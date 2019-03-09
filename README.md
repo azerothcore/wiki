@@ -1,3 +1,3 @@
-# aZerothCore WIKI
+# AzerothCore WIKI
 
-wiki for the aZerothCore Project available here: http://azerothcore.github.io/wiki
+wiki for the AzerothCore Project available here: http://azerothcore.github.io/wiki
