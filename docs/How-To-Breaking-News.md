@@ -51,3 +51,5 @@ Result:
 
 ![AzerothCore WoW Breaking News](https://i.postimg.cc/9Fb7WD20/Breaking-News.png)
 
+Here the [patch-m.MPQ](https://mega.nz/#!NhYjSKQC!w1CxZwqie5HJPgAtj_0J5stBPUU_wo8AM-tjHZrJ4Yg) or just the [directory zipped](https://mega.nz/#!JlIziI5R!Hh-MZqDd0sujCGHZ5sBSLaVbN8uLUdlHXPZbxnyjF4s).
+
