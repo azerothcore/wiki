@@ -36,7 +36,7 @@ SERVERALERT:
 
 Hello from AzerothCore!
 
-AzerothCore is growing up day by day, it becomes more strong in years.
+AzerothCore is growing up day by day, it becomes stronger and stronge.
 
 Have a nice Play!;
 ```
