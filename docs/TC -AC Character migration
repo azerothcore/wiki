@@ -19,8 +19,7 @@ The following files must be run in order from 1 to 4 (dont run file.5 yet)
 2_CREATE_MISSING_TABLES
 3_ALTER_TABLES
 4_CLEANUP_AND_CONVERT_SPELLS
-Now re-run the character.sql update you created in step 1 located in  AzerothCore from the \env\dist\sql folder on the converted trinitycore character databse
-Now you may run 5_FINALCLEAN.sql 
+NOW you may run 5_FINALCLEAN.sql 
 Change the location of the charcters database in the worldserver.conf to your converted TrinityCore characters Database
 start ./worldserver
 
