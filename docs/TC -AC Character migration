@@ -14,7 +14,7 @@ world
 Download the TC-AC character migration tool
 Now you have your Official AzerothCore server  tested and working we can migrate the characters
 Download TC - AC Migration Tool  https://github.com/azerothcore/tool-tc-migration.git
-The following files must be run in order from 1 to 4 (dont run file.5 yet)
+The following files must be run in order from 1 to 4 on your TrinityCore characters database (dont run file.5 yet)
 1_CREATE_CLEANUP_TABLES
 2_CREATE_MISSING_TABLES
 3_ALTER_TABLES
