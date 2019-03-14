@@ -34,6 +34,8 @@ The following files must be run in order from 1 to 4 on your TrinityCore charact
 - 4_CLEANUP_AND_CONVERT_SPELLS
 - 5_FINAL_CLEANUP
 
+Now run the azerothcore-wotlk\env\dist\sql\characters_update.sql you created in the step 1 on your newly converted characters database.
+
 Change the location of the charcters database in the worldserver.conf to your converted TrinityCore characters Database
 and start the `./worldserver`
 
