@@ -10,14 +10,13 @@ This table describes the reward that you will receive when you obtain a given ac
 
 <table>
 <colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -28,7 +27,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p><strong>Null</strong></p></td>
 <td><p><strong>Default</strong></p></td>
 <td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
 </tr>
 <tr class="even">
 <td><p><a href="#id">ID</a></p></td>
@@ -37,7 +35,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
 <td><p>0</p></td>
-<td><p> </p></td>
 <td><p> </p></td>
 </tr>
 <tr class="odd">
@@ -48,7 +45,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p>NO</p></td>
 <td><p>0</p></td>
 <td><p> </p></td>
-<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p><a href="#titleh">TitleH</a></p></td>
@@ -57,7 +53,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p> </p></td>
 <td><p>NO</p></td>
 <td><p>0</p></td>
-<td><p> </p></td>
 <td><p> </p></td>
 </tr>
 <tr class="odd">
@@ -68,7 +63,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p>NO</p></td>
 <td><p>0</p></td>
 <td><p> </p></td>
-<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p><a href="#sender">Sender</a></p></td>
@@ -77,7 +71,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p> </p></td>
 <td><p>NO</p></td>
 <td><p>0</p></td>
-<td><p> </p></td>
 <td><p> </p></td>
 </tr>
 <tr class="odd">
@@ -88,7 +81,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p>YES</p></td>
 <td><p>NULL</p></td>
 <td><p> </p></td>
-<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p><a href="#body">Body</a></p></td>
@@ -96,7 +88,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td><p>signed</p></td>
 <td><p> </p></td>
 <td><p>YES</p></td>
-<td><p> </p></td>
 <td><p> </p></td>
 <td><p> </p></td>
 </tr>
@@ -107,7 +98,6 @@ This table describes the reward that you will receive when you obtain a given ac
 <td> </td>
 <td>YES</td>
 <td>0</td>
-<td> </td>
 <td> </td>
 </tr>
 </tbody>
