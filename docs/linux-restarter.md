@@ -1,3 +1,5 @@
+NOTE: screen is linux package/software only!
+
 ### Requirements for automatic restarter on GNU/Linux
 
 1. ***Open terminal and run this command
