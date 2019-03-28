@@ -49,4 +49,6 @@ and u are in screen!
 *Ctrl + A then Ctrl + D . Doing this will detach you from the screen session which you can later resume by doing screen -r .
 You can also do: Ctrl + A then type : , this will put you in screen command mode. Type the command detach to be detached from the running screen session.*
 
+**Author**: [Orangs / DarkDream.cz](https://github.com/Orangs "Orangs / DarkDream.cz")*
+
 
