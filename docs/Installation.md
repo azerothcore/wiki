@@ -177,7 +177,7 @@ Follow these instructions: [Database Setup](Database-Setup).
 ### Configure your auth.realmlist table
 
 In the `acore_auth` database, you must fill the `realmlist` table with your connection info.
-It must correspond with the values in worldserver.conf (for realmid, flag and realmzone).
+It must correspond with the values in `worldserver.conf` (for realmid, flag and realmzone).
 
 	Address: 127.0.0.1 OR <Your LOCAL NETWORK ip>  OR <Your PUBLIC NETWORK ip>
 	Port :	worldserver port
