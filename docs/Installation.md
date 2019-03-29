@@ -128,12 +128,12 @@ _Please Read [How to edit .conf files](how-to-work-with-conf-files.md) article t
 Open both `authserver.conf` and `worldserver.conf` files and go to the `MYSQL SETTINGS` section, then set the variables:
 
 ```
-LoginDatabaseInfo     = "127.0.0.1;3306;root;your_password;acore_auth"
-WorldDatabaseInfo     = "127.0.0.1;3306;root;your_password;acore_world"
-CharacterDatabaseInfo = "127.0.0.1;3306;root;your_password;acore_characters"
+LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth"
+WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world"
+CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters"
 ```
 
-replacing `your_password` with the password of your MySQL server root user
+The default user is `acore` with password `acore`. If you would like to use another MySQL user, change the credentials here.
 (the `authserver.conf` has the `LoginDatabaseInfo` variable only).
 
 In the worldserver.conf file, also set:
