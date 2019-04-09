@@ -2,13 +2,32 @@
 
 ## Intro
 
-In many parts of the code you will find several bit operations. These are mostly used on flags and masks.
+In computing, numbers are internally represented in binary. This means, when you use an integer type for a variable, this will internally be represented as a summation or concatenation of zeros and ones.
+This is also true for booleans! If you had a bit that equaled to 1 or a boolean that was equal to true, there would be no difference in the value of both variables.
 
-In computing, numbers are internally represented in binary. This means, where you use an integer type for a variable, this will actually internally will be represented as a summation of zeros and ones.
+As you might know, a single bit represents one 0 or one 1. A concatenation of eight of those bits represent a Byte. The maximum value of a byte is 255 which is the summation of all the bits. Each bit has a "value" and the summation of all the bits is what we call mask. For example the, the first bit value is 1, the 2nd bit value is 2 * the value of the bit to his right.
 
-As you might know, a single bit represents one 0 or one 1. A concatenation of eight of those bits represent a Byte, e.g. 00000101, which is the number 5.
-When a number is 4 Bytes long, this means that your number actually uses 32 bits of the internal storage.
+This is the same as saying that 2^the current bit = x, for example:
 
+2^0=1
+2^1=2
+2^2=4
+Etc, until the last bit.
+Another way of representing this concept:
+
+1 = 00000001
+2 = 00000010
+3 = 00000011
+4 = 00000100
+5 = 00000101
+
+
+When a number is 4 Bytes long, this means that your number actually uses 32 bits of the internal storage:
+
+00000000 00000000 00000000 00000000
+
+The 32-bit integer data type can hold integer values in the range of −2,147,483,648 to 2,147,483,647. You may also refer to this data type as signed int or signed. Unsigned int means that the 32-bit unsigned int data type can hold integer values in the range of 0 to 4,294,967,295.
+The reason why the unsigned int will always atore more positive values vs a signed is because we use the negatove values of the signed int as positives and this duplicates the ammout of positive values you can store in a variable.
 
 ## What is their usage for?
 
