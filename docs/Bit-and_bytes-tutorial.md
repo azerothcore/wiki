@@ -21,7 +21,12 @@ As you might know, a single bit represents one 0 or one 1. A concatenation of ei
 2^6=64
 2^7=128
 
-// Or you could represent this concept like this:
+/*
+ * You can represent a byte as a sequence of zeros and ones accordingly.
+ * Reading like this, the order of the bits is read
+ * from right to left 
+ * <-----
+*/
 1   = 00000001
 2   = 00000010
 4   = 00000100
@@ -41,34 +46,73 @@ The reason why the unsigned int will always store more positive values vs a sign
 
 ## What is their usage for?
 
-Now imagine you want to create a program that holds a state, which is based on multiple values that are one(true) or zero(false). One could store these values in different variables, may they be booleans or integers. Or instead use a single integer variable and use each bit of its internal 32 bits to represent the different true and falses.
+Now imagine you want to create a program that holds a state, which is based on multiple values. We can
 
-An example: 00000101. Here the the first bit (reading from right to left) is true, which represents the first variable. The 2nd is false, which represents the 2nd variable. The third true. And so on...
+``` c++
+// Store the current state of this program
+bool firstValue = true;
+bool secondValue = false;
+
+```
+
+We can store these values in different variables, may they be booleans or integers. Or instead use a single integer variable and use each bit of its internal 32 bits to represent the different true and falses.
+
+``` c++
+// 00000101
+int maskValue = 5;
+```
+
+Above, the the first bit is true, which represents the first variable. The 2nd is false, which represents the 2nd variable. The third true. And so on...
 
 This is a very compact way of storing data and has many usages.
 
 This is where bit masking comes in. It sounds complex but actually it's very simple.
 
-Bit masking allows you to use operations that work on bit-level.
+Bitmasking allows the user to:
+1. Editing particular bits in a byte(s)
+2. Checking if particular bit values are present or not.
+3. Apply a mask to a value, where in our case the value is our state 00000101 and the mask is again a binary number, which indicates the bits of interest. In this case our mask is the number 5.
 
-Editing particular bits in a byte(s)
-Checking if particular bit values are present or not.
-You actually apply a mask to a value, where in our case the value is our state 00000101 and the mask is again a binary number, which indicates the bits of interest.
+## Binary operations
 
-By performing binary operations on the mask and the state one could achieve the following:
+
+If we want to set a particular value to true, we could do this by using the OR operator and the following bit mask:
+The OR operator sets a subset of the bits in the state.
+
+``` C++
+Mask:   10000000
+Value:  00000101
+---- OR ---------
+Result: 10000101
+
+// Here we initialize MyState with 5
+// This is the same as saying that MyState is equal to 00000101
+int MyState = 5;
+
+// Then we can add a value to it with the following syntax
+// This will turn the mask from 00000101 to 10000000
+MyState |= 128;
+
+// Our end result will turn 5 into 133
+```
+
 
 The AND operator extracts a subset of the bits in the state
-The OR operator sets a subset of the bits in the state
-The XOR operator toggles a subset of the bits in the state
-If we want to set a particular value to true, we could do this by using the OR operator and the following bit mask:
-
-Mask:   10000000b
-Value:  00000101b
----- OR ---------
-Result: 10000101b
 Or one could select a particular value from the state by using the AND operator:
 
-Mask:   00000100b
-Value:  00000101b
+``` C++
+Mask:   00000100
+Value:  00000101
 ---- AND ---------
-Result: 00000100b
+Result: 00000100
+
+// In this case we have the value 5
+int MyState = 5;
+
+// And we want to remove 1 state from that value
+MyState &= 1;
+
+/* This will turn our 00000101 (5)
+ * into a 00000100 (4)
+ */
+```
