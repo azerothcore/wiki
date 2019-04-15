@@ -2320,7 +2320,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>Despawn Target after param1 in Milliseconds. If you want to set respawn time set param2 in seconds.</p></td>
+<td><p>Despawn Target after param1 in Milliseconds.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_ACTION_SET_INVINCIBILITY_HP_LEVEL</p></td>
