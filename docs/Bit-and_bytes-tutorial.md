@@ -75,6 +75,51 @@ Bitmasking allows the user to:
 
 ## Binary operations
 
+Operating with bits is pretty similar to setting up conditions between two variables. Lets say we have, for example:
+
+``` C++
+if (1 && !0)
+  printf('This condition is true');
+```
+
+Any value that is not 0 will always be the same as true. This means that:
+
+- 1 is true
+- !0 is the same as saying not false, which means that !0 is true
+- true and true confirms the condition
+
+This way we can compare 2 bits values and if they are both true, we can keep the bit's value and get an end result likewise:
+
+``` C++
+255 &= 1
+
+// This will result in 255 becoming 254 due to 
+// F - False and T - True to compare the bits from 255 and 1
+(255) -> 1 1 1 1 1 1 1 1
+(1)   -> 0 0 0 0 0 0 0 1
+(1)   -> F F F F F F F T
+         0 0 0 0 0 0 0 1
+         
+// Another example:
+Value:  00000101
+Mask:   00000100
+---- AND ---------
+Result: 00000100
+
+// In this case we have the value 5
+int MyState = 5;
+
+// And we want to remove 1 state from that value
+MyState &= 4;
+
+/* This will turn our 00000101 (5)
+ * into a 00000100 (4)
+ */
+```
+Resuming: The AND operator extracts a subset of the bits in the state
+Or one could select a particular value from the state by using the AND operator.
+
+--- 
 
 If we want to set a particular value to true, we could do this by using the OR operator and the following bit mask:
 The OR operator sets a subset of the bits in the state.
@@ -94,25 +139,4 @@ int MyState = 5;
 MyState |= 128;
 
 // Our end result will turn 5 into 133
-```
-
-
-The AND operator extracts a subset of the bits in the state
-Or one could select a particular value from the state by using the AND operator:
-
-``` C++
-Mask:   00000100
-Value:  00000101
----- AND ---------
-Result: 00000100
-
-// In this case we have the value 5
-int MyState = 5;
-
-// And we want to remove 1 state from that value
-MyState &= 1;
-
-/* This will turn our 00000101 (5)
- * into a 00000100 (4)
- */
 ```
