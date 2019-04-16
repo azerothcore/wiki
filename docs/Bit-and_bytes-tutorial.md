@@ -93,7 +93,7 @@ This way we can compare 2 bits values and if they are both true, we can keep the
 ``` C++
 255 &= 1
 
-// This will result in 255 becoming 254 due to 
+// This will result in 255 becoming 1 due to 
 // F - False and T - True to compare the bits from 255 and 1
 (255) -> 1 1 1 1 1 1 1 1
 (1)   -> 0 0 0 0 0 0 0 1
