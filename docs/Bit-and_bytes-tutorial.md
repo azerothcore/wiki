@@ -11,7 +11,7 @@ As you might know, a single bit represents one 0 or one 1. A concatenation of ei
 
 
 ``` c++
-// This is the same as saying that 2^the current bit = x, for example
+// This is the same as saying that 2^N = x, for example
 2^0=1
 2^1=2
 2^2=4
@@ -46,7 +46,7 @@ The reason why the unsigned int will always store more positive values vs a sign
 
 ## What is their usage for?
 
-Now imagine you want to create a program that holds a state, which is based on multiple values. We can
+Now imagine you want to create a program that holds a state, which is based on multiple values:
 
 ``` c++
 // Store the current state of this program
@@ -55,7 +55,7 @@ bool secondValue = false;
 
 ```
 
-We can store these values in different variables, may they be booleans or integers. Or instead use a single integer variable and use each bit of its internal 32 bits to represent the different true and falses.
+Or instead use a single integer variable and use each bit of its internal 8 bits to represent the different true and falses.
 
 ``` c++
 // 00000101
@@ -116,8 +116,42 @@ MyState &= 4;
  * into a 00000100 (4)
  */
 ```
-Resuming: The AND operator extracts a subset of the bits in the state
-Or one could select a particular value from the state by using the AND operator.
+
+The examples above might have left you wondering. Why not simply subtract the values from numbers?
+5-1 = 4 is easier than going around comparing pointers and more natural for the human language.
+
+The point in using & in bit operations is often acompanied by another bit operation character which is the '~'.
+
+What ~ allows you to do is to invert the bitmask, for example:
+
+``` C++
+255 &= ~1; // This will make 255 turn into 254 because:
+(255) -> 1 1 1 1 1 1 1 1
+(1)   -> 0 0 0 0 0 0 0 1 // First bit is true
+(~1)  -> 1 1 1 1 1 1 1 0 // Inverts the bits in 1 -> 254
+(254) -> 1 1 1 1 1 1 1 0
+```
+
+imagine a bitmask like this one:
+1 0 0 0 0 0 0 0 (128)
+
+if this was an integer operation then 128 - 64 = 64
+
+However, if you tried to remove 64 from 128:
+
+```
+1 0 0 0 0 0 0 0 &= ~64
+
+(128) 1 0 0 0 0 0 0 0
+(64)  0 1 0 0 0 0 0 0
+(~64) 1 0 1 1 1 1 1 1
+---------------------
+(128) 1 0 0 0 0 0 0 0
+```
+
+So 128 wouldn't change because 64 is already off.
+
+This is why often in files you will see variables adding new flags and removing others.
 
 --- 
 
