@@ -5,6 +5,9 @@
 In computing, numbers are internally represented in binary. This means, when you use an integer type for a variable, this will internally be represented as a summation or concatenation of zeros and ones.
 This is also true for booleans! If you had a bit that equaled to 1 or a boolean that was equal to true, there would be no difference in the value of both variables.
 
+While this is true for the value output, a boolean does take up an entire byte.
+Thats because you can't simply borrow just 1 bit, so in order to define a bool, you take up 1 byte or 8 bits.
+
 As you might know, a single bit represents one 0 or one 1. A concatenation of eight of those bits represent a Byte. The maximum value of a byte is 255 which is the summation of all the bits. Each bit has a "value" and the summation of all the bits is what we call mask. For example the, the first bit value is 1, the 2nd bit value is 2 * the value of the bit to his right.
 
 
@@ -117,8 +120,11 @@ MyState &= 4;
  */
 ```
 
-The examples above might have left you wondering. Why not simply subtract the values from numbers?
-5-1 = 4 is easier than going around comparing pointers and more natural for the human language.
+The examples above are indeed bad examples of how to use bit calculations and might have left you wondering. Why not simply subtract the values from numbers?
+
+5-1 = 4
+
+is easier to understand than going around comparing bytes or bits and more natural for the human language.
 
 The point in using & in bit operations is often acompanied by another bit operation character which is the '~'.
 
