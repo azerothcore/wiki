@@ -55,6 +55,12 @@ At this point, you must be in your "build/" directory.
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
 ```
 
+**Alternative cmake command for linux users**
+You can add your azerothcore source path after cmake, like so
+```
+cmake ../azerothcore-wotlk -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
+```
+
 Then, replacing `4` with the number of threads that you want to execute, type:
 
 ```
