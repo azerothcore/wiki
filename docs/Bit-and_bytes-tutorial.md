@@ -78,6 +78,7 @@ Bitmasking allows the user to:
 
 ## Binary operations
 
+### Bitwise AND "&"
 Operating with bits is pretty similar to setting up conditions between two variables. Lets say we have, for example:
 
 ``` C++
@@ -161,22 +162,52 @@ This is why often in files you will see variables adding new flags and removing 
 
 --- 
 
-If we want to set a particular value to true, we could do this by using the OR operator and the following bit mask:
-The OR operator sets a subset of the bits in the state.
+### Bitwise OR "|"
+
+Adding a new flag to a bitmask is easier than removing them.
+
+This concept is applied just like the OR in a condition:
 
 ``` C++
-Mask:   10000000
-Value:  00000101
----- OR ---------
-Result: 10000101
 
-// Here we initialize MyState with 5
-// This is the same as saying that MyState is equal to 00000101
+if (true || false)
+  printf("This condition is true");
+else if (true || true)
+  printf("This condition is true");
+else if (false || true)
+  printf("This condition is true");
+else if (false || false)
+  printf("This condition is false");
+
+/* Here we initialize MyState with 5
+ * or 00000101 if we talk in bit language
+ */ 
+
 int MyState = 5;
 
-// Then we can add a value to it with the following syntax
-// This will turn the mask from 00000101 to 10000000
+// Then we can add a mask to it with the following syntax
 MyState |= 128;
 
-// Our end result will turn 5 into 133
+// Our end result will turn 5 into 133 because of this logic:
+
+5   -   0 0 0 0 0 1 0 1
+128 -   1 0 0 0 0 0 0 0
+133 -   1 0 0 0 0 1 0 1
 ```
+
+---
+## Conclusion
+
+[Cheat sheet taken from this link](https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/)
+
+1. "&" (bitwise AND) Takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 
+
+2. "|" (bitwise OR) Takes two numbers as operands and does OR on every bit of two numbers. The result of OR is 1 any of the two bits is 
+
+3. "^" (bitwise XOR) Takes two numbers as operands and does XOR on every bit of two numbers. The result of XOR is 1 if the two bits are different.
+
+4. "<<" (left shift) Takes two numbers, left shifts the bits of the first operand, the second operand decides the number of places to shift.
+
+5. ">>" (right shift) Takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to shift.
+
+6. "~" (bitwise NOT) Takes one number and inverts all bits of it
