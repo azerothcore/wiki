@@ -178,22 +178,51 @@ else if (false || true)
   printf("This condition is true");
 else if (false || false)
   printf("This condition is false");
+```
 
-/* Here we initialize MyState with 5
- * or 00000101 if we talk in bit language
- */ 
+Just like two conditions, you can compare 2 bits and get a new bitmask because, if one of either bits is true, this bit value will become true. In other words, if you have 1 or 0 the new bitmask value will be 1, for example:
 
+``` C++
+// Here we initialize MyState with 5 aka 00000101 if we talk in bit language
 int MyState = 5;
 
 // Then we can add a mask to it with the following syntax
 MyState |= 128;
 
 // Our end result will turn 5 into 133 because of this logic:
-
 5   -   0 0 0 0 0 1 0 1
 128 -   1 0 0 0 0 0 0 0
+------- Result --------
 133 -   1 0 0 0 0 1 0 1
 ```
+
+### Bitwise XOR "^"
+
+This bit operator character works in a different than expected way and can be difficult to find a way to use it.
+
+Imagine having the following bitmasks:
+
+| Bitmask | Value |
+| --- | --- |
+| ```0 1 0 0 1 1 1 0``` | 78
+| ```0 0 1 1 0 1 0 0``` | 52
+| ```F T T T T F T F``` | XOR Results |
+| ```0 1 1 1 1 0 1 0``` | 122
+
+You might be confused with what just happened.
+
+Well, we just compared bit from first mask and bit from second mask and compared them. If they are diferent then the final value is true. This is how it would look like programmatically:
+
+``` C++
+// Compare the values from mask 1 and 2
+// If they are different then the XOR condition is true
+for (int i = 0; i < 8; ++i)
+{
+  if (bitmask_1[i] != bitmask_2[i])
+    printf("This condition is true")
+}
+```
+
 
 ---
 ## Conclusion
