@@ -2399,7 +2399,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>move the target forward for the specified distance (point movement)</p></td>
+<td><p>move self forward for the specified distance (point movement)</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_ACTION_SET_VISIBILITY</p></td>
