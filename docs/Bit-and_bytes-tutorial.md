@@ -1,6 +1,13 @@
 ## Intro
 
 In computing, numbers are internally represented in binary. This means, when you use an integer type for a variable, this will internally be represented as a summation or concatenation of zeros and ones.
+
+![Byte](http://schoolcoders.com/w/images/0/07/Byte.png)
+
+You could also view it like this:
+
+![Hobbyte](https://ih0.redbubble.net/image.474456834.0620/ap,550x550,12x12,1,transparent,t.u1.png)
+
 This is also true for booleans! If you had a bit that equaled to 1 or a boolean that was equal to true, there would be no difference in the value of both variables.
 
 While this is true for the value output, a boolean does take up an entire byte.
