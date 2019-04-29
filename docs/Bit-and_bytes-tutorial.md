@@ -1,5 +1,3 @@
-*This is a work in progress*
-
 ## Intro
 
 In computing, numbers are internally represented in binary. This means, when you use an integer type for a variable, this will internally be represented as a summation or concatenation of zeros and ones.
@@ -30,14 +28,14 @@ As you might know, a single bit represents one 0 or one 1. A concatenation of ei
  * from right to left 
  * <-----
 */
-1   = 00000001
-2   = 00000010
-4   = 00000100
-8   = 00001000
-16  = 00010000
-32  = 00100000
-64  = 01000000
-128 = 10000000
+1   = 0 0 0 0 0 0 0 1
+2   = 0 0 0 0 0 0 1 0
+4   = 0 0 0 0 0 1 0 0
+8   = 0 0 0 0 1 0 0 0
+16  = 0 0 0 1 0 0 0 0
+32  = 0 0 1 0 0 0 0 0
+64  = 0 1 0 0 0 0 0 0
+128 = 1 0 0 0 0 0 0 0
 ```
 
 When a number is 4 Bytes long, this means that your number actually uses 32 bits of the internal storage:
@@ -223,7 +221,34 @@ for (int i = 0; i < 8; ++i)
 }
 ```
 
+### Bitwise left shit "<<"
 
+This bit operation will shift all the binary values N times as specified. Lets look deeper:
+
+If we have the following value in binary X:
+
+```0 0 0 0 0 0 0 1``` (which is 1) 
+
+and we do x << 1, then x will become
+
+```0 0 0 0 0 0 1 0``` 
+
+So by this rule, It moves all bits to left by one and adds a 0 to the right.
+x << 2 would move all bits by 2 so x would become
+
+```0 0 0 0 0 1 0 0``` 
+
+``` C++
+// Shift the value "1", "8-1" times to the left
+1<<(8-1)
+
+// (8-1) is the same as 7
+1<<(7)
+
+// Which moves 000000001 the 1 in that value 7 places to the left.
+// so the result is 128 or
+10000000
+```
 ---
 ## Conclusion
 
