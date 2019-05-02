@@ -1805,7 +1805,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>React State. Can be Passive (0), Defensive (1), Aggressive (2), Assist (3).</p></td>
+<td><p>React State. Can be Passive (0), Defensive (1), Aggressive (2).</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_ACTION_ACTIVATE_GOBJECT</p></td>
@@ -2604,13 +2604,11 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 </tr>
 <tr class="odd">
-<td><p>SMART_ACTION_SET_DISABLE_GRAVITY</p></td>
+<td><p>SMART_ACTION_SET_FLY</p></td>
 <td><p>60</p></td>
-<td><p>0 = On / 1 = Off</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
+<td><p>fly (0/1)</p></td>
+<td><p>speed</p></td>
+<td><p>disable gravity (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3505,8 +3503,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td><br />
-</td>
+<td><p>Not supported yet</p></td>
 </tr>
 <tr class="even">
 <td>SMART_ACTION_DISABLE_EVADE</td>
@@ -3522,8 +3519,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td><br />
-</td>
+<td><p>Not supported yet</p></td>
 </tr>
 <tr class="odd">
 <td>SMART_ACTION_GO_SET_GO_STATE</td>
@@ -3539,8 +3535,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td><br />
-</td>
+<td><p>Not supported yet</p></td>
 </tr>
 <tr class="even">
 <td>SMART_ACTION_SET_CAN_FLY</td>
@@ -3556,8 +3551,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td><br />
-</td>
+<td><p>Not supported yet</p></td>
 </tr>
 <tr class="odd">
 <td>SMART_ACTION_REMOVE_AURAS_BY_TYPE</td>
@@ -3573,8 +3567,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td><br />
-</td>
+<td><p>Not supported yet</p></td>
 </tr>
 <tr class="even">
 <td>SMART_ACTION_SET_SIGHT_DIST</td>
