@@ -272,3 +272,10 @@ x << 2 would move all bits by 2 so x would become
 5. ">>" (right shift) Takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to shift.
 
 6. "~" (bitwise NOT) Takes one number and inverts all bits of it
+
+# Credits
+
+Documentation built with these articles in consideration:
+
+https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/
+https://stackoverflow.com/questions/31575691/what-is-a-bitmask-and-a-mask
