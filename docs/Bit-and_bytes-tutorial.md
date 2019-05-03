@@ -278,4 +278,5 @@ x << 2 would move all bits by 2 so x would become
 Documentation built with these articles in consideration:
 
 https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/
+
 https://stackoverflow.com/questions/31575691/what-is-a-bitmask-and-a-mask
