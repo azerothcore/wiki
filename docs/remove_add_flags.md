@@ -34,5 +34,16 @@ inverts the bitmask '~'.
 If you wanted to make a creature not a vendor anymore, one would have to run the following query:
 
 ``` SQL
-UPDATE `creature_template` SET `npcflag` = `npcflag` & ~128 WHERE `entry` = 12345;
+UPDATE `creature_template` SET `npcflag` = `npcflag` & ~(128) WHERE `entry` = 12345;
+```
+
+Graphically, this would mean that , if he had a gossip and was also a vendor, he would have flags 1 and 128 which means that it was 129.
+In other words, the bit operation would look like the following.
+
+``` C++
+     AND OPERATION
+129  - 1 0 0 0 0 0 0 1
+~128 - 0 1 1 1 1 1 1 1
+-----------------------
+1    - 0 0 0 0 0 0 0 1
 ```
