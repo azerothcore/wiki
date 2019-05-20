@@ -2543,7 +2543,7 @@ In what slot the item can be equipped.
 </tr>
 <tr class="even">
 <td><p>13</p></td>
-<td><p>Weapon</p></td>
+<td><p>One-Hand (not to confuse with Off-Hand)</p></td>
 <td><p>28</p></td>
 <td><p>Relic</p></td>
 </tr>
