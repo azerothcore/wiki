@@ -58,19 +58,24 @@ Good:
 UPDATE `table_1` SET `field_1` = 'someValue' WHERE `entry` IN (1000, 2000, 3000);
 ```
 
-For flags (2^) columns, when you remove or add a flag, it is better not to override the existing value as flags are combined values:
+#### Flags
+
+For flags (2^) columns, when you remove or add a flag, it is better not to override the existing value as flags are combined values.
+
+For example, given a flag with value `128`, this is how it would be to add, remove and invert it:
 
 ```sql
 -- ADD AN EXTRA FLAG (|)
-UPDATE `table_1` SET `field_1` = `field_1` | 128 WHERE (entry = 1000);
+UPDATE `table_1` SET `field_1` = `field_1` | 128 WHERE `entry` = 1000;
 
 -- REMOVE AN EXTRA FLAG (& ~)
-UPDATE `table_1` SET `field_1` = `field_1` & ~128 WHERE (entry = 1000);
+UPDATE `table_1` SET `field_1` = `field_1` & ~128 WHERE `entry` = 1000;
 
 -- INVERT A FLAG (if present = removed, if absent = added) (^)
-UPDATE `table_1` SET `field_1` = `field_1` ^ 128 WHERE (entry = 1000);
+UPDATE `table_1` SET `field_1` = `field_1` ^ 128 WHERE `entry` = 1000;
 ```
 
+This way, you will make sure that your query will only affect that specific flag, leaving all the other flags unchanged.
 
 ### DELETE
 
