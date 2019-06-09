@@ -5,7 +5,6 @@
 <p>This table holds the base experience point information needed for when a player explores a new zone.</p>
 
 <table>
-
 <tbody>
 <tr class="even">
 <td><p><strong>Field</strong></p></td>
