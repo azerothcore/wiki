@@ -97,7 +97,7 @@ Basically all item changes made when player changes faction.
 
 Not implemented.
 
-See item\_template.AllowableRace
+See [item\_template.AllowableRace](http://www.azerothcore.org/wiki/item_template#allowablerace)
 
 ### alliance\_id
 
@@ -111,7 +111,7 @@ This is for easy item name identifying. Comment style should be name(ItemLevel)
 
 Not implemented.
 
-See item\_template.AllowableRace
+See [item\_template.AllowableRace](http://www.azerothcore.org/wiki/item_template#allowablerace)
 
 ### horde\_id
 
