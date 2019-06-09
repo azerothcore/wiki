@@ -77,24 +77,6 @@ This table holds the vendor data for all NPCs that sell items and currency. The 
 </tbody>
 </table>
 
-## 6.x.x version
-
-| Field                                              | Type         | Attributes | Key | Null | Default |
-|----------------------------------------------------|--------------|------------|-----|------|---------|
-| [entry](#npc_vendor-entry)                         | mediumint(8) | unsigned   | PRI | NO   | 0       |
-| [slot](#npc_vendor-slot)                           | smallint(6)  | signed     | MUL | NO   | 0       |
-| [item](#npc_vendor-item)                           | mediumint(8) | signed     | PRI | NO   | 0       |
-| [maxcount](#npc_vendor-maxcount)                   | mediumint(8) | unsigned   |     | NO   | 0       |
-| [incrtime](#npc_vendor-incrtime)                   | int(10)      | unsigned   |     | NO   | 0       |
-| [ExtendedCost](#npc_vendor-ExtendedCost)           | mediumint(8) | unsigned   | PRI | NO   | 0       |
-| [type](#npc_vendor-type)                           | tinyint(3)   | unsigned   | PRI | NO   | 1       |
-| [PlayerConditionID](#npc_vendor-PlayerConditionID) | int(10)      | unsigned   |     | NO   | 0       |
-| [IgnoreFiltering](#npc_vendor-IgnoreFiltering)     | tinyint(3)   | unsigned   |     | NO   | 0       |
-| [VerifiedBuild](#npc_vendor-VerifiedBuild)         | smallint(5)  | signed     |     | YES  | 0       |
-
- 
-
- 
 
 **Field Descriptions**
 
