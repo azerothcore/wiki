@@ -73,7 +73,7 @@ Time to wait (in ms) between each point.
 
 #### action
 
-ID of the action to be performed. See [waypoint\_scripts.id](https://trinitycore.atlassian.net/wiki/display/tc/scripts#scripts-id).
+ID of the action to be performed. See [waypoint\_scripts.id](scripts#id).
 
 #### action\_chance
 

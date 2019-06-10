@@ -21,16 +21,16 @@ Contains waypoint data, allowing Creatures to move to certain X, Y, and Z coordi
 
 | Field                                                                                                 | Type         | Attributes | Key | Null | Default |
 |-------------------------------------------------------------------------------------------------------|--------------|------------|-----|------|---------|
-| [entry](https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-entry)                  | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
-| [pointid](https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-pointid)              | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
-| [position\_x](https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-position_x)       | FLOAT        | -          | -   | NO   | 0       |
-| [position\_y](https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-position_y)       | FLOAT        | -          | -   | NO   | 0       |
-| [position\_z](https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-position_z)       | FLOAT        | -          | -   | NO   | 0       |
-| [point\_comment](https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-point_comment) | TEXT         | -          | -   | YES  | -       |
+| [entry](waypoints#entry)                  | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
+| [pointid](waypoints#pointid)              | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
+| [position\_x](waypoints#position_x)       | FLOAT        | -          | -   | NO   | 0       |
+| [position\_y](waypoints#position_y)       | FLOAT        | -          | -   | NO   | 0       |
+| [position\_z](waypoints#position_z)       | FLOAT        | -          | -   | NO   | 0       |
+| [point\_comment](waypoints#point_comment) | TEXT         | -          | -   | YES  | -       |
 
 #### entry
 
-Entry of the creature. See [creature\_template.entry](https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry).
+Entry of the creature. See [creature\_template.entry](http://www.azerothcore.org/wiki/creature_template#creature_template-entry).
 
 #### pointid
 
