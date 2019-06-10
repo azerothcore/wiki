@@ -4,7 +4,7 @@
 
 **The \`vehicle\_template\_accessory\` table**
 
-Records in this table can be overwritten by [vehicle\_accessory](https://trinitycore.atlassian.net/wiki/display/tc/vehicle_accessory) table
+Records in this table can be overwritten by [vehicle\_accessory](vehicle_accessory) table
 
 **Structure**
 
