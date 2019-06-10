@@ -405,7 +405,7 @@
 
 **Description of the fields**
 
-Please note: ![](attachments/2130108/2130327.png) means that the feature/option is not (yet) implemented.
+Please note: **X** means that the feature/option is not (yet) implemented.
 
 ### entryorguid
 
@@ -428,12 +428,12 @@ Please note: ![](attachments/2130108/2130327.png) means that the feature/option
     | SMART\_SCRIPT\_TYPE\_CREATURE                                       | 0     |
     | SMART\_SCRIPT\_TYPE\_GAMEOBJECT                                     | 1     |
     | SMART\_SCRIPT\_TYPE\_AREATRIGGER                                    | 2     |
-    | ![](attachments/2130108/2130327.png) SMART\_SCRIPT\_TYPE\_EVENT     | 3     |
-    | ![](attachments/2130108/2130327.png) SMART\_SCRIPT\_TYPE\_GOSSIP    | 4     |
-    | ![](attachments/2130108/2130327.png) SMART\_SCRIPT\_TYPE\_QUEST     | 5     |
-    | ![](attachments/2130108/2130327.png) SMART\_SCRIPT\_TYPE\_SPELL     | 6     |
-    | ![](attachments/2130108/2130327.png) SMART\_SCRIPT\_TYPE\_TRANSPORT | 7     |
-    | ![](attachments/2130108/2130327.png) SMART\_SCRIPT\_TYPE\_INSTANCE  | 8     |
+    | **X** SMART\_SCRIPT\_TYPE\_EVENT								      | 3     |
+    | **X** SMART\_SCRIPT\_TYPE\_GOSSIP    								  | 4     |
+    | **X** SMART\_SCRIPT\_TYPE\_QUEST    								  | 5     |
+    | **X** SMART\_SCRIPT\_TYPE\_SPELL     								  | 6     |
+    | **X** SMART\_SCRIPT\_TYPE\_TRANSPORT								  | 7     |
+    | **X** SMART\_SCRIPT\_TYPE\_INSTANCE  								  | 8     |
     | SMART\_SCRIPT\_TYPE\_TIMED\_ACTIONLIST                              | 9     |
 
 ### id
@@ -571,9 +571,6 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 </tbody>
 </table>
-
-**
-**
 
 -   Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
 
@@ -868,7 +865,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_EVENT_RECEIVE_EMOTE</p></td>
 <td><p>22</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/Emotes">EmoteId</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/Emotes">EmoteId</a></p></td>
 <td><p>CooldownMin</p></td>
 <td><p>CooldownMax</p></td>
 <td><p>condition</p></td>
@@ -1108,7 +1105,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="even">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_TRANSPORT_ADDPLAYER</p>
+<p>**X** SMART_EVENT_TRANSPORT_ADDPLAYER</p>
 </div></td>
 <td><p>41</p></td>
 <td><p><br />
@@ -1126,7 +1123,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="odd">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_TRANSPORT_ADDCREATURE</p>
+<p>**X** SMART_EVENT_TRANSPORT_ADDCREATURE</p>
 </div></td>
 <td><p>42</p></td>
 <td><p>Entry (0 any)</p></td>
@@ -1143,7 +1140,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="even">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_TRANSPORT_REMOVE_PLAYER</p>
+<p>**X** SMART_EVENT_TRANSPORT_REMOVE_PLAYER</p>
 </div></td>
 <td><p>43</p></td>
 <td><p><br />
@@ -1161,7 +1158,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="odd">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_TRANSPORT_RELOCATE</p>
+<p>**X** SMART_EVENT_TRANSPORT_RELOCATE</p>
 </div></td>
 <td><p>44</p></td>
 <td><p>PointId</p></td>
@@ -1178,7 +1175,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="even">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_INSTANCE_PLAYER_ENTER</p>
+<p>**X** SMART_EVENT_INSTANCE_PLAYER_ENTER</p>
 </div></td>
 <td><p>45</p></td>
 <td><p>Team (0 any)</p></td>
@@ -1208,7 +1205,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="even">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_QUEST_ACCEPTED</p>
+<p>**X** SMART_EVENT_QUEST_ACCEPTED</p>
 </div></td>
 <td><p>47</p></td>
 <td><p><br />
@@ -1225,7 +1222,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="odd">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_QUEST_OBJ_COMPLETION</p>
+<p>**X** SMART_EVENT_QUEST_OBJ_COMPLETION</p>
 </div></td>
 <td><p>48</p></td>
 <td><p><br />
@@ -1242,7 +1239,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="even">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_QUEST_COMPLETION</p>
+<p>**X** SMART_EVENT_QUEST_COMPLETION</p>
 </div></td>
 <td><p>49</p></td>
 <td><p><br />
@@ -1259,7 +1256,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="odd">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_QUEST_REWARDED</p>
+<p>**X** SMART_EVENT_QUEST_REWARDED</p>
 </div></td>
 <td><p>50</p></td>
 <td><p><br />
@@ -1276,7 +1273,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tr>
 <tr class="even">
 <td><div class="content-wrapper">
-<p><img src="attachments/2130108/2130327.png" /> SMART_EVENT_QUEST_FAIL</p>
+<p>**X** MART_EVENT_QUEST_FAIL</p>
 </div></td>
 <td><p>51</p></td>
 <td><p><br />
@@ -1294,8 +1291,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_EVENT_TEXT_OVER</p></td>
 <td><p>52</p></td>
-<td><p>GroupId (from <a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_text">creature_text</a>)</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature#creature-id">Creature.Id</a> (0 any)</p></td>
+<td><p>GroupId (from <a href="http://www.azerothcore.org/wiki/creature_text">creature_text</a>)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature#id">Creature.Id</a> (0 any)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1516,7 +1513,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_EVENT_GAME_EVENT_START</p></td>
 <td><p>68</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/game_event#game_event-eventEntry">game_event.eventEntry</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/game_event#evententry">game_event.eventEntry</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1530,7 +1527,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_EVENT_GAME_EVENT_END</p></td>
 <td><p>69</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/game_event#game_event-eventEntry">game_event.eventEntry</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/game_event#evententry">game_event.eventEntry</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1687,7 +1684,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_TALK</p></td>
 <td><p>1</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_text#creature_text-groupid">Creature_text.groupid</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_text#groupid">Creature_text.groupid</a></p></td>
 <td><p>Duration to wait before SMART_EVENT_TEXT_OVER is triggered.</p></td>
 <td>0 It will try to trigger talk of the target
 <p>1 Set target as talk target (used for $vars in texts and whisper target)</p></td>
@@ -1702,7 +1699,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SET_FACTION</p></td>
 <td><p>2</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/FactionTemplate">FactionID</a> (or 0 for default)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/Faction">FactionID</a> (or 0 for default)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1718,8 +1715,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_MORPH_TO_ENTRY_OR_MODEL</p></td>
 <td><p>3</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">Creature_template.entry</a>(param1)</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-modelid1-4">Creature_template.modelID</a>(param2)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">Creature_template.entry</a>(param1)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-modelid">Creature_template.modelID</a>(param2)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1747,7 +1744,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_PLAY_EMOTE</p></td>
 <td><p>5</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/Emotes">EmoteId</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/Emotes">EmoteId</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1779,7 +1776,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_OFFER_QUEST</p></td>
 <td><p>7</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-Id">QuestID</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/quest_template#id">QuestID</a></p></td>
 <td><p>directAdd (0/1)</p></td>
 <td><p><br />
 </p></td>
@@ -1794,7 +1791,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SET_REACT_STATE</p></td>
 <td><p>8</p></td>
-<td><p><a href="https://github.com/TrinityCore/TrinityCore/blob/2652d70/src/server/game/Entities/Unit/Unit.h#L1127-L1133">State</a></p></td>
+<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/97e65bd4479272106bba87364d35233d2e4bd2ef/src/server/game/Entities/Unit/Unit.h#L1106-L1111">State</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1827,8 +1824,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_RANDOM_EMOTE</p></td>
 <td><p>10</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/Emotes">EmoteId1</a></p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/Emotes">EmoteId2</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/Emotes">EmoteId1</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/Emotes">EmoteId2</a></p></td>
 <td><p>EmoteId3</p></td>
 <td><p>Emote4</p></td>
 <td><p>Emote5</p></td>
@@ -1895,7 +1892,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_CALL_AREAEXPLOREDOREVENTHAPPENS</p></td>
 <td><p>15</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-Id">QuestID</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/quest_template#id">QuestID</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1910,10 +1907,10 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 </tr>
 <tr class="odd">
-<td><p>SMART_ACTION_SET_INGAME_PHASE_ID</p></td>
+<td><p></p></td>
 <td><p>16</p></td>
-<td><p>phaseId</p></td>
-<td><p>apply/remove (1/0)</p></td>
+<td><p></p></td>
+<td><p></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1922,12 +1919,12 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>For 4.3.4 + only</p></td>
+<td><p></p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_ACTION_SET_EMOTE_STATE</p></td>
 <td><p>17</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/Emotes">EmoteId</a></p></td>
+<td><p><a href="http://www.azerothcore.org/Emotes">EmoteId</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1946,7 +1943,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>(may be more than one field OR'd together)</p></td>
 <td><p>type</p>
 <p>If false set creature_template.unit_flags</p>
-<p>If true set <a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-unit_flags2">creature_template.unit_flags2</a></p></td>
+<p>If true set <a href="http://www.azerothcore.org/wiki/creature_template#creature_template-unit_flags2">creature_template.unit_flags2</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -1962,8 +1959,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>19</p></td>
 <td><p>(may be more than one field OR'd together)</p></td>
 <td><p>type</p>
-<p>If false set  <a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-unit_flags">creature_template.unit_flags</a></p>
-<p>If true set <a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-unit_flags2">creature_template.unit_flags2</a></p></td>
+<p>If false set  <a href="http://www.azerothcore.org/wiki/creature_template#creature_template-unit_flags">creature_template.unit_flags</a></p>
+<p>If true set <a href="http://www.azerothcore.org/wiki/creature_template#creature_template-unit_flags2">creature_template.unit_flags2</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2073,7 +2070,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_CALL_GROUPEVENTHAPPENS</p></td>
 <td><p>26</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-Id">QuestID</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/quest_template#id">QuestID</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2126,7 +2123,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>29</p></td>
 <td><p>Distance (0 = Default value)</p></td>
 <td><p>Angle (0 = Default value)</p></td>
-<td><p>End <a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template">creature_template.entry</a></p></td>
+<td><p>End <a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">creature_template.entry</a></p></td>
 <td><p>credit</p></td>
 <td><p>creditType (0monsterkill, 1event)</p></td>
 <td><p><br />
@@ -2136,12 +2133,12 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_RANDOM_PHASE</p></td>
 <td><p>30</p></td>
-<td><p>smart_scripts.event_phase_mask1</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/smart_scripts#smart_scripts-event_phase_mask">smart_scripts.event_phase_mask</a>2</p></td>
-<td><p>smart_scripts.event_phase_mask 3</p></td>
-<td><p>smart_scripts.event_phase_mask 4</p></td>
-<td><p>smart_scripts.event_phase_mask 5</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/smart_scripts#smart_scripts-event_phase_mask">smart_scripts.event_phase_mask</a>6</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a>1</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a>2</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a>3</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a>4</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a>5</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a>6</p></td>
 <td><p><br />
 </p></td>
 </tr>
@@ -2149,7 +2146,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_RANDOM_PHASE_RANGE</p></td>
 <td><p>31</p></td>
 <td><p>smart_scripts.event_phase_mask minimum</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/smart_scripts#smart_scripts-event_phase_mask">smart_scripts.event_phase_mask</a> maximum</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/smart_scripts#event_phase_mask">smart_scripts.event_phase_mask</a> maximum</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2192,7 +2189,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>This is the ID from <a href="https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-RequiredNpcOrGo">quest_template.RequiredNpcOrGo</a></p></td>
+<td><p>This is the ID from <a href="http://www.azerothcore.org/wiki/quest_template#requirednpcorgo">quest_template.RequiredNpcOrGo</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_ACTION_SET_INST_DATA</p></td>
@@ -2341,7 +2338,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_MOUNT_TO_ENTRY_OR_MODEL</p></td>
 <td><p>43</p></td>
 <td><p>creature_template.entry</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-modelid1-4">creature_template.modelID</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-modelid">creature_template.modelID</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2353,12 +2350,9 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>Mount to Creature Entry (param1) OR Mount to Creature Display (param2) Or both = 0 for Unmount</p></td>
 </tr>
 <tr class="odd">
-<td><p>SMART_ACTION_SET_INGAME_PHASE_MASK (for 3.3.5)</p>
-<p>SMART_ACTION_SET_INGAME_PHASE_GROUP (for 4.3.4 +)</p></td>
+<td><p>SMART_ACTION_SET_INGAME_PHASE_MASK</p>
 <td><p>44</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature#creature-phaseMask">creature.phasemask</a> (3.3.5)</p>
-<p>creature.phasegroup (4.3.4 +)</p></td>
-<td><p>0 = remove / 1 = add (4.3.4+ only)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature#phasemask">creature.phasemask</a></p>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2453,7 +2447,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SUMMON_GO</p></td>
 <td><p>50</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-entry">gameobject_template.entry</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject_template#entry">gameobject_template.entry</a></p></td>
 <td><p>De-spawn time in seconds.</p></td>
 <td><p>0 - For despawn when the summoner despawn or time runs out</p>
 <p>1 - For despawn when time runs out</p></td>
@@ -2502,9 +2496,9 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_WP_START</p></td>
 <td><p>53</p></td>
 <td><p>0 = walk / 1 = run</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/waypoints#waypoints-entry">waypoints.entry</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/waypoints#entry">waypoints.entry</a></p></td>
 <td><p>canRepeat</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID">quest_template.id</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/quest_template#id">quest_template.id</a></p></td>
 <td><p>despawntime</p></td>
 <td><p>reactState</p></td>
 <td><p>Creature starts Waypoint Movement. Use <a href="waypoints" class="uri">waypoints</a> table to create movement.</p></td>
@@ -2529,7 +2523,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_WP_STOP</p></td>
 <td><p>55</p></td>
 <td><p>despawnTime</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID">quest_template.id</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/quest_template#id">quest_template.id</a></p></td>
 <td><p>fail (0/1)</p></td>
 <td><p><br />
 </p></td>
@@ -2542,7 +2536,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_ADD_ITEM</p></td>
 <td><p>56</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/item_template#item_template-entry">item_template.entry</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/item_template#entry">item_template.entry</a></p></td>
 <td><p>count</p></td>
 <td><p><br />
 </p></td>
@@ -2557,7 +2551,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_REMOVE_ITEM</p></td>
 <td><p>57</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/item_template#item_template-entry">item_template.entry</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/item_template#entry">item_template.entry</a></p></td>
 <td><p>count</p></td>
 <td><p><br />
 </p></td>
@@ -2637,7 +2631,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_TELEPORT</p></td>
 <td><p>62</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/Map">MapID</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/Map">MapID</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2778,11 +2772,11 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_EQUIP</p></td>
 <td><p>71</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_equip_template#creature_equip_template-CreatureID">creature_equip_template.CreatureID</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_equip_template#creatureid">creature_equip_template.CreatureID</a></p></td>
 <td><p>Slotmask</p></td>
-<td><p>Slot1 (<a href="https://trinitycore.atlassian.net/wiki/display/tc/item_template#item_template-entry">item_template.entry</a>)</p></td>
-<td><p>Slot2 (<a href="https://trinitycore.atlassian.net/wiki/display/tc/item_template#item_template-entry">item_template.entry</a>)</p></td>
-<td><p>Slot3 (<a href="https://trinitycore.atlassian.net/wiki/display/tc/item_template#item_template-entry">item_template.entry</a>)</p></td>
+<td><p>Slot1 (<a href="http://www.azerothcore.org/wiki/item_template#entry">item_template.entry</a>)</p></td>
+<td><p>Slot2 (<a href="http://www.azerothcore.org/wiki/item_template#entry">item_template.entry</a>)</p></td>
+<td><p>Slot3 (<a href="http://www.azerothcore.org/wiki/item_template#entry">item_template.entry</a>)</p></td>
 <td><p><br />
 </p></td>
 <td><p>only slots with mask set will be sent to client, bits are 1, 2, 4, leaving mask 0 is defaulted to mask 7 (send all), Slots1-3 are only used if no Param1 is set</p></td>
@@ -2941,7 +2935,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_SET_NPC_FLAG</p></td>
 <td><p>81</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-npcflag">Creature_template.npcflag</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#npcflag">Creature_template.npcflag</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2958,7 +2952,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_ADD_NPC_FLAG</p></td>
 <td><p>82</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-npcflag">Creature_template.npcflag</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#npcflag">Creature_template.npcflag</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2975,7 +2969,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_REMOVE_NPC_FLAG</p></td>
 <td><p>83</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-npcflag">Creature_template.npcflag</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#npcflag">Creature_template.npcflag</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2992,7 +2986,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SIMPLE_TALK</p></td>
 <td><p>84</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_text#creature_text-groupid">creature_text.groupid</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_text#groupid">creature_text.groupid</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3138,7 +3132,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SET_DYNAMIC_FLAG</p></td>
 <td><p>94</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature#creature-dynamicflags">creature.dynamicflags</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#dynamicflags">creature.dynamicflags</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3155,7 +3149,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_ACTION_ADD_DYNAMIC_FLAG</p></td>
 <td><p>95</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature#creature-dynamicflags">creature.dynamicflags</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#dynamicflags">creature.dynamicflags</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3172,7 +3166,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_REMOVE_DYNAMIC_FLAG</p></td>
 <td><p>96</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature#creature-dynamicflags">creature.dynamicflags</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#dynamicflags">creature.dynamicflags</a></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3206,8 +3200,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_SEND_GOSSIP_MENU</p></td>
 <td><p>98</p></td>
 <td><p>gossip_menu.entry</p></td>
-<td><p><a href="#text_id">gossip_menu.text_id</a><br />
-(same value as <a href="#id">npc_text.ID</a>)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gossip_menu#text_id">gossip_menu.text_id</a><br />
+(same value as <a href="http://www.azerothcore.org/wiki/npc_text#id">npc_text.ID</a>)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3304,7 +3298,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td>SMART_ACTION_SET_GO_FLAG</td>
 <td>104</td>
-<td><a href="gameobject_template_addon_46235672.html#gameobject_template_addon-flags">gameobject_template_addon.flags</a></td>
+<td><a href="http://www.azerothcore.org/wiki/gameobject_template_addon#flags">gameobject_template_addon.flags</a></td>
 <td><br />
 </td>
 <td><br />
@@ -3320,7 +3314,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td>SMART_ACTION_ADD_GO_FLAG</td>
 <td>105</td>
-<td><a href="gameobject_template_addon_46235672.html#gameobject_template_addon-flags">gameobject_template_addon.flags</a></td>
+<td><a href="http://www.azerothcore.org/wiki/gameobject_template_addon#flags">gameobject_template_addon.flags</a></td>
 <td><br />
 </td>
 <td><br />
@@ -3336,7 +3330,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td>SMART_ACTION_REMOVE_GO_FLAG</td>
 <td>106</td>
-<td><a href="gameobject_template_addon_46235672.html#gameobject_template_addon-flags">gameobject_template_addon.flags</a></td>
+<td><a href="http://www.azerothcore.org/wiki/gameobject_template_addon#flags">gameobject_template_addon.flags</a></td>
 <td><br />
 </td>
 <td><br />
@@ -3352,7 +3346,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td>SMART_ACTION_SUMMON_CREATURE_GROUP</td>
 <td>107</td>
-<td><a href="creature_summon_groups_2130086.html#creature_summon_groups-groupId">creature_summon_groups.groupId</a></td>
+<td><a href="http://www.azerothcore.org/wiki/creature_summon_groups#groupid">creature_summon_groups.groupId</a></td>
 <td>Attack invoker (0/1)</td>
 <td><br />
 </td>
@@ -3697,14 +3691,10 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 </tr>
 <tr class="odd">
-<td>SMART_ACTION_PLAY_ANIMKIT</td>
+<td></td>
 <td>128</td>
-<td>AnimKit ID</td>
-<td><p>type:</p>
-<p>1- PlayOneShotAnimKitId</p>
-<p>2- SetAIAnimKitId</p>
-<p>3- SetMeleeAnimKitId</p>
-<p>4- SetMovementAnimKitId</p></td>
+<td></td>
+<td></td>
 <td><br />
 </td>
 <td><br />
@@ -3713,12 +3703,12 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td>// don't use on 3.3.5a</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>SMART_ACTION_SCENE_PLAY</td>
+<td>S</td>
 <td>129</td>
-<td>SceneId</td>
+<td></td>
 <td><br />
 </td>
 <td><br />
@@ -3729,12 +3719,12 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td>// don't use on 3.3.5a</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>SMART_ACTION_SCENE_CANCEL</td>
+<td></td>
 <td>130</td>
-<td>SceneId</td>
+<td></td>
 <td><br />
 </td>
 <td><br />
@@ -3745,7 +3735,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </td>
 <td><br />
 </td>
-<td>// don't use on 3.3.5a</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>SMART_ACTION_SPAWN_SPAWNGROUP</td>
@@ -4395,7 +4385,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_CREATURE_RANGE</p></td>
 <td><p>9</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
 <td><p>minDist</p></td>
 <td><p>maxDist</p></td>
 <td><p>Number of target</p>
@@ -4432,7 +4422,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_CREATURE_DISTANCE</p></td>
 <td><p>11</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
 <td><p>maxDist</p></td>
 <td><p>Number of target</p>
 <p>0 = all targets</p></td>
@@ -4471,7 +4461,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_GAMEOBJECT_RANGE</p></td>
 <td><p>13</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-entry">GO Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject_template#entry">GameObject Entry</a> (0 any)</p></td>
 <td><p>minDist</p></td>
 <td><p>maxDist</p></td>
 <td><p>Number of target</p>
@@ -4587,7 +4577,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_CLOSEST_CREATURE</p></td>
 <td><p>19</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
 <td><p>maxDist (Can be from 0-100 yards)</p></td>
 <td><p>dead? (0/1)</p></td>
 <td><br />
@@ -4863,9 +4853,13 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES(y,'SmartTrigger
 
 ### Invoker:
 
-|                                                                      |
-|----------------------------------------------------------------------|
-| // white list of events that actually have an invoker passed to them |
+<table>
+<thead>
+<tr class="header">
+<th><p>// white list of events that actually have an invoker passed to them</p></th>
+</tr>
+</thead>
+</table>
 
 Actions like SMART\_ACTION\_INVOKER\_CAST and targets like SMART\_TARGET\_ACTION\_INVOKER will work only if the event is in this list:
 
@@ -4946,8 +4940,3 @@ SMART\_EVENT\_INSTANCE\_PLAYER\_ENTER
 SMART\_EVENT\_TRANSPORT\_ADDCREATURE
 
 SMART\_EVENT\_DATA\_SET
-
-## Attachments:
-
-![](images/icons/bullet_blue.gif){width="8" height="8"} [Unused.png](attachments/2130108/2130327.png) (image/png)
-
