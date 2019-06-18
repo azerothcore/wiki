@@ -33,8 +33,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [attackpower](#creature_template-attackpower)                     | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#creature_template-BaseAttackTime)               | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [RangeAttackTime](#creature_template-RangeAttackTime)             | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| BaseVariance                                                      | float                 | NO   |     | 1       |       |                                      |
-| RangeVariance                                                     | float                 | NO   |     | 1       |       |                                      |
 | [unit\_class](#creature_template-unit_class)                      | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [unit\_flags](#creature_template-unit_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [unit\_flags2](#creature_template-unit_flags2)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
