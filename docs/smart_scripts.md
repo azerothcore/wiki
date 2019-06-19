@@ -583,7 +583,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 
 ### event\_type
 
-<table>
+<table height=400 >
 <thead>
 <tr class="header">
 <th><p>Name</p></th>
