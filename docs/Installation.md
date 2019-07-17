@@ -8,34 +8,41 @@ For macOS users: the build on mac is currently broken (see [this issue](https://
 
 Make sure your system fits with the [Requirements](Requirements.md).
 
+## 2) Creating a user to work with
 
-## 2) Getting the source files
+```
+sudo adduser azerothcore
+sudo su - azerothcore
+cd ~/
+```
+
+
+## 3) Getting the source files
 
 Choose one of the following method:
 
 
 ```
 1) Clone only the master branch + full history (smaller size - recommended):
-git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
+git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch source
 
 2) Clone only the master branch + no previous history (smallest size):
-git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
+git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch source --depth 1
 
 3) Clone all branches and all history:
-git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
+git clone https://github.com/azerothcore/azerothcore-wotlk.git source
 ```
 
 Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option 2).
 
 
-## 3) Compiling
+## 4) Compiling
 
 ### Compiling on GNU/Linux or Mac OS X
 
 ```
-cd azerothcore
-mkdir build
-cd build
+cd source
+mkdir build; cd build
 ```
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
@@ -52,7 +59,7 @@ At this point, you must be in your "build/" directory.
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
 ```
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
 ```
 
 Then, replacing `4` with the number of threads that you want to execute, type:
@@ -67,7 +74,7 @@ make install
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
 ```
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient_r.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient_r.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
 ```
 
 Then, replacing `4` with the number of threads that you want to execute, type:
@@ -75,6 +82,12 @@ Then, replacing `4` with the number of threads that you want to execute, type:
 ```
 make -j 4
 make install
+```
+
+### Keeping the code up to date
+```
+cd ~/source/
+git pull origin master
 ```
 
 ### Compiling on Windows
@@ -116,9 +129,9 @@ Copy `libmysql.dll` from your MYSQL_LIBRARY path into `CMAKE_INSTALL_PREFIX`
 **Note:** Do not use ARM architecture as azerothcore requires SSE2 and ARM doesn't support it.  
 
 
-## 4) Setting the configuration files
+## 5) Setting the configuration files
 
-Inside the directory where you installed the binaries (e.g. `/home/youruser/azeroth-server/`), open the directory where configuration files has been installed  ( `etc/` on linux ) , then:
+Inside the directory where you installed the binaries (e.g. `/home/user/server/`), open the directory where configuration files has been installed  ( `etc/` on linux ) , then:
 
 - copy the file `authserver.conf.dist` and rename it to `authserver.conf` ( DO NOT REMOVE THE .dist FILE )
 - copy the file `worldserver.conf.dist` and rename it to `worldserver.conf` ( DO NOT REMOVE THE .dist FILE )
@@ -138,12 +151,12 @@ The default user is `acore` with password `acore`. If you would like to use anot
 
 In the worldserver.conf file, also set:
 
-`DataDir = "/home/youruser/azeroth-server/data"`
+`DataDir = "/home/user/server/data"`
 
-replacing `/home/youruser/azeroth-server` with `CMAKE_INSTALL_PREFIX`.
+replacing `/home/user/server` with `CMAKE_INSTALL_PREFIX`.
 
 
-## 5) Download the data files
+## 6) Download the data files
 
 Go to `CMAKE_INSTALL_PREFIX` and create a new directory named `data`
 
@@ -161,7 +174,7 @@ Two options to choose from:
 Extract all the archives and place the extracted `dbc`, `maps`, `mmaps`, `vmaps` directories inside the data directory.
 
 
-## 6) Setting up the database
+## 7) Setting up the database
 
 ### Base DB setup
 Follow these instructions: [Database Setup](Database-Setup).
@@ -183,11 +196,11 @@ It must correspond with the values in `worldserver.conf` (for realmid, flag and 
 	Port :	worldserver port
 
 
-## 7) Starting the servers
+## 8) Starting the servers
 
 ### GNU/Linux and Mac OS X
 
-Open 2 terminal windows (or terminal tabs) and move to the `bin` directory of your azeroth server (for example `/home/youruser/azeroth-server/bin`), 
+Open 2 terminal windows (or terminal tabs) and move to the `bin` directory of your azeroth server (for example `/home/user/server/bin`), 
 
 then in one window/tab type:
 
@@ -203,7 +216,7 @@ in the other one:
 Run `worldserver.exe` and `authserver.exe` from `CMAKE_INSTALL_PREFIX`.
 
 
-## 8) Connecting to the server
+## 9) Connecting to the server
 
 Edit your `realmlist.wtf` and add the IP you set in the realmlist table (and the port if needed). Then you can connect with a newly made account or the test accounts (`test1` to `test10`, with password `a`).
 
