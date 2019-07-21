@@ -7,23 +7,25 @@ This tutorial will walk you through the entire AzerothCore server setup process,
 
 There is a Step-by-Step YouTube Video which walks you through this entire process. It's encouraged you follow along with that video, while using this tutorial as a reference guide.
 
+[![Tutorial Video](https://img.youtube.com/vi/lenMiDtbHhs/0.jpg)](https://www.youtube.com/watch?v=lenMiDtbHhs)
+
 ## PC Apps You May Need:
 #### MySQL Clients:
-- HeidiSQL
-- MySQL Workbench
-- SQLYog (Paid)
+- [HeidiSQL](https://www.heidisql.com/)
+- [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- [SQLYog](https://www.webyog.com/product/sqlyog) (Paid)
 
 #### SSH Clients:
 - DigitalOcean’s Console
-- PuTTY
-- Terminus (Paid)
+- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
+- [Terminus](https://termius.com/) (Paid)
 
 #### FTP Clients:
-- Filezilla
-- Terminus (Paid)
+- [Filezilla](https://filezilla-project.org/)
+- [Terminus](https://termius.com/) (Paid)
 
 #### File Editors:
-- Notepad++
+- [Notepad++](https://notepad-plus-plus.org/)
 
 ## Choosing our Droplet
 #### Setup new Droplet
@@ -106,27 +108,37 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 
 
 #### Set up the server config files
-- Using SFTP, navigate to `/home/azcore/azeroth-server/etc' and download the authserver.conf.dist and worldserver.conf.dist. 
+- Using SFTP, navigate to `/home/azcore/azeroth-server/etc' and download the authserver.conf.dist and worldserver.conf.dist to your local machine.
 - Rename them on your local machine to remove the .dist from the file name. 
-- Update the Database information in both the Authserver and Worldserver configuration files to use the username and password you created in the earlier steps.
+- Update the Database information in both the Authserver and Worldserver configuration files by using Notepad++ to edit. Use the username and password you created in the earlier steps to update the database connection information.
 - In the Worldserver config, configure the DataDir folder to: `“/home/azcore/azeroth-server/data"`
 - Upload the .conf files back to the etc directory using your SFTP client.
 
-#### Database Setup
-Clone /home/azcore/azerothcore/conf/config.sh.dist to config.sh
-Update the section DB EXPORTER/IMPORTER CONFIGURATIONS with DB Information
-Save and upload back
-Run bash apps/db_assembler/db_assembler.sh
-Select import-all: Assemble & Import All
-Update Realmlist Table
-Open HeidiSQL or MySQL Workbench and connect to DB
-Update the acore_auth.realmlist to the ip of the DigitalOcean server
-Start up the server
-As root, navigate to: cd /home/azcore/azeroth-server/bin
-screen -AmdS auth ./authserver
-screen -AmdS world ./worldserver
-Create your In-Game Account
-Navigate to the World screen: screen -r world
-account create [accountname] [password]
-account set gmlevel [accountname] 3 -1
-Set your realmlist.wtf to your DigitalOcean IP, and log in!
+#### Initial Database Setup and Load
+- Similar to what was done with the Authserver.conf and Worldserver.conf, we need to update the database import configuration file. Using SFTP, navigate to `/home/azcore/azerothcore/conf/` and find the `config.sh.dist`. Download it to your local machine.
+- Rename it to remove the `.dist` from the file name, so it reads `config.sh`. 
+- Open up `config.sh` in Notepad++ and locate the section *DB EXPORTER/IMPORTER CONFIGURATIONS*.
+- Replace the Database login information beginning at line 153 with the database username and password you set earlier in this tutorial. Do this for the Auth, Character, and World database configuration sections (beginning at line 153, 158, and 163 respectively).
+- Save `config.sh` and upload back to the directory `/home/azcore/azerothcore/conf/`.
+- We need to be in the git directory in order to execute the import script, so enter the following command `cd /home/azcore/azerothcore`
+- Start up the database import script by entering the following command `bash apps/db_assembler/db_assembler.sh`. We need to configure all databases, so we need to choose *Import-all: Assemble & Import All*. Type `import-all` and hit enter. This may error after each execution, but that's ok - it imports each database successfully. Repeate this entire step until the World database loads. Type `quit` once the World database has been imported.
+
+## Server Start Up
+#### Final Configuration
+- Using your MySQL Client, connect to your database. The IP address of your DigitalOcean server is the hostname, the username is your database username, and the password is your database password. The port should default to 3306. Connect.
+- Navigate to the `acore_auth` database, and open up the table called `realmlist`. View the table's Data. 
+- Update the `address` value to your server's IP address. This is where you can update the name of the realm of your server if you so choose.
+
+#### Start up Your Server
+- In your SSH terminal, enter the following command `cd /home/azcore/azeroth-server/bin`
+- Now, let's turn on the Authserver. We're using Screens so we can have both the Authserver and Worldserver open at the same time. We're going to label the Authserver's Screen 'auth'. Enter the following command to start it up `screen -AmdS auth ./authserver`. Enter `screen -r auth` to verify that it started successfully. Press *Ctrl + A, followed by D* to exit the auth screen. To quit the screen altogether, hit *Ctrl + C*. This will kill the process, so only use this when shutting down the Authserver.
+- Now, let's turn on the Worldserver. We're going to label the Worldserver's Screen 'world'. Enter the following command to start it up `screen -AmdS world ./worldserver`. Enter `screen -r world` to verify that it started successfully. Press *Ctrl + A, followed by D* to exit the world screen. To quit the screen altogether, hit *Ctrl + C*. This will kill the process, so only use this when shutting down the Worldserver.
+- Side note: If you want to learn more about why we're passing `AmdS` when initializing Screens, or to see if there are other arguments you want to pass, [here's a great reference](https://linux.die.net/man/1/screen) on what each letter means and why they're used.
+
+#### Create your In-Game Account
+- Navigate to the world screen by typing `screen -r world`
+- Enter the following command to create your new account `account create [accountname] [password]`
+- Next, let's make your new Account an Administrator account `account set gmlevel [accountname] 3 -1`
+
+#### Update Your Realmlist
+- Set your realmlist.wtf to your DigitalOcean IP, which can be found in the `[WoW Directory]/data/enUS`. Edit with Notepad++, and log in!
