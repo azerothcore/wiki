@@ -25,6 +25,7 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 - [Terminus](https://termius.com/) (Paid)
 
 #### File Editors:
+- [Visual Studio Code](https://code.visualstudio.com/)
 - [Notepad++](https://notepad-plus-plus.org/)
 
 ## Choosing our Droplet
@@ -49,11 +50,15 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 
 #### Verify Sudo access for the new User
 - Let's log in as our new user `sudo su azcore`
-- Enter `sudo whoami` and then enter the password you chose for this user (may be different from your root password.
+- Enter `sudo whoami` and then enter the password you chose for this user (may be different from your root password).
 - If it says *root*, then you're all set! Enter the command `exit` to return to your root user for the next steps.
 
 #### Installing Key Libraries & Additional Apps
-- Next we need to install a bunch of important libraries, applications, and tools needed to Azerothcore. Run the following command: `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev` Choose 'Y' for any prompts asking for additional space for the installation.
+- Next we need to install a bunch of important libraries, applications, and tools needed to Azerothcore. Run the following command: 
+```
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
+```
+- Choose 'Y' for any prompts asking for additional space for the installation.
 - Let's refresh our App List once again before we continue `sudo apt-get update`
 - Let's install Screen, an application that will let us have multiple applications open at once and persist after we log out of the console `sudo apt-get install screen`
 - Next up is curl - we'll be using this to get the VMAP, MMAP, and other required data for the server `sudo apt install curl`
@@ -64,7 +69,11 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 - Let's begin the process `sudo mysql_secure_installation`
 - For the following prompts, answer `[no pass]/N/Y/Y/Y/Y`
 - Once we're back in the command line, type `sudo mysql` to enter the MariaDB Console
-- Once in the MariaDB Console, let's create our User `GRANT ALL ON *.* TO 'dbadmin'@'%' IDENTIFIED BY 'password1' WITH GRANT OPTION;` Choose a Username you want - it can be anything you'd like, it doesn't have to be `dbadmin`. Also, please make sure you choose a very secure password, as `password1` should *NEVER* be used.
+- Once in the MariaDB Console, let's create our User: 
+```
+GRANT ALL ON *.* TO 'dbadmin'@'%' IDENTIFIED BY 'password1' WITH GRANT OPTION;
+```
+- Choose a Username you want - it can be anything you'd like, it doesn't have to be `dbadmin`. Also, please make sure you choose a very secure password, as `password1` should *NEVER* be used.
 - Let's refresh the permissions for MariaDB `Flush Privileges;`
 - Return to the main Debian console `exit`
 
@@ -94,9 +103,16 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 - Once the clone is complete, let's navigate to the top level folder of the git directory `cd azerothcore`
 - We need to make a folder called *build* `mkdir build`
 - Navigate to the new build folder `cd build`
-- Now we run the cmake command, this is the pre-compile step to ensure all cpp files are accounted for before we compile, and it tells the compile what to compile. `cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1`
-- Now we compile AzerothCore - this can take some time, depending on the number of cpu cores your Droplet has. This tutorial is based on the 4 cpu core Droplet, so we'll use `make -j 4`. If you've got a different number of cores, replace the 4 with the number of cpu cores you have.
-- Once the compile is complete, let's assemble the final files and move them to their final home `make install`
+- Now we run the cmake command, this is the pre-compile step to ensure all cpp files are accounted for before we compile, and it tells the compile what to compile. 
+```
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
+```
+- Now we compile AzerothCore - this can take some time, depending on the number of cpu cores your Droplet has. This tutorial is based on the 4 cpu core Droplet. Enter the following command to compile the core and place the assembled items in their new home:
+```
+MTHREADS=`grep -c ^processor /proc/cpuinfo`; MTHREADS=$(($MTHREADS + 2));
+make -j $MTHREADS;
+make install -j $MTHREADS;
+```
 
 #### Data Files
 - Let's navigate back to the home directory `cd`
@@ -104,20 +120,20 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 - Let's download the data files required. `curl https://wow.heyaapl.com/data.zip --output data.zip`
 - Let's unzip the main data directory `unzip data.zip`
 - We need to navigate to the data folder to continue unzipping the child folders `cd data`
-- No we will unzip all child zip files `unzip ‘*.zip’`
+- No we will unzip all child zip files `unzip '*.zip'`
 
 
 #### Set up the server config files
-- Using SFTP, navigate to `/home/azcore/azeroth-server/etc' and download the authserver.conf.dist and worldserver.conf.dist to your local machine.
+- Using SFTP, navigate to `/home/azcore/azeroth-server/etc` and download the authserver.conf.dist and worldserver.conf.dist to your local machine.
 - Rename them on your local machine to remove the .dist from the file name. 
-- Update the Database information in both the Authserver and Worldserver configuration files by using Notepad++ to edit. Use the username and password you created in the earlier steps to update the database connection information.
-- In the Worldserver config, configure the DataDir folder to: `“/home/azcore/azeroth-server/data"`
+- Update the Database information in both the Authserver and Worldserver configuration files by using your file editor to edit. Use the username and password you created in the earlier steps to update the database connection information.
+- In the Worldserver config, configure the DataDir folder to: `"/home/azcore/azeroth-server/data"`
 - Upload the .conf files back to the etc directory using your SFTP client.
 
 #### Initial Database Setup and Load
 - Similar to what was done with the Authserver.conf and Worldserver.conf, we need to update the database import configuration file. Using SFTP, navigate to `/home/azcore/azerothcore/conf/` and find the `config.sh.dist`. Download it to your local machine.
 - Rename it to remove the `.dist` from the file name, so it reads `config.sh`. 
-- Open up `config.sh` in Notepad++ and locate the section *DB EXPORTER/IMPORTER CONFIGURATIONS*.
+- Open up `config.sh` in an editor and locate the section *DB EXPORTER/IMPORTER CONFIGURATIONS*.
 - Replace the Database login information beginning at line 153 with the database username and password you set earlier in this tutorial. Do this for the Auth, Character, and World database configuration sections (beginning at line 153, 158, and 163 respectively).
 - Save `config.sh` and upload back to the directory `/home/azcore/azerothcore/conf/`.
 - We need to be in the git directory in order to execute the import script, so enter the following command `cd /home/azcore/azerothcore`
@@ -141,4 +157,4 @@ There is a Step-by-Step YouTube Video which walks you through this entire proces
 - Next, let's make your new Account an Administrator account `account set gmlevel [accountname] 3 -1`
 
 #### Update Your Realmlist
-- Set your realmlist.wtf to your DigitalOcean IP, which can be found in the `[WoW Directory]/data/enUS`. Edit with Notepad++, and log in!
+- Set your realmlist.wtf to your DigitalOcean IP, which can be found in the `[WoW Directory]/data/enUS`. Edit with your editor, and log in!
