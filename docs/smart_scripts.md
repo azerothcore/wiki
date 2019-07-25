@@ -543,7 +543,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_EVENT_FLAG_RESERVED_5</p></td>
 <td><p>32</p></td>
-<td><p>0x20</p>/td>
+<td><p>0x20</p></td>
 <td><p><br />
 </p></td>
 </tr>
