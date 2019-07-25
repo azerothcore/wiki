@@ -575,9 +575,6 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tbody>
 </table>
 
-**
-**
-
 -   Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
 
 <!-- -->
@@ -4373,11 +4370,10 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_CREATURE_RANGE</p></td>
 <td><p>9</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#entry">creature_template.entry</a> (0 any)</p></td>
 <td><p>minDist</p></td>
 <td><p>maxDist</p></td>
-<td><p>Number of target</p>
-<p>0 = all targets</p></td>
+<td><p>alive state (1 alive, 2 dead, 0 both)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4386,13 +4382,14 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>(Random?) creature with specified ID within specified range.</p></td>
+<td><p>All creatures with the specified ID within the specified range and the specified alive state.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_CREATURE_GUID</p></td>
 <td><p>10</p></td>
-<td><p>guid</p></td>
-<td><p>entry</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature#guid">creature.guid</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#entry">creature_template.entry</a></p></td>
+<td><p>getFromHashMap (0/1, this does not work in instances!)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4403,17 +4400,14 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p>Creature with specified GUID.</p></td>
+<td><p>Creature with specified GUID and/or specified creature template ID.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_TARGET_CREATURE_DISTANCE</p></td>
 <td><p>11</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#entry">creature_template.entry</a> (0 any)</p></td>
 <td><p>maxDist</p></td>
-<td><p>Number of target</p>
-<p>0 = all targets</p></td>
+<td><p>alive state (1 alive, 2 dead, 0 both)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4424,7 +4418,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>Creature with specified ID within distance. (Different from #9?)</p></td>
+<td><p>All creatures with the specified ID within the specified distance and the specified alive state.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_STORED</p></td>
@@ -4449,11 +4443,9 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_GAMEOBJECT_RANGE</p></td>
 <td><p>13</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-entry">GO Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject_template#entry">gameobject_template.entry</a> (0 any)</p></td>
 <td><p>minDist</p></td>
 <td><p>maxDist</p></td>
-<td><p>Number of target</p>
-<p>0 = all targets</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4462,13 +4454,16 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>(Random?) object with specified ID within specified range.</p></td>
+<td><p><br />
+</p></td>
+<td><p>All game objects with the specified ID within the specified range.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_GAMEOBJECT_GUID</p></td>
 <td><p>14</p></td>
-<td><p>guid</p></td>
-<td><p>entry</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject#guid">gameobject.guid</a></p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject_template#entry">gameobject_template.entry</a></p></td>
+<td><p>getFromHashMap (0/1, this does not work in instances!)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4479,17 +4474,13 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p>Object with specified GUID.</p></td>
+<td><p>Object with specified GUID and/or specified game object template ID.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_TARGET_GAMEOBJECT_DISTANCE</p></td>
 <td><p>15</p></td>
-<td><p>GO Entry (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject_template#entry">gameobject_template.entry</a> (0 any)</p></td>
 <td><p>maxDist</p></td>
-<td><p>Number of target</p>
-<p>0 = all targets</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4500,7 +4491,9 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>Object with specified ID within distance. (Different from #13?)</p></td>
+<td><p><br />
+</p></td>
+<td><p>All objects with the specified ID within the specified distance.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_INVOKER_PARTY</p></td>
@@ -4528,6 +4521,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>17</p></td>
 <td><p>minDist</p></td>
 <td><p>maxDist</p></td>
+<td><p>maxCount</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4538,9 +4532,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p>(Random?) player within specified range.</p></td>
+<td><p>All players up to maxCount within the specified range.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_PLAYER_DISTANCE</p></td>
@@ -4560,12 +4552,12 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>(Random?) player within specified distance. (Different from #17?)</p></td>
+<td><p>All players within the specified distance.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_TARGET_CLOSEST_CREATURE</p></td>
 <td><p>19</p></td>
-<td><p><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature Entry</a> (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/creature_template#entry">creature_template.entry</a> (0 any)</p></td>
 <td><p>maxDist (Can be from 0-100 yards)</p></td>
 <td><p>dead? (0/1)</p></td>
 <td><p><br />
@@ -4578,12 +4570,12 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>Closest creature with specified ID within specified range.</p></td>
+<td><p>Closest creature with the specified ID within the specified range.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_CLOSEST_GAMEOBJECT</p></td>
 <td><p>20</p></td>
-<td><p>GO Entry (0 any)</p></td>
+<td><p><a href="http://www.azerothcore.org/wiki/gameobject_template#entry">gameobject_template.entry</a> (0 any)</p></td>
 <td><p>maxDist (Can be from 0-100 yards)</p></td>
 <td><p><br />
 </p></td>
@@ -4643,8 +4635,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="even">
 <td><p>SMART_TARGET_OWNER_OR_SUMMONER</p></td>
 <td><p>23</p></td>
-<td><p><br />
-</p></td>
+<td><p>use owner of owner (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4664,6 +4655,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_TARGET_THREAT_LIST</p></td>
 <td><p>24</p></td>
+<td><p>maxDist (0 any)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4678,9 +4670,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p>All units on creature's threat list</p></td>
+<td><p>All units on creature's threat list within the specified distance if maxDist > 0</p></td>
 </tr>
 <tr class="even">
 <td>SMART_TARGET_CLOSEST_ENEMY</td>
@@ -4721,7 +4711,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td>Any friendly unit (creature, player or pet) within maxDist</td>
 </tr>
 <tr class="even">
-<td>SMART_TARGET_LOOT_RECIPIENTS</td>
+<td>❌ SMART_TARGET_LOOT_RECIPIENTS</td>
 <td>27</td>
 <td><p><br />
 </p></td>
@@ -4745,7 +4735,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td>SMART_TARGET_FARTHEST</td>
 <td>28</td>
 <td>maxDist</td>
-<td>playerOnly</td>
+<td>playerOnly (0/1)</td>
 <td>isInLos (0/1)</td>
 <td><p><br />
 </p></td>
@@ -4760,7 +4750,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>Farthest unit on the threat list</p></td>
 </tr>
 <tr class="even">
-<td>SMART_TARGET_VEHICLE_ACCESSORY</td>
+<td>❌ SMART_TARGET_VEHICLE_ACCESSORY</td>
 <td>29</td>
 <td>seat</td>
 <td><p><br />
@@ -4794,12 +4784,12 @@ Commenting on SAI uses a template which is the following: (with an example)
 
 -   Always update *creature\_template*,*gameobject\_template* or *areatrigger\_scripts* with:
 
-``` cpp
-UPDATE `creature_template` SET `AIName`='SmartAI' WHERE `entry`=y;
+```sql
+UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = y;
 
-UPDATE `gameobject_template` SET `AIName`='SmartGameObjectAI' WHERE `entry`=y;
+UPDATE `gameobject_template` SET `AIName` = 'SmartGameObjectAI' WHERE `entry` = y;
 
-INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES(y,'SmartTrigger');
+INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigger');
 ```
 
 -   If the creature or GO is inside a dungeon, set *event\_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
@@ -4812,9 +4802,9 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES(y,'SmartTrigger
 |----------------------------------------------------------------|------|------|-------------------------------------------------------------------------|
 | SMARTCAST\_INTERRUPT\_PREVIOUS                                 | 1    | 0x01 | Interrupt any spell casting                                             |
 | SMARTCAST\_TRIGGERED                                           | 2    | 0x02 | Triggered (this makes spell cost zero mana and have no cast time)       |
-| ![](attachments/2130108/2130327.png) CAST\_FORCE\_CAST         | 4    | 0x04 | Forces cast even if creature is out of mana or out of range             |
-| ![](attachments/2130108/2130327.png) CAST\_NO\_MELEE\_IF\_OOM  | 8    | 0x08 | Prevents creature from entering melee if out of mana or out of range    |
-| ![](attachments/2130108/2130327.png) CAST\_FORCE\_TARGET\_SELF | 16   | 0x10 | Forces the target to cast this spell on itself                          |
+| ❌ CAST\_FORCE\_CAST                                           | 4    | 0x04 | Forces cast even if creature is out of mana or out of range             |
+| ❌ CAST\_NO\_MELEE\_IF\_OOM                                    | 8    | 0x08 | Prevents creature from entering melee if out of mana or out of range    |
+| ❌ CAST\_FORCE\_TARGET\_SELF                                   | 16   | 0x10 | Forces the target to cast this spell on itself                          |
 | CAST\_AURA\_NOT\_PRESENT                                       | 32   | 0x20 | Only casts the spell if the target does not have an aura from the spell |
 | SMARTCAST\_COMBAT\_MOVE                                        | 64   | 0x40 | Prevent combat movement on cast, allow on fail range, mana, LOS         |
 
