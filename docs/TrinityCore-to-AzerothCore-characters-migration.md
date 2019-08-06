@@ -19,14 +19,18 @@ Backup your TrinityCore Databases before proceeding (always backup before making
 
 Download the [TC-to-AC character migration tool](https://github.com/azerothcore/tool-tc-migration).
 
-The following files must be run in order from 1 to 4 on your TrinityCore characters database:
+The following files must be run in order from 1 to 5 on your TrinityCore characters database:
 
 - 1_CREATE_CLEANUP_TABLES
 - 2_CREATE_MISSING_TABLES
 - 3_ALTER_TABLES
 - 4_CLEANUP_AND_CONVERT_SPELLS
 - 5_FINAL_CLEANUP
+
+Ru the following file no.6 on your Trinitycore Auth Database
+
 - 6_AUTH_CONVERTER
+
 Change the `worldserver.conf` of your AzerothCore server to point to your converted (ex TrinityCore) characters database
 and start the `./worldserver`
 
