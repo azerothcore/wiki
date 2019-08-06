@@ -27,7 +27,7 @@ The following files must be run in order from 1 to 5 on your TrinityCore charact
 - 4_CLEANUP_AND_CONVERT_SPELLS
 - 5_FINAL_CLEANUP
 
-Ru the following file no.6 on your Trinitycore Auth Database
+Run the following file no.6 on your Trinitycore Auth Database
 
 - 6_AUTH_CONVERTER
 
