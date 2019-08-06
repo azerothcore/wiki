@@ -1,4 +1,4 @@
-# TrinityCore to AzerothCore Character Migration
+# TrinityCore to AzerothCore Character & Auth Migration Tool
 
 ### 1) Install AzerothCore  
 
@@ -15,7 +15,7 @@ Backup your TrinityCore Databases before proceeding (always backup before making
 - characters
 - world
 
-### 3) Character Migration
+### 3) Character & Auth Migration
 
 Download the [TC-to-AC character migration tool](https://github.com/azerothcore/tool-tc-migration).
 
@@ -26,9 +26,8 @@ The following files must be run in order from 1 to 4 on your TrinityCore charact
 - 3_ALTER_TABLES
 - 4_CLEANUP_AND_CONVERT_SPELLS
 - 5_FINAL_CLEANUP
-
+- 6_AUTH_CONVERTER
 Change the `worldserver.conf` of your AzerothCore server to point to your converted (ex TrinityCore) characters database
 and start the `./worldserver`
-
 
 
