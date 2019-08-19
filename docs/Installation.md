@@ -4,19 +4,12 @@ Alternatively, it is also possible to [use AzerothCore with Docker](Install-with
 
 For macOS users: the build on mac is currently broken (see [this issue](https://github.com/azerothcore/azerothcore-wotlk/issues/122)), but you can still use AzerothCore on macOS with Docker.
 
-## 1) Creating a user to work with on Linux
-Start with logging in to your Linux machine and create an account for the server itself on most recent distributions this can easily be done with the following command :
-
-```sudo adduser <username>``` Note: Change `<username>` to the preferred username of your going to use on your server.  
-	
-```sudo su - <username>``` Note: Switch user to newly created `<username>` so everything will run and compile with the user you just have created.
-
-## 2) Installing the requirements
+## 1) Installing the requirements
 
 Make sure your system fits with the [Requirements](Requirements.md).
 
 
-## 3) Getting the source files
+## 2) Getting the source files
 
 Choose one of the following method:
 
@@ -35,7 +28,7 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
 Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option 2).
 
 
-## 4) Compiling
+## 3) Compiling
 
 ### Compiling on GNU/Linux or Mac OS X
 
@@ -123,7 +116,7 @@ Copy `libmysql.dll` from your MYSQL_LIBRARY path into `CMAKE_INSTALL_PREFIX`
 **Note:** Do not use ARM architecture as azerothcore requires SSE2 and ARM doesn't support it.  
 
 
-## 5) Setting the configuration files
+## 4) Setting the configuration files
 
 Inside the directory where you installed the binaries (e.g. `/home/youruser/azeroth-server/`), open the directory where configuration files has been installed  ( `etc/` on linux ) , then:
 
@@ -150,7 +143,7 @@ In the worldserver.conf file, also set:
 replacing `/home/youruser/azeroth-server` with `CMAKE_INSTALL_PREFIX`.
 
 
-## 6) Download the data files
+## 5) Download the data files
 
 Go to `CMAKE_INSTALL_PREFIX` and create a new directory named `data`
 
@@ -169,7 +162,7 @@ Two options to choose from:
 Extract all the archives and place the extracted `dbc`, `maps`, `mmaps`, `vmaps` directories inside the data directory.
 
 
-## 7) Setting up the database
+## 6) Setting up the database
 
 ### Base DB setup
 Follow these instructions: [Database Setup](Database-Setup).
@@ -191,7 +184,7 @@ It must correspond with the values in `worldserver.conf` (for realmid, flag and 
 	Port :	worldserver port
 
 
-## 8) Starting the servers
+## 7) Starting the servers
 
 ### GNU/Linux and Mac OS X
 
@@ -211,7 +204,7 @@ in the other one:
 Run `worldserver.exe` and `authserver.exe` from `CMAKE_INSTALL_PREFIX`.
 
 
-## 9) Connecting to the server
+## 8) Connecting to the server
 
 Edit your `realmlist.wtf` and add the IP you set in the realmlist table (and the port if needed). Then you can connect with a newly made account or the test accounts (`test1` to `test10`, with password `a`).
 
@@ -228,3 +221,10 @@ You can change all the passwords at once by pasting this into the worldserver co
 .account set password test9 new_pass new_pass
 .account set password test10 new_pass new_pass
 ```
+
+## Option) Creating a regular user to work with on Linux
+Start with logging in to your Linux machine and create an account for the server itself on most recent distributions this can easily be done with the following command :
+
+```sudo adduser <username>``` Note: Change `<username>` to the preferred username of your going to use on your server.  
+	
+```sudo su - <username>``` Note: Switch user to newly created `<username>` so everything will run and compile with the user you just have created.
