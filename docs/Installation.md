@@ -222,7 +222,7 @@ You can change all the passwords at once by pasting this into the worldserver co
 .account set password test10 new_pass new_pass
 ```
 
-## Option) Creating a regular user to work with on Linux
+## Optional: Creating a regular user to work with on Linux
 Start with logging in to your Linux machine and create an account for the server itself on most recent distributions this can easily be done with the following command :
 
 ```sudo adduser <username>``` Note: Change `<username>` to the preferred username of your going to use on your server.  
