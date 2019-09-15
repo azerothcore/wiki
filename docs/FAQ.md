@@ -6,7 +6,7 @@
 - You can put bounties (money) on issues and suggestions by using bountysource. Read this: [Bountysource](Bountysource.md)
 - If you're a developer, check out this page: Contribute
 
-#### 2 - Why is AzerothCore using more ram than TrinityCore?
+#### 2 - Why is AzerothCore using more RAM than TrinityCore?
 
 See [Memory Usage](Memory-Usage.md)
 
