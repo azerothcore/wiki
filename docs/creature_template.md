@@ -44,7 +44,7 @@ This table contains the description of creatures. Each spawned creature is an in
 | [trainer_race](#trainer_race)                  | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [minrangedmg](#minrangedmg)                     | float                 | NO   |     | 0       |       |                                      |
 | [maxrangedmg](#maxrangedmg)                     | float                 | NO   |     | 0       |       |                                      |
-| [rangedattackpower](#rangeattackpower)         | smallint(5)           | NO   |     | 0       |       |                                      |
+| [rangedattackpower](#rangedattackpower)         | smallint(5)           | NO   |     | 0       |       |                                      |
 | [type](#type)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [type_flags](#type_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
@@ -507,7 +507,7 @@ The ID of the pickpocketing loot template that this creature should use to gener
 
 The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)
 
-#### resistancex
+**resistancex**
 
 | resistancex | school |
 |-------------|--------|
@@ -543,17 +543,21 @@ Maximum money that the creature drops when killed, in copper.
 
 This field is overridden by ScriptName field if both are set.
 
-| Name        | Description                                                    |
-|-------------|----------------------------------------------------------------|
-| Name        | Description                                                    |
-| NullAI      | Empty AI, creature does nothing.                               |
-| AggressorAI | Creature attacks as soon as something is in aggro range.       |
-| ReactorAI   | Creature attacks only if aggroed by attack, spell etc.         |
-| GuardAI     |                                                                |
-| PetAI       | Creature is a pet.                                             |
-| TotemAI     | Creature casts spell from field spell1, otherwise like NullAI. |
-| EventAI     | Creature uses event based AI.                                  |
-| SmartAI     | Creature uses new smart AI.                                    |
+| Name            | Description                                                    |
+|-----------------|----------------------------------------------------------------|
+| NullCreatureAI  | Empty AI, creature does nothing.                               |
+| TriggerAI       |                                                                |
+| AggressorAI     | Creature attacks as soon as something is in aggro range.       |
+| PassiveAI       |                                                                |
+| CritterAI       |                                                                |
+| GuardAI         |                                                                |
+| PetAI           | Creature is a pet.                                             |
+| TotemAI         | Creature casts spell from field spell1.                        |
+| CombatAI        |                                                                |
+| ArcherAI        |                                                                |
+| TurretAI        |                                                                |
+| VehicleAI       |                                                                |
+| SmartAI         | Creature uses Smart AI                                         |
 
 #### MovementType
 
