@@ -201,7 +201,7 @@ The global unique identifier for the game object. This field must be unique amon
 
 ### id
 
-The template ID of the gameobject. See [gameobject\_template.entry](https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-entry)
+The template ID of the gameobject. See [gameobject\_template.entry](http://www.azerothcore.org/wiki/gameobject_template#entry)
 
 ### map
 
@@ -252,7 +252,6 @@ Just like flags you can add them as you wish so 3 would be: Spawned in 10/25 man
 </tbody>
 </table>
 
-For 6.x read [spawnmask 6.x](spawnmask_6.x)
 
 ### phaseMask
 

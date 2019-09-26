@@ -2236,7 +2236,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="even">
 <td>128</td>
 <td>0x080</td>
-<td>No default 30 seconds cooldown when equipped</td>
+<td>No default 30 seconds cooldown when equipped (for "On use" items)</td>
 </tr>
 <tr class="odd">
 <td>256</td>
@@ -2296,7 +2296,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="even">
 <td><p>524288</p></td>
 <td>0x080000</td>
-<td><p>Unique equipped (player can only have one equipped at the same time)</p></td>
+<td><p>Unique equipped (player can only have one equipped at the same time but as many as he wants in his bags, if maxcount = 1, it will still display Unique-Equipped)</p></td>
 </tr>
 <tr class="odd">
 <td>1048576</td>
@@ -2321,17 +2321,17 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>16777216</td>
 <td>0x01000000</td>
-<td> UNK10</td>
+<td>UNK10</td>
 </tr>
 <tr class="even">
-<td>54432</td>
+<td>33554432</td>
 <td>0x02000000</td>
-<td> Profession recipes: can only be looted if you meet requirements and don't already know it</td>
+<td>Profession recipes: can only be looted if you meet requirements and don't already know it</td>
 </tr>
 <tr class="odd">
 <td>67108864</td>
 <td>0x04000000</td>
-<td> Item cannot be used in arena</td>
+<td>Item cannot be used in arena</td>
 </tr>
 <tr class="even">
 <td><p>134217728</p></td>
@@ -2351,7 +2351,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>1073741824</td>
 <td>0x040000000</td>
-<td> UNK11</td>
+<td>UNK11</td>
 </tr>
 <tr class="even">
 <td><p>2147483648</p></td>
@@ -2433,7 +2433,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 
 ### BuyCount
 
-The size of the item stack when sold by vendors. Also if a vendor has limited copies of this item available, everytime the vendor list is refreshed (See [npc\_vendor.incrtime](npc_vendor_2130245.html#npc_vendor-incrtime)), the number of copies increases by this number.
+The size of the item stack when sold by vendors. Also if a vendor has limited copies of this item available, everytime the vendor list is refreshed (See [npc\_vendor.incrtime](http://www.azerothcore.org/wiki/npc_vendor#incrtime)), the number of copies increases by this number.
 
 ### BuyPrice
 
@@ -2467,7 +2467,7 @@ In what slot the item can be equipped.
 <td><p>0</p></td>
 <td><p>Non equipable</p></td>
 <td><p>15</p></td>
-<td><p>Ranged (Bows)</p></td>
+<td><p>Ranged (Bows) (see also Ranged right = 26)</p></td>
 </tr>
 <tr class="even">
 <td><p>1</p></td>
@@ -2495,9 +2495,9 @@ In what slot the item can be equipped.
 </tr>
 <tr class="even">
 <td><p>5</p></td>
-<td><p>Chest</p></td>
+<td><p>Chest (see also Robe = 20)</p></td>
 <td><p>20</p></td>
-<td><p>Robe</p></td>
+<td><p>Robe (see also Chest = 5)</p></td>
 </tr>
 <tr class="odd">
 <td><p>6</p></td>
@@ -2509,13 +2509,13 @@ In what slot the item can be equipped.
 <td><p>7</p></td>
 <td><p>Legs</p></td>
 <td><p>22</p></td>
-<td><p>Off hand</p></td>
+<td><p>Off Hand weapons (see also One-Hand = 13)</p></td>
 </tr>
 <tr class="odd">
 <td><p>8</p></td>
 <td><p>Feet</p></td>
 <td><p>23</p></td>
-<td><p>Holdable (Tome)</p></td>
+<td><p>Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22)</p></td>
 </tr>
 <tr class="even">
 <td><p>9</p></td>
@@ -2533,7 +2533,7 @@ In what slot the item can be equipped.
 <td><p>11</p></td>
 <td><p>Finger</p></td>
 <td><p>26</p></td>
-<td><p>Ranged right (Wands, Guns)</p></td>
+<td><p>Ranged right (Wands, Guns) (see also Ranged = 15)</p></td>
 </tr>
 <tr class="odd">
 <td><p>12</p></td>
@@ -2543,7 +2543,7 @@ In what slot the item can be equipped.
 </tr>
 <tr class="even">
 <td><p>13</p></td>
-<td><p>Weapon</p></td>
+<td><p>One-Hand (not to confuse with Off-Hand = 22)</p></td>
 <td><p>28</p></td>
 <td><p>Relic</p></td>
 </tr>
@@ -2594,7 +2594,7 @@ The honor rank the player needs to have to use this item.
 
 ### RequiredCityRank
 
-`field-no-description|22`
+Its use is unknown. All items have 0.
 
 ### RequiredReputationFaction
 
@@ -2655,7 +2655,7 @@ The rank the player has to have with the faction from [RequiredReputationFaction
 
 ### maxcount
 
-Maximum number of copies of this item a player can have. Use 0 for infinite.
+Maximum number of copies of this item which a player can have. Use 0 for infinite.
 
 ### stackable
 
@@ -3093,7 +3093,7 @@ The description that appears in orange letters at the bottom of the item tooltip
 
 ### PageText
 
-The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See [page\_text.entry](page_text_2130246.html#page_text-entry)
+The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See [page\_text.entry](http://www.azerothcore.org/wiki/page_text#entry)
 
 ### LanguageID
 
@@ -3109,7 +3109,7 @@ See the [PageTextMaterial DBC file](PageTextMaterial) for the IDs of all of the 
 
 ### startquest
 
-The ID of the quest that this item will start if right-clicked. See [quest\_template.id](quest_template_2130261.html#quest_template-entry)
+The ID of the quest that this item will start if right-clicked. See [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id)
 
 ### lockid
 
@@ -3241,11 +3241,11 @@ Controls how the item is put away on the character. Press the 'Z' hotkey to shea
 
 ### RandomProperty
 
-The number in this field points to [item\_enchantment\_template.entry](item_enchantment_template_2130231.html#item_enchantment_template-entry) and ties in an item's chance at having a random property attached to it when it shows up for the first time. This field and the [RandomSuffix](#item_template-RandomSuffix) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
+The number in this field points to [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) and ties in an item's chance at having a random property attached to it when it shows up for the first time. This field and the [RandomSuffix](#item_template-RandomSuffix) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
 
 ### RandomSuffix
 
-The number in this field points to [item\_enchantment\_template.entry](item_enchantment_template_2130231.html#item_enchantment_template-entry) and ties in an item's chance at having a random suffix attached to it when it shows up for the first time. This field and the [RandomProperty](#item_template-RandomProperty) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
+The number in this field points to [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) and ties in an item's chance at having a random suffix attached to it when it shows up for the first time. This field and the [RandomProperty](#item_template-RandomProperty) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
 
 ### block
 
@@ -3612,7 +3612,7 @@ The name of the script that the item should use. There is no 'internalitemhandle
 
 ### DisenchantID
 
-The disenchant loot template ID. See [disenchant\_loot\_template.entry](loot_template_2130202.html#loot_template-entry)
+The disenchant loot template ID. See [disenchant\_loot\_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)
 
 ### FoodType
 

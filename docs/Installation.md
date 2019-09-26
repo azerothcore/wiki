@@ -49,7 +49,9 @@ Check the options here if you know what you're doing: [CMake options](CMake-opti
 
 At this point, you must be in your "build/" directory.
 
-**Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
+**Note**: in the following command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
+
+**Note2**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
 
 ```
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
@@ -58,7 +60,7 @@ cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/b
 Then, replacing `4` with the number of threads that you want to execute, type:
 
 ```
-make -j 4
+make -j 6
 make install
 ```
 
@@ -149,10 +151,11 @@ Go to `CMAKE_INSTALL_PREFIX` and create a new directory named `data`
 
 Two options to choose from:
 
-#### A) [[Extract Client Data]] from your own WOW client with AzerothCore extractors
-#### B) (Easier) Download directly from mega with the links below:
+#### A) [Extract Client Data](http://www.azerothcore.org/wiki/Extract-Client-Data) from your own WOW client using the AzerothCore extractors
+#### B) (Easier) Download directly using one of the links below:
 
-- [From 03/01/19 to now](https://mega.nz/#F!Am4DBKCR!o9Qj_xFLfsg4sczqg0xq2A) (choose this version if you are installing AzerothCore for the first time)
+- [From 13/08/19 to now](https://github.com/wowgaming/client-data/releases/tag/v7) ( RECOMMENDED - choose this version if you are installing AzerothCore for the first time)
+- [From 03/01/19 to 13/08/19](https://mega.nz/#F!Am4DBKCR!o9Qj_xFLfsg4sczqg0xq2A)
 - [From 07/18/18 to 03/01/19](https://mega.nz/#!utg3hKJL!TtSzcWxVkvxF4HJvor8LFWhrBwwpH2pHpI-xHGr-HZo) (before commit [59d4e1d3a806a4f2f48f535be366bde1b24d737e](https://github.com/azerothcore/azerothcore-wotlk/commit/59d4e1d3a806a4f2f48f535be366bde1b24d737e)) 
 - For older versions, check out this page's history.
 
@@ -220,3 +223,10 @@ You can change all the passwords at once by pasting this into the worldserver co
 .account set password test9 new_pass new_pass
 .account set password test10 new_pass new_pass
 ```
+
+## Optional: Creating a regular user to work with on Linux
+Start with logging in to your Linux machine and create an account for the server itself on most recent distributions this can easily be done with the following command :
+
+```sudo adduser <username>``` Note: Change `<username>` to the preferred username of your going to use on your server.  
+	
+```sudo su - <username>``` Note: Switch user to newly created `<username>` so everything will run and compile with the user you just have created.

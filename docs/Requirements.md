@@ -3,18 +3,49 @@
 
 ### Debian
 
-`sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 ### Debian 9
 
-`sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+### Debian 10
+
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev`
 
 ### Ubuntu
-`sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
-Note: on latest versions of Ubuntu the default mysql version is 5.7. If you're using this version, [read this](Requirements#mysql-57).
+### Check your clang version
+
+`clang --version`
+
+Your `clang` version **MUST** be `6` or higher ([here](http://www.azerothcore.org/wiki/travis-build) you can check the versions that run in our Travis CI pipeline, we recommend to use one of those versions).
+
+For example, if you are using an older version of Ubuntu like 16.04, you need to install clang using:
+
+`sudo apt-get install clang-6.0`
+
+If you use another distro or version, search on google for how to install the right clang version for your system.
+
+### Check your cmake version
+
+`cmake --version`
+
+Your `cmake` version **MUST** be `3.8` or higher.
+
+If you are using an older version of Ubuntu like 16.04, you need to follow the instructions here in order to install the latest version:
+https://apt.kitware.com/
+
+### Ensure that the gcc-7 headers are installed
+
+This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
+https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
+
+After `sudo apt-get update` you can install gcc-7: `sudo apt-get install g++-7 gcc-7`
+
 
 # Mac OS X
 
@@ -36,13 +67,13 @@ Then use it to install the required packages:
 
 # Windows
 
-* Install Visual Studio >= 15 ( 2017 Desktop Community ) [Microsoft downloads](https://visualstudio.microsoft.com/downloads/)
+* Install Visual Studio >= 15 ( 2017 Desktop Community ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
 * Install [CMake](https://cmake.org/) version >= 2.8  
 
 * Install latest version of [Git Extensions](https://git-scm.com/download/win)
 
-* [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) ( 5.6 or higher )
+* [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) (version 5.6 or 5.7, anything later is not supported)
 
 * [MySQL Development File](https://docs.google.com/uc?id=0B1fF5EIDoF1fWjYwQ1FCNUJmMWc&export=download)
   
@@ -64,11 +95,3 @@ Then use it to install the required packages:
 4. _Note #2: While installing OpenSSL, choose **The OpenSSL binaries (/bin) directory** (NOT "The Windows system directory") when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for Core Installation._
 
 ***
-
-### MYSQL 5.7
-
-AzerothCore does not officially support MySQL version >= 5.7, but there is a way to get it up and running.
-
-You have to remove NO_ZERO_IN_DATE and NO_ZERO_DATE flags from MySQL's sql_mode variable in the MySQL config file so that all queries updates and core statements can be applied correctly.
-
-You will find some useful information on StackOverflow about [How to use AzerothCore with MySQL 5.7](https://stackoverflow.com/questions/53884965/how-to-use-azerothcore-with-mysql-5-7)
