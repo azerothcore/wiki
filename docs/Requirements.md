@@ -5,9 +5,13 @@
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
+Might not be compatible with our current master branch as we need clang-6.x+.
+
 ### Debian 9
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+You might need to add the `stretch-backports` repositories to APT in order to install clang-6.x+.
 
 ### Debian 10
 
