@@ -229,9 +229,9 @@ AnimKit ID from AnimKit.db2 that is applied on creature when spawned.
 
 This field controls the visibility distance for creatures:
 
-0 = Normal, 100.0f  // default visible distance, 100 yards on continents
+0 = Normal, standard visible distance from worldserver.conf (default 90 yards)
 
-1 = Large,  200.0f
+1 = Large, maximum visibility distance (250 yards)
 
 ### auras
 
