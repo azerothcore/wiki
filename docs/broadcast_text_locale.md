@@ -34,7 +34,7 @@ Can have 8 values : deDE, esES, esMX, frFR, koKR, ruRU, zhCN, zhTW
 
 ### MaleText
 
-The localized text that the male creature will broadcast, or male lpayers can read from gossip menu.
+The localized text that the male creature will broadcast, or male players can read from gossip menu.
 
 ### FemaleText
 
