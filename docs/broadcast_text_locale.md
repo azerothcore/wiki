@@ -11,13 +11,13 @@ Its purpose is (will be) used as a globalized table containing the localized tex
 
 **Structure**
 
-| Field                                    | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|------------------------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [ID](#ID)                 | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [locale](#locale)                       | varchar(4)  | unsigned   | PRI | NO   | 0       |       |         |
-| [MaleText](#MaleText)     | text        | signed     |     | YES  | NULL    |       |         |
-| [FemaleText](#FemaleText) | text        | signed     |     | YES  | NULL    |       |         |
-| WDBVerified                              | smallint(5) | signed     |     | YES   | 0       |       |         |
+| Field                       | Type         |  Key | Null | Default | Extra | Comment |
+|-----------------------------|--------------|------|------|---------|-------|---------|
+| [ID](#ID)                   | mediumint(8) |  PRI | NO   | 0       |       |         |
+| [locale](#locale)           | varchar(4)   |  PRI | NO   | NULL    |       |         |
+| [MaleText](#MaleText)       | text         |      | YES  | NULL    |       |         |
+| [FemaleText](#FemaleText)   | text         |      | YES  | NULL    |       |         |
+| VerifiedBuild               | smallint(5)  |      | YES  | 0       |       |         |
 
 ### Description of the fields
 
