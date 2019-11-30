@@ -902,7 +902,19 @@ This table holds vital static information for each character. This information l
 <td><p><br />
 </p></td>
 </tr>
+  
 <tr class="even">
+<td><p><a href="#creation_date">creation_date</a></p></td>
+<td><p>timestamp</p></td>
+<td></td>
+<td></td>
+<td><p>NO</p></td>
+<td><p>CURRENT_TIMESTAMP</p></td>
+<td></td>
+<td></td>
+</tr>
+  
+<tr class="odd">
 <td><p><a href="#deleteinfos_account">deleteInfos_Account</a></p></td>
 <td><p>int(10)</p></td>
 <td><p>unsigned</p></td>
@@ -915,7 +927,7 @@ This table holds vital static information for each character. This information l
 <td><p><br />
 </p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><p><a href="#deleteinfos_name">deleteInfos_Name</a></p></td>
 <td><p>varchar(12)</p></td>
 <td><p>unsigned</p></td>
@@ -928,7 +940,7 @@ This table holds vital static information for each character. This information l
 <td><p><br />
 </p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><p><a href="#deletedate">deleteDate</a></p></td>
 <td><p>int(10)</p></td>
 <td><p>signed</p></td>
@@ -1322,7 +1334,7 @@ Bitmasks of explored zones (1 bit for explored, 0 bit for unexplored)
 
 ### equipmentCache
 
-`field-no-description|58`
+Character's equipment and bag cache. `field-no-description|58`
 
 ### ammoId
 
@@ -1385,7 +1397,11 @@ A bitmask that contains visible actionbars for the player
 
 ### grantableLevels
 
+Recruit A Friend stuff.
 
+### creation_date
+
+Character's creation date and time. Format YYY-MM-DD HH:MM:SS according to server's time.
 
 ### deleteInfos\_Account
 
@@ -1398,5 +1414,3 @@ Stores the name of character if the character is deleted and CharDelete.Method i
 ### deleteDate
 
 Stores the date when the character was deleted and CharDelete.Method in worldserver.conf is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
-
-/ptr data-emoticon-name=/tdconfluenceTd/pp
