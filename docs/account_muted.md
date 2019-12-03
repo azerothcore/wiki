@@ -17,8 +17,8 @@ Disable chat messaging for any character from account of character $playerName (
 | [guid](#guid)               | int(10)      |  PRI | NO   | 0       |       |Global Unique Identifier|
 | [mutedate](#mutedate)       | int(10)      |  PRI | NO   | 0       |       |         |
 | [mutetime](#mutetime)       | int(10)      |      | NO   | 0       |       |         |
-| [mutedby](#mutedby)         | varchar(50)  |      | N O  | 0       |       |         |
-| [mutereason](#mutereason)    | varchar(255) |      | NO   | 0       |       |         |
+| [mutedby](#mutedby)         | varchar(50)  |      | NO   | 0       |       |         |
+| [mutereason](#mutereason)   | varchar(255) |      | NO   | 0       |       |         |
 
 ### Description of the fields
 
