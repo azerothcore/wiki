@@ -8,7 +8,7 @@ This table contains account IDs whose characters are assigned a ban chat (mute).
 
 GM-Command: **.mute [$playerName] $timeInMinutes [$reason]**.
 
-Disible chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline.
+Disable chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline.
 
 **Structure**
 
