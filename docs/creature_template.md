@@ -558,7 +558,7 @@ This field is overridden by ScriptName field if both are set.
 | ArcherAI        | Creature casts spell from field spell1; chases the victim.                                                          |
 | TurretAI        | Creature attacks using spell from field spell1; does not move.                                                      |
 | VehicleAI       | Creature acts as player vehicle.                                                                                    |
-| SmartAI         | Creature uses the "[smart_scripts](http://www.azerothcore.org/wiki/smart_scripts)" table to specify it's behaviour. |
+| SmartAI         | Creature uses the "[smart_scripts](smart_scripts.md)" table to specify it's behaviour. |
 
 #### MovementType
 
