@@ -4,7 +4,7 @@
 
 - You can help us by testing our [Pull Requests](Contribute#how-to-test-a-pull-request), and participating on the github issues' discussions. You can also provide support when you can in our discord, on the popular [stackoverflow](https://stackoverflow.com/questions/tagged/azerothcore) and on other emulation forums (ac-web.org for example). You can also help us with documentation (this wiki, or the readme), we need help with that too!
 - You can put bounties (money) on issues and suggestions by using bountysource. Read this: [Bountysource](Bountysource.md)
-- If you're a developer, check out this page: Contribute
+- If you're a developer, check out this page: [Contribute](Contribute.md)
 
 #### 2 - Why is AzerothCore using more RAM than TrinityCore?
 
@@ -44,4 +44,11 @@ Although we strive to provide blizzlike content we also value user experience. T
 
 #### 1 - Mysql has gone away
 
-Change the max packet size in your mysql configuration (and report on our github which SQL file is to be incriminated). Check this https://stackoverflow.com/search?q=2006+-+MySQL+server+has+gone+away
+Change the max packet size in your mysql configuration (and report on our github which SQL file is to be incriminated). Check this (https://stackoverflow.com/search?q=2006+-+MySQL+server+has+gone+away)
+
+
+## DEVELOPMENT QUESTIONS
+
+#### 1 - I need a new hook for my custom module, what can I do?
+
+You can add the hook to your own fork (cf: [Create a new Hook](http://www.azerothcore.org/wiki/Create-a-new-Hook)) and create a new Pull Request to the official repository so we can validate it and merge it.
