@@ -44,7 +44,7 @@ Although we strive to provide blizzlike content we also value user experience. T
 
 #### 1 - Mysql has gone away
 
-Change the max packet size in your mysql configuration (and report on our github which SQL file is to be incriminated). Check this (https://stackoverflow.com/search?q=2006+-+MySQL+server+has+gone+away)
+Change the max packet size in your mysql configuration (and report on our github which SQL file is to be incriminated). Check this <https://stackoverflow.com/search?q=2006+-+MySQL+server+has+gone+away>
 
 
 ## DEVELOPMENT QUESTIONS
