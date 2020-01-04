@@ -141,7 +141,7 @@ make install -j $MTHREADS;
 - After the terminal says `make install -j $MTHREADS` after compiling, hit 'Return' or 'Enter' on your Keyboard to install and finish the compiling process.
 
 #### Data Files
-- As the AZCore User, let's navigate back to the home directory `cd`
+- As the `azcore` user, let's navigate back to the home directory `cd`
 - Now we need to go to the compile server folder `cd azeroth-server`
 - We need to make a folder for our data files and navigate to it `mkdir data;cd data`
 - Let's download the data files required. `curl https://wow.heyaapl.com/data.zip --output data.zip`
