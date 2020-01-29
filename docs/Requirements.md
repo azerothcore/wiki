@@ -1,5 +1,29 @@
 # GNU/Linux
-## Debian-based
+
+## Debian-based requirements
+
+### Ubuntu
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
+
+--- 
+
+### Install last cmake version on Debian
+
+To install last version of cmake use:
+```
+sudo apt install python3-pip
+pip3 install --upgrade cmake
+```
+
+Than **reboot** to sync the bash and use cmake from the terminal, than type the followings commands to check the cmake version:
+```
+cmake --version
+```
+You should have a version **>= 3.8**.
+
+Continue below the guide to install the other installation requirements.
 
 ### Debian
 
@@ -13,10 +37,8 @@
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev`
 
-### Ubuntu
-`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+--- 
 
-To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
 ### Check your clang version
 
