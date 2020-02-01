@@ -1,0 +1,1 @@
+# AZEROTHCORE INSTALLATION on Arch based Distos
