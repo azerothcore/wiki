@@ -2,17 +2,17 @@
 
 If dealing with IDs it has to be ensured that the same ID is not used twice. Please use these ranges for new IDs and always check if the ID you chose is not already used by the core or one of the modules (see below for already existing IDs).
 
-| ID type           | Table               | Field      | Reserved IDs for the core | Reserved IDs for modules | Reserved IDs for custom use | Max value |
-|-------------------|---------------------|------------|---------------------------|--------------------------|-----------------------------|-----------|
-| Creature ID       | creature_template   | entry      | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| Creature GUID     | creature            | guid       | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| Gameobject ID     | gameobject_template | entry      | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| Gameobject GUID   | gameobject          | guid       | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| NPC Text ID       | npc_text            | ID         | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| Gossip Menu ID    | gossip_menu         | MenuID     | < 57000                   | >= 57000 < 60000         | >= 60000                    | 65535     |
-| Broadcast Text ID | broadcast_text      | ID         | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| Creature Text ID  | creature_text       | CreatureID | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
-| ACore String ID   | acore_string        | entry      | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215  |
+| ID type           | Table               | Field      | Reserved IDs for the core | Reserved IDs for modules | Reserved IDs for custom use | Max value  |
+|-------------------|---------------------|------------|---------------------------|--------------------------|-----------------------------|------------|
+| Creature ID       | creature_template   | entry      | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215   |
+| Creature GUID     | creature            | guid       | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 4294967295 |
+| Gameobject ID     | gameobject_template | entry      | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215   |
+| Gameobject GUID   | gameobject          | guid       | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 4294967295 |
+| NPC Text ID       | npc_text            | ID         | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215   |
+| Gossip Menu ID    | gossip_menu         | MenuID     | < 57000                   | >= 57000 < 60000         | >= 60000                    | 65535      |
+| Broadcast Text ID | broadcast_text      | ID         | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215   |
+| Creature Text ID  | creature_text       | CreatureID | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215   |
+| ACore String ID   | acore_string        | entry      | < 4000000                 | >= 4000000 < 5000000     | >= 5000000                  | 16777215   |
 
 
 # IDs already in use by modules
