@@ -121,6 +121,41 @@ Zero value of **Chance** is allowed for [grouped entries](#loot_template-groupi
 
 A special parameter used for separating conditional loot, such as Hard Mode loot. A lootmode of 0 will effectively disable a loot entry (its roll will always fail). This column is a bitmask, so you shouldn't duplicate loot across lootmodes. The active lootmode(s) can be changed at any time by the core. This column should only be used if required, in most cases it should be left as 1. Valid lootmodes include: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 16384, 32768.
 
+Loot mode examples from the Flame Leviathan fight in Ulduar:
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>LootMode</strong></p></td>
+<td><p><strong>Use</strong></p></td>
+</tr>
+<tr class="even">
+<td><p>1</p></td>
+<td><p>Normal mode (0 towers)</p></td>
+</tr>
+<tr class="odd">
+<td><p>2</p></td>
+<td><p>Hard mode A (1 tower)</p></td>
+</tr>
+<tr class="even">
+<td><p>4</p></td>
+<td><p>Hard mode B (2 towers)</p></td>
+</tr>
+<tr class="odd">
+<td><p>8</p></td>
+<td><p>Hard mode C (3 towers)</p></td>
+</tr>
+<tr class="even">
+<td><p>16</p></td>
+<td><p>Hard mode D (4 towers)</p></td>
+</tr>
+</tbody>
+</table>
+
 ### GroupId
 
 A group is a set of loot definitions processed in such a way that at any given looting event the loot generated can receive only 1 (or none) [item](#loot_template-item) from the items declared in the loot definitions of the group. Groups are formed by loot definitions having the same values of [entry](#loot_template-entry) and **GroupId** fields.
