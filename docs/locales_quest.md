@@ -1,4 +1,7 @@
-[Database Structure](Database-Structure) > [World-Database](World-Database) > [locales_quest](locales_quest)
+# locales_quest
+
+[<-Back-to:World](database-world.md)
+
 
 Column | Type | Description
 --- | --- | ---

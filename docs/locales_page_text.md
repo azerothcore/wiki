@@ -1,4 +1,7 @@
-[Database Structure](Database-Structure) > [World-Database](World-Database) > [locales_page_text](locales_page_text)
+# locales_page_text
+
+[<-Back-to:World](database-world.md)
+
 
 Column | Type | Description
 --- | --- | ---
