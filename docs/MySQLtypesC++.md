@@ -10,7 +10,7 @@
                 <tr>
                     <th class="confluenceTh">
                         <p>MySQL type</p>
-                        < /th> <th class="confluenceTh">Trinity type
+                        <th class="confluenceTh">Core type
                     </th>
                     <th class="confluenceTh">Example code</th>
                     <th colspan="1" class="confluenceTh">Variable operators</th>
