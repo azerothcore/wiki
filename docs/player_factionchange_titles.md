@@ -1,4 +1,7 @@
-[Database Structure](Database-Structure) > [World-Database](World-Database) > [player_factionchange_titles](player_factionchange_titles)
+# player_factionchange_titles
+
+[<-Back-to:World](database-world.md)
+
 
 Column | Type | Description
 --- | --- | ---

@@ -50,7 +50,7 @@
 **Description of the fields**
 
 ### TypeId
-field-no-description|1
+`field-no-description|1`
 
 ### ScriptName
 The name of the script that this outdoor pvp uses. This ties a script from a scripting engine to this outdoor pvp.
