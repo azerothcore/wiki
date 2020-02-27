@@ -1,4 +1,3 @@
-</div>
 <div id="main-content" data-inline-comments-target="true" class="wiki-content">
     <div class="table-wrap">
         <table class="confluenceTable" resolved="">
@@ -193,7 +192,9 @@
     <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true"
         data-macro-name="code" data-macro-id="">
         <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Example</b></div>
-        <div class="codeContent panelContent pdl">
+        <div class="codeContent panelContent pdl"></div>
+	</div>
+</div>
 		
 ```cpp
 // world database query                           0      1      2      3        4
