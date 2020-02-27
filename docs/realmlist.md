@@ -518,8 +518,3 @@ Accepted Client version for the realm.
 | 11623         | 3.3.3        |
 | 11723         | 3.3.3a       |
 | 12340         | 3.3.5a       |
-
-## Attachments:
-
-![](images/icons/bullet_blue.gif){width="8" height="8"} [1.jpg](attachments/2130016/73202494.jpg) (image/jpeg)
-

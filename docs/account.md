@@ -1,7 +1,8 @@
 # account
 
-# Table: account**
-**
+[<-Back-to:Auth](database-auth.md)
+
+**The \`account\` table**
 
 This table holds information on all available accounts.
 
@@ -428,9 +429,4 @@ Stores information about client's OS. Used by Warden system.
 
 ### recruiter
 
-The account ID of another account. Used for recuit-a-friend system. See [account.id](#account-id)
-
-## Attachments:
-
-![](images/icons/bullet_blue.gif){width="8" height="8"} [Vbd5vtN.png](attachments/2130004/2131663.png) (image/png)
-
+The account ID of another account. Used for recuit-a-friend system. See [account.id](account#id)

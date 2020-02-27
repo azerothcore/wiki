@@ -77,7 +77,7 @@ This table contains the autobroadcast entries for your realms. Values like it's 
 
 ### realmid
 
-The [\`realmlist\`.\`id\`](realmlist). Defines which realm this entry belongs to. Use **-1** for all realms to load this entry.
+The [realmlist.id](realmlist). Defines which realm this entry belongs to. Use **-1** for all realms to load this entry.
 
 ### id
 
