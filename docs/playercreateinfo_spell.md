@@ -2,7 +2,6 @@
 
 [<-Back-to:World](database-world.md)
 
-
 Column | Type | Description
 --- | --- | ---
 Racemask | int(10) unsigned | 

@@ -2,7 +2,6 @@
 
 [<-Back-to:World](database-world.md)
 
-
 Column | Type | Description
 --- | --- | ---
 Alliance_id | int(8) | 

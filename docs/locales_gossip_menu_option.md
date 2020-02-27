@@ -2,7 +2,6 @@
 
 [<-Back-to:World](database-world.md)
 
-
 Column | Type | Description
 --- | --- | ---
 Menu_id | smallint(6) unsigned | 

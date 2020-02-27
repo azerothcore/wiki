@@ -2,7 +2,6 @@
 
 [<-Back-to:World](database-world.md)
 
-
 Column | Type | Description
 --- | --- | ---
 Id | mediumint(8) unsigned | 
