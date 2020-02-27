@@ -1,5 +1,7 @@
 # quest\_template
 
+[<-Back-to:World](database-world.md)
+
 **Table: quest\_template**
 
 Contains all basic definitions of available quests.
