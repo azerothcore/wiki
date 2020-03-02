@@ -490,7 +490,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |group disband|3|Syntax: .group disband [$characterName] Disbands the given character's group.|
 |group remove|3|Syntax: .group remove [$characterName] Removes the given character from his group.|
 |debug moveflags|3|Syntax: .debug moveflags [$newMoveFlags [$newMoveFlags2]] No params given will output the current moveflags of the target|
-|morph|2|Syntax: .morph #displayid (Change your current model id to #displayid.) or .morph reset (Reset the original model for the selected target)|
+|morph|2|Syntax: .morph #displayid Change your current model id to #displayid.|
 |modify arenapoints|1|Syntax: .modify arenapoints #value Add $amount arena points to the selected player.|
 |npc set data|3|Syntax: .npc set data $field $data Sets data for the selected creature. Used for testing Scripting|
 |disable add quest|3|Syntax: .disable add quest $entry $flag $comment|
