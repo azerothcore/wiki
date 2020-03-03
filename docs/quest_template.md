@@ -1203,10 +1203,6 @@ Objectives of the quest. If empty, quest is an auto-complete quest that can be i
 
 The quest text. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
 
-### EndText
-
-`field-no-description|57`
-
 ### OfferRewardText
 
 First text send to the player by the NPC when completing the quest. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
@@ -1214,10 +1210,6 @@ First text send to the player by the NPC when completing the quest. You can use 
 ### RequestItemsText
 
 Text sent to player when the player tries to talk to the NPC with the quest active but incomplete. (The text under the "Progress" title in Wowhead.) You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
-
-### CompletedText
-
-`field-no-description|59`
 
 ### RequiredNpcOrGo
 
