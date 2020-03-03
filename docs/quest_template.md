@@ -955,7 +955,7 @@ This flag field defines more specifically the type of quest it is. Aside from th
 <tr class="even">
 <td><p>1</p></td>
 <td><p>QUEST_FLAGS_STAY_ALIVE</p></td>
-<td><p>If the player dies, the quest is failed.?</p></td>
+<td><p>If the player dies, the quest is failed.</p></td>
 </tr>
 <tr class="odd">
 <td><p>2</p></td>
@@ -1475,4 +1475,3 @@ Note:
 If player can choose between chain A or B may be determined by faction status (aldor or scryer), using ReqMinRepFaction = 1. Player should not be able to be neutral+1 with both at the same time. This may be the common threshold to obtain aldor or scryer quests (this is unsure). If that is the case, only the unlock of C, D and E after complete A2 *or* B2 is the impossible part.\_Note 2: With the [Conditions](conditions) table now every quest chain is possible.''
 
 /table
-
