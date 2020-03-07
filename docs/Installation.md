@@ -12,6 +12,10 @@ This page describes how to use [AzerothCore with AWS](aws-tutorial.md)
 
 This page describes how to use [AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
 
+## ArchLinux and Arch based distro
+
+This page describes how to use [AzerothCore with ArchLinux](arch-linux.md)
+
 ## CLASSIC INSTALLATION
 
 /!\ For **macOS** users: the build on mac is currently broken (see [this issue](https://github.com/azerothcore/azerothcore-wotlk/issues/122)), but you can still use AzerothCore on macOS with Docker.
