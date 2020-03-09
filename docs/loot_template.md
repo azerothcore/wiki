@@ -110,7 +110,7 @@ Negative and zero values of **Chance** make no sense for that case and should n
 
 Zero value of **Chance** is allowed for [grouped entries](#loot_template-groupid) only.
 
-(Non-zero) values of **Chance** in loot definition are multiplied by RATE\_DROP\_ITEMS (mangos config setting) during loot generation for references and non-reference entries, but not for grouped entries.
+(Non-zero) values of **Chance** in loot definition are multiplied by Rate.Drop.Item.XXX (worldserver.conf settings) during loot generation for references and non-reference entries, **but not for grouped entries.** It only works when `groupid` is equal to 0.
 
 ### QuestRequired
 
