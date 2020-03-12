@@ -29,9 +29,9 @@ CharacterDatabaseInfo = "127.0.0.1;3306;root;root;azerothcore_test_chars"
 
 ## Modules configuration
 
-After normal `.conf` and `.conf.dist` files has been loaded, you are able to load an infinite number of configuration files using scripts/modules API. They will have the same behaviour as described above. 
+After normal `.conf` and `.conf.dist` files have been loaded, you are able to load an infinite number of configuration files using scripts/modules API. They will have the same behaviour as described above. 
 
-**Note:** we do not recommend you to overwrite server configuration properties since you can have concurrency issues with other modules that use them too. Instead, **create new namespaced properties**.
+**Note:** We do not recommend you to overwrite server configuration properties since you can have concurrency issues with other modules that use them too. Instead, **create new namespaced properties**.
 
 For example, if you want to modify the "disable water breath" functionality in your module. Instead of using the existing property from `worldserver.conf.dist`:
 
@@ -46,7 +46,7 @@ Use a namespace like:
 and work with that.
 
 
-## Can I use relative pathes in the configuration files?
+## Can I use relative paths in the configuration files?
 
 Yes, but it's not recommended. Each path is relative to the directory from where you launched the authserver/worldserver, whether you launch it manually or through a script. So if you do this (linux example):
 
@@ -55,7 +55,7 @@ cd /tmp/test
 ./path/to/worldserver
 ```
 
-And you have relative pathes in the worldserver.conf like `LogsDir = "../logs/worldserver/"`
+And you have relative paths in the worldserver.conf like `LogsDir = "../logs/worldserver/"`
 It will create the logs inside `/logs/worldserver`.
 
 ## Conclusion
