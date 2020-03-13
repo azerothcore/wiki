@@ -1,7 +1,3 @@
-AzerothCore is able to read on multiple .conf file for both authserver and worldserver
-
-In fact our modules are capable of create their own [configuration files](Create-a-Module#create-a-custom-configuration-file).
-
 ## Why worldserver and authserver needs .conf.dist files to be present in installation path?
 
 It's because AzerothCore use them as a "fallback" for configurations that you don't have on copied .conf file ( for example if we updated the dist or you've removed a conf )
@@ -31,28 +27,46 @@ WorldDatabaseInfo     = "127.0.0.1;3306;root;root;azerothcore_test_world"
 CharacterDatabaseInfo = "127.0.0.1;3306;root;root;azerothcore_test_chars"
 ```
 
-### Modules case
+## Modules configuration
 
-After normal .conf and .conf.dist files has been loaded, you're able to load infinite other configuration files using scripts/modules API. They will have the same behaviour of .conf described above. However, we do not recommend you to overwrite server configuration properties since you can have concurrency issues with other modules that use them too, **create new namespaced properties instead**.
+After normal `.conf` and `.conf.dist` files have been loaded, you are able to load an infinite number of configuration files using scripts/modules API. They will have the same behaviour as described above. 
 
-For example, if you want to improve in your module the "disable water breath" functionality of the core. Instead of add this property in your conf file:
+**Note:** We do not recommend you to overwrite server configuration properties since you can have concurrency issues with other modules that use them too. Instead, **create new namespaced properties**.
 
-`DisableWaterBreath = x`
+For example, if you want to modify the "disable water breath" functionality in your module. Instead of using the existing property from `worldserver.conf.dist`:
 
-You can use something like:
+```
+DisableWaterBreath = x
+```
+
+Use a namespace like:
 
 `MyModuleName.DisableWaterBreath = x`
 
-and work with it
+and work with that.
 
+
+## Can I use relative paths in the configuration files?
+
+Yes, but it's not recommended. Each path is relative to the directory from where you launched the authserver/worldserver, whether you launch it manually or through a script. So if you do this (linux example):
+
+```bash
+cd /tmp/test
+./path/to/worldserver
+```
+
+And you have relative paths in the worldserver.conf like `LogsDir = "../logs/worldserver/"`
+It will create the logs inside `/logs/worldserver`.
 
 ## Conclusion
 
-To summarize this article, we can say that the configuration files will be loaded following this flow:
-
+Configuration files will be loaded following this flow:
 
 ```
-loading all new properties from worldserver.dist.conf
-loading all new properties from worldserver.conf ( and overwrite properties with same name loaded before )
-loading all new properties from modules .conf files ( and overwrite properties with same name loaded before )
+authserver.conf.dist
+authserver.conf (overwrite properties from authserver.conf.dist)
+worldserver.conf.dist
+worldserver.conf (overwrite properties from worldserver.conf.dist)
+modules *.conf.dist
+modules *.conf (overwrite properties from each module's .conf.dist)
 ```
