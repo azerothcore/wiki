@@ -25,6 +25,16 @@ You should have a version **>= 3.8**.
 
 Continue below the guide to install the other installation requirements.
 
+**Troubleshooting (cmake install)**: if you get any errors like: `No module named 'skbuild'`, you can solve with this:
+
+```
+apt install python3-pip
+pip3 install scikit-build
+pip3 install --upgrade pip
+pip3 install cmake
+```
+
+
 ### Debian
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
