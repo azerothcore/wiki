@@ -17,7 +17,7 @@ cd ace
 makepkg -si
 ```
 ## Install *AzerothCore*
-After that you can install [azeroth-core](https://aur.archlinux.org/packages/azerothcore/) package:
+After that you can install [azerothcore](https://aur.archlinux.org/packages/azerothcore/) package:
 
 ```
 git clone https://aur.archlinux.org/azerothcore.git
