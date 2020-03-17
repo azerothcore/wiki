@@ -17,11 +17,11 @@ cd ace
 makepkg -si
 ```
 ## Install *AzerothCore*
-After that you can install [azeroth-core](https://aur.archlinux.org/packages/azeroth-core/) package:
+After that you can install [azeroth-core](https://aur.archlinux.org/packages/azerothcore/) package:
 
 ```
-git clone https://aur.archlinux.org/azeroth-core.git
-cd azeroth-core
+git clone https://aur.archlinux.org/azerothcore.git
+cd azerothcore
 makepkg -si
 ```
 Moreover, if you want you can use [*yay*](https://github.com/Jguer/yay) as AUR package manager to install AUR packages.
