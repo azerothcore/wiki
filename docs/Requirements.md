@@ -9,7 +9,12 @@ To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other se
 
 --- 
 
-### Install last cmake version on Debian
+
+### Debian 8
+
+`sudo apt-get update && sudo apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+### Install last cmake version on Debian 8
 
 To install last version of cmake use:
 ```
@@ -34,14 +39,12 @@ pip3 install --upgrade pip
 pip3 install cmake
 ```
 
-
-### Debian
-
-`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
-
 ### Debian 9
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+You might need to add the stretch-backports repositories to APT in order to install clang-6.x+ and cmake v3.8+.
+If you do not succeed installing cmake you can use the package manager of python3 (pip3)
 
 ### Debian 10
 
@@ -68,8 +71,7 @@ If you use another distro or version, search on google for how to install the ri
 
 Your `cmake` version **MUST** be `3.8` or higher.
 
-If you are using an older version of Ubuntu like 16.04, you need to follow the instructions here in order to install the latest version:
-https://apt.kitware.com/
+On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
 ### Ensure that the gcc-7 headers are installed
 
