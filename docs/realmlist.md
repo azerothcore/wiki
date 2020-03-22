@@ -38,7 +38,7 @@ This table sets up information on all available realms. Each row controls a diff
 <td><p>signed</p></td>
 <td><p>UNI</p></td>
 <td><p>NO</p></td>
-<td><p>Trinity</p></td>
+<td><p>AzerothCore</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
