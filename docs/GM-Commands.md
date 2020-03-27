@@ -142,7 +142,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |help|0|Syntax: .help [$command] Display usage instructions for the given $command. If no $command provided show list available commands.|
 |hidearea|3|Syntax: .hidearea #areaid Hide the area of #areaid to the selected character. If no character is selected, hide this area to you.|
 |honor add|2|Syntax: .honor add $amount Add a certain amount of honor (gained today) to the selected player.|
-|honor add kill|2|Syntax: .honor add kill Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
+|~~honor add kill~~ NOT IMPLEMENTED|2|Syntax: .honor add kill Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
 |honor update|2|Syntax: .honor update Force the yesterday's honor fields to be updated with today's data, which will get reset for the selected player.|
 |honor|2|Syntax: .honor $subcommand Type .honor to see the list of possible subcommands or .help honor $subcommand to see info on subcommands|
 |modify talentpoints|1|Syntax: .modify talentpoints #amount Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward.|
