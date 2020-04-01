@@ -20,7 +20,7 @@ If dealing with IDs it has to be ensured that the same ID is not used twice. Ple
 **The following IDs may not be used by the core or other modules!**
 
 
-## Creature IDs
+## creature_template IDs
 
 - Guild House Ver. 1: 70101
 - Guild House Ver. 2: 55005
@@ -44,7 +44,7 @@ If dealing with IDs it has to be ensured that the same ID is not used twice. Ple
 - NPC Weapon Visual: 55003
 - NPC Morph: 55004
 - NPC Reward Shop: 92000
-
+- NPC 1v1 arena: 999991
 
 - Battleground: Slavery Valley 129999, 130000, 130001
 
