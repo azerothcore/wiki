@@ -20,7 +20,7 @@ If dealing with IDs it has to be ensured that the same ID is not used twice. Ple
 **The following IDs may not be used by the core or other modules!**
 
 
-## creature_template IDs
+## Creature IDs
 
 - Guild House Ver. 1: 70101
 - Guild House Ver. 2: 55005
@@ -32,7 +32,6 @@ If dealing with IDs it has to be ensured that the same ID is not used twice. Ple
 - NPC Codebox: 601021
 - NPC Beastmaster: 601026
 - NPC Morphsummon: 601072
-
 
 - NPC Emblem Transfer: 100000
 - NPC Transmog: 190010
