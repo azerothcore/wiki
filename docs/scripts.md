@@ -275,7 +275,7 @@ Depending on what command was used, the meaning and use for the following fields
 
 - source: Creature.
 - datalong: MovementType.
-- datalong2: MovementDistance (e.g. spawndist for MovementType 1).
+- datalong2: MovementDistance (e.g. wander_distance for MovementType 1).
 - dataint: pathid (for MovementType 2, see [waypoint\_data.id](waypoint_data#id)).
 
 ### guid

@@ -463,7 +463,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload creature_text|3|Syntax: .reload creature_text Reload creature_text table.|
 |debug areatriggers|1|Syntax: .debug areatriggers Toggle debug mode for areatriggers. In debug mode GM will be notified if reaching an areatrigger|
 |learn all recipes|2|Syntax: .learn all recipes [$profession] Learns all recipes of specified profession and sets skill level to max. Example: .learn all recipes enchanting|
-|npc set spawndist|2|Syntax: .npc set spawndist #dist Adjust spawndistance of selected creature to dist.|
+|npc set wanderdistance|3|Syntax: .npc set wanderdistance #dist Adjust wanderdistance of selected creature to dist.|
 |npc set spawntime|2|Syntax: .npc set spawntime #time Adjust spawntime of selected creature to time.|
 |npc add temp|2|Syntax: .npc add temp Adds temporary NPC, not saved to database.|
 |npc textemote|1|Syntax: .npc textemote #emoteid Make the selected creature to do textemote with an emote of id #emoteid.|
