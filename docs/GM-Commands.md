@@ -366,7 +366,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |saveall|1|Syntax: .saveall Save all characters in game.|
 |send items|3|Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN] Send a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.|
 |send mail|1|Syntax: .send mail #playername "#subject" "#text" Send a mail to a player. Subject and mail text must be in "".|
-|send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR.|
+|send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR. **Will return an error if player is offline (can be problematic with SOAP for example)!**|
 |send money|3|Syntax: .send money #playername "#subject" "#text" #money Send mail with money to a player. Subject and mail text must be in "".|
 |server corpses|2|Syntax: .server corpses Triggering corpses expire check in world.|
 |server exit|4|Syntax: .server exit Terminate azeroth-core NOW. Exit code 0.|
