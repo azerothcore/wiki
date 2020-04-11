@@ -564,11 +564,11 @@ This field is overridden by ScriptName field if both are set.
 
 The creature's default movement type.
 
-| ID | Type                                        |
-|----|---------------------------------------------|
-| 0  | Idle; stay in one place                     |
-| 1  | Random movement inside the spawndist radius |
-| 2  | Waypoint movement                           |
+| ID | Type                                        		 |
+|----|---------------------------------------------------|
+| 0  | Idle; stay in one place                     		 |
+| 1  | Random movement inside the wander_distance radius |
+| 2  | Waypoint movement                           		 |
 
 #### InhabitType
 
