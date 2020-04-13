@@ -1467,6 +1467,28 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td>If the value of specified counterID is equal to a specified value</td>
 </tr>
+<tr class="odd">
+<td>SMART_EVENT_NEAR_PLAYERS</td>
+<td>101</td>
+<td>minPlayers</td>
+<td>Range (yards)</td>
+<td>FirstCheck (ms)</td>
+<td>RepeatCheck (ms)</td>
+<td><p><br />
+</p></td>
+<td><p>Event will trigger if there are more than minPlayers in range.</p></td>
+</tr>
+<tr class="odd">
+<td>SMART_EVENT_NEAR_PLAYERS_NEGATION</td>
+<td>102</td>
+<td>maxPlayers</td>
+<td>Range (yards)</td>
+<td>FirstCheck (ms)</td>
+<td>RepeatCheck (ms)</td>
+<td><p><br />
+</p></td>
+<td><p>Event will trigger if there are less than maxPlayers in range.</p></td>
+</tr>
 </tbody>
 </table>
 
