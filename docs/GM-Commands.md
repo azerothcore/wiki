@@ -17,7 +17,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |account set password|4|Syntax: .account set password $account $password $password Set password for account.|
 |account set|3|Syntax: .account set $subcommand Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands|
 |account|0|Syntax: .account Display the access level of your account.|
-|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. .|
+|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
 |additemset|3|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
 |announce|1|Syntax: .announce $MessageToBroadcast Send a global message to all players online in chat log.|
 |arena captain|3|Syntax: .arena captain #TeamID $name. A command to set new captain to the team. $name must be in the team|
