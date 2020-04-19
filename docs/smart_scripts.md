@@ -2082,6 +2082,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SET_IN_COMBAT_WITH_ZONE</p></td>
 <td><p>38</p></td>
+<td><p>Range in yards for all players to be forced into combat with the creature. Only used in the open world. Leave as 0 if used in an instance.</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2092,10 +2093,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
+<td><p>Sets the creature in combat with its zone, can be used in instances and open world. Useful for creatures inside instances so all players will be set in combat until the fight ends.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_ACTION_CALL_FOR_HELP</p></td>
