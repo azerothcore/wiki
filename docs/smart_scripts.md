@@ -3708,14 +3708,14 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 0 = permanent</p></td>
 <td><p>Distance between rings (yards)</p></td>
 <td><p>Distance between each summons in a row (yards)</p></td>
-<td><p>Length of the cone</p></td>
-<td><p>Width of the cone (angle)</p></td>
-<td><p>Legion, BFA, Mop like Custom Cone-Spells</p></td>
+<td><p>Length of the cone (yards)</p></td>
+<td><p>Width of the cone (angle 1°-360°)</p></td>
+<td><p>Allows you to spawn creatures in a cone (As seen in later expansions). Useful for custom cone aoes</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_ACTION_PLAYER_TALK</p></td>
 <td><p>220</p></td>
-<td><p>creature_text.groupid</p></td>
+<td><p>acore_string.id</p></td>
 <td><p>yell? (0/1)</p></td>
 <td><p><br />
 </p></td>
@@ -3737,7 +3737,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>Spiral appearance</p></td>
 <td><p>range max</p></td>
 <td><p>phi_delta</p></td>
-<td><p>Vortex = Spiral</p></td>
+<td><p>Allows you to summon creature in a customizable spiral(/vortex). Parameters can be confusing, exmaple parameters for testing: 5000 - summon duration, 5 - Spiral Scaling, 25 - spiral appearance, 60 - range max, 40 - phi delta</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_ACTION_CU_ENCOUNTER_START</p></td>
@@ -3754,7 +3754,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>Resets all cooldowns and removes exhausted debuffs on boss start</p></td>
+<td><p>Resets all cooldowns and removes exhausted debuffs when action is called</p></td>
 </tr>
 </tbody>
 </table>
