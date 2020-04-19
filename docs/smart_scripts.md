@@ -4174,9 +4174,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p>All players up to maxCount within the specified range.</p></td>
+<td><p>>0 it will try all possible targets in max instead of min-maxing.</p></td>
+<td><p>All players up to maxCount within the specified range. Excluding GMs and Dead.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_PLAYER_DISTANCE</p></td>
@@ -4317,10 +4316,10 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>All units on creature's threat list within the specified distance if maxDist > 0</p></td>
 </tr>
 <tr class="even">
-<td>SMART_TARGET_CLOSEST_ENEMY</td>
-<td>25</td>
-<td>maxDist</td>
-<td>playerOnly (0/1)</td>
+<td><p>SMART_TARGET_CLOSEST_ENEMY</p></td>
+<td><p>25</p></td>
+<td><p>maxDist</p></td>
+<td><p>playerOnly (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4333,13 +4332,13 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td>Any attackable target (creature or player) within maxDist</td>
+<td><p>Any attackable target (creature or player) within maxDist</p></td>
 </tr>
 <tr class="odd">
-<td>SMART_TARGET_CLOSEST_FRIENDLY</td>
-<td>26</td>
-<td>maxDist</td>
-<td>playerOnly (0/1)</td>
+<td><p>SMART_TARGET_CLOSEST_FRIENDLY</p></td>
+<td><p>26</p></td>
+<td><p>maxDist</p></td>
+<td><p>playerOnly (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4352,14 +4351,14 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td>Any friendly unit (creature, player or pet) within maxDist</td>
+<td><p>Any friendly unit (creature, player or pet) within maxDist</p></td>
 </tr>
 <tr class="even">
-<td>SMART_TARGET_FARTHEST</td>
-<td>28</td>
-<td>maxDist</td>
-<td>playerOnly (0/1)</td>
-<td>isInLos (0/1)</td>
+<td><p>SMART_TARGET_FARTHEST</p></td>
+<td><p>28</p></td>
+<td><p>maxDist</p></td>
+<td><p>playerOnly (0/1)</p></td>
+<td><p>isInLos (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4371,6 +4370,58 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p><br />
 </p></td>
 <td><p>Farthest unit on the threat list</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_TARGET_PLAYER_WITH_AURA</p></td>
+<td><p>201</p></td>
+<td><p>spellID</p></td>
+<td><p>Negative (0/1)</p></td>
+<td><p>MaxDist</p></td>
+<td><p>MinDist</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><p>Number to resize the target list</p></td>
+<td><p><p>Target players with aura</p></td>
+</tr>
+<tr class="even">
+<td><p>SMART_TARGET_RANDOM_POINT</p></td>
+<td>201</p></td>
+<td><p>range (yards)</p></td>
+<td><p>amount (for summoning creature)</p></td>
+<td><p>self as middle (0/1)<br />
+else use xyz</p></td>
+<td><p></p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_TARGET_ROLE_SELECTION</p></td>
+<td>201</p></td>
+<td><p>rangeMax (yards)</p></td>
+<td><p>TargetMask (Tanks (1), Healer (2) Damage (4))</p></td>
+<td><p>Resize list</p></td>
+<td><p></p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>Target a Tank/Healer/DPS role. Based on the players spec.</p></td>
 </tr>
 </tbody>
 </table>
