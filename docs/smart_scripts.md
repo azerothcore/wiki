@@ -2543,8 +2543,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_SET_ORIENTATION</p></td>
 <td><p>66</p></td>
 <td><p>Depends on the script target. If SMART_TARGET_SELF, facing will be the same as in HomePosition, For SMART_TARGET_POSITION you need to set target_o : 0 = North, West = 1.5, South = 3, East = 4.5</p></td>
-<td><p><br />
-</p></td>
+<td><p>Random orientation? (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3707,6 +3706,75 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 0: Play music for the specified target(s)<br />
 1: Play music for all players in the entire zone<br />
 2: Play music for all players in the area</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_ACTION_CUSTOM_CAST</p></td>
+<td><p>218</p></td>
+<td><p>spellId</p></td>
+<td><p>castFlag</p></td>
+<td><p>bp0</p></td>
+<td><p>bp1</p></td>
+<td><p>bp2</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td><p>SMART_ACTION_CONE_SUMMON</p></td>
+<td><p>219</p></td>
+<td><p>entry</p></td>
+<td><p>Duration (ms)<br />
+0 = permanent</p></td>
+<td><p>Distance between rings (yards)</p></td>
+<td><p>Distance between each summons in a row (yards)</p></td>
+<td><p>Length of the cone (yards)</p></td>
+<td><p>Width of the cone (angle 1°-360°)</p></td>
+<td><p>Allows you to spawn creatures in a cone (As seen in later expansions). Useful for custom cone aoes</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_ACTION_PLAYER_TALK</p></td>
+<td><p>220</p></td>
+<td><p>acore_string.id</p></td>
+<td><p>yell? (0/1)</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>Make the player say something</p></td>
+</tr>
+<tr class="even">
+<td><p>SMART_ACTION_VORTEX_SUMMON</p></td>
+<td><p>221</p></td>
+<td><p>entry</p></td>
+<td><p>Duration (ms)<br />
+0 = permanent</p></td>
+<td><p>Spiral scaling</p></td>
+<td><p>Spiral appearance</p></td>
+<td><p>range max</p></td>
+<td><p>phi_delta</p></td>
+<td><p>Allows you to summon creature in a customizable spiral(/vortex). Parameters can be confusing, exmaple parameters for testing: 5000 - summon duration, 5 - Spiral Scaling, 25 - spiral appearance, 60 - range max, 40 - phi delta</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_ACTION_CU_ENCOUNTER_START</p></td>
+<td><p>222</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>Resets all cooldowns and removes exhausted debuffs when action is called</p></td>
 </tr>
 </tbody>
 </table>
