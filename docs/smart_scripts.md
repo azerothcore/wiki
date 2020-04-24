@@ -4174,7 +4174,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p>>0 it will try all possible targets in max instead of min-maxing.</p></td>
+<td><p>When target.o is set and it didnt find any targets in min-max range, it will try all possible targets in max range instead.</p></td>
 <td><p>All players up to maxCount within the specified range. Excluding GMs and Dead.</p></td>
 </tr>
 <tr class="odd">
@@ -4385,7 +4385,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p><br />
 </p></td>
 <td><p><p>Number to resize the target list</p></td>
-<td><p><p>Target players with aura</p></td>
+<td><p><p>Target players with or without aura</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_TARGET_RANDOM_POINT</p></td>
@@ -4394,7 +4394,6 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>amount (for summoning creature)</p></td>
 <td><p>self as middle (0/1)<br />
 else use xyz</p></td>
-<td><p></p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4405,6 +4404,7 @@ else use xyz</p></td>
 </p></td>
 <td><p><br />
 </p></td>
+<td><p>This only works with  SMART_ACTION_SUMMON_CREATURE, SMART_ACTION_MOVE_TO_POS and SMART_ACTION_JUMP_TO_POS</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_ROLE_SELECTION</p></td>
