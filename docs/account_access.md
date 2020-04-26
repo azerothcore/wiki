@@ -71,7 +71,7 @@ This table holds security access level for any realm in [realmlist](realmlist) t
 
 ### id
 
-The [account ID](account_2130004.html#account-id).
+The [account ID](account#id).
 
 ### gmlevel
 
@@ -79,4 +79,4 @@ The account security level. Different levels have access to different commands. 
 
 ### RealmID
 
-The [Realm ID](realmlist_2130016.html#realmlist-id).
+The [Realm ID](realmlist#id).
