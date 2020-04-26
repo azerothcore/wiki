@@ -2121,7 +2121,7 @@ The model ID of the item. Each model has its own icon assigned so this field con
 
 ### Quality
 
-The quality of the item. To use the Bind to Account quality, the item must have its flags set to 134221824.
+The quality of the item. To use the Bind to Account quality, the item must have its flags set to 134217728.
 
 <table>
 <colgroup>
