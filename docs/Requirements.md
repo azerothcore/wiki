@@ -57,7 +57,7 @@ If you do not succeed installing cmake you can use the package manager of python
 
 `clang --version`
 
-Your `clang` version **MUST** be `6` or higher ([here](http://www.azerothcore.org/wiki/travis-build) you can check the versions that run in our Travis CI pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be `6` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
 
 For example, if you are using an older version of Ubuntu like 16.04, you need to install clang using:
 
@@ -103,7 +103,7 @@ Then use it to install the required packages:
 
 * Install Visual Studio >= 15 ( 2017 Desktop Community, make sure you're using Version 15.9.17+ ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
-* Install [CMake](https://cmake.org/) version >= 2.8  
+* Install [CMake](https://cmake.org/) version 2.8 or newer.  
 
 * Install latest version of [Git Extensions](https://git-scm.com/download/win)
 
