@@ -3046,7 +3046,7 @@ The cooldown time in milliseconds that is applied to all other spells in the cat
 
 ### bonding
 
-The bonding for the item. To use the Bind to Account bonding, the item must have its flags set to 134217728.
+The bonding for the item. To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum).
 
 <table>
 <colgroup>
