@@ -2121,7 +2121,7 @@ The model ID of the item. Each model has its own icon assigned so this field con
 
 ### Quality
 
-The quality of the item. To use the Bind to Account quality, the item must have its flags set to 134217728.
+The quality of the item.
 
 <table>
 <colgroup>
@@ -2175,7 +2175,7 @@ The quality of the item. To use the Bind to Account quality, the item must have 
 <tr class="even">
 <td><p>7</p></td>
 <td><p>Gold</p></td>
-<td><p>Bind to Account</p></td>
+<td><p>Heirlooms (or some Bind to Account items)</p></td>
 </tr>
 </tbody>
 </table>
@@ -3046,7 +3046,7 @@ The cooldown time in milliseconds that is applied to all other spells in the cat
 
 ### bonding
 
-The bonding for the item.
+The bonding for the item. To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum).
 
 <table>
 <colgroup>
