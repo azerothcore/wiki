@@ -331,7 +331,7 @@ The time when the ticket was closed or deleted by the issuer as linux timestamp
 
 0 : Open
 
--1 : Closed by Console
+~-1 : Closed by Console~ (not implemented on azerothcore yet)
 
 &gt;0 : player who abandoned ticket or GM who closed ticket
 
