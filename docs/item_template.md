@@ -2336,7 +2336,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="even">
 <td><p>134217728</p></td>
 <td>0x08000000</td>
-<td><p>Bind to Account (Set Quality = 7 for the corresponding color. Might require to set Bonding = 1)</p></td>
+<td><p>Bind to Account (Requires to set Bonding > 0)</p></td>
 </tr>
 <tr class="odd">
 <td><p>268435456</p></td>
@@ -3046,7 +3046,8 @@ The cooldown time in milliseconds that is applied to all other spells in the cat
 
 ### bonding
 
-The bonding for the item. To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum).
+The bonding for the item.
+**Note:** To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum) and a `bonding` > 0 (ex: 1,2,3).
 
 <table>
 <colgroup>
