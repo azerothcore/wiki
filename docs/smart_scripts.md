@@ -3875,7 +3875,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tbody>
 </table>
 
-### target\_type
+### target_type
 
 <table height="400">
 <thead>
