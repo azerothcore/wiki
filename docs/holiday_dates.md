@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world.md)
 
-**The \`holiday\dates` table**
+**The \`holiday\_dates` table**
 
 `table-no-description`
 
