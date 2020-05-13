@@ -42,6 +42,22 @@ INSERT INTO `table_1` VALUES
 (3000, ...);
 ```
 
+### DELETE
+
+Bad:
+
+```sql
+DELETE FROM `table_1` WHERE `entry` = 1000;
+DELETE FROM `table_1` WHERE `entry` = 2000;
+DELETE FROM `table_1` WHERE `entry` = 3000;
+```
+
+Good:
+
+```sql
+DELETE FROM `table_1` WHERE `entry` IN (1000, 2000, 3000);
+```
+
 ### UPDATE
 
 Bad:
@@ -58,7 +74,7 @@ Good:
 UPDATE `table_1` SET `field_1` = 'someValue' WHERE `entry` IN (1000, 2000, 3000);
 ```
 
-#### Flags
+### Flags
 
 For flags (2^) columns, when you remove or add a flag, it is better not to override the existing value as flags are combined values.
 
@@ -76,22 +92,6 @@ UPDATE `table_1` SET `field_1` = `field_1` ^ 128 WHERE `entry` = 1000;
 ```
 
 This way, you will make sure that your query will only affect that specific flag, leaving all the other flags unchanged.
-
-### DELETE
-
-Bad:
-
-```sql
-DELETE FROM `table_1` WHERE `entry` = 1000;
-DELETE FROM `table_1` WHERE `entry` = 2000;
-DELETE FROM `table_1` WHERE `entry` = 3000;
-```
-
-Good:
-
-```sql
-DELETE FROM `table_1` WHERE `entry` IN (1000, 2000, 3000);
-```
 
 ## How to create an sql update file
 
