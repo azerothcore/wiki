@@ -2,17 +2,17 @@
 
 [<-Back-to:World](database-world.md)
 
-**General information**
+## General information
 
 This table holds the vendor data for all NPCs that sell items or currencies.
 
-The price (in gold) for each item or currency is defined in its item template related entry as [BuyPrice](item_template#buyprice).
+The price (in gold) for each item or currency is defined in its item template related entry as [item_template.BuyPrice](item_template#buyprice).
 Special costs (honor, tokens etc...) are defined in this table in the column [ExtendedCost](#extendedcost).
 
 If you open the vendor's window in GM mode, you will see all the items sold by the vendor. If you disable GM mode, you will see the items sold like a normal player (ex: only for your own faction, only for your own class etc...).
 
 
-**Table Structure**
+## Table Structure
 
 |      Field        |    Type      | Attributes | Key | Null | Default |
 |-------------------|--------------|------------|-----|------|---------|
@@ -31,11 +31,11 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 [6]: #extendedcost
 
 
-**Field Descriptions**
+## Field Descriptions
 
 ### entry
 
-The ID of the creature. See [creature\_template.entry](creature_template#creature_template-entry).
+The ID of the creature. See [creature\_template.entry](creature_template#entry).
 
 ### slot
 
@@ -43,7 +43,7 @@ Position of the item when the vendor window opens. The image below explains how 
 
 ### item
 
-The item ID. See  [item\_template.entry](item_template#item_template-entry).
+The item ID. See  [item\_template.entry](item_template#entry).
 
 ### maxcount
 
@@ -51,8 +51,8 @@ The maximum number of items carried by the vendor at any time. If you want the v
 
 ### incrtime
 
-Combined with [maxcount](#npc_vendor-maxcount), this field tells how often (in seconds) the vendor list is refreshed and the limited item copies are restocked. For limited item copies, every refresh, the quantity is increased by [item\_template.BuyCount](item_template#item_template-BuyCount) .
+Combined with [maxcount](#maxcount), this field tells how often (in seconds) the vendor list is refreshed and the limited item copies are restocked. For limited item copies, every refresh, the quantity is increased by [item\_template.BuyCount](item_template#buycount) .
 
 ### ExtendedCost
 
-The value here corresponds to the ID in [ItemExtendedCost.dbc](ItemExtendedCost) and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.
+The value here corresponds to the ID in [ItemExtendedCost.dbc](NO_LINK_YET) and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.
