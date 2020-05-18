@@ -6,8 +6,12 @@
 
 This table holds the vendor data for all NPCs that sell items or currencies.
 
+### Prices
+
 The price (in gold) for each item or currency is defined in its item template related entry as [item_template.BuyPrice](item_template#buyprice).
 Special costs (honor, tokens etc...) are defined in this table in the column [ExtendedCost](#extendedcost).
+
+### GM mode
 
 If you open the vendor's window in GM mode, you will see all the items sold by the vendor. If you disable GM mode, you will see the items sold like a normal player (ex: only for your own faction, only for your own class etc...).
 
