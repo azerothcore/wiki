@@ -369,19 +369,21 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR. **Will return an error if player is offline (can be problematic with SOAP for example)!**|
 |send money|3|Syntax: .send money #playername "#subject" "#text" #money Send mail with money to a player. Subject and mail text must be in "".|
 |server corpses|2|Syntax: .server corpses Triggering corpses expire check in world.|
-|server exit|4|Syntax: .server exit Terminate azeroth-core NOW. Exit code 0.|
-|server idlerestart cancel|3|Syntax: .server idlerestart cancel Cancel the restart/shutdown timer if any.|
-|server idlerestart|3|Syntax: .server idlerestart #delay Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code or 2 as program exit code.|
-|server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
-|server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code or 0 as program exit code.|
 |server info|0|Syntax: .server info Display server version and the number of connected players.|
 |server motd|0|Syntax: .server motd Show server Message of the day.|
+<!-- .server restart/shutdown commands - START -->
 |server restart cancel|3|Syntax: .server restart cancel Cancel the restart/shutdown timer if any.|
-|server restart|3|Syntax: .server restart #delay Restart the server after #delay seconds. Use #exit_code or 2 as program exit code.|
+|server restart|3|Syntax: .server restart #delay [#exit_code] Restart the server after #delay seconds. Use #exit_code to change the exit code, default = 2.|
+|server idlerestart|3|Syntax: .server idlerestart #delay [#exit_code] Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 2.|
+|server idlerestart cancel|3|Syntax: .server idlerestart cancel Cancel the restart/shutdown timer if any.|
+|server shutdown|3|Syntax: .server shutdown #delay [#exit_code] Shut the server down after #delay seconds. Use #exit_code to change the exit code, default = 0.|
+|server shutdown cancel|3|Syntax: .server shutdown cancel Cancel the restart/shutdown timer if any.|
+|server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 0.|
+|server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
+|server exit|4|Syntax: .server exit Terminate worldserver NOW. Exit code 0.|
+<!-- .server restart/shutdown commands - END -->
 |server set closed|3|Syntax: server set closed on/off Sets whether the world accepts new client connectsions.|
 |server set motd|3|Syntax: .server set motd $MOTD Set server Message of the day.|
-|server shutdown cancel|3|Syntax: .server shutdown cancel Cancel the restart/shutdown timer if any.|
-|server shutdown|3|Syntax: .server shutdown #delay [#exit_code] Shut the server down after #delay seconds. Use #exit_code or 0 as program exit code.|
 |server togglequerylog|4|Syntax: .server togglequerylog. Toggle SQL query log on/off.|
 |server|3|Syntax: .server $subcommand Type .server to see the list of possible subcommands or .help server $subcommand to see info on subcommands|
 |setskill|3|Syntax: .setskill #skill #level [#max] Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill.|
