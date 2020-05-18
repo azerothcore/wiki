@@ -4,410 +4,50 @@
 
 **Table Structure**
 
-<table height="400">
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entryorguid">entryorguid</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#source_type">source_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#link">link</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_phase_mask">event_phase_mask</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_chance">event_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>100</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_flags">event_flags</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_param1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_type">event_param2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_param3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_type">event_param4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_param5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#action_type">action_param1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_param2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#action_type">action_param3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_param4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#action_type">action_param5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_param6</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_param1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_param2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_param3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_param4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_x</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_y</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_z</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_o</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>text</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p>Event Comment</p></td>
-</tr>
-</tbody>
-</table>
+| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
+|-----------------------|-------------|------------|-----|------|---------|-------|---------------|
+| [entryorguid][1]      | int(11)     | signed     | PRI | NO   | NULL    |       |               |
+| [source_type][2]      | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |               |
+| [id][3]               | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
+| [link][4]             | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
+| [event_type][5]       | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
+| [event_phase_mask][6] | smallint(5) | unsigned   |     | NO   | 0       |       |               |
+| [event_chance][7]     | tinyint(3)  | unsigned   |     | NO   | 100     |       |               |
+| [event_flags][8]      | smallint(5) | unsigned   |     | NO   | 0       |       |               |
+| [event_param1][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param2][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param3][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param4][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param5][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_type][9]      | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
+| [action_param1][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param2][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param3][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param4][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param5][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param6][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_type][10]     | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
+| [target_param1][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_param2][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_param3][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_param4][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_x][10]        | float       |            |     | NO   | 0       |       |               |
+| [target_y][10]        | float       |            |     | NO   | 0       |       |               |
+| [target_z][10]        | float       |            |     | NO   | 0       |       |               |
+| [target_o][10]        | float       |            |     | NO   | 0       |       |               |
+| [comment][11]         | text        |            |     | NO   | NULL    |       | Event Comment |
+
+[1]: #entryorguid
+[2]: #source_type
+[3]: #id
+[4]: #link
+[5]: #event_type
+[6]: #event_phase_mask
+[7]: #event_chance
+[8]: #event_flags
+[9]: #action_type
+[10]: #target_type
+[11]: #comment
 
 **Description of the fields**
 
