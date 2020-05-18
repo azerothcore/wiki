@@ -2,78 +2,34 @@
 
 [<-Back-to:World](database-world.md)
 
+**General information**
+
+This table holds the vendor data for all NPCs that sell items or currencies.
+
+The price (in gold) for each item or currency is defined in its item template related entry as [BuyPrice](item_template#buyprice).
+Special costs (honor, tokens etc...) are defined in this table in the column [ExtendedCost](#extendedcost).
+
+If you open the vendor's window in GM mode, you will see all the items sold by the vendor. If you disable GM mode, you will see the items sold like a normal player (ex: only for your own faction, only for your own class etc...).
+
+
 **Table Structure**
 
-This table holds the vendor data for all NPCs that sell items and currency. The price for each item or currency is in its item template as [BuyPrice](item_template#item_template-BuyPrice) or as [ExtendedCost](npc_vendor#npc_vendor-ExtendedCost).
+|      Field        |    Type      | Attributes | Key | Null | Default |
+|-------------------|--------------|------------|-----|------|---------|
+| [entry][1]        | mediumint(8) | unsigned   | PRI | NO   | 0       |
+| [slot][2]         | smallint(6)  | signed     |     | NO   | 0       |
+| [item][3]         | mediumint(8) | signed     | PRI | NO   | 0       |
+| [maxcount][4]     | tinyint(3)   | unsigned   |     | NO   | 0       |
+| [incrtime][5]     | int(10)      | unsigned   |     | NO   | 0       |
+| [ExtendedCost][6] | mediumint(8) | unsigned   | PRI | NO   | 0       |
 
-<table style="width:100%;">
-<colgroup>
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#slot">slot</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#item">item</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#maxcount">maxcount</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#incrtime">incrtime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#extendedcost">ExtendedCost</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
+[1]: #entry
+[2]: #slot
+[3]: #item
+[4]: #maxcount
+[5]: #incrtime
+[6]: #extendedcost
+
 
 **Field Descriptions**
 
