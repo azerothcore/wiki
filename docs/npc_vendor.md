@@ -43,7 +43,8 @@ The ID of the creature. See [creature\_template.entry](creature_template#entry).
 
 ### slot
 
-Position of the item when the vendor window opens. The image below explains how the vendor-inventory slots are numbered. To continue on past the first page just use numbers 10, 11, 12, etc...
+Position of the item when the vendor window opens. It starts from 0 to x, from top to bottom, and from left to right.
+*Note: if you have a list of items at slot 0, and you edit one of them to be at slot 1 or any number, that item will always be at the end because all the other items are in slot 0.*
 
 ### item
 
