@@ -4,7 +4,7 @@
 
 ## General information
 
-This table holds the vendor data for all NPCs that sell items or currencies.
+This table holds the vendor data for all NPCs that sell items or currencies. A vendor can only hold up to 150 items (15 pages), it is hardcoded in the emulator and if you change it, the client will crash.
 
 ### Prices
 
