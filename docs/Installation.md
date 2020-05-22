@@ -116,17 +116,19 @@ You will find your freshly compiled binaries in the Build\bin\Release or Build\b
 You will need the following files in order for the core to function properly:
  
 ```
-libeay32.dll
-libmySQL.dll 
-ssleay32.dll 
 ace.dll
-worldserver.conf.dist
-worldserver.exe 
+libeay32.dll/libcrypto-1_1.dll
+libmySQL.dll 
+ssleay32.dll/libssl-1_1.dll 
 authserver.conf.dist 
 authserver.exe
+worldserver.conf.dist
+worldserver.exe 
 ```
 
-Copy `libeay32.dll` and `ssleay32.dll` from OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
+For OpenSSL 1.0 or older: Copy `libeay32.dll` and `ssleay32.dll` from the OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
+
+For OpenSSL 1.1 or newer: Copy `libcrypto-1_1.dll` and `libssl-1_1.dll` from the OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
 
 Copy `libmysql.dll` from your MYSQL_LIBRARY path into `CMAKE_INSTALL_PREFIX`
 
