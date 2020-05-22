@@ -117,20 +117,34 @@ You will need the following files in order for the core to function properly:
  
 ```
 ace.dll
-libeay32.dll/libcrypto-1_1.dll
+libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
 libmySQL.dll 
-ssleay32.dll/libssl-1_1.dll 
+ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
 authserver.conf.dist 
 authserver.exe
 worldserver.conf.dist
 worldserver.exe 
 ```
 
-For OpenSSL 1.0 or older: Copy `libeay32.dll` and `ssleay32.dll` from the OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
+The `.dll` files needs to be copied manually from their install folder into your compiled folder.
 
-For OpenSSL 1.1 or newer: Copy `libcrypto-1_1.dll` and `libssl-1_1.dll` from the OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
+`libmysql.dll` (C:\MySQL\MySQL Server 5.x\lib\)
 
-Copy `libmysql.dll` from your MYSQL_LIBRARY path into `CMAKE_INSTALL_PREFIX`
+For OpenSSL 1.0 or older: 
+
+* (C:\OpenSSL-Win32\ or C:\OpenSSL-Win64\)
+  * `libeay32.dll`
+  * `ssleay32.dll`
+
+For OpenSSL 1.1 or newer: 
+
+* Win32 (C:\OpenSSL-Win32\bin)
+  * `libcrypto-1_1.dll` 
+  * `libssl-1_1.dll`
+
+* Win64 (C:\OpenSSL-Win64\bin)
+  * `libcrypto-1_1-x64.dll`
+  * `libssl-1_1-x64.dll`
 
 
 **Note:** Do not use ARM architecture as azerothcore requires SSE2 and ARM doesn't support it.  
