@@ -109,12 +109,6 @@ Then use it to install the required packages:
 
 * [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) (version 5.6 or 5.7, anything later is not supported)
 
-* [MySQL Development File](https://docs.google.com/uc?id=0B1fF5EIDoF1fWjYwQ1FCNUJmMWc&export=download)
-  
-  These files are shipped with MySQL Server but to make it easier we packed the libs and include files for both 32 bits and 64 bits.
-
-  Extract the files to a known location, e.g, C:\MySQL, directory structure must be following: C:\MySQL\include and C:\MySQL\lib\debug (Move libmysql.dll and libmysql.lib there) 
-
 * Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x (Do not install the Light version) 
   
   Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
