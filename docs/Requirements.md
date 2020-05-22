@@ -109,7 +109,7 @@ Then use it to install the required packages:
 
 * [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) (version 5.6 or 5.7, anything later is not supported)
 
-* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x (Do not install the Light version) 
+* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x or 1.1.x (Do not install the Light version) 
   
   Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
 
