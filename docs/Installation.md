@@ -130,13 +130,13 @@ The `.dll` files needs to be copied manually from their install folder into your
 
 `libmysql.dll` (C:\MySQL\MySQL Server 5.x\lib\)
 
-For OpenSSL 1.0 or older: 
+For OpenSSL 1.0.x: 
 
 * (C:\OpenSSL-Win32\ or C:\OpenSSL-Win64\)
   * `libeay32.dll`
   * `ssleay32.dll`
 
-For OpenSSL 1.1 or newer: 
+For OpenSSL 1.1.x: 
 
 * Win32 (C:\OpenSSL-Win32\bin)
   * `libcrypto-1_1.dll` 
