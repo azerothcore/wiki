@@ -1052,7 +1052,13 @@ CONDITION_STAND_STATE</p></td>
 <td>CONDITION_QUESTSTATE</td>
 <td>47</td>
 <td>Quest ID - see <a href="http://www.azerothcore.org/wiki/quest_template#id">quest_template.id</a></td>
-<td>state_mask</td>
+<td>state_mask:
+<li>1 = Not taken</li>
+<li>2 = Completed</li>
+<li>8 = In progress</li>
+<li>32 = Failed</li>
+<li>64 = Rewarded</li>
+</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
