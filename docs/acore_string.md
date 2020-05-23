@@ -12,130 +12,22 @@ NOTE: The % arguments need to stay in the exact same order as they are provided 
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#content_default">content_default</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#content_loc">content_loc1</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#content_loc">content_loc2</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#content_loc">content_loc3</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#content_loc">content_loc4</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#content_loc">content_loc5</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#content_loc">content_loc6</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#content_loc">content_loc7</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#content_loc">content_loc8</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                  | Type      | Attributes | Key | Null | Default | Comment |
+|:-----------------------|:----------|:-----------|:----|:-----|:--------|:--------|
+| [entry][1]             | mediumint | unsigned   | PRI | NO   | 0       |         |
+| [content\_default][2]  | text      | signed     |     | NO   |         |         |
+| [locale\_koKR][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_frFR][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_deDE][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_zhCN][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_zhTW][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_esES][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_esMX][3]      | text      | signed     |     | YES  |         |         |
+| [locale\_ruRU][3]      | text      | signed     |     | YES  |         |         |
+
+[1]: #entry
+[2]: #content\_default
+[3]: #locale\_nnNN
 
 **Description of the fields**
 
@@ -147,6 +39,6 @@ The ID that the core uses to identify a string. These IDs are contained and used
 
 The English translation (locale ID 0).
 
-### content\_loc
+### locale\_nnNN
 
-The translation in another language depending on the locale ID of that language.
+The translation in another language depending on the locale name.
