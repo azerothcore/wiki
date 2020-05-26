@@ -2515,7 +2515,7 @@ In what slot the item can be equipped.
 <td><p>8</p></td>
 <td><p>Feet</p></td>
 <td><p>23</p></td>
-<td><p>Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22)</p></td>
+<td><p>Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22) (class = armor, not weapon even if in weapon slot)</p></td>
 </tr>
 <tr class="even">
 <td><p>9</p></td>
@@ -2545,13 +2545,13 @@ In what slot the item can be equipped.
 <td><p>13</p></td>
 <td><p>One-Hand (not to confuse with Off-Hand = 22)</p></td>
 <td><p>28</p></td>
-<td><p>Relic</p></td>
+<td><p>Relic (class = armor, not weapon even if in weapon slot)</p></td>
 </tr>
 <tr class="odd">
 <td><p>14</p></td>
-<td><p>Shield</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p>Shield (class = armor, not weapon even if in weapon slot)</p></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
