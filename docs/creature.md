@@ -317,6 +317,8 @@ The ID as defined within [creature\_equip\_template](creature_equip_template) co
 -   **  0**: No equipment defined.
 -   **1+**: The individual id within creature\_equip\_template.
 
+If creature spawned with `.npc add`, then this value will be set automatically (0 if nothing in creature_equip_template).
+
 ### position\_x
 
 The X position of the creatures spawn point.
