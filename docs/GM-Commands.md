@@ -371,7 +371,6 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |server corpses|2|Syntax: .server corpses Triggering corpses expire check in world.|
 |server info|0|Syntax: .server info Display server version and the number of connected players.|
 |server motd|0|Syntax: .server motd Show server Message of the day.|
-<!-- .server restart/shutdown commands - START -->
 |server restart cancel|3|Syntax: .server restart cancel Cancel the restart/shutdown timer if any.|
 |server restart|3|Syntax: .server restart #delay [#exit_code] Restart the server after #delay seconds. Use #exit_code to change the exit code, default = 2.|
 |server idlerestart|3|Syntax: .server idlerestart #delay [#exit_code] Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 2.|
@@ -381,7 +380,6 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 0.|
 |server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
 |server exit|4|Syntax: .server exit Terminate worldserver NOW. Exit code 0.|
-<!-- .server restart/shutdown commands - END -->
 |server set closed|3|Syntax: server set closed on/off Sets whether the world accepts new client connectsions.|
 |server set motd|3|Syntax: .server set motd $MOTD Set server Message of the day.|
 |server togglequerylog|4|Syntax: .server togglequerylog. Toggle SQL query log on/off.|
