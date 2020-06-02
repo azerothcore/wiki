@@ -1,4 +1,8 @@
-[Database Structure](Database-Structure) > [Auth-Database](Auth-Database) > [ip2nationCountries](ip2nationCountries)
+# ip2nationCountries
+
+[<-Back-to:Auth](database-auth.md)
+
+**The \`ip2nationCountries\` table**
 
 Column | Type | Description
 --- | --- | ---

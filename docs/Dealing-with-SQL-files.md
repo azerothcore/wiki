@@ -42,6 +42,22 @@ INSERT INTO `table_1` VALUES
 (3000, ...);
 ```
 
+### DELETE
+
+Bad:
+
+```sql
+DELETE FROM `table_1` WHERE `entry` = 1000;
+DELETE FROM `table_1` WHERE `entry` = 2000;
+DELETE FROM `table_1` WHERE `entry` = 3000;
+```
+
+Good:
+
+```sql
+DELETE FROM `table_1` WHERE `entry` IN (1000, 2000, 3000);
+```
+
 ### UPDATE
 
 Bad:
@@ -58,21 +74,24 @@ Good:
 UPDATE `table_1` SET `field_1` = 'someValue' WHERE `entry` IN (1000, 2000, 3000);
 ```
 
-### DELETE
+### Flags
 
-Bad:
+For flags (2^) columns, when you remove or add a flag, it is better not to override the existing value as flags are combined values.
 
-```sql
-DELETE FROM `table_1` WHERE `entry` = 1000;
-DELETE FROM `table_1` WHERE `entry` = 2000;
-DELETE FROM `table_1` WHERE `entry` = 3000;
-```
-
-Good:
+For example, given a flag with value `128`, this is how it would be to add, remove and invert it:
 
 ```sql
-DELETE FROM `table_1` WHERE `entry` IN (1000, 2000, 3000);
+-- ADD AN EXTRA FLAG (|)
+UPDATE `table_1` SET `field_1` = `field_1` | 128 WHERE `entry` = 1000;
+
+-- REMOVE AN EXTRA FLAG (& ~)
+UPDATE `table_1` SET `field_1` = `field_1` & ~128 WHERE `entry` = 1000;
+
+-- INVERT A FLAG (if present = removed, if absent = added) (^)
+UPDATE `table_1` SET `field_1` = `field_1` ^ 128 WHERE `entry` = 1000;
 ```
+
+This way, you will make sure that your query will only affect that specific flag, leaving all the other flags unchanged.
 
 ## How to create an sql update file
 

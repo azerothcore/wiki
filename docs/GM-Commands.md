@@ -17,7 +17,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |account set password|4|Syntax: .account set password $account $password $password Set password for account.|
 |account set|3|Syntax: .account set $subcommand Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands|
 |account|0|Syntax: .account Display the access level of your account.|
-|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. .|
+|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
 |additemset|3|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
 |announce|1|Syntax: .announce $MessageToBroadcast Send a global message to all players online in chat log.|
 |arena captain|3|Syntax: .arena captain #TeamID $name. A command to set new captain to the team. $name must be in the team|
@@ -83,7 +83,6 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug unitstate|3|Syntax: .debug unitstate [#unitstate]. Set #unitstate for the selected unit. If no parameter is specified show the unit state and the react state of the unit.|
 |debug uws|3|Syntax: .debug uws #worldstate #value. Send update world state for #worldstate and #value to the current player.|
 |debug|3|Syntax: .debug $subcommand Type .debug to see the list of possible subcommands or .help debug $subcommand to see info on subcommands|
-|demorph|2|Syntax: .demorph Demorph the selected player.|
 |deserter bg add|3|Syntax: .deserter bg add $time. Adds the bg deserter debuff to your target with $time duration.|
 |deserter bg remove|3|Syntax: .deserter bg remove. Removes the bg deserter debuff from your target.|
 |deserter instance add|3|Syntax: .deserter instance add $time. Adds the instance deserter debuff to your target with $time duration.|
@@ -143,7 +142,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |help|0|Syntax: .help [$command] Display usage instructions for the given $command. If no $command provided show list available commands.|
 |hidearea|3|Syntax: .hidearea #areaid Hide the area of #areaid to the selected character. If no character is selected, hide this area to you.|
 |honor add|2|Syntax: .honor add $amount Add a certain amount of honor (gained today) to the selected player.|
-|honor add kill|2|Syntax: .honor add kill Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
+|~~honor add kill~~ NOT IMPLEMENTED|2|Syntax: .honor add kill Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
 |honor update|2|Syntax: .honor update Force the yesterday's honor fields to be updated with today's data, which will get reset for the selected player.|
 |honor|2|Syntax: .honor $subcommand Type .honor to see the list of possible subcommands or .help honor $subcommand to see info on subcommands|
 |modify talentpoints|1|Syntax: .modify talentpoints #amount Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward.|
@@ -266,6 +265,8 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |pet|2|Syntax: .pet $subcommand Type .pet to see the list of possible subcommands or .help pet $subcommand to see info on subcommands|
 |pinfo|2|Syntax: .pinfo [$player_name/#GUID] Output account information for selected player or player find by $player_name or #GUID.|
 |playall|2|Syntax: .playall #soundid Player a sound to whole server.|
+|player learn|2|Syntax: .player learn #playername #spell [all]. Learn spell #spell for the specified player. If 'all' is added then all ranks are learned.|
+|player unlearn|2|Syntax: .player unlearn #playername #spell [all]. Unlearn spell #spell for the specified player. If 'all' is added then all ranks are unlearned.|
 |possess|3|Syntax: .possess Possesses indefinitely the selected creature.|
 |quest add|3|Syntax: .quest add #quest_id Add to character quest log quest #quest_id. Quest started from item can't be added by this command but correct .additem call provided in command output.|
 |quest complete|3|Syntax: .quest complete #questid Mark all quest objectives as completed for target character active quest. After this target character can go and get quest reward.|
@@ -280,6 +281,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload all gossips|3|Syntax: .reload all gossips Reload gossip_menu, gossip_menu_option, gossip_scripts, points_of_interest tables.|
 |reload all|3|Syntax: .reload all Reload all tables with reload support added and that can be safe reloaded.|
 |reload achievement_reward_locale|3|Syntax: .reload achievement_reward_locale Reload achievement_reward_locale table.|
+|reload acore_string|3|Syntax: .reload acore_string Reload acore_string table.|
 |reload areatrigger_involvedrelation|3|Syntax: .reload areatrigger_involvedrelation Reload areatrigger_involvedrelation table.|
 |reload areatrigger_tavern|3|Syntax: .reload areatrigger_tavern Reload areatrigger_tavern table.|
 |reload areatrigger_teleport|3|Syntax: .reload areatrigger_teleport Reload areatrigger_teleport table.|
@@ -287,7 +289,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload battleground_template|3|Syntax: .reload battleground_template Reload battleground_template table.|
 |reload broadcast_text|3|Syntax: .reload broadcast_text Reload broadcast_text table.|
 |reload command|3|Syntax: .reload command Reload command table.|
-|reload config|3|Syntax: .reload config Reload config settings (by default stored in trinityd.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload.|
+|reload config|3|Syntax: .reload config Reload config settings (by default stored in worldserver.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload.|
 |reload creature_linked_respawn|2|Syntax: .reload creature_linked_respawn Reload creature_linked_respawn table.|
 |reload creature_loot_template|3|Syntax: .reload creature_loot_template Reload creature_loot_template table.|
 |reload creature_queststarter|3|Syntax: .reload creature_queststarter Reload creature_queststarter table.|
@@ -346,7 +348,6 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload spell_scripts|3|Syntax: .reload spell_scripts Reload spell_scripts table.|
 |reload spell_target_position|3|Syntax: .reload spell_target_position Reload spell_target_position table.|
 |reload spell_threats|3|Syntax: .reload spell_threats Reload spell_threats table.|
-|reload trinity_string|3|Syntax: .reload trinity_string Reload trinity_string table.|
 |reload warden_action|3|Syntax: .reload warden_action Reload warden_action table.|
 |reload waypoint_scripts|3|Syntax: .reload waypoint_scripts Reload waypoint_scripts table.|
 |reload|3|Syntax: .reload $subcommand Type .reload to see the list of possible subcommands or .help reload $subcommand to see info on subcommands|
@@ -365,22 +366,24 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |saveall|1|Syntax: .saveall Save all characters in game.|
 |send items|3|Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN] Send a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.|
 |send mail|1|Syntax: .send mail #playername "#subject" "#text" Send a mail to a player. Subject and mail text must be in "".|
-|send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR.|
+|send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR. **Will return an error if player is offline (can be problematic with SOAP for example)!**|
 |send money|3|Syntax: .send money #playername "#subject" "#text" #money Send mail with money to a player. Subject and mail text must be in "".|
 |server corpses|2|Syntax: .server corpses Triggering corpses expire check in world.|
-|server exit|4|Syntax: .server exit Terminate trinity-core NOW. Exit code 0.|
-|server idlerestart cancel|3|Syntax: .server idlerestart cancel Cancel the restart/shutdown timer if any.|
-|server idlerestart|3|Syntax: .server idlerestart #delay Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code or 2 as program exit code.|
-|server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
-|server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code or 0 as program exit code.|
 |server info|0|Syntax: .server info Display server version and the number of connected players.|
 |server motd|0|Syntax: .server motd Show server Message of the day.|
+<!-- .server restart/shutdown commands - START -->
 |server restart cancel|3|Syntax: .server restart cancel Cancel the restart/shutdown timer if any.|
-|server restart|3|Syntax: .server restart #delay Restart the server after #delay seconds. Use #exit_code or 2 as program exit code.|
+|server restart|3|Syntax: .server restart #delay [#exit_code] Restart the server after #delay seconds. Use #exit_code to change the exit code, default = 2.|
+|server idlerestart|3|Syntax: .server idlerestart #delay [#exit_code] Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 2.|
+|server idlerestart cancel|3|Syntax: .server idlerestart cancel Cancel the restart/shutdown timer if any.|
+|server shutdown|3|Syntax: .server shutdown #delay [#exit_code] Shut the server down after #delay seconds. Use #exit_code to change the exit code, default = 0.|
+|server shutdown cancel|3|Syntax: .server shutdown cancel Cancel the restart/shutdown timer if any.|
+|server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 0.|
+|server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
+|server exit|4|Syntax: .server exit Terminate worldserver NOW. Exit code 0.|
+<!-- .server restart/shutdown commands - END -->
 |server set closed|3|Syntax: server set closed on/off Sets whether the world accepts new client connectsions.|
 |server set motd|3|Syntax: .server set motd $MOTD Set server Message of the day.|
-|server shutdown cancel|3|Syntax: .server shutdown cancel Cancel the restart/shutdown timer if any.|
-|server shutdown|3|Syntax: .server shutdown #delay [#exit_code] Shut the server down after #delay seconds. Use #exit_code or 0 as program exit code.|
 |server togglequerylog|4|Syntax: .server togglequerylog. Toggle SQL query log on/off.|
 |server|3|Syntax: .server $subcommand Type .server to see the list of possible subcommands or .help server $subcommand to see info on subcommands|
 |setskill|3|Syntax: .setskill #skill #level [#max] Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill.|
@@ -427,7 +430,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |unpossess|3|Syntax: .unpossess If you are possessed, unpossesses yourself; otherwise unpossesses current possessed target.|
 |cheat|2|Syntax: .cheat $subcommand Type .cheat to see the list of possible subcommands or .help cheat $subcommand to see info on subcommands|
 |wchange|3|Syntax: .wchange #weathertype #status Set current weather to #weathertype with an intensity of #status. #weathertype can be 1 for rain, 2 for snow, and 3 for sand. #status can be 0 for disabled, and 1 for enabled.|
-|whispers|1|Syntax: .whispers on\off Enable/disable accepting whispers by GM from players. By default use trinityd.conf setting.|
+|whispers|1|Syntax: .whispers on\off Enable/disable accepting whispers by GM from players. By default use worldserver.conf setting.|
 |wp event|2|Syntax: .wp event $subcommand Type .path event to see the list of possible subcommands or .help path event $subcommand to see info on subcommands.|
 |wp load|2|Syntax: .wp load $pathid Load pathid number for selected creature. Creature must have no waypoint data.|
 |wp modify||Syntax: .wp modify $optionOptions:action Changes the value actionaction_chance Changes the value action_chancedel Deletes a selected waypointdelay Changes the value delaymove Moves a selected waypointmove_flag Changes the value move_flag|
@@ -462,7 +465,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload creature_text|3|Syntax: .reload creature_text Reload creature_text table.|
 |debug areatriggers|1|Syntax: .debug areatriggers Toggle debug mode for areatriggers. In debug mode GM will be notified if reaching an areatrigger|
 |learn all recipes|2|Syntax: .learn all recipes [$profession] Learns all recipes of specified profession and sets skill level to max. Example: .learn all recipes enchanting|
-|npc set spawndist|2|Syntax: .npc set spawndist #dist Adjust spawndistance of selected creature to dist.|
+|npc set wanderdistance|3|Syntax: .npc set wanderdistance #dist Adjust wanderdistance of selected creature to dist.|
 |npc set spawntime|2|Syntax: .npc set spawntime #time Adjust spawntime of selected creature to time.|
 |npc add temp|2|Syntax: .npc add temp Adds temporary NPC, not saved to database.|
 |npc textemote|1|Syntax: .npc textemote #emoteid Make the selected creature to do textemote with an emote of id #emoteid.|
@@ -490,6 +493,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |group remove|3|Syntax: .group remove [$characterName] Removes the given character from his group.|
 |debug moveflags|3|Syntax: .debug moveflags [$newMoveFlags [$newMoveFlags2]] No params given will output the current moveflags of the target|
 |morph|2|Syntax: .morph #displayid Change your current model id to #displayid.|
+|morph reset|2|Syntax: .morph reset Reset the original model for the selected target.|
 |modify arenapoints|1|Syntax: .modify arenapoints #value Add $amount arena points to the selected player.|
 |npc set data|3|Syntax: .npc set data $field $data Sets data for the selected creature. Used for testing Scripting|
 |disable add quest|3|Syntax: .disable add quest $entry $flag $comment|

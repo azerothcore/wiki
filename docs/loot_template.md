@@ -14,9 +14,8 @@ Loot templates define only items in the loot. See comments about money drop in c
 
 ## Structure
 
-|                                              |                    |          |         |             |           |
-|----------------------------------------------|--------------------|----------|---------|-------------|-----------|
 | **Field**                                    | **Type**           | **Null** | **Key** | **Default** | **Extra** |
+|----------------------------------------------|--------------------|----------|---------|-------------|-----------|
 | [Entry](#loot_template-Entry)                | mediumint unsigned | NO       | PRI     | 0           |           |
 | [Item](#loot_template-Item)                  | mediumint unsigned | NO       | PRI     | 0           |           |
 | Reference                                    | mediumint unsigned | NO       |         | 0           |           |
@@ -111,7 +110,7 @@ Negative and zero values of **Chance** make no sense for that case and should n
 
 Zero value of **Chance** is allowed for [grouped entries](#loot_template-groupid) only.
 
-(Non-zero) values of **Chance** in loot definition are multiplied by RATE\_DROP\_ITEMS (mangos config setting) during loot generation for references and non-reference entries, but not for grouped entries.
+(Non-zero) values of **Chance** in loot definition are multiplied by Rate.Drop.Item.XXX (worldserver.conf settings) during loot generation for references and non-reference entries, **but not for grouped entries.** It only works when `groupid` is equal to 0.
 
 ### QuestRequired
 
@@ -120,6 +119,41 @@ Zero value of **Chance** is allowed for [grouped entries](#loot_template-groupi
 ### LootMode
 
 A special parameter used for separating conditional loot, such as Hard Mode loot. A lootmode of 0 will effectively disable a loot entry (its roll will always fail). This column is a bitmask, so you shouldn't duplicate loot across lootmodes. The active lootmode(s) can be changed at any time by the core. This column should only be used if required, in most cases it should be left as 1. Valid lootmodes include: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 16384, 32768.
+
+Loot mode examples from the Flame Leviathan fight in Ulduar:
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p><strong>LootMode</strong></p></td>
+<td><p><strong>Use</strong></p></td>
+</tr>
+<tr class="even">
+<td><p>1</p></td>
+<td><p>Normal mode (0 towers)</p></td>
+</tr>
+<tr class="odd">
+<td><p>2</p></td>
+<td><p>Hard mode A (1 tower)</p></td>
+</tr>
+<tr class="even">
+<td><p>4</p></td>
+<td><p>Hard mode B (2 towers)</p></td>
+</tr>
+<tr class="odd">
+<td><p>8</p></td>
+<td><p>Hard mode C (3 towers)</p></td>
+</tr>
+<tr class="even">
+<td><p>16</p></td>
+<td><p>Hard mode D (4 towers)</p></td>
+</tr>
+</tbody>
+</table>
 
 ### GroupId
 
@@ -361,7 +395,7 @@ VALUES
 
 ### Creature having in the pocket single quest item
 
-``` cpp
+``` sql
 -- creature_template: entry=6846, name='Defias Dockmaster', pickpocketloot=6846
 -- Note: link with pickpocketing_loot_template is on `pickpocketloot` field (which is equal to `entry` field in this case)
 DELETE `pickpocketing_loot_template` WHERE `Entry`=6846;

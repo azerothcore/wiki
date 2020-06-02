@@ -1,15 +1,31 @@
-This tutorial explains how to compile and install AzerothCore in your host system.
+# AZEROTHCORE INSTALLATION
 
-Alternatively, it is also possible to [use AzerothCore with Docker](Install-with-Docker.md).
+## DOCKER INSTALLATION
 
-For macOS users: the build on mac is currently broken (see [this issue](https://github.com/azerothcore/azerothcore-wotlk/issues/122)), but you can still use AzerothCore on macOS with Docker.
+This page describes how to use [AzerothCore with Docker](Install-with-Docker.md).
 
-## 1) Installing the requirements
+## AWS INSTALLATION
 
-Make sure your system fits with the [Requirements](Requirements.md).
+This page describes how to use [AzerothCore with AWS](aws-tutorial.md)
+
+## DIGITALOCEAN CLOUD
+
+This page describes how to use [AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
+
+## ArchLinux and Arch based distro
+
+This page describes how to use [AzerothCore with ArchLinux](arch-linux.md)
+
+## CLASSIC INSTALLATION
+
+/!\ For **macOS** users: the build on mac is currently broken (see [this issue](https://github.com/azerothcore/azerothcore-wotlk/issues/122)), but you can still use AzerothCore on macOS with Docker.
+
+### 1) Requirements
+
+Make sure your system fits the [Requirements](Requirements.md).
 
 
-## 2) Getting the source files
+### 2) Getting the source files
 
 Choose one of the following method:
 
@@ -28,9 +44,9 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
 Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option 2).
 
 
-## 3) Compiling
+### 3) Compiling
 
-### Compiling on GNU/Linux or Mac OS X
+#### Compiling on GNU/Linux or Mac OS X
 
 ```
 cd azerothcore
@@ -79,7 +95,7 @@ make -j 4
 make install
 ```
 
-### Compiling on Windows
+#### Compiling on Windows
 
 Open CMake, press `Browse Source...` button and select the folder that you cloned earlier then press `Browse Build...` and select a folder where the CMake will generate the build files. Press the `Configure` button.
 
@@ -100,25 +116,41 @@ You will find your freshly compiled binaries in the Build\bin\Release or Build\b
 You will need the following files in order for the core to function properly:
  
 ```
-libeay32.dll
-libmySQL.dll 
-ssleay32.dll 
 ace.dll
-worldserver.conf.dist
-worldserver.exe 
+libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
+libmySQL.dll 
+ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
 authserver.conf.dist 
 authserver.exe
+worldserver.conf.dist
+worldserver.exe 
 ```
 
-Copy `libeay32.dll` and `ssleay32.dll` from OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
+The `.dll` files needs to be copied manually from their install folder into your compiled folder.
 
-Copy `libmysql.dll` from your MYSQL_LIBRARY path into `CMAKE_INSTALL_PREFIX`
+`libmysql.dll` (C:\MySQL\MySQL Server 5.x\lib\)
+
+For OpenSSL 1.0.x: 
+
+* (C:\OpenSSL-Win32\ or C:\OpenSSL-Win64\)
+  * `libeay32.dll`
+  * `ssleay32.dll`
+
+For OpenSSL 1.1.x: 
+
+* Win32 (C:\OpenSSL-Win32\bin)
+  * `libcrypto-1_1.dll` 
+  * `libssl-1_1.dll`
+
+* Win64 (C:\OpenSSL-Win64\bin)
+  * `libcrypto-1_1-x64.dll`
+  * `libssl-1_1-x64.dll`
 
 
 **Note:** Do not use ARM architecture as azerothcore requires SSE2 and ARM doesn't support it.  
 
 
-## 4) Setting the configuration files
+### 4) Setting the configuration files
 
 Inside the directory where you installed the binaries (e.g. `/home/youruser/azeroth-server/`), open the directory where configuration files has been installed  ( `etc/` on linux ) , then:
 
@@ -145,28 +177,37 @@ In the worldserver.conf file, also set:
 replacing `/home/youruser/azeroth-server` with `CMAKE_INSTALL_PREFIX`.
 
 
-## 5) Download the data files
+### 5) Download the data files
 
 Go to `CMAKE_INSTALL_PREFIX` and create a new directory named `data`
 
 Two options to choose from:
 
-#### A) [Extract Client Data](http://www.azerothcore.org/wiki/Extract-Client-Data) from your own WOW client using the AzerothCore extractors
-#### B) (Easier) Download directly using one of the links below:
+##### A) [Extract Client Data](http://www.azerothcore.org/wiki/Extract-Client-Data) from your own WOW client using the AzerothCore extractors (required for custom maps)
+##### B) (Easier) Download directly using one of the links below:
 
-- [From 13/08/19 to now](https://github.com/wowgaming/client-data/releases/tag/v7) ( RECOMMENDED - choose this version if you are installing AzerothCore for the first time)
+Github links:
+
+[Full data (v8) - from 13/08/19 to now](https://github.com/wowgaming/client-data/releases/tag/v7) (Used in the automatic downloader script in `/apps/`)
+
+
+Mega links:
+- [DBC & maps for all versions](https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ)
+- [Vmaps & mmaps only (v8) - from 13/08/19 to now](https://mega.nz/#F!xqYxDQ5K!PesmFvXRSqiCRcknVxBn5g)
+
+
+Old versions links (< v8):
 - [From 03/01/19 to 13/08/19](https://mega.nz/#F!Am4DBKCR!o9Qj_xFLfsg4sczqg0xq2A)
 - [From 07/18/18 to 03/01/19](https://mega.nz/#!utg3hKJL!TtSzcWxVkvxF4HJvor8LFWhrBwwpH2pHpI-xHGr-HZo) (before commit [59d4e1d3a806a4f2f48f535be366bde1b24d737e](https://github.com/azerothcore/azerothcore-wotlk/commit/59d4e1d3a806a4f2f48f535be366bde1b24d737e)) 
 - For older versions, check out this page's history.
 
 
+Then, extract all the archives and place the extracted `dbc`, `maps`, `mmaps`, `vmaps` directories inside the `data` directory.
 
-Extract all the archives and place the extracted `dbc`, `maps`, `mmaps`, `vmaps` directories inside the data directory.
 
+### 6) Setting up the database
 
-## 6) Setting up the database
-
-### Base DB setup
+#### Base DB setup
 Follow these instructions: [Database Setup](Database-Setup).
 
 **Note**: by default, database names are configured to be named:
@@ -177,18 +218,18 @@ Follow these instructions: [Database Setup](Database-Setup).
 
  if, for some reasons, you decide to name them differently, remember to edit your `authserver.conf` and `worldserver.conf` accordingly.
 
-### Configure your auth.realmlist table
+#### Configure your auth.realmlist table
 
 In the `acore_auth` database, you must fill the `realmlist` table with your connection info.
 It must correspond with the values in `worldserver.conf` (for realmid, flag and realmzone).
 
-	Address: 127.0.0.1 OR <Your LOCAL NETWORK ip>  OR <Your PUBLIC NETWORK ip>
-	Port :	worldserver port
+    Address: 127.0.0.1 OR <Your LOCAL NETWORK ip>  OR <Your PUBLIC NETWORK ip>
+    Port :  worldserver port
 
 
-## 7) Starting the servers
+### 7) Starting the servers
 
-### GNU/Linux and Mac OS X
+#### GNU/Linux and Mac OS X
 
 Open 2 terminal windows (or terminal tabs) and move to the `bin` directory of your azeroth server (for example `/home/youruser/azeroth-server/bin`), 
 
@@ -201,12 +242,12 @@ in the other one:
 `./worldserver`
 
 
-### Windows
+#### Windows
 
 Run `worldserver.exe` and `authserver.exe` from `CMAKE_INSTALL_PREFIX`.
 
 
-## 8) Connecting to the server
+### 8) Connecting to the server
 
 Edit your `realmlist.wtf` and add the IP you set in the realmlist table (and the port if needed). Then you can connect with a newly made account or the test accounts (`test1` to `test10`, with password `a`).
 
@@ -224,9 +265,9 @@ You can change all the passwords at once by pasting this into the worldserver co
 .account set password test10 new_pass new_pass
 ```
 
-## Optional: Creating a regular user to work with on Linux
+### Optional: Creating a regular user to work with on Linux
 Start with logging in to your Linux machine and create an account for the server itself on most recent distributions this can easily be done with the following command :
 
 ```sudo adduser <username>``` Note: Change `<username>` to the preferred username of your going to use on your server.  
-	
+    
 ```sudo su - <username>``` Note: Switch user to newly created `<username>` so everything will run and compile with the user you just have created.

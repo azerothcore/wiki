@@ -211,9 +211,9 @@ NOTE: //creatures always have melee weapon ready if any unless specified otherwi
 
 List of few known values and what their visual effects on the creature
 
--   0 = STATE\_UNARMED (not prepared weapon)
--   1 = STATE\_MELEE (prepared melee weapon)
--   2 = STATE\_RANGED (prepared ranged weapon)
+-   0 = STATE\_UNARMED (not prepared weapon, weapons on the sides/back)
+-   1 = STATE\_MELEE (prepared melee weapon in hands)
+-   2 = STATE\_RANGED (prepared ranged weapon in hands, melee weapons on the sides)
 
 ### emote
 

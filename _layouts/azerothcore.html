@@ -34,12 +34,12 @@
             {% if site.inc_before_toc %}
             {% include {{ site.inc_before_toc }} %}
             {% endif %}
-
-            <div id="git-wiki-toc"></div>
-
+            
+            {% include git-wiki/components/toc/toc-lib.html minHeaders=3 html=content sanitize=true class="inline_toc" id="git-wiki-toc" h_min=1 h_max=2 %}
+            
             {% if site.inc_after_toc %}
             {% include {{ site.inc_after_toc }} %}
-            {% endif %}
+            {% endif %}            
 
             {% if site.inc_before_content %}
             {% include {{ site.inc_before_content }} %}

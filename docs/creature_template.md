@@ -543,31 +543,32 @@ Maximum money that the creature drops when killed, in copper.
 
 This field is overridden by ScriptName field if both are set.
 
-| Name            | Description                                                    |
-|-----------------|----------------------------------------------------------------|
-| NullCreatureAI  | Empty AI, creature does nothing.                               |
-| TriggerAI       |                                                                |
-| AggressorAI     | Creature attacks as soon as something is in aggro range.       |
-| PassiveAI       |                                                                |
-| CritterAI       |                                                                |
-| GuardAI         |                                                                |
-| PetAI           | Creature is a pet.                                             |
-| TotemAI         | Creature casts spell from field spell1.                        |
-| CombatAI        |                                                                |
-| ArcherAI        |                                                                |
-| TurretAI        |                                                                |
-| VehicleAI       |                                                                |
-| SmartAI         | Creature uses Smart AI                                         |
+| Name            | Description                                                                                                         |
+|-----------------|---------------------------------------------------------------------------------------------------------------------|
+| NullCreatureAI  | Empty AI, creature does nothing; cannot be charmed.                                                                 |
+| TriggerAI       | Same as "NullCreatureAI", except that the creature casts the spell from field spell1 when summoned.                 |
+| AggressorAI     | Creature attacks when entering aggro radius; uses only melee attacks.                                               |
+| ReactorAI       | Creature attacks only if aggroed; uses only melee attacks.                                                          |
+| PassiveAI       | Creature behaves passive, cannot attack.                                                                            |
+| CritterAI       | Critter which flees if attacked.                                                                                    |
+| GuardAI         | Creature is a zone guard.                                                                                           |
+| PetAI           | Creature is a pet.                                                                                                  |
+| TotemAI         | Creature casts spell from field spell1; does not move.                                                              |
+| CombatAI        | Creature attacks as soon as something is in aggro range; uses also spells.                                          |
+| ArcherAI        | Creature casts spell from field spell1; chases the victim.                                                          |
+| TurretAI        | Creature attacks using spell from field spell1; does not move.                                                      |
+| VehicleAI       | Creature acts as player vehicle.                                                                                    |
+| SmartAI         | Creature uses the "[smart_scripts](smart_scripts.md)" table to specify it's behaviour. |
 
 #### MovementType
 
 The creature's default movement type.
 
-| ID | Type                                        |
-|----|---------------------------------------------|
-| 0  | Idle; stay in one place                     |
-| 1  | Random movement inside the spawndist radius |
-| 2  | Waypoint movement                           |
+| ID | Type                                        		 |
+|----|---------------------------------------------------|
+| 0  | Idle; stay in one place                     		 |
+| 1  | Random movement inside the wander_distance radius |
+| 2  | Waypoint movement                           		 |
 
 #### InhabitType
 
@@ -713,7 +714,7 @@ The name of the script that this creature uses, if any. This ties a script from 
 
 #### VerifiedBuild
 
-This field is used by the TrinityDB Team to determine whether a template has been verified from WDB files.
+This field was used to determine whether a template has been verified from WDB files.
 
 If value is 0 then it has not been parsed yet.
 
@@ -721,4 +722,4 @@ If value is above 0 then it has been parsed with WDB files from that specific cl
 
 If value is -1 then it is just a place holder until proper data are found on WDBs.
 
-If value is [-Client Build](http://archive.trinitycore.info/DB:Auth:realmlist#gamebuild "DB:Auth:realmlist") then it was parsed with WDB files from that specific [client build](http://archive.trinitycore.info/DB:Auth:realmlist#gamebuild "DB:Auth:realmlist") and manually edited later for some special necessity.
+If value is -Client Build then it was parsed with WDB files from that specific [client build](http://archive.trinitycore.info/DB:Auth:realmlist#gamebuild "DB:Auth:realmlist") and manually edited later for some special necessity.

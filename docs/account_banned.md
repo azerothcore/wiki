@@ -97,7 +97,7 @@ This table lists all of the accounts that have been banned along with the date w
 
 ### id
 
-The account ID. See [account.id](account_2130004.html#account-id).
+The account ID. See [account.id](account#id).
 
 ### bandate
 

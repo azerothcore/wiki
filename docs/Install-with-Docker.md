@@ -150,6 +150,16 @@ Then your `docker-compose up` will automatically locate the `.env` with your cus
 
 - The `docker-compose down` command will stop your containers, but it also removes the stopped containers as well as any networks that were created.
 
+### How can I delete my database files?
+
+**Warning** Once you've deleted your database files they are unrecoverable unless you have a backup.
+
+To remove your database files you firstly want to make sure that your containers have been stopped and removed by typing: `docker-compose down`.
+
+After stopping and removing your containers you can proceed to remove the volume by typing: `docker volume rm azerothcore-wotlk_ac-database`
+
+**Note** If you've changed your folder name from the default `azerothcore-wotlk` the volume name will be slightly different. To find the new volume name you can use the command `docker volume ls`. The volume should be labelled something along the lines of `xxxx_ac-database`.
+
 ### How can I run commands in the worldserver console?
 
 You can easily attach/detach from the worldserver console.

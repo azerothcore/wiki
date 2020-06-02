@@ -8,7 +8,7 @@ Move to your AzerothCore sources directory.
 
 ## 2) Recompile
 
-Compile again your sources, this step is the same as the [Compilation step during Installation](Installation#3-compiling), but generally you can skip the CMake part.
+Compile again your sources, this step is the same as the [Compilation step during Installation](Installation#3-compiling), but generally you can skip the CMake part unless you're adding new modules.
 
 For example, in Linux/Mac you just have to `cd build;` and run `make -j 4; make install`.
 

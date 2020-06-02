@@ -1,28 +1,63 @@
 # GNU/Linux
-## Debian-based
 
-### Debian
-
-`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
-
-### Debian 9
-
-`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
-
-### Debian 10
-
-`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev`
+## Debian-based requirements
 
 ### Ubuntu
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
+--- 
+
+
+### Debian 8
+
+`sudo apt-get update && sudo apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+### Install last cmake version on Debian 8
+
+To install last version of cmake use:
+```
+sudo apt install python3-pip
+pip3 install --upgrade cmake
+```
+
+Than **reboot** to sync the bash and use cmake from the terminal, than type the followings commands to check the cmake version:
+```
+cmake --version
+```
+You should have a version **>= 3.8**.
+
+Continue below the guide to install the other installation requirements.
+
+**Troubleshooting (cmake install)**: if you get any errors like: `No module named 'skbuild'`, you can solve with this:
+
+```
+apt install python3-pip
+pip3 install scikit-build
+pip3 install --upgrade pip
+pip3 install cmake
+```
+
+### Debian 9
+
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
+
+You might need to add the stretch-backports repositories to APT in order to install clang-6.x+ and cmake v3.8+.
+If you do not succeed installing cmake you can use the package manager of python3 (pip3)
+
+### Debian 10
+
+`sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev`
+
+--- 
+
+
 ### Check your clang version
 
 `clang --version`
 
-Your `clang` version **MUST** be `6` or higher ([here](http://www.azerothcore.org/wiki/travis-build) you can check the versions that run in our Travis CI pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be `6` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
 
 For example, if you are using an older version of Ubuntu like 16.04, you need to install clang using:
 
@@ -36,8 +71,7 @@ If you use another distro or version, search on google for how to install the ri
 
 Your `cmake` version **MUST** be `3.8` or higher.
 
-If you are using an older version of Ubuntu like 16.04, you need to follow the instructions here in order to install the latest version:
-https://apt.kitware.com/
+On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
 ### Ensure that the gcc-7 headers are installed
 
@@ -69,19 +103,13 @@ Then use it to install the required packages:
 
 * Install Visual Studio >= 15 ( 2017 Desktop Community, make sure you're using Version 15.9.17+ ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
-* Install [CMake](https://cmake.org/) version >= 2.8  
+* Install [CMake](https://cmake.org/) version 2.8 or newer.  
 
 * Install latest version of [Git Extensions](https://git-scm.com/download/win)
 
 * [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) (version 5.6 or 5.7, anything later is not supported)
 
-* [MySQL Development File](https://docs.google.com/uc?id=0B1fF5EIDoF1fWjYwQ1FCNUJmMWc&export=download)
-  
-  These files are shipped with MySQL Server but to make it easier we packed the libs and include files for both 32 bits and 64 bits.
-
-  Extract the files to a known location, e.g, C:\MySQL, directory structure must be following: C:\MySQL\include and C:\MySQL\lib\debug (Move libmysql.dll and libmysql.lib there) 
-
-* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x (Do not install the Light version) 
+* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x or 1.1.x (Do not install the Light version) 
   
   Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
 

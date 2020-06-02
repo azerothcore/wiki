@@ -455,17 +455,13 @@ Spell ID from <a href="http://www.azerothcore.org/wiki/Spell">Spell.dbc</a></td
 <td>Condition must be met for quest to be available to player.</td>
 </tr>
 <tr class="odd">
-<td>UNUSED</td>
+<td>CONDITION_SOURCE_TYPE_UNUSED_20</td>
 <td>20</td>
-<td><br />
-</td>
 <td></td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><br />
@@ -1056,7 +1052,13 @@ CONDITION_STAND_STATE</p></td>
 <td>CONDITION_QUESTSTATE</td>
 <td>47</td>
 <td>Quest ID - see <a href="http://www.azerothcore.org/wiki/quest_template#id">quest_template.id</a></td>
-<td>state_mask</td>
+<td>state_mask:
+<li>1 = Not taken</li>
+<li>2 = Completed</li>
+<li>8 = In progress</li>
+<li>32 = Failed</li>
+<li>64 = Rewarded</li>
+</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">

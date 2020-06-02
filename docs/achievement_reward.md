@@ -107,32 +107,32 @@ This table describes the reward that you will receive when you obtain a given ac
 
 ### ID
 
-This is the ID of the achievement from Achievement.dbc
+This is the ID of the achievement taken from the DBC `Achievement.dbc`.
 
 ### TitleA
 
-This is the ID of the title for Aliance from CharTitles.dbc if the achievement rewards a title.
+This is the ID of the title for Alliance from `CharTitles.dbc` if the achievement rewards a title.
 
 ### TitleH
 
-This is the ID of the title for Horde from CharTitles.dbc if the achievement rewards a title.
+This is the ID of the title for Horde from `CharTitles.dbc` if the achievement rewards a title.
 
 ### ItemID
 
-This is the item that you get if the achievement rewards an item. You will get this item in the mail.
+This is the item that that the player will receive if the achievement rewards an item. The player will get this item in a mail.
 
 ### Sender
 
-This is the sender of the mail that you receive.
+This is the sender of the mail that the player will receive.
 
 ### Subject
 
-This is the subject of the mail that you receive.
+This is the subject of the mail that the player will receive.
 
 ### Body
 
-This is the text of the body of that mail that you receive.
+This is the body (text) of the mail that the player will receive.
 
 ### MailTemplateID
 
-This is Id of MailTemplate from MailTemplate.dbc of that mail that you receive. Subject and Text must be empty. They are read from dbc file.
+Id of the MailTemplate from `MailTemplate.dbc` of that mail that the player will receive. To use this column, `Subject` and `Body` must be empty as they are loaded from the DBC file.

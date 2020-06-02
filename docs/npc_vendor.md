@@ -2,92 +2,53 @@
 
 [<-Back-to:World](database-world.md)
 
-**Table Structure**
+## General information
 
-This table holds the vendor data for all NPCs that sell items and currency. The price for each item or currency is in its item template as [BuyPrice](item_template#item_template-BuyPrice) or as [ExtendedCost](npc_vendor#npc_vendor-ExtendedCost).
+This table holds the vendor data for all NPCs that sell items or currencies. A vendor can only hold up to 150 items (15 pages), it is hardcoded in the emulator and if you change it, the client will crash.
 
-<table style="width:100%;">
-<colgroup>
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#slot">slot</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#item">item</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#maxcount">maxcount</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#incrtime">incrtime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#extendedcost">ExtendedCost</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
+### Prices
 
-**Field Descriptions**
+The price (in gold) for each item or currency is defined in its item template related entry as [item_template.BuyPrice](item_template#buyprice).
+Special costs (honor, tokens etc...) are defined in this table in the column [ExtendedCost](#extendedcost).
+
+### GM mode
+
+If you open the vendor's window in GM mode, you will see all the items sold by the vendor. If you disable GM mode, you will see the items sold like a normal player (ex: only for your own faction, only for your own class etc...).
+
+
+## Table Structure
+
+|      Field        |    Type      | Attributes | Key | Null | Default |
+|-------------------|--------------|------------|-----|------|---------|
+| [entry][1]        | mediumint(8) | unsigned   | PRI | NO   | 0       |
+| [slot][2]         | smallint(6)  | signed     |     | NO   | 0       |
+| [item][3]         | mediumint(8) | signed     | PRI | NO   | 0       |
+| [maxcount][4]     | tinyint(3)   | unsigned   |     | NO   | 0       |
+| [incrtime][5]     | int(10)      | unsigned   |     | NO   | 0       |
+| [ExtendedCost][6] | mediumint(8) | unsigned   | PRI | NO   | 0       |
+
+[1]: #entry
+[2]: #slot
+[3]: #item
+[4]: #maxcount
+[5]: #incrtime
+[6]: #extendedcost
+
+
+## Field Descriptions
 
 ### entry
 
-The ID of the creature. See [creature\_template.entry](creature_template#creature_template-entry).
+The ID of the creature. See [creature\_template.entry](creature_template#entry).
 
 ### slot
 
-Position of the item when the vendor window opens. The image below explains how the vendor-inventory slots are numbered. To continue on past the first page just use numbers 10, 11, 12, etc...
+Position of the item when the vendor window opens. It starts from 0 to x, from top to bottom, and from left to right.
+*Note: if you have a list of items at slot 0, and you edit one of them to be at slot 1 or any number, that item will always be at the end because all the other items are in slot 0.*
 
 ### item
 
-The item ID. See  [item\_template.entry](item_template#item_template-entry).
+The item ID. See  [item\_template.entry](item_template#entry).
 
 ### maxcount
 
@@ -95,8 +56,8 @@ The maximum number of items carried by the vendor at any time. If you want the v
 
 ### incrtime
 
-Combined with [maxcount](#npc_vendor-maxcount), this field tells how often (in seconds) the vendor list is refreshed and the limited item copies are restocked. For limited item copies, every refresh, the quantity is increased by [item\_template.BuyCount](item_template#item_template-BuyCount) .
+Combined with [maxcount](#maxcount), this field tells how often (in seconds) the vendor list is refreshed and the limited item copies are restocked. For limited item copies, every refresh, the quantity is increased by [item\_template.BuyCount](item_template#buycount) .
 
 ### ExtendedCost
 
-The value here corresponds to the ID in [ItemExtendedCost.dbc](ItemExtendedCost) and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.
+The value here corresponds to the ID in [ItemExtendedCost.dbc](NO_LINK_YET) and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.

@@ -91,7 +91,7 @@ A unixtime timestamp indicating when this string was logged.
 
 ### realm
 
-The [RealmID](realmlist_2130016.html#realmlist-id) of the realm this log string came from. 0 if realmd.
+The [RealmID](realmlist#id) of the realm this log string came from. 0 if realmd.
 
 ### type
 
