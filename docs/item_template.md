@@ -3262,11 +3262,11 @@ The maximum durability of this item.
 
 ### area
 
-The ID of the zone in which this item can be used.
+The ID of the zone in which this item can be used. If you leave the area, the item will be deleted from the inventory.
 
 ### Map
 
-The ID of the map in which this item can be used.
+The ID of the map in which this item can be used. If you leave the map, the item will be deleted from the inventory.
 
 ### BagFamily
 
