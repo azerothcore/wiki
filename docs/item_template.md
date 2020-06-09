@@ -3602,7 +3602,9 @@ Set ITEM\_FLAGS\_CU\_DURATION\_REAL\_TIME in *flagsCustom* for real time. In tha
 
 ### ItemLimitCategory
 
-`field-no-description|78`
+This is related to ItemLimitCategory.dbc.
+It is a property that defines if an item belongs to a "category", like "Mana Gems" or "Healthstone" and it defines how many items of the category you can have in the bag (this is the "limit").
+For example, for Healthstone, there are several items like "Lesser Healthstone, Greater Healthstone, etc." but you can have only one in your bag (check as example value 3 or 4).
 
 ### HolidayId
 
