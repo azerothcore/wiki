@@ -704,6 +704,7 @@ The \`broadcast\_text\`.\`ID\` field value for the \`MaleText\` in the \`broadca
 ### lang0
 
 The language of the text in game. Refer to [this page](Languages) for the available language IDs.
+If set to 0, then it doesn't require to know any specific language.
 
 ### Probability0
 
