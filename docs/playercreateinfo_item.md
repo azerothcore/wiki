@@ -14,11 +14,13 @@ This table is used for any custom items that you might want to give to character
 | [class][2]  | tinyint   | unsigned   | PRI | NO   | 0       |       |         |
 | [itemid][3] | mediumint | unsigned   | PRI | NO   | 0       |       |         |
 | [amount][4] | smallint  | unsigned   |     | NO   | 1       |       |         |
+| [Note][5]   | varchar   |            |     | YES  | NULL    |       |         |
 
 [1]: #race
 [2]: #class
 [3]: #itemid
 [4]: #amount
+[5]: #Note
 
 **Description of the fields**
 
@@ -39,3 +41,7 @@ The template ID of the item. See item\_template.entry
 ### amount
 
 The number of copies of that item.
+
+### Note
+
+Note of the entry
