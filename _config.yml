@@ -1,3 +1,4 @@
+# based on git-wiki-theme 2.6.1
 remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 title: AzerothCore
