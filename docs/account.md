@@ -8,312 +8,57 @@ This table holds information on all available accounts.
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>Auto increment</p></td>
-<td><p>Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#username">username</a></p></td>
-<td><p>varchar(32)</p></td>
-<td><p><br />
-</p></td>
-<td><p>UNI</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#sha_pass_hash">sha_pass_hash</a></p></td>
-<td><p>varchar(40)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#sessionkey">sessionkey</a></p></td>
-<td><p>varchar(80)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#v">v</a></p></td>
-<td><p>varchar(64)</p></td>
-<td><br />
-</td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#s">s</a></p></td>
-<td><p>varchar(64)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#token_key">token_key</a></td>
-<td>varchar(100)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>''</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#email">email</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#reg_mail">reg_mail</a></td>
-<td>varchar(255)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>''</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#joindate">joindate</a></p></td>
-<td><p>timestamp</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>CURRENT_TIMESTAMP</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#last_ip">last_ip</a></p></td>
-<td><p>varchar(15)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>127.0.0.1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#failed_logins">failed_logins</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#locked">locked</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#last_login">last_login</a></p></td>
-<td><p>timestamp</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0000-00-00 00:00:00</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#online">online</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#expansion">expansion</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>2</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mutetime">mutetime</a></p></td>
-<td><p>bigint(20)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><a href="#mutereason">mutereason</a></td>
-<td>varchar(255)</td>
-<td>signed</td>
-<td><br />
-</td>
-<td>NO</td>
-<td><p>&quot;</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#muteby">muteby</a></td>
-<td>varchar(50)</td>
-<td>signed</td>
-<td><br />
-</td>
-<td>NO</td>
-<td><p>&quot;</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#locale">locale</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#os">os</a></p></td>
-<td><p>varchar(3)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#recruiter">recruiter</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type         | Attributes | Key | Null | Default             | Extra          | Comment    |
+|---------------------|--------------|------------|-----|------|---------------------|----------------|------------|
+| [id][1]             | int(10)      | unsigned   | PRI | NO   |                     | Auto increment | Identifier |
+| [username][2]       | varchar(32)  |            | UNI | NO   | ''                  |                |            |
+| [sha_pass_hash][3]  | varchar(40)  |            |     | NO   | ''                  |                |            |
+| [sessionkey][4]     | varchar(80)  |            |     | NO   | ''                  |                |            |
+| [v][5]              | varchar(64)  |            |     | NO   | ''                  |                |            |
+| [s][6]              | varchar(64)  |            |     | NO   | ''                  |                |            |
+| [token_key][7]      | varchar(100) |            |     | NO   | ''                  |                |            |
+| [email][8]          | varchar(255) |            |     | NO   | ''                  |                |            |
+| [reg_mail][9]       | varchar(255) |            |     | NO   | ''                  |                |            |
+| [joindate][10]      | timestamp    | signed     |     | NO   | CURRENT_TIMESTAMP   |                |            |
+| [last_ip][11]       | varchar(15)  |            |     | NO   | 127.0.0.1           |                |            |
+| [failed_logins][12] | int(10)      | unsigned   |     | NO   | 0                   |                |            |
+| [locked][13]        | tinyint(3)   | unsigned   |     | NO   | 0                   |                |            |
+| [last_login][14]    | timestamp    | signed     |     | NO   | 0000-00-00 00:00:00 |                |            |
+| [totaltime][15]     | int(10)      | unsigned   |     | NO   | 0                   |                |            |
+| [online][16]        | tinyint(3)   | signed     |     | NO   | 0                   |                |            |
+| [expansion][17]     | tinyint(3)   | unsigned   |     | NO   | 2                   |                |            |
+| [mutetime][18]      | bigint(20)   | signed     |     | NO   | 0                   |                |            |
+| [mutereason][19]    | varchar(255) | signed     |     | NO   | ''                  |                |            |
+| [muteby][20]        | varchar(50)  | signed     |     | NO   | ''                  |                |            |
+| [locale][21]        | tinyint(3)   | unsigned   |     | NO   | 0                   |                |            |
+| [os][22]            | varchar(3)   | signed     |     | NO   | ''                  |                |            |
+| [recruiter][23]     | int(10)      | unsigned   |     | NO   | 0                   |                |            |
+
+
+[1]: #id
+[2]: #username
+[3]: #sha_pass_hash
+[4]: #sessionkey
+[5]: #v
+[6]: #s
+[7]: #token_key
+[8]: #email
+[9]: #reg_mail
+[10]: #joindate
+[11]: #last_ip
+[12]: #failed_logins
+[13]: #locked
+[14]: #last_login
+[15]: #totaltime
+[16]: #online
+[17]: #expansion
+[18]: #mutetime
+[19]: #mutereason
+[20]: #muteby
+[21]: #locale
+[22]: #os
+[23]: #recruiter
+
 
 ## Description of the fields
 
@@ -383,6 +128,10 @@ Boolean 0 or 1 controlling if the account has been locked or not. This can be co
 ### last\_login
 
 The date when the account was last logged into.
+
+### totaltime
+
+Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
 
 ### online
 
