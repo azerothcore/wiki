@@ -132,6 +132,7 @@ The date when the account was last logged into.
 ### totaltime
 
 Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
+Stored in Unix Time.
 
 ### online
 
