@@ -36,3 +36,7 @@ have been placed under /deps folder
 ## HOOKS:
 
 Internal [Hook system for bash](Hooks-Bash.md)
+
+## Other resources
+
+- Single bash command to install azerothcore: [Video + script in description](https://www.youtube.com/watch?v=j1HI6pLZZvM)
