@@ -4,10 +4,14 @@ redirect_from: "/"
 
 Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered by [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
 
-## How to install
+## Getting started
 
 - [Traditional setup guide](Installation.md)
 - [Docker setup guide](Install-with-Docker.md)
+
+## Documentation
+
+- [Documentation Index](documentation_index.md)
 
 ## Overview
 
