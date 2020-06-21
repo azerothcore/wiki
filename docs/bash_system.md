@@ -31,3 +31,8 @@ All commands come with a shorter alias. For example `./acore.sh c configure` wil
 
 Our bash system uses external bash libraries that are generic and not related to the azerothcore itself, those libraries have been created by us and 
 have been placed under /deps folder
+
+
+## HOOKS:
+
+Internal [Hook system for bash](Hooks-Bash.md)
