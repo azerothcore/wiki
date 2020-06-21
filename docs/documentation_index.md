@@ -5,7 +5,7 @@
 * [Traditional setup guide](Installation.md)
 * [Docker setup guide](Install-with-Docker.md)
 
-### Documentation
+## Documentation
 
 * [Directory structure](Directory-Structure)
 * [Bash system](bash_system.md)
@@ -17,7 +17,7 @@
 * [CMake options](CMake-options)
 * [Bitwise operations](Bit-and_bytes-tutorial)
 
-# Extends AzerothCore
+## Extend AzerothCore
 
 * [The Modular Structure](The-Modular-Structure)
 * [Hooks Bash](Hooks-Bash)
