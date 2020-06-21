@@ -14,6 +14,10 @@ This script runs a dashboard that contains the commands to run all scripts relat
 
 run `./acore.sh --help` for the entire list of the available commands. 
 
+### Configuration
+
+The /conf folder available in our project root directory is used to give you the possibility to change configurations for all our bash scripts
+
 ### Interactive mode
 
 run `./acore.sh` and you can use the dashboard in interactive mode: you can navigate within the dashboard menu and sub-menu and run the command you need
