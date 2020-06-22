@@ -41,7 +41,7 @@ Table used for storing custom spell attributes.
 <td><p>spell id</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="#attributes">ttributes</a></p></td>
+<td><p><a href="#attributes">attributes</a></p></td>
 <td><p>medium int(8)</p></td>
 <td><p>unsigned</p></td>
 <td><p> </p></td>
