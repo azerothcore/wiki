@@ -1,109 +1,40 @@
-# lag\_reports
+# lag_reports
 
 [<-Back-to:Characters](database-characters.md)
 
-**The \`lag\_reports\` table**
 
-`table-no-description|0`
+## The `lag_reports` table
 
-**Structure**
+This table stores the lag reports made by players ingame (when they click on "Help Request").
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#reportid">reportId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p>Auto Increment</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#lagtype">lagType</a></p></td>
-<td><p>inyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#mapid">mapId</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#posx">posX</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#posy">posY</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#posz">posZ</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>No</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
 
-**Description of the fields**
+## Structure
+
+| Field           | Type        | Attributes | Key | Null | Default | Extra          | Comment |
+|-----------------|-------------|------------|-----|------|---------|----------------|---------|
+| [reportId][1]   | int(10)     | unsigned   | PRI | NO   |         | Auto Increment |         |
+| [guid][2]       | int(10)     | unsigned   |     | NO   | 0       |                |         |
+| [lagType][3]    | inyint(3)   | unsigned   |     | NO   | 0       |                |         |
+| [mapId][4]      | smallint(5) | unsigned   |     | NO   | 0       |                |         |
+| [posX][5]       | float       | signed     |     | NO   | 0       |                |         |
+| [posY][6]       | float       | signed     |     | NO   | 0       |                |         |
+| [posZ][7]       | float       | signed     |     | NO   | 0       |                |         |
+| [latency][8]    | int(10)     | unsigned   |     | NO   | 0       |                |         |
+| [createTime][9] | int(10)     | unsigned   |     | NO   | 0       |                |         |
+
+
+[reportId][1]: #reportId
+[guid][2]: #guid
+[lagType][3]: #lagType
+[mapId][4]: #mapId
+[posX][5]: #posX
+[posY][6]: #posY
+[posZ][7]: #posZ
+[latency][8]: #latency
+[createTime][9]: #createTime
+
+
+## Description of the fields
 
 ### reportId
 
@@ -111,11 +42,16 @@ Report ID
 
 ### guid
 
-Player guid. See [characters.guid](http://www.azerothcore.org/wiki/characters#guid)
+Character guid. See [characters.guid](characters#guid)
 
 ### lagType
 
-`field-no-description|3`
+* 0 = Loot related
+* 1 = Auction House related
+* 2 = Mail related
+* 3 = Chat related
+* 4 = Movement related
+* 5 = Spells and Abilities related
 
 ### mapId
 
@@ -132,3 +68,11 @@ Position Y
 ### posZ
 
 Position Y
+
+### latency
+
+Latency in ms at the moment of the report.
+
+### createTime
+
+Creation date in Unix Time (TODO: should be changed to mysql timestamp)
