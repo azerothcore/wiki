@@ -22,16 +22,15 @@ This table stores the lag reports made by players ingame (when they click on "He
 | [latency][8]    | int(10)     | unsigned   |     | NO   | 0       |                |         |
 | [createTime][9] | int(10)     | unsigned   |     | NO   | 0       |                |         |
 
-
-[reportId][1]: #reportId
-[guid][2]: #guid
-[lagType][3]: #lagType
-[mapId][4]: #mapId
-[posX][5]: #posX
-[posY][6]: #posY
-[posZ][7]: #posZ
-[latency][8]: #latency
-[createTime][9]: #createTime
+[1]: #reportId
+[2]: #guid
+[3]: #lagType
+[4]: #mapId
+[5]: #posX
+[6]: #posY
+[7]: #posZ
+[8]: #latency
+[9]: #createTime
 
 
 ## Description of the fields
