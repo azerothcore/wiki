@@ -343,7 +343,7 @@ The comment to the ticket, only visible to game masters
 
 ### response
 
-Requires GM response. 17 = true, 1 = false (17 is default)
+The string the GM inserted with `.ticket response` commands to answer the ticket before completing it.
 
 ### completed
 
