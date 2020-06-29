@@ -39,6 +39,8 @@ At the beginning of each development phase, we will clean the sql/updates folder
 
 * **PHASE 4: End of Life ( EOL )**: We will archive that release keeping documentation and branch ofc. You can continue to use/download it, but we won't offer any official support of any kind
 
+## List of releases
+
 | version/branch | codename  | description | current state | release data | end of support|
 |     --         |    --     |      --     |           --  |       --     |      --       |
 |     0.x        |  Sunwell|  small reworks for sunwell  |EOL|      2016 Q3 |      2017  Q1 |
