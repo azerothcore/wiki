@@ -66,7 +66,7 @@ Position Y
 
 ### posZ
 
-Position Y
+Position Z
 
 ### latency
 
