@@ -329,11 +329,9 @@ The time when the ticket was closed or deleted by the issuer as linux timestamp
 
 ### closedBy
 
-0 : Open
-
-~-1 : Closed by Console~ (not implemented on azerothcore yet)
-
-&gt;0 : player who abandoned ticket or GM who closed ticket
+* 0 = Open
+* ~-1 = Closed by Console~ (not implemented on azerothcore yet)
+* &gt; 0 = player who abandoned ticket or GM who closed ticket
 
 ### assignedTo
 
@@ -345,21 +343,24 @@ The comment to the ticket, only visible to game masters
 
 ### response
 
-Requires GM response. 17 = true, 1 = false (17 is default)
+The string the GM inserted with `.ticket response` commands to answer the ticket before completing it.
 
 ### completed
 
-`field-no-description|14`
+* 0 = not completed
+* 1 = completed (will inform the user and show what is in `response`)
 
 ### escalated
 
-`field-no-description|15`
+* 0 = ticket is not currently assigned to a gm
+* 1 = ticket is assigned to a normal gm
+* 2 = ticket has been escalated after completion (a GM is supposed to contact the player back) 
+
 
 ### viewed
 
-0 : no one has viewed the ticket.
-
-&gt;0 : How many times the ticket has been viewed.
+* 0 = no one has viewed the ticket.
+* &gt;0 = How many times the ticket has been viewed by GMs
 
 ### needMoreHelp
 
@@ -367,4 +368,6 @@ Requests further GM interaction on a ticket to which a GM has already responded.
 
 ### resolvedBy
 
-GUID of GM who resolved the ticket.
+* 0 = Open
+* ~-1 = Resolved by Console~ (not supported on azerothcore yet cause of datatype in DB)
+* &gt; 0 = Character guid of the GM who resolved it (by closing the ticket or by completing the ticket)
