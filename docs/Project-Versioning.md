@@ -1,3 +1,4 @@
+
 We are using the semantic versioning standard:
 
 http://semver.org/spec/v2.0.0.html
@@ -38,5 +39,9 @@ At the beginning of each development phase, we will clean the sql/updates folder
 
 * **PHASE 4: End of Life ( EOL )**: We will archive that release keeping documentation and branch ofc. You can continue to use/download it, but we won't offer any official support of any kind
 
-![Versioning](https://docs.google.com/spreadsheets/d/1W0fqLhfbh9N4NIjcKYqpfifdAGHEQatPfy1bxzpHWds/pubchart?oid=379908243&format=image)
-
+| version/branch | codename  | description | current state | release data | end of support|
+|     --         |    --     |      --     |           --  |       --     |      --       |
+|     0.x        |  Sunwell|  small reworks for sunwell  |EOL|      2016 Q3 |      2017  Q1 |
+|     1.x        |  Mimiron | first version to introduce the module system | EOL|     2017 Q1 |      2019  Q1 |
+|     2.x        |  Gunship | Integrated CI/CD and tons of fixes  | Security & Stability   |     2019 Q1 |      ~ |
+|     master (3.x)        |  ~ | ~ | developing |     ~ |      ~|
