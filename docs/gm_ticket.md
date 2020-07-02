@@ -1,12 +1,15 @@
-# gm\_ticket
+# gm_ticket
 
 [<-Back-to:Characters](database-characters.md)
 
-**The \`gm\_tickets\` table**
+## The `gm_tickets` table
 
-This table stores all tickets
+This table stores all tickets.
 
-**Structure**
+Note: do not insert directly into most of these columns, else the client won't update the ticket status until table reload and a logout.
+
+
+## Structure
 
 <table>
 <tbody>
@@ -339,11 +342,11 @@ Specify account number of GameMaster that have this ticket assigned.
 
 ### comment
 
-The comment to the ticket, only visible to game masters
+The comment to the ticket added with `.ticket comment`, only visible to game masters. If the command is used twice, it overwrites the previous comment.
 
 ### response
 
-The string the GM inserted with `.ticket response` commands to answer the ticket before completing it.
+The string the GM inserted with `.ticket response` commands to answer the ticket before completing it. If the command is used twice, it appends the new answer at the end of the previous one.
 
 ### completed
 
