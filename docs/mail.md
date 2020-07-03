@@ -226,13 +226,7 @@ Here is stored mail subject.
 
 ### body
 
-The text contained in the mail.
-
-Info about the max length of a mail, from the code:
-```cpp
-    // client can't work with packets > max int16 value
-    const uint32 maxPacketSize = 32767;
-```
+The text contained in the mail. Max length is 8000 characters.
 
 ### has_items
 
