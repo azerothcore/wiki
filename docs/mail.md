@@ -228,13 +228,19 @@ Here is stored mail subject.
 
 The text contained in the mail.
 
-### has\_items
+Info about the max length of a mail, from the code:
+```cpp
+    // client can't work with packets > max int16 value
+    const uint32 maxPacketSize = 32767;
+```
+
+### has_items
 
 Default: 0,
 
 When is set to 1, that mail can contain items.
 
-For items look at [mail\_items](mail_items) table.
+For items look at [mail_items](mail_items) table.
 
 ### expire\_time
 
