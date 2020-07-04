@@ -226,15 +226,15 @@ Here is stored mail subject.
 
 ### body
 
-The text contained in the mail.
+The text contained in the mail. Max length is 8000 characters.
 
-### has\_items
+### has_items
 
 Default: 0,
 
 When is set to 1, that mail can contain items.
 
-For items look at [mail\_items](mail_items) table.
+For items look at [mail_items](mail_items) table.
 
 ### expire\_time
 
