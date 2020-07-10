@@ -1,4 +1,4 @@
-# characters
+# characters (table)
 
 [<-Back-to:Characters](database-characters.md)
 
