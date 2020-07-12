@@ -101,6 +101,8 @@ Then use it to install the required packages:
 
 # Windows
 
+* Install [git](https://git-scm.com/downloads) including **git bash** which will be used as terminal to run commands during the setup.
+
 * Install Visual Studio >= 15 ( 2017 Desktop Community, make sure you're using Version 15.9.17+ ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
 * Install [CMake](https://cmake.org/) version 2.8 or newer.  
