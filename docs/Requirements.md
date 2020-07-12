@@ -1,8 +1,10 @@
-# GNU/Linux
+# AzerothCore Requirements
 
-## Debian-based requirements
+## GNU/Linux
 
-### Ubuntu
+### Debian-based requirements
+
+#### Ubuntu
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
@@ -10,11 +12,11 @@ To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other se
 --- 
 
 
-### Debian 8
+#### Debian 8
 
 `sudo apt-get update && sudo apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
-### Install last cmake version on Debian 8
+#### Install last cmake version on Debian 8
 
 To install last version of cmake use:
 ```
@@ -39,21 +41,21 @@ pip3 install --upgrade pip
 pip3 install cmake
 ```
 
-### Debian 9
+#### Debian 9
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 You might need to add the stretch-backports repositories to APT in order to install clang-6.x+ and cmake v3.8+.
 If you do not succeed installing cmake you can use the package manager of python3 (pip3)
 
-### Debian 10
+#### Debian 10
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev`
 
 --- 
 
 
-### Check your clang version
+#### Check your clang version
 
 `clang --version`
 
@@ -65,7 +67,7 @@ For example, if you are using an older version of Ubuntu like 16.04, you need to
 
 If you use another distro or version, search on google for how to install the right clang version for your system.
 
-### Check your cmake version
+#### Check your cmake version
 
 `cmake --version`
 
@@ -73,7 +75,7 @@ Your `cmake` version **MUST** be `3.8` or higher.
 
 On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
-### Ensure that the gcc-7 headers are installed
+#### Ensure that the gcc-7 headers are installed
 
 This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
 https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
@@ -81,7 +83,7 @@ https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
 After `sudo apt-get update` you can install gcc-7: `sudo apt-get install g++-7 gcc-7`
 
 
-# Mac OS X
+## Mac OS X
 
 Install XCode using the App Store, then open the terminal and type:
 
@@ -99,7 +101,7 @@ Then use it to install the required packages:
 
 `brew link mysql56 --force`
 
-# Windows
+## Windows
 
 * Install Visual Studio >= 15 ( 2017 Desktop Community, make sure you're using Version 15.9.17+ ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
