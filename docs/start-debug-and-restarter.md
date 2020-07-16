@@ -12,7 +12,7 @@ Authserver and Worldservers can be placed to different environment, however, in 
 both authserver and worldserver can be started by simply run the compiled binaries after [completing the installation](https://www.azerothcore.org/wiki/Installation).
 
 
-### How to Debug
+### How to Debug and generate Crashdumps
 
 [WIP]
 
@@ -25,14 +25,13 @@ If you compile azerothcore using the [acore.sh](https://www.azerothcore.org/wiki
 
 [WIP]
 
+### Crashdumps
+
+[WIP]
+
 ### Run at system startup
 
 [WIP]
-
-### Enable GDB
-
-[WIP]
-
 
 ## As Windows service
 
@@ -41,10 +40,16 @@ If you compile azerothcore using the [acore.sh](https://www.azerothcore.org/wiki
 
 [WIP]
 
+### Crashdumps
+
 ## PM2 Process Manager
 
 **based on**: nodejs
 **operating systems**: [All OS supported by NodeJS](https://en.wikipedia.org/wiki/Node.js)
+
+[WIP]
+
+### Run at system startup
 
 [WIP]
 
@@ -55,6 +60,9 @@ If you compile azerothcore using the [acore.sh](https://www.azerothcore.org/wiki
 
 [WIP]
 
+### Run at system startup
+
+[WIP]
 
 ### With Manual compilation
 
