@@ -85,21 +85,20 @@ After `sudo apt-get update` you can install gcc-7: `sudo apt-get install g++-7 g
 
 ## Mac OS X
 
-Install XCode using the App Store, then open the terminal and type:
+- Install XCode using the App Store, then open the terminal and type:
 
 `xcode-select --install` 
 
-For those who don't have [Homebrew](http://brew.sh/) installed, you can easily install it typing:
+- Install the package manager [Homebrew](http://brew.sh/)
 
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
-Then use it to install the required packages:
+Use brew it to install the required packages:
 
 `brew update`
 
-`brew install openssl readline cmake ace coreutils bash bash-completion md5sha1sum mysql56`
+`brew install openssl readline cmake ace coreutils bash bash-completion coreutils`
 
-`brew link mysql56 --force`
+`brew link mysql`
+
 
 ## Windows
 
