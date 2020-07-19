@@ -85,21 +85,30 @@ After `sudo apt-get update` you can install gcc-7: `sudo apt-get install g++-7 g
 
 ## Mac OS X
 
-Install XCode using the App Store, then open the terminal and type:
+- Install XCode using the App Store, then open the terminal and type:
 
 `xcode-select --install` 
 
-For those who don't have [Homebrew](http://brew.sh/) installed, you can easily install it typing:
+- Install the package manager [Homebrew](http://brew.sh/)
 
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
-Then use it to install the required packages:
+Use brew it to install the required packages:
 
 `brew update`
 
-`brew install openssl readline cmake ace coreutils bash bash-completion md5sha1sum mysql56`
+`brew install openssl readline cmake ace coreutils bash bash-completion coreutils`
 
-`brew link mysql56 --force`
+Now install mysql:
+
+`brew install mysql`
+
+You will be prompted some instructions to complete the `mysql` installation, for example to properly set a password. Just follow the instructions and properly configure mysql. **This step is important, do not skip it.**
+
+To verify that mysql has been properly installed, try accessing it using either the command line (e.g. `mysql -u root -p`) or using DB client managers with a UI like Sequel Pro.
+
+You can install Sequel Pro with:
+
+`brew cask install sequel-pro`
+
 
 ## Windows
 
