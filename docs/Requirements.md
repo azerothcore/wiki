@@ -97,7 +97,17 @@ Use brew it to install the required packages:
 
 `brew install openssl readline cmake ace coreutils bash bash-completion coreutils`
 
-`brew link mysql`
+Now install mysql:
+
+`brew install mysql`
+
+You will be prompted some instructions to complete the `mysql` installation, for example to properly set a password. Just follow the instructions and properly configure mysql.
+
+To verify that mysql has been properly installed, try accessing it using either the command line (e.g. `mysql -u root -p`) or using DB client managers with a UI like Sequel Pro.
+
+You can install Sequel Pro with:
+
+`brew cask install sequel-pro`
 
 
 ## Windows
