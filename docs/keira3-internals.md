@@ -42,7 +42,7 @@ More specifically, we have:
  
  - **E2E tests**. We have a tiny set of e2e tests based on [Spectron](https://www.electronjs.org/spectron). For example, to check the sqlite integration.
  
- ### Why automated testing?
+ ### Why test automation?
  
  Because every time you modify your app, you never know if you are breaking any existing functionality unless you manually test everything again and again.
  
