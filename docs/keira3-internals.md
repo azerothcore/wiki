@@ -29,7 +29,24 @@ We don't use many native Electron features so usually you don't have to worry ab
 
 ## Testing
 
-TODO
+We use [test automation](https://en.wikipedia.org/wiki/Test_automation) in Keira3 in our development cycle. For every PR/commit, our CI automatically runs a lot of automated tests.
+
+More specifically, we have:
+
+- **Unit tests**. It's all `*.spec.ts` file, they run with `ng test`. We keep **100% coverage**.
+  This means that if you try to submit untested code, the CI build of your PR will fail. We use the [Angular testing framework](https://angular.io/guide/testing) for it.
+
+- **Integration tests**. It's all the `*.integration.spec.ts` file, they also run with `ng test`, together with the unit tests.
+ You can see the integration tests of Keira3 almost like a set of e2e tests, the main difference is that all the DB interactions are mocked.
+ The difference between unit tests and integration test is: in unit tests we test units by mocking all their dependencies, while in integration tests we test "big pieces" of Keira3 together. Mostly used to test the editors.
+ 
+ - **E2E tests**. We have a tiny set of e2e tests based on [Spectron](https://www.electronjs.org/spectron). For example, to check the sqlite integration.
+ 
+ ### Why automated testing?
+ 
+ Because every time you modify your app, you never know if you are breaking any existing functionality unless you manually test everything again and again.
+ 
+ When you have automated tests in place, you are still not 100% sure about not breaking existing stuff, but at least they can give you some assurance.
 
 ## Architecture design
 
