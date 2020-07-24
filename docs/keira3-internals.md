@@ -40,13 +40,33 @@ More specifically, we have:
  You can see the integration tests of Keira3 almost like a set of e2e tests, the main difference is that all the DB interactions are mocked.
  The difference between unit tests and integration test is: in unit tests we test units by mocking all their dependencies, while in integration tests we test "big pieces" of Keira3 together (mocking only the DB). Mostly used to test the editors.
  
- - **E2E tests**. We have a tiny set of e2e tests based on [Spectron](https://www.electronjs.org/spectron). For example, to check the sqlite integration.
+ - **E2E tests**. We have a tiny set of e2e tests based on [Spectron](https://www.electronjs.org/spectron). For example, to check the sqlite integration. 
+ The command `ng e2e` will automatically serve the app and run the e2e tests.
  
  ### Why test automation?
  
  Because every time you modify your app, you never know if you are breaking any existing functionality unless you manually test everything again and again.
  
  When you have automated tests in place, you are still not 100% sure about not breaking existing stuff, but at least they can give you some assurance.
+
+## Files structure
+
+Relevant directories:
+
+- **e2e**: all e2e test cases, isolated from everything else;
+
+- **src/assets**: images and **global** style files (the components' style files are located in `src/app`);
+
+- **src/app**: source code of the application as well as the unit and integration tests;
+
+- **src/app/config**: app configuration files, like routing and library-specific configurations;
+
+- **src/app/features**: source code of the main Keira3 features (each one isolated from the others). **RULE**: a feature can NOT import anything from another feature.
+If something is meant to be shared across features, then it must be placed under `src/app/shared`;
+
+- **src/app/main**: components that don't belong to a specific feature, yet they are isolated. For example, the root component `AppComponent`, the Sidebar, the Login window, etc...
+
+- **src/app/shared**: all kinds of utilities, modules, components, services, abstract classes, testing utilities, etc... that **are meant to be used by more than 1 feature**;
 
 ## Architecture design
 
