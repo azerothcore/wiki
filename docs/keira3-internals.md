@@ -82,6 +82,12 @@ Keira3 is [**modular**](https://en.wikipedia.org/wiki/Modular_programming), you 
 
 Typically, Keira3 features are caraterised by the following elements.
 
+### Table types
+
+All the definitions of the AzerothCore DB tables are defined in Keira3 inside `src/app/shared/types`.
+
+If you want to create a new editor, you have to first create its definition there.
+
 ### The Main Entity
 
 For example ***Creature*** is a main entity. Whether you want to modify a vendor (`npc_vendor`) or a loot of a creature (`creature_loot_template`), you still have to select (or create) a Creature.
