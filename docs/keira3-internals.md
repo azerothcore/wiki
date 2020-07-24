@@ -138,3 +138,13 @@ In order to maximise code reuse, the following abstract classes have been create
 - `SingleRowEditorComponent`: extends `EditorComponent`, base of all Single-row Editor Components (e.g. `CreatureTemplateComponent` extends this class);
 - `MultiRowEditorComponent`: extends `EditorComponent`, base of all Multi-row Editor Components (e.g. `CreatureLootTemplateComponent` extends this class);
 
+### Handler
+
+Handlers are services responsible for holding statuses such as:
+
+- which entity has been selected (for example, when you select a Creature, the ID of the creature is kept inside the `CreatureHandlerService`)
+- which editors are left with unsaved changes
+
+Group of editors that refer to the same main entity should share **one Handler**. For example, all Creature Editors refer to the `CreatureHandlerService`, all Quest Editors refer to the `QuestHandlerService`, and so on...
+
+All Handlers classes extend the `HandlerService` abstract class.
