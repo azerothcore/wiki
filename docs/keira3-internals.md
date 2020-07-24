@@ -68,7 +68,7 @@ If something is meant to be shared across features, then it must be placed under
 
 - **src/app/shared**: all kinds of utilities, modules, components, services, abstract classes, testing utilities, etc... that **are meant to be used by more than 1 feature**;
 
-## Architecture design
+## Architecture design and fundamentals
 
 Keira3 code is structured using [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) with techniques like [inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) and [generic types](https://www.typescriptlang.org/docs/handbook/generics.html) to maximise code reuse.
 
@@ -76,4 +76,65 @@ Inside the directory `src/app/shared/abstract` there is a collection of abstract
 
 *If you are not familiar with the terminology used so far, please check the above hyperlinks before proceeding.*
 
-TODO
+Keira3 is [**modular**](https://en.wikipedia.org/wiki/Modular_programming), you can see it as a collection of features and shared utilities that are organised into [Angular Modules](https://angular.io/guide/architecture-modules).
+
+## Keira3 terminology and conventions
+
+Typically, Keira3 features are caraterised by the following elements.
+
+### The Main Entity
+
+For example ***Creature*** is a main entity. Whether you want to modify a vendor (`npc_vendor`) or a loot of a creature (`creature_loot_template`), you still have to select (or create) a Creature.
+
+There is always a table (and so also an Editor) for the Main Entity. For creatures it's `creature_template`.
+
+You can't have a vendor, loot, etc... without having a creature first. In other words, you can't have an `npc_vendor` row without linking it to an existing entry of `creature_template`.
+
+Another example could be: you can't have a row in `quest_template_addon` without linking it to an existing row of `quest_template`. Because `quest_template` is the Main Entity of the Quest editors.
+
+### Editor
+
+An Editor is typically linked to a table. For example, the ***Creature*** -> ***Trainer*** editor allows you to edit the `npc_trainer` table.
+
+There are 2 main types of Editors in Keira3:
+
+#### Single-row editors
+
+They are the editors of tables containing **ONE row for each entity**.
+
+For example, the table `creature_template_addon` can have only ONE row for each creature. You can never have 2 rows pointing to the same creature in this table.
+
+Every row is uniquely identified by a primary key, that is the ID of the selected entity. Typically in the DB they are called `id`, `ID`, `entry`, `Entry`, etc... yes, they are completely inconsistent, but that's what we inherited from MaNGOS/TrinityCore. In Keira3 we call it just `entityIdField`.
+
+#### Multi-row editors
+
+They are the editors containing **MULTIPLE rows for each entity**.
+
+For example, the table `npc_vendor` can have multiple rows that belongs to the same Creature. Every row of `npc_vendor` represents a specific Item that is sold by a specific Creature. And a Creature can sell 0, 1 or many items. Then every Creature can have 0, 1 or many rows in the `npc_vendor` table. Makes sense right?
+
+Every row has 2 primary keys, typically (but not always) called `id` and `guid`. In Keira3 we always call them `entityIdField` and 
+`entitySecondIdField`. The `entityIdField` is the ID of the selected entity.
+
+Back to the example of `npc_vendor`:
+
+- `entityIdField` would be the ID of the Creature
+- `entitySecondIdField` would be the ID of the Item
+
+#### Editor's Component and Service
+
+Every Editor in Keira3 has its own [Component](https://angular.io/guide/architecture-components) and [Service](https://angular.io/guide/architecture-services) counterparts, where:
+
+- you can see an **Editor Component** as the "UI part" of the Editor. It reflects the status of the table being edited and contains a form that allows the user to change its properties. Components are typically "dumb" (without much logic code) and are mostly about the HTML code. Of course it's linked to the Editor Service;
+
+- the **Editor Service** contains all the logic that powers an Editor, as well as the **status** for the current table being edited. It's responsible for calling the `QueryService` whenever the user edits any property in order to re-generate the SQL queries.
+
+In order to maximise code reuse, the following abstract classes have been created:
+
+- `EditorService`: base of all Editor Services;
+- `SingleRowEditorService`: extends `EditorService`, base of all Single-row Editor Services (e.g. `CreatureTemplateService` extends this class);
+- `MultiRowEditorService`: extends `EditorService`, base of all Multi-row Editor Services (e.g. `CreatureLootTemplateService` extends this class);
+
+- `EditorComponent`: base of all Editor Components
+- `SingleRowEditorComponent`: extends `EditorComponent`, base of all Single-row Editor Components (e.g. `CreatureTemplateComponent` extends this class);
+- `MultiRowEditorComponent`: extends `EditorComponent`, base of all Multi-row Editor Components (e.g. `CreatureLootTemplateComponent` extends this class);
+
