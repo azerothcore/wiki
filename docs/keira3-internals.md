@@ -50,4 +50,10 @@ More specifically, we have:
 
 ## Architecture design
 
-TODO 
+Keira3 code is structured using [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) with techniques like [inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) and [generic types](https://www.typescriptlang.org/docs/handbook/generics.html) to maximise code reuse.
+
+Inside the directory `src/app/shared/abstract` there is a collection of abstract classes that are meant to be extended by the concrete Angular [Components](https://angular.io/guide/architecture-components) and [Services](https://angular.io/guide/architecture-services) which will implement the Keira3 features.
+
+*If you are not familiar with the terminology used so far, please check the above hyperlinks before proceeding.*
+
+TODO
