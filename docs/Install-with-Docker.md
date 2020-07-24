@@ -84,6 +84,8 @@ Put your data files into the `docker/worldserver/data/` folder that is inside `a
 
 Inside your terminal (if you use Windows, use git bash), run the following commands.
 
+**Note for Windows users**: when running the following commands, you may need to use `bash bin\acore-...` instead of `./bin/acore-...`. Note using `\` instead of `/` and `bash bin...` instead of `./bin...`
+
 **1) Generate your server configuration files:**
 
 ```
