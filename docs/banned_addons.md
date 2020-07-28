@@ -1,4 +1,4 @@
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [banned_addons](banned_addons)
+[<-Back-to:Characters](database-characters.md)
 
 Column | Type | Description
 --- | --- | ---
