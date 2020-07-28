@@ -90,7 +90,7 @@ Example creature GUID: 1234567, example path id: 123456700
 If you need the waypoints for SmartAI you have to copy the waypoints from table [waypoint_data](waypoint_data) into table [waypoints](waypoints) and then delete the original waypoints (unload the path for the creature via ```.wp unload``` if it was loaded before). Here an example for path 123456700:
 ```sql
 INSERT INTO `waypoints` (`entry`,`pointid`,`position_x`,`position_y`,`position_z`)
-  SELECT `id`,`point`,`position_x`,`position_y`,`position_z` FROM `waypoint_data` WHERE `id` = 123456700;
+SELECT `id`,`point`,`position_x`,`position_y`,`position_z` FROM `waypoint_data` WHERE `id` = 123456700;
 DELETE FROM `waypoint_data` WHERE `id` = 123456700;
 ```
 
@@ -99,7 +99,7 @@ DELETE FROM `waypoint_data` WHERE `id` = 123456700;
 The same as above, but now for [script_waypoint](script_waypoint) instead of [waypoints](waypoints). The entry of [script_waypoint](script_waypoint) has to be the [creature_template.entry](creature_template#entry), here for example 1234567:
 ```sql
 INSERT INTO `script_waypoint` (`entry`,`pointid`,`location_x`,`location_y`,`location_z`)
-  SELECT 1234567 AS `entry`,`point`,`position_x`,`position_y`,`position_z` FROM `waypoint_data` WHERE `id` = 123456700;
+SELECT 1234567 AS `entry`,`point`,`position_x`,`position_y`,`position_z` FROM `waypoint_data` WHERE `id` = 123456700;
 DELETE FROM `waypoint_data` WHERE `id` = 123456700;
 
 ```
