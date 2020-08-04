@@ -116,7 +116,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |go creature|1|Syntax:.go creature #creature_guidTeleport your character to creature with guid #creature_guid..go creature #creature_nameTeleport your character to creature with this name..go creature id #creature_entryTeleport your character to a creature that was spawned from the template with this entry.If more than one creature is found, then you are teleported to the first that is found inside the database.|
 |go graveyard|1|Syntax: .go graveyard #graveyardId Teleport to graveyard with the graveyardId specified.|
 |go grid|1|Syntax: .go grid #gridX #gridY [#mapId] Teleport the gm to center of grid with provided indexes at map #mapId (or current map if it not provided).|
-|go object|1|Syntax: .go object #object_guid Teleport your character to gameobject with guid #object_guid|
+|go gobject|1|Syntax: .go gobject #object_guid Teleport your character to gameobject with guid #object_guid|
 |go taxinode|1|Syntax: .go taxinode #taxinode Teleport player to taxinode coordinates. You can look up zone using .lookup taxinode $namepart|
 |go ticket|1|Syntax: .go ticket #ticketid Teleports the user to the location where $ticketid was created.|
 |go trigger|1|Syntax: .go trigger #trigger_id Teleport your character to areatrigger with id #trigger_id. Character will be teleported to trigger target if selected areatrigger is telporting trigger.|
@@ -175,7 +175,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |list auras|3|Syntax: .list auras List auras (passive and active) of selected creature or player. If no creature or player is selected, list your own auras.|
 |list creature|3|Syntax: .list creature #creature_id [#max_count] Output creatures with creature id #creature_id found in world. Output creature guids and coordinates sorted by distance from character. Will be output maximum #max_count creatures. If #max_count not provided use 10 as default value.|
 |list item|3|Syntax: .list item #item_id [#max_count] Output items with item id #item_id found in all character inventories, mails, auctions, and guild banks. Output item guids, item owner guid, owner account and owner name (guild name and guid in case guild bank). Will be output maximum #max_count items. If #max_count not provided use 10 as default value.|
-|list object|3|Syntax: .list object #gameobject_id [#max_count] Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value.|
+|list gobject|3|Syntax: .list gobject #gameobject_id [#max_count] Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value.|
 |list|3|Syntax: .list $subcommand Type .list to see the list of possible subcommands or .help list $subcommand to see info on subcommands|
 |wp reload|3|Syntax: .wp reload $pathid Load path changes ingame - IMPORTANT: must be applied first for new paths before .wp load #pathid|
 |reload spell_group|3|Syntax: .reload spell_group Reload spell_group table.|
@@ -186,7 +186,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |lookup item|3|Syntax: .lookup item $itemname Looks up an item by $itemname, and returns all matches with their Item ID's.|
 |lookup itemset|3|Syntax: .lookup itemset $itemname Looks up an item set by $itemname, and returns all matches with their Item set ID's.|
 |lookup map|3|Syntax: .lookup map $namepart Looks up a map by $namepart, and returns all matches with their map ID's.|
-|lookup object|3|Syntax: .lookup object $objname Looks up an gameobject by $objname, and returns all matches with their Gameobject ID's.|
+|lookup gobject|3|Syntax: .lookup gobject $objname Return gameobject(s) ID matching $objname.|
 |lookup player account|2|Syntax: .lookup player account $account ($limit) Searchs players, which account username is $account with optional parametr $limit of results.|
 |lookup player email|2|Syntax: .lookup player email $email ($limit) Searchs players, which account email is $email with optional parametr $limit of results.|
 |lookup player ip|2|Syntax: .lookup player ip $ip ($limit) Searchs players, which account ast_ip is $ip with optional parametr $limit of results.|
