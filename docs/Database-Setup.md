@@ -4,7 +4,7 @@ You can setup the database manually or using the automated script.
 
 ### Edit script configuration
 
-- Copy the file `conf/config.sh.dist` to `conf/config.sh`
+- Copy the file `conf/dist/config.sh` to `conf/config.sh`
 - Open the `conf/config.sh` with any text editor
 - Go to the secion `DB EXPORTER/IMPORTER CONFIGURATIONS`
 - Edit the variables accordingly, e.g. you most likely need to edit `MYSQL_USER` and `MYSQL_PASS` variables putting your mysql server settings.
