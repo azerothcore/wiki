@@ -155,8 +155,7 @@ make install -j $MTHREADS;
 - Upload the .conf files back to the etc directory using your SFTP client.
 
 #### Initial Database Setup and Load
-- Similar to what was done with the Authserver.conf and Worldserver.conf, we need to update the database import configuration file. Using SFTP, navigate to `/home/azcore/azerothcore/conf/` and find the `config.sh.dist`. Download it to your local machine.
-- Rename it to remove the `.dist` from the file name, so it reads `config.sh`. 
+- Similar to what was done with the Authserver.conf and Worldserver.conf, we need to update the database import configuration file. Using SFTP, navigate to `/home/azcore/azerothcore/conf/dist/` and find the `config.sh`. Download it to your local machine.
 - Open up `config.sh` in an editor and locate the section *DB EXPORTER/IMPORTER CONFIGURATIONS*.
 - Replace the Database login information beginning at line 153 with the database username and password you set earlier in this tutorial. Do this for the Auth, Character, and World database configuration sections (beginning at line 153, 158, and 163 respectively).
 - Save `config.sh` and upload back to the directory `/home/azcore/azerothcore/conf/`.
