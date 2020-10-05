@@ -68,9 +68,9 @@ The unique account ID.
 
 ### username
 
-The account user name.
+The user's account name.
 
-**NOTE**: username are limited to 20 characters
+**NOTE**: usernames are limited to 20 characters and have no character restriction.
 
 ### sha\_pass\_hash
 
@@ -81,7 +81,7 @@ This field contains the encrypted password. The encryption is SHA1 and is in the
 | SQL      | UPPER(SHA1(CONCAT(UPPER('myusername'), ':', UPPER('mypass'))));     |
 | PHP      | strtoupper(sha1(strtoupper($username).':'.strtoupper($password)));  |
 
-**NOTE**: Passwords are limited to 16 characters
+**NOTE**: Passwords are limited to 16 characters and have no character restriction.
 
 ### sessionkey
 
@@ -90,7 +90,7 @@ This field contains the encrypted password. The encryption is SHA1 and is in the
 ### v
 ### s
 
-v and s fields are used by server authentication system since the client uses a SRP6 protocol to handle authentication
+`v` and `s` fields are used by server authentication system since the client uses a SRP6 protocol to handle authentication
 
 If you change the password these fields must be set to 0 allowing the server to regenerate them at login. 
 The .account password command already does it, but you must take care about it on external registration systems (web client)
