@@ -105,3 +105,8 @@ DELETE FROM `waypoint_data` WHERE `id` = 123456700;
 ```
 Don't forget to unload the path from the creature if it was loaded before.
 
+
+### Waypoint pathing best practices
+When creating paths along an incline, ground clipping can be minimized by maintaining line-of-sight.
+
+![waypoints](https://i.imgur.com/s045BKp.png)
