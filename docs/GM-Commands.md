@@ -10,8 +10,8 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |account addon|1|Syntax: .account addon #addon Set expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk.|
 |account create|4|Syntax: .account create $account $password Create account and set password to it.|
 |account delete|4|Syntax: .account delete $account Delete account with all characters.|
-|account lock country|0|Syntax: .account lock country [on/off]. Allow login from account only from current used Country or remove this requirement.|
 |account lock|0|Syntax: .account lock [on/off] Allow login from account only from current used IP or remove this requirement.|
+|account lock country|0|Syntax: .account lock country [on/off]. Allow login from account only from current used Country or remove this requirement.|
 |account onlinelist|4|Syntax: .account onlinelist Show list of online accounts.|
 |account password|0|Syntax: .account password $old_password $new_password $new_password Change your account password.|
 |account set|3|Syntax: .account set $subcommand Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands|
