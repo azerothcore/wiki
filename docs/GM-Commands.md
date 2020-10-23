@@ -365,7 +365,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reset stats|3|Syntax: .reset stats [Playername] Resets(recalculate) all stats of the targeted player to their original VALUESat current level.|
 |reset talents|3|Syntax: .reset talents [Playername] Removes all talents of the targeted player or pet or named player. Playername can be name of offline character. With player talents also will be reset talents for all character's pets if any.|
 |reset|3|Syntax: .reset $subcommand Type .reset to see the list of possible subcommands or .help reset $subcommand to see info on subcommands|
-|respawn|3|Syntax: .respawn Respawn all nearest creatures and GO without waiting respawn time expiration.|
+|respawn|3|Syntax: .respawn Respawn target creature and GO without waiting for respawn time expiration. If no target provided, respawn all nearest creatures. |
 |revive|3|Syntax: .revive Revive the selected player. If no player is selected, it will revive you.|
 |save|0|Syntax: .save Saves your character.|
 |saveall|1|Syntax: .saveall Save all characters in game.|
