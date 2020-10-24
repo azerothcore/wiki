@@ -50,7 +50,7 @@ C) Clone all branches and all history:
 git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
 ```
 
-Note: If you want to get the full history back, use git fetch --unshallow (if you chose option B).
+Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option B).
 
 
 ### 3) Compiling
