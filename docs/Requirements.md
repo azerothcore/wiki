@@ -118,7 +118,7 @@ You can install Sequel Pro with:
 
 * Install latest version of [Git Extensions](https://git-scm.com/download/win)
 
-* [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) (version 8.0 or 5.7, older versions are not recommended)
+* [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/) (version 8.0 or 5.7, older versions are not recommended)
 
 * Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x or 1.1.x (Do not install the Light version) 
   
