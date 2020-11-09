@@ -33,11 +33,19 @@ Using Docker will have the same benefits as using virtual machines, but with muc
 
 ![Docker containers vs Virtual machines](https://user-images.githubusercontent.com/75517/51078179-d4fec680-16b1-11e9-8ce6-87b5053f55dd.png)
 
-## Setup
+## PART 1 - Setup
 
 ### Software requirements
 
-The only requirements are [git](https://git-scm.com/download/) and Docker.
+The only requirements are [git](https://git-scm.com/download/) and Docker (https://docs.docker.com/docker-for-windows/install/).
+
+Be aware that Docker itself has several software requirements such as;
+- Windows 10 64-bit: Pro, Enterprise, or Education (Build 16299 or later).
+- Hyper-V and Containers Windows features must be enabled.
+- BIOS-level hardware virtualization support must be enabled in the BIOS settings. For more information, see Virtualization.
+
+Use Google & support to help you achieve these 3 tasks.
+
 
 #### New Operating Systems [recommended]:
 - For GNU/Linux install [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu) and [Docker Compose](https://docs.docker.com/compose/install/)
@@ -49,7 +57,7 @@ The only requirements are [git](https://git-scm.com/download/) and Docker.
 - For Windows 7/8/8.1 install [Docker Toolbox for Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
 
-Before going further, make sure you have `docker` and `docker-compose` installed in your system by typing in a terminal:
+Before going further, make sure you have `docker` and `docker-compose` installed in your system by typing in a terminal such as Command Prompt or Git Bash:
 
 ```
 docker --version
@@ -58,13 +66,17 @@ docker --version
 docker-compose --version
 ```
 
-You should see a similar output:
+You should see a similar output to this;
 
 ![image](https://user-images.githubusercontent.com/75517/51273280-a132e200-19cc-11e9-914e-d54610f43ad6.png)
 
 **Note for Windows users**: you can use **git-bash** (the shell included in git) as a terminal.
 
+## PART 2 - AzerothCore
+
 ### Clone the AzerothCore repository
+
+Open a teminal such as Git Bash or Command Prompt as an Administrator.
 
 You need to clone the AzerothCore repository (or use your own fork):
 
@@ -72,13 +84,19 @@ You need to clone the AzerothCore repository (or use your own fork):
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
 
-Now go into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run inside this folder**.
+Now go into the main directory using 
+
+```
+cd azerothcore-wotlk 
+```
+
+**All commands will have to be run inside this folder**.
 
 ### WoW Client Data files
 
 You also need to have the data files. Check the step "5) Download the data files" from the [installation guide](Installation#5-download-the-data-files).
 
-Put your data files into `docker/worldserver/data/` which is inside `azerothcore-wotlk`.
+Put your data files into `docker/worldserver/data/` which is inside `azerothcore-wotlk` which is likely to be found in the System32 folder if you're using Windows.
 
 ### Installation
 
@@ -86,17 +104,32 @@ Inside your terminal (if you use Windows, use git bash), run the following comma
 
 **1) Generate your server configuration files:**
 
+Windows;
+```
+bash bin/acore-docker-generate-etc
+```
+
+Other;
 ```
 ./bin/acore-docker-generate-etc
 ```
 
 **2) Compile AzerothCore:**
+
+Windows;
+```
+bash bin/acore-docker-build
+```
+
+Other;
 ```
 ./bin/acore-docker-build
 ```
+
 This will take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
 
 **3) Run the containers**
+
 ```
 docker-compose up
 ```
