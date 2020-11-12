@@ -117,13 +117,19 @@ First of all make sure to use the AC commit template (this should only be necess
 git config --local commit.template ".git_commit_template.txt"
 ```
 
-Then commit your changes using:
+When you will write your commit message, it will use the default text editor `Vim` which is very hard to manipulate. You can keep it or you can instead use the much simpler `Nano` editor. Here is how to proceed, type:
+```
+git config --global core.editor "nano"
+```
 
+Then commit your changes by typing:
 ```
 git commit
 ```
+You are then prompted to specify an appropriate commit message. Please, follow the format guidelines here (= every line starting by a # that will be ignored in the commit message), and you can refer to a commit like [this](https://github.com/azerothcore/mod-npc-beastmaster/commit/53cf90233091db2191b522f0fa7c4b6009dca22e) as an example.
+If using `Nano`, press [ctrl]+[x] and say yes to save and exit (other commands are written at the bottom in `Nano`, and can be found easily on the net or by typing `man nano` in the terminal).
 
-You are then prompted to specify an appropriate commit message (please follow the format guidelines here).
+Verify you're satisfied by typing `git show`. Exit by pressing [q]. If not satisfied, you can recommit the **last local** commit by typing `git commit --amend`.
 
 Now it's time to push them remotely. 
 If you use the `git push` command for the first time in this branch, 
