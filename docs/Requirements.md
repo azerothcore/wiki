@@ -97,6 +97,8 @@ Use brew it to install the required packages:
 
 `brew install openssl readline cmake ace coreutils bash bash-completion coreutils`
 
+This will install bash 5+, you might need to restart your terminal. Make sure you are using bash 5 or newer by typing `bash --version`.
+
 Now install mysql:
 
 `brew install mysql`
