@@ -69,7 +69,7 @@ There is already a question and answer for that! Let's upvote the guys who asked
 
 ## How to ask new questions
 
-What if you can't find a question related to my specific problem? **Let's [open a new question](https://stackoverflow.com/questions/ask)**.
+What if you can't find a question related to my specific problem? **Let's [open a new question](https://stackoverflow.com/questions/ask?tags=azerothcore)**.
 
 Remember to:
 

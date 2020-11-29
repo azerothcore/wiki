@@ -2,9 +2,9 @@
 ## **How to add a module**
 
 
-1. Get the module from this website [http://www.azerothcore.org/modules-catalogue/](http://www.azerothcore.org/modules-catalogue/)
+1. Get the module from this website [https://www.azerothcore.org/catalogue/](https://www.azerothcore.org/catalogue/)
 2. Clone it using git (recommended) or just download it
-3. I'll use this for Exmple: [http://www.azerothcore.org/modules-catalogue/details.html?id=177019524](http://www.azerothcore.org/modules-catalogue/details.html?id=177019524).
+3. I'll use this for Exmple: [https://www.azerothcore.org/catalogue/details.html?id=177019524](https://www.azerothcore.org/catalogue/details.html?id=177019524).
 4. Once you downloaded it or cloned: ( Extract it, you will have than Folder looks like this :
 ![Image](<https://user-images.githubusercontent.com/41213210/56865195-84df1200-69cb-11e9-8faa-7519fb3a8384.png>)
 

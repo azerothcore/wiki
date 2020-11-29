@@ -2,164 +2,263 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-**The \`characters\` table**
+## Information
 
-This table holds vital static information for each character. This information loaded and used to create the player objects in-game.
+This table holds vital static information for each character. It is used to create the player objects in-game.
 
-**Structure**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------------------|--------------|------------|-----|------|---------|-------|---------|
-|[guid](#guid)                |int(10)       |unsigned    |PRI  |NO    |0        |Unique |Global Unique Identifier|
-|[account](#account)          |int(10)       |unsigned    |     |NO    |0        |       |Account Identifier|
-|[name](#name)                |varchar(12)   |signed      |     |NO    |NULL     |       ||
-|[race](#race)                |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[class](#class)              |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[gender](#gender)            |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[level](#level)              |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[xp](#xp)                    |int(10)       |unsigned    |     |NO    |0        |       ||
-|[money](#money)              |int(10)       |unsigned    |     |NO    |0	     |       ||
-|[skin](#skin)			      |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[face](#face)			      |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[hairStyle](#hairStyle)	  |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[hairColor](#hairColor)	  |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[facialStyle](#facialStyle)  |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[bankSlots](#bankSlots)      |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[restState](#restState)      |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[playerflags](#playerflags)  |int(10)       |unsigned    |     |NO    |0        |       ||
-|[position_x](#position_x)    |float         |signed      |     |NO    |0        |       ||
-|[position_y](#position_y)    |float         |signed      |     |NO    |0        |       ||
-|[position_z](#position_z)    |float         |signed      |     |NO    |0        |       ||
-|[map](#map)    			  |smallint(5)   |signed      |     |NO    |0        |       |Map Identifier|
-|[instance_id](#instance_id)  |int(10)       |unsigned    |     |NO    |0        |       ||
-|[instance_mode_mask](#instance_mode_mask)|tinyint(3)|unsigned| |NO    |0        |       ||
-|[orientation](#orientation)  |float         |signed	  |     |NO    |0        |       ||
-|[taximask](#taximask)        |text          |signed      |     |NO    |0        |       ||
-|[online](#online)            |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[cinematic](#cinematic)      |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[totaltime](#totaltime)      |int(10)       |unsigned    |     |NO    |0        |       ||
-|[leveltime](#leveltime)      |int(10)       |unsigned    |     |NO    |0        |       ||
-|[logout_time](#logout_time)  |int(10)       |unsigned    |     |NO    |0        |       ||
-|[is_logout_resting](#is_logout_resting)|tinyint(3)|unsigned|   |NO    |0        |       ||
-|[rest_bonus](#rest_bonus)    |float         |signed      |     |NO    |0        |       ||
-|[resettalents_cost](#resettalents_cost)|int(10)|unsigned |     |NO    |0        |       ||
-|[resettalents_time](#resettalents_time)|int(10)|unsigned |     |NO    |0        |       ||
-|[trans_x](#trans_x)          |float         |signed      |     |NO    |0        |       ||
-|[trans_y](#trans_y)          |float         |signed      |     |NO    |0        |       ||
-|[trans_z](#trans_z)          |float         |signed      |     |NO    |0        |       ||
-|[trans_o](#trans_o)          |float         |signed      |     |NO    |0        |       ||
-|[transguid](#transguid)      |mediumint(8)  |unsigned    |     |NO    |0        |       ||
-|[extra_flags](#extra_flags)  |smallint(5)   |unsigned    |     |NO    |0        |       ||
-|[extra_flags](#extra_flags)  |smallint(5)   |unsigned    |     |NO    |0        |       ||
-|[stable_slots](#stable_slots)|tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[at_login](#at_login)        |smallint(5)   |unsigned    |     |NO    |0        |       ||
-|[zone](#zone)                |smallint(5)   |unsigned    |     |NO    |0        |       ||
-|[death_expire_time](#death_expire_time)|int(10)|unsigned |     |NO    |0        |       ||
-|[taxi_path](#taxi_path)      |text          |signed      |     |YES   |NULL     |       ||
-|[arenaPoints](#arenaPoints)  |int(10)       |unsigned    |     |NO    |0        |       ||
-|[totalhonorpoints](#totalhonorpoints)|int(10)|unsigned   |     |NO    |0        |       ||
-|[todayhonorpoints](#todayhonorpoints)|int(10)|unsigned   |     |NO    |0        |       ||
-|[yesterdayhonorpoints](#yesterdayhonorpoints)|int(10)|unsigned ||NO   |0        |       ||
-|[totalkills](#totalkills)    |int(10)       |unsigned    |     |NO    |0        |       ||
-|[todayKills](#todaykills)    |smallint(5)   |unsigned    |     |NO    |0        |       ||
-|[yesterdayKills](#yesterdayKills)|smallint(5)|unsigned   |     |NO    |0        |       ||
-|[chosenTitle](#chosenTitle)  |int(10)       |unsigned    |     |NO    |0        |       ||
-|[knownCurrencies](#knownCurrencies)|bigint(20)|unsigned  |     |NO    |0        |       ||
-|[watchedFaction](#watchedFaction)|int(10)   |unsigned    |     |NO    |0        |       ||
-|[drunk](#drunk)              |tinyint(3)    |unsigned    |     |NO    |0        |       ||
-|[health](#health)            |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power1)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power2)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power3)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power4)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power5)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power6)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[power](#power7)             |int(10)       |unsigned    |     |NO    |0        |       ||
-|[latency](#latency)          |mediumint(8)  |unsigned    |     |NO    |0        |       ||
-|[talentGroupsCount](#talentGroupsCount)|tinyint(3)|unsigned|   |NO    |1        |       ||
-|[activeTalentGroup](#activeTalentGroup)|tinyint(3)|unsigned|   |NO    |0        |       ||
-|[exploredzones](#exploredzones)|longtext    |signed      |     |YES   |NULL     |       ||
-|[equipmentcache](#equipmentcache)|longtext  |signed      |     |YES   |NULL     |       ||
-|[ammoid](#ammoid)            |int(10)       |unsigned    |     |NO    |0        |       ||
-|[knownTitles](#knownTitles)  |longtext      |signed      |     |YES   |NULL     |       ||
-|[actionbars](#actionbars)    |longtext      |unsigned    |     |NO    |0        |       ||
-|[grantableLevels](#grantablelevels)|longtext|unsigned    |     |NO    |0        |       ||
-|[creation_date](#creation_date)|timestamp   |signed      |     |NO    |CURRENT_TIMESTAMP|||
-|[deleteInfos_Account](#deleteInfos_Account)|int(10)|unsigned|  |YES   |NULL     |       ||
-|[deleteInfos_Name](#deleteInfos_Name)|varchar(12)|unsigned|    |YES   |NULL     |       ||
-|[deleteDate](#deleteDate)    |int(10)       |unsigned    |     |YES   |NULL     |       ||
+## Structure
+
+| Field                      | Type         | Attributes | Key | Null | Default           | Extra  | Comment                  |
+|----------------------------|--------------|------------|-----|------|-------------------|--------|--------------------------|
+| [guid][1]                  | int(10)      | unsigned   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
+| [account][2]               | int(10)      | unsigned   |     | NO   | 0                 |        | Account Identifier       |
+| [name][3]                  | varchar(12)  | signed     |     | NO   | NULL              |        |                          |
+| [race][4]                  | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [class][5]                 | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [gender][6]                | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [level][7]                 | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [xp][8]                    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [money][9]                 | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [skin][10]                 | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [face][11]                 | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [hairStyle][12]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [hairColor][13]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [facialStyle][14]          | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [bankSlots][15]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [restState][16]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [playerflags][17]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [position_x][18]           | float        | signed     |     | NO   | 0                 |        |                          |
+| [position_y][19]           | float        | signed     |     | NO   | 0                 |        |                          |
+| [position_z][20]           | float        | signed     |     | NO   | 0                 |        |                          |
+| [map][21]                  | smallint(5)  | signed     |     | NO   | 0                 |        | Map Identifier           |
+| [instance_id][22]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [instance_mode_mask][23]   | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [orientation][24]          | float        | signed     |     | NO   | 0                 |        |                          |
+| [taximask][25]             | text         | signed     |     | NO   | 0                 |        |                          |
+| [online][26]               | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [cinematic][27]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [totaltime][28]            | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [leveltime][29]            | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [logout_time][30]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [is_logout_resting][31]    | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [rest_bonus][32]           | float        | signed     |     | NO   | 0                 |        |                          |
+| [resettalents_cost][33]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [resettalents_time][34]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [trans_x][35]              | float        | signed     |     | NO   | 0                 |        |                          |
+| [trans_y][36]              | float        | signed     |     | NO   | 0                 |        |                          |
+| [trans_z][37]              | float        | signed     |     | NO   | 0                 |        |                          |
+| [trans_o][38]              | float        | signed     |     | NO   | 0                 |        |                          |
+| [transguid][39]            | mediumint(8) | unsigned   |     | NO   | 0                 |        |                          |
+| [extra_flags][40]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [extra_flags][41]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [stable_slots][42]         | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [at_login][43]             | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [zone][44]                 | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [death_expire_time][45]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [taxi_path][46]            | text         | signed     |     | YES  | NULL              |        |                          |
+| [arenaPoints][47]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [totalhonorpoints][48]     | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [todayhonorpoints][49]     | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [yesterdayhonorpoints][50] | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [totalkills][51]           | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [todayKills][52]           | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [yesterdayKills][53]       | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [chosenTitle][54]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [knownCurrencies][55]      | bigint(20)   | unsigned   |     | NO   | 0                 |        |                          |
+| [watchedFaction][56]       | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [drunk][57]                | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [health][58]               | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][59]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][60]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][61]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][62]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][63]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][64]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][65]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [latency][66]              | mediumint(8) | unsigned   |     | NO   | 0                 |        |                          |
+| [talentGroupsCount][67]    | tinyint(3)   | unsigned   |     | NO   | 1                 |        |                          |
+| [activeTalentGroup][68]    | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
+| [exploredzones][69]        | longtext     | signed     |     | YES  | NULL              |        |                          |
+| [equipmentcache][70]       | longtext     | signed     |     | YES  | NULL              |        |                          |
+| [ammoid][71]               | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [knownTitles][72]          | longtext     | signed     |     | YES  | NULL              |        |                          |
+| [actionbars][73]           | longtext     | unsigned   |     | NO   | 0                 |        |                          |
+| [grantableLevels][74]      | longtext     | unsigned   |     | NO   | 0                 |        |                          |
+| [creation_date][75]        | timestamp    | signed     |     | NO   | CURRENT_TIMESTAMP |        |                          |
+| [deleteInfos_Account][76]  | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
+| [deleteInfos_Name][77]     | varchar(12)  | unsigned   |     | YES  | NULL              |        |                          |
+| [deleteDate][78]           | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
   
-**Description of the fields**
+[1]: #guid
+[2]: #account
+[3]: #name
+[4]: #race
+[5]: #class
+[6]: #gender
+[7]: #level
+[8]: #xp
+[9]: #money
+[10]: #skin
+[11]: #face
+[12]: #hairStyle
+[13]: #hairColor
+[14]: #facialStyle
+[15]: #bankSlots
+[16]: #restState
+[17]: #playerflags
+[18]: #position_x
+[19]: #position_y
+[20]: #position_z
+[21]: #map
+[22]: #instance_id
+[23]: #instance_mode_mask
+[24]: #orientation
+[25]: #taximask
+[26]: #online
+[27]: #cinematic
+[28]: #totaltime
+[29]: #leveltime
+[30]: #logout_time
+[31]: #is_logout_resting
+[32]: #rest_bonus
+[33]: #resettalents_cost
+[34]: #resettalents_time
+[35]: #trans_x
+[36]: #trans_y
+[37]: #trans_z
+[38]: #trans_o
+[39]: #transguid
+[40]: #extra_flags
+[41]: #extra_flags
+[42]: #stable_slots
+[43]: #at_login
+[44]: #zone
+[45]: #death_expire_time
+[46]: #taxi_path
+[47]: #arenaPoints
+[48]: #totalhonorpoints
+[49]: #todayhonorpoints
+[50]: #yesterdayhonorpoints
+[51]: #totalkills
+[52]: #todaykills
+[53]: #yesterdayKills
+[54]: #chosenTitle
+[55]: #knownCurrencies
+[56]: #watchedFaction
+[57]: #drunk
+[58]: #health
+[59]: #power1
+[60]: #power2
+[61]: #power3
+[62]: #power4
+[63]: #power5
+[64]: #power6
+[65]: #power7
+[66]: #latency
+[67]: #talentGroupsCount
+[68]: #activeTalentGroup
+[69]: #exploredzones
+[70]: #equipmentcache
+[71]: #ammoid
+[72]: #knownTitles
+[73]: #actionbars
+[74]: #grantablelevels
+[75]: #creation_date
+[76]: #deleteInfos_Account
+[77]: #deleteInfos_Name
+[78]: #deleteDate
+
+
+## Description of the fields
+
 
 ### guid
 
 The character global unique identifier. This number must be unique and is the best way to identify separate characters.
 
+
 ### account
 
 The account ID in which this character resides. See [account.id](http://www.azerothcore.org/wiki/account#id). in the auth database.
 
+
 ### name
 
-The name of the character.
+The name of the character. Max length is 12 characters.
+
 
 ### race
 
 The race of the character. See [ChrRaces.dbc](ChrRaces)
 
+
 ### class
 
 The class of the character: [ChrClasses.dbc](ChrClasses)
+
 
 ### gender
 
 The gender of the character.
 
-|    |             |
+| Id | Gender      |
 | -- | ---         |
 | 0  | Male        |
 | 1  | Female      |
 | 2  | Unknown (?) |
+
+`2` is seen in table `creature_model_info` notably
 
 
 ### level
 
 The level of the character.
 
+
 ### xp
 
 The amount of experience this character has earned towards the next level.
 
+
 ### money
 
 The amount of copper this character has.
+
 
 ### skin
 
 Contains data about the skincolor of the character.
 skinColor = playerbytes  % 256
 
+
 ### face
 
 Contains data about the facestyle of the character.
 faceStyle = (playerbytes &gt;&gt; 8) % 256
 
+
 ### hairStyle
 Contains data about the hairStyle of the character.
 hairStyle = (playerbytes &gt;&gt; 16) % 256
 
+
 ### hairColor
 Contains data about the haircolor of the character.
 hairColor = (playerbytes &gt;&gt; 24) % 256
+
 
 ### facialStyle
 
 Contains data about facial hair of the character.
 facialHair = playerBytes2 % 256
 
+
 ### bankSlots
 
+
 ### restState
+
 
 ### playerFlags
 
@@ -194,126 +293,125 @@ A bitmask that represents what Player flags the player has. Each bit controls a 
 | 16777216 | 0x01000000 | PLAYER_FLAGS_UNK25            | disabled all melee ability on tab include autoattack                              |
 | 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN       |                                                                                   |
 
-### position\_x
+
+### position_x
 
 The x position of the character's location.
 
-### position\_y
+
+### position_y
 
 The y position of the character's location.
 
-### position\_z
+
+### position_z
 
 The z position of the character's location.
+
 
 ### map
 
 The map ID the character is in.
 
-### instance\_id
+
+### instance_id
 
 The instance ID the character is currently in and bound to
 
-### instance\_mode\_mask
+
+### instance_mode_mask
 
 The current dungeon difficulty that the player is in. This field is bitmask. Values are put together, however, only two of four should be used at once. This description may not be 100% correct.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Flag</p></th>
-<th><p>Comment</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Normal</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Heroic</p></td>
-</tr>
-<tr class="odd">
-<td><p>16</p></td>
-<td><p>10 man</p></td>
-</tr>
-<tr class="even">
-<td><p>32</p></td>
-<td><p>25 man</p></td>
-</tr>
-</tbody>
-</table>
+| Flag | Comment |
+|------|---------|
+| 0    | Normal  |
+| 1    | Heroic  |
+| 16   | 10 man  |
+| 32   | 25 man  |
+
 
 ### orientation
 
 The orientation the character is facing. (North = 0.0, South = 3.14159)
 
+
 ### taximask
 
 Known taxi nodes separated with space
+
 
 ### online
 
 Records whether the character is online (1) or offline (0).
 
+
 ### cinematic
 
 Boolean 1 or 0 controlling whether the start cinematic has been shown or not.
+
 
 ### totaltime
 
 The total time that the character has been active in the world, measured in seconds.
 
+
 ### leveltime
 
 The total time the character has spent in the world at the current level, measured in seconds.
 
-### logout\_time
+
+### logout_time
 
 The time when the character last logged out, measured in Unix time.
 
-### is\_logout\_resting
+
+### is_logout_resting
 
 Boolean 1 or 0 controlling if the character is currently in a resting zone or not.
 
-### rest\_bonus
+
+### rest_bonus
 
 The cumulated bonus of rested rate for gaining experience.
 
-### resettalents\_cost
+
+### resettalents_cost
 
 The cost for the character to reset its talents, measured in copper.
 
-### resettalents\_time
 
-`field-no-description|30`
+### resettalents_time
 
-### trans\_x
+*Missing description*
+
+
+### trans_x
 
 The x position of the transport this character was on when they were last saved.
 
-### trans\_y
+
+### trans_y
 
 The y position of the transport this character was on when they were last saved.
 
-### trans\_z
+
+### trans_z
 
 The z position of the transport this character was on when they were last saved.
 
-### trans\_o
+
+### trans_o
 
 The orientation of the transport this character was on when they were last saved.
+
 
 ### transguid
 
 The global unique identifier of the transport this character was on when they were last saved.
 
-### extra\_flags
+
+### extra_flags
 
 These flags control certain player specific attributes, mostly GM features
 
@@ -328,11 +426,13 @@ These flags control certain player specific attributes, mostly GM features
 | 64   | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marks if player already has 310% speed flying mount |
 | 256  | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Store PvP death status until corpse creating        |
 
-### stable\_slots
+
+### stable_slots
 
 The Stable Slots available (bought) at the Stable Master.
 
-### at\_login
+
+### at_login
 
 This field is a bitmask controlling different actions taken once a player logs in with the character.
 
@@ -349,57 +449,71 @@ This field is a bitmask controlling different actions taken once a player logs i
 
 For multiple actions, add values together.
 
+
 ### zone
 
 The zone ID the character is in.
 
-### death\_expire\_time
+
+### death_expire_time
 
 Time when a character can be resurrected in case of a server crash or client exit while in ghost form, measured in Unix time.
 
-### taxi\_path
+
+### taxi_path
 
 Stores the players current taxi path ([TaxiPath.dbc](TaxiPath)) if logged off while on one.
+
 
 ### arenaPoints
 
 The amount of arena points this character has stored up, and will receive next time arena points are distributed.
 
+
 ### totalHonorPoints
 
 The amount of honor points this character has got
+
 
 ### todayHonorPoints
 
 The amount of honor points this character has gotten today
 
+
 ### yesterdayHonorPoints
 
 The amount of honor points this character got yesterday
+
 
 ### totalKills
 
 The amount of players this character has killed
 
+
 ### todayKills
 
 The amount of players this character has killed today
+
 
 ### yesterdayKills
 
 The amount of players this character killed yesterday
 
+
 ### chosenTitle
 
-Current title, using the bit\_index field (InGameOrder in [CharTitles.dbc](CharTitles))
+Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](CharTitles))
+
 
 ### knownCurrencies
 
 Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](CurrencyTypes)
 
+
 ### watchedFaction
 
 Tracked faction at experience bar (using reputation ID, see [Faction.dbc](Faction))
+
 
 ### drunk
 
@@ -410,124 +524,84 @@ Character's drunk state, 0-100
 -   50-89 = Drunk
 -   90-100 = Smashed
 
+
 ### health
 
 The characters current health.
+
 
 ### power
 
 Current character powers (snapshot from when the character was saved)
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Field</p></th>
-<th><p>Power name</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>power1</p></td>
-<td><p>Mana</p></td>
-</tr>
-<tr class="even">
-<td><p>power2</p></td>
-<td><p>Rage</p></td>
-</tr>
-<tr class="odd">
-<td><p>power3</p></td>
-<td><p>Focus</p></td>
-</tr>
-<tr class="even">
-<td><p>power4</p></td>
-<td><p>Energy</p></td>
-</tr>
-<tr class="odd">
-<td><p>power5</p></td>
-<td><p>Happiness</p></td>
-</tr>
-<tr class="even">
-<td><p>power6</p></td>
-<td><p>Runes</p></td>
-</tr>
-<tr class="odd">
-<td><p>power7</p></td>
-<td><p>Runic Power</p></td>
-</tr>
-</tbody>
-</table>
+| Field  | Power name  |
+|--------|-------------|
+| power1 | Mana        |
+| power2 | Rage        |
+| power3 | Focus       |
+| power4 | Energy      |
+| power5 | Happiness   |
+| power6 | Runes       |
+| power7 | Runic Power |
+
 
 ### latency
 
 This characters latency, or ping, in milliseconds, as of the last update.
 
+
 ### talentGroupsCount
 
 The number of specs this character has access to. Default value is 1. Maximum currently supported value is 2. Should never be 0 (this is a sign of a character created before the dual spec system.)
+
 
 ### activeTalentGroup
 
 The currently activated spec for this character, spec = 0 is the first spec, spec = 1 is the second spec.
 
+
 ### exploredZones
 
 Bitmasks of explored zones (1 bit for explored, 0 bit for unexplored)
+
 
 ### equipmentCache
 
 Character's equipment and bag cache. `field-no-description|58`
 
+
 ### ammoId
 
 [Template ID](http://www.azerothcore.org/wiki/item_template#entry) of the ammo item
+
 
 ### knownTitles
 
 Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](CharTitles), take Archmage title for example:
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>TitleID</p></td>
-<td><p>UnkRef?</p></td>
-<td><p>MaleTitle</p></td>
-<td><p>FemaleTitle</p></td>
-<td><p>InGameOrder</p></td>
-</tr>
-<tr class="even">
-<td><p>93</p></td>
-<td><p>0</p></td>
-<td><p>Archmage %s</p></td>
-<td><p>Archmage %s</p></td>
-<td><p>61</p></td>
-</tr>
-</tbody>
-</table>
+| TitleID | UnkRef? | MaleTitle   | FemaleTitle | InGameOrder |
+|---------|---------|-------------|-------------|-------------|
+| 93      | 0       | Archmage %s | Archmage %s | 61          |
+
 
 We use the InGameOrder to calculate in which one of the 6 (16bit) integer is the title stored:
 
+```
 InGameOrder / 32 = X
 61 / 32 = **1,90625** (1 - Do **NOT** round the value!)
+```
 
-so the 1st integer stores the title. Because counting starts from **0** to 5, it would be "0 **TITLE\_BIT** 0 0 0 0".
+so the 1st integer stores the title. Because counting starts from **0** to 5, it would be "0 **TITLE_BIT** 0 0 0 0".
 
 Now which bit stores the title? We use modulo to calculate this.
 
+```
 InGameOrder Modulo 32 = X
 61 Mod 32 = **29**
+```
 
 so the 29bit stores the title. This would be 2 ^ 29 = 536870912. This bit stores the Archmage title. This would mean if you **only** have the Archmage title, characters.knownTitles would be "0 536870912 0 0 0 0".
+
 
 ### actionBars
 
@@ -540,21 +614,26 @@ A bitmask that contains visible actionbars for the player
 | 4    | 0x00000004 | Rigth Bar        |
 | 8    | 0x00000008 | Right Bar 2      |
 
+
 ### grantableLevels
 
 Recruit A Friend stuff.
+
 
 ### creation_date
 
 Character's creation date and time. Format YYY-MM-DD HH:MM:SS according to server's time.
 
-### deleteInfos\_Account
+
+### deleteInfos_Account
 
 Stores the account id if the character is deleted and CharDelete.Method in worldserver.conf is set to 1.
 
-### deleteInfos\_Name
+
+### deleteInfos_Name
 
 Stores the name of character if the character is deleted and CharDelete.Method in worldserver.conf is set to 1.
+
 
 ### deleteDate
 

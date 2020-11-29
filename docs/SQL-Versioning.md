@@ -12,13 +12,10 @@ In order to achieve this, we use a specific **convention for file names** and we
 
 ### File names
 
-The format we use to name sql update files is: **YYY_MM_DD_XX.sql**
+The file name should not be renamed and should be kept as the name `creat_sql.sh` has created for the file.
 
-where:
-- **YYYY** -> year
-- **MM** -> month
-- **DD** -> day
-- **XX** -> an incremental number starting from 00 to uniquely identify different files of the same day
+The file name will look like this:
+`rev_XXXXXXXXXXXXXXXXXXX`
 
 ### SQL Header
 

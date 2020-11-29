@@ -4,410 +4,50 @@
 
 **Table Structure**
 
-<table height="400">
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entryorguid">entryorguid</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#source_type">source_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#link">link</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_phase_mask">event_phase_mask</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_chance">event_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>100</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_flags">event_flags</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_param1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_type">event_param2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_param3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#event_type">event_param4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event_type">event_param5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#action_type">action_param1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_param2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#action_type">action_param3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_param4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#action_type">action_param5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action_type">action_param6</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_param1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_param2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_param3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_param4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_x</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_y</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_type">target_z</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_type">target_o</a></p></td>
-<td><p>float</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>text</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p>Event Comment</p></td>
-</tr>
-</tbody>
-</table>
+| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
+|-----------------------|-------------|------------|-----|------|---------|-------|---------------|
+| [entryorguid][1]      | int(11)     | signed     | PRI | NO   | NULL    |       |               |
+| [source_type][2]      | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |               |
+| [id][3]               | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
+| [link][4]             | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
+| [event_type][5]       | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
+| [event_phase_mask][6] | smallint(5) | unsigned   |     | NO   | 0       |       |               |
+| [event_chance][7]     | tinyint(3)  | unsigned   |     | NO   | 100     |       |               |
+| [event_flags][8]      | smallint(5) | unsigned   |     | NO   | 0       |       |               |
+| [event_param1][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param2][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param3][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param4][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param5][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_type][9]      | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
+| [action_param1][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param2][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param3][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param4][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param5][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [action_param6][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_type][10]     | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
+| [target_param1][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_param2][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_param3][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_param4][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [target_x][10]        | float       |            |     | NO   | 0       |       |               |
+| [target_y][10]        | float       |            |     | NO   | 0       |       |               |
+| [target_z][10]        | float       |            |     | NO   | 0       |       |               |
+| [target_o][10]        | float       |            |     | NO   | 0       |       |               |
+| [comment][11]         | text        |            |     | NO   | NULL    |       | Event Comment |
+
+[1]: #entryorguid
+[2]: #source_type
+[3]: #id
+[4]: #link
+[5]: #event_type
+[6]: #event_phase_mask
+[7]: #event_chance
+[8]: #event_flags
+[9]: #action_type
+[10]: #target_type
+[11]: #comment
 
 **Description of the fields**
 
@@ -1467,6 +1107,28 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td>If the value of specified counterID is equal to a specified value</td>
 </tr>
+<tr class="odd">
+<td>SMART_EVENT_NEAR_PLAYERS</td>
+<td>101</td>
+<td>minPlayers</td>
+<td>Range (yards)</td>
+<td>FirstCheck (ms)</td>
+<td>RepeatCheck (ms)</td>
+<td><p><br />
+</p></td>
+<td><p>Event will trigger if there are more than minPlayers in range.</p></td>
+</tr>
+<tr class="odd">
+<td>SMART_EVENT_NEAR_PLAYERS_NEGATION</td>
+<td>102</td>
+<td>maxPlayers</td>
+<td>Range (yards)</td>
+<td>FirstCheck (ms)</td>
+<td>RepeatCheck (ms)</td>
+<td><p><br />
+</p></td>
+<td><p>Event will trigger if there are less than maxPlayers in range.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -2082,6 +1744,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <tr class="odd">
 <td><p>SMART_ACTION_SET_IN_COMBAT_WITH_ZONE</p></td>
 <td><p>38</p></td>
+<td><p>Range in yards for all players to be forced into combat with the creature. Only used in the open world. Leave as 0 if used in an instance.</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -2092,10 +1755,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
+<td><p>Sets the creature in combat with its zone, can be used in instances and open world. Useful for creatures inside instances so all players will be set in combat until the fight ends.</p></td>
 </tr>
 <tr class="even">
 <td><p>SMART_ACTION_CALL_FOR_HELP</p></td>
@@ -2523,8 +2183,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>SMART_ACTION_SET_ORIENTATION</p></td>
 <td><p>66</p></td>
 <td><p>Depends on the script target. If SMART_TARGET_SELF, facing will be the same as in HomePosition, For SMART_TARGET_POSITION you need to set target_o : 0 = North, West = 1.5, South = 3, East = 4.5</p></td>
-<td><p><br />
-</p></td>
+<td><p>Random orientation? (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -3688,6 +3347,75 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 1: Play music for all players in the entire zone<br />
 2: Play music for all players in the area</p></td>
 </tr>
+<tr class="odd">
+<td><p>SMART_ACTION_CUSTOM_CAST</p></td>
+<td><p>218</p></td>
+<td><p>spellId</p></td>
+<td><p>castFlag</p></td>
+<td><p>bp0</p></td>
+<td><p>bp1</p></td>
+<td><p>bp2</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td><p>SMART_ACTION_CONE_SUMMON</p></td>
+<td><p>219</p></td>
+<td><p>entry</p></td>
+<td><p>Duration (ms)<br />
+0 = permanent</p></td>
+<td><p>Distance between rings (yards)</p></td>
+<td><p>Distance between each summons in a row (yards)</p></td>
+<td><p>Length of the cone (yards)</p></td>
+<td><p>Width of the cone (angle 1°-360°)</p></td>
+<td><p>Allows you to spawn creatures in a cone (As seen in later expansions). Useful for custom cone aoes</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_ACTION_PLAYER_TALK</p></td>
+<td><p>220</p></td>
+<td><p>acore_string.id</p></td>
+<td><p>yell? (0/1)</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>Make the player say something</p></td>
+</tr>
+<tr class="even">
+<td><p>SMART_ACTION_VORTEX_SUMMON</p></td>
+<td><p>221</p></td>
+<td><p>entry</p></td>
+<td><p>Duration (ms)<br />
+0 = permanent</p></td>
+<td><p>Spiral scaling</p></td>
+<td><p>Spiral appearance</p></td>
+<td><p>range max</p></td>
+<td><p>phi_delta</p></td>
+<td><p>Allows you to summon creature in a customizable spiral(/vortex). Parameters can be confusing, exmaple parameters for testing: 5000 - summon duration, 5 - Spiral Scaling, 25 - spiral appearance, 60 - range max, 40 - phi delta</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_ACTION_CU_ENCOUNTER_START</p></td>
+<td><p>222</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>Resets all cooldowns and removes exhausted debuffs when action is called</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -3787,7 +3515,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </tbody>
 </table>
 
-### target\_type
+### target_type
 
 <table height="400">
 <thead>
@@ -4154,9 +3882,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td><p><br />
-</p></td>
-<td><p>All players up to maxCount within the specified range.</p></td>
+<td><p>When target.o is set and it didnt find any targets in min-max range, it will try all possible targets in max range instead.</p></td>
+<td><p>All players up to maxCount within the specified range. Excluding GMs and Dead.</p></td>
 </tr>
 <tr class="odd">
 <td><p>SMART_TARGET_PLAYER_DISTANCE</p></td>
@@ -4297,10 +4024,10 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p>All units on creature's threat list within the specified distance if maxDist > 0</p></td>
 </tr>
 <tr class="even">
-<td>SMART_TARGET_CLOSEST_ENEMY</td>
-<td>25</td>
-<td>maxDist</td>
-<td>playerOnly (0/1)</td>
+<td><p>SMART_TARGET_CLOSEST_ENEMY</p></td>
+<td><p>25</p></td>
+<td><p>maxDist</p></td>
+<td><p>playerOnly (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4313,13 +4040,13 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td>Any attackable target (creature or player) within maxDist</td>
+<td><p>Any attackable target (creature or player) within maxDist</p></td>
 </tr>
 <tr class="odd">
-<td>SMART_TARGET_CLOSEST_FRIENDLY</td>
-<td>26</td>
-<td>maxDist</td>
-<td>playerOnly (0/1)</td>
+<td><p>SMART_TARGET_CLOSEST_FRIENDLY</p></td>
+<td><p>26</p></td>
+<td><p>maxDist</p></td>
+<td><p>playerOnly (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4332,14 +4059,14 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 </p></td>
 <td><p><br />
 </p></td>
-<td>Any friendly unit (creature, player or pet) within maxDist</td>
+<td><p>Any friendly unit (creature, player or pet) within maxDist</p></td>
 </tr>
 <tr class="even">
-<td>SMART_TARGET_FARTHEST</td>
-<td>28</td>
-<td>maxDist</td>
-<td>playerOnly (0/1)</td>
-<td>isInLos (0/1)</td>
+<td><p>SMART_TARGET_FARTHEST</p></td>
+<td><p>28</p></td>
+<td><p>maxDist</p></td>
+<td><p>playerOnly (0/1)</p></td>
+<td><p>isInLos (0/1)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />
@@ -4351,6 +4078,58 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <td><p><br />
 </p></td>
 <td><p>Farthest unit on the threat list</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_TARGET_PLAYER_WITH_AURA</p></td>
+<td><p>201</p></td>
+<td><p>spellID</p></td>
+<td><p>Negative (0/1)</p></td>
+<td><p>MaxDist</p></td>
+<td><p>MinDist</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><p>Number to resize the target list</p></td>
+<td><p><p>Target players with or without aura</p></td>
+</tr>
+<tr class="even">
+<td><p>SMART_TARGET_RANDOM_POINT</p></td>
+<td>201</p></td>
+<td><p>range (yards)</p></td>
+<td><p>amount (for summoning creature)</p></td>
+<td><p>self as middle (0/1)<br />
+else use xyz</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>This only works with  SMART_ACTION_SUMMON_CREATURE, SMART_ACTION_MOVE_TO_POS and SMART_ACTION_JUMP_TO_POS</p></td>
+</tr>
+<tr class="odd">
+<td><p>SMART_TARGET_ROLE_SELECTION</p></td>
+<td>201</p></td>
+<td><p>rangeMax (yards)</p></td>
+<td><p>TargetMask (Tanks (1), Healer (2) Damage (4))</p></td>
+<td><p>Resize list</p></td>
+<td><p></p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p><br />
+</p></td>
+<td><p>Target a Tank/Healer/DPS role. Based on the players spec.</p></td>
 </tr>
 </tbody>
 </table>

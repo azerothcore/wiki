@@ -17,24 +17,29 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |account set password|4|Syntax: .account set password $account $password $password Set password for account.|
 |account set|3|Syntax: .account set $subcommand Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands|
 |account|0|Syntax: .account Display the access level of your account.|
-|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. .|
+|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
 |additemset|3|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
 |announce|1|Syntax: .announce $MessageToBroadcast Send a global message to all players online in chat log.|
 |arena captain|3|Syntax: .arena captain #TeamID $name. A command to set new captain to the team. $name must be in the team|
 |aura|3|Syntax: .aura #spellid Add the aura from spell #spellid to the selected Unit.|
-|ban account|3|Syntax: .ban account $Name $bantime $reason Ban account kick player. $bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".|
-|ban character|3|Syntax: .ban character $Name $bantime $reason Ban character and kick player. $bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".|
-|ban ip|3|Syntax: .ban ip $Ip $bantime $reason Ban IP. $bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".|
 |ban|3|Syntax: .ban $subcommand Type .ban to see the list of possible subcommands or .help ban $subcommand to see info on subcommands|
+|ban account|3|Syntax: .ban account $account_name $bantime $reason Ban account and kick the player if ingame on any character. $bantime: negative value leads to permban, otherwise use a timestring like `4d20h3s`.|
+|ban playeraccount|3|Syntax: .ban playeraccount $character_name $bantime $reason Ban an account based on the character's name and kick that character if ingame. $bantime: negative value leads to permban, otherwise use a timestring like `4d20h3s`.|
+|ban character|3|Syntax: .ban character $character_name $bantime $reason Ban character and kick that character if ingame. $bantime: negative value leads to permban, otherwise use a timestring like `4d20h3s`.|
+|ban ip|3|Syntax: .ban ip $Ip $bantime $reason Ban IP. $bantime: negative value leads to permban, otherwise use a timestring like `4d20h3s`.|
+|unban account|3|Syntax: .unban account $Name Unban accounts for account name pattern.|
+|unban character|3|Syntax: .unban character $Name Unban accounts for character name pattern.|
+|unban ip|3|Syntax : .unban ip $Ip Unban accounts for IP pattern.|
+|unban|3|Syntax: .unban $subcommand Type .unban to see the list of possible subcommands or .help unban $subcommand to see info on subcommands|
 |baninfo account|3|Syntax: .baninfo account $accountid Watch full information about a specific ban.|
 |baninfo character|3|Syntax: .baninfo character $charactername Watch full information about a specific ban.|
 |baninfo ip|3|Syntax: .baninfo ip $ip Watch full information about a specific ban.|
 |baninfo|3|Syntax: .baninfo $subcommand Type .baninfo to see the list of possible subcommands or .help baninfo $subcommand to see info on subcommands|
-|bank|3|Syntax: .bank Show your bank inventory.|
 |banlist account|3|Syntax: .banlist account [$Name] Searches the banlist for a account name pattern or show full list account bans.|
 |banlist character|3|Syntax: .banlist character $Name Searches the banlist for a character name pattern. Pattern required.|
 |banlist ip|3|Syntax: .banlist ip [$Ip] Searches the banlist for a IP pattern or show full list of IP bans.|
 |banlist|3|Syntax: .banlist $subcommand Type .banlist to see the list of possible subcommands or .help banlist $subcommand to see info on subcommands|
+|bank|3|Syntax: .bank Show your bank inventory.|
 |bindsight|3|Syntax: .bindsight Binds vision to the selected unit indefinitely. Cannot be used while currently possessing a target.|
 |cast back|3|Syntax: .cast back #spellid [triggered] Selected target will cast #spellid to your character. If 'trigered' or part provided then spell casted with triggered flag.|
 |cast dist|3|Syntax: .cast dist #spellid [#dist [triggered]] You will cast spell to pint at distance #dist. If 'trigered' or part provided then spell casted with triggered flag. Not all spells can be casted as area spells.|
@@ -111,7 +116,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |go creature|1|Syntax:.go creature #creature_guidTeleport your character to creature with guid #creature_guid..go creature #creature_nameTeleport your character to creature with this name..go creature id #creature_entryTeleport your character to a creature that was spawned from the template with this entry.If more than one creature is found, then you are teleported to the first that is found inside the database.|
 |go graveyard|1|Syntax: .go graveyard #graveyardId Teleport to graveyard with the graveyardId specified.|
 |go grid|1|Syntax: .go grid #gridX #gridY [#mapId] Teleport the gm to center of grid with provided indexes at map #mapId (or current map if it not provided).|
-|go object|1|Syntax: .go object #object_guid Teleport your character to gameobject with guid #object_guid|
+|go gobject|1|Syntax: .go gobject #object_guid Teleport your character to gameobject with guid #object_guid|
 |go taxinode|1|Syntax: .go taxinode #taxinode Teleport player to taxinode coordinates. You can look up zone using .lookup taxinode $namepart|
 |go ticket|1|Syntax: .go ticket #ticketid Teleports the user to the location where $ticketid was created.|
 |go trigger|1|Syntax: .go trigger #trigger_id Teleport your character to areatrigger with id #trigger_id. Character will be teleported to trigger target if selected areatrigger is telporting trigger.|
@@ -142,7 +147,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |help|0|Syntax: .help [$command] Display usage instructions for the given $command. If no $command provided show list available commands.|
 |hidearea|3|Syntax: .hidearea #areaid Hide the area of #areaid to the selected character. If no character is selected, hide this area to you.|
 |honor add|2|Syntax: .honor add $amount Add a certain amount of honor (gained today) to the selected player.|
-|honor add kill|2|Syntax: .honor add kill Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
+|~~honor add kill~~ NOT IMPLEMENTED|2|Syntax: .honor add kill Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
 |honor update|2|Syntax: .honor update Force the yesterday's honor fields to be updated with today's data, which will get reset for the selected player.|
 |honor|2|Syntax: .honor $subcommand Type .honor to see the list of possible subcommands or .help honor $subcommand to see info on subcommands|
 |modify talentpoints|1|Syntax: .modify talentpoints #amount Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward.|
@@ -170,7 +175,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |list auras|3|Syntax: .list auras List auras (passive and active) of selected creature or player. If no creature or player is selected, list your own auras.|
 |list creature|3|Syntax: .list creature #creature_id [#max_count] Output creatures with creature id #creature_id found in world. Output creature guids and coordinates sorted by distance from character. Will be output maximum #max_count creatures. If #max_count not provided use 10 as default value.|
 |list item|3|Syntax: .list item #item_id [#max_count] Output items with item id #item_id found in all character inventories, mails, auctions, and guild banks. Output item guids, item owner guid, owner account and owner name (guild name and guid in case guild bank). Will be output maximum #max_count items. If #max_count not provided use 10 as default value.|
-|list object|3|Syntax: .list object #gameobject_id [#max_count] Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value.|
+|list gobject|3|Syntax: .list gobject #gameobject_id [#max_count] Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value.|
 |list|3|Syntax: .list $subcommand Type .list to see the list of possible subcommands or .help list $subcommand to see info on subcommands|
 |wp reload|3|Syntax: .wp reload $pathid Load path changes ingame - IMPORTANT: must be applied first for new paths before .wp load #pathid|
 |reload spell_group|3|Syntax: .reload spell_group Reload spell_group table.|
@@ -181,7 +186,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |lookup item|3|Syntax: .lookup item $itemname Looks up an item by $itemname, and returns all matches with their Item ID's.|
 |lookup itemset|3|Syntax: .lookup itemset $itemname Looks up an item set by $itemname, and returns all matches with their Item set ID's.|
 |lookup map|3|Syntax: .lookup map $namepart Looks up a map by $namepart, and returns all matches with their map ID's.|
-|lookup object|3|Syntax: .lookup object $objname Looks up an gameobject by $objname, and returns all matches with their Gameobject ID's.|
+|lookup gobject|3|Syntax: .lookup gobject $objname Return gameobject(s) ID matching $objname.|
 |lookup player account|2|Syntax: .lookup player account $account ($limit) Searchs players, which account username is $account with optional parametr $limit of results.|
 |lookup player email|2|Syntax: .lookup player email $email ($limit) Searchs players, which account email is $email with optional parametr $limit of results.|
 |lookup player ip|2|Syntax: .lookup player ip $ip ($limit) Searchs players, which account ast_ip is $ip with optional parametr $limit of results.|
@@ -360,28 +365,28 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reset stats|3|Syntax: .reset stats [Playername] Resets(recalculate) all stats of the targeted player to their original VALUESat current level.|
 |reset talents|3|Syntax: .reset talents [Playername] Removes all talents of the targeted player or pet or named player. Playername can be name of offline character. With player talents also will be reset talents for all character's pets if any.|
 |reset|3|Syntax: .reset $subcommand Type .reset to see the list of possible subcommands or .help reset $subcommand to see info on subcommands|
-|respawn|3|Syntax: .respawn Respawn all nearest creatures and GO without waiting respawn time expiration.|
+|respawn|3|Syntax: .respawn Respawn target creature and GO without waiting for respawn time expiration. If no target provided, respawn all nearest creatures. |
 |revive|3|Syntax: .revive Revive the selected player. If no player is selected, it will revive you.|
 |save|0|Syntax: .save Saves your character.|
 |saveall|1|Syntax: .saveall Save all characters in game.|
 |send items|3|Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN] Send a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.|
 |send mail|1|Syntax: .send mail #playername "#subject" "#text" Send a mail to a player. Subject and mail text must be in "".|
-|send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR.|
+|send message|3|Syntax: .send message $playername $message Send screen message to player from ADMINISTRATOR. **Will return an error if player is offline (can be problematic with SOAP for example)!**|
 |send money|3|Syntax: .send money #playername "#subject" "#text" #money Send mail with money to a player. Subject and mail text must be in "".|
 |server corpses|2|Syntax: .server corpses Triggering corpses expire check in world.|
-|server exit|4|Syntax: .server exit Terminate azeroth-core NOW. Exit code 0.|
-|server idlerestart cancel|3|Syntax: .server idlerestart cancel Cancel the restart/shutdown timer if any.|
-|server idlerestart|3|Syntax: .server idlerestart #delay Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code or 2 as program exit code.|
-|server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
-|server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code or 0 as program exit code.|
 |server info|0|Syntax: .server info Display server version and the number of connected players.|
 |server motd|0|Syntax: .server motd Show server Message of the day.|
 |server restart cancel|3|Syntax: .server restart cancel Cancel the restart/shutdown timer if any.|
-|server restart|3|Syntax: .server restart #delay Restart the server after #delay seconds. Use #exit_code or 2 as program exit code.|
+|server restart|3|Syntax: .server restart #delay [#exit_code] Restart the server after #delay seconds. Use #exit_code to change the exit code, default = 2.|
+|server idlerestart|3|Syntax: .server idlerestart #delay [#exit_code] Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 2.|
+|server idlerestart cancel|3|Syntax: .server idlerestart cancel Cancel the restart/shutdown timer if any.|
+|server shutdown|3|Syntax: .server shutdown #delay [#exit_code] Shut the server down after #delay seconds. Use #exit_code to change the exit code, default = 0.|
+|server shutdown cancel|3|Syntax: .server shutdown cancel Cancel the restart/shutdown timer if any.|
+|server idleshutdown|3|Syntax: .server idleshutdown #delay [#exit_code] Shut the server down after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 0.|
+|server idleshutdown cancel|3|Syntax: .server idleshutdown cancel Cancel the restart/shutdown timer if any.|
+|server exit|4|Syntax: .server exit Terminate worldserver NOW. Exit code 0.|
 |server set closed|3|Syntax: server set closed on/off Sets whether the world accepts new client connectsions.|
 |server set motd|3|Syntax: .server set motd $MOTD Set server Message of the day.|
-|server shutdown cancel|3|Syntax: .server shutdown cancel Cancel the restart/shutdown timer if any.|
-|server shutdown|3|Syntax: .server shutdown #delay [#exit_code] Shut the server down after #delay seconds. Use #exit_code or 0 as program exit code.|
 |server togglequerylog|4|Syntax: .server togglequerylog. Toggle SQL query log on/off.|
 |server|3|Syntax: .server $subcommand Type .server to see the list of possible subcommands or .help server $subcommand to see info on subcommands|
 |setskill|3|Syntax: .setskill #skill #level [#max] Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill.|
@@ -417,10 +422,6 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |ticket viewname|1|Usage: .ticket viewname $creatorname. Returns details about specified ticket. Ticket must be open and not deleted.|
 |ticket|1|Syntax: .ticket $subcommand Type .ticket to see the list of possible subcommands or .help ticket $subcommand to see info on subcommands|
 |unaura|3|Syntax: .unaura #spellid Remove aura due to spell #spellid from the selected Unit.|
-|unban account|3|Syntax: .unban account $Name Unban accounts for account name pattern.|
-|unban character|3|Syntax: .unban character $Name Unban accounts for character name pattern.|
-|unban ip|3|Syntax : .unban ip $Ip Unban accounts for IP pattern.|
-|unban|3|Syntax: .unban $subcommand Type .unban to see the list of possible subcommands or .help unban $subcommand to see info on subcommands|
 |unbindsight|3|Syntax: .unbindsight Removes bound vision. Cannot be used while currently possessing a target.|
 |unfreeze|1|Syntax: .unfreeze (#player) "Unfreezes" #player and enables his chat again. When using this without #name it will unfreeze your target.|
 |unlearn|3|Syntax: .unlearn #spell [all] Unlearn for selected player a spell #spell. If 'all' provided then all ranks unlearned.|
@@ -456,14 +457,13 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload lfg_dungeon_rewards|3|Syntax: .reload lfg_dungeon_rewards Reload lfg_dungeon_rewards table.|
 |character changefaction|2|Syntax: .character changefaction $name Change character faction.|
 |character changerace|2|Syntax: .character changerace $name Change character race.|
-|ban playeraccount|3|Syntax: .ban playeraccount $Name $bantime $reason Ban account and kick player. $bantime: negative value leads to permban, otherwise use a timestring like "4d20h3s".|
 |achievement add|4|Syntax: .achievement add $achievement Add an achievement to the targeted player. $achievement: can be either achievement id or achievement link|
 |achievement checkall|3|Syntax: .achievement checkall. Check all achievement criteria of the selected player.|
 |achievement|4|Syntax: .achievement $subcommand Type .achievement to see the list of possible subcommands or .help achievement $subcommand to see info on subcommands|
 |reload creature_text|3|Syntax: .reload creature_text Reload creature_text table.|
 |debug areatriggers|1|Syntax: .debug areatriggers Toggle debug mode for areatriggers. In debug mode GM will be notified if reaching an areatrigger|
 |learn all recipes|2|Syntax: .learn all recipes [$profession] Learns all recipes of specified profession and sets skill level to max. Example: .learn all recipes enchanting|
-|npc set spawndist|2|Syntax: .npc set spawndist #dist Adjust spawndistance of selected creature to dist.|
+|npc set wanderdistance|3|Syntax: .npc set wanderdistance #dist Adjust wanderdistance of selected creature to dist.|
 |npc set spawntime|2|Syntax: .npc set spawntime #time Adjust spawntime of selected creature to time.|
 |npc add temp|2|Syntax: .npc add temp Adds temporary NPC, not saved to database.|
 |npc textemote|1|Syntax: .npc textemote #emoteid Make the selected creature to do textemote with an emote of id #emoteid.|

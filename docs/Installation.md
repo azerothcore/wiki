@@ -18,8 +18,6 @@ This page describes how to use [AzerothCore with ArchLinux](arch-linux.md)
 
 ## CLASSIC INSTALLATION
 
-/!\ For **macOS** users: the build on mac is currently broken (see [this issue](https://github.com/azerothcore/azerothcore-wotlk/issues/122)), but you can still use AzerothCore on macOS with Docker.
-
 ### 1) Requirements
 
 Make sure your system fits the [Requirements](Requirements.md).
@@ -70,7 +68,7 @@ At this point, you must be in your "build/" directory.
 **Note2**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
 
 ```
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1 -DWITH_WARNINGS=1 -DCMAKE_C_FLAGS="-Werror" -DCMAKE_CXX_FLAGS="-Werror"
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1
 ```
 
 Then, replacing `6` with the number of threads that you want to execute, type:
@@ -85,7 +83,7 @@ make install
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
 ```
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient_r.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
 ```
 
 Then, replacing `4` with the number of threads that you want to execute, type:
@@ -116,19 +114,35 @@ You will find your freshly compiled binaries in the Build\bin\Release or Build\b
 You will need the following files in order for the core to function properly:
  
 ```
-libeay32.dll
-libmySQL.dll 
-ssleay32.dll 
 ace.dll
-worldserver.conf.dist
-worldserver.exe 
+libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
+libmySQL.dll 
+ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
 authserver.conf.dist 
 authserver.exe
+worldserver.conf.dist
+worldserver.exe 
 ```
 
-Copy `libeay32.dll` and `ssleay32.dll` from OpenSSL install folder into `CMAKE_INSTALL_PREFIX`.
+The `.dll` files needs to be copied manually from their install folder into your compiled folder.
 
-Copy `libmysql.dll` from your MYSQL_LIBRARY path into `CMAKE_INSTALL_PREFIX`
+`libmysql.dll` (C:\MySQL\MySQL Server 5.x\lib\)
+
+For OpenSSL 1.0.x: 
+
+* (C:\OpenSSL-Win32\ or C:\OpenSSL-Win64\)
+  * `libeay32.dll`
+  * `ssleay32.dll`
+
+For OpenSSL 1.1.x: 
+
+* Win32 (C:\OpenSSL-Win32\bin)
+  * `libcrypto-1_1.dll` 
+  * `libssl-1_1.dll`
+
+* Win64 (C:\OpenSSL-Win64\bin)
+  * `libcrypto-1_1-x64.dll`
+  * `libssl-1_1-x64.dll`
 
 
 **Note:** Do not use ARM architecture as azerothcore requires SSE2 and ARM doesn't support it.  

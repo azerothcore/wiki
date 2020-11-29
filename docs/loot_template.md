@@ -23,7 +23,7 @@ Loot templates define only items in the loot. See comments about money drop in c
 | QuestRequired                                | bool               | NO       |         | 0           |           |
 | [LootMode](#loot_template-LootMode)          | smallint           | NO       |         | 1           |           |
 | [GroupId](#loot_template-GroupId)            | tinyint            | NO       |         | 0           |           |
-| [MinCount](#loot_template-MinCountOrRef)     | mediumint          | NO       |         | 1           |           |
+| [MinCount](#loot_template-MinCount)     | mediumint          | NO       |         | 1           |           |
 | [MaxCount](#loot_template-MaxCount)          | tinyint unsigned   | NO       |         | 1           |           |
 | Comment                                      | varchar            |          |         |             |           |
 
@@ -228,7 +228,7 @@ Groupid for dummies as people have a hard time understanding it;
 
 For reference entries: If GroupId &gt; 0 only the referenced items with said GroupId will drop.
 
-### MinCountOrRef
+### MinCount
 
 The minimum number of copies of the item that can drop in a single loot
 

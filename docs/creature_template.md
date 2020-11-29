@@ -100,17 +100,20 @@ Creature's unique id.
 | [Anomalus](http://www.wowhead.com/npc=26763/anomalus)     | 26763 | 30529                | 0                    | 0                    |
 | [Sindragosa](http://www.wowhead.com/npc=36853/sindragosa) | 36853 | 38265                | 38266                | 38267                |
 
-Anomalus is a boss located in The Nexus. You can fight him on two types of difficulties (normal dungeon and heroic dungeon). It's obvious that depending on the type of difficulty bosses have different statistics like health and damage. In case of Anomalus information from entry 26763 is used when you fight him at normal difficulty and entry 30529 is used when you fight him at heroic difficulty.
+Anomalus is a 5 man boss located in The Nexus. You can fight him on two types of difficulties (normal dungeon and heroic dungeon). Depending on the type of difficulty, bosses have different statistics like health and damage. In case of Anomalus information from entry 26763 is used when you fight him at normal difficulty and entry 30529 is used when you fight him at heroic difficulty.
 
-Another important case of that would be Sindragosa. Boss located in the Icecrown Citadel, you can fight her on 4 different difficulties (10man normal/heroic, 25man normal/heroic). Depending on the type of difficulty, she must have different statistics. So if you see her in 10man normal raid she will use information from entry 36853, in a 25man normal raid entry 38265 will be used and so on. 
+Sindragosa, a raid boss encounter located in the Icecrown Citadel can be fought on 4 different difficulties due to the introduction of heroic raid modes in Patch 3.2 (10man normal/heroic, 25man normal/heroic). Depending on the type of difficulty, she must have different statistics. So if you see her in 10man normal raid she will use information from entry 36853, in a 25man normal raid entry 38265 will be used and so on.  This is in stark contrast to raid bosses such as Patchwerk and XT-002 Deconstructor, located in Naxxramas and Ulduar respectively, who only have two different raid modes (10-man 'normal'/25-man 'normal').  Hardmodes within the Ulduar raid do not have their own template, due to game mechanics engaging the harder difficulty during the encounter itself.
 
-If you look at database you will notice a very characteristic pattern which is summarized in table below:
+Here is a special case with the Alterac Valley battleground. There are 4 level brackets where the NPCs are made easier or harder, depending on your level bracket (Added in WoW patch 3.2.2 when level 80 characters received their own bracket for this battleground and all brackets below level 80 received their own level of difficulty).  The same concept applies to the Isle of Conquest battleground, with only two brackets.  
+
+If you look at the database you will notice a very characteristic pattern which is summarized in table below:
 
 | name             | entry             | difficulty_entry_1 | difficulty_entry_2 | difficulty_entry_3 |
 |------------------|-------------------|----------------------|----------------------|----------------------|
 | Normal Creature  | Different than 0  | 0                    | 0                    | 0                    |
 | Dungeon Creature | Normal Dungeon    | Heroic Dungeon       | 0                    | 0                    |
 | Raid Creature    | 10man Normal Raid | 25man Normal Raid    | 10man Heroic Raid    | 25man Heroic Raid    |
+| Battleground     | 51- 59            | 60-69                | 70-79                | 80                   |
 
 #### KillCredit1
 
@@ -564,11 +567,11 @@ This field is overridden by ScriptName field if both are set.
 
 The creature's default movement type.
 
-| ID | Type                                        |
-|----|---------------------------------------------|
-| 0  | Idle; stay in one place                     |
-| 1  | Random movement inside the spawndist radius |
-| 2  | Waypoint movement                           |
+| ID | Type                                        		 |
+|----|---------------------------------------------------|
+| 0  | Idle; stay in one place                     		 |
+| 1  | Random movement inside the wander_distance radius |
+| 2  | Waypoint movement                           		 |
 
 #### InhabitType
 
@@ -579,7 +582,7 @@ Controls where the creature can move and attack.
 | 1       | Ground |
 | 2       | Water  |
 | 4       | Flying |
-| 8       | Rooted |
+| ~8~     |~Rooted~ (not implemented)|
 
 (This is a bitmask. You can add values together: 1+4=5 would make the creature walk on ground and fly.)
 

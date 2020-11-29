@@ -1,4 +1,8 @@
-[Database Structure](Database-Structure) > [Auth-Database](Auth-Database) > [version_db_auth](version_db_auth)
+# version_db_auth
+
+[<-Back-to:Auth](database-auth.md)
+
+**The \`version_db_auth\` table**
 
 Column | Type | Description
 --- | --- | ---

@@ -29,7 +29,7 @@ When used on GNU/Linux system, the amount of memory used by Docker is even less.
 
 #### Docker containers vs Virtual machines
 
-Usind Docker will have the same benefits as using virtual machines, but with much less overhead:
+Using Docker will have the same benefits as using virtual machines, but with much less overhead:
 
 ![Docker containers vs Virtual machines](https://user-images.githubusercontent.com/75517/51078179-d4fec680-16b1-11e9-8ce6-87b5053f55dd.png)
 
@@ -72,17 +72,17 @@ You need to clone the AzerothCore repository (or use your own fork):
 git clone https://github.com/azerothcore/azerothcore-wotlk.git
 ```
 
-Now cd into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run from this position**.
+Now go into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run inside this folder**.
 
 ### WoW Client Data files
 
 You also need to have the data files. Check the step "5) Download the data files" from the [installation guide](Installation#5-download-the-data-files).
 
-Put your data files into the `docker/worldserver/data/` folder that is inside `azerothcore-wotlk`.
+Put your data files into `docker/worldserver/data/` which is inside `azerothcore-wotlk`.
 
 ### Installation
 
-Inside your terminal (if you use Windows, use git bash), run the following commands.
+Inside your terminal (if you use Windows, use git bash), run the following commands inside azerothcore-wotlk'
 
 **1) Generate your server configuration files:**
 
@@ -144,11 +144,21 @@ Then your `docker-compose up` will automatically locate the `.env` with your cus
 
 - The `docker-compose start` will start your existing containers.
 
-- The `docker-compose stop` will stop your containers, but it won’t remove them.
+- The `docker-compose stop` will stop your containers, but it won't remove them.
 
 - The `docker-compose up` builds, (re)creates, and starts your containers.
 
 - The `docker-compose down` command will stop your containers, but it also removes the stopped containers as well as any networks that were created.
+
+### How can I delete my database files?
+
+**Warning** Once you've deleted your database files they are unrecoverable unless you have a backup.
+
+To remove your database files you firstly want to make sure that your containers have been stopped and removed by typing: `docker-compose down`.
+
+After stopping and removing your containers you can proceed to remove the volume by typing: `docker volume rm azerothcore-wotlk_ac-database`
+
+**Note** If you've changed your folder name from the default `azerothcore-wotlk` the volume name will be slightly different. To find the new volume name you can use the command `docker volume ls`. The volume should be labelled something along the lines of `xxxx_ac-database`.
 
 ### How can I run commands in the worldserver console?
 

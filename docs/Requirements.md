@@ -1,8 +1,10 @@
-# GNU/Linux
+# AzerothCore Requirements
 
-## Debian-based requirements
+## GNU/Linux
 
-### Ubuntu
+### Debian-based requirements
+
+#### Ubuntu
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
@@ -10,11 +12,11 @@ To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other se
 --- 
 
 
-### Debian 8
+#### Debian 8
 
 `sudo apt-get update && sudo apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
-### Install last cmake version on Debian 8
+#### Install last cmake version on Debian 8
 
 To install last version of cmake use:
 ```
@@ -39,25 +41,25 @@ pip3 install --upgrade pip
 pip3 install cmake
 ```
 
-### Debian 9
+#### Debian 9
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev`
 
 You might need to add the stretch-backports repositories to APT in order to install clang-6.x+ and cmake v3.8+.
 If you do not succeed installing cmake you can use the package manager of python3 (pip3)
 
-### Debian 10
+#### Debian 10
 
 `sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev`
 
 --- 
 
 
-### Check your clang version
+#### Check your clang version
 
 `clang --version`
 
-Your `clang` version **MUST** be `6` or higher ([here](http://www.azerothcore.org/wiki/travis-build) you can check the versions that run in our Travis CI pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be `6` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
 
 For example, if you are using an older version of Ubuntu like 16.04, you need to install clang using:
 
@@ -65,7 +67,7 @@ For example, if you are using an older version of Ubuntu like 16.04, you need to
 
 If you use another distro or version, search on google for how to install the right clang version for your system.
 
-### Check your cmake version
+#### Check your cmake version
 
 `cmake --version`
 
@@ -73,7 +75,7 @@ Your `cmake` version **MUST** be `3.8` or higher.
 
 On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
-### Ensure that the gcc-7 headers are installed
+#### Ensure that the gcc-7 headers are installed
 
 This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
 https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
@@ -81,41 +83,47 @@ https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
 After `sudo apt-get update` you can install gcc-7: `sudo apt-get install g++-7 gcc-7`
 
 
-# Mac OS X
+## Mac OS X
 
-Install XCode using the App Store, then open the terminal and type:
+- Install XCode using the App Store, then open the terminal and type:
 
 `xcode-select --install` 
 
-For those who don't have [Homebrew](http://brew.sh/) installed, you can easily install it typing:
+- Install the package manager [Homebrew](http://brew.sh/)
 
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
-Then use it to install the required packages:
+Use brew it to install the required packages:
 
 `brew update`
 
-`brew install openssl readline cmake ace coreutils bash bash-completion md5sha1sum mysql56`
+`brew install openssl readline cmake ace coreutils bash bash-completion coreutils`
 
-`brew link mysql56 --force`
+This will install bash 5+, you might need to restart your terminal.
+Make sure you are using bash 5 or newer by typing `bash --version`.
 
-# Windows
+Now install mysql:
+
+`brew install mysql`
+
+You will be prompted some instructions to complete the `mysql` installation, for example to properly set a password. Just follow the instructions and properly configure mysql. **This step is important, do not skip it.**
+
+To verify that mysql has been properly installed, try accessing it using either the command line (e.g. `mysql -u root -p`) or using DB client managers with a UI like Sequel Pro.
+
+You can install Sequel Pro with:
+
+`brew cask install sequel-pro`
+
+
+## Windows
 
 * Install Visual Studio >= 15 ( 2017 Desktop Community, make sure you're using Version 15.9.17+ ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
 
-* Install [CMake](https://cmake.org/) version >= 2.8  
+* Install [CMake](https://cmake.org/) version 2.8 or newer.  
 
 * Install latest version of [Git Extensions](https://git-scm.com/download/win)
 
-* [MySQL Server Community Edition](http://dev.mysql.com/downloads/mysql/5.6.html) (version 5.6 or 5.7, anything later is not supported)
+* [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/) (version 8.0 or 5.7, older versions are not supported)
 
-* [MySQL Development File](https://docs.google.com/uc?id=0B1fF5EIDoF1fWjYwQ1FCNUJmMWc&export=download)
-  
-  These files are shipped with MySQL Server but to make it easier we packed the libs and include files for both 32 bits and 64 bits.
-
-  Extract the files to a known location, e.g, C:\MySQL, directory structure must be following: C:\MySQL\include and C:\MySQL\lib\debug (Move libmysql.dll and libmysql.lib there) 
-
-* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x (Do not install the Light version) 
+* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x or 1.1.x (Do not install the Light version) 
   
   Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
 

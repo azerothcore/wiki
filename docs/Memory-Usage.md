@@ -12,3 +12,8 @@ AzerothCore is based on SunwellCore (a fork from TC). SunwellCore was a public s
 | >100              | >16 GB                  |
 
 We recommend at least 16 GB as the server will gradually cache the world maps as the players explore them which finally takes up to at least 11 GB of RAM usage.
+
+It means that even though you have few players online, when they explore any map, it will never be unloaded from the RAM until reboot. So after enough time, all the maps will be loaded, taking up more RAM.
+It's an architectural choice granting "high performance" on heavy usage.
+
+![ram](https://i.imgur.com/X3GBBbD.jpg)

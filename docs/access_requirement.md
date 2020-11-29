@@ -5,6 +5,7 @@
 **The \`access\_requirement\` table**
 
 This table contains the access requirements to enter an instance.
+**Note:** If you reload this table with `.reload access_r`, you will have to close and reopen the ingame Dungeon Finder/Raid Browser to update its status.
 
 **Structure**
 
@@ -201,11 +202,13 @@ The maximum level that you can be in order to enter the instance.
 
 ### item\_level
 
-The at least required item level for a instance.
+The at least required item level for an instance.
 
 -   All WotLK Heroics require at least an average item level of 180.
 -   Trial of the Champion, Pit of Saron, and the Forge of Souls require an average item level of 200.
 -   Halls of Reflection requires an average item level of 219.
+
+**Note:** this requirement only applies to the Dungeon Finder and the Raid Browser, not to a dungeon/raid portal (and it's blizzlike). This also means a guild could try to clear a raid while being undergeared :)
 
 ### item
 
@@ -233,4 +236,4 @@ The text that is shown if you try and enter the instance without having complete
 
 ### comment
 
-This field is for any comment you want to make about the requirements. It is arbitrary text.
+This field is for any comment you want to make about the requirements or the instance. It is arbitrary text.

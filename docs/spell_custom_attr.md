@@ -41,7 +41,7 @@ Table used for storing custom spell attributes.
 <td><p>spell id</p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="#attributes">ttributes</a></p></td>
+<td><p><a href="#attributes">attributes</a></p></td>
 <td><p>medium int(8)</p></td>
 <td><p>unsigned</p></td>
 <td><p> </p></td>
@@ -80,9 +80,12 @@ SET @SPELL_ATTR0_CU_ENCHANT_PROC                  = 1,
     @SPELL_ATTR0_CU_NEGATIVE_EFF0                 = 4096,
     @SPELL_ATTR0_CU_NEGATIVE_EFF1                 = 8192,
     @SPELL_ATTR0_CU_NEGATIVE_EFF2                 = 16384,
+    @SPELL_ATTR0_CU_NEGATIVE                      = 28672,
     @SPELL_ATTR0_CU_IGNORE_ARMOR                  = 32768,
     @SPELL_ATTR0_CU_REQ_TARGET_FACING_CASTER      = 65536,
     @SPELL_ATTR0_CU_REQ_CASTER_BEHIND_TARGET      = 131072;
+
+-- (@SPELL_ATTR0_CU_NEGATIVE = @SPELL_ATTR0_CU_NEGATIVE_EFF0 | @SPELL_ATTR0_CU_NEGATIVE_EFF1 | @SPELL_ATTR0_CU_NEGATIVE_EFF2)
 
 DELETE FROM `spell_custom_attr` WHERE `entry`=123;
 INSERT INTO `spell_custom_attr` (`entry`, `attributes`) VALUES

@@ -2,7 +2,7 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-# Table: realmcharacters
+**The \`realmcharacters\` table**
 
 This table holds information on the number of characters each account has for each realm.
 The data in this table is maintained by the core.
@@ -68,11 +68,11 @@ The data in this table is maintained by the core.
 
 ### realmid
 
-The ID of the realm. See [realmlist.id](realmlist_2130016.html#realmlist-id)
+The ID of the realm. See [realmlist.id](realmlist#id)
 
 ### acctid
 
-The account ID. See [account.id](account_2130004.html#account-id)
+The account ID. See [account.id](account#id)
 
 ### numchars
 

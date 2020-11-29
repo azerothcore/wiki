@@ -1,3 +1,5 @@
+# based on git-wiki-theme 2.6.1
+remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 title: AzerothCore
 # (string) Description of your wiki
@@ -53,11 +55,8 @@ google_cse_token:
 # git-wiki includes some internal themes that you can choose
 # check _layouts folder
 #
-markdown: kramdown
+markdown: GFM
 highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 defaults:
  -

@@ -2121,7 +2121,7 @@ The model ID of the item. Each model has its own icon assigned so this field con
 
 ### Quality
 
-The quality of the item. To use the Bind to Account quality, the item must have its flags set to 134221824.
+The quality of the item.
 
 <table>
 <colgroup>
@@ -2175,7 +2175,7 @@ The quality of the item. To use the Bind to Account quality, the item must have 
 <tr class="even">
 <td><p>7</p></td>
 <td><p>Gold</p></td>
-<td><p>Bind to Account</p></td>
+<td><p>Heirlooms (or some Bind to Account items)</p></td>
 </tr>
 </tbody>
 </table>
@@ -2201,7 +2201,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td><p>1</p></td>
 <td>0x01</td>
-<td><p>UNK1</p></td>
+<td>ITEM_FLAG_NO_PICKUP (NOT IMPLEMENTED)</td>
 </tr>
 <tr class="even">
 <td><p>2</p></td>
@@ -2216,12 +2216,12 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="even">
 <td><p>8</p></td>
 <td>0x08</td>
-<td><p>Makes green &quot;Heroic&quot; text appear on item</p></td>
+<td><p>ITEM_FLAG_HEROIC_TOOLTIP (NOT IMPLEMENTED) - Makes green &quot;Heroic&quot; text appear on item</p></td>
 </tr>
 <tr class="odd">
 <td><p>16</p></td>
 <td>0x010</td>
-<td><p>Deprecated Item</p></td>
+<td>ITEM_FLAG_DEPRECATED (NOT IMPLEMENTED) - Deprecated Item</td>
 </tr>
 <tr class="even">
 <td><p>32</p></td>
@@ -2231,7 +2231,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td><p>64</p></td>
 <td>0x040</td>
-<td><p>UNK2</p></td>
+<td><p>ITEM_FLAG_PLAYERCAST (NOT IMPLEMENTED) - Item's spells are castable by players</p></td>
 </tr>
 <tr class="even">
 <td>128</td>
@@ -2241,7 +2241,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>256</td>
 <td>0x0100</td>
-<td>UNK3</td>
+<td>ITEM_FLAG_MULTI_LOOT_QUEST (NOT IMPLEMENTED)</td>
 </tr>
 <tr class="even">
 <td><p>512</p></td>
@@ -2251,7 +2251,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td><p>1024</p></td>
 <td>0x0400</td>
-<td><p>UNK4</p></td>
+<td><p>ITEM_FLAG_USES_RESOURCES (NOT IMPLEMENTED)</p></td>
 </tr>
 <tr class="even">
 <td><p>2048</p></td>
@@ -2271,22 +2271,22 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>16384</td>
 <td>0x04000</td>
-<td>UNK5 // comment in code : Only readable items have this (but not all)</td>
+<td>ITEM_FLAG_HAS_TEXT (NOT IMPLEMENTED) - Only readable items have this (but not all)</td>
 </tr>
 <tr class="even">
 <td><p>32768</p></td>
 <td>0x08000</td>
-<td><p>UNK6</p></td>
+<td><p>ITEM_FLAG_NO_DISENCHANT (NOT IMPLEMENTED) - If enabled, prevent disenchanting. Implemented in another column `RequiredDisenchantSkill`</p></td>
 </tr>
 <tr class="odd">
 <td>65536</td>
 <td>0x010000</td>
-<td>UNK7</td>
+<td>ITEM_FLAG_REAL_DURATION (NOT IMPLEMENTED) - Probably real time duration. Implemented in another column `flagsCustom`</td>
 </tr>
 <tr class="even">
 <td>131072</td>
 <td>0x020000</td>
-<td>UNK8</td>
+<td>ITEM_FLAG_NO_CREATOR (NOT IMPLEMENTED OR PARTIALLY) - Maybe to remove the "Made by XX" message on crafted/summoned item or for signing charters</td>
 </tr>
 <tr class="odd">
 <td>262144</td>
@@ -2301,7 +2301,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>1048576</td>
 <td>0x0100000</td>
-<td>UNK9</td>
+<td>ITEM_FLAG_IGNORE_FOR_AURAS (NOT IMPLEMENTED) - ??</td>
 </tr>
 <tr class="even">
 <td>2097152</td>
@@ -2321,7 +2321,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>16777216</td>
 <td>0x01000000</td>
-<td>UNK10</td>
+<td>ITEM_FLAG_HAS_QUEST_GLOW (NOT IMPLEMENTED)</td>
 </tr>
 <tr class="even">
 <td>33554432</td>
@@ -2336,12 +2336,12 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="even">
 <td><p>134217728</p></td>
 <td>0x08000000</td>
-<td><p>Bind to Account (Set Quality = 7 for the corresponding color. Might require to set Bonding = 1)</p></td>
+<td><p>Bind to Account (Requires to set Bonding > 0)</p></td>
 </tr>
 <tr class="odd">
 <td><p>268435456</p></td>
 <td>0x010000000</td>
-<td><p>Spell is cast with triggered flag</p></td>
+<td><p>Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents` and the flag is called ITEM_FLAG_NO_REAGENT_COST)</p></td>
 </tr>
 <tr class="even">
 <td><p>536870912</p></td>
@@ -2351,12 +2351,12 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 <tr class="odd">
 <td>1073741824</td>
 <td>0x040000000</td>
-<td>UNK11</td>
+<td>ITEM_FLAG_REPORT_TO_GUILD_CHAT (NOT IMPLEMENTED)</td>
 </tr>
 <tr class="even">
 <td><p>2147483648</p></td>
 <td>0x080000000</td>
-<td><p>Bind on Pickup tradeable (only few quest items have this flag and it doesn't seem to bind at all)</p></td>
+<td>ITEM_FLAG_NO_PROGRESSIVE_LOOT (NOT IMPLEMENTED)</td>
 </tr>
 </tbody>
 </table>
@@ -2515,7 +2515,7 @@ In what slot the item can be equipped.
 <td><p>8</p></td>
 <td><p>Feet</p></td>
 <td><p>23</p></td>
-<td><p>Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22)</p></td>
+<td><p>Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22) (class = armor, not weapon even if in weapon slot)</p></td>
 </tr>
 <tr class="even">
 <td><p>9</p></td>
@@ -2545,13 +2545,13 @@ In what slot the item can be equipped.
 <td><p>13</p></td>
 <td><p>One-Hand (not to confuse with Off-Hand = 22)</p></td>
 <td><p>28</p></td>
-<td><p>Relic</p></td>
+<td><p>Relic (class = armor, not weapon even if in weapon slot)</p></td>
 </tr>
 <tr class="odd">
 <td><p>14</p></td>
-<td><p>Shield</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p>Shield (class = armor, not weapon even if in weapon slot)</p></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3047,6 +3047,7 @@ The cooldown time in milliseconds that is applied to all other spells in the cat
 ### bonding
 
 The bonding for the item.
+**Note:** To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum) and a `bonding` > 0 (ex: 1,2,3).
 
 <table>
 <colgroup>
@@ -3261,11 +3262,11 @@ The maximum durability of this item.
 
 ### area
 
-The ID of the zone in which this item can be used.
+The ID of the zone in which this item can be used. If you leave the area, the item will be deleted from the inventory.
 
 ### Map
 
-The ID of the map in which this item can be used.
+The ID of the map in which this item can be used. If you leave the map, the item will be deleted from the inventory.
 
 ### BagFamily
 
@@ -3588,6 +3589,7 @@ The value here corresponds to the ID in GemProperties.dbc.
 ### RequiredDisenchantSkill
 
 The required proficiency in disenchanting that the player needs to have to be able to disenchant this item.
+If set to -1, the item can't be disenchanted.
 
 ### ArmorDamageModifier
 
@@ -3600,7 +3602,9 @@ Set ITEM\_FLAGS\_CU\_DURATION\_REAL\_TIME in *flagsCustom* for real time. In tha
 
 ### ItemLimitCategory
 
-`field-no-description|78`
+This is related to ItemLimitCategory.dbc.
+It is a property that defines if an item belongs to a "category", like "Mana Gems" or "Healthstone" and it defines how many items of the category you can have in the bag (this is the "limit").
+For example, for Healthstone, there are several items like "Lesser Healthstone, Greater Healthstone, etc." but you can have only one in your bag (check as example value 3 or 4).
 
 ### HolidayId
 

@@ -97,7 +97,7 @@ This table lists all of the accounts that have been banned along with the date w
 
 ### id
 
-The account ID. See [account.id](account_2130004.html#account-id).
+The account ID. See [account.id](account#id).
 
 ### bandate
 
@@ -109,7 +109,7 @@ The date when the account will be automatically unbanned, in Unix time. A value 
 
 ### bannedby
 
-The character with the rights to the .ban command that banned the account.
+The GM character's name who banned that account. If banned from the console, then it will be empty (until improved).
 
 ### banreason
 
