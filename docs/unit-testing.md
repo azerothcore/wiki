@@ -17,7 +17,7 @@ make install -j 6
 2. You can now run the unit tests using:
 
 ```
-./build/src/test/BUILD_TESTING
+./build/src/test/unit_tests
 ```
 
 ## How to write unit tests for AzerothCore
