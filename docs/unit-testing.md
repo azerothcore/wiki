@@ -2,7 +2,7 @@
 
 ## How to compile and run the AC unit tests
 
-1. You have to compile your core by passing `-DUNIT_TESTS=1` in your `cmake` command. 
+1. You have to compile your core by passing `-DBUILD_TESTING=1` in your `cmake` command. 
 
 For example:
 
@@ -10,14 +10,14 @@ For example:
 cd azerothcore
 mkdir build
 cd build
-cmake ../ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1 -DUNIT_TESTS=1
+cmake ../ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1 -DBUILD_TESTING=1
 make install -j 6
 ```
 
 2. You can now run the unit tests using:
 
 ```
-./build/src/test/unit_tests
+./build/src/test/BUILD_TESTING
 ```
 
 ## How to write unit tests for AzerothCore
