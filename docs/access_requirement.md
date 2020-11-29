@@ -182,7 +182,7 @@ This table contains the access requirements to enter an instance.
 
 ### mapId
 
-This is the [access\_id](instance_template_2130198.html#instance_template-access_id) field from the [instance\_template](instance_template) table. It is an arbitrary number that merely links the requirements to an [instance\_template](instance_template), or [areatrigger\_teleport](areatrigger_teleport)
+This is the [access\_id](instance_template) field from the [instance\_template](instance_template) table. It is an arbitrary number that merely links the requirements to an [instance\_template](instance_template), or [areatrigger\_teleport](areatrigger_teleport)
 
 ### difficulty
 
@@ -212,19 +212,19 @@ The at least required item level for an instance.
 
 ### item
 
-An [item](item_template_2130222.html#item_template-entry) that you must have in your inventory to enter the instance. This item can not be in the bank.
+A horde only [item](item_template) that you must have in your inventory to enter the instance. This item can not be in the bank.
 
 ### item2
 
-A second [item](item_template_2130222.html#item_template-entry) that you must have in your inventory. This item can not be in the bank.
+An alliance only [item](item_template) that you must have in your inventory. This item can not be in the bank.
 
 ### quest\_done\_A
 
-A [quest](quest_template_2130261.html#quest_template-id) that you must have completed. This field is only for alliance.
+A [quest](quest_template) that you must have completed. This field is only for alliance.
 
 ### quest\_done\_H
 
-A [quest](quest_template_2130261.html#quest_template-id) that you must have completed. This field is only for horde.
+A [quest](quest_template) that you must have completed. This field is only for horde.
 
 ### completed\_achievement
 
