@@ -484,7 +484,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |spect version|0|Syntax: .spect version. Check spectator addon version.|
 |spect watch|0|Syntax: .spect watch #playername. Watch #playername.|
 |summon|1|Syntax: .summon [$charactername] Teleport the given character to you. Character can be offline.|
-|tele|1|Syntax: .tele #location Teleport player to a given location.|
+|teleport|1|Syntax: .teleport #location Teleport player to a given location.|
 |tele add|3|Syntax: .tele add $name Add current your position to .tele command target locations list with name $name.|
 |tele del|3|Syntax: .tele del $name Remove location with name $name for .tele command locations list.|
 |tele group|1|Syntax: .tele group#location Teleport a selected player and his group members to a given location.|
