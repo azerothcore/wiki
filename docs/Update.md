@@ -22,7 +22,6 @@ You need to import the **new** sql update files (located at https://github.com/a
 
 To automate this process you can use the db-assembler bash script `bash apps/db_assembler/db_assembler.sh`.
 
+If this is the first time you are using it [READ THIS FIRST](https://www.azerothcore.org/wiki/Database-Setup) and properly configure your `conf/config.sh` file.
+
 ![](https://user-images.githubusercontent.com/75517/50738699-6912ee80-11d7-11e9-95ea-667baa0bda70.png)
-
-IMPORTANT: remember to properly set your `conf/config.sh` file before using the `db_assembler.sh` script
-
