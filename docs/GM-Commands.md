@@ -244,7 +244,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |lookup spell id|3|Syntax: .lookup spell id #spellid Looks up a spell by #spellid, and returns the match with its spell name.|
 |lookup spell|3|Syntax: .lookup spell $namepart Looks up a spell by $namepart, and returns all matches with their spell ID's.|
 |lookup taxinode|3|Syntax: .lookup taxinode $substring Search and output all taxinodes with provide $substring in name.|
-|lookup tele|1|Syntax: .lookup tele $substring Search and output all .tele command locations with provide $substring in name.|
+|lookup teleport|1|Syntax: .lookup teleport $substring Search and output all .teleport command locations with provide $substring in name.|
 |lookup title|2|Syntax: .lookup title $$namepart Looks up a title by $namepart, and returns all matches with their title ID's and index's.|
 |mailbox|1|Syntax: .mailbox. Open mailbox.|
 |maxskill|3|Syntax: .maxskill Sets all skills of the targeted player to their maximum values for its current level.|
@@ -485,10 +485,10 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |spect watch|0|Syntax: .spect watch #playername. Watch #playername.|
 |summon|1|Syntax: .summon [$charactername] Teleport the given character to you. Character can be offline.|
 |teleport|1|Syntax: .teleport #location Teleport player to a given location.|
-|tele add|3|Syntax: .tele add $name Add current your position to .tele command target locations list with name $name.|
-|tele del|3|Syntax: .tele del $name Remove location with name $name for .tele command locations list.|
-|tele group|1|Syntax: .tele group#location Teleport a selected player and his group members to a given location.|
-|tele name|1|Syntax: .tele name [#playername] #location Teleport the given character to a given location. Character can be offline. To teleport to homebind, set #location to "$home" (without quotes).|
+|teleport add|3|Syntax: .teleport add $name Add current your position to .teleport command target locations list with name $name.|
+|teleport del|3|Syntax: .teleport del $name Remove location with name $name for .teleport command locations list.|
+|teleport group|1|Syntax: .teleport group#location Teleport a selected player and his group members to a given location.|
+|teleport name|1|Syntax: .teleport name [#playername] #location Teleport the given character to a given location. Character can be offline. To teleport to homebind, set #location to "$home" (without quotes).|
 |ticket|1|Syntax: .ticket $subcommand Type .ticket to see the list of possible subcommands or .help ticket $subcommand to see info on subcommands|
 |ticket assign|1|Usage: .ticket assign $ticketid $gmname. Assigns the specified ticket to the specified Game Master.|
 |ticket closedlist|1|Displays a list of closed GM tickets.|
