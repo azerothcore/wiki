@@ -63,6 +63,8 @@ The terminal will prompt an editor (usually `nano` or `vim`) that asks to save t
 - If the editor is `nano`, you can do it by simply using `CTRL+O` and `ENTER` to save then `CTRL+X` to exit.
 - If the editor is `vim` you can hold the `SHIFT` key and press two times `Z` to save and exist.
 
+You can read more about the `git` configuration and its default editor [here](http://web.mit.edu/6.005/www/fa14/tutorial/git/config.html).
+
 ## Update your local server to apply the changes
 
 Now you simply need to update your local server with the new changes. The procedure is analogue to a normal server update.
