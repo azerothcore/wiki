@@ -60,6 +60,14 @@ The commands above will create a new local branch called `pr-XXXX` which will co
 
 The terminal might prompt an editor (usually `nano`) that asks to save the merge commit message. Just save the changes and exit the editor. If the editor is `nano`, you can do it by simply using `CTRL+O` and `ENTER` to save then `CTRL+X` to exit.
 
+This may also be the way to resolve the editor merge commit message prompt.
+
+    press "i" (i for insert)
+    write your merge message
+    press "esc" (escape)
+    write ":wq" (write & quit)
+    then press enter
+
 ## Update your local server to apply the changes
 
 Now you simply need to update your local server with the new changes. The procedure is analogue to a normal server update.
@@ -111,6 +119,18 @@ You should write:
 - sometimes you may also want to specify how things worked **before** and **after** the PR
 - please insert as many details as possible
 - you can also insert screenshot or videos
+
+## Get Back to Master
+
+Once you have finished testing you likely want to return to the master branch.
+
+To do this you must run;
+
+```git checkout master```
+
+```git pull```
+
+```./bin/acore-docker-build```
 
 ## Examples of good testing reports
 
