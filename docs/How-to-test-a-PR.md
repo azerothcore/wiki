@@ -58,7 +58,10 @@ git remote add upstream https://github.com/azerothcore/azerothcore-wotlk.git
 
 The commands above will create a new local branch called `pr-XXXX` which will contain all the changes that need to be tested.
 
-The terminal might prompt an editor (usually `nano`) that asks to save the merge commit message. Just save the changes and exit the editor. If the editor is `nano`, you can do it by simply using `CTRL+O` and `ENTER` to save then `CTRL+X` to exit.
+The terminal will prompt an editor (usually `nano` or `vim`) that asks to save the merge commit message. Just save the changes and exit the editor. 
+
+- If the editor is `nano`, you can do it by simply using `CTRL+O` and `ENTER` to save then `CTRL+X` to exit.
+- If the editor is `vim` you can hold the `SHIFT` key and press two times `Z` to save and exist.
 
 ## Update your local server to apply the changes
 
