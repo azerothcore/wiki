@@ -56,16 +56,6 @@ For example, are you getting an error from mysql? Search it under the **[azeroth
 
 Oh, there is already a question! And it has an answer! Let's open it!
 
-![image](https://user-images.githubusercontent.com/75517/51132034-85df9f80-1831-11e9-9cc9-3eaee236396e.png)
-
-**Another example**, imagine you're wondering whether you can use LUA scripts on AzerothCore:
-
-![image](https://user-images.githubusercontent.com/75517/51131089-f802b500-182e-11e9-9b5d-a438172b22ea.png)
-
-There is already a question and answer for that! Let's upvote the guys who asked and answered:
-
-![image](https://user-images.githubusercontent.com/75517/51131658-ac510b00-1830-11e9-98dc-e7f3ef0da058.png)
-
 
 ## How to ask new questions
 
