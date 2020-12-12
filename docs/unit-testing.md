@@ -69,7 +69,7 @@ Examples of refactoring AzerothCore singletons to make them mockable (and improv
 
 ### Run tests in IDEs
 
-You can also run the tests directly in IDEs such as [CLion](https://github.com/azerothcore/forum/issues/4) 
+You can also run the tests directly in IDEs such as [CLion](https://github.com/azerothcore/azerothcore-wotlk/discussions/3881) 
 
 CLion lets you easily run the tests with debug and with coverage:
 
