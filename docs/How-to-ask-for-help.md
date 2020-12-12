@@ -41,9 +41,9 @@ this kind of questions are considered support questions, and are handled via [St
 
 ### Do I need to register in StackOverflow?
 
-**Not necessarily!** If you have a Google or a Facebook account, you can already log in [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore) (click the **_Log in_** button on the top-right corner of the website).
+**Not necessarily!** If you have a GitHub, Google or a Facebook account, you can already log in [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore) (click the **_Log in_** button on the top-right corner of the website).
 
-![image](https://user-images.githubusercontent.com/75517/51560794-d84e3b00-1e85-11e9-8510-6f1dd0b33d18.png)
+![image](https://user-images.githubusercontent.com/75517/101984531-45d60100-3c82-11eb-8b57-a2c15421d732.png)
 
 
 ### Search among the existing questions
