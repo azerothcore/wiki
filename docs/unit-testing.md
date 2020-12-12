@@ -29,6 +29,7 @@ We use [googletest](https://github.com/google/googletest) at AzerothCore as our 
 - https://github.com/google/googletest/blob/master/googletest/docs/primer.md
 - https://github.com/google/googletest/blob/master/googlemock/README.md
 - https://github.com/nordlow/gtest-tutorial
+- https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md
 
 You can find plenty of other references online that explain how to deal with googletest or unit testing in general. 
 If you know some other useful resources, feel free to edit this page and add them.
@@ -51,4 +52,24 @@ We keep its test at:
 src/test/server/game/Miscellaneous/FormulasTest.cpp
 ```
 
-That's it, happy testing!
+### Singleton issues
+
+We have some legacy code in AzerothCore that is tightly coupled and there are singletons that are impossible to mock without some refactoring.
+
+Following the [gmock guidelines](https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md), to mock a class you should first define its interface. Then you can create mocks and use them when unit testing.
+
+Examples of refactoring AzerothCore singletons to make them mockable (and improve the software architecture in general) are available:
+
+- [sLog](https://github.com/azerothcore/azerothcore-wotlk/pull/3801)
+- [sWorld](https://github.com/azerothcore/azerothcore-wotlk/pull/3862)
+
+### Existing unit tests examples in AzerothCore
+
+- All available in [src/test](https://github.com/azerothcore/azerothcore-wotlk/tree/master/src/test)
+
+### Run tests in IDEs
+
+You can also run the tests directly in IDEs such as [CLion](https://github.com/azerothcore/forum/issues/4) 
+
+
+Happy testing!
