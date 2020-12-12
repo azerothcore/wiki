@@ -22,24 +22,33 @@ This page describes how to use [AzerothCore with ArchLinux](arch-linux.md)
 
 Make sure your system fits the [Requirements](Requirements.md).
 
+**Note for Windows users**: use **git bash** as terminal to run commands (see Requirements).
 
 ### 2) Getting the source files
 
-Choose one of the following method:
+Choose **ONE** of the following method, run one of the below `git ...` commands in your terminal.
 
+This will create an `azerothcore-wotlk` directory containing the AC source files.
+
+A) Clone only the master branch + full history (smaller size - recommended):
 
 ```
-1) Clone only the master branch + full history (smaller size - recommended):
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
+```
 
-2) Clone only the master branch + no previous history (smallest size):
+B) Clone only the master branch + no previous history (smallest size):
+
+```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
+```
 
-3) Clone all branches and all history:
+C) Clone all branches and all history:
+
+```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
 ```
 
-Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option 2).
+Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option B).
 
 
 ### 3) Compiling
