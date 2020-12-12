@@ -71,5 +71,13 @@ Examples of refactoring AzerothCore singletons to make them mockable (and improv
 
 You can also run the tests directly in IDEs such as [CLion](https://github.com/azerothcore/forum/issues/4) 
 
+CLion lets you easily run the tests with debug and with coverage:
+
+![AzerothCore running tests with CLion](https://user-images.githubusercontent.com/75517/101983422-520a9000-3c7b-11eb-8442-5c9fd18e13f6.png)
+
+then it shows which lines of the code are covered by the tests (green lines) and which ones are still uncovered (red lines):
+
+![AzerothCore test coverage CLion](https://user-images.githubusercontent.com/75517/101983433-6fd7f500-3c7b-11eb-882d-0aed16f0f03a.png)
+
 
 Happy testing!
