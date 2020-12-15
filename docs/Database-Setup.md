@@ -4,7 +4,7 @@ You can setup the database manually or using the automated script.
 
 ### Use the default configurations:
 
-The `db_assembler` script and the `acore.sh` dashboard both use by default the **acore** db user for the database connection. Running for the first time the assembler command should create the user for you, however, if you're having permissions error or any other issue with that user, please run the following queries in your database with the root user:
+The `db_assembler` script and the `acore.sh` dashboard both use by default the **acore** db user for the database connection. Running for the first time the assembler command should create the user for you, however, if you're having permissions error or any other issue with that user, please open your MySQL client with the root user and run the following queries:
 
 ```SQL
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore';
