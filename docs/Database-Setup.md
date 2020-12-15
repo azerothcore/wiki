@@ -2,7 +2,25 @@ You can setup the database manually or using the automated script.
 
 ## How to setup the AzerothCore DB using the automated script
 
-### Edit script configuration
+### Use the default configurations:
+
+The `db_assembler` script and the `acore.sh` dashboard both use by default the **acore** db user for the database connection. Running for the first time the assembler command should create the user for you, however, if you're having permissions error or any other issue with that user, please run the following queries in your database with the root user:
+
+```SQL
+CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore';
+CREATE USER 'acore'@'127.0.0.1' IDENTIFIED BY 'acore';
+GRANT ALL PRIVILEGES ON * . * TO 'acore'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'acore'@'127.0.0.1';
+FLUSH PRIVILEGES;
+exit;
+```
+
+It will setup the acore user properly to be used by the db_assembler script
+
+
+### [ALTERNATIVE] Edit script configuration
+
+If you don't want to use the default acore user, then you can change the configuration of the script with the following steps:
 
 - Copy the file `conf/dist/config.sh` to `conf/config.sh`
 - Open the `conf/config.sh` with any text editor
