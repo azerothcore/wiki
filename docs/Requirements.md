@@ -106,11 +106,11 @@ Now install mysql:
 
 You will be prompted some instructions to complete the `mysql` installation, for example to properly set a password. Just follow the instructions and properly configure mysql. **This step is important, do not skip it.**
 
-To verify that mysql has been properly installed, try accessing it using either the command line (e.g. `mysql -u root -p`) or using DB client managers with a UI like Sequel Pro.
+To verify that mysql has been properly installed, try accessing it using either the command line (e.g. `mysql -u root -p`) or using DB client managers with a UI like Sequel Ace.
 
-You can install Sequel Pro with:
+You can install Sequel Ace with:
 
-`brew cask install sequel-pro`
+`brew cask install sequel-ace`
 
 
 ## Windows
