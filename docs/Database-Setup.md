@@ -6,7 +6,7 @@ You can setup the database manually or using the automated script.
 
 The `db_assembler` script and the `acore.sh` dashboard both use by default the **acore** db user for the database connection. Running for the first time the assembler command should create the user for you, however, if you're having permissions error or any other issue with that user, please open your MySQL client with the root user and run the following queries:
 
-```SQL
+```
 DROP USER IF EXISTS 'acore'@'localhost';
 DROP USER IF EXISTS 'acore'@'127.0.0.1';
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore';
