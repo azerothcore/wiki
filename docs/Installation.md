@@ -1,20 +1,27 @@
-# AZEROTHCORE INSTALLATION
+# AzerothCore Installation
 
-## DOCKER INSTALLATION
+There are several ways to install AzerothCore, you need to pick **one**.
 
-This page describes how to use [AzerothCore with Docker](Install-with-Docker.md).
+- **Azerothcore Classic setup** - the traditional way of installing AzerothCore.
+  Battle-tested, recommended for all operating systems for any purposes.
+  This process gives more awareness of how AzerothCore is structured. **See below in this page**.
+  
 
-## AWS INSTALLATION
+- **AzerothCore Docker setup** - a simplified installation process based on Docker. 
+  See [Install AzerothCore with Docker](Install-with-Docker.md).
 
-This page describes how to use [AzerothCore with AWS](aws-tutorial.md)
 
-## DIGITALOCEAN CLOUD
+- **[NEW] AzerothCore Bash Dashboard setup** - simplest way of installing AzerothCore, 
+  recommended for **Linux** systems for both local development and production. 
+  Currently not recommended for Windows or macOS.
+  See [Install AzerothCore with Docker](Install-with-AC-Dashboard.md).
 
-This page describes how to use [AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
 
-## ArchLinux and Arch based distro
+Other tutorials from the community for specific platforms:
 
-This page describes how to use [AzerothCore with ArchLinux](arch-linux.md)
+- [Install AzerothCore on Amazon Web Services](aws-tutorial.md)
+- [Install AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
+- [Install AzerothCore with ArchLinux](arch-linux.md)
 
 ## CLASSIC INSTALLATION
 
