@@ -1,6 +1,6 @@
 ## Generic MySQL clients
 
-We recommend to use a generic client to access and manage your MySQL/MariDB databases.
+We recommend to use a generic client to access and manage your MySQL/MariaDB databases.
 
 With a MySQL client you can easily create/view/edit/delete your database/tables and their contents.
 
