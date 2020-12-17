@@ -19,5 +19,5 @@ Here's a list of free and open source clients (feel free to edit this page to su
 It allows you to view and edit your world DB contents by automatically generating the SQL code that you need.
 
 Note that Keira3 is **not** meant to be used as a generic MySQL client, 
-so we recommend to download Keira3 **and** one of the MySQL clients listed above.
+so we recommend to download Keira3 **and** one of the MySQL clients listed above. They serve different purposes.
 
