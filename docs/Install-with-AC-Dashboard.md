@@ -154,17 +154,21 @@ That's it.
 You can use [tmux](https://github.com/tmux/tmux) as terminal multiplexer, 
 it will allow you to easily manage your processes inside a server with no GUI.
 
-You can create 2 sessions for the `worldserver` and `authserver` processes:
+You can create 2 sessions and run the `worldserver` and `authserver` processes inside them:
 
 - `tmux new -s world-session`
-- `tmux new -s auth-session`
+- now run the `./acore.sh run-worldserver` inside it, then detach from it
 
-For example you can attach to the `world-session` session using:
+
+- `tmux new -s auth-session`
+- now run the `./acore.sh run-worldserver` inside it, then detach from it
+
+You can detach using `CTRL+B+D` to exit the session without killing the process.
+If connected using VSCode SSH, you can just close the terminal session.
+
+You can attach again to the `world-session` session using:
 
 - `tmux attach -t world-session`
-
-Then you can push `CTRL+B+D` to exit the session without killing the process.
-If connected using VSCode SSH, you can just close the terminal session.
 
 Other useful commands:
 
