@@ -3,39 +3,28 @@
 The AzerothCore bash dashboard is a collection of scripts that help with the installation and maintenance of an AzerothCore server.
 It allows to easily install, update and execute AzerothCore on your machine in a tremendously small amount of steps.
 
-Installing a development or production private server has never been so easy before.
-
-### NOTE: not for all platforms yet
-
-These scripts are supposed to be cross-platform, however we are not quite there yet.
-It's not currently recommended to use the installation process described in this page on Windows or macOS.
-You can of course try them anyway and [let us know](https://github.com/azerothcore/azerothcore-wotlk/issues/new/choose) in case you encounter any issue.
-
-That does not mean that you cannot use this in production.
-We tested this procedure on a dedicated server machine running Ubuntu 20.04 and it worked quite nicely,
-we'll include here some extra tips for production environments as well.
-
-
-### Tips for dedicated servers
-
-You can easily install AzerothCore in a linux server without any kind of GUI,
-simply connecting remotely via ssh using [Visual Studio Code](https://code.visualstudio.com/) 
-and the [SSH](https://code.visualstudio.com/docs/remote/ssh) 
-and the [SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) extensions so you'll feel just like at home.
-
+Installing a development or production private server has never been so easy before. 
 If you need any help just [ask a question](https://www.azerothcore.org/wiki/How-to-ask-for-help).
 
-More tips for dedicated servers below.
+## Requirements
+
+You need to have [git](https://git-scm.com/) installed in your machine. 
+No other software is required to be installed manually.
+
+- debian/ubuntu-based: `apt update && apt install git`
+- macOS: `brew install git`
+
+
+### Notes
+- For macOS users: install and use the latest version of bash to run the commands of the dashboard (`brew install bash`)
+- For Windows users: the commands need to be executed within the "git bash" shell or a bash-compatible shell such as WSL, cygwin etc..
+  However, git bash is suggested because is preinstalled with git for windows (one of our requirements)
+  
 
 ## Setup
 
 ### Get the AC sources
 
-Install [git](https://git-scm.com/) and clone the AC repository:
-
-```
-apt update && apt install git
-```
 
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-wotlk`
@@ -148,6 +137,13 @@ Update the database:
 That's it.
 
 ## Tips for dedicated (production) servers
+
+### Tips for dedicated servers
+
+You can easily install AzerothCore in a linux server without any kind of GUI,
+simply connecting remotely via ssh using [Visual Studio Code](https://code.visualstudio.com/)
+and the [SSH](https://code.visualstudio.com/docs/remote/ssh)
+and the [SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) extensions so you'll feel just like at home.
 
 ### Run AzerothCore inside Tmux sessions
 

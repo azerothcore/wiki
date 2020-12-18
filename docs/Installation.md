@@ -15,6 +15,12 @@ There are several ways to install AzerothCore, you need to pick **one**.
   recommended for **Linux** systems for both local development and production. 
   Currently not recommended for Windows or macOS.
   See [**Install AzerothCore using the AC bash dashboard**](Install-with-AC-Dashboard.md).
+  **Disclaimer**: These scripts are supposed to be cross-platform, however we are not quite there yet.
+  It's not currently recommended to use the installation process described in this page on Windows or macOS.
+  You can of course try them anyway and [let us know](https://github.com/azerothcore/azerothcore-wotlk/issues/new/choose) in case you encounter any issue.
+  That does not mean that you cannot use this in production.
+  We tested this procedure on a dedicated server machine running Ubuntu 20.04 and it worked quite nicely,
+  we'll include here some extra tips for production environments as well.
 
 
 Other tutorials from the community for specific platforms:
