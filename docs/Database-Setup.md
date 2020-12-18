@@ -1,5 +1,9 @@
 You can setup the database manually or using the automated script.
 
+## Get a Database client
+
+We recommend to get a database client to operate to your DB easily, see [this page](Database-client.md).
+
 ## How to setup the AzerothCore DB using the automated script
 
 ### Use the default configurations:
@@ -41,5 +45,7 @@ If you don't want to use the default acore user, then you can change the configu
 - Once the process is finished, you can exit the script.
 
 -----------
+
+## How to setup the AzerothCore DB manually
 
 Alternatively, you could also [set up your DB manually](Database-Manual-Setup.md) but this process is harder and not recommended for beginners.

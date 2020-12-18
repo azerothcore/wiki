@@ -3,7 +3,7 @@
 
 ### MySQL client tool
 
-In order to set up your database, you can use whatever MySQL client you like. Some examples are [HeidiSQL](http://www.heidisql.com/download.php), [SequelPro](http://www.sequelpro.com/) and [phpMyAdmin](https://www.phpmyadmin.net/).
+In order to set up your database, you can use whatever MySQL client you like. Some examples [here](Database-client.md).
 
 We will assume that you already know how to perform the basic tasks like creating a new database, selecting a database and importing a SQL dump file. If you don't, don't worry: it's very easy and you will find a lot of guides on Google, whatever MySQL client tool you're using.
 
