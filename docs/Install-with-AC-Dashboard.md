@@ -156,10 +156,10 @@ it will allow you to easily manage your processes inside a server with no GUI.
 
 You can create 2 sessions for the `worldserver` and `authserver` processes:
 
-- `auth-session`
-- `world-session`
+- `tmux new -s world-session`
+- `tmux new -s auth-session`
 
-For example you can attach to the `worldserver` session using:
+For example you can attach to the `world-session` session using:
 
 - `tmux attach -t world-session`
 
