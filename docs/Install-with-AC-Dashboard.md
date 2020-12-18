@@ -16,7 +16,7 @@ We tested this procedure on a dedicated server machine running Ubuntu 20.04 and 
 we'll include here some extra tips for production environments as well.
 
 
-### Tips for dedicated server
+### Tips for dedicated servers
 
 You can easily install AzerothCore in a linux server without any kind of GUI,
 simply connecting remotely via ssh using [Visual Studio Code](https://code.visualstudio.com/) 
@@ -76,7 +76,7 @@ FLUSH PRIVILEGES;
 exit;
 ```
 
-- Or change the `config.sh` to use another user.
+- Or change the `config.sh` to use another MySQL user.
 
 Then run:
 
@@ -125,6 +125,27 @@ The AzerothCore dashboard comes with a bundled restarter suite:
 
 For dedicated servers, 
 you may want to run them inside terminal multiplexer sessions using tools like `tmux` (see below).
+
+## How to update your server
+
+Update the sources:
+
+```
+git pull
+```
+
+Rebuild:
+```
+./acore.sh compiler build
+```
+
+Update the database:
+
+```
+./acore.sh db-assembler import-updates
+```
+
+That's it.
 
 ## Tips for dedicated (production) servers
 
