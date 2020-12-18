@@ -6,6 +6,7 @@ It allows to easily install, update and execute AzerothCore on your machine in a
 Installing a development or production private server has never been so easy before. 
 If you need any help just [ask a question](https://www.azerothcore.org/wiki/How-to-ask-for-help).
 
+
 ## Requirements
 
 You need to have [git](https://git-scm.com/) installed in your machine. 
@@ -13,7 +14,6 @@ No other software is required to be installed manually.
 
 - debian/ubuntu-based: `apt update && apt install git`
 - macOS: `brew install git`
-
 
 ### Notes
 - For macOS users: install and use the latest version of bash to run the commands of the dashboard (`brew install bash`)
@@ -24,7 +24,6 @@ No other software is required to be installed manually.
 ## Setup
 
 ### Get the AC sources
-
 
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-wotlk`
@@ -115,6 +114,7 @@ The AzerothCore dashboard comes with a bundled restarter suite:
 For dedicated servers, 
 you may want to run them inside terminal multiplexer sessions using tools like `tmux` (see below).
 
+
 ## How to update your server
 
 Update the sources:
@@ -135,6 +135,7 @@ Update the database:
 ```
 
 That's it.
+
 
 ## Tips for dedicated (production) servers
 
