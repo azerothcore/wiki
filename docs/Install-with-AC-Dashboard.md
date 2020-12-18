@@ -139,7 +139,14 @@ That's it.
 
 ## Tips for dedicated (production) servers
 
-### Tips for dedicated servers
+### Daily backups of your databases via Telegram
+
+Getting daily backups of your private server databases directly to your phone/computer 
+via [Telegram](https://telegram.org/) messages?
+
+Yes, that's possible. Just use: [azerothcore/telegram-automated-db-backup](https://github.com/azerothcore/telegram-automated-db-backup)
+
+### Visual Studio Code SSH
 
 You can easily install AzerothCore in a linux server without any kind of GUI,
 simply connecting remotely via ssh using [Visual Studio Code](https://code.visualstudio.com/)
@@ -177,4 +184,54 @@ Other useful commands:
 
 ### Automatically start the tmux sessions at system startup
 
-TODO
+You can automatically create the tmux sessions and execute the `authserver` and `worldserver` using this simple script:
+
+```sh
+#!/usr/bin/env bash
+
+# CHANGE THESE WITH THE CORRECT PATHS
+authserver="/path/to/azerothcore-wotlk/env/dist/bin/authserver"
+worldserver="/path/to/azerothcore-wotlk/env/dist/bin/worldserver"
+
+authserver_session="auth-session"
+worldserver_session="world-session"
+
+if tmux new-session -d -s $authserver_session; then
+    echo "Created authserver session: $authserver_session"
+else
+    echo "Error when trying to create authserver session: $authserver_session"
+fi
+
+if tmux new-session -d -s $worldserver_session; then
+    echo "Created worldserver session: $worldserver_session"
+else
+    echo "Error when trying to create worldserver session: $worldserver_session"
+fi
+
+if tmux send-keys -t $authserver_session $authserver C-m; then
+    echo "Executed \"$authserver\" inside $authserver_session"
+    echo "You can attach to $authserver_session and check the result using \"tmux attach -t $authserver_session\""
+else
+    echo "Error when executing \"$authserver\" inside $authserver_session"
+fi
+
+if tmux send-keys -t $worldserver_session $worldserver C-m; then
+    echo "Executed \"$worldserver\" inside $worldserver_session"
+    echo "You can attach to $worldserver_session and check the result using \"tmux attach -t $worldserver_session\""
+else
+    echo "Error when executing \"$worldserver\" inside $worldserver_session"
+fi
+```
+
+On unix systems, you can then use [crontab](https://en.wikipedia.org/wiki/Cron) 
+to run the script automatically at system startup:
+
+```
+crontab -e
+```
+
+then add this line (replace `/path/to/startup.sh` with the path of where you placed the above script):
+
+```
+@reboot /bin/bash /path/to/startup.sh
+```
