@@ -64,6 +64,9 @@ FLUSH PRIVILEGES;
 exit;
 ```
 
+*Note:  even though the `acore` user is only accessible from localhost, 
+it is a good practice to change its password to something more secure.*
+
 - Or change the `config.sh` to use another MySQL user.
 
 Then run:
