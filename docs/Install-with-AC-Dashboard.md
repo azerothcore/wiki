@@ -182,6 +182,7 @@ Other useful commands:
 - create a new session: `tmux new -s my_session`
 - list all sessions: `tmux ls`
 - kill a session: `tmux kill my_session` (or just attach to it and type `exit`)
+- kill ALL sessions: `tmux kill-server`
 - ...more details available at the [tmux wiki](https://github.com/tmux/tmux/wiki)
 
 
