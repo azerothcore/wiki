@@ -1,20 +1,33 @@
-# AZEROTHCORE INSTALLATION
+# AzerothCore Installation
 
-## DOCKER INSTALLATION
+There are several ways to install AzerothCore, you need to pick **one**.
 
-This page describes how to use [AzerothCore with Docker](Install-with-Docker.md).
+- **Azerothcore Classic setup** - the traditional way of installing AzerothCore.
+  Battle-tested, recommended for all operating systems for any purposes.
+  This process gives more awareness of how AzerothCore is structured. **See below in this page**.
+  
 
-## AWS INSTALLATION
+- **AzerothCore Docker setup** - a simplified installation process based on Docker. 
+  See [**Install AzerothCore with Docker**](Install-with-Docker.md).
 
-This page describes how to use [AzerothCore with AWS](aws-tutorial.md)
 
-## DIGITALOCEAN CLOUD
+- **[NEW] AzerothCore Bash Dashboard setup** - simplest way of installing AzerothCore, 
+  recommended for **Linux** systems for both local development and production. 
+  Currently not recommended for Windows or macOS.
+  See [**Install AzerothCore using the AC bash dashboard**](Install-with-AC-Dashboard.md).
+  **Disclaimer**: These scripts are supposed to be cross-platform, however we are not quite there yet.
+  It's not currently recommended to use the installation process described in this page on Windows or macOS.
+  You can of course try them anyway and [let us know](https://github.com/azerothcore/azerothcore-wotlk/issues/new/choose) in case you encounter any issue.
+  That does not mean that you cannot use this in production.
+  We tested this procedure on a dedicated server machine running Ubuntu 20.04 and it worked quite nicely,
+  we'll include here some extra tips for production environments as well.
 
-This page describes how to use [AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
 
-## ArchLinux and Arch based distro
+Other tutorials from the community for specific platforms:
 
-This page describes how to use [AzerothCore with ArchLinux](arch-linux.md)
+- [Install AzerothCore on Amazon Web Services](aws-tutorial.md)
+- [Install AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
+- [Install AzerothCore with ArchLinux](arch-linux.md)
 
 ## CLASSIC INSTALLATION
 
