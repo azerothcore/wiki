@@ -26,7 +26,7 @@ No other software is required to be installed manually.
 ### Get the AC sources
 
 ```
-git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-wotlk`
+git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-wotlk
 ```
 
 ### Configuration
