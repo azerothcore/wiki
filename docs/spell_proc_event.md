@@ -20,17 +20,17 @@
 [CustomChance][10] | float | signed | | | 0
 [Cooldown][11] | int(10) | unsigned | | | 0
 
-[1]: #Entry
-[2]: #SchoolMask
-[3]: #SpellFamilyName
-[4]: #SpellFamilyMask0
-[5]: #SpellFamilyMask1
-[6]: #SpellFamilyMask2
-[7]: #procFlags
-[8]: #procEx
-[9]: #ppmRate
-[10]: #CustomChance
-[11]: #Cooldown
+[1]: #entry
+[2]: #schoolmask
+[3]: #spellfamilyname
+[4]: #spellfamilymask0
+[5]: #spellfamilymask1
+[6]: #spellfamilymask2
+[7]: #procflags
+[8]: #procex
+[9]: #ppmrate
+[10]: #customchance
+[11]: #cooldown
 
 **Description of the fields**
 
@@ -52,6 +52,7 @@ SPELL_SCHOOL_ARCANE | 64 | 0x40 | Arcane Damage
 
 ### SpellFamilyName
 This fireld controls what family name spells can proc the triggered spell.
+
 ID | Family Name
 :--- | :---
 0 | Generic
