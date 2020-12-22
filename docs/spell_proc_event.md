@@ -52,6 +52,7 @@ SPELL_SCHOOL_ARCANE | 64 | 0x40 | Arcane Damage
 
 ### SpellFamilyName
 This fireld controls what family name spells can proc the triggered spell.
+
 ID | Family Name
 :--- | :---
 0 | Generic
