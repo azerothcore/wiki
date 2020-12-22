@@ -3034,19 +3034,22 @@ The proc per minute rate controlling how often the spell is triggered (if [\#spe
 
 ### spellcooldown
 
-The cooldown in milliseconds for the specific spell controlling how often the spell can be used. Use -1 to use the default spell cooldown. Note: this is not the "internal cooldown" of procs commonly found on items such as trinkets with "Chance on hit" effects.
+The cooldown in milliseconds for the specific spell controlling how often the spell can be used. Use -1 to use the default spell cooldown.  
+Note: this is not the "internal cooldown" of procs commonly found on items such as trinkets with "Chance on hit" effects.
 
 ### spellcategory
 
-The category that the spell is in.
+The category that the spell is in. You can choose one from the DBC `SpellCategory.dbc` or invent a new one (> 1260) for your custom item.
 
 ### spellcategorycooldown
 
-The cooldown time in milliseconds that is applied to all other spells in the category that the triggered spell is also in. Use -1 to use the default spell cooldown.
+The cooldown time in milliseconds that is applied to all other spells in the category that the triggered spell is also in. Use -1 to use the default spell cooldown.  
+Note: you can have a `spellcooldown` and a `spellcategorycooldown`, they're not mutually exclusive.
 
 ### bonding
 
 The bonding for the item.
+
 **Note:** To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum) and a `bonding` > 0 (ex: 1,2,3).
 
 <table>
