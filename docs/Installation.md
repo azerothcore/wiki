@@ -131,7 +131,7 @@ Go to the location where the build files have been generated and open AzerothCor
 _Note: If MySQL is not found by CMake it is required to set MYSQL_INCLUDE_DIR = C:/mysql_libs/include and MYSQL_LIBRARY= C:/mysql_libs/lib_XX/libmysql.lib._
 _XX depends if you are compiling in 32 or 64 bits mode. ( See [Windows Requirements article](Requirements.md#windows) )_
 
-Press `BUILD` then select `Build solution` or press F6.  
+Press `BUILD` then select `Build solution` or press Ctrl+Shift+B on VS 2019 / F6 on VS 2017.  
 Wait until the Build has been finished (It should take between 10-40 minutes depending on your hardware).  
 
 You will find your freshly compiled binaries in the Build\bin\Release or Build\bin\Debug folder. These are all used to run your server at the end of this instruction.
