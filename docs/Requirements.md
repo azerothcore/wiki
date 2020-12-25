@@ -115,7 +115,7 @@ You can install Sequel Ace with:
 
 ## Windows
 
-* Install Visual Studio >= 15 ( 2017 Desktop Community, make sure you're using Version 15.9.17+ ) [Microsoft downloads](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
+* Install [Visual Studio](https://visualstudio.microsoft.com/downloads/) version >= 15.9.17 (VS 2017 Community / VS 2019 Community)
 
 * Install [CMake](https://cmake.org/) version 2.8 or newer.  
 
