@@ -10,29 +10,6 @@ Installing AzerothCore using Docker is a simplified procedure that has several b
 - Forget about platform-specific bugs. When using Docker, AzerothCore will always run in **Linux-mode**. 
 - There are many other [benefits when using Docker](https://www.google.com/search?q=docker+benefits)
 
-_AzerothCore running on macOS with Docker_
-![AzerothCore on macOS using Docker](https://user-images.githubusercontent.com/75517/51341229-2089e980-1a91-11e9-8d06-ebd5897552d4.png)
-
-_AzerothCore running on Windows 10 with Docker_
-![AzerothCore on Windows 10 with Docker](https://user-images.githubusercontent.com/75517/51561998-966ec600-1e80-11e9-939e-d522c71de459.png)
-
-
-#### Memory usage
-
-The total amount of RAM when running all AzerothCore docker containers is **less than 2 GB** with no players online.
-
-This is an example of a fresh, empty AzerothCore server running with Docker on macOS:
-
-![AzerothCore Containers Memory](https://user-images.githubusercontent.com/75517/51341568-f258d980-1a91-11e9-9cc1-121591477910.png)
-
-When used on GNU/Linux system, the amount of memory used by Docker is even less.
-
-#### Docker containers vs Virtual machines
-
-Using Docker will have the same benefits as using virtual machines, but with much less overhead:
-
-![Docker containers vs Virtual machines](https://user-images.githubusercontent.com/75517/51078179-d4fec680-16b1-11e9-8ce6-87b5053f55dd.png)
-
 ## Setup
 
 ### Software requirements
@@ -113,7 +90,29 @@ Your server will be up and running shortly.
 To access your MySQL database we recommend clients like [HeidiSQL](https://www.heidisql.com/) (for Windows/Linux+Wine) or [SequelPro](https://www.sequelpro.com/) (for macOS). Use `root` as user and `127.0.0.1` as default host.
 The default password of the root DB user will be `password`.
 
-#### Docker reference & support requests
+### Memory usage
+
+The total amount of RAM when running all AzerothCore docker containers is **less than 2 GB** with no players online.
+
+This is an example of a fresh, empty AzerothCore server running with Docker on macOS:
+
+![AzerothCore Containers Memory](https://user-images.githubusercontent.com/75517/51341568-f258d980-1a91-11e9-9cc1-121591477910.png)
+
+When used on GNU/Linux system, the amount of memory used by Docker is even less.
+
+### Docker containers vs Virtual machines
+
+Using Docker will have the same benefits as using virtual machines, but with much less overhead:
+
+![Docker containers vs Virtual machines](https://user-images.githubusercontent.com/75517/51078179-d4fec680-16b1-11e9-8ce6-87b5053f55dd.png)
+
+_AzerothCore running on macOS with Docker_
+![AzerothCore on macOS using Docker](https://user-images.githubusercontent.com/75517/51341229-2089e980-1a91-11e9-8d06-ebd5897552d4.png)
+
+_AzerothCore running on Windows 10 with Docker_
+![AzerothCore on Windows 10 with Docker](https://user-images.githubusercontent.com/75517/51561998-966ec600-1e80-11e9-939e-d522c71de459.png)
+
+### Docker reference & support requests
 
 For server administrators, we recommend to read the [Docker documentation](https://docs.docker.com/) as well as the [Docker Compose reference](https://docs.docker.com/compose/reference/overview/).
 
