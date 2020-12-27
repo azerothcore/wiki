@@ -90,6 +90,8 @@ Your server will be up and running shortly.
 To access your MySQL database we recommend clients like [HeidiSQL](https://www.heidisql.com/) (for Windows/Linux+Wine) or [SequelPro](https://www.sequelpro.com/) (for macOS). Use `root` as user and `127.0.0.1` as default host.
 The default password of the root DB user will be `password`.
 
+## More info
+
 ### Memory usage
 
 The total amount of RAM when running all AzerothCore docker containers is **less than 2 GB** with no players online.
