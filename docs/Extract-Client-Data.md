@@ -15,26 +15,26 @@ Next press Configue and then Generate.
 ### Now that you have the source compiled, you can proceed to the next step.
 
 3. Go to your AzerothCore build directory (E.g. AzerothCore\build\bin\Release) and copy the following files to your World of Warcraft directory (E.g. D:\World of Warcraft 3.3.5a (no install))
-* **ace.dll**
 * **mapextractor.exe**
 * **mmaps_generator.exe**
 * **vmap4assembler.exe**
 * **vmap4extractor.exe**
-* **[extract_vmaps.bat](https://pastebin.com/KKMurZ4D)**
+* **[extract_vmaps.bat](https://pastebin.com/KKMurZ4D)** : You need to create a .txt file, write on it with the linked text, save it and then rename the file as **extract_vmaps.bat**
 
 4. First, you must extract **dbc** and **maps**. Go ahead and click on **mapextractor.exe**. You must wait until this process is completed.
 
 5. Next, we need to extract **Buildings**. Go ahead and click on **vmap4extractor.exe**. You must wait until this process is completed.
 
-6. Now we need to assembly **vmaps**. Click on **extract_vmaps.bat**. Same thing, you must wait until this process is completed.
+6. Now we need to assembly **vmaps**. Click on **extract_vmaps.bat**. You must wait until this process is completed and press a button when done.
 
-7. Next, we need to extract **mmaps**. Go ahead and click on **mmaps_generator.exe**.  
+7. Next, we need to extract **mmaps**. In case you do not have the folder **mmaps** then create it manually. Go ahead and click on **mmaps_generator.exe**.  
 **NOTE: This process will take up to a few hours, depending on your computer specs.**
 
 Now that everything is completed, you need to copy **dbc**, **maps**, **vmaps** and **mmaps** folders to your AzerothCore build directory (E.g. AzerothCore\build\bin\Release).
+Note: Keep in mind [this config line at worldserver.conf](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/worldserver/worldserver.conf.dist#L61) when you place your dbc and maps into your build.
 
-This guide was written by [mindsear](https://github.com/mindsear).
-
+Written by [mindsear](https://github.com/mindsear)
+Updated by [Silker](https://github.com/Si1ker)
 
 ***
 
