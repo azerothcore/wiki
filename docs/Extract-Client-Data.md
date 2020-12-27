@@ -19,7 +19,7 @@ Next press Configue and then Generate.
 * **mmaps_generator.exe**
 * **vmap4assembler.exe**
 * **vmap4extractor.exe**
-* **[extract_vmaps.bat](https://pastebin.com/KKMurZ4D)** : You need to create a .txt file, write on it with the linked text, save it and then rename the file as **extract_vmaps.bat**
+* **[extract_vmaps.bat](https://pastebin.com/KKMurZ4D)** : You can whether create an **extract_vmap.bat** file and edit it with the linked script or you can create a text file, write on it with the linked text, save it and then rename the file as **extract_vmaps.bat**
 
 4. First, you must extract **dbc** and **maps**. Go ahead and click on **mapextractor.exe**. You must wait until this process is completed.
 
