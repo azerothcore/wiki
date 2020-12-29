@@ -25,7 +25,7 @@ Next press Configue and then Generate.
 
 5. Next, we need to extract **Buildings**. Go ahead and click on **vmap4extractor.exe**. You must wait until this process is completed.
 
-6. Now we need to assembly **vmaps**. Click on **extract_vmaps.bat**. You must wait until this process is completed and press a button when done.
+6. Now we need to assembly **vmaps**. Click on **extract_vmaps.bat**. You must wait until this process is completed and press any button when done.
 
 7. Next, we need to extract **mmaps**. In case you do not have the folder **mmaps** then create it manually. Go ahead and click on **mmaps_generator.exe**.  
 **NOTE: This process will take up to a few hours, depending on your computer specs.**
