@@ -218,3 +218,9 @@ https://github.com/robbyrussell/oh-my-zsh
 
 But any linux/mac terminal is ok too. 
 If you are so unlucky to be on windows, use [git bash](https://git-scm.com/downloads).
+
+### Do I have to re-authenticated every time I use git push?
+
+You can clone your own fork using SSH instead of HTTPS and then follow [this guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) to set the SSH keys.
+
+This way you can use `git push` without typing your password over and over.
