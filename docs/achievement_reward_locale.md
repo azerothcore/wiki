@@ -4,41 +4,41 @@
 
 **The \`achievement\_reward\_locale\` table**
 
-`table-no-description`
-
 **Structure**
 
-|                                                         |              |                |         |          |             |           |             |
-|---------------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
-| **Field**                                               | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#entry)               | mediumint(8) | unsigned       | PRI     | NO       | 0           |           |             |
-| [subject\_loc1](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc2](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc3](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc4](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc5](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc6](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc7](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [subject\_loc8](#subject_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [text\_loc1](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc2](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc3](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc4](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc5](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc6](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc7](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
-| [text\_loc8](#text_loc)       | text         | signed         |         | YES      | NULL        |           |             |
+| Field   | Type         | Attributes | Collation       | Null | Key | Default | Extra | Comment |
+|---------|--------------|------------|-----------------|------|-----|---------|-------|---------|
+| ID      | mediumint(8) | unsigned   |                 | NO   | PRI | 0       |       |         |
+| Locale  | varchar(4)   |            | utf8_general_ci | NO   | PRI | (NULL)  |       |         |
+| Subject | text         |            | utf8_general_ci | YES  |     | (NULL)  |       |         |
+| Text    | text         |            | utf8_general_ci | YES  |     | (NULL)  |       |         |
 
 **Description of the fields**
 
-### entry
+### ID
 
-`field-no-description|1`
+It is the ID of the achievement obtained from `achievement_reward`
 
-### subject\_loc
+### Locale
 
-`field-no-description|2`
+This is the language of the gaming client.
 
-### text\_loc
+| ID | Language |
+|----|----------|
+| 0  | enUS     |
+| 1  | koKR     |
+| 2  | frFR     |
+| 3  | deDE     |
+| 4  | zhCN     |
+| 5  | zhTW     |
+| 6  | esES     |
+| 7  | esMX     |
+| 8  | ruRU     |
 
-`field-no-description|3`
+### Subject
+
+It is the text of the column `Subject` of the table `achievement_reward`
+
+### Text
+
+It is the text of the column `Body` of the table `achievement_reward`
