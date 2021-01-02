@@ -45,7 +45,7 @@ It is the text of the column `Body` of the table `achievement_reward`
 
 ### Example
 ```sql
-DELETE FROM `achievement_reward_locale` WHERE `ID`=13 AND `locale`="esES";
+DELETE FROM `achievement_reward_locale` WHERE `ID`=13 AND `Locale`="esES";
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES
 (13, "esES", "Nivel 80", "Alcanza el nivel 80.");
 ```
