@@ -151,7 +151,7 @@ worldserver.exe
 
 The `.dll` files needs to be copied manually from their install folder into your compiled folder.
 
-`libmysql.dll` (C:\MySQL\MySQL Server 5.x\lib\)
+`libmysql.dll` (C:\Program Files\MySQL\MySQL Server 8.0\lib\)
 
 For OpenSSL 1.0.x: 
 
