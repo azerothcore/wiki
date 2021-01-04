@@ -8,20 +8,33 @@ This table is used to provide to localized clients with localized string for que
 
 **Structure**
 
-| Field          | Type                  | Collation       | Null | Key | Default | Extra | Comment |
-|----------------|-----------------------|-----------------|------|-----|---------|-------|---------|
-| ID             | mediumint(8) unsigned | (NULL)          | NO   | PRI | 0       |       |         |
-| locale         | varchar(4)            | utf8_general_ci | NO   | PRI | (NULL)  |       |         |
-| Title          | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| Details        | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| Objectives     | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| EndText        | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| CompletedText  | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| ObjectiveText1 | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| ObjectiveText2 | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| ObjectiveText3 | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| ObjectiveText4 | text                  | utf8_general_ci | YES  |     | (NULL)  |       |         |
-| VerifiedBuild  | smallint(5)           | (NULL)          | YES  |     | 0       |       |         |
+| Field                | Type         | Attribute | Key | Null | Default | Extra | Comment |
+|----------------------|--------------|-----------|-----|------|---------|-------|---------|
+| [ID][1]              | mediumint(8) | unsigned  | PRI | NO   | 0       |       |         |
+| [locale][2]          | varchar(4)   |           | PRI | NO   | NULL    |       |         |
+| [Title][3]           | text         |           |     | YES  | NULL    |       |         |
+| [Details][4]         | text         |           |     | YES  | NULL    |       |         |
+| [Objectives][5]      | text         |           |     | YES  | NULL    |       |         |
+| [EndText][6]         | text         |           |     | YES  | NULL    |       |         |
+| [CompletedText][7]   | text         |           |     | YES  | NULL    |       |         |
+| [ObjectiveText1][8]  | text         |           |     | YES  | NULL    |       |         |
+| [ObjectiveText2][9]  | text         |           |     | YES  | NULL    |       |         |
+| [ObjectiveText3][10] | text         |           |     | YES  | NULL    |       |         |
+| [ObjectiveText4][11] | text         |           |     | YES  | NULL    |       |         |
+| [VerifiedBuild][12]  | smallint(5)  |           |     | YES  | 0       |       |         |
+
+[1]: #id
+[2]: #locale
+[3]: #title
+[4]: #details
+[5]: #objectives
+[6]: #endtext
+[7]: #completedtext
+[8]: #objectivetext1
+[9]: #objectivetext2
+[10]: #objectivetext3
+[11]: #objectivetext4
+[12]: #verifiedbuild
 
 **Description of the fields**
 
