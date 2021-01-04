@@ -582,7 +582,7 @@ Controls where the creature can move and attack.
 | 1       | Ground |
 | 2       | Water  |
 | 4       | Flying |
-| ~8~     |~Rooted~ (not implemented)|
+| 8       | Rooted |
 
 (This is a bitmask. You can add values together: 1+4=5 would make the creature walk on ground and fly.)
 
