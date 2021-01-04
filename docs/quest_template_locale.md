@@ -72,9 +72,24 @@ This is the text that is displayed when it is completed.
 
 This is the text that is displayed until the quest is completed.
 
-### ObjectiveText1, ObjectiveText2, ObjectiveText3, ObjectiveText4
+### ObjectiveText1
 
-These are the objectives of the quest.
+This is objective 1 of the search.
+In other words, it is the text that accompanies the counters.
+
+### ObjectiveText2
+
+This is objective 2 of the search.
+In other words, it is the text that accompanies the counters.
+
+### ObjectiveText3
+
+This is objective 3 of the search.
+In other words, it is the text that accompanies the counters.
+
+### ObjectiveText4
+
+This is objective 4 of the search.
 In other words, it is the text that accompanies the counters.
 
 ### VerifiedBuild
