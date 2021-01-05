@@ -6,73 +6,70 @@
 
 This table holds information on every applied item hotfix and can overwrite existing items within the game. Together with item, item\_modified\_appearance and item\_modified\_appearance they present the means to hotfix an item.
 
- 
-
 **Structure**
 
-|                                                                           |             |                |         |          |             |           |                          |
-|---------------------------------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|--------------------------|
-| **Field**                                                                 | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment**              |
-| [ID](#item_sparse-ID)                                                     | int(10)     | unsigned       | PRI     | NO       | 0           |           |                          |
-| [Quality](#item_sparse-Quality)                                           | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Flags](#item_sparse-Flags)                                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Unk1](#item_sparse-Unk1)                                                 | float       | signed         |         | NO       | 0           |           |                          |
-| [Unk2](#item_sparse-Unk2)                                                 | float       | signed         |         | NO       | 0           |           |                          |
-| [BuyCount](#item_sparse-BuyCount)                                         | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [BuyPrice](#item_sparse-BuyPrice)                                         | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [SellPrice](#item_sparse-SellPrice)                                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [InventoryType](#item_sparse-InventoryType)                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [AllowableClass](#item_sparse-AllowableClass)                             | int(11)     | signed         |         | NO       | 0           |           |                          |
-| [AllowableRace](#item_sparse-AllowableRace)                               | int(11)     | signed         |         | NO       | 0           |           |                          |
-| [ItemLevel](#item_sparse-ItemLevel)                                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredLevel](#item_sparse-RequiredLevel)                               | int(10)     | signed         |         | NO       | 0           |           |                          |
-| [RequiredSkill](#item_sparse-RequiredSkill)                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredSkillRank](#item_sparse-RequiredSkillRank)                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredSpell](#item_sparse-RequiredSpell)                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredHonorRank](#item_sparse-RequiredHonorRank)                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredCityRank](#item_sparse-RequiredCityRank)                         | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredReputationFaction](#item_sparse-RequiredReputationFaction)       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RequiredReputationRank](#item_sparse-RequiredReputationRank)             | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [MaxCount](#item_sparse-MaxCount)                                         | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Stackable](#item_sparse-Stackable)                                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [ContainerSlots](#item_sparse-ContainerSlots)                             | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [ItemStatType](#item_sparse-ItemStatType)                                 | int(11)     | signed         |         | NO       | 0           |           |                          |
-| [ItemStatValue](#item_sparse-ItemStatValue)                               | int(11)     | signed         |         | NO       | 0           |           |                          |
-| [ItemStatAllocation](#item_sparse-ItemStatAllocation)                     | int(11)     | signed         |         | NO       | 0           |           |                          |
-| [ItemStatSocketCostMultiplier](#item_sparse-ItemStatSocketCostMultiplier) | float       | signed         |         | NO       | 0           |           |                          |
-| [ScalingStatDistribution](#item_sparse-ScalingStatDistribution)           | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [DamageType](#item_sparse-DamageType)                                     | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Delay](#item_sparse-Delay)                                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RangedModRange](#item_sparse-RangedModRange)                             | float       | signed         |         | NO       | 0           |           |                          |
-| [Bonding](#item_sparse-Bonding)                                           | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Name](#item_sparse-Name)                                                 | TEXT        |                |         | YES      |             |           |                          |
-| [Description](#item_sparse-Description)                                   | TEXT        |                |         | YES      |             |           |                          |
-| [PageText](#item_sparse-PageText)                                         | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [LanguageID](#item_sparse-LanguageID)                                     | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [PageMaterial](#item_sparse-PageMaterial)                                 | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [StartQuest](#item_sparse-StartQuest)                                     | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [LockID](#item_sparse-LockID)                                             | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Material](#item_sparse-Material)                                         | int(11)     | signed         |         | NO       | 0           |           |                          |
-| [Sheath](#item_sparse-Sheath)                                             | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RandomProperty](#item_sparse-RandomProperty)                             | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [RandomSuffix](#item_sparse-RandomSuffix)                                 | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [ItemSet](#item_sparse-ItemSet)                                           | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Area](#item_sparse-Area)                                                 | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [Map](#item_sparse-Map)                                                   | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [BagFamily](#item_sparse-BagFamily)                                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [TotemCategory](#item_sparse-TotemCategory)                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [SocketColor](item_sparse)                                                | int(10)     | unsigned       |         | NO       | 0           |           | SocketColor1 can be NULL |
-| [SocketBonus](#item_sparse-SocketBonus)                                   | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [GemProperties](#item_sparse-GemProperties)                               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [ArmorDamageModifier](#item_sparse-ArmorDamageModifier)                   | float       | signed         |         | NO       | 0           |           |                          |
-| [Duration](#item_sparse-Duration)                                         | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [ItemLimitCategory](#item_sparse-ItemLimitCategory)                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [HolidayID](#item_sparse-HolidayID)                                       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [StatScalingFactor](#item_sparse-StatScalingFactor)                       | float       | signed         |         | NO       | 0           |           |                          |
-| [CurrencySubstitutionID](#item_sparse-CurrencySubstitutionID)             | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [CurrencySubstitutionCount](#item_sparse-CurrencySubstitutionCount)       | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [ItemNameDescriptionID](#item_sparse-ItemNameDescriptionID)               | int(10)     | unsigned       |         | NO       | 0           |           |                          |
-| [VerifiedBuild](#item_sparse-VerifiedBuild)                               | smallint(6) | signed         |         | NO       | 0           |           |                          |
+| Field                                                                     | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
+|---------------------------------------------------------------------------|-------------|------------|-----|------|---------|-------|--------------------------|
+| [ID](#item_sparse-ID)                                                     | int(10)     | unsigned   | PRI | NO   | 0       |       |                          |
+| [Quality](#item_sparse-Quality)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Flags](#item_sparse-Flags)                                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Unk1](#item_sparse-Unk1)                                                 | float       | signed     |     | NO   | 0       |       |                          |
+| [Unk2](#item_sparse-Unk2)                                                 | float       | signed     |     | NO   | 0       |       |                          |
+| [BuyCount](#item_sparse-BuyCount)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [BuyPrice](#item_sparse-BuyPrice)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [SellPrice](#item_sparse-SellPrice)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [InventoryType](#item_sparse-InventoryType)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [AllowableClass](#item_sparse-AllowableClass)                             | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [AllowableRace](#item_sparse-AllowableRace)                               | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [ItemLevel](#item_sparse-ItemLevel)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredLevel](#item_sparse-RequiredLevel)                               | int(10)     | signed     |     | NO   | 0       |       |                          |
+| [RequiredSkill](#item_sparse-RequiredSkill)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredSkillRank](#item_sparse-RequiredSkillRank)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredSpell](#item_sparse-RequiredSpell)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredHonorRank](#item_sparse-RequiredHonorRank)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredCityRank](#item_sparse-RequiredCityRank)                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredReputationFaction](#item_sparse-RequiredReputationFaction)       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RequiredReputationRank](#item_sparse-RequiredReputationRank)             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [MaxCount](#item_sparse-MaxCount)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Stackable](#item_sparse-Stackable)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ContainerSlots](#item_sparse-ContainerSlots)                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ItemStatType](#item_sparse-ItemStatType)                                 | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [ItemStatValue](#item_sparse-ItemStatValue)                               | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [ItemStatAllocation](#item_sparse-ItemStatAllocation)                     | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [ItemStatSocketCostMultiplier](#item_sparse-ItemStatSocketCostMultiplier) | float       | signed     |     | NO   | 0       |       |                          |
+| [ScalingStatDistribution](#item_sparse-ScalingStatDistribution)           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [DamageType](#item_sparse-DamageType)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Delay](#item_sparse-Delay)                                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RangedModRange](#item_sparse-RangedModRange)                             | float       | signed     |     | NO   | 0       |       |                          |
+| [Bonding](#item_sparse-Bonding)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Name](#item_sparse-Name)                                                 | TEXT        |            |     | YES  |         |       |                          |
+| [Description](#item_sparse-Description)                                   | TEXT        |            |     | YES  |         |       |                          |
+| [PageText](#item_sparse-PageText)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [LanguageID](#item_sparse-LanguageID)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [PageMaterial](#item_sparse-PageMaterial)                                 | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [StartQuest](#item_sparse-StartQuest)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [LockID](#item_sparse-LockID)                                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Material](#item_sparse-Material)                                         | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [Sheath](#item_sparse-Sheath)                                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RandomProperty](#item_sparse-RandomProperty)                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [RandomSuffix](#item_sparse-RandomSuffix)                                 | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ItemSet](#item_sparse-ItemSet)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Area](#item_sparse-Area)                                                 | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [Map](#item_sparse-Map)                                                   | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [BagFamily](#item_sparse-BagFamily)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [TotemCategory](#item_sparse-TotemCategory)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [SocketColor](item_sparse)                                                | int(10)     | unsigned   |     | NO   | 0       |       | SocketColor1 can be NULL |
+| [SocketBonus](#item_sparse-SocketBonus)                                   | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [GemProperties](#item_sparse-GemProperties)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ArmorDamageModifier](#item_sparse-ArmorDamageModifier)                   | float       | signed     |     | NO   | 0       |       |                          |
+| [Duration](#item_sparse-Duration)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ItemLimitCategory](#item_sparse-ItemLimitCategory)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [HolidayID](#item_sparse-HolidayID)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [StatScalingFactor](#item_sparse-StatScalingFactor)                       | float       | signed     |     | NO   | 0       |       |                          |
+| [CurrencySubstitutionID](#item_sparse-CurrencySubstitutionID)             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [CurrencySubstitutionCount](#item_sparse-CurrencySubstitutionCount)       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ItemNameDescriptionID](#item_sparse-ItemNameDescriptionID)               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [VerifiedBuild](#item_sparse-VerifiedBuild)                               | smallint(6) | signed     |     | NO   | 0       |       |                          |
 
 **Description of the fields**
 
@@ -84,67 +81,17 @@ The unique ID of the item.Choosing an existing item ID will overwrite that item 
 
 The quality of the item. To use the Bind to Battle.net account quality, the item must have its flags set to 134221824.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Color</p></th>
-<th><p>Quality</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Grey</p></td>
-<td><p>Poor</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>White</p></td>
-<td><p>Common</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Green</p></td>
-<td><p>Uncommon</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Blue</p></td>
-<td><p>Rare</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Purple</p></td>
-<td><p>Epic</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Orange</p></td>
-<td><p>Legendary</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Red</p></td>
-<td><p>Artifact</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Gold</p></td>
-<td><p>Heirloom / Bind to Battle.net account</p></td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>Aqua</td>
-<td>WoW Token</td>
-</tr>
-</tbody>
-</table>
+| ID | Color  | Quality                               |
+|----|--------|---------------------------------------|
+| 0  | Grey   | Poor                                  |
+| 1  | White  | Common                                |
+| 2  | Green  | Uncommon                              |
+| 3  | Blue   | Rare                                  |
+| 4  | Purple | Epic                                  |
+| 5  | Orange | Legendary                             |
+| 6  | Red    | Artifact                              |
+| 7  | Gold   | Heirloom / Bind to Battle.net account |
+| 8  | Aqua   | WoW Token                             |
 
 ### Flags
 
@@ -152,182 +99,40 @@ Flags1 to Flags3 are bitmask fields that contains flags that the item has on it.
 
  **Note:** The item system for 6xx  gives more than one flag bitmask field and each of these can be populated individually.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Flag</p></th>
-<th> </th>
-<th><p>Comments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1</p></td>
-<td>0x01</td>
-<td><p>UNK1</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td>0x02</td>
-<td><p>Conjured item</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td>0x04</td>
-<td><p>Openable (can be opened by right-click)</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td>0x08</td>
-<td><p>Makes green &quot;Heroic&quot; text appear on item</p></td>
-</tr>
-<tr class="odd">
-<td><p>16</p></td>
-<td>0x010</td>
-<td><p>Deprecated Item</p></td>
-</tr>
-<tr class="even">
-<td><p>32</p></td>
-<td>0x020</td>
-<td><p>Item can not be destroyed, except by using spell (item can be reagent for spell)</p></td>
-</tr>
-<tr class="odd">
-<td><p>64</p></td>
-<td>0x040</td>
-<td><p>UNK2</p></td>
-</tr>
-<tr class="even">
-<td>128</td>
-<td>0x080</td>
-<td>No default 30 seconds cooldown when equipped</td>
-</tr>
-<tr class="odd">
-<td>256</td>
-<td>0x0100</td>
-<td>UNK3</td>
-</tr>
-<tr class="even">
-<td><p>512</p></td>
-<td>0x0200</td>
-<td><p>Wrapper : Item can wrap other items</p></td>
-</tr>
-<tr class="odd">
-<td><p>1024</p></td>
-<td>0x0400</td>
-<td><p>UNK4</p></td>
-</tr>
-<tr class="even">
-<td><p>2048</p></td>
-<td>0x0800</td>
-<td><p>Item is party loot and can be looted by all</p></td>
-</tr>
-<tr class="odd">
-<td><p>4096</p></td>
-<td>0x01000</td>
-<td><p>Item is refundable</p></td>
-</tr>
-<tr class="even">
-<td><p>8192</p></td>
-<td>0x02000</td>
-<td><p>Charter (Arena or Guild)</p></td>
-</tr>
-<tr class="odd">
-<td>16384</td>
-<td>0x04000</td>
-<td>UNK5 // comment in code : Only readable items have this (but not all)</td>
-</tr>
-<tr class="even">
-<td><p>32768</p></td>
-<td>0x08000</td>
-<td><p>UNK6</p></td>
-</tr>
-<tr class="odd">
-<td>65536</td>
-<td>0x010000</td>
-<td>UNK7</td>
-</tr>
-<tr class="even">
-<td>131072</td>
-<td>0x020000</td>
-<td>UNK8</td>
-</tr>
-<tr class="odd">
-<td>262144</td>
-<td>0x040000</td>
-<td><p>Item can be prospected</p></td>
-</tr>
-<tr class="even">
-<td><p>524288</p></td>
-<td>0x080000</td>
-<td><p>Unique equipped (player can only have one equipped at the same time)</p></td>
-</tr>
-<tr class="odd">
-<td>1048576</td>
-<td>0x0100000</td>
-<td>UNK9</td>
-</tr>
-<tr class="even">
-<td>2097152</td>
-<td>0x0200000</td>
-<td>Item can be used during arena match</td>
-</tr>
-<tr class="odd">
-<td><p>4194304</p></td>
-<td>0x0400000</td>
-<td><p>Throwable (for tooltip ingame)</p></td>
-</tr>
-<tr class="even">
-<td><p>8388608</p></td>
-<td>0x0800000</td>
-<td><p>Item can be used in shapeshift forms</p></td>
-</tr>
-<tr class="odd">
-<td>16777216</td>
-<td>0x01000000</td>
-<td> UNK10</td>
-</tr>
-<tr class="even">
-<td>54432</td>
-<td>0x02000000</td>
-<td> Profession recipes: can only be looted if you meet requirements and don't already know it</td>
-</tr>
-<tr class="odd">
-<td>67108864</td>
-<td>0x04000000</td>
-<td> Item cannot be used in arena</td>
-</tr>
-<tr class="even">
-<td><p>134217728</p></td>
-<td>0x08000000</td>
-<td><p>Bind to Account (Also needs Quality = 7 set)</p></td>
-</tr>
-<tr class="odd">
-<td><p>268435456</p></td>
-<td>0x010000000</td>
-<td><p>Spell is cast with triggered flag</p></td>
-</tr>
-<tr class="even">
-<td><p>536870912</p></td>
-<td>0x020000000</td>
-<td><p>Millable</p></td>
-</tr>
-<tr class="odd">
-<td>1073741824</td>
-<td>0x040000000</td>
-<td> UNK11</td>
-</tr>
-<tr class="even">
-<td><p>2147483648</p></td>
-<td>0x080000000</td>
-<td><p>Bind on Pickup tradeable8192</p></td>
-</tr>
-</tbody>
-</table>
+| Flag       |             | Comments                                                                                   |
+|------------|-------------|--------------------------------------------------------------------------------------------|
+| 1          | 0x01        | UNK1                                                                                       |
+| 2          | 0x02        | Conjured item                                                                              |
+| 4          | 0x04        | Openable (can be opened by right-click)                                                    |
+| 8          | 0x08        | Makes green "Heroic" text appear on item                                                   |
+| 16         | 0x010       | Deprecated Item                                                                            |
+| 32         | 0x020       | Item can not be destroyed, except by using spell (item can be reagent for spell)           |
+| 64         | 0x040       | UNK2                                                                                       |
+| 128        | 0x080       | No default 30 seconds cooldown when equipped                                               |
+| 256        | 0x0100      | UNK3                                                                                       |
+| 512        | 0x0200      | Wrapper : Item can wrap other items                                                        |
+| 1024       | 0x0400      | UNK4                                                                                       |
+| 2048       | 0x0800      | Item is party loot and can be looted by all                                                |
+| 4096       | 0x01000     | Item is refundable                                                                         |
+| 8192       | 0x02000     | Charter (Arena or Guild)                                                                   |
+| 16384      | 0x04000     | UNK5 // comment in code : Only readable items have this (but not all)                      |
+| 32768      | 0x08000     | UNK6                                                                                       |
+| 65536      | 0x010000    | UNK7                                                                                       |
+| 131072     | 0x020000    | UNK8                                                                                       |
+| 262144     | 0x040000    | Item can be prospected                                                                     |
+| 524288     | 0x080000    | Unique equipped (player can only have one equipped at the same time)                       |
+| 1048576    | 0x0100000   | UNK9                                                                                       |
+| 2097152    | 0x0200000   | Item can be used during arena match                                                        |
+| 4194304    | 0x0400000   | Throwable (for tooltip ingame)                                                             |
+| 8388608    | 0x0800000   | Item can be used in shapeshift forms                                                       |
+| 16777216   | 0x01000000  |  UNK10                                                                                     |
+| 54432      | 0x02000000  |  Profession recipes: can only be looted if you meet requirements and don't already know it |
+| 67108864   | 0x04000000  |  Item cannot be used in arena                                                              |
+| 134217728  | 0x08000000  | Bind to Account (Also needs Quality = 7 set)                                               |
+| 268435456  | 0x010000000 | Spell is cast with triggered flag                                                          |
+| 536870912  | 0x020000000 | Millable                                                                                   |
+| 1073741824 | 0x040000000 |  UNK11                                                                                     |
+| 2147483648 | 0x080000000 | Bind on Pickup tradeable8192                                                               |
 
 ### Unk1
 
@@ -353,114 +158,23 @@ The price that the vendor will pay you for the item when you sell it and if it i
 
 In what slot the item can be equipped.
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Slot Name</p></th>
-<th><p>ID</p></th>
-<th><p>Slot Name</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Non equipable</p></td>
-<td><p>15</p></td>
-<td><p>Ranged (Bows)</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Head</p></td>
-<td><p>16</p></td>
-<td><p>Back</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Neck</p></td>
-<td><p>17</p></td>
-<td><p>Two-Hand</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Shoulder</p></td>
-<td><p>18</p></td>
-<td><p>Bag</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Shirt</p></td>
-<td><p>19</p></td>
-<td><p>Tabard</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Chest</p></td>
-<td><p>20</p></td>
-<td><p>Robe</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Waist</p></td>
-<td><p>21</p></td>
-<td><p>Main hand</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Legs</p></td>
-<td><p>22</p></td>
-<td><p>Off hand</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Feet</p></td>
-<td><p>23</p></td>
-<td><p>Holdable (Tome)</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>Wrists</p></td>
-<td><p>24</p></td>
-<td><p>Ammo</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>Hands</p></td>
-<td><p>25</p></td>
-<td><p>Thrown</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>Finger</p></td>
-<td><p>26</p></td>
-<td><p>Ranged right (Wands, Guns)</p></td>
-</tr>
-<tr class="odd">
-<td><p>12</p></td>
-<td><p>Trinket</p></td>
-<td><p>27</p></td>
-<td><p>Quiver</p></td>
-</tr>
-<tr class="even">
-<td><p>13</p></td>
-<td><p>Weapon</p></td>
-<td><p>28</p></td>
-<td><p>Relic</p></td>
-</tr>
-<tr class="odd">
-<td><p>14</p></td>
-<td><p>Shield</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| ID | Slot Name     | ID | Slot Name                  |
+|----|---------------|----|----------------------------|
+| 0  | Non equipable | 15 | Ranged (Bows)              |
+| 1  | Head          | 16 | Back                       |
+| 2  | Neck          | 17 | Two-Hand                   |
+| 3  | Shoulder      | 18 | Bag                        |
+| 4  | Shirt         | 19 | Tabard                     |
+| 5  | Chest         | 20 | Robe                       |
+| 6  | Waist         | 21 | Main hand                  |
+| 7  | Legs          | 22 | Off hand                   |
+| 8  | Feet          | 23 | Holdable (Tome)            |
+| 9  | Wrists        | 24 | Ammo                       |
+| 10 | Hands         | 25 | Thrown                     |
+| 11 | Finger        | 26 | Ranged right (Wands, Guns) |
+| 12 | Trinket       | 27 | Quiver                     |
+| 13 | Weapon        | 28 | Relic                      |
+| 14 | Shield        |    |                            |
 
 ### AllowableClass
 
@@ -512,52 +226,16 @@ See the [Faction DBC file](Faction6x) for the IDs of all of the factions.
 
 The rank the player has to have with the faction from [RequiredReputationFaction](#item_sparse-RequiredReputationFaction).
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Rank</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Hated</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Hostile</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Unfriendly</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Neutral</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Friendly</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Honored</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Revered</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Exalted</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Rank       |
+|----|------------|
+| 0  | Hated      |
+| 1  | Hostile    |
+| 2  | Unfriendly |
+| 3  | Neutral    |
+| 4  | Friendly   |
+| 5  | Honored    |
+| 6  | Revered    |
+| 7  | Exalted    |
 
 ### MaxCount
 
@@ -575,300 +253,78 @@ If the item is a bag, this field controls the number of slots the bag has.
 
 The type of stat to modify. A maximum of 10 stats can be set as seen by the column count.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Stat Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>ITEM_MOD_MANA</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>ITEM_MOD_HEALTH</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>ITEM_MOD_AGILITY</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>ITEM_MOD_STRENGTH</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>ITEM_MOD_INTELLECT</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>ITEM_MOD_SPIRIT</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>ITEM_MOD_STAMINA</td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>ITEM_MOD_DEFENSE_SKILL_RATING</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>ITEM_MOD_DODGE_RATING</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>ITEM_MOD_PARRY_RATING</td>
-</tr>
-<tr class="odd">
-<td>15</td>
-<td>ITEM_MOD_BLOCK_RATING</td>
-</tr>
-<tr class="even">
-<td>16</td>
-<td>ITEM_MOD_HIT_MELEE_RATING</td>
-</tr>
-<tr class="odd">
-<td>17</td>
-<td>ITEM_MOD_HIT_RANGED_RATING</td>
-</tr>
-<tr class="even">
-<td>18</td>
-<td>ITEM_MOD_HIT_SPELL_RATING</td>
-</tr>
-<tr class="odd">
-<td>19</td>
-<td>ITEM_MOD_CRIT_MELEE_RATING</td>
-</tr>
-<tr class="even">
-<td>20</td>
-<td>ITEM_MOD_CRIT_RANGED_RATING</td>
-</tr>
-<tr class="odd">
-<td>21</td>
-<td>ITEM_MOD_CRIT_SPELL_RATING</td>
-</tr>
-<tr class="even">
-<td>22</td>
-<td>ITEM_MOD_HIT_TAKEN_MELEE_RATING</td>
-</tr>
-<tr class="odd">
-<td>23</td>
-<td>ITEM_MOD_HIT_TAKEN_RANGED_RATING</td>
-</tr>
-<tr class="even">
-<td>24</td>
-<td>ITEM_MOD_HIT_TAKEN_SPELL_RATING</td>
-</tr>
-<tr class="odd">
-<td>25</td>
-<td>ITEM_MOD_CRIT_TAKEN_MELEE_RATING</td>
-</tr>
-<tr class="even">
-<td>26</td>
-<td>ITEM_MOD_CRIT_TAKEN_RANGED_RATING</td>
-</tr>
-<tr class="odd">
-<td>27</td>
-<td>ITEM_MOD_CRIT_TAKEN_SPELL_RATING</td>
-</tr>
-<tr class="even">
-<td>28</td>
-<td>ITEM_MOD_HASTE_MELEE_RATING</td>
-</tr>
-<tr class="odd">
-<td>29</td>
-<td>ITEM_MOD_HASTE_RANGED_RATING</td>
-</tr>
-<tr class="even">
-<td>30</td>
-<td>ITEM_MOD_HASTE_SPELL_RATING</td>
-</tr>
-<tr class="odd">
-<td>31</td>
-<td>ITEM_MOD_HIT_RATING</td>
-</tr>
-<tr class="even">
-<td>32</td>
-<td>ITEM_MOD_CRIT_RATING</td>
-</tr>
-<tr class="odd">
-<td>33</td>
-<td>ITEM_MOD_HIT_TAKEN_RATING</td>
-</tr>
-<tr class="even">
-<td>34</td>
-<td>ITEM_MOD_CRIT_TAKEN_RATING</td>
-</tr>
-<tr class="odd">
-<td>35</td>
-<td>ITEM_MOD_RESILIENCE_RATING</td>
-</tr>
-<tr class="even">
-<td>36</td>
-<td>ITEM_MOD_HASTE_RATING</td>
-</tr>
-<tr class="odd">
-<td>37</td>
-<td>ITEM_MOD_EXPERTISE_RATING</td>
-</tr>
-<tr class="even">
-<td>38</td>
-<td>ITEM_MOD_ATTACK_POWER</td>
-</tr>
-<tr class="odd">
-<td>39</td>
-<td>ITEM_MOD_RANGED_ATTACK_POWER</td>
-</tr>
-<tr class="even">
-<td>40</td>
-<td>ITEM_MOD_VERSATILITY</td>
-</tr>
-<tr class="odd">
-<td>41</td>
-<td>ITEM_MOD_SPELL_HEALING_DONE</td>
-</tr>
-<tr class="even">
-<td>42</td>
-<td>ITEM_MOD_SPELL_DAMAGE_DONE</td>
-</tr>
-<tr class="odd">
-<td>43</td>
-<td>ITEM_MOD_MANA_REGENERATION</td>
-</tr>
-<tr class="even">
-<td>44</td>
-<td>ITEM_MOD_ARMOR_PENETRATION_RATING</td>
-</tr>
-<tr class="odd">
-<td>45</td>
-<td>ITEM_MOD_SPELL_POWER</td>
-</tr>
-<tr class="even">
-<td>46</td>
-<td>ITEM_MOD_HEALTH_REGEN</td>
-</tr>
-<tr class="odd">
-<td>47</td>
-<td>ITEM_MOD_SPELL_PENETRATION</td>
-</tr>
-<tr class="even">
-<td>48</td>
-<td>ITEM_MOD_BLOCK_VALUE</td>
-</tr>
-<tr class="odd">
-<td>49</td>
-<td>ITEM_MOD_MASTERY_RATING</td>
-</tr>
-<tr class="even">
-<td>50</td>
-<td>ITEM_MOD_EXTRA_ARMOR</td>
-</tr>
-<tr class="odd">
-<td>51</td>
-<td>ITEM_MOD_FIRE_RESISTANCE</td>
-</tr>
-<tr class="even">
-<td>52</td>
-<td>ITEM_MOD_FROST_RESISTANCE</td>
-</tr>
-<tr class="odd">
-<td>53</td>
-<td>ITEM_MOD_HOLY_RESISTANCE</td>
-</tr>
-<tr class="even">
-<td>54</td>
-<td>ITEM_MOD_SHADOW_RESISTANCE</td>
-</tr>
-<tr class="odd">
-<td>55</td>
-<td>ITEM_MOD_NATURE_RESISTANCE</td>
-</tr>
-<tr class="even">
-<td>56</td>
-<td>ITEM_MOD_ARCANE_RESISTANCE</td>
-</tr>
-<tr class="odd">
-<td>57</td>
-<td>ITEM_MOD_PVP_POWER</td>
-</tr>
-<tr class="even">
-<td>58</td>
-<td>ITEM_MOD_CR_AMPLIFY</td>
-</tr>
-<tr class="odd">
-<td>59</td>
-<td>ITEM_MOD_CR_MULTISTRIKE</td>
-</tr>
-<tr class="even">
-<td>60</td>
-<td>ITEM_MOD_CR_READINESS</td>
-</tr>
-<tr class="odd">
-<td>61</td>
-<td>ITEM_MOD_CR_SPEED</td>
-</tr>
-<tr class="even">
-<td>62</td>
-<td>ITEM_MOD_CR_LIFESTEAL</td>
-</tr>
-<tr class="odd">
-<td>63</td>
-<td>ITEM_MOD_CR_AVOIDANCE</td>
-</tr>
-<tr class="even">
-<td>64</td>
-<td>ITEM_MOD_CR_STURDINESS</td>
-</tr>
-<tr class="odd">
-<td>65</td>
-<td>ITEM_MOD_CR_UNUSED_7</td>
-</tr>
-<tr class="even">
-<td>66</td>
-<td>ITEM_MOD_CR_CLEAVE</td>
-</tr>
-<tr class="odd">
-<td>67</td>
-<td>ITEM_MOD_CR_UNUSED_9</td>
-</tr>
-<tr class="even">
-<td>68</td>
-<td>ITEM_MOD_CR_UNUSED_10</td>
-</tr>
-<tr class="odd">
-<td>69</td>
-<td>ITEM_MOD_CR_UNUSED_11</td>
-</tr>
-<tr class="even">
-<td>70</td>
-<td>ITEM_MOD_CR_UNUSED_12</td>
-</tr>
-<tr class="odd">
-<td>71</td>
-<td>ITEM_MOD_AGI_STR_INT</td>
-</tr>
-<tr class="even">
-<td>72</td>
-<td>ITEM_MOD_AGI_STR</td>
-</tr>
-<tr class="odd">
-<td>73</td>
-<td>ITEM_MOD_AGI_INT</td>
-</tr>
-<tr class="even">
-<td>74</td>
-<td>ITEM_MOD_STR_INT</td>
-</tr>
-</tbody>
-</table>
+| ID | Stat Type                         |
+|----|-----------------------------------|
+| 0  | ITEM_MOD_MANA                     |
+| 1  | ITEM_MOD_HEALTH                   |
+| 3  | ITEM_MOD_AGILITY                  |
+| 4  | ITEM_MOD_STRENGTH                 |
+| 5  | ITEM_MOD_INTELLECT                |
+| 6  | ITEM_MOD_SPIRIT                   |
+| 7  | ITEM_MOD_STAMINA                  |
+| 12 | ITEM_MOD_DEFENSE_SKILL_RATING     |
+| 13 | ITEM_MOD_DODGE_RATING             |
+| 14 | ITEM_MOD_PARRY_RATING             |
+| 15 | ITEM_MOD_BLOCK_RATING             |
+| 16 | ITEM_MOD_HIT_MELEE_RATING         |
+| 17 | ITEM_MOD_HIT_RANGED_RATING        |
+| 18 | ITEM_MOD_HIT_SPELL_RATING         |
+| 19 | ITEM_MOD_CRIT_MELEE_RATING        |
+| 20 | ITEM_MOD_CRIT_RANGED_RATING       |
+| 21 | ITEM_MOD_CRIT_SPELL_RATING        |
+| 22 | ITEM_MOD_HIT_TAKEN_MELEE_RATING   |
+| 23 | ITEM_MOD_HIT_TAKEN_RANGED_RATING  |
+| 24 | ITEM_MOD_HIT_TAKEN_SPELL_RATING   |
+| 25 | ITEM_MOD_CRIT_TAKEN_MELEE_RATING  |
+| 26 | ITEM_MOD_CRIT_TAKEN_RANGED_RATING |
+| 27 | ITEM_MOD_CRIT_TAKEN_SPELL_RATING  |
+| 28 | ITEM_MOD_HASTE_MELEE_RATING       |
+| 29 | ITEM_MOD_HASTE_RANGED_RATING      |
+| 30 | ITEM_MOD_HASTE_SPELL_RATING       |
+| 31 | ITEM_MOD_HIT_RATING               |
+| 32 | ITEM_MOD_CRIT_RATING              |
+| 33 | ITEM_MOD_HIT_TAKEN_RATING         |
+| 34 | ITEM_MOD_CRIT_TAKEN_RATING        |
+| 35 | ITEM_MOD_RESILIENCE_RATING        |
+| 36 | ITEM_MOD_HASTE_RATING             |
+| 37 | ITEM_MOD_EXPERTISE_RATING         |
+| 38 | ITEM_MOD_ATTACK_POWER             |
+| 39 | ITEM_MOD_RANGED_ATTACK_POWER      |
+| 40 | ITEM_MOD_VERSATILITY              |
+| 41 | ITEM_MOD_SPELL_HEALING_DONE       |
+| 42 | ITEM_MOD_SPELL_DAMAGE_DONE        |
+| 43 | ITEM_MOD_MANA_REGENERATION        |
+| 44 | ITEM_MOD_ARMOR_PENETRATION_RATING |
+| 45 | ITEM_MOD_SPELL_POWER              |
+| 46 | ITEM_MOD_HEALTH_REGEN             |
+| 47 | ITEM_MOD_SPELL_PENETRATION        |
+| 48 | ITEM_MOD_BLOCK_VALUE              |
+| 49 | ITEM_MOD_MASTERY_RATING           |
+| 50 | ITEM_MOD_EXTRA_ARMOR              |
+| 51 | ITEM_MOD_FIRE_RESISTANCE          |
+| 52 | ITEM_MOD_FROST_RESISTANCE         |
+| 53 | ITEM_MOD_HOLY_RESISTANCE          |
+| 54 | ITEM_MOD_SHADOW_RESISTANCE        |
+| 55 | ITEM_MOD_NATURE_RESISTANCE        |
+| 56 | ITEM_MOD_ARCANE_RESISTANCE        |
+| 57 | ITEM_MOD_PVP_POWER                |
+| 58 | ITEM_MOD_CR_AMPLIFY               |
+| 59 | ITEM_MOD_CR_MULTISTRIKE           |
+| 60 | ITEM_MOD_CR_READINESS             |
+| 61 | ITEM_MOD_CR_SPEED                 |
+| 62 | ITEM_MOD_CR_LIFESTEAL             |
+| 63 | ITEM_MOD_CR_AVOIDANCE             |
+| 64 | ITEM_MOD_CR_STURDINESS            |
+| 65 | ITEM_MOD_CR_UNUSED_7              |
+| 66 | ITEM_MOD_CR_CLEAVE                |
+| 67 | ITEM_MOD_CR_UNUSED_9              |
+| 68 | ITEM_MOD_CR_UNUSED_10             |
+| 69 | ITEM_MOD_CR_UNUSED_11             |
+| 70 | ITEM_MOD_CR_UNUSED_12             |
+| 71 | ITEM_MOD_AGI_STR_INT              |
+| 72 | ITEM_MOD_AGI_STR                  |
+| 73 | ITEM_MOD_AGI_INT                  |
+| 74 | ITEM_MOD_STR_INT                  |
 
 ### ItemStatValue
 
@@ -891,46 +347,15 @@ Use this like the static stats.
 
 The damage type that the item uses.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong></td>
-<td><strong>Damage Type</strong></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>Physical</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Holy</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Fire</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>Nature</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Frost</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>Shadow</p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>Arcane</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Damage Type |
+|----|-------------|
+| 0  | Physical    |
+| 1  | Holy        |
+| 2  | Fire        |
+| 3  | Nature      |
+| 4  | Frost       |
+| 5  | Shadow      |
+| 6  | Arcane      |
 
 ### Delay
 
@@ -946,42 +371,14 @@ Note: All blizzard ranged weapons have RangedModRange of 100.
 
 The bonding for the item.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong></td>
-<td><strong>Bonding Type</strong></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>No bounds</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Binds when picked up</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Binds when equipped</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>Binds when used</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Quest item</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>Quest Item1</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Bonding Type         |
+|----|----------------------|
+| 0  | No bounds            |
+| 1  | Binds when picked up |
+| 2  | Binds when equipped  |
+| 3  | Binds when used      |
+| 4  | Quest item           |
+| 5  | Quest Item1          |
 
 ### Name
 
@@ -1023,119 +420,31 @@ See the [Lock DBC file](Lock).
 
 The material that the item is made of. The value here affects the sound that the item makes when moved. Use -1 for consumable items like food, reagents, etc.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong></td>
-<td><strong>Material</strong></td>
-<td><strong>Comment</strong></td>
-</tr>
-<tr class="even">
-<td><p>-1</p></td>
-<td><p>Consumables</p></td>
-<td>Food, reagents, etc...</td>
-</tr>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Not Defined</p></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Metal</p></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Wood</p></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Liquid</p></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Jewelry</p></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Chain</p></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Plate</p></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Cloth</p></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Leather</p></td>
-<td> </td>
-</tr>
-</tbody>
-</table>
+| ID | Material    | Comment                |
+|----|-------------|------------------------|
+| -1 | Consumables | Food, reagents, etc... |
+| 0  | Not Defined |                        |
+| 1  | Metal       |                        |
+| 2  | Wood        |                        |
+| 3  | Liquid      |                        |
+| 4  | Jewelry     |                        |
+| 5  | Chain       |                        |
+| 6  | Plate       |                        |
+| 7  | Cloth       |                        |
+| 8  | Leather     |                        |
 
 ### Sheath
 
 Controls how the item is put away on the character. Press the 'Z' hotkey to sheath and unsheathe your weapons.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong></td>
-<td><strong>Type</strong></td>
-<td><strong>Position</strong></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Two Handed Weapon</p></td>
-<td><p>Diagonally across the back pointing downwards.</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Staff</p></td>
-<td><p>Diagonally across the back pointing upwards.</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>One Handed</p></td>
-<td><p>On the left-hand side of the character's waist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Shield</p></td>
-<td><p>On the middle of the character's back.</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Enchanter's Rod</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Off hand</p></td>
-<td><p>On the right-hand side of the character's waist.</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Type              | Position                                         |
+|----|-------------------|--------------------------------------------------|
+| 1  | Two Handed Weapon | Diagonally across the back pointing downwards.   |
+| 2  | Staff             | Diagonally across the back pointing upwards.     |
+| 3  | One Handed        | On the left-hand side of the character's waist.  |
+| 4  | Shield            | On the middle of the character's back.           |
+| 5  | Enchanter's Rod   |                                                  |
+| 6  | Off hand          | On the right-hand side of the character's waist. |
 
 ### RandomProperty
 
@@ -1161,283 +470,88 @@ The ID of the map in which this item can be used.
 
 If the item is a bag, this field is a bitmask controlling what types of items can be put in this bag. You can combine different types by adding up the bit numbers.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong></td>
-<td><strong>Bag Family Mask</strong></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>None</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Arrows</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Bullets</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Soul Shards</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>Leatherworking Supplies</p></td>
-</tr>
-<tr class="odd">
-<td><p>16</p></td>
-<td><p>Inscription Supplies</p></td>
-</tr>
-<tr class="even">
-<td><p>32</p></td>
-<td><p>Herbs</p></td>
-</tr>
-<tr class="odd">
-<td><p>64</p></td>
-<td><p>Enchanting Supplies</p></td>
-</tr>
-<tr class="even">
-<td><p>128</p></td>
-<td><p>Engineering Supplies</p></td>
-</tr>
-<tr class="odd">
-<td><p>256</p></td>
-<td><p>Keys</p></td>
-</tr>
-<tr class="even">
-<td><p>512</p></td>
-<td><p>Gems</p></td>
-</tr>
-<tr class="odd">
-<td><p>1024</p></td>
-<td><p>Mining Supplies</p></td>
-</tr>
-<tr class="even">
-<td><p>2048</p></td>
-<td><p>Soulbound Equipment</p></td>
-</tr>
-<tr class="odd">
-<td><p>4096</p></td>
-<td><p>Vanity Pets</p></td>
-</tr>
-<tr class="even">
-<td><p>8192</p></td>
-<td><p>Currency Tokens</p></td>
-</tr>
-<tr class="odd">
-<td><p>16384</p></td>
-<td><p>Quest Items</p></td>
-</tr>
-</tbody>
-</table>
+| ID    | Bag Family Mask         |
+|-------|-------------------------|
+| 0     | None                    |
+| 1     | Arrows                  |
+| 2     | Bullets                 |
+| 4     | Soul Shards             |
+| 8     | Leatherworking Supplies |
+| 16    | Inscription Supplies    |
+| 32    | Herbs                   |
+| 64    | Enchanting Supplies     |
+| 128   | Engineering Supplies    |
+| 256   | Keys                    |
+| 512   | Gems                    |
+| 1024  | Mining Supplies         |
+| 2048  | Soulbound Equipment     |
+| 4096  | Vanity Pets             |
+| 8192  | Currency Tokens         |
+| 16384 | Quest Items             |
 
 ### TotemCategory
 
 Corresponds to the ID in the TotemCategory DBC file.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>ID</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Skinning Knife (OLD)</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Earth Totem</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Air Totem</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Fire Totem</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Water Totem</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Runed Copper Rod</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Runed Silver Rod</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Runed Golden Rod</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>Runed Truesilver Rod</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>Runed Arcanite Rod</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>Mining Pick (OLD)</p></td>
-</tr>
-<tr class="odd">
-<td><p>12</p></td>
-<td><p>Philosopher's Stone</p></td>
-</tr>
-<tr class="even">
-<td><p>13</p></td>
-<td><p>Blacksmith Hammer (OLD)</p></td>
-</tr>
-<tr class="odd">
-<td><p>14</p></td>
-<td><p>Arclight Spanner</p></td>
-</tr>
-<tr class="even">
-<td><p>15</p></td>
-<td><p>Gyromatic Micro-Adjustor</p></td>
-</tr>
-<tr class="odd">
-<td><p>21</p></td>
-<td><p>Master Totem</p></td>
-</tr>
-<tr class="even">
-<td><p>41</p></td>
-<td><p>Runed Fel Iron Rod</p></td>
-</tr>
-<tr class="odd">
-<td><p>62</p></td>
-<td><p>Runed Adamantite Rod</p></td>
-</tr>
-<tr class="even">
-<td><p>63</p></td>
-<td><p>Runed Eternium Rod</p></td>
-</tr>
-<tr class="odd">
-<td><p>81</p></td>
-<td><p>Hollow Quill</p></td>
-</tr>
-<tr class="even">
-<td><p>101</p></td>
-<td><p>Runed Azurite Rod</p></td>
-</tr>
-<tr class="odd">
-<td><p>121</p></td>
-<td><p>Virtuoso Inking Set</p></td>
-</tr>
-<tr class="even">
-<td><p>141</p></td>
-<td><p>Drums</p></td>
-</tr>
-<tr class="odd">
-<td><p>161</p></td>
-<td><p>Gnomish Army Knife</p></td>
-</tr>
-<tr class="even">
-<td><p>162</p></td>
-<td><p>Blacksmith Hammer</p></td>
-</tr>
-<tr class="odd">
-<td><p>165</p></td>
-<td><p>Mining Pick</p></td>
-</tr>
-<tr class="even">
-<td><p>166</p></td>
-<td><p>Skinning Knife</p></td>
-</tr>
-<tr class="odd">
-<td><p>167</p></td>
-<td><p>Hammer Pick</p></td>
-</tr>
-<tr class="even">
-<td><p>168</p></td>
-<td><p>Bladed Pickaxe</p></td>
-</tr>
-<tr class="odd">
-<td><p>169</p></td>
-<td><p>Flint and Tinder</p></td>
-</tr>
-<tr class="even">
-<td><p>189</p></td>
-<td><p>Runed Cobalt Rod</p></td>
-</tr>
-<tr class="odd">
-<td><p>190</p></td>
-<td><p>Runed Titanium Rod</p></td>
-</tr>
-</tbody>
-</table>
+| ID  | Name                     |
+|-----|--------------------------|
+| 1   | Skinning Knife (OLD)     |
+| 2   | Earth Totem              |
+| 3   | Air Totem                |
+| 4   | Fire Totem               |
+| 5   | Water Totem              |
+| 6   | Runed Copper Rod         |
+| 7   | Runed Silver Rod         |
+| 8   | Runed Golden Rod         |
+| 9   | Runed Truesilver Rod     |
+| 10  | Runed Arcanite Rod       |
+| 11  | Mining Pick (OLD)        |
+| 12  | Philosopher's Stone      |
+| 13  | Blacksmith Hammer (OLD)  |
+| 14  | Arclight Spanner         |
+| 15  | Gyromatic Micro-Adjustor |
+| 21  | Master Totem             |
+| 41  | Runed Fel Iron Rod       |
+| 62  | Runed Adamantite Rod     |
+| 63  | Runed Eternium Rod       |
+| 81  | Hollow Quill             |
+| 101 | Runed Azurite Rod        |
+| 121 | Virtuoso Inking Set      |
+| 141 | Drums                    |
+| 161 | Gnomish Army Knife       |
+| 162 | Blacksmith Hammer        |
+| 165 | Mining Pick              |
+| 166 | Skinning Knife           |
+| 167 | Hammer Pick              |
+| 168 | Bladed Pickaxe           |
+| 169 | Flint and Tinder         |
+| 189 | Runed Cobalt Rod         |
+| 190 | Runed Titanium Rod       |
 
 ### SocketColor
 
 The color of the socket that can be placed in this item. A maximum of 3 socket colors can be set as seen by the column count.
 
-**ID**
-**Color**
-1
-
-Meta
-
-2
-
-Red
-
-4
-
-Yellow
-
-8
-
-Blue
+| ID | Color  |
+|----|--------|
+| 1  | Meta   |
+| 2  | Red    |
+| 4  | Yellow |
+| 8  | Blue   |
 
 ### SocketBonus
 
 Commonly used socket bonus IDs
 
-**ID**
-**Effect**
-3312
-
-+8 Strength
-
-3313
-
-+8 Agility
-
-3305
-
-+12 Stamina
-
-3
-
-+8 Intellect
-
-2872
-
-+9 Healing
-
-3753
-
-+9 Spell Power
-
-3877
-
-+16 Attack Power
+| ID   | Effect           |
+|------|------------------|
+| 3312 | +8 Strength      |
+| 3313 | +8 Agility       |
+| 3305 | +12 Stamina      |
+| 3    | +8 Intellect     |
+| 2872 | +9 Healing       |
+| 3753 | +9 Spell Power   |
+| 3877 | +16 Attack Power |
 
 ### GemProperties
 
@@ -1484,5 +598,3 @@ If value is 0 then it has not been parsed yet.
 If value is above 0 then it has been parsed with WDB files from that specific client build.
 
 If value is -1 then it is just a place holder until proper data are found on WDBs.
-
-
