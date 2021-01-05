@@ -26,9 +26,11 @@ GUID of the group. See [groups.guid](Groups+tc2#Groupstc2-guid).
 
 GUID of the character member of the group. See [characters.guid](Characters+tc2#Characterstc2-guid).
 
-| MEMBER_FLAG_ASSISTANT  | 0x01 |     |
-| MEMBER_FLAG_MAINTANK   | 0x02 | (U) |
-| MEMBER_FLAG_MAINASSIST | 0x04 | (U) |
+| Name                   | Value | Unique |
+|------------------------|-------|--------|
+| MEMBER_FLAG_ASSISTANT  | 0x01  |        |
+| MEMBER_FLAG_MAINTANK   | 0x02  | (U)    |
+| MEMBER_FLAG_MAINASSIST | 0x04  | (U)    |
 
 *(U) = Unique per group.*
 
