@@ -46,3 +46,10 @@ You can choose from the following:
 It is the text that is shown, while the quest is not completed.
 
 ### VerifiedBuild
+
+### Example
+```sql
+DELETE FROM `quest_request_items_locale` WHERE `ID`=2 AND `locale`='esES';
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES`ID`, `locale`, `CompletionText`, `VerifiedBuild`
+(2, "esES", "Sí, $gpoderoso:poderosa; $c, he presentido tu llegada. Confío que tienes más noticias que darme sobre tu caza.", 0);
+```
