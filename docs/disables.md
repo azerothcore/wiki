@@ -8,99 +8,21 @@ This table is used to disable dungeons/bgs/spells/etc.
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#sourcetype">sourceType</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#flags">flags</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#params_0">params_0</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#params_1">params_1</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|--------------|------------|-----|------|---------|-------|---------|
+| [sourceType][1] | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
+| [entry][2]      | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
+| [flags][3]      | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [params_0][4]   | varchar(255) |            |     | NO   |         |       |         |
+| [params_1][5]   | varchar(255) |            |     | NO   |         |       |         |
+| [comment][6]    | varchar(255) |            |     | NO   |         |       |         |
+
+[1]: #sourcetype
+[2]: #entry
+[3]: #flags
+[4]: #params_0
+[5]: #params_1
+[6]: #comment
 
 **Description of the fields**
 
@@ -145,36 +67,12 @@ This will disable spell Moonfire (8921) for players in maps 571,1 and area 1519.
 
 Specifies what type of map is disabled (5man/10man/heroic/etc).
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Value</p></th>
-<th><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>DUNGEON_STATUSFLAG_NORMAL OR RAID_STATUSFLAG_10MAN_NORMAL</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>DUNGEON_STATUSFLAG_HEROIC OR RAID_STATUSFLAG_25MAN_NORMAL</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>RAID_STATUSFLAG_10MAN_HEROIC</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>RAID_STATUSFLAG_25MAN_HEROIC</p></td>
-</tr>
-</tbody>
-</table>
+| Value | Type                                                        |
+|-------|-------------------------------------------------------------|
+| 1     | DUNGEON_STATUS_FLAG_NORMAL OR RAID_STATUS_FLAG_10MAN_NORMAL |
+| 2     | DUNGEON_STATUS_FLAG_HEROIC OR RAID_STATUS_FLAG_25MAN_NORMAL |
+| 4     | RAID_STATUS_FLAG_10MAN_HEROIC                               |
+| 8     | RAID_STATUS_FLAG_25MAN_HEROIC                               |
 
 The value is a bitmask of VALID modes for the specific map, 15 is as such NOT a valid mask on certain maps, only those actually found possible for the respective map.
 
