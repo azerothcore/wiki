@@ -8,70 +8,19 @@ Comes from sniffs. Visually speaking, this table is used to identify the X and Y
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="even">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_poi_points-questid">questid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unasigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_poi_points-idx">idx</a>2</p></td>
-<td><p>int(10)</p></td>
-<td><p>unasigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_poi_points-x">x</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unasigned</p></td>
-<td><p></p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_poi_points-y">y</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unasigned</p></td>
-<td><p></p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#VerifiedBuild">VerifiedBuild</a></p></td>
-<td><p>smallint</p></td>
-<td><p>unasigned</p></td>
-<td><p></p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
+|--------------------|----------|------------|-----|------|---------|-------|---------|
+| [questid][1]       | int(10)  | unasigned  | PRI | NO   | 0       |       |         |
+| [idx2][2]          | int(10)  | unasigned  | PRI | NO   | 0       |       |         |
+| [x][3]             | int(10)  | unasigned  |     | NO   | 0       |       |         |
+| [y][4]             | int(10)  | unasigned  |     | NO   | 0       |       |         |
+| [VerifiedBuild][5] | smallint | unasigned  |     | YES  | NULL    |       |         |
+
+[1]: #questid
+[2]: #idx2
+[3]: #x
+[4]: #y
+[5]: #verifiedbuild
 
 **Description of the fields**
 
@@ -89,82 +38,16 @@ Used to group multiple entries in the quest poi points to draw the polygon for t
 
 Example quest: Secreat Communication.
 
-<table>
-<tbody>
-<tr class="even">
-<td><p><strong>QuestID</strong></p></td>
-<td><p><strong>idx1</strong></p></td>
-<td><p><strong>idx2</strong></p></td>
-<td><p><strong>x</strong></p></td>
-<td><p><strong>y</strong></p></td>
-<td><p><strong>VerifiedBuild</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>0</p></td>
-<td><p>-6231</p></td>
-<td><p>-51</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>1</p></td>
-<td><p>-6236</p></td>
-<td><p>-19</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>2</p></td>
-<td><p>-6241</p></td>
-<td><p>-52</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>3</p></td>
-<td><p>-6316</p></td>
-<td><p>-282</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>4</p></td>
-<td><p>-6413</p></td>
-<td><p>-282</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>5</p></td>
-<td><p>-6483</p></td>
-<td><p>-250</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>6</p></td>
-<td><p>-6483</p></td>
-<td><p>-217</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>8318</p></td>
-<td><p>3</p></td>
-<td><p>7</p></td>
-<td><p>-6326</p></td>
-<td><p>-7</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
+| QuestID | idx1 | idx2 | x     | y    | VerifiedBuild |
+|---------|------|------|-------|------|---------------|
+| 8318    | 3    | 0    | -6231 | -51  | 0             |
+| 8318    | 3    | 1    | -6236 | -19  | 0             |
+| 8318    | 3    | 2    | -6241 | -52  | 0             |
+| 8318    | 3    | 3    | -6316 | -282 | 0             |
+| 8318    | 3    | 4    | -6413 | -282 | 0             |
+| 8318    | 3    | 5    | -6483 | -250 | 0             |
+| 8318    | 3    | 6    | -6483 | -217 | 0             |
+| 8318    | 3    | 7    | -6326 | -7   | 0             |
 
 ### x
 
