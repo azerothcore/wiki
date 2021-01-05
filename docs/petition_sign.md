@@ -8,80 +8,19 @@ This table holds information on all the signatures of a petition for either a gu
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#ownerguid">ownerguid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#petitionguid">petitionguid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#playerguid">playerguid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#player_account">player_account</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#type">type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|---------------------|------------|------------|-----|------|---------|-------|---------|
+| [ownerguid][1]      | int(10)    | unsigned   |     | NO   |         |       |         |
+| [petitionguid][2]   | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [playerguid][3]     | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [player_account][4] | int(10)    | unsigned   |     | NO   | 0       |       |         |
+| [type][5]           | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #ownerguid
+[2]: #petitionguid
+[3]: #playerguid
+[4]: #player_account
+[5]: #type
 
 **Description of the fields**
 
@@ -105,35 +44,9 @@ The account ID of the player that has signed the charter. No two players can sig
 
 The type of the petition.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>2vs2 Arena charter</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>3vs3 Arena charter</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>5vs5 Arena charter</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>Guild charter</p></td>
-</tr>
-</tbody>
-</table>
-
-
+| ID | Type               |
+|----|--------------------|
+| 2  | 2vs2 Arena charter |
+| 3  | 3vs3 Arena charter |
+| 5  | 5vs5 Arena charter |
+| 9  | Guild charter      |

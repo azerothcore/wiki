@@ -8,190 +8,41 @@ This table holds basic info about groups.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#leaderguid">leaderGuid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#lootmethod">lootMethod</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#looterguid">looterGuid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#lootthreshold">lootThreshold</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#8">icon1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#8">icon2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#8">icon3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#8">icon4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#8">icon5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td><p> </p></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p><a href="#8">icon6</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#8">icon7</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p><a href="#8">icon8</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#grouptype">groupType</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td> </td>
-<td><p>NO</p></td>
-<td> </td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p><a href="#difficulty">difficulty</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#raiddifficulty">raiddifficulty</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|----------------------|------------|------------|-----|------|---------|-------|---------|
+| [guid][1]            | int(10)    | unsigned   | PRI | NO   |         |       |         |
+| [leaderGuid][2]      | int(10)    | unsigned   |     | NO   |         |       |         |
+| [lootMethod][3]      | tinyint(3) | unsigned   |     | NO   |         |       |         |
+| [looterGuid][4]      | int(10)    | unsigned   |     | NO   |         |       |         |
+| [lootThreshold][5]   | tinyint(3) | unsigned   |     | NO   |         |       |         |
+| [icon1][6]           | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon2][7]           | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon3][8]           | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon4][9]           | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon5][10]          | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon6][11]          | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon7][12]          | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon8][13]          | int(10)    | unsigned   |     | NO   |         |       |         |
+| [groupType][14]      | tinyint(3) | unsigned   |     | NO   |         |       |         |
+| [difficulty][15]     | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [raiddifficulty][16] | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #guid
+[2]: #leaderguid
+[3]: #lootmethod
+[4]: #looterguid
+[5]: #lootthreshold
+[6]: #icon1
+[7]: #icon2
+[8]: #icon3
+[9]: #icon4
+[10]: #icon5
+[11]: #icon6
+[12]: #icon7
+[13]: #icon8
+[14]: #grouptype
+[15]: #difficulty
+[16]: #raiddifficulty
 
 **Description of the fields**
 
@@ -205,47 +56,13 @@ The GUID of the character. See characters.guid
 
 ### lootMethod
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Value</p></th>
-<th><p>Name</p></th>
-<th><p>Comments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>FREE_FOR_ALL</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>ROUND_ROBIN</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>MASTER_LOOT</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>GROUP_LOOT</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>NEED_BEFORE_GREED</p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Value | Name              | Comments |
+|-------|-------------------|----------|
+| 0     | FREE_FOR_ALL      |          |
+| 1     | ROUND_ROBIN       |          |
+| 2     | MASTER_LOOT       |          |
+| 3     | GROUP_LOOT        |          |
+| 4     | NEED_BEFORE_GREED |          |
 
 ### looterGuid
 
@@ -262,52 +79,14 @@ If [lootMethod](#groups-lootMethod) is not 2, then it's group leader's guid.
 
 ### groupType
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Value</p></th>
-<th><p>Name</p></th>
-<th><p>Comments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>GROUPTYPE_NORMAL</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>GROUPTYPE_BG</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>GROUPTYPE_RAID</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>GROUPTYPE_BGRAID</p></td>
-<td><p>GROUPTYPE_BG + GROUPTYPE_RAID, // mask</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>GROUPTYPE_UNK1</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>GROUPTYPE_LFG</p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Value | Name             | Comments                               |
+|-------|------------------|----------------------------------------|
+| 0     | GROUPTYPE_NORMAL |                                        |
+| 1     | GROUPTYPE_BG     |                                        |
+| 2     | GROUPTYPE_RAID   |                                        |
+| 3     | GROUPTYPE_BGRAID | GROUPTYPE_BG + GROUPTYPE_RAID, // mask |
+| 4     | GROUPTYPE_UNK1   |                                        |
+| 8     | GROUPTYPE_LFG    |                                        |
 
 ### difficulty
 
