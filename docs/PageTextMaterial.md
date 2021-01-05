@@ -3,7 +3,7 @@
 &lt;noinclude&gt;|
 `Back-to:DBC`
 
-&lt;big&gt;**PageTextMaterial.dbc**&lt;/big&gt;
+**PageTextMaterial.dbc**
 
 This DBC contains material used to display a gossip window for quest or page text.
 
