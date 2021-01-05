@@ -8,13 +8,19 @@ This table holds info about group members.
 
 **Structure**
 
-| Field       | Type       | Attributes | Key | Null | Default | Extra  | Comment |
-|-------------|------------|------------|-----|------|---------|--------|---------|
-| guid        | int(10)    | unsigned   |     | NO   |         |        |         |
-| memberGuid  | int(10)    | unsigned   | PRI | NO   |         | Unique |         |
-| memberFlags | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
-| subgroup    | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
-| roles       | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
+| Field            | Type       | Attributes | Key | Null | Default | Extra  | Comment |
+|------------------|------------|------------|-----|------|---------|--------|---------|
+| [guid][1]        | int(10)    | unsigned   |     | NO   |         |        |         |
+| [memberGuid][2]  | int(10)    | unsigned   | PRI | NO   |         | Unique |         |
+| [memberFlags][3] | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
+| [subgroup[4]     | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
+| [roles][5]       | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
+
+[1]: #guid
+[2]: #memberguid
+[3]: #memberflags
+[4]: #subgroup
+[5]: #roles
 
 **Description of the fields**
 
