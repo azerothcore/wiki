@@ -9,60 +9,15 @@ Gameobjects can be linked too!
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>Dependent Creature</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#linkedguid">linkedGuid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>Master Creature</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#linktype">linkType</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type       | Attributes | Key | Null | Default | Extra | Comment            |
+|-----------------|------------|------------|-----|------|---------|-------|--------------------|
+| [guid][1]       | int(10)    | unsigned   | PRI | NO   |         |       | Dependent Creature |
+| [linkedGuid][2] | int(10)    | unsigned   |     | NO   |         |       | Master Creature    |
+| [linkType][3]   | tinyint(3) | unsigned   |     | NO   | 0       |       |                    |
+
+[1]: #guid
+[2]: #linkedguid
+[3]: #linktype
 
 **Description of the fields**
 
@@ -76,39 +31,9 @@ This is the guid of the [creature](http://www.azerothcore.org/wiki/creature#guid
 
 ### linkedType
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Value</strong></p></td>
-<td><p><strong>Dependent</strong></p></td>
-<td><p><strong>Master</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>creature</p></td>
-<td><p>creature</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>creature</p></td>
-<td><p>gameobject</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>gameobject</p></td>
-<td><p>gameobject</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>gameobject</p></td>
-<td><p>creature</p></td>
-</tr>
-</tbody>
-</table>
-
-
+| Value | Dependent  | Master     |
+|-------|------------|------------|
+| 0     | creature   | creature   |
+| 1     | creature   | gameobject |
+| 2     | gameobject | gameobject |
+| 3     | gameobject | creature   |
