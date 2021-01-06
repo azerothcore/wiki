@@ -2,42 +2,15 @@
 
 [<-Back-to:World](database-world.md)
 
-<table>
-<tbody>
-<tr class="even">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unasigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#ghost_zone">ghost_zone</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unasigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#faction">faction</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unasigned</p></td>
-<td><p></p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|--------------|------------|-----|------|---------|-------|---------|
+| [id][1]         | mediumint(8) | unasigned  | PRI | NO   | 0       |       |         |
+| [ghost_zone][2] | mediumint(8) | unasigned  | PRI | NO   | 0       |       |         |
+| [faction][3]    | smallint(5)  | unasigned  |     | NO   | 0       |       |         |
+
+[1]: #id
+[2]: #ghost_zone
+[3]: #faction
 
 **Description of the fields**
 

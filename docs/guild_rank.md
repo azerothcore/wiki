@@ -8,80 +8,19 @@ This table holds the information on all of the ranks available in a guild along 
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guildid">guildid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rid">rid</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rname">rname</a></p></td>
-<td><p>varchar(20)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rights">rights</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#bankmoneyperday">BankMoneyPerDay</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|----------------------|--------------|------------|-----|------|---------|-------|---------|
+| [guildid][1]         | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [rid][2]             | tinyint(3)   | unsigned   | PRI | NO   |         |       |         |
+| [rname][3]           | varchar(20)  | signed     |     | NO   | "       |       |         |
+| [rights][4]          | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [BankMoneyPerDay][5] | int(10)      | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #guildid
+[2]: #rid
+[3]: #rname
+[4]: #rights
+[5]: #bankmoneyperday
 
 **Description of the fields**
 
@@ -101,117 +40,27 @@ The name of the rank that is displayed in-game.
 
 The rights a player with this rank has in the guild. The calculation of multiple rights is a bit different in this case as the rights do not all have 2^n values. To combine ranks, you must do the OR operation (\|) on the two flags.
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Flag</p></th>
-<th><p>Name</p></th>
-<th><p>Comments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>64</p></td>
-<td><p>GR_RIGHT_EMPTY</p></td>
-<td><p>Having just this flag by itself is equivalent to having no rights at all.</p></td>
-</tr>
-<tr class="even">
-<td><p>65</p></td>
-<td><p>GR_RIGHT_GCHATLISTEN</p></td>
-<td><p>Player can read messages in the guild general chat channel.</p></td>
-</tr>
-<tr class="odd">
-<td><p>66</p></td>
-<td><p>GR_RIGHT_GCHATSPEAK</p></td>
-<td><p>Player can type messages in the guild general chat channel.</p></td>
-</tr>
-<tr class="even">
-<td><p>68</p></td>
-<td><p>GR_RIGHT_OFFCHATLISTEN</p></td>
-<td><p>Player can read messages in the guild officers channel.</p></td>
-</tr>
-<tr class="odd">
-<td><p>72</p></td>
-<td><p>GR_RIGHT_OFFCHATSPEAK</p></td>
-<td><p>Player can type messages in the guild officers channel.</p></td>
-</tr>
-<tr class="even">
-<td><p>80</p></td>
-<td><p>GR_RIGHT_INVITE</p></td>
-<td><p>Can invite other players to guild.</p></td>
-</tr>
-<tr class="odd">
-<td><p>96</p></td>
-<td><p>GR_RIGHT_REMOVE</p></td>
-<td><p>Can kick other players out of guild.</p></td>
-</tr>
-<tr class="even">
-<td><p>192</p></td>
-<td><p>GR_RIGHT_PROMOTE</p></td>
-<td><p>Can promote other players.</p></td>
-</tr>
-<tr class="odd">
-<td><p>320</p></td>
-<td><p>GR_RIGHT_DEMOTE</p></td>
-<td><p>Can demote other players.</p></td>
-</tr>
-<tr class="even">
-<td><p>4160</p></td>
-<td><p>GR_RIGHT_SETMOTD</p></td>
-<td><p>Can change the guild message of the day.</p></td>
-</tr>
-<tr class="odd">
-<td><p>8256</p></td>
-<td><p>GR_RIGHT_EPNOTE</p></td>
-<td><p>Can edit other players' personal notes.</p></td>
-</tr>
-<tr class="even">
-<td><p>16448</p></td>
-<td><p>GR_RIGHT_VIEWOFFNOTE</p></td>
-<td><p>Can view the officer notes of other players.</p></td>
-</tr>
-<tr class="odd">
-<td><p>32832</p></td>
-<td><p>GR_RIGHT_EOFFNOTE</p></td>
-<td><p>Can edit officer notes of other players.</p></td>
-</tr>
-<tr class="even">
-<td><p>65600</p></td>
-<td><p>GR_RIGHT_MODIFY_GUILD_INFO</p></td>
-<td><p>Can edit guild info.</p></td>
-</tr>
-<tr class="odd">
-<td><p>131072</p></td>
-<td><p>GR_RIGHT_WITHDRAW_GOLD_LOCK</p></td>
-<td><p>Can remove money withdraw capacity.</p></td>
-</tr>
-<tr class="even">
-<td><p>262144</p></td>
-<td><p>GR_RIGHT_WITHDRAW_REPAIR</p></td>
-<td><p>Can withdraw for repair.</p></td>
-</tr>
-<tr class="odd">
-<td><p>524288</p></td>
-<td><p>GR_RIGHT_WITHDRAW_GOLD</p></td>
-<td><p>Can withdraw gold.</p></td>
-</tr>
-<tr class="even">
-<td><p>1048576</p></td>
-<td><p>GR_RIGHT_CREATE_GUILD_EVENT</p></td>
-<td><p>Can create a guild event.</p></td>
-</tr>
-<tr class="odd">
-<td><p>1962495</p></td>
-<td><p>GR_RIGHT_ALL</p></td>
-<td><p>Has all of the rights.</p></td>
-</tr>
-</tbody>
-</table>
+| Flag    | Name                        | Comments                                                                  |
+|---------|-----------------------------|---------------------------------------------------------------------------|
+| 64      | GR_RIGHT_EMPTY              | Having just this flag by itself is equivalent to having no rights at all. |
+| 65      | GR_RIGHT_GCHATLISTEN        | Player can read messages in the guild general chat channel.               |
+| 66      | GR_RIGHT_GCHATSPEAK         | Player can type messages in the guild general chat channel.               |
+| 68      | GR_RIGHT_OFFCHATLISTEN      | Player can read messages in the guild officers channel.                   |
+| 72      | GR_RIGHT_OFFCHATSPEAK       | Player can type messages in the guild officers channel.                   |
+| 80      | GR_RIGHT_INVITE             | Can invite other players to guild.                                        |
+| 96      | GR_RIGHT_REMOVE             | Can kick other players out of guild.                                      |
+| 192     | GR_RIGHT_PROMOTE            | Can promote other players.                                                |
+| 320     | GR_RIGHT_DEMOTE             | Can demote other players.                                                 |
+| 4160    | GR_RIGHT_SETMOTD            | Can change the guild message of the day.                                  |
+| 8256    | GR_RIGHT_EPNOTE             | Can edit other players' personal notes.                                   |
+| 16448   | GR_RIGHT_VIEWOFFNOTE        | Can view the officer notes of other players.                              |
+| 32832   | GR_RIGHT_EOFFNOTE           | Can edit officer notes of other players.                                  |
+| 65600   | GR_RIGHT_MODIFY_GUILD_INFO  | Can edit guild info.                                                      |
+| 131072  | GR_RIGHT_WITHDRAW_GOLD_LOCK | Can remove money withdraw capacity.                                       |
+| 262144  | GR_RIGHT_WITHDRAW_REPAIR    | Can withdraw for repair.                                                  |
+| 524288  | GR_RIGHT_WITHDRAW_GOLD      | Can withdraw gold.                                                        |
+| 1048576 | GR_RIGHT_CREATE_GUILD_EVENT | Can create a guild event.                                                 |
+| 1962495 | GR_RIGHT_ALL                | Has all of the rights.                                                    |
 
 ### BankMoneyPerDay
 

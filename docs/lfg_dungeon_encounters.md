@@ -4,54 +4,15 @@
 
 **The \`lfg\_dungeon\_encounters\` table**
 
-`table-no-description|0`
-
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#achievementid">achievementId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Achievement marking final boss completion</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#dungeonid">dungeonId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Dungeon entry from dbc</p></td>
-</tr>
-</tbody>
-</table>
+| Field              | Type    | Attributes | Key | Null | Default | Extra | Comment                                   |
+|--------------------|---------|------------|-----|------|---------|-------|-------------------------------------------|
+| [achievementId][1] | int(10) | unsigned   | PRI | NO   | 0       |       | Achievement marking final boss completion |
+| [dungeonId][2]     | int(10) | unsigned   |     | NO   | 0       |       | Dungeon entry from dbc                    |
+
+[1]: #achievementid
+[2]: #dungeonid
 
 **Description of the fields**
 

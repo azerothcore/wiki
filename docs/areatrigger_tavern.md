@@ -8,50 +8,13 @@ Enable a trigger when player enters a city or tavern. This causes the player to 
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field     | Type         | Attributes | Key | Null | Default | Extra | Comment    |
+|-----------|--------------|------------|-----|------|---------|-------|------------|
+| [id][1]   | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Identifier |
+| [name][2] | text         | signed     |     | YES  | NULL    |       |            |
+
+[1]: #id
+[2]: #name
 
 **Description of the fields**
 
@@ -62,3 +25,13 @@ This is the trigger identifier, see [AreaTrigger.dbc](DBC-AreaTrigger)
 ### name
 
 Name of the city or tavern. This is purely for descriptive purposes.
+
+### Example
+
+| id  | name                                         |
+|-----|----------------------------------------------|
+| 71  | Westfall - Sentinel Hill Inn                 |
+| 98  | Nesingwary's Expedition                      |
+| 178 | Strahnbrad                                   |
+| 562 | Elwynn Forest - Goldshire - Lion's Pride Inn |
+| 682 | Redridge Mountains - Lakeshire Inn           |
