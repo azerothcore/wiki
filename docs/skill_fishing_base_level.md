@@ -13,6 +13,9 @@ This table controls the minimum skill level required in fishing to fish in a cer
 | [entry][1] | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Area identifier              |
 | [skill][2] | smallint(6)  | signed     |     | NO   | 0       |       | Base skill level requirement |
 
+[1]: #entry
+[2]: #skill
+
 **Description of the fields**
 
 ### entry
