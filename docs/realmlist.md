@@ -8,160 +8,31 @@ This table sets up information on all available realms. Each row controls a diff
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>Auto increment</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(32)</p></td>
-<td><p>signed</p></td>
-<td><p>UNI</p></td>
-<td><p>NO</p></td>
-<td><p>AzerothCore</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#address">address</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>127.0.0.1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><a href="#localaddress">localAddress</a></td>
-<td>varchar(255)</td>
-<td>signed</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>127.0.0.1</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#port">port</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>8085</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#icon">icon</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#flag">flag</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>2</p></td>
-<td><p><br />
-</p></td>
-<td><p>Updates population status or realm status</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#timezone">timezone</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#allowedsecuritylevel">allowedSecurityLevel</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#population">population</a></p></td>
-<td><p>float</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#gamebuild">gamebuild</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>12340</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field                     | Type         | Attributes | Key | Null | Default     | Extra          | Comment                                   |
+|---------------------------|--------------|------------|-----|------|-------------|----------------|-------------------------------------------|
+| [id][1]                   | int(10)      | unsigned   | PRI | NO   |             | Auto increment |                                           |
+| [name][2]                 | varchar(32)  | signed     | UNI | NO   | AzerothCore |                |                                           |
+| [address][3]              | varchar(255) | signed     |     | NO   | 127.0.0.1   |                |                                           |
+| [localAddress][4]         | varchar(255) | signed     |     | NO   | 127.0.0.1   |                |                                           |
+| [port][5]                 | smallint(5)  | unsigned   |     | NO   | 8085        |                |                                           |
+| [icon][6]                 | tinyint(3)   | unsigned   |     | NO   | 0           |                |                                           |
+| [flag][7]                 | tinyint(3)   | unsigned   |     | NO   | 2           |                | Updates population status or realm status |
+| [timezone][8]             | tinyint(3)   | unsigned   |     | NO   | 0           |                |                                           |
+| [allowedSecurityLevel][9] | tinyint(3)   | unsigned   |     | NO   | 0           |                |                                           |
+| [population][10]          | float        | unsigned   |     | NO   | 0           |                |                                           |
+| [gamebuild][11]           | int(10)      | unsigned   |     | NO   | 12340       |                |                                           |
+
+[1]: #id
+[2]: #name
+[3]: #address
+[4]: #localaddress
+[5]: #port
+[6]: #icon
+[7]: #flag
+[8]: #timezone
+[9]: #allowedsecuritylevel
+[10]: #population
+[11]: #gamebuild
 
 **Description of the fields**
 
@@ -191,40 +62,13 @@ The port that the world server is running on. If all world servers are on the sa
 
 The icon of the realm.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Icon</p></th>
-<th><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Normal</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>PvP</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Normal</p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>RP</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>RP PvP</p></td>
-</tr>
-</tbody>
-</table>
+| Icon | Type   |
+|------|--------|
+| 0    | Normal |
+| 1    | PvP    |
+| 4    | Normal |
+| 6    | RP     |
+| 8    | RP PvP |
 
 ### flag
 
@@ -246,251 +90,66 @@ Realmflag of this realm.
 
 The realm timezone, it will be displayed in the tabs of the realmlist
 
-<table>
-<thead>
-<tr class="header">
-<th><p>timezone</p></th>
-<th><p>displayed name</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Development</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>United States</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>Oceanic</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Latin America</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>Tournament</p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>Korea</p></td>
-</tr>
-<tr class="odd">
-<td><p>7</p></td>
-<td><p>Tournament</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>English</p></td>
-</tr>
-<tr class="odd">
-<td><p>9</p></td>
-<td><p>German</p></td>
-</tr>
-<tr class="even">
-<td><p>10</p></td>
-<td><p>French</p></td>
-</tr>
-<tr class="odd">
-<td><p>11</p></td>
-<td><p>Spanish</p></td>
-</tr>
-<tr class="even">
-<td><p>12</p></td>
-<td><p>Russian</p></td>
-</tr>
-<tr class="odd">
-<td><p>13</p></td>
-<td><p>Tournament</p></td>
-</tr>
-<tr class="even">
-<td><p>14</p></td>
-<td><p>Taiwan</p></td>
-</tr>
-<tr class="odd">
-<td><p>15</p></td>
-<td><p>Tournament</p></td>
-</tr>
-<tr class="even">
-<td><p>16</p></td>
-<td><p>China</p></td>
-</tr>
-<tr class="odd">
-<td><p>17</p></td>
-<td><p>CN1</p></td>
-</tr>
-<tr class="even">
-<td><p>18</p></td>
-<td><p>CN2</p></td>
-</tr>
-<tr class="odd">
-<td><p>19</p></td>
-<td><p>CN3</p></td>
-</tr>
-<tr class="even">
-<td><p>20</p></td>
-<td><p>CN4</p></td>
-</tr>
-<tr class="odd">
-<td><p>21</p></td>
-<td><p>CN5</p></td>
-</tr>
-<tr class="even">
-<td><p>22</p></td>
-<td><p>CN6</p></td>
-</tr>
-<tr class="odd">
-<td><p>23</p></td>
-<td><p>CN7</p></td>
-</tr>
-<tr class="even">
-<td><p>24</p></td>
-<td><p>CN8</p></td>
-</tr>
-<tr class="odd">
-<td><p>25</p></td>
-<td><p>Tournament</p></td>
-</tr>
-<tr class="even">
-<td><p>26</p></td>
-<td><p>Test Server</p></td>
-</tr>
-<tr class="odd">
-<td><p>27</p></td>
-<td><p>Tournament</p></td>
-</tr>
-<tr class="even">
-<td>29</td>
-<td>CN9</td>
-</tr>
-<tr class="odd">
-<td>30</td>
-<td>Test Server 2</td>
-</tr>
-<tr class="even">
-<td><p>31</p></td>
-<td><p>CN10</p></td>
-</tr>
-<tr class="odd">
-<td>32</td>
-<td>CTC</td>
-</tr>
-<tr class="even">
-<td><p>33</p></td>
-<td><p>CNC</p></td>
-</tr>
-<tr class="odd">
-<td><p>34</p></td>
-<td><p>CN1/4</p></td>
-</tr>
-<tr class="even">
-<td>35</td>
-<td><p>CN/2/6/9</p></td>
-</tr>
-<tr class="odd">
-<td>36</td>
-<td><p>CN3/7</p></td>
-</tr>
-<tr class="even">
-<td><p>37</p></td>
-<td><p>Russian Tournament</p></td>
-</tr>
-<tr class="odd">
-<td>38</td>
-<td>CN5/8</td>
-</tr>
-<tr class="even">
-<td>39</td>
-<td>CN11</td>
-</tr>
-<tr class="odd">
-<td>40</td>
-<td>CN12</td>
-</tr>
-<tr class="even">
-<td>41</td>
-<td>CN13</td>
-</tr>
-<tr class="odd">
-<td>42</td>
-<td>CN14</td>
-</tr>
-<tr class="even">
-<td>43</td>
-<td>CN15</td>
-</tr>
-<tr class="odd">
-<td>44</td>
-<td>CN16</td>
-</tr>
-<tr class="even">
-<td>45</td>
-<td>CN17</td>
-</tr>
-<tr class="odd">
-<td>46</td>
-<td>CN18</td>
-</tr>
-<tr class="even">
-<td>47</td>
-<td>CN19</td>
-</tr>
-<tr class="odd">
-<td>48</td>
-<td>CN20</td>
-</tr>
-<tr class="even">
-<td>49</td>
-<td>Brazil</td>
-</tr>
-<tr class="odd">
-<td>50</td>
-<td>Italian</td>
-</tr>
-<tr class="even">
-<td>51</td>
-<td>Hyrule</td>
-</tr>
-<tr class="odd">
-<td>52</td>
-<td>QA2 Test</td>
-</tr>
-<tr class="even">
-<td>53</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>54</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>55</td>
-<td>Recommended Realm</td>
-</tr>
-<tr class="odd">
-<td>56</td>
-<td>Test</td>
-</tr>
-<tr class="even">
-<td>57</td>
-<td>Recommended Realm</td>
-</tr>
-<tr class="odd">
-<td>58</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>59</td>
-<td>Future Test</td>
-</tr>
-</tbody>
-</table>
+| timezone | displayed name     |
+|----------|--------------------|
+| 1        | Development        |
+| 2        | United States      |
+| 3        | Oceanic            |
+| 4        | Latin America      |
+| 5        | Tournament         |
+| 6        | Korea              |
+| 7        | Tournament         |
+| 8        | English            |
+| 9        | German             |
+| 10       | French             |
+| 11       | Spanish            |
+| 12       | Russian            |
+| 13       | Tournament         |
+| 14       | Taiwan             |
+| 15       | Tournament         |
+| 16       | China              |
+| 17       | CN1                |
+| 18       | CN2                |
+| 19       | CN3                |
+| 20       | CN4                |
+| 21       | CN5                |
+| 22       | CN6                |
+| 23       | CN7                |
+| 24       | CN8                |
+| 25       | Tournament         |
+| 26       | Test Server        |
+| 27       | Tournament         |
+| 29       | CN9                |
+| 30       | Test Server 2      |
+| 31       | CN10               |
+| 32       | CTC                |
+| 33       | CNC                |
+| 34       | CN1/4              |
+| 35       | CN/2/6/9           |
+| 36       | CN3/7              |
+| 37       | Russian Tournament |
+| 38       | CN5/8              |
+| 39       | CN11               |
+| 40       | CN12               |
+| 41       | CN13               |
+| 42       | CN14               |
+| 43       | CN15               |
+| 44       | CN16               |
+| 45       | CN17               |
+| 46       | CN18               |
+| 47       | CN19               |
+| 48       | CN20               |
+| 49       | Brazil             |
+| 50       | Italian            |
+| 51       | Hyrule             |
+| 52       | QA2 Test           |
+| 53       |                    |
+| 54       |                    |
+| 55       | Recommended Realm  |
+| 56       | Test               |
+| 57       | Recommended Realm  |
+| 58       |                    |
+| 59       | Future Test        |
 
 ### allowedSecurityLevel
 
