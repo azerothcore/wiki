@@ -4,75 +4,32 @@
 
 **The \`lfg\_data\` table**
 
-`table-no-description`
+This table contains saved data for LFG. This table is constantly in use by the core.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#dungeon">dungeon</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#state">state</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field        | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
+|--------------|------------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]    | int(10)    | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [dungeon][2] | int(10)    | unsigned   |     | NO   | 0       |       |                          |
+| [state][3]   | tinyint(3) | unsigned   |     | NO   | 0       |       |                          |
+
+[1]: #guid
+[2]: #dungeon
+[3]: #state
 
 **Description of the fields**
 
 ### guid
 
-`field-no-description|1`
+The guid for this group.
 
 ### dungeon
 
-`field-no-description|2`
+The dungeon ID from dbc.
 
 ### state
 
-`field-no-description|3`
+The state for this group / dungeon.
+
+Source: https://ascemu.github.io/Wiki/database/characters/lfg_data/
