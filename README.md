@@ -7,7 +7,7 @@ Wiki for the AzerothCore Project available here: http://azerothcore.github.io/wi
 ### With [docker-compose](https://docs.docker.com/compose/install/)
 
 1. install [docker-compose](https://docs.docker.com/compose/install/)
-2. run `docker-compose up`
+2. run `docker-compose up github-wiki-theme`
 3. the website will be ready on `http://127.0.0.1:4000/`
 
 ### Without docker compose
