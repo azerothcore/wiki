@@ -4,6 +4,12 @@ Wiki for the AzerothCore Project available here: http://azerothcore.github.io/wi
 
 ## How to install locally (development)
 
+### With docker-compose
+
+Just run `docker-compose up`
+
+### Without docker compose
+
 First of all install the [ruby development environment](https://jekyllrb.com/docs/installation/) using [this guide](https://jekyllrb.com/docs/installation/).
 
 After that install `bundler` using gem and run `bundler install`:
