@@ -10,68 +10,17 @@ That opcode is sent for quests in which you have to loot creatures, who are alre
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong>'</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#npc_entry">npc_entry</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td>Reference to the creature_template table</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spell_id">spell_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p>The ID of the spell to be cast</p></td>
-</tr>
-<tr class="even">
-<td><a href="#cast_flags">cast_flags</a></td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>NULL</td>
-<td><br />
-</td>
-<td><p>Who casts the spell on who, creature &lt;=&gt; player (values: 0-3)</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#user_type">user_type</a></p></td>
-<td><p>smallint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p>Relation with summoner: 0-no 1-friendly 2-raid 3-party player can click</p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type        | Attributes | Key | Null | Default | Extra | Comment                                                                 |
+|-----------------|-------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------|
+| [npc_entry][1]  | int(10)     | unsigned   | PRI | NO   | NULL    |       | Reference to the creature_template table                                |
+| [spell_id][2]   | int(10)     | unsigned   | PRI | NO   | NULL    |       | The ID of the spell to be cast                                          |
+| [cast_flags][3] | tinyint(3)  | unsigned   |     | NO   | NULL    |       | Who casts the spell on who, creature <=> player (values: 0-3)           |
+| [user_type][4]  | smallint(3) | unsigned   |     | NO   | 0       |       | Relation with summoner: 0-no 1-friendly 2-raid 3-party player can click |
+
+[1]: #npc_entry
+[2]: #spell_id
+[3]: #cast_flags
+[4]: #user_type
 
 **Description of the fields**
 
@@ -107,35 +56,9 @@ You can use that table for the actual value:
 
 Relation with summoner: defines who is able to use this spellclick.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Value</p></th>
-<th><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Only self</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Friendly</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Raid</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Party</p></td>
-</tr>
-</tbody>
-</table>
-
-
+| Value | Description |
+|-------|-------------|
+| 0     | Only self   |
+| 1     | Friendly    |
+| 2     | Raid        |
+| 3     | Party       |

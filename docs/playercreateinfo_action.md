@@ -6,83 +6,19 @@
 
 This table holds information on what default actions a brand new character should start out with. Each race-class combination can have a different default starting setup.
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#race">race</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#class">class</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#button">button</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#action">action</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#type">type</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field       | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|-------------|-------------|------------|-----|------|---------|-------|---------|
+| [race][1]   | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
+| [class][2]  | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
+| [button][3] | smallint(5) | unsigned   |     | NO   | 0       |       |         |
+| [action][4] | int(11)     | unsigned   |     | NO   | 0       |       |         |
+| [type][5]   | smallint(5) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #race
+[2]: #class
+[3]: #button
+[4]: #action
+[5]: #type
 
 **Field Descriptions**
 
@@ -121,31 +57,8 @@ Depending on the type value, this could be either the [spell ID](Spell#Spell-ID)
 
 The type of action:
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>ID</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Spell</p></td>
-</tr>
-<tr class="even">
-<td><p>64</p></td>
-<td><p>Macro</p></td>
-</tr>
-<tr class="odd">
-<td><p>128</p></td>
-<td><p>Item</p></td>
-</tr>
-</tbody>
-</table>
-
-
+| ID  | Type  |
+|-----|-------|
+| 0   | Spell |
+| 64  | Macro |
+| 128 | Item  |

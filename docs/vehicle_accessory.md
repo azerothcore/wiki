@@ -8,100 +8,23 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#accessory_entry">accessory_entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#seat_id">seat_id</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#minion">minion</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#description">description</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#summonype">summontype</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>6</p></td>
-<td><p> </p></td>
-<td><p>see enum TempSummonType</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#summontimer">summontimer</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>30000</p></td>
-<td><p> </p></td>
-<td><p>timer, only relevant for certain summontypes</p></td>
-</tr>
-</tbody>
-</table>
+| Field                | Type         | Attributes | Key | Null | Default | Extra | Comment                                      |
+|----------------------|--------------|------------|-----|------|---------|-------|----------------------------------------------|
+| [guid][1]            | mediumint(8) | unsigned   | PRI | NO   | 0       |       |                                              |
+| [accessory_entry][2] | mediumint(8) | unsigned   |     | NO   | 0       |       |                                              |
+| [seat_id][3]         | tinyint(1)   | signed     | PRI | NO   | 0       |       |                                              |
+| [minion][4]          | tinyint(1)   | unsigned   |     | NO   | 0       |       |                                              |
+| [description][5]     | text         | signed     |     | NO   | "       |       |                                              |
+| [summontype][6]      | tinyint(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
+| [summontimer][7]     | int(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
+
+[1]: #guid
+[2]: #accessory_entry
+[3]: #seat_id
+[4]: #minion
+[5]: #description
+[6]: #summontype
+[7]: #summontimer
 
 **Description of the fields**
 
@@ -131,62 +54,16 @@ Comment
 
 ### summontype
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Flag</p></th>
-<th><p>Name</p></th>
-<th><p>Comments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>TEMPSUMMON_TIMED_OR_DEAD_DESPAWN</p></td>
-<td><p>Despawns after a specified time OR when the creature disappears</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>TEMPSUMMON_TIMED_OR_CORPSE_DESPAWN</p></td>
-<td><p>Despawns after a specified time OR when the creature dies</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>TEMPSUMMON_TIMED_DESPAWN</p></td>
-<td><p>Despawns after a specified time</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>TEMPSUMMON_TIMED_DESPAWN_OUT_OF_COMBAT</p></td>
-<td><p>Despawns after a specified time after the creature is out of combat</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>TEMPSUMMON_CORPSE_DESPAWN</p></td>
-<td><p>Despawns instantly after death</p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>TEMPSUMMON_CORPSE_TIMED_DESPAWN</p></td>
-<td><p>Despawns after a specified time after death</p></td>
-</tr>
-<tr class="odd">
-<td><p>7</p></td>
-<td><p>TEMPSUMMON_DEAD_DESPAWN</p></td>
-<td><p>Despawns when the creature disappears</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>TEMPSUMMON_MANUAL_DESPAWN</p></td>
-<td><p>Despawns when UnSummon() is called</p></td>
-</tr>
-</tbody>
-</table>
+| Flag | Name                                   | Comments                                                            |
+|------|----------------------------------------|---------------------------------------------------------------------|
+| 1    | TEMPSUMMON_TIMED_OR_DEAD_DESPAWN       | Despawns after a specified time OR when the creature disappears     |
+| 2    | TEMPSUMMON_TIMED_OR_CORPSE_DESPAWN     | Despawns after a specified time OR when the creature dies           |
+| 3    | TEMPSUMMON_TIMED_DESPAWN               | Despawns after a specified time                                     |
+| 4    | TEMPSUMMON_TIMED_DESPAWN_OUT_OF_COMBAT | Despawns after a specified time after the creature is out of combat |
+| 5    | TEMPSUMMON_CORPSE_DESPAWN              | Despawns instantly after death                                      |
+| 6    | TEMPSUMMON_CORPSE_TIMED_DESPAWN        | Despawns after a specified time after death                         |
+| 7    | TEMPSUMMON_DEAD_DESPAWN                | Despawns when the creature disappears                               |
+| 8    | TEMPSUMMON_MANUAL_DESPAWN              | Despawns when UnSummon() is called                                  |
 
 ### summontimer
 
