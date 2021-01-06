@@ -4,9 +4,11 @@ Wiki for the AzerothCore Project available here: http://azerothcore.github.io/wi
 
 ## How to install locally (development)
 
-### With docker-compose
+### With [docker-compose](https://docs.docker.com/compose/install/)
 
-Just run `docker-compose up`
+1. install [docker-compose](https://docs.docker.com/compose/install/)
+2. run `docker-compose up`
+3. the website will be ready on `http://127.0.0.1:4000/`
 
 ### Without docker compose
 
