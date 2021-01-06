@@ -8,50 +8,10 @@ Contains all creature instances that have to be spawned/unspawned during defined
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#evententry">eventEntry</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>Entry of the game event. Put negative entry to remove during event.</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p>Unique</p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type       | Attributes | Key | Null | Default | Extra  | Comment                                                             |
+|-----------------|------------|------------|-----|------|---------|--------|---------------------------------------------------------------------|
+| [eventEntry][1] | tinyint(3) | signed     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
+| [guid][2]       | int(10)    | unsigned   | PRI | NO   |         | Unique |                                                                     |
 
 **Description of the fields**
 
