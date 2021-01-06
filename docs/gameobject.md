@@ -8,190 +8,41 @@ This table holds the individual object data on each spawned game object in the w
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p>Auto increment</p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#id">id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Gameobject Identifier</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#map">map</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Map Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spawnmask">spawnMask</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#phasemask">phaseMask</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#position_x">position_x</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#position_y">position_y</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#position_z">position_z</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#orientation">orientation</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rotation0">rotation0</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rotation1">rotation1</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rotation2">rotation2</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rotation3">rotation3</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spawntimesecs">spawntimesecs</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#animprogress">animprogress</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#state">state</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type         | Attributes | Key | Null | Default | Extra          | Comment                  |
+|---------------------|--------------|------------|-----|------|---------|----------------|--------------------------|
+| [guid][1]           | int(10)      | unsigned   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
+| [id][2]             | mediumint(8) | unsigned   |     | NO   | 0       |                | Gameobject Identifier    |
+| [map][3]            | smallint(5)  | unsigned   |     | NO   | 0       |                | Map Identifier           |
+| [spawnMask][4]      | tinyint(3)   | unsigned   |     | NO   | 1       |                |                          |
+| [phaseMask][5]      | smallint(5)  | unsigned   |     | NO   | 1       |                |                          |
+| [position_x][6]     | float        | signed     |     | NO   | 0       |                |                          |
+| [position_y][7]     | float        | signed     |     | NO   | 0       |                |                          |
+| [position_z][8]     | float        | signed     |     | NO   | 0       |                |                          |
+| [orientation][9]    | float        | signed     |     | NO   | 0       |                |                          |
+| [rotation0][10]     | float        | signed     |     | NO   | 0       |                |                          |
+| [rotation1][11]     | float        | signed     |     | NO   | 0       |                |                          |
+| [rotation2][12]     | float        | signed     |     | NO   | 0       |                |                          |
+| [rotation3][13]     | float        | signed     |     | NO   | 0       |                |                          |
+| [spawntimesecs][14] | int(11)      | signed     |     | NO   | 0       |                |                          |
+| [animprogress][15]  | tinyint(3)   | unsigned   |     | NO   | 0       |                |                          |
+| [state][16]         | tinyint(3)   | unsigned   |     | NO   | 1       |                |                          |
+
+[1]: #guid
+[2]: #id
+[3]: #map
+[4]: #spawnmask
+[5]: #phasemask
+[6]: #position_x
+[7]: #position_y
+[8]: #position_z
+[9]: #orientation
+[10]: #rotation0
+[11]: #rotation1
+[12]: #rotation2
+[13]: #rotation3
+[14]: #spawntimesecs
+[15]: #animprogress
+[16]: #state
 
 **Description of the fields**
 
@@ -213,45 +64,14 @@ Controls under which difficulties the object is spawned.
 
 Just like flags you can add them as you wish so 3 would be: Spawned in 10/25 man normal versions of maps (pre 3.2 all maps)
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Value</p></th>
-<th><p>Comment</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Not spawned</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode)</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Spawned only in 10-man heroic versions of maps</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Spawned only in 25-man-heroic versions of maps</p></td>
-</tr>
-<tr class="even">
-<td><p>15</p></td>
-<td><p>Spawned in all versions of maps</p></td>
-</tr>
-</tbody>
-</table>
-
+| Value | Comment                                                                              |
+|-------|--------------------------------------------------------------------------------------|
+| 0     | Not spawned                                                                          |
+| 1     | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
+| 2     | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
+| 4     | Spawned only in 10-man heroic versions of maps                                       |
+| 8     | Spawned only in 25-man-heroic versions of maps                                       |
+| 15    | Spawned in all versions of maps                                                      |
 
 ### phaseMask
 
@@ -297,4 +117,3 @@ For chests or doors.
 
 -   1 = closed
 -   0 = open
-
