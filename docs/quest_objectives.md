@@ -8,141 +8,31 @@ This table provides answer for a very important question. What do I need to do i
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>ID</p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td>NO</td>
-<td>PRI</td>
-<td>0</td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>QuestID</p></td>
-<td>mediumint(8)</td>
-<td>unsigned</td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>Type</p></td>
-<td><p>tinyint(3)</p></td>
-<td>unsigned</td>
-<td>NO</td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>StorageIndex</p></td>
-<td>tinyint(3)</td>
-<td>signed</td>
-<td>NO</td>
-<td><p><br />
-</p></td>
-<td>0</td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>ObjectID</p></td>
-<td><p>int(10)</p></td>
-<td>signed</td>
-<td>NO</td>
-<td><br />
-</td>
-<td>0</td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>Amount</p></td>
-<td><p>int(10)</p></td>
-<td>signed</td>
-<td>NO</td>
-<td><br />
-</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>Flags</td>
-<td>int(10)</td>
-<td>unsigned</td>
-<td>NO</td>
-<td><br />
-</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>Flags2</td>
-<td>int(10)</td>
-<td>unsigned</td>
-<td>NO</td>
-<td><br />
-</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>ProgressBarWeight</td>
-<td>float</td>
-<td><br />
-</td>
-<td>NO</td>
-<td><br />
-</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>Description</td>
-<td>text</td>
-<td><br />
-</td>
-<td>YES</td>
-<td><br />
-</td>
-<td>NULL</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>VerifiedBuild</td>
-<td>smallint(5)</td>
-<td>signed</td>
-<td>NO</td>
-<td><br />
-</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Field                  | Type         | Attributes | Null | Key | Default | Comment |
+|------------------------|--------------|------------|------|-----|---------|---------|
+| [ID][1]                | mediumint(8) | unsigned   | NO   | PRI | 0       |         |
+| [QuestID][2]           | mediumint(8) | unsigned   | NO   |     | 0       |         |
+| [Type][3]              | tinyint(3)   | unsigned   | NO   |     | 0       |         |
+| [StorageIndex][4]      | tinyint(3)   | signed     | NO   |     | 0       |         |
+| [ObjectID][5]          | int(10)      | signed     | NO   |     | 0       |         |
+| [Amount][6]            | int(10)      | signed     | NO   |     | 0       |         |
+| [Flags][7]             | int(10)      | unsigned   | NO   |     | 0       |         |
+| [Flags2][8]            | int(10)      | unsigned   | NO   |     | 0       |         |
+| [ProgressBarWeight][9] | float        |            | NO   |     | 0       |         |
+| [Description][10]      | text         |            | YES  |     | NULL    |         |
+| [VerifiedBuild][11]    | smallint(5)  | signed     | NO   |     | 0       |         |
+
+[1]: #id
+[2]: #questid
+[3]: #type
+[4]: #storageindex
+[5]: #objectid
+[6]: #amount
+[7]: #flags
+[8]: #flags2
+[9]: #progressbarweight
+[10]: #description
+[11]: #verifiedbuild
 
 ## Description of the fields
 
@@ -156,117 +46,26 @@ The Quest Id from quest\_template.id
 
 ### Type
 
-<table>
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>ID</th>
-<th>ObjectID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_MONSTER</td>
-<td>0</td>
-<td><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature_template.entry</a></td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_ITEM</td>
-<td>1</td>
-<td>itemID from Item.db2</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_GAMEOBJECT</td>
-<td>2</td>
-<td><a href="https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-entry">gameobject_template.entry</a></td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_TALKTO</td>
-<td>3</td>
-<td><a href="https://trinitycore.atlassian.net/wiki/display/tc/creature_template#creature_template-entry">creature_template.entry</a></td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_CURRENCY</td>
-<td>4</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_LEARNSPELL</td>
-<td>5</td>
-<td>SpellId Spell.db2</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_MIN_REPUTATION</td>
-<td>6</td>
-<td>Faction</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_MAX_REPUTATION</td>
-<td>7</td>
-<td>Faction</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_MONEY</td>
-<td>8</td>
-<td>Money</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_PLAYERKILLS</td>
-<td>9</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_AREATRIGGER</td>
-<td>10</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_WINPETBATTLEAGAINSTNPC</td>
-<td>11</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_DEFEATBATTLEPET</td>
-<td>12</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_WINPVPPETBATTLES</td>
-<td>13</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_CRITERIA_TREE</td>
-<td>14</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_PROGRESS_BAR</td>
-<td>15</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>QUEST_OBJECTIVE_HAVE_CURRENCY</td>
-<td>16</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>QUEST_OBJECTIVE_OBTAIN_CURRENCY</td>
-<td>17</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Type                                   | ID | ObjectID                  |
+|----------------------------------------|----|---------------------------|
+| QUEST_OBJECTIVE_MONSTER                | 0  | creature_template.entry   |
+| QUEST_OBJECTIVE_ITEM                   | 1  | itemID from Item.db2      |
+| QUEST_OBJECTIVE_GAMEOBJECT             | 2  | gameobject_template.entry |
+| QUEST_OBJECTIVE_TALKTO                 | 3  | creature_template.entry   |
+| QUEST_OBJECTIVE_CURRENCY               | 4  |                           |
+| QUEST_OBJECTIVE_LEARNSPELL             | 5  | SpellId Spell.db2         |
+| QUEST_OBJECTIVE_MIN_REPUTATION         | 6  | Faction                   |
+| QUEST_OBJECTIVE_MAX_REPUTATION         | 7  | Faction                   |
+| QUEST_OBJECTIVE_MONEY                  | 8  | Money                     |
+| QUEST_OBJECTIVE_PLAYERKILLS            | 9  |                           |
+| QUEST_OBJECTIVE_AREATRIGGER            | 10 |                           |
+| QUEST_OBJECTIVE_WINPETBATTLEAGAINSTNPC | 11 |                           |
+| QUEST_OBJECTIVE_DEFEATBATTLEPET        | 12 |                           |
+| QUEST_OBJECTIVE_WINPVPPETBATTLES       | 13 |                           |
+| QUEST_OBJECTIVE_CRITERIA_TREE          | 14 |                           |
+| QUEST_OBJECTIVE_PROGRESS_BAR           | 15 |                           |
+| QUEST_OBJECTIVE_HAVE_CURRENCY          | 16 |                           |
+| QUEST_OBJECTIVE_OBTAIN_CURRENCY        | 17 |                           |
 
 ### StorageIndex
 
@@ -302,5 +101,3 @@ Like all flag based fields, **QuestObjectiveFlags** can be added for the differe
 ### Description
 
 ### VerifiedBuild
-
-
