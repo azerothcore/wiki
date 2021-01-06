@@ -8,130 +8,29 @@ This table controls the reputation given by creatures when killed by other playe
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#creature_id">creature_id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Creature Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewonkillrepfaction">RewOnKillRepFaction1</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewonkillrepfaction">RewOnKillRepFaction2</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#maxstanding">MaxStanding1</a></p></td>
-<td><p>tinyint(4)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#isteamaward">IsTeamAward1</a></p></td>
-<td><p>tinyint(4)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewonkillrepvalue">RewOnKillRepValue1</a></p></td>
-<td><p>mediumint(9)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#maxstanding">MaxStanding2</a></p></td>
-<td><p>tinyint(4)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#isteamaward">IsTeamAward2</a></p></td>
-<td><p>tinyint(4)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewonkillrepvalue">RewOnKillRepValue2</a></p></td>
-<td><p>mediumint(9)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#teamdependent">TeamDependent</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment             |
+|---------------------------|--------------|------------|-----|------|---------|-------|---------------------|
+| [creature_id][1]          | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Creature Identifier |
+| [RewOnKillRepFaction1][2] | smallint(6)  | signed     |     | NO   | 0       |       |                     |
+| [RewOnKillRepFaction2][3] | smallint(6)  | signed     |     | NO   | 0       |       |                     |
+| [MaxStanding1][4]         | tinyint(4)   | signed     |     | NO   | 0       |       |                     |
+| [IsTeamAward1][5]         | tinyint(4)   | signed     |     | NO   | 0       |       |                     |
+| [RewOnKillRepValue1][6]   | mediumint(9) | signed     |     | NO   | 0       |       |                     |
+| [MaxStanding2][7]         | tinyint(4)   | signed     |     | NO   | 0       |       |                     |
+| [IsTeamAward2][8]         | tinyint(4)   | signed     |     | NO   | 0       |       |                     |
+| [RewOnKillRepValue2][9]   | mediumint(9) | signed     |     | NO   | 0       |       |                     |
+| [TeamDependent][10]       | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
+
+[1]: #creature_id
+[2]: #rewonkillrepfaction1
+[3]: #rewonkillrepfaction2
+[4]: #maxstanding1
+[5]: #isteamaward1
+[6]: #rewonkillrepvalue1
+[7]: #maxstanding2
+[8]: #isteamaward2
+[9]: #rewonkillrepvalue2
+[10]: #teamdependent
 
 **Description of the fields**
 
@@ -147,52 +46,16 @@ The faction ID of the faction that the player will gain or lose points in. See F
 
 The maximum standing that the creature will award reputation until. If the player achieves this standing or any other standing higher than this, the creature will not award any reputation.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Rank</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Hated</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Hostile</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Unfriendly</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Neutral</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Friendly</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Honored</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Revered</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Exalted</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Rank       |
+|----|------------|
+| 0  | Hated      |
+| 1  | Hostile    |
+| 2  | Unfriendly |
+| 3  | Neutral    |
+| 4  | Friendly   |
+| 5  | Honored    |
+| 6  | Revered    |
+| 7  | Exalted    |
 
 ### IsTeamAward
 
@@ -213,4 +76,3 @@ Boolean 0 or 1.
 
 -   0: The creature will give reputation to the any player from both fields (RewOnKillRepFaction1 and RewOnKillRepFaction2) if both fields are non-zero.
 -   1: The creature will award alliance players the reputation from RewOnKillRepFaction1 and will award horde players the reputation from RewOnKillRepFaction2
-
