@@ -8,70 +8,17 @@ This table contains the autobroadcast entries for your realms. Values like it's 
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><a href="#realmid">realmid</a></td>
-<td>int(11)</td>
-<td>signed</td>
-<td>PRI</td>
-<td>NO</td>
-<td>-1</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#id">id</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p>auto_increment</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><a href="#weight">weight</a></td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td> </td>
-<td>YES</td>
-<td>1</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#text">text</a></p></td>
-<td><p>longtext</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field        | Type       | Attributes | Key | Null | Default | Extra          | Comment |
+|--------------|------------|------------|-----|------|---------|----------------|---------|
+| [realmid][1] | int(11)    | signed     | PRI | NO   | -1      |                |         |
+| [id][2]      | tinyint(3) | unsigned   | PRI | NO   |         | auto_increment |         |
+| [weight][3]  | tinyint(3) | unsigned   |     | YES  | 1       |                |         |
+| [text][4]    | longtext   |            |     | NO   | NULL    |                |         |
+
+[1]: #realmid
+[2]: #id
+[3]: #weight
+[4]: #text
 
 **Description of the fields**
 
