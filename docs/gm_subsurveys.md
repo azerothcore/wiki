@@ -8,100 +8,23 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#surveyid">surveyid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#subsurveyid">subsurveyid</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rank">rank</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>longtext</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#played">played</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#wins2">wins2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rank">rank</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
+|------------------|----------|------------|-----|------|---------|-------|---------|
+| [surveyid][1]    | int(10)  | signed     | PRI | NO   |         |       |         |
+| [subsurveyid][2] | int(11)  | unsigned   | PRI | NO   | 0       |       |         |
+| [rank][3]        | int(11)  | unsigned   |     | NO   | 0       |       |         |
+| [comment][4]     | longtext | signed     |     | NO   |         |       |         |
+| [played][5]      | int(10)  | unsigned   |     | NO   | 0       |       |         |
+| [wins2][6]       | int(10)  | unsigned   |     | NO   | 0       |       |         |
+| [rank][7]        | int(10)  | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #surveyid
+[2]: #subsurveyid
+[3]: #rank
+[4]: #comment
+[5]: #played
+[6]: #wins2
+[7]: #rank
 
 **Description of the fields**
 
@@ -120,3 +43,15 @@
 ### comment
 
 `field-no-description|4`
+
+### played
+
+`field-no-description|5`
+
+### wins2
+
+`field-no-description|6`
+
+### rank
+
+`field-no-description|7`
