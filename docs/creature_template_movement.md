@@ -6,96 +6,42 @@ This table contains the description of creatures movements, where the creature c
 
 **Structure**
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>Field</strong></th>
-<th><strong>Type</strong></th>
-<th><strong>Attributes</strong></th>
-<th><strong>Key</strong></th>
-<th><strong>Null</strong></th>
-<th><strong>Default</strong></th>
-<th><strong>Extra</strong></th>
-<th><strong>Comment</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CreatureId</td>
-<td>int(10)</td>
-<td>unsigned</td>
-<td>PRI</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>Ground</td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>Swim</td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>Flight</td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>Rooted</td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|------------|------------|-----|------|---------|-------|---------|
+| [CreatureId][1] | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [Ground][2]     | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [Swim][3]       | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [Flight][4]     | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [Rooted][5]     | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
 
-|                                                                |
-|----------------------------------------------------------------|
-| Ground States:  "None"=0, "Run"=1, "Hover"=2                   
-                                                                 
- Swim States:     "None"=0, "Swim"=1                             
-                                                                 
- Flight States:      "None"=0, "DisableGravity"=1, "CanFly" =2;  
-                                                                 
- Rooted States:   "None"=0, "Rooted "=1                          |
+[1]: #creatureid
+[2]: #ground
+[3]: #swim
+[4]: #flight
+[5]: #rooted
+
+### CreatureId
+
+This is the [creature\_template.entry](http://www.azerothcore.org/wiki/creature_template#creature_template-entry) to which the script is linked to.
+
+### Ground
+
+- "None"=0
+- "Run"=1
+- "Hover"=2
+
+### Swim
+- "None"=0
+- "Swim"=1
+
+### Flight
+- "None"=0
+- "DisableGravity"=1
+- "CanFly" =2
+
+### Rooted
+- "None"=0
+- "Rooted"=1
 
 Notice:
 

@@ -8,70 +8,17 @@ Contains data about client account and settings.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#account">account</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#type">type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#time">time</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#data">data</a></p></td>
-<td><p>blob</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|--------------|------------|------------|-----|------|---------|-------|---------|
+| [account][1] | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [type][2]    | tinyint(3) | unsigned   | PRI | NO   | 0       |       |         |
+| [time][3]    | int(10)    | unsigned   |     | NO   | 0       |       |         |
+| [data][4]    | blob       | signed     |     | NO   |         |       |         |
+
+[1]: #account
+[2]: #type
+[3]: #time
+[4]: #data
 
 **Description of the fields**
 
@@ -81,9 +28,11 @@ Contains data about client account and settings.
 
 ### type
 
--   0 = Global-account config cache
--   2 = Global-account bindings cache
--   4 = Global-account macros cache
+| Value | Description                   |
+|-------|-------------------------------|
+| 0     | Global-account config cache   |
+| 2     | Global-account bindings cache |
+| 4     | Global-account macros cache   |
 
 ### time
 

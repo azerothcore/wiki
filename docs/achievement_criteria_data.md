@@ -1,6 +1,6 @@
 # achievement\_criteria\_data
 
-`            Back-to:World     `
+[<-Back-to:World](database-world.md)
 
 **The \`achievement\_criteria\_data\` table**
 
@@ -8,80 +8,19 @@ This table contains the data that a player needs to obtain / complete in order t
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#criteria_id">criteria_id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#type">type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#value1">value1</a></p></td>
-<td><p>medium(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#value2">value2</a></p></td>
-<td><p>medium(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#scriptname">ScriptName</a></p></td>
-<td><p>char(64)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|------------------|--------------|------------|-----|------|---------|-------|---------|
+| [criteria_id][1] | mediumint(8) | signed     | PRI | NO   | NULL    |       |         |
+| [type][2]        | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [value1][3]      | medium(8)    | unsigned   |     | NO   | 0       |       |         |
+| [value2][4]      | medium(8)    | unsigned   |     | NO   | 0       |       |         |
+| [ScriptName][5]  | char(64)     | signed     |     | NO   |         |       |         |
+
+[1]: #criteria_id
+[2]: #type
+[3]: #value1
+[4]: #value2
+[5]: #scriptname
 
 **Description of the fields**
 
@@ -93,116 +32,32 @@ This is the ID from [Achievement\_Criteria.dbc](Achievement+Criteria).
 
 Depending on this value, it will determine how value1 and value2 are used.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Type</p></th>
-<th><p>Name</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>TYPE_NONE</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>TYPE_T_CREATURE</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>TYPE_T_PLAYER_CLASS_RACE</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>TYPE_T_PLAYER_LESS_HEALTH</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>TYPE_T_PLAYER_DEAD</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>TYPE_S_AURA</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>TYPE_S_AREA</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>TYPE_T_AURA</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>TYPE_VALUE</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>TYPE_T_LEVEL</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>TYPE_T_GENDER</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>TYPE_SCRIPT</p></td>
-</tr>
-<tr class="odd">
-<td><p>12</p></td>
-<td><p>TYPE_MAP_DIFFICULTY</p></td>
-</tr>
-<tr class="even">
-<td><p>13</p></td>
-<td><p>TYPE_MAP_PLAYER_COUNT</p></td>
-</tr>
-<tr class="odd">
-<td><p>14</p></td>
-<td><p>TYPE_T_TEAM</p></td>
-</tr>
-<tr class="even">
-<td><p>15</p></td>
-<td><p>TYPE_S_DRUNK</p></td>
-</tr>
-<tr class="odd">
-<td><p>16</p></td>
-<td><p>TYPE_HOLIDAY</p></td>
-</tr>
-<tr class="even">
-<td><p>17</p></td>
-<td><p>TYPE_BG_LOSS_TEAM_SCORE</p></td>
-</tr>
-<tr class="odd">
-<td><p>18</p></td>
-<td><p>TYPE_INSTANCE_SCRIPT</p></td>
-</tr>
-<tr class="even">
-<td><p>19</p></td>
-<td><p>TYPE_S_EQUIPED_ITEM</p></td>
-</tr>
-<tr class="odd">
-<td><p>20</p></td>
-<td><p>TYPE_MAP_ID</p></td>
-</tr>
-<tr class="even">
-<td><p>21</p></td>
-<td><p>TYPE_S_PLAYER_CLASS_RACE</p></td>
-</tr>
-<tr class="odd">
-<td>22</td>
-<td>TYPE_NTH_BIRTHDAY</td>
-</tr>
-<tr class="even">
-<td>23</td>
-<td>TYPE_S_KNOWN_TITLE</td>
-</tr>
-</tbody>
-</table>
+| Type | Name                      |
+|------|---------------------------|
+| 0    | TYPE_NONE                 |
+| 1    | TYPE_T_CREATURE           |
+| 2    | TYPE_T_PLAYER_CLASS_RACE  |
+| 3    | TYPE_T_PLAYER_LESS_HEALTH |
+| 4    | TYPE_T_PLAYER_DEAD        |
+| 5    | TYPE_S_AURA               |
+| 6    | TYPE_S_AREA               |
+| 7    | TYPE_T_AURA               |
+| 8    | TYPE_VALUE                |
+| 9    | TYPE_T_LEVEL              |
+| 10   | TYPE_T_GENDER             |
+| 11   | TYPE_SCRIPT               |
+| 12   | TYPE_MAP_DIFFICULTY       |
+| 13   | TYPE_MAP_PLAYER_COUNT     |
+| 14   | TYPE_T_TEAM               |
+| 15   | TYPE_S_DRUNK              |
+| 16   | TYPE_HOLIDAY              |
+| 17   | TYPE_BG_LOSS_TEAM_SCORE   |
+| 18   | TYPE_INSTANCE_SCRIPT      |
+| 19   | TYPE_S_EQUIPED_ITEM       |
+| 20   | TYPE_MAP_ID               |
+| 21   | TYPE_S_PLAYER_CLASS_RACE  |
+| 22   | TYPE_NTH_BIRTHDAY         |
+| 23   | TYPE_S_KNOWN_TITLE        |
 
 ### value1
 
@@ -300,7 +155,6 @@ Depending on this value, it will determine how value1 and value2 are used.
 \***TYPE\_S\_PLAYER\_CLASS\_RACE**
 
 -   -   The Source here is a valid class (paste class list). value2 must also be set
-
  
 
 \***TYPE\_NTH\_BIRTHDAY**
@@ -308,12 +162,10 @@ Depending on this value, it will determine how value1 and value2 are used.
 -    Number of Birthday
 
 \***TYPE\_S\_KNOWN\_TITLE**
-
  
 
 -   The value here is a valid titleId. See CharTitles.dbc
 
- 
 
 ### value2
 

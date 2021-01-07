@@ -8,80 +8,19 @@ This table contains all of the banned IPs and the date when (or if) the ban will
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#ip">ip</a></p></td>
-<td><p>varchar(15)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>127.0.0.1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#bandate">bandate</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#unbandate">unbandate</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#bannedby">bannedby</a></p></td>
-<td><p>varchar(50)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>Console</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#banreason">banreason</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>no reason</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field          | Type         | Attributes | Key | Null | Default   | Extra | Comment |
+|----------------|--------------|------------|-----|------|-----------|-------|---------|
+| [ip][1]        | varchar(15)  | signed     | PRI | NO   | 127.0.0.1 |       |         |
+| [bandate][2]   | int(10)      | unsigned   |     | NO   |           |       |         |
+| [unbandate][3] | int(10)      | unsigned   |     | NO   |           |       |         |
+| [bannedby][4]  | varchar(50)  | signed     |     | NO   | Console   |       |         |
+| [banreason][5] | varchar(255) | signed     |     | NO   | no reason |       |         |
+
+[1]: #ip
+[2]: #bandate
+[3]: #unbandate
+[4]: #bannedby
+[5]: #banreason
 
 **Description of the fields**
 

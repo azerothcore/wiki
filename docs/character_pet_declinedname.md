@@ -8,100 +8,23 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#owner">owner</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#genitive">genitive</a></p></td>
-<td><p>varchar(12)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#dative">dative</a></p></td>
-<td><p>varchar(12)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#accusative">accusative</a></p></td>
-<td><p>varchar(12)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#instrumental">instrumental</a></p></td>
-<td><p>varchar(12)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#prepositional">prepositional</a></p></td>
-<td><p>varchar(12)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|--------------------|-------------|------------|-----|------|---------|-------|---------|
+| [id][1]            | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
+| [owner][2]         | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [genitive][3]      | varchar(12) | signed     |     | NO   | NULL    |       |         |
+| [dative][4]        | varchar(12) | signed     |     | NO   | NULL    |       |         |
+| [accusative][5]    | varchar(12) | signed     |     | NO   | NULL    |       |         |
+| [instrumental][6]  | varchar(12) | signed     |     | NO   | NULL    |       |         |
+| [prepositional][7] | varchar(12) | signed     |     | NO   | NULL    |       |         |
+
+[1]: #id
+[2]: #owner
+[3]: #genitive
+[4]: #dative
+[5]: #accusative
+[6]: #instrumental
+[7]: #prepositional
 
 **Description of the fields**
 

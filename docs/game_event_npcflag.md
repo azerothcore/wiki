@@ -8,60 +8,15 @@ This table contains npcflags that are to be added to an NPC when the specified e
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#evententry">eventEntry</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>Entry of the game event</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#npcflag">npcflag</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
+|-----------------|--------------|------------|-----|------|---------|-------|-------------------------|
+| [eventEntry][1] | tinyint(3)   | unsigned   | PRI | NO   |         |       | Entry of the game event |
+| [guid][2]       | mediumint(8) | unsigned   | PRI | NO   | 0       |       |                         |
+| [npcflag][3]    | int(10)      | unsigned   |     | NO   | 0       |       |                         |
+
+[1]: #evententry
+[2]: #guid
+[3]: #npcflag
 
 **Description of the fields**
 

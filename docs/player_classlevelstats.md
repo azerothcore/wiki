@@ -8,77 +8,23 @@ This table holds information on the base health and mana of characters when they
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#class">class</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#level">level</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#basehp">basehp</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#basemana">basemana</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|---------------|-------------|------------|-----|------|---------|-------|---------|
+| [class][1]    | tinyint(3)  | unsigned   | PRI | NO   | NULL    |       |         |
+| [level][2]    | tinyint(3)  | unsigned   | PRI | NO   | NULL    |       |         |
+| [basehp][3]   | smallint(5) | unsigned   |     | NO   | NULL    |       |         |
+| [basemana][4] | smallint(5) | unsigned   |     | NO   | NULL    |       |         |
+
+[1]: #class
+[2]: #level
+[3]: #basehp
+[4]: #basemana
 
 **Description of the fields**
 
 ### class
 
-The character class.
-`:ChrClasses.dbc_tc2`
+The character class. `ChrClasses.dbc`
 
 ### level
 

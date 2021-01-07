@@ -1,6 +1,6 @@
 # battleground\_template
 
-`            Back-to:World     `
+[<-Back-to:World](database-world.md)
 
 **The \`battleground\_template\` table**
 
@@ -8,202 +8,35 @@ Contains information about the different battlegrounds, like how many players ar
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Atributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#minplayersperteam">MinPlayersPerTeam</a></p></td>
-<td><p>smallintint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#maxplayersperteam">MaxPlayersPerTeam</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#minlvl">MinLvl</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#maxlvl">MaxLvl</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#alliancestartloc">AllianceStartLoc</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#alliancestarto">AllianceStartO</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#hordestartloc">HordeStartLoc</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#hordestarto">HordeStartO</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#startmaxdist">StartMaxDist</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#weight">Weight</a></p></td>
-<td><p>tinyint (2)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#scriptname">ScriptName</a></p></td>
-<td><p>char (64)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#comment">Comment</a></p></td>
-<td><p>char (32)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field                  | Type           | Atributes | Key | Null | Default | Extra | Comment |
+|------------------------|----------------|-----------|-----|------|---------|-------|---------|
+| [id][1]                | mediumint(8)   | unsigned  | PRI | NO   | NULL    |       |         |
+| [MinPlayersPerTeam][2] | smallintint(5) | unsigned  |     | NO   | 0       |       |         |
+| [MaxPlayersPerTeam][3] | smallint(5)    | unsigned  |     | NO   | 0       |       |         |
+| [MinLvl][4]            | tinyint(3)     | unsigned  |     | NO   | 0       |       |         |
+| [MaxLvl][5]            | tinyint(3)     | unsigned  |     | NO   | 0       |       |         |
+| [AllianceStartLoc][6]  | mediumint(8)   | unsigned  |     | NO   | NULL    |       |         |
+| [AllianceStartO][7]    | float          | signed    |     | NO   | NULL    |       |         |
+| [HordeStartLoc][8]     | mediumint(8)   | unsigned  |     | NO   | NULL    |       |         |
+| [HordeStartO][9]       | float          | signed    |     | NO   | NULL    |       |         |
+| [StartMaxDist][10]     | float          | signed    |     | NO   | 0       |       |         |
+| [Weight][11]           | tinyint (2)    | unsigned  |     | NO   | 1       |       |         |
+| [ScriptName][12]       | char (64)      |           |     | NO   |         |       |         |
+| [Comment][13]          | char (32)      |           |     | NO   |         |       |         |
+
+[1]: #id
+[2]: #minplayersperteam
+[3]: #maxplayersperteam
+[4]: #minlvl
+[5]: #maxlvl
+[6]: #alliancestartloc
+[7]: #alliancestarto
+[8]: #hordestartloc
+[9]: #hordestarto
+[10]: #startmaxdist
+[11]: #weight
+[12]: #scriptname
+[13]: #comment
 
 **Description of the fields**
 
@@ -211,72 +44,21 @@ Contains information about the different battlegrounds, like how many players ar
 
 The battleground ID.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ID</p></th>
-<th><p>Type</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Alterac Valley</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Warsong Gulch</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>Arathi Basin</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Nagrand Arena</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>Blade's Edge Arena</p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>All Arena</p></td>
-</tr>
-<tr class="odd">
-<td><p>7</p></td>
-<td><p>Eye of the Storm</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>Ruins of Lordaeron</p></td>
-</tr>
-<tr class="odd">
-<td><p>9</p></td>
-<td><p>Strand of the Ancients</p></td>
-</tr>
-<tr class="even">
-<td><p>10</p></td>
-<td><p>Dalaran Sewers</p></td>
-</tr>
-<tr class="odd">
-<td><p>11</p></td>
-<td><p>The Ring of Valor</p></td>
-</tr>
-<tr class="even">
-<td><p>30</p></td>
-<td><p>Isle of Conquest</p></td>
-</tr>
-<tr class="odd">
-<td><p>32</p></td>
-<td><p>Random battleground</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Type                   |
+|----|------------------------|
+| 1  | Alterac Valley         |
+| 2  | Warsong Gulch          |
+| 3  | Arathi Basin           |
+| 4  | Nagrand Arena          |
+| 5  | Blade's Edge Arena     |
+| 6  | All Arena              |
+| 7  | Eye of the Storm       |
+| 8  | Ruins of Lordaeron     |
+| 9  | Strand of the Ancients |
+| 10 | Dalaran Sewers         |
+| 11 | The Ring of Valor      |
+| 30 | Isle of Conquest       |
+| 32 | Random battleground    |
 
 ### MinPlayersPerTeam
 

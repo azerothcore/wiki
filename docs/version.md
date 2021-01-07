@@ -8,80 +8,19 @@ Includes information on current core and database version.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#core_version">core_version</a></p></td>
-<td><p>varchar(120)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p>Core revision dumped at startup</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#core_revision">core_revision</a></p></td>
-<td><p>bigint(20)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p>Core revision hash</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#db_version">db_version</a></p></td>
-<td><p>varchar(120)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p>Version of world DB</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#script_version">script_version</a></p></td>
-<td><p>varchar(120)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p>Version of scripts DB</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#cache_id">cache_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Minor DB version</p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                         |
+|---------------------|--------------|------------|-----|------|---------|-------|---------------------------------|
+| [core_version][1]   | varchar(120) | signed     |     | YES  | NULL    |       | Core revision dumped at startup |
+| [core_revision][2]  | bigint(20)   | unsigned   |     | YES  | NULL    |       | Core revision hash              |
+| [db_version][3]     | varchar(120) | signed     |     | YES  | NULL    |       | Version of world DB             |
+| [script_version][4] | varchar(120) | signed     |     | YES  | NULL    |       | Version of scripts DB           |
+| [cache_id][5]       | int(10)      | signed     |     | YES  | 0       |       | Minor DB version                |
+
+[1]: #core_version
+[2]: #core_revision
+[3]: #db_version
+[4]: #script_version
+[5]: #cache_id
 
 **Description of the fields**
 

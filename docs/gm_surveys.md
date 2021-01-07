@@ -8,80 +8,19 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#surveyid">surveyid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>Auto Increment</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#player">player</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mainsurvey">mainSurvey</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#overall_comment">overall_comment</a></p></td>
-<td><p>longtext</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#timestamp">timestamp</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                | Type     | Attributes | Key | Null | Default        | Extra | Comment |
+|----------------------|----------|------------|-----|------|----------------|-------|---------|
+| [surveyid][1]        | int(10)  | signed     | PRI | NO   | Auto Increment |       |         |
+| [player][2]          | int(11)  | unsigned   |     | NO   | 0              |       |         |
+| [mainSurvey][3]      | int(11)  | unsigned   |     | NO   | 0              |       |         |
+| [overall_comment][4] | longtext | signed     |     | NO   |                |       |         |
+| [timestamp][5]       | int(11)  | unsigned   |     | NO   | 0              |       |         |
+
+[1]: #surveyid
+[2]: #player
+[3]: #mainsurvey
+[4]: #overall_comment
+[5]: #timestamp
 
 **Description of the fields**
 

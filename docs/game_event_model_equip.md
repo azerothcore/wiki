@@ -8,72 +8,25 @@ Contains all creature instances that need to change display id and/or equipment 
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#evententry">eventEntry</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Entry of the game event.</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p>Unique</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#modelid">modelid</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#equipment_id">equipment_id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field             | Type         | Attributes | Key | Null | Default | Extra  | Comment                  |
+|-------------------|--------------|------------|-----|------|---------|--------|--------------------------|
+| [eventEntry][1]   | tinyint(3)   | signed     |     | NO   | 0       |        | Entry of the game event. |
+| [guid][2]         | int(10)      | unsigned   | PRI | NO   | 0       | Unique |                          |
+| [modelid][3]      | mediumint(8) | unsigned   |     | NO   | 0       |        |                          |
+| [equipment_id][4] | mediumint(8) | unsigned   |     | NO   | 0       |        |                          |
+
+[1]: #evententry
+[2]: #guid
+[3]: #modelid
+[4]: #equipment_id
 
 **Description of the fields**
+
+### eventEntry
+
+Entry of the event (game\_event.eventEntry)
+
+-   In this table, event entry can only be positive
 
 ### guid
 
@@ -88,10 +41,3 @@ Use 0 if only the [equipment](#game_event_model_equip-equipment_id) is to be cha
 
 New equipment to be used during the event (Refers to creature\_equip\_template.entry))
 Use 0 if only the [model](#game_event_model_equip-modelid) is to be changed during event.
-
-### eventEntry
-
-Entry of the event (game\_event.eventEntry)
-
--   In this table, event entry can only be positive
-

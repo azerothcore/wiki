@@ -8,70 +8,17 @@ This table controls the so called "discovery" system of learning spells. This sy
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spellid">spellId</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>SpellId of the discoverable spell</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#reqspell">reqSpell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>spell requirement</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#reqskillvalue">reqSkillValue</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>skill points requirement</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#chance">chance</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>chance to discover</p></td>
-</tr>
-</tbody>
-</table>
+| Field              | Type         | Attributes | Key | Null | Default | Extra | Comment                           |
+|--------------------|--------------|------------|-----|------|---------|-------|-----------------------------------|
+| [spellId][1]       | mediumint(8) | unsigned   | PRI | NO   | 0       |       | SpellId of the discoverable spell |
+| [reqSpell][2]      | mediumint(8) | unsigned   | PRI | NO   | 0       |       | spell requirement                 |
+| [reqSkillValue][3] | smallint(5)  | unsigned   |     | NO   | 0       |       | skill points requirement          |
+| [chance][4]        | float        | signed     |     | NO   | 0       |       | chance to discover                |
+
+[1]: #spellid
+[2]: #reqspell
+[3]: #reqskillvalue
+[4]: #chance
 
 **Description of the fields**
 

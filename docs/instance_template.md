@@ -10,70 +10,17 @@ If you want to change the spot you will start in when you enter/leave an instanc
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#map">map</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#parent">parent</a></p></td>
-<td><p>bigint(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#script">script</a></p></td>
-<td><p>varchar(128)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#allowmount">allowMount</a></p></td>
-<td><p>tinyiny(1)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|--------------|------------|-----|------|---------|-------|---------|
+| [map][1]        | int(10)      | unsigned   |     | NO   | NULL    |       |         |
+| [parent][2]     | bigint(10)   | unsigned   |     | NO   | 0       |       |         |
+| [script][3]     | varchar(128) | signed     |     | NO   | NULL    |       |         |
+| [allowMount][4] | tinyiny(1)   | signed     |     | NO   | 0       |       |         |
+
+[1]: #map
+[2]: #parent
+[3]: #script
+[4]: #allowmount
 
 **Description of the fields**
 
