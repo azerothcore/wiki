@@ -6,70 +6,17 @@
 
 This table provides data for spell linking system, telling it which spells trigger what, and under which conditions.
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spell_trigger">spell_trigger</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spell_effect">spell_effect</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#type">type</a></p></td>
-<td><p>smallint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|--------------------|--------------|------------|-----|------|---------|-------|---------|
+| [spell_trigger][1] | mediumint(8) | signed     |     | NO   | NULL    |       |         |
+| [spell_effect][2]  | mediumint(8) | signed     |     | NO   | 0       |       |         |
+| [type][3]          | smallint(3)  | unsigned   |     | NO   | 0       |       |         |
+| [comment][4]       | text         | signed     |     | NO   | NULL    |       |         |
+
+[1]: #spell_trigger
+[2]: #spell_effect
+[3]: #type
+[4]: #comment
 
 **Description of the fields**
 
@@ -95,13 +42,13 @@ Optional comment to explain the link.
 
 **Trigger mode**
 
-\***spell\_trigger &gt; 0:** "When *spell\_trigger* is cast..."
-\***spell\_trigger &lt; 0:** "When the aura due to *spell\_trigger* is removed..."
+\***spell\_trigger > 0:** "When *spell\_trigger* is cast..."
+\***spell\_trigger < 0:** "When the aura due to *spell\_trigger* is removed..."
 
 **Effect**
 
-\***spell\_effect &gt; 0:** *spell\_effect* is also cast (with triggered flag) on the same targets, on the caster if spell\_trigger has no target.
-\***spell\_effect &lt; 0:** Auras due to *spell\_effect* are removed.
+\***spell\_effect > 0:** *spell\_effect* is also cast (with triggered flag) on the same targets, on the caster if spell\_trigger has no target.
+\***spell\_effect < 0:** Auras due to *spell\_effect* are removed.
 
 ### type 1 (HIT)
 
@@ -111,8 +58,8 @@ For this mode *spell\_trigger* must be positive. Effect is executed when *spell\
 
 **Effect**
 
-\***spell\_effect &gt; 0:** *spell\_effect* is cast (with triggered flag) on the same target.
-\***spell\_effect &lt; 0:** Auras due to *spell\_effect* are removed.
+\***spell\_effect > 0:** *spell\_effect* is cast (with triggered flag) on the same target.
+\***spell\_effect < 0:** Auras due to *spell\_effect* are removed.
 
 ### type == 2 (AURA)
 
@@ -122,19 +69,12 @@ For this mode *spell\_trigger* must be positive. Effect is executed when the aur
 
 **Effect**
 
-\***spell\_effect &gt; 0 (ADD/REMOVE AURA)**
+\***spell\_effect > 0 (ADD/REMOVE AURA)**
 
 -   ON APPLY: Adds aura *spell\_effect* on the same target.
-
-<!-- -->
-
 -   ON REMOVE: Removes aura *spell\_effect*on the same target.
 
-    \***spell\_effect &lt; 0 (IMMUNITY)**
+\***spell\_effect < 0 (IMMUNITY)**
 
 -   ON APPLY: Makes the target immune to *spell\_effect*.
-
-<!-- -->
-
 -   ON REMOVE: Clears target immunity to *spell\_effect*.
-
