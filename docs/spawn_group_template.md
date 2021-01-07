@@ -8,52 +8,15 @@ This table contains Spawn Group names and flags.
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#groupid">roupId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#groupname">roupName</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#groupflags">roupFlags</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|----------------|--------------|------------|-----|------|---------|-------|---------|
+| [roupId][1]    | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
+| [roupName][2]  | varchar(100) |            |     | NO   | NULL    |       |         |
+| [roupFlags][3] | int(10)      | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #roupid
+[2]: #roupname
+[3]: #roupflags
 
 **Description of the fields**
 
@@ -77,5 +40,3 @@ These are the flags that will apply to the group.
 | SPAWNGROUP\_FLAG\_MANUAL\_SPAWN        | 0x04   | This group will not be spawned by core by default. Scripts can manually spawn/despawn these groups on demand.                                        |
 | SPAWNGROUP\_FLAG\_DYNAMIC\_SPAWN\_RATE | 0x08   | This group will have dynamic spawn rates applied (by default quest interested creatures/gos and gather nodes use this)                               |
 | SPAWNGROUP\_FLAG\_ESCORTQUESTNPC       | 0x10   | This group contains Escort quest NPCs. This further enhances Dynamic spawn to begin respawn time at the point a quest is taken and the escort begins |
-
-
