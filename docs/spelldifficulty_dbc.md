@@ -8,80 +8,19 @@ This table contains spell data regarding cpp scripts. The id is called in the sc
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spellid0">spellid0</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spellid1">spellid1</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spellid2">spellid2</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spellid3">spellid3</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
+|---------------|---------|------------|-----|------|---------|-------|---------|
+| [id][1]       | int(11) | unsigned   | PRI | NO   | 0       |       |         |
+| [spellid0][2] | int(11) | unsigned   |     | NO   | 0       |       |         |
+| [spellid1][3] | int(11) | unsigned   |     | NO   | 0       |       |         |
+| [spellid2][4] | int(11) | unsigned   |     | NO   | 0       |       |         |
+| [spellid3][5] | int(11) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #id
+[2]: #spellid0
+[3]: #spellid1
+[4]: #spellid2
+[5]: #spellid3
 
 **Description of the fields**
 
