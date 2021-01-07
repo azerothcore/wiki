@@ -8,80 +8,19 @@ This table holds the server's uptime. The core will automatically update the lat
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#realmid">realmid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#starttime">starttime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#uptime">uptime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#maxplayers">maxplayers</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#revision">revision</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>AzerothCore</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default     | Extra | Comment |
+|-----------------|--------------|------------|-----|------|-------------|-------|---------|
+| [realmid][1]    | int(10)      | unsigned   | PRI | NO   |             |       |         |
+| [starttime][2]  | int(10)      | unsigned   | PRI | NO   | 0           |       |         |
+| [uptime][3]     | int(10)      | unsigned   |     | NO   | 0           |       |         |
+| [maxplayers][4] | smallint(5)  | unsigned   |     | NO   | 0           |       |         |
+| [revision][5]   | varchar(255) | signed     |     | NO   | AzerothCore |       |         |
+
+[1]: #realmid
+[2]: #starttime
+[3]: #uptime
+[4]: #maxplayers
+[5]: #revision
 
 **Description of the fields**
 
