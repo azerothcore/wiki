@@ -8,90 +8,21 @@ Table used for storing custom damage/healing bonus coefficients.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#direct_bonus">direct_bonus</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#dot_bonus">dot_bonus</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#ap_bonus">ap_bonus</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#ap_dot_bonus">ap_dot_bonus</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comments">comments</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------|--------------|------------|-----|------|---------|-------|---------|
+| [entry][1]        | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [direct_bonus][2] | float        | signed     |     | NO   | 0       |       |         |
+| [dot_bonus][3]    | float        | signed     |     | NO   | 0       |       |         |
+| [ap_bonus][4]     | float        | signed     |     | NO   | 0       |       |         |
+| [ap_dot_bonus][5] | float        | signed     |     | NO   | 0       |       |         |
+| [comments][6]     | varchar(255) | signed     |     | YES  | NULL    |       |         |
+
+[1]: #entry
+[2]: #direct_bonus
+[3]: #dot_bonus
+[4]: #ap_bonus
+[5]: #ap_dot_bonus
+[6]: #comments
 
 **Description of the fields**
 
@@ -105,7 +36,7 @@ Only the first rank of the spell needs data if spell exists in Spell\_ranks and 
 
 Direct spell power damage.
 
-If &lt; 0
+If < 0
 
 Calculate default spell power coefficient.
 
@@ -113,7 +44,7 @@ If = 0
 
 Don't apply any spell power coefficient. (Don't scale damage with spellpower)
 
-If &gt; 0
+If > 0
 
 Use this as new spell power coefficient.
 
@@ -121,18 +52,18 @@ Use this as new spell power coefficient.
 
 Spell damage over time.
 
-If &lt; 0
+If < 0
 Calculate default spell power coefficient.
 If = 0
 Don't apply any spell power coefficient. (Don't scale damage with spellpower)
-If &gt; 0
+If > 0
 Use this as new spell power coefficient.
 
 ### ap\_bonus
 
 Direct Melee/Ranged damage.
 
-If &lt; 0
+If < 0
 
 Calculate default attack power coefficient.
 
@@ -140,7 +71,7 @@ If = 0
 
 Don't apply any attack power coefficient. (Don't scale damage with attack power)
 
-If &gt; 0
+If > 0
 
 Use this as new attack power coefficient.
 
@@ -148,7 +79,7 @@ Use this as new attack power coefficient.
 
 Melee/Ranged damage over time.
 
-If &lt; 0
+If < 0
 
 Calculate default attack power coefficient.
 
@@ -156,7 +87,7 @@ If = 0
 
 Don't apply any attack power coefficient. (Don't scale damage with attack power)
 
-If &gt; 0
+If > 0
 
 Use this as new attack power coefficient.
 
