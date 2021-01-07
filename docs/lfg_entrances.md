@@ -8,90 +8,21 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#dungeonid">dungeonId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Dungeon entry from dbc</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p>Dungeon name from dbc</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#position_x">position_x</a></p></td>
-<td><p>float</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#position_y">position_y</a></p></td>
-<td><p>float</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td><p><a href="#position_z">position_z</a></p></td>
-<td><p>float</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td><p><a href="#orientation">orientation</a></p></td>
-<td><p>float</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                |
+|------------------|--------------|------------|-----|------|---------|-------|------------------------|
+| [dungeonId][1]   | int(10)      | unsigned   | PRI | NO   | 0       |       | Dungeon entry from dbc |
+| [name][2]        | varchar(255) |            |     | YES  | NULL    |       | Dungeon name from dbc  |
+| [position_x][3]  | float        |            |     | NO   | 0       |       |                        |
+| [position_y][4]  | float        |            |     | NO   | 0       |       |                        |
+| [position_z][5]  | float        |            |     | NO   | 0       |       |                        |
+| [orientation][6] | float        |            |     | NO   | 0       |       |                        |
+
+[1]: #dungeonid
+[2]: #name
+[3]: #position_x
+[4]: #position_y
+[5]: #position_z
+[6]: #orientation
 
 **Description of the fields**
 
