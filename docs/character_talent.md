@@ -8,56 +8,15 @@ Contains all the individual talent data for each character. This is only used as
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spell">spell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#talentgroup">talentGroup</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|------------------|--------------|------------|-----|------|---------|-------|---------|
+| [guid][1]        | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
+| [spell][2]       | mediumint(8) | unsigned   | PRI | NO   | NULL    |       |         |
+| [talentGroup][3] | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+
+[1]: #guid
+[2]: #spell
+[3]: #talentgroup
 
 **Description of the fields**
 
