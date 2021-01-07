@@ -8,110 +8,25 @@ Contains all the individual glyph data for each character.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spec">spec</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#6">glyph1</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#6">glyph2</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#6">glyph3</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#6">glyph4</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#6">glyph5</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#6">glyph6</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field       | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|-------------|-------------|------------|-----|------|---------|-------|---------|
+| [guid][1]   | int(10)     | unsigned   | PRI | NO   |         |       |         |
+| [spec][2]   | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
+| [glyph1][3] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph2][4] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph3][5] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph4][6] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph5][7] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph6][8] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+
+[1]: #guid
+[2]: #spec
+[3]: #glyph1
+[4]: #glyph2
+[5]: #glyph3
+[6]: #glyph4
+[7]: #glyph5
+[8]: #glyph6
 
 **Description of the fields**
 
@@ -123,6 +38,6 @@ The GUID of the character. See characters.guid
 
 spec = 0 is the first spec, spec = 1 is the second spec.
 
-### glyph1-6
+### glyph 1-6
 
 The GlyphProperties entry of the glyphs in that particular spec.
