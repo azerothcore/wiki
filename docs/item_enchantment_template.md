@@ -8,60 +8,15 @@ This table holds enchantment chance information for items that should have eithe
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#ench">ench</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#chance">chance</a></p></td>
-<td><p>float</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------|--------------|------------|-----|------|---------|-------|---------|
+| [entry][1]  | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [ench][2]   | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [chance][3] | float        | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #entry
+[2]: #ench
+[3]: #chance
 
 **Description of the fields**
 
