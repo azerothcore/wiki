@@ -8,60 +8,15 @@ Holds information on the seasonal quest (quests with ZoneOrSort of -22) status o
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#quest">quest</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Quest Identifier</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#event">event</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Event Identifier</p></td>
-</tr>
-</tbody>
-</table>
+| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
+|------------|---------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]  | int(10) | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2] | int(10) | unsigned   | PRI | NO   | 0       |       | Quest Identifier         |
+| [event][3] | int(10) | unsigned   |     | NO   | 0       |       | Event Identifier         |
+
+[1]: #guid
+[2]: #quest
+[3]: #event
 
 **Description of the fields**
 

@@ -8,60 +8,15 @@ This table contains data regarding items from item\_instance which are being sen
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mail_id">mail_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#item_guid">item_guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#receiver">receiver</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Character Global Unique Identifier</p></td>
-</tr>
-</tbody>
-</table>
+| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment                            |
+|----------------|---------|------------|-----|------|---------|-------|------------------------------------|
+| [mail_id][1]   | int(10) | unsigned   |     | NO   | 0       |       |                                    |
+| [item_guid][2] | int(10) | unsigned   | PRI | NO   | 0       |       |                                    |
+| [receiver][3]  | int(10) | unsigned   |     | NO   | 0       |       | Character Global Unique Identifier |
+
+[1]: #mail_id
+[2]: #item_guid
+[3]: #receiver
 
 **Description of the fields**
 

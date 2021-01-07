@@ -8,50 +8,13 @@ Holds information on the game event seasonal quest relations to allow for resett
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#questid">questId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Quest Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#evententry">eventEntry</a></p></td>
-<td><p>mediumint(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Entry of the game event</p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type          | Attributes | Key | Null | Default | Extra | Comment                 |
+|-----------------|---------------|------------|-----|------|---------|-------|-------------------------|
+| [questId][1]    | int(10)       | unsigned   | PRI | NO   | 0       |       | Quest Identifier        |
+| [eventEntry][2] | mediumint(10) | unsigned   | PRI | NO   | 0       |       | Entry of the game event |
+
+[1]: #questid
+[2]: #evententry
 
 **Description of the fields**
 

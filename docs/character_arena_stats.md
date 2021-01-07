@@ -8,60 +8,15 @@ This table holds information about character's matchmaker rating in all team typ
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#slot">slot</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#matchmakerrating">matchmakerRating</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------------|-------------|------------|-----|------|---------|-------|---------|
+| [guid][1]             | int(10)     | signed     | PRI | NO   |         |       |         |
+| [slot][2]             | tinyint(3)  | signed     | PRI | NO   |         |       |         |
+| [matchmakerRating][3] | smallint(5) | signed     |     | NO   |         |       |         |
+
+[1]: #guid
+[2]: #slot
+[3]: #matchmakerrating
 
 **Description of the fields**
 
@@ -73,11 +28,11 @@ The GUID of the character. See characters.guid
 
 Arena slot index:
 
-0 - 2v2
-
-1 - 3v3
-
-2 - 5v5
+| Value | Description |
+|-------|-------------|
+| 0     | 2v2         |
+| 1     | 3v3         |
+| 2     | 5v5         |
 
 ### matchmakerRating
 
