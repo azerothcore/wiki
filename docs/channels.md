@@ -8,100 +8,23 @@ Information and settings for ingame, player-based chat channels (not affecting t
 
 ## Structure
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#m_name">name</a></p></td>
-<td><p>varchar(128)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#m_team">team</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#m_announce">announce</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#m_ownership">ownership</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#m_password">password</a></p></td>
-<td><p>varchar(32)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#bannedlist">bannedList</a> (NOT IMPLEMENTED FOR NOW)</p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#last_used">lastUsed</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|--------------|------------|-----|------|---------|-------|---------|
+| [name][1]       | varchar(128) | signed     | PRI | NO   |         |       |         |
+| [team][2]       | int(10)      | unsigned   | PRI | NO   |         |       |         |
+| [announce][3]   | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
+| [ownership][4]  | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
+| [password][5]   | varchar(32)  | signed     |     | YES  | NULL    |       |         |
+| [bannedList][6] | text         | signed     |     | YES  |         |       |         |
+| [lastUsed][7]   | int(10)      | unsigned   |     | NO   |         |       |         |
+
+[1]: #name
+[2]: #team
+[3]: #announce
+[4]: #ownership
+[5]: #password
+[6]: #bannedlist
+[7]: #lastused
 
 ## Description of the fields
 
@@ -113,20 +36,20 @@ Name of the channel
 
 ### team
 
-**&lt;team id&gt; Allow access to channel from specified player faction ID**
+**team id** Allow access to channel from specified player faction ID
 
-For multirace channels, two (or more) separate entries must exist with the EXACT same settings for all fields apart from this (it needs a different &lt;team id&gt;)
+For multirace channels, two (or more) separate entries must exist with the EXACT same settings for all fields apart from this (it needs a different **team id**)
 
-Horde -&gt; 67
-
-Alliance -&gt; 469
+| Faction  | Value |
+|----------|-------|
+| Horde    | 67    |
+| Alliance | 469   |
 
 ### announce
 
 **Channel announce (0/1)**
 
 0 = Channel join/part actions will not be sent
-
 1 = Channel join/part actions will be sent
 
 ### ownership
@@ -134,7 +57,6 @@ Alliance -&gt; 469
 **Channel ownership (0/1)**
 
 0 = No one will ever be an owner.
-
 1 = Ownership is the first person in the channel.
 
 ### password
