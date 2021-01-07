@@ -8,70 +8,17 @@ This table holds a listing of all skill for each character.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#skill">skill</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#value">value</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#max">max</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field      | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
+|------------|-------------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]  | int(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [skill][2] | smallint(5) | unsigned   | PRI | NO   | 0       |       |                          |
+| [value][3] | smallint(5) | unsigned   |     | NO   | 0       |       |                          |
+| [max][4]   | smallint(5) | unsigned   |     | NO   | 0       |       |                          |
+
+[1]: #guid
+[2]: #skill
+[3]: #value
+[4]: #max
 
 **Description of the fields**
 
