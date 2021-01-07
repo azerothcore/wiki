@@ -8,100 +8,25 @@ This table describes the reward that you will receive when you obtain a given ac
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">ID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#titlea">TitleA</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#titleh">TitleH</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#itemid">ItemID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#sender">Sender</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#subject">Subject</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#body">Body</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><a href="#mailtemplateid">MailTemplateID</a></td>
-<td>mediumint(8)</td>
-<td>unsigned</td>
-<td> </td>
-<td>YES</td>
-<td>0</td>
-<td> </td>
-</tr>
-</tbody>
-</table>
+| Field               | Type         | Attributes | Key | Null | Default | Extra |
+|---------------------|--------------|------------|-----|------|---------|-------|
+| [ID][1]             | mediumint(8) | unsigned   | PRI | NO   | 0       |       |
+| [TitleA][2]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
+| [TitleH][3]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
+| [ItemID][4]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
+| [Sender][5]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
+| [Subject][6]        | varchar(255) | signed     |     | YES  | NULL    |       |
+| [Body][7]           | text         | signed     |     | YES  |         |       |
+| [MailTemplateID][8] | mediumint(8) | unsigned   |     | YES  | 0       |       |
+
+[1]: #id
+[2]: #titlea
+[3]: #titleh
+[4]: #itemid
+[5]: #sender
+[6]: #subject
+[7]: #body
+[8]: #mailtemplateid
 
 **Description of the fields**
 
