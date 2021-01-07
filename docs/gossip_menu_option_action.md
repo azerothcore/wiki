@@ -6,70 +6,17 @@ This table holds information about what a gossip menu option is doing, redirect 
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#menuid">MenuId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#optionindex">OptionIndex</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#actionmenuid">ActionMenuId</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#actionpoiid">ActionPoiId</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------|---------|------------|-----|------|---------|-------|---------|
+| [MenuId][1]       | int(10) | unsigned   | PRI | NO   | 0       |       |         |
+| [OptionIndex][2]  | int(10) | unsigned   | PRI | NO   | 0       |       |         |
+| [ActionMenuId][3] | int(11) | unsigned   |     | NO   | 0       |       |         |
+| [ActionPoiId][4]  | int(11) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #menuid
+[2]: #optionindex
+[3]: #actionmenuid
+[4]: #actionpoiid
 
 ## Description of the fields
 
