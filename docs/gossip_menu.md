@@ -8,54 +8,13 @@ This table is used for displaying gossip when a player talks to an NPC with [np
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#MenuID">MenuID</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#TextID">TextID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------|--------------|------------|-----|------|---------|-------|---------|
+| [MenuID][1] | smallint(6)  | unsigned   | PRI | NO   | 0       |       |         |
+| [TextID][2] | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+
+[1]: #menuid
+[2]: #textid
 
 **Description of the fields**
 
