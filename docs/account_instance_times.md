@@ -8,60 +8,15 @@ This table controls how many instances the account's characters have been in las
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#accountid">accountId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#instanceid">instanceId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#releasetime">releaseTime</a></p></td>
-<td><p>bigint(20)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|------------------|------------|------------|-----|------|---------|-------|---------|
+| [accountId][1]   | int(10)    | unsigned   | PRI | NO   |         |       |         |
+| [instanceId][2]  | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [releaseTime][3] | bigint(20) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #accountid
+[2]: #instanceid
+[3]: #releasetime
 
 **Description of the fields**
 
