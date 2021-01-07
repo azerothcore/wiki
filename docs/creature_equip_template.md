@@ -8,84 +8,19 @@ This table contains all the equipment combinations that can be sent for each cre
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#creatureid">CreatureID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p>Unique entry</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#id">ID</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p>Unique entry</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#itemid1">ItemID1</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#itemid2">ItemID2</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#itemid3">ItemID3</a></p></td>
-<td>mediumint(8)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment      |
+|-----------------|--------------|------------|-----|------|---------|-------|--------------|
+| [CreatureID][1] | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Unique entry |
+| [ID][2]         | tinyint(3)   | unsigned   | PRI | NO   | 1       |       | Unique entry |
+| [ItemID1][3]    | mediumint(8) | unsigned   |     | NO   | 0       |       |              |
+| [ItemID2][4]    | mediumint(8) | unsigned   |     | NO   | 0       |       |              |
+| [ItemID3][5]    | mediumint(8) | unsigned   |     | NO   | 0       |       |              |
 
-**
-**
+[1]: #creatureid
+[2]: #id
+[3]: #itemid1
+[4]: #itemid2
+[5]: #itemid3
 
 ## Description of the fields
 
