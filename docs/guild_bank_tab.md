@@ -8,80 +8,19 @@ This table holds information on all the tabs in use for all guilds that make use
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guildid">guildid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#tabid">TabId</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#tabname">TabName</a></p></td>
-<td><p>varchar(16)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#tabicon">TabIcon</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#tabtext">TabText</a></p></td>
-<td><p>varchar(500)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|--------------|--------------|------------|-----|------|---------|-------|---------|
+| [guildid][1] | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [TabId][2]   | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [TabName][3] | varchar(16)  | signed     |     | NO   | "       |       |         |
+| [TabIcon][4] | varchar(100) | signed     |     | NO   | "       |       |         |
+| [TabText][5] | varchar(500) | signed     |     | YES  | NULL    |       |         |
+
+[1]: #guildid
+[2]: #tabid
+[3]: #tabname
+[4]: #tabicon
+[5]: #tabtext
 
 **Description of the fields**
 
