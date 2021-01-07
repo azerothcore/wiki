@@ -8,90 +8,21 @@ This table holds coordinate information on where the player should be teleported
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_map">target_map</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_position_x">target_position_x</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_position_y">target_position_y</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#target_position_z">target_position_z</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#target_orientation">target_orientation</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment    |
+|-------------------------|--------------|------------|-----|------|---------|-------|------------|
+| [id][1]                 | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Identifier |
+| [target_map][2]         | smallint(5)  | unsigned   |     | NO   | 0       |       |            |
+| [target_position_x][3]  | float        | signed     |     | NO   | 0       |       |            |
+| [target_position_y][4]  | float        | signed     |     | NO   | 0       |       |            |
+| [target_position_z][5]  | float        | signed     |     | NO   | 0       |       |            |
+| [target_orientation][6] | float        | signed     |     | NO   | 0       |       |            |
+
+[1]: #id
+[2]: #target_map
+[3]: #target_position_x
+[4]: #target_position_y
+[5]: #target_position_z
+[6]: #target_orientation
 
 **Description of the fields**
 
