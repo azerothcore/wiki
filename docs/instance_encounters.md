@@ -8,80 +8,19 @@ Definitions of instance encounters. Used by LFG.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Unique entry from DungeonEncounter.dbc</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#credittype">creditType</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#creditentry">creditEntry</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#lastencounterdungeon">lastEncounterDungeon</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>If not 0, LfgDungeon.dbc entry for the instance it is last encounter in</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>varchat(255)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                 |
+|---------------------------|--------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------|
+| [entry][1]                | int(10)      | unsigned   | PRI | NO   | 0       |       | Unique entry from DungeonEncounter.dbc                                  |
+| [creditType][2]           | tinyint(3)   | unsigned   |     | NO   | 0       |       |                                                                         |
+| [creditEntry][3]          | int(10)      | unsigned   |     | NO   | 0       |       |                                                                         |
+| [lastEncounterDungeon][4] | smallint(5)  | unsigned   |     | NO   | 0       |       | If not 0, LfgDungeon.dbc entry for the instance it is last encounter in |
+| [comment][5]              | varchat(255) | signed     |     | NO   | "       |       |                                                                         |
+
+[1]: #entry
+[2]: #credittype
+[3]: #creditentry
+[4]: #lastencounterdungeon
+[5]: #comment
 
 **Description of the fields**
 
