@@ -8,54 +8,13 @@ Table used for storing custom spell attributes.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>medium int(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>spell id</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#attributes">attributes</a></p></td>
-<td><p>medium int(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>SpellCustomAttributes</p></td>
-</tr>
-</tbody>
-</table>
+| Field           | Type          | Attributes | Key | Null | Default | Extra | Comment               |
+|-----------------|---------------|------------|-----|------|---------|-------|-----------------------|
+| [entry][1]      | medium int(8) | unsigned   | PRI | NO   | 0       |       | spell id              |
+| [attributes][2] | medium int(8) | unsigned   |     | NO   | 0       |       | SpellCustomAttributes |
 
- 
-
- 
+[1]: #entry
+[2]: #attributes
 
 **Description of the fields**
 
@@ -91,5 +50,3 @@ DELETE FROM `spell_custom_attr` WHERE `entry`=123;
 INSERT INTO `spell_custom_attr` (`entry`, `attributes`) VALUES
 (123, @SPELL_ATTR0_CU_FLAG1 | @SPELL_ATTR0_CU_FLAG2);
 ```
-
-
