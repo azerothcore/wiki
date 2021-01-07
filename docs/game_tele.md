@@ -6,94 +6,23 @@
 
 This table contains a list of teleport locations that can be used with the *.tele* command in-game. Entries in this table can be added/deleted manually or with the *.tele add* and *.tele delete* commands.
 
-<table style="width:100%;">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p>Auto increment</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#position_x">position_x</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#position_y">position_y</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#position_z">position_z</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#orientation">orientation</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#map">map</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type         | Attributes | Key | Null | Default | Extra          |
+|------------------|--------------|------------|-----|------|---------|----------------|
+| [id][1]          | mediumint(8) | unsigned   | PRI | NO   | NULL    | Auto increment |
+| [position_x][2]  | float        | signed     |     | NO   | 0       |                |
+| [position_y][3]  | float        | signed     |     | NO   | 0       |                |
+| [position_z][4]  | float        | signed     |     | NO   | 0       |                |
+| [orientation][5] | float        | signed     |     | NO   | 0       |                |
+| [map][6]         | smallint(5)  | unsigned   |     | NO   | 0       |                |
+| [name][7]        | varchar(100) | signed     |     | NO   | NULL    |                |
 
-**
-**
+[1]: #id
+[2]: #position_x
+[3]: #position_y
+[4]: #position_z
+[5]: #orientation
+[6]: #map
+[7]: #name
 
 **Field Descriptions**
 
@@ -126,3 +55,13 @@ The map ID of the location. See the [Map DBC file](Map) for the IDs of all of th
 ### name
 
 A descriptive name for the teleport location. The name *cannot* have any spaces in it. It is also not recommended to use special characters such as periods, commas, slashes, etc...
+
+### Examples
+
+| id | position_x | position_y | position_z | orientation | map | name         |
+|----|------------|------------|------------|-------------|-----|--------------|
+| 10 | 2799.46    | 847.549    | 111.842    | 0.509892    | 0   | AgamandMills |
+| 11 | -7040.08   | -3342.15   | 241.667    | 0.82338     | 0   | AgmondsEnd   |
+| 12 | 451.572    | -3342.23   | 119.689    | 0.772541    | 0   | AgolWatha    |
+| 13 | -2681.4    | -4787.21   | 16.0751    | 4.69276     | 1   | AlcazIsland  |
+| 14 | -1746.58   | 5780.03    | 146.44     | 1.30629     | 530 | AldorRise    |
