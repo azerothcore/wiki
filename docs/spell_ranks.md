@@ -8,60 +8,15 @@ Table used by the core to group different ranks of spells (the gray text seen on
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#first_spell_id">first_spell_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spell_id">spell_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rank">rank</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|---------------------|------------|------------|-----|------|---------|-------|---------|
+| [first_spell_id][1] | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [spell_id][2]       | int(10)    | unsigned   |     | NO   | 0       |       |         |
+| [rank][3]           | tinyint(3) | unsigned   | PRI | NO   | 0       |       |         |
+
+[1]: #first_spell_id
+[2]: #spell_id
+[3]: #rank
 
 **Description of the fields**
 
@@ -80,4 +35,3 @@ An integer which ranks the spell within the chain of spell ranks for the given \
 -   At least two levels are required
 -   There can be no jumps between ranks (e.g. one spell being level 3 and one being level 5 while level 4 is missing altogether)
 -   There can be no duplicates in ranks.
-
