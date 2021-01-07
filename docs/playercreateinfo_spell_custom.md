@@ -8,70 +8,17 @@ Please note you'll have to set PlayerStart.AllSpells to 1 in config, else this t
 
 ## Structure
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#race">racemask</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#class">classmask</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spell">Spell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#note">Note</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|----------------|--------------|------------|-----|------|---------|-------|---------|
+| [racemask][1]  | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [classmask][2] | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [Spell][3]     | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [Note][4]      | varchar(255) | signed     |     | YES  | NULL    |       |         |
+
+[1]: #racemask
+[2]: #classmask
+[3]: #spell
+[4]: #note
 
 ## Description of the fields
 
