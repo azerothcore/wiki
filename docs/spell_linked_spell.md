@@ -8,10 +8,10 @@ This table provides data for spell linking system, telling it which spells trigg
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
-| [spell_trigger][1] | mediumint(8) | signed     |     | NO   | NULL    |       |         |
-| [spell_effect][2]  | mediumint(8) | signed     |     | NO   | 0       |       |         |
-| [type][3]          | smallint(3)  | unsigned   |     | NO   | 0       |       |         |
-| [comment][4]       | text         | signed     |     | NO   | NULL    |       |         |
+| [spell_trigger][1] | mediumint(8) | signed     |     | NO   |         |       |         |
+| [spell_effect][2]  | mediumint(8) | signed     |     | NO   |         |       |         |
+| [type][3]          | smallint(3)  | unsigned   |     | NO   |         |       |         |
+| [comment][4]       | text         |            |     | NO   |         |       |         |
 
 [1]: #spell_trigger
 [2]: #spell_effect
