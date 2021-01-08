@@ -11,15 +11,15 @@ This table holds the main guild information. All created guilds or all guilds in
 | Field                | Type         | Attributes | Key | Null | Default | Extra  | Comment |
 |----------------------|--------------|------------|-----|------|---------|--------|---------|
 | [guildid][1]         | int(10)      | unsigned   | PRI | NO   | 0       | Unique |         |
-| [name][2]            | varchar(24)  | signed     |     | NO   | "       |        |         |
+| [name][2]            | varchar(24)  | signed     |     | NO   |         |        |         |
 | [leaderguid][3]      | int(10)      | unsigned   |     | NO   | 0       |        |         |
 | [EmblemStyle][4]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
 | [EmblemColor][5]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
 | [BorderStyle][6]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
 | [BorderColor][7]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
 | [BackgroundColor][8] | tinyint(3)   | signed     |     | NO   | 0       |        |         |
-| [info][9]            | text         | signed     |     | NO   | "       |        |         |
-| [motd][10]           | varchar(128) | signed     |     | NO   | "       |        |         |
+| [info][9]            | text         | signed     |     | NO   |         |        |         |
+| [motd][10]           | varchar(128) | signed     |     | NO   |         |        |         |
 | [createdate][11]     | int(10)      | unsigned   |     | NO   | 0       |        |         |
 | [BankMoney][12]      | bigint(20)   | signed     |     | NO   | 0       |        |         |
 
