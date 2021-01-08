@@ -13,8 +13,8 @@ Each line holds one Zone or Area with one phaseId and a description.  Each line
 
 | Field        | Type    | Null | Key | Default | Extra |
 |--------------|---------|------|-----|---------|-------|
-| [AreaId][1]  | int     | No   | Pri | 0       |       |
-| [PhaseId][2] | int     | No   | Pri | 0       |       |
+| [AreaId][1]  | int     | No   | PRI | 0       |       |
+| [PhaseId][2] | int     | No   | PRI | 0       |       |
 | [Comment][3] | varchar |      |     |         |       |
 
 [1]: #areaid
