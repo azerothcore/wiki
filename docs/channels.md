@@ -49,15 +49,15 @@ For multirace channels, two (or more) separate entries must exist with the EXACT
 
 **Channel announce (0/1)**
 
-0 = Channel join/part actions will not be sent
-1 = Channel join/part actions will be sent
+- 0 = Channel join/part actions will not be sent
+- 1 = Channel join/part actions will be sent
 
 ### ownership
 
 **Channel ownership (0/1)**
 
-0 = No one will ever be an owner.
-1 = Ownership is the first person in the channel.
+- 0 = No one will ever be an owner.
+- 1 = Ownership is the first person in the channel.
 
 ### password
 

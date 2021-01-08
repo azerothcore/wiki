@@ -42,8 +42,8 @@ These values 32bits flags. So 8 x 32bits values makes 256 bits available to stor
 
 Each bit means:
 
-0  -  Not yet shown
-1  -  Shown
+- 0 - Not yet shown
+- 1 - Shown
 
 This is used to diplay only tutorial messages the character did not see before.
 
