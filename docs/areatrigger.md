@@ -8,148 +8,29 @@ This table contains trigger points for events in certain coordinates in the maps
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>int (10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p>auto_increment<br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#map">map</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#x">x</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#y">y</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#z">z</a></td>
-<td>FLOAT</td>
-<td></td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#radius">radius</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#length">length</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#width">width</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#height">height</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#orientation">orientation</a></p></td>
-<td><p>FLOAT</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field             | Type     | Attributes | Key | Null | Default | Extra          | Comment |
+|-------------------|----------|------------|-----|------|---------|----------------|---------|
+| [entry][1]        | int (10) | unsigned   | PRI | NO   | NULL    | auto_increment |         |
+| [map][2]          | int(10)  | unsigned   | PRI | NO   | 0       |                |         |
+| [x][3]            | FLOAT    |            |     | NO   | 0       |                |         |
+| [y][4]            | FLOAT    |            |     | NO   | 0       |                |         |
+| [z][5]            | FLOAT    |            |     | NO   | 0       |                |         |
+| [radius][6]       | FLOAT    |            |     | NO   | 0       |                |         |
+| [length][7]       | FLOAT    |            |     | NO   | 0       |                |         |
+| [width][8]        | FLOAT    |            |     | NO   | 0       |                |         |
+| [height][9]       | FLOAT    |            |     | NO   | 0       |                |         |
+| [orientation][10] | FLOAT    |            |     | NO   | 0       |                |         |
+
+[1]: #entry
+[2]: #map
+[3]: #x
+[4]: #y
+[5]: #z
+[6]: #radius
+[7]: #length
+[8]: #width
+[9]: #height
+[10]: #orientation
 
 **Description of the fields**
 
@@ -172,4 +53,3 @@ This contains the radius of activation of the trigger.
 ### Length, Width, Height and Orientation
 
 these fields contain the values for the physics and behavior of a given trigger.
-

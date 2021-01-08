@@ -8,150 +8,33 @@ This table holds the main guild information. All created guilds or all guilds in
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guildid">guildid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p>Unique</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(24)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#leaderguid">leaderguid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#emblemstyle">EmblemStyle</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#emblemcolor">EmblemColor</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#borderstyle">BorderStyle</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#bordercolor">BorderColor</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#backgroundcolor">BackgroundColor</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#info">info</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#motd">motd</a></p></td>
-<td><p>varchar(128)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#createdate">createdate</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#bankmoney">BankMoney</a></p></td>
-<td><p>bigint(20)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                | Type         | Attributes | Key | Null | Default | Extra  | Comment |
+|----------------------|--------------|------------|-----|------|---------|--------|---------|
+| [guildid][1]         | int(10)      | unsigned   | PRI | NO   | 0       | Unique |         |
+| [name][2]            | varchar(24)  | signed     |     | NO   |         |        |         |
+| [leaderguid][3]      | int(10)      | unsigned   |     | NO   | 0       |        |         |
+| [EmblemStyle][4]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
+| [EmblemColor][5]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
+| [BorderStyle][6]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
+| [BorderColor][7]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
+| [BackgroundColor][8] | tinyint(3)   | signed     |     | NO   | 0       |        |         |
+| [info][9]            | text         | signed     |     | NO   |         |        |         |
+| [motd][10]           | varchar(128) | signed     |     | NO   |         |        |         |
+| [createdate][11]     | int(10)      | unsigned   |     | NO   | 0       |        |         |
+| [BankMoney][12]      | bigint(20)   | signed     |     | NO   | 0       |        |         |
+
+[1]: #guildid
+[2]: #name
+[3]: #leaderguid
+[4]: #emblemstyle
+[5]: #emblemcolor
+[6]: #borderstyle
+[7]: #bordercolor
+[8]: #backgroundcolor
+[9]: #info
+[10]: #motd
+[11]: #createdate
+[12]: #bankmoney
 
 **Description of the fields**
 

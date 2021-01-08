@@ -6,23 +6,31 @@
 
 This table contains some of the item effect data regarding item hotfixes. This table is primarily used to hotfix spells on items.
 
- 
-
 **Structure**
 
-|                                                   |             |                |         |          |             |           |             |
-|---------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|-------------|
-| **Field**                                         | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#item_effect-ID)                             | int(10)     | unsigned       | PRI     | NO       | 0           |           |             |
-| [ItemID](#item_effect-ItemID)                     | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [OrderIndex](#item_effect-OrderIndex)             | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [SpellID](#item_effect-SpellID)                   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [Trigger](#item_effect-Trigger)                   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [Charges](#item_effect-Charges)                   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [Cooldown](#item_effect-Cooldown)                 | int(11)     | signed         |         | NO       | 0           |           |             |
-| [Category](#item_effect-Category)                 | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [CategoryCooldown](#item_effect-CategoryCooldown) | int(11)     | signed         |         | NO       | 0           |           |             |
-| [VerifiedBuild](#item_effect-VerifiedBuild)       | smallint(6) | signed         |         | NO       | 0           |           |             |
+| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------------|-------------|------------|-----|------|---------|-------|---------|
+| [ID][1]               | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
+| [ItemID][2]           | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [OrderIndex][3]       | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [SpellID][4]          | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [Trigger][5]          | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [Charges][6]          | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [Cooldown][7]         | int(11)     | signed     |     | NO   | 0       |       |         |
+| [Category][8]         | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [CategoryCooldown][9] | int(11)     | signed     |     | NO   | 0       |       |         |
+| [VerifiedBuild][10]   | smallint(6) | signed     |     | NO   | 0       |       |         |
+
+[1]: #id
+[2]: #itemid
+[3]: #orderindex
+[4]: #spellid
+[5]: #trigger
+[6]: #charges
+[7]: #cooldown
+[8]: #category
+[9]: #categorycooldown
+[10]: #verifiedbuild
 
 **Description of the fields**
 
@@ -48,42 +56,14 @@ The spell ID of the spell that the item can cast or trigger.
 
 The type of trigger for the spell.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>ID</strong></td>
-<td><strong>Trigger Type</strong></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>Use</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>On Equip</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Chance on Hit</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Soulstone</p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Use with no delay</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Learn Spell ID</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Trigger Type      |
+|----|-------------------|
+| 0  | Use               |
+| 1  | On Equip          |
+| 2  | Chance on Hit     |
+| 4  | Soulstone         |
+| 5  | Use with no delay |
+| 6  | Learn Spell ID    |
 
 ### Charges
 

@@ -8,90 +8,21 @@ This table holds static information on all current instances that have not yet b
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#map">map</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#resettime">resettime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#difficulty">difficulty</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#completedencounters">completedEncounters</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#data">data</a></p></td>
-<td><p>tinytext</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                    | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|--------------------------|-------------|------------|-----|------|---------|-------|---------|
+| [id][1]                  | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
+| [map][2]                 | smallint(5) | unsigned   |     | NO   | 0       |       |         |
+| [resettime][3]           | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [difficulty][4]          | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
+| [completedEncounters][5] | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [data][6]                | tinytext    | signed     |     | NO   |         |       |         |
+
+[1]: #id
+[2]: #map
+[3]: #resettime
+[4]: #difficulty
+[5]: #completedencounters
+[6]: #data
 
 **Description of the fields**
 
@@ -112,10 +43,12 @@ The resettime of raid and heroic instances for every specific group is stored in
 
 The difficulty of the current instance.
 
-- 0 = 10-man Normal
-- 1 = 25-man Normal
-- 2 = 10-man Heroic
-- 3 = 25-man Heroic.
+| Value | Description   |
+|-------|---------------|
+| 0     | 10-man Normal |
+| 1     | 25-man Normal |
+| 2     | 10-man Heroic |
+| 3     | 25-man Heroic |
 
 ### completedEncounters
 

@@ -8,120 +8,27 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guildid">guildid</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Guild Identificator</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#logguid">LogGuid</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Log record identificator - auxiliary column</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#tabid">TabID</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Guild bank TabId</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#eventtype">EventType</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Event type</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#playerguid">PlayerGuid</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#itemormoney">ItemOrMoney</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#itemstackcount">ItemStackCount</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#desttabid">DestTabId</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Destination Tab Id</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#timestamp">TimeStamp</a></p></td>
-<td><p>bigint(20)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Event UNIX time</p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type       | Attributes | Key | Null | Default | Extra | Comment                                     |
+|---------------------|------------|------------|-----|------|---------|-------|---------------------------------------------|
+| [guildid][1]        | int(11)    | unsigned   | PRI | NO   | 0       |       | Guild Identificator                         |
+| [LogGuid][2]        | int(11)    | unsigned   | PRI | NO   | 0       |       | Log record identificator - auxiliary column |
+| [TabID][3]          | tinyint(3) | unsigned   | PRI | NO   | 0       |       | Guild bank TabId                            |
+| [EventType][4]      | tinyint(3) | unsigned   |     | NO   | 0       |       | Event type                                  |
+| [PlayerGuid][5]     | int(11)    | unsigned   |     | NO   | 0       |       |                                             |
+| [ItemOrMoney][6]    | int(11)    | unsigned   |     | NO   | 0       |       |                                             |
+| [ItemStackCount][7] | tinyint(3) | unsigned   |     | NO   | 0       |       |                                             |
+| [DestTabId][8]      | tinyint(1) | unsigned   |     | NO   | 0       |       | Destination Tab Id                          |
+| [TimeStamp][9]      | bigint(20) | unsigned   |     | NO   | 0       |       | Event UNIX time                             |
+
+[1]: #guildid
+[2]: #logguid
+[3]: #tabid
+[4]: #eventtype
+[5]: #playerguid
+[6]: #itemormoney
+[7]: #itemstackcount
+[8]: #desttabid
+[9]: #timestamp
 
 **Description of the fields**
 
@@ -139,23 +46,17 @@
 
 ### EventType
 
-1 = GUILD\_BANK\_LOG\_DEPOSIT\_ITEM
-
-2 = GUILD\_BANK\_LOG\_WITHDRAW\_ITEM
-
-3 = GUILD\_BANK\_LOG\_MOVE\_ITEM
-
-4 = GUILD\_BANK\_LOG\_DEPOSIT\_MONEY
-
-5 = GUILD\_BANK\_LOG\_WITHDRAW\_MONEY
-
-6 = GUILD\_BANK\_LOG\_REPAIR\_MONEY
-
-7 = GUILD\_BANK\_LOG\_MOVE\_ITEM2
-
-8 = GUILD\_BANK\_LOG\_UNK1
-
-9 = GUILD\_BANK\_LOG\_BUY\_SLOT
+| Value | Description                       |
+|-------|-----------------------------------|
+| 1     | GUILD\_BANK\_LOG\_DEPOSIT\_ITEM   |
+| 2     | GUILD\_BANK\_LOG\_WITHDRAW\_ITEM  |
+| 3     | GUILD\_BANK\_LOG\_MOVE\_ITEM      |
+| 4     | GUILD\_BANK\_LOG\_DEPOSIT\_MONEY  |
+| 5     | GUILD\_BANK\_LOG\_WITHDRAW\_MONEY |
+| 6     | GUILD\_BANK\_LOG\_REPAIR\_MONEY   |
+| 7     | GUILD\_BANK\_LOG\_MOVE\_ITEM2     |
+| 8     | GUILD\_BANK\_LOG\_UNK1            |
+| 9     | GUILD\_BANK\_LOG\_BUY\_SLOT       |
 
 ### PlayerGuid
 

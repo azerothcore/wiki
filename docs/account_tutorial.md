@@ -8,120 +8,27 @@ This table is used to store the tutorial state of all the accounts.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#accountid">accountId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p>Unique</p></td>
-<td><p>Account Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#7">tut0</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#7">tut1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#7">tut2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#7">tut3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#7">tut4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#7">tut5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#7">tut6</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#7">tut7</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field          | Type    | Attributes | Key | Null | Default | Extra  | Comment            |
+|----------------|---------|------------|-----|------|---------|--------|--------------------|
+| [accountId][1] | int(10) | unsigned   | PRI | NO   | 0       | Unique | Account Identifier |
+| [tut0][2]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut1][3]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut2][4]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut3][5]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut4][6]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut5][7]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut6][8]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+| [tut7][9]      | int(10) | unsigned   |     | NO   | 0       |        |                    |
+
+[1]: #accountid
+[2]: #tut0
+[3]: #tut1
+[4]: #tut2
+[5]: #tut3
+[6]: #tut4
+[7]: #tut5
+[8]: #tut6
+[9]: #tut7
 
 **Description of the fields**
 
@@ -135,10 +42,8 @@ These values 32bits flags. So 8 x 32bits values makes 256 bits available to stor
 
 Each bit means:
 
-``` cpp
-  0  -  Not yet shown
-  1  -  Shown
-```
+- 0 - Not yet shown
+- 1 - Shown
 
 This is used to diplay only tutorial messages the character did not see before.
 

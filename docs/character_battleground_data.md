@@ -8,140 +8,31 @@ This table holds information for each character in a battleground. Also hold inf
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#instanceid">instanceId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Instance Identifier</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#team">team</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#joinx">joinX</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#joiny">joinY</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#joinz">joinZ</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#joino">joinO</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#joinmapid">joinMapId</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Map Identifier</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#taxistart">taxiStart</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#taxiend">taxiEnd</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mountspell">mountSpell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
+|------------------|--------------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]        | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [instanceId][2]  | int(10)      | unsigned   |     | NO   | 0       |       | Instance Identifier      |
+| [team][3]        | smallint(5)  | unsigned   |     | NO   |         |       |                          |
+| [joinX][4]       | float        | signed     |     | NO   | 0       |       |                          |
+| [joinY][5]       | float        | signed     |     | NO   | 0       |       |                          |
+| [joinZ][6]       | float        | signed     |     | NO   | 0       |       |                          |
+| [joinO][7]       | float        | signed     |     | NO   | 0       |       |                          |
+| [joinMapId][8]   | smallint(5)  | unsigned   |     | NO   | 0       |       | Map Identifier           |
+| [taxiStart][9]   | int(10)      | unsigned   |     | NO   | 0       |       |                          |
+| [taxiEnd][10]    | int(10)      | unsigned   |     | NO   | 0       |       |                          |
+| [mountSpell][11] | mediumint(8) | unsigned   |     | NO   | 0       |       |                          |
+
+[1]: #guid
+[2]: #instanceid
+[3]: #team
+[4]: #joinx
+[5]: #joiny
+[6]: #joinz
+[7]: #joino
+[8]: #joinmapid
+[9]: #taxistart
+[10]: #taxiend
+[11]: #mountspell
 
 **Description of the fields**
 
@@ -157,10 +48,11 @@ This is the battleground instanceId. It's shared with [instance.id](instance_213
 
 teamId:
 
-469 - Alliance
-
-67 - Horde
-0 - GM
+| ID  | Description |
+|-----|-------------|
+| 0   | GM          |
+| 67  | Horde       |
+| 469 | Alliance    |
 
 ### joinX
 

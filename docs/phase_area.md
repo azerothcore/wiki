@@ -11,50 +11,15 @@ Each line holds one Zone or Area with one phaseId and a description.  Each line
 
 ## Structure
 
-<table>
-<thead>
-<tr class="header">
-<th>Field</th>
-<th>Type</th>
-<th>Null</th>
-<th>Key</th>
-<th>Default</th>
-<th>Extra</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="#areaid">AreaId</a></td>
-<td>int</td>
-<td>No</td>
-<td>Pri</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#phaseid">PhaseId</a></td>
-<td>int</td>
-<td>No</td>
-<td>Pri</td>
-<td>0</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#comment">Comment</a></td>
-<td>varchar</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Field        | Type    | Null | Key | Default | Extra |
+|--------------|---------|------|-----|---------|-------|
+| [AreaId][1]  | int     | No   | PRI | 0       |       |
+| [PhaseId][2] | int     | No   | PRI | 0       |       |
+| [Comment][3] | varchar |      |     |         |       |
+
+[1]: #areaid
+[2]: #phaseid
+[3]: #comment
 
 ## Description of the fields
 
@@ -70,8 +35,7 @@ This is the connected PhaseId 
 
 A free description.
 
-**
-Examples**
+### Examples
 
 As Demo we look at Kezan, Startarea Goblin.
 
@@ -100,5 +64,3 @@ Next we declare the following range for phase 379 starting with reward on quest 
 And so on....
 
 Note: The quest 14109/14110 14113/14153 are Required Gender Quest.
-
-

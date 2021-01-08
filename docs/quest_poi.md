@@ -8,122 +8,25 @@ Comes from sniffs.
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#questid">QuestID</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#objindex">ObjectiveIndex</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#mapid">MapID</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#worldmapareaid">WorldMapAreaId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#floorid">Floor</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#unk3">Priority</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#unk4">Flags</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
+|---------------------|---------|------------|-----|------|---------|-------|---------|
+| [QuestID][1]        | int(10) | unsigned   | PRI | NO   | 0       |       |         |
+| [id][2]             | int(10) | unsigned   | PRI | NO   | 0       |       |         |
+| [ObjectiveIndex][3] | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [MapID][4]          | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [WorldMapAreaId][5] | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [Floor][6]          | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [Priority][7]       | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [Flags][8]          | int(10) | unsigned   |     | NO   | 0       |       |         |
+
+[1]: #questid
+[2]: #id
+[3]: #objectiveindex
+[4]: #mapid
+[5]: #worldmapareaid
+[6]: #floor
+[7]: #priority
+[8]: #flags
 
 **Description of the fields**
 
