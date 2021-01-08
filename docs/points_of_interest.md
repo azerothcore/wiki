@@ -16,7 +16,7 @@
 | [icon][4]       | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
 | [flags][5]      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
 | [Importance][6] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [icon_name][7]  | text         | signed     |     | NO   | NULL    |       |         |
+| [icon_name][7]  | text         |            |     | NO   | NULL    |       |         |
 
 [1]: #entry
 [2]: #x
