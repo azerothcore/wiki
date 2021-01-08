@@ -36,19 +36,19 @@ The [RealmID](realmlist#id) of the realm this log string came from. 0 if realmd.
 
 The type of log this is:
 
-| Values          | Description | Comment                     |
-|-----------------|-------------|-----------------------------|
-| LOG_TYPE_STRING | 0           | A NORMAL INFORMATIVE STRING |
-| LOG_TYPE_ERROR  | 1           | SOME SORT OF ERROR          |
-| LOG_TYPE_BASIC  | 2           | BASIC INFORMATION           |
-| LOG_TYPE_DETAIL | 3           | DETAILED INFORMATION        |
-| LOG_TYPE_DEBUG  | 4           | DEBUGGING INFORMATION       |
-| LOG_TYPE_CHAR   | 5           | CHARACTER-RELATED           |
-| LOG_TYPE_WORLD  | 6           | WORLD PACKET DUMP           |
-| LOG_TYPE_RA     | 7           | REMOTE ACCESS LOGS          |
-| LOG_TYPE_GM     | 8           | GM COMMAND LOGS             |
-| LOG_TYPE_CRASH  | 9           | CRASH ALARM LOGS            |
-| LOG_TYPE_CHAT   | 10          | CHAT/MESSAGE LOGS           |
+| Name            | Value | Description                 |
+|-----------------|-------|-----------------------------|
+| LOG_TYPE_STRING | 0     | A NORMAL INFORMATIVE STRING |
+| LOG_TYPE_ERROR  | 1     | SOME SORT OF ERROR          |
+| LOG_TYPE_BASIC  | 2     | BASIC INFORMATION           |
+| LOG_TYPE_DETAIL | 3     | DETAILED INFORMATION        |
+| LOG_TYPE_DEBUG  | 4     | DEBUGGING INFORMATION       |
+| LOG_TYPE_CHAR   | 5     | CHARACTER-RELATED           |
+| LOG_TYPE_WORLD  | 6     | WORLD PACKET DUMP           |
+| LOG_TYPE_RA     | 7     | REMOTE ACCESS LOGS          |
+| LOG_TYPE_GM     | 8     | GM COMMAND LOGS             |
+| LOG_TYPE_CRASH  | 9     | CRASH ALARM LOGS            |
+| LOG_TYPE_CHAT   | 10    | CHAT/MESSAGE LOGS           |
 
 ### level
 
