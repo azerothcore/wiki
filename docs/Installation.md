@@ -48,19 +48,19 @@ This will create an `azerothcore-wotlk` directory containing the AC source files
 
 A) Clone only the master branch + full history (smaller size - recommended):
 
-```
+```sh
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
 ```
 
 B) Clone only the master branch + no previous history (smallest size):
 
-```
+```sh
 git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
 ```
 
 C) Clone all branches and all history:
 
-```
+```sh
 git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
 ```
 
@@ -71,10 +71,16 @@ Note: If you want to get the full history back, use `git fetch --unshallow` (if 
 
 #### Compiling on GNU/Linux or Mac OS X
 
-```
+```sh
 cd azerothcore
 mkdir build
 cd build
+```
+
+or
+
+```sh
+cd azerothcore && mkdir build && cd build
 ```
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
@@ -88,34 +94,63 @@ Check the options here if you know what you're doing: [CMake options](CMake-opti
 
 At this point, you must be in your "build/" directory.
 
-**Note**: in the following command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
+**Note**: in the following command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root". You can check the state of the environment variable, as follows:
+
+```sh
+echo $HOME
+```
 
 **Note2**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
 
-```
+```sh
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1
+```
+
+To know the amount of cores available.
+You can use the following command
+
+```sh
+nproc --all
 ```
 
 Then, replacing `6` with the number of threads that you want to execute, type:
 
-```
+```sh
 make -j 6
 make install
+```
+
+or
+
+```sh
+make -j 6 && make install
 ```
 
 **CMake on Mac OS X:**
 
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
-```
+```sh
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
+```
+
+To know the amount of cores available.
+You can use the following command
+
+```sh
+nproc --all
 ```
 
 Then, replacing `4` with the number of threads that you want to execute, type:
 
-```
+```sh
 make -j 4
 make install
+```
+or
+
+```sh
+make -j 4 && make install
 ```
 
 #### Compiling on Windows
