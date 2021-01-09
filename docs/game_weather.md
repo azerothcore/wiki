@@ -6,130 +6,35 @@
 
 This table holds the percent chances for weather changes to occur in various zones. Not all zones can have their weather changed. For any given zone the percentage of all weather types for each season should total, and not exceed 100%.
 
-<table style="width:100%;">
-<colgroup>
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-<col width="16%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#zone">zone</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spring_rain_chance">spring_rain_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spring_snow_chance">spring_snow_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#spring_storm_chance">spring_storm_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#summer_rain_chance">summer_rain_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#summer_snow_chance">summer_snow_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#summer_storm_chance">summer_storm_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#fall_rain_chance">fall_rain_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#fall_snow_chance">fall_snow_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#fall_storm_chance">fall_storm_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#winter_rain_chance">winter_rain_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#winter_snow_chance">winter_snow_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#winter_storm_chance">winter_storm_chance</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>25</p></td>
-</tr>
-</tbody>
-</table>
+| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|---------------------------|--------------|------------|-----|------|---------|-------|---------|
+| [zone][1]                 | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [spring_rain_chance][2]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [spring_snow_chance][3]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [spring_storm_chance][4]  | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [summer_rain_chance][5]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [summer_snow_chance][6]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [summer_storm_chance][7]  | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [fall_rain_chance][8]     | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [fall_snow_chance][9]     | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [fall_storm_chance][10]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [winter_rain_chance][11]  | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [winter_snow_chance][12]  | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [winter_storm_chance][13] | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+
+[1]: #zone
+[2]: #spring_rain_chance
+[3]: #spring_snow_chance
+[4]: #spring_storm_chance
+[5]: #summer_rain_chance
+[6]: #summer_snow_chance
+[7]: #summer_storm_chance
+[8]: #fall_rain_chance
+[9]: #fall_snow_chance
+[10]: #fall_storm_chance
+[11]: #winter_rain_chance
+[12]: #winter_snow_chance
+[13]: #winter_storm_chance
 
 **Field Descriptions**
 
