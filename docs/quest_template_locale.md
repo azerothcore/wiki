@@ -11,16 +11,16 @@ This table is used to provide to localized clients with localized string for que
 | Field                | Type         | Attribute | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|-----------|-----|------|---------|-------|---------|
 | [ID][1]              | mediumint(8) | unsigned  | PRI | NO   | 0       |       |         |
-| [locale][2]          | varchar(4)   |           | PRI | NO   | NULL    |       |         |
-| [Title][3]           | text         |           |     | YES  | NULL    |       |         |
-| [Details][4]         | text         |           |     | YES  | NULL    |       |         |
-| [Objectives][5]      | text         |           |     | YES  | NULL    |       |         |
-| [EndText][6]         | text         |           |     | YES  | NULL    |       |         |
-| [CompletedText][7]   | text         |           |     | YES  | NULL    |       |         |
-| [ObjectiveText1][8]  | text         |           |     | YES  | NULL    |       |         |
-| [ObjectiveText2][9]  | text         |           |     | YES  | NULL    |       |         |
-| [ObjectiveText3][10] | text         |           |     | YES  | NULL    |       |         |
-| [ObjectiveText4][11] | text         |           |     | YES  | NULL    |       |         |
+| [locale][2]          | varchar(4)   |           | PRI | NO   |         |       |         |
+| [Title][3]           | text         |           |     | YES  |         |       |         |
+| [Details][4]         | text         |           |     | YES  |         |       |         |
+| [Objectives][5]      | text         |           |     | YES  |         |       |         |
+| [EndText][6]         | text         |           |     | YES  |         |       |         |
+| [CompletedText][7]   | text         |           |     | YES  |         |       |         |
+| [ObjectiveText1][8]  | text         |           |     | YES  |         |       |         |
+| [ObjectiveText2][9]  | text         |           |     | YES  |         |       |         |
+| [ObjectiveText3][10] | text         |           |     | YES  |         |       |         |
+| [ObjectiveText4][11] | text         |           |     | YES  |         |       |         |
 | [VerifiedBuild][12]  | smallint(5)  |           |     | YES  | 0       |       |         |
 
 [1]: #id
