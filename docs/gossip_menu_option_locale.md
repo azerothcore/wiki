@@ -8,210 +8,45 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#menu_id">menu_id</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#id">id</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#option_text_loc">option_text_loc1</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#option_text_loc">option_text_loc2</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#option_text_loc">option_text_loc3</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#option_text_loc">option_text_loc4</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#option_text_loc">option_text_loc5</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#option_text_loc">option_text_loc6</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#option_text_loc">option_text_loc7</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#option_text_loc">option_text_loc8</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#box_text_loc">box_text_loc1</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#box_text_loc">box_text_loc2</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#box_text_loc">box_text_loc3</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#box_text_loc">box_text_loc4</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#box_text_loc">box_text_loc5</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#box_text_loc">box_text_loc6</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#box_text_loc">box_text_loc7</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#box_text_loc">box_text_loc8</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
+|------------------------|-------------|------------|-----|------|---------|-------|---------|
+| [menu_id][1]           | smallint(6) | unsigned   | PRI | NO   |         |       |         |
+| [id][2]                | smallint(6) | unsigned   | PRI | NO   |         |       |         |
+| [option_text_loc1][3]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc2][4]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc3][5]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc4][6]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc5][7]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc6][8]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc7][9]  | text        | signed     |     | YES  | NULL    |       |         |
+| [option_text_loc8][10] | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc1][11]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc2][12]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc3][13]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc4][14]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc5][15]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc6][16]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc7][17]    | text        | signed     |     | YES  | NULL    |       |         |
+| [box_text_loc8][18]    | text        | signed     |     | YES  | NULL    |       |         |
+
+[1]: #menu_id
+[2]: #id
+[3]: #option_text_loc1
+[4]: #option_text_loc2
+[5]: #option_text_loc3
+[6]: #option_text_loc4
+[7]: #option_text_loc5
+[8]: #option_text_loc6
+[9]: #option_text_loc7
+[10]: #option_text_loc8
+[11]: #box_text_loc1
+[12]: #box_text_loc2
+[13]: #box_text_loc3
+[14]: #box_text_loc4
+[15]: #box_text_loc5
+[16]: #box_text_loc6
+[17]: #box_text_loc7
+[18]: #box_text_loc8
 
 **Description of the fields**
 
