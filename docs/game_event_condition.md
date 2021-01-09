@@ -8,90 +8,21 @@ This table contains conditions to meet for the specified game event to be comple
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#evententry">eventEntry</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>Entry of the game event</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#condition_id">condition_id</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#req_num">req_num</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#max_world_state_field">max_world_state_field</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#done_world_state_field">done_world_state_field</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#description">description</a></p></td>
-<td><p>varchar(25)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
+|-----------------------------|--------------|------------|-----|------|---------|-------|-------------------------|
+| [eventEntry][1]             | tinyint(3)   | unsigned   | PRI | NO   |         |       | Entry of the game event |
+| [condition_id][2]           | mediumint(8) | unsigned   | PRI | NO   |         |       |                         |
+| [req_num][3]                | float        | signed     |     | YES  | 0       |       |                         |
+| [max_world_state_field][4]  | smallint(5)  | unsigned   |     | NO   |         |       |                         |
+| [done_world_state_field][5] | smallint(5)  | unsigned   |     | NO   |         |       |                         |
+| [description][6]            | varchar(25)  | signed     |     | NO   |         |       |                         |
+
+[1]: #evententry
+[2]: #condition_id
+[3]: #req_num
+[4]: #max_world_state_field
+[5]: #done_world_state_field
+[6]: #description
 
 **Description of the fields**
 
