@@ -8,10 +8,10 @@
 
 | Field               | Type        | Attribute | Key | Null | Default | Extra | Comment |
 |---------------------|-------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]             | int(10)     | unsigned  | PRI | NO   | 0       |       |         |
-| [locale][2]         | varchar(4)  |           | PRI | NO   | NULL    |       |         |
+| [ID][1]             | int(10)     | unsigned  | PRI | NO   |         |       |         |
+| [locale][2]         | varchar(4)  |           | PRI | NO   |         |       |         |
 | [CompletionText][3] | text        |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4]  | smallint(6) |           |     | NO   | 0       |       |         |
+| [VerifiedBuild][4]  | smallint(6) |           |     | NO   |         |       |         |
 
 [1]: #id
 [2]: #locale
