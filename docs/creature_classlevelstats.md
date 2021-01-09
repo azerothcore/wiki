@@ -1,124 +1,38 @@
 # creature\_classlevelstats
 
-``
-
 **Table Structure**
 
 This table contains the base values for creature health, mana, armor, attack power, ranged attack power, damage, and experience.
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#level">level</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#class">class</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#basehp0">basehp0</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#basehp1">basehp1</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#basehp2">basehp2</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#basemana">basemana</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#basearmor">basearmor</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><a href="#attackpower">attackpower</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td>NO</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td><a href="#rangedattackpower">rangedattackpower</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td>NO</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td><a href="#damage_base">damage_base</a></td>
-<td>float</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td><a href="#damage_exp1">damage_exp1</a></td>
-<td>float</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td><a href="#damage_exp2">damage_exp2</a></td>
-<td>float</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td><a href="#comment">comment</a></td>
-<td>text</td>
-<td><br />
-</td>
-<td>YES</td>
-<td>NULL</td>
-</tr>
-</tbody>
-</table>
+| Field                  | Type        | Attributes | Null | Default | Extra | Comment |
+|------------------------|-------------|------------|------|---------|-------|---------|
+| [level][1]             | tinyint(3)  | unsigned   | NO   |         |       |         |
+| [class][2]             | tinyint(3)  | unsigned   | NO   |         |       |         |
+| [basehp0][3]           | smallint(5) | unsigned   | NO   |         |       |         |
+| [basehp1][4]           | smallint(5) | unsigned   | NO   |         |       |         |
+| [basehp2][5]           | smallint(5) | unsigned   | NO   |         |       |         |
+| [basemana][6]          | smallint(5) | unsigned   | NO   |         |       |         |
+| [basearmor][7]         | smallint(5) | unsigned   | NO   |         |       |         |
+| [attackpower][8]       | smallint(5) | unsigned   | NO   |         |       |         |
+| [rangedattackpower][9] | smallint(5) | unsigned   | NO   |         |       |         |
+| [damage_base][10]      | float       |            | NO   |         |       |         |
+| [damage_exp1][11]      | float       |            | NO   |         |       |         |
+| [damage_exp2][12]      | float       |            | NO   |         |       |         |
+| [comment][13]          | text        |            | YES  | NULL    |       |         |
+
+[1]: #level
+[2]: #class
+[3]: #basehp0
+[4]: #basehp1
+[5]: #basehp2
+[6]: #basemana
+[7]: #basearmor
+[8]: #attackpower
+[9]: #rangedattackpower
+[10]: #damage_base
+[11]: #damage_exp1
+[12]: #damage_exp2
+[13]: #comment
 
 **Field Descriptions**
 
@@ -173,5 +87,3 @@ Max damage This will increase/decrease by creature\_template.damagemodifier.
 ### comment
 
 A comment describing the purpose of the record (entry).
-
-
