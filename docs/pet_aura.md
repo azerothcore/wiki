@@ -8,180 +8,39 @@
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#caster_guid">caster_guid</a></p></td>
-<td><p>bigint(20)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>Full Global Unique Identifier</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spell">spell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#effect_mask">effect_mask</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#recalculate_mask">recalculate_mask</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#stackcount">stackcount</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#amount">amount0</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#amount">amount1</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#amount">amount2</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#base_amount">base_amount0</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#base_amount">base_amount1</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#base_amount">base_amount2</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#maxduration">maxduration</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#remaintime">remaintime</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#remaincharges">remaincharges</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
+|-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
+| [guid][1]             | int(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
+| [caster_guid][2]      | bigint(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
+| [spell][3]            | mediumint(8) | unsigned   |     | NO   |         |       |                               |
+| [effect_mask][4]      | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [recalculate_mask][5] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [stackcount][6]       | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [amount0][7]          | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [amount1][8]          | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [amount2][9]          | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [base_amount0][10]    | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [base_amount1][11]    | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [base_amount2][12]    | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [maxduration][13]     | int(11)      | signed     |     | NO   |         |       |                               |
+| [remaintime][14]      | int(11)      | signed     |     | NO   |         |       |                               |
+| [remaincharges][15]   | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+
+[1]: #guid
+[2]: #caster_guid
+[3]: #spell
+[4]: #effect_mask
+[5]: #recalculate_mask
+[6]: #stackcount
+[7]: #amount0
+[8]: #amount1
+[9]: #amount2
+[10]: #base_amount0
+[11]: #base_amount1
+[12]: #base_amount2
+[13]: #maxduration
+[14]: #remaintime
+[15]: #remaincharges
 
 **Description of the fields**
 
