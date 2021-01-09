@@ -8,224 +8,41 @@ Holds information on the quest status of each character.
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p>Global Unique Identifier</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#quest">quest</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p>Quest Identifier</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#status">status</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#explored">explored</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#timer">timer</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#mobcount">mobcount1</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mobcount">mobcount2</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#mobcount">mobcount3</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mobcount">mobcount4</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#itemcount">itemcount1</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#itemcount">itemcount2</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#itemcount">itemcount3</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#itemcount">itemcount4</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td>itemcount5</td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>itemcount6</td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#playercount">playercount</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field             | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
+|-------------------|-------------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]         | int(10)     | unsigned   | PRI | NO   |         |       | Global Unique Identifier |
+| [quest][2]        | int(10)     | unsigned   | PRI | NO   |         |       | Quest Identifier         |
+| [status][3]       | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
+| [explored][4]     | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
+| [timer][5]        | int(10)     | unsigned   |     | NO   |         |       |                          |
+| [mobcount1][6]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount2][7]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount3][8]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount4][9]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount1][10]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount2][11]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount3][12]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount4][13]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount5][14]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount6][15]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [playercount][16] | smallint(5) | unsigned   |     | NO   |         |       |                          |
+
+[1]: #guid
+[2]: #quest
+[3]: #status
+[4]: #explored
+[5]: #timer
+[6]: #mobcount1
+[7]: #mobcount2
+[8]: #mobcount3
+[9]: #mobcount4
+[10]: #itemcount1
+[11]: #itemcount2
+[12]: #itemcount3
+[13]: #itemcount4
+[14]: #itemcount5
+[15]: #itemcount6
+[16]: #playercount
 
 **Description of the fields**
 
