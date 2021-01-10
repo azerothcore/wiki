@@ -10,9 +10,9 @@ This table holds security access level for any realm in [realmlist](realmlist) t
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]      | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
-| [gmlevel][2] | tinyint(3)   | unsigned   |     | NO   | NULL    |       |         |
-| [RealmID][3] | int(11)      |            | PRI | NO   | -1      |       |         |
+| [id][1]      | int(10)      | unsigned   | PRI | NO   |         |       |         |
+| [gmlevel][2] | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [RealmID][3] | int(11)      | signed     | PRI | NO   | -1      |       |         |
 | [comment][4] | varchar(255) |            |     | YES  |         |       |         |
 
 [1]: #id
