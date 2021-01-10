@@ -1,10 +1,10 @@
 # account\_muted
 
+[<-Back-to:Auth](database-auth.md)
+
 **The \`account\_muted\` table**
 
-
 This table contains account IDs whose characters are assigned a ban chat (mute).
-
 
 GM-Command: **.mute [$playerName] $timeInMinutes [$reason]**.
 
@@ -12,13 +12,19 @@ Disable chat messaging for any character from account of character $playerName (
 
 **Structure**
 
-| Field                       | Type         |  Key | Null | Default | Extra | Comment |
-|-----------------------------|--------------|------|------|---------|-------|---------|
-| [guid](#guid)               | int(10)      |  PRI | NO   | 0       |       |Global Unique Identifier|
-| [mutedate](#mutedate)       | int(10)      |  PRI | NO   | 0       |       |         |
-| [mutetime](#mutetime)       | int(10)      |      | NO   | 0       |       |         |
-| [mutedby](#mutedby)         | varchar(50)  |      | NO   | 0       |       |         |
-| [mutereason](#mutereason)   | varchar(255) |      | NO   | 0       |       |         |
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
+|-----------------|--------------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]       | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [mutedate][2]   | int(10)      | unsigned   | PRI | NO   | 0       |       |                          |
+| [mutetime][3]   | int(10)      | unsigned   |     | NO   | 0       |       |                          |
+| [mutedby][4]    | varchar(50)  |            |     | NO   |         |       |                          |
+| [mutereason][5] | varchar(255) |            |     | NO   |         |       |                          |
+
+[1]: #guid
+[2]: #mutedate
+[3]: #mutetime
+[4]: #mutedby
+[5]: #mutereason
 
 ### Description of the fields
 
