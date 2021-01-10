@@ -1,9 +1,8 @@
 # SkillLine
 
-&lt;noinclude&gt;|
 `Back-to:DBC`
 
-&lt;big&gt;**SkillLine.dbc**&lt;/big&gt;
+**SkillLine.dbc**
 
 This DBC contains all skills.
 
@@ -11,1455 +10,171 @@ This DBC contains all skills.
 
 ## Structure
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><pre><code>Column</code></pre></th>
-<th><pre><code>Field</code></pre></th>
-<th><pre><code>Type</code></pre></th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td><pre><code>ID</code></pre></td>
-<td><pre><code>Integer</code></pre></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td><pre><code>iRefID_SkillLineCategory</code></pre></td>
-<td><pre><code>Integer</code></pre></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td><pre><code>skillCostID</code></pre></td>
-<td><pre><code>Integer</code></pre></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td><pre><code>sRefName</code></pre></td>
-<td><pre><code>String + Loc</code></pre></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td><pre><code>description</code></pre></td>
-<td><pre><code>String + Loc</code></pre></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td><pre><code>iRefID_SpellIcon</code></pre></td>
-<td><pre><code>Integer</code></pre></td>
-<td> </td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td><pre><code>verb</code></pre></td>
-<td><pre><code>String + Loc</code></pre></td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td><pre><code>canLink</code></pre></td>
-<td><pre><code>Integer</code></pre></td>
-<td><pre><code>prof. with recipes</code></pre></td>
-</tr>
-</tbody>
-</table>
+| Column | Field                    | Type         | Notes              |
+|--------|--------------------------|--------------|--------------------|
+| 1      | ID                       | Integer      |                    |
+| 2      | iRefID_SkillLineCategory | Integer      |                    |
+| 3      | skillCostID              | Integer      |                    |
+| 4      | sRefName                 | String + Loc |                    |
+| 5      | description              | String + Loc |                    |
+| 6      | iRefID_SpellIcon         | Integer      |                    |
+| 7      | verb                     | String + Loc |                    |
+| 8      | canLink                  | Integer      | prof. with recipes |
 
 ## **Content**
 
-&lt;/noinclude&gt;
-
-<table style="width:100%;">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>ID</strong></p></td>
-<td><ul>
-<li><a href="#SkillLine-CategoryId">CategoryId</a>*</li>
-</ul></td>
-<td><p><strong>SkillCostId</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-<td><p><strong>SpellIcon</strong></p></td>
-<td><p><strong>AltVerb</strong></p></td>
-<td><p><strong>CanLink</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Frost</p></td>
-<td><p>188</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Fire</p></td>
-<td><p>183</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>26</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Arms</p></td>
-<td><p>514</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>38</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Combat</p></td>
-<td><p>243</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>39</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Subtlety</p></td>
-<td><p>250</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>43</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Swords</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>44</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Axes</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>45</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Bows</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>46</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Guns</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>50</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Beast Mastery</p></td>
-<td><p>255</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>51</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Survival</p></td>
-<td><p>257</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>54</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Maces</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>55</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Two-Handed Swords</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>56</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Holy</p></td>
-<td><p>70</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>78</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Shadow Magic</p></td>
-<td><p>234</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>95</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Defense</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>98</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Common</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>101</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Dwarven Racial</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>109</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Orcish</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>111</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Dwarven</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>113</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Darnassian</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>115</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Taurahe</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>118</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Dual Wield</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>124</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Tauren Racial</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>125</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Orc Racial</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>126</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Night Elf Racial</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>129</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>First Aid</p></td>
-<td><p>504</p></td>
-<td><p> </p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>134</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Feral Combat</p></td>
-<td><p>107</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>136</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Staves</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>137</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Thalassian</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>138</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Draconic</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>139</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Demon Tongue</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>140</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Titan</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>141</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Old Tongue</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>142</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Survival</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>148</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Horse Riding</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>149</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Wolf Riding</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>150</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Tiger Riding</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>152</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Ram Riding</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>155</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Swimming</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>160</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Two-Handed Maces</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>162</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Unarmed</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>163</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Marksmanship</p></td>
-<td><p>126</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>164</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Blacksmithing</p></td>
-<td><p>335</p></td>
-<td><p>Modify</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>165</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Leatherworking</p></td>
-<td><p>346</p></td>
-<td><p>Emboss</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>171</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Alchemy</p></td>
-<td><p>339</p></td>
-<td><p>Refill</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>172</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Two-Handed Axes</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>173</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Daggers</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>176</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Thrown</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>182</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Herbalism</p></td>
-<td><p>345</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>183</p></td>
-<td><p>12</p></td>
-<td><p>0</p></td>
-<td><p>GENERIC (DND)</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>184</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Retribution</p></td>
-<td><p>555</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>185</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Cooking</p></td>
-<td><p>1467</p></td>
-<td><p> </p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>186</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Mining</p></td>
-<td><p>2418</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>188</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Imp</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>189</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Felhunter</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>197</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Tailoring</p></td>
-<td><p>341</p></td>
-<td><p>Embroider</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>202</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Engineering</p></td>
-<td><p>333</p></td>
-<td><p>Tinker</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>203</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Spider</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>204</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Voidwalker</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>205</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Succubus</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>206</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Infernal</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>207</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Doomguard</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>208</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Wolf</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>209</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Cat</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>210</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Bear</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>211</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Boar</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>212</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Crocolisk</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>213</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Carrion Bird</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>214</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Crab</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>215</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Gorilla</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>217</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Raptor</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>218</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Tallstrider</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>220</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Racial - Undead</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>226</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Crossbows</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>228</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Wands</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>229</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Polearms</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>236</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Scorpid</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>237</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Arcane</p></td>
-<td><p>125</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>251</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Turtle</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>253</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Assassination</p></td>
-<td><p>514</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>256</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Fury</p></td>
-<td><p>561</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>257</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Protection</p></td>
-<td><p>276</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>267</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Protection</p></td>
-<td><p>291</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>270</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Generic Hunter</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>293</p></td>
-<td><p>8</p></td>
-<td><p>0</p></td>
-<td><p>Plate Mail</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>313</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Gnomish</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>315</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Troll</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>333</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Enchanting</p></td>
-<td><p>578</p></td>
-<td><p>Enchant</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>354</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Demonology</p></td>
-<td><p>90</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>355</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Affliction</p></td>
-<td><p>88</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>356</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Fishing</p></td>
-<td><p>580</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>373</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Enhancement</p></td>
-<td><p>19</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>374</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Restoration</p></td>
-<td><p>13</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>375</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Elemental Combat</p></td>
-<td><p>62</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>393</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Skinning</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>413</p></td>
-<td><p>8</p></td>
-<td><p>0</p></td>
-<td><p>Mail</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>414</p></td>
-<td><p>8</p></td>
-<td><p>0</p></td>
-<td><p>Leather</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>415</p></td>
-<td><p>8</p></td>
-<td><p>0</p></td>
-<td><p>Cloth</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>433</p></td>
-<td><p>8</p></td>
-<td><p>0</p></td>
-<td><p>Shield</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>473</p></td>
-<td><p>6</p></td>
-<td><p>0</p></td>
-<td><p>Fist Weapons</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>533</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Raptor Riding</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>553</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Mechanostrider Piloting</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>554</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Undead Horsemanship</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>573</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Restoration</p></td>
-<td><p>962</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>574</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Balance</p></td>
-<td><p>225</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>593</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Destruction</p></td>
-<td><p>547</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>594</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Holy</p></td>
-<td><p>70</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>613</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Discipline</p></td>
-<td><p>685</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>633</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Lockpicking</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>653</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Bat</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>654</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Hyena</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>655</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Bird of Prey</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>656</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Wind Serpent</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>673</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Gutterspeak</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>713</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Kodo Riding</p></td>
-<td><p>317</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>733</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Racial - Troll</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>753</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Racial - Gnome</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>754</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Racial - Human</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>755</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Jewelcrafting</p></td>
-<td><p>1768</p></td>
-<td><p>Modify</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>756</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Blood Elf Racial</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>758</p></td>
-<td><p>-1</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Event - Remote Control</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>759</p></td>
-<td><p>10</p></td>
-<td><p>0</p></td>
-<td><p>Language: Draenei</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>760</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Draenei Racial</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>761</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Felguard</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>762</p></td>
-<td><p>9</p></td>
-<td><p>0</p></td>
-<td><p>Riding</p></td>
-<td><p>255</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>763</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Dragonhawk</p></td>
-<td><p>1530</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>764</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Nether Ray</p></td>
-<td><p>1577</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>765</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Sporebat</p></td>
-<td><p>2033</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>766</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Warp Stalker</p></td>
-<td><p>1952</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>767</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Ravager</p></td>
-<td><p>1585</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>768</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Serpent</p></td>
-<td><p>2167</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>769</p></td>
-<td><p>7</p></td>
-<td><p>22</p></td>
-<td><p>Internal</p></td>
-<td><p>1775</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>770</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Blood</p></td>
-<td><p>2636</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>771</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Frost</p></td>
-<td><p>2632</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>772</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Unholy</p></td>
-<td><p>2633</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>773</p></td>
-<td><p>11</p></td>
-<td><p>0</p></td>
-<td><p>Inscription</p></td>
-<td><p>3267</p></td>
-<td><p>Inscribe</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>775</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Moth</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>776</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Runeforging</p></td>
-<td><p>2727</p></td>
-<td><p>Engrave</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>777</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Mounts</p></td>
-<td><p>2224</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>778</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Companions</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>780</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Chimaera</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>781</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Devlisaur</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>782</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Ghoul</p></td>
-<td><p>221</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>783</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Silithid</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>784</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Worm</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>785</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet- Wasp</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>786</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Rhino</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>787</p></td>
-<td><p>7</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Core Hound</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>788</p></td>
-<td><p>5</p></td>
-<td><p>0</p></td>
-<td><p>Pet - Exotic Spirit Beast</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-
-&lt;noinclude&gt;
-
-------------------------------------------------------------------------
+| ID  | CategoryId* | SkillCostId | Name                         | SpellIcon | AltVerb   | CanLink |
+|-----|-------------|-------------|------------------------------|-----------|-----------|---------|
+| 6   | 7           | 0           | Frost                        | 188       |           | 0       |
+| 8   | 7           | 0           | Fire                         | 183       |           | 0       |
+| 26  | 7           | 0           | Arms                         | 514       |           | 0       |
+| 38  | 7           | 0           | Combat                       | 243       |           | 0       |
+| 39  | 7           | 0           | Subtlety                     | 250       |           | 0       |
+| 43  | 6           | 0           | Swords                       | 1         |           | 0       |
+| 44  | 6           | 0           | Axes                         | 1         |           | 0       |
+| 45  | 6           | 0           | Bows                         | 1         |           | 0       |
+| 46  | 6           | 0           | Guns                         | 1         |           | 0       |
+| 50  | 7           | 0           | Beast Mastery                | 255       |           | 0       |
+| 51  | 7           | 0           | Survival                     | 257       |           | 0       |
+| 54  | 6           | 0           | Maces                        | 1         |           | 0       |
+| 55  | 6           | 0           | Two-Handed Swords            | 1         |           | 0       |
+| 56  | 7           | 0           | Holy                         | 70        |           | 0       |
+| 78  | 7           | 0           | Shadow Magic                 | 234       |           | 0       |
+| 95  | 6           | 0           | Defense                      | 1         |           | 0       |
+| 98  | 10          | 0           | Language: Common             | 1         |           | 0       |
+| 101 | 9           | 0           | Dwarven Racial               | 1         |           | 0       |
+| 109 | 10          | 0           | Language: Orcish             | 1         |           | 0       |
+| 111 | 10          | 0           | Language: Dwarven            | 1         |           | 0       |
+| 113 | 10          | 0           | Language: Darnassian         | 1         |           | 0       |
+| 115 | 10          | 0           | Language: Taurahe            | 1         |           | 0       |
+| 118 | 6           | 0           | Dual Wield                   | 1         |           | 0       |
+| 124 | 9           | 0           | Tauren Racial                | 1         |           | 0       |
+| 125 | 9           | 0           | Orc Racial                   | 1         |           | 0       |
+| 126 | 9           | 0           | Night Elf Racial             | 1         |           | 0       |
+| 129 | 9           | 0           | First Aid                    | 504       |           | 1       |
+| 134 | 7           | 0           | Feral Combat                 | 107       |           | 0       |
+| 136 | 6           | 0           | Staves                       | 1         |           | 0       |
+| 137 | 10          | 0           | Language: Thalassian         | 1         |           | 0       |
+| 138 | 10          | 0           | Language: Draconic           | 1         |           | 0       |
+| 139 | 10          | 0           | Language: Demon Tongue       | 1         |           | 0       |
+| 140 | 10          | 0           | Language: Titan              | 1         |           | 0       |
+| 141 | 10          | 0           | Language: Old Tongue         | 1         |           | 0       |
+| 142 | 9           | 0           | Survival                     | 1         |           | 0       |
+| 148 | 9           | 0           | Horse Riding                 | 1         |           | 0       |
+| 149 | 9           | 0           | Wolf Riding                  | 1         |           | 0       |
+| 150 | 9           | 0           | Tiger Riding                 | 1         |           | 0       |
+| 152 | 9           | 0           | Ram Riding                   | 1         |           | 0       |
+| 155 | 9           | 0           | Swimming                     | 1         |           | 0       |
+| 160 | 6           | 0           | Two-Handed Maces             | 1         |           | 0       |
+| 162 | 6           | 0           | Unarmed                      | 1         |           | 0       |
+| 163 | 7           | 0           | Marksmanship                 | 126       |           | 0       |
+| 164 | 11          | 0           | Blacksmithing                | 335       | Modify    | 1       |
+| 165 | 11          | 0           | Leatherworking               | 346       | Emboss    | 1       |
+| 171 | 11          | 0           | Alchemy                      | 339       | Refill    | 1       |
+| 172 | 6           | 0           | Two-Handed Axes              | 1         |           | 0       |
+| 173 | 6           | 0           | Daggers                      | 1         |           | 0       |
+| 176 | 6           | 0           | Thrown                       | 1         |           | 0       |
+| 182 | 11          | 0           | Herbalism                    | 345       |           | 0       |
+| 183 | 12          | 0           | GENERIC (DND)                | 1         |           | 0       |
+| 184 | 7           | 0           | Retribution                  | 555       |           | 0       |
+| 185 | 9           | 0           | Cooking                      | 1467      |           | 1       |
+| 186 | 11          | 0           | Mining                       | 2418      |           | 0       |
+| 188 | 7           | 0           | Pet - Imp                    | 1         |           | 0       |
+| 189 | 7           | 0           | Pet - Felhunter              | 1         |           | 0       |
+| 197 | 11          | 0           | Tailoring                    | 341       | Embroider | 1       |
+| 202 | 11          | 0           | Engineering                  | 333       | Tinker    | 1       |
+| 203 | 7           | 0           | Pet - Spider                 | 1         |           | 0       |
+| 204 | 7           | 0           | Pet - Voidwalker             | 1         |           | 0       |
+| 205 | 7           | 0           | Pet - Succubus               | 1         |           | 0       |
+| 206 | 7           | 0           | Pet - Infernal               | 1         |           | 0       |
+| 207 | 7           | 0           | Pet - Doomguard              | 1         |           | 0       |
+| 208 | 7           | 0           | Pet - Wolf                   | 1         |           | 0       |
+| 209 | 7           | 0           | Pet - Cat                    | 1         |           | 0       |
+| 210 | 7           | 0           | Pet - Bear                   | 1         |           | 0       |
+| 211 | 7           | 0           | Pet - Boar                   | 1         |           | 0       |
+| 212 | 7           | 0           | Pet - Crocolisk              | 1         |           | 0       |
+| 213 | 7           | 0           | Pet - Carrion Bird           | 1         |           | 0       |
+| 214 | 7           | 0           | Pet - Crab                   | 1         |           | 0       |
+| 215 | 7           | 0           | Pet - Gorilla                | 1         |           | 0       |
+| 217 | 7           | 0           | Pet - Raptor                 | 1         |           | 0       |
+| 218 | 7           | 0           | Pet - Tallstrider            | 1         |           | 0       |
+| 220 | 9           | 0           | Racial - Undead              | 1         |           | 0       |
+| 226 | 6           | 0           | Crossbows                    | 1         |           | 0       |
+| 228 | 6           | 0           | Wands                        | 1         |           | 0       |
+| 229 | 6           | 0           | Polearms                     | 1         |           | 0       |
+| 236 | 7           | 0           | Pet - Scorpid                | 1         |           | 0       |
+| 237 | 7           | 0           | Arcane                       | 125       |           | 0       |
+| 251 | 7           | 0           | Pet - Turtle                 | 1         |           | 0       |
+| 253 | 7           | 0           | Assassination                | 514       |           | 0       |
+| 256 | 7           | 0           | Fury                         | 561       |           | 0       |
+| 257 | 7           | 0           | Protection                   | 276       |           | 0       |
+| 267 | 7           | 0           | Protection                   | 291       |           | 0       |
+| 270 | 7           | 0           | Pet - Generic Hunter         | 1         |           | 0       |
+| 293 | 8           | 0           | Plate Mail                   | 1         |           | 0       |
+| 313 | 10          | 0           | Language: Gnomish            | 1         |           | 0       |
+| 315 | 10          | 0           | Language: Troll              | 1         |           | 0       |
+| 333 | 11          | 0           | Enchanting                   | 578       | Enchant   | 1       |
+| 354 | 7           | 0           | Demonology                   | 90        |           | 0       |
+| 355 | 7           | 0           | Affliction                   | 88        |           | 0       |
+| 356 | 9           | 0           | Fishing                      | 580       |           | 0       |
+| 373 | 7           | 0           | Enhancement                  | 19        |           | 0       |
+| 374 | 7           | 0           | Restoration                  | 13        |           | 0       |
+| 375 | 7           | 0           | Elemental Combat             | 62        |           | 0       |
+| 393 | 11          | 0           | Skinning                     | 1         |           | 0       |
+| 413 | 8           | 0           | Mail                         | 1         |           | 0       |
+| 414 | 8           | 0           | Leather                      | 1         |           | 0       |
+| 415 | 8           | 0           | Cloth                        | 1         |           | 0       |
+| 433 | 8           | 0           | Shield                       | 1         |           | 0       |
+| 473 | 6           | 0           | Fist Weapons                 | 1         |           | 0       |
+| 533 | 9           | 0           | Raptor Riding                | 1         |           | 0       |
+| 553 | 9           | 0           | Mechanostrider Piloting      | 1         |           | 0       |
+| 554 | 9           | 0           | Undead Horsemanship          | 1         |           | 0       |
+| 573 | 7           | 0           | Restoration                  | 962       |           | 0       |
+| 574 | 7           | 0           | Balance                      | 225       |           | 0       |
+| 593 | 7           | 0           | Destruction                  | 547       |           | 0       |
+| 594 | 7           | 0           | Holy                         | 70        |           | 0       |
+| 613 | 7           | 0           | Discipline                   | 685       |           | 0       |
+| 633 | 7           | 0           | Lockpicking                  | 1         |           | 0       |
+| 653 | 7           | 0           | Pet - Bat                    | 1         |           | 0       |
+| 654 | 7           | 0           | Pet - Hyena                  | 1         |           | 0       |
+| 655 | 7           | 0           | Pet - Bird of Prey           | 1         |           | 0       |
+| 656 | 7           | 0           | Pet - Wind Serpent           | 1         |           | 0       |
+| 673 | 10          | 0           | Language: Gutterspeak        | 1         |           | 0       |
+| 713 | 9           | 0           | Kodo Riding                  | 317       |           | 0       |
+| 733 | 9           | 0           | Racial - Troll               | 0         |           | 0       |
+| 753 | 9           | 0           | Racial - Gnome               | 0         |           | 0       |
+| 754 | 9           | 0           | Racial - Human               | 0         |           | 0       |
+| 755 | 11          | 0           | Jewelcrafting                | 1768      | Modify    | 1       |
+| 756 | 9           | 0           | Blood Elf Racial             | 0         |           | 0       |
+| 758 | -1          | 0           | Pet - Event - Remote Control | 0         |           | 0       |
+| 759 | 10          | 0           | Language: Draenei            | 0         |           | 0       |
+| 760 | 9           | 0           | Draenei Racial               | 0         |           | 0       |
+| 761 | 7           | 0           | Pet - Felguard               | 0         |           | 0       |
+| 762 | 9           | 0           | Riding                       | 255       |           | 0       |
+| 763 | 7           | 0           | Pet - Dragonhawk             | 1530      |           | 0       |
+| 764 | 7           | 0           | Pet - Nether Ray             | 1577      |           | 0       |
+| 765 | 7           | 0           | Pet - Sporebat               | 2033      |           | 0       |
+| 766 | 7           | 0           | Pet - Warp Stalker           | 1952      |           | 0       |
+| 767 | 7           | 0           | Pet - Ravager                | 1585      |           | 0       |
+| 768 | 7           | 0           | Pet - Serpent                | 2167      |           | 0       |
+| 769 | 7           | 22          | Internal                     | 1775      |           | 0       |
+| 770 | 7           | 0           | Blood                        | 2636      |           | 0       |
+| 771 | 7           | 0           | Frost                        | 2632      |           | 0       |
+| 772 | 7           | 0           | Unholy                       | 2633      |           | 0       |
+| 773 | 11          | 0           | Inscription                  | 3267      | Inscribe  | 1       |
+| 775 | 7           | 0           | Pet - Moth                   | 0         |           | 0       |
+| 776 | 7           | 0           | Runeforging                  | 2727      | Engrave   | 0       |
+| 777 | 7           | 0           | Mounts                       | 2224      |           | 0       |
+| 778 | 7           | 0           | Companions                   | 0         |           | 0       |
+| 780 | 7           | 0           | Pet - Exotic Chimaera        | 0         |           | 0       |
+| 781 | 7           | 0           | Pet - Exotic Devlisaur       | 0         |           | 0       |
+| 782 | 7           | 0           | Pet - Ghoul                  | 221       |           | 0       |
+| 783 | 7           | 0           | Pet - Exotic Silithid        | 0         |           | 0       |
+| 784 | 7           | 0           | Pet - Exotic Worm            | 0         |           | 0       |
+| 785 | 7           | 0           | Pet- Wasp                    | 0         |           | 0       |
+| 786 | 7           | 0           | Pet - Exotic Rhino           | 0         |           | 0       |
+| 787 | 7           | 0           | Pet - Exotic Core Hound      | 0         |           | 0       |
+| 788 | 5           | 0           | Pet - Exotic Spirit Beast    | 0         |           | 0       |
 
 ## CategoryId
 
@@ -1467,49 +182,13 @@ This field is from SkillLineCategory.dbc
 
 This in the content of this small dbc
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Category Id</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p>Attributes</p></td>
-</tr>
-<tr class="odd">
-<td><p>6</p></td>
-<td><p>Weapon Skills</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Class Skills</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Armor Proficiencies</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>Secondary Skills</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>Languages</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>Professions</p></td>
-</tr>
-<tr class="odd">
-<td><p>12</p></td>
-<td><p>Not Displayed</p></td>
-</tr>
-</tbody>
-</table>
-
-
+| Category Id | Name                |
+|-------------|---------------------|
+| 5           | Attributes          |
+| 6           | Weapon Skills       |
+| 7           | Class Skills        |
+| 8           | Armor Proficiencies |
+| 9           | Secondary Skills    |
+| 10          | Languages           |
+| 11          | Professions         |
+| 12          | Not Displayed       |
