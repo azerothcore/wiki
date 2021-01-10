@@ -13,7 +13,7 @@ This table contains the autobroadcast entries for your realms. Values like it's 
 | [realmid][1] | int(11)    | signed     | PRI | NO   | -1      |                |         |
 | [id][2]      | tinyint(3) | unsigned   | PRI | NO   |         | auto_increment |         |
 | [weight][3]  | tinyint(3) | unsigned   |     | YES  | 1       |                |         |
-| [text][4]    | longtext   |            |     | NO   | NULL    |                |         |
+| [text][4]    | longtext   |            |     | NO   |         |                |         |
 
 [1]: #realmid
 [2]: #id
