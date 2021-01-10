@@ -263,7 +263,7 @@ These values are used by the core and a few spell\_\* tables.
 |----|-------------|
 | 0  | Mana        |
 | 1  | Rage        |
-| 2  |             |
+| 2  | Focus       |
 | 3  | Energy      |
 
 ## **RequiresSpellFocus**
