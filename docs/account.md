@@ -28,7 +28,7 @@ This table holds information on all available accounts.
 | [last_login][16]      | timestamp    |            |     | YES  | NULL              |                |            |
 | [online][17]          | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [expansion][18]       | tinyint(3)   | unsigned   |     | NO   | 2                 |                |            |
-| [mutetime][19]        | bigint(20)   |            |     | NO   | 0                 |                |            |
+| [mutetime][19]        | bigint(20)   | signed     |     | NO   | 0                 |                |            |
 | [mutereason][20]      | varchar(255) |            |     | NO   |                   |                |            |
 | [muteby][21]          | varchar(50)  |            |     | NO   |                   |                |            |
 | [locale][22]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
