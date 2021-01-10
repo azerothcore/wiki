@@ -8,291 +8,64 @@ This table stores all tickets.
 
 Note: do not insert directly into most of these columns, else the client won't update the ticket status until table reload and a logout.
 
-
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">Id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>Auto increment</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#type">type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p>0 open, 1 closed, 2 character deleted</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#playerguid">playerGuid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p>Global Unique Identifier of ticket creator</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(12)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p>Name of ticket creator</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#description">description</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><br />
-</td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#createtime">createtime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#mapid">mapId</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="dd">
-<td><p><a href="#posx">posX</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#posy">posY</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#posz">posZ</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#lastmodifiedtime">lastModifiedTime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#closedby">closedBy</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#assignedto">assignedTo</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><p>GUID of admin to whom ticket is assigned</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#response">response</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#completed">completed</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#escalated">escalated</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#viewed">viewed</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#needmorehelp">needMoreHelp</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#resolvedBy">resolvedBy</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><br />
-</td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><br />
-</td>
-<td>GUID of GM who resolved the ticket</td>
-</tr>
+| Field                  | Type        | Attributes | Key | Null | Default | Extra          | Comment                                    |
+|------------------------|-------------|------------|-----|------|---------|----------------|--------------------------------------------|
+| [Id][1]                | int(10)     | signed     | PRI | NO   |         | Auto increment |                                            |
+| [type][2]              | tinyint(3)  | unsigned   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
+| [playerGuid][3]        | int(10)     | unsigned   |     | NO   |         |                | Global Unique Identifier of ticket creator |
+| [name][4]              | varchar(12) |            |     | NO   |         |                | Name of ticket creator                     |
+| [description][5]       | text        |            |     | NO   |         |                |                                            |
+| [createtime][6]        | int(10)     | unsigned   |     | NO   |         |                |                                            |
+| [mapId][7]             | smallint(5) | unsigned   |     | NO   |         |                |                                            |
+| [posX][8]              | float       | signed     |     | NO   |         |                |                                            |
+| [posY][9]              | float       | signed     |     | NO   |         |                |                                            |
+| [posZ][10]             | float       | signed     |     | NO   |         |                |                                            |
+| [lastModifiedTime][11] | int(10)     | signed     |     | NO   |         |                |                                            |
+| [closedBy][12]         | int(10)     | signed     |     | NO   |         |                |                                            |
+| [assignedTo][13]       | int(10)     | unsigned   |     | NO   |         |                | GUID of admin to whom ticket is assigned   |
+| [comment][14]          | text        |            |     | NO   |         |                |                                            |
+| [response][15]         | text        |            |     | NO   |         |                |                                            |
+| [completed][16]        | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
+| [escalated][17]        | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
+| [viewed][18]           | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
+| [needMoreHelp][19]     | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
+| [resolvedBy][20]       | int(10)     | unsigned   |     | NO   |         |                | GUID of GM who resolved the ticket         |
 
-</tbody>
-</table>
+[1]: #id
+[2]: #type
+[3]: #playerguid
+[4]: #name
+[5]: #description
+[6]: #createtime
+[7]: #mapid
+[8]: #posx
+[9]: #posy
+[10]: #posz
+[11]: #lastmodifiedtime
+[12]: #closedby
+[13]: #assignedto
+[14]: #comment
+[15]: #response
+[16]: #completed
+[17]: #escalated
+[18]: #viewed
+[19]: #needmorehelp
+[20]: #resolvedby
 
-'Description of the fields'''
+**Description of the fields**
 
 ### Id
 
 The ticket global unique identifier. This number must be unique and is the best way to identify separate tickets.
 
 ### type
-Type of ticket. 
-Variables: 0 = open, 1 = closed, 2 = character deleted.
+
+Type of ticket. Variables: 
+- 0 = open
+- 1 = closed
+- 2 = character deleted.
 
 ### playerGuid
 
@@ -332,9 +105,9 @@ The time when the ticket was closed or deleted by the issuer as linux timestamp
 
 ### closedBy
 
-* 0 = Open
-* ~-1 = Closed by Console~ (not implemented on azerothcore yet)
-* &gt; 0 = player who abandoned ticket or GM who closed ticket
+- 0 = Open
+- ~-1 = Closed by Console~ (not implemented on azerothcore yet)
+- > 0 = player who abandoned ticket or GM who closed ticket
 
 ### assignedTo
 
@@ -350,20 +123,20 @@ The string the GM inserted with `.ticket response` commands to answer the ticket
 
 ### completed
 
-* 0 = not completed
-* 1 = completed (will inform the user and show what is in `response`)
+- 0 = not completed
+- 1 = completed (will inform the user and show what is in `response`)
 
 ### escalated
 
-* 0 = ticket is not currently assigned to a gm
-* 1 = ticket is assigned to a normal gm
-* 2 = ticket has been escalated after completion (a GM is supposed to contact the player back) 
+- 0 = ticket is not currently assigned to a gm
+- 1 = ticket is assigned to a normal gm
+- 2 = ticket has been escalated after completion (a GM is supposed to contact the player back) 
 
 
 ### viewed
 
-* 0 = no one has viewed the ticket.
-* &gt;0 = How many times the ticket has been viewed by GMs
+- 0 = no one has viewed the ticket.
+- > 0 = How many times the ticket has been viewed by GMs
 
 ### needMoreHelp
 
@@ -371,6 +144,6 @@ Requests further GM interaction on a ticket to which a GM has already responded.
 
 ### resolvedBy
 
-* 0 = Open
-* ~-1 = Resolved by Console~ (not supported on azerothcore yet cause of datatype in DB)
-* &gt; 0 = Character guid of the GM who resolved it (by closing the ticket or by completing the ticket)
+- 0 = Open
+- ~-1 = Resolved by Console~ (not supported on azerothcore yet cause of datatype in DB)
+- > 0 = Character guid of the GM who resolved it (by closing the ticket or by completing the ticket)
