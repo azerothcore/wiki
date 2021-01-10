@@ -8,220 +8,47 @@ This table holds information on the members of all guilds, their ranks in the gu
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#guildid">guildid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>Guild Identificator</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#guid">guid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>Unique</p></td>
-<td><p>NO</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rank">rank</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#pnote">pnote</a></p></td>
-<td><p>varchar(31)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#offnote">offnote</a></p></td>
-<td><p>varchar(31)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#bankresettimemoney">BankResetTimeMoney</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#bankremmoney">BankRemMoney</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#5">BankResetTimeTab0</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#5">BankRemSlotsTab0</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#5">BankResetTimeTab1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#5">BankRemSlotsTab1</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#5">BankResetTimeTab2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#5">BankRemSlotsTab2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#5">BankResetTimeTab3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#5">BankRemSlotsTab3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#5">BankResetTimeTab4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#5">BankRemSlotsTab4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#5">BankResetTimeTab5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#5">BankRemSlotsTab5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                   | Type        | Attributes | Key    | Null | Default | Extra | Comment             |
+|-------------------------|-------------|------------|--------|------|---------|-------|---------------------|
+| [guildid][1]            | int(10)     | unsigned   |        | NO   |         |       | Guild Identificator |
+| [guid][2]               | int(10)     | unsigned   | Unique | NO   |         |       |                     |
+| [rank][3]               | tinyint(3)  | unsigned   |        | NO   |         |       |                     |
+| [pnote][4]              | varchar(31) |            |        | NO   |         |       |                     |
+| [offnote][5]            | varchar(31) |            |        | NO   |         |       |                     |
+| [BankResetTimeMoney][6] | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemMoney][7]       | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeTab0][8]  | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemSlotsTab0][9]   | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeTab1][10] | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemSlotsTab1][11]  | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeTab2][12] | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemSlotsTab2][13]  | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeTab3][14] | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemSlotsTab3][15]  | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeTab4][16] | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemSlotsTab4][17]  | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeTab5][18] | int(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankRemSlotsTab5][19]  | int(10)     | unsigned   |        | NO   |         |       |                     |
+
+[1]: #guildid
+[2]: #guid
+[3]: #rank
+[4]: #pnote
+[5]: #offnote
+[6]: #bankresettimemoney
+[7]: #bankremmoney
+[8]: #bankresettimetab0
+[9]: #bankremslotstab0
+[10]: #bankresettimetab1
+[11]: #bankremslotstab1
+[12]: #bankresettimetab2
+[13]: #bankremslotstab2
+[14]: #bankresettimetab3
+[15]: #bankremslotstab3
+[16]: #bankresettimetab4
+[17]: #bankremslotstab4
+[18]: #bankresettimetab5
+[19]: #bankremslotstab5
 
 **Description of the fields**
 
