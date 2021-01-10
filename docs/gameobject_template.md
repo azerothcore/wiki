@@ -4,474 +4,43 @@ Contains template of all gameobjects
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#type">type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#displayid">displayId</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#iconname">IconName</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#castbarcaption">castBarCaption</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#unk1">unk1</a></p></td>
-<td><p>varchar(100)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#size">size</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data0</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data1</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>-1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data2</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data3</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data4</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data5</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data6</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>-1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data7</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data8</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data9</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data10</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data11</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data12</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data13</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data14</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data15</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data16</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data17</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data18</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data19</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data20</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data21</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#23">data22</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#23">data23</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#ainame">AIName</a></p></td>
-<td><p>char(64)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#scriptname">ScriptName</a></p></td>
-<td><p>varchar(64)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#wdbverified">WDBVerified</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|----------------|--------------|------------|-----|------|---------|-------|---------|
+| entry          | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| type           | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| displayId      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| name           | varchar(100) | signed     |     | NO   | "       |       |         |
+| IconName       | varchar(100) | signed     |     | NO   | "       |       |         |
+| castBarCaption | varchar(100) | signed     |     | NO   | "       |       |         |
+| unk1           | varchar(100) | signed     |     | NO   | "       |       |         |
+| size           | float        | signed     |     | NO   | 1       |       |         |
+| data0          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data1          | int(11)      | unsigned   |     | NO   | -1      |       |         |
+| data2          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data3          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data4          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data5          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data6          | int(11)      | unsigned   |     | NO   | -1      |       |         |
+| data7          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data8          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data9          | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data10         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data11         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data12         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data13         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data14         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data15         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data16         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data17         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data18         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data19         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data20         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data21         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data22         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| data23         | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| AIName         | char(64)     | signed     |     | NO   | "       |       |         |
+| ScriptName     | varchar(64)  | signed     |     | NO   | "       |       |         |
+| WDBVerified    | smallint(5)  | signed     |     | YES  | 1       |       |         |
 
 ## Description of the fields
 
@@ -481,46 +50,44 @@ Id of the gameobject template. `WDB-fields`
 
 ### type 
 
-``` cpp
-   GAMEOBJECT_TYPE_DOOR               = 0
-   GAMEOBJECT_TYPE_BUTTON             = 1
-   GAMEOBJECT_TYPE_QUESTGIVER         = 2
-   GAMEOBJECT_TYPE_CHEST              = 3
-   GAMEOBJECT_TYPE_BINDER             = 4
-   GAMEOBJECT_TYPE_GENERIC            = 5
-   GAMEOBJECT_TYPE_TRAP               = 6
-   GAMEOBJECT_TYPE_CHAIR              = 7
-   GAMEOBJECT_TYPE_SPELL_FOCUS        = 8
-   GAMEOBJECT_TYPE_TEXT               = 9
-   GAMEOBJECT_TYPE_GOOBER             = 10
-   GAMEOBJECT_TYPE_TRANSPORT          = 11
-   GAMEOBJECT_TYPE_AREADAMAGE         = 12
-   GAMEOBJECT_TYPE_CAMERA             = 13
-   GAMEOBJECT_TYPE_MAP_OBJECT         = 14
-   GAMEOBJECT_TYPE_MO_TRANSPORT       = 15
-   GAMEOBJECT_TYPE_DUEL_ARBITER       = 16
-   GAMEOBJECT_TYPE_FISHINGNODE        = 17
-   GAMEOBJECT_TYPE_RITUAL             = 18
-   GAMEOBJECT_TYPE_MAILBOX            = 19
-   GAMEOBJECT_TYPE_AUCTIONHOUSE       = 20
-   GAMEOBJECT_TYPE_GUARDPOST          = 21
-   GAMEOBJECT_TYPE_SPELLCASTER        = 22
-   GAMEOBJECT_TYPE_MEETINGSTONE       = 23
-   GAMEOBJECT_TYPE_FLAGSTAND          = 24
-   GAMEOBJECT_TYPE_FISHINGHOLE        = 25
-   GAMEOBJECT_TYPE_FLAGDROP           = 26
-   GAMEOBJECT_TYPE_MINI_GAME          = 27
-   GAMEOBJECT_TYPE_LOTTERY_KIOSK      = 28
-   GAMEOBJECT_TYPE_CAPTURE_POINT      = 29
-   GAMEOBJECT_TYPE_AURA_GENERATOR     = 30
-   GAMEOBJECT_TYPE_DUNGEON_DIFFICULTY = 31
-   GAMEOBJECT_TYPE_BARBER_CHAIR       = 32
-   GAMEOBJECT_TYPE_DESTRUCTIBLE_BUILDING = 33
-   GAMEOBJECT_TYPE_GUILD_BANK         = 34
-   GAMEOBJECT_TYPE_TRAPDOOR           = 35
-```
-
-    WDB-fields
+| Name                                  | Value |
+|---------------------------------------|-------|
+| GAMEOBJECT_TYPE_DOOR                  | 0     |
+| GAMEOBJECT_TYPE_BUTTON                | 1     |
+| GAMEOBJECT_TYPE_QUESTGIVER            | 2     |
+| GAMEOBJECT_TYPE_CHEST                 | 3     |
+| GAMEOBJECT_TYPE_BINDER                | 4     |
+| GAMEOBJECT_TYPE_GENERIC               | 5     |
+| GAMEOBJECT_TYPE_TRAP                  | 6     |
+| GAMEOBJECT_TYPE_CHAIR                 | 7     |
+| GAMEOBJECT_TYPE_SPELL_FOCUS           | 8     |
+| GAMEOBJECT_TYPE_TEXT                  | 9     |
+| GAMEOBJECT_TYPE_GOOBER                | 10    |
+| GAMEOBJECT_TYPE_TRANSPORT             | 11    |
+| GAMEOBJECT_TYPE_AREADAMAGE            | 12    |
+| GAMEOBJECT_TYPE_CAMERA                | 13    |
+| GAMEOBJECT_TYPE_MAP_OBJECT            | 14    |
+| GAMEOBJECT_TYPE_MO_TRANSPORT          | 15    |
+| GAMEOBJECT_TYPE_DUEL_ARBITER          | 16    |
+| GAMEOBJECT_TYPE_FISHINGNODE           | 17    |
+| GAMEOBJECT_TYPE_RITUAL                | 18    |
+| GAMEOBJECT_TYPE_MAILBOX               | 19    |
+| GAMEOBJECT_TYPE_AUCTIONHOUSE          | 20    |
+| GAMEOBJECT_TYPE_GUARDPOST             | 21    |
+| GAMEOBJECT_TYPE_SPELLCASTER           | 22    |
+| GAMEOBJECT_TYPE_MEETINGSTONE          | 23    |
+| GAMEOBJECT_TYPE_FLAGSTAND             | 24    |
+| GAMEOBJECT_TYPE_FISHINGHOLE           | 25    |
+| GAMEOBJECT_TYPE_FLAGDROP              | 26    |
+| GAMEOBJECT_TYPE_MINI_GAME             | 27    |
+| GAMEOBJECT_TYPE_LOTTERY_KIOSK         | 28    |
+| GAMEOBJECT_TYPE_CAPTURE_POINT         | 29    |
+| GAMEOBJECT_TYPE_AURA_GENERATOR        | 30    |
+| GAMEOBJECT_TYPE_DUNGEON_DIFFICULTY    | 31    |
+| GAMEOBJECT_TYPE_BARBER_CHAIR          | 32    |
+| GAMEOBJECT_TYPE_DESTRUCTIBLE_BUILDING | 33    |
+| GAMEOBJECT_TYPE_GUILD_BANK            | 34    |
+| GAMEOBJECT_TYPE_TRAPDOOR              | 35    |
 
 ### displayId
 
@@ -534,13 +101,13 @@ Object's name. `WDB-fields`
 
 Works exactly like creature\_template IconName.
 
-Working iconnames;
+Working iconnames
 
-Taxi
-Talk
-Attack
-Directions
-Quest
+- Taxi
+- Talk
+- Attack
+- Directions
+- Quest
 
 You may experience minor bugs trying to get the Quest (Yellow exclamation mark) working.
 However; the rest of the listed icons, works.
@@ -567,72 +134,72 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 
 **GAMEOBJECT\_TYPE\_DOOR = 0**
 
--   data0: startOpen (Boolean flag)
--    data1: open (LockId from Lock.dbc)
--   data2: autoClose (Time in milliseconds)
--   data3: noDamageImmune (Boolean flag)
--   data4: openTextID (Unknown Text ID)
--   data5: closeTextID (Unknown Text ID)
--   data6: Ignored by pathfinding
--   data7: Conditionid1
--   data8: Door is opaque
--   data9: Gigantic AOI
--   data10: Infinite AOI
+- data0: startOpen (Boolean flag)
+- data1: open (LockId from Lock.dbc)
+- data2: autoClose (Time in milliseconds)
+- data3: noDamageImmune (Boolean flag)
+- data4: openTextID (Unknown Text ID)
+- data5: closeTextID (Unknown Text ID)
+- data6: Ignored by pathfinding
+- data7: Conditionid1
+- data8: Door is opaque
+- data9: Gigantic AOI
+- data10: Infinite AOI
 
 **GAMEOBJECT\_TYPE\_BUTTON = 1**
 
--   data0: startOpen (State)
--   data1: open (LockId from Lock.dbc)
--   data2: autoClose (long unknown flag)
--   data3: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
--   data4: noDamageImmune (Boolean flag)
--   data5: large? (Boolean flag)
--   data6: openTextID (Unknown Text ID)
--   data7: closeTextID (Unknown Text ID)
--   data8: losOK (Boolean flag)
--   data9: Conditionid1
+- data0: startOpen (State)
+- data1: open (LockId from Lock.dbc)
+- data2: autoClose (long unknown flag)
+- data3: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data4: noDamageImmune (Boolean flag)
+- data5: large? (Boolean flag)
+- data6: openTextID (Unknown Text ID)
+- data7: closeTextID (Unknown Text ID)
+- data8: losOK (Boolean flag)
+- data9: Conditionid1
 
 **GAMEOBJECT\_TYPE\_QUESTGIVER = 2**
 
--   data0: open (LockId from Lock.dbc)
--   data1: questList (unknown ID)
--   data2: pageMaterial (PageTextMaterial.dbc)
--   data3: gossipID (gossip\_menu\_option.menu\_id)
--   data4: customAnim (unknown value from 1 to 4)
--   data5: noDamageImmune (Boolean flag)
--   data6: openTextID (broadcast\_text ID)
--   data7: losOK (Boolean flag)
--   data8: allowMounted (Boolean flag)
--   data9: large? (Boolean flag)
--   data10: Conditionid1
--   data11: Never usable while mounted
+- data0: open (LockId from Lock.dbc)
+- data1: questList (unknown ID)
+- data2: pageMaterial (PageTextMaterial.dbc)
+- data3: gossipID (gossip\_menu\_option.menu\_id)
+- data4: customAnim (unknown value from 1 to 4)
+- data5: noDamageImmune (Boolean flag)
+- data6: openTextID (broadcast\_text ID)
+- data7: losOK (Boolean flag)
+- data8: allowMounted (Boolean flag)
+- data9: large? (Boolean flag)
+- data10: Conditionid1
+- data11: Never usable while mounted
 
 **GAMEOBJECT\_TYPE\_CHEST = 3**
 
--   data0: open (LockId from Lock.dbc)
--   data1: chestLoot ([gameobject\_loot\_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)) `WDB-fields`
--   data2: chestRestockTime (time in seconds)
--   data3: consumable (State: Boolean flag)
--   data4: minRestock (Min successful loot attempts for Mining, Herbalism etc)
--   data5: maxRestock (Max successful loot attempts for Mining, Herbalism etc)
--   data6: lootedEvent (Event ID from table event\_scripts)
--   data7: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
--   data8: questID ([quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) of completed quest)
--   data9: level (minimal level required to open this gameobject)
--   data10: losOK (Boolean flag)
--   data11: leaveLoot (Boolean flag)
--   data12: notInCombat (Boolean flag)
--   data13: log loot (Boolean flag)
--   data14: openTextID (Unknown ID)
--   data15: use group loot rules (Boolean flag)
--   data16: floating tooltip
--   data17: conditionid1
--   data18: xplevel
--   data19: xpDifficulty
--   data20: lootlevel
--   data21: Group Xp
--   data22: Damage Immune
--   data23: trivialSkillLow
+- data0: open (LockId from Lock.dbc)
+- data1: chestLoot ([gameobject\_loot\_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)) `WDB-fields`
+- data2: chestRestockTime (time in seconds)
+- data3: consumable (State: Boolean flag)
+- data4: minRestock (Min successful loot attempts for Mining, Herbalism etc)
+- data5: maxRestock (Max successful loot attempts for Mining, Herbalism etc)
+- data6: lootedEvent (Event ID from table event\_scripts)
+- data7: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data8: questID ([quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) of completed quest)
+- data9: level (minimal level required to open this gameobject)
+- data10: losOK (Boolean flag)
+- data11: leaveLoot (Boolean flag)
+- data12: notInCombat (Boolean flag)
+- data13: log loot (Boolean flag)
+- data14: openTextID (Unknown ID)
+- data15: use group loot rules (Boolean flag)
+- data16: floating tooltip
+- data17: conditionid1
+- data18: xplevel
+- data19: xpDifficulty
+- data20: lootlevel
+- data21: Group Xp
+- data22: Damage Immune
+- data23: trivialSkillLow
 
 **GAMEOBJECT\_TYPE\_BINDER = 4**
 
@@ -640,57 +207,57 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_GENERIC = 5**
 
--   data0: floatingTooltip (Boolean flag)
--   data1: highlight (Boolean flag)
--   data2: serverOnly? (Always 0)
--   data3: large? (Boolean flag)
--   data4: floatOnWater (Boolean flag)
--   data5: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
--   data6: conditionID1
--   data7: LargeAOI
--   data8: UseGarrisonOwnerGuildColors
+- data0: floatingTooltip (Boolean flag)
+- data1: highlight (Boolean flag)
+- data2: serverOnly? (Always 0)
+- data3: large? (Boolean flag)
+- data4: floatOnWater (Boolean flag)
+- data5: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
+- data6: conditionID1
+- data7: LargeAOI
+- data8: UseGarrisonOwnerGuildColors
 
 **GAMEOBJECT\_TYPE\_TRAP = 6**
 
--   data0: open (LockId from [Lock.dbc](Lock) )
--   data1: level (npc equivalent level for casted spell)
--   data2: diameter (so radius \* 2)
--   data3: spell (Spell Id from [Spell.dbc](Spell))
--   data4: type (0 trap with no despawn after cast. 1 trap despawns after cast. 2 bomb casts on spawn)
--   data5: cooldown (time in seconds)
--   data6:  ? (unknown flag)
--   data7: startDelay? (time in seconds)
--   data8: serverOnly? (always 0)
--   data9: stealthed (Boolean flag)
--   data10: large? (Boolean flag)
--   data11: stealthAffected (Boolean flag)
--   data12: openTextID (Unknown ID)
--   data13: closeTextID
--   data14: IgnoreTotems
--   data15: conditionID1
--   data16: playerCast
--   data17: SummonerTriggered
--   data18: requireLOS
+- data0: open (LockId from [Lock.dbc](Lock) )
+- data1: level (npc equivalent level for casted spell)
+- data2: diameter (so radius \* 2)
+- data3: spell (Spell Id from [Spell.dbc](Spell))
+- data4: type (0 trap with no despawn after cast. 1 trap despawns after cast. 2 bomb casts on spawn)
+- data5: cooldown (time in seconds)
+- data6:  ? (unknown flag)
+- data7: startDelay? (time in seconds)
+- data8: serverOnly? (always 0)
+- data9: stealthed (Boolean flag)
+- data10: large? (Boolean flag)
+- data11: stealthAffected (Boolean flag)
+- data12: openTextID (Unknown ID)
+- data13: closeTextID
+- data14: IgnoreTotems
+- data15: conditionID1
+- data16: playerCast
+- data17: SummonerTriggered
+- data18: requireLOS
 
 **GAMEOBJECT\_TYPE\_CHAIR = 7**
 
--   data0: chairslots (number of players that can sit down on it)
--   data1: chairorientation? (number of usable side?)
--   data2: onlyCreatorUse
--   data3: triggeredEvent
--   data4: conditionID1
+- data0: chairslots (number of players that can sit down on it)
+- data1: chairorientation? (number of usable side?)
+- data2: onlyCreatorUse
+- data3: triggeredEvent
+- data4: conditionID1
 
 **GAMEOBJECT\_TYPE\_SPELL\_FOCUS = 8**
 
--   data0: spellFocusType (from SpellFocusObject.dbc; value also appears as RequiresSpellFocus in [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
--   data1: diameter (so radius\*2)
--   data2: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
--   data3: serverOnly? (Always 0)
--   data4: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
--   data5: large? (Boolean flag)
--   data6: floatingTooltip (Boolean flag)
--   data7: floatOnWater
--   data8: conditionID1
+- data0: spellFocusType (from SpellFocusObject.dbc; value also appears as RequiresSpellFocus in [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
+- data1: diameter (so radius\*2)
+- data2: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data3: serverOnly? (Always 0)
+- data4: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
+- data5: large? (Boolean flag)
+- data6: floatingTooltip (Boolean flag)
+- data7: floatOnWater
+- data8: conditionID1
 
 **GAMEOBJECT\_TYPE\_TEXT = 9**
 
