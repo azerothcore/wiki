@@ -10,7 +10,7 @@ This table holds information on all available accounts.
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [id][1]               | int(10)      | unsigned   | PRI | NO   | NULL              | auto_increment | Identifier |
+| [id][1]               | int(10)      | unsigned   | PRI | NO   |                   | auto_increment | Identifier |
 | [username][2]         | varchar(32)  |            | UNI | NO   |                   |                |            |
 | [sha_pass_hash][3]    | varchar(40)  |            |     | NO   |                   |                |            |
 | [sessionkey][4]       | varchar(80)  |            |     | NO   |                   |                |            |
@@ -188,35 +188,3 @@ Stores information about client's OS. Used by Warden system.
 ### recruiter
 
 The account ID of another account. Used for recuit-a-friend system. See [account.id][1]
-
-```sql
-CREATE TABLE IF NOT EXISTS `account` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Identifier',
-  `username` varchar(32) NOT NULL DEFAULT '',
-  `sha_pass_hash` varchar(40) NOT NULL DEFAULT '',
-  `sessionkey` varchar(80) NOT NULL DEFAULT '',
-  `v` varchar(64) NOT NULL DEFAULT '',
-  `s` varchar(64) NOT NULL DEFAULT '',
-  `token_key` varchar(100) NOT NULL DEFAULT '',
-  `email` varchar(255) NOT NULL DEFAULT '',
-  `reg_mail` varchar(255) NOT NULL DEFAULT '',
-  `joindate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `last_ip` varchar(15) NOT NULL DEFAULT '127.0.0.1',
-  `last_attempt_ip` varchar(15) NOT NULL DEFAULT '127.0.0.1',
-  `failed_logins` int(10) unsigned NOT NULL DEFAULT '0',
-  `locked` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `lock_country` varchar(2) NOT NULL DEFAULT '00',
-  `last_login` timestamp NULL DEFAULT NULL,
-  `online` int(10) unsigned NOT NULL DEFAULT '0',
-  `expansion` tinyint(3) unsigned NOT NULL DEFAULT '2',
-  `mutetime` bigint(20) NOT NULL DEFAULT '0',
-  `mutereason` varchar(255) NOT NULL DEFAULT '',
-  `muteby` varchar(50) NOT NULL DEFAULT '',
-  `locale` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `os` varchar(3) NOT NULL DEFAULT '',
-  `recruiter` int(10) unsigned NOT NULL DEFAULT '0',
-  `totaltime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `idx_username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='Account System';
-```
