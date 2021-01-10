@@ -10,11 +10,11 @@ This table contains all of the banned IPs and the date when (or if) the ban will
 
 | Field          | Type         | Attributes | Key | Null | Default   | Extra | Comment |
 |----------------|--------------|------------|-----|------|-----------|-------|---------|
-| [ip][1]        | varchar(15)  | signed     | PRI | NO   | 127.0.0.1 |       |         |
-| [bandate][2]   | int(10)      | unsigned   |     | NO   |           |       |         |
+| [ip][1]        | varchar(15)  |            | PRI | NO   | 127.0.0.1 |       |         |
+| [bandate][2]   | int(10)      | unsigned   | PRI | NO   |           |       |         |
 | [unbandate][3] | int(10)      | unsigned   |     | NO   |           |       |         |
-| [bannedby][4]  | varchar(50)  | signed     |     | NO   | Console   |       |         |
-| [banreason][5] | varchar(255) | signed     |     | NO   | no reason |       |         |
+| [bannedby][4]  | varchar(50)  |            |     | NO   | [Console] |       |         |
+| [banreason][5] | varchar(255) |            |     | NO   | no reason |       |         |
 
 [1]: #ip
 [2]: #bandate
