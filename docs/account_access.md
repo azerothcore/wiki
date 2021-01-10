@@ -35,3 +35,13 @@ The account security level. Different levels have access to different commands. 
 The [Realm ID](realmlist#id).
 
 ### comment
+
+```sql
+CREATE TABLE IF NOT EXISTS `account_access` (
+  `id` int(10) unsigned NOT NULL,
+  `gmlevel` tinyint(3) unsigned NOT NULL,
+  `RealmID` int(11) NOT NULL DEFAULT '-1',
+  `comment` varchar(255) DEFAULT '',
+  PRIMARY KEY (`id`,`RealmID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
