@@ -8,247 +8,43 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 **Structure:**
 
-<table>
-<thead>
-<tr class="header">
-<th><p><strong>Field</strong></p></th>
-<th><p><strong>Type</strong></p></th>
-<th><p><strong>Attributes</strong></p></th>
-<th><p><strong>Key</strong></p></th>
-<th><p><strong>Null</strong></p></th>
-<th><p><strong>Default</strong></p></th>
-<th><p><strong>Extra</strong></p></th>
-<th><p><strong>Comment</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="#id">ID</a></td>
-<td>mediumint(8)</td>
-<td>unsigned</td>
-<td>PRI</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><td><a href="quest_template#id">Unique ID linked to quest_template.ID</a></td>
-Unique ID linked to quest_template.ID</td>
-</tr>
-<tr class="even">
-<td><a href="#maxlevel">MaxLevel</a></td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#allowableclasses">AllowableClasses</a></td>
-<td>int(10)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#sourcespellid">SourceSpellID</a></td>
-<td>mediumint(8)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#prevquestid">PrevQuestID</a></td>
-<td>mediumint(8)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#nextquestid">NextQuestID</a></td>
-<td>mediumint(8)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#exclusivegroup">ExclusiveGroup</a></td>
-<td>mediumint(8)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#rewardmailtemplateid">RewardMailTemplateID</a></td>
-<td>mediumint(8)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#rewardmaildelay">RewardMailDelay</a></td>
-<td>int(10)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#requiredskillid">RequiredSkillID</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#requiredskillpoints">RequiredSkillPoints</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#requiredminrepfaction">RequiredMinRepFaction</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#requiredmaxrepfaction">RequiredMaxRepFaction</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#requiredminrepvalue">RequiredMinRepValue</a></td>
-<td>mediumint(8)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#requiredmaxrepvalue">RequiredMaxRepValue</a></td>
-<td>mediumint(8)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><a href="#provideditemcount">ProvidedItemCount</a></td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#specialflags">SpecialFlags</a></td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
+|-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
+| [ID][1]                     | mediumint(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
+| [MaxLevel][2]               | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
+| [AllowableClasses][3]       | int(10)      | unsigned   |     | NO   |         |       |                                       |
+| [SourceSpellID][4]          | mediumint(8) | unsigned   |     | NO   |         |       |                                       |
+| [PrevQuestID][5]            | mediumint(8) |            |     | NO   |         |       |                                       |
+| [NextQuestID][6]            | mediumint(8) |            |     | NO   |         |       |                                       |
+| [ExclusiveGroup][7]         | mediumint(8) |            |     | NO   |         |       |                                       |
+| [RewardMailTemplateID][8]   | mediumint(8) | unsigned   |     | NO   |         |       |                                       |
+| [RewardMailDelay][9]        | int(10)      | unsigned   |     | NO   |         |       |                                       |
+| [RequiredSkillID][10]       | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredSkillPoints][11]   | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredMinRepFaction][12] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredMaxRepFaction][13] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredMinRepValue][14]   | mediumint(8) |            |     | NO   |         |       |                                       |
+| [RequiredMaxRepValue][15]   | mediumint(8) |            |     | NO   |         |       |                                       |
+| [ProvidedItemCount][16]     | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
+| [SpecialFlags][17]          | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
+
+[1]: #id
+[2]: #maxlevel
+[3]: #allowableclasses
+[4]: #sourcespellid
+[5]: #prevquestid
+[6]: #nextquestid
+[7]: #exclusivegroup
+[8]: #rewardmailtemplateid
+[9]: #rewardmaildelay
+[10]: #requiredskillid
+[11]: #requiredskillpoints
+[12]: #requiredminrepfaction
+[13]: #requiredmaxrepfaction
+[14]: #requiredminrepvalue
+[15]: #requiredmaxrepvalue
+[16]: #provideditemcount
+[17]: #specialflags
 
 **Description of the fields:**
 
@@ -271,8 +67,8 @@ The spell ID cast on player upon starting the quest.
 
 ### **PrevQuestID**
 
--   **if value &gt; 0:** Contains the previous quest id, that must be completed before this quest can be started.
--   **If value &lt; 0:** Contains the parent quest id, that must be active before this quest can be started.
+- **if value > 0:** Contains the previous quest id, that must be completed before this quest can be started.
+- **If value < 0:** Contains the parent quest id, that must be active before this quest can be started.
 
 See the [examples section](quest_template#examples-dealing-with-quests) for examples.
 
@@ -284,11 +80,11 @@ See the [examples section](quest_template#examples-dealing-with-quests) for exam
 
 ### **ExclusiveGroup**
 
--   **if ExclusiveGroup &gt; 0**
+- **if ExclusiveGroup > 0**
 
 Allows to define a group of quests of which only one may be chosen and completed. E.g. if from quests 1200, 1201 and 1202 only one should be allowed to be chosen, insert 1200 into ExclusiveGroup of all 3 quests.
 
--   **if ExclusiveGroup &lt; 0**
+- **if ExclusiveGroup < 0**
 
 Allows to define a group of quests of which all must be completed and rewarded to start next quest. E.g. if quest 1000 dependent from one of quests 1200, 1201 and 1202 and all this quests have same negative exclusive group then all this quest must be completed and rewarded before quest 1000 can be started.
 
@@ -335,13 +131,10 @@ Number of items given to the player (inserted in the player's bags) upon accepti
 
 This field is a bitmask and is for controlling server side quest functions. Blizzard keeps these data server-side and they are not sent to the client, so we have to populate the field manually.
 
--   0: No extra requirements
-
-<!-- -->
-
--    1: Makes the quest repeatable.
--    2: Makes the quest only completable by some external event (an entry in [areatrigger\_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell\_scripts](scripts) with command 7 as some examples)
--    4: Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.
--    8: Only used for Dungeon Finder quests
--   16: Makes the quest monthly
--   32: The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
+- 0: No extra requirements
+- 1: Makes the quest repeatable.
+- 2: Makes the quest only completable by some external event (an entry in [areatrigger\_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell\_scripts](scripts) with command 7 as some examples)
+- 4: Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.
+- 8: Only used for Dungeon Finder quests
+- 16: Makes the quest monthly
+- 32: The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
