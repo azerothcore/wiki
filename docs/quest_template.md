@@ -8,800 +8,73 @@ Contains all basic definitions of available quests.
 
 ## **Structure**
 
-<table>
-<thead>
-<tr class="header">
-<th>Field</th>
-<th>Type</th>
-<th>Null</th>
-<th>Key</th>
-<th>Default</th>
-<th>Extra</th>
-<th>Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p><a href="#id">ID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p>PRI</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#questtype">QuestType</a></p></td>
-<td><p>tinyint(3) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>2</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#questlevel">QuestLevel</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>-1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#questpackageid">QuestPackageID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#minlevel">MinLevel</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#questsortid">QuestSortID</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#questinfoid">QuestInfoID</a></p></td>
-<td><p>smallint(5) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#suggestedgroupnum">SuggestedGroupNum</a></p></td>
-<td><p>tinyint(3) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardnextquest">RewardNextQuest</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardxpdifficulty">RewardXPDifficulty</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardxpmultiplier">RewardXPMultiplier</a></p></td>
-<td><p>float</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardmoney">RewardMoney</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardmoneydifficulty">RewardMoneyDifficulty</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardmoneymultiplier">RewardMoneyMultiplier</a></p></td>
-<td><p>float</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardbonusmoney">RewardBonusMoney</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewarddisplayspell">RewardDisplaySpell(X=1...3)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardspell">RewardSpell</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardhonor">RewardHonor</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardkillh">RewardKillHonor</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#startitem">StartItem</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">RewardArtifactXPDifficulty</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="quest_template">RewardArtifactXPMultiplier</a></p></td>
-<td><p>float</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">RewardArtifactCategoryID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#flags">Flags</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#flagsex">FlagsEx</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewarditem(x=1...4)">RewardItem(X=1...4)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardamount">RewardAmount(X=1...4)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#itemdrop">ItemDrop(X=1...4)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#itemdropquantity(x=1...4)">ItemDropQuantity(X=1...4)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardchoiceitemid">RewardChoiceItemID(X=1...6)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardchoiceitemquantity(">RewardChoiceItemQuantity(X=1...6)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardchoiceitemdisplayid(x">RewardChoiceItemDisplayID(X=1...6)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#poicontinent">POIContinent</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="quest_template">POIx</a></p></td>
-<td><p>float</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">POIy</a></p></td>
-<td><p>float</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#poipriority">POIPriority</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardtitle">RewardTitle</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="quest_template">RewardArenaPoints</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">RewardSkillLineID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardnumskillups">RewardNumSkillUps</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">PortraitGiver</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#portraitturnin">PortraitTurnIn</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardfactionid">RewardFactionID(X=1...5)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardfactionvalue">RewardFactionValue(X=1...5)</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardfactionoverride(x=1...5)">RewardFactionOverride(X=1...5)</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardfactioncapin(x=1...5)">RewardFactionCapIn(X=1...5)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardfactionflags">RewardFactionFlags</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rewardcurrencyid(">RewardCurrencyID(X=1...4)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rewardcurrencyqty">RewardCurrencyQty(X=1...4)</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#acceptedsoundkitid">AcceptedSoundKitID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#completesoundkitid">CompleteSoundKitID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#areagroupid">AreaGroupID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#timeallowed">TimeAllowed</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#allowableraces">AllowableRaces</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>-1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#questrewardid">QuestRewardID</a></p></td>
-<td><p>int(10) unsigned</p></td>
-<td><p>NO</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#logtitle">LogTitle</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">LogDescription</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#questdescription">QuestDescription</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">AreaDescription</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="quest_template">PortraitGiverText</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">PortraitGiverName</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#portraitturnintext">PortraitTurnInText</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="quest_template">PortraitTurnInName</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="quest_template">QuestCompletionLog</a></p></td>
-<td><p>text</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>(NULL)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#verifiedbuild">VerifiedBuild</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>YES</p></td>
-<td><p><br />
-</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field                              | Type                 | Null | Key | Default | Extra | Comment |
+|------------------------------------|----------------------|------|-----|---------|-------|---------|
+| ID                                 | int(10) unsigned     | NO   | PRI | 0       |       |         |
+| QuestType                          | tinyint(3) unsigned  | NO   |     | 2       |       |         |
+| QuestLevel                         | int(11)              | NO   |     | -1      |       |         |
+| QuestPackageID                     | int(10) unsigned     | NO   |     | 0       |       |         |
+| MinLevel                           | int(11)              | NO   |     | 0       |       |         |
+| QuestSortID                        | smallint(6)          | NO   |     | 0       |       |         |
+| QuestInfoID                        | smallint(5) unsigned | NO   |     | 0       |       |         |
+| SuggestedGroupNum                  | tinyint(3) unsigned  | NO   |     | 0       |       |         |
+| RewardNextQuest                    | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardXPDifficulty                 | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardXPMultiplier                 | float                | NO   |     | 1       |       |         |
+| RewardMoney                        | int(11)              | NO   |     | 0       |       |         |
+| RewardMoneyDifficulty              | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardMoneyMultiplier              | float                | NO   |     | 1       |       |         |
+| RewardBonusMoney                   | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardDisplaySpell(X=1...3)        | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardSpell                        | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardHonor                        | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardKillHonor                    | int(10) unsigned     | NO   |     | 0       |       |         |
+| StartItem                          | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardArtifactXPDifficulty         | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardArtifactXPMultiplier         | float                | NO   |     | 1       |       |         |
+| RewardArtifactCategoryID           | int(10) unsigned     | NO   |     | 0       |       |         |
+| Flags                              | int(10) unsigned     | NO   |     | 0       |       |         |
+| FlagsEx                            | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardItem(X=1...4)                | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardAmount(X=1...4)              | int(10) unsigned     | NO   |     | 0       |       |         |
+| ItemDrop(X=1...4)                  | int(10) unsigned     | NO   |     | 0       |       |         |
+| ItemDropQuantity(X=1...4)          | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardChoiceItemID(X=1...6)        | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardChoiceItemQuantity(X=1...6)  | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardChoiceItemDisplayID(X=1...6) | int(10) unsigned     | NO   |     | 0       |       |         |
+| POIContinent                       | int(10) unsigned     | NO   |     | 0       |       |         |
+| POIx                               | float                | NO   |     | 0       |       |         |
+| POIy                               | float                | NO   |     | 0       |       |         |
+| POIPriority                        | int(11)              | NO   |     | 0       |       |         |
+| RewardTitle                        | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardArenaPoints                  | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardSkillLineID                  | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardNumSkillUps                  | int(10) unsigned     | NO   |     | 0       |       |         |
+| PortraitGiver                      | int(10) unsigned     | NO   |     | 0       |       |         |
+| PortraitTurnIn                     | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardFactionID(X=1...5)           | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardFactionValue(X=1...5)        | int(11)              | NO   |     | 0       |       |         |
+| RewardFactionOverride(X=1...5)     | int(11)              | NO   |     | 0       |       |         |
+| RewardFactionCapIn(X=1...5)        | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardFactionFlags                 | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardCurrencyID(X=1...4)          | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardCurrencyQty(X=1...4)         | int(10) unsigned     | NO   |     | 0       |       |         |
+| AcceptedSoundKitID                 | int(10) unsigned     | NO   |     | 0       |       |         |
+| CompleteSoundKitID                 | int(10) unsigned     | NO   |     | 0       |       |         |
+| AreaGroupID                        | int(10) unsigned     | NO   |     | 0       |       |         |
+| TimeAllowed                        | int(10) unsigned     | NO   |     | 0       |       |         |
+| AllowableRaces                     | int(11)              | NO   |     | -1      |       |         |
+| QuestRewardID                      | int(10) unsigned     | NO   |     | 0       |       |         |
+| LogTitle                           | text                 | YES  |     | (NULL)  |       |         |
+| LogDescription                     | text                 | YES  |     | (NULL)  |       |         |
+| QuestDescription                   | text                 | YES  |     | (NULL)  |       |         |
+| AreaDescription                    | text                 | YES  |     | (NULL)  |       |         |
+| PortraitGiverText                  | text                 | YES  |     | (NULL)  |       |         |
+| PortraitGiverName                  | text                 | YES  |     | (NULL)  |       |         |
+| PortraitTurnInText                 | text                 | YES  |     | (NULL)  |       |         |
+| PortraitTurnInName                 | text                 | YES  |     | (NULL)  |       |         |
+| QuestCompletionLog                 | text                 | YES  |     | (NULL)  |       |         |
+| VerifiedBuild                      | smallint(5)          | YES  |     | 0       |       |         |
 
 **Description of the fields**
 
@@ -938,192 +211,41 @@ Items given by the quest giver at beginning of the quest. Items will be deleted 
 
 This flag field defines more specifically the type of quest it is. Aside from the daily flag and sharable flag, this field is used just for grouping purposes and NOT for any other quest requirements. The quest requirements are calculated from non-zero values in other quest template fields. Also, while some of these flags are known, others have yet an unknown purpose and the comments below is simply guesswork on them.
 
-<table>
-<thead>
-<tr class="header">
-<th><p>Flag</p></th>
-<th><p>Name</p></th>
-<th><p>Comments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>QUEST_FLAGS_NONE</p></td>
-<td><p>No flags, so no groups assigned to this quest.</p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>QUEST_FLAGS_STAY_ALIVE</p></td>
-<td><p>If the player dies, the quest is failed.</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>QUEST_FLAGS_PARTY_ACCEPT</p></td>
-<td><p>Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest.</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>QUEST_FLAGS_EXPLORATION</p></td>
-<td><p>Involves the activation of an areatrigger.</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>QUEST_FLAGS_SHARABLE</p></td>
-<td><p>Allows the quest to be shared with other players.</p></td>
-</tr>
-<tr class="even">
-<td><p>16</p></td>
-<td><p>QUEST_FLAGS_HAS_CONDITION</p></td>
-<td><p>Not used currently</p></td>
-</tr>
-<tr class="odd">
-<td><p>32</p></td>
-<td><p>QUEST_FLAGS_HIDE_REWARD_POI</p></td>
-<td><p>Not used currently: Unsure of content</p></td>
-</tr>
-<tr class="even">
-<td><p>64</p></td>
-<td><p>QUEST_FLAGS_RAID</p></td>
-<td><p>Can be completed while in raid</p></td>
-</tr>
-<tr class="odd">
-<td><p>128</p></td>
-<td><p>QUEST_FLAGS_TBC</p></td>
-<td><p>Not used currently: Available if TBC expansion enabled only</p></td>
-</tr>
-<tr class="even">
-<td><p>256</p></td>
-<td><p>QUEST_FLAGS_NO_MONEY_FROM_XP</p></td>
-<td><p>Not used currently: Experience is not converted to gold at max level</p></td>
-</tr>
-<tr class="odd">
-<td><p>512</p></td>
-<td><p>QUEST_FLAGS_HIDDEN_REWARDS</p></td>
-<td><p>Item and monetary rewards are hidden in the initial quest details page and in the quest log but will appear once ready to be rewarded.</p></td>
-</tr>
-<tr class="even">
-<td><p>1024</p></td>
-<td><p>QUEST_FLAGS_TRACKING</p></td>
-<td><p>These quests are automatically rewarded on quest complete and they will never appear in quest log client side.</p></td>
-</tr>
-<tr class="odd">
-<td><p>2048</p></td>
-<td><p>QUEST_FLAGS_DEPRECATE_REPUTATION</p></td>
-<td><p>Not used currently</p></td>
-</tr>
-<tr class="even">
-<td><p>4096</p></td>
-<td><p>QUEST_FLAGS_DAILY</p></td>
-<td><p>Daily repeatable quests (only flag that the core applies specific behavior for)</p></td>
-</tr>
-<tr class="odd">
-<td><p>8192</p></td>
-<td><p>QUEST_FLAGS_FLAGS_PVP</p></td>
-<td><p>Having this quest in log forces PvP flag</p></td>
-</tr>
-<tr class="even">
-<td><p>16384</p></td>
-<td><p>QUEST_FLAGS_UNAVAILABLE</p></td>
-<td><p>Used on quests that are not generically available</p></td>
-</tr>
-<tr class="odd">
-<td><p>32768</p></td>
-<td><p>QUEST_FLAGS_WEEKLY</p></td>
-<td><p>Weekly repeatable quests (only flag that the core applies specific behavior for)</p></td>
-</tr>
-<tr class="even">
-<td><p>65536</p></td>
-<td><p>QUEST_FLAGS_AUTOCOMPLETE</p></td>
-<td><p>Auto complete</p></td>
-</tr>
-<tr class="odd">
-<td><p>131072</p></td>
-<td><p>QUEST_FLAGS_DISPLAY_ITEM_IN_TRACKER</p></td>
-<td><p>Displays usable item in quest tracker</p></td>
-</tr>
-<tr class="even">
-<td><p>262144</p></td>
-<td><p>QUEST_FLAGS_OBJ_TEXT</p></td>
-<td><p>Use Objective text as Complete text</p></td>
-</tr>
-<tr class="odd">
-<td><p>524288</p></td>
-<td><p>QUEST_FLAGS_AUTO_ACCEPT</p></td>
-<td><p>The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag. Maybe blizz used to use it, or will use it in the future.</p></td>
-</tr>
-<tr class="even">
-<td>1048576</td>
-<td>QUEST_FLAGS_PLAYER_CAST_ON_ACCEPT</td>
-<td>Quests with this flag player submit automatically by special button in player GUI</td>
-</tr>
-<tr class="odd">
-<td>2097152</td>
-<td> QUEST_FLAGS_PLAYER_CAST_ON_COMPLETE</td>
-<td>Automatically suggestion of accepting quest. Not from npc.</td>
-</tr>
-<tr class="even">
-<td>4194304</td>
-<td>QUEST_FLAGS_UPDATE_PHASE_SHIFT</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>8388608</td>
-<td>QUEST_FLAGS_SOR_WHITELIST</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>16777216</td>
-<td>QUEST_FLAGS_LAUNCH_GOSSIP_COMPLETE</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>54432</td>
-<td>QUEST_FLAGS_REMOVE_EXTRA_GET_ITEMS</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>67108864</td>
-<td>QUEST_FLAGS_HIDE_UNTIL_DISCOVERED</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>134217728</td>
-<td>QUEST_FLAGS_PORTRAIT_IN_QUEST_LOG</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>268435456</td>
-<td>QUEST_FLAGS_SHOW_ITEM_WHEN_COMPLETED</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>536870912</td>
-<td>QUEST_FLAGS_LAUNCH_GOSSIP_ACCEPT</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td>1073741824</td>
-<td>QUEST_FLAGS_ITEMS_GLOW_WHEN_DONE</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>2147483648</td>
-<td>QUEST_FLAGS_FAIL_ON_LOGOUT</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Flag       | Name                                 | Comments                                                                                                                                                               |
+|------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0          | QUEST_FLAGS_NONE                     | No flags, so no groups assigned to this quest.                                                                                                                         |
+| 1          | QUEST_FLAGS_STAY_ALIVE               | If the player dies, the quest is failed.                                                                                                                               |
+| 2          | QUEST_FLAGS_PARTY_ACCEPT             | Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest.              |
+| 4          | QUEST_FLAGS_EXPLORATION              | Involves the activation of an areatrigger.                                                                                                                             |
+| 8          | QUEST_FLAGS_SHARABLE                 | Allows the quest to be shared with other players.                                                                                                                      |
+| 16         | QUEST_FLAGS_HAS_CONDITION            | Not used currently                                                                                                                                                     |
+| 32         | QUEST_FLAGS_HIDE_REWARD_POI          | Not used currently: Unsure of content                                                                                                                                  |
+| 64         | QUEST_FLAGS_RAID                     | Can be completed while in raid                                                                                                                                         |
+| 128        | QUEST_FLAGS_TBC                      | Not used currently: Available if TBC expansion enabled only                                                                                                            |
+| 256        | QUEST_FLAGS_NO_MONEY_FROM_XP         | Not used currently: Experience is not converted to gold at max level                                                                                                   |
+| 512        | QUEST_FLAGS_HIDDEN_REWARDS           | Item and monetary rewards are hidden in the initial quest details page and in the quest log but will appear once ready to be rewarded.                                 |
+| 1024       | QUEST_FLAGS_TRACKING                 | These quests are automatically rewarded on quest complete and they will never appear in quest log client side.                                                         |
+| 2048       | QUEST_FLAGS_DEPRECATE_REPUTATION     | Not used currently                                                                                                                                                     |
+| 4096       | QUEST_FLAGS_DAILY                    | Daily repeatable quests (only flag that the core applies specific behavior for)                                                                                        |
+| 8192       | QUEST_FLAGS_FLAGS_PVP                | Having this quest in log forces PvP flag                                                                                                                               |
+| 16384      | QUEST_FLAGS_UNAVAILABLE              | Used on quests that are not generically available                                                                                                                      |
+| 32768      | QUEST_FLAGS_WEEKLY                   | Weekly repeatable quests (only flag that the core applies specific behavior for)                                                                                       |
+| 65536      | QUEST_FLAGS_AUTOCOMPLETE             | Auto complete                                                                                                                                                          |
+| 131072     | QUEST_FLAGS_DISPLAY_ITEM_IN_TRACKER  | Displays usable item in quest tracker                                                                                                                                  |
+| 262144     | QUEST_FLAGS_OBJ_TEXT                 | Use Objective text as Complete text                                                                                                                                    |
+| 524288     | QUEST_FLAGS_AUTO_ACCEPT              | The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag. Maybe blizz used to use it, or will use it in the future. |
+| 1048576    | QUEST_FLAGS_PLAYER_CAST_ON_ACCEPT    | Quests with this flag player submit automatically by special button in player GUI                                                                                      |
+| 2097152    | QUEST_FLAGS_PLAYER_CAST_ON_COMPLETE  | Automatically suggestion of accepting quest. Not from npc.                                                                                                             |
+| 4194304    | QUEST_FLAGS_UPDATE_PHASE_SHIFT       |                                                                                                                                                                        |
+| 8388608    | QUEST_FLAGS_SOR_WHITELIST            |                                                                                                                                                                        |
+| 16777216   | QUEST_FLAGS_LAUNCH_GOSSIP_COMPLETE   |                                                                                                                                                                        |
+| 54432      | QUEST_FLAGS_REMOVE_EXTRA_GET_ITEMS   |                                                                                                                                                                        |
+| 67108864   | QUEST_FLAGS_HIDE_UNTIL_DISCOVERED    |                                                                                                                                                                        |
+| 134217728  | QUEST_FLAGS_PORTRAIT_IN_QUEST_LOG    |                                                                                                                                                                        |
+| 268435456  | QUEST_FLAGS_SHOW_ITEM_WHEN_COMPLETED |                                                                                                                                                                        |
+| 536870912  | QUEST_FLAGS_LAUNCH_GOSSIP_ACCEPT     |                                                                                                                                                                        |
+| 1073741824 | QUEST_FLAGS_ITEMS_GLOW_WHEN_DONE     |                                                                                                                                                                        |
+| 2147483648 | QUEST_FLAGS_FAIL_ON_LOGOUT           |                                                                                                                                                                        |
 
 Like all flag based fields, **QuestFlags** can be added for the different types of quest.
 
@@ -1273,11 +395,11 @@ Always use PrevQuestId before using NextQuestId. NextQuestId is considered optio
 
 Single, stand-alone quest with no prerequisites
 
-``` cpp
+```
     questA
 ```
 
-``` cpp
+```sql
 entry = questA        PrevQuestId = 0        NextQuestId = 0        ExclusiveGroup = 0        NextQuestInChain = 0
 ```
 
@@ -1285,11 +407,11 @@ entry = questA        PrevQuestId = 0        NextQuestId = 0        ExclusiveGro
 
 When this quest require another quest to be rewarded
 
-``` cpp
+```
     questA
 ```
 
-``` cpp
+```sql
 entry = questA        PrevQuestId = questX   NextQuestId = 0        ExclusiveGroup = 0        NextQuestInChain = 0
 ```
 
@@ -1297,7 +419,7 @@ entry = questA        PrevQuestId = questX   NextQuestId = 0        ExclusiveGro
 
 Player get quests in a strict chain that must be completed in a specific order.
 
-``` cpp
+```
     questA
       |
     questB
@@ -1307,7 +429,7 @@ Player get quests in a strict chain that must be completed in a specific order.
     questD
 ```
 
-``` cpp
+```sql
 entry = questA      PrevQuestId = 0          NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = questB
 entry = questB      PrevQuestId = questA     NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = questC
 entry = questC      PrevQuestId = questB     NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = questD
@@ -1318,7 +440,7 @@ entry = questD      PrevQuestId = questC     NextQuestId = 0       ExclusiveGrou
 
 Player should only be allowed to complete one of three possible
 
-``` cpp
+```sql
     questA     questB    questC
       \           |         /
         ------ questD -----
@@ -1326,7 +448,7 @@ Player should only be allowed to complete one of three possible
                questE
 ```
 
-``` cpp
+```sql
 entry = questA      PrevQuestId = 0        NextQuestId = questD    ExclusiveGroup = questA    NextQuestInChain = questD    
 entry = questB      PrevQuestId = 0        NextQuestId = questD    ExclusiveGroup = questA    NextQuestInChain = questD
 entry = questC      PrevQuestId = 0        NextQuestId = questD    ExclusiveGroup = questA    NextQuestInChain = questD
@@ -1338,7 +460,7 @@ entry = questE      PrevQuestId = questD   NextQuestId = 0         ExclusiveGrou
 
 Player must complete all three initial quests before D becomes available
 
-``` cpp
+```sql
     questA    questB    questC
       \         |          /
        ------ questD -----
@@ -1346,7 +468,7 @@ Player must complete all three initial quests before D becomes available
               questE
 ```
 
-``` cpp
+```sql
 entry = questA      PrevQuestId = 0        NextQuestId = questD   ExclusiveGroup = -questA    NextQuestInChain = questD
 entry = questB      PrevQuestId = 0        NextQuestId = questD   ExclusiveGroup = -questA    NextQuestInChain = questD
 entry = questC      PrevQuestId = 0        NextQuestId = questD   ExclusiveGroup = -questA    NextQuestInChain = questD
@@ -1358,7 +480,7 @@ entry = questE      PrevQuestId = questD   NextQuestId = 0        ExclusiveGroup
 
 Completing A unlocks B and C that can be done at the same time. They both need to be completed before D becomes available. X is needed to obtain item for C and this quest should only be available if C is active
 
-``` cpp
+```sql
                 questA
               /        \
           questB     questC  -  questX
@@ -1366,7 +488,7 @@ Completing A unlocks B and C that can be done at the same time. They both need t
                 questD
 ```
 
-``` cpp
+```sql
 entry = questA       PrevQuestId = 0        NextQuestId = 0        ExclusiveGroup = 0         NextQuestInChain = 0
 entry = questB       PrevQuestId = questA   NextQuestId = questD   ExclusiveGroup = -questB   NextQuestInChain = 0
 entry = questC       PrevQuestId = questA   NextQuestId = questD   ExclusiveGroup = -questB   NextQuestInChain = 0
@@ -1378,7 +500,7 @@ entry = questD       PrevQuestId = 0        NextQuestId = 0        ExclusiveGrou
 
 Player may complete (not required to) X, but has to complete all three quest chains before final quest becomes available
 
-``` cpp
+```sql
                 *questX*
                    |
     *questA*    *questC*    *questE*
@@ -1388,7 +510,7 @@ Player may complete (not required to) X, but has to complete all three quest cha
          ------ *questG* -----
 ```
 
-``` cpp
+```sql
 PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questC    entry = questX
 PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questB    entry = questA
 PrevQuestId = questA   NextQuestId = questG    ExclusiveGroup = -questB    NextQuestInChain = 0         entry = questB
@@ -1404,7 +526,7 @@ PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQ
 
 Player must first complete A, then B to unlock the chain from C to E. Three other quests in a group will also be unlocked, those can be done at the same time. The three grouped quests must all be completed before I becomes available. Completion of E and I is required to obtain the final quest.
 
-``` cpp
+```sql
                 *questA*
                    |
                 *questB*
@@ -1418,7 +540,7 @@ Player must first complete A, then B to unlock the chain from C to E. Three othe
                 *questJ*
 ```
 
-``` cpp
+```sql
 PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questB    entry = questA
 PrevQuestId = questA   NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questB
 
@@ -1439,7 +561,7 @@ PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQ
 
 Player can choose between two alternative chains (Chain A or B, but not both chains). A2 or B2 should unlock C, D and E when complete. When all three complete, F should be unlocked. If player get A3 or B3 after complete F, depends on if chain A or B was chosen
 
-``` cpp
+```sql
                 *questA1*           *questB1*
                     |                   |
                 *questA2*           *questB2*
@@ -1453,7 +575,7 @@ Player can choose between two alternative chains (Chain A or B, but not both cha
                     *questA3*   *questB3*
 ```
 
-``` cpp
+```sql
 PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questA2   entry = questA1
 PrevQuestId = questA1  NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questA2
 
@@ -1472,6 +594,4 @@ PrevQuestId = questF   NextQuestId = 0         ExclusiveGroup = 0          NextQ
 
 Note:
 
-If player can choose between chain A or B may be determined by faction status (aldor or scryer), using ReqMinRepFaction = 1. Player should not be able to be neutral+1 with both at the same time. This may be the common threshold to obtain aldor or scryer quests (this is unsure). If that is the case, only the unlock of C, D and E after complete A2 *or* B2 is the impossible part.\_Note 2: With the [Conditions](conditions) table now every quest chain is possible.''
-
-/table
+If player can choose between chain A or B may be determined by faction status (aldor or scryer), using ReqMinRepFaction = 1. Player should not be able to be neutral+1 with both at the same time. This may be the common threshold to obtain aldor or scryer quests (this is unsure). If that is the case, only the unlock of C, D and E after complete A2 *or* B2 is the impossible part.\_Note 2: With the [Conditions](conditions) table now every quest chain is possible.
