@@ -1,6 +1,8 @@
-# The `account` table**
+# account
 
 [<-Back-to:Auth](database-auth.md)
+
+**The `account` table**
 
 This table holds information on all available accounts.
 
