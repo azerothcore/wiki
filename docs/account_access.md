@@ -1,8 +1,8 @@
-# account_access
+# account\_access
 
 [<-Back-to:Auth](database-auth.md)
 
-**The `account_access` table**
+**The \`account\_access\` table**
 
 This table holds security access level for any realm in [realmlist](realmlist) table.
 
