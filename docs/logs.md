@@ -8,13 +8,13 @@ This table stores all logs from authserver if database logging in config is enab
 
 **Structure**
 
-| Field       | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|-------------|------------|------------|-----|------|---------|-------|---------|
-| [time][1]   | int(10)    | unsigned   |     | NO   |         |       |         |
-| [realm][2]  | realm(10)  | unsigned   |     | NO   |         |       |         |
-| [type][3]   | tinyint(3) | unsigned   |     | NO   |         |       |         |
-| [level][4]  | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
-| [string][5] | text       | signed     |     | YES  |         |       |         |
+| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------|--------------|------------|-----|------|---------|-------|---------|
+| [time][1]   | int(10)      | unsigned   |     | NO   |         |       |         |
+| [realm][2]  | int(10)      | unsigned   |     | NO   |         |       |         |
+| [type][3]   | varchar(250) |            |     | NO   |         |       |         |
+| [level][4]  | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [string][5] | text         |            |     | YES  |         |       |         |
 
 [1]: #time
 [2]: #realm
