@@ -20,6 +20,17 @@
 
 ### country
 
+### Example
+
+| ip        | country |
+|-----------|---------|
+| 0         | us      |
+| 687865856 | za      |
+| 689963008 | eg      |
+| 691011584 | za      |
+| 691617792 | zw      |
+| 691621888 | lr      |
+
 These tables allow to see approximately which country a player might be from when doing **.pinfo <player>** command.
 
 They are not mantained by TrinityCore development team and **they require external data to perform their function**, which can be found at
