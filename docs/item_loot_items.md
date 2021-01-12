@@ -11,140 +11,31 @@ the player either removes an item or destroys the container item.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#container_id">container_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#item_id">item_id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#item_count">item_count</a></p></td>
-<td><p>int(10)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#follow_rules">follow_rules</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#ffa">ffa</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#blocked">blocked</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#counted">counted</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#under_threshold">under_threshold</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#needs_quest">needs_quest</a></p></td>
-<td><p>tinyint(1)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rnd_prop">rnd_prop</a></p></td>
-<td><p>int(10)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rnd_suffix">rnd_suffix</a></p></td>
-<td><p>int(10)</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
+|----------------------|------------|------------|-----|------|---------|-------|---------|
+| [container_id][1]    | int(10)    | unsigned   |     | NO   |         |       |         |
+| [item_id][2]         | int(10)    | unsigned   |     | NO   |         |       |         |
+| [item_count][3]      | int(10)    |            |     | NO   |         |       |         |
+| [follow_rules][4]    | tinyint(1) |            |     | NO   |         |       |         |
+| [ffa][5]             | tinyint(1) |            |     | NO   |         |       |         |
+| [blocked][6]         | tinyint(1) |            |     | NO   |         |       |         |
+| [counted][7]         | tinyint(1) |            |     | NO   |         |       |         |
+| [under_threshold][8] | tinyint(1) |            |     | NO   |         |       |         |
+| [needs_quest][9]     | tinyint(1) |            |     | NO   |         |       |         |
+| [rnd_prop][10]       | int(10)    |            |     | NO   |         |       |         |
+| [rnd_suffix][11]     | int(10)    |            |     | NO   |         |       |         |
+
+[1]: #container_id
+[2]: #item_id
+[3]: #item_count
+[4]: #follow_rules
+[5]: #ffa
+[6]: #blocked
+[7]: #counted
+[8]: #under_threshold
+[9]: #needs_quest
+[10]: #rnd_prop
+[11]: #rnd_suffix
 
 **Description of the fields**
 

@@ -8,180 +8,39 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#arenateamid">arenaTeamId</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p>Unique</p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(24)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#captainguid">captainGuid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#type">type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#rating">rating</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#seasongames">seasonGames</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#seasonwins">seasonWins</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#weekgames">weekGames</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#weekwins">weekWins</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#rank">rank</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#backgroundcolor">BackgroundColor</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#emblemstyle">EmblemStyle</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#emblemcolor">EmblemColor</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#borderstyle">BorderStyle</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#bordercolor">BorderColor</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
+|-----------------------|-------------|------------|-----|------|---------|--------|---------|
+| [arenaTeamId][1]      | int(10)     | unsigned   | PRI | NO   |         | Unique |         |
+| [name][2]             | varchar(24) |            |     | NO   |         |        |         |
+| [captainGuid][3]      | int(10)     | unsigned   |     | NO   |         |        |         |
+| [type][4]             | tinyint(3)  | unsigned   |     | NO   |         |        |         |
+| [rating][5]           | smallint(5) | unsigned   |     | NO   |         |        |         |
+| [seasonGames][6]      | smallint(5) | unsigned   |     | NO   |         |        |         |
+| [seasonWins][7]       | smallint(5) | unsigned   |     | NO   |         |        |         |
+| [weekGames][8]        | smallint(5) | unsigned   |     | NO   |         |        |         |
+| [weekWins][9]         | smallint(5) | unsigned   |     | NO   |         |        |         |
+| [rank][10]            | int(10)     | unsigned   |     | NO   |         |        |         |
+| [BackgroundColor][11] | int(10)     | unsigned   |     | NO   |         |        |         |
+| [EmblemStyle][12]     | tinyint(3)  | unsigned   |     | NO   |         |        |         |
+| [EmblemColor][13]     | int(10)     | unsigned   |     | NO   |         |        |         |
+| [BorderStyle][14]     | tinyint(3)  | unsigned   |     | NO   |         |        |         |
+| [BorderColor][15]     | int(10)     | unsigned   |     | NO   |         |        |         |
+
+[1]: #arenateamid
+[2]: #name
+[3]: #captainguid
+[4]: #type
+[5]: #rating
+[6]: #seasongames
+[7]: #seasonwins
+[8]: #weekgames
+[9]: #weekwins
+[10]: #rank
+[11]: #backgroundcolor
+[12]: #emblemstyle
+[13]: #emblemcolor
+[14]: #borderstyle
+[15]: #bordercolor
 
 **Description of the fields**
 
@@ -201,11 +60,9 @@ The GUID of the character who created the ArenaTeam. See [characters.guid](21299
 
 Defines the ArenaType:
 
-2 – 2vs2 Team
-
-3 – 3vs3 Team
-
-5 – 5vs5 Team
+- 2 – 2vs2 Team
+- 3 – 3vs3 Team
+- 5 – 5vs5 Team
 
 ### rating
 

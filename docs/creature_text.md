@@ -16,7 +16,7 @@ If you look at the beginning of the code you can find *enum* named Texts which i
 
 **boss\_sindragosa.cpp**  Expand source
 
-``` cpp
+```cpp
  enum Texts
  {
      SAY_AGGRO = 0, // You are fools to have come to this place! The icy winds of Northrend will consume your souls!
@@ -37,7 +37,7 @@ There is nothing? That's a shame, but maybe, maybe you had a chance to discover 
 
 **boss\_sindragosa.cpp**  Expand source
 
-``` cpp
+```cpp
  void EnterCombat(Unit* victim) override
  {
      ...
@@ -56,185 +56,35 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#creatureid">CreatureID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">creature_template entry</a></p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#groupid">GroupID</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">ID</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#text">Text</a></p></td>
-<td><p>longtext</p></td>
-<td><p>utf8_general_ci</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#type">Type</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#language">Language</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#probability">Probability</a></p></td>
-<td><p>float</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#emote">Emote</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#duration">Duration</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#sound">Sound</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#broadcasttextid">BroadcastTextId</a></td>
-<td>mediumint(6)</td>
-<td>signed</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><a href="#textrange">TextRange</a></td>
-<td>tinyint(3)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="even">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>varchar(255)</p></td>
-<td><p>utf8_general_ci</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>' '</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field                 | Type         | Attributes      | Key | Null | Default | Extra | Comment                 |
+|-----------------------|--------------|-----------------|-----|------|---------|-------|-------------------------|
+| [CreatureID][1]       | mediumint(8) | unsigned        | PRI | NO   |         |       | creature_template entry |
+| [GroupID][2]          | tinyint(3)   | unsigned        | PRI | NO   |         |       |                         |
+| [ID][3]               | tinyint(3)   | unsigned        | PRI | NO   |         |       |                         |
+| [Text][4]             | longtext     | utf8_general_ci |     | YES  | NULL    |       |                         |
+| [Type][5]             | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
+| [Language][6]         | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
+| [Probability][7]      | float        | signed          |     | NO   |         |       |                         |
+| [Emote][8]            | mediumint(8) | unsigned        |     | NO   |         |       |                         |
+| [Duration][9]         | mediumint(8) | unsigned        |     | NO   |         |       |                         |
+| [Sound][10]           | mediumint(8) | unsigned        |     | NO   |         |       |                         |
+| [BroadcastTextId][11] | mediumint(6) | signed          |     | NO   |         |       |                         |
+| [TextRange][12]       | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
+| [comment][13]         | varchar(255) | utf8_general_ci |     | YES  | NULL    |       |                         |
+
+[1]: #creatureid
+[2]: #groupid
+[3]: #id
+[4]: #text
+[5]: #type
+[6]: #language
+[7]: #probability
+[8]: #emote
+[9]: #duration
+[10]: #sound
+[11]: #broadcasttextid
+[12]: #textrange
+[13]: #comment
 
 ## Description of the fields
 
@@ -322,4 +172,3 @@ Id of the equivalent text found in [broadcast\_text](broadcast_text)
 ### comment
 
 This field allows you to label a text entry.
-

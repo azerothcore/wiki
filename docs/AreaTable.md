@@ -10,14114 +10,2366 @@ This dbc contains the zone and subzone lists. For the purposes of this wiki arti
 
 ## Structure
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Column</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Notes</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>ID</p></td>
-<td><p>Int</p></td>
-<td><p>Zone Area</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>MapID</p></td>
-<td><p>Int</p></td>
-<td><p>Map or Continent</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>AreaID</p></td>
-<td><p>Int</p></td>
-<td><p>SubArea of Map</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Explore Flag</p></td>
-<td><p>Int</p></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><p>5</p></td>
-<td><p><a href="#AreaTable-Flags">Flags</a></p></td>
-<td><p>Int</p></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>SoundAmbienceID</p></td>
-<td><p>Int</p></td>
-<td><p>Reference to what Ambiance to use during day and night</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>ZoneMusicID</p></td>
-<td><p>Int</p></td>
-<td><p>Reference to what zone music to play</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>ZoneIntroMusicID</p></td>
-<td><p>Int</p></td>
-<td><p>Reference to what zone intro music to play when entering area</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>Area Level</p></td>
-<td><p>Int</p></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><p>12-28</p></td>
-<td><p>Area Name</p></td>
-<td><p>String</p></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><p>29</p></td>
-<td><p>FactionGroupID</p></td>
-<td><p>Int</p></td>
-<td><p>Faction that owns area</p></td>
-</tr>
-</tbody>
-</table>
+| Column | Name             | Type   | Notes                                                         |
+|--------|------------------|--------|---------------------------------------------------------------|
+| 1      | ID               | Int    | Zone Area                                                     |
+| 2      | MapID            | Int    | Map or Continent                                              |
+| 3      | AreaID           | Int    | SubArea of Map                                                |
+| 4      | Explore Flag     | Int    |                                                               |
+| 5      | Flags            | Int    |                                                               |
+| 8      | SoundAmbienceID  | Int    | Reference to what Ambiance to use during day and night        |
+| 9      | ZoneMusicID      | Int    | Reference to what zone music to play                          |
+| 10     | ZoneIntroMusicID | Int    | Reference to what zone intro music to play when entering area |
+| 11     | Area Level       | Int    |                                                               |
+| 12-28  | Area Name        | String |                                                               |
+| 29     | FactionGroupID   | Int    | Faction that owns area                                        |
 
 **Description of the fields**
 
 ## Flags
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Value</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-<td><p><strong>Notes</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>0x00000001</p></td>
-<td><p>AREA_FLAG_SNOW</p></td>
-<td><p>snow (only Dun Morogh, Naxxramas, Razorfen Downs and Winterspring)</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00000002</p></td>
-<td><p>AREA_FLAG_UNK1</p></td>
-<td><p>may be necropolis?</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00000004</p></td>
-<td><p>AREA_FLAG_UNK2</p></td>
-<td><p>Only used for areas on map 571 (development before)</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00000008</p></td>
-<td><p>AREA_FLAG_SLAVE_CAPITAL</p></td>
-<td><p>city and city subsones</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00000010</p></td>
-<td><p>AREA_FLAG_UNK3</p></td>
-<td><p>can't find common meaning</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00000020</p></td>
-<td><p>AREA_FLAG_SLAVE_CAPITAL2</p></td>
-<td><p>slave capital city flag?</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00000040</p></td>
-<td><p>AREA_FLAG_ALLOW_DUELS</p></td>
-<td><p>allow to duel here</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00000080</p></td>
-<td><p>AREA_FLAG_ARENA</p></td>
-<td><p>arena, both instanced and world arenas</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00000100</p></td>
-<td><p>AREA_FLAG_CAPITAL</p></td>
-<td><p>main capital city flag</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00000200</p></td>
-<td><p>AREA_FLAG_CITY</p></td>
-<td><p>only for one zone named &quot;City&quot; (where it located?)</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00000400</p></td>
-<td><p>AREA_FLAG_OUTLAND</p></td>
-<td><p>expansion zones? (only Eye of the Storm not have this flag, but have 0x00004000 flag)</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00000800</p></td>
-<td><p>AREA_FLAG_SANCTUARY</p></td>
-<td><p>sanctuary area (PvP disabled)</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00001000</p></td>
-<td><p>AREA_FLAG_NEED_FLY</p></td>
-<td><p>only Netherwing Ledge, Socrethar's Seat, Tempest Keep, The Arcatraz, The Botanica, The Mechanar, Sorrow Wing Point, Dragonspine Ridge, Netherwing Mines, Dragonmaw Base Camp, Dragonmaw Skyway</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00002000</p></td>
-<td><p>AREA_FLAG_UNUSED1</p></td>
-<td><p>not used now (no area/zones with this flag set in 3.0.3)</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00004000</p></td>
-<td><p>AREA_FLAG_OUTLAND2</p></td>
-<td><p>expansion zones? (only Circle of Blood Arena not have this flag, but have 0x00000400 flag)</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00008000</p></td>
-<td><p>AREA_FLAG_OUTDOOR_PVP</p></td>
-<td><p>pvp objective area? (Death's Door also has this flag although it's no pvp object area)</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00010000</p></td>
-<td><p>AREA_FLAG_ARENA_INSTANCE</p></td>
-<td><p>used by instanced arenas only</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00020000</p></td>
-<td><p>AREA_FLAG_UNUSED2</p></td>
-<td><p>not used now (no area/zones with this flag set in 3.0.3)</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00040000</p></td>
-<td><p>AREA_FLAG_CONTESTED_AREA</p></td>
-<td><p>On PvP servers these areas are considered contested, even though the zone it is contained in is a Horde/Alliance territory.</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00080000</p></td>
-<td><p>AREA_FLAG_UNK6</p></td>
-<td><p>Valgarde and Acherus: The Ebon Hold</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00100000</p></td>
-<td><p>AREA_FLAG_LOWLEVEL</p></td>
-<td><p>used for some starting areas with area_level &lt;=15</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00200000</p></td>
-<td><p>AREA_FLAG_TOWN</p></td>
-<td><p>small towns with Inn</p></td>
-</tr>
-<tr class="even">
-<td><p>0x00400000</p></td>
-<td><p>AREA_FLAG_UNK7</p></td>
-<td><p>Warsong Hold, Acherus: The Ebon Hold, New Agamand Inn, Vengeance Landing Inn</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x00800000</p></td>
-<td><p>AREA_FLAG_UNK8</p></td>
-<td><p>Westguard Inn, Acherus: The Ebon Hold, Valgarde</p></td>
-</tr>
-<tr class="even">
-<td><p>0x01000000</p></td>
-<td><p>AREA_FLAG_WINTERGRASP</p></td>
-<td><p>Wintergrasp and it's subzones</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x02000000</p></td>
-<td><p>AREA_FLAG_INSIDE</p></td>
-<td><p>used for determinating spell related inside/outside questions in Map::IsOutdoors</p></td>
-</tr>
-<tr class="even">
-<td><p>0x04000000</p></td>
-<td><p>AREA_FLAG_OUTSIDE</p></td>
-<td><p>used for determinating spell related inside/outside questions in Map::IsOutdoors</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x08000000</p></td>
-<td><p>AREA_FLAG_WINTERGRASP_2</p></td>
-<td><p>Wintergrasp and it's subzones</p></td>
-</tr>
-<tr class="even">
-<td><p>0x20000000</p></td>
-<td><p>AREA_FLAG_CANNOT_FLY</p></td>
-<td><p>not allowed to fly, only used in Dalaran areas (zone 4395)</p></td>
-</tr>
-</tbody>
-</table>
+| Value      | Name                     | Notes                                                                                                                                                                                          |
+|------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0x00000001 | AREA_FLAG_SNOW           | snow (only Dun Morogh, Naxxramas, Razorfen Downs and Winterspring)                                                                                                                             |
+| 0x00000002 | AREA_FLAG_UNK1           | may be necropolis?                                                                                                                                                                             |
+| 0x00000004 | AREA_FLAG_UNK2           | Only used for areas on map 571 (development before)                                                                                                                                            |
+| 0x00000008 | AREA_FLAG_SLAVE_CAPITAL  | city and city subsones                                                                                                                                                                         |
+| 0x00000010 | AREA_FLAG_UNK3           | can't find common meaning                                                                                                                                                                      |
+| 0x00000020 | AREA_FLAG_SLAVE_CAPITAL2 | slave capital city flag?                                                                                                                                                                       |
+| 0x00000040 | AREA_FLAG_ALLOW_DUELS    | allow to duel here                                                                                                                                                                             |
+| 0x00000080 | AREA_FLAG_ARENA          | arena, both instanced and world arenas                                                                                                                                                         |
+| 0x00000100 | AREA_FLAG_CAPITAL        | main capital city flag                                                                                                                                                                         |
+| 0x00000200 | AREA_FLAG_CITY           | only for one zone named "City" (where it located?)                                                                                                                                             |
+| 0x00000400 | AREA_FLAG_OUTLAND        | expansion zones? (only Eye of the Storm not have this flag, but have 0x00004000 flag)                                                                                                          |
+| 0x00000800 | AREA_FLAG_SANCTUARY      | sanctuary area (PvP disabled)                                                                                                                                                                  |
+| 0x00001000 | AREA_FLAG_NEED_FLY       | only Netherwing Ledge, Socrethar's Seat, Tempest Keep, The Arcatraz, The Botanica, The Mechanar, Sorrow Wing Point, Dragonspine Ridge, Netherwing Mines, Dragonmaw Base Camp, Dragonmaw Skyway |
+| 0x00002000 | AREA_FLAG_UNUSED1        | not used now (no area/zones with this flag set in 3.0.3)                                                                                                                                       |
+| 0x00004000 | AREA_FLAG_OUTLAND2       | expansion zones? (only Circle of Blood Arena not have this flag, but have 0x00000400 flag)                                                                                                     |
+| 0x00008000 | AREA_FLAG_OUTDOOR_PVP    | pvp objective area? (Death's Door also has this flag although it's no pvp object area)                                                                                                         |
+| 0x00010000 | AREA_FLAG_ARENA_INSTANCE | used by instanced arenas only                                                                                                                                                                  |
+| 0x00020000 | AREA_FLAG_UNUSED2        | not used now (no area/zones with this flag set in 3.0.3)                                                                                                                                       |
+| 0x00040000 | AREA_FLAG_CONTESTED_AREA | On PvP servers these areas are considered contested, even though the zone it is contained in is a Horde/Alliance territory.                                                                    |
+| 0x00080000 | AREA_FLAG_UNK6           | Valgarde and Acherus: The Ebon Hold                                                                                                                                                            |
+| 0x00100000 | AREA_FLAG_LOWLEVEL       | used for some starting areas with area_level <=15                                                                                                                                              |
+| 0x00200000 | AREA_FLAG_TOWN           | small towns with Inn                                                                                                                                                                           |
+| 0x00400000 | AREA_FLAG_UNK7           | Warsong Hold, Acherus: The Ebon Hold, New Agamand Inn, Vengeance Landing Inn                                                                                                                   |
+| 0x00800000 | AREA_FLAG_UNK8           | Westguard Inn, Acherus: The Ebon Hold, Valgarde                                                                                                                                                |
+| 0x01000000 | AREA_FLAG_WINTERGRASP    | Wintergrasp and it's subzones                                                                                                                                                                  |
+| 0x02000000 | AREA_FLAG_INSIDE         | used for determinating spell related inside/outside questions in Map::IsOutdoors                                                                                                               |
+| 0x04000000 | AREA_FLAG_OUTSIDE        | used for determinating spell related inside/outside questions in Map::IsOutdoors                                                                                                               |
+| 0x08000000 | AREA_FLAG_WINTERGRASP_2  | Wintergrasp and it's subzones                                                                                                                                                                  |
+| 0x20000000 | AREA_FLAG_CANNOT_FLY     | not allowed to fly, only used in Dalaran areas (zone 4395)                                                                                                                                     |
 
 **It's complete! 2307 records**
 
 ## Content
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field Nb</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-<td><p><strong>MapID</strong></p></td>
-<td><p><strong>AreaID</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Dun Morogh</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Longshore</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>3</p></td>
-<td><p>Badlands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Blasted Lands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>7</p></td>
-<td><p>Blackwater Cove</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Swamp of Sorrows</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>9</p></td>
-<td><p>Northshire Valley</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>10</p></td>
-<td><p>Duskwood</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>11</p></td>
-<td><p>Wetlands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>12</p></td>
-<td><p>Elwynn Forest</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>13</p></td>
-<td><p>The World Tree</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>14</p></td>
-<td><p>Durotar</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>15</p></td>
-<td><p>Dustwallow Marsh</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>16</p></td>
-<td><p>Azshara</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>17</p></td>
-<td><p>The Barrens</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>18</p></td>
-<td><p>Crystal Lake</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>19</p></td>
-<td><p>Zul'Gurub</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>20</p></td>
-<td><p>Moonbrook</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>21</p></td>
-<td><p>Kul Tiras</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>22</p></td>
-<td><p>Programmer Isle</p></td>
-<td><p>451</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>23</p></td>
-<td><p>Northshire River</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>24</p></td>
-<td><p>Northshire Abbey</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>25</p></td>
-<td><p>Blackrock Mountain</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>26</p></td>
-<td><p>Lighthouse</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>28</p></td>
-<td><p>Western Plaguelands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>30</p></td>
-<td><p>Nine</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>32</p></td>
-<td><p>The Cemetary</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>33</p></td>
-<td><p>Stranglethorn Vale</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>34</p></td>
-<td><p>Echo Ridge Mine</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>35</p></td>
-<td><p>Booty Bay</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>36</p></td>
-<td><p>Alterac Mountains</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>37</p></td>
-<td><p>Lake Nazferiti</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>38</p></td>
-<td><p>Loch Modan</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>40</p></td>
-<td><p>Westfall</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>41</p></td>
-<td><p>Deadwind Pass</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>42</p></td>
-<td><p>Darkshire</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>43</p></td>
-<td><p>Wild Shore</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>44</p></td>
-<td><p>Redridge Mountains</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>45</p></td>
-<td><p>Arathi Highlands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>46</p></td>
-<td><p>Burning Steppes</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>47</p></td>
-<td><p>The Hinterlands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>49</p></td>
-<td><p>Dead Man's Hole</p></td>
-<td><p>451</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="even">
-<td><p>51</p></td>
-<td><p>Searing Gorge</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>53</p></td>
-<td><p>Thieves Camp</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>54</p></td>
-<td><p>Jasperlode Mine</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>55</p></td>
-<td><p>Valley of Heroes UNUSED</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>56</p></td>
-<td><p>Heroes' Vigil</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>57</p></td>
-<td><p>Fargodeep Mine</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>59</p></td>
-<td><p>Northshire Vineyards</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>60</p></td>
-<td><p>Forest's Edge</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>61</p></td>
-<td><p>Thunder Falls</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>62</p></td>
-<td><p>Brackwell Pumpkin Patch</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>63</p></td>
-<td><p>The Stonefield Farm</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>64</p></td>
-<td><p>The Maclure Vineyards</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>65</p></td>
-<td><p>Dragonblight</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>66</p></td>
-<td><p>Zul'Drak</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>67</p></td>
-<td><p>The Storm Peaks</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>68</p></td>
-<td><p>Lake Everstill</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>69</p></td>
-<td><p>Lakeshire</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>70</p></td>
-<td><p>Stonewatch</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>71</p></td>
-<td><p>Stonewatch Falls</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>72</p></td>
-<td><p>The Dark Portal</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="even">
-<td><p>73</p></td>
-<td><p>The Tainted Scar</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>74</p></td>
-<td><p>Pool of Tears</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>75</p></td>
-<td><p>Stonard</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="odd">
-<td><p>76</p></td>
-<td><p>Fallow Sanctuary</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>77</p></td>
-<td><p>Anvilmar</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>80</p></td>
-<td><p>Stormwind Mountains</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>81</p></td>
-<td><p>Jeff NE Quadrant Changed</p></td>
-<td><p>451</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="odd">
-<td><p>82</p></td>
-<td><p>Jeff NW Quadrant</p></td>
-<td><p>451</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="even">
-<td><p>83</p></td>
-<td><p>Jeff SE Quadrant</p></td>
-<td><p>451</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="odd">
-<td><p>84</p></td>
-<td><p>Jeff SW Quadrant</p></td>
-<td><p>451</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="even">
-<td><p>85</p></td>
-<td><p>Tirisfal Glades</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>86</p></td>
-<td><p>Stone Cairn Lake</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>87</p></td>
-<td><p>Goldshire</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>88</p></td>
-<td><p>Eastvale Logging Camp</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>89</p></td>
-<td><p>Mirror Lake Orchard</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>91</p></td>
-<td><p>Tower of Azora</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>92</p></td>
-<td><p>Mirror Lake</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>93</p></td>
-<td><p>Vul'Gol Ogre Mound</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>94</p></td>
-<td><p>Raven Hill</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>95</p></td>
-<td><p>Redridge Canyons</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>96</p></td>
-<td><p>Tower of Ilgalar</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>97</p></td>
-<td><p>Alther's Mill</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>98</p></td>
-<td><p>Rethban Caverns</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>99</p></td>
-<td><p>Rebel Camp</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>100</p></td>
-<td><p>Nesingwary's Expedition</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>101</p></td>
-<td><p>Kurzen's Compound</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>102</p></td>
-<td><p>Ruins of Zul'Kunda</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>103</p></td>
-<td><p>Ruins of Zul'Mamwe</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>104</p></td>
-<td><p>The Vile Reef</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>105</p></td>
-<td><p>Mosh'Ogg Ogre Mound</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>106</p></td>
-<td><p>The Stockpile</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>107</p></td>
-<td><p>Saldean's Farm</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>108</p></td>
-<td><p>Sentinel Hill</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>109</p></td>
-<td><p>Furlbrow's Pumpkin Farm</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>111</p></td>
-<td><p>Jangolode Mine</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>113</p></td>
-<td><p>Gold Coast Quarry</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>115</p></td>
-<td><p>Westfall Lighthouse</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>116</p></td>
-<td><p>Misty Valley</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>117</p></td>
-<td><p>Grom'gol Base Camp</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>118</p></td>
-<td><p>Whelgar's Excavation Site</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>120</p></td>
-<td><p>Westbrook Garrison</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>121</p></td>
-<td><p>Tranquil Gardens Cemetery</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>122</p></td>
-<td><p>Zuuldaia Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>123</p></td>
-<td><p>Bal'lal Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>125</p></td>
-<td><p>Kal'ai Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>126</p></td>
-<td><p>Tkashi Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>127</p></td>
-<td><p>Balia'mah Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>128</p></td>
-<td><p>Ziata'jai Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>129</p></td>
-<td><p>Mizjah Ruins</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>130</p></td>
-<td><p>Silverpine Forest</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>131</p></td>
-<td><p>Kharanos</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>132</p></td>
-<td><p>Coldridge Valley</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>133</p></td>
-<td><p>Gnomeregan</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>134</p></td>
-<td><p>Gol'Bolar Quarry</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>135</p></td>
-<td><p>Frostmane Hold</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>136</p></td>
-<td><p>The Grizzled Den</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>137</p></td>
-<td><p>Brewnall Village</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>138</p></td>
-<td><p>Misty Pine Refuge</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>139</p></td>
-<td><p>Eastern Plaguelands</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>141</p></td>
-<td><p>Teldrassil</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>142</p></td>
-<td><p>Ironband's Excavation Site</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>143</p></td>
-<td><p>Mo'grosh Stronghold</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="even">
-<td><p>144</p></td>
-<td><p>Thelsamar</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>145</p></td>
-<td><p>Algaz Gate</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="even">
-<td><p>146</p></td>
-<td><p>Stonewrought Dam</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>147</p></td>
-<td><p>The Farstrider Lodge</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="even">
-<td><p>148</p></td>
-<td><p>Darkshore</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>149</p></td>
-<td><p>Silver Stream Mine</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="even">
-<td><p>150</p></td>
-<td><p>Menethil Harbor</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>151</p></td>
-<td><p>Designer Island</p></td>
-<td><p>451</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>152</p></td>
-<td><p>The Bulwark</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>153</p></td>
-<td><p>Ruins of Lordaeron</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>154</p></td>
-<td><p>Deathknell</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>155</p></td>
-<td><p>Night Web's Hollow</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>156</p></td>
-<td><p>Solliden Farmstead</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>157</p></td>
-<td><p>Agamand Mills</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>158</p></td>
-<td><p>Agamand Family Crypt</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>159</p></td>
-<td><p>Brill</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>160</p></td>
-<td><p>Whispering Gardens</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>161</p></td>
-<td><p>Terrace of Repose</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>162</p></td>
-<td><p>Brightwater Lake</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>163</p></td>
-<td><p>Gunther's Retreat</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>164</p></td>
-<td><p>Garren's Haunt</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>165</p></td>
-<td><p>Balnir Farmstead</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>166</p></td>
-<td><p>Cold Hearth Manor</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>167</p></td>
-<td><p>Crusader Outpost</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>168</p></td>
-<td><p>The North Coast</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>169</p></td>
-<td><p>Whispering Shore</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>170</p></td>
-<td><p>Lordamere Lake</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>172</p></td>
-<td><p>Fenris Isle</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>173</p></td>
-<td><p>Faol's Rest</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>186</p></td>
-<td><p>Dolanaar</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>187</p></td>
-<td><p>Darnassus UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>188</p></td>
-<td><p>Shadowglen</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>189</p></td>
-<td><p>Steelgrill's Depot</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>190</p></td>
-<td><p>Hearthglen</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>192</p></td>
-<td><p>Northridge Lumber Camp</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>193</p></td>
-<td><p>Ruins of Andorhal</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>195</p></td>
-<td><p>School of Necromancy</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>196</p></td>
-<td><p>Uther's Tomb</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>197</p></td>
-<td><p>Sorrow Hill</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>198</p></td>
-<td><p>The Weeping Cave</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>199</p></td>
-<td><p>Felstone Field</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>200</p></td>
-<td><p>Dalson's Tears</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>201</p></td>
-<td><p>Gahrron's Withering</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>202</p></td>
-<td><p>The Writhing Haunt</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>203</p></td>
-<td><p>Mardenholde Keep</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>204</p></td>
-<td><p>Pyrewood Village</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>205</p></td>
-<td><p>Dun Modr</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>206</p></td>
-<td><p>Utgarde Keep</p></td>
-<td><p>574</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>207</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>36</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>208</p></td>
-<td><p>Unused Ironcladcove</p></td>
-<td><p>36</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>209</p></td>
-<td><p>Shadowfang Keep</p></td>
-<td><p>33</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>210</p></td>
-<td><p>Icecrown</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>211</p></td>
-<td><p>Iceflow Lake</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>212</p></td>
-<td><p>Helm's Bed Lake</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>213</p></td>
-<td><p>Deep Elem Mine</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>214</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>215</p></td>
-<td><p>Mulgore</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>219</p></td>
-<td><p>Alexston Farmstead</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>220</p></td>
-<td><p>Red Cloud Mesa</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>221</p></td>
-<td><p>Camp Narache</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>222</p></td>
-<td><p>Bloodhoof Village</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>223</p></td>
-<td><p>Stonebull Lake</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>224</p></td>
-<td><p>Ravaged Caravan</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>225</p></td>
-<td><p>Red Rocks</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>226</p></td>
-<td><p>The Skittering Dark</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>227</p></td>
-<td><p>Valgan's Field</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>228</p></td>
-<td><p>The Sepulcher</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>229</p></td>
-<td><p>Olsen's Farthing</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>230</p></td>
-<td><p>The Greymane Wall</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>231</p></td>
-<td><p>Beren's Peril</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>232</p></td>
-<td><p>The Dawning Isles</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>233</p></td>
-<td><p>Ambermill</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>235</p></td>
-<td><p>Fenris Keep</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>236</p></td>
-<td><p>Shadowfang Keep</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>237</p></td>
-<td><p>The Decrepit Ferry</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>238</p></td>
-<td><p>Malden's Orchard</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>239</p></td>
-<td><p>The Ivar Patch</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>240</p></td>
-<td><p>The Dead Field</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>241</p></td>
-<td><p>The Rotting Orchard</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>242</p></td>
-<td><p>Brightwood Grove</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>243</p></td>
-<td><p>Forlorn Rowe</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>244</p></td>
-<td><p>The Whipple Estate</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>245</p></td>
-<td><p>The Yorgen Farmstead</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>246</p></td>
-<td><p>The Cauldron</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>247</p></td>
-<td><p>Grimesilt Dig Site</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="odd">
-<td><p>249</p></td>
-<td><p>Dreadmaul Rock</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>250</p></td>
-<td><p>Ruins of Thaurissan</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="odd">
-<td><p>251</p></td>
-<td><p>Flame Crest</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>252</p></td>
-<td><p>Blackrock Stronghold</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="odd">
-<td><p>253</p></td>
-<td><p>The Pillar of Ash</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>254</p></td>
-<td><p>Blackrock Mountain</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="odd">
-<td><p>255</p></td>
-<td><p>Altar of Storms</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>256</p></td>
-<td><p>Aldrassil</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>257</p></td>
-<td><p>Shadowthread Cave</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>258</p></td>
-<td><p>Fel Rock</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>259</p></td>
-<td><p>Lake Al'Ameth</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>260</p></td>
-<td><p>Starbreeze Village</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>261</p></td>
-<td><p>Gnarlpine Hold</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>262</p></td>
-<td><p>Ban'ethil Barrow Den</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>263</p></td>
-<td><p>The Cleft</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>264</p></td>
-<td><p>The Oracle Glade</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>265</p></td>
-<td><p>Wellspring River</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>266</p></td>
-<td><p>Wellspring Lake</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>267</p></td>
-<td><p>Hillsbrad Foothills</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>268</p></td>
-<td><p>Azshara Crater</p></td>
-<td><p>37</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>269</p></td>
-<td><p>Dun Algaz</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>271</p></td>
-<td><p>Southshore</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>272</p></td>
-<td><p>Tarren Mill</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>275</p></td>
-<td><p>Durnholde Keep</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>276</p></td>
-<td><p>UNUSED Stonewrought Pass</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>277</p></td>
-<td><p>The Foothill Caverns</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>278</p></td>
-<td><p>Lordamere Internment Camp</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>279</p></td>
-<td><p>Dalaran Crater</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>280</p></td>
-<td><p>Strahnbrad</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>281</p></td>
-<td><p>Ruins of Alterac</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>282</p></td>
-<td><p>Crushridge Hold</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>283</p></td>
-<td><p>Slaughter Hollow</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>284</p></td>
-<td><p>The Uplands</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>285</p></td>
-<td><p>Southpoint Tower</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>286</p></td>
-<td><p>Hillsbrad Fields</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>287</p></td>
-<td><p>Hillsbrad</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>288</p></td>
-<td><p>Azurelode Mine</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>289</p></td>
-<td><p>Nethander Stead</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>290</p></td>
-<td><p>Dun Garok</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>293</p></td>
-<td><p>Thoradin's Wall</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>294</p></td>
-<td><p>Eastern Strand</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>295</p></td>
-<td><p>Western Strand</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>296</p></td>
-<td><p>South Seas UNUSED</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>297</p></td>
-<td><p>Jaguero Isle</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>298</p></td>
-<td><p>Baradin Bay</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>299</p></td>
-<td><p>Menethil Bay</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>300</p></td>
-<td><p>Misty Reed Strand</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>301</p></td>
-<td><p>The Savage Coast</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>302</p></td>
-<td><p>The Crystal Shore</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>303</p></td>
-<td><p>Shell Beach</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>305</p></td>
-<td><p>North Tide's Run</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>306</p></td>
-<td><p>South Tide's Run</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>307</p></td>
-<td><p>The Overlook Cliffs</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>308</p></td>
-<td><p>The Forbidding Sea</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>309</p></td>
-<td><p>Ironbeard's Tomb</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>310</p></td>
-<td><p>Crystalvein Mine</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>311</p></td>
-<td><p>Ruins of Aboraz</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>312</p></td>
-<td><p>Janeiro's Point</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>313</p></td>
-<td><p>Northfold Manor</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>314</p></td>
-<td><p>Go'Shek Farm</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>315</p></td>
-<td><p>Dabyrie's Farmstead</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>316</p></td>
-<td><p>Boulderfist Hall</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>317</p></td>
-<td><p>Witherbark Village</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>318</p></td>
-<td><p>Drywhisker Gorge</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>320</p></td>
-<td><p>Refuge Pointe</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>321</p></td>
-<td><p>Hammerfall</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>322</p></td>
-<td><p>Blackwater Shipwrecks</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>323</p></td>
-<td><p>O'Breen's Camp</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>324</p></td>
-<td><p>Stromgarde Keep</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>325</p></td>
-<td><p>The Tower of Arathor</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>326</p></td>
-<td><p>The Sanctum</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>327</p></td>
-<td><p>Faldir's Cove</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>328</p></td>
-<td><p>The Drowned Reef</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>330</p></td>
-<td><p>Thandol Span</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>331</p></td>
-<td><p>Ashenvale</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>332</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>333</p></td>
-<td><p>Circle of East Binding</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>334</p></td>
-<td><p>Circle of West Binding</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>335</p></td>
-<td><p>Circle of Inner Binding</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>336</p></td>
-<td><p>Circle of Outer Binding</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>337</p></td>
-<td><p>Apocryphan's Rest</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>338</p></td>
-<td><p>Angor Fortress</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>339</p></td>
-<td><p>Lethlor Ravine</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>340</p></td>
-<td><p>Kargath</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>341</p></td>
-<td><p>Camp Kosh</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>342</p></td>
-<td><p>Camp Boff</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>343</p></td>
-<td><p>Camp Wurg</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>344</p></td>
-<td><p>Camp Cagg</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>345</p></td>
-<td><p>Agmond's End</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>346</p></td>
-<td><p>Hammertoe's Digsite</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>347</p></td>
-<td><p>Dustbelch Grotto</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>348</p></td>
-<td><p>Aerie Peak</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>349</p></td>
-<td><p>Wildhammer Keep</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>350</p></td>
-<td><p>Quel'Danil Lodge</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>351</p></td>
-<td><p>Skulk Rock</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>352</p></td>
-<td><p>Zun'watha</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>353</p></td>
-<td><p>Shadra'Alor</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>354</p></td>
-<td><p>Jintha'Alor</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>355</p></td>
-<td><p>The Altar of Zul</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>356</p></td>
-<td><p>Seradane</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>357</p></td>
-<td><p>Feralas</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>358</p></td>
-<td><p>Brambleblade Ravine</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>359</p></td>
-<td><p>Bael Modan</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>360</p></td>
-<td><p>The Venture Co. Mine</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>361</p></td>
-<td><p>Felwood</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>362</p></td>
-<td><p>Razor Hill</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>363</p></td>
-<td><p>Valley of Trials</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>364</p></td>
-<td><p>The Den</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>365</p></td>
-<td><p>Burning Blade Coven</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>366</p></td>
-<td><p>Kolkar Crag</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>367</p></td>
-<td><p>Sen'jin Village</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>368</p></td>
-<td><p>Echo Isles</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>369</p></td>
-<td><p>Thunder Ridge</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>370</p></td>
-<td><p>Drygulch Ravine</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>371</p></td>
-<td><p>Dustwind Cave</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>372</p></td>
-<td><p>Tiragarde Keep</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>373</p></td>
-<td><p>Scuttle Coast</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>374</p></td>
-<td><p>Bladefist Bay</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>375</p></td>
-<td><p>Deadeye Shore</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>377</p></td>
-<td><p>Southfury River</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>378</p></td>
-<td><p>Camp Taurajo</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>379</p></td>
-<td><p>Far Watch Post</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>380</p></td>
-<td><p>The Crossroads</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>381</p></td>
-<td><p>Boulder Lode Mine</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>382</p></td>
-<td><p>The Sludge Fen</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>383</p></td>
-<td><p>The Dry Hills</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>384</p></td>
-<td><p>Dreadmist Peak</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>385</p></td>
-<td><p>Northwatch Hold</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>386</p></td>
-<td><p>The Forgotten Pools</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>387</p></td>
-<td><p>Lushwater Oasis</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>388</p></td>
-<td><p>The Stagnant Oasis</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>390</p></td>
-<td><p>Field of Giants</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>391</p></td>
-<td><p>The Merchant Coast</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>392</p></td>
-<td><p>Ratchet</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>393</p></td>
-<td><p>Darkspear Strand</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>394</p></td>
-<td><p>Grizzly Hills</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>395</p></td>
-<td><p>Grizzlemaw</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>396</p></td>
-<td><p>Winterhoof Water Well</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>397</p></td>
-<td><p>Thunderhorn Water Well</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>398</p></td>
-<td><p>Wildmane Water Well</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>399</p></td>
-<td><p>Skyline Ridge</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>400</p></td>
-<td><p>Thousand Needles</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>401</p></td>
-<td><p>The Tidus Stair</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>403</p></td>
-<td><p>Shady Rest Inn</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>404</p></td>
-<td><p>Bael'dun Digsite</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>405</p></td>
-<td><p>Desolace</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>406</p></td>
-<td><p>Stonetalon Mountains</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>407</p></td>
-<td><p>Orgrimmar UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>408</p></td>
-<td><p>Gillijim's Isle</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>409</p></td>
-<td><p>Island of Doctor Lapidis</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>410</p></td>
-<td><p>Razorwind Canyon</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>411</p></td>
-<td><p>Bathran's Haunt</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>412</p></td>
-<td><p>The Ruins of Ordil'Aran</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>413</p></td>
-<td><p>Maestra's Post</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>414</p></td>
-<td><p>The Zoram Strand</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>415</p></td>
-<td><p>Astranaar</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>416</p></td>
-<td><p>The Shrine of Aessina</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>417</p></td>
-<td><p>Fire Scar Shrine</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>418</p></td>
-<td><p>The Ruins of Stardust</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>419</p></td>
-<td><p>The Howling Vale</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>420</p></td>
-<td><p>Silverwind Refuge</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>421</p></td>
-<td><p>Mystral Lake</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>422</p></td>
-<td><p>Fallen Sky Lake</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>424</p></td>
-<td><p>Iris Lake</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>425</p></td>
-<td><p>Moonwell</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>426</p></td>
-<td><p>Raynewood Retreat</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>427</p></td>
-<td><p>The Shady Nook</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>428</p></td>
-<td><p>Night Run</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>429</p></td>
-<td><p>Xavian</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>430</p></td>
-<td><p>Satyrnaar</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>431</p></td>
-<td><p>Splintertree Post</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>432</p></td>
-<td><p>The Dor'Danil Barrow Den</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>433</p></td>
-<td><p>Falfarren River</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>434</p></td>
-<td><p>Felfire Hill</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>435</p></td>
-<td><p>Demon Fall Canyon</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>436</p></td>
-<td><p>Demon Fall Ridge</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>437</p></td>
-<td><p>Warsong Lumber Camp</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>438</p></td>
-<td><p>Bough Shadow</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>439</p></td>
-<td><p>The Shimmering Flats</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>440</p></td>
-<td><p>Tanaris</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>441</p></td>
-<td><p>Lake Falathim</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>442</p></td>
-<td><p>Auberdine</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>443</p></td>
-<td><p>Ruins of Mathystra</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>444</p></td>
-<td><p>Tower of Althalaxx</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>445</p></td>
-<td><p>Cliffspring Falls</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>446</p></td>
-<td><p>Bashal'Aran</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>447</p></td>
-<td><p>Ameth'Aran</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>448</p></td>
-<td><p>Grove of the Ancients</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>449</p></td>
-<td><p>The Master's Glaive</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>450</p></td>
-<td><p>Remtravel's Excavation</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>452</p></td>
-<td><p>Mist's Edge</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>453</p></td>
-<td><p>The Long Wash</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>454</p></td>
-<td><p>Wildbend River</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>455</p></td>
-<td><p>Blackwood Den</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>456</p></td>
-<td><p>Cliffspring River</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>457</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>458</p></td>
-<td><p>Gold Road</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>459</p></td>
-<td><p>Scarlet Watch Post</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>460</p></td>
-<td><p>Sun Rock Retreat</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>461</p></td>
-<td><p>Windshear Crag</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>463</p></td>
-<td><p>Cragpool Lake</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>464</p></td>
-<td><p>Mirkfallon Lake</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>465</p></td>
-<td><p>The Charred Vale</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>466</p></td>
-<td><p>Valley of the Bloodfuries</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>467</p></td>
-<td><p>Stonetalon Peak</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>468</p></td>
-<td><p>The Talon Den</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>469</p></td>
-<td><p>Greatwood Vale</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>470</p></td>
-<td><p>Thunder Bluff UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>471</p></td>
-<td><p>Brave Wind Mesa</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>472</p></td>
-<td><p>Fire Stone Mesa</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>473</p></td>
-<td><p>Mantle Rock</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>474</p></td>
-<td><p>Hunter Rise UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>475</p></td>
-<td><p>Spirit RiseUNUSED</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>476</p></td>
-<td><p>Elder RiseUNUSED</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>477</p></td>
-<td><p>Ruins of Jubuwal</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>478</p></td>
-<td><p>Pools of Arlithrien</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>479</p></td>
-<td><p>The Rustmaul Dig Site</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>480</p></td>
-<td><p>Camp E'thok</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>481</p></td>
-<td><p>Splithoof Crag</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>482</p></td>
-<td><p>Highperch</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>483</p></td>
-<td><p>The Screeching Canyon</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>484</p></td>
-<td><p>Freewind Post</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>485</p></td>
-<td><p>The Great Lift</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>486</p></td>
-<td><p>Galak Hold</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>487</p></td>
-<td><p>Roguefeather Den</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>488</p></td>
-<td><p>The Weathered Nook</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>489</p></td>
-<td><p>Thalanaar</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>490</p></td>
-<td><p>Un'Goro Crater</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>491</p></td>
-<td><p>Razorfen Kraul</p></td>
-<td><p>47</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>492</p></td>
-<td><p>Raven Hill Cemetery</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>493</p></td>
-<td><p>Moonglade</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>495</p></td>
-<td><p>Howling Fjord</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>496</p></td>
-<td><p>Brackenwall Village</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>497</p></td>
-<td><p>Swamplight Manor</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>498</p></td>
-<td><p>Bloodfen Burrow</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>499</p></td>
-<td><p>Darkmist Cavern</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>500</p></td>
-<td><p>Moggle Point</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>501</p></td>
-<td><p>Beezil's Wreck</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>502</p></td>
-<td><p>Witch Hill</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>503</p></td>
-<td><p>Sentry Point</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>504</p></td>
-<td><p>North Point Tower</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>505</p></td>
-<td><p>West Point Tower</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>506</p></td>
-<td><p>Lost Point</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>507</p></td>
-<td><p>Bluefen</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>508</p></td>
-<td><p>Stonemaul Ruins</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>509</p></td>
-<td><p>The Den of Flame</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>510</p></td>
-<td><p>The Dragonmurk</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>511</p></td>
-<td><p>Wyrmbog</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>512</p></td>
-<td><p>Blackhoof Village</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>513</p></td>
-<td><p>Theramore Isle</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>514</p></td>
-<td><p>Foothold Citadel</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>515</p></td>
-<td><p>Ironclad Prison</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>516</p></td>
-<td><p>Dustwallow Bay</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>517</p></td>
-<td><p>Tidefury Cove</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>518</p></td>
-<td><p>Dreadmurk Shore</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>536</p></td>
-<td><p>Addle's Stead</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>537</p></td>
-<td><p>Fire Plume Ridge</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="even">
-<td><p>538</p></td>
-<td><p>Lakkari Tar Pits</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="odd">
-<td><p>539</p></td>
-<td><p>Terror Run</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="even">
-<td><p>540</p></td>
-<td><p>The Slithering Scar</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="odd">
-<td><p>541</p></td>
-<td><p>Marshal's Refuge</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="even">
-<td><p>542</p></td>
-<td><p>Fungal Rock</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="odd">
-<td><p>543</p></td>
-<td><p>Golakka Hot Springs</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="even">
-<td><p>556</p></td>
-<td><p>The Loch</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>576</p></td>
-<td><p>Beggar's Haunt</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>596</p></td>
-<td><p>Kodo Graveyard</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>597</p></td>
-<td><p>Ghost Walker Post</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>598</p></td>
-<td><p>Sar'theris Strand</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>599</p></td>
-<td><p>Thunder Axe Fortress</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>600</p></td>
-<td><p>Bolgan's Hole</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>602</p></td>
-<td><p>Mannoroc Coven</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>603</p></td>
-<td><p>Sargeron</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>604</p></td>
-<td><p>Magram Village</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>606</p></td>
-<td><p>Gelkis Village</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>607</p></td>
-<td><p>Valley of Spears</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>608</p></td>
-<td><p>Nijel's Point</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>609</p></td>
-<td><p>Kolkar Village</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>616</p></td>
-<td><p>Hyjal</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>618</p></td>
-<td><p>Winterspring</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>636</p></td>
-<td><p>Blackwolf River</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>637</p></td>
-<td><p>Kodo Rock</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>638</p></td>
-<td><p>Hidden Path</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>639</p></td>
-<td><p>Spirit Rock</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>640</p></td>
-<td><p>Shrine of the Dormant Flame</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>656</p></td>
-<td><p>Lake Elune'ara</p></td>
-<td><p>1</p></td>
-<td><p>493</p></td>
-</tr>
-<tr class="even">
-<td><p>657</p></td>
-<td><p>The Harborage</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="odd">
-<td><p>676</p></td>
-<td><p>Outland</p></td>
-<td><p>150</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>696</p></td>
-<td><p>Craftsmen's Terrace UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>697</p></td>
-<td><p>Tradesmen's Terrace UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>698</p></td>
-<td><p>The Temple Gardens UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>699</p></td>
-<td><p>Temple of Elune UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>700</p></td>
-<td><p>Cenarion Enclave UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>701</p></td>
-<td><p>Warrior's Terrace UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="even">
-<td><p>702</p></td>
-<td><p>Rut'theran Village</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>716</p></td>
-<td><p>Ironband's Compound</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>717</p></td>
-<td><p>The Stockade</p></td>
-<td><p>34</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>718</p></td>
-<td><p>Wailing Caverns</p></td>
-<td><p>43</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>719</p></td>
-<td><p>Blackfathom Deeps</p></td>
-<td><p>48</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>720</p></td>
-<td><p>Fray Island</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>721</p></td>
-<td><p>Gnomeregan</p></td>
-<td><p>90</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>722</p></td>
-<td><p>Razorfen Downs</p></td>
-<td><p>129</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>736</p></td>
-<td><p>Ban'ethil Hollow</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>796</p></td>
-<td><p>Scarlet Monastery</p></td>
-<td><p>189</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>797</p></td>
-<td><p>Jerod's Landing</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="odd">
-<td><p>798</p></td>
-<td><p>Ridgepoint Tower</p></td>
-<td><p>0</p></td>
-<td><p>12</p></td>
-</tr>
-<tr class="even">
-<td><p>799</p></td>
-<td><p>The Darkened Bank</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>800</p></td>
-<td><p>Coldridge Pass</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>801</p></td>
-<td><p>Chill Breeze Valley</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>802</p></td>
-<td><p>Shimmer Ridge</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>803</p></td>
-<td><p>Amberstill Ranch</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>804</p></td>
-<td><p>The Tundrid Hills</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>805</p></td>
-<td><p>South Gate Pass</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>806</p></td>
-<td><p>South Gate Outpost</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>807</p></td>
-<td><p>North Gate Pass</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>808</p></td>
-<td><p>North Gate Outpost</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>809</p></td>
-<td><p>Gates of Ironforge</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>810</p></td>
-<td><p>Stillwater Pond</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>811</p></td>
-<td><p>Nightmare Vale</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>812</p></td>
-<td><p>Venomweb Vale</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>813</p></td>
-<td><p>The Bulwark</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>814</p></td>
-<td><p>Southfury River</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>815</p></td>
-<td><p>Southfury River</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>816</p></td>
-<td><p>Razormane Grounds</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>817</p></td>
-<td><p>Skull Rock</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>818</p></td>
-<td><p>Palemane Rock</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>819</p></td>
-<td><p>Windfury Ridge</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>820</p></td>
-<td><p>The Golden Plains</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>821</p></td>
-<td><p>The Rolling Plains</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="odd">
-<td><p>836</p></td>
-<td><p>Dun Algaz</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>837</p></td>
-<td><p>Dun Algaz</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>838</p></td>
-<td><p>North Gate Pass</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="even">
-<td><p>839</p></td>
-<td><p>South Gate Pass</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>856</p></td>
-<td><p>Twilight Grove</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>876</p></td>
-<td><p>GM Island</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>877</p></td>
-<td><p>Delete ME</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>878</p></td>
-<td><p>Southfury River</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>879</p></td>
-<td><p>Southfury River</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>880</p></td>
-<td><p>Thandol Span</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>881</p></td>
-<td><p>Thandol Span</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>896</p></td>
-<td><p>Purgation Isle</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>916</p></td>
-<td><p>The Jansen Stead</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>917</p></td>
-<td><p>The Dead Acre</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>918</p></td>
-<td><p>The Molsen Farm</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>919</p></td>
-<td><p>Stendel's Pond</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>920</p></td>
-<td><p>The Dagger Hills</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>921</p></td>
-<td><p>Demont's Place</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>922</p></td>
-<td><p>The Dust Plains</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>923</p></td>
-<td><p>Stonesplinter Valley</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>924</p></td>
-<td><p>Valley of Kings</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="even">
-<td><p>925</p></td>
-<td><p>Algaz Station</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>926</p></td>
-<td><p>Bucklebree Farm</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>927</p></td>
-<td><p>The Shining Strand</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>928</p></td>
-<td><p>North Tide's Hollow</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="even">
-<td><p>936</p></td>
-<td><p>Grizzlepaw Ridge</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>956</p></td>
-<td><p>The Verdant Fields</p></td>
-<td><p>169</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>976</p></td>
-<td><p>Gadgetzan</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>977</p></td>
-<td><p>Steamwheedle Port</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>978</p></td>
-<td><p>Zul'Farrak</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>979</p></td>
-<td><p>Sandsorrow Watch</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>980</p></td>
-<td><p>Thistleshrub Valley</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>981</p></td>
-<td><p>The Gaping Chasm</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>982</p></td>
-<td><p>The Noxious Lair</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>983</p></td>
-<td><p>Dunemaul Compound</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>984</p></td>
-<td><p>Eastmoon Ruins</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>985</p></td>
-<td><p>Waterspring Field</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>986</p></td>
-<td><p>Zalashji's Den</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>987</p></td>
-<td><p>Land's End Beach</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>988</p></td>
-<td><p>Wavestrider Beach</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>989</p></td>
-<td><p>Uldum</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>990</p></td>
-<td><p>Valley of the Watchers</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>991</p></td>
-<td><p>Gunstan's Post</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>992</p></td>
-<td><p>Southmoon Ruins</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>996</p></td>
-<td><p>Render's Camp</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>997</p></td>
-<td><p>Render's Valley</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>998</p></td>
-<td><p>Render's Rock</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>999</p></td>
-<td><p>Stonewatch Tower</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>1000</p></td>
-<td><p>Galardell Valley</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>1001</p></td>
-<td><p>Lakeridge Highway</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>1002</p></td>
-<td><p>Three Corners</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="even">
-<td><p>1016</p></td>
-<td><p>Direforge Hill</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1017</p></td>
-<td><p>Raptor Ridge</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>1018</p></td>
-<td><p>Black Channel Marsh</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1019</p></td>
-<td><p>The Green Belt</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>1020</p></td>
-<td><p>Mosshide Fen</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1021</p></td>
-<td><p>Thelgen Rock</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>1022</p></td>
-<td><p>Bluegill Marsh</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1023</p></td>
-<td><p>Saltspray Glen</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>1024</p></td>
-<td><p>Sundown Marsh</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1025</p></td>
-<td><p>The Green Belt</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>1036</p></td>
-<td><p>Angerfang Encampment</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1037</p></td>
-<td><p>Grim Batol</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>1038</p></td>
-<td><p>Dragonmaw Gates</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>1039</p></td>
-<td><p>The Lost Fleet</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>1056</p></td>
-<td><p>Darrow Hill</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="odd">
-<td><p>1057</p></td>
-<td><p>Thoradin's Wall</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>1076</p></td>
-<td><p>Webwinder Path</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>1097</p></td>
-<td><p>The Hushed Bank</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>1098</p></td>
-<td><p>Manor Mistmantle</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>1099</p></td>
-<td><p>Camp Mojache</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1100</p></td>
-<td><p>Grimtotem Compound</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1101</p></td>
-<td><p>The Writhing Deep</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1102</p></td>
-<td><p>Wildwind Lake</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1103</p></td>
-<td><p>Gordunni Outpost</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1104</p></td>
-<td><p>Mok'Gordun</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1105</p></td>
-<td><p>Feral Scar Vale</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1106</p></td>
-<td><p>Frayfeather Highlands</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1107</p></td>
-<td><p>Idlewind Lake</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1108</p></td>
-<td><p>The Forgotten Coast</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1109</p></td>
-<td><p>East Pillar</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1110</p></td>
-<td><p>West Pillar</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1111</p></td>
-<td><p>Dream Bough</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1112</p></td>
-<td><p>Jademir Lake</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1113</p></td>
-<td><p>Oneiros</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1114</p></td>
-<td><p>Ruins of Ravenwind</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1115</p></td>
-<td><p>Rage Scar Hold</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1116</p></td>
-<td><p>Feathermoon Stronghold</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1117</p></td>
-<td><p>Ruins of Solarsal</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1118</p></td>
-<td><p>Lower Wilds UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1119</p></td>
-<td><p>The Twin Colossals</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1120</p></td>
-<td><p>Sardor Isle</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1121</p></td>
-<td><p>Isle of Dread</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1136</p></td>
-<td><p>High Wilderness</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>1137</p></td>
-<td><p>Lower Wilds</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>1156</p></td>
-<td><p>Southern Barrens</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1157</p></td>
-<td><p>Southern Gold Road</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1176</p></td>
-<td><p>Zul'Farrak</p></td>
-<td><p>209</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1196</p></td>
-<td><p>Utgarde Pinnacle</p></td>
-<td><p>575</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1216</p></td>
-<td><p>Timbermaw Hold</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1217</p></td>
-<td><p>Vanndir Encampment</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1218</p></td>
-<td><p>TESTAzshara</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1219</p></td>
-<td><p>Legash Encampment</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1220</p></td>
-<td><p>Thalassian Base Camp</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1221</p></td>
-<td><p>Ruins of Eldarath</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1222</p></td>
-<td><p>Hetaera's Clutch</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1223</p></td>
-<td><p>Temple of Zin-Malor</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1224</p></td>
-<td><p>Bear's Head</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1225</p></td>
-<td><p>Ursolan</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1226</p></td>
-<td><p>Temple of Arkkoran</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1227</p></td>
-<td><p>Bay of Storms</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1228</p></td>
-<td><p>The Shattered Strand</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1229</p></td>
-<td><p>Tower of Eldara</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1230</p></td>
-<td><p>Jagged Reef</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1231</p></td>
-<td><p>Southridge Beach</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1232</p></td>
-<td><p>Ravencrest Monument</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1233</p></td>
-<td><p>Forlorn Ridge</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1234</p></td>
-<td><p>Lake Mennar</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1235</p></td>
-<td><p>Shadowsong Shrine</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1236</p></td>
-<td><p>Haldarr Encampment</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1237</p></td>
-<td><p>Valormok</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>1256</p></td>
-<td><p>The Ruined Reaches</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>1276</p></td>
-<td><p>The Talondeep Path</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>1277</p></td>
-<td><p>The Talondeep Path</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>1296</p></td>
-<td><p>Rocktusk Farm</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>1297</p></td>
-<td><p>Jaggedswine Farm</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>1316</p></td>
-<td><p>Razorfen Downs</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1336</p></td>
-<td><p>Lost Rigger Cove</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>1337</p></td>
-<td><p>Uldaman</p></td>
-<td><p>70</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1338</p></td>
-<td><p>Lordamere Lake</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>1339</p></td>
-<td><p>Lordamere Lake</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>1357</p></td>
-<td><p>Gallows' Corner</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>1377</p></td>
-<td><p>Silithus</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1397</p></td>
-<td><p>Emerald Forest</p></td>
-<td><p>169</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1417</p></td>
-<td><p>Sunken Temple</p></td>
-<td><p>109</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1437</p></td>
-<td><p>Dreadmaul Hold</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>1438</p></td>
-<td><p>Nethergarde Keep</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="even">
-<td><p>1439</p></td>
-<td><p>Dreadmaul Post</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>1440</p></td>
-<td><p>Serpent's Coil</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="even">
-<td><p>1441</p></td>
-<td><p>Altar of Storms</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>1442</p></td>
-<td><p>Firewatch Ridge</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>1443</p></td>
-<td><p>The Slag Pit</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="odd">
-<td><p>1444</p></td>
-<td><p>The Sea of Cinders</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>1445</p></td>
-<td><p>Blackrock Mountain</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="odd">
-<td><p>1446</p></td>
-<td><p>Thorium Point</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>1457</p></td>
-<td><p>Garrison Armory</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>1477</p></td>
-<td><p>The Temple of Atal'Hakkar</p></td>
-<td><p>109</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1497</p></td>
-<td><p>Undercity</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1517</p></td>
-<td><p>Uldaman</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>1518</p></td>
-<td><p>Not Used Deadmines</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>1519</p></td>
-<td><p>Stormwind City</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1537</p></td>
-<td><p>Ironforge</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1557</p></td>
-<td><p>Splithoof Hold</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>1577</p></td>
-<td><p>The Cape of Stranglethorn</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>1578</p></td>
-<td><p>Southern Savage Coast</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>1579</p></td>
-<td><p>Unused The Deadmines 002</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1580</p></td>
-<td><p>Unused Ironclad Cove 003</p></td>
-<td><p>0</p></td>
-<td><p>1579</p></td>
-</tr>
-<tr class="even">
-<td><p>1581</p></td>
-<td><p>The Deadmines</p></td>
-<td><p>36</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1582</p></td>
-<td><p>Ironclad Cove</p></td>
-<td><p>36</p></td>
-<td><p>1581</p></td>
-</tr>
-<tr class="even">
-<td><p>1583</p></td>
-<td><p>Blackrock Spire</p></td>
-<td><p>229</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1584</p></td>
-<td><p>Blackrock Depths</p></td>
-<td><p>230</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1597</p></td>
-<td><p>Raptor Grounds UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1598</p></td>
-<td><p>Grol'dom Farm UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1599</p></td>
-<td><p>Mor'shan Base Camp</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1600</p></td>
-<td><p>Honor's Stand UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1601</p></td>
-<td><p>Blackthorn Ridge UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1602</p></td>
-<td><p>Bramblescar UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1603</p></td>
-<td><p>Agama'gor UNUSED</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1617</p></td>
-<td><p>Valley of Heroes</p></td>
-<td><p>0</p></td>
-<td><p>1519</p></td>
-</tr>
-<tr class="even">
-<td><p>1637</p></td>
-<td><p>Orgrimmar</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1638</p></td>
-<td><p>Thunder Bluff</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1639</p></td>
-<td><p>Elder Rise</p></td>
-<td><p>1</p></td>
-<td><p>1638</p></td>
-</tr>
-<tr class="odd">
-<td><p>1640</p></td>
-<td><p>Spirit Rise</p></td>
-<td><p>1</p></td>
-<td><p>1638</p></td>
-</tr>
-<tr class="even">
-<td><p>1641</p></td>
-<td><p>Hunter Rise</p></td>
-<td><p>1</p></td>
-<td><p>1638</p></td>
-</tr>
-<tr class="odd">
-<td><p>1657</p></td>
-<td><p>Darnassus</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>1658</p></td>
-<td><p>Cenarion Enclave</p></td>
-<td><p>1</p></td>
-<td><p>1657</p></td>
-</tr>
-<tr class="odd">
-<td><p>1659</p></td>
-<td><p>Craftsmen's Terrace</p></td>
-<td><p>1</p></td>
-<td><p>1657</p></td>
-</tr>
-<tr class="even">
-<td><p>1660</p></td>
-<td><p>Warrior's Terrace</p></td>
-<td><p>1</p></td>
-<td><p>1657</p></td>
-</tr>
-<tr class="odd">
-<td><p>1661</p></td>
-<td><p>The Temple Gardens</p></td>
-<td><p>1</p></td>
-<td><p>1657</p></td>
-</tr>
-<tr class="even">
-<td><p>1662</p></td>
-<td><p>Tradesmen's Terrace</p></td>
-<td><p>1</p></td>
-<td><p>1657</p></td>
-</tr>
-<tr class="odd">
-<td><p>1677</p></td>
-<td><p>Gavin's Naze</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>1678</p></td>
-<td><p>Sofera's Naze</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>1679</p></td>
-<td><p>Corrahn's Dagger</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>1680</p></td>
-<td><p>The Headland</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>1681</p></td>
-<td><p>Misty Shore</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>1682</p></td>
-<td><p>Dandred's Fold</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>1683</p></td>
-<td><p>Growless Cave</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>1684</p></td>
-<td><p>Chillwind Point</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>1697</p></td>
-<td><p>Raptor Grounds</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1698</p></td>
-<td><p>Bramblescar</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1699</p></td>
-<td><p>Thorn Hill</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1700</p></td>
-<td><p>Agama'gor</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1701</p></td>
-<td><p>Blackthorn Ridge</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1702</p></td>
-<td><p>Honor's Stand</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1703</p></td>
-<td><p>The Mor'shan Rampart</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1704</p></td>
-<td><p>Grol'dom Farm</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1717</p></td>
-<td><p>Razorfen Kraul</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>1718</p></td>
-<td><p>The Great Lift</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>1737</p></td>
-<td><p>Mistvale Valley</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>1738</p></td>
-<td><p>Nek'mani Wellspring</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>1739</p></td>
-<td><p>Bloodsail Compound</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>1740</p></td>
-<td><p>Venture Co. Base Camp</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>1741</p></td>
-<td><p>Gurubashi Arena</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>1742</p></td>
-<td><p>Spirit Den</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>1757</p></td>
-<td><p>The Crimson Veil</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>1758</p></td>
-<td><p>The Riptide</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>1759</p></td>
-<td><p>The Damsel's Luck</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>1760</p></td>
-<td><p>Venture Co. Operations Center</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>1761</p></td>
-<td><p>Deadwood Village</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>1762</p></td>
-<td><p>Felpaw Village</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>1763</p></td>
-<td><p>Jaedenar</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>1764</p></td>
-<td><p>Bloodvenom River</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>1765</p></td>
-<td><p>Bloodvenom Falls</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>1766</p></td>
-<td><p>Shatter Scar Vale</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>1767</p></td>
-<td><p>Irontree Woods</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>1768</p></td>
-<td><p>Irontree Cavern</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>1769</p></td>
-<td><p>Timbermaw Hold</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>1770</p></td>
-<td><p>Shadow Hold</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>1771</p></td>
-<td><p>Shrine of the Deceiver</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>1777</p></td>
-<td><p>Itharius's Cave</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="odd">
-<td><p>1778</p></td>
-<td><p>Sorrowmurk</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>1779</p></td>
-<td><p>Draenil'dur Village</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="odd">
-<td><p>1780</p></td>
-<td><p>Splinterspear Junction</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>1797</p></td>
-<td><p>Stagalbog</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="odd">
-<td><p>1798</p></td>
-<td><p>The Shifting Mire</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>1817</p></td>
-<td><p>Stagalbog Cave</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="odd">
-<td><p>1837</p></td>
-<td><p>Witherbark Caverns</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>1857</p></td>
-<td><p>Thoradin's Wall</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="odd">
-<td><p>1858</p></td>
-<td><p>Boulder'gor</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>1877</p></td>
-<td><p>Valley of Fangs</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>1878</p></td>
-<td><p>The Dustbowl</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>1879</p></td>
-<td><p>Mirage Flats</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>1880</p></td>
-<td><p>Featherbeard's Hovel</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>1881</p></td>
-<td><p>Shindigger's Camp</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>1882</p></td>
-<td><p>Plaguemist Ravine</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>1883</p></td>
-<td><p>Valorwind Lake</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>1884</p></td>
-<td><p>Agol'watha</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>1885</p></td>
-<td><p>Hiri'watha</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>1886</p></td>
-<td><p>The Creeping Ruin</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>1887</p></td>
-<td><p>Bogen's Ledge</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>1897</p></td>
-<td><p>The Maker's Terrace</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>1898</p></td>
-<td><p>Dustwind Gulch</p></td>
-<td><p>0</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>1917</p></td>
-<td><p>Shaol'watha</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="even">
-<td><p>1937</p></td>
-<td><p>Noonshade Ruins</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>1938</p></td>
-<td><p>Broken Pillar</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>1939</p></td>
-<td><p>Abyssal Sands</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="odd">
-<td><p>1940</p></td>
-<td><p>Southbreak Shore</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>1941</p></td>
-<td><p>Caverns of Time</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1942</p></td>
-<td><p>The Marshlands</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="even">
-<td><p>1943</p></td>
-<td><p>Ironstone Plateau</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="odd">
-<td><p>1957</p></td>
-<td><p>Blackchar Cave</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>1958</p></td>
-<td><p>Tanner Camp</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="odd">
-<td><p>1959</p></td>
-<td><p>Dustfire Valley</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>1977</p></td>
-<td><p>Zul'Gurub</p></td>
-<td><p>309</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>1978</p></td>
-<td><p>Misty Reed Post</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>1997</p></td>
-<td><p>Bloodvenom Post</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>1998</p></td>
-<td><p>Talonbranch Glade</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>2017</p></td>
-<td><p>Stratholme</p></td>
-<td><p>329</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2037</p></td>
-<td><p>Quel'thalas</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2057</p></td>
-<td><p>Scholomance</p></td>
-<td><p>289</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2077</p></td>
-<td><p>Twilight Vale</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="even">
-<td><p>2078</p></td>
-<td><p>Twilight Shore</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>2079</p></td>
-<td><p>Alcaz Island</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>2097</p></td>
-<td><p>Darkcloud Pinnacle</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>2098</p></td>
-<td><p>Dawning Wood Catacombs</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>2099</p></td>
-<td><p>Stonewatch Keep</p></td>
-<td><p>0</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="odd">
-<td><p>2100</p></td>
-<td><p>Maraudon</p></td>
-<td><p>349</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2101</p></td>
-<td><p>Stoutlager Inn</p></td>
-<td><p>0</p></td>
-<td><p>38</p></td>
-</tr>
-<tr class="odd">
-<td><p>2102</p></td>
-<td><p>Thunderbrew Distillery</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>2103</p></td>
-<td><p>Menethil Keep</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>2104</p></td>
-<td><p>Deepwater Tavern</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="even">
-<td><p>2117</p></td>
-<td><p>Shadow Grave</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>2118</p></td>
-<td><p>Brill Town Hall</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>2119</p></td>
-<td><p>Gallows' End Tavern</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="odd">
-<td><p>2137</p></td>
-<td><p>The Pools of VisionUNUSED</p></td>
-<td><p>1</p></td>
-<td><p>215</p></td>
-</tr>
-<tr class="even">
-<td><p>2138</p></td>
-<td><p>Dreadmist Den</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>2157</p></td>
-<td><p>Bael'dun Keep</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>2158</p></td>
-<td><p>Emberstrife's Den</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>2159</p></td>
-<td><p>Onyxia's Lair</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2160</p></td>
-<td><p>Windshear Mine</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>2161</p></td>
-<td><p>Roland's Doom</p></td>
-<td><p>0</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="even">
-<td><p>2177</p></td>
-<td><p>Battle Ring</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>2197</p></td>
-<td><p>The Pools of Vision</p></td>
-<td><p>1</p></td>
-<td><p>1638</p></td>
-</tr>
-<tr class="even">
-<td><p>2198</p></td>
-<td><p>Shadowbreak Ravine</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2217</p></td>
-<td><p>Broken Spear Village</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>2237</p></td>
-<td><p>Whitereach Post</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>2238</p></td>
-<td><p>Gornia</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>2239</p></td>
-<td><p>Zane's Eye Crater</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>2240</p></td>
-<td><p>Mirage Raceway</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>2241</p></td>
-<td><p>Frostsaber Rock</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2242</p></td>
-<td><p>The Hidden Grove</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2243</p></td>
-<td><p>Timbermaw Post</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2244</p></td>
-<td><p>Winterfall Village</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2245</p></td>
-<td><p>Mazthoril</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2246</p></td>
-<td><p>Frostfire Hot Springs</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2247</p></td>
-<td><p>Ice Thistle Hills</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2248</p></td>
-<td><p>Dun Mandarr</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2249</p></td>
-<td><p>Frostwhisper Gorge</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2250</p></td>
-<td><p>Owl Wing Thicket</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2251</p></td>
-<td><p>Lake Kel'Theril</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2252</p></td>
-<td><p>The Ruins of Kel'Theril</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2253</p></td>
-<td><p>Starfall Village</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2254</p></td>
-<td><p>Ban'Thallow Barrow Den</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2255</p></td>
-<td><p>Everlook</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="odd">
-<td><p>2256</p></td>
-<td><p>Darkwhisper Gorge</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>2257</p></td>
-<td><p>Deeprun Tram</p></td>
-<td><p>369</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2258</p></td>
-<td><p>The Fungal Vale</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2259</p></td>
-<td><p>UNUSEDThe Marris Stead</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2260</p></td>
-<td><p>The Marris Stead</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2261</p></td>
-<td><p>The Undercroft</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2262</p></td>
-<td><p>Darrowshire</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2263</p></td>
-<td><p>Crown Guard Tower</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2264</p></td>
-<td><p>Corin's Crossing</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2265</p></td>
-<td><p>Scarlet Base Camp</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2266</p></td>
-<td><p>Tyr's Hand</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2267</p></td>
-<td><p>The Scarlet Basilica</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2268</p></td>
-<td><p>Light's Hope Chapel</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2269</p></td>
-<td><p>Browman Mill</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2270</p></td>
-<td><p>The Noxious Glade</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2271</p></td>
-<td><p>Eastwall Tower</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2272</p></td>
-<td><p>Northdale</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2273</p></td>
-<td><p>Zul'Mashar</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2274</p></td>
-<td><p>Mazra'Alor</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2275</p></td>
-<td><p>Northpass Tower</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2276</p></td>
-<td><p>Quel'Lithien Lodge</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2277</p></td>
-<td><p>Plaguewood</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2278</p></td>
-<td><p>Scourgehold</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2279</p></td>
-<td><p>Stratholme</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2280</p></td>
-<td><p>DO NOT USE</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2297</p></td>
-<td><p>Darrowmere Lake</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="odd">
-<td><p>2298</p></td>
-<td><p>Caer Darrow</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>2299</p></td>
-<td><p>Darrowmere Lake</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2300</p></td>
-<td><p>Caverns of Time</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>2301</p></td>
-<td><p>Thistlefur Village</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>2302</p></td>
-<td><p>The Quagmire</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>2303</p></td>
-<td><p>Windbreak Canyon</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>2317</p></td>
-<td><p>South Seas</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>2318</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>2319</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="even">
-<td><p>2320</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>2321</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>2322</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>141</p></td>
-</tr>
-<tr class="odd">
-<td><p>2323</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>2324</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2325</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>2326</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>148</p></td>
-</tr>
-<tr class="odd">
-<td><p>2337</p></td>
-<td><p>Razor Hill Barracks</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>2338</p></td>
-<td><p>South Seas</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="odd">
-<td><p>2339</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>2357</p></td>
-<td><p>Bloodtooth Camp</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>2358</p></td>
-<td><p>Forest Song</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>2359</p></td>
-<td><p>Greenpaw Village</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>2360</p></td>
-<td><p>Silverwing Outpost</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>2361</p></td>
-<td><p>Nighthaven</p></td>
-<td><p>1</p></td>
-<td><p>493</p></td>
-</tr>
-<tr class="odd">
-<td><p>2362</p></td>
-<td><p>Shrine of Remulos</p></td>
-<td><p>1</p></td>
-<td><p>493</p></td>
-</tr>
-<tr class="even">
-<td><p>2363</p></td>
-<td><p>Stormrage Barrow Dens</p></td>
-<td><p>1</p></td>
-<td><p>493</p></td>
-</tr>
-<tr class="odd">
-<td><p>2364</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="even">
-<td><p>2365</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>2366</p></td>
-<td><p>The Black Morass</p></td>
-<td><p>269</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2367</p></td>
-<td><p>Old Hillsbrad Foothills</p></td>
-<td><p>560</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2368</p></td>
-<td><p>Tarren Mill</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="even">
-<td><p>2369</p></td>
-<td><p>Southshore</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="odd">
-<td><p>2370</p></td>
-<td><p>Durnholde Keep</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="even">
-<td><p>2371</p></td>
-<td><p>Dun Garok</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="odd">
-<td><p>2372</p></td>
-<td><p>Hillsbrad Fields</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="even">
-<td><p>2373</p></td>
-<td><p>Eastern Strand</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="odd">
-<td><p>2374</p></td>
-<td><p>Nethander Stead</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="even">
-<td><p>2375</p></td>
-<td><p>Darrow Hill</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="odd">
-<td><p>2376</p></td>
-<td><p>Southpoint Tower</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="even">
-<td><p>2377</p></td>
-<td><p>Thoradin's Wall</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="odd">
-<td><p>2378</p></td>
-<td><p>Western Strand</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="even">
-<td><p>2379</p></td>
-<td><p>Azurelode Mine</p></td>
-<td><p>560</p></td>
-<td><p>2367</p></td>
-</tr>
-<tr class="odd">
-<td><p>2397</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>2398</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>130</p></td>
-</tr>
-<tr class="odd">
-<td><p>2399</p></td>
-<td><p>The Great Sea</p></td>
-<td><p>0</p></td>
-<td><p>85</p></td>
-</tr>
-<tr class="even">
-<td><p>2400</p></td>
-<td><p>The Forbidding Sea</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>2401</p></td>
-<td><p>The Forbidding Sea</p></td>
-<td><p>0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="even">
-<td><p>2402</p></td>
-<td><p>The Forbidding Sea</p></td>
-<td><p>0</p></td>
-<td><p>11</p></td>
-</tr>
-<tr class="odd">
-<td><p>2403</p></td>
-<td><p>The Forbidding Sea</p></td>
-<td><p>0</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="even">
-<td><p>2404</p></td>
-<td><p>Tethris Aran</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2405</p></td>
-<td><p>Ethel Rethor</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>2406</p></td>
-<td><p>Ranazjar Isle</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2407</p></td>
-<td><p>Kormek's Hut</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="even">
-<td><p>2408</p></td>
-<td><p>Shadowprey Village</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2417</p></td>
-<td><p>Blackrock Pass</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>2418</p></td>
-<td><p>Morgan's Vigil</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="odd">
-<td><p>2419</p></td>
-<td><p>Slither Rock</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>2420</p></td>
-<td><p>Terror Wing Path</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="odd">
-<td><p>2421</p></td>
-<td><p>Draco'dar</p></td>
-<td><p>0</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="even">
-<td><p>2437</p></td>
-<td><p>Ragefire Chasm</p></td>
-<td><p>389</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2457</p></td>
-<td><p>Nightsong Woods</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>2477</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>2478</p></td>
-<td><p>Morlos'Aran</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>2479</p></td>
-<td><p>Emerald Sanctuary</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>2480</p></td>
-<td><p>Jadefire Glen</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>2481</p></td>
-<td><p>Ruins of Constellas</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="odd">
-<td><p>2497</p></td>
-<td><p>Bitter Reaches</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>2517</p></td>
-<td><p>Rise of the Defiler</p></td>
-<td><p>0</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>2518</p></td>
-<td><p>Lariss Pavilion</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>2519</p></td>
-<td><p>Woodpaw Hills</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>2520</p></td>
-<td><p>Woodpaw Den</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>2521</p></td>
-<td><p>Verdantis River</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>2522</p></td>
-<td><p>Ruins of Isildien</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="even">
-<td><p>2537</p></td>
-<td><p>Grimtotem Post</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>2538</p></td>
-<td><p>Camp Aparaje</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>2539</p></td>
-<td><p>Malaka'jin</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>2540</p></td>
-<td><p>Boulderslide Ravine</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>2541</p></td>
-<td><p>Sishir Canyon</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="odd">
-<td><p>2557</p></td>
-<td><p>Dire Maul</p></td>
-<td><p>429</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2558</p></td>
-<td><p>Deadwind Ravine</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="odd">
-<td><p>2559</p></td>
-<td><p>Diamondhead River</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="even">
-<td><p>2560</p></td>
-<td><p>Ariden's Camp</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="odd">
-<td><p>2561</p></td>
-<td><p>The Vice</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="even">
-<td><p>2562</p></td>
-<td><p>Karazhan</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="odd">
-<td><p>2563</p></td>
-<td><p>Morgan's Plot</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="even">
-<td><p>2577</p></td>
-<td><p>Dire Maul</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>2597</p></td>
-<td><p>Alterac Valley</p></td>
-<td><p>30</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2617</p></td>
-<td><p>Scrabblescrew's Camp</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2618</p></td>
-<td><p>Jadefire Run</p></td>
-<td><p>1</p></td>
-<td><p>361</p></td>
-</tr>
-<tr class="even">
-<td><p>2619</p></td>
-<td><p>Thondroril River</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2620</p></td>
-<td><p>Thondroril River</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>2621</p></td>
-<td><p>Lake Mereldar</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2622</p></td>
-<td><p>Pestilent Scar</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2623</p></td>
-<td><p>The Infectis Scar</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2624</p></td>
-<td><p>Blackwood Lake</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2625</p></td>
-<td><p>Eastwall Gate</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2626</p></td>
-<td><p>Terrorweb Tunnel</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>2627</p></td>
-<td><p>Terrordale</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>2637</p></td>
-<td><p>Kargathia Keep</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>2657</p></td>
-<td><p>Valley of Bones</p></td>
-<td><p>1</p></td>
-<td><p>405</p></td>
-</tr>
-<tr class="odd">
-<td><p>2677</p></td>
-<td><p>Blackwing Lair</p></td>
-<td><p>469</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2697</p></td>
-<td><p>Deadman's Crossing</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="odd">
-<td><p>2717</p></td>
-<td><p>Molten Core</p></td>
-<td><p>409</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2737</p></td>
-<td><p>The Scarab Wall</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>2738</p></td>
-<td><p>Southwind Village</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>2739</p></td>
-<td><p>Twilight Base Camp</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>2740</p></td>
-<td><p>The Crystal Vale</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>2741</p></td>
-<td><p>The Scarab Dais</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>2742</p></td>
-<td><p>Hive'Ashi</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>2743</p></td>
-<td><p>Hive'Zora</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>2744</p></td>
-<td><p>Hive'Regal</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>2757</p></td>
-<td><p>Shrine of the Fallen Warrior</p></td>
-<td><p>1</p></td>
-<td><p>17</p></td>
-</tr>
-<tr class="odd">
-<td><p>2777</p></td>
-<td><p>UNUSED Alterac Valley</p></td>
-<td><p>0</p></td>
-<td><p>267</p></td>
-</tr>
-<tr class="even">
-<td><p>2797</p></td>
-<td><p>Blackfathom Deeps</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>2817</p></td>
-<td><p>Crystalsong Forest</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2837</p></td>
-<td><p>The Master's Cellar</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="odd">
-<td><p>2838</p></td>
-<td><p>Stonewrought Pass</p></td>
-<td><p>0</p></td>
-<td><p>51</p></td>
-</tr>
-<tr class="even">
-<td><p>2839</p></td>
-<td><p>Alterac Valley</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="odd">
-<td><p>2857</p></td>
-<td><p>The Rumble Cage</p></td>
-<td><p>1</p></td>
-<td><p>440</p></td>
-</tr>
-<tr class="even">
-<td><p>2877</p></td>
-<td><p>Chunk Test</p></td>
-<td><p>451</p></td>
-<td><p>22</p></td>
-</tr>
-<tr class="odd">
-<td><p>2897</p></td>
-<td><p>Zoram'gar Outpost</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="even">
-<td><p>2917</p></td>
-<td><p>Hall of Legends</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>2918</p></td>
-<td><p>Champions' Hall</p></td>
-<td><p>449</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>2937</p></td>
-<td><p>Grosh'gok Compound</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="odd">
-<td><p>2938</p></td>
-<td><p>Sleeping Gorge</p></td>
-<td><p>0</p></td>
-<td><p>41</p></td>
-</tr>
-<tr class="even">
-<td><p>2957</p></td>
-<td><p>Irondeep Mine</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>2958</p></td>
-<td><p>Stonehearth Outpost</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>2959</p></td>
-<td><p>Dun Baldar</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>2960</p></td>
-<td><p>Icewing Pass</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>2961</p></td>
-<td><p>Frostwolf Village</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>2962</p></td>
-<td><p>Tower Point</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>2963</p></td>
-<td><p>Coldtooth Mine</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>2964</p></td>
-<td><p>Winterax Hold</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>2977</p></td>
-<td><p>Iceblood Garrison</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>2978</p></td>
-<td><p>Frostwolf Keep</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>2979</p></td>
-<td><p>Tor'kren Farm</p></td>
-<td><p>1</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="odd">
-<td><p>3017</p></td>
-<td><p>Frost Dagger Pass</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3037</p></td>
-<td><p>Ironstone Camp</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>3038</p></td>
-<td><p>Weazel's Crater</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="even">
-<td><p>3039</p></td>
-<td><p>Tahonda Ruins</p></td>
-<td><p>1</p></td>
-<td><p>400</p></td>
-</tr>
-<tr class="odd">
-<td><p>3057</p></td>
-<td><p>Field of Strife</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3058</p></td>
-<td><p>Icewing Cavern</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3077</p></td>
-<td><p>Valor's Rest</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>3097</p></td>
-<td><p>The Swarming Pillar</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>3098</p></td>
-<td><p>Twilight Post</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>3099</p></td>
-<td><p>Twilight Outpost</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>3100</p></td>
-<td><p>Ravaged Twilight Camp</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>3117</p></td>
-<td><p>Shalzaru's Lair</p></td>
-<td><p>1</p></td>
-<td><p>357</p></td>
-</tr>
-<tr class="odd">
-<td><p>3137</p></td>
-<td><p>Talrendis Point</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>3138</p></td>
-<td><p>Rethress Sanctum</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>3139</p></td>
-<td><p>Moon Horror Den</p></td>
-<td><p>1</p></td>
-<td><p>618</p></td>
-</tr>
-<tr class="even">
-<td><p>3140</p></td>
-<td><p>Scalebeard's Cave</p></td>
-<td><p>1</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>3157</p></td>
-<td><p>Boulderslide Cavern</p></td>
-<td><p>1</p></td>
-<td><p>406</p></td>
-</tr>
-<tr class="even">
-<td><p>3177</p></td>
-<td><p>Warsong Labor Camp</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>3197</p></td>
-<td><p>Chillwind Camp</p></td>
-<td><p>0</p></td>
-<td><p>28</p></td>
-</tr>
-<tr class="even">
-<td><p>3217</p></td>
-<td><p>The Maul</p></td>
-<td><p>429</p></td>
-<td><p>2557</p></td>
-</tr>
-<tr class="odd">
-<td><p>3237</p></td>
-<td><p>The Maul UNUSED</p></td>
-<td><p>429</p></td>
-<td><p>2557</p></td>
-</tr>
-<tr class="even">
-<td><p>3257</p></td>
-<td><p>Bones of Grakkarond</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>3277</p></td>
-<td><p>Warsong Gulch</p></td>
-<td><p>489</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3297</p></td>
-<td><p>Frostwolf Graveyard</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3298</p></td>
-<td><p>Frostwolf Pass</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3299</p></td>
-<td><p>Dun Baldar Pass</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3300</p></td>
-<td><p>Iceblood Graveyard</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3301</p></td>
-<td><p>Snowfall Graveyard</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3302</p></td>
-<td><p>Stonehearth Graveyard</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3303</p></td>
-<td><p>Stormpike Graveyard</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3304</p></td>
-<td><p>Icewing Bunker</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3305</p></td>
-<td><p>Stonehearth Bunker</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3306</p></td>
-<td><p>Wildpaw Ridge</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3317</p></td>
-<td><p>Revantusk Village</p></td>
-<td><p>0</p></td>
-<td><p>47</p></td>
-</tr>
-<tr class="odd">
-<td><p>3318</p></td>
-<td><p>Rock of Durotan</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3319</p></td>
-<td><p>Silverwing Grove</p></td>
-<td><p>1</p></td>
-<td><p>331</p></td>
-</tr>
-<tr class="odd">
-<td><p>3320</p></td>
-<td><p>Warsong Lumber Mill</p></td>
-<td><p>489</p></td>
-<td><p>3277</p></td>
-</tr>
-<tr class="even">
-<td><p>3321</p></td>
-<td><p>Silverwing Hold</p></td>
-<td><p>489</p></td>
-<td><p>3277</p></td>
-</tr>
-<tr class="odd">
-<td><p>3337</p></td>
-<td><p>Wildpaw Cavern</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>3338</p></td>
-<td><p>The Veiled Cleft</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>3357</p></td>
-<td><p>Yojamba Isle</p></td>
-<td><p>0</p></td>
-<td><p>33</p></td>
-</tr>
-<tr class="even">
-<td><p>3358</p></td>
-<td><p>Arathi Basin</p></td>
-<td><p>529</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3377</p></td>
-<td><p>The Coil</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="even">
-<td><p>3378</p></td>
-<td><p>Altar of Hir'eek</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="odd">
-<td><p>3379</p></td>
-<td><p>Shadra'zaar</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="even">
-<td><p>3380</p></td>
-<td><p>Hakkari Grounds</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="odd">
-<td><p>3381</p></td>
-<td><p>Naze of Shirvallah</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="even">
-<td><p>3382</p></td>
-<td><p>Temple of Bethekk</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="odd">
-<td><p>3383</p></td>
-<td><p>The Bloodfire Pit</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="even">
-<td><p>3384</p></td>
-<td><p>Altar of the Blood God</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="odd">
-<td><p>3397</p></td>
-<td><p>Zanza's Rise</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="even">
-<td><p>3398</p></td>
-<td><p>Edge of Madness</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="odd">
-<td><p>3417</p></td>
-<td><p>Trollbane Hall</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="even">
-<td><p>3418</p></td>
-<td><p>Defiler's Den</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="odd">
-<td><p>3419</p></td>
-<td><p>Pagle's Pointe</p></td>
-<td><p>309</p></td>
-<td><p>1977</p></td>
-</tr>
-<tr class="even">
-<td><p>3420</p></td>
-<td><p>Farm</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="odd">
-<td><p>3421</p></td>
-<td><p>Blacksmith</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="even">
-<td><p>3422</p></td>
-<td><p>Lumber Mill</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="odd">
-<td><p>3423</p></td>
-<td><p>Gold Mine</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="even">
-<td><p>3424</p></td>
-<td><p>Stables</p></td>
-<td><p>529</p></td>
-<td><p>3358</p></td>
-</tr>
-<tr class="odd">
-<td><p>3425</p></td>
-<td><p>Cenarion Hold</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>3426</p></td>
-<td><p>Staghelm Point</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>3427</p></td>
-<td><p>Bronzebeard Encampment</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>3428</p></td>
-<td><p>Ahn'Qiraj</p></td>
-<td><p>531</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3429</p></td>
-<td><p>Ruins of Ahn'Qiraj</p></td>
-<td><p>509</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3430</p></td>
-<td><p>Eversong Woods</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3431</p></td>
-<td><p>Sunstrider Isle</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3432</p></td>
-<td><p>Shrine of Dath'Remar</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3433</p></td>
-<td><p>Ghostlands</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3434</p></td>
-<td><p>Scarab Terrace</p></td>
-<td><p>531</p></td>
-<td><p>3428</p></td>
-</tr>
-<tr class="odd">
-<td><p>3435</p></td>
-<td><p>General's Terrace</p></td>
-<td><p>531</p></td>
-<td><p>3428</p></td>
-</tr>
-<tr class="even">
-<td><p>3436</p></td>
-<td><p>The Reservoir</p></td>
-<td><p>531</p></td>
-<td><p>3428</p></td>
-</tr>
-<tr class="odd">
-<td><p>3437</p></td>
-<td><p>The Hatchery</p></td>
-<td><p>531</p></td>
-<td><p>3428</p></td>
-</tr>
-<tr class="even">
-<td><p>3438</p></td>
-<td><p>The Comb</p></td>
-<td><p>531</p></td>
-<td><p>3428</p></td>
-</tr>
-<tr class="odd">
-<td><p>3439</p></td>
-<td><p>Watchers' Terrace</p></td>
-<td><p>531</p></td>
-<td><p>3428</p></td>
-</tr>
-<tr class="even">
-<td><p>3440</p></td>
-<td><p>Scarab Terrace</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="odd">
-<td><p>3441</p></td>
-<td><p>General's Terrace</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="even">
-<td><p>3442</p></td>
-<td><p>The Reservoir</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="odd">
-<td><p>3443</p></td>
-<td><p>The Hatchery</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="even">
-<td><p>3444</p></td>
-<td><p>The Comb</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="odd">
-<td><p>3445</p></td>
-<td><p>Watchers' Terrace</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="even">
-<td><p>3446</p></td>
-<td><p>Twilight's Run</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>3447</p></td>
-<td><p>Ortell's Hideout</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="even">
-<td><p>3448</p></td>
-<td><p>Scarab Terrace</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="odd">
-<td><p>3449</p></td>
-<td><p>General's Terrace</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="even">
-<td><p>3450</p></td>
-<td><p>The Reservoir</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="odd">
-<td><p>3451</p></td>
-<td><p>The Hatchery</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="even">
-<td><p>3452</p></td>
-<td><p>The Comb</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="odd">
-<td><p>3453</p></td>
-<td><p>Watchers' Terrace</p></td>
-<td><p>509</p></td>
-<td><p>3429</p></td>
-</tr>
-<tr class="even">
-<td><p>3454</p></td>
-<td><p>Ruins of Ahn'Qiraj</p></td>
-<td><p>1</p></td>
-<td><p>1377</p></td>
-</tr>
-<tr class="odd">
-<td><p>3455</p></td>
-<td><p>The North Sea</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3456</p></td>
-<td><p>Naxxramas</p></td>
-<td><p>533</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3457</p></td>
-<td><p>Karazhan</p></td>
-<td><p>532</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3459</p></td>
-<td><p>City</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3460</p></td>
-<td><p>Golden Strand</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3461</p></td>
-<td><p>Sunsail Anchorage</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3462</p></td>
-<td><p>Fairbreeze Village</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3463</p></td>
-<td><p>Magisters Gate</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3464</p></td>
-<td><p>Farstrider Retreat</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3465</p></td>
-<td><p>North Sanctum</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3466</p></td>
-<td><p>West Sanctum</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3467</p></td>
-<td><p>East Sanctum</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3468</p></td>
-<td><p>Saltheril's Haven</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3469</p></td>
-<td><p>Thuron's Livery</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3470</p></td>
-<td><p>Stillwhisper Pond</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3471</p></td>
-<td><p>The Living Wood</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3472</p></td>
-<td><p>Azurebreeze Coast</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3473</p></td>
-<td><p>Lake Elrendar</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3474</p></td>
-<td><p>The Scorched Grove</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3475</p></td>
-<td><p>Zeb'Watha</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3476</p></td>
-<td><p>Tor'Watha</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3477</p></td>
-<td><p>Azjol-Nerub</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3478</p></td>
-<td><p>Gates of Ahn'Qiraj</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3479</p></td>
-<td><p>The Veiled Sea</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3480</p></td>
-<td><p>Duskwither Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3481</p></td>
-<td><p>Duskwither Spire</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3482</p></td>
-<td><p>The Dead Scar</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3483</p></td>
-<td><p>Hellfire Peninsula</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3484</p></td>
-<td><p>The Sunspire</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3485</p></td>
-<td><p>Falthrien Academy</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3486</p></td>
-<td><p>Ravenholdt Manor</p></td>
-<td><p>0</p></td>
-<td><p>36</p></td>
-</tr>
-<tr class="even">
-<td><p>3487</p></td>
-<td><p>Silvermoon City</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3488</p></td>
-<td><p>Tranquillien</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3489</p></td>
-<td><p>Suncrown Village</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3490</p></td>
-<td><p>Goldenmist Village</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3491</p></td>
-<td><p>Windrunner Village</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3492</p></td>
-<td><p>Windrunner Spire</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3493</p></td>
-<td><p>Sanctum of the Sun</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3494</p></td>
-<td><p>Sanctum of the Moon</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3495</p></td>
-<td><p>Dawnstar Spire</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3496</p></td>
-<td><p>Farstrider Enclave</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3497</p></td>
-<td><p>An'daroth</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3498</p></td>
-<td><p>An'telas</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3499</p></td>
-<td><p>An'owyn</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3500</p></td>
-<td><p>Deatholme</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3501</p></td>
-<td><p>Bleeding Ziggurat</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3502</p></td>
-<td><p>Howling Ziggurat</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3503</p></td>
-<td><p>Shalandis Isle</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3504</p></td>
-<td><p>Toryl Estate</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3505</p></td>
-<td><p>Underlight Mines</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3506</p></td>
-<td><p>Andilien Estate</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3507</p></td>
-<td><p>Hatchet Hills</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3508</p></td>
-<td><p>Amani Pass</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3509</p></td>
-<td><p>Sungraze Peak</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3510</p></td>
-<td><p>Amani Catacombs</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3511</p></td>
-<td><p>Tower of the Damned</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3512</p></td>
-<td><p>Zeb'Sora</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3513</p></td>
-<td><p>Lake Elrendar</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3514</p></td>
-<td><p>The Dead Scar</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3515</p></td>
-<td><p>Elrendar River</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3516</p></td>
-<td><p>Zeb'Tela</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3517</p></td>
-<td><p>Zeb'Nowa</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3518</p></td>
-<td><p>Nagrand</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3519</p></td>
-<td><p>Terokkar Forest</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3520</p></td>
-<td><p>Shadowmoon Valley</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3521</p></td>
-<td><p>Zangarmarsh</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3522</p></td>
-<td><p>Blade's Edge Mountains</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3523</p></td>
-<td><p>Netherstorm</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3524</p></td>
-<td><p>Azuremyst Isle</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3525</p></td>
-<td><p>Bloodmyst Isle</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3526</p></td>
-<td><p>Ammen Vale</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3527</p></td>
-<td><p>Crash Site</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3528</p></td>
-<td><p>Silverline Lake</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3529</p></td>
-<td><p>Nestlewood Thicket</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3530</p></td>
-<td><p>Shadow Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3531</p></td>
-<td><p>Skulking Row</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3532</p></td>
-<td><p>Dawning Lane</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3533</p></td>
-<td><p>Ruins of Silvermoon</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3534</p></td>
-<td><p>Feth's Way</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3535</p></td>
-<td><p>Hellfire Citadel</p></td>
-<td><p>540</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3536</p></td>
-<td><p>Thrallmar</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3537</p></td>
-<td><p>Borean Tundra</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3538</p></td>
-<td><p>Honor Hold</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3539</p></td>
-<td><p>The Stair of Destiny</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3540</p></td>
-<td><p>Twisting Nether</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3541</p></td>
-<td><p>Forge Camp: Mageddon</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3542</p></td>
-<td><p>The Path of Glory</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3543</p></td>
-<td><p>The Great Fissure</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3544</p></td>
-<td><p>Plain of Shards</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3545</p></td>
-<td><p>Hellfire Citadel</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3546</p></td>
-<td><p>Expedition Armory</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3547</p></td>
-<td><p>Throne of Kil'jaeden</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3548</p></td>
-<td><p>Forge Camp: Rage</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3549</p></td>
-<td><p>Invasion Point: Annihilator</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3550</p></td>
-<td><p>Borune Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3551</p></td>
-<td><p>Ruins of Sha'naar</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3552</p></td>
-<td><p>Temple of Telhamat</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3553</p></td>
-<td><p>Pools of Aggonar</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3554</p></td>
-<td><p>Falcon Watch</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3555</p></td>
-<td><p>Mag'har Post</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3556</p></td>
-<td><p>Den of Haal'esh</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3557</p></td>
-<td><p>The Exodar</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3558</p></td>
-<td><p>Elrendar Falls</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3559</p></td>
-<td><p>Nestlewood Hills</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3560</p></td>
-<td><p>Ammen Fields</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3561</p></td>
-<td><p>The Sacred Grove</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3562</p></td>
-<td><p>Hellfire Ramparts</p></td>
-<td><p>543</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3563</p></td>
-<td><p>Hellfire Citadel</p></td>
-<td><p>543</p></td>
-<td><p>3562</p></td>
-</tr>
-<tr class="odd">
-<td><p>3564</p></td>
-<td><p>Emberglade</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3565</p></td>
-<td><p>Cenarion Refuge</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3566</p></td>
-<td><p>Moonwing Den</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3567</p></td>
-<td><p>Pod Cluster</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3568</p></td>
-<td><p>Pod Wreckage</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3569</p></td>
-<td><p>Tides' Hollow</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3570</p></td>
-<td><p>Wrathscale Point</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3571</p></td>
-<td><p>Bristlelimb Village</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3572</p></td>
-<td><p>Stillpine Hold</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3573</p></td>
-<td><p>Odesyus' Landing</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3574</p></td>
-<td><p>Valaar's Berth</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3575</p></td>
-<td><p>Silting Shore</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3576</p></td>
-<td><p>Azure Watch</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3577</p></td>
-<td><p>Geezle's Camp</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3578</p></td>
-<td><p>Menagerie Wreckage</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3579</p></td>
-<td><p>Traitor's Cove</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3580</p></td>
-<td><p>Wildwind Peak</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3581</p></td>
-<td><p>Wildwind Path</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3582</p></td>
-<td><p>Zeth'Gor</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3583</p></td>
-<td><p>Beryl Coast</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3584</p></td>
-<td><p>Blood Watch</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3585</p></td>
-<td><p>Bladewood</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3586</p></td>
-<td><p>The Vector Coil</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3587</p></td>
-<td><p>The Warp Piston</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3588</p></td>
-<td><p>The Cryo-Core</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3589</p></td>
-<td><p>The Crimson Reach</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3590</p></td>
-<td><p>Wrathscale Lair</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3591</p></td>
-<td><p>Ruins of Loreth'Aran</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3592</p></td>
-<td><p>Nazzivian</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3593</p></td>
-<td><p>Axxarien</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3594</p></td>
-<td><p>Blacksilt Shore</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3595</p></td>
-<td><p>The Foul Pool</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3596</p></td>
-<td><p>The Hidden Reef</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3597</p></td>
-<td><p>Amberweb Pass</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3598</p></td>
-<td><p>Wyrmscar Island</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3599</p></td>
-<td><p>Talon Stand</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3600</p></td>
-<td><p>Bristlelimb Enclave</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3601</p></td>
-<td><p>Ragefeather Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3602</p></td>
-<td><p>Kessel's Crossing</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3603</p></td>
-<td><p>Tel'athion's Camp</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3604</p></td>
-<td><p>The Bloodcursed Reef</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3605</p></td>
-<td><p>Hyjal Past</p></td>
-<td><p>560</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3606</p></td>
-<td><p>Hyjal Summit</p></td>
-<td><p>534</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3607</p></td>
-<td><p>Serpentshrine Cavern</p></td>
-<td><p>548</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3608</p></td>
-<td><p>Vindicator's Rest</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3609</p></td>
-<td><p>Unused3</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3610</p></td>
-<td><p>Burning Blade Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3611</p></td>
-<td><p>Clan Watch</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3612</p></td>
-<td><p>Bloodcurse Isle</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3613</p></td>
-<td><p>Garadar</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3614</p></td>
-<td><p>Skysong Lake</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3615</p></td>
-<td><p>Throne of the Elements</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3616</p></td>
-<td><p>Laughing Skull Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3617</p></td>
-<td><p>Warmaul Hill</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3618</p></td>
-<td><p>Gruul's Lair</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3619</p></td>
-<td><p>Auren Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3620</p></td>
-<td><p>Auren Falls</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3621</p></td>
-<td><p>Lake Sunspring</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3622</p></td>
-<td><p>Sunspring Post</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3623</p></td>
-<td><p>Aeris Landing</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3624</p></td>
-<td><p>Forge Camp: Fear</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3625</p></td>
-<td><p>Forge Camp: Hate</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3626</p></td>
-<td><p>Telaar</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3627</p></td>
-<td><p>Northwind Cleft</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3628</p></td>
-<td><p>Halaa</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3629</p></td>
-<td><p>Southwind Cleft</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3630</p></td>
-<td><p>Oshu'gun</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3631</p></td>
-<td><p>Spirit Fields</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3632</p></td>
-<td><p>Shamanar</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3633</p></td>
-<td><p>Ancestral Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3634</p></td>
-<td><p>Windyreed Village</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3635</p></td>
-<td><p>Unused2</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3636</p></td>
-<td><p>Elemental Plateau</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3637</p></td>
-<td><p>Kil'sorrow Fortress</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3638</p></td>
-<td><p>The Ring of Trials</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3639</p></td>
-<td><p>Silvermyst Isle</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3640</p></td>
-<td><p>Daggerfen Village</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3641</p></td>
-<td><p>Umbrafen Village</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3642</p></td>
-<td><p>Feralfen Village</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3643</p></td>
-<td><p>Bloodscale Enclave</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3644</p></td>
-<td><p>Telredor</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3645</p></td>
-<td><p>Zabra'jin</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3646</p></td>
-<td><p>Quagg Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3647</p></td>
-<td><p>The Spawning Glen</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3648</p></td>
-<td><p>The Dead Mire</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3649</p></td>
-<td><p>Sporeggar</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3650</p></td>
-<td><p>Ango'rosh Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3651</p></td>
-<td><p>Ango'rosh Stronghold</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3652</p></td>
-<td><p>Funggor Cavern</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3653</p></td>
-<td><p>Serpent Lake</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3654</p></td>
-<td><p>The Drain</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3655</p></td>
-<td><p>Umbrafen Lake</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3656</p></td>
-<td><p>Marshlight Lake</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3657</p></td>
-<td><p>Portal Clearing</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3658</p></td>
-<td><p>Sporewind Lake</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3659</p></td>
-<td><p>The Lagoon</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3660</p></td>
-<td><p>Blades' Run</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3661</p></td>
-<td><p>Blade Tooth Canyon</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3662</p></td>
-<td><p>Commons Hall</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3663</p></td>
-<td><p>Derelict Manor</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3664</p></td>
-<td><p>Huntress of the Sun</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3665</p></td>
-<td><p>Falconwing Square</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3666</p></td>
-<td><p>Halaani Basin</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3667</p></td>
-<td><p>Hewn Bog</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3668</p></td>
-<td><p>Boha'mu Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3669</p></td>
-<td><p>The Stadium</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3670</p></td>
-<td><p>The Overlook</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3671</p></td>
-<td><p>Broken Hill</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3672</p></td>
-<td><p>Mag'hari Procession</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3673</p></td>
-<td><p>Nesingwary Safari</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3674</p></td>
-<td><p>Cenarion Thicket</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3675</p></td>
-<td><p>Tuurem</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3676</p></td>
-<td><p>Veil Shienor</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3677</p></td>
-<td><p>Veil Skith</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3678</p></td>
-<td><p>Veil Shalas</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3679</p></td>
-<td><p>Skettis</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3680</p></td>
-<td><p>Blackwind Valley</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3681</p></td>
-<td><p>Firewing Point</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3682</p></td>
-<td><p>Grangol'var Village</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3683</p></td>
-<td><p>Stonebreaker Hold</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3684</p></td>
-<td><p>Allerian Stronghold</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3685</p></td>
-<td><p>Bonechewer Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3686</p></td>
-<td><p>Veil Lithic</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3687</p></td>
-<td><p>Olembas</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3688</p></td>
-<td><p>Auchindoun</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3689</p></td>
-<td><p>Veil Reskk</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3690</p></td>
-<td><p>Blackwind Lake</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3691</p></td>
-<td><p>Lake Ere'Noru</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3692</p></td>
-<td><p>Lake Jorune</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3693</p></td>
-<td><p>Skethyl Mountains</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3694</p></td>
-<td><p>Misty Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3695</p></td>
-<td><p>The Broken Hills</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3696</p></td>
-<td><p>The Barrier Hills</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3697</p></td>
-<td><p>The Bone Wastes</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3698</p></td>
-<td><p>Nagrand Arena</p></td>
-<td><p>559</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3699</p></td>
-<td><p>Laughing Skull Courtyard</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3700</p></td>
-<td><p>The Ring of Blood</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3701</p></td>
-<td><p>Arena Floor</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3702</p></td>
-<td><p>Blade's Edge Arena</p></td>
-<td><p>562</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3703</p></td>
-<td><p>Shattrath City</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3704</p></td>
-<td><p>The Shepherd's Gate</p></td>
-<td><p>530</p></td>
-<td><p>3487</p></td>
-</tr>
-<tr class="even">
-<td><p>3705</p></td>
-<td><p>Telaari Basin</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3706</p></td>
-<td><p>The Dark Portal</p></td>
-<td><p>269</p></td>
-<td><p>2366</p></td>
-</tr>
-<tr class="even">
-<td><p>3707</p></td>
-<td><p>Alliance Base</p></td>
-<td><p>534</p></td>
-<td><p>3606</p></td>
-</tr>
-<tr class="odd">
-<td><p>3708</p></td>
-<td><p>Horde Encampment</p></td>
-<td><p>534</p></td>
-<td><p>3606</p></td>
-</tr>
-<tr class="even">
-<td><p>3709</p></td>
-<td><p>Night Elf Village</p></td>
-<td><p>534</p></td>
-<td><p>3606</p></td>
-</tr>
-<tr class="odd">
-<td><p>3710</p></td>
-<td><p>Nordrassil</p></td>
-<td><p>534</p></td>
-<td><p>3606</p></td>
-</tr>
-<tr class="even">
-<td><p>3711</p></td>
-<td><p>Sholazar Basin</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3712</p></td>
-<td><p>Area 52</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3713</p></td>
-<td><p>The Blood Furnace</p></td>
-<td><p>542</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3714</p></td>
-<td><p>The Shattered Halls</p></td>
-<td><p>540</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3715</p></td>
-<td><p>The Steamvault</p></td>
-<td><p>545</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3716</p></td>
-<td><p>The Underbog</p></td>
-<td><p>546</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3717</p></td>
-<td><p>The Slave Pens</p></td>
-<td><p>547</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3718</p></td>
-<td><p>Swamprat Post</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3719</p></td>
-<td><p>Bleeding Hollow Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3720</p></td>
-<td><p>Twin Spire Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3721</p></td>
-<td><p>The Crumbling Waste</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3722</p></td>
-<td><p>Manaforge Ara</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3723</p></td>
-<td><p>Arklon Ruins</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3724</p></td>
-<td><p>Cosmowrench</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3725</p></td>
-<td><p>Ruins of Enkaat</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3726</p></td>
-<td><p>Manaforge B'naar</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3727</p></td>
-<td><p>The Scrap Field</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3728</p></td>
-<td><p>The Vortex Fields</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3729</p></td>
-<td><p>The Heap</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3730</p></td>
-<td><p>Manaforge Coruu</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3731</p></td>
-<td><p>The Tempest Rift</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3732</p></td>
-<td><p>Kirin'Var Village</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3733</p></td>
-<td><p>The Violet Tower</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3734</p></td>
-<td><p>Manaforge Duro</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3735</p></td>
-<td><p>Voidwind Plateau</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3736</p></td>
-<td><p>Manaforge Ultris</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3737</p></td>
-<td><p>Celestial Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3738</p></td>
-<td><p>The Stormspire</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3739</p></td>
-<td><p>Forge Base: Oblivion</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3740</p></td>
-<td><p>Forge Base: Gehenna</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3741</p></td>
-<td><p>Ruins of Farahlon</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3742</p></td>
-<td><p>Socrethar's Seat</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3743</p></td>
-<td><p>Legion Hold</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3744</p></td>
-<td><p>Shadowmoon Village</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3745</p></td>
-<td><p>Wildhammer Stronghold</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3746</p></td>
-<td><p>The Hand of Gul'dan</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3747</p></td>
-<td><p>The Fel Pits</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3748</p></td>
-<td><p>The Deathforge</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3749</p></td>
-<td><p>Coilskar Cistern</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3750</p></td>
-<td><p>Coilskar Point</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3751</p></td>
-<td><p>Sunfire Point</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3752</p></td>
-<td><p>Illidari Point</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3753</p></td>
-<td><p>Ruins of Baa'ri</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3754</p></td>
-<td><p>Altar of Sha'tar</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3755</p></td>
-<td><p>The Stair of Doom</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3756</p></td>
-<td><p>Ruins of Karabor</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3757</p></td>
-<td><p>Ata'mal Terrace</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3758</p></td>
-<td><p>Netherwing Fields</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3759</p></td>
-<td><p>Netherwing Ledge</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3760</p></td>
-<td><p>The Barrier Hills</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3761</p></td>
-<td><p>The High Path</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3762</p></td>
-<td><p>Windyreed Pass</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3763</p></td>
-<td><p>Zangar Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3764</p></td>
-<td><p>The Twilight Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3765</p></td>
-<td><p>Razorthorn Trail</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3766</p></td>
-<td><p>Orebor Harborage</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3767</p></td>
-<td><p>Blades' Run</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3768</p></td>
-<td><p>Jagged Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3769</p></td>
-<td><p>Thunderlord Stronghold</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3770</p></td>
-<td><p>Blade Tooth Canyon</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3771</p></td>
-<td><p>The Living Grove</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3772</p></td>
-<td><p>Sylvanaar</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3773</p></td>
-<td><p>Bladespire Hold</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3774</p></td>
-<td><p>Gruul's Lair</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3775</p></td>
-<td><p>Circle of Blood</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3776</p></td>
-<td><p>Bloodmaul Outpost</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3777</p></td>
-<td><p>Bloodmaul Camp</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3778</p></td>
-<td><p>Draenethyst Mine</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3779</p></td>
-<td><p>Trogma's Claim</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3780</p></td>
-<td><p>Blackwing Coven</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3781</p></td>
-<td><p>Grishnath</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3782</p></td>
-<td><p>Veil Lashh</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3783</p></td>
-<td><p>Veil Vekh</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3784</p></td>
-<td><p>Forge Camp: Terror</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3785</p></td>
-<td><p>Forge Camp: Wrath</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3786</p></td>
-<td><p>Ogri'la</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3787</p></td>
-<td><p>Forge Camp: Anger</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3788</p></td>
-<td><p>The Low Path</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="even">
-<td><p>3789</p></td>
-<td><p>Shadow Labyrinth</p></td>
-<td><p>555</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3790</p></td>
-<td><p>Auchenai Crypts</p></td>
-<td><p>558</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3791</p></td>
-<td><p>Sethekk Halls</p></td>
-<td><p>556</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3792</p></td>
-<td><p>Mana-Tombs</p></td>
-<td><p>557</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3793</p></td>
-<td><p>Felspark Ravine</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3794</p></td>
-<td><p>Valley of Bones</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3795</p></td>
-<td><p>Sha'naari Wastes</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3796</p></td>
-<td><p>The Warp Fields</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3797</p></td>
-<td><p>Fallen Sky Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3798</p></td>
-<td><p>Haal'eshi Gorge</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3799</p></td>
-<td><p>Stonewall Canyon</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3800</p></td>
-<td><p>Thornfang Hill</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3801</p></td>
-<td><p>Mag'har Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3802</p></td>
-<td><p>Void Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3803</p></td>
-<td><p>The Abyssal Shelf</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3804</p></td>
-<td><p>The Legion Front</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3805</p></td>
-<td><p>Zul'Aman</p></td>
-<td><p>568</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3806</p></td>
-<td><p>Supply Caravan</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3807</p></td>
-<td><p>Reaver's Fall</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3808</p></td>
-<td><p>Cenarion Post</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3809</p></td>
-<td><p>Southern Rampart</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3810</p></td>
-<td><p>Northern Rampart</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3811</p></td>
-<td><p>Gor'gaz Outpost</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3812</p></td>
-<td><p>Spinebreaker Post</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3813</p></td>
-<td><p>The Path of Anguish</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3814</p></td>
-<td><p>East Supply Caravan</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3815</p></td>
-<td><p>Expedition Point</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3816</p></td>
-<td><p>Zeppelin Crash</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3817</p></td>
-<td><p>Testing</p></td>
-<td><p>13</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3818</p></td>
-<td><p>Bloodscale Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="even">
-<td><p>3819</p></td>
-<td><p>Darkcrest Enclave</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3820</p></td>
-<td><p>Eye of the Storm</p></td>
-<td><p>566</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3821</p></td>
-<td><p>Warden's Cage</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3822</p></td>
-<td><p>Eclipse Point</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3823</p></td>
-<td><p>Isle of Tribulations</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3824</p></td>
-<td><p>Bloodmaul Ravine</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3825</p></td>
-<td><p>Dragons' End</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3826</p></td>
-<td><p>Daggermaw Canyon</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3827</p></td>
-<td><p>Vekhaar Stand</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3828</p></td>
-<td><p>Ruuan Weald</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3829</p></td>
-<td><p>Veil Ruuan</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3830</p></td>
-<td><p>Raven's Wood</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3831</p></td>
-<td><p>Death's Door</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3832</p></td>
-<td><p>Vortex Pinnacle</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3833</p></td>
-<td><p>Razor Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3834</p></td>
-<td><p>Ridge of Madness</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3835</p></td>
-<td><p>Dustquill Ravine</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3836</p></td>
-<td><p>Magtheridon's Lair</p></td>
-<td><p>544</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3837</p></td>
-<td><p>Sunfury Hold</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3838</p></td>
-<td><p>Spinebreaker Mountains</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3839</p></td>
-<td><p>Abandoned Armory</p></td>
-<td><p>530</p></td>
-<td><p>3518</p></td>
-</tr>
-<tr class="odd">
-<td><p>3840</p></td>
-<td><p>The Black Temple</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3841</p></td>
-<td><p>Darkcrest Shore</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3842</p></td>
-<td><p>Tempest Keep</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3844</p></td>
-<td><p>Mok'Nathal Village</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3845</p></td>
-<td><p>Tempest Keep</p></td>
-<td><p>550</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3846</p></td>
-<td><p>The Arcatraz</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3847</p></td>
-<td><p>The Botanica</p></td>
-<td><p>553</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3848</p></td>
-<td><p>The Arcatraz</p></td>
-<td><p>552</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3849</p></td>
-<td><p>The Mechanar</p></td>
-<td><p>554</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3850</p></td>
-<td><p>Netherstone</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3851</p></td>
-<td><p>Midrealm Post</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3852</p></td>
-<td><p>Tuluman's Landing</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3854</p></td>
-<td><p>Protectorate Watch Post</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3855</p></td>
-<td><p>Circle of Blood Arena</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3856</p></td>
-<td><p>Elrendar Crossing</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="even">
-<td><p>3857</p></td>
-<td><p>Ammen Ford</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3858</p></td>
-<td><p>Razorthorn Shelf</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3859</p></td>
-<td><p>Silmyr Lake</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3860</p></td>
-<td><p>Raastok Glade</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3861</p></td>
-<td><p>Thalassian Pass</p></td>
-<td><p>530</p></td>
-<td><p>3433</p></td>
-</tr>
-<tr class="odd">
-<td><p>3862</p></td>
-<td><p>Churning Gulch</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3863</p></td>
-<td><p>Broken Wilds</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3864</p></td>
-<td><p>Bash'ir Landing</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3865</p></td>
-<td><p>Crystal Spine</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3866</p></td>
-<td><p>Skald</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3867</p></td>
-<td><p>Bladed Gulch</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3868</p></td>
-<td><p>Gyro-Plank Bridge</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3869</p></td>
-<td><p>Mage Tower</p></td>
-<td><p>566</p></td>
-<td><p>3820</p></td>
-</tr>
-<tr class="odd">
-<td><p>3870</p></td>
-<td><p>Blood Elf Tower</p></td>
-<td><p>566</p></td>
-<td><p>3820</p></td>
-</tr>
-<tr class="even">
-<td><p>3871</p></td>
-<td><p>Draenei Ruins</p></td>
-<td><p>566</p></td>
-<td><p>3820</p></td>
-</tr>
-<tr class="odd">
-<td><p>3872</p></td>
-<td><p>Fel Reaver Ruins</p></td>
-<td><p>566</p></td>
-<td><p>3820</p></td>
-</tr>
-<tr class="even">
-<td><p>3873</p></td>
-<td><p>The Proving Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3874</p></td>
-<td><p>Eco-Dome Farfield</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3875</p></td>
-<td><p>Eco-Dome Skyperch</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3876</p></td>
-<td><p>Eco-Dome Sutheron</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3877</p></td>
-<td><p>Eco-Dome Midrealm</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3878</p></td>
-<td><p>Ethereum Staging Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3879</p></td>
-<td><p>Chapel Yard</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3880</p></td>
-<td><p>Access Shaft Zeon</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3881</p></td>
-<td><p>Trelleum Mine</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3882</p></td>
-<td><p>Invasion Point: Destroyer</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3883</p></td>
-<td><p>Camp of Boom</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3884</p></td>
-<td><p>Spinebreaker Pass</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3885</p></td>
-<td><p>Netherweb Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3886</p></td>
-<td><p>Derelict Caravan</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3887</p></td>
-<td><p>Refugee Caravan</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3888</p></td>
-<td><p>Shadow Tomb</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3889</p></td>
-<td><p>Veil Rhaze</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3890</p></td>
-<td><p>Tomb of Lights</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3891</p></td>
-<td><p>Carrion Hill</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3892</p></td>
-<td><p>Writhing Mound</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3893</p></td>
-<td><p>Ring of Observance</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3894</p></td>
-<td><p>Auchenai Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3895</p></td>
-<td><p>Cenarion Watchpost</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3896</p></td>
-<td><p>Aldor Rise</p></td>
-<td><p>530</p></td>
-<td><p>3703</p></td>
-</tr>
-<tr class="even">
-<td><p>3897</p></td>
-<td><p>Terrace of Light</p></td>
-<td><p>530</p></td>
-<td><p>3703</p></td>
-</tr>
-<tr class="odd">
-<td><p>3898</p></td>
-<td><p>Scryer's Tier</p></td>
-<td><p>530</p></td>
-<td><p>3703</p></td>
-</tr>
-<tr class="even">
-<td><p>3899</p></td>
-<td><p>Lower City</p></td>
-<td><p>530</p></td>
-<td><p>3703</p></td>
-</tr>
-<tr class="odd">
-<td><p>3900</p></td>
-<td><p>Invasion Point: Overlord</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3901</p></td>
-<td><p>Allerian Post</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3902</p></td>
-<td><p>Stonebreaker Camp</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3903</p></td>
-<td><p>Boulder'mok</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3904</p></td>
-<td><p>Cursed Hollow</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3905</p></td>
-<td><p>Coilfang Reservoir</p></td>
-<td><p>530</p></td>
-<td><p>3521</p></td>
-</tr>
-<tr class="odd">
-<td><p>3906</p></td>
-<td><p>The Bloodwash</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3907</p></td>
-<td><p>Veridian Point</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3908</p></td>
-<td><p>Middenvale</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3909</p></td>
-<td><p>The Lost Fold</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="odd">
-<td><p>3910</p></td>
-<td><p>Mystwood</p></td>
-<td><p>530</p></td>
-<td><p>3525</p></td>
-</tr>
-<tr class="even">
-<td><p>3911</p></td>
-<td><p>Tranquil Shore</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3912</p></td>
-<td><p>Goldenbough Pass</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3913</p></td>
-<td><p>Runestone Falithas</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="odd">
-<td><p>3914</p></td>
-<td><p>Runestone Shan'dor</p></td>
-<td><p>530</p></td>
-<td><p>3430</p></td>
-</tr>
-<tr class="even">
-<td><p>3915</p></td>
-<td><p>Fairbridge Strand</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="odd">
-<td><p>3916</p></td>
-<td><p>Moongraze Woods</p></td>
-<td><p>530</p></td>
-<td><p>3524</p></td>
-</tr>
-<tr class="even">
-<td><p>3917</p></td>
-<td><p>Auchindoun</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3918</p></td>
-<td><p>Toshley's Station</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3919</p></td>
-<td><p>Singing Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3920</p></td>
-<td><p>Shatter Point</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="even">
-<td><p>3921</p></td>
-<td><p>Arklonis Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3922</p></td>
-<td><p>Bladespire Outpost</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3923</p></td>
-<td><p>Gruul's Lair</p></td>
-<td><p>565</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3924</p></td>
-<td><p>Northmaul Tower</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3925</p></td>
-<td><p>Southmaul Tower</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3926</p></td>
-<td><p>Shattered Plains</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3927</p></td>
-<td><p>Oronok's Farm</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3928</p></td>
-<td><p>The Altar of Damnation</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3929</p></td>
-<td><p>The Path of Conquest</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3930</p></td>
-<td><p>Eclipsion Fields</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3931</p></td>
-<td><p>Bladespire Grounds</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3932</p></td>
-<td><p>Sketh'lon Base Camp</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3933</p></td>
-<td><p>Sketh'lon Wreckage</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3934</p></td>
-<td><p>Town Square</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="even">
-<td><p>3935</p></td>
-<td><p>Wizard Row</p></td>
-<td><p>530</p></td>
-<td><p>3523</p></td>
-</tr>
-<tr class="odd">
-<td><p>3936</p></td>
-<td><p>Deathforge Tower</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3937</p></td>
-<td><p>Slag Watch</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3938</p></td>
-<td><p>Sanctum of the Stars</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3939</p></td>
-<td><p>Dragonmaw Fortress</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3940</p></td>
-<td><p>The Fetid Pool</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3941</p></td>
-<td><p>Test</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3942</p></td>
-<td><p>Razaan's Landing</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3943</p></td>
-<td><p>Invasion Point: Cataclysm</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3944</p></td>
-<td><p>The Altar of Shadows</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3945</p></td>
-<td><p>Netherwing Pass</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3946</p></td>
-<td><p>Wayne's Refuge</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3947</p></td>
-<td><p>The Scalding Pools</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3948</p></td>
-<td><p>Brian and Pat Test</p></td>
-<td><p>451</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3949</p></td>
-<td><p>Magma Fields</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3950</p></td>
-<td><p>Crimson Watch</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3951</p></td>
-<td><p>Evergrove</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3952</p></td>
-<td><p>Wyrmskull Bridge</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3953</p></td>
-<td><p>Scalewing Shelf</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3954</p></td>
-<td><p>Wyrmskull Tunnel</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3955</p></td>
-<td><p>Hellfire Basin</p></td>
-<td><p>530</p></td>
-<td><p>3483</p></td>
-</tr>
-<tr class="odd">
-<td><p>3956</p></td>
-<td><p>The Shadow Stair</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3957</p></td>
-<td><p>Sha'tari Outpost</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3958</p></td>
-<td><p>Sha'tari Base Camp</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3959</p></td>
-<td><p>Black Temple</p></td>
-<td><p>564</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3960</p></td>
-<td><p>Soulgrinder's Barrow</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3961</p></td>
-<td><p>Sorrow Wing Point</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3962</p></td>
-<td><p>Vim'gol's Circle</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3963</p></td>
-<td><p>Dragonspine Ridge</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3964</p></td>
-<td><p>Skyguard Outpost</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3965</p></td>
-<td><p>Netherwing Mines</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3966</p></td>
-<td><p>Dragonmaw Base Camp</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="even">
-<td><p>3967</p></td>
-<td><p>Dragonmaw Skyway</p></td>
-<td><p>530</p></td>
-<td><p>3520</p></td>
-</tr>
-<tr class="odd">
-<td><p>3968</p></td>
-<td><p>Ruins of Lordaeron</p></td>
-<td><p>572</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>3969</p></td>
-<td><p>Rivendark's Perch</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3970</p></td>
-<td><p>Obsidia's Perch</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3971</p></td>
-<td><p>Insidion's Perch</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="odd">
-<td><p>3972</p></td>
-<td><p>Furywing's Perch</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>3973</p></td>
-<td><p>Blackwind Landing</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3974</p></td>
-<td><p>Veil Harr'ik</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3975</p></td>
-<td><p>Terokk's Rest</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3976</p></td>
-<td><p>Veil Ala'rak</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3977</p></td>
-<td><p>Upper Veil Shil'ak</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>3978</p></td>
-<td><p>Lower Veil Shil'ak</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="even">
-<td><p>3979</p></td>
-<td><p>The Frozen Sea</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>3980</p></td>
-<td><p>Daggercap Bay</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3981</p></td>
-<td><p>Valgarde</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3982</p></td>
-<td><p>Wyrmskull Village</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3983</p></td>
-<td><p>Utgarde Keep</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3984</p></td>
-<td><p>Nifflevar</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3985</p></td>
-<td><p>Falls of Ymiron</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3986</p></td>
-<td><p>Echo Reach</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3987</p></td>
-<td><p>The Isle of Spears</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3988</p></td>
-<td><p>Kamagua</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3989</p></td>
-<td><p>Garvan's Reef</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3990</p></td>
-<td><p>Scalawag Point</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3991</p></td>
-<td><p>New Agamand</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3992</p></td>
-<td><p>The Ancient Lift</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3993</p></td>
-<td><p>Westguard Turret</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3994</p></td>
-<td><p>Halgrind</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3995</p></td>
-<td><p>The Laughing Stand</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3996</p></td>
-<td><p>Baelgun's Excavation Site</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3997</p></td>
-<td><p>Explorers' League Outpost</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>3998</p></td>
-<td><p>Westguard Keep</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>3999</p></td>
-<td><p>Steel Gate</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4000</p></td>
-<td><p>Vengeance Landing</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4001</p></td>
-<td><p>Baleheim</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4002</p></td>
-<td><p>Skorn</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4003</p></td>
-<td><p>Fort Wildervar</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4004</p></td>
-<td><p>Vileprey Village</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4005</p></td>
-<td><p>Ivald's Ruin</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4006</p></td>
-<td><p>Gjalerbron</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4007</p></td>
-<td><p>Tomb of the Lost Kings</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4008</p></td>
-<td><p>Shartuul's Transporter</p></td>
-<td><p>530</p></td>
-<td><p>3522</p></td>
-</tr>
-<tr class="even">
-<td><p>4009</p></td>
-<td><p>Illidari Training Grounds</p></td>
-<td><p>564</p></td>
-<td><p>3959</p></td>
-</tr>
-<tr class="odd">
-<td><p>4010</p></td>
-<td><p>Mudsprocket</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>4018</p></td>
-<td><p>Camp Winterhoof</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4019</p></td>
-<td><p>Development Land</p></td>
-<td><p>451</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4020</p></td>
-<td><p>Mightstone Quarry</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4021</p></td>
-<td><p>Bloodspore Plains</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4022</p></td>
-<td><p>Gammoth</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4023</p></td>
-<td><p>Amber Ledge</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4024</p></td>
-<td><p>Coldarra</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4025</p></td>
-<td><p>The Westrift</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4026</p></td>
-<td><p>The Transitus Stair</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4027</p></td>
-<td><p>Coast of Echoes</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4028</p></td>
-<td><p>Riplash Strand</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4029</p></td>
-<td><p>Riplash Ruins</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4030</p></td>
-<td><p>Coast of Idols</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4031</p></td>
-<td><p>Pal'ea</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4032</p></td>
-<td><p>Valiance Keep</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4033</p></td>
-<td><p>Winterfin Village</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4034</p></td>
-<td><p>The Borean Wall</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4035</p></td>
-<td><p>The Geyser Fields</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4036</p></td>
-<td><p>Fizzcrank Pumping Station</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4037</p></td>
-<td><p>Taunka'le Village</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4038</p></td>
-<td><p>Magnamoth Caverns</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4039</p></td>
-<td><p>Coldrock Quarry</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4040</p></td>
-<td><p>Njord's Breath Bay</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4041</p></td>
-<td><p>Kaskala</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4042</p></td>
-<td><p>Transborea</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4043</p></td>
-<td><p>The Flood Plains</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4046</p></td>
-<td><p>Direhorn Post</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="odd">
-<td><p>4047</p></td>
-<td><p>Nat's Landing</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>4048</p></td>
-<td><p>Ember Clutch</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4049</p></td>
-<td><p>Tabetha's Farm</p></td>
-<td><p>1</p></td>
-<td><p>15</p></td>
-</tr>
-<tr class="even">
-<td><p>4050</p></td>
-<td><p>Derelict Strand</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4051</p></td>
-<td><p>The Frozen Glade</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4052</p></td>
-<td><p>The Vibrant Glade</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4053</p></td>
-<td><p>The Twisted Glade</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4054</p></td>
-<td><p>Rivenwood</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4055</p></td>
-<td><p>Caldemere Lake</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4056</p></td>
-<td><p>Utgarde Catacombs</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4057</p></td>
-<td><p>Shield Hill</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4058</p></td>
-<td><p>Lake Cauldros</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4059</p></td>
-<td><p>Cauldros Isle</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4060</p></td>
-<td><p>Bleeding Vale</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4061</p></td>
-<td><p>Giants' Run</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4062</p></td>
-<td><p>Apothecary Camp</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4063</p></td>
-<td><p>Ember Spear Tower</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4064</p></td>
-<td><p>Shattered Straits</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4065</p></td>
-<td><p>Gjalerhorn</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4066</p></td>
-<td><p>Frostblade Peak</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4067</p></td>
-<td><p>Plaguewood Tower</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>4068</p></td>
-<td><p>West Spear Tower</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4069</p></td>
-<td><p>North Spear Tower</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4070</p></td>
-<td><p>Chillmere Coast</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4071</p></td>
-<td><p>Whisper Gulch</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4072</p></td>
-<td><p>Sub zone</p></td>
-<td><p>451</p></td>
-<td><p>151</p></td>
-</tr>
-<tr class="odd">
-<td><p>4073</p></td>
-<td><p>Winter's Terrace</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4074</p></td>
-<td><p>The Waking Halls</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4075</p></td>
-<td><p>Sunwell Plateau</p></td>
-<td><p>580</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4076</p></td>
-<td><p>Reuse Me 7</p></td>
-<td><p>598</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4077</p></td>
-<td><p>Sorlof's Strand</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4078</p></td>
-<td><p>Razorthorn Rise</p></td>
-<td><p>530</p></td>
-<td><p>3519</p></td>
-</tr>
-<tr class="odd">
-<td><p>4079</p></td>
-<td><p>Frostblade Pass</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4080</p></td>
-<td><p>Isle of Quel'Danas</p></td>
-<td><p>530</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4081</p></td>
-<td><p>The Dawnchaser</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4082</p></td>
-<td><p>The Sin'loren</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4083</p></td>
-<td><p>Silvermoon's Pride</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4084</p></td>
-<td><p>The Bloodoath</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4085</p></td>
-<td><p>Shattered Sun Staging Area</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4086</p></td>
-<td><p>Sun's Reach Sanctum</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4087</p></td>
-<td><p>Sun's Reach Harbor</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4088</p></td>
-<td><p>Sun's Reach Armory</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4089</p></td>
-<td><p>Dawnstar Village</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4090</p></td>
-<td><p>The Dawning Square</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4091</p></td>
-<td><p>Greengill Coast</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4092</p></td>
-<td><p>The Dead Scar</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4093</p></td>
-<td><p>The Sun Forge</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4094</p></td>
-<td><p>Sunwell Plateau</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="odd">
-<td><p>4095</p></td>
-<td><p>Magisters' Terrace</p></td>
-<td><p>530</p></td>
-<td><p>4080</p></td>
-</tr>
-<tr class="even">
-<td><p>4096</p></td>
-<td><p>Clayt?Ân's WoWEdit Land</p></td>
-<td><p>451</p></td>
-<td><p>4019</p></td>
-</tr>
-<tr class="odd">
-<td><p>4097</p></td>
-<td><p>Winterfin Caverns</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4098</p></td>
-<td><p>Glimmer Bay</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4099</p></td>
-<td><p>Winterfin Retreat</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4100</p></td>
-<td><p>The Culling of Stratholme</p></td>
-<td><p>595</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4101</p></td>
-<td><p>Sands of Nasam</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4102</p></td>
-<td><p>Krom's Landing</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4103</p></td>
-<td><p>Nasam's Talon</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4104</p></td>
-<td><p>Echo Cove</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4105</p></td>
-<td><p>Beryl Point</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4106</p></td>
-<td><p>Garrosh's Landing</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4107</p></td>
-<td><p>Warsong Jetty</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4108</p></td>
-<td><p>Fizzcrank Airstrip</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4109</p></td>
-<td><p>Lake Kum'uya</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4110</p></td>
-<td><p>Farshire Fields</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4111</p></td>
-<td><p>Farshire</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4112</p></td>
-<td><p>Farshire Lighthouse</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4113</p></td>
-<td><p>Unu'pe</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4114</p></td>
-<td><p>Death's Stand</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4115</p></td>
-<td><p>The Abandoned Reach</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4116</p></td>
-<td><p>Scalding Pools</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4117</p></td>
-<td><p>Steam Springs</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4118</p></td>
-<td><p>Talramas</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4119</p></td>
-<td><p>Festering Pools</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4120</p></td>
-<td><p>The Nexus</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4121</p></td>
-<td><p>Transitus Shield</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4122</p></td>
-<td><p>Bor'gorok Outpost</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4123</p></td>
-<td><p>Magmoth</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4124</p></td>
-<td><p>The Dens of Dying</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4125</p></td>
-<td><p>Temple City of En'kilah</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4126</p></td>
-<td><p>The Wailing Ziggurat</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4127</p></td>
-<td><p>Steeljaw's Caravan</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4128</p></td>
-<td><p>Naxxanar</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4129</p></td>
-<td><p>Warsong Hold</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4130</p></td>
-<td><p>Plains of Nasam</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4131</p></td>
-<td><p>Magisters' Terrace</p></td>
-<td><p>585</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4132</p></td>
-<td><p>Ruins of Eldra'nath</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4133</p></td>
-<td><p>Charred Rise</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4134</p></td>
-<td><p>Blistering Pool</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4135</p></td>
-<td><p>Spire of Blood</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4136</p></td>
-<td><p>Spire of Decay</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4137</p></td>
-<td><p>Spire of Pain</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4138</p></td>
-<td><p>Frozen Reach</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4139</p></td>
-<td><p>Parhelion Plaza</p></td>
-<td><p>580</p></td>
-<td><p>4075</p></td>
-</tr>
-<tr class="even">
-<td><p>4140</p></td>
-<td><p>The Dead Scar</p></td>
-<td><p>580</p></td>
-<td><p>4075</p></td>
-</tr>
-<tr class="odd">
-<td><p>4141</p></td>
-<td><p>Torp's Farm</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4142</p></td>
-<td><p>Warsong Granary</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4143</p></td>
-<td><p>Warsong Slaughterhouse</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4144</p></td>
-<td><p>Warsong Farms Outpost</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4145</p></td>
-<td><p>West Point Station</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4146</p></td>
-<td><p>North Point Station</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4147</p></td>
-<td><p>Mid Point Station</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4148</p></td>
-<td><p>South Point Station</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4149</p></td>
-<td><p>D.E.H.T.A. Encampment</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4150</p></td>
-<td><p>Kaw's Roost</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4151</p></td>
-<td><p>Westwind Refugee Camp</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4152</p></td>
-<td><p>Moa'ki Harbor</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4153</p></td>
-<td><p>Indu'le Village</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4154</p></td>
-<td><p>Snowfall Glade</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4155</p></td>
-<td><p>The Half Shell</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4156</p></td>
-<td><p>Surge Needle</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4157</p></td>
-<td><p>Moonrest Gardens</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4158</p></td>
-<td><p>Stars' Rest</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4159</p></td>
-<td><p>Westfall Brigade Encampment</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4160</p></td>
-<td><p>Lothalor Woodlands</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4161</p></td>
-<td><p>Wyrmrest Temple</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4162</p></td>
-<td><p>Icemist Falls</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4163</p></td>
-<td><p>Icemist Village</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4164</p></td>
-<td><p>The Pit of Narjun</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4165</p></td>
-<td><p>Agmar's Hammer</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4166</p></td>
-<td><p>Lake Indu'le</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4167</p></td>
-<td><p>Obsidian Dragonshrine</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4168</p></td>
-<td><p>Ruby Dragonshrine</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4169</p></td>
-<td><p>Fordragon Hold</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4170</p></td>
-<td><p>Kor'kron Vanguard</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4171</p></td>
-<td><p>The Court of Skulls</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4172</p></td>
-<td><p>Angrathar the Wrathgate</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4173</p></td>
-<td><p>Galakrond's Rest</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4174</p></td>
-<td><p>The Wicked Coil</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4175</p></td>
-<td><p>Bronze Dragonshrine</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4176</p></td>
-<td><p>The Mirror of Dawn</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4177</p></td>
-<td><p>Wintergarde Keep</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4178</p></td>
-<td><p>Wintergarde Mine</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4179</p></td>
-<td><p>Emerald Dragonshrine</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4180</p></td>
-<td><p>New Hearthglen</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4181</p></td>
-<td><p>Crusader's Landing</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4182</p></td>
-<td><p>Sinner's Folly</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4183</p></td>
-<td><p>Azure Dragonshrine</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4184</p></td>
-<td><p>Path of the Titans</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4185</p></td>
-<td><p>The Forgotten Shore</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4186</p></td>
-<td><p>Venomspite</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4187</p></td>
-<td><p>The Crystal Vice</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4188</p></td>
-<td><p>The Carrion Fields</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4189</p></td>
-<td><p>Onslaught Base Camp</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4190</p></td>
-<td><p>Thorson's Post</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4191</p></td>
-<td><p>Light's Trust</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4192</p></td>
-<td><p>Frostmourne Cavern</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4193</p></td>
-<td><p>Scarlet Point</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4194</p></td>
-<td><p>Jintha'kalar</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4195</p></td>
-<td><p>Ice Heart Cavern</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4196</p></td>
-<td><p>Drak'Tharon Keep</p></td>
-<td><p>600</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4197</p></td>
-<td><p>Wintergrasp</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4198</p></td>
-<td><p>Kili'ua's Atoll</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4199</p></td>
-<td><p>Silverbrook</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4200</p></td>
-<td><p>Vordrassil's Heart</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4201</p></td>
-<td><p>Vordrassil's Tears</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4202</p></td>
-<td><p>Vordrassil's Tears</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4203</p></td>
-<td><p>Vordrassil's Limb</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4204</p></td>
-<td><p>Amberpine Lodge</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4205</p></td>
-<td><p>Solstice Village</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4206</p></td>
-<td><p>Conquest Hold</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4207</p></td>
-<td><p>Voldrune</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4208</p></td>
-<td><p>Granite Springs</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4209</p></td>
-<td><p>Zeb'Halak</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4210</p></td>
-<td><p>Drak'Tharon Keep</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4211</p></td>
-<td><p>Camp Oneqwah</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4212</p></td>
-<td><p>Eastwind Shore</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4213</p></td>
-<td><p>The Broken Bluffs</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4214</p></td>
-<td><p>Boulder Hills</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4215</p></td>
-<td><p>Rage Fang Shrine</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4216</p></td>
-<td><p>Drakil'jin Ruins</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4217</p></td>
-<td><p>Blackriver Logging Camp</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4218</p></td>
-<td><p>Heart's Blood Shrine</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4219</p></td>
-<td><p>Hollowstone Mine</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4220</p></td>
-<td><p>Dun Argol</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4221</p></td>
-<td><p>Thor Modan</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4222</p></td>
-<td><p>Blue Sky Logging Grounds</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4223</p></td>
-<td><p>Maw of Neltharion</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4224</p></td>
-<td><p>The Briny Pinnacle</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4225</p></td>
-<td><p>Glittering Strand</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4226</p></td>
-<td><p>Iskaal</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4227</p></td>
-<td><p>Dragon's Fall</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4228</p></td>
-<td><p>The Oculus</p></td>
-<td><p>578</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4229</p></td>
-<td><p>Prospector's Point</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4230</p></td>
-<td><p>Coldwind Heights</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4231</p></td>
-<td><p>Redwood Trading Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4232</p></td>
-<td><p>Vengeance Pass</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4233</p></td>
-<td><p>Dawn's Reach</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4234</p></td>
-<td><p>Naxxramas</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4235</p></td>
-<td><p>Heartwood Trading Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4236</p></td>
-<td><p>Evergreen Trading Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4237</p></td>
-<td><p>Spruce Point Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4238</p></td>
-<td><p>White Pine Trading Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4239</p></td>
-<td><p>Aspen Grove Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4240</p></td>
-<td><p>Forest's Edge Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4241</p></td>
-<td><p>Eldritch Heights</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4242</p></td>
-<td><p>Venture Bay</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4243</p></td>
-<td><p>Wintergarde Crypt</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4244</p></td>
-<td><p>Bloodmoon Isle</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4245</p></td>
-<td><p>Shadowfang Tower</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4246</p></td>
-<td><p>Wintergarde Mausoleum</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4247</p></td>
-<td><p>Duskhowl Den</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4248</p></td>
-<td><p>The Conquest Pit</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4249</p></td>
-<td><p>The Path of Iron</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4250</p></td>
-<td><p>Ruins of Tethys</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4251</p></td>
-<td><p>Silverbrook Hills</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4252</p></td>
-<td><p>The Broken Bluffs</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4253</p></td>
-<td><p>7th Legion Front</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4254</p></td>
-<td><p>The Dragon Wastes</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4255</p></td>
-<td><p>Ruins of Drak'Zin</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4256</p></td>
-<td><p>Drak'Mar Lake</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4257</p></td>
-<td><p>Dragonspine Tributary</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="even">
-<td><p>4258</p></td>
-<td><p>The North Sea</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4259</p></td>
-<td><p>Drak'ural</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4260</p></td>
-<td><p>Thorvald's Camp</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4261</p></td>
-<td><p>Ghostblade Post</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4262</p></td>
-<td><p>Ashwood Post</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4263</p></td>
-<td><p>Lydell's Ambush</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4264</p></td>
-<td><p>Halls of Stone</p></td>
-<td><p>599</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4265</p></td>
-<td><p>The Nexus</p></td>
-<td><p>576</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4266</p></td>
-<td><p>Harkor's Camp</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4267</p></td>
-<td><p>Vordrassil Pass</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4268</p></td>
-<td><p>Ruuna's Camp</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4269</p></td>
-<td><p>Shrine of Scales</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4270</p></td>
-<td><p>Drak'atal Passage</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4271</p></td>
-<td><p>Utgarde Pinnacle</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4272</p></td>
-<td><p>Halls of Lightning</p></td>
-<td><p>602</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4273</p></td>
-<td><p>Ulduar</p></td>
-<td><p>603</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4275</p></td>
-<td><p>The Argent Stand</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4276</p></td>
-<td><p>Altar of Sseratus</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4277</p></td>
-<td><p>Azjol-Nerub</p></td>
-<td><p>601</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4278</p></td>
-<td><p>Drak'Sotra Fields</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4279</p></td>
-<td><p>Drak'Sotra</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4280</p></td>
-<td><p>Drak'Agal</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4281</p></td>
-<td><p>Acherus: The Ebon Hold</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>4282</p></td>
-<td><p>The Avalanche</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4283</p></td>
-<td><p>The Lost Lands</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4284</p></td>
-<td><p>Nesingwary Base Camp</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4285</p></td>
-<td><p>The Seabreach Flow</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4286</p></td>
-<td><p>The Bones of Nozronn</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4287</p></td>
-<td><p>Kartak's Hold</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4288</p></td>
-<td><p>Sparktouched Haven</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4289</p></td>
-<td><p>The Path of the Lifewarden</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4290</p></td>
-<td><p>River's Heart</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4291</p></td>
-<td><p>Rainspeaker Canopy</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4292</p></td>
-<td><p>Frenzyheart Hill</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4293</p></td>
-<td><p>Wildgrowth Mangal</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4294</p></td>
-<td><p>Heb'Valok</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4295</p></td>
-<td><p>The Sundered Shard</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4296</p></td>
-<td><p>The Lifeblood Pillar</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4297</p></td>
-<td><p>Mosswalker Village</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4298</p></td>
-<td><p>Plaguelands: The Scarlet Enclave</p></td>
-<td><p>609</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4299</p></td>
-<td><p>Kolramas</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4300</p></td>
-<td><p>Waygate</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4302</p></td>
-<td><p>The Skyreach Pillar</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4303</p></td>
-<td><p>Hardknuckle Clearing</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4304</p></td>
-<td><p>Sapphire Hive</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4306</p></td>
-<td><p>Mistwhisper Refuge</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4307</p></td>
-<td><p>The Glimmering Pillar</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4308</p></td>
-<td><p>Spearborn Encampment</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4309</p></td>
-<td><p>Drak'Tharon Keep</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4310</p></td>
-<td><p>Zeramas</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4311</p></td>
-<td><p>Reliquary of Agony</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4312</p></td>
-<td><p>Ebon Watch</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4313</p></td>
-<td><p>Thrym's End</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4314</p></td>
-<td><p>Voltarus</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4315</p></td>
-<td><p>Reliquary of Pain</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4316</p></td>
-<td><p>Rageclaw Den</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4317</p></td>
-<td><p>Light's Breach</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4318</p></td>
-<td><p>Pools of Zha'Jin</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4319</p></td>
-<td><p>Zim'Abwa</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4320</p></td>
-<td><p>Amphitheater of Anguish</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4321</p></td>
-<td><p>Altar of Rhunok</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4322</p></td>
-<td><p>Altar of Har'koa</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4323</p></td>
-<td><p>Zim'Torga</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4324</p></td>
-<td><p>Pools of Jin'Alai</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4325</p></td>
-<td><p>Altar of Quetz'lun</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4326</p></td>
-<td><p>Heb'Drakkar</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4327</p></td>
-<td><p>Drak'Mabwa</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4328</p></td>
-<td><p>Zim'Rhuk</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4329</p></td>
-<td><p>Altar of Mam'toth</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4342</p></td>
-<td><p>Acherus: The Ebon Hold</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4343</p></td>
-<td><p>New Avalon</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4344</p></td>
-<td><p>New Avalon Fields</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4345</p></td>
-<td><p>New Avalon Orchard</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4346</p></td>
-<td><p>New Avalon Town Hall</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4347</p></td>
-<td><p>Havenshire</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4348</p></td>
-<td><p>Havenshire Farms</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4349</p></td>
-<td><p>Havenshire Lumber Mill</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4350</p></td>
-<td><p>Havenshire Stables</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4351</p></td>
-<td><p>Scarlet Hold</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4352</p></td>
-<td><p>Chapel of the Crimson Flame</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4353</p></td>
-<td><p>Light's Point Tower</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4354</p></td>
-<td><p>Light's Point</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4355</p></td>
-<td><p>Crypt of Remembrance</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4356</p></td>
-<td><p>Death's Breach</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4357</p></td>
-<td><p>The Noxious Glade</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4358</p></td>
-<td><p>Tyr's Hand</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4359</p></td>
-<td><p>King's Harbor</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4360</p></td>
-<td><p>Scarlet Overlook</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4361</p></td>
-<td><p>Light's Hope Chapel</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4362</p></td>
-<td><p>Sinner's Folly</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4363</p></td>
-<td><p>Pestilent Scar</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4364</p></td>
-<td><p>Browman Mill</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4365</p></td>
-<td><p>Havenshire Mine</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4366</p></td>
-<td><p>Ursoc's Den</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4367</p></td>
-<td><p>The Blight Line</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4368</p></td>
-<td><p>The Bonefields</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4369</p></td>
-<td><p>Dorian's Outpost</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4371</p></td>
-<td><p>Mam'toth Crater</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4372</p></td>
-<td><p>Zol'Maz Stronghold</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4373</p></td>
-<td><p>Zol'Heb</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4374</p></td>
-<td><p>Rageclaw Lake</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4375</p></td>
-<td><p>Gundrak</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4376</p></td>
-<td><p>The Savage Thicket</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4377</p></td>
-<td><p>New Avalon Forge</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4378</p></td>
-<td><p>Dalaran Arena</p></td>
-<td><p>617</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4379</p></td>
-<td><p>Valgarde</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4380</p></td>
-<td><p>Westguard Inn</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4381</p></td>
-<td><p>Waygate</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="even">
-<td><p>4382</p></td>
-<td><p>The Shaper's Terrace</p></td>
-<td><p>1</p></td>
-<td><p>490</p></td>
-</tr>
-<tr class="odd">
-<td><p>4383</p></td>
-<td><p>Lakeside Landing</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4384</p></td>
-<td><p>Strand of the Ancients</p></td>
-<td><p>607</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4385</p></td>
-<td><p>Bittertide Lake</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4386</p></td>
-<td><p>Rainspeaker Rapids</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4387</p></td>
-<td><p>Frenzyheart River</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4388</p></td>
-<td><p>Wintergrasp River</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4389</p></td>
-<td><p>The Suntouched Pillar</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4390</p></td>
-<td><p>Frigid Breach</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4391</p></td>
-<td><p>Swindlegrin's Dig</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4392</p></td>
-<td><p>The Stormwright's Shelf</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4393</p></td>
-<td><p>Death's Hand Encampment</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4394</p></td>
-<td><p>Scarlet Tavern</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="odd">
-<td><p>4395</p></td>
-<td><p>Dalaran</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4396</p></td>
-<td><p>Nozzlerust Post</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4399</p></td>
-<td><p>Farshire Mine</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4400</p></td>
-<td><p>The Mosslight Pillar</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4401</p></td>
-<td><p>Saragosa's Landing</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4402</p></td>
-<td><p>Vengeance Lift</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4403</p></td>
-<td><p>Balejar Watch</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4404</p></td>
-<td><p>New Agamand Inn</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4405</p></td>
-<td><p>Passage of Lost Fiends</p></td>
-<td><p>601</p></td>
-<td><p>4277</p></td>
-</tr>
-<tr class="even">
-<td><p>4406</p></td>
-<td><p>The Ring of Valor</p></td>
-<td><p>618</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4407</p></td>
-<td><p>Hall of the Frostwolf</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="even">
-<td><p>4408</p></td>
-<td><p>Hall of the Stormpike</p></td>
-<td><p>30</p></td>
-<td><p>2597</p></td>
-</tr>
-<tr class="odd">
-<td><p>4411</p></td>
-<td><p>Stormwind Harbor</p></td>
-<td><p>0</p></td>
-<td><p>1519</p></td>
-</tr>
-<tr class="even">
-<td><p>4412</p></td>
-<td><p>The Makers' Overlook</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="odd">
-<td><p>4413</p></td>
-<td><p>The Makers' Perch</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4414</p></td>
-<td><p>Scarlet Tower</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4415</p></td>
-<td><p>The Violet Hold</p></td>
-<td><p>608</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4416</p></td>
-<td><p>Gundrak</p></td>
-<td><p>604</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4417</p></td>
-<td><p>Onslaught Harbor</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4418</p></td>
-<td><p>K3</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4419</p></td>
-<td><p>Snowblind Hills</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4420</p></td>
-<td><p>Snowblind Terrace</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4421</p></td>
-<td><p>Garm</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4422</p></td>
-<td><p>Brunnhildar Village</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4423</p></td>
-<td><p>Sifreldar Village</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4424</p></td>
-<td><p>Valkyrion</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4425</p></td>
-<td><p>The Forlorn Mine</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4426</p></td>
-<td><p>Bor's Breath River</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4427</p></td>
-<td><p>Argent Vanguard</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4428</p></td>
-<td><p>Frosthold</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4429</p></td>
-<td><p>Grom'arsh Crash-Site</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4430</p></td>
-<td><p>Temple of Storms</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4431</p></td>
-<td><p>Engine of the Makers</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4432</p></td>
-<td><p>The Foot Steppes</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4433</p></td>
-<td><p>Dragonspine Peaks</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4434</p></td>
-<td><p>Nidavelir</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4435</p></td>
-<td><p>Narvir's Cradle</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4436</p></td>
-<td><p>Snowdrift Plains</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4437</p></td>
-<td><p>Valley of Ancient Winters</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4438</p></td>
-<td><p>Dun Niffelem</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4439</p></td>
-<td><p>Frostfield Lake</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4440</p></td>
-<td><p>Thunderfall</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4441</p></td>
-<td><p>Camp Tunka'lo</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4442</p></td>
-<td><p>Brann's Base-Camp</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4443</p></td>
-<td><p>Gate of Echoes</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4444</p></td>
-<td><p>Plain of Echoes</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4445</p></td>
-<td><p>Ulduar</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4446</p></td>
-<td><p>Terrace of the Makers</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4447</p></td>
-<td><p>Gate of Lightning</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4448</p></td>
-<td><p>Path of the Titans</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4449</p></td>
-<td><p>Uldis</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4450</p></td>
-<td><p>Loken's Bargain</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4451</p></td>
-<td><p>Bor's Fall</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4452</p></td>
-<td><p>Bor's Breath</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4453</p></td>
-<td><p>Rohemdal Pass</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4454</p></td>
-<td><p>The Storm Foundry</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4455</p></td>
-<td><p>Hibernal Cavern</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4456</p></td>
-<td><p>Voldrune Dwelling</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4457</p></td>
-<td><p>Torseg's Rest</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4458</p></td>
-<td><p>Sparksocket Minefield</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4459</p></td>
-<td><p>Ricket's Folly</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4460</p></td>
-<td><p>Garm's Bane</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4461</p></td>
-<td><p>Garm's Rise</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4462</p></td>
-<td><p>Crystalweb Cavern</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4463</p></td>
-<td><p>Temple of Life</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4464</p></td>
-<td><p>Temple of Order</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4465</p></td>
-<td><p>Temple of Winter</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4466</p></td>
-<td><p>Temple of Invention</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4467</p></td>
-<td><p>Death's Rise</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4468</p></td>
-<td><p>The Dead Fields</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4469</p></td>
-<td><p>Dargath's Demise</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4470</p></td>
-<td><p>The Hidden Hollow</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4471</p></td>
-<td><p>Bernau's Happy Fun Land</p></td>
-<td><p>451</p></td>
-<td><p>4019</p></td>
-</tr>
-<tr class="even">
-<td><p>4472</p></td>
-<td><p>Frostgrip's Hollow</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4473</p></td>
-<td><p>The Frigid Tomb</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4474</p></td>
-<td><p>Twin Shores</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4475</p></td>
-<td><p>Zim'bo's Hideout</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4476</p></td>
-<td><p>Abandoned Camp</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4477</p></td>
-<td><p>The Shadow Vault</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4478</p></td>
-<td><p>Coldwind Pass</p></td>
-<td><p>571</p></td>
-<td><p>65</p></td>
-</tr>
-<tr class="odd">
-<td><p>4479</p></td>
-<td><p>Winter's Breath Lake</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="even">
-<td><p>4480</p></td>
-<td><p>The Forgotten Overlook</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4481</p></td>
-<td><p>Jintha'kalar Passage</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4482</p></td>
-<td><p>Arriga Footbridge</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4483</p></td>
-<td><p>The Lost Passage</p></td>
-<td><p>571</p></td>
-<td><p>3711</p></td>
-</tr>
-<tr class="even">
-<td><p>4484</p></td>
-<td><p>Bouldercrag's Refuge</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4485</p></td>
-<td><p>The Inventor's Library</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4486</p></td>
-<td><p>The Frozen Mine</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4487</p></td>
-<td><p>Frostfloe Deep</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4488</p></td>
-<td><p>The Howling Hollow</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4489</p></td>
-<td><p>Crusader Forward Camp</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="even">
-<td><p>4490</p></td>
-<td><p>Stormcrest</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4491</p></td>
-<td><p>Bonesnap's Camp</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="even">
-<td><p>4492</p></td>
-<td><p>Ufrang's Hall</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4493</p></td>
-<td><p>The Obsidian Sanctum</p></td>
-<td><p>615</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4494</p></td>
-<td><p>Ahn'kahet: The Old Kingdom</p></td>
-<td><p>619</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4495</p></td>
-<td><p>Fjorn's Anvil</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4496</p></td>
-<td><p>Jotunheim</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4497</p></td>
-<td><p>Savage Ledge</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4498</p></td>
-<td><p>Halls of the Ancestors</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4499</p></td>
-<td><p>The Blighted Pool</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4500</p></td>
-<td><p>The Eye of Eternity</p></td>
-<td><p>616</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4501</p></td>
-<td><p>The Argent Vanguard</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4502</p></td>
-<td><p>Mimir's Workshop</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4503</p></td>
-<td><p>Ironwall Dam</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4504</p></td>
-<td><p>Valley of Echoes</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4505</p></td>
-<td><p>The Breach</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4506</p></td>
-<td><p>Scourgeholme</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4507</p></td>
-<td><p>The Broken Front</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4508</p></td>
-<td><p>Mord'rethar: The Death Gate</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4509</p></td>
-<td><p>The Bombardment</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4510</p></td>
-<td><p>Aldur'thar: The Desolation Gate</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4511</p></td>
-<td><p>The Skybreaker</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4512</p></td>
-<td><p>Orgrim's Hammer</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4513</p></td>
-<td><p>Ymirheim</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4514</p></td>
-<td><p>Saronite Mines</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4515</p></td>
-<td><p>The Conflagration</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4516</p></td>
-<td><p>Ironwall Rampart</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4517</p></td>
-<td><p>Weeping Quarry</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4518</p></td>
-<td><p>Corp'rethar: The Horror Gate</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4519</p></td>
-<td><p>The Court of Bones</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4520</p></td>
-<td><p>Malykriss: The Vile Hold</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4521</p></td>
-<td><p>Cathedral of Darkness</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4522</p></td>
-<td><p>Icecrown Citadel</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4523</p></td>
-<td><p>Icecrown Glacier</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4524</p></td>
-<td><p>Valhalas</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4525</p></td>
-<td><p>The Underhalls</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4526</p></td>
-<td><p>Njorndar Village</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4527</p></td>
-<td><p>Balargarde Fortress</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4528</p></td>
-<td><p>Kul'galar Keep</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4529</p></td>
-<td><p>The Crimson Cathedral</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4530</p></td>
-<td><p>Sanctum of Reanimation</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4531</p></td>
-<td><p>The Fleshwerks</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4532</p></td>
-<td><p>Vengeance Landing Inn</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4533</p></td>
-<td><p>Sindragosa's Fall</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4534</p></td>
-<td><p>Wildervar Mine</p></td>
-<td><p>571</p></td>
-<td><p>495</p></td>
-</tr>
-<tr class="odd">
-<td><p>4535</p></td>
-<td><p>The Pit of the Fang</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4536</p></td>
-<td><p>Frosthowl Cavern</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4537</p></td>
-<td><p>The Valley of Lost Hope</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4538</p></td>
-<td><p>The Sunken Ring</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4539</p></td>
-<td><p>The Broken Temple</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4540</p></td>
-<td><p>The Valley of Fallen Heroes</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4541</p></td>
-<td><p>Vanguard Infirmary</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4542</p></td>
-<td><p>Hall of the Shaper</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4543</p></td>
-<td><p>Temple of Wisdom</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4544</p></td>
-<td><p>Death's Breach</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>4545</p></td>
-<td><p>Abandoned Mine</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="even">
-<td><p>4546</p></td>
-<td><p>Ruins of the Scarlet Enclave</p></td>
-<td><p>0</p></td>
-<td><p>139</p></td>
-</tr>
-<tr class="odd">
-<td><p>4547</p></td>
-<td><p>Halls of Stone</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4548</p></td>
-<td><p>Halls of Lightning</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="odd">
-<td><p>4549</p></td>
-<td><p>The Great Tree</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="even">
-<td><p>4550</p></td>
-<td><p>The Mirror of Twilight</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="odd">
-<td><p>4551</p></td>
-<td><p>The Twilight Rivulet</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="even">
-<td><p>4552</p></td>
-<td><p>The Decrepit Flow</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="odd">
-<td><p>4553</p></td>
-<td><p>Forlorn Woods</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="even">
-<td><p>4554</p></td>
-<td><p>Ruins of Shandaral</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="odd">
-<td><p>4555</p></td>
-<td><p>The Azure Front</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="even">
-<td><p>4556</p></td>
-<td><p>Violet Stand</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="odd">
-<td><p>4557</p></td>
-<td><p>The Unbound Thicket</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="even">
-<td><p>4558</p></td>
-<td><p>Sunreaver's Command</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="odd">
-<td><p>4559</p></td>
-<td><p>Windrunner's Overlook</p></td>
-<td><p>571</p></td>
-<td><p>2817</p></td>
-</tr>
-<tr class="even">
-<td><p>4560</p></td>
-<td><p>The Underbelly</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4564</p></td>
-<td><p>Krasus' Landing</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4567</p></td>
-<td><p>The Violet Hold</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4568</p></td>
-<td><p>The Eventide</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4569</p></td>
-<td><p>Sewer Exit Pipe</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4570</p></td>
-<td><p>Circle of Wills</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4571</p></td>
-<td><p>Silverwing Flag Room</p></td>
-<td><p>489</p></td>
-<td><p>3277</p></td>
-</tr>
-<tr class="odd">
-<td><p>4572</p></td>
-<td><p>Warsong Flag Room</p></td>
-<td><p>489</p></td>
-<td><p>3277</p></td>
-</tr>
-<tr class="even">
-<td><p>4575</p></td>
-<td><p>Wintergrasp Fortress</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4576</p></td>
-<td><p>Central Bridge</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4577</p></td>
-<td><p>Eastern Bridge</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4578</p></td>
-<td><p>Western Bridge</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4579</p></td>
-<td><p>Dubra'Jin</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4580</p></td>
-<td><p>Crusaders' Pinnacle</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4581</p></td>
-<td><p>Flamewatch Tower</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4582</p></td>
-<td><p>Winter's Edge Tower</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4583</p></td>
-<td><p>Shadowsight Tower</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4584</p></td>
-<td><p>The Cauldron of Flames</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4585</p></td>
-<td><p>Glacial Falls</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4586</p></td>
-<td><p>Windy Bluffs</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4587</p></td>
-<td><p>The Forest of Shadows</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4588</p></td>
-<td><p>Blackwatch</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4589</p></td>
-<td><p>The Chilled Quagmire</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4590</p></td>
-<td><p>The Steppe of Life</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4591</p></td>
-<td><p>Silent Vigil</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4592</p></td>
-<td><p>Gimorak's Den</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4593</p></td>
-<td><p>The Pit of Fiends</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4594</p></td>
-<td><p>Battlescar Spire</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4595</p></td>
-<td><p>Hall of Horrors</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4596</p></td>
-<td><p>The Circle of Suffering</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4597</p></td>
-<td><p>Rise of Suffering</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4598</p></td>
-<td><p>Krasus' Landing</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4599</p></td>
-<td><p>Sewer Exit Pipe</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4601</p></td>
-<td><p>Dalaran Island</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4602</p></td>
-<td><p>Force Interior</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4603</p></td>
-<td><p>Vault of Archavon</p></td>
-<td><p>624</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4604</p></td>
-<td><p>Gate of the Red Sun</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="odd">
-<td><p>4605</p></td>
-<td><p>Gate of the Blue Sapphire</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="even">
-<td><p>4606</p></td>
-<td><p>Gate of the Green Emerald</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="odd">
-<td><p>4607</p></td>
-<td><p>Gate of the Purple Amethyst</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="even">
-<td><p>4608</p></td>
-<td><p>Gate of the Yellow Moon</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="odd">
-<td><p>4609</p></td>
-<td><p>Courtyard of the Ancients</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="even">
-<td><p>4610</p></td>
-<td><p>Landing Beach</p></td>
-<td><p>607</p></td>
-<td><p>4384</p></td>
-</tr>
-<tr class="odd">
-<td><p>4611</p></td>
-<td><p>Westspark Workshop</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="even">
-<td><p>4612</p></td>
-<td><p>Eastspark Workshop</p></td>
-<td><p>571</p></td>
-<td><p>4197</p></td>
-</tr>
-<tr class="odd">
-<td><p>4613</p></td>
-<td><p>Dalaran City</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4614</p></td>
-<td><p>The Violet Citadel Spire</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4615</p></td>
-<td><p>Naz'anak: The Forgotten Depths</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4616</p></td>
-<td><p>Sunreaver's Sanctuary</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4617</p></td>
-<td><p>Elevator</p></td>
-<td><p>0</p></td>
-<td><p>1497</p></td>
-</tr>
-<tr class="even">
-<td><p>4618</p></td>
-<td><p>Antonidas Memorial</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4619</p></td>
-<td><p>The Violet Citadel</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4620</p></td>
-<td><p>Magus Commerce Exchange</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4621</p></td>
-<td><p>UNUSED</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4622</p></td>
-<td><p>First Legion Forward Camp</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4623</p></td>
-<td><p>Hall of the Conquered Kings</p></td>
-<td><p>619</p></td>
-<td><p>4494</p></td>
-</tr>
-<tr class="even">
-<td><p>4624</p></td>
-<td><p>Befouled Terrace</p></td>
-<td><p>619</p></td>
-<td><p>4494</p></td>
-</tr>
-<tr class="odd">
-<td><p>4625</p></td>
-<td><p>The Desecrated Altar</p></td>
-<td><p>619</p></td>
-<td><p>4494</p></td>
-</tr>
-<tr class="even">
-<td><p>4626</p></td>
-<td><p>Shimmering Bog</p></td>
-<td><p>619</p></td>
-<td><p>4494</p></td>
-</tr>
-<tr class="odd">
-<td><p>4627</p></td>
-<td><p>Fallen Temple of Ahn'kahet</p></td>
-<td><p>619</p></td>
-<td><p>4494</p></td>
-</tr>
-<tr class="even">
-<td><p>4628</p></td>
-<td><p>Halls of Binding</p></td>
-<td><p>229</p></td>
-<td><p>1583</p></td>
-</tr>
-<tr class="odd">
-<td><p>4629</p></td>
-<td><p>Winter's Heart</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4630</p></td>
-<td><p>The North Sea</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4631</p></td>
-<td><p>The Broodmother's Nest</p></td>
-<td><p>571</p></td>
-<td><p>67</p></td>
-</tr>
-<tr class="even">
-<td><p>4632</p></td>
-<td><p>Dalaran Floating Rocks</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4633</p></td>
-<td><p>Raptor Pens</p></td>
-<td><p>600</p></td>
-<td><p>4196</p></td>
-</tr>
-<tr class="even">
-<td><p>4635</p></td>
-<td><p>Drak'Tharon Keep</p></td>
-<td><p>571</p></td>
-<td><p>66</p></td>
-</tr>
-<tr class="odd">
-<td><p>4636</p></td>
-<td><p>The Noxious Pass</p></td>
-<td><p>609</p></td>
-<td><p>4298</p></td>
-</tr>
-<tr class="even">
-<td><p>4637</p></td>
-<td><p>Vargoth's Retreat</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4638</p></td>
-<td><p>Violet Citadel Balcony</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4639</p></td>
-<td><p>Band of Variance</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4640</p></td>
-<td><p>Band of Acceleration</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4641</p></td>
-<td><p>Band of Transmutation</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="odd">
-<td><p>4642</p></td>
-<td><p>Band of Alignment</p></td>
-<td><p>571</p></td>
-<td><p>3537</p></td>
-</tr>
-<tr class="even">
-<td><p>4646</p></td>
-<td><p>Ashwood Lake</p></td>
-<td><p>571</p></td>
-<td><p>394</p></td>
-</tr>
-<tr class="odd">
-<td><p>4650</p></td>
-<td><p>Iron Concourse</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="even">
-<td><p>4652</p></td>
-<td><p>Formation Grounds</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="odd">
-<td><p>4653</p></td>
-<td><p>Razorscale's Aerie</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="even">
-<td><p>4654</p></td>
-<td><p>The Colossal Forge</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="odd">
-<td><p>4655</p></td>
-<td><p>The Scrapyard</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="even">
-<td><p>4656</p></td>
-<td><p>The Conservatory of Life</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="odd">
-<td><p>4657</p></td>
-<td><p>The Archivum</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="even">
-<td><p>4658</p></td>
-<td><p>Argent Tournament Grounds</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4665</p></td>
-<td><p>Expedition Base Camp</p></td>
-<td><p>603</p></td>
-<td><p>4273</p></td>
-</tr>
-<tr class="even">
-<td><p>4666</p></td>
-<td><p>Sunreaver Pavilion</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4667</p></td>
-<td><p>Silver Covenant Pavilion</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4668</p></td>
-<td><p>The Cooper Residence</p></td>
-<td><p>0</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="odd">
-<td><p>4669</p></td>
-<td><p>The Ring of Champions</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4670</p></td>
-<td><p>The Aspirants' Ring</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4671</p></td>
-<td><p>The Argent Valiants' Ring</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4672</p></td>
-<td><p>The Alliance Valiants' Ring</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4673</p></td>
-<td><p>The Horde Valiants' Ring</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4674</p></td>
-<td><p>Argent Pavilion</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4676</p></td>
-<td><p>Sunreaver Pavilion</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4677</p></td>
-<td><p>Silver Covenant Pavilion</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4679</p></td>
-<td><p>The Forlorn Cavern</p></td>
-<td><p>0</p></td>
-<td><p>1537</p></td>
-</tr>
-<tr class="even">
-<td><p>4688</p></td>
-<td><p>claytonio test area</p></td>
-<td><p>451</p></td>
-<td><p>151</p></td>
-</tr>
-<tr class="odd">
-<td><p>4692</p></td>
-<td><p>Quel'Delar's Rest</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4710</p></td>
-<td><p>Isle of Conquest</p></td>
-<td><p>628</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4722</p></td>
-<td><p>Trial of the Crusader</p></td>
-<td><p>649</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4723</p></td>
-<td><p>Trial of the Champion</p></td>
-<td><p>650</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4739</p></td>
-<td><p>Runeweaver Square</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="even">
-<td><p>4740</p></td>
-<td><p>The Silver Enclave</p></td>
-<td><p>571</p></td>
-<td><p>4395</p></td>
-</tr>
-<tr class="odd">
-<td><p>4741</p></td>
-<td><p>Isle of Conquest No Man's Land</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="even">
-<td><p>4742</p></td>
-<td><p>Hrothgar's Landing</p></td>
-<td><p>571</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4743</p></td>
-<td><p>Deathspeaker's Watch</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="even">
-<td><p>4747</p></td>
-<td><p>Workshop</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="odd">
-<td><p>4748</p></td>
-<td><p>Quarry</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="even">
-<td><p>4749</p></td>
-<td><p>Docks</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="odd">
-<td><p>4750</p></td>
-<td><p>Hangar</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="even">
-<td><p>4751</p></td>
-<td><p>Refinery</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="odd">
-<td><p>4752</p></td>
-<td><p>Horde Keep</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="even">
-<td><p>4753</p></td>
-<td><p>Alliance Keep</p></td>
-<td><p>628</p></td>
-<td><p>4710</p></td>
-</tr>
-<tr class="odd">
-<td><p>4760</p></td>
-<td><p>The Sea Reaver's Run</p></td>
-<td><p>571</p></td>
-<td><p>4742</p></td>
-</tr>
-<tr class="even">
-<td><p>4763</p></td>
-<td><p>Transport: Alliance Gunship</p></td>
-<td><p>641</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4764</p></td>
-<td><p>Transport: Horde Gunship</p></td>
-<td><p>642</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4769</p></td>
-<td><p>Hrothgar's Landing</p></td>
-<td><p>571</p></td>
-<td><p>4742</p></td>
-</tr>
-<tr class="odd">
-<td><p>4809</p></td>
-<td><p>The Forge of Souls</p></td>
-<td><p>632</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4812</p></td>
-<td><p>Icecrown Citadel</p></td>
-<td><p>631</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4813</p></td>
-<td><p>Pit of Saron</p></td>
-<td><p>658</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4820</p></td>
-<td><p>Halls of Reflection</p></td>
-<td><p>668</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4832</p></td>
-<td><p>Transport: Alliance Gunship (IGB)</p></td>
-<td><p>672</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4833</p></td>
-<td><p>Transport: Horde Gunship (IGB)</p></td>
-<td><p>673</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4859</p></td>
-<td><p>The Frozen Throne</p></td>
-<td><p>631</p></td>
-<td><p>4812</p></td>
-</tr>
-<tr class="even">
-<td><p>4862</p></td>
-<td><p>The Frozen Halls</p></td>
-<td><p>571</p></td>
-<td><p>210</p></td>
-</tr>
-<tr class="odd">
-<td><p>4889</p></td>
-<td><p>The Frost Queen's Lair</p></td>
-<td><p>631</p></td>
-<td><p>4812</p></td>
-</tr>
-<tr class="even">
-<td><p>4890</p></td>
-<td><p>Putricide's Laboratory of Alchemical Horrors and Fun</p></td>
-<td><p>631</p></td>
-<td><p>4812</p></td>
-</tr>
-<tr class="odd">
-<td><p>4891</p></td>
-<td><p>The Sanctum of Blood</p></td>
-<td><p>631</p></td>
-<td><p>4812</p></td>
-</tr>
-<tr class="even">
-<td><p>4892</p></td>
-<td><p>The Crimson Hall</p></td>
-<td><p>631</p></td>
-<td><p>4812</p></td>
-</tr>
-<tr class="odd">
-<td><p>4893</p></td>
-<td><p>The Frost Queen's Lair</p></td>
-<td><p>631</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4894</p></td>
-<td><p>Putricide's Laboratory of Alchemical Horrors and Fun</p></td>
-<td><p>631</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4895</p></td>
-<td><p>The Crimson Hall</p></td>
-<td><p>631</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4896</p></td>
-<td><p>The Frozen Throne</p></td>
-<td><p>631</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>4897</p></td>
-<td><p>The Sanctum of Blood</p></td>
-<td><p>631</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>4898</p></td>
-<td><p>Frostmourne</p></td>
-<td><p>631</p></td>
-<td><p>4896</p></td>
-</tr>
-<tr class="odd">
-<td><p>4904</p></td>
-<td><p>The Dark Approach</p></td>
-<td><p>658</p></td>
-<td><p>4813</p></td>
-</tr>
-<tr class="even">
-<td><p>4905</p></td>
-<td><p>Scourgelord's Command</p></td>
-<td><p>658</p></td>
-<td><p>4813</p></td>
-</tr>
-<tr class="odd">
-<td><p>4906</p></td>
-<td><p>The Shadow Throne</p></td>
-<td><p>668</p></td>
-<td><p>4820</p></td>
-</tr>
-<tr class="even">
-<td><p>4908</p></td>
-<td><p>The Hidden Passage</p></td>
-<td><p>668</p></td>
-<td><p>4820</p></td>
-</tr>
-<tr class="odd">
-<td><p>4910</p></td>
-<td><p>Frostmourne</p></td>
-<td><p>631</p></td>
-<td><p>4812</p></td>
-</tr>
-<tr class="even">
-<td><p>4987</p></td>
-<td><p>The Ruby Sanctum</p></td>
-<td><p>724</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-
-
+| Field Nb | Name                                                 | MapID | AreaID |
+|----------|------------------------------------------------------|-------|--------|
+| 1        | Dun Morogh                                           | 0     | 0      |
+| 2        | Longshore                                            | 0     | 40     |
+| 3        | Badlands                                             | 0     | 0      |
+| 4        | Blasted Lands                                        | 0     | 0      |
+| 7        | Blackwater Cove                                      | 0     | 33     |
+| 8        | Swamp of Sorrows                                     | 0     | 0      |
+| 9        | Northshire Valley                                    | 0     | 12     |
+| 10       | Duskwood                                             | 0     | 0      |
+| 11       | Wetlands                                             | 0     | 0      |
+| 12       | Elwynn Forest                                        | 0     | 0      |
+| 13       | The World Tree                                       | 0     | 10     |
+| 14       | Durotar                                              | 1     | 0      |
+| 15       | Dustwallow Marsh                                     | 1     | 0      |
+| 16       | Azshara                                              | 1     | 0      |
+| 17       | The Barrens                                          | 1     | 0      |
+| 18       | Crystal Lake                                         | 0     | 12     |
+| 19       | Zul'Gurub                                            | 0     | 33     |
+| 20       | Moonbrook                                            | 0     | 40     |
+| 21       | Kul Tiras                                            | 0     | 0      |
+| 22       | Programmer Isle                                      | 451   | 0      |
+| 23       | Northshire River                                     | 0     | 12     |
+| 24       | Northshire Abbey                                     | 0     | 12     |
+| 25       | Blackrock Mountain                                   | 0     | 0      |
+| 26       | Lighthouse                                           | 0     | 40     |
+| 28       | Western Plaguelands                                  | 0     | 0      |
+| 30       | Nine                                                 | 0     | 0      |
+| 32       | The Cemetary                                         | 0     | 10     |
+| 33       | Stranglethorn Vale                                   | 0     | 0      |
+| 34       | Echo Ridge Mine                                      | 0     | 12     |
+| 35       | Booty Bay                                            | 0     | 33     |
+| 36       | Alterac Mountains                                    | 0     | 0      |
+| 37       | Lake Nazferiti                                       | 0     | 33     |
+| 38       | Loch Modan                                           | 0     | 0      |
+| 40       | Westfall                                             | 0     | 0      |
+| 41       | Deadwind Pass                                        | 0     | 0      |
+| 42       | Darkshire                                            | 0     | 10     |
+| 43       | Wild Shore                                           | 0     | 33     |
+| 44       | Redridge Mountains                                   | 0     | 0      |
+| 45       | Arathi Highlands                                     | 0     | 0      |
+| 46       | Burning Steppes                                      | 0     | 0      |
+| 47       | The Hinterlands                                      | 0     | 0      |
+| 49       | Dead Man's Hole                                      | 451   | 22     |
+| 51       | Searing Gorge                                        | 0     | 0      |
+| 53       | Thieves Camp                                         | 0     | 12     |
+| 54       | Jasperlode Mine                                      | 0     | 12     |
+| 55       | Valley of Heroes UNUSED                              | 0     | 12     |
+| 56       | Heroes' Vigil                                        | 0     | 12     |
+| 57       | Fargodeep Mine                                       | 0     | 12     |
+| 59       | Northshire Vineyards                                 | 0     | 12     |
+| 60       | Forest's Edge                                        | 0     | 12     |
+| 61       | Thunder Falls                                        | 0     | 12     |
+| 62       | Brackwell Pumpkin Patch                              | 0     | 12     |
+| 63       | The Stonefield Farm                                  | 0     | 12     |
+| 64       | The Maclure Vineyards                                | 0     | 12     |
+| 65       | Dragonblight                                         | 571   | 0      |
+| 66       | Zul'Drak                                             | 571   | 0      |
+| 67       | The Storm Peaks                                      | 571   | 0      |
+| 68       | Lake Everstill                                       | 0     | 44     |
+| 69       | Lakeshire                                            | 0     | 44     |
+| 70       | Stonewatch                                           | 0     | 44     |
+| 71       | Stonewatch Falls                                     | 0     | 44     |
+| 72       | The Dark Portal                                      | 0     | 4      |
+| 73       | The Tainted Scar                                     | 0     | 4      |
+| 74       | Pool of Tears                                        | 0     | 8      |
+| 75       | Stonard                                              | 0     | 8      |
+| 76       | Fallow Sanctuary                                     | 0     | 8      |
+| 77       | Anvilmar                                             | 0     | 1      |
+| 80       | Stormwind Mountains                                  | 0     | 12     |
+| 81       | Jeff NE Quadrant Changed                             | 451   | 22     |
+| 82       | Jeff NW Quadrant                                     | 451   | 22     |
+| 83       | Jeff SE Quadrant                                     | 451   | 22     |
+| 84       | Jeff SW Quadrant                                     | 451   | 22     |
+| 85       | Tirisfal Glades                                      | 0     | 0      |
+| 86       | Stone Cairn Lake                                     | 0     | 12     |
+| 87       | Goldshire                                            | 0     | 12     |
+| 88       | Eastvale Logging Camp                                | 0     | 12     |
+| 89       | Mirror Lake Orchard                                  | 0     | 12     |
+| 91       | Tower of Azora                                       | 0     | 12     |
+| 92       | Mirror Lake                                          | 0     | 12     |
+| 93       | Vul'Gol Ogre Mound                                   | 0     | 10     |
+| 94       | Raven Hill                                           | 0     | 10     |
+| 95       | Redridge Canyons                                     | 0     | 44     |
+| 96       | Tower of Ilgalar                                     | 0     | 44     |
+| 97       | Alther's Mill                                        | 0     | 44     |
+| 98       | Rethban Caverns                                      | 0     | 44     |
+| 99       | Rebel Camp                                           | 0     | 33     |
+| 100      | Nesingwary's Expedition                              | 0     | 33     |
+| 101      | Kurzen's Compound                                    | 0     | 33     |
+| 102      | Ruins of Zul'Kunda                                   | 0     | 33     |
+| 103      | Ruins of Zul'Mamwe                                   | 0     | 33     |
+| 104      | The Vile Reef                                        | 0     | 33     |
+| 105      | Mosh'Ogg Ogre Mound                                  | 0     | 33     |
+| 106      | The Stockpile                                        | 0     | 33     |
+| 107      | Saldean's Farm                                       | 0     | 40     |
+| 108      | Sentinel Hill                                        | 0     | 40     |
+| 109      | Furlbrow's Pumpkin Farm                              | 0     | 40     |
+| 111      | Jangolode Mine                                       | 0     | 40     |
+| 113      | Gold Coast Quarry                                    | 0     | 40     |
+| 115      | Westfall Lighthouse                                  | 0     | 40     |
+| 116      | Misty Valley                                         | 0     | 8      |
+| 117      | Grom'gol Base Camp                                   | 0     | 33     |
+| 118      | Whelgar's Excavation Site                            | 0     | 11     |
+| 120      | Westbrook Garrison                                   | 0     | 12     |
+| 121      | Tranquil Gardens Cemetery                            | 0     | 10     |
+| 122      | Zuuldaia Ruins                                       | 0     | 33     |
+| 123      | Bal'lal Ruins                                        | 0     | 33     |
+| 125      | Kal'ai Ruins                                         | 0     | 33     |
+| 126      | Tkashi Ruins                                         | 0     | 33     |
+| 127      | Balia'mah Ruins                                      | 0     | 33     |
+| 128      | Ziata'jai Ruins                                      | 0     | 33     |
+| 129      | Mizjah Ruins                                         | 0     | 33     |
+| 130      | Silverpine Forest                                    | 0     | 0      |
+| 131      | Kharanos                                             | 0     | 1      |
+| 132      | Coldridge Valley                                     | 0     | 1      |
+| 133      | Gnomeregan                                           | 0     | 1      |
+| 134      | Gol'Bolar Quarry                                     | 0     | 1      |
+| 135      | Frostmane Hold                                       | 0     | 1      |
+| 136      | The Grizzled Den                                     | 0     | 1      |
+| 137      | Brewnall Village                                     | 0     | 1      |
+| 138      | Misty Pine Refuge                                    | 0     | 1      |
+| 139      | Eastern Plaguelands                                  | 0     | 0      |
+| 141      | Teldrassil                                           | 1     | 0      |
+| 142      | Ironband's Excavation Site                           | 0     | 38     |
+| 143      | Mo'grosh Stronghold                                  | 0     | 38     |
+| 144      | Thelsamar                                            | 0     | 38     |
+| 145      | Algaz Gate                                           | 0     | 38     |
+| 146      | Stonewrought Dam                                     | 0     | 38     |
+| 147      | The Farstrider Lodge                                 | 0     | 38     |
+| 148      | Darkshore                                            | 1     | 0      |
+| 149      | Silver Stream Mine                                   | 0     | 38     |
+| 150      | Menethil Harbor                                      | 0     | 11     |
+| 151      | Designer Island                                      | 451   | 0      |
+| 152      | The Bulwark                                          | 0     | 85     |
+| 153      | Ruins of Lordaeron                                   | 0     | 85     |
+| 154      | Deathknell                                           | 0     | 85     |
+| 155      | Night Web's Hollow                                   | 0     | 85     |
+| 156      | Solliden Farmstead                                   | 0     | 85     |
+| 157      | Agamand Mills                                        | 0     | 85     |
+| 158      | Agamand Family Crypt                                 | 0     | 85     |
+| 159      | Brill                                                | 0     | 85     |
+| 160      | Whispering Gardens                                   | 0     | 85     |
+| 161      | Terrace of Repose                                    | 0     | 85     |
+| 162      | Brightwater Lake                                     | 0     | 85     |
+| 163      | Gunther's Retreat                                    | 0     | 85     |
+| 164      | Garren's Haunt                                       | 0     | 85     |
+| 165      | Balnir Farmstead                                     | 0     | 85     |
+| 166      | Cold Hearth Manor                                    | 0     | 85     |
+| 167      | Crusader Outpost                                     | 0     | 85     |
+| 168      | The North Coast                                      | 0     | 85     |
+| 169      | Whispering Shore                                     | 0     | 85     |
+| 170      | Lordamere Lake                                       | 0     | 0      |
+| 172      | Fenris Isle                                          | 0     | 130    |
+| 173      | Faol's Rest                                          | 0     | 85     |
+| 186      | Dolanaar                                             | 1     | 141    |
+| 187      | Darnassus UNUSED                                     | 1     | 141    |
+| 188      | Shadowglen                                           | 1     | 141    |
+| 189      | Steelgrill's Depot                                   | 0     | 1      |
+| 190      | Hearthglen                                           | 0     | 28     |
+| 192      | Northridge Lumber Camp                               | 0     | 28     |
+| 193      | Ruins of Andorhal                                    | 0     | 28     |
+| 195      | School of Necromancy                                 | 0     | 28     |
+| 196      | Uther's Tomb                                         | 0     | 28     |
+| 197      | Sorrow Hill                                          | 0     | 28     |
+| 198      | The Weeping Cave                                     | 0     | 28     |
+| 199      | Felstone Field                                       | 0     | 28     |
+| 200      | Dalson's Tears                                       | 0     | 28     |
+| 201      | Gahrron's Withering                                  | 0     | 28     |
+| 202      | The Writhing Haunt                                   | 0     | 28     |
+| 203      | Mardenholde Keep                                     | 0     | 28     |
+| 204      | Pyrewood Village                                     | 0     | 130    |
+| 205      | Dun Modr                                             | 0     | 11     |
+| 206      | Utgarde Keep                                         | 574   | 0      |
+| 207      | The Great Sea                                        | 36    | 0      |
+| 208      | Unused Ironcladcove                                  | 36    | 0      |
+| 209      | Shadowfang Keep                                      | 33    | 0      |
+| 210      | Icecrown                                             | 571   | 0      |
+| 211      | Iceflow Lake                                         | 0     | 1      |
+| 212      | Helm's Bed Lake                                      | 0     | 1      |
+| 213      | Deep Elem Mine                                       | 0     | 130    |
+| 214      | The Great Sea                                        | 0     | 0      |
+| 215      | Mulgore                                              | 1     | 0      |
+| 219      | Alexston Farmstead                                   | 0     | 40     |
+| 220      | Red Cloud Mesa                                       | 1     | 215    |
+| 221      | Camp Narache                                         | 1     | 215    |
+| 222      | Bloodhoof Village                                    | 1     | 215    |
+| 223      | Stonebull Lake                                       | 1     | 215    |
+| 224      | Ravaged Caravan                                      | 1     | 215    |
+| 225      | Red Rocks                                            | 1     | 215    |
+| 226      | The Skittering Dark                                  | 0     | 130    |
+| 227      | Valgan's Field                                       | 0     | 130    |
+| 228      | The Sepulcher                                        | 0     | 130    |
+| 229      | Olsen's Farthing                                     | 0     | 130    |
+| 230      | The Greymane Wall                                    | 0     | 130    |
+| 231      | Beren's Peril                                        | 0     | 130    |
+| 232      | The Dawning Isles                                    | 0     | 130    |
+| 233      | Ambermill                                            | 0     | 130    |
+| 235      | Fenris Keep                                          | 0     | 130    |
+| 236      | Shadowfang Keep                                      | 0     | 130    |
+| 237      | The Decrepit Ferry                                   | 0     | 130    |
+| 238      | Malden's Orchard                                     | 0     | 130    |
+| 239      | The Ivar Patch                                       | 0     | 130    |
+| 240      | The Dead Field                                       | 0     | 130    |
+| 241      | The Rotting Orchard                                  | 0     | 10     |
+| 242      | Brightwood Grove                                     | 0     | 10     |
+| 243      | Forlorn Rowe                                         | 0     | 10     |
+| 244      | The Whipple Estate                                   | 0     | 10     |
+| 245      | The Yorgen Farmstead                                 | 0     | 10     |
+| 246      | The Cauldron                                         | 0     | 51     |
+| 247      | Grimesilt Dig Site                                   | 0     | 51     |
+| 249      | Dreadmaul Rock                                       | 0     | 46     |
+| 250      | Ruins of Thaurissan                                  | 0     | 46     |
+| 251      | Flame Crest                                          | 0     | 46     |
+| 252      | Blackrock Stronghold                                 | 0     | 46     |
+| 253      | The Pillar of Ash                                    | 0     | 46     |
+| 254      | Blackrock Mountain                                   | 0     | 46     |
+| 255      | Altar of Storms                                      | 0     | 46     |
+| 256      | Aldrassil                                            | 1     | 141    |
+| 257      | Shadowthread Cave                                    | 1     | 141    |
+| 258      | Fel Rock                                             | 1     | 141    |
+| 259      | Lake Al'Ameth                                        | 1     | 141    |
+| 260      | Starbreeze Village                                   | 1     | 141    |
+| 261      | Gnarlpine Hold                                       | 1     | 141    |
+| 262      | Ban'ethil Barrow Den                                 | 1     | 141    |
+| 263      | The Cleft                                            | 1     | 141    |
+| 264      | The Oracle Glade                                     | 1     | 141    |
+| 265      | Wellspring River                                     | 1     | 141    |
+| 266      | Wellspring Lake                                      | 1     | 141    |
+| 267      | Hillsbrad Foothills                                  | 0     | 0      |
+| 268      | Azshara Crater                                       | 37    | 0      |
+| 269      | Dun Algaz                                            | 0     | 0      |
+| 271      | Southshore                                           | 0     | 267    |
+| 272      | Tarren Mill                                          | 0     | 267    |
+| 275      | Durnholde Keep                                       | 0     | 267    |
+| 276      | UNUSED Stonewrought Pass                             | 0     | 0      |
+| 277      | The Foothill Caverns                                 | 0     | 36     |
+| 278      | Lordamere Internment Camp                            | 0     | 36     |
+| 279      | Dalaran Crater                                       | 0     | 36     |
+| 280      | Strahnbrad                                           | 0     | 36     |
+| 281      | Ruins of Alterac                                     | 0     | 36     |
+| 282      | Crushridge Hold                                      | 0     | 36     |
+| 283      | Slaughter Hollow                                     | 0     | 36     |
+| 284      | The Uplands                                          | 0     | 36     |
+| 285      | Southpoint Tower                                     | 0     | 267    |
+| 286      | Hillsbrad Fields                                     | 0     | 267    |
+| 287      | Hillsbrad                                            | 0     | 267    |
+| 288      | Azurelode Mine                                       | 0     | 267    |
+| 289      | Nethander Stead                                      | 0     | 267    |
+| 290      | Dun Garok                                            | 0     | 267    |
+| 293      | Thoradin's Wall                                      | 0     | 0      |
+| 294      | Eastern Strand                                       | 0     | 267    |
+| 295      | Western Strand                                       | 0     | 267    |
+| 296      | South Seas UNUSED                                    | 0     | 0      |
+| 297      | Jaguero Isle                                         | 0     | 33     |
+| 298      | Baradin Bay                                          | 0     | 11     |
+| 299      | Menethil Bay                                         | 0     | 11     |
+| 300      | Misty Reed Strand                                    | 0     | 8      |
+| 301      | The Savage Coast                                     | 0     | 33     |
+| 302      | The Crystal Shore                                    | 0     | 33     |
+| 303      | Shell Beach                                          | 0     | 33     |
+| 305      | North Tide's Run                                     | 0     | 130    |
+| 306      | South Tide's Run                                     | 0     | 130    |
+| 307      | The Overlook Cliffs                                  | 0     | 47     |
+| 308      | The Forbidding Sea                                   | 0     | 0      |
+| 309      | Ironbeard's Tomb                                     | 0     | 11     |
+| 310      | Crystalvein Mine                                     | 0     | 33     |
+| 311      | Ruins of Aboraz                                      | 0     | 33     |
+| 312      | Janeiro's Point                                      | 0     | 33     |
+| 313      | Northfold Manor                                      | 0     | 45     |
+| 314      | Go'Shek Farm                                         | 0     | 45     |
+| 315      | Dabyrie's Farmstead                                  | 0     | 45     |
+| 316      | Boulderfist Hall                                     | 0     | 45     |
+| 317      | Witherbark Village                                   | 0     | 45     |
+| 318      | Drywhisker Gorge                                     | 0     | 45     |
+| 320      | Refuge Pointe                                        | 0     | 45     |
+| 321      | Hammerfall                                           | 0     | 45     |
+| 322      | Blackwater Shipwrecks                                | 0     | 45     |
+| 323      | O'Breen's Camp                                       | 0     | 45     |
+| 324      | Stromgarde Keep                                      | 0     | 45     |
+| 325      | The Tower of Arathor                                 | 0     | 45     |
+| 326      | The Sanctum                                          | 0     | 45     |
+| 327      | Faldir's Cove                                        | 0     | 45     |
+| 328      | The Drowned Reef                                     | 0     | 45     |
+| 330      | Thandol Span                                         | 0     | 0      |
+| 331      | Ashenvale                                            | 1     | 0      |
+| 332      | The Great Sea                                        | 1     | 0      |
+| 333      | Circle of East Binding                               | 0     | 45     |
+| 334      | Circle of West Binding                               | 0     | 45     |
+| 335      | Circle of Inner Binding                              | 0     | 45     |
+| 336      | Circle of Outer Binding                              | 0     | 45     |
+| 337      | Apocryphan's Rest                                    | 0     | 3      |
+| 338      | Angor Fortress                                       | 0     | 3      |
+| 339      | Lethlor Ravine                                       | 0     | 3      |
+| 340      | Kargath                                              | 0     | 3      |
+| 341      | Camp Kosh                                            | 0     | 3      |
+| 342      | Camp Boff                                            | 0     | 3      |
+| 343      | Camp Wurg                                            | 0     | 3      |
+| 344      | Camp Cagg                                            | 0     | 3      |
+| 345      | Agmond's End                                         | 0     | 3      |
+| 346      | Hammertoe's Digsite                                  | 0     | 3      |
+| 347      | Dustbelch Grotto                                     | 0     | 3      |
+| 348      | Aerie Peak                                           | 0     | 47     |
+| 349      | Wildhammer Keep                                      | 0     | 47     |
+| 350      | Quel'Danil Lodge                                     | 0     | 47     |
+| 351      | Skulk Rock                                           | 0     | 47     |
+| 352      | Zun'watha                                            | 0     | 47     |
+| 353      | Shadra'Alor                                          | 0     | 47     |
+| 354      | Jintha'Alor                                          | 0     | 47     |
+| 355      | The Altar of Zul                                     | 0     | 47     |
+| 356      | Seradane                                             | 0     | 47     |
+| 357      | Feralas                                              | 1     | 0      |
+| 358      | Brambleblade Ravine                                  | 1     | 215    |
+| 359      | Bael Modan                                           | 1     | 17     |
+| 360      | The Venture Co. Mine                                 | 1     | 215    |
+| 361      | Felwood                                              | 1     | 0      |
+| 362      | Razor Hill                                           | 1     | 14     |
+| 363      | Valley of Trials                                     | 1     | 14     |
+| 364      | The Den                                              | 1     | 14     |
+| 365      | Burning Blade Coven                                  | 1     | 14     |
+| 366      | Kolkar Crag                                          | 1     | 14     |
+| 367      | Sen'jin Village                                      | 1     | 14     |
+| 368      | Echo Isles                                           | 1     | 14     |
+| 369      | Thunder Ridge                                        | 1     | 14     |
+| 370      | Drygulch Ravine                                      | 1     | 14     |
+| 371      | Dustwind Cave                                        | 1     | 14     |
+| 372      | Tiragarde Keep                                       | 1     | 14     |
+| 373      | Scuttle Coast                                        | 1     | 14     |
+| 374      | Bladefist Bay                                        | 1     | 14     |
+| 375      | Deadeye Shore                                        | 1     | 14     |
+| 377      | Southfury River                                      | 1     | 0      |
+| 378      | Camp Taurajo                                         | 1     | 17     |
+| 379      | Far Watch Post                                       | 1     | 17     |
+| 380      | The Crossroads                                       | 1     | 17     |
+| 381      | Boulder Lode Mine                                    | 1     | 17     |
+| 382      | The Sludge Fen                                       | 1     | 17     |
+| 383      | The Dry Hills                                        | 1     | 17     |
+| 384      | Dreadmist Peak                                       | 1     | 17     |
+| 385      | Northwatch Hold                                      | 1     | 17     |
+| 386      | The Forgotten Pools                                  | 1     | 17     |
+| 387      | Lushwater Oasis                                      | 1     | 17     |
+| 388      | The Stagnant Oasis                                   | 1     | 17     |
+| 390      | Field of Giants                                      | 1     | 17     |
+| 391      | The Merchant Coast                                   | 1     | 17     |
+| 392      | Ratchet                                              | 1     | 17     |
+| 393      | Darkspear Strand                                     | 1     | 14     |
+| 394      | Grizzly Hills                                        | 571   | 0      |
+| 395      | Grizzlemaw                                           | 571   | 394    |
+| 396      | Winterhoof Water Well                                | 1     | 215    |
+| 397      | Thunderhorn Water Well                               | 1     | 215    |
+| 398      | Wildmane Water Well                                  | 1     | 215    |
+| 399      | Skyline Ridge                                        | 1     | 215    |
+| 400      | Thousand Needles                                     | 1     | 0      |
+| 401      | The Tidus Stair                                      | 1     | 17     |
+| 403      | Shady Rest Inn                                       | 1     | 15     |
+| 404      | Bael'dun Digsite                                     | 1     | 215    |
+| 405      | Desolace                                             | 1     | 0      |
+| 406      | Stonetalon Mountains                                 | 1     | 0      |
+| 407      | Orgrimmar UNUSED                                     | 1     | 14     |
+| 408      | Gillijim's Isle                                      | 0     | 0      |
+| 409      | Island of Doctor Lapidis                             | 0     | 0      |
+| 410      | Razorwind Canyon                                     | 1     | 14     |
+| 411      | Bathran's Haunt                                      | 1     | 331    |
+| 412      | The Ruins of Ordil'Aran                              | 1     | 331    |
+| 413      | Maestra's Post                                       | 1     | 331    |
+| 414      | The Zoram Strand                                     | 1     | 331    |
+| 415      | Astranaar                                            | 1     | 331    |
+| 416      | The Shrine of Aessina                                | 1     | 331    |
+| 417      | Fire Scar Shrine                                     | 1     | 331    |
+| 418      | The Ruins of Stardust                                | 1     | 331    |
+| 419      | The Howling Vale                                     | 1     | 331    |
+| 420      | Silverwind Refuge                                    | 1     | 331    |
+| 421      | Mystral Lake                                         | 1     | 331    |
+| 422      | Fallen Sky Lake                                      | 1     | 331    |
+| 424      | Iris Lake                                            | 1     | 331    |
+| 425      | Moonwell                                             | 1     | 331    |
+| 426      | Raynewood Retreat                                    | 1     | 331    |
+| 427      | The Shady Nook                                       | 1     | 331    |
+| 428      | Night Run                                            | 1     | 331    |
+| 429      | Xavian                                               | 1     | 331    |
+| 430      | Satyrnaar                                            | 1     | 331    |
+| 431      | Splintertree Post                                    | 1     | 331    |
+| 432      | The Dor'Danil Barrow Den                             | 1     | 331    |
+| 433      | Falfarren River                                      | 1     | 331    |
+| 434      | Felfire Hill                                         | 1     | 331    |
+| 435      | Demon Fall Canyon                                    | 1     | 331    |
+| 436      | Demon Fall Ridge                                     | 1     | 331    |
+| 437      | Warsong Lumber Camp                                  | 1     | 331    |
+| 438      | Bough Shadow                                         | 1     | 331    |
+| 439      | The Shimmering Flats                                 | 1     | 400    |
+| 440      | Tanaris                                              | 1     | 0      |
+| 441      | Lake Falathim                                        | 1     | 331    |
+| 442      | Auberdine                                            | 1     | 148    |
+| 443      | Ruins of Mathystra                                   | 1     | 148    |
+| 444      | Tower of Althalaxx                                   | 1     | 148    |
+| 445      | Cliffspring Falls                                    | 1     | 148    |
+| 446      | Bashal'Aran                                          | 1     | 148    |
+| 447      | Ameth'Aran                                           | 1     | 148    |
+| 448      | Grove of the Ancients                                | 1     | 148    |
+| 449      | The Master's Glaive                                  | 1     | 148    |
+| 450      | Remtravel's Excavation                               | 1     | 148    |
+| 452      | Mist's Edge                                          | 1     | 148    |
+| 453      | The Long Wash                                        | 1     | 148    |
+| 454      | Wildbend River                                       | 1     | 148    |
+| 455      | Blackwood Den                                        | 1     | 148    |
+| 456      | Cliffspring River                                    | 1     | 148    |
+| 457      | The Veiled Sea                                       | 1     | 0      |
+| 458      | Gold Road                                            | 1     | 17     |
+| 459      | Scarlet Watch Post                                   | 0     | 85     |
+| 460      | Sun Rock Retreat                                     | 1     | 406    |
+| 461      | Windshear Crag                                       | 1     | 406    |
+| 463      | Cragpool Lake                                        | 1     | 406    |
+| 464      | Mirkfallon Lake                                      | 1     | 406    |
+| 465      | The Charred Vale                                     | 1     | 406    |
+| 466      | Valley of the Bloodfuries                            | 1     | 406    |
+| 467      | Stonetalon Peak                                      | 1     | 406    |
+| 468      | The Talon Den                                        | 1     | 406    |
+| 469      | Greatwood Vale                                       | 1     | 406    |
+| 470      | Thunder Bluff UNUSED                                 | 1     | 215    |
+| 471      | Brave Wind Mesa                                      | 1     | 215    |
+| 472      | Fire Stone Mesa                                      | 1     | 215    |
+| 473      | Mantle Rock                                          | 1     | 215    |
+| 474      | Hunter Rise UNUSED                                   | 1     | 215    |
+| 475      | Spirit RiseUNUSED                                    | 1     | 215    |
+| 476      | Elder RiseUNUSED                                     | 1     | 215    |
+| 477      | Ruins of Jubuwal                                     | 0     | 33     |
+| 478      | Pools of Arlithrien                                  | 1     | 141    |
+| 479      | The Rustmaul Dig Site                                | 1     | 400    |
+| 480      | Camp E'thok                                          | 1     | 400    |
+| 481      | Splithoof Crag                                       | 1     | 400    |
+| 482      | Highperch                                            | 1     | 400    |
+| 483      | The Screeching Canyon                                | 1     | 400    |
+| 484      | Freewind Post                                        | 1     | 400    |
+| 485      | The Great Lift                                       | 1     | 400    |
+| 486      | Galak Hold                                           | 1     | 400    |
+| 487      | Roguefeather Den                                     | 1     | 400    |
+| 488      | The Weathered Nook                                   | 1     | 400    |
+| 489      | Thalanaar                                            | 1     | 357    |
+| 490      | Un'Goro Crater                                       | 1     | 0      |
+| 491      | Razorfen Kraul                                       | 47    | 0      |
+| 492      | Raven Hill Cemetery                                  | 0     | 10     |
+| 493      | Moonglade                                            | 1     | 0      |
+| 495      | Howling Fjord                                        | 571   | 0      |
+| 496      | Brackenwall Village                                  | 1     | 15     |
+| 497      | Swamplight Manor                                     | 1     | 15     |
+| 498      | Bloodfen Burrow                                      | 1     | 15     |
+| 499      | Darkmist Cavern                                      | 1     | 15     |
+| 500      | Moggle Point                                         | 1     | 15     |
+| 501      | Beezil's Wreck                                       | 1     | 15     |
+| 502      | Witch Hill                                           | 1     | 15     |
+| 503      | Sentry Point                                         | 1     | 15     |
+| 504      | North Point Tower                                    | 1     | 15     |
+| 505      | West Point Tower                                     | 1     | 15     |
+| 506      | Lost Point                                           | 1     | 15     |
+| 507      | Bluefen                                              | 1     | 15     |
+| 508      | Stonemaul Ruins                                      | 1     | 15     |
+| 509      | The Den of Flame                                     | 1     | 15     |
+| 510      | The Dragonmurk                                       | 1     | 15     |
+| 511      | Wyrmbog                                              | 1     | 15     |
+| 512      | Blackhoof Village                                    | 1     | 15     |
+| 513      | Theramore Isle                                       | 1     | 15     |
+| 514      | Foothold Citadel                                     | 1     | 15     |
+| 515      | Ironclad Prison                                      | 1     | 15     |
+| 516      | Dustwallow Bay                                       | 1     | 15     |
+| 517      | Tidefury Cove                                        | 1     | 15     |
+| 518      | Dreadmurk Shore                                      | 1     | 15     |
+| 536      | Addle's Stead                                        | 0     | 10     |
+| 537      | Fire Plume Ridge                                     | 1     | 490    |
+| 538      | Lakkari Tar Pits                                     | 1     | 490    |
+| 539      | Terror Run                                           | 1     | 490    |
+| 540      | The Slithering Scar                                  | 1     | 490    |
+| 541      | Marshal's Refuge                                     | 1     | 490    |
+| 542      | Fungal Rock                                          | 1     | 490    |
+| 543      | Golakka Hot Springs                                  | 1     | 490    |
+| 556      | The Loch                                             | 0     | 38     |
+| 576      | Beggar's Haunt                                       | 0     | 10     |
+| 596      | Kodo Graveyard                                       | 1     | 405    |
+| 597      | Ghost Walker Post                                    | 1     | 405    |
+| 598      | Sar'theris Strand                                    | 1     | 405    |
+| 599      | Thunder Axe Fortress                                 | 1     | 405    |
+| 600      | Bolgan's Hole                                        | 1     | 405    |
+| 602      | Mannoroc Coven                                       | 1     | 405    |
+| 603      | Sargeron                                             | 1     | 405    |
+| 604      | Magram Village                                       | 1     | 405    |
+| 606      | Gelkis Village                                       | 1     | 405    |
+| 607      | Valley of Spears                                     | 1     | 405    |
+| 608      | Nijel's Point                                        | 1     | 405    |
+| 609      | Kolkar Village                                       | 1     | 405    |
+| 616      | Hyjal                                                | 1     | 0      |
+| 618      | Winterspring                                         | 1     | 0      |
+| 636      | Blackwolf River                                      | 1     | 406    |
+| 637      | Kodo Rock                                            | 1     | 215    |
+| 638      | Hidden Path                                          | 1     | 14     |
+| 639      | Spirit Rock                                          | 1     | 14     |
+| 640      | Shrine of the Dormant Flame                          | 1     | 14     |
+| 656      | Lake Elune'ara                                       | 1     | 493    |
+| 657      | The Harborage                                        | 0     | 8      |
+| 676      | Outland                                              | 150   | 0      |
+| 696      | Craftsmen's Terrace UNUSED                           | 1     | 141    |
+| 697      | Tradesmen's Terrace UNUSED                           | 1     | 141    |
+| 698      | The Temple Gardens UNUSED                            | 1     | 141    |
+| 699      | Temple of Elune UNUSED                               | 1     | 141    |
+| 700      | Cenarion Enclave UNUSED                              | 1     | 141    |
+| 701      | Warrior's Terrace UNUSED                             | 1     | 141    |
+| 702      | Rut'theran Village                                   | 1     | 141    |
+| 716      | Ironband's Compound                                  | 0     | 1      |
+| 717      | The Stockade                                         | 34    | 0      |
+| 718      | Wailing Caverns                                      | 43    | 0      |
+| 719      | Blackfathom Deeps                                    | 48    | 0      |
+| 720      | Fray Island                                          | 1     | 17     |
+| 721      | Gnomeregan                                           | 90    | 0      |
+| 722      | Razorfen Downs                                       | 129   | 0      |
+| 736      | Ban'ethil Hollow                                     | 1     | 141    |
+| 796      | Scarlet Monastery                                    | 189   | 0      |
+| 797      | Jerod's Landing                                      | 0     | 12     |
+| 798      | Ridgepoint Tower                                     | 0     | 12     |
+| 799      | The Darkened Bank                                    | 0     | 10     |
+| 800      | Coldridge Pass                                       | 0     | 1      |
+| 801      | Chill Breeze Valley                                  | 0     | 1      |
+| 802      | Shimmer Ridge                                        | 0     | 1      |
+| 803      | Amberstill Ranch                                     | 0     | 1      |
+| 804      | The Tundrid Hills                                    | 0     | 1      |
+| 805      | South Gate Pass                                      | 0     | 1      |
+| 806      | South Gate Outpost                                   | 0     | 1      |
+| 807      | North Gate Pass                                      | 0     | 1      |
+| 808      | North Gate Outpost                                   | 0     | 1      |
+| 809      | Gates of Ironforge                                   | 0     | 1      |
+| 810      | Stillwater Pond                                      | 0     | 85     |
+| 811      | Nightmare Vale                                       | 0     | 85     |
+| 812      | Venomweb Vale                                        | 0     | 85     |
+| 813      | The Bulwark                                          | 0     | 28     |
+| 814      | Southfury River                                      | 1     | 14     |
+| 815      | Southfury River                                      | 1     | 17     |
+| 816      | Razormane Grounds                                    | 1     | 14     |
+| 817      | Skull Rock                                           | 1     | 14     |
+| 818      | Palemane Rock                                        | 1     | 215    |
+| 819      | Windfury Ridge                                       | 1     | 215    |
+| 820      | The Golden Plains                                    | 1     | 215    |
+| 821      | The Rolling Plains                                   | 1     | 215    |
+| 836      | Dun Algaz                                            | 0     | 11     |
+| 837      | Dun Algaz                                            | 0     | 38     |
+| 838      | North Gate Pass                                      | 0     | 38     |
+| 839      | South Gate Pass                                      | 0     | 38     |
+| 856      | Twilight Grove                                       | 0     | 10     |
+| 876      | GM Island                                            | 1     | 0      |
+| 877      | Delete ME                                            | 1     | 17     |
+| 878      | Southfury River                                      | 1     | 16     |
+| 879      | Southfury River                                      | 1     | 331    |
+| 880      | Thandol Span                                         | 0     | 45     |
+| 881      | Thandol Span                                         | 0     | 11     |
+| 896      | Purgation Isle                                       | 0     | 267    |
+| 916      | The Jansen Stead                                     | 0     | 40     |
+| 917      | The Dead Acre                                        | 0     | 40     |
+| 918      | The Molsen Farm                                      | 0     | 40     |
+| 919      | Stendel's Pond                                       | 0     | 40     |
+| 920      | The Dagger Hills                                     | 0     | 40     |
+| 921      | Demont's Place                                       | 0     | 40     |
+| 922      | The Dust Plains                                      | 0     | 40     |
+| 923      | Stonesplinter Valley                                 | 0     | 38     |
+| 924      | Valley of Kings                                      | 0     | 38     |
+| 925      | Algaz Station                                        | 0     | 38     |
+| 926      | Bucklebree Farm                                      | 0     | 130    |
+| 927      | The Shining Strand                                   | 0     | 130    |
+| 928      | North Tide's Hollow                                  | 0     | 130    |
+| 936      | Grizzlepaw Ridge                                     | 0     | 38     |
+| 956      | The Verdant Fields                                   | 169   | 0      |
+| 976      | Gadgetzan                                            | 1     | 440    |
+| 977      | Steamwheedle Port                                    | 1     | 440    |
+| 978      | Zul'Farrak                                           | 1     | 440    |
+| 979      | Sandsorrow Watch                                     | 1     | 440    |
+| 980      | Thistleshrub Valley                                  | 1     | 440    |
+| 981      | The Gaping Chasm                                     | 1     | 440    |
+| 982      | The Noxious Lair                                     | 1     | 440    |
+| 983      | Dunemaul Compound                                    | 1     | 440    |
+| 984      | Eastmoon Ruins                                       | 1     | 440    |
+| 985      | Waterspring Field                                    | 1     | 440    |
+| 986      | Zalashji's Den                                       | 1     | 440    |
+| 987      | Land's End Beach                                     | 1     | 440    |
+| 988      | Wavestrider Beach                                    | 1     | 440    |
+| 989      | Uldum                                                | 1     | 440    |
+| 990      | Valley of the Watchers                               | 1     | 440    |
+| 991      | Gunstan's Post                                       | 1     | 440    |
+| 992      | Southmoon Ruins                                      | 1     | 440    |
+| 996      | Render's Camp                                        | 0     | 44     |
+| 997      | Render's Valley                                      | 0     | 44     |
+| 998      | Render's Rock                                        | 0     | 44     |
+| 999      | Stonewatch Tower                                     | 0     | 44     |
+| 1000     | Galardell Valley                                     | 0     | 44     |
+| 1001     | Lakeridge Highway                                    | 0     | 44     |
+| 1002     | Three Corners                                        | 0     | 44     |
+| 1016     | Direforge Hill                                       | 0     | 11     |
+| 1017     | Raptor Ridge                                         | 0     | 11     |
+| 1018     | Black Channel Marsh                                  | 0     | 11     |
+| 1019     | The Green Belt                                       | 0     | 139    |
+| 1020     | Mosshide Fen                                         | 0     | 11     |
+| 1021     | Thelgen Rock                                         | 0     | 11     |
+| 1022     | Bluegill Marsh                                       | 0     | 11     |
+| 1023     | Saltspray Glen                                       | 0     | 11     |
+| 1024     | Sundown Marsh                                        | 0     | 11     |
+| 1025     | The Green Belt                                       | 0     | 11     |
+| 1036     | Angerfang Encampment                                 | 0     | 11     |
+| 1037     | Grim Batol                                           | 0     | 11     |
+| 1038     | Dragonmaw Gates                                      | 0     | 11     |
+| 1039     | The Lost Fleet                                       | 0     | 11     |
+| 1056     | Darrow Hill                                          | 0     | 267    |
+| 1057     | Thoradin's Wall                                      | 0     | 267    |
+| 1076     | Webwinder Path                                       | 1     | 406    |
+| 1097     | The Hushed Bank                                      | 0     | 10     |
+| 1098     | Manor Mistmantle                                     | 0     | 10     |
+| 1099     | Camp Mojache                                         | 1     | 357    |
+| 1100     | Grimtotem Compound                                   | 1     | 357    |
+| 1101     | The Writhing Deep                                    | 1     | 357    |
+| 1102     | Wildwind Lake                                        | 1     | 357    |
+| 1103     | Gordunni Outpost                                     | 1     | 357    |
+| 1104     | Mok'Gordun                                           | 1     | 357    |
+| 1105     | Feral Scar Vale                                      | 1     | 357    |
+| 1106     | Frayfeather Highlands                                | 1     | 357    |
+| 1107     | Idlewind Lake                                        | 1     | 357    |
+| 1108     | The Forgotten Coast                                  | 1     | 357    |
+| 1109     | East Pillar                                          | 1     | 357    |
+| 1110     | West Pillar                                          | 1     | 357    |
+| 1111     | Dream Bough                                          | 1     | 357    |
+| 1112     | Jademir Lake                                         | 1     | 357    |
+| 1113     | Oneiros                                              | 1     | 357    |
+| 1114     | Ruins of Ravenwind                                   | 1     | 357    |
+| 1115     | Rage Scar Hold                                       | 1     | 357    |
+| 1116     | Feathermoon Stronghold                               | 1     | 357    |
+| 1117     | Ruins of Solarsal                                    | 1     | 357    |
+| 1118     | Lower Wilds UNUSED                                   | 1     | 357    |
+| 1119     | The Twin Colossals                                   | 1     | 357    |
+| 1120     | Sardor Isle                                          | 1     | 357    |
+| 1121     | Isle of Dread                                        | 1     | 357    |
+| 1136     | High Wilderness                                      | 1     | 357    |
+| 1137     | Lower Wilds                                          | 1     | 357    |
+| 1156     | Southern Barrens                                     | 1     | 17     |
+| 1157     | Southern Gold Road                                   | 1     | 17     |
+| 1176     | Zul'Farrak                                           | 209   | 0      |
+| 1196     | Utgarde Pinnacle                                     | 575   | 0      |
+| 1216     | Timbermaw Hold                                       | 1     | 16     |
+| 1217     | Vanndir Encampment                                   | 1     | 16     |
+| 1218     | TESTAzshara                                          | 1     | 16     |
+| 1219     | Legash Encampment                                    | 1     | 16     |
+| 1220     | Thalassian Base Camp                                 | 1     | 16     |
+| 1221     | Ruins of Eldarath                                    | 1     | 16     |
+| 1222     | Hetaera's Clutch                                     | 1     | 16     |
+| 1223     | Temple of Zin-Malor                                  | 1     | 16     |
+| 1224     | Bear's Head                                          | 1     | 16     |
+| 1225     | Ursolan                                              | 1     | 16     |
+| 1226     | Temple of Arkkoran                                   | 1     | 16     |
+| 1227     | Bay of Storms                                        | 1     | 16     |
+| 1228     | The Shattered Strand                                 | 1     | 16     |
+| 1229     | Tower of Eldara                                      | 1     | 16     |
+| 1230     | Jagged Reef                                          | 1     | 16     |
+| 1231     | Southridge Beach                                     | 1     | 16     |
+| 1232     | Ravencrest Monument                                  | 1     | 16     |
+| 1233     | Forlorn Ridge                                        | 1     | 16     |
+| 1234     | Lake Mennar                                          | 1     | 16     |
+| 1235     | Shadowsong Shrine                                    | 1     | 16     |
+| 1236     | Haldarr Encampment                                   | 1     | 16     |
+| 1237     | Valormok                                             | 1     | 16     |
+| 1256     | The Ruined Reaches                                   | 1     | 16     |
+| 1276     | The Talondeep Path                                   | 1     | 331    |
+| 1277     | The Talondeep Path                                   | 1     | 406    |
+| 1296     | Rocktusk Farm                                        | 1     | 14     |
+| 1297     | Jaggedswine Farm                                     | 1     | 14     |
+| 1316     | Razorfen Downs                                       | 1     | 17     |
+| 1336     | Lost Rigger Cove                                     | 1     | 440    |
+| 1337     | Uldaman                                              | 70    | 0      |
+| 1338     | Lordamere Lake                                       | 0     | 130    |
+| 1339     | Lordamere Lake                                       | 0     | 36     |
+| 1357     | Gallows' Corner                                      | 0     | 36     |
+| 1377     | Silithus                                             | 1     | 0      |
+| 1397     | Emerald Forest                                       | 169   | 0      |
+| 1417     | Sunken Temple                                        | 109   | 0      |
+| 1437     | Dreadmaul Hold                                       | 0     | 4      |
+| 1438     | Nethergarde Keep                                     | 0     | 4      |
+| 1439     | Dreadmaul Post                                       | 0     | 4      |
+| 1440     | Serpent's Coil                                       | 0     | 4      |
+| 1441     | Altar of Storms                                      | 0     | 4      |
+| 1442     | Firewatch Ridge                                      | 0     | 51     |
+| 1443     | The Slag Pit                                         | 0     | 51     |
+| 1444     | The Sea of Cinders                                   | 0     | 51     |
+| 1445     | Blackrock Mountain                                   | 0     | 51     |
+| 1446     | Thorium Point                                        | 0     | 51     |
+| 1457     | Garrison Armory                                      | 0     | 4      |
+| 1477     | The Temple of Atal'Hakkar                            | 109   | 0      |
+| 1497     | Undercity                                            | 0     | 0      |
+| 1517     | Uldaman                                              | 0     | 3      |
+| 1518     | Not Used Deadmines                                   | 0     | 40     |
+| 1519     | Stormwind City                                       | 0     | 0      |
+| 1537     | Ironforge                                            | 0     | 0      |
+| 1557     | Splithoof Hold                                       | 1     | 400    |
+| 1577     | The Cape of Stranglethorn                            | 0     | 33     |
+| 1578     | Southern Savage Coast                                | 0     | 33     |
+| 1579     | Unused The Deadmines 002                             | 0     | 0      |
+| 1580     | Unused Ironclad Cove 003                             | 0     | 1579   |
+| 1581     | The Deadmines                                        | 36    | 0      |
+| 1582     | Ironclad Cove                                        | 36    | 1581   |
+| 1583     | Blackrock Spire                                      | 229   | 0      |
+| 1584     | Blackrock Depths                                     | 230   | 0      |
+| 1597     | Raptor Grounds UNUSED                                | 1     | 17     |
+| 1598     | Grol'dom Farm UNUSED                                 | 1     | 17     |
+| 1599     | Mor'shan Base Camp                                   | 1     | 17     |
+| 1600     | Honor's Stand UNUSED                                 | 1     | 17     |
+| 1601     | Blackthorn Ridge UNUSED                              | 1     | 17     |
+| 1602     | Bramblescar UNUSED                                   | 1     | 17     |
+| 1603     | Agama'gor UNUSED                                     | 1     | 17     |
+| 1617     | Valley of Heroes                                     | 0     | 1519   |
+| 1637     | Orgrimmar                                            | 1     | 0      |
+| 1638     | Thunder Bluff                                        | 1     | 0      |
+| 1639     | Elder Rise                                           | 1     | 1638   |
+| 1640     | Spirit Rise                                          | 1     | 1638   |
+| 1641     | Hunter Rise                                          | 1     | 1638   |
+| 1657     | Darnassus                                            | 1     | 0      |
+| 1658     | Cenarion Enclave                                     | 1     | 1657   |
+| 1659     | Craftsmen's Terrace                                  | 1     | 1657   |
+| 1660     | Warrior's Terrace                                    | 1     | 1657   |
+| 1661     | The Temple Gardens                                   | 1     | 1657   |
+| 1662     | Tradesmen's Terrace                                  | 1     | 1657   |
+| 1677     | Gavin's Naze                                         | 0     | 36     |
+| 1678     | Sofera's Naze                                        | 0     | 36     |
+| 1679     | Corrahn's Dagger                                     | 0     | 36     |
+| 1680     | The Headland                                         | 0     | 36     |
+| 1681     | Misty Shore                                          | 0     | 36     |
+| 1682     | Dandred's Fold                                       | 0     | 36     |
+| 1683     | Growless Cave                                        | 0     | 36     |
+| 1684     | Chillwind Point                                      | 0     | 36     |
+| 1697     | Raptor Grounds                                       | 1     | 17     |
+| 1698     | Bramblescar                                          | 1     | 17     |
+| 1699     | Thorn Hill                                           | 1     | 17     |
+| 1700     | Agama'gor                                            | 1     | 17     |
+| 1701     | Blackthorn Ridge                                     | 1     | 17     |
+| 1702     | Honor's Stand                                        | 1     | 17     |
+| 1703     | The Mor'shan Rampart                                 | 1     | 17     |
+| 1704     | Grol'dom Farm                                        | 1     | 17     |
+| 1717     | Razorfen Kraul                                       | 1     | 17     |
+| 1718     | The Great Lift                                       | 1     | 17     |
+| 1737     | Mistvale Valley                                      | 0     | 33     |
+| 1738     | Nek'mani Wellspring                                  | 0     | 33     |
+| 1739     | Bloodsail Compound                                   | 0     | 33     |
+| 1740     | Venture Co. Base Camp                                | 0     | 33     |
+| 1741     | Gurubashi Arena                                      | 0     | 33     |
+| 1742     | Spirit Den                                           | 0     | 33     |
+| 1757     | The Crimson Veil                                     | 0     | 33     |
+| 1758     | The Riptide                                          | 0     | 33     |
+| 1759     | The Damsel's Luck                                    | 0     | 33     |
+| 1760     | Venture Co. Operations Center                        | 0     | 33     |
+| 1761     | Deadwood Village                                     | 1     | 361    |
+| 1762     | Felpaw Village                                       | 1     | 361    |
+| 1763     | Jaedenar                                             | 1     | 361    |
+| 1764     | Bloodvenom River                                     | 1     | 361    |
+| 1765     | Bloodvenom Falls                                     | 1     | 361    |
+| 1766     | Shatter Scar Vale                                    | 1     | 361    |
+| 1767     | Irontree Woods                                       | 1     | 361    |
+| 1768     | Irontree Cavern                                      | 1     | 361    |
+| 1769     | Timbermaw Hold                                       | 1     | 361    |
+| 1770     | Shadow Hold                                          | 1     | 361    |
+| 1771     | Shrine of the Deceiver                               | 1     | 361    |
+| 1777     | Itharius's Cave                                      | 0     | 8      |
+| 1778     | Sorrowmurk                                           | 0     | 8      |
+| 1779     | Draenil'dur Village                                  | 0     | 8      |
+| 1780     | Splinterspear Junction                               | 0     | 8      |
+| 1797     | Stagalbog                                            | 0     | 8      |
+| 1798     | The Shifting Mire                                    | 0     | 8      |
+| 1817     | Stagalbog Cave                                       | 0     | 8      |
+| 1837     | Witherbark Caverns                                   | 0     | 45     |
+| 1857     | Thoradin's Wall                                      | 0     | 45     |
+| 1858     | Boulder'gor                                          | 0     | 45     |
+| 1877     | Valley of Fangs                                      | 0     | 3      |
+| 1878     | The Dustbowl                                         | 0     | 3      |
+| 1879     | Mirage Flats                                         | 0     | 3      |
+| 1880     | Featherbeard's Hovel                                 | 0     | 47     |
+| 1881     | Shindigger's Camp                                    | 0     | 47     |
+| 1882     | Plaguemist Ravine                                    | 0     | 47     |
+| 1883     | Valorwind Lake                                       | 0     | 47     |
+| 1884     | Agol'watha                                           | 0     | 47     |
+| 1885     | Hiri'watha                                           | 0     | 47     |
+| 1886     | The Creeping Ruin                                    | 0     | 47     |
+| 1887     | Bogen's Ledge                                        | 0     | 47     |
+| 1897     | The Maker's Terrace                                  | 0     | 3      |
+| 1898     | Dustwind Gulch                                       | 0     | 3      |
+| 1917     | Shaol'watha                                          | 0     | 47     |
+| 1937     | Noonshade Ruins                                      | 1     | 440    |
+| 1938     | Broken Pillar                                        | 1     | 440    |
+| 1939     | Abyssal Sands                                        | 1     | 440    |
+| 1940     | Southbreak Shore                                     | 1     | 440    |
+| 1941     | Caverns of Time                                      | 1     | 0      |
+| 1942     | The Marshlands                                       | 1     | 490    |
+| 1943     | Ironstone Plateau                                    | 1     | 490    |
+| 1957     | Blackchar Cave                                       | 0     | 51     |
+| 1958     | Tanner Camp                                          | 0     | 51     |
+| 1959     | Dustfire Valley                                      | 0     | 51     |
+| 1977     | Zul'Gurub                                            | 309   | 0      |
+| 1978     | Misty Reed Post                                      | 0     | 8      |
+| 1997     | Bloodvenom Post                                      | 1     | 361    |
+| 1998     | Talonbranch Glade                                    | 1     | 361    |
+| 2017     | Stratholme                                           | 329   | 0      |
+| 2037     | Quel'thalas                                          | 0     | 0      |
+| 2057     | Scholomance                                          | 289   | 0      |
+| 2077     | Twilight Vale                                        | 1     | 148    |
+| 2078     | Twilight Shore                                       | 1     | 148    |
+| 2079     | Alcaz Island                                         | 1     | 15     |
+| 2097     | Darkcloud Pinnacle                                   | 1     | 400    |
+| 2098     | Dawning Wood Catacombs                               | 0     | 10     |
+| 2099     | Stonewatch Keep                                      | 0     | 44     |
+| 2100     | Maraudon                                             | 349   | 0      |
+| 2101     | Stoutlager Inn                                       | 0     | 38     |
+| 2102     | Thunderbrew Distillery                               | 0     | 1      |
+| 2103     | Menethil Keep                                        | 0     | 11     |
+| 2104     | Deepwater Tavern                                     | 0     | 11     |
+| 2117     | Shadow Grave                                         | 0     | 85     |
+| 2118     | Brill Town Hall                                      | 0     | 85     |
+| 2119     | Gallows' End Tavern                                  | 0     | 85     |
+| 2137     | The Pools of VisionUNUSED                            | 1     | 215    |
+| 2138     | Dreadmist Den                                        | 1     | 17     |
+| 2157     | Bael'dun Keep                                        | 1     | 17     |
+| 2158     | Emberstrife's Den                                    | 1     | 15     |
+| 2159     | Onyxia's Lair                                        | 1     | 0      |
+| 2160     | Windshear Mine                                       | 1     | 406    |
+| 2161     | Roland's Doom                                        | 0     | 10     |
+| 2177     | Battle Ring                                          | 0     | 33     |
+| 2197     | The Pools of Vision                                  | 1     | 1638   |
+| 2198     | Shadowbreak Ravine                                   | 1     | 405    |
+| 2217     | Broken Spear Village                                 | 1     | 405    |
+| 2237     | Whitereach Post                                      | 1     | 400    |
+| 2238     | Gornia                                               | 1     | 400    |
+| 2239     | Zane's Eye Crater                                    | 1     | 400    |
+| 2240     | Mirage Raceway                                       | 1     | 400    |
+| 2241     | Frostsaber Rock                                      | 1     | 618    |
+| 2242     | The Hidden Grove                                     | 1     | 618    |
+| 2243     | Timbermaw Post                                       | 1     | 618    |
+| 2244     | Winterfall Village                                   | 1     | 618    |
+| 2245     | Mazthoril                                            | 1     | 618    |
+| 2246     | Frostfire Hot Springs                                | 1     | 618    |
+| 2247     | Ice Thistle Hills                                    | 1     | 618    |
+| 2248     | Dun Mandarr                                          | 1     | 618    |
+| 2249     | Frostwhisper Gorge                                   | 1     | 618    |
+| 2250     | Owl Wing Thicket                                     | 1     | 618    |
+| 2251     | Lake Kel'Theril                                      | 1     | 618    |
+| 2252     | The Ruins of Kel'Theril                              | 1     | 618    |
+| 2253     | Starfall Village                                     | 1     | 618    |
+| 2254     | Ban'Thallow Barrow Den                               | 1     | 618    |
+| 2255     | Everlook                                             | 1     | 618    |
+| 2256     | Darkwhisper Gorge                                    | 1     | 618    |
+| 2257     | Deeprun Tram                                         | 369   | 0      |
+| 2258     | The Fungal Vale                                      | 0     | 139    |
+| 2259     | UNUSEDThe Marris Stead                               | 0     | 139    |
+| 2260     | The Marris Stead                                     | 0     | 139    |
+| 2261     | The Undercroft                                       | 0     | 139    |
+| 2262     | Darrowshire                                          | 0     | 139    |
+| 2263     | Crown Guard Tower                                    | 0     | 139    |
+| 2264     | Corin's Crossing                                     | 0     | 139    |
+| 2265     | Scarlet Base Camp                                    | 0     | 139    |
+| 2266     | Tyr's Hand                                           | 0     | 139    |
+| 2267     | The Scarlet Basilica                                 | 0     | 139    |
+| 2268     | Light's Hope Chapel                                  | 0     | 139    |
+| 2269     | Browman Mill                                         | 0     | 139    |
+| 2270     | The Noxious Glade                                    | 0     | 139    |
+| 2271     | Eastwall Tower                                       | 0     | 139    |
+| 2272     | Northdale                                            | 0     | 139    |
+| 2273     | Zul'Mashar                                           | 0     | 139    |
+| 2274     | Mazra'Alor                                           | 0     | 139    |
+| 2275     | Northpass Tower                                      | 0     | 139    |
+| 2276     | Quel'Lithien Lodge                                   | 0     | 139    |
+| 2277     | Plaguewood                                           | 0     | 139    |
+| 2278     | Scourgehold                                          | 0     | 139    |
+| 2279     | Stratholme                                           | 0     | 139    |
+| 2280     | DO NOT USE                                           | 0     | 0      |
+| 2297     | Darrowmere Lake                                      | 0     | 28     |
+| 2298     | Caer Darrow                                          | 0     | 28     |
+| 2299     | Darrowmere Lake                                      | 0     | 139    |
+| 2300     | Caverns of Time                                      | 1     | 440    |
+| 2301     | Thistlefur Village                                   | 1     | 331    |
+| 2302     | The Quagmire                                         | 1     | 15     |
+| 2303     | Windbreak Canyon                                     | 1     | 400    |
+| 2317     | South Seas                                           | 1     | 440    |
+| 2318     | The Great Sea                                        | 1     | 15     |
+| 2319     | The Great Sea                                        | 1     | 17     |
+| 2320     | The Great Sea                                        | 1     | 14     |
+| 2321     | The Great Sea                                        | 1     | 16     |
+| 2322     | The Veiled Sea                                       | 1     | 141    |
+| 2323     | The Veiled Sea                                       | 1     | 357    |
+| 2324     | The Veiled Sea                                       | 1     | 405    |
+| 2325     | The Veiled Sea                                       | 1     | 331    |
+| 2326     | The Veiled Sea                                       | 1     | 148    |
+| 2337     | Razor Hill Barracks                                  | 1     | 14     |
+| 2338     | South Seas                                           | 0     | 33     |
+| 2339     | The Great Sea                                        | 0     | 33     |
+| 2357     | Bloodtooth Camp                                      | 1     | 331    |
+| 2358     | Forest Song                                          | 1     | 331    |
+| 2359     | Greenpaw Village                                     | 1     | 331    |
+| 2360     | Silverwing Outpost                                   | 1     | 331    |
+| 2361     | Nighthaven                                           | 1     | 493    |
+| 2362     | Shrine of Remulos                                    | 1     | 493    |
+| 2363     | Stormrage Barrow Dens                                | 1     | 493    |
+| 2364     | The Great Sea                                        | 0     | 40     |
+| 2365     | The Great Sea                                        | 0     | 11     |
+| 2366     | The Black Morass                                     | 269   | 0      |
+| 2367     | Old Hillsbrad Foothills                              | 560   | 0      |
+| 2368     | Tarren Mill                                          | 560   | 2367   |
+| 2369     | Southshore                                           | 560   | 2367   |
+| 2370     | Durnholde Keep                                       | 560   | 2367   |
+| 2371     | Dun Garok                                            | 560   | 2367   |
+| 2372     | Hillsbrad Fields                                     | 560   | 2367   |
+| 2373     | Eastern Strand                                       | 560   | 2367   |
+| 2374     | Nethander Stead                                      | 560   | 2367   |
+| 2375     | Darrow Hill                                          | 560   | 2367   |
+| 2376     | Southpoint Tower                                     | 560   | 2367   |
+| 2377     | Thoradin's Wall                                      | 560   | 2367   |
+| 2378     | Western Strand                                       | 560   | 2367   |
+| 2379     | Azurelode Mine                                       | 560   | 2367   |
+| 2397     | The Great Sea                                        | 0     | 267    |
+| 2398     | The Great Sea                                        | 0     | 130    |
+| 2399     | The Great Sea                                        | 0     | 85     |
+| 2400     | The Forbidding Sea                                   | 0     | 47     |
+| 2401     | The Forbidding Sea                                   | 0     | 45     |
+| 2402     | The Forbidding Sea                                   | 0     | 11     |
+| 2403     | The Forbidding Sea                                   | 0     | 8      |
+| 2404     | Tethris Aran                                         | 1     | 405    |
+| 2405     | Ethel Rethor                                         | 1     | 405    |
+| 2406     | Ranazjar Isle                                        | 1     | 405    |
+| 2407     | Kormek's Hut                                         | 1     | 405    |
+| 2408     | Shadowprey Village                                   | 1     | 405    |
+| 2417     | Blackrock Pass                                       | 0     | 46     |
+| 2418     | Morgan's Vigil                                       | 0     | 46     |
+| 2419     | Slither Rock                                         | 0     | 46     |
+| 2420     | Terror Wing Path                                     | 0     | 46     |
+| 2421     | Draco'dar                                            | 0     | 46     |
+| 2437     | Ragefire Chasm                                       | 389   | 0      |
+| 2457     | Nightsong Woods                                      | 1     | 331    |
+| 2477     | The Veiled Sea                                       | 1     | 1377   |
+| 2478     | Morlos'Aran                                          | 1     | 361    |
+| 2479     | Emerald Sanctuary                                    | 1     | 361    |
+| 2480     | Jadefire Glen                                        | 1     | 361    |
+| 2481     | Ruins of Constellas                                  | 1     | 361    |
+| 2497     | Bitter Reaches                                       | 1     | 16     |
+| 2517     | Rise of the Defiler                                  | 0     | 4      |
+| 2518     | Lariss Pavilion                                      | 1     | 357    |
+| 2519     | Woodpaw Hills                                        | 1     | 357    |
+| 2520     | Woodpaw Den                                          | 1     | 357    |
+| 2521     | Verdantis River                                      | 1     | 357    |
+| 2522     | Ruins of Isildien                                    | 1     | 357    |
+| 2537     | Grimtotem Post                                       | 1     | 406    |
+| 2538     | Camp Aparaje                                         | 1     | 406    |
+| 2539     | Malaka'jin                                           | 1     | 406    |
+| 2540     | Boulderslide Ravine                                  | 1     | 406    |
+| 2541     | Sishir Canyon                                        | 1     | 406    |
+| 2557     | Dire Maul                                            | 429   | 0      |
+| 2558     | Deadwind Ravine                                      | 0     | 41     |
+| 2559     | Diamondhead River                                    | 0     | 41     |
+| 2560     | Ariden's Camp                                        | 0     | 41     |
+| 2561     | The Vice                                             | 0     | 41     |
+| 2562     | Karazhan                                             | 0     | 41     |
+| 2563     | Morgan's Plot                                        | 0     | 41     |
+| 2577     | Dire Maul                                            | 1     | 357    |
+| 2597     | Alterac Valley                                       | 30    | 0      |
+| 2617     | Scrabblescrew's Camp                                 | 1     | 405    |
+| 2618     | Jadefire Run                                         | 1     | 361    |
+| 2619     | Thondroril River                                     | 0     | 139    |
+| 2620     | Thondroril River                                     | 0     | 28     |
+| 2621     | Lake Mereldar                                        | 0     | 139    |
+| 2622     | Pestilent Scar                                       | 0     | 139    |
+| 2623     | The Infectis Scar                                    | 0     | 139    |
+| 2624     | Blackwood Lake                                       | 0     | 139    |
+| 2625     | Eastwall Gate                                        | 0     | 139    |
+| 2626     | Terrorweb Tunnel                                     | 0     | 139    |
+| 2627     | Terrordale                                           | 0     | 139    |
+| 2637     | Kargathia Keep                                       | 1     | 331    |
+| 2657     | Valley of Bones                                      | 1     | 405    |
+| 2677     | Blackwing Lair                                       | 469   | 0      |
+| 2697     | Deadman's Crossing                                   | 0     | 41     |
+| 2717     | Molten Core                                          | 409   | 0      |
+| 2737     | The Scarab Wall                                      | 1     | 1377   |
+| 2738     | Southwind Village                                    | 1     | 1377   |
+| 2739     | Twilight Base Camp                                   | 1     | 1377   |
+| 2740     | The Crystal Vale                                     | 1     | 1377   |
+| 2741     | The Scarab Dais                                      | 1     | 1377   |
+| 2742     | Hive'Ashi                                            | 1     | 1377   |
+| 2743     | Hive'Zora                                            | 1     | 1377   |
+| 2744     | Hive'Regal                                           | 1     | 1377   |
+| 2757     | Shrine of the Fallen Warrior                         | 1     | 17     |
+| 2777     | UNUSED Alterac Valley                                | 0     | 267    |
+| 2797     | Blackfathom Deeps                                    | 1     | 331    |
+| 2817     | Crystalsong Forest                                   | 571   | 0      |
+| 2837     | The Master's Cellar                                  | 0     | 41     |
+| 2838     | Stonewrought Pass                                    | 0     | 51     |
+| 2839     | Alterac Valley                                       | 0     | 36     |
+| 2857     | The Rumble Cage                                      | 1     | 440    |
+| 2877     | Chunk Test                                           | 451   | 22     |
+| 2897     | Zoram'gar Outpost                                    | 1     | 331    |
+| 2917     | Hall of Legends                                      | 1     | 0      |
+| 2918     | Champions' Hall                                      | 449   | 0      |
+| 2937     | Grosh'gok Compound                                   | 0     | 41     |
+| 2938     | Sleeping Gorge                                       | 0     | 41     |
+| 2957     | Irondeep Mine                                        | 30    | 2597   |
+| 2958     | Stonehearth Outpost                                  | 30    | 2597   |
+| 2959     | Dun Baldar                                           | 30    | 2597   |
+| 2960     | Icewing Pass                                         | 30    | 2597   |
+| 2961     | Frostwolf Village                                    | 30    | 2597   |
+| 2962     | Tower Point                                          | 30    | 2597   |
+| 2963     | Coldtooth Mine                                       | 30    | 2597   |
+| 2964     | Winterax Hold                                        | 30    | 2597   |
+| 2977     | Iceblood Garrison                                    | 30    | 2597   |
+| 2978     | Frostwolf Keep                                       | 30    | 2597   |
+| 2979     | Tor'kren Farm                                        | 1     | 14     |
+| 3017     | Frost Dagger Pass                                    | 30    | 2597   |
+| 3037     | Ironstone Camp                                       | 1     | 400    |
+| 3038     | Weazel's Crater                                      | 1     | 400    |
+| 3039     | Tahonda Ruins                                        | 1     | 400    |
+| 3057     | Field of Strife                                      | 30    | 2597   |
+| 3058     | Icewing Cavern                                       | 30    | 2597   |
+| 3077     | Valor's Rest                                         | 1     | 1377   |
+| 3097     | The Swarming Pillar                                  | 1     | 1377   |
+| 3098     | Twilight Post                                        | 1     | 1377   |
+| 3099     | Twilight Outpost                                     | 1     | 1377   |
+| 3100     | Ravaged Twilight Camp                                | 1     | 1377   |
+| 3117     | Shalzaru's Lair                                      | 1     | 357    |
+| 3137     | Talrendis Point                                      | 1     | 16     |
+| 3138     | Rethress Sanctum                                     | 1     | 16     |
+| 3139     | Moon Horror Den                                      | 1     | 618    |
+| 3140     | Scalebeard's Cave                                    | 1     | 16     |
+| 3157     | Boulderslide Cavern                                  | 1     | 406    |
+| 3177     | Warsong Labor Camp                                   | 1     | 331    |
+| 3197     | Chillwind Camp                                       | 0     | 28     |
+| 3217     | The Maul                                             | 429   | 2557   |
+| 3237     | The Maul UNUSED                                      | 429   | 2557   |
+| 3257     | Bones of Grakkarond                                  | 1     | 1377   |
+| 3277     | Warsong Gulch                                        | 489   | 0      |
+| 3297     | Frostwolf Graveyard                                  | 30    | 2597   |
+| 3298     | Frostwolf Pass                                       | 30    | 2597   |
+| 3299     | Dun Baldar Pass                                      | 30    | 2597   |
+| 3300     | Iceblood Graveyard                                   | 30    | 2597   |
+| 3301     | Snowfall Graveyard                                   | 30    | 2597   |
+| 3302     | Stonehearth Graveyard                                | 30    | 2597   |
+| 3303     | Stormpike Graveyard                                  | 30    | 2597   |
+| 3304     | Icewing Bunker                                       | 30    | 2597   |
+| 3305     | Stonehearth Bunker                                   | 30    | 2597   |
+| 3306     | Wildpaw Ridge                                        | 30    | 2597   |
+| 3317     | Revantusk Village                                    | 0     | 47     |
+| 3318     | Rock of Durotan                                      | 30    | 2597   |
+| 3319     | Silverwing Grove                                     | 1     | 331    |
+| 3320     | Warsong Lumber Mill                                  | 489   | 3277   |
+| 3321     | Silverwing Hold                                      | 489   | 3277   |
+| 3337     | Wildpaw Cavern                                       | 30    | 2597   |
+| 3338     | The Veiled Cleft                                     | 30    | 2597   |
+| 3357     | Yojamba Isle                                         | 0     | 33     |
+| 3358     | Arathi Basin                                         | 529   | 0      |
+| 3377     | The Coil                                             | 309   | 1977   |
+| 3378     | Altar of Hir'eek                                     | 309   | 1977   |
+| 3379     | Shadra'zaar                                          | 309   | 1977   |
+| 3380     | Hakkari Grounds                                      | 309   | 1977   |
+| 3381     | Naze of Shirvallah                                   | 309   | 1977   |
+| 3382     | Temple of Bethekk                                    | 309   | 1977   |
+| 3383     | The Bloodfire Pit                                    | 309   | 1977   |
+| 3384     | Altar of the Blood God                               | 309   | 1977   |
+| 3397     | Zanza's Rise                                         | 309   | 1977   |
+| 3398     | Edge of Madness                                      | 309   | 1977   |
+| 3417     | Trollbane Hall                                       | 529   | 3358   |
+| 3418     | Defiler's Den                                        | 529   | 3358   |
+| 3419     | Pagle's Pointe                                       | 309   | 1977   |
+| 3420     | Farm                                                 | 529   | 3358   |
+| 3421     | Blacksmith                                           | 529   | 3358   |
+| 3422     | Lumber Mill                                          | 529   | 3358   |
+| 3423     | Gold Mine                                            | 529   | 3358   |
+| 3424     | Stables                                              | 529   | 3358   |
+| 3425     | Cenarion Hold                                        | 1     | 1377   |
+| 3426     | Staghelm Point                                       | 1     | 1377   |
+| 3427     | Bronzebeard Encampment                               | 1     | 1377   |
+| 3428     | Ahn'Qiraj                                            | 531   | 0      |
+| 3429     | Ruins of Ahn'Qiraj                                   | 509   | 0      |
+| 3430     | Eversong Woods                                       | 530   | 0      |
+| 3431     | Sunstrider Isle                                      | 530   | 3430   |
+| 3432     | Shrine of Dath'Remar                                 | 530   | 3430   |
+| 3433     | Ghostlands                                           | 530   | 0      |
+| 3434     | Scarab Terrace                                       | 531   | 3428   |
+| 3435     | General's Terrace                                    | 531   | 3428   |
+| 3436     | The Reservoir                                        | 531   | 3428   |
+| 3437     | The Hatchery                                         | 531   | 3428   |
+| 3438     | The Comb                                             | 531   | 3428   |
+| 3439     | Watchers' Terrace                                    | 531   | 3428   |
+| 3440     | Scarab Terrace                                       | 509   | 3429   |
+| 3441     | General's Terrace                                    | 509   | 3429   |
+| 3442     | The Reservoir                                        | 509   | 3429   |
+| 3443     | The Hatchery                                         | 509   | 3429   |
+| 3444     | The Comb                                             | 509   | 3429   |
+| 3445     | Watchers' Terrace                                    | 509   | 3429   |
+| 3446     | Twilight's Run                                       | 1     | 1377   |
+| 3447     | Ortell's Hideout                                     | 1     | 1377   |
+| 3448     | Scarab Terrace                                       | 509   | 3429   |
+| 3449     | General's Terrace                                    | 509   | 3429   |
+| 3450     | The Reservoir                                        | 509   | 3429   |
+| 3451     | The Hatchery                                         | 509   | 3429   |
+| 3452     | The Comb                                             | 509   | 3429   |
+| 3453     | Watchers' Terrace                                    | 509   | 3429   |
+| 3454     | Ruins of Ahn'Qiraj                                   | 1     | 1377   |
+| 3455     | The North Sea                                        | 530   | 0      |
+| 3456     | Naxxramas                                            | 533   | 0      |
+| 3457     | Karazhan                                             | 532   | 0      |
+| 3459     | City                                                 | 0     | 0      |
+| 3460     | Golden Strand                                        | 530   | 3430   |
+| 3461     | Sunsail Anchorage                                    | 530   | 3430   |
+| 3462     | Fairbreeze Village                                   | 530   | 3430   |
+| 3463     | Magisters Gate                                       | 530   | 3430   |
+| 3464     | Farstrider Retreat                                   | 530   | 3430   |
+| 3465     | North Sanctum                                        | 530   | 3430   |
+| 3466     | West Sanctum                                         | 530   | 3430   |
+| 3467     | East Sanctum                                         | 530   | 3430   |
+| 3468     | Saltheril's Haven                                    | 530   | 3430   |
+| 3469     | Thuron's Livery                                      | 530   | 3430   |
+| 3470     | Stillwhisper Pond                                    | 530   | 3430   |
+| 3471     | The Living Wood                                      | 530   | 3430   |
+| 3472     | Azurebreeze Coast                                    | 530   | 3430   |
+| 3473     | Lake Elrendar                                        | 530   | 3430   |
+| 3474     | The Scorched Grove                                   | 530   | 3430   |
+| 3475     | Zeb'Watha                                            | 530   | 3430   |
+| 3476     | Tor'Watha                                            | 530   | 3430   |
+| 3477     | Azjol-Nerub                                          | 571   | 0      |
+| 3478     | Gates of Ahn'Qiraj                                   | 1     | 0      |
+| 3479     | The Veiled Sea                                       | 530   | 0      |
+| 3480     | Duskwither Grounds                                   | 530   | 3430   |
+| 3481     | Duskwither Spire                                     | 530   | 3430   |
+| 3482     | The Dead Scar                                        | 530   | 3430   |
+| 3483     | Hellfire Peninsula                                   | 530   | 0      |
+| 3484     | The Sunspire                                         | 530   | 3430   |
+| 3485     | Falthrien Academy                                    | 530   | 3430   |
+| 3486     | Ravenholdt Manor                                     | 0     | 36     |
+| 3487     | Silvermoon City                                      | 530   | 0      |
+| 3488     | Tranquillien                                         | 530   | 3433   |
+| 3489     | Suncrown Village                                     | 530   | 3433   |
+| 3490     | Goldenmist Village                                   | 530   | 3433   |
+| 3491     | Windrunner Village                                   | 530   | 3433   |
+| 3492     | Windrunner Spire                                     | 530   | 3433   |
+| 3493     | Sanctum of the Sun                                   | 530   | 3433   |
+| 3494     | Sanctum of the Moon                                  | 530   | 3433   |
+| 3495     | Dawnstar Spire                                       | 530   | 3433   |
+| 3496     | Farstrider Enclave                                   | 530   | 3433   |
+| 3497     | An'daroth                                            | 530   | 3433   |
+| 3498     | An'telas                                             | 530   | 3433   |
+| 3499     | An'owyn                                              | 530   | 3433   |
+| 3500     | Deatholme                                            | 530   | 3433   |
+| 3501     | Bleeding Ziggurat                                    | 530   | 3433   |
+| 3502     | Howling Ziggurat                                     | 530   | 3433   |
+| 3503     | Shalandis Isle                                       | 530   | 3433   |
+| 3504     | Toryl Estate                                         | 530   | 3433   |
+| 3505     | Underlight Mines                                     | 530   | 3433   |
+| 3506     | Andilien Estate                                      | 530   | 3433   |
+| 3507     | Hatchet Hills                                        | 530   | 3433   |
+| 3508     | Amani Pass                                           | 530   | 3433   |
+| 3509     | Sungraze Peak                                        | 530   | 3433   |
+| 3510     | Amani Catacombs                                      | 530   | 3433   |
+| 3511     | Tower of the Damned                                  | 530   | 3433   |
+| 3512     | Zeb'Sora                                             | 530   | 3433   |
+| 3513     | Lake Elrendar                                        | 530   | 3433   |
+| 3514     | The Dead Scar                                        | 530   | 3433   |
+| 3515     | Elrendar River                                       | 530   | 3433   |
+| 3516     | Zeb'Tela                                             | 530   | 3433   |
+| 3517     | Zeb'Nowa                                             | 530   | 3433   |
+| 3518     | Nagrand                                              | 530   | 0      |
+| 3519     | Terokkar Forest                                      | 530   | 0      |
+| 3520     | Shadowmoon Valley                                    | 530   | 0      |
+| 3521     | Zangarmarsh                                          | 530   | 0      |
+| 3522     | Blade's Edge Mountains                               | 530   | 0      |
+| 3523     | Netherstorm                                          | 530   | 0      |
+| 3524     | Azuremyst Isle                                       | 530   | 0      |
+| 3525     | Bloodmyst Isle                                       | 530   | 0      |
+| 3526     | Ammen Vale                                           | 530   | 3524   |
+| 3527     | Crash Site                                           | 530   | 3524   |
+| 3528     | Silverline Lake                                      | 530   | 3524   |
+| 3529     | Nestlewood Thicket                                   | 530   | 3524   |
+| 3530     | Shadow Ridge                                         | 530   | 3524   |
+| 3531     | Skulking Row                                         | 530   | 3430   |
+| 3532     | Dawning Lane                                         | 530   | 3430   |
+| 3533     | Ruins of Silvermoon                                  | 530   | 3430   |
+| 3534     | Feth's Way                                           | 530   | 3430   |
+| 3535     | Hellfire Citadel                                     | 540   | 0      |
+| 3536     | Thrallmar                                            | 530   | 3483   |
+| 3537     | Borean Tundra                                        | 571   | 0      |
+| 3538     | Honor Hold                                           | 530   | 3483   |
+| 3539     | The Stair of Destiny                                 | 530   | 3483   |
+| 3540     | Twisting Nether                                      | 530   | 0      |
+| 3541     | Forge Camp: Mageddon                                 | 530   | 3483   |
+| 3542     | The Path of Glory                                    | 530   | 3483   |
+| 3543     | The Great Fissure                                    | 530   | 3483   |
+| 3544     | Plain of Shards                                      | 530   | 3483   |
+| 3545     | Hellfire Citadel                                     | 530   | 3483   |
+| 3546     | Expedition Armory                                    | 530   | 3483   |
+| 3547     | Throne of Kil'jaeden                                 | 530   | 3483   |
+| 3548     | Forge Camp: Rage                                     | 530   | 3483   |
+| 3549     | Invasion Point: Annihilator                          | 530   | 3483   |
+| 3550     | Borune Ruins                                         | 530   | 3483   |
+| 3551     | Ruins of Sha'naar                                    | 530   | 3483   |
+| 3552     | Temple of Telhamat                                   | 530   | 3483   |
+| 3553     | Pools of Aggonar                                     | 530   | 3483   |
+| 3554     | Falcon Watch                                         | 530   | 3483   |
+| 3555     | Mag'har Post                                         | 530   | 3483   |
+| 3556     | Den of Haal'esh                                      | 530   | 3483   |
+| 3557     | The Exodar                                           | 530   | 0      |
+| 3558     | Elrendar Falls                                       | 530   | 3430   |
+| 3559     | Nestlewood Hills                                     | 530   | 3524   |
+| 3560     | Ammen Fields                                         | 530   | 3524   |
+| 3561     | The Sacred Grove                                     | 530   | 3524   |
+| 3562     | Hellfire Ramparts                                    | 543   | 0      |
+| 3563     | Hellfire Citadel                                     | 543   | 3562   |
+| 3564     | Emberglade                                           | 530   | 3524   |
+| 3565     | Cenarion Refuge                                      | 530   | 3521   |
+| 3566     | Moonwing Den                                         | 530   | 3524   |
+| 3567     | Pod Cluster                                          | 530   | 3524   |
+| 3568     | Pod Wreckage                                         | 530   | 3524   |
+| 3569     | Tides' Hollow                                        | 530   | 3524   |
+| 3570     | Wrathscale Point                                     | 530   | 3524   |
+| 3571     | Bristlelimb Village                                  | 530   | 3524   |
+| 3572     | Stillpine Hold                                       | 530   | 3524   |
+| 3573     | Odesyus' Landing                                     | 530   | 3524   |
+| 3574     | Valaar's Berth                                       | 530   | 3524   |
+| 3575     | Silting Shore                                        | 530   | 3524   |
+| 3576     | Azure Watch                                          | 530   | 3524   |
+| 3577     | Geezle's Camp                                        | 530   | 3524   |
+| 3578     | Menagerie Wreckage                                   | 530   | 3524   |
+| 3579     | Traitor's Cove                                       | 530   | 3524   |
+| 3580     | Wildwind Peak                                        | 530   | 3524   |
+| 3581     | Wildwind Path                                        | 530   | 3524   |
+| 3582     | Zeth'Gor                                             | 530   | 3483   |
+| 3583     | Beryl Coast                                          | 530   | 3525   |
+| 3584     | Blood Watch                                          | 530   | 3525   |
+| 3585     | Bladewood                                            | 530   | 3525   |
+| 3586     | The Vector Coil                                      | 530   | 3525   |
+| 3587     | The Warp Piston                                      | 530   | 3525   |
+| 3588     | The Cryo-Core                                        | 530   | 3525   |
+| 3589     | The Crimson Reach                                    | 530   | 3525   |
+| 3590     | Wrathscale Lair                                      | 530   | 3525   |
+| 3591     | Ruins of Loreth'Aran                                 | 530   | 3525   |
+| 3592     | Nazzivian                                            | 530   | 3525   |
+| 3593     | Axxarien                                             | 530   | 3525   |
+| 3594     | Blacksilt Shore                                      | 530   | 3525   |
+| 3595     | The Foul Pool                                        | 530   | 3525   |
+| 3596     | The Hidden Reef                                      | 530   | 3525   |
+| 3597     | Amberweb Pass                                        | 530   | 3525   |
+| 3598     | Wyrmscar Island                                      | 530   | 3525   |
+| 3599     | Talon Stand                                          | 530   | 3525   |
+| 3600     | Bristlelimb Enclave                                  | 530   | 3525   |
+| 3601     | Ragefeather Ridge                                    | 530   | 3525   |
+| 3602     | Kessel's Crossing                                    | 530   | 3525   |
+| 3603     | Tel'athion's Camp                                    | 530   | 3525   |
+| 3604     | The Bloodcursed Reef                                 | 530   | 3525   |
+| 3605     | Hyjal Past                                           | 560   | 0      |
+| 3606     | Hyjal Summit                                         | 534   | 0      |
+| 3607     | Serpentshrine Cavern                                 | 548   | 0      |
+| 3608     | Vindicator's Rest                                    | 530   | 3525   |
+| 3609     | Unused3                                              | 530   | 3518   |
+| 3610     | Burning Blade Ruins                                  | 530   | 3518   |
+| 3611     | Clan Watch                                           | 530   | 3518   |
+| 3612     | Bloodcurse Isle                                      | 530   | 3525   |
+| 3613     | Garadar                                              | 530   | 3518   |
+| 3614     | Skysong Lake                                         | 530   | 3518   |
+| 3615     | Throne of the Elements                               | 530   | 3518   |
+| 3616     | Laughing Skull Ruins                                 | 530   | 3518   |
+| 3617     | Warmaul Hill                                         | 530   | 3518   |
+| 3618     | Gruul's Lair                                         | 530   | 3518   |
+| 3619     | Auren Ridge                                          | 530   | 3518   |
+| 3620     | Auren Falls                                          | 530   | 3518   |
+| 3621     | Lake Sunspring                                       | 530   | 3518   |
+| 3622     | Sunspring Post                                       | 530   | 3518   |
+| 3623     | Aeris Landing                                        | 530   | 3518   |
+| 3624     | Forge Camp: Fear                                     | 530   | 3518   |
+| 3625     | Forge Camp: Hate                                     | 530   | 3518   |
+| 3626     | Telaar                                               | 530   | 3518   |
+| 3627     | Northwind Cleft                                      | 530   | 3518   |
+| 3628     | Halaa                                                | 530   | 3518   |
+| 3629     | Southwind Cleft                                      | 530   | 3518   |
+| 3630     | Oshu'gun                                             | 530   | 3518   |
+| 3631     | Spirit Fields                                        | 530   | 3518   |
+| 3632     | Shamanar                                             | 530   | 3518   |
+| 3633     | Ancestral Grounds                                    | 530   | 3518   |
+| 3634     | Windyreed Village                                    | 530   | 3518   |
+| 3635     | Unused2                                              | 530   | 3518   |
+| 3636     | Elemental Plateau                                    | 530   | 3518   |
+| 3637     | Kil'sorrow Fortress                                  | 530   | 3518   |
+| 3638     | The Ring of Trials                                   | 530   | 3518   |
+| 3639     | Silvermyst Isle                                      | 530   | 3524   |
+| 3640     | Daggerfen Village                                    | 530   | 3521   |
+| 3641     | Umbrafen Village                                     | 530   | 3521   |
+| 3642     | Feralfen Village                                     | 530   | 3521   |
+| 3643     | Bloodscale Enclave                                   | 530   | 3521   |
+| 3644     | Telredor                                             | 530   | 3521   |
+| 3645     | Zabra'jin                                            | 530   | 3521   |
+| 3646     | Quagg Ridge                                          | 530   | 3521   |
+| 3647     | The Spawning Glen                                    | 530   | 3521   |
+| 3648     | The Dead Mire                                        | 530   | 3521   |
+| 3649     | Sporeggar                                            | 530   | 3521   |
+| 3650     | Ango'rosh Grounds                                    | 530   | 3521   |
+| 3651     | Ango'rosh Stronghold                                 | 530   | 3521   |
+| 3652     | Funggor Cavern                                       | 530   | 3521   |
+| 3653     | Serpent Lake                                         | 530   | 3521   |
+| 3654     | The Drain                                            | 530   | 3521   |
+| 3655     | Umbrafen Lake                                        | 530   | 3521   |
+| 3656     | Marshlight Lake                                      | 530   | 3521   |
+| 3657     | Portal Clearing                                      | 530   | 3521   |
+| 3658     | Sporewind Lake                                       | 530   | 3521   |
+| 3659     | The Lagoon                                           | 530   | 3521   |
+| 3660     | Blades' Run                                          | 530   | 3521   |
+| 3661     | Blade Tooth Canyon                                   | 530   | 3521   |
+| 3662     | Commons Hall                                         | 530   | 3430   |
+| 3663     | Derelict Manor                                       | 530   | 3430   |
+| 3664     | Huntress of the Sun                                  | 530   | 3430   |
+| 3665     | Falconwing Square                                    | 530   | 3430   |
+| 3666     | Halaani Basin                                        | 530   | 3518   |
+| 3667     | Hewn Bog                                             | 530   | 3521   |
+| 3668     | Boha'mu Ruins                                        | 530   | 3521   |
+| 3669     | The Stadium                                          | 530   | 3483   |
+| 3670     | The Overlook                                         | 530   | 3483   |
+| 3671     | Broken Hill                                          | 530   | 3483   |
+| 3672     | Mag'hari Procession                                  | 530   | 3518   |
+| 3673     | Nesingwary Safari                                    | 530   | 3518   |
+| 3674     | Cenarion Thicket                                     | 530   | 3519   |
+| 3675     | Tuurem                                               | 530   | 3519   |
+| 3676     | Veil Shienor                                         | 530   | 3519   |
+| 3677     | Veil Skith                                           | 530   | 3519   |
+| 3678     | Veil Shalas                                          | 530   | 3519   |
+| 3679     | Skettis                                              | 530   | 3519   |
+| 3680     | Blackwind Valley                                     | 530   | 3519   |
+| 3681     | Firewing Point                                       | 530   | 3519   |
+| 3682     | Grangol'var Village                                  | 530   | 3519   |
+| 3683     | Stonebreaker Hold                                    | 530   | 3519   |
+| 3684     | Allerian Stronghold                                  | 530   | 3519   |
+| 3685     | Bonechewer Ruins                                     | 530   | 3519   |
+| 3686     | Veil Lithic                                          | 530   | 3519   |
+| 3687     | Olembas                                              | 530   | 3519   |
+| 3688     | Auchindoun                                           | 530   | 3519   |
+| 3689     | Veil Reskk                                           | 530   | 3519   |
+| 3690     | Blackwind Lake                                       | 530   | 3519   |
+| 3691     | Lake Ere'Noru                                        | 530   | 3519   |
+| 3692     | Lake Jorune                                          | 530   | 3519   |
+| 3693     | Skethyl Mountains                                    | 530   | 3519   |
+| 3694     | Misty Ridge                                          | 530   | 3519   |
+| 3695     | The Broken Hills                                     | 530   | 3519   |
+| 3696     | The Barrier Hills                                    | 530   | 3519   |
+| 3697     | The Bone Wastes                                      | 530   | 3519   |
+| 3698     | Nagrand Arena                                        | 559   | 0      |
+| 3699     | Laughing Skull Courtyard                             | 530   | 3518   |
+| 3700     | The Ring of Blood                                    | 530   | 3518   |
+| 3701     | Arena Floor                                          | 530   | 3518   |
+| 3702     | Blade's Edge Arena                                   | 562   | 0      |
+| 3703     | Shattrath City                                       | 530   | 0      |
+| 3704     | The Shepherd's Gate                                  | 530   | 3487   |
+| 3705     | Telaari Basin                                        | 530   | 3518   |
+| 3706     | The Dark Portal                                      | 269   | 2366   |
+| 3707     | Alliance Base                                        | 534   | 3606   |
+| 3708     | Horde Encampment                                     | 534   | 3606   |
+| 3709     | Night Elf Village                                    | 534   | 3606   |
+| 3710     | Nordrassil                                           | 534   | 3606   |
+| 3711     | Sholazar Basin                                       | 571   | 0      |
+| 3712     | Area 52                                              | 530   | 3523   |
+| 3713     | The Blood Furnace                                    | 542   | 0      |
+| 3714     | The Shattered Halls                                  | 540   | 0      |
+| 3715     | The Steamvault                                       | 545   | 0      |
+| 3716     | The Underbog                                         | 546   | 0      |
+| 3717     | The Slave Pens                                       | 547   | 0      |
+| 3718     | Swamprat Post                                        | 530   | 3521   |
+| 3719     | Bleeding Hollow Ruins                                | 530   | 3519   |
+| 3720     | Twin Spire Ruins                                     | 530   | 3521   |
+| 3721     | The Crumbling Waste                                  | 530   | 3523   |
+| 3722     | Manaforge Ara                                        | 530   | 3523   |
+| 3723     | Arklon Ruins                                         | 530   | 3523   |
+| 3724     | Cosmowrench                                          | 530   | 3523   |
+| 3725     | Ruins of Enkaat                                      | 530   | 3523   |
+| 3726     | Manaforge B'naar                                     | 530   | 3523   |
+| 3727     | The Scrap Field                                      | 530   | 3523   |
+| 3728     | The Vortex Fields                                    | 530   | 3523   |
+| 3729     | The Heap                                             | 530   | 3523   |
+| 3730     | Manaforge Coruu                                      | 530   | 3523   |
+| 3731     | The Tempest Rift                                     | 530   | 3523   |
+| 3732     | Kirin'Var Village                                    | 530   | 3523   |
+| 3733     | The Violet Tower                                     | 530   | 3523   |
+| 3734     | Manaforge Duro                                       | 530   | 3523   |
+| 3735     | Voidwind Plateau                                     | 530   | 3523   |
+| 3736     | Manaforge Ultris                                     | 530   | 3523   |
+| 3737     | Celestial Ridge                                      | 530   | 3523   |
+| 3738     | The Stormspire                                       | 530   | 3523   |
+| 3739     | Forge Base: Oblivion                                 | 530   | 3523   |
+| 3740     | Forge Base: Gehenna                                  | 530   | 3523   |
+| 3741     | Ruins of Farahlon                                    | 530   | 3523   |
+| 3742     | Socrethar's Seat                                     | 530   | 3523   |
+| 3743     | Legion Hold                                          | 530   | 3520   |
+| 3744     | Shadowmoon Village                                   | 530   | 3520   |
+| 3745     | Wildhammer Stronghold                                | 530   | 3520   |
+| 3746     | The Hand of Gul'dan                                  | 530   | 3520   |
+| 3747     | The Fel Pits                                         | 530   | 3520   |
+| 3748     | The Deathforge                                       | 530   | 3520   |
+| 3749     | Coilskar Cistern                                     | 530   | 3520   |
+| 3750     | Coilskar Point                                       | 530   | 3520   |
+| 3751     | Sunfire Point                                        | 530   | 3520   |
+| 3752     | Illidari Point                                       | 530   | 3520   |
+| 3753     | Ruins of Baa'ri                                      | 530   | 3520   |
+| 3754     | Altar of Sha'tar                                     | 530   | 3520   |
+| 3755     | The Stair of Doom                                    | 530   | 3520   |
+| 3756     | Ruins of Karabor                                     | 530   | 3520   |
+| 3757     | Ata'mal Terrace                                      | 530   | 3520   |
+| 3758     | Netherwing Fields                                    | 530   | 3520   |
+| 3759     | Netherwing Ledge                                     | 530   | 3520   |
+| 3760     | The Barrier Hills                                    | 530   | 3518   |
+| 3761     | The High Path                                        | 530   | 3518   |
+| 3762     | Windyreed Pass                                       | 530   | 3518   |
+| 3763     | Zangar Ridge                                         | 530   | 3518   |
+| 3764     | The Twilight Ridge                                   | 530   | 3518   |
+| 3765     | Razorthorn Trail                                     | 530   | 3483   |
+| 3766     | Orebor Harborage                                     | 530   | 3521   |
+| 3767     | Blades' Run                                          | 530   | 3522   |
+| 3768     | Jagged Ridge                                         | 530   | 3522   |
+| 3769     | Thunderlord Stronghold                               | 530   | 3522   |
+| 3770     | Blade Tooth Canyon                                   | 530   | 3522   |
+| 3771     | The Living Grove                                     | 530   | 3522   |
+| 3772     | Sylvanaar                                            | 530   | 3522   |
+| 3773     | Bladespire Hold                                      | 530   | 3522   |
+| 3774     | Gruul's Lair                                         | 530   | 3522   |
+| 3775     | Circle of Blood                                      | 530   | 3522   |
+| 3776     | Bloodmaul Outpost                                    | 530   | 3522   |
+| 3777     | Bloodmaul Camp                                       | 530   | 3522   |
+| 3778     | Draenethyst Mine                                     | 530   | 3522   |
+| 3779     | Trogma's Claim                                       | 530   | 3522   |
+| 3780     | Blackwing Coven                                      | 530   | 3522   |
+| 3781     | Grishnath                                            | 530   | 3522   |
+| 3782     | Veil Lashh                                           | 530   | 3522   |
+| 3783     | Veil Vekh                                            | 530   | 3522   |
+| 3784     | Forge Camp: Terror                                   | 530   | 3522   |
+| 3785     | Forge Camp: Wrath                                    | 530   | 3522   |
+| 3786     | Ogri'la                                              | 530   | 3522   |
+| 3787     | Forge Camp: Anger                                    | 530   | 3522   |
+| 3788     | The Low Path                                         | 530   | 3518   |
+| 3789     | Shadow Labyrinth                                     | 555   | 0      |
+| 3790     | Auchenai Crypts                                      | 558   | 0      |
+| 3791     | Sethekk Halls                                        | 556   | 0      |
+| 3792     | Mana-Tombs                                           | 557   | 0      |
+| 3793     | Felspark Ravine                                      | 530   | 3483   |
+| 3794     | Valley of Bones                                      | 530   | 3483   |
+| 3795     | Sha'naari Wastes                                     | 530   | 3483   |
+| 3796     | The Warp Fields                                      | 530   | 3483   |
+| 3797     | Fallen Sky Ridge                                     | 530   | 3483   |
+| 3798     | Haal'eshi Gorge                                      | 530   | 3483   |
+| 3799     | Stonewall Canyon                                     | 530   | 3483   |
+| 3800     | Thornfang Hill                                       | 530   | 3483   |
+| 3801     | Mag'har Grounds                                      | 530   | 3483   |
+| 3802     | Void Ridge                                           | 530   | 3483   |
+| 3803     | The Abyssal Shelf                                    | 530   | 3483   |
+| 3804     | The Legion Front                                     | 530   | 3483   |
+| 3805     | Zul'Aman                                             | 568   | 0      |
+| 3806     | Supply Caravan                                       | 530   | 3483   |
+| 3807     | Reaver's Fall                                        | 530   | 3483   |
+| 3808     | Cenarion Post                                        | 530   | 3483   |
+| 3809     | Southern Rampart                                     | 530   | 3483   |
+| 3810     | Northern Rampart                                     | 530   | 3483   |
+| 3811     | Gor'gaz Outpost                                      | 530   | 3483   |
+| 3812     | Spinebreaker Post                                    | 530   | 3483   |
+| 3813     | The Path of Anguish                                  | 530   | 3483   |
+| 3814     | East Supply Caravan                                  | 530   | 3483   |
+| 3815     | Expedition Point                                     | 530   | 3483   |
+| 3816     | Zeppelin Crash                                       | 530   | 3483   |
+| 3817     | Testing                                              | 13    | 0      |
+| 3818     | Bloodscale Grounds                                   | 530   | 3521   |
+| 3819     | Darkcrest Enclave                                    | 530   | 3521   |
+| 3820     | Eye of the Storm                                     | 566   | 0      |
+| 3821     | Warden's Cage                                        | 530   | 3520   |
+| 3822     | Eclipse Point                                        | 530   | 3520   |
+| 3823     | Isle of Tribulations                                 | 530   | 3433   |
+| 3824     | Bloodmaul Ravine                                     | 530   | 3522   |
+| 3825     | Dragons' End                                         | 530   | 3522   |
+| 3826     | Daggermaw Canyon                                     | 530   | 3522   |
+| 3827     | Vekhaar Stand                                        | 530   | 3522   |
+| 3828     | Ruuan Weald                                          | 530   | 3522   |
+| 3829     | Veil Ruuan                                           | 530   | 3522   |
+| 3830     | Raven's Wood                                         | 530   | 3522   |
+| 3831     | Death's Door                                         | 530   | 3522   |
+| 3832     | Vortex Pinnacle                                      | 530   | 3522   |
+| 3833     | Razor Ridge                                          | 530   | 3522   |
+| 3834     | Ridge of Madness                                     | 530   | 3522   |
+| 3835     | Dustquill Ravine                                     | 530   | 3483   |
+| 3836     | Magtheridon's Lair                                   | 544   | 0      |
+| 3837     | Sunfury Hold                                         | 530   | 3523   |
+| 3838     | Spinebreaker Mountains                               | 530   | 3483   |
+| 3839     | Abandoned Armory                                     | 530   | 3518   |
+| 3840     | The Black Temple                                     | 530   | 3520   |
+| 3841     | Darkcrest Shore                                      | 530   | 3521   |
+| 3842     | Tempest Keep                                         | 530   | 3523   |
+| 3844     | Mok'Nathal Village                                   | 530   | 3522   |
+| 3845     | Tempest Keep                                         | 550   | 0      |
+| 3846     | The Arcatraz                                         | 530   | 3525   |
+| 3847     | The Botanica                                         | 553   | 0      |
+| 3848     | The Arcatraz                                         | 552   | 0      |
+| 3849     | The Mechanar                                         | 554   | 0      |
+| 3850     | Netherstone                                          | 530   | 3523   |
+| 3851     | Midrealm Post                                        | 530   | 3523   |
+| 3852     | Tuluman's Landing                                    | 530   | 3523   |
+| 3854     | Protectorate Watch Post                              | 530   | 3523   |
+| 3855     | Circle of Blood Arena                                | 530   | 3522   |
+| 3856     | Elrendar Crossing                                    | 530   | 3433   |
+| 3857     | Ammen Ford                                           | 530   | 3524   |
+| 3858     | Razorthorn Shelf                                     | 530   | 3519   |
+| 3859     | Silmyr Lake                                          | 530   | 3519   |
+| 3860     | Raastok Glade                                        | 530   | 3519   |
+| 3861     | Thalassian Pass                                      | 530   | 3433   |
+| 3862     | Churning Gulch                                       | 530   | 3522   |
+| 3863     | Broken Wilds                                         | 530   | 3522   |
+| 3864     | Bash'ir Landing                                      | 530   | 3522   |
+| 3865     | Crystal Spine                                        | 530   | 3522   |
+| 3866     | Skald                                                | 530   | 3522   |
+| 3867     | Bladed Gulch                                         | 530   | 3522   |
+| 3868     | Gyro-Plank Bridge                                    | 530   | 3523   |
+| 3869     | Mage Tower                                           | 566   | 3820   |
+| 3870     | Blood Elf Tower                                      | 566   | 3820   |
+| 3871     | Draenei Ruins                                        | 566   | 3820   |
+| 3872     | Fel Reaver Ruins                                     | 566   | 3820   |
+| 3873     | The Proving Grounds                                  | 530   | 3523   |
+| 3874     | Eco-Dome Farfield                                    | 530   | 3523   |
+| 3875     | Eco-Dome Skyperch                                    | 530   | 3523   |
+| 3876     | Eco-Dome Sutheron                                    | 530   | 3523   |
+| 3877     | Eco-Dome Midrealm                                    | 530   | 3523   |
+| 3878     | Ethereum Staging Grounds                             | 530   | 3523   |
+| 3879     | Chapel Yard                                          | 530   | 3523   |
+| 3880     | Access Shaft Zeon                                    | 530   | 3523   |
+| 3881     | Trelleum Mine                                        | 530   | 3523   |
+| 3882     | Invasion Point: Destroyer                            | 530   | 3523   |
+| 3883     | Camp of Boom                                         | 530   | 3523   |
+| 3884     | Spinebreaker Pass                                    | 530   | 3483   |
+| 3885     | Netherweb Ridge                                      | 530   | 3519   |
+| 3886     | Derelict Caravan                                     | 530   | 3519   |
+| 3887     | Refugee Caravan                                      | 530   | 3519   |
+| 3888     | Shadow Tomb                                          | 530   | 3519   |
+| 3889     | Veil Rhaze                                           | 530   | 3519   |
+| 3890     | Tomb of Lights                                       | 530   | 3519   |
+| 3891     | Carrion Hill                                         | 530   | 3519   |
+| 3892     | Writhing Mound                                       | 530   | 3519   |
+| 3893     | Ring of Observance                                   | 530   | 3519   |
+| 3894     | Auchenai Grounds                                     | 530   | 3519   |
+| 3895     | Cenarion Watchpost                                   | 530   | 3521   |
+| 3896     | Aldor Rise                                           | 530   | 3703   |
+| 3897     | Terrace of Light                                     | 530   | 3703   |
+| 3898     | Scryer's Tier                                        | 530   | 3703   |
+| 3899     | Lower City                                           | 530   | 3703   |
+| 3900     | Invasion Point: Overlord                             | 530   | 3523   |
+| 3901     | Allerian Post                                        | 530   | 3519   |
+| 3902     | Stonebreaker Camp                                    | 530   | 3519   |
+| 3903     | Boulder'mok                                          | 530   | 3522   |
+| 3904     | Cursed Hollow                                        | 530   | 3522   |
+| 3905     | Coilfang Reservoir                                   | 530   | 3521   |
+| 3906     | The Bloodwash                                        | 530   | 3525   |
+| 3907     | Veridian Point                                       | 530   | 3525   |
+| 3908     | Middenvale                                           | 530   | 3525   |
+| 3909     | The Lost Fold                                        | 530   | 3525   |
+| 3910     | Mystwood                                             | 530   | 3525   |
+| 3911     | Tranquil Shore                                       | 530   | 3430   |
+| 3912     | Goldenbough Pass                                     | 530   | 3430   |
+| 3913     | Runestone Falithas                                   | 530   | 3430   |
+| 3914     | Runestone Shan'dor                                   | 530   | 3430   |
+| 3915     | Fairbridge Strand                                    | 530   | 3524   |
+| 3916     | Moongraze Woods                                      | 530   | 3524   |
+| 3917     | Auchindoun                                           | 530   | 0      |
+| 3918     | Toshley's Station                                    | 530   | 3522   |
+| 3919     | Singing Ridge                                        | 530   | 3522   |
+| 3920     | Shatter Point                                        | 530   | 3483   |
+| 3921     | Arklonis Ridge                                       | 530   | 3523   |
+| 3922     | Bladespire Outpost                                   | 530   | 3522   |
+| 3923     | Gruul's Lair                                         | 565   | 0      |
+| 3924     | Northmaul Tower                                      | 530   | 3522   |
+| 3925     | Southmaul Tower                                      | 530   | 3522   |
+| 3926     | Shattered Plains                                     | 530   | 3520   |
+| 3927     | Oronok's Farm                                        | 530   | 3520   |
+| 3928     | The Altar of Damnation                               | 530   | 3520   |
+| 3929     | The Path of Conquest                                 | 530   | 3520   |
+| 3930     | Eclipsion Fields                                     | 530   | 3520   |
+| 3931     | Bladespire Grounds                                   | 530   | 3522   |
+| 3932     | Sketh'lon Base Camp                                  | 530   | 3520   |
+| 3933     | Sketh'lon Wreckage                                   | 530   | 3520   |
+| 3934     | Town Square                                          | 530   | 3523   |
+| 3935     | Wizard Row                                           | 530   | 3523   |
+| 3936     | Deathforge Tower                                     | 530   | 3520   |
+| 3937     | Slag Watch                                           | 530   | 3520   |
+| 3938     | Sanctum of the Stars                                 | 530   | 3520   |
+| 3939     | Dragonmaw Fortress                                   | 530   | 3520   |
+| 3940     | The Fetid Pool                                       | 530   | 3520   |
+| 3941     | Test                                                 | 530   | 3520   |
+| 3942     | Razaan's Landing                                     | 530   | 3522   |
+| 3943     | Invasion Point: Cataclysm                            | 530   | 3520   |
+| 3944     | The Altar of Shadows                                 | 530   | 3520   |
+| 3945     | Netherwing Pass                                      | 530   | 3520   |
+| 3946     | Wayne's Refuge                                       | 530   | 3519   |
+| 3947     | The Scalding Pools                                   | 530   | 3520   |
+| 3948     | Brian and Pat Test                                   | 451   | 0      |
+| 3949     | Magma Fields                                         | 530   | 3520   |
+| 3950     | Crimson Watch                                        | 530   | 3520   |
+| 3951     | Evergrove                                            | 530   | 3522   |
+| 3952     | Wyrmskull Bridge                                     | 530   | 3522   |
+| 3953     | Scalewing Shelf                                      | 530   | 3522   |
+| 3954     | Wyrmskull Tunnel                                     | 530   | 3522   |
+| 3955     | Hellfire Basin                                       | 530   | 3483   |
+| 3956     | The Shadow Stair                                     | 530   | 3519   |
+| 3957     | Sha'tari Outpost                                     | 530   | 3519   |
+| 3958     | Sha'tari Base Camp                                   | 530   | 3519   |
+| 3959     | Black Temple                                         | 564   | 0      |
+| 3960     | Soulgrinder's Barrow                                 | 530   | 3522   |
+| 3961     | Sorrow Wing Point                                    | 530   | 3519   |
+| 3962     | Vim'gol's Circle                                     | 530   | 3522   |
+| 3963     | Dragonspine Ridge                                    | 530   | 3522   |
+| 3964     | Skyguard Outpost                                     | 530   | 3522   |
+| 3965     | Netherwing Mines                                     | 530   | 3520   |
+| 3966     | Dragonmaw Base Camp                                  | 530   | 3520   |
+| 3967     | Dragonmaw Skyway                                     | 530   | 3520   |
+| 3968     | Ruins of Lordaeron                                   | 572   | 0      |
+| 3969     | Rivendark's Perch                                    | 530   | 3522   |
+| 3970     | Obsidia's Perch                                      | 530   | 3522   |
+| 3971     | Insidion's Perch                                     | 530   | 3522   |
+| 3972     | Furywing's Perch                                     | 530   | 3522   |
+| 3973     | Blackwind Landing                                    | 530   | 3519   |
+| 3974     | Veil Harr'ik                                         | 530   | 3519   |
+| 3975     | Terokk's Rest                                        | 530   | 3519   |
+| 3976     | Veil Ala'rak                                         | 530   | 3519   |
+| 3977     | Upper Veil Shil'ak                                   | 530   | 3519   |
+| 3978     | Lower Veil Shil'ak                                   | 530   | 3519   |
+| 3979     | The Frozen Sea                                       | 571   | 0      |
+| 3980     | Daggercap Bay                                        | 571   | 495    |
+| 3981     | Valgarde                                             | 571   | 495    |
+| 3982     | Wyrmskull Village                                    | 571   | 495    |
+| 3983     | Utgarde Keep                                         | 571   | 495    |
+| 3984     | Nifflevar                                            | 571   | 495    |
+| 3985     | Falls of Ymiron                                      | 571   | 495    |
+| 3986     | Echo Reach                                           | 571   | 495    |
+| 3987     | The Isle of Spears                                   | 571   | 495    |
+| 3988     | Kamagua                                              | 571   | 495    |
+| 3989     | Garvan's Reef                                        | 571   | 495    |
+| 3990     | Scalawag Point                                       | 571   | 495    |
+| 3991     | New Agamand                                          | 571   | 495    |
+| 3992     | The Ancient Lift                                     | 571   | 495    |
+| 3993     | Westguard Turret                                     | 571   | 495    |
+| 3994     | Halgrind                                             | 571   | 495    |
+| 3995     | The Laughing Stand                                   | 571   | 495    |
+| 3996     | Baelgun's Excavation Site                            | 571   | 495    |
+| 3997     | Explorers' League Outpost                            | 571   | 495    |
+| 3998     | Westguard Keep                                       | 571   | 495    |
+| 3999     | Steel Gate                                           | 571   | 495    |
+| 4000     | Vengeance Landing                                    | 571   | 495    |
+| 4001     | Baleheim                                             | 571   | 495    |
+| 4002     | Skorn                                                | 571   | 495    |
+| 4003     | Fort Wildervar                                       | 571   | 495    |
+| 4004     | Vileprey Village                                     | 571   | 495    |
+| 4005     | Ivald's Ruin                                         | 571   | 495    |
+| 4006     | Gjalerbron                                           | 571   | 495    |
+| 4007     | Tomb of the Lost Kings                               | 571   | 495    |
+| 4008     | Shartuul's Transporter                               | 530   | 3522   |
+| 4009     | Illidari Training Grounds                            | 564   | 3959   |
+| 4010     | Mudsprocket                                          | 1     | 15     |
+| 4018     | Camp Winterhoof                                      | 571   | 495    |
+| 4019     | Development Land                                     | 451   | 0      |
+| 4020     | Mightstone Quarry                                    | 571   | 3537   |
+| 4021     | Bloodspore Plains                                    | 571   | 3537   |
+| 4022     | Gammoth                                              | 571   | 3537   |
+| 4023     | Amber Ledge                                          | 571   | 3537   |
+| 4024     | Coldarra                                             | 571   | 3537   |
+| 4025     | The Westrift                                         | 571   | 3537   |
+| 4026     | The Transitus Stair                                  | 571   | 3537   |
+| 4027     | Coast of Echoes                                      | 571   | 3537   |
+| 4028     | Riplash Strand                                       | 571   | 3537   |
+| 4029     | Riplash Ruins                                        | 571   | 3537   |
+| 4030     | Coast of Idols                                       | 571   | 3537   |
+| 4031     | Pal'ea                                               | 571   | 3537   |
+| 4032     | Valiance Keep                                        | 571   | 3537   |
+| 4033     | Winterfin Village                                    | 571   | 3537   |
+| 4034     | The Borean Wall                                      | 571   | 3537   |
+| 4035     | The Geyser Fields                                    | 571   | 3537   |
+| 4036     | Fizzcrank Pumping Station                            | 571   | 3537   |
+| 4037     | Taunka'le Village                                    | 571   | 3537   |
+| 4038     | Magnamoth Caverns                                    | 571   | 3537   |
+| 4039     | Coldrock Quarry                                      | 571   | 3537   |
+| 4040     | Njord's Breath Bay                                   | 571   | 3537   |
+| 4041     | Kaskala                                              | 571   | 3537   |
+| 4042     | Transborea                                           | 571   | 3537   |
+| 4043     | The Flood Plains                                     | 571   | 3537   |
+| 4046     | Direhorn Post                                        | 1     | 15     |
+| 4047     | Nat's Landing                                        | 1     | 15     |
+| 4048     | Ember Clutch                                         | 571   | 495    |
+| 4049     | Tabetha's Farm                                       | 1     | 15     |
+| 4050     | Derelict Strand                                      | 571   | 495    |
+| 4051     | The Frozen Glade                                     | 571   | 495    |
+| 4052     | The Vibrant Glade                                    | 571   | 495    |
+| 4053     | The Twisted Glade                                    | 571   | 495    |
+| 4054     | Rivenwood                                            | 571   | 495    |
+| 4055     | Caldemere Lake                                       | 571   | 495    |
+| 4056     | Utgarde Catacombs                                    | 571   | 495    |
+| 4057     | Shield Hill                                          | 571   | 495    |
+| 4058     | Lake Cauldros                                        | 571   | 495    |
+| 4059     | Cauldros Isle                                        | 571   | 495    |
+| 4060     | Bleeding Vale                                        | 571   | 495    |
+| 4061     | Giants' Run                                          | 571   | 495    |
+| 4062     | Apothecary Camp                                      | 571   | 495    |
+| 4063     | Ember Spear Tower                                    | 571   | 495    |
+| 4064     | Shattered Straits                                    | 571   | 495    |
+| 4065     | Gjalerhorn                                           | 571   | 495    |
+| 4066     | Frostblade Peak                                      | 571   | 495    |
+| 4067     | Plaguewood Tower                                     | 0     | 139    |
+| 4068     | West Spear Tower                                     | 571   | 495    |
+| 4069     | North Spear Tower                                    | 571   | 495    |
+| 4070     | Chillmere Coast                                      | 571   | 495    |
+| 4071     | Whisper Gulch                                        | 571   | 495    |
+| 4072     | Sub zone                                             | 451   | 151    |
+| 4073     | Winter's Terrace                                     | 571   | 495    |
+| 4074     | The Waking Halls                                     | 571   | 495    |
+| 4075     | Sunwell Plateau                                      | 580   | 0      |
+| 4076     | Reuse Me 7                                           | 598   | 0      |
+| 4077     | Sorlof's Strand                                      | 571   | 495    |
+| 4078     | Razorthorn Rise                                      | 530   | 3519   |
+| 4079     | Frostblade Pass                                      | 571   | 495    |
+| 4080     | Isle of Quel'Danas                                   | 530   | 0      |
+| 4081     | The Dawnchaser                                       | 530   | 4080   |
+| 4082     | The Sin'loren                                        | 530   | 4080   |
+| 4083     | Silvermoon's Pride                                   | 530   | 4080   |
+| 4084     | The Bloodoath                                        | 530   | 4080   |
+| 4085     | Shattered Sun Staging Area                           | 530   | 4080   |
+| 4086     | Sun's Reach Sanctum                                  | 530   | 4080   |
+| 4087     | Sun's Reach Harbor                                   | 530   | 4080   |
+| 4088     | Sun's Reach Armory                                   | 530   | 4080   |
+| 4089     | Dawnstar Village                                     | 530   | 4080   |
+| 4090     | The Dawning Square                                   | 530   | 4080   |
+| 4091     | Greengill Coast                                      | 530   | 4080   |
+| 4092     | The Dead Scar                                        | 530   | 4080   |
+| 4093     | The Sun Forge                                        | 530   | 4080   |
+| 4094     | Sunwell Plateau                                      | 530   | 4080   |
+| 4095     | Magisters' Terrace                                   | 530   | 4080   |
+| 4096     | Clayt?Ân's WoWEdit Land                              | 451   | 4019   |
+| 4097     | Winterfin Caverns                                    | 571   | 3537   |
+| 4098     | Glimmer Bay                                          | 571   | 3537   |
+| 4099     | Winterfin Retreat                                    | 571   | 3537   |
+| 4100     | The Culling of Stratholme                            | 595   | 0      |
+| 4101     | Sands of Nasam                                       | 571   | 3537   |
+| 4102     | Krom's Landing                                       | 571   | 3537   |
+| 4103     | Nasam's Talon                                        | 571   | 3537   |
+| 4104     | Echo Cove                                            | 571   | 3537   |
+| 4105     | Beryl Point                                          | 571   | 3537   |
+| 4106     | Garrosh's Landing                                    | 571   | 3537   |
+| 4107     | Warsong Jetty                                        | 571   | 3537   |
+| 4108     | Fizzcrank Airstrip                                   | 571   | 3537   |
+| 4109     | Lake Kum'uya                                         | 571   | 3537   |
+| 4110     | Farshire Fields                                      | 571   | 3537   |
+| 4111     | Farshire                                             | 571   | 3537   |
+| 4112     | Farshire Lighthouse                                  | 571   | 3537   |
+| 4113     | Unu'pe                                               | 571   | 3537   |
+| 4114     | Death's Stand                                        | 571   | 3537   |
+| 4115     | The Abandoned Reach                                  | 571   | 3537   |
+| 4116     | Scalding Pools                                       | 571   | 3537   |
+| 4117     | Steam Springs                                        | 571   | 3537   |
+| 4118     | Talramas                                             | 571   | 3537   |
+| 4119     | Festering Pools                                      | 571   | 3537   |
+| 4120     | The Nexus                                            | 571   | 3537   |
+| 4121     | Transitus Shield                                     | 571   | 3537   |
+| 4122     | Bor'gorok Outpost                                    | 571   | 3537   |
+| 4123     | Magmoth                                              | 571   | 3537   |
+| 4124     | The Dens of Dying                                    | 571   | 3537   |
+| 4125     | Temple City of En'kilah                              | 571   | 3537   |
+| 4126     | The Wailing Ziggurat                                 | 571   | 3537   |
+| 4127     | Steeljaw's Caravan                                   | 571   | 3537   |
+| 4128     | Naxxanar                                             | 571   | 3537   |
+| 4129     | Warsong Hold                                         | 571   | 3537   |
+| 4130     | Plains of Nasam                                      | 571   | 3537   |
+| 4131     | Magisters' Terrace                                   | 585   | 0      |
+| 4132     | Ruins of Eldra'nath                                  | 571   | 3537   |
+| 4133     | Charred Rise                                         | 571   | 3537   |
+| 4134     | Blistering Pool                                      | 571   | 3537   |
+| 4135     | Spire of Blood                                       | 571   | 3537   |
+| 4136     | Spire of Decay                                       | 571   | 3537   |
+| 4137     | Spire of Pain                                        | 571   | 3537   |
+| 4138     | Frozen Reach                                         | 571   | 3537   |
+| 4139     | Parhelion Plaza                                      | 580   | 4075   |
+| 4140     | The Dead Scar                                        | 580   | 4075   |
+| 4141     | Torp's Farm                                          | 571   | 3537   |
+| 4142     | Warsong Granary                                      | 571   | 3537   |
+| 4143     | Warsong Slaughterhouse                               | 571   | 3537   |
+| 4144     | Warsong Farms Outpost                                | 571   | 3537   |
+| 4145     | West Point Station                                   | 571   | 3537   |
+| 4146     | North Point Station                                  | 571   | 3537   |
+| 4147     | Mid Point Station                                    | 571   | 3537   |
+| 4148     | South Point Station                                  | 571   | 3537   |
+| 4149     | D.E.H.T.A. Encampment                                | 571   | 3537   |
+| 4150     | Kaw's Roost                                          | 571   | 3537   |
+| 4151     | Westwind Refugee Camp                                | 571   | 65     |
+| 4152     | Moa'ki Harbor                                        | 571   | 65     |
+| 4153     | Indu'le Village                                      | 571   | 65     |
+| 4154     | Snowfall Glade                                       | 571   | 65     |
+| 4155     | The Half Shell                                       | 571   | 65     |
+| 4156     | Surge Needle                                         | 571   | 65     |
+| 4157     | Moonrest Gardens                                     | 571   | 65     |
+| 4158     | Stars' Rest                                          | 571   | 65     |
+| 4159     | Westfall Brigade Encampment                          | 571   | 394    |
+| 4160     | Lothalor Woodlands                                   | 571   | 65     |
+| 4161     | Wyrmrest Temple                                      | 571   | 65     |
+| 4162     | Icemist Falls                                        | 571   | 65     |
+| 4163     | Icemist Village                                      | 571   | 65     |
+| 4164     | The Pit of Narjun                                    | 571   | 65     |
+| 4165     | Agmar's Hammer                                       | 571   | 65     |
+| 4166     | Lake Indu'le                                         | 571   | 65     |
+| 4167     | Obsidian Dragonshrine                                | 571   | 65     |
+| 4168     | Ruby Dragonshrine                                    | 571   | 65     |
+| 4169     | Fordragon Hold                                       | 571   | 65     |
+| 4170     | Kor'kron Vanguard                                    | 571   | 65     |
+| 4171     | The Court of Skulls                                  | 571   | 65     |
+| 4172     | Angrathar the Wrathgate                              | 571   | 65     |
+| 4173     | Galakrond's Rest                                     | 571   | 65     |
+| 4174     | The Wicked Coil                                      | 571   | 65     |
+| 4175     | Bronze Dragonshrine                                  | 571   | 65     |
+| 4176     | The Mirror of Dawn                                   | 571   | 65     |
+| 4177     | Wintergarde Keep                                     | 571   | 65     |
+| 4178     | Wintergarde Mine                                     | 571   | 65     |
+| 4179     | Emerald Dragonshrine                                 | 571   | 65     |
+| 4180     | New Hearthglen                                       | 571   | 65     |
+| 4181     | Crusader's Landing                                   | 571   | 65     |
+| 4182     | Sinner's Folly                                       | 571   | 65     |
+| 4183     | Azure Dragonshrine                                   | 571   | 65     |
+| 4184     | Path of the Titans                                   | 571   | 65     |
+| 4185     | The Forgotten Shore                                  | 571   | 65     |
+| 4186     | Venomspite                                           | 571   | 65     |
+| 4187     | The Crystal Vice                                     | 571   | 65     |
+| 4188     | The Carrion Fields                                   | 571   | 65     |
+| 4189     | Onslaught Base Camp                                  | 571   | 65     |
+| 4190     | Thorson's Post                                       | 571   | 65     |
+| 4191     | Light's Trust                                        | 571   | 65     |
+| 4192     | Frostmourne Cavern                                   | 571   | 65     |
+| 4193     | Scarlet Point                                        | 571   | 65     |
+| 4194     | Jintha'kalar                                         | 571   | 65     |
+| 4195     | Ice Heart Cavern                                     | 571   | 65     |
+| 4196     | Drak'Tharon Keep                                     | 600   | 0      |
+| 4197     | Wintergrasp                                          | 571   | 0      |
+| 4198     | Kili'ua's Atoll                                      | 571   | 65     |
+| 4199     | Silverbrook                                          | 571   | 394    |
+| 4200     | Vordrassil's Heart                                   | 571   | 394    |
+| 4201     | Vordrassil's Tears                                   | 571   | 0      |
+| 4202     | Vordrassil's Tears                                   | 571   | 394    |
+| 4203     | Vordrassil's Limb                                    | 571   | 394    |
+| 4204     | Amberpine Lodge                                      | 571   | 394    |
+| 4205     | Solstice Village                                     | 571   | 394    |
+| 4206     | Conquest Hold                                        | 571   | 394    |
+| 4207     | Voldrune                                             | 571   | 394    |
+| 4208     | Granite Springs                                      | 571   | 394    |
+| 4209     | Zeb'Halak                                            | 571   | 394    |
+| 4210     | Drak'Tharon Keep                                     | 571   | 394    |
+| 4211     | Camp Oneqwah                                         | 571   | 394    |
+| 4212     | Eastwind Shore                                       | 571   | 394    |
+| 4213     | The Broken Bluffs                                    | 571   | 394    |
+| 4214     | Boulder Hills                                        | 571   | 394    |
+| 4215     | Rage Fang Shrine                                     | 571   | 394    |
+| 4216     | Drakil'jin Ruins                                     | 571   | 394    |
+| 4217     | Blackriver Logging Camp                              | 571   | 394    |
+| 4218     | Heart's Blood Shrine                                 | 571   | 394    |
+| 4219     | Hollowstone Mine                                     | 571   | 394    |
+| 4220     | Dun Argol                                            | 571   | 394    |
+| 4221     | Thor Modan                                           | 571   | 394    |
+| 4222     | Blue Sky Logging Grounds                             | 571   | 394    |
+| 4223     | Maw of Neltharion                                    | 571   | 65     |
+| 4224     | The Briny Pinnacle                                   | 571   | 65     |
+| 4225     | Glittering Strand                                    | 571   | 65     |
+| 4226     | Iskaal                                               | 571   | 495    |
+| 4227     | Dragon's Fall                                        | 571   | 65     |
+| 4228     | The Oculus                                           | 578   | 0      |
+| 4229     | Prospector's Point                                   | 571   | 394    |
+| 4230     | Coldwind Heights                                     | 571   | 65     |
+| 4231     | Redwood Trading Post                                 | 571   | 394    |
+| 4232     | Vengeance Pass                                       | 571   | 65     |
+| 4233     | Dawn's Reach                                         | 571   | 65     |
+| 4234     | Naxxramas                                            | 571   | 65     |
+| 4235     | Heartwood Trading Post                               | 571   | 394    |
+| 4236     | Evergreen Trading Post                               | 571   | 394    |
+| 4237     | Spruce Point Post                                    | 571   | 394    |
+| 4238     | White Pine Trading Post                              | 571   | 394    |
+| 4239     | Aspen Grove Post                                     | 571   | 394    |
+| 4240     | Forest's Edge Post                                   | 571   | 394    |
+| 4241     | Eldritch Heights                                     | 571   | 65     |
+| 4242     | Venture Bay                                          | 571   | 394    |
+| 4243     | Wintergarde Crypt                                    | 571   | 65     |
+| 4244     | Bloodmoon Isle                                       | 571   | 394    |
+| 4245     | Shadowfang Tower                                     | 571   | 394    |
+| 4246     | Wintergarde Mausoleum                                | 571   | 65     |
+| 4247     | Duskhowl Den                                         | 571   | 394    |
+| 4248     | The Conquest Pit                                     | 571   | 394    |
+| 4249     | The Path of Iron                                     | 571   | 394    |
+| 4250     | Ruins of Tethys                                      | 571   | 394    |
+| 4251     | Silverbrook Hills                                    | 571   | 394    |
+| 4252     | The Broken Bluffs                                    | 571   | 495    |
+| 4253     | 7th Legion Front                                     | 571   | 65     |
+| 4254     | The Dragon Wastes                                    | 571   | 65     |
+| 4255     | Ruins of Drak'Zin                                    | 571   | 394    |
+| 4256     | Drak'Mar Lake                                        | 571   | 65     |
+| 4257     | Dragonspine Tributary                                | 571   | 65     |
+| 4258     | The North Sea                                        | 571   | 0      |
+| 4259     | Drak'ural                                            | 571   | 394    |
+| 4260     | Thorvald's Camp                                      | 571   | 495    |
+| 4261     | Ghostblade Post                                      | 571   | 495    |
+| 4262     | Ashwood Post                                         | 571   | 394    |
+| 4263     | Lydell's Ambush                                      | 571   | 495    |
+| 4264     | Halls of Stone                                       | 599   | 0      |
+| 4265     | The Nexus                                            | 576   | 0      |
+| 4266     | Harkor's Camp                                        | 571   | 394    |
+| 4267     | Vordrassil Pass                                      | 571   | 394    |
+| 4268     | Ruuna's Camp                                         | 571   | 394    |
+| 4269     | Shrine of Scales                                     | 571   | 3537   |
+| 4270     | Drak'atal Passage                                    | 571   | 394    |
+| 4271     | Utgarde Pinnacle                                     | 571   | 495    |
+| 4272     | Halls of Lightning                                   | 602   | 0      |
+| 4273     | Ulduar                                               | 603   | 0      |
+| 4275     | The Argent Stand                                     | 571   | 66     |
+| 4276     | Altar of Sseratus                                    | 571   | 66     |
+| 4277     | Azjol-Nerub                                          | 601   | 0      |
+| 4278     | Drak'Sotra Fields                                    | 571   | 66     |
+| 4279     | Drak'Sotra                                           | 571   | 66     |
+| 4280     | Drak'Agal                                            | 571   | 66     |
+| 4281     | Acherus: The Ebon Hold                               | 0     | 139    |
+| 4282     | The Avalanche                                        | 571   | 3711   |
+| 4283     | The Lost Lands                                       | 571   | 3711   |
+| 4284     | Nesingwary Base Camp                                 | 571   | 3711   |
+| 4285     | The Seabreach Flow                                   | 571   | 3711   |
+| 4286     | The Bones of Nozronn                                 | 571   | 3711   |
+| 4287     | Kartak's Hold                                        | 571   | 3711   |
+| 4288     | Sparktouched Haven                                   | 571   | 3711   |
+| 4289     | The Path of the Lifewarden                           | 571   | 3711   |
+| 4290     | River's Heart                                        | 571   | 3711   |
+| 4291     | Rainspeaker Canopy                                   | 571   | 3711   |
+| 4292     | Frenzyheart Hill                                     | 571   | 3711   |
+| 4293     | Wildgrowth Mangal                                    | 571   | 3711   |
+| 4294     | Heb'Valok                                            | 571   | 66     |
+| 4295     | The Sundered Shard                                   | 571   | 3711   |
+| 4296     | The Lifeblood Pillar                                 | 571   | 3711   |
+| 4297     | Mosswalker Village                                   | 571   | 3711   |
+| 4298     | Plaguelands: The Scarlet Enclave                     | 609   | 0      |
+| 4299     | Kolramas                                             | 571   | 66     |
+| 4300     | Waygate                                              | 571   | 3711   |
+| 4302     | The Skyreach Pillar                                  | 571   | 3711   |
+| 4303     | Hardknuckle Clearing                                 | 571   | 3711   |
+| 4304     | Sapphire Hive                                        | 571   | 3711   |
+| 4306     | Mistwhisper Refuge                                   | 571   | 3711   |
+| 4307     | The Glimmering Pillar                                | 571   | 3711   |
+| 4308     | Spearborn Encampment                                 | 571   | 3711   |
+| 4309     | Drak'Tharon Keep                                     | 571   | 66     |
+| 4310     | Zeramas                                              | 571   | 66     |
+| 4311     | Reliquary of Agony                                   | 571   | 66     |
+| 4312     | Ebon Watch                                           | 571   | 66     |
+| 4313     | Thrym's End                                          | 571   | 66     |
+| 4314     | Voltarus                                             | 571   | 66     |
+| 4315     | Reliquary of Pain                                    | 571   | 66     |
+| 4316     | Rageclaw Den                                         | 571   | 66     |
+| 4317     | Light's Breach                                       | 571   | 66     |
+| 4318     | Pools of Zha'Jin                                     | 571   | 66     |
+| 4319     | Zim'Abwa                                             | 571   | 66     |
+| 4320     | Amphitheater of Anguish                              | 571   | 66     |
+| 4321     | Altar of Rhunok                                      | 571   | 66     |
+| 4322     | Altar of Har'koa                                     | 571   | 66     |
+| 4323     | Zim'Torga                                            | 571   | 66     |
+| 4324     | Pools of Jin'Alai                                    | 571   | 66     |
+| 4325     | Altar of Quetz'lun                                   | 571   | 66     |
+| 4326     | Heb'Drakkar                                          | 571   | 66     |
+| 4327     | Drak'Mabwa                                           | 571   | 66     |
+| 4328     | Zim'Rhuk                                             | 571   | 66     |
+| 4329     | Altar of Mam'toth                                    | 571   | 66     |
+| 4342     | Acherus: The Ebon Hold                               | 609   | 4298   |
+| 4343     | New Avalon                                           | 609   | 4298   |
+| 4344     | New Avalon Fields                                    | 609   | 4298   |
+| 4345     | New Avalon Orchard                                   | 609   | 4298   |
+| 4346     | New Avalon Town Hall                                 | 609   | 4298   |
+| 4347     | Havenshire                                           | 609   | 4298   |
+| 4348     | Havenshire Farms                                     | 609   | 4298   |
+| 4349     | Havenshire Lumber Mill                               | 609   | 4298   |
+| 4350     | Havenshire Stables                                   | 609   | 4298   |
+| 4351     | Scarlet Hold                                         | 609   | 4298   |
+| 4352     | Chapel of the Crimson Flame                          | 609   | 4298   |
+| 4353     | Light's Point Tower                                  | 609   | 4298   |
+| 4354     | Light's Point                                        | 609   | 4298   |
+| 4355     | Crypt of Remembrance                                 | 609   | 4298   |
+| 4356     | Death's Breach                                       | 609   | 4298   |
+| 4357     | The Noxious Glade                                    | 609   | 4298   |
+| 4358     | Tyr's Hand                                           | 609   | 4298   |
+| 4359     | King's Harbor                                        | 609   | 4298   |
+| 4360     | Scarlet Overlook                                     | 609   | 4298   |
+| 4361     | Light's Hope Chapel                                  | 609   | 4298   |
+| 4362     | Sinner's Folly                                       | 609   | 4298   |
+| 4363     | Pestilent Scar                                       | 609   | 4298   |
+| 4364     | Browman Mill                                         | 609   | 4298   |
+| 4365     | Havenshire Mine                                      | 609   | 4298   |
+| 4366     | Ursoc's Den                                          | 571   | 394    |
+| 4367     | The Blight Line                                      | 571   | 3711   |
+| 4368     | The Bonefields                                       | 571   | 3711   |
+| 4369     | Dorian's Outpost                                     | 571   | 3711   |
+| 4371     | Mam'toth Crater                                      | 571   | 66     |
+| 4372     | Zol'Maz Stronghold                                   | 571   | 66     |
+| 4373     | Zol'Heb                                              | 571   | 66     |
+| 4374     | Rageclaw Lake                                        | 571   | 66     |
+| 4375     | Gundrak                                              | 571   | 66     |
+| 4376     | The Savage Thicket                                   | 571   | 3711   |
+| 4377     | New Avalon Forge                                     | 609   | 4298   |
+| 4378     | Dalaran Arena                                        | 617   | 0      |
+| 4379     | Valgarde                                             | 571   | 495    |
+| 4380     | Westguard Inn                                        | 571   | 495    |
+| 4381     | Waygate                                              | 1     | 490    |
+| 4382     | The Shaper's Terrace                                 | 1     | 490    |
+| 4383     | Lakeside Landing                                     | 571   | 3711   |
+| 4384     | Strand of the Ancients                               | 607   | 0      |
+| 4385     | Bittertide Lake                                      | 571   | 3711   |
+| 4386     | Rainspeaker Rapids                                   | 571   | 3711   |
+| 4387     | Frenzyheart River                                    | 571   | 3711   |
+| 4388     | Wintergrasp River                                    | 571   | 3711   |
+| 4389     | The Suntouched Pillar                                | 571   | 3711   |
+| 4390     | Frigid Breach                                        | 571   | 66     |
+| 4391     | Swindlegrin's Dig                                    | 571   | 3711   |
+| 4392     | The Stormwright's Shelf                              | 571   | 3711   |
+| 4393     | Death's Hand Encampment                              | 571   | 3711   |
+| 4394     | Scarlet Tavern                                       | 609   | 4298   |
+| 4395     | Dalaran                                              | 571   | 0      |
+| 4396     | Nozzlerust Post                                      | 571   | 65     |
+| 4399     | Farshire Mine                                        | 571   | 3537   |
+| 4400     | The Mosslight Pillar                                 | 571   | 3711   |
+| 4401     | Saragosa's Landing                                   | 571   | 3537   |
+| 4402     | Vengeance Lift                                       | 571   | 495    |
+| 4403     | Balejar Watch                                        | 571   | 495    |
+| 4404     | New Agamand Inn                                      | 571   | 495    |
+| 4405     | Passage of Lost Fiends                               | 601   | 4277   |
+| 4406     | The Ring of Valor                                    | 618   | 0      |
+| 4407     | Hall of the Frostwolf                                | 30    | 2597   |
+| 4408     | Hall of the Stormpike                                | 30    | 2597   |
+| 4411     | Stormwind Harbor                                     | 0     | 1519   |
+| 4412     | The Makers' Overlook                                 | 571   | 3711   |
+| 4413     | The Makers' Perch                                    | 571   | 3711   |
+| 4414     | Scarlet Tower                                        | 571   | 65     |
+| 4415     | The Violet Hold                                      | 608   | 0      |
+| 4416     | Gundrak                                              | 604   | 0      |
+| 4417     | Onslaught Harbor                                     | 571   | 210    |
+| 4418     | K3                                                   | 571   | 67     |
+| 4419     | Snowblind Hills                                      | 571   | 67     |
+| 4420     | Snowblind Terrace                                    | 571   | 67     |
+| 4421     | Garm                                                 | 571   | 67     |
+| 4422     | Brunnhildar Village                                  | 571   | 67     |
+| 4423     | Sifreldar Village                                    | 571   | 67     |
+| 4424     | Valkyrion                                            | 571   | 67     |
+| 4425     | The Forlorn Mine                                     | 571   | 67     |
+| 4426     | Bor's Breath River                                   | 571   | 67     |
+| 4427     | Argent Vanguard                                      | 571   | 67     |
+| 4428     | Frosthold                                            | 571   | 67     |
+| 4429     | Grom'arsh Crash-Site                                 | 571   | 67     |
+| 4430     | Temple of Storms                                     | 571   | 67     |
+| 4431     | Engine of the Makers                                 | 571   | 67     |
+| 4432     | The Foot Steppes                                     | 571   | 67     |
+| 4433     | Dragonspine Peaks                                    | 571   | 67     |
+| 4434     | Nidavelir                                            | 571   | 67     |
+| 4435     | Narvir's Cradle                                      | 571   | 67     |
+| 4436     | Snowdrift Plains                                     | 571   | 67     |
+| 4437     | Valley of Ancient Winters                            | 571   | 67     |
+| 4438     | Dun Niffelem                                         | 571   | 67     |
+| 4439     | Frostfield Lake                                      | 571   | 67     |
+| 4440     | Thunderfall                                          | 571   | 67     |
+| 4441     | Camp Tunka'lo                                        | 571   | 67     |
+| 4442     | Brann's Base-Camp                                    | 571   | 67     |
+| 4443     | Gate of Echoes                                       | 571   | 67     |
+| 4444     | Plain of Echoes                                      | 571   | 67     |
+| 4445     | Ulduar                                               | 571   | 67     |
+| 4446     | Terrace of the Makers                                | 571   | 67     |
+| 4447     | Gate of Lightning                                    | 571   | 67     |
+| 4448     | Path of the Titans                                   | 571   | 67     |
+| 4449     | Uldis                                                | 571   | 67     |
+| 4450     | Loken's Bargain                                      | 571   | 67     |
+| 4451     | Bor's Fall                                           | 571   | 67     |
+| 4452     | Bor's Breath                                         | 571   | 67     |
+| 4453     | Rohemdal Pass                                        | 571   | 67     |
+| 4454     | The Storm Foundry                                    | 571   | 67     |
+| 4455     | Hibernal Cavern                                      | 571   | 67     |
+| 4456     | Voldrune Dwelling                                    | 571   | 394    |
+| 4457     | Torseg's Rest                                        | 571   | 67     |
+| 4458     | Sparksocket Minefield                                | 571   | 67     |
+| 4459     | Ricket's Folly                                       | 571   | 67     |
+| 4460     | Garm's Bane                                          | 571   | 67     |
+| 4461     | Garm's Rise                                          | 571   | 67     |
+| 4462     | Crystalweb Cavern                                    | 571   | 67     |
+| 4463     | Temple of Life                                       | 571   | 67     |
+| 4464     | Temple of Order                                      | 571   | 67     |
+| 4465     | Temple of Winter                                     | 571   | 67     |
+| 4466     | Temple of Invention                                  | 571   | 67     |
+| 4467     | Death's Rise                                         | 571   | 210    |
+| 4468     | The Dead Fields                                      | 571   | 66     |
+| 4469     | Dargath's Demise                                     | 571   | 66     |
+| 4470     | The Hidden Hollow                                    | 571   | 210    |
+| 4471     | Bernau's Happy Fun Land                              | 451   | 4019   |
+| 4472     | Frostgrip's Hollow                                   | 571   | 67     |
+| 4473     | The Frigid Tomb                                      | 571   | 67     |
+| 4474     | Twin Shores                                          | 571   | 495    |
+| 4475     | Zim'bo's Hideout                                     | 571   | 394    |
+| 4476     | Abandoned Camp                                       | 571   | 67     |
+| 4477     | The Shadow Vault                                     | 571   | 210    |
+| 4478     | Coldwind Pass                                        | 571   | 65     |
+| 4479     | Winter's Breath Lake                                 | 571   | 495    |
+| 4480     | The Forgotten Overlook                               | 571   | 394    |
+| 4481     | Jintha'kalar Passage                                 | 571   | 66     |
+| 4482     | Arriga Footbridge                                    | 571   | 394    |
+| 4483     | The Lost Passage                                     | 571   | 3711   |
+| 4484     | Bouldercrag's Refuge                                 | 571   | 67     |
+| 4485     | The Inventor's Library                               | 571   | 67     |
+| 4486     | The Frozen Mine                                      | 571   | 67     |
+| 4487     | Frostfloe Deep                                       | 571   | 67     |
+| 4488     | The Howling Hollow                                   | 571   | 67     |
+| 4489     | Crusader Forward Camp                                | 571   | 66     |
+| 4490     | Stormcrest                                           | 571   | 67     |
+| 4491     | Bonesnap's Camp                                      | 571   | 394    |
+| 4492     | Ufrang's Hall                                        | 571   | 210    |
+| 4493     | The Obsidian Sanctum                                 | 615   | 0      |
+| 4494     | Ahn'kahet: The Old Kingdom                           | 619   | 0      |
+| 4495     | Fjorn's Anvil                                        | 571   | 67     |
+| 4496     | Jotunheim                                            | 571   | 210    |
+| 4497     | Savage Ledge                                         | 571   | 210    |
+| 4498     | Halls of the Ancestors                               | 571   | 210    |
+| 4499     | The Blighted Pool                                    | 571   | 67     |
+| 4500     | The Eye of Eternity                                  | 616   | 0      |
+| 4501     | The Argent Vanguard                                  | 571   | 210    |
+| 4502     | Mimir's Workshop                                     | 571   | 67     |
+| 4503     | Ironwall Dam                                         | 571   | 210    |
+| 4504     | Valley of Echoes                                     | 571   | 210    |
+| 4505     | The Breach                                           | 571   | 210    |
+| 4506     | Scourgeholme                                         | 571   | 210    |
+| 4507     | The Broken Front                                     | 571   | 210    |
+| 4508     | Mord'rethar: The Death Gate                          | 571   | 210    |
+| 4509     | The Bombardment                                      | 571   | 210    |
+| 4510     | Aldur'thar: The Desolation Gate                      | 571   | 210    |
+| 4511     | The Skybreaker                                       | 571   | 210    |
+| 4512     | Orgrim's Hammer                                      | 571   | 210    |
+| 4513     | Ymirheim                                             | 571   | 210    |
+| 4514     | Saronite Mines                                       | 571   | 210    |
+| 4515     | The Conflagration                                    | 571   | 210    |
+| 4516     | Ironwall Rampart                                     | 571   | 210    |
+| 4517     | Weeping Quarry                                       | 571   | 210    |
+| 4518     | Corp'rethar: The Horror Gate                         | 571   | 210    |
+| 4519     | The Court of Bones                                   | 571   | 210    |
+| 4520     | Malykriss: The Vile Hold                             | 571   | 210    |
+| 4521     | Cathedral of Darkness                                | 571   | 210    |
+| 4522     | Icecrown Citadel                                     | 571   | 210    |
+| 4523     | Icecrown Glacier                                     | 571   | 210    |
+| 4524     | Valhalas                                             | 571   | 210    |
+| 4525     | The Underhalls                                       | 571   | 210    |
+| 4526     | Njorndar Village                                     | 571   | 210    |
+| 4527     | Balargarde Fortress                                  | 571   | 210    |
+| 4528     | Kul'galar Keep                                       | 571   | 210    |
+| 4529     | The Crimson Cathedral                                | 571   | 210    |
+| 4530     | Sanctum of Reanimation                               | 571   | 210    |
+| 4531     | The Fleshwerks                                       | 571   | 210    |
+| 4532     | Vengeance Landing Inn                                | 571   | 495    |
+| 4533     | Sindragosa's Fall                                    | 571   | 210    |
+| 4534     | Wildervar Mine                                       | 571   | 495    |
+| 4535     | The Pit of the Fang                                  | 571   | 67     |
+| 4536     | Frosthowl Cavern                                     | 571   | 67     |
+| 4537     | The Valley of Lost Hope                              | 571   | 210    |
+| 4538     | The Sunken Ring                                      | 571   | 4197   |
+| 4539     | The Broken Temple                                    | 571   | 4197   |
+| 4540     | The Valley of Fallen Heroes                          | 571   | 210    |
+| 4541     | Vanguard Infirmary                                   | 571   | 210    |
+| 4542     | Hall of the Shaper                                   | 571   | 67     |
+| 4543     | Temple of Wisdom                                     | 571   | 67     |
+| 4544     | Death's Breach                                       | 0     | 139    |
+| 4545     | Abandoned Mine                                       | 0     | 139    |
+| 4546     | Ruins of the Scarlet Enclave                         | 0     | 139    |
+| 4547     | Halls of Stone                                       | 571   | 67     |
+| 4548     | Halls of Lightning                                   | 571   | 67     |
+| 4549     | The Great Tree                                       | 571   | 2817   |
+| 4550     | The Mirror of Twilight                               | 571   | 2817   |
+| 4551     | The Twilight Rivulet                                 | 571   | 2817   |
+| 4552     | The Decrepit Flow                                    | 571   | 2817   |
+| 4553     | Forlorn Woods                                        | 571   | 2817   |
+| 4554     | Ruins of Shandaral                                   | 571   | 2817   |
+| 4555     | The Azure Front                                      | 571   | 2817   |
+| 4556     | Violet Stand                                         | 571   | 2817   |
+| 4557     | The Unbound Thicket                                  | 571   | 2817   |
+| 4558     | Sunreaver's Command                                  | 571   | 2817   |
+| 4559     | Windrunner's Overlook                                | 571   | 2817   |
+| 4560     | The Underbelly                                       | 571   | 4395   |
+| 4564     | Krasus' Landing                                      | 571   | 4395   |
+| 4567     | The Violet Hold                                      | 571   | 4395   |
+| 4568     | The Eventide                                         | 571   | 4395   |
+| 4569     | Sewer Exit Pipe                                      | 571   | 4395   |
+| 4570     | Circle of Wills                                      | 571   | 4395   |
+| 4571     | Silverwing Flag Room                                 | 489   | 3277   |
+| 4572     | Warsong Flag Room                                    | 489   | 3277   |
+| 4575     | Wintergrasp Fortress                                 | 571   | 4197   |
+| 4576     | Central Bridge                                       | 571   | 4197   |
+| 4577     | Eastern Bridge                                       | 571   | 4197   |
+| 4578     | Western Bridge                                       | 571   | 4197   |
+| 4579     | Dubra'Jin                                            | 571   | 66     |
+| 4580     | Crusaders' Pinnacle                                  | 571   | 210    |
+| 4581     | Flamewatch Tower                                     | 571   | 4197   |
+| 4582     | Winter's Edge Tower                                  | 571   | 4197   |
+| 4583     | Shadowsight Tower                                    | 571   | 4197   |
+| 4584     | The Cauldron of Flames                               | 571   | 4197   |
+| 4585     | Glacial Falls                                        | 571   | 4197   |
+| 4586     | Windy Bluffs                                         | 571   | 4197   |
+| 4587     | The Forest of Shadows                                | 571   | 4197   |
+| 4588     | Blackwatch                                           | 571   | 210    |
+| 4589     | The Chilled Quagmire                                 | 571   | 4197   |
+| 4590     | The Steppe of Life                                   | 571   | 4197   |
+| 4591     | Silent Vigil                                         | 571   | 210    |
+| 4592     | Gimorak's Den                                        | 571   | 67     |
+| 4593     | The Pit of Fiends                                    | 571   | 210    |
+| 4594     | Battlescar Spire                                     | 571   | 210    |
+| 4595     | Hall of Horrors                                      | 571   | 210    |
+| 4596     | The Circle of Suffering                              | 571   | 210    |
+| 4597     | Rise of Suffering                                    | 571   | 210    |
+| 4598     | Krasus' Landing                                      | 571   | 4395   |
+| 4599     | Sewer Exit Pipe                                      | 571   | 4395   |
+| 4601     | Dalaran Island                                       | 571   | 4395   |
+| 4602     | Force Interior                                       | 571   | 0      |
+| 4603     | Vault of Archavon                                    | 624   | 0      |
+| 4604     | Gate of the Red Sun                                  | 607   | 4384   |
+| 4605     | Gate of the Blue Sapphire                            | 607   | 4384   |
+| 4606     | Gate of the Green Emerald                            | 607   | 4384   |
+| 4607     | Gate of the Purple Amethyst                          | 607   | 4384   |
+| 4608     | Gate of the Yellow Moon                              | 607   | 4384   |
+| 4609     | Courtyard of the Ancients                            | 607   | 4384   |
+| 4610     | Landing Beach                                        | 607   | 4384   |
+| 4611     | Westspark Workshop                                   | 571   | 4197   |
+| 4612     | Eastspark Workshop                                   | 571   | 4197   |
+| 4613     | Dalaran City                                         | 571   | 4395   |
+| 4614     | The Violet Citadel Spire                             | 571   | 4395   |
+| 4615     | Naz'anak: The Forgotten Depths                       | 571   | 210    |
+| 4616     | Sunreaver's Sanctuary                                | 571   | 4395   |
+| 4617     | Elevator                                             | 0     | 1497   |
+| 4618     | Antonidas Memorial                                   | 571   | 4395   |
+| 4619     | The Violet Citadel                                   | 571   | 4395   |
+| 4620     | Magus Commerce Exchange                              | 571   | 4395   |
+| 4621     | UNUSED                                               | 571   | 67     |
+| 4622     | First Legion Forward Camp                            | 571   | 210    |
+| 4623     | Hall of the Conquered Kings                          | 619   | 4494   |
+| 4624     | Befouled Terrace                                     | 619   | 4494   |
+| 4625     | The Desecrated Altar                                 | 619   | 4494   |
+| 4626     | Shimmering Bog                                       | 619   | 4494   |
+| 4627     | Fallen Temple of Ahn'kahet                           | 619   | 4494   |
+| 4628     | Halls of Binding                                     | 229   | 1583   |
+| 4629     | Winter's Heart                                       | 571   | 67     |
+| 4630     | The North Sea                                        | 571   | 0      |
+| 4631     | The Broodmother's Nest                               | 571   | 67     |
+| 4632     | Dalaran Floating Rocks                               | 571   | 4395   |
+| 4633     | Raptor Pens                                          | 600   | 4196   |
+| 4635     | Drak'Tharon Keep                                     | 571   | 66     |
+| 4636     | The Noxious Pass                                     | 609   | 4298   |
+| 4637     | Vargoth's Retreat                                    | 571   | 4395   |
+| 4638     | Violet Citadel Balcony                               | 571   | 4395   |
+| 4639     | Band of Variance                                     | 571   | 3537   |
+| 4640     | Band of Acceleration                                 | 571   | 3537   |
+| 4641     | Band of Transmutation                                | 571   | 3537   |
+| 4642     | Band of Alignment                                    | 571   | 3537   |
+| 4646     | Ashwood Lake                                         | 571   | 394    |
+| 4650     | Iron Concourse                                       | 603   | 4273   |
+| 4652     | Formation Grounds                                    | 603   | 4273   |
+| 4653     | Razorscale's Aerie                                   | 603   | 4273   |
+| 4654     | The Colossal Forge                                   | 603   | 4273   |
+| 4655     | The Scrapyard                                        | 603   | 4273   |
+| 4656     | The Conservatory of Life                             | 603   | 4273   |
+| 4657     | The Archivum                                         | 603   | 4273   |
+| 4658     | Argent Tournament Grounds                            | 571   | 210    |
+| 4665     | Expedition Base Camp                                 | 603   | 4273   |
+| 4666     | Sunreaver Pavilion                                   | 571   | 210    |
+| 4667     | Silver Covenant Pavilion                             | 571   | 210    |
+| 4668     | The Cooper Residence                                 | 0     | 40     |
+| 4669     | The Ring of Champions                                | 571   | 210    |
+| 4670     | The Aspirants' Ring                                  | 571   | 210    |
+| 4671     | The Argent Valiants' Ring                            | 571   | 210    |
+| 4672     | The Alliance Valiants' Ring                          | 571   | 210    |
+| 4673     | The Horde Valiants' Ring                             | 571   | 210    |
+| 4674     | Argent Pavilion                                      | 571   | 210    |
+| 4676     | Sunreaver Pavilion                                   | 571   | 210    |
+| 4677     | Silver Covenant Pavilion                             | 571   | 210    |
+| 4679     | The Forlorn Cavern                                   | 0     | 1537   |
+| 4688     | claytonio test area                                  | 451   | 151    |
+| 4692     | Quel'Delar's Rest                                    | 571   | 210    |
+| 4710     | Isle of Conquest                                     | 628   | 0      |
+| 4722     | Trial of the Crusader                                | 649   | 0      |
+| 4723     | Trial of the Champion                                | 650   | 0      |
+| 4739     | Runeweaver Square                                    | 571   | 4395   |
+| 4740     | The Silver Enclave                                   | 571   | 4395   |
+| 4741     | Isle of Conquest No Man's Land                       | 628   | 4710   |
+| 4742     | Hrothgar's Landing                                   | 571   | 0      |
+| 4743     | Deathspeaker's Watch                                 | 571   | 210    |
+| 4747     | Workshop                                             | 628   | 4710   |
+| 4748     | Quarry                                               | 628   | 4710   |
+| 4749     | Docks                                                | 628   | 4710   |
+| 4750     | Hangar                                               | 628   | 4710   |
+| 4751     | Refinery                                             | 628   | 4710   |
+| 4752     | Horde Keep                                           | 628   | 4710   |
+| 4753     | Alliance Keep                                        | 628   | 4710   |
+| 4760     | The Sea Reaver's Run                                 | 571   | 4742   |
+| 4763     | Transport: Alliance Gunship                          | 641   | 0      |
+| 4764     | Transport: Horde Gunship                             | 642   | 0      |
+| 4769     | Hrothgar's Landing                                   | 571   | 4742   |
+| 4809     | The Forge of Souls                                   | 632   | 0      |
+| 4812     | Icecrown Citadel                                     | 631   | 0      |
+| 4813     | Pit of Saron                                         | 658   | 0      |
+| 4820     | Halls of Reflection                                  | 668   | 0      |
+| 4832     | Transport: Alliance Gunship (IGB)                    | 672   | 0      |
+| 4833     | Transport: Horde Gunship (IGB)                       | 673   | 0      |
+| 4859     | The Frozen Throne                                    | 631   | 4812   |
+| 4862     | The Frozen Halls                                     | 571   | 210    |
+| 4889     | The Frost Queen's Lair                               | 631   | 4812   |
+| 4890     | Putricide's Laboratory of Alchemical Horrors and Fun | 631   | 4812   |
+| 4891     | The Sanctum of Blood                                 | 631   | 4812   |
+| 4892     | The Crimson Hall                                     | 631   | 4812   |
+| 4893     | The Frost Queen's Lair                               | 631   | 0      |
+| 4894     | Putricide's Laboratory of Alchemical Horrors and Fun | 631   | 0      |
+| 4895     | The Crimson Hall                                     | 631   | 0      |
+| 4896     | The Frozen Throne                                    | 631   | 0      |
+| 4897     | The Sanctum of Blood                                 | 631   | 0      |
+| 4898     | Frostmourne                                          | 631   | 4896   |
+| 4904     | The Dark Approach                                    | 658   | 4813   |
+| 4905     | Scourgelord's Command                                | 658   | 4813   |
+| 4906     | The Shadow Throne                                    | 668   | 4820   |
+| 4908     | The Hidden Passage                                   | 668   | 4820   |
+| 4910     | Frostmourne                                          | 631   | 4812   |
+| 4987     | The Ruby Sanctum                                     | 724   | 0      |

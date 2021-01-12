@@ -9,174 +9,33 @@ This table contains the access requirements to enter an instance.
 
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#mapid">mapId</a></p></td>
-<td><p>mediumint (8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#difficulty">difficulty</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#level_min">level_min</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#level_max">level_max</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#item_level">item_level</a></td>
-<td>smallint(5)</td>
-<td>unsigned</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#item">item</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#item2">item2</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#quest_done_a">quest_done_A</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_done_h">quest_done_H</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#completed_achievement">completed_achievement</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_failed_text">quest_failed_text</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#comment">comment</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field                       | Type          | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------------------|---------------|------------|-----|------|---------|-------|---------|
+| [mapId][1]                  | mediumint (8) | unsigned   | PRI | NO   |         |       |         |
+| [difficulty][2]             | tinyint(3)    | unsigned   | PRI | NO   |         |       |         |
+| [level_min][3]              | tinyint(3)    | unsigned   |     | NO   |         |       |         |
+| [level_max][4]              | tinyint(3)    | unsigned   |     | NO   |         |       |         |
+| [item_level][5]             | smallint(5)   | unsigned   |     | NO   |         |       |         |
+| [item][6]                   | mediumint(8)  | unsigned   |     | NO   |         |       |         |
+| [item2][7]                  | mediumint(8)  | unsigned   |     | NO   |         |       |         |
+| [quest_done_A][8]           | mediumint(8)  | unsigned   |     | NO   |         |       |         |
+| [quest_done_H][9]           | mediumint(8)  | unsigned   |     | NO   |         |       |         |
+| [completed_achievement][10] | mediumint(8)  | unsigned   |     | NO   |         |       |         |
+| [quest_failed_text][11]     | text          |            |     | YES  | NULL    |       |         |
+| [comment][12]               | text          |            |     | YES  | NULL    |       |         |
+
+[1]: #mapid
+[2]: #difficulty
+[3]: #level_min
+[4]: #level_max
+[5]: #item_level
+[6]: #item
+[7]: #item2
+[8]: #quest_done_a
+[9]: #quest_done_h
+[10]: #completed_achievement
+[11]: #quest_failed_text
+[12]: #comment
 
 **Description of the fields**
 
@@ -186,11 +45,9 @@ This is the [access\_id](instance_template) field from the [instance\_template](
 
 ### difficulty
 
-5 man dungeons - 0 for normal, 1 for heroic, 2 for epic (not used yet)
-
-10 man dungeons - 0 for normal, 2 for heroic
-
-25 man dungeons - 1 for normal, 3 for heroic
+- 5 man dungeons - 0 for normal, 1 for heroic, 2 for epic (not used yet)
+- 10 man dungeons - 0 for normal, 2 for heroic
+- 25 man dungeons - 1 for normal, 3 for heroic
 
 ### level\_min
 

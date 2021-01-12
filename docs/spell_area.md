@@ -6,156 +6,31 @@
 
 This table is used to apply a specific spell aura to the player within an area in the game. When any player enters this area or somehow interacts with a quest, this aura will be handled accordingly.
 
-Some examples:
-
--   An area could pacify all players (spell 39331)
--   Another area could full heal every 1 second (spell 48591)
--   Teleport player out of an area (spell 53141)
--   Factions-specific buffs, e.g. in Icecrown Citadel:
-    -   "Hellscream's Warsong" (spell 73822) for horde 
-    -   "Strength of Wrynn" (spell 73828) for alliance
--   Even region-based buffs, such as area 440 - Tanaris.
-
 **Structure**
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#spell">spell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#area">area</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_start">quest_start</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#quest_end">quest_end</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#aura_spell">aura_spell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>signed</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#racemask">racemask</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#gender">gender</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>2</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#flags">flags</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>3</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#quest_start_status,quest_end_status">quest_start_status</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>64</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#quest_start_status,quest_end_status">quest_end_status</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>11</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------------|--------------|------------|-----|------|---------|-------|---------|
+| [spell][1]              | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [area][2]               | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [quest_start][3]        | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [quest_end][4]          | mediumint(8) | unsigned   |     | NO   |         |       |         |
+| [aura_spell][5]         | mediumint(8) | signed     | PRI | NO   |         |       |         |
+| [racemask][6]           | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [gender][7]             | tinyint(3)   | unsigned   | PRI | NO   |         |       |         |
+| [flags][8]              | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [quest_start_status][9] | int(11)      | unsigned   |     | NO   |         |       |         |
+| [quest_end_status][10]  | int(11)      | unsigned   |     | NO   |         |       |         |
+
+[1]: #spell
+[2]: #area
+[3]: #quest_start
+[4]: #quest_end
+[5]: #aura_spell
+[6]: #racemask
+[7]: #gender
+[8]: #flags
+[9]: #quest_start_status
+[10]: #quest_end_status
 
 **Description of the fields**
 
@@ -181,29 +56,17 @@ If set, this value (plus or minus aura spell ID from Spell.dbc) imposes addition
 
 The value has the following effect:
 
--   **&lt;** **0**  (negative values) If the player has aura **-aura\_spell** then the [spell](#spell_area-spell) will not be activated.
--     **0**   this column is ignored.
--   **&gt;** **0**  (positive values) If the player has no aura **aura\_spell** then the [spell](#spell_area-spell) will not be activated.
+- **< 0**  (negative values) If the player has aura **-aura\_spell** then the [spell](#spell_area-spell) will not be activated.
+-   **0**   this column is ignored.
+- **> 0**  (positive values) If the player has no aura **aura\_spell** then the [spell](#spell_area-spell) will not be activated.
 
 ### racemask
 
 This ID is automatically called from [ChrRaces.dbc](ChrRaces). The bitmask is entered here.
 
-MASTER:
-
-0, 52430847 = All Races
-
-55378 (2 + 16 + 32 + 128 + 256 + 512 + 54432) = Horde Only
-
-18875469 (1 + 4 + 8 + 64 + 1024 + 2097152 + 16777216) = Alliance Only
-
-3.3.5:
-
-0, 1791 = All Races
-
-690 (2 + 16 + 32 + 128 + 512) = Horde Only
-
-1101 (1 + 4 + 8 + 64 + 1024 ) = Alliance Only
+- 0, 1791 = All Races
+- 690 (2 + 16 + 32 + 128 + 512) = Horde Only
+- 1101 (1 + 4 + 8 + 64 + 1024 ) = Alliance Only
 
 ### gender
 
@@ -211,26 +74,19 @@ The gender type this entry applies to. 0 = Male, 1 = Female, 2 = Any.
 
 ### flags
 
-Flag
-Name
-Comment
-1
-0x01
-SPELL\_AREA\_FLAG\_AUTOCAST
-If the spell should be automatically applied when the character enters the area. Also prevents the user from removing it.
-2
-0x02
-SPELL\_AREA\_FLAG\_AUTOREMOVE
-If the spell should be automatically removed when the character is **inside** the area (only works with quest updates)
+| Flag | Value | Name                          | Comment                                                                                                                   |
+|------|-------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| 1    | 0x01  | SPELL\_AREA\_FLAG\_AUTOCAST   | If the spell should be automatically applied when the character enters the area. Also prevents the user from removing it. |
+| 2    | 0x02  | SPELL\_AREA\_FLAG\_AUTOREMOVE | If the spell should be automatically removed when the character is **inside** the area (only works with quest updates)    |
 
 Note: Spell is allways removed on leaving area, SPELL\_AREA\_FLAG\_AUTOREMOVE does not effect this.
 
 Example:
 
-flags = 0 : Spell not added on enter (must be added manually), not automatically removed on quest update, but removed on leave.
-flags = 1 : Spell is automatically applied on enter, not automatically removed on quest update, but removed on leave.
-flags = 2 : Spell not added on enter (must be added manually), automatically removed on quest update and removed on leave.
-flags = 3 : (Default) Spell is automatically applied on enter, automatically removed on quest update and removed on leave.
+- flags = 0 : Spell not added on enter (must be added manually), not automatically removed on quest update, but removed on leave.
+- flags = 1 : Spell is automatically applied on enter, not automatically removed on quest update, but removed on leave.
+- flags = 2 : Spell not added on enter (must be added manually), automatically removed on quest update and removed on leave.
+- flags = 3 : (Default) Spell is automatically applied on enter, automatically removed on quest update and removed on leave.
 
 ### quest\_start\_status, quest\_end\_status
 
@@ -244,14 +100,13 @@ Area 257 is a cavern on Teldrassil. What we want is simple : When the player ta
 
 You should have the spell 92237 when entering the cavern IF :
 
-    The start quest 28725 is incomplete, complete or rewarded (2 | 8 | 64 = 74)
-
-    The end quest 28727 is not taked (none), incomplete or complete BUT not rewarded (1 | 2 | 8 = 11)
+- The start quest 28725 is incomplete, complete or rewarded (2 | 8 | 64 = 74) 
+- The end quest 28727 is not taked (none), incomplete or complete BUT not rewarded (1 | 2 | 8 = 11)
 
 Here is the SQL for this example : 
 
 ```sql
-INSERT INTO spell_area (spell, area, quest_start, quest_end, autocast, quest_start_status, quest_end_status) VALUES 
+INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `autocast`, `quest_start_status`, `quest_end_status`) VALUES 
 (92237, 257, 28725, 28727, 1, 74, 11);
 ```
 
@@ -270,5 +125,16 @@ Example for a SQL
  For a \`quest\_end\_status\` that should contain QUEST\_STATUS\_NONE (1), QUEST\_STATUS\_COMPLETE (2) and QUEST\_STATUS\_INCOMPLETE (8):
 
 ``` sql
-UPDATE `spell_area` SET `quest_end_status`= (1|2|8) WHERE `spell`=XXXXX AND `area`=YYYY; -- equivalent to `quest_end_status`= 11
+-- equivalent to `quest_end_status`= 11
+UPDATE `spell_area` SET `quest_end_status`= (1|2|8) WHERE `spell`=XXXXX AND `area`=YYYY;
 ```
+
+Some examples:
+
+- An area could pacify all players (spell 39331)
+- Another area could full heal every 1 second (spell 48591)
+- Teleport player out of an area (spell 53141)
+- Factions-specific buffs, e.g. in Icecrown Citadel:
+- "Hellscream's Warsong" (spell 73822) for horde 
+- "Strength of Wrynn" (spell 73828) for alliance
+- Even region-based buffs, such as area 440 - Tanaris.

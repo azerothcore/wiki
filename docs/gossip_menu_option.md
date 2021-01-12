@@ -6,203 +6,37 @@ This table holds information about menu options a gossip NPC can have. Example
 
 ## Structure
 
-<table>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#menuid">MenuID</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#id">OptionID</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#optionicon">OptionIcon</a></p></td>
-<td><p>smallint(6)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#optiontext">OptionText</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#optionbroadcasttextid">OptionBroadcastTextID</a></td>
-<td>mediumint(6)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td><p><a href="#optionid">OptionType</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#npcoptionnpcflag">OptionNpcFlag</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#actionmenuid">ActionMenuID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#actionpoiid">ActionPoiID</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#boxcoded">BoxCoded</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#boxmoney">BoxMoney</a></p></td>
-<td><p>int(11)</p></td>
-<td><p>unsigned</p></td>
-<td><p><br />
-</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#boxtext">BoxText</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p><br />
-</p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><a href="#boxbroadcasttextid">BoxBroadcastTextID</a></td>
-<td>mediumint(6)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-<tr class="odd">
-<td>VerifiedBuild</td>
-<td>smallint(5)</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td>NO</td>
-<td>0</td>
-<td><br />
-</td>
-<td><br />
-</td>
-</tr>
-</tbody>
-</table>
+| Field                      | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|----------------------------|--------------|------------|-----|------|---------|-------|---------|
+| [MenuID][1]                | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
+| [OptionID][2]              | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
+| [OptionIcon][3]            | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
+| [OptionText][4]            | text         |            |     | YES  | NULL    |       |         |
+| [OptionBroadcastTextID][5] | mediumint(6) |            |     | NO   |         |       |         |
+| [OptionType][6]            | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [OptionNpcFlag][7]         | int(10)      | unsigned   |     | NO   |         |       |         |
+| [ActionMenuID][8]          | mediumint(8) | unsigned   |     | NO   |         |       |         |
+| [ActionPoiID][9]           | mediumint(8) | unsigned   |     | NO   |         |       |         |
+| [BoxCoded][10]             | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [BoxMoney][11]             | int(11)      | unsigned   |     | NO   |         |       |         |
+| [BoxText][12]              | text         |            |     | YES  | NULL    |       |         |
+| [BoxBroadcastTextID][13]   | mediumint(6) |            |     | NO   |         |       |         |
+| [VerifiedBuild][14]        | smallint(5)  |            |     | NO   |         |       |         |
+
+[1]: #menuid
+[2]: #optionid
+[3]: #optionicon
+[4]: #optiontext
+[5]: #optionbroadcasttextid
+[6]: #optiontype
+[7]: #optionnpcflag
+[8]: #actionmenuid
+[9]: #actionpoiid
+[10]: #boxcoded
+[11]: #boxmoney
+[12]: #boxtext
+[13]: #boxbroadcasttextid
+[14]: #verifiedbuild
 
 ## Description of the fields
 
@@ -218,19 +52,19 @@ Value increments by 1 if there are multiple options in the same gossip\_menu.
 
 ### OptionIcon
 
-| Name                      | ID  | Description                                 |
-|---------------------------|-----|---------------------------------------------|
-| GOSSIP\_ICON\_CHAT        | 0   | White chat bubble                           |
-| GOSSIP\_ICON\_VENDOR      | 1   | Brown bag                                   |
-| GOSSIP\_ICON\_TAXI        | 2   | Flight                                      |
-| GOSSIP\_ICON\_TRAINER     | 3   | Book                                        |
-| GOSSIP\_ICON\_INTERACT\_1 | 4   | Interaction wheel                           |
-| GOSSIP\_ICON\_INTERACT\_2 | 5   | Interaction wheel                           |
-| GOSSIP\_ICON\_MONEY\_BAG  | 6   | Brown bag with yellow dot (gold)            |
-| GOSSIP\_ICON\_TALK        | 7   | White chat bubble with black dots (**...**) |
-| GOSSIP\_ICON\_TABARD      | 8   | Tabard                                      |
-| GOSSIP\_ICON\_BATTLE      | 9   | Two swords                                  |
-| GOSSIP\_ICON\_DOT         | 10  | Yellow dot                                  |
+| Name                      | ID | Description                                 |
+|---------------------------|----|---------------------------------------------|
+| GOSSIP\_ICON\_CHAT        | 0  | White chat bubble                           |
+| GOSSIP\_ICON\_VENDOR      | 1  | Brown bag                                   |
+| GOSSIP\_ICON\_TAXI        | 2  | Flight                                      |
+| GOSSIP\_ICON\_TRAINER     | 3  | Book                                        |
+| GOSSIP\_ICON\_INTERACT\_1 | 4  | Interaction wheel                           |
+| GOSSIP\_ICON\_INTERACT\_2 | 5  | Interaction wheel                           |
+| GOSSIP\_ICON\_MONEY\_BAG  | 6  | Brown bag with yellow dot (gold)            |
+| GOSSIP\_ICON\_TALK        | 7  | White chat bubble with black dots (**...**) |
+| GOSSIP\_ICON\_TABARD      | 8  | Tabard                                      |
+| GOSSIP\_ICON\_BATTLE      | 9  | Two swords                                  |
+| GOSSIP\_ICON\_DOT         | 10 | Yellow dot                                  |
 
 ### OptionText
 
@@ -243,29 +77,29 @@ The ID of the same text in broadcast\_text.ID.
 
 ### OptionType
 
-|option_id Name|Value|npcflag Name (& comment)|npcflag value|
-|--- |--- |--- |--- |
-|GOSSIP_OPTION_NONE|0|UNIT_NPC_FLAG_NONE|0|
-|GOSSIP_OPTION_GOSSIP|1|UNIT_NPC_FLAG_GOSSIP|1|
-|GOSSIP_OPTION_QUESTGIVER|2|UNIT_NPC_FLAG_QUESTGIVER|2|
-|GOSSIP_OPTION_VENDOR|3|UNIT_NPC_FLAG_VENDOR (Make sure there is npc_vendor data for this creature)|128|
-|GOSSIP_OPTION_TAXIVENDOR|4|UNIT_NPC_FLAG_TAXIVENDOR|8192|
-|GOSSIP_OPTION_TRAINER|5|UNIT_NPC_FLAG_TRAINER (Remember to set trainer_class in creature_template)|16|
-|GOSSIP_OPTION_SPIRITHEALER|6|UNIT_NPC_FLAG_SPIRITHEALER|16384|
-|GOSSIP_OPTION_SPIRITGUIDE|7|UNIT_NPC_FLAG_SPIRITGUIDE|32768|
-|GOSSIP_OPTION_INNKEEPER|8|UNIT_NPC_FLAG_INNKEEPER|65536|
-|GOSSIP_OPTION_BANKER|9|UNIT_NPC_FLAG_BANKER|131072|
-|GOSSIP_OPTION_PETITIONER|10|UNIT_NPC_FLAG_PETITIONER|262144|
-|GOSSIP_OPTION_TABARDDESIGNER|11|UNIT_NPC_FLAG_TABARDDESIGNER|524288|
-|GOSSIP_OPTION_BATTLEFIELD|12|UNIT_NPC_FLAG_BATTLEFIELDPERSON|1048576|
-|GOSSIP_OPTION_AUCTIONEER|13|UNIT_NPC_FLAG_AUCTIONEER|2097152|
-|GOSSIP_OPTION_STABLEPET|14|UNIT_NPC_FLAG_STABLE|4194304|
-|GOSSIP_OPTION_ARMORER|15|UNIT_NPC_FLAG_ARMORER (not used)|4096|
-|GOSSIP_OPTION_UNLEARNTALENTS|16|UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)|16|
-|GOSSIP_OPTION_UNLEARNPETTALENTS|17|UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)|16|
-|GOSSIP_OPTION_LEARNDUALSPEC|18|UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)|16|
-|GOSSIP_OPTION_OUTDOORPVP|19|Added by code (option for outdoor PvP creatures)||
-|GOSSIP_OPTION_MAX||||
+| option_id Name                  | Value | npcflag Name (& comment)                                                    | npcflag value |
+|---------------------------------|-------|-----------------------------------------------------------------------------|---------------|
+| GOSSIP_OPTION_NONE              | 0     | UNIT_NPC_FLAG_NONE                                                          | 0             |
+| GOSSIP_OPTION_GOSSIP            | 1     | UNIT_NPC_FLAG_GOSSIP                                                        | 1             |
+| GOSSIP_OPTION_QUESTGIVER        | 2     | UNIT_NPC_FLAG_QUESTGIVER                                                    | 2             |
+| GOSSIP_OPTION_VENDOR            | 3     | UNIT_NPC_FLAG_VENDOR (Make sure there is npc_vendor data for this creature) | 128           |
+| GOSSIP_OPTION_TAXIVENDOR        | 4     | UNIT_NPC_FLAG_TAXIVENDOR                                                    | 8192          |
+| GOSSIP_OPTION_TRAINER           | 5     | UNIT_NPC_FLAG_TRAINER (Remember to set trainer_class in creature_template)  | 16            |
+| GOSSIP_OPTION_SPIRITHEALER      | 6     | UNIT_NPC_FLAG_SPIRITHEALER                                                  | 16384         |
+| GOSSIP_OPTION_SPIRITGUIDE       | 7     | UNIT_NPC_FLAG_SPIRITGUIDE                                                   | 32768         |
+| GOSSIP_OPTION_INNKEEPER         | 8     | UNIT_NPC_FLAG_INNKEEPER                                                     | 65536         |
+| GOSSIP_OPTION_BANKER            | 9     | UNIT_NPC_FLAG_BANKER                                                        | 131072        |
+| GOSSIP_OPTION_PETITIONER        | 10    | UNIT_NPC_FLAG_PETITIONER                                                    | 262144        |
+| GOSSIP_OPTION_TABARDDESIGNER    | 11    | UNIT_NPC_FLAG_TABARDDESIGNER                                                | 524288        |
+| GOSSIP_OPTION_BATTLEFIELD       | 12    | UNIT_NPC_FLAG_BATTLEFIELDPERSON                                             | 1048576       |
+| GOSSIP_OPTION_AUCTIONEER        | 13    | UNIT_NPC_FLAG_AUCTIONEER                                                    | 2097152       |
+| GOSSIP_OPTION_STABLEPET         | 14    | UNIT_NPC_FLAG_STABLE                                                        | 4194304       |
+| GOSSIP_OPTION_ARMORER           | 15    | UNIT_NPC_FLAG_ARMORER (not used)                                            | 4096          |
+| GOSSIP_OPTION_UNLEARNTALENTS    | 16    | UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)              | 16            |
+| GOSSIP_OPTION_UNLEARNPETTALENTS | 17    | UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)              | 16            |
+| GOSSIP_OPTION_LEARNDUALSPEC     | 18    | UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)              | 16            |
+| GOSSIP_OPTION_OUTDOORPVP        | 19    | Added by code (option for outdoor PvP creatures)                            |               |
+| GOSSIP_OPTION_MAX               |       |                                                                             |               |
 
 
 ### OptionNpcFlag

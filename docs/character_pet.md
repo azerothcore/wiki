@@ -8,220 +8,47 @@ This table holds the pet data for each pet summoned by anyone in the game.
 
 **Structure**
 
-<table>
-<colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-<col width="12%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Field</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-<td><p><strong>Attributes</strong></p></td>
-<td><p><strong>Key</strong></p></td>
-<td><p><strong>Null</strong></p></td>
-<td><p><strong>Default</strong></p></td>
-<td><p><strong>Extra</strong></p></td>
-<td><p><strong>Comment</strong></p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#id">id</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p>PRI</p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#entry">entry</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#owner">owner</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#modelid">modelid</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#createdbyspell">CreatedBySpell</a></p></td>
-<td><p>mediumint(8)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#pettype">PetType</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#level">level</a></p></td>
-<td><p>smallint(5)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#exp">exp</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#reactstate">Reactstate</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#name">name</a></p></td>
-<td><p>varchar(21)</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>Pet</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#renamed">renamed</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#slot">slot</a></p></td>
-<td><p>tinyint(3)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#curhealth">curhealth</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>1</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#curmana">curmana</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#curhappiness">curhappiness</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#savetime">savetime</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#resettalents_cost">resettalents_cost</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="odd">
-<td><p><a href="#resettalents_time">resettalents_time</a></p></td>
-<td><p>int(10)</p></td>
-<td><p>unsigned</p></td>
-<td><p> </p></td>
-<td><p>NO</p></td>
-<td><p>0</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-<tr class="even">
-<td><p><a href="#abdata">abdata</a></p></td>
-<td><p>text</p></td>
-<td><p>signed</p></td>
-<td><p> </p></td>
-<td><p>YES</p></td>
-<td><p>NULL</p></td>
-<td><p> </p></td>
-<td><p> </p></td>
-</tr>
-</tbody>
-</table>
+| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------------|--------------|------------|-----|------|---------|-------|---------|
+| [id][1]                 | int(10)      | unsigned   | PRI | NO   |         |       |         |
+| [entry][2]              | int(10)      | unsigned   |     | NO   |         |       |         |
+| [owner][3]              | int(10)      | unsigned   |     | NO   |         |       |         |
+| [modelid][4]            | int(10)      | unsigned   |     | YES  | 0       |       |         |
+| [CreatedBySpell][5]     | mediumint(8) | unsigned   |     | NO   |         |       |         |
+| [PetType][6]            | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [level][7]              | smallint(5)  | unsigned   |     | NO   |         |       |         |
+| [exp][8]                | int(10)      | unsigned   |     | NO   |         |       |         |
+| [Reactstate][9]         | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [name][10]              | varchar(21)  |            |     | NO   |         |       |         |
+| [renamed][11]           | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [slot][12]              | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [curhealth][13]         | int(10)      | unsigned   |     | NO   |         |       |         |
+| [curmana][14]           | int(10)      | unsigned   |     | NO   |         |       |         |
+| [curhappiness][15]      | int(10)      | unsigned   |     | NO   |         |       |         |
+| [savetime][16]          | int(10)      | unsigned   |     | NO   |         |       |         |
+| [resettalents_cost][17] | int(10)      | unsigned   |     | NO   |         |       |         |
+| [resettalents_time][18] | int(10)      | unsigned   |     | NO   |         |       |         |
+| [abdata][19]            | text         |            |     | YES  | NULL    |       |         |
+
+[1]: #id
+[2]: #entry
+[3]: #owner
+[4]: #modelid
+[5]: #createdbyspell
+[6]: #pettype
+[7]: #level
+[8]: #exp
+[9]: #reactstate
+[10]: #name
+[11]: #renamed
+[12]: #slot
+[13]: #curhealth
+[14]: #curmana
+[15]: #curhappiness
+[16]: #savetime
+[17]: #resettalents_cost
+[18]: #resettalents_time
+[19]: #abdata
 
 **Description of the fields**
 
@@ -271,10 +98,10 @@ Boolean 1 or 0. 1 = Pet has been renamed, 0 = Pet has never been renamed and sti
 
 ### slot
 
-The pet slot that the pet is in.
-The slot is 0 for the active pet, which is with the player;
-1-4 for pets in stable (slot 1-4)
-100 for a pet which is with the player but currently dismissed.
+- The pet slot that the pet is in.
+- The slot is 0 for the active pet, which is with the player;
+- 1-4 for pets in stable (slot 1-4)
+- 100 for a pet which is with the player but currently dismissed.
 
 ### curhealth
 

@@ -11,1252 +11,260 @@ These values are used by the core and a few spell\_\* tables.
 
 ## **Structure**
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>ID</strong></p></td>
-<td><p><strong>Name</strong></p></td>
-<td><p><strong>Type</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>Entry</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Category</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Dispel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>Mechanic</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Attributes</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>5</p></td>
-<td><p>AttributesEx</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>6</p></td>
-<td><p>AttributesEx2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>7</p></td>
-<td><p>AttributesEx3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>8</p></td>
-<td><p>AttributesEx4</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>9</p></td>
-<td><p>AttributesEx5</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>10</p></td>
-<td><p>AttributesEx6</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>11</p></td>
-<td><p>AttributesEx7</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>12</p></td>
-<td><p>Stances</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>13</p></td>
-<td><p>unk_320_2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>14</p></td>
-<td><p>StancesNot</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>15</p></td>
-<td><p>unk_320_3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>16</p></td>
-<td><p>Targets</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>17</p></td>
-<td><p>TargetCreatureType</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>18</p></td>
-<td><p><a href="#Spell-RequiresSpellFocus">requiresSpellFocus</a></p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>19</p></td>
-<td><p>FacingCasterFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>20</p></td>
-<td><p>CasterAuraState</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>21</p></td>
-<td><p>TargetAuraState</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>22</p></td>
-<td><p>CasterAuraStateNot</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>23</p></td>
-<td><p>TargetAuraStateNot</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>24</p></td>
-<td><p>casterAuraSpell</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>25</p></td>
-<td><p>targetAuraSpell</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>26</p></td>
-<td><p>excludeCasterAuraSpell</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>27</p></td>
-<td><p>excludeTargetAuraSpell</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>28</p></td>
-<td><p>CastingTimeIndex</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>29</p></td>
-<td><p>RecoveryTime</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>30</p></td>
-<td><p>CategoryRecoveryTime</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>31</p></td>
-<td><p>InterruptFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>32</p></td>
-<td><p>AuraInterruptFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>33</p></td>
-<td><p>ChannelInterruptFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>34</p></td>
-<td><p>procFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>35</p></td>
-<td><p>procChance</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>36</p></td>
-<td><p>procCharges</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>37</p></td>
-<td><p>maxLevel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>38</p></td>
-<td><p>baseLevel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>39</p></td>
-<td><p>spellLevel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>40</p></td>
-<td><p>DurationIndex</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>41</p></td>
-<td><p><a href="#Spell-powerType">powerType</a></p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>42</p></td>
-<td><p>manaCost</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>43</p></td>
-<td><p>manaCostPerlevel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>44</p></td>
-<td><p>manaPerSecond</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>45</p></td>
-<td><p>manaPerSecondPerLevel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>46</p></td>
-<td><p>rangeIndex</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>47</p></td>
-<td><p>speed</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>48</p></td>
-<td><p>modalNextSpell</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>49</p></td>
-<td><p>StackAmount</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>50</p></td>
-<td><p>Totem1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>51</p></td>
-<td><p>Totem2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>52</p></td>
-<td><p>Reagent1</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>53</p></td>
-<td><p>Reagent2</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>54</p></td>
-<td><p>Reagent3</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>55</p></td>
-<td><p>Reagent4</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>56</p></td>
-<td><p>Reagent5</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>57</p></td>
-<td><p>Reagent6</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>58</p></td>
-<td><p>Reagent7</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>59</p></td>
-<td><p>Reagent8</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>60</p></td>
-<td><p>ReagentCount1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>61</p></td>
-<td><p>ReagentCount2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>62</p></td>
-<td><p>ReagentCount3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>63</p></td>
-<td><p>ReagentCount4</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>64</p></td>
-<td><p>ReagentCount5</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>65</p></td>
-<td><p>ReagentCount6</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>66</p></td>
-<td><p>ReagentCount7</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>67</p></td>
-<td><p>ReagentCount8</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>68</p></td>
-<td><p>EquippedItemClass</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>69</p></td>
-<td><p>EquippedItemSubClassMask</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>70</p></td>
-<td><p>EquippedItemInventoryTypeMask</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>71</p></td>
-<td><p>Effect1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>72</p></td>
-<td><p>Effect2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>73</p></td>
-<td><p>Effect3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>74</p></td>
-<td><p>EffectDieSides1</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>75</p></td>
-<td><p>EffectDieSides2</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>76</p></td>
-<td><p>EffectDieSides3</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>77</p></td>
-<td><p>EffectRealPointsPerLevel1</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>78</p></td>
-<td><p>EffectRealPointsPerLevel2</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="odd">
-<td><p>79</p></td>
-<td><p>EffectRealPointsPerLevel3</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>80</p></td>
-<td><p>EffectBasePoints1</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>81</p></td>
-<td><p>EffectBasePoints2</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>82</p></td>
-<td><p>EffectBasePoints3</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>83</p></td>
-<td><p>EffectMechanic1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>84</p></td>
-<td><p>EffectMechanic2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>85</p></td>
-<td><p>EffectMechanic3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>86</p></td>
-<td><p>EffectImplicitTargetA1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>87</p></td>
-<td><p>EffectImplicitTargetA2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>88</p></td>
-<td><p>EffectImplicitTargetA3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>89</p></td>
-<td><p>EffectImplicitTargetB1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>90</p></td>
-<td><p>EffectImplicitTargetB2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>91</p></td>
-<td><p>EffectImplicitTargetB3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>92</p></td>
-<td><p>EffectRadiusIndex1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>93</p></td>
-<td><p>EffectRadiusIndex2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>94</p></td>
-<td><p>EffectRadiusIndex3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>95</p></td>
-<td><p>EffectApplyAuraName1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>96</p></td>
-<td><p>EffectApplyAuraName2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>97</p></td>
-<td><p>EffectApplyAuraName3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>98</p></td>
-<td><p>EffectAmplitude1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>99</p></td>
-<td><p>EffectAmplitude2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>100</p></td>
-<td><p>EffectAmplitude3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>101</p></td>
-<td><p>EffectValueMultiplier1</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>102</p></td>
-<td><p>EffectValueMultiplier2</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="odd">
-<td><p>103</p></td>
-<td><p>EffectValueMultiplier3</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>104</p></td>
-<td><p>EffectChainTarget1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>105</p></td>
-<td><p>EffectChainTarget2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>106</p></td>
-<td><p>EffectChainTarget3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>107</p></td>
-<td><p>EffectItemType1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>108</p></td>
-<td><p>EffectItemType2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>109</p></td>
-<td><p>EffectItemType3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>110</p></td>
-<td><p>EffectMiscValue1</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>111</p></td>
-<td><p>EffectMiscValue2</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>112</p></td>
-<td><p>EffectMiscValue3</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>113</p></td>
-<td><p>EffectMiscValueB1</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>114</p></td>
-<td><p>EffectMiscValueB2</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>115</p></td>
-<td><p>EffectMiscValueB3</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="even">
-<td><p>116</p></td>
-<td><p>EffectTriggerSpell1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>117</p></td>
-<td><p>EffectTriggerSpell2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>118</p></td>
-<td><p>EffectTriggerSpell3</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>119</p></td>
-<td><p>EffectPointsPerComboPoint1</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>120</p></td>
-<td><p>EffectPointsPerComboPoint2</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="odd">
-<td><p>121</p></td>
-<td><p>EffectPointsPerComboPoint3</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>122</p></td>
-<td><p>EffectSpellClassMask1</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="odd">
-<td><p>123</p></td>
-<td><p>EffectSpellClassMask2</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="even">
-<td><p>124</p></td>
-<td><p>EffectSpellClassMask3</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="odd">
-<td><p>125</p></td>
-<td><p>EffectSpellClassMask4</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="even">
-<td><p>126</p></td>
-<td><p>EffectSpellClassMask5</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="odd">
-<td><p>127</p></td>
-<td><p>EffectSpellClassMask6</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="even">
-<td><p>128</p></td>
-<td><p>EffectSpellClassMask7</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="odd">
-<td><p>129</p></td>
-<td><p>EffectSpellClassMask8</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="even">
-<td><p>130</p></td>
-<td><p>EffectSpellClassMask9</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="odd">
-<td><p>131</p></td>
-<td><p>SpellVisual1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>132</p></td>
-<td><p>SpellVisual2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>133</p></td>
-<td><p>SpellIconID</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>134</p></td>
-<td><p>activeIconID</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>135</p></td>
-<td><p>spellPriority</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>136</p></td>
-<td><p>SpellName_0</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>137</p></td>
-<td><p>SpellName_1</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>138</p></td>
-<td><p>SpellName_2</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>139</p></td>
-<td><p>SpellName_3</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>140</p></td>
-<td><p>SpellName_4</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>141</p></td>
-<td><p>SpellName_5</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>142</p></td>
-<td><p>SpellName_6</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>143</p></td>
-<td><p>SpellName_7</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>144</p></td>
-<td><p>SpellName_8</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>145</p></td>
-<td><p>SpellName_9</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>146</p></td>
-<td><p>SpellName_10</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>147</p></td>
-<td><p>SpellName_11</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>148</p></td>
-<td><p>SpellName_12</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>149</p></td>
-<td><p>SpellName_13</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>150</p></td>
-<td><p>SpellName_14</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>151</p></td>
-<td><p>SpellName_15</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>152</p></td>
-<td><p>SpellNameFlag</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>153</p></td>
-<td><p>Rank_0</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>154</p></td>
-<td><p>Rank_1</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>155</p></td>
-<td><p>Rank_2</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>156</p></td>
-<td><p>Rank_3</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>157</p></td>
-<td><p>Rank_4</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>158</p></td>
-<td><p>Rank_5</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>159</p></td>
-<td><p>Rank_6</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>160</p></td>
-<td><p>Rank_7</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>161</p></td>
-<td><p>Rank_8</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>162</p></td>
-<td><p>Rank_9</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>163</p></td>
-<td><p>Rank_10</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>164</p></td>
-<td><p>Rank_11</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>165</p></td>
-<td><p>Rank_12</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>166</p></td>
-<td><p>Rank_13</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>167</p></td>
-<td><p>Rank_14</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>168</p></td>
-<td><p>Rank_15</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>169</p></td>
-<td><p>RankFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>170</p></td>
-<td><p>Description_0</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>171</p></td>
-<td><p>Description_1</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>172</p></td>
-<td><p>Description_2</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>173</p></td>
-<td><p>Description_3</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>174</p></td>
-<td><p>Description_4</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>175</p></td>
-<td><p>Description_5</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>176</p></td>
-<td><p>Description_6</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>177</p></td>
-<td><p>Description_7</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>178</p></td>
-<td><p>Description_8</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>179</p></td>
-<td><p>Description_9</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>180</p></td>
-<td><p>Description_10</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>181</p></td>
-<td><p>Description_11</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>182</p></td>
-<td><p>Description_12</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>183</p></td>
-<td><p>Description_13</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>184</p></td>
-<td><p>Description_14</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>185</p></td>
-<td><p>Description_15</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>186</p></td>
-<td><p>DescriptionFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>187</p></td>
-<td><p>ToolTip_0</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>188</p></td>
-<td><p>ToolTip_1</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>189</p></td>
-<td><p>ToolTip_2</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>190</p></td>
-<td><p>ToolTip_3</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>191</p></td>
-<td><p>ToolTip_4</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>192</p></td>
-<td><p>ToolTip_5</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>193</p></td>
-<td><p>ToolTip_6</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>194</p></td>
-<td><p>ToolTip_7</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>195</p></td>
-<td><p>ToolTip_8</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>196</p></td>
-<td><p>ToolTip_9</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>197</p></td>
-<td><p>ToolTip_10</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>198</p></td>
-<td><p>ToolTip_11</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>199</p></td>
-<td><p>ToolTip_12</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>200</p></td>
-<td><p>ToolTip_13</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>201</p></td>
-<td><p>ToolTip_14</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="even">
-<td><p>202</p></td>
-<td><p>ToolTip_15</p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="odd">
-<td><p>203</p></td>
-<td><p>ToolTipFlags</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>204</p></td>
-<td><p>ManaCostPercentage</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>205</p></td>
-<td><p>StartRecoveryCategory</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>206</p></td>
-<td><p>StartRecoveryTime</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>207</p></td>
-<td><p>MaxTargetLevel</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>208</p></td>
-<td><p>SpellFamilyName</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>209</p></td>
-<td><p>SpellFamilyFlagsLow</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="even">
-<td><p>210</p></td>
-<td><p>SpellFamilyFlagsHigh</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="odd">
-<td><p>211</p></td>
-<td><p>SpellFamilyFlags2</p></td>
-<td><p>flag96</p></td>
-</tr>
-<tr class="even">
-<td><p>212</p></td>
-<td><p>MaxAffectedTargets</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>213</p></td>
-<td><p>DmgClass</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>214</p></td>
-<td><p>PreventionType</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>215</p></td>
-<td><p>StanceBarOrder</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>216</p></td>
-<td><p>EffectDamageMultiplier1</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="odd">
-<td><p>217</p></td>
-<td><p>EffectDamageMultiplier2</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>218</p></td>
-<td><p>EffectDamageMultiplier3</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="odd">
-<td><p>219</p></td>
-<td><p>MinFactionId</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>220</p></td>
-<td><p>MinReputation</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>221</p></td>
-<td><p>RequiredAuraVision</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>222</p></td>
-<td><p>TotemCategory1</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>223</p></td>
-<td><p>TotemCategory2</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>224</p></td>
-<td><p>AreaGroupId</p></td>
-<td><p>int</p></td>
-</tr>
-<tr class="odd">
-<td><p>225</p></td>
-<td><p>SchoolMask</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>226</p></td>
-<td><p>runeCostID</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>227</p></td>
-<td><p>spellMissileID</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="even">
-<td><p>228</p></td>
-<td><p>PowerDisplayId</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>229</p></td>
-<td><p>EffectBonusMultiplier1</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>230</p></td>
-<td><p>EffectBonusMultiplier2</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="odd">
-<td><p>231</p></td>
-<td><p>EffectBonusMultiplier3</p></td>
-<td><p>float</p></td>
-</tr>
-<tr class="even">
-<td><p>232</p></td>
-<td><p>spellDescriptionVariableID</p></td>
-<td><p>uint</p></td>
-</tr>
-<tr class="odd">
-<td><p>233</p></td>
-<td><p>SpellDifficultyId</p></td>
-<td><p>uint</p></td>
-</tr>
-</tbody>
-</table>
+| ID  | Name                          | Type   |
+|-----|-------------------------------|--------|
+| 0   | Entry                         | uint   |
+| 1   | Category                      | uint   |
+| 2   | Dispel                        | uint   |
+| 3   | Mechanic                      | uint   |
+| 4   | Attributes                    | uint   |
+| 5   | AttributesEx                  | uint   |
+| 6   | AttributesEx2                 | uint   |
+| 7   | AttributesEx3                 | uint   |
+| 8   | AttributesEx4                 | uint   |
+| 9   | AttributesEx5                 | uint   |
+| 10  | AttributesEx6                 | uint   |
+| 11  | AttributesEx7                 | uint   |
+| 12  | Stances                       | uint   |
+| 13  | unk_320_2                     | uint   |
+| 14  | StancesNot                    | uint   |
+| 15  | unk_320_3                     | uint   |
+| 16  | Targets                       | uint   |
+| 17  | TargetCreatureType            | uint   |
+| 18  | requiresSpellFocus            | uint   |
+| 19  | FacingCasterFlags             | uint   |
+| 20  | CasterAuraState               | uint   |
+| 21  | TargetAuraState               | uint   |
+| 22  | CasterAuraStateNot            | uint   |
+| 23  | TargetAuraStateNot            | uint   |
+| 24  | casterAuraSpell               | uint   |
+| 25  | targetAuraSpell               | uint   |
+| 26  | excludeCasterAuraSpell        | uint   |
+| 27  | excludeTargetAuraSpell        | uint   |
+| 28  | CastingTimeIndex              | uint   |
+| 29  | RecoveryTime                  | uint   |
+| 30  | CategoryRecoveryTime          | uint   |
+| 31  | InterruptFlags                | uint   |
+| 32  | AuraInterruptFlags            | uint   |
+| 33  | ChannelInterruptFlags         | uint   |
+| 34  | procFlags                     | uint   |
+| 35  | procChance                    | uint   |
+| 36  | procCharges                   | uint   |
+| 37  | maxLevel                      | uint   |
+| 38  | baseLevel                     | uint   |
+| 39  | spellLevel                    | uint   |
+| 40  | DurationIndex                 | uint   |
+| 41  | powerType                     | uint   |
+| 42  | manaCost                      | uint   |
+| 43  | manaCostPerlevel              | uint   |
+| 44  | manaPerSecond                 | uint   |
+| 45  | manaPerSecondPerLevel         | uint   |
+| 46  | rangeIndex                    | uint   |
+| 47  | speed                         | float  |
+| 48  | modalNextSpell                | uint   |
+| 49  | StackAmount                   | uint   |
+| 50  | Totem1                        | uint   |
+| 51  | Totem2                        | uint   |
+| 52  | Reagent1                      | int    |
+| 53  | Reagent2                      | int    |
+| 54  | Reagent3                      | int    |
+| 55  | Reagent4                      | int    |
+| 56  | Reagent5                      | int    |
+| 57  | Reagent6                      | int    |
+| 58  | Reagent7                      | int    |
+| 59  | Reagent8                      | int    |
+| 60  | ReagentCount1                 | uint   |
+| 61  | ReagentCount2                 | uint   |
+| 62  | ReagentCount3                 | uint   |
+| 63  | ReagentCount4                 | uint   |
+| 64  | ReagentCount5                 | uint   |
+| 65  | ReagentCount6                 | uint   |
+| 66  | ReagentCount7                 | uint   |
+| 67  | ReagentCount8                 | uint   |
+| 68  | EquippedItemClass             | int    |
+| 69  | EquippedItemSubClassMask      | int    |
+| 70  | EquippedItemInventoryTypeMask | int    |
+| 71  | Effect1                       | uint   |
+| 72  | Effect2                       | uint   |
+| 73  | Effect3                       | uint   |
+| 74  | EffectDieSides1               | int    |
+| 75  | EffectDieSides2               | int    |
+| 76  | EffectDieSides3               | int    |
+| 77  | EffectRealPointsPerLevel1     | float  |
+| 78  | EffectRealPointsPerLevel2     | float  |
+| 79  | EffectRealPointsPerLevel3     | float  |
+| 80  | EffectBasePoints1             | int    |
+| 81  | EffectBasePoints2             | int    |
+| 82  | EffectBasePoints3             | int    |
+| 83  | EffectMechanic1               | uint   |
+| 84  | EffectMechanic2               | uint   |
+| 85  | EffectMechanic3               | uint   |
+| 86  | EffectImplicitTargetA1        | uint   |
+| 87  | EffectImplicitTargetA2        | uint   |
+| 88  | EffectImplicitTargetA3        | uint   |
+| 89  | EffectImplicitTargetB1        | uint   |
+| 90  | EffectImplicitTargetB2        | uint   |
+| 91  | EffectImplicitTargetB3        | uint   |
+| 92  | EffectRadiusIndex1            | uint   |
+| 93  | EffectRadiusIndex2            | uint   |
+| 94  | EffectRadiusIndex3            | uint   |
+| 95  | EffectApplyAuraName1          | uint   |
+| 96  | EffectApplyAuraName2          | uint   |
+| 97  | EffectApplyAuraName3          | uint   |
+| 98  | EffectAmplitude1              | uint   |
+| 99  | EffectAmplitude2              | uint   |
+| 100 | EffectAmplitude3              | uint   |
+| 101 | EffectValueMultiplier1        | float  |
+| 102 | EffectValueMultiplier2        | float  |
+| 103 | EffectValueMultiplier3        | float  |
+| 104 | EffectChainTarget1            | uint   |
+| 105 | EffectChainTarget2            | uint   |
+| 106 | EffectChainTarget3            | uint   |
+| 107 | EffectItemType1               | uint   |
+| 108 | EffectItemType2               | uint   |
+| 109 | EffectItemType3               | uint   |
+| 110 | EffectMiscValue1              | int    |
+| 111 | EffectMiscValue2              | int    |
+| 112 | EffectMiscValue3              | int    |
+| 113 | EffectMiscValueB1             | int    |
+| 114 | EffectMiscValueB2             | int    |
+| 115 | EffectMiscValueB3             | int    |
+| 116 | EffectTriggerSpell1           | uint   |
+| 117 | EffectTriggerSpell2           | uint   |
+| 118 | EffectTriggerSpell3           | uint   |
+| 119 | EffectPointsPerComboPoint1    | float  |
+| 120 | EffectPointsPerComboPoint2    | float  |
+| 121 | EffectPointsPerComboPoint3    | float  |
+| 122 | EffectSpellClassMask1         | flag96 |
+| 123 | EffectSpellClassMask2         | flag96 |
+| 124 | EffectSpellClassMask3         | flag96 |
+| 125 | EffectSpellClassMask4         | flag96 |
+| 126 | EffectSpellClassMask5         | flag96 |
+| 127 | EffectSpellClassMask6         | flag96 |
+| 128 | EffectSpellClassMask7         | flag96 |
+| 129 | EffectSpellClassMask8         | flag96 |
+| 130 | EffectSpellClassMask9         | flag96 |
+| 131 | SpellVisual1                  | uint   |
+| 132 | SpellVisual2                  | uint   |
+| 133 | SpellIconID                   | uint   |
+| 134 | activeIconID                  | uint   |
+| 135 | spellPriority                 | uint   |
+| 136 | SpellName_0                   | string |
+| 137 | SpellName_1                   | string |
+| 138 | SpellName_2                   | string |
+| 139 | SpellName_3                   | string |
+| 140 | SpellName_4                   | string |
+| 141 | SpellName_5                   | string |
+| 142 | SpellName_6                   | string |
+| 143 | SpellName_7                   | string |
+| 144 | SpellName_8                   | string |
+| 145 | SpellName_9                   | string |
+| 146 | SpellName_10                  | string |
+| 147 | SpellName_11                  | string |
+| 148 | SpellName_12                  | string |
+| 149 | SpellName_13                  | string |
+| 150 | SpellName_14                  | string |
+| 151 | SpellName_15                  | string |
+| 152 | SpellNameFlag                 | uint   |
+| 153 | Rank_0                        | string |
+| 154 | Rank_1                        | string |
+| 155 | Rank_2                        | string |
+| 156 | Rank_3                        | string |
+| 157 | Rank_4                        | string |
+| 158 | Rank_5                        | string |
+| 159 | Rank_6                        | string |
+| 160 | Rank_7                        | string |
+| 161 | Rank_8                        | string |
+| 162 | Rank_9                        | string |
+| 163 | Rank_10                       | string |
+| 164 | Rank_11                       | string |
+| 165 | Rank_12                       | string |
+| 166 | Rank_13                       | string |
+| 167 | Rank_14                       | string |
+| 168 | Rank_15                       | string |
+| 169 | RankFlags                     | uint   |
+| 170 | Description_0                 | string |
+| 171 | Description_1                 | string |
+| 172 | Description_2                 | string |
+| 173 | Description_3                 | string |
+| 174 | Description_4                 | string |
+| 175 | Description_5                 | string |
+| 176 | Description_6                 | string |
+| 177 | Description_7                 | string |
+| 178 | Description_8                 | string |
+| 179 | Description_9                 | string |
+| 180 | Description_10                | string |
+| 181 | Description_11                | string |
+| 182 | Description_12                | string |
+| 183 | Description_13                | string |
+| 184 | Description_14                | string |
+| 185 | Description_15                | string |
+| 186 | DescriptionFlags              | uint   |
+| 187 | ToolTip_0                     | string |
+| 188 | ToolTip_1                     | string |
+| 189 | ToolTip_2                     | string |
+| 190 | ToolTip_3                     | string |
+| 191 | ToolTip_4                     | string |
+| 192 | ToolTip_5                     | string |
+| 193 | ToolTip_6                     | string |
+| 194 | ToolTip_7                     | string |
+| 195 | ToolTip_8                     | string |
+| 196 | ToolTip_9                     | string |
+| 197 | ToolTip_10                    | string |
+| 198 | ToolTip_11                    | string |
+| 199 | ToolTip_12                    | string |
+| 200 | ToolTip_13                    | string |
+| 201 | ToolTip_14                    | string |
+| 202 | ToolTip_15                    | string |
+| 203 | ToolTipFlags                  | uint   |
+| 204 | ManaCostPercentage            | uint   |
+| 205 | StartRecoveryCategory         | uint   |
+| 206 | StartRecoveryTime             | uint   |
+| 207 | MaxTargetLevel                | uint   |
+| 208 | SpellFamilyName               | uint   |
+| 209 | SpellFamilyFlagsLow           | flag96 |
+| 210 | SpellFamilyFlagsHigh          | flag96 |
+| 211 | SpellFamilyFlags2             | flag96 |
+| 212 | MaxAffectedTargets            | uint   |
+| 213 | DmgClass                      | uint   |
+| 214 | PreventionType                | uint   |
+| 215 | StanceBarOrder                | uint   |
+| 216 | EffectDamageMultiplier1       | float  |
+| 217 | EffectDamageMultiplier2       | float  |
+| 218 | EffectDamageMultiplier3       | float  |
+| 219 | MinFactionId                  | uint   |
+| 220 | MinReputation                 | uint   |
+| 221 | RequiredAuraVision            | uint   |
+| 222 | TotemCategory1                | uint   |
+| 223 | TotemCategory2                | uint   |
+| 224 | AreaGroupId                   | int    |
+| 225 | SchoolMask                    | uint   |
+| 226 | runeCostID                    | uint   |
+| 227 | spellMissileID                | uint   |
+| 228 | PowerDisplayId                | uint   |
+| 229 | EffectBonusMultiplier1        | float  |
+| 230 | EffectBonusMultiplier2        | float  |
+| 231 | EffectBonusMultiplier3        | float  |
+| 232 | spellDescriptionVariableID    | uint   |
+| 233 | SpellDifficultyId             | uint   |
 
 ## **Category**
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>ID</strong></p></td>
-<td><p><strong>Description</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>Default</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Summon guards</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>Entry</p></td>
-</tr>
-<tr class="odd">
-<td><p>4</p></td>
-<td><p>Entry</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Description   |
+|----|---------------|
+| 0  | Default       |
+| 1  | Summon guards |
+| 2  | Entry         |
+| 4  | Entry         |
 
 ## **powerType**
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>ID</strong></p></td>
-<td><p><strong>Description</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>0</p></td>
-<td><p>Mana</p></td>
-</tr>
-<tr class="odd">
-<td><p>1</p></td>
-<td><p>Rage</p></td>
-</tr>
-<tr class="even">
-<td><p>2</p></td>
-<td><p>?</p></td>
-</tr>
-<tr class="odd">
-<td><p>3</p></td>
-<td><p>Energy</p></td>
-</tr>
-</tbody>
-</table>
+| ID | Description |
+|----|-------------|
+| 0  | Mana        |
+| 1  | Rage        |
+| 2  | Focus       |
+| 3  | Energy      |
 
 ## **RequiresSpellFocus**
 

@@ -14,20 +14,29 @@ Loot templates define only items in the loot. See comments about money drop in c
 
 ## Structure
 
-| **Field**                                    | **Type**           | **Null** | **Key** | **Default** | **Extra** |
-|----------------------------------------------|--------------------|----------|---------|-------------|-----------|
-| [Entry](#loot_template-Entry)                | mediumint unsigned | NO       | PRI     | 0           |           |
-| [Item](#loot_template-Item)                  | mediumint unsigned | NO       | PRI     | 0           |           |
-| Reference                                    | mediumint unsigned | NO       |         | 0           |           |
-| [Chance](#loot_template-ChanceOrQuestChance) | float              | NO       |         | 100         |           |
-| QuestRequired                                | bool               | NO       |         | 0           |           |
-| [LootMode](#loot_template-LootMode)          | smallint           | NO       |         | 1           |           |
-| [GroupId](#loot_template-GroupId)            | tinyint            | NO       |         | 0           |           |
-| [MinCount](#loot_template-MinCount)     | mediumint          | NO       |         | 1           |           |
-| [MaxCount](#loot_template-MaxCount)          | tinyint unsigned   | NO       |         | 1           |           |
-| Comment                                      | varchar            |          |         |             |           |
+| Field               | Type               | Null | Key | Default | Extra | Comment |
+|---------------------|--------------------|------|-----|---------|-------|---------|
+| [Entry][1]          | mediumint unsigned | NO   | PRI | 0       |       |         |
+| [Item][2]           | mediumint unsigned | NO   | PRI | 0       |       |         |
+| [Reference][3]      | mediumint unsigned | NO   |     | 0       |       |         |
+| [Chance][4]         | float              | NO   |     | 100     |       |         |
+| [QuestRequired]][5] | bool               | NO   |     | 0       |       |         |
+| [LootMode][6]       | smallint           | NO   |     | 1       |       |         |
+| [GroupId][7]        | tinyint            | NO   |     | 0       |       |         |
+| [MinCount][8]       | mediumint          | NO   |     | 1       |       |         |
+| [MaxCount][9]       | tinyint unsigned   | NO   |     | 1       |       |         |
+| [Comment][10]       | varchar            |      |     |         |       |         |
 
- 
+[1]: #entry
+[2]: #item
+[3]: #reference
+[4]: #chance
+[5]: #questrequired
+[6]: #lootmode
+[7]: #groupid
+[8]: #mincount
+[9]: #maxcount
+[10]: #comment
 
 ## Relations
 
@@ -76,8 +85,8 @@ Value of M[axCount](#loot_template-maxcount) field is used as a repetition fact
 
 Be careful. Self references (loot template includes reference to itself) and loop references (loot template A includes reference to entire template B, loot template B includes reference to entire template A) are *completely* different from [internal references](#loot_template-Group_reference). If you make a self-reference like
 
-``` cpp
-INSERT INTO `reference_loot_template` (`Entry`,`Item`,`Reference`) VALUES (21215, 0, 21215); 
+```sql
+INSERT INTO `reference_loot_template` (`Entry`, `Item`, `Reference`) VALUES (21215, 0, 21215); 
 ```
 
 then the core will crash due to stack overflow at first attempt of loot 21215 processing. That is why **self references and loop references are strictly forbidden**.
@@ -88,13 +97,13 @@ Item drop chance (plain entry or quest entry). Not sure how this functions for l
 
 ### Plain entry
 
-**Chance** &gt; 0
+**Chance** > 0
 
 Absolute value of **Chance** signifies the percent chance that the item has to drop. Any floating point number is allowed but indeed any value larger that 100 will make the same result as 100.
 
 ### Quest drop
 
-**Chance** &gt; 0
+**Chance** > 0
 
 Absolute value of **Chance** signifies the percent chance that the item has to drop. Any floating point number is allowed but indeed any value larger that 100 will make the same result as 100.
 
@@ -102,7 +111,7 @@ Just as for [plain entries](#loot_template-Plain_entry) absolute value of **Chan
 
 ### Chanced references
 
-For **Reference*** *entries **Chance** signifies the percent chance that the reference has to be used. So it is very similar to [plain entries](#loot_template-Plain_entry) meaning, just note that entire reference is skipped if the chance is missed.
+For **Reference** **entries** **Chance** signifies the percent chance that the reference has to be used. So it is very similar to [plain entries](#loot_template-Plain_entry) meaning, just note that entire reference is skipped if the chance is missed.
 
 Negative and zero values of **Chance** make no sense for that case and should not be used.
 
@@ -122,38 +131,13 @@ A special parameter used for separating conditional loot, such as Hard Mode loot
 
 Loot mode examples from the Flame Leviathan fight in Ulduar:
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>LootMode</strong></p></td>
-<td><p><strong>Use</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>1</p></td>
-<td><p>Normal mode (0 towers)</p></td>
-</tr>
-<tr class="odd">
-<td><p>2</p></td>
-<td><p>Hard mode A (1 tower)</p></td>
-</tr>
-<tr class="even">
-<td><p>4</p></td>
-<td><p>Hard mode B (2 towers)</p></td>
-</tr>
-<tr class="odd">
-<td><p>8</p></td>
-<td><p>Hard mode C (3 towers)</p></td>
-</tr>
-<tr class="even">
-<td><p>16</p></td>
-<td><p>Hard mode D (4 towers)</p></td>
-</tr>
-</tbody>
-</table>
+| LootMode | Use                    |
+|----------|------------------------|
+| 1        | Normal mode (0 towers) |
+| 2        | Hard mode A (1 tower)  |
+| 4        | Hard mode B (2 towers) |
+| 8        | Hard mode C (3 towers) |
+| 16       | Hard mode D (4 towers) |
 
 ### GroupId
 
@@ -161,15 +145,15 @@ A group is a set of loot definitions processed in such a way that at any given l
 
 A group may consists of **explicitly-chanced** (having non-zero [Chance](#loot_template-ChanceOrQuestChance)) and **equal-chanced** ([Chance](#loot_template-ChanceOrQuestChance) = 0) entries. Every *equal-chanced* entry of a group is considered having such a chance that:
 
--   all equal-chanced entries have the same chance
+- all equal-chanced entries have the same chance
 
     \***group chance** (sum of chances of all entries) is 100%
 
 Of course group may consist of
 
--   only explicitly-chanced entries or
--   only equal-chanced entries or
--   entries of both type.
+- only explicitly-chanced entries or
+- only equal-chanced entries or
+- entries of both type.
 
 The easiest way to understand what are groups is to understand how core processes grouped entries:
 
@@ -179,35 +163,35 @@ At loading time:
 
 During loot generation:
 
--   core rolls for explicitly-chanced entries (if any):
--   **a random number\*R **is rolled in range 0 to 100 (floating point value).
-    -   chance to drop is checked for every (explicitly-chanced) entry in the group:
-    -   **if\*R** is less than absolute value of [Chance](#loot_template-ChanceOrQuestChance) of the entry then the entry 'wins': the [Item](#loot_template-item) is included in the loot. Group processing stops, the rest of group entries are just skipped.
-    -   **otherwise the entry 'looses': the [Item](#loot_template-item) misses its chance to get into the loot.\*R** is decreased by the absolute value of [Chance](#loot_template-ChanceOrQuestChance) and next explicitly-chanced entry is checked.
--   if none of explicitly-chanced entries got its chance then equal-chanced part (if any) is processed:
-    -   a random entry is selected from the set of equal-chanced entries and corresponding [Item](#loot_template-item) is included in the loot.
--   If nothing selected yet (this never happens if the group has some equal-chanced entries) - no item from the group is included into the loot.
+- core rolls for explicitly-chanced entries (if any):
+- **a random number\*R **is rolled in range 0 to 100 (floating point value).
+- chance to drop is checked for every (explicitly-chanced) entry in the group:
+- **if\*R** is less than absolute value of [Chance](#loot_template-ChanceOrQuestChance) of the entry then the entry 'wins': the [Item](#loot_template-item) is included in the loot. Group processing stops, the rest of group entries are just skipped.
+- **otherwise the entry 'looses': the [Item](#loot_template-item) misses its chance to get into the loot.\*R** is decreased by the absolute value of [Chance](#loot_template-ChanceOrQuestChance) and next explicitly-chanced entry is checked.
+- if none of explicitly-chanced entries got its chance then equal-chanced part (if any) is processed:
+- a random entry is selected from the set of equal-chanced entries and corresponding [Item](#loot_template-item) is included in the loot.
+- If nothing selected yet (this never happens if the group has some equal-chanced entries) - no item from the group is included into the loot.
 
 Let us use term **group chance** as the sum of [Chance](#loot_template-ChanceOrQuestChance) (absolute) values for the group. Please note that even one equal-chanced entry makes group chance to be 100% (provided that sum of explicit chances does not exceed 100%).
 
 If you understand the process you can understand the results:
 
--   Not more than one item from a group may drop at any given time.
+- Not more than one item from a group may drop at any given time.
 
     **If\*group chance** is at least 100 then one item will be dropped for sure.
 
--   If *group chance* does not exceed 100 then every item defined in group entries has *exactly* that chance to drop as set in [Chance](#loot_template-ChanceOrQuestChance).
+- If *group chance* does not exceed 100 then every item defined in group entries has *exactly* that chance to drop as set in [Chance](#loot_template-ChanceOrQuestChance).
 
     **If *group chance* is greater than 100 then some entries will lost a part of their chance (or even not be checked at all - that will be the case for all equal-chanced entries) whatever value takes the roll\*R**. So for some items chance to drop will be less than their [Chance](#loot_template-ChanceOrQuestChance). That is *very* bad and that is why having *group chance* &gt; 100 is strictly prohibited.
 
--   Processing of *equal-chanced* part takes much less time then of *explicitly-chanced* one. So usage of equal-chanced groups is recommended when possible.
+- Processing of *equal-chanced* part takes much less time then of *explicitly-chanced* one. So usage of equal-chanced groups is recommended when possible.
 
 So now basic applications of the groups are clear:
 
 **Groups with *group chance* of 100% generate\*exactly one** [item](#loot_template-item) every time. This is needed quite often, for example such behavior is needed to define a loot template for tier item drop from a boss.
 **Groups with *group chance* &lt; 100 generate\*one or zero** [items](#loot_template-item) every time keeping [chances](#loot_template-ChanceOrRef) of every item unchanged. Such behavior is useful to limit maximum number of items in the loot.
 
--   A single group may be defined for a set of items common for several loot sources. This could be very useful for decreasing DB size without any loss of data. See [References](#loot_template-Group_reference) for more details.
+- A single group may be defined for a set of items common for several loot sources. This could be very useful for decreasing DB size without any loss of data. See [References](#loot_template-Group_reference) for more details.
 
 There is no way to have a [reference](#loot_template-mincountOrRef) as a part of a group.
 
@@ -221,8 +205,8 @@ Note: The core has no limitation for number of groups (except 255 by DB field si
 
 Groupid for dummies as people have a hard time understanding it;
 
--   Lets say you have 10 different items in groupid 1 with the same chance, everytime the creature dies, it will randomly pick one of those items to drop.
--   If you have 10 different items in groupid 1 and 10 different items in groupid 2 with the same chance, then everytime the creature dies, it will randomly pick one of those 10 items in groupid 1 to drop, and one of the 10 items in groupid 2 to drop, meaning two items will drop. This is how boss loot works, this is how you make two random gear items drop everytime the boss dies.
+- Lets say you have 10 different items in groupid 1 with the same chance, everytime the creature dies, it will randomly pick one of those items to drop.
+- If you have 10 different items in groupid 1 and 10 different items in groupid 2 with the same chance, then everytime the creature dies, it will randomly pick one of those 10 items in groupid 1 to drop, and one of the 10 items in groupid 2 to drop, meaning two items will drop. This is how boss loot works, this is how you make two random gear items drop everytime the boss dies.
 
  
 
@@ -232,7 +216,7 @@ For reference entries: If GroupId &gt; 0 only the referenced items with said Gro
 
 The minimum number of copies of the item that can drop in a single loot
 
--   Zero value makes no sense and should not be used.
+- Zero value makes no sense and should not be used.
 
 ### MaxCount
 
@@ -254,16 +238,16 @@ Also an extra note on fishing\_loot\_template: if just one area ID is defined fo
 
 When several zones uses the same loot definition then
 
--   the loot template of the zone with minimal ID (minID) should be defined without references
--   the other zone with the same loot should have loot definition as a single [reference](#loot_template-mincountOrRef) to the minID loot definition
+- the loot template of the zone with minimal ID (minID) should be defined without references
+- the other zone with the same loot should have loot definition as a single [reference](#loot_template-mincountOrRef) to the minID loot definition
 
 Note: To be confirmed by TDB developers
 
 As successful fishing should give exactly 1 fish (with an exception for quest fishes) so non-quest part of every loot template should be
 
--   or single [plain entry](#loot_template-Plain_entry) with 100% drop chance
--   or a single group with [*group chance*](#loot_template-groupid) equal to 100%
--   or a reference to a template made according to previous two variants. It is recommended to use [group references](#loot_template-Group_reference).
+- or single [plain entry](#loot_template-Plain_entry) with 100% drop chance
+- or a single group with [*group chance*](#loot_template-groupid) equal to 100%
+- or a reference to a template made according to previous two variants. It is recommended to use [group references](#loot_template-Group_reference).
 
 When a fish is catched for a quest it becoms the *second* fish on the hook. Many people rolled on floor laughing but this is blizzlike and fortunately easy to implement. Just add necessary [quest drop](#loot_template-Quest_drop) definition(s).
 
@@ -271,8 +255,8 @@ When a fish is catched for a quest it becoms the *second* fish on the hook. Many
 
 For creature\_loot\_template basic approach is to use creature\_template.lootid equal to creature\_template.entry. But this results in great overhead in the loot table as
 
--   many creatures use the same loot definition (well, stats on sites are *similar* due to the nature of random roll)
--   even more creatures use same parts of loot definition
+- many creatures use the same loot definition (well, stats on sites are *similar* due to the nature of random roll)
+- even more creatures use same parts of loot definition
     That is why it is recommended to use [grouping](#loot_template-groupid), [group references](#loot_template-Group_reference) and [template references](#loot_template-Template_reference).
 
 ## Disenchant outcome
@@ -281,8 +265,8 @@ Agreements for disenchant loot templates numbering is **item.ItemLevel\*100 + it
 
 As disenchanting should give exactly 1 type of shard/essence/dust/etc so every loot template should be
 
--   or single [plain entry](#loot_template-Plain_entry) with 100% drop chance
--   or a single group with [*group chance*](#loot_template-groupid) equal to 100%
+- or single [plain entry](#loot_template-Plain_entry) with 100% drop chance
+- or a single group with [*group chance*](#loot_template-groupid) equal to 100%
 
 There is no use for references here as the reference is done with the relation field. No quest drop at all.
 
@@ -312,8 +296,8 @@ Agreements for skinning loot templates numbering is not known. It's a real pity 
 
 As skinning should give exactly 1 type of skin/hide/etc so every loot template should be
 
--   or single [plain entry](#loot_template-Plain_entry) with 100% drop chance
--   or single group with [*group chance*](#loot_template-groupid) equal to 100%
+- or single [plain entry](#loot_template-Plain_entry) with 100% drop chance
+- or single group with [*group chance*](#loot_template-groupid) equal to 100%
 
 There is no use for references here as the reference is done with the relation field.
 
@@ -323,84 +307,38 @@ When a skin is pulled for a quest it becoms the *second* skin from the mob. Yes,
 
 Agreements for Reference Templates are as followed:
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Range</strong></p></td>
-<td><p><strong>Used for</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>00000-00999</p></td>
-<td><p>Skinning Reference Templates</p></td>
-</tr>
-<tr class="odd">
-<td><p>01000-09999</p></td>
-<td><p>KEEP FREE: TDB-DEV-References</p></td>
-</tr>
-<tr class="even">
-<td><p>10000-10999</p></td>
-<td><p>Item Reference Templates</p></td>
-</tr>
-<tr class="odd">
-<td><p>11000-11799</p></td>
-<td><p>Fishing Reference Templates</p></td>
-</tr>
-<tr class="even">
-<td><p>11800-11999</p></td>
-<td><p>Milling Reference Templates</p></td>
-</tr>
-<tr class="odd">
-<td><p>12000-12899</p></td>
-<td><p>Raid: Gameobject Reference Templates</p></td>
-</tr>
-<tr class="even">
-<td><p>12900-12999</p></td>
-<td><p>Mining Reference Templates</p></td>
-</tr>
-<tr class="odd">
-<td><p>13000-13999</p></td>
-<td><p>Prospecting Reference Templates</p></td>
-</tr>
-<tr class="even">
-<td><p>14000-29000</p></td>
-<td><p>World Reference Templates</p></td>
-</tr>
-<tr class="odd">
-<td><p>34000-34999</p></td>
-<td><p>Raid: Creature Reference Templates</p></td>
-</tr>
-<tr class="even">
-<td><p>35000-35999</p></td>
-<td><p>Dungeon Reference Templates</p></td>
-</tr>
-</tbody>
-</table>
+| Range       | Used for                             |
+|-------------|--------------------------------------|
+| 00000-00999 | Skinning Reference Templates         |
+| 01000-09999 | KEEP FREE: TDB-DEV-References        |
+| 10000-10999 | Item Reference Templates             |
+| 11000-11799 | Fishing Reference Templates          |
+| 11800-11999 | Milling Reference Templates          |
+| 12000-12899 | Raid: Gameobject Reference Templates |
+| 12900-12999 | Mining Reference Templates           |
+| 13000-13999 | Prospecting Reference Templates      |
+| 14000-29000 | World Reference Templates            |
+| 34000-34999 | Raid: Creature Reference Templates   |
+| 35000-35999 | Dungeon Reference Templates          |
 
 # Examples
 
 ### Gameobject dropping a single non-quest item
 
-``` sql
+```sql
 -- Add a single non-quest item to an object
-DELETE `gameobject_loot_template` WHERE `Entry`=1419;
-INSERT INTO `gameobject_loot_template`
-   (`Entry`,`Item`,`Chance`,`LootMode`,`GroupId`,`MinCount`,`MaxCount`)
-VALUES
-(1419,2453,100,0,0,1,3);  -- 100% chance to drop a 1 to 3 Bruiseweed
+-- 100% chance to drop a 1 to 3 Bruiseweed
+DELETE `gameobject_loot_template` WHERE `Entry`=1419 AND `Item`=2453;
+INSERT INTO `gameobject_loot_template` (`Entry`,`Item`,`Chance`,`LootMode`,`GroupId`,`MinCount`,`MaxCount`) VALUES
+(1419,2453,100,0,0,1,3);
 ```
 
 ### Creature having in the pocket single quest item
 
-``` sql
+```sql
 -- creature_template: entry=6846, name='Defias Dockmaster', pickpocketloot=6846
 -- Note: link with pickpocketing_loot_template is on `pickpocketloot` field (which is equal to `entry` field in this case)
-DELETE `pickpocketing_loot_template` WHERE `Entry`=6846;
-INSERT INTO `pickpocketing_loot_template`
-   (`Entry`,`Item`,`Chance`,`LootMode`,`GroupId`,`MinCount`,`MaxCount`)
-VALUES
+DELETE `pickpocketing_loot_template` WHERE `Entry`=6846 AND `Item`=7675;
+INSERT INTO `pickpocketing_loot_template` (`Entry`,`Item`,`Chance`,`LootMode`,`GroupId`,`MinCount`,`MaxCount`) VALUES
 (6846,7675,100,0,0,1,1);
 ```
