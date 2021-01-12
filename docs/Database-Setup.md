@@ -10,7 +10,7 @@ We recommend to get a database client to operate to your DB easily, see [this pa
 
 The `db_assembler` script and the `acore.sh` dashboard both use by default the **acore** db user for the database connection. Running for the first time the assembler command should create the user for you, however, if you're having permissions error or any other issue with that user, please open your MySQL client with the root user and run the following queries:
 
-```
+```sql
 DROP USER IF EXISTS 'acore'@'localhost';
 DROP USER IF EXISTS 'acore'@'127.0.0.1';
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore';
@@ -22,7 +22,6 @@ exit;
 ```
 
 It will setup the acore user properly to be used by the db_assembler script
-
 
 ### [ALTERNATIVE] Edit script configuration
 
@@ -43,8 +42,6 @@ If you don't want to use the default acore user, then you can change the configu
 - Run `bash apps/db_assembler/db_assembler.sh`
 - Select `import-all: Assemble & Import all`
 - Once the process is finished, you can exit the script.
-
------------
 
 ## How to setup the AzerothCore DB manually
 
