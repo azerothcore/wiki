@@ -8,16 +8,16 @@ This table describes the reward that you will receive when you obtain a given ac
 
 **Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra |
-|---------------------|--------------|------------|-----|------|---------|-------|
-| [ID][1]             | mediumint(8) | unsigned   | PRI | NO   | 0       |       |
-| [TitleA][2]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
-| [TitleH][3]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
-| [ItemID][4]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
-| [Sender][5]         | mediumint(8) | unsigned   |     | NO   | 0       |       |
-| [Subject][6]        | varchar(255) | signed     |     | YES  | NULL    |       |
-| [Body][7]           | text         | signed     |     | YES  |         |       |
-| [MailTemplateID][8] | mediumint(8) | unsigned   |     | YES  | 0       |       |
+| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|---------------------|--------------|------------|-----|------|---------|-------|---------|
+| [ID][1]             | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [TitleA][2]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [TitleH][3]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [ItemID][4]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [Sender][5]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [Subject][6]        | varchar(255) |            |     | YES  |         |       |         |
+| [Body][7]           | text         |            |     | YES  |         |       |         |
+| [MailTemplateID][8] | mediumint(8) | unsigned   |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #titlea
@@ -61,3 +61,10 @@ This is the body (text) of the mail that the player will receive.
 ### MailTemplateID
 
 Id of the MailTemplate from `MailTemplate.dbc` of that mail that the player will receive. To use this column, `Subject` and `Body` must be empty as they are loaded from the DBC file.
+
+### Example
+
+| ID | TitleA | TitleH | ItemID | Sender | Subject             |
+|----|--------|--------|--------|--------|---------------------|
+| 13 | 0      | 0      | 41426  | 16128  | Level 80            |
+| 45 | 0      | 0      | 43348  | 28070  | You've Been Around! |
