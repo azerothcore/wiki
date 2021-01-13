@@ -97,7 +97,13 @@ This field is for any comment you want to make about the requirements or the ins
 
 ### Example
 
-| mapId | difficulty | level_min | level_max | item_level | item | item2 | quest_done_A | quest_done_H | completed_achievement | quest_failed_text | comment                      |
-|-------|------------|-----------|-----------|------------|------|-------|--------------|--------------|-----------------------|-------------------|------------------------------|
-| 33    | 0          | 14        | 0         | 0          | 0    | 0     | 0            | 0            | 0                     |                   | Shadowfang Keep Entrance     |
-| 34    | 0          | 15        | 0         | 0          | 0    | 0     | 0            | 0            | 0                     |                   | Stormwind Stockades Entrance |
+| mapId | difficulty | level_min | level_max | comment                      |
+|-------|------------|-----------|-----------|------------------------------|
+| 33    | 0          | 14        | 0         | Shadowfang Keep Entrance     |
+| 34    | 0          | 15        | 0         | Stormwind Stockades Entrance |
+
+**Note:** The table, has more attributes, but as an example, it was not necessary to show them all, because most did not have values and thus, avoid the table is very extensive. The executed SQL query is the following:
+
+```sql
+SELECT `mapId`, `difficulty`, `level_min`, `level_max`, `comment` FROM `access_requirement` LIMIT 2;
+```
