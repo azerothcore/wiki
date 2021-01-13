@@ -2,6 +2,8 @@
 
 [<-Back-to:World](database-world.md)
 
+The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL language. The important thing is always to analyze, who is the event that motivates the execution of an action and of course, who is the objective. As a recommendation, you can review the scripts that are already inside the table, to understand how it works. The advantage, for which several use this method, is that it is not required to compile, when adding records, with restarting the server, if it is well programmed, you can appreciate the changes. Another reason is the portability, but it depends on the point of view of the developer, the response you can get.
+
 **Table Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
