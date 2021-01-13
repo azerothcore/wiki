@@ -6,7 +6,7 @@
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------------|
-| [entryorguid][1]      | int(11)     | signed     | PRI | NO   | NULL    |       |               |
+| [entryorguid][1]      | int(11)     |            | PRI | NO   |         |       |               |
 | [source_type][2]      | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |               |
 | [id][3]               | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
 | [link][4]             | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
@@ -14,11 +14,11 @@
 | [event_phase_mask][6] | smallint(5) | unsigned   |     | NO   | 0       |       |               |
 | [event_chance][7]     | tinyint(3)  | unsigned   |     | NO   | 100     |       |               |
 | [event_flags][8]      | smallint(5) | unsigned   |     | NO   | 0       |       |               |
-| [event_param1][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param2][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param3][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param4][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param5][8]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param1][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param2][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param3][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param4][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
+| [event_param5][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [action_type][9]      | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
 | [action_param1][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [action_param2][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
@@ -31,11 +31,11 @@
 | [target_param2][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [target_param3][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [target_param4][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_x][10]        | float       |            |     | NO   | 0       |       |               |
-| [target_y][10]        | float       |            |     | NO   | 0       |       |               |
-| [target_z][10]        | float       |            |     | NO   | 0       |       |               |
-| [target_o][10]        | float       |            |     | NO   | 0       |       |               |
-| [comment][11]         | text        |            |     | NO   | NULL    |       | Event Comment |
+| [target_x][11]        | float       |            |     | NO   | 0       |       |               |
+| [target_y][12]        | float       |            |     | NO   | 0       |       |               |
+| [target_z][13]        | float       |            |     | NO   | 0       |       |               |
+| [target_o][14]        | float       |            |     | NO   | 0       |       |               |
+| [comment][15]         | text        |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid
 [2]: #source_type
@@ -47,48 +47,50 @@
 [8]: #event_flags
 [9]: #action_type
 [10]: #target_type
-[11]: #comment
+[11]: #target_x
+[12]: #target_y
+[13]: #target_z
+[14]: #target_o
+[15]: #comment
 
 **Description of the fields**
 
 ### entryorguid
 
--   EntryOrGuid &gt; 0: entry of the creature / game object / etc.
+- EntryOrGuid > 0: `entry` of the creature / game object / etc.
+- EntryOrGuid < 0: `guid` of the creature / game object / etc.
 
-<!-- -->
+**Depends on source\_type.**
 
--   EntryOrGuid &lt; 0: guid of the creature / game object / etc.
+> In other words:
 
-<!-- -->
+> If the entryorguid, is greater than 0, we would be using the `entry` of a creature, in other words, we are applying the fix, to a whole family of npcs, objects... which, while using all the same `entry`, all run the same script.
 
--   Depends on source\_type.
+> On the other hand, if the entryorguid is less than 0, we would use the `guid` of the creature table, being able to apply the fix, only to 1 creature, of a group of many others. But maybe we don't want all of them to behave the same way.
 
 ### source\_type
 
--   Object type: creature, game object, spell. see table below for values
+Object type: creature, game object, spell. see table below for values
 
-    | Name                                                                | Value |
-    |---------------------------------------------------------------------|-------|
-    | SMART\_SCRIPT\_TYPE\_CREATURE                                       | 0     |
-    | SMART\_SCRIPT\_TYPE\_GAMEOBJECT                                     | 1     |
-    | SMART\_SCRIPT\_TYPE\_AREATRIGGER                                    | 2     |
-    | SMART\_SCRIPT\_TYPE\_TIMED\_ACTIONLIST                              | 9     |
+| Name                                   | Value |
+|----------------------------------------|-------|
+| SMART\_SCRIPT\_TYPE\_CREATURE          | 0     |
+| SMART\_SCRIPT\_TYPE\_GAMEOBJECT        | 1     |
+| SMART\_SCRIPT\_TYPE\_AREATRIGGER       | 2     |
+| SMART\_SCRIPT\_TYPE\_TIMED\_ACTIONLIST | 9     |
 
 ### id
 
--   Incremental id *bound* to each entryorguid & source\_type (0, 1, 2, ...).
+Incremental id *bound* to each entryorguid & source\_type (0, 1, 2, ...).
 
 ### link
 
--   Simple event linking;
+Simple event linking;
 
-<!-- -->
+- Example: if id = 0 and link = 1; id 1 will only be able to occur if id = 0 was triggered (id 1 has to use event\_type SMART\_EVENT\_LINK).
+- Smart\_event to be used.
 
--   Example: if id = 0 and link = 1; id 1 will only be able to occur if id = 0 was triggered (id 1 has to use event\_type SMART\_EVENT\_LINK).
-
-<!-- -->
-
--   Smart\_event to be used.
+**Thanks to the use of links, you can execute several actions, keeping the same event.**
 
 ### event\_phase\_mask
 
@@ -96,15 +98,15 @@ When dealing with phases, *phase IDs* have to be used. There are 13 (12+1) diffe
 
 **Example:** The script is in phase 0 by default - If we want it to go to phase 1, we got two choices:
 
--   SMART\_ACTION\_INC\_PHASE by 1 or SMART\_ACTION\_SET\_PHASE 1
+- SMART\_ACTION\_INC\_PHASE by 1 or SMART\_ACTION\_SET\_PHASE 1
 
 If the script is in phase 0 and want to skip to phase 2:
 
--   SMART\_ACTION\_INC\_PHASE by 2 or SMART\_ACTION\_SET\_PHASE 2
+- SMART\_ACTION\_INC\_PHASE by 2 or SMART\_ACTION\_SET\_PHASE 2
 
 If the script is in phase 1 and want to skip to phase 2:
 
--   SMART\_ACTION\_INC\_PHASE by 1 or SMART\_ACTION\_SET\_PHASE 2
+- SMART\_ACTION\_INC\_PHASE by 1 or SMART\_ACTION\_SET\_PHASE 2
 
 | Name                             | Flag | Hex   | Comment                     |
 |----------------------------------|------|-------|-----------------------------|
@@ -122,11 +124,8 @@ If the script is in phase 1 and want to skip to phase 2:
 | SMART\_EVENT\_PHASE\_11          | 1024 | 0x400 | Phase 11 only.              |
 | SMART\_EVENT\_PHASE\_12          | 2048 | 0x800 | Phase 12 only.              |
 
--   Event will only be able to occur if creature/GO is in this phase.
-
-<!-- -->
-
--   Example: If we want an event to only be able to occure in phase 1 and 4, **event\_phase\_mask** = 1+8 = 9
+- Event will only be able to occur if creature/GO is in this phase.
+- Example: If we want an event to only be able to occure in phase 1 and 4, **event\_phase\_mask** = 1+8 = 9
 
 ### event\_chance
 
@@ -134,4005 +133,291 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 
 ### event\_flags
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>Name</strong></th>
-<th>Flag</th>
-<th>Hex</th>
-<th>Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>SMART_EVENT_FLAG_NOT_REPEATABLE</p></td>
-<td><p>1</p></td>
-<td><p>0x01</p></td>
-<td><p>Event can not repeat</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_FLAG_DIFFICULTY_0</p></td>
-<td><p>2</p></td>
-<td><p>0x02</p></td>
-<td><p>Event only occurs in normal dungeon</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_FLAG_DIFFICULTY_1</p></td>
-<td><p>4</p></td>
-<td><p>0x04</p></td>
-<td><p>Event only occurs in heroic dungeon</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_FLAG_DIFFICULTY_2</p></td>
-<td><p>8</p></td>
-<td><p>0x08</p></td>
-<td><p>Event only occurs in normal raid</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_FLAG_DIFFICULTY_3</p></td>
-<td><p>16</p></td>
-<td><p>0x10</p></td>
-<td><p>Event only occurs in heroic raid</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_FLAG_RESERVED_5</p></td>
-<td><p>32</p></td>
-<td><p>0x20</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_FLAG_RESERVED_6</p></td>
-<td><p>64</p></td>
-<td><p>0x40</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_FLAG_DEBUG_ONLY</p></td>
-<td><p>128</p></td>
-<td><p>0x80</p></td>
-<td><p>Event only occurs in debug build</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_FLAG_DONT_RESET</p></td>
-<td><p>256</p></td>
-<td><p>0x100</p></td>
-<td><p>Event will not reset in SmartScript::OnReset()</p></td>
-</tr>
-</tbody>
-</table>
+| Name                            | Flag | Hex   | Comment                                        |
+|---------------------------------|------|-------|------------------------------------------------|
+| SMART_EVENT_FLAG_NOT_REPEATABLE | 1    | 0x01  | Event can not repeat                           |
+| SMART_EVENT_FLAG_DIFFICULTY_0   | 2    | 0x02  | Event only occurs in normal dungeon            |
+| SMART_EVENT_FLAG_DIFFICULTY_1   | 4    | 0x04  | Event only occurs in heroic dungeon            |
+| SMART_EVENT_FLAG_DIFFICULTY_2   | 8    | 0x08  | Event only occurs in normal raid               |
+| SMART_EVENT_FLAG_DIFFICULTY_3   | 16   | 0x10  | Event only occurs in heroic raid               |
+| SMART_EVENT_FLAG_RESERVED_5     | 32   | 0x20  |                                                |
+| SMART_EVENT_FLAG_RESERVED_6     | 64   | 0x40  |                                                |
+| SMART_EVENT_FLAG_DEBUG_ONLY     | 128  | 0x80  | Event only occurs in debug build               |
+| SMART_EVENT_FLAG_DONT_RESET     | 256  | 0x100 | Event will not reset in SmartScript::OnReset() |
 
--   Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
-
-<!-- -->
-
--   Values can be added together (bitwise math).
+- Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
+- Values can be added together (bitwise math).
 
 ### event\_type
 
-<table height="400">
-<thead>
-<tr class="header">
-<th><p>Name</p></th>
-<th><p>Value</p></th>
-<th><p>Param1</p></th>
-<th><p>Param2</p></th>
-<th><p>Param3</p></th>
-<th><p>Param4</p></th>
-<th><p>Param5</p></th>
-<th>Comment</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>SMART_EVENT_UPDATE_IC</p></td>
-<td><p>0</p></td>
-<td><p>InitialMin</p></td>
-<td><p>InitialMax</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td><p>In combat.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_UPDATE_OOC</p></td>
-<td><p>1</p></td>
-<td><p>InitialMin</p></td>
-<td><p>InitialMax</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>Out of combat.</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_HEALTH_PCT</p></td>
-<td><p>2</p></td>
-<td><p>HPMin%</p></td>
-<td><p>HPMax%</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td><p>Health Percentage</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_MANA_PCT</p></td>
-<td><p>3</p></td>
-<td><p>ManaMin%</p></td>
-<td><p>ManaMax%</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td><p>Mana Percentage</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_AGGRO</p></td>
-<td><p>4</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Aggro</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_KILL</p></td>
-<td><p>5</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p>Player only (0/1)</p></td>
-<td><p>Creature entry (if param3 is 0)</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Kill</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_DEATH</p></td>
-<td><p>6</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Death</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_EVADE</p></td>
-<td><p>7</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Evade Attack</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_SPELLHIT</p></td>
-<td><p>8</p></td>
-<td><p>SpellID</p></td>
-<td><p>School</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature/Gameobject Spell Hit</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_RANGE</p></td>
-<td><p>9</p></td>
-<td><p>MinDist</p></td>
-<td><p>MaxDist</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Target In Range</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_OOC_LOS</p></td>
-<td><p>10</p></td>
-<td><p>NoHostile</p></td>
-<td><p>MaxRange</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td>0/1 Player Only</td>
-<td>On Target In Distance Out of Combat</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_RESPAWN</p></td>
-<td><p>11</p></td>
-<td><p>type (None = 0, Map = 1, Area = 2)</p></td>
-<td><p>MapId</p></td>
-<td><p>ZoneId</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature/Gameobject Respawn</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_TARGET_HEALTH_PCT</p></td>
-<td><p>12</p></td>
-<td><p>HPMin%</p></td>
-<td><p>HPMax%</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Health Percentage</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_VICTIM_CASTING</p></td>
-<td><p>13</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p>Spell id (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Casting Spell</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_FRIENDLY_HEALTH</p></td>
-<td><p>14</p></td>
-<td><p>HPDeficit</p></td>
-<td><p>Radius</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Friendly Health Deficit</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_FRIENDLY_IS_CC</p></td>
-<td><p>15</p></td>
-<td><p>Radius</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_FRIENDLY_MISSING_BUFF</p></td>
-<td><p>16</p></td>
-<td><p>SpellId</p></td>
-<td><p>Radius</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Friendly Lost Buff</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_SUMMONED_UNIT</p></td>
-<td><p>17</p></td>
-<td><p>CretureId (0 all)</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature/Gameobject Summoned Unit</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_TARGET_MANA_PCT</p></td>
-<td><p>18</p></td>
-<td><p>ManaMin%</p></td>
-<td><p>ManaMax%</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Mana Percentage</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_ACCEPTED_QUEST</p></td>
-<td><p>19</p></td>
-<td><p>QuestID (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Accepted Quest</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_REWARD_QUEST</p></td>
-<td><p>20</p></td>
-<td><p>QuestID (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Rewarded Quest</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_REACHED_HOME</p></td>
-<td><p>21</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Reached Home</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_RECEIVE_EMOTE</p></td>
-<td><p>22</p></td>
-<td><p><a href="Emotes">EmoteId</a></p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td>On Receive Emote.</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_HAS_AURA</p></td>
-<td><p>23</p></td>
-<td><p>SpellID</p></td>
-<td><p>Stacks</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Has Aura</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_TARGET_BUFFED</p></td>
-<td><p>24</p></td>
-<td><p>SpellID</p></td>
-<td><p>Stacks</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Buffed With Spell</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_RESET</p></td>
-<td><p>25</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>After Combat, On Respawn or Spawn</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_IC_LOS</p></td>
-<td><p>26</p></td>
-<td><p>NoHostile</p></td>
-<td><p>MaxRange</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td>0/1 Player Only</td>
-<td>On Target In Distance In Combat</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_PASSENGER_BOARDED</p></td>
-<td><p>27</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_PASSENGER_REMOVED</p></td>
-<td><p>28</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_CHARMED</p></td>
-<td><p>29</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Charmed</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_CHARMED_TARGET</p></td>
-<td><p>30</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Charmed</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_SPELLHIT_TARGET</p></td>
-<td><p>31</p></td>
-<td><p>SpellId</p></td>
-<td><p>School</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Spell Hit</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_DAMAGED</p></td>
-<td><p>32</p></td>
-<td><p>MinDmg</p></td>
-<td><p>MaxDmg</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Damaged</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_DAMAGED_TARGET</p></td>
-<td><p>33</p></td>
-<td><p>MinDmg</p></td>
-<td><p>MaxDmg</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Target Damaged</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_MOVEMENTINFORM</p></td>
-<td><p>34</p></td>
-<td><p>MovementType (0=any)</p></td>
-<td><p>PointID</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>ESCORT_MOTION_TYPE = 17, POINT_MOTION_TYPE = 8</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_SUMMON_DESPAWNED</p></td>
-<td><p>35</p></td>
-<td><p>Entry</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Summoned Unit Despawned</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_CORPSE_REMOVED</p></td>
-<td><p>36</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Corpse Removed</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_AI_INIT</p></td>
-<td><p>37</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_DATA_SET</p></td>
-<td><p>38</p></td>
-<td><p>Field</p></td>
-<td><p>Value</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature/Gameobject Data Set, Can be used with SMART_ACTION_SET_DATA</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_WAYPOINT_START</p></td>
-<td><p>39</p></td>
-<td><p>PointId (0 any)</p></td>
-<td><p>pathId (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Waypoint ID Started</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_WAYPOINT_REACHED</p></td>
-<td><p>40</p></td>
-<td><p>PointId (0 any)</p></td>
-<td><p>pathId (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Waypoint ID Reached</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_AREATRIGGER_ONTRIGGER</p></td>
-<td><p>46</p></td>
-<td><p>TriggerId (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_TEXT_OVER</p></td>
-<td><p>52</p></td>
-<td><p><a href="creature_text#groupid">creature_text.GroupID</a></p></td>
-<td><p><a href="creature#id">creature.id</a> (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On TEXT_OVER Event Triggered After SMART_ACTION_TALK</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_RECEIVE_HEAL</p></td>
-<td><p>53</p></td>
-<td><p>MinHeal</p></td>
-<td><p>MaxHeal</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Received Healing</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_JUST_SUMMONED</p></td>
-<td><p>54</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Just spawned</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_WAYPOINT_PAUSED</p></td>
-<td><p>55</p></td>
-<td><p>PointId (0 any)</p></td>
-<td><p>pathID (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Paused at Waypoint ID</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_WAYPOINT_RESUMED</p></td>
-<td><p>56</p></td>
-<td><p>PointId (0 any)</p></td>
-<td><p>pathID (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Resumed after Waypoint ID</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_WAYPOINT_STOPPED</p></td>
-<td><p>57</p></td>
-<td><p>PointId (0 any)</p></td>
-<td><p>pathID (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Stopped On Waypoint ID</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_WAYPOINT_ENDED</p></td>
-<td><p>58</p></td>
-<td><p>PointId (0 any)</p></td>
-<td><p>pathID (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature Waypoint Path Ended</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_TIMED_EVENT_TRIGGERED</p></td>
-<td><p>59</p></td>
-<td><p>Id</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_UPDATE</p></td>
-<td><p>60</p></td>
-<td><p>InitialMin</p></td>
-<td><p>InitialMax</p></td>
-<td><p>RepeatMin</p></td>
-<td><p>RepeatMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_LINK</p></td>
-<td><p>61</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>Used to link together multiple events as a chain of events.</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_GOSSIP_SELECT</p></td>
-<td><p>62</p></td>
-<td><p><a href="gossip_menu_option#menuid">gossip_menu_option.MenuID</a></p></td>
-<td><p><a href="gossip_menu_option#optionid">gossip_menu_option.OptionID</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On gossip clicked (<a href="gossip_menu_option">gossip_menu_option</a>).</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_JUST_CREATED</p></td>
-<td><p>63</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_GOSSIP_HELLO</p></td>
-<td><p>64</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Right-Click Creature/Gameobject that have gossip enabled.</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_FOLLOW_COMPLETED</p></td>
-<td><p>65</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><div class="content-wrapper">
-<p>SMART_EVENT_UNUSED_66</p>
-</div></td>
-<td><p>66</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>UNUSED</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_IS_BEHIND_TARGET</p></td>
-<td><p>67</p></td>
-<td><p>CooldownMin</p></td>
-<td><p>CooldownMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On Creature is behind target.</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_GAME_EVENT_START</p></td>
-<td><p>68</p></td>
-<td><p><a href="game_event#evententry">game_event.eventEntry</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On <a href="game_event">game_event</a> started.</td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_GAME_EVENT_END</p></td>
-<td><p>69</p></td>
-<td><p><a href="game_event#evententry">game_event.eventEntry</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>On <a href="game_event">game_event</a> ended.</td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_GO_STATE_CHANGED</p></td>
-<td><p>70</p></td>
-<td><p>State (0 - Active, 1 - Ready, 2 - Active alternative)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_EVENT_GO_EVENT_INFORM</p></td>
-<td><p>71</p></td>
-<td><p>EventId</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_EVENT_ACTION_DONE</p></td>
-<td><p>72</p></td>
-<td><p>EventId</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td>SMART_EVENT_ON_SPELLCLICK</td>
-<td>73</td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td>SMART_EVENT_FRIENDLY_HEALTH_PCT</td>
-<td>74</td>
-<td><p>minHpPct</p></td>
-<td><p>maxHpPct</p></td>
-<td><p>repeatMin</p></td>
-<td><p>repeatMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td>SMART_EVENT_DISTANCE_CREATURE</td>
-<td>75</td>
-<td>database guid</td>
-<td>database entry</td>
-<td>distance</td>
-<td>repeat interval (ms)</td>
-<td><p><br />
-</p></td>
-<td><p>On creature guid OR any instance of creature entry is within distance.</p></td>
-</tr>
-<tr class="odd">
-<td>SMART_EVENT_DISTANCE_GAMEOBJECT</td>
-<td>76</td>
-<td>database guid</td>
-<td>database entry</td>
-<td>distance</td>
-<td>repeat interval (ms)</td>
-<td><p><br />
-</p></td>
-<td><p>On gameobject guid OR any instance of gameobject entry is within distance.</p></td>
-</tr>
-<tr class="even">
-<td>SMART_EVENT_COUNTER_SET</td>
-<td>77</td>
-<td>counterID</td>
-<td>value</td>
-<td>cooldownMin</td>
-<td>cooldownMax</td>
-<td><p><br />
-</p></td>
-<td>If the value of specified counterID is equal to a specified value</td>
-</tr>
-<tr class="odd">
-<td>SMART_EVENT_NEAR_PLAYERS</td>
-<td>101</td>
-<td>minPlayers</td>
-<td>Range (yards)</td>
-<td>FirstCheck (ms)</td>
-<td>RepeatCheck (ms)</td>
-<td><p><br />
-</p></td>
-<td><p>Event will trigger if there are more than minPlayers in range.</p></td>
-</tr>
-<tr class="odd">
-<td>SMART_EVENT_NEAR_PLAYERS_NEGATION</td>
-<td>102</td>
-<td>maxPlayers</td>
-<td>Range (yards)</td>
-<td>FirstCheck (ms)</td>
-<td>RepeatCheck (ms)</td>
-<td><p><br />
-</p></td>
-<td><p>Event will trigger if there are less than maxPlayers in range.</p></td>
-</tr>
-</tbody>
-</table>
+| Name                              | Value | Param1                                                | Param2                      | Param3            | Param4                          | Param5          | Comment                                                                      |
+|-----------------------------------|-------|-------------------------------------------------------|-----------------------------|-------------------|---------------------------------|-----------------|------------------------------------------------------------------------------|
+| SMART_EVENT_UPDATE_IC             | 0     | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       |                 | In combat.                                                                   |
+| SMART_EVENT_UPDATE_OOC            | 1     | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       |                 | Out of combat.                                                               |
+| SMART_EVENT_HEALTH_PCT            | 2     | HPMin%                                                | HPMax%                      | RepeatMin         | RepeatMax                       |                 | Health Percentage                                                            |
+| SMART_EVENT_MANA_PCT              | 3     | ManaMin%                                              | ManaMax%                    | RepeatMin         | RepeatMax                       |                 | Mana Percentage                                                              |
+| SMART_EVENT_AGGRO                 | 4     |                                                       |                             |                   |                                 |                 | On Creature Aggro                                                            |
+| SMART_EVENT_KILL                  | 5     | CooldownMin                                           | CooldownMax                 | Player only (0/1) | Creature entry (if param3 is 0) |                 | On Creature Kill                                                             |
+| SMART_EVENT_DEATH                 | 6     |                                                       |                             |                   |                                 |                 | On Creature Death                                                            |
+| SMART_EVENT_EVADE                 | 7     |                                                       |                             |                   |                                 |                 | On Creature Evade Attack                                                     |
+| SMART_EVENT_SPELLHIT              | 8     | SpellID                                               | School                      | CooldownMin       | CooldownMax                     |                 | On Creature/Gameobject Spell Hit                                             |
+| SMART_EVENT_RANGE                 | 9     | MinDist                                               | MaxDist                     | RepeatMin         | RepeatMax                       |                 | On Target In Range                                                           |
+| SMART_EVENT_OOC_LOS               | 10    | NoHostile                                             | MaxRange                    | CooldownMin       | CooldownMax                     | 0/1 Player Only | On Target In Distance Out of Combat                                          |
+| SMART_EVENT_RESPAWN               | 11    | type (None = 0, Map = 1, Area = 2)                    | MapId                       | ZoneId            |                                 |                 | On Creature/Gameobject Respawn                                               |
+| SMART_EVENT_TARGET_HEALTH_PCT     | 12    | HPMin%                                                | HPMax%                      | RepeatMin         | RepeatMax                       |                 | On Target Health Percentage                                                  |
+| SMART_EVENT_VICTIM_CASTING        | 13    | RepeatMin                                             | RepeatMax                   | Spell id (0 any)  |                                 |                 | On Target Casting Spell                                                      |
+| SMART_EVENT_FRIENDLY_HEALTH       | 14    | HPDeficit                                             | Radius                      | RepeatMin         | RepeatMax                       |                 | On Friendly Health Deficit                                                   |
+| SMART_EVENT_FRIENDLY_IS_CC        | 15    | Radius                                                | RepeatMin                   | RepeatMax         |                                 |                 |                                                                              |
+| SMART_EVENT_FRIENDLY_MISSING_BUFF | 16    | SpellId                                               | Radius                      | RepeatMin         | RepeatMax                       |                 | On Friendly Lost Buff                                                        |
+| SMART_EVENT_SUMMONED_UNIT         | 17    | CretureId (0 all)                                     | CooldownMin                 | CooldownMax       |                                 |                 | On Creature/Gameobject Summoned Unit                                         |
+| SMART_EVENT_TARGET_MANA_PCT       | 18    | ManaMin%                                              | ManaMax%                    | RepeatMin         | RepeatMax                       |                 | On Target Mana Percentage                                                    |
+| SMART_EVENT_ACCEPTED_QUEST        | 19    | QuestID (0 any)                                       |                             |                   |                                 |                 | On Target Accepted Quest                                                     |
+| SMART_EVENT_REWARD_QUEST          | 20    | QuestID (0 any)                                       |                             |                   |                                 |                 | On Target Rewarded Quest                                                     |
+| SMART_EVENT_REACHED_HOME          | 21    |                                                       |                             |                   |                                 |                 | On Creature Reached Home                                                     |
+| SMART_EVENT_RECEIVE_EMOTE         | 22    | EmoteId                                               | CooldownMin                 | CooldownMax       |                                 |                 | On Receive Emote.                                                            |
+| SMART_EVENT_HAS_AURA              | 23    | SpellID                                               | Stacks                      | RepeatMin         | RepeatMax                       |                 | On Creature Has Aura                                                         |
+| SMART_EVENT_TARGET_BUFFED         | 24    | SpellID                                               | Stacks                      | RepeatMin         | RepeatMax                       |                 | On Target Buffed With Spell                                                  |
+| SMART_EVENT_RESET                 | 25    |                                                       |                             |                   |                                 |                 | After Combat, On Respawn or Spawn                                            |
+| SMART_EVENT_IC_LOS                | 26    | NoHostile                                             | MaxRange                    | CooldownMin       | CooldownMax                     | 0/1 Player Only | On Target In Distance In Combat                                              |
+| SMART_EVENT_PASSENGER_BOARDED     | 27    | CooldownMin                                           | CooldownMax                 |                   |                                 |                 |                                                                              |
+| SMART_EVENT_PASSENGER_REMOVED     | 28    | CooldownMin                                           | CooldownMax                 |                   |                                 |                 |                                                                              |
+| SMART_EVENT_CHARMED               | 29    |                                                       |                             |                   |                                 |                 | On Creature Charmed                                                          |
+| SMART_EVENT_CHARMED_TARGET        | 30    |                                                       |                             |                   |                                 |                 | On Target Charmed                                                            |
+| SMART_EVENT_SPELLHIT_TARGET       | 31    | SpellId                                               | School                      | RepeatMin         | RepeatMax                       |                 | On Target Spell Hit                                                          |
+| SMART_EVENT_DAMAGED               | 32    | MinDmg                                                | MaxDmg                      | RepeatMin         | RepeatMax                       |                 | On Creature Damaged                                                          |
+| SMART_EVENT_DAMAGED_TARGET        | 33    | MinDmg                                                | MaxDmg                      | RepeatMin         | RepeatMax                       |                 | On Target Damaged                                                            |
+| SMART_EVENT_MOVEMENTINFORM        | 34    | MovementType (0=any)                                  | PointID                     |                   |                                 |                 | ESCORT_MOTION_TYPE = 17, POINT_MOTION_TYPE = 8                               |
+| SMART_EVENT_SUMMON_DESPAWNED      | 35    | Entry                                                 | CooldownMin                 | CooldownMax       |                                 |                 | On Summoned Unit Despawned                                                   |
+| SMART_EVENT_CORPSE_REMOVED        | 36    |                                                       |                             |                   |                                 |                 | On Creature Corpse Removed                                                   |
+| SMART_EVENT_AI_INIT               | 37    |                                                       |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_DATA_SET              | 38    | Field                                                 | Value                       | CooldownMin       | CooldownMax                     |                 | On Creature/Gameobject Data Set, Can be used with SMART_ACTION_SET_DATA      |
+| SMART_EVENT_WAYPOINT_START        | 39    | PointId (0 any)                                       | pathId (0 any)              |                   |                                 |                 | On Creature Waypoint ID Started                                              |
+| SMART_EVENT_WAYPOINT_REACHED      | 40    | PointId (0 any)                                       | pathId (0 any)              |                   |                                 |                 | On Creature Waypoint ID Reached                                              |
+| SMART_EVENT_AREATRIGGER_ONTRIGGER | 46    | TriggerId (0 any)                                     |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_TEXT_OVER             | 52    | creature_text.GroupID                                 | creature.id (0 any)         |                   |                                 |                 | On TEXT_OVER Event Triggered After SMART_ACTION_TALK                         |
+| SMART_EVENT_RECEIVE_HEAL          | 53    | MinHeal                                               | MaxHeal                     | CooldownMin       | CooldownMax                     |                 | On Creature Received Healing                                                 |
+| SMART_EVENT_JUST_SUMMONED         | 54    |                                                       |                             |                   |                                 |                 | On Creature Just spawned                                                     |
+| SMART_EVENT_WAYPOINT_PAUSED       | 55    | PointId (0 any)                                       | pathID (0 any)              |                   |                                 |                 | On Creature Paused at Waypoint ID                                            |
+| SMART_EVENT_WAYPOINT_RESUMED      | 56    | PointId (0 any)                                       | pathID (0 any)              |                   |                                 |                 | On Creature Resumed after Waypoint ID                                        |
+| SMART_EVENT_WAYPOINT_STOPPED      | 57    | PointId (0 any)                                       | pathID (0 any)              |                   |                                 |                 | On Creature Stopped On Waypoint ID                                           |
+| SMART_EVENT_WAYPOINT_ENDED        | 58    | PointId (0 any)                                       | pathID (0 any)              |                   |                                 |                 | On Creature Waypoint Path Ended                                              |
+| SMART_EVENT_TIMED_EVENT_TRIGGERED | 59    | Id                                                    |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_UPDATE                | 60    | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       |                 |                                                                              |
+| SMART_EVENT_LINK                  | 61    |                                                       |                             |                   |                                 |                 | Used to link together multiple events as a chain of events.                  |
+| SMART_EVENT_GOSSIP_SELECT         | 62    | gossip_menu_option.MenuID                             | gossip_menu_option.OptionID |                   |                                 |                 | On gossip clicked (gossip_menu_option).                                      |
+| SMART_EVENT_JUST_CREATED          | 63    |                                                       |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_GOSSIP_HELLO          | 64    |                                                       |                             |                   |                                 |                 | On Right-Click Creature/Gameobject that have gossip enabled.                 |
+| SMART_EVENT_FOLLOW_COMPLETED      | 65    |                                                       |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_UNUSED_66             | 66    |                                                       |                             |                   |                                 |                 | UNUSED                                                                       |
+| SMART_EVENT_IS_BEHIND_TARGET      | 67    | CooldownMin                                           | CooldownMax                 |                   |                                 |                 | On Creature is behind target.                                                |
+| SMART_EVENT_GAME_EVENT_START      | 68    | game_event.eventEntry                                 |                             |                   |                                 |                 | On game_event started.                                                       |
+| SMART_EVENT_GAME_EVENT_END        | 69    | game_event.eventEntry                                 |                             |                   |                                 |                 | On game_event ended.                                                         |
+| SMART_EVENT_GO_STATE_CHANGED      | 70    | State (0 - Active, 1 - Ready, 2 - Active alternative) |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_GO_EVENT_INFORM       | 71    | EventId                                               |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_ACTION_DONE           | 72    | EventId                                               |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_ON_SPELLCLICK         | 73    |                                                       |                             |                   |                                 |                 |                                                                              |
+| SMART_EVENT_FRIENDLY_HEALTH_PCT   | 74    | minHpPct                                              | maxHpPct                    | repeatMin         | repeatMax                       |                 |                                                                              |
+| SMART_EVENT_DISTANCE_CREATURE     | 75    | database guid                                         | database entry              | distance          | repeat interval (ms)            |                 | On creature guid OR any instance of creature entry is within distance.       |
+| SMART_EVENT_DISTANCE_GAMEOBJECT   | 76    | database guid                                         | database entry              | distance          | repeat interval (ms)            |                 | On gameobject guid OR any instance of gameobject entry is within   distance. |
+| SMART_EVENT_COUNTER_SET           | 77    | counterID                                             | value                       | cooldownMin       | cooldownMax                     |                 | If the value of specified counterID is equal to a specified value            |
+| SMART_EVENT_NEAR_PLAYERS          | 101   | minPlayers                                            | Range (yards)               | FirstCheck (ms)   | RepeatCheck (ms)                |                 | Event will trigger if there are more than minPlayers in range.               |
+| SMART_EVENT_NEAR_PLAYERS_NEGATION | 102   | maxPlayers                                            | Range (yards)               | FirstCheck (ms)   | RepeatCheck (ms)                |                 | Event will trigger if there are less than maxPlayers in range.               |
 
 ### action\_type
 
-<table height="400">
-<thead>
-<tr class="header">
-<th><p>Name</p></th>
-<th><p>Value</p></th>
-<th><p>Param1</p></th>
-<th><p>Param2</p></th>
-<th><p>Param3</p></th>
-<th><p>Param4</p></th>
-<th><p>Param5</p></th>
-<th><p>Param6</p></th>
-<th><p>Comment</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>SMART_ACTION_NONE</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Do nothing</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_TALK</p></td>
-<td><p>1</p></td>
-<td><p><a href="creature_text#groupid">creature_text.GroupID</a></p></td>
-<td><p>Duration to wait before SMART_EVENT_TEXT_OVER is triggered.</p></td>
-<td>0 It will try to trigger talk of the target
-<p>1 Set target as talk target (used for $vars in texts and whisper target)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Param2 in Milliseconds.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_FACTION</p></td>
-<td><p>2</p></td>
-<td><p><a href="FactionTemplate">FactionID</a> (or 0 for default)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Sets faction to creature.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_MORPH_TO_ENTRY_OR_MODEL</p></td>
-<td><p>3</p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a>(param1)</p></td>
-<td><p><a href="creature_template#modelidx">creature_template.modelidx</a>(param2)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Take DisplayID of creature (param1) OR Turn to DisplayID (param2) OR Both = 0 for Demorph</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SOUND</p></td>
-<td><p>4</p></td>
-<td><p>SoundId</p></td>
-<td><p>onlySelf (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Play Sound; onlySelf = 1 only sends sound to self, onlySelf = 0 sends sound to everyone in visibility range</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_PLAY_EMOTE</p></td>
-<td><p>5</p></td>
-<td><p><a href="Emotes">EmoteId</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Play Emote</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_FAIL_QUEST</p></td>
-<td><p>6</p></td>
-<td><p>QuestID</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Fail Quest of Target</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_OFFER_QUEST</p></td>
-<td><p>7</p></td>
-<td><p><a href="quest_template#id">quest_template.id</a></p></td>
-<td><p>directAdd (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Add Quest to Target</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_REACT_STATE</p></td>
-<td><p>8</p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Unit/Unit.h#L1099-L1104">ReactState</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>React State. Can be Passive (0), Defensive (1), Aggressive (2).</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ACTIVATE_GOBJECT</p></td>
-<td><p>9</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Activate Object</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RANDOM_EMOTE</p></td>
-<td><p>10</p></td>
-<td><p><a href="Emotes">EmoteId1</a></p></td>
-<td><p><a href="Emotes">EmoteId2</a></p></td>
-<td><p><a href="Emotes">EmoteId3</a></p></td>
-<td><p><a href="Emotes">EmoteId4</a></p></td>
-<td><p><a href="Emotes">EmoteId5</a></p></td>
-<td><p><a href="Emotes">EmoteId6</a></p></td>
-<td><p>Play Random Emote</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CAST</p></td>
-<td><p>11</p></td>
-<td><p>SpellId</p></td>
-<td><p><a href="#cast-flags">castFlags</a></p></td>
-<td><p>limitTargets (0 = all targets)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Cast Spell ID at Target(s)</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SUMMON_CREATURE</p></td>
-<td><p>12</p></td>
-<td><p>creature_template.entry</p></td>
-<td><p><a href="#summon-types">Summon type</a></p></td>
-<td><p>duration in ms</p></td>
-<td><p>attackInvoker (0/1/2)</p></td>
-<td><p>attackScriptOwner (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p>Summon Unit; attackInvoker 1: attack target; attackInvoker 2: attack actual invoker</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_THREAT_SINGLE_PCT</p></td>
-<td><p>13</p></td>
-<td><p>Threat% inc</p></td>
-<td><p>Threat% dec</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Change Threat Percentage for Single Target</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_THREAT_ALL_PCT</p></td>
-<td><p>14</p></td>
-<td><p>Threat% inc</p></td>
-<td><p>Threat% dec</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Change Threat Percentage for All Enemies</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CALL_AREAEXPLOREDOREVENTHAPPENS</p></td>
-<td><p>15</p></td>
-<td><p><a href="quest_template#id">quest_template.id</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RESERVED_16</p></td>
-<td><p>16</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>For 4.3.4 + only</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_EMOTE_STATE</p></td>
-<td><p>17</p></td>
-<td><p><a href="Emotes">EmoteId</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Play Emote Continuously</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_UNIT_FLAG</p></td>
-<td><p>18</p></td>
-<td><p>(may be more than one field OR'd together)</p></td>
-<td><p>type</p>
-<p>If false set <a href="creature_template#unit_flags">creature_template.unit_flags</a></p>
-<p>If true set <a href="creature_template#unit_flags2">creature_template.unit_flags2</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Can set Multi-able flags at once</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_REMOVE_UNIT_FLAG</p></td>
-<td><p>19</p></td>
-<td><p>(may be more than one field OR'd together)</p></td>
-<td><p>type</p>
-<p>If false set  <a href="creature_template#unit_flags">creature_template.unit_flags</a></p>
-<p>If true set <a href="creature_template#unit_flags2">creature_template.unit_flags2</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Can Remove Multi-able flags at once</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_AUTO_ATTACK</p></td>
-<td><p>20</p></td>
-<td><p>AllowAttackState (0 = Stop attack, anything else means continue attacking)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Stop or Continue Automatic Attack.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ALLOW_COMBAT_MOVEMENT</p></td>
-<td><p>21</p></td>
-<td><p>AllowCombatMovement (0 = Stop combat based movement, anything else continue attacking)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Allow or Disable Combat Movement</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_EVENT_PHASE</p></td>
-<td><p>22</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Set event phase 0-12 (the actual values, no bit mask!)</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_INC_EVENT_PHASE</p></td>
-<td><p>23</p></td>
-<td><p>Increment</p></td>
-<td><p>Decrement</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Set param1 OR param2 (not both). Value 0 has no effect.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_EVADE</p></td>
-<td><p>24</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Evade Incoming Attack</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_FLEE_FOR_ASSIST</p></td>
-<td><p>25</p></td>
-<td><p>0/1 (If you want the fleeing NPC to say attempts to flee text on flee, use 1 on param1. For no message use 0.)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>If you want the fleeing NPC to say '%s attempts to run away in fear' on flee, use 1 on param1. 0 for no message.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CALL_GROUPEVENTHAPPENS</p></td>
-<td><p>26</p></td>
-<td><p><a href="quest_template#id">quest_template.id</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_COMBAT_STOP</p></td>
-<td><p>27</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_REMOVEAURASFROMSPELL</p></td>
-<td><p>28</p></td>
-<td><p>Spellid (0 removes all auras)</p></td>
-<td><p>charges (0 removes aura)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_FOLLOW</p></td>
-<td><p>29</p></td>
-<td><p>Distance (0 = Default value)</p></td>
-<td><p>Angle (0 = Default value)</p></td>
-<td><p>End <a href="creature_template#entry">creature_template.entry</a></p></td>
-<td><p>credit</p></td>
-<td><p>creditType (0 monsterkill, 1 event)</p></td>
-<td><p><br />
-</p></td>
-<td><p>Follow Target</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RANDOM_PHASE</p></td>
-<td><p>30</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> 1</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> 2</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> 3</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> 4</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> 5</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> 6</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_RANDOM_PHASE_RANGE</p></td>
-<td><p>31</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> minimum</p></td>
-<td><p><a href="#event_phase_mask">event_phase_mask</a> maximum</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RESET_GOBJECT</p></td>
-<td><p>32</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Reset Gameobject</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CALL_KILLEDMONSTER</p></td>
-<td><p>33</p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>This is the ID from <a href="quest_template#requirednpcorgo">quest_template.RequiredNpcOrGo</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_INST_DATA</p></td>
-<td><p>34</p></td>
-<td><p>Field</p></td>
-<td><p>Data</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Set Instance Data</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_INST_DATA64</p></td>
-<td><p>35</p></td>
-<td><p>Field</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Set Instance Data uint64</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_UPDATE_TEMPLATE</p></td>
-<td><p>36</p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a></p></td>
-<td><p>Update Level</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Updates creature_template to given entry</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_DIE</p></td>
-<td><p>37</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Kill Target</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_IN_COMBAT_WITH_ZONE</p></td>
-<td><p>38</p></td>
-<td><p>Range in yards for all players to be forced into combat with the creature. Only used in the open world. Leave as 0 if used in an instance.</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Sets the creature in combat with its zone, can be used in instances and open world. Useful for creatures inside instances so all players will be set in combat until the fight ends.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CALL_FOR_HELP</p></td>
-<td><p>39</p></td>
-<td><p>Radius in yards that other creatures must be to acknowledge the cry for help.</p></td>
-<td><p>0/1 (say calls for help text)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>If you want the NPC to say '%s calls for help!'. Use 1 on param1, 0 for no message.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_SHEATH</p></td>
-<td><p>40</p></td>
-<td><p>Sheath (0-unarmed, 1-melee, 2-ranged)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_FORCE_DESPAWN</p></td>
-<td><p>41</p></td>
-<td><p>Despawn timer &quot;ms&quot;</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Despawn Target after param1 in Milliseconds.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_INVINCIBILITY_HP_LEVEL</p></td>
-<td><p>42</p></td>
-<td><p>flat hp value</p></td>
-<td><p>percent hp value</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>If you use both params, only percent will be used.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_MOUNT_TO_ENTRY_OR_MODEL</p></td>
-<td><p>43</p></td>
-<td><p>creature_template.entry</p></td>
-<td><p><a href="creature_template#modelidx">creature_template.modelidx</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Mount to Creature Entry (param1) OR Mount to Creature Display (param2) Or both = 0 for Unmount</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_INGAME_PHASE_MASK</p></td>
-<td><p>44</p></td>
-<td><p><a href="creature#phasemask">creature.phaseMask</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_DATA</p></td>
-<td><p>45</p></td>
-<td><p>Field</p></td>
-<td><p>Data</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Set Data For Target, can be used with SMART_EVENT_DATA_SET</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_MOVE_FORWARD</p></td>
-<td><p>46</p></td>
-<td><p>distance</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>move self forward for the specified distance (point movement)</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_VISIBILITY</p></td>
-<td><p>47</p></td>
-<td><p>0/1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Makes creature Visible = 1  or  Invisible = 0</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_ACTIVE</p></td>
-<td><p>48</p></td>
-<td><p>0/1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>If a creature or GO is set active it will stay active even if no player is near. Take care, though, as it needs additional ressources (CPU/RAM) to keep them active (other objects/creatures nearby stay active).</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ATTACK_START</p></td>
-<td><p>49</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Allows basic melee swings to creature.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SUMMON_GO</p></td>
-<td><p>50</p></td>
-<td><p><a href="gameobject_template#entry">gameobject_template.entry</a></p></td>
-<td><p>De-spawn time in seconds.</p></td>
-<td><p>targetSummon (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Spawns Gameobject, use target_type to set spawn position; if an entity is specified as target and also coordinates are set (target x,y,z) those coordinates are handled as offset from the target's position; if targetSummon is 1 then the target will summon the GO on the position of the actor</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_KILL_UNIT</p></td>
-<td><p>51</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Kills Creature.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_ACTIVATE_TAXI</p></td>
-<td><p>52</p></td>
-<td><p>TaxiID</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Sends player to flight path. You have to be close to Flight Master, which gives Taxi ID you need.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_WP_START</p></td>
-<td><p>53</p></td>
-<td><p>0 = walk / 1 = run</p></td>
-<td><p><a href="waypoints#entry">waypoints.entry</a></p></td>
-<td><p>canRepeat</p></td>
-<td><p><a href="quest_template#id">quest_template.id</a></p></td>
-<td><p>despawntime</p></td>
-<td><p>reactState</p></td>
-<td><p>Creature starts Waypoint Movement. Use <a href="waypoints#entry">waypoints</a> table to create movement.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_WP_PAUSE</p></td>
-<td><p>54</p></td>
-<td><p>time (in ms)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Creature pauses its Waypoint Movement for given time.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_WP_STOP</p></td>
-<td><p>55</p></td>
-<td><p>despawnTime</p></td>
-<td><p><a href="quest_template#id">quest_template.id</a></p></td>
-<td><p>fail (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Creature stops its Waypoint Movement.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_ADD_ITEM</p></td>
-<td><p>56</p></td>
-<td><p><a href="item_template#entry">item_template.entry</a></p></td>
-<td><p>count</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Adds item(s) to player.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_REMOVE_ITEM</p></td>
-<td><p>57</p></td>
-<td><p><a href="item_template#entry">item_template.entry</a></p></td>
-<td><p>count</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Removes item(s) from player.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_INSTALL_AI_TEMPLATE</p></td>
-<td><p>58</p></td>
-<td><p>TemplateID (see <a href="#predefined-sai-templates">Predefined SAI templates</a> below)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_RUN</p></td>
-<td><p>59</p></td>
-<td><p>0 = Off / 1 = On</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_FLY</p></td>
-<td><p>60</p></td>
-<td><p>fly (0/1)</p></td>
-<td><p>speed</p></td>
-<td><p>disable gravity (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Only works for creatures with inhabit air.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_SWIM</p></td>
-<td><p>61</p></td>
-<td><p>0 = Off / 1 = On</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_TELEPORT</p></td>
-<td><p>62</p></td>
-<td><p><a href="Map">MapID</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Continue this action with the TARGET_TYPE column. Use any target_type (except 0), and use target_x, target_y, target_z, target_o as the coordinates</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_COUNTER</p></td>
-<td><p>63</p></td>
-<td><p>counterID</p></td>
-<td><p>value</p></td>
-<td><p>reset (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>If reset is 0 the counter with the specified ID is increased by the given value; if reset is 1 the counter is set to the value.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_STORE_TARGET_LIST</p></td>
-<td><p>64</p></td>
-<td><p>varID</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_WP_RESUME</p></td>
-<td><p>65</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Creature continues in its Waypoint Movement.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_ORIENTATION</p></td>
-<td><p>66</p></td>
-<td><p>Depends on the script target. If SMART_TARGET_SELF, facing will be the same as in HomePosition, For SMART_TARGET_POSITION you need to set target_o : 0 = North, West = 1.5, South = 3, East = 4.5</p></td>
-<td><p>Random orientation? (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CREATE_TIMED_EVENT</p></td>
-<td><p>67</p></td>
-<td><p>id</p></td>
-<td><p>InitialMin</p></td>
-<td><p>InitialMax</p></td>
-<td><p>RepeatMin(only if it repeats)</p></td>
-<td><p>RepeatMax(only if it repeats)</p></td>
-<td><p>chance</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_PLAYMOVIE</p></td>
-<td><p>68</p></td>
-<td><p>entry</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_MOVE_TO_POS</p></td>
-<td><p>69</p></td>
-<td><p>PointId</p></td>
-<td><p>isTransport (0 or 1)</p></td>
-<td><p>controlled (0 or 1)</p></td>
-<td><p>ContactDistance</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>PointId is called by SMART_EVENT_MOVEMENTINFORM. Continue this action with the TARGET_TYPE column. Use any target_type, and use target_x, target_y, target_z as the coordinates; if an entity is specified as target and also coordinates are set (target x,y,z) those coordinates are handled as offset from the target's position</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RESPAWN_TARGET</p></td>
-<td><p>70</p></td>
-<td><p>Respawntime in seconds</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_EQUIP</p></td>
-<td><p>71</p></td>
-<td><p><a href="creature_equip_template#id">creature_equip_template.ID</a></p></td>
-<td><p>Slotmask</p></td>
-<td><p>Slot1 (<a href="item_template#entry">item_template.entry</a>)</p></td>
-<td><p>Slot2 (<a href="item_template#entry">item_template.entry</a>)</p></td>
-<td><p>Slot3 (<a href="item_template#entry">item_template.entry</a>)</p></td>
-<td><p><br />
-</p></td>
-<td><p>only slots with mask set will be sent to client, bits are 1, 2, 4, leaving mask 0 is defaulted to mask 7 (send all), Slots1-3 are only used if no Param1 is set</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CLOSE_GOSSIP</p></td>
-<td><p>72</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td>Closes gossip window.</td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_TRIGGER_TIMED_EVENT</p></td>
-<td><p>73</p></td>
-<td><p>id(&gt;1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_REMOVE_TIMED_EVENT</p></td>
-<td><p>74</p></td>
-<td><p>id(&gt;1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ADD_AURA</p></td>
-<td><p>75</p></td>
-<td><p>SpellId</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Adds aura to player(s). Use target_type 17 to make AoE aura.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_OVERRIDE_SCRIPT_BASE_OBJECT</p></td>
-<td><p>76</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>WARNING: CAN CRASH CORE, do not use if you dont know what you are doing</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_RESET_SCRIPT_BASE_OBJECT</p></td>
-<td><p>77</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CALL_SCRIPT_RESET</p></td>
-<td><p>78</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_RANGED_MOVEMENT</p></td>
-<td><p>79</p></td>
-<td><p>attackDistance</p></td>
-<td><p>attackAngle</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Sets movement to follow at a specific range to the target.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CALL_TIMED_ACTIONLIST</p></td>
-<td><p>80</p></td>
-<td><p>EntryOrGuid * 100 (<a href="#entryorguid">entryorguid</a> with 00 added after the entry, or 01, 02, 03 etc. for multiple action lists)</p></td>
-<td><p>timer update type(0 OOC, 1 IC, 2 ALWAYS)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_NPC_FLAG</p></td>
-<td><p>81</p></td>
-<td><p><a href="creature_template#npcflag">creature_template.npcflag</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_ADD_NPC_FLAG</p></td>
-<td><p>82</p></td>
-<td><p><a href="creature_template#npcflag">creature_template.npcflag</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_REMOVE_NPC_FLAG</p></td>
-<td><p>83</p></td>
-<td><p><a href="creature_template#npcflag">creature_template.npcflag</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SIMPLE_TALK</p></td>
-<td><p>84</p></td>
-<td><p><a href="creature_text#groupid">creature_text.GroupID</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Makes a player say text. SMART_EVENT_TEXT_OVER is not triggered and whispers can not be used.</p></td>
-</tr>
-<tr class="even">
-<td>SMART_ACTION_INVOKER_CAST</td>
-<td><p>85</p></td>
-<td><p>SpellID</p></td>
-<td><p><a href="#cast-flags">castFlags</a></p></td>
-<td><p>triggeredFlags</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>if avaliable, last used invoker will cast spellId with castFlags on targets (warning: TC 3.3.5 uses another action here: SMART_ACTION_SELF_CAST)</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CROSS_CAST</p></td>
-<td><p>86</p></td>
-<td><p>SpellID</p></td>
-<td><p><a href="#cast-flags">castFlags</a></p></td>
-<td><p>CasterTargetType (caster is selected here, use it as target_type)</p></td>
-<td><p>CasterTarget (target_param1)</p></td>
-<td><p>CasterTarget (target_param2)</p></td>
-<td><p>CasterTarget (target_param3)</p></td>
-<td><p>This action is used to make selected caster (in CasterTargetType) to cast spell. Actual target is entered in target_type as normally.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CALL_RANDOM_TIMED_ACTIONLIST</p></td>
-<td><p>87</p></td>
-<td><p>EntryOrGuid 1 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>EntryOrGuid 2 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>EntryOrGuid 3 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>EntryOrGuid 4 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>EntryOrGuid 5 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>EntryOrGuid 6 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>Will select one entry from the ones provided. 0 is ignored.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CALL_RANDOM_RANGE_TIMED_ACTIONLIST</p></td>
-<td><p>88</p></td>
-<td><p>EntryOrGuid 1 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p>EntryOrGuid 2 (<a href="#entryorguid">entryorguid</a> * 100 + n)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>0 is ignored.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_RANDOM_MOVE</p></td>
-<td><p>89</p></td>
-<td><p>Radius</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Creature moves to random position in given radius.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_UNIT_FIELD_BYTES_1</p></td>
-<td><p>90</p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Unit/Unit.h#L137">Value</a></p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Unit/Unit.h#L137">Type</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_REMOVE_UNIT_FIELD_BYTES_1</p></td>
-<td><p>91</p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Unit/Unit.h#L137">Value</a></p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Unit/Unit.h#L137">Type</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_INTERRUPT_SPELL</p></td>
-<td><p>92</p></td>
-<td><p>With delay (0/1)</p></td>
-<td><p>SpellId</p></td>
-<td><p>Instant (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>This action allows you to interrupt the current spell being cast. If you do not set the spellId, the core will find the current spell depending on the withDelay and the withInstant values.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SEND_GO_CUSTOM_ANIM</p></td>
-<td><p>93</p></td>
-<td><p>animprogress (0-255)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_DYNAMIC_FLAG</p></td>
-<td><p>94</p></td>
-<td><p><a href="creature_template#dynamicflags">creature_template.dynamicflags</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ADD_DYNAMIC_FLAG</p></td>
-<td><p>95</p></td>
-<td><p><a href="creature_template#dynamicflags">creature_template.dynamicflags</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_REMOVE_DYNAMIC_FLAG</p></td>
-<td><p>96</p></td>
-<td><p><a href="creature_template#dynamicflags">creature_template.dynamicflags</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_JUMP_TO_POS</p></td>
-<td><p>97</p></td>
-<td><p>Speed XY</p></td>
-<td><p>Speed Z</p></td>
-<td><p>selfJump (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>If selfJump is 1 the actor will jump to the target (you can add an offset from the target's position by also specifying target coordinates); if selfJump is 0 the targeted creature will jump to the target position</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SEND_GOSSIP_MENU</p></td>
-<td><p>98</p></td>
-<td><p><a href="gossip_menu#entry">gossip_menu.entry</a></p></td>
-<td><p><a href="gossip_menu#text_id">gossip_menu.text_id</a><br />
-(same value as <a href="npc_text#id">npc_text.ID</a>)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Can be used together with 'SMART_EVENT_GOSSIP_HELLO' to set custom gossip.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_GO_SET_LOOT_STATE</p></td>
-<td><p>99</p></td>
-<td><p>LootState (0 - Not ready, 1 - Ready, 2 - Activated, 3 - Just deactivated)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SEND_TARGET_TO_TARGET</p></td>
-<td><p>100</p></td>
-<td><p>Id</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Send targets previously stored with SMART_ACTION_STORE_TARGET, to another npc/go, the other npc/go can then access them as if it was its own stored list</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_HOME_POS</p></td>
-<td><p>101</p></td>
-<td><p>0: if the target is a creature, set it's current position as it's new home position; if the target is SMART_TARGET_POSITION, use this position as new home position for the actor</p>
-<p>1: if the target is a creature, reset it's home position to the one from the DB; if the target is SMART_TARGET_POSITION, reset the actor's home position to the one from the DB (the actual values of the target position are ignored)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_HEALTH_REGEN</p></td>
-<td><p>102</p></td>
-<td><p>0/1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Sets the current creatures health regen on or off.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_ROOT</p></td>
-<td><p>103</p></td>
-<td><p>0/1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Enables or disables creature movement</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_GO_FLAG</p></td>
-<td><p>104</p></td>
-<td><p><a href="gameobject_template_addon#flags">gameobject_template_addon.flags</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>oldFlag = newFlag</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ADD_GO_FLAG</p></td>
-<td><p>105</p></td>
-<td><p><a href="gameobject_template_addon#flags">gameobject_template_addon.flags</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>oldFlag |= newFlag</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_REMOVE_GO_FLAG</p></td>
-<td><p>106</p></td>
-<td><p><a href="gameobject_template_addon#flags">gameobject_template_addon.flags</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>oldFlag &amp;= ~newFlag</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SUMMON_CREATURE_GROUP</p></td>
-<td><p>107</p></td>
-<td><p><a href="creature_summon_groups#groupid">creature_summon_groups.groupId</a></p></td>
-<td><p>attackInvoker (0/1)</p></td>
-<td><p>attackScriptOwner (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Use creature_summon_groups table. SAI target has no effect, use 0</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_POWER</p></td>
-<td><p>108</p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Miscellaneous/SharedDefines.h#L169">Power type</a></p></td>
-<td><p>New power</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ADD_POWER</p></td>
-<td><p>109</p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Miscellaneous/SharedDefines.h#L169">Power type</a></p></td>
-<td><p>Power to add</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_REMOVE_POWER</p></td>
-<td><p>110</p></td>
-<td><p><a href="https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Miscellaneous/SharedDefines.h#L169">Power type</a></p></td>
-<td><p>Power to remove</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_GAME_EVENT_STOP</p></td>
-<td><p>111</p></td>
-<td><p><a href="game_event#evententry">game_event.eventEntry</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_GAME_EVENT_START</p></td>
-<td><p>112</p></td>
-<td><p><a href="game_event#evententry">game_event.eventEntry</a></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_START_CLOSEST_WAYPOINT</p></td>
-<td><p>113</p></td>
-<td><p>wp1</p></td>
-<td><p>wp2</p></td>
-<td><p>wp3</p></td>
-<td><p>wp4</p></td>
-<td><p>wp5</p></td>
-<td><p>wp6</p></td>
-<td><p>Make target follow closest waypoint to its location</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RISE_UP</p></td>
-<td><p>114</p></td>
-<td><p>distance</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>move up for the specified distance (warning: TC 3.3.5 uses another action here: SMART_ACTION_MOVE_OFFSET)</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_RANDOM_SOUND</p></td>
-<td><p>115</p></td>
-<td><p>soundId1</p></td>
-<td><p>soundId2</p></td>
-<td><p>soundId3</p></td>
-<td><p>soundId4</p></td>
-<td><p>onlySelf (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_SIGHT_DIST</p></td>
-<td><p>121</p></td>
-<td><p>SightDistance</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_FLEE</p></td>
-<td><p>122</p></td>
-<td><p>FleeTime</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_ADD_THREAT</p></td>
-<td><p>123</p></td>
-<td><p>+threat</p></td>
-<td><p>-threat</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_LOAD_EQUIPMENT</p></td>
-<td><p>124</p></td>
-<td><p>Id</p></td>
-<td><p>force</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_TRIGGER_RANDOM_TIMED_EVENT</p></td>
-<td><p>125</p></td>
-<td><p>id min range</p></td>
-<td><p>id max range</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_REMOVE_ALL_GAMEOBJECTS</p></td>
-<td><p>126</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_MOVE_TO_POS_TARGET</p></td>
-<td><p>201</p></td>
-<td><p>pointId</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_GO_STATE</p></td>
-<td><p>202</p></td>
-<td><p>state</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_EXIT_VEHICLE</p></td>
-<td><p>203</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_UNIT_MOVEMENT_FLAGS</p></td>
-<td><p>204</p></td>
-<td><p>flags</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_COMBAT_DISTANCE</p></td>
-<td><p>205</p></td>
-<td><p>combatDistance</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_SET_CASTER_COMBAT_DIST</p></td>
-<td><p>206</p></td>
-<td><p>followDistance</p></td>
-<td><p>resetToMax</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_HOVER</p></td>
-<td><p>207</p></td>
-<td><p>0/1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ADD_IMMUNITY</p></td>
-<td><p>208</p></td>
-<td><p>type</p></td>
-<td><p>id</p></td>
-<td><p>value</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_REMOVE_IMMUNITY</p></td>
-<td><p>209</p></td>
-<td><p>type</p></td>
-<td><p>id</p></td>
-<td><p>value</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_FALL</p></td>
-<td><p>210</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_SET_EVENT_FLAG_RESET</p></td>
-<td><p>211</p></td>
-<td><p>0/1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_STOP_MOTION</p></td>
-<td><p>212</p></td>
-<td><p>stopMoving</p></td>
-<td><p>movementExpired</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_NO_ENVIRONMENT_UPDATE</p></td>
-<td><p>213</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_ZONE_UNDER_ATTACK</p></td>
-<td><p>214</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_LOAD_GRID</p></td>
-<td><p>215</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_MUSIC</p></td>
-<td><p>216</p></td>
-<td><p>SoundId</p></td>
-<td><p>onlySelf</p></td>
-<td><p>type</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Plays the specified sound file as music. Type can be one of these values:<br />
-0: Play music for the specified target(s)<br />
-1: Play music for all players in the entire zone<br />
-2: Play music for all players in the area</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_RANDOM_MUSIC</p></td>
-<td><p>217</p></td>
-<td><p>SoundId1</p></td>
-<td><p>SoundId2</p></td>
-<td><p>SoundId3</p></td>
-<td><p>SoundId4</p></td>
-<td><p>onlySelf</p></td>
-<td><p>type</p></td>
-<td><p>Plays randomly one of the specified sound files as music. Type can be one of these values:<br />
-0: Play music for the specified target(s)<br />
-1: Play music for all players in the entire zone<br />
-2: Play music for all players in the area</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CUSTOM_CAST</p></td>
-<td><p>218</p></td>
-<td><p>spellId</p></td>
-<td><p>castFlag</p></td>
-<td><p>bp0</p></td>
-<td><p>bp1</p></td>
-<td><p>bp2</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_CONE_SUMMON</p></td>
-<td><p>219</p></td>
-<td><p>entry</p></td>
-<td><p>Duration (ms)<br />
-0 = permanent</p></td>
-<td><p>Distance between rings (yards)</p></td>
-<td><p>Distance between each summons in a row (yards)</p></td>
-<td><p>Length of the cone (yards)</p></td>
-<td><p>Width of the cone (angle 1°-360°)</p></td>
-<td><p>Allows you to spawn creatures in a cone (As seen in later expansions). Useful for custom cone aoes</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_PLAYER_TALK</p></td>
-<td><p>220</p></td>
-<td><p>acore_string.id</p></td>
-<td><p>yell? (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Make the player say something</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_ACTION_VORTEX_SUMMON</p></td>
-<td><p>221</p></td>
-<td><p>entry</p></td>
-<td><p>Duration (ms)<br />
-0 = permanent</p></td>
-<td><p>Spiral scaling</p></td>
-<td><p>Spiral appearance</p></td>
-<td><p>range max</p></td>
-<td><p>phi_delta</p></td>
-<td><p>Allows you to summon creature in a customizable spiral(/vortex). Parameters can be confusing, exmaple parameters for testing: 5000 - summon duration, 5 - Spiral Scaling, 25 - spiral appearance, 60 - range max, 40 - phi delta</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_ACTION_CU_ENCOUNTER_START</p></td>
-<td><p>222</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Resets all cooldowns and removes exhausted debuffs when action is called</p></td>
-</tr>
-</tbody>
-</table>
+| Name                                            | Value | Param1                                                                                                                                                                                                                                                                                                                                                                                                                                 | Param2                                                                                               | Param3                                                                                                                     | Param4                                         | Param5                                | Param6                                | Comment                                                                                                                                                                                                                                                                                                                                     |
+|-------------------------------------------------|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SMART_ACTION_NONE                               | 0     |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Do nothing                                                                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_TALK                               | 1     | creature_text.GroupID                                                                                                                                                                                                                                                                                                                                                                                                                  | Duration to wait before SMART_EVENT_TEXT_OVER is triggered.                                          | 0 It will try to trigger talk of the target<br/>1 Set target as   talk target (used for $vars in texts and whisper target) |                                                |                                       |                                       | Param2 in Milliseconds.                                                                                                                                                                                                                                                                                                                     |
+| SMART_ACTION_SET_FACTION                        | 2     | FactionID (or 0 for default)                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Sets faction to creature.                                                                                                                                                                                                                                                                                                                   |
+| SMART_ACTION_MORPH_TO_ENTRY_OR_MODEL            | 3     | creature_template.entry(param1)                                                                                                                                                                                                                                                                                                                                                                                                        | creature_template.modelidx(param2)                                                                   |                                                                                                                            |                                                |                                       |                                       | Take DisplayID of creature (param1) OR Turn to DisplayID (param2) OR Both   = 0 for Demorph                                                                                                                                                                                                                                                 |
+| SMART_ACTION_SOUND                              | 4     | SoundId                                                                                                                                                                                                                                                                                                                                                                                                                                | onlySelf (0/1)                                                                                       |                                                                                                                            |                                                |                                       |                                       | Play Sound; onlySelf = 1 only sends sound to self, onlySelf = 0 sends   sound to everyone in visibility range                                                                                                                                                                                                                               |
+| SMART_ACTION_PLAY_EMOTE                         | 5     | EmoteId                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Play Emote                                                                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_FAIL_QUEST                         | 6     | QuestID                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Fail Quest of Target                                                                                                                                                                                                                                                                                                                        |
+| SMART_ACTION_OFFER_QUEST                        | 7     | quest_template.id                                                                                                                                                                                                                                                                                                                                                                                                                      | directAdd (0/1)                                                                                      |                                                                                                                            |                                                |                                       |                                       | Add Quest to Target                                                                                                                                                                                                                                                                                                                         |
+| SMART_ACTION_SET_REACT_STATE                    | 8     | ReactState                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | React State. Can be Passive (0), Defensive (1), Aggressive (2).                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ACTIVATE_GOBJECT                   | 9     |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Activate Object                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_RANDOM_EMOTE                       | 10    | EmoteId1                                                                                                                                                                                                                                                                                                                                                                                                                               | EmoteId2                                                                                             | EmoteId3                                                                                                                   | EmoteId4                                       | EmoteId5                              | EmoteId6                              | Play Random Emote                                                                                                                                                                                                                                                                                                                           |
+| SMART_ACTION_CAST                               | 11    | SpellId                                                                                                                                                                                                                                                                                                                                                                                                                                | castFlags                                                                                            | limitTargets (0 = all targets)                                                                                             |                                                |                                       |                                       | Cast Spell ID at Target(s)                                                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_SUMMON_CREATURE                    | 12    | creature_template.entry                                                                                                                                                                                                                                                                                                                                                                                                                | Summon type                                                                                          | duration in ms                                                                                                             | attackInvoker (0/1/2)                          | attackScriptOwner (0/1)               |                                       | Summon Unit; attackInvoker 1: attack target; attackInvoker 2: attack   actual invoker                                                                                                                                                                                                                                                       |
+| SMART_ACTION_THREAT_SINGLE_PCT                  | 13    | Threat% inc                                                                                                                                                                                                                                                                                                                                                                                                                            | Threat% dec                                                                                          |                                                                                                                            |                                                |                                       |                                       | Change Threat Percentage for Single Target                                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_THREAT_ALL_PCT                     | 14    | Threat% inc                                                                                                                                                                                                                                                                                                                                                                                                                            | Threat% dec                                                                                          |                                                                                                                            |                                                |                                       |                                       | Change Threat Percentage for All Enemies                                                                                                                                                                                                                                                                                                    |
+| SMART_ACTION_CALL_AREAEXPLOREDOREVENTHAPPENS    | 15    | quest_template.id                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_RESERVED_16                        | 16    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | For 4.3.4 + only                                                                                                                                                                                                                                                                                                                            |
+| SMART_ACTION_SET_EMOTE_STATE                    | 17    | EmoteId                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Play Emote Continuously                                                                                                                                                                                                                                                                                                                     |
+| SMART_ACTION_SET_UNIT_FLAG                      | 18    | (may be more than one field OR'd together)                                                                                                                                                                                                                                                                                                                                                                                             | type<br/>If false   set creature_template.unit_flags<br/>If true   set creature_template.unit_flags2 |                                                                                                                            |                                                |                                       |                                       | Can set Multi-able flags at once                                                                                                                                                                                                                                                                                                            |
+| SMART_ACTION_REMOVE_UNIT_FLAG                   | 19    | (may be more than one field OR'd together)                                                                                                                                                                                                                                                                                                                                                                                             | type<br/>If false   set creature_template.unit_flags<br/>If true   set creature_template.unit_flags2 |                                                                                                                            |                                                |                                       |                                       | Can Remove Multi-able flags at once                                                                                                                                                                                                                                                                                                         |
+| SMART_ACTION_AUTO_ATTACK                        | 20    | AllowAttackState (0 = Stop attack, anything else means continue   attacking)                                                                                                                                                                                                                                                                                                                                                           |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Stop or Continue Automatic Attack.                                                                                                                                                                                                                                                                                                          |
+| SMART_ACTION_ALLOW_COMBAT_MOVEMENT              | 21    | AllowCombatMovement (0 = Stop combat based movement, anything else   continue attacking)                                                                                                                                                                                                                                                                                                                                               |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Allow or Disable Combat Movement                                                                                                                                                                                                                                                                                                            |
+| SMART_ACTION_SET_EVENT_PHASE                    | 22    | event_phase_mask                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Set event phase 0-12 (the actual values, no bit mask!)                                                                                                                                                                                                                                                                                      |
+| SMART_ACTION_INC_EVENT_PHASE                    | 23    | Increment                                                                                                                                                                                                                                                                                                                                                                                                                              | Decrement                                                                                            |                                                                                                                            |                                                |                                       |                                       | Set param1 OR param2 (not both). Value 0 has no effect.                                                                                                                                                                                                                                                                                     |
+| SMART_ACTION_EVADE                              | 24    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Evade Incoming Attack                                                                                                                                                                                                                                                                                                                       |
+| SMART_ACTION_FLEE_FOR_ASSIST                    | 25    | 0/1 (If you want the fleeing NPC to say attempts to flee text on flee,   use 1 on param1. For no message use 0.)                                                                                                                                                                                                                                                                                                                       |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | If you want the fleeing NPC to say '%s attempts to run away in fear' on   flee, use 1 on param1. 0 for no message.                                                                                                                                                                                                                          |
+| SMART_ACTION_CALL_GROUPEVENTHAPPENS             | 26    | quest_template.id                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_COMBAT_STOP                        | 27    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVEAURASFROMSPELL               | 28    | Spellid (0 removes all auras)                                                                                                                                                                                                                                                                                                                                                                                                          | charges (0 removes aura)                                                                             |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_FOLLOW                             | 29    | Distance (0 = Default value)                                                                                                                                                                                                                                                                                                                                                                                                           | Angle (0 = Default value)                                                                            | End creature_template.entry                                                                                                | credit                                         | creditType (0 monsterkill, 1 event)   |                                       | Follow Target                                                                                                                                                                                                                                                                                                                               |
+| SMART_ACTION_RANDOM_PHASE                       | 30    | event_phase_mask 1                                                                                                                                                                                                                                                                                                                                                                                                                     | event_phase_mask 2                                                                                   | event_phase_mask 3                                                                                                         | event_phase_mask 4                             | event_phase_mask 5                    | event_phase_mask 6                    |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_RANDOM_PHASE_RANGE                 | 31    | event_phase_mask minimum                                                                                                                                                                                                                                                                                                                                                                                                               | event_phase_mask maximum                                                                             |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_RESET_GOBJECT                      | 32    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Reset Gameobject                                                                                                                                                                                                                                                                                                                            |
+| SMART_ACTION_CALL_KILLEDMONSTER                 | 33    | creature_template.entry                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | This is the ID from quest_template.RequiredNpcOrGo                                                                                                                                                                                                                                                                                          |
+| SMART_ACTION_SET_INST_DATA                      | 34    | Field                                                                                                                                                                                                                                                                                                                                                                                                                                  | Data                                                                                                 |                                                                                                                            |                                                |                                       |                                       | Set Instance Data                                                                                                                                                                                                                                                                                                                           |
+| SMART_ACTION_SET_INST_DATA64                    | 35    | Field                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Set Instance Data uint64                                                                                                                                                                                                                                                                                                                    |
+| SMART_ACTION_UPDATE_TEMPLATE                    | 36    | creature_template.entry                                                                                                                                                                                                                                                                                                                                                                                                                | Update Level                                                                                         |                                                                                                                            |                                                |                                       |                                       | Updates creature_template to given entry                                                                                                                                                                                                                                                                                                    |
+| SMART_ACTION_DIE                                | 37    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Kill Target                                                                                                                                                                                                                                                                                                                                 |
+| SMART_ACTION_SET_IN_COMBAT_WITH_ZONE            | 38    | Range in yards for all players to be forced into combat with the   creature. Only used in the open world. Leave as 0 if used in an instance.                                                                                                                                                                                                                                                                                           |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Sets the creature in combat with its zone, can be used in instances and   open world. Useful for creatures inside instances so all players will be set   in combat until the fight ends.                                                                                                                                                    |
+| SMART_ACTION_CALL_FOR_HELP                      | 39    | Radius in yards that other creatures must be to acknowledge the cry for   help.                                                                                                                                                                                                                                                                                                                                                        | 0/1 (say calls for help text)                                                                        |                                                                                                                            |                                                |                                       |                                       | If you want the NPC to say '%s calls for help!'. Use 1 on param1, 0 for   no message.                                                                                                                                                                                                                                                       |
+| SMART_ACTION_SET_SHEATH                         | 40    | Sheath (0-unarmed, 1-melee, 2-ranged)                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_FORCE_DESPAWN                      | 41    | Despawn timer "ms"                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Despawn Target after param1 in Milliseconds.                                                                                                                                                                                                                                                                                                |
+| SMART_ACTION_SET_INVINCIBILITY_HP_LEVEL         | 42    | flat hp value                                                                                                                                                                                                                                                                                                                                                                                                                          | percent hp value                                                                                     |                                                                                                                            |                                                |                                       |                                       | If you use both params, only percent will be used.                                                                                                                                                                                                                                                                                          |
+| SMART_ACTION_MOUNT_TO_ENTRY_OR_MODEL            | 43    | creature_template.entry                                                                                                                                                                                                                                                                                                                                                                                                                | creature_template.modelidx                                                                           |                                                                                                                            |                                                |                                       |                                       | Mount to Creature Entry (param1) OR Mount to Creature Display (param2) Or   both = 0 for Unmount                                                                                                                                                                                                                                            |
+| SMART_ACTION_SET_INGAME_PHASE_MASK              | 44    | creature.phaseMask                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_DATA                           | 45    | Field                                                                                                                                                                                                                                                                                                                                                                                                                                  | Data                                                                                                 |                                                                                                                            |                                                |                                       |                                       | Set Data For Target, can be used with SMART_EVENT_DATA_SET                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_MOVE_FORWARD                       | 46    | distance                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | move self forward for the specified distance (point movement)                                                                                                                                                                                                                                                                               |
+| SMART_ACTION_SET_VISIBILITY                     | 47    | 0/1                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Makes creature Visible = 1 or Invisible = 0                                                                                                                                                                                                                                                                                                 |
+| SMART_ACTION_SET_ACTIVE                         | 48    | 0/1                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | If a creature or GO is set active it will stay active even if no player   is near. Take care, though, as it needs additional ressources (CPU/RAM) to   keep them active (other objects/creatures nearby stay active).                                                                                                                       |
+| SMART_ACTION_ATTACK_START                       | 49    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Allows basic melee swings to creature.                                                                                                                                                                                                                                                                                                      |
+| SMART_ACTION_SUMMON_GO                          | 50    | gameobject_template.entry                                                                                                                                                                                                                                                                                                                                                                                                              | De-spawn time in seconds.                                                                            | targetSummon (0/1)                                                                                                         |                                                |                                       |                                       | Spawns Gameobject, use target_type to set spawn position; if an entity is   specified as target and also coordinates are set (target x,y,z) those   coordinates are handled as offset from the target's position; if targetSummon   is 1 then the target will summon the GO on the position of the actor                                    |
+| SMART_ACTION_KILL_UNIT                          | 51    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Kills Creature.                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ACTIVATE_TAXI                      | 52    | TaxiID                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Sends player to flight path. You have to be close to Flight Master, which   gives Taxi ID you need.                                                                                                                                                                                                                                         |
+| SMART_ACTION_WP_START                           | 53    | 0 = walk / 1 = run                                                                                                                                                                                                                                                                                                                                                                                                                     | waypoints.entry                                                                                      | canRepeat                                                                                                                  | quest_template.id                              | despawntime                           | reactState                            | Creature starts Waypoint Movement. Use waypoints table to   create movement.                                                                                                                                                                                                                                                                |
+| SMART_ACTION_WP_PAUSE                           | 54    | time (in ms)                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Creature pauses its Waypoint Movement for given time.                                                                                                                                                                                                                                                                                       |
+| SMART_ACTION_WP_STOP                            | 55    | despawnTime                                                                                                                                                                                                                                                                                                                                                                                                                            | quest_template.id                                                                                    | fail (0/1)                                                                                                                 |                                                |                                       |                                       | Creature stops its Waypoint Movement.                                                                                                                                                                                                                                                                                                       |
+| SMART_ACTION_ADD_ITEM                           | 56    | item_template.entry                                                                                                                                                                                                                                                                                                                                                                                                                    | count                                                                                                |                                                                                                                            |                                                |                                       |                                       | Adds item(s) to player.                                                                                                                                                                                                                                                                                                                     |
+| SMART_ACTION_REMOVE_ITEM                        | 57    | item_template.entry                                                                                                                                                                                                                                                                                                                                                                                                                    | count                                                                                                |                                                                                                                            |                                                |                                       |                                       | Removes item(s) from player.                                                                                                                                                                                                                                                                                                                |
+| SMART_ACTION_INSTALL_AI_TEMPLATE                | 58    | TemplateID (see Predefined SAI templates below)                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_RUN                            | 59    | 0 = Off / 1 = On                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_FLY                            | 60    | fly (0/1)                                                                                                                                                                                                                                                                                                                                                                                                                              | speed                                                                                                | disable gravity (0/1)                                                                                                      |                                                |                                       |                                       | Only works for creatures with inhabit air.                                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_SET_SWIM                           | 61    | 0 = Off / 1 = On                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_TELEPORT                           | 62    | MapID                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Continue this action with the TARGET_TYPE column. Use any target_type   (except 0), and use target_x, target_y, target_z, target_o as the coordinates                                                                                                                                                                                       |
+| SMART_ACTION_SET_COUNTER                        | 63    | counterID                                                                                                                                                                                                                                                                                                                                                                                                                              | value                                                                                                | reset (0/1)                                                                                                                |                                                |                                       |                                       | If reset is 0 the counter with the specified ID is increased by the given   value; if reset is 1 the counter is set to the value.                                                                                                                                                                                                           |
+| SMART_ACTION_STORE_TARGET_LIST                  | 64    | varID                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_WP_RESUME                          | 65    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Creature continues in its Waypoint Movement.                                                                                                                                                                                                                                                                                                |
+| SMART_ACTION_SET_ORIENTATION                    | 66    | Depends on the script target. If SMART_TARGET_SELF, facing will be the   same as in HomePosition, For SMART_TARGET_POSITION you need to set target_o :   0 = North, West = 1.5, South = 3, East = 4.5                                                                                                                                                                                                                                  | Random orientation? (0/1)                                                                            |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_CREATE_TIMED_EVENT                 | 67    | id                                                                                                                                                                                                                                                                                                                                                                                                                                     | InitialMin                                                                                           | InitialMax                                                                                                                 | RepeatMin(only if it repeats)                  | RepeatMax(only if it repeats)         | chance                                |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_PLAYMOVIE                          | 68    | entry                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_MOVE_TO_POS                        | 69    | PointId                                                                                                                                                                                                                                                                                                                                                                                                                                | isTransport (0 or 1)                                                                                 | controlled (0 or 1)                                                                                                        | ContactDistance                                |                                       |                                       | PointId is called by SMART_EVENT_MOVEMENTINFORM. Continue this action   with the TARGET_TYPE column. Use any target_type, and use target_x, target_y,   target_z as the coordinates; if an entity is specified as target and also   coordinates are set (target x,y,z) those coordinates are handled as offset   from the target's position |
+| SMART_ACTION_RESPAWN_TARGET                     | 70    | Respawntime in seconds                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_EQUIP                              | 71    | creature_equip_template.ID                                                                                                                                                                                                                                                                                                                                                                                                             | Slotmask                                                                                             | Slot1 (item_template.entry)                                                                                                | Slot2 (item_template.entry)                    | Slot3 (item_template.entry)           |                                       | only slots with mask set will be sent to client, bits are 1, 2, 4,   leaving mask 0 is defaulted to mask 7 (send all), Slots1-3 are only used if   no Param1 is set                                                                                                                                                                         |
+| SMART_ACTION_CLOSE_GOSSIP                       | 72    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Closes gossip window.                                                                                                                                                                                                                                                                                                                       |
+| SMART_ACTION_TRIGGER_TIMED_EVENT                | 73    | id(>1)                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_TIMED_EVENT                 | 74    | id(>1)                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ADD_AURA                           | 75    | SpellId                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Adds aura to player(s). Use target_type 17 to make AoE aura.                                                                                                                                                                                                                                                                                |
+| SMART_ACTION_OVERRIDE_SCRIPT_BASE_OBJECT        | 76    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | WARNING: CAN CRASH CORE, do not use if you dont know what you are doing                                                                                                                                                                                                                                                                     |
+| SMART_ACTION_RESET_SCRIPT_BASE_OBJECT           | 77    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_CALL_SCRIPT_RESET                  | 78    |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_RANGED_MOVEMENT                | 79    | attackDistance                                                                                                                                                                                                                                                                                                                                                                                                                         | attackAngle                                                                                          |                                                                                                                            |                                                |                                       |                                       | Sets movement to follow at a specific range to the target.                                                                                                                                                                                                                                                                                  |
+| SMART_ACTION_CALL_TIMED_ACTIONLIST              | 80    | EntryOrGuid * 100 (entryorguid with 00 added after the entry, or 01,   02, 03 etc. for multiple action lists)                                                                                                                                                                                                                                                                                                                          | timer update type(0 OOC, 1 IC, 2 ALWAYS)                                                             |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_NPC_FLAG                       | 81    | creature_template.npcflag                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ADD_NPC_FLAG                       | 82    | creature_template.npcflag                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_NPC_FLAG                    | 83    | creature_template.npcflag                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SIMPLE_TALK                        | 84    | creature_text.GroupID                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Makes a player say text. SMART_EVENT_TEXT_OVER is not triggered and   whispers can not be used.                                                                                                                                                                                                                                             |
+| SMART_ACTION_INVOKER_CAST                       | 85    | SpellID                                                                                                                                                                                                                                                                                                                                                                                                                                | castFlags                                                                                            | triggeredFlags                                                                                                             |                                                |                                       |                                       | if avaliable, last used invoker will cast spellId with castFlags on   targets (warning: TC 3.3.5 uses another action here: SMART_ACTION_SELF_CAST)                                                                                                                                                                                          |
+| SMART_ACTION_CROSS_CAST                         | 86    | SpellID                                                                                                                                                                                                                                                                                                                                                                                                                                | castFlags                                                                                            | CasterTargetType (caster is selected here, use it as target_type)                                                          | CasterTarget (target_param1)                   | CasterTarget (target_param2)          | CasterTarget (target_param3)          | This action is used to make selected caster (in CasterTargetType) to cast   spell. Actual target is entered in target_type as normally.                                                                                                                                                                                                     |
+| SMART_ACTION_CALL_RANDOM_TIMED_ACTIONLIST       | 87    | EntryOrGuid 1 (entryorguid * 100 + n)                                                                                                                                                                                                                                                                                                                                                                                                  | EntryOrGuid 2 (entryorguid * 100 + n)                                                                | EntryOrGuid 3 (entryorguid * 100 + n)                                                                                      | EntryOrGuid 4 (entryorguid * 100 + n)          | EntryOrGuid 5 (entryorguid * 100 + n) | EntryOrGuid 6 (entryorguid * 100 + n) | Will select one entry from the ones provided. 0 is ignored.                                                                                                                                                                                                                                                                                 |
+| SMART_ACTION_CALL_RANDOM_RANGE_TIMED_ACTIONLIST | 88    | EntryOrGuid 1 (entryorguid * 100 + n)                                                                                                                                                                                                                                                                                                                                                                                                  | EntryOrGuid 2 (entryorguid * 100 + n)                                                                |                                                                                                                            |                                                |                                       |                                       | 0 is ignored.                                                                                                                                                                                                                                                                                                                               |
+| SMART_ACTION_RANDOM_MOVE                        | 89    | Radius                                                                                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Creature moves to random position in given radius.                                                                                                                                                                                                                                                                                          |
+| SMART_ACTION_SET_UNIT_FIELD_BYTES_1             | 90    | Value                                                                                                                                                                                                                                                                                                                                                                                                                                  | Type                                                                                                 |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_UNIT_FIELD_BYTES_1          | 91    | Value                                                                                                                                                                                                                                                                                                                                                                                                                                  | Type                                                                                                 |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_INTERRUPT_SPELL                    | 92    | With delay (0/1)                                                                                                                                                                                                                                                                                                                                                                                                                       | SpellId                                                                                              | Instant (0/1)                                                                                                              |                                                |                                       |                                       | This action allows you to interrupt the current spell being cast. If you   do not set the spellId, the core will find the current spell depending on the   withDelay and the withInstant values.                                                                                                                                            |
+| SMART_ACTION_SEND_GO_CUSTOM_ANIM                | 93    | animprogress (0-255)                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_DYNAMIC_FLAG                   | 94    | creature_template.dynamicflags                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ADD_DYNAMIC_FLAG                   | 95    | creature_template.dynamicflags                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_DYNAMIC_FLAG                | 96    | creature_template.dynamicflags                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_JUMP_TO_POS                        | 97    | Speed XY                                                                                                                                                                                                                                                                                                                                                                                                                               | Speed Z                                                                                              | selfJump (0/1)                                                                                                             |                                                |                                       |                                       | If selfJump is 1 the actor will jump to the target (you can add an offset   from the target's position by also specifying target coordinates); if   selfJump is 0 the targeted creature will jump to the target position                                                                                                                    |
+| SMART_ACTION_SEND_GOSSIP_MENU                   | 98    | gossip_menu.entry                                                                                                                                                                                                                                                                                                                                                                                                                      | gossip_menu.text_id<br/>(same value as npc_text.ID)                                                  |                                                                                                                            |                                                |                                       |                                       | Can be used together with 'SMART_EVENT_GOSSIP_HELLO' to set custom   gossip.                                                                                                                                                                                                                                                                |
+| SMART_ACTION_GO_SET_LOOT_STATE                  | 99    | LootState (0 - Not ready, 1 - Ready, 2 - Activated, 3 - Just deactivated)                                                                                                                                                                                                                                                                                                                                                              |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SEND_TARGET_TO_TARGET              | 100   | Id                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Send targets previously stored with SMART_ACTION_STORE_TARGET, to another   npc/go, the other npc/go can then access them as if it was its own stored   list                                                                                                                                                                                |
+| SMART_ACTION_SET_HOME_POS                       | 101   | 0: if the target is a creature, set it's current position as it's new   home position; if the target is SMART_TARGET_POSITION, use this position as   new home position for the actor<br/>1: if the target is a creature,   reset it's home position to the one from the DB; if the target is   SMART_TARGET_POSITION, reset the actor's home position to the one from the DB   (the actual values of the target position are ignored) |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_HEALTH_REGEN                   | 102   | 0/1                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Sets the current creatures health regen on or off.                                                                                                                                                                                                                                                                                          |
+| SMART_ACTION_SET_ROOT                           | 103   | 0/1                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Enables or disables creature movement                                                                                                                                                                                                                                                                                                       |
+| SMART_ACTION_SET_GO_FLAG                        | 104   | gameobject_template_addon.flags                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | oldFlag = newFlag                                                                                                                                                                                                                                                                                                                           |
+| SMART_ACTION_ADD_GO_FLAG                        | 105   | gameobject_template_addon.flags                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | oldFlag \|= newFlag                                                                                                                                                                                                                                                                                                                         |
+| SMART_ACTION_REMOVE_GO_FLAG                     | 106   | gameobject_template_addon.flags                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | oldFlag &= ~newFlag                                                                                                                                                                                                                                                                                                                         |
+| SMART_ACTION_SUMMON_CREATURE_GROUP              | 107   | creature_summon_groups.groupId                                                                                                                                                                                                                                                                                                                                                                                                         | attackInvoker (0/1)                                                                                  | attackScriptOwner (0/1)                                                                                                    |                                                |                                       |                                       | Use creature_summon_groups table. SAI target has no effect, use 0                                                                                                                                                                                                                                                                           |
+| SMART_ACTION_SET_POWER                          | 108   | Power type                                                                                                                                                                                                                                                                                                                                                                                                                             | New power                                                                                            |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ADD_POWER                          | 109   | Power type                                                                                                                                                                                                                                                                                                                                                                                                                             | Power to add                                                                                         |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_POWER                       | 110   | Power type                                                                                                                                                                                                                                                                                                                                                                                                                             | Power to remove                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_GAME_EVENT_STOP                    | 111   | game_event.eventEntry                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_GAME_EVENT_START                   | 112   | game_event.eventEntry                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_START_CLOSEST_WAYPOINT             | 113   | wp1                                                                                                                                                                                                                                                                                                                                                                                                                                    | wp2                                                                                                  | wp3                                                                                                                        | wp4                                            | wp5                                   | wp6                                   | Make target follow closest waypoint to its location                                                                                                                                                                                                                                                                                         |
+| SMART_ACTION_RISE_UP                            | 114   | distance                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | move up for the specified distance (warning: TC 3.3.5 uses another action   here: SMART_ACTION_MOVE_OFFSET)                                                                                                                                                                                                                                 |
+| SMART_ACTION_RANDOM_SOUND                       | 115   | soundId1                                                                                                                                                                                                                                                                                                                                                                                                                               | soundId2                                                                                             | soundId3                                                                                                                   | soundId4                                       | onlySelf (0/1)                        |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_SIGHT_DIST                     | 121   | SightDistance                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_FLEE                               | 122   | FleeTime                                                                                                                                                                                                                                                                                                                                                                                                                               |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ADD_THREAT                         | 123   | +threat                                                                                                                                                                                                                                                                                                                                                                                                                                | -threat                                                                                              |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_LOAD_EQUIPMENT                     | 124   | Id                                                                                                                                                                                                                                                                                                                                                                                                                                     | force                                                                                                |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_TRIGGER_RANDOM_TIMED_EVENT         | 125   | id min range                                                                                                                                                                                                                                                                                                                                                                                                                           | id max range                                                                                         |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_ALL_GAMEOBJECTS             | 126   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_MOVE_TO_POS_TARGET                 | 201   | pointId                                                                                                                                                                                                                                                                                                                                                                                                                                |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_GO_STATE                       | 202   | state                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_EXIT_VEHICLE                       | 203   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_UNIT_MOVEMENT_FLAGS            | 204   | flags                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_COMBAT_DISTANCE                | 205   | combatDistance                                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_CASTER_COMBAT_DIST             | 206   | followDistance                                                                                                                                                                                                                                                                                                                                                                                                                         | resetToMax                                                                                           |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_HOVER                          | 207   | 0/1                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ADD_IMMUNITY                       | 208   | type                                                                                                                                                                                                                                                                                                                                                                                                                                   | id                                                                                                   | value                                                                                                                      |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_REMOVE_IMMUNITY                    | 209   | type                                                                                                                                                                                                                                                                                                                                                                                                                                   | id                                                                                                   | value                                                                                                                      |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_FALL                               | 210   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_SET_EVENT_FLAG_RESET               | 211   | 0/1                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_STOP_MOTION                        | 212   | stopMoving                                                                                                                                                                                                                                                                                                                                                                                                                             | movementExpired                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_NO_ENVIRONMENT_UPDATE              | 213   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_ZONE_UNDER_ATTACK                  | 214   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_LOAD_GRID                          | 215   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_MUSIC                              | 216   | SoundId                                                                                                                                                                                                                                                                                                                                                                                                                                | onlySelf                                                                                             | type                                                                                                                       |                                                |                                       |                                       | Plays the specified sound file as music. Type can be one of these   values:<br/>0: Play music for the specified target(s)<br/>1: Play   music for all players in the entire zone<br/>2: Play music for all   players in the area.                                                                                                           |
+| SMART_ACTION_RANDOM_MUSIC                       | 217   | SoundId1                                                                                                                                                                                                                                                                                                                                                                                                                               | SoundId2                                                                                             | SoundId3                                                                                                                   | SoundId4                                       | onlySelf                              | type                                  | Plays randomly one of the specified sound files as music. Type can be one   of these values:<br/>0: Play music for the specified   target(s)<br/>1: Play music for all players in the entire   zone<br/>2: Play music for all players in the area.                                                                                          |
+| SMART_ACTION_CUSTOM_CAST                        | 218   | spellId                                                                                                                                                                                                                                                                                                                                                                                                                                | castFlag                                                                                             | bp0                                                                                                                        | bp1                                            | bp2                                   |                                       |                                                                                                                                                                                                                                                                                                                                             |
+| SMART_ACTION_CONE_SUMMON                        | 219   | entry                                                                                                                                                                                                                                                                                                                                                                                                                                  | Duration (ms)<br/>0 = permanent                                                                      | Distance between rings (yards)                                                                                             | Distance between each summons in a row (yards) | Length of the cone (yards)            | Width of the cone (angle 1°-360°)     | Allows you to spawn creatures in a cone (As seen in later expansions).   Useful for custom cone aoes                                                                                                                                                                                                                                        |
+| SMART_ACTION_PLAYER_TALK                        | 220   | acore_string.id                                                                                                                                                                                                                                                                                                                                                                                                                        | yell? (0/1)                                                                                          |                                                                                                                            |                                                |                                       |                                       | Make the player say something                                                                                                                                                                                                                                                                                                               |
+| SMART_ACTION_VORTEX_SUMMON                      | 221   | entry                                                                                                                                                                                                                                                                                                                                                                                                                                  | Duration (ms)<br/>0 = permanent                                                                      | Spiral scaling                                                                                                             | Spiral appearance                              | range max                             | phi_delta                             | Allows you to summon creature in a customizable spiral(/vortex).   Parameters can be confusing, exmaple parameters for testing: 5000 - summon   duration, 5 - Spiral Scaling, 25 - spiral appearance, 60 - range max, 40 -   phi delta                                                                                                      |
+| SMART_ACTION_CU_ENCOUNTER_START                 | 222   |                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                      |                                                                                                                            |                                                |                                       |                                       | Resets all cooldowns and removes exhausted debuffs when action is called                                                                                                                                                                                                                                                                    |
 
 ### Predefined SAI templates
 
-<table>
-<thead>
-<tr class="header">
-<th><p>Description Name</p></th>
-<th><p>Value (Param1)</p></th>
-<th><p>Param2</p></th>
-<th><p>Param3</p></th>
-<th><p>Param4</p></th>
-<th><p>Param5</p></th>
-<th><p>Param6</p></th>
-<th><p>Comment</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>SMARTAI_TEMPLATE_BASIC</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMARTAI_TEMPLATE_CASTER</p></td>
-<td><p>1</p></td>
-<td><p>spellid</p></td>
-<td><p>repeatMin</p></td>
-<td><p>repeatMax</p></td>
-<td><p>range</p></td>
-<td><p>manaPCT</p></td>
-<td><p>+JOIN: target_param1 as castFlag</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMARTAI_TEMPLATE_TURRET</p></td>
-<td><p>2</p></td>
-<td><p>spellid</p></td>
-<td><p>repeatMin</p></td>
-<td><p>repeatMax</p></td>
-<td><p>range</p></td>
-<td><p>manaPCT</p></td>
-<td><p>+JOIN: target_param1 as castflag</p></td>
-</tr>
-<tr class="even">
-<td><p>SMARTAI_TEMPLATE_PASSIVE</p></td>
-<td><p>3</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMARTAI_TEMPLATE_CAGED_GO_PART</p></td>
-<td><p>4</p></td>
-<td><p>creatureID</p></td>
-<td><p>give credit at point end (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-</tr>
-<tr class="even">
-<td><p>SMARTAI_TEMPLATE_CAGED_NPC_PART</p></td>
-<td><p>5</p></td>
-<td><p>gameObjectID</p></td>
-<td><p>despawntime</p></td>
-<td><p>run (0/1)</p></td>
-<td><p>dist</p></td>
-<td><p>TextGroupID</p></td>
-<td><p><br />
-</p></td>
-</tr>
-</tbody>
-</table>
+| Description Name                | Value (Param1) | Param2       | Param3                         | Param4    | Param5 | Param6      | Comment                          |
+|---------------------------------|----------------|--------------|--------------------------------|-----------|--------|-------------|----------------------------------|
+| SMARTAI_TEMPLATE_BASIC          | 0              |              |                                |           |        |             |                                  |
+| SMARTAI_TEMPLATE_CASTER         | 1              | spellid      | repeatMin                      | repeatMax | range  | manaPCT     | +JOIN: target_param1 as castFlag |
+| SMARTAI_TEMPLATE_TURRET         | 2              | spellid      | repeatMin                      | repeatMax | range  | manaPCT     | +JOIN: target_param1 as castflag |
+| SMARTAI_TEMPLATE_PASSIVE        | 3              |              |                                |           |        |             |                                  |
+| SMARTAI_TEMPLATE_CAGED_GO_PART  | 4              | creatureID   | give credit at point end (0/1) |           |        |             |                                  |
+| SMARTAI_TEMPLATE_CAGED_NPC_PART | 5              | gameObjectID | despawntime                    | run (0/1) | dist   | TextGroupID |                                  |
 
 ### target_type
 
-<table height="400">
-<thead>
-<tr class="header">
-<th><p>Name</p></th>
-<th><p>Value</p></th>
-<th><p>target_param1</p></th>
-<th><p>target_param2</p></th>
-<th><p>target_param3</p></th>
-<th><p>target_param4</p></th>
-<th><p>target_x</p></th>
-<th><p>target_y</p></th>
-<th><p>target_z</p></th>
-<th><p>target_o</p></th>
-<th><p>Comment</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>SMART_TARGET_NONE</p></td>
-<td><p>0</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>None.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_SELF</p></td>
-<td><p>1</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Self cast.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_VICTIM</p></td>
-<td><p>2</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Our current target. (ie: highest aggro)</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_HOSTILE_SECOND_AGGRO</p></td>
-<td><p>3</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Second highest aggro.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_HOSTILE_LAST_AGGRO</p></td>
-<td><p>4</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Dead last on aggro.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_HOSTILE_RANDOM</p></td>
-<td><p>5</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Just any random target on our threat list.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_HOSTILE_RANDOM_NOT_TOP</p></td>
-<td><p>6</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Any random target except top threat.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_ACTION_INVOKER</p></td>
-<td><p>7</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Unit who caused this Event to occur.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_POSITION</p></td>
-<td><p>8</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>x</p></td>
-<td><p>y</p></td>
-<td><p>z</p></td>
-<td><p>o</p></td>
-<td><p>Use xyz from event params.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_CREATURE_RANGE</p></td>
-<td><p>9</p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a> (0 any)</p></td>
-<td><p>minDist</p></td>
-<td><p>maxDist</p></td>
-<td><p>alive state (1 alive, 2 dead, 0 both)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>All creatures with the specified ID within the specified range and the specified alive state.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_CREATURE_GUID</p></td>
-<td><p>10</p></td>
-<td><p><a href="creature#guid">creature.guid</a></p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a></p></td>
-<td><p>getFromHashMap (0/1, this does not work in instances!)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Creature with specified GUID and/or specified creature template ID.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_CREATURE_DISTANCE</p></td>
-<td><p>11</p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a> (0 any)</p></td>
-<td><p>maxDist</p></td>
-<td><p>alive state (1 alive, 2 dead, 0 both)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>All creatures with the specified ID within the specified distance and the specified alive state.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_STORED</p></td>
-<td><p>12</p></td>
-<td><p>id</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Uses pre-stored target(list)</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_GAMEOBJECT_RANGE</p></td>
-<td><p>13</p></td>
-<td><p><a href="gameobject_template#entry">gameobject_template.entry</a> (0 any)</p></td>
-<td><p>minDist</p></td>
-<td><p>maxDist</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>All game objects with the specified ID within the specified range.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_GAMEOBJECT_GUID</p></td>
-<td><p>14</p></td>
-<td><p><a href="gameobject#guid">gameobject.guid</a></p></td>
-<td><p><a href="gameobject_template#entry">gameobject_template.entry</a></p></td>
-<td><p>getFromHashMap (0/1, this does not work in instances!)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Object with specified GUID and/or specified game object template ID.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_GAMEOBJECT_DISTANCE</p></td>
-<td><p>15</p></td>
-<td><p><a href="gameobject_template#entry">gameobject_template.entry</a> (0 any)</p></td>
-<td><p>maxDist</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>All objects with the specified ID within the specified distance.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_INVOKER_PARTY</p></td>
-<td><p>16</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Invoker's party members</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_PLAYER_RANGE</p></td>
-<td><p>17</p></td>
-<td><p>minDist</p></td>
-<td><p>maxDist</p></td>
-<td><p>maxCount</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>When target.o is set and it didnt find any targets in min-max range, it will try all possible targets in max range instead.</p></td>
-<td><p>All players up to maxCount within the specified range. Excluding GMs and Dead.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_PLAYER_DISTANCE</p></td>
-<td><p>18</p></td>
-<td><p>maxDist</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>All players within the specified distance.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_CLOSEST_CREATURE</p></td>
-<td><p>19</p></td>
-<td><p><a href="creature_template#entry">creature_template.entry</a> (0 any)</p></td>
-<td><p>maxDist (Can be from 0-100 yards)</p></td>
-<td><p>dead? (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Closest creature with the specified ID within the specified range.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_CLOSEST_GAMEOBJECT</p></td>
-<td><p>20</p></td>
-<td><p><a href="gameobject_template#entry">gameobject_template.entry</a> (0 any)</p></td>
-<td><p>maxDist (Can be from 0-100 yards)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Closest object with specified ID within specified range.</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_CLOSEST_PLAYER</p></td>
-<td><p>21</p></td>
-<td><p>maxDist</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Closest player within specified range.</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_ACTION_INVOKER_VEHICLE</p></td>
-<td><p>22</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Unit's vehicle who caused this Event to occur</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_OWNER_OR_SUMMONER</p></td>
-<td><p>23</p></td>
-<td><p>use owner of owner (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Unit's owner or summoner</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_THREAT_LIST</p></td>
-<td><p>24</p></td>
-<td><p>maxDist (0 any)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>All units on creature's threat list within the specified distance if maxDist > 0</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_CLOSEST_ENEMY</p></td>
-<td><p>25</p></td>
-<td><p>maxDist</p></td>
-<td><p>playerOnly (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Any attackable target (creature or player) within maxDist</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_CLOSEST_FRIENDLY</p></td>
-<td><p>26</p></td>
-<td><p>maxDist</p></td>
-<td><p>playerOnly (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Any friendly unit (creature, player or pet) within maxDist</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_FARTHEST</p></td>
-<td><p>28</p></td>
-<td><p>maxDist</p></td>
-<td><p>playerOnly (0/1)</p></td>
-<td><p>isInLos (0/1)</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Farthest unit on the threat list</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_PLAYER_WITH_AURA</p></td>
-<td><p>201</p></td>
-<td><p>spellID</p></td>
-<td><p>Negative (0/1)</p></td>
-<td><p>MaxDist</p></td>
-<td><p>MinDist</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><p>Number to resize the target list</p></td>
-<td><p><p>Target players with or without aura</p></td>
-</tr>
-<tr class="even">
-<td><p>SMART_TARGET_RANDOM_POINT</p></td>
-<td>201</p></td>
-<td><p>range (yards)</p></td>
-<td><p>amount (for summoning creature)</p></td>
-<td><p>self as middle (0/1)<br />
-else use xyz</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>This only works with  SMART_ACTION_SUMMON_CREATURE, SMART_ACTION_MOVE_TO_POS and SMART_ACTION_JUMP_TO_POS</p></td>
-</tr>
-<tr class="odd">
-<td><p>SMART_TARGET_ROLE_SELECTION</p></td>
-<td>201</p></td>
-<td><p>rangeMax (yards)</p></td>
-<td><p>TargetMask (Tanks (1), Healer (2) Damage (4))</p></td>
-<td><p>Resize list</p></td>
-<td><p></p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p><br />
-</p></td>
-<td><p>Target a Tank/Healer/DPS role. Based on the players spec.</p></td>
-</tr>
-</tbody>
-</table>
+| Name                                | Value | target_param1                     | target_param2                                 | target_param3                                          | target_param4                         | target_x | target_y | target_z | target_o                                                                                                                      | Comment                                                                                                    |
+|-------------------------------------|-------|-----------------------------------|-----------------------------------------------|--------------------------------------------------------|---------------------------------------|----------|----------|----------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| SMART_TARGET_NONE                   | 0     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | None.                                                                                                      |
+| SMART_TARGET_SELF                   | 1     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Self cast.                                                                                                 |
+| SMART_TARGET_VICTIM                 | 2     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Our current target. (ie: highest aggro)                                                                    |
+| SMART_TARGET_HOSTILE_SECOND_AGGRO   | 3     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Second highest aggro.                                                                                      |
+| SMART_TARGET_HOSTILE_LAST_AGGRO     | 4     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Dead last on aggro.                                                                                        |
+| SMART_TARGET_HOSTILE_RANDOM         | 5     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Just any random target on our threat list.                                                                 |
+| SMART_TARGET_HOSTILE_RANDOM_NOT_TOP | 6     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Any random target except top threat.                                                                       |
+| SMART_TARGET_ACTION_INVOKER         | 7     |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Unit who caused this Event to occur.                                                                       |
+| SMART_TARGET_POSITION               | 8     |                                   |                                               |                                                        |                                       | x        | y        | z        | o                                                                                                                             | Use xyz from event params.                                                                                 |
+| SMART_TARGET_CREATURE_RANGE         | 9     | creature_template.entry (0 any)   | minDist                                       | maxDist                                                | alive state (1 alive, 2 dead, 0 both) |          |          |          |                                                                                                                               | All creatures with the specified ID within the specified range and the   specified alive state.            |
+| SMART_TARGET_CREATURE_GUID          | 10    | creature.guid                     | creature_template.entry                       | getFromHashMap (0/1, this does not work in instances!) |                                       |          |          |          |                                                                                                                               | Creature with specified GUID and/or specified creature template ID.                                        |
+| SMART_TARGET_CREATURE_DISTANCE      | 11    | creature_template.entry (0 any)   | maxDist                                       | alive state (1 alive, 2 dead, 0 both)                  |                                       |          |          |          |                                                                                                                               | All creatures with the specified ID within the specified distance and the   specified alive state.         |
+| SMART_TARGET_STORED                 | 12    | id                                |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Uses pre-stored target(list)                                                                               |
+| SMART_TARGET_GAMEOBJECT_RANGE       | 13    | gameobject_template.entry (0 any) | minDist                                       | maxDist                                                |                                       |          |          |          |                                                                                                                               | All game objects with the specified ID within the specified range.                                         |
+| SMART_TARGET_GAMEOBJECT_GUID        | 14    | gameobject.guid                   | gameobject_template.entry                     | getFromHashMap (0/1, this does not work in instances!) |                                       |          |          |          |                                                                                                                               | Object with specified GUID and/or specified game object template ID.                                       |
+| SMART_TARGET_GAMEOBJECT_DISTANCE    | 15    | gameobject_template.entry (0 any) | maxDist                                       |                                                        |                                       |          |          |          |                                                                                                                               | All objects with the specified ID within the specified distance.                                           |
+| SMART_TARGET_INVOKER_PARTY          | 16    |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Invoker's party members                                                                                    |
+| SMART_TARGET_PLAYER_RANGE           | 17    | minDist                           | maxDist                                       | maxCount                                               |                                       |          |          |          | When target.o is set and it didnt find any targets in min-max range, it   will try all possible targets in max range instead. | All players up to maxCount within the specified range. Excluding GMs and   Dead.                           |
+| SMART_TARGET_PLAYER_DISTANCE        | 18    | maxDist                           |                                               |                                                        |                                       |          |          |          |                                                                                                                               | All players within the specified distance.                                                                 |
+| SMART_TARGET_CLOSEST_CREATURE       | 19    | creature_template.entry (0 any)   | maxDist (Can be from 0-100 yards)             | dead? (0/1)                                            |                                       |          |          |          |                                                                                                                               | Closest creature with the specified ID within the specified range.                                         |
+| SMART_TARGET_CLOSEST_GAMEOBJECT     | 20    | gameobject_template.entry (0 any) | maxDist (Can be from 0-100 yards)             |                                                        |                                       |          |          |          |                                                                                                                               | Closest object with specified ID within specified range.                                                   |
+| SMART_TARGET_CLOSEST_PLAYER         | 21    | maxDist                           |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Closest player within specified range.                                                                     |
+| SMART_TARGET_ACTION_INVOKER_VEHICLE | 22    |                                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Unit's vehicle who caused this Event to occur                                                              |
+| SMART_TARGET_OWNER_OR_SUMMONER      | 23    | use owner of owner (0/1)          |                                               |                                                        |                                       |          |          |          |                                                                                                                               | Unit's owner or summoner                                                                                   |
+| SMART_TARGET_THREAT_LIST            | 24    | maxDist (0 any)                   |                                               |                                                        |                                       |          |          |          |                                                                                                                               | All units on creature's threat list within the specified distance if   maxDist > 0                         |
+| SMART_TARGET_CLOSEST_ENEMY          | 25    | maxDist                           | playerOnly (0/1)                              |                                                        |                                       |          |          |          |                                                                                                                               | Any attackable target (creature or player) within maxDist                                                  |
+| SMART_TARGET_CLOSEST_FRIENDLY       | 26    | maxDist                           | playerOnly (0/1)                              |                                                        |                                       |          |          |          |                                                                                                                               | Any friendly unit (creature, player or pet) within maxDist                                                 |
+| SMART_TARGET_FARTHEST               | 28    | maxDist                           | playerOnly (0/1)                              | isInLos (0/1)                                          |                                       |          |          |          |                                                                                                                               | Farthest unit on the threat list                                                                           |
+| SMART_TARGET_PLAYER_WITH_AURA       | 201   | spellID                           | Negative (0/1)                                | MaxDist                                                | MinDist                               |          |          |          | Number to resize the target list                                                                                              | Target players with or without aura                                                                        |
+| SMART_TARGET_RANDOM_POINT           | 201   | range (yards)                     | amount (for summoning creature)               | self as middle (0/1)<br/>else use xyz                  |                                       |          |          |          |                                                                                                                               | This only works with SMART_ACTION_SUMMON_CREATURE,   SMART_ACTION_MOVE_TO_POS and SMART_ACTION_JUMP_TO_POS |
+| SMART_TARGET_ROLE_SELECTION         | 201   | rangeMax (yards)                  | TargetMask (Tanks (1), Healer (2) Damage (4)) | Resize list                                            |                                       |          |          |          |                                                                                                                               | Target a Tank/Healer/DPS role. Based on the players spec.                                                  |
 
 ### comment
 
@@ -4144,7 +429,7 @@ Commenting on SAI uses a template which is the following: (with an example)
 
 **Quick notes:**
 
--   Always update *creature\_template*,*gameobject\_template* or *areatrigger\_scripts* with:
+- Always update *creature\_template*,*gameobject\_template* or *areatrigger\_scripts* with:
 
 ```sql
 UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = y;
@@ -4154,7 +439,7 @@ UPDATE `gameobject_template` SET `AIName` = 'SmartGameObjectAI' WHERE `entry` = 
 INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigger');
 ```
 
--   If the creature or GO is inside a dungeon, set *event\_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
+- If the creature or GO is inside a dungeon, set *event\_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
 
 **In case of doubt about an *Event*, *Action\_or \_Target,\_check source code (\_src/server/game/AI/SmartScripts* files; mainly \*SmartScript.cpp**)
 
@@ -4190,91 +475,46 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 
 ### Invoker:
 
-<table>
-<thead>
-<tr class="header">
-<th><p>// white list of events that actually have an invoker passed to them</p></th>
-</tr>
-</thead>
-</table>
+> white list of events that actually have an invoker passed to them
 
-Actions like SMART\_ACTION\_INVOKER\_CAST and targets like SMART\_TARGET\_ACTION\_INVOKER will work only if the event is in this list:
+> Actions like SMART\_ACTION\_INVOKER\_CAST and targets like SMART\_TARGET\_ACTION\_INVOKER will work only if the event is in this list:
 
-SMART\_EVENT\_AGGRO
-
-SMART\_EVENT\_DEATH
-
-SMART\_EVENT\_KILL
-
-SMART\_EVENT\_SUMMONED\_UNIT
-
-SMART\_EVENT\_SPELLHIT
-
-SMART\_EVENT\_SPELLHIT\_TARGET
-
-SMART\_EVENT\_DAMAGED
-
-SMART\_EVENT\_RECEIVE\_HEAL
-
-SMART\_EVENT\_RECEIVE\_EMOTE
-
-SMART\_EVENT\_JUST\_SUMMONED
-
-SMART\_EVENT\_DAMAGED\_TARGET
-
-SMART\_EVENT\_SUMMON\_DESPAWNED
-
-SMART\_EVENT\_PASSENGER\_BOARDED
-
-SMART\_EVENT\_PASSENGER\_REMOVED
-
-SMART\_EVENT\_GOSSIP\_HELLO
-
-SMART\_EVENT\_GOSSIP\_SELECT
-
-SMART\_EVENT\_ACCEPTED\_QUEST
-
-SMART\_EVENT\_REWARD\_QUEST
-
-SMART\_EVENT\_FOLLOW\_COMPLETED
-
-SMART\_EVENT\_ON\_SPELLCLICK
-
-SMART\_EVENT\_GO\_LOOT\_STATE\_CHANGED
-
-SMART\_EVENT\_AREATRIGGER\_ONTRIGGER
-
-SMART\_EVENT\_IC\_LOS
-
-SMART\_EVENT\_OOC\_LOS
-
-SMART\_EVENT\_DISTANCE\_CREATURE
-
-SMART\_EVENT\_FRIENDLY\_HEALTH
-
-SMART\_EVENT\_FRIENDLY\_HEALTH\_PCT
-
-SMART\_EVENT\_FRIENDLY\_IS\_CC
-
-SMART\_EVENT\_FRIENDLY\_MISSING\_BUFF
-
-SMART\_EVENT\_ACTION\_DONE
-
-SMART\_EVENT\_TARGET\_HEALTH\_PCT
-
-SMART\_EVENT\_TARGET\_MANA\_PCT
-
-SMART\_EVENT\_RANGE
-
-SMART\_EVENT\_VICTIM\_CASTING
-
-SMART\_EVENT\_TARGET\_BUFFED
-
-SMART\_EVENT\_IS\_BEHIND\_TARGET
-
-SMART\_EVENT\_INSTANCE\_PLAYER\_ENTER
-
-SMART\_EVENT\_TRANSPORT\_ADDCREATURE
-
-SMART\_EVENT\_DATA\_SET
-
+- SMART\_EVENT\_AGGRO
+- SMART\_EVENT\_DEATH
+- SMART\_EVENT\_KILL
+- SMART\_EVENT\_SUMMONED\_UNIT
+- SMART\_EVENT\_SPELLHIT
+- SMART\_EVENT\_SPELLHIT\_TARGET
+- SMART\_EVENT\_DAMAGED
+- SMART\_EVENT\_RECEIVE\_HEAL
+- SMART\_EVENT\_RECEIVE\_EMOTE
+- SMART\_EVENT\_JUST\_SUMMONED
+- SMART\_EVENT\_DAMAGED\_TARGET
+- SMART\_EVENT\_SUMMON\_DESPAWNED
+- SMART\_EVENT\_PASSENGER\_BOARDED
+- SMART\_EVENT\_PASSENGER\_REMOVED
+- SMART\_EVENT\_GOSSIP\_HELLO
+- SMART\_EVENT\_GOSSIP\_SELECT
+- SMART\_EVENT\_ACCEPTED\_QUEST
+- SMART\_EVENT\_REWARD\_QUEST
+- SMART\_EVENT\_FOLLOW\_COMPLETED
+- SMART\_EVENT\_ON\_SPELLCLICK
+- SMART\_EVENT\_GO\_LOOT\_STATE\_CHANGED
+- SMART\_EVENT\_AREATRIGGER\_ONTRIGGER
+- SMART\_EVENT\_IC\_LOS
+- SMART\_EVENT\_OOC\_LOS
+- SMART\_EVENT\_DISTANCE\_CREATURE
+- SMART\_EVENT\_FRIENDLY\_HEALTH
+- SMART\_EVENT\_FRIENDLY\_HEALTH\_PCT
+- SMART\_EVENT\_FRIENDLY\_IS\_CC
+- SMART\_EVENT\_FRIENDLY\_MISSING\_BUFF
+- SMART\_EVENT\_ACTION\_DONE
+- SMART\_EVENT\_TARGET\_HEALTH\_PCT
+- SMART\_EVENT\_TARGET\_MANA\_PCT
+- SMART\_EVENT\_RANGE
+- SMART\_EVENT\_VICTIM\_CASTING
+- SMART\_EVENT\_TARGET\_BUFFED
+- SMART\_EVENT\_IS\_BEHIND\_TARGET
+- SMART\_EVENT\_INSTANCE\_PLAYER\_ENTER
+- SMART\_EVENT\_TRANSPORT\_ADDCREATURE
+- SMART\_EVENT\_DATA\_SET
