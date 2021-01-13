@@ -17,13 +17,13 @@ NOTE: The % arguments need to stay in the exact same order as they are provided 
 | [entry][1]           | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [content_default][2] | text         |            |     | NO   |         |       |         |
 | [locale_koKR][3]     | text         |            |     | YES  |         |       |         |
-| [locale_frFR][4]     | text         |            |     | YES  |         |       |         |
-| [locale_deDE][5]     | text         |            |     | YES  |         |       |         |
-| [locale_zhCN][6]     | text         |            |     | YES  |         |       |         |
-| [locale_zhTW][7]     | text         |            |     | YES  |         |       |         |
-| [locale_esES][8]     | text         |            |     | YES  |         |       |         |
-| [locale_esMX][9]     | text         |            |     | YES  |         |       |         |
-| [locale_ruRU][10]    | text         |            |     | YES  |         |       |         |
+| [locale_frFR][3]     | text         |            |     | YES  |         |       |         |
+| [locale_deDE][3]     | text         |            |     | YES  |         |       |         |
+| [locale_zhCN][3]     | text         |            |     | YES  |         |       |         |
+| [locale_zhTW][3]     | text         |            |     | YES  |         |       |         |
+| [locale_esES][3]     | text         |            |     | YES  |         |       |         |
+| [locale_esMX][3]     | text         |            |     | YES  |         |       |         |
+| [locale_ruRU][3]     | text         |            |     | YES  |         |       |         |
 
 [1]: #entry
 [2]: #content\_default
