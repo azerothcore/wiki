@@ -9,20 +9,20 @@ This table contains the access requirements to enter an instance.
 
 **Structure**
 
-| Field                       | Type          | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------------------|---------------|------------|-----|------|---------|-------|---------|
-| [mapId][1]                  | mediumint (8) | unsigned   | PRI | NO   |         |       |         |
-| [difficulty][2]             | tinyint(3)    | unsigned   | PRI | NO   |         |       |         |
-| [level_min][3]              | tinyint(3)    | unsigned   |     | NO   |         |       |         |
-| [level_max][4]              | tinyint(3)    | unsigned   |     | NO   |         |       |         |
-| [item_level][5]             | smallint(5)   | unsigned   |     | NO   |         |       |         |
-| [item][6]                   | mediumint(8)  | unsigned   |     | NO   |         |       |         |
-| [item2][7]                  | mediumint(8)  | unsigned   |     | NO   |         |       |         |
-| [quest_done_A][8]           | mediumint(8)  | unsigned   |     | NO   |         |       |         |
-| [quest_done_H][9]           | mediumint(8)  | unsigned   |     | NO   |         |       |         |
-| [completed_achievement][10] | mediumint(8)  | unsigned   |     | NO   |         |       |         |
-| [quest_failed_text][11]     | text          |            |     | YES  | NULL    |       |         |
-| [comment][12]               | text          |            |     | YES  | NULL    |       |         |
+| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------------------|--------------|------------|-----|------|---------|-------|---------|
+| [mapId][1]                  | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [difficulty][2]             | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [level_min][3]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [level_max][4]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [item_level][5]             | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
+| [item][6]                   | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [item2][7]                  | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [quest_done_A][8]           | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [quest_done_H][9]           | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [completed_achievement][10] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [quest_failed_text][11]     | text         |            |     | YES  |         |       |         |
+| [comment][12]               | text         |            |     | YES  |         |       |         |
 
 [1]: #mapid
 [2]: #difficulty
@@ -94,3 +94,10 @@ The text that is shown if you try and enter the instance without having complete
 ### comment
 
 This field is for any comment you want to make about the requirements or the instance. It is arbitrary text.
+
+### Example
+
+| mapId | difficulty | level_min | level_max | item_level | item | item2 | quest_done_A | quest_done_H | completed_achievement | quest_failed_text | comment                      |
+|-------|------------|-----------|-----------|------------|------|-------|--------------|--------------|-----------------------|-------------------|------------------------------|
+| 33    | 0          | 14        | 0         | 0          | 0    | 0     | 0            | 0            | 0                     |                   | Shadowfang Keep Entrance     |
+| 34    | 0          | 15        | 0         | 0          | 0    | 0     | 0            | 0            | 0                     |                   | Stormwind Stockades Entrance |
