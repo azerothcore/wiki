@@ -8,16 +8,15 @@ Contains all the teleport triggers definition. This table is used to complete .d
 
 **Structure**
 
-| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment    |
-|-------------------------|--------------|------------|-----|------|---------|-------|------------|
-| [id][1]                 | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Identifier |
-| [name][2]               | text         | signed     |     | YES  | NULL    |       |            |
-| [target_map][3]         | smallint(5)  | unsigned   |     | NO   | 0       |       |            |
-| [target_position_x][4]  | float        | signed     |     | NO   | 0       |       |            |
-| [target_position_y][5]  | float        | signed     |     | NO   | 0       |       |            |
-| [target_position_z][6]  | float        | signed     |     | NO   | 0       |       |            |
-| [target_orientation][7] | float        | signed     |     | NO   | 0       |       |            |
-| [VerifiedBuild][8]      | smallint(5)  | signed     |     | YES  | 0       |       |            |
+| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------------|--------------|------------|-----|------|---------|-------|---------|
+| [ID][1]                 | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [Name][2]               | text         |            | MUL | YES  |         |       |         |
+| [target_map][3]         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
+| [target_position_x][4]  | float        |            |     | NO   | 0       |       |         |
+| [target_position_y][5]  | float        |            |     | NO   | 0       |       |         |
+| [target_position_z][6]  | float        |            |     | NO   | 0       |       |         |
+| [target_orientation][7] | float        |            |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #name
@@ -26,11 +25,10 @@ Contains all the teleport triggers definition. This table is used to complete .d
 [5]: #target_position_y
 [6]: #target_position_z
 [7]: #target_orientation
-[8]: #verifiedbuild
 
 **Description of the fields**
 
-### id
+### ID
 
 This is the trigger identifier, it must match with the one from [AreaTrigger.dbc](DBC-AreaTrigger)
 
@@ -58,14 +56,12 @@ Z coordinate for the target destination of the trigger
 
 Orientation the player will get when appearing at this location
 
-### VerifiedBuild
+### Examples
 
-This field was used to determine whether a template has been verified from WDB files.
-
-If value is 0 then it has not been parsed yet.
-
-If value is above 0 then it has been parsed with WDB files from that specific client build.
-
-If value is -1 then it is just a place holder until proper data are found on WDBs.
-
-If value is -Client Build then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.
+| ID  | Name                                     | target_map | target_position_x | target_position_y | target_position_z | target_orientation |
+|-----|------------------------------------------|------------|-------------------|-------------------|-------------------|--------------------|
+| 45  | Scarlet Monastery - Graveyard (Entrance) | 189        | 1688.99           | 1053.48           | 18.6775           | 0.00117            |
+| 78  | DeadMines Entrance                       | 36         | -16.4             | -383.07           | 61.78             | 1.86               |
+| 101 | Stormwind Stockades Entrance             | 34         | 54.23             | 0.28              | -18.34            | 6.26               |
+| 107 | Stormwind Vault Entrance                 | 35         | -0.91             | 40.57             | -24.23            | 0                  |
+| 109 | Stormwind Vault Instance                 | 0          | -8653.45          | 606.19            | 91.16             | 0                  |
