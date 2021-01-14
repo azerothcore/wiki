@@ -27,3 +27,13 @@ This is the trigger ID from [AreaTrigger.dbc](DBC-AreaTrigger)
 ### quest
 
 This is the quest id that the trigger is tied to.
+
+### Example
+
+| id  | quest |
+|-----|-------|
+| 78  | 155   |
+| 87  | 76    |
+| 88  | 62    |
+| 98  | 201   |
+| 169 | 287   |
