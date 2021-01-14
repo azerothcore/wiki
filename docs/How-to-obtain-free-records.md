@@ -7,7 +7,7 @@ Either because we want to insert a new value, or we want to restructure our tabl
 To do this, you can use the following script
 
 ```sql
-SELECT t.id +1
+SELECT t.id + 1
 FROM Table1 t
 WHERE NOT EXISTS (
     SELECT * 
@@ -24,7 +24,7 @@ Now let's look at an example. Let's suppose that we want to search the first fre
 The first thing we have to identify is your primary key: `guid`
 
 ```sql
-SELECT t.`guid` +1
+SELECT t.`guid` + 1
 FROM `creature` t
 WHERE NOT EXISTS (
     SELECT * 
