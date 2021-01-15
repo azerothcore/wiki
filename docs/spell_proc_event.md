@@ -140,6 +140,11 @@ PROC_EX_NO_AURA_REFRESH | 1048576 | 0x0100000 | Proc if aura was not refreshed
 ### ppmRate
 Proc per minute. If 0 the value will be taken from DBC.
 
+ppmRate is a rate and therefore will not be guaranteed to prox X amount of times per minute. ppm is calculated by this formula
+```
+(WeaponSpeed * PPM) / 600.0f);   // result is chance in percents (probability = Speed_in_sec * (PPM / 60))
+```
+
 ### CustomChance
 If non-zero, chance for spell to trigger.
 
