@@ -142,7 +142,7 @@ Proc per minute. If 0 the value will be taken from DBC.
 
 ppmRate is a rate and therefore will not be guaranteed to prox X amount of times per minute. ppm is calculated by this formula
 ```
-(WeaponSpeed * PPM) / 600.0f);   // result is chance in percents (probability = Speed_in_sec * (PPM / 60))
+((WeaponSpeed * PPM) / 600.0f);   // result is chance in percents (probability = Speed_in_sec * (PPM / 60))
 ```
 
 ### CustomChance
