@@ -57,8 +57,7 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 
 - EntryOrGuid > 0: `entry` of the creature / game object / etc.
 - EntryOrGuid < 0: `guid` of the creature / game object / etc.
-
-**Depends on source\_type.**
+- **Depends on source\_type.**
 
 ### source\_type
 
