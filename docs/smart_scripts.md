@@ -8,7 +8,7 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------------|
-| [entryorguid][1]      | int(11)     |            | PRI | NO   |         |       |               |
+| [entryorguid][1]      | int(11)     | signed     | PRI | NO   |         |       |               |
 | [source_type][2]      | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |               |
 | [id][3]               | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
 | [link][4]             | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
@@ -33,11 +33,11 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 | [target_param2][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [target_param3][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [target_param4][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_x][11]        | float       |            |     | NO   | 0       |       |               |
-| [target_y][12]        | float       |            |     | NO   | 0       |       |               |
-| [target_z][13]        | float       |            |     | NO   | 0       |       |               |
-| [target_o][14]        | float       |            |     | NO   | 0       |       |               |
-| [comment][15]         | text        |            |     | NO   |         |       | Event Comment |
+| [target_x][10]        | float       | signed     |     | NO   | 0       |       |               |
+| [target_y][10]        | float       | signed     |     | NO   | 0       |       |               |
+| [target_z][10]        | float       | signed     |     | NO   | 0       |       |               |
+| [target_o][10]        | float       | signed     |     | NO   | 0       |       |               |
+| [comment][11]         | text        |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid
 [2]: #source_type
@@ -49,11 +49,7 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 [8]: #event_flags
 [9]: #action_type
 [10]: #target_type
-[11]: #target_x
-[12]: #target_y
-[13]: #target_z
-[14]: #target_o
-[15]: #comment
+[11]: #comment
 
 **Description of the fields**
 
@@ -63,12 +59,6 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 - EntryOrGuid < 0: `guid` of the creature / game object / etc.
 
 **Depends on source\_type.**
-
-> In other words:
-
-> If the entryorguid, is greater than 0, we would be using the `entry` of a creature, in other words, we are applying the fix, to a whole family of npcs, objects... which, while using all the same `entry`, all run the same script.
-
-> On the other hand, if the entryorguid is less than 0, we would use the `guid` of the creature table, being able to apply the fix, only to 1 creature, of a group of many others. But maybe we don't want all of them to behave the same way.
 
 ### source\_type
 
