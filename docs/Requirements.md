@@ -10,11 +10,7 @@
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
 ```
 
-If you are using the `root` user
-
-```sh
-apt-get update && apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
-```
+Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
@@ -34,11 +30,7 @@ apt-get update && apt-get install git cmake make gcc g++ clang libmysqlclient-de
 sudo apt-get update && sudo apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
 ```
 
-If you are using the `root` user
-
-```sh
-apt-get update && apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
-```
+Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 #### Install last cmake version on Debian 8
 
@@ -83,14 +75,12 @@ pip3 install cmake
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
 ```
 
-If you are using the `root` user
-
-```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
-```
+Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 You might need to add the stretch-backports repositories to APT in order to install clang-6.x+ and cmake v3.8+.
 If you do not succeed installing cmake you can use the package manager of python3 (pip3)
+
+---
 
 #### Debian 10
 
@@ -98,11 +88,7 @@ If you do not succeed installing cmake you can use the package manager of python
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev
 ```
 
-If you are using the `root` user
-
-```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev
-```
+Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 **Note:** If you add the option `-y` and at the end of the list, it will start installing them without the need for you to confirm.
 
@@ -222,5 +208,3 @@ brew cask install sequel-ace
 
 3. _Note #1: If you get a "Missing Microsoft Visual C++ 2008 Redistributables" error message while installing OpenSSL, download the ** [Microsoft Visual C++ 2008 Redistributable Package (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=29) ** (1.7MB Installer) and install it. If you need 32bit support, download and install the [ **Microsoft Visual C++ 2008 Redistributable Package (x86)** ](http://www.microsoft.com/en-us/download/details.aspx?id=15336)._
 4. _Note #2: While installing OpenSSL, choose **The OpenSSL binaries (/bin) directory** (NOT "The Windows system directory") when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for Core Installation._
-
-5. If you don't get the MySQL 5.7 library, you can download it from the following [link](https://cdn.discordapp.com/attachments/265262398942740481/640628930117894154/lib_mysql_5_7_28_win.zip)
