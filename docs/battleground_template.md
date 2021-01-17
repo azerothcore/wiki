@@ -8,21 +8,21 @@ Contains information about the different battlegrounds, like how many players ar
 
 **Structure**
 
-| Field                  | Type           | Atributes | Key | Null | Default | Extra | Comment |
-|------------------------|----------------|-----------|-----|------|---------|-------|---------|
-| [id][1]                | mediumint(8)   | unsigned  | PRI | NO   | NULL    |       |         |
-| [MinPlayersPerTeam][2] | smallintint(5) | unsigned  |     | NO   | 0       |       |         |
-| [MaxPlayersPerTeam][3] | smallint(5)    | unsigned  |     | NO   | 0       |       |         |
-| [MinLvl][4]            | tinyint(3)     | unsigned  |     | NO   | 0       |       |         |
-| [MaxLvl][5]            | tinyint(3)     | unsigned  |     | NO   | 0       |       |         |
-| [AllianceStartLoc][6]  | mediumint(8)   | unsigned  |     | NO   | NULL    |       |         |
-| [AllianceStartO][7]    | float          | signed    |     | NO   | NULL    |       |         |
-| [HordeStartLoc][8]     | mediumint(8)   | unsigned  |     | NO   | NULL    |       |         |
-| [HordeStartO][9]       | float          | signed    |     | NO   | NULL    |       |         |
-| [StartMaxDist][10]     | float          | signed    |     | NO   | 0       |       |         |
-| [Weight][11]           | tinyint (2)    | unsigned  |     | NO   | 1       |       |         |
-| [ScriptName][12]       | char (64)      |           |     | NO   |         |       |         |
-| [Comment][13]          | char (32)      |           |     | NO   |         |       |         |
+| Field                  | Type         | Atributes | Key | Null | Default | Extra | Comment |
+|------------------------|--------------|-----------|-----|------|---------|-------|---------|
+| [ID][1]                | mediumint(8) | unsigned  | PRI | NO   | 0       |       |         |
+| [MinPlayersPerTeam][2] | smallint(5)  | unsigned  |     | NO   | 0       |       |         |
+| [MaxPlayersPerTeam][3] | smallint(5)  | unsigned  |     | NO   | 0       |       |         |
+| [MinLvl][4]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
+| [MaxLvl][5]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
+| [AllianceStartLoc][6]  | mediumint(8) | unsigned  |     | NO   |         |       |         |
+| [AllianceStartO][7]    | float        | signed    |     | NO   |         |       |         |
+| [HordeStartLoc][8]     | mediumint(8) | unsigned  |     | NO   |         |       |         |
+| [HordeStartO][9]       | float        | signed    |     | NO   |         |       |         |
+| [StartMaxDist][10]     | float        | signed    |     | NO   | 0       |       |         |
+| [Weight][11]           | tinyint(3)   | unsigned  |     | NO   | 1       |       |         |
+| [ScriptName][12]       | char(64)     |           |     | NO   |         |       |         |
+| [Comment][13]          | char(38)     |           |     | NO   |         |       |         |
 
 [1]: #id
 [2]: #minplayersperteam
@@ -102,3 +102,13 @@ The orientation of the horde players upon teleport into the battleground. North 
 
 Determines what battleground(s) will be more frequently chosen when using Random Battleground.
 For example: If you want AV to be less often chosen, give 2 and for all other give 3.
+
+### Example
+
+| ID | MinPlayersPerTeam | MaxPlayersPerTeam | MinLvl | MaxLvl | AllianceStartLoc | AllianceStartO | HordeStartLoc | HordeStartO | StartMaxDist | Weight | ScriptName | Comment                                |
+|----|-------------------|-------------------|--------|--------|------------------|----------------|---------------|-------------|--------------|--------|------------|----------------------------------------|
+| 1  | 20                | 40                | 51     | 80     | 611              | 3.16312        | 610           | 0.715504    | 100          | 1      |            | Alterac Valley (battleground)          |
+| 2  | 5                 | 10                | 10     | 80     | 769              | 3.14159        | 770           | 0.151581    | 75           | 1      |            | Warsong Gulch (battleground)           |
+| 3  | 8                 | 15                | 20     | 80     | 890              | 3.91571        | 889           | 0.813671    | 75           | 1      |            | Arathi Basin (battleground)            |
+| 4  | 0                 | 5                 | 10     | 80     | 929              | 0              | 936           | 3.14159     | 0            | 1      |            | Nagrand Arena / Ring of Trials (arena) |
+| 5  | 0                 | 5                 | 10     | 80     | 939              | 0              | 940           | 3.14159     | 0            | 1      |            | Blades's Edge Arena (arena)            |
