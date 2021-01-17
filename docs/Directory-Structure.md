@@ -5,16 +5,17 @@ AzerothCore and our modules is following  directory structure standard from hw-c
 This structure is conformed to our [modular architecture](The-Modular-Structure).
 
 azerothcore/
-├── [apps][1]
-├── [bin][2]
-├── [conf][3]
-├── [data][4]
-├── [deps][5]
-├── [docker][6]
-├── [env][7]
-├── [modules][8]
-├── [src][9]
-└── [var][10]
+
+├── [apps][1]<br/>
+├── [bin][2]<br/>
+├── [conf][3]<br/>
+├── [data][4]<br/>
+├── [deps][5]<br/>
+├── [docker][6]<br/>
+├── [env][7]<br/>
+├── [modules][8]<br/>
+├── [src][9]<br/>
+└── [var][10]<br/>
 
 [1]: #apps
 [2]: #bin
