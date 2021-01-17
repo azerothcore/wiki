@@ -125,14 +125,14 @@ The text the creature will say.
 
 ### Type
 
-| Value | Old value | Localization | Picture Example                               |
-|-------|-----------|--------------|-----------------------------------------------|
-| 12    | 0         | Say          | ![Say](assets/images/Say.png)                 |
-| 14    | 1         | Yell         | ![Yell](assets/images/Yell.png)               |
-| 16    | 2         | Emote        | ![Emote](assets/images/Emote.png)             |
-| 41    | 3         | Boss Emote   | ![BossEmote](assets/images/BossEmote.png)     |
-| 15    | 4         | Whisper      | ![Whisper](assets/images/Whisper.png)         |
-| 42    | 5         | Boss Whisper | ![BossWhisper](assets/images/BossWhisper.png) |
+| Value | Old value | Localization | Example                                                       |
+|-------|-----------|--------------|---------------------------------------------------------------|
+| 12    | 0         | Say          | <span style="color: #FFFFFF">Azeroth says: Say</span>         |
+| 14    | 1         | Yell         | <span style="color: #FF3F40">Azeroth yells: Yell</span>       |
+| 16    | 2         | Emote        | <span style="color: #FF7E40">Emote</span>                     |
+| 41    | 3         | Boss Emote   | <span style="color: #FFFC01">[BossEmote]</span>               |
+| 15    | 4         | Whisper      | <span style="color: #FF7EFF">Azeroth whispers: Whisper</span> |
+| 42    | 5         | Boss Whisper | <span style="color: #FFFC01">BossWhisper</span>               |
 
 ### Language
 
