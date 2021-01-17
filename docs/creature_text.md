@@ -127,7 +127,7 @@ The text the creature will say.
 
 | Value | Old value | Localization | Example                                                       |
 |-------|-----------|--------------|---------------------------------------------------------------|
-| 12    | 0         | Say          | <span style="color:#FFFFFF;">Azeroth says: Say</span>         |
+| 12    | 0         | Say          | <span id="textSay">Azeroth says: Say</span>                   |
 | 14    | 1         | Yell         | <span style="color:#FF3F40;">Azeroth yells: Yell</span>       |
 | 16    | 2         | Emote        | <span style="color:#FF7E40;">Emote</span>                     |
 | 41    | 3         | Boss Emote   | <span style="color:#FFFC01;">[BossEmote]</span>               |
