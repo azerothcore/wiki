@@ -60,4 +60,4 @@ This dbc contains all possible races, some of which are unused and unavailable t
 
 ### How do I get the values?
 
-For more information, on how to obtain the values, you can consult the following link: [bit-and_bytes-tutorial](Bit-and_bytes-tutorial)
+If you want to learn how bits work you can read the tutorial here [bit-and_bytes-tutorial](Bit-and_bytes-tutorial)
