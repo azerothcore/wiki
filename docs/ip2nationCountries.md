@@ -49,3 +49,7 @@
 | ae   | AE         | ARE        | United Arab Emirates | United Arab Emirates | 24    | 54     |
 | af   | AF         | AFG        | Afghanistan          | Afghanistan          | 33    | 65     |
 | ag   | AG         | ATG        | Antigua and Barbuda  | Antigua and Barbuda  | 17.03 | -61.48 |
+
+They are not mantained by AzerothCore development team and **they require external data to perform their function**, which can be found at
+[ip2nation](http://www.ip2nation.com/ip2nation/Download) or via this module [mod-ip2natioon-ip2nationcountries](https://github.com/azerothcore/mod-ip2nation-ip2nationcontries)
+
