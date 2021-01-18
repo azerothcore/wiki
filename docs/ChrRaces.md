@@ -75,3 +75,5 @@ Through the powers of 2. It can be better understood in the following table:
 | 9  | 8     | 256           | Goblin (4.x) |
 | 10 | 9     | 512           | Blood Elf    |
 | 11 | 10    | 1024          | Draenei      |
+
+![raceMask](https://user-images.githubusercontent.com/2810187/104961176-909b1500-59b4-11eb-8a55-2db891410ba7.png)
