@@ -60,20 +60,4 @@ This dbc contains all possible races, some of which are unused and unavailable t
 
 ### How do I get the values?
 
-Through the powers of 2. It can be better understood in the following table:
-
-| N  | N - 1 | 2 exp (N - 1) | Races        |
-|----|-------|---------------|--------------|
-| 1  | 0     | 1             | Human        |
-| 2  | 1     | 2             | Orc          |
-| 3  | 2     | 4             | Dwarf        |
-| 4  | 3     | 8             | Night Elf    |
-| 5  | 4     | 16            | Undead       |
-| 6  | 5     | 32            | Tauren       |
-| 7  | 6     | 64            | Gnome        |
-| 8  | 7     | 128           | Troll        |
-| 9  | 8     | 256           | Goblin (4.x) |
-| 10 | 9     | 512           | Blood Elf    |
-| 11 | 10    | 1024          | Draenei      |
-
-![raceMask](https://user-images.githubusercontent.com/2810187/104961176-909b1500-59b4-11eb-8a55-2db891410ba7.png)
+For more information, on how to obtain the values, you can consult the following link: [bit-and_bytes-tutorial](Bit-and_bytes-tutorial)
