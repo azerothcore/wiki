@@ -1,4 +1,7 @@
-# based on git-wiki-theme 2.6.1
+# this version is only used internally to update 
+# the remote_theme when needed
+ac_wiki_version: 2.0.0
+# based on latest (master) git-wiki-theme
 remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 title: AzerothCore
