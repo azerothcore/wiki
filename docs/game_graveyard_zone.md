@@ -27,4 +27,4 @@ Graveyard's team.
 
 469 - Alliance team only
 
-47 - Horde team only
+67 - Horde team only
