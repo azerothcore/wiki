@@ -114,7 +114,6 @@ You will find your freshly compiled binaries in the Build\bin\Release or Build\b
 You will need the following files in order for the core to function properly:
  
 ```
-ace.dll
 libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
 libmySQL.dll 
 ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
