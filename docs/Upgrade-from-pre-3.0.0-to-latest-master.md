@@ -6,7 +6,9 @@ This is the tutorial to upgrade any existing server from a version prior to the 
 
 You need first to update your server to [this commit](https://github.com/azerothcore/azerothcore-wotlk/commit/2d609e9e48b2e516e4a555015b2662cab15b0c38), running:
 
-`git checkout 2d609e9e48b2e516e4a555015b2662cab15b0c38`
+```
+git pull; git checkout 2d609e9e48b2e516e4a555015b2662cab15b0c38
+```
 
 Now update your **database** as you usually do (e.g. using the db-assembler)
 
