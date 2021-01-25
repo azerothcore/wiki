@@ -54,7 +54,9 @@ During this process NO ONE should push anything to the master branch.
 
 7) Commit the changes from steps 4-6 together [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/0858526c9a678e90ffa830182c25434b36fee2c5)
 
-8) Announce to the users that a new release is available so they have to update their DBs following a special procedure (see below)
+8) Fix the SQL chain: https://github.com/azerothcore/azerothcore-wotlk/commit/3cdc5a45a184341536465df4c25ee4e85ec250fd
+
+9) Announce to the users that a new release is available so they have to update their DBs following a special procedure (see below)
 
 ## How to update an existing server from a previous release
 
