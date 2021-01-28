@@ -26,8 +26,8 @@ Creature entry from [creature_template.entry](creature_template#entry).
 
 ### School
 
-| Value | Name
-| :- | :-
+Value | Name
+:- | :-
 1 | SPELL_SCHOOL_HOLY
 2 | SPELL_SCHOOL_FIRE
 3 | SPELL_SCHOOL_NATURE
