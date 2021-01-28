@@ -34,6 +34,8 @@ The world database has information basically related to creatures, objects, item
 - [creature_template](creature_template.md)
 - [creature_template_addon](creature_addon.md)
 - [creature_template_locale](creature_template_locale.md)
+- [creature_template_resistance](creature_template_resistance.md)
+- [creature_template_spell](creature_template_spell.md)
 - [creature_text](creature_text.md)
 - [creature_text_locale](creature_text_locale.md)
 - [disables](disables.md)
