@@ -1,6 +1,6 @@
 [Database Structure](Database-Structure) > [Character-Database](Character-Database) > [gm_subsurvey](gm_subsurvey)
 
-Not implemented for now
+This table contains the answers to the survey questions. It's linked to `gm_survey`.
 
 Column | Type | Description
 --- | --- | ---
