@@ -1,4 +1,10 @@
-# creature\_template\_movement
+## NOT EXISTING
+
+**This table does NOT currently exist in AzerothCore, but it might be added later. See [#4361](https://github.com/azerothcore/azerothcore-wotlk/issues/4361)**
+
+For creature movements check [creature_template#InhabitType](https://www.azerothcore.org/wiki/creature_template#inhabittype)
+
+# creature_template_movement
 
 **The \`creature\_template\_movement\` table**
 
