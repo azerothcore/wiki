@@ -81,6 +81,7 @@ This table contains the description of creatures. Each spawned creature is an in
 | [movementId](#movementid)                       | int(11) unsigned      | NO   |     | 0       |       |                                      |
 | [RegenHealth](#regenhealth)                     | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
 | [mechanic_immune_mask](#mechanic_immune_mask) | int(10) unsigned      | NO   |     | 0       |       |                                      |
+| [spell_school_immune_mask](#spell_school_immune_mask) | int(3) unsigned | NO | | 0
 | [flags_extra](#flags_extra)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [ScriptName](#scriptname)                       | char(64)              | NO   |     |         |       |                                      |
 | [VerifiedBuild](#verifiedbuild)                 | smallint(5)           | YES  |     | 0       |       |                                      |
@@ -678,6 +679,22 @@ Uses references from SpellMechanic.dbc.
 | 1073741824 | 0x40000000 | MECHANIC_ENRAGED         |                                                          |
 
 To combine immunities just add values. Immune to everything corresponds to the value 2147483647 (0x3FFF FFFF).
+
+#### spell_school_immune_mask 
+
+This makes the creature immune to specific spell schools.
+
+| Flag | Type |
+| - | - | 
+| 1 | SPELL_SCHOOL_NORMAL |
+| 2 | SPELL_SCHOOL_HOLY |
+| 4 | SPELL_SCHOOL_FIRE |
+| 8 | SPELL_SCHOOL_NATURE |
+| 16 | SPELL_SCHOOL_FROST |
+| 32 | SPELL_SCHOOL_SHADOW |
+| 64 | SPELL_SCHOOL_ARCANE |
+
+To combine immunities just add values. Immune to everything corresponds to the value 127.
 
 #### flags_extra
 
