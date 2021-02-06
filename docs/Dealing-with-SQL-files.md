@@ -74,7 +74,24 @@ Good:
 UPDATE `table_1` SET `field_1` = 'someValue' WHERE `entry` IN (1000, 2000, 3000);
 ```
 
-### Flags
+## Use variables when necessary
+
+SQL variables help to make IDs/GUIDs more manageable, use them when needed:
+
+```sql
+SET @FREE_GUID:=145211;
+
+DELETE FROM `creature` WHERE `guid` BETWEEN @FREE_GUID AND @FREE_GUID+6;
+INSERT INTO `creature` VALUES
+(@FREE_GUID+0, 1420, 530, 6785.898, -7607.692, 128.1121, 3.815103, 120, 0),
+(@FREE_GUID+1, 1420, 530, 6753.482, -7647.198, 128.3187, 3.793595, 120, 0),
+(@FREE_GUID+2, 2914, 530, 6830.517, -7396.761, 46.36444, 2.204267, 120, 0),
+(@FREE_GUID+3, 2914, 530, 6967.708, -7464.932, 47.05861, 1.433785, 120, 0),
+(@FREE_GUID+4, 2914, 530, 6764.093, -7363.276, 50.46708, 2.048597, 120, 0),
+(@FREE_GUID+5, 2914, 530, 6703.647, -7402.308, 51.60884, 5.743487, 120, 0);
+```
+
+## Flags
 
 For flags (2^) columns, when you remove or add a flag, it is better not to override the existing value as flags are combined values.
 
