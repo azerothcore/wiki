@@ -81,7 +81,7 @@ SQL variables help to make IDs/GUIDs more manageable, use them when needed:
 ```sql
 SET @FREE_GUID:=145211;
 
-DELETE FROM `creature` WHERE `guid` BETWEEN @FREE_GUID AND @FREE_GUID+6;
+DELETE FROM `creature` WHERE `guid` BETWEEN @FREE_GUID AND @FREE_GUID+5;
 INSERT INTO `creature` VALUES
 (@FREE_GUID+0, 1420, 530, 6785.898, -7607.692, 128.1121, 3.815103, 120, 0),
 (@FREE_GUID+1, 1420, 530, 6753.482, -7647.198, 128.3187, 3.793595, 120, 0),
