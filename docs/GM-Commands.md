@@ -14,16 +14,16 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |account lock country|0|Syntax: .account lock country [on/off]. Allow login from account only from current used Country or remove this requirement.|
 |account onlinelist|4|Syntax: .account onlinelist Show list of online accounts.|
 |account password|0|Syntax: .account password $old_password $new_password $new_password Change your account password.|
-|account set|3|Syntax: .account set $subcommand Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands|
-|account set addon|3|Syntax: .account set addon [$account] #addon Set user (possible targeted) expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk.|
+|account set|2|Syntax: .account set $subcommand Type .account set to see the list of possible subcommands or .help account set $subcommand to see info on subcommands|
+|account set addon|2|Syntax: .account set addon [$account] #addon Set user (possible targeted) expansion addon level allowed. Addon values: 0 - normal, 1 - tbc, 2 - wotlk.|
 |account set gmlevel|4|Syntax: .account set gmlevel [$account] #level [#realmid] Set the security level for targeted player (can't be used at self) or for account $name to a level of #level on the realm #realmID. #level may range from 0 to 3. #reamID may be -1 for all realms.|
 |account set password|4|Syntax: .account set password $account $password $password Set password for account.|
-|achievement|4|Syntax: .achievement $subcommand Type .achievement to see the list of possible subcommands or .help achievement $subcommand to see info on subcommands|
-|achievement add|4|Syntax: .achievement add $achievement Add an achievement to the targeted player. $achievement: can be either achievement id or achievement link|
+|achievement|2|Syntax: .achievement $subcommand Type .achievement to see the list of possible subcommands or .help achievement $subcommand to see info on subcommands|
+|achievement add|2|Syntax: .achievement add $achievement Add an achievement to the targeted player. $achievement: can be either achievement id or achievement link|
 |achievement checkall|3|Syntax: .achievement checkall. Check all achievement criteria of the selected player.|
-|additem|3|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
-|additemset|3|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
-|announce|1|Syntax: .announce $MessageToBroadcast Send a global message to all players online in chat log.|
+|additem|2|Syntax: .additem #itemid/[#itemname]/#shift-click-item-link #itemcount Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
+|additemset|2|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
+|announce|2|Syntax: .announce $MessageToBroadcast Send a global message to all players online in chat log.|
 |appear|1|Syntax: .appear [$charactername] Teleport to the given character. Either specify the character name or click on the character's portrait,e.g. when you are in a group. Character can be offline.|
 |arena captain|3|Syntax: .arena captain #TeamID $name. A command to set new captain to the team. $name must be in the team|
 |aura|3|Syntax: .aura #spellid Add the aura from spell #spellid to the selected Unit.|
