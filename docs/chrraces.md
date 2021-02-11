@@ -58,6 +58,15 @@ This dbc contains all possible races, some of which are unused and unavailable t
 | 25 | 16777216 | Pandaren Alliance (5.x) |
 | 26 | 33554432 | Pandaren Horde (5.x)    |
 
+
+### Faction values
+
+On WOTLK:
+Alliance only = 1101
+Horde only = 690
+Both factions = 0
+
+
 ### How do I get the values?
 
 If you want to learn how bits work you can read the tutorial here [bit-and_bytes-tutorial](Bit-and_bytes-tutorial)
