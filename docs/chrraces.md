@@ -64,7 +64,7 @@ This dbc contains all possible races, some of which are unused and unavailable t
 On WOTLK:
 Alliance only = 1101
 Horde only = 690
-Both factions = 0
+Both factions = 1791 (0 may work)
 
 
 ### How do I get the values?
