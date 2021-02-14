@@ -10,8 +10,8 @@ Table used for storing custom spell attributes.
 
 | Field           | Type          | Attributes | Key | Null | Default | Extra | Comment               |
 |-----------------|---------------|------------|-----|------|---------|-------|-----------------------|
-| [entry][1]      | medium int(8) | unsigned   | PRI | NO   | 0       |       | spell id              |
-| [attributes][2] | medium int(8) | unsigned   |     | NO   | 0       |       | SpellCustomAttributes |
+| [entry][1]      | MEDIUMIN      | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
+| [attributes][2] | INT           | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
 [1]: #entry
 [2]: #attributes
