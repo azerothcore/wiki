@@ -168,7 +168,7 @@ You can create 2 sessions and run the `worldserver` and `authserver` processes i
 
 
 - `tmux new -s auth-session`
-- now run the `./acore.sh run-worldserver` inside it, then detach from it
+- now run the `./acore.sh run-authserver` inside it, then detach from it
 
 You can detach using `CTRL+B+D` to exit the session without killing the process.
 If connected using VSCode SSH, you can just close the terminal session.
