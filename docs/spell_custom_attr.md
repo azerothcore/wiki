@@ -10,7 +10,7 @@ Table used for storing custom spell attributes.
 
 | Field           | Type          | Attributes | Key | Null | Default | Extra | Comment               |
 |-----------------|---------------|------------|-----|------|---------|-------|-----------------------|
-| [entry][1]      | MEDIUMIN      | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
+| [entry][1]      | MEDIUMINT     | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
 | [attributes][2] | INT           | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
 [1]: #entry
