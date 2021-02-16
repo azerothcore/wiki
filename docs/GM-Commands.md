@@ -156,7 +156,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |gm fly|2|Syntax: .gm fly [on/off] Enable/disable gm fly mode.|
 |gm ingame|0|Syntax: .gm ingame Display a list of available in game Game Masters.|
 |gm list|3|Syntax: .gm list Display a list of all Game Masters accounts and security levels.|
-|gm visible|1|Syntax: .gm visible on/off Output current visibility state or make GM visible(on) and invisible(off) for other players.|
+|gm visible|2|Syntax: .gm visible on/off Output current visibility state or make GM visible(on) and invisible(off) for other players.|
 |gmannounce|2|Syntax: .gmannounce $announcement Send an announcement to online Gamemasters.|
 |gmnameannounce|2|Syntax: .gmnameannounce $announcement. Send an announcement to all online GM's, displaying the name of the sender.|
 |gmnotify|2|Syntax: .gmnotify $notification Displays a notification on the screen of all online GM's.|
