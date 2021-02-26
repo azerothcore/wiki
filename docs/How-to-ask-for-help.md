@@ -72,7 +72,7 @@ Remember to:
 
 - It's useful to add **4 more tags** according to the category of your question (e.g. `c++`, `docker`, `mysql`, `sql`, etc... ).
 
-- Link your question in the #support-general channel of our [Discord chat](https://discordapp.com/channels/217589275766685707/284406375495368704)
+- Link your question in the #support-general channel of our [Discord chat](https://discordapp.com/invite/gkt4y2x)
 
 - Read: [stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
 
