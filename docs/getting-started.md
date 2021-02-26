@@ -99,6 +99,21 @@ Always read the documentation about every table that you deal with:
 
 - [azerothcore.org/wiki/database-world](https://www.azerothcore.org/wiki/database-world)
 
+### SmartAI
+
+With SmartAI you can do a lot of things. You can add special behaviour to an element of the game such as a creature, without ever touching a single line of C++.
+
+In a nutshell, with SmartAI you can make an entity (for example a Creature) perform a certain **action** when a certain **event** occurs, optionally specifying a **target**. In other words, you can make entities react to events with a behaviour defined by you.
+
+For example, you can make a creature cast a spell (action), when its health goes below 50% of its total health (event), against a random member of the party group (target).
+
+Technically the `smart_script` is just a table inside the world database (and its documentation can be found [here](https://www.azerothcore.org/wiki/smart_scripts). Tools like Keira3 help you working with SmartAI using a pratical graphic interface.
+
+Try to open Keira3, look for any creature that has "SmartAI" as "AIName", open it and click on "SmartAI" on the right menu.
+You'll be prompted with a visual editor that will assist you when working with SmartAI.
+
+The AI of most of the creatures you'll find in the world is done with SmartAI. While more complex creatures (typically raid bosses) are scripted in C++.
+
 ### Learn the SQL language
 
 In most cases, you'll need only the basics of the SQL language, and in most cases, you'll probably figure it out by yourself, however, it's not a bad idea to read about the SQL language. You can find a lot of resources online, for example:
@@ -106,3 +121,25 @@ In most cases, you'll need only the basics of the SQL language, and in most case
 - [https://www.w3schools.com/sql/sql_intro.asp](https://www.w3schools.com/sql/sql_intro.asp)
 
 if you understand how basic statements such as `SELECT`, `UPDATE`, `INSERT` and `DELETE` work, that's usually enough. You don't need to go too deep into SQL in order to be able to contribute.
+
+## Start contributing!
+
+If you mastered some of the above parts, there is already **A LOT** you can do to help our project and becoming a contributor.
+For example:
+
+- help the developers by testing PRs
+- do some bug triaging by confirming issues and helping us to identify and close the invalid reports
+- report any bug that you may find
+- 
+
+## Learn C++
+
+### Learn some OOP basics
+
+TODO
+
+### Do some practice
+
+## Summary
+
+TODO
