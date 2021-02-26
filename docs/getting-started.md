@@ -2,7 +2,7 @@
 
 ## Introduction
 
-If you want to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and be able to contribute, you came to the right place!
+If you want to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute, you came to the right place!
 
 Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](https://www.azerothcore.org/wiki/How-to-ask-for-help) before asking for help.
 
@@ -54,6 +54,12 @@ First of all, `set realmlist localhost` and join your own server using the `test
 
 Get confident with the commands, you will need them for any administration, testing or development activities.
 
+## Learn git
+
+`git` is one of the most important tools you will use in nearly **ANY** software development project. Learning its basics will help you a lot with AzerothCore, but it's also something very good to put in your CV.
+
+You can find plenty of resources online about learning `git`, for example [try.github.io](https://try.github.io/)
+
 ## Learn how to update your WoW server
 
 We release improvements to AzerothCore on a daily basis. You should learn how to update your server and keep updating it often. We recommend avoiding working on older versions of AzerothCore because they have can have bugs that we already resolved and you don't want to stay behind.
@@ -61,12 +67,6 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
 - [azerothcore.org/wiki/Update](https://www.azerothcore.org/wiki/Update)
-
-## Learn git
-
-`git` is one of the most important tools you will use in nearly **ANY** software development project. Learning its basics will help you a lot with AzerothCore, but it's also something very good to put in your CV.
-
-You can find plenty of resources online about learning `git`, for example [try.github.io](https://try.github.io/)
 
 ## Learn to check out PRs
 
