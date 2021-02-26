@@ -45,3 +45,53 @@ You can choose one setup, or even try more than one. You can find all the instru
 Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/How-to-ask-for-help.md).
 
 Got your WoW server installed? Congratulations! Now let's see what you can do next.
+
+## Access the game, learn the GM commands
+
+First of all, `set realmlist localhost` and join your own server using the `test1` account with password `a` (yes, one-letter password). This account is already `GM` so you can use the commands from this list:
+
+- [azerothcore.org/wiki/GM-Commands](https://www.azerothcore.org/wiki/GM-Commands)
+
+Get confident with the commands, you will need them for any administration, testing or development activities.
+
+## Learn how to update your WoW server
+
+We release improvements to AzerothCore on a daily basis. You should learn how to update your server and keep updating it often. We recommend avoiding working on older versions of AzerothCore because they have can have bugs that we already resolved and you don't want to stay behind.
+
+So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
+
+- [azerothcore.org/wiki/Update](https://www.azerothcore.org/wiki/Update)
+
+## Learn git
+
+`git` is one of the most important tools you will use in nearly **ANY** software development project. Learning its basics will help you a lot with AzerothCore, but it's also something very good to put in your CV.
+
+You can find plenty of resources online about learning `git`, for example [try.github.io](https://try.github.io/)
+
+## Learning how to work with the Database
+
+The Database is the best place to start developing a WoW server. Because it's easier than the other components, and there are tools that are able to automatically generate the code for you. For example, Keira3.
+
+### Download Keira3
+
+Keira3 is a DB editor for AzerothCore which allows you to edit or add contents to the world very easily, we recommend to install and play with it:
+
+- [azerothcore.org/Keira3
+](https://www.azerothcore.org/Keira3)
+
+Keira3 automatically generates the SQL code needed to create or change stuff in the database.
+Sounds complicated? Give it a try and you'll see how it works.
+
+### The DB documentation is your friend
+
+Always read the documentation about every table that you deal with:
+
+- [azerothcore.org/wiki/database-world](https://www.azerothcore.org/wiki/database-world)
+
+### Learn the SQL language
+
+In most cases, you'll need only the basics of the SQL language, and in most cases, you'll probably figure it out by yourself, however, it's not a bad idea to read about the SQL language. You can find a lot of resources online, for example:
+
+- [https://www.w3schools.com/sql/sql_intro.asp](https://www.w3schools.com/sql/sql_intro.asp)
+
+if you understand how basic statements such as `SELECT`, `UPDATE`, `INSERT` and `DELETE` work, that's usually enough. You don't need to go too deep into SQL in order to be able to contribute.
