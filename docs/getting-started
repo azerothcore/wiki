@@ -68,6 +68,14 @@ So it is **very important** that you update your AzerothCore server regularly. W
 
 You can find plenty of resources online about learning `git`, for example [try.github.io](https://try.github.io/)
 
+## Learn to check out PRs
+
+A great way to start contributing is by testing PRs made by other contributors. This is not only quite easy to do, but it is extremely helpful for the project and can help you to get into our development process.
+
+This topic is so important that there is a dedicated tutorial for it:
+
+- [azerothcore.org/wiki/How-to-test-a-PR](https://www.azerothcore.org/wiki/How-to-test-a-PR)
+
 ## Learning how to work with the Database
 
 The Database is the best place to start developing a WoW server. Because it's easier than the other components, and there are tools that are able to automatically generate the code for you. For example, Keira3.
@@ -76,11 +84,14 @@ The Database is the best place to start developing a WoW server. Because it's ea
 
 Keira3 is a DB editor for AzerothCore which allows you to edit or add contents to the world very easily, we recommend to install and play with it:
 
-- [azerothcore.org/Keira3
-](https://www.azerothcore.org/Keira3)
+- [azerothcore.org/Keira3](https://www.azerothcore.org/Keira3)
 
 Keira3 automatically generates the SQL code needed to create or change stuff in the database.
 Sounds complicated? Give it a try and you'll see how it works.
+
+### Download a MySQL client
+
+- [azerothcore.org/wiki/Database-client](https://www.azerothcore.org/wiki/Database-client)
 
 ### The DB documentation is your friend
 
