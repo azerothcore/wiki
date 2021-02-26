@@ -1,0 +1,47 @@
+# Getting started with AzerothCore
+
+## Introduction
+
+If you want to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and be able to contribute, you came to the right place!
+
+Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](https://www.azerothcore.org/wiki/How-to-ask-for-help) before asking for help.
+
+If while reading any of the tutorials linked on this page you find something that is not clear: let us know. We'll do our best to rephrase it and make it easier to be understood for beginners. Improving the docs is also a way to contribute!
+
+## Knowledge requirements
+
+There are **NO** technical requirements. You just need to be patient and willing to learn.
+
+If you already have some programming knowledge it would surely be an advantage for you. However, trust me, you don't need any pre-existing knowledge to learn about WoW servers.
+
+**Personal note from the author of this tutorial:** when I first installed my first WoW server I was 15, I had no programming knowledge at all, I was using Windows XP and barely understood English. I'm sure if you are reading this, you have already more skills than I used to have when I was trying to install MaNGOS+UDB+ScriptDev2 and get a decent WoW server to run on my local machine.
+Initially, I spent hours trying to read and understand tutorial from different people written on different websites, but eventually, I succeeded. AzerothCore is an all-in-one project so it's going to be easier than that, bear with me and you'll get there!
+
+## Installing AzerothCore on your computer
+
+The first step is always installing a local WoW server in your own machine. And there are several ways to do it, which can vary according to your operating system.
+
+### Your operating system
+
+Let me be clear about one thing: **ALL operating systems are supported by AzerothCore**.
+So you can successfully install AzerothCore GNU/Linux, macOS or Windows without any issue.
+
+However, I can tell you if you use a Linux distribution such as **Ubuntu 20.04**, the process is going to be easier. If you would like to install Ubuntu, you can download it from [here](https://ubuntu.com/download/desktop) and you can find plenty of tutorials online about how to do it. There is a nice tutorial about running WoW on Linux [here](https://www.mangosrumors.org/how-to-run-wow-on-linux/).
+
+Would you like to stick with **Windows** or **macOS**? That's absolutely fine.
+
+### Different ways to install AzerothCore
+
+Basically, there are 3 main ways to install AC:
+
+- the "**classic setup**": this is the traditional setup you would normally use to install a common WoW emulator. **All operating systems are supported.** Doing this setup also probably gives you a better overview of the components of the server.
+- the "**docker setup**": this is a simplified setup that uses Docker to automate a lot of things for you. This setup is typically easier. **You can use this setup in all operating systems where you can install [Docker](https://www.docker.com/products/docker-desktop).**
+- the "**dashboard setup**": this is an **EXTREMELY EASY** way of installing AzerothCore in your machine, based on a collection of bash scripts created by [Yehonal](https://github.com/Yehonal). However, **you can only use this setup in Ubuntu** or similar platforms. Windows is not supported, and probably we are not there yet with macOS as well.
+
+You can choose one setup, or even try more than one. You can find all the instructions here:
+
+- [azerothcore.org/wiki/Installation](https://www.azerothcore.org/wiki/Installation)
+
+Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/How-to-ask-for-help.md).
+
+Got your WoW server installed? Congratulations! Now let's see what you can do next.
