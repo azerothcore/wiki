@@ -2,7 +2,7 @@
 
 ## Introduction
 
-If you want to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute? You came to the right place!
+Would you like to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute? You came to the right place!
 
 Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](https://www.azerothcore.org/wiki/How-to-ask-for-help) before asking for help.
 
