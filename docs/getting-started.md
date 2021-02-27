@@ -2,7 +2,7 @@
 
 ## Introduction
 
-If you want to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute, you came to the right place!
+If you want to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute? You came to the right place!
 
 Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](https://www.azerothcore.org/wiki/How-to-ask-for-help) before asking for help.
 
@@ -79,7 +79,7 @@ You can find plenty of resources online about learning `git`, for example [try.g
 
 ## Learn how to update your WoW server
 
-We release improvements to AzerothCore on a daily basis. You should learn how to update your server and keep updating it often. We recommend avoiding working on older versions of AzerothCore because they have can have bugs that we already resolved and you don't want to stay behind.
+We release improvements to AzerothCore on a daily basis. You should learn how to update your server and keep updating it often. We recommend avoiding working on older versions of AzerothCore because they can have bugs that we already resolved and you don't want to stay behind.
 
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
@@ -159,7 +159,7 @@ The AI of most of the creatures you'll find in the world is done with SmartAI. W
 
 ### Learn the SQL language
 
-In most cases, you'll need only the basics of the SQL language, and in most cases, you'll probably figure it out by yourself, however, it's not a bad idea to read about the SQL language. You can find a lot of resources online, for example:
+Usually, you'll need only the basics of the SQL language, and in most cases, you'll probably figure it out by yourself, however, it's not a bad idea to read about the SQL language. You can find a lot of resources online, for example:
 
 - [https://www.w3schools.com/sql/sql_intro.asp](https://www.w3schools.com/sql/sql_intro.asp)
 
@@ -174,7 +174,7 @@ For example:
 - do some bug triaging by confirming issues and helping us to identify and close the invalid reports
 - you can also help by [triaging the bugs coming from the players of ChromieCraft](https://github.com/chromiecraft/chromiecraft) (our child-project)
 - report any bug that you may find yourself
-- try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that. Being this an open-source project, you can find plenty of examples on our main GitHub repository
+- try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that (e.g. using SmartAI or other embedded editors). Being this an open-source project, you can find plenty of examples on our main GitHub repository
 
 Would you like to talk to us? Join [the AzerothCore Discord server](https://discordapp.com/invite/gkt4y2x).
 
@@ -197,3 +197,4 @@ In this tutorial, I wanted to help beginners and demonstrate how much you can le
 
 Happy coding!
 
+-- Shin aka Francesco
