@@ -54,9 +54,11 @@ First of all, `set realmlist localhost` and join your own server using the `test
 
 Get confident with the commands, you will need them for any administration, testing or development activities.
 
-## Learn git
+## Consider learning git
 
-`git` is one of the most important tools you will use in nearly **ANY** software development project. Learning its basics will help you a lot with AzerothCore, but it's also something very good to put in your CV.
+You can just blindly copy-paste the `git` commands that you'll see in the tutorials linked here, most likely you will not have issues with them.
+However, properly learning `git` will make you really aware of what you're doing, and this knowledge can help you with whatever other software development project you may work with.
+Yes, because `git` is one of the most important tools used in many software engineering projects. Learning its basics will not only help you a lot with AzerothCore, but it's also something very good to put in your CV.
 
 You can find plenty of resources online about learning `git`, for example [try.github.io](https://try.github.io/)
 
@@ -111,6 +113,9 @@ Technically the `smart_script` is just a table inside the world database (and it
 
 Try to open Keira3, look for any creature that has "SmartAI" as "AIName", open it and click on "SmartAI" on the right menu.
 You'll be prompted with a visual editor that will assist you when working with SmartAI.
+
+![image](https://user-images.githubusercontent.com/75517/109367698-1bfea480-7897-11eb-9cf0-f047b3dcdb85.png)
+
 
 The AI of most of the creatures you'll find in the world is done with SmartAI. While more complex creatures (typically raid bosses) are scripted in C++.
 
