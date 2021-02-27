@@ -63,6 +63,9 @@ First of all, `set realmlist localhost` and join your own server using the `test
 
 Get confident with the commands, you will need them for any administration, testing or development activities.
 
+![AzerothCore GM](https://user-images.githubusercontent.com/75517/109369940-ba423880-789e-11eb-88d6-e6d8f7b8a723.png)
+
+
 ## Consider learning git
 
 You can just blindly copy-paste the `git` commands that you'll see in the tutorials linked here, most likely you will not have issues with them.
@@ -70,6 +73,9 @@ However, properly learning `git` will make you really aware of what you're doing
 Yes, because `git` is one of the most important tools used in many software engineering projects. Learning its basics will not only help you a lot with AzerothCore, but it's also something very good to put in your CV.
 
 You can find plenty of resources online about learning `git`, for example [try.github.io](https://try.github.io/)
+
+![AzerothCore learning git](https://user-images.githubusercontent.com/75517/109370018-fb3a4d00-789e-11eb-8532-1ab1bf8fba60.png)
+
 
 ## Learn how to update your WoW server
 
@@ -84,6 +90,9 @@ After you follow the update procedure, it is important to **verify** that:
 - your server application (core) has been properly updated, use the `server info` command to make sure of it
 - your DB has been properly updated and aligned to your core version, [read this answer on stackoverflow](https://stackoverflow.com/a/55282168/3497671)
 
+![AzerothCore server info](https://user-images.githubusercontent.com/75517/109370296-00e46280-78a0-11eb-9ed0-b9df14f2008b.png)
+
+
 ## Learn to check out PRs
 
 A great way to start contributing is by testing PRs made by other contributors. This is not only quite easy to do, but it is extremely helpful for the project and can help you to get into our development process.
@@ -91,6 +100,9 @@ A great way to start contributing is by testing PRs made by other contributors. 
 This topic is so important that there is a dedicated tutorial for it:
 
 - [azerothcore.org/wiki/How-to-test-a-PR](https://www.azerothcore.org/wiki/How-to-test-a-PR)
+
+![image](https://user-images.githubusercontent.com/75517/109370244-d397b480-789f-11eb-9ac7-64d98ca0d33c.png)
+
 
 ## Learning how to work with the Database
 
@@ -105,9 +117,16 @@ Keira3 is a DB editor for AzerothCore which allows you to edit or add contents t
 Keira3 automatically generates the SQL code needed to create or change stuff in the database.
 Sounds complicated? Give it a try and you'll see how it works.
 
+![AzerothCore Keira3](https://user-images.githubusercontent.com/75517/109370160-769bfe80-789f-11eb-9958-dc17ff48f39a.png)
+
 ### Download a MySQL client
 
+You'll need a generic database client too in order to manage tables and their contents.
+
 - [azerothcore.org/wiki/Database-client](https://www.azerothcore.org/wiki/Database-client)
+
+![AzerothCore world database viewed with sequel-ace](https://user-images.githubusercontent.com/75517/109370368-42750d80-78a0-11eb-946c-c0831a02b52b.png)
+
 
 ### The DB documentation is your friend
 
@@ -151,19 +170,30 @@ if you understand how basic statements such as `SELECT`, `UPDATE`, `INSERT` and 
 If you mastered some of the above parts, there is already **A LOT** you can do to help our project and becoming a contributor.
 For example:
 
-- help the developers by testing PRs
+- help the developers by testing PRs and giving your feedback
 - do some bug triaging by confirming issues and helping us to identify and close the invalid reports
-- report any bug that you may find
-- 
+- you can also help by [triaging the bugs coming from the players of ChromieCraft](https://github.com/chromiecraft/chromiecraft) (our child-project)
+- report any bug that you may find yourself
+- try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that. Being this an open-source project, you can find plenty of examples on our main GitHub repository
 
-## Learn C++
+Would you like to talk to us? Join [the AzerothCore Discord server](https://discordapp.com/invite/gkt4y2x).
 
-### Learn some OOP basics
+![Contributing to AzerothCore](https://user-images.githubusercontent.com/75517/109370461-b44d5700-78a0-11eb-916c-81c8500fa969.png)
 
-TODO
+## Conclusion and next steps
 
-### Do some practice
+Never stop learning. Go to learn the basics behind Object-Oriented Programming (OOP).
+Get some C++ tutorial, start experimenting with the core source code. Look at other people PR's as examples.
 
-## Summary
+Study the basic mechanisms of the game server (read articles like [this](https://stackoverflow.com/questions/62249204/how-does-the-update-diff-work-in-azerothcore). Try to [create modules](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore).
 
-TODO
+Or learn another programming language, there are plenty of tools you might build for AzerothCore users or developers using your favourite programming language.
+
+Whatever you are going to do, always remember: **StackOverflow is your friend**.
+
+-------------------------------------------------
+
+In this tutorial, I wanted to help beginners and demonstrate how much you can learn and contribute without even knowing C++. All you need is some time and patience.
+
+Happy coding!
+
