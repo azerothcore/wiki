@@ -95,6 +95,8 @@ then to launch the server you have to destroy and recreate the containers using 
 
 -----
 
+## Verify your actual version
+
 To make sure you are correctly running your server with the PR, check the date and branch name in the output of the `server info` command. They should match with the PR.
 
 Now log in game and do your tests!
