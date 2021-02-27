@@ -8,18 +8,21 @@ Getting started with WoW emulation might be tricky at first, but don't worry, we
 
 If while reading any of the tutorials linked on this page you find something that is not clear: let us know. We'll do our best to rephrase it and make it easier to be understood for beginners. Improving the docs is also a way to contribute!
 
+![AzerothCore learning code](https://user-images.githubusercontent.com/75517/109369720-b6fa7d00-789d-11eb-86b4-5fe15d6ab834.png)
+
+
 ## Knowledge requirements
 
 There are **NO** technical requirements. You just need to be patient and willing to learn.
 
 If you already have some programming knowledge it would surely be an advantage for you. However, trust me, you don't need any pre-existing knowledge to learn about WoW servers.
 
-**Personal note from the author of this tutorial:** when I first installed my first WoW server I was 15, I had no programming knowledge at all, I was using Windows XP and barely understood English. I'm sure if you are reading this, you have already more skills than I used to have when I was trying to install MaNGOS+UDB+ScriptDev2 and get a decent WoW server to run on my local machine.
-Initially, I spent hours trying to read and understand tutorial from different people written on different websites, but eventually, I succeeded. AzerothCore is an all-in-one project so it's going to be easier than that, bear with me and you'll get there!
+*Personal note from the author of this tutorial: when I first installed my first WoW server I was 15, I had no programming knowledge at all, I was using Windows XP and barely understood English. I'm sure if you are reading this, you have already more skills than I used to have when I was trying to install MaNGOS+UDB+ScriptDev2 and get a decent WoW server to run on my local machine.
+Initially, I spent hours trying to read and understand tutorial from different people written on different websites, but eventually, I succeeded. AzerothCore is an all-in-one project so it's going to be easier than that, bear with me and you'll get there!*
 
 ## Installing AzerothCore on your computer
 
-The first step is always installing a local WoW server in your own machine. And there are several ways to do it, which can vary according to your operating system.
+The first step is always installing a local WoW server in your own machine. And there are several ways to do it, which can vary according to the operating system.
 
 ### Your operating system
 
@@ -29,6 +32,9 @@ So you can successfully install AzerothCore GNU/Linux, macOS or Windows without 
 However, I can tell you if you use a Linux distribution such as **Ubuntu 20.04**, the process is going to be easier. If you would like to install Ubuntu, you can download it from [here](https://ubuntu.com/download/desktop) and you can find plenty of tutorials online about how to do it. There is a nice tutorial about running WoW on Linux [here](https://www.mangosrumors.org/how-to-run-wow-on-linux/).
 
 Would you like to stick with **Windows** or **macOS**? That's absolutely fine.
+
+![AzerothCore supports GNU/Linux, macOS and Windows](https://user-images.githubusercontent.com/75517/109369213-e5775880-789b-11eb-8356-99a4ab842bfb.png)
+
 
 ### Different ways to install AzerothCore
 
@@ -45,6 +51,9 @@ You can choose one setup, or even try more than one. You can find all the instru
 Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/How-to-ask-for-help.md).
 
 Got your WoW server installed? Congratulations! Now let's see what you can do next.
+
+![AzerothCore server running on macOS](https://user-images.githubusercontent.com/75517/109369101-80236780-789b-11eb-900c-bcc17a3cf13c.png)
+
 
 ## Access the game, learn the GM commands
 
@@ -69,6 +78,11 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
 - [azerothcore.org/wiki/Update](https://www.azerothcore.org/wiki/Update)
+
+After you follow the update procedure, it is important to **verify** that:
+
+- your server application (core) has been properly updated, use the `server info` command to make sure of it
+- your DB has been properly updated and aligned to your core version, [read this answer on stackoverflow](https://stackoverflow.com/a/55282168/3497671)
 
 ## Learn to check out PRs
 
@@ -105,19 +119,24 @@ Always read the documentation about every table that you deal with:
 
 With SmartAI you can do a lot of things. You can add special behaviour to an element of the game such as a creature, without ever touching a single line of C++.
 
-In a nutshell, with SmartAI you can make an entity (for example a Creature) perform a certain **action** when a certain **event** occurs, optionally specifying a **target**. In other words, you can make entities react to events with a behaviour defined by you.
+In a nutshell, with SmartAI you can make an entity (for example a Creature) perform a certain **action** when a certain **event** occurs, optionally specifying a **target**. In other words, you can make entities react to events with behaviour defined by you.
 
 For example, you can make a creature cast a spell (action), when its health goes below 50% of its total health (event), against a random member of the party group (target).
 
-Technically the `smart_script` is just a table inside the world database (and its documentation can be found [here](https://www.azerothcore.org/wiki/smart_scripts). Tools like Keira3 help you working with SmartAI using a pratical graphic interface.
+Technically the `smart_script` is just a table inside the world database (and its documentation can be found [here](https://www.azerothcore.org/wiki/smart_scripts)). Tools like Keira3 help you working with SmartAI using a practical graphic interface.
 
 Try to open Keira3, look for any creature that has "SmartAI" as "AIName", open it and click on "SmartAI" on the right menu.
 You'll be prompted with a visual editor that will assist you when working with SmartAI.
 
-![image](https://user-images.githubusercontent.com/75517/109367698-1bfea480-7897-11eb-9cf0-f047b3dcdb85.png)
+![AzerothCore SmartAI with Keira3](https://user-images.githubusercontent.com/75517/109367698-1bfea480-7897-11eb-9cf0-f047b3dcdb85.png)
 
+Experiment with the SmartAI and get confident with it. It's a simple but very powerful tool.
+After getting some knowledge of it, you will be able to do many things. Many bugs can be fixed just using the SmartAI.
 
 The AI of most of the creatures you'll find in the world is done with SmartAI. While more complex creatures (typically raid bosses) are scripted in C++.
+
+![SmartAI vs C++](https://user-images.githubusercontent.com/75517/109369529-e78de700-789c-11eb-97d5-02ecc6c85a0a.png)
+
 
 ### Learn the SQL language
 
