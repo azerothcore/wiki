@@ -185,7 +185,7 @@ Would you like to talk to us? Join [the AzerothCore Discord server](https://disc
 Never stop learning. Go to learn the basics behind Object-Oriented Programming (OOP).
 Get some C++ tutorial, start experimenting with the core source code. Look at other people PR's as examples.
 
-Study the basic mechanisms of the game server (read articles like [this](https://stackoverflow.com/questions/62249204/how-does-the-update-diff-work-in-azerothcore). Try to [create modules](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore).
+Study the basic mechanisms of the game server (read articles like [this](https://stackoverflow.com/questions/62249204/how-does-the-update-diff-work-in-azerothcore)). Try to [create modules](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore).
 
 Or learn another programming language, there are plenty of tools you might build for AzerothCore users or developers using your favourite programming language.
 
