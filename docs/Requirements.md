@@ -14,13 +14,14 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
-**Note:** If you add the option `-y` and at the end of the list, it will start installing them without the need for you to confirm.
+**Note**: in older versions of Ubuntu like **18.04** you need to install gcc 10:
 
-**Example:**
-
-```sh
-apt-get update && apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev -y
 ```
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt install gcc-10 g++-10
+```
+
 
 --- 
 
