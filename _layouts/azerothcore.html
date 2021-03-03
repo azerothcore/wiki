@@ -35,7 +35,9 @@
             {% include {{ site.inc_before_toc }} %}
             {% endif %}
             
+            {% if site.tableofcontents %}
             {% include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" h_min=1 h_max=2 ordered=1 %}
+            {% endif %}
             
             {% if site.inc_after_toc %}
             {% include {{ site.inc_after_toc }} %}
