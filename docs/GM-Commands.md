@@ -22,7 +22,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |achievement add|2|`.achievement add $achievement`|Add an achievement to the targeted player. $achievement: can be either achievement id or achievement link|
 |achievement checkall|3|`.achievement checkall`|Check all achievement criteria of the selected player.|
 |additem|2|`.additem #itemid/[#itemname]/#shift-click-item-link #itemcount`|Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
-|additemset|2|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
+|additemset|2|`.additemset #itemsetid`|Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
 |announce|2|`.announce $MessageToBroadcast`|Send a global message to all players online in chat log.|
 |appear|1|`.appear [$charactername]`|Teleport to the given character. Either specify the character name or click on the character's portrait,e.g. when you are in a group. Character can be offline.|
 |arena captain|3|`.arena captain #TeamID $name`|A command to set new captain to the team. $name must be in the team|
@@ -42,7 +42,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |unban account|2|`.unban account $Name`|Unban accounts for account name pattern.|
 |unban character|2|`.unban character $Name`|Unban accounts for character name pattern.|
 |unban ip|2|`.unban ip $Ip`|Unban accounts for IP pattern.|
-|baninfo|2|Syntax: .baninfo $subcommand Type .baninfo to see the list of possible subcommands or .help baninfo $subcommand to see info on subcommands|
+|baninfo|2|`.baninfo $subcommand`|Type .baninfo to see the list of possible subcommands or .help baninfo $subcommand to see info on subcommands|
 |baninfo account|2|`.baninfo account $accountid`|Watch full information about a specific ban.|
 |baninfo character|2|`.baninfo character $charactername`|Watch full information about a specific ban.|
 |baninfo ip|2|`.baninfo ip $ip`|Watch full information about a specific ban.|
@@ -58,12 +58,12 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |bf timer|3|`.bf timer #battleid #timer`||
 |bindsight|3|`.bindsight`|Binds vision to the selected unit indefinitely. Cannot be used while currently possessing a target.|
 |unbindsight|3|`.unbindsight`|Removes bound vision. Cannot be used while currently possessing a target.|
-|cast|2|Syntax: .cast #spellid [triggered] Cast #spellid to selected target. If no target selected cast to self. If 'trigered' or part provided then spell casted with triggered flag.|
+|cast|2|`.cast #spellid [triggered]`|Cast #spellid to selected target. If no target selected cast to self. If 'trigered' or part provided then spell casted with triggered flag.|
 |cast back|2|`.cast back #spellid [triggered]`|Selected target will cast #spellid to your character. If 'trigered' or part provided then spell casted with triggered flag.|
 |cast dest|2|`.cast dest #spellid #x #y #z [triggered]`|Selected target will cast #spellid at provided destination. If 'trigered' or part provided then spell casted with triggered flag.|
 |cast dist|2|`.cast dist #spellid [#dist [triggered]]`|You will cast spell to pint at distance #dist. If 'trigered' or part provided then spell casted with triggered flag. Not all spells can be casted as area spells.|
 |cast self|2|`.cast self #spellid [triggered]`|Cast #spellid by target at target itself. If 'trigered' or part provided then spell casted with triggered flag.|
-|cast target|2|Syntax: .cast target #spellid [triggered] Selected target will cast #spellid to his victim. If 'trigered' or part provided then spell casted with triggered flag.|
+|cast target|2|`.cast target #spellid [triggered]`|Selected target will cast #spellid to his victim. If 'trigered' or part provided then spell casted with triggered flag.|
 |character changefaction|2|`.character changefaction $name`|Change character faction.|
 |character changerace|2|`.character changerace $name`|Change character race.|
 |character customize|2|`.character customize [$name]`|Mark selected in game or by $name in command character for customize at next login.|
@@ -76,7 +76,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |character rename|2|`.character rename [$name]`|Mark selected in game or by $name in command character for rename at next login.|
 |character reputation|2|`.character reputation [$player_name]`|Show reputation information for selected player or player find by $player_name.|
 |character titles|2|`.character titles [$player_name]`|Show known titles list for selected player or player find by $player_name.|
-|cheat|2|Syntax: .cheat $subcommand Type .cheat to see the list of possible subcommands or .help cheat $subcommand to see info on subcommands|
+|cheat|2|`.cheat $subcommand`|Type .cheat to see the list of possible subcommands or .help cheat $subcommand to see info on subcommands|
 |cheat casttime|2|`.cheat casttime [on/off]`|Enables or disables your character's spell cast times.|
 |cheat cooldown|2|`.cheat cooldown [on/off]`|Enables or disables your character's spell cooldowns.|
 |cheat god|2|`.cheat god [on/off]`|Enables or disables your character's ability to take damage.|
@@ -89,7 +89,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |commands|0|`.commands`|Display a list of available commands for your account level.|
 |cooldown|2|`.cooldown [#spell_id]`|Remove all (if spell_id not provided) or #spel_id spell cooldown from selected character or you (if no selection).|
 |damage|2|`.damage $damage_amount [$school [$spellid]]`|Apply $damage to target. If not $school and $spellid provided then this flat clean melee damage without any modifiers. If $school provided then damage modified by armor reduction (if school physical), and target absorbing modifiers and result applied as melee damage to target. If spell provided then damage modified and applied as spell damage. $spellid can be shift-link.|
-|debug|2|Syntax: .debug $subcommand Type .debug to see the list of possible subcommands or .help debug $subcommand to see info on subcommands|
+|debug|2|`.debug $subcommand`|Type .debug to see the list of possible subcommands or .help debug $subcommand to see info on subcommands|
 |debug Mod32Value|3|`.debug Mod32Value #field #value`|Add #value to field #field of your character.|
 |debug areatriggers|3|`.debug areatriggers`|Toggle debug mode for areatriggers. In debug mode GM will be notified if reaching an areatrigger|
 |debug arena|3|`.debug arena`|Toggle debug mode for arenas. In debug mode GM can start arena with single player.|
@@ -105,7 +105,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug play cinematic|1|`.debug play cinematic #cinematicid`|Play cinematic #cinematicid for you. You stay at place while your mind fly.|
 |debug play movie|1|`.debug play movie #movieid`|Play movie #movieid for you.|
 |debug play sound|1|`.debug play sound #soundid`|Play sound with #soundid. Sound will be play only for you. Other players do not hear this. Warning: client may have more 5000 sounds...|
-|debug send buyerror|3|Syntax: .debug send buyerror #errorid. Test buy error id.|
+|debug send buyerror|3|`.debug send buyerror #errorid`|Test buy error id.|
 |debug send channelnotify|3|`.debug send channelnotify #notifytype`|Send #notifytype to the channel "test".|
 |debug send chatmmessage|3|`.debug send chatmmessage #msgtype`|Send a message "testtest" of type #msgtype.|
 |debug send equiperror|3|`.debug send equiperror #errorid`|Test equip error id.|
@@ -123,10 +123,10 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug spawnvehicle|3|`.debug spawnvehicle #entry [#vehicleid]`|Spawn vehicle with creature template #entry and optional #vehicleid.|
 |debug unitstate|3|`.debug unitstate [#unitstate]`|Set #unitstate for the selected unit. If no parameter is specified show the unit state and the react state of the unit.|
 |debug uws|3|`.debug uws #worldstate #value`|Send update world state for #worldstate and #value to the current player.|
-|deserter bg add|3|Syntax: .deserter bg add $time. Adds the bg deserter debuff to your target with $time duration.|
+|deserter bg add|3|`.deserter bg add $time`|Adds the bg deserter debuff to your target with $time duration.|
 |deserter bg remove|3|`.deserter bg remove`|Removes the bg deserter debuff from your target.|
 |deserter instance add|3|`.deserter instance add $time`|Adds the instance deserter debuff to your target with $time duration.|
-|deserter instance remove|3|Syntax: .deserter instance remove. Removes the instance deserter debuff from your target.|
+|deserter instance remove|3|`.deserter instance remove`|Removes the instance deserter debuff from your target.|
 |dev|3|`.dev [on/off]`|Enable or Disable in game Dev tag or show current state if on/off not provided.|
 |die|2|`.die`|Kill the selected player. If no player is selected, it will kill you.|
 |disable add battleground|3|`.disable add battleground $entry $flag $comment`||
@@ -143,10 +143,10 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |disable remove vmap|3|`.disable remove vmap $entry`||
 |dismount|0|`.dismount`|Dismount you, if you are mounted.|
 |distance|3|`.distance`|Display the distance from your character to the selected creature.|
-|event|2|Syntax: .event #event_id Show details about event with #event_id.|
+|event|2|`.event #event_id`|Show details about event with #event_id.|
 |event activelist|2|`.event activelist`|Show list of currently active events.|
 |event start|2|`.event start #event_id`|Start event #event_id. Set start time for event to current moment (change not saved in DB).|
-|event stop|2|Syntax: .event stop #event_id Stop event #event_id. Set start time for event to time in past that make current moment is event stop time (change not saved in DB).|
+|event stop|2|`.event stop #event_id`|Stop event #event_id. Set start time for event to time in past that make current moment is event stop time (change not saved in DB).|
 |explorecheat|3|`.explorecheat [1\0]`|1: Set all zones to explored; 0: Set all zones to unexplored|
 |flusharenapoints|3|`.flusharenapoints`|Use it to distribute arena points based on arena team ratings, and start a new week.|
 |freeze|2|`.freeze (#player)`|"Freezes" #player and disables his chat. When using this without #name it will freeze your target.|
@@ -160,7 +160,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |gmannounce|2|`.gmannounce $announcement`|Send an announcement to online Gamemasters.|
 |gmnameannounce|2|`.gmnameannounce $announcement`|Send an announcement to all online GM's, displaying the name of the sender.|
 |gmnotify|2|`.gmnotify $notification`|Displays a notification on the screen of all online GM's.|
-|go|1|Syntax: .go $subcommand Type .go to see the list of possible subcommands or .help go $subcommand to see info on subcommands|
+|go|1|`.go $subcommand`|Type .go to see the list of possible subcommands or .help go $subcommand to see info on subcommands|
 |go creature|1|Syntax:.go creature #creature_guid|Teleport your character to creature with guid #creature_guid..go creature #creature_nameTeleport your character to creature with this name..go creature id #creature_entryTeleport your character to a creature that was spawned from the template with this entry.If more than one creature is found, then you are teleported to the first that is found inside the database.|
 |go gobject|1|`.go gobject #object_guid`|Teleport your character to gameobject with guid #object_guid|
 |go graveyard|1|`.go graveyard #graveyardId`|Teleport to graveyard with the graveyardId specified.|
@@ -169,7 +169,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |go ticket|2|`.go ticket #ticketid`|Teleports the user to the location where $ticketid was created.|
 |go trigger|1|`.go trigger #trigger_id`|Teleport your character to areatrigger with id #trigger_id. Character will be teleported to trigger target if selected areatrigger is telporting trigger.|
 |go xyz|1|`.go xyz #x #y [#z [#mapid [#orientation]]]`|Teleport player to point with (#x,#y,#z) coordinates at map #mapid with orientation #orientation. If z is not provided, ground/water level will be used. If mapid is not provided, the current map will be used. If #orientation is not provided, the current orientation will be used.|
-|go zonexy|1|Syntax: .go zonexy #x #y [#zone] Teleport player to point with (#x,#y) client coordinates at ground(water) level in zone #zoneid or current zone if #zoneid not provided. You can look up zone using .lookup area $namepart|
+|go zonexy|1|`.go zonexy #x #y [#zone]`|Teleport player to point with (#x,#y) client coordinates at ground(water) level in zone #zoneid or current zone if #zoneid not provided. You can look up zone using .lookup area $namepart|
 |gobject|2|`.gobject $subcommand`|Type .gobject to see the list of possible subcommands or .help gobject $subcommand to see info on subcommands|
 |gobject activate|2|`.gobject activate #guid`|Activates an object like a door or a button.|
 |gobject add|3|`.gobject add #id`|Add a game object from game object templates to the world at your current location using the #id. spawntimesecs sets the spawntime, it is optional. Note: this is a copy of .gameobject.|
@@ -181,7 +181,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |gobject set phase|3|`.gobject set phase #guid #phasemask`|Gameobject with DB guid #guid phasemask changed to #phasemask with related world vision update for players. Gameobject state saved to DB and persistent.|
 |gobject target|1|`.gobject target [#go_id\#go_name_part]`|Locate and show position nearest gameobject. If #go_id or #go_name_part provide then locate and show position of nearest gameobject with gameobject template id #go_id or name included #go_name_part as part.|
 |gobject turn|3|`.gobject turn #goguid`|Set for gameobject #goguid orientation same as current character orientation.|
-|gps|1|Syntax: .gps [$name\$shift-link] Display the position information for a selected character or creature (also if player name $name provided then for named player, or if creature/gameobject shift-link provided then pointed creature/gameobject if it loaded). Position information includes X, Y, Z, and orientation, map Id and zone Id|
+|gps|1|`.gps [$name\$shift-link]`|Display the position information for a selected character or creature (also if player name $name provided then for named player, or if creature/gameobject shift-link provided then pointed creature/gameobject if it loaded). Position information includes X, Y, Z, and orientation, map Id and zone Id|
 |group|2|`.group $subcommand`|Type .group to see the list of possible subcommands or .help group $subcommand to see info on subcommands|
 |group disband|2|`.group disband [$characterName]`|Disbands the given character's group.|
 |group join|2|`.group join $AnyCharacterNameFromGroup [$CharacterName]`|Adds to group of player $AnyCharacterNameFromGroup player $CharacterName (or selected).|
@@ -201,13 +201,13 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |honor add|2|`.honor add $amount`|Add a certain amount of honor (gained today) to the selected player.|
 |~~honor add kill~~ NOT IMPLEMENTED|2|`.honor add kill`|Add the targeted unit as one of your pvp kills today (you only get honor if it's a racial leader or a player)|
 |honor update|2|`.honor update`|Force the yesterday's honor fields to be updated with today's data, which will get reset for the selected player.|
-|instance|1|Syntax: .instance $subcommand Type .instance to see the list of possible subcommands or .help instance $subcommand to see info on subcommands|
+|instance|1|`.instance $subcommand`|Type .instance to see the list of possible subcommands or .help instance $subcommand to see info on subcommands|
 |instance getbossstate|1|`.instance getbossstate $bossId [$Name]`|Gets the current EncounterState for the provided boss id. If no character name is provided, the current map will be used as target.|
 |instance listbinds|1|`.instance listbinds`|Lists the binds of the selected player.|
 |instance savedata|3|`.instance savedata`|Save the InstanceData for the current player's map to the DB.|
 |instance setbossstate|2|`.instance setbossstate $bossId $encounterState [$Name]`|Sets the EncounterState for the given boss id to a new value. EncounterStates range from 0 to 5. If no character name is provided, the current map will be used as target.|
 |instance stats|1|`.instance stats`|Shows statistics about instances.|
-|instance unbind|2|Syntax: .instance unbind <mapid\all> [difficulty] Clear all/some of player's binds|
+|instance unbind|2|`.instance unbind <mapid\all> [difficulty]`|Clear all/some of player's binds|
 |itemmove|2|`.itemmove #sourceslotid #destinationslotid`|Move an item from slots #sourceslotid to #destinationslotid in your inventory Not yet implemented|
 |kick|2|`.kick [$charactername] [$reason]`|Kick the given character name from the world with or without reason. If no character name is provided then the selected player (except for yourself) will be kicked. If no reason is provided, default is "No Reason".|
 |learn|2|`.learn #spell [all]`|Selected character learn a spell of id #spell. If 'all' provided then all ranks learned.|
@@ -220,7 +220,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |learn all my spells|2|`.learn all my spells`|Learn all spells (except talents and spells with first rank learned as talent) available for his class.|
 |learn all my talents|2|`.learn all my talents`|Learn all talents (and spells with first rank learned as talent) available for his class.|
 |learn all recipes|2|`.learn all recipes [$profession]`|Learns all recipes of specified profession and sets skill level to max. Example: .learn all recipes enchanting|
-|unlearn|2|Syntax: .unlearn #spell [all] Unlearn for selected player a spell #spell. If 'all' provided then all ranks unlearned.|
+|unlearn|2|`.unlearn #spell [all]`|Unlearn for selected player a spell #spell. If 'all' provided then all ranks unlearned.|
 |levelup|2|`.levelup [$playername] [#numberoflevels]`|Increase/decrease the level of character with $playername (or the selected if not name provided) by #numberoflevels Or +1 if no #numberoflevels provided). If #numberoflevels is omitted, the level will be increase by 1. If #numberoflevels is 0, the same level will be restarted. If no character is selected and name not provided, increase your level. Command can be used for offline character. All stats and dependent values recalculated. At level decrease talents can be reset if need. Also at level decrease equipped items with greater level requirement can be lost.|
 |lfg clean|3|`.flg clean`|Cleans current queue, only for debugging purposes.|
 |lfg group|1|`.lfg group`|Shows information about all players in the group (state, roles, comment, dungeons selected).|
@@ -233,7 +233,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |list creature|1|`.list creature #creature_id [#max_count]`|Output creatures with creature id #creature_id found in world. Output creature guids and coordinates sorted by distance from character. Will be output maximum #max_count creatures. If #max_count not provided use 10 as default value.|
 |list gobject|1|`.list gobject #gameobject_id [#max_count]`|Output gameobjects with gameobject id #gameobject_id found in world. Output gameobject guids and coordinates sorted by distance from character. Will be output maximum #max_count gameobject. If #max_count not provided use 10 as default value.|
 |list item|1|`.list item #item_id [#max_count]`|Output items with item id #item_id found in all character inventories, mails, auctions, and guild banks. Output item guids, item owner guid, owner account and owner name (guild name and guid in case guild bank). Will be output maximum #max_count items. If #max_count not provided use 10 as default value.|
-|lookup|13|Syntax: .lookup $subcommand Type .lookup to see the list of possible subcommands or .help lookup $subcommand to see info on subcommands|
+|lookup|1|`.lookup $subcommand`|Type .lookup to see the list of possible subcommands or .help lookup $subcommand to see info on subcommands|
 |lookup area|1|`.lookup area $namepart`|Looks up an area by $namepart, and returns all matches with their area ID's.|
 |lookup creature|1|`.lookup creature $namepart`|Looks up a creature by $namepart, and returns all matches with their creature ID's.|
 |lookup event|1|`.lookup event $name`|Attempts to find the ID of the event with the provided $name.|
@@ -251,7 +251,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |lookup spell id|1|`.lookup spell id #spellid`|Looks up a spell by #spellid, and returns the match with its spell name.|
 |lookup taxinode|1|`.lookup taxinode $substring`|Search and output all taxinodes with provide $substring in name.|
 |lookup teleport|1|`.lookup teleport $substring`|Search and output all .teleport command locations with provide $substring in name.|
-|lookup title|1|Syntax: .lookup title $$namepart Looks up a title by $namepart, and returns all matches with their title ID's and index's.|
+|lookup title|1|`.lookup title $$namepart`|Looks up a title by $namepart, and returns all matches with their title ID's and index's.|
 |mailbox|1|`.mailbox`|Open mailbox.|
 |maxskill|2|`.maxskill`|Sets all skills of the targeted player to their maximum values for its current level.|
 |mmap loadedtiles|3|`.mmap loadedtiles`|To show which tiles are currently loaded.|
@@ -267,7 +267,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |modify faction|3|`.modify faction #factionid #flagid #npcflagid #dynamicflagid`|Modify the faction and flags of the selected creature. Without arguments, display the faction and flags of the selected creature.|
 |modify gender|2|`.modify gender male/female`|Change gender of selected player.|
 |modify honor|2|`.modify honor $amount`|Add $amount honor points to the selected player.|
-|modify hp|2|Syntax: .modify hp #newhp Modify the hp of the selected player. If no player is selected, modify your hp.|
+|modify hp|2|`.modify hp #newhp`|Modify the hp of the selected player. If no player is selected, modify your hp.|
 |modify mana|2|`.modify mana #newmana`|Modify the mana of the selected player. If no player is selected, modify your mana.|
 |modify money|2|`.modify money #money`|Add or remove money to the selected player. If no player is selected, modify your money. #gold can be negative to remove money.|
 |modify mount|2|`.modify mount #id #speed`|Display selected player as mounted at #id creature and set speed to #speed value.|
@@ -284,7 +284,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |modify speed walk|2|`.modify speed bwalk #rate`|Modify the speed of the selected player while running to "normal walk speed"*rate. If no player is selected, modify your speed. #rate may range from 0.1 to 50.|
 |modify spell|2||TODO|
 |modify standstate|2|`.modify standstate #emoteid`|Change the emote of your character while standing to #emoteid.|
-|modify talentpoints|2|Syntax: .modify talentpoints #amount Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward.|
+|modify talentpoints|2|`.modify talentpoints #amount`|Set free talent points for selected character or character's pet. It will be reset to default expected at next levelup/login/quest reward.|
 |morph|1|`.morph #displayid`|Change your current model id to #displayid.|
 |morph reset|1|`.morph reset`|Reset the original model for the selected target.|
 |movegens|3|`.movegens`|Show movement generators stack for selected creature or player.|
@@ -294,7 +294,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |nameannounce|2|`.nameannounce $announcement`|Send an announcement to all online players, displaying the name of the sender.|
 |neargrave|2|`.neargrave [alliance\horde]`|Find nearest graveyard linked to zone (or only nearest from accepts alliance or horde faction ghosts).|
 |notify|2|`.notify $MessageToBroadcast`|Send a global message to all players online in screen.|
-|npc|2|Syntax: .npc $subcommand Type .npc to see the list of possible subcommands or .help npc $subcommand to see info on subcommands|
+|npc|2|`.npc $subcommand`|Type .npc to see the list of possible subcommands or .help npc $subcommand to see info on subcommands|
 |npc add|3|`.npc add #creatureid`|Spawn a creature by the given template id of #creatureid.|
 |npc add formation|3|`.npc add formation $leader`|Add selected creature to a leader's formation.|
 |npc add item|3|`.npc add item #itemId <#maxcount><#incrtime><#extendedcost>r`|Add item #itemid to item list of selected vendor. Also optionally set max count item in vendor item list and time to item count restoring and items ExtendedCost.|
@@ -308,7 +308,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |npc move|3|`.npc move [#creature_guid]`|Move the targeted creature spawn point to your coordinates.|
 |npc playemote|3|`.npc playemote #emoteid`|Make the selected creature emote with an emote of id #emoteid.|
 |npc say|2|`.npc say $message`|Make selected creature say specified message.|
-|npc set allowmove|3|Syntax: .npc set allowmove Enable or disable movement creatures in world. Not implemented.|
+|npc set allowmove|3|`.npc set allowmove`|Enable or disable movement creatures in world. Not implemented.|
 |npc set data|3|`.npc set data $field $data`|Sets data for the selected creature. Used for testing Scripting|
 |npc set entry|3|`.npc set entry $entry`|Switch selected creature with another entry from creature_template. - New creature.id value not saved to DB.|
 |npc set faction original|3|`.npc set faction original`|Revert the temporal faction of the selected creature.|
@@ -326,7 +326,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |npc textemote|2|`.npc textemote #emoteid`|Make the selected creature to do textemote with an emote of id #emoteid.|
 |npc whisper|2|`.npc whisper #playerguid #text`|Make the selected npc whisper #text to #playerguid.|
 |npc yell|2|`.npc yell $message`|Make selected creature yell specified message.|
-|pdump|3|Syntax: .pdump $subcommand Type .pdump to see the list of possible subcommands or .help pdump $subcommand to see info on subcommands|
+|pdump|3|`.pdump $subcommand`|Type .pdump to see the list of possible subcommands or .help pdump $subcommand to see info on subcommands|
 |pdump load|3|`.pdump load $filename $account [$newname] [$newguid]`|Load character dump from dump file into character list of $account with saved or $newname, with saved (or first free) or $newguid guid.|
 |pdump write|3|`.pdump write $filename $playerNameOrGUID`|Write character dump with name/guid $playerNameOrGUID to file $filename.|
 |pet|2|`.pet $subcommand`|Type .pet to see the list of possible subcommands or .help pet $subcommand to see info on subcommands|
@@ -339,7 +339,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |player unlearn|2|`.player unlearn #playername #spell [all]`|Unlearn spell #spell for the specified player. If 'all' is added then all ranks are unlearned.|
 |possess|2|`.possess`|Possesses indefinitely the selected creature.|
 |unpossess|2|`.unpossess`|If you are possessed, unpossesses yourself; otherwise unpossesses current possessed target.|
-|quest|2|Syntax: .quest $subcommand Type .quest to see the list of possible subcommands or .help quest $subcommand to see info on subcommands|
+|quest|2|`.quest $subcommand`|Type .quest to see the list of possible subcommands or .help quest $subcommand to see info on subcommands|
 |quest add|2|`.quest add #quest_id`|Add to character quest log quest #quest_id. Quest started from item can't be added by this command but correct .additem call provided in command output.|
 |quest complete|2|`.quest complete #questid`|Mark all quest objectives as completed for target character active quest. After this target character can go and get quest reward.|
 |quest remove|2|`.quest remove #quest_id`|Set quest #quest_id state to not completed and not active (and remove from active quest list) for selected player.|
@@ -350,7 +350,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload achievement_reward|3|`.reload achievement_reward`|Reload achievement_reward table.|
 |reload achievement_reward_locale|3|`.reload achievement_reward_locale`|Reload achievement_reward_locale table.|
 |reload acore_string|3|`.reload acore_string`|Reload acore_string table.|
-|reload all|3|Syntax: .reload all Reload all tables with reload support added and that can be safe reloaded.|
+|reload all|3|`.reload all`|Reload all tables with reload support added and that can be safe reloaded.|
 |reload all achievement|3|`.reload all achievement`|Reload achievement_reward, achievement_criteria_data tables.|
 |reload all area|3|`.reload all area`|Reload areatrigger_teleport, areatrigger_tavern, game_graveyard_zone tables.|
 |reload all gossips|3|`.reload all gossips`|Reload gossip_menu, gossip_menu_option, gossip_scripts, points_of_interest tables.|
@@ -370,7 +370,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload broadcast_text|3|`.reload broadcast_text`|Reload broadcast_text table.|
 |reload command|3|`.reload command`|Reload command table.|
 |reload conditions|3||Reload conditions table.|
-|reload config|3|Syntax: .reload config Reload config settings (by default stored in worldserver.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload.|
+|reload config|3|`.reload config`|Reload config settings (by default stored in worldserver.conf). Not all settings can be change at reload: some new setting values will be ignored until restart, some values will applied with delay or only to new objects/maps, some values will explicitly rejected to change at reload.|
 |reload creature_linked_respawn|2|`.reload creature_linked_respawn`|Reload creature_linked_respawn table.|
 |reload creature_loot_template|3|`.reload creature_loot_template`|Reload creature_loot_template table.|
 |reload creature_onkill_reputation|3|`.reload creature_onkill_reputation`|Reload creature_onkill_reputation table.|
@@ -390,10 +390,9 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload gameobject_queststarter|3|`.reload gameobject_queststarter`|Reload gameobject_queststarter table.|
 |reload gameobject_template_locale|3|`.reload gameobject_template_locale`|Reload gameobject_template_locale table.|
 |reload gm_tickets|3|`.reload gm_tickets`|Reload gm_tickets table.|
-|reload gossip_menu_option_locale|3|Syntax: .reload gossip_menu_option_locale. Reload gossip_menu_option_locale table.|
-|reload gossip_menu_option|3|Syntax: .reload gossip_menu_option Reload gossip_menu_option table.|
-|reload gossip_menu|3|Syntax: .reload gossip_menu Reload gossip_menu table.|
-|reload item_enchantment_template|3|`.reload item_enchantment_template`|Reload item_enchantment_template table.|
+|reload gossip_menu|3|`.reload gossip_menu`|Reload gossip_menu table.|
+|reload gossip_menu_option|3|`.reload gossip_menu_option`|Reload gossip_menu_option table.|
+|reload gossip_menu_option_locale|3|`.reload gossip_menu_option_locale`|Reload gossip_menu_option_locale table.||reload item_enchantment_template|3|`.reload item_enchantment_template`|Reload item_enchantment_template table.|
 |reload item_loot_template|3|`.reload item_loot_template`|Reload item_loot_template table.|
 |reload item_set_name_locale|3|`.reload item_set_name_locale`|Reload item_set_name_locale table.|
 |reload item_set_names|3|`.reload item_set_names`|Reload item_set_names table.|
@@ -412,14 +411,14 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload points_of_interest|3|`.reload points_of_interest`|Reload points_of_interest table.|
 |reload points_of_interest_locale|3|`.reload points_of_interest_locale`|Reload points_of_interest_locale table.|
 |reload prospecting_loot_template|3|`.reload prospecting_loot_template`|Reload prospecting_loot_template table.|
-|reload quest_offer_reward_locale|3|Syntax: .reload quest_offer_reward_locale. Reload quest_offer_reward_locale table.|
+|reload quest_offer_reward_locale|3|`.reload quest_offer_reward_locale`|Reload quest_offer_reward_locale table.|
 |reload quest_poi|3|`.reload quest_poi`|Reload quest_poi table.|
 |reload quest_request_item_locale|3|`.reload quest_request_item_locale`|Reload quest_request_item_locale table.|
 |reload quest_template|3|`.reload quest_template`|Reload quest_template table.|
 |reload quest_template_locale|3|`.reload quest_template_locale`|Reload quest_template_locale table.|
 |reload reference_loot_template|3|`.reload reference_loot_template`|Reload reference_loot_template table.|
 |reload reputation_reward_rate|3|`.reload reputation_reward_rate`|Reload reputation_reward_rate table.|
-|reload reputation_spillover_template|3|Syntax: .reload reputation_spillover_template. Reload reputation_spillover_template table.|
+|reload reputation_spillover_template|3|`.reload reputation_spillover_template`|Reload reputation_spillover_template table.|
 |reload reserved_name|3|`.reload reserved_name`|Reload reserved_name table.|
 |reload skill_discovery_template|3|`.reload skill_discovery_template`|Reload skill_discovery_template table.|
 |reload skill_extra_item_template|3|`.reload skill_extra_item_template`|Reload skill_extra_item_template table.|
@@ -439,9 +438,8 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |reload spell_scripts|3|`.reload spell_scripts`|Reload spell_scripts table.|
 |reload spell_target_position|3|`.reload spell_target_position`|Reload spell_target_position table.|
 |reload spell_threats|3|`.reload spell_threats`|Reload spell_threats table.|
-|reload vehicle_accessory|3|Syntax: .reload vehicle_accessory Reloads GUID-based vehicle accessory definitions from the database.|
-|reload vehicle_template_accessory|3|Syntax: .reload vehicle_template_accessory Reloads entry-based vehicle accessory definitions from the database.|
-|reload warden_action|3|`.reload warden_action`|Reload warden_action table.|
+|reload vehicle_accessory|3|`.reload vehicle_accessory`|Reloads GUID-based vehicle accessory definitions from the database.|
+|reload vehicle_template_accessory|3|`.reload vehicle_template_accessory`|Reloads entry-based vehicle accessory definitions from the database.||reload warden_action|3|`.reload warden_action`|Reload warden_action table.|
 |reload waypoint_data|3|`.reload waypoint_data`|Will reload waypoint_data table.|
 |reload waypoint_scripts|3|`.reload waypoint_scripts`|Reload waypoint_scripts table.|
 |repairitems|2|`.repairitems`|Repair all selected player's items.|
@@ -457,10 +455,10 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |revive|2|`.revive`|Revive the selected player. If no player is selected, it will revive you.|
 |save|0|`.save`|Saves your character.|
 |saveall|2|`.saveall`|Save all characters in game.|
-|send items|2|Syntax: .send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN] Send a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.|
+|send items|2|`.send items #playername "#subject" "#text" itemid1[:count1] itemid2[:count2] ... itemidN[:countN]`|Send a mail to a player. Subject and mail text must be in "". If for itemid not provided related count values then expected 1, if count > max items in stack then items will be send in required amount stacks. All stacks amount in mail limited to 12.|
 |send mail|2|`.send mail #playername "#subject" "#text"`|Send a mail to a player. Subject and mail text must be in "".|
 |send message|3|`.send message $playername $message`|Send screen message to player from ADMINISTRATOR. **Will return an error if player is offline (can be problematic with SOAP for example)!**|
-|send money|2|Syntax: .send money #playername "#subject" "#text" #money Send mail with money to a player. Subject and mail text must be in "".|
+|send money|2|`.send money #playername "#subject" "#text" #money`|Send mail with money to a player. Subject and mail text must be in "".|
 |server|3|`.server $subcommand`|Type .server to see the list of possible subcommands or .help server $subcommand to see info on subcommands|
 |server corpses|2|`.server corpses`|Triggering corpses expire check in world.|
 |server exit|4|`.server exit`|Terminate worldserver NOW. Exit code 0.|
@@ -479,7 +477,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |server shutdown|3|`.server shutdown #delay [#exit_code]`|Shut the server down after #delay seconds. Use #exit_code to change the exit code, default = 0.|
 |server shutdown cancel|3|`.server shutdown cancel`|Cancel the restart/shutdown timer if any.|
 |server togglequerylog|4|`.server togglequerylog`|Toggle SQL query log on/off.|
-|setskill|2|Syntax: .setskill #skill #level [#max] Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill.|
+|setskill|2|`.setskill #skill #level [#max]`|Set a skill of id #skill with a current skill value of #level and a maximum value of #max (or equal current maximum if not provide) for the selected character. If no character is selected, you learn the skill.|
 |showarea|2|`.showarea #areaid`|Reveal the area of #areaid to the selected character. If no character is selected, reveal this area to you.|
 |skirmish|3|`.skirmish [arena] [XvX] [Nick1] [Nick2] ... [NickN]`|[arena] can be "all" or comma-separated list of possible arenas (NA,BE,RL,DS,RV). [XvX] can be 1v1, 2v2, 3v3, 5v5. After [XvX] specify enough nicknames for that mode.|
 |spect leave|0|`.spect leave`|Leave arena spectator.|
@@ -492,7 +490,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |teleport add|3|`.teleport add $name`|Add current your position to .teleport command target locations list with name $name.|
 |teleport del|3|`.teleport del $name`|Remove location with name $name for .teleport command locations list.|
 |teleport group|2|`.teleport group#location`|Teleport a selected player and his group members to a given location.|
-|teleport name|2|Syntax: .teleport name [#playername] #location Teleport the given character to a given location. Character can be offline. To teleport to homebind, set #location to "$home" (without quotes).|
+|teleport name|2|`.teleport name [#playername] #location`|Teleport the given character to a given location. Character can be offline. To teleport to homebind, set #location to "$home" (without quotes).|
 |ticket|2|`.ticket $subcommand`|Type .ticket to see the list of possible subcommands or .help ticket $subcommand to see info on subcommands|
 |ticket assign|2|`.ticket assign $ticketid $gmname`|Assigns the specified ticket to the specified Game Master.|
 |ticket close|2|`.ticket close $ticketid`|Closes the specified ticket. Does not delete permanently.|
@@ -510,10 +508,10 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |ticket unassign|2|`.ticket unassign $ticketid`|Unassigns the specified ticket from the current assigned Game Master.|
 |ticket viewid|2|`.ticket viewid $ticketid`|Returns details about specified ticket. Ticket must be open and not deleted.|
 |ticket viewname|2|`.ticket viewname $creatorname`|Returns details about specified ticket. Ticket must be open and not deleted.|
-|titles add|2|Syntax: .titles add #title Add title #title (id or shift-link) to known titles list for selected player.|
+|titles add|2|`.titles add #title`|Add title #title (id or shift-link) to known titles list for selected player.|
 |titles current|2|`.titles current #title`|Set title #title (id or shift-link) as current selected titl for selected player. If title not in known title list for player then it will be added to list.|
 |titles remove|2|`.titles remove #title`|Remove title #title (id or shift-link) from known titles list for selected player.|
-|titles set mask|2|Syntax: .titles set mask #mask Allows user to use all titles from #mask. #mask=0 disables the title-choose-field|
+|titles set mask|2|`.titles set mask #mask`|Allows user to use all titles from #mask. #mask=0 disables the title-choose-field|
 |unstuck|2|`.unstuck $playername [inn/graveyard/startzone]`|Teleports specified player to specified location. Default location is player's current hearth location.|
 |wchange|3|`.wchange #weathertype #status`|Set current weather to #weathertype with an intensity of #status. #weathertype can be 1 for rain, 2 for snow, and 3 for sand. #status can be 0 for disabled, and 1 for enabled.|
 |whispers|1|`.whispers on\off`|Enable/disable accepting whispers by GM from players. By default use worldserver.conf setting.|
