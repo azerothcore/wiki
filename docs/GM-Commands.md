@@ -22,7 +22,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |achievement add|2|`.achievement add $achievement`|Add an achievement to the targeted player. $achievement: can be either achievement id or achievement link|
 |achievement checkall|3|`.achievement checkall`|Check all achievement criteria of the selected player.|
 |additem|2|`.additem #itemid/[#itemname]/#shift-click-item-link #itemcount`|Adds the specified number of items of id #itemid (or exact (!) name $itemname in brackets, or link created by shift-click at item in inventory or recipe) to your or selected character inventory. If #itemcount is omitted, only one item will be added. **If #itemcount is negative, it will remove the item(s) from the character.**|
-|additemset|2|Syntax: .additemset #itemsetid Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
+|additemset|2|`.additemset #itemsetid`|Add items from itemset of id #itemsetid to your or selected character inventory. Will add by one example each item from itemset.|
 |announce|2|`.announce $MessageToBroadcast`|Send a global message to all players online in chat log.|
 |appear|1|`.appear [$charactername]`|Teleport to the given character. Either specify the character name or click on the character's portrait,e.g. when you are in a group. Character can be offline.|
 |arena captain|3|`.arena captain #TeamID $name`|A command to set new captain to the team. $name must be in the team|
