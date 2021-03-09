@@ -165,6 +165,12 @@ Usually, you'll need only the basics of the SQL language, and in most cases, you
 
 if you understand how basic statements such as `SELECT`, `UPDATE`, `INSERT` and `DELETE` work, that's usually enough. You don't need to go too deep into SQL in order to be able to contribute.
 
+## Share your code!
+
+You can submit your improvement via PR. Read this guide:
+
+- [How to create a Pull Request (PR)](https://www.azerothcore.org/wiki/How-to-create-a-PR)
+
 ## Start contributing!
 
 If you mastered some of the above parts, there is already **A LOT** you can do to help our project and becoming a contributor.
