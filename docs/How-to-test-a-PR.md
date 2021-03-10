@@ -18,7 +18,7 @@ Clicking on the label above will show you the list of all PRs that need to be te
 
 You need to:
 
-- have AzerothCore installed in your system (either using the [traditional setup](Installation) or the [Docker setup](Install-with-Docker)).
+- have AzerothCore installed in your system (see [Installation](https://www.azerothcore.org/wiki/Installation)).
 - have a GitHub account, you can [register one here](https://github.com/join) for free.
 
 ### What if the PR has only DB changes?
