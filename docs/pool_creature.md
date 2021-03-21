@@ -40,6 +40,8 @@ If the pool spawns more than one creature, the chance is ignored and all the cre
 
 In case the pool spawns just one creature and all the creatures have a nonzero chance, the sum of the chances for all the creatures must equal to 100, otherwise the pool won't be spawned.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `pool_creature_chk_1`.
+
 ### description
 
 This field usually names the creature corresponding to the guid and mentions which spawn point it is. Example: Snarlflare (14272) - Spawn 1
