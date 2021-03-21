@@ -211,6 +211,8 @@ If non-zero, chance for spell to trigger. If both ProcsPerMinute and Chance are 
 
 Define hidden cooldowns on the spell, in milliseconds. Also known as the proc's internal cooldown, or ICD.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `spell_proc_chk_1`.
+
 ### Charges
 
 If non-zero, overrides amount of aura charges available to proc. Else this value is taken from DBC.
