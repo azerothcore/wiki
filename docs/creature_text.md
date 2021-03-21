@@ -142,6 +142,8 @@ Value from [Languages.dbc](Languages) (+ the wiki table from the dbc file). When
 
 A value from 1-100 that represents the percentage chance that this text will be executed.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `creature_text_chk_1`.
+
 ### Emote
 
 The emote that the creature plays when the text is executed. Value to use in this field can be obtained from the [emote.dbc](Emotes)
