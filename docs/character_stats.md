@@ -149,25 +149,37 @@ Character's current arcane resistance value.
 
 Character's current block chance.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `character_stats_chk_1`.
+
 ### dodgePct
 
 Character's current dodge chance.
+
+Value must be >=0. If the value does not meet the condition the SQL will fail on `character_stats_chk_1`.
 
 ### parryPct
 
 Character's current parry chance.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `character_stats_chk_1`.
+
 ### critPct
 
 Character's current crit chance.
+
+Value must be >=0. If the value does not meet the condition the SQL will fail on `character_stats_chk_1`.
 
 ### rangedCritPct
 
 Character's current ranged crit chance.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `character_stats_chk_1`.
+
 ### spellCritPct
 
 Character's current spell crit chance.
+
+Value must be >=0. If the value does not meet the condition the SQL will fail on `character_stats_chk_1`.
 
 ### attackPower
 
