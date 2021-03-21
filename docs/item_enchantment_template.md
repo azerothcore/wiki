@@ -31,3 +31,5 @@ The enchantment to apply on the item. If the entry for the current row is used i
 ### chance
 
 The chance for a random property or suffix to be applied to the item. For each entry in this table, the combined chances of all properties/suffixes need to equal 100 otherwise the item may not get a random enchantment on it.
+
+Value must be >=0. If the value does not meet the condition the SQL will fail on `item_enchantment_template_chk_1`.
