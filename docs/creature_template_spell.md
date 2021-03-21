@@ -26,6 +26,8 @@ Creature entry from [creature_template.entry](creature_template#entry).
 
 ### Index
 
+Value must be within this range. If above or under the SQL will fail on `creature_template_spell_chk_1`.
+
 Index 0 - 7.
 
 Spell position on actionbar for vehicle creatures.
