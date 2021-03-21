@@ -26,6 +26,8 @@ Creature entry from [creature_template.entry](creature_template#entry).
 
 ### School
 
+Value must be within this range. If above or under the SQL will fail on `creature_template_resistance_chk_1`.
+
 Value | Name
 :- | :-
 1 | SPELL_SCHOOL_HOLY
