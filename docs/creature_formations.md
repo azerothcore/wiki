@@ -38,12 +38,16 @@ GUID of group member
 
 Maximum distance between group leader and member
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `creature_formations_chk_1`.
+
 ## angle
 
 Angle between leader and member
 Note: Only degrees are used! Values should be between 0 and 360
 
 ![angle](assets/images/angle.png)
+
+Value must be >=0. If the value does not meet the condition the SQL will fail on `creature_formations_chk_1`.
 
 ## groupAI
 
