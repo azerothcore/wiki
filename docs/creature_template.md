@@ -50,20 +50,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [lootid](#lootid)                               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
 | [pickpocketloot](#pickpocketloot)               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
 | [skinloot](#skinloot)                              | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [resistance1](#resistancex)                      | smallint(6)           | NO   |     | 0       |       |                                      |
-| [resistance2](#resistancex)                      | smallint(6)           | NO   |     | 0       |       |                                      |
-| [resistance3](#resistancex)                      | smallint(6)           | NO   |     | 0       |       |                                      |
-| [resistance4](#resistancex)                      | smallint(6)           | NO   |     | 0       |       |                                      |
-| [resistance5](#resistancex)                      | smallint(6)           | NO   |     | 0       |       |                                      |
-| [resistance6](#resistancex)                      | smallint(6)           | NO   |     | 0       |       |                                      |
-| [spell1](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell2](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell3](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell4](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell5](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell6](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell7](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [spell8](#spellx)                                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
 | [PetSpellDataId](#petspelldataid)               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
 | [VehicleId](#vehicleid)                         | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
 | [mingold](#mingold)                             | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
@@ -510,22 +496,6 @@ The ID of the pickpocketing loot template that this creature should use to gener
 #### skinloot
 
 The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)
-
-**resistancex**
-
-| resistancex | school |
-|-------------|--------|
-| 1           | Holy   |
-| 2           | Fire   |
-| 3           | Nature |
-| 4           | Frost  |
-| 5           | Shadow |
-| 6           | Arcane |
-
-#### spellx
-
-Spell ID that can be used for Mind Control of this creature. 
-For vehicle creatures: spell on action bar with position X.
 
 #### PetSpellDataId
 
