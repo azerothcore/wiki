@@ -8,10 +8,10 @@
 
 | Field | Type | Attribute | Key | Null | Default | Extra | Comment
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-[CreatureID][1] | mediumint(8) | UNSIGNED | PRI | NO
-[School][2] | tinyint(6) | UNSIGNED | PRI | NO
-[Resistance][3] | smallint(6) | SIGNED | | YES | Null
-[VerifiedBuild][4] | smallint(5) | SIGNED | | YES | 0
+[CreatureID][1] | MEDIUMINT | UNSIGNED | PRI | NO
+[School][2] | TINYINT | UNSIGNED | PRI | NO
+[Resistance][3] | SMALLINT | SIGNED | | YES | Null
+[VerifiedBuild][4] | SMALLINT | SIGNED | | YES | 0
 
 [1]: #creatureid
 [2]: #school
