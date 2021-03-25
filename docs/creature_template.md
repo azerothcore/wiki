@@ -257,13 +257,15 @@ This is the base time that determines how long a creature must wait between rang
 
 #### BaseVariance
 
-This is the minimum melee damage. 
-Modified by DamageModifier. mindmg = mindmg * DamageModifier.
+Custom value to modify a creatures damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
+
+Non-Custom Creatures should always leave this at 1.
 
 #### RangeVariance
 
-This is the maximum melee damage.
-Modified by DamageModifier. maxdmg = maxdmg * DamageModifier.
+Custom value to modify a creatures damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
+
+Non-Custom Creatures should always leave this at 1.
 
 #### unit_class
 
@@ -559,8 +561,8 @@ Used to modify the Minimum/Maximum damage of a creature.
 
 The formulas to calculate the damage output are:
 
-MINDAMAGE = (([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))
-MAXDAMAGE = ((([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) * 1.5) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance)) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))) 
+MINDAMAGE = ((([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance)) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))  
+MAXDAMAGE = (((([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) * 1.5) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance)) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))
 
 damage_base comes from the creature_classless table and takes its value either from [damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base), [damage_exp1](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_exp1) or [damage_exp2](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_exp2) according to the creatures value in [exp](http://www.azerothcore.org/wiki/creature_template#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
 
