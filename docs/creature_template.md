@@ -27,12 +27,11 @@ This table contains the description of creatures. Each spawned creature is an in
 | [speed_run](#speed_run)                        | float                 | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
 | [scale](#scale)                                 | float                 | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
-| [mindmg](#mindmg)                               | float                 | NO   |     | 0       |       |                                      |
-| [maxdmg](#maxdmg)                               | float                 | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                         | tinyint(4)            | NO   |     | 0       |       |                                      |
-| [attackpower](#attackpower)                     | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)               | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [RangeAttackTime](#rangeattacktime)             | int(10) unsigned      | NO   |     | 0       |       |                                      |
+| [BaseVariance](#BaseVariance)                   | float                 | NO   |     | 1       |       |                                      |
+| [RangeVariance](#RangeVariance)                 | float                 | NO   |     | 1       |       |                                      |
 | [unit_class](#unit_class)                      | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [unit_flags](#unit_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [unit_flags2](#unit_flags2)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
@@ -42,9 +41,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [trainer_spell](#trainer_spell)                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
 | [trainer_class](#trainer_class)                | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [trainer_race](#trainer_race)                  | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
-| [minrangedmg](#minrangedmg)                     | float                 | NO   |     | 0       |       |                                      |
-| [maxrangedmg](#maxrangedmg)                     | float                 | NO   |     | 0       |       |                                      |
-| [rangedattackpower](#rangedattackpower)         | smallint(5)           | NO   |     | 0       |       |                                      |
 | [type](#type)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [type_flags](#type_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
@@ -237,16 +233,6 @@ The rank of the creature:
 
 **Note 3:** If you want the creature to show a skull or "??" in the portrait (often with Bosses), set the [type_flags](http://www.azerothcore.org/wiki/creature_template#type_flags) to 4.
 
-#### mindmg
-
-This is the minimum melee damage. 
-Modified by DamageModifier. mindmg = mindmg * DamageModifier.
-
-#### maxdmg
-
-This is the maximum melee damage.
-Modified by DamageModifier. maxdmg = maxdmg * DamageModifier.
-
 #### dmgschool
 
 Creature's melee damage school.
@@ -261,10 +247,6 @@ Creature's melee damage school.
 | 5  | SPELL_SCHOOL_SHADOW |
 | 6  | SPELL_SCHOOL_ARCANE |
 
-#### attackpower
-
-Melee attack power used for spells?
-
 #### BaseAttackTime
 
 This is the base time that determines how long a creature must wait between melee attacks. This time is in milliseconds.
@@ -272,6 +254,16 @@ This is the base time that determines how long a creature must wait between mele
 #### RangeAttackTime
 
 This is the base time that determines how long a creature must wait between ranged attacks. This time is in milliseconds.
+
+#### BaseVariance
+
+This is the minimum melee damage. 
+Modified by DamageModifier. mindmg = mindmg * DamageModifier.
+
+#### RangeVariance
+
+This is the maximum melee damage.
+Modified by DamageModifier. maxdmg = maxdmg * DamageModifier.
 
 #### unit_class
 
@@ -418,20 +410,6 @@ If the NPC is a class trainer or a pet trainer ([trainer_type](http://www.azerot
 
 If the NPC is a mount trainer ([trainer_type](http://www.azerothcore.org/wiki/creature_template#trainer_type) = 1), then the player's race must be the same as the value specified here to talk to this trainer. See [characters.race](http://www.azerothcore.org/wiki/characters#race)
 
-#### minrangedmg
-
-This is the minimum ranged damage. 
-Modified by DamageModifier. minrangedmg = minrangedmg * DamageModifier.
-
-#### maxrangedmg
-
-This is the maximum ranged damage.
-Modified by DamageModifier. maxrangedmg = maxrangedmg * DamageModifier.
-
-#### rangeattackpower
-
-Range attack power used for spells?
-
 #### type
 
 The type of the creature.
@@ -577,7 +555,21 @@ Used to modify the base Level/Class armor of a creature.
 
 #### DamageModifier
 
-TODO!
+Used to modify the Minimum/Maximum damage of a creature.
+
+The formulas to calculate the damage output are:
+
+MINDAMAGE = (([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))
+MAXDAMAGE = ((([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) * 1.5) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance)) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))) 
+
+damage_base comes from the creature_classless table and takes its value either from [damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base), [damage_exp1](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_exp1) or [damage_exp2](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_exp2) according to the creatures value in [exp](http://www.azerothcore.org/wiki/creature_template#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
+
+BaseAttackTime is either [BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) or [RangeAttackTime](https://www.azerothcore.org/wiki/creature_template#rangeattacktime) depending on the type of attack.
+
+attackpower is either [attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) or [rangedattackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#rangedattackpower) depending on the type of attack.
+
+BaseVariance is either [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance) or [RangeVariance](https://www.azerothcore.org/wiki/creature_template#RangeVariance) depending on the type of attack.
+
 
 #### ExperienceModifier
 
