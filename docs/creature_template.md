@@ -257,15 +257,15 @@ This is the base time that determines how long a creature must wait between rang
 
 #### BaseVariance
 
-Custom value to modify a creatures damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
+Value to customize the creature's damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
 
-Non-Custom Creatures should always leave this at 1.
+Non-custom creatures should always leave this at 1.
 
 #### RangeVariance
 
-Custom value to modify a creatures damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
+Value to customize the creature's damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
 
-Non-Custom Creatures should always leave this at 1.
+Non-custom creatures should always leave this at 1.
 
 #### unit_class
 
