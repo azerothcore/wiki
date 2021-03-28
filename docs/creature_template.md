@@ -30,8 +30,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [dmgschool](#dmgschool)                         | tinyint(4)            | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)               | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [RangeAttackTime](#rangeattacktime)             | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [BaseVariance](#BaseVariance)                   | float                 | NO   |     | 1       |       |                                      |
-| [RangeVariance](#RangeVariance)                 | float                 | NO   |     | 1       |       |                                      |
+| [BaseVariance](#baseVariance)                   | float                 | NO   |     | 1       |       |                                      |
+| [RangeVariance](#rangeVariance)                 | float                 | NO   |     | 1       |       |                                      |
 | [unit_class](#unit_class)                      | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [unit_flags](#unit_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [unit_flags2](#unit_flags2)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
@@ -257,19 +257,19 @@ This is the base time that determines how long a creature must wait between rang
 
 #### BaseVariance
 
-Value to customize the creature's damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
+Value to customize the creature's damage output. See [DamageModifier](#damageModifier).
 
 Non-custom creatures should always leave this at 1.
 
 #### RangeVariance
 
-Value to customize the creature's damage output. See [DamageModifier](http://www.azerothcore.org/wiki/creature_template#DamageModifier)
+Value to customize the creature's damage output. See [DamageModifier](#damageModifier).
 
 Non-custom creatures should always leave this at 1.
 
 #### unit_class
 
-This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to [exp](http://www.azerothcore.org/wiki/creature_template#exp), [HealthModifier](http://www.azerothcore.org/wiki/creature_template#HealthModifier), and [ManaModifier](http://www.azerothcore.org/wiki/creature_template#ManaModifier). Not setting this value will report a minor warning in the "DB_Errors.log".
+This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to [exp](#exp), [HealthModifier](#healthModifier), and [ManaModifier](#manaModifier). Not setting this value will report a minor warning in the "DB_Errors.log".
 
 | Value | Name           | Power Shown                                            |
 |-------|----------------|--------------------------------------------------------|
@@ -561,16 +561,16 @@ Used to modify the Minimum/Maximum damage of a creature.
 
 The formulas to calculate the damage output are:
 
-MINDAMAGE = ((([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance)) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))  
-MAXDAMAGE = (((([damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base) * 1.5) + ([attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) / 14) * [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance)) * DamageModifier) * ([BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) / 1000))
+MINDAMAGE = ((([damage_base](creature_classlevelstats#damage_base) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#baseVariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
+MAXDAMAGE = (((([damage_base](creature_classlevelstats#damage_base) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#baseVariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
 
-damage_base comes from the creature_classless table and takes its value either from [damage_base](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_base), [damage_exp1](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_exp1) or [damage_exp2](https://www.azerothcore.org/wiki/creature_classlevelstats#damage_exp2) according to the creature's value in [exp](http://www.azerothcore.org/wiki/creature_template#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
+damage_base comes from the creature_classlevelstats table and takes its value either from [damage\_base](creature_classlevelstats#damage_base), [damage\_exp1](creature_classlevelstats#damage_exp1) or [damage\_exp2](creature_classlevelstats#damage_exp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
 
-BaseAttackTime is either [BaseAttackTime](https://www.azerothcore.org/wiki/creature_template#baseattacktime) or [RangeAttackTime](https://www.azerothcore.org/wiki/creature_template#rangeattacktime) depending on the type of attack.
+BaseAttackTime is either [BaseAttackTime](#baseattacktime) or [RangeAttackTime](#rangeattacktime) depending on the type of attack.
 
-attackpower is either [attackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#attackpower) or [rangedattackpower](https://www.azerothcore.org/wiki/creature_classlevelstats#rangedattackpower) depending on the type of attack.
+attackpower is either [attackpower](creature_classlevelstats#attackpower) or [rangedattackpower](creature_classlevelstats#rangedattackpower) depending on the type of attack.
 
-BaseVariance is either [BaseVariance](https://www.azerothcore.org/wiki/creature_template#BaseVariance) or [RangeVariance](https://www.azerothcore.org/wiki/creature_template#RangeVariance) depending on the type of attack.
+BaseVariance is either [BaseVariance](#baseVariance) or [RangeVariance](#rangeVariance) depending on the type of attack.
 
 
 #### ExperienceModifier
