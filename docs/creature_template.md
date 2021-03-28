@@ -100,15 +100,15 @@ If you look at the database you will notice a very characteristic pattern which 
 
 #### KillCredit1
 
-If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the first [entry](http://www.azerothcore.org/wiki/creature_template#entry) of the creature that could be killed to give quest credit.
+If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the first [entry](#entry) of the creature that could be killed to give quest credit.
 
 #### KillCredit2
 
-If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the second [entry](http://www.azerothcore.org/wiki/creature_template#entry) of the creature that could be killed to give quest credit. If more than two creatures can be killed and count toward a single objective, an smart or C++ script will be required.
+If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the second [entry](#entry) of the creature that could be killed to give quest credit. If more than two creatures can be killed and count toward a single objective, an smart or C++ script will be required.
 
 #### modelidx
 
-A random graphical model that the client applies on this creature. Of course if you specify only one modelid and the rest will be equal to 0, model you have set won't be chosen randomly. This is a [creature_model_info.modelid](creature_model_info)
+A random graphical model that the client applies on this creature. Of course if you specify only one modelid and the rest will be equal to 0, model you have set won't be chosen randomly. This is a [creature_model_info.modelid](creature_model_info#modelid)
 
 #### name
 
@@ -144,7 +144,7 @@ Used to tell the player what kind of NPC this creature is.
 
 #### gossip_menu_id
 
-The gossip ID of this creature. This field is obtained from sniff (update fields). If you can not sniff this value, and need to make one up, it must be &gt; 50000. This field is the link to [gossip_menu.entry](http://www.azerothcore.org/wiki/gossip_menu#entry).
+The gossip ID of this creature. This field is obtained from sniff (update fields). If you can not sniff this value, and need to make one up, it must be &gt; 50000. This field is the link to [gossip_menu.entry](gossip_menu#entry).
 
 #### minlevel
 
@@ -229,9 +229,9 @@ The rank of the creature:
 
 **Note 1:** An NPC's rank is mostly visual (which also requires your Cache to be cleared to see changes). Changing this value will not change its health, damage, or loot. However, it will change the respawn time of the creature.
 
-**Note 2:** Respawn times can be modified in two other places: [Creature.spawntimesecs](http://www.azerothcore.org/wiki/creature#spawntimesecs) (only for that single GUID of the creature) and in the worldserver.conf file under the "Corpse.Decay" settings (for ALL creatures of the same rank). The default \`spawntimesecs\` for all spawned creatures is 300 seconds (5 minutes). For example, using the ".npc add" command to spawn a "Normal" NPC will give it a default respawn time of 6 minutes (spawntimesecs + Corpse.Decay time). Also, the creature must decay first before it can respawn. For this reason, the Corpse Decay Time of the creature is also it's minimum respawn time, since setting the creature's Creature.spawntimesecs = 0 will remove the Default Respawn Time. In the example above, setting our Normal NPC's spawntimesecs = 0 will mean the creature's respawn time decreases from 6 minutes to 60 seconds.
+**Note 2:** Respawn times can be modified in two other places: [Creature.spawntimesecs](creature#spawntimesecs) (only for that single GUID of the creature) and in the worldserver.conf file under the "Corpse.Decay" settings (for ALL creatures of the same rank). The default \`spawntimesecs\` for all spawned creatures is 300 seconds (5 minutes). For example, using the ".npc add" command to spawn a "Normal" NPC will give it a default respawn time of 6 minutes (spawntimesecs + Corpse.Decay time). Also, the creature must decay first before it can respawn. For this reason, the Corpse Decay Time of the creature is also it's minimum respawn time, since setting the creature's Creature.spawntimesecs = 0 will remove the Default Respawn Time. In the example above, setting our Normal NPC's spawntimesecs = 0 will mean the creature's respawn time decreases from 6 minutes to 60 seconds.
 
-**Note 3:** If you want the creature to show a skull or "??" in the portrait (often with Bosses), set the [type_flags](http://www.azerothcore.org/wiki/creature_template#type_flags) to 4.
+**Note 3:** If you want the creature to show a skull or "??" in the portrait (often with Bosses), set the [type_flags](creature_template#type_flags) to 4.
 
 #### dmgschool
 
@@ -395,22 +395,22 @@ If the NPC is a trainer (has the trainer flag), then this field controls what ki
 
 | ID | Type                       | Related Field                                                                         | Comments            |
 |----|----------------------------|---------------------------------------------------------------------------------------|---------------------|
-| 0  | TRAINER_TYPE_CLASS       | [trainer_class](http://www.azerothcore.org/wiki/creature_template#trainer_class) | Trains class spells |
-| 1  | TRAINER_TYPE_MOUNTS      | [trainer_race](http://www.azerothcore.org/wiki/creature_template#trainer_race)   | Trains riding skill |
-| 2  | TRAINER_TYPE_TRADESKILLS | [trainer_spell](http://www.azerothcore.org/wiki/creature_template#trainer_spell) | Trains professions  |
-| 3  | TRAINER_TYPE_PETS        | [trainer_class](http://www.azerothcore.org/wiki/creature_template#trainer_class) | Trains pet skills   |
+| 0  | TRAINER_TYPE_CLASS       | [trainer_class](#trainer_class) | Trains class spells |
+| 1  | TRAINER_TYPE_MOUNTS      | [trainer_race](#trainer_race)   | Trains riding skill |
+| 2  | TRAINER_TYPE_TRADESKILLS | [trainer_spell](#trainer_spell) | Trains professions  |
+| 3  | TRAINER_TYPE_PETS        | [trainer_class](#trainer_class) | Trains pet skills   |
 
 #### trainer_spell
 
-If the NPC is a trainer that teaches professions ([trainer_type](http://www.azerothcore.org/wiki/creature_template#trainer_type) = 2), then the player must already know the spell ID specified here to be able to talk to this NPC.
+If the NPC is a trainer that teaches professions ([trainer_type](#trainer_type) = 2), then the player must already know the spell ID specified here to be able to talk to this NPC.
 
 #### trainer_class
 
-If the NPC is a class trainer or a pet trainer ([trainer_type](http://www.azerothcore.org/wiki/creature_template#trainer_type) = 0 or 3), then the player's class must be the same as the value specified here to talk to this trainer. For pet trainers, this value must be 3 (hunter). See [characters.class](http://archive.trinitycore.info/Characters_tc2#class "Characters tc2")
+If the NPC is a class trainer or a pet trainer ([trainer_type](#trainer_type) = 0 or 3), then the player's class must be the same as the value specified here to talk to this trainer. For pet trainers, this value must be 3 (hunter). See [characters.class](characters#class)
 
 #### trainer_race
 
-If the NPC is a mount trainer ([trainer_type](http://www.azerothcore.org/wiki/creature_template#trainer_type) = 1), then the player's race must be the same as the value specified here to talk to this trainer. See [characters.race](http://www.azerothcore.org/wiki/characters#race)
+If the NPC is a mount trainer ([trainer_type](#trainer_type) = 1), then the player's race must be the same as the value specified here to talk to this trainer. See [characters.race](characters#race)
 
 #### type
 
@@ -435,7 +435,7 @@ The type of the creature.
 
 #### type_flags
 
-This field can control whether a mob is minable or herbable or lootable by engineer. If it is either of those three, then the loot given when it is skinned/mined will be stored in the [skinning_loot_template](http://www.azerothcore.org/wiki/loot_template) table. It also controls, whether this mob can be tamed by a hunter. Other fields have no special meaning on the serverside. The entire field will be send to the client in SMSG_CREATURE_QUERY_RESPONSE
+This field can control whether a mob is minable or herbable or lootable by engineer. If it is either of those three, then the loot given when it is skinned/mined will be stored in the [skinning_loot_template](loot_template) table. It also controls, whether this mob can be tamed by a hunter. Other fields have no special meaning on the serverside. The entire field will be send to the client in SMSG_CREATURE_QUERY_RESPONSE
 
 | Flag      |            | Name                                                 | Comments                                                                                   |
 |-----------|------------|------------------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -467,15 +467,15 @@ This field can control whether a mob is minable or herbable or lootable by engin
 
 #### lootid
 
-The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)
+The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](loot_template#loot_template-Entry)
 
 #### pickpocketloot
 
-The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)
+The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](loot_template#loot_template-Entry)
 
 #### skinloot
 
-The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)
+The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](loot_template#loot_template-Entry)
 
 #### PetSpellDataId
 
@@ -537,7 +537,7 @@ Controls where the creature can move and attack.
 
 (This is a bitmask. You can add values together: 1+4=5 would make the creature walk on ground and fly.)
 
-**Note:** If your vehicle is a flying vehicle then your accessory **MUST** have it's [InhabitType](http://www.azerothcore.org/wiki/creature_template#InhabitType) set to (4 - Flying). This being if you set it for both ground and flying it will spawn on the ground if the vehicle is initially spawned on the ground.
+**Note:** If your vehicle is a flying vehicle then your accessory **MUST** have it's [InhabitType](#inhabitType) set to (4 - Flying). This being if you set it for both ground and flying it will spawn on the ground if the vehicle is initially spawned on the ground.
 
 #### HoverHeight
 
