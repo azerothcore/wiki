@@ -41,6 +41,8 @@ This table sets up information on all available realms. Each row controls a diff
 
 The realm ID. This number is unique for every realm and it MUST correlate with the RealmID configuration value in worldserver.conf.
 
+Value must be >=0. If the value does not meet the condition the SQL will fail on `realmlist_chk_1`.
+
 ### name
 
 The name of the realm. This will appear in the realm selection list as well as in the character selection screen.
