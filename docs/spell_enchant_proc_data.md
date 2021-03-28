@@ -32,7 +32,7 @@ Enchantment ID from SpellItemEnchantment.dbc
 
 ### PPMChance
 
-`field-no-description|3`
+Value must be >=0. If the value does not meet the condition the SQL will fail on `spell_enchant_proc_data_chk_1`.
 
 ### procEx
 
