@@ -30,8 +30,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [dmgschool](#dmgschool)                         | tinyint(4)            | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)               | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [RangeAttackTime](#rangeattacktime)             | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [BaseVariance](#baseVariance)                   | float                 | NO   |     | 1       |       |                                      |
-| [RangeVariance](#rangeVariance)                 | float                 | NO   |     | 1       |       |                                      |
+| [BaseVariance](#basevariance)                   | float                 | NO   |     | 1       |       |                                      |
+| [RangeVariance](#rangevariance)                 | float                 | NO   |     | 1       |       |                                      |
 | [unit_class](#unit_class)                      | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [unit_flags](#unit_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [unit_flags2](#unit_flags2)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
@@ -257,19 +257,19 @@ This is the base time that determines how long a creature must wait between rang
 
 #### BaseVariance
 
-Value to customize the creature's damage output. See [DamageModifier](#damageModifier).
+Value to customize the creature's damage output. See [DamageModifier](#damagemodifier).
 
 Non-custom creatures should always leave this at 1.
 
 #### RangeVariance
 
-Value to customize the creature's damage output. See [DamageModifier](#damageModifier).
+Value to customize the creature's damage output. See [DamageModifier](#damagemodifier).
 
 Non-custom creatures should always leave this at 1.
 
 #### unit_class
 
-This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to [exp](#exp), [HealthModifier](#healthModifier), and [ManaModifier](#manaModifier). Not setting this value will report a minor warning in the "DB_Errors.log".
+This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to [exp](#exp), [HealthModifier](#healthmodifier), and [ManaModifier](#manamodifier). Not setting this value will report a minor warning in the "DB_Errors.log".
 
 | Value | Name           | Power Shown                                            |
 |-------|----------------|--------------------------------------------------------|
@@ -467,15 +467,15 @@ This field can control whether a mob is minable or herbable or lootable by engin
 
 #### lootid
 
-The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](loot_template#loot_template-Entry)
+The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](loot_template#loot_template-entry)
 
 #### pickpocketloot
 
-The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](loot_template#loot_template-Entry)
+The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](loot_template#loot_template-entry)
 
 #### skinloot
 
-The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](loot_template#loot_template-Entry)
+The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](loot_template#loot_template-entry)
 
 #### PetSpellDataId
 
@@ -537,7 +537,7 @@ Controls where the creature can move and attack.
 
 (This is a bitmask. You can add values together: 1+4=5 would make the creature walk on ground and fly.)
 
-**Note:** If your vehicle is a flying vehicle then your accessory **MUST** have it's [InhabitType](#inhabitType) set to (4 - Flying). This being if you set it for both ground and flying it will spawn on the ground if the vehicle is initially spawned on the ground.
+**Note:** If your vehicle is a flying vehicle then your accessory **MUST** have it's [InhabitType](#inhabittype) set to (4 - Flying). This being if you set it for both ground and flying it will spawn on the ground if the vehicle is initially spawned on the ground.
 
 #### HoverHeight
 
@@ -561,8 +561,8 @@ Used to modify the Minimum/Maximum damage of a creature.
 
 The formulas to calculate the damage output are:
 
-MINDAMAGE = ((([damage_base](creature_classlevelstats#damage_base) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#baseVariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
-MAXDAMAGE = (((([damage_base](creature_classlevelstats#damage_base) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#baseVariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
+MINDAMAGE = ((([damage_base](creature_classlevelstats#damage_base) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
+MAXDAMAGE = (((([damage_base](creature_classlevelstats#damage_base) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
 
 damage_base comes from the creature_classlevelstats table and takes its value either from [damage\_base](creature_classlevelstats#damage_base), [damage\_exp1](creature_classlevelstats#damage_exp1) or [damage\_exp2](creature_classlevelstats#damage_exp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
 
@@ -570,7 +570,7 @@ BaseAttackTime is either [BaseAttackTime](#baseattacktime) or [RangeAttackTime](
 
 attackpower is either [attackpower](creature_classlevelstats#attackpower) or [rangedattackpower](creature_classlevelstats#rangedattackpower) depending on the type of attack.
 
-BaseVariance is either [BaseVariance](#baseVariance) or [RangeVariance](#rangeVariance) depending on the type of attack.
+BaseVariance is either [BaseVariance](#basevariance) or [RangeVariance](#rangevariance) depending on the type of attack.
 
 
 #### ExperienceModifier
