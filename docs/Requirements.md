@@ -55,7 +55,7 @@ Than **reboot** to sync the bash and use cmake from the terminal, than type the 
 cmake --version
 ```
 
-You should have a version **>= 3.8**.
+You should have a version **>= 3.16**.
 
 Continue below the guide to install the other installation requirements.
 
