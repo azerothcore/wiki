@@ -55,7 +55,7 @@ Than **reboot** to sync the bash and use cmake from the terminal, than type the 
 cmake --version
 ```
 
-You should have a version **>= 3.8**.
+You should have a version **>= 3.16**.
 
 Continue below the guide to install the other installation requirements.
 
@@ -124,7 +124,7 @@ If you use another distro or version, search on google for how to install the ri
 cmake --version
 ```
 
-Your `cmake` version **MUST** be `3.8` or higher.
+Your `cmake` version **MUST** be `3.16` or higher.
 
 On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
