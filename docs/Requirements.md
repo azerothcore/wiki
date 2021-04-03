@@ -191,7 +191,7 @@ brew cask install sequel-ace
 
 * Install [Visual Studio](https://visualstudio.microsoft.com/downloads/) VS 2019 Community
 
-* Install [CMake](https://cmake.org/) version 2.8 or newer.  
+* Install [CMake](https://cmake.org/) version 3.16 or higher
 
 * Install latest version of [Git Extensions](https://git-scm.com/download/win)
 
