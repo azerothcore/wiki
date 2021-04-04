@@ -32,7 +32,17 @@ GUID of group leader
 
 ## memberGUID
 
-GUID of group member
+GUID of group member. NOTE: Is required to have an entry with `leaderGUID` and `memberGUID` with the `leaderGUID` in order to make the group work.
+Example:
+
+* Leader = 1
+* Members = 2 and 3
+
+| leaderGUID | memberGUID |
+|------------|------------|
+| 1          | 1          |
+| 1          | 2          |
+| 1          | 3          |
 
 ## dist
 
@@ -77,9 +87,3 @@ If your leader has a path like the one below where he moves to point 5 then back
 
        8    7      6
 ```
-
-If your leader has a path like the one below where he moves to point 5 then back to 1 you would set point\_1 = 4 and point\_2 = 8 on the memberGUID. If the memberGUID is at angle 90 up to point 5 it will switch to angle 270 for the return trip. This is only needed to keep creatures on the correct side. these values can be left at 0 for creatures following directly behind leaderGUID or any creatures in a circular path.
-
-## Attachments:
-
-![](images/icons/bullet_blue.gif){width="8" height="8"} [followangle2.png](attachments/2129997/2130322.png) (image/png)
