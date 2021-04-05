@@ -241,17 +241,19 @@ Go to `CMAKE_INSTALL_PREFIX` and create a new directory named `data`
 Two options to choose from:
 
 ##### A) [Extract Client Data](http://www.azerothcore.org/wiki/Extract-Client-Data) from your own WOW client using the AzerothCore extractors (required for custom maps)
+
 ##### B) (Easier) Download directly using one of the links below:
 
 Github links:
 
-[Full data (v9) - from 1/12/2020 to now](https://github.com/wowgaming/client-data/releases/download/v9/data.zip) (Used in the automatic downloader script in `/apps/`)
+
+[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/download/v10/data.zip) (Used in the automatic downloader script in `/apps/`)
 
 Mega links:
 - [DBC & maps for all versions](https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ)
 
-
-Old versions links (< v8):
+Old versions links (<= v9):
+- [From 1/12/2020 to 05/04/2021](https://github.com/wowgaming/client-data/releases/download/v9/data.zip) (Used in the automatic downloader script in `/apps/`)
 - [From 13/08/19 to 1/12/2020](https://github.com/wowgaming/client-data/releases/tag/v7) [Vmaps & mmaps only (v8) - from 13/08/19 to 1/12/2020](https://mega.nz/#F!xqYxDQ5K!PesmFvXRSqiCRcknVxBn5g)
 - [From 03/01/19 to 13/08/19](https://mega.nz/#F!Am4DBKCR!o9Qj_xFLfsg4sczqg0xq2A)
 - [From 07/18/18 to 03/01/19](https://mega.nz/#!utg3hKJL!TtSzcWxVkvxF4HJvor8LFWhrBwwpH2pHpI-xHGr-HZo) (before commit [59d4e1d3a806a4f2f48f535be366bde1b24d737e](https://github.com/azerothcore/azerothcore-wotlk/commit/59d4e1d3a806a4f2f48f535be366bde1b24d737e)) 
