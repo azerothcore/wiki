@@ -14,7 +14,7 @@
 
 1. Git Extensions
 
-    a. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
+    1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
 
 2. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
 
@@ -24,15 +24,15 @@
    
 3. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
 
-    a. Download the Windows MSI Installer.
+    3. Download the Windows MSI Installer.
     
-    b. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
+    3. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
     
-    c. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
+    3. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
     
-    d. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
+    3. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
     
-    e. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
+    3. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
 
 4. Choose a database management tool
 
