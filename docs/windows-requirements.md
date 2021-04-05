@@ -23,7 +23,6 @@
    To do this, select **Custom** in the type of installation and pick **Common Tools for Visual C++ 2019** in **Programming Languages -> Visual C++**
    
 3. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
-
     a. Download the Windows MSI Installer.
     b. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
     c. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
