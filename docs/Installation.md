@@ -247,7 +247,7 @@ Two options to choose from:
 Github links:
 
 
-[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/download/v9/data.zip) (Used in the automatic downloader script in `/apps/`)
+[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/download/v10/data.zip) (Used in the automatic downloader script in `/apps/`)
 
 Mega links:
 - [DBC & maps for all versions](https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ)
