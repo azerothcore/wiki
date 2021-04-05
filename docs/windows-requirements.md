@@ -23,18 +23,27 @@
    To do this, select **Custom** in the type of installation and pick **Common Tools for Visual C++ 2019** in **Programming Languages -> Visual C++**
    
 3. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
+
     a. Download the Windows MSI Installer.
+    
     b. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
+    
     c. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
+    
     d. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
+    
     e. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
 
 4. Choose a database management tool
 
     a. mysql cli (Fastest)
+    
     b. [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
+    
     c. [HeidiSQL](https://www.heidisql.com/download.php) (Best for beginners)
+    
     d. MySQL Workbench (already installed if you chose to install full MySQL package)
+    
     e. [DBeaver](https://dbeaver.io/) (Multiplattform Database Management Tool)
  
 * Install [Visual Studio](https://visualstudio.microsoft.com/downloads/) VS 2019 Community
