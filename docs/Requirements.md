@@ -11,6 +11,8 @@
 
 [Windows Requirements](windows-requirements.md)
 
+<br>
+
 ## Help
 
 If you are still having problems, check:
