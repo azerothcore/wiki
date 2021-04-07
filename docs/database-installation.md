@@ -7,11 +7,17 @@
 
 ## Creating and Populating the Database in MySQL with automated script
 
+### Creating the Databases and User
+
+https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
+
+You can perform this with a MySQL client or with the MySQL command-line interface (CLI).
+
+You would need to use one MySQL root account with your MySQL client or with MySQL CLI before starting core to run one of those files (use MySQL root only to import one of those files, never run core as root or administrator).
+
+*Tip: You can change the password of the user you are creating for increased security.*
+
 ### Importing the Database
-
-Open **C:\AzerothCore\apps\db_assambler** and run **db_assambler**.
-
-By default the script will use the user **acore** in the database and the assambler will create the user for you.
 
 *Note: if you're using MySQL 5.7, first run*
 
@@ -22,6 +28,8 @@ mysql -e "SET GLOBAL sql_mode = '';" -u root -p first
 (replace root with your mysql user).
 
 *Note: If you are using Windows you will need to run the .sh files with git*
+
+1. Open **C:\AzerothCore\apps\db_assambler**
 
 1. Run db_assambler.sh `bash apps/db_assembler/db_assembler.sh`
 
