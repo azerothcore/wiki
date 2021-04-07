@@ -9,9 +9,9 @@
 
 [Linux Core Installation](linux-core-installation.md)
 
-[macOS Core Installation](linux-core-installation.md)
+[macOS Core Installation](macos-core-installation.md)
 
-[Windows Core Installation](linux-core-installation.md)
+[Windows Core Installation](windows-core-installation.md)
 
 [Amazon Web Services](aws-tutorial.md)
 
