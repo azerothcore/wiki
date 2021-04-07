@@ -162,7 +162,7 @@ This will sync your local repo to the latest commits from the branch you have se
 
 1. Compile downloaded source
 
-1. Run the DB Assambler to apply all DB updats.
+1. Run the [DB Assambler](database-installation.md) to apply all DB updats.
 
 <br>
 

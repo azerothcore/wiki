@@ -76,16 +76,16 @@ make -j 4
 make install
 ```
 
-## Keeping the code up to date
+Now return to the [compilation part](#compiling_the_source_code) again, and repeat the instructions there.
 
-AzerothCore developers and contributors are always working on improving the code and implementing new features to the core. You can always check them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
+### Keeping the source Up-to-Date
+
+AzerothCore developers and contributors are always working on fixing and adding new features to the core. You can always find them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
 
 ```sh
 cd ~/azerothcore/
 git pull origin master
 ```
-
-Now return to the [compilation part](#compiling_the_source_code) again, and repeat the instructions there.
 
 <br>
 
