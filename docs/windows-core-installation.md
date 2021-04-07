@@ -67,9 +67,9 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
 - If you get an error that *CMake could NOT find OpenSSL*:
     
-    1. Check the **Advanced** checkbox.
+    - Check the **Advanced** checkbox.
     
-    1. Find the two OPENSSL entries in the list and point to the correct directories:
+    - Find the two OPENSSL entries in the list and point to the correct directories:
 
         - OPENSSL_ROOT_DIR is the installation path (by default, **C:/OpenSSL-Win32** or **C:/OpenSSL-Win64**)
         
