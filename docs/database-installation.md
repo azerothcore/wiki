@@ -47,16 +47,6 @@ If you want to change the user or password you will need to edit the script conf
 
 1. Edit the variables accordingly, e.g. you most likely need to edit **MYSQL_USER** and **MYSQL_PASS** variables putting your mysql server settings.
 
-### Troubleshooting
-
-If you are having permission errors with MySQL run this file manually:
-
-https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
-
-You can perform this with a MySQL client or with the MySQL command-line interface (CLI).
-
-You would need to use one MySQL root account with your MySQL client or with MySQL CLI before starting core to run one of those files (use MySQL root only to import one of those files, never run core as root or administrator).
-
 ## Keeping the database Up-to-Date
 
 1. Make sure your [core is Up-to-Date](core-installation.md).
