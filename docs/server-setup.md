@@ -29,6 +29,8 @@ Mega link:
 
 ## Extractors
 
+If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
+
 This part is just a general summary of the overall process - please read it more detaild for the OS you are working with.
 
 [Linux Server Setup](linux-server-setup.md)
