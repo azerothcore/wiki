@@ -1,331 +1,180 @@
-# AzerothCore Installation
+# Windows Core Installation
 
-There are several ways to install AzerothCore, you need to pick **one**.
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| [<< Step 1: Requirements](requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
 
-- **Azerothcore Classic setup** - the traditional way of installing AzerothCore.
-  Battle-tested, recommended for all operating systems for any purposes.
-  This process gives more awareness of how AzerothCore is structured. **See below in this page**.
-  
+## Required software
 
-- **AzerothCore Docker setup** - a simplified installation process based on Docker.
+See [Requirements](requirements.md)
 
-  See [Install AzerothCore with Docker](Install-with-Docker.md).
+## Pulling & Compiling the source
 
+### Pulling the code
 
-- **[NEW] AzerothCore Bash Dashboard setup** - simplest way of installing AzerothCore, 
-  recommended for **Linux** systems for both local development and production. 
-  Currently not recommended for Windows or macOS.
+1. Create the directory where the source files will be located. In this guide we will use **C:\Azerothcore**.
 
-  See [Install AzerothCore using the AC bash dashboard](Install-with-AC-Dashboard.md).
+1. Right-click on the folder and select **GitExt Clone...**
 
-  **Disclaimer**: These scripts are supposed to be cross-platform, however we are not quite there yet.
-  It's not currently recommended to use the installation process described in this page on Windows or macOS.
-  You can of course try them anyway and [let us know](https://github.com/azerothcore/azerothcore-wotlk/issues/new/choose) in case you encounter any issue.
-  That does not mean that you cannot use this in production.
-  We tested this procedure on a dedicated server machine running Ubuntu 20.04 and it worked quite nicely,
-  we'll include here some extra tips for production environments as well.
-
-
-Other tutorials from the community for specific platforms:
-
-- [Install AzerothCore on Amazon Web Services](aws-tutorial.md)
-- [Install AzerothCore on a Digital Ocean droplet](digital-ocean-video-tutorial.md)
-- [Install AzerothCore with ArchLinux](arch-linux.md)
-
-## CLASSIC INSTALLATION
-
-### 1) Requirements
-
-Make sure your system fits the [Requirements](Requirements.md).
-
-**Note for Windows users**: use **git bash** as terminal to run commands (see Requirements).
-
-### 2) Getting the source files
-
-Choose **ONE** of the following method, run one of the below `git ...` commands in your terminal.
-
-This will create an `azerothcore-wotlk` directory containing the AC source files.
-
-A) Clone only the master branch + full history (smaller size - recommended):
-
-```sh
-git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
-```
-
-B) Clone only the master branch + no previous history (smallest size):
-
-```sh
-git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
-```
-
-C) Clone all branches and all history:
-
-```sh
-git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
-```
-
-Note: If you want to get the full history back, use `git fetch --unshallow` (if you chose option B).
-
-
-### 3) Compiling
-
-#### Compiling on GNU/Linux or Mac OS X
-
-```sh
-cd azerothcore
-mkdir build
-cd build
-```
-
-or
-
-```sh
-cd azerothcore && mkdir build && cd build
-```
-
-Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
-
-**CMAKE OPTIONS**
-
-Check the options here if you know what you're doing: [CMake options](CMake-options.md)
-
-
-**CMake on Linux:**
-
-At this point, you must be in your "build/" directory.
-
-**Note**: in the following command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root". You can check the state of the environment variable, as follows:
-
-```sh
-echo $HOME
-```
-
-**Note2**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
-
-```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1
-```
-
-To know the amount of cores available.
-You can use the following command
-
-```sh
-nproc --all
-```
-
-Then, replacing `6` with the number of threads that you want to execute, type:
-
-```sh
-make -j 6
-make install
-```
-
-or
-
-```sh
-make -j 6 && make install
-```
-
-**CMake on Mac OS X:**
-
-**Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
-
-```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
-```
-
-To know the amount of cores available.
-You can use the following command
-
-```sh
-nproc --all
-```
-
-Then, replacing `4` with the number of threads that you want to execute, type:
-
-```sh
-make -j 4
-make install
-```
-or
-
-```sh
-make -j 4 && make install
-```
-
-#### Compiling on Windows
-
-Open CMake, press `Browse Source...` button and select the folder that you cloned earlier then press `Browse Build...` and select a folder where the CMake will generate the build files. Press the `Configure` button.
-
-CMake will ask you to select what compiler to use. For example you'll want to select `Visual Studio 16 2019` to compile binaries using Visual Studio 2019. If you want to build using x64 set `Optional platform for generator` to x64. Do not change the `Use default native compilers` option. Press `Finish` and wait until CMake is done checking for requires files.
-
-Change `CMAKE_INSTALL_PREFIX` to the location where you will run your server from.  
-Press `Configure` once again and then press `Generate`. If no error occurred you can close CMake.  
-Go to the location where the build files have been generated and open AzerothCore.sln  
-
-_Note: If MySQL is not found by CMake it is required to set MYSQL_INCLUDE_DIR = C:/mysql_libs/include and MYSQL_LIBRARY= C:/mysql_libs/lib_XX/libmysql.lib._
-_XX depends if you are compiling in 32 or 64 bits mode. ( See [Windows Requirements article](Requirements.md#windows) )_
-
-Press `BUILD` then select `Build solution` or press Ctrl+Shift+B on VS 2019 / F6 on VS 2017.  
-Wait until the Build has been finished (It should take between 10-40 minutes depending on your hardware).  
-
-You will find your freshly compiled binaries in the Build\bin\Release or Build\bin\Debug folder. These are all used to run your server at the end of this instruction.
- 
-You will need the following files in order for the core to function properly:
- 
-```
-libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
-libmySQL.dll 
-ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
-authserver.conf.dist 
-authserver.exe
-worldserver.conf.dist
-worldserver.exe 
-```
-
-The `.dll` files needs to be copied manually from their install folder into your compiled folder.
-
-`libmysql.dll` (C:\Program Files\MySQL\MySQL Server 8.0\lib\)
-
-For OpenSSL 1.0.x: 
-
-* (C:\OpenSSL-Win32\ or C:\OpenSSL-Win64\)
-  * `libeay32.dll`
-  * `ssleay32.dll`
-
-For OpenSSL 1.1.x: 
-
-* Win32 (C:\OpenSSL-Win32\bin)
-  * `libcrypto-1_1.dll` 
-  * `libssl-1_1.dll`
-
-* Win64 (C:\OpenSSL-Win64\bin)
-  * `libcrypto-1_1-x64.dll`
-  * `libssl-1_1-x64.dll`
-
-
-**Note:** Do not use ARM architecture as azerothcore requires SSE2 and ARM doesn't support it.  
-
-
-### 4) Setting the configuration files
-
-Inside the directory where you installed the binaries (e.g. `/home/youruser/azeroth-server/`), open the directory where configuration files has been installed  ( `etc/` on linux ) , then:
-
-- copy the file `authserver.conf.dist` and rename it to `authserver.conf` ( DO NOT REMOVE THE .dist FILE )
-- copy the file `worldserver.conf.dist` and rename it to `worldserver.conf` ( DO NOT REMOVE THE .dist FILE )
-
-_Please Read [How to edit .conf files](how-to-work-with-conf-files.md) article to understand how configuration files work, and why you need the .dist file too_
-
-Open both `authserver.conf` and `worldserver.conf` files and go to the `MYSQL SETTINGS` section, then set the variables:
+1. Fill in the data as follow:
 
 ```
-LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth"
-WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world"
-CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters"
+Repository to clone: https://github.com/azerothcore/azerothcore-wotlk
+Destination: C:\Azerothcore
+Subdirectory to create: <none>*
+Branch: master
+Repository type: Personal repository
 ```
 
-The default user is `acore` with password `acore`. If you would like to use another MySQL user, change the credentials here.
-(the `authserver.conf` has the `LoginDatabaseInfo` variable only).
+Click **Clone**. Within a few minutes Azerothcore's sourcefiles will be cloned into **C:\Azerothcore**.
 
-In the worldserver.conf file, also set:
+### Configuring and generating Visual C++ solution with CMake
 
-`DataDir = "/home/youruser/azeroth-server/data"`
+Before you begin, create a new directory called **Build**. In this guide we will use **C:\Build**.
 
-replacing `/home/youruser/azeroth-server` with `CMAKE_INSTALL_PREFIX`.
+1. Open CMake
 
+1. Click **Browse Source...** → Select the source directory (**C:\Azerothcore**)
 
-### 5) Download the data files
+1. Click **Browse Build...** → Select the build directory (**C:\Build**)
 
-Go to `CMAKE_INSTALL_PREFIX` and create a new directory named `data`
+1. Click **Configure**.
 
-Two options to choose from:
+1. In the dropdown menu, choose the version of the compiler you downloaded in [Requirements](windows-requirements.md) section. Be sure to choose **Win64** version if you work on a 64-bit compilation.
 
-##### A) [Extract Client Data](http://www.azerothcore.org/wiki/Extract-Client-Data) from your own WOW client using the AzerothCore extractors (required for custom maps)
+1. Make sure that **Use default native compilers** is checked.
 
-##### B) (Easier) Download directly using one of the links below:
+1. Click **Finish**.
 
-Github links:
+1. Make sure **TOOLS** is checked. This will compile the extractors needed later in the setup.
 
+1. Click **Configure** again. As long as you have error(s) typed in red in the log window you will need to check your parameters and re-run it.
 
-[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/download/v10/data.zip) (Used in the automatic downloader script in `/apps/`)
+1. Click **Generate**. This will install the selected build files into your **C:\Build** folder.
 
-Mega links:
-- [DBC & maps for all versions](https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ)
+#### Some error fixes
 
-Old versions links (<= v9):
-- [From 1/12/2020 to 05/04/2021](https://github.com/wowgaming/client-data/releases/download/v9/data.zip) (Used in the automatic downloader script in `/apps/`)
-- [From 13/08/19 to 1/12/2020](https://github.com/wowgaming/client-data/releases/tag/v7) [Vmaps & mmaps only (v8) - from 13/08/19 to 1/12/2020](https://mega.nz/#F!xqYxDQ5K!PesmFvXRSqiCRcknVxBn5g)
-- [From 03/01/19 to 13/08/19](https://mega.nz/#F!Am4DBKCR!o9Qj_xFLfsg4sczqg0xq2A)
-- [From 07/18/18 to 03/01/19](https://mega.nz/#!utg3hKJL!TtSzcWxVkvxF4HJvor8LFWhrBwwpH2pHpI-xHGr-HZo) (before commit [59d4e1d3a806a4f2f48f535be366bde1b24d737e](https://github.com/azerothcore/azerothcore-wotlk/commit/59d4e1d3a806a4f2f48f535be366bde1b24d737e)) 
-- For older versions, check out this page's history.
+- If MySQL is not found by CMake it is required to set **MYSQL_INCLUDE_DIR = C:/XX/MySQL/MySQL Server X.X/include** and **MYSQL_LIBRARY = C:/XX/MySQL/MySQL Server X.X/lib(_XX)/libmysql.lib**.
 
-
-Then, extract all the archives and place the extracted `dbc`, `maps`, `mmaps`, `vmaps` directories inside the `data` directory.
-
-
-### 6) Setting up the database
-
-#### Base DB setup
-Follow these instructions: [Database Setup](Database-Setup).
-
-**Note**: by default, database names are configured to be named:
-
-- `acore_characters`
-- `acore_auth`
-- `acore_world`
-
- if, for some reasons, you decide to name them differently, remember to edit your `authserver.conf` and `worldserver.conf` accordingly.
-
-#### Configure your auth.realmlist table
-
-In the `acore_auth` database, you must fill the `realmlist` table with your connection info.
-It must correspond with the values in `worldserver.conf` (for realmid, flag and realmzone).
-
-    Address: 127.0.0.1 OR <Your LOCAL NETWORK ip>  OR <Your PUBLIC NETWORK ip>
-    Port :  worldserver port
-
-
-### 7) Starting the servers
-
-#### GNU/Linux and Mac OS X
-
-Open 2 terminal windows (or terminal tabs) and move to the `bin` directory of your azeroth server (for example `/home/youruser/azeroth-server/bin`), 
-
-then in one window/tab type:
-
-`./authserver`
-
-in the other one:
-
-`./worldserver`
-
-
-#### Windows
-
-Run `worldserver.exe` and `authserver.exe` from `CMAKE_INSTALL_PREFIX`.
-
-
-### 8) Connecting to the server
-
-Edit your `realmlist.wtf` and add the IP you set in the realmlist table (and the port if needed). Then you can connect with a newly made account or the test accounts (`test1` to `test10`, with password `a`).
-
-You can change all the passwords at once by pasting this into the worldserver console:
-```
-.account set password test1 new_pass new_pass
-.account set password test2 new_pass new_pass
-.account set password test3 new_pass new_pass
-.account set password test4 new_pass new_pass
-.account set password test5 new_pass new_pass
-.account set password test6 new_pass new_pass
-.account set password test7 new_pass new_pass
-.account set password test8 new_pass new_pass
-.account set password test9 new_pass new_pass
-.account set password test10 new_pass new_pass
-```
-
-### Optional: Creating a regular user to work with on Linux
-Start with logging in to your Linux machine and create an account for the server itself on most recent distributions this can easily be done with the following command :
-
-```sudo adduser <username>``` Note: Change `<username>` to the preferred username of your going to use on your server.  
+    - XX depends on which MySQL version you use.
     
-```sudo su - <username>``` Note: Switch user to newly created `<username>` so everything will run and compile with the user you just have created.
+    - (If you do not see the MYSQL fields in CMake, tick the Advanced box).
+    
+- If you get linker errors (e.g "error LNK2019: unresolved external symbol mysql_server_init"), make sure MYSQL_LIBRARY is set to the libmysql.lib that matches your compile mode (x64 vs 32 bits).
+
+    - (If you do not see the MYSQL fields in CMake, tick the Advanced box).
+
+- If you get an error that *CMake could NOT find OpenSSL*:
+    
+    1. Check the **Advanced** checkbox.
+    
+    1. Find the two OPENSSL entries in the list and point to the correct directories:
+
+        - OPENSSL_ROOT_DIR is the installation path (by default, **C:/OpenSSL-Win32** or **C:/OpenSSL-Win64**)
+        
+        - OPENSSL_INCLUDE_DIR is the "include" folder in installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
+
+### Compiling the Source
+
+1. In CMake press **Open Project** to open the **AzerothCore.sln** file directly with Visual Studio.
+
+1. In the menu at the top, click **Build** and select **Configuration Manager**.
+
+1. Set **Active Solution Configuration** to **RelWithDebInfo**.
+
+1. In the list menus below "Help", set **Active Solution Platform** to **x64** and then click Close (settings automatically save).
+
+    1. If you set 32-bit compilation during CMake configuration, select **x86**.
+
+1. Rick-click **ALL_BUILD** in the Solution Explorer on the right sidebar and select **Clean**.
+ 
+1. Right-click **ALL_BUILD** and select **Build**. (Ctrl + Shift + B)
+
+    1. If your GUI does not show Solution Explorer, click the Build menu and select **Clean Solution** then **Build**.
+
+Build time differs from machine to machine, but you can expect it to take between 5 and 30 minutes.
+
+If you are asked to "Reload build files" during or after the compile, do so.
+
+When the build is complete you will find a message in the output that looks similar to this:
+
+```
+========== Build: 22 succeeded, 0 failed, 0 up-to-date, 1 skipped ==========
+```
+
+You will find your freshly compiled binaries in the **C:\Build\bin\RelWithDebInfo** or **C:\Build\bin\Debug** folder. These are all used to run your server at the end of this instruction.
+
+You will need the following files in order for the core to function properly:
+
+```
+\configs\
+authserver.exe
+authserver.pbd
+worldserver.exe
+worldserver.pdb
+libmysql.dll
+libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
+ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
+```
+
+In the **configs** folder you should find:
+
+```
+authserver.conf.dist
+worldserver.conf.dist
+```
+
+There are three DLL files that need to be manually added to this folder, and you need to copy them from the following installation/bin directories:
+
+**libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.x\lib\
+
+OpenSLL _before_ version 1.1.0:
+
+**libeay32.dll**
+**ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*.
+
+OpenSSL 1.1.0 and more recent installed, names have changed:
+
+**libssl-1_1.dll**
+**libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
+
+**libssl-1_1-x64.dll**
+**libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
+
+#### About compilation log and report
+
+pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not mandatory but it's recommended to compile core on at least RelWithDebInfo mode to get proper crashlogs. If you compile on Release mode the pdb files aren't needed.
+
+To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
+
+### Keeping the source Up-to-Date
+
+AzerothCore developers and contributors are always working on fixing and adding new features to the core. You can always find them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
+
+Open your AzerothCore repository in GitExtensions.
+
+1. Click on the blue down arrow (Pull - merge).
+
+This will sync your local repo to the latest commits from the branch you have setup as default.
+
+1. Now you will need to re-run CMake Configure and Generate to update your solution (.sln) files.
+
+1. Compile downloaded source
+
+1. Run the DB Assambler to apply all DB updats.
+
+<br>
+
+## Help
+
+If you are still having problems, check:
+
+* [How to ask for help](How-to-ask-for-help.md)
+
+* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
+
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| [<< Step 1: Requirements](requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
