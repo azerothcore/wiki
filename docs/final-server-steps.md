@@ -46,7 +46,7 @@ account set gmlevel <user> 3 -1
 **Changing password**
 
 ```
-.account set password <user> <password> <password>
+account set password <user> <password> <password>
 ```
 
 <br>
