@@ -15,7 +15,7 @@ This will sync your local repo to the latest commits from the Azerothcore-wotlk 
 
 1. Now you will need to re-run CMake Configure and Generate to update your solution (.sln) files.
 
-1. Compile downloaded source as explained in [Windows Core Installation](windows-core-installation.md#compiling_the_source)
+1. Compile downloaded source as explained in [Windows Core Installation](windows-core-installation.md#compiling-the-source)
 
 ## Keeping the Database Up-to-Date
 

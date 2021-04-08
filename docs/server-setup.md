@@ -35,7 +35,7 @@ This part is just a general summary of the overall process - please read it more
 
 [Linux Server Setup](linux-server-setup.md)
 
-[macOS Server Setup](macOS-server-setup.md)
+[macOS Server Setup](macos-server-setup.md)
 
 [Windows Server Setup](windows-server-setup.md)
 

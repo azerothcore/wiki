@@ -1,19 +1,19 @@
-# Keeping the Server Up-to-Date
+# Database Keeping the Server Up-to-Date
 
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 6: Final Server Steps](final-server-steps.md) | [Step 8: Client Setup >>](client-setup.md) |
 
-AzerothCore developers and contributors are always working on fixing and adding new features to the core. You can always find them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
+1. First make sure that your core is [up-to-date](keeping-the-server-up-to-date.md).
 
-[Linux Keeping the Server Up-to-Date](linux-keeping-the-server-up-to-date.md)
-
-[macOS Keeping the Server Up-to-Date](macos-keeping-the-server-up-to-date.md)
-
-[Windows Keeping the Server Up-to-Date](windows-keeping-the-server-up-to-date.md)
-
-[Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-date.md)
+1. Run db_assambler.sh and select **import-updates: Assamble & Import only updates**.
+    
+    1. For Linux and macOS users run this command:
+    
+    ```
+    bash apps/db_assembler/db_assembler.sh
+    ```
 
 <br>
 

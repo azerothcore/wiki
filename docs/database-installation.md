@@ -9,6 +9,8 @@
 
 ### Creating the Databases and User
 
+First of all you need to create the acore user using the script below.
+
 https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
 
 You can perform this with a MySQL client or with the MySQL command-line interface (CLI).
@@ -46,12 +48,6 @@ If you want to change the user or password you will need to edit the script conf
 1. Go to the secion **DB EXPORTER/IMPORTER CONFIGURATIONS**.
 
 1. Edit the variables accordingly, e.g. you most likely need to edit **MYSQL_USER** and **MYSQL_PASS** variables putting your mysql server settings.
-
-## Keeping the database Up-to-Date
-
-1. Make sure your [core is Up-to-Date](core-installation.md).
-
-1. Run db_assambler.sh and select **import-updates: Assamble & Import only updates**.
 
 <br>
 
