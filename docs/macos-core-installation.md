@@ -7,7 +7,7 @@
 
 ## Required software
 
-See [Requirements](requirements.md)
+See [Requirements](requirements.md) before you continue.
 
 ## Getting the source code
 
@@ -74,17 +74,6 @@ Then, replacing `4` with the number of threads that you want to execute, type:
 ```sh
 make -j 4
 make install
-```
-
-Now return to the [compilation part](#compiling_the_source_code) again, and repeat the instructions there.
-
-### Keeping the source Up-to-Date
-
-AzerothCore developers and contributors are always working on fixing and adding new features to the core. You can always find them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
-
-```sh
-cd ~/azerothcore/
-git pull origin master
 ```
 
 <br>

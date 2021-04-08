@@ -7,7 +7,7 @@
 
 ## Required software
 
-See [Requirements](requirements.md)
+See [Requirements](requirements.md) before you continue.
 
 ## Pulling & Compiling the source
 
@@ -147,22 +147,6 @@ OpenSSL 1.1.0 and more recent installed, names have changed:
 pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not mandatory but it's recommended to compile core on at least RelWithDebInfo mode to get proper crashlogs. If you compile on Release mode the pdb files aren't needed.
 
 To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
-
-### Keeping the source Up-to-Date
-
-AzerothCore developers and contributors are always working on fixing and adding new features to the core. You can always find them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
-
-Open your AzerothCore repository in GitExtensions.
-
-1. Click on the blue down arrow (Pull - merge).
-
-This will sync your local repo to the latest commits from the branch you have setup as default.
-
-1. Now you will need to re-run CMake Configure and Generate to update your solution (.sln) files.
-
-1. Compile downloaded source
-
-1. Run the [DB Assambler](database-installation.md) to apply all DB updats.
 
 <br>
 

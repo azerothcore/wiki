@@ -3,7 +3,7 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 5: Networking](networking.md) | [Step 7: Client Setup >>](client-setup.md) |
+| [<< Step 5: Networking](networking.md) | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date.md) |
 
 ## Starting the server
 

@@ -4,9 +4,21 @@
 
 AzerothCore is a rather complex and demanding software, and as such, it may seem quite daunting to install and maintain. This guide will attempt to describe in detail how to setup your server environment.
 
-Every step of the guide is divided in three tabs (probably more will follow) regarding different operating systems (mainly divided into Linux, macOS and Windows).
+[AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) (simplest way of installing AzerothCore, recommended for **Linux** systems for both local development and production. Currently not recommended for Windows or macOS.)
 
-The guide has been divided into 7 steps, to make it more readable:
+[Docker](Install-with-Docker.md) (a simplified installation process based on Docker.)
+
+[Amazon Web Services](aws-tutorial.md)
+
+[Digital Ocean droplet](digital-ocean-video-tutorial.md)
+
+[ArchLinux](arch-linux.md)
+
+Classic installation guides for Linux, macOS and Windows can be found in our Installation Guide series below.
+
+Every step of the guide is divided in three tabs regarding different operating systems (Linux, macOS and Windows).
+
+The guide has been divided into 8 steps, to make it more readable:
 
 1. [Requirements](requirements.md)
 
@@ -19,6 +31,8 @@ The guide has been divided into 7 steps, to make it more readable:
 1. [Networking](networking.md)
 
 1. [Final Server Steps](final-server-steps.md)
+
+1. [Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md)
 
 1. [Client Setup](client-setup.md)
 

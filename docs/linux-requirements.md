@@ -11,6 +11,7 @@
 | CMake ≥ 3.16 |
 | Clang ≥ [6](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
+#### Ubuntu
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev

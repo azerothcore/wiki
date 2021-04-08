@@ -5,19 +5,11 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 1: Requirements](requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
 
-[AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) (simplest way of installing AzerothCore, recommended for **Linux** systems for both local development and production. Currently not recommended for Windows or macOS.)
-
 [Linux Core Installation](linux-core-installation.md)
 
 [macOS Core Installation](macos-core-installation.md)
 
 [Windows Core Installation](windows-core-installation.md)
-
-[Amazon Web Services](aws-tutorial.md)
-
-[Digital Ocean droplet](digital-ocean-video-tutorial.md)
-
-[ArchLinux](arch-linux.md)
 
 <br>
 
