@@ -100,6 +100,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug getvalue|3|`.debug $field [1\0]`|1: get uint32 value of $field of the selected unit; 0: get float value of $field of the selected unit|
 |debug hostil|1||Get hostile reference list of the selected unit.|
 |debug itemexpire|3|`.debug itemexpire $guid`|Delete the item with $guid.|
+|debug los|3|`.debug los`|Show information about the line of sight status.|
 |debug lootrecipient|3|`.debug lootrecipient`|Get loot recipient of the selected creature.|
 |debug moveflags|3|`.debug moveflags [$newMoveFlags [$newMoveFlags2]]`|No params given will output the current moveflags of the target|
 |debug play cinematic|1|`.debug play cinematic #cinematicid`|Play cinematic #cinematicid for you. You stay at place while your mind fly.|
