@@ -2,7 +2,7 @@
 
 ## Introduction
 
-AzerothCore is a rather complex and demanding software, and as such, it may seem quite daunting to install and maintain. This guide will attempt to describe in detail how to setup your server environment.
+There are several ways to install AzerothCore, you need to choose ONE.
 
 [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) (simplest way of installing AzerothCore, recommended for **Linux** systems for both local development and production. Currently not recommended for Windows or macOS.)
 
