@@ -6,7 +6,7 @@ AzerothCore is a rather complex and demanding software, and as such, it may seem
 
 [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) (simplest way of installing AzerothCore, recommended for **Linux** systems for both local development and production. Currently not recommended for Windows or macOS.)
 
-[Docker](Install-with-Docker.md) (a simplified installation process based on Docker.)
+[Docker setup](Install-with-Docker.md) (a simplified installation process based on Docker.)
 
 [Amazon Web Services](aws-tutorial.md)
 
