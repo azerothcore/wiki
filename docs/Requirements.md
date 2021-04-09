@@ -4,7 +4,13 @@
 
 ### Debian-based requirements
 
-#### Ubuntu
+#### Ubuntu with MariaDB 10.x
+
+```sh
+sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
+```
+
+#### Ubuntu with MySQL 8.x
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
