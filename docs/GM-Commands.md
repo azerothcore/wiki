@@ -100,6 +100,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug getvalue|3|`.debug $field [1\0]`|1: get uint32 value of $field of the selected unit; 0: get float value of $field of the selected unit|
 |debug hostil|1||Get hostile reference list of the selected unit.|
 |debug itemexpire|3|`.debug itemexpire $guid`|Delete the item with $guid.|
+|debug los|3|`.debug los`|Show information about the line of sight status.|
 |debug lootrecipient|3|`.debug lootrecipient`|Get loot recipient of the selected creature.|
 |debug moveflags|3|`.debug moveflags [$newMoveFlags [$newMoveFlags2]]`|No params given will output the current moveflags of the target|
 |debug play cinematic|1|`.debug play cinematic #cinematicid`|Play cinematic #cinematicid for you. You stay at place while your mind fly.|
@@ -152,7 +153,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |freeze|2|`.freeze (#player)`|"Freezes" #player and disables his chat. When using this without #name it will freeze your target.|
 |unfreeze|2|`.unfreeze (#player)`|"Unfreezes" #player and enables his chat again. When using this without #name it will unfreeze your target.|
 |gm|1|`.gm [on/off]`|Enable or Disable in game GM MODE or show current state of on/off not provided.|
-|gm chat|1|`.gm chat [on/off]`|Enable or disable chat GM MODE (show gm badge in messages) or show current state of on/off not provided.|
+|gm chat|2|`.gm chat [on/off]`|Enable or disable chat GM MODE (show gm badge in messages) or show current state of on/off not provided.|
 |gm fly|2|`.gm fly [on/off]`|Enable/disable gm fly mode.|
 |gm ingame|0|`.gm ingame`|Display a list of available in game Game Masters.|
 |gm list|3|`.gm list`|Display a list of all Game Masters accounts and security levels.|
