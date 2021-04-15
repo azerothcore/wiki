@@ -24,11 +24,6 @@
 
 - The AzerothCore realm should be selectable. Log in, create a character, and you're all done!
 
-*Tip: If you do not want to create a new account there are pre-made accounts.*
-*Test1 - Test10 with password a.**
-
-**NOTE: You should always remove or change the password of the test accounts before allowing anyone to join your server as these have predefined GM Access.**
-
 ## Account Creation
 
 **To create an account**
