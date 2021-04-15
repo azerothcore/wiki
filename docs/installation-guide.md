@@ -4,7 +4,7 @@
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
 
-- **Azerothcore Classic setup** - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
+- [**Azerothcore Classic Setup**](#azerothcore_classic_setup) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
 
 - [Docker setup](Install-with-Docker.md) - a simplified installation process based on Docker.
 
