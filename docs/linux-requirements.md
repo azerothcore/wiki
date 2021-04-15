@@ -1,10 +1,23 @@
-# AzerothCore Requirements
+# Linux Requirements
 
-## GNU/Linux
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](installation-guide.md) | [Step 2: Core Installation >>](core-intallation.md) |
 
-### Debian-based requirements
+| |
+| :- |
+| MySQL ≥ 5.7.0 |
+| CMake ≥ 3.16 |
+| Clang ≥ [6](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
-#### Ubuntu
+#### Ubuntu with MariaDB 10.x
+
+```sh
+sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
+```
+
+#### Ubuntu with MySQL 8.x
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
@@ -145,67 +158,17 @@ you can install gcc-7:
 sudo apt-get install g++-7 gcc-7
 ```
 
----
+<br>
 
-## Mac OS X
+## Help
 
-- Install XCode using the App Store, then open the terminal and type:
+If you are still having problems, check:
 
-```sh
-xcode-select --install
-```
+* [How to ask for help](How-to-ask-for-help.md)
 
-- Install the package manager [Homebrew](http://brew.sh/)
+* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-Use brew it to install the required packages:
-
-```sh
-brew update
-```
-
-```sh
-brew install openssl readline cmake ace coreutils bash bash-completion coreutils
-```
-
-This will install bash 5+, you might need to restart your terminal.
-Make sure you are using bash 5 or newer by typing `bash --version`.
-
-Now install mysql:
-
-```sh
-brew install mysql
-```
-
-You will be prompted some instructions to complete the `mysql` installation, for example to properly set a password. Just follow the instructions and properly configure mysql. **This step is important, do not skip it.**
-
-To verify that mysql has been properly installed, try accessing it using either the command line (e.g. `mysql -u root -p`) or using DB client managers with a UI like Sequel Ace.
-
-You can install Sequel Ace with:
-
-```sh
-brew cask install sequel-ace
-```
-
-
-## Windows
-
-* Install [Visual Studio](https://visualstudio.microsoft.com/downloads/) VS 2019 Community
-
-* Install [CMake](https://cmake.org/) version 3.16 or higher
-
-* Install latest version of [Git Extensions](https://git-scm.com/download/win)
-
-* [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/) (version 8.0 or 5.7, older versions are not supported)
-
-* Install [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) version 1.0.x or 1.1.x (Do not install the Light version) 
-  
-  Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
-
-1. Find the 64bit version by finding the _latest _ **Win64 OpenSSL** that is **NOT** the "light" version.
-    1. Example: **Win64 OpenSSL v1.0.1p**
-
-2. Find the 32bit version by finding the _latest _ **Win32 OpenSSL** that is **NOT** the "light" version.
-    1. Example: **Win32 OpenSSL v1.0.1p**
-
-3. _Note #1: If you get a "Missing Microsoft Visual C++ 2008 Redistributables" error message while installing OpenSSL, download the ** [Microsoft Visual C++ 2008 Redistributable Package (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=29) ** (1.7MB Installer) and install it. If you need 32bit support, download and install the [ **Microsoft Visual C++ 2008 Redistributable Package (x86)** ](http://www.microsoft.com/en-us/download/details.aspx?id=15336)._
-4. _Note #2: While installing OpenSSL, choose **The OpenSSL binaries (/bin) directory** (NOT "The Windows system directory") when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for Core Installation._
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](installation-guide.md) | [Step 2: Core Installation >>](core-intallation.md) |
