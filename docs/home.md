@@ -6,8 +6,7 @@ Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered b
 
 ## Getting started
 
-- [Traditional setup guide](Installation.md)
-- [Docker setup guide](Install-with-Docker.md)
+- [Installation Guide](installation.md)
 
 ## Documentation
 
