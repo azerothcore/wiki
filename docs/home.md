@@ -6,7 +6,7 @@ Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered b
 
 ## Getting started
 
-- [Installation Guide](installation.md)
+- [Installation Guide](Installation.md)
 
 ## Documentation
 
