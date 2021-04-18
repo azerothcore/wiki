@@ -27,7 +27,7 @@ They both work out of the box when you compile with the dashboard
 
 Always make sure to use **RelWithDebInfo** or **Debug** compilation (in your CMake command) in order to get meaningful crash reports.
 
-Create a file called `gdb.txt` with this inside:
+Create a file called `gdb.conf` with this inside:
 
     set logging on
     set debug timestamp
@@ -37,7 +37,7 @@ Create a file called `gdb.txt` with this inside:
 Then, to debug or create a crashdump you can just use the gdb command as described in its documentation:
 
 ```
-gdb -x gdb.txt --batch ./worldserver
+gdb -x gdb.conf --batch ./worldserver
 ```
 
 This command should be enough to both attach your IDE to debug your code and also generate a crashdump when the server crashes
@@ -45,7 +45,7 @@ This command should be enough to both attach your IDE to debug your code and als
 For an "universal" and more advanced restarter, Personally I'm using [PM2][2]
 
 ```
-pm2 start "gdb -x gdb.txt --batch ./worldserver"
+pm2 start "gdb -x gdb.conf --batch ./worldserver"
 ```
 
 It should be enough to automatically restart, monitoring and gdb your server
