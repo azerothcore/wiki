@@ -105,11 +105,22 @@ UPDATE realmlist SET address='<SERVER PUBLIC IP ADDRESS>';
 
 To add a module simply place the module directory inside of the **/azeorthcore-wotlk/modules** directory.
 
-After adding a module you'll have to rebuild the server.
+After adding a module you'll have to rebuild azerothcore.
 ```
 ./bin/acore-docker-build
 ```
-If the added module makes use of configurations files you'll have to place them in the **azerothcore-wotlk\docker\worldserver\etc\modules** directory. You'll have to manually create the modules directory if it doesn't exist.
+If the added module makes use of configurations files you'll have to place them in the **azerothcore-wotlk\docker\worldserver\etc\modules** directory. If the module directory doesn't exist, you'll have to manually create it yourself.
+
+After rebulding you can start the containers again with the docker-compose command.
+
+(if your containers are still running)
+```
+docker-compose restart
+```
+or (if your containers are stopped)
+```
+docker-compose start
+```
 
 ### Memory usage
 
