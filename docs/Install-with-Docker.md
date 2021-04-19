@@ -103,13 +103,13 @@ UPDATE realmlist SET address='<SERVER PUBLIC IP ADDRESS>';
 ## More info
 ### Adding Modules
 
-Adding a module to your server is quite simple, place the module in the module directory of your server (e.g. /azerothcore-wotlk/modules)
+To add a module simply place the module directory inside of the **/azeorthcore-wotlk/modules** directory.
 
 After adding a module you'll have to rebuild the server.
 ```
 ./bin/acore-docker-build
 ```
-If the added module makes use of configurations file you'll have to place them in the **azerothcore-wotlk\docker\worldserver\etc\modules** directory. You'll have to manually create the modules directory if it doesn't exist.
+If the added module makes use of configurations files you'll have to place them in the **azerothcore-wotlk\docker\worldserver\etc\modules** directory. You'll have to manually create the modules directory if it doesn't exist.
 
 ### Memory usage
 
