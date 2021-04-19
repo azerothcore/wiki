@@ -111,13 +111,13 @@ After adding a module you'll have to rebuild azerothcore.
 ```
 If the added module makes use of configurations files you'll have to place them in the **azerothcore-wotlk\docker\worldserver\etc\modules** directory. If the module directory doesn't exist, you'll have to manually create it yourself.
 
-After rebulding you can start the containers again with the docker-compose command.
+After rebuilding you can (re)start the containers again with the docker-compose command.
 
-(if your containers are still running)
+If your containers are running, please use the restart command
 ```
 docker-compose restart
 ```
-or (if your containers are stopped)
+or if your containers are stopped, use the start command
 ```
 docker-compose start
 ```
