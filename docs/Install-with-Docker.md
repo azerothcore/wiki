@@ -80,6 +80,12 @@ This will take a while. Meanwhile you can go and drink a glass of wine :wine_gla
 
 **Congratulations! Now you have an up and running azerothcore server! Continue to the next step to create an account**
 
+If you need to run this in background, you can use the following command to run the docker-compose detached mode:
+
+```
+./acore.sh docker start:app:d
+```
+
 **4) Access the worldserver console**
 
 Open a new terminal and run the following command
