@@ -121,7 +121,13 @@ This service is used for our build and db operations, but it can also be used
 by you to develop with the [VSCode Remote Docker extension](https://code.visualstudio.com/docs/remote/containers)
 
 Inside the azerothcore repo there's a pre-configured dev-container that can be opened by using the VSCode command palette.
-The command to type is: `> Remote-Containers: Reopen Folder in Container`
+To setup the Dev-Container follow these steps:
+
+1. Copy the `docker-compose.override.yml` file from the /conf/dist folder to the root directory of the azerothcore repo.
+2. [install and open VSCode](https://code.visualstudio.com/)
+3. install the remote-container extension
+4. Open the azerothcore folder inside VSCode
+5. Open the VSCode [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (Ctrl+Shift+P) and run: `>Remote-Containers: Reopen in Container` 
 
 **IMPORTANT**: The dev-container also contains a pre-configured debugger action that allows you to use breakpoints and debug your worlserver. 
 
