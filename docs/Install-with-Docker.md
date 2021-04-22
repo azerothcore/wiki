@@ -112,10 +112,33 @@ SELECT * FROM realmlist;
 UPDATE realmlist SET address='<SERVER PUBLIC IP ADDRESS>';
 ```
 
+### How to keep your AzerothCore updated with the latest changes
+
+First of all, you just need to use the `git` tool to update your repository by running the following common command:
+
+`git pull origin master` : this will download latest commits from the azerothcore repository
+
+Then you can just run the following command:
+
+`./acore.sh docker build`: to rebuild the sources and generating new binaries. Moreover, it will import latest database changes.
+
+NOTE: sometime you also need to recreate the docker images and re-download new version of the client data. We do not update the neither the Dockerfile nor the client data but 
+when it happens you can run the following commands:
+
+1. `docker-compose down` : it will delete the containers (not the volumes, so your data will be safe).
+2. `docker-compose build`: it will rebuild your docker images based on the Dockerfile (normally it's automatically done by the `./acore.sh docker start:app/build` commands)
+3. `./acore.sh client-data`: it will download the new version of the client data if there's a new version available
+
+
 ### How to run the worlserver with GDB
+
+Running the server with GDB allows you to generate a crashdump if the server crashes. The crashdump file is useful for developers to understand which lines are failing and possibly fix it.
 
 1. Create a `config.sh` file under the `/conf/` directory of the azerothcore-wotlk repository
 2. Add this configuration inside: `AC_RESTARTER_WITHGDB=true`. It will configure the restarter used by our docker services to use GDB instead of the binaries directly
+3. Restart your containers and that's it!
+
+If the server crashes, you will find the crashdump file (`gdb.txt`) within the `/env/docker` folder
 
 ### How to use the dev-container
 
@@ -138,6 +161,18 @@ To setup the Dev-Container follow these steps:
 
 Do not forget that you need to [Remote Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 
 installed in your [Visual Studio Code](https://code.visualstudio.com/) IDE
+
+#### How to debug your code with the dev-container
+
+Once inside the VSCode dev-container you can go to the debug session and use the `Linux/Docker debug` action as you can see in this image:
+
+![image](https://user-images.githubusercontent.com/147092/115712693-5a837d80-a375-11eb-98aa-b415e1919125.png)
+
+It will run a worldserver in debug mode and then you can start placing breakpoints in your code to debug it.
+
+![image](https://user-images.githubusercontent.com/147092/115712867-9cacbf00-a375-11eb-9cab-890e4f68d98b.png)
+
+For more info about how to debug in vscode you can refer to the [official guide](https://code.visualstudio.com/docs/editor/debugging)
 
 ### How to create a second realm with docker-compose
 
