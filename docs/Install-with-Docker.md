@@ -180,7 +180,7 @@ By default they are located in `env/docker/authserver/` and `env/docker/worldser
 
 ### How can I change the docker containers configuration?
 
-You can copy the file `/conf/dist/.env.docker` within the root folder of the project, renaming the copy in `.env` and editing it accordingly to your needs.
+You can copy the file `/conf/dist/.env.docker` to `.env` and place it in the root folder of the project, then edit it according to your needs.
 
 In the `.env` file you can configure:
 
