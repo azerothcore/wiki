@@ -51,44 +51,53 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git
 
 Now go into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run inside this folder**.
 
-### WoW Client Data files
-
-You also need to have the data files. Check the step "5) Download the data files" from the [installation guide](Installation#5-download-the-data-files).
-
-Put your data files into `docker/worldserver/data/` which is inside `azerothcore-wotlk`.
-
 ### Installation
 
-Inside your terminal (if you use Windows, use git bash), run the following commands inside azerothcore-wotlk'
+Inside your terminal (if you use Windows, use git bash), run the following commands inside the azerothcore-wotlk folder
 
-**1) Generate your server configuration files:**
+NOTE: the following procedure uses our acore.sh dashboard, however, these commands are a shortcut of the docker-compose ones.
+      you can check the docker-compose commands used in background by running `./acore.sh docker --help` and read the description of each command
+
+**1) Download the client data:**
 
 ```
-./bin/acore-docker-generate-etc
+./acore.sh docker client-data
 ```
+
+NOTE: This command should be executed only at the first installation and when there's a new version of the client-data available
 
 **2) Compile AzerothCore:**
 ```
-./bin/acore-docker-build
+./acore.sh docker build
 ```
 This will take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
 
 **3) Run the containers**
+
 ```
-docker-compose up
+./acore.sh docker start:app
 ```
 
-Docker will build and run your containers. Meanwhile you will see messages like:
+**Congratulations! Now you have an up and running azerothcore server! Continue to the next step to create an account**
 
-> Could not connect to MySQL database at 127.0.0.1: Can't connect to MySQL server on '127.0.0.1' (111)
+If you need to run this in background, you can use the following command to run the docker-compose detached mode:
 
-> Retrying in 10 seconds...
+```
+./acore.sh docker start:app:d
+```
 
-**Don't panic**. Your server processes are simply waiting for the database container to be ready, it can take a while (depends on your machine).
+**4) Access the worldserver console**
 
-Your server will be up and running shortly.
+Open a new terminal and run the following command
 
-**4) Access database and update realmlist**
+```
+./acore.sh docker attach ac-worlserver
+```
+
+This command will automatically attach your terminal to the worlserver console. 
+Now you can run the `account create <user> <password>` command to create your first in-game account.
+
+**5) Access database and update realmlist**
 
 To access your MySQL database we recommend clients like [HeidiSQL](https://www.heidisql.com/) (for Windows/Linux+Wine) or [SequelPro](https://www.sequelpro.com/) (for macOS). Use `root` as user and `127.0.0.1` as default host.
 The default password of the root DB user will be `password`.
@@ -99,6 +108,37 @@ USE acore_auth;
 SELECT * FROM realmlist;
 UPDATE realmlist SET address='<SERVER PUBLIC IP ADDRESS>';
 ```
+
+### How to run the worlserver with GDB
+
+1. Create a `config.sh` file under the `/conf/` directory of the azerothcore-wotlk repository
+2. Add this configuration inside: `AC_RESTARTER_WITHGDB=true`. It will configure the restarter used by our docker services to use GDB instead of the binaries directly
+
+### How to use the dev-container
+
+Within our docker-compose you can find the `ac-dev-server` service
+This service is used for our build and db operations, but it can also be used
+by you to develop with the [VSCode Remote Docker extension](https://code.visualstudio.com/docs/remote/containers)
+
+A dev-container lets you use a Docker container as a full-featured development environment. The **.devcontainer** folder in our project contains files to tell VS Code how to access (or create) a development container with all the needed tools. This container will run the AzerothCore with all the software and the configurations needed for working with our codebase and debugging the server.
+
+Inside the azerothcore repo there's a pre-configured `devcontainer.json` that can be opened by using the VSCode command palette.
+To setup the Dev-Container follow these steps:
+
+1. Copy the `docker-compose.override.yml` file from the /conf/dist folder to the root directory of the azerothcore repo. (needed until [this](https://github.com/microsoft/vscode-remote-release/issues/1080) will be solved)
+2. [install and open VSCode](https://code.visualstudio.com/)
+3. install the remote-container extension
+4. Open the azerothcore folder inside VSCode
+5. Open the VSCode [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (Ctrl+Shift+P) and run: `>Remote-Containers: Reopen in Container` 
+
+**IMPORTANT**: The dev-container also contains a pre-configured debugger action that allows you to use breakpoints and debug your worlserver. 
+
+Do not forget that you need to [Remote Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 
+installed in your [Visual Studio Code](https://code.visualstudio.com/) IDE
+
+### How to create a second realm with docker-compose
+
+To create a second realm we suggest you to take a look at the example available within the http://github.com/azerothcore/acore-docker repository.
 
 ## More info
 
@@ -133,15 +173,14 @@ If you want to be an administrator of an AzerothCore production server, it helps
 Feel free to ask questions on [StackOverflow](https://stackoverflow.com/) and link them in the **#support-docker** channel of our [Discord chat](https://stackoverflow.com/questions/tagged/azerothcore). We will be happy to help you!
 
 ## FAQ
-*Faq? Faq you!*
 
 ### Where are the etc and logs folders of my server?
 
-By default they are located in `docker/authserver/` and `docker/worldserver/`.
+By default they are located in `env/docker/authserver/` and `env/docker/worldserver/`.
 
 ### How can I change the docker containers configuration?
 
-You can copy the file `.env.dist`, renaming the copy in `.env` and editing it accordingly to your needs.
+You can copy the file `/conf/dist/.env.docker` to `.env` and place it in the root folder of the project, then edit it according to your needs.
 
 In the `.env` file you can configure:
 
@@ -171,9 +210,23 @@ After stopping and removing your containers you can proceed to remove the volume
 
 **Note** If you've changed your folder name from the default `azerothcore-wotlk` the volume name will be slightly different. To find the new volume name you can use the command `docker volume ls`. The volume should be labelled something along the lines of `xxxx_ac-database`.
 
+### macOS optimizations
+
+The **osxfs** is well known to have [performance limitations](https://github.com/docker/for-mac/issues/1592), that's why we optimized the docker-compose 
+file for the **osxfs** by using volumes and the "delegated" strategy. However, we also introduced an experimental feature to let you use named volumes instead of binded ones.
+You can use this feature by setting this environment variable in your `.env` file:
+
+`DOCKER_EXTENDS_BIND=abstract-no-bind`
+
+This will copy all the external sources in a persistent volume inside docker which means that, as a drawback, changes inside 
+the container won't be reflected outside (host) and vice-versa. 
+
+NOTE: If you are not experimenting any particular issues with I/O performance, we suggest to **NOT** use this configuration
+
 ### How can I run commands in the worldserver console?
 
-You can easily attach/detach from the worldserver console.
+Besides the usage of the `./acore.sh docker attach` command, you can use a manual approach if you encountered any problems.
+
 First of all, type `docker-compose ps` to know the name of your worldserver container, it should be something like `azerothcore-wotlk_ac-worldserver_1`.
 
 **To attach**: open a new terminal tab and type `docker attach azerothcore-wotlk_ac-worldserver_1`
