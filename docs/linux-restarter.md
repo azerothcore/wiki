@@ -1,6 +1,10 @@
 ## Introduction
 This tutorial will walk you through creating a script to restart AzerothCore after a shutdown, restart, or crash when using a Linux server.
 
+The easiest way to setup a restarter is by using our [integrated scripts or docker](how-to-restart-and-debug.md)
+
+However, the following guy will show you how to create your own restarter from scratch.
+
 ## Creating The Scripts
 #### Prerequisites
 - Verify that your Linux server has screen and nano installed.
