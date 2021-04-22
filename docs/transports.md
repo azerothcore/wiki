@@ -7,10 +7,10 @@ Entry | mediumint(8) unsigned |
 Name | text | 
 ScriptName | char(64) | 
 
-[1]: #Guid
-[2]: #Entry
-[3]: #Name
-[4]: #ScriptName
+[1]: #guid
+[2]: #entry
+[3]: #name
+[4]: #scriptName
 
 **Description of the fields**
 
