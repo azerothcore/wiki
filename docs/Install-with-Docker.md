@@ -126,7 +126,7 @@ Then you can just run the following command:
 
 `./acore.sh docker build`: to rebuild the sources and generating new binaries. Moreover, it will import latest database changes.
 
-NOTE: sometime you also need to recreate the docker images and re-download new version of the client data. We do not update the neither the Dockerfile nor the client data but 
+NOTE: sometime you also need to recreate the docker images and re-download new version of the client data. We do not update neither the Dockerfile nor the client data, but 
 when it happens you can run the following commands:
 
 1. `docker-compose down` : it will delete the containers (not the volumes, so your data will be safe).
