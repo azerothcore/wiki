@@ -16,6 +16,7 @@
 * [MySQL types (C++)](MySQLtypesC++.md)
 * [CMake options](CMake-options.md)
 * [Bitwise operations](Bit-and_bytes-tutorial.md)
+* [How to Debug and Restart](how-to-restart-and-debug.md)
 
 ## Database
 
