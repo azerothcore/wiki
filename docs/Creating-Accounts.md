@@ -14,6 +14,12 @@ Note that any gm commands issued from the worldconsole do not require a . in fro
 
 `account create acoreuser abc123`
 
+## Changing password
+
+```
+account set password <user> <password> <password>
+```
+
 # Modifying Account GM Levels
 
 From the worldserver console you can use the account set gmlevel command to modify the gm rights for user.  The available levels range from 0 (no access) to 3 (most access).  The following command is used to set gm levels for an account:
