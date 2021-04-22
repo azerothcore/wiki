@@ -37,7 +37,10 @@ docker-compose --version
 
 You should see a similar output:
 
-![image](https://user-images.githubusercontent.com/75517/51273280-a132e200-19cc-11e9-914e-d54610f43ad6.png)
+```
+Docker version 20.10.5, build 55c4c88
+docker-compose version 1.28.2, build 67630359
+```
 
 **Note for Windows users**: you can use **git-bash** (the shell included in git) as a terminal.
 
