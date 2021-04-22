@@ -16,6 +16,8 @@
 
 **NOTE don't use localhost for address, if you need to connect to localhost use 127.0.0.1**
 
+If you need a copy of the original client you can check this page: https://wowgaming.github.io/wiki-en/wotlk-home.html#client
+
 <br>
 
 ## Help
