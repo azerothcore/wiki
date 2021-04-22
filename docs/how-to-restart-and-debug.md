@@ -2,6 +2,18 @@
 tableofcontents: 1
 ---
 
+AzerothCore is composed by 2 services: authserver and worldserver.
+Authserver only acts as an authenticator and a router for your realms redirecting your authorized client connections to the selected realm address.
+the Worldserver instead handles all connections related to the game mechanics and it's the single source of truth for everything related to a single realm.
+
+Authserver and Worldservers can be placed to different environment, however, in the following guide we will explain you how to run them together on same environment.
+
+## how to start the services
+
+both authserver and worldserver can be started by simply run the compiled binaries after [completing the installation](https://www.azerothcore.org/wiki/Installation).
+
+## how to configure a restarter
+
 Restarting and debugging an application works in many different way depending on your operating system. That's why we always suggest to use our docker solution that is fully supported on all platforms.
 
 However, if you need to keep your server up and running after a crash and checking what's going on with your code, you can do it using a restarter and a debugger.
