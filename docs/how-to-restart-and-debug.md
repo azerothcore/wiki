@@ -1,4 +1,25 @@
-### Using acore dashboard
+---
+tableofcontents: 1
+---
+
+### Restarter using acore dashboard
+
+You can use `./acore.sh run-worldserver` and `./acore.sh run-authserver`
+
+They both work out of the box when you compile with the dashboard.
+
+**NOTE**: To enable GDB you can use `AC_RESTARTER_WITHGDB=true` as an environment variable or by adding this to your `/conf/config.sh` file
+
+### USING DOCKER
+
+Our docker system integrates the scripts above within the docker-compose. It means that enabling the GDB works exactly in the same way in docker too.
+Moreover our docker-compose uses the [restart-policy feature](https://docs.docker.com/config/containers/start-containers-automatically/) to keep the containers up and running.
+
+For more information please refer to the [Install-with-Docker](Install-with-Docker.md) documentation
+
+### Advanced restarter
+
+For more advanced restarters that include several other useful configurations, you can try our "run-engine" system written in bash.
 
 Here you can find the restarters for linux/bash environments: https://github.com/azerothcore/azerothcore-wotlk/tree/master/apps/startup-scripts
 
@@ -13,14 +34,6 @@ Eventually you will have something like this:
 [![example][1]][1]
 
 Run those 2 restarter script to have both authserver and worldserver restarters with gdb support.
-
-
-
-**RESTARTERS (without gdb support)**
-
-You can also use `./acore.sh run-worldserver` and `./acore.sh run-authserver`
-
-They both work out of the box when you compile with the dashboard
 
 
 ### Manual way
@@ -49,10 +62,6 @@ pm2 start "gdb -x gdb.conf --batch ./worldserver"
 ```
 
 It should be enough to automatically restart, monitoring and gdb your server
-
-### USING DOCKER
-
-Work in progress...
 
 
   [1]: https://i.stack.imgur.com/EyIi7.png
