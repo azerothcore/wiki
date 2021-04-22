@@ -120,7 +120,9 @@ Within our docker-compose you can find the `ac-dev-server` service
 This service is used for our build and db operations, but it can also be used
 by you to develop with the [VSCode Remote Docker extension](https://code.visualstudio.com/docs/remote/containers)
 
-Inside the azerothcore repo there's a pre-configured dev-container that can be opened by using the VSCode command palette.
+A dev-container lets you use a Docker container as a full-featured development environment. The **.devcontainer** folder in our project contains files to tell VS Code how to access (or create) a development container with all the needed tools. This container will run the AzerothCore with all the software and the configurations needed for working with our codebase and debugging the server.
+
+Inside the azerothcore repo there's a pre-configured `devcontainer.json` that can be opened by using the VSCode command palette.
 To setup the Dev-Container follow these steps:
 
 1. Copy the `docker-compose.override.yml` file from the /conf/dist folder to the root directory of the azerothcore repo. (needed until [this](https://github.com/microsoft/vscode-remote-release/issues/1080) will be solved)
