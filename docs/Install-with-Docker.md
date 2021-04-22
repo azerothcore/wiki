@@ -1,3 +1,7 @@
+---
+toc_h_max: 100
+---
+
 Welcome to the AzerothCore Docker guide!
 
 ## Introduction
