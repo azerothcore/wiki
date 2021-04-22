@@ -36,7 +36,7 @@
             {% endif %}
             
             {% if site.tableofcontents %}
-            {% include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" h_min=1 h_max=2 ordered=1 %}
+            {% include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" h_min={{ page.toc_h_min | default: 1 }} h_max={{ page.toc_h_max | default: 2 }} ordered={{ page.toc_ordered | default: 1 }} %}
             {% endif %}
             
             {% if site.inc_after_toc %}
