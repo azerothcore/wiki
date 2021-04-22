@@ -210,15 +210,18 @@ After stopping and removing your containers you can proceed to remove the volume
 
 **Note** If you've changed your folder name from the default `azerothcore-wotlk` the volume name will be slightly different. To find the new volume name you can use the command `docker volume ls`. The volume should be labelled something along the lines of `xxxx_ac-database`.
 
-### MacOSx optimizations
+### macOS optimizations
 
-We optimized the docker-compose file for the OSX by using volumes and the "delegated" strategy.
-However, we also introduced an experimental feature to let you use named volumes instead of binded ones.
+The **osxfs** is well known to have [performance limitations](https://github.com/docker/for-mac/issues/1592), that's why we optimized the docker-compose 
+file for the **osxfs** by using volumes and the "delegated" strategy. However, we also introduced an experimental feature to let you use named volumes instead of binded ones.
 You can use this feature by setting this environment variable in your `.env` file:
 
 `DOCKER_EXTENDS_BIND=abstract-no-bind`
 
-NOTE: If you are not experimenting any particular issues with I/O performance, we suggest to NOT use this configuration
+This will copy all the external sources in a persistent volume inside docker which means that, as a drawback, changes inside 
+the container won't be reflected outside (host) and vice-versa. 
+
+NOTE: If you are not experimenting any particular issues with I/O performance, we suggest to **NOT** use this configuration
 
 ### How can I run commands in the worldserver console?
 
