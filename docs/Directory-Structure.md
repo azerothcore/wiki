@@ -11,22 +11,20 @@ azerothcore/
 ├── [conf][3]<br/>
 ├── [data][4]<br/>
 ├── [deps][5]<br/>
-├── [docker][6]<br/>
-├── [env][7]<br/>
-├── [modules][8]<br/>
-├── [src][9]<br/>
-└── [var][10]<br/>
+├── [env][6]<br/>
+├── [modules][7]<br/>
+├── [src][8]<br/>
+└── [var][9]<br/>
 
 [1]: #apps
 [2]: #bin
 [3]: #conf
 [4]: #data
 [5]: #deps
-[6]: #docker
-[7]: #env
-[8]: #modules
-[9]: #src
-[10]: #var
+[6]: #env
+[7]: #modules
+[8]: #src
+[9]: #var
 
 ##  AzerothCore Wotlk directory structure in detail:
 
@@ -61,8 +59,6 @@ azerothcore/
   
   An example of module are the transmog, the autobalance, the crossbattlegrounds etc.
 
-### docker
-    
 ### env
   This folder is used for the default distribution environment. By default the compiler will generate binaries, configuration files and everything is needed by the server application inside the /env/dist folder. However, as explained in the directory-structure standard, this folder can be used to create any kind of nested encapsulated environments.
 
