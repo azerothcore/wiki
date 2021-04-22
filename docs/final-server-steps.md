@@ -9,6 +9,8 @@
 
 - Run authserver and worldserver in your build folder.
 
+For detailed information on how to configure a restarter and a debugger go to [how-to-restart-and-debug](how-to-restart-and-debug.md) page
+
 **NEVER create an account directly into your database unless you are ABSOLUTELY SURE that you know what to do and how to do it!**
 
 - Next create your Login Account by typing directly into the **worldserver** window the GM Command **account create**. Syntax: (see examples below)
