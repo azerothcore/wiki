@@ -192,13 +192,15 @@ Then your `docker-compose up` will automatically locate the `.env` with your cus
 
 ### How can I start, stop, create and destroy my containers?
 
-- The `docker-compose start` will start your existing containers.
+- The `docker-compose start --profile app start` will start your existing app containers in detached mode.
 
 - The `docker-compose stop` will stop your containers, but it won't remove them.
 
-- The `docker-compose up` builds, (re)creates, and starts your containers.
+- The `docker-compose --profile app up` builds, (re)creates, and starts your app services.
 
 - The `docker-compose down` command will stop your containers, but it also removes the stopped containers as well as any networks that were created.
+
+- ⚠️ The `docker-compose down --rmi all -v` : command will stop, remove, and delete EVERYTHING. Including the volumes with the associated database ⚠️ 
 
 ### How can I delete my database files?
 
