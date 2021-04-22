@@ -6,3 +6,29 @@ Guid | int(10) unsigned |
 Entry | mediumint(8) unsigned | 
 Name | text | 
 ScriptName | char(64) | 
+
+[1]: #Guid
+[2]: #Entry
+[3]: #Name
+[4]: #ScriptName
+
+**Description of the fields**
+
+### Guid
+
+Unique identifier for this transport. Each time a new one is added, it has to add +1 value of the previous number.
+
+### Entry
+
+[GameObject](gameobject_template) Entry to be used for this transport. It must be a GameObject whose Type is 15.
+
+### Name
+
+Name or comment used to detail the Transport entry.
+
+##### Example:
+Undercity, Tirisfal Glades and Grom'gol Base Camp, Stranglethorn Vale ("The Purple Princess")
+
+### ScriptName
+
+Undefined.
