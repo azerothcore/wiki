@@ -2,20 +2,28 @@
 tableofcontents: 1
 ---
 
+Restarting and debugging an application works in many different way depending on your operating system. That's why we always suggest to use our docker solution that is fully supported on all platforms.
+
+However, if you need to keep your server up and running after a crash and checking what's going on with your code, you can do it using a restarter and a debugger.
+
+Below are going to explain how to use our integrated restarter scripts and the [GDB](https://www.gnu.org/software/gdb/) debugger utility also to generate crash-dumps
+
 ### Restarter using acore dashboard (only for bash)
 
 You can use `./acore.sh run-worldserver` and `./acore.sh run-authserver`
 
 They both work out of the box when you compile with the dashboard.
 
-**NOTE**: To enable GDB you can use `AC_RESTARTER_WITHGDB=true` as an environment variable or by adding this to your `/conf/config.sh` file
+**NOTE**: To enable GDB you can use `AC_RESTARTER_WITHGDB=true` as an environment variable or by adding this to your `/conf/config.sh` file.
+After enabled GDB, if the server crashes, you will find the crashdump file (gdb.txt) within the /env/ folder
 
 ### Using docker (crossplatform)
 
 Our docker system integrates the scripts above within the docker-compose. It means that enabling the GDB works exactly in the same way in docker too.
 Moreover our docker-compose uses the [restart-policy feature](https://docs.docker.com/config/containers/start-containers-automatically/) to keep the containers up and running.
 
-For more information please refer to the [Install-with-Docker](Install-with-Docker.md) documentation
+For more information please refer to the [Install-with-Docker](Install-with-Docker.md) documentation. 
+You will also find a guide on how to debug your code by using VSCode combined with its Remote Docker extension.
 
 ### Advanced restarter (only for bash)
 
