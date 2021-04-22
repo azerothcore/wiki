@@ -1,5 +1,5 @@
 ---
-toc_h_max: 100
+tableofcontents: 1
 ---
 
 Welcome to the AzerothCore Docker guide!
