@@ -26,25 +26,7 @@ For detailed information on how to configure a restarter and a debugger go to [h
 
 - The AzerothCore realm should be selectable. Log in, create a character, and you're all done!
 
-## Account Creation
-
-**To create an account**
-
-```
-account create <user> <pass>
-```
-
-**To set your account security level**
-
-```
-account set gmlevel <user> 3 -1
-```
-
-**Changing password**
-
-```
-account set password <user> <password> <password>
-```
+## [Account Creation](Creating-Accounts.md)
 
 <br>
 
