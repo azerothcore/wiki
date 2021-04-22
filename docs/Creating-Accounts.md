@@ -1,9 +1,3 @@
-# Verifying Your Installation
-
-Your initial installation of AzerothCore will come with 10 default test accounts.  These accounts are named test1 through test10. The default password for all of these accounts is `a` (literally the letter). These accounts can be used to test your worldserver functionality without needing to create an account immediately.
-
-> If you choose to leave your test accounts on your server then it is recommended to log into each of them and change the password. You can create a character on the account, enter the game and use the `.account password` command to modify it.
-
 # Creating Your First Account
 
 Your first account will need to be created from the worldserver console.  After you start the worldserver it will function as an interactive console.  In your worldserver console you can use the following command to create a new user:
