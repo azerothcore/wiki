@@ -47,6 +47,14 @@ If you want to chance those values, run the following instead:
 DB_EXTERNAL_PORT=9000 DB_ROOT_PASSWORD=root docker-compose up ac-database
 ```
 
+After the db service is up and running, use the following command to import the database
+
+`docker-compose run --rm ac-dev-server ./acore.sh db-assembler import-all`
+
+This will import all the sql files needed to setup your database 
+
+NOTE: The same command can be used to keep the database updated with latest changes when you update the repository
+
 ### Destroy the docker instance of the AC Database
 
 You can destroy the containers created with docker-compose using:
