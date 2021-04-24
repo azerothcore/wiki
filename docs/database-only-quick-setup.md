@@ -38,7 +38,7 @@ The default password will be `password` and the default port will be `3306`.
 If you want to chance those values, run the following instead:
 
 ```
-DB_EXTERNAL_PORT=9000 DB_ROOT_PASSWORD=root docker compose up ac-database
+DB_EXTERNAL_PORT=9000 DB_ROOT_PASSWORD=root docker compose up -d ac-database
 ```
 
 After the db service is up and running, use the following command to import the database
