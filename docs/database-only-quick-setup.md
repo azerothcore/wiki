@@ -30,13 +30,7 @@ cd azerothcore-wotlk;
 You can easily create an instance of MySQL server containing the AC database using:
 
 ```
-docker-compose up ac-database
-```
-
-Alternatively, you can pass the `-d` parameter to run this command in detach mode:
-
-```
-docker-compose up -d ac-database
+docker compose up -d ac-database
 ```
 
 The default password will be `password` and the default port will be `3306`.
@@ -44,22 +38,22 @@ The default password will be `password` and the default port will be `3306`.
 If you want to chance those values, run the following instead:
 
 ```
-DB_EXTERNAL_PORT=9000 DB_ROOT_PASSWORD=root docker-compose up ac-database
+DB_EXTERNAL_PORT=9000 DB_ROOT_PASSWORD=root docker compose up ac-database
 ```
 
 After the db service is up and running, use the following command to import the database
 
-`docker-compose run --rm ac-dev-server ./acore.sh db-assembler import-all`
+`docker compose run --rm ac-dev-server ./acore.sh db-assembler import-all`
 
 This will import all the sql files needed to setup your database 
 
-NOTE: The same command can be used to keep the database updated with latest changes when you update the repository
+**NOTE:** The same command can be used to keep the database updated with latest changes when you update the repository
 
 ### Destroy the docker instance of the AC Database
 
 You can destroy the containers created with docker-compose using:
 
 ```
-docker-compose down
+docker compose down
 ```
 
