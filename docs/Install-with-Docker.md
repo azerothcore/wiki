@@ -98,10 +98,10 @@ If you need to run this in background, you can use the following command to run 
 Open a new terminal and run the following command
 
 ```
-./acore.sh docker attach ac-worlserver
+./acore.sh docker attach ac-worldserver
 ```
 
-This command will automatically attach your terminal to the worlserver console. 
+This command will automatically attach your terminal to the worldserver console. 
 Now you can run the `account create <user> <password>` command to [create your first in-game account.](Creating-Accounts.md)
 
 **5) Access database and update realmlist**
@@ -133,7 +133,7 @@ NOTE: sometime you also need to recreate the docker images and re-download new v
 3. `./acore.sh client-data`: it will download the new version of the client data if there's a new version available
 
 
-### How to run the worlserver with GDB
+### How to run the worldserver with GDB
 
 Running the server with GDB allows you to generate a crashdump if the server crashes. The crashdump file is useful for developers to understand which lines are failing and possibly fix it.
 
@@ -164,7 +164,7 @@ To setup the Dev-Container follow these steps:
 4. Open the azerothcore folder inside VSCode
 5. Open the VSCode [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (Ctrl+Shift+P) and run: `>Remote-Containers: Reopen in Container` 
 
-**IMPORTANT**: The dev-container also contains a pre-configured debugger action that allows you to use breakpoints and debug your worlserver. 
+**IMPORTANT**: The dev-container also contains a pre-configured debugger action that allows you to use breakpoints and debug your worldserver. 
 
 Do not forget that you need to [Remote Container extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 
 installed in your [Visual Studio Code](https://code.visualstudio.com/) IDE
