@@ -30,7 +30,7 @@ cd azerothcore-wotlk;
 You can easily create an instance of MySQL server containing the AC database using:
 
 ```
-docker compose up -d ac-database
+docker-compose up -d ac-database
 ```
 
 The default password will be `password` and the default port will be `3306`.
@@ -38,12 +38,12 @@ The default password will be `password` and the default port will be `3306`.
 If you want to change those values, run the following instead:
 
 ```
-DOCKER_DB_EXTERNAL_PORT=9000 DOCKER_DB_ROOT_PASSWORD=root docker compose up -d ac-database
+DOCKER_DB_EXTERNAL_PORT=9000 DOCKER_DB_ROOT_PASSWORD=root docker-compose up -d ac-database
 ```
 
 After the db service is up and running, use the following command to import the database
 
-`docker compose run --rm ac-dev-server ./acore.sh db-assembler import-all`
+`docker-compose run --rm ac-dev-server ./acore.sh db-assembler import-all`
 
 This will import all the sql files needed to setup your database 
 
@@ -54,6 +54,6 @@ This will import all the sql files needed to setup your database
 You can destroy the containers created with docker-compose using:
 
 ```
-docker compose down
+docker-compose down
 ```
 
