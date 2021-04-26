@@ -2,15 +2,15 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-**The `account` table**
+**The \`account\` table**
 
 This table holds information on all available accounts.
 
-## Structure
+**Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [id][1]               | INT          | UNSIGNED   | PRI | NO   |                   | auto_increment | Identifier |
+| [id][1]               | INT          | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
 | [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
 | [salt][3]             | BINARY(32)   |            |     | NO   |                   |                |            |
 | [verifier][4]         | BINARY(32)   |            |     | NO   |                   |                |            |
