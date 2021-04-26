@@ -10,7 +10,7 @@ ScriptName | char(64) |
 [1]: #guid
 [2]: #entry
 [3]: #name
-[4]: #scriptName
+[4]: #scriptname
 
 **Description of the fields**
 
