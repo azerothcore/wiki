@@ -37,7 +37,7 @@ First of all, define the actual class, and have it inherit from ScriptObject, li
             virtual void OnAnotherEvent(uint32 someArg) = 0;
     }
 ```
-    
+
 Next, you need to add a specialization for ScriptRegistry. Put this in the bottom of
 ScriptMgr.cpp:
 ```C++
@@ -53,8 +53,12 @@ SCR_CLEAR(MyScriptType);
 Now your script type is good to go with the script system. What you need to do now
 is add functions to ScriptMgr that can be called from the core to actually trigger
 certain events. For example, in ScriptMgr.h:
+
+```C++
 void OnSomeEvent(uint32 someArg1, std::string& someArg2);
 void OnAnotherEvent(uint32 someArg);
+```
+
 In ScriptMgr.cpp:
 
 ```C++
@@ -64,7 +68,7 @@ void ScriptMgr::OnSomeEvent(uint32 someArg1, std::string& someArg2)
 }
 void ScriptMgr::OnAnotherEvent(uint32 someArg)
 {
-    FOREACH_SCRIPT(MyScriptType)->OnAnotherEvent(someArg1, someArg2);
+    FOREACH_SCRIPT(MyScriptType)->OnAnotherEvent(someArg);
 }
 ```
 
