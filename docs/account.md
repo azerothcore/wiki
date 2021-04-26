@@ -10,30 +10,30 @@ This table holds information on all available accounts.
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [id][1]               | int(10)      | unsigned   | PRI | NO   |                   | auto_increment | Identifier |
-| [username][2]         | varchar(32)  |            | UNI | NO   |                   |                |            |
+| [id][1]               | INT          | UNSIGNED   | PRI | NO   |                   | auto_increment | Identifier |
+| [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
 | [salt][3]             | BINARY(32)   |            |     | NO   |                   |                |            |
 | [verifier][4]         | BINARY(32)   |            |     | NO   |                   |                |            |
 | [session_key][5]      | BINARY(40)   |            |     | YES  |                   |                |            |
-| [token_key][6]        | varchar(100) |            |     | NO   |                   |                |            |
-| [email][7]            | varchar(255) |            |     | NO   |                   |                |            |
-| [reg_mail][8]         | varchar(255) |            |     | NO   |                   |                |            |
-| [joindate][9]        | timestamp    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
-| [last_ip][10]         | varchar(15)  |            |     | NO   | 127.0.0.1         |                |            |
-| [last_attempt_ip][11] | varchar(15)  |            |     | NO   | 127.0.0.1         |                |            |
-| [failed_logins][12]   | int(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [locked][13]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
-| [lock_country][14]    | varchar(2)   |            |     | NO   | 0                 |                |            |
-| [last_login][15]      | timestamp    |            |     | YES  | NULL              |                |            |
-| [online][16]          | int(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [expansion][17]       | tinyint(3)   | unsigned   |     | NO   | 2                 |                |            |
-| [mutetime][18]        | bigint(20)   | signed     |     | NO   | 0                 |                |            |
-| [mutereason][19]      | varchar(255) |            |     | NO   |                   |                |            |
-| [muteby][20]          | varchar(50)  |            |     | NO   |                   |                |            |
-| [locale][21]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
-| [os][22]              | varchar(3)   |            |     | NO   |                   |                |            |
-| [recruiter][23]       | int(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [totaltime][24]       | int(10)      | unsigned   |     | NO   | 0                 |                |            |
+| [token_key][6]        | VARCHAR(100) |            |     | NO   |                   |                |            |
+| [email][7]            | VARCHAR(255) |            |     | NO   |                   |                |            |
+| [reg_mail][8]         | VARCHAR(255) |            |     | NO   |                   |                |            |
+| [joindate][9]         | TIMESTAMP    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
+| [last_ip][10]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
+| [last_attempt_ip][11] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
+| [failed_logins][12]   | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
+| [locked][13]          | tinyint(3)   | UNSIGNED   |     | NO   | 0                 |                |            |
+| [lock_country][14]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
+| [last_login][15]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
+| [online][16]          | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
+| [expansion][17]       | TINYINT      | UNSIGNED   |     | NO   | 2                 |                |            |
+| [mutetime][18]        | BIGINT       | SIGNED     |     | NO   | 0                 |                |            |
+| [mutereason][19]      | VARCHAR(255) |            |     | NO   |                   |                |            |
+| [muteby][20]          | VARCHAR(50)  |            |     | NO   |                   |                |            |
+| [locale][21]          | TINYINT      | UNSIGNED   |     | NO   | 0                 |                |            |
+| [os][22]              | VARCHAR(3)   |            |     | NO   |                   |                |            |
+| [recruiter][23]       | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
+| [totaltime][24]       | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
 
 [1]: #id
 [2]: #username
@@ -70,11 +70,11 @@ The unique account ID.
 
 The user's account name.
 
-**NOTE**: usernames are limited to 20 characters and have no character restriction.
+**NOTE:** usernames are limited to 20 characters and have no character restriction.
 
 ### salt
 
-salt is a cryptographically random 32-byte value
+salt is a cryptographically random 32-byte value.
 
 ### verifier
 
@@ -82,17 +82,39 @@ verifier is derived from salt, as well as the user's username (all uppercase) an
 
 To obtain the verifier you need to calculate:
 
-1. Calculate `h1 = SHA1("USERNAME:PASSWORD")`, substituting the user's username and password converted to uppercase
+1. Calculate `h1 = SHA1("USERNAME:PASSWORD")`, substituting the user's username and password converted to uppercase.
 
-1. Calculate `h2 = SHA1(salt || h1)`, where || is concatenation (the . operator in PHP)
+2. Calculate `h2 = SHA1(salt || h1)`, where || is concatenation (the . operator in PHP).
 
-1.
+**NOTE:** Both `salt` and `h1` are binary, not hexadecimal strings!
+
+3. Treat `h2` as an integer in little-endian order (the first byte is the least significant).
+
+4. Calculate `(g ^ h2) % N`.
+
+**NOTE:** `g` and `N` are parameters, which are fixed in the WoW implementation.
+
+`g = 7`
+
+`N = 0x894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7`
+
+5. Convert the result back to a byte array in little-endian order.
+
+**For PHP implementations**
+
+Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php.ini.
+
+[CalculateSRP6Verifier.php](https://gist.github.com/Treeston/db44f23503ae9f1542de31cb8d66781e)
+
+[GetSRP6RegistrationData.php](https://gist.github.com/Treeston/40b99dd71f55d55c68857919088b2e41)
+
+[VerifySRP6Login.php](https://gist.github.com/Treeston/34d9249fb467dddc11b2568e74f8cb1e)
 
 ### session_key
 
 `field-no-description|5`
 
-### **token_key**
+### token_key
 
 The authenticator key.
 
@@ -148,10 +170,6 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | 0     | Classic                        |
 | 1     | The Burning Crusade (TBC)      |
 | 2     | Wrath of the Lich King (WotLK) |
-| 3     | Cataclysm                      |
-| 4     | Mist of Pandaria (MOP)         |
-| 5     | Warlords of Draenor (WOD)      |
-| 6     | Legion                         |
 
 ### mutetime
 
