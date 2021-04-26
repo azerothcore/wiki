@@ -38,7 +38,11 @@ The [RealmID](realmlist#id) of the realm this log string came from. 0 if realmd.
 
 ### type
 
-The `Logger` name
+The `Logger` name from config
+Example logger:
+```ini
+Logger.server=4,Console Server
+```
 
 ### level
 
