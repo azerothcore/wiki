@@ -102,7 +102,9 @@ For instance:
 
 ```C++
 OnMotdChange(std::string& newMotd)
-``` Passing the newMotd with the '&' character you allow the listeners to change the value of the Motd when that action is called.
+``` 
+
+Passing the newMotd with the '&' character you allow the listeners to change the value of the Motd when that action is called.
 
 ### Using a bool return value
 
