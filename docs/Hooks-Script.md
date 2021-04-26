@@ -95,7 +95,7 @@ the `[When]` part is optional, but strongly suggested
 With hooks you can't only run specific actions at a specific time, you can even change the behaviour of the script where the hook is called
 To do so, you have 2 solutions:
 
-### 1) Using reference parameters
+#### 1) Using reference parameters
 
 This is the most common one. Basically using the concept of passing a parameter by reference you can change everything is passed to the hook itself.
 For instance:
@@ -106,7 +106,7 @@ OnMotdChange(std::string& newMotd)
 
 Passing the newMotd with the '&' character you allow the listeners to change the value of the Motd when that action is called.
 
-### 2) Using a bool return value
+#### 2) Using a bool return value
 
 This approach is not very common, most of the hooks return a "void" type and working with references is easier most of the time, but if you really need it you can implement an hook which is declared in this way:
 
@@ -126,5 +126,12 @@ This hook notifies all the listeners but also catches when at least one of the r
 In this particular case this hook is used within an if-condition to disallow a player to be teleported if one of the listener returns **false** for some reason.
 
 You can implement your different logic (e.g. false by default, true if any) just remember to document it properly!
+
+### Create your hook system within your module
+
+By using the guide above you can even create your ScriptObject within your module to allow people extending it. 
+Some modules, such as the autobalance, allows to customize certain part of their function by using internal hooks
+
+You can take a look at this file as example: https://github.com/azerothcore/mod-autobalance/blob/master/src/AutoBalance.h
 
 
