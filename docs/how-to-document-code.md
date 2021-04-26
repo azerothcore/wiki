@@ -1,3 +1,9 @@
+---
+tableofcontents: 1
+---
+
+# How to document your code
+
 The extensive Doxygen manual ( <http://www.stack.nl/~dimitri/doxygen/manual.html,> <http://www.stack.nl/~dimitri/doxygen/commands.html> ) is well worth browsing. Doxygen provides a wide variety of options for documenting code and can be adapted for general documentation as well. This page well take you through some of the commonly used features in AzerothCore documentation.
 
 
