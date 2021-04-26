@@ -96,13 +96,15 @@ To do so, you have 2 solutions:
 This is the most common one. Basically using the concept of passing a parameter by reference you can change everything is passed to the hook itself.
 For instance:
 
-`OnMotdChange(std::string& newMotd)` Passing the newMotd with the '&' character you allow the listeners to change the value of the Motd when that action is called.
+```C++
+OnMotdChange(std::string& newMotd)
+``` Passing the newMotd with the '&' character you allow the listeners to change the value of the Motd when that action is called.
 
 ### Using a bool return value
 
 This approach is not very common, most of the hooks return a "void" type and working with references is easier most of the time, but if you really need it you can implement an hook which is declared in this way:
 
-```
+```C++
 bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, float y, float z, float orientation, uint32 options, Unit* target)
 {
     bool ret = true;
