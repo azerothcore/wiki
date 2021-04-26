@@ -68,11 +68,11 @@ This tag tells Doxygen that this is a free floating page and allows doxygen to n
 
 `@page describing_awesome_mode_by_james This Page describes James' Awesome Mode`
 
-The first word after @page is the word that will need to be type in a @ref command to link the page. Doxygen will replace any references to the page with the string that appears after the word. So in the above case Doxygen would replace "describing_awesome_mode_by_james" with "This Page describes James' Awesome Mode" in the generated documentation. Generally in html as least links are shown in blue. Note that I have had trouble including upper case letters in the "word" naming the page. Sometimes it works as described above, but other times it fails to replace "word" with the "string" for links from other locations.
+The first word after `@page` is the word that will need to be type in a `@ref` command to link the page. Doxygen will replace any references to the page with the string that appears after the word. So in the above case Doxygen would replace "describing_awesome_mode_by_james" with "This Page describes James' Awesome Mode" in the generated documentation. Generally in html as least links are shown in blue. Note that I have had trouble including upper case letters in the "word" naming the page. Sometimes it works as described above, but other times it fails to replace "word" with the "string" for links from other locations.
 
 `@ref`
 
-This command tells Doxgyen to insert a link to the specified page in this section. So following on from the @page command above if I wanted to insert a link to the page describing James' awesome mode I would type
+This command tells Doxgyen to insert a link to the specified page in this section. So following on from the `@page` command above if I wanted to insert a link to the page describing James' awesome mode I would type
 
 `///// @ref describing_awesome_mode_by_james`
 
@@ -88,7 +88,7 @@ A picture is sometimes worth a thousand words or so the addage goes at least. Th
 
 `@subsection`
 
-It is often useful to divide a doxygen page into sections and subsections. The serves two purposes. One it creates headers. Second reference can be created to thorugh the page to link to the section. This page makes of sections and links to sections. The list of section at the beginning of the page is implemented using the @section command. Similar to the @page command, a link name and string can be provided.
+It is often useful to divide a doxygen page into sections and subsections. The serves two purposes. One it creates headers. Second reference can be created to thorugh the page to link to the section. This page makes of sections and links to sections. The list of section at the beginning of the page is implemented using the `@section` command. Similar to the `@page` command, a link name and string can be provided.
 
 `///// @section common_doxygen_tags_used Common Doxygen Tags`
 
