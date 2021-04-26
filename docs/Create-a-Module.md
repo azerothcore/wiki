@@ -7,7 +7,7 @@ Before start we suggest you to read [Documentation about modular structure](The-
 
 - Module template: [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
 - Script template: https://github.com/azerothcore/azerothcore-boilerplates
-- All the hooks in the core are listed in [ScriptMgr.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.cpp). If you need custom hooks, they can be added to the core.
+- All the hooks in the core are listed in [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). If you need custom hooks, they can be added to the core.
 
 
 
