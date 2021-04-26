@@ -31,11 +31,11 @@ By taking a few minutes as you are writing your code to write comment blocks you
 
 `@brief`
 
-This tag supplies a brief description of a function for doxygen pages. This message should tell what happens in the function. By convention in Rosetta3 all functions must have brief tags. These included in the header file along with the declaration of the functions.
+This tag supplies a brief description of a function for doxygen pages. This message should tell what happens in the function. By convention in AzerothCore all functions must have brief tags. These included in the header file along with the declaration of the functions.
 
 `@details`
 
-This tag supplies a more detailed description. This message should give a user an idea of when it is valid to call this function( i.e. what must be true for the function to work), how the function carries out it function, and what will be true when the function returns. By convention in Rosetta3 all functions must have details tags. These are placed with the definition of the function.
+This tag supplies a more detailed description. This message should give a user an idea of when it is valid to call this function( i.e. what must be true for the function to work), how the function carries out it function, and what will be true when the function returns. By convention in AzerothCore all functions must have details tags. These are placed with the definition of the function.
 
 `@param`
 
