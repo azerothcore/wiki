@@ -6,7 +6,7 @@
 | [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) |
 
 
-- Open the realmlist.wtf file inside the your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
+- Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
 
     - Change the first line to: set realmlist <IP address used in realmlist table>
     
