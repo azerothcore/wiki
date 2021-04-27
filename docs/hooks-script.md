@@ -2,7 +2,7 @@
 
 The ScriptAI system implemented by AC uses a special [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) strategy to implement an event-driven programming which is also the **CORE** of our modular system.
 
-This guide, together with the our [module system](Create-a-Module.md) lets you to extend the AzerothCore without patching the core directly. This allows you to update your core by keeping your additions and customizations conflict-free!
+This guide, together with the our [module system](Create-a-Module.md) lets you to extend the AzerothCore without patching it directly. This allows you to update your repository by keeping your additions and customizations conflict-free!
 
 # Resources
 
