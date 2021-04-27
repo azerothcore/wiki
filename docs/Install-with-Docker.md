@@ -77,7 +77,15 @@ NOTE: This command should be executed only at the first installation and when th
 ```
 ./acore.sh docker build
 ```
-This will take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
+It will build docker images, compile the core and import needed SQL files automatically!
+This may take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
+
+**NOTE For dev:** if you are working with code and you need a fast way to compile your binaries, the command above
+can be a bit overkill for you because you probably do not need to rebuild images or import SQL if you have not changed them. 
+Therefore, we suggest to use one of the following solution instead:
+
+* `./acore.sh docker build:compiler` it only builds the dev image and compiles the sources without importing sql.
+* `./acore.sh docker dev:build` it's similar to the previous command, but it uses the dev-container which uses volumes instead of the container. It can be faster on some configurations.
 
 **3) Run the containers**
 
