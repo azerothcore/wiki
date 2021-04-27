@@ -8,7 +8,7 @@ This guide, together with our [module system](Create-a-Module.md) lets you exten
 
 ## Hook List
 
-The list of the hooks can be found here: [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
+The list of the hooks can be found inside the [ScriptMgr.h file](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
 ## Glossary
 
@@ -228,4 +228,3 @@ NOTE: You also need to create your own ScriptMgr implementation and offer a sing
 There are different other features of the ScriptAI system that have not been included in this documentation, such as the creation of scripts binded 
 to specific entities inside our database (E.g. CreatureScript). This advanced usage can be implemented by replicate the related code we have inside the ScriptMgr files.
 If you need any help or you want to improve this documentation, feel free to ask support and edit this page.
-
