@@ -1,18 +1,39 @@
 # The ScriptAI system
 
-The ScriptAI system implemented by AC uses a special [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) strategy to implement an event-driven programming which is also the **CORE** of our modular system. 
+The ScriptAI system implemented by AC uses a special [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) strategy to implement an event-driven programming which is also the **CORE** of our modular system.
 
-## Hook list
+This guide, together with the our [module system](Create-a-Module.md) lets you to extend the AzerothCore without patching the core directly. This allows you to update your core by keeping your additions and customizations conflict-free!
+
+# Resources
+
+## Hook List
 
 The list of the hooks can be found here: [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
+## Glossary
+
+* **Hook**: A function that is declared inside a **_ScriptObject_** and that calls the **_Listeners_**
+* **ScriptObject**: Abstract class that should be extended to create the **_Observer_**.
+* **Script type**: The class that extends the ScriptObject (E.g. PLayerScript, CreatureScript etc.), 
+  when you extend the script type class you are initializing a **_Concrete Observer_**
+* **ScriptRegistry**: This class contains the registry of all the registered Observers.
+* **ScriptMgr**: The singleton class that contains the list of all the available hooks and acts as a **_Observable_** by notifying the **_Listeners_** when an event is dispatched.
+
 ## How to create a hook
 
-Before going through the next step you should ask yourself: do I have to create a new ScriptObject class or can I reuse one of those already existing?
+Before going through the next step you should ask yourself: do I have to create a new script type based on ScriptObject class or can I reuse one of those already existing?
 
-Most of the time you just have to add new hooks to existing scripts, in this case just jump to point 2 of this chapter.
+A script type is normally strictly related to certain classes of the core. For example: 
+* PlayerScript -> Player class
+* WorldScript -> World class
+* CreatureScript -> Creature class
+etc.
 
-If you really need to create a new ScriptType (for a custom feature or a new class of the core) then you have to follow the step 1 as well
+There are some exception such as the GlobalScript which is an Observer used in different classes throughout the core. But generally speaking a script type should refer to a specific class.
+
+Therefore, if you create a new class inside that has to be extended with hooks, then you can proceed with the first point.
+
+However, most of the time you just have to add new hooks to existing scripts, in this case just jump to point 2 of this chapter.
 
 ### 1) Standard procedure when adding new script type classes
 
