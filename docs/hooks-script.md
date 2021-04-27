@@ -228,3 +228,7 @@ NOTE: You also need to create your own ScriptMgr implementation and offer a sing
 There are different other features of the ScriptAI system that have not been included in this documentation, such as the creation of scripts bound 
 to specific entities inside our database (E.g. CreatureScript). This advanced usage can be implemented by replicate the related code we have inside the ScriptMgr files.
 If you need any help or you want to improve this documentation, feel free to ask for support and edit this page.
+
+## External resources
+
+- [Stack overflow topic: Is it possible to turn a core patch into a module for AzerothCore?](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore/66340683#66340683)
