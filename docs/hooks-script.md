@@ -6,11 +6,11 @@ The ScriptAI system implemented by AC uses a special [Observer pattern](https://
 
 The list of the hooks can be found here: [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
-## How to create an hook
+## How to create a hook
 
 Before going through the next step you should ask yourself: do I have to create a new ScriptObject class or can I reuse one of those already existing?
 
-Most of the time you just have to add new hooks to existing Scripts, in this case just jump to the point 2 of this chapter.
+Most of the time you just have to add new hooks to existing scripts, in this case just jump to point 2 of this chapter.
 
 If you really need to create a new ScriptType (for a custom feature or a new class of the core) then you have to follow the step 1 as well
 
@@ -67,7 +67,7 @@ And finally your class is good to go with the script system!
 
 ### 2) Implement the hooks functions
 
-If you didn't follow the point 1 and you want to reuse an existing ScriptObject, then you have to declare the functions 
+If you didn't follow point 1 and you want to reuse an existing ScriptObject, then you have to declare the functions 
 within one of the pre-existing ScriptObject classes first (such as PlayerScript, ServerScript etc.)
     
 #### Declare you hooks
@@ -82,7 +82,7 @@ void OnAnotherEvent(uint32 someArg);
 ```
 
 NOTE: for certain scripts the method declared inside the ScriptMgr class and the one declared into the related ScriptObject,
-they don't always match. For instance: `OnLogin` is an hook from the PlayerScript that is declared as `OnPlayerLogin` when 
+they don't always match. For instance: `OnLogin` is a hook from the PlayerScript that is declared as `OnPlayerLogin` when 
 used inside the ScriptMgr class, thus avoid collisions with other method since the ScriptMgr class collects hooks from all
 the ScriptObjects within the same list.
 
@@ -173,7 +173,7 @@ Passing the newMotd with the '&' character you allow the listeners to change the
 
 #### 2) Using a bool return value
 
-This approach is not very common, most of the hooks return a "void" type and working with references is easier most of the time, but if you really need it you can implement an hook which is declared in this way:
+This approach is not very common, most of the hooks return a "void" type and working with references is easier most of the time, but if you really need it you can implement a hook which is declared in this way:
 
 ```C++
 bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, float y, float z, float orientation, uint32 options, Unit* target)
