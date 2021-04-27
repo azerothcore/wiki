@@ -14,22 +14,22 @@ The list of the hooks can be found inside the [ScriptMgr.h file](https://github.
 
 * **Hook**: A function that is declared inside a **_ScriptObject_** and that calls the **_Listeners_**
 * **ScriptObject**: Abstract class that should be extended to create the **_Observer_**.
-* **Script type**: The class that extends the ScriptObject (E.g. PLayerScript, CreatureScript etc.), 
+* **Script type**: The class that extends the `ScriptObject` (e.g. `PLayerScript`, `CreatureScript`, etc.), 
   when you extend the script type class you are initializing a **_Concrete Observer_**
 * **ScriptRegistry**: This class contains the registry of all the registered Observers.
 * **ScriptMgr**: The singleton class that contains the list of all the available hooks and acts as a **_Observable_** by notifying the **_Listeners_** when an event is dispatched.
 
 ## How to create a hook
 
-Before going through the next step you should ask yourself: do I have to create a new script type based on ScriptObject class or can I reuse one of those already existing?
+Before going through the next step you should ask yourself: do I have to create a new script type based on `ScriptObject` class or can I reuse one of those already existing?
 
-A script type is normally strictly related to certain classes of the core. For example: 
-* PlayerScript -> Player class
-* WorldScript -> World class
-* CreatureScript -> Creature class
-etc.
+A script type is normally strictly related to a certain class of the core. For example: 
+- `PlayerScript` -> `Player` class
+- `WorldScript -> `World` class
+- `CreatureScript` -> `Creature` class
+and so on.
 
-There are some exception such as the GlobalScript which is an Observer used in different classes throughout the core. But generally speaking a script type should refer to a specific class.
+There are some exceptions such as the `GlobalScript` which is an Observer used in different classes throughout the core. But generally speaking, a script type should refer to a specific class.
 
 Therefore, if you create a new class inside that has to be extended with hooks, then you can proceed with the first point.
 
@@ -91,7 +91,7 @@ And finally your class is good to go with the script system!
 If you didn't follow point 1 and you want to reuse an existing ScriptObject, then you have to declare the functions 
 within one of the pre-existing ScriptObject classes first (such as PlayerScript, ServerScript etc.)
     
-#### Declare you hooks
+#### Declare your hooks
 What you need to do now is add functions to ScriptMgr that can be called from the core to actually trigger
 certain events.
 
@@ -103,13 +103,13 @@ void OnAnotherEvent(uint32 someArg);
 ```
 
 NOTE: for certain scripts the method declared inside the ScriptMgr class and the one declared into the related ScriptObject,
-they don't always match. For instance: `OnLogin` is a hook from the PlayerScript that is declared as `OnPlayerLogin` when 
-used inside the ScriptMgr class, thus avoid collisions with other method since the ScriptMgr class collects hooks from all
+don't always match. For instance: `OnLogin` is a hook from the PlayerScript that is declared as `OnPlayerLogin` when 
+used inside the ScriptMgr class, thus avoid collisions with other methods since the ScriptMgr class collects hooks from all
 the ScriptObjects within the same list.
 
 #### Define your hooks
 
-This step define the way your hook should call the registered listeners.
+This step defines the way your hook should call the registered listeners.
 The most common way to do it is the following
 
 In ScriptMgr.cpp:
@@ -151,7 +151,7 @@ void CoreClass::SomeEvent()
 
 Remember to document your new hook by following the [How to document your code](how-to-document-code.md) guide.
 
-When you create a new hook to publish into the AC repo, one of the acceptance criteria is to write a proper documentation for it,
+When you create a new hook to publish into the AC repo, one of the acceptance criteria is to write proper documentation for it,
 hence other people know how to use it properly. So please, read that guide carefully. 
 
 ## Naming conventions
@@ -165,14 +165,14 @@ For example:
 * `OnBeforeConfigLoad`
 * `OnAfterArenaRatingCalculation`
 
-The action normally match the name of the function within which the hook is called.
+The action normally matches the name of the function within which the hook is called.
 If the parent function is complex enough to even host different hooks, then the action
 should reflect what the hook is used for.
 
 The `[When]` part is optional, but strongly suggested.
 It helps to understand in which part of the parent function the hook is called.
 For instance, you can have both `OnBeforeConfigLoad` and `OnAfterConfigLoad`,
-to change the behaviour before and after the config are loaded.
+to change the behaviour before and after the config is loaded.
 
 ## Advanced hooks
 
@@ -183,7 +183,7 @@ To do so, you have 2 solutions:
 
 #### 1) Using reference parameters
 
-This is the most common one. Basically using the concept of passing a parameter by reference you can change everything is passed to the hook itself.
+This is the most common one. Basically using the concept of passing a parameter by reference you can change everything that is passed to the hook itself.
 For instance:
 
 ```C++
@@ -194,7 +194,7 @@ Passing the newMotd with the '&' character you allow the listeners to change the
 
 #### 2) Using a bool return value
 
-This approach is not very common, most of the hooks return a "void" type and working with references is easier most of the time, but if you really need it you can implement a hook which is declared in this way:
+This approach is not very common, most of the hooks return a "void" type, and working with references is easier most of the time, but if you really need it you can implement a hook that is declared in this way:
 
 ```C++
 bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, float y, float z, float orientation, uint32 options, Unit* target)
@@ -209,22 +209,22 @@ bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, fl
 ```
 
 This hook notifies all the listeners but also catches when at least one of the registered listener returns "false", in that case the final return value will be false as well.
-In this particular case this hook is used within an if-condition to disallow a player to be teleported if one of the listener returns **false** for some reason.
+In this particular case, this hook is used within an if-condition to disallow a player to be teleported if one of the listeners returns **false** for some reason.
 
 You can implement your different logic (e.g. false by default, true if any) just remember to document it properly!
 
 ### Create your hook system within your module
 
-By using the guide above you can even create your ScriptObject within your module to allow people extending it. 
-Some modules, such as the autobalance, allows to customize certain part of their function by using internal hooks
+By using the guide above you can even create your ScriptObject within your module to allow people to extend it. 
+Some modules, such as the auto-balance, allows customizing certain part of their function by using internal hooks
 
-You can take a look at this file as example: https://github.com/azerothcore/mod-autobalance/blob/master/src/AutoBalance.h
+You can take a look at this file as an example: https://github.com/azerothcore/mod-autobalance/blob/master/src/AutoBalance.h
 
 NOTE: You also need to create your own ScriptMgr implementation and offer a singleton to allow calling your hooks.
 
 
 ### Final considerations
 
-There are different other features of the ScriptAI system that have not been included in this documentation, such as the creation of scripts binded 
+There are different other features of the ScriptAI system that have not been included in this documentation, such as the creation of scripts bound 
 to specific entities inside our database (E.g. CreatureScript). This advanced usage can be implemented by replicate the related code we have inside the ScriptMgr files.
-If you need any help or you want to improve this documentation, feel free to ask support and edit this page.
+If you need any help or you want to improve this documentation, feel free to ask for support and edit this page.
