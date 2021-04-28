@@ -11,7 +11,7 @@ This table contains conditions to meet for the specified game event to be comple
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
 |-----------------------------|--------------|------------|-----|------|---------|-------|-------------------------|
 | [eventEntry][1]             | tinyint(3)   | unsigned   | PRI | NO   |         |       | Entry of the game event |
-| [condition_id][2]           | mediumint(8) | unsigned   | PRI | NO   |         |       |                         |
+| [condition_id][2]           | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |                         |
 | [req_num][3]                | FLOAT        | signed     |     | YES  | 0       |       |                         |
 | [max_world_state_field][4]  | smallint(5)  | unsigned   |     | NO   |         |       |                         |
 | [done_world_state_field][5] | smallint(5)  | unsigned   |     | NO   |         |       |                         |

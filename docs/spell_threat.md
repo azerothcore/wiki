@@ -10,8 +10,8 @@ This table holds threat values on all spells that should either give or take awa
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]  | mediumint(8) | unsigned   | PRI | NO   | NULL    |       |         |
-| [Threat][2] | smallint(6)  | signed     |     | NO   | NULL    |       |         |
+| [entry][1]  | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    |       |         |
+| [Threat][2] | SMALLINT(6)  | signed     |     | NO   | NULL    |       |         |
 
 [1]: #entry
 [2]: #threat

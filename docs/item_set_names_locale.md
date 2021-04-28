@@ -10,7 +10,7 @@
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]     | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [entry][1]     | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [name_loc1][2] | VARCHAR(100) | signed     |     | NO   |         |       |         |
 | [name_loc2][3] | VARCHAR(100) | signed     |     | NO   |         |       |         |
 | [name_loc3][4] | VARCHAR(100) | signed     |     | NO   |         |       |         |

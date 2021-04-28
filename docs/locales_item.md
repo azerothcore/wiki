@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | mediumint(8) unsigned | 
+Entry | MEDIUMINT(8) unsigned | 
 Name_loc1 | VARCHAR(100) | 
 Name_loc2 | VARCHAR(100) | 
 Name_loc3 | VARCHAR(100) | 

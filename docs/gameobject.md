@@ -11,7 +11,7 @@ This table holds the individual object data on each spawned game object in the w
 | Field               | Type         | Attributes | Key | Null | Default | Extra          | Comment                  |
 |---------------------|--------------|------------|-----|------|---------|----------------|--------------------------|
 | [guid][1]           | int(10)      | unsigned   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
-| [id][2]             | mediumint(8) | unsigned   |     | NO   | 0       |                | Gameobject Identifier    |
+| [id][2]             | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | Gameobject Identifier    |
 | [map][3]            | smallint(5)  | unsigned   |     | NO   | 0       |                | Map Identifier           |
 | [spawnMask][4]      | tinyint(3)   | unsigned   |     | NO   | 1       |                |                          |
 | [phaseMask][5]      | smallint(5)  | unsigned   |     | NO   | 1       |                |                          |

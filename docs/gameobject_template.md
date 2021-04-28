@@ -6,9 +6,9 @@ Contains template of all gameobjects
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| entry          | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| entry          | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | type           | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| displayId      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| displayId      | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | name           | VARCHAR(100) | signed     |     | NO   | "       |       |         |
 | IconName       | VARCHAR(100) | signed     |     | NO   | "       |       |         |
 | castBarCaption | VARCHAR(100) | signed     |     | NO   | "       |       |         |

@@ -12,7 +12,7 @@ Val2 | int(10) unsigned |
 Count | int(11) | 
 Map | smallint(5) | 
 Pos | VARCHAR(255) | 
-Level | mediumint(9) | 
+Level | MEDIUMINT(9) | 
 First_date | datetime | 
 Last_date | datetime | 
 Op | VARCHAR(255) | 

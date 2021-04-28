@@ -10,8 +10,8 @@ This table holds coordinate information on where the player should be teleported
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 |-------------------------|--------------|------------|-----|------|---------|-------|------------|
-| [id][1]                 | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Identifier |
-| [target_map][2]         | smallint(5)  | unsigned   |     | NO   | 0       |       |            |
+| [id][1]                 | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Identifier |
+| [target_map][2]         | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |            |
 | [target_position_x][3]  | FLOAT        | signed     |     | NO   | 0       |       |            |
 | [target_position_y][4]  | FLOAT        | signed     |     | NO   | 0       |       |            |
 | [target_position_z][5]  | FLOAT        | signed     |     | NO   | 0       |       |            |

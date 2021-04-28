@@ -11,7 +11,7 @@ Holds the remaining cooldowns from either character spells or item spells for ea
 | Field      | Type         | Attributes | Key | Null | Default | Extra | Comment                            |
 |------------|--------------|------------|-----|------|---------|-------|------------------------------------|
 | [guid][1]  | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
-| [spell][2] | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Spell Identifier                   |
+| [spell][2] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Spell Identifier                   |
 | [item][3]  | int(10)      | unsigned   |     | NO   | 0       |       | Item Identifier                    |
 | [time][4]  | int(10)      | unsigned   |     | NO   | 0       |       |                                    |
 

@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | mediumint(8) unsigned | 
+Entry | MEDIUMINT(8) unsigned | 
 Icon_name_loc1 | text | 
 Icon_name_loc2 | text | 
 Icon_name_loc3 | text | 

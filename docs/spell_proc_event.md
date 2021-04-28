@@ -8,9 +8,9 @@
 
 | Field | Type | Attribute | Key | Null | Default | Extra | Comment
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-[Entry][1] | mediumint(8) | signed | PRI | | 0
+[Entry][1] | MEDIUMINT(8) | signed | PRI | | 0
 [SchoolMask][2] | tinyint(4) | signed | | | 0
-[SpellFamilyName][3] | smallint(5) | unsigned | | | 0
+[SpellFamilyName][3] | SMALLINT(5) | unsigned | | | 0
 [SpellFamilyMask0][4] | int(10) | unsigned | | | 0
 [SpellFamilyMask1][5] | int(10) | unsigned | | | 0
 [SpellFamilyMask2][6] | int(10) | unsigned | | | 0

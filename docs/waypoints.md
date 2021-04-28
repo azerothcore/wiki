@@ -12,8 +12,8 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 
 | Field                            | Type         | Attributes | Key | Null | Default |
 |----------------------------------|--------------|------------|-----|------|---------|
-| [entry](#entry)                  | mediumint(8) | unsigned   | PRI | NO   | 0       |
-| [pointid](#pointid)              | mediumint(8) | unsigned   | PRI | NO   | 0       |
+| [entry](#entry)                  | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |
+| [pointid](#pointid)              | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |
 | [position\_x](#position_x)       | FLOAT        |            |     | NO   | 0       |
 | [position\_y](#position_y)       | FLOAT        |            |     | NO   | 0       |
 | [position\_z](#position_z)       | FLOAT        |            |     | NO   | 0       |

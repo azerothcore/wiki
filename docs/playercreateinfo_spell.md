@@ -6,5 +6,5 @@ Column | Type | Description
 --- | --- | ---
 Racemask | int(10) unsigned | 
 Classmask | int(10) unsigned | 
-Spell | mediumint(8) unsigned | 
+Spell | MEDIUMINT(8) unsigned | 
 Note | VARCHAR(255) | 

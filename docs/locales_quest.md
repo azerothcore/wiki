@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | mediumint(8) unsigned | 
+Id | MEDIUMINT(8) unsigned | 
 Title_loc1 | text | 
 Title_loc2 | text | 
 Title_loc3 | text | 

@@ -11,7 +11,7 @@ Contains all the individual talent data for each character. This is only used as
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
 | [guid][1]        | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
-| [spell][2]       | mediumint(8) | unsigned   | PRI | NO   | NULL    |       |         |
+| [spell][2]       | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    |       |         |
 | [talentGroup][3] | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
 
 [1]: #guid

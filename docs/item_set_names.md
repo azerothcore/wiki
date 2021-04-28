@@ -10,7 +10,7 @@
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]         | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [entry][1]         | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
 | [name][2]          | VARCHAR(255) | signed     |     | NO   |         |       |         |
 | [InventoryType][3] | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
 | [WDBVerified][4]   | smallint(5)  | unsigned   |     | NO   | 1       |       |         |

@@ -10,12 +10,12 @@ This table is used to apply a specific spell aura to the player within an area i
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [spell][1]              | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
-| [area][2]               | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
-| [quest_start][3]        | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
-| [quest_end][4]          | mediumint(8) | unsigned   |     | NO   |         |       |         |
-| [aura_spell][5]         | mediumint(8) | signed     | PRI | NO   |         |       |         |
-| [racemask][6]           | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [spell][1]              | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
+| [area][2]               | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
+| [quest_start][3]        | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
+| [quest_end][4]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
+| [aura_spell][5]         | MEDIUMINT(8) | signed     | PRI | NO   |         |       |         |
+| [racemask][6]           | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
 | [gender][7]             | tinyint(3)   | unsigned   | PRI | NO   |         |       |         |
 | [flags][8]              | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [quest_start_status][9] | int(11)      | unsigned   |     | NO   |         |       |         |

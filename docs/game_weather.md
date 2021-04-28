@@ -8,7 +8,7 @@ This table holds the percent chances for weather changes to occur in various zon
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [zone][1]                 | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [zone][1]                 | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
 | [spring_rain_chance][2]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [spring_snow_chance][3]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [spring_storm_chance][4]  | tinyint(3)   | unsigned   |     | NO   |         |       |         |

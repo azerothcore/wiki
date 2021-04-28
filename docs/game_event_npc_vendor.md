@@ -11,12 +11,12 @@ This table allows you to change the items a vendor sells, or to create a [vendor
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|--------------|------------|-----|------|---------|-------|---------|
 | [eventEntry][1]   | tinyint(3)   | signed     |     | NO   | 0       |       |         |
-| [guid][2]         | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [guid][2]         | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [slot][3]         | smallint(6)  | signed     |     | NO   | 0       |       |         |
-| [item][4]         | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [maxcount][5]     | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [incrtime][6]     | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [ExtendedCost][7] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [item][4]         | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [maxcount][5]     | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
+| [incrtime][6]     | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
+| [ExtendedCost][7] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #evententry
 [2]: #guid

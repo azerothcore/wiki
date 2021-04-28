@@ -10,8 +10,8 @@ Holds game object quest giver relations. The game objects in this table should a
 
 | Field      | Type         | Attributes | Key | Null | Default | Extra | Comment          |
 |------------|--------------|------------|-----|------|---------|-------|------------------|
-| [id][1]    | mediumint(8) | unsigned   | PRI | NO   | 0       |       |                  |
-| [quest][2] | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Quest Identifier |
+| [id][1]    | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |                  |
+| [quest][2] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Quest Identifier |
 
 [1]: #id
 [2]: #quest

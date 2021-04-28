@@ -10,21 +10,21 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
-| [ID][1]                     | mediumint(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
+| [ID][1]                     | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
 | [MaxLevel][2]               | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
 | [AllowableClasses][3]       | int(10)      | unsigned   |     | NO   |         |       |                                       |
-| [SourceSpellID][4]          | mediumint(8) | unsigned   |     | NO   |         |       |                                       |
-| [PrevQuestID][5]            | mediumint(8) |            |     | NO   |         |       |                                       |
-| [NextQuestID][6]            | mediumint(8) |            |     | NO   |         |       |                                       |
-| [ExclusiveGroup][7]         | mediumint(8) |            |     | NO   |         |       |                                       |
-| [RewardMailTemplateID][8]   | mediumint(8) | unsigned   |     | NO   |         |       |                                       |
+| [SourceSpellID][4]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
+| [PrevQuestID][5]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
+| [NextQuestID][6]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
+| [ExclusiveGroup][7]         | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
+| [RewardMailTemplateID][8]   | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
 | [RewardMailDelay][9]        | int(10)      | unsigned   |     | NO   |         |       |                                       |
 | [RequiredSkillID][10]       | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredSkillPoints][11]   | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredMinRepFaction][12] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredMaxRepFaction][13] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMinRepValue][14]   | mediumint(8) |            |     | NO   |         |       |                                       |
-| [RequiredMaxRepValue][15]   | mediumint(8) |            |     | NO   |         |       |                                       |
+| [RequiredMinRepValue][14]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
+| [RequiredMaxRepValue][15]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [ProvidedItemCount][16]     | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
 | [SpecialFlags][17]          | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
 

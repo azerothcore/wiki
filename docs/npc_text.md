@@ -8,7 +8,7 @@ This table contains the texts that are used for gossip. More research needs to b
 
 | Field         | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|--------------|------------|-----|------|---------|-------|---------|
-| ID            | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| ID            | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | text0_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text0_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang0         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |

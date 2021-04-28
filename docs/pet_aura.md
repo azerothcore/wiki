@@ -12,16 +12,16 @@
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
 | [guid][1]             | int(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
 | [caster_guid][2]      | BIGINT(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
-| [spell][3]            | mediumint(8) | unsigned   |     | NO   |         |       |                               |
+| [spell][3]            | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                               |
 | [effect_mask][4]      | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
 | [recalculate_mask][5] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
 | [stackcount][6]       | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [amount0][7]          | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [amount1][8]          | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [amount2][9]          | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [base_amount0][10]    | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [base_amount1][11]    | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [base_amount2][12]    | mediumint(8) | signed     |     | NO   |         |       |                               |
+| [amount0][7]          | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
+| [amount1][8]          | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
+| [amount2][9]          | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
+| [base_amount0][10]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
+| [base_amount1][11]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
+| [base_amount2][12]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
 | [maxduration][13]     | int(11)      | signed     |     | NO   |         |       |                               |
 | [remaintime][14]      | int(11)      | signed     |     | NO   |         |       |                               |
 | [remaincharges][15]   | tinyint(3)   | unsigned   |     | NO   |         |       |                               |

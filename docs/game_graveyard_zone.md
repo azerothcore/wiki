@@ -4,8 +4,8 @@
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]         | mediumint(8) | unasigned  | PRI | NO   | 0       |       |         |
-| [ghost_zone][2] | mediumint(8) | unasigned  | PRI | NO   | 0       |       |         |
+| [id][1]         | MEDIUMINT(8) | unasigned  | PRI | NO   | 0       |       |         |
+| [ghost_zone][2] | MEDIUMINT(8) | unasigned  | PRI | NO   | 0       |       |         |
 | [faction][3]    | smallint(5)  | unasigned  |     | NO   | 0       |       |         |
 
 [1]: #id

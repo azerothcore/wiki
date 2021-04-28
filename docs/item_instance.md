@@ -11,7 +11,7 @@ This table holds individual item instance information for all items currently eq
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------|--------------|------------|-----|------|---------|-------|---------|
 | [guid][1]              | int(10)      | unsigned   | PRI | NO   |         |       |         |
-| [itemEntry][2]         | mediumint(8) | unsigned   |     | NO   |         |       |         |
+| [itemEntry][2]         | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [owner_guid][3]        | int(10)      | unsigned   |     | NO   |         |       |         |
 | [creatorGuid][4]       | int(10)      | unsigned   |     | NO   |         |       |         |
 | [giftCreatorGuid][5]   | int(10)      | unsigned   |     | NO   |         |       |         |

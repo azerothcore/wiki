@@ -11,7 +11,7 @@ This table is used to provide to localized clients with localized string for ite
 |                                                            |              |                |         |          |             |           |             |
 |------------------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                                  | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#item_template_locale-entry)                       | mediumint(8) | unsigned       | PRI     | NO       | 0           |           |             |
+| [entry](#item_template_locale-entry)                       | MEDIUMINT(8) | unsigned       | PRI     | NO       | 0           |           |             |
 | [name\_loc1](#item_template_locale-name_loc)               | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
 | [name\_loc2](#item_template_locale-name_loc)               | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
 | [name\_loc3](#item_template_locale-name_loc)               | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |

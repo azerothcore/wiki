@@ -13,7 +13,7 @@ This table contains main data about all mails in the game.
 | [id][1]             | int(10)      | unsigned   | PRI | NO   | 0       |       | Identifier                         |
 | [messageType][2]    | tinyint(3)   | unsigned   |     | NO   | 0       |       |                                    |
 | [stationery][3]     | tinyint(3)   | signed     |     | NO   | 41      |       |                                    |
-| [mailTemplateId][4] | mediumint(5) | unsigned   |     | NO   | 0       |       |                                    |
+| [mailTemplateId][4] | MEDIUMINT(5) | unsigned   |     | NO   | 0       |       |                                    |
 | [sender][5]         | int(10)      | unsigned   |     | NO   | 0       |       | Character Global Unique Identifier |
 | [receiver][6]       | int(10)      | unsigned   |     | NO   | 0       |       | Character Global Unique Identifier |
 | [subject][7]        | longtext     | signed     |     | YES  | NULL    |       |                                    |

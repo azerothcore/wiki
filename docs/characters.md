@@ -49,7 +49,7 @@ This table holds vital static information for each character. It is used to crea
 | [trans_y][36]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [trans_z][37]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [trans_o][38]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
-| [transguid][39]            | mediumint(8) | unsigned   |     | NO   | 0                 |        |                          |
+| [transguid][39]            | MEDIUMINT(8) | unsigned   |     | NO   | 0                 |        |                          |
 | [extra_flags][40]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [extra_flags][41]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [stable_slots][42]         | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
@@ -76,7 +76,7 @@ This table holds vital static information for each character. It is used to crea
 | [power][63]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [power][64]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [power][65]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [latency][66]              | mediumint(8) | unsigned   |     | NO   | 0                 |        |                          |
+| [latency][66]              | MEDIUMINT(8) | unsigned   |     | NO   | 0                 |        |                          |
 | [talentGroupsCount][67]    | tinyint(3)   | unsigned   |     | NO   | 1                 |        |                          |
 | [activeTalentGroup][68]    | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [exploredzones][69]        | longtext     | signed     |     | YES  | NULL              |        |                          |

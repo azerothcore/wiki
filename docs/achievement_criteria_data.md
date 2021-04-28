@@ -10,10 +10,10 @@ This table contains the data that a player needs to obtain / complete in order t
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [criteria_id][1] | mediumint(8) |            | PRI | NO   |         |       |         |
+| [criteria_id][1] | MEDIUMINT(8) |            | PRI | NO   |         |       |         |
 | [type][2]        | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [value1][3]      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [value2][4]      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [value1][3]      | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
+| [value2][4]      | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [ScriptName][5]  | char(64)     |            |     | NO   |         |       |         |
 
 [1]: #criteria_id

@@ -10,12 +10,12 @@
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]      | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [entry][1]      | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [x][2]          | FLOAT        | signed     |     | NO   | 0       |       |         |
 | [y][3]          | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [icon][4]       | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [flags][5]      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [Importance][6] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [icon][4]       | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
+| [flags][5]      | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
+| [Importance][6] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [icon_name][7]  | text         |            |     | NO   | NULL    |       |         |
 
 [1]: #entry

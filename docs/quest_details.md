@@ -10,7 +10,7 @@ This table handles Quest NPC emotes with emote delays.
 
 | Field                                         | Type         | Attributes | Key | NULL | Default | Comment                                                                                                              |
 |-----------------------------------------------|--------------|------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
-| [ID](#quest_details-ID)                       | mediumint(8) | unsigned   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
+| [ID](#quest_details-ID)                       | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
 | [Emote1](#quest_details-Emote1)               | smallint(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
 | [Emote2](#quest_details-Emote2)               | smallint(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
 | [Emote3](#quest_details-Emote3)               | smallint(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |

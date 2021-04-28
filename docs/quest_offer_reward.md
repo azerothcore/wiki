@@ -10,7 +10,7 @@ This table is used for quests offering rewards without any required quest items 
 
 | Field                                              | Type         | Attributes        | Key | NULL | Default | Comment                                                                                                              |
 |----------------------------------------------------|--------------|-------------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
-| [ID](#quest_offer_reward-ID)                       | mediumint(8) | unsigned          | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
+| [ID](#quest_offer_reward-ID)                       | MEDIUMINT(8) | unsigned          | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
 | [Emote1](#quest_offer_reward-Emote1)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
 | [Emote2](#quest_offer_reward-Emote2)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
 | [Emote3](#quest_offer_reward-Emote3)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |

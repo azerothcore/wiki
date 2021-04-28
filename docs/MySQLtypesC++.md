@@ -43,14 +43,14 @@
                     <td colspan="1" class="confluenceTd"><span>%u</span></td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">mediumint(8)</td>
+                    <td colspan="1" class="confluenceTd">MEDIUMINT(8)</td>
                     <td colspan="1" class="confluenceTd">int32</td>
                     <td colspan="1" class="confluenceTd"><code><span>int32 val = fields[n].GetInt32();</span></code>
                     </td>
                     <td colspan="1" class="confluenceTd"><span>%u</span></td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">mediumint(8) unsigned</td>
+                    <td colspan="1" class="confluenceTd">MEDIUMINT(8) unsigned</td>
                     <td colspan="1" class="confluenceTd">uint32</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint32 val = fields[n].GetUInt32();</span></code>
                     </td>

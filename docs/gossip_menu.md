@@ -11,7 +11,7 @@ This table is used for displaying gossip when a player talks to an NPC with [np
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|--------------|------------|-----|------|---------|-------|---------|
 | [MenuID][1] | smallint(6)  | unsigned   | PRI | NO   | 0       |       |         |
-| [TextID][2] | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [TextID][2] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 
 [1]: #menuid
 [2]: #textid

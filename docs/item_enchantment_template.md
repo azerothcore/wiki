@@ -10,8 +10,8 @@ This table holds enchantment chance information for items that should have eithe
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]  | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [ench][2]   | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [entry][1]  | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [ench][2]   | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [chance][3] | FLOAT        | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #entry

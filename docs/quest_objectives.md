@@ -10,8 +10,8 @@ This table provides answer for a very important question. What do I need to do i
 
 | Field                  | Type         | Attributes | Null | Key | Default | Comment |
 |------------------------|--------------|------------|------|-----|---------|---------|
-| [ID][1]                | mediumint(8) | unsigned   | NO   | PRI | 0       |         |
-| [QuestID][2]           | mediumint(8) | unsigned   | NO   |     | 0       |         |
+| [ID][1]                | MEDIUMINT(8) | unsigned   | NO   | PRI | 0       |         |
+| [QuestID][2]           | MEDIUMINT(8) | unsigned   | NO   |     | 0       |         |
 | [Type][3]              | tinyint(3)   | unsigned   | NO   |     | 0       |         |
 | [StorageIndex][4]      | tinyint(3)   | signed     | NO   |     | 0       |         |
 | [ObjectID][5]          | int(10)      | signed     | NO   |     | 0       |         |

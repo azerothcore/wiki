@@ -20,7 +20,7 @@ This table holds information for each character in a battleground. Also hold inf
 | [joinMapId][8]   | smallint(5)  | unsigned   |     | NO   | 0       |       | Map Identifier           |
 | [taxiStart][9]   | int(10)      | unsigned   |     | NO   | 0       |       |                          |
 | [taxiEnd][10]    | int(10)      | unsigned   |     | NO   | 0       |       |                          |
-| [mountSpell][11] | mediumint(8) | unsigned   |     | NO   | 0       |       |                          |
+| [mountSpell][11] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #instanceid

@@ -10,7 +10,7 @@
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [event_id][1]   | mediumint(8) | unsigned   | PRI | NO   | NULL    |       |         |
+| [event_id][1]   | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    |       |         |
 | [state][2]      | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
 | [next_start][3] | BIGINT(11)   | unsigned   |     | NO   | 0       |       |         |
 

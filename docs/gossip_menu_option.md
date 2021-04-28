@@ -12,15 +12,15 @@ This table holds information about menu options a gossip NPC can have. Example
 | [OptionID][2]              | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
 | [OptionIcon][3]            | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
 | [OptionText][4]            | text         |            |     | YES  | NULL    |       |         |
-| [OptionBroadcastTextID][5] | mediumint(6) |            |     | NO   |         |       |         |
+| [OptionBroadcastTextID][5] | MEDIUMINT(6) |            |     | NO   |         |       |         |
 | [OptionType][6]            | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [OptionNpcFlag][7]         | int(10)      | unsigned   |     | NO   |         |       |         |
-| [ActionMenuID][8]          | mediumint(8) | unsigned   |     | NO   |         |       |         |
-| [ActionPoiID][9]           | mediumint(8) | unsigned   |     | NO   |         |       |         |
+| [ActionMenuID][8]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
+| [ActionPoiID][9]           | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [BoxCoded][10]             | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [BoxMoney][11]             | int(11)      | unsigned   |     | NO   |         |       |         |
 | [BoxText][12]              | text         |            |     | YES  | NULL    |       |         |
-| [BoxBroadcastTextID][13]   | mediumint(6) |            |     | NO   |         |       |         |
+| [BoxBroadcastTextID][13]   | MEDIUMINT(6) |            |     | NO   |         |       |         |
 | [VerifiedBuild][14]        | smallint(5)  |            |     | NO   |         |       |         |
 
 [1]: #menuid

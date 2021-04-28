@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | mediumint(8) unsigned | 
+Entry | MEDIUMINT(8) unsigned | 
 Groupid | tinyint(3) unsigned | 
 Id | tinyint(3) unsigned | 
 Text_loc1 | text | 

@@ -8,7 +8,7 @@ This table contains a list of teleport locations that can be used with the *.tel
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra          |
 |------------------|--------------|------------|-----|------|---------|----------------|
-| [id][1]          | mediumint(8) | unsigned   | PRI | NO   | NULL    | Auto increment |
+| [id][1]          | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    | Auto increment |
 | [position_x][2]  | FLOAT        | signed     |     | NO   | 0       |                |
 | [position_y][3]  | FLOAT        | signed     |     | NO   | 0       |                |
 | [position_z][4]  | FLOAT        | signed     |     | NO   | 0       |                |

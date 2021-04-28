@@ -22,7 +22,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#sourcetypeorreferenceid">SourceTypeOrReferenceId</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>signed</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -34,7 +34,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="odd">
 <td><p><a href="#sourcegroup">SourceGroup</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>unsigned</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -46,7 +46,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#sourceentry">SourceEntry</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>signed</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -69,7 +69,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#elsegroup">ElseGroup</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>unsigned</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -81,7 +81,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="odd">
 <td><p><a href="#conditiontypeorreference">ConditionTypeOrReference</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>signed</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -153,7 +153,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="odd">
 <td><p><a href="#errortype">ErrorType</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>unsigned</p></td>
 <td><p><br />
 </p></td>
@@ -166,7 +166,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#errortextid">ErrorTextId</a></p></td>
-<td><p>mediumint(8)</p></td>
+<td><p>MEDIUMINT(8)</p></td>
 <td><p>unsigned</p></td>
 <td><p><br />
 </p></td>

@@ -4,20 +4,20 @@ This table contains the description of creatures. Each spawned creature is an in
 
 | Field                                                             | Type                  | Null | Key | Default | Extra | Comment                              |
 |-------------------------------------------------------------------|-----------------------|------|-----|---------|-------|--------------------------------------|
-| [entry](#entry)                                 | mediumint(8) unsigned | NO   | PRI | 0       |       |                                      |
-| [difficulty_entry_1](#difficulty_entry_x)       | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [difficulty_entry_2](#difficulty_entry_x)       | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [difficulty_entry_3](#difficulty_entry_x)       | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
+| [entry](#entry)                                 | MEDIUMINT(8) unsigned | NO   | PRI | 0       |       |                                      |
+| [difficulty_entry_1](#difficulty_entry_x)       | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [difficulty_entry_2](#difficulty_entry_x)       | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [difficulty_entry_3](#difficulty_entry_x)       | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [KillCredit1](#killcredit1)                     | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [KillCredit2](#killcredit2)                     | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [modelid1](#modelidx)                            | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [modelid2](#modelidx)                            | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [modelid3](#modelidx)                            | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [modelid4](#modelidx)                            | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
+| [modelid1](#modelidx)                            | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [modelid2](#modelidx)                            | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [modelid3](#modelidx)                            | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [modelid4](#modelidx)                            | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [name](#name)                                   | char(100)             | NO   | MUL | 0       |       |                                      |
 | [subname](#subname)                             | char(100)             | YES  |     | (NULL)  |       |                                      |
 | [IconName](#iconname)                           | char(100)             | YES  |     | (NULL)  |       |                                      |
-| [gossip_menu_id](#gossip_menu_id)             | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
+| [gossip_menu_id](#gossip_menu_id)             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [minlevel](#minlevel)                           | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
 | [maxlevel](#maxlevel)                           | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
 | [exp](#exp)                                     | smallint(6)           | NO   |     | 0       |       |                                      |
@@ -38,18 +38,18 @@ This table contains the description of creatures. Each spawned creature is an in
 | [dynamicflags](#dynamicflags)                   | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [family](#family)                               | tinyint(4)            | NO   |     | 0       |       |                                      |
 | [trainer_type](#trainer_type)                  | tinyint(4)            | NO   |     | 0       |       |                                      |
-| [trainer_spell](#trainer_spell)                | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
+| [trainer_spell](#trainer_spell)                | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [trainer_class](#trainer_class)                | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [trainer_race](#trainer_race)                  | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [type](#type)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [type_flags](#type_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [lootid](#lootid)                               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [pickpocketloot](#pickpocketloot)               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [skinloot](#skinloot)                              | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [PetSpellDataId](#petspelldataid)               | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [VehicleId](#vehicleid)                         | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [mingold](#mingold)                             | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
-| [maxgold](#maxgold)                             | mediumint(8) unsigned | NO   |     | 0       |       |                                      |
+| [lootid](#lootid)                               | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [pickpocketloot](#pickpocketloot)               | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [skinloot](#skinloot)                              | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [PetSpellDataId](#petspelldataid)               | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [VehicleId](#vehicleid)                         | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [mingold](#mingold)                             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
+| [maxgold](#maxgold)                             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [AIName](#ainame)                               | char(64)              | NO   |     |         |       |                                      |
 | [MovementType](#movementtype)                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [InhabitType](#inhabittype)                     | tinyint(3) unsigned   | NO   |     | 3       |       |                                      |

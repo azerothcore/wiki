@@ -10,8 +10,8 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment                                      |
 |----------------------|--------------|------------|-----|------|---------|-------|----------------------------------------------|
-| [entry][1]           | mediumint(8) | unsigned   | PRI | NO   | 0       |       |                                              |
-| [accessory_entry][2] | mediumint(8) | unsigned   |     | NO   | 0       |       |                                              |
+| [entry][1]           | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |                                              |
+| [accessory_entry][2] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                                              |
 | [seat_id][3]         | tinyint(1)   | signed     | PRI | NO   | 0       |       |                                              |
 | [minion][4]          | tinyint(1)   | unsigned   |     | NO   | 0       |       |                                              |
 | [description][5]     | text         | signed     |     | NO   |         |       |                                              |
