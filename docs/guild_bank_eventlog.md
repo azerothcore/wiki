@@ -18,7 +18,7 @@
 | [ItemOrMoney][6]    | INT    | UNSIGNED   |     | NO   | 0       |       |                                             |
 | [ItemStackCount][7] | TINYINT | UNSIGNED   |     | NO   | 0       |       |                                             |
 | [DestTabId][8]      | TINYINT | UNSIGNED   |     | NO   | 0       |       | Destination Tab Id                          |
-| [TIMESTAMP][9]      | BIGINT | UNSIGNED   |     | NO   | 0       |       | Event UNIX time                             |
+| [timestamp][9]      | BIGINT | UNSIGNED   |     | NO   | 0       |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid
@@ -28,7 +28,7 @@
 [6]: #itemormoney
 [7]: #itemstackcount
 [8]: #desttabid
-[9]: #TIMESTAMP
+[9]: #timestamp
 
 **Description of the fields**
 
@@ -74,6 +74,6 @@
 
 `Destination Tab Id`
 
-### TIMESTAMP
+### timestamp
 
 `Event UNIX time`

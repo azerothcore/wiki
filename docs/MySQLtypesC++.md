@@ -86,8 +86,8 @@
                 </tr>
                 <tr>
                     <td colspan="1" class="confluenceTd">FLOAT</td>
-                    <td rowspan="2" class="confluenceTd">FLOAT</td>
-                    <td rowspan="2" class="confluenceTd"><code>FLOAT val = fields[n].GetFLOAT();</code></td>
+                    <td rowspan="2" class="confluenceTd">float</td>
+                    <td rowspan="2" class="confluenceTd"><code>float val = fields[n].GetFLOAT();</code></td>
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
@@ -95,13 +95,13 @@
                     <td class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="confluenceTd">double</td>
+                    <td class="confluenceTd">DOUBLE</td>
                     <td rowspan="2" class="confluenceTd">double</td>
                     <td rowspan="2" class="confluenceTd"><code>double val = fields[n].GetDouble();</code></td>
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="confluenceTd">double UNSIGNED</td>
+                    <td class="confluenceTd">DOUBLE UNSIGNED</td>
                     <td class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>

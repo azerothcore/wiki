@@ -14,7 +14,7 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 
 | Field                | Type                | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|---------------------|------------|-----|------|---------|-------|---------|
-| [guid/entry][1]      | INT/medumint(8) | UNSIGNED   | PRI | NO   |         |       |         |
+| [guid/entry][1]      | INT/MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [path_id][2]         | INT             | UNSIGNED   |     | NO   |         |       |         |
 | [mount][3]           | MEDIUMINT        | UNSIGNED   |     | NO   |         |       |         |
 | [bytes1][4]          | INT             | UNSIGNED   |     | NO   |         |       |         |

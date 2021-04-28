@@ -74,4 +74,4 @@ Latency in ms at the moment of the report.
 
 ### createTime
 
-Creation date in Unix Time (TODO: should be changed to mysql TIMESTAMP)
+Creation date in Unix Time (TODO: should be changed to mysql timestamp)

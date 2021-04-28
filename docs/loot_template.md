@@ -99,13 +99,13 @@ Item drop chance (plain entry or quest entry). Not sure how this functions for l
 
 **Chance** > 0
 
-Absolute value of **Chance** signifies the percent chance that the item has to drop. Any FLOATing point number is allowed but indeed any value larger that 100 will make the same result as 100.
+Absolute value of **Chance** signifies the percent chance that the item has to drop. Any floating point number is allowed but indeed any value larger that 100 will make the same result as 100.
 
 ### Quest drop
 
 **Chance** > 0
 
-Absolute value of **Chance** signifies the percent chance that the item has to drop. Any FLOATing point number is allowed but indeed any value larger that 100 will make the same result as 100.
+Absolute value of **Chance** signifies the percent chance that the item has to drop. Any floating point number is allowed but indeed any value larger that 100 will make the same result as 100.
 
 Just as for [plain entries](#loot_template-Plain_entry) absolute value of **Chance **signifies the percent chance that the item has to drop. But in addition negative **Chance**
 
@@ -164,7 +164,7 @@ At loading time:
 During loot generation:
 
 - core rolls for explicitly-chanced entries (if any):
-- **a random number\*R **is rolled in range 0 to 100 (FLOATing point value).
+- **a random number\*R **is rolled in range 0 to 100 (floating point value).
 - chance to drop is checked for every (explicitly-chanced) entry in the group:
 - **if\*R** is less than absolute value of [Chance](#loot_template-ChanceOrQuestChance) of the entry then the entry 'wins': the [Item](#loot_template-item) is included in the loot. Group processing stops, the rest of group entries are just skipped.
 - **otherwise the entry 'looses': the [Item](#loot_template-item) misses its chance to get into the loot.\*R** is decreased by the absolute value of [Chance](#loot_template-ChanceOrQuestChance) and next explicitly-chanced entry is checked.

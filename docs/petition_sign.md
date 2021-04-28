@@ -34,11 +34,11 @@ The GUID of the charter item. See item\_template.guid
 
 ### playerguid
 
-The GUID of the player that has SIGNED the charter. See characters.guid
+The GUID of the player that has signed the charter. See characters.guid
 
 ### player\_account
 
-The account ID of the player that has SIGNED the charter. No two players can sign the same charter from the same account.
+The account ID of the player that has signed the charter. No two players can sign the same charter from the same account.
 
 ### type
 

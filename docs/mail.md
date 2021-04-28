@@ -98,11 +98,11 @@ For items look at [mail_items](mail_items) table.
 
 ### expire\_time
 
-Here is TIMESTAMP which stores date for auto-return mail to sender.
+Here is timestamp which stores date for auto-return mail to sender.
 
 ### deliver\_time
 
-Here is TIMESTAMP which stores date of send mail.
+Here is timestamp which stores date of send mail.
 
 ### money
 

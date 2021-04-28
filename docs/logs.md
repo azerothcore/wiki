@@ -26,7 +26,7 @@ This table stores all logs from authserver if database logging in config is enab
 
 ### time
 
-A unixtime TIMESTAMP indicating when this string was logged.
+A unixtime timestamp indicating when this string was logged.
 
 ### realm
 

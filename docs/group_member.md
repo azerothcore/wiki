@@ -50,7 +50,7 @@ There can only be 5 membes in one subgroup per raid group.
 | Value | Name        | Comments                                                         |
 |-------|-------------|------------------------------------------------------------------|
 | 0     | ROLE_NONE   |                                                                  |
-| 1     | ROLE_LEADER | The character has SIGNED to Random Dungeon Finder as experienced |
-| 2     | ROLE_TANK   | The character has SIGNED to Random Dungeon Finder as tank        |
-| 4     | ROLE_HEALER | The character has SIGNED to Random Dungeon Finder as healer      |
-| 8     | ROLE_DAMAGE | The character has SIGNED to Random Dungeon Finder as dps         |
+| 1     | ROLE_LEADER | The character has signed to Random Dungeon Finder as experienced |
+| 2     | ROLE_TANK   | The character has signed to Random Dungeon Finder as tank        |
+| 4     | ROLE_HEALER | The character has signed to Random Dungeon Finder as healer      |
+| 8     | ROLE_DAMAGE | The character has signed to Random Dungeon Finder as dps         |
