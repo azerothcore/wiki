@@ -130,7 +130,7 @@
                     <td class="confluenceTd"><span>%s</span></td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">varchar(k)</td>
+                    <td colspan="1" class="confluenceTd">VARCHAR(k)</td>
                     <td class="confluenceTd"><span>%s</span></td>
                 </tr>
                 <tr>

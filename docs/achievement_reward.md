@@ -15,7 +15,7 @@ This table describes the reward that you will receive when you obtain a given ac
 | [TitleH][3]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
 | [ItemID][4]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
 | [Sender][5]         | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [Subject][6]        | varchar(255) |            |     | YES  |         |       |         |
+| [Subject][6]        | VARCHAR(255) |            |     | YES  |         |       |         |
 | [Body][7]           | text         |            |     | YES  |         |       |         |
 | [MailTemplateID][8] | mediumint(8) | unsigned   |     | YES  | 0       |       |         |
 

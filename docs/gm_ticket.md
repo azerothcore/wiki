@@ -15,7 +15,7 @@ Note: do not insert directly into most of these columns, else the client won't u
 | [Id][1]                | int(10)     | signed     | PRI | NO   |         | Auto increment |                                            |
 | [type][2]              | tinyint(3)  | unsigned   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
 | [playerGuid][3]        | int(10)     | unsigned   |     | NO   |         |                | Global Unique Identifier of ticket creator |
-| [name][4]              | varchar(12) |            |     | NO   |         |                | Name of ticket creator                     |
+| [name][4]              | VARCHAR(12) |            |     | NO   |         |                | Name of ticket creator                     |
 | [description][5]       | text        |            |     | NO   |         |                |                                            |
 | [createtime][6]        | int(10)     | unsigned   |     | NO   |         |                |                                            |
 | [mapId][7]             | smallint(5) | unsigned   |     | NO   |         |                |                                            |

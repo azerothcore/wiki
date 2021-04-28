@@ -15,7 +15,7 @@ This table contains conditions to meet for the specified game event to be comple
 | [req_num][3]                | FLOAT        | signed     |     | YES  | 0       |       |                         |
 | [max_world_state_field][4]  | smallint(5)  | unsigned   |     | NO   |         |       |                         |
 | [done_world_state_field][5] | smallint(5)  | unsigned   |     | NO   |         |       |                         |
-| [description][6]            | varchar(25)  | signed     |     | NO   |         |       |                         |
+| [description][6]            | VARCHAR(25)  | signed     |     | NO   |         |       |                         |
 
 [1]: #evententry
 [2]: #condition_id

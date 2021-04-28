@@ -11,7 +11,7 @@ This table contains Spawn Group names and flags.
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
 | [roupId][1]    | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
-| [roupName][2]  | varchar(100) |            |     | NO   | NULL    |       |         |
+| [roupName][2]  | VARCHAR(100) |            |     | NO   | NULL    |       |         |
 | [roupFlags][3] | int(10)      | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #roupid

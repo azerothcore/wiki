@@ -2,4 +2,4 @@
 
 Column | Type | Description
 --- | --- | ---
-Name | varchar(12) | 
+Name | VARCHAR(12) | 

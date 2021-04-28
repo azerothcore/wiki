@@ -13,7 +13,7 @@ This is the pool of pools table. You can create a pool with a chance of a range 
 | [pool_id][1]     | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [mother_pool][2] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
 | [chance][3]      | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [description][4] | varchar(255) | signed     |     | YES  | NULL    |       |         |
+| [description][4] | VARCHAR(255) | signed     |     | YES  | NULL    |       |         |
 
 [1]: #pool_id
 [2]: #mother_pool

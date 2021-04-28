@@ -3,16 +3,16 @@
 Column | Type | Description
 --- | --- | ---
 Entry | bigint(20) | 
-Player | varchar(30) | 
+Player | VARCHAR(30) | 
 Acctid | int(11) | 
-Reason | varchar(255) | 
+Reason | VARCHAR(255) | 
 Speed | FLOAT | 
 Val1 | FLOAT | 
 Val2 | int(10) unsigned | 
 Count | int(11) | 
 Map | smallint(5) | 
-Pos | varchar(255) | 
+Pos | VARCHAR(255) | 
 Level | mediumint(9) | 
 First_date | datetime | 
 Last_date | datetime | 
-Op | varchar(255) | 
+Op | VARCHAR(255) | 

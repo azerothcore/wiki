@@ -12,9 +12,9 @@ This table holds information on all the tabs in use for all guilds that make use
 |--------------|--------------|------------|-----|------|---------|-------|---------|
 | [guildid][1] | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
 | [TabId][2]   | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [TabName][3] | varchar(16)  | signed     |     | NO   | "       |       |         |
-| [TabIcon][4] | varchar(100) | signed     |     | NO   | "       |       |         |
-| [TabText][5] | varchar(500) | signed     |     | YES  | NULL    |       |         |
+| [TabName][3] | VARCHAR(16)  | signed     |     | NO   | "       |       |         |
+| [TabIcon][4] | VARCHAR(100) | signed     |     | NO   | "       |       |         |
+| [TabText][5] | VARCHAR(500) | signed     |     | YES  | NULL    |       |         |
 
 [1]: #guildid
 [2]: #tabid

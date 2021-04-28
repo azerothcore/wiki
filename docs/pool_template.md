@@ -12,7 +12,7 @@ Each unique pool is defined in this table.
 |------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
 | [entry][1]       | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Pool entry                            |
 | [max_limit][2]   | int(10)      | unsigned   |     | NO   | 0       |       | Max number of objects (0) is no limit |
-| [description][3] | varchar(255) | signed     |     | YES  | NULL    |       |                                       |
+| [description][3] | VARCHAR(255) | signed     |     | YES  | NULL    |       |                                       |
 
 [1]: #entry
 [2]: #max_limit

@@ -8,11 +8,11 @@
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [code][1]        | varchar(4)   |            | PRI | NO   |         |       |         |
-| [iso_code_2][2]  | varchar(2)   |            |     | NO   |         |       |         |
-| [iso_code_3][3]  | varchar(3)   |            |     | YES  |         |       |         |
-| [iso_country][4] | varchar(255) |            |     | NO   |         |       |         |
-| [country][5]     | varchar(255) |            |     | NO   |         |       |         |
+| [code][1]        | VARCHAR(4)   |            | PRI | NO   |         |       |         |
+| [iso_code_2][2]  | VARCHAR(2)   |            |     | NO   |         |       |         |
+| [iso_code_3][3]  | VARCHAR(3)   |            |     | YES  |         |       |         |
+| [iso_country][4] | VARCHAR(255) |            |     | NO   |         |       |         |
+| [country][5]     | VARCHAR(255) |            |     | NO   |         |       |         |
 | [lat][6]         | FLOAT        |            |     | NO   | 0       |       |         |
 | [lon][7]         | FLOAT        |            |     | NO   | 0       |       |         |
 

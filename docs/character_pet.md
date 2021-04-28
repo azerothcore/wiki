@@ -19,7 +19,7 @@ This table holds the pet data for each pet summoned by anyone in the game.
 | [level][7]              | smallint(5)  | unsigned   |     | NO   |         |       |         |
 | [exp][8]                | int(10)      | unsigned   |     | NO   |         |       |         |
 | [Reactstate][9]         | tinyint(3)   | unsigned   |     | NO   |         |       |         |
-| [name][10]              | varchar(21)  |            |     | NO   |         |       |         |
+| [name][10]              | VARCHAR(21)  |            |     | NO   |         |       |         |
 | [renamed][11]           | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [slot][12]              | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [curhealth][13]         | int(10)      | unsigned   |     | NO   |         |       |         |

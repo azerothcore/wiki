@@ -5,14 +5,14 @@
 Column | Type | Description
 --- | --- | ---
 Entry | mediumint(8) unsigned | 
-Subject_loc1 | varchar(100) | 
-Subject_loc2 | varchar(100) | 
-Subject_loc3 | varchar(100) | 
-Subject_loc4 | varchar(100) | 
-Subject_loc5 | varchar(100) | 
-Subject_loc6 | varchar(100) | 
-Subject_loc7 | varchar(100) | 
-Subject_loc8 | varchar(100) | 
+Subject_loc1 | VARCHAR(100) | 
+Subject_loc2 | VARCHAR(100) | 
+Subject_loc3 | VARCHAR(100) | 
+Subject_loc4 | VARCHAR(100) | 
+Subject_loc5 | VARCHAR(100) | 
+Subject_loc6 | VARCHAR(100) | 
+Subject_loc7 | VARCHAR(100) | 
+Subject_loc8 | VARCHAR(100) | 
 Text_loc1 | text | 
 Text_loc2 | text | 
 Text_loc3 | text | 

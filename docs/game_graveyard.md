@@ -9,7 +9,7 @@
 | [x](#x)                     | FLOAT        |      | NO   | 0       |
 | [y](#y)                     | FLOAT        |      | NO   | 0       |
 | [z](#z)                     | FLOAT        |      | NO   | 0       |
-| [Comment](#Comment)         | varchar(255) |      | YES  | NULL    |
+| [Comment](#Comment)         | VARCHAR(255) |      | YES  | NULL    |
 
 **Description of the fields**
 

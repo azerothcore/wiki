@@ -15,7 +15,7 @@ Table used for storing custom damage/healing bonus coefficients.
 | [dot_bonus][3]    | FLOAT        | signed     |     | NO   | 0       |       |         |
 | [ap_bonus][4]     | FLOAT        | signed     |     | NO   | 0       |       |         |
 | [ap_dot_bonus][5] | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [comments][6]     | varchar(255) | signed     |     | YES  | NULL    |       |         |
+| [comments][6]     | VARCHAR(255) | signed     |     | YES  | NULL    |       |         |
 
 [1]: #entry
 [2]: #direct_bonus

@@ -10,11 +10,11 @@ Information and settings for ingame, player-based chat channels (not affecting t
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [name][1]       | varchar(128) | signed     | PRI | NO   |         |       |         |
+| [name][1]       | VARCHAR(128) | signed     | PRI | NO   |         |       |         |
 | [team][2]       | int(10)      | unsigned   | PRI | NO   |         |       |         |
 | [announce][3]   | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
 | [ownership][4]  | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
-| [password][5]   | varchar(32)  | signed     |     | YES  | NULL    |       |         |
+| [password][5]   | VARCHAR(32)  | signed     |     | YES  | NULL    |       |         |
 | [bannedList][6] | text         | signed     |     | YES  |         |       |         |
 | [lastUsed][7]   | int(10)      | unsigned   |     | NO   |         |       |         |
 

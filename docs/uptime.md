@@ -14,7 +14,7 @@ This table holds the server's uptime. The core will automatically update the lat
 | [starttime][2]  | int(10)      | unsigned   | PRI | NO   | 0           |       |         |
 | [uptime][3]     | int(10)      | unsigned   |     | NO   | 0           |       |         |
 | [maxplayers][4] | smallint(5)  | unsigned   |     | NO   | 0           |       |         |
-| [revision][5]   | varchar(255) |            |     | NO   | AzerothCore |       |         |
+| [revision][5]   | VARCHAR(255) |            |     | NO   | AzerothCore |       |         |
 
 [1]: #realmid
 [2]: #starttime

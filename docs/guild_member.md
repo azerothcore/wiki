@@ -13,8 +13,8 @@ This table holds information on the members of all guilds, their ranks in the gu
 | [guildid][1]            | int(10)     | unsigned   |        | NO   |         |       | Guild Identificator |
 | [guid][2]               | int(10)     | unsigned   | Unique | NO   |         |       |                     |
 | [rank][3]               | tinyint(3)  | unsigned   |        | NO   |         |       |                     |
-| [pnote][4]              | varchar(31) |            |        | NO   |         |       |                     |
-| [offnote][5]            | varchar(31) |            |        | NO   |         |       |                     |
+| [pnote][4]              | VARCHAR(31) |            |        | NO   |         |       |                     |
+| [offnote][5]            | VARCHAR(31) |            |        | NO   |         |       |                     |
 | [BankResetTimeMoney][6] | int(10)     | unsigned   |        | NO   |         |       |                     |
 | [BankRemMoney][7]       | int(10)     | unsigned   |        | NO   |         |       |                     |
 | [BankResetTimeTab0][8]  | int(10)     | unsigned   |        | NO   |         |       |                     |

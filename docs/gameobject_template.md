@@ -9,10 +9,10 @@ Contains template of all gameobjects
 | entry          | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
 | type           | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
 | displayId      | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| name           | varchar(100) | signed     |     | NO   | "       |       |         |
-| IconName       | varchar(100) | signed     |     | NO   | "       |       |         |
-| castBarCaption | varchar(100) | signed     |     | NO   | "       |       |         |
-| unk1           | varchar(100) | signed     |     | NO   | "       |       |         |
+| name           | VARCHAR(100) | signed     |     | NO   | "       |       |         |
+| IconName       | VARCHAR(100) | signed     |     | NO   | "       |       |         |
+| castBarCaption | VARCHAR(100) | signed     |     | NO   | "       |       |         |
+| unk1           | VARCHAR(100) | signed     |     | NO   | "       |       |         |
 | size           | FLOAT        | signed     |     | NO   | 1       |       |         |
 | data0          | int(10)      | unsigned   |     | NO   | 0       |       |         |
 | data1          | int(11)      | unsigned   |     | NO   | -1      |       |         |
@@ -39,7 +39,7 @@ Contains template of all gameobjects
 | data22         | int(10)      | unsigned   |     | NO   | 0       |       |         |
 | data23         | int(10)      | unsigned   |     | NO   | 0       |       |         |
 | AIName         | char(64)     | signed     |     | NO   | "       |       |         |
-| ScriptName     | varchar(64)  | signed     |     | NO   | "       |       |         |
+| ScriptName     | VARCHAR(64)  | signed     |     | NO   | "       |       |         |
 | WDBVerified    | smallint(5)  | signed     |     | YES  | 1       |       |         |
 
 ## Description of the fields

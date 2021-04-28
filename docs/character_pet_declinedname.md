@@ -12,11 +12,11 @@
 |--------------------|-------------|------------|-----|------|---------|-------|---------|
 | [id][1]            | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
 | [owner][2]         | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [genitive][3]      | varchar(12) | signed     |     | NO   | NULL    |       |         |
-| [dative][4]        | varchar(12) | signed     |     | NO   | NULL    |       |         |
-| [accusative][5]    | varchar(12) | signed     |     | NO   | NULL    |       |         |
-| [instrumental][6]  | varchar(12) | signed     |     | NO   | NULL    |       |         |
-| [prepositional][7] | varchar(12) | signed     |     | NO   | NULL    |       |         |
+| [genitive][3]      | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
+| [dative][4]        | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
+| [accusative][5]    | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
+| [instrumental][6]  | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
+| [prepositional][7] | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
 
 [1]: #id
 [2]: #owner

@@ -13,8 +13,8 @@ This table holds info about player's equipment manager settings.
 | [guid][1]        | int(10)      | signed     |     | NO   |         |                |         |
 | [setguid][2]     | bigint(20)   | signed     | PRI | NO   |         | Auto Increment |         |
 | [setindex][3]    | tinyint(3)   | signed     |     | NO   |         |                |         |
-| [name][4]        | varchar(31)  |            |     | NO   |         |                |         |
-| [iconname][5]    | varchar(100) |            |     | NO   |         |                |         |
+| [name][4]        | VARCHAR(31)  |            |     | NO   |         |                |         |
+| [iconname][5]    | VARCHAR(100) |            |     | NO   |         |                |         |
 | [ignore_mask][6] | int(11)      | unsigned   |     | NO   |         |                |         |
 | [item0][7]       | int(11)      | unsigned   |     | NO   |         |                |         |
 | [item1][8]       | int(11)      | unsigned   |     | NO   |         |                |         |

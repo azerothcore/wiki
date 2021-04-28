@@ -70,7 +70,7 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 | [Sound][10]           | mediumint(8) | unsigned        |     | NO   |         |       |                         |
 | [BroadcastTextId][11] | mediumint(6) | signed          |     | NO   |         |       |                         |
 | [TextRange][12]       | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
-| [comment][13]         | varchar(255) | utf8_general_ci |     | YES  | NULL    |       |                         |
+| [comment][13]         | VARCHAR(255) | utf8_general_ci |     | YES  | NULL    |       |                         |
 
 [1]: #creatureid
 [2]: #groupid

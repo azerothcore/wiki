@@ -12,7 +12,7 @@ This table contains a list of quests that are tied to a specific pool.
 |------------------|--------------|------------|-----|------|---------|-------|---------|
 | [entry][1]       | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
 | [pool_entry][2]  | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [description][3] | varchar(255) | signed     |     | YES  | NULL    |       |         |
+| [description][3] | VARCHAR(255) | signed     |     | YES  | NULL    |       |         |
 
 [1]: #entry
 [2]: #pool_entry

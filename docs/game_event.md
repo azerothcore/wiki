@@ -13,7 +13,7 @@ This table holds definitions for all game events that are activated or deactivat
 | [length][5]       | bigint(20)   | unsigned   |     | NO   |         |        | Length in minutes of the event                                                                                                       |
 | [holiday][6]      | mediumint(8) | unsigned   |     | NO   |         |        | Client side holiday id (from dbc)                                                                                                    |
 | [holidayStage][7] | tinyint(3)   | unsigned   |     | NO   |         |        |                                                                                                                                      |
-| [description][8]  | varchar(255) | signed     |     | YES  | NULL    |        | Description of the event displayed in console                                                                                        |
+| [description][8]  | VARCHAR(255) | signed     |     | YES  | NULL    |        | Description of the event displayed in console                                                                                        |
 | [world_event][9]  | tinyint(3)   | unsigned   |     | NO   |         |        | 0 if normal event, 1 if world event                                                                                                  |
 | [announce][10]    | tinyint(3)   | unsigned   |     | YES  | 2       |        | 0 dont announce, 1 announce, 2 value from config                                                                                     |
 

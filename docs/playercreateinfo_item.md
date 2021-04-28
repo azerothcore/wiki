@@ -14,7 +14,7 @@ This table is used for any custom items that you might want to give to character
 | [class][2]  | tinyint   | unsigned   | PRI | NO   | 0       |       |         |
 | [itemid][3] | mediumint | unsigned   | PRI | NO   | 0       |       |         |
 | [amount][4] | smallint  | unsigned   |     | NO   | 1       |       |         |
-| [Note][5]   | varchar   |            |     | YES  | NULL    |       |         |
+| [Note][5]   | VARCHAR   |            |     | YES  | NULL    |       |         |
 
 [1]: #race
 [2]: #class

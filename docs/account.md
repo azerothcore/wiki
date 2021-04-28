@@ -9,28 +9,28 @@
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
 | [id][1]               | int(10)      | unsigned   | PRI | NO   |                   | auto_increment | Identifier |
-| [username][2]         | varchar(32)  |            | UNI | NO   |                   |                |            |
-| [sha_pass_hash][3]    | varchar(40)  |            |     | NO   |                   |                |            |
-| [sessionkey][4]       | varchar(80)  |            |     | NO   |                   |                |            |
-| [v][5]                | varchar(64)  |            |     | NO   |                   |                |            |
-| [s][6]                | varchar(64)  |            |     | NO   |                   |                |            |
-| [token_key][7]        | varchar(100) |            |     | NO   |                   |                |            |
-| [email][8]            | varchar(255) |            |     | NO   |                   |                |            |
-| [reg_mail][9]         | varchar(255) |            |     | NO   |                   |                |            |
+| [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
+| [sha_pass_hash][3]    | VARCHAR(40)  |            |     | NO   |                   |                |            |
+| [sessionkey][4]       | VARCHAR(80)  |            |     | NO   |                   |                |            |
+| [v][5]                | VARCHAR(64)  |            |     | NO   |                   |                |            |
+| [s][6]                | VARCHAR(64)  |            |     | NO   |                   |                |            |
+| [token_key][7]        | VARCHAR(100) |            |     | NO   |                   |                |            |
+| [email][8]            | VARCHAR(255) |            |     | NO   |                   |                |            |
+| [reg_mail][9]         | VARCHAR(255) |            |     | NO   |                   |                |            |
 | [joindate][10]        | timestamp    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
-| [last_ip][11]         | varchar(15)  |            |     | NO   | 127.0.0.1         |                |            |
-| [last_attempt_ip][12] | varchar(15)  |            |     | NO   | 127.0.0.1         |                |            |
+| [last_ip][11]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
+| [last_attempt_ip][12] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [failed_logins][13]   | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [locked][14]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
-| [lock_country][15]    | varchar(2)   |            |     | NO   | 0                 |                |            |
+| [lock_country][15]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
 | [last_login][16]      | timestamp    |            |     | YES  | NULL              |                |            |
 | [online][17]          | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [expansion][18]       | tinyint(3)   | unsigned   |     | NO   | 2                 |                |            |
 | [mutetime][19]        | bigint(20)   | signed     |     | NO   | 0                 |                |            |
-| [mutereason][20]      | varchar(255) |            |     | NO   |                   |                |            |
-| [muteby][21]          | varchar(50)  |            |     | NO   |                   |                |            |
+| [mutereason][20]      | VARCHAR(255) |            |     | NO   |                   |                |            |
+| [muteby][21]          | VARCHAR(50)  |            |     | NO   |                   |                |            |
 | [locale][22]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
-| [os][23]              | varchar(3)   |            |     | NO   |                   |                |            |
+| [os][23]              | VARCHAR(3)   |            |     | NO   |                   |                |            |
 | [recruiter][24]       | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [totaltime][25]       | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 

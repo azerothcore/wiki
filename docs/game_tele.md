@@ -14,7 +14,7 @@ This table contains a list of teleport locations that can be used with the *.tel
 | [position_z][4]  | FLOAT        | signed     |     | NO   | 0       |                |
 | [orientation][5] | FLOAT        | signed     |     | NO   | 0       |                |
 | [map][6]         | smallint(5)  | unsigned   |     | NO   | 0       |                |
-| [name][7]        | varchar(100) | signed     |     | NO   | NULL    |                |
+| [name][7]        | VARCHAR(100) | signed     |     | NO   | NULL    |                |
 
 [1]: #id
 [2]: #position_x

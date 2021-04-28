@@ -9,4 +9,4 @@ Sender | int(10) unsigned |
 Status | tinyint(1) unsigned | 
 Statustime | int(10) unsigned | 
 Rank | tinyint(1) unsigned | 
-Text | varchar(255) | 
+Text | VARCHAR(255) | 

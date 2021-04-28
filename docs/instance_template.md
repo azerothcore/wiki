@@ -14,7 +14,7 @@ If you want to change the spot you will start in when you enter/leave an instanc
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
 | [map][1]        | int(10)      | unsigned   |     | NO   | NULL    |       |         |
 | [parent][2]     | bigint(10)   | unsigned   |     | NO   | 0       |       |         |
-| [script][3]     | varchar(128) | signed     |     | NO   | NULL    |       |         |
+| [script][3]     | VARCHAR(128) | signed     |     | NO   | NULL    |       |         |
 | [allowMount][4] | tinyiny(1)   | signed     |     | NO   | 0       |       |         |
 
 [1]: #map

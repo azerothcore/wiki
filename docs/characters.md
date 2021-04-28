@@ -13,7 +13,7 @@ This table holds vital static information for each character. It is used to crea
 |----------------------------|--------------|------------|-----|------|-------------------|--------|--------------------------|
 | [guid][1]                  | int(10)      | unsigned   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
 | [account][2]               | int(10)      | unsigned   |     | NO   | 0                 |        | Account Identifier       |
-| [name][3]                  | varchar(12)  | signed     |     | NO   | NULL              |        |                          |
+| [name][3]                  | VARCHAR(12)  | signed     |     | NO   | NULL              |        |                          |
 | [race][4]                  | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [class][5]                 | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [gender][6]                | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
@@ -87,7 +87,7 @@ This table holds vital static information for each character. It is used to crea
 | [grantableLevels][74]      | longtext     | unsigned   |     | NO   | 0                 |        |                          |
 | [creation_date][75]        | timestamp    | signed     |     | NO   | CURRENT_TIMESTAMP |        |                          |
 | [deleteInfos_Account][76]  | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
-| [deleteInfos_Name][77]     | varchar(12)  | unsigned   |     | YES  | NULL              |        |                          |
+| [deleteInfos_Name][77]     | VARCHAR(12)  | unsigned   |     | YES  | NULL              |        |                          |
 | [deleteDate][78]           | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
   
 [1]: #guid

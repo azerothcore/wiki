@@ -12,7 +12,7 @@ This table holds information on what skills newly created characters should star
 | [classmask](#playercreateinfo_skills-class) | int(10)      | unsigned   | PRI | NO   |         |       |         |
 | [skill](SkillLine)                          | smallint(5)  | unsigned   | PRI | NO   |         |       |         |
 | rank                                        | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
-| Comment                                     | varchar(255) | signed     |     | YES  |         |       |         |
+| Comment                                     | VARCHAR(255) | signed     |     | YES  |         |       |         |
 
  
 

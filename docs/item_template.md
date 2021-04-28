@@ -14,7 +14,7 @@ Holds information on every item that exists in the game. All items are created f
 | [class][2]                      | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [subclass][3]                   | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [SoundOverrideSubclass][4]      | tinyint(3)   | signed     |     | NO   | -1      |       |                     |
-| [name][5]                       | varchar(255) | signed     |     | NO   | NULL    |       |                     |
+| [name][5]                       | VARCHAR(255) | signed     |     | NO   | NULL    |       |                     |
 | [displayid][6]                  | mediumint(8) | unsigned   |     | NO   | 0       |       |                     |
 | [Quality][7]                    | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [Flags][8]                      | bigint(20)   | signed     |     | NO   | 0       |       |                     |
@@ -112,7 +112,7 @@ Holds information on every item that exists in the game. All items are created f
 | [spellcategory_5][100]          | smallint(5)  | unsigned   |     | NO   | 0       |       |                     |
 | [spellcategorycooldown_5][101]  | int(11)      | signed     |     | NO   | -1      |       |                     |
 | [bonding][102]                  | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
-| [description][103]              | varchar(255) | signed     |     | NO   | NULL    |       |                     |
+| [description][103]              | VARCHAR(255) | signed     |     | NO   | NULL    |       |                     |
 | [PageText][104]                 | mediumint(8) | unsigned   |     | NO   | 0       |       |                     |
 | [LanguageID][105]               | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [PageMaterial][106]             | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
@@ -142,7 +142,7 @@ Holds information on every item that exists in the game. All items are created f
 | [duration][130]                 | int(10)      | unsigned   |     | NO   | 0       |       | Duration in seconds |
 | [ItemLimitCategory][131]        | smallint(6)  | signed     |     | NO   | 0       |       |                     |
 | [HolidayId][132]                | int(11)      | unsigned   |     | NO   | 0       |       |                     |
-| [ScriptName][133]               | varchar(64)  | signed     |     | NO   | NULL    |       |                     |
+| [ScriptName][133]               | VARCHAR(64)  | signed     |     | NO   | NULL    |       |                     |
 | [DisenchantID][134]             | mediumint(8) | unsigned   |     | NO   | 0       |       |                     |
 | [FoodType][135]                 | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [minMoneyLoot][136]             | int(10)      | unsigned   |     | NO   | 0       |       |                     |

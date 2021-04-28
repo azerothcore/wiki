@@ -11,10 +11,10 @@ This table sets up information on all available realms. Each row controls a diff
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 |----------------------------|--------------|------------|-----|------|---------------|----------------|---------|
 | [id][1]                    | int(10)      | unsigned   | PRI | NO   |               | auto_increment |         |
-| [name][2]                  | varchar(32)  |            | UNI | NO   |               |                |         |
-| [address][3]               | varchar(255) |            |     | NO   | 127.0.0.1     |                |         |
-| [localAddress][4]          | varchar(255) |            |     | NO   | 127.0.0.1     |                |         |
-| [localSubnetMask][5]       | varchar(255) |            |     | NO   | 255.255.255.0 |                |         |
+| [name][2]                  | VARCHAR(32)  |            | UNI | NO   |               |                |         |
+| [address][3]               | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
+| [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
+| [localSubnetMask][5]       | VARCHAR(255) |            |     | NO   | 255.255.255.0 |                |         |
 | [port][6]                  | smallint(5)  | unsigned   |     | NO   | 8085          |                |         |
 | [icon][7]                  | tinyint(3)   | unsigned   |     | NO   | 0             |                |         |
 | [flag][8]                  | tinyint(3)   | unsigned   |     | NO   | 2             |                |         |

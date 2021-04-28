@@ -192,7 +192,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#comment">Comment</a></p></td>
-<td><p>varchar(255)</p></td>
+<td><p>VARCHAR(255)</p></td>
 <td><p><br />
 </p></td>
 <td><p><br />

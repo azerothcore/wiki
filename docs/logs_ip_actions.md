@@ -12,7 +12,7 @@
 | [account_id][2]     | int(10)     | unsigned   |     | NO   |                   |                | Account ID                    |
 | [character_guid][3] | int(10)     | unsigned   |     | NO   |                   |                | Character Guid                |
 | [type][4]           | tinyint(3)  | unsigned   |     | NO   |                   |                |                               |
-| [ip][5]             | varchar(15) |            |     | NO   | 127.0.0.1         |                |                               |
+| [ip][5]             | VARCHAR(15) |            |     | NO   | 127.0.0.1         |                |                               |
 | [systemnote][6]     | text        |            |     | YES  |                   |                | Notes inserted by system      |
 | [unixtime][7]       | int(10)     | unsigned   |     | NO   |                   |                | Unixtime                      |
 | [time][8]           | timestamp   |            |     | NO   | CURRENT_TIMESTAMP |                | Timestamp                     |

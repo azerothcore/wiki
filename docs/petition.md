@@ -12,7 +12,7 @@ This table holds information on all ongoing petitions for a guild or for an aren
 |-------------------|-------------|------------|-----|------|---------|-------|---------|
 | [ownerguid][1]    | int(10)     | unsigned   | PRI | NO   |         |       |         |
 | [petitionguid][2] | int(10)     | unsigned   |     | YES  | 0       |       |         |
-| [name][3]         | varchar(24) | signed     |     | NO   |         |       |         |
+| [name][3]         | VARCHAR(24) | signed     |     | NO   |         |       |         |
 | [type][4]         | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
 
 [1]: #ownerguid

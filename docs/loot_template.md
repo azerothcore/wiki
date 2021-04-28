@@ -25,7 +25,7 @@ Loot templates define only items in the loot. See comments about money drop in c
 | [GroupId][7]        | tinyint            | NO   |     | 0       |       |         |
 | [MinCount][8]       | mediumint          | NO   |     | 1       |       |         |
 | [MaxCount][9]       | tinyint unsigned   | NO   |     | 1       |       |         |
-| [Comment][10]       | varchar            |      |     |         |       |         |
+| [Comment][10]       | VARCHAR            |      |     |         |       |         |
 
 [1]: #entry
 [2]: #item
