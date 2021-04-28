@@ -31,7 +31,7 @@ and so on.
 
 There are some exceptions such as the `GlobalScript` which is an Observer used in different classes throughout the core. But generally speaking, a script type should refer to a specific class.
 
-Therefore, if you create a new class inside that has to be extended with hooks, then you can proceed with the first point.
+Therefore, if you have created a new class that has to be extended with hooks, then you can proceed with the first point.
 
 However, most of the time you just have to add new hooks to existing scripts, in this case just jump to point 2 of this chapter.
 
