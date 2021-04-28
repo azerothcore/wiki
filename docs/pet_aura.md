@@ -11,7 +11,7 @@
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
 | [guid][1]             | int(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
-| [caster_guid][2]      | bigint(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
+| [caster_guid][2]      | BIGINT(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
 | [spell][3]            | mediumint(8) | unsigned   |     | NO   |         |       |                               |
 | [effect_mask][4]      | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
 | [recalculate_mask][5] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |

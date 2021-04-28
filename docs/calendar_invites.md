@@ -2,8 +2,8 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | bigint(20) unsigned | 
-Event | bigint(20) unsigned | 
+Id | BIGINT(20) unsigned | 
+Event | BIGINT(20) unsigned | 
 Invitee | int(10) unsigned | 
 Sender | int(10) unsigned | 
 Status | tinyint(1) unsigned | 

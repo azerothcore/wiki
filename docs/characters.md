@@ -65,7 +65,7 @@ This table holds vital static information for each character. It is used to crea
 | [todayKills][52]           | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [yesterdayKills][53]       | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [chosenTitle][54]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [knownCurrencies][55]      | bigint(20)   | unsigned   |     | NO   | 0                 |        |                          |
+| [knownCurrencies][55]      | BIGINT(20)   | unsigned   |     | NO   | 0                 |        |                          |
 | [watchedFaction][56]       | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [drunk][57]                | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [health][58]               | int(10)      | unsigned   |     | NO   | 0                 |        |                          |

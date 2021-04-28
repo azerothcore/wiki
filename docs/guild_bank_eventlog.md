@@ -18,7 +18,7 @@
 | [ItemOrMoney][6]    | int(11)    | unsigned   |     | NO   | 0       |       |                                             |
 | [ItemStackCount][7] | tinyint(3) | unsigned   |     | NO   | 0       |       |                                             |
 | [DestTabId][8]      | tinyint(1) | unsigned   |     | NO   | 0       |       | Destination Tab Id                          |
-| [TIMESTAMP][9]      | bigint(20) | unsigned   |     | NO   | 0       |       | Event UNIX time                             |
+| [TIMESTAMP][9]      | BIGINT(20) | unsigned   |     | NO   | 0       |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid

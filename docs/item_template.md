@@ -17,10 +17,10 @@ Holds information on every item that exists in the game. All items are created f
 | [name][5]                       | VARCHAR(255) | signed     |     | NO   | NULL    |       |                     |
 | [displayid][6]                  | mediumint(8) | unsigned   |     | NO   | 0       |       |                     |
 | [Quality][7]                    | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
-| [Flags][8]                      | bigint(20)   | signed     |     | NO   | 0       |       |                     |
+| [Flags][8]                      | BIGINT(20)   | signed     |     | NO   | 0       |       |                     |
 | [FlagsExtra][9]                 | int(10)      | unsigned   |     | NO   | 0       |       |                     |
 | [BuyCount][10]                  | tinyint(3)   | unsigned   |     | NO   | 1       |       |                     |
-| [BuyPrice][11]                  | bigint(20)   | signed     |     | NO   | 0       |       |                     |
+| [BuyPrice][11]                  | BIGINT(20)   | signed     |     | NO   | 0       |       |                     |
 | [SellPrice][12]                 | int(10)      | unsigned   |     | NO   | 0       |       |                     |
 | [InventoryType][13]             | tinyint(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [AllowableClass][14]            | int(11)      | signed     |     | NO   | -1      |       |                     |

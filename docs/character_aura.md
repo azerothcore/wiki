@@ -11,8 +11,8 @@ Contains aura information that is loaded when a character is loaded, so the aura
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
 | [guid][1]             | int(10)      | unsigned   | PRI | NO   |         |       | Global Unique Identifier      |
-| [caster_guid][2]      | bigint(20)   | unsigned   | PRI | NO   |         |       | Full Global Unique Identifier |
-| [item_guid][3]        | bigint(20)   | unsigned   | PRI | NO   |         |       |                               |
+| [caster_guid][2]      | BIGINT(20)   | unsigned   | PRI | NO   |         |       | Full Global Unique Identifier |
+| [item_guid][3]        | BIGINT(20)   | unsigned   | PRI | NO   |         |       |                               |
 | [spell][4]            | mediumint(8) | unsigned   | PRI | NO   |         |       |                               |
 | [effect_mask][5]      | tinyint(3)   | unsigned   | PRI | NO   |         |       |                               |
 | [recalculate_mask][6] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |

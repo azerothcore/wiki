@@ -12,7 +12,7 @@
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
 | [event_id][1]   | mediumint(8) | unsigned   | PRI | NO   | NULL    |       |         |
 | [state][2]      | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
-| [next_start][3] | bigint(11)   | unsigned   |     | NO   | 0       |       |         |
+| [next_start][3] | BIGINT(11)   | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #event_id
 [2]: #state

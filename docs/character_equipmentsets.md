@@ -11,7 +11,7 @@ This table holds info about player's equipment manager settings.
 | Field            | Type         | Attributes | Key | Null | Default | Extra          | Comment |
 |------------------|--------------|------------|-----|------|---------|----------------|---------|
 | [guid][1]        | int(10)      | signed     |     | NO   |         |                |         |
-| [setguid][2]     | bigint(20)   | signed     | PRI | NO   |         | Auto Increment |         |
+| [setguid][2]     | BIGINT(20)   | signed     | PRI | NO   |         | Auto Increment |         |
 | [setindex][3]    | tinyint(3)   | signed     |     | NO   |         |                |         |
 | [name][4]        | VARCHAR(31)  |            |     | NO   |         |                |         |
 | [iconname][5]    | VARCHAR(100) |            |     | NO   |         |                |         |

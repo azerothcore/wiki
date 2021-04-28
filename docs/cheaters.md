@@ -2,7 +2,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | bigint(20) | 
+Entry | BIGINT(20) | 
 Player | VARCHAR(30) | 
 Acctid | int(11) | 
 Reason | VARCHAR(255) | 

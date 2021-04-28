@@ -16,7 +16,7 @@
 | [PlayerGuid1][4] | int(11)    | signed     |     | NO   | NULL    |       | Player 1                                    |
 | [PlayerGuid2][5] | int(11)    | signed     |     | NO   | NULL    |       | Player 2                                    |
 | [NewRank][6]     | tinyint(2) | signed     |     | NO   | NULL    |       | New rank(in case promotion/demotion)        |
-| [TIMESTAMP][7]   | bigint(20) | signed     |     | NO   | NULL    |       | Event UNIX time                             |
+| [TIMESTAMP][7]   | BIGINT(20) | signed     |     | NO   | NULL    |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid

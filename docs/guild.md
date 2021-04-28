@@ -21,7 +21,7 @@ This table holds the main guild information. All created guilds or all guilds in
 | [info][9]            | text         | signed     |     | NO   |         |        |         |
 | [motd][10]           | VARCHAR(128) | signed     |     | NO   |         |        |         |
 | [createdate][11]     | int(10)      | unsigned   |     | NO   | 0       |        |         |
-| [BankMoney][12]      | bigint(20)   | signed     |     | NO   | 0       |        |         |
+| [BankMoney][12]      | BIGINT(20)   | signed     |     | NO   | 0       |        |         |
 
 [1]: #guildid
 [2]: #name

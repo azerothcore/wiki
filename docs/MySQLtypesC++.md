@@ -16,13 +16,13 @@
                     <th colspan="1" class="confluenceTh">Variable operators</th>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">bigint(20)</td>
+                    <td colspan="1" class="confluenceTd">BIGINT(20)</td>
                     <td colspan="1" class="confluenceTd">int64</td>
                     <td colspan="1" class="confluenceTd"><code>int64 val = fields[n].GetInt64();</code></td>
                     <td colspan="1" class="confluenceTd">%I64d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Capital i)</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">bigint(20) unsigned</td>
+                    <td colspan="1" class="confluenceTd">BIGINT(20) unsigned</td>
                     <td colspan="1" class="confluenceTd">uint64</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint64 val = fields[n].GetUInt64();</span></code>
                     </td>

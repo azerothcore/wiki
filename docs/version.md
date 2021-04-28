@@ -11,7 +11,7 @@ Includes information on current core and database version.
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                         |
 |---------------------|--------------|------------|-----|------|---------|-------|---------------------------------|
 | [core_version][1]   | VARCHAR(120) | signed     |     | YES  | NULL    |       | Core revision dumped at startup |
-| [core_revision][2]  | bigint(20)   | unsigned   |     | YES  | NULL    |       | Core revision hash              |
+| [core_revision][2]  | BIGINT(20)   | unsigned   |     | YES  | NULL    |       | Core revision hash              |
 | [db_version][3]     | VARCHAR(120) | signed     |     | YES  | NULL    |       | Version of world DB             |
 | [script_version][4] | VARCHAR(120) | signed     |     | YES  | NULL    |       | Version of scripts DB           |
 | [cache_id][5]       | int(10)      | signed     |     | YES  | 0       |       | Minor DB version                |

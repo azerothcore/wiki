@@ -12,7 +12,7 @@ Contains data about character settings.
 |-----------|------------|------------|-----|------|---------|-------|---------|
 | [guid][1] | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [type][2] | int(3)     | unsigned   | PRI | NO   | 0       |       |         |
-| [time][3] | bigint(10) | unsigned   |     | NO   | 0       |       |         |
+| [time][3] | BIGINT(10) | unsigned   |     | NO   | 0       |       |         |
 | [data][4] | blob       | signed     |     | NO   |         |       |         |
 
 [1]: #guid

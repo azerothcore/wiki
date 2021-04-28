@@ -2,7 +2,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | bigint(20) unsigned | 
+Id | BIGINT(20) unsigned | 
 Creator | int(10) unsigned | 
 Title | VARCHAR(255) | 
 Description | VARCHAR(255) | 
