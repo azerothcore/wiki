@@ -4,7 +4,7 @@
 
 **The \`logs\` table**
 
-This table stores logs from `Appennder` type database in config file.
+This table stores logs from `Appender` type database in config file.
 Example db appender:
 ```ini
 Appender.DB=3,5,0
