@@ -12,14 +12,14 @@ This table contains trigger points for events in certain coordinates in the maps
 |-------------|---------|------------|-----|------|---------|----------------|------------------------------------------------------|
 | entry       | int(10) | unsigned   | PRI | NO   |         | auto_increment |                                                      |
 | map         | int(10) | unsigned   |     | NO   | 0       |                |                                                      |
-| x           | float   |            |     | NO   | 0       |                |                                                      |
-| y           | float   |            |     | NO   | 0       |                |                                                      |
-| z           | float   |            |     | NO   | 0       |                |                                                      |
-| radius      | float   |            |     | NO   | 0       |                | Seems to be a box of size yards with center at x,y,z |
-| length      | float   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
-| width       | float   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
-| height      | float   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
-| orientation | float   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
+| x           | FLOAT   |            |     | NO   | 0       |                |                                                      |
+| y           | FLOAT   |            |     | NO   | 0       |                |                                                      |
+| z           | FLOAT   |            |     | NO   | 0       |                |                                                      |
+| radius      | FLOAT   |            |     | NO   | 0       |                | Seems to be a box of size yards with center at x,y,z |
+| length      | FLOAT   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
+| width       | FLOAT   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
+| height      | FLOAT   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
+| orientation | FLOAT   |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
 
 **Description of the fields**
 

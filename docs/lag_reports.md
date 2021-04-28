@@ -16,9 +16,9 @@ This table stores the lag reports made by players ingame (when they click on "He
 | [guid][2]       | int(10)     | unsigned   |     | NO   | 0       |                |         |
 | [lagType][3]    | inyint(3)   | unsigned   |     | NO   | 0       |                |         |
 | [mapId][4]      | smallint(5) | unsigned   |     | NO   | 0       |                |         |
-| [posX][5]       | float       | signed     |     | NO   | 0       |                |         |
-| [posY][6]       | float       | signed     |     | NO   | 0       |                |         |
-| [posZ][7]       | float       | signed     |     | NO   | 0       |                |         |
+| [posX][5]       | FLOAT       | signed     |     | NO   | 0       |                |         |
+| [posY][6]       | FLOAT       | signed     |     | NO   | 0       |                |         |
+| [posZ][7]       | FLOAT       | signed     |     | NO   | 0       |                |         |
 | [latency][8]    | int(10)     | unsigned   |     | NO   | 0       |                |         |
 | [createTime][9] | int(10)     | unsigned   |     | NO   | 0       |                |         |
 

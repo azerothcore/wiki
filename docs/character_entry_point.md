@@ -3,10 +3,10 @@
 Column | Type | Description
 --- | --- | ---
 Guid | int(10) unsigned | 
-JoinX | float | 
-JoinY | float | 
-JoinZ | float | 
-JoinO | float | 
+JoinX | FLOAT | 
+JoinY | FLOAT | 
+JoinZ | FLOAT | 
+JoinO | FLOAT | 
 JoinMapId | int(10) unsigned | 
 TaxiPath | text | 
 MountSpell | int(10) unsigned | 

@@ -13,10 +13,10 @@ Contains all the teleport triggers definition. This table is used to complete .d
 | [ID][1]                 | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [Name][2]               | text         |            | MUL | YES  |         |       |         |
 | [target_map][3]         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
-| [target_position_x][4]  | float        |            |     | NO   | 0       |       |         |
-| [target_position_y][5]  | float        |            |     | NO   | 0       |       |         |
-| [target_position_z][6]  | float        |            |     | NO   | 0       |       |         |
-| [target_orientation][7] | float        |            |     | NO   | 0       |       |         |
+| [target_position_x][4]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [target_position_y][5]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [target_position_z][6]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [target_orientation][7] | FLOAT        |            |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #name

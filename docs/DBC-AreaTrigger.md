@@ -15,15 +15,15 @@ This DBC contains information about the triggers of the in-game areas.
 |--------|-------------------|---------|------------------------------------------------------|
 | 1      | ID                | Integer |                                                      |
 | 2      | iRefID_[Map](Map) | Integer |                                                      |
-| 3      | X                 | Float   |                                                      |
-| 4      | Y                 | Float   |                                                      |
-| 5      | Z                 | Float   |                                                      |
+| 3      | X                 | FLOAT   |                                                      |
+| 4      | Y                 | FLOAT   |                                                      |
+| 5      | Z                 | FLOAT   |                                                      |
 | +      | phaseshift        | Integer | New with wotlk or cataclysm                          |
-| 6      | radius            | Float   | Seems to be a box of size yards with center at x,y,z |
-| 7      | box_x             | Float   | Most commonly used when size is 0, but not always    |
-| 8      | box_y             | Float   | Most commonly used when size is 0, but not always    |
-| 9      | box_z             | Float   | Most commonly used when size is 0, but not always    |
-| 10     | box_orientation   | Float   | Most commonly used when size is 0, but not always    |
+| 6      | radius            | FLOAT   | Seems to be a box of size yards with center at x,y,z |
+| 7      | box_x             | FLOAT   | Most commonly used when size is 0, but not always    |
+| 8      | box_y             | FLOAT   | Most commonly used when size is 0, but not always    |
+| 9      | box_z             | FLOAT   | Most commonly used when size is 0, but not always    |
+| 10     | box_orientation   | FLOAT   | Most commonly used when size is 0, but not always    |
 
  
 

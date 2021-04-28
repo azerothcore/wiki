@@ -21,8 +21,8 @@ This table holds information on what events (or procs) certain spells are activa
 | [SpellPhaseMask][9]   | int(10)     | unsigned   |     | NO   | 0       |        |         |
 | [HitMask][10]         | int(10)     | unsigned   |     | NO   | 0       |        |         |
 | [AttributesMask][11]  | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [ProcsPerMinute][12]  | float       |            |     | NO   | 0       |        |         |
-| [Chance][13]          | float       |            |     | NO   | 0       |        |         |
+| [ProcsPerMinute][12]  | FLOAT       |            |     | NO   | 0       |        |         |
+| [Chance][13]          | FLOAT       |            |     | NO   | 0       |        |         |
 | [Cooldown][14]        | int(10)     | unsigned   |     | NO   | 0       |        |         |
 | [Charges][15]         | tinyint(3)  | unsigned   |     | NO   | 0       |        |         |
 

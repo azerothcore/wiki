@@ -13,7 +13,7 @@ This table contains the mapping of a quest in a world event to the condition tha
 | [eventEntry][1]   | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [quest][2]        | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [condition_id][3] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [num][4]          | float        | signed     |     | YES  | 0       |       |         |
+| [num][4]          | FLOAT        | signed     |     | YES  | 0       |       |         |
 
 [1]: #evententry
 [2]: #quest

@@ -4,10 +4,10 @@
 |-------------|-------------|------------|-----|------|---------|--------|------------------------------------|
 | corpseGuid  | int(10)     | unsigned   | PRI | NO   | 0       | Unique | Global Unique Identifier           |
 | guid        | int(10)     | unsigned   |     | NO   | 0       |        | Character Global Unique Identifier |
-| posX        | float       | signed     |     | NO   | 0       |        |                                    |
-| posY        | float       | signed     |     | NO   | 0       |        |                                    |
-| posZ        | float       | signed     |     | NO   | 0       |        |                                    |
-| orientation | float       | signed     |     | NO   | 0       |        |                                    |
+| posX        | FLOAT       | signed     |     | NO   | 0       |        |                                    |
+| posY        | FLOAT       | signed     |     | NO   | 0       |        |                                    |
+| posZ        | FLOAT       | signed     |     | NO   | 0       |        |                                    |
+| orientation | FLOAT       | signed     |     | NO   | 0       |        |                                    |
 | mapId       | smallint(5) | unsigned   |     | NO   | 0       |        | Map Identifier                     |
 | phaseMask   | smallint(5) | unsigned   |     | NO   | 0       |        |                                    |
 | displayId   | int(10)     | unsigned   |     | NO   | 0       |        |                                    |

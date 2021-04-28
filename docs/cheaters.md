@@ -6,8 +6,8 @@ Entry | bigint(20) |
 Player | varchar(30) | 
 Acctid | int(11) | 
 Reason | varchar(255) | 
-Speed | float | 
-Val1 | float | 
+Speed | FLOAT | 
+Val1 | FLOAT | 
 Val2 | int(10) unsigned | 
 Count | int(11) | 
 Map | smallint(5) | 

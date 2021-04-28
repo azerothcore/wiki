@@ -16,8 +16,8 @@
 [SpellFamilyMask2][6] | int(10) | unsigned | | | 0
 [procFlags][7] | int(10) | unsigned | | | 0
 [procEx][8] | int(10) | unsigned | | | 0
-[ppmRate][9] | float | signed | | | 0
-[CustomChance][10] | float | signed | | | 0
+[ppmRate][9] | FLOAT | signed | | | 0
+[CustomChance][10] | FLOAT | signed | | | 0
 [Cooldown][11] | int(10) | unsigned | | | 0
 
 [1]: #entry

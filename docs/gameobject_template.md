@@ -13,7 +13,7 @@ Contains template of all gameobjects
 | IconName       | varchar(100) | signed     |     | NO   | "       |       |         |
 | castBarCaption | varchar(100) | signed     |     | NO   | "       |       |         |
 | unk1           | varchar(100) | signed     |     | NO   | "       |       |         |
-| size           | float        | signed     |     | NO   | 1       |       |         |
+| size           | FLOAT        | signed     |     | NO   | 1       |       |         |
 | data0          | int(10)      | unsigned   |     | NO   | 0       |       |         |
 | data1          | int(11)      | unsigned   |     | NO   | -1      |       |         |
 | data2          | int(10)      | unsigned   |     | NO   | 0       |       |         |
@@ -192,7 +192,7 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 - data13: log loot (Boolean flag)
 - data14: openTextID (Unknown ID)
 - data15: use group loot rules (Boolean flag)
-- data16: floating tooltip
+- data16: FLOATing tooltip
 - data17: conditionid1
 - data18: xplevel
 - data19: xpDifficulty
@@ -207,11 +207,11 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_GENERIC = 5**
 
-- data0: floatingTooltip (Boolean flag)
+- data0: FLOATingTooltip (Boolean flag)
 - data1: highlight (Boolean flag)
 - data2: serverOnly? (Always 0)
 - data3: large? (Boolean flag)
-- data4: floatOnWater (Boolean flag)
+- data4: FLOATOnWater (Boolean flag)
 - data5: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 - data6: conditionID1
 - data7: LargeAOI
@@ -255,8 +255,8 @@ Object type not used
 - data3: serverOnly? (Always 0)
 - data4: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 - data5: large? (Boolean flag)
-- data6: floatingTooltip (Boolean flag)
-- data7: floatOnWater
+- data6: FLOATingTooltip (Boolean flag)
+- data7: FLOATOnWater
 - data8: conditionID1
 
 **GAMEOBJECT\_TYPE\_TEXT = 9**
@@ -289,7 +289,7 @@ Object type not used
 -   data16: losOK (Boolean flag) (somewhat related to battlegrounds)
 -   data19: gossipID - casts the spell when used
 -   data20: AllowMultiInteract
--   data21: floatOnWater
+-   data21: FLOATOnWater
 -   data22: conditionID1
 -   data23: playerCast
 

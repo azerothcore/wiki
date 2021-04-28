@@ -2296,7 +2296,7 @@ This dbc contains the zone and subzone lists. For the purposes of this wiki arti
 | 4629     | Winter's Heart                                       | 571   | 67     |
 | 4630     | The North Sea                                        | 571   | 0      |
 | 4631     | The Broodmother's Nest                               | 571   | 67     |
-| 4632     | Dalaran Floating Rocks                               | 571   | 4395   |
+| 4632     | Dalaran FLOATing Rocks                               | 571   | 4395   |
 | 4633     | Raptor Pens                                          | 600   | 4196   |
 | 4635     | Drak'Tharon Keep                                     | 571   | 66     |
 | 4636     | The Noxious Pass                                     | 609   | 4298   |

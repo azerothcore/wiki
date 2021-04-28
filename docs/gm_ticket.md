@@ -19,9 +19,9 @@ Note: do not insert directly into most of these columns, else the client won't u
 | [description][5]       | text        |            |     | NO   |         |                |                                            |
 | [createtime][6]        | int(10)     | unsigned   |     | NO   |         |                |                                            |
 | [mapId][7]             | smallint(5) | unsigned   |     | NO   |         |                |                                            |
-| [posX][8]              | float       | signed     |     | NO   |         |                |                                            |
-| [posY][9]              | float       | signed     |     | NO   |         |                |                                            |
-| [posZ][10]             | float       | signed     |     | NO   |         |                |                                            |
+| [posX][8]              | FLOAT       | signed     |     | NO   |         |                |                                            |
+| [posY][9]              | FLOAT       | signed     |     | NO   |         |                |                                            |
+| [posZ][10]             | FLOAT       | signed     |     | NO   |         |                |                                            |
 | [lastModifiedTime][11] | int(10)     | signed     |     | NO   |         |                |                                            |
 | [closedBy][12]         | int(10)     | signed     |     | NO   |         |                |                                            |
 | [assignedTo][13]       | int(10)     | unsigned   |     | NO   |         |                | GUID of admin to whom ticket is assigned   |

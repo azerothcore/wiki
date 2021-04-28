@@ -14,10 +14,10 @@ This table holds data about temporary summoned creatures. It is possible to grou
 | [summonerType][2] | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
 | [groupId][3]      | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
 | [entry][4]        | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [position_x][5]   | float        |            |     | NO   | 0       |       |         |
-| [position_y][6]   | float        |            |     | NO   | 0       |       |         |
-| [position_z][7]   | float        |            |     | NO   | 0       |       |         |
-| [orientation][8]  | float        |            |     | NO   | 0       |       |         |
+| [position_x][5]   | FLOAT        |            |     | NO   | 0       |       |         |
+| [position_y][6]   | FLOAT        |            |     | NO   | 0       |       |         |
+| [position_z][7]   | FLOAT        |            |     | NO   | 0       |       |         |
+| [orientation][8]  | FLOAT        |            |     | NO   | 0       |       |         |
 | [summonType][9]   | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
 | [summonTime][10]  | int(10)      | unsigned   |     | NO   | 0       |       |         |
 

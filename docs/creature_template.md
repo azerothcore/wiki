@@ -23,15 +23,15 @@ This table contains the description of creatures. Each spawned creature is an in
 | [exp](#exp)                                     | smallint(6)           | NO   |     | 0       |       |                                      |
 | [faction](#faction)                             | smallint(5) unsigned  | NO   |     | 0       |       |                                      |
 | [npcflag](#npcflag)                             | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [speed_walk](#speed_walk)                      | float                 | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
-| [speed_run](#speed_run)                        | float                 | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
-| [scale](#scale)                                 | float                 | NO   |     | 1       |       |                                      |
+| [speed_walk](#speed_walk)                      | FLOAT                 | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
+| [speed_run](#speed_run)                        | FLOAT                 | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
+| [scale](#scale)                                 | FLOAT                 | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                         | tinyint(4)            | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)               | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [RangeAttackTime](#rangeattacktime)             | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [BaseVariance](#basevariance)                   | float                 | NO   |     | 1       |       |                                      |
-| [RangeVariance](#rangevariance)                 | float                 | NO   |     | 1       |       |                                      |
+| [BaseVariance](#basevariance)                   | FLOAT                 | NO   |     | 1       |       |                                      |
+| [RangeVariance](#rangevariance)                 | FLOAT                 | NO   |     | 1       |       |                                      |
 | [unit_class](#unit_class)                      | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [unit_flags](#unit_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [unit_flags2](#unit_flags2)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
@@ -53,12 +53,12 @@ This table contains the description of creatures. Each spawned creature is an in
 | [AIName](#ainame)                               | char(64)              | NO   |     |         |       |                                      |
 | [MovementType](#movementtype)                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [InhabitType](#inhabittype)                     | tinyint(3) unsigned   | NO   |     | 3       |       |                                      |
-| [HoverHeight](#hoverheight)                     | float                 | NO   |     | 1       |       |                                      |
-| [HealthModifier](#healthmodifier)               | float                 | NO   |     | 1       |       |                                      |
-| [ManaModifier](#manamodifier)                   | float                 | NO   |     | 1       |       |                                      |
-| [ArmorModifier](#armormodifier)                 | float                 | NO   |     | 1       |       |                                      |
-| [DamageModifier](#damagemodifier)               | float                 | NO   |     | 1       |       |                                      |
-| [ExperienceModifier](#experiencemodifier)       | float                 | NO   |     | 1       |       |                                      |
+| [HoverHeight](#hoverheight)                     | FLOAT                 | NO   |     | 1       |       |                                      |
+| [HealthModifier](#healthmodifier)               | FLOAT                 | NO   |     | 1       |       |                                      |
+| [ManaModifier](#manamodifier)                   | FLOAT                 | NO   |     | 1       |       |                                      |
+| [ArmorModifier](#armormodifier)                 | FLOAT                 | NO   |     | 1       |       |                                      |
+| [DamageModifier](#damagemodifier)               | FLOAT                 | NO   |     | 1       |       |                                      |
+| [ExperienceModifier](#experiencemodifier)       | FLOAT                 | NO   |     | 1       |       |                                      |
 | [RacialLeader](#racialleader)                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
 | [movementId](#movementid)                       | int(11) unsigned      | NO   |     | 0       |       |                                      |
 | [RegenHealth](#regenhealth)                     | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |

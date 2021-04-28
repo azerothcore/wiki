@@ -15,14 +15,14 @@ This table holds the individual object data on each spawned game object in the w
 | [map][3]            | smallint(5)  | unsigned   |     | NO   | 0       |                | Map Identifier           |
 | [spawnMask][4]      | tinyint(3)   | unsigned   |     | NO   | 1       |                |                          |
 | [phaseMask][5]      | smallint(5)  | unsigned   |     | NO   | 1       |                |                          |
-| [position_x][6]     | float        | signed     |     | NO   | 0       |                |                          |
-| [position_y][7]     | float        | signed     |     | NO   | 0       |                |                          |
-| [position_z][8]     | float        | signed     |     | NO   | 0       |                |                          |
-| [orientation][9]    | float        | signed     |     | NO   | 0       |                |                          |
-| [rotation0][10]     | float        | signed     |     | NO   | 0       |                |                          |
-| [rotation1][11]     | float        | signed     |     | NO   | 0       |                |                          |
-| [rotation2][12]     | float        | signed     |     | NO   | 0       |                |                          |
-| [rotation3][13]     | float        | signed     |     | NO   | 0       |                |                          |
+| [position_x][6]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [position_y][7]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [position_z][8]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [orientation][9]    | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [rotation0][10]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [rotation1][11]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [rotation2][12]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
+| [rotation3][13]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
 | [spawntimesecs][14] | int(11)      | signed     |     | NO   | 0       |                |                          |
 | [animprogress][15]  | tinyint(3)   | unsigned   |     | NO   | 0       |                |                          |
 | [state][16]         | tinyint(3)   | unsigned   |     | NO   | 1       |                |                          |

@@ -12,7 +12,7 @@ This table holds information about when using certain profession spells, you hav
 |-----------------------------|--------------|------------|-----|------|---------|-------|------------------------------------|
 | [spellId][1]                | mediumint(8) | unsigned   | PRI | NO   | 0       |       | SpellId of the item creation spell |
 | [requiredSpecialization][2] | mediumint(8) | unsigned   |     | NO   | 0       |       | Specialization spell id            |
-| [additionalCreateChance][3] | float        | signed     |     | NO   | 0       |       | chance to create add               |
+| [additionalCreateChance][3] | FLOAT        | signed     |     | NO   | 0       |       | chance to create add               |
 | [additionalMaxNum][4]       | tinyint(3)   | unsigned   |     | NO   | 0       |       | max num of adds                    |
 
 [1]: #spellid

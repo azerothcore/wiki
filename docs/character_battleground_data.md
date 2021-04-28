@@ -13,10 +13,10 @@ This table holds information for each character in a battleground. Also hold inf
 | [guid][1]        | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [instanceId][2]  | int(10)      | unsigned   |     | NO   | 0       |       | Instance Identifier      |
 | [team][3]        | smallint(5)  | unsigned   |     | NO   |         |       |                          |
-| [joinX][4]       | float        | signed     |     | NO   | 0       |       |                          |
-| [joinY][5]       | float        | signed     |     | NO   | 0       |       |                          |
-| [joinZ][6]       | float        | signed     |     | NO   | 0       |       |                          |
-| [joinO][7]       | float        | signed     |     | NO   | 0       |       |                          |
+| [joinX][4]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
+| [joinY][5]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
+| [joinZ][6]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
+| [joinO][7]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
 | [joinMapId][8]   | smallint(5)  | unsigned   |     | NO   | 0       |       | Map Identifier           |
 | [taxiStart][9]   | int(10)      | unsigned   |     | NO   | 0       |       |                          |
 | [taxiEnd][10]    | int(10)      | unsigned   |     | NO   | 0       |       |                          |

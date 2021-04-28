@@ -33,10 +33,10 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 | [target_param2][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [target_param3][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [target_param4][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_x][10]        | float       | signed     |     | NO   | 0       |       |               |
-| [target_y][10]        | float       | signed     |     | NO   | 0       |       |               |
-| [target_z][10]        | float       | signed     |     | NO   | 0       |       |               |
-| [target_o][10]        | float       | signed     |     | NO   | 0       |       |               |
+| [target_x][10]        | FLOAT       | signed     |     | NO   | 0       |       |               |
+| [target_y][10]        | FLOAT       | signed     |     | NO   | 0       |       |               |
+| [target_z][10]        | FLOAT       | signed     |     | NO   | 0       |       |               |
+| [target_o][10]        | FLOAT       | signed     |     | NO   | 0       |       |               |
 | [comment][11]         | text        |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid

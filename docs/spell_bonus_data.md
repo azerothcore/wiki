@@ -11,10 +11,10 @@ Table used for storing custom damage/healing bonus coefficients.
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|--------------|------------|-----|------|---------|-------|---------|
 | [entry][1]        | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [direct_bonus][2] | float        | signed     |     | NO   | 0       |       |         |
-| [dot_bonus][3]    | float        | signed     |     | NO   | 0       |       |         |
-| [ap_bonus][4]     | float        | signed     |     | NO   | 0       |       |         |
-| [ap_dot_bonus][5] | float        | signed     |     | NO   | 0       |       |         |
+| [direct_bonus][2] | FLOAT        | signed     |     | NO   | 0       |       |         |
+| [dot_bonus][3]    | FLOAT        | signed     |     | NO   | 0       |       |         |
+| [ap_bonus][4]     | FLOAT        | signed     |     | NO   | 0       |       |         |
+| [ap_dot_bonus][5] | FLOAT        | signed     |     | NO   | 0       |       |         |
 | [comments][6]     | varchar(255) | signed     |     | YES  | NULL    |       |         |
 
 [1]: #entry

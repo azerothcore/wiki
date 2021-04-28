@@ -13,8 +13,8 @@ This table holds information on every applied item hotfix and can overwrite exis
 | [ID](#item_sparse-ID)                                                     | int(10)     | unsigned   | PRI | NO   | 0       |       |                          |
 | [Quality](#item_sparse-Quality)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [Flags](#item_sparse-Flags)                                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Unk1](#item_sparse-Unk1)                                                 | float       | signed     |     | NO   | 0       |       |                          |
-| [Unk2](#item_sparse-Unk2)                                                 | float       | signed     |     | NO   | 0       |       |                          |
+| [Unk1](#item_sparse-Unk1)                                                 | FLOAT       | signed     |     | NO   | 0       |       |                          |
+| [Unk2](#item_sparse-Unk2)                                                 | FLOAT       | signed     |     | NO   | 0       |       |                          |
 | [BuyCount](#item_sparse-BuyCount)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [BuyPrice](#item_sparse-BuyPrice)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [SellPrice](#item_sparse-SellPrice)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
@@ -36,11 +36,11 @@ This table holds information on every applied item hotfix and can overwrite exis
 | [ItemStatType](#item_sparse-ItemStatType)                                 | int(11)     | signed     |     | NO   | 0       |       |                          |
 | [ItemStatValue](#item_sparse-ItemStatValue)                               | int(11)     | signed     |     | NO   | 0       |       |                          |
 | [ItemStatAllocation](#item_sparse-ItemStatAllocation)                     | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [ItemStatSocketCostMultiplier](#item_sparse-ItemStatSocketCostMultiplier) | float       | signed     |     | NO   | 0       |       |                          |
+| [ItemStatSocketCostMultiplier](#item_sparse-ItemStatSocketCostMultiplier) | FLOAT       | signed     |     | NO   | 0       |       |                          |
 | [ScalingStatDistribution](#item_sparse-ScalingStatDistribution)           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [DamageType](#item_sparse-DamageType)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [Delay](#item_sparse-Delay)                                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RangedModRange](#item_sparse-RangedModRange)                             | float       | signed     |     | NO   | 0       |       |                          |
+| [RangedModRange](#item_sparse-RangedModRange)                             | FLOAT       | signed     |     | NO   | 0       |       |                          |
 | [Bonding](#item_sparse-Bonding)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [Name](#item_sparse-Name)                                                 | TEXT        |            |     | YES  |         |       |                          |
 | [Description](#item_sparse-Description)                                   | TEXT        |            |     | YES  |         |       |                          |
@@ -61,11 +61,11 @@ This table holds information on every applied item hotfix and can overwrite exis
 | [SocketColor](item_sparse)                                                | int(10)     | unsigned   |     | NO   | 0       |       | SocketColor1 can be NULL |
 | [SocketBonus](#item_sparse-SocketBonus)                                   | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [GemProperties](#item_sparse-GemProperties)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ArmorDamageModifier](#item_sparse-ArmorDamageModifier)                   | float       | signed     |     | NO   | 0       |       |                          |
+| [ArmorDamageModifier](#item_sparse-ArmorDamageModifier)                   | FLOAT       | signed     |     | NO   | 0       |       |                          |
 | [Duration](#item_sparse-Duration)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [ItemLimitCategory](#item_sparse-ItemLimitCategory)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [HolidayID](#item_sparse-HolidayID)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [StatScalingFactor](#item_sparse-StatScalingFactor)                       | float       | signed     |     | NO   | 0       |       |                          |
+| [StatScalingFactor](#item_sparse-StatScalingFactor)                       | FLOAT       | signed     |     | NO   | 0       |       |                          |
 | [CurrencySubstitutionID](#item_sparse-CurrencySubstitutionID)             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [CurrencySubstitutionCount](#item_sparse-CurrencySubstitutionCount)       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [ItemNameDescriptionID](#item_sparse-ItemNameDescriptionID)               | int(10)     | unsigned   |     | NO   | 0       |       |                          |

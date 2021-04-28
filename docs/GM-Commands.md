@@ -97,7 +97,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug entervehicle|3||Enter targeted vehicle.|
 |debug getitemstate|3|`.debug getitemstate [unchanged\changed\new\removed\queue\check_all]`|Get specified item state of the items of the selected player.|
 |debug getitemvalue|3|`.debug getitemvalue $guid $index`|Get value from item with $guid at $index.|
-|debug getvalue|3|`.debug $field [1\0]`|1: get uint32 value of $field of the selected unit; 0: get float value of $field of the selected unit|
+|debug getvalue|3|`.debug $field [1\0]`|1: get uint32 value of $field of the selected unit; 0: get FLOAT value of $field of the selected unit|
 |debug hostil|1||Get hostile reference list of the selected unit.|
 |debug itemexpire|3|`.debug itemexpire $guid`|Delete the item with $guid.|
 |debug los|3|`.debug los`|Show information about the line of sight status.|
@@ -120,7 +120,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug setaurastate|3|`.debug setaurastate #aurastatetype`|Modify aura state of the selected unit (#aurastatetype > 0) or reset the state (#aurastatetype = 0).|
 |debug setbit|3|`.debug setbit #fieldnumber #bitnumber`|Set bit #bitnumber of field #fieldnumber for the selected unit.|
 |debug setitemvalue|3|`.debug getitemvalue $guid $index $value`|Set $value for item with $guid at $index.|
-|debug setvalue|3|`.debug $field $value [1\0]`|1: set uint32 $value for $field of the selected unit; 0: set float $value for $field of the selected unit|
+|debug setvalue|3|`.debug $field $value [1\0]`|1: set uint32 $value for $field of the selected unit; 0: set FLOAT $value for $field of the selected unit|
 |debug spawnvehicle|3|`.debug spawnvehicle #entry [#vehicleid]`|Spawn vehicle with creature template #entry and optional #vehicleid.|
 |debug unitstate|3|`.debug unitstate [#unitstate]`|Set #unitstate for the selected unit. If no parameter is specified show the unit state and the react state of the unit.|
 |debug uws|3|`.debug uws #worldstate #value`|Send update world state for #worldstate and #value to the current player.|

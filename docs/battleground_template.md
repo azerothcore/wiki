@@ -16,10 +16,10 @@ Contains information about the different battlegrounds, like how many players ar
 | [MinLvl][4]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
 | [MaxLvl][5]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
 | [AllianceStartLoc][6]  | mediumint(8) | unsigned  |     | NO   |         |       |         |
-| [AllianceStartO][7]    | float        | signed    |     | NO   |         |       |         |
+| [AllianceStartO][7]    | FLOAT        | signed    |     | NO   |         |       |         |
 | [HordeStartLoc][8]     | mediumint(8) | unsigned  |     | NO   |         |       |         |
-| [HordeStartO][9]       | float        | signed    |     | NO   |         |       |         |
-| [StartMaxDist][10]     | float        | signed    |     | NO   | 0       |       |         |
+| [HordeStartO][9]       | FLOAT        | signed    |     | NO   |         |       |         |
+| [StartMaxDist][10]     | FLOAT        | signed    |     | NO   | 0       |       |         |
 | [Weight][11]           | tinyint(3)   | unsigned  |     | NO   | 1       |       |         |
 | [ScriptName][12]       | char(64)     |           |     | NO   |         |       |         |
 | [Comment][13]          | char(38)     |           |     | NO   |         |       |         |

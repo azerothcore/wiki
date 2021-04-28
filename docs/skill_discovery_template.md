@@ -13,7 +13,7 @@ This table controls the so called "discovery" system of learning spells. This sy
 | [spellId][1]       | mediumint(8) | unsigned   | PRI | NO   | 0       |       | SpellId of the discoverable spell |
 | [reqSpell][2]      | mediumint(8) | unsigned   | PRI | NO   | 0       |       | spell requirement                 |
 | [reqSkillValue][3] | smallint(5)  | unsigned   |     | NO   | 0       |       | skill points requirement          |
-| [chance][4]        | float        | signed     |     | NO   | 0       |       | chance to discover                |
+| [chance][4]        | FLOAT        | signed     |     | NO   | 0       |       | chance to discover                |
 
 [1]: #spellid
 [2]: #reqspell

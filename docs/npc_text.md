@@ -12,7 +12,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text0_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text0_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang0         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability0  | float        | signed     |     | NO   | 0       |       |         |
+| Probability0  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em0_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em0_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em0_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -22,7 +22,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text1_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text1_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang1         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability1  | float        | signed     |     | NO   | 0       |       |         |
+| Probability1  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em1_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em1_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em1_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -32,7 +32,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text2_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text2_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang2         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability2  | float        | signed     |     | NO   | 0       |       |         |
+| Probability2  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em2_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em2_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em2_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -42,7 +42,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text3_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text3_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang3         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability3  | float        | signed     |     | NO   | 0       |       |         |
+| Probability3  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em3_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em3_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em3_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -52,7 +52,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text4_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text4_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang4         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability4  | float        | signed     |     | NO   | 0       |       |         |
+| Probability4  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em4_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em4_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em4_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -62,7 +62,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text5_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text5_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang5         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability5  | float        | signed     |     | NO   | 0       |       |         |
+| Probability5  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em5_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em5_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em5_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -72,7 +72,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text6_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text6_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang5         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability6  | float        | signed     |     | NO   | 0       |       |         |
+| Probability6  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em6_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em6_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em6_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
@@ -82,7 +82,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | text7_0       | longtext     | signed     |     | YES  | NULL    |       |         |
 | text7_1       | longtext     | signed     |     | YES  | NULL    |       |         |
 | lang7         | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| Probability7  | float        | signed     |     | NO   | 0       |       |         |
+| Probability7  | FLOAT        | signed     |     | NO   | 0       |       |         |
 | em7_0         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em7_1         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
 | em7_2         | smallint(5)  | unsigned   |     | NO   | 0       |       |         |

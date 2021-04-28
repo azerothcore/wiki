@@ -12,10 +12,10 @@
 |------------------|--------------|------------|-----|------|---------|-------|------------------------|
 | [dungeonId][1]   | int(10)      | unsigned   | PRI | NO   | 0       |       | Dungeon entry from dbc |
 | [name][2]        | varchar(255) |            |     | YES  | NULL    |       | Dungeon name from dbc  |
-| [position_x][3]  | float        |            |     | NO   | 0       |       |                        |
-| [position_y][4]  | float        |            |     | NO   | 0       |       |                        |
-| [position_z][5]  | float        |            |     | NO   | 0       |       |                        |
-| [orientation][6] | float        |            |     | NO   | 0       |       |                        |
+| [position_x][3]  | FLOAT        |            |     | NO   | 0       |       |                        |
+| [position_y][4]  | FLOAT        |            |     | NO   | 0       |       |                        |
+| [position_z][5]  | FLOAT        |            |     | NO   | 0       |       |                        |
+| [orientation][6] | FLOAT        |            |     | NO   | 0       |       |                        |
 
 [1]: #dungeonid
 [2]: #name

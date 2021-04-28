@@ -20,7 +20,7 @@ This table sets up information on all available realms. Each row controls a diff
 | [flag][8]                  | tinyint(3)   | unsigned   |     | NO   | 2             |                |         |
 | [timezone][9]              | tinyint(3)   | unsigned   |     | NO   | 0             |                |         |
 | [allowedSecurityLevel][10] | tinyint(3)   | unsigned   |     | NO   | 0             |                |         |
-| [population][11]           | float        | unsigned   |     | NO   | 0             |                |         |
+| [population][11]           | FLOAT        | unsigned   |     | NO   | 0             |                |         |
 | [gamebuild][12]            | int(10)      | unsigned   |     | NO   | 12340         |                |         |
 
 [1]: #id

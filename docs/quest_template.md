@@ -20,10 +20,10 @@ Contains all basic definitions of available quests.
 | SuggestedGroupNum                  | tinyint(3) unsigned  | NO   |     | 0       |       |         |
 | RewardNextQuest                    | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardXPDifficulty                 | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardXPMultiplier                 | float                | NO   |     | 1       |       |         |
+| RewardXPMultiplier                 | FLOAT                | NO   |     | 1       |       |         |
 | RewardMoney                        | int(11)              | NO   |     | 0       |       |         |
 | RewardMoneyDifficulty              | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardMoneyMultiplier              | float                | NO   |     | 1       |       |         |
+| RewardMoneyMultiplier              | FLOAT                | NO   |     | 1       |       |         |
 | RewardBonusMoney                   | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardDisplaySpell(X=1...3)        | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardSpell                        | int(10) unsigned     | NO   |     | 0       |       |         |
@@ -31,7 +31,7 @@ Contains all basic definitions of available quests.
 | RewardKillHonor                    | int(10) unsigned     | NO   |     | 0       |       |         |
 | StartItem                          | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardArtifactXPDifficulty         | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardArtifactXPMultiplier         | float                | NO   |     | 1       |       |         |
+| RewardArtifactXPMultiplier         | FLOAT                | NO   |     | 1       |       |         |
 | RewardArtifactCategoryID           | int(10) unsigned     | NO   |     | 0       |       |         |
 | Flags                              | int(10) unsigned     | NO   |     | 0       |       |         |
 | FlagsEx                            | int(10) unsigned     | NO   |     | 0       |       |         |
@@ -43,8 +43,8 @@ Contains all basic definitions of available quests.
 | RewardChoiceItemQuantity(X=1...6)  | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardChoiceItemDisplayID(X=1...6) | int(10) unsigned     | NO   |     | 0       |       |         |
 | POIContinent                       | int(10) unsigned     | NO   |     | 0       |       |         |
-| POIx                               | float                | NO   |     | 0       |       |         |
-| POIy                               | float                | NO   |     | 0       |       |         |
+| POIx                               | FLOAT                | NO   |     | 0       |       |         |
+| POIy                               | FLOAT                | NO   |     | 0       |       |         |
 | POIPriority                        | int(11)              | NO   |     | 0       |       |         |
 | RewardTitle                        | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardArenaPoints                  | int(10) unsigned     | NO   |     | 0       |       |         |

@@ -64,7 +64,7 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 | [Text][4]             | longtext     | utf8_general_ci |     | YES  | NULL    |       |                         |
 | [Type][5]             | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
 | [Language][6]         | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
-| [Probability][7]      | float        | signed          |     | NO   |         |       |                         |
+| [Probability][7]      | FLOAT        | signed          |     | NO   |         |       |                         |
 | [Emote][8]            | mediumint(8) | unsigned        |     | NO   |         |       |                         |
 | [Duration][9]         | mediumint(8) | unsigned        |     | NO   |         |       |                         |
 | [Sound][10]           | mediumint(8) | unsigned        |     | NO   |         |       |                         |

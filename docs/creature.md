@@ -15,12 +15,12 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [phaseMask][5]        | smallint(5)  | unsigned   |     | NO   | 1       |                |                                                                                       |
 | [modelid][6]          | mediumint(8) | unsigned   |     | NO   | 0       |                | 0 core determined random model or model_id to prevent random model selection by core. |
 | [equipment_id][7]     | tinyint(3)   | unsigned   |     | NO   | 1       |                |                                                                                       |
-| [position_x][8]       | float        | signed     |     | NO   | 0       |                |                                                                                       |
-| [position_y][9]       | float        | signed     |     | NO   | 0       |                |                                                                                       |
-| [position_z][10]      | float        | signed     |     | NO   | 0       |                |                                                                                       |
-| [orientation][11]     | float        | signed     |     | NO   | 0       |                |                                                                                       |
+| [position_x][8]       | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
+| [position_y][9]       | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
+| [position_z][10]      | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
+| [orientation][11]     | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
 | [spawntimesecs][12]   | int(10)      | unsigned   |     | NO   | 120     |                |                                                                                       |
-| [wander_distance][13] | float        | signed     |     | NO   | 5       |                | Dist in yards for random movement.                                                    |
+| [wander_distance][13] | FLOAT        | signed     |     | NO   | 5       |                | Dist in yards for random movement.                                                    |
 | [currentwaypoint][14] | mediumint(8) | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
 | [curhealth][15]       | int(10)      | unsigned   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
 | [curmana][16]         | int(10)      | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |

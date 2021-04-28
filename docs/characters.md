@@ -28,13 +28,13 @@ This table holds vital static information for each character. It is used to crea
 | [bankSlots][15]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [restState][16]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [playerflags][17]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [position_x][18]           | float        | signed     |     | NO   | 0                 |        |                          |
-| [position_y][19]           | float        | signed     |     | NO   | 0                 |        |                          |
-| [position_z][20]           | float        | signed     |     | NO   | 0                 |        |                          |
+| [position_x][18]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
+| [position_y][19]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
+| [position_z][20]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [map][21]                  | smallint(5)  | signed     |     | NO   | 0                 |        | Map Identifier           |
 | [instance_id][22]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [instance_mode_mask][23]   | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [orientation][24]          | float        | signed     |     | NO   | 0                 |        |                          |
+| [orientation][24]          | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [taximask][25]             | text         | signed     |     | NO   | 0                 |        |                          |
 | [online][26]               | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [cinematic][27]            | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
@@ -42,13 +42,13 @@ This table holds vital static information for each character. It is used to crea
 | [leveltime][29]            | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [logout_time][30]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [is_logout_resting][31]    | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [rest_bonus][32]           | float        | signed     |     | NO   | 0                 |        |                          |
+| [rest_bonus][32]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [resettalents_cost][33]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [resettalents_time][34]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [trans_x][35]              | float        | signed     |     | NO   | 0                 |        |                          |
-| [trans_y][36]              | float        | signed     |     | NO   | 0                 |        |                          |
-| [trans_z][37]              | float        | signed     |     | NO   | 0                 |        |                          |
-| [trans_o][38]              | float        | signed     |     | NO   | 0                 |        |                          |
+| [trans_x][35]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
+| [trans_y][36]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
+| [trans_z][37]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
+| [trans_o][38]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [transguid][39]            | mediumint(8) | unsigned   |     | NO   | 0                 |        |                          |
 | [extra_flags][40]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [extra_flags][41]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |

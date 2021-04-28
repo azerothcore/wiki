@@ -60,7 +60,7 @@ These values are used by the core and a few spell\_\* tables.
 | 44  | manaPerSecond                 | uint   |
 | 45  | manaPerSecondPerLevel         | uint   |
 | 46  | rangeIndex                    | uint   |
-| 47  | speed                         | float  |
+| 47  | speed                         | FLOAT  |
 | 48  | modalNextSpell                | uint   |
 | 49  | StackAmount                   | uint   |
 | 50  | Totem1                        | uint   |
@@ -90,9 +90,9 @@ These values are used by the core and a few spell\_\* tables.
 | 74  | EffectDieSides1               | int    |
 | 75  | EffectDieSides2               | int    |
 | 76  | EffectDieSides3               | int    |
-| 77  | EffectRealPointsPerLevel1     | float  |
-| 78  | EffectRealPointsPerLevel2     | float  |
-| 79  | EffectRealPointsPerLevel3     | float  |
+| 77  | EffectRealPointsPerLevel1     | FLOAT  |
+| 78  | EffectRealPointsPerLevel2     | FLOAT  |
+| 79  | EffectRealPointsPerLevel3     | FLOAT  |
 | 80  | EffectBasePoints1             | int    |
 | 81  | EffectBasePoints2             | int    |
 | 82  | EffectBasePoints3             | int    |
@@ -114,9 +114,9 @@ These values are used by the core and a few spell\_\* tables.
 | 98  | EffectAmplitude1              | uint   |
 | 99  | EffectAmplitude2              | uint   |
 | 100 | EffectAmplitude3              | uint   |
-| 101 | EffectValueMultiplier1        | float  |
-| 102 | EffectValueMultiplier2        | float  |
-| 103 | EffectValueMultiplier3        | float  |
+| 101 | EffectValueMultiplier1        | FLOAT  |
+| 102 | EffectValueMultiplier2        | FLOAT  |
+| 103 | EffectValueMultiplier3        | FLOAT  |
 | 104 | EffectChainTarget1            | uint   |
 | 105 | EffectChainTarget2            | uint   |
 | 106 | EffectChainTarget3            | uint   |
@@ -132,9 +132,9 @@ These values are used by the core and a few spell\_\* tables.
 | 116 | EffectTriggerSpell1           | uint   |
 | 117 | EffectTriggerSpell2           | uint   |
 | 118 | EffectTriggerSpell3           | uint   |
-| 119 | EffectPointsPerComboPoint1    | float  |
-| 120 | EffectPointsPerComboPoint2    | float  |
-| 121 | EffectPointsPerComboPoint3    | float  |
+| 119 | EffectPointsPerComboPoint1    | FLOAT  |
+| 120 | EffectPointsPerComboPoint2    | FLOAT  |
+| 121 | EffectPointsPerComboPoint3    | FLOAT  |
 | 122 | EffectSpellClassMask1         | flag96 |
 | 123 | EffectSpellClassMask2         | flag96 |
 | 124 | EffectSpellClassMask3         | flag96 |
@@ -229,9 +229,9 @@ These values are used by the core and a few spell\_\* tables.
 | 213 | DmgClass                      | uint   |
 | 214 | PreventionType                | uint   |
 | 215 | StanceBarOrder                | uint   |
-| 216 | EffectDamageMultiplier1       | float  |
-| 217 | EffectDamageMultiplier2       | float  |
-| 218 | EffectDamageMultiplier3       | float  |
+| 216 | EffectDamageMultiplier1       | FLOAT  |
+| 217 | EffectDamageMultiplier2       | FLOAT  |
+| 218 | EffectDamageMultiplier3       | FLOAT  |
 | 219 | MinFactionId                  | uint   |
 | 220 | MinReputation                 | uint   |
 | 221 | RequiredAuraVision            | uint   |
@@ -242,9 +242,9 @@ These values are used by the core and a few spell\_\* tables.
 | 226 | runeCostID                    | uint   |
 | 227 | spellMissileID                | uint   |
 | 228 | PowerDisplayId                | uint   |
-| 229 | EffectBonusMultiplier1        | float  |
-| 230 | EffectBonusMultiplier2        | float  |
-| 231 | EffectBonusMultiplier3        | float  |
+| 229 | EffectBonusMultiplier1        | FLOAT  |
+| 230 | EffectBonusMultiplier2        | FLOAT  |
+| 231 | EffectBonusMultiplier3        | FLOAT  |
 | 232 | spellDescriptionVariableID    | uint   |
 | 233 | SpellDifficultyId             | uint   |
 

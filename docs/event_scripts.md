@@ -16,8 +16,8 @@ Holds scripts activated whenever an event is activated, be it by an object or as
 | [datalong](scripts#otherfields)  | mediumint(8) | unsigned     |     | NO   | 0       |
 | [datalong2](scripts#otherfields) | int(10)      | unsigned     |     | NO   | 0       |
 | [dataint](scripts#otherfields)   | int(11)      |              |     | NO   | 0       |
-| [x](scripts#otherfields)         | float        |              |     | NO   | 0       |
-| [y](scripts#otherfields)         | float        |              |     | NO   | 0       |
-| [z](scripts#otherfields)         | float        |              |     | NO   | 0       |
-| [o](scripts#otherfields)         | float        |              |     | NO   | 0       |
+| [x](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
+| [y](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
+| [z](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
+| [o](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
 

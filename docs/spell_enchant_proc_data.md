@@ -12,8 +12,8 @@
 |-------------------|---------|------------|-----|------|---------|-------|---------|
 | [entry][1]        | int(10) | unsigned   |     | NO   | NULL    |       |         |
 | [customChance][2] | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [PPMChance][3]    | float   | unsigned   |     | NO   | 0       |       |         |
-| [proxEx][4]       | float   | unsigned   |     | NO   | 0       |       |         |
+| [PPMChance][3]    | FLOAT   | unsigned   |     | NO   | 0       |       |         |
+| [proxEx][4]       | FLOAT   | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #customchance

@@ -13,8 +13,8 @@
 | [iso_code_3][3]  | varchar(3)   |            |     | YES  |         |       |         |
 | [iso_country][4] | varchar(255) |            |     | NO   |         |       |         |
 | [country][5]     | varchar(255) |            |     | NO   |         |       |         |
-| [lat][6]         | float        |            |     | NO   | 0       |       |         |
-| [lon][7]         | float        |            |     | NO   | 0       |       |         |
+| [lat][6]         | FLOAT        |            |     | NO   | 0       |       |         |
+| [lon][7]         | FLOAT        |            |     | NO   | 0       |       |         |
 
 [1]: #code
 [2]: #iso_code_2

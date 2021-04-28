@@ -4,9 +4,7 @@
 
 **The `account` table**
 
-This table holds information on all available accounts.
-
-## Structure
+**Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|

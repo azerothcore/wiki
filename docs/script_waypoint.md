@@ -14,9 +14,9 @@ Used for CreatureAI waypoint movement. See also [Waypoints-Information](Waypoint
 |----------------------------------|--------------|------------|-----|------|---------|
 | [entry](creature_template#entry) | mediumint(8) | unsigned   | PRI | NO   | 0       |
 | [pointid](#pointid)              | mediumint(8) | unsigned   | PRI | NO   | 0       |
-| [location_x](#location_x)        | float        |            |     | NO   | 0       |
-| [location_y](#location_y)        | float        |            |     | NO   | 0       |
-| [location_z](#location_z)        | float        |            |     | NO   | 0       |
+| [location_x](#location_x)        | FLOAT        |            |     | NO   | 0       |
+| [location_y](#location_y)        | FLOAT        |            |     | NO   | 0       |
+| [location_z](#location_z)        | FLOAT        |            |     | NO   | 0       |
 | [waittime](#waittime)            | int(10)      | unsigned   |     | NO   | 0       |
 | [point_comment](#point_comment)  | text         |            |     | YES  | NULL    |
 
