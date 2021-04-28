@@ -2,12 +2,12 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | BIGINT(20) UNSIGNED | 
-Creator | INT(10) UNSIGNED | 
+Id | BIGINT UNSIGNED | 
+Creator | INT UNSIGNED | 
 Title | VARCHAR(255) | 
 Description | VARCHAR(255) | 
-Type | TINYINT(1) UNSIGNED | 
-Dungeon | INT(10) | 
-Eventtime | INT(10) UNSIGNED | 
-Flags | INT(10) UNSIGNED | 
-Time2 | INT(10) UNSIGNED | 
+Type | TINYINT UNSIGNED | 
+Dungeon | INT | 
+Eventtime | INT UNSIGNED | 
+Flags | INT UNSIGNED | 
+Time2 | INT UNSIGNED | 

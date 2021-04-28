@@ -10,9 +10,9 @@ Contains all the teleport triggers definition. This table is used to complete .d
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [ID][1]                 | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ID][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Name][2]               | text         |            | MUL | YES  |         |       |         |
-| [target_map][3]         | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [target_map][3]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [target_position_x][4]  | FLOAT        |            |     | NO   | 0       |       |         |
 | [target_position_y][5]  | FLOAT        |            |     | NO   | 0       |       |         |
 | [target_position_z][6]  | FLOAT        |            |     | NO   | 0       |       |         |

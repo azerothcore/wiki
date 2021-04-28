@@ -16,20 +16,20 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
 
 | Field                                    | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------------------------|-------------|------------|-----|------|---------|-------|---------|
-| [ID](#broadcast_text-ID)                 | INT(10)     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Language](#broadcast_text-Language)     | INT(11)     | UNSIGNED   |     | NO   | 0       |       |         |
+| [ID](#broadcast_text-ID)                 | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Language](#broadcast_text-Language)     | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [MaleText](#broadcast_text-MaleText)     | text        | SIGNED     |     | YES  | NULL    |       |         |
 | [FemaleText](#broadcast_text-FemaleText) | text        | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteID1                                 | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteID2                                 | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteID3                                 | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteDelay1                              | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteDelay2                              | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteDelay3                              | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| SoundId                                  | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| UnkEmoteID                               | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| Type                                     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
-| WDBVerified                              | SMALLINT(5) | SIGNED     |     | NO   | 0       |       |         |
+| EmoteID1                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteID2                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteID3                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteDelay1                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteDelay2                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteDelay3                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| SoundId                                  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| UnkEmoteID                               | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Type                                     | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
 
 ### Description of the fields
 

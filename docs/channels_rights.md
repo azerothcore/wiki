@@ -3,8 +3,8 @@
 Column | Type | Description
 --- | --- | ---
 Name | VARCHAR(128) | 
-Flags | INT(10) UNSIGNED | 
-Speakdelay | INT(10) UNSIGNED | 
+Flags | INT UNSIGNED | 
+Speakdelay | INT UNSIGNED | 
 Joinmessage | VARCHAR(255) | 
 Delaymessage | VARCHAR(255) | 
 Moderators | text | 

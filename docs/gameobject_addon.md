@@ -2,6 +2,6 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | INT(10) UNSIGNED | 
-InvisibilityType | TINYINT(3) UNSIGNED | 
-InvisibilityValue | INT(10) UNSIGNED | 
+Guid | INT UNSIGNED | 
+InvisibilityType | TINYINT UNSIGNED | 
+InvisibilityValue | INT UNSIGNED | 

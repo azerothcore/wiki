@@ -11,7 +11,7 @@ This table is used to provide localized clients with localized string for page\_
 |                                      |              |                |         |          |             |           |             |
 |--------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                            | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#page_text_locale-entry)        | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [ID](#page_text_locale-entry)        | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
 | [l](#page_text_locale-Text_loc)ocale | longtext     | SIGNED         |         | YES      | NULL        |           |             |
 | [Name](#page_text_locale-Name)       | longtext     | SIGNED         |         | YES      | NULL        |           |             |
 

@@ -2,11 +2,11 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | INT(10) UNSIGNED | 
+Guid | INT UNSIGNED | 
 JoinX | FLOAT | 
 JoinY | FLOAT | 
 JoinZ | FLOAT | 
 JoinO | FLOAT | 
-JoinMapId | INT(10) UNSIGNED | 
+JoinMapId | INT UNSIGNED | 
 TaxiPath | text | 
-MountSpell | INT(10) UNSIGNED | 
+MountSpell | INT UNSIGNED | 

@@ -8,10 +8,10 @@
 
 | Field         | Type         | Attributes | Key | Null | Default | Extra | Comment         |
 |---------------|--------------|------------|-----|------|---------|-------|-----------------|
-| [spell][1]    | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | NULL    |       | dummy spell id  |
-| [effectId][2] | TINYINT(3)   | UNSIGNED   | PRI | NO   | 0       |       |                 |
-| [pet][3]      | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | pet id; 0 = all |
-| [aura][4]     | MEDIUMINT(8) | UNSIGNED   |     | NO   | NULL    |       | pet aura id     |
+| [spell][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       | dummy spell id  |
+| [effectId][2] | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |                 |
+| [pet][3]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | pet id; 0 = all |
+| [aura][4]     | MEDIUMINT | UNSIGNED   |     | NO   | NULL    |       | pet aura id     |
 
 [1]: #spell
 [2]: #effectid

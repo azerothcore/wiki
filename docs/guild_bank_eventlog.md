@@ -10,15 +10,15 @@
 
 | Field               | Type       | Attributes | Key | Null | Default | Extra | Comment                                     |
 |---------------------|------------|------------|-----|------|---------|-------|---------------------------------------------|
-| [guildid][1]        | INT(11)    | UNSIGNED   | PRI | NO   | 0       |       | Guild Identificator                         |
-| [LogGuid][2]        | INT(11)    | UNSIGNED   | PRI | NO   | 0       |       | Log record identificator - auxiliary column |
-| [TabID][3]          | TINYINT(3) | UNSIGNED   | PRI | NO   | 0       |       | Guild bank TabId                            |
-| [EventType][4]      | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       | Event type                                  |
-| [PlayerGuid][5]     | INT(11)    | UNSIGNED   |     | NO   | 0       |       |                                             |
-| [ItemOrMoney][6]    | INT(11)    | UNSIGNED   |     | NO   | 0       |       |                                             |
-| [ItemStackCount][7] | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       |                                             |
-| [DestTabId][8]      | TINYINT(1) | UNSIGNED   |     | NO   | 0       |       | Destination Tab Id                          |
-| [TIMESTAMP][9]      | BIGINT(20) | UNSIGNED   |     | NO   | 0       |       | Event UNIX time                             |
+| [guildid][1]        | INT    | UNSIGNED   | PRI | NO   | 0       |       | Guild Identificator                         |
+| [LogGuid][2]        | INT    | UNSIGNED   | PRI | NO   | 0       |       | Log record identificator - auxiliary column |
+| [TabID][3]          | TINYINT | UNSIGNED   | PRI | NO   | 0       |       | Guild bank TabId                            |
+| [EventType][4]      | TINYINT | UNSIGNED   |     | NO   | 0       |       | Event type                                  |
+| [PlayerGuid][5]     | INT    | UNSIGNED   |     | NO   | 0       |       |                                             |
+| [ItemOrMoney][6]    | INT    | UNSIGNED   |     | NO   | 0       |       |                                             |
+| [ItemStackCount][7] | TINYINT | UNSIGNED   |     | NO   | 0       |       |                                             |
+| [DestTabId][8]      | TINYINT | UNSIGNED   |     | NO   | 0       |       | Destination Tab Id                          |
+| [TIMESTAMP][9]      | BIGINT | UNSIGNED   |     | NO   | 0       |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid

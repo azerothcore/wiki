@@ -2,13 +2,13 @@
 
 Column | Type | Description
 --- | --- | ---
-Fight_id | INT(10) UNSIGNED | 
-Member_id | TINYINT(3) UNSIGNED | 
+Fight_id | INT UNSIGNED | 
+Member_id | TINYINT UNSIGNED | 
 Name | char(20) | 
-Guid | INT(10) UNSIGNED | 
-Team | INT(10) UNSIGNED | 
-Account | INT(10) UNSIGNED | 
+Guid | INT UNSIGNED | 
+Team | INT UNSIGNED | 
+Account | INT UNSIGNED | 
 Ip | char(15) | 
-Damage | INT(10) UNSIGNED | 
-Heal | INT(10) UNSIGNED | 
-Kblows | INT(10) UNSIGNED | 
+Damage | INT UNSIGNED | 
+Heal | INT UNSIGNED | 
+Kblows | INT UNSIGNED | 

@@ -10,13 +10,13 @@ This table allows you to change the items a vendor sells, or to create a [vendor
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|--------------|------------|-----|------|---------|-------|---------|
-| [eventEntry][1]   | TINYINT(3)   | SIGNED     |     | NO   | 0       |       |         |
-| [guid][2]         | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [slot][3]         | SMALLINT(6)  | SIGNED     |     | NO   | 0       |       |         |
-| [item][4]         | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [maxcount][5]     | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
-| [incrtime][6]     | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExtendedCost][7] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [eventEntry][1]   | TINYINT   | SIGNED     |     | NO   | 0       |       |         |
+| [guid][2]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [slot][3]         | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
+| [item][4]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [maxcount][5]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [incrtime][6]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ExtendedCost][7] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #evententry
 [2]: #guid

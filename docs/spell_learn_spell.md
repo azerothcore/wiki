@@ -12,9 +12,9 @@ NOTE: Spells with spell effects SPELL\_EFFECT\_LEARN\_SPELL should NOT be includ
 
 | Field        | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |--------------|-------------|------------|-----|------|---------|-------|---------|
-| [entry][1]   | SMALLINT(5) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [SpellID][2] | SMALLINT(5) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Active][3]  | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [entry][1]   | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [SpellID][2] | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Active][3]  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #spellid

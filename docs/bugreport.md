@@ -2,6 +2,6 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | INT(10) UNSIGNED | 
+Id | INT UNSIGNED | 
 Type | longtext | 
 Content | longtext | 

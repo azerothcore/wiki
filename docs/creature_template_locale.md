@@ -11,7 +11,7 @@ This table is used to provide to localized clients with localized string for cre
 |                                                        |              |                |         |          |             |           |             |
 |--------------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                              | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#creature_template_locale-entry)               | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [entry](#creature_template_locale-entry)               | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
 | [name\_loc1](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
 | [name\_loc2](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
 | [name\_loc3](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |

@@ -10,11 +10,11 @@ This table holds the information on all of the ranks available in a guild along 
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guildid][1]         | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [rid][2]             | TINYINT(3)   | UNSIGNED   | PRI | NO   |         |       |         |
+| [guildid][1]         | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [rid][2]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
 | [rname][3]           | VARCHAR(20)  | SIGNED     |     | NO   | "       |       |         |
-| [rights][4]          | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
-| [BankMoneyPerDay][5] | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| [rights][4]          | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [BankMoneyPerDay][5] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid
 [2]: #rid

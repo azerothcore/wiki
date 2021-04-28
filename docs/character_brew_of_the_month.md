@@ -2,5 +2,5 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | INT(10) UNSIGNED | 
-LastEventId | INT(10) UNSIGNED | 
+Guid | INT UNSIGNED | 
+LastEventId | INT UNSIGNED | 

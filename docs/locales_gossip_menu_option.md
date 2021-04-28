@@ -4,8 +4,8 @@
 
 Column | Type | Description
 --- | --- | ---
-Menu_id | SMALLINT(6) UNSIGNED | 
-Id | SMALLINT(6) UNSIGNED | 
+Menu_id | SMALLINT UNSIGNED | 
+Id | SMALLINT UNSIGNED | 
 Option_text_loc1 | text | 
 Option_text_loc2 | text | 
 Option_text_loc3 | text | 

@@ -2,5 +2,5 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | INT(10) UNSIGNED | 
-Quest | INT(10) UNSIGNED | 
+Guid | INT UNSIGNED | 
+Quest | INT UNSIGNED | 

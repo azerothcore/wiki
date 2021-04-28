@@ -10,7 +10,7 @@ Holds reputation multipliers for specific factions.
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
-| [faction][1]       | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [faction][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [quest_rate][2]    | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
 | [creature_rate][3] | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
 | [spell_rate][4]    | FLOAT        | SIGNED     |     | NO   | 1       |       |         |

@@ -7,11 +7,11 @@ Table created and content moved from gameobject\_template in commit bd4bf0a
 |                                               |              |                |         |          |             |           |             |
 |-----------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                     | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#gameobject_template_addon-entry)     | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [faction](#gameobject_template_addon-faction) | SMALLINT(5)  | UNSIGNED       |         | NO       | 0           |           |             |
-| [flags](#gameobject_template_addon-flags)     | INT(10)      | UNSIGNED       |         | NO       | 0           |           |             |
-| mingold                                       | MEDIUMINT(8) | UNSIGNED       |         | NO       | 0           |           |             |
-| maxgold                                       | MEDIUMINT(8) | UNSIGNED       |         | NO       | 0           |           |             |
+| [entry](#gameobject_template_addon-entry)     | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [faction](#gameobject_template_addon-faction) | SMALLINT  | UNSIGNED       |         | NO       | 0           |           |             |
+| [flags](#gameobject_template_addon-flags)     | INT      | UNSIGNED       |         | NO       | 0           |           |             |
+| mingold                                       | MEDIUMINT | UNSIGNED       |         | NO       | 0           |           |             |
+| maxgold                                       | MEDIUMINT | UNSIGNED       |         | NO       | 0           |           |             |
 
 ## Description of the fields
 

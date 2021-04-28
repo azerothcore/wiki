@@ -10,7 +10,7 @@ This table is used to provide to localized clients with localized string for que
 
 | Field                | Type         | Attribute | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]              | MEDIUMINT(8) | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [ID][1]              | MEDIUMINT | UNSIGNED  | PRI | NO   | 0       |       |         |
 | [locale][2]          | VARCHAR(4)   |           | PRI | NO   |         |       |         |
 | [Title][3]           | text         |           |     | YES  |         |       |         |
 | [Details][4]         | text         |           |     | YES  |         |       |         |
@@ -21,7 +21,7 @@ This table is used to provide to localized clients with localized string for que
 | [ObjectiveText2][9]  | text         |           |     | YES  |         |       |         |
 | [ObjectiveText3][10] | text         |           |     | YES  |         |       |         |
 | [ObjectiveText4][11] | text         |           |     | YES  |         |       |         |
-| [VerifiedBuild][12]  | SMALLINT(5)  |           |     | YES  | 0       |       |         |
+| [VerifiedBuild][12]  | SMALLINT  |           |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #locale

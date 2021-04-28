@@ -15,9 +15,9 @@ For a list of all existing graveyard zones and their respective IDs, check out W
 |                                         |              |                |         |          |             |           |             |
 |-----------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                               | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| ID                                      | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [GhostZone](#graveyard_zone-ghost_zone) | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [Faction](#graveyard_zone-faction)      | SMALLINT(5)  | UNSIGNED       |         | NO       | 0           |           |             |
+| ID                                      | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [GhostZone](#graveyard_zone-ghost_zone) | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [Faction](#graveyard_zone-faction)      | SMALLINT  | UNSIGNED       |         | NO       | 0           |           |             |
 | Comment                                 | TEXT         |                |         |          |             |           |             |
 
 **Description of the fields**

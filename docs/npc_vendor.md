@@ -20,12 +20,12 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 
 |      Field        |    Type      | Attributes | Key | Null | Default |
 |-------------------|--------------|------------|-----|------|---------|
-| [entry][1]        | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
-| [slot][2]         | SMALLINT(6)  | SIGNED     |     | NO   | 0       |
-| [item][3]         | MEDIUMINT(8) | SIGNED     | PRI | NO   | 0       |
-| [maxcount][4]     | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |
-| [incrtime][5]     | INT(10)      | UNSIGNED   |     | NO   | 0       |
-| [ExtendedCost][6] | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
+| [entry][1]        | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
+| [slot][2]         | SMALLINT  | SIGNED     |     | NO   | 0       |
+| [item][3]         | MEDIUMINT | SIGNED     | PRI | NO   | 0       |
+| [maxcount][4]     | TINYINT   | UNSIGNED   |     | NO   | 0       |
+| [incrtime][5]     | INT      | UNSIGNED   |     | NO   | 0       |
+| [ExtendedCost][6] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
 
 [1]: #entry
 [2]: #slot

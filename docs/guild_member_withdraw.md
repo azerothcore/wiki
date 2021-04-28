@@ -2,11 +2,11 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | INT(10) UNSIGNED | 
-Tab0 | INT(10) UNSIGNED | 
-Tab1 | INT(10) UNSIGNED | 
-Tab2 | INT(10) UNSIGNED | 
-Tab3 | INT(10) UNSIGNED | 
-Tab4 | INT(10) UNSIGNED | 
-Tab5 | INT(10) UNSIGNED | 
-Money | INT(10) UNSIGNED | 
+Guid | INT UNSIGNED | 
+Tab0 | INT UNSIGNED | 
+Tab1 | INT UNSIGNED | 
+Tab2 | INT UNSIGNED | 
+Tab3 | INT UNSIGNED | 
+Tab4 | INT UNSIGNED | 
+Tab5 | INT UNSIGNED | 
+Money | INT UNSIGNED | 

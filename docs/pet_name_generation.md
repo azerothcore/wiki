@@ -10,10 +10,10 @@ This table holds pieces of names (first and last half) that are use for pet name
 
 | Field      | Type         | Attributes | Key | Null | Default | Extra          | Comment |
 |------------|--------------|------------|-----|------|---------|----------------|---------|
-| [id][1]    | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | NULL    | Auto increment |         |
+| [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    | Auto increment |         |
 | [word][2]  | tinytext     | SIGNED     |     | NO   | NULL    |                |         |
-| [entry][3] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |                |         |
-| [half][4]  | TINYINT(4)   | SIGNED     |     | NO   | 0       |                |         |
+| [entry][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                |         |
+| [half][4]  | TINYINT   | SIGNED     |     | NO   | 0       |                |         |
 
 [1]: #id
 [2]: #word

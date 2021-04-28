@@ -10,9 +10,9 @@ This table contains Spawn Group names and flags.
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| [roupId][1]    | INT(10)      | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [roupId][1]    | INT      | UNSIGNED   | PRI | NO   | NULL    |       |         |
 | [roupName][2]  | VARCHAR(100) |            |     | NO   | NULL    |       |         |
-| [roupFlags][3] | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| [roupFlags][3] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #roupid
 [2]: #roupname

@@ -12,10 +12,10 @@ That opcode is sent for quests in which you have to loot creatures, who are alre
 
 | Field           | Type        | Attributes | Key | Null | Default | Extra | Comment                                                                 |
 |-----------------|-------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------|
-| [npc_entry][1]  | INT(10)     | UNSIGNED   | PRI | NO   | NULL    |       | Reference to the creature_template table                                |
-| [spell_id][2]   | INT(10)     | UNSIGNED   | PRI | NO   | NULL    |       | The ID of the spell to be cast                                          |
-| [cast_flags][3] | TINYINT(3)  | UNSIGNED   |     | NO   | NULL    |       | Who casts the spell on who, creature <=> player (values: 0-3)           |
-| [user_type][4]  | SMALLINT(3) | UNSIGNED   |     | NO   | 0       |       | Relation with summoner: 0-no 1-friendly 2-raid 3-party player can click |
+| [npc_entry][1]  | INT     | UNSIGNED   | PRI | NO   | NULL    |       | Reference to the creature_template table                                |
+| [spell_id][2]   | INT     | UNSIGNED   | PRI | NO   | NULL    |       | The ID of the spell to be cast                                          |
+| [cast_flags][3] | TINYINT  | UNSIGNED   |     | NO   | NULL    |       | Who casts the spell on who, creature <=> player (values: 0-3)           |
+| [user_type][4]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Relation with summoner: 0-no 1-friendly 2-raid 3-party player can click |
 
 [1]: #npc_entry
 [2]: #spell_id

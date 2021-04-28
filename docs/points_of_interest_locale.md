@@ -11,7 +11,7 @@
 |                                        |              |                |         |          |             |           |             |
 |----------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                              | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [I](#points_of_interest_locale-entry)D | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [I](#points_of_interest_locale-entry)D | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
 | locale                                 | text         | SIGNED         |         | YES      | NULL        |           |             |
 | Name                                   | text         | SIGNED         |         | YES      | NULL        |           |             |
 

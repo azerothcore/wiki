@@ -6,15 +6,15 @@ This table contains the base values for creature health, mana, armor, attack pow
 
 | Field                  | Type        | Attributes | Null | Default | Extra | Comment |
 |------------------------|-------------|------------|------|---------|-------|---------|
-| [level][1]             | TINYINT(3)  | UNSIGNED   | NO   |         |       |         |
-| [class][2]             | TINYINT(3)  | UNSIGNED   | NO   |         |       |         |
-| [basehp0][3]           | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
-| [basehp1][4]           | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
-| [basehp2][5]           | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
-| [basemana][6]          | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
-| [basearmor][7]         | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
-| [attackpower][8]       | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
-| [rangedattackpower][9] | SMALLINT(5) | UNSIGNED   | NO   |         |       |         |
+| [level][1]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
+| [class][2]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
+| [basehp0][3]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basehp1][4]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basehp2][5]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basemana][6]          | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basearmor][7]         | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [attackpower][8]       | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [rangedattackpower][9] | SMALLINT | UNSIGNED   | NO   |         |       |         |
 | [damage_base][10]      | FLOAT       |            | NO   |         |       |         |
 | [damage_exp1][11]      | FLOAT       |            | NO   |         |       |         |
 | [damage_exp2][12]      | FLOAT       |            | NO   |         |       |         |

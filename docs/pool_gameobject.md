@@ -11,8 +11,8 @@ This table can only contain gameobjects that have a type of GAMEOBJECT\_TYPE\_CH
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]        | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [pool_entry][2]  | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [pool_entry][2]  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [chance][3]      | FLOAT        | UNSIGNED   |     | NO   | 0       |       |         |
 | [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 

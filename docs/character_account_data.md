@@ -10,9 +10,9 @@ Contains data about character settings.
 
 | Field     | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------|------------|------------|-----|------|---------|-------|---------|
-| [guid][1] | INT(10)    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2] | INT(3)     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [time][3] | BIGINT(10) | UNSIGNED   |     | NO   | 0       |       |         |
+| [guid][1] | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [type][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [time][3] | BIGINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [data][4] | BLOB       | SIGNED     |     | NO   |         |       |         |
 
 [1]: #guid

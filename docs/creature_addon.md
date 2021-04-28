@@ -14,16 +14,16 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 
 | Field                | Type                | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|---------------------|------------|-----|------|---------|-------|---------|
-| [guid/entry][1]      | INT(10)/medumint(8) | UNSIGNED   | PRI | NO   |         |       |         |
-| [path_id][2]         | INT(11)             | UNSIGNED   |     | NO   |         |       |         |
-| [mount][3]           | MEDIUMINT(8)        | UNSIGNED   |     | NO   |         |       |         |
-| [bytes1][4]          | INT(10)             | UNSIGNED   |     | NO   |         |       |         |
-| [bytes2][5]          | INT(10)             | UNSIGNED   |     | NO   |         |       |         |
-| [emote][6]           | INT(10)             | UNSIGNED   |     | NO   |         |       |         |
-| [aiAnimKit][7]       | SMALLINT(6)         | SIGNED     |     | NO   |         |       |         |
-| [movementAnimKit][8] | SMALLINT(6)         | SIGNED     |     | NO   |         |       |         |
-| [meleeAnimKit][9]    | SMALLINT(6)         | SIGNED     |     | NO   |         |       |         |
-| [isLarge][10]        | TINYINT(1)          | UNSIGNED   |     | NO   |         |       |         |
+| [guid/entry][1]      | INT/medumint(8) | UNSIGNED   | PRI | NO   |         |       |         |
+| [path_id][2]         | INT             | UNSIGNED   |     | NO   |         |       |         |
+| [mount][3]           | MEDIUMINT        | UNSIGNED   |     | NO   |         |       |         |
+| [bytes1][4]          | INT             | UNSIGNED   |     | NO   |         |       |         |
+| [bytes2][5]          | INT             | UNSIGNED   |     | NO   |         |       |         |
+| [emote][6]           | INT             | UNSIGNED   |     | NO   |         |       |         |
+| [aiAnimKit][7]       | SMALLINT         | SIGNED     |     | NO   |         |       |         |
+| [movementAnimKit][8] | SMALLINT         | SIGNED     |     | NO   |         |       |         |
+| [meleeAnimKit][9]    | SMALLINT         | SIGNED     |     | NO   |         |       |         |
+| [isLarge][10]        | TINYINT          | UNSIGNED   |     | NO   |         |       |         |
 | [auras][11]          | text                |            |     | YES  |         |       |         |
 
 [1]: #guid/entry

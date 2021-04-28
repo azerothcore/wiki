@@ -12,8 +12,8 @@ If you want to change the spot you will start in when you enter/leave an instanc
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [map][1]        | INT(10)      | UNSIGNED   |     | NO   | NULL    |       |         |
-| [parent][2]     | BIGINT(10)   | UNSIGNED   |     | NO   | 0       |       |         |
+| [map][1]        | INT      | UNSIGNED   |     | NO   | NULL    |       |         |
+| [parent][2]     | BIGINT   | UNSIGNED   |     | NO   | 0       |       |         |
 | [script][3]     | VARCHAR(128) | SIGNED     |     | NO   | NULL    |       |         |
 | [allowMount][4] | tinyiny(1)   | SIGNED     |     | NO   | 0       |       |         |
 

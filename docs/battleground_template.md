@@ -10,17 +10,17 @@ Contains information about the different battlegrounds, like how many players ar
 
 | Field                  | Type         | Atributes | Key | Null | Default | Extra | Comment |
 |------------------------|--------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]                | MEDIUMINT(8) | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [MinPlayersPerTeam][2] | SMALLINT(5)  | UNSIGNED  |     | NO   | 0       |       |         |
-| [MaxPlayersPerTeam][3] | SMALLINT(5)  | UNSIGNED  |     | NO   | 0       |       |         |
-| [MinLvl][4]            | TINYINT(3)   | UNSIGNED  |     | NO   | 0       |       |         |
-| [MaxLvl][5]            | TINYINT(3)   | UNSIGNED  |     | NO   | 0       |       |         |
-| [AllianceStartLoc][6]  | MEDIUMINT(8) | UNSIGNED  |     | NO   |         |       |         |
+| [ID][1]                | MEDIUMINT | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [MinPlayersPerTeam][2] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [MaxPlayersPerTeam][3] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [MinLvl][4]            | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [MaxLvl][5]            | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [AllianceStartLoc][6]  | MEDIUMINT | UNSIGNED  |     | NO   |         |       |         |
 | [AllianceStartO][7]    | FLOAT        | SIGNED    |     | NO   |         |       |         |
-| [HordeStartLoc][8]     | MEDIUMINT(8) | UNSIGNED  |     | NO   |         |       |         |
+| [HordeStartLoc][8]     | MEDIUMINT | UNSIGNED  |     | NO   |         |       |         |
 | [HordeStartO][9]       | FLOAT        | SIGNED    |     | NO   |         |       |         |
 | [StartMaxDist][10]     | FLOAT        | SIGNED    |     | NO   | 0       |       |         |
-| [Weight][11]           | TINYINT(3)   | UNSIGNED  |     | NO   | 1       |       |         |
+| [Weight][11]           | TINYINT   | UNSIGNED  |     | NO   | 1       |       |         |
 | [ScriptName][12]       | char(64)     |           |     | NO   |         |       |         |
 | [Comment][13]          | char(38)     |           |     | NO   |         |       |         |
 

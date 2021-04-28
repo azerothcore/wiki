@@ -10,16 +10,16 @@ This table is used to apply a specific spell aura to the player within an area i
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [spell][1]              | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |         |
-| [area][2]               | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |         |
-| [quest_start][3]        | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |         |
-| [quest_end][4]          | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |         |
-| [aura_spell][5]         | MEDIUMINT(8) | SIGNED     | PRI | NO   |         |       |         |
-| [racemask][6]           | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |         |
-| [gender][7]             | TINYINT(3)   | UNSIGNED   | PRI | NO   |         |       |         |
-| [flags][8]              | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [quest_start_status][9] | INT(11)      | UNSIGNED   |     | NO   |         |       |         |
-| [quest_end_status][10]  | INT(11)      | UNSIGNED   |     | NO   |         |       |         |
+| [spell][1]              | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [area][2]               | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [quest_start][3]        | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [quest_end][4]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [aura_spell][5]         | MEDIUMINT | SIGNED     | PRI | NO   |         |       |         |
+| [racemask][6]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [gender][7]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
+| [flags][8]              | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [quest_start_status][9] | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [quest_end_status][10]  | INT      | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #spell
 [2]: #area

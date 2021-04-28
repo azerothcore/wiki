@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | MEDIUMINT(8) UNSIGNED | 
+Entry | MEDIUMINT UNSIGNED | 
 Subject_loc1 | VARCHAR(100) | 
 Subject_loc2 | VARCHAR(100) | 
 Subject_loc3 | VARCHAR(100) | 

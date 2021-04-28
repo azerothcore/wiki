@@ -4,8 +4,8 @@
 
 | Field                       | Type         |  Key | Null | Default |
 |-----------------------------|--------------|------|------|---------|
-| [ID](#ID)                   | INT(10)      |  PRI | NO   | 0       |
-| [Map](#Map)                 | INT(10)      |      | NO   | 0       |
+| [ID](#ID)                   | INT      |  PRI | NO   | 0       |
+| [Map](#Map)                 | INT      |      | NO   | 0       |
 | [x](#x)                     | FLOAT        |      | NO   | 0       |
 | [y](#y)                     | FLOAT        |      | NO   | 0       |
 | [z](#z)                     | FLOAT        |      | NO   | 0       |

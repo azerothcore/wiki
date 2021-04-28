@@ -4,9 +4,9 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | MEDIUMINT(8) UNSIGNED | 
-Groupid | TINYINT(3) UNSIGNED | 
-Id | TINYINT(3) UNSIGNED | 
+Entry | MEDIUMINT UNSIGNED | 
+Groupid | TINYINT UNSIGNED | 
+Id | TINYINT UNSIGNED | 
 Text_loc1 | text | 
 Text_loc2 | text | 
 Text_loc3 | text | 

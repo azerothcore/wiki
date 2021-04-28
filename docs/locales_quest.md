@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | MEDIUMINT(8) UNSIGNED | 
+Id | MEDIUMINT UNSIGNED | 
 Title_loc1 | text | 
 Title_loc2 | text | 
 Title_loc3 | text | 
@@ -93,4 +93,4 @@ ObjectiveText4_loc5 | text |
 ObjectiveText4_loc6 | text | 
 ObjectiveText4_loc7 | text | 
 ObjectiveText4_loc8 | text | 
-VerifiedBuild | SMALLINT(5) | 
+VerifiedBuild | SMALLINT | 

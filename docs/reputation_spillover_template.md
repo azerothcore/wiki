@@ -10,19 +10,19 @@
 
 | Field          | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|-------------|------------|-----|------|---------|-------|---------|
-| [faction][1]   | SMALLINT(6) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [faction1][2]  | SMALLINT(6) | UNSIGNED   |     | NO   | 0       |       |         |
+| [faction][1]   | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [faction1][2]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_1][3]    | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| [rank1][4]     | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |         |
-| [faction2][5]  | SMALLINT(6) | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank1][4]     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [faction2][5]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_2][6]    | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| [rank_2][7]    | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |         |
-| [faction3][8]  | SMALLINT(6) | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank_2][7]    | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [faction3][8]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_3][9]    | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| [rank_3][10]   | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |         |
-| [faction4][11] | SMALLINT(6) | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank_3][10]   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [faction4][11] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_4][12]   | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| [rank_4][13]   | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank_4][13]   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #faction
 [2]: #faction1

@@ -10,10 +10,10 @@ This table holds the text for letter items or any items that when moused-over tu
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]       | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [entry][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [text][2]        | longtext     | SIGNED     |     | NO   | NULL    |       |         |
-| [next_page][3]   | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
-| [WDBVerified][4] | SMALLINT(5)  | SIGNED     |     | YES  | 1       |       |         |
+| [next_page][3]   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [WDBVerified][4] | SMALLINT  | SIGNED     |     | YES  | 1       |       |         |
 
 [1]: #entry
 [2]: #text

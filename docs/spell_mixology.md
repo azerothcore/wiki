@@ -4,5 +4,5 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | MEDIUMINT(8) UNSIGNED | 
+Entry | MEDIUMINT UNSIGNED | 
 PctMod | FLOAT | 

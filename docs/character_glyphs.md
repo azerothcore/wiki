@@ -10,14 +10,14 @@ Contains all the individual glyph data for each character.
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|-------------|------------|-----|------|---------|-------|---------|
-| [guid][1]   | INT(10)     | UNSIGNED   | PRI | NO   |         |       |         |
-| [spec][2]   | TINYINT(3)  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [glyph1][3] | SMALLINT(5) | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph2][4] | SMALLINT(5) | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph3][5] | SMALLINT(5) | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph4][6] | SMALLINT(5) | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph5][7] | SMALLINT(5) | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph6][8] | SMALLINT(5) | UNSIGNED   |     | YES  | 0       |       |         |
+| [guid][1]   | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [spec][2]   | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [glyph1][3] | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| [glyph2][4] | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| [glyph3][5] | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| [glyph4][6] | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| [glyph5][7] | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| [glyph6][8] | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
 
 [1]: #guid
 [2]: #spec

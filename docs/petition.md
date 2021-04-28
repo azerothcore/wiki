@@ -10,10 +10,10 @@ This table holds information on all ongoing petitions for a guild or for an aren
 
 | Field             | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|-------------|------------|-----|------|---------|-------|---------|
-| [ownerguid][1]    | INT(10)     | UNSIGNED   | PRI | NO   |         |       |         |
-| [petitionguid][2] | INT(10)     | UNSIGNED   |     | YES  | 0       |       |         |
+| [ownerguid][1]    | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [petitionguid][2] | INT     | UNSIGNED   |     | YES  | 0       |       |         |
 | [name][3]         | VARCHAR(24) | SIGNED     |     | NO   |         |       |         |
-| [type][4]         | TINYINT(3)  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [type][4]         | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #ownerguid
 [2]: #petitionguid

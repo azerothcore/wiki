@@ -11,37 +11,37 @@ See worldserver.conf: PlayerSave.Stats.\*
 
 | Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment                            |
 |-------------------------|---------|------------|-----|------|---------|-------|------------------------------------|
-| [guid][1]               | INT(10) | UNSIGNED   | PRI | NO   |         |       | Global Unique Identifier, Low part |
-| [maxhealth][2]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower1][3]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower2][4]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower3][5]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower4][6]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower5][7]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower6][8]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower7][9]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [strength][10]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [agility][11]           | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [stamina][12]           | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [intellect][13]         | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [spirit][14]            | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [armor][15]             | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resHoly][16]           | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resFire][17]           | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resNature][18]         | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resFrost][19]          | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resShadow][20]         | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resArcane][21]         | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
+| [guid][1]               | INT | UNSIGNED   | PRI | NO   |         |       | Global Unique Identifier, Low part |
+| [maxhealth][2]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower1][3]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower2][4]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower3][5]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower4][6]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower5][7]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower6][8]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [maxpower7][9]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [strength][10]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [agility][11]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [stamina][12]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [intellect][13]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [spirit][14]            | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [armor][15]             | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resHoly][16]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resFire][17]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resNature][18]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resFrost][19]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resShadow][20]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resArcane][21]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
 | [blockPct][22]          | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
 | [dodgePct][23]          | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
 | [parryPct][24]          | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
 | [critPct][25]           | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
 | [rangedCritPct][26]     | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
 | [spellCritPct][27]      | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [attackPower][28]       | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [rangedAttackPower][29] | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [spellPower][30]        | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
-| [resilience][31]        | INT(10) | UNSIGNED   |     | NO   |         |       |                                    |
+| [attackPower][28]       | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [rangedAttackPower][29] | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [spellPower][30]        | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| [resilience][31]        | INT | UNSIGNED   |     | NO   |         |       |                                    |
 
 [1]: #guid
 [2]: #maxhealth

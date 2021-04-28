@@ -10,24 +10,24 @@ This table holds the pet data for each pet summoned by anyone in the game.
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]                 | INT(10)      | UNSIGNED   | PRI | NO   |         |       |         |
-| [entry][2]              | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [owner][3]              | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [modelid][4]            | INT(10)      | UNSIGNED   |     | YES  | 0       |       |         |
-| [CreatedBySpell][5]     | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |         |
-| [PetType][6]            | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [level][7]              | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |         |
-| [exp][8]                | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [Reactstate][9]         | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
+| [id][1]                 | INT      | UNSIGNED   | PRI | NO   |         |       |         |
+| [entry][2]              | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [owner][3]              | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [modelid][4]            | INT      | UNSIGNED   |     | YES  | 0       |       |         |
+| [CreatedBySpell][5]     | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [PetType][6]            | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [level][7]              | SMALLINT  | UNSIGNED   |     | NO   |         |       |         |
+| [exp][8]                | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [Reactstate][9]         | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [name][10]              | VARCHAR(21)  |            |     | NO   |         |       |         |
-| [renamed][11]           | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [slot][12]              | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [curhealth][13]         | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [curmana][14]           | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [curhappiness][15]      | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [savetime][16]          | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [resettalents_cost][17] | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
-| [resettalents_time][18] | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [renamed][11]           | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [slot][12]              | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [curhealth][13]         | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [curmana][14]           | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [curhappiness][15]      | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [savetime][16]          | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [resettalents_cost][17] | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [resettalents_time][18] | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [abdata][19]            | text         |            |     | YES  | NULL    |       |         |
 
 [1]: #id

@@ -8,19 +8,19 @@ This table holds the percent chances for weather changes to occur in various zon
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [zone][1]                 | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |         |
-| [spring_rain_chance][2]   | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [spring_snow_chance][3]   | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [spring_storm_chance][4]  | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [summer_rain_chance][5]   | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [summer_snow_chance][6]   | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [summer_storm_chance][7]  | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [fall_rain_chance][8]     | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [fall_snow_chance][9]     | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [fall_storm_chance][10]   | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [winter_rain_chance][11]  | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [winter_snow_chance][12]  | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
-| [winter_storm_chance][13] | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
+| [zone][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [spring_rain_chance][2]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [spring_snow_chance][3]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [spring_storm_chance][4]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [summer_rain_chance][5]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [summer_snow_chance][6]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [summer_storm_chance][7]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [fall_rain_chance][8]     | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [fall_snow_chance][9]     | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [fall_storm_chance][10]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [winter_rain_chance][11]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [winter_snow_chance][12]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [winter_storm_chance][13] | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #zone
 [2]: #spring_rain_chance

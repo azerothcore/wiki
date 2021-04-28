@@ -10,8 +10,8 @@ This table holds information on all the tabs in use for all guilds that make use
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------|--------------|------------|-----|------|---------|-------|---------|
-| [guildid][1] | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TabId][2]   | TINYINT(3)   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [guildid][1] | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [TabId][2]   | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [TabName][3] | VARCHAR(16)  | SIGNED     |     | NO   | "       |       |         |
 | [TabIcon][4] | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
 | [TabText][5] | VARCHAR(500) | SIGNED     |     | YES  | NULL    |       |         |

@@ -3,8 +3,8 @@
 Column | Type | Description
 --- | --- | ---
 Time | datetime | 
-Map | SMALLINT(5) UNSIGNED | 
-Difficulty | TINYINT(3) UNSIGNED | 
-CreditType | TINYINT(3) UNSIGNED | 
-CreditEntry | INT(10) UNSIGNED | 
+Map | SMALLINT UNSIGNED | 
+Difficulty | TINYINT UNSIGNED | 
+CreditType | TINYINT UNSIGNED | 
+CreditEntry | INT UNSIGNED | 
 PlayersInfo | text | 

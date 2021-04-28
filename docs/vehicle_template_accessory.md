@@ -10,13 +10,13 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment                                      |
 |----------------------|--------------|------------|-----|------|---------|-------|----------------------------------------------|
-| [entry][1]           | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |                                              |
-| [accessory_entry][2] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |                                              |
-| [seat_id][3]         | TINYINT(1)   | SIGNED     | PRI | NO   | 0       |       |                                              |
-| [minion][4]          | TINYINT(1)   | UNSIGNED   |     | NO   | 0       |       |                                              |
+| [entry][1]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                                              |
+| [accessory_entry][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                                              |
+| [seat_id][3]         | TINYINT   | SIGNED     | PRI | NO   | 0       |       |                                              |
+| [minion][4]          | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                              |
 | [description][5]     | text         | SIGNED     |     | NO   |         |       |                                              |
-| [summontype][6]      | TINYINT(3)   | UNSIGNED   |     | NO   | 6       |       | see enum TempSummonType                      |
-| [summontimer][7]     | INT(10)      | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
+| [summontype][6]      | TINYINT   | UNSIGNED   |     | NO   | 6       |       | see enum TempSummonType                      |
+| [summontimer][7]     | INT      | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #entry
 [2]: #accessory_entry

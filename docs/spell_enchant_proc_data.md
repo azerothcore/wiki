@@ -10,8 +10,8 @@
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|---------|------------|-----|------|---------|-------|---------|
-| [entry][1]        | INT(10) | UNSIGNED   |     | NO   | NULL    |       |         |
-| [customChance][2] | INT(10) | UNSIGNED   |     | NO   | 0       |       |         |
+| [entry][1]        | INT | UNSIGNED   |     | NO   | NULL    |       |         |
+| [customChance][2] | INT | UNSIGNED   |     | NO   | 0       |       |         |
 | [PPMChance][3]    | FLOAT   | UNSIGNED   |     | NO   | 0       |       |         |
 | [proxEx][4]       | FLOAT   | UNSIGNED   |     | NO   | 0       |       |         |
 

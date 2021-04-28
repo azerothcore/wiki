@@ -4,5 +4,5 @@
 
 Column | Type | Description
 --- | --- | ---
-Alliance_id | INT(10) UNSIGNED | 
-Horde_id | INT(10) UNSIGNED | 
+Alliance_id | INT UNSIGNED | 
+Horde_id | INT UNSIGNED | 

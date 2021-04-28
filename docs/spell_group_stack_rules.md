@@ -11,8 +11,8 @@ Notes: The table doesn't affect persistent area auras stacking or passive auras 
 |                                                    |             |                |         |          |             |           |             |
 |----------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                          | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [group\_id](#spell_group_stack_rules-group_id)     | INT(11)     | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [stack\_rule](#spell_group_stack_rules-stack_rule) | TINYINT(3)  | SIGNED         |         | NO       | 0           |           |             |
+| [group\_id](#spell_group_stack_rules-group_id)     | INT     | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [stack\_rule](#spell_group_stack_rules-stack_rule) | TINYINT  | SIGNED         |         | NO       | 0           |           |             |
 | [description](#description)                        | VARCHAR(150)|                |         | NO       |             |           |             |
 
 **Description of the fields**

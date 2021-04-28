@@ -4,7 +4,7 @@
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|
-| [TypeId[1]      | TINYINT(2) | unasigned  | PRI | NO   |         |       |         |
+| [TypeId[1]      | TINYINT | unasigned  | PRI | NO   |         |       |         |
 | [ScriptName][2] | char(64)   | SIGNED     |     | NO   | 0       |       |         |
 | [comment][3]    | text       | SIGNED     |     | YES  | NULL    |       |         |
 

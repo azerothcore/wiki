@@ -10,12 +10,12 @@
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]      | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [entry][1]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [x][2]          | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [y][3]          | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [icon][4]       | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
-| [flags][5]      | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
-| [Importance][6] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [icon][4]       | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [flags][5]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Importance][6] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [icon_name][7]  | text         |            |     | NO   | NULL    |       |         |
 
 [1]: #entry

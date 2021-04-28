@@ -2,17 +2,17 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | BIGINT(20) | 
+Entry | BIGINT | 
 Player | VARCHAR(30) | 
-Acctid | INT(11) | 
+Acctid | INT | 
 Reason | VARCHAR(255) | 
 Speed | FLOAT | 
 Val1 | FLOAT | 
-Val2 | INT(10) UNSIGNED | 
-Count | INT(11) | 
-Map | SMALLINT(5) | 
+Val2 | INT UNSIGNED | 
+Count | INT | 
+Map | SMALLINT | 
 Pos | VARCHAR(255) | 
-Level | MEDIUMINT(9) | 
+Level | MEDIUMINT | 
 First_date | datetime | 
 Last_date | datetime | 
 Op | VARCHAR(255) | 

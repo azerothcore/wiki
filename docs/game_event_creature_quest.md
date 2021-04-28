@@ -10,9 +10,9 @@ This table holds information on quests that should only be available when an eve
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 |-----------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [eventEntry][1] | TINYINT(3)   | UNSIGNED   |     | NO   |         |       | Entry of the game event. |
-| [id][2]         | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [quest][3]      | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [eventEntry][1] | TINYINT   | UNSIGNED   |     | NO   |         |       | Entry of the game event. |
+| [id][2]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [quest][3]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
 
 [1]: #evententry
 [2]: #id

@@ -2,6 +2,6 @@
 
 Column | Type | Description
 --- | --- | ---
-ChannelId | INT(10) UNSIGNED | 
-PlayerGUID | INT(10) UNSIGNED | 
-BanTime | INT(10) UNSIGNED | 
+ChannelId | INT UNSIGNED | 
+PlayerGUID | INT UNSIGNED | 
+BanTime | INT UNSIGNED | 

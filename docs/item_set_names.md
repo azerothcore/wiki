@@ -10,10 +10,10 @@
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]         | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |         |
+| [entry][1]         | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [name][2]          | VARCHAR(255) | SIGNED     |     | NO   |         |       |         |
-| [InventoryType][3] | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |         |
-| [WDBVerified][4]   | SMALLINT(5)  | UNSIGNED   |     | NO   | 1       |       |         |
+| [InventoryType][3] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [WDBVerified][4]   | SMALLINT  | UNSIGNED   |     | NO   | 1       |       |         |
 
 [1]: #entry
 [2]: #name

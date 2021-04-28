@@ -10,10 +10,10 @@ This table holds data about wrapped/gift items.
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|---------|------------|-----|------|---------|-------|---------|
-| [guid][1]      | INT(10) | UNSIGNED   |     | NO   | 0       |       |         |
-| [item_guid][2] | INT(10) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [entry][3]     | INT(10) | UNSIGNED   |     | NO   | 0       |       |         |
-| [flags][4]     | INT(10) | UNSIGNED   |     | NO   | 0       |       |         |
+| [guid][1]      | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [item_guid][2] | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [entry][3]     | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [flags][4]     | INT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #item_guid

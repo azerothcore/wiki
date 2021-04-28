@@ -10,17 +10,17 @@ This table contains all the path data for creatures that use waypoints and waypo
 
 | Field                            | Type         | Attributes   | Key | Null | Default |
 |----------------------------------|--------------|--------------|-----|------|---------|
-| [id](#id)                        | INT(10)      | UNSIGNED     | PRI | NO   | 0       |
-| [point](#point)                  | MEDIUMINT(8) | UNSIGNED     | PRI | NO   | 0       |
+| [id](#id)                        | INT      | UNSIGNED     | PRI | NO   | 0       |
+| [point](#point)                  | MEDIUMINT | UNSIGNED     | PRI | NO   | 0       |
 | [position\_x](#position_x)       | FLOAT        |              |     | NO   | 0       |
 | [position\_y](#position_y)       | FLOAT        |              |     | NO   | 0       |
 | [position\_z](#position_z)       | FLOAT        |              |     | NO   | 0       |
 | [orientation](#orientation)      | FLOAT        |              |     | NO   | 0       |
-| [delay](#delay)                  | INT(10)      | UNSIGNED     |     | NO   | 0       |
-| [move\_type](#move_type)         | INT(11)      |              |     | NO   | 0       |
-| [action](#action)                | INT(11)      |              |     | NO   | 0       |
-| [action\_chance](#action_chance) | SMALLINT(6)  |              |     | NO   | 100     |
-| [wpguid](#wpguid)                | INT(11)      | UNSIGNED     |     | NO   | 0       |
+| [delay](#delay)                  | INT      | UNSIGNED     |     | NO   | 0       |
+| [move\_type](#move_type)         | INT      |              |     | NO   | 0       |
+| [action](#action)                | INT      |              |     | NO   | 0       |
+| [action\_chance](#action_chance) | SMALLINT  |              |     | NO   | 100     |
+| [wpguid](#wpguid)                | INT      | UNSIGNED     |     | NO   | 0       |
 
 #### id
 

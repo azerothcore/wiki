@@ -3,4 +3,4 @@
 Column | Type | Description
 --- | --- | ---
 Name | VARCHAR(120) | 
-Crc | INT(10) UNSIGNED | 
+Crc | INT UNSIGNED | 

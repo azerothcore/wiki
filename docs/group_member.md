@@ -10,11 +10,11 @@ This table holds info about group members.
 
 | Field            | Type       | Attributes | Key | Null | Default | Extra  | Comment |
 |------------------|------------|------------|-----|------|---------|--------|---------|
-| [guid][1]        | INT(10)    | UNSIGNED   |     | NO   |         |        |         |
-| [memberGuid][2]  | INT(10)    | UNSIGNED   | PRI | NO   |         | Unique |         |
-| [memberFlags][3] | TINYINT(3) | UNSIGNED   |     | NO   | 0       |        |         |
-| [subgroup[4]     | TINYINT(3) | UNSIGNED   |     | NO   | 0       |        |         |
-| [roles][5]       | TINYINT(3) | UNSIGNED   |     | NO   | 0       |        |         |
+| [guid][1]        | INT    | UNSIGNED   |     | NO   |         |        |         |
+| [memberGuid][2]  | INT    | UNSIGNED   | PRI | NO   |         | Unique |         |
+| [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
+| [subgroup[4]     | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
+| [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #guid
 [2]: #memberguid

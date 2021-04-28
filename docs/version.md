@@ -11,10 +11,10 @@ Includes information on current core and database version.
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                         |
 |---------------------|--------------|------------|-----|------|---------|-------|---------------------------------|
 | [core_version][1]   | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Core revision dumped at startup |
-| [core_revision][2]  | BIGINT(20)   | UNSIGNED   |     | YES  | NULL    |       | Core revision hash              |
+| [core_revision][2]  | BIGINT   | UNSIGNED   |     | YES  | NULL    |       | Core revision hash              |
 | [db_version][3]     | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Version of world DB             |
 | [script_version][4] | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Version of scripts DB           |
-| [cache_id][5]       | INT(10)      | SIGNED     |     | YES  | 0       |       | Minor DB version                |
+| [cache_id][5]       | INT      | SIGNED     |     | YES  | 0       |       | Minor DB version                |
 
 [1]: #core_version
 [2]: #core_revision

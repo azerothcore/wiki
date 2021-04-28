@@ -12,9 +12,9 @@ This table holds information on the achievements a character has earned / comple
 
 | Field            | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|-------------|------------|-----|------|---------|-------|---------|
-| [guid][1]        | INT(10)     | UNSIGNED   | PRI | NO   |         |       |         |
-| [achievement][2] | SMALLINT(5) | UNSIGNED   | PRI | NO   |         |       |         |
-| [date][3]        | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
+| [guid][1]        | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [achievement][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [date][3]        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #achievement

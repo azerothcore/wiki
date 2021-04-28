@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-ID | MEDIUMINT(8) UNSIGNED | 
+ID | MEDIUMINT UNSIGNED | 
 MaleText_loc1 | longtext | 
 MaleText_loc2 | longtext | 
 MaleText_loc3 | longtext | 
@@ -21,4 +21,4 @@ FemaleText_loc5 | longtext |
 FemaleText_loc6 | longtext | 
 FemaleText_loc7 | longtext | 
 FemaleText_loc8 | longtext | 
-VerifiedBuild | SMALLINT(5) | 
+VerifiedBuild | SMALLINT | 

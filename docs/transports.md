@@ -2,8 +2,8 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | INT(10) UNSIGNED | 
-Entry | MEDIUMINT(8) UNSIGNED | 
+Guid | INT UNSIGNED | 
+Entry | MEDIUMINT UNSIGNED | 
 Name | text | 
 ScriptName | char(64) | 
 

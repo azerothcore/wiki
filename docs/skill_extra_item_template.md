@@ -10,10 +10,10 @@ This table holds information about when using certain profession spells, you hav
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                            |
 |-----------------------------|--------------|------------|-----|------|---------|-------|------------------------------------|
-| [spellId][1]                | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the item creation spell |
-| [requiredSpecialization][2] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       | Specialization spell id            |
+| [spellId][1]                | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the item creation spell |
+| [requiredSpecialization][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Specialization spell id            |
 | [additionalCreateChance][3] | FLOAT        | SIGNED     |     | NO   | 0       |       | chance to create add               |
-| [additionalMaxNum][4]       | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       | max num of adds                    |
+| [additionalMaxNum][4]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       | max num of adds                    |
 
 [1]: #spellid
 [2]: #requiredspecialization

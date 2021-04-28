@@ -10,8 +10,8 @@ Contains all creature instances that have to be spawned/unspawned during defined
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra  | Comment                                                             |
 |-----------------|------------|------------|-----|------|---------|--------|---------------------------------------------------------------------|
-| [eventEntry][1] | TINYINT(3) | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [guid][2]       | INT(10)    | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
+| [eventEntry][1] | TINYINT | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
+| [guid][2]       | INT    | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
 
 [1]: #evententry
 [2]: #guid

@@ -8,12 +8,12 @@ Basically all item changes made when player changes faction.
 
 | Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------|------------|-----|------|---------|-------|---------|
-| [race_A][1]      | INT(8) | SIGNED     |     | NO   |         |       |         |
-| [alliance_id][2] | INT(8) | SIGNED     | PRI | NO   |         |       |         |
+| [race_A][1]      | INT | SIGNED     |     | NO   |         |       |         |
+| [alliance_id][2] | INT | SIGNED     | PRI | NO   |         |       |         |
 | [commentA][3]    | tex    | SIGNED     |     |      |         |       |         |
-| [race_H][4]      | INT(8) | SIGNED     |     | NO   |         |       |         |
-| [horde_id][5]    | INT(8) | SIGNED     | PRI | NO   |         |       |         |
-| [commentH][6]    | INT(8) | SIGNED     |     |      |         |       |         |
+| [race_H][4]      | INT | SIGNED     |     | NO   |         |       |         |
+| [horde_id][5]    | INT | SIGNED     | PRI | NO   |         |       |         |
+| [commentH][6]    | INT | SIGNED     |     |      |         |       |         |
 
 [1]: #race_a
 [2]: #alliance_id

@@ -8,31 +8,31 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------------|
-| [entryorguid][1]      | INT(11)     | SIGNED     | PRI | NO   |         |       |               |
-| [source_type][2]      | TINYINT(3)  | UNSIGNED   | PRI | NO   | 0       |       |               |
-| [id][3]               | SMALLINT(5) | UNSIGNED   | PRI | NO   | 0       |       |               |
-| [link][4]             | SMALLINT(5) | UNSIGNED   | PRI | NO   | 0       |       |               |
-| [event_type][5]       | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_phase_mask][6] | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_chance][7]     | TINYINT(3)  | UNSIGNED   |     | NO   | 100     |       |               |
-| [event_flags][8]      | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param1][5]     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param2][5]     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param3][5]     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param4][5]     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param5][5]     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_type][9]      | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param1][9]    | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param2][9]    | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param3][9]    | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param4][9]    | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param5][9]    | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param6][9]    | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_type][10]     | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param1][10]   | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param2][10]   | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param3][10]   | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param4][10]   | INT(10)     | UNSIGNED   |     | NO   | 0       |       |               |
+| [entryorguid][1]      | INT     | SIGNED     | PRI | NO   |         |       |               |
+| [source_type][2]      | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [id][3]               | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [link][4]             | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [event_type][5]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_phase_mask][6] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_chance][7]     | TINYINT  | UNSIGNED   |     | NO   | 100     |       |               |
+| [event_flags][8]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param1][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param2][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param3][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param4][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param5][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_type][9]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param1][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param2][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param3][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param4][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param5][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param6][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_type][10]     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param1][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param2][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param3][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param4][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
 | [target_x][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
 | [target_y][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
 | [target_z][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |

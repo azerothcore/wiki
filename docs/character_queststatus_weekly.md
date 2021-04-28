@@ -10,8 +10,8 @@ Holds information on the weekly quest status of every player. The timers reset a
 
 | Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 |------------|---------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]  | INT(10) | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT(10) | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
+| [guid][1]  | INT | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2] | INT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
 
 [1]: #guid
 [2]: #quest

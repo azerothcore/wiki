@@ -11,16 +11,16 @@ This table holds information on individual pet base stats based on level.
 |                                                   |              |                |         |          |             |           |             |
 |---------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                         | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [creature\_entry](#pet_levelstats-creature_entry) | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | NULL        |           |             |
-| [level](#pet_levelstats-level)                    | TINYINT(3)   | UNSIGNED       | PRI     | NO       | NULL        |           |             |
-| [hp](#pet_levelstats-hp)                          | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
-| [mana](#pet_levelstats-mana)                      | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
-| [armor](#pet_levelstats-armor)                    | INT(10)      | UNSIGNED       |         | NO       | 0           |           |             |
-| [str](#pet_levelstats-str)                        | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
-| [agi](#pet_levelstats-agi)                        | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
-| [sta](#pet_levelstats-sta)                        | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
-| [inte](#pet_levelstats-inte)                      | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
-| [spi](#pet_levelstats-spi)                        | SMALLINT(5)  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [creature\_entry](#pet_levelstats-creature_entry) | MEDIUMINT | UNSIGNED       | PRI     | NO       | NULL        |           |             |
+| [level](#pet_levelstats-level)                    | TINYINT   | UNSIGNED       | PRI     | NO       | NULL        |           |             |
+| [hp](#pet_levelstats-hp)                          | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [mana](#pet_levelstats-mana)                      | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [armor](#pet_levelstats-armor)                    | INT      | UNSIGNED       |         | NO       | 0           |           |             |
+| [str](#pet_levelstats-str)                        | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [agi](#pet_levelstats-agi)                        | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [sta](#pet_levelstats-sta)                        | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [inte](#pet_levelstats-inte)                      | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
+| [spi](#pet_levelstats-spi)                        | SMALLINT  | UNSIGNED       |         | NO       | NULL        |           |             |
 
 **Description of the fields**
 

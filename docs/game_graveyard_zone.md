@@ -4,9 +4,9 @@
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]         | MEDIUMINT(8) | unasigned  | PRI | NO   | 0       |       |         |
-| [ghost_zone][2] | MEDIUMINT(8) | unasigned  | PRI | NO   | 0       |       |         |
-| [faction][3]    | SMALLINT(5)  | unasigned  |     | NO   | 0       |       |         |
+| [id][1]         | MEDIUMINT | unasigned  | PRI | NO   | 0       |       |         |
+| [ghost_zone][2] | MEDIUMINT | unasigned  | PRI | NO   | 0       |       |         |
+| [faction][3]    | SMALLINT  | unasigned  |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #ghost_zone

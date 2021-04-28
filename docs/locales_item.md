@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | MEDIUMINT(8) UNSIGNED | 
+Entry | MEDIUMINT UNSIGNED | 
 Name_loc1 | VARCHAR(100) | 
 Name_loc2 | VARCHAR(100) | 
 Name_loc3 | VARCHAR(100) | 
@@ -21,4 +21,4 @@ Description_loc5 | VARCHAR(255) |
 Description_loc6 | VARCHAR(255) | 
 Description_loc7 | VARCHAR(255) | 
 Description_loc8 | VARCHAR(255) | 
-VerifiedBuild | SMALLINT(5) | 
+VerifiedBuild | SMALLINT | 

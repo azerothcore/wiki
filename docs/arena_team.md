@@ -10,21 +10,21 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 |-----------------------|-------------|------------|-----|------|---------|--------|---------|
-| [arenaTeamId][1]      | INT(10)     | UNSIGNED   | PRI | NO   |         | Unique |         |
+| [arenaTeamId][1]      | INT     | UNSIGNED   | PRI | NO   |         | Unique |         |
 | [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
-| [captainGuid][3]      | INT(10)     | UNSIGNED   |     | NO   |         |        |         |
-| [type][4]             | TINYINT(3)  | UNSIGNED   |     | NO   |         |        |         |
-| [rating][5]           | SMALLINT(5) | UNSIGNED   |     | NO   |         |        |         |
-| [seasonGames][6]      | SMALLINT(5) | UNSIGNED   |     | NO   |         |        |         |
-| [seasonWins][7]       | SMALLINT(5) | UNSIGNED   |     | NO   |         |        |         |
-| [weekGames][8]        | SMALLINT(5) | UNSIGNED   |     | NO   |         |        |         |
-| [weekWins][9]         | SMALLINT(5) | UNSIGNED   |     | NO   |         |        |         |
-| [rank][10]            | INT(10)     | UNSIGNED   |     | NO   |         |        |         |
-| [BackgroundColor][11] | INT(10)     | UNSIGNED   |     | NO   |         |        |         |
-| [EmblemStyle][12]     | TINYINT(3)  | UNSIGNED   |     | NO   |         |        |         |
-| [EmblemColor][13]     | INT(10)     | UNSIGNED   |     | NO   |         |        |         |
-| [BorderStyle][14]     | TINYINT(3)  | UNSIGNED   |     | NO   |         |        |         |
-| [BorderColor][15]     | INT(10)     | UNSIGNED   |     | NO   |         |        |         |
+| [captainGuid][3]      | INT     | UNSIGNED   |     | NO   |         |        |         |
+| [type][4]             | TINYINT  | UNSIGNED   |     | NO   |         |        |         |
+| [rating][5]           | SMALLINT | UNSIGNED   |     | NO   |         |        |         |
+| [seasonGames][6]      | SMALLINT | UNSIGNED   |     | NO   |         |        |         |
+| [seasonWins][7]       | SMALLINT | UNSIGNED   |     | NO   |         |        |         |
+| [weekGames][8]        | SMALLINT | UNSIGNED   |     | NO   |         |        |         |
+| [weekWins][9]         | SMALLINT | UNSIGNED   |     | NO   |         |        |         |
+| [rank][10]            | INT     | UNSIGNED   |     | NO   |         |        |         |
+| [BackgroundColor][11] | INT     | UNSIGNED   |     | NO   |         |        |         |
+| [EmblemStyle][12]     | TINYINT  | UNSIGNED   |     | NO   |         |        |         |
+| [EmblemColor][13]     | INT     | UNSIGNED   |     | NO   |         |        |         |
+| [BorderStyle][14]     | TINYINT  | UNSIGNED   |     | NO   |         |        |         |
+| [BorderColor][15]     | INT     | UNSIGNED   |     | NO   |         |        |         |
 
 [1]: #arenateamid
 [2]: #name

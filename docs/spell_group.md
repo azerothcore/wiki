@@ -8,8 +8,8 @@ Table used to group spells for varius checks in the core. One spell may be added
 
 | Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|---------|------------|-----|------|---------|-------|---------|
-| [id][1]       | INT(11) | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [spell_id][2] | INT(11) | SIGNED     | PRI | NO   | 0       |       |         |
+| [id][1]       | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [spell_id][2] | INT | SIGNED     | PRI | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #spell_id

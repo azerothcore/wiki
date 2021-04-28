@@ -10,20 +10,20 @@ This table contains main data about all mails in the game.
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                            |
 |---------------------|--------------|------------|-----|------|---------|-------|------------------------------------|
-| [id][1]             | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       | Identifier                         |
-| [messageType][2]    | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [stationery][3]     | TINYINT(3)   | SIGNED     |     | NO   | 41      |       |                                    |
-| [mailTemplateId][4] | MEDIUMINT(5) | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [sender][5]         | INT(10)      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
-| [receiver][6]       | INT(10)      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
+| [id][1]             | INT      | UNSIGNED   | PRI | NO   | 0       |       | Identifier                         |
+| [messageType][2]    | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [stationery][3]     | TINYINT   | SIGNED     |     | NO   | 41      |       |                                    |
+| [mailTemplateId][4] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [sender][5]         | INT      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
+| [receiver][6]       | INT      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
 | [subject][7]        | longtext     | SIGNED     |     | YES  | NULL    |       |                                    |
 | [body][8]           | longtext     | SIGNED     |     | YES  |         |       |                                    |
-| [has_items][9]      | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [expire_time][10]   | INT(10)      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [deliver_time][11]  | INT(10)      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [money][12]         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [cod][13]           | INT(10)      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [checked][14]       | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [has_items][9]      | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [expire_time][10]   | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [deliver_time][11]  | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [money][12]         | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [cod][13]           | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [checked][14]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                    |
 
 [1]: #id
 [2]: #messagetype

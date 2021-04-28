@@ -10,11 +10,11 @@ This table contains conditions to meet for the specified game event to be comple
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
 |-----------------------------|--------------|------------|-----|------|---------|-------|-------------------------|
-| [eventEntry][1]             | TINYINT(3)   | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
-| [condition_id][2]           | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       |                         |
+| [eventEntry][1]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
+| [condition_id][2]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |                         |
 | [req_num][3]                | FLOAT        | SIGNED     |     | YES  | 0       |       |                         |
-| [max_world_state_field][4]  | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                         |
-| [done_world_state_field][5] | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                         |
+| [max_world_state_field][4]  | SMALLINT  | UNSIGNED   |     | NO   |         |       |                         |
+| [done_world_state_field][5] | SMALLINT  | UNSIGNED   |     | NO   |         |       |                         |
 | [description][6]            | VARCHAR(25)  | SIGNED     |     | NO   |         |       |                         |
 
 [1]: #evententry

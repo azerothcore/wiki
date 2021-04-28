@@ -8,8 +8,8 @@ Table used to add restrictions for learning spells from trainer. Player can't le
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| [spell_id][1]  | MEDIUMINT(9) | SIGNED     | PRI | NO   | 0       |       |         |
-| [req_spell][2] | MEDIUMINT(9) | SIGNED     | PRI | NO   | 0       |       |         |
+| [spell_id][1]  | MEDIUMINT | SIGNED     | PRI | NO   | 0       |       |         |
+| [req_spell][2] | MEDIUMINT | SIGNED     | PRI | NO   | 0       |       |         |
 
 [1]: #spell_id
 [2]: #req_spell

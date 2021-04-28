@@ -10,9 +10,9 @@ Contains information on the location where characters get teleported when they u
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |-------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | INT(10)     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mapId][2]  | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
-| [zoneId][3] | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
+| [guid][1]   | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [mapId][2]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
+| [zoneId][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
 | [posX][4]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate x             |
 | [posY][5]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate y             |
 | [posZ][6]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate z             |

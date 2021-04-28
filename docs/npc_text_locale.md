@@ -11,7 +11,7 @@ This table is used to provide localized clients with localized string for npc\_t
 |                                             |              |                |         |          |             |           |             |
 |---------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                   | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#npc_text_locale-ID)                   | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [ID](#npc_text_locale-ID)                   | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
 | [Text0\_0\_loc1](#npc_text_locale-Text_loc) | longtext     | SIGNED         |         | YES      | NULL        |           |             |
 | [Text0\_0\_loc2](#npc_text_locale-Text_loc) | longtext     | SIGNED         |         | YES      | NULL        |           |             |
 | [Text0\_0\_loc3](#npc_text_locale-Text_loc) | longtext     | SIGNED         |         | YES      | NULL        |           |             |
