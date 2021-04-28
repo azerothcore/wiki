@@ -1,3 +1,7 @@
+---
+tableofcontents: 1
+---
+
 # The ScriptAI system
 
 The ScriptAI system implemented by AC uses a special [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) strategy to implement an event-driven programming which is also the **CORE** of our modular system.
