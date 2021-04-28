@@ -182,7 +182,7 @@ to change the behaviour before and after the config is loaded.
 
 ### How to change the behaviour of a function (filtering)
 
-With hooks you can't only run specific actions at a specific time, you can even change the behaviour of the script where the hook is called
+With hooks you can't only run specific actions at a specific time, you can even change the behaviour of the function where the hook is called
 To do so, you have 2 solutions:
 
 #### 1) Using reference parameters
