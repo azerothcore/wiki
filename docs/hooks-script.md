@@ -8,13 +8,13 @@ The ScriptAI system implemented by AC uses a special [Observer pattern](https://
 
 This guide, together with our [module system](Create-a-Module.md) lets you extend the AzerothCore without patching it directly. This allows you to update your repository by keeping your additions and customizations conflict-free!
 
-# Resources
+## Resources
 
-## Hook List
+### Hook List
 
 The list of the hooks can be found inside the [ScriptMgr.h file](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
-## Glossary
+### Glossary
 
 * **Hook**: A function that is declared inside a **_ScriptObject_** and that is defined by the **_Listeners_**
 * **ScriptObject**: Abstract class that should be extended to create the **_Observer_**.
