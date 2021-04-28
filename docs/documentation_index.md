@@ -29,5 +29,5 @@
 * [The Modular Structure](The-Modular-Structure.md)
 * [Hooks Bash](Hooks-Bash.md)
 * [Hooks Cmake](Hooks-Cmake.md)
-* [Hooks C++](Create-a-new-Hook.md)
+* [Hooks C++](hooks-script.md)
 
