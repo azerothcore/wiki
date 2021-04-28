@@ -1,11 +1,19 @@
-[Database Structure](Database-Structure) > [World-Database](World-Database) > [transports](transports)
+# transports
 
-Column | Type | Description
---- | --- | ---
-Guid | INT UNSIGNED | 
-Entry | MEDIUMINT UNSIGNED | 
-Name | text | 
-ScriptName | char(64) | 
+[<-Back-to:World](database-world.md)
+
+**The \`transports\` table**
+
+This table contains all type 15 transports (Boats and Zeppelins). All other transport types have their frame time read from TransportAnimation.dbc.
+
+**Structure**
+
+| Field | Type | Attribute | Key | Null | Default | Extra | Comment
+:--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
+[Guid][1] | INT | UNSIGNED | PRI | NO | | AUTO_INCREMENT |
+[Entry][2] | MEDIUMINT | UNSIGNED | UNIQUE | NO | 0 |
+[Name][3] | TEXT | | | YES | NULL |
+[ScriptName][4] | CHAR(64) | | | NO | ' '
 
 [1]: #guid
 [2]: #entry
@@ -14,21 +22,20 @@ ScriptName | char(64) |
 
 **Description of the fields**
 
-### Guid
+### guid
 
-Unique identifier for this transport. Each time a new one is added, it has to add +1 value of the previous number.
+Unique identifier for transport. Each time you add a new guid simply add one (1) from max guid.
 
-### Entry
+### entry
 
-[GameObject](gameobject_template) Entry to be used for this transport. It must be a GameObject whose Type is 15.
+[gameobject_template.entry](gameobject_template#entry) to be used for this transport. It must be a type 15 gameobject.
 
-### Name
+### name
 
-Name or comment used to detail the Transport entry.
-
-##### Example:
-Undercity, Tirisfal Glades and Grom'gol Base Camp, Stranglethorn Vale ("The Purple Princess")
+This is an arbitrary to describe the transport entry.
 
 ### ScriptName
 
-Undefined.
+`field-no-description|4`
+
+**Note:** Transports have their own map: https://wow.tools/dbc/?dbc=map&build=3.3.5.12340#page=1&colFilter[1]=Transport

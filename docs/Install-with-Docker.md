@@ -77,7 +77,15 @@ NOTE: This command should be executed only at the first installation and when th
 ```
 ./acore.sh docker build
 ```
-This will take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
+It will build docker images, compile the core and import needed SQL files automatically!
+This may take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
+
+**NOTE For dev:** if you are working with code and you need a fast way to compile your binaries, the command above
+can be a bit overkill for you because you probably do not need to rebuild images or import SQL if you have not changed them. 
+Therefore, we suggest to use one of the following solution instead:
+
+* `./acore.sh docker build:compiler` it only builds the dev image and compiles the sources without importing sql.
+* `./acore.sh docker dev:build` it's similar to the previous command, but it uses the dev-container which uses volumes instead of the container. It can be faster on some configurations.
 
 **3) Run the containers**
 
@@ -124,14 +132,11 @@ First of all, you just need to use the `git` tool to update your repository by r
 
 Then you can just run the following command:
 
-`./acore.sh docker build`: to rebuild the sources and generating new binaries. Moreover, it will import latest database changes.
+`./acore.sh docker build`: to rebuild the images and generate new binaries. Moreover, it will also import latest database changes.
 
-NOTE: sometime you also need to recreate the docker images and re-download new version of the client data. We do not update so often neither the Dockerfile nor the client data, but when it happens you can run the following commands:
+NOTE:  We do not update so often the client data, but when it happens you can run the following command:
 
-1. `docker-compose down` : it will delete the containers (not the volumes, so your data will be safe).
-2. `docker-compose build`: it will rebuild your docker images based on the Dockerfile (normally it's automatically done by the `./acore.sh docker start:app/build` commands)
-3. `./acore.sh client-data`: it will download the new version of the client data if there's a new version available
-
+`./acore.sh client-data`: it will download the new version of the client data if there's a new version available
 
 ### How to run the worldserver with GDB
 
@@ -259,7 +264,7 @@ After stopping and removing your containers you can proceed to remove the volume
 
 **Note** If you've changed your folder name from the default `azerothcore-wotlk` the volume name will be slightly different. To find the new volume name you can use the command `docker volume ls`. The volume should be labelled something along the lines of `xxxx_ac-database`.
 
-### macOS optimizations
+### macOS optimizations (for dev server)
 
 The **osxfs** is well known to have [performance limitations](https://github.com/docker/for-mac/issues/1592), that's why we optimized the docker-compose 
 file for the **osxfs** by using volumes and the "delegated" strategy. However, we also introduced an experimental feature to let you use named volumes instead of binded ones.
