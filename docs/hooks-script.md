@@ -12,9 +12,9 @@ The list of the hooks can be found inside the [ScriptMgr.h file](https://github.
 
 ## Glossary
 
-* **Hook**: A function that is declared inside a **_ScriptObject_** and that calls the **_Listeners_**
+* **Hook**: A function that is declared inside a **_ScriptObject_** and that is defined by the **_Listeners_**
 * **ScriptObject**: Abstract class that should be extended to create the **_Observer_**.
-* **Script type**: The class that extends the `ScriptObject` (e.g. `PLayerScript`, `CreatureScript`, etc.), 
+* **Script type**: The class that extends the `ScriptObject` and contains hooks (e.g. `PLayerScript`, `CreatureScript`, etc.), 
   when you extend the script type class you are initializing a **_Concrete Observer_**
 * **ScriptRegistry**: This class contains the registry of all the registered Observers.
 * **ScriptMgr**: The singleton class that contains the list of all the available hooks and acts as a **_Observable_** by notifying the **_Listeners_** when an event is dispatched.
