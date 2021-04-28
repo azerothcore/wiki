@@ -51,8 +51,8 @@ When a number is 4 Bytes long, this means that your number actually uses 32 bits
 
 00000000 00000000 00000000 00000000
 
-The 32-bit integer data type can hold integer values in the range of −2,147,483,648 to 2,147,483,647. You may also refer to this data type as SIGNED INT or UNSIGNED. Unsigned INT means that the 32-bit UNSIGNED INT data type can hold integer values in the range of 0 to 4,294,967,295.
-The reason why the UNSIGNED INT will always store more positive values vs a SIGNED is because we use the negative values of the SIGNED INT as positives and this duplicates the ammout of positive values you can store in a variable.
+The 32-bit integer data type can hold integer values in the range of −2,147,483,648 to 2,147,483,647. You may also refer to this data type as signed int or unsigned. Unsigned int means that the 32-bit unsigned int data type can hold integer values in the range of 0 to 4,294,967,295.
+The reason why the unsigned int will always store more positive values vs a signed is because we use the negative values of the signed int as positives and this duplicates the ammout of positive values you can store in a variable.
 
 ## What is their usage for?
 
@@ -69,7 +69,7 @@ Or instead use a single integer variable and use each bit of its internal 8 bits
 
 ``` c++
 // 00000101
-INT maskValue = 5;
+int maskValue = 5;
 ```
 
 Above, the the first bit is true, which represents the first variable. The 2nd is false, which represents the 2nd variable. The third true. And so on...
@@ -191,7 +191,7 @@ Just like two conditions, you can compare 2 bits and get a new bitmask because, 
 
 ``` C++
 // Here we initialize MyState with 5 aka 00000101 if we talk in bit language
-INT MyState = 5;
+int MyState = 5;
 
 // Then we can add a mask to it with the following syntax
 MyState |= 128;
@@ -223,7 +223,7 @@ Well, we just compared bit from first mask and bit from second mask and compared
 ``` C++
 // Compare the values from mask 1 and 2
 // If they are different then the XOR condition is true
-for (INT i = 0; i < 8; ++i)
+for (int i = 0; i < 8; ++i)
 {
   if (bitmask_1[i] != bitmask_2[i])
     printf("This condition is true")
