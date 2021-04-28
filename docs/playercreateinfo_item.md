@@ -10,8 +10,8 @@ This table is used for any custom items that you might want to give to character
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | :-----------|:----------|:-----------|:----|:-----|:--------|:------|:--------|
-| [race][1]   | tinyint   | unsigned   | PRI | NO   | 0       |       |         |
-| [class][2]  | tinyint   | unsigned   | PRI | NO   | 0       |       |         |
+| [race][1]   | TINYINT   | unsigned   | PRI | NO   | 0       |       |         |
+| [class][2]  | TINYINT   | unsigned   | PRI | NO   | 0       |       |         |
 | [itemid][3] | MEDIUMINT | unsigned   | PRI | NO   | 0       |       |         |
 | [amount][4] | SMALLINT  | unsigned   |     | NO   | 1       |       |         |
 | [Note][5]   | VARCHAR   |            |     | YES  | NULL    |       |         |

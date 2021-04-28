@@ -71,14 +71,14 @@
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">tinyint(4)</td>
+                    <td colspan="1" class="confluenceTd">TINYINT(4)</td>
                     <td colspan="1" class="confluenceTd">int8</td>
                     <td colspan="1" class="confluenceTd"><code><span>int16 val = fields[n].GetInt16();</span></code>
                     </td>
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">tinyint(3) unsigned</td>
+                    <td colspan="1" class="confluenceTd">TINYINT(3) unsigned</td>
                     <td colspan="1" class="confluenceTd">uint8</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint8 val = fields[n].GetUInt8();</span></code>
                     </td>

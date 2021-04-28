@@ -8,8 +8,8 @@ This table holds information on what default actions a brand new character shoul
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|-------------|------------|-----|------|---------|-------|---------|
-| [race][1]   | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
-| [class][2]  | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
+| [race][1]   | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       |         |
+| [class][2]  | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       |         |
 | [button][3] | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
 | [action][4] | int(11)     | unsigned   |     | NO   | 0       |       |         |
 | [type][5]   | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |

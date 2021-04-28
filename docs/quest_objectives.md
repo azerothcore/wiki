@@ -12,8 +12,8 @@ This table provides answer for a very important question. What do I need to do i
 |------------------------|--------------|------------|------|-----|---------|---------|
 | [ID][1]                | MEDIUMINT(8) | unsigned   | NO   | PRI | 0       |         |
 | [QuestID][2]           | MEDIUMINT(8) | unsigned   | NO   |     | 0       |         |
-| [Type][3]              | tinyint(3)   | unsigned   | NO   |     | 0       |         |
-| [StorageIndex][4]      | tinyint(3)   | signed     | NO   |     | 0       |         |
+| [Type][3]              | TINYINT(3)   | unsigned   | NO   |     | 0       |         |
+| [StorageIndex][4]      | TINYINT(3)   | signed     | NO   |     | 0       |         |
 | [ObjectID][5]          | int(10)      | signed     | NO   |     | 0       |         |
 | [Amount][6]            | int(10)      | signed     | NO   |     | 0       |         |
 | [Flags][7]             | int(10)      | unsigned   | NO   |     | 0       |         |

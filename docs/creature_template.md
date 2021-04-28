@@ -18,30 +18,30 @@ This table contains the description of creatures. Each spawned creature is an in
 | [subname](#subname)                             | char(100)             | YES  |     | (NULL)  |       |                                      |
 | [IconName](#iconname)                           | char(100)             | YES  |     | (NULL)  |       |                                      |
 | [gossip_menu_id](#gossip_menu_id)             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
-| [minlevel](#minlevel)                           | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
-| [maxlevel](#maxlevel)                           | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
+| [minlevel](#minlevel)                           | TINYINT(3) unsigned   | NO   |     | 1       |       |                                      |
+| [maxlevel](#maxlevel)                           | TINYINT(3) unsigned   | NO   |     | 1       |       |                                      |
 | [exp](#exp)                                     | SMALLINT(6)           | NO   |     | 0       |       |                                      |
 | [faction](#faction)                             | SMALLINT(5) unsigned  | NO   |     | 0       |       |                                      |
 | [npcflag](#npcflag)                             | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [speed_walk](#speed_walk)                      | FLOAT                 | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speed_run)                        | FLOAT                 | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
 | [scale](#scale)                                 | FLOAT                 | NO   |     | 1       |       |                                      |
-| [rank](#rank)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
-| [dmgschool](#dmgschool)                         | tinyint(4)            | NO   |     | 0       |       |                                      |
+| [rank](#rank)                                   | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
+| [dmgschool](#dmgschool)                         | TINYINT(4)            | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)               | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [RangeAttackTime](#rangeattacktime)             | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [BaseVariance](#basevariance)                   | FLOAT                 | NO   |     | 1       |       |                                      |
 | [RangeVariance](#rangevariance)                 | FLOAT                 | NO   |     | 1       |       |                                      |
-| [unit_class](#unit_class)                      | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
+| [unit_class](#unit_class)                      | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
 | [unit_flags](#unit_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [unit_flags2](#unit_flags2)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [dynamicflags](#dynamicflags)                   | int(10) unsigned      | NO   |     | 0       |       |                                      |
-| [family](#family)                               | tinyint(4)            | NO   |     | 0       |       |                                      |
-| [trainer_type](#trainer_type)                  | tinyint(4)            | NO   |     | 0       |       |                                      |
+| [family](#family)                               | TINYINT(4)            | NO   |     | 0       |       |                                      |
+| [trainer_type](#trainer_type)                  | TINYINT(4)            | NO   |     | 0       |       |                                      |
 | [trainer_spell](#trainer_spell)                | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
-| [trainer_class](#trainer_class)                | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
-| [trainer_race](#trainer_race)                  | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
-| [type](#type)                                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
+| [trainer_class](#trainer_class)                | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
+| [trainer_race](#trainer_race)                  | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
+| [type](#type)                                   | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
 | [type_flags](#type_flags)                      | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                               | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [pickpocketloot](#pickpocketloot)               | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
@@ -51,17 +51,17 @@ This table contains the description of creatures. Each spawned creature is an in
 | [mingold](#mingold)                             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [maxgold](#maxgold)                             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [AIName](#ainame)                               | char(64)              | NO   |     |         |       |                                      |
-| [MovementType](#movementtype)                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
-| [InhabitType](#inhabittype)                     | tinyint(3) unsigned   | NO   |     | 3       |       |                                      |
+| [MovementType](#movementtype)                   | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
+| [InhabitType](#inhabittype)                     | TINYINT(3) unsigned   | NO   |     | 3       |       |                                      |
 | [HoverHeight](#hoverheight)                     | FLOAT                 | NO   |     | 1       |       |                                      |
 | [HealthModifier](#healthmodifier)               | FLOAT                 | NO   |     | 1       |       |                                      |
 | [ManaModifier](#manamodifier)                   | FLOAT                 | NO   |     | 1       |       |                                      |
 | [ArmorModifier](#armormodifier)                 | FLOAT                 | NO   |     | 1       |       |                                      |
 | [DamageModifier](#damagemodifier)               | FLOAT                 | NO   |     | 1       |       |                                      |
 | [ExperienceModifier](#experiencemodifier)       | FLOAT                 | NO   |     | 1       |       |                                      |
-| [RacialLeader](#racialleader)                   | tinyint(3) unsigned   | NO   |     | 0       |       |                                      |
+| [RacialLeader](#racialleader)                   | TINYINT(3) unsigned   | NO   |     | 0       |       |                                      |
 | [movementId](#movementid)                       | int(11) unsigned      | NO   |     | 0       |       |                                      |
-| [RegenHealth](#regenhealth)                     | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
+| [RegenHealth](#regenhealth)                     | TINYINT(3) unsigned   | NO   |     | 1       |       |                                      |
 | [mechanic_immune_mask](#mechanic_immune_mask) | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [spell_school_immune_mask](#spell_school_immune_mask) | int(3) unsigned | NO | | 0
 | [flags_extra](#flags_extra)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |

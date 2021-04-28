@@ -5,8 +5,8 @@
 Column | Type | Description
 --- | --- | ---
 Entry | MEDIUMINT(8) unsigned | 
-Groupid | tinyint(3) unsigned | 
-Id | tinyint(3) unsigned | 
+Groupid | TINYINT(3) unsigned | 
+Id | TINYINT(3) unsigned | 
 Text_loc1 | text | 
 Text_loc2 | text | 
 Text_loc3 | text | 

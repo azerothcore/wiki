@@ -3,7 +3,7 @@
 Column | Type | Description
 --- | --- | ---
 Fight_id | int(10) unsigned | 
-Member_id | tinyint(3) unsigned | 
+Member_id | TINYINT(3) unsigned | 
 Name | char(20) | 
 Guid | int(10) unsigned | 
 Team | int(10) unsigned | 

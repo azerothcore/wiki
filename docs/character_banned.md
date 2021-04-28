@@ -15,7 +15,7 @@ This table lists all of the characters that have been banned along with the date
 | [unbandate][3] | int(10)      | unsigned   |     | NO   | 0       |       |                          |
 | [bannedby][4]  | VARCHAR(50)  | signed     |     | NO   |         |       |                          |
 | [banreason][5] | VARCHAR(255) | signed     |     | NO   |         |       |                          |
-| [active][6]    | tinyint(3)   | unsigned   |     | NO   | 1       |       |                          |
+| [active][6]    | TINYINT(3)   | unsigned   |     | NO   | 1       |       |                          |
 
 [1]: #guid
 [2]: #bandate

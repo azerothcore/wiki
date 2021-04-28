@@ -16,10 +16,10 @@ This table sets up information on all available realms. Each row controls a diff
 | [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localSubnetMask][5]       | VARCHAR(255) |            |     | NO   | 255.255.255.0 |                |         |
 | [port][6]                  | SMALLINT(5)  | unsigned   |     | NO   | 8085          |                |         |
-| [icon][7]                  | tinyint(3)   | unsigned   |     | NO   | 0             |                |         |
-| [flag][8]                  | tinyint(3)   | unsigned   |     | NO   | 2             |                |         |
-| [timezone][9]              | tinyint(3)   | unsigned   |     | NO   | 0             |                |         |
-| [allowedSecurityLevel][10] | tinyint(3)   | unsigned   |     | NO   | 0             |                |         |
+| [icon][7]                  | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
+| [flag][8]                  | TINYINT(3)   | unsigned   |     | NO   | 2             |                |         |
+| [timezone][9]              | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
+| [allowedSecurityLevel][10] | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
 | [population][11]           | FLOAT        | unsigned   |     | NO   | 0             |                |         |
 | [gamebuild][12]            | int(10)      | unsigned   |     | NO   | 12340         |                |         |
 

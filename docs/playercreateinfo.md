@@ -10,8 +10,8 @@ This table holds the start positions of each class-race combinations for all new
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [race][1]        | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [class][2]       | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [race][1]        | TINYINT(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [class][2]       | TINYINT(3)   | unsigned   | PRI | NO   | 0       |       |         |
 | [map][3]         | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |         |
 | [zone][4]        | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [position_x][5]  | FLOAT        | signed     |     | NO   | 0       |       |         |

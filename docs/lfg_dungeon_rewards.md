@@ -11,7 +11,7 @@
 | Field              | Type       | Attributes | Key | Null | Default | Extra | Comment                                                                                         |
 |--------------------|------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------------------------------|
 | [dungeonId][1]     | int(10)    | unsigned   | PRI | NO   | 0       |       | Dungeon entry from dbc                                                                          |
-| [maxlevel][2]      | tinyint(3) | unsigned   | PRI | NO   | 0       |       | Max level at which this reward is rewarded                                                      |
+| [maxlevel][2]      | TINYINT(3) | unsigned   | PRI | NO   | 0       |       | Max level at which this reward is rewarded                                                      |
 | [firstQuestId][3]  | int(10)    | unsigned   |     | NO   | 0       |       | Quest id with rewards for first dungeon this day                                                |
 | [firstMoneyVar][4] | int(10)    | unsigned   |     | NO   | 0       |       | Money multiplier for completing the dungeon first time in a day with less players than max      |
 | [firstXPVar][5]    | int(10)    | unsigned   |     | NO   | 0       |       | Experience multiplier for completing the dungeon first time in a day with less players than max |

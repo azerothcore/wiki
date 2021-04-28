@@ -11,7 +11,7 @@ This table holds the information on all of the ranks available in a guild along 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|------------|-----|------|---------|-------|---------|
 | [guildid][1]         | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
-| [rid][2]             | tinyint(3)   | unsigned   | PRI | NO   |         |       |         |
+| [rid][2]             | TINYINT(3)   | unsigned   | PRI | NO   |         |       |         |
 | [rname][3]           | VARCHAR(20)  | signed     |     | NO   | "       |       |         |
 | [rights][4]          | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [BankMoneyPerDay][5] | int(10)      | unsigned   |     | NO   | 0       |       |         |

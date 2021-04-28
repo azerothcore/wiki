@@ -12,7 +12,7 @@ Contains all the individual talent data for each character. This is only used as
 |------------------|--------------|------------|-----|------|---------|-------|---------|
 | [guid][1]        | int(10)      | unsigned   | PRI | NO   | NULL    |       |         |
 | [spell][2]       | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    |       |         |
-| [talentGroup][3] | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [talentGroup][3] | TINYINT(3)   | unsigned   | PRI | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #spell

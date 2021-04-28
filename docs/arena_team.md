@@ -13,7 +13,7 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 | [arenaTeamId][1]      | int(10)     | unsigned   | PRI | NO   |         | Unique |         |
 | [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
 | [captainGuid][3]      | int(10)     | unsigned   |     | NO   |         |        |         |
-| [type][4]             | tinyint(3)  | unsigned   |     | NO   |         |        |         |
+| [type][4]             | TINYINT(3)  | unsigned   |     | NO   |         |        |         |
 | [rating][5]           | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [seasonGames][6]      | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [seasonWins][7]       | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
@@ -21,9 +21,9 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 | [weekWins][9]         | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [rank][10]            | int(10)     | unsigned   |     | NO   |         |        |         |
 | [BackgroundColor][11] | int(10)     | unsigned   |     | NO   |         |        |         |
-| [EmblemStyle][12]     | tinyint(3)  | unsigned   |     | NO   |         |        |         |
+| [EmblemStyle][12]     | TINYINT(3)  | unsigned   |     | NO   |         |        |         |
 | [EmblemColor][13]     | int(10)     | unsigned   |     | NO   |         |        |         |
-| [BorderStyle][14]     | tinyint(3)  | unsigned   |     | NO   |         |        |         |
+| [BorderStyle][14]     | TINYINT(3)  | unsigned   |     | NO   |         |        |         |
 | [BorderColor][15]     | int(10)     | unsigned   |     | NO   |         |        |         |
 
 [1]: #arenateamid

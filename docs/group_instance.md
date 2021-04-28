@@ -12,7 +12,7 @@
 |----------------|------------|------------|-----|------|---------|-------|---------|
 | [guid][1]      | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [instance][2]  | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [permanent][3] | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [permanent][3] | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #instance

@@ -12,9 +12,9 @@ This table contains the access requirements to enter an instance.
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------|
 | [mapId][1]                  | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
-| [difficulty][2]             | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [level_min][3]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| [level_max][4]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [difficulty][2]             | TINYINT(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [level_min][3]              | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
+| [level_max][4]              | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
 | [item_level][5]             | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |         |
 | [item][6]                   | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [item2][7]                  | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |

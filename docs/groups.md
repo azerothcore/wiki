@@ -12,9 +12,9 @@ This table holds basic info about groups.
 |----------------------|------------|------------|-----|------|---------|-------|---------|
 | [guid][1]            | int(10)    | unsigned   | PRI | NO   |         |       |         |
 | [leaderGuid][2]      | int(10)    | unsigned   |     | NO   |         |       |         |
-| [lootMethod][3]      | tinyint(3) | unsigned   |     | NO   |         |       |         |
+| [lootMethod][3]      | TINYINT(3) | unsigned   |     | NO   |         |       |         |
 | [looterGuid][4]      | int(10)    | unsigned   |     | NO   |         |       |         |
-| [lootThreshold][5]   | tinyint(3) | unsigned   |     | NO   |         |       |         |
+| [lootThreshold][5]   | TINYINT(3) | unsigned   |     | NO   |         |       |         |
 | [icon1][6]           | int(10)    | unsigned   |     | NO   |         |       |         |
 | [icon2][7]           | int(10)    | unsigned   |     | NO   |         |       |         |
 | [icon3][8]           | int(10)    | unsigned   |     | NO   |         |       |         |
@@ -23,9 +23,9 @@ This table holds basic info about groups.
 | [icon6][11]          | int(10)    | unsigned   |     | NO   |         |       |         |
 | [icon7][12]          | int(10)    | unsigned   |     | NO   |         |       |         |
 | [icon8][13]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [groupType][14]      | tinyint(3) | unsigned   |     | NO   |         |       |         |
-| [difficulty][15]     | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
-| [raiddifficulty][16] | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [groupType][14]      | TINYINT(3) | unsigned   |     | NO   |         |       |         |
+| [difficulty][15]     | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
+| [raiddifficulty][16] | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #leaderguid

@@ -13,9 +13,9 @@
 | [guid][1]             | int(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
 | [caster_guid][2]      | BIGINT(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
 | [spell][3]            | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                               |
-| [effect_mask][4]      | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [recalculate_mask][5] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [stackcount][6]       | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [effect_mask][4]      | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
+| [recalculate_mask][5] | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
+| [stackcount][6]       | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 | [amount0][7]          | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
 | [amount1][8]          | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
 | [amount2][9]          | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
@@ -24,7 +24,7 @@
 | [base_amount2][12]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
 | [maxduration][13]     | int(11)      | signed     |     | NO   |         |       |                               |
 | [remaintime][14]      | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaincharges][15]   | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [remaincharges][15]   | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 
 [1]: #guid
 [2]: #caster_guid

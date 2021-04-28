@@ -12,8 +12,8 @@ Holds information on the quest status of each character.
 |-------------------|-------------|------------|-----|------|---------|-------|--------------------------|
 | [guid][1]         | int(10)     | unsigned   | PRI | NO   |         |       | Global Unique Identifier |
 | [quest][2]        | int(10)     | unsigned   | PRI | NO   |         |       | Quest Identifier         |
-| [status][3]       | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
-| [explored][4]     | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
+| [status][3]       | TINYINT(3)  | unsigned   |     | NO   |         |       |                          |
+| [explored][4]     | TINYINT(3)  | unsigned   |     | NO   |         |       |                          |
 | [timer][5]        | int(10)     | unsigned   |     | NO   |         |       |                          |
 | [mobcount1][6]    | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
 | [mobcount2][7]    | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |

@@ -23,7 +23,7 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 | [aiAnimKit][7]       | SMALLINT(6)         | signed     |     | NO   |         |       |         |
 | [movementAnimKit][8] | SMALLINT(6)         | signed     |     | NO   |         |       |         |
 | [meleeAnimKit][9]    | SMALLINT(6)         | signed     |     | NO   |         |       |         |
-| [isLarge][10]        | tinyint(1)          | unsigned   |     | NO   |         |       |         |
+| [isLarge][10]        | TINYINT(1)          | unsigned   |     | NO   |         |       |         |
 | [auras][11]          | text                |            |     | YES  |         |       |         |
 
 [1]: #guid/entry

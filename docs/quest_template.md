@@ -11,13 +11,13 @@ Contains all basic definitions of available quests.
 | Field                              | Type                 | Null | Key | Default | Extra | Comment |
 |------------------------------------|----------------------|------|-----|---------|-------|---------|
 | ID                                 | int(10) unsigned     | NO   | PRI | 0       |       |         |
-| QuestType                          | tinyint(3) unsigned  | NO   |     | 2       |       |         |
+| QuestType                          | TINYINT(3) unsigned  | NO   |     | 2       |       |         |
 | QuestLevel                         | int(11)              | NO   |     | -1      |       |         |
 | QuestPackageID                     | int(10) unsigned     | NO   |     | 0       |       |         |
 | MinLevel                           | int(11)              | NO   |     | 0       |       |         |
 | QuestSortID                        | SMALLINT(6)          | NO   |     | 0       |       |         |
 | QuestInfoID                        | SMALLINT(5) unsigned | NO   |     | 0       |       |         |
-| SuggestedGroupNum                  | tinyint(3) unsigned  | NO   |     | 0       |       |         |
+| SuggestedGroupNum                  | TINYINT(3) unsigned  | NO   |     | 0       |       |         |
 | RewardNextQuest                    | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardXPDifficulty                 | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardXPMultiplier                 | FLOAT                | NO   |     | 1       |       |         |

@@ -10,7 +10,7 @@ This table allows you to change the items a vendor sells, or to create a [vendor
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|--------------|------------|-----|------|---------|-------|---------|
-| [eventEntry][1]   | tinyint(3)   | signed     |     | NO   | 0       |       |         |
+| [eventEntry][1]   | TINYINT(3)   | signed     |     | NO   | 0       |       |         |
 | [guid][2]         | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [slot][3]         | SMALLINT(6)  | signed     |     | NO   | 0       |       |         |
 | [item][4]         | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |

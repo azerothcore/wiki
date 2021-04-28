@@ -11,9 +11,9 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------|----------|------------|-----|------|---------|-------|---------|
 | [id][1]             | BIGINT   | unsigned   | PRI | NO   |         |       |         |
-| [winner_faction][2] | tinyint  |            |     | NO   |         |       |         |
-| [bracket_id][3]     | tinyint  | unsigned   |     | NO   |         |       |         |
-| [type][4]           | tinyint  | unsigned   |     | NO   |         |       |         |
+| [winner_faction][2] | TINYINT  |            |     | NO   |         |       |         |
+| [bracket_id][3]     | TINYINT  | unsigned   |     | NO   |         |       |         |
+| [type][4]           | TINYINT  | unsigned   |     | NO   |         |       |         |
 | [date][5]           | datetime |            |     | NO   |         |       |         |
 
 [1]: #id

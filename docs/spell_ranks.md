@@ -12,7 +12,7 @@ Table used by the core to group different ranks of spells (the gray text seen on
 |---------------------|------------|------------|-----|------|---------|-------|---------|
 | [first_spell_id][1] | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [spell_id][2]       | int(10)    | unsigned   |     | NO   | 0       |       |         |
-| [rank][3]           | tinyint(3) | unsigned   | PRI | NO   | 0       |       |         |
+| [rank][3]           | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
 
 [1]: #first_spell_id
 [2]: #spell_id

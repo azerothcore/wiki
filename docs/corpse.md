@@ -15,8 +15,8 @@
 | bytes1      | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
 | bytes2      | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
 | guildId     | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| flags       | tinyint(3)  | unsigned   |     | NO   | 0       |        |                                    |
-| dynFlags    | tinyint(3)  | unsigned   |     | NO   | 0       |        |                                    |
+| flags       | TINYINT(3)  | unsigned   |     | NO   | 0       |        |                                    |
+| dynFlags    | TINYINT(3)  | unsigned   |     | NO   | 0       |        |                                    |
 | time        | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| corpseType  | tinyint(3)  | unsigned   |     | NO   | 0       |        |                                    |
+| corpseType  | TINYINT(3)  | unsigned   |     | NO   | 0       |        |                                    |
 | instanceId  | int(10)     | unsigned   |     | NO   | 0       |        |                                    |

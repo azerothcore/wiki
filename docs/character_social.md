@@ -12,7 +12,7 @@ Contains data about characters' friends/ignored list.
 |-------------|-------------|------------|-----|------|---------|-------|------------------------------------|
 | [guid][1]   | int(10)     | unsigned   | PRI | NO   | 0       |       | Character Global Unique Identifier |
 | [friend][2] | int(10)     | unsigned   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
-| [flags][3]  | tinyint(3)  | unsigned   | PRI | NO   | 0       |       | Friend Flags                       |
+| [flags][3]  | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       | Friend Flags                       |
 | [note][4]   | VARCHAR(48) | signed     |     | NO   |         |       | Friend Note                        |
 
 [1]: #guid

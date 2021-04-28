@@ -11,7 +11,7 @@ This table holds information on what events (or procs) certain spells are activa
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 |-----------------------|-------------|------------|-----|------|---------|--------|---------|
 | [SpellId][1]          | int(11)     | signed     | PRI | NO   | 0       | Unique |         |
-| [SchoolMask][2]       | tinyint(3)  | unsigned   |     | NO   | 0       |        |         |
+| [SchoolMask][2]       | TINYINT(3)  | unsigned   |     | NO   | 0       |        |         |
 | [SpellFamilyName][3]  | SMALLINT(5) | unsigned   |     | NO   | 0       |        |         |
 | [SpellFamilyMask0][4] | int(10)     | unsigned   |     | NO   | 0       |        |         |
 | [SpellFamilyMask1][5] | int(10)     | unsigned   |     | NO   | 0       |        |         |
@@ -24,7 +24,7 @@ This table holds information on what events (or procs) certain spells are activa
 | [ProcsPerMinute][12]  | FLOAT       |            |     | NO   | 0       |        |         |
 | [Chance][13]          | FLOAT       |            |     | NO   | 0       |        |         |
 | [Cooldown][14]        | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [Charges][15]         | tinyint(3)  | unsigned   |     | NO   | 0       |        |         |
+| [Charges][15]         | TINYINT(3)  | unsigned   |     | NO   | 0       |        |         |
 
 [1]: #spellid
 [2]: #schoolmask

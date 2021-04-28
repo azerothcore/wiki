@@ -12,10 +12,10 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 |----------------------|--------------|------------|-----|------|---------|-------|----------------------------------------------|
 | [entry][1]           | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |                                              |
 | [accessory_entry][2] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                                              |
-| [seat_id][3]         | tinyint(1)   | signed     | PRI | NO   | 0       |       |                                              |
-| [minion][4]          | tinyint(1)   | unsigned   |     | NO   | 0       |       |                                              |
+| [seat_id][3]         | TINYINT(1)   | signed     | PRI | NO   | 0       |       |                                              |
+| [minion][4]          | TINYINT(1)   | unsigned   |     | NO   | 0       |       |                                              |
 | [description][5]     | text         | signed     |     | NO   |         |       |                                              |
-| [summontype][6]      | tinyint(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
+| [summontype][6]      | TINYINT(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
 | [summontimer][7]     | int(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #entry

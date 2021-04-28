@@ -12,8 +12,8 @@ Information and settings for ingame, player-based chat channels (not affecting t
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
 | [name][1]       | VARCHAR(128) | signed     | PRI | NO   |         |       |         |
 | [team][2]       | int(10)      | unsigned   | PRI | NO   |         |       |         |
-| [announce][3]   | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
-| [ownership][4]  | tinyint(3)   | unsigned   |     | NO   | 1       |       |         |
+| [announce][3]   | TINYINT(3)   | unsigned   |     | NO   | 1       |       |         |
+| [ownership][4]  | TINYINT(3)   | unsigned   |     | NO   | 1       |       |         |
 | [password][5]   | VARCHAR(32)  | signed     |     | YES  | NULL    |       |         |
 | [bannedList][6] | text         | signed     |     | YES  |         |       |         |
 | [lastUsed][7]   | int(10)      | unsigned   |     | NO   |         |       |         |

@@ -93,7 +93,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#conditiontarget">ConditionTarget</a></p></td>
-<td><p>tinyint(3)</p></td>
+<td><p>TINYINT(3)</p></td>
 <td><p>unsigned</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -141,7 +141,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#negativecondition">NegativeCondition</a></p></td>
-<td><p>tinyint(3)</p></td>
+<td><p>TINYINT(3)</p></td>
 <td><p>unsigned</p></td>
 <td><p><br />
 </p></td>

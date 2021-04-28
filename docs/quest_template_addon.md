@@ -11,7 +11,7 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
 | [ID][1]                     | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
-| [MaxLevel][2]               | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
+| [MaxLevel][2]               | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
 | [AllowableClasses][3]       | int(10)      | unsigned   |     | NO   |         |       |                                       |
 | [SourceSpellID][4]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
 | [PrevQuestID][5]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
@@ -25,8 +25,8 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 | [RequiredMaxRepFaction][13] | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredMinRepValue][14]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [RequiredMaxRepValue][15]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
-| [ProvidedItemCount][16]     | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
-| [SpecialFlags][17]          | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
+| [ProvidedItemCount][16]     | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
+| [SpecialFlags][17]          | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
 
 [1]: #id
 [2]: #maxlevel

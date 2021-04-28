@@ -11,7 +11,7 @@
 | Field            | Type    | Attribute | Key | Null | Default | Extra | Comment |
 |:-----------------|---------|-----------|-----|------|---------|-------|---------|
 | id               | int     | unsigned  | PRI | NO   |         |       |         |
-| date_id          | tinyint | unsigned  | PRI | NO   |         |       |         |
+| date_id          | TINYINT | unsigned  | PRI | NO   |         |       |         |
 | date_value       | int     | unsigned  |     | NO   |         |       |         |
 | holiday_duration | int     | unsigned  |     | NO   | 0       |       |         |
 

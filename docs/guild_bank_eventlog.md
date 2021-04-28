@@ -12,12 +12,12 @@
 |---------------------|------------|------------|-----|------|---------|-------|---------------------------------------------|
 | [guildid][1]        | int(11)    | unsigned   | PRI | NO   | 0       |       | Guild Identificator                         |
 | [LogGuid][2]        | int(11)    | unsigned   | PRI | NO   | 0       |       | Log record identificator - auxiliary column |
-| [TabID][3]          | tinyint(3) | unsigned   | PRI | NO   | 0       |       | Guild bank TabId                            |
-| [EventType][4]      | tinyint(3) | unsigned   |     | NO   | 0       |       | Event type                                  |
+| [TabID][3]          | TINYINT(3) | unsigned   | PRI | NO   | 0       |       | Guild bank TabId                            |
+| [EventType][4]      | TINYINT(3) | unsigned   |     | NO   | 0       |       | Event type                                  |
 | [PlayerGuid][5]     | int(11)    | unsigned   |     | NO   | 0       |       |                                             |
 | [ItemOrMoney][6]    | int(11)    | unsigned   |     | NO   | 0       |       |                                             |
-| [ItemStackCount][7] | tinyint(3) | unsigned   |     | NO   | 0       |       |                                             |
-| [DestTabId][8]      | tinyint(1) | unsigned   |     | NO   | 0       |       | Destination Tab Id                          |
+| [ItemStackCount][7] | TINYINT(3) | unsigned   |     | NO   | 0       |       |                                             |
+| [DestTabId][8]      | TINYINT(1) | unsigned   |     | NO   | 0       |       | Destination Tab Id                          |
 | [TIMESTAMP][9]      | BIGINT(20) | unsigned   |     | NO   | 0       |       | Event UNIX time                             |
 
 [1]: #guildid

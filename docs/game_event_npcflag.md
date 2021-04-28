@@ -10,7 +10,7 @@ This table contains npcflags that are to be added to an NPC when the specified e
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
 |-----------------|--------------|------------|-----|------|---------|-------|-------------------------|
-| [eventEntry][1] | tinyint(3)   | unsigned   | PRI | NO   |         |       | Entry of the game event |
+| [eventEntry][1] | TINYINT(3)   | unsigned   | PRI | NO   |         |       | Entry of the game event |
 | [guid][2]       | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |                         |
 | [npcflag][3]    | int(10)      | unsigned   |     | NO   | 0       |       |                         |
 

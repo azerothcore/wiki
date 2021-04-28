@@ -13,14 +13,14 @@ Contains information about the different battlegrounds, like how many players ar
 | [ID][1]                | MEDIUMINT(8) | unsigned  | PRI | NO   | 0       |       |         |
 | [MinPlayersPerTeam][2] | SMALLINT(5)  | unsigned  |     | NO   | 0       |       |         |
 | [MaxPlayersPerTeam][3] | SMALLINT(5)  | unsigned  |     | NO   | 0       |       |         |
-| [MinLvl][4]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
-| [MaxLvl][5]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
+| [MinLvl][4]            | TINYINT(3)   | unsigned  |     | NO   | 0       |       |         |
+| [MaxLvl][5]            | TINYINT(3)   | unsigned  |     | NO   | 0       |       |         |
 | [AllianceStartLoc][6]  | MEDIUMINT(8) | unsigned  |     | NO   |         |       |         |
 | [AllianceStartO][7]    | FLOAT        | signed    |     | NO   |         |       |         |
 | [HordeStartLoc][8]     | MEDIUMINT(8) | unsigned  |     | NO   |         |       |         |
 | [HordeStartO][9]       | FLOAT        | signed    |     | NO   |         |       |         |
 | [StartMaxDist][10]     | FLOAT        | signed    |     | NO   | 0       |       |         |
-| [Weight][11]           | tinyint(3)   | unsigned  |     | NO   | 1       |       |         |
+| [Weight][11]           | TINYINT(3)   | unsigned  |     | NO   | 1       |       |         |
 | [ScriptName][12]       | char(64)     |           |     | NO   |         |       |         |
 | [Comment][13]          | char(38)     |           |     | NO   |         |       |         |
 

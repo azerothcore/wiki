@@ -12,9 +12,9 @@ This table holds info about group members.
 |------------------|------------|------------|-----|------|---------|--------|---------|
 | [guid][1]        | int(10)    | unsigned   |     | NO   |         |        |         |
 | [memberGuid][2]  | int(10)    | unsigned   | PRI | NO   |         | Unique |         |
-| [memberFlags][3] | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
-| [subgroup[4]     | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
-| [roles][5]       | tinyint(3) | unsigned   |     | NO   | 0       |        |         |
+| [memberFlags][3] | TINYINT(3) | unsigned   |     | NO   | 0       |        |         |
+| [subgroup[4]     | TINYINT(3) | unsigned   |     | NO   | 0       |        |         |
+| [roles][5]       | TINYINT(3) | unsigned   |     | NO   | 0       |        |         |
 
 [1]: #guid
 [2]: #memberguid

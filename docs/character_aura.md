@@ -14,9 +14,9 @@ Contains aura information that is loaded when a character is loaded, so the aura
 | [caster_guid][2]      | BIGINT(20)   | unsigned   | PRI | NO   |         |       | Full Global Unique Identifier |
 | [item_guid][3]        | BIGINT(20)   | unsigned   | PRI | NO   |         |       |                               |
 | [spell][4]            | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |                               |
-| [effect_mask][5]      | tinyint(3)   | unsigned   | PRI | NO   |         |       |                               |
-| [recalculate_mask][6] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [stackcount][7]       | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [effect_mask][5]      | TINYINT(3)   | unsigned   | PRI | NO   |         |       |                               |
+| [recalculate_mask][6] | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
+| [stackcount][7]       | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 | [amount0][8]          | int(11)      | signed     |     | NO   |         |       |                               |
 | [amount1][9]          | int(11)      | signed     |     | NO   |         |       |                               |
 | [amount2][10]         | int(11)      | signed     |     | NO   |         |       |                               |
@@ -25,7 +25,7 @@ Contains aura information that is loaded when a character is loaded, so the aura
 | [base_amount2][13]    | int(11)      | signed     |     | NO   |         |       |                               |
 | [maxduration][14]     | int(11)      | signed     |     | NO   |         |       |                               |
 | [remaintime][15]      | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaincharges][16]   | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [remaincharges][16]   | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 
 [1]: #guid
 [2]: #caster_guid

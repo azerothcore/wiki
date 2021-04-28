@@ -15,13 +15,13 @@ This table holds the pet data for each pet summoned by anyone in the game.
 | [owner][3]              | int(10)      | unsigned   |     | NO   |         |       |         |
 | [modelid][4]            | int(10)      | unsigned   |     | YES  | 0       |       |         |
 | [CreatedBySpell][5]     | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
-| [PetType][6]            | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [PetType][6]            | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [level][7]              | SMALLINT(5)  | unsigned   |     | NO   |         |       |         |
 | [exp][8]                | int(10)      | unsigned   |     | NO   |         |       |         |
-| [Reactstate][9]         | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [Reactstate][9]         | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [name][10]              | VARCHAR(21)  |            |     | NO   |         |       |         |
-| [renamed][11]           | tinyint(3)   | unsigned   |     | NO   |         |       |         |
-| [slot][12]              | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [renamed][11]           | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
+| [slot][12]              | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [curhealth][13]         | int(10)      | unsigned   |     | NO   |         |       |         |
 | [curmana][14]           | int(10)      | unsigned   |     | NO   |         |       |         |
 | [curhappiness][15]      | int(10)      | unsigned   |     | NO   |         |       |         |

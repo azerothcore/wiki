@@ -14,7 +14,7 @@ This table holds information on all the signatures of a petition for either a gu
 | [petitionguid][2]   | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [playerguid][3]     | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [player_account][4] | int(10)    | unsigned   |     | NO   | 0       |       |         |
-| [type][5]           | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [type][5]           | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #ownerguid
 [2]: #petitionguid

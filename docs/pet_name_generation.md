@@ -13,7 +13,7 @@ This table holds pieces of names (first and last half) that are use for pet name
 | [id][1]    | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    | Auto increment |         |
 | [word][2]  | tinytext     | signed     |     | NO   | NULL    |                |         |
 | [entry][3] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                |         |
-| [half][4]  | tinyint(4)   | signed     |     | NO   | 0       |                |         |
+| [half][4]  | TINYINT(4)   | signed     |     | NO   | 0       |                |         |
 
 [1]: #id
 [2]: #word

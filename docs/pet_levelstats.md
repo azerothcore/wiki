@@ -12,7 +12,7 @@ This table holds information on individual pet base stats based on level.
 |---------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                         | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
 | [creature\_entry](#pet_levelstats-creature_entry) | MEDIUMINT(8) | unsigned       | PRI     | NO       | NULL        |           |             |
-| [level](#pet_levelstats-level)                    | tinyint(3)   | unsigned       | PRI     | NO       | NULL        |           |             |
+| [level](#pet_levelstats-level)                    | TINYINT(3)   | unsigned       | PRI     | NO       | NULL        |           |             |
 | [hp](#pet_levelstats-hp)                          | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
 | [mana](#pet_levelstats-mana)                      | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
 | [armor](#pet_levelstats-armor)                    | int(10)      | unsigned       |         | NO       | 0           |           |             |

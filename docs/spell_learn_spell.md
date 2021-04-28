@@ -14,7 +14,7 @@ NOTE: Spells with spell effects SPELL\_EFFECT\_LEARN\_SPELL should NOT be includ
 |--------------|-------------|------------|-----|------|---------|-------|---------|
 | [entry][1]   | SMALLINT(5) | unsigned   | PRI | NO   | 0       |       |         |
 | [SpellID][2] | SMALLINT(5) | unsigned   | PRI | NO   | 0       |       |         |
-| [Active][3]  | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
+| [Active][3]  | TINYINT(3)  | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #spellid

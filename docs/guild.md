@@ -13,11 +13,11 @@ This table holds the main guild information. All created guilds or all guilds in
 | [guildid][1]         | int(10)      | unsigned   | PRI | NO   | 0       | Unique |         |
 | [name][2]            | VARCHAR(24)  | signed     |     | NO   |         |        |         |
 | [leaderguid][3]      | int(10)      | unsigned   |     | NO   | 0       |        |         |
-| [EmblemStyle][4]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
-| [EmblemColor][5]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
-| [BorderStyle][6]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
-| [BorderColor][7]     | tinyint(3)   | unsigned   |     | NO   | 0       |        |         |
-| [BackgroundColor][8] | tinyint(3)   | signed     |     | NO   | 0       |        |         |
+| [EmblemStyle][4]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
+| [EmblemColor][5]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
+| [BorderStyle][6]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
+| [BorderColor][7]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
+| [BackgroundColor][8] | TINYINT(3)   | signed     |     | NO   | 0       |        |         |
 | [info][9]            | text         | signed     |     | NO   |         |        |         |
 | [motd][10]           | VARCHAR(128) | signed     |     | NO   |         |        |         |
 | [createdate][11]     | int(10)      | unsigned   |     | NO   | 0       |        |         |

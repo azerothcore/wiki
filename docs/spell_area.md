@@ -16,8 +16,8 @@ This table is used to apply a specific spell aura to the player within an area i
 | [quest_end][4]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [aura_spell][5]         | MEDIUMINT(8) | signed     | PRI | NO   |         |       |         |
 | [racemask][6]           | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
-| [gender][7]             | tinyint(3)   | unsigned   | PRI | NO   |         |       |         |
-| [flags][8]              | tinyint(3)   | unsigned   |     | NO   |         |       |         |
+| [gender][7]             | TINYINT(3)   | unsigned   | PRI | NO   |         |       |         |
+| [flags][8]              | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [quest_start_status][9] | int(11)      | unsigned   |     | NO   |         |       |         |
 | [quest_end_status][10]  | int(11)      | unsigned   |     | NO   |         |       |         |
 

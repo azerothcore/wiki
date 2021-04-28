@@ -10,14 +10,14 @@ This table holds information on what stats are gained by characters when they le
 
 | Field      | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |------------|------------|------------|-----|------|---------|-------|---------|
-| [race][1]  | tinyint(3) | unsigned   | PRI | NO   | NULL    |       |         |
-| [class][2] | tinyint(3) | unsigned   | PRI | NO   | NULL    |       |         |
-| [level][3] | tinyint(3) | unsigned   | PRI | NO   | NULL    |       |         |
-| [str][4]   | tinyint(3) | unsigned   |     | NO   | NULL    |       |         |
-| [agi][5]   | tinyint(3) | unsigned   |     | NO   | NULL    |       |         |
-| [sta][6]   | tinyint(3) | unsigned   |     | NO   | NULL    |       |         |
-| [inte][7]  | tinyint(3) | unsigned   |     | NO   | NULL    |       |         |
-| [spi][8]   | tinyint(3) | unsigned   |     | NO   | NULL    |       |         |
+| [race][1]  | TINYINT(3) | unsigned   | PRI | NO   | NULL    |       |         |
+| [class][2] | TINYINT(3) | unsigned   | PRI | NO   | NULL    |       |         |
+| [level][3] | TINYINT(3) | unsigned   | PRI | NO   | NULL    |       |         |
+| [str][4]   | TINYINT(3) | unsigned   |     | NO   | NULL    |       |         |
+| [agi][5]   | TINYINT(3) | unsigned   |     | NO   | NULL    |       |         |
+| [sta][6]   | TINYINT(3) | unsigned   |     | NO   | NULL    |       |         |
+| [inte][7]  | TINYINT(3) | unsigned   |     | NO   | NULL    |       |         |
+| [spi][8]   | TINYINT(3) | unsigned   |     | NO   | NULL    |       |         |
 
 [1]: #race
 [2]: #class

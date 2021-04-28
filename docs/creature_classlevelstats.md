@@ -6,8 +6,8 @@ This table contains the base values for creature health, mana, armor, attack pow
 
 | Field                  | Type        | Attributes | Null | Default | Extra | Comment |
 |------------------------|-------------|------------|------|---------|-------|---------|
-| [level][1]             | tinyint(3)  | unsigned   | NO   |         |       |         |
-| [class][2]             | tinyint(3)  | unsigned   | NO   |         |       |         |
+| [level][1]             | TINYINT(3)  | unsigned   | NO   |         |       |         |
+| [class][2]             | TINYINT(3)  | unsigned   | NO   |         |       |         |
 | [basehp0][3]           | SMALLINT(5) | unsigned   | NO   |         |       |         |
 | [basehp1][4]           | SMALLINT(5) | unsigned   | NO   |         |       |         |
 | [basehp2][5]           | SMALLINT(5) | unsigned   | NO   |         |       |         |

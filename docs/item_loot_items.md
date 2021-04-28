@@ -16,12 +16,12 @@ the player either removes an item or destroys the container item.
 | [container_id][1]    | int(10)    | unsigned   |     | NO   |         |       |         |
 | [item_id][2]         | int(10)    | unsigned   |     | NO   |         |       |         |
 | [item_count][3]      | int(10)    |            |     | NO   |         |       |         |
-| [follow_rules][4]    | tinyint(1) |            |     | NO   |         |       |         |
-| [ffa][5]             | tinyint(1) |            |     | NO   |         |       |         |
-| [blocked][6]         | tinyint(1) |            |     | NO   |         |       |         |
-| [counted][7]         | tinyint(1) |            |     | NO   |         |       |         |
-| [under_threshold][8] | tinyint(1) |            |     | NO   |         |       |         |
-| [needs_quest][9]     | tinyint(1) |            |     | NO   |         |       |         |
+| [follow_rules][4]    | TINYINT(1) |            |     | NO   |         |       |         |
+| [ffa][5]             | TINYINT(1) |            |     | NO   |         |       |         |
+| [blocked][6]         | TINYINT(1) |            |     | NO   |         |       |         |
+| [counted][7]         | TINYINT(1) |            |     | NO   |         |       |         |
+| [under_threshold][8] | TINYINT(1) |            |     | NO   |         |       |         |
+| [needs_quest][9]     | TINYINT(1) |            |     | NO   |         |       |         |
 | [rnd_prop][10]       | int(10)    |            |     | NO   |         |       |         |
 | [rnd_suffix][11]     | int(10)    |            |     | NO   |         |       |         |
 

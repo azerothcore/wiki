@@ -11,7 +11,7 @@ This table holds datas about BattleGrounds deserters. To enable storing this kin
 | Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|----------|------------|-----|------|---------|-------|---------|
 | [guid][1]     | int      | unsigned   |     |      |         |       |         |
-| [type][2]     | tinyint  | unsigned   |     |      |         |       |         |
+| [type][2]     | TINYINT  | unsigned   |     |      |         |       |         |
 | [datetime][3] | datetime |            |     |      |         |       |         |
 
 [1]: #guid

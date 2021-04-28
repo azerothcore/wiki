@@ -59,17 +59,17 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 | Field                 | Type         | Attributes      | Key | Null | Default | Extra | Comment                 |
 |-----------------------|--------------|-----------------|-----|------|---------|-------|-------------------------|
 | [CreatureID][1]       | MEDIUMINT(8) | unsigned        | PRI | NO   |         |       | creature_template entry |
-| [GroupID][2]          | tinyint(3)   | unsigned        | PRI | NO   |         |       |                         |
-| [ID][3]               | tinyint(3)   | unsigned        | PRI | NO   |         |       |                         |
+| [GroupID][2]          | TINYINT(3)   | unsigned        | PRI | NO   |         |       |                         |
+| [ID][3]               | TINYINT(3)   | unsigned        | PRI | NO   |         |       |                         |
 | [Text][4]             | longtext     | utf8_general_ci |     | YES  | NULL    |       |                         |
-| [Type][5]             | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
-| [Language][6]         | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
+| [Type][5]             | TINYINT(3)   | unsigned        |     | NO   |         |       |                         |
+| [Language][6]         | TINYINT(3)   | unsigned        |     | NO   |         |       |                         |
 | [Probability][7]      | FLOAT        | signed          |     | NO   |         |       |                         |
 | [Emote][8]            | MEDIUMINT(8) | unsigned        |     | NO   |         |       |                         |
 | [Duration][9]         | MEDIUMINT(8) | unsigned        |     | NO   |         |       |                         |
 | [Sound][10]           | MEDIUMINT(8) | unsigned        |     | NO   |         |       |                         |
 | [BroadcastTextId][11] | MEDIUMINT(6) | signed          |     | NO   |         |       |                         |
-| [TextRange][12]       | tinyint(3)   | unsigned        |     | NO   |         |       |                         |
+| [TextRange][12]       | TINYINT(3)   | unsigned        |     | NO   |         |       |                         |
 | [comment][13]         | VARCHAR(255) | utf8_general_ci |     | YES  | NULL    |       |                         |
 
 [1]: #creatureid

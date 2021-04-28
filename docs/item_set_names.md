@@ -12,7 +12,7 @@
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
 | [entry][1]         | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
 | [name][2]          | VARCHAR(255) | signed     |     | NO   |         |       |         |
-| [InventoryType][3] | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [InventoryType][3] | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
 | [WDBVerified][4]   | SMALLINT(5)  | unsigned   |     | NO   | 1       |       |         |
 
 [1]: #entry

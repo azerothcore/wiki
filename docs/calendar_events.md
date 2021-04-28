@@ -6,7 +6,7 @@ Id | BIGINT(20) unsigned |
 Creator | int(10) unsigned | 
 Title | VARCHAR(255) | 
 Description | VARCHAR(255) | 
-Type | tinyint(1) unsigned | 
+Type | TINYINT(1) unsigned | 
 Dungeon | int(10) | 
 Eventtime | int(10) unsigned | 
 Flags | int(10) unsigned | 

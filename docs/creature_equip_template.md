@@ -11,7 +11,7 @@ This table contains all the equipment combinations that can be sent for each cre
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment      |
 |-----------------|--------------|------------|-----|------|---------|-------|--------------|
 | [CreatureID][1] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Unique entry |
-| [ID][2]         | tinyint(3)   | unsigned   | PRI | NO   | 1       |       | Unique entry |
+| [ID][2]         | TINYINT(3)   | unsigned   | PRI | NO   | 1       |       | Unique entry |
 | [ItemID1][3]    | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |              |
 | [ItemID2][4]    | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |              |
 | [ItemID3][5]    | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |              |

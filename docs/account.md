@@ -21,15 +21,15 @@
 | [last_ip][11]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [last_attempt_ip][12] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [failed_logins][13]   | int(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [locked][14]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
+| [locked][14]          | TINYINT(3)   | unsigned   |     | NO   | 0                 |                |            |
 | [lock_country][15]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
 | [last_login][16]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
 | [online][17]          | int(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [expansion][18]       | tinyint(3)   | unsigned   |     | NO   | 2                 |                |            |
+| [expansion][18]       | TINYINT(3)   | unsigned   |     | NO   | 2                 |                |            |
 | [mutetime][19]        | BIGINT(20)   | signed     |     | NO   | 0                 |                |            |
 | [mutereason][20]      | VARCHAR(255) |            |     | NO   |                   |                |            |
 | [muteby][21]          | VARCHAR(50)  |            |     | NO   |                   |                |            |
-| [locale][22]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
+| [locale][22]          | TINYINT(3)   | unsigned   |     | NO   | 0                 |                |            |
 | [os][23]              | VARCHAR(3)   |            |     | NO   |                   |                |            |
 | [recruiter][24]       | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [totaltime][25]       | int(10)      | unsigned   |     | NO   | 0                 |                |            |

@@ -13,7 +13,7 @@ Note: do not insert directly into most of these columns, else the client won't u
 | Field                  | Type        | Attributes | Key | Null | Default | Extra          | Comment                                    |
 |------------------------|-------------|------------|-----|------|---------|----------------|--------------------------------------------|
 | [Id][1]                | int(10)     | signed     | PRI | NO   |         | Auto increment |                                            |
-| [type][2]              | tinyint(3)  | unsigned   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
+| [type][2]              | TINYINT(3)  | unsigned   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
 | [playerGuid][3]        | int(10)     | unsigned   |     | NO   |         |                | Global Unique Identifier of ticket creator |
 | [name][4]              | VARCHAR(12) |            |     | NO   |         |                | Name of ticket creator                     |
 | [description][5]       | text        |            |     | NO   |         |                |                                            |
@@ -27,10 +27,10 @@ Note: do not insert directly into most of these columns, else the client won't u
 | [assignedTo][13]       | int(10)     | unsigned   |     | NO   |         |                | GUID of admin to whom ticket is assigned   |
 | [comment][14]          | text        |            |     | NO   |         |                |                                            |
 | [response][15]         | text        |            |     | NO   |         |                |                                            |
-| [completed][16]        | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
-| [escalated][17]        | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
-| [viewed][18]           | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
-| [needMoreHelp][19]     | tinyint(3)  | unsigned   |     | NO   |         |                |                                            |
+| [completed][16]        | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
+| [escalated][17]        | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
+| [viewed][18]           | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
+| [needMoreHelp][19]     | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
 | [resolvedBy][20]       | int(10)     | unsigned   |     | NO   |         |                | GUID of GM who resolved the ticket         |
 
 [1]: #id

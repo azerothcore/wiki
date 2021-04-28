@@ -12,7 +12,7 @@ This table contains saved data for LFG. This table is constantly in use by the c
 |--------------|------------|------------|-----|------|---------|-------|--------------------------|
 | [guid][1]    | int(10)    | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [dungeon][2] | int(10)    | unsigned   |     | NO   | 0       |       |                          |
-| [state][3]   | tinyint(3) | unsigned   |     | NO   | 0       |       |                          |
+| [state][3]   | TINYINT(3) | unsigned   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #dungeon

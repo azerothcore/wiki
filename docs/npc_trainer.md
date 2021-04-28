@@ -16,7 +16,7 @@ This table contains all the spells that each trainer can teach.
 | [MoneyCost](#npc_trainer-spellcost)        | int(10)      | unsigned       |         | NO       | 0           |           |             |
 | [ReqSkillLine](#npc_trainer-reqskill)      | SMALLINT(5)  | unsigned       |         | NO       | 0           |           |             |
 | [ReqSkillRank](#npc_trainer-reqskillvalue) | SMALLINT(5)  | unsigned       |         | NO       | 0           |           |             |
-| [ReqLevel](#npc_trainer-reqlevel)          | tinyint(3)   | unsigned       |         | NO       | 0           |           |             |
+| [ReqLevel](#npc_trainer-reqlevel)          | TINYINT(3)   | unsigned       |         | NO       | 0           |           |             |
 
 **Description of the fields**
 

@@ -4,7 +4,7 @@ Column | Type | Description
 --- | --- | ---
 Time | datetime | 
 Map | SMALLINT(5) unsigned | 
-Difficulty | tinyint(3) unsigned | 
-CreditType | tinyint(3) unsigned | 
+Difficulty | TINYINT(3) unsigned | 
+CreditType | TINYINT(3) unsigned | 
 CreditEntry | int(10) unsigned | 
 PlayersInfo | text | 

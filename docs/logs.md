@@ -13,7 +13,7 @@ This table stores all logs from authserver if database logging in config is enab
 | [time][1]   | int(10)      | unsigned   |     | NO   |         |       |         |
 | [realm][2]  | int(10)      | unsigned   |     | NO   |         |       |         |
 | [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
-| [level][4]  | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
+| [level][4]  | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
 | [string][5] | text         |            |     | YES  |         |       |         |
 
 [1]: #time

@@ -13,7 +13,7 @@ This table contains all models of mobs, their gender and other information that 
 | [modelid][1]              | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [bounding_radius][2]      | FLOAT        | signed     |     | NO   | 0       |       |         |
 | [combat_reach][3]         | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [gender][4]               | tinyint(3)   | unsigned   |     | NO   | 2       |       |         |
+| [gender][4]               | TINYINT(3)   | unsigned   |     | NO   | 2       |       |         |
 | [modelid_other_gender][5] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #modelid

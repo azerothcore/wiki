@@ -11,10 +11,10 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [guid][1]             | int(10)      | unsigned   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                                                              |
 | [id][2]               | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | Creature Identifier                                                                   |
 | [map][3]              | SMALLINT(5)  | unsigned   |     | NO   | 0       |                | Map Identifier                                                                        |
-| [spawnMask][4]        | tinyint(3)   | unsigned   |     | NO   | 1       |                |                                                                                       |
+| [spawnMask][4]        | TINYINT(3)   | unsigned   |     | NO   | 1       |                |                                                                                       |
 | [phaseMask][5]        | SMALLINT(5)  | unsigned   |     | NO   | 1       |                |                                                                                       |
 | [modelid][6]          | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | 0 core determined random model or model_id to prevent random model selection by core. |
-| [equipment_id][7]     | tinyint(3)   | unsigned   |     | NO   | 1       |                |                                                                                       |
+| [equipment_id][7]     | TINYINT(3)   | unsigned   |     | NO   | 1       |                |                                                                                       |
 | [position_x][8]       | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
 | [position_y][9]       | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
 | [position_z][10]      | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
@@ -24,7 +24,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [currentwaypoint][14] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
 | [curhealth][15]       | int(10)      | unsigned   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
 | [curmana][16]         | int(10)      | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
-| [MovementType][17]    | tinyint(3)   | unsigned   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path                                                       |
+| [MovementType][17]    | TINYINT(3)   | unsigned   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path                                                       |
 | [npcflag][18]         | int(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
 | [unit_flags][19]      | int(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
 | [dynamicflags][20]    | int(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |

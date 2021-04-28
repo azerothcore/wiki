@@ -11,7 +11,7 @@ This table holds information about character's matchmaker rating in all team typ
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------|
 | [guid][1]             | int(10)     | signed     | PRI | NO   |         |       |         |
-| [slot][2]             | tinyint(3)  | signed     | PRI | NO   |         |       |         |
+| [slot][2]             | TINYINT(3)  | signed     | PRI | NO   |         |       |         |
 | [matchmakerRating][3] | SMALLINT(5) | signed     |     | NO   |         |       |         |
 
 [1]: #guid

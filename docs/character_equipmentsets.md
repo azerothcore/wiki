@@ -12,7 +12,7 @@ This table holds info about player's equipment manager settings.
 |------------------|--------------|------------|-----|------|---------|----------------|---------|
 | [guid][1]        | int(10)      | signed     |     | NO   |         |                |         |
 | [setguid][2]     | BIGINT(20)   | signed     | PRI | NO   |         | Auto Increment |         |
-| [setindex][3]    | tinyint(3)   | signed     |     | NO   |         |                |         |
+| [setindex][3]    | TINYINT(3)   | signed     |     | NO   |         |                |         |
 | [name][4]        | VARCHAR(31)  |            |     | NO   |         |                |         |
 | [iconname][5]    | VARCHAR(100) |            |     | NO   |         |                |         |
 | [ignore_mask][6] | int(11)      | unsigned   |     | NO   |         |                |         |

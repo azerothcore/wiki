@@ -3,4 +3,4 @@
 Column | Type | Description
 --- | --- | ---
 WardenId | SMALLINT(5) unsigned | 
-Action | tinyint(3) unsigned | 
+Action | TINYINT(3) unsigned | 

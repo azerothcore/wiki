@@ -10,7 +10,7 @@ This table contains events that must have been completed to start the given even
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [eventEntry][1]         | tinyint(3)   | unsigned   | PRI | NO   |         |       |         |
+| [eventEntry][1]         | TINYINT(3)   | unsigned   | PRI | NO   |         |       |         |
 | [prerequisite_event][2] | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |         |
 
 [1]: #evententry

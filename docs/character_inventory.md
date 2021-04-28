@@ -12,7 +12,7 @@ Contains all the character inventory data, including the bank data.
 |-----------|------------|------------|--------|------|---------|-------|-------------------------------|
 | [guid][1] | int(10)    | unsigned   | Unique | NO   | 0       |       | Global Unique Identifier      |
 | [bag][2]  | int(10)    | unsigned   | Unique | NO   | 0       |       |                               |
-| [slot][3] | tinyint(3) | unsigned   | Unique | NO   | 0       |       |                               |
+| [slot][3] | TINYINT(3) | unsigned   | Unique | NO   | 0       |       |                               |
 | [item][4] | int(10)    | unsigned   | PRI    | NO   | 0       |       | Item Global Unique Identifier |
 
 [1]: #guid

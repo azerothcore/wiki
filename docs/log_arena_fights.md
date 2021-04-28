@@ -4,7 +4,7 @@ Column | Type | Description
 --- | --- | ---
 Fight_id | int(10) unsigned | 
 Time | datetime | 
-Type | tinyint(3) unsigned | 
+Type | TINYINT(3) unsigned | 
 Duration | int(10) unsigned | 
 Winner | int(10) unsigned | 
 Loser | int(10) unsigned | 

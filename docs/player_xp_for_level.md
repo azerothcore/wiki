@@ -10,7 +10,7 @@ Includes information on how much experience needed for next level. Comes from sn
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|
-| [Level][1]      | tinyint(3) | unsigned   | PRI | NO   | NULL    |       |         |
+| [Level][1]      | TINYINT(3) | unsigned   | PRI | NO   | NULL    |       |         |
 | [Experience][2] | int(10)    | unsigned   |     | NO   | NULL    |       |         |
 
 [1]: #level
