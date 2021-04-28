@@ -10,61 +10,61 @@ Contains all basic definitions of available quests.
 
 | Field                              | Type                 | Null | Key | Default | Extra | Comment |
 |------------------------------------|----------------------|------|-----|---------|-------|---------|
-| ID                                 | int(10) unsigned     | NO   | PRI | 0       |       |         |
+| ID                                 | INT(10) unsigned     | NO   | PRI | 0       |       |         |
 | QuestType                          | TINYINT(3) unsigned  | NO   |     | 2       |       |         |
-| QuestLevel                         | int(11)              | NO   |     | -1      |       |         |
-| QuestPackageID                     | int(10) unsigned     | NO   |     | 0       |       |         |
-| MinLevel                           | int(11)              | NO   |     | 0       |       |         |
+| QuestLevel                         | INT(11)              | NO   |     | -1      |       |         |
+| QuestPackageID                     | INT(10) unsigned     | NO   |     | 0       |       |         |
+| MinLevel                           | INT(11)              | NO   |     | 0       |       |         |
 | QuestSortID                        | SMALLINT(6)          | NO   |     | 0       |       |         |
 | QuestInfoID                        | SMALLINT(5) unsigned | NO   |     | 0       |       |         |
 | SuggestedGroupNum                  | TINYINT(3) unsigned  | NO   |     | 0       |       |         |
-| RewardNextQuest                    | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardXPDifficulty                 | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardNextQuest                    | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardXPDifficulty                 | INT(10) unsigned     | NO   |     | 0       |       |         |
 | RewardXPMultiplier                 | FLOAT                | NO   |     | 1       |       |         |
-| RewardMoney                        | int(11)              | NO   |     | 0       |       |         |
-| RewardMoneyDifficulty              | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardMoney                        | INT(11)              | NO   |     | 0       |       |         |
+| RewardMoneyDifficulty              | INT(10) unsigned     | NO   |     | 0       |       |         |
 | RewardMoneyMultiplier              | FLOAT                | NO   |     | 1       |       |         |
-| RewardBonusMoney                   | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardDisplaySpell(X=1...3)        | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardSpell                        | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardHonor                        | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardKillHonor                    | int(10) unsigned     | NO   |     | 0       |       |         |
-| StartItem                          | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardArtifactXPDifficulty         | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardBonusMoney                   | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardDisplaySpell(X=1...3)        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardSpell                        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardHonor                        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardKillHonor                    | INT(10) unsigned     | NO   |     | 0       |       |         |
+| StartItem                          | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardArtifactXPDifficulty         | INT(10) unsigned     | NO   |     | 0       |       |         |
 | RewardArtifactXPMultiplier         | FLOAT                | NO   |     | 1       |       |         |
-| RewardArtifactCategoryID           | int(10) unsigned     | NO   |     | 0       |       |         |
-| Flags                              | int(10) unsigned     | NO   |     | 0       |       |         |
-| FlagsEx                            | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardItem(X=1...4)                | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardAmount(X=1...4)              | int(10) unsigned     | NO   |     | 0       |       |         |
-| ItemDrop(X=1...4)                  | int(10) unsigned     | NO   |     | 0       |       |         |
-| ItemDropQuantity(X=1...4)          | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardChoiceItemID(X=1...6)        | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardChoiceItemQuantity(X=1...6)  | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardChoiceItemDisplayID(X=1...6) | int(10) unsigned     | NO   |     | 0       |       |         |
-| POIContinent                       | int(10) unsigned     | NO   |     | 0       |       |         |
+| RewardArtifactCategoryID           | INT(10) unsigned     | NO   |     | 0       |       |         |
+| Flags                              | INT(10) unsigned     | NO   |     | 0       |       |         |
+| FlagsEx                            | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardItem(X=1...4)                | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardAmount(X=1...4)              | INT(10) unsigned     | NO   |     | 0       |       |         |
+| ItemDrop(X=1...4)                  | INT(10) unsigned     | NO   |     | 0       |       |         |
+| ItemDropQuantity(X=1...4)          | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardChoiceItemID(X=1...6)        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardChoiceItemQuantity(X=1...6)  | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardChoiceItemDisplayID(X=1...6) | INT(10) unsigned     | NO   |     | 0       |       |         |
+| POIContinent                       | INT(10) unsigned     | NO   |     | 0       |       |         |
 | POIx                               | FLOAT                | NO   |     | 0       |       |         |
 | POIy                               | FLOAT                | NO   |     | 0       |       |         |
-| POIPriority                        | int(11)              | NO   |     | 0       |       |         |
-| RewardTitle                        | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardArenaPoints                  | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardSkillLineID                  | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardNumSkillUps                  | int(10) unsigned     | NO   |     | 0       |       |         |
-| PortraitGiver                      | int(10) unsigned     | NO   |     | 0       |       |         |
-| PortraitTurnIn                     | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardFactionID(X=1...5)           | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardFactionValue(X=1...5)        | int(11)              | NO   |     | 0       |       |         |
-| RewardFactionOverride(X=1...5)     | int(11)              | NO   |     | 0       |       |         |
-| RewardFactionCapIn(X=1...5)        | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardFactionFlags                 | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardCurrencyID(X=1...4)          | int(10) unsigned     | NO   |     | 0       |       |         |
-| RewardCurrencyQty(X=1...4)         | int(10) unsigned     | NO   |     | 0       |       |         |
-| AcceptedSoundKitID                 | int(10) unsigned     | NO   |     | 0       |       |         |
-| CompleteSoundKitID                 | int(10) unsigned     | NO   |     | 0       |       |         |
-| AreaGroupID                        | int(10) unsigned     | NO   |     | 0       |       |         |
-| TimeAllowed                        | int(10) unsigned     | NO   |     | 0       |       |         |
-| AllowableRaces                     | int(11)              | NO   |     | -1      |       |         |
-| QuestRewardID                      | int(10) unsigned     | NO   |     | 0       |       |         |
+| POIPriority                        | INT(11)              | NO   |     | 0       |       |         |
+| RewardTitle                        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardArenaPoints                  | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardSkillLineID                  | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardNumSkillUps                  | INT(10) unsigned     | NO   |     | 0       |       |         |
+| PortraitGiver                      | INT(10) unsigned     | NO   |     | 0       |       |         |
+| PortraitTurnIn                     | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardFactionID(X=1...5)           | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardFactionValue(X=1...5)        | INT(11)              | NO   |     | 0       |       |         |
+| RewardFactionOverride(X=1...5)     | INT(11)              | NO   |     | 0       |       |         |
+| RewardFactionCapIn(X=1...5)        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardFactionFlags                 | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardCurrencyID(X=1...4)          | INT(10) unsigned     | NO   |     | 0       |       |         |
+| RewardCurrencyQty(X=1...4)         | INT(10) unsigned     | NO   |     | 0       |       |         |
+| AcceptedSoundKitID                 | INT(10) unsigned     | NO   |     | 0       |       |         |
+| CompleteSoundKitID                 | INT(10) unsigned     | NO   |     | 0       |       |         |
+| AreaGroupID                        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| TimeAllowed                        | INT(10) unsigned     | NO   |     | 0       |       |         |
+| AllowableRaces                     | INT(11)              | NO   |     | -1      |       |         |
+| QuestRewardID                      | INT(10) unsigned     | NO   |     | 0       |       |         |
 | LogTitle                           | text                 | YES  |     | (NULL)  |       |         |
 | LogDescription                     | text                 | YES  |     | (NULL)  |       |         |
 | QuestDescription                   | text                 | YES  |     | (NULL)  |       |         |

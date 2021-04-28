@@ -8,7 +8,7 @@
 
 | Field               | Type        | Attribute | Key | Null | Default | Extra | Comment |
 |---------------------|-------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]             | int(10)     | unsigned  | PRI | NO   |         |       |         |
+| [ID][1]             | INT(10)     | unsigned  | PRI | NO   |         |       |         |
 | [locale][2]         | VARCHAR(4)  |           | PRI | NO   |         |       |         |
 | [CompletionText][3] | text        |           |     | YES  | NULL    |       |         |
 | [VerifiedBuild][4]  | SMALLINT(6) |           |     | NO   |         |       |         |

@@ -10,8 +10,8 @@ This table holds information of **every** rewarded quest to a player.
 
 | Field       | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
 |-------------|------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | int(10)    | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2]  | int(10)    | unsigned   | PRI | NO   | 0       |       | Quest Identifier         |
+| [guid][1]   | INT(10)    | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2]  | INT(10)    | unsigned   | PRI | NO   | 0       |       | Quest Identifier         |
 | [active][3] | TINYINT(3) | unsigned   |     | NO   | 1       |       |                          |
 
 [1]: #guid

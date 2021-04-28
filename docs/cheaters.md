@@ -4,12 +4,12 @@ Column | Type | Description
 --- | --- | ---
 Entry | BIGINT(20) | 
 Player | VARCHAR(30) | 
-Acctid | int(11) | 
+Acctid | INT(11) | 
 Reason | VARCHAR(255) | 
 Speed | FLOAT | 
 Val1 | FLOAT | 
-Val2 | int(10) unsigned | 
-Count | int(11) | 
+Val2 | INT(10) unsigned | 
+Count | INT(11) | 
 Map | SMALLINT(5) | 
 Pos | VARCHAR(255) | 
 Level | MEDIUMINT(9) | 

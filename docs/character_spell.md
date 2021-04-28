@@ -10,7 +10,7 @@ Holds information for each character's spells.
 
 | Field         | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 |---------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]     | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [guid][1]     | INT(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [spell][2]    | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Spell Identifier         |
 | [active][3]   | TINYINT(3)   | unsigned   |     | NO   | 1       |       |                          |
 | [disabled][4] | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                          |

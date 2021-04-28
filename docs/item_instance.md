@@ -10,19 +10,19 @@ This table holds individual item instance information for all items currently eq
 
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]              | int(10)      | unsigned   | PRI | NO   |         |       |         |
+| [guid][1]              | INT(10)      | unsigned   | PRI | NO   |         |       |         |
 | [itemEntry][2]         | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
-| [owner_guid][3]        | int(10)      | unsigned   |     | NO   |         |       |         |
-| [creatorGuid][4]       | int(10)      | unsigned   |     | NO   |         |       |         |
-| [giftCreatorGuid][5]   | int(10)      | unsigned   |     | NO   |         |       |         |
-| [count][6]             | int(10)      | unsigned   |     | NO   |         |       |         |
-| [duration][7]          | int(10)      | unsigned   |     | NO   |         |       |         |
+| [owner_guid][3]        | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [creatorGuid][4]       | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [giftCreatorGuid][5]   | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [count][6]             | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [duration][7]          | INT(10)      | unsigned   |     | NO   |         |       |         |
 | [charges][8]           | tinytext     |            |     | YES  | NULL    |       |         |
 | [flags][9]             | mediunint(8) | unsigned   |     | NO   |         |       |         |
 | [enchantments][10]     | text         |            |     | NO   |         |       |         |
 | [randomPropertyId][11] | SMALLINT(5)  | signed     |     | NO   |         |       |         |
 | [durability][12]       | SMALLINT(5)  | unsigned   |     | NO   |         |       |         |
-| [playedTime][13]       | int(10)      | unsigned   |     | NO   |         |       |         |
+| [playedTime][13]       | INT(10)      | unsigned   |     | NO   |         |       |         |
 | [text][14]             | text         |            |     | YES  | NULL    |       |         |
 
 [1]: #guid

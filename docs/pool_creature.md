@@ -10,7 +10,7 @@ This table contains a list of creatures that are tied to a specific pool.
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]        | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [guid][1]        | INT(10)      | unsigned   | PRI | NO   | 0       |       |         |
 | [pool_entry][2]  | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [chance][3]      | FLOAT        | unsigned   |     | NO   | 0       |       |         |
 | [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |

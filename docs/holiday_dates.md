@@ -10,10 +10,10 @@
 
 | Field            | Type    | Attribute | Key | Null | Default | Extra | Comment |
 |:-----------------|---------|-----------|-----|------|---------|-------|---------|
-| id               | int     | unsigned  | PRI | NO   |         |       |         |
+| id               | INT     | unsigned  | PRI | NO   |         |       |         |
 | date_id          | TINYINT | unsigned  | PRI | NO   |         |       |         |
-| date_value       | int     | unsigned  |     | NO   |         |       |         |
-| holiday_duration | int     | unsigned  |     | NO   | 0       |       |         |
+| date_value       | INT     | unsigned  |     | NO   |         |       |         |
+| holiday_duration | INT     | unsigned  |     | NO   | 0       |       |         |
 
 **Description of fields:**
 

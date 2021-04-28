@@ -8,8 +8,8 @@
 
 | Field                      | Type   | Attribute | Key | Null | Default | Extra | Comment |
 |----------------------------|--------|-----------|-----|------|---------|-------|---------|
-| [QuestId][1]               | int(5) | unsigned  | PRI | NO   | 0       |       |         |
-| [RewardMailSenderEntry][2] | int(5) | unsigned  |     | NO   | 0       |       |         |
+| [QuestId][1]               | INT(5) | unsigned  | PRI | NO   | 0       |       |         |
+| [RewardMailSenderEntry][2] | INT(5) | unsigned  |     | NO   | 0       |       |         |
 
 [1]: #questid
 [2]: #rewardmailsenderentry

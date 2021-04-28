@@ -11,9 +11,9 @@ This table contains Spawn Group members.
 |                                                                                              |             |                |         |          |             |           |             |
 |----------------------------------------------------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                                                                    | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [g](spawn_group_template_87293959.html#spawn_group_template-mapId)[roupId](#spawn_group-gro) | int(10)     | unsigned       | PRI     | NO       | NULL        |           |             |
+| [g](spawn_group_template_87293959.html#spawn_group_template-mapId)[roupId](#spawn_group-gro) | INT(10)     | unsigned       | PRI     | NO       | NULL        |           |             |
 | [spawnType](#spawn_group-spawnType)                                                          | TINYINT(10) | unsigned       | PRI     | NO       | NULL        |           |             |
-| [spawnId](#spawn_group-spawnId)                                                              | int(10)     | unsigned       | PRI     | NO       | NULL        |           |             |
+| [spawnId](#spawn_group-spawnId)                                                              | INT(10)     | unsigned       | PRI     | NO       | NULL        |           |             |
 
 **Description of the fields**
 

@@ -10,9 +10,9 @@ This table holds the reputation information for each character.
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |---------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]     | int(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [guid][1]     | INT(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [faction][2]  | SMALLINT(5) | unsigned   | PRI | NO   | 0       |       |                          |
-| [standing][3] | int(11)     | signed     |     | NO   | 0       |       |                          |
+| [standing][3] | INT(11)     | signed     |     | NO   | 0       |       |                          |
 | [flags][4]    | SMALLINT(5) | unsigned   |     | NO   | 0       |       |                          |
 
 [1]: #guid

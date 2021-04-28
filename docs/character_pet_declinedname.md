@@ -10,8 +10,8 @@
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|-------------|------------|-----|------|---------|-------|---------|
-| [id][1]            | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
-| [owner][2]         | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [id][1]            | INT(10)     | unsigned   | PRI | NO   | 0       |       |         |
+| [owner][2]         | INT(10)     | unsigned   |     | NO   | 0       |       |         |
 | [genitive][3]      | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
 | [dative][4]        | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
 | [accusative][5]    | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |

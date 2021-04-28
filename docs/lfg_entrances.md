@@ -10,7 +10,7 @@
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                |
 |------------------|--------------|------------|-----|------|---------|-------|------------------------|
-| [dungeonId][1]   | int(10)      | unsigned   | PRI | NO   | 0       |       | Dungeon entry from dbc |
+| [dungeonId][1]   | INT(10)      | unsigned   | PRI | NO   | 0       |       | Dungeon entry from dbc |
 | [name][2]        | VARCHAR(255) |            |     | YES  | NULL    |       | Dungeon name from dbc  |
 | [position_x][3]  | FLOAT        |            |     | NO   | 0       |       |                        |
 | [position_y][4]  | FLOAT        |            |     | NO   | 0       |       |                        |

@@ -10,11 +10,11 @@
 
 | Field            | Type       | Attributes | Key | Null | Default | Extra | Comment                                     |
 |------------------|------------|------------|-----|------|---------|-------|---------------------------------------------|
-| [guildid][1]     | int(11)    | signed     | PRI | NO   | NULL    |       | Guild Identificator                         |
-| [LogGuid][2]     | int(11)    | signed     | PRI | NO   | NULL    |       | Log record identificator - auxiliary column |
+| [guildid][1]     | INT(11)    | signed     | PRI | NO   | NULL    |       | Guild Identificator                         |
+| [LogGuid][2]     | INT(11)    | signed     | PRI | NO   | NULL    |       | Log record identificator - auxiliary column |
 | [EventType][3]   | TINYINT(1) | signed     |     | NO   | NULL    |       | Event type                                  |
-| [PlayerGuid1][4] | int(11)    | signed     |     | NO   | NULL    |       | Player 1                                    |
-| [PlayerGuid2][5] | int(11)    | signed     |     | NO   | NULL    |       | Player 2                                    |
+| [PlayerGuid1][4] | INT(11)    | signed     |     | NO   | NULL    |       | Player 1                                    |
+| [PlayerGuid2][5] | INT(11)    | signed     |     | NO   | NULL    |       | Player 2                                    |
 | [NewRank][6]     | TINYINT(2) | signed     |     | NO   | NULL    |       | New rank(in case promotion/demotion)        |
 | [TIMESTAMP][7]   | BIGINT(20) | signed     |     | NO   | NULL    |       | Event UNIX time                             |
 

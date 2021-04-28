@@ -11,7 +11,7 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 | Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------------|-----------|------------|-----|------|---------|-------|---------|
 | [battleground_id][1]       | BIGINT    | unsigned   | PRI | NO   |         |       |         |
-| [character_guid][2]        | int       | unsigned   | PRI | NO   |         |       |         |
+| [character_guid][2]        | INT       | unsigned   | PRI | NO   |         |       |         |
 | [win][3]                   | bit       |            |     |      |         |       |         |
 | [score_killing_blows][4]   | MEDIUMINT | unsigned   |     | NO   |         |       |         |
 | [score_deaths][5]          | MEDIUMINT | unsigned   |     | NO   |         |       |         |

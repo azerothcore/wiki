@@ -12,11 +12,11 @@ Holds scripts that can be activated by spells with effect SPELL\_EFFECT\_SCRIPT\
 |----------------------------------|--------------|--------------|-----|------|---------|
 | [id](scripts#id)                 | MEDIUMINT(8) | unsigned     |     | NO   | 0       |
 | [effIndex](scripts#effindex)     | TINYINT(3)   | unsigned     |     | NO   | 0       |
-| [delay](scripts#delay)           | int(10)      | unsigned     |     | NO   | 0       |
+| [delay](scripts#delay)           | INT(10)      | unsigned     |     | NO   | 0       |
 | [command](scripts#command)       | MEDIUMINT(8) | unsigned     |     | NO   | 0       |
 | [datalong](scripts#otherfields)  | MEDIUMINT(8) | unsigned     |     | NO   | 0       |
-| [datalong2](scripts#otherfields) | int(10)      | unsigned     |     | NO   | 0       |
-| [dataint](scripts#otherfields)   | int(11)      |              |     | NO   | 0       |
+| [datalong2](scripts#otherfields) | INT(10)      | unsigned     |     | NO   | 0       |
+| [dataint](scripts#otherfields)   | INT(11)      |              |     | NO   | 0       |
 | [x](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
 | [y](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
 | [z](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |

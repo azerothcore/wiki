@@ -12,16 +12,16 @@ This table is used by Trinity while running and not a table that you would usual
 
 | Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------|---------|------------|-----|------|---------|-------|---------|
-| [id][1]             | int(10) | unsigned   | PRI | NO   | 0       |       |         |
-| [auctioneerguid][2] | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [itemguid][3]       | int(10) | unsigned   | UNI | NO   | 0       |       |         |
-| [itemowner][4]      | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [buyoutprice][5]    | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [time][6]           | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [buyguid][7]        | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [lastbid][8]        | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [startbid][9]       | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [deposit][10]       | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [id][1]             | INT(10) | unsigned   | PRI | NO   | 0       |       |         |
+| [auctioneerguid][2] | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [itemguid][3]       | INT(10) | unsigned   | UNI | NO   | 0       |       |         |
+| [itemowner][4]      | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [buyoutprice][5]    | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [time][6]           | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [buyguid][7]        | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [lastbid][8]        | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [startbid][9]       | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [deposit][10]       | INT(10) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #auctioneerguid

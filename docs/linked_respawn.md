@@ -11,8 +11,8 @@ Gameobjects can be linked too!
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment            |
 |-----------------|------------|------------|-----|------|---------|-------|--------------------|
-| [guid][1]       | int(10)    | unsigned   | PRI | NO   |         |       | Dependent Creature |
-| [linkedGuid][2] | int(10)    | unsigned   |     | NO   |         |       | Master Creature    |
+| [guid][1]       | INT(10)    | unsigned   | PRI | NO   |         |       | Dependent Creature |
+| [linkedGuid][2] | INT(10)    | unsigned   |     | NO   |         |       | Master Creature    |
 | [linkType][3]   | TINYINT(3) | unsigned   |     | NO   | 0       |       |                    |
 
 [1]: #guid

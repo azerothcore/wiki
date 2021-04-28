@@ -11,7 +11,7 @@ Contains all creature instances that need to change display id and/or equipment 
 | Field             | Type         | Attributes | Key | Null | Default | Extra  | Comment                  |
 |-------------------|--------------|------------|-----|------|---------|--------|--------------------------|
 | [eventEntry][1]   | TINYINT(3)   | signed     |     | NO   | 0       |        | Entry of the game event. |
-| [guid][2]         | int(10)      | unsigned   | PRI | NO   | 0       | Unique |                          |
+| [guid][2]         | INT(10)      | unsigned   | PRI | NO   | 0       | Unique |                          |
 | [modelid][3]      | MEDIUMINT(8) | unsigned   |     | NO   | 0       |        |                          |
 | [equipment_id][4] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |        |                          |
 

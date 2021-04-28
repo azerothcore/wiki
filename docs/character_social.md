@@ -10,8 +10,8 @@ Contains data about characters' friends/ignored list.
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                            |
 |-------------|-------------|------------|-----|------|---------|-------|------------------------------------|
-| [guid][1]   | int(10)     | unsigned   | PRI | NO   | 0       |       | Character Global Unique Identifier |
-| [friend][2] | int(10)     | unsigned   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
+| [guid][1]   | INT(10)     | unsigned   | PRI | NO   | 0       |       | Character Global Unique Identifier |
+| [friend][2] | INT(10)     | unsigned   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
 | [flags][3]  | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       | Friend Flags                       |
 | [note][4]   | VARCHAR(48) | signed     |     | NO   |         |       | Friend Note                        |
 

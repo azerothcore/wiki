@@ -10,7 +10,7 @@ This table sets up information on all available realms. Each row controls a diff
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 |----------------------------|--------------|------------|-----|------|---------------|----------------|---------|
-| [id][1]                    | int(10)      | unsigned   | PRI | NO   |               | auto_increment |         |
+| [id][1]                    | INT(10)      | unsigned   | PRI | NO   |               | auto_increment |         |
 | [name][2]                  | VARCHAR(32)  |            | UNI | NO   |               |                |         |
 | [address][3]               | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
@@ -21,7 +21,7 @@ This table sets up information on all available realms. Each row controls a diff
 | [timezone][9]              | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
 | [allowedSecurityLevel][10] | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
 | [population][11]           | FLOAT        | unsigned   |     | NO   | 0             |                |         |
-| [gamebuild][12]            | int(10)      | unsigned   |     | NO   | 12340         |                |         |
+| [gamebuild][12]            | INT(10)      | unsigned   |     | NO   | 12340         |                |         |
 
 [1]: #id
 [2]: #name

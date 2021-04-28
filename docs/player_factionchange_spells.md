@@ -8,8 +8,8 @@ Basically all spell changes made when player changes faction.
 
 | Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------|------------|-----|------|---------|-------|---------|
-| [alliance_id][1] | int(8) | unsigned   | PRI | NO   |         |       |         |
-| [horde_id][2]    | int(8) | signed     | PRI | NO   |         |       |         |
+| [alliance_id][1] | INT(8) | unsigned   | PRI | NO   |         |       |         |
+| [horde_id][2]    | INT(8) | signed     | PRI | NO   |         |       |         |
 
 [1]: #alliance_id
 [2]: #horde_id

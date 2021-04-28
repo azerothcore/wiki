@@ -10,9 +10,9 @@ This table holds information on pet spell cooldowns.
 
 | Field      | Type         | Attributes | Key | Null | Default | Extra | Comment                            |
 |------------|--------------|------------|-----|------|---------|-------|------------------------------------|
-| [guid][1]  | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
+| [guid][1]  | INT(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
 | [spell][2] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Spell Identifier                   |
-| [time][3]  | int(10)      | unsigned   |     | NO   | 0       |       |                                    |
+| [time][3]  | INT(10)      | unsigned   |     | NO   | 0       |       |                                    |
 
 [1]: #guid
 [2]: #spell

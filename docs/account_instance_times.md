@@ -10,8 +10,8 @@ This table controls how many instances the account's characters have been in las
 
 | Field            | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|------------|------------|-----|------|---------|-------|---------|
-| [accountId][1]   | int(10)    | unsigned   | PRI | NO   |         |       |         |
-| [instanceId][2]  | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [accountId][1]   | INT(10)    | unsigned   | PRI | NO   |         |       |         |
+| [instanceId][2]  | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [releaseTime][3] | BIGINT(20) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #accountid

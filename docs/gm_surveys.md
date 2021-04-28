@@ -10,11 +10,11 @@
 
 | Field                | Type     | Attributes | Key | Null | Default        | Extra | Comment |
 |----------------------|----------|------------|-----|------|----------------|-------|---------|
-| [surveyid][1]        | int(10)  | signed     | PRI | NO   | Auto Increment |       |         |
-| [player][2]          | int(11)  | unsigned   |     | NO   | 0              |       |         |
-| [mainSurvey][3]      | int(11)  | unsigned   |     | NO   | 0              |       |         |
+| [surveyid][1]        | INT(10)  | signed     | PRI | NO   | Auto Increment |       |         |
+| [player][2]          | INT(11)  | unsigned   |     | NO   | 0              |       |         |
+| [mainSurvey][3]      | INT(11)  | unsigned   |     | NO   | 0              |       |         |
 | [overall_comment][4] | longtext | signed     |     | NO   |                |       |         |
-| [TIMESTAMP][5]       | int(11)  | unsigned   |     | NO   | 0              |       |         |
+| [TIMESTAMP][5]       | INT(11)  | unsigned   |     | NO   | 0              |       |         |
 
 [1]: #surveyid
 [2]: #player

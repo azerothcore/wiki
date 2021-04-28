@@ -10,21 +10,21 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 |-----------------------|-------------|------------|-----|------|---------|--------|---------|
-| [arenaTeamId][1]      | int(10)     | unsigned   | PRI | NO   |         | Unique |         |
+| [arenaTeamId][1]      | INT(10)     | unsigned   | PRI | NO   |         | Unique |         |
 | [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
-| [captainGuid][3]      | int(10)     | unsigned   |     | NO   |         |        |         |
+| [captainGuid][3]      | INT(10)     | unsigned   |     | NO   |         |        |         |
 | [type][4]             | TINYINT(3)  | unsigned   |     | NO   |         |        |         |
 | [rating][5]           | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [seasonGames][6]      | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [seasonWins][7]       | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [weekGames][8]        | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [weekWins][9]         | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
-| [rank][10]            | int(10)     | unsigned   |     | NO   |         |        |         |
-| [BackgroundColor][11] | int(10)     | unsigned   |     | NO   |         |        |         |
+| [rank][10]            | INT(10)     | unsigned   |     | NO   |         |        |         |
+| [BackgroundColor][11] | INT(10)     | unsigned   |     | NO   |         |        |         |
 | [EmblemStyle][12]     | TINYINT(3)  | unsigned   |     | NO   |         |        |         |
-| [EmblemColor][13]     | int(10)     | unsigned   |     | NO   |         |        |         |
+| [EmblemColor][13]     | INT(10)     | unsigned   |     | NO   |         |        |         |
 | [BorderStyle][14]     | TINYINT(3)  | unsigned   |     | NO   |         |        |         |
-| [BorderColor][15]     | int(10)     | unsigned   |     | NO   |         |        |         |
+| [BorderColor][15]     | INT(10)     | unsigned   |     | NO   |         |        |         |
 
 [1]: #arenateamid
 [2]: #name

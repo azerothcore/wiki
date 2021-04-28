@@ -10,21 +10,21 @@ Contains aura information that is loaded when a character is loaded, so the aura
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
-| [guid][1]             | int(10)      | unsigned   | PRI | NO   |         |       | Global Unique Identifier      |
+| [guid][1]             | INT(10)      | unsigned   | PRI | NO   |         |       | Global Unique Identifier      |
 | [caster_guid][2]      | BIGINT(20)   | unsigned   | PRI | NO   |         |       | Full Global Unique Identifier |
 | [item_guid][3]        | BIGINT(20)   | unsigned   | PRI | NO   |         |       |                               |
 | [spell][4]            | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       |                               |
 | [effect_mask][5]      | TINYINT(3)   | unsigned   | PRI | NO   |         |       |                               |
 | [recalculate_mask][6] | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 | [stackcount][7]       | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
-| [amount0][8]          | int(11)      | signed     |     | NO   |         |       |                               |
-| [amount1][9]          | int(11)      | signed     |     | NO   |         |       |                               |
-| [amount2][10]         | int(11)      | signed     |     | NO   |         |       |                               |
-| [base_amount0][11]    | int(11)      | signed     |     | NO   |         |       |                               |
-| [base_amount1][12]    | int(11)      | signed     |     | NO   |         |       |                               |
-| [base_amount2][13]    | int(11)      | signed     |     | NO   |         |       |                               |
-| [maxduration][14]     | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaintime][15]      | int(11)      | signed     |     | NO   |         |       |                               |
+| [amount0][8]          | INT(11)      | signed     |     | NO   |         |       |                               |
+| [amount1][9]          | INT(11)      | signed     |     | NO   |         |       |                               |
+| [amount2][10]         | INT(11)      | signed     |     | NO   |         |       |                               |
+| [base_amount0][11]    | INT(11)      | signed     |     | NO   |         |       |                               |
+| [base_amount1][12]    | INT(11)      | signed     |     | NO   |         |       |                               |
+| [base_amount2][13]    | INT(11)      | signed     |     | NO   |         |       |                               |
+| [maxduration][14]     | INT(11)      | signed     |     | NO   |         |       |                               |
+| [remaintime][15]      | INT(11)      | signed     |     | NO   |         |       |                               |
 | [remaincharges][16]   | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 
 [1]: #guid

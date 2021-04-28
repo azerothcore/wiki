@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-DungeonId | int(10) unsigned | 
+DungeonId | INT(10) unsigned | 
 Name | VARCHAR(255) | 
 Position_x | FLOAT | 
 Position_y | FLOAT | 

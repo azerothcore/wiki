@@ -10,7 +10,7 @@ Contains all the individual glyph data for each character.
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|-------------|------------|-----|------|---------|-------|---------|
-| [guid][1]   | int(10)     | unsigned   | PRI | NO   |         |       |         |
+| [guid][1]   | INT(10)     | unsigned   | PRI | NO   |         |       |         |
 | [spec][2]   | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       |         |
 | [glyph1][3] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
 | [glyph2][4] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |

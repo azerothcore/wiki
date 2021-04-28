@@ -18,13 +18,13 @@ Holds information on every item that exists in the game. All items are created f
 | [displayid][6]                  | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                     |
 | [Quality][7]                    | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [Flags][8]                      | BIGINT(20)   | signed     |     | NO   | 0       |       |                     |
-| [FlagsExtra][9]                 | int(10)      | unsigned   |     | NO   | 0       |       |                     |
+| [FlagsExtra][9]                 | INT(10)      | unsigned   |     | NO   | 0       |       |                     |
 | [BuyCount][10]                  | TINYINT(3)   | unsigned   |     | NO   | 1       |       |                     |
 | [BuyPrice][11]                  | BIGINT(20)   | signed     |     | NO   | 0       |       |                     |
-| [SellPrice][12]                 | int(10)      | unsigned   |     | NO   | 0       |       |                     |
+| [SellPrice][12]                 | INT(10)      | unsigned   |     | NO   | 0       |       |                     |
 | [InventoryType][13]             | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
-| [AllowableClass][14]            | int(11)      | signed     |     | NO   | -1      |       |                     |
-| [AllowableRace][15]             | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [AllowableClass][14]            | INT(11)      | signed     |     | NO   | -1      |       |                     |
+| [AllowableRace][15]             | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [ItemLevel][16]                 | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
 | [RequiredLevel][17]             | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [RequiredSkill][18]             | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
@@ -34,8 +34,8 @@ Holds information on every item that exists in the game. All items are created f
 | [RequiredCityRank][22]          | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                     |
 | [RequiredReputationFaction][23] | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
 | [RequiredReputationRank][24]    | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
-| [maxcount][25]                  | int(11)      | signed     |     | NO   | 0       |       |                     |
-| [stackable][26]                 | int(11)      | signed     |     | NO   | 1       |       |                     |
+| [maxcount][25]                  | INT(11)      | signed     |     | NO   | 0       |       |                     |
+| [stackable][26]                 | INT(11)      | signed     |     | NO   | 1       |       |                     |
 | [ContainerSlots][27]            | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
 | [StatsCount][28]                | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [stat_type1][29]                | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
@@ -59,7 +59,7 @@ Holds information on every item that exists in the game. All items are created f
 | [stat_type10][47]               | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [stat_value10][48]              | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [ScalingStatDistribution][49]   | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
-| [ScalingStatValue][50]          | int(6)       | unsigned   |     | NO   | 0       |       |                     |
+| [ScalingStatValue][50]          | INT(6)       | unsigned   |     | NO   | 0       |       |                     |
 | [dmg_min1][51]                  | FLOAT        | signed     |     | NO   | 0       |       |                     |
 | [dmg_max1][52]                  | FLOAT        | signed     |     | NO   | 0       |       |                     |
 | [dmg_type1][53]                 | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
@@ -80,37 +80,37 @@ Holds information on every item that exists in the game. All items are created f
 | [spelltrigger_1][68]            | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [spellcharges_1][69]            | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [spellppmRate_1][70]            | FLOAT        | signed     |     | NO   | 0       |       |                     |
-| [spellcooldown_1][71]           | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcooldown_1][71]           | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellcategory_1][72]           | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_1][73]   | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcategorycooldown_1][73]   | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellid_2][74]                 | MEDIUMINT(8) | signed     |     | NO   | 0       |       |                     |
 | [spelltrigger_2][75]            | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [spellcharges_2][76]            | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [spellppmRate_2][77]            | FLOAT        | signed     |     | NO   | 0       |       |                     |
-| [spellcooldown_2][78]           | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcooldown_2][78]           | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellcategory_2][79]           | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_2][80]   | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcategorycooldown_2][80]   | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellid_3][81]                 | MEDIUMINT(8) | signed     |     | NO   | 0       |       |                     |
 | [spelltrigger_3][82]            | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [spellcharges_3][83]            | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [spellppmRate_3][84]            | FLOAT        | signed     |     | NO   | 0       |       |                     |
-| [spellcooldown_3][85]           | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcooldown_3][85]           | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellcategory_3][86]           | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_3][87]   | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcategorycooldown_3][87]   | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellid_4][88]                 | MEDIUMINT(8) | signed     |     | NO   | 0       |       |                     |
 | [spelltrigger_4][89]            | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [spellcharges_4][90]            | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [spellppmRate_4][91]            | FLOAT        | signed     |     | NO   | 0       |       |                     |
-| [spellcooldown_4][92]           | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcooldown_4][92]           | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellcategory_4][93]           | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_4][94]   | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcategorycooldown_4][94]   | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellid_5][95]                 | MEDIUMINT(8) | signed     |     | NO   | 0       |       |                     |
 | [spelltrigger_5][96]            | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [spellcharges_5][97]            | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [spellppmRate_5][98]            | FLOAT        | signed     |     | NO   | 0       |       |                     |
-| [spellcooldown_5][99]           | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcooldown_5][99]           | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [spellcategory_5][100]          | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_5][101]  | int(11)      | signed     |     | NO   | -1      |       |                     |
+| [spellcategorycooldown_5][101]  | INT(11)      | signed     |     | NO   | -1      |       |                     |
 | [bonding][102]                  | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
 | [description][103]              | VARCHAR(255) | signed     |     | NO   | NULL    |       |                     |
 | [PageText][104]                 | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                     |
@@ -139,15 +139,15 @@ Holds information on every item that exists in the game. All items are created f
 | [GemProperties][127]            | MEDIUMINT(9) | signed     |     | NO   | 0       |       |                     |
 | [RequiredDisenchantSkill][128]  | SMALLINT(6)  | signed     |     | NO   | -1      |       |                     |
 | [ArmorDamageModifier][129]      | FLOAT        | signed     |     | NO   | 0       |       |                     |
-| [duration][130]                 | int(10)      | unsigned   |     | NO   | 0       |       | Duration in seconds |
+| [duration][130]                 | INT(10)      | unsigned   |     | NO   | 0       |       | Duration in seconds |
 | [ItemLimitCategory][131]        | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
-| [HolidayId][132]                | int(11)      | unsigned   |     | NO   | 0       |       |                     |
+| [HolidayId][132]                | INT(11)      | unsigned   |     | NO   | 0       |       |                     |
 | [ScriptName][133]               | VARCHAR(64)  | signed     |     | NO   | NULL    |       |                     |
 | [DisenchantID][134]             | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                     |
 | [FoodType][135]                 | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
-| [minMoneyLoot][136]             | int(10)      | unsigned   |     | NO   | 0       |       |                     |
-| [maxMoneyLoot][137]             | int(10)      | unsigned   |     | NO   | 0       |       |                     |
-| [flagsCustom][138]              | int(10)      | unsigned   |     | NO   | 0       |       |                     |
+| [minMoneyLoot][136]             | INT(10)      | unsigned   |     | NO   | 0       |       |                     |
+| [maxMoneyLoot][137]             | INT(10)      | unsigned   |     | NO   | 0       |       |                     |
+| [flagsCustom][138]              | INT(10)      | unsigned   |     | NO   | 0       |       |                     |
 | [VerifiedBuild][139]            | SMALLINT(5)  | signed     |     | YES  | 1       |       | (WDBVerified)       |
 
 [1]: #entry

@@ -10,7 +10,7 @@
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |--------------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]          | int(11)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [guid][1]          | INT(11)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [genitive][2]      | VARCHAR(15) | signed     |     | NO   | NULL    |       |                          |
 | [dative][3]        | VARCHAR(15) | signed     |     | NO   | NULL    |       |                          |
 | [accusative][4]    | VARCHAR(15) | signed     |     | NO   | NULL    |       |                          |

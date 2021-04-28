@@ -11,8 +11,8 @@ The data in this table is maintained by the core.
 
 | Field         | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|------------|------------|-----|------|---------|-------|---------|
-| [realmid][1]  | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [acctid][2]   | int(10)    | unsigned   | PRI | NO   |         |       |         |
+| [realmid][1]  | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [acctid][2]   | INT(10)    | unsigned   | PRI | NO   |         |       |         |
 | [numchars][3] | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #realmid

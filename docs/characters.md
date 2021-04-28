@@ -11,15 +11,15 @@ This table holds vital static information for each character. It is used to crea
 
 | Field                      | Type         | Attributes | Key | Null | Default           | Extra  | Comment                  |
 |----------------------------|--------------|------------|-----|------|-------------------|--------|--------------------------|
-| [guid][1]                  | int(10)      | unsigned   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
-| [account][2]               | int(10)      | unsigned   |     | NO   | 0                 |        | Account Identifier       |
+| [guid][1]                  | INT(10)      | unsigned   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
+| [account][2]               | INT(10)      | unsigned   |     | NO   | 0                 |        | Account Identifier       |
 | [name][3]                  | VARCHAR(12)  | signed     |     | NO   | NULL              |        |                          |
 | [race][4]                  | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [class][5]                 | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [gender][6]                | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [level][7]                 | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [xp][8]                    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [money][9]                 | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [xp][8]                    | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [money][9]                 | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [skin][10]                 | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [face][11]                 | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [hairStyle][12]            | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
@@ -27,24 +27,24 @@ This table holds vital static information for each character. It is used to crea
 | [facialStyle][14]          | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [bankSlots][15]            | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [restState][16]            | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [playerflags][17]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [playerflags][17]          | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [position_x][18]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [position_y][19]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [position_z][20]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [map][21]                  | SMALLINT(5)  | signed     |     | NO   | 0                 |        | Map Identifier           |
-| [instance_id][22]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [instance_id][22]          | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [instance_mode_mask][23]   | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [orientation][24]          | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [taximask][25]             | text         | signed     |     | NO   | 0                 |        |                          |
 | [online][26]               | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [cinematic][27]            | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [totaltime][28]            | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [leveltime][29]            | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [logout_time][30]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [totaltime][28]            | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [leveltime][29]            | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [logout_time][30]          | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [is_logout_resting][31]    | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [rest_bonus][32]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
-| [resettalents_cost][33]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [resettalents_time][34]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [resettalents_cost][33]    | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [resettalents_time][34]    | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [trans_x][35]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [trans_y][36]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [trans_z][37]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
@@ -55,40 +55,40 @@ This table holds vital static information for each character. It is used to crea
 | [stable_slots][42]         | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [at_login][43]             | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [zone][44]                 | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
-| [death_expire_time][45]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [death_expire_time][45]    | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [taxi_path][46]            | text         | signed     |     | YES  | NULL              |        |                          |
-| [arenaPoints][47]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [totalhonorpoints][48]     | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [todayhonorpoints][49]     | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [yesterdayhonorpoints][50] | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [totalkills][51]           | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [arenaPoints][47]          | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [totalhonorpoints][48]     | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [todayhonorpoints][49]     | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [yesterdayhonorpoints][50] | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [totalkills][51]           | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [todayKills][52]           | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [yesterdayKills][53]       | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
-| [chosenTitle][54]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [chosenTitle][54]          | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [knownCurrencies][55]      | BIGINT(20)   | unsigned   |     | NO   | 0                 |        |                          |
-| [watchedFaction][56]       | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [watchedFaction][56]       | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [drunk][57]                | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [health][58]               | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][59]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][60]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][61]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][62]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][63]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][64]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [power][65]                | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [health][58]               | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][59]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][60]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][61]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][62]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][63]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][64]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [power][65]                | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [latency][66]              | MEDIUMINT(8) | unsigned   |     | NO   | 0                 |        |                          |
 | [talentGroupsCount][67]    | TINYINT(3)   | unsigned   |     | NO   | 1                 |        |                          |
 | [activeTalentGroup][68]    | TINYINT(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [exploredzones][69]        | longtext     | signed     |     | YES  | NULL              |        |                          |
 | [equipmentcache][70]       | longtext     | signed     |     | YES  | NULL              |        |                          |
-| [ammoid][71]               | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
+| [ammoid][71]               | INT(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [knownTitles][72]          | longtext     | signed     |     | YES  | NULL              |        |                          |
 | [actionbars][73]           | longtext     | unsigned   |     | NO   | 0                 |        |                          |
 | [grantableLevels][74]      | longtext     | unsigned   |     | NO   | 0                 |        |                          |
 | [creation_date][75]        | TIMESTAMP    | signed     |     | NO   | CURRENT_TIMESTAMP |        |                          |
-| [deleteInfos_Account][76]  | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
+| [deleteInfos_Account][76]  | INT(10)      | unsigned   |     | YES  | NULL              |        |                          |
 | [deleteInfos_Name][77]     | VARCHAR(12)  | unsigned   |     | YES  | NULL              |        |                          |
-| [deleteDate][78]           | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
+| [deleteDate][78]           | INT(10)      | unsigned   |     | YES  | NULL              |        |                          |
   
 [1]: #guid
 [2]: #account

@@ -10,10 +10,10 @@ Contains all the individual button data for each character. A button is any of t
 
 | Field  | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |--------|------------|------------|-----|------|---------|-------|---------|
-| guid   | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| guid   | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | spec   | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
 | button | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
-| action | int(10)    | unsigned   |     | NO   | 0       |       |         |
+| action | INT(10)    | unsigned   |     | NO   | 0       |       |         |
 | type   | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
 
 **Description of the fields**

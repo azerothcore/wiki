@@ -11,8 +11,8 @@ This table is used to store necessary data for scenes to run, e.g. ScriptPackage
 | Field                | Type     | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|----------|------------|-----|------|---------|-------|---------|
 | [SceneId][1]         | in(10)   | unsigned   | PRI | NO   | NONE    |       |         |
-| [Flags][2]           | int(10)  | unsigned   |     | NO   | 16      |       |         |
-| [ScriptPackageId][3] | int(10)  | unsigned   |     | NO   | NONE    |       |         |
+| [Flags][2]           | INT(10)  | unsigned   |     | NO   | 16      |       |         |
+| [ScriptPackageId][3] | INT(10)  | unsigned   |     | NO   | NONE    |       |         |
 | [ScriptName][4]      | char(64) | unsigned   |     | NO   | ' '     |       |         |
 
 [1]: #sceneid

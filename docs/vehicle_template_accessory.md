@@ -16,7 +16,7 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 | [minion][4]          | TINYINT(1)   | unsigned   |     | NO   | 0       |       |                                              |
 | [description][5]     | text         | signed     |     | NO   |         |       |                                              |
 | [summontype][6]      | TINYINT(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
-| [summontimer][7]     | int(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
+| [summontimer][7]     | INT(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #entry
 [2]: #accessory_entry

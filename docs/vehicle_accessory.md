@@ -16,7 +16,7 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 | [minion][4]          | TINYINT(1)   | unsigned   |     | NO   | 0       |       |                                              |
 | [description][5]     | text         | signed     |     | NO   | "       |       |                                              |
 | [summontype][6]      | TINYINT(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
-| [summontimer][7]     | int(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
+| [summontimer][7]     | INT(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #guid
 [2]: #accessory_entry

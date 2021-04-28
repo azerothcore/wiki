@@ -4,7 +4,7 @@ This table contains the answers to the survey questions. It's linked to `gm_surv
 
 Column | Type | Description
 --- | --- | ---
-SurveyId | int(10) unsigned | 
-QuestionId | int(10) unsigned | 
-Answer | int(10) unsigned | 
+SurveyId | INT(10) unsigned | 
+QuestionId | INT(10) unsigned | 
+Answer | INT(10) unsigned | 
 AnswerComment | text | 

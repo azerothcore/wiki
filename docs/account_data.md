@@ -10,9 +10,9 @@ Contains data about client account and settings.
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |--------------|------------|------------|-----|------|---------|-------|---------|
-| [account][1] | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
+| [account][1] | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
 | [type][2]    | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
-| [time][3]    | int(10)    | unsigned   |     | NO   | 0       |       |         |
+| [time][3]    | INT(10)    | unsigned   |     | NO   | 0       |       |         |
 | [data][4]    | blob       | signed     |     | NO   |         |       |         |
 
 [1]: #account

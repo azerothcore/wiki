@@ -14,11 +14,11 @@ This table holds information about menu options a gossip NPC can have. Example
 | [OptionText][4]            | text         |            |     | YES  | NULL    |       |         |
 | [OptionBroadcastTextID][5] | MEDIUMINT(6) |            |     | NO   |         |       |         |
 | [OptionType][6]            | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
-| [OptionNpcFlag][7]         | int(10)      | unsigned   |     | NO   |         |       |         |
+| [OptionNpcFlag][7]         | INT(10)      | unsigned   |     | NO   |         |       |         |
 | [ActionMenuID][8]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [ActionPoiID][9]           | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [BoxCoded][10]             | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
-| [BoxMoney][11]             | int(11)      | unsigned   |     | NO   |         |       |         |
+| [BoxMoney][11]             | INT(11)      | unsigned   |     | NO   |         |       |         |
 | [BoxText][12]              | text         |            |     | YES  | NULL    |       |         |
 | [BoxBroadcastTextID][13]   | MEDIUMINT(6) |            |     | NO   |         |       |         |
 | [VerifiedBuild][14]        | SMALLINT(5)  |            |     | NO   |         |       |         |

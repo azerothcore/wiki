@@ -10,19 +10,19 @@ This table holds basic info about groups.
 
 | Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|------------|------------|-----|------|---------|-------|---------|
-| [guid][1]            | int(10)    | unsigned   | PRI | NO   |         |       |         |
-| [leaderGuid][2]      | int(10)    | unsigned   |     | NO   |         |       |         |
+| [guid][1]            | INT(10)    | unsigned   | PRI | NO   |         |       |         |
+| [leaderGuid][2]      | INT(10)    | unsigned   |     | NO   |         |       |         |
 | [lootMethod][3]      | TINYINT(3) | unsigned   |     | NO   |         |       |         |
-| [looterGuid][4]      | int(10)    | unsigned   |     | NO   |         |       |         |
+| [looterGuid][4]      | INT(10)    | unsigned   |     | NO   |         |       |         |
 | [lootThreshold][5]   | TINYINT(3) | unsigned   |     | NO   |         |       |         |
-| [icon1][6]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon2][7]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon3][8]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon4][9]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon5][10]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon6][11]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon7][12]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon8][13]          | int(10)    | unsigned   |     | NO   |         |       |         |
+| [icon1][6]           | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon2][7]           | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon3][8]           | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon4][9]           | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon5][10]          | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon6][11]          | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon7][12]          | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [icon8][13]          | INT(10)    | unsigned   |     | NO   |         |       |         |
 | [groupType][14]      | TINYINT(3) | unsigned   |     | NO   |         |       |         |
 | [difficulty][15]     | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
 | [raiddifficulty][16] | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |

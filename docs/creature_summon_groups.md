@@ -19,7 +19,7 @@ This table holds data about temporary summoned creatures. It is possible to grou
 | [position_z][7]   | FLOAT        |            |     | NO   | 0       |       |         |
 | [orientation][8]  | FLOAT        |            |     | NO   | 0       |       |         |
 | [summonType][9]   | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
-| [summonTime][10]  | int(10)      | unsigned   |     | NO   | 0       |       |         |
+| [summonTime][10]  | INT(10)      | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #summonerid
 [2]: #summonertype

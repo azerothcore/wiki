@@ -13,12 +13,12 @@ This table links together the appearances and item ids in regards to item hotfix
 |                                                              |             |                |         |          |             |           |             |
 |--------------------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                                    | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#item_modified_appearance-ID)                           | int(10)     | unsigned       | PRI     | NO       | 0           |           |             |
-| [ItemID](#item_modified_appearance-ItemID)                   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [AppearanceModID](#item_modified_appearance-AppearanceModID) | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [AppearanceID](#item_modified_appearance-AppearanceID)       | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [IconFileDataID](#item_modified_appearance-IconFileDataID)   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [Index](#item_modified_appearance-Index)                     | int(10)     | unsigned       |         | NO       | 0           |           |             |
+| [ID](#item_modified_appearance-ID)                           | INT(10)     | unsigned       | PRI     | NO       | 0           |           |             |
+| [ItemID](#item_modified_appearance-ItemID)                   | INT(10)     | unsigned       |         | NO       | 0           |           |             |
+| [AppearanceModID](#item_modified_appearance-AppearanceModID) | INT(10)     | unsigned       |         | NO       | 0           |           |             |
+| [AppearanceID](#item_modified_appearance-AppearanceID)       | INT(10)     | unsigned       |         | NO       | 0           |           |             |
+| [IconFileDataID](#item_modified_appearance-IconFileDataID)   | INT(10)     | unsigned       |         | NO       | 0           |           |             |
+| [Index](#item_modified_appearance-Index)                     | INT(10)     | unsigned       |         | NO       | 0           |           |             |
 | [VerifiedBuild](#item_modified_appearance-VerifiedBuild)     | SMALLINT(6) | signed         |         | NO       | 0           |           |             |
 
 **Description of the fields**

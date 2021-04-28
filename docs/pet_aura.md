@@ -10,7 +10,7 @@
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
-| [guid][1]             | int(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
+| [guid][1]             | INT(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
 | [caster_guid][2]      | BIGINT(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
 | [spell][3]            | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                               |
 | [effect_mask][4]      | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
@@ -22,8 +22,8 @@
 | [base_amount0][10]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
 | [base_amount1][11]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
 | [base_amount2][12]    | MEDIUMINT(8) | signed     |     | NO   |         |       |                               |
-| [maxduration][13]     | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaintime][14]      | int(11)      | signed     |     | NO   |         |       |                               |
+| [maxduration][13]     | INT(11)      | signed     |     | NO   |         |       |                               |
+| [remaintime][14]      | INT(11)      | signed     |     | NO   |         |       |                               |
 | [remaincharges][15]   | TINYINT(3)   | unsigned   |     | NO   |         |       |                               |
 
 [1]: #guid

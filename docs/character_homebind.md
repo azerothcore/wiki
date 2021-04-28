@@ -10,7 +10,7 @@ Contains information on the location where characters get teleported when they u
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |-------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | int(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [guid][1]   | INT(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [mapId][2]  | SMALLINT(5) | unsigned   |     | NO   | 0       |       | Map Identifier           |
 | [zoneId][3] | SMALLINT(5) | unsigned   |     | NO   | 0       |       | Zone Identifier          |
 | [posX][4]   | FLOAT       | signed     |     | NO   | 0       |       | Coordinate x             |

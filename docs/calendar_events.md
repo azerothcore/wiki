@@ -3,11 +3,11 @@
 Column | Type | Description
 --- | --- | ---
 Id | BIGINT(20) unsigned | 
-Creator | int(10) unsigned | 
+Creator | INT(10) unsigned | 
 Title | VARCHAR(255) | 
 Description | VARCHAR(255) | 
 Type | TINYINT(1) unsigned | 
-Dungeon | int(10) | 
-Eventtime | int(10) unsigned | 
-Flags | int(10) unsigned | 
-Time2 | int(10) unsigned | 
+Dungeon | INT(10) | 
+Eventtime | INT(10) unsigned | 
+Flags | INT(10) unsigned | 
+Time2 | INT(10) unsigned | 

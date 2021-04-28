@@ -12,13 +12,13 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
 | [ID][1]                     | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
 | [MaxLevel][2]               | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
-| [AllowableClasses][3]       | int(10)      | unsigned   |     | NO   |         |       |                                       |
+| [AllowableClasses][3]       | INT(10)      | unsigned   |     | NO   |         |       |                                       |
 | [SourceSpellID][4]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
 | [PrevQuestID][5]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [NextQuestID][6]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [ExclusiveGroup][7]         | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [RewardMailTemplateID][8]   | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
-| [RewardMailDelay][9]        | int(10)      | unsigned   |     | NO   |         |       |                                       |
+| [RewardMailDelay][9]        | INT(10)      | unsigned   |     | NO   |         |       |                                       |
 | [RequiredSkillID][10]       | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredSkillPoints][11]   | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredMinRepFaction][12] | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |

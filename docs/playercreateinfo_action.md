@@ -11,7 +11,7 @@ This table holds information on what default actions a brand new character shoul
 | [race][1]   | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       |         |
 | [class][2]  | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       |         |
 | [button][3] | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
-| [action][4] | int(11)     | unsigned   |     | NO   | 0       |       |         |
+| [action][4] | INT(11)     | unsigned   |     | NO   | 0       |       |         |
 | [type][5]   | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #race

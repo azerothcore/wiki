@@ -14,12 +14,12 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 
 | Field                | Type                | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|---------------------|------------|-----|------|---------|-------|---------|
-| [guid/entry][1]      | int(10)/medumint(8) | unsigned   | PRI | NO   |         |       |         |
-| [path_id][2]         | int(11)             | unsigned   |     | NO   |         |       |         |
+| [guid/entry][1]      | INT(10)/medumint(8) | unsigned   | PRI | NO   |         |       |         |
+| [path_id][2]         | INT(11)             | unsigned   |     | NO   |         |       |         |
 | [mount][3]           | MEDIUMINT(8)        | unsigned   |     | NO   |         |       |         |
-| [bytes1][4]          | int(10)             | unsigned   |     | NO   |         |       |         |
-| [bytes2][5]          | int(10)             | unsigned   |     | NO   |         |       |         |
-| [emote][6]           | int(10)             | unsigned   |     | NO   |         |       |         |
+| [bytes1][4]          | INT(10)             | unsigned   |     | NO   |         |       |         |
+| [bytes2][5]          | INT(10)             | unsigned   |     | NO   |         |       |         |
+| [emote][6]           | INT(10)             | unsigned   |     | NO   |         |       |         |
 | [aiAnimKit][7]       | SMALLINT(6)         | signed     |     | NO   |         |       |         |
 | [movementAnimKit][8] | SMALLINT(6)         | signed     |     | NO   |         |       |         |
 | [meleeAnimKit][9]    | SMALLINT(6)         | signed     |     | NO   |         |       |         |

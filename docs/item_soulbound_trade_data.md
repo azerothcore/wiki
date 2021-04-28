@@ -10,7 +10,7 @@ This table stores information about which players can trade soulbound items betw
 
 | Field              | Type    | Attributes | Key | Null | Default | Extra  | Comment                                                                 |
 |--------------------|---------|------------|-----|------|---------|--------|-------------------------------------------------------------------------|
-| [itemGuid][1]      | int(10) | unsigned   | PRI | NO   |         | Unique | Item GUID                                                               |
+| [itemGuid][1]      | INT(10) | unsigned   | PRI | NO   |         | Unique | Item GUID                                                               |
 | [alowedplayers][2] | text    | signed     | PRI | NO   |         |        | Space separated GUID list of players who can receive this item in trade |
 
 [1]: #itemguid

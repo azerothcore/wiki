@@ -24,7 +24,7 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 | [slot][2]         | SMALLINT(6)  | signed     |     | NO   | 0       |
 | [item][3]         | MEDIUMINT(8) | signed     | PRI | NO   | 0       |
 | [maxcount][4]     | TINYINT(3)   | unsigned   |     | NO   | 0       |
-| [incrtime][5]     | int(10)      | unsigned   |     | NO   | 0       |
+| [incrtime][5]     | INT(10)      | unsigned   |     | NO   | 0       |
 | [ExtendedCost][6] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |
 
 [1]: #entry

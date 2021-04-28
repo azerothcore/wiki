@@ -10,7 +10,7 @@ This table stores battlegrounds IDs for random battleground sessions.
 
 | Field     | Type     | Attributes | Key | Null | Default | Extra | Comment |
 |-----------|----------|------------|-----|------|---------|-------|---------|
-| [guid][1] | int (10) | unsigned   | PRI | NO   | 0       |       |         |
+| [guid][1] | INT (10) | unsigned   | PRI | NO   | 0       |       |         |
 
 [1]: #guid
 

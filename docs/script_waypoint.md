@@ -17,7 +17,7 @@ Used for CreatureAI waypoint movement. See also [Waypoints-Information](Waypoint
 | [location_x](#location_x)        | FLOAT        |            |     | NO   | 0       |
 | [location_y](#location_y)        | FLOAT        |            |     | NO   | 0       |
 | [location_z](#location_z)        | FLOAT        |            |     | NO   | 0       |
-| [waittime](#waittime)            | int(10)      | unsigned   |     | NO   | 0       |
+| [waittime](#waittime)            | INT(10)      | unsigned   |     | NO   | 0       |
 | [point_comment](#point_comment)  | text         |            |     | YES  | NULL    |
 
 ### entry

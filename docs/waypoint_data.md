@@ -10,17 +10,17 @@ This table contains all the path data for creatures that use waypoints and waypo
 
 | Field                            | Type         | Attributes   | Key | Null | Default |
 |----------------------------------|--------------|--------------|-----|------|---------|
-| [id](#id)                        | int(10)      | unsigned     | PRI | NO   | 0       |
+| [id](#id)                        | INT(10)      | unsigned     | PRI | NO   | 0       |
 | [point](#point)                  | MEDIUMINT(8) | unsigned     | PRI | NO   | 0       |
 | [position\_x](#position_x)       | FLOAT        |              |     | NO   | 0       |
 | [position\_y](#position_y)       | FLOAT        |              |     | NO   | 0       |
 | [position\_z](#position_z)       | FLOAT        |              |     | NO   | 0       |
 | [orientation](#orientation)      | FLOAT        |              |     | NO   | 0       |
-| [delay](#delay)                  | int(10)      | unsigned     |     | NO   | 0       |
-| [move\_type](#move_type)         | int(11)      |              |     | NO   | 0       |
-| [action](#action)                | int(11)      |              |     | NO   | 0       |
+| [delay](#delay)                  | INT(10)      | unsigned     |     | NO   | 0       |
+| [move\_type](#move_type)         | INT(11)      |              |     | NO   | 0       |
+| [action](#action)                | INT(11)      |              |     | NO   | 0       |
 | [action\_chance](#action_chance) | SMALLINT(6)  |              |     | NO   | 100     |
-| [wpguid](#wpguid)                | int(11)      | unsigned     |     | NO   | 0       |
+| [wpguid](#wpguid)                | INT(11)      | unsigned     |     | NO   | 0       |
 
 #### id
 

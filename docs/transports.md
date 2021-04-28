@@ -2,7 +2,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | int(10) unsigned | 
+Guid | INT(10) unsigned | 
 Entry | MEDIUMINT(8) unsigned | 
 Name | text | 
 ScriptName | char(64) | 

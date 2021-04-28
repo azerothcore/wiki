@@ -2,9 +2,9 @@
 
 Column | Type | Description
 --- | --- | ---
-SurveyId | int(10) unsigned | 
-Guid | int(10) unsigned | 
-MainSurvey | int(10) unsigned | 
+SurveyId | INT(10) unsigned | 
+Guid | INT(10) unsigned | 
+MainSurvey | INT(10) unsigned | 
 Comment | longtext | 
-CreateTime | int(10) unsigned | 
+CreateTime | INT(10) unsigned | 
 MaxMMR | SMALLINT(5) | 

@@ -14,7 +14,7 @@ This table contains data related to the use of the anti-cheat tool Warden, which
 | [type](#warden_checks-type)       | TINYINT(3)  | unsigned          |     | YES  | NULL            |                                           |
 | [data](#warden_checks-data)       | VARCHAR(48) | utf8\_general\_ci |     | YES  | NULL            |                                           |
 | [str](#warden_checks-str)         | VARCHAR(20) | utf8\_general\_ci |     | YES  | NULL            |                                           |
-| [address](#warden_checks-address) | int(10)     | unsigned          |     | YES  | NULL            |                                           |
+| [address](#warden_checks-address) | INT(10)     | unsigned          |     | YES  | NULL            |                                           |
 | [length](#warden_checks-length)   | TINYINT(3)  | unsigned          |     | YES  | NULL            |                                           |
 | [result](#warden_checks-result)   | VARCHAR(24) | utf8\_general\_ci |     | YES  | NULL            |                                           |
 | [comment](#warden_checks-comment) | VARCHAR(50) | utf8\_general\_ci |     | YES  | NULL            |                                           |

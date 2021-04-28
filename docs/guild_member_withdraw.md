@@ -2,11 +2,11 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | int(10) unsigned | 
-Tab0 | int(10) unsigned | 
-Tab1 | int(10) unsigned | 
-Tab2 | int(10) unsigned | 
-Tab3 | int(10) unsigned | 
-Tab4 | int(10) unsigned | 
-Tab5 | int(10) unsigned | 
-Money | int(10) unsigned | 
+Guid | INT(10) unsigned | 
+Tab0 | INT(10) unsigned | 
+Tab1 | INT(10) unsigned | 
+Tab2 | INT(10) unsigned | 
+Tab3 | INT(10) unsigned | 
+Tab4 | INT(10) unsigned | 
+Tab5 | INT(10) unsigned | 
+Money | INT(10) unsigned | 

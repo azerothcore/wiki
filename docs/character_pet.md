@@ -10,24 +10,24 @@ This table holds the pet data for each pet summoned by anyone in the game.
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]                 | int(10)      | unsigned   | PRI | NO   |         |       |         |
-| [entry][2]              | int(10)      | unsigned   |     | NO   |         |       |         |
-| [owner][3]              | int(10)      | unsigned   |     | NO   |         |       |         |
-| [modelid][4]            | int(10)      | unsigned   |     | YES  | 0       |       |         |
+| [id][1]                 | INT(10)      | unsigned   | PRI | NO   |         |       |         |
+| [entry][2]              | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [owner][3]              | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [modelid][4]            | INT(10)      | unsigned   |     | YES  | 0       |       |         |
 | [CreatedBySpell][5]     | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [PetType][6]            | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [level][7]              | SMALLINT(5)  | unsigned   |     | NO   |         |       |         |
-| [exp][8]                | int(10)      | unsigned   |     | NO   |         |       |         |
+| [exp][8]                | INT(10)      | unsigned   |     | NO   |         |       |         |
 | [Reactstate][9]         | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [name][10]              | VARCHAR(21)  |            |     | NO   |         |       |         |
 | [renamed][11]           | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
 | [slot][12]              | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
-| [curhealth][13]         | int(10)      | unsigned   |     | NO   |         |       |         |
-| [curmana][14]           | int(10)      | unsigned   |     | NO   |         |       |         |
-| [curhappiness][15]      | int(10)      | unsigned   |     | NO   |         |       |         |
-| [savetime][16]          | int(10)      | unsigned   |     | NO   |         |       |         |
-| [resettalents_cost][17] | int(10)      | unsigned   |     | NO   |         |       |         |
-| [resettalents_time][18] | int(10)      | unsigned   |     | NO   |         |       |         |
+| [curhealth][13]         | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [curmana][14]           | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [curhappiness][15]      | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [savetime][16]          | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [resettalents_cost][17] | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [resettalents_time][18] | INT(10)      | unsigned   |     | NO   |         |       |         |
 | [abdata][19]            | text         |            |     | YES  | NULL    |       |         |
 
 [1]: #id

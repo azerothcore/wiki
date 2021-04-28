@@ -58,7 +58,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="odd">
 <td><p><a href="#condition_source_type_smart_event=22">SourceId</a></p></td>
-<td><p>int(11)</p></td>
+<td><p>INT(11)</p></td>
 <td><p>signed</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -105,7 +105,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="odd">
 <td><p><a href="#conditionvalue1">ConditionValue1</a></p></td>
-<td><p>int(10)</p></td>
+<td><p>INT(10)</p></td>
 <td><p>unsigned</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -117,7 +117,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="even">
 <td><p><a href="#conditionvalue2">ConditionValue2</a></p></td>
-<td><p>int(10)</p></td>
+<td><p>INT(10)</p></td>
 <td><p>unsigned</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>
@@ -129,7 +129,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 </tr>
 <tr class="odd">
 <td><p><a href="#conditionvalue3">ConditionValue3</a></p></td>
-<td><p>int(10)</p></td>
+<td><p>INT(10)</p></td>
 <td><p>unsigned</p></td>
 <td><p>PRI</p></td>
 <td><p>NO</p></td>

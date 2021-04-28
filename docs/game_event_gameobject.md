@@ -11,7 +11,7 @@ Contains all gameobjects instances that participate to any game event.
 | Field           | Type       | Attributes | Key | Null | Default | Extra  | Comment                                                             |
 |-----------------|------------|------------|-----|------|---------|--------|---------------------------------------------------------------------|
 | [eventEntry][1] | TINYINT(3) | signed     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [guid][2]       | int(10)    | unsigned   | PRI | NO   |         | Unique |                                                                     |
+| [guid][2]       | INT(10)    | unsigned   | PRI | NO   |         | Unique |                                                                     |
 
 [1]: #evententry
 [2]: #guid

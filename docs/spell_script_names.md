@@ -10,7 +10,7 @@ Holds the spell id to ScriptName pairings for use in spell scripts.
 
 | Field           | Type     | Attributes | Key    | Null | Default | Extra | Comment |
 |-----------------|----------|------------|--------|------|---------|-------|---------|
-| [spell_id][1]   | int(11)  | signed     | UNIQUE | NO   | NONE    |       |         |
+| [spell_id][1]   | INT(11)  | signed     | UNIQUE | NO   | NONE    |       |         |
 | [ScriptName][2] | char(64) | unsigned   | UNIQUE | NO   | NONE    |       |         |
 
 [1]: #spell_id

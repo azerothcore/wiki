@@ -10,9 +10,9 @@ Definitions of instance encounters. Used by LFG.
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                 |
 |---------------------------|--------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------|
-| [entry][1]                | int(10)      | unsigned   | PRI | NO   | 0       |       | Unique entry from DungeonEncounter.dbc                                  |
+| [entry][1]                | INT(10)      | unsigned   | PRI | NO   | 0       |       | Unique entry from DungeonEncounter.dbc                                  |
 | [creditType][2]           | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                                                                         |
-| [creditEntry][3]          | int(10)      | unsigned   |     | NO   | 0       |       |                                                                         |
+| [creditEntry][3]          | INT(10)      | unsigned   |     | NO   | 0       |       |                                                                         |
 | [lastEncounterDungeon][4] | SMALLINT(5)  | unsigned   |     | NO   | 0       |       | If not 0, LfgDungeon.dbc entry for the instance it is last encounter in |
 | [comment][5]              | varchat(255) | signed     |     | NO   | "       |       |                                                                         |
 

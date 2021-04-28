@@ -10,8 +10,8 @@ This table contains saved data for LFG. This table is constantly in use by the c
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
 |--------------|------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]    | int(10)    | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [dungeon][2] | int(10)    | unsigned   |     | NO   | 0       |       |                          |
+| [guid][1]    | INT(10)    | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [dungeon][2] | INT(10)    | unsigned   |     | NO   | 0       |       |                          |
 | [state][3]   | TINYINT(3) | unsigned   |     | NO   | 0       |       |                          |
 
 [1]: #guid

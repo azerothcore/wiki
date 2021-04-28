@@ -29,14 +29,14 @@
                     <td colspan="1" class="confluenceTd">%I64u&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Capital i)</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">int(11)</td>
+                    <td colspan="1" class="confluenceTd">INT(11)</td>
                     <td colspan="1" class="confluenceTd">int32</td>
                     <td colspan="1" class="confluenceTd"><code><span>int32 val = fields[n].GetInt32();</span></code>
                     </td>
                     <td colspan="1" class="confluenceTd"><span>%u</span></td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">int(10) unsigned</td>
+                    <td colspan="1" class="confluenceTd">INT(10) unsigned</td>
                     <td colspan="1" class="confluenceTd">uint32</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint32 val = fields[n].GetUInt32();</span></code>
                     </td>
@@ -165,7 +165,7 @@
                         <p style="text-align: center;">cstring (char const*)</p>
                     </td>
                     <td colspan="1" class="confluenceTd">
-                        <p><code>int sum;</code></p>
+                        <p><code>INT sum;</code></p>
                         <p><code>if (const char* ch = fields[n].GetCString())</code></p>
                         <p><code> sum = atoi(ch);</code></p>
                     </td>

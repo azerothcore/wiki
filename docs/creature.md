@@ -8,7 +8,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra          | Comment                                                                               |
 |-----------------------|--------------|------------|-----|------|---------|----------------|---------------------------------------------------------------------------------------|
-| [guid][1]             | int(10)      | unsigned   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                                                              |
+| [guid][1]             | INT(10)      | unsigned   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                                                              |
 | [id][2]               | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | Creature Identifier                                                                   |
 | [map][3]              | SMALLINT(5)  | unsigned   |     | NO   | 0       |                | Map Identifier                                                                        |
 | [spawnMask][4]        | TINYINT(3)   | unsigned   |     | NO   | 1       |                |                                                                                       |
@@ -19,15 +19,15 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [position_y][9]       | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
 | [position_z][10]      | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
 | [orientation][11]     | FLOAT        | signed     |     | NO   | 0       |                |                                                                                       |
-| [spawntimesecs][12]   | int(10)      | unsigned   |     | NO   | 120     |                |                                                                                       |
+| [spawntimesecs][12]   | INT(10)      | unsigned   |     | NO   | 120     |                |                                                                                       |
 | [wander_distance][13] | FLOAT        | signed     |     | NO   | 5       |                | Dist in yards for random movement.                                                    |
 | [currentwaypoint][14] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
-| [curhealth][15]       | int(10)      | unsigned   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
-| [curmana][16]         | int(10)      | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
+| [curhealth][15]       | INT(10)      | unsigned   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
+| [curmana][16]         | INT(10)      | unsigned   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
 | [MovementType][17]    | TINYINT(3)   | unsigned   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path                                                       |
-| [npcflag][18]         | int(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
-| [unit_flags][19]      | int(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
-| [dynamicflags][20]    | int(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
+| [npcflag][18]         | INT(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
+| [unit_flags][19]      | INT(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
+| [dynamicflags][20]    | INT(10)      | unsigned   |     | NO   | 0       |                |                                                                                       |
 
 [1]: #guid
 [2]: #id

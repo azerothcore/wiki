@@ -10,7 +10,7 @@ This table holds the individual object data on each spawned game object in the w
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra          | Comment                  |
 |---------------------|--------------|------------|-----|------|---------|----------------|--------------------------|
-| [guid][1]           | int(10)      | unsigned   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
+| [guid][1]           | INT(10)      | unsigned   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
 | [id][2]             | MEDIUMINT(8) | unsigned   |     | NO   | 0       |                | Gameobject Identifier    |
 | [map][3]            | SMALLINT(5)  | unsigned   |     | NO   | 0       |                | Map Identifier           |
 | [spawnMask][4]      | TINYINT(3)   | unsigned   |     | NO   | 1       |                |                          |
@@ -23,7 +23,7 @@ This table holds the individual object data on each spawned game object in the w
 | [rotation1][11]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
 | [rotation2][12]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
 | [rotation3][13]     | FLOAT        | signed     |     | NO   | 0       |                |                          |
-| [spawntimesecs][14] | int(11)      | signed     |     | NO   | 0       |                |                          |
+| [spawntimesecs][14] | INT(11)      | signed     |     | NO   | 0       |                |                          |
 | [animprogress][15]  | TINYINT(3)   | unsigned   |     | NO   | 0       |                |                          |
 | [state][16]         | TINYINT(3)   | unsigned   |     | NO   | 1       |                |                          |
 

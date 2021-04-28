@@ -10,8 +10,8 @@ Please note you'll have to set PlayerStart.AllSpells to 1 in config, else this t
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| [racemask][1]  | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
-| [classmask][2] | int(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [racemask][1]  | INT(10)      | unsigned   | PRI | NO   | 0       |       |         |
+| [classmask][2] | INT(10)      | unsigned   | PRI | NO   | 0       |       |         |
 | [Spell][3]     | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [Note][4]      | VARCHAR(255) | signed     |     | YES  | NULL    |       |         |
 

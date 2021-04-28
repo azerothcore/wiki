@@ -8,8 +8,8 @@ This table holds information on what skills newly created characters should star
 
 | Field                                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [racemask](#playercreateinfo_skills-race)   | int(10)      | unsigned   | PRI | NO   |         |       |         |
-| [classmask](#playercreateinfo_skills-class) | int(10)      | unsigned   | PRI | NO   |         |       |         |
+| [racemask](#playercreateinfo_skills-race)   | INT(10)      | unsigned   | PRI | NO   |         |       |         |
+| [classmask](#playercreateinfo_skills-class) | INT(10)      | unsigned   | PRI | NO   |         |       |         |
 | [skill](SkillLine)                          | SMALLINT(5)  | unsigned   | PRI | NO   |         |       |         |
 | rank                                        | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |         |
 | Comment                                     | VARCHAR(255) | signed     |     | YES  |         |       |         |
