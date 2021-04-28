@@ -4,7 +4,11 @@
 
 **The \`logs\` table**
 
-This table stores all logs from authserver if database logging in config is enabled.
+This table stores logs from `Appender` type database in config file.
+Example db appender:
+```ini
+Appender.DB=3,5,0
+```
 
 **Structure**
 
@@ -34,21 +38,11 @@ The [RealmID](realmlist#id) of the realm this log string came from. 0 if realmd.
 
 ### type
 
-The type of log this is:
-
-| Name            | Value | Description                 |
-|-----------------|-------|-----------------------------|
-| LOG_TYPE_STRING | 0     | A NORMAL INFORMATIVE STRING |
-| LOG_TYPE_ERROR  | 1     | SOME SORT OF ERROR          |
-| LOG_TYPE_BASIC  | 2     | BASIC INFORMATION           |
-| LOG_TYPE_DETAIL | 3     | DETAILED INFORMATION        |
-| LOG_TYPE_DEBUG  | 4     | DEBUGGING INFORMATION       |
-| LOG_TYPE_CHAR   | 5     | CHARACTER-RELATED           |
-| LOG_TYPE_WORLD  | 6     | WORLD PACKET DUMP           |
-| LOG_TYPE_RA     | 7     | REMOTE ACCESS LOGS          |
-| LOG_TYPE_GM     | 8     | GM COMMAND LOGS             |
-| LOG_TYPE_CRASH  | 9     | CRASH ALARM LOGS            |
-| LOG_TYPE_CHAT   | 10    | CHAT/MESSAGE LOGS           |
+The `Logger` name from config
+Example logger:
+```ini
+Logger.server=4,Console Server
+```
 
 ### level
 
@@ -56,12 +50,12 @@ Depends on LogLevel in authserver.conf
 
 | Value | Description |
 |-------|-------------|
-| 1     | (Trace)     |
-| 2     | (Debug)     |
-| 3     | (Info)      |
-| 4     | (Warn)      |
-| 5     | (Error)     |
-| 6     | (Fatal)     |
+| 1     | (Fatal)     |
+| 2     | (Error)     |
+| 3     | (Warning)   |
+| 4     | (Info)      |
+| 5     | (Debug)     |
+| 6     | (Trace)     |
 
 ### string
 
