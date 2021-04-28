@@ -29,7 +29,7 @@ Before going through the next step you should ask yourself: do I have to create 
 
 A script type is normally strictly related to a certain class of the core. For example: 
 - `PlayerScript` -> `Player` class
-- `WorldScript -> `World` class
+- `WorldScript` -> `World` class
 - `CreatureScript` -> `Creature` class
 and so on.
 
