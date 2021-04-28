@@ -8,7 +8,7 @@
 
 | Field               | Type        | Attributes | Key | Null | Default           | Extra          | Comment                       |
 |---------------------|-------------|------------|-----|------|-------------------|----------------|-------------------------------|
-| [id][1]             | INT(10)     | UNSIGNED   | PRI | NO   |                   | auto_increment | Unique Identifier             |
+| [id][1]             | INT(10)     | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Unique Identifier             |
 | [account_id][2]     | INT(10)     | UNSIGNED   |     | NO   |                   |                | Account ID                    |
 | [character_guid][3] | INT(10)     | UNSIGNED   |     | NO   |                   |                | Character Guid                |
 | [type][4]           | TINYINT(3)  | UNSIGNED   |     | NO   |                   |                |                               |

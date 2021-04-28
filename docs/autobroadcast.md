@@ -11,7 +11,7 @@ This table contains the autobroadcast entries for your realms. Values like it's 
 | Field        | Type       | Attributes | Key | Null | Default | Extra          | Comment |
 |--------------|------------|------------|-----|------|---------|----------------|---------|
 | [realmid][1] | INT(11)    | SIGNED     | PRI | NO   | -1      |                |         |
-| [id][2]      | TINYINT(3) | UNSIGNED   | PRI | NO   |         | auto_increment |         |
+| [id][2]      | TINYINT(3) | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
 | [weight][3]  | TINYINT(3) | UNSIGNED   |     | YES  | 1       |                |         |
 | [text][4]    | longtext   |            |     | NO   |         |                |         |
 

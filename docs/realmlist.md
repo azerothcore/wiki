@@ -10,7 +10,7 @@ This table sets up information on all available realms. Each row controls a diff
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 |----------------------------|--------------|------------|-----|------|---------------|----------------|---------|
-| [id][1]                    | INT(10)      | UNSIGNED   | PRI | NO   |               | auto_increment |         |
+| [id][1]                    | INT(10)      | UNSIGNED   | PRI | NO   |               | AUTO_INCREMENT |         |
 | [name][2]                  | VARCHAR(32)  |            | UNI | NO   |               |                |         |
 | [address][3]               | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |

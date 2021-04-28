@@ -8,7 +8,7 @@
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [id][1]               | INT(10)      | UNSIGNED   | PRI | NO   |                   | auto_increment | Identifier |
+| [id][1]               | INT(10)      | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
 | [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
 | [sha_pass_hash][3]    | VARCHAR(40)  |            |     | NO   |                   |                |            |
 | [sessionkey][4]       | VARCHAR(80)  |            |     | NO   |                   |                |            |
