@@ -15,7 +15,7 @@
 | [ip][5]             | VARCHAR(15) |            |     | NO   | 127.0.0.1         |                |                               |
 | [systemnote][6]     | text        |            |     | YES  |                   |                | Notes inserted by system      |
 | [unixtime][7]       | int(10)     | unsigned   |     | NO   |                   |                | Unixtime                      |
-| [time][8]           | timestamp   |            |     | NO   | CURRENT_TIMESTAMP |                | Timestamp                     |
+| [time][8]           | TIMESTAMP   |            |     | NO   | CURRENT_TIMESTAMP |                | TIMESTAMP                     |
 | [comment][9]        | text        |            |     | YES  |                   |                | Allows users to add a comment |
 
 [1]: #id

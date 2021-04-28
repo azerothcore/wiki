@@ -81,7 +81,7 @@ The content of the ticket
 
 ### createTime
 
-The creation time of the ticket as linux timestamp
+The creation time of the ticket as linux TIMESTAMP
 
 ### mapId
 
@@ -101,7 +101,7 @@ Position Z Where ticket has ben created.
 
 ### lastModifiedTime
 
-The time when the ticket was closed or deleted by the issuer as linux timestamp
+The time when the ticket was closed or deleted by the issuer as linux TIMESTAMP
 
 ### closedBy
 

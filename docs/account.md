@@ -17,13 +17,13 @@
 | [token_key][7]        | VARCHAR(100) |            |     | NO   |                   |                |            |
 | [email][8]            | VARCHAR(255) |            |     | NO   |                   |                |            |
 | [reg_mail][9]         | VARCHAR(255) |            |     | NO   |                   |                |            |
-| [joindate][10]        | timestamp    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
+| [joindate][10]        | TIMESTAMP    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
 | [last_ip][11]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [last_attempt_ip][12] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [failed_logins][13]   | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [locked][14]          | tinyint(3)   | unsigned   |     | NO   | 0                 |                |            |
 | [lock_country][15]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
-| [last_login][16]      | timestamp    |            |     | YES  | NULL              |                |            |
+| [last_login][16]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
 | [online][17]          | int(10)      | unsigned   |     | NO   | 0                 |                |            |
 | [expansion][18]       | tinyint(3)   | unsigned   |     | NO   | 2                 |                |            |
 | [mutetime][19]        | bigint(20)   | signed     |     | NO   | 0                 |                |            |

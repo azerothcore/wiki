@@ -34,7 +34,7 @@ ID of muted account, taken from muted character. All characters on this account 
 
 ### mutedate
 
-The date then mute started. Used UNIX timestamp.
+The date then mute started. Used UNIX TIMESTAMP.
 
 ### mutetime
 

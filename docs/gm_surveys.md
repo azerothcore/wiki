@@ -14,13 +14,13 @@
 | [player][2]          | int(11)  | unsigned   |     | NO   | 0              |       |         |
 | [mainSurvey][3]      | int(11)  | unsigned   |     | NO   | 0              |       |         |
 | [overall_comment][4] | longtext | signed     |     | NO   |                |       |         |
-| [timestamp][5]       | int(11)  | unsigned   |     | NO   | 0              |       |         |
+| [TIMESTAMP][5]       | int(11)  | unsigned   |     | NO   | 0              |       |         |
 
 [1]: #surveyid
 [2]: #player
 [3]: #mainsurvey
 [4]: #overall_comment
-[5]: #timestamp
+[5]: #TIMESTAMP
 
 **Description of the fields**
 
@@ -40,6 +40,6 @@
 
 `field-no-description|4`
 
-### timestamp
+### TIMESTAMP
 
 `field-no-description|5`

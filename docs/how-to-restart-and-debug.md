@@ -63,7 +63,7 @@ Always make sure to use **RelWithDebInfo** or **Debug** compilation (in your CMa
 Create a file called `gdb.conf` with this inside:
 
     set logging on
-    set debug timestamp
+    set debug TIMESTAMP
     run -c ../etc/worldserver.conf
     bt
 

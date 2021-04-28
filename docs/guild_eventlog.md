@@ -16,7 +16,7 @@
 | [PlayerGuid1][4] | int(11)    | signed     |     | NO   | NULL    |       | Player 1                                    |
 | [PlayerGuid2][5] | int(11)    | signed     |     | NO   | NULL    |       | Player 2                                    |
 | [NewRank][6]     | tinyint(2) | signed     |     | NO   | NULL    |       | New rank(in case promotion/demotion)        |
-| [TimeStamp][7]   | bigint(20) | signed     |     | NO   | NULL    |       | Event UNIX time                             |
+| [TIMESTAMP][7]   | bigint(20) | signed     |     | NO   | NULL    |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid
@@ -24,7 +24,7 @@
 [4]: #playerguid1
 [5]: #playerguid2
 [6]: #newrank
-[7]: #timestamp
+[7]: #TIMESTAMP
 
 **Description of the fields**
 
@@ -59,6 +59,6 @@
 
 `New rank (in case of promotion/demotion)`
 
-### TimeStamp
+### TIMESTAMP
 
 `Event UNIX time`

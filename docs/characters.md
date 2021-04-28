@@ -85,7 +85,7 @@ This table holds vital static information for each character. It is used to crea
 | [knownTitles][72]          | longtext     | signed     |     | YES  | NULL              |        |                          |
 | [actionbars][73]           | longtext     | unsigned   |     | NO   | 0                 |        |                          |
 | [grantableLevels][74]      | longtext     | unsigned   |     | NO   | 0                 |        |                          |
-| [creation_date][75]        | timestamp    | signed     |     | NO   | CURRENT_TIMESTAMP |        |                          |
+| [creation_date][75]        | TIMESTAMP    | signed     |     | NO   | CURRENT_TIMESTAMP |        |                          |
 | [deleteInfos_Account][76]  | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
 | [deleteInfos_Name][77]     | VARCHAR(12)  | unsigned   |     | YES  | NULL              |        |                          |
 | [deleteDate][78]           | int(10)      | unsigned   |     | YES  | NULL              |        |                          |
