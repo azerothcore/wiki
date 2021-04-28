@@ -25,6 +25,10 @@ The list of the hooks can be found inside the [ScriptMgr.h file](https://github.
 
 ## How to create a hook
 
+Don't worry! is not scary as you may think!
+
+![](https://media4.giphy.com/media/B4ZgcoPTHYXL2/giphy.gif?cid=ecf05e47mvpbtn5sbmgkcg2gurnrjk35hsdt3m7faillyp26&rid=giphy.gif&ct=g)
+
 Before going through the next step you should ask yourself: do I have to create a new script type based on `ScriptObject` class or can I reuse one of those already existing?
 
 A script type is normally strictly related to a certain class of the core. For example: 
