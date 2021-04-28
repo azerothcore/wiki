@@ -12,26 +12,26 @@ Note: do not insert directly into most of these columns, else the client won't u
 
 | Field                  | Type        | Attributes | Key | Null | Default | Extra          | Comment                                    |
 |------------------------|-------------|------------|-----|------|---------|----------------|--------------------------------------------|
-| [Id][1]                | INT(10)     | signed     | PRI | NO   |         | Auto increment |                                            |
-| [type][2]              | TINYINT(3)  | unsigned   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
-| [playerGuid][3]        | INT(10)     | unsigned   |     | NO   |         |                | Global Unique Identifier of ticket creator |
+| [Id][1]                | INT(10)     | SIGNED     | PRI | NO   |         | Auto increment |                                            |
+| [type][2]              | TINYINT(3)  | UNSIGNED   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
+| [playerGuid][3]        | INT(10)     | UNSIGNED   |     | NO   |         |                | Global Unique Identifier of ticket creator |
 | [name][4]              | VARCHAR(12) |            |     | NO   |         |                | Name of ticket creator                     |
 | [description][5]       | text        |            |     | NO   |         |                |                                            |
-| [createtime][6]        | INT(10)     | unsigned   |     | NO   |         |                |                                            |
-| [mapId][7]             | SMALLINT(5) | unsigned   |     | NO   |         |                |                                            |
-| [posX][8]              | FLOAT       | signed     |     | NO   |         |                |                                            |
-| [posY][9]              | FLOAT       | signed     |     | NO   |         |                |                                            |
-| [posZ][10]             | FLOAT       | signed     |     | NO   |         |                |                                            |
-| [lastModifiedTime][11] | INT(10)     | signed     |     | NO   |         |                |                                            |
-| [closedBy][12]         | INT(10)     | signed     |     | NO   |         |                |                                            |
-| [assignedTo][13]       | INT(10)     | unsigned   |     | NO   |         |                | GUID of admin to whom ticket is assigned   |
+| [createtime][6]        | INT(10)     | UNSIGNED   |     | NO   |         |                |                                            |
+| [mapId][7]             | SMALLINT(5) | UNSIGNED   |     | NO   |         |                |                                            |
+| [posX][8]              | FLOAT       | SIGNED     |     | NO   |         |                |                                            |
+| [posY][9]              | FLOAT       | SIGNED     |     | NO   |         |                |                                            |
+| [posZ][10]             | FLOAT       | SIGNED     |     | NO   |         |                |                                            |
+| [lastModifiedTime][11] | INT(10)     | SIGNED     |     | NO   |         |                |                                            |
+| [closedBy][12]         | INT(10)     | SIGNED     |     | NO   |         |                |                                            |
+| [assignedTo][13]       | INT(10)     | UNSIGNED   |     | NO   |         |                | GUID of admin to whom ticket is assigned   |
 | [comment][14]          | text        |            |     | NO   |         |                |                                            |
 | [response][15]         | text        |            |     | NO   |         |                |                                            |
-| [completed][16]        | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
-| [escalated][17]        | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
-| [viewed][18]           | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
-| [needMoreHelp][19]     | TINYINT(3)  | unsigned   |     | NO   |         |                |                                            |
-| [resolvedBy][20]       | INT(10)     | unsigned   |     | NO   |         |                | GUID of GM who resolved the ticket         |
+| [completed][16]        | TINYINT(3)  | UNSIGNED   |     | NO   |         |                |                                            |
+| [escalated][17]        | TINYINT(3)  | UNSIGNED   |     | NO   |         |                |                                            |
+| [viewed][18]           | TINYINT(3)  | UNSIGNED   |     | NO   |         |                |                                            |
+| [needMoreHelp][19]     | TINYINT(3)  | UNSIGNED   |     | NO   |         |                |                                            |
+| [resolvedBy][20]       | INT(10)     | UNSIGNED   |     | NO   |         |                | GUID of GM who resolved the ticket         |
 
 [1]: #id
 [2]: #type

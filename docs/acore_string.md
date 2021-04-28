@@ -14,7 +14,7 @@ NOTE: The % arguments need to stay in the exact same order as they are provided 
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]           | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
+| [entry][1]           | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [content_default][2] | text         |            |     | NO   |         |       |         |
 | [locale_koKR][3]     | text         |            |     | YES  |         |       |         |
 | [locale_frFR][3]     | text         |            |     | YES  |         |       |         |

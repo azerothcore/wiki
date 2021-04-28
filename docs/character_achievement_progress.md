@@ -10,10 +10,10 @@
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|-------------|------------|-----|------|---------|-------|---------|
-| [guid][1]     | INT(10)     | unsigned   | PRI | NO   |         |       |         |
-| [criteria][2] | SMALLINT(5) | unsigned   | PRI | NO   |         |       |         |
-| [counter][3]  | INT(10)     | unsigned   |     | NO   |         |       |         |
-| [date][4]     | INT(10)     | unsigned   |     | NO   | 0       |       |         |
+| [guid][1]     | INT(10)     | UNSIGNED   | PRI | NO   |         |       |         |
+| [criteria][2] | SMALLINT(5) | UNSIGNED   | PRI | NO   |         |       |         |
+| [counter][3]  | INT(10)     | UNSIGNED   |     | NO   |         |       |         |
+| [date][4]     | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #criteria

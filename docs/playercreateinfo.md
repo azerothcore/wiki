@@ -10,14 +10,14 @@ This table holds the start positions of each class-race combinations for all new
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [race][1]        | TINYINT(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [class][2]       | TINYINT(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [map][3]         | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |         |
-| [zone][4]        | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
-| [position_x][5]  | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [position_y][6]  | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [position_z][7]  | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [orientation][8] | FLOAT        | signed     |     | NO   | 0       |       |         |
+| [race][1]        | TINYINT(3)   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [class][2]       | TINYINT(3)   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [map][3]         | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [zone][4]        | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [position_x][5]  | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [position_y][6]  | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [position_z][7]  | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [orientation][8] | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #race
 [2]: #class

@@ -10,17 +10,17 @@ This table holds information for each character in a battleground. Also hold inf
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 |------------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]        | INT(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [instanceId][2]  | INT(10)      | unsigned   |     | NO   | 0       |       | Instance Identifier      |
-| [team][3]        | SMALLINT(5)  | unsigned   |     | NO   |         |       |                          |
-| [joinX][4]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
-| [joinY][5]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
-| [joinZ][6]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
-| [joinO][7]       | FLOAT        | signed     |     | NO   | 0       |       |                          |
-| [joinMapId][8]   | SMALLINT(5)  | unsigned   |     | NO   | 0       |       | Map Identifier           |
-| [taxiStart][9]   | INT(10)      | unsigned   |     | NO   | 0       |       |                          |
-| [taxiEnd][10]    | INT(10)      | unsigned   |     | NO   | 0       |       |                          |
-| [mountSpell][11] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                          |
+| [guid][1]        | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [instanceId][2]  | INT(10)      | UNSIGNED   |     | NO   | 0       |       | Instance Identifier      |
+| [team][3]        | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                          |
+| [joinX][4]       | FLOAT        | SIGNED     |     | NO   | 0       |       |                          |
+| [joinY][5]       | FLOAT        | SIGNED     |     | NO   | 0       |       |                          |
+| [joinZ][6]       | FLOAT        | SIGNED     |     | NO   | 0       |       |                          |
+| [joinO][7]       | FLOAT        | SIGNED     |     | NO   | 0       |       |                          |
+| [joinMapId][8]   | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
+| [taxiStart][9]   | INT(10)      | UNSIGNED   |     | NO   | 0       |       |                          |
+| [taxiEnd][10]    | INT(10)      | UNSIGNED   |     | NO   | 0       |       |                          |
+| [mountSpell][11] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #instanceid

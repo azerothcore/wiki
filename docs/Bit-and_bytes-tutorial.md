@@ -51,8 +51,8 @@ When a number is 4 Bytes long, this means that your number actually uses 32 bits
 
 00000000 00000000 00000000 00000000
 
-The 32-bit integer data type can hold integer values in the range of −2,147,483,648 to 2,147,483,647. You may also refer to this data type as signed INT or unsigned. Unsigned INT means that the 32-bit unsigned INT data type can hold integer values in the range of 0 to 4,294,967,295.
-The reason why the unsigned INT will always store more positive values vs a signed is because we use the negative values of the signed INT as positives and this duplicates the ammout of positive values you can store in a variable.
+The 32-bit integer data type can hold integer values in the range of −2,147,483,648 to 2,147,483,647. You may also refer to this data type as SIGNED INT or UNSIGNED. Unsigned INT means that the 32-bit UNSIGNED INT data type can hold integer values in the range of 0 to 4,294,967,295.
+The reason why the UNSIGNED INT will always store more positive values vs a SIGNED is because we use the negative values of the SIGNED INT as positives and this duplicates the ammout of positive values you can store in a variable.
 
 ## What is their usage for?
 

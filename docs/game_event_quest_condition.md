@@ -10,10 +10,10 @@ This table contains the mapping of a quest in a world event to the condition tha
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|--------------|------------|-----|------|---------|-------|---------|
-| [eventEntry][1]   | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
-| [quest][2]        | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [condition_id][3] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
-| [num][4]          | FLOAT        | signed     |     | YES  | 0       |       |         |
+| [eventEntry][1]   | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
+| [quest][2]        | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [condition_id][3] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [num][4]          | FLOAT        | SIGNED     |     | YES  | 0       |       |         |
 
 [1]: #evententry
 [2]: #quest

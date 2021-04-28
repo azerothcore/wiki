@@ -10,13 +10,13 @@ Stores achievement data that is missing in [Achievement.dbc](Achievement)
 
 | Field                | Type    | Attributes | Key | Null | Default | Extra | Comment                                                                          |
 |----------------------|---------|------------|-----|------|---------|-------|----------------------------------------------------------------------------------|
-| [ID][1]              | INT(10) | unsigned   | PRI | NO   |         |       |                                                                                  |
-| [requiredFaction][2] | INT(11) | signed     |     | NO   | -1      |       |                                                                                  |
-| [mapID][3]           | INT(11) | signed     |     | NO   | -1      |       |                                                                                  |
-| [points][4]          | INT(10) | unsigned   |     | NO   | 0       |       | Achievement points awarded for completing the achievement, has no use serverside |
-| [flags][5]           | INT(10) | unsigned   |     | NO   | 0       |       |                                                                                  |
-| [count][6]           | INT(10) | unsigned   |     | NO   | 0       |       |                                                                                  |
-| [refAchievement][7]  | INT(10) | unsigned   |     | NO   | 0       |       |                                                                                  |
+| [ID][1]              | INT(10) | UNSIGNED   | PRI | NO   |         |       |                                                                                  |
+| [requiredFaction][2] | INT(11) | SIGNED     |     | NO   | -1      |       |                                                                                  |
+| [mapID][3]           | INT(11) | SIGNED     |     | NO   | -1      |       |                                                                                  |
+| [points][4]          | INT(10) | UNSIGNED   |     | NO   | 0       |       | Achievement points awarded for completing the achievement, has no use serverside |
+| [flags][5]           | INT(10) | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
+| [count][6]           | INT(10) | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
+| [refAchievement][7]  | INT(10) | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
 
 [1]: #id
 [2]: #requiredfaction

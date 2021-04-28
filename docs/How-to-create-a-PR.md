@@ -2,7 +2,7 @@
 
 ### 1. Create a fork of AzerothCore
 
-You need to be signed on [github.com](https://github.com/). If you don't have an account yet, create one.
+You need to be SIGNED on [github.com](https://github.com/). If you don't have an account yet, create one.
 
 Open the [AzerothCore repository](https://github.com/azerothcore/azerothcore-wotlk) 
 and create a fork of it by clicking in the top-right "Fork" button:

@@ -10,7 +10,7 @@ Enable a trigger when player enters a city or tavern. This causes the player to 
 
 | Field     | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 |-----------|--------------|------------|-----|------|---------|-------|------------|
-| [id][1]   | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Identifier |
+| [id][1]   | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
 | [name][2] | text         |            |     | YES  |         |       |            |
 
 [1]: #id

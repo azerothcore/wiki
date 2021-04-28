@@ -2,5 +2,5 @@
 
 Column | Type | Description
 --- | --- | ---
-WardenId | SMALLINT(5) unsigned | 
-Action | TINYINT(3) unsigned | 
+WardenId | SMALLINT(5) UNSIGNED | 
+Action | TINYINT(3) UNSIGNED | 

@@ -10,13 +10,13 @@
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|-------------|------------|-----|------|---------|-------|---------|
-| [id][1]            | INT(10)     | unsigned   | PRI | NO   | 0       |       |         |
-| [owner][2]         | INT(10)     | unsigned   |     | NO   | 0       |       |         |
-| [genitive][3]      | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
-| [dative][4]        | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
-| [accusative][5]    | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
-| [instrumental][6]  | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
-| [prepositional][7] | VARCHAR(12) | signed     |     | NO   | NULL    |       |         |
+| [id][1]            | INT(10)     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [owner][2]         | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
+| [genitive][3]      | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+| [dative][4]        | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+| [accusative][5]    | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+| [instrumental][6]  | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+| [prepositional][7] | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
 
 [1]: #id
 [2]: #owner

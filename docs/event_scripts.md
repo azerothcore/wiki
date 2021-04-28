@@ -10,11 +10,11 @@ Holds scripts activated whenever an event is activated, be it by an object or as
 
 | Field                            | Type         | Attributes   | Key | Null | Default |
 |----------------------------------|--------------|--------------|-----|------|---------|
-| [id](scripts#id)                 | MEDIUMINT(8) | unsigned     |     | NO   | 0       |
-| [delay](scripts#delay)           | INT(10)      | unsigned     |     | NO   | 0       |
-| [command](scripts#command)       | MEDIUMINT(8) | unsigned     |     | NO   | 0       |
-| [datalong](scripts#otherfields)  | MEDIUMINT(8) | unsigned     |     | NO   | 0       |
-| [datalong2](scripts#otherfields) | INT(10)      | unsigned     |     | NO   | 0       |
+| [id](scripts#id)                 | MEDIUMINT(8) | UNSIGNED     |     | NO   | 0       |
+| [delay](scripts#delay)           | INT(10)      | UNSIGNED     |     | NO   | 0       |
+| [command](scripts#command)       | MEDIUMINT(8) | UNSIGNED     |     | NO   | 0       |
+| [datalong](scripts#otherfields)  | MEDIUMINT(8) | UNSIGNED     |     | NO   | 0       |
+| [datalong2](scripts#otherfields) | INT(10)      | UNSIGNED     |     | NO   | 0       |
 | [dataint](scripts#otherfields)   | INT(11)      |              |     | NO   | 0       |
 | [x](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
 | [y](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |

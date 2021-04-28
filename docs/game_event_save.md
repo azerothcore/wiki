@@ -10,9 +10,9 @@
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [event_id][1]   | MEDIUMINT(8) | unsigned   | PRI | NO   | NULL    |       |         |
-| [state][2]      | TINYINT(3)   | unsigned   |     | NO   | 1       |       |         |
-| [next_start][3] | BIGINT(11)   | unsigned   |     | NO   | 0       |       |         |
+| [event_id][1]   | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [state][2]      | TINYINT(3)   | UNSIGNED   |     | NO   | 1       |       |         |
+| [next_start][3] | BIGINT(11)   | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #event_id
 [2]: #state

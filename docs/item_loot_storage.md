@@ -2,8 +2,8 @@
 
 Column | Type | Description
 --- | --- | ---
-ContainerGUID | INT(10) unsigned | 
-Itemid | INT(10) unsigned | 
-Count | INT(10) unsigned | 
+ContainerGUID | INT(10) UNSIGNED | 
+Itemid | INT(10) UNSIGNED | 
+Count | INT(10) UNSIGNED | 
 RandomPropertyId | INT(10) | 
-RandomSuffix | INT(10) unsigned | 
+RandomSuffix | INT(10) UNSIGNED | 

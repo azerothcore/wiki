@@ -13,10 +13,10 @@ This table contains some of the appearance data regarding item hotfixes. Togeth
 |                                                   |             |                |         |          |             |           |             |
 |---------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                         | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#item_appearance-ID)                         | INT(10)     | unsigned       | PRI     | NO       | 0           |           |             |
-| [DisplayID](#item_appearance-DisplayID)           | INT(10)     | unsigned       |         | NO       | 0           |           |             |
-| [IconFileDataID](#item_appearance-IconFileDataID) | INT(10)     | unsigned       |         | NO       | 0           |           |             |
-| [VerifiedBuild](#item_appearance-VerifiedBuild)   | SMALLINT(6) | signed         |         | NO       | 0           |           |             |
+| [ID](#item_appearance-ID)                         | INT(10)     | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [DisplayID](#item_appearance-DisplayID)           | INT(10)     | UNSIGNED       |         | NO       | 0           |           |             |
+| [IconFileDataID](#item_appearance-IconFileDataID) | INT(10)     | UNSIGNED       |         | NO       | 0           |           |             |
+| [VerifiedBuild](#item_appearance-VerifiedBuild)   | SMALLINT(6) | SIGNED         |         | NO       | 0           |           |             |
 
 **Description of the fields**
 

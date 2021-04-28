@@ -10,18 +10,18 @@ This table holds the main guild information. All created guilds or all guilds in
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra  | Comment |
 |----------------------|--------------|------------|-----|------|---------|--------|---------|
-| [guildid][1]         | INT(10)      | unsigned   | PRI | NO   | 0       | Unique |         |
-| [name][2]            | VARCHAR(24)  | signed     |     | NO   |         |        |         |
-| [leaderguid][3]      | INT(10)      | unsigned   |     | NO   | 0       |        |         |
-| [EmblemStyle][4]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
-| [EmblemColor][5]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
-| [BorderStyle][6]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
-| [BorderColor][7]     | TINYINT(3)   | unsigned   |     | NO   | 0       |        |         |
-| [BackgroundColor][8] | TINYINT(3)   | signed     |     | NO   | 0       |        |         |
-| [info][9]            | text         | signed     |     | NO   |         |        |         |
-| [motd][10]           | VARCHAR(128) | signed     |     | NO   |         |        |         |
-| [createdate][11]     | INT(10)      | unsigned   |     | NO   | 0       |        |         |
-| [BankMoney][12]      | BIGINT(20)   | signed     |     | NO   | 0       |        |         |
+| [guildid][1]         | INT(10)      | UNSIGNED   | PRI | NO   | 0       | Unique |         |
+| [name][2]            | VARCHAR(24)  | SIGNED     |     | NO   |         |        |         |
+| [leaderguid][3]      | INT(10)      | UNSIGNED   |     | NO   | 0       |        |         |
+| [EmblemStyle][4]     | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |        |         |
+| [EmblemColor][5]     | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |        |         |
+| [BorderStyle][6]     | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |        |         |
+| [BorderColor][7]     | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |        |         |
+| [BackgroundColor][8] | TINYINT(3)   | SIGNED     |     | NO   | 0       |        |         |
+| [info][9]            | text         | SIGNED     |     | NO   |         |        |         |
+| [motd][10]           | VARCHAR(128) | SIGNED     |     | NO   |         |        |         |
+| [createdate][11]     | INT(10)      | UNSIGNED   |     | NO   | 0       |        |         |
+| [BankMoney][12]      | BIGINT(20)   | SIGNED     |     | NO   | 0       |        |         |
 
 [1]: #guildid
 [2]: #name

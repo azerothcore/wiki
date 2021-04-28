@@ -10,9 +10,9 @@ This table holds data the Core needs to handle variables (like timer for arena p
 
 | Field   | Type          | Attributes | Key | Null | Default | Extra | Comment |
 |---------|---------------|------------|-----|------|---------|-------|---------|
-| entry   | MEDIUMINT(10) | unsigned   | PRI | NO   | 0       |       |         |
-| value   | INT(10)       | unsigned   |     | NO   | 0       |       |         |
-| comment | text          | signed     |     | YES  |         |       |         |
+| entry   | MEDIUMINT(10) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| value   | INT(10)       | UNSIGNED   |     | NO   | 0       |       |         |
+| comment | text          | SIGNED     |     | YES  |         |       |         |
 
 ### entry
 

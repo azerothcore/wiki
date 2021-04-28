@@ -2,16 +2,16 @@
 
 Column | Type | Description
 --- | --- | ---
-Fight_id | INT(10) unsigned | 
+Fight_id | INT(10) UNSIGNED | 
 Time | datetime | 
-Type | TINYINT(3) unsigned | 
-Duration | INT(10) unsigned | 
-Winner | INT(10) unsigned | 
-Loser | INT(10) unsigned | 
-Winner_tr | SMALLINT(5) unsigned | 
-Winner_mmr | SMALLINT(5) unsigned | 
+Type | TINYINT(3) UNSIGNED | 
+Duration | INT(10) UNSIGNED | 
+Winner | INT(10) UNSIGNED | 
+Loser | INT(10) UNSIGNED | 
+Winner_tr | SMALLINT(5) UNSIGNED | 
+Winner_mmr | SMALLINT(5) UNSIGNED | 
 Winner_tr_change | SMALLINT(6) | 
-Loser_tr | SMALLINT(5) unsigned | 
-Loser_mmr | SMALLINT(5) unsigned | 
+Loser_tr | SMALLINT(5) UNSIGNED | 
+Loser_mmr | SMALLINT(5) UNSIGNED | 
 Loser_tr_change | SMALLINT(6) | 
-CurrOnline | INT(10) unsigned | 
+CurrOnline | INT(10) UNSIGNED | 

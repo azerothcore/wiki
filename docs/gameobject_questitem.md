@@ -2,6 +2,6 @@
 
 Column | Type | Description
 --- | --- | ---
-GameObjectEntry | INT(10) unsigned | Entry ID of a gameobject that contains quest items when the related quest is active.
-Idx | INT(10) unsigned | Index
-ItemId | INT(10) unsigned | Entry ID of an item that can be looted from the gameobject when the related quest is active.
+GameObjectEntry | INT(10) UNSIGNED | Entry ID of a gameobject that contains quest items when the related quest is active.
+Idx | INT(10) UNSIGNED | Index
+ItemId | INT(10) UNSIGNED | Entry ID of an item that can be looted from the gameobject when the related quest is active.

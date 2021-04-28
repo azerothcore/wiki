@@ -10,16 +10,16 @@ This table controls the reputation given by creatures when killed by other playe
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment             |
 |---------------------------|--------------|------------|-----|------|---------|-------|---------------------|
-| [creature_id][1]          | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Creature Identifier |
-| [RewOnKillRepFaction1][2] | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
-| [RewOnKillRepFaction2][3] | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
-| [MaxStanding1][4]         | TINYINT(4)   | signed     |     | NO   | 0       |       |                     |
-| [IsTeamAward1][5]         | TINYINT(4)   | signed     |     | NO   | 0       |       |                     |
-| [RewOnKillRepValue1][6]   | MEDIUMINT(9) | signed     |     | NO   | 0       |       |                     |
-| [MaxStanding2][7]         | TINYINT(4)   | signed     |     | NO   | 0       |       |                     |
-| [IsTeamAward2][8]         | TINYINT(4)   | signed     |     | NO   | 0       |       |                     |
-| [RewOnKillRepValue2][9]   | MEDIUMINT(9) | signed     |     | NO   | 0       |       |                     |
-| [TeamDependent][10]       | TINYINT(3)   | unsigned   |     | NO   | 0       |       |                     |
+| [creature_id][1]          | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | Creature Identifier |
+| [RewOnKillRepFaction1][2] | SMALLINT(6)  | SIGNED     |     | NO   | 0       |       |                     |
+| [RewOnKillRepFaction2][3] | SMALLINT(6)  | SIGNED     |     | NO   | 0       |       |                     |
+| [MaxStanding1][4]         | TINYINT(4)   | SIGNED     |     | NO   | 0       |       |                     |
+| [IsTeamAward1][5]         | TINYINT(4)   | SIGNED     |     | NO   | 0       |       |                     |
+| [RewOnKillRepValue1][6]   | MEDIUMINT(9) | SIGNED     |     | NO   | 0       |       |                     |
+| [MaxStanding2][7]         | TINYINT(4)   | SIGNED     |     | NO   | 0       |       |                     |
+| [IsTeamAward2][8]         | TINYINT(4)   | SIGNED     |     | NO   | 0       |       |                     |
+| [RewOnKillRepValue2][9]   | MEDIUMINT(9) | SIGNED     |     | NO   | 0       |       |                     |
+| [TeamDependent][10]       | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |                     |
 
 [1]: #creature_id
 [2]: #rewonkillrepfaction1

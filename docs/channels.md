@@ -10,13 +10,13 @@ Information and settings for ingame, player-based chat channels (not affecting t
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [name][1]       | VARCHAR(128) | signed     | PRI | NO   |         |       |         |
-| [team][2]       | INT(10)      | unsigned   | PRI | NO   |         |       |         |
-| [announce][3]   | TINYINT(3)   | unsigned   |     | NO   | 1       |       |         |
-| [ownership][4]  | TINYINT(3)   | unsigned   |     | NO   | 1       |       |         |
-| [password][5]   | VARCHAR(32)  | signed     |     | YES  | NULL    |       |         |
-| [bannedList][6] | text         | signed     |     | YES  |         |       |         |
-| [lastUsed][7]   | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [name][1]       | VARCHAR(128) | SIGNED     | PRI | NO   |         |       |         |
+| [team][2]       | INT(10)      | UNSIGNED   | PRI | NO   |         |       |         |
+| [announce][3]   | TINYINT(3)   | UNSIGNED   |     | NO   | 1       |       |         |
+| [ownership][4]  | TINYINT(3)   | UNSIGNED   |     | NO   | 1       |       |         |
+| [password][5]   | VARCHAR(32)  | SIGNED     |     | YES  | NULL    |       |         |
+| [bannedList][6] | text         | SIGNED     |     | YES  |         |       |         |
+| [lastUsed][7]   | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #name
 [2]: #team

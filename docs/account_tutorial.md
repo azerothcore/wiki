@@ -10,15 +10,15 @@ This table is used to store the tutorial state of all the accounts.
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra  | Comment            |
 |----------------|---------|------------|-----|------|---------|--------|--------------------|
-| [accountId][1] | INT(10) | unsigned   | PRI | NO   | 0       | Unique | Account Identifier |
-| [tut0][2]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut1][3]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut2][4]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut3][5]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut4][6]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut5][7]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut6][8]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
-| [tut7][9]      | INT(10) | unsigned   |     | NO   | 0       |        |                    |
+| [accountId][1] | INT(10) | UNSIGNED   | PRI | NO   | 0       | Unique | Account Identifier |
+| [tut0][2]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut1][3]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut2][4]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut3][5]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut4][6]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut5][7]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut6][8]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut7][9]      | INT(10) | UNSIGNED   |     | NO   | 0       |        |                    |
 
 [1]: #accountid
 [2]: #tut0

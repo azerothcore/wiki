@@ -10,9 +10,9 @@
 
 | Field             | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|------------|------------|-----|------|---------|-------|---------|
-| [eventEntry][1]   | TINYINT(3) | unsigned   | PRI | NO   |         |       |         |
-| [condition_id][2] | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [done][3]         | FLOAT      | signed     |     | YES  | 0       |       |         |
+| [eventEntry][1]   | TINYINT(3) | UNSIGNED   | PRI | NO   |         |       |         |
+| [condition_id][2] | INT(10)    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [done][3]         | FLOAT      | SIGNED     |     | YES  | 0       |       |         |
 
 [1]: #evententry
 [2]: #condition_id

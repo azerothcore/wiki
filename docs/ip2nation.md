@@ -8,7 +8,7 @@
 
 | Field        | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |--------------|---------|------------|-----|------|---------|-------|---------|
-| [ip][1]      | INT(11) | unsigned   | MUL | NO   | 0       |       |         |
+| [ip][1]      | INT(11) | UNSIGNED   | MUL | NO   | 0       |       |         |
 | [country][2] | char(2) |            |     | NO   |         |       |         |
 
 [1]: #ip

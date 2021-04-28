@@ -14,8 +14,8 @@ the player either removes the money or destroys the container item.
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|---------|------------|-----|------|---------|-------|---------|
-| [container_id][1] | INT(10) | unsigned   |     | NO   | 0       |       |         |
-| [money][2]        | INT(10) | unsigned   |     | NO   | 0       |       |         |
+| [container_id][1] | INT(10) | UNSIGNED   |     | NO   | 0       |       |         |
+| [money][2]        | INT(10) | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #container_id
 [2]: #money

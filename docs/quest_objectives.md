@@ -10,17 +10,17 @@ This table provides answer for a very important question. What do I need to do i
 
 | Field                  | Type         | Attributes | Null | Key | Default | Comment |
 |------------------------|--------------|------------|------|-----|---------|---------|
-| [ID][1]                | MEDIUMINT(8) | unsigned   | NO   | PRI | 0       |         |
-| [QuestID][2]           | MEDIUMINT(8) | unsigned   | NO   |     | 0       |         |
-| [Type][3]              | TINYINT(3)   | unsigned   | NO   |     | 0       |         |
-| [StorageIndex][4]      | TINYINT(3)   | signed     | NO   |     | 0       |         |
-| [ObjectID][5]          | INT(10)      | signed     | NO   |     | 0       |         |
-| [Amount][6]            | INT(10)      | signed     | NO   |     | 0       |         |
-| [Flags][7]             | INT(10)      | unsigned   | NO   |     | 0       |         |
-| [Flags2][8]            | INT(10)      | unsigned   | NO   |     | 0       |         |
+| [ID][1]                | MEDIUMINT(8) | UNSIGNED   | NO   | PRI | 0       |         |
+| [QuestID][2]           | MEDIUMINT(8) | UNSIGNED   | NO   |     | 0       |         |
+| [Type][3]              | TINYINT(3)   | UNSIGNED   | NO   |     | 0       |         |
+| [StorageIndex][4]      | TINYINT(3)   | SIGNED     | NO   |     | 0       |         |
+| [ObjectID][5]          | INT(10)      | SIGNED     | NO   |     | 0       |         |
+| [Amount][6]            | INT(10)      | SIGNED     | NO   |     | 0       |         |
+| [Flags][7]             | INT(10)      | UNSIGNED   | NO   |     | 0       |         |
+| [Flags2][8]            | INT(10)      | UNSIGNED   | NO   |     | 0       |         |
 | [ProgressBarWeight][9] | FLOAT        |            | NO   |     | 0       |         |
 | [Description][10]      | text         |            | YES  |     | NULL    |         |
-| [VerifiedBuild][11]    | SMALLINT(5)  | signed     | NO   |     | 0       |         |
+| [VerifiedBuild][11]    | SMALLINT(5)  | SIGNED     | NO   |     | 0       |         |
 
 [1]: #id
 [2]: #questid

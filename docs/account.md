@@ -8,7 +8,7 @@
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [id][1]               | INT(10)      | unsigned   | PRI | NO   |                   | auto_increment | Identifier |
+| [id][1]               | INT(10)      | UNSIGNED   | PRI | NO   |                   | auto_increment | Identifier |
 | [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
 | [sha_pass_hash][3]    | VARCHAR(40)  |            |     | NO   |                   |                |            |
 | [sessionkey][4]       | VARCHAR(80)  |            |     | NO   |                   |                |            |
@@ -20,19 +20,19 @@
 | [joindate][10]        | TIMESTAMP    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
 | [last_ip][11]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [last_attempt_ip][12] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
-| [failed_logins][13]   | INT(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [locked][14]          | TINYINT(3)   | unsigned   |     | NO   | 0                 |                |            |
+| [failed_logins][13]   | INT(10)      | UNSIGNED   |     | NO   | 0                 |                |            |
+| [locked][14]          | TINYINT(3)   | UNSIGNED   |     | NO   | 0                 |                |            |
 | [lock_country][15]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
 | [last_login][16]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
-| [online][17]          | INT(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [expansion][18]       | TINYINT(3)   | unsigned   |     | NO   | 2                 |                |            |
-| [mutetime][19]        | BIGINT(20)   | signed     |     | NO   | 0                 |                |            |
+| [online][17]          | INT(10)      | UNSIGNED   |     | NO   | 0                 |                |            |
+| [expansion][18]       | TINYINT(3)   | UNSIGNED   |     | NO   | 2                 |                |            |
+| [mutetime][19]        | BIGINT(20)   | SIGNED     |     | NO   | 0                 |                |            |
 | [mutereason][20]      | VARCHAR(255) |            |     | NO   |                   |                |            |
 | [muteby][21]          | VARCHAR(50)  |            |     | NO   |                   |                |            |
-| [locale][22]          | TINYINT(3)   | unsigned   |     | NO   | 0                 |                |            |
+| [locale][22]          | TINYINT(3)   | UNSIGNED   |     | NO   | 0                 |                |            |
 | [os][23]              | VARCHAR(3)   |            |     | NO   |                   |                |            |
-| [recruiter][24]       | INT(10)      | unsigned   |     | NO   | 0                 |                |            |
-| [totaltime][25]       | INT(10)      | unsigned   |     | NO   | 0                 |                |            |
+| [recruiter][24]       | INT(10)      | UNSIGNED   |     | NO   | 0                 |                |            |
+| [totaltime][25]       | INT(10)      | UNSIGNED   |     | NO   | 0                 |                |            |
 
 [1]: #id
 [2]: #username

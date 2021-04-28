@@ -10,11 +10,11 @@ This table contains all models of mobs, their gender and other information that 
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [modelid][1]              | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [bounding_radius][2]      | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [combat_reach][3]         | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [gender][4]               | TINYINT(3)   | unsigned   |     | NO   | 2       |       |         |
-| [modelid_other_gender][5] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
+| [modelid][1]              | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [bounding_radius][2]      | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [combat_reach][3]         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [gender][4]               | TINYINT(3)   | UNSIGNED   |     | NO   | 2       |       |         |
+| [modelid_other_gender][5] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #modelid
 [2]: #bounding_radius

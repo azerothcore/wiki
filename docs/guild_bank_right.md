@@ -10,11 +10,11 @@ This table hold informations regarding the right guild member have to withdraw, 
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|
-| [guildid][1]    | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [TabId][2]      | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
-| [rid][3]        | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
-| [gbright][4]    | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
-| [SlotPerDay][5] | INT(10)    | unsigned   |     | NO   | 0       |       |         |
+| [guildid][1]    | INT(10)    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [TabId][2]      | TINYINT(3) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [rid][3]        | TINYINT(3) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [gbright][4]    | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       |         |
+| [SlotPerDay][5] | INT(10)    | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid
 [2]: #tabid

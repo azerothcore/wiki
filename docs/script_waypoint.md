@@ -12,12 +12,12 @@ Used for CreatureAI waypoint movement. See also [Waypoints-Information](Waypoint
 
 | Field                            | Type         | Attributes | Key | Null | Default |
 |----------------------------------|--------------|------------|-----|------|---------|
-| [entry](creature_template#entry) | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |
-| [pointid](#pointid)              | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |
+| [entry](creature_template#entry) | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
+| [pointid](#pointid)              | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |
 | [location_x](#location_x)        | FLOAT        |            |     | NO   | 0       |
 | [location_y](#location_y)        | FLOAT        |            |     | NO   | 0       |
 | [location_z](#location_z)        | FLOAT        |            |     | NO   | 0       |
-| [waittime](#waittime)            | INT(10)      | unsigned   |     | NO   | 0       |
+| [waittime](#waittime)            | INT(10)      | UNSIGNED   |     | NO   | 0       |
 | [point_comment](#point_comment)  | text         |            |     | YES  | NULL    |
 
 ### entry

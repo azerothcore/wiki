@@ -8,7 +8,7 @@ Acctid | INT(11) |
 Reason | VARCHAR(255) | 
 Speed | FLOAT | 
 Val1 | FLOAT | 
-Val2 | INT(10) unsigned | 
+Val2 | INT(10) UNSIGNED | 
 Count | INT(11) | 
 Map | SMALLINT(5) | 
 Pos | VARCHAR(255) | 

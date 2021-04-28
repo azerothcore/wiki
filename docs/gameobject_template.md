@@ -6,41 +6,41 @@ Contains template of all gameobjects
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| entry          | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
-| type           | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
-| displayId      | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
-| name           | VARCHAR(100) | signed     |     | NO   | "       |       |         |
-| IconName       | VARCHAR(100) | signed     |     | NO   | "       |       |         |
-| castBarCaption | VARCHAR(100) | signed     |     | NO   | "       |       |         |
-| unk1           | VARCHAR(100) | signed     |     | NO   | "       |       |         |
-| size           | FLOAT        | signed     |     | NO   | 1       |       |         |
-| data0          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data1          | INT(11)      | unsigned   |     | NO   | -1      |       |         |
-| data2          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data3          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data4          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data5          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data6          | INT(11)      | unsigned   |     | NO   | -1      |       |         |
-| data7          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data8          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data9          | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data10         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data11         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data12         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data13         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data14         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data15         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data16         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data17         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data18         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data19         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data20         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data21         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data22         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| data23         | INT(10)      | unsigned   |     | NO   | 0       |       |         |
-| AIName         | char(64)     | signed     |     | NO   | "       |       |         |
-| ScriptName     | VARCHAR(64)  | signed     |     | NO   | "       |       |         |
-| WDBVerified    | SMALLINT(5)  | signed     |     | YES  | 1       |       |         |
+| entry          | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| type           | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |         |
+| displayId      | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| name           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| IconName       | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| castBarCaption | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| unk1           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| size           | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
+| data0          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data1          | INT(11)      | UNSIGNED   |     | NO   | -1      |       |         |
+| data2          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data3          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data4          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data5          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data6          | INT(11)      | UNSIGNED   |     | NO   | -1      |       |         |
+| data7          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data8          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data9          | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data10         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data11         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data12         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data13         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data14         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data15         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data16         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data17         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data18         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data19         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data20         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data21         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data22         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| data23         | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
+| AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
+| ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
+| WDBVerified    | SMALLINT(5)  | SIGNED     |     | YES  | 1       |       |         |
 
 ## Description of the fields
 

@@ -2,7 +2,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | INT(10) unsigned | 
+Id | INT(10) UNSIGNED | 
 Name | VARCHAR(255) | 
 Version | VARCHAR(255) | 
 TIMESTAMP | TIMESTAMP | 

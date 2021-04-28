@@ -22,7 +22,7 @@
                     <td colspan="1" class="confluenceTd">%I64d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Capital i)</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">BIGINT(20) unsigned</td>
+                    <td colspan="1" class="confluenceTd">BIGINT(20) UNSIGNED</td>
                     <td colspan="1" class="confluenceTd">uint64</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint64 val = fields[n].GetUInt64();</span></code>
                     </td>
@@ -36,7 +36,7 @@
                     <td colspan="1" class="confluenceTd"><span>%u</span></td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">INT(10) unsigned</td>
+                    <td colspan="1" class="confluenceTd">INT(10) UNSIGNED</td>
                     <td colspan="1" class="confluenceTd">uint32</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint32 val = fields[n].GetUInt32();</span></code>
                     </td>
@@ -50,7 +50,7 @@
                     <td colspan="1" class="confluenceTd"><span>%u</span></td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">MEDIUMINT(8) unsigned</td>
+                    <td colspan="1" class="confluenceTd">MEDIUMINT(8) UNSIGNED</td>
                     <td colspan="1" class="confluenceTd">uint32</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint32 val = fields[n].GetUInt32();</span></code>
                     </td>
@@ -64,7 +64,7 @@
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">SMALLINT(5) unsigned</td>
+                    <td colspan="1" class="confluenceTd">SMALLINT(5) UNSIGNED</td>
                     <td colspan="1" class="confluenceTd">uint16</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint16 val = fields[n].GetUInt16();</span></code>
                     </td>
@@ -78,7 +78,7 @@
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">TINYINT(3) unsigned</td>
+                    <td colspan="1" class="confluenceTd">TINYINT(3) UNSIGNED</td>
                     <td colspan="1" class="confluenceTd">uint8</td>
                     <td colspan="1" class="confluenceTd"><code><span>uint8 val = fields[n].GetUInt8();</span></code>
                     </td>
@@ -91,7 +91,7 @@
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="1" class="confluenceTd">FLOAT unsigned</td>
+                    <td colspan="1" class="confluenceTd">FLOAT UNSIGNED</td>
                     <td class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
@@ -101,7 +101,7 @@
                     <td colspan="1" class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="confluenceTd">double unsigned</td>
+                    <td class="confluenceTd">double UNSIGNED</td>
                     <td class="confluenceTd">&nbsp;</td>
                 </tr>
                 <tr>

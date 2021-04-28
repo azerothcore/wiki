@@ -14,11 +14,11 @@ This table contains the description of creatures movements, where the creature c
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|
-| [CreatureId][1] | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [Ground][2]     | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
-| [Swim][3]       | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
-| [Flight][4]     | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
-| [Rooted][5]     | TINYINT(3) | unsigned   |     | NO   | 0       |       |         |
+| [CreatureId][1] | INT(10)    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Ground][2]     | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       |         |
+| [Swim][3]       | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       |         |
+| [Flight][4]     | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       |         |
+| [Rooted][5]     | TINYINT(3) | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #creatureid
 [2]: #ground

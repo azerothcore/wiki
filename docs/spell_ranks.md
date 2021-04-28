@@ -10,9 +10,9 @@ Table used by the core to group different ranks of spells (the gray text seen on
 
 | Field               | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------|------------|------------|-----|------|---------|-------|---------|
-| [first_spell_id][1] | INT(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [spell_id][2]       | INT(10)    | unsigned   |     | NO   | 0       |       |         |
-| [rank][3]           | TINYINT(3) | unsigned   | PRI | NO   | 0       |       |         |
+| [first_spell_id][1] | INT(10)    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [spell_id][2]       | INT(10)    | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank][3]           | TINYINT(3) | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #first_spell_id
 [2]: #spell_id

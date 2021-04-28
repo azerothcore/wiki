@@ -12,12 +12,12 @@ Waypoint paths directly attached to a creature via [creature_addon.path_id](crea
 
 | Field                            | Type         | Attributes   | Key | Null | Default | Comment
 |----------------------------------|--------------|--------------|-----|------|---------|--------
-| [id](scripts#id)                 | INT(11)      | unsigned     |     | NO   | 0       |
-| [delay](scripts#delay)           | INT(11)      | unsigned     |     | NO   | 0       |
-| [command](scripts#command)       | INT(11)      | unsigned     |     | NO   | 0       |
-| [datalong](scripts#otherfields)  | INT(11)      | unsigned     |     | NO   | 0       |
-| [datalong2](scripts#otherfields) | INT(11)      | unsigned     |     | NO   | 0       |
-| [dataint](scripts#otherfields)   | INT(11)      | unsigned     |     | NO   | 0       |
+| [id](scripts#id)                 | INT(11)      | UNSIGNED     |     | NO   | 0       |
+| [delay](scripts#delay)           | INT(11)      | UNSIGNED     |     | NO   | 0       |
+| [command](scripts#command)       | INT(11)      | UNSIGNED     |     | NO   | 0       |
+| [datalong](scripts#otherfields)  | INT(11)      | UNSIGNED     |     | NO   | 0       |
+| [datalong2](scripts#otherfields) | INT(11)      | UNSIGNED     |     | NO   | 0       |
+| [dataint](scripts#otherfields)   | INT(11)      | UNSIGNED     |     | NO   | 0       |
 | [x](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
 | [y](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |
 | [z](scripts#otherfields)         | FLOAT        |              |     | NO   | 0       |

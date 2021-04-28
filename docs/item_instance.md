@@ -10,19 +10,19 @@ This table holds individual item instance information for all items currently eq
 
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]              | INT(10)      | unsigned   | PRI | NO   |         |       |         |
-| [itemEntry][2]         | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
-| [owner_guid][3]        | INT(10)      | unsigned   |     | NO   |         |       |         |
-| [creatorGuid][4]       | INT(10)      | unsigned   |     | NO   |         |       |         |
-| [giftCreatorGuid][5]   | INT(10)      | unsigned   |     | NO   |         |       |         |
-| [count][6]             | INT(10)      | unsigned   |     | NO   |         |       |         |
-| [duration][7]          | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [guid][1]              | INT(10)      | UNSIGNED   | PRI | NO   |         |       |         |
+| [itemEntry][2]         | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |         |
+| [owner_guid][3]        | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [creatorGuid][4]       | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [giftCreatorGuid][5]   | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [count][6]             | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [duration][7]          | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
 | [charges][8]           | tinytext     |            |     | YES  | NULL    |       |         |
-| [flags][9]             | mediunint(8) | unsigned   |     | NO   |         |       |         |
+| [flags][9]             | mediunint(8) | UNSIGNED   |     | NO   |         |       |         |
 | [enchantments][10]     | text         |            |     | NO   |         |       |         |
-| [randomPropertyId][11] | SMALLINT(5)  | signed     |     | NO   |         |       |         |
-| [durability][12]       | SMALLINT(5)  | unsigned   |     | NO   |         |       |         |
-| [playedTime][13]       | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [randomPropertyId][11] | SMALLINT(5)  | SIGNED     |     | NO   |         |       |         |
+| [durability][12]       | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |         |
+| [playedTime][13]       | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
 | [text][14]             | text         |            |     | YES  | NULL    |       |         |
 
 [1]: #guid

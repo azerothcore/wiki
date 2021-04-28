@@ -11,22 +11,22 @@ This table is used to provide to localized clients with localized string for cre
 |                                                        |              |                |         |          |             |           |             |
 |--------------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                              | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#creature_template_locale-entry)               | MEDIUMINT(8) | unsigned       | PRI     | NO       | 0           |           |             |
-| [name\_loc1](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc2](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc3](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc5](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc6](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc7](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc8](#creature_template_locale-name_loc)       | VARCHAR(100) | signed         |         | NO       | NULL        |           |             |
-| [subname\_loc1](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc2](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc3](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc4](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc5](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc6](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc7](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
-| [subname\_loc8](#creature_template_locale-subname_loc) | VARCHAR(100) | signed         |         | YES      | NULL        |           |             |
+| [entry](#creature_template_locale-entry)               | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [name\_loc1](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc2](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc3](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc5](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc6](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc7](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc8](#creature_template_locale-name_loc)       | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [subname\_loc1](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc2](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc3](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc4](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc5](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc6](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc7](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
+| [subname\_loc8](#creature_template_locale-subname_loc) | VARCHAR(100) | SIGNED         |         | YES      | NULL        |           |             |
 
 **Description of the fields**
 

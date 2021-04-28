@@ -5,8 +5,8 @@
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|
 | [TypeId[1]      | TINYINT(2) | unasigned  | PRI | NO   |         |       |         |
-| [ScriptName][2] | char(64)   | signed     |     | NO   | 0       |       |         |
-| [comment][3]    | text       | signed     |     | YES  | NULL    |       |         |
+| [ScriptName][2] | char(64)   | SIGNED     |     | NO   | 0       |       |         |
+| [comment][3]    | text       | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #typeid
 [2]: #scriptname

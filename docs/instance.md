@@ -10,12 +10,12 @@ This table holds static information on all current instances that have not yet b
 
 | Field                    | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------------|-------------|------------|-----|------|---------|-------|---------|
-| [id][1]                  | INT(10)     | unsigned   | PRI | NO   | 0       |       |         |
-| [map][2]                 | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
-| [resettime][3]           | INT(10)     | unsigned   |     | NO   | 0       |       |         |
-| [difficulty][4]          | TINYINT(3)  | unsigned   |     | NO   | 0       |       |         |
-| [completedEncounters][5] | INT(10)     | unsigned   |     | NO   | 0       |       |         |
-| [data][6]                | tinytext    | signed     |     | NO   |         |       |         |
+| [id][1]                  | INT(10)     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [map][2]                 | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       |         |
+| [resettime][3]           | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
+| [difficulty][4]          | TINYINT(3)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [completedEncounters][5] | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
+| [data][6]                | tinytext    | SIGNED     |     | NO   |         |       |         |
 
 [1]: #id
 [2]: #map

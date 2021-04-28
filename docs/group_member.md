@@ -10,11 +10,11 @@ This table holds info about group members.
 
 | Field            | Type       | Attributes | Key | Null | Default | Extra  | Comment |
 |------------------|------------|------------|-----|------|---------|--------|---------|
-| [guid][1]        | INT(10)    | unsigned   |     | NO   |         |        |         |
-| [memberGuid][2]  | INT(10)    | unsigned   | PRI | NO   |         | Unique |         |
-| [memberFlags][3] | TINYINT(3) | unsigned   |     | NO   | 0       |        |         |
-| [subgroup[4]     | TINYINT(3) | unsigned   |     | NO   | 0       |        |         |
-| [roles][5]       | TINYINT(3) | unsigned   |     | NO   | 0       |        |         |
+| [guid][1]        | INT(10)    | UNSIGNED   |     | NO   |         |        |         |
+| [memberGuid][2]  | INT(10)    | UNSIGNED   | PRI | NO   |         | Unique |         |
+| [memberFlags][3] | TINYINT(3) | UNSIGNED   |     | NO   | 0       |        |         |
+| [subgroup[4]     | TINYINT(3) | UNSIGNED   |     | NO   | 0       |        |         |
+| [roles][5]       | TINYINT(3) | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #guid
 [2]: #memberguid
@@ -50,7 +50,7 @@ There can only be 5 membes in one subgroup per raid group.
 | Value | Name        | Comments                                                         |
 |-------|-------------|------------------------------------------------------------------|
 | 0     | ROLE_NONE   |                                                                  |
-| 1     | ROLE_LEADER | The character has signed to Random Dungeon Finder as experienced |
-| 2     | ROLE_TANK   | The character has signed to Random Dungeon Finder as tank        |
-| 4     | ROLE_HEALER | The character has signed to Random Dungeon Finder as healer      |
-| 8     | ROLE_DAMAGE | The character has signed to Random Dungeon Finder as dps         |
+| 1     | ROLE_LEADER | The character has SIGNED to Random Dungeon Finder as experienced |
+| 2     | ROLE_TANK   | The character has SIGNED to Random Dungeon Finder as tank        |
+| 4     | ROLE_HEALER | The character has SIGNED to Random Dungeon Finder as healer      |
+| 8     | ROLE_DAMAGE | The character has SIGNED to Random Dungeon Finder as dps         |

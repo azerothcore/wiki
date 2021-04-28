@@ -10,8 +10,8 @@ This table contains trigger points for events in certain coordinates in the maps
 
 | Field       | Type    | Attributes | Key | Null | Default | Extra          | Comment                                              |
 |-------------|---------|------------|-----|------|---------|----------------|------------------------------------------------------|
-| entry       | INT(10) | unsigned   | PRI | NO   |         | auto_increment |                                                      |
-| map         | INT(10) | unsigned   |     | NO   | 0       |                |                                                      |
+| entry       | INT(10) | UNSIGNED   | PRI | NO   |         | auto_increment |                                                      |
+| map         | INT(10) | UNSIGNED   |     | NO   | 0       |                |                                                      |
 | x           | FLOAT   |            |     | NO   | 0       |                |                                                      |
 | y           | FLOAT   |            |     | NO   | 0       |                |                                                      |
 | z           | FLOAT   |            |     | NO   | 0       |                |                                                      |

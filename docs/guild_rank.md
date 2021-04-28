@@ -10,11 +10,11 @@ This table holds the information on all of the ranks available in a guild along 
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guildid][1]         | INT(10)      | unsigned   | PRI | NO   | 0       |       |         |
-| [rid][2]             | TINYINT(3)   | unsigned   | PRI | NO   |         |       |         |
-| [rname][3]           | VARCHAR(20)  | signed     |     | NO   | "       |       |         |
-| [rights][4]          | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
-| [BankMoneyPerDay][5] | INT(10)      | unsigned   |     | NO   | 0       |       |         |
+| [guildid][1]         | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [rid][2]             | TINYINT(3)   | UNSIGNED   | PRI | NO   |         |       |         |
+| [rname][3]           | VARCHAR(20)  | SIGNED     |     | NO   | "       |       |         |
+| [rights][4]          | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [BankMoneyPerDay][5] | INT(10)      | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid
 [2]: #rid
@@ -64,4 +64,4 @@ The rights a player with this rank has in the guild. The calculation of multiple
 
 ### BankMoneyPerDay
 
-The total money per day, in copper, that a person with this rank can take out. Use the maximum value of an unsigned INT (4294967295) to specify unlimited amount.
+The total money per day, in copper, that a person with this rank can take out. Use the maximum value of an UNSIGNED INT (4294967295) to specify unlimited amount.

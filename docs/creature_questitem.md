@@ -2,6 +2,6 @@
 
 Column | Type | Description
 --- | --- | ---
-CreatureEntry | INT(10) unsigned | Entry ID of a creature that drops quest items when the related quest is active.
-Idx | INT(10) unsigned | Index
-ItemId | INT(10) unsigned | Entry ID of an item that can be looted from the creature when the related quest is active.
+CreatureEntry | INT(10) UNSIGNED | Entry ID of a creature that drops quest items when the related quest is active.
+Idx | INT(10) UNSIGNED | Index
+ItemId | INT(10) UNSIGNED | Entry ID of an item that can be looted from the creature when the related quest is active.

@@ -10,23 +10,23 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
-| [ID][1]                     | MEDIUMINT(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
-| [MaxLevel][2]               | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
-| [AllowableClasses][3]       | INT(10)      | unsigned   |     | NO   |         |       |                                       |
-| [SourceSpellID][4]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
+| [ID][1]                     | MEDIUMINT(8) | UNSIGNED   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
+| [MaxLevel][2]               | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |                                       |
+| [AllowableClasses][3]       | INT(10)      | UNSIGNED   |     | NO   |         |       |                                       |
+| [SourceSpellID][4]          | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |                                       |
 | [PrevQuestID][5]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [NextQuestID][6]            | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [ExclusiveGroup][7]         | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
-| [RewardMailTemplateID][8]   | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
-| [RewardMailDelay][9]        | INT(10)      | unsigned   |     | NO   |         |       |                                       |
-| [RequiredSkillID][10]       | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredSkillPoints][11]   | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMinRepFaction][12] | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMaxRepFaction][13] | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RewardMailTemplateID][8]   | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |                                       |
+| [RewardMailDelay][9]        | INT(10)      | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredSkillID][10]       | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredSkillPoints][11]   | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredMinRepFaction][12] | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredMaxRepFaction][13] | SMALLINT(5)  | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredMinRepValue][14]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [RequiredMaxRepValue][15]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
-| [ProvidedItemCount][16]     | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
-| [SpecialFlags][17]          | TINYINT(3)   | unsigned   |     | NO   |         |       |                                       |
+| [ProvidedItemCount][16]     | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |                                       |
+| [SpecialFlags][17]          | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |                                       |
 
 [1]: #id
 [2]: #maxlevel

@@ -10,12 +10,12 @@ Contains information on the location where characters get teleported when they u
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |-------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | INT(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mapId][2]  | SMALLINT(5) | unsigned   |     | NO   | 0       |       | Map Identifier           |
-| [zoneId][3] | SMALLINT(5) | unsigned   |     | NO   | 0       |       | Zone Identifier          |
-| [posX][4]   | FLOAT       | signed     |     | NO   | 0       |       | Coordinate x             |
-| [posY][5]   | FLOAT       | signed     |     | NO   | 0       |       | Coordinate y             |
-| [posZ][6]   | FLOAT       | signed     |     | NO   | 0       |       | Coordinate z             |
+| [guid][1]   | INT(10)     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [mapId][2]  | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
+| [zoneId][3] | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
+| [posX][4]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate x             |
+| [posY][5]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate y             |
+| [posZ][6]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate z             |
 
 [1]: #guid
 [2]: #mapid

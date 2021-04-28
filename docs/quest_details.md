@@ -10,15 +10,15 @@ This table handles Quest NPC emotes with emote delays.
 
 | Field                                         | Type         | Attributes | Key | NULL | Default | Comment                                                                                                              |
 |-----------------------------------------------|--------------|------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
-| [ID](#quest_details-ID)                       | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
-| [Emote1](#quest_details-Emote1)               | SMALLINT(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote2](#quest_details-Emote2)               | SMALLINT(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote3](#quest_details-Emote3)               | SMALLINT(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote4](#quest_details-Emote4)               | SMALLINT(5)  | unsigned   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [EmoteDelay1](#quest_details-EmoteDelay1)     | INT(10)      | unsigned   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay2](#quest_details-EmoteDelay2)     | INT(10)      | unsigned   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay3](#quest_details-EmoteDelay3)     | INT(10)      | unsigned   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay4](#quest_details-EmoteDelay4)     | INT(10)      | unsigned   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [ID](#quest_details-ID)                       | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
+| [Emote1](#quest_details-Emote1)               | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [Emote2](#quest_details-Emote2)               | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [Emote3](#quest_details-Emote3)               | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [Emote4](#quest_details-Emote4)               | SMALLINT(5)  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [EmoteDelay1](#quest_details-EmoteDelay1)     | INT(10)      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [EmoteDelay2](#quest_details-EmoteDelay2)     | INT(10)      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [EmoteDelay3](#quest_details-EmoteDelay3)     | INT(10)      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [EmoteDelay4](#quest_details-EmoteDelay4)     | INT(10)      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
 | [VerifiedBuild](#quest_details-VerifiedBuild) | SMALLINT(5)  |            |     | NO   | 0       | Game client Build number or manually set value                                                                       |
 
  

@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-ID | MEDIUMINT(8) unsigned | 
+ID | MEDIUMINT(8) UNSIGNED | 
 MaleText_loc1 | longtext | 
 MaleText_loc2 | longtext | 
 MaleText_loc3 | longtext | 

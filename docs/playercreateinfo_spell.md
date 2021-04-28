@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Racemask | INT(10) unsigned | 
-Classmask | INT(10) unsigned | 
-Spell | MEDIUMINT(8) unsigned | 
+Racemask | INT(10) UNSIGNED | 
+Classmask | INT(10) UNSIGNED | 
+Spell | MEDIUMINT(8) UNSIGNED | 
 Note | VARCHAR(255) | 

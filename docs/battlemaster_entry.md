@@ -10,8 +10,8 @@ Holds information on which NPC can start what battleground or arena.
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
 |------------------|--------------|------------|-----|------|---------|-------|-------------------------|
-| [entry][1]       | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Entry of a creature     |
-| [bg_template][2] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       | Batleground template id |
+| [entry][1]       | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | Entry of a creature     |
+| [bg_template][2] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       | Batleground template id |
 
 [1]: #entry
 [2]: #bg_template

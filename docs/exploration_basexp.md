@@ -7,7 +7,7 @@
 | Field       | Type         | Attributes | Key | Null | Default |
 |-------------|--------------|------------|-----|------|---------|
 | [level][1]  | TINYINT(3)   | unasigned  | PRI | NO   | 0       |
-| [basexp][2] | MEDIUMINT(8) | signed     |     | NO   | 0       |
+| [basexp][2] | MEDIUMINT(8) | SIGNED     |     | NO   | 0       |
 
 [1]: #level
 [2]: #basexp

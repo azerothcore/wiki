@@ -10,11 +10,11 @@ This table contains spell data regarding cpp scripts. The id is called in the sc
 
 | Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|---------|------------|-----|------|---------|-------|---------|
-| [id][1]       | INT(11) | unsigned   | PRI | NO   | 0       |       |         |
-| [spellid0][2] | INT(11) | unsigned   |     | NO   | 0       |       |         |
-| [spellid1][3] | INT(11) | unsigned   |     | NO   | 0       |       |         |
-| [spellid2][4] | INT(11) | unsigned   |     | NO   | 0       |       |         |
-| [spellid3][5] | INT(11) | unsigned   |     | NO   | 0       |       |         |
+| [id][1]       | INT(11) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [spellid0][2] | INT(11) | UNSIGNED   |     | NO   | 0       |       |         |
+| [spellid1][3] | INT(11) | UNSIGNED   |     | NO   | 0       |       |         |
+| [spellid2][4] | INT(11) | UNSIGNED   |     | NO   | 0       |       |         |
+| [spellid3][5] | INT(11) | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #spellid0

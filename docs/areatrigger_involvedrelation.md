@@ -12,8 +12,8 @@ If there is a record in the table for a quest, then the quest will not be comple
 
 | Field      | Type         | Attributes | Key | Null | Default | Extra | Comments         |
 |------------|--------------|------------|-----|------|---------|-------|------------------|
-| [id][1]    | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Identifier       |
-| [quest][2] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       | Quest Identifier |
+| [id][1]    | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
+| [quest][2] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       | Quest Identifier |
 
 [1]: #id
 [2]: #quest

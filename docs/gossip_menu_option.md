@@ -8,17 +8,17 @@ This table holds information about menu options a gossip NPC can have. Example
 
 | Field                      | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [MenuID][1]                | SMALLINT(6)  | unsigned   | PRI | NO   |         |       |         |
-| [OptionID][2]              | SMALLINT(6)  | unsigned   | PRI | NO   |         |       |         |
-| [OptionIcon][3]            | SMALLINT(6)  | unsigned   | PRI | NO   |         |       |         |
+| [MenuID][1]                | SMALLINT(6)  | UNSIGNED   | PRI | NO   |         |       |         |
+| [OptionID][2]              | SMALLINT(6)  | UNSIGNED   | PRI | NO   |         |       |         |
+| [OptionIcon][3]            | SMALLINT(6)  | UNSIGNED   | PRI | NO   |         |       |         |
 | [OptionText][4]            | text         |            |     | YES  | NULL    |       |         |
 | [OptionBroadcastTextID][5] | MEDIUMINT(6) |            |     | NO   |         |       |         |
-| [OptionType][6]            | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
-| [OptionNpcFlag][7]         | INT(10)      | unsigned   |     | NO   |         |       |         |
-| [ActionMenuID][8]          | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
-| [ActionPoiID][9]           | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
-| [BoxCoded][10]             | TINYINT(3)   | unsigned   |     | NO   |         |       |         |
-| [BoxMoney][11]             | INT(11)      | unsigned   |     | NO   |         |       |         |
+| [OptionType][6]            | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
+| [OptionNpcFlag][7]         | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [ActionMenuID][8]          | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |         |
+| [ActionPoiID][9]           | MEDIUMINT(8) | UNSIGNED   |     | NO   |         |       |         |
+| [BoxCoded][10]             | TINYINT(3)   | UNSIGNED   |     | NO   |         |       |         |
+| [BoxMoney][11]             | INT(11)      | UNSIGNED   |     | NO   |         |       |         |
 | [BoxText][12]              | text         |            |     | YES  | NULL    |       |         |
 | [BoxBroadcastTextID][13]   | MEDIUMINT(6) |            |     | NO   |         |       |         |
 | [VerifiedBuild][14]        | SMALLINT(5)  |            |     | NO   |         |       |         |

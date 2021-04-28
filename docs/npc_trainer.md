@@ -11,12 +11,12 @@ This table contains all the spells that each trainer can teach.
 |                                            |              |                |         |          |             |           |             |
 |--------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                  | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#npc_trainer-entry)                   | MEDIUMINT(8) | unsigned       | PRI     | NO       | 0           |           |             |
-| [SpellID](#npc_trainer-spell)              | MEDIUMINT(8) | signed         | PRI     | NO       | 0           |           |             |
-| [MoneyCost](#npc_trainer-spellcost)        | INT(10)      | unsigned       |         | NO       | 0           |           |             |
-| [ReqSkillLine](#npc_trainer-reqskill)      | SMALLINT(5)  | unsigned       |         | NO       | 0           |           |             |
-| [ReqSkillRank](#npc_trainer-reqskillvalue) | SMALLINT(5)  | unsigned       |         | NO       | 0           |           |             |
-| [ReqLevel](#npc_trainer-reqlevel)          | TINYINT(3)   | unsigned       |         | NO       | 0           |           |             |
+| [ID](#npc_trainer-entry)                   | MEDIUMINT(8) | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [SpellID](#npc_trainer-spell)              | MEDIUMINT(8) | SIGNED         | PRI     | NO       | 0           |           |             |
+| [MoneyCost](#npc_trainer-spellcost)        | INT(10)      | UNSIGNED       |         | NO       | 0           |           |             |
+| [ReqSkillLine](#npc_trainer-reqskill)      | SMALLINT(5)  | UNSIGNED       |         | NO       | 0           |           |             |
+| [ReqSkillRank](#npc_trainer-reqskillvalue) | SMALLINT(5)  | UNSIGNED       |         | NO       | 0           |           |             |
+| [ReqLevel](#npc_trainer-reqlevel)          | TINYINT(3)   | UNSIGNED       |         | NO       | 0           |           |             |
 
 **Description of the fields**
 

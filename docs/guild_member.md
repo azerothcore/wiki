@@ -10,25 +10,25 @@ This table holds information on the members of all guilds, their ranks in the gu
 
 | Field                   | Type        | Attributes | Key    | Null | Default | Extra | Comment             |
 |-------------------------|-------------|------------|--------|------|---------|-------|---------------------|
-| [guildid][1]            | INT(10)     | unsigned   |        | NO   |         |       | Guild Identificator |
-| [guid][2]               | INT(10)     | unsigned   | Unique | NO   |         |       |                     |
-| [rank][3]               | TINYINT(3)  | unsigned   |        | NO   |         |       |                     |
+| [guildid][1]            | INT(10)     | UNSIGNED   |        | NO   |         |       | Guild Identificator |
+| [guid][2]               | INT(10)     | UNSIGNED   | Unique | NO   |         |       |                     |
+| [rank][3]               | TINYINT(3)  | UNSIGNED   |        | NO   |         |       |                     |
 | [pnote][4]              | VARCHAR(31) |            |        | NO   |         |       |                     |
 | [offnote][5]            | VARCHAR(31) |            |        | NO   |         |       |                     |
-| [BankResetTimeMoney][6] | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemMoney][7]       | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankResetTimeTab0][8]  | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemSlotsTab0][9]   | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankResetTimeTab1][10] | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemSlotsTab1][11]  | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankResetTimeTab2][12] | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemSlotsTab2][13]  | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankResetTimeTab3][14] | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemSlotsTab3][15]  | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankResetTimeTab4][16] | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemSlotsTab4][17]  | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankResetTimeTab5][18] | INT(10)     | unsigned   |        | NO   |         |       |                     |
-| [BankRemSlotsTab5][19]  | INT(10)     | unsigned   |        | NO   |         |       |                     |
+| [BankResetTimeMoney][6] | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemMoney][7]       | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankResetTimeTab0][8]  | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemSlotsTab0][9]   | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankResetTimeTab1][10] | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemSlotsTab1][11]  | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankResetTimeTab2][12] | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemSlotsTab2][13]  | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankResetTimeTab3][14] | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemSlotsTab3][15]  | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankResetTimeTab4][16] | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemSlotsTab4][17]  | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankResetTimeTab5][18] | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
+| [BankRemSlotsTab5][19]  | INT(10)     | UNSIGNED   |        | NO   |         |       |                     |
 
 [1]: #guildid
 [2]: #guid

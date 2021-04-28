@@ -10,9 +10,9 @@ Date and time when heroic and raid instances will be reset (i.e. instances which
 
 | Field           | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|-------------|------------|-----|------|---------|-------|---------|
-| [mapid][1]      | SMALLINT(5) | unsigned   | PRI | NO   | 0       |       |         |
-| [difficulty][2] | TINYINT(3)  | unsigned   | PRI | NO   | 0       |       |         |
-| [resettime][3]  | INT(10)     | unsigned   |     | NO   | 0       |       |         |
+| [mapid][1]      | SMALLINT(5) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [difficulty][2] | TINYINT(3)  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [resettime][3]  | INT(10)     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #mapid
 [2]: #difficulty

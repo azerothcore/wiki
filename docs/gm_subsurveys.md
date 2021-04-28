@@ -10,13 +10,13 @@
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|----------|------------|-----|------|---------|-------|---------|
-| [surveyid][1]    | INT(10)  | signed     | PRI | NO   |         |       |         |
-| [subsurveyid][2] | INT(11)  | unsigned   | PRI | NO   | 0       |       |         |
-| [rank][3]        | INT(11)  | unsigned   |     | NO   | 0       |       |         |
-| [comment][4]     | longtext | signed     |     | NO   |         |       |         |
-| [played][5]      | INT(10)  | unsigned   |     | NO   | 0       |       |         |
-| [wins2][6]       | INT(10)  | unsigned   |     | NO   | 0       |       |         |
-| [rank][7]        | INT(10)  | unsigned   |     | NO   | 0       |       |         |
+| [surveyid][1]    | INT(10)  | SIGNED     | PRI | NO   |         |       |         |
+| [subsurveyid][2] | INT(11)  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [rank][3]        | INT(11)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [comment][4]     | longtext | SIGNED     |     | NO   |         |       |         |
+| [played][5]      | INT(10)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [wins2][6]       | INT(10)  | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank][7]        | INT(10)  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #surveyid
 [2]: #subsurveyid

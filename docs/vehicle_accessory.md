@@ -10,13 +10,13 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment                                      |
 |----------------------|--------------|------------|-----|------|---------|-------|----------------------------------------------|
-| [guid][1]            | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |                                              |
-| [accessory_entry][2] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |                                              |
-| [seat_id][3]         | TINYINT(1)   | signed     | PRI | NO   | 0       |       |                                              |
-| [minion][4]          | TINYINT(1)   | unsigned   |     | NO   | 0       |       |                                              |
-| [description][5]     | text         | signed     |     | NO   | "       |       |                                              |
-| [summontype][6]      | TINYINT(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
-| [summontimer][7]     | INT(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
+| [guid][1]            | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |                                              |
+| [accessory_entry][2] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |                                              |
+| [seat_id][3]         | TINYINT(1)   | SIGNED     | PRI | NO   | 0       |       |                                              |
+| [minion][4]          | TINYINT(1)   | UNSIGNED   |     | NO   | 0       |       |                                              |
+| [description][5]     | text         | SIGNED     |     | NO   | "       |       |                                              |
+| [summontype][6]      | TINYINT(3)   | UNSIGNED   |     | NO   | 6       |       | see enum TempSummonType                      |
+| [summontimer][7]     | INT(10)      | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #guid
 [2]: #accessory_entry

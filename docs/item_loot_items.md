@@ -13,8 +13,8 @@ the player either removes an item or destroys the container item.
 
 | Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|------------|------------|-----|------|---------|-------|---------|
-| [container_id][1]    | INT(10)    | unsigned   |     | NO   |         |       |         |
-| [item_id][2]         | INT(10)    | unsigned   |     | NO   |         |       |         |
+| [container_id][1]    | INT(10)    | UNSIGNED   |     | NO   |         |       |         |
+| [item_id][2]         | INT(10)    | UNSIGNED   |     | NO   |         |       |         |
 | [item_count][3]      | INT(10)    |            |     | NO   |         |       |         |
 | [follow_rules][4]    | TINYINT(1) |            |     | NO   |         |       |         |
 | [ffa][5]             | TINYINT(1) |            |     | NO   |         |       |         |

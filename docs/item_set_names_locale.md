@@ -10,15 +10,15 @@
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]     | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [name_loc1][2] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc2][3] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc3][4] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc4][5] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc5][6] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc6][7] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc7][8] | VARCHAR(100) | signed     |     | NO   |         |       |         |
-| [name_loc8][9] | VARCHAR(100) | signed     |     | NO   |         |       |         |
+| [entry][1]     | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [name_loc1][2] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc2][3] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc3][4] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc4][5] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc5][6] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc6][7] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc7][8] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [name_loc8][9] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
 
 [1]: #entry
 [2]: #name_loc1

@@ -10,9 +10,9 @@ This table is used to disable dungeons/bgs/spells/etc.
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [sourceType][1] | INT(10)      | unsigned   | PRI | NO   | NULL    |       |         |
-| [entry][2]      | INT(10)      | unsigned   | PRI | NO   | NULL    |       |         |
-| [flags][3]      | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
+| [sourceType][1] | INT(10)      | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [entry][2]      | INT(10)      | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [flags][3]      | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |         |
 | [params_0][4]   | VARCHAR(255) |            |     | NO   |         |       |         |
 | [params_1][5]   | VARCHAR(255) |            |     | NO   |         |       |         |
 | [comment][6]    | VARCHAR(255) |            |     | NO   |         |       |         |

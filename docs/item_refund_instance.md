@@ -10,10 +10,10 @@ This table serves as a receipt of refundable purchases during a 2 hour ingame ti
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment     |
 |-----------------------|-------------|------------|-----|------|---------|--------|-------------|
-| [item_guid][1]        | INT(10)     | unsigned   | PRI | NO   |         | Unique | Item GUID   |
-| [player_guid][2]      | INT(10)     | unsigned   | PRI | NO   |         |        | Player GUID |
-| [paidMoney][3]        | INT(10)     | unsigned   |     | NO   | 0       |        |             |
-| [paidExtendedCost][4] | SMALLINT(5) | unsigned   |     | NO   | 0       |        |             |
+| [item_guid][1]        | INT(10)     | UNSIGNED   | PRI | NO   |         | Unique | Item GUID   |
+| [player_guid][2]      | INT(10)     | UNSIGNED   | PRI | NO   |         |        | Player GUID |
+| [paidMoney][3]        | INT(10)     | UNSIGNED   |     | NO   | 0       |        |             |
+| [paidExtendedCost][4] | SMALLINT(5) | UNSIGNED   |     | NO   | 0       |        |             |
 
 [1]: #item_guid
 [2]: #player_guid

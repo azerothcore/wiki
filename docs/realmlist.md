@@ -10,18 +10,18 @@ This table sets up information on all available realms. Each row controls a diff
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 |----------------------------|--------------|------------|-----|------|---------------|----------------|---------|
-| [id][1]                    | INT(10)      | unsigned   | PRI | NO   |               | auto_increment |         |
+| [id][1]                    | INT(10)      | UNSIGNED   | PRI | NO   |               | auto_increment |         |
 | [name][2]                  | VARCHAR(32)  |            | UNI | NO   |               |                |         |
 | [address][3]               | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localSubnetMask][5]       | VARCHAR(255) |            |     | NO   | 255.255.255.0 |                |         |
-| [port][6]                  | SMALLINT(5)  | unsigned   |     | NO   | 8085          |                |         |
-| [icon][7]                  | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
-| [flag][8]                  | TINYINT(3)   | unsigned   |     | NO   | 2             |                |         |
-| [timezone][9]              | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
-| [allowedSecurityLevel][10] | TINYINT(3)   | unsigned   |     | NO   | 0             |                |         |
-| [population][11]           | FLOAT        | unsigned   |     | NO   | 0             |                |         |
-| [gamebuild][12]            | INT(10)      | unsigned   |     | NO   | 12340         |                |         |
+| [port][6]                  | SMALLINT(5)  | UNSIGNED   |     | NO   | 8085          |                |         |
+| [icon][7]                  | TINYINT(3)   | UNSIGNED   |     | NO   | 0             |                |         |
+| [flag][8]                  | TINYINT(3)   | UNSIGNED   |     | NO   | 2             |                |         |
+| [timezone][9]              | TINYINT(3)   | UNSIGNED   |     | NO   | 0             |                |         |
+| [allowedSecurityLevel][10] | TINYINT(3)   | UNSIGNED   |     | NO   | 0             |                |         |
+| [population][11]           | FLOAT        | UNSIGNED   |     | NO   | 0             |                |         |
+| [gamebuild][12]            | INT(10)      | UNSIGNED   |     | NO   | 12340         |                |         |
 
 [1]: #id
 [2]: #name

@@ -10,10 +10,10 @@ This is the pool of pools table. You can create a pool with a chance of a range 
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|--------------|------------|-----|------|---------|-------|---------|
-| [pool_id][1]     | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [mother_pool][2] | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
-| [chance][3]      | FLOAT        | signed     |     | NO   | 0       |       |         |
-| [description][4] | VARCHAR(255) | signed     |     | YES  | NULL    |       |         |
+| [pool_id][1]     | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [mother_pool][2] | MEDIUMINT(8) | UNSIGNED   |     | NO   | 0       |       |         |
+| [chance][3]      | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [description][4] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #pool_id
 [2]: #mother_pool

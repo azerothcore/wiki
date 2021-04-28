@@ -10,7 +10,7 @@ This table is used to provide to localized clients with localized string for que
 
 | Field                | Type         | Attribute | Key | Null | Default | Extra | Comment |
 |----------------------|--------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]              | MEDIUMINT(8) | unsigned  | PRI | NO   | 0       |       |         |
+| [ID][1]              | MEDIUMINT(8) | UNSIGNED  | PRI | NO   | 0       |       |         |
 | [locale][2]          | VARCHAR(4)   |           | PRI | NO   |         |       |         |
 | [Title][3]           | text         |           |     | YES  |         |       |         |
 | [Details][4]         | text         |           |     | YES  |         |       |         |

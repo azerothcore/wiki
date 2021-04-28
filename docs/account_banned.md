@@ -10,12 +10,12 @@ This table lists all of the accounts that have been banned along with the date w
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 |----------------|--------------|------------|-----|------|---------|-------|------------|
-| [id][1]        | INT(10)      | unsigned   | PRI | NO   | 0       |       | Account id |
-| [bandate][2]   | INT(10)      | unsigned   | PRI | NO   | 0       |       |            |
-| [unbandate][3] | INT(10)      | unsigned   |     | NO   | 0       |       |            |
+| [id][1]        | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       | Account id |
+| [bandate][2]   | INT(10)      | UNSIGNED   | PRI | NO   | 0       |       |            |
+| [unbandate][3] | INT(10)      | UNSIGNED   |     | NO   | 0       |       |            |
 | [bannedby][4]  | VARCHAR(50)  |            |     | NO   |         |       |            |
 | [banreason][5] | VARCHAR(255) |            |     | NO   |         |       |            |
-| [active][6]    | TINYINT(3)   | unsigned   |     | NO   | 1       |       |            |
+| [active][6]    | TINYINT(3)   | UNSIGNED   |     | NO   | 1       |       |            |
 
 [1]: #id
 [2]: #bandate

@@ -10,8 +10,8 @@ Holds NPC quest giver relations on which NPCs start which quests.
 
 | Field      | Type         | Attributes | Key | Null | Default | Extra | Comment          |
 |------------|--------------|------------|-----|------|---------|-------|------------------|
-| [id][1]    | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Identifier       |
-| [quest][2] | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Quest Identifier |
+| [id][1]    | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
+| [quest][2] | MEDIUMINT(8) | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
 
 [1]: #id
 [2]: #quest

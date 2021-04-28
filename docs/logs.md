@@ -10,10 +10,10 @@ This table stores all logs from authserver if database logging in config is enab
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|--------------|------------|-----|------|---------|-------|---------|
-| [time][1]   | INT(10)      | unsigned   |     | NO   |         |       |         |
-| [realm][2]  | INT(10)      | unsigned   |     | NO   |         |       |         |
+| [time][1]   | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
+| [realm][2]  | INT(10)      | UNSIGNED   |     | NO   |         |       |         |
 | [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
-| [level][4]  | TINYINT(3)   | unsigned   |     | NO   | 0       |       |         |
+| [level][4]  | TINYINT(3)   | UNSIGNED   |     | NO   | 0       |       |         |
 | [string][5] | text         |            |     | YES  |         |       |         |
 
 [1]: #time
