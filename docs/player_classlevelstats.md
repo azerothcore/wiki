@@ -12,8 +12,8 @@ This table holds information on the base health and mana of characters when they
 |---------------|-------------|------------|-----|------|---------|-------|---------|
 | [class][1]    | tinyint(3)  | unsigned   | PRI | NO   | NULL    |       |         |
 | [level][2]    | tinyint(3)  | unsigned   | PRI | NO   | NULL    |       |         |
-| [basehp][3]   | smallint(5) | unsigned   |     | NO   | NULL    |       |         |
-| [basemana][4] | smallint(5) | unsigned   |     | NO   | NULL    |       |         |
+| [basehp][3]   | SMALLINT(5) | unsigned   |     | NO   | NULL    |       |         |
+| [basemana][4] | SMALLINT(5) | unsigned   |     | NO   | NULL    |       |         |
 
 [1]: #class
 [2]: #level

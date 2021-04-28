@@ -10,12 +10,12 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 |-----------------------|-------------|------------|-----|------|---------|-------|---------------|
 | [entryorguid][1]      | int(11)     | signed     | PRI | NO   |         |       |               |
 | [source_type][2]      | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |               |
-| [id][3]               | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
-| [link][4]             | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
+| [id][3]               | SMALLINT(5) | unsigned   | PRI | NO   | 0       |       |               |
+| [link][4]             | SMALLINT(5) | unsigned   | PRI | NO   | 0       |       |               |
 | [event_type][5]       | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
-| [event_phase_mask][6] | smallint(5) | unsigned   |     | NO   | 0       |       |               |
+| [event_phase_mask][6] | SMALLINT(5) | unsigned   |     | NO   | 0       |       |               |
 | [event_chance][7]     | tinyint(3)  | unsigned   |     | NO   | 100     |       |               |
-| [event_flags][8]      | smallint(5) | unsigned   |     | NO   | 0       |       |               |
+| [event_flags][8]      | SMALLINT(5) | unsigned   |     | NO   | 0       |       |               |
 | [event_param1][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [event_param2][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
 | [event_param3][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |

@@ -12,12 +12,12 @@ Contains all the individual glyph data for each character.
 |-------------|-------------|------------|-----|------|---------|-------|---------|
 | [guid][1]   | int(10)     | unsigned   | PRI | NO   |         |       |         |
 | [spec][2]   | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |         |
-| [glyph1][3] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
-| [glyph2][4] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
-| [glyph3][5] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
-| [glyph4][6] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
-| [glyph5][7] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
-| [glyph6][8] | smallint(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph1][3] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph2][4] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph3][5] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph4][6] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph5][7] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
+| [glyph6][8] | SMALLINT(5) | unsigned   |     | YES  | 0       |       |         |
 
 [1]: #guid
 [2]: #spec

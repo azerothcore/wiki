@@ -15,8 +15,8 @@ Contains all basic definitions of available quests.
 | QuestLevel                         | int(11)              | NO   |     | -1      |       |         |
 | QuestPackageID                     | int(10) unsigned     | NO   |     | 0       |       |         |
 | MinLevel                           | int(11)              | NO   |     | 0       |       |         |
-| QuestSortID                        | smallint(6)          | NO   |     | 0       |       |         |
-| QuestInfoID                        | smallint(5) unsigned | NO   |     | 0       |       |         |
+| QuestSortID                        | SMALLINT(6)          | NO   |     | 0       |       |         |
+| QuestInfoID                        | SMALLINT(5) unsigned | NO   |     | 0       |       |         |
 | SuggestedGroupNum                  | tinyint(3) unsigned  | NO   |     | 0       |       |         |
 | RewardNextQuest                    | int(10) unsigned     | NO   |     | 0       |       |         |
 | RewardXPDifficulty                 | int(10) unsigned     | NO   |     | 0       |       |         |
@@ -74,7 +74,7 @@ Contains all basic definitions of available quests.
 | PortraitTurnInText                 | text                 | YES  |     | (NULL)  |       |         |
 | PortraitTurnInName                 | text                 | YES  |     | (NULL)  |       |         |
 | QuestCompletionLog                 | text                 | YES  |     | (NULL)  |       |         |
-| VerifiedBuild                      | smallint(5)          | YES  |     | 0       |       |         |
+| VerifiedBuild                      | SMALLINT(5)          | YES  |     | 0       |       |         |
 
 **Description of the fields**
 

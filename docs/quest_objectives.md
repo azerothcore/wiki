@@ -20,7 +20,7 @@ This table provides answer for a very important question. What do I need to do i
 | [Flags2][8]            | int(10)      | unsigned   | NO   |     | 0       |         |
 | [ProgressBarWeight][9] | FLOAT        |            | NO   |     | 0       |         |
 | [Description][10]      | text         |            | YES  |     | NULL    |         |
-| [VerifiedBuild][11]    | smallint(5)  | signed     | NO   |     | 0       |         |
+| [VerifiedBuild][11]    | SMALLINT(5)  | signed     | NO   |     | 0       |         |
 
 [1]: #id
 [2]: #questid

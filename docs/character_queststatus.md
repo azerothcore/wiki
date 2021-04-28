@@ -15,17 +15,17 @@ Holds information on the quest status of each character.
 | [status][3]       | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
 | [explored][4]     | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
 | [timer][5]        | int(10)     | unsigned   |     | NO   |         |       |                          |
-| [mobcount1][6]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [mobcount2][7]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [mobcount3][8]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [mobcount4][9]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount1][10]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount2][11]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount3][12]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount4][13]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount5][14]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount6][15]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [playercount][16] | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount1][6]    | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount2][7]    | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount3][8]    | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [mobcount4][9]    | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount1][10]  | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount2][11]  | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount3][12]  | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount4][13]  | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount5][14]  | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [itemcount6][15]  | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
+| [playercount][16] | SMALLINT(5) | unsigned   |     | NO   |         |       |                          |
 
 [1]: #guid
 [2]: #quest

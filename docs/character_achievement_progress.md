@@ -11,7 +11,7 @@
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|-------------|------------|-----|------|---------|-------|---------|
 | [guid][1]     | int(10)     | unsigned   | PRI | NO   |         |       |         |
-| [criteria][2] | smallint(5) | unsigned   | PRI | NO   |         |       |         |
+| [criteria][2] | SMALLINT(5) | unsigned   | PRI | NO   |         |       |         |
 | [counter][3]  | int(10)     | unsigned   |     | NO   |         |       |         |
 | [date][4]     | int(10)     | unsigned   |     | NO   | 0       |       |         |
 

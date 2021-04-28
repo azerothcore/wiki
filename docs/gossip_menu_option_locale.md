@@ -10,8 +10,8 @@
 
 | Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------|-------------|------------|-----|------|---------|-------|---------|
-| [menu_id][1]           | smallint(6) | unsigned   | PRI | NO   |         |       |         |
-| [id][2]                | smallint(6) | unsigned   | PRI | NO   |         |       |         |
+| [menu_id][1]           | SMALLINT(6) | unsigned   | PRI | NO   |         |       |         |
+| [id][2]                | SMALLINT(6) | unsigned   | PRI | NO   |         |       |         |
 | [option_text_loc1][3]  | text        | signed     |     | YES  | NULL    |       |         |
 | [option_text_loc2][4]  | text        | signed     |     | YES  | NULL    |       |         |
 | [option_text_loc3][5]  | text        | signed     |     | YES  | NULL    |       |         |

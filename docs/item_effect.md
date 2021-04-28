@@ -19,7 +19,7 @@ This table contains some of the item effect data regarding item hotfixes. This t
 | [Cooldown][7]         | int(11)     | signed     |     | NO   | 0       |       |         |
 | [Category][8]         | int(10)     | unsigned   |     | NO   | 0       |       |         |
 | [CategoryCooldown][9] | int(11)     | signed     |     | NO   | 0       |       |         |
-| [VerifiedBuild][10]   | smallint(6) | signed     |     | NO   | 0       |       |         |
+| [VerifiedBuild][10]   | SMALLINT(6) | signed     |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #itemid

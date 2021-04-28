@@ -17,7 +17,7 @@ Its purpose is (will be) used as a globalized table containing the localized tex
 | [locale](#locale)           | VARCHAR(4)   |  PRI | NO   | NULL    |       |         |
 | [MaleText](#MaleText)       | text         |      | YES  | NULL    |       |         |
 | [FemaleText](#FemaleText)   | text         |      | YES  | NULL    |       |         |
-| VerifiedBuild               | smallint(5)  |      | YES  | 0       |       |         |
+| VerifiedBuild               | SMALLINT(5)  |      | YES  | 0       |       |         |
 
 ### Description of the fields
 

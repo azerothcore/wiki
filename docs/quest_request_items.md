@@ -14,10 +14,10 @@
 | Field                                                       | Type         | Attributes        | Key | NULL | Default | Comment                                                                                                              |
 |-------------------------------------------------------------|--------------|-------------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
 | [ID](quest_request_items)                                   | MEDIUMINT(8) | unsigned          | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
-| [EmoteOnComplete](#quest_request_items-EmoteOnComplete)     | smallint(5)  | unsigned          |     | NO   | 0       | Quest ender NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                    |
-| [EmoteOnIncomplete](#quest_request_items-EmoteOnIncomplete) | smallint(5)  | unsigned          |     | NO   | 0       | Quest ender NPC Emote                                                                                                |
+| [EmoteOnComplete](#quest_request_items-EmoteOnComplete)     | SMALLINT(5)  | unsigned          |     | NO   | 0       | Quest ender NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                    |
+| [EmoteOnIncomplete](#quest_request_items-EmoteOnIncomplete) | SMALLINT(5)  | unsigned          |     | NO   | 0       | Quest ender NPC Emote                                                                                                |
 | [CompletionText](#quest_request_items-CompletionText)       | text         | utf8\_general\_ci |     | YES  | NULL    | Quest completion text                                                                                                |
-| [VerifiedBuild](#quest_request_items-VerifiedBuild)         | smallint(5)  |                   |     | NO   | 0       | Game client Build number                                                                                             |
+| [VerifiedBuild](#quest_request_items-VerifiedBuild)         | SMALLINT(5)  |                   |     | NO   | 0       | Game client Build number                                                                                             |
 
  
 

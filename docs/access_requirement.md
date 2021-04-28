@@ -15,7 +15,7 @@ This table contains the access requirements to enter an instance.
 | [difficulty][2]             | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
 | [level_min][3]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
 | [level_max][4]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| [item_level][5]             | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
+| [item_level][5]             | SMALLINT(5)  | unsigned   |     | NO   | 0       |       |         |
 | [item][6]                   | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [item2][7]                  | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
 | [quest_done_A][8]           | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |

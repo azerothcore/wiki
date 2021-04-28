@@ -20,8 +20,8 @@ This table holds individual item instance information for all items currently eq
 | [charges][8]           | tinytext     |            |     | YES  | NULL    |       |         |
 | [flags][9]             | mediunint(8) | unsigned   |     | NO   |         |       |         |
 | [enchantments][10]     | text         |            |     | NO   |         |       |         |
-| [randomPropertyId][11] | smallint(5)  | signed     |     | NO   |         |       |         |
-| [durability][12]       | smallint(5)  | unsigned   |     | NO   |         |       |         |
+| [randomPropertyId][11] | SMALLINT(5)  | signed     |     | NO   |         |       |         |
+| [durability][12]       | SMALLINT(5)  | unsigned   |     | NO   |         |       |         |
 | [playedTime][13]       | int(10)      | unsigned   |     | NO   |         |       |         |
 | [text][14]             | text         |            |     | YES  | NULL    |       |         |
 

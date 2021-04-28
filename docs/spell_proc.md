@@ -12,7 +12,7 @@ This table holds information on what events (or procs) certain spells are activa
 |-----------------------|-------------|------------|-----|------|---------|--------|---------|
 | [SpellId][1]          | int(11)     | signed     | PRI | NO   | 0       | Unique |         |
 | [SchoolMask][2]       | tinyint(3)  | unsigned   |     | NO   | 0       |        |         |
-| [SpellFamilyName][3]  | smallint(5) | unsigned   |     | NO   | 0       |        |         |
+| [SpellFamilyName][3]  | SMALLINT(5) | unsigned   |     | NO   | 0       |        |         |
 | [SpellFamilyMask0][4] | int(10)     | unsigned   |     | NO   | 0       |        |         |
 | [SpellFamilyMask1][5] | int(10)     | unsigned   |     | NO   | 0       |        |         |
 | [SpellFamilyMask2][6] | int(10)     | unsigned   |     | NO   | 0       |        |         |

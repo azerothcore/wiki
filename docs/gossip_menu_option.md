@@ -8,9 +8,9 @@ This table holds information about menu options a gossip NPC can have. Example
 
 | Field                      | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [MenuID][1]                | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
-| [OptionID][2]              | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
-| [OptionIcon][3]            | smallint(6)  | unsigned   | PRI | NO   |         |       |         |
+| [MenuID][1]                | SMALLINT(6)  | unsigned   | PRI | NO   |         |       |         |
+| [OptionID][2]              | SMALLINT(6)  | unsigned   | PRI | NO   |         |       |         |
+| [OptionIcon][3]            | SMALLINT(6)  | unsigned   | PRI | NO   |         |       |         |
 | [OptionText][4]            | text         |            |     | YES  | NULL    |       |         |
 | [OptionBroadcastTextID][5] | MEDIUMINT(6) |            |     | NO   |         |       |         |
 | [OptionType][6]            | tinyint(3)   | unsigned   |     | NO   |         |       |         |
@@ -21,7 +21,7 @@ This table holds information about menu options a gossip NPC can have. Example
 | [BoxMoney][11]             | int(11)      | unsigned   |     | NO   |         |       |         |
 | [BoxText][12]              | text         |            |     | YES  | NULL    |       |         |
 | [BoxBroadcastTextID][13]   | MEDIUMINT(6) |            |     | NO   |         |       |         |
-| [VerifiedBuild][14]        | smallint(5)  |            |     | NO   |         |       |         |
+| [VerifiedBuild][14]        | SMALLINT(5)  |            |     | NO   |         |       |         |
 
 [1]: #menuid
 [2]: #optionid

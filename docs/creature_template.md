@@ -20,8 +20,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [gossip_menu_id](#gossip_menu_id)             | MEDIUMINT(8) unsigned | NO   |     | 0       |       |                                      |
 | [minlevel](#minlevel)                           | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
 | [maxlevel](#maxlevel)                           | tinyint(3) unsigned   | NO   |     | 1       |       |                                      |
-| [exp](#exp)                                     | smallint(6)           | NO   |     | 0       |       |                                      |
-| [faction](#faction)                             | smallint(5) unsigned  | NO   |     | 0       |       |                                      |
+| [exp](#exp)                                     | SMALLINT(6)           | NO   |     | 0       |       |                                      |
+| [faction](#faction)                             | SMALLINT(5) unsigned  | NO   |     | 0       |       |                                      |
 | [npcflag](#npcflag)                             | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [speed_walk](#speed_walk)                      | FLOAT                 | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speed_run)                        | FLOAT                 | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
@@ -66,7 +66,7 @@ This table contains the description of creatures. Each spawned creature is an in
 | [spell_school_immune_mask](#spell_school_immune_mask) | int(3) unsigned | NO | | 0
 | [flags_extra](#flags_extra)                    | int(10) unsigned      | NO   |     | 0       |       |                                      |
 | [ScriptName](#scriptname)                       | char(64)              | NO   |     |         |       |                                      |
-| [VerifiedBuild](#verifiedbuild)                 | smallint(5)           | YES  |     | 0       |       |                                      |
+| [VerifiedBuild](#verifiedbuild)                 | SMALLINT(5)           | YES  |     | 0       |       |                                      |
 
 ---
 

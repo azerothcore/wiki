@@ -10,7 +10,7 @@ Speed | FLOAT |
 Val1 | FLOAT | 
 Val2 | int(10) unsigned | 
 Count | int(11) | 
-Map | smallint(5) | 
+Map | SMALLINT(5) | 
 Pos | VARCHAR(255) | 
 Level | MEDIUMINT(9) | 
 First_date | datetime | 

@@ -29,7 +29,7 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
 | SoundId                                  | int(10)     | unsigned   |     | NO   | 0       |       |         |
 | UnkEmoteID                               | int(10)     | unsigned   |     | NO   | 0       |       |         |
 | Type                                     | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| WDBVerified                              | smallint(5) | signed     |     | NO   | 0       |       |         |
+| WDBVerified                              | SMALLINT(5) | signed     |     | NO   | 0       |       |         |
 
 ### Description of the fields
 

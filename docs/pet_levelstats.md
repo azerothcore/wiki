@@ -13,14 +13,14 @@ This table holds information on individual pet base stats based on level.
 | **Field**                                         | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
 | [creature\_entry](#pet_levelstats-creature_entry) | MEDIUMINT(8) | unsigned       | PRI     | NO       | NULL        |           |             |
 | [level](#pet_levelstats-level)                    | tinyint(3)   | unsigned       | PRI     | NO       | NULL        |           |             |
-| [hp](#pet_levelstats-hp)                          | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
-| [mana](#pet_levelstats-mana)                      | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [hp](#pet_levelstats-hp)                          | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [mana](#pet_levelstats-mana)                      | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
 | [armor](#pet_levelstats-armor)                    | int(10)      | unsigned       |         | NO       | 0           |           |             |
-| [str](#pet_levelstats-str)                        | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
-| [agi](#pet_levelstats-agi)                        | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
-| [sta](#pet_levelstats-sta)                        | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
-| [inte](#pet_levelstats-inte)                      | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
-| [spi](#pet_levelstats-spi)                        | smallint(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [str](#pet_levelstats-str)                        | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [agi](#pet_levelstats-agi)                        | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [sta](#pet_levelstats-sta)                        | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [inte](#pet_levelstats-inte)                      | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
+| [spi](#pet_levelstats-spi)                        | SMALLINT(5)  | unsigned       |         | NO       | NULL        |           |             |
 
 **Description of the fields**
 

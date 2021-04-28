@@ -21,4 +21,4 @@ FemaleText_loc5 | longtext |
 FemaleText_loc6 | longtext | 
 FemaleText_loc7 | longtext | 
 FemaleText_loc8 | longtext | 
-VerifiedBuild | smallint(5) | 
+VerifiedBuild | SMALLINT(5) | 

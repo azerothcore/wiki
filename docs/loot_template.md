@@ -21,7 +21,7 @@ Loot templates define only items in the loot. See comments about money drop in c
 | [Reference][3]      | MEDIUMINT unsigned | NO   |     | 0       |       |         |
 | [Chance][4]         | FLOAT              | NO   |     | 100     |       |         |
 | [QuestRequired]][5] | bool               | NO   |     | 0       |       |         |
-| [LootMode][6]       | smallint           | NO   |     | 1       |       |         |
+| [LootMode][6]       | SMALLINT           | NO   |     | 1       |       |         |
 | [GroupId][7]        | tinyint            | NO   |     | 0       |       |         |
 | [MinCount][8]       | MEDIUMINT          | NO   |     | 1       |       |         |
 | [MaxCount][9]       | tinyint unsigned   | NO   |     | 1       |       |         |

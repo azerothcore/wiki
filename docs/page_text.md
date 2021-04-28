@@ -13,7 +13,7 @@ This table holds the text for letter items or any items that when moused-over tu
 | [entry][1]       | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       |         |
 | [text][2]        | longtext     | signed     |     | NO   | NULL    |       |         |
 | [next_page][3]   | MEDIUMINT(8) | unsigned   |     | NO   | 0       |       |         |
-| [WDBVerified][4] | smallint(5)  | signed     |     | YES  | 1       |       |         |
+| [WDBVerified][4] | SMALLINT(5)  | signed     |     | YES  | 1       |       |         |
 
 [1]: #entry
 [2]: #text

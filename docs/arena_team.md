@@ -14,11 +14,11 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 | [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
 | [captainGuid][3]      | int(10)     | unsigned   |     | NO   |         |        |         |
 | [type][4]             | tinyint(3)  | unsigned   |     | NO   |         |        |         |
-| [rating][5]           | smallint(5) | unsigned   |     | NO   |         |        |         |
-| [seasonGames][6]      | smallint(5) | unsigned   |     | NO   |         |        |         |
-| [seasonWins][7]       | smallint(5) | unsigned   |     | NO   |         |        |         |
-| [weekGames][8]        | smallint(5) | unsigned   |     | NO   |         |        |         |
-| [weekWins][9]         | smallint(5) | unsigned   |     | NO   |         |        |         |
+| [rating][5]           | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
+| [seasonGames][6]      | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
+| [seasonWins][7]       | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
+| [weekGames][8]        | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
+| [weekWins][9]         | SMALLINT(5) | unsigned   |     | NO   |         |        |         |
 | [rank][10]            | int(10)     | unsigned   |     | NO   |         |        |         |
 | [BackgroundColor][11] | int(10)     | unsigned   |     | NO   |         |        |         |
 | [EmblemStyle][12]     | tinyint(3)  | unsigned   |     | NO   |         |        |         |

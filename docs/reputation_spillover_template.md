@@ -10,17 +10,17 @@
 
 | Field          | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|-------------|------------|-----|------|---------|-------|---------|
-| [faction][1]   | smallint(6) | unsigned   | PRI | NO   | 0       |       |         |
-| [faction1][2]  | smallint(6) | unsigned   |     | NO   | 0       |       |         |
+| [faction][1]   | SMALLINT(6) | unsigned   | PRI | NO   | 0       |       |         |
+| [faction1][2]  | SMALLINT(6) | unsigned   |     | NO   | 0       |       |         |
 | [rate_1][3]    | FLOAT       | signed     |     | NO   | 0       |       |         |
 | [rank1][4]     | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
-| [faction2][5]  | smallint(6) | unsigned   |     | NO   | 0       |       |         |
+| [faction2][5]  | SMALLINT(6) | unsigned   |     | NO   | 0       |       |         |
 | [rate_2][6]    | FLOAT       | signed     |     | NO   | 0       |       |         |
 | [rank_2][7]    | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
-| [faction3][8]  | smallint(6) | unsigned   |     | NO   | 0       |       |         |
+| [faction3][8]  | SMALLINT(6) | unsigned   |     | NO   | 0       |       |         |
 | [rate_3][9]    | FLOAT       | signed     |     | NO   | 0       |       |         |
 | [rank_3][10]   | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
-| [faction4][11] | smallint(6) | unsigned   |     | NO   | 0       |       |         |
+| [faction4][11] | SMALLINT(6) | unsigned   |     | NO   | 0       |       |         |
 | [rate_4][12]   | FLOAT       | signed     |     | NO   | 0       |       |         |
 | [rank_4][13]   | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
 

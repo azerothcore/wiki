@@ -12,11 +12,11 @@ This table holds arena info about specific team members. All arena\_team members
 |---------------------|-------------|------------|-----|------|---------|-------|---------|
 | [arenaTeamId][1]    | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
 | [guid][2]           | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
-| [personalRating][3] | smallint(5) | unsigned   |     | NO   | 0       |       |         |
-| [weekGames][4]      | smallint(5) | unsigned   |     | NO   | 0       |       |         |
-| [weekWins][5]       | smallint(5) | unsigned   |     | NO   | 0       |       |         |
-| [seasonGames][6]    | smallint(5) | unsigned   |     | NO   | 0       |       |         |
-| [seasonWins][7]     | smallint(5) | unsigned   |     | NO   | 0       |       |         |
+| [personalRating][3] | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
+| [weekGames][4]      | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
+| [weekWins][5]       | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
+| [seasonGames][6]    | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
+| [seasonWins][7]     | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
 
 [1]: #arenateamid
 [2]: #guid

@@ -19,7 +19,7 @@ This table links together the appearances and item ids in regards to item hotfix
 | [AppearanceID](#item_modified_appearance-AppearanceID)       | int(10)     | unsigned       |         | NO       | 0           |           |             |
 | [IconFileDataID](#item_modified_appearance-IconFileDataID)   | int(10)     | unsigned       |         | NO       | 0           |           |             |
 | [Index](#item_modified_appearance-Index)                     | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [VerifiedBuild](#item_modified_appearance-VerifiedBuild)     | smallint(6) | signed         |         | NO       | 0           |           |             |
+| [VerifiedBuild](#item_modified_appearance-VerifiedBuild)     | SMALLINT(6) | signed         |         | NO       | 0           |           |             |
 
 **Description of the fields**
 

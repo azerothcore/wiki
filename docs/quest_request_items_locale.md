@@ -11,7 +11,7 @@
 | [ID][1]             | int(10)     | unsigned  | PRI | NO   |         |       |         |
 | [locale][2]         | VARCHAR(4)  |           | PRI | NO   |         |       |         |
 | [CompletionText][3] | text        |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4]  | smallint(6) |           |     | NO   |         |       |         |
+| [VerifiedBuild][4]  | SMALLINT(6) |           |     | NO   |         |       |         |
 
 [1]: #id
 [2]: #locale

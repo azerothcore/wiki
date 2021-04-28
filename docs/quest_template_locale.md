@@ -21,7 +21,7 @@ This table is used to provide to localized clients with localized string for que
 | [ObjectiveText2][9]  | text         |           |     | YES  |         |       |         |
 | [ObjectiveText3][10] | text         |           |     | YES  |         |       |         |
 | [ObjectiveText4][11] | text         |           |     | YES  |         |       |         |
-| [VerifiedBuild][12]  | smallint(5)  |           |     | YES  | 0       |       |         |
+| [VerifiedBuild][12]  | SMALLINT(5)  |           |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #locale

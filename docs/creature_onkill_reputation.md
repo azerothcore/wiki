@@ -11,8 +11,8 @@ This table controls the reputation given by creatures when killed by other playe
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment             |
 |---------------------------|--------------|------------|-----|------|---------|-------|---------------------|
 | [creature_id][1]          | MEDIUMINT(8) | unsigned   | PRI | NO   | 0       |       | Creature Identifier |
-| [RewOnKillRepFaction1][2] | smallint(6)  | signed     |     | NO   | 0       |       |                     |
-| [RewOnKillRepFaction2][3] | smallint(6)  | signed     |     | NO   | 0       |       |                     |
+| [RewOnKillRepFaction1][2] | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
+| [RewOnKillRepFaction2][3] | SMALLINT(6)  | signed     |     | NO   | 0       |       |                     |
 | [MaxStanding1][4]         | tinyint(4)   | signed     |     | NO   | 0       |       |                     |
 | [IsTeamAward1][5]         | tinyint(4)   | signed     |     | NO   | 0       |       |                     |
 | [RewOnKillRepValue1][6]   | MEDIUMINT(9) | signed     |     | NO   | 0       |       |                     |

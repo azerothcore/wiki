@@ -37,7 +37,7 @@ Fixes for this table should always contain:
 | MaxLevel                      | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
 | BaseLevel                     | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
 | SpellLevel                    | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
-| DurationIndex                 | smallint(5) | unsigned   |     | NO   | 0       |       |         |
+| DurationIndex                 | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
 | RangeIndex                    | tinyint(3)  | unsigned   |     | NO   | 1       |       |         |
 | StackAmount                   | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
 | EquippedItemClass             | int(11)     | signed     |     | NO   | -1      |       |         |
@@ -67,9 +67,9 @@ Fixes for this table should always contain:
 | EffectRadiusIndex1            | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
 | EffectRadiusIndex2            | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
 | EffectRadiusIndex3            | tinyint(3)  | unsigned   |     | NO   | 0       |       |         |
-| EffectApplyAuraName1          | smallint(5) | unsigned   |     | NO   | 0       |       |         |
-| EffectApplyAuraName2          | smallint(5) | unsigned   |     | NO   | 0       |       |         |
-| EffectApplyAuraName3          | smallint(5) | unsigned   |     | NO   | 0       |       |         |
+| EffectApplyAuraName1          | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
+| EffectApplyAuraName2          | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
+| EffectApplyAuraName3          | SMALLINT(5) | unsigned   |     | NO   | 0       |       |         |
 | EffectAmplitude1              | int(11)     | signed     |     | NO   | 0       |       |         |
 | EffectAmplitude2              | int(11)     | signed     |     | NO   | 0       |       |         |
 | EffectAmplitude3              | int(11)     | signed     |     | NO   | 0       |       |         |

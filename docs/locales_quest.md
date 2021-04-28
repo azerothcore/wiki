@@ -93,4 +93,4 @@ ObjectiveText4_loc5 | text |
 ObjectiveText4_loc6 | text | 
 ObjectiveText4_loc7 | text | 
 ObjectiveText4_loc8 | text | 
-VerifiedBuild | smallint(5) | 
+VerifiedBuild | SMALLINT(5) | 

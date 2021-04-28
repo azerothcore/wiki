@@ -19,10 +19,10 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 | [ExclusiveGroup][7]         | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [RewardMailTemplateID][8]   | MEDIUMINT(8) | unsigned   |     | NO   |         |       |                                       |
 | [RewardMailDelay][9]        | int(10)      | unsigned   |     | NO   |         |       |                                       |
-| [RequiredSkillID][10]       | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredSkillPoints][11]   | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMinRepFaction][12] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMaxRepFaction][13] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredSkillID][10]       | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredSkillPoints][11]   | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredMinRepFaction][12] | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
+| [RequiredMaxRepFaction][13] | SMALLINT(5)  | unsigned   |     | NO   |         |       |                                       |
 | [RequiredMinRepValue][14]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [RequiredMaxRepValue][15]   | MEDIUMINT(8) |            |     | NO   |         |       |                                       |
 | [ProvidedItemCount][16]     | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |

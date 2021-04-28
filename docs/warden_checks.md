@@ -10,7 +10,7 @@ This table contains data related to the use of the anti-cheat tool Warden, which
 
 | Field                             | Type        | Attributes        | Key | NULL | Default         | Comment                                   |
 |-----------------------------------|-------------|-------------------|-----|------|-----------------|-------------------------------------------|
-| [id](#warden_checks-id)           | smallint(5) | unsigned          | PRI | NO   | auto\_increment | Unique ID, automatically incremented by 1 |
+| [id](#warden_checks-id)           | SMALLINT(5) | unsigned          | PRI | NO   | auto\_increment | Unique ID, automatically incremented by 1 |
 | [type](#warden_checks-type)       | tinyint(3)  | unsigned          |     | YES  | NULL            |                                           |
 | [data](#warden_checks-data)       | VARCHAR(48) | utf8\_general\_ci |     | YES  | NULL            |                                           |
 | [str](#warden_checks-str)         | VARCHAR(20) | utf8\_general\_ci |     | YES  | NULL            |                                           |

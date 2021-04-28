@@ -13,7 +13,7 @@ This table serves as a receipt of refundable purchases during a 2 hour ingame ti
 | [item_guid][1]        | int(10)     | unsigned   | PRI | NO   |         | Unique | Item GUID   |
 | [player_guid][2]      | int(10)     | unsigned   | PRI | NO   |         |        | Player GUID |
 | [paidMoney][3]        | int(10)     | unsigned   |     | NO   | 0       |        |             |
-| [paidExtendedCost][4] | smallint(5) | unsigned   |     | NO   | 0       |        |             |
+| [paidExtendedCost][4] | SMALLINT(5) | unsigned   |     | NO   | 0       |        |             |
 
 [1]: #item_guid
 [2]: #player_guid

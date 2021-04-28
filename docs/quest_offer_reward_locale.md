@@ -11,7 +11,7 @@
 | [ID][1]            | int(10)     | unsigned  | PRI | NO   | 0       |       |         |
 | [locale][2]        | VARCHAR(4)  |           | PRI | NO   | NULL    |       |         |
 | [RewardText][3]    | text        |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | smallint(6) |           |     | NO   | 0       |       |         |
+| [VerifiedBuild][4] | SMALLINT(6) |           |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #locale

@@ -40,7 +40,7 @@ Contains template of all gameobjects
 | data23         | int(10)      | unsigned   |     | NO   | 0       |       |         |
 | AIName         | char(64)     | signed     |     | NO   | "       |       |         |
 | ScriptName     | VARCHAR(64)  | signed     |     | NO   | "       |       |         |
-| WDBVerified    | smallint(5)  | signed     |     | YES  | 1       |       |         |
+| WDBVerified    | SMALLINT(5)  | signed     |     | YES  | 1       |       |         |
 
 ## Description of the fields
 

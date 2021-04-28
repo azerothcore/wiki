@@ -20,9 +20,9 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 | [bytes1][4]          | int(10)             | unsigned   |     | NO   |         |       |         |
 | [bytes2][5]          | int(10)             | unsigned   |     | NO   |         |       |         |
 | [emote][6]           | int(10)             | unsigned   |     | NO   |         |       |         |
-| [aiAnimKit][7]       | smallint(6)         | signed     |     | NO   |         |       |         |
-| [movementAnimKit][8] | smallint(6)         | signed     |     | NO   |         |       |         |
-| [meleeAnimKit][9]    | smallint(6)         | signed     |     | NO   |         |       |         |
+| [aiAnimKit][7]       | SMALLINT(6)         | signed     |     | NO   |         |       |         |
+| [movementAnimKit][8] | SMALLINT(6)         | signed     |     | NO   |         |       |         |
+| [meleeAnimKit][9]    | SMALLINT(6)         | signed     |     | NO   |         |       |         |
 | [isLarge][10]        | tinyint(1)          | unsigned   |     | NO   |         |       |         |
 | [auras][11]          | text                |            |     | YES  |         |       |         |
 

@@ -8,13 +8,13 @@ This table contains the base values for creature health, mana, armor, attack pow
 |------------------------|-------------|------------|------|---------|-------|---------|
 | [level][1]             | tinyint(3)  | unsigned   | NO   |         |       |         |
 | [class][2]             | tinyint(3)  | unsigned   | NO   |         |       |         |
-| [basehp0][3]           | smallint(5) | unsigned   | NO   |         |       |         |
-| [basehp1][4]           | smallint(5) | unsigned   | NO   |         |       |         |
-| [basehp2][5]           | smallint(5) | unsigned   | NO   |         |       |         |
-| [basemana][6]          | smallint(5) | unsigned   | NO   |         |       |         |
-| [basearmor][7]         | smallint(5) | unsigned   | NO   |         |       |         |
-| [attackpower][8]       | smallint(5) | unsigned   | NO   |         |       |         |
-| [rangedattackpower][9] | smallint(5) | unsigned   | NO   |         |       |         |
+| [basehp0][3]           | SMALLINT(5) | unsigned   | NO   |         |       |         |
+| [basehp1][4]           | SMALLINT(5) | unsigned   | NO   |         |       |         |
+| [basehp2][5]           | SMALLINT(5) | unsigned   | NO   |         |       |         |
+| [basemana][6]          | SMALLINT(5) | unsigned   | NO   |         |       |         |
+| [basearmor][7]         | SMALLINT(5) | unsigned   | NO   |         |       |         |
+| [attackpower][8]       | SMALLINT(5) | unsigned   | NO   |         |       |         |
+| [rangedattackpower][9] | SMALLINT(5) | unsigned   | NO   |         |       |         |
 | [damage_base][10]      | FLOAT       |            | NO   |         |       |         |
 | [damage_exp1][11]      | FLOAT       |            | NO   |         |       |         |
 | [damage_exp2][12]      | FLOAT       |            | NO   |         |       |         |

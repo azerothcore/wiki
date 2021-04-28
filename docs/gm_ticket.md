@@ -18,7 +18,7 @@ Note: do not insert directly into most of these columns, else the client won't u
 | [name][4]              | VARCHAR(12) |            |     | NO   |         |                | Name of ticket creator                     |
 | [description][5]       | text        |            |     | NO   |         |                |                                            |
 | [createtime][6]        | int(10)     | unsigned   |     | NO   |         |                |                                            |
-| [mapId][7]             | smallint(5) | unsigned   |     | NO   |         |                |                                            |
+| [mapId][7]             | SMALLINT(5) | unsigned   |     | NO   |         |                |                                            |
 | [posX][8]              | FLOAT       | signed     |     | NO   |         |                |                                            |
 | [posY][9]              | FLOAT       | signed     |     | NO   |         |                |                                            |
 | [posZ][10]             | FLOAT       | signed     |     | NO   |         |                |                                            |

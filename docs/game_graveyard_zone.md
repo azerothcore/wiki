@@ -6,7 +6,7 @@
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
 | [id][1]         | MEDIUMINT(8) | unasigned  | PRI | NO   | 0       |       |         |
 | [ghost_zone][2] | MEDIUMINT(8) | unasigned  | PRI | NO   | 0       |       |         |
-| [faction][3]    | smallint(5)  | unasigned  |     | NO   | 0       |       |         |
+| [faction][3]    | SMALLINT(5)  | unasigned  |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #ghost_zone

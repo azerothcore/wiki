@@ -31,7 +31,7 @@ This table holds vital static information for each character. It is used to crea
 | [position_x][18]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [position_y][19]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [position_z][20]           | FLOAT        | signed     |     | NO   | 0                 |        |                          |
-| [map][21]                  | smallint(5)  | signed     |     | NO   | 0                 |        | Map Identifier           |
+| [map][21]                  | SMALLINT(5)  | signed     |     | NO   | 0                 |        | Map Identifier           |
 | [instance_id][22]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [instance_mode_mask][23]   | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
 | [orientation][24]          | FLOAT        | signed     |     | NO   | 0                 |        |                          |
@@ -50,11 +50,11 @@ This table holds vital static information for each character. It is used to crea
 | [trans_z][37]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [trans_o][38]              | FLOAT        | signed     |     | NO   | 0                 |        |                          |
 | [transguid][39]            | MEDIUMINT(8) | unsigned   |     | NO   | 0                 |        |                          |
-| [extra_flags][40]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
-| [extra_flags][41]          | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [extra_flags][40]          | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [extra_flags][41]          | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [stable_slots][42]         | tinyint(3)   | unsigned   |     | NO   | 0                 |        |                          |
-| [at_login][43]             | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
-| [zone][44]                 | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [at_login][43]             | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [zone][44]                 | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [death_expire_time][45]    | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [taxi_path][46]            | text         | signed     |     | YES  | NULL              |        |                          |
 | [arenaPoints][47]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
@@ -62,8 +62,8 @@ This table holds vital static information for each character. It is used to crea
 | [todayhonorpoints][49]     | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [yesterdayhonorpoints][50] | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [totalkills][51]           | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
-| [todayKills][52]           | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
-| [yesterdayKills][53]       | smallint(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [todayKills][52]           | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
+| [yesterdayKills][53]       | SMALLINT(5)  | unsigned   |     | NO   | 0                 |        |                          |
 | [chosenTitle][54]          | int(10)      | unsigned   |     | NO   | 0                 |        |                          |
 | [knownCurrencies][55]      | BIGINT(20)   | unsigned   |     | NO   | 0                 |        |                          |
 | [watchedFaction][56]       | int(10)      | unsigned   |     | NO   | 0                 |        |                          |

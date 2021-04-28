@@ -21,4 +21,4 @@ Description_loc5 | VARCHAR(255) |
 Description_loc6 | VARCHAR(255) | 
 Description_loc7 | VARCHAR(255) | 
 Description_loc8 | VARCHAR(255) | 
-VerifiedBuild | smallint(5) | 
+VerifiedBuild | SMALLINT(5) | 

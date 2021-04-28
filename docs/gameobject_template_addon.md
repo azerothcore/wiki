@@ -8,7 +8,7 @@ Table created and content moved from gameobject\_template in commit bd4bf0a
 |-----------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                     | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
 | [entry](#gameobject_template_addon-entry)     | MEDIUMINT(8) | unsigned       | PRI     | NO       | 0           |           |             |
-| [faction](#gameobject_template_addon-faction) | smallint(5)  | unsigned       |         | NO       | 0           |           |             |
+| [faction](#gameobject_template_addon-faction) | SMALLINT(5)  | unsigned       |         | NO       | 0           |           |             |
 | [flags](#gameobject_template_addon-flags)     | int(10)      | unsigned       |         | NO       | 0           |           |             |
 | mingold                                       | MEDIUMINT(8) | unsigned       |         | NO       | 0           |           |             |
 | maxgold                                       | MEDIUMINT(8) | unsigned       |         | NO       | 0           |           |             |

@@ -69,7 +69,7 @@ This table holds information on every applied item hotfix and can overwrite exis
 | [CurrencySubstitutionID](#item_sparse-CurrencySubstitutionID)             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [CurrencySubstitutionCount](#item_sparse-CurrencySubstitutionCount)       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
 | [ItemNameDescriptionID](#item_sparse-ItemNameDescriptionID)               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [VerifiedBuild](#item_sparse-VerifiedBuild)                               | smallint(6) | signed     |     | NO   | 0       |       |                          |
+| [VerifiedBuild](#item_sparse-VerifiedBuild)                               | SMALLINT(6) | signed     |     | NO   | 0       |       |                          |
 
 **Description of the fields**
 

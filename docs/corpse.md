@@ -8,8 +8,8 @@
 | posY        | FLOAT       | signed     |     | NO   | 0       |        |                                    |
 | posZ        | FLOAT       | signed     |     | NO   | 0       |        |                                    |
 | orientation | FLOAT       | signed     |     | NO   | 0       |        |                                    |
-| mapId       | smallint(5) | unsigned   |     | NO   | 0       |        | Map Identifier                     |
-| phaseMask   | smallint(5) | unsigned   |     | NO   | 0       |        |                                    |
+| mapId       | SMALLINT(5) | unsigned   |     | NO   | 0       |        | Map Identifier                     |
+| phaseMask   | SMALLINT(5) | unsigned   |     | NO   | 0       |        |                                    |
 | displayId   | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
 | itemCache   | text        | signed     |     | NO   |         |        |                                    |
 | bytes1      | int(10)     | unsigned   |     | NO   | 0       |        |                                    |

@@ -11,8 +11,8 @@ Contains information about the different battlegrounds, like how many players ar
 | Field                  | Type         | Atributes | Key | Null | Default | Extra | Comment |
 |------------------------|--------------|-----------|-----|------|---------|-------|---------|
 | [ID][1]                | MEDIUMINT(8) | unsigned  | PRI | NO   | 0       |       |         |
-| [MinPlayersPerTeam][2] | smallint(5)  | unsigned  |     | NO   | 0       |       |         |
-| [MaxPlayersPerTeam][3] | smallint(5)  | unsigned  |     | NO   | 0       |       |         |
+| [MinPlayersPerTeam][2] | SMALLINT(5)  | unsigned  |     | NO   | 0       |       |         |
+| [MaxPlayersPerTeam][3] | SMALLINT(5)  | unsigned  |     | NO   | 0       |       |         |
 | [MinLvl][4]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
 | [MaxLvl][5]            | tinyint(3)   | unsigned  |     | NO   | 0       |       |         |
 | [AllianceStartLoc][6]  | MEDIUMINT(8) | unsigned  |     | NO   |         |       |         |

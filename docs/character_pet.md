@@ -16,7 +16,7 @@ This table holds the pet data for each pet summoned by anyone in the game.
 | [modelid][4]            | int(10)      | unsigned   |     | YES  | 0       |       |         |
 | [CreatedBySpell][5]     | MEDIUMINT(8) | unsigned   |     | NO   |         |       |         |
 | [PetType][6]            | tinyint(3)   | unsigned   |     | NO   |         |       |         |
-| [level][7]              | smallint(5)  | unsigned   |     | NO   |         |       |         |
+| [level][7]              | SMALLINT(5)  | unsigned   |     | NO   |         |       |         |
 | [exp][8]                | int(10)      | unsigned   |     | NO   |         |       |         |
 | [Reactstate][9]         | tinyint(3)   | unsigned   |     | NO   |         |       |         |
 | [name][10]              | VARCHAR(21)  |            |     | NO   |         |       |         |
