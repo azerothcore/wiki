@@ -47,7 +47,7 @@ However, most of the time you just have to add new hooks to existing scripts, in
 
 First of all, define the actual class, and have it inherit from ScriptObject, like so:
     
- ```C++
+ ```cpp
     class MyScriptType : public ScriptObject
     {
         uint32 _someId;
@@ -72,13 +72,13 @@ First of all, define the actual class, and have it inherit from ScriptObject, li
 ```
 
 Next, you need to add a specialization for ScriptRegistry. Put this at the beginning of ScriptMgr.cpp:
-```C++
+```cpp
 template class ScriptRegistry<MyScriptType>;
 ```
 
 Now add the register at the bottom of the ScriptMgr.cpp:
 
-```C++
+```cpp
 MyScriptType::MyScriptType(const char* name)
     : ScriptObject(name)
 {
@@ -105,7 +105,7 @@ certain events.
 
 In ScriptMgr.h , inside the `class ScriptMgr`
 
-```C++
+```cpp
 void OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2);
 void OnAnotherEvent(uint32 someArg);
 ```
@@ -122,7 +122,7 @@ The most common way to do it is the following
 
 In ScriptMgr.cpp:
 
-```C++
+```cpp
 void ScriptMgr::OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2)
 {
     FOREACH_SCRIPT(MyScriptType)->OnBeforeSomeEvent(someArg1, someArg2);
@@ -143,7 +143,7 @@ AC provides a global property called "sScriptMgr" that you can use to call your 
 
 For instance:
 
-```C++
+```cpp
 void CoreClass::SomeEvent() 
 {
     uint32 arg1=10;
@@ -194,7 +194,7 @@ To do so, you have 2 solutions:
 This is the most common one. Basically using the concept of passing a parameter by reference you can change everything that is passed to the hook itself.
 For instance:
 
-```C++
+```cpp
 OnMotdChange(std::string& newMotd)
 ``` 
 
@@ -204,7 +204,7 @@ Passing the newMotd with the '&' character you allow the listeners to change the
 
 This approach is not very common, most of the hooks return a "void" type, and working with references is easier most of the time, but if you really need it you can implement a hook that is declared in this way:
 
-```C++
+```cpp
 bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, float y, float z, float orientation, uint32 options, Unit* target)
 {
     bool ret = true;
