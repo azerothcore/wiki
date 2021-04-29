@@ -118,7 +118,7 @@ Mask:   00000100
 Result: 00000100
 
 // In this case we have the value 5
-INT MyState = 5;
+int MyState = 5;
 
 // And we want to remove 1 state from that value
 MyState &= 4;
