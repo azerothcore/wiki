@@ -44,9 +44,9 @@ These values are used by the core and a few spell\_\* tables.
 | 28  | CastingTimeIndex              | uint   |
 | 29  | RecoveryTime                  | uint   |
 | 30  | CategoryRecoveryTime          | uint   |
-| 31  | interruptFlags                | uint   |
-| 32  | AurainterruptFlags            | uint   |
-| 33  | ChannelinterruptFlags         | uint   |
+| 31  | InterruptFlags                | uint   |
+| 32  | AuraInterruptFlags            | uint   |
+| 33  | ChannelInterruptFlags         | uint   |
 | 34  | procFlags                     | uint   |
 | 35  | procChance                    | uint   |
 | 36  | procCharges                   | uint   |
@@ -117,9 +117,9 @@ These values are used by the core and a few spell\_\* tables.
 | 101 | EffectValueMultiplier1        | float  |
 | 102 | EffectValueMultiplier2        | float  |
 | 103 | EffectValueMultiplier3        | float  |
-| 104 | EffectChaintarget1            | uint   |
-| 105 | EffectChaintarget2            | uint   |
-| 106 | EffectChaintarget3            | uint   |
+| 104 | EffectChainTarget1            | uint   |
+| 105 | EffectChainTarget2            | uint   |
+| 106 | EffectChainTarget3            | uint   |
 | 107 | EffectItemType1               | uint   |
 | 108 | EffectItemType2               | uint   |
 | 109 | EffectItemType3               | uint   |

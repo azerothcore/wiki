@@ -32,4 +32,4 @@ The ID of the achievement from [Achievement.dbc](Achievement).
 
 ### date
 
-The date/time when this achievement was earned, in Unix time. See [Unix TIMESTAMP Calculator](http://www.unixTIMESTAMP.com/index.php)
+The date/time when this achievement was earned, in Unix time. See [Unix timestamp Calculator](http://www.unixtimestamp.com/index.php)
