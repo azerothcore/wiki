@@ -2,21 +2,21 @@
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra  | Comment                            |
 |-------------|-------------|------------|-----|------|---------|--------|------------------------------------|
-| corpseGuid  | int(10)     | unsigned   | PRI | NO   | 0       | Unique | Global Unique Identifier           |
-| guid        | int(10)     | unsigned   |     | NO   | 0       |        | Character Global Unique Identifier |
-| posX        | float       | signed     |     | NO   | 0       |        |                                    |
-| posY        | float       | signed     |     | NO   | 0       |        |                                    |
-| posZ        | float       | signed     |     | NO   | 0       |        |                                    |
-| orientation | float       | signed     |     | NO   | 0       |        |                                    |
-| mapId       | smallint(5) | unsigned   |     | NO   | 0       |        | Map Identifier                     |
-| phaseMask   | smallint(5) | unsigned   |     | NO   | 0       |        |                                    |
-| displayId   | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| itemCache   | text        | signed     |     | NO   |         |        |                                    |
-| bytes1      | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| bytes2      | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| guildId     | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| flags       | tinyint(3)  | unsigned   |     | NO   | 0       |        |                                    |
-| dynFlags    | tinyint(3)  | unsigned   |     | NO   | 0       |        |                                    |
-| time        | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
-| corpseType  | tinyint(3)  | unsigned   |     | NO   | 0       |        |                                    |
-| instanceId  | int(10)     | unsigned   |     | NO   | 0       |        |                                    |
+| corpseGuid  | INT     | UNSIGNED   | PRI | NO   | 0       | Unique | Global Unique Identifier           |
+| guid        | INT     | UNSIGNED   |     | NO   | 0       |        | Character Global Unique Identifier |
+| posX        | FLOAT       | SIGNED     |     | NO   | 0       |        |                                    |
+| posY        | FLOAT       | SIGNED     |     | NO   | 0       |        |                                    |
+| posZ        | FLOAT       | SIGNED     |     | NO   | 0       |        |                                    |
+| orientation | FLOAT       | SIGNED     |     | NO   | 0       |        |                                    |
+| mapId       | SMALLINT | UNSIGNED   |     | NO   | 0       |        | Map Identifier                     |
+| phaseMask   | SMALLINT | UNSIGNED   |     | NO   | 0       |        |                                    |
+| displayId   | INT     | UNSIGNED   |     | NO   | 0       |        |                                    |
+| itemCache   | text        | SIGNED     |     | NO   |         |        |                                    |
+| bytes1      | INT     | UNSIGNED   |     | NO   | 0       |        |                                    |
+| bytes2      | INT     | UNSIGNED   |     | NO   | 0       |        |                                    |
+| guildId     | INT     | UNSIGNED   |     | NO   | 0       |        |                                    |
+| flags       | TINYINT  | UNSIGNED   |     | NO   | 0       |        |                                    |
+| dynFlags    | TINYINT  | UNSIGNED   |     | NO   | 0       |        |                                    |
+| time        | INT     | UNSIGNED   |     | NO   | 0       |        |                                    |
+| corpseType  | TINYINT  | UNSIGNED   |     | NO   | 0       |        |                                    |
+| instanceId  | INT     | UNSIGNED   |     | NO   | 0       |        |                                    |

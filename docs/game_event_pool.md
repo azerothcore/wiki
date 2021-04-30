@@ -10,8 +10,8 @@ This table determines if a given pool is active for a given game event.
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra  | Comment                                                             |
 |-----------------|--------------|------------|-----|------|---------|--------|---------------------------------------------------------------------|
-| [eventEntry][1] | tinyint(3)   | signed     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [pool_entry][2] | mediumint(8) | unsigned   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
+| [eventEntry][1] | TINYINT   | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
+| [pool_entry][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
 
 [1]: #evententry
 [2]: #pool_entry

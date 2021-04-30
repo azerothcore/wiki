@@ -10,10 +10,10 @@ This table holds information on the base health and mana of characters when they
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|-------------|------------|-----|------|---------|-------|---------|
-| [class][1]    | tinyint(3)  | unsigned   | PRI | NO   | NULL    |       |         |
-| [level][2]    | tinyint(3)  | unsigned   | PRI | NO   | NULL    |       |         |
-| [basehp][3]   | smallint(5) | unsigned   |     | NO   | NULL    |       |         |
-| [basemana][4] | smallint(5) | unsigned   |     | NO   | NULL    |       |         |
+| [class][1]    | TINYINT  | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [level][2]    | TINYINT  | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [basehp][3]   | SMALLINT | UNSIGNED   |     | NO   | NULL    |       |         |
+| [basemana][4] | SMALLINT | UNSIGNED   |     | NO   | NULL    |       |         |
 
 [1]: #class
 [2]: #level

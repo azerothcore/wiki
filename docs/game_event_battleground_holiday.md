@@ -10,8 +10,8 @@ This table is used to add a holiday to a battleground, for things like extra rep
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra  | Comment                 |
 |-----------------|------------|------------|-----|------|---------|--------|-------------------------|
-| [eventEntry][1] | tinyint(3) | unsigned   | PRI | NO   |         | Unique | Entry of the game event |
-| [bgflag][2]     | int(10)    | unsigned   |     | NO   | 0       |        |                         |
+| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         | Unique | Entry of the game event |
+| [bgflag][2]     | INT    | UNSIGNED   |     | NO   | 0       |        |                         |
 
 [1]: #evententry
 [2]: #bgflag

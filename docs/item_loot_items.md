@@ -13,17 +13,17 @@ the player either removes an item or destroys the container item.
 
 | Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|------------|------------|-----|------|---------|-------|---------|
-| [container_id][1]    | int(10)    | unsigned   |     | NO   |         |       |         |
-| [item_id][2]         | int(10)    | unsigned   |     | NO   |         |       |         |
-| [item_count][3]      | int(10)    |            |     | NO   |         |       |         |
-| [follow_rules][4]    | tinyint(1) |            |     | NO   |         |       |         |
-| [ffa][5]             | tinyint(1) |            |     | NO   |         |       |         |
-| [blocked][6]         | tinyint(1) |            |     | NO   |         |       |         |
-| [counted][7]         | tinyint(1) |            |     | NO   |         |       |         |
-| [under_threshold][8] | tinyint(1) |            |     | NO   |         |       |         |
-| [needs_quest][9]     | tinyint(1) |            |     | NO   |         |       |         |
-| [rnd_prop][10]       | int(10)    |            |     | NO   |         |       |         |
-| [rnd_suffix][11]     | int(10)    |            |     | NO   |         |       |         |
+| [container_id][1]    | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [item_id][2]         | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [item_count][3]      | INT    |            |     | NO   |         |       |         |
+| [follow_rules][4]    | TINYINT |            |     | NO   |         |       |         |
+| [ffa][5]             | TINYINT |            |     | NO   |         |       |         |
+| [blocked][6]         | TINYINT |            |     | NO   |         |       |         |
+| [counted][7]         | TINYINT |            |     | NO   |         |       |         |
+| [under_threshold][8] | TINYINT |            |     | NO   |         |       |         |
+| [needs_quest][9]     | TINYINT |            |     | NO   |         |       |         |
+| [rnd_prop][10]       | INT    |            |     | NO   |         |       |         |
+| [rnd_suffix][11]     | INT    |            |     | NO   |         |       |         |
 
 [1]: #container_id
 [2]: #item_id

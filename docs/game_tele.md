@@ -8,13 +8,13 @@ This table contains a list of teleport locations that can be used with the *.tel
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra          |
 |------------------|--------------|------------|-----|------|---------|----------------|
-| [id][1]          | mediumint(8) | unsigned   | PRI | NO   | NULL    | Auto increment |
-| [position_x][2]  | float        | signed     |     | NO   | 0       |                |
-| [position_y][3]  | float        | signed     |     | NO   | 0       |                |
-| [position_z][4]  | float        | signed     |     | NO   | 0       |                |
-| [orientation][5] | float        | signed     |     | NO   | 0       |                |
-| [map][6]         | smallint(5)  | unsigned   |     | NO   | 0       |                |
-| [name][7]        | varchar(100) | signed     |     | NO   | NULL    |                |
+| [id][1]          | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    | Auto increment |
+| [position_x][2]  | FLOAT        | SIGNED     |     | NO   | 0       |                |
+| [position_y][3]  | FLOAT        | SIGNED     |     | NO   | 0       |                |
+| [position_z][4]  | FLOAT        | SIGNED     |     | NO   | 0       |                |
+| [orientation][5] | FLOAT        | SIGNED     |     | NO   | 0       |                |
+| [map][6]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |                |
+| [name][7]        | VARCHAR(100) | SIGNED     |     | NO   | NULL    |                |
 
 [1]: #id
 [2]: #position_x

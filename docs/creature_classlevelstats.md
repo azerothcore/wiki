@@ -6,18 +6,18 @@ This table contains the base values for creature health, mana, armor, attack pow
 
 | Field                  | Type        | Attributes | Null | Default | Extra | Comment |
 |------------------------|-------------|------------|------|---------|-------|---------|
-| [level][1]             | tinyint(3)  | unsigned   | NO   |         |       |         |
-| [class][2]             | tinyint(3)  | unsigned   | NO   |         |       |         |
-| [basehp0][3]           | smallint(5) | unsigned   | NO   |         |       |         |
-| [basehp1][4]           | smallint(5) | unsigned   | NO   |         |       |         |
-| [basehp2][5]           | smallint(5) | unsigned   | NO   |         |       |         |
-| [basemana][6]          | smallint(5) | unsigned   | NO   |         |       |         |
-| [basearmor][7]         | smallint(5) | unsigned   | NO   |         |       |         |
-| [attackpower][8]       | smallint(5) | unsigned   | NO   |         |       |         |
-| [rangedattackpower][9] | smallint(5) | unsigned   | NO   |         |       |         |
-| [damage_base][10]      | float       |            | NO   |         |       |         |
-| [damage_exp1][11]      | float       |            | NO   |         |       |         |
-| [damage_exp2][12]      | float       |            | NO   |         |       |         |
+| [level][1]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
+| [class][2]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
+| [basehp0][3]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basehp1][4]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basehp2][5]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basemana][6]          | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [basearmor][7]         | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [attackpower][8]       | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [rangedattackpower][9] | SMALLINT | UNSIGNED   | NO   |         |       |         |
+| [damage_base][10]      | FLOAT       |            | NO   |         |       |         |
+| [damage_exp1][11]      | FLOAT       |            | NO   |         |       |         |
+| [damage_exp2][12]      | FLOAT       |            | NO   |         |       |         |
 | [comment][13]          | text        |            | YES  | NULL    |       |         |
 
 [1]: #level

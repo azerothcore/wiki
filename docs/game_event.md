@@ -6,16 +6,16 @@ This table holds definitions for all game events that are activated or deactivat
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra  | Comment                                                                                                                              |
 |-------------------|--------------|------------|-----|------|---------|--------|--------------------------------------------------------------------------------------------------------------------------------------|
-| [eventEntry][1]   | tinyint(3)   | unsigned   | PRI | NO   |         | Unique | Entry of the game event                                                                                                              |
-| [start_time][2]   | timestamp    |            |     | YES  | NULL    |        | Absolute start date, the event will never start before                                                                               |
-| [end_time][3]     | timestamp    |            |     | YES  | NULL    |        | Absolute end date, the event will never start after; if NULL it will be implicitly set to 2 years in the future on each server start |
-| [occurrence][4]   | bigint(20)   | unsigned   |     | NO   |         |        | Delay in minutes between occurrences of the event                                                                                    |
-| [length][5]       | bigint(20)   | unsigned   |     | NO   |         |        | Length in minutes of the event                                                                                                       |
-| [holiday][6]      | mediumint(8) | unsigned   |     | NO   |         |        | Client side holiday id (from dbc)                                                                                                    |
-| [holidayStage][7] | tinyint(3)   | unsigned   |     | NO   |         |        |                                                                                                                                      |
-| [description][8]  | varchar(255) | signed     |     | YES  | NULL    |        | Description of the event displayed in console                                                                                        |
-| [world_event][9]  | tinyint(3)   | unsigned   |     | NO   |         |        | 0 if normal event, 1 if world event                                                                                                  |
-| [announce][10]    | tinyint(3)   | unsigned   |     | YES  | 2       |        | 0 dont announce, 1 announce, 2 value from config                                                                                     |
+| [eventEntry][1]   | TINYINT   | UNSIGNED   | PRI | NO   |         | Unique | Entry of the game event                                                                                                              |
+| [start_time][2]   | TIMESTAMP    |            |     | YES  | NULL    |        | Absolute start date, the event will never start before                                                                               |
+| [end_time][3]     | TIMESTAMP    |            |     | YES  | NULL    |        | Absolute end date, the event will never start after; if NULL it will be implicitly set to 2 years in the future on each server start |
+| [occurrence][4]   | BIGINT   | UNSIGNED   |     | NO   |         |        | Delay in minutes between occurrences of the event                                                                                    |
+| [length][5]       | BIGINT   | UNSIGNED   |     | NO   |         |        | Length in minutes of the event                                                                                                       |
+| [holiday][6]      | MEDIUMINT | UNSIGNED   |     | NO   |         |        | Client side holiday id (from dbc)                                                                                                    |
+| [holidayStage][7] | TINYINT   | UNSIGNED   |     | NO   |         |        |                                                                                                                                      |
+| [description][8]  | VARCHAR(255) | SIGNED     |     | YES  | NULL    |        | Description of the event displayed in console                                                                                        |
+| [world_event][9]  | TINYINT   | UNSIGNED   |     | NO   |         |        | 0 if normal event, 1 if world event                                                                                                  |
+| [announce][10]    | TINYINT   | UNSIGNED   |     | YES  | 2       |        | 0 dont announce, 1 announce, 2 value from config                                                                                     |
 
 [1]: #evententry
 [2]: #start_time

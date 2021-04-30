@@ -10,8 +10,8 @@ This information comes from sniffs and is NOT supposed to be changed.
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra  | Comment                  |
 |-----------------|------------|------------|-----|------|---------|--------|--------------------------|
-| [eventEntry][1] | tinyint(3) | unsigned   |     | NO   |         | Unique | Entry of the game event. |
-| [season][2]     | tinyint(3) | unsigned   |     | NO   |         | Unique | Arena season number      |
+| [eventEntry][1] | TINYINT | UNSIGNED   |     | NO   |         | Unique | Entry of the game event. |
+| [season][2]     | TINYINT | UNSIGNED   |     | NO   |         | Unique | Arena season number      |
 
 [1]: #evententry
 [2]: #season

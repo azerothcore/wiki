@@ -10,7 +10,7 @@ Allows for an area trigger to be scripted with Trinity Script.
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]      | mediumint(8) |            | PRI | NO   |         |       |         |
+| [entry][1]      | MEDIUMINT |            | PRI | NO   |         |       |         |
 | [ScriptName][2] | char(64)     |            |     | NO   |         |       |         |
 
 [1]: #entry

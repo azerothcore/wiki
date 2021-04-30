@@ -4,8 +4,8 @@
 
 Column | Type | Description
 --- | --- | ---
-Menu_id | smallint(6) unsigned | 
-Id | smallint(6) unsigned | 
+Menu_id | SMALLINT UNSIGNED | 
+Id | SMALLINT UNSIGNED | 
 Option_text_loc1 | text | 
 Option_text_loc2 | text | 
 Option_text_loc3 | text | 

@@ -10,12 +10,12 @@ This table lists all of the characters that have been banned along with the date
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 |----------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]      | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [bandate][2]   | int(10)      | unsigned   | PRI | NO   | 0       |       |                          |
-| [unbandate][3] | int(10)      | unsigned   |     | NO   | 0       |       |                          |
-| [bannedby][4]  | varchar(50)  | signed     |     | NO   |         |       |                          |
-| [banreason][5] | varchar(255) | signed     |     | NO   |         |       |                          |
-| [active][6]    | tinyint(3)   | unsigned   |     | NO   | 1       |       |                          |
+| [guid][1]      | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [bandate][2]   | INT      | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [unbandate][3] | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
+| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
+| [active][6]    | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                          |
 
 [1]: #guid
 [2]: #bandate

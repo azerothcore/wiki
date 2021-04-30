@@ -10,22 +10,22 @@ This table holds basic info about groups.
 
 | Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|------------|------------|-----|------|---------|-------|---------|
-| [guid][1]            | int(10)    | unsigned   | PRI | NO   |         |       |         |
-| [leaderGuid][2]      | int(10)    | unsigned   |     | NO   |         |       |         |
-| [lootMethod][3]      | tinyint(3) | unsigned   |     | NO   |         |       |         |
-| [looterGuid][4]      | int(10)    | unsigned   |     | NO   |         |       |         |
-| [lootThreshold][5]   | tinyint(3) | unsigned   |     | NO   |         |       |         |
-| [icon1][6]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon2][7]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon3][8]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon4][9]           | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon5][10]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon6][11]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon7][12]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [icon8][13]          | int(10)    | unsigned   |     | NO   |         |       |         |
-| [groupType][14]      | tinyint(3) | unsigned   |     | NO   |         |       |         |
-| [difficulty][15]     | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
-| [raiddifficulty][16] | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [guid][1]            | INT    | UNSIGNED   | PRI | NO   |         |       |         |
+| [leaderGuid][2]      | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [lootMethod][3]      | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| [looterGuid][4]      | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [lootThreshold][5]   | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| [icon1][6]           | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon2][7]           | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon3][8]           | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon4][9]           | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon5][10]          | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon6][11]          | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon7][12]          | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [icon8][13]          | INT    | UNSIGNED   |     | NO   |         |       |         |
+| [groupType][14]      | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| [difficulty][15]     | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [raiddifficulty][16] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #leaderguid

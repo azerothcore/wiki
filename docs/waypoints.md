@@ -12,11 +12,11 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 
 | Field                            | Type         | Attributes | Key | Null | Default |
 |----------------------------------|--------------|------------|-----|------|---------|
-| [entry](#entry)                  | mediumint(8) | unsigned   | PRI | NO   | 0       |
-| [pointid](#pointid)              | mediumint(8) | unsigned   | PRI | NO   | 0       |
-| [position\_x](#position_x)       | float        |            |     | NO   | 0       |
-| [position\_y](#position_y)       | float        |            |     | NO   | 0       |
-| [position\_z](#position_z)       | float        |            |     | NO   | 0       |
+| [entry](#entry)                  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
+| [pointid](#pointid)              | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
+| [position\_x](#position_x)       | FLOAT        |            |     | NO   | 0       |
+| [position\_y](#position_y)       | FLOAT        |            |     | NO   | 0       |
+| [position\_z](#position_z)       | FLOAT        |            |     | NO   | 0       |
 | [point\_comment](#point_comment) | text         |            |     | YES  | NULL    |
 
 #### entry

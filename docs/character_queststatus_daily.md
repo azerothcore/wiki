@@ -10,9 +10,9 @@ Holds information on the daily quest status of every player. The quest must have
 
 | Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 |------------|---------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]  | int(10) | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | int(10) | unsigned   | PRI | NO   | 0       |       | Quest Identifier         |
-| [time][3]  | int(10) | unsigned   |     | NO   | 0       |       |                          |
+| [guid][1]  | INT | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2] | INT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
+| [time][3]  | INT | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #quest

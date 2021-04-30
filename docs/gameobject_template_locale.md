@@ -11,23 +11,23 @@ This table is used to provide to localized clients with localized string for gam
 |                                                                        |              |                |         |          |             |           |             |
 |------------------------------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                                              | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#gameobject_template_locale-entry)                             | mediumint(8) | unsigned       | PRI     | NO       | 0           |           |             |
-| [name\_loc1](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc2](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc3](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc4](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc5](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc6](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc7](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [name\_loc8](#gameobject_template_locale-name_loc)                     | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc1](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc2](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc3](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc4](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc5](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc6](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc7](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc8](#gameobject_template_locale-castbarcaption_loc) | varchar(100) | signed         |         | NO       | NULL        |           |             |
+| [entry](#gameobject_template_locale-entry)                             | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [name\_loc1](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc2](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc3](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc4](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc5](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc6](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc7](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [name\_loc8](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc1](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc2](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc3](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc4](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc5](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc6](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc7](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| [castbarcaption\_loc8](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
 
 **Description of the fields**
 

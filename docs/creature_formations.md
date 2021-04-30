@@ -10,13 +10,13 @@ This table allows to group mobs. Members of group will follow others, and attack
 
 | Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|---------|------------|-----|------|---------|-------|---------|
-| [leaderGUID][1] | int(11) | unsigned   |     | NO   | NULL    |       |         |
-| [memberGUID][2] | int(11) | unsigned   | PRI | NO   | NULL    |       |         |
-| [dist][3]       | float   | unsigned   |     | NO   | NULL    |       |         |
-| [angle][4]      | float   | unsigned   |     | NO   | NULL    |       |         |
-| [groupAI][5]    | int(11) | unsigned   |     | NO   | NULL    |       |         |
-| [point_1][6]    | int(11) | unsigned   |     | NO   | 0       |       |         |
-| [point_2][7]    | int(11) | unsigned   |     | NO   | 0       |       |         |
+| [leaderGUID][1] | INT | UNSIGNED   |     | NO   | NULL    |       |         |
+| [memberGUID][2] | INT | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [dist][3]       | FLOAT   | UNSIGNED   |     | NO   | NULL    |       |         |
+| [angle][4]      | FLOAT   | UNSIGNED   |     | NO   | NULL    |       |         |
+| [groupAI][5]    | INT | UNSIGNED   |     | NO   | NULL    |       |         |
+| [point_1][6]    | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [point_2][7]    | INT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #leaderguid
 [2]: #memberguid

@@ -8,35 +8,35 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------------|
-| [entryorguid][1]      | int(11)     | signed     | PRI | NO   |         |       |               |
-| [source_type][2]      | tinyint(3)  | unsigned   | PRI | NO   | 0       |       |               |
-| [id][3]               | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
-| [link][4]             | smallint(5) | unsigned   | PRI | NO   | 0       |       |               |
-| [event_type][5]       | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
-| [event_phase_mask][6] | smallint(5) | unsigned   |     | NO   | 0       |       |               |
-| [event_chance][7]     | tinyint(3)  | unsigned   |     | NO   | 100     |       |               |
-| [event_flags][8]      | smallint(5) | unsigned   |     | NO   | 0       |       |               |
-| [event_param1][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param2][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param3][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param4][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [event_param5][5]     | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [action_type][9]      | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
-| [action_param1][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [action_param2][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [action_param3][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [action_param4][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [action_param5][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [action_param6][9]    | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_type][10]     | tinyint(3)  | unsigned   |     | NO   | 0       |       |               |
-| [target_param1][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_param2][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_param3][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_param4][10]   | int(10)     | unsigned   |     | NO   | 0       |       |               |
-| [target_x][10]        | float       | signed     |     | NO   | 0       |       |               |
-| [target_y][10]        | float       | signed     |     | NO   | 0       |       |               |
-| [target_z][10]        | float       | signed     |     | NO   | 0       |       |               |
-| [target_o][10]        | float       | signed     |     | NO   | 0       |       |               |
+| [entryorguid][1]      | INT     | SIGNED     | PRI | NO   |         |       |               |
+| [source_type][2]      | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [id][3]               | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [link][4]             | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [event_type][5]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_phase_mask][6] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_chance][7]     | TINYINT  | UNSIGNED   |     | NO   | 100     |       |               |
+| [event_flags][8]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param1][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param2][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param3][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param4][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param5][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_type][9]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param1][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param2][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param3][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param4][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param5][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param6][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_type][10]     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param1][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param2][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param3][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param4][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_x][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [target_y][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [target_z][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [target_o][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
 | [comment][11]         | text        |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid

@@ -10,8 +10,8 @@ It is the table that stores the translations of the table `achievement_reward`, 
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------|--------------|------------|-----|------|---------|-------|---------|
-| [ID][1]      | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [Locale][2]  | varchar(4)   |            | PRI | NO   |         |       |         |
+| [ID][1]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Locale][2]  | VARCHAR(4)   |            | PRI | NO   |         |       |         |
 | [Subject][3] | text         |            |     | YES  |         |       |         |
 | [Text][4]    | text         |            |     | YES  |         |       |         |
 

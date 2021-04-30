@@ -10,22 +10,22 @@ Contains aura information that is loaded when a character is loaded, so the aura
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
-| [guid][1]             | int(10)      | unsigned   | PRI | NO   |         |       | Global Unique Identifier      |
-| [caster_guid][2]      | bigint(20)   | unsigned   | PRI | NO   |         |       | Full Global Unique Identifier |
-| [item_guid][3]        | bigint(20)   | unsigned   | PRI | NO   |         |       |                               |
-| [spell][4]            | mediumint(8) | unsigned   | PRI | NO   |         |       |                               |
-| [effect_mask][5]      | tinyint(3)   | unsigned   | PRI | NO   |         |       |                               |
-| [recalculate_mask][6] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [stackcount][7]       | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [amount0][8]          | int(11)      | signed     |     | NO   |         |       |                               |
-| [amount1][9]          | int(11)      | signed     |     | NO   |         |       |                               |
-| [amount2][10]         | int(11)      | signed     |     | NO   |         |       |                               |
-| [base_amount0][11]    | int(11)      | signed     |     | NO   |         |       |                               |
-| [base_amount1][12]    | int(11)      | signed     |     | NO   |         |       |                               |
-| [base_amount2][13]    | int(11)      | signed     |     | NO   |         |       |                               |
-| [maxduration][14]     | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaintime][15]      | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaincharges][16]   | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [guid][1]             | INT      | UNSIGNED   | PRI | NO   |         |       | Global Unique Identifier      |
+| [caster_guid][2]      | BIGINT   | UNSIGNED   | PRI | NO   |         |       | Full Global Unique Identifier |
+| [item_guid][3]        | BIGINT   | UNSIGNED   | PRI | NO   |         |       |                               |
+| [spell][4]            | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |                               |
+| [effect_mask][5]      | TINYINT   | UNSIGNED   | PRI | NO   |         |       |                               |
+| [recalculate_mask][6] | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
+| [stackcount][7]       | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
+| [amount0][8]          | INT      | SIGNED     |     | NO   |         |       |                               |
+| [amount1][9]          | INT      | SIGNED     |     | NO   |         |       |                               |
+| [amount2][10]         | INT      | SIGNED     |     | NO   |         |       |                               |
+| [base_amount0][11]    | INT      | SIGNED     |     | NO   |         |       |                               |
+| [base_amount1][12]    | INT      | SIGNED     |     | NO   |         |       |                               |
+| [base_amount2][13]    | INT      | SIGNED     |     | NO   |         |       |                               |
+| [maxduration][14]     | INT      | SIGNED     |     | NO   |         |       |                               |
+| [remaintime][15]      | INT      | SIGNED     |     | NO   |         |       |                               |
+| [remaincharges][16]   | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
 
 [1]: #guid
 [2]: #caster_guid

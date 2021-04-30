@@ -13,11 +13,11 @@ Its purpose is (will be) used as a globalized table containing the localized tex
 
 | Field                       | Type         |  Key | Null | Default | Extra | Comment |
 |-----------------------------|--------------|------|------|---------|-------|---------|
-| [ID](#ID)                   | mediumint(8) |  PRI | NO   | 0       |       |         |
-| [locale](#locale)           | varchar(4)   |  PRI | NO   | NULL    |       |         |
+| [ID](#ID)                   | MEDIUMINT |  PRI | NO   | 0       |       |         |
+| [locale](#locale)           | VARCHAR(4)   |  PRI | NO   | NULL    |       |         |
 | [MaleText](#MaleText)       | text         |      | YES  | NULL    |       |         |
 | [FemaleText](#FemaleText)   | text         |      | YES  | NULL    |       |         |
-| VerifiedBuild               | smallint(5)  |      | YES  | 0       |       |         |
+| VerifiedBuild               | SMALLINT  |      | YES  | 0       |       |         |
 
 ### Description of the fields
 

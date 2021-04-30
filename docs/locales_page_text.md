@@ -4,7 +4,7 @@
 
 Column | Type | Description
 --- | --- | ---
-Entry | mediumint(8) unsigned | 
+Entry | MEDIUMINT UNSIGNED | 
 Text_loc1 | longtext | 
 Text_loc2 | longtext | 
 Text_loc3 | longtext | 

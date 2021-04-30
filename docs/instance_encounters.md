@@ -10,11 +10,11 @@ Definitions of instance encounters. Used by LFG.
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                 |
 |---------------------------|--------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------|
-| [entry][1]                | int(10)      | unsigned   | PRI | NO   | 0       |       | Unique entry from DungeonEncounter.dbc                                  |
-| [creditType][2]           | tinyint(3)   | unsigned   |     | NO   | 0       |       |                                                                         |
-| [creditEntry][3]          | int(10)      | unsigned   |     | NO   | 0       |       |                                                                         |
-| [lastEncounterDungeon][4] | smallint(5)  | unsigned   |     | NO   | 0       |       | If not 0, LfgDungeon.dbc entry for the instance it is last encounter in |
-| [comment][5]              | varchat(255) | signed     |     | NO   | "       |       |                                                                         |
+| [entry][1]                | INT      | UNSIGNED   | PRI | NO   | 0       |       | Unique entry from DungeonEncounter.dbc                                  |
+| [creditType][2]           | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                                                         |
+| [creditEntry][3]          | INT      | UNSIGNED   |     | NO   | 0       |       |                                                                         |
+| [lastEncounterDungeon][4] | SMALLINT  | UNSIGNED   |     | NO   | 0       |       | If not 0, LfgDungeon.dbc entry for the instance it is last encounter in |
+| [comment][5]              | varchat(255) | SIGNED     |     | NO   | "       |       |                                                                         |
 
 [1]: #entry
 [2]: #credittype

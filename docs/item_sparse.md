@@ -10,66 +10,66 @@ This table holds information on every applied item hotfix and can overwrite exis
 
 | Field                                                                     | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |---------------------------------------------------------------------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [ID](#item_sparse-ID)                                                     | int(10)     | unsigned   | PRI | NO   | 0       |       |                          |
-| [Quality](#item_sparse-Quality)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Flags](#item_sparse-Flags)                                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Unk1](#item_sparse-Unk1)                                                 | float       | signed     |     | NO   | 0       |       |                          |
-| [Unk2](#item_sparse-Unk2)                                                 | float       | signed     |     | NO   | 0       |       |                          |
-| [BuyCount](#item_sparse-BuyCount)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [BuyPrice](#item_sparse-BuyPrice)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [SellPrice](#item_sparse-SellPrice)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [InventoryType](#item_sparse-InventoryType)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [AllowableClass](#item_sparse-AllowableClass)                             | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [AllowableRace](#item_sparse-AllowableRace)                               | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [ItemLevel](#item_sparse-ItemLevel)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredLevel](#item_sparse-RequiredLevel)                               | int(10)     | signed     |     | NO   | 0       |       |                          |
-| [RequiredSkill](#item_sparse-RequiredSkill)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredSkillRank](#item_sparse-RequiredSkillRank)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredSpell](#item_sparse-RequiredSpell)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredHonorRank](#item_sparse-RequiredHonorRank)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredCityRank](#item_sparse-RequiredCityRank)                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredReputationFaction](#item_sparse-RequiredReputationFaction)       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RequiredReputationRank](#item_sparse-RequiredReputationRank)             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [MaxCount](#item_sparse-MaxCount)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Stackable](#item_sparse-Stackable)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ContainerSlots](#item_sparse-ContainerSlots)                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ItemStatType](#item_sparse-ItemStatType)                                 | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [ItemStatValue](#item_sparse-ItemStatValue)                               | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [ItemStatAllocation](#item_sparse-ItemStatAllocation)                     | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [ItemStatSocketCostMultiplier](#item_sparse-ItemStatSocketCostMultiplier) | float       | signed     |     | NO   | 0       |       |                          |
-| [ScalingStatDistribution](#item_sparse-ScalingStatDistribution)           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [DamageType](#item_sparse-DamageType)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Delay](#item_sparse-Delay)                                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RangedModRange](#item_sparse-RangedModRange)                             | float       | signed     |     | NO   | 0       |       |                          |
-| [Bonding](#item_sparse-Bonding)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
+| [ID](#item_sparse-ID)                                                     | INT     | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [Quality](#item_sparse-Quality)                                           | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Flags](#item_sparse-Flags)                                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Unk1](#item_sparse-Unk1)                                                 | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [Unk2](#item_sparse-Unk2)                                                 | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [BuyCount](#item_sparse-BuyCount)                                         | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [BuyPrice](#item_sparse-BuyPrice)                                         | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [SellPrice](#item_sparse-SellPrice)                                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [InventoryType](#item_sparse-InventoryType)                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [AllowableClass](#item_sparse-AllowableClass)                             | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [AllowableRace](#item_sparse-AllowableRace)                               | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [ItemLevel](#item_sparse-ItemLevel)                                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredLevel](#item_sparse-RequiredLevel)                               | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [RequiredSkill](#item_sparse-RequiredSkill)                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredSkillRank](#item_sparse-RequiredSkillRank)                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredSpell](#item_sparse-RequiredSpell)                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredHonorRank](#item_sparse-RequiredHonorRank)                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredCityRank](#item_sparse-RequiredCityRank)                         | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredReputationFaction](#item_sparse-RequiredReputationFaction)       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RequiredReputationRank](#item_sparse-RequiredReputationRank)             | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [MaxCount](#item_sparse-MaxCount)                                         | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Stackable](#item_sparse-Stackable)                                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [ContainerSlots](#item_sparse-ContainerSlots)                             | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [ItemStatType](#item_sparse-ItemStatType)                                 | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [ItemStatValue](#item_sparse-ItemStatValue)                               | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [ItemStatAllocation](#item_sparse-ItemStatAllocation)                     | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [ItemStatSocketCostMultiplier](#item_sparse-ItemStatSocketCostMultiplier) | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [ScalingStatDistribution](#item_sparse-ScalingStatDistribution)           | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [DamageType](#item_sparse-DamageType)                                     | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Delay](#item_sparse-Delay)                                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RangedModRange](#item_sparse-RangedModRange)                             | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [Bonding](#item_sparse-Bonding)                                           | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
 | [Name](#item_sparse-Name)                                                 | TEXT        |            |     | YES  |         |       |                          |
 | [Description](#item_sparse-Description)                                   | TEXT        |            |     | YES  |         |       |                          |
-| [PageText](#item_sparse-PageText)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [LanguageID](#item_sparse-LanguageID)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [PageMaterial](#item_sparse-PageMaterial)                                 | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [StartQuest](#item_sparse-StartQuest)                                     | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [LockID](#item_sparse-LockID)                                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Material](#item_sparse-Material)                                         | int(11)     | signed     |     | NO   | 0       |       |                          |
-| [Sheath](#item_sparse-Sheath)                                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RandomProperty](#item_sparse-RandomProperty)                             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [RandomSuffix](#item_sparse-RandomSuffix)                                 | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ItemSet](#item_sparse-ItemSet)                                           | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Area](#item_sparse-Area)                                                 | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [Map](#item_sparse-Map)                                                   | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [BagFamily](#item_sparse-BagFamily)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [TotemCategory](#item_sparse-TotemCategory)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [SocketColor](item_sparse)                                                | int(10)     | unsigned   |     | NO   | 0       |       | SocketColor1 can be NULL |
-| [SocketBonus](#item_sparse-SocketBonus)                                   | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [GemProperties](#item_sparse-GemProperties)                               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ArmorDamageModifier](#item_sparse-ArmorDamageModifier)                   | float       | signed     |     | NO   | 0       |       |                          |
-| [Duration](#item_sparse-Duration)                                         | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ItemLimitCategory](#item_sparse-ItemLimitCategory)                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [HolidayID](#item_sparse-HolidayID)                                       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [StatScalingFactor](#item_sparse-StatScalingFactor)                       | float       | signed     |     | NO   | 0       |       |                          |
-| [CurrencySubstitutionID](#item_sparse-CurrencySubstitutionID)             | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [CurrencySubstitutionCount](#item_sparse-CurrencySubstitutionCount)       | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [ItemNameDescriptionID](#item_sparse-ItemNameDescriptionID)               | int(10)     | unsigned   |     | NO   | 0       |       |                          |
-| [VerifiedBuild](#item_sparse-VerifiedBuild)                               | smallint(6) | signed     |     | NO   | 0       |       |                          |
+| [PageText](#item_sparse-PageText)                                         | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [LanguageID](#item_sparse-LanguageID)                                     | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [PageMaterial](#item_sparse-PageMaterial)                                 | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [StartQuest](#item_sparse-StartQuest)                                     | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [LockID](#item_sparse-LockID)                                             | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Material](#item_sparse-Material)                                         | INT     | SIGNED     |     | NO   | 0       |       |                          |
+| [Sheath](#item_sparse-Sheath)                                             | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RandomProperty](#item_sparse-RandomProperty)                             | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [RandomSuffix](#item_sparse-RandomSuffix)                                 | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [ItemSet](#item_sparse-ItemSet)                                           | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Area](#item_sparse-Area)                                                 | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [Map](#item_sparse-Map)                                                   | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [BagFamily](#item_sparse-BagFamily)                                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [TotemCategory](#item_sparse-TotemCategory)                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [SocketColor](item_sparse)                                                | INT     | UNSIGNED   |     | NO   | 0       |       | SocketColor1 can be NULL |
+| [SocketBonus](#item_sparse-SocketBonus)                                   | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [GemProperties](#item_sparse-GemProperties)                               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [ArmorDamageModifier](#item_sparse-ArmorDamageModifier)                   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [Duration](#item_sparse-Duration)                                         | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [ItemLimitCategory](#item_sparse-ItemLimitCategory)                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [HolidayID](#item_sparse-HolidayID)                                       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [StatScalingFactor](#item_sparse-StatScalingFactor)                       | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [CurrencySubstitutionID](#item_sparse-CurrencySubstitutionID)             | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [CurrencySubstitutionCount](#item_sparse-CurrencySubstitutionCount)       | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [ItemNameDescriptionID](#item_sparse-ItemNameDescriptionID)               | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [VerifiedBuild](#item_sparse-VerifiedBuild)                               | SMALLINT | SIGNED     |     | NO   | 0       |       |                          |
 
 **Description of the fields**
 

@@ -10,17 +10,17 @@ This table is used for quests offering rewards without any required quest items 
 
 | Field                                              | Type         | Attributes        | Key | NULL | Default | Comment                                                                                                              |
 |----------------------------------------------------|--------------|-------------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
-| [ID](#quest_offer_reward-ID)                       | mediumint(8) | unsigned          | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
-| [Emote1](#quest_offer_reward-Emote1)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote2](#quest_offer_reward-Emote2)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote3](#quest_offer_reward-Emote3)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote4](#quest_offer_reward-Emote4)               | smallint(5)  | unsigned          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [EmoteDelay1](#quest_offer_reward-EmoteDelay1)     | int(10)      | unsigned          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay2](#quest_offer_reward-EmoteDelay2)     | int(10)      | unsigned          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay3](#quest_offer_reward-EmoteDelay3)     | int(10)      | unsigned          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay4](#quest_offer_reward-EmoteDelay4)     | int(10)      | unsigned          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [ID](#quest_offer_reward-ID)                       | MEDIUMINT | UNSIGNED          | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
+| [Emote1](#quest_offer_reward-Emote1)               | SMALLINT  | UNSIGNED          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [Emote2](#quest_offer_reward-Emote2)               | SMALLINT  | UNSIGNED          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [Emote3](#quest_offer_reward-Emote3)               | SMALLINT  | UNSIGNED          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [Emote4](#quest_offer_reward-Emote4)               | SMALLINT  | UNSIGNED          |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
+| [EmoteDelay1](#quest_offer_reward-EmoteDelay1)     | INT      | UNSIGNED          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [EmoteDelay2](#quest_offer_reward-EmoteDelay2)     | INT      | UNSIGNED          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [EmoteDelay3](#quest_offer_reward-EmoteDelay3)     | INT      | UNSIGNED          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
+| [EmoteDelay4](#quest_offer_reward-EmoteDelay4)     | INT      | UNSIGNED          |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
 | [RewardText](#quest_offer_reward-RewardText)       | text         | utf8\_general\_ci |     | YES  | NULL    | Quest gossip text, single quest dialogue                                                                             |
-| [VerifiedBuild](#quest_offer_reward-VerifiedBuild) | smallint(5)  |                   |     | NO   | 0       | Game client Build number or manually set value                                                                       |
+| [VerifiedBuild](#quest_offer_reward-VerifiedBuild) | SMALLINT  |                   |     | NO   | 0       | Game client Build number or manually set value                                                                       |
 
  
 

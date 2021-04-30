@@ -4,12 +4,12 @@
 
 | Field                       | Type         |  Key | Null | Default |
 |-----------------------------|--------------|------|------|---------|
-| [ID](#ID)                   | int(10)      |  PRI | NO   | 0       |
-| [Map](#Map)                 | int(10)      |      | NO   | 0       |
-| [x](#x)                     | float        |      | NO   | 0       |
-| [y](#y)                     | float        |      | NO   | 0       |
-| [z](#z)                     | float        |      | NO   | 0       |
-| [Comment](#Comment)         | varchar(255) |      | YES  | NULL    |
+| [ID](#ID)                   | INT      |  PRI | NO   | 0       |
+| [Map](#Map)                 | INT      |      | NO   | 0       |
+| [x](#x)                     | FLOAT        |      | NO   | 0       |
+| [y](#y)                     | FLOAT        |      | NO   | 0       |
+| [z](#z)                     | FLOAT        |      | NO   | 0       |
+| [Comment](#Comment)         | VARCHAR(255) |      | YES  | NULL    |
 
 **Description of the fields**
 

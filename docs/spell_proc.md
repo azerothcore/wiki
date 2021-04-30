@@ -10,21 +10,21 @@ This table holds information on what events (or procs) certain spells are activa
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 |-----------------------|-------------|------------|-----|------|---------|--------|---------|
-| [SpellId][1]          | int(11)     | signed     | PRI | NO   | 0       | Unique |         |
-| [SchoolMask][2]       | tinyint(3)  | unsigned   |     | NO   | 0       |        |         |
-| [SpellFamilyName][3]  | smallint(5) | unsigned   |     | NO   | 0       |        |         |
-| [SpellFamilyMask0][4] | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [SpellFamilyMask1][5] | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [SpellFamilyMask2][6] | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [ProcFlags][7]        | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [SpellTypeMask][8]    | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [SpellPhaseMask][9]   | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [HitMask][10]         | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [AttributesMask][11]  | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [ProcsPerMinute][12]  | float       |            |     | NO   | 0       |        |         |
-| [Chance][13]          | float       |            |     | NO   | 0       |        |         |
-| [Cooldown][14]        | int(10)     | unsigned   |     | NO   | 0       |        |         |
-| [Charges][15]         | tinyint(3)  | unsigned   |     | NO   | 0       |        |         |
+| [SpellId][1]          | INT     | SIGNED     | PRI | NO   | 0       | Unique |         |
+| [SchoolMask][2]       | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyName][3]  | SMALLINT | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyMask0][4] | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyMask1][5] | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyMask2][6] | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [ProcFlags][7]        | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellTypeMask][8]    | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellPhaseMask][9]   | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [HitMask][10]         | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [AttributesMask][11]  | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [ProcsPerMinute][12]  | FLOAT       |            |     | NO   | 0       |        |         |
+| [Chance][13]          | FLOAT       |            |     | NO   | 0       |        |         |
+| [Cooldown][14]        | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [Charges][15]         | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #spellid
 [2]: #schoolmask

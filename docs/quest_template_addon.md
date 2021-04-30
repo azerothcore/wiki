@@ -10,23 +10,23 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
-| [ID][1]                     | mediumint(8) | unsigned   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
-| [MaxLevel][2]               | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
-| [AllowableClasses][3]       | int(10)      | unsigned   |     | NO   |         |       |                                       |
-| [SourceSpellID][4]          | mediumint(8) | unsigned   |     | NO   |         |       |                                       |
-| [PrevQuestID][5]            | mediumint(8) |            |     | NO   |         |       |                                       |
-| [NextQuestID][6]            | mediumint(8) |            |     | NO   |         |       |                                       |
-| [ExclusiveGroup][7]         | mediumint(8) |            |     | NO   |         |       |                                       |
-| [RewardMailTemplateID][8]   | mediumint(8) | unsigned   |     | NO   |         |       |                                       |
-| [RewardMailDelay][9]        | int(10)      | unsigned   |     | NO   |         |       |                                       |
-| [RequiredSkillID][10]       | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredSkillPoints][11]   | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMinRepFaction][12] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMaxRepFaction][13] | smallint(5)  | unsigned   |     | NO   |         |       |                                       |
-| [RequiredMinRepValue][14]   | mediumint(8) |            |     | NO   |         |       |                                       |
-| [RequiredMaxRepValue][15]   | mediumint(8) |            |     | NO   |         |       |                                       |
-| [ProvidedItemCount][16]     | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
-| [SpecialFlags][17]          | tinyint(3)   | unsigned   |     | NO   |         |       |                                       |
+| [ID][1]                     | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
+| [MaxLevel][2]               | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
+| [AllowableClasses][3]       | INT      | UNSIGNED   |     | NO   |         |       |                                       |
+| [SourceSpellID][4]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
+| [PrevQuestID][5]            | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [NextQuestID][6]            | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [ExclusiveGroup][7]         | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [RewardMailTemplateID][8]   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
+| [RewardMailDelay][9]        | INT      | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredSkillID][10]       | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredSkillPoints][11]   | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredMinRepFaction][12] | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredMaxRepFaction][13] | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredMinRepValue][14]   | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [RequiredMaxRepValue][15]   | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [ProvidedItemCount][16]     | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
+| [SpecialFlags][17]          | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
 
 [1]: #id
 [2]: #maxlevel

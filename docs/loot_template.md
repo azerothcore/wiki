@@ -16,16 +16,16 @@ Loot templates define only items in the loot. See comments about money drop in c
 
 | Field               | Type               | Null | Key | Default | Extra | Comment |
 |---------------------|--------------------|------|-----|---------|-------|---------|
-| [Entry][1]          | mediumint unsigned | NO   | PRI | 0       |       |         |
-| [Item][2]           | mediumint unsigned | NO   | PRI | 0       |       |         |
-| [Reference][3]      | mediumint unsigned | NO   |     | 0       |       |         |
-| [Chance][4]         | float              | NO   |     | 100     |       |         |
+| [Entry][1]          | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
+| [Item][2]           | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
+| [Reference][3]      | MEDIUMINT UNSIGNED | NO   |     | 0       |       |         |
+| [Chance][4]         | FLOAT              | NO   |     | 100     |       |         |
 | [QuestRequired]][5] | bool               | NO   |     | 0       |       |         |
-| [LootMode][6]       | smallint           | NO   |     | 1       |       |         |
-| [GroupId][7]        | tinyint            | NO   |     | 0       |       |         |
-| [MinCount][8]       | mediumint          | NO   |     | 1       |       |         |
-| [MaxCount][9]       | tinyint unsigned   | NO   |     | 1       |       |         |
-| [Comment][10]       | varchar            |      |     |         |       |         |
+| [LootMode][6]       | SMALLINT           | NO   |     | 1       |       |         |
+| [GroupId][7]        | TINYINT            | NO   |     | 0       |       |         |
+| [MinCount][8]       | MEDIUMINT          | NO   |     | 1       |       |         |
+| [MaxCount][9]       | TINYINT UNSIGNED   | NO   |     | 1       |       |         |
+| [Comment][10]       | VARCHAR            |      |     |         |       |         |
 
 [1]: #entry
 [2]: #item

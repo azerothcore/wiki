@@ -10,13 +10,13 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment                                      |
 |----------------------|--------------|------------|-----|------|---------|-------|----------------------------------------------|
-| [entry][1]           | mediumint(8) | unsigned   | PRI | NO   | 0       |       |                                              |
-| [accessory_entry][2] | mediumint(8) | unsigned   |     | NO   | 0       |       |                                              |
-| [seat_id][3]         | tinyint(1)   | signed     | PRI | NO   | 0       |       |                                              |
-| [minion][4]          | tinyint(1)   | unsigned   |     | NO   | 0       |       |                                              |
-| [description][5]     | text         | signed     |     | NO   |         |       |                                              |
-| [summontype][6]      | tinyint(3)   | unsigned   |     | NO   | 6       |       | see enum TempSummonType                      |
-| [summontimer][7]     | int(10)      | unsigned   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
+| [entry][1]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                                              |
+| [accessory_entry][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                                              |
+| [seat_id][3]         | TINYINT   | SIGNED     | PRI | NO   | 0       |       |                                              |
+| [minion][4]          | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                              |
+| [description][5]     | text         | SIGNED     |     | NO   |         |       |                                              |
+| [summontype][6]      | TINYINT   | UNSIGNED   |     | NO   | 6       |       | see enum TempSummonType                      |
+| [summontimer][7]     | INT      | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #entry
 [2]: #accessory_entry

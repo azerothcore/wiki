@@ -12,9 +12,9 @@ This table holds information on the achievements a character has earned / comple
 
 | Field            | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |------------------|-------------|------------|-----|------|---------|-------|---------|
-| [guid][1]        | int(10)     | unsigned   | PRI | NO   |         |       |         |
-| [achievement][2] | smallint(5) | unsigned   | PRI | NO   |         |       |         |
-| [date][3]        | int(10)     | unsigned   |     | NO   | 0       |       |         |
+| [guid][1]        | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [achievement][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [date][3]        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #achievement
@@ -32,4 +32,4 @@ The ID of the achievement from [Achievement.dbc](Achievement).
 
 ### date
 
-The date/time when this achievement was earned, in Unix time. See [Unix Timestamp Calculator](http://www.unixtimestamp.com/index.php)
+The date/time when this achievement was earned, in Unix time. See [Unix timestamp Calculator](http://www.unixtimestamp.com/index.php)

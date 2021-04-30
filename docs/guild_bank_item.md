@@ -10,10 +10,10 @@ This table holds all item information for items that are stored in the guild ban
 
 | Field          | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|------------|------------|-----|------|---------|-------|---------|
-| [guildid][1]   | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [TabId][2]     | tinyint(3) | unsigned   | PRI | NO   | 0       |       |         |
-| [SlotId][3]    | tinyint(3) | unsigned   | PRI | NO   | 0       |       |         |
-| [item_guid][4] | int(10)    | unsigned   |     | NO   | 0       |       |         |
+| [guildid][1]   | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [TabId][2]     | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [SlotId][3]    | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [item_guid][4] | INT    | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid
 [2]: #tabid

@@ -10,9 +10,9 @@ This table holds the re-spawn time when game objects should be re spawned in the
 
 | Field            | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 |------------------|---------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]        | int(10) | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [respawntime][2] | int(10) | unsigned   |     | NO   | 0       |       |                          |
-| [instance][3]    | int(10) | unsigned   | PRI | NO   | 0       |       | Instance Identifier      |
+| [guid][1]        | INT | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [respawntime][2] | INT | UNSIGNED   |     | NO   | 0       |       |                          |
+| [instance][3]    | INT | UNSIGNED   | PRI | NO   | 0       |       | Instance Identifier      |
 
 [1]: #guid
 [2]: #respawntime

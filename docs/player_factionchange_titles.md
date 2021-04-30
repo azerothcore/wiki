@@ -4,5 +4,5 @@
 
 Column | Type | Description
 --- | --- | ---
-Alliance_id | int(8) | 
-Horde_id | int(8) | 
+Alliance_id | INT | 
+Horde_id | INT | 

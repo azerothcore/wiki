@@ -10,17 +10,17 @@ This table provides answer for a very important question. What do I need to do i
 
 | Field                  | Type         | Attributes | Null | Key | Default | Comment |
 |------------------------|--------------|------------|------|-----|---------|---------|
-| [ID][1]                | mediumint(8) | unsigned   | NO   | PRI | 0       |         |
-| [QuestID][2]           | mediumint(8) | unsigned   | NO   |     | 0       |         |
-| [Type][3]              | tinyint(3)   | unsigned   | NO   |     | 0       |         |
-| [StorageIndex][4]      | tinyint(3)   | signed     | NO   |     | 0       |         |
-| [ObjectID][5]          | int(10)      | signed     | NO   |     | 0       |         |
-| [Amount][6]            | int(10)      | signed     | NO   |     | 0       |         |
-| [Flags][7]             | int(10)      | unsigned   | NO   |     | 0       |         |
-| [Flags2][8]            | int(10)      | unsigned   | NO   |     | 0       |         |
-| [ProgressBarWeight][9] | float        |            | NO   |     | 0       |         |
+| [ID][1]                | MEDIUMINT | UNSIGNED   | NO   | PRI | 0       |         |
+| [QuestID][2]           | MEDIUMINT | UNSIGNED   | NO   |     | 0       |         |
+| [Type][3]              | TINYINT   | UNSIGNED   | NO   |     | 0       |         |
+| [StorageIndex][4]      | TINYINT   | SIGNED     | NO   |     | 0       |         |
+| [ObjectID][5]          | INT      | SIGNED     | NO   |     | 0       |         |
+| [Amount][6]            | INT      | SIGNED     | NO   |     | 0       |         |
+| [Flags][7]             | INT      | UNSIGNED   | NO   |     | 0       |         |
+| [Flags2][8]            | INT      | UNSIGNED   | NO   |     | 0       |         |
+| [ProgressBarWeight][9] | FLOAT        |            | NO   |     | 0       |         |
 | [Description][10]      | text         |            | YES  |     | NULL    |         |
-| [VerifiedBuild][11]    | smallint(5)  | signed     | NO   |     | 0       |         |
+| [VerifiedBuild][11]    | SMALLINT  | SIGNED     | NO   |     | 0       |         |
 
 [1]: #id
 [2]: #questid

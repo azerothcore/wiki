@@ -6,8 +6,8 @@
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
-| [sql_rev][1]       | varchar(100) |            | PRI | NO   |         |       |         |
-| [required_rev][2]  | varchar(100) |            | MUL | YES  |         |       |         |
+| [sql_rev][1]       | VARCHAR(100) |            | PRI | NO   |         |       |         |
+| [required_rev][2]  | VARCHAR(100) |            | MUL | YES  |         |       |         |
 | [2020_02_07_00][3] | bit(1)       |            |     | YES  |         |       |         |
 
 [1]: #sql_rev

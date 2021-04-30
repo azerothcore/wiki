@@ -8,10 +8,10 @@ This table holds information about what a gossip menu option is doing, redirect 
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |-------------------|---------|------------|-----|------|---------|-------|---------|
-| [MenuId][1]       | int(10) | unsigned   | PRI | NO   | 0       |       |         |
-| [OptionIndex][2]  | int(10) | unsigned   | PRI | NO   | 0       |       |         |
-| [ActionMenuId][3] | int(11) | unsigned   |     | NO   | 0       |       |         |
-| [ActionPoiId][4]  | int(11) | unsigned   |     | NO   | 0       |       |         |
+| [MenuId][1]       | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [OptionIndex][2]  | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ActionMenuId][3] | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ActionPoiId][4]  | INT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #menuid
 [2]: #optionindex

@@ -10,10 +10,10 @@ On certain levels, you receive a mail with some text.
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------|--------------|------------|-----|------|---------|-------|---------|
-| [level][1]          | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [raceMask][2]       | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [mailTemplateId][3] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [senderEntry][4]    | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [level][1]          | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [raceMask][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [mailTemplateId][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [senderEntry][4]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #level
 [2]: #racemask

@@ -10,10 +10,10 @@ Contains all the character inventory data, including the bank data.
 
 | Field     | Type       | Attributes | Key    | Null | Default | Extra | Comment                       |
 |-----------|------------|------------|--------|------|---------|-------|-------------------------------|
-| [guid][1] | int(10)    | unsigned   | Unique | NO   | 0       |       | Global Unique Identifier      |
-| [bag][2]  | int(10)    | unsigned   | Unique | NO   | 0       |       |                               |
-| [slot][3] | tinyint(3) | unsigned   | Unique | NO   | 0       |       |                               |
-| [item][4] | int(10)    | unsigned   | PRI    | NO   | 0       |       | Item Global Unique Identifier |
+| [guid][1] | INT    | UNSIGNED   | Unique | NO   | 0       |       | Global Unique Identifier      |
+| [bag][2]  | INT    | UNSIGNED   | Unique | NO   | 0       |       |                               |
+| [slot][3] | TINYINT | UNSIGNED   | Unique | NO   | 0       |       |                               |
+| [item][4] | INT    | UNSIGNED   | PRI    | NO   | 0       |       | Item Global Unique Identifier |
 
 [1]: #guid
 [2]: #bag

@@ -10,20 +10,20 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 
 | Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------------|-----------|------------|-----|------|---------|-------|---------|
-| [battleground_id][1]       | bigint    | unsigned   | PRI | NO   |         |       |         |
-| [character_guid][2]        | int       | unsigned   | PRI | NO   |         |       |         |
+| [battleground_id][1]       | BIGINT    | UNSIGNED   | PRI | NO   |         |       |         |
+| [character_guid][2]        | INT       | UNSIGNED   | PRI | NO   |         |       |         |
 | [win][3]                   | bit       |            |     |      |         |       |         |
-| [score_killing_blows][4]   | mediumint | unsigned   |     | NO   |         |       |         |
-| [score_deaths][5]          | mediumint | unsigned   |     | NO   |         |       |         |
-| [score_honorable_kills][6] | mediumint | unsigned   |     | NO   |         |       |         |
-| [score_bonus_honor][7]     | mediumint | unsigned   |     | NO   |         |       |         |
-| [score_damage_done][8]     | mediumint | unsigned   |     | NO   |         |       |         |
-| [score_healing_done][9]    | mediumint | unsigned   |     | NO   |         |       |         |
-| [attr_1][10]               | mediumint | unsigned   |     | NO   | 0       |       |         |
-| [attr_2][11]               | mediumint | unsigned   |     | NO   | 0       |       |         |
-| [attr_3][12]               | mediumint | unsigned   |     | NO   | 0       |       |         |
-| [attr_4][13]               | mediumint | unsigned   |     | NO   | 0       |       |         |
-| [attr_5][14]               | mediumint | unsigned   |     | NO   | 0       |       |         |
+| [score_killing_blows][4]   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [score_deaths][5]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [score_honorable_kills][6] | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [score_bonus_honor][7]     | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [score_damage_done][8]     | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [score_healing_done][9]    | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
+| [attr_1][10]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [attr_2][11]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [attr_3][12]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [attr_4][13]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [attr_5][14]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #battleground_id
 [2]: #character_guid

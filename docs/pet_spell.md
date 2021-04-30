@@ -10,9 +10,9 @@ This table holds information on individual pet spells.
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 |-------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | int(10)      | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [spell][2]  | mediumint(8) | unsigned   | PRI | NO   | 0       |       | Spell Identifier         |
-| [active][3] | tinyint(3)   | unsigned   |     | NO   | 0       |       |                          |
+| [guid][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [spell][2]  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier         |
+| [active][3] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #spell

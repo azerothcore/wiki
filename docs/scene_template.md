@@ -10,10 +10,10 @@ This table is used to store necessary data for scenes to run, e.g. ScriptPackage
 
 | Field                | Type     | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------|----------|------------|-----|------|---------|-------|---------|
-| [SceneId][1]         | in(10)   | unsigned   | PRI | NO   | NONE    |       |         |
-| [Flags][2]           | int(10)  | unsigned   |     | NO   | 16      |       |         |
-| [ScriptPackageId][3] | int(10)  | unsigned   |     | NO   | NONE    |       |         |
-| [ScriptName][4]      | char(64) | unsigned   |     | NO   | ' '     |       |         |
+| [SceneId][1]         | in(10)   | UNSIGNED   | PRI | NO   | NONE    |       |         |
+| [Flags][2]           | INT  | UNSIGNED   |     | NO   | 16      |       |         |
+| [ScriptPackageId][3] | INT  | UNSIGNED   |     | NO   | NONE    |       |         |
+| [ScriptName][4]      | char(64) | UNSIGNED   |     | NO   | ' '     |       |         |
 
 [1]: #sceneid
 [2]: #flags

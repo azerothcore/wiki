@@ -10,13 +10,13 @@
 
 | Field            | Type       | Attributes | Key | Null | Default | Extra | Comment                                     |
 |------------------|------------|------------|-----|------|---------|-------|---------------------------------------------|
-| [guildid][1]     | int(11)    | signed     | PRI | NO   | NULL    |       | Guild Identificator                         |
-| [LogGuid][2]     | int(11)    | signed     | PRI | NO   | NULL    |       | Log record identificator - auxiliary column |
-| [EventType][3]   | tinyint(1) | signed     |     | NO   | NULL    |       | Event type                                  |
-| [PlayerGuid1][4] | int(11)    | signed     |     | NO   | NULL    |       | Player 1                                    |
-| [PlayerGuid2][5] | int(11)    | signed     |     | NO   | NULL    |       | Player 2                                    |
-| [NewRank][6]     | tinyint(2) | signed     |     | NO   | NULL    |       | New rank(in case promotion/demotion)        |
-| [TimeStamp][7]   | bigint(20) | signed     |     | NO   | NULL    |       | Event UNIX time                             |
+| [guildid][1]     | INT    | SIGNED     | PRI | NO   | NULL    |       | Guild Identificator                         |
+| [LogGuid][2]     | INT    | SIGNED     | PRI | NO   | NULL    |       | Log record identificator - auxiliary column |
+| [EventType][3]   | TINYINT | SIGNED     |     | NO   | NULL    |       | Event type                                  |
+| [PlayerGuid1][4] | INT    | SIGNED     |     | NO   | NULL    |       | Player 1                                    |
+| [PlayerGuid2][5] | INT    | SIGNED     |     | NO   | NULL    |       | Player 2                                    |
+| [NewRank][6]     | TINYINT | SIGNED     |     | NO   | NULL    |       | New rank(in case promotion/demotion)        |
+| [timestamp][7]   | BIGINT | SIGNED     |     | NO   | NULL    |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid
@@ -59,6 +59,6 @@
 
 `New rank (in case of promotion/demotion)`
 
-### TimeStamp
+### timestamp
 
 `Event UNIX time`

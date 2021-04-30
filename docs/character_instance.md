@@ -10,9 +10,9 @@ Contains the instance data for characters.
 
 | Field          | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |----------------|------------|------------|-----|------|---------|-------|---------|
-| [guid][1]      | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [instance][2]  | int(10)    | unsigned   | PRI | NO   | 0       |       |         |
-| [permanent][3] | tinyint(3) | unsigned   |     | NO   | 0       |       |         |
+| [guid][1]      | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [instance][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [permanent][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #instance

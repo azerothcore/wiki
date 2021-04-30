@@ -2,6 +2,6 @@
 
 Column | Type | Description
 --- | --- | ---
-Guid | int(10) unsigned | 
-InvisibilityType | tinyint(3) unsigned | 
-InvisibilityValue | int(10) unsigned | 
+Guid | INT UNSIGNED | 
+InvisibilityType | TINYINT UNSIGNED | 
+InvisibilityValue | INT UNSIGNED | 

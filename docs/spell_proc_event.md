@@ -8,17 +8,17 @@
 
 | Field | Type | Attribute | Key | Null | Default | Extra | Comment
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-[Entry][1] | mediumint(8) | signed | PRI | | 0
-[SchoolMask][2] | tinyint(4) | signed | | | 0
-[SpellFamilyName][3] | smallint(5) | unsigned | | | 0
-[SpellFamilyMask0][4] | int(10) | unsigned | | | 0
-[SpellFamilyMask1][5] | int(10) | unsigned | | | 0
-[SpellFamilyMask2][6] | int(10) | unsigned | | | 0
-[procFlags][7] | int(10) | unsigned | | | 0
-[procEx][8] | int(10) | unsigned | | | 0
-[ppmRate][9] | float | signed | | | 0
-[CustomChance][10] | float | signed | | | 0
-[Cooldown][11] | int(10) | unsigned | | | 0
+[Entry][1] | MEDIUMINT | SIGNED | PRI | | 0
+[SchoolMask][2] | TINYINT | SIGNED | | | 0
+[SpellFamilyName][3] | SMALLINT | UNSIGNED | | | 0
+[SpellFamilyMask0][4] | INT | UNSIGNED | | | 0
+[SpellFamilyMask1][5] | INT | UNSIGNED | | | 0
+[SpellFamilyMask2][6] | INT | UNSIGNED | | | 0
+[procFlags][7] | INT | UNSIGNED | | | 0
+[procEx][8] | INT | UNSIGNED | | | 0
+[ppmRate][9] | FLOAT | SIGNED | | | 0
+[CustomChance][10] | FLOAT | SIGNED | | | 0
+[Cooldown][11] | INT | UNSIGNED | | | 0
 
 [1]: #entry
 [2]: #schoolmask

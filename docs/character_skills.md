@@ -10,10 +10,10 @@ This table holds a listing of all skill for each character.
 
 | Field      | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]  | int(10)     | unsigned   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [skill][2] | smallint(5) | unsigned   | PRI | NO   | 0       |       |                          |
-| [value][3] | smallint(5) | unsigned   |     | NO   | 0       |       |                          |
-| [max][4]   | smallint(5) | unsigned   |     | NO   | 0       |       |                          |
+| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [skill][2] | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [value][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
+| [max][4]   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #skill

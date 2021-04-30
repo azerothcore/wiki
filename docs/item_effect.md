@@ -10,16 +10,16 @@ This table contains some of the item effect data regarding item hotfixes. This t
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------|
-| [ID][1]               | int(10)     | unsigned   | PRI | NO   | 0       |       |         |
-| [ItemID][2]           | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [OrderIndex][3]       | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [SpellID][4]          | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [Trigger][5]          | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [Charges][6]          | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [Cooldown][7]         | int(11)     | signed     |     | NO   | 0       |       |         |
-| [Category][8]         | int(10)     | unsigned   |     | NO   | 0       |       |         |
-| [CategoryCooldown][9] | int(11)     | signed     |     | NO   | 0       |       |         |
-| [VerifiedBuild][10]   | smallint(6) | signed     |     | NO   | 0       |       |         |
+| [ID][1]               | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ItemID][2]           | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [OrderIndex][3]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellID][4]          | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [Trigger][5]          | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [Charges][6]          | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [Cooldown][7]         | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Category][8]         | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [CategoryCooldown][9] | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [VerifiedBuild][10]   | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #itemid

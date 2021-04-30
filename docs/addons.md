@@ -2,5 +2,5 @@
 
 Column | Type | Description
 --- | --- | ---
-Name | varchar(120) | 
-Crc | int(10) unsigned | 
+Name | VARCHAR(120) | 
+Crc | INT UNSIGNED | 

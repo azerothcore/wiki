@@ -4,8 +4,6 @@
 
 **The \`account\` table**
 
-This table holds information on all available accounts.
-
 **Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
@@ -22,7 +20,7 @@ This table holds information on all available accounts.
 | [last_ip][10]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [last_attempt_ip][11] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [failed_logins][12]   | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
-| [locked][13]          | tinyint(3)   | UNSIGNED   |     | NO   | 0                 |                |            |
+| [locked][13]          | TINYINT   | UNSIGNED   |     | NO   | 0                 |                |            |
 | [lock_country][14]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
 | [last_login][15]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
 | [online][16]          | INT          | UNSIGNED   |     | NO   | 0                 |                |            |

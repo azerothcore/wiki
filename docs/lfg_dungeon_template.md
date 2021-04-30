@@ -4,9 +4,9 @@
 
 Column | Type | Description
 --- | --- | ---
-DungeonId | int(10) unsigned | 
-Name | varchar(255) | 
-Position_x | float | 
-Position_y | float | 
-Position_z | float | 
-Orientation | float | 
+DungeonId | INT UNSIGNED | 
+Name | VARCHAR(255) | 
+Position_x | FLOAT | 
+Position_y | FLOAT | 
+Position_z | FLOAT | 
+Orientation | FLOAT | 

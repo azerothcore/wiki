@@ -10,8 +10,8 @@ Holds information on the game event seasonal quest relations to allow for resett
 
 | Field           | Type          | Attributes | Key | Null | Default | Extra | Comment                 |
 |-----------------|---------------|------------|-----|------|---------|-------|-------------------------|
-| [questId][1]    | int(10)       | unsigned   | PRI | NO   | 0       |       | Quest Identifier        |
-| [eventEntry][2] | mediumint(10) | unsigned   | PRI | NO   | 0       |       | Entry of the game event |
+| [questId][1]    | INT       | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier        |
+| [eventEntry][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Entry of the game event |
 
 [1]: #questid
 [2]: #evententry

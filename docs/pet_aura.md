@@ -10,21 +10,21 @@
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
 |-----------------------|--------------|------------|-----|------|---------|-------|-------------------------------|
-| [guid][1]             | int(10)      | unsigned   |     | NO   |         |       | Global Unique Identifier      |
-| [caster_guid][2]      | bigint(20)   | unsigned   |     | NO   |         |       | Full Global Unique Identifier |
-| [spell][3]            | mediumint(8) | unsigned   |     | NO   |         |       |                               |
-| [effect_mask][4]      | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [recalculate_mask][5] | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [stackcount][6]       | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
-| [amount0][7]          | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [amount1][8]          | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [amount2][9]          | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [base_amount0][10]    | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [base_amount1][11]    | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [base_amount2][12]    | mediumint(8) | signed     |     | NO   |         |       |                               |
-| [maxduration][13]     | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaintime][14]      | int(11)      | signed     |     | NO   |         |       |                               |
-| [remaincharges][15]   | tinyint(3)   | unsigned   |     | NO   |         |       |                               |
+| [guid][1]             | INT      | UNSIGNED   |     | NO   |         |       | Global Unique Identifier      |
+| [caster_guid][2]      | BIGINT   | UNSIGNED   |     | NO   |         |       | Full Global Unique Identifier |
+| [spell][3]            | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                               |
+| [effect_mask][4]      | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
+| [recalculate_mask][5] | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
+| [stackcount][6]       | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
+| [amount0][7]          | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
+| [amount1][8]          | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
+| [amount2][9]          | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
+| [base_amount0][10]    | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
+| [base_amount1][11]    | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
+| [base_amount2][12]    | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
+| [maxduration][13]     | INT      | SIGNED     |     | NO   |         |       |                               |
+| [remaintime][14]      | INT      | SIGNED     |     | NO   |         |       |                               |
+| [remaincharges][15]   | TINYINT   | UNSIGNED   |     | NO   |         |       |                               |
 
 [1]: #guid
 [2]: #caster_guid

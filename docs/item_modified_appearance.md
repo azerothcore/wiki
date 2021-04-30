@@ -13,13 +13,13 @@ This table links together the appearances and item ids in regards to item hotfix
 |                                                              |             |                |         |          |             |           |             |
 |--------------------------------------------------------------|-------------|----------------|---------|----------|-------------|-----------|-------------|
 | **Field**                                                    | **Type**    | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [ID](#item_modified_appearance-ID)                           | int(10)     | unsigned       | PRI     | NO       | 0           |           |             |
-| [ItemID](#item_modified_appearance-ItemID)                   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [AppearanceModID](#item_modified_appearance-AppearanceModID) | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [AppearanceID](#item_modified_appearance-AppearanceID)       | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [IconFileDataID](#item_modified_appearance-IconFileDataID)   | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [Index](#item_modified_appearance-Index)                     | int(10)     | unsigned       |         | NO       | 0           |           |             |
-| [VerifiedBuild](#item_modified_appearance-VerifiedBuild)     | smallint(6) | signed         |         | NO       | 0           |           |             |
+| [ID](#item_modified_appearance-ID)                           | INT     | UNSIGNED       | PRI     | NO       | 0           |           |             |
+| [ItemID](#item_modified_appearance-ItemID)                   | INT     | UNSIGNED       |         | NO       | 0           |           |             |
+| [AppearanceModID](#item_modified_appearance-AppearanceModID) | INT     | UNSIGNED       |         | NO       | 0           |           |             |
+| [AppearanceID](#item_modified_appearance-AppearanceID)       | INT     | UNSIGNED       |         | NO       | 0           |           |             |
+| [IconFileDataID](#item_modified_appearance-IconFileDataID)   | INT     | UNSIGNED       |         | NO       | 0           |           |             |
+| [Index](#item_modified_appearance-Index)                     | INT     | UNSIGNED       |         | NO       | 0           |           |             |
+| [VerifiedBuild](#item_modified_appearance-VerifiedBuild)     | SMALLINT | SIGNED         |         | NO       | 0           |           |             |
 
 **Description of the fields**
 

@@ -11,16 +11,16 @@ This table contains the access requirements to enter an instance.
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [mapId][1]                  | mediumint(8) | unsigned   | PRI | NO   |         |       |         |
-| [difficulty][2]             | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [level_min][3]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| [level_max][4]              | tinyint(3)   | unsigned   |     | NO   | 0       |       |         |
-| [item_level][5]             | smallint(5)  | unsigned   |     | NO   | 0       |       |         |
-| [item][6]                   | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [item2][7]                  | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [quest_done_A][8]           | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [quest_done_H][9]           | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
-| [completed_achievement][10] | mediumint(8) | unsigned   |     | NO   | 0       |       |         |
+| [mapId][1]                  | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [difficulty][2]             | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [level_min][3]              | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [level_max][4]              | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [item_level][5]             | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [item][6]                   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [item2][7]                  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [quest_done_A][8]           | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [quest_done_H][9]           | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [completed_achievement][10] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [quest_failed_text][11]     | text         |            |     | YES  |         |       |         |
 | [comment][12]               | text         |            |     | YES  |         |       |         |
 

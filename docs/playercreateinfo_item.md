@@ -10,11 +10,11 @@ This table is used for any custom items that you might want to give to character
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | :-----------|:----------|:-----------|:----|:-----|:--------|:------|:--------|
-| [race][1]   | tinyint   | unsigned   | PRI | NO   | 0       |       |         |
-| [class][2]  | tinyint   | unsigned   | PRI | NO   | 0       |       |         |
-| [itemid][3] | mediumint | unsigned   | PRI | NO   | 0       |       |         |
-| [amount][4] | smallint  | unsigned   |     | NO   | 1       |       |         |
-| [Note][5]   | varchar   |            |     | YES  | NULL    |       |         |
+| [race][1]   | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [class][2]  | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [itemid][3] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [amount][4] | SMALLINT  | UNSIGNED   |     | NO   | 1       |       |         |
+| [Note][5]   | VARCHAR   |            |     | YES  | NULL    |       |         |
 
 [1]: #race
 [2]: #class

@@ -10,22 +10,22 @@ Holds information on the quest status of each character.
 
 | Field             | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 |-------------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]         | int(10)     | unsigned   | PRI | NO   |         |       | Global Unique Identifier |
-| [quest][2]        | int(10)     | unsigned   | PRI | NO   |         |       | Quest Identifier         |
-| [status][3]       | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
-| [explored][4]     | tinyint(3)  | unsigned   |     | NO   |         |       |                          |
-| [timer][5]        | int(10)     | unsigned   |     | NO   |         |       |                          |
-| [mobcount1][6]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [mobcount2][7]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [mobcount3][8]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [mobcount4][9]    | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount1][10]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount2][11]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount3][12]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount4][13]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount5][14]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [itemcount6][15]  | smallint(5) | unsigned   |     | NO   |         |       |                          |
-| [playercount][16] | smallint(5) | unsigned   |     | NO   |         |       |                          |
+| [guid][1]         | INT     | UNSIGNED   | PRI | NO   |         |       | Global Unique Identifier |
+| [quest][2]        | INT     | UNSIGNED   | PRI | NO   |         |       | Quest Identifier         |
+| [status][3]       | TINYINT  | UNSIGNED   |     | NO   |         |       |                          |
+| [explored][4]     | TINYINT  | UNSIGNED   |     | NO   |         |       |                          |
+| [timer][5]        | INT     | UNSIGNED   |     | NO   |         |       |                          |
+| [mobcount1][6]    | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [mobcount2][7]    | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [mobcount3][8]    | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [mobcount4][9]    | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [itemcount1][10]  | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [itemcount2][11]  | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [itemcount3][12]  | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [itemcount4][13]  | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [itemcount5][14]  | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [itemcount6][15]  | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
+| [playercount][16] | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
 
 [1]: #guid
 [2]: #quest

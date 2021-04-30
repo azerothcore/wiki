@@ -10,9 +10,9 @@ This table is used to provide to localized clients with localized string for cre
 
 | Field                                        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |----------------------------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry](#creature_text_locale-entry)         | mediumint(8) | unsigned   | PRI | NO   | 0       |       |         |
-| [groupid](#creature_text_locale-groupid)     | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
-| [id](#creature_text_locale-id)               | tinyint(3)   | unsigned   | PRI | NO   | 0       |       |         |
+| [entry](#creature_text_locale-entry)         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [groupid](#creature_text_locale-groupid)     | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [id](#creature_text_locale-id)               | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [text\_loc1](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
 | [text\_loc2](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
 | [text\_loc3](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |

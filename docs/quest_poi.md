@@ -10,14 +10,14 @@ Comes from sniffs.
 
 | Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |---------------------|---------|------------|-----|------|---------|-------|---------|
-| [QuestID][1]        | int(10) | unsigned   | PRI | NO   | 0       |       |         |
-| [id][2]             | int(10) | unsigned   | PRI | NO   | 0       |       |         |
-| [ObjectiveIndex][3] | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [MapID][4]          | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [WorldMapAreaId][5] | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [Floor][6]          | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [Priority][7]       | int(10) | unsigned   |     | NO   | 0       |       |         |
-| [Flags][8]          | int(10) | unsigned   |     | NO   | 0       |       |         |
+| [QuestID][1]        | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [id][2]             | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ObjectiveIndex][3] | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [MapID][4]          | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [WorldMapAreaId][5] | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Floor][6]          | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Priority][7]       | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Flags][8]          | INT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #questid
 [2]: #id

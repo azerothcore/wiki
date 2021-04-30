@@ -2,11 +2,11 @@
 
 Column | Type | Description
 --- | --- | ---
-Id | bigint(20) unsigned | 
-Event | bigint(20) unsigned | 
-Invitee | int(10) unsigned | 
-Sender | int(10) unsigned | 
-Status | tinyint(1) unsigned | 
-Statustime | int(10) unsigned | 
-Rank | tinyint(1) unsigned | 
-Text | varchar(255) | 
+Id | BIGINT UNSIGNED | 
+Event | BIGINT UNSIGNED | 
+Invitee | INT UNSIGNED | 
+Sender | INT UNSIGNED | 
+Status | TINYINT UNSIGNED | 
+Statustime | INT UNSIGNED | 
+Rank | TINYINT UNSIGNED | 
+Text | VARCHAR(255) | 
