@@ -13,9 +13,9 @@
 | [requirement_id][3]         | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
 | [requirement_note][4]       | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 | [faction][5]                | TINYINT      | UNSIGNED   |     | NO   | 2       |       |         |
-| [priority][6]               | TINYINT      | UNSIGNED   |     | YES  | NULL   |       |         |
+| [priority][6]               | TINYINT      | UNSIGNED   |     | YES  | NULL    |       |         |
 | [leader_only][7]            | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
-| [comment][8]                | VARCHAR(255) |            |     | YES  | NULL       |       |         |
+| [comment][8]                | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 [1]: #dungeon_access_id
 [2]: #requirement_type
