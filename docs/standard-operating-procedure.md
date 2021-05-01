@@ -5,3 +5,5 @@
 - [SQL Standards](sql-standards)
 
 - [File Headers](file-headers)
+
+- [Issue Tracker Standards](issue-tracker-standards)
