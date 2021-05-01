@@ -32,7 +32,7 @@ The dungeon template ID
 
 ### map_id
 
-Map ID from [instance_template.ID](instance_template#id).
+Map ID from [instance_template.map](instance_template#map).
 
 ### difficulty
 
