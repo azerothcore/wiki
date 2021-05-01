@@ -1,6 +1,6 @@
 # worldstates
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:Characters](database-characters.md)
 
 **The \`worldstates\` table**
 
