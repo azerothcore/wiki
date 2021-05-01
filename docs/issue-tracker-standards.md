@@ -31,44 +31,35 @@ Issue template:
 [//]: # (You should always read how to properly fill out the bug report before continuing. https://www.azerothcore.org/wiki/issue-tracker-standards)
 [//]: # (For issues containing a fix, please create a Pull Request following this tutorial: https://www.azerothcore.org/wiki/How-to-create-a-PR)
 
-## CURRENT BEHAVIOUR:
-
+**CURRENT BEHAVIOUR:**
 [//]: # (If this is a crash report you should post the crashlog. Upload it to https://gist.github.com/)
 
-## EXPECTED BLIZZLIKE BEHAVIOUR:
-
+**EXPECTED BLIZZLIKE BEHAVIOUR:**
 [//]: # (What should happen instead)
 
-## SOURCE:
-
+**SOURCE:**
 [//]: # (If you can, include a source that can strengthen your claim)
 
-## STEPS TO REPRODUCE THE PROBLEM:
-
+**STEPS TO REPRODUCE THE PROBLEM:**
 [//]: # (Describe in a detailed step-by-step order how to reproduce the issue)
 
 1. 
 2. 
 3. 
 
-## EXTRA NOTES:
-
+**EXTRA NOTES:**
 [//]: # (Any extra notes that can help solve the issue)
 
-## AC HASH/COMMIT:
-
+**AC HASH/COMMIT:**
 [//]: # (Always include the exact hash/commit you are using. Never write "latest"!) 
 
-## OPERATING SYSTEM:
-
+**OPERATING SYSTEM:**
 [//]: # (Which OS are you running)
 
-## MODULES:
-
+**MODULES:**
 [//]: # (Are you using any modules? List them here)
 
-## CUSTOMIZATIONS:
-
+**CUSTOMIZATIONS:**
 [//]: # (Do you have any other customizations? List them here)
 ```
 
