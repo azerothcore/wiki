@@ -165,7 +165,7 @@ To setup the Dev-Container follow these steps:
 
 1. Copy the `docker-compose.override.yml` file from the /conf/dist folder to the root directory of the azerothcore repo. (needed until [this](https://github.com/microsoft/vscode-remote-release/issues/1080) will be solved)
 2. [install and open VSCode](https://code.visualstudio.com/)
-3. install the remote-container extension
+3. install the [remote-container](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 4. Open the azerothcore folder inside VSCode
 5. Open the VSCode [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) (Ctrl+Shift+P) and run: `>Remote-Containers: Reopen in Container` 
 
