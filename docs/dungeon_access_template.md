@@ -36,22 +36,31 @@ Map ID from [instance_template.map](instance_template#map).
 
 ### difficulty
 
-5 man: 0 = normal, 1 = heroic, 2 = epic (Mythic, not implemented in 3.3.5) 
+- 5 man: 0 = normal, 1 = heroic, 2 = epic (Mythic, not implemented in 3.3.5) 
 
-10 man: 0 = normal, 2 = heroic 
+- 10 man: 0 = normal, 2 = heroic 
 
-25 man: 1 = normal, 3 = heroic
+- 25 man: 1 = normal, 3 = heroic
 
 ### min_level
 
-Minimum level required to enter the instance.
+The minimum level you must be to enter the instance.
 
 ### max_level
 
-Maximum level to enter the instance.
+The maximum level you can be to enter the instance.
 
 ### min_avg_item_level
 
 Min average ilvl required to enter the instance.
+
+- All WotLK Heroics require at least an average item level of 180.
+
+- Trial of the Champion, Pit of Saron, and the Forge of Souls require an average item level of 200.
+
+- Halls of Reflection requires an average item level of 219.
+
+**Note:** this requirement only applies to the Dungeon Finder and the Raid Browser, not to a dungeon/raid portal (and it's blizzlike). This also means a guild could try to clear a raid while being undergeared :)
+
 
 ### comment

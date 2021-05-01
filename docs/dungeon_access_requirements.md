@@ -34,11 +34,11 @@ ID from [dungeon_access_template.id](dungeon_access_template#id).
 
 ### requirement_type
 
-| Value | Comment     |
-|:------|:------------|
-| 0     | Achievement |
-| 1     | Quest       |
-| 2     | Item        |
+| Value | Type        | Comment                         |
+|:------|:------------|:--------------------------------|
+| 0     | Achievement |                                 |
+| 1     | Quest       |                                 |
+| 2     | Item        | The item cannot be in the bank. |
 
 ### requirement_id
 
@@ -46,7 +46,7 @@ ID for Achievement, Quest or Item depending on chosen [requirement_type][2].
 
 ### requirement_note
 
-Optional msg shown in-game to the player if the requirements are not met.
+The text that is shown if you try and enter the instance without meeting the requirements.
 
 ### faction
 
