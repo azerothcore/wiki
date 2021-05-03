@@ -2,6 +2,8 @@
 tableofcontents: 1
 ---
 
+# Install with Docker
+
 Welcome to the AzerothCore Docker guide!
 
 ## Introduction
