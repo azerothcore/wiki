@@ -2,7 +2,7 @@
 tableofcontents: 1
 ---
 
-# Logging Configuration
+# Logging Configuration (log4j-like)
 
 ## Loggers and Appenders
 
@@ -36,7 +36,7 @@ Example:
 
 As "server" is not defined, it uses the root logger and it's log level.
 
-TRACE < DEBUG < INFO < WARN < ERROR < FATAL.
+FATAL < ERROR < WARN < INFO < DEBUG < TRACE.
 
 ### Appenders
 
@@ -70,12 +70,12 @@ Type: Type of the appender
 LogLevel: Log level
 
 0 - (Disabled)
-1 - (Trace)
-2 - (Debug)
-3 - (Info)
-4 - (Warn)
-5 - (Error)
-6 - (Fatal)
+1 - (Fatal)
+2 - (Error)
+3 - (Warning)
+4 - (Info)
+5 - (Debug)
+6 - (Trace)
 
 Flags: Define some extra modifications to do to logging message
 
@@ -107,7 +107,7 @@ Format: "fatal error warn info debug trace"
 12 - LMAGENTA
 13 - LCYAN
 14 - WHITE
-Example: "13 11 9 5 3 1"
+Example: "1 9 3 6 5 8"
 
 File: Name of the file (read as optional1 if Type = File)
 Allows to use one "%u" to create dynamic files
@@ -121,18 +121,22 @@ w - (Overwrite)
 Example:
 
 ```
-Appender.Console1=1,2,6
+Appender.Console1=1,5,6
+```
 
 Creates new appender to log to console any message with log level DEBUG or higher and prefixes log type and level to the message.
 
-Appender.Console2=1,5,1,13 11 9 5 3 1
+```
+Appender.Console2=1,2,1,"1 9 3 6 5 8"
+```
 
 Creates new appender to log to console any message with log level ERROR or higher and prefixes timestamp to the message using colored text.
 
-Appender.File=2,2,7,Auth.log,w
+```
+Appender.File=2,5,7,Auth.log,w
+```
 
 Creates new appender to log to file "Auth.log" any message with log level DEBUG or higher and prefixes timestamp, type and level to message
-```
 
 In the example, having two different loggers to log to console is perfectly legal but redundant.
 
@@ -146,12 +150,12 @@ It's a list of elements separated by comma where each element has its own meanin
 LogLevel
 
 0 - (Disabled)
-1 - (Trace)
-2 - (Debug)
-3 - (Info)
-4 - (Warn)
-5 - (Error)
-6 - (Fatal)
+1 - (Fatal)
+2 - (Error)
+3 - (Warning)
+4 - (Info)
+5 - (Debug)
+6 - (Trace)
 
 AppenderList: List of appenders linked to logger
 (Using spaces as separator).
@@ -164,60 +168,59 @@ AppenderList: List of appenders linked to logger
 Log errors to console and a file called server.log that only contain logs for this server run. File should prefix timestamp, type and log level to the messages. Console should prefix type and log level.
 
 ```
-Appender.Console=1,5,6
-Appender.Server=2,5,7,Server.log,w
-Logger.root=5,Console Server
+Appender.Console=1,2,6
+Appender.Server=2,2,7,Server.log,w
+Logger.root=2,Console Server
 ```
 
 Lets trace how system will log two different messages:
 
-1. LOG_ERROR(LOG_FILTER_GUILD, "Guild 1 created");
+1. LOG_ERROR("guild", "Guild 1 created");
 
 System will try to find logger of type GUILD, as no logger is configured for GUILD it will use Root logger. As message Log Level is equal or higher than the Log level of logger the message is sent to the Appenders configured in the Logger. "Console" and "Server".
 
-Console will write: "ERROR [GUILD ] Guild 1 created"
+Console will write: "ERROR [GUILD] Guild 1 created"
 
-Server will write to file "2012-08-15 ERROR [GUILD ] Guild 1 created"
+Server will write to file "2012-08-15 ERROR [GUILD] Guild 1 created"
 
-2. LOG_INFO(LOG_FILTER_CHARACTER, "Player Name Logged in");
+2. LOG_INFO("entities.player.character", "Player Name Logged in");
 
-System will try to find logger of type CHARACTER, as no logger is configured for CHARACTER it will use Root logger. As message Log Level is not equal or higher than the Log level of logger the message its discarted.
+System will try to find logger of type "character", as no logger is configured for "character" it will use Root logger. As message Log Level is not equal or higher than the Log level of logger the message its discarted.
 
 ### Example 2
 
-Same example that above, but now i want to see all messages of level INFO on
-file and server file should add timestamp on creation.
+Same example that above, but now i want to see all messages of level INFO on file and server file should add timestamp on creation.
 
 ```
-Appender.Console=1,5,6
+Appender.Console=1,2,6
 Appender.Server=2,4,15,Server.log
-Logger.root=4,Console Server
+Logger.root=3,Console Server
 ```
 
 Lets trace how system will log two different messages:
 
-1. LOG_ERROR(LOG_FILTER_GUILD, "Guild 1 created");
+1. LOG_ERROR("guild", "Guild 1 created");
 
 Performs exactly as example 1.
 
-2. LOG_INFO(LOG_FILTER_CHARACTER, "Player Name Logged in");
+2. LOG_INFO("entities.player.character", "Player Name Logged in");
 
-System will try to find logger of type CHARACTER, as no logger is configured for CHARACTER it will use Root logger. As message Log Level is equal or higher than the Log level of logger the message is sent to the Appenders configured in the Logger. "Console" and "Server".
+System will try to find logger of type "character", as no logger is configured for "character" it will use Root logger. As message Log Level is equal or higher than the Log level of logger the message is sent to the Appenders configured in the Logger. "Console" and "Server".
 
-Console will discard msg as Log Level is not higher or equal to this appender
+Console will discard msg as Log Level is not higher or equal to this appender.
 
-Server will write to file "2012-08-15 INFO [CHARACTER ] Player Name Logged in"
+Server will write to file "2012-08-15 INFO [CHARACTER] Player Name Logged in"
 
 ### Example 3
 
-As a dev, i may be interested in logging just a particular part of the core while I'm trying to fix something. So... i want to debug GUILDS to maximum and also some CHARACTER events to some point. Also im checking some Waypoints so i want SQLDEV to be logged to file without prefixes. All other messages should only be logged to console, GUILD to TRACE and CHARACTER to INFO.
+As a dev, i may be interested in logging just a particular part of the core while I'm trying to fix something. So... i want to debug "guild" to maximum and also some "character" events to some point. Also im checking some Waypoints so I want "sql.dev" to be logged to file without prefixes. All other messages should only be logged to console, "guild" to TRACE and "character" to INFO.
 
 ```
-Appender.Console=1,1
-Appender.SQLDev=2,2,0,SQLDev.log
-Logger.guild=1,Console
-Logger.entities.player.character=3,Console
-Logger.sql.dev=3,SQLDev
+Appender.Console=1,6
+Appender.SQLDev=2,5,0,SQLDev.log
+Logger.guild=6,Console
+Logger.entities.player.character=4,Console
+Logger.sql.dev=4,SQLDev
 ```
 
-With this config, any message logger with a Log type different to GUILD, CHARACTER or SQLDEV will be ignored, as we didn't define a logger Root and system created a default Root disabled. Appender Console, log level should be defined to allow all possible messages of its loggers, in this case GUILD uses TRACE (1), so Appender should allow it. Logger Characters will limit it's own messages to INFO (3).
+With this config, any message logger with a Log type different to "guild", "character" or "sql.dev" will be ignored, as we didn't define a logger Root and system created a default Root disabled. Appender Console, log level should be defined to allow all possible messages of its loggers, in this case "guild" uses TRACE (6), so Appender should allow it. Logger Characters will limit it's own messages to INFO (4).
