@@ -6,6 +6,8 @@
 | [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) |
 
 
+If you need a copy of the original client you can find some torrent downloads here: https://wowgaming.github.io/wiki-en/wotlk-home.html#client
+
 - Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
 
     - Change the first line to: set realmlist <IP address used in realmlist table>
@@ -15,8 +17,6 @@
 - (Optional) If you wish to use the WoW Launcher.exe to run your client then you must change your set patchlist to the same ip/dns name as your realmlist.
 
 **NOTE don't use localhost for address, if you need to connect to localhost use 127.0.0.1**
-
-If you need a copy of the original client you can check this page: https://wowgaming.github.io/wiki-en/wotlk-home.html#client
 
 <br>
 
