@@ -137,4 +137,6 @@ UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`|64|
 UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`&~(64|256|1024) WHERE `entry` = 7727;
 ```
 
-**Note for SQL reviewers:** When we work with GUID's, make sure that we use as low entries as possible to fill out the gaps in the database. This can easily be done with tools like [Unused GUID Searcher](https://github.com/azerothcore/unused-guid-search).
+### Note for SQL reviewer
+
+When we work with GUID's, make sure that we use as low entries as possible to fill out the gaps in the database. This can easily be done with tools like [Unused GUID Searcher](https://github.com/azerothcore/unused-guid-search).
