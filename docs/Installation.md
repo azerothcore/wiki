@@ -1,14 +1,24 @@
 # Installation Guide
 
-## Introduction
+## Choosing a setup
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
+
+### Full (supported)
+
+These are the officially-supported and complete ways of installing AzerothCore, for any purposes.
 
 - [**Azerothcore Classic Setup**](#azerothcore-classic-setup) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
 
 - [Docker setup](Install-with-Docker.md) - a simplified installation process based on Docker.
 
 - [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for **Linux** systems for both local development and production. Currently not recommended for Windows or macOS.
+
+### Minimal (supported, limited usage)
+
+- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - an extremely simple way of installing AzerothCore. Suitable only for bug triaging, bug reporting or domestic usage.
+
+### Others (unsupported)
 
 There are also other tutorials from the community for specific platforms:
 
