@@ -8,7 +8,7 @@
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [build][1]            | INT(11)      |            | PRI | NO   |                   |                | Identifier |
+| [build][1]            | INT          |            | PRI | NO   |                   |                | Identifier |
 | [majorVersion][2]     | INT          |            |     | YES  |                   |                |            |
 | [minorVersion][3]     | INT          |            |     | YES  |                   |                |            |
 | [bugfixVersion][4]    | INT          |            |     | YES  |                   |                |            |
