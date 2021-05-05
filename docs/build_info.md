@@ -20,15 +20,15 @@
 | [macChecksumSeed][10] | VARCHAR(40)  |            |     | YES  |                   |                |            |
 
 [1]: #build
-[2]: #majorVersion
-[3]: #minorVersion
-[4]: #bugfixVersion
-[5]: #hotfixVersion
-[6]: #winAuthSeed
-[7]: #win64AuthSeed
-[8]: #mac64AuthSeed
-[9]: #winChecksumSeed
-[10]: #macChecksumSeed
+[2]: #majorversion
+[3]: #minorversion
+[4]: #bugfixversion
+[5]: #hotfixversion
+[6]: #winauthseed
+[7]: #win64authseed
+[8]: #mac64authseed
+[9]: #winchecksumseed
+[10]: #macchecksumseed
 
 ## Description of the fields
 
