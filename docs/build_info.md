@@ -9,15 +9,15 @@
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
 |-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
 | [build][1]            | INT          |            | PRI | NO   |                   |                | Identifier |
-| [majorVersion][2]     | INT          |            |     | YES  |                   |                |            |
-| [minorVersion][3]     | INT          |            |     | YES  |                   |                |            |
-| [bugfixVersion][4]    | INT          |            |     | YES  |                   |                |            |
-| [hotfixVersion][5]    | CHAR(3)      |            |     | YES  |                   |                |            |
-| [winAuthSeed][6]      | VARCHAR(32)  |            |     | YES  |                   |                |            |
-| [win64AuthSeed][7]    | VARCHAR(32)  |            |     | YES  |                   |                |            |
-| [mac64AuthSeed][8]    | VARCHAR(32)  |            |     | YES  |                   |                |            |
-| [winChecksumSeed][9]  | VARCHAR(40)  |            |     | YES  |                   |                |            |
-| [macChecksumSeed][10] | VARCHAR(40)  |            |     | YES  |                   |                |            |
+| [majorVersion][2]     | INT          |            |     | YES  | NULL              |                |            |
+| [minorVersion][3]     | INT          |            |     | YES  | NULL              |                |            |
+| [bugfixVersion][4]    | INT          |            |     | YES  | NULL              |                |            |
+| [hotfixVersion][5]    | CHAR(3)      |            |     | YES  | NULL              |                |            |
+| [winAuthSeed][6]      | VARCHAR(32)  |            |     | YES  | NULL              |                |            |
+| [win64AuthSeed][7]    | VARCHAR(32)  |            |     | YES  | NULL              |                |            |
+| [mac64AuthSeed][8]    | VARCHAR(32)  |            |     | YES  | NULL              |                |            |
+| [winChecksumSeed][9]  | VARCHAR(40)  |            |     | YES  | NULL              |                |            |
+| [macChecksumSeed][10] | VARCHAR(40)  |            |     | YES  | NULL              |                |            |
 
 [1]: #build
 [2]: #majorversion
