@@ -8,7 +8,7 @@ tableofcontents: 1
 
 ### General standards
 
-We always use backticks \` around keywords. \`creature_loot_template\`.
+We always use backticks \` around table- and column names. \`creature_loot_template\`.
 
 We always use single quotes around string values ' ' but NEVER around an integer.
 
