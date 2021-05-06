@@ -111,6 +111,26 @@ Open a new terminal and run the following command
 ./acore.sh docker attach ac-worldserver
 ```
 
+If you got error message `the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'`, you may run the following command 
+
+```
+docker-compose ps
+```
+
+find the name of worldserver
+
+```
+azerothcore-wotlk_ac-authserver_1    ./acore.sh run-authserver     Up             0.0.0.0:3724->3724/tcp,:::3724->3724/tcp
+azerothcore-wotlk_ac-database_1      docker-entrypoint.sh mysqld   Up (healthy)   0.0.0.0:3306->3306/tcp,:::3306->3306/tcp, 33060/tcp
+azerothcore-wotlk_ac-worldserver_1   ./acore.sh run-worldserver    Up             0.0.0.0:7878->7878/tcp,:::7878->7878/tcp, 0.0.0.0:8085->8085/tcp,:::8085->8085/tcp
+```
+
+and then attach the worldserver name with winpty
+
+```
+winpty docker attach azerothcore-wotlk_ac-worldserver_1
+```
+
 This command will automatically attach your terminal to the worldserver console. 
 Now you can run the `account create <user> <password>` command to [create your first in-game account.](Creating-Accounts.md)
 
