@@ -137,6 +137,51 @@ UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`|64|
 UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`&~(64|256|1024) WHERE `entry` = 7727;
 ```
 
-### Note for SQL reviewer
+## Tables and Columns
+
+### Integers
+
+We do not define the width of an integer when we create new columns. (Width is deprecated in later versions of MySQL 8)
+
+```
+TINYINT(M)   -> TINYINT
+SMALLINT(M)  -> SMALLINT
+INT(M)       -> INT
+MEDIUMINT(M) -> MEDIUMINT
+BIGINT(M)    -> BIGINT
+
+BOOL         -> Never, synonym for TINYINT. 0 = false <>0 = true
+```
+
+### Float, Double, Decimal
+
+These data types cannot be UNSIGNED and therefore we use CHECK CONSTRAINTS instead. (UNSIGNED Float, Double, Decimal is deprecated in later versions of MySQL 8)
+
+```
+FLOAT UNSIGNED -> CHECK (`column`>=0)
+```
+
+### Character Encoding
+
+We use UTF8MB4 where you would previously use UTF8 or UTF8MB3. (utf8 is an alias and utf8mb3 is deprecated in later versions of MySQL 8)
+
+```
+utf8    -> utf8mb4
+utf8mb3 -> utf8mb4
+
+This also applies to utf8_unicode_ci etc.
+```
+
+### Check Constraints
+
+You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how a check contraint is made.
+
+All active Check Constraints can be found by using this query:
+
+```sql
+SELECT * FROM information_schema.CHECK_CONSTRAINTS;
+```
+
+## Note for SQL reviewer
 
 When we work with GUID's, make sure that we use as low entries as possible to fill out the gaps in the database. This can easily be done with tools like [Unused GUID Searcher](https://github.com/azerothcore/unused-guid-search).
