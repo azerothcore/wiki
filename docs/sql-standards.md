@@ -150,7 +150,7 @@ INT(M)       -> INT
 MEDIUMINT(M) -> MEDIUMINT
 BIGINT(M)    -> BIGINT
 
-BOOL         -> Never, synonym for TINYINT. 0 = false <>0 = true
+BOOL         -> Never used, synonym for TINYINT. 0 = false <>0 = true
 ```
 
 ### Float, Double, Decimal
