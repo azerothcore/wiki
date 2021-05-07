@@ -174,7 +174,7 @@ This also applies to utf8_unicode_ci etc.
 
 ### Check Constraints
 
-You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how a check contraint is made.
+You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how check contraints are made.
 
 All active Check Constraints can be found by using this query:
 
