@@ -196,6 +196,19 @@ To create a second realm we suggest you to take a look at the example available 
 
 ## More info
 
+### Adding Modules
+
+To add a module simply place the module directory inside of the `/azerothcore-wotlk/modules` directory.
+
+After adding a module you'll have to rebuild azerothcore:
+```
+./acore.sh docker build
+```
+
+If the added module makes use of configurations files you'll have to place them in the `azerothcore-wotlk/env/docker/etc/modules` directory.  If this modules directory doesn't exist, you'll have to manually create it yourself.
+
+After rebuilding you can [(re)start the containers](#how-can-i-start-stop-create-and-destroy-my-containers) again.
+
 ### Memory usage
 
 The total amount of RAM when running all AzerothCore docker containers is **less than 2 GB** with no players online.
