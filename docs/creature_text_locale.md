@@ -8,37 +8,46 @@ This table is used to provide to localized clients with localized string for cre
 
 **Structure**
 
-| Field                                        | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry](#creature_text_locale-entry)         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [groupid](#creature_text_locale-groupid)     | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [id](#creature_text_locale-id)               | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [text\_loc1](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc2](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc3](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc4](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc5](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc6](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc7](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
-| [text\_loc8](#creature_text_locale-text_loc) | text         |            |     | YES  | NULL    |       |         |
+| Field           | Type         | Attributes | Key      | Null     | Default | Extra | Comment |
+|-----------------|--------------|------------|----------|----------|---------|-------|---------|
+| [CreatureID][1] | mediumint(8) | unsigned   |  PRI     |  NO      | 0       |       |         |
+| [GroupID][2]    | tinyint(3)   | unsigned   |  PRI     |  NO      | 0       |       |         |
+| [ID][3]         | tinyint(3)   | unsigned   |  PRI     |  NO      | 0       |       |         |
+| [Locale][4]     | varchar(4)   |            |  PRI     |  NO      |         |       |         |
+| [Text][5]       | text         |            |          |  YES     |         |       |         |
+
+[1]: #CreatureID
+[2]: #GroupID
+[3]: #ID
+[4]: #Locale
+[5]: #Text
 
 **Description of the fields**
 
-### entry
+### CreatureID
+Creature ID, obtained from [creature_template#entry](https://www.azerothcore.org/wiki/creature_template#entry)
 
-This entry must be the same as [creature\_text.entry](https://trinitycore.atlassian.net/wiki/display/tc/creature_text#creature_text-entry) and then the row will be used to provide localization support for this creature record.
+### GroupID
+If there is more than one of the same entry (more than one text the creature says), this column is used to choose if it is a random say or an ordered list. If a creature has got more than one say text to be shown in a given order, it must be incremented for each new matching entry (ex. 0, 1, 2, 3...). If there is only one entry or only one group, this value should be 0. If there are multiple groups of texts, this value stays the same within the group while the id increments within the same group.
 
-### groupid
+### ID
+Entry for each group of texts. This is the unique identifier when entry (creature) is the same and groupid is unchanged, it must be incremented (ex. 0, 1, 2, 3...). A creature say will be randomly selected from this list based on the groupid it belongs to.
 
-This entry must be the same as [creature\_text.groupid](https://trinitycore.atlassian.net/wiki/display/tc/creature_text#creature_text-groupid) and then the row will be used to provide localization support for this creature record.
+### Locale
+It is the language in which you want to make the translation.
+You can choose from the following:
 
-### id
+| ID | Language |
+|----|----------|
+| 0  | enUS     |
+| 1  | koKR     |
+| 2  | frFR     |
+| 3  | deDE     |
+| 4  | zhCN     |
+| 5  | zhTW     |
+| 6  | esES     |
+| 7  | esMX     |
+| 8  | ruRU     |
 
-This entry must be the same as [creature\_text.id](https://trinitycore.atlassian.net/wiki/display/tc/creature_text#creature_text-id) and then the row will be used to provide localization support for this creature record.
-
-### text\_loc
-
-Translated content for [creature\_text.text](https://trinitycore.atlassian.net/wiki/display/tc/creature_text#creature_text-text) field for language X.
-See [localization languages](Localization+lang) list to know which value to use for X.
-
- 
+### Text
+The text the creature will say.
