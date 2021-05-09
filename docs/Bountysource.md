@@ -1,3 +1,5 @@
+## What is Bountysource
+
 Bountysource is a crowdfunding platform that allows people to sponsor any open source projects by placing "bounties" (money rewards) for the resolution of issues reported on GitHub. Whoever will fix that issue, will get the money from the bounty.
 
 So if you want to support a specific issue resolution, you can place bounties to our [open issues](https://github.com/azerothcore/azerothcore-wotlk/issues).
@@ -21,6 +23,19 @@ This is how Bountysource works:
 4) If accepted, Bountysource pays the bounties to the developer.
 
 **Big thanks to our [top backers](https://www.bountysource.com/teams/azerothcore/backers) of Bountysource.**
+
+### What if you don't want to claim the bounty?
+
+What if you have worked on an issue that has a Bounty, but you do not want to claim it for yourself?
+
+You can donate that money back to the AzerothCore Bountysource organisation, so we can re-assign it to some other issue.
+
+The money you decide to give back to the AC organisation **will be shown as your own donation count**, so you will be in the list of [backers](https://www.bountysource.com/teams/azerothcore/backers) as well.
+
+This is what typically AC admins do.
+
+![image](https://user-images.githubusercontent.com/75517/117544116-1c968280-b020-11eb-80f6-5c7d3b725219.png)
+
 
 ## Other resources
 
