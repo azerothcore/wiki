@@ -28,7 +28,7 @@ the values within the [ ] array. In this case we only need the value 616.
 *Note: the --search option is backed by an eval, which means you can run any javascript method to execute a comparison*
 
 The result of that command will be:
-```
+```json
 {
     "ID": 616,
     "ContinentID": 1,
@@ -78,7 +78,7 @@ You can check the list of the flags [here](https://www.azerothcore.org/wiki/Area
 Now run the same command above but with the output type : `npm run start -- -s "[616].includes({*})" -t sql  --columns=ID AreaTable` to extract the INSERT query
 
 Output: 
-```SQL
+```sql
 INSERT IGNORE INTO areatable_dbc (`ID`,`ContinentID`,`ParentAreaID`,`AreaBit`,`Flags`,`SoundProviderPref`,`SoundProviderPrefUnderwater`,`AmbienceID`,`ZoneMusic`,`IntroSound`,`ExplorationLevel`,`AreaName_Lang_enUS`,`AreaName_Lang_enGB`,`AreaName_Lang_koKR`,`AreaName_Lang_frFR`,`AreaName_Lang_deDE`,`AreaName_Lang_enCN`,`AreaName_Lang_zhCN`,`AreaName_Lang_enTW`,`AreaName_Lang_zhTW`,`AreaName_Lang_esES`,`AreaName_Lang_esMX`,`AreaName_Lang_ruRU`,`AreaName_Lang_ptPT`,`AreaName_Lang_ptBR`,`AreaName_Lang_itIT`,`AreaName_Lang_Unk`,`AreaName_Lang_Mask`,`FactionGroupMask`,`LiquidTypeID_1`,`LiquidTypeID_2`,`LiquidTypeID_3`,`LiquidTypeID_4`,`MinElevation`,`Ambient_Multiplier`,`Lightid`)
  VALUES (616,1,0,619,64,0,11,31,0,0,0,"Hyjal","","","","","","","","","","","","","","","",16712190,0,0,0,0,0,-500,0,0);
 ````
@@ -87,7 +87,7 @@ INSERT IGNORE INTO areatable_dbc (`ID`,`ContinentID`,`ParentAreaID`,`AreaBit`,`F
 
 Create the update query to set the proper faction :
 
-```SQL
+```sql
 UPDATE areatable_dbc SET Flags=19456 WHERE ID=616
 ```
 
