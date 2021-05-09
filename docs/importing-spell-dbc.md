@@ -15,4 +15,5 @@ When submitting a PR with a `spell_dbc` fix for a certain spell, if that spell w
 
 ## How to import spells from the DBC files to the spell_dbc table
 
-TODO
+To import data from Spell.dbc to our spell_dbc table, you can take a look at the general guide on [how to import data from DBC files](how-to-import-dbc-data-in-db.md).
+You just need to use the same guidelines with by using the Spell.dbc file instead.
