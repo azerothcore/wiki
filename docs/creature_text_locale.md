@@ -8,13 +8,13 @@ This table is used to provide to localized clients with localized string for cre
 
 **Structure**
 
-| Field           | Type         | Attributes | Key      | Null     | Default | Extra | Comment |
-|-----------------|--------------|------------|----------|----------|---------|-------|---------|
-| [CreatureID][1] | mediumint(8) | unsigned   |  PRI     |  NO      | 0       |       |         |
-| [GroupID][2]    | tinyint(3)   | unsigned   |  PRI     |  NO      | 0       |       |         |
-| [ID][3]         | tinyint(3)   | unsigned   |  PRI     |  NO      | 0       |       |         |
-| [Locale][4]     | varchar(4)   |            |  PRI     |  NO      |         |       |         |
-| [Text][5]       | text         |            |          |  YES     |         |       |         |
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|-----------|------------|-----|------|---------|-------|---------|
+| [CreatureID][1] | MEDIUMINT | unsigned   | PRI | NO   | 0       |       |         |
+| [GroupID][2]    | MEDIUMINT | unsigned   | PRI | NO   | 0       |       |         |
+| [ID][3]         | MEDIUMINT | unsigned   | PRI | NO   | 0       |       |         |
+| [Locale][4]     | VARCHAR   |            | PRI | NO   |         |       |         |
+| [Text][5]       | TEXT      |            |     | YES  |         |       |         |
 
 [1]: #creatureid
 [2]: #groupid
