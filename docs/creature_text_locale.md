@@ -16,16 +16,16 @@ This table is used to provide to localized clients with localized string for cre
 | [Locale][4]     | varchar(4)   |            |  PRI     |  NO      |         |       |         |
 | [Text][5]       | text         |            |          |  YES     |         |       |         |
 
-[1]: #CreatureID
-[2]: #GroupID
-[3]: #ID
-[4]: #Locale
-[5]: #Text
+[1]: #creatureid
+[2]: #groupid
+[3]: #id
+[4]: #locale
+[5]: #text
 
 **Description of the fields**
 
 ### CreatureID
-Creature ID, obtained from [creature_template#entry](https://www.azerothcore.org/wiki/creature_template#entry)
+Creature ID, obtained from [creature_template.entry](creature_template#entry)
 
 ### GroupID
 If there is more than one of the same entry (more than one text the creature says), this column is used to choose if it is a random say or an ordered list. If a creature has got more than one say text to be shown in a given order, it must be incremented for each new matching entry (ex. 0, 1, 2, 3...). If there is only one entry or only one group, this value should be 0. If there are multiple groups of texts, this value stays the same within the group while the id increments within the same group.
@@ -50,4 +50,4 @@ You can choose from the following:
 | 8  | ruRU     |
 
 ### Text
-The text the creature will say.
+The translated text the creature will say.
