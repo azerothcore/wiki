@@ -34,3 +34,7 @@
 
 * [How to import DBC data into SQL](how-to-import-dbc-data-in-db.md)
 
+## External resources
+
+<a href="https://wowdev.wiki/Category:DBC_WotLK" target="_blank">DBC Documentation</a>
+
