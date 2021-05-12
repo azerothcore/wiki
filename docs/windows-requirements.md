@@ -74,15 +74,15 @@
     1. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
        *when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
   
-1. Boost.
+1. [Boost](https://www.boost.org/).
 
     1. Download the prebuilt Windows Binary for Visual Studio 2019
 
-    3. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0`is recommended
+    1. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0`is recommended
 
-    5. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
+    1. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
 
-    7. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
+    1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
    
 <br>
 
