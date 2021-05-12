@@ -7,9 +7,9 @@
 
 | |
 | :- |
+| Boost ≥ 1.70 |
 | MySQL ≥ 5.7.0 |
 | CMake ≥ 3.16 |
-
 
 - Install XCode using the App Store, then open the terminal and type:
 
@@ -26,7 +26,7 @@ brew update
 ```
 
 ```sh
-brew install openssl readline cmake ace coreutils bash bash-completion coreutils
+brew install openssl readline cmake ace boost coreutils bash bash-completion coreutils
 ```
 
 This will install bash 5+, you might need to restart your terminal.
