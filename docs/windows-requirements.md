@@ -83,7 +83,13 @@
     1. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
 
     1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
-   
+
+    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `C:/local/boost_1_74_0`. Important is to use '/', not '\'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
+
+    1. ![image](https://user-images.githubusercontent.com/18329778/118027284-f4928080-b38b-11eb-982c-39c632713580.png) Copyright (C) TrinityCore
+
+    1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
+  
 <br>
 
 ## Help
