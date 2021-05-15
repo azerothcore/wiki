@@ -8,58 +8,50 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment       |
 |-----------------------|-------------|------------|-----|------|---------|-------|---------------|
-| [entryorguid][1]      | INT     | SIGNED     | PRI | NO   |         |       |               |
-| [source_type][2]      | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |               |
-| [id][3]               | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
-| [link][4]             | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
-| [event_type][5]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_phase_mask][6] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_chance][7]     | TINYINT  | UNSIGNED   |     | NO   | 100     |       |               |
-| [event_flags][8]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param1][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param2][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param3][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param4][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [event_param5][5]     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_type][9]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param1][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param2][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param3][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param4][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param5][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [action_param6][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_type][10]     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param1][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param2][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param3][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_param4][10]   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
-| [target_x][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
-| [target_y][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
-| [target_z][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
-| [target_o][10]        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
-| [comment][11]         | text        |            |     | NO   |         |       | Event Comment |
+| [entryorguid](#1)     | INT     | SIGNED     | PRI | NO   |         |       |               |
+| [source_type](#2)      | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [id](#3)               | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [link](#4)             | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |               |
+| [event_type](#5)       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_phase_mask](#6) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_chance](#7)     | TINYINT  | UNSIGNED   |     | NO   | 100     |       |               |
+| [event_flags](#8)      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param1](#5)     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param2](#5)     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param3](#5)     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param4](#5)     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param5](#5)     | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_type](#9)      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param1](#9)    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param2](#9)    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param3](#9)    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param4](#9)    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param5](#9)    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [action_param6](#9)    | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_type](#10)     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param1](#10)   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param2](#10)   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param3](#10)   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_param4](#10)   | INT     | UNSIGNED   |     | NO   | 0       |       |               |
+| [target_x](#10)        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [target_y](#10)        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [target_z](#10)        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [target_o](#10)        | FLOAT       | SIGNED     |     | NO   | 0       |       |               |
+| [comment](#11)         | text        |            |     | NO   |         |       | Event Comment |
 
-[1]: #entryorguid
-[2]: #source_type
-[3]: #id
-[4]: #link
-[5]: #event_type
-[6]: #event_phase_mask
-[7]: #event_chance
-[8]: #event_flags
-[9]: #action_type
-[10]: #target_type
-[11]: #comment
+
+
+#comment
 
 **Description of the fields**
 
-### entryorguid
+### entryorguid<a id="1"></a>
 
 - EntryOrGuid > 0: `entry` of the creature / game object / etc.
 - EntryOrGuid < 0: `guid` of the creature / game object / etc.
 - **Depends on source\_type.**
 
-### source\_type
+### source\_type<a id="2"></a>
 
 Object type: creature, game object, spell. see table below for values
 
@@ -70,11 +62,11 @@ Object type: creature, game object, spell. see table below for values
 | SMART\_SCRIPT\_TYPE\_AREATRIGGER       | 2     |
 | SMART\_SCRIPT\_TYPE\_TIMED\_ACTIONLIST | 9     |
 
-### id
+### id<a id="3"></a>
 
 Incremental id *bound* to each entryorguid & source\_type (0, 1, 2, ...).
 
-### link
+### link<a id="4"></a>
 
 Simple event linking;
 
@@ -83,7 +75,7 @@ Simple event linking;
 
 **Thanks to the use of links, you can execute several actions, keeping the same event.**
 
-### event\_phase\_mask
+### event\_phase\_mask<a id="6"></a>
 
 When dealing with phases, *phase IDs* have to be used. There are 13 (12+1) different phases: 1, 2, ... 12 and the default 0.
 
@@ -118,11 +110,11 @@ If the script is in phase 1 and want to skip to phase 2:
 - Event will only be able to occur if creature/GO is in this phase.
 - Example: If we want an event to only be able to occure in phase 1 and 4, **event\_phase\_mask** = 1+8 = 9
 
-### event\_chance
+### event\_chance<a id="7"></a>
 
 This is the probability of the event to occur as a percentage from 0-100. So, if you want the event to occur roughly half of the time, then set this to 50. 
 
-### event\_flags
+### event\_flags<a id="8"></a>
 
 | Name                            | Flag | Hex   | Comment                                        |
 |---------------------------------|------|-------|------------------------------------------------|
@@ -139,7 +131,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 - Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
 - Values can be added together (bitwise math).
 
-### event\_type
+### event\_type<a id="5"></a>
 
 | Name                              | Value | Param1                                                | Param2                      | Param3            | Param4                          | Param5          | Comment                                                                      |
 |-----------------------------------|-------|-------------------------------------------------------|-----------------------------|-------------------|---------------------------------|-----------------|------------------------------------------------------------------------------|
@@ -214,7 +206,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMART_EVENT_NEAR_PLAYERS          | 101   | minPlayers                                            | Range (yards)               | FirstCheck (ms)   | RepeatCheck (ms)                |                 | Event will trigger if there are more than minPlayers in range.               |
 | SMART_EVENT_NEAR_PLAYERS_NEGATION | 102   | maxPlayers                                            | Range (yards)               | FirstCheck (ms)   | RepeatCheck (ms)                |                 | Event will trigger if there are less than maxPlayers in range.               |
 
-### action\_type
+### action\_type<a id="9"></a>
 
 | Name                                            | Value | Param1                                                                                                                                                                                                                                                                                                                                                                                                                                 | Param2                                                                                               | Param3                                                                                                                     | Param4                                         | Param5                                | Param6                                | Comment                                                                                                                                                                                                                                                                                                                                     |
 |-------------------------------------------------|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|---------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -374,7 +366,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMARTAI_TEMPLATE_CAGED_GO_PART  | 4              | creatureID   | give credit at point end (0/1) |           |        |             |                                  |
 | SMARTAI_TEMPLATE_CAGED_NPC_PART | 5              | gameObjectID | despawntime                    | run (0/1) | dist   | TextGroupID |                                  |
 
-### target_type
+### target_type<a id="10"></a>
 
 | Name                                | Value | target_param1                     | target_param2                                 | target_param3                                          | target_param4                         | target_x | target_y | target_z | target_o                                                                                                                      | Comment                                                                                                    |
 |-------------------------------------|-------|-----------------------------------|-----------------------------------------------|--------------------------------------------------------|---------------------------------------|----------|----------|----------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
@@ -410,7 +402,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMART_TARGET_RANDOM_POINT           | 201   | range (yards)                     | amount (for summoning creature)               | self as middle (0/1)<br/>else use xyz                  |                                       |          |          |          |                                                                                                                               | This only works with SMART_ACTION_SUMMON_CREATURE,   SMART_ACTION_MOVE_TO_POS and SMART_ACTION_JUMP_TO_POS |
 | SMART_TARGET_ROLE_SELECTION         | 201   | rangeMax (yards)                  | TargetMask (Tanks (1), Healer (2) Damage (4)) | Resize list                                            |                                       |          |          |          |                                                                                                                               | Target a Tank/Healer/DPS role. Based on the players spec.                                                  |
 
-### comment
+### comment<a id="11"></a>
 
 Commenting on SAI uses a template which is the following: (with an example)
 
