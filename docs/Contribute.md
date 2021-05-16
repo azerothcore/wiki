@@ -41,7 +41,7 @@ If **(and only if)** the bug hasn't been reported yet, you can [open an issue](h
 
 ## How to create a Pull Request
 
-- Read [How to create a PR](How-to-create-a-PR).
+- Read [How to create a PR](how-to-create-a-pr).
 
 ### Giving credit to the author of code
 

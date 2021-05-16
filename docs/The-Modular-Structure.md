@@ -14,7 +14,7 @@ The list of the script hooks is available [here](Hooks-Script.md).
 
 Sometimes you need to add new hooks for your custom module, it's absolutely possible to add them to the core. There are just a few steps needed in order to create a new hook, you can see an example [here](https://github.com/azerothcore/azerothcore-wotlk/commit/15b1a99b55bf01cd6975cc4da3994778d36edb35) 
 
-When you add new hooks, don't forget to [create a PR](http://www.azerothcore.org/wiki/How-to-create-a-PR) with them. This way, they will be reviewed by the AzerothCore developers and included in the official repo.
+When you add new hooks, don't forget to [create a PR](http://www.azerothcore.org/wiki/how-to-create-a-pr) with them. This way, they will be reviewed by the AzerothCore developers and included in the official repo.
 
 ### Cmake hooks
 

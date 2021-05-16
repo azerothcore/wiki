@@ -66,4 +66,4 @@ As said before, we've a special workflow for PR to allow db data consistency for
 
 it requires some stuffs to be done on your PR's sql to be compatible with our import system and allow you to avoid double importing of same queries.
 
-The how to is described under [How to create a PR](How-to-create-a-PR) article
+The how to is described under [How to create a PR](how-to-create-a-pr) article

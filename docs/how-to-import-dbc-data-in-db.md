@@ -96,5 +96,5 @@ UPDATE areatable_dbc SET Flags=19456 WHERE ID=616
 5. Create your PR
 
 If you are using this guide to fix a bug (not for customization purpose), 
-now you can create [your PR](https://www.azerothcore.org/wiki/How-to-create-a-PR) with the 2 queries above 
+now you can create [your PR](https://www.azerothcore.org/wiki/how-to-create-a-pr) with the 2 queries above 
 

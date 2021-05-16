@@ -29,7 +29,7 @@ Issue template:
 ```
 [//]: # (IF YOU DO NOT FILL THIS TEMPLATE OUT, WE WILL CLOSE YOUR ISSUE)
 [//]: # (You should always read how to properly fill out the bug report before continuing. https://www.azerothcore.org/wiki/issue-tracker-standards)
-[//]: # (For issues containing a fix, please create a Pull Request following this tutorial: https://www.azerothcore.org/wiki/How-to-create-a-PR)
+[//]: # (For issues containing a fix, please create a Pull Request following this tutorial: https://www.azerothcore.org/wiki/how-to-create-a-pr)
 
 **CURRENT BEHAVIOUR:**
 [//]: # (If this is a crash report you should post the crashlog. Upload it to https://gist.github.com/)
