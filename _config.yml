@@ -6,13 +6,13 @@ remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 title: AzerothCore
 # (string) Description of your wiki
-description: Wiki and Documentation of AzerothCore project
+description: Wiki and Documentation of the AzerothCore project
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
 show_wiki_pages_limit: 10
 # (boolean) Enable/disable blog feature
-blog_feature: true
+blog_feature: false
 # (boolean) Enable/disable wiki posts list in sidebar (needs blog_feature enabled)
 show_wiki_posts: true
 # (integer) Maximum number of wiki posts to shown in sidebar
