@@ -43,7 +43,6 @@ You can choose from the following:
 
 | ID | Language |
 |----|----------|
-| 0  | enUS     |
 | 1  | koKR     |
 | 2  | frFR     |
 | 3  | deDE     |
