@@ -9,7 +9,7 @@
 | :- |
 | MySQL ≥ 5.7.0 |
 | CMake ≥ 3.16 |
-| Clang ≥ [6](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
+| Clang ≥ [7](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
 #### Ubuntu with MariaDB 10.x
 
@@ -34,7 +34,6 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt install gcc-10 g++-10
 ```
-
 
 --- 
 
@@ -114,19 +113,18 @@ apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlc
 
 --- 
 
-
 #### Check your clang version
 
 ```sh
 clang --version
 ```
 
-Your `clang` version **MUST** be `6` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be `7` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
 
-For example, if you are using an older version of Ubuntu like 16.04, you need to install clang using:
+For example, if you are using an older version of Ubuntu like 18.04, you need to install clang using:
 
 ```sh
-sudo apt-get install clang-6.0
+sudo apt-get install clang-7.0
 ```
 
 If you use another distro or version, search on google for how to install the right clang version for your system.
@@ -141,7 +139,7 @@ Your `cmake` version **MUST** be `3.16` or higher.
 
 On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
-#### Ensure that the gcc-7 headers are installed
+#### Ensure that the gcc-8 headers are installed
 
 This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
 https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
@@ -152,10 +150,10 @@ After
 sudo apt-get update
 ```
 
-you can install gcc-7: 
+you can install gcc-8: 
 
 ```sh
-sudo apt-get install g++-7 gcc-7
+sudo apt-get install g++-8 gcc-8
 ```
 
 <br>
