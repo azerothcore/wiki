@@ -64,7 +64,7 @@ Create a file called `gdb.conf` with this inside:
 
     set logging on
     set debug timestamp
-    run -c ../etc/worldserver.conf
+    run -c /absolute/path/to/etc/worldserver.conf
     bt
 
 Then, to debug or create a crashdump you can just use the gdb command as described in its documentation:
