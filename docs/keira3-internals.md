@@ -197,9 +197,9 @@ Now you can use it in the `.html` template of the component by adding the `keira
 
 This is the result:
 
-![image](https://user-images.githubusercontent.com/75517/118694803-c1794280-b80c-11eb-9099-00758983ca2e.png)
+<img src="https://user-images.githubusercontent.com/75517/118694803-c1794280-b80c-11eb-9099-00758983ca2e.png" width=300>
 
-![image](https://user-images.githubusercontent.com/75517/118694841-cf2ec800-b80c-11eb-8719-b770a7fd0c98.png)
+<img src="https://user-images.githubusercontent.com/75517/118694841-cf2ec800-b80c-11eb-8719-b770a7fd0c98.png" width=500>
 
 ### FlagsSelectorBtnComponent
 
@@ -228,6 +228,13 @@ The attributes for this component are:
 - `[control]` the form control, example `editorService.form.controls.dynamicflags` (note: `dynamicflags` is the name of the field)
 - `[config]` an object specifying the `options` and `name` property
 - `[modalClass]` the class of the modal, so you can change the modal size, e.g. `modal-md` or `modal-lg` (optional)
+
+This is the result:
+
+<img src="https://user-images.githubusercontent.com/75517/118697264-685ede00-b80f-11eb-9609-6b4af903bcdc.png" width=300>
+
+![image](https://user-images.githubusercontent.com/75517/118697333-790f5400-b80f-11eb-8795-cdeae8ebfd64.png)
+
 
 ### Other selectors
 
