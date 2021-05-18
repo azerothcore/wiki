@@ -154,3 +154,100 @@ Handlers are services responsible for holding statuses such as:
 Group of editors that refer to the same main entity should share **one Handler**. For example, all Creature Editors refer to the `CreatureHandlerService`, all Quest Editors refer to the `QuestHandlerService`, and so on...
 
 All Handlers classes extend the `HandlerService` abstract class.
+
+## Selectors
+
+There are several kinds of selectors which allow the user to easily select a value for a given field.
+
+Selectors are typically available to the user by clicking on the button with three dots:
+
+![image](https://user-images.githubusercontent.com/75517/118693269-351a5000-b80b-11eb-81b5-15065634a5b4.png)
+
+There are three main types of selectors, listed below.
+
+### SingleValueSelectorBtnComponent
+
+The `SingleValueSelectorBtnComponent` is a reusable component which can be used to allow the user to select a **single value** from a list of values, for a given field.
+
+Let's check for example the `exp` field of `creature_template`, allowing to specify ONE value:
+
+```
+0 - Classic
+1 - TBC
+2 - WOTLK
+```
+
+All you have to do to implement such selector is first definying the list values by creating an array of `Option`:
+
+![image](https://user-images.githubusercontent.com/75517/118694016-e7eaae00-b80b-11eb-8701-bc59c80ec3bd.png)
+
+All the options are located in `src/app/shared/constants/options` so you just need to create a new file like the above.
+
+You then need to import the array of options, in this case `EXPANSIONS`, in the `.ts` file of your component and declare it as `PUBLIC READONLY` in order to make it available for the component's template:
+
+![image](https://user-images.githubusercontent.com/75517/118694375-4dd73580-b80c-11eb-8f22-4f2ec76bfe68.png)
+
+Now you can use it in the `.html` template of the component by adding the `keira-single-value-selector-btn` html element and passing the following properties:
+
+- `[control]` the form control, example `editorService.form.controls.exp` (note: `exp` is the name of the field)
+- `[config]` an object specifying the `options` and `name` property
+- `[modalClass]` the class of the modal, so you can change the modal size, e.g. `modal-md` or `modal-lg` (optional)
+
+![image](https://user-images.githubusercontent.com/75517/118693601-7c084580-b80b-11eb-9a6d-8833d6581920.png)
+
+This is the result:
+
+<img src="https://user-images.githubusercontent.com/75517/118694803-c1794280-b80c-11eb-9099-00758983ca2e.png" width=300>
+
+<img src="https://user-images.githubusercontent.com/75517/118694841-cf2ec800-b80c-11eb-8719-b770a7fd0c98.png" width=500>
+
+### FlagsSelectorBtnComponent
+
+The `FlagsSelectorBtnComponent` is another very useful reusable component which allows the user to compose a value from a set of **flags** (bitmask), for a given field. If terms like bits, bitmask, flags, etc.. sounds weird to you, we recommend to read [this page](https://www.azerothcore.org/wiki/Bit-and_bytes-tutorial) to fully understand how flag values work.
+
+Let's see, for example, how the field `dynamicflags` of `creature_template` is implemented.
+
+First you need to define the the list of (bit) values by creating an array of `Flag`:
+
+![image](https://user-images.githubusercontent.com/75517/118695616-aeb33d80-b80d-11eb-97cd-a6b7933b632d.png)
+
+All the flag values are located in `src/app/shared/constants/flags` so you can create a new file there, for example `dynamic-flags.ts` in our case.
+
+Basically you need to define what's the meaning of every single bit. Don't forge that bits typically start from zero.
+
+Then you need to import the `DYNAMIC_FLAGS` array in the component's `.ts` file and make it available for its `.html` template by declaring it `PUBLIC READONLY`:
+
+![image](https://user-images.githubusercontent.com/75517/118696084-339e5700-b80e-11eb-951d-0b8f7acf1052.png)
+
+Now you just need to use it in the html by adding the `keira-flags-selector-btn` component there:
+
+![image](https://user-images.githubusercontent.com/75517/118695922-02258b80-b80e-11eb-9c29-ec6ae693d13c.png)
+
+The attributes for this component are:
+
+- `[control]` the form control, example `editorService.form.controls.dynamicflags` (note: `dynamicflags` is the name of the field)
+- `[config]` an object specifying the `options` and `name` property
+- `[modalClass]` the class of the modal, so you can change the modal size, e.g. `modal-md` or `modal-lg` (optional)
+
+This is the result:
+
+<img src="https://user-images.githubusercontent.com/75517/118697264-685ede00-b80f-11eb-9609-6b4af903bcdc.png" width=300>
+
+![image](https://user-images.githubusercontent.com/75517/118697333-790f5400-b80f-11eb-8795-cdeae8ebfd64.png)
+
+
+### Other selectors
+
+There are other selectors that allow the user to select values by doing a search either in the DB or in the DBC contained in the sqlite integrated in Keira3.
+
+You can find their implementations in `src/app/shared/modules/selectors` as well as examples of usage around the app.
+
+![image](https://user-images.githubusercontent.com/75517/118693136-10be7380-b80b-11eb-9721-081bf1f4128d.png)
+
+Example: the **item-selector**.
+
+![image](https://user-images.githubusercontent.com/75517/118697495-a2c87b00-b80f-11eb-9db4-69357704d5f5.png)
+
+You can use it whenever an Item ID is needed:
+
+![image](https://user-images.githubusercontent.com/75517/118697570-bbd12c00-b80f-11eb-9959-feb7186dab45.png)
