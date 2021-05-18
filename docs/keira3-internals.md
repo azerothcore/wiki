@@ -244,7 +244,7 @@ You can find their implementations in `src/app/shared/modules/selectors` as well
 
 ![image](https://user-images.githubusercontent.com/75517/118693136-10be7380-b80b-11eb-9721-081bf1f4128d.png)
 
-Example: the **item search selector**.
+Example: the **item-selector**.
 
 ![image](https://user-images.githubusercontent.com/75517/118697495-a2c87b00-b80f-11eb-9db4-69357704d5f5.png)
 
