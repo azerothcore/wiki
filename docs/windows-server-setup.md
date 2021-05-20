@@ -18,7 +18,9 @@ vmap4assembler.exe
 
 2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.2
 
-3. Launch extractor.bat and select your extractor options.
+3. Create **mmaps** and **vmaps** folders in your World of Warcraft directoryt.
+
+4. Launch extractor.bat and select your extractor options.
 
 **Important notes**
 
