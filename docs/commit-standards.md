@@ -30,7 +30,7 @@ Most common Scopes are that is used:
 Most common Subscopes that are used:
 
 | Subscope | DB | Script | Core |
-| :--- | :- |
+| :------- | :- | :----- | :--- |
 | Creature | x | x | |
 | Quest | x | x | |
 | Boss | x | x | |
