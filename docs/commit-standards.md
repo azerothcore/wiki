@@ -11,6 +11,7 @@ We follow the [Conventional Commit specification](https://www.conventionalcommit
 ```
 
 | Type | |
+| :--- | :- |
 | fix  | Used when we fix a bug |
 | feat | Used when we introduce a new feature to the core |
 | refactor | Used if we overhaul and rework things to a larger scale |
@@ -18,16 +19,18 @@ We follow the [Conventional Commit specification](https://www.conventionalcommit
 | ci   | Used when we change something in our workflow |
 | docs | When changing any documentation |
 
-Most common Scope that is used:
+Most common Scopes are that is used:
 
 | Scope | |
+| :--- | :- |
 | DB | Used for DB only changes |
 | Script | Used for Script only changes |
 | Core | Used for any changes that involves the core |
 
-Most common Subscope that is used:
+Most common Subscopes that are used:
 
 | Subscope | DB | Script | Core |
+| :--- | :- |
 | Creature | x | x | |
 | Quest | x | x | |
 | Boss | x | x | |
