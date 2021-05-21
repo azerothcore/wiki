@@ -16,9 +16,9 @@ vmap4extractor.exe
 vmap4assembler.exe
 ```
 
-2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.2
+2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.
 
-3. Create **mmaps** and **vmaps** folders in your World of Warcraft directoryt.
+3. Create **mmaps** and **vmaps** folders in your World of Warcraft directory.
 
 4. Launch extractor.bat and select your extractor options.
 
@@ -34,9 +34,9 @@ vmap4assembler.exe
 
 - **Optional but extremely recommended: Extract mmaps.** Do not attempt to stop this process while it is exctracting.
 
-4. Create a new folder in **C:\Build\RelWithDebInfo** \* called **Data**
+5. Create a new folder in **C:\Build\RelWithDebInfo** \* called **Data**
 
-5. Move the vmaps, maps, dbc, cameras into the **Data** folder.
+6. Move the vmaps, maps, dbc, cameras into the **Data** folder.
 
 \* Can be found in RelWithDebInfo, Debug or Release.
 
