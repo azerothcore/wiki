@@ -59,57 +59,62 @@ Due to it's ubiquity telnet is easy to use from almost anywhere.
 
 Soap works using standard HTTP POST. The entire post payload is XML.
 
-	<SOAP-ENV:Envelope  
-	    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
-	    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
-	    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" 
-	    xmlns:xsd="http://www.w3.org/1999/XMLSchema" 
-	    xmlns:ns1="urn:AC">
-	    <SOAP-ENV:Body>
-		<ns1:executeCommand>
-	 	    <command>server status</command>
-	 	</ns1:executeCommand>
-	    </SOAP-ENV:Body>
-	</SOAP-ENV:Envelope>
+```xml
+<SOAP-ENV:Envelope  
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema" 
+    xmlns:ns1="urn:AC">
+    <SOAP-ENV:Body>
+	<ns1:executeCommand>
+	    <command>server status</command>
+	</ns1:executeCommand>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 
 The response will look like this:
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<SOAP-ENV:Envelope
-	  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-	  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
-	  xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
-	  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
-	  xmlns:ns1="urn:AC">
-	  <SOAP-ENV:Body>
-	    <ns1:executeCommandResponse>
-	      <result>AzerothCore rev. 6f4f0043c2ab+ 2021-05-18 02:16:59 +0200 (master branch) (Win64, RelWithDebInfo)&#xD;
-	Connected players: 0. Characters in world: 0.&#xD;
-	Connection peak: 0.&#xD;
-	Server uptime: 5 second(s).&#xD;
-	Update time diff: 10ms, average: 10ms.&#xD;
-	</result>
-	    </ns1:executeCommandResponse>
-	  </SOAP-ENV:Body>
-	</SOAP-ENV:Envelope>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:ns1="urn:AC">
+  <SOAP-ENV:Body>
+    <ns1:executeCommandResponse>
+      <result>AzerothCore rev. 6f4f0043c2ab+ 2021-05-18 02:16:59 +0200 (master branch) (Win64, RelWithDebInfo)&#xD;
+Connected players: 0. Characters in world: 0.&#xD;
+Connection peak: 0.&#xD;
+Server uptime: 5 second(s).&#xD;
+Update time diff: 10ms, average: 10ms.&#xD;
+</result>
+    </ns1:executeCommandResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 
 Error response looks like this
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<SOAP-ENV:Envelope
-	  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-	  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
-	  xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
-	  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
-	  xmlns:ns1="urn:AC">
-	  <SOAP-ENV:Body>
-	    <SOAP-ENV:Fault>
-	      <faultcode>SOAP-ENV:Client</faultcode>
-	      <faultstring>Error 401: HTTP 401 Unauthorized</faultstring>
-	    </SOAP-ENV:Fault>
-	  </SOAP-ENV:Body>
-	</SOAP-ENV:Envelope>
-
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:ns1="urn:AC">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Fault>
+      <faultcode>SOAP-ENV:Client</faultcode>
+      <faultstring>Error 401: HTTP 401 Unauthorized</faultstring>
+    </SOAP-ENV:Fault>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 
 You need to authenticate by putting the username and password in the URI like this: `http://soapuser:abcd1234@localhost:7878/` (this is also known as "basic auth")
 
@@ -121,15 +126,17 @@ setting request header `Content-Type: application/xml` is not needed. For now.
     <summary>PHP</summary>
 	
 using built-in [SoapClient](https://www.php.net/manual/en/class.soapclient.php)
-	
-    $conn = new SoapClient(NULL, array(
-        'location' => "http://{{ ip }}:{{ port }}/",
-        'uri'      => 'urn:AC',
-        'style'    => SOAP_RPC,
-        'login'    => 'soapuser',
-        'password' => 'abcd1234'
-    ));
-    echo $conn->executeCommand(new SoapParam('server info', 'command'));
+
+```php
+$conn = new SoapClient(NULL, array(
+'location' => "http://{{ ip }}:{{ port }}/",
+'uri'      => 'urn:AC',
+'style'    => SOAP_RPC,
+'login'    => 'soapuser',
+'password' => 'abcd1234'
+));
+echo $conn->executeCommand(new SoapParam('server info', 'command'));
+```
 	
 </details>
 <details>
@@ -137,53 +144,55 @@ using built-in [SoapClient](https://www.php.net/manual/en/class.soapclient.php)
 	
 using [xml2js](https://www.npmjs.com/package/xml2js) to parse the response. Please make sure to sanitize the inputs.
 	
-    function AzerothCore_Soap(command){
-	    return new Promise((resolve, reject)=>{
-		var req = http.request(<http.ClientRequestArgs>{
-		    port: 7878,
-		    method: "POST",
-		    hostname: "localhost",
-		    auth: "soapuser:abcd1234",
-		    headers: { 'Content-Type': 'application/xml' }
-		}, res=>{
-		    res.on('data', async d => {
-			var xml = await xml2js.parseStringPromise(d.toString());
+```javascript
+function AzerothCore_Soap(command){
+    return new Promise((resolve, reject)=>{
+	var req = http.request(<http.ClientRequestArgs>{
+	    port: 7878,
+	    method: "POST",
+	    hostname: "localhost",
+	    auth: "soapuser:abcd1234",
+	    headers: { 'Content-Type': 'application/xml' }
+	}, res=>{
+	    res.on('data', async d => {
+		var xml = await xml2js.parseStringPromise(d.toString());
 
-			var body = xml["SOAP-ENV:Envelope"]["SOAP-ENV:Body"][0];
-			var fault = body["SOAP-ENV:Fault"];
-			if(fault){
-			    resolve({
-				faultCode  : fault[0]["faultcode"][0],
-				faultString: fault[0]["faultstring"][0],
-			    });
-			    return;
-			}
-			var response = body["ns1:executeCommandResponse"];
-			if(response){
-			    resolve({
-				result: response[0]["result"][0]
-			    });
-			    return;
-			}
-			console.log(d.toString());
-		    })
-		});
-		req.write(
-		    '<SOAP-ENV:Envelope' +
-		    ' xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"' +
-		    ' xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"' +
-		    ' xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"' +
-		    ' xmlns:xsd="http://www.w3.org/1999/XMLSchema"' +
-		    ' xmlns:ns1="urn:AC">' +
-		    '<SOAP-ENV:Body>' +
-		    '<ns1:executeCommand>' +
-			'<command>'+command+'</command>' +
-		    '</ns1:executeCommand>' +
-		    '</SOAP-ENV:Body>' +
-		    '</SOAP-ENV:Envelope>'
-		);
-		req.end();
-	    });
-	}
+		var body = xml["SOAP-ENV:Envelope"]["SOAP-ENV:Body"][0];
+		var fault = body["SOAP-ENV:Fault"];
+		if(fault){
+		    resolve({
+			faultCode  : fault[0]["faultcode"][0],
+			faultString: fault[0]["faultstring"][0],
+		    });
+		    return;
+		}
+		var response = body["ns1:executeCommandResponse"];
+		if(response){
+		    resolve({
+			result: response[0]["result"][0]
+		    });
+		    return;
+		}
+		console.log(d.toString());
+	    })
+	});
+	req.write(
+	    '<SOAP-ENV:Envelope' +
+	    ' xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"' +
+	    ' xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"' +
+	    ' xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"' +
+	    ' xmlns:xsd="http://www.w3.org/1999/XMLSchema"' +
+	    ' xmlns:ns1="urn:AC">' +
+	    '<SOAP-ENV:Body>' +
+	    '<ns1:executeCommand>' +
+		'<command>'+command+'</command>' +
+	    '</ns1:executeCommand>' +
+	    '</SOAP-ENV:Body>' +
+	    '</SOAP-ENV:Envelope>'
+	);
+	req.end();
+    });
+}
+```
 	
 </details>
