@@ -1,3 +1,7 @@
+---
+redirect_from: "/How-to-make-a-PR"
+---
+
 # How to create a PR
 
 - [How to create a PR using Git](how-to-create-a-pr-git)
