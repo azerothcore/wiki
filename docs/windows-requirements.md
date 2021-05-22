@@ -32,6 +32,18 @@
     
     1. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
 
+    1. Add MySQL to Environment Variables.
+    
+        1. Go to Control Panel -> System
+        
+        1. Go to Advanced System Settings
+
+        1. Go to Environment Variables
+        
+        1. Under "Systemvariables" select **Path**
+        
+        1. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\**
+
 1. Choose a database management tool
 
     1. mysql cli (Fastest)
@@ -53,8 +65,6 @@
     1. Download and install the **Latest Release** win32-x86.exe file, **NEVER the RC (Release Candidate) versions.**
     
     1. We recommend to compile in 64 bits mode. 
-    
-    1. Note: If used different MySQL server e.g Wampserver with included MySQL or any other software, then is needed to point cmake to that directory. Add an environment variable to "System" variable named "MYSQL_ROOT" and as value your MySQL installation directory, e.g "c:/wamp/bin/mysql/mysql5.7.19". Important is to use "/", not "\"  when pointing to directory.
 
 1. MySQL development files
 
