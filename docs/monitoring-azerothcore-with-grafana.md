@@ -6,7 +6,7 @@ tableofcontents: 1
 
 ## Required Software
 
-1. [Influx DB](https://www.influxdata.com/products/influxdb-overview/) - a time-series data storage.
+1. [Influx DB](https://www.influxdata.com/products/influxdb-overview/) 1.x - a time-series data storage.
 
 1. [Grafana](https://grafana.com/) - graph and a dashboard builder for visualizing time series metrics.
 
