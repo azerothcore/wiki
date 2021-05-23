@@ -140,14 +140,14 @@ echo $conn->executeCommand(new SoapParam('server info', 'command'));
 	
 </details>
 <details>
-    <summary>NodeJS</summary>
+    <summary>NodeJS (TypeScript)</summary>
 	
 using [xml2js](https://www.npmjs.com/package/xml2js) to parse the response. Please make sure to sanitize the inputs.
 	
-```javascript
+```typescript
 function AzerothCore_Soap(command){
     return new Promise((resolve, reject)=>{
-	var req = http.request(<http.ClientRequestArgs>{
+	const req = http.request({
 	    port: 7878,
 	    method: "POST",
 	    hostname: "localhost",
@@ -155,10 +155,10 @@ function AzerothCore_Soap(command){
 	    headers: { 'Content-Type': 'application/xml' }
 	}, res=>{
 	    res.on('data', async d => {
-		var xml = await xml2js.parseStringPromise(d.toString());
+		const xml = await xml2js.parseStringPromise(d.toString());
 
-		var body = xml["SOAP-ENV:Envelope"]["SOAP-ENV:Body"][0];
-		var fault = body["SOAP-ENV:Fault"];
+		const body = xml["SOAP-ENV:Envelope"]["SOAP-ENV:Body"][0];
+		const fault = body["SOAP-ENV:Fault"];
 		if(fault){
 		    resolve({
 			faultCode  : fault[0]["faultcode"][0],
@@ -166,7 +166,7 @@ function AzerothCore_Soap(command){
 		    });
 		    return;
 		}
-		var response = body["ns1:executeCommandResponse"];
+		const response = body["ns1:executeCommandResponse"];
 		if(response){
 		    resolve({
 			result: response[0]["result"][0]
