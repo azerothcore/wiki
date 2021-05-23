@@ -8,97 +8,42 @@
 | |
 | :- |
 | MySQL ≥ 5.7.0 |
+| Boost ≥ 1.67 |
 | CMake ≥ 3.16 |
 | Clang ≥ [7](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
 #### Ubuntu with MariaDB 10.x
 
 ```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
+sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
 ```
 
 #### Ubuntu with MySQL 8.x
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libboost-all-dev libace-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
-**Note**: in older versions of Ubuntu like **18.04** you need to install gcc 10:
+**Note**: in older versions of Ubuntu like **18.04** you need to install `gcc-10` and `libboost1.74-dev`:
 
 ```
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:mhier/libboost-latest
 sudo apt-get update
-sudo apt install gcc-10 g++-10
+sudo apt install -y gcc-10 g++-10
+sudo apt install -y install libboost1.74-dev
 ```
 
 --- 
 
-#### Debian 8
-
-```sh
-sudo apt-get update && sudo apt-get install git make gcc g++ clang libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
-```
-
-Remember that if you are using the `root` user, it is not necessary to use `sudo`.
-
-#### Install last cmake version on Debian 8
-
-To install last version of cmake use:
-
-```sh
-sudo apt install python3-pip
-pip3 install --upgrade cmake
-```
-
-If you are using the `root` user
-
-```sh
-apt install python3-pip
-pip3 install --upgrade cmake
-```
-
-Than **reboot** to sync the bash and use cmake from the terminal, than type the followings commands to check the cmake version:
-
-```sh
-cmake --version
-```
-
-You should have a version **>= 3.16**.
-
-Continue below the guide to install the other installation requirements.
-
-**Troubleshooting (cmake install)**: if you get any errors like: `No module named 'skbuild'`, you can solve with this:
-
-```sh
-apt install python3-pip
-pip3 install scikit-build
-pip3 install --upgrade pip
-pip3 install cmake
-```
-
----
-
-#### Debian 9
-
-```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl1.0-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libace-dev
-```
-
-Remember that if you are using the `root` user, it is not necessary to use `sudo`.
-
-You might need to add the stretch-backports repositories to APT in order to install clang-6.x+ and cmake v3.8+.
-If you do not succeed installing cmake you can use the package manager of python3 (pip3)
-
----
-
 #### Debian 10
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -156,7 +101,7 @@ you can install gcc-8:
 sudo apt-get install g++-8 gcc-8
 ```
 
-<br>
+---
 
 ## Help
 
