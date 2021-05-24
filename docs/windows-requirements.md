@@ -20,7 +20,8 @@
 
    You will need to install the C++ compiler.
    
-   To do this, select **Custom** in the type of installation and pick **Common Tools for Visual C++ 2019** in **Programming Languages -> Visual C++**
+   To do this, select **Desktop development for C++** under **Workloads -> Desktop & Mobile**.
+
 1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
 
     1. Download the Windows MSI Installer.
