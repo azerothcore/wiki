@@ -95,11 +95,14 @@
 
     1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
 
-    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `C:/local/boost_1_74_0`. Important is to use '/', not '\'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
+    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `C:/local/boost_1_74_0`. Important is to use '/', not '\'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the images below.)
 
-    1. ![image](https://user-images.githubusercontent.com/18329778/118027284-f4928080-b38b-11eb-982c-39c632713580.png) Copyright (C) TrinityCore
+    1. ![image](https://user-images.githubusercontent.com/75517/119373230-7baef500-bcb8-11eb-8b38-c214a766b5ec.png)
+    1. ![image](https://user-images.githubusercontent.com/75517/119373256-823d6c80-bcb8-11eb-8a46-72059ee3b899.png)
+    1. ![image](https://user-images.githubusercontent.com/75517/119373280-879ab700-bcb8-11eb-9478-617b4d7ab3c3.png)
+    1. ![image](https://user-images.githubusercontent.com/75517/119373290-89647a80-bcb8-11eb-9e4d-532aa4685802.png)
 
-    1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
+    1. Notice that this image shows the version number `1.74.0` - use your actual version number in your settings.
   
 <br>
 
