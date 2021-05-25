@@ -38,18 +38,36 @@ The client build.
 
 ### majorVersion
 
+`field-no-description|2`
+
 ### minorVersion
+
+`field-no-description|3`
 
 ### bugfixVersion
 
+`field-no-description|4`
+
 ### hotfixVersion
+
+`field-no-description|5`
 
 ### winAuthSeed
 
+`field-no-description|6`
+
 ### win64AuthSeed
+
+`field-no-description|7`
 
 ### mac64AuthSeed
 
+`field-no-description|8`
+
 ### winChecksumSeed
 
+`field-no-description|9`
+
 ### macChecksumSeed
+
+`field-no-description|10`
