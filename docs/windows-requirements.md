@@ -21,7 +21,7 @@
 
    You will need to install the C++ compiler.
    
-   To do this, select **Custom** in the type of installation and pick **Common Tools for Visual C++ 2019** in **Programming Languages -> Visual C++**
+   To do this, select **Desktop development for C++** under **Workloads -> Desktop & Mobile**.
 
    <a href="../images/visualstudio.jpg" target="_blank">
    <img src="../images/visualstudio.jpg" height="50%" width="50%">

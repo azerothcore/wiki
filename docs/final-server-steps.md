@@ -28,6 +28,11 @@ For detailed information on how to configure a restarter and a debugger go to [h
 
 ## [Account Creation](Creating-Accounts.md)
 
+
+## Setting up Remote Access
+You could be satisfied with creating users manually in the world console. But at some point you should set up a registration form, so you wont have to paste their passwords.
+Check out [Remote Access](/wiki/Remote-Access) on how to send commands into the server.
+
 <br>
 
 ## Help
