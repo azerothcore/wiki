@@ -52,35 +52,147 @@ In a more simplified format: SOAP for websites, telnet for command line.
 
 Due to it's ubiquity telnet is easy to use from almost anywhere. 
 
-1. open up a terminal session (or PuTTY) and type in `telnet {{ ip }} {{port}}`
+1. open up a terminal session (or PuTTY) and type in `telnet localhost 3443`
 2. Enter your username and password.
 
 #### Soap
 
-Soap works using POST requests on the HTTP protocol. If you are using php for your server, these is a module that will create and send SOAPs for you, namely:
+Soap works using standard HTTP POST. The entire post payload is XML.
 
-    $conn = new SoapClient(NULL, array(
-        'location' => "http://{{ ip }}:{{ port }}/",
-        'uri'      => 'urn:TC',
-        'style'    => SOAP_RPC,
-        'login'    => '{{ username }}',
-        'password' => '{{ password }}'
-    ));
-    echo $conn->executeCommand(new SoapParam('server info', 'command'));
+```xml
+<SOAP-ENV:Envelope  
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" 
+    xmlns:xsd="http://www.w3.org/1999/XMLSchema" 
+    xmlns:ns1="urn:AC">
+    <SOAP-ENV:Body>
+	<ns1:executeCommand>
+	    <command>server status</command>
+	</ns1:executeCommand>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 
-However if you are not using php, it's a little more complicated. Or, it was before this documentation showed up! To create a valid soap request you need to include the appropriate xml namespaces. These were taken directly from the ones the server itself uses. You can see the SOAP itself is taken from the SOAP-ENV schema. Under the ns1 namespace are the commands we need to interact with the server. All commands go in the body of the SOAP. To send a command, you call the function executeCommand in the ns1 namespace and send the parameter command to the server. In this case our command gets the server status.
+The response will look like this:
 
-	<SOAP-ENV:Envelope  
-		xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
-		xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
-		xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance" 
-		xmlns:xsd="http://www.w3.org/1999/XMLSchema" 
-		xmlns:ns1="urn:TC">
-		<SOAP-ENV:Body>
-	 		<ns1:executeCommand>
-	 			<command>server status</command>
-	 		</ns1:executeCommand>
-		</SOAP-ENV:Body>
-	</SOAP-ENV:Envelope>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:ns1="urn:AC">
+  <SOAP-ENV:Body>
+    <ns1:executeCommandResponse>
+      <result>AzerothCore rev. 6f4f0043c2ab+ 2021-05-18 02:16:59 +0200 (master branch) (Win64, RelWithDebInfo)&#xD;
+Connected players: 0. Characters in world: 0.&#xD;
+Connection peak: 0.&#xD;
+Server uptime: 5 second(s).&#xD;
+Update time diff: 10ms, average: 10ms.&#xD;
+</result>
+    </ns1:executeCommandResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 
-The response to this command is what you would expect from the terminal.
+Error response looks like this
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+  xmlns:ns1="urn:AC">
+  <SOAP-ENV:Body>
+    <SOAP-ENV:Fault>
+      <faultcode>SOAP-ENV:Client</faultcode>
+      <faultstring>Error 401: HTTP 401 Unauthorized</faultstring>
+    </SOAP-ENV:Fault>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
+You need to authenticate by putting the username and password in the URI like this: `http://soapuser:abcd1234@localhost:7878/` (this is also known as "basic auth")
+
+setting request header `Content-Type: application/xml` is not needed. For now.
+
+## Code Examples
+
+<details>
+    <summary>PHP</summary>
+	
+using built-in [SoapClient](https://www.php.net/manual/en/class.soapclient.php)
+
+```php
+$conn = new SoapClient(NULL, array(
+'location' => "http://{{ ip }}:{{ port }}/",
+'uri'      => 'urn:AC',
+'style'    => SOAP_RPC,
+'login'    => 'soapuser',
+'password' => 'abcd1234'
+));
+echo $conn->executeCommand(new SoapParam('server info', 'command'));
+```
+	
+</details>
+<details>
+    <summary>NodeJS (TypeScript)</summary>
+	
+using [xml2js](https://www.npmjs.com/package/xml2js) to parse the response. Please make sure to sanitize the inputs.
+	
+```typescript
+function AzerothCore_Soap(command){
+    return new Promise((resolve, reject)=>{
+	const req = http.request({
+	    port: 7878,
+	    method: "POST",
+	    hostname: "localhost",
+	    auth: "soapuser:abcd1234",
+	    headers: { 'Content-Type': 'application/xml' }
+	}, res=>{
+	    res.on('data', async d => {
+		const xml = await xml2js.parseStringPromise(d.toString());
+
+		const body = xml["SOAP-ENV:Envelope"]["SOAP-ENV:Body"][0];
+		const fault = body["SOAP-ENV:Fault"];
+		if(fault){
+		    resolve({
+			faultCode  : fault[0]["faultcode"][0],
+			faultString: fault[0]["faultstring"][0],
+		    });
+		    return;
+		}
+		const response = body["ns1:executeCommandResponse"];
+		if(response){
+		    resolve({
+			result: response[0]["result"][0]
+		    });
+		    return;
+		}
+		console.log(d.toString());
+	    })
+	});
+	req.write(
+	    '<SOAP-ENV:Envelope' +
+	    ' xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"' +
+	    ' xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"' +
+	    ' xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"' +
+	    ' xmlns:xsd="http://www.w3.org/1999/XMLSchema"' +
+	    ' xmlns:ns1="urn:AC">' +
+	    '<SOAP-ENV:Body>' +
+	    '<ns1:executeCommand>' +
+		'<command>'+command+'</command>' +
+	    '</ns1:executeCommand>' +
+	    '</SOAP-ENV:Body>' +
+	    '</SOAP-ENV:Envelope>'
+	);
+	req.end();
+    });
+}
+```
+	
+</details>
