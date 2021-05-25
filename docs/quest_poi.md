@@ -52,7 +52,7 @@ The ID from [WorldMapArea.dbc](WorldMapArea).
 
 ### Floor
 
-This is the AreaID of the POI. (AreaTable.dbc ID)
+This is the ID from [AreaTable.dbc](AreaTable.md) of the POI.
 
 ### Priority
 
