@@ -14,6 +14,7 @@
 | MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview)
 
 1. Git Extensions
+
     1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
 
 1. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
@@ -21,6 +22,10 @@
    You will need to install the C++ compiler.
    
    To do this, select **Desktop development for C++** under **Workloads -> Desktop & Mobile**.
+
+   <a href="../images/visualstudio.jpg" target="_blank">
+   <img src="../images/visualstudio.jpg" height="50%" width="50%">
+   </a>
 
 1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
 
@@ -95,9 +100,11 @@
 
     1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
 
-    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `C:/local/boost_1_74_0`. Important is to use '/', not '\'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
+    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
 
-    1. ![image](https://user-images.githubusercontent.com/18329778/118027284-f4928080-b38b-11eb-982c-39c632713580.png) Copyright (C) TrinityCore
+    <a href="../images/boost.jpg" target="_blank">
+    <img src="../images/boost.jpg" height="50%" width="50%">
+    </a>
 
     1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
   

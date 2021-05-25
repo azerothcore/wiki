@@ -50,6 +50,7 @@ Example quest: Secreat Communication.
 | 8318    | 3    | 7    | -6326 | -7   | 0             |
 
 **These points are all the little corners on the blue box. idx1 represents an area defined by the points of idx2 to draw the shape.**
+
 ![image](https://user-images.githubusercontent.com/1884642/119476187-bca11b00-bd45-11eb-95e5-876960f24457.png)
 
 ### x
