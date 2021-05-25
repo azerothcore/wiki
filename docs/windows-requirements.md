@@ -96,7 +96,7 @@
 
     1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
 
-    1. <img src="../images/boost.png" height="50%" width="50%">
+    <img src="../images/boost.png" height="75%" width="75%">
 
     1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
   
