@@ -14,6 +14,7 @@
 | MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview)
 
 1. Git Extensions
+
     1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
 
 1. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
@@ -21,6 +22,11 @@
    You will need to install the C++ compiler.
    
    To do this, select **Custom** in the type of installation and pick **Common Tools for Visual C++ 2019** in **Programming Languages -> Visual C++**
+
+   <a href="../images/visualstudio.jpg" target="_blank">
+   <img src="../images/visualstudio.jpg" height="50%" width="50%">
+   </a>
+
 1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
 
     1. Download the Windows MSI Installer.
