@@ -12,8 +12,8 @@ Running the Worldserver and Authserver through Visual Studio has some benefits.
 
 1. Choose the desired build configuration, in this guide we will refer to Debug.
 
-    <a href="/images/run-worldserver-and-authserver-in-visual-studio-1.jpg" target="_blank">
-    <img src="/images/run-worldserver-and-authserver-in-visual-studio-1.jpg" height="50%" width="50%">
+    <a href="/wiki/images/run-worldserver-and-authserver-in-visual-studio-1.jpg" target="_blank">
+    <img src="/wiki/images/run-worldserver-and-authserver-in-visual-studio-1.jpg" height="50%" width="50%">
     </a>
 
 1. Right-click **Solution 'AzerothCore' (20 of 20 projects)**.
@@ -24,8 +24,8 @@ Running the Worldserver and Authserver through Visual Studio has some benefits.
 
         1. In the dropdown menu, select **Start** for **authserver** and **worldserver**.
 
-    <a href="/images/run-worldserver-and-authserver-in-visual-studio-2.jpg" target="_blank">
-    <img src="/images/run-worldserver-and-authserver-in-visual-studio-2.jpg" height="50%" width="50%">
+    <a href="/wiki/images/run-worldserver-and-authserver-in-visual-studio-2.jpg" target="_blank">
+    <img src="/wiki/images/run-worldserver-and-authserver-in-visual-studio-2.jpg" height="50%" width="50%">
     </a>
 
 1. Right-click **authserver**.
@@ -38,8 +38,8 @@ Running the Worldserver and Authserver through Visual Studio has some benefits.
 
         1. In **Working Directory** choose your path to the directory of your binaries.
 
-    <a href="/images/run-worldserver-and-authserver-in-visual-studio-3.jpg" target="_blank">
-    <img src="/images/run-worldserver-and-authserver-in-visual-studio-3.jpg" height="50%" width="50%">
+    <a href="/wiki/images/run-worldserver-and-authserver-in-visual-studio-3.jpg" target="_blank">
+    <img src="/wiki/images/run-worldserver-and-authserver-in-visual-studio-3.jpg" height="50%" width="50%">
     </a>
 
 1. Do step 3. for **worldserver** as well.
