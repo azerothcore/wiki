@@ -23,8 +23,8 @@
    
    To do this, select **Desktop development for C++** under **Workloads -> Desktop & Mobile**.
 
-   <a href="/images/visualstudio.jpg" target="_blank">
-   <img src="/images/visualstudio.jpg" height="50%" width="50%">
+   <a href="/wiki/images/visualstudio.jpg" target="_blank">
+   <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
 1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
@@ -102,8 +102,8 @@
 
     1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
 
-    <a href="/images/boost.jpg" target="_blank">
-    <img src="/images/boost.jpg" height="50%" width="50%">
+    <a href="/wiki/images/boost.jpg" target="_blank">
+    <img src="/wiki/images/boost.jpg" height="50%" width="50%">
     </a>
 
     1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
