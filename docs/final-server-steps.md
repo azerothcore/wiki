@@ -26,12 +26,12 @@ For detailed information on how to configure a restarter and a debugger go to [h
 
 - The AzerothCore realm should be selectable. Log in, create a character, and you're all done!
 
-## [Account Creation](Creating-Accounts.md)
+## Creating an Account
 
+Read [creating accounts](Creating-Accounts.md).
 
 ## Setting up Remote Access
-You could be satisfied with creating users manually in the world console. But at some point you should set up a registration form, so you wont have to paste their passwords.
-Check out [Remote Access](/wiki/Remote-Access) on how to send commands into the server.
+For development purposes, this step is not necessary. However, for increased security when you want other people to make accounts you should set up a registration form, so you don't have to paste their passwords. Check out [Remote Access](Remote-Access.md) on how to send commands into the server.
 
 <br>
 
