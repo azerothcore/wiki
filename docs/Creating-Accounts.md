@@ -1,12 +1,27 @@
-# Creating Your First Account
+# Creating Accounts
 
-Your first account will need to be created from the worldserver console.  After you start the worldserver it will function as an interactive console.  In your worldserver console you can use the following command to create a new user:
+To be able to log in to your new server you need an account. 
 
-`account create <username> <password>`
+It is recommended to use security level 3 for your own account.
 
-Note that any gm commands issued from the worldconsole do not require a . in front of them as all inputs are considered server commands.  This will create a basic account with no admin rights. Here is an example of creating an account with the name acoreuser and abc123 as the password:
+## To create an account
 
-`account create acoreuser abc123`
+```
+account create <user> <pass>
+```
+
+## To set your account security level
+
+| Level | Security Level |
+| :---: | :------------- 
+| 0 | SEC_PLAYER |
+| 1 | SEC_MODERATOR |
+| 2 | SEC_GAMEMASTER |
+| 3 | SEC_ADMINISTRATOR |
+
+```
+account set gmlevel <user> <level> <realm> (-1 all realms)
+```
 
 ## Changing password
 
@@ -14,26 +29,17 @@ Note that any gm commands issued from the worldconsole do not require a . in fro
 account set password <user> <password> <password>
 ```
 
-# Modifying Account GM Levels
+## Higher security level
 
-From the worldserver console you can use the account set gmlevel command to modify the gm rights for user.  The available levels range from 0 (no access) to 3 (most access).  The following command is used to set gm levels for an account:
+The highest security level is SEC_CONSOLE (4) which your worlserver has by default.
 
-`account set gmlevel <accountname> <gmlevel> <realmid>`
+It has access to account management and is not recommended for in-game accounts for anyone that does not know what they are doing.
 
-The realm ID indicates what realm their account will have GM access to.  If you only have one realm or if you want the account to have blanket gm privleges to all realms just use -1.  Otherwise you will use the realm id in your auth.realmlist table.  To give our acoreuser full gm rights on all realms we'd run the following command:
+To update an account to security level 4 you need to manually edit the fields in the database or run the query below.
 
-`account set gmlevel acoreuser 3 -1`
+```sql
+UPDATE account_access AS access
+INNER JOIN account AS account ON access.id = account.id
+SET gmlevel = 4 WHERE name = '<user>';
+```
 
-# Higher Level Access
-
-It is possible to give a user level 4 GM access which will give them the ability to do account management in-game.  This is not recommended as they will have access not only to create, but also delete accounts.  If you want to provide them this access you can either use your preferred MySQL application to modify the needed tables or do it from the mysql command line.  If doing it from the MySQL console just use the following command:
-
-`UPDATE auth.account_access AS access
-INNER JOIN auth.account AS account ON access.id = account.id
-SET gmlevel = '4' WHERE name = '<accountName>';`
-
-In this case we are assuming you used the default database name of auth.  If you named your database differently make sure to change it in the preceding code.  If we wanted to change our acoreuser to a GM level of 4 we would execute the following sql command:
-
-`UPDATE auth.account_access AS access
-INNER JOIN auth.account AS account ON access.id = account.id
-SET gmlevel = '4' WHERE name = 'acoreuser';`
