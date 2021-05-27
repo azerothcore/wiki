@@ -13,6 +13,7 @@
 * [Directory structure](Directory-Structure.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)
 * [Logging Configuration](logging-configuration.md)
+* [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana.md)
 * [MySQL types (C++)](MySQLtypesC++.md)
 * [Project Versioning](Project-Versioning.md)
 * [SQL Versioning](SQL-Versioning.md)
