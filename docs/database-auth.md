@@ -7,6 +7,7 @@ The auth database currently has 14 tables, which mainly store information relate
 - [account_banned](account_banned.md)
 - [account_muted](account_muted.md)
 - [autobroadcast](autobroadcast.md)
+- [build_info](build_info.md)
 - [ip2nation](ip2nation.md)
 - [ip2nationCountries](ip2nationCountries.md)
 - [ip_banned](ip_banned.md)
