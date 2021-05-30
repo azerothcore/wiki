@@ -451,6 +451,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |send message|3|`.send message $playername $message`|Send screen message to player from ADMINISTRATOR. **Will return an error if player is offline (can be problematic with SOAP for example)!**|
 |send money|2|`.send money #playername "#subject" "#text" #money`|Send mail with money to a player. Subject and mail text must be in "".|
 |server corpses|2|`.server corpses`|Triggering corpses expire check in world.|
+|server debug|3|`.server debug`|Shows detailed information about the server setup, useful when reporting a bug.|
 |server exit|4|`.server exit`|Terminate worldserver NOW. Exit code 0.|
 |server idlerestart cancel|3|`.server idlerestart cancel`|Cancel the restart/shutdown timer if any.|
 |server idlerestart|4|`.server idlerestart #delay [#exit_code]`|Restart the server after #delay seconds if no active connections are present (no players). Use #exit_code to change the exit code, default = 2.|
