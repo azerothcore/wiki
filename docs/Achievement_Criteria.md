@@ -1,7 +1,3 @@
----
-redirect_from: "/Achievement_Criteria"
----
-
 # Achievement Criteria
 
 `Back-to:DBC`
