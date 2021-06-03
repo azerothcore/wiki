@@ -8,10 +8,10 @@ This table holds arena info about specific team members. All arena\_team members
 
 **Structure**
 
-| Field               | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|---------------------|-------------|------------|-----|------|---------|-------|---------|
-| [arenaTeamId][1]    | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [guid][2]           | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [arenaTeamId][1]    | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [guid][2]           | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [personalRating][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [weekGames][4]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [weekWins][5]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |

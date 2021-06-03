@@ -15,7 +15,7 @@ This dbc contains the zone and subzone lists. For the purposes of this wiki arti
 ## Structure
 
 | Column | Name             | Type   | Notes                                                         |
-|--------|------------------|--------|---------------------------------------------------------------|
+| ------ | ---------------- | ------ | ------------------------------------------------------------- |
 | 1      | ID               | Int    | Zone Area                                                     |
 | 2      | MapID            | Int    | Map or Continent                                              |
 | 3      | AreaID           | Int    | SubArea of Map                                                |
@@ -33,7 +33,7 @@ This dbc contains the zone and subzone lists. For the purposes of this wiki arti
 ## Flags
 
 | Value      | Name                     | Notes                                                                                                                                                                                          |
-|------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0x00000001 | AREA_FLAG_SNOW           | snow (only Dun Morogh, Naxxramas, Razorfen Downs and Winterspring)                                                                                                                             |
 | 0x00000002 | AREA_FLAG_UNK1           | may be necropolis?                                                                                                                                                                             |
 | 0x00000004 | AREA_FLAG_UNK2           | Only used for areas on map 571 (development before)                                                                                                                                            |
@@ -69,7 +69,7 @@ This dbc contains the zone and subzone lists. For the purposes of this wiki arti
 ## Content
 
 | Field Nb | Name                                                 | MapID | AreaID |
-|----------|------------------------------------------------------|-------|--------|
+| -------- | ---------------------------------------------------- | ----- | ------ |
 | 1        | Dun Morogh                                           | 0     | 0      |
 | 2        | Longshore                                            | 0     | 40     |
 | 3        | Badlands                                             | 0     | 0      |
