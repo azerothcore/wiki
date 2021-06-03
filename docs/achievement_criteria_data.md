@@ -8,13 +8,13 @@ This table contains the data that a player needs to obtain / complete in order t
 
 **Structure**
 
-| Field            | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|------------------|--------------|------------|-----|------|---------|-------|---------|
 | [criteria_id][1] | MEDIUMINT |            | PRI | NO   |         |       |         |
 | [type][2]        | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [value1][3]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [value2][4]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ScriptName][5]  | char(64)  |            |     | NO   |         |       |         |
+| [ScriptName][5]  | char(64)     |            |     | NO   |         |       |         |
 
 [1]: #criteria_id
 [2]: #type
@@ -33,7 +33,7 @@ This is the ID from [Achievement\_Criteria.dbc](Achievement+Criteria).
 Depending on this value, it will determine how value1 and value2 are used.
 
 | Type | Name                      |
-| ---- | ------------------------- |
+|------|---------------------------|
 | 0    | TYPE_NONE                 |
 | 1    | TYPE_T_CREATURE           |
 | 2    | TYPE_T_PLAYER_CLASS_RACE  |
@@ -191,7 +191,7 @@ Depending on this value, it will determine how value1 and value2 are used.
 **TYPE\_VALUE**
 
 | ComparisationType        |
-| ------------------------ |
+|--------------------------|
 | COMP\_TYPE\_EQ = 0       |
 | COMP\_TYPE\_HIGH = 1     |
 | COMP\_TYPE\_LOW = 2      |

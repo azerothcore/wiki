@@ -12,18 +12,18 @@ NOTE: The % arguments need to stay in the exact same order as they are provided 
 
 **Structure**
 
-| Field                | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|----------------------|--------------|------------|-----|------|---------|-------|---------|
 | [entry][1]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [content_default][2] | text      |            |     | NO   |         |       |         |
-| [locale_koKR][3]     | text      |            |     | YES  |         |       |         |
-| [locale_frFR][3]     | text      |            |     | YES  |         |       |         |
-| [locale_deDE][3]     | text      |            |     | YES  |         |       |         |
-| [locale_zhCN][3]     | text      |            |     | YES  |         |       |         |
-| [locale_zhTW][3]     | text      |            |     | YES  |         |       |         |
-| [locale_esES][3]     | text      |            |     | YES  |         |       |         |
-| [locale_esMX][3]     | text      |            |     | YES  |         |       |         |
-| [locale_ruRU][3]     | text      |            |     | YES  |         |       |         |
+| [content_default][2] | text         |            |     | NO   |         |       |         |
+| [locale_koKR][3]     | text         |            |     | YES  |         |       |         |
+| [locale_frFR][3]     | text         |            |     | YES  |         |       |         |
+| [locale_deDE][3]     | text         |            |     | YES  |         |       |         |
+| [locale_zhCN][3]     | text         |            |     | YES  |         |       |         |
+| [locale_zhTW][3]     | text         |            |     | YES  |         |       |         |
+| [locale_esES][3]     | text         |            |     | YES  |         |       |         |
+| [locale_esMX][3]     | text         |            |     | YES  |         |       |         |
+| [locale_ruRU][3]     | text         |            |     | YES  |         |       |         |
 
 [1]: #entry
 [2]: #content\_default

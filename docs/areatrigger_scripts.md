@@ -8,10 +8,10 @@ Allows for an area trigger to be scripted with Trinity Script.
 
 **Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-----------------|--------------|------------|-----|------|---------|-------|---------|
 | [entry][1]      | MEDIUMINT |            | PRI | NO   |         |       |         |
-| [ScriptName][2] | char(64)  |            |     | NO   |         |       |         |
+| [ScriptName][2] | char(64)     |            |     | NO   |         |       |         |
 
 [1]: #entry
 [2]: #scriptname
@@ -30,7 +30,7 @@ This might also be 'SmartTrigger'. It will than use [SmartAI](smart_scripts).
 ### Examples
 
 | entry | ScriptName        |
-| ----- | ----------------- |
+|-------|-------------------|
 | 302   | at_sentry_point   |
 | 962   | SmartTrigger      |
 | 1447  | SmartTrigger      |

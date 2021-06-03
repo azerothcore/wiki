@@ -8,8 +8,8 @@ This table is used to apply a specific spell aura to the player within an area i
 
 **Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------------|--------------|------------|-----|------|---------|-------|---------|
 | [spell][1]              | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [area][2]               | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [quest_start][3]        | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
@@ -18,8 +18,8 @@ This table is used to apply a specific spell aura to the player within an area i
 | [racemask][6]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [gender][7]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
 | [flags][8]              | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [quest_start_status][9] | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [quest_end_status][10]  | INT       | UNSIGNED   |     | NO   |         |       |         |
+| [quest_start_status][9] | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [quest_end_status][10]  | INT      | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #spell
 [2]: #area
@@ -75,7 +75,7 @@ The gender type this entry applies to. 0 = Male, 1 = Female, 2 = Any.
 ### flags
 
 | Flag | Value | Name                          | Comment                                                                                                                   |
-| ---- | ----- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+|------|-------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | 1    | 0x01  | SPELL\_AREA\_FLAG\_AUTOCAST   | If the spell should be automatically applied when the character enters the area. Also prevents the user from removing it. |
 | 2    | 0x02  | SPELL\_AREA\_FLAG\_AUTOREMOVE | If the spell should be automatically removed when the character is **inside** the area (only works with quest updates)    |
 
@@ -111,7 +111,7 @@ INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_end`, `autocast
 ```
 
 | Quest Status                       | Flag          | Explanation                                                                         |
-| ---------------------------------- | ------------- | ----------------------------------------------------------------------------------- |
+|------------------------------------|---------------|-------------------------------------------------------------------------------------|
 | QUEST\_STATUS\_NONE = 0            | 1             | Player does not have or had quest at all. He could accept it, but he did not (yet). |
 | QUEST\_STATUS\_COMPLETE = 1        | 2             | Player fulfilled objectives, but did not hand it in yet.                            |
 | ~~QUEST\_STATUS\_UNAVAILABLE = 2~~ | 4 (NOT USED)  | (Not used)                                                                          |

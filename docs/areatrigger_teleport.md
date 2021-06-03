@@ -8,15 +8,15 @@ Contains all the teleport triggers definition. This table is used to complete .d
 
 **Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
+|-------------------------|--------------|------------|-----|------|---------|-------|---------|
 | [ID][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Name][2]               | text      |            | MUL | YES  |         |       |         |
+| [Name][2]               | text         |            | MUL | YES  |         |       |         |
 | [target_map][3]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [target_position_x][4]  | FLOAT     |            |     | NO   | 0       |       |         |
-| [target_position_y][5]  | FLOAT     |            |     | NO   | 0       |       |         |
-| [target_position_z][6]  | FLOAT     |            |     | NO   | 0       |       |         |
-| [target_orientation][7] | FLOAT     |            |     | NO   | 0       |       |         |
+| [target_position_x][4]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [target_position_y][5]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [target_position_z][6]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [target_orientation][7] | FLOAT        |            |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #name
@@ -59,7 +59,7 @@ Orientation the player will get when appearing at this location
 ### Examples
 
 | ID  | Name                                     | target_map | target_position_x | target_position_y | target_position_z | target_orientation |
-| --- | ---------------------------------------- | ---------- | ----------------- | ----------------- | ----------------- | ------------------ |
+|-----|------------------------------------------|------------|-------------------|-------------------|-------------------|--------------------|
 | 45  | Scarlet Monastery - Graveyard (Entrance) | 189        | 1688.99           | 1053.48           | 18.6775           | 0.00117            |
 | 78  | DeadMines Entrance                       | 36         | -16.4             | -383.07           | 61.78             | 1.86               |
 | 101 | Stormwind Stockades Entrance             | 34         | 54.23             | 0.28              | -18.34            | 6.26               |

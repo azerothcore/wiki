@@ -9,15 +9,15 @@ This table describes the reward that you will receive when you obtain a given ac
 **Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TitleA][2]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [TitleH][3]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemID][4]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Sender][5]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
+|---------------------|--------------|------------|-----|------|---------|-------|---------|
+| [ID][1]             | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [TitleA][2]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [TitleH][3]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemID][4]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Sender][5]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [Subject][6]        | VARCHAR(255) |            |     | YES  |         |       |         |
 | [Body][7]           | text         |            |     | YES  |         |       |         |
-| [MailTemplateID][8] | MEDIUMINT    | UNSIGNED   |     | YES  | 0       |       |         |
+| [MailTemplateID][8] | MEDIUMINT | UNSIGNED   |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #titlea
@@ -64,7 +64,7 @@ Id of the MailTemplate from `MailTemplate.dbc` of that mail that the player will
 
 ### Example
 
-| ID  | TitleA | TitleH | ItemID | Sender | Subject             |
-| --- | ------ | ------ | ------ | ------ | ------------------- |
-| 13  | 0      | 0      | 41426  | 16128  | Level 80            |
-| 45  | 0      | 0      | 43348  | 28070  | You've Been Around! |
+| ID | TitleA | TitleH | ItemID | Sender | Subject             |
+|----|--------|--------|--------|--------|---------------------|
+| 13 | 0      | 0      | 41426  | 16128  | Level 80            |
+| 45 | 0      | 0      | 43348  | 28070  | You've Been Around! |

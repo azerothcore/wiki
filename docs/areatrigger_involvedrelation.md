@@ -10,8 +10,8 @@ If there is a record in the table for a quest, then the quest will not be comple
 
 **Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra | Comments         |
-| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
+| Field      | Type         | Attributes | Key | Null | Default | Extra | Comments         |
+|------------|--------------|------------|-----|------|---------|-------|------------------|
 | [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
 | [quest][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Quest Identifier |
 
@@ -31,7 +31,7 @@ This is the quest id that the trigger is tied to.
 ### Example
 
 | id  | quest |
-| --- | ----- |
+|-----|-------|
 | 78  | 155   |
 | 87  | 76    |
 | 88  | 62    |

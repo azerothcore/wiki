@@ -13,10 +13,10 @@ Disable chat messaging for any character from account of character $playerName (
 **Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mutedate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [mutetime][3]   | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
+|-----------------|--------------|------------|-----|------|---------|-------|--------------------------|
+| [guid][1]       | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [mutedate][2]   | INT      | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [mutetime][3]   | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
 | [mutedby][4]    | VARCHAR(50)  |            |     | NO   |         |       |                          |
 | [mutereason][5] | VARCHAR(255) |            |     | NO   |         |       |                          |
 
