@@ -1,3 +1,7 @@
+---
+redirect_from: "/The-Modular-Structure"
+---
+
 # The Modular Structure
 
 Based on our modular domain-based [directory structure](Directory-Structure) , the AzerothCore project allows you to add and extend game features by adding custom isolated modules, without patching the core directly.
