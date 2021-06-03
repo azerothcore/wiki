@@ -1,7 +1,12 @@
-Before start we suggest you to read [Documentation about modular structure](The-Modular-Structure) to understand the way AzerothCore works.
+---
+redirect_from: "/Create-a-Module"
+---
+
+# Create a Module
 
 ## **How to create a module**
 
+Before start we suggest you to read [Documentation about modular structure](The-Modular-Structure) to understand the way AzerothCore works.
 
 ### Resources
 

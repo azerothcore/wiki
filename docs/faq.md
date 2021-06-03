@@ -1,3 +1,9 @@
+---
+redirect_from: "/FAQ"
+---
+
+# FAQ
+
 ## COMMON QUESTIONS
 
 #### 1 - How can I contribute? I am not a developer, I know nothing useful.

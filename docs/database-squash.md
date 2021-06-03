@@ -1,4 +1,10 @@
-## Database squash Introduction
+---
+redirect_from: "/Database-squash"
+---
+
+# Database Squash
+
+## Introduction
 
 ### What is the Database squash
 

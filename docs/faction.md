@@ -1,3 +1,7 @@
+---
+redirect_from: "/Faction"
+---
+
 # Faction
 
 **Faction.dbc**

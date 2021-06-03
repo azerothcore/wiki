@@ -1,3 +1,9 @@
+---
+redirect_from: "/Environment-Variable"
+---
+
+# Environment Variable
+
 ### Introduction
 To use MySQL server on the command line, you must have the correct system path. This is usually done automatically.
 

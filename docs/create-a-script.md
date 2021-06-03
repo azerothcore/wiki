@@ -1,3 +1,9 @@
+---
+redirect_from: "/Create-a-Script"
+---
+
+# Create a Script
+
 # Script vs module
 
 On AzerothCore, we don't really use the usual scripts like in other emulators. Instead, we work with modules which are way more practical to use. See Create-a-Module

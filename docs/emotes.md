@@ -1,3 +1,7 @@
+---
+redirect_from: "/Emotes"
+---
+
 # Emotes
 
 This DBC contains emotes which can be used by NPCs.

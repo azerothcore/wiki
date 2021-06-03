@@ -1,3 +1,8 @@
+---
+redirect_from: "/Add-a-module"
+---
+
+# Add a module
 
 ## **How to add a module**
 

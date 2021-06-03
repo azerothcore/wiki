@@ -1,3 +1,8 @@
+---
+redirect_from: "/Database-Manual-Setup"
+---
+
+# Database Manual Setup
 
 ##  How to setup the AzerothCore DB manually
 

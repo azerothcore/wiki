@@ -1,3 +1,9 @@
+---
+redirect_from: "/Directory-Structure"
+---
+
+# Directory Structure
+
 AzerothCore and our modules is following  directory structure standard from hw-core:
 
 <a href="https://github.com/HW-Core/directory-structure/blob/master/README.md" target="_blank">Standard Directory Structure</a>

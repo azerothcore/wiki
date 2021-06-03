@@ -1,3 +1,7 @@
+---
+redirect_from: "/Achievement"
+---
+
 # Achievement
 
 `Back-to:DBC`

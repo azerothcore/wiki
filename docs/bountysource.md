@@ -1,3 +1,9 @@
+---
+redirect_from: "/Bountysource"
+---
+
+# Bountysource
+
 ## What is Bountysource
 
 Bountysource is a crowdfunding platform that allows people to sponsor any open source projects by placing "bounties" (money rewards) for the resolution of issues reported on GitHub. Whoever will fix that issue, will get the money from the bounty.

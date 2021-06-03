@@ -1,3 +1,9 @@
+---
+redirect_from: "/CMake-options"
+---
+
+# CMake Options
+
 ## PERFORMANCE
 
 If you want to disable performance improvement, add this flag `-DENABLE_EXTRAS=0`

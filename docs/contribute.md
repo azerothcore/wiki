@@ -1,3 +1,9 @@
+---
+redirect_from: "/Contribute"
+---
+
+# Contribute
+
 You can contribute in several ways to AzerothCore:
 
 - [commenting an open issue](Contribute#how-to-comment-an-issue)

@@ -1,3 +1,7 @@
+---
+redirect_from: "/Creating-Accounts"
+---
+
 # Creating Accounts
 
 To be able to log in to your new server you need an account. 

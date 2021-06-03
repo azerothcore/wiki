@@ -1,4 +1,8 @@
-# Hooks for Cmake
+---
+redirect_from: "/Hooks-Cmake"
+---
+
+# Hooks CMake
 
 AFTER_LOAD_CONF
 
