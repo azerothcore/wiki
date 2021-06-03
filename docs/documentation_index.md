@@ -33,6 +33,7 @@
 ## Recipes & Techniques
 
 * [How to import DBC data into SQL](how-to-import-dbc-data-in-db.md)
+* [Run Worldserver and Authserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
 
 ## External resources
 
