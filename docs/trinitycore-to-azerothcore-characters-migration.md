@@ -1,3 +1,7 @@
+---
+redirect_from: "/TrinityCore-to-AzerothCore-characters-migration"
+---
+
 # TrinityCore to AzerothCore Character & Auth Migration Tool
 
 ### 1) Install AzerothCore  

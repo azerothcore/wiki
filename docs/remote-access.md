@@ -1,3 +1,9 @@
+---
+redirect_from: "/Remote-Access"
+---
+
+# Remote Access
+
 ## Introduction
 
 Azerothcore has 4 ways of interfacing with the world server.

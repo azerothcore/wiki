@@ -1,3 +1,7 @@
+---
+redirect_from: "/Update"
+---
+
 # How to update AzerothCore to the latest stable version
 
 ## 1) Update your local sources

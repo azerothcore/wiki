@@ -1,3 +1,7 @@
+---
+redirect_from: "/Map"
+---
+
 # Map
 
 **Map.dbc**

@@ -1,3 +1,7 @@
+---
+redirect_from: "/Installation"
+---
+
 # Installation Guide
 
 ## Choosing a setup

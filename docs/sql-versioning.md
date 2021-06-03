@@ -1,3 +1,9 @@
+---
+redirect_from: "/SQL-Versioning"
+---
+
+# SQL Versioning
+
 We've two kind of versions:
 
 - Chronological versioning, For accepted sql files

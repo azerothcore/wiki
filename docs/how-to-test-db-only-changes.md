@@ -1,3 +1,9 @@
+---
+redirect_from: "/How-to-test-DB-only-changes"
+---
+
+# How to test DB only changes
+
 ## Introduction
 
 The main guide about [How to test a PR](How-to-test-a-PR) will work for all kind of PRs.

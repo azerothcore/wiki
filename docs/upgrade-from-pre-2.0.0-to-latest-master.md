@@ -1,3 +1,9 @@
+---
+redirect_from: "/Upgrade-from-pre-2.0.0-to-latest-master"
+---
+
+# Upgrade from pre 2.0.0 to latest master
+
 This is the tutorial to upgrade any existing server from a version prior to the [2.0.0 release](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v2.0.0) to the latest `master` version.
 
 **Note**: it is always recommended to backup your database before doing any update.

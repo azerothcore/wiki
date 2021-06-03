@@ -1,3 +1,8 @@
+---
+redirect_from: "/Project-Versioning"
+---
+
+# Project Versioning
 
 We are using the semantic versioning standard:
 

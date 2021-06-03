@@ -1,3 +1,7 @@
+---
+redirect_from: "/TotemCategory"
+---
+
 # TotemCategory
 
 `Back-to:DBC`

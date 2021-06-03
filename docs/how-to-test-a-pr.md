@@ -1,3 +1,7 @@
+---
+redirect_from: "/How-to-test-a-PR"
+---
+
 # How to test a PR
 
 ## Introduction

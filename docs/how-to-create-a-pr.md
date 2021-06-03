@@ -1,3 +1,7 @@
+---
+redirect_from: "/How-to-create-a-PR"
+---
+
 # How to create a PR
 
 ### 1. Create a fork of AzerothCore

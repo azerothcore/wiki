@@ -1,3 +1,7 @@
+---
+redirect_from: "/Languages"
+---
+
 # Languages
 
 **DBC Structure - For Version 3.3.5a**

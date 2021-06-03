@@ -1,3 +1,9 @@
+---
+redirect_from: "/How-to-find-TrinityCore-commits-of-specific-code-addition"
+---
+
+# How to find TrinityCore commits of specific code addition
+
 Sometimes we need to import something from TrinityCore, for example we see an extra line or file in the code, and we want to better know the context of that addition (i.e. the commit that introduced it).
 
 How to do that:

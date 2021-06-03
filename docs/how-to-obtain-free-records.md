@@ -1,3 +1,7 @@
+---
+redirect_from: "/How-to-obtain-free-records"
+---
+
 # How to obtain free records
 
 On some occasions, we need to obtain or know records whose values are not being occupied.

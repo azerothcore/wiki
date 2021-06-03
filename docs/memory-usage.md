@@ -1,3 +1,9 @@
+---
+redirect_from: "/Memory-Usage"
+---
+
+# Memory Usage
+
 ### AzerothCore Memory Usage
 
 AzerothCore is based on SunwellCore (a fork from TC). SunwellCore was a public server with 4000 players online and they made sure their core could handle that amount of players easily. Reading data from the ram is much faster than reading from the hard disk (there are entire systems based on this principle). That's one of the reason there is a bigger ram usage.

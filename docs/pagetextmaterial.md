@@ -1,3 +1,7 @@
+---
+redirect_from: "/PageTextMaterial"
+---
+
 # PageTextMaterial
 
 &lt;noinclude&gt;|

@@ -1,3 +1,9 @@
+---
+redirect_from: "/MySQLtypesC++"
+---
+
+# MySQL Types C++
+
 <div id="main-content" data-inline-comments-target="true" class="wiki-content">
     <div class="table-wrap">
         <table class="confluenceTable" resolved="">

@@ -1,3 +1,9 @@
+---
+redirect_from: "/The-Staging-Branch"
+---
+
+# The Staging Branch
+
 # NOTE: CURRENTLY DISABLED
 
 At AzerothCore, changes are submitted via PRs that are **first tested** and then merged to the `master`branch.

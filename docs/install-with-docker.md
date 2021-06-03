@@ -1,5 +1,6 @@
 ---
 tableofcontents: 1
+redirect_from: "/Install-with-Docker"
 ---
 
 # Install with Docker
