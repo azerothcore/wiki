@@ -113,7 +113,7 @@ Open a new terminal and run the following command
 ```
 
 This command will automatically attach your terminal to the worldserver console. 
-Now you can run the `account create <user> <password>` command to [create your first in-game account.](Creating-Accounts.md)
+Now you can run the `account create <user> <password>` command to [create your first in-game account.](creating-accounts.md)
 
 **5) Access database and update realmlist**
 

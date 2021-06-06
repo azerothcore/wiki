@@ -34,7 +34,7 @@ After enabled GDB, if the server crashes, you will find the crashdump file (gdb.
 Our docker system integrates the scripts above within the docker-compose. It means that enabling the GDB works exactly in the same way in docker too.
 Moreover our docker-compose uses the [restart-policy feature](https://docs.docker.com/config/containers/start-containers-automatically/) to keep the containers up and running.
 
-For more information please refer to the [Install-with-Docker](Install-with-Docker.md) documentation. 
+For more information please refer to the [Install-with-Docker](install-with-docker.md) documentation. 
 You will also find a guide on how to debug your code by using VSCode combined with its Remote Docker extension.
 
 ### Advanced restarter (only for bash)

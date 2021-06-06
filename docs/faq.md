@@ -9,20 +9,20 @@ redirect_from: "/FAQ"
 #### 1 - How can I contribute? I am not a developer, I know nothing useful.
 
 - You can help us by testing our [Pull Requests](Contribute#how-to-test-a-pull-request), and participating on the github issues' discussions. You can also provide support when you can in our discord, on the popular [stackoverflow](https://stackoverflow.com/questions/tagged/azerothcore) and on other emulation forums (ac-web.org for example). You can also help us with documentation (this wiki, or the readme), we need help with that too!
-- You can put bounties (money) on issues and suggestions by using bountysource. Read this: [Bountysource](Bountysource.md)
-- If you're a developer, check out this page: [Contribute](Contribute.md)
+- You can put bounties (money) on issues and suggestions by using bountysource. Read this: [Bountysource](bountysource.md)
+- If you're a developer, check out this page: [Contribute](contribute.md)
 
 #### 2 - Why is AzerothCore using more RAM than TrinityCore?
 
-See [Memory Usage](Memory-Usage.md).
+See [Memory Usage](memory-usage.md).
 
 #### 3 - I want this fixed or this feature or this module. How can I proceed?
 
-You can open a bounty and if developers are interested by the job, they might do it. Read this: [Bountysource](Bountysource.md)
+You can open a bounty and if developers are interested by the job, they might do it. Read this: [Bountysource](bountysource.md)
 
 #### 4 - I have an issue, where can I get help?
 
-Read this carefully: [How to ask for help](How-to-ask-for-help.md).
+Read this carefully: [How to ask for help](how-to-ask-for-help.md).
 
 #### 5 - Why is it better to ask on Stackoverflow for support questions?
 
