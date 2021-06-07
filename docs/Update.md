@@ -1,7 +1,7 @@
 # How to update AzerothCore to the latest stable version
 
 ## 1) Verify that you're on the latest release
-Check the [releases](https://github.com/azerothcore/azerothcore-wotlk/releases) page on the azerothcore-wotlk github page to see if there has been a new release since you last upgraded. If there has been a new release, follow the upgrade instructions to update to the latest release. **The next steps will not work properly unless you are on the latest release.**
+The latest release is currently 3.0.0. If you haven't upgraded to version 3.0.0 yes, follow [this guide](Upgrade-from-pre-3.0.0-to-latest-master.md) to update. **The next steps will not work properly unless you are on the latest release.**
 
 We'd also highly recommend following the #announcements channel on the AzerothCore discord so you'll know about any other important changes to AzerothCore.
 
