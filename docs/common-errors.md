@@ -161,20 +161,5 @@ Extract maps first.
 
 No.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help.md) on how to proceed with your question in the best way. |
 | --- |
