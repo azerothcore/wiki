@@ -1,7 +1,9 @@
 # How to update AzerothCore to the latest stable version
 
 ## 1) Verify that you're on the latest release
-The latest release is currently 3.0.0. If you haven't upgraded to version 3.0.0, follow [this guide](Upgrade-from-pre-3.0.0-to-latest-master.md) to update. **The next steps will not work properly unless you are on the latest release.**
+1. Type `.server debug` in your console
+  1. If it outputs `Using World DB: ACDB 335.4-dev` then you can proceed to [Update your local source](#update-your-local-source)
+  1. If it outputs anything else for `Using World DB:` then you first need to follow [this guide on updating to latest master](upgrade-from-pre-3.0.0-to-latest-master.md)
 
 We'd also highly recommend following the #announcements channel on the AzerothCore discord so you'll know about any other important changes to AzerothCore.
 
