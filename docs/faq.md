@@ -45,7 +45,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - [How to Restart and Debug](how-to-restart-and-debug.md).
 
 - Do you support Repacks based on AzerothCore?
-  - No. Compile the code yourself if you want support.
+  - No. Repacks are NOT supported and we strongly suggest to not use them for [several reasons](https://www.mangosrumors.org/why-you-should-not-use-repacks-to-run-your-wow-server/). You can check [this tutorial](https://www.chromiecraft.com/how-to-install-a-wow-server-on-your-own-computer/) for an easy way of installing AC without using any repack.
 
 ## Database-related FAQ
 
