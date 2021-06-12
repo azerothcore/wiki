@@ -30,6 +30,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - Some fixes requires testing and not all devs can test so you need to wait on someone else to test it.
   - They get merged eventually after getting the To Be Merged label.
   - Maybe you are not following the [SQL/C++ standards](https://www.azerothcore.org/wiki/standard-operating-procedure).
+  - Read more in [Merge Process](merge-process.md).
 
 - How do I report a crash?
   - By pasting your crashlog into a PasteBin or Gist.
