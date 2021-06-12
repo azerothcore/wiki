@@ -98,7 +98,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 
 - How can I get a good crashlog on Windows?
   - Compile your core in RelWithDebInfo or Debug. A crashlog from Release will be useless.
-  - You can debug it yourself if you [Run worldserver and autherserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
+  - You can debug it yourself if you [Run worldserver and autherserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md).
 
 ## Module-related FAQ
 
@@ -106,7 +106,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - You can add the hook to your own fork (cf: [Create a new Hook](create-a-new-hook.md)) and create a new Pull Request to the official repository so we can validate it and merge it.
 
 - Is it possible to turn a core patch into a module?
-  - Yes. [Is it possible to turn a core patch into a module for AzerothCore? - StackOverflow](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore/66340683#66340683)
+  - Yes. [Is it possible to turn a core patch into a module for AzerothCore? - StackOverflow](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore/66340683#66340683).
 
 ## Feature-related FAQ
 
