@@ -28,10 +28,10 @@ For detailed information on how to configure a restarter and a debugger go to [h
 
 ## Creating an Account
 
-Read [creating accounts](Creating-Accounts.md).
+Read [creating accounts](creating-accounts.md).
 
 ## Setting up Remote Access
-For development purposes, this step is not necessary. However, for increased security when you want other people to make accounts you should set up a registration form, so you don't have to paste their passwords. Check out [Remote Access](Remote-Access.md) on how to send commands into the server.
+For development purposes, this step is not necessary. However, for increased security when you want other people to make accounts you should set up a registration form, so you don't have to paste their passwords. Check out [Remote Access](remote-access.md) on how to send commands into the server.
 
 <br>
 
@@ -39,7 +39,7 @@ For development purposes, this step is not necessary. However, for increased sec
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
