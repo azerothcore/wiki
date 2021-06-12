@@ -7,7 +7,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 
 ## General-related FAQ
 
-- What operating systems are supported?
+- What operating systems/platforms are supported?
   - Currently, Windows, macOS, Linux and Docker are supported.
 
 - How much RAM do I need for AzerothCore?
