@@ -18,7 +18,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - We recommend updating your core frequently, at least once a week, in order to benefit of latest core fixes and security patches.
 
 - How much RAM do I need for AzerothCore?
-  - You can find all RAM information [here](Memory-Usage.md).
+  - You can find all RAM information [here](memory-usage).
 
 - What is "Blizzlike"?
   - AzerothCore is trying to replicate the Blizzard state for World of Warcraft. The term "Blizzlike" means that it is close enough to being a replication of what was on the Blizzard servers.
@@ -60,7 +60,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 - When will the source be stable?
   - Soon...™
   - We do our best to keep the master branch stable and playable. We never push code directly into the master branch, but rather we first require everyone (including AC admins and staff) to first open a PR so everyone is able check them before they got merged into master.
-  - Please help us by [testing PRs](https://www.azerothcore.org/wiki/How-to-test-a-PR) and reporting any bugs you may find.
+  - Please help us by [testing PRs](how-to-test-a-pr) and reporting any bugs you may find.
 
 - I can't run the extractors on Windows-platforms, it just disappears when I click on it?
   - Understand that it is a **commandline** tool, not a GUI-tool. This means you need to use the commandline in Windows (for example "Command prompt") instead of just doubleclicking on it. 
@@ -85,14 +85,14 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 - I am missing the libraries for MySQL and can't seem to find them in the repository?
   - The library is called "mysql.lib" and is not provided by AzerothCore.
   - Make sure you installed your MySQL-Server with DEVELOPMENT HEADERS.
-  - You can follow the [Core Installation](core-intallation.md) guide to find the libraries.
+  - You can follow the [Core Installation](core-installation) guide to find the libraries.
 
 - I am missing the libraries for OpenSSL and can't seem to find them in the repository?
   - For OpenSSL versions prior to 1.1.0 they will be named "libeay32.dll" and "ssleay32.dll".
   - For OpenSSL versions 1.1.0 and more recent they are called:
     - For 32bit installs: "libssl-1_1.dll" and "libcrypto-1_1.dll".
     - for 64bit installs: "libssl-1_1-x64.dll" and "libcrypto-1_1-x64.dll"
-  - You can follow the [Core Installation](core-intallation.md) guide to find the libraries.
+  - You can follow the [Core Installation](core-installation) guide to find the libraries.
 
 ## Debug-related FAQ
 
@@ -103,7 +103,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 ## Module-related FAQ
 
 - I need a new hook for my custom module, what can I do?
-  - You can add the hook to your own fork (cf: [Create a new Hook](create-a-new-hook.md)) and create a new Pull Request to the official repository so we can validate it and merge it.
+  - You can add the hook to your own fork (cf: [create a new hook](hooks-script)) and create a new Pull Request to the official repository so we can validate it and merge it.
 
 - Is it possible to turn a core patch into a module?
   - Yes. [Is it possible to turn a core patch into a module for AzerothCore? - StackOverflow](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore/66340683#66340683).
