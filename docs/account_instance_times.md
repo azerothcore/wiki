@@ -8,8 +8,8 @@ This table controls how many instances the account's characters have been in las
 
 **Structure**
 
-| Field            | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|------------------|------------|------------|-----|------|---------|-------|---------|
+| Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [accountId][1]   | INT    | UNSIGNED   | PRI | NO   |         |       |         |
 | [instanceId][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [releaseTime][3] | BIGINT | UNSIGNED   |     | NO   | 0       |       |         |

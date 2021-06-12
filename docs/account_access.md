@@ -9,10 +9,10 @@ This table holds security access level for any realm in [realmlist](realmlist) t
 **Structure**
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|--------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]      | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [gmlevel][2] | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [RealmID][3] | INT      | SIGNED     | PRI | NO   | -1      |       |         |
+| ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [id][1]      | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [gmlevel][2] | TINYINT      | UNSIGNED   |     | NO   |         |       |         |
+| [RealmID][3] | INT          | SIGNED     | PRI | NO   | -1      |       |         |
 | [comment][4] | VARCHAR(255) |            |     | YES  |         |       |         |
 
 [1]: #id
