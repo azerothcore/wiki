@@ -117,7 +117,7 @@ These values are ID taken from [QuestInfo.dbc](QuestInfo)
 
 Recommended number of players to do the quest together.
 
-### LimitTime
+### TimeAllowed
 
 Time in seconds that the player has to complete this quest.
 
@@ -151,7 +151,7 @@ Reputation value that the player must achieve with the faction in [RepObjectiveF
 
 ### RewardNextQuest
 
-**(Old field name: NextQuestIdChain)**
+** RewardNextQuest (Old field name: NextQuestIdChain)**
 
 The quest entry from a **creature** or **gameobject** that ends a quest and starts a new one. The result is, that if you end the quest, the new quest instantly appears from the quest giver.
 
@@ -179,13 +179,13 @@ Money earned by completing the quest (if value &gt; 0) or money requirement to c
 
 The money a character at level 80 would get when they complete this quest.
 
-### RewardSpell
+### RewardDisplaySpell
 
-Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpellCast](#quest_template-RewardSpellCast) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
+Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](#quest_template-RewardSpell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
 NOTE: This field comes straight from the WDB and should not be changed.
 
-### RewardSpellCast
+### RewardSpell
 
 Spell that will always be casted at player when completing the quest. This can be learn spell and player learned some spell in result, or buff spell, for example. If this field is non-zero then this spell will ALWAYS be casted and the spell in [RewardSpell](#quest_template-RewardSpell) will not.
 
@@ -197,7 +197,7 @@ Number of honorable kill honor rewarded for completing this quest.
 
 Example: An example value is 15 for quest 8388: At level 80 an honorable kill is 124 honor worth. Multiply this with 15 and you receive 1860, after the multiplication the value is rounded up. So the honor rewarded at level 80 is 1860 for this quest.
 
-### RewardHonorMultiplier
+### RewardKillHonor
 
 Multiplies [RewardHonor](#quest_template-RewardHonor), so if value is 2, it will give double.
 
@@ -344,13 +344,13 @@ NOTE: If RequiredSpellCast is != 0 and the spell has effects Send Event or Ques
 
 The number of times the creature or gameobject must be killed or casted upon.
 
-### RequiredSourceItemId
+### ItemDrop
 
 Item ID that is needed indirectly by the quest. For example, the quests asks for item X but the only way to get item X is by activating item Y; however, item Y is also a quest item. Therefore you set item Y's ID in this field. This requirement will not appear in the quest text, it is just for the core to know when to drop a quest item that isn't in the RequiredItemId field but is still needed by the quest.
 
-### RequiredSourceItemCount
+### ItemDropQuantity
 
-The maximum number of copies of the item in RequiredSourceItemId that can be picked up (and dropped by the core).
+The maximum number of copies of the item in ItemDrop that can be picked up (and dropped by the core).
 
 ### RequiredItemId
 [Item\_template](item_template#id) 

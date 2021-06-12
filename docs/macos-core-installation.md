@@ -52,14 +52,24 @@ cd build
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
-Parameter explanation for advanced users [CMake options](CMake-options.md).
+Parameter explanation for advanced users [CMake options](cmake-options.md).
 
 At this point, you must be in your "build/" directory.
 
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
 ```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DTOOLS=0 -DSCRIPTS=1 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib -DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include -DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
+cmake ../ \
+-DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
+-DTOOLS=0 \
+-DSCRIPTS=1 \
+-DMYSQL_ADD_INCLUDE_PATH=/usr/local/include \
+-DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib \
+-DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include \
+-DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib \
+-DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include \
+-DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib \
+-DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
 ```
 
 To know the amount of cores available.
@@ -82,7 +92,7 @@ make install
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 

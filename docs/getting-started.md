@@ -20,6 +20,8 @@ If you already have some programming knowledge it would surely be an advantage f
 *Personal note from the author of this tutorial: when I first installed my first WoW server I was 15, I had no programming knowledge at all, I was using Windows XP and barely understood English. I'm sure if you are reading this, you have already more skills than I used to have when I was trying to install MaNGOS+UDB+ScriptDev2 and get a decent WoW server to run on my local machine.
 Initially, I spent hours trying to read and understand tutorials from different people written on different websites, but eventually, I succeeded. AzerothCore is an all-in-one project so it's going to be easier than that, bear with me and you'll get there!*
 
+Tempted to use a repack instead? [Don't do it](https://www.mangosrumors.org/why-you-should-not-use-repacks-to-run-your-wow-server/).
+
 ## Installing AzerothCore on your computer
 
 The first step is always installing a local WoW server in your own machine. And there are several ways to do it, which can vary according to the operating system.
@@ -48,7 +50,7 @@ You can choose one setup, or even try more than one. You can find all the instru
 
 - [azerothcore.org/wiki/Installation](https://www.azerothcore.org/wiki/Installation)
 
-Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/How-to-ask-for-help.md).
+Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help.md).
 
 Got your WoW server installed? Congratulations! Now let's see what you can do next.
 

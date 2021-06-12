@@ -6,13 +6,13 @@ remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 title: AzerothCore
 # (string) Description of your wiki
-description: Wiki and Documentation of AzerothCore project
+description: Wiki and Documentation of the AzerothCore project
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
 show_wiki_pages_limit: 10
 # (boolean) Enable/disable blog feature
-blog_feature: true
+blog_feature: false
 # (boolean) Enable/disable wiki posts list in sidebar (needs blog_feature enabled)
 show_wiki_posts: true
 # (integer) Maximum number of wiki posts to shown in sidebar
@@ -22,7 +22,7 @@ paginate: 5
 paginate_path: "/blog/page:num"
 permalink: /blog/posts/:year/:month/:day/:title:output_ext
 # (boolean) Enable/disable download buttons in sidebar
-show_downloads: true
+show_downloads: false
 # (string) Specify branch rendered by gitpages allowing wiki tool buttons to work
 git_branch: "master"
 # (string) Url of logo image, it can be full, absolute or relative.
@@ -43,7 +43,7 @@ use_prose_io: false
 # - github : it uses internal github repository search
 # - google : it uses cse search bar, you need to configure google_cse_token
 #
-search_engine : "js"
+search_engine : "github"
 # Setting google custom search engine for google
 # cse search bar (https://cse.google.it/cse/)
 google_cse_token:

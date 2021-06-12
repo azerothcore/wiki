@@ -40,15 +40,15 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 | [comment][11]         | text        |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid
-[2]: #source_type
+[2]: #sourcetype
 [3]: #id
 [4]: #link
-[5]: #event_type
-[6]: #event_phase_mask
-[7]: #event_chance
-[8]: #event_flags
-[9]: #action_type
-[10]: #target_type
+[5]: #eventtype
+[6]: #eventphasemask
+[7]: #eventchance
+[8]: #eventflags
+[9]: #actiontype
+[10]: #targettype
 [11]: #comment
 
 **Description of the fields**
