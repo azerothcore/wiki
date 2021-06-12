@@ -183,7 +183,7 @@ All active Check Constraints can be found by using this query:
 SELECT * FROM information_schema.CHECK_CONSTRAINTS;
 
 -- MySQL 5.7
-SELECT * FROM information_schema.TABLE_CONSTRAINTS
+SELECT * FROM information_schema.TABLE_CONSTRAINTS;
 ```
 
 ## Note for SQL reviewer
