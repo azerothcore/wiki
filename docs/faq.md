@@ -14,6 +14,9 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 - What operating systems/platforms are supported?
   - Currently, Windows, macOS, Linux and Docker are supported.
 
+- When should I update my source?
+  - We recommend updating your core frequently, at least once a week, in order to benefit of latest core fixes and security patches.
+
 - How much RAM do I need for AzerothCore?
   - You can find all RAM information [here](Memory-Usage.md).
 
@@ -39,6 +42,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 - How do I report a crash?
   - By pasting your crashlog into a PasteBin or Gist.
   - The crashlog **needs to come from a RelWithDebInfo or Debug compilation**. If it is from Release it is useless.
+  - [How to Restart and Debug](how-to-restart-and-debug.md).
 
 - Do you support Repacks based on AzerothCore?
   - No. Compile the code yourself if you want support.
@@ -55,6 +59,8 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 
 - When will the source be stable?
   - Soon...™
+  - We do our best to keep the master branch stable and playable. We never push code directly into the master branch, but rather we first require everyone (including AC admins and staff) to first open a PR so everyone is able check them before they got merged into master.
+  - Please help us by [testing PRs](https://www.azerothcore.org/wiki/How-to-test-a-PR) and reporting any bugs you may find.
 
 - I can't run the extractors on Windows-platforms, it just disappears when I click on it?
   - Understand that it is a **commandline** tool, not a GUI-tool. This means you need to use the commandline in Windows (for example "Command prompt") instead of just doubleclicking on it. 
@@ -90,13 +96,17 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 
 ## Debug-related FAQ
 
-- How can I get a good crashlog on Windows?'
+- How can I get a good crashlog on Windows?
   - Compile your core in RelWithDebInfo or Debug. A crashlog from Release will be useless.
+  - You can debug it yourself if you [Run worldserver and autherserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
 
 ## Module-related FAQ
 
 - I need a new hook for my custom module, what can I do?
   - You can add the hook to your own fork (cf: [Create a new Hook](create-a-new-hook.md)) and create a new Pull Request to the official repository so we can validate it and merge it.
+
+- Is it possible to turn a core patch into a module?
+  - Yes. [Is it possible to turn a core patch into a module for AzerothCore? - StackOverflow](https://stackoverflow.com/questions/66340549/is-it-possible-to-turn-a-core-patch-into-a-module-for-azerothcore/66340683#66340683)
 
 ## Feature-related FAQ
 
