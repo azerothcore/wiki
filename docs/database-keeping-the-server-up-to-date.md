@@ -15,6 +15,8 @@
     bash apps/db_assembler/db_assembler.sh
     ```
 
+Tip: how to [make sure your DB is up to date](https://stackoverflow.com/questions/55282167/how-to-make-sure-that-the-db-is-up-to-date)
+
 <br>
 
 ## Help
