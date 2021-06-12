@@ -50,7 +50,7 @@ You can choose one setup, or even try more than one. You can find all the instru
 
 - [azerothcore.org/wiki/Installation](https://www.azerothcore.org/wiki/Installation)
 
-Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/How-to-ask-for-help.md).
+Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help.md).
 
 Got your WoW server installed? Congratulations! Now let's see what you can do next.
 
