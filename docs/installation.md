@@ -64,6 +64,10 @@ Each step can be read independently or you can read them neatly, to gradually ge
 
 If you are still having problems, check:
 
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
 * [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.

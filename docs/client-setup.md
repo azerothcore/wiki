@@ -24,6 +24,10 @@ If you need a copy of the original client you can find some torrent downloads he
 
 If you are still having problems, check:
 
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
 * [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
