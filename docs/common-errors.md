@@ -12,6 +12,8 @@ Your database structure is not up to date. Please make sure you've executed all 
 ```
 You are simply not updated and you need to [Update your database](database-keeping-the-server-up-to-date.md).
 
+---------------------------------------------------------
+
 **ACE00002** I can't start my Auth/WorldServer, I get:
 ```
 [ERROR]: DatabasePool world NOT opened. There were errors opening the MySQL connections. Check your SQLDriverLogFile for specific errors.
@@ -23,11 +25,15 @@ You need to enable the SQLDriverLogFile in Worldserver.conf to get an accurate r
 
 To do this, uncomment Logger.sql.driver and then run the WorldServer again.
 
+---------------------------------------------------------
+
 **ACE00003** I can't start my Auth/WorldServer, I get:
 ```
 > Loaded 0 acore strings. DB table `acore_string` is empty.
 ```
 This is because you have not imported the Database at all. Follow the instructions in [Database Installation](database-installation.md)
+
+---------------------------------------------------------
 
 **ACE00004** I can't start my Auth/WorldServer, I get:
 ```
@@ -42,6 +48,8 @@ This can mean several things:
 3. You are trying to use a custom patch or module but have forgotten to update your database.
 4. You are trying to use an SQL patch from another project.
 
+---------------------------------------------------------
+
 ## Database Update-related errors
 
 **ACE00020** My DB Assambler closes and does not import all updates, I get:
@@ -52,12 +60,16 @@ This error is because you have manually changed the database structure and is co
 
 The easiest way to fix it is by dropping your database and importing it again.
 
+---------------------------------------------------------
+
 **ACE0021** My DB Assambler closes and does not import all updates, I get:
 
 This can be due to several reasons:
 
 1. You have the wrong credentials set up for the DB Assambler.
 2. Your Database structure has been modified manually and is conflicting with the updates. Fix this by dropping the database.
+
+---------------------------------------------------------
 
 **ACE00022** My DB Assambler closes and does not import all updates, I get:
 ```
@@ -73,9 +85,13 @@ dbc exists, and has 13 field(s) (expected 12). Extracted file might be from wron
 ```
 You need to extract the DBC files from the same unmodified client version as your server is. i.e 3.3.5a.
 
+---------------------------------------------------------
+
 **ACE00041** Core doesn't start, it closes as soon as I open it.
 
 Start the server using command prompt to get the exact error.
+
+---------------------------------------------------------
 
 **ACE00042** Core doesn't start, I get this error window.
 
@@ -86,17 +102,23 @@ Or similar error.
 ```
 You have not copied the necessary .dll files into the binaries directory.
 
+---------------------------------------------------------
+
 **ACE00043** Core doesn't start, I get:
 ```
 AzerothCore does not support MySQL versions below 5.7
 ```
 Upgrade your MySQL.
 
+---------------------------------------------------------
+
 **ACE00044** I get:
 ```
 -- Performing Test boost_filesystem_copy_links_without_NO_SCOPED_ENUM - Failed error
 ```
 You can ignore it. It's an error we cannot hide.
+
+---------------------------------------------------------
 
 **ACE00045** I get an error when the WorldServer is running:
 ```
@@ -110,13 +132,19 @@ Pull the source, recompile tools, copy the extractors to your wow binaries and r
 
 Read how to properly install Git for Windows.
 
+---------------------------------------------------------
+
 **ACE00061** I cannot install AzerothCore on CentOS/Ubtuntu/Debian etc.
 
 AzerothCore requires GCC 8.0 or higher and CLang 7 or higher.
 
+---------------------------------------------------------
+
 **ACE00062** I cannot install AzerothCore on Windows XP/Vista
 
 AzerothCore requires [Visual Studio 2019](https://docs.microsoft.com/en-us/visualstudio/releases/2019/system-requirements), therefore you need to update to Windows 7 or above.
+
+---------------------------------------------------------
 
 **ACE00063** I cannot install AzerothCore on Linuyx, I get:
 ```
@@ -126,9 +154,13 @@ This can be due to:
 1. Selinux stronged kernels, workaround: change to one standard kernel, compile with clang instad of gcc or compile without pch.
 2. Low ram/swap memory, increase it.
 
+---------------------------------------------------------
+
 **ACE00064** How do I \<insert question\> on my operating system.
 
 Use google or buy a book to learn the operating system you are using.
+
+---------------------------------------------------------
 
 **ACE00065** I can't copmile, I get:
 ```
@@ -149,13 +181,19 @@ Update your Visual Studio.
 
 No they are not. The name "vmap4extractor"/"vmap4assambler" reflects the version of the tool. They are all for WoW 3.3.5a.
 
+---------------------------------------------------------
+
 **ACE00081** Couldn't open RootWmo while running extractor.
 
 Not an error, ignore it.
 
+---------------------------------------------------------
+
 **ACE00082** I can't use Vmap extractor.
 
 Extract maps first.
+
+---------------------------------------------------------
 
 **ACE00083** I have maps from ManGOS or TrinityCore, can I use them?
 
