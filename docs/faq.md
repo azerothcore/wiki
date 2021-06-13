@@ -74,7 +74,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - Beside the core as binaries which give a fundamental and the individual client interpreting functions, definitions and commands, the core can be described as 'a body' with the following data forming it's 'anatomy':
     - **Maps**: Maps are **required to run AzerothCore**. Maps provide the physical values and data for the core to interpret. Based on these, the core has a layout that can be compared with each client. This includes area definitions.
     - **VMaps**: VMaps are **optional, but highly recommended**. VMaps ("Virtual Maps") calculate the possibility of line-of-sight, as an example. Based on their content, the server can (for example) calculate if spell casts are possible (e.g. if a wall is in between the target and caster or not).
-    - **MMaps**: MMaps are optional, but recommended. To further physical boundaries, MMaps ("Movement Maps") enforce physical boundaries on non-player characters, e.g. NPCs, as their collision is not handled by the client. They also improve path generation.
+    - **MMaps**: MMaps are **optional, but highly recommended**. To further physical boundaries, MMaps ("Movement Maps") enforce physical boundaries on non-player characters, e.g. NPCs, as their collision is not handled by the client. They also improve path generation.
     - **DBC**: DBCs are **required to run AzerothCore**. The DBCs ("Data Base Client [Files]") give essential values that the World of Warcraft client interprets. They define races, textures, local models and more. AzerothCore interprets these and loads them up.
   - Compiling AzerothCore with "TOOLS" will always create the necessary tools to extract and create these files.
 
