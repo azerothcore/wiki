@@ -169,6 +169,8 @@ C1076: compiler limit : internal heap limit reached; use /Zm to specify a higher
 ```
 Read [How to: Enable a 64-Bit, x664 hosted MSVC toolset on the command line. Microsoft](https://docs.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?redirectedfrom=MSDN&view=msvc-160).
 
+---------------------------------------------------------
+
 **ACE00066** I can't compile, I get:
 ```
 C1001: An internal error has occurred in the compiler.
