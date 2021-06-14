@@ -12,13 +12,24 @@ For instance, we can have: **1.5.1-dev.1** that corresponds to: **MAJOR.MINOR.PA
 
 More in depth:
 
-**MAJOR** version when you make incompatible API / DB structure changes
+* **MAJOR** version when you make incompatible API / DB structure changes
 
-**MINOR** version when you add functionality in a backwards-compatible manner
+* **MINOR** version when you add functionality in a backwards-compatible manner
 
-**PATCH** version when you make backwards-compatible bug fixes.
+* **PATCH** version when you make backwards-compatible bug fixes.
 
-**PRERELEASE** this is such called "metadata" in semver standard. We use this part of the versioning while we work on **master** branch. Everytime a new feature or breaking change is released, this number is increased to notify you regarding possible actions to take. Check [how to use the changelog](how-to-use-changelog.md).
+* **PRERELEASE** this is such called "metadata" in semver standard. We use this part of the versioning while we work on **master** branch. Everytime a new feature or breaking change (on both code or db) is released, this number is increased to notify you regarding possible actions to take. Check [how to use the changelog](how-to-use-changelog.md).
+
+### PRERELEASE first
+
+AzerothCore is not yet considered a "completed" software at an enterprise level. The versioning described above will be used to provide a simple way to check if a module, script or anything connected to AC is compatible or not with AC and what to do to upgrade it.
+
+Our strategy is (in order of most common actions):
+
+- to not update the version when the changes are just fixes/chore changes
+- to update the `-dev.x` prerelease version on master when we have breaking changes or new features
+- to upgrade the major version when we decide to release a new stable version
+- if any new security patch or feature is imported within the released major version, those ones will increase the minor/patch version then, but we do it very occasionally.
 
 ## Dev stages
 
