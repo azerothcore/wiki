@@ -1,0 +1,59 @@
+# How to use changelog
+
+All breaking/notable changes to this project will be documented in the `/docs/changelog/master.md` file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](project-versioning.md).
+
+## How to create a changelog
+
+The creation of a changelog for a PR is similar to the creation of a new sql file.
+Under the `doc/changelog/pendings` folder you will find a `create.sh` script.
+
+Run this script to create a new changelog file in the same folder which will be automatically called `changes_<timestamp>.md`.
+
+Once the PR is merged, our pipeline will merge your file into the `doc/changelog/master.md` by automatically creating a new section inside that file.
+This section will be titled with the new version number based on the previous one from the `acore.json` file you can find within the root folder.
+
+So, for instance:
+
+if the current version is `1.0.0-dev.1`, after your PR is merged it will be changed to `1.0.0-dev.2` automatically within the `acore.json` and a new section 
+called `## 1.0.0-dev.2` will be created under the `master.md` changelog.
+
+This approach is pretty useful also for modules to keep track of the compatibility
+
+## How to write a changelog
+
+It's mandatory to use the "[Keep a Changelog](https://keepachangelog.com/en/1.0.0/)" format, by correctly using the following types of section titles:
+
+- Added for new features.
+- Changed for changes in existing functionality.
+- Deprecated for soon-to-be removed features.
+- Removed for now removed features.
+- Fixed for any bug fixes.
+- Security in case of vulnerabilities.
+
+You have to create a new H3 section ( `###` in markdown) for every different type of changes.
+
+For example:
+
+```
+### Added
+
+- new hooks X, Y
+- new formula for Z
+
+### Changed
+
+- return value for hook X
+```
+
+### Document how to upgrade
+
+After the sections above you have to describe the steps needed to upgrade the code. This is particulary useful for module authors to fix their code based on
+what you changed without struggling reading tons of commits and looking for information around.
+
+To do so, you can use the generated ```### How to upgrade``` section by our `create.sh`. 
+Please, be as much as detailed as possible. 
+If the guidelines are very long and they require more than few lines (an entire wiki page for instance), you can just link that page then.
+
