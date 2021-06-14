@@ -5,6 +5,12 @@ All breaking/notable changes to this project will be documented in the `/docs/ch
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](project-versioning.md).
 
+**This changelog should provide an easy way for the developers to upgrade their own code which is connected to AzerothCore** (e.g. modules, APIs, scripts etc.)
+Therefore, just 2 golden rules to follow:
+
+- **DO WRITE** changelog when you added breaking changes, security fixes or important new features that other people can use.
+- **DO NOT WRITE** changelog when you are adding small fixes or improvements.
+
 ## How to create a changelog
 
 The creation of a changelog for a PR is similar to the creation of a new sql file.
@@ -30,7 +36,6 @@ It's mandatory to use the "[Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Changed for changes in existing functionality.
 - Deprecated for soon-to-be removed features.
 - Removed for now removed features.
-- Fixed for any bug fixes.
 - Security in case of vulnerabilities.
 
 You have to create a new H3 section ( `###` in markdown) for every different type of changes.
@@ -61,4 +66,3 @@ If the guidelines are very long and they require more than few lines (an entire 
 ## How to release a new major version
 
 This is a manual process. Everytime we release a new major version (4.0.0, 5.0.0 etc.) we need to move the `master.md` into the `doc/changelog/previous-versions` folder and rename it using this format: `v[major].x.md`. After that we have to create a new empty `master.md` file
-
