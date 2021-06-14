@@ -57,3 +57,8 @@ To do so, you can use the generated ```### How to upgrade``` section by our `cre
 Please, be as much as detailed as possible. 
 If the guidelines are very long and they require more than few lines (an entire wiki page for instance), you can just link that page then.
 
+
+## How to release a new major version
+
+This is a manual process. Everytime we release a new major version (4.0.0, 5.0.0 etc.) we need to move the `master.md` into the `doc/changelog/previous-versions` folder and rename it using this format: `v[major].x.md`. After that we have to create a new empty `master.md` file
+
