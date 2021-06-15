@@ -12,11 +12,11 @@ For instance, we can have: **1.5.1-dev.1** that corresponds to: **MAJOR.MINOR.PA
 
 More in depth:
 
-* **MAJOR** version when you make incompatible API / DB structure changes
+* **MAJOR** version when you make incompatible API / DB structure changes. In AzerothCore we release a MAJOR version once in a while and we support only security fixes right after (read the section below). Therefore, this version can be seen more as a Milestone. 
 
-* **MINOR** version when you add functionality in a backwards-compatible manner
+* **MINOR** version when you add functionality in a backwards-compatible manner. This is mostly unused on AC since we do not import any new functionality after we release a MAJOR  version.
 
-* **PATCH** version when you make backwards-compatible bug fixes.
+* **PATCH** version when you make backwards-compatible bug and security fixes.
 
 * **PRERELEASE** this is such called "metadata" in semver standard. We use this part of the versioning while we work on **master** branch. Everytime a new feature or breaking change (on both code or db) is released, this number is increased to notify you regarding possible actions to take. Check [how to use the changelog](how-to-use-changelog.md).
 
