@@ -6,10 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](project-versioning.md).
 
 **This changelog should provide an easy way for the developers to upgrade their own code which is connected to AzerothCore** (e.g. modules, APIs, scripts etc.)
-Therefore, just 2 golden rules to follow:
+It's not a way to keep track of ALL the changes made (we have the git history for that). Therefore, just 2 golden rules to follow:
 
 - **DO WRITE** changelog when you added breaking changes, security fixes or important new features that other people can use.
-- **DO NOT WRITE** changelog when you are adding small fixes or improvements.
+- **DO NOT WRITE** changelog when you are adding small fixes or minor improvements.
 
 ## How to create a changelog
 
@@ -50,18 +50,24 @@ For example:
 
 ### Changed
 
-- return value for hook X
+- return value for hook X, now it's boolean instead of void
 ```
 
 ### Document how to upgrade
 
-After the sections above you have to describe the steps needed to upgrade the code. This is particulary useful for module authors to fix their code based on
-what you changed without struggling reading tons of commits and looking for information around.
+After the sections above you have to describe the steps needed to upgrade the code. This is the **most important part** and it's particulary useful for module authors to fix their code based on what you changed without struggling reading tons of commits and looking for information around.
 
 To do so, you can use the generated ```### How to upgrade``` section by our `create.sh`. 
 Please, be as much as detailed as possible. 
 If the guidelines are very long and they require more than few lines (an entire wiki page for instance), you can just link that page then.
 
+Example:
+
+```
+### How to upgrade
+
+- The hook OnCheck of the Achievement script class now returns a boolean instead of a void. Add `return true` to your methods if you don't want to change the original behaviour. 
+```
 
 ## How to release a new major version
 
