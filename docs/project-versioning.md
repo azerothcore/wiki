@@ -22,11 +22,11 @@ More in depth:
 
 ### PRERELEASE first
 
-AzerothCore is not yet considered a "completed" software at an enterprise level. The versioning described above will be used to provide a simple way to check if a module, script or anything connected to AC is compatible or not with AC and what to do to upgrade it.
+AzerothCore is not yet considered a "completed" software, hence is costantly in dev stage. The versioning described above will be mainly used to provide a simple way to check if a module, script or anything connected to AC is compatible or not with AC and what to do to upgrade it.
 
 Our strategy is (in order of most common actions):
 
-- to not update the version when the changes are just fixes/chore changes
+- to not update the version when the changes are just small fixes/chore changes
 - to update the `-dev.x` prerelease version on master when we have breaking changes or new features
 - to upgrade the major version when we decide to release a new stable version
 - if any new security patch or feature is imported within the released major version, those ones will increase the minor/patch version then, but we do it very occasionally.
