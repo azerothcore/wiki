@@ -294,12 +294,12 @@ According to the [Level](#quest_template-Level), the basic experience with index
 This field also controls the XP given as the XP is calculated from the value in this field by the following formula. If the quest is repeatable, XP will be given only once. The total XP that a character will receive is also affected by the level difference between the character's level and the quest's level.
 
 The formula for calculating XP from the value in this field:
-**QuestLevel &gt;= 65:** XP = RewMoneyMaxLevel / 6.0
-**QuestLevel h1. 64:** XP = RewMoneyMaxLevel / 4.8
-**QuestLevel 63:** XP = RewMoneyMaxLevel / 3.6
-**QuestLevel h1. 62:** XP = RewMoneyMaxLevel / 2.4
-**QuestLevel 61:** XP = RewMoneyMaxLevel / 1.2
-**QuestLevel &lt;= 60:** XP = RewMoneyMaxLevel / 0.6
+- **QuestLevel &gt;= 65:** XP = RewMoneyMaxLevel / 6.0
+- **QuestLevel h1. 64:** XP = RewMoneyMaxLevel / 4.8
+- **QuestLevel 63:** XP = RewMoneyMaxLevel / 3.6
+- **QuestLevel h1. 62:** XP = RewMoneyMaxLevel / 2.4
+- **QuestLevel 61:** XP = RewMoneyMaxLevel / 1.2
+- **QuestLevel &lt;= 60:** XP = RewMoneyMaxLevel / 0.6
 
 ### RewardMoney
 
@@ -578,9 +578,10 @@ Text sent to player when the player tries to talk to the NPC with the quest acti
 ### RequiredNpcOrGo3
 ### RequiredNpcOrGo4
 
-Value &gt; 0:required creature\_template ID the player needs to kill/cast on in order to complete the quest.
-Value &lt; 0:required gameobject\_template ID the player needs to cast on in order to complete the quest.
-If\*RequiredSpellCast\*is != 0, the objective is to cast on target, else kill.
+- Value &gt; 0:required creature\_template ID the player needs to kill/cast on in order to complete the quest.
+- Value &lt; 0:required gameobject\_template ID the player needs to cast on in order to complete the quest.
+- If\*RequiredSpellCast\*is != 0, the objective is to cast on target, else kill.
+
 NOTE: If RequiredSpellCast is != 0 and the spell has effects Send Event or Quest Complete, this field may be left empty.
 
 ### RequiredNpcOrGoCount1
