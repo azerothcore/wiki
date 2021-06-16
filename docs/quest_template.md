@@ -599,7 +599,7 @@ The number of times the creature or gameobject must be killed or casted upon.
 ### RequiredItemId5
 ### RequiredItemId6
 
-[Id](item_template#id) of required item to complete the quest.
+[Id](item_template#entry) of required item to complete the quest.
 
 ### RequiredItemCount1
 ### RequiredItemCount2
