@@ -1,5 +1,6 @@
 ---
 tableofcontents: 1
+redirect_from: /Dealing-with-SQL-files
 ---
 
 # SQL Standards
