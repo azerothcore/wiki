@@ -316,7 +316,7 @@ The money a character at level 80 would get when they complete this quest.
 
 ### RewardSpell
 
-Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpellCast](#quest_template-RewardSpellCast) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
+Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpellCast](quest_template#rewardspellcast) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
 NOTE: This field comes straight from the WDB and should not be changed.
 
