@@ -23,3 +23,5 @@ THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct in
 ## ARCHIVED PAGES: (Not yet implemented)
 
 ALL ARCHIVED PAGES that could potentially have some sort of value should be added in the `archive.md` list and links to these pages should be removed from other places in the wiki.
+
+They should also be moved into the /docs/archive/ folder.
