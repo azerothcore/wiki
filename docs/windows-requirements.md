@@ -3,23 +3,30 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](Installation.md) | [Step 2: Core Installation >>](core-installation.md) |
+| [<< Start: Installation Guide](installation.md) | [Step 2: Core Installation >>](core-installation.md) |
 
 | |
 | :- |
+| Boost ≥ 1.70 - 1.74 |
 | MySQL ≥ 5.7.0 |
 | OpenSLL ≥ 1.0.x |
 | CMake ≥ 3.16 |
 | MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview)
 
 1. Git Extensions
+
     1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
 
 1. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
 
    You will need to install the C++ compiler.
    
-   To do this, select **Custom** in the type of installation and pick **Common Tools for Visual C++ 2019** in **Programming Languages -> Visual C++**
+   To do this, select **Desktop development for C++** under **Workloads -> Desktop & Mobile**.
+
+   <a href="/wiki/images/visualstudio.jpg" target="_blank">
+   <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
+   </a>
+
 1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
 
     1. Download the Windows MSI Installer.
@@ -31,6 +38,18 @@
     1. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
     
     1. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
+
+    1. Add MySQL to Environment Variables.
+    
+        1. Go to Control Panel -> System
+        
+        1. Go to Advanced System Settings
+
+        1. Go to Environment Variables
+        
+        1. Under "Systemvariables" select **Path**
+        
+        1. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\**
 
 1. Choose a database management tool
 
@@ -53,8 +72,6 @@
     1. Download and install the **Latest Release** win32-x86.exe file, **NEVER the RC (Release Candidate) versions.**
     
     1. We recommend to compile in 64 bits mode. 
-    
-    1. Note: If used different MySQL server e.g Wampserver with included MySQL or any other software, then is needed to point cmake to that directory. Add an environment variable to "System" variable named "MYSQL_ROOT" and as value your MySQL installation directory, e.g "c:/wamp/bin/mysql/mysql5.7.19". Important is to use "/", not "\"  when pointing to directory.
 
 1. MySQL development files
 
@@ -72,18 +89,40 @@
        
     1. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
        *when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
+  
+1. [Boost](https://www.boost.org/).
 
+    1. Download the prebuilt Windows Binary for Visual Studio 2019
+
+    1. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0`is recommended
+
+    1. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
+
+    1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
+
+    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
+
+    <a href="/wiki/images/boost.jpg" target="_blank">
+    <img src="/wiki/images/boost.jpg" height="50%" width="50%">
+    </a>
+
+    1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
+  
 <br>
 
 ## Help
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](Installation.md) | [Step 2: Core Installation >>](core-installation.md) |
+| [<< Start: Installation Guide](installation.md) | [Step 2: Core Installation >>](core-installation.md) |

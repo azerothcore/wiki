@@ -282,7 +282,7 @@ Reputation value 2 that the player must achieve with the faction in [RepObjectiv
 
 ### RewardNextQuest
 
-**(Old field name: NextQuestIdChain)**
+** RewardNextQuest (Old field name: NextQuestIdChain)**
 
 The quest entry from a **creature** or **gameobject** that ends a quest and starts a new one. The result is, that if you end the quest, the new quest instantly appears from the quest giver.
 
@@ -312,7 +312,7 @@ The money a character at level 80 would get when they complete this quest.
 
 ### RewardDisplaySpell
 
-
+Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](#quest_template-RewardSpell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
 ### RewardSpell
 
@@ -327,7 +327,6 @@ Number of honorable kill honor rewarded for completing this quest.
 Example: An example value is 15 for quest 8388: At level 80 an honorable kill is 124 honor worth. Multiply this with 15 and you receive 1860, after the multiplication the value is rounded up. So the honor rewarded at level 80 is 1860 for this quest.
 
 ### RewardKillHonor
-
 
 
 ### StartItem
@@ -519,11 +518,18 @@ Amount to be obtained from the above-mentioned item
 ### RewardFactionValue2
 
 
+### ItemDrop
+
+
 ### RewardFactionOverride2
 
 
 ### RewardFactionID3
 
+
+### ItemDropQuantity
+
+The maximum number of copies of the item in ItemDrop that can be picked up (and dropped by the core).
 
 ### RewardFactionValue3
 

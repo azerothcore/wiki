@@ -71,6 +71,8 @@ The result of that command will be:
 
 The value: `"Flags": 64` means "normal zone", we have to override it with `19456 - Sanctuary (Duels allowed)`.
 
+For the DBC documentation check [this wiki](https://wowdev.wiki/Category:DBC_WotLK)
+
 You can check the list of the flags [here](https://www.azerothcore.org/wiki/AreaTable)
 
 3. Export the SQL

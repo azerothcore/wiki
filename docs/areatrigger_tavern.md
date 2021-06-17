@@ -8,10 +8,10 @@ Enable a trigger when player enters a city or tavern. This causes the player to 
 
 **Structure**
 
-| Field     | Type         | Attributes | Key | Null | Default | Extra | Comment    |
-|-----------|--------------|------------|-----|------|---------|-------|------------|
+| Field     | Type      | Attributes | Key | Null | Default | Extra | Comment    |
+| --------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
 | [id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
-| [name][2] | text         |            |     | YES  |         |       |            |
+| [name][2] | text      |            |     | YES  |         |       |            |
 
 [1]: #id
 [2]: #name
@@ -29,7 +29,7 @@ Name of the city or tavern. This is purely for descriptive purposes.
 ### Example
 
 | id  | name                                         |
-|-----|----------------------------------------------|
+| --- | -------------------------------------------- |
 | 71  | Westfall - Sentinel Hill Inn                 |
 | 98  | Nesingwary's Expedition                      |
 | 178 | Strahnbrad                                   |
