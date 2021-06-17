@@ -7,7 +7,7 @@
 **Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
-|-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
+| --------------------- | ------------ | ---------- | --- | ---- | ----------------- | -------------- | ---------- |
 | [id][1]               | INT          | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
 | [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
 | [salt][3]             | BINARY(32)   |            |     | NO   |                   |                |            |
@@ -20,7 +20,7 @@
 | [last_ip][10]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [last_attempt_ip][11] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
 | [failed_logins][12]   | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
-| [locked][13]          | TINYINT   | UNSIGNED   |     | NO   | 0                 |                |            |
+| [locked][13]          | TINYINT      | UNSIGNED   |     | NO   | 0                 |                |            |
 | [lock_country][14]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
 | [last_login][15]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
 | [online][16]          | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
@@ -164,7 +164,7 @@ Boolean 0 or 1 controlling if the account is currently logged in and online.
 Integer 0, 1 or 2 controlling if the client logged in on the account has any expansions. (for example if client is TBC, but expansion is set to 0, it will not be able to enter outlands and etc.)
 
 | Value | Expansion                      |
-|-------|--------------------------------|
+| ----- | ------------------------------ |
 | 0     | Classic                        |
 | 1     | The Burning Crusade (TBC)      |
 | 2     | Wrath of the Lich King (WotLK) |

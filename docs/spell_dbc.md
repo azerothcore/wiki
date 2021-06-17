@@ -15,23 +15,23 @@ Fixes for this table should always contain:
 
 **Structure**
 
-| Field                         | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------------------|-------------|------------|-----|------|---------|-------|---------|
-| Id                            | INT     | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| Field                         | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Id                            | INT      | UNSIGNED   | PRI | NO   | NULL    |       |         |
 | Dispel                        | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | Mechanic                      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Attributes                    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| AttributesEx                  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| AttributesEx2                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| AttributesEx3                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| AttributesEx4                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| AttributesEx5                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| Stances                       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| StancesNot                    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| Targets                       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Attributes                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| AttributesEx                  | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| AttributesEx2                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| AttributesEx3                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| AttributesEx4                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| AttributesEx5                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Stances                       | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| StancesNot                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Targets                       | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | CastingTimeIndex              | TINYINT  | UNSIGNED   |     | NO   | 1       |       |         |
-| AuraInterruptFlags            | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| ProcFlags                     | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| AuraInterruptFlags            | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| ProcFlags                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | ProcChance                    | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | ProcCharges                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | MaxLevel                      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
@@ -40,21 +40,21 @@ Fixes for this table should always contain:
 | DurationIndex                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | RangeIndex                    | TINYINT  | UNSIGNED   |     | NO   | 1       |       |         |
 | StackAmount                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| EquippedItemClass             | INT     | SIGNED     |     | NO   | -1      |       |         |
-| EquippedItemSubClassMask      | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EquippedItemInventoryTypeMask | INT     | SIGNED     |     | NO   | 0       |       |         |
+| EquippedItemClass             | INT      | SIGNED     |     | NO   | -1      |       |         |
+| EquippedItemSubClassMask      | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EquippedItemInventoryTypeMask | INT      | SIGNED     |     | NO   | 0       |       |         |
 | Effect1                       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | Effect2                       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | Effect3                       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectDieSides1               | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectDieSides2               | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectDieSides3               | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectRealPointsPerLevel1     | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| EffectRealPointsPerLevel2     | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| EffectRealPointsPerLevel3     | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| EffectBasePoints1             | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectBasePoints2             | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectBasePoints3             | INT     | SIGNED     |     | NO   | 0       |       |         |
+| EffectDieSides1               | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectDieSides2               | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectDieSides3               | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectRealPointsPerLevel1     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| EffectRealPointsPerLevel2     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| EffectRealPointsPerLevel3     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| EffectBasePoints1             | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectBasePoints2             | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectBasePoints3             | INT      | SIGNED     |     | NO   | 0       |       |         |
 | EffectMechanic1               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | EffectMechanic2               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | EffectMechanic3               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
@@ -70,44 +70,44 @@ Fixes for this table should always contain:
 | EffectApplyAuraName1          | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | EffectApplyAuraName2          | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | EffectApplyAuraName3          | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectAmplitude1              | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectAmplitude2              | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectAmplitude3              | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectMultipleValue1          | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| EffectMultipleValue2          | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| EffectMultipleValue3          | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| EffectMiscValue1              | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectMiscValue2              | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectMiscValue3              | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectMiscValueB1             | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectMiscValueB2             | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectMiscValueB3             | INT     | SIGNED     |     | NO   | 0       |       |         |
-| EffectTriggerSpell1           | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectTriggerSpell2           | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectTriggerSpell3           | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskA1        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskA2        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskA3        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskB1        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskB2        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskB3        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskC1        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskC2        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EffectSpellClassMaskC3        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectAmplitude1              | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectAmplitude2              | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectAmplitude3              | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectMultipleValue1          | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| EffectMultipleValue2          | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| EffectMultipleValue3          | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| EffectMiscValue1              | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectMiscValue2              | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectMiscValue3              | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectMiscValueB1             | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectMiscValueB2             | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectMiscValueB3             | INT      | SIGNED     |     | NO   | 0       |       |         |
+| EffectTriggerSpell1           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectTriggerSpell2           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectTriggerSpell3           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskA1        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskA2        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskA3        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskB1        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskB2        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskB3        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskC1        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskC2        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EffectSpellClassMaskC3        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | MaxTargetLevel                | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | SpellFamilyName               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| SpellFamilyFlags1             | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| SpellFamilyFlags2             | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| SpellFamilyFlags3             | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| SpellFamilyFlags1             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| SpellFamilyFlags2             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| SpellFamilyFlags3             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | MaxAffectedTargets            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | DmgClass                      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | PreventionType                | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| DmgMultiplier1                | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| DmgMultiplier2                | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| DmgMultiplier3                | FLOAT       | SIGNED     |     | NO   | 0       |       |         |
-| AreaGroupId                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| SchoolMask                    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| Comment                       | text        | SIGNED     |     | NO   | NULL    |       |         |
+| DmgMultiplier1                | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| DmgMultiplier2                | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| DmgMultiplier3                | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| AreaGroupId                   | INT      | SIGNED     |     | NO   | 0       |       |         |
+| SchoolMask                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Comment                       | text     | SIGNED     |     | NO   | NULL    |       |         |
 
 **Description of the fields**
 
@@ -312,7 +312,7 @@ Effect1, Effect2 and Effect3. Effect\_ID of the Spell\_Effect. A Spell can only 
 Effect\_IDs of [Effect1, Effect2 and/or Effect3](#spell_dbc-Effect).
 
 | Effect_ID | Spell_Effect                   | Description                                                                                                                             |
-|-----------|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| --------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | 0         | EffectNULL                     | NULL                                                                                                                                    |
 | 1         | EffectInstaKill                | SPELL_EFFECT_INSTAKILL                                                                                                                  |
 | 2         | EffectSchoolDMG                | SPELL_EFFECT_SCHOOL_DAMAGE                                                                                                              |

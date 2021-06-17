@@ -52,7 +52,7 @@ cd build
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
-Parameter explanation for advanced users [CMake options](CMake-options.md).
+Parameter explanation for advanced users [CMake options](cmake-options.md).
 
 At this point, you must be in your "build/" directory.
 
@@ -92,7 +92,11 @@ make install
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 

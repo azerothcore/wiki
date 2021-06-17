@@ -64,9 +64,16 @@ highlighter: rouge
 defaults:
  -
     scope:
+      locale: "en"
       path: "docs"
     values:
       permalink: /:basename
+ -
+    scope:
+      locale: "es"
+      path: "docs/es"
+    values:
+      permalink: /es/:basename
  -
     scope:
       path: "" # an empty string here means all files in the project
