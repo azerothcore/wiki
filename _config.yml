@@ -75,6 +75,11 @@ defaults:
     values:
       permalink: /es/:basename
  -
+     scope:
+      path: "docs/archive"
+    values:
+      permalink: /archive/:basename
+ -
     scope:
       path: "" # an empty string here means all files in the project
     values:
