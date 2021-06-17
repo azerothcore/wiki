@@ -12,6 +12,7 @@
 * [CMake options](cmake-options.md)
 * [Directory structure](directory-structure.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)
+* [IP2LOCATION](ip2location.md)
 * [Logging Configuration](logging-configuration.md)
 * [MySQL types (C++)](mysqltypescpp.md)
 * [Project Versioning](project-versioning.md)
