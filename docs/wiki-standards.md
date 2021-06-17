@@ -20,6 +20,12 @@ When adding/removing a table it should also be updated in `database-auth.md` `da
 
 THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct info in the tab.)
 
+## TRANSLATION
+
+ALL TRANSLATIONS should be in a sub directory of /docs/ with the shortened locale of the language. i.e /docs/es/. If there has been no translations prior, you need to allow the directory path in the config. See [this commit on how to do it](https://github.com/azerothcore/wiki/commit/8b897c3384298674e82108357ee5e655f788229f).
+
+ALL FILES should be named the **exact same as the English versions**! Do not ever translate the file names, only the contents within.
+
 ## ARCHIVED PAGES: (Not yet implemented)
 
 ALL ARCHIVED PAGES that could potentially have some sort of value should be added in the `archive.md` list and links to these pages should be removed from other places in the wiki.
