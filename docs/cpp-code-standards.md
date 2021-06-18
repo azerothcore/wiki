@@ -195,7 +195,6 @@ float posX = 234.3456f;
 We define WorldObjects in this way:
 
 ```cpp
-
 GameObject* go;
 Creature* creature;
 Item* item;
