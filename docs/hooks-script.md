@@ -162,6 +162,12 @@ Remember to document your new hook by following the [How to document your code](
 When you create a new hook to publish into the AC repo, one of the acceptance criteria is to write proper documentation for it,
 hence other people know how to use it properly. So please, read that guide carefully. 
 
+
+### Write a changelog
+
+When you create or modify any hook, you have to create a new changelog to explain people how to adapt their code and to keep them
+informed about these changes. Please follow [this guide](https://www.azerothcore.org/wiki/how-to-use-changelog) to learn how to do it.
+
 ## Naming conventions
 
 Every hook must have the following naming convention:
