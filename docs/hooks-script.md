@@ -166,7 +166,7 @@ hence other people know how to use it properly. So please, read that guide caref
 ### Write a changelog
 
 When you create or modify any hook, you have to create a new changelog to explain people how to adapt their code and to keep them
-informed about these changes. Please follow [this guide](https://www.azerothcore.org/wiki/how-to-use-changelog) to learn how to do it.
+informed about these changes. Please follow [this guide](how-to-use-changelog.md) to learn how to do it.
 
 ## Naming conventions
 
