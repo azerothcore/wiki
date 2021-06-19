@@ -484,15 +484,19 @@ Amount to be obtained from the above-mentioned item
 
 ### POIContinent
 
+MapId of a quest point of interest (POI - Point Of Interest). POI will be shown on the map when quest is active.
 
 ### POIx
 
+X coordinate of quest POI.
 
 ### POIy
 
+Y coordinate of quest POI.
 
 ### POIPriority
 
+TODO
 
 ### RewardTitle
 
