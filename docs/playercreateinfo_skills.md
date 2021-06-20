@@ -16,6 +16,12 @@ This table holds information on what skills newly created characters should star
 | [rank][4]      | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [Comment][5]   | VARCHAR(255) |            |     | YES  |         |       |         |
 
+[1]: #racemask
+[2]: #classmask
+[3]: #spell
+[4]: #rank
+[5]: #comment
+
 ## Description of the fields
 
 ### racemask
