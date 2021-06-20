@@ -21,7 +21,7 @@ If you do not want to extract these files using the extractors you can find down
 
 Github link:
 
-[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/download/v10/data.zip) (Used in the automatic downloader script in `/apps/`)
+[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/){target="_blank"} (Used in the automatic downloader script in `/apps/`)
 
 Mega link:
 
