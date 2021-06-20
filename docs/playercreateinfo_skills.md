@@ -1,30 +1,30 @@
 # playercreateinfo\_skills
 
+[<-Back-to:World](database-world.md)
+
 # playercreateinfo\_skills table
 
 This table holds information on what skills newly created characters should start out with. A character in this table is defined by his/her race and class combination.
 
 ## Structure
 
-| Field                                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|---------------------------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [racemask](#playercreateinfo_skills-race)   | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [classmask](#playercreateinfo_skills-class) | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [skill](SkillLine)                          | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| rank                                        | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Comment                                     | VARCHAR(255) | SIGNED     |     | YES  |         |       |         |
-
- 
+| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [racemask][1]  | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [classmask][2] | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [skill][3]     | SMALLINT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [rank][4]      | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [Comment][5]   | VARCHAR(255) |            |     | YES  |         |       |         |
 
 ## Description of the fields
 
 ### racemask
 
-One or more character's race. See [ChrRaces](ChrRaces).
+One or more character's race. See [ChrRaces.dbc](ChrRaces).
 
 ### classmask
 
-One or more character's class. See ChrClasses.
+One or more character's class. See [ChrClasses.dbc](chrclasses).
 
 ### Spell
 
