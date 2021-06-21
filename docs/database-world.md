@@ -113,7 +113,7 @@ The world database has information basically related to creatures, objects, item
 - [playercreateinfo](playercreateinfo.md)
 - [playercreateinfo_action](playercreateinfo_action.md)
 - [playercreateinfo_item](playercreateinfo_item.md)
-- [playercreateinfo_spell](playercreateinfo_spell.md)
+- [playercreateinfo_skills](playercreateinfo_skills.md)
 - [playercreateinfo_spell_custom](playercreateinfo_spell_custom.md)
 - [points_of_interest](points_of_interest.md)
 - [points_of_interest_locale](points_of_interest_locale.md)
