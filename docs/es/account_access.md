@@ -1,7 +1,3 @@
----
-permalink: /es/
----
-
 # account\_access
 
 [<-Back-to:Auth](database-auth.md)
