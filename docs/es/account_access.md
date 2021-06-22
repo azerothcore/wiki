@@ -1,6 +1,6 @@
 # account\_access
 
-[<-Back-to:Auth](database-auth.md)
+[<- Volver a: Auth](database-auth.md)
 
 **Tabla \`account\_access\`**
 
