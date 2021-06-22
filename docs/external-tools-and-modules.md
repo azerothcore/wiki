@@ -5,6 +5,7 @@ We directly maintain some of them such as:
 
 * [ACore-CMS](https://github.com/azerothcore/acore-cms)
 * [Keira3](https://github.com/azerothcore/Keira3)
+* [SpellWork](https://github.com/azerothcore/SpellWork)
 * [Noderouter](https://github.com/azerothcore/noderouter)
 
 ...and many other that you can find in our [Catalogue](https://www.azerothcore.org/catalogue.html)
