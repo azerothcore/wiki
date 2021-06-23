@@ -10,7 +10,7 @@
 | MySQL ≥ 5.7.0 |
 | Boost ≥ 1.67 |
 | CMake ≥ 3.16 |
-| Clang ≥ [7](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
+| Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
 #### Ubuntu with MariaDB 10.x
 

@@ -126,6 +126,16 @@ Map file './maps/0004331.map' is from an incompatible map version (MAPS v9), MAP
 ```
 Pull the source, recompile tools, copy the extractors to your wow binaries and recreate the maps using the updated mapextractor. Then replace your old map files with the new ones.
 
+---------------------------------------------------------
+
+**ACE00046*** I get an error when WorldServer is starting:
+```
+Used MySQL library version (8.0.19 id 80019) does not match the version id used to compile AzerothCore (id 80024)
+```` 
+You need to use the exact version of libmysql.dll as the version you used to compile your source with. You get it from **C:\Program Files\MySQL\MySQL Server 8.x\lib\** or by following the [installation guide](https://www.azerothcore.org/wiki/windows-core-installation#compiling-the-source).
+
+---------------------------------------------------------
+
 ## Core compilation-related errors
 
 **ACE00060** I don't get a AzerothCore hash
@@ -168,6 +178,8 @@ fatal error C1060: compiler is out of heap space
 C1076: compiler limit : internal heap limit reached; use /Zm to specify a higher limit
 ```
 Read [How to: Enable a 64-Bit, x664 hosted MSVC toolset on the command line. Microsoft](https://docs.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?redirectedfrom=MSDN&view=msvc-160).
+
+---------------------------------------------------------
 
 **ACE00066** I can't compile, I get:
 ```

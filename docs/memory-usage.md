@@ -10,12 +10,12 @@ AzerothCore is based on SunwellCore (a fork from TC). SunwellCore was a public s
 
 #### RAM Requirements
 
-| Number of players | Minimum RAM requirement |
-|-------------------|-------------------------|
-| 1-5               |   4 GB                  |
-| 10                |   6 GB                  |
-| 100               |  16 GB                  |
-| >100              | >16 GB                  |
+| Number of players | Minimum RAM requirement (approx.) |
+|-------------------|-----------------------------------|
+| 1-10              |   4 GB                            |
+| 10-50             |   6 GB                            |
+| 50-100            |   8 GB                            |
+| 100+              |  16 GB                            |
 
 We recommend at least 16 GB as the server will gradually cache the world maps as the players explore them which finally takes up to at least 11 GB of RAM usage.
 

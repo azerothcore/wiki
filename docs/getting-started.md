@@ -123,9 +123,9 @@ Sounds complicated? Give it a try and you'll see how it works.
 
 ### Download a MySQL client
 
-You'll need a generic database client too in order to manage tables and their contents.
+You'll need a generic database management tool too in order to manage tables and their contents.
 
-- [azerothcore.org/wiki/Database-client](https://www.azerothcore.org/wiki/Database-client)
+- [Database Management Tool](database-management-tool)
 
 ![AzerothCore world database viewed with sequel-ace](https://user-images.githubusercontent.com/75517/109370368-42750d80-78a0-11eb-946c-c0831a02b52b.png)
 
