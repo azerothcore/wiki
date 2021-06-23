@@ -62,7 +62,7 @@ At this point, you must be in your "build/" directory.
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
 -DTOOLS=0 \
--DSCRIPTS=1 \
+-DSCRIPTS=static \
 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include \
 -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib \
 -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include \

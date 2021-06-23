@@ -10,7 +10,7 @@ For example:
 cd azerothcore
 mkdir build
 cd build
-cmake ../ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1 -DBUILD_TESTING=1
+cmake ../ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static -DBUILD_TESTING=1
 make install -j 6
 ```
 
