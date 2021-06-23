@@ -130,7 +130,7 @@ GRANT ALL ON *.* TO 'dbadmin'@'%' IDENTIFIED BY 'password1' WITH GRANT OPTION;
 - Navigate to the new build folder `cd build`
 - Now we run the cmake command, this is the pre-compile step to ensure all cpp files are accounted for before we compile, and it tells the compile what to compile. 
 ```
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=1
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DTOOLS=0 -DSCRIPTS=static
 ```
 - Now we compile AzerothCore - this can take some time depending on the number of CPU cores your Droplet has. This tutorial is based on the 4 CPU core Droplet, which compiles in about 8 minutes. Enter the following command to compile the core and place the assembled items in their new home:
 ```
