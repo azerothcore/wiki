@@ -18,7 +18,7 @@ Note: Will be CPU intensive.
 
 ## PCH
 
-Totally disable PCH:
+Disable all usage of precompiled headers:
 
 `-DNOPCH=1`
 
@@ -27,6 +27,8 @@ Or one by one:
 -DUSE_COREPCH=0
 -DUSE_SCRIPTPCH=0
 ```
+
+May increase build times.
 
 ## VERBOSITY
 

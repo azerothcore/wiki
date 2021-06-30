@@ -62,13 +62,13 @@ At this point, you must be in your "build/" directory.
 echo $HOME
 ```
 
-**Note**: in case you use a non-default package for `clang` (such as not from a package manager), you need to replace it accordingly with the path of where your clang and clang++.
+**Note**: in case you use a non-default package for `clang` (such as not from a package manager), you may need to replace the binary name accordingly with the path of where your clang and clang++. This is usually not necessary as long as  you installed from a package manager as they symlink the binary names with the common paths.
 
 ```sh
 cmake ../ \
--DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ \
--DCMAKE_C_COMPILER=(which clang) \
--DCMAKE_CXX_COMPILER=(which clang++) \
+-DCMAKE_INSTALL_PREFIX=$(dirname "$(pwd)") \
+-DCMAKE_C_COMPILER=$(which clang) \
+-DCMAKE_CXX_COMPILER=$(which clang++) \
 -DWITH_WARNINGS=1 \
 -DTOOLS=1 \
 -DSCRIPTS=static
