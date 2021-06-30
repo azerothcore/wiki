@@ -6,17 +6,17 @@ redirect_from: "/Contribute"
 
 You can contribute in several ways to AzerothCore:
 
-- [commenting an open issue](Contribute#how-to-comment-an-issue)
+- [commenting an open issue](contribute#how-to-comment-an-issue)
 
-- [opening an issue](Contribute#how-to-open-an-issue)
+- [opening an issue](contribute#how-to-open-an-issue)
 
 - [testing a pull request](How-to-test-a-PR)
 
 - [testing DB-only changes](How-to-test-DB-only-changes)
 
-- [creating a pull request](Contribute#how-to-create-a-pull-request)
+- [creating a pull request](contribute#how-to-create-a-pull-request)
 
-- [improving our wiki](Contribute#improve-the-wiki)
+- [improving our wiki](contribute#improve-the-wiki)
 ## General information
 
 To contribute, you obviously need a github account.
