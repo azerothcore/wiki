@@ -50,19 +50,18 @@ cd build
 
 ### Configuring for compiling
 
-Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
-
 Parameter explanation for advanced users [CMake options](cmake-options.md).
 
 At this point, you must be in your "build/" directory.
 
-**Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
+**Note**: in the follows command the variable `$HOME` is the home directory of the **current user**, so if you are logged as root, $HOME will be "/root".
 
 ```sh
 cmake ../ \
--DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
--DTOOLS=0 \
+-DCMAKE_INSTALL_PREFIX=$(dirname "$(pwd)")  \
+-DTOOLS=1 \
 -DSCRIPTS=static \
+-DWITH_WARNINGS=1 \
 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include \
 -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib \
 -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include \
@@ -72,17 +71,17 @@ cmake ../ \
 -DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
 ```
 
-To know the amount of cores available.
-You can use the following command
+To know the amount of threads available.
+You can use the following command:
 
 ```sh
 nproc --all
 ```
 
-Then, replacing `4` with the number of threads that you want to execute, type:
+Then you can simply run this to compile with all threads available and install the server.
 
 ```sh
-make -j 4
+make -j$(nproc --all)
 make install
 ```
 
