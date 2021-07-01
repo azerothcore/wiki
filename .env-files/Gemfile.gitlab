@@ -16,3 +16,4 @@ gem "jekyll-sitemap"
 gem "jekyll-titles-from-headings"
 gem "jemoji"
 gem "jekyll-gitlab-metadata"
+gem 'webrick' # solves error with Ruby 3.0
