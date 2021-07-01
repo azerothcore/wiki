@@ -84,7 +84,7 @@
     1. Find the 32bit version by finding the latest 1.0.x or 1.1.x Win32 OpenSSL that is NOT the "light" version. (Example: Win32 OpenSSL v1.1.1g)
 
     1. *Note #1: If you get a "Missing Microsoft Visual C++ 2008 Redistributable" error message while installing OpenSSL,*
-       *download the [Microsoft Visual C++ 2008 Redistributable Service Pack 1](http://www.microsoft.com/download/details.aspx?id=26368) (x64) and install it.*
+       *download the [Microsoft Visual C++ 2008 Redistributable Service Pack 1](https://www.microsoft.com/download/details.aspx?id=26368) (x64) and install it.*
        *If you need 32bit support, download and install from the same link, but select x86 instead*
        
     2. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
