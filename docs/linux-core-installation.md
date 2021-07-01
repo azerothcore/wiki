@@ -81,10 +81,10 @@ You can use the following command
 nproc --all
 ```
 
-Then, replacing `6` with the number of threads that you want to execute, type:
+Then you can simply run this to compile with all threads available and install the server.
 
 ```sh
-make -j 6
+make -j$(nproc --all)
 make install
 ```
 

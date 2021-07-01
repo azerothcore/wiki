@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 gem 'webrick' # solves error with Ruby 3.0
 gem "jekyll-gitlab-metadata" # for cross compatibility

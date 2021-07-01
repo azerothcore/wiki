@@ -9,7 +9,7 @@
 | :- |
 | Boost ≥ 1.70 - 1.74 |
 | MySQL ≥ 5.7.0 |
-| OpenSLL ≥ 1.0.x |
+| OpenSSL ≥ 1.0.x |
 | CMake ≥ 3.16 |
 | MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview)
 
@@ -77,30 +77,30 @@
 
     1. These files are shipped with MySQL Server, search for them at program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib.
 
-1. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
+1. [OpenSSL](https://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
 
     1. Find the 64bit version by finding the latest 1.0.x or 1.1.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v1.1.1g)
     
     1. Find the 32bit version by finding the latest 1.0.x or 1.1.x Win32 OpenSSL that is NOT the "light" version. (Example: Win32 OpenSSL v1.1.1g)
 
     1. *Note #1: If you get a "Missing Microsoft Visual C++ 2008 Redistributable" error message while installing OpenSSL,*
-       *download the [Microsoft Visual C++ 2008 Redistributable Package (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=29) (1.7MB Installer) and install it.*
-       *If you need 32bit support, download and install the [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/en-us/download/details.aspx?id=15336).*
+       *download the [Microsoft Visual C++ 2008 Redistributable Package (x64)](https://my.visualstudio.com/Downloads?pid=620) (x64) and install it.*
+       *If you need 32bit support, download and install from the same link, but select x86 instead*
        
-    1. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
+    2. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
        *when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
   
-1. [Boost](https://www.boost.org/).
+2. [Boost](https://www.boost.org/).
 
     1. Download the prebuilt Windows Binary for Visual Studio 2019
 
-    1. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0`is recommended
+    2. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0`is recommended
 
-    1. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
+    3. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
 
-    1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
+    4. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
 
-    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
+    5. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
 
     <a href="/wiki/images/boost.jpg" target="_blank">
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">
