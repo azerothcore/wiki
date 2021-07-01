@@ -19,7 +19,7 @@ Choose **ONE** of the following methods. Run one of the below `git ...` commands
     git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
     ```
 
-2. Clone only the master branch + no previous history (smallest size):
+1. Clone only the master branch + no previous history (smallest size):
 
     ```sh
     git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
@@ -27,7 +27,7 @@ Choose **ONE** of the following methods. Run one of the below `git ...` commands
 
     Note: If you want to get the full history back, use `git fetch --unshallow`.
 
-3. Clone all branches and all history:
+1. Clone all branches and all history:
 
     ```sh
     git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore

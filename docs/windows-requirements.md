@@ -87,20 +87,20 @@
        *download the [Microsoft Visual C++ 2008 Redistributable Service Pack 1](https://www.microsoft.com/download/details.aspx?id=26368) (x64) and install it.*
        *If you need 32bit support, download and install from the same link, but select x86 instead*
        
-    2. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
+    1. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
        *when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
   
-2. [Boost](https://www.boost.org/).
+1. [Boost](https://www.boost.org/).
 
     1. Download the prebuilt Windows Binary for Visual Studio 2019
 
-    2. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0` is recommended
+    1. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0` is recommended
 
-    3. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
+    1. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
 
-    4. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
+    1. 32bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
 
-    5. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
+    1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
 
     <a href="/wiki/images/boost.jpg" target="_blank">
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">
