@@ -18,7 +18,7 @@
 | [reg_mail][8]         | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
 | [joindate][9]         | TIMESTAMP     | SIGNED     |     | NO   | CURRENT_TIMESTAMP |                |            |
 | [last_ip][10]         | VARCHAR(15)   | SIGNED     |     | NO   | 127.0.0.1         |                |            |
-| [last_attempt_ip][11] | VARCHAR(15)   | SIGNED 	 |     | NO   | 127.0.0.1         |                |            |
+| [last_attempt_ip][11] | VARCHAR(15)   | SIGNED     |     | NO   | 127.0.0.1         |                |            |
 | [failed_logins][12]   | INT(10)       | UNSIGNED   |     | NO   | 0                 |                |            |
 | [locked][13]          | TINYINT(3)    | UNSIGNED   |     | NO   | 0                 |                |            |
 | [lock_country][14]    | VARCHAR(2)    | SIGNED     |     | NO   | 00                |                |            |
