@@ -1,8 +1,8 @@
-# account\_secret_digest
+# secret_digest
 
 [<-Back-to:Auth](database-auth.md)
 
-**The \`account\_secret_digest\` table**
+**The \`secret_digest\` table**
 
 **Structure**
 
