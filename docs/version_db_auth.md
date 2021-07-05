@@ -20,7 +20,7 @@
 
 ### sql_rev
 
-Sql review.
+SQL review.
 
 ### required_rev
 
