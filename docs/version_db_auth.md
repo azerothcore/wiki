@@ -11,10 +11,10 @@
 | [date][3]          | VARCHAR(50)  |            |     | YES  |         |       |         |
 | [2021_06_17_00][4] | BIT(1)       |            |     | YES  |         |       |         |
 
-[1]: #sql_rev
-[2]: #required_rev
+[1]: #sqlrev
+[2]: #requiredrev
 [3]: #date
-[4]: #2021_06_17_00
+[4]: #2021061700
 
 **Description of the fields**
 
