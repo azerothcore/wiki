@@ -18,7 +18,7 @@ Appender.DB=3,5,0
 | [realm][2]  | INT          | UNSIGNED   |     | NO   |         |       |         |
 | [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
 | [level][4]  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [string][5] | text         |            |     | YES  |         |       |         |
+| [string][5] | TEXT         |            |     | YES  |         |       |         |
 
 [1]: #time
 [2]: #realm

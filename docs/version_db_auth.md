@@ -9,7 +9,7 @@
 | [sql_rev][1]       | VARCHAR(100) |            | PRI | NO   |         |       |         |
 | [required_rev][2]  | VARCHAR(100) |            | MUL | YES  |         |       |         |
 | [date][3]          | VARCHAR(50)  |            |     | YES  |         |       |         |
-| [2021_06_17_00][4] | bit(1)       |            |     | YES  |         |       |         |
+| [2021_06_17_00][4] | BIT(1)       |            |     | YES  |         |       |         |
 
 [1]: #sql_rev
 [2]: #required_rev
