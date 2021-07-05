@@ -1,7 +1,3 @@
----
-redirect_from: "/Upgrade-from-pre-2.0.0-to-latest-master"
----
-
 # Actualización de previa a 2.0.0 a la última versión 
 
 Este es el tutorial para actualizar cualquier servidor existente desde una versión anterior a la [versión 2.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v2.0.0) a la última versión `master`.
