@@ -14,10 +14,10 @@ Appender.DB=3,5,0
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |-------------|--------------|------------|-----|------|---------|-------|---------|
-| [time][1]   | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [realm][2]  | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [time][1]   | INT          | UNSIGNED   |     | NO   |         |       |         |
+| [realm][2]  | INT          | UNSIGNED   |     | NO   |         |       |         |
 | [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
-| [level][4]  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [level][4]  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [string][5] | text         |            |     | YES  |         |       |         |
 
 [1]: #time
