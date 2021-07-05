@@ -1,10 +1,10 @@
 # account
 
-[<-Back-to:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth.md)
 
-**The \`account\` table**
+**Tabla \`account\`**
 
-**Structure**
+**Estructura**
 
 | Field                 | Type          | Attributes | Key | Null | Default           | Extra          | Comment    |
 | --------------------- | ------------- | ---------- | --- | ---- | ----------------- | -------------- | ---------- |
@@ -33,6 +33,7 @@
 | [recruiter][23]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
 | [totaltime][24]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
 
+
 [1]: #id
 [2]: #username
 [3]: #salt
@@ -58,49 +59,49 @@
 [23]: #recruiter
 [24]: #totaltime
 
-## Description of the fields
+## Descripción de los campos
 
 ### id
 
-The unique account ID.
+El ID único de la cuenta.
 
 ### username
 
-The user's account name.
+El nombre de la cuenta de usuario.
 
-**NOTE:** usernames are limited to 20 characters and have no character restriction.
+**NOTA:** los nombres de usuario están limitados a 20 caracteres y estos mismos no tienen restricción por caracter.
 
 ### salt
 
-salt is a cryptographically random 32-byte value.
+Salt es un valor criptográfico aleatorio de 32 bytes.
 
 ### verifier
 
-verifier is derived from salt, as well as the user's username (all uppercase) and their password (all uppercase).
+El verificador se deriva de salt, así como el nombre de usuario (todo en mayúsculas) y su contraseña (todo en mayúsculas).
 
-To obtain the verifier you need to calculate:
+Para obtener el verificador hay que calcular:
 
-1. Calculate `h1 = SHA1("USERNAME:PASSWORD")`, substituting the user's username and password converted to uppercase.
+1. Calcular `h1 = SHA1("USUARIO:CONTRASEÑA")`, sustituyendo el nombre de usuario y la contraseña convertidos en mayúsculas.
 
-2. Calculate `h2 = SHA1(salt || h1)`, where || is concatenation (the . operator in PHP).
+2. Calcular `h2 = SHA1(salt || h1)`, dónde || es la concatenación (el operador . en PHP).
 
-**NOTE:** Both `salt` and `h1` are binary, not hexadecimal strings!
+**NOTA:** ¡Tanto `salt` como `h1` son cadenas binarias, no hexadecimales!
 
-3. Treat `h2` as an integer in little-endian order (the first byte is the least significant).
+3. Tratar `h2` como un entero en orden little-endian (el primer byte es el menos significativo).
 
-4. Calculate `(g ^ h2) % N`.
+4. Calcular `(g ^ h2) % N`.
 
-**NOTE:** `g` and `N` are parameters, which are fixed in the WoW implementation.
+**NOTA:** `g` y `N` son parámetros, que están fijados en la implementación de WoW.
 
 `g = 7`
 
 `N = 0x894B645E89E1535BBDAD5B8B290650530801B18EBFBF5E8FAB3C82872A3E9BB7`
 
-5. Convert the result back to a byte array in little-endian order.
+5. Convierte el resultado en una matriz de bytes en orden little-endian.
 
-**For PHP implementations**
+**Para implementaciones de PHP**
 
-Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php.ini.
+¡Asegúrese de que la extensión PHP GMP esté cargada! Descomente `extension=gmp` en su php.ini.
 
 [CalculateSRP6Verifier.php](https://gist.github.com/Treeston/db44f23503ae9f1542de31cb8d66781e)
 
@@ -110,60 +111,60 @@ Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php
 
 ### session_key
 
-`field-no-description|5`
+`campo-sin-descripción|5`
 
 ### totp_secret
 
-The authenticator key.
+La clave del autentificador.
 
-Key can be generated through the Google Authenticator API, a 3rd-party TOTP generator, or manually specified (must be a Base32-compliant expression that is 16 characters).
+La clave puede generarse a través de la API de Google Authenticator, un generador TOTP de terceros, o especificarse manualmente (debe ser una expresión compatible con Base32 de 16 caracteres).
 
-Implementation link on Wikipedia for the Google Authenticator API
+Enlace de implementación en Wikipedia para la API de Google Authenticator
 
-<http://en.wikipedia.org/wiki/Google_Authenticator#Implementations>
+<https://es.wikipedia.org/wiki/Google_Authenticator#Implementaciones>
 
 ### email
 
-The e-mail address associated with this account.
+La dirección de correo electrónico asociada a esta cuenta.
 
 ### reg_mail
 
-The registration e-mail address associated with this account.
+La dirección de correo electrónico de registro asociada a esta cuenta.
 
 ### joindate
 
-The date when the account was created.
+La fecha de creación de la cuenta.
 
 ### last_ip
 
-The last IP used by the person who logged in the account.
+La última IP utilizada por la persona que se conectó a la cuenta.
 
 ### failed_logins
 
-The number of failed logins attempted on the account.
+El número de inicios de sesión fallidos en la cuenta.
 
 ### locked
 
-Boolean 0 or 1 controlling if the account has been locked or not. This can be controlled with the ".account lock" GM command. If locked (1), the user can only log in with their [last_ip][11]. If unlocked (0), a user can log in from any IP, and their last_ip will be updated if it is different. ".Ban account" does not lock it.
+Booleano 0 o 1 que controla si la cuenta ha sido bloqueada o no. Esto se puede controlar con el comando GM ".account lock". Si está bloqueada (1), el usuario sólo puede iniciar sesión con su [last_ip][11]. Si está desbloqueado (0), el usuario puede conectarse desde cualquier IP, y su last_ip se actualizará si es diferente. ".Ban account" no la bloquea.
 
 ### last_login
 
-The date when the account was last logged into.
+La fecha en la que se inició sesión por última vez.
 
 ### totaltime
 
-Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
-Stored in Unix Time.
+Tiempo total jugado en todos los personajes de un jugador. Incluso en personajes borrados que ya no se encuentran en la base de datos.
+Almacenado en tiempo Unix.
 
 ### online
 
-Boolean 0 or 1 controlling if the account is currently logged in and online.
+Booleano 0 o 1 que controla si la cuenta está actualmente conectada y en línea.
 
 ### expansion
 
-Integer 0, 1 or 2 controlling if the client logged in on the account has any expansions. (for example if client is TBC, but expansion is set to 0, it will not be able to enter outlands and etc.)
+Entero 0, 1 o 2 que controla si el cliente conectado a la cuenta tiene alguna otra expansión. (por ejemplo, si el cliente es TBC ( 1 ), pero la expansión está configurada como 0 ( vanilla ), no podrá entrar en Terrallende, etc.)
 
-| Value | Expansion                      |
+| Valor | Expansión                      |
 | ----- | ------------------------------ |
 | 0     | Classic                        |
 | 1     | The Burning Crusade (TBC)      |
@@ -171,7 +172,7 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 
 ### mutetime
 
-The time, in Unix time, when the account will be unmuted. To see when mute will be expired you can use this query:
+La hora, en tiempo Unix, en la que la cuenta será desmuteada. Para ver cuándo expirará el silenciamiento puedes usar esta consulta:
 
 ```sql
 SELECT FROM_UNIXTIME(`mutetime`);
@@ -179,23 +180,23 @@ SELECT FROM_UNIXTIME(`mutetime`);
 
 ### mutereason
 
-The reason for the mute.
+La razón del muteo.
 
 ### muteby
 
-The character name with the rights to the .mute command that give the mute.
+El nombre del personaje con los derechos o el poder sobre el comando .mute que da el silenciamiento.
 
 ### locale
 
-The locale used by the client logged into this account. If multiple locale data has been configured and added to the world servers, the world servers will return the proper locale strings to the client. See [localization IDs](Localization_lang)
+La configuración regional utilizada por el cliente conectado a esta cuenta. Si se han configurado y añadido múltiples datos de localización a los servidores mundiales, éstos devolverán al cliente las cadenas de localización adecuadas. Ver [IDs de localización](es/Localization_lang)
 
 ### os
 
-Stores information about client's OS. Used by Warden system.
+Almacena información sobre el sistema operativo del cliente. Utilizado por el sistema Warden.
 
 - Win
 - Mac
 
 ### recruiter
 
-The account ID of another account. Used for recuit-a-friend system. See [account.id][1]
+El ID de otra cuenta asociada a esta cuenta. Se utiliza para el sistema de "recuit-a-friend" (reclutar un amigo). Ver [account.id][1]

@@ -35,7 +35,7 @@ account set password <user> <password> <password>
 
 ## Higher security level
 
-The highest security level is SEC_CONSOLE (4) which your worlserver has by default.
+The highest security level is SEC_CONSOLE (4) which your worldserver has by default.
 
 It has access to account management and is not recommended for in-game accounts for anyone that does not know what they are doing.
 
