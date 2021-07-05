@@ -1,23 +1,27 @@
-# Actualizaciï¿½n de previa a 2.0.0 a la ï¿½ltima versiï¿½n 
+---
+redirect_from: "/Upgrade-from-pre-2.0.0-to-latest-master"
+---
 
-Este es el tutorial para actualizar cualquier servidor existente desde una versiï¿½n anterior a la [versiï¿½n 2.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v2.0.0) a la ï¿½ltima versiï¿½n `master`.
+# Actualización de previa a 2.0.0 a la última versión 
 
-**Nota**: siempre se recomienda hacer una copia de seguridad de su base de datos antes de realizar cualquier actualizaciï¿½n.
+Este es el tutorial para actualizar cualquier servidor existente desde una versión anterior a la [versión 2.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v2.0.0) a la última versión `master`.
 
-### Paso 1. Actualiza a la ï¿½ltima confirmaciï¿½n 2.0.0
+**Nota**: siempre se recomienda hacer una copia de seguridad de su base de datos antes de realizar cualquier actualización.
 
-Primero debe actualizar su servidor a [esta confirmaciï¿½n](https://github.com/azerothcore/azerothcore-wotlk/commit/1fc22a74088e235e78fa02decbaf0864899477d7), ejecutando:
+### Paso 1. Actualiza a la última confirmación 2.0.0
+
+Primero debe actualizar su servidor a [esta confirmación](https://github.com/azerothcore/azerothcore-wotlk/commit/1fc22a74088e235e78fa02decbaf0864899477d7), ejecutando:
 
 `git checkout 1fc22a74088e235e78fa02decbaf0864899477d7`
 
 Ahora actualice su **base de datos** como [lo hace normalmente](Update#3-update-the-database).
 
-### Paso 2. Actualiza a la versiï¿½n master mï¿½s reciente
+### Paso 2. Actualiza a la versión master más reciente
 
-Actualizar al ï¿½ltimo master:
+Actualizar al último master:
 
 `git checkout master; git pull;`
 
-**Nota**: si estï¿½ utilizando su propio fork of AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
+**Nota**: si está utilizando su propio fork of AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
 
-Ahora actualice su **nï¿½cleo y base de datos** (nuevamente) como [lo hace normalmente](Update).
+Ahora actualice su **núcleo y base de datos** (nuevamente) como [lo hace normalmente](Update).

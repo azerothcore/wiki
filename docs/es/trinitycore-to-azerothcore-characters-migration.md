@@ -1,12 +1,16 @@
-# Herramienta de migraciï¿½n de Character & Auth de TrinityCore hacia AzerothCore 
+---
+redirect_from: "/TrinityCore-to-AzerothCore-characters-migration"
+---
+
+# Herramienta de migración de Character & Auth de TrinityCore hacia AzerothCore 
 
 ### 1) Instalar AzerothCore 
 
-Siga las instrucciones de instalaciï¿½n e instale una nueva configuraciï¿½n de AzerothCore (la necesitaremos despuï¿½s de la conversiï¿½n).
+Siga las instrucciones de instalación e instale una nueva configuración de AzerothCore (la necesitaremos después de la conversión).
 
-Las instrucciones para configurar AzerothCore se pueden encontrar [aquï¿½](http://www.azerothcore.org/wiki/Installation).
+Las instrucciones para configurar AzerothCore se pueden encontrar [aquí](http://www.azerothcore.org/wiki/Installation).
 
-Asegï¿½rese de tener una instalaciï¿½n nueva completa y de trabajar sin mï¿½dulos adicionales antes de continuar. 
+Asegúrese de tener una instalación nueva completa y de trabajar sin módulos adicionales antes de continuar. 
 
 ### 2) Haga una copia de seguridad de sus bases de datos TrinityCore
 
@@ -15,9 +19,9 @@ Haga una copia de seguridad de sus bases de datos TrinityCore antes de continuar
 - characters
 - world
 
-### 3) Migraciï¿½n de Character & Auth
+### 3) Migración de Character & Auth
 
-Descargue la [Herramienta de migraciï¿½n de Character & Auth de TC hacia AC ](https://github.com/azerothcore/tool-tc-migration).
+Descargue la [Herramienta de migración de Character & Auth de TC hacia AC ](https://github.com/azerothcore/tool-tc-migration).
 
 Los siguientes archivos deben ejecutarse en orden del 1 al 5 en su base de datos de caracteres TrinityCore:
 
@@ -27,7 +31,7 @@ Los siguientes archivos deben ejecutarse en orden del 1 al 5 en su base de datos
 - 4_CLEANUP_AND_CONVERT_SPELLS
 - 5_FINAL_CLEANUP
 
-Ejecute el siguiente archivo n.6 en su base de datos de autenticaciï¿½n de Trinitycore
+Ejecute el siguiente archivo n.6 en su base de datos de autenticación de Trinitycore
 
 - 6_AUTH_CONVERTER
 

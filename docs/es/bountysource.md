@@ -1,20 +1,24 @@
+---
+redirect_from: "/Bountysource"
+---
+
 # Bountysource
 
-## ï¿½Quï¿½ es Bountysource?
+## ¿Qué es Bountysource?
 
-Bountysource es una plataforma de financiaciï¿½n colectiva que permite a las personas patrocinar proyectos de cï¿½digo abierto colocando "recompensas" (recompensas en dinero) para la resoluciï¿½n de problemas informados en GitHub. Quien solucione ese problema, obtendrï¿½ el dinero de la recompensa.
+Bountysource es una plataforma de financiación colectiva que permite a las personas patrocinar proyectos de código abierto colocando "recompensas" (recompensas en dinero) para la resolución de problemas informados en GitHub. Quien solucione ese problema, obtendrá el dinero de la recompensa.
 
-Por lo tanto, si desea respaldar la resoluciï¿½n de un problema especï¿½fico, puede otorgar recompensas a nuestros [problemas abiertos](https://github.com/azerothcore/azerothcore-wotlk/issues).
+Por lo tanto, si desea respaldar la resolución de un problema específico, puede otorgar recompensas a nuestros [problemas abiertos](https://github.com/azerothcore/azerothcore-wotlk/issues).
 
-Los problemas pueden ser solo errores o incluso solicitudes de funciones principales. Si desea patrocinar un problema que no existe, siï¿½ntase libre de crearlo primero y luego aplicar la recompensa por ï¿½l.
+Los problemas pueden ser solo errores o incluso solicitudes de funciones principales. Si desea patrocinar un problema que no existe, siéntase libre de crearlo primero y luego aplicar la recompensa por él.
 
 [https://www.bountysource.com/teams/azerothcore/bounties](https://www.bountysource.com/teams/azerothcore/bounties)
 
-Tambiï¿½n puede simplemente hacer una donaciï¿½n a nuestra [Organizaciï¿½n AzerothCore Bountysource](https://salt.bountysource.com/checkout/amount?team=azerothcore) y dejarnos decidir en quï¿½ problemas o funciones asignar el dinero.
+También puede simplemente hacer una donación a nuestra [Organización AzerothCore Bountysource](https://salt.bountysource.com/checkout/amount?team=azerothcore) y dejarnos decidir en qué problemas o funciones asignar el dinero.
 
 I want to underline that solving the issue and claiming the bounty **is NOT restricted to AC staff only, everyone can do it! :)**
 
-Asï¿½ es como funciona Bountysource:
+Así es como funciona Bountysource:
 
 1) Los usuarios financian recompensas por problemas abiertos o solicitudes de funciones que desean que se aborden.
 
@@ -26,13 +30,13 @@ Asï¿½ es como funciona Bountysource:
 
 **Muchas gracias a nuestros [Patrocinadores Principales](https://www.bountysource.com/teams/azerothcore/backers) of Bountysource.**
 
-### ï¿½Quï¿½ pasa si no quieres reclamar la recompensa?
+### ¿Qué pasa si no quieres reclamar la recompensa?
 
-ï¿½Quï¿½ sucede si ha trabajado en un problema que tiene una recompensa, pero no quiere reclamarlo para usted mismo?
+¿Qué sucede si ha trabajado en un problema que tiene una recompensa, pero no quiere reclamarlo para usted mismo?
 
-Puede devolver ese dinero a la organizaciï¿½n AzerothCore Bountysource, para que podamos reasignarlo a algï¿½n otro problema.
+Puede devolver ese dinero a la organización AzerothCore Bountysource, para que podamos reasignarlo a algún otro problema.
 
-El dinero que decida devolver a la organizaciï¿½n de AC **se mostrarï¿½ como su propio recuento de donaciones**, por lo que estarï¿½ en la lista de [Patrocinadores](https://www.bountysource.com/teams/azerothcore/backers) tambiï¿½n.
+El dinero que decida devolver a la organización de AC **se mostrará como su propio recuento de donaciones**, por lo que estará en la lista de [Patrocinadores](https://www.bountysource.com/teams/azerothcore/backers) también.
 
 Esto es lo que suelen hacer los administradores de AC.
 
