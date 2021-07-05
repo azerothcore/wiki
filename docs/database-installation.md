@@ -25,6 +25,8 @@ You can choose to populate the database in two ways:
 - Automatic Database Updater (default, recommended)
 - DB Assambler tool
 
+If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
+
 ### Automatic Database Updater (default, recommended)
 
 By default the Worldserver and Authserver will check for, and import all new files into the database you specified in the config.
