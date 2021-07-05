@@ -92,6 +92,8 @@ NOTE: the DB documentation is still a work in progress. We need your help to mak
 - [quest_tracker](quest_tracker.md)
 - [recovery_item](recovery_item.md)
 - [reserved_name](reserved_name.md)
+- [updates](updates.md)
+- [updates_include](updates_include.md)
 - [version_db_characters](version_db_characters.md)
 - [warden_action](warden_action.md)
 - [worldstates](worldstates.md)
