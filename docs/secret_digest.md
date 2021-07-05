@@ -20,7 +20,7 @@
 
 ### id
 
-the id digest
+The id digest.
 
 ### digest
 

@@ -20,22 +20,17 @@
 
 ### sql_rev
 
-sql review
+Sql review.
 
 ### required_rev
 
 ### date 
 
-sql revisions date
+Sql revisions date.
 
 ### 2021_06_17_00
 
-the date of the last update to the auth database
+The date of the last update to the auth database.
 
-### Example
+**Note** this column changes automatically according to the last update of the auth database.
 
-| sql_rev             | required_rev | date          | 2021_06_17_00 |
-|---------------------|--------------|---------------|---------------|
-| 1554142988374631100 |              |               |               |
-| 1579213352894781043 |              |               |               |
-| 1620146306002634000 |              | 2021_06_17_00 |               |
