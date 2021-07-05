@@ -165,6 +165,8 @@ The world database has information basically related to creatures, objects, item
 - [spell_threat](spell_threat.md)
 - [spelldifficulty_dbc](spelldifficulty_dbc.md)
 - [transports](transports.md)
+- [updates](updates.md)
+- [updates_include](updates_include.md)
 - [vehicle_accessory](vehicle_accessory.md)
 - [vehicle_template_accessory](vehicle_template_accessory.md)
 - [version](version.md)

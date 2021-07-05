@@ -14,5 +14,7 @@ The auth database currently has 14 tables, which mainly store information relate
 - [realmcharacters](realmcharacters.md)
 - [realmlist](realmlist.md)
 - [secret_digest](secret_digest.md)
+- [updates](updates.md)
+- [updates_include](updates_include.md)
 - [uptime](uptime.md)
 - [version_db_auth](version_db_auth.md)
