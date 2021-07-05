@@ -1,7 +1,3 @@
----
-redirect_from: "/Bountysource"
----
-
 # Bountysource
 
 ## ¿Qué es Bountysource?
