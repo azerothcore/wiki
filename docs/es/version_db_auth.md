@@ -8,11 +8,15 @@
 |--------------------|--------------|------------|-----|------|---------|-------|---------|
 | [sql_rev][1]       | VARCHAR(100) |            | PRI | NO   |         |       |         |
 | [required_rev][2]  | VARCHAR(100) |            | MUL | YES  |         |       |         |
-| [2020_02_07_00][3] | bit(1)       |            |     | YES  |         |       |         |
+| [date][3]          | VARCHAR(50)  |            |     | YES  |         |       |         |
+| [2021_06_17_00][4] | BIT(1)       |            |     | YES  |         |       |         |
 
-[1]: #sql_rev
-[2]: #required_rev
-[3]: #2020_02_07_00
+[1]: #sqlrev
+[2]: #requiredrev
+[3]: #date
+[4]: #2021061700
+
+**Descripción de los campos**
 
 ### sql_rev
 
@@ -22,11 +26,12 @@ Revisión sql.
 
 Revisión requerida.
 
-### 2020_02_07_00
+### date 
 
-### Ejemplo
+Fecha de las actualizaciones sql.
 
-| sql_rev             | required_rev | 2020_02_07_00 |
-|---------------------|--------------|---------------|
-| 1554142988374631100 |              |               |
-| 1579213352894781043 |              |               |
+### 2021_06_17_00
+
+La fecha de la última actualizacion de la base datos auth.
+
+**Nota** Esta columna cambia automaticamnete acuerdo a la última actualizacion de la base de datos auth 
