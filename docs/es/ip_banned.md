@@ -11,8 +11,8 @@ Esta tabla contiene todas las IPs baneadas y la fecha en la que (en tal caso) el
 | Field          | Type         | Attributes | Key | Null | Default   | Extra | Comment |
 |----------------|--------------|------------|-----|------|-----------|-------|---------|
 | [ip][1]        | VARCHAR(15)  |            | PRI | NO   | 127.0.0.1 |       |         |
-| [bandate][2]   | INT      | UNSIGNED   | PRI | NO   |           |       |         |
-| [unbandate][3] | INT      | UNSIGNED   |     | NO   |           |       |         |
+| [bandate][2]   | INT          | UNSIGNED   | PRI | NO   |           |       |         |
+| [unbandate][3] | INT          | UNSIGNED   |     | NO   |           |       |         |
 | [bannedby][4]  | VARCHAR(50)  |            |     | NO   | [Console] |       |         |
 | [banreason][5] | VARCHAR(255) |            |     | NO   | no reason |       |         |
 
