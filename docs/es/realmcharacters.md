@@ -11,9 +11,9 @@ Los datos de esta tabla son mantenidos por el núcleo.
 
 | Field         | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |---------------|------------|------------|-----|------|---------|-------|---------|
-| [realmid][1]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [acctid][2]   | INT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [numchars][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [realmid][1]  | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [acctid][2]   | INT        | UNSIGNED   | PRI | NO   |         |       |         |
+| [numchars][3] | TINYINT    | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #realmid
 [2]: #acctid
