@@ -10,18 +10,18 @@ Esta tabla establece información sobre todos los reinos disponibles. Cada fila 
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 |----------------------------|--------------|------------|-----|------|---------------|----------------|---------|
-| [id][1]                    | INT      | UNSIGNED   | PRI | NO   |               | AUTO_INCREMENT |         |
+| [id][1]                    | INT          | UNSIGNED   | PRI | NO   |               | AUTO_INCREMENT |         |
 | [name][2]                  | VARCHAR(32)  |            | UNI | NO   |               |                |         |
 | [address][3]               | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
 | [localSubnetMask][5]       | VARCHAR(255) |            |     | NO   | 255.255.255.0 |                |         |
-| [port][6]                  | SMALLINT  | UNSIGNED   |     | NO   | 8085          |                |         |
-| [icon][7]                  | TINYINT   | UNSIGNED   |     | NO   | 0             |                |         |
-| [flag][8]                  | TINYINT   | UNSIGNED   |     | NO   | 2             |                |         |
-| [timezone][9]              | TINYINT   | UNSIGNED   |     | NO   | 0             |                |         |
-| [allowedSecurityLevel][10] | TINYINT   | UNSIGNED   |     | NO   | 0             |                |         |
-| [population][11]           | FLOAT        | UNSIGNED   |     | NO   | 0             |                |         |
-| [gamebuild][12]            | INT      | UNSIGNED   |     | NO   | 12340         |                |         |
+| [port][6]                  | SMALLINT     | UNSIGNED   |     | NO   | 8085          |                |         |
+| [icon][7]                  | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
+| [flag][8]                  | TINYINT      | UNSIGNED   |     | NO   | 2             |                |         |
+| [timezone][9]              | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
+| [allowedSecurityLevel][10] | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
+| [population][11]           | FLOAT        |      |     | NO   | 0             |                |         |
+| [gamebuild][12]            | INT          | UNSIGNED   |     | NO   | 12340         |                |         |
 
 [1]: #id
 [2]: #name
@@ -65,11 +65,11 @@ El puerto en el que se ejecuta el WorldServer. Si todos los WorldServers están 
 
 El icono del reino.
 
-| Icon | Type   |
-|------|--------|
-| 0    | Normal |
-| 1    | JcJ    |
-| 4    | Normal |
+| Icon | Type    |
+|------|---------|
+| 0    | Normal  |
+| 1    | JcJ     |
+| 4    | Normal  |
 | 6    | JdR     |
 | 8    | JdR JcJ |
 
@@ -77,82 +77,82 @@ El icono del reino.
 
 Realmflag o marcador de este reino.
 
-| Flag | Hex value | Description  |
-|------|-----------|--------------|
-| 0    | 0x0       | Ninguno         |
-| 1    | 0x1       | Inválido     |
-| 2    | 0x2       | Fuera de Línea      |
-| 4    | 0x4       | SpecifyBuild |
-| 8    | 0x8       | Medio       |
-| 16   | 0xF       | Medio       |
-| 32   | 0x10      | Nuevos Jugadores  |
-| 64   | 0x20      | Recomendado  |
-| 128  | 0x40      | Lleno         |
+| Flag | Hex value | Description      |
+|------|-----------|------------------|
+| 0    | 0x0       | Ninguno          |
+| 1    | 0x1       | Inválido         |
+| 2    | 0x2       | Fuera de Línea   |
+| 4    | 0x4       | SpecifyBuild     |
+| 8    | 0x8       | Medio            |
+| 16   | 0xF       | Medio            |
+| 32   | 0x10      | Nuevos Jugadores |
+| 64   | 0x20      | Recomendado      |
+| 128  | 0x40      | Lleno            |
 
 ### timezone
 
 La zona horaria del reino, se mostrará en las pestañas del realmlist
 
-| Zona Horaria | Nombre en Pantalla     |
-|----------|--------------------|
-| 1        | Development        |
-| 2        | United States      |
-| 3        | Oceanic            |
-| 4        | Latin America      |
-| 5        | Tournament         |
-| 6        | Korea              |
-| 7        | Tournament         |
-| 8        | English            |
-| 9        | German             |
-| 10       | French             |
-| 11       | Spanish            |
-| 12       | Russian            |
-| 13       | Tournament         |
-| 14       | Taiwan             |
-| 15       | Tournament         |
-| 16       | China              |
-| 17       | CN1                |
-| 18       | CN2                |
-| 19       | CN3                |
-| 20       | CN4                |
-| 21       | CN5                |
-| 22       | CN6                |
-| 23       | CN7                |
-| 24       | CN8                |
-| 25       | Tournament         |
-| 26       | Test Server        |
-| 27       | Tournament         |
-| 29       | CN9                |
-| 30       | Test Server 2      |
-| 31       | CN10               |
-| 32       | CTC                |
-| 33       | CNC                |
-| 34       | CN1/4              |
-| 35       | CN/2/6/9           |
-| 36       | CN3/7              |
-| 37       | Russian Tournament |
-| 38       | CN5/8              |
-| 39       | CN11               |
-| 40       | CN12               |
-| 41       | CN13               |
-| 42       | CN14               |
-| 43       | CN15               |
-| 44       | CN16               |
-| 45       | CN17               |
-| 46       | CN18               |
-| 47       | CN19               |
-| 48       | CN20               |
-| 49       | Brazil             |
-| 50       | Italian            |
-| 51       | Hyrule             |
-| 52       | QA2 Test           |
-| 53       |                    |
-| 54       |                    |
-| 55       | Recommended Realm  |
-| 56       | Test               |
-| 57       | Recommended Realm  |
-| 58       |                    |
-| 59       | Future Test        |
+| Zona Horaria | Nombre en Pantalla |
+|----------|------------------------|
+| 1        | Development            |
+| 2        | United States          |
+| 3        | Oceanic                |
+| 4        | Latin America          |
+| 5        | Tournament             |
+| 6        | Korea                  |
+| 7        | Tournament             |
+| 8        | English                |
+| 9        | German                 |
+| 10       | French                 |
+| 11       | Spanish                |
+| 12       | Russian                |
+| 13       | Tournament             |
+| 14       | Taiwan                 |
+| 15       | Tournament             |
+| 16       | China                  |
+| 17       | CN1                    |
+| 18       | CN2                    |
+| 19       | CN3                    |
+| 20       | CN4                    |
+| 21       | CN5                    |
+| 22       | CN6                    |
+| 23       | CN7                    |
+| 24       | CN8                    |
+| 25       | Tournament             |
+| 26       | Test Server            |
+| 27       | Tournament             |
+| 29       | CN9                    |
+| 30       | Test Server 2          |
+| 31       | CN10                   |
+| 32       | CTC                    |
+| 33       | CNC                    |
+| 34       | CN1/4                  |
+| 35       | CN/2/6/9               |
+| 36       | CN3/7                  |
+| 37       | Russian Tournament     |
+| 38       | CN5/8                  |
+| 39       | CN11                   |
+| 40       | CN12                   |
+| 41       | CN13                   |
+| 42       | CN14                   |
+| 43       | CN15                   |
+| 44       | CN16                   |
+| 45       | CN17                   |
+| 46       | CN18                   |
+| 47       | CN19                   |
+| 48       | CN20                   |
+| 49       | Brazil                 |
+| 50       | Italian                |
+| 51       | Hyrule                 |
+| 52       | QA2 Test               |
+| 53       |                        |
+| 54       |                        |
+| 55       | Recommended Realm      |
+| 56       | Test                   |
+| 57       | Recommended Realm      |
+| 58       |                        |
+| 59       | Future Test            |
 
 ### allowedSecurityLevel
 
@@ -167,16 +167,16 @@ Este campo se actualiza automáticamente a intervalos regulares y tendrá la pob
 Versión del cliente aceptada para el reino.
 
 | Versión de Build | Parche del Cliente |
-|---------------|--------------|
-| 5875          | 1.12.1       |
-| 6005          | 1.12.2       |
-| 8606          | 2.4.3        |
-| 9947          | 3.1.3        |
-| 10146         | 3.2.0        |
-| 10505         | 3.2.2a       |
-| 10571         | 3.3.0        |
-| 11159         | 3.3.0a       |
-| 11403         | 3.3.2        |
-| 11623         | 3.3.3        |
-| 11723         | 3.3.3a       |
-| 12340         | 3.3.5a       |
+|---------------|-----------------------|
+| 5875          | 1.12.1                |
+| 6005          | 1.12.2                |
+| 8606          | 2.4.3                 |
+| 9947          | 3.1.3                 |
+| 10146         | 3.2.0                 |
+| 10505         | 3.2.2a                |
+| 10571         | 3.3.0                 |
+| 11159         | 3.3.0a                |
+| 11403         | 3.3.2                 |
+| 11623         | 3.3.3                 |
+| 11723         | 3.3.3a                |
+| 12340         | 3.3.5a                |

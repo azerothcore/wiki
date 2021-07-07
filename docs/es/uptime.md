@@ -10,10 +10,10 @@ Esta tabla contiene el tiempo de actividad del servidor. El núcleo actualizará
 
 | Field           | Type         | Attributes | Key | Null | Default     | Extra | Comment |
 |-----------------|--------------|------------|-----|------|-------------|-------|---------|
-| [realmid][1]    | INT      | UNSIGNED   | PRI | NO   |             |       |         |
-| [starttime][2]  | INT      | UNSIGNED   | PRI | NO   | 0           |       |         |
-| [uptime][3]     | INT      | UNSIGNED   |     | NO   | 0           |       |         |
-| [maxplayers][4] | SMALLINT  | UNSIGNED   |     | NO   | 0           |       |         |
+| [realmid][1]    | INT          | UNSIGNED   | PRI | NO   |             |       |         |
+| [starttime][2]  | INT          | UNSIGNED   | PRI | NO   | 0           |       |         |
+| [uptime][3]     | INT          | UNSIGNED   |     | NO   | 0           |       |         |
+| [maxplayers][4] | SMALLINT     | UNSIGNED   |     | NO   | 0           |       |         |
 | [revision][5]   | VARCHAR(255) |            |     | NO   | AzerothCore |       |         |
 
 [1]: #realmid
