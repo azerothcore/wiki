@@ -10,15 +10,19 @@ FILES SHOLD NOT contain any special characters other than `-` (dashes). If we wa
 
 ALL WIKI FILES should end with with `.md`.
 
+## FILE ENCODING
+
+ALL FILES must be UTF-8 encoded to work on the wiki.
+
+## FILE HEADERS
+
+THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct info in the tab.)
+
 ## DATABASE TABLE FILES:
 
 ALL DATABASE TABLE FILES should be present in it's correct DATABASE FILE.
 
 When adding/removing a table it should also be updated in `database-auth.md` `database-characters.md` `database-world.md`
-
-## FILE HEADERS
-
-THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct info in the tab.)
 
 ## TRANSLATION
 
