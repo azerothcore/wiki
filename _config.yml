@@ -60,6 +60,7 @@ google_cse_token:
 #
 markdown: GFM
 highlighter: rouge
+encoding: UTF-8
 
 defaults:
  -
