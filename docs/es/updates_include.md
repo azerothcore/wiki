@@ -1,4 +1,4 @@
-# updates_include
+﻿# updates_include
 
 [<-Volver a:Auth](database-auth.md)
 [<-Volver a:Characters](database-characters.md)
@@ -16,7 +16,7 @@
 [1]: #path
 [2]: #state
 
-## Descripci�n de los campos
+## Descripción de los campos
 
 ### path
 

@@ -1,23 +1,23 @@
-# Actualización de previa a 2.0.0 a la última versión 
+ï»¿# ActualizaciÃ³n de previa a 2.0.0 a la Ãºltima versiÃ³n 
 
-Este es el tutorial para actualizar cualquier servidor existente desde una versión anterior a la [versión 2.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v2.0.0) a la última versión `master`.
+Este es el tutorial para actualizar cualquier servidor existente desde una versiÃ³n anterior a la [versiÃ³n 2.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v2.0.0) a la Ãºltima versiÃ³n `master`.
 
-**Nota**: siempre se recomienda hacer una copia de seguridad de su base de datos antes de realizar cualquier actualización.
+**Nota**: siempre se recomienda hacer una copia de seguridad de su base de datos antes de realizar cualquier actualizaciÃ³n.
 
-### Paso 1. Actualiza a la última confirmación 2.0.0
+### Paso 1. Actualiza a la Ãºltima confirmaciÃ³n 2.0.0
 
-Primero debe actualizar su servidor a [esta confirmación](https://github.com/azerothcore/azerothcore-wotlk/commit/1fc22a74088e235e78fa02decbaf0864899477d7), ejecutando:
+Primero debe actualizar su servidor a [esta confirmaciÃ³n](https://github.com/azerothcore/azerothcore-wotlk/commit/1fc22a74088e235e78fa02decbaf0864899477d7), ejecutando:
 
 `git checkout 1fc22a74088e235e78fa02decbaf0864899477d7`
 
 Ahora actualice su **base de datos** como [lo hace normalmente](Update#3-update-the-database).
 
-### Paso 2. Actualiza a la versión master más reciente
+### Paso 2. Actualiza a la versiÃ³n master mÃ¡s reciente
 
-Actualizar al último master:
+Actualizar al Ãºltimo master:
 
 `git checkout master; git pull;`
 
-**Nota**: si está utilizando su propio fork of AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
+**Nota**: si estÃ¡ utilizando su propio fork of AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
 
-Ahora actualice su **núcleo y base de datos** (nuevamente) como [lo hace normalmente](Update).
+Ahora actualice su **nÃºcleo y base de datos** (nuevamente) como [lo hace normalmente](Update).

@@ -1,4 +1,4 @@
-# uptime
+﻿# uptime
 
 [<-Volver a:Auth](database-auth.md)
 

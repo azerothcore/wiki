@@ -1,11 +1,11 @@
-# Mantener el servidor actualizado
+ï»¿# Mantener el servidor actualizado
 
-| Guía de instalación | |
+| GuÃ­a de instalaciÃ³n | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 6: Pasos finales del servidor](final-server-steps.md) | [Paso 8: Configuración del cliente >>](client-setup.md) |
+| Este artÃ­culo es parte de la GuÃ­a de instalaciÃ³n. Puede leerlo solo o hacer clic en el enlace anterior para moverse fÃ¡cilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](final-server-steps.md) | [Paso 8: ConfiguraciÃ³n del cliente >>](client-setup.md) |
 
-Los desarrolladores y colaboradores de AzerothCore siempre están trabajando para corregir y agregar nuevas funciones al núcleo. Siempre puede encontrarlos [aquí](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
+Los desarrolladores y colaboradores de AzerothCore siempre estÃ¡n trabajando para corregir y agregar nuevas funciones al nÃºcleo. Siempre puede encontrarlos [aquÃ­](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
 
 [Linux - Manteniendo el servidor actualizado](linux-keeping-the-server-up-to-date.md)
 
@@ -19,17 +19,17 @@ Los desarrolladores y colaboradores de AzerothCore siempre están trabajando para
 
 ## Ayuda
 
-Si aún tiene problemas, verifique:
+Si aÃºn tiene problemas, verifique:
 
 * [Preguntas frecuentes](faq.md)
 
 * [Errores comunes](common-errors.md)
 
-* [Cómo pedir ayuda](how-to-ask-for-help.md)
+* [CÃ³mo pedir ayuda](how-to-ask-for-help.md)
 
-* [Únase a nuestro Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
+* [Ãšnase a nuestro Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Guía de instalación | |
+| GuÃ­a de instalaciÃ³n | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 6: Pasos finales del servidor](final-server-steps.md) | [Paso 8: Configuración del cliente >>](client-setup.md) |
+| Este artÃ­culo es parte de la GuÃ­a de instalaciÃ³n. Puede leerlo solo o hacer clic en el enlace anterior para moverse fÃ¡cilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](final-server-steps.md) | [Paso 8: ConfiguraciÃ³n del cliente >>](client-setup.md) |

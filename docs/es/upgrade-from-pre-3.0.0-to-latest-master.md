@@ -1,12 +1,12 @@
-# Actualización de la versión anterior a la 3.0.0 al último master
+ï»¿# ActualizaciÃ³n de la versiÃ³n anterior a la 3.0.0 al Ãºltimo master
 
-Este es el tutorial para actualizar cualquier servidor existente desde una versión anterior a la [versión 3.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v3.0.0) a la última versión `master`.
+Este es el tutorial para actualizar cualquier servidor existente desde una versiÃ³n anterior a la [versiÃ³n 3.0.0](https://github.com/azerothcore/azerothcore-wotlk/releases/tag/v3.0.0) a la Ãºltima versiÃ³n `master`.
 
-**Nota**: siempre se recomienda hacer una copia de seguridad de su base de datos antes de realizar CUALQUIER actualización.
+**Nota**: siempre se recomienda hacer una copia de seguridad de su base de datos antes de realizar CUALQUIER actualizaciÃ³n.
 
-### Paso 1. Actualiza a la última confirmación 3.0.0
+### Paso 1. Actualiza a la Ãºltima confirmaciÃ³n 3.0.0
 
-Primero debe actualizar su servidor a [esta confirmación](https://github.com/azerothcore/azerothcore-wotlk/commit/2d609e9e48b2e516e4a555015b2662cab15b0c38), ejecutando:
+Primero debe actualizar su servidor a [esta confirmaciÃ³n](https://github.com/azerothcore/azerothcore-wotlk/commit/2d609e9e48b2e516e4a555015b2662cab15b0c38), ejecutando:
 
 ```
 git pull; git checkout 2d609e9e48b2e516e4a555015b2662cab15b0c38
@@ -14,12 +14,12 @@ git pull; git checkout 2d609e9e48b2e516e4a555015b2662cab15b0c38
 
 Ahora actualice su **base de datos** como lo hace habitualmente (por ejemplo, usando el db-ensambler)
 
-### Paso 2. Actualiza a la versión master más reciente
+### Paso 2. Actualiza a la versiÃ³n master mÃ¡s reciente
 
-Actualizar al último master:
+Actualizar al Ãºltimo master:
 
 `git checkout master; git pull;`
 
-** Nota **: si está utilizando su propio fork de AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
+** Nota **: si estÃ¡ utilizando su propio fork de AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
 
-Ahora actualice su **núcleo y base de datos** (nuevamente) como [lo hace normalmente](Update).
+Ahora actualice su **nÃºcleo y base de datos** (nuevamente) como [lo hace normalmente](Update).

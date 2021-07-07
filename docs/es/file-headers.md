@@ -1,11 +1,11 @@
-# Encabezados de archivo
+ï»¿# Encabezados de archivo
 
-Para limpiar los archivos, usamos un formato estándar para los nuevos encabezados de archivos.
+Para limpiar los archivos, usamos un formato estÃ¡ndar para los nuevos encabezados de archivos.
 
-XXXX = año de inicio
-YYYY = año activo
+XXXX = aÃ±o de inicio
+YYYY = aÃ±o activo
 
-**Código independiente de AzerothCore (sin código anterior de nadie):**
+**CÃ³digo independiente de AzerothCore (sin cÃ³digo anterior de nadie):**
 
 ```cpp
 /*
@@ -13,7 +13,7 @@ YYYY = año activo
  */
 ```
 
-**Con código anterior de fuentes externas o desarrolladores:**
+**Con cÃ³digo anterior de fuentes externas o desarrolladores:**
 
 ```cpp
 /*
