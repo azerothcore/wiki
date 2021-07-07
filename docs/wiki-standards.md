@@ -20,7 +20,7 @@ THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct in
 
 ## DATABASE TABLE FILES:
 
-ALL DATABASE TABLE FILES should be present in it's correct DATABASE FILE.
+ALL DATABASE TABLE FILES should be present in the correct DATABASE FILE.
 
 When adding/removing a table it should also be updated in `database-auth.md` `database-characters.md` `database-world.md`
 
