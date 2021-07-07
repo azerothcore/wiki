@@ -1,4 +1,4 @@
-# Hospedaje de AzerothCore a través de Amazon AWS
+﻿# Hospedaje de AzerothCore a través de Amazon AWS
 
 Prefacio: El objetivo de esta guía es que se realice principalmente a través de una línea de comandos. También existe la [Consola de AWS] (https://aws.amazon.com/console/) que algunos encontrarán más intuitiva, sin embargo, para la longevidad de la guía (ya que la interfaz de usuario de la Consola de AWS puede cambiar), la herramienta aws-cli será recomendado. También se incluirán comandos grep para recibir solo la salida requerida. Si desea obtener la salida completa, simplemente elimine el `| grep` y todo lo que le sigue.
 

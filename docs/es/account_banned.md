@@ -1,4 +1,4 @@
-# account\_banned
+﻿# account\_banned
 
 [<-Volver a:Auth](database-auth.md)
 

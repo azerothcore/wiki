@@ -1,4 +1,4 @@
-# InstalaciÛn de Arch Linux
+Ôªø# Instalaci√≥n de Arch Linux
 Si es un usuario de Arch Linux, puede instalarlo desde AUR ([Arch User Repository](https://wiki.archlinux.org/index.php/Arch_User_Repository))
 
 ## Instalar dependencias
@@ -17,11 +17,11 @@ cd ace
 makepkg -si
 ```
 ## Instalar *AzerothCore*
-DespuÈs de eso, puedes instalar el paquete [azerothcore](https://aur.archlinux.org/packages/azerothcore/) :
+Despu√©s de eso, puedes instalar el paquete [azerothcore](https://aur.archlinux.org/packages/azerothcore/) :
 
 ```
 git clone https://aur.archlinux.org/azerothcore.git
 cd azerothcore
 makepkg -si
 ```
-Adem·s, si lo desea, puede usar [*yay*](https://github.com/Jguer/yay) como administrador de paquetes AUR para instalar paquetes AUR.
+Adem√°s, si lo desea, puede usar [*yay*](https://github.com/Jguer/yay) como administrador de paquetes AUR para instalar paquetes AUR.

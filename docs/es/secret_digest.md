@@ -1,4 +1,4 @@
-# secret_digest
+﻿# secret_digest
 
 [<-Volver a:Auth](database-auth.md)
 
@@ -15,7 +15,7 @@
 [1]: #id
 [2]: #digest
 
-**Descripci�n de los campos**
+**Descripción de los campos**
 
 ### id
 

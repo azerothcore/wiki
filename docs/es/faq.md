@@ -1,4 +1,4 @@
-# Preguntas frecuentes
+﻿# Preguntas frecuentes
 
 Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](common-errors.md).
 

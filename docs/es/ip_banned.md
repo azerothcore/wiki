@@ -1,4 +1,4 @@
-# ip\_banned
+﻿# ip\_banned
 
 [<-Volver a:Auth](database-auth.md)
 

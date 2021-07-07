@@ -1,4 +1,4 @@
-# account\_muted
+﻿# account\_muted
 
 [<-Volver a:Auth](database-auth.md)
 

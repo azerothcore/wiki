@@ -1,4 +1,4 @@
-# Uso de memoria
+﻿# Uso de memoria
 
 ### Uso de memoria de AzerothCore
 
