@@ -16,6 +16,7 @@
 * [Logging Configuration](logging-configuration.md)
 * [MySQL types (C++)](mysqltypescpp.md)
 * [Project Versioning](project-versioning.md)
+* [SQL Directory](sql-directory.md)
 * [SQL Versioning](sql-versioning.md)
 
 ## Database
