@@ -1,44 +1,40 @@
----
-redirect_from: "/es"
----
-
-Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con tecnolog韆 de [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
+Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con tecnolog铆a de [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
 
 ## Empezando
 
-- [Gu韆 de instalaci髇](es/installation.md)
+- [Gu铆a de instalaci贸n](es/installation.md)
 
-## Documentaci髇
+## Documentaci贸n
 
-- [蚽dice de documentaci髇](es/documentation_index.md)
+- [脥ndice de documentaci贸n](es/documentation_index.md)
 
-## Descripci髇 General
+## Descripci贸n General
 
-AzerothCore es una soluci髇 completa de c骴igo abierto para MMO
+AzerothCore es una soluci贸n completa de c贸digo abierto para MMO
 
-### Base S髄ida
+### Base S贸lida
 
-AzerothCore tiene una base fuerte y s髄ida, fruto de a駉s de desarrollo: se basa en MaNGOS, TrinityCore y SunwellCore.
-Estamos mejorando esta confiabilidad ofreciendo un proyecto que sigue reglas espec韋icas de control de versiones, lo que le permite desarrollarse de la manera correcta.
+AzerothCore tiene una base fuerte y s贸lida, fruto de a帽os de desarrollo: se basa en MaNGOS, TrinityCore y SunwellCore.
+Estamos mejorando esta confiabilidad ofreciendo un proyecto que sigue reglas espec铆ficas de control de versiones, lo que le permite desarrollarse de la manera correcta.
 
 ### Reproducible
 
-Nuestro principal objetivo es proporcionar una aplicaci髇 de servidor completamente funcional y reproducible. Centraremos nuestras revisiones estables en las experiencias del usuario final, en lugar de seguir patrones de desarrollo estrictos como nuestros predecesores.
-Por supuesto trabajaremos para mejorar el c骴igo en cada nueva versi髇 que se encuentre en etapa de desarrollo.
+Nuestro principal objetivo es proporcionar una aplicaci贸n de servidor completamente funcional y reproducible. Centraremos nuestras revisiones estables en las experiencias del usuario final, en lugar de seguir patrones de desarrollo estrictos como nuestros predecesores.
+Por supuesto trabajaremos para mejorar el c贸digo en cada nueva versi贸n que se encuentre en etapa de desarrollo.
 
-### C骴igo Libre
+### C贸digo Libre
 
-Los m骴ulos de AzerothCore se publican bajo GNU AGPL 3.0 y GNU GPL 2.0, ambos licencias son totalmente gratuitos y de c骴igo abierto. Creemos en el software libre, amamos la cooperaci髇.
+Los m贸dulos de AzerothCore se publican bajo GNU AGPL 3.0 y GNU GPL 2.0, ambos licencias son totalmente gratuitos y de c贸digo abierto. Creemos en el software libre, amamos la cooperaci贸n.
 
 ### Probado, Confiable, Actualizado
 
-SunwellCore, el padre de AzerothCore, hab韆 estado trabajando con miles de jugadores durante a駉s. El objetivo de AzerothCore es mantener actualizada esta aplicaci髇 de juego, continuando su desarrollo.
+SunwellCore, el padre de AzerothCore, hab铆a estado trabajando con miles de jugadores durante a帽os. El objetivo de AzerothCore es mantener actualizada esta aplicaci贸n de juego, continuando su desarrollo.
 
 ### Impulsado por la Comunidad
 
-La principal fortaleza de AzerothCore es su comunidad. Los usuarios pueden ayudarnos mejorando nuestra base de c骴igo o simplemente enviando cualquier informe de error. Si quieres contribuir, os encantar韆!
+La principal fortaleza de AzerothCore es su comunidad. Los usuarios pueden ayudarnos mejorando nuestra base de c贸digo o simplemente enviando cualquier informe de error. Si quieres contribuir, 隆nos encantar铆a!
 
 ### Modular
 
-Intentamos que nuestro software sea lo m醩 modular posible, porque el software modular es mucho m醩 f醕il de ampliar.
+Intentamos que nuestro software sea lo m谩s modular posible, porque el software modular es mucho m谩s f谩cil de ampliar.
 
