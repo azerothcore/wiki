@@ -90,20 +90,20 @@ Rank of teams in the competition by rating.
 
 ### BackgroundColor
 
-Team-tabard BackgroundColor (same as guild-tabard)
+Team-tabard BackgroundColor (same as guild-tabard).
 
 ### emblemStyle
 
-Team-tabard Emblem (same as guild-tabard)
+Team-tabard Emblem (same as guild-tabard).
 
 ### emblemColor
 
-Team-tabard emblemColor (same as guild-tabard)
+Team-tabard emblemColor (same as guild-tabard).
 
 ### borderStyle
 
-Team-tabard Bordertype (same as guild-tabard)
+Team-tabard Bordertype (same as guild-tabard).
 
 ### borderColor
 
-Team-tabard borderColor (same as guild-tabard)
+Team-tabard borderColor (same as guild-tabard).
