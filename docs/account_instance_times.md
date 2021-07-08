@@ -22,7 +22,7 @@ This table controls how many instances the account's characters have been in las
 
 ### accountId
 
-Account of the player. See [account.id](account_2130004.html#account-id).
+Account of the player. See [account.id](http://www.azerothcore.org/wiki/account#id).
 
 ### instanceId
 
