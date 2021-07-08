@@ -10,21 +10,21 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ------ | ------- |
-| [arenaTeamId][1]      | INT         | UNSIGNED   | PRI | NO   |         | Unique |         |
+| [arenaTeamId][1]      | INT         | UNSIGNED   | PRI | NO   | 0       | Unique |         |
 | [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
-| [captainGuid][3]      | INT         | UNSIGNED   |     | NO   |         |        |         |
-| [type][4]             | TINYINT     | UNSIGNED   |     | NO   |         |        |         |
-| [rating][5]           | SMALLINT    | UNSIGNED   |     | NO   |         |        |         |
-| [seasonGames][6]      | SMALLINT    | UNSIGNED   |     | NO   |         |        |         |
-| [seasonWins][7]       | SMALLINT    | UNSIGNED   |     | NO   |         |        |         |
-| [weekGames][8]        | SMALLINT    | UNSIGNED   |     | NO   |         |        |         |
-| [weekWins][9]         | SMALLINT    | UNSIGNED   |     | NO   |         |        |         |
-| [rank][10]            | INT         | UNSIGNED   |     | NO   |         |        |         |
-| [BackgroundColor][11] | INT         | UNSIGNED   |     | NO   |         |        |         |
-| [EmblemStyle][12]     | TINYINT     | UNSIGNED   |     | NO   |         |        |         |
-| [EmblemColor][13]     | INT         | UNSIGNED   |     | NO   |         |        |         |
-| [BorderStyle][14]     | TINYINT     | UNSIGNED   |     | NO   |         |        |         |
-| [BorderColor][15]     | INT         | UNSIGNED   |     | NO   |         |        |         |
+| [captainGuid][3]      | INT         | UNSIGNED   |     | NO   | 0       |        |         |
+| [type][4]             | TINYINT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [rating][5]           | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |        
+| [seasonGames][6]      | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
+| [seasonWins][7]       | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
+| [weekGames][8]        | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
+| [weekWins][9]         | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
+| [rank][10]            | INT         | UNSIGNED   |     | NO   | 0       |        |         |
+| [BackgroundColor][11] | INT         | UNSIGNED   |     | NO   | 0       |        |         |
+| [emblemStyle][12]     | TINYINT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [emblemColor][13]     | INT         | UNSIGNED   |     | NO   | 0       |        |         |
+| [borderStyle][14]     | TINYINT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [borderColor][15]     | INT         | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #arenateamid
 [2]: #name
@@ -37,10 +37,10 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 [9]: #weekwins
 [10]: #rank
 [11]: #backgroundcolor
-[12]: #emblemstyle
-[13]: #emblemcolor
-[14]: #borderstyle
-[15]: #bordercolor
+[12]: #emblemStyle
+[13]: #emblemColor
+[14]: #borderStyle
+[15]: #borderColor
 
 **Description of the fields**
 
@@ -54,7 +54,7 @@ Name of the Arena team
 
 ### captainGuid
 
-The GUID of the character who created the ArenaTeam. See [characters.guid](2129969.html#characters(table)-guid)
+The GUID of the character who created the ArenaTeam. See [characters.guid](http://www.azerothcore.org/wiki/guid)
 
 ### type
 
@@ -92,18 +92,18 @@ Rank of teams in the competition by rating.
 
 Team-tabard BackgroundColor (same as guild-tabard)
 
-### EmblemStyle
+### emblemStyle
 
 Team-tabard Emblem (same as guild-tabard)
 
-### EmblemColor
+### emblemColor
 
-Team-tabard EmblemColor (same as guild-tabard)
+Team-tabard emblemColor (same as guild-tabard)
 
-### BorderStyle
+### borderStyle
 
 Team-tabard Bordertype (same as guild-tabard)
 
-### BorderColor
+### borderColor
 
-Team-tabard BorderColor (same as guild-tabard)
+Team-tabard borderColor (same as guild-tabard)
