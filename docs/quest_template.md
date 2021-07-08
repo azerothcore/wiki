@@ -8,73 +8,220 @@ Contains all basic definitions of available quests.
 
 ## **Structure**
 
-| Field                              | Type                 | Null | Key | Default | Extra | Comment |
-|------------------------------------|----------------------|------|-----|---------|-------|---------|
-| ID                                 | INT UNSIGNED     | NO   | PRI | 0       |       |         |
-| QuestType                          | TINYINT UNSIGNED  | NO   |     | 2       |       |         |
-| QuestLevel                         | INT              | NO   |     | -1      |       |         |
-| QuestPackageID                     | INT UNSIGNED     | NO   |     | 0       |       |         |
-| MinLevel                           | INT              | NO   |     | 0       |       |         |
-| QuestSortID                        | SMALLINT          | NO   |     | 0       |       |         |
-| QuestInfoID                        | SMALLINT UNSIGNED | NO   |     | 0       |       |         |
-| SuggestedGroupNum                  | TINYINT UNSIGNED  | NO   |     | 0       |       |         |
-| RewardNextQuest                    | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardXPDifficulty                 | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardXPMultiplier                 | FLOAT                | NO   |     | 1       |       |         |
-| RewardMoney                        | INT              | NO   |     | 0       |       |         |
-| RewardMoneyDifficulty              | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardMoneyMultiplier              | FLOAT                | NO   |     | 1       |       |         |
-| RewardBonusMoney                   | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardDisplaySpell(X=1...3)        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardSpell                        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardHonor                        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardKillHonor                    | INT UNSIGNED     | NO   |     | 0       |       |         |
-| StartItem                          | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardArtifactXPDifficulty         | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardArtifactXPMultiplier         | FLOAT                | NO   |     | 1       |       |         |
-| RewardArtifactCategoryID           | INT UNSIGNED     | NO   |     | 0       |       |         |
-| Flags                              | INT UNSIGNED     | NO   |     | 0       |       |         |
-| FlagsEx                            | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardItem(X=1...4)                | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardAmount(X=1...4)              | INT UNSIGNED     | NO   |     | 0       |       |         |
-| ItemDrop(X=1...4)                  | INT UNSIGNED     | NO   |     | 0       |       |         |
-| ItemDropQuantity(X=1...4)          | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardChoiceItemID(X=1...6)        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardChoiceItemQuantity(X=1...6)  | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardChoiceItemDisplayID(X=1...6) | INT UNSIGNED     | NO   |     | 0       |       |         |
-| POIContinent                       | INT UNSIGNED     | NO   |     | 0       |       |         |
-| POIx                               | FLOAT                | NO   |     | 0       |       |         |
-| POIy                               | FLOAT                | NO   |     | 0       |       |         |
-| POIPriority                        | INT              | NO   |     | 0       |       |         |
-| RewardTitle                        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardArenaPoints                  | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardSkillLineID                  | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardNumSkillUps                  | INT UNSIGNED     | NO   |     | 0       |       |         |
-| PortraitGiver                      | INT UNSIGNED     | NO   |     | 0       |       |         |
-| PortraitTurnIn                     | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardFactionID(X=1...5)           | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardFactionValue(X=1...5)        | INT              | NO   |     | 0       |       |         |
-| RewardFactionOverride(X=1...5)     | INT              | NO   |     | 0       |       |         |
-| RewardFactionCapIn(X=1...5)        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardFactionFlags                 | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardCurrencyID(X=1...4)          | INT UNSIGNED     | NO   |     | 0       |       |         |
-| RewardCurrencyQty(X=1...4)         | INT UNSIGNED     | NO   |     | 0       |       |         |
-| AcceptedSoundKitID                 | INT UNSIGNED     | NO   |     | 0       |       |         |
-| CompleteSoundKitID                 | INT UNSIGNED     | NO   |     | 0       |       |         |
-| AreaGroupID                        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| TimeAllowed                        | INT UNSIGNED     | NO   |     | 0       |       |         |
-| AllowableRaces                     | INT              | NO   |     | -1      |       |         |
-| QuestRewardID                      | INT UNSIGNED     | NO   |     | 0       |       |         |
-| LogTitle                           | text                 | YES  |     | (NULL)  |       |         |
-| LogDescription                     | text                 | YES  |     | (NULL)  |       |         |
-| QuestDescription                   | text                 | YES  |     | (NULL)  |       |         |
-| AreaDescription                    | text                 | YES  |     | (NULL)  |       |         |
-| PortraitGiverText                  | text                 | YES  |     | (NULL)  |       |         |
-| PortraitGiverName                  | text                 | YES  |     | (NULL)  |       |         |
-| PortraitTurnInText                 | text                 | YES  |     | (NULL)  |       |         |
-| PortraitTurnInName                 | text                 | YES  |     | (NULL)  |       |         |
-| QuestCompletionLog                 | text                 | YES  |     | (NULL)  |       |         |
-| VerifiedBuild                      | SMALLINT          | YES  |     | 0       |       |         |
+|  Field                            |  Type          |  Attribute  |  Key  |  Null  |  Default  |  Extra  |  Comment  |
+|-----------------------------------|----------------|-------------|-------|--------|-----------|---------|-----------|
+|  [ID][1]                          |  MEDIUMINT     |  UNSIGNED   |  PRI  |  NO    | 0         |         |           |
+|  [QuestType][2]                   |  TINYINT       |  UNSIGNED   |       |  NO    | 2         |         |           |
+|  [QuestLevel][3]                  |  SMALLINT      |             |       |  NO    | 1         |         |           |
+|  [MinLevel][4]                    |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [QuestSortID][5]                 |  SMALLINT      |             |       |  NO    | 0         |         |           |
+|  [QuestInfoID][6]                 |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [SuggestedGroupNum][7]           |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredFactionId1][8]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredFactionId2][9]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredFactionValue1][10]      |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RequiredFactionValue2][11]      |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardNextQuest][12]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardXPDifficulty][13]         |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardMoney][14]                |  INT           |             |       |  NO    | 0         |         |           |
+|  [RewardBonusMoney][15]           |  INT           |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardDisplaySpell][16]         |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardSpell][17]                |  INT           |             |       |  NO    | 0         |         |           |
+|  [RewardHonor][18]                |  INT           |             |       |  NO    | 0         |         |           |
+|  [RewardKillHonor][19]            |  FLOAT         |             |       |  NO    | 0         |         |           |
+|  [StartItem][20]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [Flags][21]                      |  INT           |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredPlayerKills][22]        |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardItem1][23]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardAmount1][24]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardItem2][25]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardAmount2][26]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardItem3][27]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardAmount3][28]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardItem4][29]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardAmount4][30]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDrop1][31]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDropQuantity1][32]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDrop2][33]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDropQuantity2][34]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDrop3][35]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDropQuantity3][36]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDrop4][37]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ItemDropQuantity4][38]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemID1][39]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemQuantity1][40]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemID2][41]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemQuantity2][42]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemID3][43]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemQuantity3][44]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemID4][45]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemQuantity4][46]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemID5][47]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemQuantity5][48]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemID6][49]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardChoiceItemQuantity6][50]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [POIContinent][51]               |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [POIx][52]                       |  FLOAT         |             |       |  NO    | 0         |         |           |
+|  [POIy][53]                       |  FLOAT         |             |       |  NO    | 0         |         |           |
+|  [POIPriority][54]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardTitle][55]                |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardTalents][56]              |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardArenaPoints][57]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardFactionID1][58]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardFactionValue1][59]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionOverride1][60]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionID2][61]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardFactionValue2][62]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionOverride2][63]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionID3][64]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardFactionValue3][65]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionOverride3][66]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionID4][67]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardFactionValue4][68]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionOverride4][69]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionID5][70]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RewardFactionValue5][71]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RewardFactionOverride5][72]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [TimeAllowed][73]                |  INT           |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [AllowableRaces][74]             |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [LogTitle][75]                   |  TEXT          |             |       |  YES   |           |         |           |
+|  [LogDescription][76]             |  TEXT          |             |       |  YES   |           |         |           |
+|  [QuestDescription][77]           |  TEXT          |             |       |  YES   |           |         |           |
+|  [AreaDescription][78]            |  TEXT          |             |       |  YES   |           |         |           |
+|  [QuestCompletionLog][79]         |  TEXT          |             |       |  YES   |           |         |           |
+|  [RequiredNpcOrGo1][80]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGo2][81]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGo3][82]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGo4][83]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGoCount1][84]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGoCount2][85]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGoCount3][86]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredNpcOrGoCount4][87]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemId1][88]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemId2][89]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemId3][90]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemId4][91]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemId5][92]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemId6][93]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemCount1][94]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemCount2][95]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemCount3][96]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemCount4][97]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemCount5][98]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [RequiredItemCount6][99]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [Unknown0][100]                  |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
+|  [ObjectiveText1][101]            |  TEXT          |             |       |  YES   |           |         |           |
+|  [ObjectiveText2][102]            |  TEXT          |             |       |  YES   |           |         |           |
+|  [ObjectiveText3][103]            |  TEXT          |             |       |  YES   |           |         |           |
+|  [ObjectiveText4][104]            |  TEXT          |             |       |  YES   |           |         |           |
+|  [VerifiedBuild][105]             |  SMALLINT      |             |       |  YES   | 0         |         |           |
+
+[1]: #id
+[2]: #questtype
+[3]: #questlevel
+[4]: #minlevel
+[5]: #questsortid
+[6]: #questinfoid
+[7]: #suggestedgroupnum
+[8]: #requiredfactionid1
+[9]: #requiredfactionid2
+[10]: #requiredfactionvalue1
+[11]: #requiredfactionvalue2
+[12]: #rewardnextquest
+[13]: #rewardxpdifficulty
+[14]: #rewardmoney
+[15]: #rewardbonusmoney
+[16]: #rewarddisplayspell
+[17]: #rewardspell
+[18]: #rewardhonor
+[19]: #rewardkillhonor
+[20]: #startitem
+[21]: #flags
+[22]: #requiredplayerkills
+[23]: #rewarditem1
+[24]: #rewardamount1
+[25]: #rewarditem2
+[26]: #rewardamount2
+[27]: #rewarditem3
+[28]: #rewardamount3
+[29]: #rewarditem4
+[30]: #rewardamount4
+[31]: #itemdrop1
+[32]: #itemdropquantity1
+[33]: #itemdrop2
+[34]: #itemdropquantity2
+[35]: #itemdrop3
+[36]: #itemdropquantity3
+[37]: #itemdrop4
+[38]: #itemdropquantity4
+[39]: #rewardchoiceitemid1
+[40]: #rewardchoiceitemquantity1
+[41]: #rewardchoiceitemid2
+[42]: #rewardchoiceitemquantity2
+[43]: #rewardchoiceitemid3
+[44]: #rewardchoiceitemquantity3
+[45]: #rewardchoiceitemid4
+[46]: #rewardchoiceitemquantity4
+[47]: #rewardchoiceitemid5
+[48]: #rewardchoiceitemquantity5
+[49]: #rewardchoiceitemid6
+[50]: #rewardchoiceitemquantity6
+[51]: #poicontinent
+[52]: #poix
+[53]: #poiy
+[54]: #poipriority
+[55]: #rewardtitle
+[56]: #rewardtalents
+[57]: #rewardarenapoints
+[58]: #rewardfactionid1
+[59]: #rewardfactionvalue1
+[60]: #rewardfactionoverride1
+[61]: #rewardfactionid2
+[62]: #rewardfactionvalue2
+[63]: #rewardfactionoverride2
+[64]: #rewardfactionid3
+[65]: #rewardfactionvalue3
+[66]: #rewardfactionoverride3
+[67]: #rewardfactionid4
+[68]: #rewardfactionvalue4
+[69]: #rewardfactionoverride4
+[70]: #rewardfactionid5
+[71]: #rewardfactionvalue5
+[72]: #rewardfactionoverride5
+[73]: #timeallowed
+[74]: #allowableraces
+[75]: #logtitle
+[76]: #logdescription
+[77]: #questdescription
+[78]: #areadescription
+[79]: #questcompletionlog
+[80]: #requirednpcorgo1
+[81]: #requirednpcorgo2
+[82]: #requirednpcorgo3
+[83]: #requirednpcorgo4
+[84]: #requirednpcorgocount1
+[85]: #requirednpcorgocount2
+[86]: #requirednpcorgocount3
+[87]: #requirednpcorgocount4
+[88]: #requireditemid1
+[89]: #requireditemid2
+[90]: #requireditemid3
+[91]: #requireditemid4
+[92]: #requireditemid5
+[93]: #requireditemid6
+[94]: #requireditemcount1
+[95]: #requireditemcount2
+[96]: #requireditemcount3
+[97]: #requireditemcount4
+[98]: #requireditemcount5
+[99]: #requireditemcount6
+[100]: #unknown0
+[101]: #objectivetext1
+[102]: #objectivetext2
+[103]: #objectivetext3
+[104]: #objectivetext4
+[105]: #verifiedbuild
+
 
 **Description of the fields**
 
@@ -117,37 +264,21 @@ These values are ID taken from [QuestInfo.dbc](QuestInfo)
 
 Recommended number of players to do the quest together.
 
-### TimeAllowed
+### RequiredFactionId1
 
-Time in seconds that the player has to complete this quest.
+Faction ID 1 for an objective to achieve a certain reputation value with. See Faction.dbc
 
-### ~~RequiredClasses~~
+### RequiredFactionId2
 
-~~This field is a bitmask, you can combine class values. See [ChrClasses.dbc](ChrClasses)~~
+Faction ID 2 for an objective to achieve a certain reputation value with. See Faction.dbc
 
-### AllowableRaces
+### RequiredFactionValue1
 
-Races allowed to get the quest. 0 means the quest is accessible for all races. Field value is a decimal value which must transform to an 8 bits binary in order to be understandable. In binary form, each different bit represents a different race. They're assigned as follows :
+Reputation value 1 that the player must achieve with the faction in [RepObjectiveFaction](#quest_template-RepObjectiveFaction) as part of the quest objectives.
 
-**Race**
+### RequiredFactionValue2
 
-These values are 2^ID taken from ChrRaces.dbc
-
-Examples:
-
-0,1791 = All Races
-
-690 (2 + 16 + 32 + 128 + 512) = Horde Quest
-
-1101 (1 + 4 + 8 + 64 + 1024) = Alliance Quest
-
-### RepObjectiveFaction
-
-Faction ID for an objective to achieve a certain reputation value with. See Faction.dbc
-
-### RepObjectiveValue
-
-Reputation value that the player must achieve with the faction in [RepObjectiveFaction](#quest_template-RepObjectiveFaction) as part of the quest objectives.
+Reputation value 2 that the player must achieve with the faction in [RepObjectiveFaction](#quest_template-RepObjectiveFaction) as part of the quest objectives.
 
 ### RewardNextQuest
 
@@ -164,12 +295,12 @@ According to the [Level](#quest_template-Level), the basic experience with index
 This field also controls the XP given as the XP is calculated from the value in this field by the following formula. If the quest is repeatable, XP will be given only once. The total XP that a character will receive is also affected by the level difference between the character's level and the quest's level.
 
 The formula for calculating XP from the value in this field:
-**QuestLevel &gt;= 65:** XP = RewMoneyMaxLevel / 6.0
-**QuestLevel h1. 64:** XP = RewMoneyMaxLevel / 4.8
-**QuestLevel 63:** XP = RewMoneyMaxLevel / 3.6
-**QuestLevel h1. 62:** XP = RewMoneyMaxLevel / 2.4
-**QuestLevel 61:** XP = RewMoneyMaxLevel / 1.2
-**QuestLevel &lt;= 60:** XP = RewMoneyMaxLevel / 0.6
+- **QuestLevel &gt;= 65:** XP = RewMoneyMaxLevel / 6.0
+- **QuestLevel h1. 64:** XP = RewMoneyMaxLevel / 4.8
+- **QuestLevel 63:** XP = RewMoneyMaxLevel / 3.6
+- **QuestLevel h1. 62:** XP = RewMoneyMaxLevel / 2.4
+- **QuestLevel 61:** XP = RewMoneyMaxLevel / 1.2
+- **QuestLevel &lt;= 60:** XP = RewMoneyMaxLevel / 0.6
 
 ### RewardMoney
 
@@ -183,11 +314,9 @@ The money a character at level 80 would get when they complete this quest.
 
 Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](#quest_template-RewardSpell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
-NOTE: This field comes straight from the WDB and should not be changed.
-
 ### RewardSpell
 
-Spell that will always be casted at player when completing the quest. This can be learn spell and player learned some spell in result, or buff spell, for example. If this field is non-zero then this spell will ALWAYS be casted and the spell in [RewardSpell](#quest_template-RewardSpell) will not.
+Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpellCast](quest_template#rewardspellcast) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
 NOTE: This field comes straight from the WDB and should not be changed.
 
@@ -199,9 +328,6 @@ Example: An example value is 15 for quest 8388: At level 80 an honorable kill is
 
 ### RewardKillHonor
 
-Multiplies [RewardHonor](#quest_template-RewardHonor), so if value is 2, it will give double.
-
-**WARNING:** If this field is 1 and [RewardHonor](#quest_template-RewardHonor) is 0, the quest will reward default honor kill value (124 honor at level 80)
 
 ### StartItem
 
@@ -251,51 +377,110 @@ Like all flag based fields, **QuestFlags** can be added for the different types 
 
 Note that some flags may not be supported by core.
 
-### RewardTitleId
-
-The title the character will receive upon completion of the quest. See [CharTitles.dbc](CharTitles)
-
 ### RequiredPlayerKills
 
 Displays how much players you need to kill betd class=td class=a class=/td data-linked-resource-default-alias=fore completing the quest.
 
-### RewardTalents
+### RewardItem1
 
-Will give X bonus talents to the player completed the quest. Leave"0"for No Bonus Talent Points.''
+[item Id 1](item_template#entry) given for reward (no choice).
 
-### RewardArenaPoints
+### RewardAmount1
 
-Will Give X Arena Points to the player that completes the quest. Leave"0"For no Arena Points Reward.
+Amount to be obtained from the above-mentioned item
 
-### RewardChoiceItemId
+### RewardItem2
 
-Id of item available for reward choice.
-Number of Charges in rewarded item available.
+[item Id 2](item_template#entry) given for reward (no choice).
 
-### RewardChoiceItemCount
+### RewardAmount2
 
-Will choose how many items will be added for reward. E.g "RewardChoiceItemId" is the reward item and "RewardChoiceItemCount" is the count of how many items will be added as a reward.
+Amount to be obtained from the above-mentioned item
 
-### RewardItemId
+### RewardItem3
 
-[item Id](item_template#entry) given for reward (no choice).
+[item Id 3](item_template#entry) given for reward (no choice).
 
-### RewardItemCount
+### RewardAmount3
 
-`field-no-description|46`
+Amount to be obtained from the above-mentioned item
 
-### RewardFactionId
+### RewardItem4
 
-Faction Id (from [Faction.dbc](Faction)) for which the quest give reputation points.
-Number of gain or lost reputation points for Faction at quest completion. This is special reputation rewarding. Normal reputation reward to quest rewarding creature faction calculated and added automatically.
+[item Id 4](item_template#entry) given for reward (no choice).
 
-### RewardFactionValueId
+### RewardAmount4
 
-This field is used for reputation lookup in [QuestFactionReward.dbc](QuestFactionReward) if [RewardFactionValueId](#quest_template-RewardFactionValueId) is 0. Value X in this field indicates RepX column of [QuestFactionReward.dbc](QuestFactionReward). If RewardRepValueId is positive, reputation from the first row of QuestFactionReward.dbc will be used, for negative values the second row is used.
+Amount to be obtained from the above-mentioned item
 
-### RewardFactionValueIdOverride
+### ItemDrop1
 
-This field is used to give reputation values not present in QuestFactionReward.dbc or to override them if [RewardRepValueId](#quest_template-RewardRepValueId) is wrong for some reason. The value in this field is 100× the intended reputation reward (if you want to give 400 rep, put 40000 in RewardFactionValueIdOverride).
+
+
+### ItemDropQuantity1
+
+
+
+### ItemDrop2
+
+
+
+### ItemDropQuantity2
+
+
+
+### ItemDrop3
+
+
+
+### ItemDropQuantity3
+
+
+
+### ItemDrop4
+
+
+
+### ItemDropQuantity4
+
+
+
+### RewardChoiceItemID1
+
+
+
+### RewardChoiceItemQuantity1
+
+
+### RewardChoiceItemID2
+
+
+### RewardChoiceItemQuantity2
+
+
+### RewardChoiceItemID3
+
+
+### RewardChoiceItemQuantity3
+
+
+### RewardChoiceItemID4
+
+
+### RewardChoiceItemQuantity4
+
+
+### RewardChoiceItemID5
+
+
+### RewardChoiceItemQuantity5
+
+
+### RewardChoiceItemID6
+
+
+### RewardChoiceItemQuantity6
+
 
 ### POIContinent
 
@@ -313,285 +498,136 @@ Y coordinate of quest POI.
 
 TODO
 
-### Title
+### RewardTitle
 
-Title of the quest.
 
-### Objectives
+### RewardTalents
 
-Objectives of the quest. If empty, quest is an auto-complete quest that can be immediately finished without accepting it first.
 
-### Details
+### RewardArenaPoints
 
-The quest text. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
 
-### OfferRewardText
+### RewardFactionID1
 
-First text send to the player by the NPC when completing the quest. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
 
-### RequestItemsText
+### RewardFactionValue1
 
-Text sent to player when the player tries to talk to the NPC with the quest active but incomplete. (The text under the "Progress" title in Wowhead.) You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
 
-### RequiredNpcOrGo
+### RewardFactionOverride1
 
-Value &gt; 0:required creature\_template ID the player needs to kill/cast on in order to complete the quest.
-Value &lt; 0:required gameobject\_template ID the player needs to cast on in order to complete the quest.
-If\*RequiredSpellCast\*is != 0, the objective is to cast on target, else kill.
-NOTE: If RequiredSpellCast is != 0 and the spell has effects Send Event or Quest Complete, this field may be left empty.
 
-### RequiredNpcOrGoCount
+### RewardFactionID2
 
-The number of times the creature or gameobject must be killed or casted upon.
+
+### RewardFactionValue2
+
 
 ### ItemDrop
 
-Item ID that is needed indirectly by the quest. For example, the quests asks for item X but the only way to get item X is by activating item Y; however, item Y is also a quest item. Therefore you set item Y's ID in this field. This requirement will not appear in the quest text, it is just for the core to know when to drop a quest item that isn't in the RequiredItemId field but is still needed by the quest.
+
+### RewardFactionOverride2
+
+
+### RewardFactionID3
+
 
 ### ItemDropQuantity
 
 The maximum number of copies of the item in ItemDrop that can be picked up (and dropped by the core).
 
-### RequiredItemId
-[Item\_template](item_template#id) 
+### RewardFactionValue3
 
-Id of required item to complete the quest.
 
-### RequiredItemCount
+### RewardFactionOverride3
+
+
+### RewardFactionID4
+
+
+### RewardFactionValue4
+
+
+### RewardFactionOverride4
+
+
+### RewardFactionID5
+
+
+### RewardFactionValue5
+
+
+### RewardFactionOverride5
+
+
+### TimeAllowed
+
+
+### AllowableRaces
+
+
+### LogTitle
+
+Title of the quest.
+
+### LogDescription
+
+Objectives of the quest. If empty, quest is an auto-complete quest that can be immediately finished without accepting it first.
+
+### QuestDescription
+
+The quest text. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
+
+### AreaDescription
+
+
+### QuestCompletionLog
+
+Text sent to player when the player tries to talk to the NPC with the quest active but incomplete. (The text under the "Progress" title in Wowhead.) You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
+
+### RequiredNpcOrGo1
+### RequiredNpcOrGo2
+### RequiredNpcOrGo3
+### RequiredNpcOrGo4
+
+- Value &gt; 0:required creature\_template ID the player needs to kill/cast on in order to complete the quest.
+- Value &lt; 0:required gameobject\_template ID the player needs to cast on in order to complete the quest.
+- If\*RequiredSpellCast\*is != 0, the objective is to cast on target, else kill.
+
+NOTE: If RequiredSpellCast is != 0 and the spell has effects Send Event or Quest Complete, this field may be left empty.
+
+### RequiredNpcOrGoCount1
+### RequiredNpcOrGoCount2
+### RequiredNpcOrGoCount3
+### RequiredNpcOrGoCount4
+
+The number of times the creature or gameobject must be killed or casted upon.
+
+### RequiredItemId1
+### RequiredItemId2
+### RequiredItemId3
+### RequiredItemId4
+### RequiredItemId5
+### RequiredItemId6
+
+[Id](item_template#entry) of required item to complete the quest.
+
+### RequiredItemCount1
+### RequiredItemCount2
+### RequiredItemCount3
+### RequiredItemCount4
+### RequiredItemCount5
+### RequiredItemCount6
 
 Amount of required items
 
-### RequiredSpell
+### Unknown0
 
-Spell Id required to cast on [RequiredNpcOrGo](quest_template#RequiredNpcOrGo) to update Objective.
 
-### ObjectiveText
+### ObjectiveText1
+### ObjectiveText2
+### ObjectiveText3
+### ObjectiveText4
 
 Used to define non-standard objective texts, that show up in the questlog. Example, "Heal fallen warrior" and the number gets added by Count values.
 
-### DetailsEmote
-
-`field-no-description|69`
-
-### DetailsEmoteDelay
-
-Emote delay in ms
-
-### OfferRewardEmote
-
-Emote played by the NPC at the time the character is rewarded for the quest.
-
-### OfferRewardEmoteDelay
-
-Emote delay in ms
-
-### WDBVerified
-
-## **Examples dealing with quests**
-
-Always use PrevQuestId before using NextQuestId. NextQuestId is considered optional and to be used only when PrevQuestId is not sufficient
-
-### Basic quest
-
-Single, stand-alone quest with no prerequisites
-
-```
-    questA
-```
-
-```sql
-entry = questA        PrevQuestId = 0        NextQuestId = 0        ExclusiveGroup = 0        NextQuestInChain = 0
-```
-
-### Prequest
-
-When this quest require another quest to be rewarded
-
-```
-    questA
-```
-
-```sql
-entry = questA        PrevQuestId = questX   NextQuestId = 0        ExclusiveGroup = 0        NextQuestInChain = 0
-```
-
-### Chain of quests
-
-Player get quests in a strict chain that must be completed in a specific order.
-
-```
-    questA
-      |
-    questB
-      |
-    questC
-      |
-    questD
-```
-
-```sql
-entry = questA      PrevQuestId = 0          NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = questB
-entry = questB      PrevQuestId = questA     NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = questC
-entry = questC      PrevQuestId = questB     NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = questD
-entry = questD      PrevQuestId = questC     NextQuestId = 0       ExclusiveGroup = 0       NextQuestInChain = 0
-```
-
-### Chain of quests with multiple start quests.
-
-Player should only be allowed to complete one of three possible
-
-```sql
-    questA     questB    questC
-      \           |         /
-        ------ questD -----
-                  |
-               questE
-```
-
-```sql
-entry = questA      PrevQuestId = 0        NextQuestId = questD    ExclusiveGroup = questA    NextQuestInChain = questD    
-entry = questB      PrevQuestId = 0        NextQuestId = questD    ExclusiveGroup = questA    NextQuestInChain = questD
-entry = questC      PrevQuestId = 0        NextQuestId = questD    ExclusiveGroup = questA    NextQuestInChain = questD
-entry = questD      PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0         NextQuestInChain = questE
-entry = questE      PrevQuestId = questD   NextQuestId = 0         ExclusiveGroup = 0         NextQuestInChain = 0
-```
-
-### Chain of quests with multiple start quests.
-
-Player must complete all three initial quests before D becomes available
-
-```sql
-    questA    questB    questC
-      \         |          /
-       ------ questD -----
-                |
-              questE
-```
-
-```sql
-entry = questA      PrevQuestId = 0        NextQuestId = questD   ExclusiveGroup = -questA    NextQuestInChain = questD
-entry = questB      PrevQuestId = 0        NextQuestId = questD   ExclusiveGroup = -questA    NextQuestInChain = questD
-entry = questC      PrevQuestId = 0        NextQuestId = questD   ExclusiveGroup = -questA    NextQuestInChain = questD
-entry = questD      PrevQuestId = 0        NextQuestId = 0        ExclusiveGroup = 0          NextQuestInChain = questE
-entry = questE      PrevQuestId = questD   NextQuestId = 0        ExclusiveGroup = 0          NextQuestInChain = 0
-```
-
-### Quests with split and a child quest
-
-Completing A unlocks B and C that can be done at the same time. They both need to be completed before D becomes available. X is needed to obtain item for C and this quest should only be available if C is active
-
-```sql
-                questA
-              /        \
-          questB     questC  -  questX
-              \        /
-                questD
-```
-
-```sql
-entry = questA       PrevQuestId = 0        NextQuestId = 0        ExclusiveGroup = 0         NextQuestInChain = 0
-entry = questB       PrevQuestId = questA   NextQuestId = questD   ExclusiveGroup = -questB   NextQuestInChain = 0
-entry = questC       PrevQuestId = questA   NextQuestId = questD   ExclusiveGroup = -questB   NextQuestInChain = 0
-entry = questX       PrevQuestId = -questC  NextQuestId = 0        ExclusiveGroup = 0         NextQuestInChain = 0
-entry = questD       PrevQuestId = 0        NextQuestId = 0        ExclusiveGroup = 0         NextQuestInChain = 0
-```
-
-### Multiple quest chains, leading to one final quest
-
-Player may complete (not required to) X, but has to complete all three quest chains before final quest becomes available
-
-```sql
-                *questX*
-                   |
-    *questA*    *questC*    *questE*
-       |           |            |
-    *questB*    *questD*    *questF*
-       \           |           /
-         ------ *questG* -----
-```
-
-```sql
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questC    entry = questX
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questB    entry = questA
-PrevQuestId = questA   NextQuestId = questG    ExclusiveGroup = -questB    NextQuestInChain = 0         entry = questB
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questD    entry = questC
-PrevQuestId = questC   NextQuestId = questG    ExclusiveGroup = -questB    NextQuestInChain = 0         entry = questD
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questF    entry = questE
-PrevQuestId = questE   NextQuestId = questG    ExclusiveGroup = -questB    NextQuestInChain = 0         entry = questF
-
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questG
-```
-
-### Complicated
-
-Player must first complete A, then B to unlock the chain from C to E. Three other quests in a group will also be unlocked, those can be done at the same time. The three grouped quests must all be completed before I becomes available. Completion of E and I is required to obtain the final quest.
-
-```sql
-                *questA*
-                   |
-                *questB*
-              /          \
-          *questC*     *questF*
-             |         *questG*
-          *questD*     *questH*
-             |            |
-          *questE*     *questI*
-             \           /
-                *questJ*
-```
-
-```sql
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questB    entry = questA
-PrevQuestId = questA   NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questB
-
-PrevQuestId = questB   NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questD    entry = questC
-PrevQuestId = questC   NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questE    entry = questD
-PrevQuestId = questD   NextQuestId = questJ    ExclusiveGroup = -questE    NextQuestInChain = 0         entry = questE
-
-PrevQuestId = questB   NextQuestId = questI    ExclusiveGroup = -questF    NextQuestInChain = 0         entry = questF
-PrevQuestId = questB   NextQuestId = questI    ExclusiveGroup = -questF    NextQuestInChain = 0         entry = questG
-PrevQuestId = questB   NextQuestId = questI    ExclusiveGroup = -questF    NextQuestInChain = 0         entry = questH
-
-PrevQuestId = 0        NextQuestId = questJ    ExclusiveGroup = -questE    NextQuestInChain = 0         entry = questI
-
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questJ
-```
-
-### Impossible - many quests may unlock many
-
-Player can choose between two alternative chains (Chain A or B, but not both chains). A2 or B2 should unlock C, D and E when complete. When all three complete, F should be unlocked. If player get A3 or B3 after complete F, depends on if chain A or B was chosen
-
-```sql
-                *questA1*           *questB1*
-                    |                   |
-                *questA2*           *questB2*
-                    \                  /
-                     ---- *questC* ----
-                          *questD*
-                          *questE*
-                             |
-                          *questF*
-                         /        \
-                    *questA3*   *questB3*
-```
-
-```sql
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questA2   entry = questA1
-PrevQuestId = questA1  NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questA2
-
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = questB2   entry = questB1
-PrevQuestId = questB1  NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questB2
-
-PrevQuestId = 0        NextQuestId = questF    ExclusiveGroup = -questC    NextQuestInChain = 0         entry = questC
-PrevQuestId = 0        NextQuestId = questF    ExclusiveGroup = -questC    NextQuestInChain = 0         entry = questD
-PrevQuestId = 0        NextQuestId = questF    ExclusiveGroup = -questC    NextQuestInChain = 0         entry = questE
-
-PrevQuestId = 0        NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questF
-
-PrevQuestId = questF   NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questA3
-PrevQuestId = questF   NextQuestId = 0         ExclusiveGroup = 0          NextQuestInChain = 0         entry = questB3
-```
-
-Note:
-
-If player can choose between chain A or B may be determined by faction status (aldor or scryer), using ReqMinRepFaction = 1. Player should not be able to be neutral+1 with both at the same time. This may be the common threshold to obtain aldor or scryer quests (this is unsure). If that is the case, only the unlock of C, D and E after complete A2 *or* B2 is the impossible part.\_Note 2: With the [Conditions](conditions) table now every quest chain is possible.
+### VerifiedBuild
