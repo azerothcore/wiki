@@ -2,7 +2,11 @@
 redirect_from: "/"
 ---
 
+# Home
+
 Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered by [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
+
+[English](home) [Español](es/home)
 
 ## Getting started
 
