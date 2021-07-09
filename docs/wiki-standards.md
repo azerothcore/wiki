@@ -24,6 +24,12 @@ ALL DATABASE TABLE FILES should be present in the correct DATABASE FILE.
 
 When adding/removing a table it should also be updated in `database-auth.md` `database-characters.md` `database-world.md`
 
+## LINKING WITHIN THE WIKI
+
+When linking to a page in the wiki we use [relative links](https://semify.com/?Relative-Link&AID=1373#:~:text=For%20example%2C%20a%20relative%20link%20would%20only%20include%20/images%20/puppies.gif%20in%20the%20a%20href%20tag.). (`[home](home#overview)`).
+
+When linking to a page outside of the wiki we use [absolute links](https://semify.com/?Relative-Link&AID=1373#:~:text=An%20absolute%20link%2C%20on%20the%20other%20hand%2C%20would%20include%20https%3A//%20www.%20example.com/%20image/%20puppies.gif%20in%20it.). (`[Google](https://google.com)`).
+
 ## TRANSLATION
 
 ALL TRANSLATIONS should be in a sub directory of /docs/ with the shortened locale of the language. i.e /docs/es/. If there has been no translations prior, you need to allow the directory path in the config. See [this commit on how to do it](https://github.com/azerothcore/wiki/commit/8b897c3384298674e82108357ee5e655f788229f).
