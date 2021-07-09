@@ -11,11 +11,11 @@ Information and settings for ingame, player-based chat channels (not affecting t
 | Field           | Type         | Attributes | Key | Null | Default | Extra          | Comment |
 |-----------------|--------------|------------|-----|------|---------|--------------- |---------|
 | [channelId][1]  | INT          | SIGNED     | PRI | NO   |         | AUTO_INCREMENT |         |
-| [name][1]       | VARCHAR(128) | SIGNED     |     | NO   |         |                |         |
-| [team][2]       | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [announce][3]   | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
-| [ownership][4]  | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
-| [password][5]   | VARCHAR(32)  | SIGNED     |     | YES  |         |                |         |
+| [name][2]       | VARCHAR(128) | SIGNED     |     | NO   |         |                |         |
+| [team][3]       | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [announce][4]   | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
+| [ownership][5]  | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
+| [password][6]   | VARCHAR(32)  | SIGNED     |     | YES  |         |                |         |
 | [lastUsed][7]   | INT          | UNSIGNED   |     | NO   |         |                |         |
 
 [1]: #channelId
@@ -24,8 +24,7 @@ Information and settings for ingame, player-based chat channels (not affecting t
 [4]: #announce
 [5]: #ownership
 [6]: #password
-[7]: #bannedlist
-[8]: #lastused
+[7]: #lastused
 
 **Description of the fields**
 
