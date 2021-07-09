@@ -8,7 +8,7 @@
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra  | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ------ | ------- |
-| [name][1]      | varchar(120) |            | PRI | NO   | ''      | PRI    |         |
+| [name][1]      | VARCHAR(120) |            | PRI | NO   | ''      | PRI    |         |
 | [crc][2]       | INT          | UNSIGNED   |     | NO   | 0       |        |         |
 
 
@@ -24,5 +24,3 @@
 ### crc
 
 `field-no-description|2`
-
-

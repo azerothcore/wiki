@@ -12,7 +12,7 @@ This table holds datas about BattleGrounds deserters. To enable storing this kin
 |---------------|----------|------------|-----|------|---------|-------|-------------------------- |
 | [guid][1]     | INT      | UNSIGNED   |     | NO   |         |       | characters.guid           |
 | [type][2]     | TINYINT  | UNSIGNED   |     | NO   |         |       | type of the desertion     |
-| [datetime][3] | datetime |            |     | NO   |         |       | datetime of the desertion |
+| [datetime][3] | DATETIME |            |     | NO   |         |       | datetime of the desertion |
 
 [1]: #guid
 [2]: #type

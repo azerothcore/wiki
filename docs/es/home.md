@@ -6,11 +6,11 @@ Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con
 
 ## Empezando
 
-- [Guía de instalación](es/installation.md)
+- [Guía de instalación](installation.md)
 
 ## Documentación
 
-- [Índice de documentación](es/documentation_index.md)
+- [Índice de documentación](documentation_index.md)
 
 ## Descripción General
 

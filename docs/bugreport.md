@@ -2,7 +2,7 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-**The `bugreport` table**
+**The \`bugreport\` table**
 
 **Structure**
 

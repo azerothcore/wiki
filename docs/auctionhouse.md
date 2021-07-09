@@ -42,15 +42,15 @@ Unique identifier for every auction.
 
 ### houseid
 
-The GUID of the creature where the auction item was added. See [creature.guid](http://www.azerothcore.org/wiki/creature#guid)
+The GUID of the creature where the auction item was added. See [creature.guid](http://www.azerothcore.org/wiki/creature#guid).
 
 ### itemguid
 
-The GUID of the item that is up for auction. See [item\_instance.guid](http://www.azerothcore.org/wiki/item_instance#guid)
+The GUID of the item that is up for auction. See [item\_instance.guid](http://www.azerothcore.org/wiki/item_instance#guid).
 
 ### itemowner
 
-The GUID of the owner of the item up for auction. See [characters.guid](http://www.azerothcore.org/wiki/guid)
+The GUID of the owner of the item up for auction. See [characters.guid](http://www.azerothcore.org/wiki/guid).
 
 ### buyoutprice
 
@@ -62,7 +62,7 @@ The time when the auction will end, measured in [Unix time](http://en.wikipedia.
 
 ### buyguid
 
-The GUID of the highest bidder. See [characters.guid](http://www.azerothcore.org/wiki/guid)
+The GUID of the highest bidder. See [characters.guid](http://www.azerothcore.org/wiki/guid).
 
 ### lastbid
 

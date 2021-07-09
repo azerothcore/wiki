@@ -46,15 +46,15 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 
 ### arenaTeamId
 
-The ID of the ArenaTeam. This number is unique to each team and is the main method to identify a team.1
+The ID of the ArenaTeam. This number is unique to each team and is the main method to identify a team.
 
 ### name
 
-Name of the Arena team
+Name of the Arena team.
 
 ### captainGuid
 
-The GUID of the character who created the ArenaTeam. See [characters.guid](http://www.azerothcore.org/wiki/guid)
+The GUID of the character who created the ArenaTeam. See [characters.guid](http://www.azerothcore.org/wiki/guid).
 
 ### type
 
