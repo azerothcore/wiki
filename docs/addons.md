@@ -2,13 +2,13 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-**The `addons` table**
+**The \`addons\` table**
 
 **Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra  | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ------ | ------- |
-| [name][1]      | varchar(120) |            | PRI | NO   | ''      | Unique |         |
+| [name][1]      | varchar(120) |            | PRI | NO   | ''      | PRI    |         |
 | [crc][2]       | INT          | UNSIGNED   |     | NO   | 0       |        |         |
 
 
