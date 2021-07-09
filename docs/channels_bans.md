@@ -29,17 +29,3 @@ The [channel id](channels#channelId).
 ### banTime
 
 The ban time of de [channel](channels#channelId).
-
-
-
-
-
-
-
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [channels_bans](channels_bans)
-
-Column | Type | Description
---- | --- | ---
-ChannelId | INT UNSIGNED | 
-PlayerGUID | INT UNSIGNED | 
-BanTime | INT UNSIGNED | 
