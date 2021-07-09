@@ -13,7 +13,7 @@ This table is used by Trinity while running and not a table that you would usual
 | Field               | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]             | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [auctioneerguid][2] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [houseid][2]        | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [itemguid][3]       | INT  | UNSIGNED   | UNI | NO   | 0       |       |         |
 | [itemowner][4]      | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [buyoutprice][5]    | INT  | UNSIGNED   |     | NO   | 0       |       |         |
@@ -24,7 +24,7 @@ This table is used by Trinity while running and not a table that you would usual
 | [deposit][10]       | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
-[2]: #auctioneerguid
+[2]: #houseid
 [3]: #itemguid
 [4]: #itemowner
 [5]: #buyoutprice
@@ -40,17 +40,17 @@ This table is used by Trinity while running and not a table that you would usual
 
 Unique identifier for every auction.
 
-### auctioneerguid
+### houseid
 
-The GUID of the creature where the auction item was added. See creature.guid
+The GUID of the creature where the auction item was added. See [creature.guid](http://www.azerothcore.org/wiki/creature#guid)
 
 ### itemguid
 
-The GUID of the item that is up for auction. See item\_instance.guid
+The GUID of the item that is up for auction. See [item\_instance.guid](http://www.azerothcore.org/wiki/item_instance#guid)
 
 ### itemowner
 
-The GUID of the owner of the item up for auction. See characters.guid
+The GUID of the owner of the item up for auction. See [characters.guid](http://www.azerothcore.org/wiki/guid)
 
 ### buyoutprice
 
@@ -62,7 +62,7 @@ The time when the auction will end, measured in [Unix time](http://en.wikipedia.
 
 ### buyguid
 
-The GUID of the highest bidder. See characters.guid
+The GUID of the highest bidder. See [characters.guid](http://www.azerothcore.org/wiki/guid)
 
 ### lastbid
 
