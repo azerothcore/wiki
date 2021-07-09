@@ -43,10 +43,10 @@ use_prose_io: false
 # - github : it uses internal github repository search
 # - google : it uses cse search bar, you need to configure google_cse_token
 #
-search_engine : "github"
+search_engine : "google"
 # Setting google custom search engine for google
 # cse search bar (https://cse.google.it/cse/)
-google_cse_token:
+google_cse_token: 3211b10d74ee61986
 
 #
 # Jekyll configurations
