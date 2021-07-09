@@ -10,16 +10,15 @@
 |----------------- |------------- |------------|-----|------|---------|-------|--------- |
 | [id][1]          | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |          |
 | [creator][2]     | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [title][4]       | VARCHAR(255) |            |     | NO   | ''      |       |          |
-| [description][5] | VARCHAR(255) |            |     | NO   | ''      |       |          |
-| [type][6]        | TINYINT      | UNSIGNED   |     | NO   | 4       |       |          |
-| [dungeon][7]     | INT          |            |     | NO   | -1      |       |          |
-| [eventtime][8]   | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [flags][9]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [time2][10]      | INT          | UNSIGNED   |     | NO   | 0       |       |          |
+| [title][3]       | VARCHAR(255) |            |     | NO   | ''      |       |          |
+| [description][4] | VARCHAR(255) |            |     | NO   | ''      |       |          |
+| [type][5]        | TINYINT      | UNSIGNED   |     | NO   | 4       |       |          |
+| [dungeon][6]     | INT          |            |     | NO   | -1      |       |          |
+| [eventtime][7]   | INT          | UNSIGNED   |     | NO   | 0       |       |          |
+| [flags][8]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
+| [time2][9]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
 
 [1]: #id
-[2]: #type
 [3]: #creator
 [4]: #title
 [5]: #description
@@ -35,39 +34,35 @@
 
 `field-no-description|1`
 
-### type
+### creator
 
 `field-no-description|2`
 
-### creator
+### title
 
 `field-no-description|3`
 
-### title
+### description
 
 `field-no-description|4`
 
-### description
+### type
 
 `field-no-description|5`
 
-### type
+### dungeon
 
 `field-no-description|6`
 
-### dungeon
+### eventtime
 
 `field-no-description|7`
 
-### eventtime
+### flags
 
 `field-no-description|8`
 
-### flags
-
-`field-no-description|9`
-
 ### time2
 
-`field-no-description|10`
+`field-no-description|9`
 
