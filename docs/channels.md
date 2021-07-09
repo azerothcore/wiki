@@ -9,7 +9,7 @@ Information and settings for ingame, player-based chat channels (not affecting t
 ## Structure
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-|-----------------|--------------|------------|-----|------|---------|--------------- |---------|
+| --------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
 | [channelId][1]  | INT          | SIGNED     | PRI | NO   |         | AUTO_INCREMENT |         |
 | [name][2]       | VARCHAR(128) | SIGNED     |     | NO   |         |                |         |
 | [team][3]       | INT          | UNSIGNED   |     | NO   |         |                |         |
