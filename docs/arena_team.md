@@ -14,7 +14,7 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 | [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
 | [captainGuid][3]      | INT         | UNSIGNED   |     | NO   | 0       |        |         |
 | [type][4]             | TINYINT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [rating][5]           | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |        
+| [rating][5]           | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
 | [seasonGames][6]      | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
 | [seasonWins][7]       | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
 | [weekGames][8]        | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |
