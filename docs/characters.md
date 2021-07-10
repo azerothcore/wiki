@@ -168,7 +168,7 @@ This table holds vital static information for each character. It is used to crea
 [77]: #deleteinfos_name
 [78]: #deletedate
 
-## Description of the fields
+**Description of the fields**
 
 ### guid
 
@@ -184,11 +184,11 @@ The name of the character. Max length is 12 characters.
 
 ### race
 
-The race of the character. See [ChrRaces.dbc](ChrRaces).
+The race of the character. See [ChrRaces.dbc](chrraces).
 
 ### class
 
-The class of the character: [ChrClasses.dbc](ChrClasses).
+The class of the character: [ChrClasses.dbc](chrclasses).
 
 ### gender
 
@@ -462,7 +462,7 @@ Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes,
 
 ### watchedFaction
 
-Tracked faction at experience bar (using reputation ID, see [Faction.dbc](Faction))
+Tracked faction at experience bar (using reputation ID, see [Faction.dbc](faction))
 
 ### drunk
 
