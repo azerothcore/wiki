@@ -1,8 +1,8 @@
-# gm_ticket
+# gm\_ticket
 
 [<-Back-to:Characters](database-characters.md)
 
-## The `\gm_tickets\` table
+## The `\gm\_tickets\` table
 
 This table stores all tickets.
 
