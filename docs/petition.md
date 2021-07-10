@@ -28,7 +28,7 @@ The petition's owner's GUID. See [characters.guid](characters#guid).
 
 ### petitionguid
 
-The GUID of the petition item. See [item\_instance.guid](item_instance.guid)
+The GUID of the petition item. See [item\_instance.guid](item_instance#guid)
 
 ### name
 

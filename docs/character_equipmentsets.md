@@ -9,32 +9,32 @@ This table holds info about player's equipment manager settings.
 **Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-|------------------|--------------|------------|-----|------|---------|----------------|---------|
-| [guid][1]        | INT      | SIGNED     |     | NO   |         |                |         |
-| [setguid][2]     | BIGINT   | SIGNED     | PRI | NO   |         | Auto Increment |         |
-| [setindex][3]    | TINYINT   | SIGNED     |     | NO   |         |                |         |
-| [name][4]        | VARCHAR(31)  |            |     | NO   |         |                |         |
-| [iconname][5]    | VARCHAR(100) |            |     | NO   |         |                |         |
-| [ignore_mask][6] | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item0][7]       | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item1][8]       | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item2][9]       | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item3][10]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item4][11]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item5][12]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item6][13]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item7][14]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item8][15]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item9][16]      | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item10][17]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item11][18]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item12][19]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item13][20]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item14][21]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item15][22]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item16][23]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item17][24]     | INT      | UNSIGNED   |     | NO   |         |                |         |
-| [item18][25]     | INT      | UNSIGNED   |     | NO   |         |                |         |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [guid][1]        | INT          | SIGNED     |     | NO   |         | UNIQUE         |         |
+| [setguid][2]     | BIGINT       | SIGNED     | PRI | NO   |         | UNIQUE         |         |
+| [setindex][3]    | TINYINT      | UNSIGNED   |     | NO   |         | UNIQUE         |         |
+| [name][4]        | VARCHAR(31)  | SIGNED     |     | NO   |         |                |         |
+| [iconname][5]    | VARCHAR(100) | SIGNED     |     | NO   |         |                |         |
+| [ignore_mask][6] | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item0][7]       | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item1][8]       | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item2][9]       | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item3][10]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item4][11]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item5][12]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item6][13]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item7][14]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item8][15]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item9][16]      | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item10][17]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item11][18]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item12][19]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item13][20]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item14][21]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item15][22]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item16][23]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item17][24]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| [item18][25]     | INT          | UNSIGNED   |     | NO   |         |                |         |
 
 [1]: #guid
 [2]: #setguid
@@ -66,7 +66,7 @@ This table holds info about player's equipment manager settings.
 
 ### guid
 
-Player's GUID. See characters.guid
+Player's GUID. See [characters.guid](characters#guid).
 
 ### setguid
 
@@ -82,7 +82,7 @@ Individual. Name is set by player.
 
 ### iconname
 
-Name taken from ItemDisplayInfo.dbc, column 6
+Name taken from ItemDisplayInfo.dbc, column 6.
 
 ### ignore\_mask
 
@@ -90,7 +90,7 @@ Name taken from ItemDisplayInfo.dbc, column 6
 
 ### item0-18
 
-Values taken from item\_instance.guid
+Values taken from [item\_instance.guid](item_instance#guid).
 
 | ID | Name      |
 |----|-----------|
