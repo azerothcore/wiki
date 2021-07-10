@@ -37,10 +37,10 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 [9]: #weekwins
 [10]: #rank
 [11]: #backgroundcolor
-[12]: #emblemStyle
-[13]: #emblemColor
-[14]: #borderStyle
-[15]: #borderColor
+[12]: #emblemstyle
+[13]: #emblemcolor
+[14]: #borderstyle
+[15]: #bordercolor
 
 **Description of the fields**
 
@@ -54,7 +54,7 @@ Name of the Arena team.
 
 ### captainGuid
 
-The GUID of the character who created the ArenaTeam. See [characters.guid](http://www.azerothcore.org/wiki/guid).
+The GUID of the character who created the ArenaTeam. See [characters.guid](characters#guid).
 
 ### type
 

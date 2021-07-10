@@ -34,7 +34,7 @@ This table is used to store the tutorial state of all the accounts.
 
 ### guid
 
-Account of the player. See [account.id](http://www.azerothcore.org/wiki/account#id).
+Account of the player. See [account.id](account#id).
 
 ### tut0
 

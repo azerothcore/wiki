@@ -13,10 +13,10 @@
 | [Version][3]   | VARCHAR(255) |            |     | NO   | ''                | UNIQUE |         |
 | [Timestamp][4] | TIMESTAMP    |            |     | NO   | CURRENT_TIMESTAMP |        |         |
 
-[1]: #Id
-[2]: #Name
-[3]: #Version
-[4]: #Timestamp
+[1]: #id
+[2]: #name
+[3]: #version
+[4]: #timestamp
 
 **Description of the fields**
 

@@ -18,7 +18,7 @@ Information and settings for ingame, player-based chat channels (not affecting t
 | [password][6]   | VARCHAR(32)  | SIGNED     |     | YES  |         |                |         |
 | [lastUsed][7]   | INT          | UNSIGNED   |     | NO   |         |                |         |
 
-[1]: #channelId
+[1]: #channelid
 [2]: #name
 [3]: #team
 [4]: #announce

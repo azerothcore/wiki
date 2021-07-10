@@ -34,7 +34,7 @@ ID of arena team. See Team Id.
 
 ### guid
 
-Player's GUID. See [characters.guid](http://www.azerothcore.org/wiki/guid).
+Player's GUID. See [characters.guid](characters#guid).
 
 ### weekGames
 

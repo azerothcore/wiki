@@ -12,8 +12,8 @@
 | [playerGUID][2] | INT   | UNSIGNED   | PRI | NO   |         |        |         |
 | [banTime][3]    | INT   | UNSIGNED   |     | NO   |         |        |         |
 
-[1]: #channelId
-[2]: #playerGUID
+[1]: #channelid
+[2]: #playerguid
 [3]: #banTime
 
 **Description of the fields**

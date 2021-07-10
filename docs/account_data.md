@@ -15,7 +15,7 @@ Contains data about client account and settings.
 | [time][3]      | INT     | UNSIGNED   |     | NO   | 0       |       |                    |
 | [data][4]      | BLOB    | SIGNED     |     | NO   |         |       |                    |
 
-[1]: #accountId
+[1]: #accountid
 [2]: #type
 [3]: #time
 [4]: #data
@@ -24,7 +24,7 @@ Contains data about client account and settings.
 
 ### accountId
 
-[account.id](http://www.azerothcore.org/wiki/account#id).
+The [account id](account#id).
 
 ### type
 

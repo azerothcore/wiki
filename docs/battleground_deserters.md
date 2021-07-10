@@ -22,7 +22,7 @@ This table holds datas about BattleGrounds deserters. To enable storing this kin
 
 ### guid
 
-Link to [characters.guid](http://www.azerothcore.org/wiki/guid).
+Link to [characters.guid](characters#guid).
 
 ### type
 

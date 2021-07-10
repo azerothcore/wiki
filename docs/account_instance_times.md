@@ -26,7 +26,7 @@ Account of the player. See [account.id](account#id).
 
 ### instanceId
 
-This is the instance.id which characters of this account has been past 5 hours.
+This is the instance id which characters of this account has been past 5 hours.
 
 ### releaseTime
 
