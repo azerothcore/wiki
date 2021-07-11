@@ -96,6 +96,8 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 
 - I'm getting an Application Error: 0xc000007b
   - This error usually happens when mixing 32 bit and 64 bit DLLs.
+    - For 32bit compiled you will need the required DLLs in 32 bits as well.
+    - For 64bit compiled you will need the required DLLs in 64 bits as well.
 
 ## Debug-related FAQ
 
