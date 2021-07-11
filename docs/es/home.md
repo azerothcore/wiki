@@ -1,4 +1,4 @@
-﻿---
+---
 redirect_from: "/es"
 ---
 

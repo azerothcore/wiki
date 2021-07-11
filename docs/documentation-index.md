@@ -1,9 +1,18 @@
+---
+redirect_from: /documentation_index
+---
+
 # Documentation index
 
 ## How to install
 
 * [Traditional setup guide](installation.md)
 * [Docker setup guide](install-with-docker.md)
+
+## Help
+
+* [FAQ](faq)
+* [Common Errors](common-errors)
 
 ## Documentation
 
