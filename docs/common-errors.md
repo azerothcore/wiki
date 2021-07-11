@@ -136,6 +136,14 @@ You need to use the exact version of libmysql.dll as the version you used to com
 
 ---------------------------------------------------------
 
+**ACE00047** I get an error when I am trying to start Worldserver or Authserver
+```
+This application was unable to start correctly (0xc000007b). Click OK to close the application.
+```
+This is usually due to mixing 32/64bit DLLs with your compiled binaries. Your DLLs needs to be the same bit version as your compiled binaries.
+
+---------------------------------------------------------
+
 ## Core compilation-related errors
 
 **ACE00060** I don't get a AzerothCore hash
