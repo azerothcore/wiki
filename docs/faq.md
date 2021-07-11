@@ -94,6 +94,11 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
     - for 64bit installs: "libssl-1_1-x64.dll" and "libcrypto-1_1-x64.dll"
   - You can follow the [Core Installation](core-installation) guide to find the libraries.
 
+- I'm getting an Application Error: 0xc000007b
+  - This error usually happens when mixing 32 bit and 64 bit DLLs.
+    - For 32bit compiled you will need the required DLLs in 32 bits as well.
+    - For 64bit compiled you will need the required DLLs in 64 bits as well.
+
 ## Debug-related FAQ
 
 - How can I get a good crashlog on Windows?
