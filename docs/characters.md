@@ -85,10 +85,11 @@ This table holds vital static information for each character. It is used to crea
 | [knownTitles][72]          | longtext     | SIGNED     |     | YES  | NULL              |        |                          |
 | [actionbars][73]           | longtext     | UNSIGNED   |     | NO   | 0                 |        |                          |
 | [grantableLevels][74]      | longtext     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [creation_date][75]        | TIMESTAMP    | SIGNED     |     | NO   | CURRENT_TIMESTAMP |        |                          |
-| [deleteInfos_Account][76]  | INT      | UNSIGNED   |     | YES  | NULL              |        |                          |
-| [deleteInfos_Name][77]     | VARCHAR(12)  | UNSIGNED   |     | YES  | NULL              |        |                          |
-| [deleteDate][78]           | INT      | UNSIGNED   |     | YES  | NULL              |        |                          |
+| [order][75]                | TINYINT      |            |     | YES  | NULL              |        |                          |
+| [creation_date][76]        | TIMESTAMP    | SIGNED     |     | NO   | CURRENT_TIMESTAMP |        |                          |
+| [deleteInfos_Account][77]  | INT      | UNSIGNED   |     | YES  | NULL              |        |                          |
+| [deleteInfos_Name][78]     | VARCHAR(12)  | UNSIGNED   |     | YES  | NULL              |        |                          |
+| [deleteDate][79]           | INT      | UNSIGNED   |     | YES  | NULL              |        |                          |
   
 [1]: #guid
 [2]: #account
@@ -164,10 +165,11 @@ This table holds vital static information for each character. It is used to crea
 [72]: #knownTitles
 [73]: #actionbars
 [74]: #grantablelevels
-[75]: #creation_date
-[76]: #deleteInfos_Account
-[77]: #deleteInfos_Name
-[78]: #deleteDate
+[75]: #order
+[76]: #creation_date
+[77]: #deleteInfos_Account
+[78]: #deleteInfos_Name
+[79]: #deleteDate
 
 
 ## Description of the fields
@@ -618,6 +620,11 @@ A bitmask that contains visible actionbars for the player
 ### grantableLevels
 
 Recruit A Friend stuff.
+
+
+### order
+
+A field used to change the order in which the characters appear in the character selection screen. The `order` field is used first, then the `guid`, which means that if the `order` column is `NULL` for every character of an account, they will be sorted by `guid` by default.
 
 
 ### creation_date
