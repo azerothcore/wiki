@@ -9,11 +9,11 @@ Contains data about characters' friends/ignored list.
 **Structure**
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                            |
-|-------------|-------------|------------|-----|------|---------|-------|------------------------------------|
-| [guid][1]   | INT     | UNSIGNED   | PRI | NO   | 0       |       | Character Global Unique Identifier |
-| [friend][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
-| [flags][3]  | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       | Friend Flags                       |
-| [note][4]   | VARCHAR(48) | SIGNED     |     | NO   |         |       | Friend Note                        |
+| ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
+| [guid][1]   | INT         | UNSIGNED   | PRI | NO   | 0       |       | Character Global Unique Identifier |
+| [friend][2] | INT         | UNSIGNED   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
+| [flags][3]  | TINYINT     | UNSIGNED   | PRI | NO   | 0       |       | Friend Flags                       |
+| [note][4]   | VARCHAR(48) | SIGNED     |     | NO   | ''      |       | Friend Note                        |
 
 [1]: #guid
 [2]: #friend
@@ -24,11 +24,11 @@ Contains data about characters' friends/ignored list.
 
 ### guid
 
-The GUID of the character. See character.guid
+The character guid. See [characters.guid](characters#guid).
 
 ### friend
 
-The GUID of the friend/ignored. See characters.guid
+The GUID of the friend/ignored. See [characters.guid](characters#guid).
 
 ### flags
 

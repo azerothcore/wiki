@@ -9,49 +9,49 @@ See worldserver.conf: PlayerSave.Stats.\*
 
 **Structure**
 
-| Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment                            |
-|-------------------------|---------|------------|-----|------|---------|-------|------------------------------------|
-| [guid][1]               | INT | UNSIGNED   | PRI | NO   |         |       | Global Unique Identifier, Low part |
-| [maxhealth][2]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower1][3]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower2][4]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower3][5]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower4][6]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower5][7]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower6][8]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [maxpower7][9]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [strength][10]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [agility][11]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [stamina][12]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [intellect][13]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [spirit][14]            | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [armor][15]             | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resHoly][16]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resFire][17]           | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resNature][18]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resFrost][19]          | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resShadow][20]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resArcane][21]         | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [blockPct][22]          | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [dodgePct][23]          | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [parryPct][24]          | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [critPct][25]           | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [rangedCritPct][26]     | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [spellCritPct][27]      | FLOAT   | UNSIGNED   |     | NO   |         |       |                                    |
-| [attackPower][28]       | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [rangedAttackPower][29] | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [spellPower][30]        | INT | UNSIGNED   |     | NO   |         |       |                                    |
-| [resilience][31]        | INT | UNSIGNED   |     | NO   |         |       |                                    |
+| Field                   | Type  | Attributes | Key | Null | Default | Extra | Comment                            |
+| ----------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
+| [guid][1]               | INT   | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
+| [maxhealth][2]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower1][3]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower2][4]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower3][5]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower4][6]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower5][7]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower6][8]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [maxpower7][9]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [strength][10]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [agility][11]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [stamina][12]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [intellect][13]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [spirit][14]            | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [armor][15]             | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resHoly][16]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resFire][17]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resNature][18]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resFrost][19]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resShadow][20]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resArcane][21]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [blockPct][22]          | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
+| [dodgePct][23]          | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
+| [parryPct][24]          | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
+| [critPct][25]           | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
+| [rangedCritPct][26]     | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
+| [spellCritPct][27]      | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
+| [attackPower][28]       | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [rangedAttackPower][29] | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [spellPower][30]        | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [resilience][31]        | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
 
 [1]: #guid
 [2]: #maxhealth
-[3]: #maxpower1
-[4]: #maxpower2
-[5]: #maxpower3
-[6]: #maxpower4
-[7]: #maxpower5
-[8]: #maxpower6
-[9]: #maxpower7
+[3]: #maxpower
+[4]: #maxpower
+[5]: #maxpower
+[6]: #maxpower
+[7]: #maxpower
+[8]: #maxpower
+[9]: #maxpower
 [10]: #strength
 [11]: #agility
 [12]: #stamina
@@ -79,7 +79,7 @@ See worldserver.conf: PlayerSave.Stats.\*
 
 ### guid
 
-The guid of the character.
+The character guid. See [characters.guid](characters#guid).
 
 ### maxhealth
 
@@ -88,7 +88,7 @@ Maximum amount of health that the character has.
 ### maxpower
 
 | Value | Description |
-|-------|-------------|
+| ----- | ----------- |
 | 1     | mana        |
 | 2     | rage        |
 | 3     | focus       |
