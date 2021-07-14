@@ -8,26 +8,29 @@ Contains all the individual talent data for each character. This is only used as
 
 **Structure**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [spell][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [talentGroup][3] | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]     | INT       | UNSIGNED   | PRI | NO   |         |       |         |
+| [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [specMask][3] | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #spell
-[3]: #talentgroup
+[3]: #specmask
 
 **Description of the fields**
 
 ### guid
 
-The GUID of the character. See characters.guid
+The character guid. See [characters.guid](characters#guid).
 
 ### spell
 
-The spell ID. See Spell.dbc column 1
+The spell ID. See [Spell.dbc](spell) column 1.
 
-### talentGroup
+### specMask
 
-talentGroup = 0 is the first spec, talentGroup = 1 is the second spec.
+| Value | Data               | 
+| ----- | ------------------ |
+| 0     | is the first spec  | 
+| 1     | is the second spec |
