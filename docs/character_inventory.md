@@ -8,12 +8,12 @@ Contains all the character inventory data, including the bank data.
 
 **Structure**
 
-| Field     | Type       | Attributes | Key    | Null | Default | Extra | Comment                       |
-|-----------|------------|------------|--------|------|---------|-------|-------------------------------|
-| [guid][1] | INT    | UNSIGNED   | Unique | NO   | 0       |       | Global Unique Identifier      |
-| [bag][2]  | INT    | UNSIGNED   | Unique | NO   | 0       |       |                               |
-| [slot][3] | TINYINT | UNSIGNED   | Unique | NO   | 0       |       |                               |
-| [item][4] | INT    | UNSIGNED   | PRI    | NO   | 0       |       | Item Global Unique Identifier |
+| Field     | Type    | Attributes | Key    | Null | Default | Extra | Comment                       |
+| --------- | ------- | ---------- | ------ | ---- | ------- | ----- | ----------------------------- |
+| [guid][1] | INT     | UNSIGNED   | Unique | NO   | 0       |       | Global Unique Identifier      |
+| [bag][2]  | INT     | UNSIGNED   |        | NO   | 0       |       |                               |
+| [slot][3] | TINYINT | UNSIGNED   |        | NO   | 0       |       |                               |
+| [item][4] | INT     | UNSIGNED   | PRI    | NO   | 0       |       | Item Global Unique Identifier |
 
 [1]: #guid
 [2]: #bag
@@ -24,11 +24,11 @@ Contains all the character inventory data, including the bank data.
 
 ### guid
 
-The GUID of the character. See characters.guid
+The GUID of the character. See [characters.guid](characters#guid).
 
 ### bag
 
-If it isn't 0, then it is the bag's item GUID. See item\_instance.guid
+If it isn't 0, then it is the bag's item GUID. See [item\_instance.guid](item_instance#guid).
 
 ### slot
 
@@ -66,4 +66,4 @@ If the bag field is zero, then the slot has a range of 0 to 130 and the value st
 
 ### item
 
-The item's GUID. See item\_instance.guid
+The item's GUID. See [item\_instance.guid](item_instance#guid).
