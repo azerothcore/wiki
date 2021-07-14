@@ -557,7 +557,7 @@ Recruit A Friend stuff.
 
 ### order
 
-A field used to change the order in which the characters appear in the character selection screen. The `order` field is used first, then the `[charactesr.guid](charactesr#guid)`, which means that if the `order` column is `NULL` for every character of an account, they will be sorted by `[charactesr.guid](charactesr#guid)` by default.
+A field used to change the order in which the characters appear in the character selection screen. The `order` field is used first, then the `[characters.guid](characters#guid)`, which means that if the `order` column is `NULL` for every character of an account, they will be sorted by `[characters.guid](characters#guid)` by default.
 
 ### creation_date
 
