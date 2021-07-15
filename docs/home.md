@@ -14,7 +14,7 @@ Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered b
 
 ## Documentation
 
-- [Documentation Index](documentation_index.md)
+- [Documentation Index](documentation_index)
 
 ## Overview
 
