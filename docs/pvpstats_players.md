@@ -2,9 +2,9 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-**The \`[pvpstats\_players](http://collab.kpsn.org/pages/createpage.action?spaceKey=tc&title=pvpstats_battlegrounds&linkCreation=true&fromPageId=331580)\` table**
+**The \`pvpstats\_players\` table**
 
-This table holds datas about BattleGrounds scores. To enable storing this kind of informations, set **Battleground . StoreStatistics . Enable = 1** in **worldserver.config** file.
+This table holds datas about BattleGrounds scores. To enable storing this kind of informations, set **Battleground.StoreStatistics.Enable = 1** in **worldserver.config.dist** file.
 
 **Structure**
 
@@ -12,7 +12,7 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 |----------------------------|-----------|------------|-----|------|---------|-------|---------|
 | [battleground_id][1]       | BIGINT    | UNSIGNED   | PRI | NO   |         |       |         |
 | [character_guid][2]        | INT       | UNSIGNED   | PRI | NO   |         |       |         |
-| [win][3]                   | bit       |            |     |      |         |       |         |
+| [winner][3]                | BIT       | SIGNED     |     | NO   |         |       |         |
 | [score_killing_blows][4]   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
 | [score_deaths][5]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
 | [score_honorable_kills][6] | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
@@ -27,37 +27,37 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 
 [1]: #battleground_id
 [2]: #character_guid
-[3]: #win
-[4]: #score_killing_blows
-[5]: #score_deaths
-[6]: #score_honorable_kills
-[7]: #score_bonus_honor
-[8]: #score_damage_done
-[9]: #score_healing_done
-[10]: #attr_1
-[11]: #attr_2
-[12]: #attr_3
-[13]: #attr_4
-[14]: #attr_5
+[3]: #winner
+[4]: #score_
+[5]: #score_
+[6]: #score_
+[7]: #score_
+[8]: #score_
+[9]: #score_
+[10]: #attr_
+[11]: #attr_
+[12]: #attr_
+[13]: #attr_
+[14]: #attr_
 
 **Description of the fields**
 
 ### battleground\_id
 
-Link to pvpstats\_battlegrounds.id
+Link to [pvpstats\_battlegrounds.id](pvpstats_battlegrounds#id).
 
 ### character\_guid
 
-Link to characters.guid
+Link to [characters.guid](characters#guid).
 
 ### winner
 
-1 when player has won the BG, 0 otherwise
+1 when player has won the BG, 0 otherwise.
 
 ### score\_\*
 
-All scores which are in common between all BattleGrounds
+All scores which are in common between all BattleGrounds.
 
 ### attr\_\*
 
-All scores which are not in common between all BattleGrounds. This fields changes their mean according to pvpstats\_battlegrounds.type
+All scores which are not in common between all BattleGrounds. This fields changes their mean according to [pvpstats\_battlegrounds.type](pvpstats_battlegrounds#type).
