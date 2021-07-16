@@ -1,12 +1,41 @@
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [guild_member_withdraw](guild_member_withdraw)
+# guild\_member\_withdraw
 
-Column | Type | Description
---- | --- | ---
-Guid | INT UNSIGNED | 
-Tab0 | INT UNSIGNED | 
-Tab1 | INT UNSIGNED | 
-Tab2 | INT UNSIGNED | 
-Tab3 | INT UNSIGNED | 
-Tab4 | INT UNSIGNED | 
-Tab5 | INT UNSIGNED | 
-Money | INT UNSIGNED | 
+[<-Back-to:Characters](database-characters.md)
+
+**The \`guild\_member\_withdraw\` table**
+
+**Structure**
+
+| Field      | Type  | Attributes | Key | Null | Default | Extra  | Comment |
+| ---------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
+| [guid][1]  | INT   | UNSIGNED   | PRI | NO   |         |        |         |
+| [tab1][2]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab1][3]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab2][4]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab3][5]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab4][6]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab5][7]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [money][8] | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+
+[1]: #guid
+[2]: #tab
+[3]: #tab
+[4]: #tab
+[5]: #tab
+[6]: #tab
+[7]: #tab
+[8]: #money
+
+**Description of the fields**
+
+### guid
+
+`field-no-description|1`
+
+### tab
+
+`field-no-description|2-7`
+
+### money
+
+`field-no-description|8`

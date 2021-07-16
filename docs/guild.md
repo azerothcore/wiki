@@ -9,19 +9,19 @@ This table holds the main guild information. All created guilds or all guilds in
 **Structure**
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra  | Comment |
-|----------------------|--------------|------------|-----|------|---------|--------|---------|
-| [guildid][1]         | INT      | UNSIGNED   | PRI | NO   | 0       | Unique |         |
-| [name][2]            | VARCHAR(24)  | SIGNED     |     | NO   |         |        |         |
-| [leaderguid][3]      | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [EmblemStyle][4]     | TINYINT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [EmblemColor][5]     | TINYINT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [BorderStyle][6]     | TINYINT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [BorderColor][7]     | TINYINT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [BackgroundColor][8] | TINYINT   | SIGNED     |     | NO   | 0       |        |         |
-| [info][9]            | text         | SIGNED     |     | NO   |         |        |         |
-| [motd][10]           | VARCHAR(128) | SIGNED     |     | NO   |         |        |         |
-| [createdate][11]     | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [BankMoney][12]      | BIGINT   | SIGNED     |     | NO   | 0       |        |         |
+| -------------------- | ------------ | ---------- | --- | ---- | ------- | ------ | ------- |
+| [guildid][1]         | INT          | UNSIGNED   | PRI | NO   | 0       |        |         |
+| [name][2]            | VARCHAR(24)  | SIGNED     |     | NO   | ''      |        |         |
+| [leaderguid][3]      | INT          | UNSIGNED   |     | NO   | 0       |        |         |
+| [EmblemStyle][4]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [EmblemColor][5]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [BorderStyle][6]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [BorderColor][7]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [BackgroundColor][8] | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [info][9]            | VARCHAR(500) | SIGNED     |     | NO   | ''      |        |         |
+| [motd][10]           | VARCHAR(128) | SIGNED     |     | NO   | ''      |        |         |
+| [createdate][11]     | INT          | UNSIGNED   |     | NO   | 0       |        |         |
+| [BankMoney][12]      | BIGINT       | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #guildid
 [2]: #name
@@ -48,7 +48,7 @@ The guild name.
 
 ### leaderguid
 
-The GUID of the character who created the guild. See characters.guid
+The GUID of the character who created the guild. See [characters.guid](characters#guid).
 
 ### EmblemStyle
 
