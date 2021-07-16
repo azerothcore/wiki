@@ -9,7 +9,7 @@ This table holds static information on all current instances that have not yet b
 **Structure**
 
 | Field                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
-|------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | --------|
+| ------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]                  | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [map][2]                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [resettime][3]           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
