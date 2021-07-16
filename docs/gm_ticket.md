@@ -2,13 +2,13 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-## The `\gm\_tickets\` table
+## The \`gm\_tickets\` table
 
 This table stores all tickets.
 
 Note: do not insert directly into most of these columns, else the client won't update the ticket status until table reload and a logout.
 
-## Structure
+**Structure**
 
 | Field                  | Type        | Attributes | Key | Null | Default | Extra          | Comment                                    |
 | ---------------------- | ----------- | ---------- | --- | ---- | ------- | -------------- | ------------------------------------------ |
