@@ -8,13 +8,14 @@
 ## Keeping the source Up-to-Date
 
 ```sh
-cd ~/azerothcore/
 git pull origin master
 ```
 
+Rebuild if new changes were pulled.
+
 ```sh
 cd build
-make -j 8; make install
+make -j$(nproc --all) && make install
 ```
 
 Sometimes we add or remove files from the repositiory. At that point it is neccessary to recompile the server, the same way as it was installed the first time [in the macOS Core Installation](macos-core-installation.md#configuring-for-compiling).

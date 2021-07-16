@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 gem "jekyll-avatar"
 gem "jekyll-coffeescript"
 gem "jekyll-default-layout"
@@ -16,3 +16,4 @@ gem "jekyll-sitemap"
 gem "jekyll-titles-from-headings"
 gem "jemoji"
 gem "jekyll-gitlab-metadata"
+gem 'webrick' # solves error with Ruby 3.0

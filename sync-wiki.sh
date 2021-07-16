@@ -5,8 +5,8 @@
 #
 
 git pull origin master
-cd wiki
+cd wiki || return
 git pull origin master
-cd ..
+cd .. || return
 git commit -a -m "updated wiki"
 git push origin master

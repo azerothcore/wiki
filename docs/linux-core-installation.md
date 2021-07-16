@@ -62,10 +62,16 @@ At this point, you must be in your "build/" directory.
 echo $HOME
 ```
 
-**Note**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
+**Note**: in case you use a non-default package for `clang` (such as not from a package manager), you may need to replace the binary name accordingly with the path of where your clang and clang++. This is usually not necessary as long as  you installed from a package manager as they symlink the binary names with the common paths.
 
 ```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static
+cmake ../ \
+-DCMAKE_INSTALL_PREFIX=$(dirname "$(pwd)") \
+-DCMAKE_C_COMPILER=$(which clang) \
+-DCMAKE_CXX_COMPILER=$(which clang++) \
+-DWITH_WARNINGS=1 \
+-DTOOLS=1 \
+-DSCRIPTS=static
 ```
 
 To know the amount of cores available.
@@ -75,10 +81,10 @@ You can use the following command
 nproc --all
 ```
 
-Then, replacing `6` with the number of threads that you want to execute, type:
+Then you can simply run this to compile with all threads available and install the server.
 
 ```sh
-make -j 6
+make -j$(nproc --all)
 make install
 ```
 
