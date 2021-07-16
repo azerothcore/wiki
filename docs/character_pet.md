@@ -8,27 +8,25 @@ This table holds the pet data for each pet summoned by anyone in the game.
 
 **Structure**
 
-| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [id][1]                 | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [entry][2]              | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [owner][3]              | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [modelid][4]            | INT      | UNSIGNED   |     | YES  | 0       |       |         |
-| [CreatedBySpell][5]     | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [PetType][6]            | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [level][7]              | SMALLINT  | UNSIGNED   |     | NO   |         |       |         |
-| [exp][8]                | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [Reactstate][9]         | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [name][10]              | VARCHAR(21)  |            |     | NO   |         |       |         |
-| [renamed][11]           | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [slot][12]              | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [curhealth][13]         | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [curmana][14]           | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [curhappiness][15]      | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [savetime][16]          | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [resettalents_cost][17] | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [resettalents_time][18] | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [abdata][19]            | text         |            |     | YES  | NULL    |       |         |
+| Field               | Type        | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [id][1]             | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [entry][2]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| [owner][3]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| [modelid][4]        | INT         | UNSIGNED   |     | YES  | 0       |       |         |
+| [CreatedBySpell][5] | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [PetType][6]        | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [level][7]          | SMALLINT    | UNSIGNED   |     | NO   | 0       |       |         |
+| [exp][8]            | INT         | UNSIGNED   |     | NO   | 1       |       |         |
+| [Reactstate][9]     | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [name][10]          | VARCHAR(21) | SIGNED     |     | NO   | 0       |       |         |
+| [renamed][11]       | TINYINT     | UNSIGNED   |     | NO   | Pet     |       |         |
+| [slot][12]          | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [curhealth][13]     | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| [curmana][14]       | INT         | UNSIGNED   |     | NO   | 1       |       |         |
+| [curhappiness][15]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| [savetime][16]      | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| [abdata][17]        | TEXT        | SIGNED     |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #entry
@@ -46,9 +44,7 @@ This table holds the pet data for each pet summoned by anyone in the game.
 [14]: #curmana
 [15]: #curhappiness
 [16]: #savetime
-[17]: #resettalents_cost
-[18]: #resettalents_time
-[19]: #abdata
+[17]: #abdata
 
 **Description of the fields**
 
@@ -58,11 +54,11 @@ The special pet ID. This is a unique identifier among all pets.
 
 ### entry
 
-The creature entry of this pet. See creature\_template.entry
+The creature entry of this pet. See [creature\_template.entry](creature_template#entry).
 
 ### owner
 
-The GUID of the pet's owner. See characters.guid
+The GUID of the pet's owner. See [characters.guid](characters#guid).
 
 ### modelid
 
@@ -70,7 +66,7 @@ The model ID to use to display the pet.
 
 ### CreatedBySpell
 
-The ID of the spell that has created this pet. For hunters, this is usually the Tame Beast spell. For warlocks or other classes (mages), it is the spell ID that summoned the creature. See Spell.dbc column 1
+The ID of the spell that has created this pet. For hunters, this is usually the Tame Beast spell. For warlocks or other classes (mages), it is the spell ID that summoned the creature. See [Spell.dbc](spell) column 1.
 
 ### PetType
 
@@ -119,14 +115,6 @@ The current pet happiness.
 
 The time when the pet was last saved, in Unix time.
 
-### resettalents\_cost
-
-The cost for the character to reset pet's talents, measured in copper.
-
-### resettalents\_time
-
-The date when the talents were reset, in Unix time.
-
 ### abdata
 
-`field-no-description|19`
+`field-no-description|17`

@@ -8,13 +8,13 @@ This table holds the information on all of the ranks available in a guild along 
 
 **Structure**
 
-| Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guildid][1]         | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [rid][2]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [rname][3]           | VARCHAR(20)  | SIGNED     |     | NO   | "       |       |         |
-| [rights][4]          | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [BankMoneyPerDay][5] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                | Type        | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guildid][1]         | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [rid][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [rname][3]           | VARCHAR(20) | SIGNED     |     | NO   | "       |       |         |
+| [rights][4]          | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [BankMoneyPerDay][5] | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid
 [2]: #rid
@@ -26,7 +26,7 @@ This table holds the information on all of the ranks available in a guild along 
 
 ### guildid
 
-The guild ID that the rank is part of. See guild.guildid
+The guild ID that the rank is part of. See [guild.guildid](guild#guildid).
 
 ### rid
 
@@ -41,7 +41,7 @@ The name of the rank that is displayed in-game.
 The rights a player with this rank has in the guild. The calculation of multiple rights is a bit different in this case as the rights do not all have 2^n values. To combine ranks, you must do the OR operation (\|) on the two flags.
 
 | Flag    | Name                        | Comments                                                                  |
-|---------|-----------------------------|---------------------------------------------------------------------------|
+| ------- | --------------------------- | ------------------------------------------------------------------------- |
 | 64      | GR_RIGHT_EMPTY              | Having just this flag by itself is equivalent to having no rights at all. |
 | 65      | GR_RIGHT_GCHATLISTEN        | Player can read messages in the guild general chat channel.               |
 | 66      | GR_RIGHT_GCHATSPEAK         | Player can type messages in the guild general chat channel.               |

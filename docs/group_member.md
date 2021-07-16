@@ -8,10 +8,10 @@ This table holds info about group members.
 
 **Structure**
 
-| Field            | Type       | Attributes | Key | Null | Default | Extra  | Comment |
-|------------------|------------|------------|-----|------|---------|--------|---------|
-| [guid][1]        | INT    | UNSIGNED   |     | NO   |         |        |         |
-| [memberGuid][2]  | INT    | UNSIGNED   | PRI | NO   |         | Unique |         |
+| Field            | Type    | Attributes | Key | Null | Default | Extra  | Comment |
+| ---------------- |-------- | ---------- | --- | ---- | ------- | ------ | ------- |
+| [guid][1]        | INT     | UNSIGNED   |     | NO   |         |        |         |
+| [memberGuid][2]  | INT     | UNSIGNED   | PRI | NO   |         | Unique |         |
 | [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
 | [subgroup[4]     | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
 | [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
@@ -26,11 +26,11 @@ This table holds info about group members.
 
 #### guid
 
-GUID of the group. See [groups.guid](Groups+tc2#Groupstc2-guid).
+GUID of the group. See [groups.guid](groups#guid).
 
 #### memberGuid
 
-GUID of the character member of the group. See [characters.guid](Characters+tc2#Characterstc2-guid).
+GUID of the character member of the group. See [characters.guid](characters#guid).
 
 | Name                   | Value | Unique |
 |------------------------|-------|--------|

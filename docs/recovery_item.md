@@ -1,19 +1,19 @@
-# recovery_item
+# recovery\_item
 
 [<-Back-to:Characters](database-characters.md)
 
-**The \`recovery_item\` table**
+**The \`recovery\_item\` table**
 
 This table holds information about character's matchmaker rating in all team types.
 
 **Structure**
 
-| Field                 | Type        | Attributes | Key | Null | Default | Extra          | Comment |
-|-----------------------|-------------|------------|-----|------|---------|----------------|---------|
-| [Id][1]               | INT         | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [Guid][2]             | INT         | UNSIGNED   | KEY | NO   | 0       | idx_guid       |         |
-| [ItemEntry][3]        | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |                |         |
-| [Count][4]            | INT         | UNSIGNED   |     | NO   | 0       |                |         |
+| Field          | Type      | Attributes | Key | Null | Default | Extra          | Comment |
+| -------------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [Id][1]        | INT       | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
+| [Guid][2]      | INT       | UNSIGNED   |     | NO   | 0       |                |         |
+| [ItemEntry][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                |         |
+| [Count][4]     | INT       | UNSIGNED   |     | NO   | 0       |                |         |
 
 [1]: #id
 [2]: #guid
@@ -32,7 +32,7 @@ This table holds information about character's matchmaker rating in all team typ
 
 ### ItemEntry
 
-[item_template.entry](item_template#entry)
+See [item_template.entry](item_template#entry).
 
 ### Count
 

@@ -12,29 +12,29 @@ This table holds arena info about specific team members. All arena\_team members
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [arenaTeamId][1]    | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [guid][2]           | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [personalRating][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [weekGames][4]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [weekWins][5]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [seasonGames][6]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [seasonWins][7]     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [weekGames][3]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [weekWins][4]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [seasonGames][5]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [seasonWins][6]     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [personalRating][7] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #arenateamid
 [2]: #guid
-[3]: #personalrating
-[4]: #weekgames
-[5]: #weekwins
-[6]: #seasongames
-[7]: #seasonwins
+[3]: #weekgames
+[4]: #weekwins
+[5]: #seasongames
+[6]: #seasonwins
+[7]: #personalrating
 
 **Description of the fields**
 
 ### arenaTeamId
 
-ID of arena team. See Team Id
+ID of arena team. See Team Id.
 
 ### guid
 
-Player's GUID. See characters.guid
+Player's GUID. See [characters.guid](characters#guid).
 
 ### weekGames
 
@@ -51,3 +51,7 @@ Number of games played this **season**.
 ### seasonWins
 
 Number of games won this **season**.
+
+### personalrating
+
+The player's personal arena rating.

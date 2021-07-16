@@ -1,10 +1,50 @@
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [channels_rights](channels_rights)
+# channels\_rights
 
-Column | Type | Description
---- | --- | ---
-Name | VARCHAR(128) | 
-Flags | INT UNSIGNED | 
-Speakdelay | INT UNSIGNED | 
-Joinmessage | VARCHAR(255) | 
-Delaymessage | VARCHAR(255) | 
-Moderators | text | 
+[<-Back-to:Characters](database-characters.md)
+
+**The \`channels\_rights\` table**
+
+**Structure**
+
+| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [name][1]         | VARCHAR(128) | SIGNED     | PRI | NO   |         |       |         |
+| [flags][2]        | INT          | UNSIGNED   |     | NO   |         |       |         |
+| [speakdelay][3]   | INT          | UNSIGNED   |     | NO   |         |       |         |
+| [joinmessage][4]  | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
+| [delaymessage][5] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
+| [moderators][6]   | TEXT         | SIGNED     |     | YES  |         |       |         |
+
+
+[1]: #name
+[2]: #flags
+[3]: #speakdelay
+[4]: #joinmessage
+[5]: #delaymessage
+[6]: #moderators
+
+**Description of the fields**
+
+### name
+
+`field-no-description|1`
+
+### flags
+
+`field-no-description|2`
+
+### speakdelay
+
+`field-no-description|3`
+
+### joinmessage
+
+`field-no-description|4`
+
+### delaymessage
+
+`field-no-description|5`
+
+### moderators
+
+`field-no-description|6`

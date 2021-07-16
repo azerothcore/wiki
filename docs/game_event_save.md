@@ -4,23 +4,21 @@
 
 **The \`game\_event\_save\` table**
 
-`table-no-description`
-
 **Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [event_id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [state][2]      | TINYINT   | UNSIGNED   |     | NO   | 1       |       |         |
-| [next_start][3] | BIGINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [state][2]      | TINYINT | UNSIGNED   |     | NO   | 1       |       |         |
+| [next_start][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
-[1]: #event_id
+[1]: #evententry
 [2]: #state
 [3]: #next_start
 
 **Description of the fields**
 
-### event\_id
+### eventEntry
 
 `field-no-description|1`
 

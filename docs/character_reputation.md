@@ -9,11 +9,11 @@ This table holds the reputation information for each character.
 **Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-|---------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]     | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [faction][2]  | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [standing][3] | INT     | SIGNED     |     | NO   | 0       |       |                          |
-| [flags][4]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
+| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]     | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [faction][2]  | SMALLINT    | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [standing][3] | INT         | SIGNED     |     | NO   | 0       |       |                          |
+| [flags][4]    | SMALLINT    | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #faction
@@ -24,11 +24,11 @@ This table holds the reputation information for each character.
 
 ### guid
 
-The GUID of the character. See characters.guid
+The character guid. See [characters.guid](characters#guid).
 
 ### faction
 
-The faction ID that the character has the given reputation in. See Faction.dbc
+The faction ID that the character has the given reputation in. See [Faction.dbc](faction).
 
 ### standing
 
