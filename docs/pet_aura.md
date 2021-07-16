@@ -33,9 +33,9 @@
 [7]: #amount
 [8]: #amount
 [9]: #amount
-[10]: #base_amount
-[11]: #base_amount
-[12]: #base_amount
+[10]: #baseamount
+[11]: #baseamount
+[12]: #baseamount
 [13]: #maxduration
 [14]: #remaintime
 [15]: #remaincharges

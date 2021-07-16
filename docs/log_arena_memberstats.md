@@ -19,8 +19,8 @@
 | [heal][9]      | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [kblows][10]   | INT      | UNSIGNED   |     | NO   |         |       |         |
 
-[1]: #fight_id
-[2]: #member_id
+[1]: #fightid
+[2]: #memberid
 [3]: #name
 [4]: #guid
 [5]: #team

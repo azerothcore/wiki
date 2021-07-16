@@ -18,12 +18,12 @@
 | [topic][8]         | CHAR(255)| SIGNED     |     | NO   |         |       |         |
 | [date][9]          | DATETIME | SIGNED     |     | NO   |         |       |         |
 
-[1]: #sender_acc
-[2]: #sender_guid
-[3]: #sender_name
-[4]: #sender_ip
-[5]: #receiver_acc
-[6]: #receiver_name
+[1]: #senderacc
+[2]: #senderguid
+[3]: #sendername
+[4]: #senderip
+[5]: #receiveracc
+[6]: #receivername
 [7]: #money
 [8]: #topic
 [9]: #date

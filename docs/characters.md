@@ -9,7 +9,7 @@ This table holds vital static information for each character. It is used to crea
 ## Structure
 
 | Field                      | Type         | Attributes | Key | Null | Default           | Extra  | Comment                  |
-|----------------------------|--------------|------------|-----|------|-------------------|--------|--------------------------|
+| -------------------------- | ------------ | ---------- | --- | ---- | ----------------- | ------ | ------------------------ |
 | [guid][1]                  | INT          | UNSIGNED   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
 | [account][2]               | INT          | UNSIGNED   |     | NO   | 0                 |        | Account Identifier       |
 | [name][3]                  | VARCHAR(12)  | SIGNED     |     | NO   |                   |        |                          |
@@ -106,34 +106,34 @@ This table holds vital static information for each character. It is used to crea
 [15]: #bankslots
 [16]: #reststate
 [17]: #playerflags
-[18]: #position_x
-[19]: #position_y
-[20]: #position_z
+[18]: #positionx
+[19]: #positiony
+[20]: #positionz
 [21]: #map
-[22]: #instance_id
-[23]: #instance_mode_mask
+[22]: #instanceid
+[23]: #instancemodemask
 [24]: #orientation
 [25]: #taximask
 [26]: #online
 [27]: #cinematic
 [28]: #totaltime
 [29]: #leveltime
-[30]: #logout_time
-[31]: #is_logout_resting
-[32]: #rest_bonus
-[33]: #resettalents_cost
-[34]: #resettalents_time
-[35]: #trans_x
-[36]: #trans_y
-[37]: #trans_z
-[38]: #trans_o
+[30]: #logouttime
+[31]: #islogoutresting
+[32]: #restbonus
+[33]: #resettalentscost
+[34]: #resettalentstime
+[35]: #transx
+[36]: #transy
+[37]: #transz
+[38]: #transo
 [39]: #transguid
-[40]: #extra_flags
-[41]: #stable_slots
-[42]: #at_login
+[40]: #extraflags
+[41]: #stableslots
+[42]: #atlogin
 [43]: #zone
-[44]: #death_expire_time
-[45]: #taxi_path
+[44]: #deathexpiretime
+[45]: #taxipath
 [46]: #arenaPoints
 [47]: #totalhonorpoints
 [48]: #todayhonorpoints
@@ -163,9 +163,9 @@ This table holds vital static information for each character. It is used to crea
 [72]: #actionbars
 [73]: #grantablelevels
 [74]: #order
-[75]: #creation_date
-[76]: #deleteinfos_account
-[77]: #deleteinfos_name
+[75]: #creationdate
+[76]: #deleteinfosaccount
+[77]: #deleteinfosname
 [78]: #deletedate
 
 **Description of the fields**
@@ -176,7 +176,7 @@ The character global unique identifier. This number must be unique and is the be
 
 ### account
 
-The account ID in which this character resides. See [account.id](account#id). in the auth database.
+The account ID in which this character resides. See [account.id](account#id) in the auth database.
 
 ### name
 
@@ -195,12 +195,12 @@ The class of the character: [ChrClasses.dbc](chrclasses).
 The gender of the character.
 
 | Id | Gender      |
-| -- | ---         |
+| -- | ----------- |
 | 0  | Male        |
 | 1  | Female      |
 | 2  | Unknown (?) |
 
-`2` is seen in table [`creature_model_info`](creature_model_info) notably.
+`2` is seen in table [creature\_model\_info](creature_model_info) notably.
 
 ### level
 
@@ -252,7 +252,7 @@ facialHair = playerBytes2 % 256
 A bitmask that represents what Player flags the player has. Each bit controls a different flag and to combine flags, you can add each flag that you want, in effect activating the respective bits.
 
 | Flag     |            | Name                          | Comment                                                                           |
-|----------|------------|-------------------------------|-----------------------------------------------------------------------------------|
+| -------- | ---------- | ----------------------------- | --------------------------------------------------------------------------------- |
 | 1        | 0x00000001 | PLAYER_FLAGS_GROUP_LEADER     |                                                                                   |
 | 2        | 0x00000002 | PLAYER_FLAGS_AFK              |                                                                                   |
 | 4        | 0x00000004 | PLAYER_FLAGS_DND              |                                                                                   |
@@ -281,15 +281,15 @@ A bitmask that represents what Player flags the player has. Each bit controls a 
 | 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN       |                                                                                   |
 
 
-### position_x
+### position\_x
 
 The x position of the character's location.
 
-### position_y
+### position\_y
 
 The y position of the character's location.
 
-### position_z
+### position\_z
 
 The z position of the character's location.
 
@@ -297,16 +297,16 @@ The z position of the character's location.
 
 The map ID the character is in.
 
-### instance_id
+### instance\_id
 
-The instance ID the character is currently in and bound to
+The instance ID the character is currently in and bound to.
 
-### instance_mode_mask
+### instance\_mode\_mask
 
 The current dungeon difficulty that the player is in. This field is bitmask. Values are put together, however, only two of four should be used at once. This description may not be 100% correct.
 
 | Flag | Comment |
-|------|---------|
+| ---- | ------- |
 | 0    | Normal  |
 | 1    | Heroic  |
 | 16   | 10 man  |
@@ -318,7 +318,7 @@ The orientation the character is facing. (North = 0.0, South = 3.14159)
 
 ### taximask
 
-Known taxi nodes separated with space
+Known taxi nodes separated with space.
 
 ### online
 
@@ -336,11 +336,11 @@ The total time that the character has been active in the world, measured in seco
 
 The total time the character has spent in the world at the current level, measured in seconds.
 
-### logout_time
+### logout\_time
 
 The time when the character last logged out, measured in Unix time.
 
-### is_logout_resting
+### is\_logout\_resting
 
 Boolean 1 or 0 controlling if the character is currently in a resting zone or not.
 
@@ -348,27 +348,27 @@ Boolean 1 or 0 controlling if the character is currently in a resting zone or no
 
 The cumulated bonus of rested rate for gaining experience.
 
-### resettalents_cost
+### resettalents\_cost
 
 The cost for the character to reset its talents, measured in copper.
 
-### resettalents_time
+### resettalents\_time
 
 `field-no-description|34`
 
-### trans_x
+### trans\_x
 
 The x position of the transport this character was on when they were last saved.
 
-### trans_y
+### trans\_y
 
 The y position of the transport this character was on when they were last saved.
 
-### trans_z
+### trans\_z
 
 The z position of the transport this character was on when they were last saved.
 
-### trans_o
+### trans\_o
 
 The orientation of the transport this character was on when they were last saved.
 
@@ -376,12 +376,12 @@ The orientation of the transport this character was on when they were last saved
 
 The global unique identifier of the transport this character was on when they were last saved.
 
-### extra_flags
+### extra\_flags
 
 These flags control certain player specific attributes, mostly GM features.
 
 | Flag |            | Name                           | Description                                         |
-|------|------------|--------------------------------|-----------------------------------------------------|
+| ---- | ---------- | ------------------------------ | --------------------------------------------------- |
 | 1    | 0x00000001 | PLAYER_EXTRA_GM_ON             | Defines GM state                                    |
 | 2    | 0x00000002 | PLAYER_EXTRA_GM_ACCEPT_TICKETS | NO LONGER USED Defines if tickets are accepted      |
 | 4    | 0x00000004 | PLAYER_EXTRA_ACCEPT_WHISPERS   | Defines if whispers are accepted                    |
@@ -391,16 +391,16 @@ These flags control certain player specific attributes, mostly GM features.
 | 64   | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marks if player already has 310% speed flying mount |
 | 256  | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Store PvP death status until corpse creating        |
 
-### stable_slots
+### stable\_slots
 
 The Stable Slots available (bought) at the Stable Master.
 
-### at_login
+### at\_login
 
 This field is a bitmask controlling different actions taken once a player logs in with the character.
 
 | Flag |      | Name                       | Description                          |
-|------|------|----------------------------|--------------------------------------|
+| ---- | ---- | -------------------------- | ------------------------------------ |
 | 1    | 0x01 | AT_LOGIN_RENAME            | Force character to change name       |
 | 2    | 0x02 | AT_LOGIN_RESET_SPELLS      | Reset spells (professions as well)   |
 | 4    | 0x04 | AT_LOGIN_RESET_TALENTS     | Reset talents                        |
@@ -416,11 +416,11 @@ For multiple actions, add values together.
 
 The zone ID the character is in.
 
-### death_expire_time
+### death\_expire\_time
 
 Time when a character can be resurrected in case of a server crash or client exit while in ghost form, measured in Unix time.
 
-### taxi_path
+### taxi\_path
 
 Stores the players current taxi path ([TaxiPath.dbc](TaxiPath)) if logged off while on one.
 
@@ -458,11 +458,11 @@ Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](CharTi
 
 ### knownCurrencies
 
-Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](CurrencyTypes)
+Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](CurrencyTypes).
 
 ### watchedFaction
 
-Tracked faction at experience bar (using reputation ID, see [Faction.dbc](faction))
+Tracked faction at experience bar (using reputation ID, see [Faction.dbc](faction)).
 
 ### drunk
 
@@ -482,7 +482,7 @@ The characters current health.
 Current character powers (snapshot from when the character was saved).
 
 | Field  | Power name  |
-|--------|-------------|
+| ------ | ----------- |
 | power1 | Mana        |
 | power2 | Rage        |
 | power3 | Focus       |
@@ -520,7 +520,7 @@ Character's equipment and bag cache.
 Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](CharTitles), take Archmage title for example:
 
 | TitleID | UnkRef? | MaleTitle   | FemaleTitle | InGameOrder |
-|---------|---------|-------------|-------------|-------------|
+| ------- | ------- | ----------- | ----------- | ----------- |
 | 93      | 0       | Archmage %s | Archmage %s | 61          |
 
 We use the InGameOrder to calculate in which one of the 6 (16bit) integer is the title stored:
@@ -545,7 +545,7 @@ so the 29bit stores the title. This would be 2 ^ 29 = 536870912. This bit store
 A bitmask that contains visible actionbars for the player.
 
 | Flag |            | Comment          |
-|------|------------|------------------|
+| ---- | ---------- | ---------------- |
 | 1    | 0x00000001 | Bottom Left Bar  |
 | 2    | 0x00000002 | Bottom Right Bar |
 | 4    | 0x00000004 | Rigth Bar        |
@@ -559,18 +559,18 @@ Recruit A Friend stuff.
 
 A field used to change the order in which the characters appear in the character selection screen. The order field is used first, then the [characters.guid](characters#guid), which means that if the order column is NULL for every character of an account, they will be sorted by [characters.guid](characters#guid) by default.
 
-### creation_date
+### creation\_date
 
 Character's creation date and time. Format YYY-MM-DD HH:MM:SS according to server's time.
 
-### deleteInfos_Account
+### deleteInfos\_Account
 
 Stores the account id if the character is deleted and CharDelete.Method in worldserver.conf is set to 1.
 
-### deleteInfos_Name
+### deleteInfos\_Name
 
 Stores the name of character if the character is deleted and CharDelete.Method in worldserver.conf is set to 1.
 
 ### deleteDate
 
-Stores the date when the character was deleted and CharDelete.Method in worldserver.conf is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
+Stores the date when the character was deleted and CharDelete.Method in worldserver.conf.dist is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.

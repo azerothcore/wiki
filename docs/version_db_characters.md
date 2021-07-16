@@ -11,18 +11,18 @@
 | [date][3]          | VARCHAR(50)  | SIGNED     |     | YES  |         |       |         |
 | [2021_07_08_00][4] | BIT(1)       | SIGNED     |     | YES  |         |       |         |
 
-[1]: #sql_rev
-[2]: #required_rev
+[1]: #sqlrev
+[2]: #requiredrev
 [3]: #date
-[4]: #2021_07_08_00
+[4]: #2021070800
 
 **Description of the fields**
 
-### sql_rev
+### sql\_rev
 
 SQL review.
 
-### required_rev
+### required\_rev
 
 `field-no-description|2`
 
@@ -30,7 +30,7 @@ SQL review.
 
 Sql revisions date.
 
-### 2021_07_08_00
+### 2021\_07\_08\_00
 
 The date of the last update to the auth database.
 

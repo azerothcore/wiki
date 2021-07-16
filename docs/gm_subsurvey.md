@@ -18,7 +18,7 @@ This table contains the answers to the survey questions. It's linked to `gm_surv
 [1]: #surveyid
 [2]: #questionid
 [3]: #answer
-[4]: #answerComment
+[4]: #answercomment
 
 **Description of the fields**
 

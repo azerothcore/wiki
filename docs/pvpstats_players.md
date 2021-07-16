@@ -9,7 +9,7 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 **Structure**
 
 | Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------------|-----------|------------|-----|------|---------|-------|---------|
+| -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [battleground_id][1]       | BIGINT    | UNSIGNED   | PRI | NO   |         |       |         |
 | [character_guid][2]        | INT       | UNSIGNED   | PRI | NO   |         |       |         |
 | [winner][3]                | BIT       | SIGNED     |     | NO   |         |       |         |
@@ -28,17 +28,17 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 [1]: #battleground_id
 [2]: #character_guid
 [3]: #winner
-[4]: #score_
-[5]: #score_
-[6]: #score_
-[7]: #score_
-[8]: #score_
-[9]: #score_
-[10]: #attr_
-[11]: #attr_
-[12]: #attr_
-[13]: #attr_
-[14]: #attr_
+[4]: #score
+[5]: #score
+[6]: #score
+[7]: #score
+[8]: #score
+[9]: #score
+[10]: #attr
+[11]: #attr
+[12]: #attr
+[13]: #attr
+[14]: #attr
 
 **Description of the fields**
 

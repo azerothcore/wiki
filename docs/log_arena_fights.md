@@ -22,18 +22,18 @@
 | [loser_tr_change][12] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [currOnline][13]      | INT      | SIGNED     |     | NO   | 0       |       |         |
 
-[1]: #fight_id
+[1]: #fightid
 [2]: #time
 [3]: #type
 [4]: #duration
 [5]: #winner
 [6]: #loser
-[7]: #winner_tr
-[8]: #winner_mmr
-[9]: #winner_tr_change
-[10]: #loser_tr
-[11]: #loser_mmr
-[12]: #loser_tr_change
+[7]: #winnertr
+[8]: #winnermmr
+[9]: #winnertrchange
+[10]: #losertr
+[11]: #losermmr
+[12]: #losertrchange
 [13]: #curronline
 
 **Description of the fields**

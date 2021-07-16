@@ -18,13 +18,13 @@
 |[core_revision][8]       | VARCHAR(120) | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #id
-[2]: #character_guid
-[3]: #quest_accept_time
-[4]: #quest_complete_time
-[5]: #quest_abandon_time
-[6]: #completed_by_gm
-[7]: #core_hash
-[8]: #core_revision
+[2]: #characterguid
+[3]: #questaccepttime
+[4]: #questcompletetime
+[5]: #questabandontime
+[6]: #completedbygm
+[7]: #corehash
+[8]: #corerevision
 
 **Description of the fields**
 

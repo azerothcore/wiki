@@ -36,7 +36,7 @@ Guild Identificator.
 
 ### LogGuid
 
-.Log record identificator - auxiliary column.
+Log record identification - auxiliary column.
 
 ### TabId
 
@@ -45,7 +45,7 @@ Guild bank TabId.
 ### EventType
 
 | Value | Description                       |
-|-------|-----------------------------------|
+| ----- | --------------------------------- |
 | 1     | GUILD\_BANK\_LOG\_DEPOSIT\_ITEM   |
 | 2     | GUILD\_BANK\_LOG\_WITHDRAW\_ITEM  |
 | 3     | GUILD\_BANK\_LOG\_MOVE\_ITEM      |
