@@ -11,13 +11,14 @@
     + [Find number of items and level statistics for items in a given RLT](#find-number-of-items-and-level-statistics-for-items-in-a-given-rlt)
     + [Recursively find an item by name](#recursively-find-an-item-by-name)
   * [Miscellaneous Issues](#miscellaneous-issues)
-    + [Find creature information from a spawn GUID:](#find-creature-information-from-a-spawn-guid-)
+    + [Find creature information from a spawn GUID](#find-creature-information-from-a-spawn-guid)
     + [Find all static creatures given a name](#find-all-static-creatures-given-a-name)
     + [Find creatures that use a certain spell](#find-creatures-that-use-a-certain-spell)
     + [Find average wander distance for a creature](#find-average-wander-distance-for-a-creature)
+    + [Find other members of a node pool](#find-other-members-of-a node-pool)
 
 ### Introduction
-These SQL queries are intended to be fast and easy-to-use tools that can help identify and troubleshoot problems in the AzerothCore database more easily. They're here to be a quick reference to help when looking at DB-related problems. If anyone else has any similar useful queries, let me know and I'll add them. Similarly, if you have a common problem for which you'd like a query written, feel free to get in touch.
+These SQL queries are intended to be fast and easy-to-use tools that can help identify and troubleshoot problems in the AzerothCore database. They're here to be a quick reference to help when looking at DB-related problems. If anyone else has any similar useful queries, let me know and I'll add them. Similarly, if you have a common problem for which you'd like a query written, feel free to get in touch.
 
 ### Loot and Reference Loot Issues
 
@@ -28,7 +29,7 @@ SELECT ct.name, clt.chance, ct.maxlevel, it.ItemLevel
 FROM `creature_template` ct
 JOIN `creature_loot_template` clt ON ct.lootid = clt.entry
 JOIN `item_template` it ON clt.item = it.entry
-WHERE it.entry = XXXXX
+WHERE it.entry = XXXXX;
 ```
 
 #### Find which RLTs an item is in
@@ -36,23 +37,25 @@ WHERE it.entry = XXXXX
 SELECT rlt.entry, it.entry, it.name
 FROM `reference_loot_template` rlt
 JOIN `item_template` it ON rlt.Item = it.entry
-WHERE it.entry = XXXXX
+WHERE it.entry = XXXXX;
 ```
 
 #### Find which creatures share a RLT
+Non-recursive.
 ```
 SELECT distinct ct.entry, ct.name
 FROM `creature_template` ct
 JOIN `creature_loot_template` clt ON ct.lootid = clt.entry
-WHERE clt.Reference = XXXXX
+WHERE clt.Reference = XXXXX;
 ```
 
 #### Find number of items and level statistics for items in a given RLT
+This is useful when determining which creatures should have a particular RLT in their drop tables.
 ```
 SELECT COUNT(rlt.Item), MIN(it.ItemLevel), MAX(it.ItemLevel), AVG(it.ItemLevel)
 FROM `item_template` it 
 JOIN `reference_loot_template` rlt ON it.entry = rlt.item 
-WHERE rlt.entry = XXXXX
+WHERE rlt.entry = XXXXX;
 ```
 
 #### Recursively find an item by name
@@ -86,12 +89,13 @@ ORDER BY ct.name;
 ```
 
 ### Miscellaneous Issues
-#### Find creature information from a spawn GUID:
+#### Find creature information from a spawn GUID
+Bug reports sometimes just reference a GUID with no other information about an NPC. This will find the creature a GUID belongs to.
 ```
 SELECT ct.entry, ct.name, ct.minlevel, ct.maxlevel
 FROM `creature_template` ct 
 JOIN `creature` c ON ct.entry = c.id
-WHERE c.guid = XXXXX
+WHERE c.guid = XXXXX;
 ```
 
 #### Find all static creatures given a name
@@ -100,7 +104,7 @@ You can just use part of the NPC's name (as here, 'Gordunni') and it will find a
 SELECT c.guid, ct.name
 FROM `creature` c
 JOIN `creature_template` ct ON ct.entry = c.id
-WHERE c.movementtype = 0 AND ct.name LIKE '%gordunni%'
+WHERE c.movementtype = 0 AND ct.name LIKE '%gordunni%';
 ```
 
 #### Find creatures that use a certain spell
@@ -109,12 +113,20 @@ Note this is a bit rough and ready, and only works if the spell is in their firs
 SELECT ct.entry, ct.name, ct.maxlevel, ss.action_param1
 FROM `creature_template` ct
 JOIN `smart_scripts` ss ON ct.entry = ss.entryorguid
-WHERE ss.action_param1 = XXXXX
+WHERE ss.action_param1 = XXXXX;
 ```
 
 #### Find average wander distance for a creature
+Handy for fixing static creatures.
 ```
 SELECT c.id, AVG(c.wander_distance)
 FROM `creature` c
-WHERE c.id = XXXX
+WHERE c.id = XXXX;
+```
+
+#### Find other members of a node pool
+Given a node GUID, find if it belongs to a node pool and list the other members.
+```
+SELECT * FROM `pool_gameobject` WHERE `pool_entry` IN (
+SELECT `pool_entry` from `pool_gameobject` WHERE guid = XXXX);
 ```
