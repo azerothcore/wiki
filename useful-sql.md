@@ -1,3 +1,5 @@
+# useful-sql.md
+
 ## Useful SQL snippets:
 
 ### Table of Contents
@@ -93,13 +95,13 @@ WHERE c.guid = XXXXX
 ```
 
 #### Find all static creatures given a name
+You can just use part of the NPC's name (as here, 'Gordunni') and it will find all NPCs with that string in their name.
 ```
 SELECT c.guid, ct.name
 FROM `creature` c
 JOIN `creature_template` ct ON ct.entry = c.id
 WHERE c.movementtype = 0 AND ct.name LIKE '%gordunni%'
 ```
-
 
 #### Find creatures that use a certain spell
 Note this is a bit rough and ready, and only works if the spell is in their first action slot. In this case, XXXX is the spell ID.
