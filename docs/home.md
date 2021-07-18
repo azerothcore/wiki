@@ -2,13 +2,11 @@
 redirect_from: "/"
 ---
 
-Read in: [English :gb:](home) [Spanish :es:](es/home)
-
 # Home
 
 Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered by [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
 
-[English](home) [Español](es/home)
+Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## Getting started
 
