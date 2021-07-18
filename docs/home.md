@@ -2,6 +2,8 @@
 redirect_from: "/"
 ---
 
+Read in: [English :gb:](home) [Spanish :es:](es/home)
+
 # Home
 
 Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki powered by [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
@@ -39,5 +41,4 @@ SunwellCore, the father of AzerothCore, had been running with thousands of playe
 The main strenght of AzerothCore is its community. Users can help us by improving our code base or simply by submitting any bug report. If you want to contribute, we'd love it!
 
 ### Modular
-We try to make our software as modular as possible, because modular software is much easier to be extended. 
-
+We try to make our software as modular as possible, because modular software is much easier to be extended.
