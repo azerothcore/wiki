@@ -2,6 +2,8 @@
 
 [<-Back-to:Auth](database-auth.md)
 
+Read in: [English :gb:](account_access) [Spanish :es:](es/account_access)
+
 **The \`account\_access\` table**
 
 This table holds security access level for any realm in [realmlist](realmlist) table.
@@ -13,7 +15,7 @@ This table holds security access level for any realm in [realmlist](realmlist) t
 | [id][1]      | INT          | UNSIGNED   | PRI | NO   |         |       |         |
 | [gmlevel][2] | TINYINT      | UNSIGNED   |     | NO   |         |       |         |
 | [RealmID][3] | INT          | SIGNED     | PRI | NO   | -1      |       |         |
-| [comment][4] | VARCHAR(255) |            |     | YES  | ''      |       |         |
+| [comment][4] | VARCHAR(255) | SIGNED     |     | YES  | ''      |       |         |
 
 [1]: #id
 [2]: #gmlevel

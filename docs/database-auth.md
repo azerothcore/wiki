@@ -1,5 +1,7 @@
 # Database Auth
 
+Read in: [English :gb:](database-auth) [Spanish :es:](es/database-auth)
+
 The auth database currently has 14 tables, which mainly store information related to user accounts. Although some of them have other functionalities. The last synchronization was done: [05-07-2021](https://github.com/azerothcore/wiki/pull/573). If you detect that any table is outdated, you can create an [issue](https://github.com/azerothcore/wiki/issues) within our repository or make a [pull request](https://github.com/azerothcore/wiki/pulls) with the modification of the information.
 
 - [account](account.md)

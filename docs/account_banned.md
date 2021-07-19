@@ -2,6 +2,8 @@
 
 [<-Back-to:Auth](database-auth.md)
 
+Read in: [English :gb:](account_banned) [Spanish :es:](es/account_banneds)
+
 **The \`account\_banned\` table**
 
 This table lists all of the accounts that have been banned along with the date when (or if) the ban will expire.
@@ -13,8 +15,8 @@ This table lists all of the accounts that have been banned along with the date w
 | [id][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       | Account id |
 | [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |            |
 | [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |            |
-| [bannedby][4]  | VARCHAR(50)  |            |     | NO   |         |       |            |
-| [banreason][5] | VARCHAR(255) |            |     | NO   |         |       |            |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |            |
+| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |            |
 | [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |            |
 
 [1]: #id
