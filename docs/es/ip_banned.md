@@ -2,6 +2,8 @@
 
 [<-Volver a:Auth](database-auth.md)
 
+Leer en: [English :gb:](../ip_banned) [Spanish :es:](ip_banned)
+
 **Tabla \`ip\_banned\`**
 
 Esta tabla contiene todas las IPs baneadas y la fecha en la que (en tal caso) el baneo expirase.
@@ -9,12 +11,12 @@ Esta tabla contiene todas las IPs baneadas y la fecha en la que (en tal caso) el
 **Estructura**
 
 | Field          | Type         | Attributes | Key | Null | Default   | Extra | Comment |
-|----------------|--------------|------------|-----|------|-----------|-------|---------|
-| [ip][1]        | VARCHAR(15)  |            | PRI | NO   | 127.0.0.1 |       |         |
+| -------------- | ------------ | ---------- | --- | ---- | --------- | ----- | ------- |
+| [ip][1]        | VARCHAR(15)  | SIGNED     | PRI | NO   | 127.0.0.1 |       |         |
 | [bandate][2]   | INT          | UNSIGNED   | PRI | NO   |           |       |         |
 | [unbandate][3] | INT          | UNSIGNED   |     | NO   |           |       |         |
-| [bannedby][4]  | VARCHAR(50)  |            |     | NO   | [Console] |       |         |
-| [banreason][5] | VARCHAR(255) |            |     | NO   | no reason |       |         |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   | [Console] |       |         |
+| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   | no reason |       |         |
 
 [1]: #ip
 [2]: #bandate
