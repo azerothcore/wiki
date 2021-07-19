@@ -2,7 +2,11 @@
 redirect_from: "/es"
 ---
 
+# Inicio
+
 Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con tecnología de [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
+
+Leer en: [English :gb:](home) [Spanish :es:](es/home)
 
 ## Empezando
 
@@ -41,4 +45,3 @@ La principal fortaleza de AzerothCore es su comunidad. Los usuarios pueden ayuda
 ### Modular
 
 Intentamos que nuestro software sea lo más modular posible, porque el software modular es mucho más fácil de ampliar.
-
