@@ -1,57 +1,143 @@
-<!--suppress HtmlUnknownTarget -->
+﻿<!--suppress HtmlUnknownTarget -->
 <div class="sidebar-wrapper">
+	
+    <script language= "JavaScript">
+
+	function changeLang(language)
+        {            
+            document.getElementById('en').style.display= (language=='en')? 'inline' : 'none';
+            document.getElementById('es').style.display= (language=='es')? 'inline' : 'none';
+        }
+	
+    </script>
+    
     <b>How-To ( branch master )</b> <a href="https://github.com/azerothcore/wiki/edit/master/_includes/azerothcore/sidebar.html">Edit</a>
-    <b>Install:</b>
-    <ul>
-        <li><a href="/wiki/installation">Installation Guide</a></li>
-        <li><a href="/wiki/requirements">Requirements</a></li>
-        <li><a href="/wiki/core-installation">Core Installation</a></li>
-        <li><a href="/wiki/server-setup">Server Setup</a></li>
-        <li><a href="/wiki/database-installation">Database Installation</a></li>
-        <li><a href="/wiki/networking">Networking</a></li>
-        <li><a href="/wiki/final-server-steps">Final Server Steps</a></li>
-        <li><a href="/wiki/keeping-the-server-up-to-date">Keeping the server up to date</a></li>
-        <li><a href="/wiki/client-setup">Client Setup</a></li>
-        <li><a href="/wiki/memory-usage">Memory Usage</a></li>
-    </ul>
-    <b>Contribute:</b>
-    <ul>
-        <li><a href="/wiki/contribute">How to contribute </a></li>
-        <li><a href="/wiki/how-to-create-a-pr">How to create a PR</a></li>
-        <li><a href="/wiki/how-to-test-a-pr">How to test a PR</a></li>
-        <li><a href="/wiki/how-to-test-db-only-changes">How to test DB-only changes</a></li>
-        <li><a href="/wiki/how-to-document-code">How to document your code</a></li>
-    </ul>
-    <b>Documentation</b>
-    <ul>
-        <li><a href="/wiki/documentation_index">Documentation Index</a></li>
-        <li><a href="/wiki/standard-operating-procedure">Standard Operating Procedure</a></li>
-    </ul>
-    <b>Database:</b>
-    <ul>
-        <li><a href="/wiki/database-auth">DB auth</a></li>
-        <li><a href="/wiki/database-characters">DB characters</a></li>
-        <li><a href="/wiki/database-world">DB world</a></li>
-    </ul>
-    <b>Other:</b>
-    <ul>
-        <li><a href="/wiki/how-to-ask-for-help">How to ask for help</a></li>
-        <li><a href="/wiki/best-practices">Best practices</a></li>
-        <li><a href="/wiki/external-tools-and-modules">Other Tools & Modules</a></li>
-        <li><a href="/wiki/faq">FAQ</a></li>
-        <li><a href="/wiki/creating-accounts">Create Accounts</a></li>
-        <li><a href="/wiki/create-a-module">Create a Module</a></li>
-        <li><a href="/wiki/create-a-script">Create your first Script</a></li>
-        <li><a href="/wiki/how-to-work-with-conf-files">Work with configuration files (.conf & .conf.dist)</a></li>
-        <li><a href="/wiki/server-setup">Extract client data (maps, mmaps, vmaps, dbc)</a></li>
-        <li><a href="/wiki/linux-restarter">Linux automatic restarter</a></li>
-        <li><a href="/wiki/gm-commands">GM Commands</a></li>
-        <li><a href="/wiki/remote-access">Remote Access</a></li>
-        <li><a href="/wiki/waypoints-information">Information about waypoints</a></li>
-        <li><a href="/wiki/how-to-obtain-free-records">How to obtain free records</a></li>
-    </ul>
-    <b>Archive</b>
-    <ul>
-        <li><a target="_blank" href="http://www.azerothcore.org/pages/sunwell.pl/">Original SC Description</a></li>
-    </ul>
+    
+    <div id="language">
+    
+		<ol>
+            <b style="cursor: pointer;" onclick="changeLang('en');"><img src="https://github.com/azerothcore/wiki/blob/acbf3f05e90da007939ae32c8e9ec940f2e622ec/images/gb.png?raw=true" alt="English"></b>
+            <b style="cursor: pointer;" onclick="changeLang('es');"><img src="https://github.com/azerothcore/wiki/blob/acbf3f05e90da007939ae32c8e9ec940f2e622ec/images/es.png?raw=true" alt="Spanish"></b>
+        </ol>
+	
+    </div>
+    
+    <div id="en">
+    
+		<p></p>
+        <b>Install:</b>
+        <ul>
+            <li><a href="/wiki/installation">Installation Guide</a></li>
+            <li><a href="/wiki/requirements">Requirements</a></li>
+            <li><a href="/wiki/core-installation">Core Installation</a></li>
+            <li><a href="/wiki/server-setup">Server Setup</a></li>
+            <li><a href="/wiki/database-installation">Database Installation</a></li>
+            <li><a href="/wiki/networking">Networking</a></li>
+            <li><a href="/wiki/final-server-steps">Final Server Steps</a></li>
+            <li><a href="/wiki/keeping-the-server-up-to-date">Keeping the server up to date</a></li>
+            <li><a href="/wiki/client-setup">Client Setup</a></li>
+            <li><a href="/wiki/memory-usage">Memory Usage</a></li>
+        </ul>
+        <b>Contribute:</b>
+        <ul>
+            <li><a href="/wiki/contribute">How to contribute </a></li>
+            <li><a href="/wiki/how-to-create-a-pr">How to create a PR</a></li>
+            <li><a href="/wiki/how-to-test-a-pr">How to test a PR</a></li>
+            <li><a href="/wiki/how-to-test-db-only-changes">How to test DB-only changes</a></li>
+            <li><a href="/wiki/how-to-document-code">How to document your code</a></li>
+        </ul>
+        <b>Documentation:</b>
+        <ul>
+            <li><a href="/wiki/documentation_index">Documentation Index</a></li>
+            <li><a href="/wiki/standard-operating-procedure">Standard Operating Procedure</a></li>
+        </ul>
+        <b>Database:</b>
+        <ul>
+            <li><a href="/wiki/database-auth">DB auth</a></li>
+            <li><a href="/wiki/database-characters">DB characters</a></li>
+            <li><a href="/wiki/database-world">DB world</a></li>
+        </ul>
+        <b>Other:</b>
+        <ul>
+            <li><a href="/wiki/how-to-ask-for-help">How to ask for help</a></li>
+            <li><a href="/wiki/best-practices">Best practices</a></li>
+            <li><a href="/wiki/external-tools-and-modules">Other Tools & Modules</a></li>
+            <li><a href="/wiki/faq">FAQ</a></li>
+            <li><a href="/wiki/creating-accounts">Create Accounts</a></li>
+            <li><a href="/wiki/create-a-module">Create a Module</a></li>
+            <li><a href="/wiki/create-a-script">Create your first Script</a></li>
+            <li><a href="/wiki/how-to-work-with-conf-files">Work with configuration files (.conf & .conf.dist)</a></li>
+            <li><a href="/wiki/server-setup">Extract client data (maps, mmaps, vmaps, dbc)</a></li>
+            <li><a href="/wiki/linux-restarter">Linux automatic restarter</a></li>
+            <li><a href="/wiki/gm-commands">GM Commands</a></li>
+            <li><a href="/wiki/remote-access">Remote Access</a></li>
+            <li><a href="/wiki/waypoints-information">Information about waypoints</a></li>
+            <li><a href="/wiki/how-to-obtain-free-records">How to obtain free records</a></li>
+        </ul>
+        <b>Archive</b>
+        <ul>
+            <li><a target="_blank" href="http://www.azerothcore.org/pages/sunwell.pl/">Original SC Description</a></li>
+        </ul>
+        
+    </div>
+	
+    <div id="es"  style="display: none;"> 
+    
+        <p></p>
+        <b>Instalación:</b>
+        <ul>
+            <li><a href="/wiki/es/installation">Guía de instalación</a></li>
+            <li><a href="/wiki/es/requirements">Requisitos</a></li>
+            <li><a href="/wiki/es/core-installation">Instalación del núcleo</a></li>
+            <li><a href="/wiki/es/server-setup">Configuración del servidor</a></li>
+            <li><a href="/wiki/es/database-installation"> Instalación de la BD</a></li>
+            <li><a href="/wiki/es/networking">Redes</a></li>
+            <li><a href="/wiki/es/final-server-steps">Pasos finales del servidor</a></li>
+            <li><a href="/wiki/es/keeping-the-server-up-to-date">  Mantener el servidor actualizado</a></li>
+            <li><a href="/wiki/es/client-setup">Configuración del cliente</a></li>
+            <li><a href="/wiki/es/memory-usage">Uso de memoria</a></li>
+        </ul>
+        <b>Contribuir:</b>
+        <ul>
+            <li><a href="/wiki/es/contribute">Cómo contribuir</a></li>
+            <li><a href="/wiki/es/how-to-create-a-pr">Cómo crear un PR</a></li>
+            <li><a href="/wiki/es/how-to-test-a-pr">Cómo probar un PR</a></li>
+            <li><a href="/wiki/es/how-to-test-db-only-changes">Cómo probar los cambios solo en la BD</a></li>
+            <li><a href="/wiki/es/how-to-document-code">Cómo documentar su código</a></li>
+        </ul>
+        <b>Documentación:</b>
+        <ul>
+            <li><a href="/wiki/es/documentation_index">Índice de documentación</a></li>
+            <li><a href="/wiki/es/standard-operating-procedure">Procedimiento Operativo Estándar</a></li>
+        </ul>
+        <b>Base de datos:</b>
+        <ul>
+            <li><a href="/wiki/es/database-auth">DB auth</a></li>
+            <li><a href="/wiki/es/database-characters">DB characters</a></li>
+            <li><a href="/wiki/es/database-world">DB world</a></li>
+        </ul>
+        <b>Otro:</b>
+        <ul>
+            <li><a href="/wiki/es/how-to-ask-for-help">Cómo pedir ayuda</a></li>
+            <li><a href="/wiki/es/best-practices">Mejores prácticas</a></li>
+            <li><a href="/wiki/es/external-tools-and-modules">Otras herramientas y módulos</a></li>
+            <li><a href="/wiki/es/faq">Preguntas más frecuentes</a></li>
+            <li><a href="/wiki/es/creating-accounts">Crear cuentas</a></li>
+            <li><a href="/wiki/es/create-a-module">Crear un módulo</a></li>
+            <li><a href="/wiki/es/create-a-script">Crea tu primer Script</a></li>
+            <li><a href="/wiki/es/how-to-work-with-conf-files">Trabajar con archivos de configuración (.conf & .conf.dist)</a></li>
+            <li><a href="/wiki/es/server-setup">Extraer datos del cliente (mapas, mmaps, vmaps, dbc)</a></li>
+            <li><a href="/wiki/es/linux-restarter">Reiniciar automático en Linux</a></li>
+            <li><a href="/wiki/es/gm-commands">Comandos GM</a></li>
+            <li><a href="/wiki/es/remote-access">Acceso remoto</a></li>
+            <li><a href="/wiki/es/waypoints-information">Información sobre waypoints</a></li>
+            <li><a href="/wiki/es/how-to-obtain-free-records">Cómo obtener registros gratuitos</a></li>
+        </ul>
+        <b>Archivo</b>
+        <ul>
+            <li><a target="_blank" href="http://www.azerothcore.org/pages/sunwell.pl/">Descripción original del SC</a></li>
+        </ul>	
+        
+     </div>
+     
 </div>
