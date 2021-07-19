@@ -1,23 +1,25 @@
-﻿# account
+﻿# build\_info
 
 [<-Volver a:Auth](database-auth.md)
 
-**Tabla \`build_info\`**
+Leer en: [English :gb:](../build_info) [Spanish :es:](build_info)
+
+**Tabla \`build\_info\`**
 
 **Estructura**
 
-| Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
-|-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [build][1]            | INT          |            | PRI | NO   |                   |                | Identifier |
-| [majorVersion][2]     | INT          |            |     | YES  | NULL              |                |            |
-| [minorVersion][3]     | INT          |            |     | YES  | NULL              |                |            |
-| [bugfixVersion][4]    | INT          |            |     | YES  | NULL              |                |            |
-| [hotfixVersion][5]    | CHAR(3)      |            |     | YES  | NULL              |                |            |
-| [winAuthSeed][6]      | VARCHAR(32)  |            |     | YES  | NULL              |                |            |
-| [win64AuthSeed][7]    | VARCHAR(32)  |            |     | YES  | NULL              |                |            |
-| [mac64AuthSeed][8]    | VARCHAR(32)  |            |     | YES  | NULL              |                |            |
-| [winChecksumSeed][9]  | VARCHAR(40)  |            |     | YES  | NULL              |                |            |
-| [macChecksumSeed][10] | VARCHAR(40)  |            |     | YES  | NULL              |                |            |
+| Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment    |
+| --------------------- | ------------ | ---------- | --- | ---- | ------- | ----- |----------- |
+| [build][1]            | INT          | SIGNED     | PRI | NO   |         |       | Identifier |
+| [majorVersion][2]     | INT          | SIGNED     |     | YES  |         |       |            |
+| [minorVersion][3]     | INT          | SIGNED     |     | YES  |         |       |            |
+| [bugfixVersion][4]    | INT          | SIGNED     |     | YES  |         |       |            |
+| [hotfixVersion][5]    | CHAR(3)      | SIGNED     |     | YES  |         |       |            |
+| [winAuthSeed][6]      | VARCHAR(32)  | SIGNED     |     | YES  |         |       |            |
+| [win64AuthSeed][7]    | VARCHAR(32)  | SIGNED     |     | YES  |         |       |            |
+| [mac64AuthSeed][8]    | VARCHAR(32)  | SIGNED     |     | YES  |         |       |            |
+| [winChecksumSeed][9]  | VARCHAR(40)  | SIGNED     |     | YES  |         |       |            |
+| [macChecksumSeed][10] | VARCHAR(40)  | SIGNED     |     | YES  |         |       |            |
 
 [1]: #build
 [2]: #majorversion
@@ -30,7 +32,7 @@
 [9]: #winchecksumseed
 [10]: #macchecksumseed
 
-## Descripción de los campos
+**Descripción de los campos**
 
 ### build
 

@@ -2,6 +2,8 @@
 
 [<-Volver a:Auth](database-auth.md)
 
+Leer en: [English :gb:](../autobroadcast) [Spanish :es:](autobroadcast)
+
 **Tabla \`autobroadcast\`**
 
 Esta tabla contiene las entradas de autobroadcast para tus reinos. Los valores como su actividad, posición y temporizador (\*.On, \*.Center, \*.Timer) se definen dentro de [worldserver.conf](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/worldserver/worldserver.conf.dist). Se eligen al azar, en función de su tamaño.
@@ -13,7 +15,7 @@ Esta tabla contiene las entradas de autobroadcast para tus reinos. Los valores c
 | [realmid][1] | INT      | SIGNED     | PRI | NO   | -1      |                |         |
 | [id][2]      | TINYINT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
 | [weight][3]  | TINYINT  | UNSIGNED   |     | YES  | 1       |                |         |
-| [text][4]    | longtext |            |     | NO   |         |                |         |
+| [text][4]    | LONGTEXT | SIGNED     |     | NO   |         |                |         |
 
 [1]: #realmid
 [2]: #id
@@ -24,7 +26,7 @@ Esta tabla contiene las entradas de autobroadcast para tus reinos. Los valores c
 
 ### realmid
 
-El [realmlist.id](realmlist). Define a qué reino pertenece esta entrada. Utilice **-1** para que todos los reinos la usen.
+El [realmlist.id](realmlist#id). Define a qué reino pertenece esta entrada. Utilice **-1** para que todos los reinos la usen.
 
 ### id
 
