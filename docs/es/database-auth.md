@@ -1,4 +1,6 @@
-﻿# Base de Batos Auth
+﻿# Base de Datos Auth
+
+Leer en: [English :gb:](../database-auth) [Spanish :es:](database-auth)
 
 La base de datos auth cuenta actualmente con 14 tablas, que almacenan principalmente información relacionada con las cuentas de usuario. Aunque algunas de ellas tienen otras funcionalidades. La última sincronización se realizó: [06-07-2021](https://github.com/azerothcore/wiki/pull/579). Si detectas que alguna tabla está desactualizada, puedes crear un [issue](https://github.com/azerothcore/wiki/issues) dentro de nuestro repositorio o hacer un [pull request](https://github.com/azerothcore/wiki/pulls) con la modificación de la información.
 

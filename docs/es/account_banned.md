@@ -2,6 +2,8 @@
 
 [<-Volver a:Auth](database-auth.md)
 
+Leer en: [English :gb:](../account_banned) [Spanish :es:](account_banned)
+
 **Tabla \`account\_banned\`**
 
 Esta tabla enumera todas las cuentas que han sido baneadas junto con la fecha en la que (en tal caso) expirase el baneo.
@@ -13,8 +15,8 @@ Esta tabla enumera todas las cuentas que han sido baneadas junto con la fecha en
 | [id][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       | Account id |
 | [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |            |
 | [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |            |
-| [bannedby][4]  | VARCHAR(50)  |            |     | NO   |         |       |            |
-| [banreason][5] | VARCHAR(255) |            |     | NO   |         |       |            |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |            |
+| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |            |
 | [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |            |
 
 [1]: #id
