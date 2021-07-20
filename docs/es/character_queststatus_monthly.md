@@ -20,7 +20,7 @@ Leer en: [English :gb:](../character_queststatus_monthly) [Spanish :es:](charact
 
 ### guid
 
-El guid delpersonaje. Ver [characters.guid](characters#guid).
+El guid del personaje. Ver [characters.guid](characters#guid).
 
 ### quest
 
