@@ -6,7 +6,7 @@ redirect_from: "/es"
 
 Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con tecnología de [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
 
-Leer en: [English :gb:](home) [Spanish :es:](es/home)
+Leer en: [English :gb:](../home) [Spanish :es:](home)
 
 ## Empezando
 
