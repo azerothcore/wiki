@@ -2,6 +2,8 @@
 
 [<-Back-to:Auth](database-auth.md)
 
+Read in: [English :gb:](account) [Spanish :es:](es/account)
+
 **The \`account\` table**
 
 **Structure**
@@ -37,17 +39,17 @@
 [2]: #username
 [3]: #salt
 [4]: #verifier
-[5]: #session_key
-[6]: #totp_secret
+[5]: #sessionkey
+[6]: #totpsecret
 [7]: #email
-[8]: #reg_mail
+[8]: #regmail
 [9]: #joindate
-[10]: #last_ip
-[11]: #last_attempt_ip
-[12]: #failed_logins
+[10]: #lastip
+[11]: #last_attemptip
+[12]: #failedlogins
 [13]: #locked
-[14]: #lock_country
-[15]: #last_login
+[14]: #lockcountry
+[15]: #lastlogin
 [16]: #online
 [17]: #expansion
 [18]: #mutetime
@@ -108,17 +110,17 @@ Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php
 
 [VerifySRP6Login.php](https://gist.github.com/Treeston/34d9249fb467dddc11b2568e74f8cb1e)
 
-### session_key
+### session\_key
 
 `field-no-description|5`
 
-### totp_secret
+### totp\_secret
 
 The authenticator key.
 
 Key can be generated through the Google Authenticator API, a 3rd-party TOTP generator, or manually specified (must be a Base32-compliant expression that is 16 characters).
 
-Implementation link on Wikipedia for the Google Authenticator API
+Implementation link on Wikipedia for the Google Authenticator API.
 
 <http://en.wikipedia.org/wiki/Google_Authenticator#Implementations>
 
@@ -126,7 +128,7 @@ Implementation link on Wikipedia for the Google Authenticator API
 
 The e-mail address associated with this account.
 
-### reg_mail
+### reg\_mail
 
 The registration e-mail address associated with this account.
 
@@ -134,11 +136,11 @@ The registration e-mail address associated with this account.
 
 The date when the account was created.
 
-### last_ip
+### last\_ip
 
 The last IP used by the person who logged in the account.
 
-### failed_logins
+### failed\_logins
 
 The number of failed logins attempted on the account.
 
@@ -146,7 +148,7 @@ The number of failed logins attempted on the account.
 
 Boolean 0 or 1 controlling if the account has been locked or not. This can be controlled with the ".account lock" GM command. If locked (1), the user can only log in with their [last_ip][11]. If unlocked (0), a user can log in from any IP, and their last_ip will be updated if it is different. ".Ban account" does not lock it.
 
-### last_login
+### last\_login
 
 The date when the account was last logged into.
 

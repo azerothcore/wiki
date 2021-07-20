@@ -2,6 +2,8 @@
 
 [<-Back-to:Auth](database-auth.md)
 
+Read in: [English :gb:](account_muted) [Spanish :es:](es/account_muted)
+
 **The \`account\_muted\` table**
 
 This table contains account IDs whose characters are assigned a ban chat (mute).
@@ -17,8 +19,8 @@ Disable chat messaging for any character from account of character $playerName (
 | [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [mutedate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
 | [mutetime][3]   | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mutedby][4]    | VARCHAR(50)  |            |     | NO   |         |       |                          |
-| [mutereason][5] | VARCHAR(255) |            |     | NO   |         |       |                          |
+| [mutedby][4]    | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
+| [mutereason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
 
 [1]: #guid
 [2]: #mutedate
@@ -26,11 +28,11 @@ Disable chat messaging for any character from account of character $playerName (
 [4]: #mutedby
 [5]: #mutereason
 
-### Description of the fields
+**Description of the fields**
 
 ### guid
 
-ID of muted account, taken from muted character. All characters on this account will be muted for [mutetime](#mutetime).
+ID of muted [account](account#id), taken from muted character. All characters on this account will be muted for [mutetime](#mutetime).
 
 ### mutedate
 
