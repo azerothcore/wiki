@@ -75,6 +75,14 @@ Before you begin, create a new directory called **Build**. In this guide we will
         
         - OPENSSL_INCLUDE_DIR is the "include" folder in installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
 
+- If you get an error that Boost was found but not filesystem etc.
+
+    - In your Boost installation folder:
+
+        - Run **bootstrap.bat**
+        
+        - Run **b2.exe** 
+
 ### Compiling the Source
 
 1. In CMake press **Open Project** to open the **AzerothCore.sln** file directly with Visual Studio.
