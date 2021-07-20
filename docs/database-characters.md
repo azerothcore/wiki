@@ -1,4 +1,6 @@
-NOTE: the DB documentation is still a work in progress. We need your help to make it better, please read [this](https://github.com/azerothcore/wiki/issues/11).
+# Database Characters
+
+The auth database currently has 95 tables, which mainly store information related to user accounts. Although some of them have other functionalities. The last synchronization was done: [20-07-2021](https://github.com/azerothcore/wiki/pull/584). If you detect that any table is outdated, you can create an [issue](https://github.com/azerothcore/wiki/issues) within our repository or make a [pull request](https://github.com/azerothcore/wiki/pulls) with the modification of the information.
 
 - [account_data](account_data.md)
 - [account_instance_times](account_instance_times.md)
