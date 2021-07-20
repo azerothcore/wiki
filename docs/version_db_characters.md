@@ -1,6 +1,6 @@
 # version\_db\_characters
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Characters](database-characters.md)
 
 **The \`version\_db\_characters\` table**
 
