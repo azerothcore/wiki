@@ -1,6 +1,6 @@
 ﻿# mail\_items
 
-[<-Volver a:Characters](database-auth.md)
+[<-Volver a:Characters](database-character.md)
 
 Leer en: [English :gb:](../mail_items) [Spanish :es:](mail_items)
 

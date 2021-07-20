@@ -1,6 +1,6 @@
 ﻿# quest\_tracker
 
-[<-Back-to:Character](database-character.md)
+[<-Volver a:Character](database-character.md)
 
 Leer en: [English :gb:](../quest_tracker) [Spanish :es:](quest_tracker)
 
