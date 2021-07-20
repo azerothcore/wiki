@@ -6,7 +6,7 @@
 
 This table holds vital static information for each character. It is used to create the player objects in-game.
 
-## Structure
+**Structure**
 
 | Field                      | Type         | Attributes | Key | Null | Default           | Extra  | Comment                  |
 | -------------------------- | ------------ | ---------- | --- | ---- | ----------------- | ------ | ------------------------ |
@@ -279,7 +279,6 @@ A bitmask that represents what Player flags the player has. Each bit controls a 
 | 8388608  | 0x00800000 | PLAYER_ALLOW_ONLY_ABILITY     | used by bladestorm and killing spree                                              |
 | 16777216 | 0x01000000 | PLAYER_FLAGS_UNK25            | disabled all melee ability on tab include autoattack                              |
 | 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN       |                                                                                   |
-
 
 ### position\_x
 

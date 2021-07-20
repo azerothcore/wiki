@@ -4,7 +4,7 @@
 
 **The \`character\_social\` table**
 
-Contains data about characters' friends/ignored list.
+Contains data about character's friends/ignored list.
 
 **Structure**
 
@@ -33,7 +33,7 @@ The GUID of the friend/ignored. See [characters.guid](characters#guid).
 ### flags
 
 | Value | Description                                                               |
-|-------|---------------------------------------------------------------------------|
+|------ | ------------------------------------------------------------------------- |
 | 0     | Unused entry - previously listed as friend or blocked (removed/unblocked) |
 | 1     | Added as friend                                                           |
 | 2     | Added as blocked user                                                     |

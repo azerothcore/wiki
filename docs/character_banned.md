@@ -9,7 +9,7 @@ This table lists all of the characters that have been banned along with the date
 **Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-|----------------|--------------|------------|-----|------|---------|-------|--------------------------|
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
 | [guid][1]      | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
 | [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |                          |

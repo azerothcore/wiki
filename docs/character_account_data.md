@@ -29,7 +29,7 @@ The character global unique identifier. See [characters.guid](characters#guid).
 ### type
 
 | Value | Description                  |
-|-------|------------------------------|
+|------ | ---------------------------- |
 | 1     | Config cache per character   |
 | 3     | Bindings cache per character |
 | 5     | Macros cache per character   |
