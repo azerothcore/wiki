@@ -2,7 +2,7 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-## The \`gm\_tickets\` table
+**The \`gm\_tickets\` table**
 
 This table stores all tickets.
 

@@ -9,7 +9,7 @@ This table holds information on all the tabs in use for all guilds that make use
 **Structure**
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | --------|
+| ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [guildid][1] | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [TabId][2]   | TINYINT      | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [TabName][3] | VARCHAR(16)  | SIGNED     |     | NO   | "       |       |         |

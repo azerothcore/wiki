@@ -37,7 +37,7 @@ If the bag field is non-zero, then the slot is the slot in the bag where the ite
 If the bag field is zero, then the slot has a range of 0 to 130 and the value stands for the following:
 
 | Slot    | Value                                  |
-|---------|----------------------------------------|
+| ------- | -------------------------------------- |
 | 0       | Head                                   |
 | 1       | Neck                                   |
 | 2       | Shoulders                              |

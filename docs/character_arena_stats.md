@@ -9,7 +9,7 @@ This table holds information about character's matchmaker rating in all team typ
 **Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------------|-------------|------------|-----|------|---------|-------|---------|
+| --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [guid][1]             | INT         | UNSIGNED   | PRI | NO   |         |       |         |
 | [slot][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
 | [matchmakerRating][3] | SMALLINT    | UNSIGNED   |     | NO   |         |       |         |
@@ -31,14 +31,14 @@ The GUID of the character. See [characters.guid](characters#guid).
 Arena slot index:
 
 | Value | Description |
-|-------|-------------|
+| ----- | ----------- |
 | 0     | 2v2         |
 | 1     | 3v3         |
 | 2     | 5v5         |
 
 ### matchmakerRating
 
-Player's matchmaker rating
+Player's matchmaker rating.
 
 ### maxMMR
 

@@ -9,8 +9,8 @@
 | Field          | Type     | Attributes | Key | Null | Default | Extra          | Comment    |
 | -------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ---------- |
 | [id][1]        | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Identifier |
-| [type][2]      | LONGTEXT |            |     | NO   |         |                |            |
-| [content][3]   | LONGTEXT |            |     | NO   |         |                |            | 
+| [type][2]      | LONGTEXT | SIGNED     |     | NO   |         |                |            |
+| [content][3]   | LONGTEXT | SIGNED     |     | NO   |         |                |            | 
 
 [1]: #id
 [2]: #type
@@ -29,4 +29,3 @@
 ### content
 
 `field-no-description|3`
-

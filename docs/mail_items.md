@@ -14,8 +14,8 @@ This table contains data regarding items from item\_instance which are being sen
 | [item_guid][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |                                    |
 | [receiver][3]  | INT  | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
 
-[1]: #mail_id
-[2]: #item_guid
+[1]: #mailid
+[2]: #itemguid
 [3]: #receiver
 
 **Description of the fields**

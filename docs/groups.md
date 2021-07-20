@@ -59,7 +59,7 @@ The GUID of the character. See [characters.guid](characters#guid).
 ### lootMethod
 
 | Value | Name              | Comments |
-|-------|-------------------|----------|
+|------ | ----------------- | -------- |
 | 0     | FREE_FOR_ALL      |          |
 | 1     | ROUND_ROBIN       |          |
 | 2     | MASTER_LOOT       |          |
@@ -82,7 +82,7 @@ If [lootMethod](groups#lootmethod) is not 2, then it's group leader's guid.
 ### groupType
 
 | Value | Name             | Comments                               |
-|-------|------------------|----------------------------------------|
+|------ | ---------------- | -------------------------------------- |
 | 0     | GROUPTYPE_NORMAL |                                        |
 | 1     | GROUPTYPE_BG     |                                        |
 | 2     | GROUPTYPE_RAID   |                                        |

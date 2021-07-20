@@ -8,26 +8,26 @@ This table holds individual item instance information for all items currently eq
 
 **Structure**
 
-| Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]              | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [itemEntry][2]         | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [owner_guid][3]        | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [creatorGuid][4]       | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [giftCreatorGuid][5]   | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [count][6]             | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [duration][7]          | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [charges][8]           | tinytext     |            |     | YES  | NULL    |       |         |
-| [flags][9]             | mediunint(8) | UNSIGNED   |     | NO   |         |       |         |
-| [enchantments][10]     | text         |            |     | NO   |         |       |         |
-| [randomPropertyId][11] | SMALLINT  | SIGNED     |     | NO   |         |       |         |
-| [durability][12]       | SMALLINT  | UNSIGNED   |     | NO   |         |       |         |
-| [playedTime][13]       | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [text][14]             | text         |            |     | YES  | NULL    |       |         |
+| Field                  | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]              | INT       | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [itemEntry][2]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [owner_guid][3]        | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [creatorGuid][4]       | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [giftCreatorGuid][5]   | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [count][6]             | INT       | UNSIGNED   |     | NO   | 1       |       |         |
+| [duration][7]          | INT       | SIGNED     |     | NO   | 0       |       |         |
+| [charges][8]           | TINYTEXT  | SIGNED     |     | YES  |         |       |         |
+| [flags][9]             | MEDIUNINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [enchantments][10]     | TEXT      | SIGNED     |     | NO   |         |       |         |
+| [randomPropertyId][11] | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
+| [durability][12]       | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [playedTime][13]       | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [text][14]             | TEXT      | SIGNED     |     | YES  |         |       |         |
 
 [1]: #guid
 [2]: #itementry
-[3]: #owner_guid
+[3]: #ownerguid
 [4]: #creatorguid
 [5]: #giftcreatorguid
 [6]: #count
@@ -48,19 +48,19 @@ The GUID of the item. This number is unique for each item instance.
 
 ### itemEnry
 
-[Item](item_template_2130222.html#item_template-entry) entry.
+[Item_template.entry](item_template#entry).
 
 ### owner\_guid
 
-The GUID of the character who has ownership of this item. See [characters.guid](2129969.html#characters(table)-guid)
+The GUID of the character who has ownership of this item. See [characters.guid](characters#guid).
 
 ### creatorGuid
 
-[GUID](2129969.html#characters(table)-guid) of character who created the item.
+[Characters.guid](characters#guid) of character who created the item.
 
 ### giftCreatorGuid
 
-[GUID](2129969.html#characters(table)-guid) of character who created the [item](character_gifts_2129986.html#character_gifts-item_guid).
+[Characters.guid](characters#guid) of character who created the [item](character_gifts#item_guid).
 
 ### count
 
@@ -72,7 +72,7 @@ Current number of item copies in the stack.
 
 ### charges
 
-`The number of charges for each of the five possible spellcharges on an item,  specified via five space separated integers.`
+The number of charges for each of the five possible spellcharges on an item, specified via five space separated integers.
 
 ### flags
 
@@ -92,10 +92,8 @@ Current item durability.
 
 ### playedTime
 
-Time in seconds
+Time in seconds.
 
 ### text
 
 The text contained in that specific item.
-
-data-anchor=

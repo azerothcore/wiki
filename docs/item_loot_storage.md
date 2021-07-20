@@ -26,12 +26,12 @@
 [3]: #count
 [4]: #randompropertyid
 [5]: #randomsuffix
-[6]: #follow_loot_rules
+[6]: #followlootrules
 [7]: #freeforall
-[8]: #is_blocked
-[9]: #is_counted
-[10]: #is_underthreshold
-[11]: #needs_quest
+[8]: #isblocked
+[9]: #iscounted
+[10]: #isunderthreshold
+[11]: #needsquest
 [12]: #conditionlootid
 
 **Description of the fields**
@@ -56,7 +56,7 @@
 
 `field-no-description|5`
 
-### follow_loot_rules
+### follow\_loot\_rules
 
 `field-no-description|6`
 
@@ -64,19 +64,19 @@
 
 `field-no-description|7`
 
-### is_blocked
+### is\_blocked
 
 `field-no-description|8`
 
-### is_counted
+### is\_counted
 
 `field-no-description|9`
 
-### is_underthreshold
+### is\_underthreshold
 
 `field-no-description|10`
 
-### needs_quest
+### needs\_quest
 
 `field-no-description|11`
 

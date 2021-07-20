@@ -28,7 +28,7 @@ The GUID of the character. See [characters.guid](characters#guid).
 
 ### item\_guid
 
-The GUID of the item. See [item\_instance.guid](item_instance#guid)
+The GUID of the item. See [item\_instance.guid](item_instance#guid).
 
 ### entry
 

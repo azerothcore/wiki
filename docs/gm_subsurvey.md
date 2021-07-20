@@ -2,7 +2,7 @@
 
 [<-Back-to:Characters](database-characters.md)
 
-## The \`gm\_subsurvey\` table
+**The \`gm\_subsurvey\` table**
 
 This table contains the answers to the survey questions. It's linked to `gm_survey`.
 

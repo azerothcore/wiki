@@ -41,7 +41,7 @@ Special bars are used for stances, auras, pets, stealth, and other similar speci
 **Possible values**
 
 | Button IDs | Set (key)                          |
-|------------|------------------------------------|
+| ---------- | ---------------------------------- |
 | 1-11       | 1 (SHIFT + 1)                      |
 | 12-23      | 2 (SHIFT + 2)                      |
 | 24-35      | 3 (SHIFT + 3) h1. Right Side Bar   |
@@ -64,7 +64,7 @@ The type of action:
 **Possible types**
 
 | Value | Description |
-|-------|-------------|
+| ----- | ----------- |
 | 0     | Spell       |
 | 1     | Click       |
 | 32    | Eq set      |

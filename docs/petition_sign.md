@@ -19,7 +19,7 @@ This table holds information on all the signatures of a petition for either a gu
 [1]: #ownerguid
 [2]: #petitionguid
 [3]: #playerguid
-[4]: #player_account
+[4]: #playeraccount
 [5]: #type
 
 **Description of the fields**
@@ -45,7 +45,7 @@ The account ID of the player that has signed the charter. No two players can sig
 The type of the petition.
 
 | ID | Type               |
-|--- | -------------------|
+|--- | ------------------ |
 | 2  | 2vs2 Arena charter |
 | 3  | 3vs3 Arena charter |
 | 5  | 5vs5 Arena charter |

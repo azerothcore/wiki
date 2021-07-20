@@ -4,7 +4,7 @@
 
 **The \`channels\_bans\` table**
 
-## Structure
+**Structure**
 
 | Field           | Type  | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -20,7 +20,7 @@
 
 ### channelId
 
-The [channel id](channels#channelId).
+The [channel.id](channels#channelid).
 
 ### playerGUID
 

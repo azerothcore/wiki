@@ -7,7 +7,7 @@
 **Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment  |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------  |
+| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------- |
 | [guid][1]        | INT  | UNSIGNED   | PRI | NO   |         |       |          |
 | [lastEventId][2] | INT  | UNSIGNED   |     | NO   | 0       |       |          |
 
