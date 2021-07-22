@@ -51,7 +51,7 @@ but you can copy it under `conf/config.sh` and change values as you please.
 
 ### Set-up the database
 
-- Either connect to your MySQL database and manually create the `acore` MySQL user:
+- Either connect to your MySQL database (with `sudo mysql -u root`) and manually create the `acore` MySQL user by running:
 
 ```
 DROP USER IF EXISTS 'acore'@'localhost';
