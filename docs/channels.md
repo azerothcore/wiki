@@ -6,7 +6,7 @@
 
 Information and settings for ingame, player-based chat channels (not affecting the default system channels).
 
-## Structure
+**Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra          | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -43,7 +43,7 @@ Allow access to channel from specified player faction ID.
 For multirace channels, two (or more) separate entries must exist with the EXACT same settings for all fields apart from this (it needs a different `team id`).
 
 | Faction  | Value |
-|----------|-------|
+| -------- | ----- |
 | Horde    | 67    |
 | Alliance | 469   |
 

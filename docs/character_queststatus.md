@@ -9,7 +9,7 @@ Holds information on the quest status of each character.
 **Structure**
 
 | Field             | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------------- | -------- | ---------- | --- | ---- | ------- |-------|--------------------------|
+| ----------------- | -------- | ---------- | --- | ---- | ------- |------ | ------------------------ |
 | [guid][1]         | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [quest][2]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
 | [status][3]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                          |
@@ -61,7 +61,7 @@ The current quest status.
 **Possible values**
 
 | Value | Status                     | Comments                                    |
-|-------|----------------------------|---------------------------------------------|
+| ----- | -------------------------- | ------------------------------------------- |
 | 0     | QUEST\_STATUS\_NONE        | Quest isn't shown in quest list; default    |
 | 1     | QUEST\_STATUS\_COMPLETE    | Quest has been completed                    |
 | 2     | QUEST\_STATUS\_UNAVAILABLE | NOT USED                                    |

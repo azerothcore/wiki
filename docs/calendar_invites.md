@@ -7,7 +7,7 @@
 **Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment  |
-|----------------- |------------- |------------|-----|------|---------|-------|--------- |
+| ---------------- |------------- |----------- | --- | ---- | ------- | ----- | -------- |
 | [id][1]          | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |          |
 | [event][2]       | BIGINT       | UNSIGNED   |     | NO   | 0       |       |          |
 | [invitee][3]     | INT          | UNSIGNED   |     | NO   | 0       |       |          |
@@ -15,7 +15,7 @@
 | [status][5]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |          |
 | [statustime][6]  | INT          | UNSIGNED   |     | NO   | 0       |       |          |
 | [rank][7]        | TINYINT      | UNSIGNED   |     | NO   | 0       |       |          |
-| [text][8]        | VARCHAR(255) |            |     | NO   | ''      |       |          |
+| [text][8]        | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
 
 [1]: #id
 [2]: #event

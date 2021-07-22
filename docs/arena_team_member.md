@@ -30,7 +30,7 @@ This table holds arena info about specific team members. All arena\_team members
 
 ### arenaTeamId
 
-ID of arena team. See Team Id.
+ID of arena team. See [arena\_team#arenateamid].
 
 ### guid
 

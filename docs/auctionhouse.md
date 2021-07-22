@@ -6,8 +6,6 @@
 
 Contains all information about the currently ongoing auctions in the auction houses. It controls what items are put up for auction and who put it up, who is the highest bidder, etc.
 
-This table is used by Trinity while running and not a table that you would usually edit.
-
 **Structure**
 
 | Field               | Type | Attributes | Key | Null | Default | Extra | Comment |

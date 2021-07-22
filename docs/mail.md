@@ -34,9 +34,9 @@ This table contains main data about all mails in the game.
 [6]: #receiver
 [7]: #subject
 [8]: #body
-[9]: #has_items
-[10]: #expire_time
-[11]: #deliver_time
+[9]: #hasitems
+[10]: #expiretime
+[11]: #delivertime
 [12]: #money
 [13]: #cod
 [14]: #checked

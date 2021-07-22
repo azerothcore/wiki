@@ -18,7 +18,7 @@ This table holds all item information for items that are stored in the guild ban
 [1]: #guildid
 [2]: #tabid
 [3]: #slotid
-[4]: #item_guid
+[4]: #itemguid
 
 **Description of the fields**
 

@@ -4,7 +4,7 @@
 
 **The \`character\_achievement\` table**
 
-This table holds information on the achievements a character has earned / completed.
+This table holds information on the achievements a character has earned/completed.
 
 **Note:** if you delete a "realm first" achievement from the characters database, you have to reboot the server to take it into account.
 

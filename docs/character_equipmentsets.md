@@ -41,26 +41,26 @@ This table holds info about player's equipment manager settings.
 [3]: #setindex
 [4]: #name
 [5]: #iconname
-[6]: #ignore_mask
-[7]: #item0
-[8]: #item1
-[9]: #item2
-[10]: #item3
-[11]: #item4
-[12]: #item5
-[13]: #item6
-[14]: #item7
-[15]: #item8
-[16]: #item9
-[17]: #item10
-[18]: #item11
-[19]: #item12
-[20]: #item13
-[21]: #item14
-[22]: #item15
-[23]: #item16
-[24]: #item17
-[25]: #item18
+[6]: #ignoremask
+[7]: #item
+[8]: #item
+[9]: #item
+[10]: #item
+[11]: #item
+[12]: #item
+[13]: #item
+[14]: #item
+[15]: #item
+[16]: #item
+[17]: #item
+[18]: #item
+[19]: #item
+[20]: #item
+[21]: #item
+[22]: #item
+[23]: #item
+[24]: #item
+[25]: #item
 
 **Description of the fields**
 
@@ -88,12 +88,12 @@ Name taken from ItemDisplayInfo.dbc, column 6.
 
 `field-no-description|6`
 
-### item0-18
+### item
 
 Values taken from [item\_instance.guid](item_instance#guid).
 
 | ID | Name      |
-|----|-----------|
+| -- | --------- |
 | 0  | Head      |
 | 1  | Neck      |
 | 2  | Shoulder  |

@@ -11,7 +11,7 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ------ | ------- |
 | [arenaTeamId][1]      | INT         | UNSIGNED   | PRI | NO   | 0       | Unique |         |
-| [name][2]             | VARCHAR(24) |            |     | NO   |         |        |         |
+| [name][2]             | VARCHAR(24) | SIGNED     |     | NO   |         |        |         |
 | [captainGuid][3]      | INT         | UNSIGNED   |     | NO   | 0       |        |         |
 | [type][4]             | TINYINT     | UNSIGNED   |     | NO   | 0       |        |         |
 | [rating][5]           | SMALLINT    | UNSIGNED   |     | NO   | 0       |        |         |

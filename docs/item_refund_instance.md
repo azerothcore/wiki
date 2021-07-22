@@ -15,8 +15,8 @@ This table serves as a receipt of refundable purchases during a 2 hour ingame ti
 | [paidMoney][3]        | INT      | UNSIGNED   |     | NO   | 0       |        |             |
 | [paidExtendedCost][4] | SMALLINT | UNSIGNED   |     | NO   | 0       |        |             |
 
-[1]: #item_guid
-[2]: #player_guid
+[1]: #itemguid
+[2]: #playerguid
 [3]: #paidmoney
 [4]: #paidextendedcost
 
