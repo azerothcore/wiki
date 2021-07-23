@@ -1,6 +1,6 @@
 # version\_db\_characters
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Characters](database-characters.md)
 
 **The \`version\_db\_characters\` table**
 
@@ -32,6 +32,6 @@ Sql revisions date.
 
 ### 2021\_07\_08\_00
 
-The date of the last update to the auth database.
+The date of the last update to the characters database.
 
-**Note** this column changes automatically according to the last update of the auth database.
+**Note** this column changes automatically according to the last update of the characters database.

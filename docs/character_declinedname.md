@@ -7,7 +7,7 @@
 **Structure**
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-|--------------------|-------------|------------|-----|------|---------|-------|--------------------------|
+| ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
 | [guid][1]          | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [genitive][2]      | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
 | [dative][3]        | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |

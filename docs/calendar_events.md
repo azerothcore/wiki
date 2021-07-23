@@ -7,13 +7,13 @@
 **Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment  |
-|----------------- |------------- |------------|-----|------|---------|-------|--------- |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | -------- |
 | [id][1]          | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |          |
 | [creator][2]     | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [title][3]       | VARCHAR(255) |            |     | NO   | ''      |       |          |
-| [description][4] | VARCHAR(255) |            |     | NO   | ''      |       |          |
+| [title][3]       | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
+| [description][4] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
 | [type][5]        | TINYINT      | UNSIGNED   |     | NO   | 4       |       |          |
-| [dungeon][6]     | INT          |            |     | NO   | -1      |       |          |
+| [dungeon][6]     | INT          | SIGNED     |     | NO   | -1      |       |          |
 | [eventtime][7]   | INT          | UNSIGNED   |     | NO   | 0       |       |          |
 | [flags][8]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
 | [time2][9]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
@@ -65,4 +65,3 @@
 ### time2
 
 `field-no-description|9`
-

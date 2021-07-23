@@ -14,7 +14,6 @@
 [1]: #guid
 [2]: #quest
 
-
 **Description of the fields**
 
 ### guid

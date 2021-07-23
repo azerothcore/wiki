@@ -25,8 +25,8 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 | [attr_4][13]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [attr_5][14]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
-[1]: #battleground_id
-[2]: #character_guid
+[1]: #battlegroundid
+[2]: #characterguid
 [3]: #winner
 [4]: #score
 [5]: #score
