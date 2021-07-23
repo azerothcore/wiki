@@ -15,7 +15,6 @@
 | [delaymessage][5] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
 | [moderators][6]   | TEXT         | SIGNED     |     | YES  |         |       |         |
 
-
 [1]: #name
 [2]: #flags
 [3]: #speakdelay

@@ -24,7 +24,7 @@ Contains data about client account and settings.
 
 ### accountId
 
-The [account id](account#id).
+The [account.id](account#id).
 
 ### type
 

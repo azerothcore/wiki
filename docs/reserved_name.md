@@ -1,4 +1,4 @@
- # reserved\_name
+# reserved\_name
 
 [<-Back-to:Characters](database-characters.md)
 

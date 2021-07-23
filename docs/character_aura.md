@@ -9,7 +9,7 @@ Contains aura information that is loaded when a character is loaded, so the aura
 **Structure**
 
 | Field                 | Type      | Attributes | Key | Null | Default | Extra | Comment                       |
-|-----------------------|-----------|------------|-----|------|---------|-------|-------------------------------|
+| --------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
 | [guid][1]             | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier      |
 | [casterGuid][2]       | BIGINT    | UNSIGNED   | PRI | NO   | 0       |       | Full Global Unique Identifier |
 | [itemGuid][3]         | BIGINT    | UNSIGNED   | PRI | NO   | 0       |       |                               |
@@ -37,9 +37,9 @@ Contains aura information that is loaded when a character is loaded, so the aura
 [8]: #amount
 [9]: #amount
 [10]: #amount
-[11]: #base_amount0
-[12]: #base_amount1
-[13]: #base_amount2
+[11]: #baseamount0
+[12]: #baseamount1
+[13]: #baseamount2
 [14]: #maxduration
 [15]: #remaintime
 [16]: #remaincharges
