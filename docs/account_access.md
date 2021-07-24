@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](account_access) [Spanish :es:](es/account_access)
-
 **The \`account\_access\` table**
 
 This table holds security access level for any realm in [realmlist](realmlist) table.

@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](account) [Spanish :es:](es/account)
-
 **The \`account\` table**
 
 **Structure**

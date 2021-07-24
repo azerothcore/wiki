@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](build_info) [Spanish :es:](es/build_info)
-
 **The \`build\_info\` table**
 
 **Structure**

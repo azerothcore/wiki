@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](account_muted) [Spanish :es:](es/account_muted)
-
 **The \`account\_muted\` table**
 
 This table contains account IDs whose characters are assigned a ban chat (mute).

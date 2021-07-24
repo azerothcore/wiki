@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](autobroadcast) [Spanish :es:](es/autobroadcast)
-
 **The \`autobroadcast\` table**
 
 This table contains the autobroadcast entries for your realms. Values like it's activity, position and Timer (\*.On, \*.Center, \*.Timer) are defined within the [worldserver.conf](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/worldserver/worldserver.conf.dist). They are chosen randomly, based on their weight.

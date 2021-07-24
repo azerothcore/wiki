@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](secret_digest) [Spanish :es:](es/secret_digest)
-
 **The \`secret\_digest\` table**
 
 **Structure**

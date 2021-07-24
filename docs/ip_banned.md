@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](ip_banned) [Spanish :es:](es/ip_banned)
-
 **The \`ip\_banned\` table**
 
 This table contains all of the banned IPs and the date when (or if) the ban will expire.

@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](logs) [Spanish :es:](es/logs)
-
 **The \`logs\` table**
 
 This table stores logs from `Appender` type database in config file.

@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](version_db_auth) [Spanish :es:](es/version_db_auth)
-
 **The \`version\_db\_auth\` table**
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |

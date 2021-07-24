@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](realmlist) [Spanish :es:](es/realmlist)
-
 **The \`realmlist\` table**
 
 This table sets up information on all available realms. Each row controls a different realm.

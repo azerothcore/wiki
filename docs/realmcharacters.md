@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](realmcharacters) [Spanish :es:](es/realmcharacters)
-
 **The \`realmcharacters\` table**
 
 This table holds information on the number of characters each account has for each realm.

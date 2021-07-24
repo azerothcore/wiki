@@ -2,8 +2,6 @@
 
 [<-Back-to:Auth](database-auth.md)
 
-Read in: [English :gb:](logs_ip_actions) [Spanish :es:](es/logs_ip_actions)
-
 **The \`logs\_ip\_actions\` table**
 
 **Structure**
