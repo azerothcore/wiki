@@ -15,7 +15,8 @@
     + [Find all static creatures given a name](#find-all-static-creatures-given-a-name)
     + [Find creatures that use a certain spell](#find-creatures-that-use-a-certain-spell)
     + [Find average wander distance for a creature](#find-average-wander-distance-for-a-creature)
-    + [Find other members of a node pool](#find-other-members-of-a node-pool)
+    + [Find other members of a node pool](#find-other-members-of-a-node-pool)
+    + [Find respawn timers for a class of object](#find-respawn-timers-for-a-class-of-object)
 
 ### Introduction
 These SQL queries are intended to be fast and easy-to-use tools that can help identify and troubleshoot problems in the AzerothCore database. They're here to be a quick reference to help when looking at DB-related problems. If anyone else has any similar useful queries, let me know and I'll add them. Similarly, if you have a common problem for which you'd like a query written, feel free to get in touch.
@@ -129,4 +130,14 @@ Given a node GUID, find if it belongs to a node pool and list the other members.
 ```SQL
 SELECT * FROM `pool_gameobject` WHERE `pool_entry` IN (
 SELECT `pool_entry` from `pool_gameobject` WHERE guid = XXXX);
+```
+
+#### Find respawn timers for a class of object
+Given a object's name, find the respawn timers for all spawns that match that name string.
+```SQL
+SELECT got.name, go.guid, go.spawntimesecs
+FROM `gameobject_template` got
+JOIN `gameobject` go ON got.entry = go.id
+WHERE name LIKE '%name-of-object%' 
+ORDER BY go.spawntimesecs
 ```
