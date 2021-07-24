@@ -25,6 +25,7 @@ This table contains the description of creatures. Each spawned creature is an in
 | [npcflag](#npcflag)                             | INT UNSIGNED      | NO   |     | 0       |       |                                      |
 | [speed_walk](#speed_walk)                      | FLOAT                 | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speed_run)                        | FLOAT                 | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
+| [detection_range](#detection_range)            | FLOAT                 | NO   |     | 20      |       |                                       |
 | [scale](#scale)                                 | FLOAT                 | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                   | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                         | TINYINT            | NO   |     | 0       |       |                                      |
@@ -210,6 +211,10 @@ Controls how fast the creature can walk. For vehicles: increases fly speed.
 #### speed_run
 
 Controls how fast the creature can run. For vehicles: increases ground movement speed.
+
+#### detection_range
+
+Controls the range at which creatures detect and see players.
 
 #### scale
 
