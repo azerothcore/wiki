@@ -8,7 +8,7 @@ redirect_from: "/Installation"
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
 
-### Full (supported)
+### Full (supported, recommended)
 
 These are the officially-supported and complete ways of installing AzerothCore, for any purposes.
 
