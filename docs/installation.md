@@ -24,7 +24,7 @@ These are the officially-supported and complete ways of installing AzerothCore, 
 
 ### Others (unsupported)
 
-There are also other tutorials from the community for specific platforms:
+These guides are made by community members and might not be up-to-date:
 
 - [Amazon Web Services](aws-tutorial.md)
 
