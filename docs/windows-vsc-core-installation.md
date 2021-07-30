@@ -89,7 +89,7 @@ When the build is complete you will find a message in the output that looks simi
 Build finished with exit code 0
 ```
 
-You will find your freshly compiled binaries in the **C:\Build\bin\RelWithDebInfo** or **C:\Build\bin\Debug** folder. These are all used to run your server at the end of this instruction.
+You will find your freshly compiled binaries in the **C:\Build\bin\Release** or **C:\Build\bin\Debug** folder. These are all used to run your server at the end of this instruction.
 
 You will need the following files in order for the core to function properly:
 
@@ -135,8 +135,6 @@ OpenSSL 1.1.0 and more recent installed, names have changed:
 pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not mandatory but it's recommended to compile core on at least RelWithDebInfo mode to get proper crashlogs. If you compile on Release mode the pdb files aren't needed.
 
 To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
-
-<br>
 
 ## Help
 
