@@ -17,8 +17,6 @@
    
    1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
    
-   
-   
 1. Install [Visual Studio 2019 Build Tools](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)
 
    You will need to install the C++ compiler.
@@ -34,13 +32,12 @@
 	1. Download and install the **Latest Version**
 	1. Install extensions
 		1. Click **View**->**Extensions**
-			
+		
 			<a href="../images/vsc_extensions.png.png" target="_blank"><img src="../images/vsc_extensions.png"></a>
 		1. In Search bar type **C/C++ Extension Pack**
 		1. Click on green install button	
 			
 			<a href="../images/visualstudio_tools.png" target="_blank"><img src="../images/vcs_extension_pack_install.png" height="50%" width="50%"></a>
-
 
 1. [CMake](https://cmake.org/)
 
