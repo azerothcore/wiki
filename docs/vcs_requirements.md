@@ -34,9 +34,11 @@
 	1. Download and install the **Latest Version**
 	1. Install extensions
 		1. Click **View**->**Extensions**
+			
 			<a href="../images/vsc_extensions.png.png" target="_blank"><img src="../images/vsc_extensions.png"></a>
 		1. In Search bar type **C/C++ Extension Pack**
 		1. Click on green install button	
+			
 			<a href="../images/visualstudio_tools.png" target="_blank"><img src="../images/vcs_extension_pack_install.png" height="50%" width="50%"></a>
 
 
