@@ -76,11 +76,11 @@ You can also set the perceived priority of an issue via tags. They are:
 
 | Tag Level | Description |
 |-----------|-------------|
-| **Critical** | should only be used in the event of server-breaking bugs. |
-| **High** | game-breaking bugs with no workaround. |
-| **Medium** | game-breaking bugs that do have a workaround. |
-| **Low** | more typical bugs with quests/items/NPCs, etc. Your 'standard' bug. |
-| **Trivial** | bugs that have no real impact on gameplay, typically cosmetic. |
+| **Critical** | Should only be used in the event of server-breaking bugs |
+| **High** | Game-breaking bugs with no workaround |
+| **Medium** | Game-breaking bugs that do have a workaround |
+| **Low** | More typical bugs with quests/items/NPCs, etc. Your 'standard' bug |
+| **Trivial** | Bugs that have no real impact on gameplay, typically cosmetic |
 
 ## Guidelines
 - **Use your judgement** We are there to exercise our best judgement, not just as photocopiers. We have access to tools and information that most players don't, so we should be able to see more deeply into a problem than they can and make decisions accordingly.
@@ -100,7 +100,7 @@ This is a general (and by no means exhaustive) look at the sources we can use to
 
 - [Wowpedia](https://wowpedia.fandom.com/wiki/Special:Search) - Wowpedia can be a pretty good source, as it has a history function that lets you view an article as it was during the WotLK era. To access it, go to the relevant article, and look to the right of the article title. Next to 'View Source' you will see 3 vertically arranged dots. Clicking that allows access to the History of the article. You typically want the last article written before the date of 12 October 2010 (Cata's release date).
 
-    Wowpedia often aggregates patch notes relating to a particular talent or ability, which is frequently useful. It also often records quest text and quest-giver dialogue, so can be a handy source for that sort of thing.
+    Wowpedia often aggregates patch notes relating to a particular talent or ability, which is frequently useful. It also often records quest text and quest-giver dialogue, so can be a handy source for that sort of thing. Note that older Wrath-era content can also be found on its sibling site [WowWiki](https://wowwiki-archive.fandom.com/wiki/Wiki). 
 	
 - Sniffs data - 'Sniffs' are intercepted data packets players have captured when playing retail Wow. They have the advantage of using real retail data and making it available in SQL, and thus broadly useable. The disadvantages are that the sniff data only contains client-visible data, it is often incomplete and patchy, and is often difficult to otherwise verify. 
     For one useful site that makes use of this data, see the [AzerothCore SpeedChecker](https://azerothcore-speedchecker.web.app/) by @Efymer on Discord - if you want to verify a creature's movement speed or other flags versus sniffed retail data, this will do it for you.
