@@ -1,8 +1,8 @@
+# Guide to Triaging
+
 ---
 tableofcontents: 1
 ---
-
-# Guide to Triaging
 
 ## Introduction
 
