@@ -21,11 +21,11 @@ If you do not want to extract these files using the extractors you can find down
 
 Github link:
 
-[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/) (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
+<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v10) - from 05/04/2021 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
 
 Mega link:
 
-[DBC & maps for all versions](https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ) (ALTERNATIVE)
+<a href="https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ" target="_blank">DBC & maps for all versions</a> (ALTERNATIVE)
 
 ## Extractors
 
