@@ -49,7 +49,7 @@
         
         1. Under "Systemvariables" select **Path**
         
-        1. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\**
+        1. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
 
 1. Choose a database management tool
 
