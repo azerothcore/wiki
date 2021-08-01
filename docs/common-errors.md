@@ -195,6 +195,16 @@ C1001: An internal error has occurred in the compiler.
 ```
 Update your Visual Studio.
 
+---------------------------------------------------------
+
+**ACE00067** I can't generate my CMake files, I get:
+```
+Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
+```
+Locate your Boost folder
+1. Run the Bootstrap.bat file
+1. Run the b2.exe file 
+
 ## Extractor-related errors
 
 **ACE00080** I am looking for map extractors but they are for wow version 4.
