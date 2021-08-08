@@ -13,8 +13,8 @@ This table lists all of the accounts that have been banned along with the date w
 | [id][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       | Account id |
 | [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |            |
 | [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |            |
-| [bannedby][4]  | VARCHAR(50)  |            |     | NO   |         |       |            |
-| [banreason][5] | VARCHAR(255) |            |     | NO   |         |       |            |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |            |
+| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |            |
 | [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |            |
 
 [1]: #id

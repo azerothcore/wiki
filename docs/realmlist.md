@@ -9,18 +9,18 @@ This table sets up information on all available realms. Each row controls a diff
 **Structure**
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
-|----------------------------|--------------|------------|-----|------|---------------|----------------|---------|
+| -------------------------- | ------------ | ---------- | --- | ---- | ------------- | -------------- | ------- |
 | [id][1]                    | INT          | UNSIGNED   | PRI | NO   |               | AUTO_INCREMENT |         |
-| [name][2]                  | VARCHAR(32)  |            | UNI | NO   | ''            |                |         |
-| [address][3]               | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
-| [localAddress][4]          | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
-| [localSubnetMask][5]       | VARCHAR(255) |            |     | NO   | 255.255.255.0 |                |         |
+| [name][2]                  | VARCHAR(32)  | SIGNED     | UNI | NO   | ''            |                |         |
+| [address][3]               | VARCHAR(255) | SIGNED     |     | NO   | 127.0.0.1     |                |         |
+| [localAddress][4]          | VARCHAR(255) | SIGNED     |     | NO   | 127.0.0.1     |                |         |
+| [localSubnetMask][5]       | VARCHAR(255) | SIGNED     |     | NO   | 255.255.255.0 |                |         |
 | [port][6]                  | SMALLINT     | UNSIGNED   |     | NO   | 8085          |                |         |
 | [icon][7]                  | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
 | [flag][8]                  | TINYINT      | UNSIGNED   |     | NO   | 2             |                |         |
 | [timezone][9]              | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
 | [allowedSecurityLevel][10] | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
-| [population][11]           | FLOAT        |            |     | NO   | 0             |                |         |
+| [population][11]           | FLOAT        | SIGNED     |     | NO   | 0             |                |         |
 | [gamebuild][12]            | INT          | UNSIGNED   |     | NO   | 12340         |                |         |
 
 [1]: #id
@@ -66,7 +66,7 @@ The port that the world server is running on. If all world servers are on the sa
 The icon of the realm.
 
 | Icon | Type   |
-|------|--------|
+| ---- | ------ |
 | 0    | Normal |
 | 1    | PvP    |
 | 4    | Normal |
@@ -78,7 +78,7 @@ The icon of the realm.
 Realmflag of this realm.
 
 | Flag | Hex value | Description  |
-|------|-----------|--------------|
+| ---- | --------- | ------------ |
 | 0    | 0x0       | None         |
 | 1    | 0x1       | Invalid      |
 | 2    | 0x2       | Offline      |
@@ -91,10 +91,10 @@ Realmflag of this realm.
 
 ### timezone
 
-The realm timezone, it will be displayed in the tabs of the realmlist
+The realm timezone, it will be displayed in the tabs of the realmlist.
 
 | timezone | displayed name     |
-|----------|--------------------|
+| -------- | ------------------ |
 | 1        | Development        |
 | 2        | United States      |
 | 3        | Oceanic            |
@@ -167,7 +167,7 @@ This field is automatically updated at regular intervals and will have the curre
 Accepted Client version for the realm.
 
 | Build Version | Client Patch |
-|---------------|--------------|
+| ------------- | ------------ |
 | 5875          | 1.12.1       |
 | 6005          | 1.12.2       |
 | 8606          | 2.4.3        |

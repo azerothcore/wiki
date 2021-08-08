@@ -9,12 +9,12 @@ This table holds the server's uptime. The core will automatically update the lat
 **Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default     | Extra | Comment |
-|-----------------|--------------|------------|-----|------|-------------|-------|---------|
+| --------------- | ------------ | ---------- | --- | ---- | ----------- | ----- | ------- |
 | [realmid][1]    | INT          | UNSIGNED   | PRI | NO   |             |       |         |
 | [starttime][2]  | INT          | UNSIGNED   | PRI | NO   | 0           |       |         |
 | [uptime][3]     | INT          | UNSIGNED   |     | NO   | 0           |       |         |
 | [maxplayers][4] | SMALLINT     | UNSIGNED   |     | NO   | 0           |       |         |
-| [revision][5]   | VARCHAR(255) |            |     | NO   | AzerothCore |       |         |
+| [revision][5]   | VARCHAR(255) | SIGNED     |     | NO   | AzerothCore |       |         |
 
 [1]: #realmid
 [2]: #starttime
@@ -26,7 +26,7 @@ This table holds the server's uptime. The core will automatically update the lat
 
 ### realmid
 
-The ID of the realm. See [realmlist.id](realmlist#id)
+The ID of the realm. See [realmlist.id](realmlist#id).
 
 ### starttime
 
@@ -42,4 +42,4 @@ The maximum number of players connected.
 
 ### revision
 
-The detailed revision of the worldserver
+The detailed revision of the worldserver.
