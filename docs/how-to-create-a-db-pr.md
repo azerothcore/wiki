@@ -90,6 +90,7 @@ Now you need to:
 
 - set the file name as the one you generated in the step 4
 - add the SQL version code that you generated in the step 4
+- add a new line, then add your own SQL code below and then add a new empty line at the end of the file
 
 ![AzerothCore new SQL file example](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-new-file-2.png)
 
