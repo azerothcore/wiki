@@ -102,6 +102,8 @@ Now scroll down the page, you'll need to:
 3. make sure that "Commit directly to the `your-new-branch-name`" is selected
 4. Click **Commit new file**
 
+![AzerothCore create new commit](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-commit.png)
+
 ### 6. Open the PR
 
 Go back to the [main AzerothCore repository](https://github.com/azerothcore/azerothcore-wotlk),
