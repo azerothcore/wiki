@@ -169,9 +169,9 @@ We use UTF8MB4 where you would previously use UTF8 or UTF8MB3. (utf8 is an alias
 ```
 utf8    -> utf8mb4
 utf8mb3 -> utf8mb4
-
-This also applies to utf8_unicode_ci etc.
 ```
+
+To be able to support MariaDB alongside MySQL we are limited to using `utf8mb4_general_ci` as coallation.
 
 ### Check Constraints
 
