@@ -264,21 +264,22 @@ These values are ID taken from [QuestInfo.dbc](QuestInfo)
 
 Recommended number of players to do the quest together.
 
-### RequiredFactionId1
+### RewardFactionId1
 
-Faction ID 1 for an objective to achieve a certain reputation value with. See Faction.dbc
+Faction Id (from Faction.dbc) for which the quest give reputation points.
+Number of gain or lost reputation points for Faction at quest completion. This is special reputation rewarding. Normal reputation reward to quest rewarding creature faction calculated and added automatically.
 
-### RequiredFactionId2
+### RewardFactionId2
 
-Faction ID 2 for an objective to achieve a certain reputation value with. See Faction.dbc
+Faction Id (from Faction.dbc) for which the quest give reputation points.
+Number of gain or lost reputation points for Faction at quest completion. This is special reputation rewarding. Normal reputation reward to quest rewarding creature faction calculated and added automatically.
 
-### RequiredFactionValue1
+### RewardFactionValueId1
 
-Reputation value 1 that the player must achieve with the faction in [RepObjectiveFaction](#quest_template-RepObjectiveFaction) as part of the quest objectives.
+This field is used for reputation lookup in QuestFactionReward.dbc if quest_template#RewardFactionValueId is 0. Value X in this field indicates RepX column of QuestFactionReward.dbc. If RewardRepValueId is positive, reputation from the first row of QuestFactionReward.dbc will be used, for negative values the second row is used.
 
-### RequiredFactionValue2
-
-Reputation value 2 that the player must achieve with the faction in [RepObjectiveFaction](#quest_template-RepObjectiveFaction) as part of the quest objectives.
+### RewardFactionValueId2
+This field is used for reputation lookup in QuestFactionReward.dbc if quest_template#RewardFactionValueId is 0. Value X in this field indicates RepX column of QuestFactionReward.dbc. If RewardRepValueId is positive, reputation from the first row of QuestFactionReward.dbc will be used, for negative values the second row is used.
 
 ### RewardNextQuest
 
