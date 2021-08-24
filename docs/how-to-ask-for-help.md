@@ -78,7 +78,7 @@ Remember to:
 - Don't forget the **[azerothcore]** tag!
   - ![image](https://user-images.githubusercontent.com/75517/51132313-364da380-1832-11e9-8483-3bb6898d438a.png)
 
-- It's useful to add **4 more tags** according to the category of your question (e.g. `c++`, `docker`, `mysql`, `sql`, etc... ).
+- It's useful to add **4 more tags** according to the category of your question (e.g. `c++`, `cmake`, `docker`, `mysql`, `sql`, etc... ).
 
 - Link your question in the #support-general channel of our [Discord chat](https://discordapp.com/invite/gkt4y2x)
 
