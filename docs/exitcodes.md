@@ -40,4 +40,4 @@ Having the Worldserver sending exit codes let's you create an external script th
 
 For example it's possible to write a script to automatically restart if the Worldserver sends RESTART_EXIT_CODE.
 
-At this moment there are no known public script that make use of the exit codes.
+You can view [this](https://github.com/Kitzunu/azerothcore-exitcode-script) batch script for Windows how exit codes can be used.
