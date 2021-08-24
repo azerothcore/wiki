@@ -21,6 +21,7 @@ redirect_from: /documentation_index
 * [Clang Format](clang-format)
 * [CMake options](cmake-options.md)
 * [Directory structure](directory-structure.md)
+* [Exit Codes](exitcodes.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)
 * [IP2LOCATION](ip2location.md)
 * [Logging Configuration](logging-configuration.md)
