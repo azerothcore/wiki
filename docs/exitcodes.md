@@ -28,7 +28,7 @@ The best way to know where all the exit codes are called is by finding them in t
 .server restart #delay [#exit_code]
 ```
 
-The `.server shutdown/restart`, `.server idleshutdown/restart` commands all have an argument for **[#exit_code]**
+The `.server shutdown/restart`, `.server idleshutdown/restart` commands all have an argument for **[#exit_code]**.
 
 The default exit code for shutdown is always 0 and the default exit code for restart is always 2 if the argument is left blank.
 
