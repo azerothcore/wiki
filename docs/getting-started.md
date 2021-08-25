@@ -171,7 +171,7 @@ if you understand how basic statements such as `SELECT`, `UPDATE`, `INSERT` and 
 
 You can submit your improvement via PR. Read this guide:
 
-- [How to create a Pull Request (PR)](https://www.azerothcore.org/wiki/How-to-create-a-PR)
+- [How to create a Pull Request (PR)](https://www.azerothcore.org/wiki/how-to-create-a-pr)
 
 ## Start contributing!
 

@@ -1,9 +1,5 @@
 # Guide to Triaging
 
----
-tableofcontents: 1
----
-
 ## Introduction
 
 This guide is intended to give an overview of bug triaging for the AzerothCore project. It will cover goals, the triaging process, a summary of tools and sources, and other useful links. 
@@ -83,11 +79,11 @@ You can also set the perceived priority of an issue via tags. They are:
 | **Trivial** | Bugs that have no real impact on gameplay, typically cosmetic |
 
 ## Guidelines
-- **Use your judgement** We are there to exercise our best judgement, not just as photocopiers. We have access to tools and information that most players don't, so we should be able to see more deeply into a problem than they can and make decisions accordingly.
+- **Use your judgement.** We are there to exercise our best judgement, not just as photocopiers. We have access to tools and information that most players don't, so we should be able to see more deeply into a problem than they can and make decisions accordingly.
 - **Generalize the problem.** Try to generalise or broaden a problem. If one unusual kind of item, NPC or spell is not working correctly, try checking other items of the same general type to see if they are broken as well. Ideally we want to capture the broadest possible range of errors that we can.
 - **Be sceptical.** Users can feel very strongly about these issues. You will quite often see claims such as "it has always been this way" or "I've played my class since vanilla and this is how it should be." These assertions, with no other evidence, should be treated with an appropriate level of scepticism. An experienced player will probably know things about their class that you don't, but that does not mean their statements should be accepted as fact without any other evidence.
-- **Combine similar problems** - if you find related problems while searching, consider linking the two with a note. (It can be as simple as "See also <ticket URL>." This will help whoever ends up fixing the issue by telling them of similar issues.) 
-- **Try to prioritize** - more severe bugs over lesser ones, frequent bugs over rare ones. Counter-intuitively, newer issues may need priority over older ones, on the grounds that if a bug has lasted a long time without being fixed, there's a good chance it's not very important.
+- **Combine similar problems.** If you find related problems while searching, consider linking the two with a note. (It can be as simple as "See also <ticket URL>." This will help whoever ends up fixing the issue by telling them of similar issues.) 
+- **Try to prioritize.** More severe bugs over lesser ones, frequent bugs over rare ones. Counter-intuitively, newer issues may need priority over older ones, on the grounds that if a bug has lasted a long time without being fixed, there's a good chance it's not very important.
 - If you can't find any sources, at least say so instead of saying nothing.
 - **Be polite.** When someone submits a bug report, they are doing us a favour. They've taken the time to make a GitHub account and type up a bug report to try to help us. The least we can do is be professional and courteous in return. 
 
