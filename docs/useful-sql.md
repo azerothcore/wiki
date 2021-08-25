@@ -108,7 +108,7 @@ Handy for fixing static creatures.
 ```sql
 SELECT c.id, AVG(c.wander_distance)
 FROM `creature` c
-WHERE c.id = XXXX;
+WHERE c.id = XXXX AND c.wander_distance > 0;
 ```
 
 ### Find other members of a node pool
