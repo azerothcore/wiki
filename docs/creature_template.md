@@ -63,8 +63,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [RacialLeader](#racialleader)                   | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [movementId](#movementid)                       | INT UNSIGNED      | NO   |     | 0       |       |                                      |
 | [RegenHealth](#regenhealth)                     | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
-| [mechanic_immune_mask](#mechanic_immune_mask) | INT UNSIGNED      | NO   |     | 0       |       |                                      |
-| [spell_school_immune_mask](#spell_school_immune_mask) | INT UNSIGNED | NO | | 0
+| [mechanic_immune_mask](#mechanicimmunemask) | INT UNSIGNED      | NO   |     | 0       |       |                                      |
+| [spell_school_immune_mask](#spellschoolimmunemask) | INT UNSIGNED | NO | | 0
 | [flags_extra](#flags_extra)                    | INT UNSIGNED      | NO   |     | 0       |       |                                      |
 | [ScriptName](#scriptname)                       | char(64)              | NO   |     |         |       |                                      |
 | [VerifiedBuild](#verifiedbuild)                 | SMALLINT           | YES  |     | 0       |       |                                      |
