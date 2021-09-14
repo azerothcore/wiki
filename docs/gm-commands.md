@@ -96,6 +96,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |debug getvalue|3|`.debug $field [1\0]`|1: get uint32 value of $field of the selected unit; 0: get float value of $field of the selected unit|
 |debug hostil|1||Get hostile reference list of the selected unit.|
 |debug itemexpire|3|`.debug itemexpire $guid`|Delete the item with $guid.|
+|debug lfg|3|`.debug lfg`|Toggle debug mode for lfg. In debug mode GM can start lfg queue with one player.|
 |debug lootrecipient|3|`.debug lootrecipient`|Get loot recipient of the selected creature.|
 |debug los|3|`.debug los`|Show information about the line of sight status.|
 |debug Mod32Value|3|`.debug Mod32Value #field #value`|Add #value to field #field of your character.|
