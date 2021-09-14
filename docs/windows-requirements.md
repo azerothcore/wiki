@@ -15,7 +15,7 @@
 
 1. Git Extensions
 
-    1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
+    1. You will need Git installed. You can get the latest version here https://sourceforge.net/projects/gitextensions/
 
 1. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
 
