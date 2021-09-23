@@ -14,7 +14,7 @@ Note: dependencies above are already installed in our docker file
 
 ## Usage (with the AzerothCore dashboard):
 
-1. To enable the gperftools you need to compile with the `-DWITH_PERFTOOLS=ON` compiler flag. You can use CUSTOMOPTIONS in `config.sh` to set it for the dashboard compiler
+1. To enable the gperftools you need to compile with the `-DWITH_PERFTOOLS=ON` compiler flag. You can use CUSTOMOPTIONS in `config.sh` to set it for the dashboard compiler. You also need to set the `CTYPE` conf to at least `RelWithDebInfo` (faster but less info) or `Debug` (slower but more info).
 2. Configure the variables inside the `config.sh`, at the ` GOOGLE PERF TOOLS` section, accordingly to your needs.
 3. run the worldserver with the `./acore.sh run-worldserver`
 4. run `killall -12 worldserver` This command will start the monitoring process. 
