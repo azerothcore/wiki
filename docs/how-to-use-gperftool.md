@@ -1,4 +1,4 @@
-# GOOGLE PERF TOOLS
+# How to use GPERFTool
 
 AzerothCore integrates the google performance tools library that allows you to analyse the code execution of your application when it comes to CPU and Memory.
 In short: thread-friendly heap-checker, heap-profiler, and cpu-profiler.
