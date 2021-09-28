@@ -14,12 +14,12 @@ Note: dependencies above are already installed in our docker file
 
 ## Usage (with the AzerothCore dashboard):
 
-1. To enable the gperftools you need to compile with the `-DWITH_PERFTOOLS=ON` compiler flag. You can use CUSTOMOPTIONS in `config.sh` to set it for the dashboard compiler. You also need to set the `CTYPE` conf to at least `RelWithDebInfo` (faster but less info) or `Debug` (slower but more info).
+1. To enable the gperftools you need to compile with the `-DWITH_PERFTOOLS=ON -DNOJEM=ON -DWITH_DYNAMIC_LINKING=0` compiler flag. You can use CUSTOMOPTIONS in `config.sh` to set it for the dashboard compiler. You also need to set the `CTYPE` conf to at least `RelWithDebInfo` (faster but less info) or `Debug` (slower but more info).
 2. Configure the variables inside the `config.sh`, at the ` GOOGLE PERF TOOLS` section, accordingly to your needs.
-3. run the worldserver with the `./acore.sh run-worldserver`
-4. run `killall -12 worldserver` This command will start the monitoring process. 
-5. Run `killall -12 worldserver` again to stop the process when you want. At this time you will have the .prof file ready in the folder configured below.
-6. Run "google-pprof--callgrind <path/of/worldserver/bin> </path/of/prof/file>" This will generate a callgrind file that can be read with
+3. run the worldserver with the `sudo ./acore.sh run-worldserver`
+4. run `sudo killall -12 worldserver` This command will start the monitoring process. 
+5. Run `sudo killall -12 worldserver` again to stop the process when you want. At this time you will have the .prof file ready in the folder configured below.
+6. Run "google-pprof --callgrind <path/of/worldserver/bin> </path/of/prof/file> > worldserver.callgrind" This will generate a callgrind file that can be read with
 [QCacheGrind](https://sourceforge.net/projects/qcachegrindwin/), [KCacheGrind](http://kcachegrind.sourceforge.net/html/Home.html) or any other compatible tools
 
 This is what you will see (screenshot of KCacheGrind):
