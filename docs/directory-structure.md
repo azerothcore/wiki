@@ -52,7 +52,9 @@ azerothcore/
 ### data 
   All static data not compiled with the sources.
   
-  An example of data are the sql files, the assets etc. 
+  An example of data are the sql files, the assets etc.
+  
+  You can learn more about the SQL Directory [here](sql-directory.md).
     
 ### deps
   This is a domain-oriented folder structure. Therefore, all folders define a specific business domain . In this case each folder represent a standalone component that is needed by the project to work. All components are stored with a [monorepo strategy](https://en.wikipedia.org/wiki/Monorepo). All code that is generic and not related to the logic of Wotlk should be moved under a separated component of the deps layer and handled by a proper VCS.
