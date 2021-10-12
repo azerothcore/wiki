@@ -9,13 +9,6 @@ Todo lo que necesita para instalar los paquetes AUR es [*base-devel*](https://ww
 $ sudo pacman -S base-devel git
 ```
 
-### Instalar *ACE*
-Debe instalar el paquete [*ACE*](https://aur.archlinux.org/packages/ace/) de AUR:
-```
-git clone https://aur.archlinux.org/ace.git
-cd ace
-makepkg -si
-```
 ## Instalar *AzerothCore*
 Después de eso, puedes instalar el paquete [azerothcore](https://aur.archlinux.org/packages/azerothcore/) :
 

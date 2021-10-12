@@ -8,15 +8,17 @@ This table holds data the Core needs to handle variables (like timer for arena p
 
 **Structure**
 
-| Field   | Type          | Attributes | Key | Null | Default | Extra | Comment |
-|---------|---------------|------------|-----|------|---------|-------|---------|
-| [entry][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [value][2]   | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [comment][3] | text          | SIGNED     |     | YES  |         |       |         |
+| Field        | Type          | Attributes | Key | Null | Default | Extra | Comment |
+| -----------  | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]   | INT           | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [value][2]   | INT           | UNSIGNED   |     | NO   | 0       |       |         |
+| [comment][3] | TINYTEXT      | SIGNED     |     | YES  |         |       |         |
 
 [1]: #entry
 [2]: #value
 [3]: #comment
+
+**Description of the fields**
 
 ### entry
 

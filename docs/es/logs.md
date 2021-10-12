@@ -2,10 +2,13 @@
 
 [<-Volver a:Auth](database-auth.md)
 
+Leer en: [English :gb:](../logs) [Spanish :es:](logs)
+
 **Tabla \`logs\`**
 
 Esta tabla almacena los registros de la base de datos de tipo `Appender` en el archivo de configuración.
 Ejemplo de db appender:
+
 ```ini
 Appender.DB=3,5,0
 ```
@@ -13,12 +16,12 @@ Appender.DB=3,5,0
 **Estructura**
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------|--------------|------------|-----|------|---------|-------|---------|
+| ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [time][1]   | INT          | UNSIGNED   |     | NO   |         |       |         |
 | [realm][2]  | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
+| [type][3]   | VARCHAR(250) | SIGNED     |     | NO   |         |       |         |
 | [level][4]  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [string][5] | text         |            |     | YES  |         |       |         |
+| [string][5] | TEXT         | SIGNED     |     | YES  |         |       |         |
 
 [1]: #time
 [2]: #realm
@@ -49,7 +52,7 @@ Logger.server=4,Console Server
 Depende del LogLevel en authserver.conf
 
 | Valor | Descripción |
-|-------|-------------|
+| ----- | ----------- |
 | 1     | (Fatal)     |
 | 2     | (Error)     |
 | 3     | (Warning)   |

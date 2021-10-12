@@ -44,6 +44,6 @@ To update an account to security level 4 you need to manually edit the fields in
 ```sql
 UPDATE account_access AS access
 INNER JOIN account AS account ON access.id = account.id
-SET gmlevel = 4 WHERE name = '<user>';
+SET gmlevel = 4 WHERE username = '<user>';
 ```
 

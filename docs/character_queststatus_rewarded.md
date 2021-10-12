@@ -9,10 +9,10 @@ This table holds information of **every** rewarded quest to a player.
 **Structure**
 
 | Field       | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
-|-------------|------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | INT    | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [active][3] | TINYINT | UNSIGNED   |     | NO   | 1       |       |                          |
+| ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]   | INT        | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2]  | INT        | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
+| [active][3] | TINYINT    | UNSIGNED   |     | NO   | 1       |       |                          |
 
 [1]: #guid
 [2]: #quest
@@ -22,12 +22,12 @@ This table holds information of **every** rewarded quest to a player.
 
 ### guid
 
-The character GUID. See characters.guid
+The character guid. See [characters.guid](characters#guid).
 
 ### quest
 
-The quest ID of the rewarded quest. See quest\_template.id
+The quest ID of the rewarded quest. See [quest\_template.id](quest_template#id).
 
 ### active
 
-`field-no-description`
+`field-no-description|3`

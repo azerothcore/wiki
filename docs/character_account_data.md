@@ -8,12 +8,12 @@ Contains data about character settings.
 
 **Structure**
 
-| Field     | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|-----------|------------|------------|-----|------|---------|-------|---------|
-| [guid][1] | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [time][3] | BIGINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [data][4] | BLOB       | SIGNED     |     | NO   |         |       |         |
+| Field     | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| --------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [type][2] | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [time][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [data][4] | BLOB    | SIGNED     |     | NO   |         |       |         |
 
 [1]: #guid
 [2]: #type
@@ -24,12 +24,12 @@ Contains data about character settings.
 
 ### guid
 
-The character global unique identifier. See [Characters.guid](2129969.html#characters(table)-guid)
+The character global unique identifier. See [characters.guid](characters#guid).
 
 ### type
 
 | Value | Description                  |
-|-------|------------------------------|
+|------ | ---------------------------- |
 | 1     | Config cache per character   |
 | 3     | Bindings cache per character |
 | 5     | Macros cache per character   |
@@ -38,7 +38,7 @@ The character global unique identifier. See [Characters.guid](2129969.html#chara
 
 ### time
 
-Time of last modification in Unixtime
+Time of last modification in Unixtime.
 
 ### data
 

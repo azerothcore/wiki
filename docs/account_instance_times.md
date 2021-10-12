@@ -22,11 +22,11 @@ This table controls how many instances the account's characters have been in las
 
 ### accountId
 
-Account of the player. See [account.id](account_2130004.html#account-id).
+Account of the player. See [account.id](account#id).
 
 ### instanceId
 
-This is the instance.id which characters of this account has been past 5 hours.
+This is the instance id which characters of this account has been past 5 hours.
 
 ### releaseTime
 

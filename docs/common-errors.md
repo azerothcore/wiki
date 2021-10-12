@@ -128,11 +128,19 @@ Pull the source, recompile tools, copy the extractors to your wow binaries and r
 
 ---------------------------------------------------------
 
-**ACE00046*** I get an error when WorldServer is starting:
+**ACE00046** I get an error when WorldServer is starting:
 ```
 Used MySQL library version (8.0.19 id 80019) does not match the version id used to compile AzerothCore (id 80024)
 ```` 
-You need to use the exact version of libmysql.dll as the version you used to compile your source with. You get it from **C:\Program Files\MySQL\MySQL Server 8.x\lib\** or by following the [installation guide](https://www.azerothcore.org/wiki/windows-core-installation#compiling-the-source).
+You need to use the exact version of libmysql.dll as the version you used to compile your source with. You get it from **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** or by following the [installation guide](https://www.azerothcore.org/wiki/windows-core-installation#compiling-the-source).
+
+---------------------------------------------------------
+
+**ACE00047** I get an error when I am trying to start Worldserver or Authserver
+```
+This application was unable to start correctly (0xc000007b). Click OK to close the application.
+```
+This is usually due to mixing 32/64bit DLLs with your compiled binaries. Your DLLs needs to be the same bit version as your compiled binaries.
 
 ---------------------------------------------------------
 
@@ -186,6 +194,16 @@ Read [How to: Enable a 64-Bit, x664 hosted MSVC toolset on the command line. Mic
 C1001: An internal error has occurred in the compiler.
 ```
 Update your Visual Studio.
+
+---------------------------------------------------------
+
+**ACE00067** I can't generate my CMake files, I get:
+```
+Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
+```
+Locate your Boost folder
+1. Run the Bootstrap.bat file
+1. Run the b2.exe file 
 
 ## Extractor-related errors
 

@@ -75,13 +75,13 @@ Before you begin, create a new directory called **Build**. In this guide we will
         
         - OPENSSL_INCLUDE_DIR is the "include" folder in installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
 
-- If you get an error that Boost was found but not filesystem etc.
+- If you get an error that CMake *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
 
-    - In your Boost installation folder:
+    - Locate your Boost folder
 
-        - Run **bootstrap.bat**
-        
-        - Run **b2.exe** 
+        - Run the Bootstrap.bat file
+
+        - Run the b2.exe file 
 
 ### Compiling the Source
 

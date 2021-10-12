@@ -8,9 +8,9 @@ This table holds information on individual pet spells.
 
 **Structure**
 
-| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-|-------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
+| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]   | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [spell][2]  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier         |
 | [active][3] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                          |
 
@@ -22,11 +22,11 @@ This table holds information on individual pet spells.
 
 ### guid
 
-The pet GUID. See character\_pet.id
+The pet GUID. See [character\_pet.id](character_pet#id).
 
 ### spell
 
-The spell ID. See Spell.dbc column 1
+The spell ID. See [Spell.dbc](spell) column 1.
 
 ### active
 

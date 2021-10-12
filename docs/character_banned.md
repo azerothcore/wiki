@@ -9,13 +9,13 @@ This table lists all of the characters that have been banned along with the date
 **Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-|----------------|--------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]      | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [bandate][2]   | INT      | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [unbandate][3] | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]      | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
 | [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
 | [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
-| [active][6]    | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                          |
+| [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                          |
 
 [1]: #guid
 [2]: #bandate
@@ -28,7 +28,7 @@ This table lists all of the characters that have been banned along with the date
 
 ### guid
 
-The character guid. See [characters.guid](2129969.html#characters(table)-id).
+The character guid. See [characters.guid](characters#guid).
 
 ### bandate
 

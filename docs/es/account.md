@@ -2,6 +2,8 @@
 
 [<-Volver a:Auth](database-auth.md)
 
+Leer en: [English :gb:](../account) [Spanish :es:](account)
+
 **Tabla \`account\`**
 
 **Estructura**
@@ -33,22 +35,21 @@
 | [recruiter][23]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
 | [totaltime][24]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
 
-
 [1]: #id
 [2]: #username
 [3]: #salt
 [4]: #verifier
-[5]: #session_key
-[6]: #totp_secret
+[5]: #sessionkey
+[6]: #totpsecret
 [7]: #email
-[8]: #reg_mail
+[8]: #regmail
 [9]: #joindate
-[10]: #last_ip
-[11]: #last_attempt_ip
-[12]: #failed_logins
+[10]: #lastip
+[11]: #lastattemptip
+[12]: #failedlogins
 [13]: #locked
-[14]: #lock_country
-[15]: #last_login
+[14]: #lockcountry
+[15]: #lastlogin
 [16]: #online
 [17]: #expansion
 [18]: #mutetime
@@ -59,7 +60,7 @@
 [23]: #recruiter
 [24]: #totaltime
 
-## Descripción de los campos
+**Descripción de los campos**
 
 ### id
 
@@ -109,11 +110,11 @@ Para obtener el verificador hay que calcular:
 
 [VerifySRP6Login.php](https://gist.github.com/Treeston/34d9249fb467dddc11b2568e74f8cb1e)
 
-### session_key
+### session\_key
 
 `campo-sin-descripción|5`
 
-### totp_secret
+### totp\_secret
 
 La clave del autentificador.
 
@@ -127,7 +128,7 @@ Enlace de implementación en Wikipedia para la API de Google Authenticator
 
 La dirección de correo electrónico asociada a esta cuenta.
 
-### reg_mail
+### reg\_mail
 
 La dirección de correo electrónico de registro asociada a esta cuenta.
 
@@ -135,11 +136,11 @@ La dirección de correo electrónico de registro asociada a esta cuenta.
 
 La fecha de creación de la cuenta.
 
-### last_ip
+### last\_ip
 
 La última IP utilizada por la persona que se conectó a la cuenta.
 
-### failed_logins
+### failed\_logins
 
 El número de inicios de sesión fallidos en la cuenta.
 
@@ -147,7 +148,7 @@ El número de inicios de sesión fallidos en la cuenta.
 
 Booleano 0 o 1 que controla si la cuenta ha sido bloqueada o no. Esto se puede controlar con el comando GM ".account lock". Si está bloqueada (1), el usuario sólo puede iniciar sesión con su [last_ip][11]. Si está desbloqueado (0), el usuario puede conectarse desde cualquier IP, y su last_ip se actualizará si es diferente. ".Ban account" no la bloquea.
 
-### last_login
+### last\_login
 
 La fecha en la que se inició sesión por última vez.
 

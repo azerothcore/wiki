@@ -34,9 +34,37 @@ This table is used to store the tutorial state of all the accounts.
 
 ### guid
 
-Account of the player. See [account.id](account_2130004.html#account-id).
+Account of the player. See [account.id](account#id).
 
-### tut0-7
+### tut0
+
+`field-no-description|2`
+
+### tut1
+
+`field-no-description|3`
+
+### tut2
+
+`field-no-description|4`
+
+### tut3
+
+`field-no-description|5`
+
+### tut4
+
+`field-no-description|6`
+
+### tut5
+
+`field-no-description|7`
+
+### tut6
+
+`field-no-description|8`
+
+### tut7
 
 These values 32bits flags. So 8 x 32bits values makes 256 bits available to store 256 tutorial messages status.
 

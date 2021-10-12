@@ -4,6 +4,12 @@ redirect_from: "/How-to-create-a-PR"
 
 # How to create a PR
 
+This guide explains how to open PRs to submit any kind of fixes (C++, SQL, etc...).
+
+If you happen to submit only DB fixes, you might give it a try to our new [simplified way of opening a PR containing SQL code](https://www.azerothcore.org/wiki/how-to-create-a-db-pr).
+
+## Do only ONCE: create and clone your AzerothCore fork
+
 ### 1. Create a fork of AzerothCore
 
 You need to be signed on [github.com](https://github.com/). If you don't have an account yet, create one.
@@ -39,6 +45,37 @@ cd azerothcore-wotlk
 
 ![Access the AzerothCore directory](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/4.png)
 
+## Creating a new PR
+
+### 1. Update your fork on GitHub
+
+Open your browser and navigate to your fork on GitHub (change `YourUsername` with your actual GitHub username):
+
+**https://github.com/YourUsername/azerothcore-wotlk**
+
+If your `master` branch is not up to date with latest AzerothCore, you'll see something like:
+
+`This branch is XX commits behind azerothcore:master`
+
+![AzerothCore update fork](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/update-fork-1.png)
+
+to update it, click on **Fetch upstream** and then **Fetch and merge**.
+
+As a result, your fork's `master` branch should say:
+
+`This branch is even with azerothcore:master`
+
+![AzerothCore update fork](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/update-fork-2.png)
+
+### 2. Update your local clone
+
+In the previous step you just updated your *remote* fork, but you have to sync your local clone as well.
+
+Open your terminal inside the `azerothcore-wotlk` directory and run:
+
+```
+git checkout master; git pull
+```
 
 ### 3. Create a new branch
 
@@ -116,6 +153,8 @@ git add data/sql/updates/pending_db_world/rev_XXXXXXXXXXXX.sql
 
 ### 6. Commit & Push your changes
 
+#### Do only ONCE: git config
+
 First of all make sure to use the AC commit template (this should only be necessary once):
 ```
 git config --local commit.template ".git_commit_template.txt"
@@ -125,6 +164,8 @@ When you will write your commit message, it will use the default text editor `Vi
 ```
 git config --global core.editor "nano"
 ```
+
+#### Git commit
 
 Then commit your changes by typing:
 ```

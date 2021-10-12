@@ -4,19 +4,17 @@
 
 **The \`guild\_eventlog\` table**
 
-`table-no-description`
-
 **Structure**
 
-| Field            | Type       | Attributes | Key | Null | Default | Extra | Comment                                     |
-|------------------|------------|------------|-----|------|---------|-------|---------------------------------------------|
-| [guildid][1]     | INT    | SIGNED     | PRI | NO   | NULL    |       | Guild Identificator                         |
-| [LogGuid][2]     | INT    | SIGNED     | PRI | NO   | NULL    |       | Log record identificator - auxiliary column |
-| [EventType][3]   | TINYINT | SIGNED     |     | NO   | NULL    |       | Event type                                  |
-| [PlayerGuid1][4] | INT    | SIGNED     |     | NO   | NULL    |       | Player 1                                    |
-| [PlayerGuid2][5] | INT    | SIGNED     |     | NO   | NULL    |       | Player 2                                    |
-| [NewRank][6]     | TINYINT | SIGNED     |     | NO   | NULL    |       | New rank(in case promotion/demotion)        |
-| [timestamp][7]   | BIGINT | SIGNED     |     | NO   | NULL    |       | Event UNIX time                             |
+| Field            | Type    | Attributes | Key | Null | Default | Extra | Comment                                     |
+| ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------------- |
+| [guildid][1]     | INT     | UNSIGNED   | PRI | NO   |         |       | Guild Identificator                         |
+| [LogGuid][2]     | INT     | UNSIGNED   | PRI | NO   |         |       | Log record identificator - auxiliary column |
+| [EventType][3]   | TINYINT | UNSIGNED   |     | NO   |         |       | Event type                                  |
+| [PlayerGuid1][4] | INT     | UNSIGNED   |     | NO   |         |       | Player 1                                    |
+| [PlayerGuid2][5] | INT     | UNSIGNED   |     | NO   |         |       | Player 2                                    |
+| [NewRank][6]     | TINYINT | UNSIGNED   |     | NO   |         |       | New rank(in case promotion/demotion)        |
+| [timestamp][7]   | BIGINT  | UNSIGNED   |     | NO   |         |       | Event UNIX time                             |
 
 [1]: #guildid
 [2]: #logguid
@@ -30,16 +28,16 @@
 
 ### guildid
 
-`Guild Identificator`
+Guild Identificator.
 
 ### LogGuid
 
-`Log record identificator - auxiliary column`
+Log record identificator - auxiliary column.
 
 ### EventType
 
 | Value | Description                         |
-|-------|-------------------------------------|
+| ----- | ----------------------------------- |
 | 1     | GUILD\_EVENT\_LOG\_INVITE\_PLAYER   |
 | 2     | GUILD\_EVENT\_LOG\_JOIN\_GUILD      |
 | 3     | GUILD\_EVENT\_LOG\_PROMOTE\_PLAYER  |
@@ -49,16 +47,16 @@
 
 ### PlayerGuid1
 
-`GUID of Player1`
+GUID of Player1.
 
 ### PlayerGuid2
 
-`GUID of Player2`
+GUID of Player2.
 
 ### NewRank
 
-`New rank (in case of promotion/demotion)`
+New rank (in case of promotion/demotion).
 
 ### timestamp
 
-`Event UNIX time`
+Event UNIX time.

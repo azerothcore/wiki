@@ -1,7 +1,31 @@
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [bugreport](bugreport)
+# bugreport
 
-Column | Type | Description
---- | --- | ---
-Id | INT UNSIGNED | 
-Type | longtext | 
-Content | longtext | 
+[<-Back-to:Characters](database-characters.md)
+
+**The \`bugreport\` table**
+
+**Structure**
+
+| Field          | Type     | Attributes | Key | Null | Default | Extra          | Comment    |
+| -------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ---------- |
+| [id][1]        | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Identifier |
+| [type][2]      | LONGTEXT | SIGNED     |     | NO   |         |                |            |
+| [content][3]   | LONGTEXT | SIGNED     |     | NO   |         |                |            | 
+
+[1]: #id
+[2]: #type
+[3]: #content
+
+**Description of the fields**
+
+### id
+
+`field-no-description|1`
+
+### type
+
+`field-no-description|2`
+
+### content
+
+`field-no-description|3`

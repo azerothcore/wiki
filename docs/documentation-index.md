@@ -1,3 +1,7 @@
+---
+redirect_from: /documentation_index
+---
+
 # Documentation index
 
 ## How to install
@@ -5,12 +9,19 @@
 * [Traditional setup guide](installation.md)
 * [Docker setup guide](install-with-docker.md)
 
+## Help
+
+* [FAQ](faq)
+* [Common Errors](common-errors)
+
 ## Documentation
 
 * [Bash system](bash_system.md)
 * [Bitwise operations](bit-and-bytes-tutorial.md)
+* [Clang Format](clang-format)
 * [CMake options](cmake-options.md)
 * [Directory structure](directory-structure.md)
+* [Exit Codes](exitcodes.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)
 * [IP2LOCATION](ip2location.md)
 * [Logging Configuration](logging-configuration.md)
@@ -36,6 +47,8 @@
 
 * [How to import DBC data into SQL](how-to-import-dbc-data-in-db.md)
 * [Run Worldserver and Authserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
+* [Useful SQL Snippets](useful-sql.md)
+* [How to use gperftool to analyse your app](how-to-use-gperftool.md)
 
 ## External resources
 

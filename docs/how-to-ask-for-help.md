@@ -4,7 +4,7 @@ redirect_from: "/How-to-ask-for-help"
 
 # How to ask for help
 
-### Need help?
+## Need help?
 
 Do you need support with AzerothCore? No worries, we're happy to help you!
 
@@ -12,7 +12,11 @@ Whether you have troubles installing AzerothCore, or you want to ask how-to or g
 
 We just want you to ask for support in the **proper way**. Please read this document before asking any help.
 
-### Why is the "proper way" so important?
+## FAQ & Common Errors
+
+First of all we recommend that you read the [Frequently Asked Questions](faq) and the [Common Errors](common-errors) to possibly find the solution to your issue.
+
+## Why is the "proper way" so important?
 
 If you ask a question directly in the chat, it can get easily lost and you might never be helped unless there is someone online in that specific moment that is able to help you.
 
@@ -22,7 +26,7 @@ Also, most of the questions asked by users are repetitive. So we need an efficie
 
 Sounds complicated? Not at all! **Just keep reading**.
 
-### Bug reports
+## Bug reports
 
 A game feature (e.g. spell/quest/talent/etc..) doesn't work as it is supposed to?
 
@@ -33,7 +37,7 @@ Example:
 
 If after searching for an existing issue report, you didn't find any, then you should [open a new issue](https://github.com/azerothcore/azerothcore-wotlk/issues/new).
 
-### Other support requests
+## Other support requests
 
 - Getting an error while installing AzerothCore?
 - Is there something in the documentation that is not clear for you?
@@ -61,7 +65,7 @@ For example, are you getting an error from mysql? Search it under the **[azeroth
 Oh, there is already a question! And it has an answer! Let's open it!
 
 
-## How to ask new questions
+### How to ask new questions
 
 What if you can't find a question related to my specific problem? **Let's [open a new question](https://stackoverflow.com/questions/ask?tags=azerothcore)**.
 
@@ -74,7 +78,7 @@ Remember to:
 - Don't forget the **[azerothcore]** tag!
   - ![image](https://user-images.githubusercontent.com/75517/51132313-364da380-1832-11e9-8483-3bb6898d438a.png)
 
-- It's useful to add **4 more tags** according to the category of your question (e.g. `c++`, `docker`, `mysql`, `sql`, etc... ).
+- It's useful to add **4 more tags** according to the category of your question (e.g. `c++`, `cmake`, `docker`, `mysql`, `sql`, etc... ).
 
 - Link your question in the #support-general channel of our [Discord chat](https://discordapp.com/invite/gkt4y2x)
 
@@ -88,4 +92,3 @@ Do you have anything to share with the community? Do you feel like some informat
 Ask a question on StackOverflow and then **answer it yourself**! Is it allowed? Yes it is! Read this:
 
 [https://stackoverflow.com/help/self-answer](https://stackoverflow.com/help/self-answer)
-

@@ -15,13 +15,13 @@
 #### Ubuntu with MariaDB 10.x
 
 ```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libace-6.* libace-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
+sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
 ```
 
 #### Ubuntu with MySQL 8.x
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libace-6.* libboost-all-dev libace-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -43,7 +43,7 @@ sudo apt install -y install libboost1.74-dev
 #### Debian 10
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
