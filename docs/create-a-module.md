@@ -33,7 +33,7 @@ Note: we suggest to use the [directory structure](Directory-Structure) standards
 
   For example ( Assuming you’ve created an src folder ):
 
-  **src/my_custom_loader.h**
+  **my_custom_loader.cpp**
 
  ```cpp
 // From SC
