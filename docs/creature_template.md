@@ -5,9 +5,9 @@ This table contains the description of creatures. Each spawned creature is an in
 | Field                                              | Type               | Null | Key | Default | Extra | Comment                              |
 | -------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | ------------------------------------ |
 | [entry](#entry)                                    | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |                                      |
-| [difficulty_entry_1](#difficulty_entry_x)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [difficulty_entry_2](#difficulty_entry_x)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [difficulty_entry_3](#difficulty_entry_x)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [difficulty_entry_1](#difficultyentryx)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [difficulty_entry_2](#difficultyentryx)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [difficulty_entry_3](#difficultyentryx)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [KillCredit1](#killcredit1)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [KillCredit2](#killcredit2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [modelid1](#modelidx)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
@@ -17,15 +17,15 @@ This table contains the description of creatures. Each spawned creature is an in
 | [name](#name)                                      | char(100)          | NO   | MUL | 0       |       |                                      |
 | [subname](#subname)                                | char(100)          | YES  |     | (NULL)  |       |                                      |
 | [IconName](#iconname)                              | char(100)          | YES  |     | (NULL)  |       |                                      |
-| [gossip_menu_id](#gossip_menu_id)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [gossip_menu_id](#gossipmenuid)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [minlevel](#minlevel)                              | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
 | [maxlevel](#maxlevel)                              | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
 | [exp](#exp)                                        | SMALLINT           | NO   |     | 0       |       |                                      |
 | [faction](#faction)                                | SMALLINT UNSIGNED  | NO   |     | 0       |       |                                      |
 | [npcflag](#npcflag)                                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [speed_walk](#speed_walk)                          | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
-| [speed_run](#speed_run)                            | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
-| [detection_range](#detection_range)                | FLOAT              | NO   |     | 20      |       |                                      |
+| [speed_walk](#speedwalk)                          | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
+| [speed_run](#speedrun)                            | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
+| [detection_range](#detectionrange)                | FLOAT              | NO   |     | 20      |       |                                      |
 | [scale](#scale)                                    | FLOAT              | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                            | TINYINT            | NO   |     | 0       |       |                                      |
@@ -33,17 +33,17 @@ This table contains the description of creatures. Each spawned creature is an in
 | [RangeAttackTime](#rangeattacktime)                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [BaseVariance](#basevariance)                      | FLOAT              | NO   |     | 1       |       |                                      |
 | [RangeVariance](#rangevariance)                    | FLOAT              | NO   |     | 1       |       |                                      |
-| [unit_class](#unit_class)                          | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [unit_flags](#unit_flags)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [unit_flags2](#unit_flags2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [unit_class](#unitclass)                          | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
+| [unit_flags](#unitflags)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [unit_flags2](#unitflags2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [dynamicflags](#dynamicflags)                      | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [family](#family)                                  | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_type](#trainer_type)                      | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_spell](#trainer_spell)                    | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [trainer_class](#trainer_class)                    | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [trainer_race](#trainer_race)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
+| [trainer_type](#trainertype)                      | TINYINT            | NO   |     | 0       |       |                                      |
+| [trainer_spell](#trainerspell)                    | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [trainer_class](#trainerclass)                    | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
+| [trainer_race](#trainerrace)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [type](#type)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [type_flags](#type_flags)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [type_flags](#typeflags)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [pickpocketloot](#pickpocketloot)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [skinloot](#skinloot)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
