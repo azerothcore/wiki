@@ -13,6 +13,7 @@ redirect_from: /documentation_index
 
 * [FAQ](faq)
 * [Common Errors](common-errors)
+* [Standard Operating Procedure](standard-operating-procedure)
 
 ## Documentation
 
