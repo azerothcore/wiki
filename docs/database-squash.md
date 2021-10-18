@@ -42,37 +42,24 @@ There is no fixed timetable. We typically do it once every 1 or 2 years, however
 
 ## How to do it (for project maintainers)
 
-During this process NO ONE should push anything to the master branch.
-
-1) **Commit** a new release by modifying the version in `acore.json` and in the `version` table of the DB world, removing `dev` [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/2742a2ed37bec33544ca496b883ed50d6a50693e)
-
-2) Wait that the pending update file fromt the previous commit is been processed by the bot [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/1fc22a74088e235e78fa02decbaf0864899477d7).
+1) Wait that the pending update file is been processed by the bot [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/d9449c7a9954c3b973153dc5bf06a441c9036cb4).
    Now draft a new release on GitHub. **NOTE**: this will be the "release commit".
 
-3) Now pull and update your local DB to the latest version. **IMPORTANT: Make sure your DB is perfectly clean.**
+2) Now pull and update your local DB to the latest version. **IMPORTANT: Make sure your DB is perfectly clean.**
   It's better to destroy it and install a fresh one at this point. Do **NOT** commit anything until specified.
 
-4) Do the actual squash action, by using the script located at `bin/acore-db-export`. This will basically backup your DBs into the base files.
+3) Do the actual squash action, by using the script located at `bin/acore-db-export`. This will basically backup your DBs into the base files.
 
-5) Move the ` data/sql/updates/db_*` folders under a new folder inside `data/sql/archive` having the name of the release (e.g. 2.x)
+4) Move the `data/sql/updates/db_*` folders under a new folder inside `data/sql/archive/db_*` having the name of the release (e.g. 2.x)
 
-6) Start a new development version by modifying the version in `acore.json` and in the `version` table of the DB world, adding the `dev` suffix to the next version
-
-7) Commit the changes from steps 4-6 together [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/0858526c9a678e90ffa830182c25434b36fee2c5)
-
-8) Fix the SQL chain: https://github.com/azerothcore/azerothcore-wotlk/commit/3cdc5a45a184341536465df4c25ee4e85ec250fd
-
-9) Announce to the users that a new release is available so they have to update their DBs following a special procedure (see below)
+5) Start a new development version by modifying the version in `acore.json` and in the `version` table of the DB world, adding the `dev` suffix to the next version
 
 ## How to update an existing server from a previous release
 
 The existing servers will have to:
 
 - `git pull`
-- Checkout the release commit (`git checkout COMMIT_HASH`)
-- Update their DB following the standard procedure
-- Checkout the latest master version (`git pull` again)
-- Update their DB following the standard procedure (yes, again)
-
-Example: [Upgrade-from-pre-2.0.0-to-latest-master](https://www.azerothcore.org/wiki/Upgrade-from-pre-2.0.0-to-latest-master)
-
+- In config files (`authserver.conf` and `worldserver.conf`) just set `Updates.EnableDatabases` for all DB.
+- These options are already enabled by default, you do not need to do anything if you have not touched them 
+- For `worldserver.conf` - `Updates.EnableDatabases = 7`
+- For `authserver.conf` - `Updates.EnableDatabases = 1`
