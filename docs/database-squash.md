@@ -54,6 +54,31 @@ There is no fixed timetable. We typically do it once every 1 or 2 years, however
 
 5) Start a new development version by modifying the version in `acore.json` and in the `version` table of the DB world, adding the `dev` suffix to the next version
 
+6) Need set all updates state to `ARCHIVED`. Create new `.sql` file (**WITHOUT** pending system) in `./data/sql/updates/db_*`. For `db_world` need update `db_version` and `cache_id`.
+Files name
+
+Example for `auth`:
+- File name `2021_10_14_01_auth.sql`
+```sql
+-- ACDB 335.5-dev auth
+UPDATE `updates` SET `state`='ARCHIVED';
+```
+
+Example for `characters`:
+- File name `2021_10_14_01_characters.sql`
+```sql
+-- ACDB 335.5-dev characters
+UPDATE `updates` SET `state`='ARCHIVED';
+```
+
+Example for `world`:
+- File name `2021_10_14_01_world.sql`
+```sql
+-- ACDB 335.5-dev world
+UPDATE `version` SET `db_version`='ACDB 335.5-dev', `cache_id`=5 LIMIT 1;
+UPDATE `updates` SET `state`='ARCHIVED';
+```
+
 ## How to update an existing server from a previous release
 
 The existing servers will have to:
