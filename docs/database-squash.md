@@ -42,7 +42,7 @@ There is no fixed timetable. We typically do it once every 1 or 2 years, however
 
 ## How to do it (for project maintainers)
 
-1) Wait that the pending update file is been processed by the bot [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/d9449c7a9954c3b973153dc5bf06a441c9036cb4).
+1) Wait that the any existing pending update file is been processed by the bot [(example)](https://github.com/azerothcore/azerothcore-wotlk/commit/d9449c7a9954c3b973153dc5bf06a441c9036cb4).
    Now draft a new release on GitHub. **NOTE**: this will be the "release commit".
 
 2) Now pull and update your local DB to the latest version. **IMPORTANT: Make sure your DB is perfectly clean.**
