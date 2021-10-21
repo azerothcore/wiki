@@ -141,15 +141,16 @@ There are three DLL files that need to be manually added to this folder, and you
 
 OpenSLL _before_ version 1.1.0:
 
-**libeay32.dll**
+**libeay32.dll** and
 **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*.
 
 OpenSSL 1.1.0 and more recent installed, names have changed:
-
-**libssl-1_1.dll**
+For 32-bit version:
+**libssl-1_1.dll** and 
 **libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
 
-**libssl-1_1-x64.dll**
+For 64-bit version:
+**libssl-1_1-x64.dll** and
 **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
 
 #### About compilation log and report
