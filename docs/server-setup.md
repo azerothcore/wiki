@@ -23,6 +23,8 @@ Github link:
 
 <a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v12) - from 20/09/2021 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
 
+After downloading all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
+
 <!-- this link contains v10 -->
 <!-- Mega link:
 
@@ -47,7 +49,7 @@ By default you will compile your core with tools and you will get the following 
 
 Place the files with your World of Warcraft binary (wow.exe on windows) and run them.
 
-After extracting all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify directory where you want to keep them changing DataDir value in worldserver.conf file.
+After extracting all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
 
 If you use extractors from other projects or branches it is almost certain that your AzerothCore will not recognize the extracted data or even work!
 
@@ -69,6 +71,18 @@ Extract V4.00 2012_02. Work complete. No errors.
 1. Make copies of both .dist files.
 
 1. From each copy, remove the .dist part.
+
+1. Open the worldserver.conf file and set your DataDir to your DataDirectory. It should look similar to this:
+```
+#
+#    DataDir
+#        Description: Data directory setting.
+#        Important:   DataDir needs to be quoted, as the string might contain space characters.
+#        Example:     "/home/youruser/azerothcore/data"
+#        Default:     "."
+
+DataDir = "C:\Build\bin\RelWithDebInfo\Data"
+```
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
