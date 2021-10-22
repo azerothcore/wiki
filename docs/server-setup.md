@@ -17,13 +17,13 @@ Some files are optional but highly recommended:
 | mmaps | HIGHLY RECOMMENDED |
 | cameras | Recommended |
 
+## Download
+
 If you do not want to extract these files using the extractors you can find download links here:
 
 Github link:
 
 <a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v12) - from 20/09/2021 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
-
-After downloading all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
 
 <!-- this link contains v10 -->
 <!-- Mega link:
@@ -31,7 +31,15 @@ After downloading all neccessary files, create a folder called **Data** within t
 <a href="https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ" target="_blank">DBC & maps for all versions</a> (ALTERNATIVE)
 -->
 
-## Extractors
+1. Download the files above.
+
+1. Create a new folder within the build folder called **Data**. i.e **E:\AzerothCore\RelWithDebInfo\Data**
+
+1. Extract the files from the zip file and place them within the **Data** folder.
+
+1. Edit your the [DataDir](#config-files-worldserver-conf---authserver-conf) config option to the location of your folder.
+
+## Extractors (Not needed if you downloaded the files above)
 
 If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
 
@@ -66,23 +74,19 @@ Done!
 Extract V4.00 2012_02. Work complete. No errors.
 ```
 
-## worldserver.conf / authserver.conf
+### Trouble Shooting
+
+"**Unable to open wmo_list.txt! Nothing extracted.**"
+
+You need to run Mapextractor.exe before the makevmaps_simple.bat.
+
+## Config Files worldserver.conf / authserver.conf
+
+### Creating the config files
 
 1. Make copies of both .dist files.
 
 1. From each copy, remove the .dist part.
-
-1. Open the worldserver.conf file and set your DataDir to your DataDirectory. It should look similar to this:
-```
-#
-#    DataDir
-#        Description: Data directory setting.
-#        Important:   DataDir needs to be quoted, as the string might contain space characters.
-#        Example:     "/home/youruser/azerothcore/data"
-#        Default:     "."
-
-DataDir = "C:\Build\bin\RelWithDebInfo\Data"
-```
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
@@ -111,16 +115,15 @@ The following steps must be verified:
 
     - create an unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
 
+### Updating DataDir
+
+1. In your worldserver.conf file locate **DataDir** option.
+
+1. Edit it to the path of your folder. i.e **E:\AzerothCore\RelWithDebInfo\Data**
 
 *Pro Tip: For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server.*
 
 *NOTE: The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice.*
-
-## Trouble Shooting
-
-"**Unable to open wmo_list.txt! Nothing extracted.**"
-
-You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
 <br>
 
