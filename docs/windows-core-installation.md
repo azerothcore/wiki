@@ -145,8 +145,9 @@ OpenSLL _before_ version 1.1.0:
 **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*.
 
 OpenSSL 1.1.0 and more recent installed, names have changed:
+
 For 32-bit version:
-**libssl-1_1.dll** and 
+**libssl-1_1.dll** and
 **libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
 
 For 64-bit version:
