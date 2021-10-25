@@ -17,17 +17,29 @@ Some files are optional but highly recommended:
 | mmaps | HIGHLY RECOMMENDED |
 | cameras | Recommended |
 
+## Download
+
 If you do not want to extract these files using the extractors you can find download links here:
 
 Github link:
 
-[Full data (v10) - from 05/04/2021 to now](https://github.com/wowgaming/client-data/releases/download/v10/data.zip) (Used in the automatic downloader script in `/apps/`)
+<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v12) - from 20/09/2021 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
 
-Mega link:
+<!-- this link contains v10 -->
+<!-- Mega link:
 
-[DBC & maps for all versions](https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ)
+<a href="https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ" target="_blank">DBC & maps for all versions</a> (ALTERNATIVE)
+-->
 
-## Extractors
+1. Download the files above.
+
+1. Create a new folder within the build folder called **Data**. i.e **E:\AzerothCore\RelWithDebInfo\Data**
+
+1. Extract the files from the zip file and place them within the **Data** folder.
+
+1. Edit your the [DataDir](#config-files-worldserver-conf---authserver-conf) config option to the location of your folder.
+
+## Extractors (Not needed if you downloaded the files above)
 
 If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
 
@@ -45,7 +57,7 @@ By default you will compile your core with tools and you will get the following 
 
 Place the files with your World of Warcraft binary (wow.exe on windows) and run them.
 
-After extracting all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify directory where you want to keep them changing DataDir value in worldserver.conf file.
+After extracting all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
 
 If you use extractors from other projects or branches it is almost certain that your AzerothCore will not recognize the extracted data or even work!
 
@@ -62,7 +74,15 @@ Done!
 Extract V4.00 2012_02. Work complete. No errors.
 ```
 
-## worldserver.conf / authserver.conf
+### Trouble Shooting
+
+"**Unable to open wmo_list.txt! Nothing extracted.**"
+
+You need to run Mapextractor.exe before the makevmaps_simple.bat.
+
+## Config Files worldserver.conf / authserver.conf
+
+### Creating the config files
 
 1. Make copies of both .dist files.
 
@@ -95,16 +115,15 @@ The following steps must be verified:
 
     - create an unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
 
+### Updating DataDir
+
+1. In your worldserver.conf file locate **DataDir** option.
+
+1. Edit it to the path of your folder. i.e **E:\AzerothCore\RelWithDebInfo\Data**
 
 *Pro Tip: For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server.*
 
 *NOTE: The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice.*
-
-## Trouble Shooting
-
-"**Unable to open wmo_list.txt! Nothing extracted.**"
-
-You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
 <br>
 
@@ -112,7 +131,11 @@ You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 

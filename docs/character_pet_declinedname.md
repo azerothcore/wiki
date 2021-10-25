@@ -4,14 +4,12 @@
 
 **The \`character\_pet\_declinedname\` table**
 
-`table-no-description`
-
 **Structure**
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|--------------------|-------------|------------|-----|------|---------|-------|---------|
-| [id][1]            | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [owner][2]         | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [id][1]            | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [owner][2]         | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 | [genitive][3]      | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
 | [dative][4]        | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
 | [accusative][5]    | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |

@@ -1,34 +1,34 @@
-# gm\_surveys
+# gm\_survey
 
 [<-Back-to:Characters](database-characters.md)
 
-**The \`gm\_surveys\` table**
-
-`table-no-description`
+**The \`gm\_survey\` table**
 
 **Structure**
 
-| Field                | Type     | Attributes | Key | Null | Default        | Extra | Comment |
-|----------------------|----------|------------|-----|------|----------------|-------|---------|
-| [surveyid][1]        | INT  | SIGNED     | PRI | NO   | Auto Increment |       |         |
-| [player][2]          | INT  | UNSIGNED   |     | NO   | 0              |       |         |
-| [mainSurvey][3]      | INT  | UNSIGNED   |     | NO   | 0              |       |         |
-| [overall_comment][4] | longtext | SIGNED     |     | NO   |                |       |         |
-| [timestamp][5]       | INT  | UNSIGNED   |     | NO   | 0              |       |         |
+| Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
+| --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [surveyId][1]   | INT      | UNSIGNED   | PRI | NO   |         | Auto Increment |         |
+| [guid][2]       | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| [mainSurvey][3] | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| [comment][4]    | LONGTEXT | SIGNED     |     | NO   |         |                |         |
+| [createTime][5] | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| [maxMMR][6]     | SMALLINT | SIGNED     |     | NO   |         |                |         |
 
 [1]: #surveyid
-[2]: #player
+[2]: #guid
 [3]: #mainsurvey
-[4]: #overall_comment
-[5]: #timestamp
+[4]: #comment
+[5]: #createtime
+[6]: #maxmmr
 
 **Description of the fields**
 
-### surveyid
+### surveyId
 
 `field-no-description|1`
 
-### player
+### guid
 
 `field-no-description|2`
 
@@ -36,10 +36,14 @@
 
 `field-no-description|3`
 
-### overall\_comment
+### comment
 
 `field-no-description|4`
 
-### timestamp
+### createTime
 
 `field-no-description|5`
+
+### maxMMR
+
+`field-no-description|6`

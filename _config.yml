@@ -60,13 +60,21 @@ google_cse_token:
 #
 markdown: GFM
 highlighter: rouge
+encoding: UTF-8
 
 defaults:
  -
     scope:
+      locale: "en"
       path: "docs"
     values:
       permalink: /:basename
+ -
+    scope:
+      locale: "es"
+      path: "docs/es"
+    values:
+      permalink: /es/:basename
  -
     scope:
       path: "" # an empty string here means all files in the project

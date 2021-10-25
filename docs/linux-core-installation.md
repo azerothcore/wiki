@@ -52,7 +52,7 @@ cd build
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
-Parameter explanation for advanced users [CMake options](CMake-options.md).
+Parameter explanation for advanced users [CMake options](cmake-options.md).
 
 At this point, you must be in your "build/" directory.
 
@@ -65,7 +65,7 @@ echo $HOME
 **Note**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
 
 ```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=1
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS=0 -DSCRIPTS=static
 ```
 
 To know the amount of cores available.
@@ -88,7 +88,11 @@ make install
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 

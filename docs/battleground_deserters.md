@@ -4,15 +4,15 @@
 
 **The \`battleground\_deserters\` table**
 
-This table holds datas about BattleGrounds deserters. To enable storing this kind of informations, set **Battleground . TrackDeserters . Enable   =   1** in **worldserver.config** file.
+This table holds datas about BattleGrounds deserters. To enable storing this kind of informations, set **Battleground.TrackDeserters.Enable = 1** in **worldserver.config** file.
 
 **Structure**
 
-| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
-|---------------|----------|------------|-----|------|---------|-------|---------|
-| [guid][1]     | INT      | UNSIGNED   |     |      |         |       |         |
-| [type][2]     | TINYINT  | UNSIGNED   |     |      |         |       |         |
-| [datetime][3] | datetime |            |     |      |         |       |         |
+| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment                   |
+| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------- |
+| [guid][1]     | INT      | UNSIGNED   |     | NO   |         |       | characters.guid           |
+| [type][2]     | TINYINT  | UNSIGNED   |     | NO   |         |       | type of the desertion     |
+| [datetime][3] | DATETIME | SIGNED     |     | NO   |         |       | datetime of the desertion |
 
 [1]: #guid
 [2]: #type
@@ -22,12 +22,12 @@ This table holds datas about BattleGrounds deserters. To enable storing this kin
 
 ### guid
 
-Link to characters.guid
+Link to [characters.guid](characters#guid).
 
 ### type
 
 | Value | Description                                             |
-|-------|---------------------------------------------------------|
+| ----- | ------------------------------------------------------- |
 | 0     | player leaves the BG                                    |
 | 1     | player is kicked from BG because offline                |
 | 2     | player is invited to join and refuses to do it          |
@@ -36,4 +36,4 @@ Link to characters.guid
 
 ### datetime
 
-date and time of the event
+Date and time of the event.

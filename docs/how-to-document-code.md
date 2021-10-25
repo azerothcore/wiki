@@ -4,17 +4,17 @@ tableofcontents: 1
 
 # How to document your code
 
-The extensive Doxygen manual ( <http://www.stack.nl/~dimitri/doxygen/manual.html,> <http://www.stack.nl/~dimitri/doxygen/commands.html> ) is well worth browsing. Doxygen provides a wide variety of options for documenting code and can be adapted for general documentation as well. This page well take you through some of the commonly used features in AzerothCore documentation.
+The extensive Doxygen manual ( https://www.doxygen.nl/manual/docblocks.html ) is well worth browsing. Doxygen provides a wide variety of options for documenting code and can be adapted for general documentation as well. This page well take you through some of the commonly used features in AzerothCore documentation.
 
 
 Doxygen comment blocks are easy to create. For line comment just insert a triple forward slash.
 
-`/////This line will be included in the Doxygen comments for this function/class/file`
+`///This line will be included in the Doxygen comments for this function/class/file`
 
 Commenting multiple lines is just as easy.
 
 ```
-/*!
+/**
 These next few lines will form a comment block
 To start a new paragraph add an empty line
 To end the comment block type asterik and then forward slash.
@@ -22,6 +22,19 @@ To end the comment block type asterik and then forward slash.
 ```
 
 By taking a few minutes as you are writing your code to write comment blocks you can tell future developers what you intended and make their life more productive and easier.
+
+This is an example of a documented [Hook](hooks-script.md) in our `ScriptMgr.h`:
+
+```cpp
+/**
+ * @brief This hook runs before sending the exit message during the arena queue, allowing you to run extra operations or disabling the exit message
+ *
+ * @param queue Contains information about the Arena queue
+ * @param ginfo Contains information about the group of the queue
+ * @return True if you want to continue sending the message, false if you want to disable the message
+ */
+[[nodiscard]] virtual bool OnBeforeSendExitMessageArenaQueue(BattlegroundQueue* /*queue*/, GroupQueueInfo* /*ginfo*/) { return true; }
+```
 
 ## Common Doxygen Tags
 ======================================================================================================================================

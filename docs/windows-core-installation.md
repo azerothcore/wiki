@@ -75,6 +75,14 @@ Before you begin, create a new directory called **Build**. In this guide we will
         
         - OPENSSL_INCLUDE_DIR is the "include" folder in installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
 
+- If you get an error that CMake *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
+
+    - Locate your Boost folder
+
+        - Run the Bootstrap.bat file
+
+        - Run the b2.exe file 
+
 ### Compiling the Source
 
 1. In CMake press **Open Project** to open the **AzerothCore.sln** file directly with Visual Studio.
@@ -133,15 +141,17 @@ There are three DLL files that need to be manually added to this folder, and you
 
 OpenSLL _before_ version 1.1.0:
 
-**libeay32.dll**
+**libeay32.dll** and
 **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*.
 
 OpenSSL 1.1.0 and more recent installed, names have changed:
 
-**libssl-1_1.dll**
+For 32-bit version:
+**libssl-1_1.dll** and
 **libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
 
-**libssl-1_1-x64.dll**
+For 64-bit version:
+**libssl-1_1-x64.dll** and
 **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
 
 #### About compilation log and report
@@ -156,7 +166,11 @@ To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 

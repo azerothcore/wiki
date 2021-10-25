@@ -10,39 +10,43 @@ This table holds the individual object data on each spawned game object in the w
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra          | Comment                  |
 |---------------------|--------------|------------|-----|------|---------|----------------|--------------------------|
-| [guid][1]           | INT      | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
-| [id][2]             | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
-| [map][3]            | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
-| [spawnMask][4]      | TINYINT   | UNSIGNED   |     | NO   | 1       |                |                          |
-| [phaseMask][5]      | SMALLINT  | UNSIGNED   |     | NO   | 1       |                |                          |
-| [position_x][6]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [position_y][7]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [position_z][8]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [orientation][9]    | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation0][10]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation1][11]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation2][12]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation3][13]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [spawntimesecs][14] | INT      | SIGNED     |     | NO   | 0       |                |                          |
-| [animprogress][15]  | TINYINT   | UNSIGNED   |     | NO   | 0       |                |                          |
-| [state][16]         | TINYINT   | UNSIGNED   |     | NO   | 1       |                |                          |
+| [guid][1]           | INT          | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
+| [id][2]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
+| [map][3]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
+| [zoneId][4]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
+| [areaId][5]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
+| [spawnMask][6]      | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                          |
+| [phaseMask][7]      | SMALLINT     | UNSIGNED   |     | NO   | 1       |                |                          |
+| [position_x][8]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [position_y][9]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [position_z][10]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [orientation][11]    | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation0][12]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation1][13]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation2][14]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation3][15]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [spawntimesecs][16] | INT          | SIGNED     |     | NO   | 0       |                |                          |
+| [animprogress][17]  | TINYINT      | UNSIGNED   |     | NO   | 0       |                |                          |
+| [state][18]         | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                          |
 
 [1]: #guid
 [2]: #id
 [3]: #map
-[4]: #spawnmask
-[5]: #phasemask
-[6]: #position_x
-[7]: #position_y
-[8]: #position_z
-[9]: #orientation
-[10]: #rotation0
-[11]: #rotation1
-[12]: #rotation2
-[13]: #rotation3
-[14]: #spawntimesecs
-[15]: #animprogress
-[16]: #state
+[4]: #zoneId
+[5]: #areaId
+[6]: #spawnmask
+[7]: #phasemask
+[8]: #position_x
+[9]: #position_y
+[10]: #position_z
+[11]: #orientation
+[12]: #rotation0
+[13]: #rotation1
+[14]: #rotation2
+[15]: #rotation3
+[16]: #spawntimesecs
+[17]: #animprogress
+[18]: #state
 
 **Description of the fields**
 
@@ -57,6 +61,18 @@ The template ID of the gameobject. See [gameobject\_template.entry](http://www.a
 ### map
 
 The map ID where this object is spawned. See Maps.dbc
+
+### zoneId
+
+The ID of the zone that this object is spawned in. (e.g. The Barrens)
+
+This column is filled in by the worldserver on startup if the `Calculate.Gameoject.Zone.Area.Data` setting is enabled. It originates from AreaTable.dbc.
+
+### areaId
+
+The ID of the area that this object is spawned in. You can think of an area as a "subzone" of a zone, e.g. Lushwater Oasis inside The Barrens. 
+
+This column is filled in by the worldserver on startup if the `Calculate.Gameoject.Zone.Area.Data` setting is enabled. It originates from AreaTable.dbc.
 
 ### spawnMask
 

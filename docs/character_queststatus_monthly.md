@@ -1,6 +1,25 @@
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [character_queststatus_monthly](character_queststatus_monthly)
+# character\_queststatus\_monthly
 
-Column | Type | Description
---- | --- | ---
-Guid | INT UNSIGNED | 
-Quest | INT UNSIGNED | 
+[<-Back-to:Characters](database-characters.md)
+
+**The \`character\_queststatus\_monthly\` table**
+
+**Structure**
+
+| Field       | Type | Attributes | Key | Null | Default | Extra  | Comment                  |
+| ----------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
+| [guid][1]   | INT  | UNSIGNED   | PRI | NO   | 0       |        | Global Unique Identifier |
+| [quest][2]  | INT  | UNSIGNED   | PRI | NO   | 0       |        | Quest Identifier         |
+
+[1]: #guid
+[2]: #quest
+
+**Description of the fields**
+
+### guid
+
+The character guid. See [characters.guid](characters#guid).
+
+### quest
+
+The quest ID of the rewarded quest. See [quest\_template.id](quest_template#id).

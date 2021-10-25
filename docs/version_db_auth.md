@@ -1,28 +1,35 @@
-# version_db_auth
+# version\_db\_auth
 
 [<-Back-to:Auth](database-auth.md)
 
-**The \`version_db_auth\` table**
+**The \`version\_db\_auth\` table**
 
 | Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|--------------------|--------------|------------|-----|------|---------|-------|---------|
-| [sql_rev][1]       | VARCHAR(100) |            | PRI | NO   |         |       |         |
-| [required_rev][2]  | VARCHAR(100) |            | MUL | YES  |         |       |         |
-| [2020_02_07_00][3] | bit(1)       |            |     | YES  |         |       |         |
+| ------------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [sql_rev][1]       | VARCHAR(100) | SIGNED     | PRI | NO   |         |       |         |
+| [required_rev][2]  | VARCHAR(100) | SIGNED     | MUL | YES  |         |       |         |
+| [date][3]          | VARCHAR(50)  | SIGNED     |     | YES  |         |       |         |
+| [2021_06_17_00][4] | BIT(1)       | SIGNED     |     | YES  |         |       |         |
 
-[1]: #sql_rev
-[2]: #required_rev
-[3]: #2020_02_07_00
+[1]: #sqlrev
+[2]: #requiredrev
+[3]: #date
+[4]: #2021061700
 
-### sql_rev
+**Description of the fields**
 
-### required_rev
+### sql\_rev
 
-### 2020_02_07_00
+SQL review.
 
-### Example
+### required\_rev
 
-| sql_rev             | required_rev | 2020_02_07_00 |
-|---------------------|--------------|---------------|
-| 1554142988374631100 |              |               |
-| 1579213352894781043 |              |               |
+### date 
+
+Sql revisions date.
+
+### 2021\_06\_17\_00
+
+The date of the last update to the auth database.
+
+**Note** this column changes automatically according to the last update of the auth database.

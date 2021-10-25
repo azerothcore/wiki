@@ -6,6 +6,7 @@
 
 This table stores logs from `Appender` type database in config file.
 Example db appender:
+
 ```ini
 Appender.DB=3,5,0
 ```
@@ -13,12 +14,12 @@ Appender.DB=3,5,0
 **Structure**
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------|--------------|------------|-----|------|---------|-------|---------|
-| [time][1]   | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [realm][2]  | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
-| [level][4]  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [string][5] | text         |            |     | YES  |         |       |         |
+| ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [time][1]   | INT          | UNSIGNED   |     | NO   |         |       |         |
+| [realm][2]  | INT          | UNSIGNED   |     | NO   |         |       |         |
+| [type][3]   | VARCHAR(250) | SIGNED     |     | NO   |         |       |         |
+| [level][4]  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [string][5] | TEXT         | SIGNED     |     | YES  |         |       |         |
 
 [1]: #time
 [2]: #realm
@@ -49,7 +50,7 @@ Logger.server=4,Console Server
 Depends on LogLevel in authserver.conf
 
 | Value | Description |
-|-------|-------------|
+|------ | ------------|
 | 1     | (Fatal)     |
 | 2     | (Error)     |
 | 3     | (Warning)   |

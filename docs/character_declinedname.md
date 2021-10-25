@@ -4,18 +4,16 @@
 
 **The \`character\_declinedname\` table**
 
-`table-no-description`
-
 **Structure**
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-|--------------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]          | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [genitive][2]      | VARCHAR(15) | SIGNED     |     | NO   | NULL    |       |                          |
-| [dative][3]        | VARCHAR(15) | SIGNED     |     | NO   | NULL    |       |                          |
-| [accusative][4]    | VARCHAR(15) | SIGNED     |     | NO   | NULL    |       |                          |
-| [instrumental][5]  | VARCHAR(15) | SIGNED     |     | NO   | NULL    |       |                          |
-| [prepositional][6] | VARCHAR(15) | SIGNED     |     | NO   | NULL    |       |                          |
+| ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]          | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [genitive][2]      | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
+| [dative][3]        | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
+| [accusative][4]    | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
+| [instrumental][5]  | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
+| [prepositional][6] | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
 
 [1]: #guid
 [2]: #genitive

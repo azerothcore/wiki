@@ -5,7 +5,7 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 3: Server Setup](server-setup.md) | [Step 5: Networking >>](networking.md) |
 
-## Creating and Populating the Database in MySQL with automated script
+## Creating the Database in MySQL
 
 ### Creating the Databases and User
 
@@ -19,7 +19,27 @@ You would need to use one MySQL root account with your MySQL client or with MySQ
 
 *Tip: You can change the password of the user you are creating for increased security.*
 
-### Importing the Database
+## Populating the database
+
+You can choose to populate the database in two ways:
+- Automatic Database Updater (default, recommended)
+- DB Assambler tool
+
+If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
+
+### Automatic Database Updater (default, recommended)
+
+By default the Worldserver and Authserver will check for, and import all new files into the database you specified in the config.
+
+This is the easiest and recommended way to make sure you are always up-to-date with the core.
+
+To edit the automatic database updater you will find the neccessary settings in authserver.conf and worldserver.conf under [UPDATE SETTINGS](https://github.com/azerothcore/azerothcore-wotlk/commit/2d2857ce81db5297eb63d388d2e2f252ef52412d#diff-56b141374cf0384a2887c9fd490c6a79a3d2f31fb020ee0e423a5685344b59d3R30).
+
+### DB Assambler (For advanced users that want more control)
+
+This is a tool written before the automatic database updater and essentially does the same thing.
+
+#### Importing the Database
 
 *Note: if you're using MySQL 5.7, first run*
 
@@ -37,7 +57,7 @@ mysql -e "SET GLOBAL sql_mode = '';" -u root -p first
 
 1. Select **import-all: Assemble & Import all**
 
-### Changing user or password
+#### Changing user or password
 
 If you want to change the user or password you will need to edit the script config.
 
@@ -55,7 +75,11 @@ If you want to change the user or password you will need to edit the script conf
 
 If you are still having problems, check:
 
-* [How to ask for help](How-to-ask-for-help.md)
+* [FAQ](faq.md)
+
+* [Common Errors](common-errors.md)
+
+* [How to ask for help](how-to-ask-for-help.md)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 

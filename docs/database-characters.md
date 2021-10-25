@@ -1,4 +1,6 @@
-NOTE: the DB documentation is still a work in progress. We need your help to make it better, please read [this](https://github.com/azerothcore/wiki/issues/11).
+# Database Characters
+
+The auth database currently has 95 tables, which mainly store information related to user accounts. Although some of them have other functionalities. The last synchronization was done: [20-07-2021](https://github.com/azerothcore/wiki/pull/584). If you detect that any table is outdated, you can create an [issue](https://github.com/azerothcore/wiki/issues) within our repository or make a [pull request](https://github.com/azerothcore/wiki/pulls) with the modification of the information.
 
 - [account_data](account_data.md)
 - [account_instance_times](account_instance_times.md)
@@ -92,6 +94,8 @@ NOTE: the DB documentation is still a work in progress. We need your help to mak
 - [quest_tracker](quest_tracker.md)
 - [recovery_item](recovery_item.md)
 - [reserved_name](reserved_name.md)
+- [updates](updates.md)
+- [updates_include](updates_include.md)
 - [version_db_characters](version_db_characters.md)
 - [warden_action](warden_action.md)
 - [worldstates](worldstates.md)

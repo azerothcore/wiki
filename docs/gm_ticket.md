@@ -1,37 +1,37 @@
-# gm_ticket
+# gm\_ticket
 
 [<-Back-to:Characters](database-characters.md)
 
-## The `gm_tickets` table
+**The \`gm\_tickets\` table**
 
 This table stores all tickets.
 
 Note: do not insert directly into most of these columns, else the client won't update the ticket status until table reload and a logout.
 
-## Structure
+**Structure**
 
 | Field                  | Type        | Attributes | Key | Null | Default | Extra          | Comment                                    |
-|------------------------|-------------|------------|-----|------|---------|----------------|--------------------------------------------|
-| [Id][1]                | INT     | SIGNED     | PRI | NO   |         | Auto increment |                                            |
-| [type][2]              | TINYINT  | UNSIGNED   |     | NO   |         |                | 0 open, 1 closed, 2 character deleted      |
-| [playerGuid][3]        | INT     | UNSIGNED   |     | NO   |         |                | Global Unique Identifier of ticket creator |
-| [name][4]              | VARCHAR(12) |            |     | NO   |         |                | Name of ticket creator                     |
-| [description][5]       | text        |            |     | NO   |         |                |                                            |
-| [createtime][6]        | INT     | UNSIGNED   |     | NO   |         |                |                                            |
-| [mapId][7]             | SMALLINT | UNSIGNED   |     | NO   |         |                |                                            |
-| [posX][8]              | FLOAT       | SIGNED     |     | NO   |         |                |                                            |
-| [posY][9]              | FLOAT       | SIGNED     |     | NO   |         |                |                                            |
-| [posZ][10]             | FLOAT       | SIGNED     |     | NO   |         |                |                                            |
-| [lastModifiedTime][11] | INT     | SIGNED     |     | NO   |         |                |                                            |
-| [closedBy][12]         | INT     | SIGNED     |     | NO   |         |                |                                            |
-| [assignedTo][13]       | INT     | UNSIGNED   |     | NO   |         |                | GUID of admin to whom ticket is assigned   |
-| [comment][14]          | text        |            |     | NO   |         |                |                                            |
-| [response][15]         | text        |            |     | NO   |         |                |                                            |
-| [completed][16]        | TINYINT  | UNSIGNED   |     | NO   |         |                |                                            |
-| [escalated][17]        | TINYINT  | UNSIGNED   |     | NO   |         |                |                                            |
-| [viewed][18]           | TINYINT  | UNSIGNED   |     | NO   |         |                |                                            |
-| [needMoreHelp][19]     | TINYINT  | UNSIGNED   |     | NO   |         |                |                                            |
-| [resolvedBy][20]       | INT     | UNSIGNED   |     | NO   |         |                | GUID of GM who resolved the ticket         |
+| ---------------------- | ----------- | ---------- | --- | ---- | ------- | -------------- | ------------------------------------------ |
+| [Id][1]                | INT         | UNSIGNED   | PRI | NO   |         | Auto increment |                                            |
+| [type][2]              | TINYINT     | UNSIGNED   |     | NO   | 0       |                | 0 open, 1 closed, 2 character deleted      |
+| [playerGuid][3]        | INT         | UNSIGNED   |     | NO   | 0       |                | Global Unique Identifier of ticket creator |
+| [name][4]              | VARCHAR(12) | SIGNED     |     | NO   |         |                | Name of ticket creator                     |
+| [description][5]       | text        | SIGNED     |     | NO   |         |                |                                            |
+| [createTime][6]        | INT         | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [mapId][7]             | SMALLINT    | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [posX][8]              | FLOAT       | SIGNED     |     | NO   | 0       |                |                                            |
+| [posY][9]              | FLOAT       | SIGNED     |     | NO   | 0       |                |                                            |
+| [posZ][10]             | FLOAT       | SIGNED     |     | NO   | 0       |                |                                            |
+| [lastModifiedTime][11] | INT         | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [closedBy][12]         | INT         | SIGNED     |     | NO   | 0       |                | -1 Closed by Console, >0 GUID of GM        |
+| [assignedTo][13]       | INT         | UNSIGNED   |     | NO   | 0       |                | GUID of admin to whom ticket is assigned   |
+| [comment][14]          | text        | SIGNED     |     | NO   |         |                |                                            |
+| [response][15]         | text        | SIGNED     |     | NO   |         |                |                                            |
+| [completed][16]        | TINYINT     | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [escalated][17]        | TINYINT     | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [viewed][18]           | TINYINT     | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [needMoreHelp][19]     | TINYINT     | UNSIGNED   |     | NO   | 0       |                |                                            |
+| [resolvedBy][20]       | INT         | SIGNED     |     | NO   | 0       |                | -1 Resolved by Console, >0 GUID of GM      |
 
 [1]: #id
 [2]: #type
@@ -65,27 +65,27 @@ The ticket global unique identifier. This number must be unique and is the best 
 Type of ticket. Variables: 
 - 0 = open
 - 1 = closed
-- 2 = character deleted.
+- 2 = character deleted
 
 ### playerGuid
 
-Player's GUID. See characters.guid
+Player's GUID. See [characters.guid](characters#guid).
 
 ### name
 
-The name of the character who created that ticket
+The name of the character who created that ticket.
 
 ### description
 
-The content of the ticket
+The content of the ticket.
 
 ### createTime
 
-The creation time of the ticket as linux timestamp
+The creation time of the ticket as linux timestamp.
 
 ### mapId
 
-Map where ticket has ben created. See Map.dbc
+Map where ticket has ben created. See [Map.dbc](map).
 
 ### posX
 
@@ -101,7 +101,7 @@ Position Z Where ticket has ben created.
 
 ### lastModifiedTime
 
-The time when the ticket was closed or deleted by the issuer as linux timestamp
+The time when the ticket was closed or deleted by the issuer as linux timestamp.
 
 ### closedBy
 
@@ -140,7 +140,7 @@ The string the GM inserted with `.ticket response` commands to answer the ticket
 
 ### needMoreHelp
 
-Requests further GM interaction on a ticket to which a GM has already responded. Basically means "has a new ticket"
+Requests further GM interaction on a ticket to which a GM has already responded. Basically means "has a new ticket".
 
 ### resolvedBy
 

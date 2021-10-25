@@ -121,6 +121,19 @@ enum Spells
 constexpr uint32 SPELL_4 = 4444;
 ```
 
+### Enum vs. Enum Class
+
+Enum classes are prefered to be used as they can cause fewer suprises that could lead to bugs as the enum will not implicitly convert to other types like integer or other enums.
+
+```cpp
+enum class Spell : uint32
+{
+    One   = 1111,
+    Two   = 2222,
+    Three = 3333
+}
+```
+
 ### Standard prefixes for constants
 
 All constants that we store have a standardized prefix.
@@ -195,7 +208,6 @@ float posX = 234.3456f;
 We define WorldObjects in this way:
 
 ```cpp
-
 GameObject* go;
 Creature* creature;
 Item* item;

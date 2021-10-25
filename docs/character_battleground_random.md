@@ -9,8 +9,8 @@ This table stores battlegrounds IDs for random battleground sessions.
 **Structure**
 
 | Field     | Type     | Attributes | Key | Null | Default | Extra | Comment |
-|-----------|----------|------------|-----|------|---------|-------|---------|
-| [guid][1] | INT (10) | UNSIGNED   | PRI | NO   | 0       |       |         |
+| --------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1] | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #guid
 
@@ -18,4 +18,4 @@ This table stores battlegrounds IDs for random battleground sessions.
 
 ### guid
 
-The guid of the character who has already won random battleground today. See [characters.guid](2129969.html#characters(table)-guid)
+The guid of the character who has already won random battleground today. See [characters.guid](characters#guid).

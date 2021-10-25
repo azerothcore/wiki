@@ -9,13 +9,13 @@ Contains information on the location where characters get teleported when they u
 **Structure**
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-|-------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]   | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mapId][2]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
-| [zoneId][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
-| [posX][4]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate x             |
-| [posY][5]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate y             |
-| [posZ][6]   | FLOAT       | SIGNED     |     | NO   | 0       |       | Coordinate z             |
+| ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]   | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [mapId][2]  | SMALLINT    | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
+| [zoneId][3] | SMALLINT    | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
+| [posX][4]   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [posY][5]   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| [posZ][6]   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #mapid
@@ -28,15 +28,15 @@ Contains information on the location where characters get teleported when they u
 
 ### guid
 
-The GUID of the character. See [characters.guid](2129969.html#characters(table)-guid)
+The GUID of the character. See [characters.guid](characters#guid).
 
 ### mapId
 
-The map ID where the character gets teleported to. See Map.dbc column 1
+The map ID where the character gets teleported to. See [Map.dbc](map) column 1.
 
 ### zoneId
 
-The zone ID where the character gets teleported to. See AreaTable.dbc column 1
+The zone ID where the character gets teleported to. See [AreaTable.dbc](areatable) column 1.
 
 ### posX
 

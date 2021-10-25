@@ -6,7 +6,7 @@ tableofcontents: 1
 
 The ScriptAI system implemented by AC uses a special [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) strategy to implement an event-driven programming which is also the **CORE** of our modular system.
 
-This guide, together with our [module system](Create-a-Module.md) lets you extend the AzerothCore without patching it directly. This allows you to update your repository by keeping your additions and customizations conflict-free!
+This guide, together with our [module system](create-a-module.md) lets you extend the AzerothCore without patching it directly. This allows you to update your repository by keeping your additions and customizations conflict-free!
 
 ## Resources
 
@@ -161,6 +161,12 @@ Remember to document your new hook by following the [How to document your code](
 
 When you create a new hook to publish into the AC repo, one of the acceptance criteria is to write proper documentation for it,
 hence other people know how to use it properly. So please, read that guide carefully. 
+
+
+### Write a changelog
+
+When you create or modify any hook, you have to create a new changelog to explain people how to adapt their code and to keep them
+informed about these changes. Please follow [this guide](how-to-use-changelog.md) to learn how to do it.
 
 ## Naming conventions
 

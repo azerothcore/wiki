@@ -8,35 +8,35 @@ Contains data about client account and settings.
 
 **Structure**
 
-| Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|--------------|------------|------------|-----|------|---------|-------|---------|
-| [account][1] | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2]    | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [time][3]    | INT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [data][4]    | BLOB       | SIGNED     |     | NO   |         |       |         |
+| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment            |
+| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |
+| [accountId][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Account Identifier |
+| [type][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                    |
+| [time][3]      | INT     | UNSIGNED   |     | NO   | 0       |       |                    |
+| [data][4]      | BLOB    | SIGNED     |     | NO   |         |       |                    |
 
-[1]: #account
+[1]: #accountid
 [2]: #type
 [3]: #time
 [4]: #data
 
 **Description of the fields**
 
-### account
+### accountId
 
-[Account.id](http://www.azerothcore.org/wiki/account#id).
+The [account.id](account#id).
 
 ### type
 
 | Value | Description                   |
-|-------|-------------------------------|
+| ----- | ----------------------------- |
 | 0     | Global-account config cache   |
 | 2     | Global-account bindings cache |
 | 4     | Global-account macros cache   |
 
 ### time
 
-Time of last modification in Unixtime
+Time of last modification in Unixtime.
 
 ### data
 

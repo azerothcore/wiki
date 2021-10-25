@@ -4,16 +4,14 @@
 
 **The \`character\_achievement\_progress\` table**
 
-`table-no-description`
-
 **Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|---------------|-------------|------------|-----|------|---------|-------|---------|
-| [guid][1]     | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [criteria][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [counter][3]  | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [date][4]     | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]     | INT         | UNSIGNED   | PRI | NO   |         |       |         |
+| [criteria][2] | SMALLINT    | UNSIGNED   | PRI | NO   |         |       |         |
+| [counter][3]  | INT         | UNSIGNED   |     | NO   |         |       |         |
+| [date][4]     | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #criteria
@@ -24,11 +22,11 @@
 
 ### guid
 
-The GUID of the character. See characters.guid
+The GUID of the character. See [characters.guid](characters#guid).
 
 ### criteria
 
-Criteria from [Achievement\_Criteria.dbc](Achievement_Criteria)
+Criteria from [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### counter
 
@@ -36,4 +34,4 @@ Criteria from [Achievement\_Criteria.dbc](Achievement_Criteria)
 
 ### date
 
-The date when this achievement was earned. See [Unix timestamp Calculator](http://www.unixtimestamp.com/index.php)
+The date when this achievement was earned. See [Unix timestamp Calculator](http://www.unixtimestamp.com/index.php).

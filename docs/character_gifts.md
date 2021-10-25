@@ -8,12 +8,12 @@ This table holds data about wrapped/gift items.
 
 **Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|---------|------------|-----|------|---------|-------|---------|
-| [guid][1]      | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [item_guid][2] | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [entry][3]     | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [flags][4]     | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field          | Type | Attributes | Key | Null | Default | Extra | Comment |
+| -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]      | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [item_guid][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [entry][3]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [flags][4]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #item_guid
@@ -24,15 +24,15 @@ This table holds data about wrapped/gift items.
 
 ### guid
 
-The GUID of the character. See characters.guid
+The GUID of the character. See [characters.guid](characters#guid).
 
 ### item\_guid
 
-The GUID of the item. See item\_instance.guid
+The GUID of the item. See [item\_instance.guid](item_instance#guid).
 
 ### entry
 
-The entry of the item. See item\_template.entry
+The entry of the item. See [item\_template.entry](item_template#entry).
 
 ### flags
 

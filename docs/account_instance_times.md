@@ -8,8 +8,8 @@ This table controls how many instances the account's characters have been in las
 
 **Structure**
 
-| Field            | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|------------------|------------|------------|-----|------|---------|-------|---------|
+| Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [accountId][1]   | INT    | UNSIGNED   | PRI | NO   |         |       |         |
 | [instanceId][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [releaseTime][3] | BIGINT | UNSIGNED   |     | NO   | 0       |       |         |
@@ -22,11 +22,11 @@ This table controls how many instances the account's characters have been in las
 
 ### accountId
 
-Account of the player. See [account.id](account_2130004.html#account-id).
+Account of the player. See [account.id](account#id).
 
 ### instanceId
 
-This is the instance.id which characters of this account has been past 5 hours.
+This is the instance id which characters of this account has been past 5 hours.
 
 ### releaseTime
 

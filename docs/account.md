@@ -6,48 +6,48 @@
 
 **Structure**
 
-| Field                 | Type         | Attributes | Key | Null | Default           | Extra          | Comment    |
-|-----------------------|--------------|------------|-----|------|-------------------|----------------|------------|
-| [id][1]               | INT          | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
-| [username][2]         | VARCHAR(32)  |            | UNI | NO   |                   |                |            |
-| [salt][3]             | BINARY(32)   |            |     | NO   |                   |                |            |
-| [verifier][4]         | BINARY(32)   |            |     | NO   |                   |                |            |
-| [session_key][5]      | BINARY(40)   |            |     | YES  |                   |                |            |
-| [token_key][6]        | VARCHAR(100) |            |     | NO   |                   |                |            |
-| [email][7]            | VARCHAR(255) |            |     | NO   |                   |                |            |
-| [reg_mail][8]         | VARCHAR(255) |            |     | NO   |                   |                |            |
-| [joindate][9]         | TIMESTAMP    |            |     | NO   | CURRENT_TIMESTAMP |                |            |
-| [last_ip][10]         | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
-| [last_attempt_ip][11] | VARCHAR(15)  |            |     | NO   | 127.0.0.1         |                |            |
-| [failed_logins][12]   | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
-| [locked][13]          | TINYINT   | UNSIGNED   |     | NO   | 0                 |                |            |
-| [lock_country][14]    | VARCHAR(2)   |            |     | NO   | 0                 |                |            |
-| [last_login][15]      | TIMESTAMP    |            |     | YES  | NULL              |                |            |
-| [online][16]          | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
-| [expansion][17]       | TINYINT      | UNSIGNED   |     | NO   | 2                 |                |            |
-| [mutetime][18]        | BIGINT       | SIGNED     |     | NO   | 0                 |                |            |
-| [mutereason][19]      | VARCHAR(255) |            |     | NO   |                   |                |            |
-| [muteby][20]          | VARCHAR(50)  |            |     | NO   |                   |                |            |
-| [locale][21]          | TINYINT      | UNSIGNED   |     | NO   | 0                 |                |            |
-| [os][22]              | VARCHAR(3)   |            |     | NO   |                   |                |            |
-| [recruiter][23]       | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
-| [totaltime][24]       | INT          | UNSIGNED   |     | NO   | 0                 |                |            |
+| Field                 | Type          | Attributes | Key | Null | Default           | Extra          | Comment    |
+| --------------------- | ------------- | ---------- | --- | ---- | ----------------- | -------------- | ---------- |
+| [id][1]               | INT           | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
+| [username][2]         | VARCHAR(32)   | SIGNED     | UNI | NO   | ''                |                |            |
+| [salt][3]             | BINARY(32)    | SIGNED     |     | NO   |                   |                |            |
+| [verifier][4]         | BINARY(32)    | SIGNED     |     | NO   |                   |                |            |
+| [session_key][5]      | BINARY(40)    | SIGNED     |     | YES  |                   |                |            |
+| [totp_secret][6]      | VARBINARY(100)| SIGNED     |     | YES  |                   |                |            |
+| [email][7]            | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
+| [reg_mail][8]         | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
+| [joindate][9]         | TIMESTAMP     | SIGNED     |     | NO   | CURRENT_TIMESTAMP |                |            |
+| [last_ip][10]         | VARCHAR(15)   | SIGNED     |     | NO   | 127.0.0.1         |                |            |
+| [last_attempt_ip][11] | VARCHAR(15)   | SIGNED     |     | NO   | 127.0.0.1         |                |            |
+| [failed_logins][12]   | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
+| [locked][13]          | TINYINT       | UNSIGNED   |     | NO   | 0                 |                |            |
+| [lock_country][14]    | VARCHAR(2)    | SIGNED     |     | NO   | 00                |                |            |
+| [last_login][15]      | TIMESTAMP     | SIGNED     |     | YES  |                   |                |            |
+| [online][16]          | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
+| [expansion][17]       | TINYINT       | UNSIGNED   |     | NO   | 2                 |                |            |
+| [mutetime][18]        | BIGINT        | SIGNED     |     | NO   | 0                 |                |            |
+| [mutereason][19]      | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
+| [muteby][20]          | VARCHAR(50)   | SIGNED     |     | NO   | ''                |                |            |
+| [locale][21]          | TINYINT       | UNSIGNED   |     | NO   | 0                 |                |            |
+| [os][22]              | VARCHAR(3)    | SIGNED     |     | NO   | ''                |                |            |
+| [recruiter][23]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
+| [totaltime][24]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
 
 [1]: #id
 [2]: #username
 [3]: #salt
 [4]: #verifier
-[5]: #session_key
-[6]: #token_key
+[5]: #sessionkey
+[6]: #totpsecret
 [7]: #email
-[8]: #reg_mail
+[8]: #regmail
 [9]: #joindate
-[10]: #last_ip
-[11]: #last_attempt_ip
-[12]: #failed_logins
+[10]: #lastip
+[11]: #last_attemptip
+[12]: #failedlogins
 [13]: #locked
-[14]: #lock_country
-[15]: #last_login
+[14]: #lockcountry
+[15]: #lastlogin
 [16]: #online
 [17]: #expansion
 [18]: #mutetime
@@ -108,17 +108,17 @@ Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php
 
 [VerifySRP6Login.php](https://gist.github.com/Treeston/34d9249fb467dddc11b2568e74f8cb1e)
 
-### session_key
+### session\_key
 
 `field-no-description|5`
 
-### token_key
+### totp\_secret
 
 The authenticator key.
 
 Key can be generated through the Google Authenticator API, a 3rd-party TOTP generator, or manually specified (must be a Base32-compliant expression that is 16 characters).
 
-Implementation link on Wikipedia for the Google Authenticator API
+Implementation link on Wikipedia for the Google Authenticator API.
 
 <http://en.wikipedia.org/wiki/Google_Authenticator#Implementations>
 
@@ -126,7 +126,7 @@ Implementation link on Wikipedia for the Google Authenticator API
 
 The e-mail address associated with this account.
 
-### reg_mail
+### reg\_mail
 
 The registration e-mail address associated with this account.
 
@@ -134,11 +134,11 @@ The registration e-mail address associated with this account.
 
 The date when the account was created.
 
-### last_ip
+### last\_ip
 
 The last IP used by the person who logged in the account.
 
-### failed_logins
+### failed\_logins
 
 The number of failed logins attempted on the account.
 
@@ -146,7 +146,7 @@ The number of failed logins attempted on the account.
 
 Boolean 0 or 1 controlling if the account has been locked or not. This can be controlled with the ".account lock" GM command. If locked (1), the user can only log in with their [last_ip][11]. If unlocked (0), a user can log in from any IP, and their last_ip will be updated if it is different. ".Ban account" does not lock it.
 
-### last_login
+### last\_login
 
 The date when the account was last logged into.
 
@@ -164,7 +164,7 @@ Boolean 0 or 1 controlling if the account is currently logged in and online.
 Integer 0, 1 or 2 controlling if the client logged in on the account has any expansions. (for example if client is TBC, but expansion is set to 0, it will not be able to enter outlands and etc.)
 
 | Value | Expansion                      |
-|-------|--------------------------------|
+| ----- | ------------------------------ |
 | 0     | Classic                        |
 | 1     | The Burning Crusade (TBC)      |
 | 2     | Wrath of the Lich King (WotLK) |

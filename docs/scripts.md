@@ -1,6 +1,6 @@
-[Database Structure](Database-Structure) > [World-Database](World-Database) > [scripts](scripts)
-
 # scripts
+
+[<-Back-to:World](database-world.md)
 
 # Tables: \*\*\*\_scripts
 
@@ -14,7 +14,7 @@ This table format is used for 3 different tables to control possible scripts act
 
 NOTE: An entry in this table may have more than one row as a script may do more than just one action. Also each action the script may make can have a separate delay attached to it. In that case, the core will activate the appropriate action after the correct delay.
 
-## **Structure**
+**Table Structure**
 
 | Field                     | Comment
 |---------------------------|--------

@@ -8,9 +8,9 @@ This table holds a listing of all skill for each character.
 
 **Structure**
 
-| Field      | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-|------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| Field      | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
+| ---------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]  | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [skill][2] | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
 | [value][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
 | [max][4]   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
@@ -24,7 +24,7 @@ This table holds a listing of all skill for each character.
 
 ### guid
 
-A Global Unique Identifier. (The seam in all characters-tables)
+The character guid. See [characters.guid](characters#guid).
 
 ### skill
 

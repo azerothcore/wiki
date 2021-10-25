@@ -8,17 +8,17 @@ This table is used to store the tutorial state of all the accounts.
 
 **Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra  | Comment            |
-|----------------|---------|------------|-----|------|---------|--------|--------------------|
-| [accountId][1] | INT | UNSIGNED   | PRI | NO   | 0       | Unique | Account Identifier |
-| [tut0][2]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut1][3]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut2][4]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut3][5]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut4][6]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut5][7]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut6][8]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut7][9]      | INT | UNSIGNED   |     | NO   | 0       |        |                    |
+| Field          | Type | Attributes | Key | Null | Default | Extra  | Comment            |
+| -------------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------ |
+| [accountId][1] | INT  | UNSIGNED   | PRI | NO   | 0       | Unique | Account Identifier |
+| [tut0][2]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut1][3]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut2][4]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut3][5]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut4][6]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut5][7]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut6][8]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| [tut7][9]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
 
 [1]: #accountid
 [2]: #tut0
@@ -34,9 +34,37 @@ This table is used to store the tutorial state of all the accounts.
 
 ### guid
 
-Account of the player. See [account.id](account_2130004.html#account-id).
+Account of the player. See [account.id](account#id).
 
-### tut0-7
+### tut0
+
+`field-no-description|2`
+
+### tut1
+
+`field-no-description|3`
+
+### tut2
+
+`field-no-description|4`
+
+### tut3
+
+`field-no-description|5`
+
+### tut4
+
+`field-no-description|6`
+
+### tut5
+
+`field-no-description|7`
+
+### tut6
+
+`field-no-description|8`
+
+### tut7
 
 These values 32bits flags. So 8 x 32bits values makes 256 bits available to store 256 tutorial messages status.
 

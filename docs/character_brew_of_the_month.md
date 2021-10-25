@@ -1,6 +1,25 @@
-[Database Structure](Database-Structure) > [Character-Database](Character-Database) > [character_brew_of_the_month](character_brew_of_the_month)
+# character\_brew\_of\_the\_month
 
-Column | Type | Description
---- | --- | ---
-Guid | INT UNSIGNED | 
-LastEventId | INT UNSIGNED | 
+[<-Back-to:Characters](database-characters.md)
+
+**The \`character\_brew\_of\_the\_month\` table**
+
+**Structure**
+
+| Field            | Type | Attributes | Key | Null | Default | Extra | Comment  |
+| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------- |
+| [guid][1]        | INT  | UNSIGNED   | PRI | NO   |         |       |          |
+| [lastEventId][2] | INT  | UNSIGNED   |     | NO   | 0       |       |          |
+
+[1]: #guid
+[2]: #lastEventId
+
+**Description of the fields**
+
+### guid
+
+`field-no-description|1`
+
+### lastEventId
+
+`field-no-description|2`

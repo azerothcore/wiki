@@ -9,11 +9,11 @@ This table holds the reputation information for each character.
 **Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-|---------------|-------------|------------|-----|------|---------|-------|--------------------------|
-| [guid][1]     | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [faction][2]  | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [standing][3] | INT     | SIGNED     |     | NO   | 0       |       |                          |
-| [flags][4]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
+| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]     | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [faction][2]  | SMALLINT    | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [standing][3] | INT         | SIGNED     |     | NO   | 0       |       |                          |
+| [flags][4]    | SMALLINT    | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #faction
@@ -24,11 +24,11 @@ This table holds the reputation information for each character.
 
 ### guid
 
-The GUID of the character. See characters.guid
+The character guid. See [characters.guid](characters#guid).
 
 ### faction
 
-The faction ID that the character has the given reputation in. See Faction.dbc
+The faction ID that the character has the given reputation in. See [Faction.dbc](faction).
 
 ### standing
 
@@ -39,7 +39,7 @@ The current reputation value that the character has.
 This field is a bitmask containing flags that apply to the faction and how it's displayed to the character. Just like any flag field, you can combine flags by adding them together. If this field is 0, then it is not shown in the reputation list in-game.
 
 | Flag | Name                          | Comments                                                                 |
-|------|-------------------------------|--------------------------------------------------------------------------|
+|----- | ----------------------------- | ------------------------------------------------------------------------ |
 | 1    | FACTION_FLAG_VISIBLE          | Displayed in the reputation tab                                          |
 | 2    | FACTION_FLAG_AT_WAR           | Active when the player sets the at war checkbox                          |
 | 4    | FACTION_FLAG_HIDDEN           | Hidden faction from reputation pane in client                            |
