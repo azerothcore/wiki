@@ -12,7 +12,7 @@ tableofcontents: 1
 
 ### Installing Influx DB
 
-1. Download and install InfuxDB from https://portal.influxdata.com/downloads/ for your operating system.
+1. Download and install InfuxDB version 1.x from https://portal.influxdata.com/downloads/ for your operating system. (Version 2.x is currently not supported.)
 
 1. Start InfuxDB
 
@@ -30,9 +30,13 @@ GRANT READ ON worldserver TO grafana
 
 1. Open the dashboard at http://localhost:3000
 
-1. Login with username *admin* and password *admin* (defaults can be changed in Grafana's .ini file)
+1. Login with username *admin* and password *admin* (defaults can be changed in Grafana's .ini file. In newer versions of Grafana you will be prompted to change this at first login.)
 
-1. Go to Data Sources → + Add Data Source
+1. Hover the cogwheel and select Data Sources
+
+1. Search for InfluxDB and select.
+
+1. Fill in the required data below.
 
 ```
 Name: Influx
@@ -42,7 +46,9 @@ Access: Server
 Database: worldserver User: grafana Password: grafana
 ```
 
-1. Go to Dashboards → Import and import each .json file in [AzerothCore's /apps/grafana](https://github.com/azerothcore/azerothcore-wotlk/tree/master/apps/grafana).
+1. Press Save & Test which should give you a green checkbox that says "Data source is working".
+
+1. Hover the + and select Import and import each .json file from [AzerothCore's /apps/grafana](https://github.com/azerothcore/azerothcore-wotlk/tree/master/apps/grafana).
 
 ### Configuring AzerothCore
 
@@ -56,38 +62,36 @@ Database: worldserver User: grafana Password: grafana
 
 ## Implemented and planned metrics
 
-We'd like help implementing these and other metrics, feel free to send us a [pull request](https://github.com/azerothcore/azerothcore-wotlk/pulls).
-
+Implemented (✔) and planned (❌) metrics:
 
 ### Technical oriented
 
-| Metric | Implemented | Planned | Comment |
-| :----- | :---------: | :-----: | :------ |
-| Packets sent | | x |
-| Packets recieved | | x |
-| Average ping | | x |
-| Traffic in | | x |
-| Traffic out | | x |
-| World session update time | | x |
-| Map update time | | x |
-| Map loads/unloads | | x |
-| MMap queries | | x |
-| Database async queries queued count | | x |
-| Server uptime | | x | through world initialize and world shutdown events |
-| Active connections | | x |
-| Queued connections | | x |
+* I/O networking trafic
+    * Packets sent ❌
+    * Packets recieved ✔
+    * Average ping ❌
+    * Traffic in ❌
+    * Traffic out ❌
+* World session update time ✔
+* Map update time ✔
+* Map loads/unloads ✔
+* MMap queries ✔
+* Database async queries queued count ✔
+* Server uptime ✔ (through world initialize and world shutdown events)
+* Active connections ❌
+* Queued connections ❌
 
 ### Game oriented
 
-| Metric | Implemented | Planned | Comment |
-| :----- | :---------: | :-----: | :------ |
-| Players online | | x |
-| Logins per hour/day/week etc | | x |
-| Mails sent | | x |
-| Auction house usage | | x |
-| Character levels | | x |
-| Gold earn/spend | | x |
-| LFG queues | | x |
+* Players online ✔
+* Logins per hour/day/week etc ✔
+* Mails sent ❌
+* Auction house usage ❌
+* Character levels ❌
+* Gold earn/spend ❌
+* LFG queues ❌
+
+We'd like help implementing these and other metrics, feel free to send us a [pull request](https://github.com/azerothcore/azerothcore-wotlk/pulls).
 
 ## Adding new metrics
 
@@ -132,3 +136,15 @@ InfluxDB is part of a bigger set of projects by [InfluxData](https://www.influxd
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/) is an alternative to Grafana to graph and visualize time-series metrics.
 
 - [Kapacitator](https://www.influxdata.com/time-series-platform/kapacitor/) is able to process streaming data from InfluxDB to provide alerts, trigger events, detect anomalies or transform data.
+
+## Additional Reading
+
+Lean more about InfluxDB and Grafana:
+
+* [InfluxDB website](https://influxdata.com/time-series-platform/influxdb/)
+* [InfluxDB documentation (v1.8)](https://docs.influxdata.com/influxdb/v1.8/)
+* [Grafana website](http://grafana.org/)
+* [Grafana documentation](http://docs.grafana.org/)
+* [Grafana live demo](http://play.grafana.org/)
+* [Adding InfluxDB to Grafana](http://docs.grafana.org/datasources/influxdb/)
+
