@@ -47,6 +47,7 @@ redirect_from: /documentation_index
 
 ## Recipes & Techniques
 
+* [How to import DBC data into SQL](how-to-import-dbc-data-in-db.md)
 * [Run Worldserver and Authserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
 * [Useful SQL Snippets](useful-sql.md)
 * [How to use gperftool to analyse your app](how-to-use-gperftool.md)
