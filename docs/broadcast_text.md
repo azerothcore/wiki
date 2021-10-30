@@ -8,9 +8,11 @@ This table (ref <https://github.com/TrinityCore/TrinityCore/commit/60e87db>) wi
 
 Its purpose is (will be) used as a globalized table containing the texts as mentionned above, and things like their sounds, their emotes and the languages in which the texts should be said.
 
- 
-
 All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzcool.
+
+ **Values from this table come from sniffs (retail data) and should not be changed unless you are absolutelly sure they have been wrongly changed before.**
+ 
+ **Most of the time, the values here are correct and your script needs to be fixed. Please ensure your script works correctly before suggesting changes to this table.**
 
 **Structure**
 
