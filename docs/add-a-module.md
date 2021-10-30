@@ -7,7 +7,7 @@ redirect_from: "/Add-a-module"
 ## **How to add a module**
 
 
-1. Get the module from this website [https://www.azerothcore.org/catalogue/](https://www.azerothcore.org/catalogue/)
+1. Get the module from this website [https://www.azerothcore.org/catalogue](https://www.azerothcore.org/catalogue)
 2. Clone it using git (recommended) or just download it
 3. I'll use this for Exmple: [https://www.azerothcore.org/catalogue/details.html?id=177019524](https://www.azerothcore.org/catalogue/details.html?id=177019524).
 4. Once you downloaded it or cloned: ( Extract it, you will have than Folder looks like this :
