@@ -11,6 +11,7 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzcool.
 
  **Values from this table come from sniffs (retail data) and should not be changed unless you are absolutelly sure they have been wrongly changed before.**
+ 
  **Most of the time, the values here are correct and your script needs to be fixed. Please ensure your script works correctly before suggesting changes to this table.**
 
 **Structure**
