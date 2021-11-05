@@ -45,7 +45,7 @@ To verify that mysql has been properly installed, try accessing it using either 
 You can install Sequel Ace with:
 
 ```sh
-brew cask install sequel-ace
+brew install --cask sequel-ace
 ```
 
 <br>
