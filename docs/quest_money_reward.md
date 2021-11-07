@@ -32,50 +32,50 @@ Player's level
 
 ### Money0
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 0.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 0.
 
 
 ### Money1
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 1.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 1.
 
 
 ### Money2
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 2.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 2.
 
 
 ### Money3
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 3.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 3.
 
 
 ### Money4
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 4.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 4.
 
 
 ### Money5
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 5.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 5.
 
 
 ### Money6
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 6.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 6.
 
 
 ### Money7
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 7.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 7.
 
 
 ### Money8
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 8.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 8.
 
 
 ### Money9
 
-Money amount rewarded to player on specific level when [MoneyRewardDifficulty](quest_template#MoneyRewardDifficulty) is set to 9.
+Money amount rewarded to player on specific level when [RewardMoneyDifficulty](quest_template#RewardMoneyDifficulty) is set to 9.
 
