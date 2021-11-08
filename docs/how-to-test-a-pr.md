@@ -94,7 +94,7 @@ Then start the server just the way you always do.
 
 If you are using the Docker setup, you can simply trigger the recompilation by running:
 
-Linux:  ```./bin/acore-docker-build``` 
+Linux:  ```./bin/acore-docker-build```  
 Windows: ```./acore.sh docker build``` 
 
 then to launch the server you have to destroy and recreate the containers using `docker-compose down` and `docker-compose up`.
