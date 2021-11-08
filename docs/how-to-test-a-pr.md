@@ -69,6 +69,9 @@ The terminal will prompt an editor (usually `nano` or `vim`) that asks to save t
 
 You can read more about the `git` configuration and its default editor [here](http://web.mit.edu/6.005/www/fa14/tutorial/git/config.html).
 
+- Note: Check the message in your console. If it states 'Automatic merge failed; fix conflicts and then commit the result', you should report back to the PR, asking the Developer to please fix the merge conflicts, and remove the 'waiting to be tested' label and attach a 'merge conflict' label.
+
+
 ## Update your local server to apply the changes
 
 Now you simply need to update your local server with the new changes. The procedure is analogue to a normal server update.
