@@ -54,5 +54,6 @@ redirect_from: /documentation_index
 
 ## External resources
 
+* <a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guides and Tips from our Forum</a>
 * <a href="https://wowdev.wiki/Category:DBC_WotLK" target="_blank">DBC Documentation</a>
 
