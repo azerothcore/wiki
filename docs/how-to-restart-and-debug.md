@@ -66,6 +66,9 @@ Create a file called `gdb.conf` with this inside:
     set debug timestamp
     run -c ../etc/worldserver.conf
     bt
+    bt full
+    info thread
+    thread apply all backtrace full
 
 Then, to debug or create a crashdump you can just use the gdb command as described in its documentation:
 
