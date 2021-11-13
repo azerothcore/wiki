@@ -125,6 +125,7 @@ The world database has information basically related to creatures, objects, item
 - [prospecting_loot_template](loot_template.md)
 - [quest_details](quest_details.md)
 - [quest_mail_sender](quest_mail_sender.md)
+- [quest_money_reward](quest_money_reward.md)
 - [quest_offer_reward](quest_offer_reward.md)
 - [quest_offer_reward_locale](quest_offer_reward_locale.md)
 - [quest_poi](quest_poi.md)
