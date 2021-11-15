@@ -963,7 +963,14 @@ body > .wrapper .pl-12 {
   padding-left: 128px!important;
 }
 
-/* https://darkmodejs.learn.uno/#debug */
+/*
+  For dark mode
+  https://darkmodejs.learn.uno/#debug 
+*/
 .darkmode-layer, .darkmode-toggle {
   z-index: 500;
+}
+
+body {
+  background-color: #000000;
 }
