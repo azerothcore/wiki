@@ -234,8 +234,9 @@ References are defined in a similar way (& must be stuck to the type)
 Creature& creature;
 ```
 
-Never define Creature\* me; in a creature script!
-'me' is the pointer to the scripted creature.
+Never define "me" in a creature or object script!
+
+'me' is the pointer to the scripted creature or object.
 
 ### Defining const variables
 
