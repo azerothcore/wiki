@@ -69,6 +69,7 @@ Sets group member behaviours, values are:
 | 1     | The member aggroes if the leader aggroes                     |
 | 2     | The leader aggroes if the member aggroes                     |
 | 3     | Everyone assists everyone and member don't follow the leader |
+| 4     | Everyone evades if any member evades (enters evade mode)     |
 | 512   | Noone assists noone and member follow the leader             |
 | 515   | Everyone assists everyone and member follow the leader       |
 
