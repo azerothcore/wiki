@@ -66,6 +66,16 @@ void AddSC_boss_lord_marrowgar()
 }
 ```
 
+### Different types of Creature AI's
+
+| Name           |
+| -------------- |
+| CreatureAI     |
+| BossAI         |
+| GuardianAI     |
+| PetAI          |
+| NullCreatureAI |
+
 ## Spell Scripts
 
 ### Validation of spells used in a script
