@@ -21,6 +21,7 @@ redirect_from: /documentation_index
 * [Bitwise operations](bit-and-bytes-tutorial.md)
 * [Clang Format](clang-format)
 * [CMake options](cmake-options.md)
+* [Core Scripts](core-scripts.md)
 * [Directory structure](directory-structure.md)
 * [Exit Codes](exitcodes.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)
