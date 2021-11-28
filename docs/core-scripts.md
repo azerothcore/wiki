@@ -164,6 +164,7 @@ class spell_pri_power_word_shield : public SpellScript
     {
         OnCheckCast += SpellCheckCastFn(spell_pri_power_word_shield::CheckCast);
     }
+}
 
 void AddSC_priest_spell_scripts()
 {
