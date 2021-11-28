@@ -128,7 +128,7 @@ void AddSC_priest_spell_scripts()
 
 For SpellScripts and AuraScripts that pair together, we script them by themselves and link them at the registry.
 
-When two scripts are going to be linked, they will always share the same name. Therefore we always prefix the AuraScript with \_aura in these cases.
+When two scripts are going to be linked, they will always share the same name. Therefore we always suffix the AuraScript with \_aura in these cases.
 
 ```cpp
 class spell_pri_power_word_shield_aura : public AuraScript
