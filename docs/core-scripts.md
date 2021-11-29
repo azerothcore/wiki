@@ -80,7 +80,7 @@ void AddSC_boss_lord_marrowgar()
 
 ### Validation of spells used in a script
 
-Spells used **within** the SpellScript should **alawys** be validated at the top of the script.
+Spells used **within** the SpellScript should **always** be validated at the top of the script.
 
 This will prevent potential crashes if we try to use a spell that doesn't exist in a script.
 
