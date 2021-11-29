@@ -125,7 +125,7 @@ Anything that causes a packet send or received gets logged by the sniffer.
 
 **Damaging effects:** Must be cast on self or target from the caster who is sniffing.
 
-## Quests:
+### Quests:
 
 **Flags:** Quest must be accepted. Accept and abandon and Accept to ensure phasing is captured if any.
 
