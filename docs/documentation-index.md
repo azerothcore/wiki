@@ -30,6 +30,7 @@ redirect_from: /documentation_index
 * [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana.md)
 * [MySQL types (C++)](mysqltypescpp.md)
 * [Project Versioning](project-versioning.md)
+* [Sniffing & Parsing](sniffing-and-parsing)
 * [SQL Directory](sql-directory.md)
 * [SQL Versioning](sql-versioning.md)
 
