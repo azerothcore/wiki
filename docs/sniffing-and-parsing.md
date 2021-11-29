@@ -166,6 +166,6 @@ Anything dealing with these must be obtained and viewed from the journal or tran
 
 ## Where to send sniffs
 
-TBD
+To contribute to AzerothCore with sniffs, upload the pkt file to [https://forms.gle/Y1Ka3wy11egTmF5y8](https://forms.gle/Y1Ka3wy11egTmF5y8).
 
 **Warning:** Do not sell or publically post your pkt file as it contains highly sensitive information identifying the sniffing account used, from ip address, billing name, friends list, and various other personal information you do not want to have released on the internet.
