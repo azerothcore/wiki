@@ -7,6 +7,7 @@ tableofcontents: 1
 This guide is to assist in obtaining thorough sniffs with ymir.
 
 This guide is written to assume you are familiar with both setting up and running the ymir sniffer at: [https://github.com/TrinityCore/ymir](https://github.com/TrinityCore/ymir)
+
 Parsing deals with the translations of sniffs with the tool, Instructions and software at: [https://github.com/TrinityCore/WowPacketParser](https://github.com/TrinityCore/WowPacketParser)
 
 **Disclaimer:** There is no guaranteed safe way to gather sniffs, and you may face an account ban or suspension. Do this only at your own risk of your account and lost invested progress.
