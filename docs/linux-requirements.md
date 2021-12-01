@@ -74,6 +74,14 @@ sudo apt-get install clang-7.0
 
 If you use another distro or version, search on google for how to install the right clang version for your system.
 
+Currently the project requires clang10 or higher.
+
+This is a way to upgrade and install version 11.
+
+The answer is detailed here:
+
+[How to install clang 11 on Debian](https://stackoverflow.com/questions/66223241/how-to-install-clang-11-on-debian)
+
 #### Check your cmake version
 
 ```sh
