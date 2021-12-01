@@ -84,6 +84,20 @@ Your `cmake` version **MUST** be `3.16` or higher.
 
 On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
 
+Remember that it is possible to update cmake, using Python.
+
+Install:
+
+```sh
+python -m pip install cmake
+```
+
+Update:
+
+```sh
+python -m pip install --upgrade cmake
+```
+
 #### Ensure that the gcc-8 headers are installed
 
 This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
