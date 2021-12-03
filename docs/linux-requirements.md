@@ -53,7 +53,7 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 **Example:**
 
 ```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libace-6.* libace-dev -y
+apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
 ```
 
 --- 
@@ -74,6 +74,14 @@ sudo apt-get install clang-7.0
 
 If you use another distro or version, search on google for how to install the right clang version for your system.
 
+Currently the project requires clang10 or higher.
+
+This is a way to upgrade and install version 11.
+
+The answer is detailed here:
+
+[How to install clang 11 on Debian](https://stackoverflow.com/questions/66223241/how-to-install-clang-11-on-debian)
+
 #### Check your cmake version
 
 ```sh
@@ -83,6 +91,20 @@ cmake --version
 Your `cmake` version **MUST** be `3.16` or higher.
 
 On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
+
+Remember that it is possible to update cmake, using Python.
+
+Install:
+
+```sh
+python -m pip install cmake
+```
+
+Update:
+
+```sh
+python -m pip install --upgrade cmake
+```
 
 #### Ensure that the gcc-8 headers are installed
 
