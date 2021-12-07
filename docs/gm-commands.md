@@ -220,7 +220,7 @@ Note: Some commands are working only by selecting a player or a creature. These 
 |learn all recipes|2|`.learn all recipes [$profession]`|Learns all recipes of specified profession and sets skill level to max. Example: .learn all recipes enchanting|
 |learn|2|`.learn #spell [all]`|Selected character learn a spell of id #spell. If 'all' provided then all ranks learned.|
 |levelup|2|`.levelup [$playername] [#numberoflevels]`|Increase/decrease the level of character with $playername (or the selected if not name provided) by #numberoflevels Or +1 if no #numberoflevels provided). If #numberoflevels is omitted, the level will be increase by 1. If #numberoflevels is 0, the same level will be restarted. If no character is selected and name not provided, increase your level. Command can be used for offline character. All stats and dependent values recalculated. At level decrease talents can be reset if need. Also at level decrease equipped items with greater level requirement can be lost.|
-|lfg clean|3|`.flg clean`|Cleans current queue, only for debugging purposes.|
+|lfg clean|3|`.lfg clean`|Cleans current queue, only for debugging purposes.|
 |lfg group|1|`.lfg group`|Shows information about all players in the group (state, roles, comment, dungeons selected).|
 |lfg options|2|`.lfg options [new value]`|Shows current lfg options. New value is set if extra param is present.|
 |lfg player|1|`.lfg player`|Shows information about player (state, roles, comment, dungeons selected).|
