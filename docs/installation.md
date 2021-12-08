@@ -32,6 +32,8 @@ These guides are made by community members and might not be up-to-date:
 
 - [ArchLinux](arch-linux.md)
 
+- [FreeBSD](FreeBSD.md)
+
 ## Azerothcore Classic setup
 
 Every step of the guide is divided in three tabs regarding different operating systems (Linux, macOS and Windows).
