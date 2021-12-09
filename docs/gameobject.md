@@ -138,6 +138,11 @@ Using a negative value will result in the object starting out by being "despawne
 
 This column is still not understood to what its purpose is for however, this is always set to `100` for chests.
 
+According to **ratkosrb**:
+> In wotlk and after its the current health percent of destructible gameobjects, like the gates in SOTA. In vanilla and tbc I'm not sure what its used for, but if you set it to 255 it disables animations, like doors snapping open/closed instantly. Also this field was first added to update fields in patch 1.12 (previous vanilla versions didn't have it), so my guess is it was used for the open world PvP objectives in EPL.
+
+
+
 ### state
 
 This column is used to avoid players to interact at the same time with the same gameobject.
