@@ -234,7 +234,7 @@ for (int i = 0; i < 8; ++i)
 }
 ```
 
-### Bitwise left shit "<<"
+### Bitwise left shift "<<"
 
 This bit operation will shift all the binary values N times as specified. Lets look deeper:
 
