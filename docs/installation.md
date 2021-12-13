@@ -32,7 +32,7 @@ These guides are made by community members and might not be up-to-date:
 
 - [ArchLinux](arch-linux.md)
 
-- [FreeBSD](FreeBSD.md)
+- [FreeBSD](freebsd.md)
 
 ## Azerothcore Classic setup
 
