@@ -106,9 +106,9 @@ You have not copied the necessary .dll files into the binaries directory.
 
 **ACE00043** Core doesn't start, I get:
 ```
-AzerothCore does not support MySQL versions below 5.7
+AzerothCore does not support MySQL versions below 5.7 and MariaDB versions below 10.5
 ```
-Upgrade your MySQL.
+Upgrade your MySQL/MariaDB.
 
 ---------------------------------------------------------
 
