@@ -4,7 +4,7 @@ redirect_from: "/Installation"
 
 # Guía de instalación 
 
-## Escogiendo una configuación
+## Escogiendo una forma de instalación
 
 Existen diferentes formas de instalar AzerothCore. Escoja solo **UNA**.
 
