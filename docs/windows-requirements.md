@@ -9,7 +9,7 @@
 | :- |
 | Boost ≥ 1.70 - 1.74 |
 | MySQL ≥ 5.7.0 |
-| OpenSLL ≥ 1.0.x (OpenSSQL 3.0 is not supported)|
+| OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported)|
 | CMake ≥ 3.16 |
 | MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview)
 
