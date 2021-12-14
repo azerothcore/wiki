@@ -61,6 +61,11 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git
 
 Now go into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run inside this folder**.
 
+Before we install let's get a copy of our own config.sh from the distribution
+```
+cp conf/dist/config.sh conf/config.sh
+```
+
 ### Installation
 
 Inside your terminal (if you use Windows, use git bash), run the following commands inside the azerothcore-wotlk folder
