@@ -53,19 +53,19 @@
 
 1. Choose a database management tool
 
-    1. mysql cli (Fastest)
+    - mysql cli (Fastest)
     
-    1. [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
+    - [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
     
-    1. [HeidiSQL](https://www.heidisql.com/download.php) (Best for beginners)
+    - [HeidiSQL](https://www.heidisql.com/download.php) (Best for beginners)
     
-    1. MySQL Workbench (already installed if you chose to install full MySQL package)
+    - MySQL Workbench (already installed if you chose to install full MySQL package)
     
-    1. [DBeaver](https://dbeaver.io/) (Multiplattform Database Management Tool)
+    - [DBeaver](https://dbeaver.io/) (Multiplattform Database Management Tool)
 
-1. Try connecting to your database. You may be looking for "Connect to Host" or "New Connection" or "Session Manager" depending on which program you use.
+    1. Try connecting to your database. You may be looking for "Connect to Host" or "New Connection" or "Session Manager" depending on which program you use.
 
-1. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
+    1. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or        SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
 
 1. [CMake](https://cmake.org/)
 
