@@ -37,7 +37,7 @@ Github link:
 
 1. Extract the files from the zip file and place them within the **Data** folder.
 
-1. Edit your the [DataDir](#config-files-worldserver-conf---authserver-conf) config option to the location of your folder.
+1. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
 
 ## Extractors (Not needed if you downloaded the files above)
 
