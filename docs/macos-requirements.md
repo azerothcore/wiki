@@ -26,7 +26,7 @@ brew update
 ```
 
 ```sh
-brew install openssl readline cmake boost coreutils bash bash-completion coreutils
+brew install openssl@1.1 readline cmake boost coreutils bash bash-completion coreutils
 ```
 
 This will install bash 5+, you might need to restart your terminal.
