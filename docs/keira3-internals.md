@@ -40,8 +40,8 @@ More specifically, we have:
  You can see the integration tests of Keira3 almost like a set of e2e tests, the main difference is that all the DB interactions are mocked.
  The difference between unit tests and integration test is: in unit tests we test units by mocking all their dependencies, while in integration tests we test "big pieces" of Keira3 together (mocking only the DB). Mostly used to test the editors.
  
- - **E2E tests**. We have a tiny set of e2e tests based on [Spectron](https://www.electronjs.org/spectron). For example, to check the sqlite integration. 
- The command `ng e2e` will automatically serve the app and run the e2e tests.
+ - **E2E tests**. We have a tiny set of e2e tests based on [Playwright](https://playwright.dev/). For example, to check the sqlite integration. 
+ The command `npm run e2e` will automatically serve the app and run the e2e tests.
  
  ### Why test automation?
  
