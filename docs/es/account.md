@@ -1,8 +1,8 @@
 ﻿# account
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a: Auth](database-auth.md)
 
-Leer en: [English :gb:](../account) [Spanish :es:](account)
+Leer en: [English :gb:](../account) [Español :es:](account)
 
 **Tabla \`account\`**
 

@@ -1,8 +1,8 @@
 ﻿# account\_banned
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a: Auth](database-auth.md)
 
-Leer en: [English :gb:](../account_banned) [Spanish :es:](account_banned)
+Leer en: [English :gb:](../account_banned) [Español :es:](account_banned)
 
 **Tabla \`account\_banned\`**
 

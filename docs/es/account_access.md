@@ -2,7 +2,7 @@
 
 [<- Volver a: Auth](database-auth.md)
 
-Leer en: [English :gb:](../account_access) [Spanish :es:](account_access)
+Leer en: [English :gb:](../account_access) [Español :es:](account_access)
 
 **Tabla \`account\_access\`**
 

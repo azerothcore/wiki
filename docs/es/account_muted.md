@@ -1,8 +1,8 @@
 ﻿# account\_muted
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a: Auth](database-auth.md)
 
-Leer en: [English :gb:](../account_muted) [Spanish :es:](account_muted)
+Leer en: [English :gb:](../account_muted) [Español :es:](account_muted)
 
 **Tabla \`account\_muted\`**
 
@@ -44,7 +44,7 @@ Duración del mute en minutos.
 
 ### mutedby
 
-Apodo del GM/moderador que emitió el mute.
+Nickname del GM/moderador que emitió el mute.
 
 #### mutereason
 
