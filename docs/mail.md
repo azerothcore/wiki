@@ -100,7 +100,7 @@ For items look at [mail\_items](mail_items) table.
 
 ### expire\_time
 
-Here is timestamp which stores date for auto-return mail to sender.
+Here is timestamp which stores date for auto-return mail to sender or delete if [stationery][3] is 62 (AuctionHouse).
 
 ### deliver\_time
 
