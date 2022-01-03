@@ -104,7 +104,7 @@ Here is timestamp which stores date for auto-return mail to sender or delete if 
 
 ### deliver\_time
 
-Here is timestamp which stores date of send mail.
+Here is timestamp which stores date when mail must be delivered to receiver. Can be delayed mails from AuctionHouse.
 
 ### money
 
@@ -129,4 +129,11 @@ when is set to 1, that field \`money\` stores gold for COD.
 
 ### auctionId
 
-`field-no-description|14`
+Only if [stationery][3] is 62.
+
+Lot id from AuctionHouse. Can be negative vector in case of delayed mail with money sended by Auction to Lot-owner.
+For example: 
+
+[auctionId][14] = 777 : mail to Lot-owner, contains money for sended Lot id 777. Delivered money.
+
+[auctionId][14] = -777 : mail contains info that Lot id 777 is sold. Money will be delivered in next mail, time of deliver is set in [`deliver_time`][11] field.
