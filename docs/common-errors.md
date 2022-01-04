@@ -77,6 +77,14 @@ ERROR 1067 (42000) at line 181: Invalid default value for 'start_time'.
 ```
 Disable MySQL strict mode, read [How to turn on/off MySQL strict mode in localhost (xampp)? StackOverflow](https://stackoverflow.com/questions/40881773/how-to-turn-on-off-mysql-strict-mode-in-localhost-xampp).
 
+------------------------------------------------------------------------------------------------------------------
+
+**ACE00023** My Worldserver closes when autoupdater, I get:
+```
+ERROR 2013 (HY000) at line 4: Lost connection to MySQL server during query
+```
+This is most likely due to your MySQL server's max_allowed_packet setting is too low. See [this](https://docs.oracle.com/cd/E19509-01/820-6323/gicxk/index.html) or run the command `set global max_allowed_packet=XXXX (some high value)` to update your max_allowed_packet.
+
 ## Core-related Errors
 
 **ACE00040** Core doesn't start, I get:
