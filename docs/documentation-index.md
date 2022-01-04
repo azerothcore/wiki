@@ -15,6 +15,12 @@ redirect_from: /documentation_index
 * [Common Errors](common-errors)
 * [Standard Operating Procedure](standard-operating-procedure)
 
+## Database
+
+* [DB auth](database-auth.md)
+* [DB characters](database-characters.md)
+* [DB world](database-world.md)
+
 ## Documentation
 
 * [Bash system](bash_system.md)
@@ -34,11 +40,13 @@ redirect_from: /documentation_index
 * [SQL Directory](sql-directory.md)
 * [SQL Versioning](sql-versioning.md)
 
-## Database
+## Recipes & Techniques
 
-* [DB auth](database-auth.md)
-* [DB characters](database-characters.md)
-* [DB world](database-world.md)
+* [Useful Tools](useful-tools.md)
+* [How to import DBC data into SQL](how-to-import-dbc-data-in-db.md)
+* [Run Worldserver and Authserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
+* [Useful SQL Snippets](useful-sql.md)
+* [How to use gperftool to analyse your app](how-to-use-gperftool.md)
 
 ## Extend AzerothCore
 
@@ -46,13 +54,6 @@ redirect_from: /documentation_index
 * [Hooks Bash](hooks-bash.md)
 * [Hooks Cmake](hooks-cmake.md)
 * [Hooks C++](hooks-script.md)
-
-## Recipes & Techniques
-
-* [How to import DBC data into SQL](how-to-import-dbc-data-in-db.md)
-* [Run Worldserver and Authserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
-* [Useful SQL Snippets](useful-sql.md)
-* [How to use gperftool to analyse your app](how-to-use-gperftool.md)
 
 ## External resources
 
