@@ -5,9 +5,9 @@ This table contains the description of creatures. Each spawned creature is an in
 | Field                                              | Type               | Null | Key | Default | Extra | Comment                              |
 | -------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | ------------------------------------ |
 | [entry](#entry)                                    | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |                                      |
-| [difficulty_entry_1](#difficultyentryx)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [difficulty_entry_2](#difficultyentryx)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [difficulty_entry_3](#difficultyentryx)          | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [difficulty_entry_1](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [difficulty_entry_2](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [difficulty_entry_3](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [KillCredit1](#killcredit1)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [KillCredit2](#killcredit2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [modelid1](#modelidx)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
@@ -17,15 +17,15 @@ This table contains the description of creatures. Each spawned creature is an in
 | [name](#name)                                      | char(100)          | NO   | MUL | 0       |       |                                      |
 | [subname](#subname)                                | char(100)          | YES  |     | (NULL)  |       |                                      |
 | [IconName](#iconname)                              | char(100)          | YES  |     | (NULL)  |       |                                      |
-| [gossip_menu_id](#gossipmenuid)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [gossip_menu_id](#gossipmenuid)                    | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [minlevel](#minlevel)                              | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
 | [maxlevel](#maxlevel)                              | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
 | [exp](#exp)                                        | SMALLINT           | NO   |     | 0       |       |                                      |
 | [faction](#faction)                                | SMALLINT UNSIGNED  | NO   |     | 0       |       |                                      |
 | [npcflag](#npcflag)                                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [speed_walk](#speedwalk)                          | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
-| [speed_run](#speedrun)                            | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
-| [detection_range](#detectionrange)                | FLOAT              | NO   |     | 20      |       |                                      |
+| [speed_walk](#speedwalk)                           | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
+| [speed_run](#speedrun)                             | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
+| [detection_range](#detectionrange)                 | FLOAT              | NO   |     | 20      |       |                                      |
 | [scale](#scale)                                    | FLOAT              | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                            | TINYINT            | NO   |     | 0       |       |                                      |
@@ -33,17 +33,17 @@ This table contains the description of creatures. Each spawned creature is an in
 | [RangeAttackTime](#rangeattacktime)                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [BaseVariance](#basevariance)                      | FLOAT              | NO   |     | 1       |       |                                      |
 | [RangeVariance](#rangevariance)                    | FLOAT              | NO   |     | 1       |       |                                      |
-| [unit_class](#unitclass)                          | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [unit_flags](#unitflags)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [unit_flags2](#unitflags2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [unit_class](#unitclass)                           | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
+| [unit_flags](#unitflags)                           | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [unit_flags2](#unitflags2)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [dynamicflags](#dynamicflags)                      | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [family](#family)                                  | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_type](#trainertype)                      | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_spell](#trainerspell)                    | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [trainer_class](#trainerclass)                    | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [trainer_race](#trainerrace)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
+| [trainer_type](#trainertype)                       | TINYINT            | NO   |     | 0       |       |                                      |
+| [trainer_spell](#trainerspell)                     | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
+| [trainer_class](#trainerclass)                     | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
+| [trainer_race](#trainerrace)                       | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [type](#type)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [type_flags](#typeflags)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [type_flags](#typeflags)                           | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [pickpocketloot](#pickpocketloot)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [skinloot](#skinloot)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
@@ -53,7 +53,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [maxgold](#maxgold)                                | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [AIName](#ainame)                                  | char(64)           | NO   |     |         |       |                                      |
 | [MovementType](#movementtype)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [InhabitType](#inhabittype)                        | TINYINT UNSIGNED   | NO   |     | 3       |       |                                      |
 | [HoverHeight](#hoverheight)                        | FLOAT              | NO   |     | 1       |       |                                      |
 | [HealthModifier](#healthmodifier)                  | FLOAT              | NO   |     | 1       |       |                                      |
 | [ManaModifier](#manamodifier)                      | FLOAT              | NO   |     | 1       |       |                                      |
@@ -536,21 +535,6 @@ The creature's default movement type.
 | 1   | Random movement inside the wander_distance radius |
 | 2   | Waypoint movement                                 |
 
-#### InhabitType
-
-Controls where the creature can move and attack.
-
-| Bitmask | Type   |
-| ------- | ------ |
-| 1       | Ground |
-| 2       | Water  |
-| 4       | Flying |
-| 8       | Rooted |
-
-(This is a bitmask. You can add values together: 1+4=5 would make the creature walk on ground and fly.)
-
-**Note:** If your vehicle is a flying vehicle then your accessory **MUST** have it's [InhabitType](#inhabittype) set to (4 - Flying). This being if you set it for both ground and flying it will spawn on the ground if the vehicle is initially spawned on the ground.
-
 #### HoverHeight
 
 Distance above the ground that the creature will hover if it has MOVEMENTFLAG_DISABLE_GRAVITY enabled. Value taken from sniffs.
@@ -696,7 +680,7 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 8192       | CREATURE_FLAG_EXTRA_IGNORE_COMBAT                   | 0x00002000 |                                                                                                                                                    |
 | 16384      | CREATURE_FLAG_EXTRA_WORLDEVENT                      | 0x00004000 | custom flag for world events (left room for merging)                                                                                               |
 | 32768      | CREATURE_FLAG_EXTRA_GUARD                           | 0x00008000 | creature is a guard (Will ignore feign death and vanish)                                                                                           |
-| 65536      | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH             | 0x00010000 | creature ignores feign death                                                                                                                       |
+| 65536      | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH              | 0x00010000 | creature ignores feign death                                                                                                                       |
 | 131072     | CREATURE_FLAG_EXTRA_NO_CRIT                         | 0x00020000 | creature does not do critical strikes                                                                                                              |
 | 262144     | CREATURE_FLAG_EXTRA_NO_SKILL_GAINS                  | 0x00040000 | creature won't increase weapon skills                                                                                                              |
 | 524288     | CREATURE_FLAG_EXTRA_OBEYS_TAUNT_DIMINISHING_RETURNS | 0x00080000 | creature taunt is subject to diminishing returns                                                                                                   |
