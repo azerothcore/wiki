@@ -83,7 +83,9 @@ Disable MySQL strict mode, read [How to turn on/off MySQL strict mode in localho
 ```
 ERROR 2013 (HY000) at line 4: Lost connection to MySQL server during query
 ```
-This is most likely due to your MySQL server's max_allowed_packet setting is too low. See [this](https://docs.oracle.com/cd/E19509-01/820-6323/gicxk/index.html) or run the command `set global max_allowed_packet=XXXX (some high value)` to update your max_allowed_packet.
+This is most likely due to your MySQL server's max_allowed_packet setting is too low. See [this](https://docs.oracle.com/cd/E19509-01/820-6323/gicxk/index.html) or run the command `SET GLOBAL max_allowed_packet=1073741824;` in your SQL client (HeidiSQL, SQLyog, etc.) to update your max_allowed_packet.
+
+**This value will reset the next time your SQL server restarts and it may be necessary to run this query again in the future.**
 
 ## Core-related Errors
 
