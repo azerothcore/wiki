@@ -25,6 +25,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [npcflag](#npcflag)                                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [speed_walk](#speedwalk)                           | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speedrun)                             | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
+| [speed_swim](#speedswim)                           | FLOAT              | NO   |     | 1       |       |                                      |
+| [speed_swim](#speedflight)                         | FLOAT              | NO   |     | 1       |       |                                      |
 | [detection_range](#detectionrange)                 | FLOAT              | NO   |     | 20      |       |                                      |
 | [scale](#scale)                                    | FLOAT              | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
@@ -210,6 +212,14 @@ Controls how fast the creature can walk. For vehicles: increases fly speed.
 #### speed_run
 
 Controls how fast the creature can run. For vehicles: increases ground movement speed.
+
+#### speed_swim
+
+Controls how fast the creature can swim.
+
+#### speed_flight
+
+Controls how fast the creature can swim.
 
 #### detection_range
 
