@@ -219,7 +219,7 @@ Controls how fast the creature can swim.
 
 #### speed_flight
 
-Controls how fast the creature can swim.
+Controls how fast the creature can fly.
 
 #### detection_range
 
