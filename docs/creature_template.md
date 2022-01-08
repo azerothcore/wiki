@@ -203,7 +203,7 @@ A bitmask that represents what NPC flags the creature has. Each bit controls a d
 | 16777216 | 0x01000000 | Spellclick         | Needs data on npc_spellclick_spells table                                        |
 | 67108864 | 0x04000000 | Mailbox            | NPC will act like a mailbox (opens mailbox with right-click)                     |
 
-So if you want a NPC that is a quest giver(2), a vendor(128) and can repair(4096) you just add specific flags together: 2+128+4096=4226                                                                              
+So if you want a NPC that is a quest giver(2), a vendor(128) and can repair(4096) you just add specific flags together: 2+128+4096=4226
 
 #### speed_walk
 
