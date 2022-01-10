@@ -15,21 +15,20 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [areaId][5]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Area Identifier                                                                       |
 | [spawnMask][6]        | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
 | [phaseMask][7]        | SMALLINT     | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
-| [modelid][8]          | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | 0 core determined random model or model_id to prevent random model selection by core. |
-| [equipment_id][9]     | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
-| [position_x][10]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [position_y][11]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [position_z][12]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [orientation][13]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [spawntimesecs][14]   | INT          | UNSIGNED   |     | NO   | 120     |                |                                                                                       |
-| [wander_distance][15] | FLOAT        | SIGNED     |     | NO   | 5       |                | Dist in yards for random movement.                                                    |
-| [currentwaypoint][16] | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
-| [curhealth][17]       | INT          | UNSIGNED   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
-| [curmana][18]         | INT          | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
-| [MovementType][19]    | TINYINT      | UNSIGNED   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path                                                       |
-| [npcflag][20]         | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
-| [unit_flags][21]      | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
-| [dynamicflags][22]    | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
+| [equipment_id][8]     | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
+| [position_x][9]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
+| [position_y][10]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
+| [position_z][11]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
+| [orientation][12]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
+| [spawntimesecs][13]   | INT          | UNSIGNED   |     | NO   | 120     |                |                                                                                       |
+| [wander_distance][14] | FLOAT        | SIGNED     |     | NO   | 5       |                | Dist in yards for random movement.                                                    |
+| [currentwaypoint][15] | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
+| [curhealth][16]       | INT          | UNSIGNED   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
+| [curmana][17]         | INT          | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
+| [MovementType][18]    | TINYINT      | UNSIGNED   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path                                                       |
+| [npcflag][19]         | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
+| [unit_flags][20]      | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
+| [dynamicflags][21]    | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
 
 [1]: #guid
 [2]: #id
@@ -38,21 +37,20 @@ Contains individual creature spawn data for each individual spawn of each indivi
 [5]: #areaId
 [6]: #spawnmask
 [7]: #phasemask
-[8]: #modelid
-[9]: #equipment_id
-[10]: #position_x
-[11]: #position_y
-[12]: #position_z
-[13]: #orientation
-[14]: #spawntimesecs
-[15]: #wander_distance
-[16]: #currentwaypoint
-[17]: #curhealth
-[18]: #curmana
-[19]: #movementtype
-[20]: #npcflag
-[21]: #unit_flags
-[22]: #dynamicflags
+[8]: #equipment_id
+[9]: #position_x
+[10]: #position_y
+[11]: #position_z
+[12]: #orientation
+[13]: #spawntimesecs
+[14]: #wander_distance
+[15]: #currentwaypoint
+[16]: #curhealth
+[17]: #curmana
+[18]: #movementtype
+[19]: #npcflag
+[20]: #unit_flags
+[21]: #dynamicflags
 
 **Field Descriptions**
 
@@ -102,14 +100,6 @@ The creature will spawn in only the 10 and 25 man heroic versions of the map tha
 ### phaseMask
 
 This is a bit-mask field that describes all the phases that a creature will appear in. Aura 261 determines the phase you can see. For example, if you had this aura <http://www.wowhead.com/?spell=55782>, you would be able to see creatures in phase 2. If you wanted the creature to be visible in both phase 1 and phase 2, you would set the phase-mask to 3.
-
-### modelid
-
-The model ID associated with the creature. Note that two creatures that use the same template can have different models. See [creature\_model\_info](creature_model_info) for more information on model-specific characteristics.
-
-Note:
-
-This can be left at 0 and a random model from its assigned models in [creature\_template](creature_template) will be assigned by the core.
 
 ### equipment\_id
 
