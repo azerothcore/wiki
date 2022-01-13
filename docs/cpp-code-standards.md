@@ -121,6 +121,19 @@ enum Spells
 constexpr uint32 SPELL_4 = 4444;
 ```
 
+### Enum vs. Enum Class
+
+Enum classes are prefered to be used as they can cause fewer suprises that could lead to bugs as the enum will not implicitly convert to other types like integer or other enums.
+
+```cpp
+enum class Spell : uint32
+{
+    One   = 1111,
+    Two   = 2222,
+    Three = 3333
+}
+```
+
 ### Standard prefixes for constants
 
 All constants that we store have a standardized prefix.
@@ -221,8 +234,9 @@ References are defined in a similar way (& must be stuck to the type)
 Creature& creature;
 ```
 
-Never define Creature\* me; in a creature script!
-'me' is the pointer to the scripted creature.
+Never define "me" in a creature or object script!
+
+'me' is the pointer to the scripted creature or object.
 
 ### Defining const variables
 

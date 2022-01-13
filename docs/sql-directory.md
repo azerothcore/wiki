@@ -46,7 +46,7 @@ Files from this directory are automatically imported with the [Automatic Databas
 
 ## Archived files
 
-All archived files are found in $\data\sql\base\ directory.
+All archived files are found in $\data\sql\archive\ directory.
 
 All archived files are update files from previous database squashes.
 

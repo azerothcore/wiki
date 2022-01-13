@@ -6,53 +6,55 @@
 
 Contains individual creature spawn data for each individual spawn of each individual creature in the game world.
 
-| Field                 | Type         | Attributes | Key | Null | Default | Extra          | Comment                                                                               |
-|-----------------------|--------------|------------|-----|------|---------|----------------|---------------------------------------------------------------------------------------|
-| [guid][1]             | INT          | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                                                              |
-| [id][2]               | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                                                                   |
-| [map][3]              | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Map Identifier                                                                        |
-| [zoneId][4]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                                                                       |
-| [areaId][5]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Area Identifier                                                                       |
-| [spawnMask][6]        | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
-| [phaseMask][7]        | SMALLINT     | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
-| [modelid][8]          | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | 0 core determined random model or model_id to prevent random model selection by core. |
-| [equipment_id][9]     | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                                                                                       |
-| [position_x][10]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [position_y][11]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [position_z][12]      | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [orientation][13]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                                                                                       |
-| [spawntimesecs][14]   | INT          | UNSIGNED   |     | NO   | 120     |                |                                                                                       |
-| [wander_distance][15] | FLOAT        | SIGNED     |     | NO   | 5       |                | Dist in yards for random movement.                                                    |
-| [currentwaypoint][16] | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
-| [curhealth][17]       | INT          | UNSIGNED   |     | NO   | 1       |                | Storage used by core. "Always set as 1"                                               |
-| [curmana][18]         | INT          | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0"                                               |
-| [MovementType][19]    | TINYINT      | UNSIGNED   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path                                                       |
-| [npcflag][20]         | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
-| [unit_flags][21]      | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
-| [dynamicflags][22]    | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
+| Field                 | Type      | Attributes | Key | Null | Default | Extra          | Comment                                 |
+| --------------------- | --------- | ---------- | --- | ---- | ------- | -------------- | --------------------------------------- |
+| [guid][1]             | INT       | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                |
+| [creature_id1][2]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [creature_id2][3]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [chanceid1][4]        | FLOAT     | UNSIGNED   |     | NO   | 100     |                |
+| [map][5]              | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Map Identifier                          |
+| [zoneId][6]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                         |
+| [areaId][7]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Area Identifier                         |
+| [spawnMask][8]        | TINYINT   | UNSIGNED   |     | NO   | 1       |                |                                         |
+| [phaseMask][9]        | SMALLINT  | UNSIGNED   |     | NO   | 1       |                |                                         |
+| [equipment_id][10]    | TINYINT   | UNSIGNED   |     | NO   | 1       |                |                                         |
+| [position_x][11]      | FLOAT     | SIGNED     |     | NO   | 0       |                |                                         |
+| [position_y][12]      | FLOAT     | SIGNED     |     | NO   | 0       |                |                                         |
+| [position_z][13]      | FLOAT     | SIGNED     |     | NO   | 0       |                |                                         |
+| [orientation][14]     | FLOAT     | SIGNED     |     | NO   | 0       |                |                                         |
+| [spawntimesecs][15]   | INT       | UNSIGNED   |     | NO   | 120     |                |                                         |
+| [wander_distance][16] | FLOAT     | SIGNED     |     | NO   | 5       |                | Dist in yards for random movement.      |
+| [currentwaypoint][17] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
+| [curhealth][18]       | INT       | UNSIGNED   |     | NO   | 1       |                | Storage used by core. "Always set as 1" |
+| [curmana][19]         | INT       | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
+| [MovementType][20]    | TINYINT   | UNSIGNED   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path         |
+| [npcflag][21]         | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
+| [unit_flags][22]      | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
+| [dynamicflags][23]    | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
 
 [1]: #guid
-[2]: #id
-[3]: #map
-[4]: #zoneId
-[5]: #areaId
-[6]: #spawnmask
-[7]: #phasemask
-[8]: #modelid
-[9]: #equipment_id
-[10]: #position_x
-[11]: #position_y
-[12]: #position_z
-[13]: #orientation
-[14]: #spawntimesecs
-[15]: #wander_distance
-[16]: #currentwaypoint
-[17]: #curhealth
-[18]: #curmana
-[19]: #movementtype
-[20]: #npcflag
-[21]: #unit_flags
-[22]: #dynamicflags
+[2]: #creatureid1
+[3]: #creatureid2
+[4]: #chanceid1
+[5]: #map
+[6]: #zoneId
+[7]: #areaId
+[8]: #spawnmask
+[9]: #phasemask
+[10]: #equipmentid
+[11]: #positionx
+[12]: #positiony
+[13]: #positionz
+[14]: #orientation
+[15]: #spawntimesecs
+[16]: #wanderdistance
+[17]: #currentwaypoint
+[18]: #curhealth
+[19]: #curmana
+[20]: #movementtype
+[21]: #npcflag
+[22]: #unitflags
+[23]: #dynamicflags
 
 **Field Descriptions**
 
@@ -60,9 +62,19 @@ Contains individual creature spawn data for each individual spawn of each indivi
 
 A unique identifier given to each creature to distinguish one creature from another. Two creatures can NOT have same GUID.
 
-### id
+### creature\_id1
 
-The ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
+The Main ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
+
+### creature\_id2
+
+The Secondary ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
+
+### chanceid1
+
+The float chance that id1 will be choosen when spawning. Must be greater that zero and less than or equal to 100.
+
+This field should be set to 100 if creature_id2 is 0 and normally 50 if creature_id2 has a value and you wish for equal spawn chance. 
 
 ### map
 
@@ -91,7 +103,7 @@ Example:
 The creature will spawn in only the 10 and 25 man heroic versions of the map that the creature is spawned on.
 
 | Value | Comment                                                                              |
-|-------|--------------------------------------------------------------------------------------|
+| ----- | ------------------------------------------------------------------------------------ |
 | 0     | Not spawned                                                                          |
 | 1     | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
 | 2     | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
@@ -102,14 +114,6 @@ The creature will spawn in only the 10 and 25 man heroic versions of the map tha
 ### phaseMask
 
 This is a bit-mask field that describes all the phases that a creature will appear in. Aura 261 determines the phase you can see. For example, if you had this aura <http://www.wowhead.com/?spell=55782>, you would be able to see creatures in phase 2. If you wanted the creature to be visible in both phase 1 and phase 2, you would set the phase-mask to 3.
-
-### modelid
-
-The model ID associated with the creature. Note that two creatures that use the same template can have different models. See [creature\_model\_info](creature_model_info) for more information on model-specific characteristics.
-
-Note:
-
-This can be left at 0 and a random model from its assigned models in [creature\_template](creature_template) will be assigned by the core.
 
 ### equipment\_id
 

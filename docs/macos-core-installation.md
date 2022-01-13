@@ -59,6 +59,7 @@ At this point, you must be in your "build/" directory.
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
 ```sh
+export OPENSSL_ROOT_DIR=$(brew --prefix openssl@1.1)
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
 -DTOOLS=0 \
@@ -67,9 +68,9 @@ cmake ../ \
 -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib \
 -DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include \
 -DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib \
--DOPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include \
--DOPENSSL_SSL_LIBRARIES=/usr/local/opt/openssl/lib/libssl.dylib \
--DOPENSSL_CRYPTO_LIBRARIES=/usr/local/opt/openssl/lib/libcrypto.dylib
+-DOPENSSL_INCLUDE_DIR="$OPENSSL_ROOT_DIR/include" \
+-DOPENSSL_SSL_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libssl.dylib" \
+-DOPENSSL_CRYPTO_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libcrypto.dylib"
 ```
 
 To know the amount of cores available.

@@ -962,3 +962,16 @@ body > .wrapper .pl-11 {
 body > .wrapper .pl-12 {
   padding-left: 128px!important;
 }
+
+/*
+  For dark mode
+  https://darkmodejs.learn.uno/#debug 
+*/
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
+
+body.darkmode--activated img, body.darkmode--activated .darkmode-ignore {
+  mix-blend-mode: difference;
+  background-color: black;
+}

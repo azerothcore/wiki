@@ -12,19 +12,19 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 
 **Structure**
 
-| Field                | Type                | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------|---------------------|------------|-----|------|---------|-------|---------|
-| [guid/entry][1]      | INT/MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [path_id][2]         | INT             | UNSIGNED   |     | NO   |         |       |         |
-| [mount][3]           | MEDIUMINT        | UNSIGNED   |     | NO   |         |       |         |
-| [bytes1][4]          | INT             | UNSIGNED   |     | NO   |         |       |         |
-| [bytes2][5]          | INT             | UNSIGNED   |     | NO   |         |       |         |
-| [emote][6]           | INT             | UNSIGNED   |     | NO   |         |       |         |
-| [aiAnimKit][7]       | SMALLINT         | SIGNED     |     | NO   |         |       |         |
-| [movementAnimKit][8] | SMALLINT         | SIGNED     |     | NO   |         |       |         |
-| [meleeAnimKit][9]    | SMALLINT         | SIGNED     |     | NO   |         |       |         |
-| [isLarge][10]        | TINYINT          | UNSIGNED   |     | NO   |         |       |         |
-| [auras][11]          | text                |            |     | YES  |         |       |         |
+| Field                        | Type          | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------------- | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid/entry][1]              | INT/MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [path_id][2]                 | INT           | UNSIGNED   |     | NO   |         |       |         |
+| [mount][3]                   | MEDIUMINT     | UNSIGNED   |     | NO   |         |       |         |
+| [bytes1][4]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
+| [bytes2][5]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
+| [emote][6]                   | INT           | UNSIGNED   |     | NO   |         |       |         |
+| [aiAnimKit][7]               | SMALLINT      | SIGNED     |     | NO   |         |       |         |
+| [movementAnimKit][8]         | SMALLINT      | SIGNED     |     | NO   |         |       |         |
+| [meleeAnimKit][9]            | SMALLINT      | SIGNED     |     | NO   |         |       |         |
+| [visibilityDistanceType][10] | TINYINT       | UNSIGNED   |     | NO   |         |       |         |
+| [auras][11]                  | text          |            |     | YES  |         |       |         |
 
 [1]: #guid/entry
 [2]: #path_id
@@ -35,7 +35,7 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 [7]: #aianimkit
 [8]: #movementanimkit
 [9]: #meleeanimkit
-[10]: #islarge
+[10]: #visibilityDistanceType
 [11]: #auras
 
 **Description of the fields**
@@ -93,13 +93,16 @@ List of often used emote IDs and what they do can be found [here](Emotes).
 
 AnimKit ID from AnimKit.db2 that is applied on creature when spawned.
 
-### isLarge
+### visibilityDistanceType
 
 This field controls the visibility distance for creatures:
 
-0 = Normal, standard visible distance from worldserver.conf (default 90 yards)
-
-1 = Large, maximum visibility distance (250 yards)
+- Normal = 0,  100.0f  // default visible distance, 100 yards on continents
+- Tiny = 1,  25.0f
+- Small = 2,  50.0f
+- Large = 3, 200.0f
+- Gigantic = 4, 400.0f
+- Infinite = 5, SIZE_OF_GRIDS // max distance for visible objects)
 
 ### auras
 

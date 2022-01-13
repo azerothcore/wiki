@@ -8,15 +8,15 @@ This table allows to group mobs. Members of group will follow others, and attack
 
 **Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|---------|------------|-----|------|---------|-------|---------|
-| [leaderGUID][1] | INT | UNSIGNED   |     | NO   | NULL    |       |         |
-| [memberGUID][2] | INT | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [dist][3]       | FLOAT   | UNSIGNED   |     | NO   | NULL    |       |         |
-| [angle][4]      | FLOAT   | UNSIGNED   |     | NO   | NULL    |       |         |
-| [groupAI][5]    | INT | UNSIGNED   |     | NO   | NULL    |       |         |
-| [point_1][6]    | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [point_2][7]    | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field           | Type  | Attributes | Key | Null | Default | Extra | Comment |
+| --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [leaderGUID][1] | INT   | UNSIGNED   |     | NO   | NULL    |       |         |
+| [memberGUID][2] | INT   | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [dist][3]       | FLOAT | UNSIGNED   |     | NO   | NULL    |       |         |
+| [angle][4]      | FLOAT | UNSIGNED   |     | NO   | NULL    |       |         |
+| [groupAI][5]    | INT   | UNSIGNED   |     | NO   | NULL    |       |         |
+| [point_1][6]    | INT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [point_2][7]    | INT   | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #leaderguid
 [2]: #memberguid
@@ -39,7 +39,7 @@ Example:
 * Members = 2 and 3
 
 | leaderGUID | memberGUID |
-|------------|------------|
+| ---------- | ---------- |
 | 1          | 1          |
 | 1          | 2          |
 | 1          | 3          |
@@ -61,16 +61,17 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 
 ## groupAI
 
-Sets group member behaviours, values are:
+Sets group member behaviors, values are:
 
-| Value | Behaviour                                                    |
-|-------|--------------------------------------------------------------|
-| 0     | Noone assists noone and member don't follow the leader       |
-| 1     | The member aggroes if the leader aggroes                     |
-| 2     | The leader aggroes if the member aggroes                     |
-| 3     | Everyone assists everyone and member don't follow the leader |
-| 512   | Noone assists noone and member follow the leader             |
-| 515   | Everyone assists everyone and member follow the leader       |
+| Value | Flag  | Name                               | Comment                                                      |
+| ----- | ----- | ---------------------------------- | ------------------------------------------------------------ |
+| 0     |       |                                    | Noone assists noone and member don't follow the leader       |
+| 1     | 0x001 | GROUP_AI_FLAG_MEMBER_ASSIST_LEADER | The member aggroes if the leader aggroes                     |
+| 2     | 0x002 | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER | The leader aggroes if the member aggroes                     |
+| 3     |       |                                    | Everyone assists everyone and member don't follow the leader |
+| 4     | 0x004 | GROUP_AI_FLAG_EVADE_TOGETHER       | Everyone evades if any member evades (enters evade mode)     |
+| 512   | 0x200 | GROUP_AI_FLAG_FOLLOW_LEADER        | Noone assists noone and member follow the leader             |
+| 515   |       |                                    | Everyone assists everyone and member follow the leader       |
 
 ## point\_1  
 

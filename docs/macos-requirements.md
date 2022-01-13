@@ -26,7 +26,7 @@ brew update
 ```
 
 ```sh
-brew install openssl readline cmake boost coreutils bash bash-completion coreutils
+brew install openssl@1.1 readline cmake boost coreutils bash bash-completion coreutils
 ```
 
 This will install bash 5+, you might need to restart your terminal.
@@ -45,7 +45,7 @@ To verify that mysql has been properly installed, try accessing it using either 
 You can install Sequel Ace with:
 
 ```sh
-brew cask install sequel-ace
+brew install --cask sequel-ace
 ```
 
 <br>

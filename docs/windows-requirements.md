@@ -9,13 +9,13 @@
 | :- |
 | Boost ≥ 1.70 - 1.74 |
 | MySQL ≥ 5.7.0 |
-| OpenSLL ≥ 1.0.x |
+| OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported)|
 | CMake ≥ 3.16 |
 | MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview)
 
 1. Git Extensions
 
-    1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
+    1. You will need Git installed. You can get the latest version here https://sourceforge.net/projects/gitextensions/
 
 1. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
 
@@ -53,19 +53,19 @@
 
 1. Choose a database management tool
 
-    1. mysql cli (Fastest)
+    - mysql cli (Fastest)
     
-    1. [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
+    - [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
     
-    1. [HeidiSQL](https://www.heidisql.com/download.php) (Best for beginners)
+    - [HeidiSQL](https://www.heidisql.com/download.php) (Best for beginners)
     
-    1. MySQL Workbench (already installed if you chose to install full MySQL package)
+    - MySQL Workbench (already installed if you chose to install full MySQL package)
     
-    1. [DBeaver](https://dbeaver.io/) (Multiplattform Database Management Tool)
+    - [DBeaver](https://dbeaver.io/) (Multiplattform Database Management Tool)
 
-1. Try connecting to your database. You may be looking for "Connect to Host" or "New Connection" or "Session Manager" depending on which program you use.
+    1. Try connecting to your database. You may be looking for "Connect to Host" or "New Connection" or "Session Manager" depending on which program you use.
 
-1. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
+    1. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or        SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
 
 1. [CMake](https://cmake.org/)
 
@@ -79,16 +79,18 @@
 
 1. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. Or you can get both if you plan to compile both 32 and 64bit, they can coexist side by side.
 
-    1. Find the 64bit version by finding the latest 1.0.x or 1.1.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v1.1.1g)
-    
-    1. Find the 32bit version by finding the latest 1.0.x or 1.1.x Win32 OpenSSL that is NOT the "light" version. (Example: Win32 OpenSSL v1.1.1g)
+    - **OpenSSL 3.0 is not supported.**
 
-    1. *Note #1: If you get a "Missing Microsoft Visual C++ 2008 Redistributable" error message while installing OpenSSL,*
-       *download the [Microsoft Visual C++ 2008 Redistributable Package (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=29) (1.7MB Installer) and install it.*
-       *If you need 32bit support, download and install the [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/en-us/download/details.aspx?id=15336).*
+    - Find the 64bit version by finding the latest 1.0.x or 1.1.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v1.1.1g)
+    
+    - Find the 32bit version by finding the latest 1.0.x or 1.1.x Win32 OpenSSL that is NOT the "light" version. (Example: Win32 OpenSSL v1.1.1g)
+
+    - *Note #1: If you get a "Missing Microsoft Visual C++ .... Redistributable" error message while installing OpenSSL,*
+      *download the [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)](https://aka.ms/vs/17/release/vc_redist.x64.exe) (1.7MB Installer) and install it.*
+      *If you need 32bit support, download and install the [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x86) (Direct Download)](https://aka.ms/vs/17/release/vc_redist.x86.exe).*
        
-    1. *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
-       *when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
+    - *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
+      *when given the choice on where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
   
 1. [Boost](https://www.boost.org/).
 

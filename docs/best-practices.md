@@ -18,7 +18,7 @@ Reasons:
 
 ## Pull Requests (PR)
 
-- [Sync your fork](http://www.azerothcore.org/wiki/Syncing-your-fork) before opening a PR
+- Update your fork to the latest Master branch.
 
 Reasons:
 

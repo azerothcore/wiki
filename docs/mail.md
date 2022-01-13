@@ -86,9 +86,56 @@ Here is receiver's [character.guid](character#guid).
 
 Here is stored mail subject.
 
+If [stationery][3] is 62, subject has formatted data:
+
+`itemEntry:0:response:lotId:itemCount`
+
+-    **itemEntry**: entry field from item_template table
+
+-    0: allways 0
+
+-    **response**: Flag from 0 to 6
+
+| Flag | Comment                     |
+| ---- | --------------------------- |
+| 0    | AUCTION_OUTBIDDED           |
+| 1    | AUCTION_WON                 |
+| 2    | AUCTION_SUCCESSFUL          |
+| 3    | AUCTION_EXPIRED             |
+| 4    | AUCTION_CANCELLED_TO_BIDDER |
+| 5    | AUCTION_CANCELED            |
+| 6    | AUCTION_SALE_PENDING        |
+
+-    **lotId**: id field from auctionhouse table
+
+-    **itemCount**: amount of item at this Lot
+
+
 ### body
 
 The text contained in the mail. Max length is 8000 characters.
+
+If [stationery][3] is 62, body has formatted data:
+
+`hexID:bid:buyout:deposit:cut:delay:eta`
+
+-    **hexID**: hex value of itemowner's GUID (guid field from characters table)
+
+-    **bid**: ending bid for this lot
+
+-    **buyout**: buyout price of lot
+
+-    **deposit**: amount of money which will be taken by auctionhouse and returned then auction ends
+
+-    **cut**: Commission fee. Will be taken by auctionhouse then auction ends
+
+-    **delay**: time in seconds to delay mail with money for successfully solded lot
+
+-    **eta**: packed time to next mail whth money which appears in mail heder and body of notification mail
+
+This formatted data seen only in mail with notification about successful auction or about pending mail with money.
+
+
 
 ### has_items
 
@@ -100,11 +147,11 @@ For items look at [mail\_items](mail_items) table.
 
 ### expire\_time
 
-Here is timestamp which stores date for auto-return mail to sender.
+Here is timestamp which stores date for auto-return mail to sender or delete if [stationery][3] is 62 (AuctionHouse).
 
 ### deliver\_time
 
-Here is timestamp which stores date of send mail.
+Here is timestamp which stores date when mail must be delivered to receiver. Can be delayed mails from AuctionHouse.
 
 ### money
 
@@ -129,4 +176,11 @@ when is set to 1, that field \`money\` stores gold for COD.
 
 ### auctionId
 
-`field-no-description|14`
+Only if [stationery][3] is 62.
+
+Lot id from AuctionHouse. Can be negative vector in case of delayed mail with money sended by Auction to Lot-owner.
+For example: 
+
+[auctionId][14] = 777 : mail to Lot-owner, contains money for sended Lot id 777. Delivered money.
+
+[auctionId][14] = -777 : mail contains info that Lot id 777 is sold. Money will be delivered in next mail, time of deliver is set in [`deliver_time`][11] field.

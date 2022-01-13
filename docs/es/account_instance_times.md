@@ -1,10 +1,10 @@
-﻿# account\_instance\_times
+# account\_instance\_times
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a: Characters](database-characters.md)
 
-**Tabla \`account\_instance\_times\`**
+**La tabla \`account\_instance\_times\`**
 
-Esta tabla controla cuántas instancias han estado los personajes de la cuenta en la última hora. Si hay 5 registros por cuenta, el jugador no podrá ingresar a otra instancia.
+Esta tabla controla en que tantas instancias han estado los personajes de la cuenta por una hora. Si hay 5 registros por cuenta, el jugador no podrá entrar a otra instancia.
 
 **Estructura**
 
@@ -22,12 +22,12 @@ Esta tabla controla cuántas instancias han estado los personajes de la cuenta e
 
 ### accountId
 
-Id de la cuenta del jugador. Consulte [account.id](account#id).
+Cuenta del jugador. Véase [account.id](account#id).
 
 ### instanceId
 
-Este es el ID de instancia cuyos personajes de esta cuenta han pasado 5 horas.
+Estas son las id de las instancias en las que el jugador ha pasado 5 horas.
 
 ### releaseTime
 
-El tiempo en que las instancias deben volver a permitirse medido en tiempo Unix.
+Cuando las instancias deberán estar disponibles de nuevo, medido en Unixtime.

@@ -18,7 +18,7 @@ We'd also highly recommend following the #announcements channel on the AzerothCo
 
 Move to your AzerothCore sources directory.
 
-- If you have your own fork of AzerothCore, you need to [sync it](Syncing-your-fork).
+- If you have your own fork of AzerothCore, you need to update from latest master branch.
 
 - Otherwise, if you cloned AzerothCore directly from the main repo, you have to `git pull` to update it.
 

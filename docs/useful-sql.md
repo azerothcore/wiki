@@ -21,10 +21,10 @@ WHERE it.entry = XXXXX;
 
 ### Find which RLTs an item is in
 ```sql
-SELECT rlt.entry, it.entry, it.name
+SELECT rlt.entry, it.name
 FROM `reference_loot_template` rlt
 JOIN `item_template` it ON rlt.Item = it.entry
-WHERE it.entry = XXXXX;
+WHERE rlt.item = XXXXX;
 ```
 
 ### Find which creatures share a RLT
@@ -108,7 +108,7 @@ Handy for fixing static creatures.
 ```sql
 SELECT c.id, AVG(c.wander_distance)
 FROM `creature` c
-WHERE c.id = XXXX;
+WHERE c.id = XXXX AND c.wander_distance > 0;
 ```
 
 ### Find other members of a node pool

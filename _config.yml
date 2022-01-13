@@ -1,6 +1,6 @@
 # this version is only used internally to update 
 # the remote_theme when needed
-ac_wiki_version: 2.0.2
+ac_wiki_version: 2.0.5
 # based on latest (master) git-wiki-theme
 remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki

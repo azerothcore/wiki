@@ -25,7 +25,11 @@
     {% endif %}
 </head>
 
-<body>
+<body style="background-color: black;" onload="darkModeSetBodyBg()">
+    <!-- dark mode -->
+    <script>
+        darkModeSetBodyBg()
+    </script>
     <div class="wrapper">
         {% include git-wiki/sections/header/header.html %}
         <div class="git-wiki-page">

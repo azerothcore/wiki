@@ -52,7 +52,7 @@ This can mean several things:
 
 ## Database Update-related errors
 
-**ACE00020** My DB Assambler closes and does not import all updates, I get:
+**ACE00020** My DB Assembler closes and does not import all updates, I get:
 ```
 ERROR 1054 (42522) at line 14062: Unknown column 'resistance2' in 'field list'
 ```
@@ -62,20 +62,30 @@ The easiest way to fix it is by dropping your database and importing it again.
 
 ---------------------------------------------------------
 
-**ACE0021** My DB Assambler closes and does not import all updates, I get:
+**ACE0021** My DB Assembler closes and does not import all updates, I get:
 
 This can be due to several reasons:
 
-1. You have the wrong credentials set up for the DB Assambler.
+1. You have the wrong credentials set up for the DB Assembler.
 2. Your Database structure has been modified manually and is conflicting with the updates. Fix this by dropping the database.
 
 ---------------------------------------------------------
 
-**ACE00022** My DB Assambler closes and does not import all updates, I get:
+**ACE00022** My DB Assembler closes and does not import all updates, I get:
 ```
 ERROR 1067 (42000) at line 181: Invalid default value for 'start_time'.
 ```
 Disable MySQL strict mode, read [How to turn on/off MySQL strict mode in localhost (xampp)? StackOverflow](https://stackoverflow.com/questions/40881773/how-to-turn-on-off-mysql-strict-mode-in-localhost-xampp).
+
+------------------------------------------------------------------------------------------------------------------
+
+**ACE00023** My Worldserver closes when autoupdater, I get:
+```
+ERROR 2013 (HY000) at line 4: Lost connection to MySQL server during query
+```
+This is most likely due to your MySQL server's max_allowed_packet setting is too low. See [this](https://docs.oracle.com/cd/E19509-01/820-6323/gicxk/index.html) or run the command `SET GLOBAL max_allowed_packet=1073741824;` in your SQL client (HeidiSQL, SQLyog, etc.) to update your max_allowed_packet.
+
+**This value will reset the next time your SQL server restarts and it may be necessary to run this query again in the future.**
 
 ## Core-related Errors
 
@@ -106,9 +116,9 @@ You have not copied the necessary .dll files into the binaries directory.
 
 **ACE00043** Core doesn't start, I get:
 ```
-AzerothCore does not support MySQL versions below 5.7
+AzerothCore does not support MySQL versions below 5.7 and MariaDB versions below 10.5
 ```
-Upgrade your MySQL.
+Upgrade your MySQL/MariaDB.
 
 ---------------------------------------------------------
 
@@ -146,13 +156,13 @@ This is usually due to mixing 32/64bit DLLs with your compiled binaries. Your DL
 
 ## Core compilation-related errors
 
-**ACE00060** I don't get a AzerothCore hash
+**ACE00060** I don't get an AzerothCore hash
 
-Read how to properly install Git for Windows.
+Reinstall Git for Windows and select "Git from the command line and also 3rd party software" when asked about adjusting your PATH.
 
 ---------------------------------------------------------
 
-**ACE00061** I cannot install AzerothCore on CentOS/Ubtuntu/Debian etc.
+**ACE00061** I cannot install AzerothCore on CentOS/Ubuntu/Debian etc.
 
 AzerothCore requires GCC 8.0 or higher and CLang 7 or higher.
 
@@ -169,7 +179,7 @@ AzerothCore requires [Visual Studio 2019](https://docs.microsoft.com/en-us/visua
 c++: internal compiler error: Segmentation fault (program cc1plus)
 ```
 This can be due to:
-1. Selinux stronged kernels, workaround: change to one standard kernel, compile with clang instad of gcc or compile without pch.
+1. SELinux stronged kernels, workaround: change to one standard kernel, compile with clang instead of gcc or compile without pch.
 2. Low ram/swap memory, increase it.
 
 ---------------------------------------------------------
@@ -180,12 +190,12 @@ Use google or buy a book to learn the operating system you are using.
 
 ---------------------------------------------------------
 
-**ACE00065** I can't copmile, I get:
+**ACE00065** I can't compile, I get:
 ```
 fatal error C1060: compiler is out of heap space
 C1076: compiler limit : internal heap limit reached; use /Zm to specify a higher limit
 ```
-Read [How to: Enable a 64-Bit, x664 hosted MSVC toolset on the command line. Microsoft](https://docs.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?redirectedfrom=MSDN&view=msvc-160).
+Read [How to: Enable a 64-Bit, x64 hosted MSVC toolset on the command line. Microsoft](https://docs.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?redirectedfrom=MSDN&view=msvc-160).
 
 ---------------------------------------------------------
 
@@ -209,7 +219,7 @@ Locate your Boost folder
 
 **ACE00080** I am looking for map extractors but they are for wow version 4.
 
-No they are not. The name "vmap4extractor"/"vmap4assambler" reflects the version of the tool. They are all for WoW 3.3.5a.
+No they are not. The name "vmap4extractor"/"vmap4Assembler" reflects the version of the tool. They are all for WoW 3.3.5a.
 
 ---------------------------------------------------------
 
