@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world.md)
 
-**The \`holiday\_dates` table**
+**The \`holiday\_dates\` table**
 
 `table-no-description`
 
@@ -19,15 +19,15 @@
 
 ### id
 
-`field-no-description|1`
+Holiday id from Holidays.dbc
 
 ### date_id
 
-`field-no-description|2`
+Unique id.
 
 ### date_value
 
-`field-no-description|3`
+Start date in blizztime. Use [https://github.com/The-Cataclysm-Preservation-Project/Packet-BlizzTime-tool](https://github.com/The-Cataclysm-Preservation-Project/Packet-BlizzTime-tool) to get the correct value.
 
 ### holiday_duration
 
