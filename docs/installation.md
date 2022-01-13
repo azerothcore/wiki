@@ -4,6 +4,10 @@ redirect_from: "/Installation"
 
 # Installation Guide
 
+## IMPORTANT NOTE
+
+**OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
+
 ## Choosing a setup
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
