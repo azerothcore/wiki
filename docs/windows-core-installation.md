@@ -139,7 +139,7 @@ There are three DLL files that need to be manually added to this folder, and you
 
 *Note: You need the exact version of libmysql to correspond to the MySQL you have downloaded. Due to this you cannot download the DLL from the web and need to take it out of the folder.*
 
-OpenSSL _before_ version 1.1.0:
+OpenSLL _before_ version 1.1.0:
 
 **libeay32.dll** and
 **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*.

@@ -12,14 +12,12 @@ cd ~/azerothcore/
 git pull origin master
 ```
 
-Rebuild the changes you pulled.
-
 ```sh
 cd build
 make -j 8; make install
 ```
 
-Sometimes we add or remove files from the repository. At that point it is necessary to recompile the server, the same way as it was installed the first time [in the Linux Core Installation](linux-core-installation.md#configuring-for-compiling).
+Sometimes we add or remove files from the repositiory. At that point it is neccessary to recompile the server, the same way as it was installed the first time [in the Linux Core Installation](linux-core-installation.md#configuring-for-compiling).
 
 ## Keeping the Database Up-to-Date
 

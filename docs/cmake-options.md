@@ -6,23 +6,15 @@ redirect_from: "/CMake-options"
 
 ## PERFORMANCE
 
-If you want to disable performance optimizations, add this flag `-DENABLE_EXTRAS=0`
-
-Only necessary if you're debugging.
+If you want to disable performance improvement, add this flag `-DENABLE_EXTRAS=0`
 
 ## EXTRA LOGS
 
-If you want to enable extra logs, add this flag: `-DENABLE_EXTRA_LOGS=1`
+If you want to enable extra logs, add this flag: `-DENABLE_EXTRAS=1 -DENABLE_EXTRA_LOGS=1`
 
-Note: Will be CPU intensive.
+## PCH
 
-## WARNINGS
-
-Enable all warnings when compiling: `-DWITH_WARNINGS=1`
-
-## Precompiled Headers (PCH)
-
-Disable all uses of PCH:
+Totally disable PCH:
 
 `-DNOPCH=1`
 
@@ -32,11 +24,9 @@ Or one by one:
 -DUSE_SCRIPTPCH=0
 ```
 
-May increase build times.
-
 ## OTHER OPTIONS
 
 Other options are available here:
 
-* https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.cmake#L58
+* https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.cmake
 * https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/cmake/showoptions.cmake
