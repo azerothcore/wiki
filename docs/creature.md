@@ -11,7 +11,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [guid][1]             | INT          | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                                                              |
 | [creature_id1][2]     | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                                                                   |
 | [creature_id1][3]     | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                                                                   |
-| [chance_id1][4]       | FLOAT        | UNSIGNED   |     | NO   | 100     |                |
+| [chanceid1][4]       | FLOAT        | UNSIGNED   |     | NO   | 100     |                |
   |
 | [map][5]              | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Map Identifier                                                                       |
 | [zoneId][6]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                                                                       |
@@ -34,9 +34,9 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [dynamicflags][23]    | INT          | UNSIGNED   |     | NO   | 0       |                |                                                                                       |
 
 [1]: #guid
-[2]: #creature_id1
-[3]: #creature_id2
-[4]: #chance_id1
+[2]: #creatureid1
+[3]: #creatureid2
+[4]: #chanceid1
 [5]: #map
 [6]: #zoneId
 [7]: #areaId
@@ -63,15 +63,15 @@ Contains individual creature spawn data for each individual spawn of each indivi
 
 A unique identifier given to each creature to distinguish one creature from another. Two creatures can NOT have same GUID.
 
-### creature_id1
+### creature\_id1
 
 The Main ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
 
-### creature_id2
+### creature\_id2
 
 The Secondary ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
 
-### chance_id1
+### chanceid1
 
 The float chance that id1 will be choosen when spawning. Must be greater that zero and less than or equal to 100.
 
