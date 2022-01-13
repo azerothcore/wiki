@@ -8,6 +8,10 @@ Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki, powered 
 
 Read in: [English :gb:](home) [Spanish :es:](es/home)
 
+## IMPORTANT NOTE
+
+**OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
+
 ## Getting started
 
 - [Installation Guide](installation.md)
