@@ -25,6 +25,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [npcflag](#npcflag)                                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [speed_walk](#speedwalk)                           | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speedrun)                             | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
+| [speed_swim](#speedswim)                           | FLOAT              | NO   |     | 1       |       |                                      |
+| [speed_swim](#speedflight)                         | FLOAT              | NO   |     | 1       |       |                                      |
 | [detection_range](#detectionrange)                 | FLOAT              | NO   |     | 20      |       |                                      |
 | [scale](#scale)                                    | FLOAT              | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
@@ -201,7 +203,7 @@ A bitmask that represents what NPC flags the creature has. Each bit controls a d
 | 16777216 | 0x01000000 | Spellclick         | Needs data on npc_spellclick_spells table                                        |
 | 67108864 | 0x04000000 | Mailbox            | NPC will act like a mailbox (opens mailbox with right-click)                     |
 
-So if you want a NPC that is a quest giver(2), a vendor(128) and can repair(4096) you just add specific flags together: 2+128+4096=4226                                                                              
+So if you want a NPC that is a quest giver(2), a vendor(128) and can repair(4096) you just add specific flags together: 2+128+4096=4226
 
 #### speed_walk
 
@@ -210,6 +212,14 @@ Controls how fast the creature can walk. For vehicles: increases fly speed.
 #### speed_run
 
 Controls how fast the creature can run. For vehicles: increases ground movement speed.
+
+#### speed_swim
+
+Controls how fast the creature can swim.
+
+#### speed_flight
+
+Controls how fast the creature can fly.
 
 #### detection_range
 
