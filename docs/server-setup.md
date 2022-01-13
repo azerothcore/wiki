@@ -5,7 +5,7 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation.md) | [Step 4: Database Installation >>](database-installation.md) |
 
-Now that you have the source compiled, you need to add some neccessary files, by either downloading or extracting them.
+Now that you have the source compiled, you need to add some necessary files, by either downloading or extracting them.
 
 Some files are optional but highly recommended:
 
@@ -43,7 +43,7 @@ Github link:
 
 If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
 
-This part is just a general summary of the overall process - please read it more detaild for the OS you are working with.
+This part is just a general summary of the overall process - please read it more detailed for the OS you are working with.
 
 [Linux Server Setup](linux-server-setup.md)
 
@@ -57,7 +57,7 @@ By default you will compile your core with tools and you will get the following 
 
 Place the files with your World of Warcraft binary (wow.exe on windows) and run them.
 
-After extracting all neccessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
+After extracting all necessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
 
 If you use extractors from other projects or branches it is almost certain that your AzerothCore will not recognize the extracted data or even work!
 
