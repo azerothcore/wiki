@@ -28,5 +28,5 @@ Or one by one:
 
 Other options are available here:
 
-* https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/config.cmake.dist
+* https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.cmake
 * https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/cmake/showoptions.cmake
