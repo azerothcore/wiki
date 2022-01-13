@@ -36,4 +36,4 @@ Fecha de las actualizaciones sql.
 
 La fecha de la última actualizacion de la base datos auth.
 
-**Nota** Esta columna cambia automaticamnete acuerdo a la última actualizacion de la base de datos auth.
+**Nota** Esta columna cambia automaticamente acuerdo a la última actualizacion de la base de datos auth.
