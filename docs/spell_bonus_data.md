@@ -91,6 +91,6 @@ If > 0
 
 Use this as new attack power coefficient.
 
-### comments
+### triggerDummy
 
-Comment as why it has such values and name of the spell.
+triggerDummy is an all purpose std::map<MapDummy, std::optionalstd::any> modified by getting it's reference and saving data in it through the MapDummy class enum. Especially useful for saving data into other spells, such as dummy spells cast by different abilities through spell scripts and AI scripts.
