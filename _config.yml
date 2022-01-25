@@ -58,7 +58,6 @@ google_cse_token:
 # git-wiki includes some internal themes that you can choose
 # check _layouts folder
 #
-markdown: GFM
 highlighter: rouge
 encoding: UTF-8
 
