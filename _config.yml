@@ -106,6 +106,7 @@ plugins:
  - jekyll-avatar
  - jemoji
  - jekyll-mentions
+ - jekyll-remote-theme
 
 exclude: ['wiki']
 
