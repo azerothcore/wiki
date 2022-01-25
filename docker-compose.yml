@@ -9,6 +9,7 @@ services:
      - 35729:35729
     environment: 
      - BUNDLE_GEMFILE=.env-files/Gemfile.github
+     - JEKYLL_ENV=production
     volumes:
      - .:/srv/jekyll
      - github_site:/srv/jekyll/_site
