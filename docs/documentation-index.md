@@ -25,7 +25,6 @@ redirect_from: /documentation_index
 
 * [Bash system](bash_system.md)
 * [Bitwise operations](bit-and-bytes-tutorial.md)
-* [Clang Format](clang-format)
 * [CMake options](cmake-options.md)
 * [Core Scripts](core-scripts.md)
 * [Directory structure](directory-structure.md)
