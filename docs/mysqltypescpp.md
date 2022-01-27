@@ -207,12 +207,12 @@ redirect_from: "/MySQLtypesC++"
 QueryResult result = WorldDatabase.Query("SELECT guid, entry, name, period, ScriptName FROM transports");
 do
 {
-    Field* fields = result->Fetch();
-    uint32 lowguid = fields[0].GetUInt32();
-    uint32 entry = fields[1].GetUInt32();
+    Field* fields    = result->Fetch();
+    uint32 lowguid   = fields[0].GetUInt32();
+    uint32 entry     = fields[1].GetUInt32();
     std::string name = fields[2].GetString();
-    uint32 period = fields[3].GetUInt32();
-    uint32 scriptId = sObjectMgr->GetScriptId(fields[4].GetCString());
+    uint32 period    = fields[3].GetUInt32();
+    uint32 scriptId  = sObjectMgr->GetScriptId(fields[4].GetCString());
      
     // ...
 }
