@@ -9,9 +9,9 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | Field                 | Type      | Attributes | Key | Null | Default | Extra          | Comment                                 |
 | --------------------- | --------- | ---------- | --- | ---- | ------- | -------------- | --------------------------------------- |
 | [guid][1]             | INT       | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                |
-| [creature_id1][2]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [creature_id2][3]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [chanceid1][4]        | FLOAT     | UNSIGNED   |     | NO   | 100     |                |
+| [id1][2]              | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [id2][3]              | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [id3][4]              | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
 | [map][5]              | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Map Identifier                          |
 | [zoneId][6]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                         |
 | [areaId][7]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Area Identifier                         |
@@ -33,9 +33,9 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [dynamicflags][23]    | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
 
 [1]: #guid
-[2]: #creatureid1
-[3]: #creatureid2
-[4]: #chanceid1
+[2]: #id1
+[3]: #id2
+[4]: #id3
 [5]: #map
 [6]: #zoneId
 [7]: #areaId
@@ -62,19 +62,17 @@ Contains individual creature spawn data for each individual spawn of each indivi
 
 A unique identifier given to each creature to distinguish one creature from another. Two creatures can NOT have same GUID.
 
-### creature\_id1
+### id1
 
 The Main ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
 
-### creature\_id2
+### id2
 
 The Secondary ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
 
-### chanceid1
+### id3
 
-The float chance that id1 will be choosen when spawning. Must be greater that zero and less than or equal to 100.
-
-This field should be set to 100 if creature_id2 is 0 and normally 50 if creature_id2 has a value and you wish for equal spawn chance. 
+The Third ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
 
 ### map
 
