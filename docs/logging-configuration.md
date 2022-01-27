@@ -4,6 +4,26 @@ tableofcontents: 1
 
 # Logging Configuration (log4j-like)
 
+## Setting up logging in the core
+
+```cpp
+LOG_TYPE("appender", "LOG MESSAGE {}", var);
+
+// Example
+LOG_ERROR("sql.sql", "Unable to load creature entry {} and spawnId {}", entry, guid);
+```
+
+To pass any argument into the LOG MESSAGE use curly brackets, which uses FMT format to take any arguments and pass them into the LOG.
+
+| Type  |
+| :---- |
+| FATAL |
+| ERROR |
+| WARN  |
+| INFO  |
+| DEBUG |
+| TRACE |
+
 ## Loggers and Appenders
 
 Logging system has two components: loggers and appenders. These types of components enable users to log messages according to message type and level and control at runtime where they are reported.
