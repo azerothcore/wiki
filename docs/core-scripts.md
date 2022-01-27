@@ -47,7 +47,7 @@ To do this, in the headerfile of the instance we add this define:
 And within the script file it would be registered like this:
 
 ```cpp
-/* Example frin boss_lord_marrowgar.cpp */
+/* Example from boss_lord_marrowgar.cpp */
 struct boss_lord_marrowgar : public BossAI
 {
 public:
