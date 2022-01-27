@@ -133,6 +133,3 @@ Updates.CleanDeadRefMaxCount = 3
 #
 ###################################################################################################
 ```
-
-Example: [Upgrade-from-pre-2.0.0-to-latest-master](https://www.azerothcore.org/wiki/Upgrade-from-pre-2.0.0-to-latest-master)
-
