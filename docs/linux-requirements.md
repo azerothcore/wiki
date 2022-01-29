@@ -66,12 +66,12 @@ apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlc
 clang --version
 ```
 
-Your `clang` version **MUST** be `7` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be `10` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
 
 For example, if you are using an older version of Ubuntu like 18.04, you need to install clang using:
 
 ```sh
-sudo apt-get install clang-7.0
+sudo apt-get install clang-10.0
 ```
 
 If you use another distro or version, search on google for how to install the right clang version for your system.
