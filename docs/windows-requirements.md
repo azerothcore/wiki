@@ -7,7 +7,7 @@
 
 | |
 | :- |
-| Boost ≥ 1.70 - 1.74 |
+| Boost ≥ 1.70 |
 | MySQL ≥ 5.7.0 |
 | OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported)|
 | CMake ≥ 3.16 |
