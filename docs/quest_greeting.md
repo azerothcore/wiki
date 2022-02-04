@@ -4,14 +4,14 @@
 
 This table add greeting behavior to an NPC or an Gameobject.
 
-| Field                | Type      | Attributes | Key | NULL | Default | Comment                                                          |
-|----------------------|-----------|------------|-----|------|---------|------------------------------------------------------------------|
-| [ID][1]              | MEDIUMINT | UNSIGNED   | Yes | NO   | 0       | Unique ID (creature_template.entry or gameobject_template.entry) |
-| [Type][2]            | TINYINT   | UNSIGNED   | Yes | NO   | 0       | 0=Creature 1=GameObject                                          |
-| [GreetEmoteType][3]  | SMALLINT  | UNSIGNED   | NO  | NO   | 0       | Quest NPC Emote                                                  |
-| [GreetEmoteDelay][4] | INT       | UNSIGNED   | NO  | NO   | 0       | Emote delay in milliseconds                                      |
-| [Greeting][5]        | TEXT      |            | NO  | YES  | NULL    | Text to show                                                     |
-| [VerifiedBuild][6]   | SMALLINT  | SIGNED     | NO  | NO   | 0       | Game client Build number or manually set value                   |
+| Field                | Type      | Attributes | Key | NULL | Default | Comment |
+| -------------------- | --------- | ---------- | --- | ---- | ------- | ------- |
+| [ID][1]              | MEDIUMINT | UNSIGNED   | Yes | NO   | 0       |         |
+| [Type][2]            | TINYINT   | UNSIGNED   | Yes | NO   | 0       |         |
+| [GreetEmoteType][3]  | SMALLINT  | UNSIGNED   | NO  | NO   | 0       |         |
+| [GreetEmoteDelay][4] | INT       | UNSIGNED   | NO  | NO   | 0       |         |
+| [Greeting][5]        | TEXT      |            | NO  | YES  | NULL    |         |
+| [VerifiedBuild][6]   | SMALLINT  | SIGNED     | NO  | NO   | 0       |         |
 
 [1]: #id
 [2]: #type
