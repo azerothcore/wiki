@@ -17,7 +17,7 @@
 
     1. You will need Git installed. You can get the latest version here https://sourceforge.net/projects/gitextensions/
 
-1. Install the compiler / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
+1. Install the compiler / IDE [Visual Studio (17) Community 2022](https://visualstudio.microsoft.com/downloads/)
 
    You will need to install the C++ compiler.
    
