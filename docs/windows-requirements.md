@@ -94,9 +94,7 @@
   
 1. [Boost](https://www.boost.org/).
 
-    1. Download the prebuilt Windows Binary for Visual Studio 2019
-
-    1. `1.70.0` is the minimum version required for Visual Studio 2019, but Version `1.74.0`is recommended
+    1. Download the prebuilt Windows Binary for Visual Studio 2022
 
     1. 64bit: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
 
