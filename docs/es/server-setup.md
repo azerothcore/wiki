@@ -1,21 +1,21 @@
 # Configuración del Servidor
 
-| Guía de instalación 																																  | 																	   |
-| :- 																																				  | :- 																	   |
+| Guía de instalación                                                                                                                                 |                                                                        |
+| :-                                                                                                                                                  | :-                                                                     |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation.md) 																							  | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
+| [<< Paso 2: Instalación del Core](core-installation.md)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
 
 Ahora que tiene el código fuente compilado, necesita añadir algunos archivos que son requeridos. Puede añadirlos ya sea descargándolos o extrayéndolos.
 
 Algunos archivos son opcionales pero ALTAMENTE recomendados:
 
-| Directorio | 						 |
-| :- 		 | :- 					 |
-| dbc 		 | Obligatorio 			 |
-| maps 		 | Obligatorio 			 |
-| vmaps 	 | ALTAMENTE RECOMENDADO |
-| mmaps 	 | ALTAMENTE RECOMENDADO |
-| cameras	 | Recomendado 			 |
+| Directorio |                       |
+| :-         | :-                    |
+| dbc        | Obligatorio           |
+| maps       | Obligatorio           |
+| vmaps      | ALTAMENTE RECOMENDADO |
+| mmaps      | ALTAMENTE RECOMENDADO |
+| cameras    | Recomendado           |
 
 ## Descarga
 
@@ -140,7 +140,7 @@ Si sigue teniendo problemas, compruebe:
 
 * [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), tenga en cuenta que no es un canal de soporte 24/7. Un miembro del staff member le responderá siempre que tenga tiempo.
 
-| Guía de instalación 																																  | 																	   |
-| :- 																																				  | :- 																	   |
+| Guía de instalación                                                                                                                                 |                                                                        |
+| :-                                                                                                                                                  | :-                                                                     |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation.md) 																							  | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
+| [<< Paso 2: Instalación del Core](core-installation.md)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
