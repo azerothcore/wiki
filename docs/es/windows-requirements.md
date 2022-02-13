@@ -1,23 +1,23 @@
 # Windows: Requisitos
 
-| Guía de Instalación | |
-| :- | :- |
+| Guía de Instalación                                                                                                                                |                                                         |
+| :-                                                                                                                                                 | :-                                                      |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Inicio: Guía de Instalación](installation.md) | [Paso 2: Instalación del Core >>](core-installation.md) |
+| [<< Inicio: Guía de Instalación](installation.md)                                                                                                  | [Paso 2: Instalación del Core >>](core-installation.md) |
 
-| |
-| :- |
-| Boost ≥ 1.70 - 1.74 |
-| MySQL ≥ 5.7.0 |
-| OpenSLL ≥ 1.0.x (OpenSSL 3.0 no es soportado)|
-| CMake ≥ 3.16 |
-| MS Visual Studio (Community) ≥ 16.4 (2019) (Escritorio) (Sin vista previa)
+|                                                                            |
+| :-                                                                         |
+| Boost ≥ 1.74                                                               |
+| MySQL ≥ 5.7.0                                                              |
+| OpenSLL ≥ 1.0.x (OpenSSL 3.0 no es soportado)                              |
+| CMake ≥ 3.16                                                               |
+| MS Visual Studio (Community) ≥ 16.4 (2019) (Escritorio) (Sin vista previa) |
 
 1. Extensiones de Git
 
     1. Necesitará tener Git instalado. Puede obtener la [versión más reciente](https://sourceforge.net/projects/gitextensions/).
 
-1. Instale el compilador / IDE [Visual Studio (16) Community 2019](https://visualstudio.microsoft.com/downloads/)
+1. Instale el compilador / IDE [Visual Studio (17) Community 2020](https://visualstudio.microsoft.com/downloads/)
 
    Necesitará instalar el compilador de C++.
    
@@ -85,22 +85,20 @@
     
     - Encuentre la versión de 32 bits buscando el último 1.0.x o 1.1.x Win32 OpenSSL que no sea la versión "light". (Ejemplo: Win32 OpenSSL v1.1.1g)
 
-    - *Nota #1: Si aparece un error como: "Missing Microsoft Visual C++ 2008 Redistributable" mientras está instalanod OpenSSL:*
-      *Descargue [Microsoft Visual C++ 2008 Redistributable Package (x64)](http://www.microsoft.com/en-us/download/details.aspx?id=29) (1.7MB Instalador) e instalelo*
-      *Si necesita soporte para 32 bits, descargue e instale [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/en-us/download/details.aspx?id=15336).*
+    - *Nota #1: Si aparece un error como: "Missing Microsoft Visual C++ ... Redistributable" mientras está instalanod OpenSSL:*
+      *Descargue [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe) (1.7MB Instalador) e instalelo*
+      *Si necesita soporte para 32 bits, descargue e instale [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x86)](https://aka.ms/vs/17/release/vc_redist.x86.exe).*
        
     - *Nota #2: Mientras esté instalando OpenSSL, seleccione el directiorio de los binarios de OpenSSL (/bin) (NO "The Windows system directory")*
       *Cuando deba elegir dónde ubicar los DLLs de OpenSSL. Estos deben ubicarse en donde sean encontrados con facilidad para la [Instalación del Core](windows-core-installation).*
   
 1. [Boost](https://www.boost.org/).
 
-    1. Descargue la versión precompilada de Windows Binary for Visual Studio 2019
+    1. Descargue la versión precompilada de Windows Binary for Visual Studio 2022
 
-    1. `1.70.0` es la versión mínima requerida para Visual Studio 2019, pero la versión `1.74.0` es la recomendada.
+    1. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download)
 
-    1. 64 bits: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-64.exe/download
-
-    1. 32 bits: https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download
+    1. [32bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download)
 
     1. Añada una variable de entorno "System", llamada "BOOST_ROOT" y como valor, ingrese el directorio de instalación de Boost. Por ejemplo: `E:/Programs/boost_1_74_0`. Es importante usar '**/**' y no '**\\**' al momento de señalar el directorio. (Asegurese de no quede un slash al final. (final de la ruta). Si sigue presentado inconvenientes, añada la misma variable de entorno en la sección de variables `USER`, tal como la siguiente imagen)
 
@@ -124,8 +122,7 @@ Si sigue teniendo inconvenientes, revise:
 
 * [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
 
-
-| Guía de Instalación | |
-| :- | :- |
+| Guía de Instalación                                                                                                                                |                                                         |
+| :-                                                                                                                                                 | :-                                                      |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Inicio: Guía de Instalación](installation.md) | [Paso 2: Instalación del Core >>](core-installation.md) |
+| [<< Inicio: Guía de Instalación](installation.md)                                                                                                  | [Paso 2: Instalación del Core >>](core-installation.md) |
