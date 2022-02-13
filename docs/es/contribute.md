@@ -1,18 +1,23 @@
-﻿# Contribuir
+﻿---
+redirect_from: "/Contribute"
+---
+
+# Contribuir
 
 Puedes contribuir de varias formas a AzerothCore:
 
-- [comentando un problema abierto](Contribute#how-to-comment-an-issue)
+- [Comentando un problema abierto](Contribute#how-to-comment-an-issue)
 
-- [abriendo un problema](Contribute#how-to-open-an-issue)
+- [Abriendo un problema](Contribute#how-to-open-an-issue)
 
-- [prueba de una solicitud de extracción](How-to-test-a-PR)
+- [Prueba de una solicitud de extracción](How-to-test-a-PR)
 
-- [prueba de cambios solo de base de datos](How-to-test-DB-only-changes)
+- [Prueba de cambios solo de base de datos](How-to-test-DB-only-changes)
 
-- [creando una solicitud de extracción](Contribute#how-to-create-a-pull-request)
+- [Creando una solicitud de extracción](Contribute#how-to-create-a-pull-request)
 
-- [mejorando nuestra wiki](Contribute#improve-the-wiki)
+- [Mejorando nuestra wiki](Contribute#improve-the-wiki)
+
 ## Información general
 
 Para contribuir, obviamente necesitas una cuenta de github.
@@ -44,6 +49,7 @@ Si **(y solo si)** el error aún no se ha informado, puede [abrir un problema](h
 ## Cómo crear una solicitud de extracción
 
 - Lea [Cómo crear un PR](How-to-create-a-PR).
+- Alternativamente, también puede consultar [este tutorial más simple](How-to-create-a-DB-PR) sobre cómo abrir PR que contienen código SQL a través de GitHub.
 
 ### Dando crédito al autor del código
 
