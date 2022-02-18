@@ -5,13 +5,13 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Start: Installation Guide](installation.md)                                                                                         | [Step 2: Core Installation >>](core-installation.md) |
 
-|                                                                   |
-| :-                                                                |
-| Boost ≥ 1.74                                                      |
-| MySQL ≥ 5.7.0                                                     |
-| OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported)                    |
-| CMake ≥ 3.16                                                      |
-| MS Visual Studio (Community) ≥ 16.4 (2019) (Desktop) (No preview) |
+|                                                                    |
+| :-                                                                 |
+| Boost ≥ 1.74                                                       |
+| MySQL ≥ 5.7.0                                                      |
+| OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported)                     |
+| CMake ≥ 3.16                                                       |
+| MS Visual Studio (Community) ≥ 16.11 (2019) (Desktop) (No preview) |
 
 1. Git Extensions
 
