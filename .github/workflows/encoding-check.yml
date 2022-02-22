@@ -21,4 +21,4 @@ jobs:
         run: |
           files=$(git diff --name-only origin/$GITHUB_BASE_REF...${{ github.sha }})
           IFS=$'\n'; files=($files); unset IFS;  # split the string into an array
-          ! file --mime "${files[@]}" | grep -v "charset=utf-8\| (No such file or directory)$"
+          ! file --mime "${files[@]}" | grep -v "charset=utf-8\|charset=us-ascii\|charset=binary\| (No such file or directory)$"
