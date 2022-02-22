@@ -1,0 +1,24 @@
+# Credit https://github.com/2DegreesInvesting/resources/issues/53
+
+name: check file encodings in PR
+on: [pull_request]
+jobs:
+  file-encoding:
+    name: file encooding check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: run the checkout action
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: list all changed files
+        run: |
+          files=$(git diff --name-only origin/$GITHUB_BASE_REF...${{ github.sha }})
+          IFS=$'\n'; files=($files); unset IFS;  # split the string into an array
+          file --mime "${files[@]}"
+      - name: list all changed files with the wrong encoding
+        run: |
+          files=$(git diff --name-only origin/$GITHUB_BASE_REF...${{ github.sha }})
+          IFS=$'\n'; files=($files); unset IFS;  # split the string into an array
+          ! file --mime "${files[@]}" | grep -v "charset=utf-8\| (No such file or directory)$"
