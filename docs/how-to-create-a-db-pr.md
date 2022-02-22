@@ -39,7 +39,6 @@ As a result, your fork's `master` branch should say:
 
 ![AzerothCore fork updated](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/update-fork-2.png)
 
-
 ### 2. Create a new branch
 
 Make sure you have the `master` branch currently selected, click on the branches dropdown and create a new branch.
@@ -67,13 +66,12 @@ You can either do it manually by clicking on the `data` folder, then `sql`, `upd
 
 In a new browser tab, open [azerothcore.org/pages/rev-generator](https://www.azerothcore.org/pages/rev-generator/).
 
-
 ![AzerothCore SQL update rev generator](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-rev-generator.png)
 
 This will give you:
 
-- the name of the file you need to create which will contain your SQL code
-- the *SQL version code* (an `INSERT INTO` query) which you will need to add at the top of the new SQL file that you will submit
+- The name of the file you need to create which will contain your SQL code.
+- The *SQL version code* (an `INSERT INTO` query) which you will need to add at the top of the new SQL file that you will submit.
 
 **Note**: they should always go together and you should always have a new rev for every PR you send.
 If you need to get a new rev, just refresh the page or click "Generate new".
@@ -88,19 +86,19 @@ Back on GitHub, from the `pending_db_world` folder, click **Add file** and then 
 
 Now you need to:
 
-- set the file name as the one you generated in the step 4
-- add the SQL version code that you generated in the step 4
-- add a new line, then add your own SQL code below and then add a new empty line at the end of the file
+- Set the file name as the one you generated in the step 4.
+- Add the SQL version code that you generated in the step 4.
+- Add a new line, then add your own SQL code below and then add a new empty line at the end of the file.
 
 ![AzerothCore new SQL file example](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-new-file-2.png)
 
 Now scroll down the page, you'll need to:
 
-1. fill out the commit message, we use the [Conventional Commits format](https://www.conventionalcommits.org/),
-  for example `fix(DB/Creature): some commit description here`
-2. (optional) include some extra description
-3. make sure that "Commit directly to the `your-new-branch-name`" is selected
-4. Click **Commit new file**
+1. Fill out the commit message, we use the [Conventional Commits format](https://www.conventionalcommits.org/),
+  for example `fix(DB/Creature): some commit description here`.
+2. Include some extra description (optional).
+3. Make sure that "Commit directly to the `your-new-branch-name`" is selected.
+4. Click **Commit new file**.
 
 ![AzerothCore create new commit](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-commit.png)
 

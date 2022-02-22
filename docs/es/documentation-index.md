@@ -15,6 +15,12 @@ redirect_from: /documentation_index
 * [Errores comunes](common-errors)
 * [Procedimiento Operativo Estándar (SOP)](standard-operating-procedure)
 
+## Base de Datos
+
+* [Base de datos: auth](database-auth.md)
+* [Base de datos: characters](database-characters.md)
+* [Base de datos: world](database-world.md)
+
 ## Documentación
 
 * [Sistema Bash ](bash_system.md)
@@ -34,11 +40,13 @@ redirect_from: /documentation_index
 * [Directorio SQL](sql-directory.md)
 * [Versionado de SQL](sql-versioning.md)
 
-## Base de Datos
+## Modelos y técnicas
 
-* [Base de datos: auth](database-auth.md)
-* [Base de datos: characters](database-characters.md)
-* [Base de datos: world](database-world.md)
+* [Herramientas útiles](useful-tools.md)
+* [Cómo importar información de DBC hacia SQL](how-to-import-dbc-data-in-db.md)
+* [Iniciar Worldserver y Authserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
+* [Snippets de SQL útiles](useful-sql.md)
+* [Cómo usar gperftool para analizar tu aplicación](how-to-use-gperftool.md)
 
 ## AzerothCore extendido
 
@@ -47,15 +55,7 @@ redirect_from: /documentation_index
 * [Hooks Cmake](hooks-cmake.md)
 * [Hooks C++](hooks-script.md)
 
-## Modelos y técnicas
-
-* [Cómo importar información de DBC hacia SQL](how-to-import-dbc-data-in-db.md)
-* [Iniciar Worldserver y Authserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
-* [Snippets de SQL útiles](useful-sql.md)
-* [Cómo usar gperftool para analizar tu aplicación](how-to-use-gperftool.md)
-
 ## Recursos externos
 
 * <a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guías y consejos de nuestro foro</a>
 * <a href="https://wowdev.wiki/Category:DBC_WotLK" target="_blank">Documentación de DBC</a>
-
