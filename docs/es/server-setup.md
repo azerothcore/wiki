@@ -1,29 +1,29 @@
 # Configuración del Servidor
 
-| Guía de instalación | |
-| :- | :- |
+| Guía de instalación                                                                                                                                 |                                                                        |
+| :-                                                                                                                                                  | :-                                                                     |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation.md) | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
+| [<< Paso 2: Instalación del Core](core-installation.md)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
 
 Ahora que tiene el código fuente compilado, necesita añadir algunos archivos que son requeridos. Puede añadirlos ya sea descargándolos o extrayéndolos.
 
 Algunos archivos son opcionales pero ALTAMENTE recomendados:
 
-| Directorio | |
-| :- | :- |
-| dbc | Obligatorio |
-| maps | Obligatorio |
-| vmaps | ALTAMENTE RECOMENDADO |
-| mmaps | ALTAMENTE RECOMENDADO |
-| cameras | Recomendado |
+| Directorio |                       |
+| :-         | :-                    |
+| dbc        | Obligatorio           |
+| maps       | Obligatorio           |
+| vmaps      | ALTAMENTE RECOMENDADO |
+| mmaps      | ALTAMENTE RECOMENDADO |
+| cameras    | Recomendado           |
 
 ## Descarga
 
-Si no desea usar herramientas para extraer estos archivos, puede descargarlos :
+Si no desea usar herramientas para extraer estos archivos, puede descargarlos:
 
 Github link:
 
-<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Archivos completos (v12) - Dede 20/09/2021 a la fecha</a> (RECOMENDADO - Usado en el script de descarga automática en `/apps/`)
+<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Archivos completos (v13) - Dede 06/01/2022 a la fecha</a> (RECOMENDADO - Usado en el script de descarga automática en `/apps/`)
 
 <!-- this link contains v10 -->
 <!-- Mega link:
@@ -107,11 +107,9 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 Los siguientes pasos deben ser verificados: 
 
 - El nombre del Host (127.0.0.1) puede quedarse igual si usted instaló AzerothCore en el mismo computador en el que lo va a correr.
-
   De lo contrario, siga las instrucciones en [Realmlist Table](realmlist.md). 
 
 - El puerto (3306) el el valor estándar configurado. Si usted lo cambia en la configuración de mysql, recuerde cambiarlo en donde corresponda.
-
   El nombre de usuario y la contraseña pueden variar. Usted puede escoger entre: 
 
     - Usar los valores por defecto
@@ -142,9 +140,7 @@ Si sigue teniendo problemas, compruebe:
 
 * [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), tenga en cuenta que no es un canal de soporte 24/7. Un miembro del staff member le responderá siempre que tenga tiempo.
 
-| Guía de instalación | |
-| :- | :- |
+| Guía de instalación                                                                                                                                 |                                                                        |
+| :-                                                                                                                                                  | :-                                                                     |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-
-| [<< Paso 2: Instalación del Core](core-installation.md) | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
-
+| [<< Paso 2: Instalación del Core](core-installation.md)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
