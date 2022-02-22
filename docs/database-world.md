@@ -178,3 +178,4 @@ The world database has information basically related to creatures, objects, item
 - [waypoint_data](waypoint_data.md)
 - [waypoint_scripts](scripts.md)
 - [waypoints](waypoints.md)
+
