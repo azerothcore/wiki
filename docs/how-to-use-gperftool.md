@@ -20,7 +20,7 @@ Note: dependencies above are already installed in our docker file
 4. run `sudo killall -12 worldserver` This command will start the monitoring process. 
 5. Run `sudo killall -12 worldserver` again to stop the process when you want. At this time you will have the .prof file ready in the folder configured below.
 6. Run `google-pprof --callgrind <path/of/worldserver/bin> </path/of/prof/file> > worldserver.callgrind` This will generate a callgrind file that can be read with
-[QCacheGrind](https://sourceforge.net/projects/qcachegrindwin/), [KCacheGrind](http://kcachegrind.sourceforge.net/html/Home.html) or any other compatible tools
+[QCacheGrind](https://sourceforge.net/projects/qcachegrindwin/), [KCacheGrind](http://kcachegrind.sourceforge.net/html/Home.html) or any other compatible tools.
 
 This is what you will see (screenshot of KCacheGrind):
 

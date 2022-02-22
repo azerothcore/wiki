@@ -6,17 +6,18 @@ redirect_from: "/Contribute"
 
 You can contribute in several ways to AzerothCore:
 
-- [commenting an open issue](#how-to-comment-an-issue)
+- [Commenting an open issue](#how-to-comment-an-issue)
 
-- [opening an issue](#how-to-open-an-issue)
+- [Opening an issue](#how-to-open-an-issue)
 
-- [testing a pull request](#how-to-test-a-pull-request)
+- [Testing a pull request](#how-to-test-a-pull-request)
 
-- [testing DB-only changes](How-to-test-DB-only-changes)
+- [Testing DB-only changes](How-to-test-DB-only-changes)
 
-- [creating a pull request](#how-to-create-a-pull-request)
+- [Creating a pull request](#how-to-create-a-pull-request)
 
-- [improving our wiki](#improve-the-wiki)
+- [Improving our wiki](#improve-the-wiki)
+
 ## General information
 
 To contribute, you obviously need a github account.
@@ -48,7 +49,7 @@ If **(and only if)** the bug hasn't been reported yet, you can [open an issue](h
 ## How to create a Pull Request
 
 - Read [How to create a PR](How-to-create-a-PR).
-- Alternatively, you can also check [this simpler tutorial](How-to-create-a-DB-PR) about opening PRs containing SQL code via GitHub
+- Alternatively, you can also check [this simpler tutorial](How-to-create-a-DB-PR) about opening PRs containing SQL code via GitHub.
 
 ### Giving credit to the author of code
 

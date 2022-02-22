@@ -37,14 +37,13 @@ Would you like to stick with **Windows** or **macOS**? That's absolutely fine.
 
 ![AzerothCore supports GNU/Linux, macOS and Windows](https://user-images.githubusercontent.com/75517/109369213-e5775880-789b-11eb-8356-99a4ab842bfb.png)
 
-
 ### Different ways to install AzerothCore
 
 Basically, there are 3 main ways to install AC:
 
-- the "**classic setup**": this is the traditional setup you would normally use to install a common WoW emulator. **All operating systems are supported.** Doing this setup also probably gives you a better overview of the components of the server.
-- the "**docker setup**": this is a simplified setup that uses Docker to automate a lot of things for you. This setup is typically easier. **You can use this setup in all operating systems where you can install [Docker](https://www.docker.com/products/docker-desktop).**
-- the "**dashboard setup**": this is an **EXTREMELY EASY** way of installing AzerothCore in your machine, based on a collection of bash scripts created by [Yehonal](https://github.com/Yehonal). However, **you can only use this setup in Ubuntu** or similar platforms. Windows is not supported, and probably we are not there yet with macOS as well.
+- The "**classic setup**": this is the traditional setup you would normally use to install a common WoW emulator. **All operating systems are supported.** Doing this setup also probably gives you a better overview of the components of the server.
+- The "**docker setup**": this is a simplified setup that uses Docker to automate a lot of things for you. This setup is typically easier. **You can use this setup in all operating systems where you can install [Docker](https://www.docker.com/products/docker-desktop).**
+- The "**dashboard setup**": this is an **EXTREMELY EASY** way of installing AzerothCore in your machine, based on a collection of bash scripts created by [Yehonal](https://github.com/Yehonal). However, **you can only use this setup in Ubuntu** or similar platforms. Windows is not supported, and probably we are not there yet with macOS as well.
 
 You can choose one setup, or even try more than one. You can find all the instructions here:
 
@@ -56,7 +55,6 @@ Got your WoW server installed? Congratulations! Now let's see what you can do ne
 
 ![AzerothCore server running on macOS](https://user-images.githubusercontent.com/75517/109369101-80236780-789b-11eb-900c-bcc17a3cf13c.png)
 
-
 ## Access the game, learn the GM commands
 
 First of all, `set realmlist localhost` and join your own server using the `test1` account with password `a` (yes, one-letter password). This account is already `GM` so you can use the commands from this list:
@@ -66,7 +64,6 @@ First of all, `set realmlist localhost` and join your own server using the `test
 Get confident with the commands, you will need them for any administration, testing or development activities.
 
 ![AzerothCore GM](https://user-images.githubusercontent.com/75517/109369940-ba423880-789e-11eb-88d6-e6d8f7b8a723.png)
-
 
 ## Consider learning git
 
@@ -78,7 +75,6 @@ You can find plenty of resources online about learning `git`, for example [try.g
 
 ![AzerothCore learning git](https://user-images.githubusercontent.com/75517/109370018-fb3a4d00-789e-11eb-8532-1ab1bf8fba60.png)
 
-
 ## Learn how to update your WoW server
 
 We release improvements to AzerothCore on a daily basis. You should learn how to update your server and keep updating it often. We recommend avoiding working on older versions of AzerothCore because they can have bugs that we already resolved and you don't want to stay behind.
@@ -89,11 +85,10 @@ So it is **very important** that you update your AzerothCore server regularly. W
 
 After you follow the update procedure, it is important to **verify** that:
 
-- your server application (core) has been properly updated, use the `server info` command to make sure of it
-- your DB has been properly updated and aligned to your core version, [read this answer on stackoverflow](https://stackoverflow.com/a/55282168/3497671)
+- Your server application (core) has been properly updated, use the `server info` command to make sure of it.
+- Your DB has been properly updated and aligned to your core version, [read this answer on stackoverflow](https://stackoverflow.com/a/55282168/3497671).
 
 ![AzerothCore server info](https://user-images.githubusercontent.com/75517/109370296-00e46280-78a0-11eb-9ed0-b9df14f2008b.png)
-
 
 ## Learn to check out PRs
 
@@ -104,7 +99,6 @@ This topic is so important that there is a dedicated tutorial for it:
 - [azerothcore.org/wiki/How-to-test-a-PR](https://www.azerothcore.org/wiki/How-to-test-a-PR)
 
 ![image](https://user-images.githubusercontent.com/75517/109370244-d397b480-789f-11eb-9ac7-64d98ca0d33c.png)
-
 
 ## Learning how to work with the Database
 
@@ -128,7 +122,6 @@ You'll need a generic database management tool too in order to manage tables and
 - [Database Management Tool](database-management-tool)
 
 ![AzerothCore world database viewed with sequel-ace](https://user-images.githubusercontent.com/75517/109370368-42750d80-78a0-11eb-946c-c0831a02b52b.png)
-
 
 ### The DB documentation is your friend
 
@@ -158,7 +151,6 @@ The AI of most of the creatures you'll find in the world is done with SmartAI. W
 
 ![SmartAI vs C++](https://user-images.githubusercontent.com/75517/109369529-e78de700-789c-11eb-97d5-02ecc6c85a0a.png)
 
-
 ### Learn the SQL language
 
 Usually, you'll need only the basics of the SQL language, and in most cases, you'll probably figure it out by yourself, however, it's not a bad idea to read about the SQL language. You can find a lot of resources online, for example:
@@ -178,11 +170,11 @@ You can submit your improvement via PR. Read this guide:
 If you mastered some of the above parts, there is already **A LOT** you can do to help our project and becoming a contributor.
 For example:
 
-- help the developers by testing PRs and giving your feedback
-- do some bug triaging by confirming issues and helping us to identify and close the invalid reports
-- you can also help by [triaging the bugs coming from the players of ChromieCraft](https://github.com/chromiecraft/chromiecraft) (our child-project)
-- report any bug that you may find yourself
-- try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that (e.g. using SmartAI or other embedded editors). Being this an open-source project, you can find plenty of examples on our main GitHub repository
+- Help the developers by testing PRs and giving your feedback
+- Do some bug triaging by confirming issues and helping us to identify and close the invalid reports
+- You can also help by [triaging the bugs coming from the players of ChromieCraft](https://github.com/chromiecraft/chromiecraft) (our child-project)
+- Report any bug that you may find yourself
+- Try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that (e.g. using SmartAI or other embedded editors). Being this an open-source project, you can find plenty of examples on our main GitHub repository
 
 Would you like to talk to us? Join [the AzerothCore Discord server](https://discordapp.com/invite/gkt4y2x).
 

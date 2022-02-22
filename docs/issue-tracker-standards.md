@@ -24,6 +24,8 @@
 
 - Did I explain what is wrong and what is the expected behavior?
 
+- Did I only report one bug per issue?
+
 Issue template:
 
 ```

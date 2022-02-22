@@ -69,14 +69,6 @@ it is a good practice to change its password to something more secure.*
 
 - Or change the `config.sh` to use another MySQL user.
 
-Then run:
-
-```
-./acore.sh db-assembler import-all
-```
-
-this will install a full AzerothCore Database. No need to import any DB update at this point.
-
 ### Download the latest client data
 
 Get the latest client data:
@@ -101,6 +93,7 @@ If you followed the above, you'll get your server inside the `env/dist` director
 The `worldserver` and `authserver` binaries are located in `azerothcore-wotlk/env/dist/bin`.
 
 You can either run them directly or use the restarter (see below).
+The first startup of the `worldserver` will install a full AzerothCore Database. No need to import any DB update at this point.
 
 ### Restarter
 

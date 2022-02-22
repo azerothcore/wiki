@@ -144,6 +144,8 @@ Used MySQL library version (8.0.19 id 80019) does not match the version id used 
 ```` 
 You need to use the exact version of libmysql.dll as the version you used to compile your source with. You get it from **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** or by following the [installation guide](https://www.azerothcore.org/wiki/windows-core-installation#compiling-the-source).
 
+This is due to that you have updated your MySQL server but have not recompiled and added the new libmysql.dll file.
+
 ---------------------------------------------------------
 
 **ACE00047** I get an error when I am trying to start Worldserver or Authserver
