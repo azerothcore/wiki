@@ -17,7 +17,7 @@
 AzerothCore does only support MariaDB versions 10.6 and 10.5.
 
 ```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadbclient-dev libmariadb-dev-compat
+sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
 ```
 
 #### Ubuntu with MySQL 8.x
