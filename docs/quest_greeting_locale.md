@@ -4,14 +4,13 @@
 
 This table add greeting behavior to an NPC or an Gameobject.
 
-| Field                | Type      | Attributes | Key | NULL | Default | Comment |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ------- |
-| [ID][1]              | MEDIUMINT | UNSIGNED   | Yes | NO   | 0       |         |
-| [Type][2]            | TINYINT   | UNSIGNED   | Yes | NO   | 0       |         |
-| [GreetEmoteType][3]  | SMALLINT  | UNSIGNED   | NO  | NO   | 0       |         |
-| [GreetEmoteDelay][4] | INT       | UNSIGNED   | NO  | NO   | 0       |         |
-| [Greeting][5]        | TEXT      |            | NO  | YES  | NULL    |         |
-| [VerifiedBuild][6]   | SMALLINT  | SIGNED     | NO  | NO   | 0       |         |
+| Field              | Type       | Attributes | Key | NULL | Default | Comment |
+| ------------------ | ---------- | ---------- | --- | ---- | ------- | ------- |
+| [ID][1]            | MEDIUMINT  | UNSIGNED   | Yes | NO   | 0       |         |
+| [Type][2]          | TINYINT    | UNSIGNED   | Yes | NO   | 0       |         |
+| [locale][3]        | VARCHAR(4) |            | NO  | NO   |         |         |
+| [Greeting][5]      | TEXT       |            | NO  | YES  | NULL    |         |
+| [VerifiedBuild][6] | SMALLINT   | SIGNED     | NO  | NO   | 0       |         |
 
 [1]: #id
 [2]: #type
@@ -31,13 +30,9 @@ Unique ID ([creature_template.entry](creature_template.md#entry) or [gameobject
 -   0=Creature (The ID is point to creature\_template.entry)
 -   1=GameObject (The ID is point to gameobject\_template.entry)
 
-### GreetEmoteType
+### locale
 
-Quest NPC [Emote](emotes.md)
-
-### GreetEmoteDelay
-
-Emote delay in milliseconds
+Client Locale
 
 ### Greeting
 
