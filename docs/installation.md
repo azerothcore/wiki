@@ -20,7 +20,7 @@ These are the officially-supported and complete ways of installing AzerothCore, 
 
 - [Docker setup](install-with-docker.md) - a simplified installation process based on Docker.
 
-- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for **Linux** systems for both local development and production. Currently not recommended for Windows or macOS.
+- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for **Linux** and **Mac OS** systems for both local development and production. Currently not recommended for Windows.
 
 ### Minimal (supported, limited usage)
 
