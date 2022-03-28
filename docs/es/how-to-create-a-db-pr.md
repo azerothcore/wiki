@@ -51,7 +51,6 @@ Deberías ver un mensaje como este **Create branch my-new-branch-123 from master
 
 Después de crear la nueva rama, asegúrate de **mantenerla seleccionada**.
 
-
 ### 3. Navegue hasta la carpeta pending_db_world folder
 
 Ahora debes navegar dentro de la carpeta `data/sql/updates/pending_db_world` de tu fork.
