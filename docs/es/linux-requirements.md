@@ -126,8 +126,6 @@ puedes instalar gcc-8:
 sudo apt-get install g++-8 gcc-8
 ```
 
----
-
 ## Ayuda
 
 Si todavía tiene problemas, compruebe:
