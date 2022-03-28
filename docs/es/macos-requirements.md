@@ -1,4 +1,4 @@
-# macOS Requirements
+# Requisitos macOS
 
 | Guía de instalación | |
 | :- | :- |
