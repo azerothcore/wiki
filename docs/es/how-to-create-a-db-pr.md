@@ -10,7 +10,7 @@ Si quiere enviar correcciones en C++ o de otro tipo que no sea SQL, siga la otra
 
 ## Hazlo sólo una vez: crea tu fork de AzerothCore
 
-Necesitas estar logueado a tu cuenta de [github.com](https://github.com/). Si aún no tienes una cuenta, crea una.
+Necesitas estar logueado en tu cuenta de [github.com](https://github.com/). Si aún no tienes una cuenta, crea una.
 
 Abre el [repositorio de AzerothCore](https://github.com/azerothcore/azerothcore-wotlk)
 y crea un fork del mismo haciendo clic en el botón "Fork" de la parte superior derecha.
