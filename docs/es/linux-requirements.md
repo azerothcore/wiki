@@ -93,7 +93,7 @@ cmake --version
 
 La versión de `cmake` **DEBE** ser `3.16` o superior.
 
-En una versión más antigua de Ubuntu (ejemplo: 16.04), puede seguir las instrucciones aquí para instalar la última versión de cmake. En debian necesitarás usar las fuentes de backports o construir Cmake manualmente.
+En una versión más antigua de Ubuntu (ejemplo: 16.04), puede seguir las instrucciones aquí para instalar la última versión de cmake. En Debian necesitarás usar las fuentes de backports o construir Cmake manualmente.
 
 Recuerde que es posible actualizar cmake usando Python.
 
