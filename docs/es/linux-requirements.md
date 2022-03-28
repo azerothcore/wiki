@@ -14,7 +14,8 @@
 
 #### Ubuntu con MariaDB 10.x
 
-AzerothCore no soporte las versiones 10.6 y 10.5 de MariaDB.
+AzerothCore no soporta las versiones 10.6 y 10.5 de MariaDB.
+```
 
 ```sh
 sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
