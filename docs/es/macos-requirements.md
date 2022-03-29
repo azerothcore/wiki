@@ -48,8 +48,6 @@ Puedes instalar Sequel Ace con:
 brew install --cask sequel-ace
 ```
 
-<br>
-
 ## Ayuda
 
 Si todavía tiene problemas, compruebe:
