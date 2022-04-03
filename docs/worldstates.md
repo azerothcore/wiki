@@ -246,8 +246,8 @@ WORLDSTATE\_SI\_WINTERSPRING = 2284, // Indeed, the hills of Winterspring are cu
 WORLDSTATE\_SI\_UNK = 2285, // saved world state is: $2285W // ???  
 
 
-SI\_GATHERED\_A = 2313, // ally silityst gathered  
-SI\_GATHERED\_H = 2314, // horde silityst gathered  
+SI\_GATHERED\_A = 2313, // ally silithyst gathered  
+SI\_GATHERED\_H = 2314, // horde silithyst gathered  
 SI\_SILITHYST\_MAX = 2317, // max silithyst  
 
 
@@ -490,10 +490,10 @@ BATTELGROUND\_RUINS\_OF\_LORDAERNON\_GREEN = 3000, // 8 green // ???
 BATTELGROUND\_RUINS\_OF\_LORDAERNON\_SHOW = 3002, // 9 show // default value 1 // ???  
 
 
-QUEST\_BREAK\_THE\_BLOCKADE\_MINUTES\_AWAY = 3078, // Our stolen zeppelin's less than $3078w minutes away. // Break the Blockade quest=11153  
+QUEST\_BREAK\_THE\_BLOCKADE\_MINUTES\_AWAY = 3078, // Our stolen zeppelin's less than $3078w minutes away. // quest=11153 <https://www.wowhead.com/quest=11153/break-the-blockade>  
 EYE\_OF\_THE\_STORM\_09 = 3085, // default value 379 // ???  
 QUEST\_BREAK\_THE\_BLOCKADE\_DWARFS\_ACTIVATED = 3094, // There are $3094W activated dwarves!  
-QUEST\_BREAK\_THE\_BLOCKADE\_TOTAL\_INJURED = 3096, // We did it boys! Now back to the Grim Guzzler and we'll drink to the $3096W that were injuredl! // RETREAT!! We've already lost $3096W and we can't afford to lose any more!!  
+QUEST\_BREAK\_THE\_BLOCKADE\_TOTAL\_INJURED = 3096, // We did it boys! Now back to the Grim Guzzler and we'll drink to the $3096W that were injured! // RETREAT!! We've already lost $3096W and we can't afford to lose any more!!  
 
 
 BG\_AV\_Alliance\_Score = 3127,  
@@ -502,7 +502,7 @@ BG\_AV\_SHOW\_H\_SCORE = 3133,
 BG\_AV\_SHOW\_A\_SCORE = 3134,  
 
 
-QUEST\_UNK\_01\_TOTAL\_CASUALTIES = 3151, // RETREAT!! We've taken a beating and had $3151W casualties! We can't keep taking these losses! FALL BACK!! // We did it boys! Now back to the Grim Guzzler and we'll drink to the $3151W that were injuredl!  
+QUEST\_UNK\_01\_TOTAL\_CASUALTIES = 3151, // RETREAT!! We've taken a beating and had $3151W casualties! We can't keep taking these losses! FALL BACK!! // We did it boys! Now back to the Grim Guzzler and we'll drink to the $3151W that were injured!  
 
 
 ARENA\_SEASON\_IN\_PROGRESS = 3191, // CONFIG\_ARENA\_SEASON\_IN\_PROGRESS // Arena season in progress, 0 - end of season //SendInitWorldStates  
@@ -510,9 +510,9 @@ ARENA\_SEASON\_IN\_PROGRESS = 3191, // CONFIG\_ARENA\_SEASON\_IN\_PROGRESS // Ar
 
 QUEST\_DISCOVERING\_PERCENT\_RAZORTHORN\_ROOTS = 3223, // Good day to you, $c.$b$bThere's much to be done to assist in the effort here. Sadly, there's very little I can do for you until I get all of my supplies.$b$bI've now got $3223w percent of the razorthorn roots I need to get started. Any assistance you provide will be well worth the effort, I assure you. // The alchemy lab is not quite yet ready, $n. Mar'nah says that she is $3223w percent done with its assembly, however.$B$BIf you would   like to help her with that, you will find her inside the inn at the Sun's Reach Harbor. // quest=11522 <http://www.wowhead.com/quest=11520/discovering-your-roots>  
 QUEST\_MAKING READY\_TOTAL\_GOAL = 3228, // <http://www.wowhead.com/npc=25046/smith-hauthaa> // Hello, $r.$b$bLet's get busy! No sense waiting around for supplies that may never arrive.$b$bI need my anvil in order to outfit our troops properly. Right now It's $3228w percent complete.$b$bAnd when the anvil is completed, there will be many more powerful items that I will be able to smith for you. // Last I heard from Hauthaa, she indicated that we are $3228w percent of the way there.$B$BI cannot   express how vital it is to our efforts that we get them created. Our men and women are going to need better armor and weapons, and the anvil and forge are the key to that.$B$BYou will find the smith behind the Sun's Reach Armory, $n.  
-QUEST\_UNK\_02\_TOTAL\_GOAL = 3233, // My orders are to create a distraction at the Dead Scar so our forces can take the Sun's Reach Armory. It might not be as glamorous as killing demons face to face, but if it wins us this battle then I'm all for it.$B$BWe are $3233w percent done with our goal. // Capturing the Sun's Reach Sanctum was the first step in our battle plan. Our orders are to take control of the armory next.$B$BWe are $3233w percent done with our goal. // I am glad that you ask.   Our efforts to take the armory are at $3233w percent of our projections.$B$BI know that Battlemage Arynna and Harbinger Inuuro need your help. Seek them inside the Sun's Reach Sanctum on the Isle of Quel'Danas. // <http://www.wowhead.com/quest=11539/taking-the-harbor>  
+QUEST\_UNK\_02\_TOTAL\_GOAL = 3233, // My orders are to create a distraction at the Dead Scar so our forces can take the Sun's Reach Armory. It might not be as glamorous as killing demons face to face, but if it wins us this battle then I'm all for it.$B$BWe are $3233w percent done with our goal. // Capturing the Sun's Reach Sanctum was the first step in our battle plan. Our orders are to take control of the armory next.$B$BWe are $3233w percent done with our goal. // I am glad that you ask.   Our efforts to take the armory are at $3233w percent of our projections.$B$BI know that Battlemage Arynna and Harbinger Inuuro need your help. Seek them inside the Sun's Reach Sanctum on the Isle of Quel'Danas. // quest=11539 <http://www.wowhead.com/quest=11539/taking-the-harbor>  
 QUEST\_UNK\_03\_TOTAL\_GOAL = 3238, // No, unfortunately we have not yet taken the harbor. However, reports indicate that we are $3238w percent of the way towards doing so.$B$B$n, if you want to help out, look for Magister Ilastar and Vindicator Kaalan at the Sun's Reach Armory on the Isle of Quel'Danas.  
-QUEST\_FURTHER\_CONVERSIONS\_TOTAL\_GOAL = 3244, // Have you seen the damaged sentries that wander the island? A few modifications to the crystals that control their behavior will allow us to gain control of them and use them to secure tactical locations.$B$BThe Sun's Reach Sanctum will be ours in no time. We are $3244w percent done with this goal. // Arming the wards at the sanctum will help us secure it faster. We don't want any Wretched getting in our way when we unleash a full scale attack   on the Legion and Kael.$B$BWe are $3244w percent done with our goal. // <http://www.wowhead.com/quest=11525/further-conversions>  
+QUEST\_FURTHER\_CONVERSIONS\_TOTAL\_GOAL = 3244, // Have you seen the damaged sentries that wander the island? A few modifications to the crystals that control their behavior will allow us to gain control of them and use them to secure tactical locations.$B$BThe Sun's Reach Sanctum will be ours in no time. We are $3244w percent done with this goal. // Arming the wards at the sanctum will help us secure it faster. We don't want any Wretched getting in our way when we unleash a full scale attack on the Legion and Kael.$B$BWe are $3244w percent done with our goal. // quest=11525 <http://www.wowhead.com/quest=11525/further-conversions>  
 QUEST\_UNK\_04\_GATE\_1\_TOTAL\_GOAL = 3255, // The first gate, Agamath, has been dismantled! The second gate of Rohendor now blocks our passage.$B$BOur mages are $3255w percent through the defenses of the second gate, Rohendor.  
 QUEST\_UNK\_05\_GATE\_2\_TOTAL\_GOAL = 3257, // Rohendor has been obliterated. Only the gateway, Archonisus, remains.$B$BOur mages are $3257w percent through the defenses of the final gate, Archonisus.  
 QUEST\_UNK\_02\_SUNWELL\_PORTAL\_PERCENT\_COMPLETED = 3269, // If we are to be successful in the creation of a portal to the Isle of Quel'Danas, and the Sunwell which rests upon it, we must acquire an energy source powerful enough to ignite the portal.$B$BWe are $3269w percent completed with our efforts. Will you assist us, $c?  
@@ -719,7 +719,7 @@ COT\_WORLDSTATE\_TIME\_GUARDIAN = 3931,
 COT\_WORLDSTATE\_TIME\_GUARDIAN\_SHOW = 3932,  
 
 
-BFTU\_TIME\_MIN\_01 = 3975,// The next battle begins in $3975w:$3976w$3782w:$3784w$3785w. // <http://www.wowhead.com/quest=13267/the-battle-for-the-undercity>  
+BFTU\_TIME\_MIN\_01 = 3975,// The next battle begins in $3975w:$3976w$3782w:$3784w$3785w. // quest=13267 <http://www.wowhead.com/quest=13267/the-battle-for-the-undercity>  
 BFTU\_TIME\_MIN\_02 = 3976,  
 
 
@@ -883,7 +883,7 @@ RS\_WORLDSTATE\_CORPOREALITY\_TWILIGHT = 5050,
 RS\_WORLDSTATE\_CORPOREALITY\_TOGGLE = 5051,  
 
 
-EVENT\_ECHO\_ISLES\_TIME = 5071, // De Echo Isles attack be startin' soon!$B$BSit back and relax, dis song will be over in anotha $5071W minutes and then we'd be going. // Okay! We're running a little behind, but the assaut is SCHEDULED to start in $5071W minutes.$B$BI mean, everything looks ready to go, and the Gyrocopters, Mechanotanks and Infantry are all here.$B$BIt looks like Mekkatorque is waiting on a few more things before the assault begins. Let's hope we start on time or I may lose   my job!  
+EVENT\_ECHO\_ISLES\_TIME = 5071, // De Echo Isles attack be startin' soon!$B$BSit back and relax, dis song will be over in anotha $5071W minutes and then we'd be going. // Okay! We're running a little behind, but the assaut is SCHEDULED to start in $5071W minutes.$B$BI mean, everything looks ready to go, and the Gyrocopters, Mechanotanks and Infantry are all here.$B$BIt looks like Mekkatorque is waiting on a few more things before the assault begins. Let's hope we start on time or I may lose my job!  
 
 
 ARENA\_RANKED\_MATCHES\_TIME = 6318, // Ranked arena matches start again in $6318d.$B$BWould-be champions are already busy honing their skills and acquiring the best gear they can. Are you going to be ready?  
