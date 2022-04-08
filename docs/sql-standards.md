@@ -21,6 +21,8 @@ Wrong:
 
 ```sql
 INSERT INTO `creature_loot_template` (3, 884, 0, 40, 1, 1, 0, 1, 1, 'Comment');
+
+REPLACE INTO `creature_loot_template` (3, 884, 0, 40, 1, 1, 0, 1, 1, 'Comment');
 ```
 
 Correct:
