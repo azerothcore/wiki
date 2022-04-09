@@ -98,7 +98,7 @@ To obtain the verifier you need to calculate:
 
 5. Convert the result back to a byte array in little-endian order.
 
-**For PHP implementations**
+#### For PHP implementations
 
 Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php.ini.
 
