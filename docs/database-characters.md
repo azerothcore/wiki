@@ -83,6 +83,8 @@ The auth database currently has 95 tables, which mainly store information relate
 - [log_money](log_money.md)
 - [mail](mail.md)
 - [mail_items](mail_items.md)
+- [mail_server_character](mail_server_character.md)
+- [mail_server_template](mail_server_template.md)
 - [pet_aura](pet_aura.md)
 - [pet_spell](pet_spell.md)
 - [pet_spell_cooldown](pet_spell_cooldown.md)
