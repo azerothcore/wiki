@@ -41,6 +41,20 @@
     
     1. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
 
+    1. Increase max_allowed_packet to prevent large updates from causing errors when importing to the database
+
+        1. Navigate to C:\ProgramData\MySQL\MySQL Server 8.0
+        
+        1. Open my.ini with the text editor of your choice
+
+        1. Find max_allowed_packet=4M
+
+        1. Change to max_allowed_packet=64M and save the file
+
+        1. Open services.msc and find your MySQL Service
+
+        1. Right click the service and choose restart
+
     1. Add MySQL to Environment Variables.
     
         1. Go to Control Panel -> System
