@@ -5,7 +5,7 @@
 
 ## Database-related errors
 
-#### ACE00001
+#### [ACE00001](#ace00001)
 I can't start my Auth/WorldServer, I get:
 ```
 [ERROR]: Table 'acore_world.table' doesn't exist
@@ -15,7 +15,7 @@ You are simply not updated and you need to [Update your database](database-keepi
 
 ---------------------------------------------------------
 
-#### ACE00002
+#### [ACE00002](#ace00002)
 I can't start my Auth/WorldServer, I get:
 ```
 [ERROR]: DatabasePool world NOT opened. There were errors opening the MySQL connections. Check your SQLDriverLogFile for specific errors.
@@ -29,7 +29,7 @@ To do this, uncomment Logger.sql.driver and then run the WorldServer again.
 
 ---------------------------------------------------------
 
-#### ACE00003
+#### [ACE00003](#ace00003)
 I can't start my Auth/WorldServer, I get:
 ```
 > Loaded 0 acore strings. DB table `acore_string` is empty.
@@ -38,7 +38,7 @@ This is because you have not imported the Database at all. Follow the instructio
 
 ---------------------------------------------------------
 
-#### ACE00004
+#### [ACE00004](#ace00004)
 I can't start my Auth/WorldServer, I get:
 ```
 Unknown column 'level' in 'field list'
@@ -56,7 +56,7 @@ This can mean several things:
 
 ## Database Update-related errors
 
-#### ACE00020
+#### [ACE00020](#ace00020)
 My DB Assembler closes and does not import all updates, I get:
 ```
 ERROR 1054 (42522) at line 14062: Unknown column 'resistance2' in 'field list'
@@ -67,7 +67,7 @@ The easiest way to fix it is by dropping your database and importing it again.
 
 ---------------------------------------------------------
 
-#### ACE0021
+#### [ACE0021](#ace0021)
 My DB Assembler closes and does not import all updates, I get:
 
 This can be due to several reasons:
@@ -77,7 +77,7 @@ This can be due to several reasons:
 
 ---------------------------------------------------------
 
-#### ACE00022
+#### [ACE00022](#ace00022)
  My DB Assembler closes and does not import all updates, I get:
 ```
 ERROR 1067 (42000) at line 181: Invalid default value for 'start_time'.
@@ -86,7 +86,7 @@ Disable MySQL strict mode, read [How to turn on/off MySQL strict mode in localho
 
 ------------------------------------------------------------------------------------------------------------------
 
-#### ACE00023
+#### [ACE00023](#ace00023)
 My Worldserver closes when autoupdater, I get:
 ```
 ERROR 2013 (HY000) at line 4: Lost connection to MySQL server during query
@@ -97,7 +97,7 @@ This is most likely due to your MySQL server's max_allowed_packet setting is too
 
 ## Core-related Errors
 
-#### ACE00040
+#### [ACE00040](#ace00040)
 Core doesn't start, I get:
 ```
 dbc exists, and has 13 field(s) (expected 12). Extracted file might be from wrong client version or a database-update has been forgotten.
@@ -106,14 +106,14 @@ You need to extract the DBC files from the same unmodified client version as you
 
 ---------------------------------------------------------
 
-#### ACE00041
+#### [ACE00041](#ace00041)
 Core doesn't start, it closes as soon as I open it.
 
 Start the server using command prompt to get the exact error.
 
 ---------------------------------------------------------
 
-#### ACE00042
+#### [ACE00042](#ace00042)
 Core doesn't start, I get this error window.
 
 ```
@@ -125,7 +125,7 @@ You have not copied the necessary .dll files into the binaries directory.
 
 ---------------------------------------------------------
 
-#### ACE00043
+#### [ACE00043](#ace00043)
 Core doesn't start, I get:
 ```
 AzerothCore does not support MySQL versions below 5.7 and MariaDB versions below 10.5
@@ -134,7 +134,7 @@ Upgrade your MySQL/MariaDB.
 
 ---------------------------------------------------------
 
-#### ACE00044
+#### [ACE00044](#ace00044)
 I get:
 ```
 -- Performing Test boost_filesystem_copy_links_without_NO_SCOPED_ENUM - Failed error
@@ -143,16 +143,16 @@ You can ignore it. It's an error we cannot hide.
 
 ---------------------------------------------------------
 
-#### ACE00045
+#### [ACE00045](#ace00045)
 I get an error when the WorldServer is running:
 ```
 Map file './maps/0004331.map' is from an incompatible map version (MAPS v9), MAPS v10 is expected
 ```
-Pull the source, recompile tools, copy the extractors to your wow binaries and recreate the maps using the updated mapextractor. Then replace your old map files with the new ones.
+Pull the source, recompile tools, copy the extractors to your wow binaries and recreate the maps using the updated mapextractor. Then repl#ace your old map files with the new ones.
 
 ---------------------------------------------------------
 
-#### ACE00046
+#### [ACE00046](#ace00046)
 I get an error when WorldServer is starting:
 ```
 Used MySQL library version (8.0.19 id 80019) does not match the version id used to compile AzerothCore (id 80024)
@@ -163,7 +163,7 @@ This is due to that you have updated your MySQL server but have not recompiled a
 
 ---------------------------------------------------------
 
-#### ACE00047
+#### [ACE00047](#ace00047)
 I get an error when I am trying to start Worldserver or Authserver
 ```
 This application was unable to start correctly (0xc000007b). Click OK to close the application.
@@ -174,28 +174,28 @@ This is usually due to mixing 32/64bit DLLs with your compiled binaries. Your DL
 
 ## Core compilation-related errors
 
-#### ACE00060
+#### [ACE00060](#ace00060)
 I don't get an AzerothCore hash
 
 Reinstall Git for Windows and select "Git from the command line and also 3rd party software" when asked about adjusting your PATH.
 
 ---------------------------------------------------------
 
-#### ACE00061
+#### [ACE00061](#ace00061)
 I cannot install AzerothCore on CentOS/Ubuntu/Debian etc.
 
 AzerothCore requires GCC 8.0 or higher and CLang 7 or higher.
 
 ---------------------------------------------------------
 
-#### ACE00062
+#### [ACE00062](#ace00062)
 I cannot install AzerothCore on Windows XP/Vista
 
 AzerothCore requires [Visual Studio 2019](https://docs.microsoft.com/en-us/visualstudio/releases/2019/system-requirements), therefore you need to update to Windows 7 or above.
 
 ---------------------------------------------------------
 
-#### ACE00063
+#### [ACE00063](#ace00063)
 I cannot install AzerothCore on Linuyx, I get:
 ```
 c++: internal compiler error: Segmentation fault (program cc1plus)
@@ -206,24 +206,24 @@ This can be due to:
 
 ---------------------------------------------------------
 
-#### ACE00064
+#### [ACE00064](#ace00064)
 How do I \<insert question\> on my operating system.
 
 Use google or buy a book to learn the operating system you are using.
 
 ---------------------------------------------------------
 
-#### ACE00065
+#### [ACE00065](#ace00065)
 I can't compile, I get:
 ```
-fatal error C1060: compiler is out of heap space
+fatal error C1060: compiler is out of heap sp#ace
 C1076: compiler limit : internal heap limit reached; use /Zm to specify a higher limit
 ```
 Read [How to: Enable a 64-Bit, x64 hosted MSVC toolset on the command line. Microsoft](https://docs.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?redirectedfrom=MSDN&view=msvc-160).
 
 ---------------------------------------------------------
 
-#### ACE00066
+#### [ACE00066](#ace00066)
 I can't compile, I get:
 ```
 C1001: An internal error has occurred in the compiler.
@@ -232,7 +232,7 @@ Update your Visual Studio.
 
 ---------------------------------------------------------
 
-#### ACE00067
+#### [ACE00067](#ace00067)
 I can't generate my CMake files, I get:
 ```
 Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
@@ -243,28 +243,28 @@ Locate your Boost folder
 
 ## Extractor-related errors
 
-#### ACE00080
+#### [ACE00080](#ace00080)
 I am looking for map extractors but they are for wow version 4.
 
 No they are not. The name "vmap4extractor"/"vmap4Assembler" reflects the version of the tool. They are all for WoW 3.3.5a.
 
 ---------------------------------------------------------
 
-#### ACE00081
+#### [ACE00081](#ace00081)
 Couldn't open RootWmo while running extractor.
 
 Not an error, ignore it.
 
 ---------------------------------------------------------
 
-#### ACE00082
+#### [ACE00082](#ace00082)
 I can't use Vmap extractor.
 
 Extract maps first.
 
 ---------------------------------------------------------
 
-#### ACE00083
+#### [ACE00083](#ace00083)
 I have maps from ManGOS or TrinityCore, can I use them?
 
 No.
