@@ -9,7 +9,7 @@ tableofcontents: 1
 
 ## Database-related errors
 
-#### [ACE00001](#ace00001)
+### [ACE00001](#ace00001)
 I can't start my Auth/WorldServer, I get:
 ```
 [ERROR]: Table 'acore_world.table' doesn't exist
