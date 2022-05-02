@@ -133,14 +133,6 @@ having a unique name that looks like `rev_XXXXXXXXXXXX.sql`
 
 ![AzerothCore - create pending sql file](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/8.png)
 
-Open it with a text editor. You will notice that it contains some SQL code like:
-
-```
-INSERT INTO `version_db_world` (`sql_rev`) VALUES ('XXXXXXXXXXXX');
-```
-
-Do NOT remove this line. Add your SQL code below and save it.
-
 Now add this file to be committed using the `git add path/to/file` command:
 
 ```
