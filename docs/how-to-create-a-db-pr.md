@@ -39,7 +39,7 @@ As a result, your fork's `master` branch should say:
 
 ![AzerothCore fork updated](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/update-fork-2.png)
 
-### 2. Create a new branch
+### 1. Create a new branch
 
 Make sure you have the `master` branch currently selected, click on the branches dropdown and create a new branch.
 
@@ -52,7 +52,7 @@ You should see a message like **Create branch my-new-branch-123 from master**.
 
 After you create the new branch, make sure you **keep that one selected**.
 
-### 3. Navigate to the pending_db_world folder
+### 1. Navigate to the pending_db_world folder
 
 You now need to navigate inside the `data/sql/updates/pending_db_world` folder of your fork.
 
@@ -62,23 +62,7 @@ You can either do it manually by clicking on the `data` folder, then `sql`, `upd
 
 **https://github.com/YourUsername/azerothcore-wotlk/tree/my-new-branch-123/data/sql/updates/pending_db_world**
 
-### 4. Generate a new update file rev
-
-In a new browser tab, open [azerothcore.org/pages/rev-generator](https://www.azerothcore.org/pages/rev-generator/).
-
-![AzerothCore SQL update rev generator](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-rev-generator.png)
-
-This will give you:
-
-- The name of the file you need to create which will contain your SQL code.
-- The *SQL version code* (an `INSERT INTO` query) which you will need to add at the top of the new SQL file that you will submit.
-
-**Note**: they should always go together and you should always have a new rev for every PR you send.
-If you need to get a new rev, just refresh the page or click "Generate new".
-
-Copy them somewhere or keep that browser tab open.
-
-### 5. Create and commit a new file
+### 1. Create and commit a new file
 
 Back on GitHub, from the `pending_db_world` folder, click **Add file** and then **Create new file**:
 
@@ -86,8 +70,7 @@ Back on GitHub, from the `pending_db_world` folder, click **Add file** and then 
 
 Now you need to:
 
-- Set the file name as the one you generated in the step 4.
-- Add the SQL version code that you generated in the step 4.
+- Give the file a name.
 - Add a new line, then add your own SQL code below and then add a new empty line at the end of the file.
 
 ![AzerothCore new SQL file example](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-new-file-2.png)
@@ -102,7 +85,7 @@ Now scroll down the page, you'll need to:
 
 ![AzerothCore create new commit](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-commit.png)
 
-### 6. Open the PR
+### 1. Open the PR
 
 Go back to the [main AzerothCore repository](https://github.com/azerothcore/azerothcore-wotlk),
 you will notice that GitHub is smart enough to realize that you are about to open a PR
