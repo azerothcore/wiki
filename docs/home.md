@@ -10,7 +10,9 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## IMPORTANT NOTE
 
-**OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
+```diff
+! OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.
+```
 
 ## Getting started
 
