@@ -38,6 +38,8 @@ These guides are made by community members and might not be up-to-date:
 
 - [FreeBSD](freebsd.md)
 
+- [Visual Studio Code](vsc-requirements)
+
 ## Azerothcore Classic Setup
 
 Every step of the guide is divided in three tabs regarding different operating systems (Linux, macOS and Windows).
