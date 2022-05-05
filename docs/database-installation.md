@@ -29,7 +29,7 @@ By default the Worldserver and Authserver will check for, and import all new fil
 
 This is the easiest and recommended way to make sure you are always up-to-date with the core.
 
-To edit the automatic database updater you will find the neccessary settings in authserver.conf and worldserver.conf under [UPDATE SETTINGS](https://github.com/azerothcore/azerothcore-wotlk/commit/2d2857ce81db5297eb63d388d2e2f252ef52412d#diff-56b141374cf0384a2887c9fd490c6a79a3d2f31fb020ee0e423a5685344b59d3R30).
+To edit the automatic database updater you will find the neccessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
 1. Start Authserver.
 2. Start Worldserver.
