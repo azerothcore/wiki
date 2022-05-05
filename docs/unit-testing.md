@@ -26,10 +26,10 @@ make install -j 6
 
 We use [googletest](https://github.com/google/googletest) at AzerothCore as our testing framework. Some useful references that explain how it works are available at:
 
-- https://github.com/google/googletest/blob/master/googletest/docs/primer.md
+- http://google.github.io/googletest/primer.html
 - https://github.com/google/googletest/blob/master/googlemock/README.md
 - https://github.com/nordlow/gtest-tutorial
-- https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md
+- https://google.github.io/googletest/gmock_for_dummies.html
 
 You can find plenty of other references online that explain how to deal with googletest or unit testing in general. 
 If you know some other useful resources, feel free to edit this page and add them.
