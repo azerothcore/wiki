@@ -148,7 +148,7 @@ All constants that we store have a standardized prefix.
 | SAY_   | [creature_text.GroupID](creature_text#groupid) |
 | EMOTE_ | [creature_text.GroupID](creature_text#groupid) Different prefix from SAY_ to show that this is an emote. |
 | MODEL_ | Creature model, DisplayID |
-| H_XX   | Heroic mode prefix (goes before the other prefix) XX is max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
+| XX_G   | Heroic mode prefix (goes after the other prefix) XX is max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
 | RAID_XX | Raid mode prefix (goes before the other prefix) XX is max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
 | EVENT_ | Event/Encounter identifier for instances |
 | DATA_  | Identifiers in instance used for GUIDs/data not being event/encounter |
@@ -158,7 +158,7 @@ Correct:
 
 ```
 SPELL_ENRAGE
-H_SPELL_ENRAGE
+SPELL_ENRAGE_H
 EVENT_ILLIDAN
 DATA_ILLIDAN
 ACHIEVE_MAKE_IT_COUNT
