@@ -19,7 +19,7 @@ This DBC contains all possible player classes.
 | 39-54  | Name_male                                    | Loc     | If different from base case, otherwise unused.                                               |
 | 55     | NameMaleLangMask                             | Integer | String flags, unused.                                                                        |
 | 56     | fileName                                     | String  | Capitalized English name.                                                                    |
-| 57     | [spellClassSet](chrclasses.md#spellClassSet) | Integer |                                                                                              |
+| 57     | [spellClassSet](#spellClassSet) | Integer |                                                                                              |
 | 58     | [Flags](#flags)                              | Integer | Unused                                                                                       |
 | 59     | Camera                                       | iRefID  | Used for the opening cinematic. 165 for Death Knight, 0 for the others.                      |
 | 60     | required_expansion                           | Integer | 0 = Classic, 1 = Burning Crusade, 3 = Wrath.                                                 |
