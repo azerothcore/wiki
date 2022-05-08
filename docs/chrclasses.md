@@ -6,23 +6,23 @@ This DBC contains all possible player classes.
 
 ### Structure
 
-| Column | Name               | Type    | Notes                                                                                        |
-|--------|--------------------|---------|----------------------------------------------------------------------------------------------|
-| 1      | ID                 | Integer |                                                                                              |
-| 2      | Unknown            | Integer | 1 for Hunter, Rogue, and Shaman, 9 for Death Knight, 0 for the others. Removed in Cataclysm. |
-| 3      | PowerType          | Integer | 0 = Mana, 1 = Rage, 2 = Focus, 3 = Energy, 4 = Happiness, 6 = Runes. 2 and 4 unused.         |
-| 4      | m_petNameToken     | String  | Pet type. 101 for Warlock's demons, 1 for the other pets.                                    |
-| 5-20   | Name               | Loc     | A name to display.                                                                           |
-| 21     | NameLangMask       | Integer | String flags, unused.                                                                        |
-| 22-37  | Name_female        | Loc     | If different from base case, otherwise unused.                                               |
-| 38     | NameFemaleLangMask | Integer | String flags, unused.                                                                        |
-| 39-54  | Name_male          | Loc     | If different from base case, otherwise unused.                                               |
-| 55     | NameMaleLangMask   | Integer | String flags, unused.                                                                        |
-| 56     | fileName           | String  | Capitalized English name.                                                                    |
-| 57     | spellClassSet      | Integer |                                            |
-| 58     | Flags              | Integer | Unused                                     |
-| 59     | Camera             | iRefID  | Used for the opening cinematic. 165 for Death Knight, 0 for the others.                      |
-| 60     | required_expansion | Integer | 0 = Classic, 1 = Burning Crusade, 3 = Wrath.                                                 |
+| Column | Name                                         | Type    | Notes                                                                                        |
+|--------|----------------------------------------------|---------|----------------------------------------------------------------------------------------------|
+| 1      | ID                                           | Integer |                                                                                              |
+| 2      | Unknown                                      | Integer | 1 for Hunter, Rogue, and Shaman, 9 for Death Knight, 0 for the others. Removed in Cataclysm. |
+| 3      | PowerType                                    | Integer | 0 = Mana, 1 = Rage, 2 = Focus, 3 = Energy, 4 = Happiness, 6 = Runes. 2 and 4 unused.         |
+| 4      | m_petNameToken                               | String  | Pet type. 101 for Warlock's demons, 1 for the other pets.                                    |
+| 5-20   | Name                                         | Loc     | A name to display.                                                                           |
+| 21     | NameLangMask                                 | Integer | String flags, unused.                                                                        |
+| 22-37  | Name_female                                  | Loc     | If different from base case, otherwise unused.                                               |
+| 38     | NameFemaleLangMask                           | Integer | String flags, unused.                                                                        |
+| 39-54  | Name_male                                    | Loc     | If different from base case, otherwise unused.                                               |
+| 55     | NameMaleLangMask                             | Integer | String flags, unused.                                                                        |
+| 56     | fileName                                     | String  | Capitalized English name.                                                                    |
+| 57     | [spellClassSet](chrclasses.md#spellClassSet) | Integer |                                                                                              |
+| 58     | [Flags](#flags)                              | Integer | Unused                                                                                       |
+| 59     | Camera                                       | iRefID  | Used for the opening cinematic. 165 for Death Knight, 0 for the others.                      |
+| 60     | required_expansion                           | Integer | 0 = Classic, 1 = Burning Crusade, 3 = Wrath.                                                 |
 
 ### Content
 
