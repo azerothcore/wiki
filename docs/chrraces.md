@@ -9,7 +9,7 @@ This dbc contains all possible races, some of which are unused and unavailable t
 | Column | Field             | Type         | Notes                                           |
 |--------|-------------------|--------------|-------------------------------------------------|
 | 1      | RaceID            | Integer      |                                                 |
-| 2      | Flags             | Integer      |                                                 |
+| 2      | [Flags](#flags)             | Integer      |                                                 |
 | 3      | FactionID         | Integer      | Faction ID                                      |
 | 4      | ExplorationSoundID| Integer      |                                                 |
 | 5      | model_m           | Integer      | Male display ID, used for character creation    |
@@ -56,6 +56,15 @@ This dbc contains all possible races, some of which are unused and unavailable t
 | 19 | 262144   | Taunka                  |
 | 20 | 524288   | Northrend Skeleton      |
 | 21 | 1048576  | Ice Troll               |
+
+### Flags
+
+| Flag | Description           |
+|------|-----------------------|
+| 1    | Not playable          |
+| 2    | Bare feet             |
+| 4    | Can mount             |
+| 8    | Has bald              |
 
 
 ### Faction values
