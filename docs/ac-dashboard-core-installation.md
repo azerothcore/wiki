@@ -126,9 +126,7 @@ Rebuild:
 
 Update the database:
 
-```
-./acore.sh db-assembler import-updates
-```
+[https://www.azerothcore.org/wiki/database-keeping-the-server-up-to-date](https://www.azerothcore.org/wiki/database-keeping-the-server-up-to-date)
 
 That's it.
 
