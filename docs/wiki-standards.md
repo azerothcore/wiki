@@ -28,6 +28,10 @@ When adding/removing a table it should also be updated in `database-auth.md` `da
 
 When linking to a page in the wiki we use [relative links](https://semify.com/?Relative-Link&AID=1373#:~:text=For%20example%2C%20a%20relative%20link%20would%20only%20include%20/images%20/puppies.gif%20in%20the%20a%20href%20tag.). (`[home](home#overview)`).
 
+When linking to a header on the same page in the wiki [relative links](https://semify.com/?Relative-Link&AID=1373#:~:text=For%20example%2C%20a%20relative%20link%20would%20only%20include%20/images%20/puppies.gif%20in%20the%20a%20href%20tag.). (`[withCapitalLetters](#withcapitalletters).`
+
+It is important to note that in relative links only lowercase letters are allowed and no special characters. Otherwise, the links will be broken.
+
 When linking to a page outside of the wiki we use [absolute links](https://semify.com/?Relative-Link&AID=1373#:~:text=An%20absolute%20link%2C%20on%20the%20other%20hand%2C%20would%20include%20https%3A//%20www.%20example.com/%20image/%20puppies.gif%20in%20it.). (`[Google](https://google.com)`).
 
 ## TRANSLATION
