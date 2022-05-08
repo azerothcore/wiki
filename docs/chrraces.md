@@ -6,27 +6,32 @@ This dbc contains all possible races, some of which are unused and unavailable t
 
 ### Structure
 
-| Column | Field             | Type         | Notes                                           |
-|--------|-------------------|--------------|-------------------------------------------------|
-| 1      | RaceID            | Integer      |                                                 |
-| 2      | Flags             | Integer      |                                                 |
-| 3      | FactionID         | Integer      | faction template id                             |
-| 4      |                   |              | unused                                          |
-| 5      | model_m           | Integer      |                                                 |
-| 6      | model_f           | Integer      |                                                 |
-| 7      |                   |              | unused                                          |
-| 8      | TeamID            | Integer      | (7-Alliance 1-Horde)                            |
-| 9-12   |                   |              | unused                                          |
-| 13     | CinematicSequence | Integer      | id from CinematicSequence.dbc                   |
-| 14     | unk_322           |              | faction (0 Alliance, 1 Horde, 2 not available?) |
-| 15-30  | name              | String + Loc | used for DBC language detection/selection       |
-| 31     |                   |              | string flags, unused                            |
-| 32-47  | nameFemale        | String + Loc | if different from base (male) case              |
-| 48     |                   |              | string flags, unused                            |
-| 49-64  |                   |              | if different from base (male) case              |
-| 65     |                   |              | string flags, unused                            |
-| 66-68  |                   |              | unused                                          |
-| 69     | expansion         | Integer      | (0 - original race, 1 - tbc addon, ...)         |
+| Column | Field                   | Type         | Notes                                                                                |
+|--------|-------------------------|--------------|--------------------------------------------------------------------------------------|
+| 1      | ID                      | Integer      |                                                                                      |
+| 2      | [Flags](#flags)         | Integer      |                                                                                      |
+| 3      | FactionID               | iRefID       | Faction template ID. The order in the creation screen depends on this.               |
+| 4      | Exploration             | iRefID       | Played on exploring zones with SMSG_EXPLORATION_EXPERIENCE.                          |
+| 5      | MaleModel               | iRefID       | Only used for the character creation/selection screen. Server sets the model ingame. |
+| 6      | FemaleModel             | iRefID       | Only used for the character creation/selection screen. Server sets the model ingame. |
+| 7      | ClientPrefix            | String       | A short form of the name. Used for helmet models.                                    |
+| 8      | BaseLanguage            | Integer      | 1 = Horde, 7 = Alliance & Not playable.                                              |
+| 9      | creatureType            | iRefID       | Always 7 (Humanoid).                                                                 |
+| 10     | ResSicknessSpellID      | Integer      | Always 15007.                                                                        |
+| 11     | SplashSoundID           | Integer      | 1090 for dwarfs, 1096 for the others. Getting stored in CGUnit at CGUnit::PostInit.  |
+| 12     | clientFilestring        | String       | Same as the one used in model filepaths.                                             |
+| 13     | cinematicSequenceID     | iRefID       | Used for the opening cinematic.                                                      |
+| 14     | alliance                | Integer      | Faction (0 = Alliance, 1 = Horde, 2 = Not available)                                 |
+| 15-30  | RaceNameNeutral         | Loc          | A name to display.                                                                   |
+| 31     | NameLangMask            | Integer      | String flags, unused                                                                 |
+| 32-47  | RaceNameFemale          | Loc          | If different from base case, otherwise unused. Always NULL for zhCN.                 |
+| 48     | NameFemaleLangMask      | Integer      | String flags, unused                                                                 |
+| 49-64  | RaceNameMale            | Loc          | If different from base case, otherwise unused. Always NULL for zhCN.                 |
+| 65     | NameMaleLangMask        | Integer      | String flags, unused                                                                 |
+| 66     | facialHairCustomization | String       | Internal names for the facial features.                                              |
+| 67     | facialHairCustomization | String       | The localized ones are in luas.                                                      |
+| 68     | hairCustomization       | String       | Internal name for the hair customizations.  Horns for tauren, normal for the others. |
+| 69     | required_expansion      | Integer      | 0 = Classic & Not playable, 1 = Burning Crusade                                      |
 
 ### Content
 
@@ -40,7 +45,7 @@ This dbc contains all possible races, some of which are unused and unavailable t
 | 6  | 32       | Tauren                  |
 | 7  | 64       | Gnome                   |
 | 8  | 128      | Troll                   |
-| 9  | 256      | Goblin (4.x)            |
+| 9  | 256      | Goblin                  |
 | 10 | 512      | Blood Elf               |
 | 11 | 1024     | Draenei                 |
 | 12 | 2048     | Fel Orc                 |
@@ -53,15 +58,19 @@ This dbc contains all possible races, some of which are unused and unavailable t
 | 19 | 262144   | Taunka                  |
 | 20 | 524288   | Northrend Skeleton      |
 | 21 | 1048576  | Ice Troll               |
-| 22 | 2097152  | Worgen (4.x)            |
-| 24 | 8388608  | Pandaren Neutral (5.x)  |
-| 25 | 16777216 | Pandaren Alliance (5.x) |
-| 26 | 33554432 | Pandaren Horde (5.x)    |
+
+### Flags
+
+| Flag | Description           |
+|------|-----------------------|
+| 1    | Not playable          |
+| 2    | Bare feet             |
+| 4    | Can mount             |
+| 8    | Has bald              |
 
 
 ### Faction values
 
-On WOTLK:
 Alliance only = 1101
 Horde only = 690
 Both factions = 1791 (0 may work)
@@ -69,4 +78,4 @@ Both factions = 1791 (0 may work)
 
 ### How do I get the values?
 
-If you want to learn how bits work you can read the tutorial here [bit-and_bytes-tutorial](Bit-and_bytes-tutorial)
+If you want to learn how bits work you can read the [bit-and-bytes tutorial](Bit-and_bytes-tutorial).
