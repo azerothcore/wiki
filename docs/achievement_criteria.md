@@ -4,7 +4,7 @@ redirect_from: "/Achievement_Criteria"
 
 # Achievement Criteria
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **Achievement\_Criteria.dbc**
 
