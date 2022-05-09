@@ -4,7 +4,7 @@ redirect_from: "/Achievement"
 
 # Achievement
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **Achievement.dbc**
 
