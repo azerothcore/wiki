@@ -6,7 +6,9 @@ redirect_from: "/Faction"
 
 **Faction.dbc**
 
-This dbc contains information on all of the base factions. These factions are unique and represent a faction with which a player can gain reputation.
+[`Back-to:DBC`](dbc-index.md)
+
+This DBC contains information on all of the base factions. These factions are unique and represent a faction with which a player can gain reputation.
 
 **IMPORTANT:** These values are used for **ALL** tables **EXCEPT** the [creature\_template](creature_template) and [gameobject\_template\_addon](gameobject_template_addon) tables.
 
