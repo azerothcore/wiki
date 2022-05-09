@@ -8,7 +8,7 @@ redirect_from: "/AreaTable"
 
 **AreaTable.dbc**
 
-This dbc contains the zone and subzone lists. For the purposes of this wiki article, the zone IDs, names, mapID and AreaID will be included.
+This DBC contains the zone and subzone lists. For the purposes of this wiki article, the zone IDs, names, mapID and AreaID will be included.
 
 **Version is : 3.3.5a**
 
