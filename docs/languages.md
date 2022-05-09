@@ -4,6 +4,8 @@ redirect_from: "/Languages"
 
 # Languages
 
+[`Back-to:DBC`](dbc-index.md)
+
 **DBC Structure - For Version 3.3.5a**
 
 This DBC contains languages that can be used in texts. The player must have competence in this language to understand what is written.
