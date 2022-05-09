@@ -4,7 +4,7 @@ redirect_from: "/AreaTable"
 
 # AreaTable
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **AreaTable.dbc**
 
