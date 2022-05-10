@@ -1,5 +1,7 @@
 # ChrClasses.dbc
 
+[`Back-to:DBC`](dbc-index.md)
+
 This DBC contains all possible player classes.
 
 **Version is 3.3.5a**

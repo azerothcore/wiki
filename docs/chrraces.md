@@ -1,6 +1,8 @@
 # ChrRaces.dbc
 
-This dbc contains all possible races, some of which are unused and unavailable to players.
+[`Back-to:DBC`](dbc-index.md)
+
+This DBC contains all possible races, some of which are unused and unavailable to players.
 
 **Version is : 3.3.5a**
 

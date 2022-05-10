@@ -4,7 +4,7 @@ redirect_from: "/SkillLine"
 
 # SkillLine
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **SkillLine.dbc**
 

@@ -4,8 +4,7 @@ redirect_from: "/PageTextMaterial"
 
 # PageTextMaterial
 
-&lt;noinclude&gt;|
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **PageTextMaterial.dbc**
 

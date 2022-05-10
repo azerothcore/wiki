@@ -4,6 +4,8 @@ redirect_from: "/Emotes"
 
 # Emotes
 
+[`Back-to:DBC`](dbc-index.md)
+
 This DBC contains emotes which can be used by NPCs.
 
 

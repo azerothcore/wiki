@@ -27,6 +27,7 @@ redirect_from: /documentation_index
 * [Changelog](changelog.md)
 * [CMake options](cmake-options.md)
 * [Core Scripts](core-scripts.md)
+* [DBC Index](dbc-index.md)
 * [Directory structure](directory-structure.md)
 * [Exit Codes](exitcodes.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)

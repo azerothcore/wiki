@@ -4,7 +4,7 @@ redirect_from: "/DBC-AreaTrigger"
 
 # AreaTrigger
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **AreaTrigger.dbc**
 

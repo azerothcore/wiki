@@ -4,7 +4,7 @@ redirect_from: "/TotemCategory"
 
 # TotemCategory
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 **TotemCategory.dbc**
 **Version is : 3.3.5a**

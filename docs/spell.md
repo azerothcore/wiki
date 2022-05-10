@@ -4,7 +4,7 @@ redirect_from: "/Spell"
 
 # Spell
 
-`Back-to:DBC`
+[`Back-to:DBC`](dbc-index.md)
 
 # **Spell.dbc**
 
