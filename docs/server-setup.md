@@ -23,7 +23,7 @@ If you do not want to extract these files using the extractors you can find down
 
 Github link:
 
-<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v15) - from 09/05/2022 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
+<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v14) - from 09/05/2022 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
 
 <!-- this link contains v10 -->
 <!-- Mega link:
