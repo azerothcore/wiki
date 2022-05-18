@@ -12,6 +12,12 @@
 | CMake ≥ 3.16 |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
+#### IMPORTANT NOTE
+
+**OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
+
+**Ubuntu 22.0 and later ships with OpenSSL 3.x! If you want to use Ubuntu, use a lower version or compile a lower version of OpenSSL**
+
 #### Ubuntu with MariaDB 10.x
 
 AzerothCore does only support MariaDB versions 10.6 and 10.5.
