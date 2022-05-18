@@ -8,6 +8,8 @@ redirect_from: "/Installation"
 
 **OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
 
+**Ubuntu 22.0 and later ships with OpenSSL 3.x! If you want to use Ubuntu, use a lower version or compile a lower version of OpenSSL**
+
 ## Choosing a setup
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
