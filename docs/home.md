@@ -12,6 +12,8 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 **OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
 
+**Ubuntu 22.0 and later ships with OpenSSL 3.x! If you want to use Ubuntu, use a lower version or compile a lower version of OpenSSL**
+
 ## Getting started
 
 - [Installation Guide](installation.md)
