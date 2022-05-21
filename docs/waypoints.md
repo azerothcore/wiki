@@ -17,6 +17,7 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 | [position\_x](#position_x)       | FLOAT        |            |     | NO   | 0       |
 | [position\_y](#position_y)       | FLOAT        |            |     | NO   | 0       |
 | [position\_z](#position_z)       | FLOAT        |            |     | NO   | 0       |
+| [orientation](#orientation) | FLOAT | | | YES | NULL |
 | [point\_comment](#point_comment) | text         |            |     | YES  | NULL    |
 
 #### entry
@@ -38,6 +39,8 @@ The Y coordinate of the destination waypoint.
 #### position\_z
 
 The Z coordinate of the destination waypoint.
+
+#### orientation
 
 #### point\_comment
 
