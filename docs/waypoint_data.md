@@ -15,7 +15,7 @@ This table contains all the path data for creatures that use waypoints and waypo
 | [position\_x](#position_x)       | FLOAT        |              |     | NO   | 0       |
 | [position\_y](#position_y)       | FLOAT        |              |     | NO   | 0       |
 | [position\_z](#position_z)       | FLOAT        |              |     | NO   | 0       |
-| [orientation](#orientation)      | FLOAT        |              |     | NO   | 0       |
+| [orientation](#orientation)      | FLOAT        |              |     | YES   | NULL       |
 | [delay](#delay)                  | INT      | UNSIGNED     |     | NO   | 0       |
 | [move\_type](#move_type)         | INT      |              |     | NO   | 0       |
 | [action](#action)                | INT      |              |     | NO   | 0       |
