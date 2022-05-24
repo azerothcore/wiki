@@ -16,9 +16,10 @@
 [SpellFamilyMask2][6] | INT | UNSIGNED | | | 0
 [procFlags][7] | INT | UNSIGNED | | | 0
 [procEx][8] | INT | UNSIGNED | | | 0
-[ppmRate][9] | FLOAT | SIGNED | | | 0
-[CustomChance][10] | FLOAT | SIGNED | | | 0
-[Cooldown][11] | INT | UNSIGNED | | | 0
+[procPhase][9] | INT | UNSIGNED | | | 0
+[ppmRate][10] | FLOAT | SIGNED | | | 0
+[CustomChance][11] | FLOAT | SIGNED | | | 0
+[Cooldown][12] | INT | UNSIGNED | | | 0
 
 [1]: #entry
 [2]: #schoolmask
@@ -28,9 +29,10 @@
 [6]: #spellfamilymask2
 [7]: #procflags
 [8]: #procex
-[9]: #ppmrate
-[10]: #customchance
-[11]: #cooldown
+[9]: #procphase
+[10]: #ppmrate
+[11]: #customchance
+[12]: #cooldown
 
 **Description of the fields**
 
@@ -136,6 +138,16 @@ PROC_EX_EX_ONE_TIME_TRIGGER | 131072 | 0x0020000 | If set trigger always but onl
 PROC_EX_ONLY_ACTIVE_SPELL | 262144 | 0x0040000 | Spell has to do damage/heal to proc
 PROC_EX_NO_OVERHEAL | 524288 | 0x0080000 | Proc if heal did some work
 PROC_EX_NO_AURA_REFRESH | 1048576 | 0x0100000 | Proc if aura was not refreshed
+
+### procPhase
+A bitmask for matching phase of a spellcast on which proc occurs.
+
+procPhase | Bit | Hex | Comment
+:--- | :--- | :--- | :--- 
+PROC_SPELL_PHASE_NONE | 0 | 0x0000000 |
+PROC_SPELL_PHASE_CAST | 1 | 0x0000001 |
+PROC_SPELL_PHASE_HIT | 2 | 0x0000002 |
+PROC_SPELL_PHASE_FINISH | 4 | 0x0000004 |
 
 ### ppmRate
 Proc per minute. If 0 the value will be taken from DBC.
