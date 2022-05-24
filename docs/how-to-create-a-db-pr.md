@@ -70,7 +70,8 @@ Back on GitHub, from the `pending_db_world` folder, click **Add file** and then 
 
 Now you need to:
 
-- Give the file a name.
+- Open https://www.azerothcore.org/pages/rev-generator/
+- Copy the text from "File name" and paste it as the new file name of the file you just created.
 - Add a new line, then add your own SQL code below and then add a new empty line at the end of the file.
 
 ![AzerothCore new SQL file example](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/web-create-new-file-2.png)
