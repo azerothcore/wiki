@@ -29,7 +29,7 @@
 [6]: #spellfamilymask2
 [7]: #procflags
 [8]: #procex
-[9]: #procPhase
+[9]: #procphase
 [10]: #ppmrate
 [11]: #customchance
 [12]: #cooldown
