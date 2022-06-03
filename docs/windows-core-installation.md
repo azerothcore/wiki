@@ -95,7 +95,7 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
     1. If you set 32-bit compilation during CMake configuration, select **x86**.
 
-1. Rick-click **ALL_BUILD** in the Solution Explorer on the right sidebar and select **Clean**.
+1. Right-click **ALL_BUILD** in the Solution Explorer on the right sidebar and select **Clean**.
  
 1. Right-click **ALL_BUILD** and select **Build**. (Ctrl + Shift + B)
 
