@@ -8,7 +8,7 @@
 | |
 | :- |
 | MySQL ≥ 5.7.0 |
-| Boost ≥ 1.67 |
+| Boost ≥ 1.74 |
 | CMake ≥ 3.16 |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
