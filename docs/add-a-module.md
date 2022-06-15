@@ -4,65 +4,54 @@ redirect_from: "/Add-a-module"
 
 # Add a module
 
-## **How to add a module**
+1. Get the module from the catalogue: [https://www.azerothcore.org/catalogue](https://www.azerothcore.org/catalogue) (For this example, we'll be using this module: [mod-npc-services](https://www.azerothcore.org/catalogue.html#/details/177019524))
 
+2. - Clone it using Git as you did during the [core installation](core-installation.md). Set the `Destination` to "C:\Azerothcore\modules\mod-npc-services" (Recommended method) [Jump to step 9 to make sure it cloned correctly]
+	- Use the download button on the catalogue page
+	- Use `Download ZIP` button on the module's Github page
 
-1. Get the module from this website [https://www.azerothcore.org/catalogue](https://www.azerothcore.org/catalogue)
-2. Clone it using git (recommended) or just download it
-3. I'll use this for Exmple: [https://www.azerothcore.org/catalogue/details.html?id=177019524](https://www.azerothcore.org/catalogue/details.html?id=177019524).
-4. Once you downloaded it or cloned: ( Extract it, you will have than Folder looks like this :
-![Image](<https://user-images.githubusercontent.com/41213210/56865195-84df1200-69cb-11e9-8faa-7519fb3a8384.png>)
+3. If in the previous step you chose not to clone the repo, you'll need to extract the downloaded ZIP archive. Once this is done, your resulting folder should look like this:
+![img1](https://user-images.githubusercontent.com/38561765/173752887-c4fae113-2615-4a6e-b5f7-33ebb61d024d.PNG)
 
+4. Due to a discrepancy between the way AzerothCore loads modules and how Github names ZIP code archives, you will need to rename the directory name. The folder will have the branch name placed onto the end of it, as in mod-npc-services-_master_. You will need to remove this branch name, leaving only mod-npc-services:
+![img2 edit](https://user-images.githubusercontent.com/38561765/173754536-947a7477-c06f-407d-a6c0-54b366ad17cb.png)
 
-5. Copy this folder you will have to paste it in next steps:
-![Image](<https://user-images.githubusercontent.com/41213210/56865210-ac35df00-69cb-11e9-87dc-6fc803cdf685.png>)
+5. Copy the renamed folder, as you'll be pasting it into the modules folder
 
-6. Now go in your AzerothCore folder (for example C:\azerothcore-wotlk-master)
+6. Navigate to your AzerothCore modules folder (C:\Azerothcore)
 
-7. When you are there, you will see there folder named modules like on this image:
-![Image](<https://user-images.githubusercontent.com/41213210/56865235-f74ff200-69cb-11e9-81a5-39e1edcea742.png>)
+7. You will see in that directory the modules folder:
+![img3 edit](https://user-images.githubusercontent.com/38561765/173755109-c5243fcc-2940-4a11-9e42-edd1d7016dca.png)
 
-8. Open that folder modules -> It will look like this :
-![Image](<https://user-images.githubusercontent.com/41213210/56865263-3f6f1480-69cc-11e9-86c4-a766d7ae29ac.png>)
+8. Open the modules folder, it should look quite sparse:
+![img4](https://user-images.githubusercontent.com/38561765/173755212-11d86754-0ef5-4dd8-af8d-68dbe033f71c.PNG)
 
-9. Paste there your downloaded module ( That we use in step 4., in my case we use : NPC Services Module
-And it will look like this when you paste it there :
-![Image](<https://user-images.githubusercontent.com/41213210/56865270-6594b480-69cc-11e9-9be1-d1437f0e7380.png>)
+9. Paste the module folder into the modules folder, it should now look like this:
+![img5](https://user-images.githubusercontent.com/38561765/173755380-9c46a74c-8342-46bb-83ae-df31d0532bfd.PNG)
 
-10. Than, open Cmake -> Press Configure
-![Image](<https://user-images.githubusercontent.com/41213210/56865297-d045f000-69cc-11e9-8e16-ca84dbeda0dd.png>)
+10. Now to recompile! Open CMake and configure. If the module has loaded correctly, you should now see it in the CMake log as well:
+![img6 edit](https://user-images.githubusercontent.com/38561765/173755762-8dbc188a-9d32-4629-ad51-834666f90b29.png)
 
-11. Than press Generate :
-![Image](<https://user-images.githubusercontent.com/41213210/56865301-da67ee80-69cc-11e9-989f-36e31ddb497e.png>)
+11. Then generate:
+![img7 edit](https://user-images.githubusercontent.com/38561765/173755809-62235d05-cdcd-45ec-beb2-6d59f5dc76bd.png)
 
-12. And you are done. P.S You have also to check in the module folder (SQL folder) if there is any .sql file required to be executed in your database ( Like on this image ) :
-![Image](<https://user-images.githubusercontent.com/41213210/56865330-25820180-69cd-11e9-94f9-0741e59325a0.png>)
+12. Now open the generated project file, clean, and build the solution
 
- then World :
-![Image](<https://user-images.githubusercontent.com/41213210/56865337-3599e100-69cd-11e9-84a3-b6b7165efe5f.png>)
+## SQL Queries
 
-- this module has an SQL file which needs to be executed in your World Database :
-![Image](<https://user-images.githubusercontent.com/41213210/56865346-5104ec00-69cd-11e9-8bdf-813b402a466d.png>)
+- If your module contains a `sql` folder, you will need to run the queries inside for the module to function correctly:
+![img8 edit](https://user-images.githubusercontent.com/38561765/173756389-d3b5e465-8083-4296-b28e-ce0f4de30e8d.png)
 
-- Let's do it :
-13. Open it with any text editor and copy all content from the file, or run it directly : ( I'll use Editor )
-This is what i have there :
+	- Opening this folder, we should then see any of these three folders: auth, characters, or world. In the example module, it contains a world folder:
+![img9](https://user-images.githubusercontent.com/38561765/173756643-40bfee42-5160-47b8-8999-6e7bdd24c476.PNG)
 
-```
-DELETE FROM `creature_template` WHERE `entry` = 55003;
-Set @NpcName = "Visual Weapon NPC",
-	@NpcSubname = "AzerothCore",
-	@NpcEntry = 55003,
-	@NpcDisplayID = 31833,
-	@NpcLevel = 80;
+	- Depending on the module, there could be more than one query file you would need to execute. Refer to the readme of the module for information regarding this. In our case, there is only one `.sql` file to run, so our job is easy:
+![img10](https://user-images.githubusercontent.com/38561765/173757090-f2ac528f-ccba-4e70-b1c0-9a4b3bac7d0d.PNG)
 
-INSERT INTO `creature_template` (`entry`, `modelid1`, `name`, `subname`, `minlevel`, `maxlevel`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `dmgschool`, `BaseAttackTime`, `RangeAttackTime`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES 
-(@NpcEntry, @NpcDisplayID, @NpcName, @NpcSubname, @NpcLevel, @NpcLevel, 35, 1, 1, 1.14286, 1, 1, 0, 2000, 2000, 2, 0, 2048, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 50, 50, 1, 0, 0, 1, 0, 0, 'npc_visualweapon', 12340);
-```
+13. Open your SQL editor of choice. In this case, we will be using HeidiSQL. You will need to select the database the query applies to on the left before you run the query. Since our query was in the world folder, we will select `acore_world`. Once the database is selected, we will then load the SQL file:
+![img11](https://user-images.githubusercontent.com/38561765/173757454-9033e605-c026-49a9-a030-5baf384900e7.PNG)
 
-14. So, We have to run (paste) this query in the Database, Let's do it.
-Open your DB Program ( Example : Navicat, HeidiSQL ) and run our code there, in this way :
-![Image](<https://user-images.githubusercontent.com/41213210/56865444-1ea7be80-69ce-11e9-9e69-384736c62351.png>)
+14. Once you navigate to the SQL file and open it up, it will open the query in a new tab. Double check that the database tab is pointing to the right database, then run the query using the marked button above the tabs:
+![img12 edit](https://user-images.githubusercontent.com/38561765/173758117-6f500fb3-a8a5-4819-a608-1222b7bc9802.png)
 
-15. We are done now. Go in game and spawn this NPC with command .npc add 55003
-@NpcEntry = 55003 <---- This is our NPC ENTRY
+With that, the module is installed! In the case of mod-npc-services, we'd then launch our server and run the command `.npc add 55002` (The NPC Entry) to spawn the NPC.
