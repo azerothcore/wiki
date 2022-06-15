@@ -13,7 +13,7 @@
 | CMake ≥ 3.16                                                       |
 | MS Visual Studio (Community) ≥ 16.11 (2019) (Desktop) (No preview) |
 
-1. [Git Extensions](https://sourceforge.net/projects/gitextensions/)
+1. [Git Extensions](https://github.com/gitextensions/gitextensions/releases/latest)
 
     1. You will need Git installed. You can get the latest version [https://git-scm.com/download/win](https://git-scm.com/download/win)
     
