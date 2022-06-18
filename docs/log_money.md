@@ -17,6 +17,7 @@
 | [money][7]         | BIGINT   | UNSIGNED   |     | NO   |         |       |         |
 | [topic][8]         | CHAR(255)| SIGNED     |     | NO   |         |       |         |
 | [date][9]          | DATETIME | SIGNED     |     | NO   |         |       |         |
+| [type][10]         | TINYINT  | SIGNED     |     | NO   |         |       | 1=COD,2=AH,3=GB DEPOSIT,4=GB WITHDRAW,5=MAIL,6=TRADE |
 
 [1]: #senderacc
 [2]: #senderguid
@@ -65,3 +66,14 @@
 ### date
 
 `field-no-description|9`
+
+### type
+
+| Name | Value       |
+| ---- | ----------- |
+| 1    | COD         |
+| 2    | AH          |
+| 3    | GB DEPOSIT  |
+| 4    | GB WITHDRAW |
+| 5    | MAIL        |
+| 6    | TRADE       |
