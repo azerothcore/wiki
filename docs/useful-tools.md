@@ -14,7 +14,7 @@ These are the most useful tools out there for AzerothCore development.
 
 - [WoW Database Editor](https://github.com/BAndysc/WoWDatabaseEditor) is an IDE for Smart Scripts and database editing. Learn more about the tool [here](https://github.com/BAndysc/WoWDatabaseEditor#readme)
 
-- [AoWoW](https://github.com/azerothcore/aowow) is an armory/database viewer adapted for AzerothCore.
+- [AoWoW](https://github.com/azerothcore/aowow) is an armory/database viewer adapted for AzerothCore. Learn more about the tool [here](https://github.com/azerothcore/aowow#readme)
 
 If you'd like to find more tools you can check out the [AzerothCore Catalogue](https://www.azerothcore.org/catalogue.html).
 
