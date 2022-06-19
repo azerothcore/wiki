@@ -2,7 +2,7 @@
 
 These are the most useful tools out there for AzerothCore development.
 
-- [Keira3](https://github.com/azerothcore/keira3) is a Database Editor for AzerothCore. Learn more about the tool [here](https://github.com/azerothcore/keira3#readme).
+- [Keira3](https://www.azerothcore.org/Keira3/) is a Database Editor for AzerothCore. Learn more about the tool [here](https://github.com/azerothcore/keira3#readme).
 
 - [SpellWork](https://github.com/azerothcore/spellwork) is a tool to browse and display information about World of Wacraft spells. Learn more about the tool [here](https://github.com/azerothcore/spellwork#readme).
 
