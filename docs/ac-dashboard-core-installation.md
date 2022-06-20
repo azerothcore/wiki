@@ -9,10 +9,11 @@ If you need any help just [ask a question](https://www.azerothcore.org/wiki/How-
 
 ## Requirements
 
-You need to have [git](https://git-scm.com/) installed in your machine. 
+You need to have [git](https://git-scm.com/), [curl](https://curl.se/), [unzip](https://github.com/madler/unzip), [sudo](https://www.sudo.ws/) installed in your machine. 
 No other software is required to be installed manually.
 
-- debian/ubuntu-based: `apt update && apt install git`
+
+- debian/ubuntu-based: `apt update && apt install git curl unzip sudo`
 - macOS: `brew install git`
 
 ### Notes
