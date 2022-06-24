@@ -4,7 +4,7 @@
 
 **The \`item\_instance\` table**
 
-This table holds individual item instance information for all items currently equipped in some kind of character bag or bank, in auctionhouses, in guild banks or in mails.
+This table holds individual item instance information for all items currently equipped in some kind of character bag or bank, in auction houses, in guild banks or in mails.
 
 **Structure**
 
@@ -18,7 +18,7 @@ This table holds individual item instance information for all items currently eq
 | [count][6]             | INT       | UNSIGNED   |     | NO   | 1       |       |         |
 | [duration][7]          | INT       | SIGNED     |     | NO   | 0       |       |         |
 | [charges][8]           | TINYTEXT  | SIGNED     |     | YES  |         |       |         |
-| [flags][9]             | MEDIUNINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [flags][9]             | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [enchantments][10]     | TEXT      | SIGNED     |     | NO   |         |       |         |
 | [randomPropertyId][11] | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
 | [durability][12]       | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
@@ -46,7 +46,7 @@ This table holds individual item instance information for all items currently eq
 
 The GUID of the item. This number is unique for each item instance.
 
-### itemEnry
+### itemEntry
 
 [Item_template.entry](item_template#entry).
 
