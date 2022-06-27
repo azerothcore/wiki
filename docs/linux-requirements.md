@@ -9,7 +9,7 @@
 | :- |
 | MySQL ≥ 5.7.0 |
 | Boost ≥ 1.74 |
-| OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported) |
+| OpenSSL ≥ 1.0.x (OpenSSL 3.0 is not supported) |
 | CMake ≥ 3.16 |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
