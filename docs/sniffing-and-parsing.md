@@ -26,7 +26,7 @@ Start the game and login.
 Everything from your ACCOUNT information, such as user name, Full name for billing, expansions authorization, bnet friends list, and bshop transactions is logged and registered.
 
 **At Character Creation\Character selection:**
-Character names\ class\race variations is logged durning sniffing. Realm Information is as well.
+Character names\ class\race variations is logged during sniffing. Realm Information is as well.
 
 **At Game play following realm login:**
 Area information is logged that is within visible range. Stuff such as npcs, gameobjects, attack rotations, spells, holiday stuff, phases, various stats, gossips, cutscene triggers, spells, auras, phases, and placements.
