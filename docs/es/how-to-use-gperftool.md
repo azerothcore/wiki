@@ -22,6 +22,6 @@ Nota: las dependencias anteriores ya están instaladas en nuestro archivo docker
 6. Ejecute `google-pprof --callgrind <path/of/worldserver/bin> </path/of/prof/file> > worldserver.callgrind` Esto generará un archivo callgrind que se puede leer con
 [QCacheGrind](https://sourceforge.net/projects/qcachegrindwin/), [KCacheGrind](http://kcachegrind.sourceforge.net/html/Home.html) o cualquier otra herramienta compatible.
 
-This is what you will see (screenshot of KCacheGrind):
+Esto es lo que verá (captura de pantalla de KCacheGrind):
 
 ![kcachegrind](https://user-images.githubusercontent.com/147092/117697104-615a1f00-b1c2-11eb-8599-f5893a04de0c.png)
