@@ -8,7 +8,7 @@ Antes de empezar te sugerimos que leas la [Documentación sobre la estructura mo
 
 - Plantilla del módulo: [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
 - Plantilla de scripts: https://github.com/azerothcore/azerothcore-boilerplates
-- Todos los hooks del núcleo se enumeran en [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). Si necesita hooks personalizados, pueden añadirse al núcleo mediante [enviando un RP](https://www.azerothcore.org/wiki/How-to-create-a-PR).
+- Todos los hooks del núcleo se enumeran en [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). Si necesita hooks personalizados, pueden añadirse al núcleo mediante [enviando un PR](https://www.azerothcore.org/wiki/How-to-create-a-PR).
 
 - Si necesita crear un nuevo hook para su módulo, siga esta guía: [Cómo crear un nuevo hook](hooks-script.md)
 
