@@ -705,7 +705,7 @@ Add flags together for all classes where condition is true.</td>
 <tr class="odd">
 <td>CONDITION_RACE</td>
 <td>16</td>
-<td>Player must be this race. See <a href="http://www.azerothcore.org/wiki/ChrRaces">ChrRaces.dbc</a> .<br />
+<td>Race mask from <a href="http://www.azerothcore.org/wiki/ChrRaces">ChrRaces.dbc</a> .<br />
 Add flags together for all races where condition is true.</td>
 <td>Always 0</td>
 <td>Always 0</td>
@@ -1353,7 +1353,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_RACE = 16**
 
--   -   ConditionValue1: race the player must be. Add flags together for all races condition should be true for. See [ChrRaces.dbc](ChrRaces)
+-   -   ConditionValue1: race mask. Add flags together for all races condition should be true for. See [ChrRaces.dbc](ChrRaces)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
