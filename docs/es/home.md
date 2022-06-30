@@ -8,6 +8,14 @@ Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con
 
 Leer en: [English :gb:](../home) [Spanish :es:](home)
 
+## NOTA IMPORTANTE
+
+**OpenSSL 3.x NO ES SOPORTADO. Utilice la versión que indica la guía de instalación.**
+
+**¡Ubuntu 22.0 y posteriores vienen con OpenSSL 3.x! Si desea utilizar Ubuntu, utilice una versión inferior o compile una versión inferior de OpenSSL**
+
+**El equipo y los propietarios de AzerothCore NO patrocinan ni apoyan en ningún caso los servidores públicos ilegales. Si usted utiliza estos proyectos para ejecutar un servidor público ilegal y no para probar y aprender es su propia elección personal.**
+
 ## Empezando
 
 - [Guía de instalación](installation.md)
