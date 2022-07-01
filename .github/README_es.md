@@ -1,6 +1,6 @@
 # AzerothCore WIKI
 
-Leer en: [Ingles :gb:](README.md) [Español :es:](README_es.md)
+Leer en: [Ingles :gb:](README.md) | [Español :es:](README_es.md)
 
 Wiki para el proyecto AzerothCore disponible aquí: http://azerothcore.github.io/wiki/es
 
