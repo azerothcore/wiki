@@ -5,61 +5,61 @@ body:
   - type: textarea
     id: describe_the_bug
     attributes:
-      - label: Describe the bug
-      - description: A clear and concise description of what the bug is.
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
     validations:
       required: true
   - type: textarea
     id: to_reproduce
     attributes:
-      - label: To reproduce
-      - description: |
-          Steps to reproduce the behavior
-          - 1. Go to '...'
-          - 2. Click on '....'
-          - 3. Scroll down to '....'
-          - 4. See error
+      label: To reproduce
+      description: |
+        Steps to reproduce the behavior
+        - 1. Go to '...'
+        - 2. Click on '....'
+        - 3. Scroll down to '....'
+        - 4. See error
     validations:
       required: true
   - type: textarea
     id: expected_behavior
     attributes:
-      - label: Expected behavior
-      - description: A clear and concise description of what you expected to happen.
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
     validations:
       required: true
   - type: textarea
     id: screenshots
     attributes:
-      - label: Screenshots
-      - description: |
-          If applicable, add screenshots to help explain your problem.
-          Just drag the images into this box and they will be uploaded.
+      label: Screenshots
+      description: |
+        If applicable, add screenshots to help explain your problem.
+        Just drag the images into this box and they will be uploaded.
   - type: textarea
     id: desktop
     attributes:
-      - label: Desktop
-      - description: |
-          (please complete the following information)
-          - OS: [e.g. Windows 10]
-          - Browser: [e.g. chrome, safari]
-          - Version: [e.g. 22]
+      label: Desktop
+      description: |
+        (please complete the following information)
+        - OS: [e.g. Windows 10]
+        - Browser: [e.g. chrome, safari]
+        - Version: [e.g. 22]
     validations:
       required: true
   - type: textarea
     id: smartphone
     attributes:
-      - label: Smartphone
-      - description: |
-          (please complete the following information)
-          - Device: [e.g. iPhone6]
-          - OS: [e.g. iOS8.1]
-          - Browser: [e.g. stock browser, safari]
-          - Version: [e.g. 22]
+      label: Smartphone
+      description: |
+        (please complete the following information)
+        - Device: [e.g. iPhone6]
+        - OS: [e.g. iOS8.1]
+        - Browser: [e.g. stock browser, safari]
+        - Version: [e.g. 22]
     validations:
       required: true
   - type: textarea
     id: additional_context
     attributes:
-      - label: Additional context
-      - description: Add any other context about the problem here.
+      label: Additional context
+      description: Add any other context about the problem here.
