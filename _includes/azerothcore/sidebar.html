@@ -1,30 +1,20 @@
 ﻿<!--suppress HtmlUnknownTarget -->
 <div class="sidebar-wrapper">
-	
     <script language= "JavaScript">
-
-	function changeLang(language)
-        {            
+        function changeLang(language)
+        {
             document.getElementById('en').style.display= (language=='en')? 'inline' : 'none';
             document.getElementById('es').style.display= (language=='es')? 'inline' : 'none';
         }
-	
     </script>
-    
     <b>How-To ( branch master )</b> <a href="https://github.com/azerothcore/wiki/edit/master/_includes/azerothcore/sidebar.html">Edit</a>
-    
     <div id="language">
-    
-		<ol>
+        <ol>
             <b style="cursor: pointer;" onclick="changeLang('en');"><img src="https://github.com/azerothcore/wiki/blob/acbf3f05e90da007939ae32c8e9ec940f2e622ec/images/gb.png?raw=true" alt="English"></b>
             <b style="cursor: pointer;" onclick="changeLang('es');"><img src="https://github.com/azerothcore/wiki/blob/acbf3f05e90da007939ae32c8e9ec940f2e622ec/images/es.png?raw=true" alt="Spanish"></b>
         </ol>
-	
     </div>
-    
     <div id="en">
-    
-		<p></p>
         <b>Install:</b>
         <ul>
             <li><a href="/wiki/installation">Installation Guide</a></li>
@@ -36,7 +26,6 @@
             <li><a href="/wiki/final-server-steps">Final Server Steps</a></li>
             <li><a href="/wiki/keeping-the-server-up-to-date">Keeping the server up to date</a></li>
             <li><a href="/wiki/client-setup">Client Setup</a></li>
-            <!-- <li><a href="/wiki/memory-usage">Memory Usage</a></li> -->
         </ul>
         <b>Contribute:</b>
         <ul>
@@ -61,7 +50,7 @@
         </ul>
         <b>Other:</b>
         <ul>
-	    <li><a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guides and Tips from our Forum</a></li>
+            <li><a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guides and Tips from our Forum</a></li>
             <li><a href="/wiki/how-to-ask-for-help">How to ask for help</a></li>
             <li><a href="/wiki/best-practices">Best practices</a></li>
             <li><a href="/wiki/external-tools-and-modules">Other Tools & Modules</a></li>
@@ -70,7 +59,7 @@
             <li><a href="/wiki/create-a-module">Create a Module</a></li>
             <li><a href="/wiki/create-a-script">Create your first Script</a></li>
             <li><a href="/wiki/how-to-work-with-conf-files">Work with configuration files (.conf & .conf.dist)</a></li>
-            <li><a href="/wiki/server-setup">Extract client data (maps, mmaps, vmaps, dbc)</a></li>
+            <li><a href="/wiki/memory-usage">Memory Usage</a></li>
             <li><a href="/wiki/linux-restarter">Linux automatic restarter</a></li>
             <li><a href="/wiki/gm-commands">GM Commands</a></li>
             <li><a href="/wiki/remote-access">Remote Access</a></li>
@@ -79,14 +68,12 @@
         </ul>
         <b>Archive</b>
         <ul>
-            <li><a target="_blank" href="http://www.azerothcore.org/pages/sunwell.pl/">Original SC Description</a></li>
+            <li><a href="http://www.azerothcore.org/pages/sunwell.pl/" target="_blank">Original SC Description</a></li>
         </ul>
         
     </div>
-	
-    <div id="es"  style="display: none;"> 
     
-        <p></p>
+    <div id="es"  style="display: none;">
         <b>Instalación:</b>
         <ul>
             <li><a href="/wiki/es/installation">Guía de instalación</a></li>
@@ -98,13 +85,12 @@
             <li><a href="/wiki/es/final-server-steps">Pasos finales del servidor</a></li>
             <li><a href="/wiki/es/keeping-the-server-up-to-date">  Mantener el servidor actualizado</a></li>
             <li><a href="/wiki/es/client-setup">Configuración del cliente</a></li>
-            <!-- <li><a href="/wiki/memory-usage">Memory Usage</a></li> -->
         </ul>
         <b>Contribuir:</b>
         <ul>
             <li><a href="/wiki/es/contribute">Cómo contribuir</a></li>
             <li><a href="/wiki/es/how-to-create-a-pr">Cómo crear un PR</a></li>
-			<li><a href="/wiki/how-to-create-a-db-pr">Cómo crear un PR de SQL a través de GitHub</a></li>
+            <li><a href="/wiki/how-to-create-a-db-pr">Cómo crear un PR de SQL a través de GitHub</a></li>
             <li><a href="/wiki/es/how-to-test-a-pr">Cómo probar un PR</a></li>
             <li><a href="/wiki/es/how-to-test-db-only-changes">Cómo probar los cambios solo en la BD</a></li>
             <li><a href="/wiki/es/how-to-document-code">Cómo documentar su código</a></li>
@@ -124,23 +110,23 @@
         <b>Otro:</b>
         <ul>
             <li><a href="/wiki/es/how-to-ask-for-help">Cómo pedir ayuda</a></li>
-            <li><a href="/wiki/es/best-practices">Mejores prácticas</a></li>
+            <li><a href="/wiki/es/best-practices">Buenas prácticas</a></li>
             <li><a href="/wiki/es/external-tools-and-modules">Otras herramientas y módulos</a></li>
-            <li><a href="/wiki/es/faq">Preguntas más frecuentes</a></li>
+            <li><a href="/wiki/es/faq">Preguntas frecuentes</a></li>
             <li><a href="/wiki/es/creating-accounts">Crear cuentas</a></li>
             <li><a href="/wiki/es/create-a-module">Crear un módulo</a></li>
             <li><a href="/wiki/es/create-a-script">Crea tu primer Script</a></li>
             <li><a href="/wiki/es/how-to-work-with-conf-files">Trabajar con archivos de configuración (.conf & .conf.dist)</a></li>
-            <li><a href="/wiki/es/server-setup">Extraer datos del cliente (mapas, mmaps, vmaps, dbc)</a></li>
+            <li><a href="/wiki/es/memory-usage">Uso de la memoria</a></li>
             <li><a href="/wiki/es/linux-restarter">Reiniciar automático en Linux</a></li>
             <li><a href="/wiki/es/gm-commands">Comandos GM</a></li>
             <li><a href="/wiki/es/remote-access">Acceso remoto</a></li>
             <li><a href="/wiki/es/waypoints-information">Información sobre waypoints</a></li>
-            <li><a href="/wiki/es/how-to-obtain-free-records">Cómo obtener registros gratuitos</a></li>
+            <li><a href="/wiki/es/how-to-obtain-free-records">Cómo obtener registros libres</a></li>
         </ul>
         <b>Archivo</b>
         <ul>
-            <li><a target="_blank" href="http://www.azerothcore.org/pages/sunwell.pl/">Descripción original del SC</a></li>
-        </ul>	
+            <li><a href="http://www.azerothcore.org/pages/sunwell.pl/" target="_blank">Descripción original del SC</a></li>
+        </ul>
      </div>
 </div>
