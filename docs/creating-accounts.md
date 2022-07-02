@@ -14,23 +14,43 @@ It is recommended to use security level 3 for your own account.
 account create <user> <pass>
 ```
 
+**Example:**
+
+```
+account create admin admin
+```
+
 ## To set your account security level
 
-| Level | Security Level |
-| :---: | :------------- 
-| 0 | SEC_PLAYER |
-| 1 | SEC_MODERATOR |
-| 2 | SEC_GAMEMASTER |
-| 3 | SEC_ADMINISTRATOR |
+| Level | Security Level    |
+|-------|-------------------|
+| 0     | SEC_PLAYER        |
+| 1     | SEC_MODERATOR     |
+| 2     | SEC_GAMEMASTER    |
+| 3     | SEC_ADMINISTRATOR |
 
 ```
-account set gmlevel <user> <level> <realm> (-1 all realms)
+account set gmlevel <user> <level> <realm>
 ```
+
+**Example:**
+
+```
+account set gmlevel admin 3 -1
+```
+
+**Note:** (-1 for the all realms)
 
 ## Changing password
 
 ```
 account set password <user> <password> <password>
+```
+
+**Example:**
+
+```
+account set password admin 1234 1234
 ```
 
 ## Higher security level
@@ -42,8 +62,7 @@ It has access to account management and is not recommended for in-game accounts 
 To update an account to security level 4 you need to manually edit the fields in the database or run the query below.
 
 ```sql
-UPDATE account_access AS access
-INNER JOIN account AS account ON access.id = account.id
-SET gmlevel = 4 WHERE username = '<user>';
+UPDATE `account_access` AS `access`
+INNER JOIN `account` AS `account` ON `access`.`id` = `account`.`id`
+SET `gmlevel` = 4 WHERE `username` = '<user>';
 ```
-
