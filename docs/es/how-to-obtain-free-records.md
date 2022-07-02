@@ -1,7 +1,3 @@
----
-redirect_from: "/es/how-to-obtain-free-records"
----
-
 # Cómo obtener registros libres
 
 En algunas ocasiones, necesitamos obtener o conocer registros cuyos valores no están siendo ocupados.
