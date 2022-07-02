@@ -40,6 +40,8 @@ LIMIT 1
 
 When running the query, we will get as a result in this case, the number **15**.
 
+**Note:** Currently, the value has changed, and now it is different. But at the time it was number 15.
+
 What we must do now is to check that this value is not being used, by means of a `SELECT`
 
 ```sql
