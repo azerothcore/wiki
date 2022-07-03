@@ -1,7 +1,3 @@
----
-redirect_from: "/Spell"
----
-
 # Spell
 
 [`Back-to:DBC`](dbc-index.md)

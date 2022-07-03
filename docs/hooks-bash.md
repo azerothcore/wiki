@@ -1,7 +1,3 @@
----
-redirect_from: "/Hooks-Bash"
----
-
 # Hooks Bash
 
 ## HOOKS FOR COMPILER

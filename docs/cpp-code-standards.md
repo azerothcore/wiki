@@ -1,7 +1,3 @@
----
-tableofcontents: 1
----
-
 # C++ Code Standards
 
 ## Intro

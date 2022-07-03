@@ -1,7 +1,3 @@
----
-redirect_from: "/Installation"
----
-
 # Installation Guide
 
 ## IMPORTANT NOTE

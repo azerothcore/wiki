@@ -1,7 +1,3 @@
----
-redirect_from: "/MySQLtypesC++"
----
-
 # MySQL Types C++
 
 <div id="main-content" data-inline-comments-target="true" class="wiki-content">

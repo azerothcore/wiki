@@ -1,7 +1,3 @@
----
-redirect_from: "/TrinityCore-to-AzerothCore-characters-migration"
----
-
 # TrinityCore to AzerothCore Character & Auth Migration Tool
 
 ### 1) Install AzerothCore  
@@ -37,5 +33,3 @@ Run the following file no.6 on your Trinitycore Auth Database
 
 Change the `worldserver.conf` of your AzerothCore server to point to your converted (ex TrinityCore) characters database
 and start the `./worldserver`
-
-

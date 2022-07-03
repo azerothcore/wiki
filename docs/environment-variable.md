@@ -1,7 +1,3 @@
----
-redirect_from: "/Environment-Variable"
----
-
 # Environment Variable
 
 ### Introduction

@@ -1,7 +1,3 @@
----
-redirect_from: "/TotemCategory"
----
-
 # TotemCategory
 
 [`Back-to:DBC`](dbc-index.md)

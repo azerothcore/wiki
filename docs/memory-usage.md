@@ -1,7 +1,3 @@
----
-redirect_from: "/Memory-Usage"
----
-
 # Memory Usage
 
 ### AzerothCore Memory Usage

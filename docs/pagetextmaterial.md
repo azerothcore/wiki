@@ -1,7 +1,3 @@
----
-redirect_from: "/PageTextMaterial"
----
-
 # PageTextMaterial
 
 [`Back-to:DBC`](dbc-index.md)

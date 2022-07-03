@@ -1,7 +1,3 @@
----
-redirect_from: "/Contribute"
----
-
 # Contribute
 
 You can contribute in several ways to AzerothCore:

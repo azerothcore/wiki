@@ -1,7 +1,3 @@
----
-tableofcontents: 1
----
-
 # Logging Configuration (log4j-like)
 
 ## Setting up logging in the core

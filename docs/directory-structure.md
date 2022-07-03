@@ -1,7 +1,3 @@
----
-redirect_from: "/Directory-Structure"
----
-
 # Directory Structure
 
 AzerothCore and our modules is following  directory structure standard from hw-core:

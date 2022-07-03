@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-create-a-DB-PR"
----
-
 # Como crear una Pull Request SQL en GitHub
 
 Esta es una guía simplificada para crear fácilmente Pull Request que contengan correcciones de la base de datos (código SQL) sin molestarse con la terminal, 

@@ -1,7 +1,3 @@
----
-redirect_from: "/SQL-Versioning"
----
-
 # SQL Versioning
 
 We've two kind of versions:
@@ -34,7 +30,7 @@ ALTER TABLE version_db_**database** CHANGE COLUMN  **previous_file_name**  **thi
 Replacing:
 - *database* with **world**, **character** or **auth**
 - *previous-file-name* with the name of the latest file ( without extension )
-- *this-file-name** with the name of the new file itself ( without extension )
+- *this-file-name* with the name of the new file itself ( without extension )
 
 The following is an example of the SQL Header query ( for auth database ):
 

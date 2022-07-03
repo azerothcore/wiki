@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-ask-for-help"
----
-
 # Cómo solicitar ayuda
 
 ## Necesita ayuda?

@@ -1,7 +1,3 @@
----
-redirect_from: "/Waypoints-Information"
----
-
 # Waypoints and pathes
 
 ### Different kinds of waypoint paths

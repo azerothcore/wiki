@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-test-a-PR"
----
-
 # How to test a PR
 
 ## Introduction
@@ -148,4 +144,3 @@ You should write:
 ## Finishing Testing
 
 Once you have left a test report, you will want to revert your AC installation back to the base state for further testing. To do this, use `git reset --hard` to remove all unstaged changes, followed by `git checkout master` to go back to the master branch. To tidy up, you can also use `git clean -fd` to get rid of any untracked files. Finally, you can then type `git status` to make sure everything is back to normal.
-

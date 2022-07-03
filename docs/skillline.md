@@ -1,7 +1,3 @@
----
-redirect_from: "/SkillLine"
----
-
 # SkillLine
 
 [`Back-to:DBC`](dbc-index.md)

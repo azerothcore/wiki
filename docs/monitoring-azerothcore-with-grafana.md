@@ -1,7 +1,3 @@
----
-tableofcontents: 1
----
-
 # Monitoring AzerothCore with Grafana
 
 ## Required Software

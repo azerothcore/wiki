@@ -1,8 +1,3 @@
----
-tableofcontents: 1
-redirect_from: "/Install-with-Docker"
----
-
 # Install with Docker
 
 Welcome to the AzerothCore Docker guide!

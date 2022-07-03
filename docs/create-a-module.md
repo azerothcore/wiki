@@ -1,7 +1,3 @@
----
-redirect_from: "/Create-a-Module"
----
-
 # Create a Module
 
 ## **How to create a module**

@@ -1,7 +1,3 @@
----
-redirect_from: "/Installation"
----
-
 # Guía de instalación 
 
 ## Escogiendo una configuación

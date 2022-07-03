@@ -1,7 +1,3 @@
----
-redirect_from: "/FactionTemplate"
----
-
 # FactionTemplate
 
 **FactionTemplate.dbc**

@@ -1,7 +1,3 @@
----
-redirect_from: "/Remote-Access"
----
-
 # Remote Access
 
 ## Introduction

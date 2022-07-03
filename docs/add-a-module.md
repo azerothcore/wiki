@@ -1,7 +1,3 @@
----
-redirect_from: "/Add-a-module"
----
-
 # Add a module
 
 1. Get the module from the catalogue: [https://www.azerothcore.org/catalogue](https://www.azerothcore.org/catalogue) (For this example, we'll be using this module: [mod-npc-services](https://www.azerothcore.org/catalogue.html#/details/177019524))

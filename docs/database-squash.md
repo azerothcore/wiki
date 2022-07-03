@@ -1,7 +1,3 @@
----
-redirect_from: "/Database-squash"
----
-
 # Database Squash
 
 ## Introduction

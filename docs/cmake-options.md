@@ -1,7 +1,3 @@
----
-redirect_from: "/CMake-options"
----
-
 # CMake Options
 
 ## PERFORMANCE

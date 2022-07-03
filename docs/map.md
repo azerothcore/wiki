@@ -1,7 +1,3 @@
----
-redirect_from: "/Map"
----
-
 # Map
 
 **Map.dbc**
@@ -174,5 +170,3 @@ This DBC contains the maps list.
 | 718 | 0    | Trasnport: The Mighty Wind (Icecrown Citadel Raid) | 0           | 2         | 0          |
 | 723 | 0    | Stormwind                                          | 0           | 0         | 0          |
 | 724 | 2    | The Ruby Sanctum                                   | 0           | 2         | 0          |
-
-

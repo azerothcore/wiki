@@ -1,7 +1,3 @@
----
-redirect_from: "/es/Creating-Accounts"
----
-
 # Creación de cuentas
 
 Para poder entrar en su nuevo servidor necesita una cuenta.

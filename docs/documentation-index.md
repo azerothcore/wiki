@@ -1,7 +1,3 @@
----
-redirect_from: /documentation_index
----
-
 # Documentation index
 
 ## How to Install

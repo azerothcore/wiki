@@ -1,7 +1,3 @@
----
-redirect_from: "/The-Staging-Branch"
----
-
 # The Staging Branch
 
 # NOTE: CURRENTLY DISABLED

@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-create-a-PR"
----
-
 # Como crear una PR
 
 Esta guía explica cómo abrir PRs para enviar cualquier tipo de correciones (C++, SQL, etc...).

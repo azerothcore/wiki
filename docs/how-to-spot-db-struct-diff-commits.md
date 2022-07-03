@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-spot-db-struct-diff-commits"
----
-
 # How to spot DB struct diff commits
 
 **1)** Clone a [3.3.5 TrinityCore](https://github.com/TrinityCore/TrinityCore/tree/3.3.5) and open it with [Visual Studio Code](https://code.visualstudio.com/) or any other IDE that has **annotate** feature (e.g. IntellIJ and similar).

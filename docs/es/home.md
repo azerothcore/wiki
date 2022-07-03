@@ -1,7 +1,3 @@
----
-redirect_from: "/es"
----
-
 # Inicio
 
 Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con tecnología de [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)

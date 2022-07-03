@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-create-a-DB-PR"
----
-
 # How to create a DB PR via GitHub
 
 This is a simplified guide to easily create PRs containing DB fixes (SQL code) without bothering with the terminal, 

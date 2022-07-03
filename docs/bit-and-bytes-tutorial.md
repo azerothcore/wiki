@@ -1,7 +1,3 @@
----
-redirect_from: "/Bit-and_bytes-tutorial"
----
-
 # Bits and Bytes Tutorial
 
 ## Intro

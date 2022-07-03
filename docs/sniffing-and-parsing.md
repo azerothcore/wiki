@@ -1,7 +1,3 @@
----
-tableofcontents: 1
----
-
 # Sniffing & Parsing
 
 This guide is to assist in obtaining thorough sniffs with ymir.

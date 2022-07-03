@@ -1,7 +1,3 @@
----
-redirect_from: "/Emotes"
----
-
 # Emotes
 
 [`Back-to:DBC`](dbc-index.md)

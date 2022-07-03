@@ -1,7 +1,3 @@
----
-redirect_from: "/GM-Commands"
----
-
 # GM Commands
 
 GM commands can be entered mainly in 2 ways. Either by typing it directly into the world console window. In the world console window the leading dot (.) is not mandantory, but you can use it. The other way is using the gm command ingame in the chat console of the wow client. There, all commands must start with a leading dot, f.ex.: .gm on

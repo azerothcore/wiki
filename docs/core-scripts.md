@@ -1,7 +1,3 @@
----
-tableofcontents: 1
----
-
 # Core Scripts
 
 When dealing with Creature- and Spell scripts we should always use the new registry macros introduced in [this](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99) commit.

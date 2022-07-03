@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-ask-for-help"
----
-
 # How to ask for help
 
 ## Need help?

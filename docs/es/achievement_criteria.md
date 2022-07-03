@@ -1,7 +1,3 @@
----
-redirect_from: "/Achievement_Criteria"
----
-
 # Criterios de los Logros
 
 `Volver a: DBC`

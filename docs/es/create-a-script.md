@@ -1,7 +1,3 @@
----
-redirect_from: "/es/create-a-script"
----
-
 # Crear un Script
 
 # Script vs. módulo

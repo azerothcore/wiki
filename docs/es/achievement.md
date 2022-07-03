@@ -1,7 +1,3 @@
----
-redirect_from: "/Achievement"
----
-
 # Logros
 
 `Volver a: DBC`

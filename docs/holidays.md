@@ -1,7 +1,3 @@
----
-redirect_from: "/Holidays"
----
-
 # Holidays
 
 ## holidays.dbc

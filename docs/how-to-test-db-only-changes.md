@@ -1,7 +1,3 @@
----
-redirect_from: "/How-to-test-DB-only-changes"
----
-
 # How to test DB only changes
 
 ## Introduction

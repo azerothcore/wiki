@@ -1,7 +1,3 @@
----
-redirect_from: "/The-Modular-Structure"
----
-
 # The Modular Structure
 
 Based on our modular domain-based [directory structure](Directory-Structure) , the AzerothCore project allows you to add and extend game features by adding custom isolated modules, without patching the core directly.
@@ -41,4 +37,3 @@ The list of the CMake hooks is available [here](hooks-bash.md).
 ## How to create a module
 
 You can get started with creating your first module by reading [how to create a module](Create-a-Module)
-

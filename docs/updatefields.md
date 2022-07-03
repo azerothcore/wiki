@@ -1,8 +1,4 @@
----
-redirect_from: "/UpdateFields"
----
-
-# UpdateFields
+# Update Fields
 
 ### General
 

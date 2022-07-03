@@ -1,7 +1,3 @@
----
-redirect_from: "/FAQ"
----
-
 # Frequently Asked Questions
 
 If you have trouble installing or compiling AzerothCore read [Common Errors](common-errors.md).

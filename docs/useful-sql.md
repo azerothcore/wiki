@@ -1,7 +1,3 @@
----
-tableofcontents: 1
----
-
 # Useful SQL snippets
 
 ## Introduction
