@@ -4,16 +4,17 @@ tableofcontents: 1
 
 # How to document your code
 
-The extensive Doxygen manual ( https://www.doxygen.nl/manual/docblocks.html ) is well worth browsing. Doxygen provides a wide variety of options for documenting code and can be adapted for general documentation as well. This page well take you through some of the commonly used features in AzerothCore documentation.
-
+The extensive [Doxygen manual](https://www.doxygen.nl/manual/docblocks.html) is well worth browsing. Doxygen provides a wide variety of options for documenting code and can be adapted for general documentation as well. This page well take you through some of the commonly used features in AzerothCore documentation.
 
 Doxygen comment blocks are easy to create. For line comment just insert a triple forward slash.
 
-`///This line will be included in the Doxygen comments for this function/class/file`
+```cpp
+///This line will be included in the Doxygen comments for this function/class/file
+```
 
 Commenting multiple lines is just as easy.
 
-```
+```cpp
 /**
 These next few lines will form a comment block
 To start a new paragraph add an empty line
@@ -37,10 +38,8 @@ This is an example of a documented [Hook](hooks-script.md) in our `ScriptMgr.h`:
 ```
 
 ## Common Doxygen Tags
-======================================================================================================================================
 
 ### Common Source Document Tags
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 `@brief`
 
@@ -73,7 +72,6 @@ This tag allows you to insert code snippets which are then collected on the exam
 This tag allows you to describe what the function is returning.
 
 ### Common Doxygen Page Tags
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 `@page`
 
@@ -108,7 +106,6 @@ It is often useful to divide a doxygen page into sections and subsections. The s
 `///// @subsection common_page_tags Common Doxygen Page Tags`
 
 ## Building Documentation
-============================================================================================================================================
 
 If doxygen is in your path simply issue the command
 
