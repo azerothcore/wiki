@@ -22,7 +22,7 @@ Leer en: [English :gb:](../home) [Spanish :es:](home)
 
 ## Documentación
 
-- [Índice de documentación](documentation_index.md)
+- [Índice de documentación](documentation-index.md)
 
 ## Descripción General
 
