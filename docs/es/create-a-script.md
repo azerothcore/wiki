@@ -1,12 +1,8 @@
----
-redirect_from: "/es/create-a-script"
----
-
 # Crear un Script
 
 # Script vs. módulo
 
-En AzerothCore, no utilizamos los habituales scripts como en otros emuladores. En su lugar, trabajamos con módulos que son mucho más prácticos de usar. Ver [Crear un módulo](/es/create-a-module)
+En AzerothCore, no utilizamos los habituales scripts como en otros emuladores. En su lugar, trabajamos con módulos que son mucho más prácticos de usar. Ver [Crear un módulo](create-a-module)
 
 # Scripts
 

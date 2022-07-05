@@ -1,7 +1,3 @@
----
-redirect_from: "/create-a-script"
----
-
 # Create a Script
 
 # Script vs module
