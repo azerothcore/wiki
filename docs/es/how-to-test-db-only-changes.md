@@ -1,7 +1,3 @@
----
-permalink: "/contribute/"
----
-
 # Cómo probar los cambios en la base de datos
 
 ## Introducción
