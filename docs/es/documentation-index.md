@@ -1,7 +1,3 @@
----
-redirect_from: /documentation_index
----
-
 # Índice de la Documentación
 
 ## Cómo instalar
