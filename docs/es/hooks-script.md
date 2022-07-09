@@ -2,7 +2,7 @@
 
 El sistema ScriptAI implementado por AC utiliza una estrategia especial: [Patrón del observador](https://en.wikipedia.org/wiki/Observer_pattern) para implementar una programación dirigida por eventos que es también el **CORE** de nuestro sistema modular.
 
-Esta guía, junto con nuestro [sistema de módulos] (create-a-module.md) te permite ampliar el AzerothCore sin parchearlo directamente. ¡Esto le permite actualizar su repositorio manteniendo sus adiciones y personalizaciones libres de conflictos!
+Esta guía, junto con nuestro [sistema de módulos](create-a-module.md) te permite ampliar el AzerothCore sin parchearlo directamente. ¡Esto le permite actualizar su repositorio manteniendo sus adiciones y personalizaciones libres de conflictos!
 
 ## Recursos
 
@@ -15,7 +15,7 @@ La lista de los hooks se encuentra dentro del archivo [ScriptMgr.h](https://gith
 - **Hook**: Una función que se declara dentro de un **_ScriptObject_** y que es definida por el **_Listeners_**
 - **ScriptObject**: Clase abstracta que debe ser extendida para crear el **_Observer_**.
 - **Script type**: La clase que extiende el `ScriptObject` y contiene hooks (por ejemplo, `PLayerScript`, `CreatureScript`, etc.), cuando extiendes la clase de tipo script estás inicializando un **_Concrete Observer_**
-- **ScriptRegistry**: Esta clase contiene el registro de todos los Observadores registrados.
+- **ScriptRegistry**: Esta clase contiene el registro de todos los `Observers` registrados.
 - **ScriptMgr**: La clase singleton que contiene la lista de todos los hooks disponibles y actúa como un **_Observer_** notificando a los **_Listeners_** cuando se despacha un evento.
 
 ## Cómo crear un hook
@@ -42,7 +42,7 @@ Sin embargo, la mayoría de las veces sólo tienes que añadir nuevos hooks a lo
 
 ### 1) Procedimiento estándar al añadir nuevas clases de scripts
 
-En primer lugar, define la clase actual, y haz que herede de ScriptObject, así:
+En primer lugar, define la clase actual, y haz que herede de `ScriptObject`, así:
 
 ```cpp
 class MyScriptType : public ScriptObject
@@ -106,7 +106,7 @@ void OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2);
 void OnAnotherEvent(uint32 someArg);
 ```
 
-**NOTA:** para ciertos scripts el método declarado dentro de la clase ScriptMgr y el declarado en el ScriptObject relacionado, no siempre coinciden. Por ejemplo: `OnLogin` es un hook del PlayerScript que se declara como `OnPlayerLogin` cuando se utiliza dentro de la clase ScriptMgr, evitando así colisiones con otros métodos ya que la clase ScriptMgr recoge los hooks de todos los ScriptObjects dentro de la misma lista.
+**NOTA:** para ciertos scripts el método declarado dentro de la clase `ScriptMgr` y el declarado en el `ScriptObject` relacionado, no siempre coinciden. Por ejemplo: `OnLogin` es un hook del PlayerScript que se declara como `OnPlayerLogin` cuando se utiliza dentro de la clase `ScriptMgr`, evitando así colisiones con otros métodos ya que la clase `ScriptMgr` recoge los hooks de todos los `ScriptObjects` dentro de la misma lista.
 
 #### Defina sus hooks
 
@@ -121,6 +121,7 @@ void ScriptMgr::OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2)
 {
     FOREACH_SCRIPT(MyScriptType)->OnBeforeSomeEvent(someArg1, someArg2);
 }
+
 void ScriptMgr::OnAnotherEvent(uint32 someArg)
 {
     FOREACH_SCRIPT(MyScriptType)->OnAnotherEvent(someArg);
@@ -131,7 +132,7 @@ Ahora basta con llamar a estas dos funciones desde cualquier lugar del core para
 
 ### Cómo llamar a tus hooks
 
-La clase ScriptMgr se inicializa dentro del AC como un singleton que contendrá todos los observers (ScriptObjects) y sus listeners registrados relacionados (hooks). AC proporciona una propiedad global llamada "sScriptMgr" que puede utilizar para llamar a su script dentro de las funciones de AC.
+La clase `ScriptMgr` se inicializa dentro del AC como un singleton que contendrá todos los observers (ScriptObjects) y sus listeners registrados relacionados (hooks). AC proporciona una propiedad global llamada "sScriptMgr" que puede utilizar para llamar a su script dentro de las funciones de AC.
 
 Por ejemplo:
 
@@ -151,7 +152,7 @@ void CoreClass::SomeEvent()
 
 Recuerda documentar tu nuevo hook siguiendo la guía [Cómo documentar tu código](how-to-document-code.md).
 
-Cuando creas un nuevo hook para publicarlo en el repo de AC, uno de los criterios de aceptación es escribir una documentación adecuada para él, para que otras personas sepan cómo usarlo correctamente. Así que, por favor, lee esa guía con atención.
+Cuando creas un nuevo hook para publicarlo en el repo de `AzerothCore`, uno de los criterios de aceptación es escribir una documentación adecuada para él, para que otras personas sepan cómo usarlo correctamente. Así que, por favor, lee esa guía con atención.
 
 ### Escribir un registro de cambios
 
@@ -159,7 +160,7 @@ Cuando creas o modificas cualquier hook, tienes que crear un nuevo changelog par
 
 ## Convenciones de nomenclatura
 
-Cada hook debe tener la siguiente convención de nombres:
+Cada `hook` debe tener la siguiente convención de nombres:
 
 `On[When]<Action>`
 
@@ -168,13 +169,13 @@ Por ejemplo:
 - `OnBeforeConfigLoad`
 - `OnAfterArenaRatingCalculation`
 
-La acción normalmente coincide con el nombre de la función dentro de la cual se llama al hook.
+La acción normalmente coincide con el nombre de la función dentro de la cual se llama al `hook`.
 
-Si la función madre es lo suficientemente compleja como para contener diferentes hooks, entonces la acción debe reflejar para qué se utiliza el hook.
+Si la función madre es lo suficientemente compleja como para contener diferentes hooks, entonces la acción debe reflejar para qué se utiliza el `hook`.
 
 La parte "Cuando" es opcional, pero se recomienda encarecidamente.
 
-Ayuda a entender en qué parte de la función padre se llama al hook.
+Ayuda a entender en qué parte de la función padre se llama al `hook`.
 
 Por ejemplo, puedes tener tanto `OnBeforeConfigLoad` como `OnAfterConfigLoad`, para cambiar el comportamiento antes y después de cargar la configuración.
 
@@ -182,11 +183,11 @@ Por ejemplo, puedes tener tanto `OnBeforeConfigLoad` como `OnAfterConfigLoad`, p
 
 ### Cómo cambiar el comportamiento de una función (filtrado)
 
-Con los hooks no sólo puedes ejecutar acciones específicas en un momento determinado, incluso puedes cambiar el comportamiento de la función donde se llama al hook para hacerlo, tienes 2 soluciones:
+Con los hooks no sólo puedes ejecutar acciones específicas en un momento determinado, incluso puedes cambiar el comportamiento de la función donde se llama al `hook` para hacerlo, tienes 2 soluciones:
 
 #### 1) Utilización de los parámetros de referencia
 
-Este es el más común. Básicamente utilizando el concepto de pasar un parámetro por referencia se puede cambiar todo lo que se pasa al propio hook.
+Este es el más común. Básicamente utilizando el concepto de pasar un parámetro por referencia se puede cambiar todo lo que se pasa al propio `hook`.
 
 Por ejemplo:
 
@@ -194,16 +195,17 @@ Por ejemplo:
 OnMotdChange(std::string& newMotd)
 ```
 
-Pasando el `newMotd` con el carácter '&' se permite a los listeners cambiar el valor del Motd cuando se llama a esa acción.
+Pasando el `newMotd` con el carácter '&' se permite a los listeners cambiar el valor del `Motd` cuando se llama a esa acción.
 
 #### 2) Utilizar un valor de retorno `bool`
 
-Este enfoque no es muy común, la mayoría de los hooks devuelven un tipo "void", y trabajar con referencias es más fácil la mayoría de las veces, pero si realmente lo necesitas puedes implementar un hook declarado de esta manera:
+Este enfoque no es muy común, la mayoría de los hooks devuelven un tipo **"void"**, y trabajar con referencias es más fácil la mayoría de las veces, pero si realmente lo necesitas puedes implementar un hook declarado de esta manera:
 
 ```cpp
 bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, float y, float z, float orientation, uint32 options, Unit* target)
 {
     bool ret = true;
+
     FOR_SCRIPTS_RET(PlayerScript, itr, end, ret) // Devuelve true por defecto si no son scripts
     if (!itr->second->OnBeforeTeleport(player, mapid, x, y, z, orientation, options, target))
         ret = false; // Cambiamos el valor de ret sólo cuando los scripts devuelven false
@@ -212,7 +214,7 @@ bool ScriptMgr::OnBeforePlayerTeleport(Player* player, uint32 mapid, float x, fl
 }
 ```
 
-Este hook notifica a todos los listeners pero también captura cuando al menos uno de los listeners registrados devuelve "false", en ese caso el valor de retorno final también será false.
+Este hook notifica a todos los listeners pero también captura cuando al menos uno de los listeners registrados devuelve **"false"**, en ese caso el valor de retorno final también será false.
 
 En este caso particular, este hook se utiliza dentro de una condición if para no permitir que un jugador sea teletransportado si uno de los listeners devuelve **false** por alguna razón.
 
@@ -220,17 +222,17 @@ Puedes implementar tu lógica diferente (por ejemplo, falso por defecto, verdade
 
 ### Cree su sistema de hooks dentro de su módulo
 
-Usando la guía anterior puedes incluso crear tu ScriptObject dentro de tu módulo para permitir que la gente lo extienda.
+Usando la guía anterior puedes incluso crear tu `ScriptObject` dentro de tu módulo para permitir que la gente lo extienda.
 
 Algunos módulos, como el de balance automático, permiten personalizar cierta parte de su función mediante el uso de hooks internos.
 
 Puede ver este archivo como ejemplo: https://github.com/azerothcore/mod-autobalance/blob/master/src/AutoBalance.h
 
-**NOTA:** También necesitas crear tu propia implementación de ScriptMgr y ofrecer un singleton que permita llamar a tus hooks.
+**NOTA:** También necesitas crear tu propia implementación de `ScriptMgr` y ofrecer un singleton que permita llamar a tus hooks.
 
 ### Consideraciones finales
 
-Existen otras características del sistema ScriptAI que no han sido incluidas en esta documentación, como la creación de scripts vinculados a entidades específicas dentro de nuestra base de datos (Ej. CreatureScript). Este uso avanzado puede ser implementado replicando el código relacionado que tenemos dentro de los archivos ScriptMgr. Si necesitas ayuda o quieres mejorar esta documentación, no dudes en pedir apoyo y editar esta página.
+Existen otras características del sistema `ScriptAI` que no han sido incluidas en esta documentación, como la creación de scripts vinculados a entidades específicas dentro de nuestra base de datos (Ej. `CreatureScript`). Este uso avanzado puede ser implementado replicando el código relacionado que tenemos dentro de los archivos `ScriptMgr`. Si necesitas ayuda o quieres mejorar esta documentación, no dudes en pedir apoyo y editar esta página.
 
 ## Recursos externos
 
