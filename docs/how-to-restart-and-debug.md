@@ -2,6 +2,8 @@
 tableofcontents: 1
 ---
 
+# How to restart and debug
+
 AzerothCore is composed by 2 services: authserver and worldserver.
 Authserver only acts as an authenticator and a router for your realms redirecting your authorized client connections to the selected realm address.
 the Worldserver instead handles all connections related to the game mechanics and it's the single source of truth for everything related to a single realm.
