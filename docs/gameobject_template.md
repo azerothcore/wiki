@@ -242,7 +242,7 @@ Object type not used
 **GAMEOBJECT\_TYPE\_CHAIR = 7**
 
 - data0: chairslots (number of players that can sit down on it)
-- data1: chairorientation? (number of usable side?)
+- data1: height
 - data2: onlyCreatorUse
 - data3: triggeredEvent
 - data4: conditionID1
