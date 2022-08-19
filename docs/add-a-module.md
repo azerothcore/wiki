@@ -55,3 +55,13 @@ redirect_from: "/Add-a-module"
 ![img12 edit](https://user-images.githubusercontent.com/38561765/173758117-6f500fb3-a8a5-4819-a608-1222b7bc9802.png)
 
 With that, the module is installed! In the case of mod-npc-services, we'd then launch our server and run the command `.npc add 55002` (The NPC Entry) to spawn the NPC.
+
+## DBC Patches
+
+If your module contains DBC files (Such as [mod-arac](https://github.com/azerothcore/mod-arac) or [mod-worgoblin](https://github.com/heyitsbench/mod-worgoblin)) there are a couple extra steps you need to take to install them correctly. The DBC files included with the module will need to be copied to your server's DBC folder in its Data directory. If you're unsure where this directory is, it is set in your worldserver.conf under the `DataDir` option.
+
+You will also need to add these patches to your client. In the case of mod-arac, it's small enough that you can grab the `Patch-A.MPQ` file directly from the repository. You can then copy it into the `Data` folder of your Wow client. However, in the case of a bigger patch like mod-worgoblin, you'll need to take the whole `patch-contents` folder and copy it to the `Data` folder of your Wow client, but you'll also need to rename the folder to `Patch-A.MPQ`. **You will need to do this step for every user connecting to your server with these changes.**
+
+You don't necessarily have to use the letter A specifically. If you use the common HD patch for example, you may find that you have many patches in your Wow Data folder already, and if Patch-A is already taken, the client will also accept numbers 1-9 and letters A-Z. Be aware, however, that the client has an order in which it will read patches, specifically it will read patches 1-9,A-Z, with the contents of 1 being the first and the contents of Z being the last loaded by the client.
+
+If you're using a client other than enUS, you may have to place the patch file in your locale folder and name it accordingly. For example, using a deDE client, the path would look like `Data/deDE/patch-deDE-A.MPQ`. This is due to other localizations of the client having differences in patch load order.
