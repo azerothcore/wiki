@@ -40,7 +40,7 @@
 
 ### fight\_id
 
-Identificador de la pelea.
+`field-no-description|1`
 
 ### time
 
@@ -68,7 +68,7 @@ Identificador de la pelea.
 
 ### winner\_mmr
 
-GUID del ganador.
+`field-no-description|8`
 
 ### winner\_tr\_change
 
