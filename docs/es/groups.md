@@ -6,7 +6,7 @@
 
 La tabla alberga información básica acerca de los grupos.
 
-*Estructura**
+**Estructura**
 
 | Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
