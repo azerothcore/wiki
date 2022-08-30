@@ -1,39 +1,36 @@
----
-redirect_from: "/Achievement"
----
 
 # Logros
 
-`Volver a: DBC`
+[`Volver a:DBC`](dbc-index.md)
 
 **Achievement.dbc**
 
-Este DBC contiene todos los logros.
+La tabla DBC contiene todos los logros disponibles dentro del juego.
 
  **Versión: 3.3.5a**
 
 ## Estructura
 
-|Columna |  Campo               | Tipo         | Notas                                                                                                                                                                                                                       |
-| ------ | -------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | ID                   | Integer      | Achievement ID                                                                                                                                                                                                              |
-| 2      | Faction              | Integer      | -1: both, 0: Horde or 1: Alliance                                                                                                                                                                                           |
-| 3      | Map                  | Integer      | Only set if achievement is related to a zone, otherwise set to -1                                                                                                                                                           |
-| 4      | Previous             | Integer      | If the Achievement belongs to a series, this is the ID of the previous one. 0 otherwise.                                                                                                                                    |
-| 5-20   | Name                 | String + Loc |                                                                                                                                                                                                                             |
-| 21     | ?                    |              | Seems to be always 0xFF01FE                                                                                                                                                                                                 |
-| 22-37  | Description          | String + Loc | If Description is empty, it's not an Achievement but part of the statistics tab                                                                                                                                             |
-| 38     | ?                    |              | Seems to be always 16712190, in rare cases 16712188 (instances ?)                                                                                                                                                           |
-| 39     | Category             | Integer      | Category ID                                                                                                                                                                                                                 |
-| 40     | Points               | Integer      | 0,5,10,15,20,25,30,50                                                                                                                                                                                                       |
-| 41     | OrderInGroup         | Integer      | Min. value: 1                                                                                                                                                                                                               |
-| 42     | Flags                | Integer      | 0-768, if it's 256 only one person per Realm can reach that achievement and if it's 768 it's only reachable for one raid per realm. Perhaps a second category?                                                              |
-| 43     | SpellIcon            | Integer      | An icon to display.                                                                                                                                                                                                         |
-| 44-59  | Reward               | String+ Loc  |                                                                                                                                                                                                                             |
-| 47     | Bonus                |              | Additional reward text                                                                                                                                                                                                      |
-| 60     | ?                    |              | Float number ?                                                                                                                                                                                                              |
-| 61     | Demands              | Integer      | Number of things you have to get/fulfill to get this Achievement. For example if you have to get 25 tabards, there is a 25. TrinityCore: "need this count of completed criterias (own or referenced achievement criterias)" |
-| 62     | ReferencedAchievemnt | Integer      | TrinityCore: "referenced achievement (counting of all completed criterias)"                                                                                                                                                 |
+|Columna |  Campo               | Tipo         | Notas                                                                                                                                                                                                                                                  |
+| ------ | -------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1      | ID                   | Integer      | Identificador (ID) del logro.                                                                                                                                                                                                                          |
+| 2      | Faction              | Integer      | Valor -1 para ambas facciones. Valor 0 para la Horda y 1 para la Alianza.                                                                                                                                                                              |
+| 3      | Map                  | Integer      | Establecerse siempre y cuando el logro esté relacionado con una zona en específico, de lo contrario se asigna el valor -1.                                                                                                                             |
+| 4      | Previous             | Integer      | En caso de que el logro pertenezca a una serie de otros logros, este campo vendría a ser inmediatamente la ID del anterior. En caso contrario se asigna el valor 0.                                                                                    |
+| 5-20   | Name                 | String + Loc |                                                                                                                                                                                                                                                        |
+| 21     | ?                    |              | Aparentemente suele ser siempre el valor hexadecimal 0xFF01FE                                                                                                                                                                                          |
+| 22-37  | Description          | String + Loc | Si la descripción de este campo se encuentra vacía, no es un logro sino parte de las Estadísticas del Jugador.                                                                                                                                         |
+| 38     | ?                    |              | Aparentemente suele ser siempre el valor 16712190, en raras ocasiones 16712188 (¿Instancias quizá?)                                                                                                                                                    |
+| 39     | Category             | Integer      | ID de la categoría del logro.                                                                                                                                                                                                                          |
+| 40     | Points               | Integer      | 0,5,10,15,20,25,30,50 (Puntos por completar el logro)                                                                                                                                                                                                  |
+| 41     | OrderInGroup         | Integer      | Valor mínimo: 1.                                                                                                                                                                                                                                       |
+| 42     | Flags                | Integer      | Comunmente desde el 0 hasta 768, si el valor es 256 quiere decir que sólo una persona por reino puede obtener el logro, y en caso de que sea 768 sólo es obtenible para una banda (Raid) por reino. ¿Quizá una segunda categoría?                      |
+| 43     | SpellIcon            | Integer      | Ícono a mostrarse.                                                                                                                                                                                                                                     |
+| 44-59  | Reward               | String+ Loc  |                                                                                                                                                                                                                                                        |
+| 47     | Bonus                |              | Texto adicional acerca de la recompensa al recibir el logro.                                                                                                                                                                                           |
+| 60     | ?                    |              | ¿Número flotante?                                                                                                                                                                                                                                      |
+| 61     | Demands              | Integer      | Número de cosas que debes de obtener/cumplir para obtener este logro. Por ejemplo, si debes de conseguir 25 tabardos, hay un número 25 en este campo. TrinityCore: "Necesita un número de Criterios de Logros Completados (propios o referenciados)"   |
+| 62     | ReferencedAchievemnt | Integer      | TrinityCore: "Logro referenciado (número de todos los Criterios de Logros completados)"                                                                                                                                                                |
 
 ## Contenido
 

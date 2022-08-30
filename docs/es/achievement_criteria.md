@@ -1,39 +1,36 @@
----
-redirect_from: "/Achievement_Criteria"
----
 
 # Criterios de los Logros
 
-`Volver a: DBC`
+[`Volver a:DBC`](dbc-index.md)
 
 **Achievement\_Criteria.dbc**
 
-Este DBC  fue añadido con WoW 3.0.1.8303 y contiene los criterios necesarios para obtener un logro.
+Este tipo de DBC (DataBaseClient) fue añadido en la versión del WoW 3.0.1.8303 y contiene los criterios necesarios para obtener un logro.
 
 **Versión : 3.3.5a**
 
 ## Estructura
 
-| Columna | Campo             | Tipo    | Notas                                                                |
-| ------  | ----------------- | ------- | -------------------------------------------------------------------- |
-| 1       | ID                | Integer | Criteria ID                                                          |
-| 2       | Achievement       | iRefID  | Reference to the achievement this criteria is needed for.            |
-| 3       | Type              | Integer | Which type is this criteria? This defines the rows below. See below. |
-| 4       | asset_id          | Integer | Main requirement                                                     |
-| 5       | Quantity          | Integer | Main requirement count                                               |
-| 6       | start_event       | Integer | additional requirement 1 type                                        |
-| 7       | start_asset       | Integer | additional requirement 1 value                                       |
-| 8       | fail_event        | Integer | additional requirement 2 type                                        |
-| 9       | fail_asset        | Integer | additional requirement 2 value                                       |
-| 10-25   | Description       | Loc     | Criteria description.                                                |
-| 26      | ?                 |         | Mostly 16712190, but not always                                      |
-| 27      | Flags             | Integer | display flags: 1: shows progress bar (other flags I don't know)      |
-| 28      | timer_start_event | Integer |                                                                      |
-| 29      | timer_asset_id    | Integer |                                                                      |
-| 30      | timer_time        | Integer | Complete quest in %i seconds.                                        |
-| 31      | ui_order          | Integer |                                                                      |
+| Columna | Campo             | Tipo    | Notas                                                                                                      |
+| ------  | ----------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| 1       | ID                | Integer | Identificador (ID) del criterio en cuestión.                                                               |
+| 2       | Achievement       | iRefID  | Es necesario hacer una referencia al logro perteneciente a éste criterio.                                  |
+| 3       | Type              | Integer | ¿De qué tipo es el criterio? Este apartado es definido en las filas de abajo. Véase en la descripción.     |
+| 4       | asset_id          | Integer | Requisito principal del criterio.                                                                          |
+| 5       | Quantity          | Integer | Cantidad del requisito principal.                                                                          |
+| 6       | start_event       | Integer | Requisito adicional del criterio 1.                                                                        |
+| 7       | start_asset       | Integer | Valor del requisito adicional número 1.                                                                    |
+| 8       | fail_event        | Integer | Requisito adicional del criterio 2.                                                                        |
+| 9       | fail_asset        | Integer | Valor del requisito adicional número 2.                                                                    |
+| 10-25   | Description       | Loc     | Descripción del criterio.                                                                                  |
+| 26      | ?                 |         | La mayoría de veces es 16712190, sin embargo no siempre se cumple.                                         |
+| 27      | Flags             | Integer | Marcadores (flags) de visualización: 1: Muestra la Barra de Progreso (desconozco otro tipo de marcadores). |
+| 28      | timer_start_event | Integer |                                                                                                            |
+| 29      | timer_asset_id    | Integer |                                                                                                            |
+| 30      | timer_time        | Integer | Completar la misión en %i segundos.                                                                        |
+| 31      | ui_order          | Integer |                                                                                                            |
 
-**Descripción de los campos**
+**Descripción de los Campos**
 
 Esto describe las filas 3 hasta la 9 por tipo (fila 2). Puede que existan más tipos. Los campos no listados son cero.
 
@@ -59,6 +56,8 @@ Esta información es recuperada de DBCStructure.h.
 
 #### REACH\_LEVEL = 5
 
+Alcanza un nivel especificado.
+
 | Column | Field  | Type    |
 | ------ | ------ | ------- |
 | 4      | unused | Integer |
@@ -66,18 +65,24 @@ Esta información es recuperada de DBCStructure.h.
 
 #### REACH\_SKILL\_LEVEL = 7
 
+Alcanza un nivel especificado en habilidad.
+
 | Column | Field      | Type    | Notes                               |
 | ------ | ---------- | ------- | ----------------------------------- |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine) or what? |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine)?         |
 | 5      | skillLevel | Integer |                                     |
 
 #### COMPLETE\_ACHIEVEMENT = 8
+
+Completa un logro.
 
 | Column | Field                      | Type   |
 | ------ | -------------------------- | ------ |
 | 4      | [Achievement](Achievement) | iRefID |
 
 #### COMPLETE\_QUEST\_COUNT = 9
+
+Completa cierta cantidad de misiones.
 
 | Column | Field           | Type    |
 | ------ | --------------- | ------- |
@@ -86,12 +91,16 @@ Esta información es recuperada de DBCStructure.h.
 
 #### COMPLETE\_DAILY\_QUEST\_DAILY = 10
 
+Completa cierta cantidad de misiones diarias cada día.
+
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
 | 4      | unused       | Integer |
 | 5      | numberOfDays | Integer |
 
 #### COMPLETE\_QUESTS\_IN\_ZONE = 11
+
+Completa cierta cantidad de misiones en una zona.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -100,7 +109,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### DAMAGE\_DONE = 13
 
+Cantidad de daño infligido.
+
 #### COMPLETE\_DAILY\_QUEST = 14
+
+Completa cierta cantidad de misiones diarias.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -109,7 +122,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### COMPLETE\_BATTLEGROUND = 15
 
+Campos de batalla completados.
+
 #### DEATH\_AT\_MAP = 16
+
+Muerte en un mapa.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
@@ -117,23 +134,31 @@ Esta información es recuperada de DBCStructure.h.
 
 #### DEATH\_IN\_DUNGEON = 18
 
+Muerte en una Mazmorra.
+
 | Column | Field    | Type    |
 | ------ | -------- | ------- |
 | 4      | manLimit | Integer |
 
 #### COMPLETE\_RAID = 19
 
-| Column | Field     | Type    | Notes              |
-| ------ | --------- | ------- | ------------------ |
-| 4      | groupSize | Integer | can be 5, 10 or 25 |
+Banda (Raid) completada
+
+| Column | Field     | Type    | Notes                |
+| ------ | --------- | ------- | -------------------- |
+| 4      | groupSize | Integer | Puede ser 5, 10 o 25 |
 
 #### KILLED\_BY\_CREATURE = 20
+
+Asesinado por una criatura.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
 | 4      | creatureEntry | Integer |
 
 #### FALL\_WITHOUT\_DYING = 24
+
+Caer sin morir.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -142,11 +167,15 @@ Esta información es recuperada de DBCStructure.h.
 
 #### DEATHS\_FROM = 26
 
+Muertes desde:
+
 | Column | Field               | Type   |
 | ------ | ------------------- | ------ |
 | 4      | EnvironmentalDamage | iRefID |
 
 #### COMPLETE\_QUEST = 27
+
+Misión completada.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -155,7 +184,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### BE\_SPELL\_TARGET = 28
 
+Hechizo lanzado a un jugador.
+
 #### BE\_SPELL\_TARGET2 = 69
+
+Hechizo lanzado a un jugador 2.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
@@ -164,7 +197,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### CAST\_SPELL = 29
 
+Hechizo lanzado.
+
 #### CAST\_SPELL2 = 110
+
+Hechizo lanzado 2.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
@@ -173,12 +210,16 @@ Esta información es recuperada de DBCStructure.h.
 
 #### BG\_OBJECTIVE\_CAPTURE = 30
 
-| Column | Field    | Type    | Notes                       |
-| ------ | -------- | ------- | --------------------------- |
-| 4      | unknow   | Integer | value 42 = capture the flag |
-| 5      | count(?) | Integer | how many captures required  |
+Captura de Objetivo del Campo de Batalla
+
+| Column | Field    | Type    | Notes                         |
+| ------ | -------- | ------- | ----------------------------- |
+| 4      | unknow   | Integer | Valor 42 = captura la bandera |
+| 5      | count(?) | Integer | Cuantas veces fue capturada   |
 
 #### HONORABLE\_KILL\_AT\_AREA = 31
+
+Muerte honorable en un área.
 
 | Column | Field             | Type    |
 | ------ | ----------------- | ------- |
@@ -187,7 +228,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### WIN\_ARENA = 32
 
+Arenas ganadas.
+
 #### PLAY\_ARENA = 33
+
+Arenas jugadas.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
@@ -195,27 +240,37 @@ Esta información es recuperada de DBCStructure.h.
 
 #### LEARN\_SPELL = 34
 
+Hechizos aprendidos.
+
 | Column | Field          | Type   |
 | ------ | -------------- | ------ |
 | 4      | [Spell](Spell) | iRefID |
 
 #### OWN\_ITEM = 36
 
+Item propio.
+
 #### WIN\_RATED\_ARENA = 37
 
-| Column | Field  | Type    | Notes      |
-| ------ | ------ | ------- | ---------- |
-| 4      | unused | Integer |            |
-| 5      | count  | Integer |            |
-| 6      | flag   | Integer | 4=in a row |
+Ganar la arena clasificada
+
+| Column | Field  | Type    | Notes          |
+| ------ | ------ | ------- | -------------- |
+| 4      | unused | Integer |                |
+| 5      | count  | Integer |                |
+| 6      | flag   | Integer | 4= en una fila |
 
 #### HIGHEST\_TEAM\_RATING = 38
+
+Mayor Índice de arena.
 
 | Column | Field    | Type    | Notes   |
 | ------ | -------- | ------- | ------- |
 | 4      | teamtype | Integer | {2,3,5} |
 
 #### REACH\_TEAM\_RATING = 39
+
+Cantidad de Índice de arena.
 
 | Column | Field      | Type    | Notes   |
 | ------ | ---------- | ------- | ------- |
@@ -224,18 +279,24 @@ Esta información es recuperada de DBCStructure.h.
 
 #### LEARN\_SKILL\_LEVEL = 40
 
-| Column | Field      | Type    | Notes                                                                     |
-| ------ | ---------- | ------- | ------------------------------------------------------------------------- |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine) or what?                                       |
-| 5      | skillLevel | Integer | apprentice=1, journeyman=2, expert=3, artisan=4, master=5, grand master=6 |
+Aprender nivel de habilidad.
+
+| Column | Field      | Type    | Notes                                                                    |
+| ------ | ---------- | ------- | ------------------------------------------------------------------------ |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine)?                                              |
+| 5      | skillLevel | Integer | Aprendiz=1. Oficial=2. Experto=3. Artesano=4. Maestro=5. Gran Maestro=6. |
 
 #### USE\_ITEM = 41
 
+Item usado.
+
 #### LOOT\_ITEM = 42
+
+Item despojado.
 
 #### EXPLORE\_AREA = 43
 
-- areaReference  **NO** es el indice de [AreaTable.dbc.](AreaTable) Proviene de WorldMapOverlay.dbc.
+areaReference  **NO** es el índice de [AreaTable.dbc.](AreaTable), proviene de WorldMapOverlay.dbc.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
@@ -243,13 +304,15 @@ Esta información es recuperada de DBCStructure.h.
 
 #### OWN\_RANK = 44
 
-- Este rango **NO** es el índice de [CharTitles.dbc](CharTitles)
+Este rango **NO** es el índice de [CharTitles.dbc](CharTitles)
 
 | Column | Field | Type    |
 | ------ | ----- | ------- |
 | 4      | rank  | Integer |
 
 #### BUY\_BANK\_SLOT = 45
+
+Comprar casillas en el banco.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
@@ -258,12 +321,16 @@ Esta información es recuperada de DBCStructure.h.
 
 #### GAIN\_REPUTATION = 46
 
-| Column | Field              | Type    | Notes                                       |
-| ------ | ------------------ | ------- | ------------------------------------------- |
-| 4      | [Faction](Faction) | iRefID  |                                             |
-| 5      | reputationAmount   | Integer | Total reputation amount, so 42000 = exalted |
+Obtener reputación.
+
+| Column | Field              | Type    | Notes                                                                  |
+| ------ | ------------------ | ------- | ---------------------------------------------------------------------- |
+| 4      | [Faction](Faction) | iRefID  |                                                                        |
+| 5      | reputationAmount   | Integer | Cantidad total de reputación, teniendo en cuenta que 42000 es exaltado |
 
 #### GAIN\_EXALTED\_REPUTATION= 47
+
+Obtener reputación exaltada.
 
 | Column | Field                   | Type    |
 | ------ | ----------------------- | ------- |
@@ -272,6 +339,8 @@ Esta información es recuperada de DBCStructure.h.
 
 #### VISIT\_BARBER\_SHOP = 48
 
+Visitar al peluquero.
+
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
 | 4      | unused         | Integer |
@@ -279,7 +348,7 @@ Esta información es recuperada de DBCStructure.h.
 
 #### EQUIP\_EPIC\_ITEM = 49
 
-- Dónde está almacenado el itemlevel requerido?
+Nivel de Item para ser considerado épico. Véase [itemlevel](item_template#itemlevel).
 
 | Column | Field    | Type    |
 | ------ | -------- | ------- |
@@ -287,7 +356,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### ROLL\_NEED\_ON\_LOOT = 50
 
+Número de dados necesarios para el botín.
+
 #### ROLL\_GREED\_ON\_LOOT = 51
+
+Número de dados necesarios en modo codicia para el botín.
 
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
@@ -296,12 +369,16 @@ Esta información es recuperada de DBCStructure.h.
 
 #### HK\_CLASS = 52
 
+Muertes honorables por clase.
+
 | Column | Field               | Type    |
 | ------ | ------------------- | ------- |
 | 4      | [Class](ChrClasses) | iRefID  |
 | 5      | count               | Integer |
 
 #### HK\_RACE = 53
+
+Muertes honorables por raza.
 
 | Column | Field            | Type    |
 | ------ | ---------------- | ------- |
@@ -310,25 +387,31 @@ Esta información es recuperada de DBCStructure.h.
 
 #### DO\_EMOTE = 54
 
-- Dónde está almacenada la información sobre el objetivo ?
+[Emotes](emotes#ID).
 
 | Column | Field           | Type    | Notes                                                           |
 | ------ | --------------- | ------- | --------------------------------------------------------------- |
 | 4      | [Emote](Emotes) | iRefID  |                                                                 |
-| 5      | count           | Integer | count of emotes, always required special target or requirements |
+| 5      | count           | Integer | Número de emotes, siempre se requiere un objetivo (jugador) o requisitos especiales. |
 
 #### HEALING\_DONE = 55
 
+Sanación realizada.
+
 #### GET\_KILLING\_BLOWS = 56
 
-| Column | Field          | Type    | Notes                      |
-| ------ | -------------- | ------- | -------------------------- |
-| 4      | unused         | Integer |                            |
-| 5      | count          | Integer |                            |
-| 6      | flag           | Integer | 3 for battleground healing |
-| 7      | [Map](Map.dbc) | iRefID  |                            |
+Hacer Golpes de Gracia.
+
+| Column | Field          | Type    | Notes                               |
+| ------ | -------------- | ------- | ----------------------------------- |
+| 4      | unused         | Integer |                                     |
+| 5      | count          | Integer |                                     |
+| 6      | flag           | Integer | 3 para sanación en Campo de Batalla |
+| 7      | [Map](Map.dbc) | iRefID  |                                     |
 
 #### EQUIP\_ITEM = 57
+
+Equipar Item.
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
@@ -337,7 +420,11 @@ Esta información es recuperada de DBCStructure.h.
 
 #### MONEY\_FROM\_QUEST\_REWARD= 62
 
+Dinero de misiones obtenido (Medido en monedas de cobre).
+
 #### LOOT\_MONEY = 67
+
+Dinero obtenido (Medido en monedas de cobre).
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
@@ -346,6 +433,8 @@ Esta información es recuperada de DBCStructure.h.
 
 #### USE\_GAMEOBJECT = 68
 
+Activar cierto Objeto del Juego (GameObject), ya sea puerta, caja, etc.
+
 | Column | Field    | Type    |
 | ------ | -------- | ------- |
 | 4      | goEntry  | Integer |
@@ -353,7 +442,7 @@ Esta información es recuperada de DBCStructure.h.
 
 #### SPECIAL\_PVP\_KILL = 70
 
-- Son criterios especiales almacenados en DBC?
+¿Acaso son Criterios de Logros especiales almacenados en los DBC?
 
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
@@ -362,12 +451,16 @@ Esta información es recuperada de DBCStructure.h.
 
 #### FISH\_IN\_GAMEOBJECT = 72
 
+Pescar en cierto Objeto del Juego (GameObject).
+
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
 | 4      | goEntry   | Integer |
 | 5      | lootCount | Integer |
 
 #### LEARN\_SKILLLINE\_SPELLS = 75
+
+Aprender hechizos de habilidad.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
@@ -376,6 +469,8 @@ Esta información es recuperada de DBCStructure.h.
 
 #### WIN\_DUEL = 76
 
+Ganar duelo (s).
+
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
 | 4      | unused    | Integer |
@@ -383,23 +478,31 @@ Esta información es recuperada de DBCStructure.h.
 
 #### HIGHEST\_POWER = 96
 
-| Column | Field     | Type    | Notes                                   |
-| ------ | --------- | ------- | --------------------------------------- |
-| 4      | powerType | Integer | 0=mana, 1=rage, 3=energy, 6=runic power |
+Mayor número de poder.
+
+| Column | Field     | Type    | Notes                                     |
+| ------ | --------- | ------- | ----------------------------------------- |
+| 4      | powerType | Integer | 0=Maná. 1=Ira. 3=Energía. 6=Poder Rúnico. |
 
 #### HIGHEST\_STAT = 97
 
-| Column | Field    | Type    | Notes                                         |
-| ------ | -------- | ------- | --------------------------------------------- |
-| 4      | statType | Integer | 4=spirit, 3=int, 2=stamina, 1=agi, 0=strength |
+Mayor número de estadística.
+
+| Column | Field    | Type    | Notes                                                    |
+| ------ | -------- | ------- | -------------------------------------------------------- |
+| 4      | statType | Integer | 4=Espíritu. 3=Intelecto, 2=Aguante, 1=Agilidad, 0=Fuerza |
 
 #### HIGHEST\_SPELLPOWER = 98
 
+Mayor número de poder de hechizos.
+
 | Column | Field       | Type   | Notes                                 |
 | ------ | ----------- | ------ | ------------------------------------- |
-| 4      | spellSchool | iRefID | [SkillLine](SkillLine) or Resistances |
+| 4      | spellSchool | iRefID | [SkillLine](SkillLine) o resistencias |
 
 #### HIGHEST\_RATING = 100
+
+Mayor número.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -407,12 +510,16 @@ Esta información es recuperada de DBCStructure.h.
 
 #### LOOT\_TYPE = 109
 
+Tipo de botín.
+
 | Column | Field         | Type    | Notes                                  |
 | ------ | ------------- | ------- | -------------------------------------- |
-| 4      | lootType      | Integer | 3=fishing, 2=pickpocket, 4=disentchant |
+| 4      | lootType      | Integer | 3=Pescar, 2=Robar, 4=Desencantar       |
 | 5      | lootTypeCount | Integer |                                        |
 
 #### LEARN\_SKILL\_LINE = 112
+
+Aprender línea de habilidad.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
@@ -421,6 +528,8 @@ Esta información es recuperada de DBCStructure.h.
 
 #### EARN\_HONORABLE\_KILL = 113
 
+Muertes honorables obtenidas.
+
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
 | 4      | unused    | Integer |
@@ -428,21 +537,27 @@ Esta información es recuperada de DBCStructure.h.
 
 #### ACCEPTED\_SUMMONS = 114
 
+Invocaciones aceptadas.
+
 | Column | Field                                       | Type    |
 | ------ | ------------------------------------------- | ------- |
 | 4      | unused                                      | Integer |
-| 5      | Here comes a 1 in, because it's a Statistic | Integer |
+| 5      | Aquí viene un 1, porque es una Estadística  | Integer |
 
 #### ACHIVEMENTPOINTS\_REACHED = 115
+
+Puntos de logro alcanzados.
 
 | Column | Field  | Type    |
 | ------ | ------ | ------- |
 | 4      | unused | Integer |
 | 5      | unused | Integer |
 
-// This thing really confuses me... Maybe it is only used for "Over Ninethousand", because nowhere AchPoints are Specified
+// Esta parte suele ser confusa... Tal vez porque sólo debe usarse para "más de noventa mil", ya que en ninguna parte de AchPoints (Puntos de Logros) se especifica.
 
 #### RANDOM\_DUNGEON\_PLAYERCOUNT = 119
+
+Número de mazmorras aleatorias.
 
 | Column | Field       | Type    |
 | ------ | ----------- | ------- |
