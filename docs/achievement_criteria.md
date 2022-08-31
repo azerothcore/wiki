@@ -279,7 +279,7 @@ This information is retrieved from DBCStructure.h.
 
 #### EQUIP\_EPIC\_ITEM = 49
 
-- Where is the required itemlevel stored?
+- [ItemLevel](item_template#itemlevel)
 
 | Column | Field    | Type    |
 | ------ | -------- | ------- |

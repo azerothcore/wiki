@@ -23,7 +23,7 @@
 - [Registro de cambios](changelog.md)
 - [Opciones de CMake](cmake-options.md)
 - [Scripts del Core](core-scripts.md)
-- [DBC Index](dbc-index.md)
+- [Índice DBC](dbc-index.md)
 - [Estructura del directorio](directory-structure.md)
 - [Codigos de salida](exitcodes.md)
 - [Cómo depurar y reiniciar](how-to-restart-and-debug.md)
