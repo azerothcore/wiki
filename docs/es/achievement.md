@@ -34,1822 +34,1822 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 
 ## Contenido
 
-| ID   | Name                                                                           |
-| ---- | ------------------------------------------------------------------------------ |
-| 6    | Level 10                                                                       |
-| 7    | Level 20                                                                       |
-| 8    | Level 30                                                                       |
-| 9    | Level 40                                                                       |
-| 10   | Level 50                                                                       |
-| 11   | Level 60                                                                       |
-| 12   | Level 70                                                                       |
-| 13   | Level 80                                                                       |
-| 15   | Plenty of Pets                                                                 |
-| 16   | Did Somebody Order a Knuckle Sandwich?                                         |
-| 31   | A Simple Re-Quest                                                              |
-| 32   | 2000 Quests Completed                                                          |
-| 33   | Nothing Boring About Borean                                                    |
-| 34   | I've Toured the Fjord                                                          |
-| 35   | Might of Dragonblight                                                          |
-| 36   | The Empire of Zul'Drak                                                         |
-| 37   | Fo' Grizzle My Shizzle                                                         |
-| 38   | The Summit of Storm Peaks                                                      |
-| 39   | Into the Basin                                                                 |
-| 40   | Icecrown: The Final Goal                                                       |
-| 41   | Loremaster of Northrend                                                        |
-| 42   | Explore Eastern Kingdoms                                                       |
-| 43   | Explore Kalimdor                                                               |
-| 44   | Explore Outland                                                                |
-| 45   | Explore Northrend                                                              |
-| 46   | World Explorer                                                                 |
-| 49   | Alterac Valley victories                                                       |
-| 50   | Eye of the Storm victories                                                     |
-| 51   | Arathi Basin victories                                                         |
-| 52   | Warsong Gulch battles                                                          |
-| 53   | Alterac Valley battles                                                         |
-| 54   | Eye of the Storm battles                                                       |
-| 55   | Arathi Basin battles                                                           |
-| 56   | Deaths in Warsong Gulch                                                        |
-| 57   | Deaths in Alterac Valley                                                       |
-| 58   | Deaths from Drek'Thar                                                          |
-| 59   | Deaths in Arathi Basin                                                         |
-| 60   | Total deaths                                                                   |
-| 73   | Disgracin' The Basin                                                           |
-| 94   | Quests abandoned                                                               |
-| 95   | Average quests completed per day                                               |
-| 97   | Daily quests completed                                                         |
-| 98   | Quests completed                                                               |
-| 99   | Ruins of Lordaeron matches                                                     |
-| 100  | Ring of Trials victories                                                       |
-| 101  | Ring of Trials matches                                                         |
-| 102  | Ruins of Lordaeron victories                                                   |
-| 103  | Circle of Blood matches                                                        |
-| 104  | Circle of Blood victories                                                      |
-| 105  | Warsong Gulch victories                                                        |
-| 107  | Creatures killed                                                               |
-| 108  | Critters killed                                                                |
-| 110  | Lich King 5-player boss killed the most                                        |
-| 112  | Deaths from drowning                                                           |
-| 113  | Deaths from fatigue                                                            |
-| 114  | Deaths from falling                                                            |
-| 115  | Deaths from fire and lava                                                      |
-| 116  | Professional Journeyman                                                        |
-| 121  | Journeyman Cook                                                                |
-| 122  | Expert Cook                                                                    |
-| 123  | Artisan Cook                                                                   |
-| 124  | Master Cook                                                                    |
-| 125  | Grand Master Cook                                                              |
-| 126  | Journeyman Fisherman                                                           |
-| 127  | Expert Fisherman                                                               |
-| 128  | Artisan Fisherman                                                              |
-| 129  | Master Fisherman                                                               |
-| 130  | Grand Master Fisherman                                                         |
-| 131  | Journeyman in First Aid                                                        |
-| 132  | Expert in First Aid                                                            |
-| 133  | Artisan in First Aid                                                           |
-| 134  | Master in First Aid                                                            |
-| 135  | Grand Master in First Aid                                                      |
-| 137  | Stocking Up                                                                    |
-| 141  | Ultimate Triage                                                                |
-| 144  | The Lurker Above                                                               |
-| 150  | The Fishing Diplomat                                                           |
-| 153  | The Old Gnome and the Sea                                                      |
-| 154  | Arathi Basin Victory                                                           |
-| 155  | Arathi Basin Veteran                                                           |
-| 156  | Territorial Dominance                                                          |
-| 157  | To The Rescue                                                                  |
-| 158  | Me and the Cappin' Makin' it Happen                                            |
-| 159  | Let's Get This Done                                                            |
-| 161  | Resilient Victory                                                              |
-| 162  | We Had It All Along cough                                                      |
-| 165  | Arathi Basin Perfection                                                        |
-| 166  | Warsong Gulch Victory                                                          |
-| 167  | Warsong Gulch Veteran                                                          |
-| 168  | Warsong Gulch Perfection                                                       |
-| 178  | Enchanting formulae learned                                                    |
-| 181  | Items disenchanted                                                             |
-| 183  | Materials produced from disenchanting                                          |
-| 189  | Largest heal cast                                                              |
-| 193  | Largest hit dealt                                                              |
-| 197  | Total damage done                                                              |
-| 198  | Total healing done                                                             |
-| 199  | Capture the Flag                                                               |
-| 200  | Persistent Defender                                                            |
-| 201  | Warsong Expedience                                                             |
-| 202  | Quick Cap                                                                      |
-| 203  | Not In My House                                                                |
-| 204  | Ironman                                                                        |
-| 206  | Supreme Defender                                                               |
-| 207  | Save The Day                                                                   |
-| 208  | Eye of the Storm Victory                                                       |
-| 209  | Eye of the Storm Veteran                                                       |
-| 211  | Storm Glory                                                                    |
-| 212  | Storm Capper                                                                   |
-| 213  | Stormtrooper                                                                   |
-| 214  | Flurry                                                                         |
-| 216  | Bound for Glory                                                                |
-| 218  | Alterac Valley Victory                                                         |
-| 219  | Alterac Valley Veteran                                                         |
-| 220  | Stormpike Perfection                                                           |
-| 221  | Alterac Grave Robber                                                           |
-| 222  | Tower Defense                                                                  |
-| 223  | The Sickly Gazelle                                                             |
-| 224  | Loyal Defender                                                                 |
-| 225  | Everything Counts                                                              |
-| 226  | The Alterac Blitz                                                              |
-| 227  | Damage Control                                                                 |
-| 229  | The Grim Reaper                                                                |
-| 230  | Battlemaster                                                                   |
-| 231  | Wrecking Ball                                                                  |
-| 233  | Bloodthirsty Berserker                                                         |
-| 238  | An Honorable Kill                                                              |
-| 239  | 25000 Honorable Kills                                                          |
-| 245  | That Takes Class                                                               |
-| 246  | Know Thy Enemy                                                                 |
-| 247  | Make Love Not Warcraft                                                         |
-| 248  | Sunday's Finest                                                                |
-| 249  | Dressed for the Occasion                                                       |
-| 252  | With a Little Helper from My Friends                                           |
-| 255  | Bring Me The Head of... Oh Wait                                                |
-| 259  | Scrooge                                                                        |
-| 260  | Charming                                                                       |
-| 263  | Ice the Frost Lord                                                             |
-| 271  | Burning Hot Pole Dance                                                         |
-| 272  | Torch Juggler                                                                  |
-| 273  | On Metzen                                                                      |
-| 275  | Veteran Nanny                                                                  |
-| 277  | 'Tis the Season                                                                |
-| 279  | Simply Abominable                                                              |
-| 281  | First Aid skill                                                                |
-| 283  | The Masquerade                                                                 |
-| 284  | A Mask for All Occasions                                                       |
-| 288  | Out With It                                                                    |
-| 289  | The Savior of Hallow's End                                                     |
-| 291  | Check Your Head                                                                |
-| 292  | Sinister Calling                                                               |
-| 293  | Disturbing the Peace                                                           |
-| 295  | Direbrewfest                                                                   |
-| 303  | Have Keg Will Travel                                                           |
-| 306  | Master Angler of Azeroth                                                       |
-| 318  | Total deaths from opposite faction                                             |
-| 319  | Duels won                                                                      |
-| 320  | Duels lost                                                                     |
-| 321  | Total raid and dungeon deaths                                                  |
-| 322  | Total deaths to Lich King dungeon bosses                                       |
-| 323  | Total deaths to Lich King 10-player raid bosses                                |
-| 324  | Total deaths to Lich King 25-player raid bosses                                |
-| 326  | Gold from quest rewards                                                        |
-| 328  | Total gold acquired                                                            |
-| 329  | Auctions posted                                                                |
-| 330  | Auction purchases                                                              |
-| 331  | Most expensive bid on auction                                                  |
-| 332  | Most expensive auction sold                                                    |
-| 333  | Gold looted                                                                    |
-| 334  | Most gold ever owned                                                           |
-| 336  | Legendary items acquired                                                       |
-| 338  | Vanity pets owned                                                              |
-| 339  | Mounts owned                                                                   |
-| 341  | Epic items looted                                                              |
-| 342  | Epic items acquired                                                            |
-| 344  | Bandages used                                                                  |
-| 345  | Health potions consumed                                                        |
-| 346  | Beverages consumed                                                             |
-| 347  | Food eaten                                                                     |
-| 349  | Flight paths taken                                                             |
-| 350  | Mage Portals taken                                                             |
-| 353  | Number of times hearthed                                                       |
-| 362  | 5v5 victories                                                                  |
-| 363  | 5v5 matches                                                                    |
-| 364  | 3v3 victories                                                                  |
-| 365  | 3v3 matches                                                                    |
-| 366  | 2v2 victories                                                                  |
-| 367  | 2v2 matches                                                                    |
-| 370  | Highest 2 man personal rating                                                  |
-| 374  | Highest 2 man team rating                                                      |
-| 377  | Most factions at Exalted                                                       |
-| 378  | Most factions at Revered or higher                                             |
-| 381  | World Honorable Kills                                                          |
-| 382  | Battleground Honorable Kills                                                   |
-| 383  | Arena Honorable Kills                                                          |
-| 388  | City Defender                                                                  |
-| 389  | Gurubashi Arena Master                                                         |
-| 393  | Alterac Valley towers defended                                                 |
-| 394  | Alterac Valley towers captured                                                 |
-| 395  | Warsong Gulch flags captured                                                   |
-| 396  | Gurubashi Arena Grand Master                                                   |
-| 397  | Step Into The Arena                                                            |
-| 398  | Mercilessly Dedicated                                                          |
-| 399  | Just the Two of Us: 1550                                                       |
-| 400  | Just the Two of Us: 1750                                                       |
-| 401  | Just the Two of Us: 2000                                                       |
-| 402  | Three's Company: 1550                                                          |
-| 403  | Three's Company: 1750                                                          |
-| 404  | High Five: 2000                                                                |
-| 405  | Three's Company: 2000                                                          |
-| 406  | High Five: 1550                                                                |
-| 407  | High Five: 1750                                                                |
-| 408  | Hot Streak                                                                     |
-| 409  | Last Man Standing                                                              |
-| 411  | Murky                                                                          |
-| 412  | Murloc Costume                                                                 |
-| 414  | Tyrael's Hilt                                                                  |
-| 415  | Big Blizzard Bear                                                              |
-| 416  | Scarab Lord                                                                    |
-| 418  | Merciless Gladiator                                                            |
-| 419  | Vengeful Gladiator                                                             |
-| 420  | Brutal Gladiator                                                               |
-| 424  | Why? Because It's Red                                                          |
-| 425  | Atiesh Greatstaff of the Guardian                                              |
-| 426  | Warglaives of Azzinoth                                                         |
-| 428  | Thunderfury Blessed Blade of the Windseeker                                    |
-| 429  | Sulfuras Hand of Ragnaros                                                      |
-| 430  | Amani War Bear                                                                 |
-| 431  | Hand of A'dal                                                                  |
-| 432  | Champion of the Naaru                                                          |
-| 433  | Grand Marshal                                                                  |
-| 434  | Field Marshal                                                                  |
-| 435  | Commander                                                                      |
-| 436  | Lieutenant Commander                                                           |
-| 437  | Knight-Champion                                                                |
-| 438  | Knight-Captain                                                                 |
-| 439  | Knight                                                                         |
-| 440  | Sergeant Major                                                                 |
-| 441  | Master Sergeant                                                                |
-| 442  | Private                                                                        |
-| 443  | High Warlord                                                                   |
-| 444  | Lieutenant General                                                             |
-| 445  | Warlord                                                                        |
-| 446  | General                                                                        |
-| 447  | Champion                                                                       |
-| 448  | Centurion                                                                      |
-| 449  | Blood Guard                                                                    |
-| 450  | Senior Sergeant                                                                |
-| 451  | Stone Guard                                                                    |
-| 452  | First Sergeant                                                                 |
-| 453  | Sergeant                                                                       |
-| 454  | Scout                                                                          |
-| 456  | Realm First                                                                    |
-| 457  | Realm First                                                                    |
-| 458  | Realm First                                                                    |
-| 459  | Realm First                                                                    |
-| 460  | Realm First                                                                    |
-| 461  | Realm First                                                                    |
-| 462  | Realm First                                                                    |
-| 463  | Realm First                                                                    |
-| 464  | Realm First                                                                    |
-| 465  | Realm First                                                                    |
-| 466  | Realm First                                                                    |
-| 467  | Realm First                                                                    |
-| 468  | Grunt                                                                          |
-| 469  | Legionnaire                                                                    |
-| 470  | Corporal                                                                       |
-| 471  | Sergeant                                                                       |
-| 472  | Knight-Lieutenant                                                              |
-| 473  | Marshal                                                                        |
-| 477  | Utgarde Keep                                                                   |
-| 478  | The Nexus                                                                      |
-| 479  | The Culling of Stratholme                                                      |
-| 480  | Azjol-Nerub                                                                    |
-| 481  | Ahn'kahet: The Old Kingdom                                                     |
-| 482  | Drak'Tharon Keep                                                               |
-| 483  | The Violet Hold                                                                |
-| 484  | Gundrak                                                                        |
-| 485  | Halls of Stone                                                                 |
-| 486  | Halls of Lightning                                                             |
-| 487  | The Oculus                                                                     |
-| 488  | Utgarde Pinnacle                                                               |
-| 489  | Heroic: Utgarde Keep                                                           |
-| 490  | Heroic: The Nexus                                                              |
-| 491  | Heroic: Azjol-Nerub                                                            |
-| 492  | Heroic: Ahn'kahet: The Old Kingdom                                             |
-| 493  | Heroic: Drak'Tharon Keep                                                       |
-| 494  | Heroic: The Violet Hold                                                        |
-| 495  | Heroic: Gundrak                                                                |
-| 496  | Heroic: Halls of Stone                                                         |
-| 497  | Heroic: Halls of Lightning                                                     |
-| 498  | Heroic: The Oculus                                                             |
-| 499  | Heroic: Utgarde Pinnacle                                                       |
-| 500  | Heroic: The Culling of Stratholme                                              |
-| 503  | 50 Quests Completed                                                            |
-| 504  | 100 Quests Completed                                                           |
-| 505  | 250 Quests Completed                                                           |
-| 506  | 500 Quests Completed                                                           |
-| 507  | 1000 Quests Completed                                                          |
-| 508  | 1500 Quests Completed                                                          |
-| 509  | 10000 Honorable Kills                                                          |
-| 512  | 5000 Honorable Kills                                                           |
-| 513  | 100 Honorable Kills                                                            |
-| 515  | 500 Honorable Kills                                                            |
-| 516  | 1000 Honorable Kills                                                           |
-| 518  | 30 Exalted Reputations                                                         |
-| 519  | 25 Exalted Reputations                                                         |
-| 520  | 20 Exalted Reputations                                                         |
-| 521  | 15 Exalted Reputations                                                         |
-| 522  | Somebody Likes Me                                                              |
-| 523  | 5 Exalted Reputations                                                          |
-| 524  | 10 Exalted Reputations                                                         |
-| 527  | Largest hit received                                                           |
-| 528  | Total damage received                                                          |
-| 529  | Most factions at Honored or higher                                             |
-| 545  | Shave and a Haircut                                                            |
-| 546  | Safe Deposit                                                                   |
-| 547  | Veteran of the Wrathgate                                                       |
-| 556  | Epic                                                                           |
-| 557  | Superior                                                                       |
-| 558  | Greedy                                                                         |
-| 559  | Needy                                                                          |
-| 560  | Deadliest Catch                                                                |
-| 561  | D.E.H.T.A's Little P.I.T.A.                                                    |
-| 562  | The Arachnid Quarter (10 player)                                               |
-| 563  | The Arachnid Quarter (25 player)                                               |
-| 564  | The Construct Quarter (10 player)                                              |
-| 565  | The Construct Quarter (25 player)                                              |
-| 566  | The Plague Quarter (10 player)                                                 |
-| 567  | The Plague Quarter (25 player)                                                 |
-| 568  | The Military Quarter (10 player)                                               |
-| 569  | The Military Quarter (25 player)                                               |
-| 572  | Sapphiron's Demise (10 player)                                                 |
-| 573  | Sapphiron's Demise (25 player)                                                 |
-| 574  | Kel'Thuzad's Defeat (10 player)                                                |
-| 575  | Kel'Thuzad's Defeat (25 player)                                                |
-| 576  | The Fall of Naxxramas (10 player)                                              |
-| 577  | The Fall of Naxxramas (25 player)                                              |
-| 578  | The Dedicated Few (10 player)                                                  |
-| 579  | The Dedicated Few (25 player)                                                  |
-| 582  | Alterac Valley All-Star                                                        |
-| 583  | Arathi Basin All-Star                                                          |
-| 584  | Arathi Basin Assassin                                                          |
-| 585  | Eye of the Storm flags captured                                                |
-| 586  | Warsong Gulch flags returned                                                   |
-| 587  | Stormy Assassin                                                                |
-| 588  | Total Honorable Kills                                                          |
-| 589  | Highest 5 man team rating                                                      |
-| 590  | Highest 3 man team rating                                                      |
-| 593  | Deaths from Vanndar Stormpike                                                  |
-| 594  | Deaths from Hogger                                                             |
-| 595  | Highest 3 man personal rating                                                  |
-| 596  | Highest 5 man personal rating                                                  |
-| 603  | Wrath of the Horde                                                             |
-| 604  | Wrath of the Alliance                                                          |
-| 605  | A Coin of Ancestry                                                             |
-| 606  | 5 Coins of Ancestry                                                            |
-| 607  | 10 Coins of Ancestry                                                           |
-| 608  | 25 Coins of Ancestry                                                           |
-| 609  | 50 Coins of Ancestry                                                           |
-| 610  | Death to the Warchief                                                          |
-| 611  | Bleeding Bloodhoof                                                             |
-| 612  | Downing the Dark Lady                                                          |
-| 613  | Killed in Quel'Thalas                                                          |
-| 614  | For The Alliance                                                               |
-| 615  | Storming Stormwind                                                             |
-| 616  | Death to the King                                                              |
-| 617  | Immortal No More                                                               |
-| 618  | Putting Out the Light                                                          |
-| 619  | For The Horde                                                                  |
-| 621  | Represent                                                                      |
-| 622  | The Spellweaver's Downfall (10 player)                                         |
-| 623  | The Spellweaver's Downfall (25 player)                                         |
-| 624  | Less Is More (10 player)                                                       |
-| 625  | Besting the Black Dragonflight (25 player)                                     |
-| 626  | Lunar Festival Finery                                                          |
-| 627  | Explore Dun Morogh                                                             |
-| 628  | Deadmines                                                                      |
-| 629  | Ragefire Chasm                                                                 |
-| 630  | Wailing Caverns                                                                |
-| 631  | Shadowfang Keep                                                                |
-| 632  | Blackfathom Deeps                                                              |
-| 633  | Stormwind Stockade                                                             |
-| 634  | Gnomeregan                                                                     |
-| 635  | Razorfen Kraul                                                                 |
-| 636  | Razorfen Downs                                                                 |
-| 637  | Scarlet Monastery                                                              |
-| 638  | Uldaman                                                                        |
-| 639  | Zul'Farrak                                                                     |
-| 640  | Maraudon                                                                       |
-| 641  | Sunken Temple                                                                  |
-| 642  | Blackrock Depths                                                               |
-| 643  | Lower Blackrock Spire                                                          |
-| 644  | King of Dire Maul                                                              |
-| 645  | Scholomance                                                                    |
-| 646  | Stratholme                                                                     |
-| 647  | Hellfire Ramparts                                                              |
-| 648  | The Blood Furnace                                                              |
-| 649  | The Slave Pens                                                                 |
-| 650  | Underbog                                                                       |
-| 651  | Mana-Tombs                                                                     |
-| 652  | The Escape From Durnholde                                                      |
-| 653  | Sethekk Halls                                                                  |
-| 654  | Shadow Labyrinth                                                               |
-| 655  | Opening of the Dark Portal                                                     |
-| 656  | The Steamvault                                                                 |
-| 657  | The Shattered Halls                                                            |
-| 658  | The Mechanar                                                                   |
-| 659  | The Botanica                                                                   |
-| 660  | The Arcatraz                                                                   |
-| 661  | Magister's Terrace                                                             |
-| 662  | Collector's Edition: Mini-Diablo                                               |
-| 663  | Collector's Edition: Panda                                                     |
-| 664  | Collector's Edition: Zergling                                                  |
-| 665  | Collector's Edition: Netherwhelp                                               |
-| 666  | Auchenai Crypts                                                                |
-| 667  | Heroic: Hellfire Ramparts                                                      |
-| 668  | Heroic: The Blood Furnace                                                      |
-| 669  | Heroic: The Slave Pens                                                         |
-| 670  | Heroic: Underbog                                                               |
-| 671  | Heroic: Mana-Tombs                                                             |
-| 672  | Heroic: Auchenai Crypts                                                        |
-| 673  | Heroic: The Escape From Durnholde                                              |
-| 674  | Heroic: Sethekk Halls                                                          |
-| 675  | Heroic: Shadow Labyrinth                                                       |
-| 676  | Heroic: Opening of the Dark Portal                                             |
-| 677  | Heroic: The Steamvault                                                         |
-| 678  | Heroic: The Shattered Halls                                                    |
-| 679  | Heroic: The Mechanar                                                           |
-| 680  | Heroic: The Botanica                                                           |
-| 681  | Heroic: The Arcatraz                                                           |
-| 682  | Heroic: Magister's Terrace                                                     |
-| 683  | Collector's Edition: Frost Wyrm Whelp                                          |
-| 684  | Onyxia's Lair (Level 60)                                                       |
-| 685  | Blackwing Lair                                                                 |
-| 686  | Molten Core                                                                    |
-| 687  | Temple of Ahn'Qiraj                                                            |
-| 688  | Zul'Gurub                                                                      |
-| 689  | Ruins of Ahn'Qiraj                                                             |
-| 690  | Karazhan                                                                       |
-| 691  | Zul'Aman                                                                       |
-| 692  | Gruul's Lair                                                                   |
-| 693  | Magtheridon's Lair                                                             |
-| 694  | Serpentshrine Cavern                                                           |
-| 695  | The Battle for Mount Hyjal                                                     |
-| 696  | Tempest Keep                                                                   |
-| 697  | The Black Temple                                                               |
-| 698  | Sunwell Plateau                                                                |
-| 699  | World Wide Winner                                                              |
-| 700  | Freedom of the Horde                                                           |
-| 701  | Freedom of the Alliance                                                        |
-| 705  | Master of Arms                                                                 |
-| 706  | Frostwolf Howler                                                               |
-| 707  | Stormpike Battle Charger                                                       |
-| 708  | Hero of the Frostwolf Clan                                                     |
-| 709  | Hero of the Stormpike Guard                                                    |
-| 710  | The Defiler                                                                    |
-| 711  | Knight of Arathor                                                              |
-| 712  | Warsong Outrider                                                               |
-| 713  | Silverwing Sentinel                                                            |
-| 714  | The Conqueror                                                                  |
-| 725  | Thori'dal the Stars' Fury                                                      |
-| 726  | Mr. Pinchy's Magical Crawdad Box                                               |
-| 727  | Call in the Cavalry                                                            |
-| 728  | Explore Durotar                                                                |
-| 729  | Deathcharger's Reins                                                           |
-| 730  | Skills to Pay the Bills                                                        |
-| 731  | Professional Expert                                                            |
-| 732  | Professional Artisan                                                           |
-| 733  | Professional Master                                                            |
-| 734  | Professional Grand Master                                                      |
-| 735  | Working Day and Night                                                          |
-| 736  | Explore Mulgore                                                                |
-| 750  | Explore The Barrens                                                            |
-| 752  | Deaths in Naxxramas                                                            |
-| 753  | Average gold earned per day                                                    |
-| 759  | Average daily quests completed per day                                         |
-| 760  | Explore Alterac Mountains                                                      |
-| 761  | Explore Arathi Highlands                                                       |
-| 762  | Ambassador of the Horde                                                        |
-| 763  | The Burning Crusader                                                           |
-| 764  | The Burning Crusader                                                           |
-| 765  | Explore Badlands                                                               |
-| 766  | Explore Blasted Lands                                                          |
-| 768  | Explore Tirisfal Glades                                                        |
-| 769  | Explore Silverpine Forest                                                      |
-| 770  | Explore Western Plaguelands                                                    |
-| 771  | Explore Eastern Plaguelands                                                    |
-| 772  | Explore Hillsbrad Foothills                                                    |
-| 773  | Explore The Hinterlands                                                        |
-| 774  | Explore Searing Gorge                                                          |
-| 775  | Explore Burning Steppes                                                        |
-| 776  | Explore Elwynn Forest                                                          |
-| 777  | Explore Deadwind Pass                                                          |
-| 778  | Explore Duskwood                                                               |
-| 779  | Explore Loch Modan                                                             |
-| 780  | Explore Redridge Mountains                                                     |
-| 781  | Explore Stranglethorn Vale                                                     |
-| 782  | Explore Swamp of Sorrows                                                       |
-| 783  | The Perfect Storm                                                              |
-| 784  | Eye of the Storm Domination                                                    |
-| 796  | Resurrected by priests                                                         |
-| 798  | Rebirthed by druids                                                            |
-| 799  | Spirit returned to body by shamans                                             |
-| 800  | Redeemed by paladins                                                           |
-| 801  | Resurrected by soulstones                                                      |
-| 802  | Explore Westfall                                                               |
-| 811  | Flasks consumed                                                                |
-| 812  | Healthstones used                                                              |
-| 829  | Largest heal received                                                          |
-| 830  | Total healing received                                                         |
-| 837  | Arenas won                                                                     |
-| 838  | Arenas played                                                                  |
-| 839  | Battlegrounds played                                                           |
-| 840  | Battlegrounds won                                                              |
-| 841  | Explore Wetlands                                                               |
-| 842  | Explore Teldrassil                                                             |
-| 843  | Explore Netherstorm                                                            |
-| 844  | Explore Darkshore                                                              |
-| 845  | Explore Ashenvale                                                              |
-| 846  | Explore Thousand Needles                                                       |
-| 847  | Explore Stonetalon Mountains                                                   |
-| 848  | Explore Desolace                                                               |
-| 849  | Explore Feralas                                                                |
-| 850  | Explore Dustwallow Marsh                                                       |
-| 851  | Explore Tanaris Desert                                                         |
-| 852  | Explore Azshara                                                                |
-| 853  | Explore Felwood                                                                |
-| 854  | Explore Un'Goro Crater                                                         |
-| 855  | Explore Moonglade                                                              |
-| 856  | Explore Silithus                                                               |
-| 857  | Explore Winterspring                                                           |
-| 858  | Explore Ghostlands                                                             |
-| 859  | Explore Eversong Woods                                                         |
-| 860  | Explore Azuremyst Isle                                                         |
-| 861  | Explore Bloodmyst Isle                                                         |
-| 862  | Explore Hellfire Peninsula                                                     |
-| 863  | Explore Zangarmarsh                                                            |
-| 864  | Explore Shadowmoon Valley                                                      |
-| 865  | Explore Blade's Edge Mountains                                                 |
-| 866  | Explore Nagrand                                                                |
-| 867  | Explore Terokkar Forest                                                        |
-| 868  | Explore Isle of Quel'Danas                                                     |
-| 869  | 50000 Honorable Kills                                                          |
-| 870  | 100000 Honorable Kills                                                         |
-| 871  | Avast Ye Admiral                                                               |
-| 872  | Frenzied Defender                                                              |
-| 873  | Frostwolf Perfection                                                           |
-| 875  | Vengefully Dedicated                                                           |
-| 876  | Brutally Dedicated                                                             |
-| 877  | The Cake Is Not A Lie                                                          |
-| 878  | One That Didn't Get Away                                                       |
-| 879  | Old School Ride                                                                |
-| 880  | Swift Zulian Tiger                                                             |
-| 881  | Swift Razzashi Raptor                                                          |
-| 882  | Fiery Warhorse's Reins                                                         |
-| 883  | Reins of the Raven Lord                                                        |
-| 884  | Swift White Hawkstrider                                                        |
-| 885  | Ashes of Al'ar                                                                 |
-| 886  | Swift Nether Drake                                                             |
-| 887  | Merciless Nether Drake                                                         |
-| 888  | Vengeful Nether Drake                                                          |
-| 889  | Fast and Furious                                                               |
-| 890  | Into The Wild Blue Yonder                                                      |
-| 891  | Giddy Up                                                                       |
-| 892  | The Right Stuff                                                                |
-| 893  | Cenarion War Hippogryph                                                        |
-| 894  | Flying High Over Skettis                                                       |
-| 896  | A Quest a Day Keeps the Ogres at Bay                                           |
-| 897  | You're So Offensive                                                            |
-| 898  | On Wings of Nether                                                             |
-| 899  | Oh My Kurenai                                                                  |
-| 900  | The Czar of Sporeggar                                                          |
-| 901  | Mag'har of Draenor                                                             |
-| 902  | Chief Exalted Officer                                                          |
-| 903  | Shattrath Divided                                                              |
-| 905  | Old Man Barlowned                                                              |
-| 906  | Kickin' It Up a Notch                                                          |
-| 907  | The Justicar                                                                   |
-| 908  | Call to Arms                                                                   |
-| 909  | Call to Arms                                                                   |
-| 910  | Elders of the Dungeons                                                         |
-| 911  | Elders of Kalimdor                                                             |
-| 912  | Elders of Eastern Kingdoms                                                     |
-| 913  | To Honor One's Elders                                                          |
-| 914  | Elders of the Horde                                                            |
-| 915  | Elders of the Alliance                                                         |
-| 916  | Total deaths in 25-player raids                                                |
-| 917  | Total deaths in 10-player raids                                                |
-| 918  | Total deaths in 5-player dungeons                                              |
-| 919  | Gold earned from auctions                                                      |
-| 921  | Gold from vendors                                                              |
-| 922  | Mana potions consumed                                                          |
-| 923  | Elixirs consumed                                                               |
-| 924  | Most Northrend factions at Exalted                                             |
-| 925  | Most Outland factions at Exalted                                               |
-| 926  | Most Horde factions at Exalted                                                 |
-| 927  | Equipped epic items in item slots                                              |
-| 928  | Extra bank slots purchased                                                     |
-| 931  | Total factions encountered                                                     |
-| 932  | Total 5-player dungeons entered                                                |
-| 933  | Total 10-player raids entered                                                  |
-| 934  | Total 25-player raids entered                                                  |
-| 937  | Elune's Blessing                                                               |
-| 938  | The Snows of Northrend                                                         |
-| 939  | Hills Like White Elekk                                                         |
-| 940  | The Green Hills of Stranglethorn                                               |
-| 941  | Hemet Nesingwary: The Collected Quests                                         |
-| 942  | The Diplomat                                                                   |
-| 943  | The Diplomat                                                                   |
-| 944  | They Love Me In That Tunnel                                                    |
-| 945  | The Argent Champion                                                            |
-| 946  | The Argent Dawn                                                                |
-| 947  | The Argent Crusade                                                             |
-| 948  | Ambassador of the Alliance                                                     |
-| 949  | Tuskarrmageddon                                                                |
-| 950  | Frenzyheart Tribe                                                              |
-| 951  | The Oracles                                                                    |
-| 952  | Mercenary of Sholazar                                                          |
-| 953  | Guardian of Cenarius                                                           |
-| 955  | Hydraxian Waterlords                                                           |
-| 956  | Brood of Nozdormu                                                              |
-| 957  | Hero of the Zandalar Tribe                                                     |
-| 958  | Sworn to the Deathsworn                                                        |
-| 959  | The Scale of the Sands                                                         |
-| 960  | The Violet Eye                                                                 |
-| 961  | Honorary Frenzyheart                                                           |
-| 962  | Savior of the Oracles                                                          |
-| 963  | Tricks and Treats of Kalimdor                                                  |
-| 964  | Going Down?                                                                    |
-| 965  | Tricks and Treats of Kalimdor                                                  |
-| 966  | Tricks and Treats of Eastern Kingdoms                                          |
-| 967  | Tricks and Treats of Eastern Kingdoms                                          |
-| 968  | Tricks and Treats of Outland                                                   |
-| 969  | Tricks and Treats of Outland                                                   |
-| 970  | Tricks and Treats of Azeroth                                                   |
-| 971  | Tricks and Treats of Azeroth                                                   |
-| 972  | Trick or Treat                                                                 |
-| 973  | 5 Daily Quests Complete                                                        |
-| 974  | 50 Daily Quests Complete                                                       |
-| 975  | 200 Daily Quests Complete                                                      |
-| 976  | 500 Daily Quests Complete                                                      |
-| 977  | 1000 Daily Quests Complete                                                     |
-| 978  | 3000 Quests Completed                                                          |
-| 979  | The Mask Task                                                                  |
-| 980  | The Horseman's Reins                                                           |
-| 981  | That Sparkling Smile                                                           |
-| 1005 | Know Thy Enemy                                                                 |
-| 1006 | City Defender                                                                  |
-| 1007 | The Wyrmrest Accord                                                            |
-| 1008 | The Kirin Tor                                                                  |
-| 1009 | Knights of the Ebon Blade                                                      |
-| 1010 | Northrend Vanguard                                                             |
-| 1011 | The Winds of the North                                                         |
-| 1012 | The Winds of the North                                                         |
-| 1014 | 35 Exalted Reputations                                                         |
-| 1015 | 40 Exalted Reputations                                                         |
-| 1017 | Can I Keep Him?                                                                |
-| 1020 | Ten Tabards                                                                    |
-| 1021 | Twenty-Five Tabards                                                            |
-| 1022 | Flame Warden of Eastern Kingdoms                                               |
-| 1023 | Flame Warden of Kalimdor                                                       |
-| 1024 | Flame Warden of Outland                                                        |
-| 1025 | Flame Keeper of Eastern Kingdoms                                               |
-| 1026 | Flame Keeper of Kalimdor                                                       |
-| 1027 | Flame Keeper of Outland                                                        |
-| 1028 | Extinguishing Eastern Kingdoms                                                 |
-| 1029 | Extinguishing Kalimdor                                                         |
-| 1030 | Extinguishing Outland                                                          |
-| 1031 | Extinguishing Eastern Kingdoms                                                 |
-| 1032 | Extinguishing Kalimdor                                                         |
-| 1033 | Extinguishing Outland                                                          |
-| 1034 | The Fires of Azeroth                                                           |
-| 1035 | Desecration of the Horde                                                       |
-| 1036 | The Fires of Azeroth                                                           |
-| 1037 | Desecration of the Alliance                                                    |
-| 1038 | The Flame Warden                                                               |
-| 1039 | The Flame Keeper                                                               |
-| 1040 | Rotten Hallow                                                                  |
-| 1041 | Rotten Hallow                                                                  |
-| 1042 | Number of hugs                                                                 |
-| 1043 | Greed rolls made on loot                                                       |
-| 1044 | Need rolls made on loot                                                        |
-| 1045 | Total cheers                                                                   |
-| 1047 | Total facepalms                                                                |
-| 1057 | Deaths in 2v2                                                                  |
-| 1065 | Total waves                                                                    |
-| 1066 | Total times LOL'd                                                              |
-| 1067 | Total times playing world's smallest violin                                    |
-| 1068 | Keli'dan the Breaker kills (The Blood Furnace)                                 |
-| 1069 | Nexus-Prince Shaffar kills (Mana Tombs)                                        |
-| 1070 | Epoch Hunter kills (The Escape From Durnholde)                                 |
-| 1071 | Quagmirran kills (Slave Pens)                                                  |
-| 1072 | Black Stalker kills (Underbog)                                                 |
-| 1073 | Exarch Maladaar kills (Auchenai Crypts)                                        |
-| 1074 | Talon King Ikiss kills (Sethekk Halls)                                         |
-| 1075 | Murmur kills (Shadow Labyrinth)                                                |
-| 1076 | Aeonus kills (Opening of the Dark Portal)                                      |
-| 1077 | Warlord Kalithresh kills (The Steamvault)                                      |
-| 1078 | Warchief Kargath Bladefist kills (The Shattered Halls)                         |
-| 1079 | Pathaleon the Calculator kills (The Mechanar)                                  |
-| 1080 | Warp Splinter kills (The Botanica)                                             |
-| 1081 | Harbinger Skyriss kills (The Arcatraz)                                         |
-| 1082 | Kael'thas Sunstrider kills (Magister's Terrace)                                |
-| 1083 | Prince Malchezaar kills (Karazhan)                                             |
-| 1084 | Zul'jin kills (Zul'Aman)                                                       |
-| 1085 | Gruul kills (Gruul's Lair)                                                     |
-| 1086 | Magtheridon kills (Magtheridon's Lair)                                         |
-| 1087 | Lady Vashj kills (Serpentshrine Cavern)                                        |
-| 1088 | Kael'thas Sunstrider kills (Tempest Keep)                                      |
-| 1089 | Illidan Stormrage kills (The Black Temple)                                     |
-| 1090 | Kil'jaeden kills (Sunwell Plateau)                                             |
-| 1091 | Edwin VanCleef kills (Deadmines)                                               |
-| 1092 | Archmage Arugal kills (Shadowfang Keep)                                        |
-| 1093 | Scarlet Commander Mograine kills (Scarlet Monastery)                           |
-| 1094 | Chief Ukorz Sandscalp kills (Zul'Farrak)                                       |
-| 1095 | Emperor Dagran Thaurissan kills (Blackrock Depths)                             |
-| 1096 | General Drakkisath kills (Blackrock Spire)                                     |
-| 1097 | Baron Rivendare kills (Stratholme)                                             |
-| 1098 | Onyxia kills (Onyxia's Lair)                                                   |
-| 1099 | Ragnaros kills (Molten Core)                                                   |
-| 1100 | Nefarian kills (Blackwing Lair)                                                |
-| 1101 | C'Thun kills (Temple of Ahn'Qiraj)                                             |
-| 1102 | Hakkar kills (Zul'Gurub)                                                       |
-| 1103 | Lich King 5-player dungeons completed (final boss killed)                      |
-| 1104 | Lich King 10-player raids completed (final boss killed)                        |
-| 1106 | Deaths in Eye of the Storm                                                     |
-| 1107 | Deaths in 3v3                                                                  |
-| 1108 | Deaths in 5v5                                                                  |
-| 1109 | 5v5 Arena Honorable Kills                                                      |
-| 1110 | 3v3 Arena Honorable Kills                                                      |
-| 1111 | 2v2 Arena Honorable Kills                                                      |
-| 1112 | Eye of the Storm Honorable Kills                                               |
-| 1113 | Alterac Valley Honorable Kills                                                 |
-| 1114 | Arathi Basin Honorable Kills                                                   |
-| 1115 | Warsong Gulch Honorable Kills                                                  |
-| 1125 | Bandage used most                                                              |
-| 1145 | King of the Fire Festival                                                      |
-| 1146 | Gold spent on travel                                                           |
-| 1147 | Gold spent at barber shops                                                     |
-| 1148 | Gold spent on postage                                                          |
-| 1149 | Talent tree respecs                                                            |
-| 1150 | Gold spent on talent tree respecs                                              |
-| 1151 | Loyal Defender                                                                 |
-| 1153 | Overly Defensive                                                               |
-| 1157 | Duel-icious                                                                    |
-| 1159 | Just the Two of Us: 2200                                                       |
-| 1160 | Three's Company: 2200                                                          |
-| 1161 | High Five: 2200                                                                |
-| 1162 | Hotter Streak                                                                  |
-| 1164 | Everything Counts                                                              |
-| 1165 | My Sack is Gigantique""                                                        |
-| 1166 | To the Looter Go the Spoils                                                    |
-| 1167 | Master of Alterac Valley                                                       |
-| 1168 | Master of Alterac Valley                                                       |
-| 1169 | Master of Arathi Basin                                                         |
-| 1170 | Master of Arathi Basin                                                         |
-| 1171 | Master of Eye of the Storm                                                     |
-| 1172 | Master of Warsong Gulch                                                        |
-| 1173 | Master of Warsong Gulch                                                        |
-| 1174 | The Arena Master                                                               |
-| 1175 | Battlemaster                                                                   |
-| 1176 | Got My Mind On My Money                                                        |
-| 1177 | Got My Mind On My Money                                                        |
-| 1178 | Got My Mind On My Money                                                        |
-| 1180 | Got My Mind On My Money                                                        |
-| 1181 | Got My Mind On My Money                                                        |
-| 1182 | The Bread Winner                                                               |
-| 1183 | Brew of the Year                                                               |
-| 1184 | Strange Brew                                                                   |
-| 1185 | The Brewfest Diet                                                              |
-| 1186 | Down With The Dark Iron                                                        |
-| 1187 | The Keymaster                                                                  |
-| 1188 | Shafted                                                                        |
-| 1189 | To Hellfire and Back                                                           |
-| 1190 | Mysteries of the Marsh                                                         |
-| 1191 | Terror of Terokkar                                                             |
-| 1192 | Nagrand Slam                                                                   |
-| 1193 | On the Blade's Edge                                                            |
-| 1194 | Into the Nether                                                                |
-| 1195 | Shadow of the Betrayer                                                         |
-| 1197 | Total kills                                                                    |
-| 1198 | Total kills that grant experience or honor                                     |
-| 1199 | Professions learned                                                            |
-| 1200 | Secondary skills at maximum skill                                              |
-| 1201 | Professions at maximum skill                                                   |
-| 1202 | Weapon skills at maximum skill                                                 |
-| 1203 | Strange Brew                                                                   |
-| 1205 | Hero of Shattrath                                                              |
-| 1206 | To All The Squirrels I've Loved Before                                         |
-| 1225 | Outland Angler                                                                 |
-| 1229 | Revived by druids                                                              |
-| 1231 | Keristrasza kills (The Nexus)                                                  |
-| 1232 | Anub'arak kills (Azjol-Nerub)                                                  |
-| 1233 | Herald Volazj kills (Ahn'kahet: The Old Kingdom)                               |
-| 1234 | The Prophet Tharon'ja kills (Drak'Tharon Keep)                                 |
-| 1235 | Cyanigosa kills (The Violet Hold)                                              |
-| 1236 | Gal'darah kills (Gundrak)                                                      |
-| 1237 | Sjonnir the Ironshaper kills (Halls of Stone)                                  |
-| 1238 | Loken kills (Halls of Lightning)                                               |
-| 1239 | Ley-Guardian Eregos kills (The Oculus)                                         |
-| 1240 | King Ymiron kills (Utgarde Pinnacle)                                           |
-| 1241 | Mal'Ganis defeated (Caverns of Time: Stratholme)                               |
-| 1242 | Ingvar the Plunderer kills (Utgarde Keep)                                      |
-| 1243 | Fish Don't Leave Footprints                                                    |
-| 1244 | Well Read                                                                      |
-| 1248 | Plethora of Pets                                                               |
-| 1250 | Shop Smart Shop Pet...Smart                                                    |
-| 1251 | Not In My House                                                                |
-| 1252 | Supreme Defender                                                               |
-| 1253 | Raised as a ghoul                                                              |
-| 1254 | Friend or Fowl?                                                                |
-| 1255 | Scrooge                                                                        |
-| 1257 | The Scavenger                                                                  |
-| 1258 | Take a Chill Pill                                                              |
-| 1259 | Not So Fast                                                                    |
-| 1260 | Drunken Stupor                                                                 |
-| 1261 | G.N.E.R.D. Rage                                                                |
-| 1262 | Loremaster of Outland                                                          |
-| 1263 | Explore Howling Fjord                                                          |
-| 1264 | Explore Borean Tundra                                                          |
-| 1265 | Explore Dragonblight                                                           |
-| 1266 | Explore Grizzly Hills                                                          |
-| 1267 | Explore Zul'Drak                                                               |
-| 1268 | Explore Sholazar Basin                                                         |
-| 1269 | Explore Storm Peaks                                                            |
-| 1270 | Explore Icecrown                                                               |
-| 1271 | To Hellfire and Back                                                           |
-| 1272 | Terror of Terokkar                                                             |
-| 1273 | Nagrand Slam                                                                   |
-| 1274 | Loremaster of Outland                                                          |
-| 1275 | Bombs Away                                                                     |
-| 1276 | Blade's Edge Bomberman                                                         |
-| 1277 | Rapid Defense                                                                  |
-| 1279 | Flirt With Disaster                                                            |
-| 1280 | Flirt With Disaster                                                            |
-| 1281 | The Rocket's Red Glare                                                         |
-| 1282 | Fa-la-la-la-Ogri'la                                                            |
-| 1283 | Classic Dungeonmaster                                                          |
-| 1284 | Outland Dungeonmaster                                                          |
-| 1285 | Classic Raider                                                                 |
-| 1286 | Outland Raider                                                                 |
-| 1287 | Outland Dungeon Hero                                                           |
-| 1288 | Northrend Dungeonmaster                                                        |
-| 1289 | Northrend Dungeon Hero                                                         |
-| 1291 | Lonely?                                                                        |
-| 1292 | Yellow Brewfest Stein                                                          |
-| 1293 | Blue Brewfest Stein                                                            |
-| 1295 | Crashin' & Thrashin'                                                           |
-| 1296 | Watch Him Die                                                                  |
-| 1297 | Hadronox Denied                                                                |
-| 1298 | Different bandage types used                                                   |
-| 1299 | Health potion used most                                                        |
-| 1300 | Different health potions used                                                  |
-| 1301 | Mana potion used most                                                          |
-| 1302 | Different mana potions used                                                    |
-| 1303 | Elixir consumed most                                                           |
-| 1304 | Different elixirs used                                                         |
-| 1305 | Flask consumed most                                                            |
-| 1306 | Different flasks consumed                                                      |
-| 1307 | Upper Blackrock Spire                                                          |
-| 1308 | Strand of the Ancients Victory                                                 |
-| 1309 | Strand of the Ancients Veteran                                                 |
-| 1310 | Storm the Beach                                                                |
-| 1311 | Medium Rare                                                                    |
-| 1312 | Bloody Rare                                                                    |
-| 1336 | Creature type killed the most                                                  |
-| 1337 | Different creature types killed                                                |
-| 1339 | Mage portal taken most                                                         |
-| 1356 | I've Toured the Fjord                                                          |
-| 1357 | Fo' Grizzle My Shizzle                                                         |
-| 1358 | Nothing Boring About Borean                                                    |
-| 1359 | Might of Dragonblight                                                          |
-| 1360 | Loremaster of Northrend                                                        |
-| 1361 | Anub'Rekhan kills (Naxxramas 10 player)                                        |
-| 1362 | Grand Widow Faerlina kills (Naxxramas 10 player)                               |
-| 1363 | Maexxna kills (Naxxramas 10 player)                                            |
-| 1364 | Patchwerk kills (Naxxramas 10 player)                                          |
-| 1365 | Noth the Plaguebringer kills (Naxxramas 10 player)                             |
-| 1366 | Gothik the Harvester kills (Naxxramas 10 player)                               |
-| 1367 | Patchwerk kills (Naxxramas 25 player)                                          |
-| 1368 | Anub'Rekhan kills (Naxxramas 25 player)                                        |
-| 1369 | Heigan the Unclean kills (Naxxramas 10 player)                                 |
-| 1370 | Loatheb kills (Naxxramas 10 player)                                            |
-| 1371 | Grobbulus kills (Naxxramas 10 player)                                          |
-| 1372 | Gluth kills (Naxxramas 10 player)                                              |
-| 1373 | Thaddius kills (Naxxramas 10 player)                                           |
-| 1374 | Instructor Razuvious kills (Naxxramas 10 player)                               |
-| 1375 | Four Horsemen kills (Naxxramas 10 player)                                      |
-| 1376 | Sapphiron kills (Naxxramas 10 player)                                          |
-| 1377 | Kel'Thuzad kills (Naxxramas 10 player)                                         |
-| 1378 | Gluth kills (Naxxramas 25 player)                                              |
-| 1379 | Gothik the Harvester kills (Naxxramas 25 player)                               |
-| 1380 | Grand Widow Faerlina kills (Naxxramas 25 player)                               |
-| 1381 | Grobbulus kills (Naxxramas 25 player)                                          |
-| 1382 | Heigan the Unclean kills (Naxxramas 25 player)                                 |
-| 1383 | Four Horsemen kills (Naxxramas 25 player)                                      |
-| 1384 | Instructor Razuvious kills (Naxxramas 25 player)                               |
-| 1385 | Loatheb kills (Naxxramas 25 player)                                            |
-| 1386 | Maexxna kills (Naxxramas 25 player)                                            |
-| 1387 | Noth the Plaguebringer kills (Naxxramas 25 player)                             |
-| 1388 | Thaddius kills (Naxxramas 25 player)                                           |
-| 1389 | Sapphiron kills (Naxxramas 25 player)                                          |
-| 1390 | Kel'Thuzad kills (Naxxramas 25 player)                                         |
-| 1391 | Malygos kills (10 player)                                                      |
-| 1392 | Sartharion kills (Chamber of the Aspects 10 player)                            |
-| 1393 | Sartharion kills (Chamber of the Aspects 25 player)                            |
-| 1394 | Malygos kills (25 player)                                                      |
-| 1396 | Elders of Northrend                                                            |
-| 1400 | Realm First                                                                    |
-| 1402 | Realm First                                                                    |
-| 1404 | Realm First                                                                    |
-| 1405 | Realm First                                                                    |
-| 1406 | Realm First                                                                    |
-| 1407 | Realm First                                                                    |
-| 1408 | Realm First                                                                    |
-| 1409 | Realm First                                                                    |
-| 1410 | Realm First                                                                    |
-| 1411 | Realm First                                                                    |
-| 1412 | Realm First                                                                    |
-| 1413 | Realm First                                                                    |
-| 1414 | Realm First                                                                    |
-| 1415 | Realm First                                                                    |
-| 1416 | Realm First                                                                    |
-| 1417 | Realm First                                                                    |
-| 1418 | Realm First                                                                    |
-| 1419 | Realm First                                                                    |
-| 1420 | Realm First                                                                    |
-| 1421 | Realm First                                                                    |
-| 1422 | Realm First                                                                    |
-| 1423 | Realm First                                                                    |
-| 1424 | Realm First                                                                    |
-| 1425 | Realm First                                                                    |
-| 1426 | Realm First                                                                    |
-| 1427 | Realm First                                                                    |
-| 1428 | Mine Sweeper                                                                   |
-| 1436 | Friends In High Places                                                         |
-| 1456 | Fish and other things caught                                                   |
-| 1457 | Explore Crystalsong Forest                                                     |
-| 1458 | Continent with the most Honorable Kills                                        |
-| 1462 | Badges of Justice acquired                                                     |
-| 1463 | Realm First                                                                    |
-| 1464 | Emblems of Heroism acquired                                                    |
-| 1465 | Emblems of Valor acquired                                                      |
-| 1466 | Most Alliance factions at Exalted                                              |
-| 1467 | Lich King 5-player bosses killed                                               |
-| 1485 | Lich King 5-player different bosses killed                                     |
-| 1486 | Strand of the Ancients Honorable Kills                                         |
-| 1487 | Total Killing Blows                                                            |
-| 1488 | World Killing Blows                                                            |
-| 1489 | Continent with the most Killing Blows                                          |
-| 1490 | Arena Killing Blows                                                            |
-| 1491 | Battleground Killing Blows                                                     |
-| 1492 | 2v2 Arena Killing Blows                                                        |
-| 1493 | 3v3 Arena Killing Blows                                                        |
-| 1494 | 5v5 Arena Killing Blows                                                        |
-| 1495 | Alterac Valley Killing Blows                                                   |
-| 1496 | Arathi Basin Killing Blows                                                     |
-| 1497 | Warsong Gulch Killing Blows                                                    |
-| 1498 | Eye of the Storm Killing Blows                                                 |
-| 1499 | Strand of the Ancients Killing Blows                                           |
-| 1500 | Deaths in Strand of the Ancients                                               |
-| 1501 | Total deaths from other players                                                |
-| 1502 | Quick Cap                                                                      |
-| 1504 | Ingvar the Plunderer kills (Heroic Utgarde Keep)                               |
-| 1505 | Keristrasza kills (Heroic Nexus)                                               |
-| 1506 | Anub'arak kills (Heroic Azjol-Nerub)                                           |
-| 1507 | Herald Volazj kills (Heroic Ahn'kahet)                                         |
-| 1508 | The Prophet Tharon'ja kills (Heroic Drak'Tharon Keep)                          |
-| 1509 | Cyanigosa kills (Heroic Violet Hold)                                           |
-| 1510 | Gal'darah kills (Heroic Gundrak)                                               |
-| 1511 | Sjonnir the Ironshaper kills (Heroic Halls of Stone)                           |
-| 1512 | Loken kills (Heroic Halls of Lightning)                                        |
-| 1513 | Ley-Guardian Eregos kills (Heroic Oculus)                                      |
-| 1514 | King Ymiron kills (Heroic Utgarde Pinnacle)                                    |
-| 1515 | Mal'Ganis defeated (Heroic CoT: Stratholme)                                    |
-| 1516 | Accomplished Angler                                                            |
-| 1517 | Northrend Angler                                                               |
-| 1518 | Fish caught                                                                    |
-| 1519 | Fishing skill                                                                  |
-| 1524 | Cooking skill                                                                  |
-| 1525 | Cooking daily quests completed                                                 |
-| 1526 | Fishing daily quests completed                                                 |
-| 1527 | Highest Alchemy skill                                                          |
-| 1532 | Highest Blacksmithing skill                                                    |
-| 1535 | Highest Enchanting skill                                                       |
-| 1536 | Highest Leatherworking skill                                                   |
-| 1537 | Highest Mining skill                                                           |
-| 1538 | Highest Herbalism skill                                                        |
-| 1539 | Highest Inscription skill                                                      |
-| 1540 | Highest Jewelcrafting skill                                                    |
-| 1541 | Highest Skinning skill                                                         |
-| 1542 | Highest Tailoring skill                                                        |
-| 1544 | Highest Engineering skill                                                      |
-| 1545 | Ring of Valor matches                                                          |
-| 1546 | Ring of Valor victories                                                        |
-| 1547 | Dalaran Sewers matches                                                         |
-| 1548 | Dalaran Sewers victories                                                       |
-| 1549 | Strand of the Ancients battles                                                 |
-| 1550 | Strand of the Ancients victories                                               |
-| 1552 | Frenzied Firecracker                                                           |
-| 1556 | 25 Fish                                                                        |
-| 1557 | 50 Fish                                                                        |
-| 1558 | 100 Fish                                                                       |
-| 1559 | 250 Fish                                                                       |
-| 1560 | 500 Fish                                                                       |
-| 1561 | 1000 Fish                                                                      |
-| 1563 | Hail to the Chef                                                               |
-| 1576 | Of Blood and Anguish                                                           |
-| 1596 | Guru of Drakuru                                                                |
-| 1636 | Competitor's Tabard                                                            |
-| 1637 | Spirit of Competition                                                          |
-| 1638 | Skyshattered                                                                   |
-| 1656 | Hallowed Be Thy Name                                                           |
-| 1657 | Hallowed Be Thy Name                                                           |
-| 1658 | Champion of the Frozen Wastes                                                  |
-| 1676 | Loremaster of Eastern Kingdoms                                                 |
-| 1677 | Loremaster of Eastern Kingdoms                                                 |
-| 1678 | Loremaster of Kalimdor                                                         |
-| 1680 | Loremaster of Kalimdor                                                         |
-| 1681 | The Loremaster                                                                 |
-| 1682 | The Loremaster                                                                 |
-| 1683 | Brewmaster                                                                     |
-| 1684 | Brewmaster                                                                     |
-| 1685 | Bros. Before Ho Ho Ho's                                                        |
-| 1686 | Bros. Before Ho Ho Ho's                                                        |
-| 1687 | Let It Snow                                                                    |
-| 1688 | The Winter Veil Gourmet                                                        |
-| 1689 | He Knows If You've Been Naughty                                                |
-| 1690 | A Frosty Shake                                                                 |
-| 1691 | Merrymaker                                                                     |
-| 1692 | Merrymaker                                                                     |
-| 1693 | Fool For Love                                                                  |
-| 1694 | Lovely Luck Is On Your Side                                                    |
-| 1695 | Dangerous Love                                                                 |
-| 1696 | The Rocket's Pink Glare                                                        |
-| 1697 | Nation of Adoration                                                            |
-| 1698 | Nation of Adoration                                                            |
-| 1699 | Fistful of Love                                                                |
-| 1700 | Perma-Peddle                                                                   |
-| 1701 | Be Mine                                                                        |
-| 1702 | Sweet Tooth                                                                    |
-| 1703 | My Love is Like a Red Red Rose                                                 |
-| 1704 | I Pitied The Fool                                                              |
-| 1705 | Clockwork Rocket Bot                                                           |
-| 1706 | Crashin' Thrashin' Racer                                                       |
-| 1707 | Fool For Love                                                                  |
-| 1716 | Battleground with the most Killing Blows                                       |
-| 1717 | Wintergrasp Victory                                                            |
-| 1718 | Wintergrasp Veteran                                                            |
-| 1719 | Battleground with the most Honorable Kills                                     |
-| 1721 | Archavon the Stone Watcher (25 player)                                         |
-| 1722 | Archavon the Stone Watcher (10 player)                                         |
-| 1723 | Vehicular Gnomeslaughter                                                       |
-| 1727 | Leaning Tower                                                                  |
-| 1729 | Alchemy Recipes learned                                                        |
-| 1730 | Blacksmithing Plans learned                                                    |
-| 1734 | Engineering Schematics learned                                                 |
-| 1735 | Inscriptions learned                                                           |
-| 1737 | Destruction Derby                                                              |
-| 1738 | Jewelcrafting Designs learned                                                  |
-| 1740 | Leatherworking Patterns learned                                                |
-| 1741 | Tailoring Patterns learned                                                     |
-| 1745 | Cooking Recipes known                                                          |
-| 1748 | First Aid Manuals learned                                                      |
-| 1751 | Didn't Stand a Chance                                                          |
-| 1752 | Master of Wintergrasp                                                          |
-| 1753 | Archavon the Stone Watcher kills (Wintergrasp 10 player)                       |
-| 1754 | Archavon the Stone Watcher kills (Wintergrasp 25 player)                       |
-| 1755 | Within Our Grasp                                                               |
-| 1756 | Lich King 25-player bosses killed                                              |
-| 1757 | Defense of the Ancients                                                        |
-| 1759 | Lich King 25-player different bosses killed                                    |
-| 1760 | Lich King 25-player boss killed the most                                       |
-| 1761 | The Dapper Sapper                                                              |
-| 1762 | Not Even a Scratch                                                             |
-| 1763 | Artillery Veteran                                                              |
-| 1764 | Drop it                                                                        |
-| 1765 | Steady Hands                                                                   |
-| 1766 | Ancient Protector                                                              |
-| 1768 | Lich King 25-player raids completed (final boss killed)                        |
-| 1770 | Lich King 10-player bosses killed                                              |
-| 1771 | Lich King 10-player different bosses killed                                    |
-| 1772 | Lich King 10-player boss killed the most                                       |
-| 1773 | Beverage consumed most                                                         |
-| 1774 | Different beverages consumed                                                   |
-| 1775 | Different foods eaten                                                          |
-| 1776 | Food eaten most                                                                |
-| 1777 | The Northrend Gourmet                                                          |
-| 1778 | The Northrend Gourmet                                                          |
-| 1779 | The Northrend Gourmet                                                          |
-| 1780 | Second That Emotion                                                            |
-| 1781 | Critter Gitter                                                                 |
-| 1782 | Our Daily Bread                                                                |
-| 1783 | Our Daily Bread                                                                |
-| 1784 | Hail to the Chef                                                               |
-| 1785 | Dinner Impossible                                                              |
-| 1786 | School of Hard Knocks                                                          |
-| 1788 | Bad Example                                                                    |
-| 1789 | Daily Chores                                                                   |
-| 1790 | Hail To The King Baby                                                          |
-| 1791 | Home Alone                                                                     |
-| 1792 | Aw Isn't It Cute?                                                              |
-| 1793 | For The Children                                                               |
-| 1795 | Lunch Lady                                                                     |
-| 1796 | Short Order Cook                                                               |
-| 1797 | Chef de Partie                                                                 |
-| 1798 | Sous Chef                                                                      |
-| 1799 | Chef de Cuisine                                                                |
-| 1800 | The Outland Gourmet                                                            |
-| 1801 | Captain Rumsey's Lager                                                         |
-| 1816 | Defenseless                                                                    |
-| 1817 | The Culling of Time                                                            |
-| 1832 | Tastes Like Chicken                                                            |
-| 1833 | It's Happy Hour Somewhere                                                      |
-| 1834 | Lightning Struck                                                               |
-| 1836 | Old Crafty                                                                     |
-| 1837 | Old Ironjaw                                                                    |
-| 1856 | Make Quick Werk Of Him (10 player)                                             |
-| 1857 | Make Quick Werk Of Him (25 player)                                             |
-| 1858 | Arachnophobia (10 player)                                                      |
-| 1859 | Arachnophobia (25 player)                                                      |
-| 1860 | Gotta Go                                                                       |
-| 1862 | Volazj's Quick Demise                                                          |
-| 1864 | What the Eck?                                                                  |
-| 1865 | Lockdown                                                                       |
-| 1866 | Good Grief                                                                     |
-| 1867 | Timely Death                                                                   |
-| 1868 | Make It Count                                                                  |
-| 1869 | A Poke In The Eye (10 player)                                                  |
-| 1870 | A Poke In The Eye (25 player)                                                  |
-| 1871 | Experienced Drake Rider                                                        |
-| 1872 | Zombiefest                                                                     |
-| 1873 | Lodi Dodi We Loves the Skadi                                                   |
-| 1874 | You Don't Have An Eternity (10 player)                                         |
-| 1875 | You Don't Have An Eternity (25 player)                                         |
-| 1876 | Besting the Black Dragonflight (10 player)                                     |
-| 1877 | Less Is More (25 player)                                                       |
-| 1919 | On The Rocks                                                                   |
-| 1936 | Does Your Wolpertinger Linger?                                                 |
-| 1956 | Higher Learning                                                                |
-| 1957 | There's Gold In That There Fountain                                            |
-| 1958 | I Smell A Giant Rat                                                            |
-| 1976 | Dalaran Cooking Awards gained                                                  |
-| 1977 | Dalaran Jewelcrafter's Tokens gained                                           |
-| 1996 | The Safety Dance (10 player)                                                   |
-| 1997 | Momma Said Knock You Out (10 player)                                           |
-| 1998 | Dalaran Cooking Award                                                          |
-| 1999 | 10 Dalaran Cooking Awards                                                      |
-| 2000 | 25 Dalaran Cooking Awards                                                      |
-| 2001 | 50 Dalaran Cooking Awards                                                      |
-| 2002 | 100 Dalaran Cooking Awards                                                     |
-| 2016 | Grizzled Veteran                                                               |
-| 2017 | Grizzled Veteran                                                               |
-| 2018 | Timear Foresees                                                                |
-| 2019 | Proof of Demise                                                                |
-| 2036 | Intense Cold                                                                   |
-| 2037 | Chaos Theory                                                                   |
-| 2038 | Respect Your Elders                                                            |
-| 2039 | Better Off Dred                                                                |
-| 2040 | Less-rabi                                                                      |
-| 2041 | Dehydration                                                                    |
-| 2042 | Shatter Resistant                                                              |
-| 2043 | The Incredible Hulk                                                            |
-| 2044 | Ruby Void                                                                      |
-| 2045 | Emerald Void                                                                   |
-| 2046 | Amber Void                                                                     |
-| 2047 | Gonna Go When the Volcano Blows (10 player)                                    |
-| 2048 | Gonna Go When the Volcano Blows (25 player)                                    |
-| 2049 | Twilight Assist (10 player)                                                    |
-| 2050 | Twilight Duo (10 player)                                                       |
-| 2051 | The Twilight Zone (10 player)                                                  |
-| 2052 | Twilight Assist (25 player)                                                    |
-| 2053 | Twilight Duo (25 player)                                                       |
-| 2054 | The Twilight Zone (25 player)                                                  |
-| 2056 | Volunteer Work                                                                 |
-| 2057 | Oh Novos                                                                       |
-| 2058 | Snakes. Why'd It Have To Be Snakes?                                            |
-| 2076 | Armored Brown Bear                                                             |
-| 2077 | Wooly Mammoth                                                                  |
-| 2078 | Traveler's Tundra Mammoth                                                      |
-| 2079 | Tabard of the Protector                                                        |
-| 2080 | Black War Mammoth                                                              |
-| 2081 | Grand Black War Mammoth                                                        |
-| 2082 | Ice Mammoth                                                                    |
-| 2083 | Grand Ice Mammoth                                                              |
-| 2084 | Ring of the Kirin Tor                                                          |
-| 2085 | 50 Stone Keeper's Shards                                                       |
-| 2086 | 100 Stone Keeper's Shards                                                      |
-| 2087 | 250 Stone Keeper's Shards                                                      |
-| 2088 | 500 Stone Keeper's Shards                                                      |
-| 2089 | 1000 Stone Keeper's Shards                                                     |
-| 2090 | Challenger                                                                     |
-| 2091 | Gladiator                                                                      |
-| 2092 | Duelist                                                                        |
-| 2093 | Rival                                                                          |
-| 2094 | A Penny For Your Thoughts                                                      |
-| 2095 | Silver in the City                                                             |
-| 2096 | The Coin Master                                                                |
-| 2097 | Get to the Choppa                                                              |
-| 2116 | Tabard of the Argent Dawn                                                      |
-| 2136 | Glory of the Hero                                                              |
-| 2137 | Glory of the Raider (10 player)                                                |
-| 2138 | Glory of the Raider (25 player)                                                |
-| 2139 | The Safety Dance (25 player)                                                   |
-| 2140 | Momma Said Knock You Out (25 player)                                           |
-| 2141 | Stable Keeper                                                                  |
-| 2142 | Filling Up The Barn                                                            |
-| 2143 | Leading the Cavalry                                                            |
-| 2144 | What A Long Strange Trip It's Been                                             |
-| 2145 | What A Long Strange Trip It's Been                                             |
-| 2146 | The Hundred Club (10 player)                                                   |
-| 2147 | The Hundred Club (25 player)                                                   |
-| 2148 | Denyin' the Scion (10 player)                                                  |
-| 2149 | Denyin' the Scion (25 player)                                                  |
-| 2150 | Split Personality                                                              |
-| 2151 | Consumption Junction                                                           |
-| 2152 | Share The Love                                                                 |
-| 2153 | A Void Dance                                                                   |
-| 2154 | Brann Spankin' New                                                             |
-| 2155 | Abuse the Ooze                                                                 |
-| 2156 | My Girl Loves to Skadi All the Time                                            |
-| 2157 | King's Bane                                                                    |
-| 2176 | And They Would All Go Down Together (10 player)                                |
-| 2177 | And They Would All Go Down Together (25 player)                                |
-| 2178 | Shocking                                                                       |
-| 2179 | Shocking                                                                       |
-| 2180 | Subtraction (10 player)                                                        |
-| 2181 | Subtraction (25 player)                                                        |
-| 2182 | Spore Loser (10 player)                                                        |
-| 2183 | Spore Loser (25 player)                                                        |
-| 2184 | Just Can't Get Enough (10 player)                                              |
-| 2185 | Just Can't Get Enough (25 player)                                              |
-| 2186 | The Immortal                                                                   |
-| 2187 | The Undying                                                                    |
-| 2188 | Leeeeeeeeeeeeeroy                                                              |
-| 2189 | Artillery Expert                                                               |
-| 2190 | Drop it now                                                                    |
-| 2191 | Ancient Courtyard Protector                                                    |
-| 2192 | Not Even a Scratch                                                             |
-| 2193 | Explosives Expert                                                              |
-| 2194 | Master of Strand of the Ancients                                               |
-| 2195 | Master of Strand of the Ancients                                               |
-| 2199 | Wintergrasp Ranger                                                             |
-| 2200 | Defense of the Ancients                                                        |
-| 2216 | Most deadly Lich King dungeon boss                                             |
-| 2217 | Most deadly Lich King 10-player raid boss                                      |
-| 2218 | Most deadly Lich King 25-player raid boss                                      |
-| 2219 | Total deaths in 5-player heroic dungeons                                       |
-| 2256 | Northern Exposure                                                              |
-| 2257 | Frostbitten                                                                    |
-| 2277 | Summons accepted                                                               |
-| 2316 | Brutal Nether Drake                                                            |
-| 2336 | Insane in the Membrane                                                         |
-| 2357 | Dreadsteed of Xoroth                                                           |
-| 2358 | Charger                                                                        |
-| 2359 | Swift Flight Form                                                              |
-| 2396 | Battleground played the most                                                   |
-| 2397 | Battleground won the most                                                      |
-| 2398 | WoW's 4th Anniversary                                                          |
-| 2416 | Hard Boiled                                                                    |
-| 2417 | Chocolate Lover                                                                |
-| 2418 | Chocoholic                                                                     |
-| 2419 | Spring Fling                                                                   |
-| 2420 | Noble Garden                                                                   |
-| 2421 | Noble Garden                                                                   |
-| 2422 | Shake Your Bunny-Maker                                                         |
-| 2436 | Desert Rose                                                                    |
-| 2456 | Vampire Hunter                                                                 |
-| 2476 | Destruction Derby                                                              |
-| 2496 | The Fifth Element                                                              |
-| 2497 | Spring Fling                                                                   |
-| 2516 | Lil' Game Hunter                                                               |
-| 2536 | Mountain o' Mounts                                                             |
-| 2537 | Mountain o' Mounts                                                             |
-| 2556 | Pest Control                                                                   |
-| 2557 | To All The Squirrels Who Shared My Life                                        |
-| 2576 | Blushing Bride                                                                 |
-| 2596 | Mr. Bigglesworth kills                                                         |
-| 2676 | I Found One                                                                    |
-| 2716 | Dual Talent Specialization                                                     |
-| 2756 | Argent Aspiration                                                              |
-| 2758 | Argent Valor                                                                   |
-| 2760 | Exalted Champion of Darnassus                                                  |
-| 2761 | Exalted Champion of the Exodar                                                 |
-| 2762 | Exalted Champion of Gnomeregan                                                 |
-| 2763 | Exalted Champion of Ironforge                                                  |
-| 2764 | Exalted Champion of Stormwind                                                  |
-| 2765 | Exalted Champion of Orgrimmar                                                  |
-| 2766 | Exalted Champion of Sen'jin                                                    |
-| 2767 | Exalted Champion of Silvermoon City                                            |
-| 2768 | Exalted Champion of Thunder Bluff                                              |
-| 2769 | Exalted Champion of the Undercity                                              |
-| 2770 | Exalted Champion of the Alliance                                               |
-| 2771 | Exalted Champion of the Horde                                                  |
-| 2772 | Tilted                                                                         |
-| 2773 | It's Just a Flesh Wound                                                        |
-| 2776 | Master of Wintergrasp                                                          |
-| 2777 | Champion of Darnassus                                                          |
-| 2778 | Champion of the Exodar                                                         |
-| 2779 | Champion of Gnomeregan                                                         |
-| 2780 | Champion of Ironforge                                                          |
-| 2781 | Champion of Stormwind                                                          |
-| 2782 | Champion of the Alliance                                                       |
-| 2783 | Champion of Orgrimmar                                                          |
-| 2784 | Champion of Sen'jin                                                            |
-| 2785 | Champion of Silvermoon City                                                    |
-| 2786 | Champion of Thunder Bluff                                                      |
-| 2787 | Champion of the Undercity                                                      |
-| 2788 | Champion of the Horde                                                          |
-| 2796 | Brew of the Month                                                              |
-| 2797 | Noble Gardener                                                                 |
-| 2798 | Noble Gardener                                                                 |
-| 2816 | Exalted Argent Champion of the Horde                                           |
-| 2817 | Exalted Argent Champion of the Alliance                                        |
-| 2836 | Lance a Lot                                                                    |
-| 2856 | Flame Leviathan kills (Ulduar 10 player)                                       |
-| 2857 | Razorscale kills (Ulduar 10 player)                                            |
-| 2858 | Ignis the Furnace Master kills (Ulduar 10 player)                              |
-| 2859 | XT-002 Deconstructor kills (Ulduar 10 player)                                  |
-| 2860 | Assembly of Iron kills (Ulduar 10 player)                                      |
-| 2861 | Kologarn kills (Ulduar 10 player)                                              |
-| 2862 | Hodir victories (Ulduar 10 player)                                             |
-| 2863 | Thorim victories (Ulduar 10 player)                                            |
-| 2864 | Freya victories (Ulduar 10 player)                                             |
-| 2865 | Mimiron victories (Ulduar 10 player)                                           |
-| 2866 | General Vezax kills (Ulduar 10 player)                                         |
-| 2867 | Algalon the Observer kills (Ulduar 10 player)                                  |
-| 2868 | Auriaya kills (Ulduar 10 player)                                               |
-| 2869 | Yogg-Saron kills (Ulduar 10 player)                                            |
-| 2870 | Emalon the Storm Watcher kills (Wintergrasp 10 player)                         |
-| 2872 | Flame Leviathan kills (Ulduar 25 player)                                       |
-| 2873 | Razorscale kills (Ulduar 25 player)                                            |
-| 2874 | Ignis the Furnace Master kills (Ulduar 25 player)                              |
-| 2875 | Kologarn kills (Ulduar 25 player)                                              |
-| 2879 | Mimiron victories (Ulduar 25 player)                                           |
-| 2880 | General Vezax kills (Ulduar 25 player)                                         |
-| 2881 | Algalon the Observer kills (Ulduar 25 player)                                  |
-| 2882 | Auriaya kills (Ulduar 25 player)                                               |
-| 2883 | Yogg-Saron kills (Ulduar 25 player)                                            |
-| 2884 | XT-002 Deconstructor kills (Ulduar 25 player)                                  |
-| 2885 | Assembly of Iron kills (Ulduar 25 player)                                      |
-| 2886 | The Siege of Ulduar (10 player)                                                |
-| 2887 | The Siege of Ulduar (25 player)                                                |
-| 2888 | The Antechamber of Ulduar (10 player)                                          |
-| 2889 | The Antechamber of Ulduar (25 player)                                          |
-| 2890 | The Keepers of Ulduar (10 player)                                              |
-| 2891 | The Keepers of Ulduar (25 player)                                              |
-| 2892 | The Descent into Madness (10 player)                                           |
-| 2893 | The Descent into Madness (25 player)                                           |
-| 2894 | The Secrets of Ulduar (10 player)                                              |
-| 2895 | The Secrets of Ulduar (25 player)                                              |
-| 2903 | Champion of Ulduar                                                             |
-| 2904 | Conqueror of Ulduar                                                            |
-| 2905 | Unbroken (10 player)                                                           |
-| 2906 | Unbroken (25 player)                                                           |
-| 2907 | Three Car Garage (10 player)                                                   |
-| 2908 | Three Car Garage (25 player)                                                   |
-| 2909 | Take Out Those Turrets (10 player)                                             |
-| 2910 | Take Out Those Turrets (25 player)                                             |
-| 2911 | Shutout (10 player)                                                            |
-| 2912 | Shutout (25 player)                                                            |
-| 2913 | Orbital Bombardment (10 player)                                                |
-| 2914 | Orbital Devastation (10 player)                                                |
-| 2915 | Nuked from Orbit (10 player)                                                   |
-| 2916 | Orbital Devastation (25 player)                                                |
-| 2917 | Nuked from Orbit (25 player)                                                   |
-| 2918 | Orbital Bombardment (25 player)                                                |
-| 2919 | A Quick Shave (10 player)                                                      |
-| 2921 | A Quick Shave (25 player)                                                      |
-| 2923 | Iron Dwarf Medium Rare (10 player)                                             |
-| 2924 | Iron Dwarf Medium Rare (25 player)                                             |
-| 2925 | Shattered (10 player)                                                          |
-| 2926 | Shattered (25 player)                                                          |
-| 2927 | Hot Pocket (10 player)                                                         |
-| 2928 | Hot Pocket (25 player)                                                         |
-| 2929 | Stokin' the Furnace (25 player)                                                |
-| 2930 | Stokin' the Furnace (10 player)                                                |
-| 2931 | Nerf Engineering (10 player)                                                   |
-| 2932 | Nerf Engineering (25 player)                                                   |
-| 2933 | Nerf Scrapbots (10 player)                                                     |
-| 2934 | Nerf Gravity Bombs (10 player)                                                 |
-| 2935 | Nerf Scrapbots (25 player)                                                     |
-| 2936 | Nerf Gravity Bombs (25 player)                                                 |
-| 2937 | Must Deconstruct Faster (10 player)                                            |
-| 2938 | Must Deconstruct Faster (25 player)                                            |
-| 2939 | I Choose You Runemaster Molgeim (10 player)                                    |
-| 2940 | I Choose You Stormcaller Brundir (10 player)                                   |
-| 2941 | I Choose You Steelbreaker (10 player)                                          |
-| 2942 | I Choose You Runemaster Molgeim (25 player)                                    |
-| 2943 | I Choose You Stormcaller Brundir (25 player)                                   |
-| 2944 | I Choose You Steelbreaker (25 player)                                          |
-| 2945 | But I'm On Your Side (10 player)                                               |
-| 2946 | But I'm On Your Side (25 player)                                               |
-| 2947 | Can't Do That While Stunned (10 player)                                        |
-| 2948 | Can't Do That While Stunned (25 player)                                        |
-| 2951 | With Open Arms (10 player)                                                     |
-| 2952 | With Open Arms (25 player)                                                     |
-| 2953 | Disarmed (10 player)                                                           |
-| 2954 | Disarmed (25 player)                                                           |
-| 2955 | If Looks Could Kill (10 player)                                                |
-| 2956 | If Looks Could Kill (25 player)                                                |
-| 2957 | Glory of the Ulduar Raider (10 player)                                         |
-| 2958 | Glory of the Ulduar Raider (25 player)                                         |
-| 2959 | Rubble and Roll (10 player)                                                    |
-| 2960 | Rubble and Roll (25 player)                                                    |
-| 2961 | Cheese the Freeze (10 player)                                                  |
-| 2962 | Cheese the Freeze (25 player)                                                  |
-| 2963 | I Have the Coolest Friends (10 player)                                         |
-| 2965 | I Have the Coolest Friends (25 player)                                         |
-| 2967 | Getting Cold in Here (10 player)                                               |
-| 2968 | Getting Cold in Here (25 player)                                               |
-| 2969 | Staying Buffed All Winter (10 player)                                          |
-| 2970 | Staying Buffed All Winter (25 player)                                          |
-| 2971 | Don't Stand in the Lightning (10 player)                                       |
-| 2972 | Don't Stand in the Lightning (25 player)                                       |
-| 2973 | I'll Take You All On (10 player)                                               |
-| 2974 | I'll Take You All On (25 player)                                               |
-| 2975 | Who Needs Bloodlust? (10 player)                                               |
-| 2976 | Who Needs Bloodlust? (25 player)                                               |
-| 2977 | Siffed (10 player)                                                             |
-| 2978 | Siffed (25 player)                                                             |
-| 2979 | Lumberjacked (10 player)                                                       |
-| 2980 | Con-speed-atory (10 player)                                                    |
-| 2981 | Con-speed-atory (25 player)                                                    |
-| 2982 | Getting Back to Nature (10 player)                                             |
-| 2983 | Getting Back to Nature (25 player)                                             |
-| 2984 | Deforestation (25 player)                                                      |
-| 2985 | Deforestation (10 player)                                                      |
-| 2989 | Set Up Us the Bomb (10 player)                                                 |
-| 2995 | Not-So-Friendly Fire (25 player)                                               |
-| 2996 | Shadowdodger (10 player)                                                       |
-| 2997 | Shadowdodger (25 player)                                                       |
-| 3002 | Supermassive (25 player)                                                       |
-| 3003 | Supermassive (10 player)                                                       |
-| 3004 | He Feeds On Your Tears (10 player)                                             |
-| 3005 | He Feeds On Your Tears (25 player)                                             |
-| 3006 | Crazy Cat Lady (10 player)                                                     |
-| 3007 | Crazy Cat Lady (25 player)                                                     |
-| 3008 | Drive Me Crazy (10 player)                                                     |
-| 3009 | Kiss and Make Up (10 player)                                                   |
-| 3010 | Drive Me Crazy (25 player)                                                     |
-| 3011 | Kiss and Make Up (25 player)                                                   |
-| 3012 | He's Not Getting Any Older (10 player)                                         |
-| 3013 | He's Not Getting Any Older (25 player)                                         |
-| 3014 | They're Coming Out of the Walls (10 player)                                    |
-| 3015 | In His House He Waits Dreaming (10 player)                                     |
-| 3016 | In His House He Waits Dreaming (25 player)                                     |
-| 3017 | They're Coming Out of the Walls (25 player)                                    |
-| 3018 | Emblems of Conquest acquired                                                   |
-| 3036 | Observed (10 player)                                                           |
-| 3037 | Observed (25 player)                                                           |
-| 3056 | Orbit-uary (10 player)                                                         |
-| 3057 | Orbit-uary (25 player)                                                         |
-| 3058 | Heartbreaker (10 player)                                                       |
-| 3059 | Heartbreaker (25 player)                                                       |
-| 3076 | Nine Lives (10 player)                                                         |
-| 3077 | Nine Lives (25 player)                                                         |
-| 3096 | Deadly Gladiator's Frostwyrm                                                   |
-| 3097 | Dwarfageddon (10 player)                                                       |
-| 3098 | Dwarfageddon (25 player)                                                       |
-| 3117 | Realm First                                                                    |
-| 3118 | Lumberjacked (25 player)                                                       |
-| 3136 | Emalon the Storm Watcher (10 player)                                           |
-| 3137 | Emalon the Storm Watcher (25 player)                                           |
-| 3138 | Not-So-Friendly Fire (10 player)                                               |
-| 3141 | Two Lights in the Darkness (10 player)                                         |
-| 3142 | Val'anyr Hammer of Ancient Kings                                               |
-| 3157 | Three Lights in the Darkness (10 player)                                       |
-| 3158 | One Light in the Darkness (10 player)                                          |
-| 3159 | Alone in the Darkness (10 player)                                              |
-| 3161 | Three Lights in the Darkness (25 player)                                       |
-| 3162 | Two Lights in the Darkness (25 player)                                         |
-| 3163 | One Light in the Darkness (25 player)                                          |
-| 3164 | Alone in the Darkness (25 player)                                              |
-| 3176 | Lose Your Illusion (10 player)                                                 |
-| 3177 | Knock on Wood (10 player)                                                      |
-| 3178 | Knock Knock on Wood (10 player)                                                |
-| 3179 | Knock Knock Knock on Wood (10 player)                                          |
-| 3180 | Firefighter (10 player)                                                        |
-| 3181 | I Love the Smell of Saronite in the Morning (10 player)                        |
-| 3182 | I Could Say That This Cache Was Rare (10 player)                               |
-| 3183 | Lose Your Illusion (25 player)                                                 |
-| 3184 | I Could Say That This Cache Was Rare (25 player)                               |
-| 3185 | Knock on Wood (25 player)                                                      |
-| 3186 | Knock Knock on Wood (25 player)                                                |
-| 3187 | Knock Knock Knock on Wood (25 player)                                          |
-| 3188 | I Love the Smell of Saronite in the Morning (25 player)                        |
-| 3189 | Firefighter (25 player)                                                        |
-| 3216 | Smelting Recipes learned                                                       |
-| 3217 | Chasing Marcia                                                                 |
-| 3218 | Turtles All the Way Down                                                       |
-| 3236 | Emalon the Storm Watcher kills (Wintergrasp 25 player)                         |
-| 3237 | Set Up Us the Bomb (25 player)                                                 |
-| 3256 | Hodir victories (Ulduar 25 player)                                             |
-| 3257 | Thorim victories (Ulduar 25 player)                                            |
-| 3258 | Freya victories (Ulduar 25 player)                                             |
-| 3259 | Realm First                                                                    |
-| 3296 | Cooking with Style                                                             |
-| 3316 | Herald of the Titans                                                           |
-| 3336 | Deadly Gladiator                                                               |
-| 3356 | Winterspring Frostsaber                                                        |
-| 3357 | Venomhide Ravasaur                                                             |
-| 3436 | Furious Gladiator                                                              |
-| 3456 | Dead Man's Party                                                               |
-| 3457 | The Captain's Booty                                                            |
-| 3478 | Pilgrim                                                                        |
-| 3496 | A Brew-FAST Mount                                                              |
-| 3516 | Deaths in Ulduar                                                               |
-| 3536 | The Marine Marine                                                              |
-| 3556 | Pilgrim's Paunch                                                               |
-| 3557 | Pilgrim's Paunch                                                               |
-| 3558 | Sharing is Caring                                                              |
-| 3559 | Turkey Lurkey                                                                  |
-| 3576 | Now We're Cookin'                                                              |
-| 3577 | Now We're Cookin'                                                              |
-| 3578 | The Turkinator                                                                 |
-| 3579 | FOOD FIGHT                                                                     |
-| 3580 | Pilgrim's Peril                                                                |
-| 3581 | Pilgrim's Peril                                                                |
-| 3582 | Terokkar Turkey Time                                                           |
-| 3596 | Pilgrim's Progress                                                             |
-| 3597 | Pilgrim's Progress                                                             |
-| 3618 | Murkimus the Gladiator                                                         |
-| 3636 | Jade Tiger                                                                     |
-| 3656 | Pilgrim                                                                        |
-| 3676 | A Silver Confidant                                                             |
-| 3677 | The Sunreavers                                                                 |
-| 3736 | Pony Up                                                                        |
-| 3756 | Furious Gladiator's Frostwyrm                                                  |
-| 3757 | Relentless Gladiator's Frostwyrm                                               |
-| 3758 | Relentless Gladiator                                                           |
-| 3776 | Isle of Conquest Victory                                                       |
-| 3777 | Isle of Conquest Veteran                                                       |
-| 3778 | Trial of the Champion                                                          |
-| 3797 | Upper Back Pain (10 player)                                                    |
-| 3798 | Resilience Will Fix It (10 player)                                             |
-| 3799 | Salt and Pepper (10 player)                                                    |
-| 3800 | The Traitor King (10 player)                                                   |
-| 3802 | Argent Confessor                                                               |
-| 3803 | The Faceroller                                                                 |
-| 3804 | I've Had Worse                                                                 |
-| 3808 | A Tribute to Skill (10 player)                                                 |
-| 3809 | A Tribute to Mad Skill (10 player)                                             |
-| 3810 | A Tribute to Insanity (10 player)                                              |
-| 3812 | Call of the Grand Crusade (25 player)                                          |
-| 3813 | Upper Back Pain (25 player)                                                    |
-| 3814 | Resilience Will Fix It (25 player)                                             |
-| 3815 | Salt and Pepper (25 player)                                                    |
-| 3816 | The Traitor King (25 player)                                                   |
-| 3817 | A Tribute to Skill (25 player)                                                 |
-| 3818 | A Tribute to Mad Skill (25 player)                                             |
-| 3819 | A Tribute to Insanity (25 player)                                              |
-| 3836 | Koralon the Flame Watcher (10 player)                                          |
-| 3837 | Koralon the Flame Watcher (25 player)                                          |
-| 3838 | Dungeon & Raid Emblem                                                          |
-| 3839 | 25 Dungeon & Raid Emblems                                                      |
-| 3840 | 50 Dungeon & Raid Emblems                                                      |
-| 3841 | 100 Dungeon & Raid Emblems                                                     |
-| 3842 | 250 Dungeon & Raid Emblems                                                     |
-| 3843 | 500 Dungeon & Raid Emblems                                                     |
-| 3844 | 1000 Dungeon & Raid Emblems                                                    |
-| 3845 | Isle of Conquest All-Star                                                      |
-| 3846 | Resource Glut                                                                  |
-| 3847 | Four Car Garage                                                                |
-| 3848 | A-bomb-inable                                                                  |
-| 3849 | A-bomb-ination                                                                 |
-| 3850 | Mowed Down                                                                     |
-| 3851 | Mine                                                                           |
-| 3852 | Cut the Blue Wire... No the Red Wire                                           |
-| 3853 | All Over the Isle                                                              |
-| 3854 | Back Door Job                                                                  |
-| 3855 | Glaive Grave                                                                   |
-| 3856 | Demolition Derby                                                               |
-| 3857 | Master of Isle of Conquest                                                     |
-| 3876 | 1500 Dungeon & Raid Emblems                                                    |
-| 3896 | Onyx Panther                                                                   |
-| 3916 | Call of the Crusade (25 player)                                                |
-| 3917 | Call of the Crusade (10 player)                                                |
-| 3918 | Call of the Grand Crusade (10 player)                                          |
-| 3936 | Not One But Two Jormungars (10 player)                                         |
-| 3937 | Not One But Two Jormungars (25 player)                                         |
-| 3957 | Master of Isle of Conquest                                                     |
-| 3996 | Three Sixty Pain Spike (10 player)                                             |
-| 3997 | Three Sixty Pain Spike (25 player)                                             |
-| 4016 | Earth Wind & Fire (10 player)                                                  |
-| 4017 | Earth Wind & Fire (25 player)                                                  |
-| 4018 | Victories over Hunter Champion (Trial of the Champion)                         |
-| 4019 | Victories over Hunter Champion (Heroic Trial of the Champion)                  |
-| 4022 | Victories over Argent Confessor Paletress (Trial of the Champion)              |
-| 4023 | Victories over Argent Confessor Paletress (Heroic Trial of the Champion)       |
-| 4024 | Victories over Eadric the Pure (Trial of the Champion)                         |
-| 4025 | Victories over Eadric the Pure (Heroic Trial of the Champion)                  |
-| 4026 | The Black Knight kills (Trial of the Champion)                                 |
-| 4027 | The Black Knight kills (Heroic Trial of the Champion)                          |
-| 4028 | Victories over the Beasts of Northrend (Trial of the Crusader 10 player)       |
-| 4029 | Victories over the Beasts of Northrend (Trial of the Grand Crusader 25 player) |
-| 4030 | Victories over the Beasts of Northrend (Trial of the Grand Crusader 10 player) |
-| 4031 | Victories over the Beasts of Northrend (Trial of the Crusader 25 player)       |
-| 4032 | Lord Jaraxxus kills (Trial of the Crusader 10 player)                          |
-| 4033 | Lord Jaraxxus kills (Trial of the Grand Crusader 10 player)                    |
-| 4034 | Lord Jaraxxus kills (Trial of the Crusader 25 player)                          |
-| 4035 | Lord Jaraxxus kills (Trial of the Grand Crusader 25 player)                    |
-| 4036 | Victories over the Faction Champions (Trial of the Crusader 10 player)         |
-| 4037 | Victories over the Faction Champions (Trial of the Grand Crusader 10 player)   |
-| 4038 | Victories over the Faction Champions (Trial of the Crusader 25 player)         |
-| 4039 | Victories over the Faction Champions (Trial of the Grand Crusader 25 player)   |
-| 4040 | Val'kyr Twins kills (Trial of the Crusader 10 player)                          |
-| 4041 | Val'kyr Twins kills (Trial of the Grand Crusader 10 player)                    |
-| 4042 | Val'kyr Twins kills (Trial of the Crusader 25 player)                          |
-| 4043 | Val'kyr Twins kills (Trial of the Grand Crusader 25 player)                    |
-| 4044 | Times completed the Trial of the Crusader (10 player)                          |
-| 4045 | Times completed the Trial of the Grand Crusader (10 player)                    |
-| 4046 | Times completed the Trial of the Crusader (25 player)                          |
-| 4047 | Times completed the Trial of the Grand Crusader (25 player)                    |
-| 4048 | Victories over Mage Champion (Trial of the Champion)                           |
-| 4049 | Victories over Mage Champion (Heroic Trial of the Champion)                    |
-| 4050 | Victories over Rogue Champion (Trial of the Champion)                          |
-| 4051 | Victories over Rogue Champion (Heroic Trial of the Champion)                   |
-| 4052 | Victories over Shaman Champion (Trial of the Champion)                         |
-| 4053 | Victories over Shaman Champion (Heroic Trial of the Champion)                  |
-| 4054 | Victories over Warrior Champion (Trial of the Champion)                        |
-| 4055 | Victories over Warrior Champion (Heroic Trial of the Champion)                 |
-| 4074 | Koralon the Flame Watcher kills (Wintergrasp 10 player)                        |
-| 4075 | Koralon the Flame Watcher kills (Wintergrasp 25 player)                        |
-| 4078 | Realm First                                                                    |
-| 4079 | A Tribute to Immortality                                                       |
-| 4080 | A Tribute to Dedicated Insanity                                                |
-| 4096 | Isle of Conquest battles                                                       |
-| 4097 | Isle of Conquest victories                                                     |
-| 4156 | A Tribute to Immortality                                                       |
-| 4176 | Resource Glut                                                                  |
-| 4177 | Mine                                                                           |
-| 4256 | Demolition Derby                                                               |
-| 4296 | Trial of the Champion                                                          |
-| 4297 | Heroic: Trial of the Champion                                                  |
-| 4298 | Heroic: Trial of the Champion                                                  |
-| 4316 | 2500 Dungeon & Raid Emblems                                                    |
-| 4396 | Onyxia's Lair (10 player)                                                      |
-| 4397 | Onyxia's Lair (25 player)                                                      |
-| 4400 | WoW's 5th Anniversary                                                          |
-| 4402 | More Dots                                                                      |
-| 4403 | Many Whelps                                                                    |
-| 4404 | She Deep Breaths More (10 player)                                              |
-| 4405 | More Dots                                                                      |
-| 4406 | Many Whelps                                                                    |
-| 4407 | She Deep Breaths More (25 player)                                              |
-| 4436 | BB King                                                                        |
-| 4437 | BB King                                                                        |
-| 4456 | Random Lich King (normal) dungeons completed                                   |
-| 4476 | Looking For More                                                               |
-| 4477 | Looking For Many                                                               |
-| 4478 | Looking For Multitudes                                                         |
-| 4496 | It's Over Nine Thousand                                                        |
-| 4516 | The Forge of Souls                                                             |
-| 4517 | The Pit of Saron                                                               |
-| 4518 | The Halls of Reflection                                                        |
-| 4519 | Heroic: The Forge of Souls                                                     |
-| 4520 | Heroic: The Pit of Saron                                                       |
-| 4521 | Heroic: The Halls of Reflection                                                |
-| 4522 | Soul Power                                                                     |
-| 4523 | Three Faced                                                                    |
-| 4524 | Doesn't Go to Eleven                                                           |
-| 4525 | Don't Look Up                                                                  |
-| 4526 | We're Not Retreating; We're Advancing in a Different Direction.                |
-| 4527 | The Frostwing Halls (10 player)                                                |
-| 4528 | The Plagueworks (10 player)                                                    |
-| 4529 | The Crimson Hall (10 player)                                                   |
-| 4530 | The Frozen Throne (10 player)                                                  |
-| 4531 | Storming the Citadel (10 player)                                               |
-| 4532 | Fall of the Lich King (10 player)                                              |
-| 4534 | Boned (10 player)                                                              |
-| 4535 | Full House (10 player)                                                         |
-| 4536 | I'm on a Boat (10 player)                                                      |
-| 4537 | I've Gone and Made a Mess (10 player)                                          |
-| 4538 | Dances with Oozes (10 player)                                                  |
-| 4539 | Once Bitten Twice Shy (10 player)                                              |
-| 4556 | Random Lich King (heroic) dungeons completed                                   |
-| 4576 | Realm First                                                                    |
-| 4577 | Flu Shot Shortage (10 player)                                                  |
-| 4578 | Nausea Heartburn Indigestion... (10 player)                                    |
-| 4579 | Portal Jockey (10 player)                                                      |
-| 4580 | All You Can Eat (10 player)                                                    |
-| 4581 | Neck-Deep in Vile (10 player)                                                  |
-| 4582 | The Orb Whisperer (10 player)                                                  |
-| 4583 | Bane of the Fallen King                                                        |
-| 4584 | The Light of Dawn                                                              |
-| 4585 | Toravon the Ice Watcher (10 player)                                            |
-| 4586 | Toravon the Ice Watcher (25 player)                                            |
-| 4596 | The Sword in the Skull                                                         |
-| 4597 | The Frozen Throne (25 player)                                                  |
-| 4598 | The Ashen Verdict                                                              |
-| 4599 | Wrathful Gladiator                                                             |
-| 4600 | Wrathful Gladiator's Frostwyrm                                                 |
-| 4601 | Been Waiting a Long Time for This (10 player)                                  |
-| 4602 | Glory of the Icecrown Raider (10 player)                                       |
-| 4603 | Glory of the Icecrown Raider (25 player)                                       |
-| 4604 | Storming the Citadel (25 player)                                               |
-| 4605 | The Plagueworks (25 player)                                                    |
-| 4606 | The Crimson Hall (25 player)                                                   |
-| 4607 | The Frostwing Halls (25 player)                                                |
-| 4608 | Fall of the Lich King (25 player)                                              |
-| 4610 | Boned (25 player)                                                              |
-| 4611 | Full House (25 player)                                                         |
-| 4612 | I'm on a Boat (25 player)                                                      |
-| 4613 | I've Gone and Made a Mess (25 player)                                          |
-| 4614 | Dances with Oozes (25 player)                                                  |
-| 4615 | Flu Shot Shortage (25 player)                                                  |
-| 4616 | Nausea Heartburn Indigestion... (25 player)                                    |
-| 4617 | The Orb Whisperer (25 player)                                                  |
-| 4618 | Once Bitten Twice Shy (25 player)                                              |
-| 4619 | Portal Jockey (25 player)                                                      |
-| 4620 | All You Can Eat (25 player)                                                    |
-| 4621 | Been Waiting a Long Time for This (25 player)                                  |
-| 4622 | Neck-Deep in Vile (25 player)                                                  |
-| 4623 | Shadowmourne                                                                   |
-| 4624 | Tough Love                                                                     |
-| 4625 | Invincible's Reins                                                             |
-| 4626 | And I'll Form the Head                                                         |
-| 4627 | Big Love Rocket                                                                |
-| 4628 | Heroic: Storming the Citadel (10 player)                                       |
-| 4629 | Heroic: The Plagueworks (10 player)                                            |
-| 4630 | Heroic: The Crimson Hall (10 player)                                           |
-| 4631 | Heroic: The Frostwing Halls (10 player)                                        |
-| 4632 | Heroic: Storming the Citadel (25 player)                                       |
-| 4633 | Heroic: The Plagueworks (25 player)                                            |
-| 4634 | Heroic: The Crimson Hall (25 player)                                           |
-| 4635 | Heroic: The Frostwing Halls (25 player)                                        |
-| 4636 | Heroic: Fall of the Lich King (10 player)                                      |
-| 4637 | Heroic: Fall of the Lich King (25 player)                                      |
-| 4639 | Lord Marrowgar kills (Icecrown 10 player)                                      |
-| 4640 | Lord Marrowgar kills (Heroic Icecrown 10 player)                               |
-| 4641 | Lord Marrowgar kills (Icecrown 25 player)                                      |
-| 4642 | Lord Marrowgar kills (Heroic Icecrown 25 player)                               |
-| 4643 | Lady Deathwhisper kills (Icecrown 10 player)                                   |
-| 4644 | Gunship Battle victories (Icecrown 10 player)                                  |
-| 4645 | Deathbringer kills (Icecrown 10 player)                                        |
-| 4646 | Festergut kills (Icecrown 10 player)                                           |
-| 4647 | Rotface kills (Icecrown 10 player)                                             |
-| 4648 | Blood Prince Council kills (Icecrown 10 player)                                |
-| 4649 | Valithria Dreamwalker rescues (Icecrown 10 player)                             |
-| 4650 | Professor Putricide kills (Icecrown 10 player)                                 |
-| 4651 | Blood Queen Lana'thel kills (Icecrown 10 player)                               |
-| 4652 | Sindragosa kills (Icecrown 10 player)                                          |
-| 4653 | Victories over the Lich King (Icecrown 10 player)                              |
-| 4654 | Lady Deathwhisper kills (Heroic Icecrown 10 player)                            |
-| 4655 | Lady Deathwhisper kills (Icecrown 25 player)                                   |
-| 4656 | Lady Deathwhisper kills (Heroic Icecrown 25 player)                            |
-| 4657 | Toravon the Ice Watcher kills (Wintergrasp 10 player)                          |
-| 4658 | Toravon the Ice Watcher kills (Wintergrasp 25 player)                          |
-| 4659 | Gunship Battle victories (Heroic Icecrown 10 player)                           |
-| 4660 | Gunship Battle victories (Icecrown 25 player)                                  |
-| 4661 | Gunship Battle victories (Heroic Icecrown 25 player)                           |
-| 4662 | Deathbringer kills (Heroic Icecrown 10 player)                                 |
-| 4663 | Deathbringer kills (Icecrown 25 player)                                        |
-| 4664 | Deathbringer kills (Heroic Icecrown 25 player)                                 |
-| 4665 | Festergut kills (Heroic Icecrown 10 player)                                    |
-| 4666 | Festergut kills (Icecrown 25 player)                                           |
-| 4667 | Festergut kills (Heroic Icecrown 25 player)                                    |
-| 4668 | Rotface kills (Heroic Icecrown 10 player)                                      |
-| 4669 | Rotface kills (Icecrown 25 player)                                             |
-| 4670 | Rotface kills (Heroic Icecrown 25 player)                                      |
-| 4671 | Blood Prince Council kills (Heroic Icecrown 10 player)                         |
-| 4672 | Blood Prince Council kills (Icecrown 25 player)                                |
-| 4673 | Blood Prince Council kills (Heroic Icecrown 25 player)                         |
-| 4674 | Valithria Dreamwalker rescues (Heroic Icecrown 10 player)                      |
-| 4675 | Valithria Dreamwalker rescues (Icecrown 25 player)                             |
-| 4676 | Valithria Dreamwalker rescues (Heroic Icecrown 25 player)                      |
-| 4677 | Professor Putricide kills (Heroic Icecrown 10 player)                          |
-| 4678 | Professor Putricide kills (Icecrown 25 player)                                 |
-| 4679 | Professor Putricide kills (Heroic Icecrown 25 player)                          |
-| 4680 | Blood Queen Lana'thel kills (Heroic Icecrown 10 player)                        |
-| 4681 | Blood Queen Lana'thel kills (Icecrown 25 player)                               |
-| 4682 | Blood Queen Lana'thel kills (Heroic Icecrown 25 player)                        |
-| 4683 | Sindragosa kills (Icecrown 25 player)                                          |
-| 4684 | Sindragosa kills (Heroic Icecrown 10 player)                                   |
-| 4685 | Sindragosa kills (Heroic Icecrown 25 player)                                   |
-| 4686 | Victories over the Lich King (Heroic Icecrown 10 player)                       |
-| 4687 | Victories over the Lich King (Icecrown 25 player)                              |
-| 4688 | Victories over the Lich King (Heroic Icecrown 25 player)                       |
-| 4713 | Bronjahm kills (Forge of Souls)                                                |
-| 4714 | Bronjahm kills (Heroic Forge of Souls)                                         |
-| 4715 | Devourer of Souls kills (Forge of Souls)                                       |
-| 4716 | Devourer of Souls kills (Heroic Forge of Souls)                                |
-| 4717 | Forgemaster Garfrost kills (Pit of Saron)                                      |
-| 4718 | Ick and Krick kills (Pit of Saron)                                             |
-| 4719 | Ick and Krick kills (Heroic Pit of Saron)                                      |
-| 4720 | Scourgelord Tyrannus kills (Pit of Saron)                                      |
-| 4721 | Scourgelord Tyrannus kills (Heroic Pit of Saron)                               |
-| 4722 | Falric kills (Halls of Reflection)                                             |
-| 4723 | Falric kills (Heroic Halls of Reflection)                                      |
-| 4724 | Marwyn kills (Halls of Reflection)                                             |
-| 4725 | Marwyn kills (Heroic Halls of Reflection)                                      |
-| 4726 | Lich King escapes (Halls of Reflection)                                        |
-| 4727 | Lich King escapes (Heroic Halls of Reflection)                                 |
-| 4728 | Forgemaster Garfrost kills (Heroic Pit of Saron)                               |
-| 4729 | Emblems of Triumph acquired                                                    |
-| 4730 | Emblems of Frost acquired                                                      |
-| 4777 | Isle of Conquest Killing Blows                                                 |
-| 4778 | Disenchant rolls made on loot                                                  |
-| 4779 | Isle of Conquest Honorable Kills                                               |
-| 4780 | Deaths in Trial of the Crusader                                                |
-| 4781 | Deaths in Icecrown Citadel                                                     |
-| 4782 | Green Brewfest Stein                                                           |
-| 4784 | Emblematic                                                                     |
-| 4785 | Emblematic                                                                     |
-| 4786 | Operation: Gnomeregan                                                          |
-| 4790 | Zalazane's Fall                                                                |
-| 4815 | The Twilight Destroyer (25 player)                                             |
-| 4816 | Heroic: The Twilight Destroyer (25 player)                                     |
-| 4817 | The Twilight Destroyer (10 player)                                             |
-| 4818 | Heroic: The Twilight Destroyer (10 player)                                     |
-| 4820 | Halion kills (Ruby Sanctum 25 player)                                          |
-| 4821 | Halion kills (Ruby Sanctum 10 player)                                          |
-| 4822 | Halion kills (Heroic Ruby Sanctum 10 player)                                   |
-| 4823 | Halion kills (Heroic Ruby Sanctum 25 player)                                   |
-| 4824 | Collector's Edition: Mini Thor                                                 |
+| ID    | Nombre                                                                         |
+| ----- | ------------------------------------------------------------------------------ |
+| 6     | Nivel 10     |
+| 7     | Nivel 20     |
+| 8     | Nivel 30     |
+| 9     | Nivel 40     |
+| 10    | Nivel 50     |
+| 11    | Nivel 60     |
+| 12    | Nivel 70     |
+| 13    | Nivel 80     |
+| 15    | Muchas mascotas     |
+| 16    | ¿Alguien ha pedido un bocadillo de nudillos?     |
+| 31    | Una re-misión sencilla     |
+| 32    | 2000 misiones completadas     |
+| 33    | La Tundra no tiene nada de aburrida     |
+| 34    | He paseado por el Fiordo     |
+| 35    | El poder del Cementerio de Dragones     |
+| 36    | El imperio de Zul\'Drak     |
+| 37    | Mi furia por las pardas     |
+| 38    | La cima de Las Cumbres Tormentosas     |
+| 39    | Dentro de la Cuenca     |
+| 40    | Corona de Hielo: la meta final     |
+| 41    | Maestro cultural de Rasganorte     |
+| 42    | Explora los Reinos del Este     |
+| 43    | Explora Kalimdor     |
+| 44    | Explora Terrallende     |
+| 45    | Explora Rasganorte     |
+| 46    | Explorador del mundo     |
+| 49    | Victorias en el Valle de Alterac     |
+| 50    | Victorias en el Ojo de la Tormenta     |
+| 51    | Victorias en la Cuenca de Arathi     |
+| 52    | Batallas en la Garganta Grito de Guerra     |
+| 53    | Batallas en el Valle de Alterac     |
+| 54    | Batallas en el Ojo de la Tormenta     |
+| 55    | Batallas en la Cuenca de Arathi     |
+| 56    | Muertes en la Garganta Grito de Guerra     |
+| 57    | Muertes en el Valle de Alterac     |
+| 58    | Muertes contra Drek\'Thar     |
+| 59    | Muertes en la Cuenca de Arathi     |
+| 60    | Muertes propias     |
+| 73    | Deshonrar la Cuenca     |
+| 94    | Misiones abandonadas     |
+| 95    | Cantidad media de misiones completadas cada día     |
+| 97    | Misiones diarias completadas     |
+| 98    | Misiones completadas     |
+| 99    | Encuentros en las Ruinas de Lordaeron     |
+| 100    | Victorias en El Círculo de los Retos     |
+| 101    | Encuentros en El Círculo de los Retos     |
+| 102    | Victorias en las Ruinas de Lordaeron     |
+| 103    | Encuentros en el Anillo de Sangre     |
+| 104    | Victorias en el Anillo de Sangre     |
+| 105    | Victorias en la Garganta Grito de Guerra     |
+| 107    | Criaturas muertas     |
+| 108    | Alimañas muertas     |
+| 110    | Lich King: Jefe asesinado más veces (5 j.)     |
+| 112    | Muertes por ahogamiento     |
+| 113    | Muertes por fatiga     |
+| 114    | Muertes por caída     |
+| 115    | Muertes por fuego y lava     |
+| 116    | Oficial profesional     |
+| 121    | Oficial cocinero     |
+| 122    | Cocinero experto     |
+| 123    | Cocinero artesano     |
+| 124    | Maestro cocinero     |
+| 125    | Gran maestro cocinero     |
+| 126    | Oficial pescador     |
+| 127    | Pescador experto     |
+| 128    | Pescador artesano     |
+| 129    | Maestro pescador     |
+| 130    | Gran maestro pescador     |
+| 131    | Oficial en primeros auxilios     |
+| 132    | Experto en primeros auxilios     |
+| 133    | Artesano en primeros auxilios     |
+| 134    | Maestro en primeros auxilios     |
+| 135    | Gran maestro en primeros auxilios     |
+| 137    | Abastecerse     |
+| 141    | Elección final     |
+| 144    | El Rondador de arriba     |
+| 150    | El diplomático pescador     |
+| 153    | El viejo gnomo y el mar     |
+| 154    | Victoria en la Cuenca de Arathi     |
+| 155    | Veterano de la Cuenca de Arathi     |
+| 156    | Dominio territorial     |
+| 157    | ¡Al rescate!     |
+| 158    | El Capitán y yo lo conseguimos     |
+| 159    | Hagámoslo     |
+| 161    | Victoria elástica     |
+| 162    | La victoria estaba clara *ejem*     |
+| 165    | Perfección en la Cuenca de Arathi     |
+| 166    | Victoria en la Garganta Grito de Guerra     |
+| 167    | Veterano de la Garganta Grito de Guerra     |
+| 168    | Perfección en la Garganta Grito de Guerra     |
+| 178    | Fórmulas de encantamiento conocidas     |
+| 181    | Objetos desencantados     |
+| 183    | Materiales producidos al desencantar     |
+| 189    | Mayor sanación realizada     |
+| 193    | Mayor golpe asestado     |
+| 197    | Daño total infligido     |
+| 198    | Sanación total realizada     |
+| 199    | Captura la bandera     |
+| 200    | Defensor persistente     |
+| 201    | Conveniencia Grito de Guerra     |
+| 202    | Captura rápida     |
+| 203    | En mi casa no     |
+| 204    | Hombre de hierro     |
+| 206    | Defensor supremo     |
+| 207    | Eres mi héroe     |
+| 208    | Victoria en el Ojo de la Tormenta     |
+| 209    | Veterano del Ojo de la Tormenta     |
+| 211    | Gloria de la tormenta     |
+| 212    | Rematar la tormenta     |
+| 213    | Soldado de asalto     |
+| 214    | Aluvión     |
+| 216    | Destinado a la gloria     |
+| 218    | Victoria en el Valle de Alterac     |
+| 219    | Veterano del Valle de Alterac     |
+| 220    | Perfección Pico Tormenta     |
+| 221    | Ladrón de tumbas de Alterac     |
+| 222    | Defensa de torres     |
+| 223    | La gacela enfermiza     |
+| 224    | Leal defensor     |
+| 225    | Todo cuenta     |
+| 226    | El rayo de Alterac     |
+| 227    | Control de daños     |
+| 229    | La parca     |
+| 230    | Maestro de batalla     |
+| 231    | Bola de demolición     |
+| 233    | Rabioso sediento de sangre     |
+| 238    | Una muerte con honor     |
+| 239    | 25000 muertes con honor     |
+| 245    | Hace falta clase     |
+| 246    | Conoce a tu enemigo     |
+| 247    | Haz el amor, no Warcraft     |
+| 248    | El traje de domingo     |
+| 249    | Vestido para la ocasión     |
+| 252    | Con un poco de ayuda de mis amigos     |
+| 255    | Tráeme la cabeza de... esto, vaya     |
+| 259    | Avaricioso     |
+| 260    | Encantador     |
+| 263    | Hiela al Señor de la Escarcha     |
+| 271    | Baile ardiente en el poste caliente     |
+| 272    | Malabarista     |
+| 273    | ¡Vamos, Metzen!     |
+| 275    | Niñera veterana     |
+| 277    | Es la temporada     |
+| 279    | Simplemente abominable     |
+| 281    | Habilidad en primeros auxilios     |
+| 283    | La Mascarada     |
+| 284    | Una máscara para todas las ocasiones     |
+| 288    | Sácalo     |
+| 289    | El salvador de Halloween     |
+| 291    | Búscate la cabeza     |
+| 292    | Llamada siniestra     |
+| 293    | Perturbar la paz     |
+| 295    | Fiesta de la Cerveza Temible     |
+| 303    | Viajará gracias al barril     |
+| 306    | Maestro pescador de Azeroth     |
+| 318    | Veces que te ha matado la facción contraria     |
+| 319    | Duelos ganados     |
+| 320    | Duelos perdidos     |
+| 321    | Muertes en mazmorra y banda     |
+| 322    | Lich King: Muertes contra jefes (5 j.)     |
+| 323    | Lich King: Muertes contra jefes (10 j.)     |
+| 324    | Lich King: Muertes contra jefes (25 j.)     |
+| 326    | Oro obtenido como recompensa de misiones     |
+| 328    | Oro total adquirido     |
+| 329    | Cantidad de subastas creadas     |
+| 330    | Compras realizadas en la casa de subastas     |
+| 331    | La puja más alta realizada en una subasta     |
+| 332    | Venta más cara realizada en una subasta     |
+| 333    | Cantidad de oro despojado     |
+| 334    | Mayor cantidad de oro jamás poseída     |
+| 336    | Objetos legendarios adquiridos     |
+| 338    | Mascotas de vanidad poseídas     |
+| 339    | Monturas poseídas     |
+| 341    | Objetos épicos despojados     |
+| 342    | Objetos épicos adquiridos     |
+| 344    | Vendas usadas     |
+| 345    | Pociones de salud consumidas     |
+| 346    | Bebidas consumidas     |
+| 347    | Comida consumida     |
+| 349    | Rutas de vuelo tomadas     |
+| 350    | Portales de mago atravesados     |
+| 353    | Veces que has usado la piedra de hogar     |
+| 362    | Victorias 5c5     |
+| 363    | Encuentros 5c5     |
+| 364    | Victorias 3c3     |
+| 365    | Encuentros 3c3     |
+| 366    | Victorias 2c2     |
+| 367    | Encuentros 2c2     |
+| 370    | Mayor índice personal en grupos de 2 personas     |
+| 374    | Mayor índice de equipo en grupos de 2 personas     |
+| 377    | Mayoría de facciones a nivel Exaltado     |
+| 378    | Mayoría de facciones en Venerado o superior     |
+| 381    | Muertes con honor en el mundo     |
+| 382    | Muertes con honor en campos de batalla     |
+| 383    | Muertes con honor en la arena     |
+| 388    | Defensor de la ciudad     |
+| 389    | Maestro de la Arena Gurubashi     |
+| 393    | Torres defendidas en el Valle de Alterac     |
+| 394    | Torres capturadas en el Valle de Alterac     |
+| 395    | Banderas capturadas en la Garganta Grito de Guerra     |
+| 396    | Gran Maestro de la Arena Gurubashi     |
+| 397    | Entra en la arena     |
+| 398    | Despiadadamente entregado     |
+| 399    | Entre tú y yo: 1550     |
+| 400    | Entre tú y yo: 1750     |
+| 401    | Entre tú y yo: 2000     |
+| 402    | Tres son multitud: 1550     |
+| 403    | Tres son multitud: 1750     |
+| 404    | Choca esos cinco: 2000     |
+| 405    | Tres son multitud: 2000     |
+| 406    | Choca esos cinco: 1550     |
+| 407    | Choca esos cinco: 1750     |
+| 408    | Una buena racha     |
+| 409    | El último hombre en pie     |
+| 411    | Murky     |
+| 412    | Traje de múrloc     |
+| 414    | Empuñadura de Tyrael     |
+| 415    | Gran oso de Blizzard     |
+| 416    | Señor Escarabajo     |
+| 418    | Gladiador despiadado     |
+| 419    | Gladiador vengativo     |
+| 420    | Gladiador brutal     |
+| 424    | ¿Por qué? Porque es rojo     |
+| 425    | Atiesh, gran báculo del Guardián     |
+| 426    | Gujas de guerra de Azzinoth     |
+| 428    | Trueno furioso, espada bendita del Hijo del Viento     |
+| 429    | Sulfuras, Mano de Ragnaros     |
+| 430    | Oso de guerra Amani     |
+| 431    | Mano de A\'dal     |
+| 432    | Campeón de los naaru     |
+| 433    | Gran mariscal     |
+| 434    | Mariscal de campo     |
+| 435    | Comandante     |
+| 436    | Teniente coronel     |
+| 437    | Campeón caballero     |
+| 438    | Capitán caballero     |
+| 439    | Caballero     |
+| 440    | Alférez     |
+| 441    | Sargento primero     |
+| 442    | Soldado     |
+| 443    | Gran Señor de la Guerra     |
+| 444    | General     |
+| 445    | Señor de la Guerra     |
+| 446    | Gran general     |
+| 447    | Campeón     |
+| 448    | Centurión     |
+| 449    | Guardia de sangre     |
+| 450    | Capataz primero     |
+| 451    | Guardia de piedra     |
+| 452    | Gran capataz     |
+| 453    | Capataz     |
+| 454    | Rastreador     |
+| 456    | ¡Primero del reino! Destripador obsidiana     |
+| 457    | ¡Primero del reino con Nivel 80!     |
+| 458    | ¡Primero del reino! Pícaro nivel 80     |
+| 459    | ¡Primero del reino! Guerrero nivel 80     |
+| 460    | ¡Primero del reino! Mago nivel 80     |
+| 461    | ¡Primero del reino! Caballero de la Muerte nivel 80     |
+| 462    | ¡Primero del reino! Cazador nivel 80     |
+| 463    | ¡Primero del reino! Brujo nivel 80     |
+| 464    | ¡Primero del reino! Sacerdote nivel 80     |
+| 465    | ¡Primero del reino! Paladín nivel 80     |
+| 466    | ¡Primero del reino! Druida nivel 80     |
+| 467    | ¡Primero del reino! Chamán nivel 80     |
+| 468    | Bruto     |
+| 469    | Legionario     |
+| 470    | Cabo     |
+| 471    | Sargento     |
+| 472    | Teniente caballero     |
+| 473    | Mariscal     |
+| 477    | Fortaleza de Utgarde     |
+| 478    | El Nexo     |
+| 479    | La Matanza de Stratholme     |
+| 480    | Azjol-Nerub     |
+| 481    | Ahn’kahet: El Antiguo Reino     |
+| 482    | Fortaleza de Drak\'Tharon     |
+| 483    | El Bastión Violeta     |
+| 484    | Gundrak     |
+| 485    | Cámaras de Piedra     |
+| 486    | Cámaras de Relámpagos     |
+| 487    | El Oculus     |
+| 488    | Pináculo de Utgarde     |
+| 489    | Heroico: Fortaleza de Utgarde     |
+| 490    | Heroico: El Nexo     |
+| 491    | Heroico: Azjol-Nerub     |
+| 492    | Heroico: Ahn\'kahet: El Antiguo Reino     |
+| 493    | Heroico: La Fortaleza de Drak\'Tharon     |
+| 494    | Heroico: El Bastión Violeta     |
+| 495    | Heroico: Gundrak     |
+| 496    | Heroico: Cámaras de Piedra     |
+| 497    | Heroico: Cámaras de Relámpagos     |
+| 498    | Heroico: El Oculus     |
+| 499    | Heroico: El Pináculo de Utgarde     |
+| 500    | Heroico: La Matanza de Stratholme     |
+| 503    | 50 misiones completadas     |
+| 504    | 100 misiones completadas     |
+| 505    | 250 misiones completadas     |
+| 506    | 500 misiones completadas     |
+| 507    | 1000 misiones completadas     |
+| 508    | 1500 misiones completadas     |
+| 509    | 10000 muertes con honor     |
+| 512    | 5000 muertes con honor     |
+| 513    | 100 muertes con honor     |
+| 515    | 500 muertes con honor     |
+| 516    | 1000 muertes con honor     |
+| 518    | 30 reputaciones Exaltado     |
+| 519    | 25 reputaciones Exaltado     |
+| 520    | 20 reputaciones Exaltado     |
+| 521    | 15 reputaciones Exaltado     |
+| 522    | A alguien le gusto     |
+| 523    | 5 reputaciones Exaltado     |
+| 524    | 10 reputaciones Exaltado     |
+| 527    | Mayor golpe recibido     |
+| 528    | Daño total recibido     |
+| 529    | Mayoría de facciones en Honorable o superior     |
+| 545    | Cortar y peinar     |
+| 546    | Depósito seguro     |
+| 547    | Veterano de la Puerta de Cólera     |
+| 556    | Épico     |
+| 557    | Superior     |
+| 558    | Avaricioso     |
+| 559    | Necesitado     |
+| 560    | La presa más mortífera     |
+| 561    | El quebradero de cabeza de D.E.H.T.A     |
+| 562    | El Arrabal Arácnido (10 j.)     |
+| 563    | El Arrabal Arácnido (25 j.)     |
+| 564    | El Arrabal de los Ensamblajes (10 j.)     |
+| 565    | El Arrabal de los Ensamblajes (25 j.)     |
+| 566    | El Arrabal de la Peste (10 j.)     |
+| 567    | El Arrabal de la Peste (25 j.)     |
+| 568    | El Arrabal Militar (10 j.)     |
+| 569    | El Arrabal Militar (25 j.)     |
+| 572    | La muerte de Sapphiron (10 j.)     |
+| 573    | La muerte de Sapphiron (25 j.)     |
+| 574    | La derrota de Kel\'Thuzad (10 j.)     |
+| 575    | La derrota de Kel\'Thuzad (25 j.)     |
+| 576    | La caída de Naxxramas (10 j.)     |
+| 577    | La caída de Naxxramas (25 j.)     |
+| 578    | Los valientes (10 j.)     |
+| 579    | Los valientes (25 j.)     |
+| 582    | Estrella del Valle de Alterac     |
+| 583    | Estrella de la Cuenca de Arathi     |
+| 584    | Asesino de la Cuenca de Arathi     |
+| 585    | Banderas del Ojo de la Tormenta capturadas     |
+| 586    | Banderas devueltas en la Garganta Grito de Guerra     |
+| 587    | Asesino tormentoso     |
+| 588    | Muertes con honor     |
+| 589    | Mayor índice de equipo en grupos de 5 personas     |
+| 590    | Mayor índice de equipo en grupos de 3 personas     |
+| 593    | Muertes contra Vanndar Pico Tormenta     |
+| 594    | Muertes contra Hogger     |
+| 595    | Mayor índice personal en grupos de 3 personas     |
+| 596    | Mayor índice personal en grupos de 5 personas     |
+| 603    | Cólera de la Horda     |
+| 604    | Cólera de la Alianza     |
+| 605    | Una moneda de linaje     |
+| 606    | 5 monedas de linaje     |
+| 607    | 10 monedas de linaje     |
+| 608    | 25 monedas de linaje     |
+| 609    | 50 monedas de linaje     |
+| 610    | ¡Muerte al Jefe de Guerra!     |
+| 611    | Pezuña de Sangre sangrante     |
+| 612    | Abajo con la Dama Oscura     |
+| 613    | Asesinado en Quel\'Thalas     |
+| 614    | ¡Por la Alianza!     |
+| 615    | Asaltar Ventormenta     |
+| 616    | ¡Muerte al Rey!     |
+| 617    | Ya no es inmortal     |
+| 618    | Apagar la luz     |
+| 619    | ¡Por la Horda!     |
+| 621    | Representa     |
+| 622    | La caída del Tejehechizos (10 j.)     |
+| 623    | La caída del Tejehechizos (25 j.)     |
+| 624    | Menos es más (10 j.)     |
+| 625    | Vencer al Vuelo Negro (25 j.)     |
+| 626    | Las mejores para el Festival Lunar     |
+| 627    | Dun Morogh     |
+| 628    | Minas de la Muerte     |
+| 629    | Sima Ígnea     |
+| 630    | Cuevas de los Lamentos     |
+| 631    | Castillo de Colmillo Oscuro     |
+| 632    | Cavernas de Brazanegra     |
+| 633    | Mazmorras de Ventormenta     |
+| 634    | Gnomeregan     |
+| 635    | Horado Rajacieno     |
+| 636    | Zahúrda Rajacieno     |
+| 637    | Monasterio Escarlata     |
+| 638    | Uldaman     |
+| 639    | Zul\'Farrak     |
+| 640    | Maraudon     |
+| 641    | Templo Sumergido     |
+| 642    | Profundidades de Roca Negra     |
+| 643    | Cumbre de Roca Negra inferior     |
+| 644    | Rey de La Masacre     |
+| 645    | Scholomance     |
+| 646    | Stratholme     |
+| 647    | Murallas del Fuego Infernal     |
+| 648    | El Horno de Sangre     |
+| 649    | Recinto de los Esclavos     |
+| 650    | La Sotiénaga     |
+| 651    | Tumbas de Maná     |
+| 652    | La Fuga de Durnholde     |
+| 653    | Salas Sethekk     |
+| 654    | Laberinto de las Sombras     |
+| 655    | Apertura de El Portal Oscuro     |
+| 656    | La Cámara de Vapor     |
+| 657    | Las Salas Arrasadas     |
+| 658    | El Mechanar     |
+| 659    | El Invernáculo     |
+| 660    | El Arcatraz     |
+| 661    | Bancal del Magister     |
+| 662    | Edición de coleccionista: Mini Diablo     |
+| 663    | Edición de coleccionista: Panda     |
+| 664    | Edición de coleccionista: Zergling     |
+| 665    | Edición de coleccionista: Cría abisal     |
+| 666    | Criptas Auchenai     |
+| 667    | Heroico: Murallas del Fuego Infernal     |
+| 668    | Heroico: El Horno de Sangre     |
+| 669    | Heroico: El Recinto de los Esclavos     |
+| 670    | Heroico: La Sotiénaga     |
+| 671    | Heroico: Tumbas de Maná     |
+| 672    | Heroico: Criptas Auchenai     |
+| 673    | Heroico: La Fuga de Durnholde     |
+| 674    | Heroico: Salas Sethekk     |
+| 675    | Heroico: Laberinto de las Sombras     |
+| 676    | Heroico: Apertura de El Portal Oscuro     |
+| 677    | Heroico: La Cámara de Vapor     |
+| 678    | Heroico: Las Salas Arrasadas     |
+| 679    | Heroico: El Mechanar     |
+| 680    | Heroico: El Invernáculo     |
+| 681    | Heroico: El Arcatraz     |
+| 682    | Heroico: Bancal del Magister     |
+| 683    | Edición de coleccionista: Cría de vermis de escarcha     |
+| 684    | Guarida de Onyxia (Nivel 60)     |
+| 685    | Guarida de Alanegra     |
+| 686    | Núcleo de Magma     |
+| 687    | Templo de Ahn\'Qiraj     |
+| 688    | Zul\'Gurub     |
+| 689    | Ruinas de Ahn\'Qiraj     |
+| 690    | Karazhan     |
+| 691    | Zul\'Aman     |
+| 692    | Guarida de Gruul     |
+| 693    | Guarida de Magtheridon     |
+| 694    | Caverna Santuario Serpiente     |
+| 695    | La Batalla del Monte Hyjal     |
+| 696    | El Castillo de la Tempestad     |
+| 697    | El Templo Oscuro     |
+| 698    | Meseta de La Fuente del Sol     |
+| 699    | Ganador mundial     |
+| 700    | Libertad de la Horda     |
+| 701    | Libertad de la Alianza     |
+| 705    | Maestro armero     |
+| 706    | Aullador Lobo Gélido     |
+| 707    | Carnero de batalla Pico Tormenta     |
+| 708    | Héroe del clan Lobo Gélido     |
+| 709    | Héroe de la Guardia Pico Tormenta     |
+| 710    | El Rapiñador     |
+| 711    | Caballero de Arathor     |
+| 712    | Escolta Grito de Guerra     |
+| 713    | Centinela Ala de Plata     |
+| 714    | El conquistador     |
+| 725    | Thori\'dal, la furia de las estrellas     |
+| 726    | Caja de cigalas mágicas de Tenacitas     |
+| 727    | A mí la caballería     |
+| 728    | Durotar     |
+| 729    | Riendas de destrero de la muerte     |
+| 730    | Habilidades que pagan las facturas     |
+| 731    | Experto profesional     |
+| 732    | Artesano profesional     |
+| 733    | Maestro profesional     |
+| 734    | Gran maestro profesional     |
+| 735    | Trabajar día y noche     |
+| 736    | Mulgore     |
+| 750    | Los Baldíos     |
+| 752    | Muertes en Naxxramas     |
+| 753    | Cantidad media de oro obtenida cada día     |
+| 759    | Cantidad media de misiones diarias completadas cada día     |
+| 760    | Montañas de Alterac     |
+| 761    | Tierras Altas de Arathi     |
+| 762    | Embajador de la Horda     |
+| 763    | El cruzado ardiente     |
+| 764    | El cruzado ardiente     |
+| 765    | Tierras Inhóspitas     |
+| 766    | Las Tierras Devastadas     |
+| 768    | Claros de Tirisfal     |
+| 769    | Bosque de Argénteos     |
+| 770    | Tierras de la Peste del Oeste     |
+| 771    | Tierras de la Peste del Este     |
+| 772    | Laderas de Trabalomas     |
+| 773    | Las Tierras del Interior     |
+| 774    | La Garganta de Fuego     |
+| 775    | Las Estepas Ardientes     |
+| 776    | Bosque de Elwynn     |
+| 777    | Paso de la Muerte     |
+| 778    | Bosque del Ocaso     |
+| 779    | Loch Modan     |
+| 780    | Montañas Crestagrana     |
+| 781    | Vega de Tuercespina     |
+| 782    | Pantano de las Penas     |
+| 783    | La tormenta perfecta     |
+| 784    | Dominio en el Ojo de la Tormenta     |
+| 796    | Resucitado por sacerdotes     |
+| 798    | Renacer por druidas     |
+| 799    | Espíritu devuelto al cuerpo por chamanes     |
+| 800    | Redimido por paladines     |
+| 801    | Resucitado con piedras de alma     |
+| 802    | Páramos de Poniente     |
+| 811    | Frascos consumidos     |
+| 812    | Piedras de salud usadas     |
+| 829    | Mayor sanación recibida     |
+| 830    | Sanación total recibida     |
+| 837    | Arenas ganadas     |
+| 838    | Arenas jugadas     |
+| 839    | Campos de batalla jugados     |
+| 840    | Campos de batalla ganados     |
+| 841    | Los Humedales     |
+| 842    | Teldrassil     |
+| 843    | Tormenta Abisal     |
+| 844    | Costa Oscura     |
+| 845    | Vallefresno     |
+| 846    | Las Mil Agujas     |
+| 847    | Sierra Espolón     |
+| 848    | Desolace     |
+| 849    | Feralas     |
+| 850    | Marjal Revolcafango     |
+| 851    | Desierto de Tanaris     |
+| 852    | Azshara     |
+| 853    | Frondavil     |
+| 854    | Cráter de Un\'Goro     |
+| 855    | Claro de la Luna     |
+| 856    | Silithus     |
+| 857    | Cuna del Invierno     |
+| 858    | Tierras Fantasma     |
+| 859    | Bosque Canción Eterna     |
+| 860    | Isla Bruma Azur     |
+| 861    | Isla Bruma de Sangre     |
+| 862    | Península del Fuego Infernal     |
+| 863    | Marisma de Zangar     |
+| 864    | Valle Sombraluna     |
+| 865    | Montañas Filospada     |
+| 866    | Nagrand     |
+| 867    | Bosque de Terokkar     |
+| 868    | Isla de Quel\'Danas     |
+| 869    | 50000 muertes con honor     |
+| 870    | 100000 muertes con honor     |
+| 871    | ¡Adelante, Almirante!     |
+| 872    | Defensor frenético     |
+| 873    | Perfección Lobo Gélido     |
+| 875    | Vengativamente entregado     |
+| 876    | Brutalmente entregado     |
+| 877    | La tarta es de verdad     |
+| 878    | Este no se escapó     |
+| 879    | Montura a la antigua usanza     |
+| 880    | Tigre Zulian presto     |
+| 881    | Raptor Razzashi presto     |
+| 882    | Riendas de caballo de guerra ígneo     |
+| 883    | Riendas del Lord Cuervo     |
+| 884    | Halcón zancudo blanco presto     |
+| 885    | Cenizas de Al\'ar     |
+| 886    | Draco abisal presto     |
+| 887    | Draco abisal despiadado     |
+| 888    | Draco abisal vengativo     |
+| 889    | A todo gas     |
+| 890    | Hacia la azul y salvaje lejanía     |
+| 891    | ¡Arre!     |
+| 892    | Elegido para la gloria     |
+| 893    | Hipogrifo de guerra Cenarion     |
+| 894    | Sobrevolando Skettis     |
+| 896    | Una misión al día llena a los ogros de alegría     |
+| 897    | Resultas muy ofensivo     |
+| 898    | Sobre alas abisales     |
+| 899    | Qué guay, Kurenai     |
+| 900    | El zar de Esporaggar     |
+| 901    | Mag\'har de Draenor     |
+| 902    | Oficial jefe Exaltado     |
+| 903    | Shattrath dividida     |
+| 905    | Superar al Viejo Barlo     |
+| 906    | ¡Dale caña!     |
+| 907    | El justicar     |
+| 908    | ¡Llamamiento a las armas!     |
+| 909    | ¡Llamamiento a las armas!     |
+| 910    | Ancestros de las mazmorras     |
+| 911    | Ancestros de Kalimdor     |
+| 912    | Ancestros de los Reinos del Este     |
+| 913    | Honrar a los ancestros personales     |
+| 914    | Ancestros de la Horda     |
+| 915    | Ancestros de la Alianza     |
+| 916    | Muertes totales en banda (25 j.)     |
+| 917    | Muertes totales en banda (10 j.)     |
+| 918    | Muertes totales en mazmorras (5 j.)     |
+| 919    | Oro total ganado en subastas     |
+| 921    | Cantidad de oro recibido de vendedores     |
+| 922    | Pociones de maná consumidas     |
+| 923    | Elixires consumidos     |
+| 924    | Mayoría de facciones de Rasganorte a nivel Exaltado     |
+| 925    | Mayoría de facciones de Terrallende a nivel Exaltado     |
+| 926    | Mayoría de facciones de la Horda a nivel Exaltado     |
+| 927    | Objetos épicos equipados en ranuras     |
+| 928    | Ranuras adicionales compradas en el banco     |
+| 931    | Cantidad total de facciones encontradas     |
+| 932    | Veces totales en mazmorras (5 j.)     |
+| 933    | Veces totales en bandas (10 j.)     |
+| 934    | Veces totales en bandas (25 j.)     |
+| 937    | La bendición de Elune     |
+| 938    | Las nieves de Rasganorte     |
+| 939    | Montes como elekk blancos     |
+| 940    | Las verdes colinas de Tuercespina     |
+| 941    | Hemet Nesingwary: las misiones recopiladas     |
+| 942    | El diplomático     |
+| 943    | El diplomático     |
+| 944    | En ese túnel me adoran     |
+| 945    | El Campeón Argenta     |
+| 946    | El Alba Argenta     |
+| 947    | La Cruzada Argenta     |
+| 948    | Embajador de la Alianza     |
+| 949    | Colmillarrmagedón     |
+| 950    | Tribu Corazón Frenético     |
+| 951    | Los Oráculos     |
+| 952    | Mercenario de Sholazar     |
+| 953    | Guardián de Cenarius     |
+| 955    | Srs. del Agua de Hydraxis     |
+| 956    | Linaje de Nozdormu     |
+| 957    | Héroe de la tribu Zandalar     |
+| 958    | Pleitesía para los Juramorte     |
+| 959    | La Escama de las Arenas     |
+| 960    | El Ojo Violeta     |
+| 961    | Corazón Frenético honorario     |
+| 962    | Salvador de los Oráculos     |
+| 963    | Truco o trato en Kalimdor     |
+| 964    | ¿Bajas?     |
+| 965    | Truco o trato en Kalimdor     |
+| 966    | Truco o trato en los Reinos del Este     |
+| 967    | Truco o trato en los Reinos del Este     |
+| 968    | Truco o trato en Terrallende     |
+| 969    | Truco o trato en Terrallende     |
+| 970    | Truco o trato en Azeroth     |
+| 971    | Truco o trato en Azeroth     |
+| 972    | ¡Truco o trato!     |
+| 973    | 5 misiones diarias completadas     |
+| 974    | 50 misiones diarias completadas     |
+| 975    | 200 misiones diarias completadas     |
+| 976    | 500 misiones diarias completadas     |
+| 977    | 1000 misiones diarias completadas     |
+| 978    | 3000 misiones completadas     |
+| 979    | La tarea de la máscara     |
+| 980    | Riendas de Jinete decapitado     |
+| 981    | Esa deslumbrante sonrisa     |
+| 1005    | Conoce a tu enemigo     |
+| 1006    | Defensor de la ciudad     |
+| 1007    | El Acuerdo del Reposo del Dragón     |
+| 1008    | El Kirin Tor     |
+| 1009    | Caballeros de la Espada de Ébano     |
+| 1010    | Vanguardia de Rasganorte     |
+| 1011    | Los vientos del Norte     |
+| 1012    | Los vientos del Norte     |
+| 1014    | 35 reputaciones Exaltado     |
+| 1015    | 40 reputaciones Exaltado     |
+| 1017    | ¿Puedo quedármela?     |
+| 1020    | Diez tabardos     |
+| 1021    | Todo sobre los tabardos     |
+| 1022    | Celador de las llamas de los Reinos del Este     |
+| 1023    | Celador de las llamas de Kalimdor     |
+| 1024    | Celador de las llamas de Terrallende     |
+| 1025    | Vigilante de las llamas de los Reinos del Este     |
+| 1026    | Vigilante de las llamas de Kalimdor     |
+| 1027    | Vigilante de las llamas de Terrallende     |
+| 1028    | Apagar los Reinos del Este     |
+| 1029    | Apagar Kalimdor     |
+| 1030    | Apagar Terrallende     |
+| 1031    | Apagar los Reinos del Este     |
+| 1032    | Apagar Kalimdor     |
+| 1033    | Apagar Terrallende     |
+| 1034    | Los fuegos de Azeroth     |
+| 1035    | Profanación de la Horda     |
+| 1036    | Los fuegos de Azeroth     |
+| 1037    | Profanación de la Alianza     |
+| 1038    | El celador de las llamas     |
+| 1039    | El vigilante de las llamas     |
+| 1040    | Santificación podrida     |
+| 1041    | Santificación podrida     |
+| 1042    | Número de personajes abrazados     |
+| 1043    | Tiros por codicia para el botín     |
+| 1044    | Tiros por necesidad para el botín     |
+| 1045    | Veces que has animado     |
+| 1047    | Veces que te has tapado la cara     |
+| 1057    | Muertes en 2c2     |
+| 1065    | Veces que has hecho /saludar     |
+| 1066    | Veces que has hecho /jaja     |
+| 1067    | Veces que has tocado el violín más pequeño del mundo     |
+| 1068    | Muertes de Keli\'dan el Ultrajador (El Horno de Sangre)     |
+| 1069    | Muertes del príncipe-nexo Shaffar (Tumbas de maná)     |
+| 1070    | Muertes del cazador de Época (La Fuga de Durnholde)     |
+| 1071    | Muertes de Quagmirran (Recinto de los Esclavos)     |
+| 1072    | Muertes de la acechadora negra (La Sotiénaga)     |
+| 1073    | Muertes del exarca Maladaar (Criptas Auchenai)     |
+| 1074    | Muertes del Rey Garra Ikiss (Salas Sethekk)     |
+| 1075    | Muertes de Murmullo (Laberinto de las Sombras)     |
+| 1076    | Muertes de Aeonus (Apertura de El Portal Oscuro)     |
+| 1077    | Muertes del señor de la guerra Kalithresh (Cámara de Vapor)     |
+| 1078    | Muertes del Jefe de Guerra K. Garrafilada (Salas Arrasadas)     |
+| 1079    | Muertes de Pathaleon el Calculador (El Mechanar)     |
+| 1080    | Muertes del disidente de distorsión (El Invernáculo)     |
+| 1081    | Muertes del presagista Cieloriss (El Arcatraz)     |
+| 1082    | Muertes de Kael\'thas Caminante del Sol (Bancal del Magister)     |
+| 1083    | Muertes del príncipe Malchezaar (Karazhan)     |
+| 1084    | Muertes de Zul\'jin (Zul\'Aman)     |
+| 1085    | Muertes de Gruul (Guarida de Gruul)     |
+| 1086    | Muertes de Magtheridon (Guarida de Magtheridon)     |
+| 1087    | Muertes de Lady Vashj (Caverna Santuario Serpiente)     |
+| 1088    | Muertes de Kael\'thas Caminante del Sol (Castillo Tempestad)     |
+| 1089    | Muertes de Illidan Tempestira (El Templo Oscuro)     |
+| 1090    | Muertes de Kil\'jaeden (Meseta de La Fuente del Sol)     |
+| 1091    | Muertes de Edwin VanCleef (Minas de la Muerte)     |
+| 1092    | Muertes del archimago Arugal (Castillo de Colmillo Oscuro)     |
+| 1093    | Muertes del Comandante Escarlata Mograine (Mon. Escarlata)     |
+| 1094    | Muertes del jefe Ukorz Cabellarena (Zul\'Farrak)     |
+| 1095    | Muertes del Emperador D. Thaurissan (Prof. de Roca Negra)     |
+| 1096    | Muertes del General Drakkisath (Cumbre de Roca Negra)     |
+| 1097    | Muertes del Barón Osahendido (Stratholme)     |
+| 1098    | Muertes de Onyxia (Guarida de Onyxia)     |
+| 1099    | Muertes de Ragnaros (Núcleo de Magma)     |
+| 1100    | Muertes de Nefarian (Guarida de Alanegra)     |
+| 1101    | Muertes de C\'Thun (Templo de Ahn\'Qiraj)     |
+| 1102    | Muertes de Hakkar (Zul\'Gurub)     |
+| 1103    | Lich King: Mazmorras completadas (5 j.) (jefe final asesinado)     |
+| 1104    | Lich King: Bandas completadas (10 j.) (jefe final asesinado)     |
+| 1106    | Muertes en el Ojo de la Tormenta     |
+| 1107    | Muertes en 3c3     |
+| 1108    | Muertes en 5c5     |
+| 1109    | Muertes con honor en la arena 5c5     |
+| 1110    | Muertes con honor en la arena 3c3     |
+| 1111    | Muertes con honor en la arena 2c2     |
+| 1112    | Muertes con honor en el Ojo de la Tormenta     |
+| 1113    | Muertes con honor en el Valle de Alterac     |
+| 1114    | Muertes con honor en la Cuenca de Arathi     |
+| 1115    | Muertes con honor en la Garganta Grito de Guerra     |
+| 1125    | Venda más utilizada     |
+| 1145    | Rey del Festival de Fuego     |
+| 1146    | Cantidad de oro gastada en viajes     |
+| 1147    | Cantidad de oro gastado en peluquerías     |
+| 1148    | Cantidad de oro gastado en mensajes     |
+| 1149    | Cantidad de cambios del árbol de talentos     |
+| 1150    | Cantidad de oro gastado en cambiar el árbol de talentos     |
+| 1151    | Leal defensor     |
+| 1153    | Demasiado defensivo     |
+| 1157    | Duelicioso     |
+| 1159    | Entre tú y yo: 2200     |
+| 1160    | Tres son multitud: 2200     |
+| 1161    | Choca esos cinco: 2200     |
+| 1162    | Una racha mejor     |
+| 1164    | Todo cuenta     |
+| 1165    | Mi bolsa es \'\'gigantesca\'\'     |
+| 1166    | El que despoja manda     |
+| 1167    | Maestro del Valle de Alterac     |
+| 1168    | Maestro del Valle de Alterac     |
+| 1169    | Maestro de la Cuenca de Arathi     |
+| 1170    | Maestro de la Cuenca de Arathi     |
+| 1171    | Maestro del Ojo de la Tormenta     |
+| 1172    | Maestro de la Garganta Grito de Guerra     |
+| 1173    | Maestro de la Garganta Grito de Guerra     |
+| 1174    | El maestro de la arena     |
+| 1175    | Maestro de batalla     |
+| 1176    | Pienso en mi dinero     |
+| 1177    | Pienso en mi dinero     |
+| 1178    | Pienso en mi dinero     |
+| 1180    | Pienso en mi dinero     |
+| 1181    | Pienso en mi dinero     |
+| 1182    | El que trae el pan a casa     |
+| 1183    | La cerveza del año     |
+| 1184    | Una extraña cerveza     |
+| 1185    | La dieta de la Fiesta de la cerveza     |
+| 1186    | Abajo los Hierro Negro     |
+| 1187    | El Maestro de llaves     |
+| 1188    | ¡Pinchado!     |
+| 1189    | Ida a Fuego Infernal y vuelta     |
+| 1190    | Misterios de la Marisma     |
+| 1191    | Terror de Terokkar     |
+| 1192    | Embate de Nagrand     |
+| 1193    | Sobre el filo de la espada     |
+| 1194    | A la tormenta     |
+| 1195    | Sombra de El Traidor     |
+| 1197    | Muertes realizadas     |
+| 1198    | Cantidad de muertes que te han otorgado experiencia u honor     |
+| 1199    | Profesiones aprendidas     |
+| 1200    | Cantidad de habilidades secundarias al máximo nivel     |
+| 1201    | Cantidad de profesiones al máximo nivel     |
+| 1202    | Cantidad de habilidades con armas al máximo nivel     |
+| 1203    | Una extraña cerveza     |
+| 1205    | Héroe de Shattrath     |
+| 1206    | A todas las ardillas que he amado     |
+| 1225    | Pescador de Terrallende     |
+| 1229    | Revivido por druidas     |
+| 1231    | Muertes de Keristrasza (El Nexo)     |
+| 1232    | Muertes de Anub\'arak (Azjol-Nerub)     |
+| 1233    | Muertes del Heraldo Volazj (Ahn’kahet: El Antiguo Reino)     |
+| 1234    | Muertes del profeta Tharon\'ja (Fortaleza de Drak\'Tharon)     |
+| 1235    | Muertes de Cianigosa (El Bastión Violeta)     |
+| 1236    | Muertes de Gal\'darah (Gundrak)     |
+| 1237    | Muertes de Sjonnir el Afilador (Cámaras de Piedra)     |
+| 1238    | Muertes de Loken (Cámaras de Relámpagos)     |
+| 1239    | Muertes del Guardián-Ley Eregos (El Oculus)     |
+| 1240    | Muertes del Rey Ymiron (Pináculo de Utgarde)     |
+| 1241    | Derrotas de Mal\'Ganis (Cavernas del Tiempo: Stratholme)     |
+| 1242    | Muertes de Ingvar el Desvalijador (Fortaleza de Utgarde)     |
+| 1243    | Los peces no dejan huellas     |
+| 1244    | Erudito     |
+| 1248    | Plétora de mascotas     |
+| 1250    | Compra con cabeza, compra mascotas... con cabeza     |
+| 1251    | En mi casa no     |
+| 1252    | Defensor supremo     |
+| 1253    | Convertido en un necrófago     |
+| 1254    | ¿Amigo o enemigo?     |
+| 1255    | Avaricioso     |
+| 1257    | El carroñero     |
+| 1258    | Tómate un tranquilizante     |
+| 1259    | No tan deprisa     |
+| 1260    | Estupor de embriaguez     |
+| 1261    | Rabia C.H.U.C.H.E.G.     |
+| 1262    | Maestro cultural de Terrallende     |
+| 1263    | Fiordo Aquilonal     |
+| 1264    | Tundra Boreal     |
+| 1265    | Cementerio de Dragones     |
+| 1266    | Colinas Pardas     |
+| 1267    | Zul\'Drak     |
+| 1268    | Cuenca de Sholazar     |
+| 1269    | Las Cumbres Tormentosas     |
+| 1270    | Corona de Hielo     |
+| 1271    | Ida a Fuego Infernal y vuelta     |
+| 1272    | Terror de Terokkar     |
+| 1273    | Embate de Nagrand     |
+| 1274    | Maestro cultural de Terrallende     |
+| 1275    | Bombas fuera     |
+| 1276    | Bombardero de Filospada     |
+| 1277    | Defensa rápida     |
+| 1279    | Flirtear con el desastre     |
+| 1280    | Flirtear con el desastre     |
+| 1281    | El resplandor rojo del cohete     |
+| 1282    | Tra-la-la-la-Ogri\'la     |
+| 1283    | Maestro de mazmorra clásico     |
+| 1284    | Maestro de mazmorras de Terrallende     |
+| 1285    | Banda clásica     |
+| 1286    | Banda de Terrallende     |
+| 1287    | Héroe de mazmorra de Terrallende     |
+| 1288    | Maestro de mazmorra de Rasganorte     |
+| 1289    | Héroe de mazmorra de Rasganorte     |
+| 1291    | ¿Solo?     |
+| 1292    | Jarra de la Fiesta de la cerveza amarilla     |
+| 1293    | Jarra de la Fiesta de la cerveza azul     |
+| 1295    | Coches de choque     |
+| 1296    | Mira cómo muere     |
+| 1297    | Hadronox rechazado     |
+| 1298    | Tipos de vendas diferentes usados     |
+| 1299    | Poción de sanación más utilizada     |
+| 1300    | Pociones de salud diferentes usadas     |
+| 1301    | Poción de maná más utilizada     |
+| 1302    | Pociones de maná diferentes usadas     |
+| 1303    | Elixir más consumido     |
+| 1304    | Elixires diferentes usados     |
+| 1305    | Frasco más consumido     |
+| 1306    | Frascos diferentes usados     |
+| 1307    | Cumbre de Roca Negra superior     |
+| 1308    | Victoria en la Playa de los Ancestros     |
+| 1309    | Veterano de la Playa de los Ancestros     |
+| 1310    | Asalta la playa     |
+| 1311    | Bastante exótica     |
+| 1312    | Sangrientamente exóticas     |
+| 1336    | Tipo de criatura que has matado más veces     |
+| 1337    | Tipos de criaturas diferentes que has matado     |
+| 1339    | Portal de mago que más veces has atravesado     |
+| 1356    | He paseado por el Fiordo     |
+| 1357    | Mi furia por las pardas     |
+| 1358    | La Tundra no tiene nada de aburrida     |
+| 1359    | El poder del Cementerio de Dragones     |
+| 1360    | Maestro cultural de Rasganorte     |
+| 1361    | Muertes de Anub\'Rekhan (Naxxramas 10 j.)     |
+| 1362    | Muertes de la Gran Viuda Faerlina (Naxxramas 10 j.)     |
+| 1363    | Muertes de Maexxna (Naxxramas 10 j.)     |
+| 1364    | Muertes de Remendejo (Naxxramas 10 j.)     |
+| 1365    | Muertes de Noth el Pesteador (Naxxramas 10 j.)     |
+| 1366    | Muertes de Gothik el Cosechador (Naxxramas 10 j.)     |
+| 1367    | Muertes de Remendejo (Naxxramas 25 j.)     |
+| 1368    | Muertes de Anub\'Rekhan (Naxxramas 25 j.)     |
+| 1369    | Muertes de Heigan el Impuro (Naxxramas 10 j.)     |
+| 1370    | Muertes de Loatheb (Naxxramas 10 j.)     |
+| 1371    | Muertes de Grobbulus (Naxxramas 10 j.)     |
+| 1372    | Muertes de Gluth (Naxxramas 10 j.)     |
+| 1373    | Muertes de Thaddius (Naxxramas 10 j.)     |
+| 1374    | Muertes del Instructor Razuvious (Naxxramas 10 j.)     |
+| 1375    | Muertes de Los Cuatro Jinetes (Naxxramas 10 j.)     |
+| 1376    | Muertes de Sapphiron (Naxxramas 10 j.)     |
+| 1377    | Muertes de Kel\'Thuzad (Naxxramas 10 j.)     |
+| 1378    | Muertes de Gluth (Naxxramas 25 j.)     |
+| 1379    | Muertes de Gothik el Cosechador (Naxxramas 25 j.)     |
+| 1380    | Muertes de la Gran Viuda Faerlina (Naxxramas 25 j.)     |
+| 1381    | Muertes de Grobbulus (Naxxramas 25 j.)     |
+| 1382    | Muertes de Heigan el Impuro (Naxxramas 25 j.)     |
+| 1383    | Muertes de Los Cuatro Jinetes (Naxxramas 25 j.)     |
+| 1384    | Muertes del Instructor Razuvious (Naxxramas 25 j.)     |
+| 1385    | Muertes de Loatheb (Naxxramas 25 j.)     |
+| 1386    | Muertes de Maexxna (Naxxramas 25 j.)     |
+| 1387    | Muertes de Noth el Pesteador (Naxxramas 25 j.)     |
+| 1388    | Muertes de Thaddius (Naxxramas 25 j.)     |
+| 1389    | Muertes de Sapphiron (Naxxramas 25 j.)     |
+| 1390    | Muertes de Kel\'Thuzad (Naxxramas 25 j.)     |
+| 1391    | Muertes de Malygos (10 j.)     |
+| 1392    | Muertes de Sartharion (Cámara de los Aspectos 10 j.)     |
+| 1393    | Muertes de Sartharion (Cámara de los Aspectos 25 j.)     |
+| 1394    | Muertes de Malygos (25 j.)     |
+| 1396    | Ancestros de Rasganorte     |
+| 1400    | ¡Primero del reino! Buscador de magia     |
+| 1402    | ¡Primero del reino! Conquistador de Naxxramas     |
+| 1404    | ¡Primero del reino! Gnomo nivel 80     |
+| 1405    | ¡Primero del reino! Elfo de sangre nivel 80     |
+| 1406    | ¡Primero del reino! Draenei nivel 80     |
+| 1407    | ¡Primero del reino! Enano nivel 80     |
+| 1408    | ¡Primero del reino! Humano nivel 80     |
+| 1409    | ¡Primero del reino! Elfo de la noche nivel 80     |
+| 1410    | ¡Primero del reino! Orco nivel 80     |
+| 1411    | ¡Primero del reino! Tauren nivel 80     |
+| 1412    | ¡Primero del reino! Trol nivel 80     |
+| 1413    | ¡Primero del reino! Renegado nivel 80     |
+| 1414    | ¡Primero del reino! Gran maestro Herrero     |
+| 1415    | ¡Primero del reino! Gran maestro Alquimista     |
+| 1416    | ¡Primero del reino! Gran maestro Cocinero     |
+| 1417    | ¡Primero del reino! Gran maestro Encantador     |
+| 1418    | ¡Primero del reino! Gran maestro Ingeniero     |
+| 1419    | ¡Primero del reino! Gran maestro en Primeros auxilios     |
+| 1420    | ¡Primero del reino! Gran maestro Pescador     |
+| 1421    | ¡Primero del reino! Gran maestro Herborista     |
+| 1422    | ¡Primero del reino! Gran maestro Escriba     |
+| 1423    | ¡Primero del reino! Gran maestro Joyero     |
+| 1424    | ¡Primero del reino! Gran maestro Peletero     |
+| 1425    | ¡Primero del reino! Gran maestro Minero     |
+| 1426    | ¡Primero del reino! Gran maestro Desollador     |
+| 1427    | ¡Primero del reino! Gran maestro Sastre     |
+| 1428    | Barredor de minas     |
+| 1436    | Amigos en lugares altos     |
+| 1456    | Peces y otras cosas pescadas     |
+| 1457    | Bosque Canto de Cristal     |
+| 1458    | Continente con más número de muertes con honor     |
+| 1462    | Distintivos de justicia adquiridos     |
+| 1463    | ¡Primero del reino! Vanguardia de Rasganorte     |
+| 1464    | Emblemas de heroísmo adquiridos     |
+| 1465    | Emblemas de valor adquiridos     |
+| 1466    | Mayoría de facciones de la Alianza a nivel Exaltado     |
+| 1467    | Lich King: Jefes asesinados (5 j.)     |
+| 1485    | Lich King: Jefes diferentes asesinados (5 j.)     |
+| 1486    | Muertes con honor en la Playa de los Ancestros     |
+| 1487    | Golpes de gracia     |
+| 1488    | Golpes de gracia del mundo     |
+| 1489    | Continente con más número de golpes de gracia     |
+| 1490    | Golpes de gracia en la arena     |
+| 1491    | Golpes de gracia en campos de batalla     |
+| 1492    | Golpes de gracia en la arena 2c2     |
+| 1493    | Golpes de gracia en la arena 3c3     |
+| 1494    | Golpes de gracia en la arena 5c5     |
+| 1495    | Golpes de gracia en el Valle de Alterac     |
+| 1496    | Golpes de gracia en la Cuenca de Arathi     |
+| 1497    | Golpes de gracia en la Garganta Grito de Guerra     |
+| 1498    | Golpes de gracia en el Ojo de la Tormenta     |
+| 1499    | Golpes de gracia en la Playa de los Ancestros     |
+| 1500    | Muertes en la Playa de los Ancestros     |
+| 1501    | Veces que te han matado otros jugadores     |
+| 1502    | Captura rápida     |
+| 1504    | Muertes de Ingvar el Desvalijador (Fortaleza de Utgarde H.)     |
+| 1505    | Muertes de Keristrasza (El Nexo H.)     |
+| 1506    | Muertes de Anub\'arak (Azjol-Nerub H.)     |
+| 1507    | Muertes del Heraldo Volazj (Ahn\'Kahet: El Antiguo Reino H.)     |
+| 1508    | Muertes del profeta Tharon\'ja (Fortaleza de Drak\'Tharon H.)     |
+| 1509    | Muertes de Cianigosa (El Bastión Violeta H.)     |
+| 1510    | Muertes de Gal\'darah (Gundrak H.)     |
+| 1511    | Muertes de Sjonnir el Afilador (Cámaras de Piedra H.)     |
+| 1512    | Muertes de Loken (Cámaras de Relámpagos H.)     |
+| 1513    | Muertes del Guardián-Ley Eregos (El Oculus H.)     |
+| 1514    | Muertes del Rey Ymiron (Pináculo de Utgarde H.)     |
+| 1515    | Derrotas de Mal\'Ganis (Cavernas del Tiempo H.: Stratholme)     |
+| 1516    | El mejor pescador     |
+| 1517    | Pescador de Rasganorte     |
+| 1518    | Peces pescados     |
+| 1519    | Habilidad en pesca     |
+| 1524    | Habilidad en cocina     |
+| 1525    | Misiones de cocina diarias completadas     |
+| 1526    | Misiones de pesca diarias completadas     |
+| 1527    | Habilidad en alquimia mayor     |
+| 1532    | Habilidad en herrería mayor     |
+| 1535    | Habilidad en encantamiento mayor     |
+| 1536    | Habilidad en peletería mayor     |
+| 1537    | Habilidad en minería mayor     |
+| 1538    | Habilidad en herboristería mayor     |
+| 1539    | Habilidad en inscripción mayor     |
+| 1540    | Habilidad en joyería mayor     |
+| 1541    | Habilidad en desuello mayor     |
+| 1542    | Habilidad en sastrería mayor     |
+| 1544    | Habilidad en ingeniería mayor     |
+| 1545    | Encuentros en el Círculo del Valor     |
+| 1546    | Victorias en el Círculo del Valor     |
+| 1547    | Encuentros en las Cloacas de Dalaran     |
+| 1548    | Victorias en las Cloacas de Dalaran     |
+| 1549    | Batallas en la Playa de los Ancestros     |
+| 1550    | Victorias en la Playa de los Ancestros     |
+| 1552     | Petardo frenético     |
+| 1556     | 25 peces     |
+| 1557     | 50 peces     |
+| 1558     | 100 peces     |
+| 1559     | 250 peces     |
+| 1560     | 500 peces     |
+| 1561     | 1000 peces     |
+| 1563     | Felicita al cocinero     |
+| 1576     | De sangre y angustia     |
+| 1596     | Gurú de Drakuru     |
+| 1636     | Tabardo de competidor     |
+| 1637     | Espíritu de competición     |
+| 1638     | Devastado     |
+| 1656     | Santificado sea tu nombre     |
+| 1657     | Santificado sea tu nombre     |
+| 1658     | Campeón de los baldíos helados     |
+| 1676     | Maestro cultural de los Reinos del Este     |
+| 1677     | Maestro cultural de los Reinos del Este     |
+| 1678     | Maestro cultural de Kalimdor     |
+| 1680     | Maestro cultural de Kalimdor     |
+| 1681     | El maestro cultural     |
+| 1682     | El maestro cultural     |
+| 1683     | Maestro cervecero     |
+| 1684     | Maestro cervecero     |
+| 1685     | Hermanos antes del ho ho ho     |
+| 1686     | Hermanos antes del ho ho ho     |
+| 1687     | ¡Que nieve!     |
+| 1688     | El gourmet del Festival de Invierno     |
+| 1689     | Sabrá si has sido malo     |
+| 1690     | Meneíto helado     |
+| 1691     | Juerguista     |
+| 1692     | Juerguista     |
+| 1693     | Loco de amor     |
+| 1694     | La preciosa suerte está de tu lado     |
+| 1695     | Amor peligroso     |
+| 1696     | El resplandor rosa del cohete     |
+| 1697     | La nación de la adoración     |
+| 1698     | La nación de la adoración     |
+| 1699     | Puñado de amor     |
+| 1700     | Pies Rápidos permanentes     |
+| 1701     | ¡Sé mío!     |
+| 1702     | Goloso     |
+| 1703     | Mi amor es como una rosa roja     |
+| 1704     | Me apiadé del loco     |
+| 1705     | Robot cohete de cuerda     |
+| 1706     | Coche de carreras triturador     |
+| 1707     | Loco de amor     |
+| 1716     | Campo de batalla con más número de golpes de gracia     |
+| 1717     | Victoria en Conquista del Invierno     |
+| 1718     | Veterano de Conquista del Invierno     |
+| 1719     | Campo de batalla con más número de muertes con honor     |
+| 1721     | Archavon el Vigía de Piedra (25j.)     |
+| 1722     | Archavon el Vigía de Piedra (10 j.)     |
+| 1723     | Matanza de gnomos rodada     |
+| 1727     | La torre inclinada     |
+| 1729     | Recetas de alquimia conocidas     |
+| 1730     | Diseños de herrería conocidos     |
+| 1734     | Esquemas de ingeniería conocidos     |
+| 1735     | Inscripciones conocidas     |
+| 1737     | Derbi destructivo     |
+| 1738     | Diseños de joyería conocidos     |
+| 1740     | Patrones de peletería conocidos     |
+| 1741     | Patrones de sastrería conocidos     |
+| 1745     | Recetas de cocina conocidas     |
+| 1748     | Manuales de primeros auxilios estudiados     |
+| 1751     | No tenían posibilidades     |
+| 1752     | Maestro de Conquista del Invierno     |
+| 1753     | Muertes de Archavon el Vigía de Piedra (Conquista del Invierno 10 j.)     |
+| 1754     | Muertes de Archavon el Vigía de Piedra (Conquista del Invierno 25 j.)     |
+| 1755     | En nuestras manos     |
+| 1756     | Lich King: Jefes asesinados (25 j.)     |
+| 1757     | Defensa de los Ancestros     |
+| 1759     | Lich King: Jefes diferentes asesinados (25 j.)     |
+| 1760     | Lich King: Jefe asesinado más veces (25 j.)     |
+| 1761     | El zapador activo     |
+| 1762     | Sin un rasguño     |
+| 1763     | Veterano artillero     |
+| 1764     | ¡Suéltalo!     |
+| 1765     | Manos firmes     |
+| 1766     | Protector de los Ancestros     |
+| 1768     | Lich King: Bandas completadas (25 j.) (jefe final asesinado)     |
+| 1770     | Lich King: Jefes asesinados (10 j.)     |
+| 1771     | Lich King: Jefes diferentes asesinados (10 j.)     |
+| 1772     | Lich King: Jefe asesinado más veces (10 j.)     |
+| 1773     | Bebida más consumida     |
+| 1774     | Bebidas diferentes consumidas     |
+| 1775     | Comidas diferentes consumidas     |
+| 1776     | Comida más consumida     |
+| 1777     | El gourmet de Rasganorte     |
+| 1778     | El gourmet de Rasganorte     |
+| 1779     | El gourmet de Rasganorte     |
+| 1780     | Secundar esa emoción     |
+| 1781     | Coleccionista de alimañas     |
+| 1782     | Nuestro pan de cada día     |
+| 1783     | Nuestro pan de cada día     |
+| 1784     | Felicita al cocinero     |
+| 1785     | Cena imposible     |
+| 1786     | Escuela de buenos golpes     |
+| 1788     | Mal ejemplo     |
+| 1789     | Faenas diarias     |
+| 1790     | ¡Saluda al rey, pequeño!     |
+| 1791     | Solo en casa     |
+| 1792     | Mira qué monada     |
+| 1793     | Para los niños     |
+| 1795     | Cocinillas     |
+| 1796     | Cocinerillo de tres al cuarto     |
+| 1797     | Chef encargado     |
+| 1798     | Asistente de chef     |
+| 1799     | Chef de cocina     |
+| 1800     | El gourmet de Terrallende     |
+| 1801     | Cerveza del capitán Rumsey     |
+| 1816     | Indefensa     |
+| 1817     | Matar el tiempo     |
+| 1832     | Sabe a pollo     |
+| 1833     | Es la hora feliz en algún lugar     |
+| 1834     | Descarga de relámpago     |
+| 1836     | El viejo Astuto     |
+| 1837     | El viejo Quijahierro     |
+| 1856     | Hazle un buen remiendo (10 j.)     |
+| 1857     | Hazle un buen remiendo (25 j.)     |
+| 1858     | Aracnofobia (10 j.)     |
+| 1859     | Aracnofobia (25 j.)     |
+| 1860     | ¡Me voy de aquí!     |
+| 1862     | La rápida muerte de Volazj     |
+| 1864     | ¿Quéck pasa aquí?     |
+| 1865     | ¡Encerrados!     |
+| 1866     | ¡Qué pena!     |
+| 1867     | Muerte calculada     |
+| 1868     | Haz que cuente     |
+| 1869     | El dedo en la llaga (10 j.)     |
+| 1870     | El dedo en la llaga (25 j.)     |
+| 1871     | Jinete de dracos experto     |
+| 1872     | ¡Fiesta de zombis!     |
+| 1873     | Tralarí, tralarí, nos encanta Skadi     |
+| 1874     | No tenemos toda la eternidad (10 j.)     |
+| 1875     | No tenemos toda la eternidad (25 j.)     |
+| 1876     | Vencer al Vuelo Negro (10 j.)     |
+| 1877     | Menos es más (25 j.)     |
+| 1919     | Con hielo     |
+| 1936     | ¿Es persistente tu wolpertinger?     |
+| 1956     | Conocimiento superior     |
+| 1957     | Hay oro en esa fuente de ahí     |
+| 1958     | Aquí huele a rata gigante     |
+| 1976     | Premios de cocina de Dalaran recibidos     |
+| 1977     | Muestras de joyero de Dalaran recibidas     |
+| 1996     | Baila por tu vida (10 j.)     |
+| 1997     | Mamá me dijo que te pegara (10 j.)     |
+| 1998     | Premio de cocina de Dalaran     |
+| 1999     | 10 Premios de cocina de Dalaran     |
+| 2000     | 25 Premios de cocina de Dalaran     |
+| 2001     | 50 Premios de cocina de Dalaran     |
+| 2002     | 100 Premios de cocina de Dalaran     |
+| 2016     | Veterano Pardo     |
+| 2017     | Veterano Pardo     |
+| 2018     | Previsiones Tiemporeja     |
+| 2019     | Prueba de defunción     |
+| 2036     | Frío intenso     |
+| 2037     | La teoría del caos     |
+| 2038     | Respeta a tus mayores     |
+| 2039     | Antes muerto…     |
+| 2040     | Menos Moorabi     |
+| 2041     | Deshidratación     |
+| 2042     | Antipedacitos     |
+| 2043     | La increíble mole     |
+| 2044     | Vacío rubí     |
+| 2045     | Vacío esmeralda     |
+| 2046     | Vacío ámbar     |
+| 2047     | Me voy cuando el volcán entre en erupción (10 j.)     |
+| 2048     | Me voy cuando el volcán entre en erupción (25 j.)     |
+| 2049     | Ayuda crepuscular (10 j.)     |
+| 2050     | Dúo crepuscular (10 j.)     |
+| 2051     | La Dimensión desconocida (10 j.)     |
+| 2052     | Ayuda crepuscular (25 j.)     |
+| 2053     | Dúo crepuscular (25 j.)     |
+| 2054     | La Dimensión desconocida (25 j.)     |
+| 2056     | Trabajo de voluntario     |
+| 2057     | Oh, ¡Novos!     |
+| 2058     | Serpientes. ¿Por qué serpientes?     |
+| 2076     | Oso marrón acorazado     |
+| 2077     | Mamut lanudo     |
+| 2078     | Mamut de tundra viajero     |
+| 2079     | Tabardo del protector     |
+| 2080     | Mamut de guerra negro     |
+| 2081     | Gran mamut de guerra negro     |
+| 2082     | Mamut de hielo     |
+| 2083     | Gran mamut de hielo     |
+| 2084     | Anillo del Kirin Tor     |
+| 2085     | 50 fragmentos de vigilante de piedra     |
+| 2086     | 100 fragmentos de vigilante de piedra     |
+| 2087     | 250 fragmentos de vigilante de piedra     |
+| 2088     | 500 fragmentos de vigilante de piedra     |
+| 2089     | 1000 fragmentos de vigilante de piedra     |
+| 2090     | Contendiente     |
+| 2091     | Gladiador     |
+| 2092     | Duelista     |
+| 2093     | Rival     |
+| 2094     | La fuente de los deseos     |
+| 2095     | Plata en la ciudad     |
+| 2096     | El maestro de las monedas     |
+| 2097     | ¡Móntate en la chopper!     |
+| 2116     | Tabardo de El Alba Argenta     |
+| 2136     | La gloria del héroe     |
+| 2137     | La gloria del asaltante (10 j.)     |
+| 2138     | La gloria del asaltante (25 j.)     |
+| 2139     | Baila por tu vida (25 j.)     |
+| 2140     | Mamá me dijo que te pegara (25 j.)     |
+| 2141     | Vigilante de establos     |
+| 2142     | Llenar el establo     |
+| 2143     | Liderar la caballería     |
+| 2144     | Ha sido un largo y raro viaje     |
+| 2145     | Ha sido un largo y raro viaje     |
+| 2146     | El club de los Cien (10 j.)     |
+| 2147     | El club de los Cien (25 j.)     |
+| 2148     | Rechazar al sucesor (10 j.)     |
+| 2149     | Rechazar al sucesor (25 j.)     |
+| 2150     | Doble personalidad     |
+| 2151     | Cruce de consumiciones     |
+| 2152     | Compartir el amor     |
+| 2153     | Un baile con el vacío     |
+| 2154     | Brann totalmente nuevo     |
+| 2155     | Abusar de los mocos     |
+| 2156     | A mi chica le encanta Skadi     |
+| 2157     | La pesadilla del Rey     |
+| 2176     | Y todos caerán a la misma vez (10 j.)     |
+| 2177     | Y todos caerán a la misma vez (25 j.)     |
+| 2178     | ¡Electrificante! (10 j.)     |
+| 2179     | ¡Electrificante! (25 j.)     |
+| 2180     | Sustraer (10 j.)     |
+| 2181     | Sustraer (25 j.)     |
+| 2182     | Perder las esporas (10 j.)     |
+| 2183     | Perder las esporas (25 j.)     |
+| 2184     | Nunca es suficiente (10 j.)     |
+| 2185     | Nunca es suficiente (25 j.)     |
+| 2186     | Los inmortales     |
+| 2187     | Los indestructibles     |
+| 2188     | ¡Leeeeeeeeeeeeeroy!     |
+| 2189     | Experto artillero     |
+| 2190     | ¡Suéltalo ahora!     |
+| 2191     | Protector del Patio de los Ancestros     |
+| 2192     | Sin un rasguño     |
+| 2193     | Experto en explosivos     |
+| 2194     | Maestro de la Playa de los Ancestros     |
+| 2195     | Maestro de la Playa de los Ancestros     |
+| 2199     | Forestal de Conquista del Invierno     |
+| 2200     | Defensa de los Ancestros     |
+| 2216     | Lich King: Jefe más mortífero (5 j.)     |
+| 2217     | Lich King: Jefe más mortífero (10 j.)     |
+| 2218     | Lich King: Jefe más mortífero (25 j.)     |
+| 2219     | Muertes totales en mazmorras heroicas (5 j.)     |
+| 2256     | Expuesto a Rasganorte     |
+| 2257     | Congelado     |
+| 2277     | Invocaciones aceptadas     |
+| 2316     | Draco abisal brutal     |
+| 2336     | Demente supereminente     |
+| 2357     | Corcel nefasto xorothiano     |
+| 2358     | Destrero     |
+| 2359     | Forma de vuelo presto     |
+| 2396     | Campo de batalla jugado más veces     |
+| 2397     | Campo de batalla ganado más veces     |
+| 2398     | 4º aniversario de WoW     |
+| 2416     | Huevo duro     |
+| 2417     | ¡Chocolateee!     |
+| 2418     | Chocohólico     |
+| 2419     | La primavera, la sangre altera     |
+| 2420     | Jardín Noble     |
+| 2421     | Jardín Noble     |
+| 2422     | Sacude las orejitas     |
+| 2436     | Rosa del desierto     |
+| 2456     | Cazador de vampiros     |
+| 2476     | Derbi destructivo     |
+| 2496     | El quinto elemento     |
+| 2497     | La primavera, la sangre altera     |
+| 2516     | Caza menor     |
+| 2536     | Un montón de monturas     |
+| 2537     | Un montón de monturas     |
+| 2556     | Control de plagas     |
+| 2557     | A todas las ardillas de mi vida     |
+| 2576     | El sonrojo de la novia     |
+| 2596     | Muertes de Baldomero     |
+| 2676     | ¡He encontrado uno!     |
+| 2716     | Doble especialización de talentos     |
+| 2756     | Aspiración Argenta     |
+| 2758     | Valor Argenta     |
+| 2760     | Campeón Exaltado de Darnassus     |
+| 2761     | Campeón Exaltado de El Exodar     |
+| 2762     | Campeón Exaltado de Gnomeregan     |
+| 2763     | Campeón Exaltado de Forjaz     |
+| 2764     | Campeón Exaltado de Ventormenta     |
+| 2765     | Campeón Exaltado de Orgrimmar     |
+| 2766     | Campeón Exaltado de Sen\'jin     |
+| 2767     | Campeón Exaltado de Ciudad de Lunargenta     |
+| 2768     | Campeón Exaltado de Cima del Trueno     |
+| 2769     | Campeón Exaltado de Entrañas     |
+| 2770     | Campeón Exaltado de la Alianza     |
+| 2771     | Campeón Exaltado de la Horda     |
+| 2772     | ¡Lanza en ristre!     |
+| 2773     | Solo es una herida superficial     |
+| 2776     | Maestro de Conquista del Invierno     |
+| 2777     | Campeón de Darnassus     |
+| 2778     | Campeón de El Exodar     |
+| 2779     | Campeón de Gnomeregan     |
+| 2780     | Campeón de Forjaz     |
+| 2781     | Campeón de Ventormenta     |
+| 2782     | Campeón de la Alianza     |
+| 2783     | Campeón de Orgrimmar     |
+| 2784     | Campeón de Sen\'jin     |
+| 2785     | Campeón de Ciudad de Lunargenta     |
+| 2786     | Campeón de Cima del Trueno     |
+| 2787     | Campeón de Entrañas     |
+| 2788     | Campeón de la Horda     |
+| 2796     | La cerveza del mes     |
+| 2797     | Jardinero Noble     |
+| 2798     | Jardinero Noble     |
+| 2816     | Campeón Argenta Exaltado de la Horda     |
+| 2817     | Campeón Argenta Exaltado de la Alianza     |
+| 2836     | Lanzalote     |
+| 2856     | Muertes del Leviatán de llamas (Ulduar 10 j.)     |
+| 2857     | Muertes de Tajoescama (Ulduar 10 j.)     |
+| 2858     | Muertes de Ignis el Maestro de la Caldera (Ulduar 10 j.)     |
+| 2859     | Muertes del Desarmador XA-002 (Ulduar 10 j.)     |
+| 2860     | Muertes de la Asamblea de Hierro (Ulduar 10 j.)     |
+| 2861     | Muertes de Kologarn (Ulduar 10 j.)     |
+| 2862     | Victorias sobre Hodir (Ulduar 10 j.)     |
+| 2863     | Victorias sobre Thorim (Ulduar 10 j.)     |
+| 2864     | Victorias sobre Freya (Ulduar 10 j.)     |
+| 2865     | Victorias sobre Mimiron (Ulduar 10 j.)     |
+| 2866     | Muertes del general Vezax (Ulduar 10 j.)     |
+| 2867     | Muertes de Algalon el Observador (Ulduar 10 j.)     |
+| 2868     | Muertes de Auriaya (Ulduar 10 j.)     |
+| 2869     | Muertes de Yogg-Saron (Ulduar 10 j.)     |
+| 2870     | Muertes de Emalon el Vigía de la Tormenta (Conquista del Invierno 10 j.)     |
+| 2872     | Muertes del Leviatán de llamas (Ulduar 25 j.)     |
+| 2873     | Muertes de Tajoescama (Ulduar 25 j.)     |
+| 2874     | Muertes de Ignis el Maestro de la Caldera (Ulduar 25 j.)     |
+| 2875     | Muertes de Kologarn (Ulduar 25 j.)     |
+| 2879     | Victorias sobre Mimiron (Ulduar 25 j.)     |
+| 2880     | Muertes del general Vezax (Ulduar 25 j.)     |
+| 2881     | Muertes de Algalon el Observador (Ulduar 25 j.)     |
+| 2882     | Muertes de Auriaya (Ulduar 25 j.)     |
+| 2883     | Muertes de Yogg-Saron (Ulduar 25 j.)     |
+| 2884     | Muertes del Desarmador XA-002 (Ulduar 25 j.)     |
+| 2885     | Muertes de la Asamblea de Hierro (Ulduar 25 j.)     |
+| 2886     | El asedio de Ulduar (10 j.)     |
+| 2887     | El asedio de Ulduar (25 j.)     |
+| 2888     | La Antecámara de Ulduar (10 j.)     |
+| 2889     | La Antecámara de Ulduar (25 j.)     |
+| 2890     | Los vigilantes de Ulduar (10 j.)     |
+| 2891     | Los vigilantes de Ulduar (25 j.)     |
+| 2892     | El Descenso a la Locura (10 j.)     |
+| 2893     | El Descenso a la Locura (25 j.)     |
+| 2894     | Los secretos de Ulduar (10 j.)     |
+| 2895     | Los secretos de Ulduar (25 j.)     |
+| 2903     | Campeón de Ulduar     |
+| 2904     | Conquistador de Ulduar     |
+| 2905     | Irrompible (10 j.)     |
+| 2906     | Irrompible (25 j.)     |
+| 2907     | Garaje de tres plazas (10 j.)     |
+| 2908     | Garaje de tres plazas (25 j.)     |
+| 2909     | Derribad esas torretas (10 j.)     |
+| 2910     | Derribad esas torretas (25 j.)     |
+| 2911     | Cerrado (10 j.)     |
+| 2912     | Cerrado (25 j.)     |
+| 2913     | Bombardeo orbital (10 j.)     |
+| 2914     | Devastación orbital (10 j.)     |
+| 2915     | Bombardeo atómico orbital (10 j.)     |
+| 2916     | Devastación orbital (25 j.)     |
+| 2917     | Bombardeo atómico orbital (25 j.)     |
+| 2918     | Bombardeo orbital (25 j.)     |
+| 2919     | Un afeitado rápido (10 j.)     |
+| 2921     | Un afeitado rápido (25 j.)     |
+| 2923     | Enano férreo, poco hecho (10 j.)     |
+| 2924     | Enano férreo, poco hecho (25 j.)     |
+| 2925     | Arrasado (10 j.)     |
+| 2926     | Arrasado (25 j.)     |
+| 2927     | Horneado (10 j.)     |
+| 2928     | Horneado (25 j.)     |
+| 2929     | Avivar las llamas (25 j.)     |
+| 2930     | Avivar las llamas (10 j.)     |
+| 2931     | Apoca la ingeniería (10 j.)     |
+| 2932     | Apoca la ingeniería (25 j.)     |
+| 2933     | Apoca robots chatarra (10 j.)     |
+| 2934     | Apoca Bombas de gravedad (10 j.)     |
+| 2935     | Apoca robots chatarra (25 j.)     |
+| 2936     | Apoca Bombas de gravedad (25 j.)     |
+| 2937     | Hay que desarmar más deprisa (10 j.)     |
+| 2938     | Hay que desarmar más deprisa (25 j.)     |
+| 2939     | Te elijo a ti, maestro de runas Molgeim (10 j.)     |
+| 2940     | Te elijo a ti, clamatormentas Brundir (10 j.)     |
+| 2941     | Te elijo a ti, Rompeacero (10 j.)     |
+| 2942     | Te elijo a ti, maestro de runas Molgeim (25 j.)     |
+| 2943     | Te elijo a ti, clamatormentas Brundir (25 j.)     |
+| 2944     | Te elijo a ti, Rompeacero (25 j.)     |
+| 2945     | Pero estoy de vuestro lado (10 j.)     |
+| 2946     | Pero estoy de vuestro lado (25 j.)     |
+| 2947     | No puedes hacer eso mientras estés aturdido (10 j.)     |
+| 2948     | No puedes hacer eso mientras estés aturdido (25 j.)     |
+| 2951     | Con los brazos abiertos (10 j.)     |
+| 2952     | Con los brazos abiertos (25 j.)     |
+| 2953     | Desarmado (10 j.)     |
+| 2954     | Desarmado (25 j.)     |
+| 2955     | Si las miradas mataran (10 j.)     |
+| 2956     | Si las miradas mataran (25 j.)     |
+| 2957     | La gloria del asaltante de Ulduar (10 j.)     |
+| 2958     | La gloria del asaltante de Ulduar (25 j.)     |
+| 2959     | Roca-nrol (10 j.)     |
+| 2960     | Roca-nrol (25 j.)     |
+| 2961     | Soporta el frío (10 j.)     |
+| 2962     | Soporta el frío (25 j.)     |
+| 2963     | Mis amigos son unos frescos (10 j.)     |
+| 2965     | Mis amigos son unos frescos (25 j.)     |
+| 2967     | Aquí hace frío (10 j.)     |
+| 2968     | Aquí hace frío (25 j.)     |
+| 2969     | Pasar todo el invierno beneficiado (10 j.)     |
+| 2970     | Pasar todo el invierno beneficiado (25 j.)     |
+| 2971     | Apártate del rayo (10 j.)     |
+| 2972     | Apártate del rayo (25 j.)     |
+| 2973     | Me enfrentaré con todos (10 j.)     |
+| 2974     | Me enfrentaré con todos (25 j.)     |
+| 2975     | ¿Quién necesita Ansia de sangre? (10 j.)     |
+| 2976     | ¿Quién necesita Ansia de sangre? (25 j.)     |
+| 2977     | Con Sif (10 j.)     |
+| 2978     | Con Sif (25 j.)     |
+| 2979     | Hecho leña (10 j.)     |
+| 2980     | In-veloz-ero (10 j.)     |
+| 2981     | In-veloz-ero (25 j.)     |
+| 2982     | Regresar a la naturaleza (10 j.)     |
+| 2983     | Regresar a la naturaleza (25 j.)     |
+| 2984     | Deforestación (25 j.)     |
+| 2985     | Deforestación (10 j.)     |
+| 2989     | Ponednos una bomba (10 j.)     |
+| 2995     | Un fuego no tan amistoso (25 j.)     |
+| 2996     | Esquivasombras (10 j.)     |
+| 2997     | Esquivasombras (25 j.)     |
+| 3002     | Supermasivo (25 j.)     |
+| 3003     | Supermasivo (10 j.)     |
+| 3004     | Se alimenta de tus lágrimas (10 j.)     |
+| 3005     | Se alimenta de tus lágrimas (25 j.)     |
+| 3006     | La loca de los gatos (10 j.)     |
+| 3007     | La loca de los gatos (25 j.)     |
+| 3008     | Vuélveme loco (10 j.)     |
+| 3009     | Daos un beso y haced las paces (10 j.)     |
+| 3010     | Vuélveme loco (25 j.)     |
+| 3011     | Daos un beso y haced las paces (25 j.)     |
+| 3012     | No se volverá más antiguo (10 j.)     |
+| 3013     | No se volverá más antiguo (25 j.)     |
+| 3014     | Salen de las paredes (10 j.)     |
+| 3015     | En su hogar espera soñando (10 j.)     |
+| 3016     | En su hogar espera soñando (25 j.)     |
+| 3017     | Salen de las paredes (25 j.)     |
+| 3018     | Emblemas de conquista adquiridos     |
+| 3036     | Observado (10 j.)     |
+| 3037     | Observado (25 j.)     |
+| 3056     | Orbituario (10 j.)     |
+| 3057     | Orbituario (25 j.)     |
+| 3058     | Rompecorazones (10 j.)     |
+| 3059     | Rompecorazones (25 j.)     |
+| 3076     | Siete vidas (10 j.)     |
+| 3077     | Siete vidas (25 j.)     |
+| 3096     | Vermis de escarcha de Gladiador mortal     |
+| 3097     | Enanicidio (10 j.)     |
+| 3098     | Enanicidio (25 j.)     |
+| 3117     | ¡Primero del reino! Heroico: Ejecutor de la muerte     |
+| 3118     | Hecho leña (25 j.)     |
+| 3136     | Emalon el Vigía de la Tormenta (10 j.)     |
+| 3137     | Emalon el Vigía de la Tormenta (25 j.)     |
+| 3138     | Un fuego no tan amistoso (10 j.)     |
+| 3141     | Dos luces en la oscuridad (10 j.)     |
+| 3142     | Val\'anyr, Martillo de los antiguos reyes     |
+| 3157     | Tres luces en la oscuridad (10 j.)     |
+| 3158     | Una luz en la oscuridad (10 j.)     |
+| 3159     | Solo en la oscuridad (10 j.)     |
+| 3161     | Tres luces en la oscuridad (25 j.)     |
+| 3162     | Dos luces en la oscuridad (25 j.)     |
+| 3163     | Una luz en la oscuridad (25 j.)     |
+| 3164     | Solo en la oscuridad (25 j.)     |
+| 3176     | Pierde tu ilusión (10 j.)     |
+| 3177     | Toca madera (10 j.)     |
+| 3178     | Toca, toca madera (10 j.)     |
+| 3179     | Toca, toca, toca madera (10 j.)     |
+| 3180     | Bombero (10 j.)     |
+| 3181     | Me encanta el aroma de la saronita por la mañana (10 j.)     |
+| 3182     | Ya decía yo que este alijo era poco común (10 j.)     |
+| 3183     | Pierde tu ilusión (25 j.)     |
+| 3184     | Ya decía yo que este alijo era poco común (25 j.)     |
+| 3185     | Toca madera (25 j.)     |
+| 3186     | Toca, toca madera (25 j.)     |
+| 3187     | Toca, toca, toca madera (25 j.)     |
+| 3188     | Me encanta el aroma de la saronita por la mañana (25 j.)     |
+| 3189     | Bombero (25 j.)     |
+| 3216     | Recetas de fundición aprendidas     |
+| 3217     | Marcia y sedal     |
+| 3218     | Tortugas hasta al fin     |
+| 3236     | Muertes de Emalon el Vigía de la Tormenta (Conquista del Invierno 25 j.)     |
+| 3237     | Ponednos una bomba (25 j.)     |
+| 3256     | Victorias sobre Hodir (Ulduar 25 j.)     |
+| 3257     | Victorias sobre Thorim (Ulduar 25 j.)     |
+| 3258     | Victorias sobre Freya (Ulduar 25 j.)     |
+| 3259     | ¡Primero del reino! Defensor celestial     |
+| 3296     | Cocinar con estilo     |
+| 3316     | Heraldo de los titanes     |
+| 3336     | Gladiador mortal     |
+| 3356     | Sable de Hielo de Cuna del Invierno     |
+| 3357     | Ravasaurio pellejo venenoso     |
+| 3436     | Gladiador furioso     |
+| 3456     | Una fiesta de muerte     |
+| 3457     | El botín de la capitana     |
+| 3478     | Peregrino     |
+| 3496     | Una montura de fiesta veloz     |
+| 3516     | Muertes en Ulduar     |
+| 3536     | El soldado marino     |
+| 3556     | Panza del peregrino     |
+| 3557     | Panza del peregrino     |
+| 3558     | Compartir es querer     |
+| 3559     | Acechapavos     |
+| 3576     | Ahora estamos cocinando     |
+| 3577     | Ahora estamos cocinando     |
+| 3578     | Pavonator     |
+| 3579     | \'\'¡GUERRA DE COMIDA!\'\'     |
+| 3580     | Riesgo del peregrino     |
+| 3581     | Riesgo del peregrino     |
+| 3582     | Hora del pavo de Terokkar     |
+| 3596     | Progreso del peregrino     |
+| 3597     | Progreso del peregrino     |
+| 3618     | Murkimus el Gladiador     |
+| 3636     | Tigre de jade     |
+| 3656     | Peregrino     |
+| 3676     | Confidente de plata     |
+| 3677     | Los Atracasol     |
+| 3736     | ¡Arriba el poni!     |
+| 3756     | Vermis de escarcha de Gladiador furioso     |
+| 3757     | Vermis de escarcha de Gladiador incansable     |
+| 3758     | Gladiador incansable     |
+| 3776     | Victoria en la Isla de la Conquista     |
+| 3777     | Veterano de la Isla de la Conquista     |
+| 3778     | Prueba del Campeón     |
+| 3797     | Lumbago (10 j.)     |
+| 3798     | El temple lo arreglará (10 j.)     |
+| 3799     | Sal y pimienta (10 j.)     |
+| 3800     | El rey traidor (10 j.)     |
+| 3802     | Confesora Argenta     |
+| 3803     | El aplastacaras     |
+| 3804     | Podría ser peor     |
+| 3808     | Un tributo a la habilidad (10 j.)     |
+| 3809     | Un tributo a la habilidad loca (10 j.)     |
+| 3810     | Un tributo a la locura (10 j.)     |
+| 3812     | La Llamada de la Gran Cruzada (25 j.)     |
+| 3813     | Lumbago (25 j.)     |
+| 3814     | El temple lo arreglará (25 j.)     |
+| 3815     | Sal y pimienta (25 j.)     |
+| 3816     | El rey traidor (25 j.)     |
+| 3817     | Un tributo a la habilidad (25 j.)     |
+| 3818     | Un tributo a la habilidad loca (25 j.)     |
+| 3819     | Un tributo a la locura (25 j.)     |
+| 3836     | Koralon el Vigía de las Llamas (10 j.)     |
+| 3837     | Koralon el Vigía de las Llamas (25 j.)     |
+| 3838     | Emblema de mazmorra y banda     |
+| 3839     | 25 emblemas de mazmorras y bandas     |
+| 3840     | 50 emblemas de mazmorras y bandas     |
+| 3841     | 100 emblemas de mazmorras y bandas     |
+| 3842     | 250 emblemas de mazmorras y bandas     |
+| 3843     | 500 emblemas de mazmorras y bandas     |
+| 3844     | 1000 emblemas de mazmorras y bandas     |
+| 3845     | Estrella de la Isla de la Conquista     |
+| 3846     | Abundancia de recursos     |
+| 3847     | Garaje para cuatro     |
+| 3848     | A-bombi-nable     |
+| 3849     | A-bombi-nación     |
+| 3850     | Acribillados     |
+| 3851     | Mío     |
+| 3852     | Corta el cable azul... ¡No! ¡El rojo!     |
+| 3853     | Por toda la isla     |
+| 3854     | Por la puerta trasera     |
+| 3855     | Tumba de guja     |
+| 3856     | Derbi demoledor     |
+| 3857     | Maestro de la Isla de la Conquista     |
+| 3876     | 1500 emblemas de mazmorras y bandas     |
+| 3896     | Pantera de ónice     |
+| 3916     | La Llamada de la Cruzada (25 j.)     |
+| 3917     | La Llamada de la Cruzada (10 j.)     |
+| 3918     | La Llamada de la Gran Cruzada (10 j.)     |
+| 3936     | No uno, sino dos jormungar (10 j.)     |
+| 3937     | No uno, sino dos jormungar (25 j.)     |
+| 3957     | Maestro de la Isla de la Conquista     |
+| 3996     | 360 grados de púas de dolor (10 j.)     |
+| 3997     | 360 grados de púas de dolor (25 j.)     |
+| 4016     | Tierra, viento y fuego (10 j.)     |
+| 4017     | Tierra, viento y fuego (25 j.)     |
+| 4018     | Victorias sobre el Campeón cazador (Prueba del Campeón)     |
+| 4019     | Victorias sobre el Campeón cazador (Prueba del Campeón heroica)     |
+| 4022     | Victorias sobre la confesora Argenta Cabelloclaro (Prueba del Campeón)     |
+| 4023     | Victorias sobre la confesora Argenta Cabelloclaro (Prueba del Campeón heroica)     |
+| 4024     | Victorias sobre Eadric el Puro (Prueba del Campeón)     |
+| 4025     | Victorias sobre Eadric el Puro (Prueba del Campeón heroica)     |
+| 4026     | Muertes de El Caballero Negro (Prueba del Campeón)     |
+| 4027     | Muertes de El Caballero Negro (Prueba del Campeón heroica)     |
+| 4028     | Victorias sobre las bestias de Rasganorte (Prueba del Cruzado 10 j.)     |
+| 4029     | Victorias sobre las bestias de Rasganorte (Prueba del Gran Cruzado 25 j.)     |
+| 4030     | Victorias sobre las bestias de Rasganorte (Prueba del Gran Cruzado 10 j.)     |
+| 4031     | Victorias sobre las bestias de Rasganorte (Prueba del Cruzado 25 j.)     |
+| 4032     | Muertes de Lord Jaraxxus (Prueba del Cruzado 10 j.)     |
+| 4033     | Muertes de Lord Jaraxxus (Prueba del Gran Cruzado 10 j.)     |
+| 4034     | Muertes de Lord Jaraxxus (Prueba del Cruzado 25 j.)     |
+| 4035     | Muertes de Lord Jaraxxus (Prueba del Gran Cruzado 25 j.)     |
+| 4036     | Victorias sobre los campeones de la facción (Prueba del Cruzado 10 j.)     |
+| 4037     | Victorias sobre los campeones de la facción (Prueba del Gran Cruzado 10 j.)     |
+| 4038     | Victorias sobre los campeones de la facción (Prueba del Cruzado 25 j.)     |
+| 4039     | Victorias sobre los campeones de la facción (Prueba del Gran Cruzado 25 j.)     |
+| 4040     | Muertes de las Gemelas Val\'kyr (Prueba del Cruzado 10 j.)     |
+| 4041     | Muertes de las Gemelas Val\'kyr (Prueba del Gran Cruzado 10 j.)     |
+| 4042     | Muertes de las Gemelas Val\'kyr (Prueba del Cruzado 25 j.)     |
+| 4043     | Muertes de las Gemelas Val\'kyr (Prueba del Gran Cruzado 25 j.)     |
+| 4044     | Veces que has completado la Prueba del Cruzado (10 j.)     |
+| 4045     | Veces que has completado la Prueba del Gran Cruzado (10 j.)     |
+| 4046     | Veces que has completado la Prueba del Cruzado (25 j.)     |
+| 4047     | Veces que has completado la Prueba del Gran Cruzado (25 j.)     |
+| 4048     | Victorias sobre el Campeón mago (Prueba del Campeón)     |
+| 4049     | Victorias sobre el Campeón mago (Prueba del Campeón heroica)     |
+| 4050     | Victorias sobre el Campeón pícaro (Prueba del Campeón)     |
+| 4051     | Victorias sobre el Campeón pícaro (Prueba del Campeón heroica)     |
+| 4052     | Victorias sobre el Campeón chamán (Prueba del Campeón)     |
+| 4053     | Victorias sobre el Campeón chamán (Prueba del Campeón heroica)     |
+| 4054     | Victorias sobre el Campeón guerrero (Prueba del Campeón)     |
+| 4055     | Victorias sobre el Campeón guerrero (Prueba del Campeón heroica)     |
+| 4074     | Muertes de Koralon el Vigía de las Llamas (Conquista del Invierno 10 j.)     |
+| 4075     | Muertes de Koralon el Vigía de las Llamas (Conquista del Invierno 25 j.)     |
+| 4078     | ¡Primero del reino! Gran Cruzado     |
+| 4079     | Un tributo a la inmortalidad     |
+| 4080     | Un tributo a la locura entregada     |
+| 4096     | Batallas en la Isla de la Conquista     |
+| 4097     | Victorias en la Isla de la Conquista     |
+| 4156     | Un tributo a la inmortalidad     |
+| 4176     | Abundancia de recursos     |
+| 4177     | Mío     |
+| 4256     | Derbi demoledor     |
+| 4296     | Prueba del Campeón     |
+| 4297     | Heroico: Prueba del Campeón     |
+| 4298     | Heroico: Prueba del Campeón     |
+| 4316     | 2500 emblemas de mazmorras y bandas     |
+| 4396     | Guarida de Onyxia (10 j.)     |
+| 4397     | Guarida de Onyxia (25 j.)     |
+| 4400     | 5º aniversario de WoW     |
+| 4402     | ¡Más daño! (10 j.)     |
+| 4403     | ¡Qué de vástagos! ¡Haz algo! (10 j.)     |
+| 4404     | Su aliento ahora es más profundo (10 j.)     |
+| 4405     | ¡Más daño! (25 j.)     |
+| 4406     | ¡Qué de vástagos! ¡Haz algo! (25 j.)     |
+| 4407     | Su aliento ahora es más profundo (25 j.)     |
+| 4436     | Rey del Rifle     |
+| 4437     | Rey del Rifle     |
+| 4456     | Mazmorras aleatorias (normales) de Lich King completadas     |
+| 4476     | Buscar más     |
+| 4477     | Buscar mucho más     |
+| 4478     | Buscar muchísimo más     |
+| 4496     | ¡Toma, 9000 puntazos!     |
+| 4516     | La Forja de Almas     |
+| 4517     | El Foso de Saron     |
+| 4518     | Las Cámaras de Reflexión     |
+| 4519     | Heroico: La Forja de Almas     |
+| 4520     | Heroico: El Foso de Saron     |
+| 4521     | Heroico: Las Cámaras de Reflexión     |
+| 4522     | Ay mi alma     |
+| 4523     | Tres caras     |
+| 4524     | Solo once campanadas     |
+| 4525     | No mires hacia arriba     |
+| 4526     | No nos retiramos: avanzamos en otra dirección     |
+| 4527     | Las Cámaras de Alaescarcha (10 j.)     |
+| 4528     | Los Talleres de la Peste (10 j.)     |
+| 4529     | La Sala Carmesí (10 j.)     |
+| 4530     | El Trono Helado (10 j.)     |
+| 4531     | Asaltar la Ciudadela (10 j.)     |
+| 4532     | La caída del Rey Exánime (10 j.)     |
+| 4534     | Deshuesado (10 j.)     |
+| 4535     | Full (10 j.)     |
+| 4536     | Al pasar la barca (10 j.)     |
+| 4537     | Mira la que he montado (10 j.)     |
+| 4538     | Bailando con mocos (10 j.)     |
+| 4539     | Devórame otra vez (10 j.)     |
+| 4556     | Mazmorras aleatorias (heroicas) de Lich King completadas     |
+| 4576     | ¡Primero del reino! La caída del Rey Exánime     |
+| 4577     | Sin vacunas (10 j.)     |
+| 4578     | Náuseas, acidez, indigestión (10 j.)     |
+| 4579     | Sereno (10 j.)     |
+| 4580     | Sacúdete (10 j.)     |
+| 4581     | Hasta arriba de espíritus malvados (10 j.)     |
+| 4582     | El hombre que susurraba a los orbes (10 j.)     |
+| 4583     | La perdición del Rey caído     |
+| 4584     | La Luz del Alba     |
+| 4585     | Toravon el Vigía de Hielo (10 j.)     |
+| 4586     | Toravon el Vigía de Hielo (25 j.)     |
+| 4596     | La Espada prometida     |
+| 4597     | El Trono Helado (25 j.)     |
+| 4598     | El Veredicto Cinéreo     |
+| 4599     | Gladiador colérico     |
+| 4600     | Vermis de escarcha de Gladiador colérico     |
+| 4601     | Hemos estado esperando mucho tiempo (10 j.)     |
+| 4602     | La gloria del asaltante de Corona de Hielo (10 j.)     |
+| 4603     | La gloria del asaltante de Corona de Hielo (25 j.)     |
+| 4604     | Asaltar la Ciudadela (25 j.)     |
+| 4605     | Los Talleres de la Peste (25 j.)     |
+| 4606     | La Sala Carmesí (25 j.)     |
+| 4607     | Las Cámaras de Alaescarcha (25 j.)     |
+| 4608     | La caída del Rey Exánime (25 j.)     |
+| 4610     | Deshuesado (25 j.)     |
+| 4611     | Full (25 j.)     |
+| 4612     | Al pasar la barca (25 j.)     |
+| 4613     | Mira la que he montado (25 j.)     |
+| 4614     | Bailando con mocos (25 j.)     |
+| 4615     | Sin vacunas (25 j.)     |
+| 4616     | Náuseas, acidez, indigestión (25 j.)     |
+| 4617     | El hombre que susurraba a los orbes (25 j.)     |
+| 4618     | Devórame otra vez (25 j.)     |
+| 4619     | Sereno (25 j.)     |
+| 4620     | Sacúdete (25 j.)     |
+| 4621     | Hemos estado esperando mucho tiempo (25 j.)     |
+| 4622     | Hasta arriba de espíritus malvados (25 j.)     |
+| 4623     | Agonía de Sombras     |
+| 4624     | El amor duele     |
+| 4625     | Riendas de Invencible     |
+| 4626     | ¡Yo pongo la cabeza!     |
+| 4627     | Gran cohete de amor     |
+| 4628     | Heroico: Asaltar la Ciudadela (10 j.)     |
+| 4629     | Heroico: Los Talleres de la Peste (10 j.)     |
+| 4630     | Heroico: La Sala Carmesí (10 j.)     |
+| 4631     | Heroico: Las Cámaras de Alaescarcha (10 j.)     |
+| 4632     | Heroico: Asaltar la Ciudadela (25 j.)     |
+| 4633     | Heroico: Los Talleres de la Peste (25 j.)     |
+| 4634     | Heroico: La Sala Carmesí (25 j.)     |
+| 4635     | Heroico: Las Cámaras de Alaescarcha (25 j.)     |
+| 4636     | Heroico: La Caída del Rey Exánime (10 j.)     |
+| 4637     | Heroico: La Caída del Rey Exánime (25 j.)     |
+| 4639     | Muertes de Lord Tuétano (Corona de Hielo 10 j.)     |
+| 4640     | Muertes de Lord Tuétano (Corona de Hielo heroica 10 j.)     |
+| 4641     | Muertes de Lord Tuétano (Corona de Hielo 25 j.)     |
+| 4642     | Muertes de Lord Tuétano (Corona de Hielo heroica 25 j.)     |
+| 4643     | Muertes de Lady Susurramuerte (Corona de Hielo 10 j.)     |
+| 4644     | Victorias en la Batalla de naves de guerra (Corona de Hielo 10 j.)     |
+| 4645     | Muertes de El Libramorte (Corona de Hielo 10 j.)     |
+| 4646     | Muertes de Panzachancro (Corona de Hielo 10 j.)     |
+| 4647     | Muertes de Carapútrea (Corona de Hielo 10 j.)     |
+| 4648     | Muertes del Consejo de Príncipes de Sangre (Corona de Hielo 10 j.)     |
+| 4649     | Rescates de Valithria Caminasueños (Corona de Hielo 10 j.)     |
+| 4650     | Muertes del profesor Putricidio (Corona de Hielo 10 j.)     |
+| 4651     | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo 10 j.)     |
+| 4652     | Muertes de Sindragosa (Corona de Hielo 10 j.)     |
+| 4653     | Victorias sobre el Rey Exánime (Corona de Hielo 10 j.)     |
+| 4654     | Muertes de Lady Susurramuerte (Corona de Hielo heroica 10 j.)     |
+| 4655     | Muertes de Lady Susurramuerte (Corona de Hielo 25 j.)     |
+| 4656     | Muertes de Lady Susurramuerte (Corona de Hielo heroica 25 j.)     |
+| 4657     | Muertes de Toravon el Vigía de Hielo (Conquista del Invierno 10 j.)     |
+| 4658     | Muertes de Toravon el Vigía de Hielo (Conquista del Invierno 25 j.)     |
+| 4659     | Victorias en la Batalla de naves de guerra (Corona de Hielo heroica 10 j.)     |
+| 4660     | Victorias en la Batalla de naves de guerra (Corona de Hielo 25 j.)     |
+| 4661     | Victorias en la Batalla de naves de guerra (Corona de Hielo heroica 25 j.)     |
+| 4662     | Muertes de El Libramorte (Corona de Hielo heroica 10 j.)     |
+| 4663     | Muertes de El Libramorte (Corona de Hielo 25 j.)     |
+| 4664     | Muertes de El Libramorte (Corona de Hielo heroica 25 j.)     |
+| 4665     | Muertes de Panzachancro (Corona de Hielo heroica 10 j.)     |
+| 4666     | Muertes de Panzachancro (Corona de Hielo 25 j.)     |
+| 4667     | Muertes de Panzachancro (Corona de Hielo heroica 25 j.)     |
+| 4668     | Muertes de Carapútrea (Corona de Hielo heroica 10 j.)     |
+| 4669     | Muertes de Carapútrea (Corona de Hielo 25 j.)     |
+| 4670     | Muertes de Carapútrea (Corona de Hielo heroica 25 j.)     |
+| 4671     | Muertes del Consejo de Príncipes de Sangre (Corona de Hielo heroica 10 j.)     |
+| 4672     | Muertes del Consejo de Príncipes de Sangre (Corona de Hielo 25 j.)     |
+| 4673     | Muertes del Consejo de Príncipes de Sangre (Corona de Hielo heroica 25 j.)     |
+| 4674     | Rescates de Valithria Caminasueños (Corona de Hielo heroica 10 j.)     |
+| 4675     | Rescates de Valithria Caminasueños (Corona de Hielo 25 j.)     |
+| 4676     | Rescates de Valithria Caminasueños (Corona de Hielo heroica 25 j.)     |
+| 4677     | Muertes del profesor Putricidio (Corona de Hielo heroica 10 j.)     |
+| 4678     | Muertes del profesor Putricidio (Corona de Hielo 25 j.)     |
+| 4679     | Muertes del profesor Putricidio (Corona de Hielo heroica 25 j.)     |
+| 4680     | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo heroica 10 j.)     |
+| 4681     | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo 25 j.)     |
+| 4682     | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo heroica 25 j.)     |
+| 4683     | Muertes de Sindragosa (Corona de Hielo 25 j.)     |
+| 4684     | Muertes de Sindragosa (Corona de Hielo heroica 10 j.)     |
+| 4685     | Muertes de Sindragosa (Corona de Hielo heroica 25 j.)     |
+| 4686     | Victorias sobre el Rey Exánime (Corona de Hielo heroica 10 j.)     |
+| 4687     | Victorias sobre el Rey Exánime (Corona de Hielo 25 j.)     |
+| 4688     | Victorias sobre el Rey Exánime (Corona de Hielo heroica 25 j.)     |
+| 4713     | Muertes de Bronjahm (La Forja de Almas)     |
+| 4714     | Muertes de Bronjahm (La Forja de Almas heroica)     |
+| 4715     | Muertes de Devoraalmas (La Forja de Almas)     |
+| 4716     | Muertes de Devoraalmas (La Forja de Almas heroica)     |
+| 4717     | Muertes del maestro de forja Gargelus (Foso de Saron)     |
+| 4718     | Muertes de Agh y Puagh (Foso de Saron)     |
+| 4719     | Muertes de Agh y Puagh (Foso de Saron heroico)     |
+| 4720     | Muertes del Señor de la Plaga Tyrannus (Foso de Saron)     |
+| 4721     | Muertes del Señor de la Plaga Tyrannus (Foso de Saron heroico)     |
+| 4722     | Muertes de Falric (Cámaras de Reflexión)     |
+| 4723     | Muertes de Falric (Cámaras de Reflexión heroica)     |
+| 4724     | Muertes de Marwyn (Cámaras de Reflexión)     |
+| 4725     | Muertes de Marwyn (Cámaras de Reflexión heroica)     |
+| 4726     | Huidas del Rey Exánime (Cámaras de Reflexión)     |
+| 4727     | Huidas del Rey Exánime (Cámaras de Reflexión heroica)     |
+| 4728     | Muertes del maestro de forja Gargelus (Foso de Saron heroico)     |
+| 4729     | Emblemas de triunfo adquiridos     |
+| 4730     | Emblemas de escarcha adquiridos     |
+| 4777     | Golpes de gracia en la Isla de la Conquista     |
+| 4778     | Tiros por desencantar para el botín     |
+| 4779     | Muertes con honor en la Isla de la Conquista     |
+| 4780     | Muertes en la Prueba del Cruzado     |
+| 4781     | Muertes en la Ciudadela de la Corona de Hielo     |
+| 4782     | Jarra de la Fiesta de la cerveza verde     |
+| 4784     | Emblemático     |
+| 4785     | Emblemático     |
+| 4786     | Operación: Gnomeregan     |
+| 4790     | Caída de Zalazane     |
+| 4815     | El Destructor del Crepúsculo (25 j.)     |
+| 4816     | Heroico: El Destructor del Crepúsculo (25 j.)     |
+| 4817     | El Destructor del Crepúsculo (10 j.)     |
+| 4818     | Heroico: El Destructor del Crepúsculo (10 j.)     |
+| 4820     | Muertes de Halion (El Sagrario Rubí 25 j.)     |
+| 4821     | Muertes de Halion (El Sagrario Rubí 10 j.)     |
+| 4822     | Muertes de Halion (El Sagrario Rubí heroica 10 j.)     |
+| 4823     | Muertes de Halion (El Sagrario Rubí heroica 25 j.)     |
+| 4824     | Edición de coleccionista: Mini thor     |
