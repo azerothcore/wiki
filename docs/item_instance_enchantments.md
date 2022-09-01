@@ -1,6 +1,6 @@
 # item\_instance
 
-[<-Back-to:Item Instance](item-instance.md)
+[<-Back-to:Item Instance](item_instance.md)
 
 **The \`item\_instance\enchantments` field**
 
