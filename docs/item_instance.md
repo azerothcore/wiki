@@ -80,7 +80,7 @@ The number of charges for each of the five possible spellcharges on an item, s
 
 ### enchantments
 
-Enchantments from SpellItemEnchantment.dbc
+Enchantments from SpellItemEnchantment.dbc see: [item_instance_enchantments](item_instance_enchantments.md)
 
 ### randomPropertyId
 
