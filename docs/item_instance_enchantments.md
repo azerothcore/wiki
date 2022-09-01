@@ -58,4 +58,3 @@ Each ordinal set of 3 Id is used for a different purpose.
   Once an Enchant is selected then the Values in ItemRandomSuffix.dbc are used to determine how strong the enchantment is in the specified slot. 
   
   If an enchantment is placed in one of these 5 slots but there is no matching AllocationPct_# in the ItemRandom_Suffix dbc then the enchantment will have no effect on the Item.
-  
