@@ -1,4 +1,3 @@
-
 # AreaTrigger
 
 [`Volver a:DBC`](dbc-index.md)
