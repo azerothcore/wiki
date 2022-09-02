@@ -1,4 +1,3 @@
-
 # item\_instance
 
 [<-Volver a:Item Instance](item-instance.md)
