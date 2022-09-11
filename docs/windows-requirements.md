@@ -11,7 +11,7 @@
 | MySQL ≥ 5.7.0                                                      |
 | OpenSLL ≥ 1.0.x (OpenSSL 3.0 is not supported)                     |
 | CMake ≥ 3.16                                                       |
-| MS Visual Studio (Community) ≥ 16.11 (2019) (Desktop) (No preview) |
+| MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)    |
 
 1. [Git Extensions](https://github.com/gitextensions/gitextensions/releases/latest)
 
