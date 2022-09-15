@@ -46,7 +46,7 @@ En un formato más simplificado: SOAP para los sitios web, telnet para la línea
 
 ### Configurar
 
-1. Ambos protocolos deben estar habilitados a través de los [archivos de configuración del servidor mundial] (https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/worldserver/worldserver.conf.dist#L2756).
+1. Ambos protocolos deben estar habilitados a través de los [archivos de configuración del servidor mundial](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist#L3122)
 2. Cuando están habilitados, para autorizar el acceso a la base de datos, es necesario encontrar la tabla `account_access` en la base de datos de autenticación y asegurarse de que el realmID de su usuario es -1 (es decir, todos los reinos).
 3. Una vez hecho esto, está configurado para utilizar telnet y SOAP
 
