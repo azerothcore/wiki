@@ -49,7 +49,7 @@ In a more simplified format: SOAP for websites, telnet for command line.
 
 ### Setup
 
-1. Both protocols must be enabled via the [worldserver config files](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/worldserver/worldserver.conf.dist#L2756). 
+1. Both protocols must be enabled via the [worldserver config files](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist#L2756). 
 2. When they are enabled, in order to authorize access to the database, you need to find the `account_access` table in the auth database and make sure the realmID of your user is -1 (meaning all realms).
 3. When that is done you are set up to use telnet and SOAP
 
