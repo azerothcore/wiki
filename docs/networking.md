@@ -19,7 +19,7 @@ This is where you have to use your internet IP so clients from the internet can 
 
 You need to make sure that your **authserver** application directs incoming connections to your realm.
 
-- Run your chosen database management tool (ex. SQLYog or HeidiSQL)
+- Run your chosen database management tool (ex. SQLYog or HeidiSQL) or with the MySQL command-line interface (CLI).
 
 - If you need to connect to your database from one external machine, read https://www.enovision.net/mysql-ssh-tunnel-heidisql instead open ports to mysql server.
 
@@ -31,6 +31,13 @@ You need to make sure that your **authserver** application directs incoming conn
 
     - External IP – If you want other people to connect to your server, use your external IP. Visit http://www.whatismyip.com/ to find your external IP address.
 
+ - MySQL CLI Commands (This step is not needed if you used a MySQL Manager like HeidiSQL)
+    - sudo mysql
+    - You should see a prompt change to mysql>
+    - use acore_world;
+    - **Replace your IP with the one you've chosen to use from above**
+    - UPDATE realmlist SET address = '[your_ip]' WHERE id = 1;
+    - exit
 <br>
 
 ## Help
