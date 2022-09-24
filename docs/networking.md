@@ -36,7 +36,7 @@ You need to make sure that your **authserver** application directs incoming conn
     - You should see a prompt change to mysql>
     - use acore_world;
     - **Replace your IP with the one you've chosen to use from above**
-    - UPDATE realmlist SET address = '[your_ip]' WHERE id = 1;
+    - `UPDATE realmlist SET address = '[your_ip]' WHERE id = 1;`
     - exit
 <br>
 
