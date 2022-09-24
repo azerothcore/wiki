@@ -32,7 +32,7 @@ You need to make sure that your **authserver** application directs incoming conn
     - External IP – If you want other people to connect to your server, use your external IP. Visit http://www.whatismyip.com/ to find your external IP address.
 
  - MySQL CLI Commands (This step is not needed if you used a MySQL Manager like HeidiSQL)
-    - sudo mysql
+    - `$ sudo mysql`
     - You should see a prompt change to mysql>
     - use acore_world;
     - **Replace your IP with the one you've chosen to use from above**
