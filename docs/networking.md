@@ -34,7 +34,7 @@ You need to make sure that your **authserver** application directs incoming conn
  - MySQL CLI Commands (This step is not needed if you used a MySQL Manager like HeidiSQL)
     - `$ sudo mysql`
     - You should see a prompt change to mysql>
-    - use acore_world;
+    - `use acore_auth`;
     - **Replace your IP with the one you've chosen to use from above**
     - `UPDATE realmlist SET address = '[your_ip]' WHERE id = 1;`
     - exit
