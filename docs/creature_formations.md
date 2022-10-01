@@ -70,6 +70,7 @@ Sets group member behaviors, values are:
 | 2     | 0x002 | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER | The leader aggroes if the member aggroes                     |
 | 3     |       |                                    | Everyone assists everyone and member don't follow the leader |
 | 4     | 0x004 | GROUP_AI_FLAG_EVADE_TOGETHER       | Everyone evades if any member evades (enters evade mode)     |
+| 8     | 0x008 | GROUP_AI_FLAG_RESPAWN_ON_EVADE     | Everyone respawns if members evade    (enters evade mode)    |
 | 512   | 0x200 | GROUP_AI_FLAG_FOLLOW_LEADER        | Noone assists noone and member follow the leader             |
 | 515   |       |                                    | Everyone assists everyone and member follow the leader       |
 
