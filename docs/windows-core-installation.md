@@ -134,7 +134,7 @@ authserver.conf.dist
 worldserver.conf.dist
 ```
 
-There are three DLL files that need to be manually added to this folder, and you need to copy them from the following installation/bin directories:
+There are three/four DLL files that need to be manually added to this folder, and you need to copy them from the following installation/bin directories:
 
 **libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.x\lib\
 
@@ -154,6 +154,10 @@ For 32-bit version:
 For 64-bit version:
 **libssl-1_1-x64.dll** and
 **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
+
+OpenSSL 3.0 you also need to copy
+
+**leagacy.dll**
 
 #### About compilation log and report
 
