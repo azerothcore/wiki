@@ -124,6 +124,7 @@ worldserver.pdb
 libmysql.dll
 libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
 ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
+legacy.dll
 ```
 
 In the **configs** folder you should find:
