@@ -62,7 +62,7 @@ At this point, you must be in your "build/" directory.
 export OPENSSL_ROOT_DIR=$(brew --prefix openssl@1.1)
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
--DTOOLS=0 \
+-DTOOLS_BUILD=all \
 -DSCRIPTS=static \
 -DMYSQL_ADD_INCLUDE_PATH=/usr/local/include \
 -DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib \
