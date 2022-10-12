@@ -1,4 +1,4 @@
-# Databse Management Tool
+# Database Management Tool
 
 - mysql cli (Fastest)
 
