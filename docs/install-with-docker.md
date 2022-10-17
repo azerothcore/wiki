@@ -24,7 +24,7 @@ Installing AzerothCore using Docker is a simplified procedure that has several b
 The only requirements are [git](https://git-scm.com/download/) and Docker.
 
 #### New Operating Systems [recommended]:
-- For GNU/Linux install [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu) and [Docker Compose](https://docs.docker.com/compose/install/)
+- For GNU/Linux install [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu)
 - For macOS 10.12+ Sierra and newer version install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 - For Windows 10 install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
@@ -33,20 +33,20 @@ The only requirements are [git](https://git-scm.com/download/) and Docker.
 - For Windows 7/8/8.1 install [Docker Toolbox for Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
 
-Before going further, make sure you have `docker` and `docker-compose` installed in your system by typing in a terminal:
+Before going further, make sure you have `docker` and `docker compose` installed in your system by typing in a terminal:
 
 ```
 docker --version
 ```
 ```
-docker-compose --version
+docker compose --version
 ```
 
 You should see a similar output:
 
 ```
 Docker version 20.10.5, build 55c4c88
-docker-compose version 1.28.2, build 67630359
+Docker Compose version 2.10.2
 ```
 
 **Note for Windows users**: you can use **git-bash** (the shell included in git) as a terminal.
@@ -70,8 +70,8 @@ cp conf/dist/config.sh conf/config.sh
 
 Inside your terminal (if you use Windows, use git bash), run the following commands inside the azerothcore-wotlk folder
 
-NOTE: the following procedure uses our acore.sh dashboard, however, these commands are a shortcut of the docker-compose ones.
-      you can check the docker-compose commands used in background by running `./acore.sh docker --help` and read the description of each command
+NOTE: the following procedure uses our acore.sh dashboard, however, these commands are a shortcut of the docker compose ones.
+      you can check the docker compose commands used in background by running `./acore.sh docker --help` and read the description of each command
 
 **1) Download the client data:**
 
@@ -103,7 +103,7 @@ Therefore, we suggest to use one of the following solution instead:
 
 **Congratulations! Now you have an up and running azerothcore server! Continue to the next step to create an account**
 
-If you need to run this in background, you can use the following command to run the docker-compose detached mode:
+If you need to run this in background, you can use the following command to run the docker compose detached mode:
 
 ```
 ./acore.sh docker start:app:d
@@ -120,7 +120,7 @@ Open a new terminal and run the following command
 If you got error message `the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'`, you may run the following command 
 
 ```
-docker-compose ps
+docker compose ps
 ```
 
 find the name of worldserver
@@ -182,7 +182,7 @@ If the server crashes, you will find the crashdump file (`gdb.txt`) within the `
 
 ### How to use the dev-container
 
-Within our docker-compose you can find the `ac-dev-server` service
+Within our docker compose you can find the `ac-dev-server` service
 This service is used for our build and db operations, but it can also be used
 by you to develop with the [VSCode Remote Docker extension](https://code.visualstudio.com/docs/remote/containers)
 
@@ -216,7 +216,7 @@ It will run a worldserver in debug mode and then you can start placing breakpoin
 
 For more info about how to debug in vscode you can refer to the [official guide](https://code.visualstudio.com/docs/editor/debugging)
 
-### How to create a second realm with docker-compose
+### How to create a second realm with docker compose
 
 To create a second realm we suggest you to take a look at the example available within the http://github.com/azerothcore/acore-docker repository.
 
@@ -281,25 +281,25 @@ In the `.env` file you can configure:
 - the open ports
 - the MySQL root password
 
-Then your `docker-compose up` will automatically locate the `.env` with your custom settings.
+Then your `docker compose up` will automatically locate the `.env` with your custom settings.
 
 ### How can I start, stop, create and destroy my containers?
 
-- The `docker-compose start --profile app start` will start your existing app containers in detached mode.
+- The `docker compose start --profile app start` will start your existing app containers in detached mode.
 
-- The `docker-compose stop` will stop your containers, but it won't remove them.
+- The `docker compose stop` will stop your containers, but it won't remove them.
 
-- The `docker-compose --profile app up` builds, (re)creates, and starts your app services.
+- The `docker compose --profile app up` builds, (re)creates, and starts your app services.
 
-- The `docker-compose down` command will stop your containers, but it also removes the stopped containers as well as any networks that were created.
+- The `docker compose down --remove-orphans` command will stop your containers, but it also removes the stopped containers as well as any networks that were created.
 
-- ⚠️ The `docker-compose down --rmi all -v` : command will stop, remove, and delete EVERYTHING. Including the volumes with the associated database ⚠️ 
+- ⚠️ The `docker compose down --rmi all -v --remove-orphans` : command will stop, remove, and delete EVERYTHING. Including the volumes with the associated database ⚠️ 
 
 ### How can I delete my database files?
 
 **Warning** Once you've deleted your database files they are unrecoverable unless you have a backup.
 
-To remove your database files you firstly want to make sure that your containers have been stopped and removed by typing: `docker-compose down`.
+To remove your database files you firstly want to make sure that your containers have been stopped and removed by typing: `docker compose down`.
 
 After stopping and removing your containers you can proceed to remove the volume by typing: `docker volume rm azerothcore-wotlk_ac-database`
 
@@ -307,7 +307,7 @@ After stopping and removing your containers you can proceed to remove the volume
 
 ### macOS optimizations (for dev server)
 
-The **osxfs** is well known to have [performance limitations](https://github.com/docker/for-mac/issues/1592), that's why we optimized the docker-compose 
+The **osxfs** is well known to have [performance limitations](https://github.com/docker/for-mac/issues/1592), that's why we optimized the docker compose 
 file for the **osxfs** by using volumes and the "delegated" strategy. However, we also introduced an experimental feature to let you use named volumes instead of binded ones.
 You can use this feature by setting this environment variable in your `.env` file:
 
@@ -322,7 +322,7 @@ NOTE: If you are not experimenting any particular issues with I/O performance, w
 
 Besides the usage of the `./acore.sh docker attach` command, you can use a manual approach if you encountered any problems.
 
-First of all, type `docker-compose ps` to know the name of your worldserver container, it should be something like `azerothcore-wotlk_ac-worldserver_1`.
+First of all, type `docker compose ps` to know the name of your worldserver container, it should be something like `azerothcore-wotlk_ac-worldserver_1`.
 
 **To attach**: open a new terminal tab and type `docker attach azerothcore-wotlk_ac-worldserver_1`
 
