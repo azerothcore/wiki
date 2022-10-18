@@ -84,6 +84,12 @@ Remember to:
 
 - Read: [stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
 
+- Do **NOT** include any error or code as **image**, instead include them as **text**
+
+- Add as many links, examples and details as possible. Make your question **technical**.
+
+Please put some effort in properly formatting your question, otherwise it will be closed.
+
 
 ### Share your knowledge!
 
@@ -92,3 +98,25 @@ Do you have anything to share with the community? Do you feel like some informat
 Ask a question on StackOverflow and then **answer it yourself**! Is it allowed? Yes it is! Read this:
 
 [https://stackoverflow.com/help/self-answer](https://stackoverflow.com/help/self-answer)
+
+
+### Examples
+
+Examples of well-asked questions:
+
+- https://stackoverflow.com/questions/54171055/azerothcore-how-to-change-the-time-after-which-client-is-disconnected-when-bein
+- https://stackoverflow.com/questions/67349437/azerothcore-change-race-or-faction-could-not-change-race-for-character
+- https://stackoverflow.com/questions/71086118/configloadfile-found-incorrect-option-my-conf-in-config-file
+- https://stackoverflow.com/questions/54699039/file-usr-include-linux-limits-h-has-been-modified-since-the-precompiled-header
+- https://stackoverflow.com/questions/53884965/how-to-use-azerothcore-with-mysql-5-7
+- https://stackoverflow.com/questions/57617534/azerothcore-change-the-port-of-authserver
+- https://stackoverflow.com/questions/53919208/cmake-on-macos-error-could-not-find-mysql-headers
+- https://stackoverflow.com/questions/66932154/how-to-lock-a-realm-for-gm-only
+- https://stackoverflow.com/questions/68328919/how-to-change-the-clang-verion-when-compiling-azerothcore-with-dashboard-setup
+- https://stackoverflow.com/questions/54206799/how-to-run-and-debug-azerothcore-using-clion
+- https://stackoverflow.com/questions/54206649/clion-error-when-opening-an-azerothcore-project
+- https://stackoverflow.com/questions/56347054/aborted-connection-10-to-db-acore-auth-user-root-host-172-18-0-3-got-a
+- https://stackoverflow.com/questions/54504153/clang-with-clion-cannot-get-compiler-information
+- https://stackoverflow.com/questions/56677483/use-typescripttolua-with-azerothcore-and-eluna-lua-engine
+- https://stackoverflow.com/questions/64948325/undefined-symbols-for-architecture-x86-64-when-writing-unit-tests-with-gtest-and
+- https://stackoverflow.com/questions/66723604/get-all-accounts-linked-to-a-certain-account-via-ip
