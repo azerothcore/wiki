@@ -307,6 +307,8 @@ After stopping and removing your containers you can proceed to remove the volume
 
 ### macOS optimizations (for dev server)
 
+NOTE: If you are not experimenting any particular issues with I/O performance, we suggest to **NOT** use this configuration
+
 The **osxfs** is well known to have [performance limitations](https://github.com/docker/for-mac/issues/1592), that's why we optimized the docker compose 
 file for the **osxfs** by using volumes and the "delegated" strategy. However, we also introduced an experimental feature to let you use named volumes instead of binded ones.
 You can use this feature by setting this environment variable in your `.env` file:
@@ -315,8 +317,6 @@ You can use this feature by setting this environment variable in your `.env` fil
 
 This will copy all the external sources in a persistent volume inside docker which means that, as a drawback, changes inside 
 the container won't be reflected outside (host) and vice-versa. 
-
-NOTE: If you are not experimenting any particular issues with I/O performance, we suggest to **NOT** use this configuration
 
 ### How can I run commands in the worldserver console?
 
