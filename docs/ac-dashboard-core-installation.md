@@ -68,8 +68,6 @@ exit;
 *Note:  even though the `acore` user is only accessible from localhost, 
 it is a good practice to change its password to something more secure.*
 
-- Or change the `config.sh` to use another MySQL user.
-
 ### Download the latest client data
 
 Get the latest client data:
@@ -78,13 +76,22 @@ Get the latest client data:
 ./acore.sh client-data
 ```
 
-### Server config files
+### Server config files (optional)
+
+create these 2 files if you want to change the default configurations of the server 
+
+#### Linux and Mac
 
 ```
 cp env/dist/etc/authserver.conf.dist env/dist/etc/authserver.conf
-```
-```
 cp env/dist/etc/worldserver.conf.dist env/dist/etc/worldserver.conf
+```
+
+#### Windows and Mac
+
+```
+cp env/dist/configs/authserver.conf.dist env/dist/configs/authserver.conf
+cp env/dist/configs/worldserver.conf.dist env/dist/configs/worldserver.conf
 ```
 
 ### Result
