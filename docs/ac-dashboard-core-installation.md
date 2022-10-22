@@ -15,6 +15,7 @@ No other software is required to be installed manually.
 
 - debian/ubuntu-based: `apt update && apt install git curl unzip sudo`
 - macOS: `brew install git`
+- Windows: download and install [Git for Windows](https://gitforwindows.org/)
 
 ### Notes
 - For macOS users: install and use the latest version of bash to run the commands of the dashboard (`brew install bash`)
@@ -43,6 +44,8 @@ but you can copy it under `conf/config.sh` and change values as you please.
 ```
 ./acore.sh install-deps
 ```
+
+NOTE: on Windows it must be executed as an administrator
 
 ### Build everything from scratch
 
@@ -110,6 +113,8 @@ The AzerothCore dashboard comes with a bundled restarter suite:
 ```
 ./acore.sh run-worldserver
 ```
+
+Wait until the process is completed then run: 
 
 ```
 ./acore.sh run-authserver
