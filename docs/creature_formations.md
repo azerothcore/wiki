@@ -64,7 +64,7 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 Sets group member behaviors, values are:
 
 | Value | Flag  | Name                                       | Comment                                                        |
-| ----- | ----- | -------------------------------------------| ---------------------------------------------------------------|
+| ----- | ----- | ------------------------------------------ | -------------------------------------------------------------- |
 | 0     |       |                                            | No one assists no one and member doesn't follow the leader     |
 | 1     | 0x001 | GROUP_AI_FLAG_MEMBER_ASSIST_LEADER         | The member aggroes if the leader aggroes                       |
 | 2     | 0x002 | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER         | The leader aggroes if the member aggroes                       |
