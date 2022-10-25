@@ -63,16 +63,18 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 
 Sets group member behaviors, values are:
 
-| Value | Flag  | Name                               | Comment                                                      |
-| ----- | ----- | ---------------------------------- | ------------------------------------------------------------ |
-| 0     |       |                                    | Noone assists noone and member don't follow the leader       |
-| 1     | 0x001 | GROUP_AI_FLAG_MEMBER_ASSIST_LEADER | The member aggroes if the leader aggroes                     |
-| 2     | 0x002 | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER | The leader aggroes if the member aggroes                     |
-| 3     |       |                                    | Everyone assists everyone and member don't follow the leader |
-| 4     | 0x004 | GROUP_AI_FLAG_EVADE_TOGETHER       | Everyone evades if any member evades (enters evade mode)     |
-| 8     | 0x008 | GROUP_AI_FLAG_RESPAWN_ON_EVADE     | Everyone respawns if members evade    (enters evade mode)    |
-| 512   | 0x200 | GROUP_AI_FLAG_FOLLOW_LEADER        | Noone assists noone and member follow the leader             |
-| 515   |       |                                    | Everyone assists everyone and member follow the leader       |
+| Value | Flag  | Name                                       | Comment                                                        |
+| ----- | ----- | ------------------------------------------ | -------------------------------------------------------------- |
+| 0     |       |                                            | No one assists no one and member doesn't follow the leader     |
+| 1     | 0x001 | GROUP_AI_FLAG_MEMBER_ASSIST_LEADER         | The member aggroes if the leader aggroes                       |
+| 2     | 0x002 | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER         | The leader aggroes if the member aggroes                       |
+| 3     |       |                                            | Everyone assists everyone and member doesn't follow the leader |
+| 4     | 0x004 | GROUP_AI_FLAG_EVADE_TOGETHER               | Everyone evades if any member evades (enters evade mode)       |
+| 8     | 0x008 | GROUP_AI_FLAG_RESPAWN_ON_EVADE             | Everyone respawns if members evade    (enters evade mode)      |
+| 16    | 0x010 | GROUP_AI_FLAG_DONT_RESPAWN_LEADER_ON_EVADE | Everyone respawns if members evade    (enters evade mode)      |
+| 24    |       |                                            | Everyone but leader respawns if members evade                  |
+| 512   | 0x200 | GROUP_AI_FLAG_FOLLOW_LEADER                | Noone assists noone and member follow the leader               |
+| 515   |       |                                            | Everyone assists everyone and member follow the leader         |
 
 ## point\_1  
 
