@@ -71,7 +71,7 @@ Sets group member behaviors, values are:
 | 3     |       |                                            | Everyone assists everyone and member doesn't follow the leader |
 | 4     | 0x004 | GROUP_AI_FLAG_EVADE_TOGETHER               | Everyone evades if any member evades (enters evade mode)       |
 | 8     | 0x008 | GROUP_AI_FLAG_RESPAWN_ON_EVADE             | Everyone respawns if members evade    (enters evade mode)      |
-| 16    | 0x010 | GROUP_AI_FLAG_DONT_RESPAWN_LEADER_ON_EVADE | Everyone respawns if members evade    (enters evade mode)      |
+| 16    | 0x010 | GROUP_AI_FLAG_DONT_RESPAWN_LEADER_ON_EVADE | Used with flag 0x008 to prevent leader from respawning         |
 | 24    |       |                                            | Everyone but leader respawns if members evade                  |
 | 512   | 0x200 | GROUP_AI_FLAG_FOLLOW_LEADER                | Noone assists noone and member follow the leader               |
 | 515   |       |                                            | Everyone assists everyone and member follow the leader         |
