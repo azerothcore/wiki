@@ -193,14 +193,14 @@ AzerothCore requires GCC 8.0 or higher and CLang 7 or higher.
 ---------------------------------------------------------
 
 #### [ACE00062](#a-hreface00062ace00062a)
-I cannot install AzerothCore on Windows XP/Vista
+I cannot install AzerothCore on Windows XP/Vista/7
 
-AzerothCore requires [Visual Studio 2019](https://docs.microsoft.com/en-us/visualstudio/releases/2019/system-requirements), therefore you need to update to Windows 7 or above.
+AzerothCore requires [Visual Studio 2022](https://docs.microsoft.com/en-us/visualstudio/releases/2022/system-requirements), therefore you need to update to Windows 10 or above.
 
 ---------------------------------------------------------
 
 #### [ACE00063](#a-hreface00063ace00063a)
-I cannot install AzerothCore on Linuyx, I get:
+I cannot install AzerothCore on Linux, I get:
 ```
 c++: internal compiler error: Segmentation fault (program cc1plus)
 ```
