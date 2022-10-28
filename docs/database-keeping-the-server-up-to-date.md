@@ -11,7 +11,7 @@ If you want to know how the SQL directory works or plan to have custom changes w
 
 ## Automatic Database Updater
 
-By default the Worldserver and Authserver will check for, and import all new files into the database you specified in the config.
+By default the Worldserver and Authserver will check for, and execute all new files into the database you specified in the config.
 
 1. Start worldserver.exe
 
