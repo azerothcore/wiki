@@ -1,44 +1,40 @@
----
-redirect_from: "/Emotes"
----
-
 # Emotes
 
-[`Back-to:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index.md)
 
-This DBC contains emotes which can be used by NPCs.
+Este archivo DBC contiene emotes que pueden ser utilizados por los NPCs y jugadores dentro del juego.
 
 
-## Structure
+## Estructura
 
-| Column | Type  | Comment                                                                                                                                               |
-|--------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1      | long  | An ID for the emote. Must be unique.                                                                                                                  |
-| 2      | str   | A descriptive name for the emote.                                                                                                                     |
-| 3      | long  | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/AnimationData). This is the ID of the animation to play.                         |
-| 4      | flags |                                                                                                                                                       |
-| 5      | flags |                                                                                                                                                       |
-| 6      | long  |                                                                                                                                                       |
-| 7      | long  | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/SoundEntries). This is the ID of the sound to play when the animation is played. |
+| Columna | Tipo  | Comentario                                                                                                                                                                                        |
+|---------|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1       | long  | Identificador del emote. Debe ser único.                                                                                                                                                          |
+| 2       | str   | Un nombre descriptivo para el emote                                                                                                                                                               |
+| 3       | long  | Hace referencia a una ID dentro de [éste archivo DBC](http://collab.kpsn.org/display/tc/AnimationData) en particular. La ID de la animación (emote) a reproducir.                                 |
+| 4       | flags |                                                                                                                                                                                                   |
+| 5       | flags |                                                                                                                                                                                                   |
+| 6       | long  |                                                                                                                                                                                                   |
+| 7       | long  | Hace referencia a una ID dentro de [éste archivo DBC](http://collab.kpsn.org/display/tc/SoundEntries) en particular. La ID del sonido que será reproducido cuando se active la animación o emote. |
 
-Information on the structure this DBC file was taken from [here](https://web.archive.org/web/20161130074340/http://www.pxr.dk/wowdev/wiki/index.php?title=Emotes.dbc) and [here](https://wowdev.wiki/DB/Emotes). For any information on the columns without a comment, just refer to [that page](https://web.archive.org/web/20161130074340/http://www.pxr.dk/wowdev/wiki/index.php?title=Emotes.dbc) or [here](https://wowdev.wiki/DB/Emotes).
+La información acerca de la estructura del archivo ha sido tomada de [aquí](https://web.archive.org/web/20161130074340/http://www.pxr.dk/wowdev/wiki/index.php?title=Emotes.dbc) o [aquí](https://wowdev.wiki/DB/Emotes). Para cualquier información sobre las columnas sin comentario, basta con remitirse a [esa página](https://web.archive.org/web/20161130074340/http://www.pxr.dk/wowdev/wiki/index.php?title=Emotes.dbc) o a [ésta](https://wowdev.wiki/DB/Emotes).
 
-## Content
+## Contenido
 
-When testing the NPC emotes listed below using the *.npc playemote \#* command, the NPC generally continuously plays the specified emote. When playing the emote through, for example, and SAI script, the NPC may use the emote differently.
+Cuando se prueban los emotes listados abajo dentro del juego con las criaturas usando el comando *.npc playemote \#*, el NPC generalmente suele reproducir continuamente el emote ya especificado. Cuando se reproduce el emote a través de, por ejemplo, un script SAI, el NPC puede utilizar el emote de manera diferente, por decir algo, durante o hasta cierto evento, incluso durate un cierto periodo de tiempo.
 
-| ID  | Emote name                          | Comment                                       |
-|-----|-------------------------------------|-----------------------------------------------|
-| 0   | ONESHOT_NONE                        | The NPC reverts to its normal standing state. |
-| 1   | ONESHOT_TALK(DNR)                   | The NPC plays the talking emote once.         |
-| 2   | ONESHOT_BOW                         | The NPC plays the bowing emote once.          |
-| 3   | ONESHOT_WAVE(DNR)                   | The NPC plays the wave emote once.            |
-| 4   | ONESHOT_CHEER(DNR)                  | The NPC plays the cheering emote once.        |
-| 5   | ONESHOT_EXCLAMATION(DNR)            | The NPC plays the exclamation emote once.     |
-| 6   | ONESHOT_QUESTION                    | The NPC plays the question emote once.        |
-| 7   | ONESHOT_EAT                         | The NPC plays the eating emote once.          |
-| 10  | STATE_DANCE                         | The NPC continuously plays the dancing emote. |
-| 11  | ONESHOT_LAUGH                       | The NPC plays the laughing emote once         |
+| ID  | Nombre del Emote                    | Comentario                                           |
+|-----|-------------------------------------|------------------------------------------------------|
+| 0   | ONESHOT_NONE                        | El PNJ vuelve a su estado normal.                    |
+| 1   | ONESHOT_TALK(DNR)                   | El PNJ utiliza el emote para hablar una sola vez.    |
+| 2   | ONESHOT_BOW                         | El PNJ utiliza el emote de reverencia una sola vez.  |
+| 3   | ONESHOT_WAVE(DNR)                   | El PNJ utiliza el emote de saludo una sola vez.                |
+| 4   | ONESHOT_CHEER(DNR)                  | El PNJ utiliza el emote animar una sola vez.         |
+| 5   | ONESHOT_EXCLAMATION(DNR)            | El PNJ utiliza el emote de exclamación una sola vez. |
+| 6   | ONESHOT_QUESTION                    | El PNJ utiliza el emote de pregunta una sola vez.    |
+| 7   | ONESHOT_EAT                         | El PNJ utiliza el emote de comer una sola vez.       |
+| 10  | STATE_DANCE                         | El PNJ utiliza el emote de baile continuamente.      |
+| 11  | ONESHOT_LAUGH                       | El PNJ utiliza el emote de risa una sola vez.        |
 | 12  | STATE_SLEEP                         |                                               |
 | 13  | STATE_SIT                           |                                               |
 | 14  | ONESHOT_RUDE(DNR)                   |                                               |
@@ -204,4 +200,4 @@ When testing the NPC emotes listed below using the *.npc playemote \#* command, 
 | 473 | STATE_STRANGULATE                   |                                               |
 | 474 | STATE_READYSPELLOMNI                |                                               |
 | 475 | STATE_HOLD_JOUST                    |                                               |
-| 476 | ONESHOT_CRY (JAINA PROUDMOORE ONLY) |                                               |
+| 476 | ONESHOT_CRY (SÓLO JAINA VALIENTE)   |                                               |
