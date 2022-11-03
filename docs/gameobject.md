@@ -121,6 +121,8 @@ The orientation. (North = 0, South = 3.14159)
 
 Time in seconds for this object to respawn.
 
+Using 0 will result in the object not despawning on use.
+
 Using a negative value will result in the object starting out by being "despawned" until a script will spawn it. It will then despawn after the amount of time specified here has passed.
 
 ### animprogress
