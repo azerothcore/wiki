@@ -48,7 +48,7 @@ sudo apt install -y install libboost1.74-dev
 ```
 
 --- 
-
+/*
 #### Debian 10
 
 ```sh
@@ -64,7 +64,7 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 ```sh
 apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
 ```
-
+*/
 --- 
 
 #### Check your clang version
