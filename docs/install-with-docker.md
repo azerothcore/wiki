@@ -61,39 +61,34 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git
 
 Now go into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run inside this folder**.
 
-Before we install let's get a copy of our own config.sh from the distribution
-```
-cp conf/dist/config.sh conf/config.sh
-```
-
 ### Installation
 
 Inside your terminal (if you use Windows, use git bash), run the following commands inside the azerothcore-wotlk folder
 
-NOTE: the following procedure uses our acore.sh dashboard, however, these commands are a shortcut of the docker compose ones.
+**IMPORTANT**: the following procedure uses our acore.sh dashboard, however, these commands are a shortcut of the docker compose ones.
       you can check the docker compose commands used in background by running `./acore.sh docker --help` and read the description of each command
 
-**1) Download the client data:**
+
+**1) Compile AzerothCore:**
+```
+./acore.sh docker build
+```
+It will build docker images and compile the core automatically!
+This may take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
+
+**NOTE For dev:** if you are working with code and you need a fast way to compile your binaries, the command above
+can be a bit overkill for you because you probably do not need to rebuild images.
+Therefore, we suggest to use one of the following solution instead:
+
+* `./acore.sh docker dev:build` it only builds the dev image and compiles the sources.
+
+**2) Download the client data:**
 
 ```
 ./acore.sh docker client-data
 ```
 
-NOTE: This command should be executed only at the first installation and when there's a new version of the client-data available
-
-**2) Compile AzerothCore:**
-```
-./acore.sh docker build
-```
-It will build docker images, compile the core and import needed SQL files automatically!
-This may take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
-
-**NOTE For dev:** if you are working with code and you need a fast way to compile your binaries, the command above
-can be a bit overkill for you because you probably do not need to rebuild images or import SQL if you have not changed them. 
-Therefore, we suggest to use one of the following solution instead:
-
-* `./acore.sh docker build:compiler` it only builds the dev image and compiles the sources without importing sql.
-* `./acore.sh docker dev:build` it's similar to the previous command, but it uses the dev-container which uses volumes instead of the container. It can be faster on some configurations.
+**IMPORTANT**: This command should be executed only at the first installation and when there's a new version of the client-data available
 
 **3) Run the containers**
 
@@ -160,11 +155,11 @@ First of all, you just need to use the `git` tool to update your repository by r
 
 Then you can just run the following command:
 
-`./acore.sh docker build`: to rebuild the images and generate new binaries. Moreover, it will also import latest database changes.
+`./acore.sh docker build`: to rebuild the images and generate new binaries.
 
 NOTE:  We do not update so often the client data, but when it happens you can run the following command:
 
-`./acore.sh client-data`: it will download the new version of the client data if there's a new version available
+`./acore.sh docker client-data`: it will download the new version of the client data if there's a new version available
 
 ### How to run the worldserver with GDB
 

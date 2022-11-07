@@ -14,19 +14,19 @@ redirect_from: "/Installation"
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
 
-### Full (supported, recommended)
+### Install from sources (supported, recommended)
 
-These are the officially-supported and complete ways of installing AzerothCore, for any purposes.
+These are the officially-supported and complete ways of installing AzerothCore, for any purposes (Windows, Linux, macOS).
 
-- [Azerothcore Classic Setup (Windows, Linux, macOS)](#azerothcore-classic-setup) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
+- [Azerothcore Classic Setup](#azerothcore-classic-setup) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
 
 - [Docker setup](install-with-docker.md) - an installation process based on Docker. Docker knowledge recommended. Limited support.
 
-- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for **Linux** and **Mac OS** systems for both local development and production. Currently not recommended for Windows.
+- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for both local development and production.
 
-### Minimal (supported, limited usage)
+### Install from pre-compiled images  (supported, limited usage)
 
-- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - an extremely simple way of installing AzerothCore. Suitable only for bug triaging, bug reporting or domestic usage.
+- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - an extremely simple way of installing AzerothCore. Currently, you can't install c++ modules, only Eluna scripts. Particularly  suitable for bug triaging, bug reporting or domestic usage.
 
 ### Others (unsupported)
 
