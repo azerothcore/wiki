@@ -23,6 +23,7 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 ## Documentation
 
 - [Documentation Index](documentation_index)
+- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/)
 
 ## Overview
 
