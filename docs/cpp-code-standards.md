@@ -6,7 +6,7 @@ tableofcontents: 1
 
 ## Intro
 
-### Why are conding standards important?
+### Why are coding standards important?
 
 It makes it easier for everyone to maintain and read the written code as well as it gives us more control over it.
 
