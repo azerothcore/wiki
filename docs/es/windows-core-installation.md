@@ -47,7 +47,7 @@ Antes de empezar, cree un nuevo directorio llamado **Build**. En esta guía usar
 
 1. Haga click en  **Finish**.
 
-1. Asegurese de marcar **TOOLS**. Esto compilará los binarios necesarios para la extracción de archivos requeridos más adelante.
+1. Asegurese de marcar **TOOLS_BUILD**. Esto compilará los binarios necesarios para la extracción de archivos requeridos más adelante.
 
 1. Haga click en **Configure** otra vez. Siempre que tenga errores marcados en rojo en la ventana, deberá revisar los parametros y ejecutar **Configure**.
 

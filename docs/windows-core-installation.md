@@ -47,7 +47,7 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
 1. Click **Finish**.
 
-1. Make sure **TOOLS** is set to `all`. This will compile the extractors needed later in the setup.
+1. Make sure **TOOLS_BUILD** is set to `all`. This will compile the extractors needed later in the setup.
 
 1. Click **Configure** again. As long as you have error(s) typed in red in the log window you will need to check your parameters and re-run it.
 
