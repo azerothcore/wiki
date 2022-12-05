@@ -157,7 +157,7 @@ For 64-bit version:
 
 #### OpenSSL 3.0 and more recent installed, you need to copy:
 
-**leagacy.dll**
+**legacy.dll**
 
 #### About compilation log and report
 
