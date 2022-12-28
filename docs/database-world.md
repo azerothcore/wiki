@@ -1,7 +1,5 @@
 # Database World
 
-The world database has information basically related to creatures, objects, items, dialogs, texts and even scripts can be made through the smart_scripts table. It also has translations, achievements, events... We are currently working to review these tables and try to update those that do not have the correct information. That is why, if you detect any error in any of them, we invite you to open an [issue](https://github.com/azerothcore/wiki/issues), providing the appropriate information, so we can update it. We also invite you to create a [pull request](https://github.com/azerothcore/wiki/pulls), with the corresponding modifications, so that we can analyze the code and incorporate it if it is correct. Currently, we are working on updating. In the next [Update database-world.md](https://github.com/azerothcore/wiki/issues/357)
-
 - [achievement_criteria_data](achievement_criteria_data.md)
 - [achievement_dbc](achievement_dbc.md)
 - [achievement_reward](achievement_reward.md)
