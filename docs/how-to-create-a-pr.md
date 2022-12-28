@@ -101,6 +101,8 @@ git checkout -b fix-issue-xxxx
 
 ### 4. Add your C++ changes (if any)
 
+Make sure all changes abides the [C++ Code Standards](cpp-code-standards.md)!
+
 If you don't have any C++ changes, you can skip this. Otherwise, open your editor and do them now! I'll wait...
 
 In this guide we will assume that you modified the file `instance_deadmines.cpp`
