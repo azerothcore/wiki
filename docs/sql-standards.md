@@ -34,7 +34,7 @@ INSERT INTO `creature_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `Q
 ```
 ---
 
-When performing DELETE queries, always specify more than one one field when possible.
+When performing DELETE queries, always specify more than one field when possible.
 
 Wrong:
 
