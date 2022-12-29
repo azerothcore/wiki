@@ -32,6 +32,21 @@ DELETE FROM `creature_loot_template` WHERE `entry` = 3 AND `item` = 884;
 INSERT INTO `creature_loot_template` (`Entry`, `Item`, `Reference`, `Chance`, `QuestRequired`, `LootMode`, `GroupId`, `MinCount`, `MaxCount`, `Comment`) VALUES 
 (3, 884, 0, 40, 1, 1, 0, 1, 1, 'Comment');
 ```
+---
+
+When performind DELETE queries, always specify more than one one field in the query when possible.
+
+Wrong:
+
+```sql
+DELETE FROM `creature_loot_template` WHERE `item` = 884;
+```
+
+Correct:
+
+```sql
+DELETE FROM `creature_loot_template` WHERE `entry` = 3 AND `item` = 884;
+```
 
 ### UPDATE
 
