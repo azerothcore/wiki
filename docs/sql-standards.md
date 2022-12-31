@@ -142,6 +142,24 @@ UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`&~(6
 
 ## Tables and Columns
 
+### Naming of tables and columns
+
+For the most part, tables should be written in snake case, and columns should be written in upper camel case.
+
+Tables:
+```
+broadcast_text
+creature_loot_template
+points_of_interest
+```
+
+Columns:
+```
+MaleText
+QuestRequired
+PositionX
+```
+
 ### Integers
 
 We do not define the width of an integer when we create new columns. (Width is deprecated in later versions of MySQL 8)
