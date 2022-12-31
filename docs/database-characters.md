@@ -1,5 +1,6 @@
 # Database Characters
 
+## A
 - [account_data](account_data.md)
 - [account_instance_times](account_instance_times.md)
 - [account_tutorial](account_tutorial.md)
@@ -7,9 +8,13 @@
 - [arena_team](arena_team.md)
 - [arena_team_member](arena_team_member.md)
 - [auctionhouse](auctionhouse.md)
+
+## B
 - [banned_addons](banned_addons.md)
 - [battleground_deserters](battleground_deserters.md)
 - [bugreport](bugreport.md)
+
+## C
 - [calendar_events](calendar_events.md)
 - [calendar_invites](calendar_invites.md)
 - [channels](channels.md)
@@ -50,6 +55,14 @@
 - [characters](characters.md)
 - [corpse](corpse.md)
 - [creature_respawn](creature_respawn.md)
+
+## D
+
+## E
+
+## F
+
+## G
 - [game_event_condition_save](game_event_condition_save.md)
 - [game_event_save](game_event_save.md)
 - [gameobject_respawn](gameobject_respawn.md)
@@ -67,22 +80,40 @@
 - [guild_member](guild_member.md)
 - [guild_member_withdraw](guild_member_withdraw.md)
 - [guild_rank](guild_rank.md)
+
+## H
+
+## I
 - [instance](instance.md)
 - [instance_reset](instance_reset.md)
 - [item_instance](item_instance.md)
 - [item_loot_storage](item_loot_storage.md)
 - [item_refund_instance](item_refund_instance.md)
 - [item_soulbound_trade_data](item_soulbound_trade_data.md)
+
+## J
+
+## K
+
+## L
 - [lag_reports](lag_reports.md)
 - [lfg_data](lfg_data.md)
 - [log_arena_fights](log_arena_fights.md)
 - [log_arena_memberstats](log_arena_memberstats.md)
 - [log_encounter](log_encounter.md)
 - [log_money](log_money.md)
+
+## M
 - [mail](mail.md)
 - [mail_items](mail_items.md)
 - [mail_server_character](mail_server_character.md)
 - [mail_server_template](mail_server_template.md)
+
+## N
+
+## O
+
+## P
 - [pet_aura](pet_aura.md)
 - [pet_spell](pet_spell.md)
 - [pet_spell_cooldown](pet_spell_cooldown.md)
@@ -91,11 +122,31 @@
 - [pool_quest_save](pool_quest_save.md)
 - [pvpstats_battlegrounds](pvpstats_battlegrounds.md)
 - [pvpstats_players](pvpstats_players.md)
+
+## Q
 - [quest_tracker](quest_tracker.md)
+
+## R
 - [recovery_item](recovery_item.md)
 - [reserved_name](reserved_name.md)
+
+## S
+
+## T
+
+## U
 - [updates](updates.md)
 - [updates_include](updates_include.md)
+
+## V
 - [version_db_characters](version_db_characters.md)
+
+## W
 - [warden_action](warden_action.md)
 - [worldstates](worldstates.md)
+
+## X
+
+## Y
+
+## Z
