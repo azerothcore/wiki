@@ -1,5 +1,6 @@
 # Database World
 
+## A
 - [achievement_criteria_data](achievement_criteria_data.md)
 - [achievement_dbc](achievement_dbc.md)
 - [achievement_reward](achievement_reward.md)
@@ -10,10 +11,14 @@
 - [areatrigger_scripts](areatrigger_scripts.md)
 - [areatrigger_tavern](areatrigger_tavern.md)
 - [areatrigger_teleport](areatrigger_teleport.md)
+
+## B
 - [battleground_template](battleground_template.md)
 - [battlemaster_entry](battlemaster_entry.md)
 - [broadcast_text](broadcast_text.md)
 - [broadcast_text_locale](broadcast_text_locale.md)
+
+## C
 - [command](command.md)
 - [conditions](conditions.md)
 - [creature](creature.md)
@@ -37,13 +42,21 @@
 - [creature_template_spell](creature_template_spell.md)
 - [creature_text](creature_text.md)
 - [creature_text_locale](creature_text_locale.md)
+
+## D
 - [disables](disables.md)
 - [disenchant_loot_template](loot_template.md)
 - [dungeon_access_requirements](dungeon_access_requirements.md)
 - [dungeon_access_template](dungeon_access_template.md)
+
+## E
 - [event_scripts](event_scripts.md)
 - [exploration_basexp](exploration_basexp.md)
+
+## F
 - [fishing_loot_template](loot_template.md)
+
+## G
 - [game_event](game_event.md)
 - [game_event_arena_seasons](game_event_arena_seasons.md)
 - [game_event_battleground_holiday](game_event_battleground_holiday.md)
@@ -75,7 +88,11 @@
 - [gossip_menu_option](gossip_menu_option.md)
 - [gossip_menu_option_locale](gossip_menu_option_locale.md)
 - [graveyard_zone](graveyard_zone.md)
+
+## H
 - [holiday_dates](holiday_dates.md)
+
+## I
 - [instance_encounters](instance_encounters.md)
 - [instance_template](instance_template.md)
 - [item_enchantment_template](item_enchantment_template.md)
@@ -84,18 +101,32 @@
 - [item_set_names_locale](item_set_names_locale.md)
 - [item_template](item_template.md)
 - [item_template_locale](item_template_locale.md)
+
+## J
+
+## K
+
+## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards.md)
 - [lfg_dungeon_template](lfg_dungeon_template.md)
 - [linked_respawn](linked_respawn.md)
+
+## M
 - [mail_level_reward](mail_level_reward.md)
 - [mail_loot_template](loot_template.md)
 - [milling_loot_template](loot_template.md)
+
+## N
 - [npc_spellclick_spells](npc_spellclick_spells.md)
 - [npc_text](npc_text.md)
 - [npc_text_locale](npc_text_locale.md)
 - [npc_trainer](npc_trainer.md)
 - [npc_vendor](npc_vendor.md)
+
+## O
 - [outdoorpvp_template](outdoorpvp_template.md)
+
+## P
 - [page_text](page_text.md)
 - [page_text_locale](page_text_locale.md)
 - [pet_levelstats](pet_levelstats.md)
@@ -123,6 +154,8 @@
 - [pool_quest](pool_quest.md)
 - [pool_template](pool_template.md)
 - [prospecting_loot_template](loot_template.md)
+
+## Q
 - [quest_details](quest_details.md)
 - [quest_greeting](quest_greeting.md)
 - [quest_greeting_locale](quest_greeting_locale.md)
@@ -137,11 +170,15 @@
 - [quest_template](quest_template.md)
 - [quest_template_addon](quest_template_addon.md)
 - [quest_template_locale](quest_template_locale.md)
+
+## R
 - [reference_loot_template](loot_template.md)
 - [reputation_reward_rate](reputation_reward_rate.md)
 - [reputation_spillover_template](reputation_spillover_template.md)
 - [script_waypoint](scripts.md)
 - [\*\*\_scripts](scripts.md)
+
+## S
 - [skill_discovery_template](skill_discovery_template.md)
 - [skill_extra_item_template](skill_extra_item_template.md)
 - [skill_fishing_base_level](skill_fishing_base_level.md)
@@ -167,14 +204,28 @@
 - [spell_target_position](spell_target_position.md)
 - [spell_threat](spell_threat.md)
 - [spelldifficulty_dbc](spelldifficulty_dbc.md)
+
+## T
 - [transports](transports.md)
+
+## U
 - [updates](updates.md)
 - [updates_include](updates_include.md)
+
+## V
 - [vehicle_accessory](vehicle_accessory.md)
 - [vehicle_template_accessory](vehicle_template_accessory.md)
 - [version](version.md)
 - [version_db_world](version_db_world.md)
+
+## W
 - [warden_checks](warden_checks.md)
 - [waypoint_data](waypoint_data.md)
 - [waypoint_scripts](scripts.md)
 - [waypoints](waypoints.md)
+
+## X
+
+## Y
+
+## Z
