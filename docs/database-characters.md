@@ -56,12 +56,6 @@
 - [corpse](corpse.md)
 - [creature_respawn](creature_respawn.md)
 
-## D
-
-## E
-
-## F
-
 ## G
 - [game_event_condition_save](game_event_condition_save.md)
 - [game_event_save](game_event_save.md)
@@ -81,8 +75,6 @@
 - [guild_member_withdraw](guild_member_withdraw.md)
 - [guild_rank](guild_rank.md)
 
-## H
-
 ## I
 - [instance](instance.md)
 - [instance_reset](instance_reset.md)
@@ -90,10 +82,6 @@
 - [item_loot_storage](item_loot_storage.md)
 - [item_refund_instance](item_refund_instance.md)
 - [item_soulbound_trade_data](item_soulbound_trade_data.md)
-
-## J
-
-## K
 
 ## L
 - [lag_reports](lag_reports.md)
@@ -108,10 +96,6 @@
 - [mail_items](mail_items.md)
 - [mail_server_character](mail_server_character.md)
 - [mail_server_template](mail_server_template.md)
-
-## N
-
-## O
 
 ## P
 - [pet_aura](pet_aura.md)
@@ -130,10 +114,6 @@
 - [recovery_item](recovery_item.md)
 - [reserved_name](reserved_name.md)
 
-## S
-
-## T
-
 ## U
 - [updates](updates.md)
 - [updates_include](updates_include.md)
@@ -144,9 +124,3 @@
 ## W
 - [warden_action](warden_action.md)
 - [worldstates](worldstates.md)
-
-## X
-
-## Y
-
-## Z
