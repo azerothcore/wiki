@@ -102,10 +102,6 @@
 - [item_template](item_template.md)
 - [item_template_locale](item_template_locale.md)
 
-## J
-
-## K
-
 ## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards.md)
 - [lfg_dungeon_template](lfg_dungeon_template.md)
@@ -223,9 +219,3 @@
 - [waypoint_data](waypoint_data.md)
 - [waypoint_scripts](scripts.md)
 - [waypoints](waypoints.md)
-
-## X
-
-## Y
-
-## Z
