@@ -4,7 +4,7 @@
 
 **The \`player\_race\_stats\` table**
 
-This table holds information on what values are applied to stats for characters as they level up. All of the values in this table signify only the base stats of a class at a specific level.
+This table holds information on modifiers for stat values applied to characters. All of the values in this table signify only the stat value modifiers based on the race of a character.
 
 **Structure**
 
