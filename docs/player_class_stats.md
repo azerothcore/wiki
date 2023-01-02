@@ -73,4 +73,8 @@ The base spirit to be applied to a character.
 
 **Relation to [\`player\_race\_stats\`](player_race_stats)**
 
-This table alone does not define the stats of a character at any level. The values from this table are combined with the values found in the \`player\_race\_stats\` table to apply the final stats to a character at any level.
+This table alone does not define the stats of a character at any level. The values from this table are combined with the values found in the `player\_race\_stats` table to apply the final stats to a character at any level.
+
+The way the final stat can be calculated is as follows: Take the base stat from this table and add the modifier for that stat from `player\_race\_stats`.
+
+For example, a druid at level forty has a base strength stat of forty-six. Combining that with a night elf's strength modifier of negative four, you get a final value of forty-two.
