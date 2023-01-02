@@ -1,8 +1,8 @@
-# player\_levelstats
+# player\_class\_stats
 
 [<-Back-to:World](database-world.md)
 
-**The \`player\_levelstats\` table**
+**The \`player\_class\_stats\` table**
 
 This table holds information on what values are applied to stats for characters as they level up. All of the values in this table signify only the base stats of a class at a specific level.
 
