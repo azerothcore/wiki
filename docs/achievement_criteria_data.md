@@ -53,7 +53,7 @@ Depending on this value, it will determine how value1 and value2 are used.
 | 16   | TYPE_HOLIDAY              |
 | 17   | TYPE_BG_LOSS_TEAM_SCORE   |
 | 18   | TYPE_INSTANCE_SCRIPT      |
-| 19   | TYPE_S_EQUIPPED_ITEM       |
+| 19   | TYPE_S_EQUIPED_ITEM       |
 | 20   | TYPE_MAP_ID               |
 | 21   | TYPE_S_PLAYER_CLASS_RACE  |
 | 22   | TYPE_NTH_BIRTHDAY         |
@@ -144,7 +144,7 @@ Depending on this value, it will determine how value1 and value2 are used.
 
 -   Make instance script call for check current criteria requirements fit.
 
-**TYPE\_S\_EQUIPPED\_ITEM**
+**TYPE\_S\_EQUIPED\_ITEM**
 
 -   Item level
 
@@ -184,7 +184,7 @@ Depending on this value, it will determine how value1 and value2 are used.
 
 -   Max. score
 
-**TYPE\_S\_EQUIPPED\_ITEM**
+**TYPE\_S\_EQUIPED\_ITEM**
 
 -   Item quality
 

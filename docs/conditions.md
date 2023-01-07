@@ -578,7 +578,7 @@ Two conditions with the same SourceType, SourceGroup and SourceEntry but with a
 <td>0 = not in bank, 1 = in bank</td>
 </tr>
 <tr class="even">
-<td>CONDITION_ITEM_EQUIPPED</td>
+<td>CONDITION_ITEM_EQUIPED</td>
 <td>3</td>
 <td>item entry (<a href="http://www.azerothcore.org/wiki/item_template#entry">item_template.entry</a>)</td>
 <td>Always 0</td>
@@ -1268,7 +1268,7 @@ Note: it will show or hide spells in vehicle spell bar.
     -   ConditionValue2: item count
     -   ConditionValue3: in bank? (true=1)
 
-\***CONDITION\_ITEM\_EQUIPPED = 3**
+\***CONDITION\_ITEM\_EQUIPED = 3**
 
 -   -   ConditionValue1: item entry ([item\_template.entry](http://www.azerothcore.org/wiki/item_template#entry))
     -   ConditionValue2: always 0
