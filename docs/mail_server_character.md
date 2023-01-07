@@ -4,7 +4,7 @@
 
 **The \`mail_server_character\` table**
 
-This table keeps entries of which player has recieved a server mail. This prevents the same mail to be sent twice to the same player.
+This table keeps entries of which player has received a server mail. This prevents the same mail to be sent twice to the same player.
 
 **Structure**
 

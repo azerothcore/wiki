@@ -116,7 +116,7 @@ PROC_FLAG_DEATH | 16777216 | 0x01000000 | Died in any way
 ### procEx
 procEx | Bit | Hex | Comment
 :--- | :--- | :--- | :--- 
-PROC_EX_NONE | 0 | 0x0000000 | If none can tigger on Hit/Crit only (passive spells MUST defined by SpellFamily flag)
+PROC_EX_NONE | 0 | 0x0000000 | If none can trigger on Hit/Crit only (passive spells MUST defined by SpellFamily flag)
 PROC_EX_NORMAL_HIT | 1 | 0x0000001 |
 PROC_EX_CRITICAL_HIT | 2 | 0x0000002 |
 PROC_EX_MISS | 4 | 0x0000004 |

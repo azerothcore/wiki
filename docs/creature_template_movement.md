@@ -4,7 +4,7 @@
 
 This table contains the description of creatures movements, where the creature can move and attack.
 
-This table can be overriden by \`creature_movement_override\`
+This table can be overridden by \`creature_movement_override\`
 
 **Table Structure**
 

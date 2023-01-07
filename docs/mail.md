@@ -92,7 +92,7 @@ If [stationery][3] is 62, subject has formatted data:
 
 -    **itemEntry**: entry field from item_template table
 
--    0: allways 0
+-    0: always 0
 
 -    **response**: Flag from 0 to 6
 
@@ -131,7 +131,7 @@ If [stationery][3] is 62, body has formatted data:
 
 -    **delay**: time in seconds to delay mail with money for successfully solded lot
 
--    **eta**: packed time to next mail whth money which appears in mail heder and body of notification mail
+-    **eta**: packed time to next mail whth money which appears in mail header and body of notification mail
 
 This formatted data seen only in mail with notification about successful auction or about pending mail with money.
 

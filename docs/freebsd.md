@@ -1,7 +1,7 @@
 # FreeBSD
 
 ## Install Dependencies
-You need to install the build and runtime dependancies:
+You need to install the build and runtime dependencies:
 
 ```
 pkg install mysql80-server

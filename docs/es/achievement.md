@@ -30,7 +30,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 47     | Bonus                |              | Texto adicional acerca de la recompensa al recibir el logro.                                                                                                                                                                                           |
 | 60     | ?                    |              | ¿Número flotante?                                                                                                                                                                                                                                      |
 | 61     | Demands              | Integer      | Número de cosas que debes de obtener/cumplir para obtener este logro. Por ejemplo, si debes de conseguir 25 tabardos, hay un número 25 en este campo. TrinityCore: "Necesita un número de Criterios de Logros Completados (propios o referenciados)"   |
-| 62     | ReferencedAchievemnt | Integer      | TrinityCore: "Logro referenciado (número de todos los Criterios de Logros completados)"                                                                                                                                                                |
+| 62     | ReferencedAchievement | Integer      | TrinityCore: "Logro referenciado (número de todos los Criterios de Logros completados)"                                                                                                                                                                |
 
 ## Contenido
 

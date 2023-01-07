@@ -547,7 +547,7 @@ A bitmask that contains visible actionbars for the player.
 | ---- | ---------- | ---------------- |
 | 1    | 0x00000001 | Bottom Left Bar  |
 | 2    | 0x00000002 | Bottom Right Bar |
-| 4    | 0x00000004 | Rigth Bar        |
+| 4    | 0x00000004 | Right Bar        |
 | 8    | 0x00000008 | Right Bar 2      |
 
 ### grantableLevels

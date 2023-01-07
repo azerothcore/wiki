@@ -18,4 +18,4 @@
 The player level.
 
 ### basexp
-The base experience the player will recieve when he or she discovers a new zone at the level specified in the level field.
+The base experience the player will receive when he or she discovers a new zone at the level specified in the level field.

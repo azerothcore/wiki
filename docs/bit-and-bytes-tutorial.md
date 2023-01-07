@@ -222,7 +222,7 @@ Imagine having the following bitmasks:
 
 You might be confused with what just happened.
 
-Well, we just compared bit from first mask and bit from second mask and compared them. If they are diferent then the final value is true. This is how it would look like programmatically:
+Well, we just compared bit from first mask and bit from second mask and compared them. If they are different then the final value is true. This is how it would look like programmatically:
 
 ``` C++
 // Compare the values from mask 1 and 2

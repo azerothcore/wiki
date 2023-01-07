@@ -47,13 +47,13 @@ ALTER TABLE `version_db_auth` CHANGE COLUMN 2016_07_09_01 2016_07_10_00 bit;
 
 Pending sql files cannot use the protection system described above because we are not able to know previously the date when they will be accepted.
 
-So we're using an optional versioning ( but recommended for devs and expecially for pull requests ).
+So we're using an optional versioning ( but recommended for devs and especially for pull requests ).
 
 We've  introduced a field inside version_db_* tables that is a primary key string, and also a 'required_rev' field that you can use to allow relation by versions. 
 
 For example you can create a version "X" that is related to a version "Y" that is not necessary the previous one.
 
-Currently we're using this bash command to avoid, as much as possibile, collisions between revisions:
+Currently we're using this bash command to avoid, as much as possible, collisions between revisions:
 
 ```bash
 date +%s%N
@@ -75,7 +75,7 @@ INSERT INTO `version_db_auth` (`sql_rev`) VALUES ('1472557015805232200');
 
 Adding it in first line of your sql, it generates an error in case of double import; Such as for chronological versioning.
 
-There's a bash script under pending_* folders that will create an sql with this row on first line for you, moreover will name the file to be reconized by our import system. We strongly suggest to use it.
+There's a bash script under pending_* folders that will create an sql with this row on first line for you, moreover will name the file to be recognized by our import system. We strongly suggest to use it.
 
 ## The pending import system
 

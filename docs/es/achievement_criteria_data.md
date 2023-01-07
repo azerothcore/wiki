@@ -53,7 +53,7 @@ Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 | 16   | TYPE_HOLIDAY              |
 | 17   | TYPE_BG_LOSS_TEAM_SCORE   |
 | 18   | TYPE_INSTANCE_SCRIPT      |
-| 19   | TYPE_S_EQUIPED_ITEM       |
+| 19   | TYPE_S_EQUIPPED_ITEM       |
 | 20   | TYPE_MAP_ID               |
 | 21   | TYPE_S_PLAYER_CLASS_RACE  |
 | 22   | TYPE_NTH_BIRTHDAY         |
@@ -143,7 +143,7 @@ Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 **TYPE\_INSTANCE\_SCRIPT**
 
 -   Hace que el script de la instancia revise que los criterios se ajusten.
-**TYPE\_S\_EQUIPED\_ITEM**
+**TYPE\_S\_EQUIPPED\_ITEM**
 
 -   Item level
 
@@ -183,13 +183,13 @@ Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 
 -   Max. puntaje
 
-**TYPE\_S\_EQUIPED\_ITEM**
+**TYPE\_S\_EQUIPPED\_ITEM**
 
 -   Calidad del item
 
 **TYPE\_VALUE**
 
-| ComparisationType        |
+| ComparisonType        |
 | ------------------------ |
 | COMP\_TYPE\_EQ = 0       |
 | COMP\_TYPE\_HIGH = 1     |

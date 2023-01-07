@@ -275,7 +275,7 @@ Object type not used
 -   data2: eventID (event\_script id)
 -   data3:  Time in ms before the initial state is restored
 -   data4: customAnim (unknown)
--   data5: consumable (Boolean flag controling if gameobject will despawn or not)
+-   data5: consumable (Boolean flag controlling if gameobject will despawn or not)
 -   data6: cooldown (time is seconds)
 -   data7: pageID ([page\_text.entry](http://www.azerothcore.org/wiki/page_text#entry))
 -   data8: language (from Languages.dbc)

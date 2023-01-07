@@ -33,7 +33,7 @@ This DBC contains all achievements.
 | 47     | Bonus                |              | Additional reward text                                                                                                                                                                                                      |
 | 60     | ?                    |              | Float number ?                                                                                                                                                                                                              |
 | 61     | Demands              | Integer      | Number of things you have to get/fulfill to get this Achievement. For example if you have to get 25 tabards, there is a 25. TrinityCore: "need this count of completed criterias (own or referenced achievement criterias)" |
-| 62     | ReferencedAchievemnt | Integer      | TrinityCore: "referenced achievement (counting of all completed criterias)"                                                                                                                                                 |
+| 62     | ReferencedAchievement | Integer      | TrinityCore: "referenced achievement (counting of all completed criterias)"                                                                                                                                                 |
 
 ## Content
 

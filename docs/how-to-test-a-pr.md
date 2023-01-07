@@ -122,7 +122,7 @@ It is important to report your test results by leaving a comment **in the PR pag
 You should write:
 
 - what you have tested
-- do the things that you've tested work as intented?
+- do the things that you've tested work as intended?
 - sometimes you may also want to specify how things worked **before** and **after** the PR
 - please insert as many details as possible
 - you can also insert screenshot or videos

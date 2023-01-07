@@ -36,4 +36,4 @@ A non-negative integer. Entries with higher weight have more chance to get picke
 
 ### text
 
-The text to broadcast. Color and item/spell/quest link formating codes can be used.
+The text to broadcast. Color and item/spell/quest link formatting codes can be used.

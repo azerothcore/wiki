@@ -55,7 +55,7 @@ For example:
 
 ### Document how to upgrade
 
-After the sections above you have to describe the steps needed to upgrade the code. This is the **most important part** and it's particulary useful for module authors to fix their code based on what you changed without struggling reading tons of commits and looking for information around.
+After the sections above you have to describe the steps needed to upgrade the code. This is the **most important part** and it's particularly useful for module authors to fix their code based on what you changed without struggling reading tons of commits and looking for information around.
 
 To do so, you can use the generated ```### How to upgrade``` section by our `create.sh`. 
 Please, be as much as detailed as possible. 

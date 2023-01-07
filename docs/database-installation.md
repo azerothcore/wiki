@@ -29,7 +29,7 @@ By default the Worldserver and Authserver will check for, and import all new fil
 
 This is the easiest and recommended way to make sure you are always up-to-date with the core.
 
-To edit the automatic database updater you will find the neccessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
+To edit the automatic database updater you will find the necessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
 1. Start Authserver.
 2. Start Worldserver.

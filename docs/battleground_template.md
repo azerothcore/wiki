@@ -8,7 +8,7 @@ Contains information about the different battlegrounds, like how many players ar
 
 **Structure**
 
-| Field                  | Type         | Atributes | Key | Null | Default | Extra | Comment |
+| Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------|--------------|-----------|-----|------|---------|-------|---------|
 | [ID][1]                | MEDIUMINT | UNSIGNED  | PRI | NO   | 0       |       |         |
 | [MinPlayersPerTeam][2] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |

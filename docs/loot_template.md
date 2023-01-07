@@ -223,7 +223,7 @@ The minimum number of copies of the item that can drop in a single loot
 
 For non-reference entries - the maximum number of copies of the item that can drop in a single loot.
 
-For [references](#reference) value of **MaxCount** field is used as a repetition factor for references - the reference will be processed not just once but exactly **MaxCount** times. This is designed to serve a single purpose: to make definition of tier token drops a bit simplier (tokens of a tier are defined as a 100%-chance group of an artificial template and bosses' loot templates include 100%-chanced reference to that group with repetition factor of 2 or 3 depending on the case). Using non-1 repetition factor for other things (references to a group with *group chance* less than 100% or [chanced references](#reference) with chance less than 100%) must be agreed with TDB devs first (and described here).
+For [references](#reference) value of **MaxCount** field is used as a repetition factor for references - the reference will be processed not just once but exactly **MaxCount** times. This is designed to serve a single purpose: to make definition of tier token drops a bit simpler (tokens of a tier are defined as a 100%-chance group of an artificial template and bosses' loot templates include 100%-chanced reference to that group with repetition factor of 2 or 3 depending on the case). Using non-1 repetition factor for other things (references to a group with *group chance* less than 100% or [chanced references](#reference) with chance less than 100%) must be agreed with TDB devs first (and described here).
 
 Note: core rolls chance for any loot definition entry just one time - so if a references looses its chance it is skipped for the current loot completely whatever is **MaxCount** value.
 
@@ -250,7 +250,7 @@ As successful fishing should give exactly 1 fish (with an exception for quest fi
 - or a single group with [*group chance*](#loot_template-groupid) equal to 100%
 - or a reference to a template made according to previous two variants. It is recommended to use [group references](#groupid).
 
-When a fish is catched for a quest it becoms the *second* fish on the hook. Many people rolled on floor laughing but this is blizzlike and fortunately easy to implement. Just add necessary [quest drop](#loot_template-Quest_drop) definition(s).
+When a fish is caught for a quest it becomes the *second* fish on the hook. Many people rolled on floor laughing but this is blizzlike and fortunately easy to implement. Just add necessary [quest drop](#loot_template-Quest_drop) definition(s).
 
 ### Corpse loot
 
@@ -302,7 +302,7 @@ As skinning should give exactly 1 type of skin/hide/etc so every loot template s
 
 There is no use for references here as the reference is done with the relation field.
 
-When a skin is pulled for a quest it becoms the *second* skin from the mob. Yes, funny. This is blizzlike and fortunately easy to implement. Just add necessary [quest drop](#questrequired) definition(s).
+When a skin is pulled for a quest it becomes the *second* skin from the mob. Yes, funny. This is blizzlike and fortunately easy to implement. Just add necessary [quest drop](#questrequired) definition(s).
 
 ## Reference Template Numbering
 

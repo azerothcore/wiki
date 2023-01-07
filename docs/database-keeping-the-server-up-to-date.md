@@ -15,7 +15,7 @@ By default the Worldserver and Authserver will check for, and execute all new fi
 
 1. Start worldserver.exe
 
-To edit the automatic database updater you will find the neccessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
+To edit the automatic database updater you will find the necessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
 <br>
 

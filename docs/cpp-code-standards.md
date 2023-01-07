@@ -106,7 +106,7 @@ if (player->GetQuestStatus(QUEST_BEAT_UP) == QUEST_STATUS_INCOMPLETE)
 
 ### Enumerations vs. define
 
-It is strongly advised to avoid using #define for constants. use either a const variable or an enum if multiple variables can be grouped togehter.
+It is strongly advised to avoid using #define for constants. use either a const variable or an enum if multiple variables can be grouped together.
 
 Enums must have a name. Separate constant on different enums depending on their type.
 
@@ -123,7 +123,7 @@ constexpr uint32 SPELL_4 = 4444;
 
 ### Enum vs. Enum Class
 
-Enum classes are prefered to be used as they can cause fewer suprises that could lead to bugs as the enum will not implicitly convert to other types like integer or other enums.
+Enum classes are preferred to be used as they can cause fewer surprises that could lead to bugs as the enum will not implicitly convert to other types like integer or other enums.
 
 ```cpp
 enum class Spell : uint32

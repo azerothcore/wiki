@@ -6,7 +6,7 @@ DATABASE TABLES files are to be named exactly as it is in the database,
 
 ALL OTHER FILES are to be named in `lower case` and to use `-` (dashes) for spaces.
 
-FILES SHOLD NOT contain any special characters other than `-` (dashes). If we want a file named C++ we name it cpp.
+FILES SHOULD NOT contain any special characters other than `-` (dashes). If we want a file named C++ we name it cpp.
 
 ALL WIKI FILES should end with with `.md`.
 

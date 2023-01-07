@@ -137,7 +137,7 @@ UPDATE `table_1` SET `field_1` = 'someValue' WHERE `entry` IN (1000, 2000, 3000)
 
 ### Flags & Bits
 
-For fields in the database where we work with flags it is always preffered that we add or remove flags instead of overriding them.
+For fields in the database where we work with flags it is always preferred that we add or remove flags instead of overriding them.
 
 Wrong:
 
@@ -210,7 +210,7 @@ To be able to support MariaDB alongside MySQL we are limited to using `utf8mb4_g
 
 ### Check Constraints
 
-You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how check contraints are made.
+You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how check constraints are made.
 
 All active Check Constraints can be found by using this query:
 

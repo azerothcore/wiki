@@ -96,7 +96,7 @@ This DBC contains the zone and subzone lists. For the purposes of this wiki arti
 | 26       | Lighthouse                                           | 0     | 40     |
 | 28       | Western Plaguelands                                  | 0     | 0      |
 | 30       | Nine                                                 | 0     | 0      |
-| 32       | The Cemetary                                         | 0     | 10     |
+| 32       | The Cemetery                                         | 0     | 10     |
 | 33       | Stranglethorn Vale                                   | 0     | 0      |
 | 34       | Echo Ridge Mine                                      | 0     | 12     |
 | 35       | Booty Bay                                            | 0     | 33     |

@@ -6,7 +6,7 @@ This file contains the changelogs of all big API changes.
 
 
 ### How to upgrade
-- `PrepareStatment`
+- `PrepareStatement`
 
 ```diff
 - setNull(...)
@@ -289,7 +289,7 @@ Changelog for commit "[fix(Core/Player): Use SkillLineAbility.dbc to determine p
 -    //uint32    racemaskNot;                                // 5        m_excludeRace
 -    //uint32    classmaskNot;                               // 6        m_excludeClass
 -    uint32    req_skill_value;                              // 7        m_minSkillLineRank
--    uint32    forward_spellid;                              // 8        m_supercededBySpell
+-    uint32    forward_spellid;                              // 8        m_supersededBySpell
 -    uint32    learnOnGetSkill;                              // 9        m_acquireMethod
 -    uint32    max_value;                                    // 10       m_trivialSkillLineRankHigh
 -    uint32    min_value;                                    // 11       m_trivialSkillLineRankLow
@@ -302,14 +302,14 @@ Changelog for commit "[fix(Core/Player): Use SkillLineAbility.dbc to determine p
 +    //uint32 ExcludeRace;                                   // 5
 +    //uint32 ExcludeClass;                                  // 6
 +    uint32 MinSkillLineRank;                                // 7
-+    uint32 SupercededBySpell;                               // 8
++    uint32 SupersededBySpell;                               // 8
 +    uint32 AcquireMethod;                                   // 9
 +    uint32 TrivialSkillLineRankHigh;                        // 10
 +    uint32 TrivialSkillLineRankLow;                         // 11
 +    //uint32 CharacterPoints[2];                            // 12-13
 ```
 
-- for example skillLine->forward_spellid will become skillLine->SupercededBySpell
+- for example skillLine->forward_spellid will become skillLine->SupersededBySpell
 
 ## 4.0.0-dev.7 | Commit: [59a3912a3b3bd4dd2d8e2b1c2cdd225b9c4d6244](https://github.com/azerothcore/azerothcore-wotlk/commit/59a3912a3b3bd4dd2d8e2b1c2cdd225b9c4d6244)
 
@@ -337,7 +337,7 @@ dynamic - Build dynamically. After start support Dynamic Linking Library (DLL) c
 minimal-static - builds commands and spells statically
 minimal-dynamic - builds commands and spells dynamically. Now don't support
 ```
-- Also the default value which is provided by the `SCRIPTS` variable is overwriteable through the `SCRIPTS_COMMANDS, SCRIPTS_SPELLS...` variable.
+- Also the default value which is provided by the `SCRIPTS` variable is overwritable through the `SCRIPTS_COMMANDS, SCRIPTS_SPELLS...` variable.
 - Each subdirectory contains it's own translation unit now which is responsible for loading it's directory
 - If module using deprecated script loader api, you get error message.
 ```cmake
