@@ -162,6 +162,7 @@ UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`&~(6
 For the most part, tables should be written in snake case, and columns should be written in upper camel case.
 
 Tables:
+
 ```
 broadcast_text
 creature_loot_template
@@ -169,10 +170,29 @@ points_of_interest
 ```
 
 Columns:
+
 ```
 MaleText
 QuestRequired
 PositionX
+```
+
+In the case of column names with acronyms (e.g. GUID, ID, NPC, etc) the letters in the acronym should be uppercase.
+
+Wrong:
+
+```
+Itemguid
+DisplayId
+RequiredNpcOrGoCount
+```
+
+Correct:
+
+```
+ItemGUID
+DisplayID
+RequiredNPCOrGOCount
 ```
 
 ### Integers
