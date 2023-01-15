@@ -705,6 +705,7 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 268435456  | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | 0x10000000 | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error.             |
 | 536870912  | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | 0x20000000 | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                             |
 | 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                                         |
+| 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                         |
 
 #### ScriptName
 
