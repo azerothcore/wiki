@@ -6,6 +6,8 @@
 
 **All reports are public. Never leave passwords or other confidential information visible in your report.**
 
+**Never upload files into issues! Use GIST for text and YouTube for video!**
+
 ### Self Checklist
 
 - Am I using the latest version/revision of AzerothCore? Do you need to update and test again before reporting?
@@ -29,40 +31,40 @@
 Issue template:
 
 ```
-[//]: # (IF YOU DO NOT FILL THIS TEMPLATE OUT, WE WILL CLOSE YOUR ISSUE)
-[//]: # (You should always read how to properly fill out the bug report before continuing. https://www.azerothcore.org/wiki/issue-tracker-standards)
-[//]: # (For issues containing a fix, please create a Pull Request following this tutorial: https://www.azerothcore.org/wiki/How-to-create-a-PR)
+Thank you for taking the time to fill out a bug report. Remember to fill out all fields including the title above.
+An issue that is not properly filled out will be closed.
+You can read more about the standards for a bug report [here](https://www.azerothcore.org/wiki/issue-tracker-standards).
 
-**CURRENT BEHAVIOUR:**
-[//]: # (If this is a crash report you should post the crashlog. Upload it to https://gist.github.com/)
+**Current Behaviour**
+Description of the problem or issue here.
+Include entries of affected creatures / items / quests / spells etc.
+If this is a crash, post the crashlog (upload to https://gist.github.com/) and include the link here.
 
-**EXPECTED BLIZZLIKE BEHAVIOUR:**
-[//]: # (What should happen instead)
+**Expected Blizzlike Behaviour**
+Tell us what should happen instead.
 
-**SOURCE:**
-[//]: # (If you can, include a source that can strengthen your claim)
+**Source**
+If you have a source that proves how it is supposed to work, please add that to make it easier for devs to fix the issue.
 
-**STEPS TO REPRODUCE THE PROBLEM:**
-[//]: # (Describe in a detailed step-by-step order how to reproduce the issue)
+**Steps to reproduce the problem**
+What does someone else need to do to encounter the same bug?
 
 1. 
 2. 
 3. 
 
-**EXTRA NOTES:**
-[//]: # (Any extra notes that can help solve the issue)
+**Extra Notes**
+Do you have any extra notes that can help solve the issue that does not fit any other field?
 
-**AC HASH/COMMIT:**
-[//]: # (Always include the exact hash/commit you are using. Never write "latest"!) 
+**AC rev. hash/commit**
+Copy the result of the .server debug command (if you need to run it from the client get a prat addon)
 
-**OPERATING SYSTEM:**
-[//]: # (Which OS are you running)
+**Operating System**
+Operating System, i.e. Windows 10 x64, Debian 10 x64, etc
 
-**MODULES:**
-[//]: # (Are you using any modules? List them here)
+**Custom changes or modules**
+List which custom changes or modules you have applied, i.e. Eluna module, etc.
 
-**CUSTOMIZATIONS:**
-[//]: # (Do you have any other customizations? List them here)
 ```
 
 [>> Issue Tracker](https://github.com/azerothcore/azerothcore-wotlk/issues)
