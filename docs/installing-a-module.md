@@ -14,7 +14,7 @@ By default AzerothCore delivers a Blizzlike experience. This can however be alte
     - Clone the repositroy using Git the same way AzerothCore was first cloned in the [Core Installation](core-installation.md). The repository should be cloned into the \modules\ directory. i.e E:\AzerothCore\modules\
     - Download the ZIP file from the catalogue and extract it in the \modules\ directory. i.e E:\AzerothCore\modules\mod-anticheat
 
-**Note: If your module has the **-master** suffix. This needs to be removed in order for the module to work!**
+**Note: If your module has a suffix i.e "-master". This needs to be removed in order for the module to work!**
 
 ## Recompiling
 
