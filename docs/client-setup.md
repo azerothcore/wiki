@@ -1,9 +1,9 @@
 # Client Setup
 
-| Installation Guide |
-| :- |
+| Installation Guide | |
+| :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) |
+| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) | [Step 9: Installing a Module >>](installing-a-module.md) |
 
 - Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
 
@@ -29,7 +29,7 @@ If you are still having problems, check:
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Installation Guide |
-| :- |
+| Installation Guide | |
+| :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) |
+| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) | [Step 9: Installing a Module >>](installing-a-module.md) |
