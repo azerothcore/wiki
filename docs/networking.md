@@ -29,7 +29,9 @@ You need to make sure that your **authserver** application directs incoming conn
 
     - 127.0.0.1 - Also known as "localhost". Leave this setting alone here and in your configs if you've installed AzerothCore on the same computer you run WoW on, and only you are connecting to it.
 
-    - External IP – If you want other people to connect to your server, use your external IP. Visit http://www.whatismyip.com/ to find your external IP address.
+    - Public IP address – If you want other people to connect to your server, use your external IP. Visit http://www.whatismyip.com/ to find your external IP address. If you're hosting it from a home network you'll likely need to set up the proper port forwards, which isn't covered within the scope of this guide. https://portforward.com has guides for most routers, and your Internet Service Provider should be able to assist with this. 
+    
+    - Fully qualified domain name - (mydomain.com or warcraft.mydomain.com) Similar to an external IP address, this would be used if you want other people to connect to your server with the added benefit of not needing to track a potentially dynamic IP address. Setting up DNS is out of the scope of this guide, though your domain registrar or dynamic-dns provider should have this documentation available.
 
  - MySQL CLI Commands (This step is not needed if you used a MySQL Manager like HeidiSQL)
     - `$ sudo mysql`
