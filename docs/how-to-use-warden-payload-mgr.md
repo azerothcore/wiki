@@ -80,6 +80,7 @@ WorldPacket CreateAddonPacket(std::string const& prefix, std::string const& msg,
 
     return data;
 }
+
 std::string myPayload = "message('Hello World!');";
 WorldPacket payloadPacket = CreateAddonPacket("wlrx", myPayload, CHAT_MSG_WHISPER, player);
 player->SendDirectMessage(&payloadPacket);
@@ -138,9 +139,9 @@ void PlayerScript::OnBeforeSendChatMessage(Player* player, uint32& type, uint32&
 
     LOG_INFO("module", "Received addon event: '{}'", event);
     
-	std::string myPayload = "print('Pong!');";
-	WorldPacket payloadPacket = CreateAddonPacket("wlrx", myPayload, CHAT_MSG_WHISPER, player);
-	player->SendDirectMessage(&payloadPacket);
+    std::string myPayload = "print('Pong!');";
+    WorldPacket payloadPacket = CreateAddonPacket("wlrx", myPayload, CHAT_MSG_WHISPER, player);
+    player->SendDirectMessage(&payloadPacket);
 }
 
 //Output: Received addon event: 'ping'.
