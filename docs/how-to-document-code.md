@@ -18,7 +18,7 @@ Commenting multiple lines is just as easy.
 /**
 These next few lines will form a comment block
 To start a new paragraph add an empty line
-To end the comment block type asterik and then forward slash.
+To end the comment block type asterisk and then forward slash.
 */
 ```
 
@@ -75,7 +75,7 @@ This tag allows you to describe what the function is returning.
 
 `@page`
 
-This tag tells Doxygen that this is a free floating page and allows doxygen to name the page so that otehr pages can reference and link to the page.
+This tag tells Doxygen that this is a free floating page and allows doxygen to name the page so that other pages can reference and link to the page.
 
 `@page describing_awesome_mode_by_james This Page describes James' Awesome Mode`
 
@@ -99,7 +99,7 @@ A picture is sometimes worth a thousand words or so the addage goes at least. Th
 
 `@subsection`
 
-It is often useful to divide a doxygen page into sections and subsections. The serves two purposes. One it creates headers. Second reference can be created to thorugh the page to link to the section. This page makes of sections and links to sections. The list of section at the beginning of the page is implemented using the `@section` command. Similar to the `@page` command, a link name and string can be provided.
+It is often useful to divide a doxygen page into sections and subsections. The serves two purposes. One it creates headers. Second reference can be created to throw the page to link to the section. This page makes of sections and links to sections. The list of section at the beginning of the page is implemented using the `@section` command. Similar to the `@page` command, a link name and string can be provided.
 
 `///// @section common_doxygen_tags_used Common Doxygen Tags`
 

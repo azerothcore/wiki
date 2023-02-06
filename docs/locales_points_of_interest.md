@@ -1,4 +1,4 @@
-# locales_points_of_intrest
+# locales_points_of_interest
 
 [<-Back-to:World](database-world.md)
 

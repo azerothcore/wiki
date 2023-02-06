@@ -115,7 +115,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - The Core is always being worked on, the most accurate data will come from you trying them yourself.
 
 - Does Warden work?
-  - Yes it does, but not with 100% sucess rate. Warden does not detect all hacks, not even on Retail.
+  - Yes it does, but not with 100% success rate. Warden does not detect all hacks, not even on Retail.
 
 - How do I close an instance or battleground? How can I disable a spell?
   - All disabling is handled in the [disables table](https://www.azerothcore.org/wiki/disables).

@@ -91,7 +91,7 @@ Depending on this value, it will determine how value1 and value2 are used.
 
 **TYPE\_VALUE**
 
--   Value to compare needed to attain achievement. This value is used in conjunction with another type. (see value2 for comparisation type)
+-   Value to compare needed to attain achievement. This value is used in conjunction with another type. (see value2 for comparison type)
 
 **TYPE\_T\_LEVEL**
 
@@ -190,7 +190,7 @@ Depending on this value, it will determine how value1 and value2 are used.
 
 **TYPE\_VALUE**
 
-| ComparisationType        |
+| ComparisonType        |
 | ------------------------ |
 | COMP\_TYPE\_EQ = 0       |
 | COMP\_TYPE\_HIGH = 1     |

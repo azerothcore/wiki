@@ -34,7 +34,7 @@ The first and foremost advantage of this system resided in the ability to disabl
 
 This capability assumes that the loggers are categorized according to some developer-chosen criteria.
 
-Loggers are named entitites. Logger names are case-sensitive and they follow the hierarchical naming rule:
+Loggers are named entities. Logger names are case-sensitive and they follow the hierarchical naming rule:
 
 A Logger is said to be an ancestor of another logger if its name followed by a dot is a prefix of the descendant logger name. A logger is said to be a parent of a child logger if there are no ancestors between itself and the
 descendant logger.
@@ -60,7 +60,7 @@ FATAL < ERROR < WARN < INFO < DEBUG < TRACE.
 
 ### Appenders
 
-The ability to selectively enable of dissable logging request based on their loggers is only part of the picture. This system allows logging requests to print to multiple destinations. An output destination is called an appender.
+The ability to selectively enable or disable logging request based on their loggers is only part of the picture. This system allows logging requests to print to multiple destinations. An output destination is called an appender.
 
 Current system defines appenders for Console, files and Database, but can be easily extended to remote socket server, NT event loggers, syslog daemons or any other system.
 

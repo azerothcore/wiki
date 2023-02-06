@@ -4,7 +4,7 @@
 
 **The \`pvpstats\_players\` table**
 
-This table holds datas about BattleGrounds scores. To enable storing this kind of informations, set **Battleground.StoreStatistics.Enable = 1** in **worldserver.config.dist** file.
+This table holds data about BattleGrounds scores. To enable storing this kind of information, set **Battleground.StoreStatistics.Enable = 1** in **worldserver.config.dist** file.
 
 **Structure**
 

@@ -79,7 +79,7 @@ The gender type this entry applies to. 0 = Male, 1 = Female, 2 = Any.
 | 1    | 0x01  | SPELL\_AREA\_FLAG\_AUTOCAST   | If the spell should be automatically applied when the character enters the area. Also prevents the user from removing it. |
 | 2    | 0x02  | SPELL\_AREA\_FLAG\_AUTOREMOVE | If the spell should be automatically removed when the character is **inside** the area (only works with quest updates)    |
 
-Note: Spell is allways removed on leaving area, SPELL\_AREA\_FLAG\_AUTOREMOVE does not effect this.
+Note: Spell is always removed on leaving area, SPELL\_AREA\_FLAG\_AUTOREMOVE does not effect this.
 
 Example:
 

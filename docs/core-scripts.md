@@ -38,7 +38,7 @@ If a creature is scripted inside an instance we register them as factory.
 To do this, in the headerfile of the instance we add this define:
 
 ```cpp
-#define Register"IntanceName"CreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, Get"InstanceName"AI)
+#define Register"InstanceName"CreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, Get"InstanceName"AI)
 
 /* Example from icecrown_citadel.h */
 #define RegisterIcecrownCitadelCreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, GetIcecrownCitadelAI)

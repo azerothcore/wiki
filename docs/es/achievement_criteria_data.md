@@ -189,7 +189,7 @@ Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 
 **TYPE\_VALUE**
 
-| ComparisationType        |
+| ComparisonType        |
 | ------------------------ |
 | COMP\_TYPE\_EQ = 0       |
 | COMP\_TYPE\_HIGH = 1     |

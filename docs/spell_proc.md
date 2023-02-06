@@ -106,7 +106,7 @@ A bitmask controlling what events trigger the spell. To combine possible events,
 | Event                                   | Flag     | Bit value  | Comment                                                      |
 |-----------------------------------------|----------|------------|--------------------------------------------------------------|
 | PROC_FLAG_NONE                          | 0        | 0x00000000 |                                                              |
-| PROC_FLAG_KILLED                        | 1        | 0x00000001 | Killed by agressor                                           |
+| PROC_FLAG_KILLED                        | 1        | 0x00000001 | Killed by aggressor                                           |
 | PROC_FLAG_KILL_AND_GET_XP               | 2        | 0x00000002 | Kill that yields experience or honor                         |
 | PROC_FLAG_SUCCESSFUL_MELEE_HIT          | 4        | 0x00000004 | Melee attack hit successful                                  |
 | PROC_FLAG_TAKEN_MELEE_HIT               | 8        | 0x00000008 | Damage taken from melee hit                                  |
@@ -186,7 +186,7 @@ PROC\_HIT\_NONE will trigger on:
 
 ### AttributesMask
 
-Adds special behaviour to the proc, spell might trigger proc only if these conditions are fullfilled
+Adds special behaviour to the proc, spell might trigger proc only if these conditions are fulfilled
 
 | Event                            | Flag | Bit       | Comment                                                                       |
 |----------------------------------|------|-----------|-------------------------------------------------------------------------------|

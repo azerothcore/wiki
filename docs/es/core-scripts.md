@@ -33,7 +33,7 @@ Si una criatura tiene un script dentro de una instancia la registramos como fáb
 Para ello, en el archivo de cabecera de la instancia añadimos esta definición:
 
 ```cpp
-#define Register"IntanceName"CreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, Get"InstanceName"AI)
+#define Register"InstanceName"CreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, Get"InstanceName"AI)
 
 /* Ejemplo de icecrown_citadel.h */
 #define RegisterIcecrownCitadelCreatureAI(ai_name) RegisterCreatureAIWithFactory(ai_name, GetIcecrownCitadelAI)

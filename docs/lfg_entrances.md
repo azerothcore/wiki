@@ -4,7 +4,7 @@
 
 **The \`lfg\_entrances\` table**
 
-`` Used by LFG system to teleport players on specified position. This table should be used instead of `areatrigger_teleport` tabe for all dungeons in the future. ``
+`` Used by LFG system to teleport players on specified position. This table should be used instead of `areatrigger_teleport` table for all dungeons in the future. ``
 
 **Structure**
 

@@ -927,7 +927,7 @@ Target to which distance is checked<br />
 <br />
 Distance.<br />
 Defines distance between current ConditionTarget and target specified in ConditionValue1</td>
-<td><p>ComparisionType:<br />
+<td><p>ComparisonType:<br />
 0 = distance must be equal to ConditionValue2<br />
 1 = distance must be higher than ConditionValue2<br />
 2 = distance must be lower than ConditionValue2<br />
@@ -965,7 +965,7 @@ CONDITION_HP_VAL</td>
 <br />
 <br />
 HP value</td>
-<td>ComparisionType:
+<td>ComparisonType:
 <ul>
 <li>0 = HP must be equal</li>
 <li>1 = HP must be higher</li>
@@ -985,7 +985,7 @@ CONDITION_HP_PCT</td>
 <br />
 38</td>
 <td>Percentage of max HP</td>
-<td>ComparisionType:
+<td>ComparisonType:
 <ul>
 <li>0 = Percentage of max HP must be equal</li>
 <li>1 = Percentage of max HP must be higher</li>
@@ -1501,7 +1501,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 -   -   ConditionValue1: target to which distance is checked - one of ConditionTargets available in current SourceType.
     -   ConditionValue2: distance - defines distance between current ConditionTarget and target specified in ConditionValue1.
-    -   ConditionValue3: ComparisionType:
+    -   ConditionValue3: ComparisonType:
         -   0 = distance must be equal to ConditionValue2
         -   1 = distance must be higher than ConditionValue2
         -   2 = distance must be lesser than ConditionValue2
@@ -1521,7 +1521,7 @@ Note: it will show or hide spells in vehicle spell bar.
 \***CONDITION\_HP\_VAL = 37**
 
 -   -   ConditionValue1: HP
-    -   ConditionValue2: ComparisionType:
+    -   ConditionValue2: ComparisonType:
         -   0 = HP must be equal
         -   1 = HP must be higher
         -   2 = HP must be lesser
@@ -1533,7 +1533,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 -   
     -   ConditionValue1: Percentage of max HP
-    -   ConditionValue2: ComparisionType:
+    -   ConditionValue2: ComparisonType:
         -   0 = Percentage of max HP must be equal
         -   1 = Percentage of max HP must be higher
         -   2 = Percentage of max HP must be lesser

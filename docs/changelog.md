@@ -6,7 +6,7 @@ This file contains the changelogs of all big API changes.
 
 
 ### How to upgrade
-- `PrepareStatment`
+- `PrepareStatement`
 
 ```diff
 - setNull(...)
@@ -337,7 +337,7 @@ dynamic - Build dynamically. After start support Dynamic Linking Library (DLL) c
 minimal-static - builds commands and spells statically
 minimal-dynamic - builds commands and spells dynamically. Now don't support
 ```
-- Also the default value which is provided by the `SCRIPTS` variable is overwriteable through the `SCRIPTS_COMMANDS, SCRIPTS_SPELLS...` variable.
+- Also the default value which is provided by the `SCRIPTS` variable is overwritable through the `SCRIPTS_COMMANDS, SCRIPTS_SPELLS...` variable.
 - Each subdirectory contains it's own translation unit now which is responsible for loading it's directory
 - If module using deprecated script loader api, you get error message.
 ```cmake

@@ -25,7 +25,7 @@ It is a must to have MySQL server already installed, if you don't have MySQL ser
 * Press the `New` button and insert the path to `mysql.exe` you located earlier
 * * Example: `C:\Program Files\MySQL\MySQL Server 5.6\bin`
 
-Now everything is set-up and you can acces `mysql` from the command line.
+Now everything is set-up and you can access `mysql` from the command line.
 
 To check if the set-up was done correctly press `Windows + R` and type cmd, when you will type `mysql` in the console you will see all the options.
 

@@ -146,7 +146,7 @@ Depending on what command was used, the meaning and use for the following fields
 #### \*SCRIPT\_COMMAND\_KILL\_CREDIT = 8
 
 - target or source: Player.
-- datalong: Creatue entry of kill credit. See [creature\_template.entry](creature_template#entry).
+- datalong: Creature entry of kill credit. See [creature\_template.entry](creature_template#entry).
 - datalong2: If value &gt; 0 gives kill credit to the whole group player belongs to, otherwise, gives personal kill credit.
 
 #### \*SCRIPT\_COMMAND\_RESPAWN\_GAMEOBJECT = 9

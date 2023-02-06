@@ -58,7 +58,7 @@ Database: worldserver User: grafana Password: grafana
 
 1. Edit `Metric.ConnectionInfo` with connection details (e.g "127.0.0.1;8086;worldserver")
 
-1. Start worldserver, the dashboard should now start recieving values.
+1. Start worldserver, the dashboard should now start receiving values.
 
 ## Implemented and planned metrics
 
@@ -66,9 +66,9 @@ Implemented (✔) and planned (❌) metrics:
 
 ### Technical oriented
 
-* I/O networking trafic
+* I/O networking traffic
     * Packets sent ❌
-    * Packets recieved ✔
+    * Packets received ✔
     * Average ping ❌
     * Traffic in ❌
     * Traffic out ❌
@@ -115,7 +115,7 @@ To log new metrics, call `METRIC_EVENT` or `METRIC_VALUE` and add a new graph to
 
 - **category**: Arbitrary string, table where the values and events are stored. By convention, event logs should be suffixed by "_value".
 
-- **value**: A measurment, it can have one of the following types: bool, std::string, float, double, or any integral type (int, int32, uint, etc...).
+- **value**: A measurement, it can have one of the following types: bool, std::string, float, double, or any integral type (int, int32, uint, etc...).
 
 **Examples**
 

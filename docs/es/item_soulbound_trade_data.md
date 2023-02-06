@@ -11,10 +11,10 @@ Esta tabla almacena información sobre qué jugadores pueden intercambiar artíc
 | Field              | Type | Attributes | Key | Null | Default | Extra  | Comment                                                                 |
 | ------------------ | ---- | ---------- | --- | ---- | ------- | ------ | ----------------------------------------------------------------------- |
 | [itemGuid][1]      | INT  | UNSIGNED   | PRI | NO   |         |        | Item GUID                                                               |
-| [alowedPlayers][2] | TEXT | SIGNED     |     | NO   |         |        | Space separated GUID list of players who can receive this item in trade |
+| [allowedPlayers][2] | TEXT | SIGNED     |     | NO   |         |        | Space separated GUID list of players who can receive this item in trade |
 
 [1]: #itemguid
-[2]: #alowedplayers
+[2]: #allowedplayers
 
 **Descripción de los campos**
 
@@ -22,6 +22,6 @@ Esta tabla almacena información sobre qué jugadores pueden intercambiar artíc
 
 El GUID del artículo que se puede comercializar. Consulte [item\_instance.guid](item_instance#guid).
 
-### alowedPlayers
+### allowedPlayers
 
 GUID de jugadores elegibles para el intercambio separados por espacio. Consulte [characters.guid](characters#guid).

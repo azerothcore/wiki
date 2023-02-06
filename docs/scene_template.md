@@ -40,7 +40,7 @@ This flags handle behavior of scene.
 | SCENEFLAG\_NONE                                 | 0         | 0x00000000 |                                                 |
 | SCENEFLAG\_UNK1                                 | 1         | 0x00000001 | NYI                                             |
 | SCENEFLAG\_UNK2 \| (SCENEFLAG\_CANCLE\_AT\_END) | 2         | 0x00000002 | Scene is being canceled at SceneComplete // NYI |
-| SCENEFLAG\_NOT\_CANCELABLE                      | 4         | 0x00000004 | Player can't cancle scene (cinematic scenes)    |
+| SCENEFLAG\_NOT\_CANCELABLE                      | 4         | 0x00000004 | Player can't cancel scene (cinematic scenes)    |
 | SCENEFLAG\_UNK8                                 | 8         | 0x00000008 | NYI                                             |
 | SCENEFLAG\_UNK16                                | 16        | 0x00000010 | NYI                                             |
 | SCENEFLAG\_UNK32                                | 32        | 0x00000020 | NYI                                             |

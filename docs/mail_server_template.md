@@ -44,11 +44,11 @@ Unique ID.
 
 ### reqLevel
 
-Players required level to be able to recieve the mail.
+Players required level to be able to receive the mail.
 
 ### reqPlayTime
 
-Players required play time in milliseconds to recieve the mail.
+Players required play time in milliseconds to receive the mail.
 
 ### moneyA
 

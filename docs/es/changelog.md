@@ -6,7 +6,7 @@ Este archivo contiene los registros de cambios de todos los grandes cambios de l
 
 ### Cómo actualizar
 
-- `PrepareStatment`
+- `PrepareStatement`
 
 ```diff
 - setNull(...)
