@@ -127,6 +127,7 @@
 - [page_text_locale](page_text_locale.md)
 - [pet_levelstats](pet_levelstats.md)
 - [pet_name_generation](pet_name_generation.md)
+- [pet_name_generation_locale](pet_name_generation_locale.md)
 - [pickpocketing_loot_template](loot_template.md)
 - [player_class_stats](player_class_stats.md)
 - [player_classlevelstats](player_classlevelstats.md)
