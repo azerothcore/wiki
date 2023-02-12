@@ -33,6 +33,7 @@ redirect_from: /documentation_index
 * [Doxygen Documentation](https://www.azerothcore.org/pages/doxygen/index.html)
 * [Exit Codes](exitcodes.md)
 * [How to Debug and Restart](how-to-restart-and-debug.md)
+* [How to Use Warden Payload Manager](how-to-use-warden-payload-mgr.md)
 * [IP2LOCATION](ip2location.md)
 * [Logging Configuration](logging-configuration.md)
 * [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana.md)
