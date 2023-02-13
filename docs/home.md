@@ -10,10 +10,6 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## IMPORTANT NOTE
 
-**OpenSSL 3.x is NOT SUPPORTED. Use the version the installation guide points to.**
-
-**Ubuntu 22.0 and later ships with OpenSSL 3.x! If you want to use Ubuntu, use a lower version or compile a lower version of OpenSSL**
-
 **The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice.**
 
 ## Getting started
