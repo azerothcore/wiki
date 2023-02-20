@@ -9,10 +9,10 @@ This table is used to disable dungeons/bgs/spells/etc.
 **Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [sourceType][1] | INT      | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [entry][2]      | INT      | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [flags][3]      | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [sourceType][1] | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [entry][2]      | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [flags][3]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [params_0][4]   | VARCHAR(255) |            |     | NO   |         |       |         |
 | [params_1][5]   | VARCHAR(255) |            |     | NO   |         |       |         |
 | [comment][6]    | VARCHAR(255) |            |     | NO   |         |       |         |
@@ -29,7 +29,7 @@ This table is used to disable dungeons/bgs/spells/etc.
 ### sourceType
 
 | Value | Type                                 |
-|-------|--------------------------------------|
+| ----- | ------------------------------------ |
 | 0     | DISABLE\_TYPE\_SPELL                 |
 | 1     | DISABLE\_TYPE\_QUEST                 |
 | 2     | DISABLE\_TYPE\_MAP                   |
@@ -39,17 +39,19 @@ This table is used to disable dungeons/bgs/spells/etc.
 | 6     | DISABLE\_TYPE\_VMAP                  |
 | 7     | DISABLE\_TYPE\_MMAP                  |
 | 8     | DISABLE\_TYPE\_LFG\_MAP              |
+| 9     | DISABLE\_TYPE\_GAME\_EVENT           |
+| 10    | DISABLE\_TYPE\_LOOT                  |
 
 ### entry
 
-Entry of Spell/Quest/Map/BG/Achievement/Map.
+Entry of Spell/Quest/Map/BG/Achievement/Map/GameEvent/Item.
 
 ### flags
 
 If sourceType = DISABLE\_TYPE\_SPELL: Specifies who the spell is disabled for.
 
 | Value | Type                                                                                          |
-|-------|-----------------------------------------------------------------------------------------------|
+| ----- | --------------------------------------------------------------------------------------------- |
 | 0     | Spell enabled                                                                                 |
 | 1     | Spell disabled for players                                                                    |
 | 2     | Spell disabled for creatures                                                                  |
@@ -68,7 +70,7 @@ This will disable spell Moonfire (8921) for players in maps 571,1 and area 1519.
 Specifies what type of map is disabled (5man/10man/heroic/etc).
 
 | Value | Type                                                        |
-|-------|-------------------------------------------------------------|
+| ----- | ----------------------------------------------------------- |
 | 1     | DUNGEON_STATUS_FLAG_NORMAL OR RAID_STATUS_FLAG_10MAN_NORMAL |
 | 2     | DUNGEON_STATUS_FLAG_HEROIC OR RAID_STATUS_FLAG_25MAN_NORMAL |
 | 4     | RAID_STATUS_FLAG_10MAN_HEROIC                               |
@@ -81,7 +83,7 @@ The value is a bitmask of VALID modes for the specific map, 15 is as such NOT a 
 Specifies on which map should be vMap disabled
 
 | Value | Type                    |
-|-------|-------------------------|
+| ----- | ----------------------- |
 | 1     | VMAP\_DISABLE\_AREAFLAG |
 | 2     | VMAP\_DISABLE\_HEIGHT   |
 | 4     | VMAP\_DISABLE\_LOS      |
@@ -99,8 +101,11 @@ This will disable vMaps on whole Kalimdor.
 
 ***If sourceType = DISABLE\_TYPE\_MMAP:***
 
-******If sourceType = DISABLE\_TYPE\_LFG\_MAP:***
-***
+***If sourceType = DISABLE\_TYPE\_LFG\_MAP:***
+
+***If sourceType = DISABLE\_TYPE\_GAME\_EVENT:***
+
+***If sourceType = DISABLE\_TYPE\_LOOT:***
 
 No flags needed just add the entry to the table with \`flags\`=0.
 
