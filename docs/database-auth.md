@@ -17,6 +17,10 @@
 - [logs](logs.md)
 - [logs_ip_actions](logs_ip_actions.md)
 
+## M
+
+- [motd](motd.md)
+
 ## R
 - [realmcharacters](realmcharacters.md)
 - [realmlist](realmlist.md)
