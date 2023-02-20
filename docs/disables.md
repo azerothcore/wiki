@@ -46,6 +46,38 @@ This table is used to disable dungeons/bgs/spells/etc.
 
 Entry of Spell/Quest/Map/BG/Achievement/Map/GameEvent/Item.
 
+***If sourceType = DISABLE\_TYPE\_SPELL:***
+
+Entry of Spell
+
+***If sourceType = DISABLE\_TYPE\_QUEST:***
+
+[quest_template.id](quest_template#id)
+
+***If sourceType = DISABLE\_TYPE\_MAP:***
+
+***If sourceType = DISABLE\_TYPE\_VMAP:***
+
+***If sourceType = DISABLE\_TYPE\_MMAP:***
+
+***If sourceType = DISABLE\_TYPE\_OUTDOORPVP:***
+
+***If sourceType = DISABLE\_TYPE\_LFG\_MAP:***
+
+Entry of Map
+
+***If sourceType = DISABLE\_TYPE\_ACHIEVEMENT\_CRITERIA:***
+
+Entry of Achievement
+
+***If sourceType = DISABLE\_TYPE\_GAME\_EVENT:***
+
+[game_event.eventEntry](game_event#evententry)
+
+***If sourceType = DISABLE\_TYPE\_LOOT:***
+
+[item_template.entry](item_template#entry)
+
 ### flags
 
 If sourceType = DISABLE\_TYPE\_SPELL: Specifies who the spell is disabled for.
