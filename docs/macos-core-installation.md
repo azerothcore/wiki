@@ -64,26 +64,18 @@ cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
 -DTOOLS_BUILD=all \
 -DSCRIPTS=static \
--DMYSQL_ADD_INCLUDE_PATH=/usr/local/include \
--DMYSQL_LIBRARY=/usr/local/lib/libmysqlclient.dylib \
--DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include \
--DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib \
+-DMYSQL_ADD_INCLUDE_PATH=/opt/homebrew/include/mysql \
+-DMYSQL_LIBRARY=/opt/homebrew/lib/libmysqlclient.dylib \
+-DREADLINE_INCLUDE_DIR=/opt/homebrew/opt/readline/include \
+-DREADLINE_LIBRARY=/opt/homebrew/opt/readline/lib/libreadline.dylib \
 -DOPENSSL_INCLUDE_DIR="$OPENSSL_ROOT_DIR/include" \
 -DOPENSSL_SSL_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libssl.dylib" \
 -DOPENSSL_CRYPTO_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libcrypto.dylib"
 ```
-
-To know the amount of cores available.
-You can use the following command
+Then, to build and install:
 
 ```sh
-nproc --all
-```
-
-Then, replacing `4` with the number of threads that you want to execute, type:
-
-```sh
-make -j 4
+make -j `nproc`
 make install
 ```
 
