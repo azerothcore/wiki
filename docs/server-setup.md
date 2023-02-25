@@ -33,11 +33,11 @@ Github link:
 
 1. Download the files above.
 
-1. Create a new folder within the build folder called **Data**. i.e **E:\Build\AzerothCore\RelWithDebInfo\Data**
+1. Create a new folder within the build folder called **Data**. i.e **your_azerothcore_path\Build\RelWithDebInfo\Data**
 
 1. Extract the files from the zip file and place them within the **Data** folder.
 
-1. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
+1. Edit your the [DataDir](#updating-datadir) config option to point to the location of the newly created folder from step 2.
 
 ## Extractors (Not needed if you downloaded the files above)
 
