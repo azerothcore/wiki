@@ -13,6 +13,8 @@ We always use backticks \` around table- and column names. \`creature_loot_templ
 
 We always use single quotes around string values ' ' but NEVER around an integer.
 
+We never include the database name in queries.
+
 ### INSERT & DELETE
 
 We always DELETE before an INSERT to ensure we always put fields in the query and that no errors occur.
