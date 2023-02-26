@@ -10,15 +10,15 @@ Table used for storing custom spell attributes.
 
 | Field           | Type          | Attributes | Key | Null | Default | Extra | Comment               |
 |-----------------|---------------|------------|-----|------|---------|-------|-----------------------|
-| [entry][1]      | MEDIUMINT     | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
+| [spell_id][1]      | MEDIUMINT     | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
 | [attributes][2] | INT           | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
-[1]: #entry
+[1]: #spell_id
 [2]: #attributes
 
 **Description of the fields**
 
-### entry
+### spell_id
 
 Spell ID. See [Spell.dbc](spell_dbc) .
 
@@ -60,11 +60,11 @@ Spell custom attributes from the enumeration SpellCustomAttributes in SpellInfo
 | SPELL_ATTR0_CU_FORCE_AURA_SAVING             | 536872960  | 0x20000800 |                                                              |
 | SPELL_ATTR0_CU_ENCOUNTER_REWARD              | 1073741824 | 0x40000000 |                                                              |
 
-SPELL_ATTR0_CU_NEGATIVE = SPELL_ATTR0_CU_NEGATIVE_EFF0 | SPELL_ATTR0_CU_NEGATIVE_EFF1 | SPELL_ATTR0_CU_NEGATIVE_EFF2
-SPELL_ATTR0_CU_POSITIVE = SPELL_ATTR0_CU_POSITIVE_EFF0 | SPELL_ATTR0_CU_POSITIVE_EFF1 | SPELL_ATTR0_CU_POSITIVE_EFF2
-
 ```sql
-DELETE FROM `spell_custom_attr` WHERE `entry`=123;
-INSERT INTO `spell_custom_attr` (`entry`, `attributes`) VALUES
-(123, SPELL_ATTR0_CU_FLAG1 | SPELL_ATTR0_CU_FLAG2);
+-- (@SPELL_ATTR0_CU_NEGATIVE = @SPELL_ATTR0_CU_NEGATIVE_EFF0 | @SPELL_ATTR0_CU_NEGATIVE_EFF1 | @SPELL_ATTR0_CU_NEGATIVE_EFF2)
+-- (@SPELL_ATTR0_CU_POSITIVE = @SPELL_ATTR0_CU_POSITIVE_EFF0 | @SPELL_ATTR0_CU_POSITIVE_EFF1 | @SPELL_ATTR0_CU_POSITIVE_EFF2)
+
+DELETE FROM `spell_custom_attr` WHERE `spell_id`=123;
+INSERT INTO `spell_custom_attr` (`spell_id`, `attributes`) VALUES
+(123, @SPELL_ATTR0_CU_FLAG1 | @SPELL_ATTR0_CU_FLAG2);
 ```
