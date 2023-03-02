@@ -22,7 +22,7 @@ Holds help and security information for commands. This table does NOT create new
 
 ### name
 
-The name of the command.
+The name of the command. [included commands](gm-commands.md)
 
 ### security
 
