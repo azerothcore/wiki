@@ -59,7 +59,7 @@ Maximum player level at which a character can get the quest.
 ### **AllowableClasses**
 
 Classes required to get the quest. 0 means the quest is available for all classes.
-This field is a bitmask, you can combine class values. See [ChrClasses.dbc](ChrClasses)
+This field is a bitmask, you can combine class values. See [ChrClasses.dbc](chrclasses)
 
 ### **SourceSpellID**
 

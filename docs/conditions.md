@@ -697,7 +697,7 @@ data</strong> (see corresponding script source files for more info)</td>
 CONDITION_CLASS</td>
 <td><br />
 15</td>
-<td>Class mask from <a href="http://www.azerothcore.org/wiki/ChrClasses">ChrClasses.dbc</a><br />
+<td>Class mask from <a href="http://www.azerothcore.org/wiki/chrclasses">ChrClasses.dbc</a><br />
 Add flags together for all classes where condition is true.</td>
 <td>Always 0</td>
 <td>Always 0</td>
@@ -705,7 +705,7 @@ Add flags together for all classes where condition is true.</td>
 <tr class="odd">
 <td>CONDITION_RACE</td>
 <td>16</td>
-<td>Race mask from <a href="http://www.azerothcore.org/wiki/ChrRaces">ChrRaces.dbc</a> .<br />
+<td>Race mask from <a href="http://www.azerothcore.org/wiki/chrraces">ChrRaces.dbc</a> .<br />
 Add flags together for all races where condition is true.</td>
 <td>Always 0</td>
 <td>Always 0</td>
@@ -1347,13 +1347,13 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_CLASS = 15**
 
--   -   ConditionValue1: class mask. Add flags together for all classes condition should be true for. See [ChrClasses.dbc](ChrClasses)
+-   -   ConditionValue1: class mask. Add flags together for all classes condition should be true for. See [ChrClasses.dbc](chrclasses)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
 \***CONDITION\_RACE = 16**
 
--   -   ConditionValue1: race mask. Add flags together for all races condition should be true for. See [ChrRaces.dbc](ChrRaces)
+-   -   ConditionValue1: race mask. Add flags together for all races condition should be true for. See [ChrRaces.dbc](chrraces)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
