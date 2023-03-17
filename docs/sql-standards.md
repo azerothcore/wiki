@@ -205,11 +205,12 @@ We do not define the width of an integer when we create new columns. (Width is d
 TINYINT(M)   -> TINYINT
 SMALLINT(M)  -> SMALLINT
 INT(M)       -> INT
-MEDIUMINT(M) -> MEDIUMINT
 BIGINT(M)    -> BIGINT
 
 BOOL         -> Never used, synonym for TINYINT. 0 = false <>0 = true
 ```
+
+We never use MEDIUMINT. Use INT instead!
 
 ### Float, Double, Decimal
 
@@ -218,17 +219,6 @@ These data types cannot be UNSIGNED and therefore we use CHECK CONSTRAINTS inste
 ```
 FLOAT UNSIGNED -> CHECK (`column`>=0)
 ```
-
-### Character Encoding
-
-We use UTF8MB4 where you would previously use UTF8 or UTF8MB3. (utf8 is an alias and utf8mb3 is deprecated in later versions of MySQL 8)
-
-```
-utf8    -> utf8mb4
-utf8mb3 -> utf8mb4
-```
-
-To be able to support MariaDB alongside MySQL we are limited to using `utf8mb4_general_ci` as coallation.
 
 ### Check Constraints
 
@@ -242,6 +232,41 @@ SELECT * FROM information_schema.CHECK_CONSTRAINTS;
 
 -- MySQL 5.7
 SELECT * FROM information_schema.TABLE_CONSTRAINTS;
+```
+
+### Charset
+
+We always use `utf8mb4` as charset
+
+### Collation
+
+We always use `utf8mb4_unicode_ci` as collation
+
+### Engine
+
+We always use `InnoDB` as the engine
+
+### Row Format
+
+We always use `DEFAULT` as row format
+
+### Dummy script for table
+
+```sql
+
+DROP TABLE IF EXISTS `our_table_name`;
+CREATE TABLE `our_table_name` (
+  `aColumnName` INT UNSIGNED NOT NULL DEFAULT '69' COMMENT 'ColumnComment',
+  `aSecondName` VARCHAR(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`aColumnName`),
+  CONSTRAINT `our_table_name_chk_1` CHECK (`aColumnName` >= 0)
+)
+COMMENT = 'TableComment'
+CHARSET = utf8mb4
+COLLATE = utf8mb4_unicode_ci
+ENGINE = InnoDB
+ROW_FORMAT = DEFAULT
+;
 ```
 
 ## Note for SQL reviewer
