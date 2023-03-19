@@ -79,9 +79,9 @@ Get the latest client data:
 ./acore.sh client-data
 ```
 
-### Server config files (optional)
+### Server config files
 
-create these 2 files if you want to change the default configurations of the server 
+create these 2 files. They contain the default configuration for the worldserver and authserver, if you don't wish to modify simply copying them is enough.
 
 #### Linux and Mac
 

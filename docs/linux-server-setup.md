@@ -9,27 +9,27 @@
 
 Go to your AzerothCore build directory (e.g. $HOME/build/bin/) and copy the following files to your World of Warcraft binaries directory.
 
-* **mapextractor**
+* **map_extractor**
 * **mmaps_generator**
-* **vmap4assembler**
-* **vmap4extractor**
+* **vmap4_assembler**
+* **vmap4_extractor**
 
 **DBC and Maps files**
 
 ```
 cd <your WoW client directory>
-./mapextractor
+./map_extractor
 ```
 
-**Visual Maps (aka vmaps) Note: If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.**
+**Visual Maps (aka vmaps) Note: If you stop vmap4_extractor before finish you will need to delete the Buildings directory before start again.**
 
 You can also extract vmaps which will take quite a while depending on your machine (up to hours on ancient hardware).
 
 ```
 cd <your WoW client directory>
-./vmap4extractor
+./vmap4_extractor
 mkdir vmaps;
-./vmap4assembler Buildings vmaps
+./vmap4_assembler Buildings vmaps
 ```
 
 When this is complete you will receive the following message which can be safely ignored.

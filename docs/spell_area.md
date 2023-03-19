@@ -62,7 +62,7 @@ The value has the following effect:
 
 ### racemask
 
-This ID is automatically called from [ChrRaces.dbc](ChrRaces). The bitmask is entered here.
+This ID is automatically called from [ChrRaces.dbc](chrraces). The bitmask is entered here.
 
 - 0, 1791 = All Races
 - 690 (2 + 16 + 32 + 128 + 512) = Horde Only

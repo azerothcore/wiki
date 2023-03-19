@@ -26,7 +26,7 @@ This table holds information on what skills newly created characters should star
 
 ### racemask
 
-One or more character's race. See [ChrRaces.dbc](ChrRaces).
+One or more character's race. See [ChrRaces.dbc](chrraces).
 
 ### classmask
 

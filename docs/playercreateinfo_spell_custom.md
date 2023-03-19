@@ -24,11 +24,11 @@ Please note you'll have to set PlayerStart.AllSpells to 1 in config, else this t
 
 ### racemask
 
-One or more character's race. See [ChrRaces.dbc](ChrRaces).
+One or more character's race. See [ChrRaces.dbc](chrraces).
 
 ### classmask
 
-One or more character's class. See [ChrClasses.dbc](ChrClasses)
+One or more character's class. See [ChrClasses.dbc](chrclasses)
 
 ### Spell
 
