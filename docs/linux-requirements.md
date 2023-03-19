@@ -29,6 +29,8 @@ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysq
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
+**Note**: If you get the error **cannot find -lstdc++** you need to install `g++-12` and it's dependencies.
+
 To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
 **Note**: in older versions of Ubuntu like **18.04** you need to install `gcc-10` and `libboost1.74-dev`:
