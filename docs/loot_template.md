@@ -18,11 +18,11 @@ Loot templates define only items in the loot. See comments about money drop in c
 | ------------------- | ------------------ | ---- | --- | ------- | ----- | ------- |
 | [Entry][1]          | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
 | [Item][2]           | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
-| [Reference][3]      | MEDIUMINT UNSIGNED | NO   |     | 0       |       |         |
+| [Reference][3]      | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
 | [Chance][4]         | FLOAT              | NO   |     | 100     |       |         |
 | [QuestRequired][5] | bool               | NO   |     | 0       |       |         |
 | [LootMode][6]       | SMALLINT           | NO   |     | 1       |       |         |
-| [GroupId][7]        | TINYINT            | NO   |     | 0       |       |         |
+| [GroupId][7]        | TINYINT            | NO   | PRI | 0       |       |         |
 | [MinCount][8]       | MEDIUMINT          | NO   |     | 1       |       |         |
 | [MaxCount][9]       | TINYINT UNSIGNED   | NO   |     | 1       |       |         |
 | [Comment][10]       | VARCHAR            |      |     |         |       |         |
@@ -75,8 +75,6 @@ Agreements on **Entry** field values are described [there](#agreements).
 ### Item
 
 Template ID of the item which can be included into the loot.
-
-NOTE: For [reference entries](#mincountorref) this field has no meaning and not used by the core in any way. Yet because of the PRIMARY KEY on the entry + item combination, this field will nonetheless need to be a unique number for each reference entry so that no indexing conflicts arise.
 
 ### Reference
 
