@@ -26,7 +26,7 @@ SPELL_EFFECT_TELEPORT_UNITS = 5
 - Multiple: Unknown
 
 SPELL_EFFECT_APPLY_AURA = 6
-- BasePoints: Value of aura (depends on Aura Id)
+- BasePoints: Value of aura (depends on Aura ID)
 
 SPELL_EFFECT_ENVIRONMENTAL_DAMAGE = 7
 - BasePoints: Base damage
@@ -46,7 +46,7 @@ SPELL_EFFECT_HEAL = 10
 SPELL_EFFECT_BIND = 11
 - BasePoints: Unknown
 - Multiple: Unknown
-- EffectMiscValueA: Area Id
+- EffectMiscValueA: Area ID
 
 SPELL_EFFECT_PORTAL = 12
 - BasePoints: Unknown
@@ -61,7 +61,7 @@ SPELL_EFFECT_RITUAL_ACTIVATE_PORTAL = 15
 
 SPELL_EFFECT_QUEST_COMPLETE = 16
 - BasePoints: Unknown
-- EffectMiscValueA: Quest Id
+- EffectMiscValueA: Quest ID
 
 SPELL_EFFECT_WEAPON_DAMAGE_NOSCHOOL = 17
 - BasePoints: Base damage
@@ -94,7 +94,7 @@ SPELL_EFFECT_BLOCK = 23
 
 SPELL_EFFECT_CREATE_ITEM = 24
 - BasePoints: Number of items
-EffectItemType: Item Id
+EffectItemType: Item ID
 
 SPELL_EFFECT_WEAPON = 25
 - BasePoints: Unknown
@@ -108,7 +108,7 @@ SPELL_EFFECT_PERSISTENT_AREA_AURA = 27
 SPELL_EFFECT_SUMMON = 28
 - BasePoints: Number of summons
 - Multiple: Unknown
-- EffectMiscValueA: NPC Id
+- EffectMiscValueA: NPC ID
 - EffectMiscValueB: [Summon Properties](dbc-summon-properties.md)
 - Radius: Spawn range
 
@@ -131,10 +131,10 @@ SPELL_EFFECT_OPEN_LOCK = 33
 
 SPELL_EFFECT_SUMMON_CHANGE_ITEM = 34
 - BasePoints: Unknown
-EffectItemType: New ItemId
+EffectItemType: New ItemID
 
 SPELL_EFFECT_APPLY_AREA_AURA_PARTY = 35
-- BasePoints: Value of aura (depends on Aura Id)
+- BasePoints: Value of aura (depends on Aura ID)
 
 SPELL_EFFECT_LEARN_SPELL = 36
 - BasePoints: Unknown
@@ -148,7 +148,7 @@ SPELL_EFFECT_DISPEL = 38
 
 SPELL_EFFECT_LANGUAGE = 39
 - BasePoints: Unknown
-- EffectMiscValueA: Language Id
+- EffectMiscValueA: Language ID
 
 SPELL_EFFECT_DUAL_WIELD = 40
 - BasePoints: Unknown
@@ -170,7 +170,7 @@ SPELL_EFFECT_TELEPORT_UNITS_FACE_CASTER = 43
 
 SPELL_EFFECT_SKILL_STEP = 44
 - BasePoints: Unknown
-- EffectMiscValueA: Skill Id
+- EffectMiscValueA: Skill ID
 
 SPELL_EFFECT_ADD_HONOR = 45
 - BasePoints: Honor points to reward

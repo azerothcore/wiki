@@ -14,7 +14,7 @@ This DBC contains Summon Properties (EffectMiscValueB) for Spell Effect SPELL_EF
 
 | Column | Name    | Type | Notes        |
 | -------|-------- | ---- | ------------ |
-| 1      | ID      | INT  | Unique Id    |
+| 1      | ID      | INT  | Unique ID    |
 | 2      | Control | INT  |              |
 | 3      | Faction | INT  |              |
 | 4      | Title   | INT  | Summon Type  |
