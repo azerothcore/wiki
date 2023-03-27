@@ -14,5 +14,6 @@
 * [Map](map.md)
 * [PageTextMaterial](pagetextmaterial.md)
 * [SkillLine](skillline.md)
+* [SummonProperties](dbc-summon-properties.md)
 * [Spell](spell.md)
 * [TotemCategory](totemcategory.md)
