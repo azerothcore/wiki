@@ -63,7 +63,7 @@ This DBC contains Summon Properties (EffectMiscValueB) for Spell Effect SPELL_EF
 | 3     | Totem 3                                     |
 | 4     | Totem 4                                     |
 | 5     | Critter                                     |
-| 6     | Quest (Players Only                         |
+| 6     | Quest (Players Only)                        |
 
 ### Flags
 | Flag       | Bit Value    | Comment                                                                |
