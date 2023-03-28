@@ -42,6 +42,7 @@ redirect_from: /documentation_index
 * [Sniffing & Parsing](sniffing-and-parsing)
 * [SQL Directory](sql-directory.md)
 * [SQL Versioning](sql-versioning.md)
+* [Spell Effects Reference](spell-effects-reference.md)
 
 ## Recipes & Techniques
 
