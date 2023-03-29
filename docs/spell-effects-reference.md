@@ -87,7 +87,7 @@ SPELL_EFFECT_BLOCK = 23
 
 SPELL_EFFECT_CREATE_ITEM = 24
 - BasePoints: Number of items
-- EffectItemType: Item ID
+- EffectItemType: [Item ID](item_template.md)
 
 SPELL_EFFECT_WEAPON = 25
 
@@ -98,7 +98,7 @@ SPELL_EFFECT_PERSISTENT_AREA_AURA = 27
 
 SPELL_EFFECT_SUMMON = 28
 - BasePoints: Number of summons
-- EffectMiscValueA: Creature ID
+- EffectMiscValueA: [Creature ID](creature_template.md)
 - EffectMiscValueB: [Summon Properties](dbc-summon-properties.md)
 - Radius: Spawn range
 
@@ -135,7 +135,7 @@ SPELL_EFFECT_OPEN_LOCK = 33
 - BasePoints: Required lockpicking skill level
 
 SPELL_EFFECT_SUMMON_CHANGE_ITEM = 34 // Weapons like Benedictions
-EffectItemType: New ItemID
+EffectItemType: New [Item ID](item_template.md)
 
 SPELL_EFFECT_APPLY_AREA_AURA_PARTY = 35
 - BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
@@ -190,7 +190,7 @@ SPELL_EFFECT_STEALTH = 48
 SPELL_EFFECT_DETECT = 49
 
 SPELL_EFFECT_TRANS_DOOR = 50
-- EffectMiscValueA: gameobject_template ID
+- EffectMiscValueA: [gameobject_template ID](gameobject_template.md)
 - gameobject_template's Data0 is the spell that is linked to the destination of the teleport when clicked.
 - Data0 entry = spell_target_position table
 
@@ -199,7 +199,7 @@ SPELL_EFFECT_FORCE_CRITICAL_HIT = 51 // Unused
 SPELL_EFFECT_GUARANTEE_HIT = 52 // Unused
 
 SPELL_EFFECT_ENCHANT_ITEM = 53
-- EffectItemType: Item ID (Scrolls/Inscription)
+- EffectItemType: [Item ID](item_template.md) (Scrolls/Inscription)
 - EffectMiscValueA: ID from SpellItemEnchantment.dbc
 - EffectMiscValueA: 14 = armor, 15 = weapon, tied to EffectItemType.
 
@@ -210,7 +210,7 @@ SPELL_EFFECT_TAMECREATURE = 55
 
 SPELL_EFFECT_SUMMON_PET = 56
 - Multiple: Relative to Caster level (e.g a value of -3 will be caster level -3) Does not currently work.
-- EffectMiscValueA: Creature ID
+- EffectMiscValueA: [Creature ID](creature_template.md)
 
 SPELL_EFFECT_LEARN_PET_SPELL = 57
 - TriggerSpell: Spell ID
@@ -247,7 +247,7 @@ SPELL_EFFECT_APPLY_AREA_AURA_RAID = 65
 
 SPELL_EFFECT_CREATE_MANA_GEM = 66
 - BasePoints: Number to refill
-- EffectItemType: Item to create/refill
+- EffectItemType: [Item ID](item_template.md) to create/refill
 
 SPELL_EFFECT_HEAL_MAX_HEALTH = 67
 
@@ -272,7 +272,7 @@ SPELL_EFFECT_HEAL_MECHANICAL = 75
 - BasePoints: Amount
 
 SPELL_EFFECT_SUMMON_OBJECT_WILD = 76
-- EffectMiscValueA: gameobject_template ID
+- EffectMiscValueA: [gameobject_template ID](gameobject_template.md)
 
 SPELL_EFFECT_SCRIPT_EFFECT = 77 Assigned to a [Core Script](/wiki/core-scripts#spell-scripts) in the DB.
 
@@ -288,7 +288,7 @@ SPELL_EFFECT_CREATE_HOUSE = 81
 SPELL_EFFECT_BIND_SIGHT = 82
 
 SPELL_EFFECT_DUEL = 83
-- EffectMiscValueA: gameobject_template ID (Duel Flag)
+- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) (Duel Flag)
 
 SPELL_EFFECT_STUCK = 84
 
@@ -305,7 +305,7 @@ SPELL_EFFECT_GAMEOBJECT_REPAIR = 88
 SPELL_EFFECT_GAMEOBJECT_SET_DESTRUCTION_STATE = 89
 - EffectMiscValueA: State
 
-| ID | State       |
+| ID | State      |
 | -- | ---------- |
 | 0  | Intact     |
 | 1  | Damaged    |
@@ -313,7 +313,7 @@ SPELL_EFFECT_GAMEOBJECT_SET_DESTRUCTION_STATE = 89
 | 3  | Rebuilding |
 
 SPELL_EFFECT_KILL_CREDIT = 90
-- EffectMiscValueA: Creature ID
+- EffectMiscValueA: [Creature ID](creature_template.md)
 
 SPELL_EFFECT_THREAT_ALL = 91 // Unused
 
@@ -354,13 +354,13 @@ SPELL_EFFECT_REPUTATION = 103
 - EffectMiscValueA: ID from [faction.dbc](faction.md)
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT1 = 104
-- EffectMiscValueA: gameobject_template ID 
+- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) 
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT2 = 105
-- EffectMiscValueA: gameobject_template ID 
+- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) 
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT3 = 106
-- EffectMiscValueA: gameobject_template ID 
+- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) 
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT4 = 107 // Unused
 
@@ -457,7 +457,7 @@ SPELL_EFFECT_UNLEARN_SPECIALIZATION = 133
 - TriggerSpell: Spell ID
 
 SPELL_EFFECT_KILL_CREDIT2 = 134
-- EffectMiscValueA: Creature ID
+- EffectMiscValueA: [Creature ID](creature_template.md)
 
 SPELL_EFFECT_CALL_PET = 135
 
@@ -521,7 +521,7 @@ SPELL_EFFECT_SUMMON_RAF_FRIEND = 152
 - TriggerSpell: Spell ID (Summon)
 
 SPELL_EFFECT_CREATE_TAMED_PET = 153
-- EffectMiscValueA: Creature ID
+- EffectMiscValueA: [Creature ID](creature_template.md)
 
 SPELL_EFFECT_DISCOVER_TAXI = 154
 - EffectMiscValueA: ID from TaxiNodes.dbc
@@ -532,7 +532,7 @@ SPELL_EFFECT_TITAN_GRIP = 155
 SPELL_EFFECT_ENCHANT_ITEM_PRISMATIC = 156
 
 SPELL_EFFECT_CREATE_ITEM_2 = 157
-- EffectItemType: Item ID to transform
+- EffectItemType: [Item ID](item_template.md) to transform
 - EffectMiscValueA: Unknown
 
 SPELL_EFFECT_MILLING = 158

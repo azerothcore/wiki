@@ -1,4 +1,4 @@
-# summonproperties\_dbc
+# SummonProperties
 
 [`Back-to:Spell Effects Reference`](spell-effects-reference.md)
 
