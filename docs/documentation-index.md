@@ -40,9 +40,9 @@ redirect_from: /documentation_index
 * [MySQL types (C++)](mysqltypescpp.md)
 * [Project Versioning](project-versioning.md)
 * [Sniffing & Parsing](sniffing-and-parsing)
+* [Spell Effects Reference](spell-effects-reference.md)
 * [SQL Directory](sql-directory.md)
 * [SQL Versioning](sql-versioning.md)
-* [Spell Effects Reference](spell-effects-reference.md)
 
 ## Recipes & Techniques
 

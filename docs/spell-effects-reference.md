@@ -4,15 +4,19 @@ redirect_from: "/Spell-Effects-Reference"
 
 [<-Back-to:spell_dbc](spell_dbc.md)
 
-## Related Information
+### Related Information
+[Summon Properties](summonproperties_dbc.md)
 
-SPELL_EFFECT_SUMMON (28)
-- EffectMiscValueB: [Summon Properties](dbc-summon-properties.md)
-
-SPELL_EFFECT_APPLY_AURA (6)
-- EffectAura: [Spell Aura](spell-aura-reference.md)
+[Spell Aura](spell-aura-reference.md)
 
 # Spell Effects Reference
+
+### This page contains description regarding the usage of EffectMiscValue and other Spell Effects values.
+
+### Contains the list of all Spell Effects.
+<br>
+
+**Version is : 3.3.5a**
 
 SPELL_EFFECT_INSTAKILL = 1
 
@@ -26,7 +30,7 @@ SPELL_EFFECT_DUMMY = 3
 SPELL_EFFECT_PORTAL_TELEPORT = 4
 
 SPELL_EFFECT_TELEPORT_UNITS = 5
-- TargetB: teleport location
+- TargetB: Teleport location
 
 SPELL_EFFECT_APPLY_AURA = 6
 - BasePoints: Value of aura (depends on Aura ID)
@@ -99,7 +103,7 @@ SPELL_EFFECT_PERSISTENT_AREA_AURA = 27
 SPELL_EFFECT_SUMMON = 28
 - BasePoints: Number of summons
 - EffectMiscValueA: [Creature ID](creature_template.md)
-- EffectMiscValueB: [Summon Properties](dbc-summon-properties.md)
+- EffectMiscValueB: [Summon Properties](summonproperties_dbc.md)
 - Radius: Spawn range
 
 SPELL_EFFECT_LEAP = 29
@@ -365,9 +369,9 @@ SPELL_EFFECT_SUMMON_OBJECT_SLOT3 = 106
 SPELL_EFFECT_SUMMON_OBJECT_SLOT4 = 107 // Unused
 
 SPELL_EFFECT_DISPEL_MECHANIC = 108
-- EffectMiscValueA: Dispel Type
+- EffectMiscValueA: Dispel Mechanic
 
-| ID | Type       | ID | Type       | ID | Type            |
+| ID | Mechanic   | ID | Mechanic   | ID | Mechanic        |
 | -- | ---------- | -- | ---------- | -- | --------------- |
 | 0  | None       | 11 | Snare      | 22 | Infected        |
 | 1  | Charm      | 12 | Stun       | 23 | Turn            |
