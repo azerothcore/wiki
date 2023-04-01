@@ -1,22 +1,19 @@
----
-redirect_from: "/Spell-Effects-Reference"
----
+# Spell Effects Reference
 
 [<-Back-to:spell_dbc](spell_dbc.md)
+
+### This page contains description regarding the usage of EffectMiscValue and other Spell Effects values.
+
+### Contains the list of all Spell Effects.
+
+**Version is : 3.3.5a**
 
 ### Related Information
 [Summon Properties](summonproperties_dbc.md)
 
 [Spell Aura](spell-aura-reference.md)
 
-# Spell Effects Reference
-
-### This page contains description regarding the usage of EffectMiscValue and other Spell Effects values.
-
-### Contains the list of all Spell Effects.
-<br>
-
-**Version is : 3.3.5a**
+# Spell Effect Names
 
 SPELL_EFFECT_INSTAKILL = 1
 

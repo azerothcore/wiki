@@ -1,4 +1,4 @@
-# SummonProperties
+# summonproperties\_dbc
 
 [`Back-to:Spell Effects Reference`](spell-effects-reference.md)
 
@@ -12,17 +12,27 @@ This DBC contains Summon Properties (EffectMiscValueB) for Spell Effect SPELL_EF
 
 **Structure**
 
-| Column | Name    | Type | Notes        |
-| -------|-------- | ---- | ------------ |
-| 1      | ID      | INT  | Unique ID    |
-| 2      | Control | INT  |              |
-| 3      | Faction | INT  |              |
-| 4      | Title   | INT  | Summon Type  |
-| 5      | Slot    | INT  |              |
-| 6      | Flags   | INT  |              |
+| Field                | Type | Attributes | Key | Null | Default | Extra | Comment                                                                          |
+| -------------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------------------------------------------- |
+| [ID][1]              | INT  | SIGNED     | PRI | NO   | 0       |       | Unique ID                                                                        |
+| [Control][2]         | INT  | SIGNED     |     | NO   | 0       |       |                                                                                  |
+| [Faction][3]         | INT  | SIGNED     |     | NO   | 0       |       |                                                                                  |
+| [Title][4]           | INT  | SIGNED     |     | NO   | 0       |       | Summon Type                                                                      |
+| [Slot][5]            | INT  | SIGNED     |     | NO   | 0       |       |                                                                                  |
+| [Flags][6]           | INT  | SIGNED     |     | NO   | 0       |       |                                                                                  |
 
+[1]: #id
+[2]: #control
+[3]: #faction
+[4]: #title
+[5]: #slot
+[6]: #flags
 
-## **Content**
+**Description of the fields**
+
+### ID
+
+This is the ID from SummonProperties.dbc.
 
 ### Control
 
@@ -35,7 +45,13 @@ This DBC contains Summon Properties (EffectMiscValueB) for Spell Effect SPELL_EF
 | 4     | Possessed Vehicle                           |
 | 5     | Vehicle (Wild, but Ride Spell will be cast) |
 
-### Title (Summon Type)
+### Faction
+
+ID from [Faction.dbc](faction.md).
+
+### Title
+
+Also known ans summon type.
 
 | ID    | Name                                        |
 | ----- | ------------------------------------------- |

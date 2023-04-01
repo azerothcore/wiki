@@ -1,16 +1,12 @@
----
-redirect_from: "/Spell-Aura-Reference"
----
+# Spell Aura Reference
 
 [`Back-to:Spell Effects Reference`](spell-effects-reference.md)
 
 [`Back-to:spell_dbc`](spell_dbc.md)
 
-# Spell Aura Reference
 
 ### This page contains description regarding the usage of EffectMiscValue and other Spell Aura values.
 ### Contains only Spell Auras that have known usage of EffectMiscValue or other unconventional values.
-<br>
 
 **Version is : 3.3.5a**
 
