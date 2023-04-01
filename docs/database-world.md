@@ -202,6 +202,7 @@
 - [spell_target_position](spell_target_position.md)
 - [spell_threat](spell_threat.md)
 - [spelldifficulty_dbc](spelldifficulty_dbc.md)
+- [summonproperties_dbc](summonproperties_dbc.md)
 
 ## T
 - [transports](transports.md)
