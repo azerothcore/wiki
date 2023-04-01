@@ -4,6 +4,10 @@ redirect_from: "/Update"
 
 # How to update AzerothCore to the latest stable version
 
+
+**NOTE: THIS IS NOT UP TO DATE. SEE DISCORD ANNOUNCEMENT CHANNEL ON WHICH COMMIT TO CHECKOUT!**
+
+
 ## Verify that you're on the latest release
 
 1. Type `.server debug` in your console.
