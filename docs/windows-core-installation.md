@@ -122,9 +122,18 @@ authserver.pbd
 worldserver.exe
 worldserver.pdb
 libmysql.dll
-libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll (Only for OpenSSL 1.1.x and below)
-ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll (Only for OpenSSL 1.1.x and below)
-legacy.dll (Only for OpenSSL 3.0 and later)
+
+---------
+For OpenSSL 1.1.x
+libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
+ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
+
+---------
+For OpenSSL 3.0 and later
+
+legacy.dll
+libcrypto-3.dll / libcrypto-3-x64.dll
+libssl-3.dll / libssl-3-x64.dll
 ```
 
 In the **configs** folder you should find:
