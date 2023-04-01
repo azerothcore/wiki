@@ -140,7 +140,7 @@ Loot mode examples from the Flame Leviathan fight in Ulduar:
 
 ### GroupId
 
-A group is a set of loot definitions processed in such a way that at any given looting event the loot generated can receive only 1 (or none) [item](#item) from the items declared in the loot definitions of the group. Groups are formed by loot definitions having the same values of [entry](#entry) and **GroupId** fields.
+A group is a set of loot definitions processed in such a way that at any given looting event the loot generated can receive only 1 (or none) [item](#item) from the items declared in the loot definitions of the group. Groups are formed by loot definitions having the same values of [entry](#entry) and **GroupId > 0** fields.
 
 A group may consists of **explicitly-chanced** (having non-zero [Chance](#chance)) and **equal-chanced** ([Chance](#chance) = 0) entries. Every *equal-chanced* entry of a group is considered having such a chance that:
 
