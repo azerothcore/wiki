@@ -59,6 +59,10 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 - EntryOrGuid < 0: `guid` of the creature / game object / etc.
 - **Depends on source\_type.**
 
+CREATURE_FLAG_EXTRA_DONT_OVERRIDE_SAI_ENTRY in creature_template allows us to not require duplicating rows that are shared between all creatures of the same entry in the GUID script.
+For example, you can keep all movement-related scripting in the GUID script, while combat scripting is handled by the ENTRY script.
+For creatures that use this flag, SAI row IDs cannot overlap, thus we should use row IDs starting with 1000 and incrementing it for each row (e.g. 1000, 1001, 1002, ...).
+
 ### source\_type
 
 Object type: creature, game object, spell. see table below for values
