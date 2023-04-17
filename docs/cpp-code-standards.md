@@ -82,6 +82,8 @@ else
 }
 ```
 
+**Please not that Azerothcore does not use curly brackets. Brackets should always start on a new line, as displayed in the example above.**
+
 ### Random numbers vs. Constants
 
 Constants makes the code easier to read and understand, they also provide a safe guard and prevents numbers from being hard-coded.
