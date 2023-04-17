@@ -63,7 +63,7 @@ When using GUID-specific SAI, the extra_flag DONT_OVERRIDE_SAI_ENTRY allows us t
 
 For example, you can keep all movement-related scripting in the GUID script, while combat scripting is handled by the ENTRY script.
 
-For creatures that use this flag, SAI row IDs cannot overlap, thus we use row IDs starting with 1000 increment it (e.g. 1000, 1001, 1002, ...).
+For creatures that use this flag, SAI row IDs cannot overlap, thus we use row IDs starting with 1000 and incrementing it (e.g. 1000, 1001, 1002, ...).
 
 ### source\_type
 
