@@ -82,7 +82,7 @@ else
 }
 ```
 
-**Please not that Azerothcore does not use curly brackets. Brackets should always start on a new line, as displayed in the example above.**
+**Please not that brackets should always start on a new line, as displayed in the example above.**
 
 ### Random numbers vs. Constants
 
