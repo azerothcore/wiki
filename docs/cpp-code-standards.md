@@ -82,7 +82,7 @@ else
 }
 ```
 
-**Please not that brackets should always start on a new line, as displayed in the example above.**
+**Please note that brackets should always start on a new line, as displayed in the example above.**
 
 ### Random numbers vs. Constants
 
