@@ -469,7 +469,7 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 | TRIGGERED_IGNORE_POWER_AND_REAGENT_COST       | 4          | 0x00000004 | Will ignore power and reagent cost                                                     |
 | TRIGGERED_IGNORE_CAST_ITEM                    | 8          | 0x00000008 | Will not take away cast item or update related achievement criteria                    |
 | RIGGERED_IGNORE_AURA_SCALING                  | 16         | 0x00000010 | Will ignore aura scaling                                                               |
-| TRIGGERED_IGNORE_CAST_IN_PROGRESS             | 32         | 0x00000020 | Will ignore aura scaling                                                               |
+| TRIGGERED_IGNORE_CAST_IN_PROGRESS             | 32         | 0x00000020 | Will not check if a current cast is in progress                                        |
 | TRIGGERED_IGNORE_COMBO_POINTS                 | 64         | 0x00000040 | Will ignore combo point requirement                                                    |
 | TRIGGERED_CAST_DIRECTLY                       | 128        | 0x00000080 | In Spell::prepare, will be cast directly without setting containers for executed spell |
 | TRIGGERED_IGNORE_AURA_INTERRUPT_FLAGS         | 256        | 0x00000100 | Will ignore interruptible aura's at cast                                               |
