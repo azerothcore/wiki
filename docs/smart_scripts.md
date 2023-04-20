@@ -480,12 +480,12 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 | TRIGGERED_IGNORE_CASTER_AURAS                 | 65536      | 0x00010000 | Will ignore caster aura restrictions or requirements                                   |
 | TRIGGERED_DISALLOW_PROC_EVENTS                | 131072     | 0x00020000 | Disallows proc events from triggered spell (default)                                   |
 | TRIGGERED_DONT_REPORT_CAST_ERROR              | 262144     | 0x00040000 | Will return SPELL_FAILED_DONT_REPORT in CheckCast functions                            |
-| TRIGGERED_FULL_MASK                           | 524287     | 0x0007FFFF | Used when doing CastSpell with triggered == true                                       |
+| TRIGGERED_FULL_MASK                           | 524287     | 0x0007FFFF | All triggered flags                                                                    |
 | TRIGGERED_IGNORE_EQUIPPED_ITEM_REQUIREMENT    | 524288     | 0x00080000 | Will ignore equipped item requirements                                                 |
 | TRIGGERED_NO_PERIODIC_RESET                   | 1048576    | 0x00100000 | Periodic aura tick wont be reset on override                                           |
 | TRIGGERED_FULL_DEBUG_MASK                     | 4294967295 | 0xFFFFFFFF |                                                                                        |
 
-**NOTICE:** TRIGGERED_FULL_MASK=1048576 or 0 so using triggeredFlags=0 will trigger the cast with full mask.
+**NOTICE:** If triggeredFlags = 0, cast will trigger with TRIGGERED_FULL_MASK = 524287.
 
 ### React States
 
