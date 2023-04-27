@@ -167,6 +167,8 @@ For 64-bit version:
 #### OpenSSL 3.0 and more recent installed, you need to copy:
 
 **legacy.dll**  → C:\OpenSSL-Win(32/64)\bin
+**libcrypto-3(-x64).dll** → C:\OpenSSL-Win(32/64)\bin
+**libssl-3(-x64).dll** → C:\OpenSSL-Win(32/64)\bin
 
 #### About compilation log and report
 
