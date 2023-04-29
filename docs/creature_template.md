@@ -699,13 +699,13 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 4194304    | CREATURE_FLAG_EXTRA_AVOID_AOE                       | 0x00400000 | ignored by aoe attacks (for icc blood prince council npc - Dark Nucleus)                                                                           |
 | 8388608    | CREATURE_FLAG_EXTRA_NO_DODGE                        | 0x00800000 | target cannot dodge                                                                                                                                |
 | 16777216   | CREATURE_FLAG_EXTRA_MODULE                          | 0x01000000 | Used by module creatures to avoid blizzlike checks.                                                                                                |
-| 33554432   | CREATURE_FLAG_EXTRA_DONT_CALL_ASSISTANCE            | 0x02000000 | Prevent creatures from calling for assistance on initial aggro                                                                                     |
-| 67108864   | CREATURE_FLAG_EXTRA_UNUSED_27                       | 0x04000000 |                                                                                                                                                    |
+| 33554432   | CREATURE_FLAG_EXTRA_IGNORE_ASSISTANCE_CALL          | 0x02000000 | Creature is not aggroed by other mobs assistance functions                                                                                         |
+| 67108864   | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_SAI_ENTRY         | 0x04000000 | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                                         |
 | 134217728  | CREATURE_FLAG_EXTRA_UNUSED_28                       | 0x08000000 |                                                                                                                                                    |
 | 268435456  | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | 0x10000000 | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error.             |
 | 536870912  | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | 0x20000000 | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                             |
 | 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                                         |
-| 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                         |
+| 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                                     |
 
 #### ScriptName
 
