@@ -23,13 +23,7 @@ If you do not want to extract these files using the extractors you can find down
 
 Github link:
 
-<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v16) - from 02/01/2023 to now</a> (RECOMMENDED - Used in the automatic downloader script in `/apps/`)
-
-<!-- this link contains v10 -->
-<!-- Mega link:
-
-<a href="https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ" target="_blank">DBC & maps for all versions</a> (ALTERNATIVE)
--->
+<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v16) - from 02/01/2023 to now</a>
 
 1. Download the files above.
 
