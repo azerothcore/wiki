@@ -15,16 +15,17 @@ See [Requirements](requirements.md) before you continue.
 
 1. Create the directory where the source files will be located. In this guide we will use **C:\Azerothcore**.
 
-1. Right-click on the folder and select **GitExt Clone...**
+1. Open up Github Desktop
+
+1. Click **File** -> **Clone repository...** in the top left
+
+1. Click **URL**
 
 1. Fill in the data as follow:
 
 ```
-Repository to clone: https://github.com/azerothcore/azerothcore-wotlk
-Destination: C:\Azerothcore
-Subdirectory to create: <none>*
-Branch: master
-Repository type: Personal repository
+Repository URL or GitHub username and repository: https://github.com/azerothcore/azerothcore-wotlk
+Local path: C:\Azerothcore
 ```
 
 Click **Clone**. Within a few minutes Azerothcore's sourcefiles will be cloned into **C:\Azerothcore**.
