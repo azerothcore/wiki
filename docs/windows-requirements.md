@@ -13,11 +13,15 @@
 | CMake ≥ 3.16                                                       |
 | MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)    |
 
-1. [Git Extensions](https://github.com/gitextensions/gitextensions/releases/latest)
+1. [Git](https://git-scm.com/download/win)
 
-    1. You will need Git installed. You can get the latest version [https://git-scm.com/download/win](https://git-scm.com/download/win)
+    1. Download the standalone installer
     
         - During Git installation - Adjusting your PATH environment. Pick "Git from the command line and also from 3rd-party software".
+
+1. [Github Desktop](https://desktop.github.com/)
+
+    1. Download the installer and follow the steps to set it up.
 
 1. Install the compiler / IDE [Visual Studio (17) Community 2022](https://visualstudio.microsoft.com/downloads/)
 
