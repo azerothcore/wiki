@@ -84,6 +84,16 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
         - Run the b2.exe file 
 
+- If you get an error that *Git was NOT FOUND on your system*:
+
+    - Check the **Advanced** checkbox.
+
+    - Search and find **GIT_EXECUTABLE**
+    
+        - Specify the path to git.exe e.g. `D:/Programs/Git/cmd/git.exe`
+        
+    - If you do not have git.exe, you need to install git. See [requirements](requirements)
+
 ### Compiling the Source
 
 1. In CMake press **Open Project** to open the **AzerothCore.sln** file directly with Visual Studio.
