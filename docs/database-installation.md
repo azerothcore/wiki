@@ -25,9 +25,7 @@ If you want to know how the SQL directory works or plan to have custom changes w
 
 #### Automatic Database Updater
 
-By default the Worldserver and Authserver will check for, and import all new files into the database you specified in the config.
-
-This is the easiest and recommended way to make sure you are always up-to-date with the core.
+The Auth- and Worldserver checks and applies all needed database files at startup.
 
 To edit the automatic database updater you will find the neccessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
