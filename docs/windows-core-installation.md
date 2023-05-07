@@ -90,7 +90,7 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
     - Search and find **GIT_EXECUTABLE**
     
-        - Specify the path to git.exe e.g. `D:/Programs/Git/cmd/git.exe`
+        - Specify the path to git.exe e.g. `C:/Program Files/Git/cmd/git.exe`
         
     - If you do not have git.exe, you need to install git. See [requirements](requirements)
 
