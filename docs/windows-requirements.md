@@ -9,7 +9,7 @@
 | :----------------------------------------------------------------- |
 | Boost ≥ 1.78                                                       |
 | MySQL ≥ 5.7.0                                                      |
-| OpenSLL ≥ 1.0.x                                                    |
+| OpenSSL ≥ 1.0.x                                                    |
 | CMake ≥ 3.16                                                       |
 | MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)    |
 
