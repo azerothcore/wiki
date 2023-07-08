@@ -10,7 +10,7 @@ tableofcontents: 1
 
 It makes it easier for everyone to maintain and read the written code as well as it gives us more control over it.
 
-It can also act as a safe guard to prevent errors in the code.
+It can also act as a safeguard to prevent errors in the code.
 
 ### Why is it important for everyone to follow the standards?
 
@@ -20,7 +20,7 @@ We only accept code that is written to the standards, this means that a PR you w
 
 ### Tabs and Indents
 
-We never use tabs, instead we use spaces.
+We never use tabs, instead, we use spaces.
 
 One tab is equal to 4 spaces and that is what should be used throughout the whole project.
 
@@ -34,9 +34,9 @@ Settings -> Preferences -> Language -> Tab size: 4, Replace by space: checked
 
 ### Comments
 
-Always comment code where it is not typical repeated code and where the code is not self-explanatory.
+Always comment on code where it is not typical repeated code and where the code is not self-explanatory.
 
-Comments should either be placed dierectly above the code, or directly beside it.
+Comments should either be placed directly above the code, or directly beside it.
 
 ```cpp
 // A Comment
@@ -49,7 +49,7 @@ if (a == b)
 
 ### Whitespace
 
-Trailing whitespace is a not allowed.
+Trailing whitespace is not allowed.
 
 You should also not have unneeded spaces within a bracket. 
 
@@ -84,9 +84,34 @@ else
 
 **Please note that brackets should always start on a new line, as displayed in the example above.**
 
+### Loop syntax
+
+```cpp
+for (uint32 i = 0; i < loopEnd; ++i)
+{
+    DoSomething();
+    DoSomethingElse();
+}
+
+uint32 i = 0;
+while (i < 10)
+{
+    DoSomething();
+    DoSomethingElse();
+    ++i;
+}
+
+do
+{
+    DoSomething();
+    DoSomethingElse();
+    ++i;
+} while (i > 0);
+```
+
 ### Random numbers vs. Constants
 
-Constants makes the code easier to read and understand, they also provide a safe guard and prevents numbers from being hard-coded.
+Constants make the code easier to read and understand, they also provide a safeguard and prevent numbers from being hard-coded.
 
 Wrong:
 
@@ -106,17 +131,19 @@ if (player->GetQuestStatus(QUEST_BEAT_UP) == QUEST_STATUS_INCOMPLETE)
 }
 ```
 
+Constants are set with #defines, constexpr, or enum/enum class. If it does not exist - create one.
+
 ### Enumerations vs. define
 
-It is strongly advised to avoid using #define for constants. use either a const variable or an enum if multiple variables can be grouped togehter.
+It is strongly advised to avoid using #define for constants. use either a const variable or an enum if multiple variables can be grouped together.
 
 Enums must have a name. Separate constant on different enums depending on their type.
 
 ```cpp
 enum Spells
 {
-    SPELL_1 = 1111
-    SPELL_2 = 2222
+    SPELL_1 = 1111,
+    SPELL_2 = 2222,
     SPELL_3 = 3333
 };
 
@@ -125,7 +152,7 @@ constexpr uint32 SPELL_4 = 4444;
 
 ### Enum vs. Enum Class
 
-Enum classes are prefered to be used as they can cause fewer suprises that could lead to bugs as the enum will not implicitly convert to other types like integer or other enums.
+Enum classes are preferred to be used as they can cause fewer surprises that could lead to bugs as the enum will not implicitly convert to other types like integers or other enums.
 
 ```cpp
 enum class Spell : uint32
@@ -150,8 +177,8 @@ All constants that we store have a standardized prefix.
 | SAY_   | [creature_text.GroupID](creature_text#groupid) |
 | EMOTE_ | [creature_text.GroupID](creature_text#groupid) Different prefix from SAY_ to show that this is an emote. |
 | MODEL_ | Creature model, DisplayID |
-| XX_G   | Heroic mode prefix (goes after the other prefix) XX is max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
-| RAID_XX | Raid mode prefix (goes before the other prefix) XX is max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
+| XX_G   | Heroic mode prefix (goes after the other prefix) XX is the max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
+| RAID_XX | Raid mode prefix (goes before the other prefix) XX is the max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
 | EVENT_ | Event/Encounter identifier for instances |
 | DATA_  | Identifiers in instance used for GUIDs/data not being event/encounter |
 | ACHIEV_ | Achievement ID |
@@ -205,6 +232,19 @@ Always use 'f' after float values when declaring them to avoid compile warnings.
 float posX = 234.3456f;
 ```
 
+### Array of Structs:
+
+```cpp
+Position const PosMobs[5] =
+{
+    {-724.12f, -176.64f, 430.03f, 2.543f},
+    {-766.70f, -225.03f, 430.50f, 1.710f},
+    {-729.54f, -186.26f, 430.12f, 1.902f},
+    {-756.01f, -219.23f, 430.50f, 2.369f},
+    {-798.01f, -227.24f, 429.84f ,1.446f},
+};
+```
+
 ### WorldObjects
 
 We define WorldObjects in this way:
@@ -217,7 +257,7 @@ Player* player;
 Unit* unit;
 ```
 
-We never use multiple declaration with pointers
+We never use multiple declarations with pointers
 
 ```cpp
 Something* obj1, *obj2;
@@ -242,7 +282,7 @@ Never define "me" in a creature or object script!
 
 ### Defining const variables
 
-const keyword should always go after type name
+const keyword should always go after the type name
 
 ```cpp
 Player const* player; // player object is constant
