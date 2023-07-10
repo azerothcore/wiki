@@ -77,12 +77,8 @@ if (var)
     me->DoB();
 }
 else
-{
     me->DoC();
-}
 ```
-
-**Please note that brackets should always start on a new line, as displayed in the example above.**
 
 ### Loop syntax
 
@@ -117,18 +113,14 @@ Wrong:
 
 ```cpp
 if (player->GetQuestStatus(10090) == 1)
-{
     me->RemoveFlag(58, 2);
-}
 ```
 
 Correct:
 
 ```cpp
 if (player->GetQuestStatus(QUEST_BEAT_UP) == QUEST_STATUS_INCOMPLETE)
-{
     me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NON_ATTACKABLE);
-}
 ```
 
 Constants are set with #defines, constexpr, or enum/enum class. If it does not exist - create one.
