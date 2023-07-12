@@ -5,7 +5,7 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) | [Step 9: Installing a Module >>](installing-a-module.md) |
 
-- Make sure you use an original WotLK client, and *not* WOW Classic. You can find downloads at [ChromieCraft](https://www.chromiecraft.com/en/downloads/)
+- Make sure you use an original WotLK client, and *not* WOW Classic. You can find downloads at [ChromieCraft](https://www.chromiecraft.com/en/downloads/) or [WOWgaming](https://wowgaming.github.io/wiki-en/wotlk-home.html#client)
 
 - Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
 
