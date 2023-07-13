@@ -223,8 +223,8 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMART_EVENT_NEAR_PLAYERS_NEGATION | 102   | maxPlayers                                            | Range (yards)               | FirstCheck (ms)   | RepeatMin (ms)                  | RepeatMax (ms)       | Event will trigger if there are less than maxPlayers in range.               |
 | SMART_EVENT_NEAR_UNIT             | 103   | Unit type to check (0: creature 1: gob)               | Entry (template)            | Count             | Range                           | Timer (ms)           | Will check for >= count of specified entry within range                      |
 | SMART_EVENT_NEAR_UNIT_NEGATION    | 104   | Unit type to check (0: creature 1: gob)               | Entry (template)            | Count             | Range                           | Timer (ms)           | Will check for < count of specified entry within range                       |
-| SMART_EVENT_AREA_CASTING          | 105   | RepeatMin                                             | RepeatMax                   | Spell Id (0: any) | Range                           | Check Timer (ms)     | Check threat list for hostiles casting. If none are found, repeat w/ param5  |
-| SMART_EVENT_AREA_RANGE            | 106   | Minimum Range                                         | Maximum Range               | RepeatMin (ms)    | RepeatMax (ms)                  | Check Timer (ms)     | Check threat list for hostiles in range. If none are found, repeat w/ param5 |
+| SMART_EVENT_AREA_CASTING          | 105   | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       | Range                | Check threat list for hostiles casting. If none are found, repeat in 1200ms  |
+| SMART_EVENT_AREA_RANGE            | 106   | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       | Range                | Check threat list for hostiles in range. If none are found, repeat in 1200ms |
 
 ### action\_type
 
