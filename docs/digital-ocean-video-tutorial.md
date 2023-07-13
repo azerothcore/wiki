@@ -160,7 +160,7 @@ make install -j $MTHREADS;
 - Replace the Database login information beginning at line 153 with the database username and password you set earlier in this tutorial. Do this for the Auth, Character, and World database configuration sections (beginning at line 153, 158, and 163 respectively).
 - Save `config.sh` and upload back to the directory `/home/azcore/azerothcore/conf/`.
 - We need to be in the git directory in order to execute the import script, so enter the following command `cd /home/azcore/azerothcore`
-- Start up the database import script by entering the following command `bash apps/db_assembler/db_assembler.sh`. We need to configure all databases, so we need to choose *Import-all: Assemble & Import All*. Type `import-all` and hit enter. This may error after each execution, but that's ok - it imports each database successfully. Repeate this entire step until the World database loads. Type `quit` once the World database has been imported.
+- Start up the database import script by entering the following command `bash apps/db_assembler/db_assembler.sh`. We need to configure all databases, so we need to choose *Import-all: Assemble & Import All*. Type `import-all` and hit enter. This may error after each execution, but that's ok - it imports each database successfully. Repeat this entire step until the World database loads. Type `quit` once the World database has been imported.
 
 ## Server Start Up
 #### Final Configuration
