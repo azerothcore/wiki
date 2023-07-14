@@ -67,7 +67,7 @@
     
     - MySQL Workbench (already installed if you chose to install full MySQL package)
     
-    - [DBeaver](https://dbeaver.io/) (Multiplattform Database Management Tool)
+    - [DBeaver](https://dbeaver.io/) (Multiplatform Database Management Tool)
 
     1. Try connecting to your database. You may be looking for "Connect to Host" or "New Connection" or "Session Manager" depending on which program you use.
 

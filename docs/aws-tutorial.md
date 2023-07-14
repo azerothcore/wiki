@@ -264,7 +264,7 @@ sudo nano /etc/fstab
 # Add this line to /etc/fstab
 /media/fasthdd/swapfile.img swap swap sw 0 0
 
-#Activiate the swap image
+#Activate the swap image
 swapon /media/fasthdd/swapfile.img
 ```
 

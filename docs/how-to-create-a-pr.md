@@ -221,7 +221,7 @@ Just repeat the procedure starting from the step 3.
 
 Be careful when creating a new branch: you **must** be in branch `master` first (type `git checkout master`).
 
-### Wow can I update my fork's master branch?
+### How can I update my fork's master branch?
 
 If you never updated your fork before, type:
 
