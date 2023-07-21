@@ -114,7 +114,7 @@ The following steps must be verified:
 
 1. In your worldserver.conf file locate **DataDir** option.
 
-1. Edit it to the path of your folder. i.e **C:\Build\AzerothCore\RelWithDebInfo\Data**
+1. Edit it to the path of your folder. i.e **C:\Build\bin\RelWithDebInfo\Data**
 
 *Pro Tip: For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server.*
 
