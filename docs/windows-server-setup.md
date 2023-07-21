@@ -7,8 +7,7 @@
 
 ## Extracting DBC, Maps, VMaps & MMaps
 
-1. Browse into your build directory (**C:\Build\RelWithDebInfo\\** \*) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
-
+1. Browse into your build directory (**C:\Build\bin\RelWithDebInfo\\** \*) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
 ```
 mapextractor.exe
 mmaps_generator.exe
@@ -34,7 +33,7 @@ vmap4assembler.exe
 
 - **Optional but extremely recommended: Extract mmaps.** Do not attempt to stop this process while it is exctracting.
 
-5. Create a new folder in **C:\Build\RelWithDebInfo** \* called **Data**
+5. Create a new folder in **C:\Build\bin\RelWithDebInfo** \* called **Data**
 
 6. Move the vmaps, maps, dbc, cameras into the **Data** folder.
 
@@ -42,7 +41,7 @@ vmap4assembler.exe
 
 ## Setting up the configuration files
 
-First of all you need to find the two default config files (named worldserver.conf.dist and authserver.conf.dist) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within /build/configs/ (may vary).
+First of all you need to find the two default config files (named worldserver.conf.dist and authserver.conf.dist) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within /build/bin/configs/ (may vary).
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
