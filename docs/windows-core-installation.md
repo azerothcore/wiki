@@ -15,6 +15,8 @@ See [Requirements](requirements.md) before you continue.
 
 1. Create the directory where the source files will be located. In this guide we will use **C:\Azerothcore**.
 
+1. Create the directory where the server should be installed to. In this guide we will use **C:\Server**.
+
 1. Open up Github Desktop
 
 1. Click **File** -> **Clone repository...** in the top left
@@ -47,6 +49,8 @@ Before you begin, create a new directory called **Build**. In this guide we will
 1. Make sure that **Use default native compilers** is checked.
 
 1. Click **Finish**.
+
+1. In the **CMAKE_INSTALL_PREFIX** value field, enter your server folder as created earlier. In this case, `C:\Server`.
 
 1. Make sure **TOOLS_BUILD** is set to `all`. This will compile the extractors needed later in the setup.
 
@@ -122,9 +126,23 @@ When the build is complete you will find a message in the output that looks simi
 ========== Build: 22 succeeded, 0 failed, 0 up-to-date, 1 skipped ==========
 ```
 
-You will find your freshly compiled binaries in the **C:\Build\bin\RelWithDebInfo** or **C:\Build\bin\Debug** folder. These are all used to run your server at the end of this instruction.
+Now that the source is compiled, right-click **INSTALL** and select **Build**. This will move all the compiled binaries and configuration files to **C:\Server** as defined earlier.
 
-You will need the following files in order for the core to function properly:
+When installation is complete, you should see the following message:
+
+```
+2>------ Build started: Project: INSTALL, Configuration: Release x64 ------
+2>-- Install configuration: "Release"
+2>-- Installing: C:/Server/configs/authserver.conf.dist
+2>-- Installing: C:/Server/configs/authserver.conf
+2>-- Installing: C:/Server/authserver.exe
+2>-- Installing: C:/Server/configs/worldserver.conf.dist
+2>-- Installing: C:/Server/configs/worldserver.conf
+2>-- Installing: C:/Server/worldserver.exe
+========== Build: 2 succeeded, 0 failed, 18 up-to-date, 0 skipped ==========
+```
+
+The files in **C:\Server** are all used to run your server at the end of this instruction. You will need the following files in this directory in order for the core to function properly:
 
 ```
 \configs\
@@ -151,7 +169,9 @@ In the **configs** folder you should find:
 
 ```
 authserver.conf.dist
+authserver.conf
 worldserver.conf.dist
+worldserver.conf
 ```
 
 There are two/three DLL files that need to be manually added to this folder, and you need to copy them from the following installation/bin directories:
