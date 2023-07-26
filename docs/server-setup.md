@@ -27,7 +27,7 @@ Github link:
 
 1. Download the files above.
 
-1. Create a new folder within the build folder called **Data**. i.e **C:\Build\AzerothCore\RelWithDebInfo\Data**
+1. Create a new folder within the server folder you created in the previous step, in this case **C:\Server**, called **Data**. i.e **C:\Server\Data**
 
 1. Extract the files from the zip file and place them within the **Data** folder.
 
@@ -51,7 +51,7 @@ By default you will compile your core with tools and you will get the following 
 
 Place the files with your World of Warcraft binary (wow.exe on windows) and run them.
 
-After extracting all necessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
+After extracting all necessary files, create a folder called **Data** within the server directory you created earlier, in this case **C:\Server**, and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
 
 If you use extractors from other projects or branches it is almost certain that your AzerothCore will not recognize the extracted data or even work!
 
@@ -78,11 +78,7 @@ You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
 ### Creating the config files
 
-1. Make copies of both .dist files.
-
-1. From each copy, remove the .dist part.
-
-Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
+Open the .conf files in **C:\Server\configs** and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
 On a newly compiled configuration, you will have the following values by default
 
@@ -114,7 +110,7 @@ The following steps must be verified:
 
 1. In your worldserver.conf file locate **DataDir** option.
 
-1. Edit it to the path of your folder. i.e **C:\Build\AzerothCore\RelWithDebInfo\Data**
+1. Edit it to the path of your folder. This can be either a static or a relative path. Ie. **C:\Server\Data** or **.\Data**.
 
 *Pro Tip: For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server.*
 
