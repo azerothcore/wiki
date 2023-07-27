@@ -27,7 +27,7 @@ Github link:
 
 1. Download the files above.
 
-1. Create a new folder within the server folder you created in the previous step, in this case **C:\Server**, called **Data**. i.e **C:\Server\Data**
+1. Create a new folder within the server folder you created in the previous step, in this case **C:\Server**, called **Data**. i.e **C:\Server\Data**. For linux: **$HOME/azeroth-server/data/**
 
 1. Extract the files from the zip file and place them within the **Data** folder.
 
