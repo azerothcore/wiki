@@ -125,6 +125,23 @@ if (player->GetQuestStatus(QUEST_BEAT_UP) == QUEST_STATUS_INCOMPLETE)
 
 Constants are set with #defines, constexpr, or enum/enum class. If it does not exist - create one.
 
+### Switch statements
+
+A default action should always be present in a switch statement, even if it is just a break.
+
+```cpp
+switch (spells)
+    case SPELL_1:
+    case SPELL_2:
+        DoSomething();
+        break;
+    case SPELL_3:
+        DoSomethinCool();
+        [[fallthrough]]
+    default:
+        break;
+```
+
 ### Enumerations vs. define
 
 It is strongly advised to avoid using #define for constants. use either a const variable or an enum if multiple variables can be grouped together.
