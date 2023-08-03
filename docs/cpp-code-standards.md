@@ -131,15 +131,20 @@ A default action should always be present in a switch statement, even if it is j
 
 ```cpp
 switch (spells)
+{
     case SPELL_1:
     case SPELL_2:
-        DoSomething();
+    {
+        if (moreThanOneLine)
+            UseBrackets();
         break;
+    }
     case SPELL_3:
         DoSomethinCool();
         [[fallthrough]]
     default:
         break;
+}
 ```
 
 ### Enumerations vs. define
