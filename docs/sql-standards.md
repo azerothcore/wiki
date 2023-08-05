@@ -9,7 +9,7 @@ redirect_from: /Dealing-with-SQL-files
 
 ### General standards
 
-We always use backticks \` around table- and column names. \`creature_loot_template\`.
+We always use backticks \` around the table- and column names. \`creature_loot_template\`.
 
 We always use single quotes around string values ' ' but NEVER around an integer.
 
@@ -70,7 +70,7 @@ UPDATE `creature_loot_template` SET `Chance` = 100 WHERE `entry` = 3 AND `item` 
 
 ### Variables
 
-Variables can be good where you change the same entry in several places to avoid mistakes.
+Variables can be good when you change the same entry in several places to avoid mistakes.
 
 Before:
 
@@ -139,7 +139,7 @@ UPDATE `table_1` SET `field_1` = 'someValue' WHERE `entry` IN (1000, 2000, 3000)
 
 ### Flags & Bits
 
-For fields in the database where we work with flags it is always preffered that we add or remove flags instead of overriding them.
+For fields in the database where we work with flags, it is always preferred that we add or remove flags instead of overriding them.
 
 Wrong:
 
@@ -207,7 +207,7 @@ SMALLINT(M)  -> SMALLINT
 INT(M)       -> INT
 BIGINT(M)    -> BIGINT
 
-BOOL         -> Never used, synonym for TINYINT. 0 = false <>0 = true
+BOOL         -> Never used, a synonym for TINYINT. 0 = false <>0 = true
 ```
 
 We never use MEDIUMINT. Use INT instead!
@@ -222,12 +222,12 @@ FLOAT UNSIGNED -> CHECK (`column`>=0)
 
 ### Check Constraints
 
-You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how check contraints are made.
+You can see [here](https://github.com/Azerothcore/azerothcore-wotlk/blob/master/data/sql/base/db_auth/realmlist.sql) how check constraints are made.
 
 All active Check Constraints can be found by using this query:
 
 ```sql
--- MySQL 8.0
+-- MySQL 8.0 and newer
 SELECT * FROM information_schema.CHECK_CONSTRAINTS;
 
 -- MySQL 5.7
@@ -236,11 +236,13 @@ SELECT * FROM information_schema.TABLE_CONSTRAINTS;
 
 ### Charset
 
-We always use `utf8mb4` as charset
+We always use `utf8mb4` as the charset
 
 ### Collation
 
-We always use `utf8mb4_unicode_ci` as collation
+We always use `utf8mb4_unicode_ci` as the collation
+
+The only exception is `characters`.`name` which uses `utf8mb4_bin` to allow it to be accent sensitive in Maria databases.
 
 ### Engine
 
@@ -248,7 +250,7 @@ We always use `InnoDB` as the engine
 
 ### Row Format
 
-We always use `DEFAULT` as row format
+We always use `DEFAULT` as the row format
 
 ### Dummy script for table
 
@@ -271,4 +273,4 @@ ROW_FORMAT = DEFAULT
 
 ## Note for SQL reviewer
 
-When we work with GUID's, make sure that we use as low entries as possible to fill out the gaps in the database. This can easily be done with tools like [Unused GUID Searcher](https://github.com/azerothcore/unused-guid-search).
+When we work with GUIDs, make sure that we use as low entries as possible to fill out the gaps in the database. This can easily be done with tools like [Unused GUID Searcher](https://github.com/azerothcore/unused-guid-search).
