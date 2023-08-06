@@ -464,12 +464,13 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 
 ### Cast Flags
 
-| Name                           | Flag | Hex  | Comment                                                                 |
-| ------------------------------ | ---- | ---- | ----------------------------------------------------------------------- |
-| SMARTCAST\_INTERRUPT\_PREVIOUS | 1    | 0x01 | Interrupt any spell casting                                             |
-| SMARTCAST\_TRIGGERED           | 2    | 0x02 | Triggered (this makes spell cost zero mana and have no cast time)       |
-| CAST\_AURA\_NOT\_PRESENT       | 32   | 0x20 | Only casts the spell if the target does not have an aura from the spell |
-| SMARTCAST\_COMBAT\_MOVE        | 64   | 0x40 | Prevent combat movement on cast, allow on fail range, mana, LOS         |
+| Name                            | Flag | Hex  | Comment                                                                     |
+| ------------------------------- | ---- | ---- | --------------------------------------------------------------------------- |
+| SMARTCAST\_INTERRUPT\_PREVIOUS  | 1    | 0x01 | Interrupt any spell casting                                                 |
+| SMARTCAST\_TRIGGERED            | 2    | 0x02 | Triggered (this makes spell cost zero mana and have no cast time)           |
+| SMARTCAST\_AURA\_NOT\_PRESENT   | 32   | 0x20 | Only casts the spell if the target does not have an aura from the spell     |
+| SMARTCAST\_COMBAT\_MOVE         | 64   | 0x40 | Prevent combat movement on cast, allow on fail range, mana, LOS             |
+| SMARTCAST_THREATLIST_NOT_SINGLE | 128  | 0x80 | Only cast if the source's threatlist is higher than one. This includes pets |
 
 ### Triggered Flags
 
