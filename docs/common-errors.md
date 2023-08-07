@@ -176,6 +176,19 @@ This is usually due to mixing 32/64bit DLLs with your compiled binaries. Your DL
 
 ---------------------------------------------------------
 
+#### [ACE00048](#a-hreface00047ace00047a)
+I get an error when I am trying to start Worldserver or Authserver
+```
+{}DatabaseInfo is not specified in configuration file!
+
+{} = World/Character/Auth
+```
+This means that the database connection information is missing from the .conf file.
+
+Go to the specified DatabaseInfo in .conf and add the connection information.
+
+---------------------------------------------------------
+
 ## Core compilation-related errors
 
 #### [ACE00060](#a-hreface00060ace00060a)
