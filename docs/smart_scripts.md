@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world.md)
 
-The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL language. The important thing is always to analyze, who is the event that motivates the execution of an action and of course, who is the objective. As a recommendation, you can review the scripts that are already inside the table, to understand how it works. The advantage, for which several use this method, is that it is not required to compile, when adding records, with restarting the server, if it is well programmed, you can appreciate the changes. Another reason is the portability, but it depends on the point of view of the developer, the response you can get.
+The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL language. The important thing is always to analyze, who is the event that motivates the execution of an action and of course, who is the objective. As a recommendation, you can review the scripts that are already inside the table, to understand how it works. The advantage, for which several use this method, is that it is not required to compile, when adding records, with restarting the server, if it is well programmed, you can appreciate the changes. Another reason is the portability, but it depends on the point of view of the developer, the response you can get.
 
 **Table Structure**
 
@@ -21,6 +21,7 @@ The `smart_scripts` table has 30 attributes. It serves to make scripts in SQL la
 | [event_param3][5]     | INT      | UNSIGNED   |     | NO   | 0       |       |               |
 | [event_param4][5]     | INT      | UNSIGNED   |     | NO   | 0       |       |               |
 | [event_param5][5]     | INT      | UNSIGNED   |     | NO   | 0       |       |               |
+| [event_param6][5]     | INT      | UNSIGNED   |     | NO   | 0       |       |               |
 | [action_type][9]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |               |
 | [action_param1][9]    | INT      | UNSIGNED   |     | NO   | 0       |       |               |
 | [action_param2][9]    | INT      | UNSIGNED   |     | NO   | 0       |       |               |
