@@ -13,11 +13,11 @@ For detailed information on how to configure a restarter and a debugger go to [h
 
 **NEVER create an account directly into your database unless you are ABSOLUTELY SURE that you know what to do and how to do it!**
 
-- Next create your Login Account by typing directly into the **worldserver** window the GM Command **account create**. Syntax: (see examples below)
+- Next, create your Login Account by typing directly into the **worldserver** window the GM Command **account create**. Syntax: (see examples below)
 
 - If you wish to set the account as a GM then type into the worldserver window: **account set gmlevel $account #level #realmid** where **$account** is the account name to change, **#level** can be 0-4 and **#realmid** is the realm ID. Setting a **#level** of "3" is GM account level (higher numbers = more access), and the "-1" is the realm ID that stands for "all realms".
 
-*Tip: Open your **acore_world** database and find the **command** table. This shows a full list of GM Commands, descriptions and security level.*
+*Tip: Open your **acore_world** database and find the **command** table. This shows a full list of GM Commands, descriptions, and security levels.*
 *This will always be the most up-to-date list you can find, assuming you keep your DB and Core updated.*
 
 - Minimize your servers and run **WoW** (never run WoW using the Launcher unless you edited the realmlist.wtf's patchlist option above).
