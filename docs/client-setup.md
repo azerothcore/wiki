@@ -7,11 +7,11 @@
 
 - Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
 
-    - Change the first line to: set realmlist <IP address used in realmlist table>
+    - Change the first line to `set realmlist <IP address used in realmlist table>`
     
     - Example: set realmlist 127.0.0.1
 
-- (Optional) If you wish to use the WoW Launcher.exe to run your client then you must change your set patchlist to the same ip/dns name as your realmlist.
+- (Optional) If you wish to use the WoW Launcher.exe to run your client then you must change your set patchlist to the same IP/DNS name as your realmlist.
 
 **NOTE don't use localhost for address, if you need to connect to localhost use 127.0.0.1**
 
