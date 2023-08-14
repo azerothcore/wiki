@@ -2,7 +2,7 @@
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. | Optional |
 | [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md) | [Step 9: Installing a Module >>](installing-a-module.md) |
 
 - Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
