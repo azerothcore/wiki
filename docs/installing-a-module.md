@@ -5,7 +5,7 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 8: Client Setup](client-setup.md) |
 
-By default, AzerothCore delivers a Blizzlike experience. This can however be altered in different ways by adding Modules.
+Adding a module is an optional step to alter the blizzlike gameplay offered by AzerothCore by default.
 
 ## Installing the Module
 
