@@ -13,7 +13,7 @@ See [Requirements](requirements.md) before you continue.
 
 ### Pulling the code
 
-1. Create the directory where the source files will be located. In this guide we will use **C:\Azerothcore**.
+1. Create the directory where the source files will be located. In this guide, we will use **C:\Azerothcore**.
 
 1. Open up Github Desktop
 
@@ -28,11 +28,11 @@ Repository URL or GitHub username and repository: https://github.com/azerothcore
 Local path: C:\Azerothcore
 ```
 
-Click **Clone**. Within a few minutes Azerothcore's sourcefiles will be cloned into **C:\Azerothcore**.
+Click **Clone**. Within a few minutes, Azerothcore's source files will be cloned into **C:\Azerothcore**.
 
 ### Configuring and generating Visual C++ solution with CMake
 
-Before you begin, create a new directory called **Build**. In this guide we will use **C:\Build**.
+Before you begin, create a new directory called **Build**. In this guide, we will use **C:\Build**.
 
 1. Open CMake
 
@@ -42,7 +42,7 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
 1. Click **Configure**.
 
-1. In the dropdown menu, choose the version of the compiler you downloaded in [Requirements](windows-requirements.md) section. Be sure to choose **Win64** version if you work on a 64-bit compilation.
+1. In the dropdown menu, choose the version of the compiler you downloaded in the [Requirements](windows-requirements.md) section. Be sure to choose the **Win64** version if you work on a 64-bit compilation.
 
 1. Make sure that **Use default native compilers** is checked.
 
@@ -70,11 +70,11 @@ Before you begin, create a new directory called **Build**. In this guide we will
     
     - Check the **Advanced** checkbox.
     
-    - Find the two OPENSSL entries in the list and point to the correct directories:
+    - Find the two OpenSSL entries in the list and point to the correct directories:
 
         - OPENSSL_ROOT_DIR is the installation path (by default, **C:/OpenSSL-Win32** or **C:/OpenSSL-Win64**)
         
-        - OPENSSL_INCLUDE_DIR is the "include" folder in installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
+        - OPENSSL_INCLUDE_DIR is the "include" folder in the installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
 
 - If you get an error that CMake *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
 
@@ -110,11 +110,11 @@ Before you begin, create a new directory called **Build**. In this guide we will
  
 1. Right-click **ALL_BUILD** and select **Build**. (Ctrl + Shift + B)
 
-    1. If your GUI does not show Solution Explorer, click the Build menu and select **Clean Solution** then **Build**.
+    1. If your GUI does not show Solution Explorer, click the Build menu and select **Clean Solution**, and then **Build**.
 
 Build time differs from machine to machine, but you can expect it to take between 5 and 30 minutes.
 
-If you are asked to "Reload build files" during or after the compile, do so.
+If you are asked to "Reload build files" during or after the compilation, do so.
 
 When the build is complete you will find a message in the output that looks similar to this:
 
@@ -166,17 +166,17 @@ There are two/three DLL files that need to be manually added to this folder, and
 
 #### OpenSSL 1.1.x names have changed:
 
-For 32-bit version:
+For the 32-bit version:
 **libssl-1_1.dll** and **libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
 
-For 64-bit version:
+For the 64-bit version:
 **libssl-1_1-x64.dll** and **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
 
 #### OpenSSL 3.0 and more recent installed, you need to copy:
 
 **legacy.dll**  → C:\OpenSSL-Win(32/64)\bin
 
-For 32-bit version:
+For the 32-bit version:
 **libcrypto-3.dll** and **libssl-3.dll** → C:\OpenSSL-Win32\bin
 
 For 64-bit version:
@@ -184,7 +184,7 @@ For 64-bit version:
 
 #### About compilation log and report
 
-pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not mandatory but it's recommended to compile core on at least RelWithDebInfo mode to get proper crashlogs. If you compile on Release mode the pdb files aren't needed.
+pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not mandatory but it's recommended to compile core on at least RelWithDebInfo mode to get proper crash logs. If you compile on Release mode the pdb files aren't needed.
 
 To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
 
