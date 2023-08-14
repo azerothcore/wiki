@@ -1,22 +1,22 @@
-## Why worldserver and authserver needs .conf.dist files to be present in installation path?
-
-It's because AzerothCore use them as a "fallback" for configurations that you don't have on copied .conf file ( for example if we updated the dist or you've removed a conf )
+# How to work with Conf Files
 
 ## How configuration files are composed
 
-All configuration files load their properties under 2 macro groups ( you must have one of them on your configuration file header) :
+All configuration files load their properties under 2 macro groups (you must have one of them on your configuration file header) :
 
-[authserver] -> for authserver configurations
+[authserver] -> For authserver configurations
 
-[worldserver] -> for worldserver configurations
+[worldserver] -> For worldserver configurations
 
-A property is composed by a name and a value that will be loaded inside an object at server startup / config reloading.
+A property is composed of a name and a value that will be loaded inside an object at server startup/config reloading.
 
-## How does the multiple .conf file loading works?
+## How are the config files loaded?
 
-At server startup we read first the .dist files and load all propoerties under sConfig object. The .conf file will be loaded Right after: all new properties will be added to the sConfig object , instead properties with the same name overwrite old one from .dist 
+All config properties can be found in the .conf.dist file, however, this file is never read.
 
-This allow you to create tiny .conf file that DOES NOT REQUIRE to have all .conf.dist properties inside since they have been already loaded before.
+At server startup, we read first the .conf files and load all properties under sConfig object. Any values not present in .conf file will be taken by the default values in the core.
+
+This allows you to create a smaller .conf file that DOES NOT REQUIRE you to have all config properties from the .conf.dist file. As the default values will be taken from the values defined in the core.
 
 For example, if you want to keep all default conf but you've to change just the database properties, you can create a worldserver.conf file with just:
 
@@ -26,6 +26,10 @@ LoginDatabaseInfo     = "127.0.0.1;3306;root;root;azerothcore_test_auth"
 WorldDatabaseInfo     = "127.0.0.1;3306;root;root;azerothcore_test_world"
 CharacterDatabaseInfo = "127.0.0.1;3306;root;root;azerothcore_test_chars"
 ```
+
+## Loading config values from environment variables
+
+It is possible to load config values from env vars, which is explained [here](config-overrides-with-env-var.md).
 
 ## Modules configuration
 
@@ -63,10 +67,9 @@ It will create the logs inside `/logs/worldserver`.
 Configuration files will be loaded following this flow:
 
 ```
-authserver.conf.dist
-authserver.conf (overwrite properties from authserver.conf.dist)
-worldserver.conf.dist
-worldserver.conf (overwrite properties from worldserver.conf.dist)
-modules *.conf.dist
-modules *.conf (overwrite properties from each module's .conf.dist)
+1. Env vars
+2. authserver.conf
+3. worldserver.conf
+4. modules *.conf
+5. Core default values
 ```
