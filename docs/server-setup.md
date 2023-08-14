@@ -27,7 +27,7 @@ Github link:
 
 1. Download the files above.
 
-1. Create a new folder within the build folder called **Data**. i.e windows: **C:\Build\bin\RelWithDebInfo\Data** or linux: **$HOME/azeroth-server/data/**
+1. Create a new folder within the build folder called **Data**. i.e windows: **C:\Build\bin\RelWithDebInfo\Data** or Linux: **$HOME/azeroth-server/data/**
 
 1. Extract the files from the zip file and place them within the **Data** folder.
 
@@ -37,7 +37,7 @@ Github link:
 
 If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
 
-This part is just a general summary of the overall process - please read it more detailed for the OS you are working with.
+This part is just a general summary of the overall process - please read it in more detail for the OS you are working with.
 
 [Linux Server Setup](linux-server-setup.md)
 
@@ -47,11 +47,11 @@ This part is just a general summary of the overall process - please read it more
 
 AzerothCore needs certain files extracted from the World of Warcraft client. You need to extract them from a 3.3.5a client.
 
-By default you will compile your core with tools and you will get the following executable files: **mapextractor**, **vmap4extractor**, **vmap4assembler**, **mmaps_generator** (.exe on windows).
+By default, you will compile your core with tools and you will get the following executable files: **mapextractor**, **vmap4extractor**, **vmap4assembler**, **mmaps_generator** (.exe on Windows).
 
-Place the files with your World of Warcraft binary (wow.exe on windows) and run them.
+Place the files with your World of Warcraft binary (wow.exe on Windows) and run them.
 
-After extracting all necessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively you can specify a different directory where you want to keep them by changing DataDir value in the worldserver.conf file.
+After extracting all necessary files, create a folder called **Data** within the **RelWithDebInfo** or **Debug** directory and place the files in there. Alternatively, you can specify a different directory where you want to keep them by changing the DataDir value in the worldserver.conf file.
 
 If you use extractors from other projects or branches it is almost certain that your AzerothCore will not recognize the extracted data or even work!
 
@@ -103,16 +103,16 @@ The following steps must be verified:
 - The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
   Otherwise, follow the instruction in [Realmlist Table](realmlist.md) if this is not the case. 
 
-- The port (3306) is the standard configured value. If you changed the default port in your mysql settings, you must change it accordingly.
+- The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
   The username and password can be variable. You can choose to either: 
 
     - use default acore / acore username and password pair.
 
-    - create an unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
+    - create a unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
 
 ### Updating DataDir
 
-1. In your worldserver.conf file locate **DataDir** option.
+1. In your worldserver.conf file locate the **DataDir** option.
 
 1. Edit it to the path of your folder. i.e **C:\Build\bin\RelWithDebInfo\Data**
 
@@ -121,6 +121,10 @@ The following steps must be verified:
 *NOTE: The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice.*
 
 <br>
+
+### (Optional) Config options by environment variable
+
+It is possible to load config options via environment variables, which you can read about [here](config-overrides-with-env-var.md).
 
 ## Help
 
