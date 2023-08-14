@@ -11,7 +11,7 @@ Open your AzerothCore repository in GitExtensions.
 
 1. Click on the blue down arrow (Pull - merge).
 
-This will sync your local repo to the latest commits from the Azerothcore-wotlk repository.
+This will sync your local repo to the latest commits from the azerothcore-wotlk repository.
 
 1. Now you will need to re-run CMake Configure and Generate to update your solution (.sln) files.
 
