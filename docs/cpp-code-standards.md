@@ -68,7 +68,7 @@ if (var)
 
 ### Brackets
 
-When we work with if or else statements, etc, we always use brackets.
+Brackets should be refrained from using for if statements that are followed by one line.
 
 ```cpp
 if (var)
