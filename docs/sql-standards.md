@@ -19,6 +19,8 @@ We never include the database name in queries.
 
 We always DELETE before an INSERT to ensure we always put fields in the query and that no errors occur.
 
+Your DELETE statement should always include at least one column with the PRIMARY key.
+
 Wrong:
 
 ```sql
