@@ -5,6 +5,11 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation.md)                                                                                    | [Step 4: Database Installation >>](database-installation.md) |
 
+**Table of contents**
+- [Download](#download)
+- [Extractors](#extractors)
+- [Config Files](#config-files)
+
 Now that you have the source compiled, you need to add some necessary files, by either downloading or extracting them.
 
 Some files are optional but highly recommended:
@@ -33,7 +38,9 @@ Github link:
 
 1. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
 
-## Extractors (Not needed if you downloaded the files above)
+## Extractors
+
+**(Not needed if you downloaded the files above)**
 
 If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
 
@@ -74,11 +81,11 @@ Extract V4.00 2012_02. Work complete. No errors.
 
 You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
-## Config Files worldserver.conf / authserver.conf
+## Config Files
 
 ### Creating the config files
 
-1. Make copies of both .dist files.
+1. Make copies of both the worldserver.conf.dist and authserver.conf.dist files.
 
 1. From each copy, remove the .dist part.
 
