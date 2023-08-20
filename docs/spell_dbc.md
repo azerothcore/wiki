@@ -4,14 +4,7 @@
 
 **The \`spell\_dbc\` table**
 
-This table contains data regarding serverside spells which are not to be found in Client DBC files as well as **overrides** of the DBC that are meant to improve or fix any spell.
-
-If you want to add more overrides, please first extract the needed SQL spell row using the [node-dbc-reader](https://github.com/wowgaming/node-dbc-reader) then you can use a `UPDATE` query to change the fields that you need to override. You can find a how-to [here](importing-spell-dbc).
-
-Fixes for this table should always contain:
-
-1) the `INSERT IGNORE` query adding the original spell from the DBC (unless that spell is already present in `spell_dbc`)
-2) the `UPDATE` query containing the desired overrides
+This table contains data regarding serverside spells which are not to be found in Client DBC files.
 
 **Spell\_Effect\_ID**
 

@@ -4,8 +4,6 @@ This guide will show you how to import DBC data inside the AzerothCore database 
 by changing the Hyjal zone from "Normal" to "Sanctuary (with duels allowed)". 
 If you do this you will turn that zone into crossfaction and, for example, you can use it for events.
 
-However, the same guide can be used for any kind of DBC ([Spell](importing-spell-dbc), Items etc.) by changing the values of the commands below.
-
 ## Requirements
 
 - [Nodejs](https://nodejs.org/en/) for the node-dbc-reader
