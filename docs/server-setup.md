@@ -83,11 +83,17 @@ You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
 ## Config Files
 
+The configuration, conf, files are where you configure your settings for the world- and authserver.
+
+Every time the core is recompiled a distributed, .dist, conf file will be made where all the default options are stored. This file serves no real purpose except for distributing all the options from the core.
+
 ### Creating the config files
 
-1. Make copies of both the worldserver.conf.dist and authserver.conf.dist files.
+1. Go to your configs folder i.e. D:\build\bin\RelWithDebInfo\configs
 
-1. From each copy, remove the .dist part.
+1. Remove the **.dist** part from **worldserver.conf.dist** and **authserver.conf.dist**.
+
+    - You should be left with **worldserver.conf** and **authserver.conf**.
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
@@ -108,14 +114,14 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 The following steps must be verified:
 
 - The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  Otherwise, follow the instruction in [Realmlist Table](realmlist.md) if this is not the case. 
+  If not, follow the instruction in [Realmlist Table](realmlist.md).
 
 - The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
   The username and password can be variable. You can choose to either: 
 
     - use default acore / acore username and password pair.
 
-    - create a unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
+    - create a unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it the necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
 
 ### Updating DataDir
 
