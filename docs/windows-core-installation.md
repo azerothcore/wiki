@@ -56,43 +56,7 @@ Before you begin, create a new directory called **Build**. In this guide, we wil
 
 #### Some error fixes
 
-- If MySQL is not found by CMake it is required to set **MYSQL_INCLUDE_DIR = C:/XX/MySQL/MySQL Server X.X/include** and **MYSQL_LIBRARY = C:/XX/MySQL/MySQL Server X.X/lib(_XX)/libmysql.lib**.
-
-    - XX depends on which MySQL version you use.
-    
-    - (If you do not see the MYSQL fields in CMake, tick the Advanced box).
-    
-- If you get linker errors (e.g "error LNK2019: unresolved external symbol mysql_server_init"), make sure MYSQL_LIBRARY is set to the libmysql.lib that matches your compile mode (x64 vs 32 bits).
-
-    - (If you do not see the MYSQL fields in CMake, tick the Advanced box).
-
-- If you get an error that *CMake could NOT find OpenSSL*:
-    
-    - Check the **Advanced** checkbox.
-    
-    - Find the two OpenSSL entries in the list and point to the correct directories:
-
-        - OPENSSL_ROOT_DIR is the installation path (by default, **C:/OpenSSL-Win32** or **C:/OpenSSL-Win64**)
-        
-        - OPENSSL_INCLUDE_DIR is the "include" folder in the installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
-
-- If you get an error that CMake *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
-
-    - Locate your Boost folder
-
-        - Run the Bootstrap.bat file
-
-        - Run the b2.exe file 
-
-- If you get an error that *Git was NOT FOUND on your system*:
-
-    - Check the **Advanced** checkbox.
-
-    - Search and find **GIT_EXECUTABLE**
-    
-        - Specify the path to git.exe e.g. `C:/Program Files/Git/cmd/git.exe`
-        
-    - If you do not have git.exe, you need to install git. See [requirements](requirements)
+If you were to encounter errors in CMake see [Common Errors](common-errors#core-installation-errors).
 
 ### Compiling the Source
 
@@ -166,27 +130,19 @@ There are two/three DLL files that need to be manually added to this folder, and
 
 #### OpenSSL 1.1.x names have changed:
 
-For the 32-bit version:
-**libssl-1_1.dll** and **libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
-
-For the 64-bit version:
 **libssl-1_1-x64.dll** and **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
 
 #### OpenSSL 3.0 and more recent installed, you need to copy:
 
 **legacy.dll**  → C:\OpenSSL-Win(32/64)\bin
 
-For the 32-bit version:
-**libcrypto-3.dll** and **libssl-3.dll** → C:\OpenSSL-Win32\bin
-
-For 64-bit version:
 **libcrypto-3-x64.dll** and **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin
 
 #### About compilation log and report
 
-pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not mandatory but it's recommended to compile core on at least RelWithDebInfo mode to get proper crash logs. If you compile on Release mode the pdb files aren't needed.
+pdb files only exist if you compile with Debug or RelWithDebInfo configuration. It is not mandatory but it is recommended to compile core with at least the RelWithDebInfo configuration to get proper crash logs.
 
-To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
+To report crash logs it's MANDATORY to compile with Debug or RelWithDebInfo configuration.
 
 <br>
 
