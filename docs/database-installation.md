@@ -15,7 +15,9 @@ https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/cre
 
 You can perform this with a MySQL client or with the MySQL command-line interface (CLI).
 
-You would need to use one MySQL root account with your MySQL client or with MySQL CLI before starting core to run one of those files (use MySQL root only to import one of those files, never run core as root or administrator).
+You need to run the script above as the **root** user of MySQL within a MySQL client or the MySQL cli.
+
+*Note: Use the MySQL root user ONLY to run the script above, never run the core as root or administrator!*
 
 *Tip: You can change the password of the user you are creating for increased security.*
 
@@ -31,6 +33,13 @@ To edit the automatic database updater you will find the necessary settings in a
 
 1. Start Authserver.
 2. Start Worldserver.
+
+If you get the following message in your console press enter to create and populate the databases.
+
+```
+Database "acore_auth" does not exist
+Do you want to create it? [yes (default) / no]:
+```
 
 <br>
 
