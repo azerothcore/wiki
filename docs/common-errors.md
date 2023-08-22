@@ -288,7 +288,7 @@ No.
 
 ## Core installation errors
 
-#### [ACE00100]
+#### [ACE00100](#ace00100)
 If MySQL is not found by CMake it is required to set 
 
 **MYSQL_INCLUDE_DIR = C:/XX/MySQL/MySQL Server X.X/include** and 
@@ -301,14 +301,14 @@ If MySQL is not found by CMake it is required to set
 
 ---------------------------------------------------------
 
-[ACE00101]
+[ACE00101](#ace00101)
 If you get linker errors (e.g "error LNK2019: unresolved external symbol mysql_server_init"), make sure MYSQL_LIBRARY is set to the libmysql.lib that matches your compile mode.
 
 - (If you do not see the MYSQL fields in CMake, tick the Advanced box).
 
 ---------------------------------------------------------
 
-[ACE00102]
+[ACE00102](#ace00102)
 If you get an error that *CMake could NOT find OpenSSL*
 
 - Check the **Advanced** checkbox.
@@ -321,7 +321,7 @@ If you get an error that *CMake could NOT find OpenSSL*
 
 ---------------------------------------------------------
 
-[ACE00103]
+[ACE00103](#ace00103)
 - If you get an error that CMake *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
 
     - Locate your Boost folder
@@ -332,7 +332,7 @@ If you get an error that *CMake could NOT find OpenSSL*
 
 ---------------------------------------------------------
 
-[ACE00104]
+[ACE00104](#ace00104)
 - If you get an error that *Git was NOT FOUND on your system*:
 
     - Check the **Advanced** checkbox.
