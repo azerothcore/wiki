@@ -286,5 +286,64 @@ I have maps from ManGOS or TrinityCore, can I use them?
 
 No.
 
+## Core installation errors
+
+#### [ACE00100]
+If MySQL is not found by CMake it is required to set 
+
+**MYSQL_INCLUDE_DIR = C:/XX/MySQL/MySQL Server X.X/include** and 
+
+**MYSQL_LIBRARY = C:/XX/MySQL/MySQL Server X.X/lib(_XX)/libmysql.lib**.
+
+- X.X depends on which MySQL version you use.
+    
+- (If you do not see the MYSQL fields in CMake, tick the Advanced box).
+
+---------------------------------------------------------
+
+[ACE00101]
+If you get linker errors (e.g "error LNK2019: unresolved external symbol mysql_server_init"), make sure MYSQL_LIBRARY is set to the libmysql.lib that matches your compile mode.
+
+- (If you do not see the MYSQL fields in CMake, tick the Advanced box).
+
+---------------------------------------------------------
+
+[ACE00102]
+If you get an error that *CMake could NOT find OpenSSL*
+
+- Check the **Advanced** checkbox.
+
+- Find the two OpenSSL entries in the list and point to the correct directories:
+
+    - OPENSSL_ROOT_DIR is the installation path (by default, **C:/OpenSSL-Win32** or **C:/OpenSSL-Win64**)
+
+    - OPENSSL_INCLUDE_DIR is the "include" folder in the installation path (by default, **C:/OpenSSL-Win32/include** or **C:/OpenSSL-Win64/include**)
+
+---------------------------------------------------------
+
+[ACE00103]
+- If you get an error that CMake *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
+
+    - Locate your Boost folder
+
+        - Run the Bootstrap.bat file
+
+        - Run the b2.exe file 
+
+---------------------------------------------------------
+
+[ACE00104]
+- If you get an error that *Git was NOT FOUND on your system*:
+
+    - Check the **Advanced** checkbox.
+
+    - Search and find **GIT_EXECUTABLE**
+    
+        - Specify the path to git.exe e.g. `C:/Program Files/Git/cmd/git.exe`
+        
+    - If you do not have git.exe, you need to install git. See [requirements](requirements)
+
+---------------------------------------------------------
+
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help.md) on how to proceed with your question in the best way. |
 | --- |
