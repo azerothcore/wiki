@@ -8,7 +8,7 @@
 |                                                                    |
 | :----------------------------------------------------------------- |
 | Boost ≥ 1.78                                                       |
-| MySQL ≥ 5.7.0                                                      |
+| MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)                         |
 | OpenSSL ≥ 1.0.x                                                    |
 | CMake ≥ 3.16                                                       |
 | MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)    |
@@ -23,7 +23,7 @@
 
     1. Download the installer and follow the steps to set it up.
 
-1. Install the compiler / IDE [Visual Studio (17) Community 2022](https://visualstudio.microsoft.com/downloads/)
+1. Install the compiler / IDE [Visual Studio Community 2022 (ver 17)](https://visualstudio.microsoft.com/downloads/)
 
    You will need to install the C++ compiler.
    
@@ -33,7 +33,7 @@
    <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
-1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (**Use version ≥ 5.7** with mysql server configuration)
+1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (Recommended version: ≥ 8.0 with MySQL server configuration)
 
     1. Download the Windows MSI Installer.
     
@@ -59,7 +59,7 @@
 
 1. Choose a database management tool
 
-    - mysql cli (Fastest)
+    - MySQL cli (Fastest)
     
     - [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
     
@@ -73,9 +73,9 @@
 
     1. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
 
-1. [CMake](https://cmake.org/)
+1. [CMake](https://cmake.org/download/)
 
-    1. Download and install the **Latest Release** win32-x86.exe file, **NEVER the RC (Release Candidate) versions.**
+    1. Download and install the **Latest Release** windows-x86_64.msi file, **NEVER the RC (Release Candidate) versions.**
     
     1. We recommend to compile in 64 bits mode. 
 
@@ -83,15 +83,12 @@
 
     1. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib.
 
-1. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. Or you can get both if you plan to compile both 32 and 64-bit, they can coexist side by side.
+1. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
 
     - Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
-    
-    - Find the 32-bit version by finding the latest 3.0.x Win32 OpenSSL but NOT the "light" version. (Example: Win32 OpenSSL v3.0.7)
 
     - *Note #1: If you get a "Missing Microsoft Visual C++ .... Redistributable" error message while installing OpenSSL,*
       *Download the [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)](https://aka.ms/vs/17/release/vc_redist.x64.exe) (1.7MB Installer) and install it.*
-      *If you need 32bit support, download and install the [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x86) (Direct Download)](https://aka.ms/vs/17/release/vc_redist.x86.exe).*
        
     - *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
       *when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
@@ -102,9 +99,7 @@
 
     1. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download)
 
-    1. [32bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-32.exe/download)
-
-    1. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
+    1. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
 
     <a href="/wiki/images/boost.jpg" target="_blank">
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">
