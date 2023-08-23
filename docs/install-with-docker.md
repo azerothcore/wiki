@@ -3,19 +3,9 @@ tableofcontents: 1
 redirect_from: "/Install-with-Docker"
 ---
 
-# Install with Docker
+# Build with Docker
 
 Welcome to the AzerothCore Docker guide!
-
-## Introduction
-
-Installing AzerothCore using Docker is a simplified procedure that has several benefits:
-
-- It's very easy! Docker will do all the dirty work for you.
-- It can be done in all operating systems where Docker is available (including **Windows**, **GNU/Linux**, **macOS**)
-- You don't need to install many dependencies (forget about _visual studio_, _cmake_, _mysql_, etc.. they are **NOT** required)
-- Forget about platform-specific bugs. When using Docker, AzerothCore will always run in **Linux-mode**. 
-- There are many other [benefits when using Docker](https://www.google.com/search?q=docker+benefits)
 
 ## Setup
 
@@ -23,15 +13,11 @@ Installing AzerothCore using Docker is a simplified procedure that has several b
 
 The only requirements are [git](https://git-scm.com/download/) and Docker.
 
-#### New Operating Systems [recommended]:
 - For GNU/Linux install [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu)
 - For macOS 10.12+ Sierra and newer version install [Docker Desktop for Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 - For Windows 10 install [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-#### Old Operating Systems [not tested]:
-- For macOS older than 10.11 El Capitan and older install [Docker Toolbox for Mac](https://docs.docker.com/toolbox/toolbox_install_mac/)
-- For Windows 7/8/8.1 install [Docker Toolbox for Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)
-
+You'll also need the `compose` plugin for docker. Installation instructions are available [at this link](https://docs.docker.com/compose/install/#scenario-one-install-docker-desktop). If you're using a machine with docker desktop, you do not need to do this step.
 
 Before going further, make sure you have `docker` and `docker compose` installed in your system by typing in a terminal:
 
@@ -56,7 +42,7 @@ Docker Compose version 2.10.2
 You need to clone the AzerothCore repository (or use your own fork):
 
 ```
-git clone https://github.com/azerothcore/azerothcore-wotlk.git
+git clone https://github.com/azerothcore/azerothcore-wotlk.git --depth 1
 ```
 
 Now go into the main directory using `cd azerothcore-wotlk`. **All commands will have to be run inside this folder**.
@@ -68,39 +54,24 @@ Inside your terminal (if you use Windows, use git bash), run the following comma
 **IMPORTANT**: the following procedure uses our acore.sh dashboard, however, these commands are a shortcut of the docker compose ones.
       you can check the docker compose commands used in background by running `./acore.sh docker --help` and read the description of each command
 
-
 **1) Compile AzerothCore:**
 ```
 ./acore.sh docker build
 ```
-It will build docker images and compile the core automatically!
-This may take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
+It will build docker images and compile the core automatically! This may take a while.  
 
-**NOTE:** if the build fails to complete with a message similar to the following:
+**For Windows:** if the build fails to complete with a message similar to the following:
 ```
 unable to start container process: exec: "C:/Program Files/Git/usr/bin/bash": stat C:/Program Files/Git/usr/bin/bash: no such file or directory: unknown
 ```
-You might have an issue with Unix > Windows path conversion. Try the following command alternative:
+
+You may have an issue with Unix > Windows path conversion. Setting the `MSYS_NO_PATHCONV=1` environment variable may fix this:
 
 ```
 MSYS_NO_PATHCONV=1 ./acore.sh docker build
 ```
 
-**NOTE For dev:** if you are working with code and you need a fast way to compile your binaries, the command above
-can be a bit overkill for you because you probably do not need to rebuild images.
-Therefore, we suggest to use one of the following solution instead:
-
-* `./acore.sh docker dev:build` it only builds the dev image and compiles the sources.
-
-**2) Download the client data:**
-
-```
-./acore.sh docker client-data
-```
-
-**IMPORTANT**: This command should be executed only at the first installation and when there's a new version of the client-data available
-
-**3) Run the containers**
+**2) Run the containers**
 
 ```
 ./acore.sh docker start:app
@@ -148,16 +119,18 @@ Now you can run the `account create <user> <password>` command to [create your f
 To access your MySQL database we recommend clients like [HeidiSQL](https://www.heidisql.com/) (for Windows/Linux+Wine) or [SequelPro](https://www.sequelpro.com/) (for macOS). Use `root` as user and `127.0.0.1` as default host.
 The default password of the root DB user will be `password`.
 
-Unless your server installation is on the same network as your client, you might want to update the `realmlist` address in the `acore_auth` database with your server public IP address :
+Unless your server installation is on the same machine as your client, you might want to update the `realmlist` address in the `acore_auth` database with your server's public or private IP address :
 ```sql
 USE acore_auth;
 SELECT * FROM realmlist;
 UPDATE realmlist SET address='<SERVER PUBLIC IP ADDRESS>';
 ```
 
+## Procedures
+
 ### How to keep your AzerothCore updated with the latest changes
 
-First of all, you just need to use the `git` tool to update your repository by running the following common command:
+First of all, you just need to use the `git` tool to update your repository by running the following command:
 
 `git pull origin master` : this will download latest commits from the azerothcore repository
 
@@ -183,9 +156,9 @@ To enable GDB the steps are the following:
 
 If the server crashes, you will find the crashdump file (`gdb.txt`) within the `/env/docker` folder
 
-### How to use the dev-container
+### .devcontainer support
 
-Within our docker compose you can find the `ac-dev-server` service
+In `docker-compose.yml`, we define the `ac-dev-server` service
 This service is used for our build and db operations, but it can also be used
 by you to develop with the [VSCode Remote Docker extension](https://code.visualstudio.com/docs/remote/containers)
 
@@ -220,7 +193,10 @@ For more info about how to debug in vscode you can refer to the [official guide]
 
 ### How to create a second realm with docker compose
 
+<!-- TODO: flesh this out. This can be included here. -->
+
 To create a second realm we suggest you to take a look at the example available within the http://github.com/azerothcore/acore-docker repository.
+
 
 ## More info
 
@@ -233,7 +209,7 @@ After adding a module you'll have to rebuild azerothcore:
 ./acore.sh docker build
 ```
 
-If the added module makes use of configurations files you'll have to place them in the `azerothcore-wotlk/env/docker/etc/modules` directory.  If this modules directory doesn't exist, you'll have to manually create it yourself.
+If the added module makes use of configurations files you'll have to place them in the `azerothcore-wotlk/env/dist/etc/modules` directory.  If this modules directory doesn't exist, you'll have to manually create it yourself.
 
 After rebuilding you can [(re)start the containers](#how-can-i-start-stop-create-and-destroy-my-containers) again.
 
@@ -241,7 +217,9 @@ After rebuilding you can [(re)start the containers](#how-can-i-start-stop-create
 
 ### Where are the etc and logs folders of my server?
 
-By default they are located in `env/docker/authserver/` and `env/docker/worldserver/`.
+With docker, it's common that applications log to the console. You can view these with the `docker compose --profile app logs` command,
+
+Additionally, they are located in `env/dist/logs` and `env/dist/logs`, though this may be removed in the future. 
 
 ### How can I change the docker containers configuration?
 
@@ -325,22 +303,10 @@ This is an example of a fresh, empty AzerothCore server running with Docker on m
 
 When used on GNU/Linux system, the amount of memory used by Docker is even less.
 
-### Docker containers vs Virtual machines
-
-Using Docker will have the same benefits as using virtual machines, but with much less overhead:
-
-![Docker containers vs Virtual machines](https://user-images.githubusercontent.com/75517/51078179-d4fec680-16b1-11e9-8ce6-87b5053f55dd.png)
-
-_AzerothCore running on macOS with Docker_
-![AzerothCore on macOS using Docker](https://user-images.githubusercontent.com/75517/51341229-2089e980-1a91-11e9-8d06-ebd5897552d4.png)
-
-_AzerothCore running on Windows 10 with Docker_
-![AzerothCore on Windows 10 with Docker](https://user-images.githubusercontent.com/75517/51561998-966ec600-1e80-11e9-939e-d522c71de459.png)
-
 ### Docker reference & support requests
 
 For server administrators, we recommend to read the [Docker documentation](https://docs.docker.com/) as well as the [Docker Compose reference](https://docs.docker.com/compose/reference/overview/).
 
-If you want to be an administrator of an AzerothCore production server, it helps if you master the basics of Docker usage.
+If you want to be an administrator of an AzerothCore production server, it helps if you are familiar and comfortable with Docker and using a command line.
 
 Feel free to ask questions on [StackOverflow](https://stackoverflow.com/) and link them in the **#support-docker** channel of our [Discord chat](https://stackoverflow.com/questions/tagged/azerothcore). We will be happy to help you!
