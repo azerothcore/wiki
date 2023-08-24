@@ -293,16 +293,6 @@ The **osxfs** and the NTFS are well known to have [performance limitations](http
   If you still want to use the `ac-dev-server` under Mac, consider to try the [acore-docker one](https://www.azerothcore.org/acore-docker/#dev-server). It uses named volumes
   that are way faster than the binded ones.
 
-### Memory usage
-
-The total amount of RAM when running all AzerothCore docker containers is **less than 2 GB** with no players online.
-
-This is an example of a fresh, empty AzerothCore server running with Docker on macOS:
-
-![AzerothCore Containers Memory](https://user-images.githubusercontent.com/75517/51341568-f258d980-1a91-11e9-9cc1-121591477910.png)
-
-When used on GNU/Linux system, the amount of memory used by Docker is even less.
-
 ### Docker reference & support requests
 
 For server administrators, we recommend to read the [Docker documentation](https://docs.docker.com/) as well as the [Docker Compose reference](https://docs.docker.com/compose/reference/overview/).
