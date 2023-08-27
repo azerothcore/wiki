@@ -7,6 +7,8 @@ redirect_from: "/Install-with-Docker"
 
 Welcome to the AzerothCore Docker guide!
 
+The example docker configurations for AzerothCore may seem non-idiomatic at times, and this document can help users get started with running an AzerothCore server in a container-based environment.
+
 ## Setup
 
 ### Software requirements
@@ -128,6 +130,43 @@ UPDATE realmlist SET address='<SERVER PUBLIC IP ADDRESS>';
 
 ## Procedures
 
+### Configuring AzerothCore in Containers
+
+Similar to most applications running in containers, AzerothCore can be configured with environment variables. You can find the valid configuration parameters and their description from the default configuration files for [the worldserver](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist) and the [authserver](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/authserver/authserver.conf.dist). Locally, these files can be found in the `env/dist/etc` directory after a build (as in, `./acore.sh docker build`) by default.
+
+After you've found a parameter you'd like to change, you can insert the new value to the `environment` section of that service in the `docker-compose.yml`. For example, environment variables to configure the worldserver would go under [this line](https://github.com/azerothcore/azerothcore-wotlk/blob/3eb2463c69e55f6e76683cca37811e8a8ca29605/docker-compose.yml#L183) (see code block below). Do note that there's a few environment variables predefined. These are required for the operation of the various components of AzerothCore in a container-based environment. Removal of them will make it difficult to ensure that your AzerothCore Server is functioning as intended.
+
+```yaml
+services:
+  ...
+  ac-worldserver:
+    ...
+    environment:
+      AC_DATA_DIR: "/azerothcore/env/dist/data" # DataDir
+      AC_LOGS_DIR: "/azerothcore/env/dist/logs" # LogsDir
+      AC_LOGIN_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_auth" # LoginDatabaseInfo
+      AC_WORLD_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_world" # WorldDatabaseInfo
+      AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters" # CharacterDatabaseInfo
+      AC_CLOSE_IDLE_CONNECTIONS: "0" # CloseIdleConnections
+      # [ CUSTOM PARAMETERS BELOW THIS LINE ]
+      AC_ALLOW_TWO_SIDE_INTERACTION_CALENDAR: "1" # AllowTwoSide.Interaction.Calendar
+```
+
+Figuring out the environment variable name of a configuration parameter can be a bit difficult. The general rules for this:
+
+- The entire parameter is prefixed with `AC_`
+- Periods (`.`) become underscores (`_`)
+- A sequence with a lowercase letter and then an uppercase letter inserts an underscore (`_`) between them
+- The entire parameter is uppercased (so `foo` becomes `FOO`)
+
+A few examples:
+
+- `foo.bar_baz` => `AC_FOO_BAR_BAZ`
+- `MaxPrimaryTradeSkill` => `AC_MAX_PRIMARY_TRADE_SKILL`
+- `AllowTwoSide.Interaction.Calendar` => `AC_ALLOW_TWO_SIDE_INTERACTION_CALENDAR`
+
+Directly inserting the environment variables into the `docker-compose.yml` keeps all of the configuration in one place; it's easy to see the full configuration of the server (including things like port forwards) without having to jump through multiple files. At times though, it may be more practical to have all env vars defined in the `env_file` or in a [`compose.override.yml`](https://docs.docker.com/compose/multiple-compose-files/merge/) file. While the inclusion of separate files may add to the complexity of your setup, separate files may make it easier to manage a subset of the containers' configuration that's changed often.  
+
 ### How to keep your AzerothCore updated with the latest changes
 
 First of all, you just need to use the `git` tool to update your repository by running the following command:
@@ -220,20 +259,6 @@ After rebuilding you can [(re)start the containers](#how-can-i-start-stop-create
 With docker, it's common that applications log to the console. You can view these with the `docker compose --profile app logs` command,
 
 Additionally, they are located in `env/dist/logs` and `env/dist/logs`, though this may be removed in the future. 
-
-### How can I change the docker containers configuration?
-
-You can copy the file `/conf/dist/.env.docker` to `.env` and place it in the root folder of the project, then edit it according to your needs.
-
-In the `.env` file you can configure:
-
-- the location of the `data`, `etc` and `logs` folders
-- the open ports
-- the MySQL root password
-
-You can check all the configurations available in the `docker-compose.yml` file
-
-Then your `docker compose up` will automatically locate the `.env` with your custom settings.
 
 ### How can I start, stop, create and destroy my containers?
 
