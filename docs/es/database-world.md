@@ -110,7 +110,7 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [player_factionchange_reputations](player_factionchange_reputations.md)
 - [player_factionchange_spells](player_factionchange_spells.md)
 - [player_factionchange_titles](player_factionchange_titles.md)
-- [player_race_stats](player_levelstats.md)
+- [player_race_stats](player_race_stats.md)
 - [player_xp_for_level](player_xp_for_level.md)
 - [playercreateinfo](playercreateinfo.md)
 - [playercreateinfo_action](playercreateinfo_action.md)
