@@ -130,7 +130,6 @@
 - [pet_name_generation_locale](pet_name_generation_locale.md)
 - [pickpocketing_loot_template](loot_template.md)
 - [player_class_stats](player_class_stats.md)
-- [player_classlevelstats](player_classlevelstats.md)
 - [player_factionchange_achievement](player_factionchange_achievement.md)
 - [player_factionchange_items](player_factionchange_items.md)
 - [player_factionchange_quests](player_factionchange_quests.md)
