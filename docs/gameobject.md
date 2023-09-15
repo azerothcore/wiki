@@ -19,8 +19,8 @@ This table holds the individual object data on each spawned game object in the w
 | [phaseMask][7]      | SMALLINT     | UNSIGNED   |     | NO   | 1       |                |                          |
 | [position_x][8]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
 | [position_y][9]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [position_z][10]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [orientation][11]    | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [position_z][10]    | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
+| [orientation][11]   | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
 | [rotation0][12]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
 | [rotation1][13]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
 | [rotation2][14]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
@@ -28,6 +28,7 @@ This table holds the individual object data on each spawned game object in the w
 | [spawntimesecs][16] | INT          | SIGNED     |     | NO   | 0       |                |                          |
 | [animprogress][17]  | TINYINT      | UNSIGNED   |     | NO   | 0       |                |                          |
 | [state][18]         | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                          |
+| [Comment][19]       | TEXT         |            |     | YES  | NULL    |                |                          |
 
 [1]: #guid
 [2]: #id
@@ -47,6 +48,7 @@ This table holds the individual object data on each spawned game object in the w
 [16]: #spawntimesecs
 [17]: #animprogress
 [18]: #state
+[19]: #comment
 
 **Description of the fields**
 
@@ -135,3 +137,9 @@ For chests or doors.
 
 -   1 = closed
 -   0 = open
+
+### comment
+
+This field serves to add additional context to this gameobject, mostly in the context of sniffed values or script notes.
+
+For example, if a gameobject's position needed to be modified, the original positions are kept in the comment field. Or if the gobs in question are part of a larger script, the comment serves for context.
