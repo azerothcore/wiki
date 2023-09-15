@@ -9,9 +9,9 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | Field                 | Type      | Attributes | Key | Null | Default | Extra          | Comment                                 |
 | --------------------- | --------- | ---------- | --- | ---- | ------- | -------------- | --------------------------------------- |
 | [guid][1]             | INT       | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                |
-| [id1][2]              | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [id2][3]              | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [id3][4]              | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [id1][2]              | INT       | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [id2][3]              | INT       | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [id3][4]              | INT       | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
 | [map][5]              | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Map Identifier                          |
 | [zoneId][6]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                         |
 | [areaId][7]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |                | Area Identifier                         |
@@ -24,13 +24,17 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [orientation][14]     | FLOAT     | SIGNED     |     | NO   | 0       |                |                                         |
 | [spawntimesecs][15]   | INT       | UNSIGNED   |     | NO   | 120     |                |                                         |
 | [wander_distance][16] | FLOAT     | SIGNED     |     | NO   | 5       |                | Dist in yards for random movement.      |
-| [currentwaypoint][17] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
+| [currentwaypoint][17] | INT       | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
 | [curhealth][18]       | INT       | UNSIGNED   |     | NO   | 1       |                | Storage used by core. "Always set as 1" |
 | [curmana][19]         | INT       | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
 | [MovementType][20]    | TINYINT   | UNSIGNED   |     | NO   | 0       |                | 0 No movement, 1 random, 2 path         |
-| [npcflag][21]         | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
-| [unit_flags][22]      | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
-| [dynamicflags][23]    | INT       | UNSIGNED   |     | NO   | 0       |                |                                         |
+| [npcflag][21]         | INT       | UNSIGNED   |     | NO   | 0       |                | creature_template override              |
+| [unit_flags][22]      | INT       | UNSIGNED   |     | NO   | 0       |                | creature_template override              |
+| [dynamicflags][23]    | INT       | UNSIGNED   |     | NO   | 0       |                | creature_template override              |
+| [ScriptName][24]      | CHAR      |            |     | YES  | NULL    |                |                                         |
+| [VerifiedBuild][25]   | INT       | SIGNED     |     | YES  | NULL    |                | Not used by the core.                   |
+| [CreateObject][26]    | TINYINT   | UNSIGNED   |     | NO   | 0       |                | Not used by the core.                   |
+| [Comment][27]         | TEXT      |            |     | YES  | NULL    |                | Not used by the core.                   |
 
 [1]: #guid
 [2]: #id1
@@ -55,6 +59,10 @@ Contains individual creature spawn data for each individual spawn of each indivi
 [21]: #npcflag
 [22]: #unitflags
 [23]: #dynamicflags
+[24]: #scriptname
+[25]: #verifiedbuild
+[26]: #createobject
+[27]: #comment
 
 **Field Descriptions**
 
@@ -184,3 +192,35 @@ Same as creature\_template.dynamicflags.
 Note:
 
 A creature.dynamicflags record will override a [creature\_template.dynamicflags](creature_template#creature_template-dynamicflags) record.
+
+### ScriptName
+
+Same as creature\_template.scriptname.
+
+A creature.scriptname record will override a [creature\_template.scriptname](creature_template#creature_template-scriptname) record.
+
+### VerifiedBuild
+
+This field is used to determine if this creature originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.
+
+If value is -Client Build then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.
+
+### CreateObject
+
+This field is specific to creatures and used to determine if the positions are perfected.
+
+Once a creature is sniffed, the packet can be either CreateObject1 or CreateObject2.
+A CO1 creature usually has already spawned, has moved, and thus deviates from its real spawn position.
+A CO2 creature was sniffed when it has spawned, so it is, in most cases, its real spawn position.
+
+Another 3rd value is used for special cases, which are creatures that do not respawn normally but by scripts. It is functionally the same as CO2 and only used to distinguish these special cases better.
+
+### comment
+
+This field serves to add additional context to this creature, mostly in the context of sniffed values or script notes.
+
+For example, if a creature's position needed to be modified, the original positions are kept in the comment field. Or if the creatures in question are part of a larger script, the comment serves for context.
