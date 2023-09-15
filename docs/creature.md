@@ -221,6 +221,6 @@ Another 3rd value is used for special cases, which are creatures that do not res
 
 ### comment
 
-This field serves to add additional context to this creature, mostly in the context of sniffed or script notes.
+This field serves to add additional context to this creature, mostly in the context of sniffed values or script notes.
 
 For example, if a creature's position needed to be modified, the original positions are kept in the comment field. Or if the creatures in question are part of a larger script, the comment serves for context.
