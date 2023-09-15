@@ -34,6 +34,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [ScriptName][24]      | CHAR      |            |     | YES  | NULL    |                |                                         |
 | [VerifiedBuild][25]   | INT       | SIGNED     |     | YES  | NULL    |                | Not used by the core.                   |
 | [CreateObject][26]    | TINYINT   | UNSIGNED   |     | NO   | 0       |                | Not used by the core.                   |
+| [Comment][27]         | TEXT      |            |     | YES  | NULL    |                | Not used by the core.                   |
 
 [1]: #guid
 [2]: #id1
@@ -61,6 +62,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 [24]: #scriptname
 [25]: #verifiedbuild
 [26]: #createobject
+[27]: #comment
 
 **Field Descriptions**
 
@@ -191,6 +193,12 @@ Note:
 
 A creature.dynamicflags record will override a [creature\_template.dynamicflags](creature_template#creature_template-dynamicflags) record.
 
+### ScriptName
+
+Same as creature\_template.scriptname.
+
+A creature.scriptname record will override a [creature\_template.scriptname](creature_template#creature_template-scriptname) record.
+
 ### VerifiedBuild
 
 This field is used to determine if this creature originates from verified sniffs.
@@ -210,3 +218,9 @@ A CO1 creature usually has already spawned, has moved, and thus deviates from it
 A CO2 creature was sniffed when it has spawned, so it is, in most cases, its real spawn position.
 
 Another 3rd value is used for special cases, which are creatures that do not respawn normally but by scripts. It is functionally the same as CO2 and only used to distinguish these special cases better.
+
+### comment
+
+This field serves to add additional context to this creature, mostly in the context of sniffed or script notes.
+
+For example, if a creature's position needed to be modified, the original positions are kept in the comment field. Or if the creatures in question are part of a larger script, the comment serves for context.
