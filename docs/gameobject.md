@@ -8,27 +8,29 @@ This table holds the individual object data on each spawned game object in the w
 
 **Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra          | Comment                  |
-|---------------------|--------------|------------|-----|------|---------|----------------|--------------------------|
-| [guid][1]           | INT          | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
-| [id][2]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
-| [map][3]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
-| [zoneId][4]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
-| [areaId][5]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
-| [spawnMask][6]      | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                          |
-| [phaseMask][7]      | SMALLINT     | UNSIGNED   |     | NO   | 1       |                |                          |
-| [position_x][8]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [position_y][9]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [position_z][10]    | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [orientation][11]   | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation0][12]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation1][13]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation2][14]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation3][15]     | FLOAT        | SIGNED     |     | NO   | 0       |                |                          |
-| [spawntimesecs][16] | INT          | SIGNED     |     | NO   | 0       |                |                          |
-| [animprogress][17]  | TINYINT      | UNSIGNED   |     | NO   | 0       |                |                          |
-| [state][18]         | TINYINT      | UNSIGNED   |     | NO   | 1       |                |                          |
-| [Comment][19]       | TEXT         |            |     | YES  | NULL    |                |                          |
+| Field               | Type       | Attributes | Key | Null | Default | Extra          | Comment                  |
+|---------------------|------------|------------|-----|------|---------|----------------|--------------------------|
+| [guid][1]           | INT        | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
+| [id][2]             | INT        | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
+| [map][3]            | SMALLINT   | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
+| [zoneId][4]         | SMALLINT   | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
+| [areaId][5]         | SMALLINT   | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
+| [spawnMask][6]      | TINYINT    | UNSIGNED   |     | NO   | 1       |                |                          |
+| [phaseMask][7]      | SMALLINT   | UNSIGNED   |     | NO   | 1       |                |                          |
+| [position_x][8]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [position_y][9]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [position_z][10]    | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [orientation][11]   | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation0][12]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation1][13]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation2][14]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation3][15]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
+| [spawntimesecs][16] | INT        | SIGNED     |     | NO   | 0       |                |                          |
+| [animprogress][17]  | TINYINT    | UNSIGNED   |     | NO   | 0       |                |                          |
+| [state][18]         | TINYINT    | UNSIGNED   |     | NO   | 1       |                |                          |
+| [ScriptName][19]    | CHAR       |            |     | YES  | ''      |                |                          |
+| [VerifiedBuild][20] | INT        | SIGNED     |     | YES  | NULL    |                | Not used by the core.    |
+| [Comment][21]       | TEXT       |            |     | YES  | NULL    |                |                          |
 
 [1]: #guid
 [2]: #id
@@ -48,7 +50,9 @@ This table holds the individual object data on each spawned game object in the w
 [16]: #spawntimesecs
 [17]: #animprogress
 [18]: #state
-[19]: #comment
+[19]: #scriptname
+[20]: #verifiedbuild
+[21]: #comment
 
 **Description of the fields**
 
@@ -137,6 +141,22 @@ For chests or doors.
 
 -   1 = closed
 -   0 = open
+
+### ScriptName
+
+Same as gameobject\_template.scriptname.
+
+A gameobject.scriptname record will override a [gameobject\_template.scriptname](gameobject_template#gameobject_template-scriptname) record.
+
+### VerifiedBuild
+
+This field is used to determine if this gameobject originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.
+
+If value is -Client Build then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.
 
 ### comment
 
