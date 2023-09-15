@@ -244,7 +244,7 @@ We always use `utf8mb4` as the charset
 
 We always use `utf8mb4_unicode_ci` as the collation
 
-The only exception is `characters`.`name` which uses `utf8mb4_bin` to allow it to be accent sensitive in Maria databases.
+The only exception is where we use a character name, here we need to use `utf8mb4_bin` to allow the name to be accent-sensitive.
 
 ### Engine
 
