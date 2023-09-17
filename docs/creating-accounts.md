@@ -8,6 +8,8 @@ To be able to log in to your new server you need an account.
 
 It is recommended to use security level 3 for your own account.
 
+Run the following commands in the Worldserver console.
+
 ## To create an account
 
 ```
