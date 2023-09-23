@@ -13,7 +13,7 @@ For almost all basic setup scenarios the default localhost (127.0.0.1) IP settin
 
 ### Setting the auth database realmlist for internet connections
 
-This is where you have to use your internet IP so clients from the internet can find your server. You have to have the ports 3724/TCP (authserver) and 8085/TCP (worldserver) forwarded or open from your router/firewall.
+This is where you have to use your internet IP so clients from the internet can find your server. You have to have the ports 3724 (authserver) and 8085 (worldserver) forwarded or open from your router/firewall. Using TCP protocol.
 
 **Realmlist Table**
 
