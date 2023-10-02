@@ -76,6 +76,16 @@ Inside your terminal (if you use Windows, use git bash), run the following comma
 It will build docker images and compile the core automatically!
 This may take a while. Meanwhile you can go and drink a glass of wine :wine_glass:
 
+**NOTE:** if the build fails to complete with a message similar to the following:
+```
+unable to start container process: exec: "C:/Program Files/Git/usr/bin/bash": stat C:/Program Files/Git/usr/bin/bash: no such file or directory: unknown
+```
+You might have an issue with Unix > Windows path conversion. Try the following command alternative:
+
+```
+MSYS_NO_PATHCONV=1 ./acore.sh docker build
+```
+
 **NOTE For dev:** if you are working with code and you need a fast way to compile your binaries, the command above
 can be a bit overkill for you because you probably do not need to rebuild images.
 Therefore, we suggest to use one of the following solution instead:
