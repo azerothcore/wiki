@@ -62,7 +62,7 @@ At this point, you must be in your "build/" directory.
 
 For APPLE SILICON CPUs:
 ```sh
-export OPENSSL_ROOT_DIR=$(brew --prefix openssl@1.1)
+export OPENSSL_ROOT_DIR=$(brew --prefix openssl@3)
 cmake ../ \
 -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
 -DTOOLS_BUILD=all \
