@@ -50,6 +50,8 @@ cd build
 
 ### Configuring for compiling
 
+The directories Homebrew uses to install packages differs between Macs that have Apple Silicon CPUs and those that have Intel CPUs. Make sure to run the correct CMake command for your machine. You can view your CPU type in `About This Mac`. The commands below are labeled for the relevant CPU type.
+
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
 Parameter explanation for advanced users [CMake options](cmake-options.md).
@@ -58,6 +60,7 @@ At this point, you must be in your "build/" directory.
 
 **Note**: in the follows command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root".
 
+For APPLE SILICON CPUs:
 ```sh
 export OPENSSL_ROOT_DIR=$(brew --prefix openssl@1.1)
 cmake ../ \
@@ -68,6 +71,22 @@ cmake ../ \
 -DMYSQL_LIBRARY=/opt/homebrew/lib/libmysqlclient.dylib \
 -DREADLINE_INCLUDE_DIR=/opt/homebrew/opt/readline/include \
 -DREADLINE_LIBRARY=/opt/homebrew/opt/readline/lib/libreadline.dylib \
+-DOPENSSL_INCLUDE_DIR="$OPENSSL_ROOT_DIR/include" \
+-DOPENSSL_SSL_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libssl.dylib" \
+-DOPENSSL_CRYPTO_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libcrypto.dylib"
+```
+
+For INTEL CPUs:
+```sh
+export OPENSSL_ROOT_DIR=$(brew --prefix openssl@3)
+cmake ../ \
+-DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/  \
+-DTOOLS_BUILD=all \
+-DSCRIPTS=static \
+-DMYSQL_ADD_INCLUDE_PATH=/usr/local/include/mysql \
+-DMYSQL_LIBRARY=/usr/local/opt/mysql/lib/libmysqlclient.dylib \
+-DREADLINE_INCLUDE_DIR=/usr/local/opt/readline/include \
+-DREADLINE_LIBRARY=/usr/local/opt/readline/lib/libreadline.dylib \
 -DOPENSSL_INCLUDE_DIR="$OPENSSL_ROOT_DIR/include" \
 -DOPENSSL_SSL_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libssl.dylib" \
 -DOPENSSL_CRYPTO_LIBRARIES="$OPENSSL_ROOT_DIR/lib/libcrypto.dylib"
