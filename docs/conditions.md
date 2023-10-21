@@ -813,7 +813,7 @@ Player level (1-80 in 3.3.5)</td>
 <td>30</td>
 <td>Gameobject entry from <a href="http://www.azerothcore.org/wiki/gameobject_template#entry">gameobject_template.entry</a></td>
 <td>Distance in yards</td>
-<td>Always 0</td>
+<td>GoState<br/><br/> 0 = ignore, 1 = Ready, 2 = Not Ready</td>
 </tr>
 <tr class="even">
 <td><br />
@@ -1446,7 +1446,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 -   -   ConditionValue1: Gameobject [entry](http://www.azerothcore.org/wiki/gameobject_template#entry)
     -   ConditionValue2: Distance (yd)
-    -   ConditionValue3: always 0
+    -   ConditionValue3: GoState, 0 = ignore, 1 = Ready, 2 = Not Ready
 
 \***CONDITION\_OBJECT\_ENTRY\_GUID= 31**
 
