@@ -64,11 +64,9 @@ If you were to encounter errors in CMake see [Common Errors](common-errors#core-
 
 1. In the menu at the top, click **Build** and select **Configuration Manager**.
 
-1. Set **Active Solution Configuration** to **RelWithDebInfo**.
+    1. Set **Active Solution Configuration** to **RelWithDebInfo**.
 
-1. In the list menus below "Help", set **Active Solution Platform** to **x64** and then click Close (settings automatically save).
-
-    1. If you set 32-bit compilation during CMake configuration, select **x86**.
+    1. Set **Active Solution Platform** to **x64** and then click Close (settings automatically save).
 
 1. Right-click **ALL_BUILD** in the Solution Explorer on the right sidebar and select **Clean**.
  
