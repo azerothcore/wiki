@@ -109,7 +109,7 @@ If you need to run this in background, you can use the following command to run 
 Open a new terminal and run the following command to attach to the worldserver:
 
 ```
-docker compose attach ac-worldserver
+docker attach ac-worldserver
 ```
 
 To detach, press `ctrl+p` and `ctrl+q`. Do **NOT** try to detach using `ctrl+c` or you will kill your worldserver process!
