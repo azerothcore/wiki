@@ -288,6 +288,41 @@ After stopping and removing your containers you can proceed to remove the volume
 
 **Note** If you've changed your folder name from the default `azerothcore-wotlk` the volume name will be slightly different. To find the new volume name you can use the command `docker volume ls`. The volume should be labelled something along the lines of `xxxx_ac-database`.
 
+### Building the containers with the docker's default bridge disabled
+
+If you have `{"bridge":"none"}` in your docker daemon config file (at `/etc/docker/daemon.json`), there's 2 ways to properly build the containers.
+
+This can sometimes be accompanied by this error message:
+
+```
+WARN[0000] buildx: failed to read current commit information with git rev-parse --is-inside-work-tree
+network mode "ac-network" not supported by buildkit - you can define a custom network for your builder using the network driver-opt in
+buildx create
+```
+
+To fix the builds for this, one may create a `docker-compose.override.yml` that sets the build network mode to `host`, allow the containers to build properly:
+
+```yaml
+# docker-compose.override.yml
+services:
+  ac-worldserver:
+    build:
+      network: host
+  ac-authserver:
+    build:
+      network: host
+  ac-db-import:
+    build:
+      network: host
+  ac-client-data-init:
+    build:
+      network: host
+```
+
+Keep in mind that this does not work on Windows or MacOS
+
+A syntax where the `network` is set to the name of the network (so `ac-network` instead of `host` in the example above) should work properly, but unfortunately this seems to not be functioning or supported by docker, as evidenced in [Github Issue](https://github.com/docker/buildx/issues/175)
+
 ### Performance optimizations (for dev server)
 
 NOTE: If you are not experimenting any particular issues with I/O performance, we suggest to **NOT** use this configuration
