@@ -71,6 +71,8 @@ exit;
 *Note:  even though the `acore` user is only accessible from localhost, 
 it is a good practice to change its password to something more secure.*
 
+NOTE: on Windows the command above is just `mysql -u root`
+
 ### Download the latest client data
 
 Get the latest client data:
@@ -123,6 +125,9 @@ Wait until the process is completed then run:
 For dedicated servers, 
 you may want to run them inside terminal multiplexer sessions using tools like `tmux` (see below).
 
+NOTE: on Windows you might run into an error with `libssl` missing, preventing the restarter from initializing properly.
+In that case, do `choco install openssl.light --version=1.1.1`. After that another error might popup, asking for a `legacy.dll` to be copied into `./env/dist`.
+The required dll can be located via `where openssl`, if you have both `openssl` and `openssl.light` installed, multiple paths might be returned. In that case, prefer the path containing `-Win64` (if there is one). 
 
 ## How to update your server
 
