@@ -105,6 +105,8 @@ do
 } while (i > 0);
 ```
 
+**Please note that brackets should always start on a new line, as displayed in the example above.**
+
 ### Random numbers vs. Constants
 
 Constants make the code easier to read and understand, they also provide a safeguard and prevent numbers from being hard-coded.
