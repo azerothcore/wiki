@@ -10,6 +10,8 @@ Leer en: [English :gb:](../home) [Spanish :es:](home)
 
 ## NOTA IMPORTANTE
 
+**ND: The Spanish guides and translations are not always up-to-date. If something feels off, or you encounter issues, circle back to the English page and you might find it updated.**
+
 **OpenSSL 3.x NO ES SOPORTADO. Utilice la versión que indica la guía de instalación.**
 
 **¡Ubuntu 22.0 y posteriores vienen con OpenSSL 3.x! Si desea utilizar Ubuntu, utilice una versión inferior o compile una versión inferior de OpenSSL**
