@@ -4,7 +4,7 @@ redirect_from: "/"
 
 # Home
 
-Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki, powered by [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
+Welcome to the [AzerothCore](http://www.azerothcore.org/) project wiki.
 
 Read in: [English :gb:](home) [Spanish :es:](es/home)
 
@@ -18,8 +18,8 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## Documentation
 
-- [Documentation Index](documentation_index)
-- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/)
+- [Documentation Index](documentation_index) - All documentation in one place
+- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Code documentation
 
 ## Overview
 
@@ -27,21 +27,30 @@ AzerothCore is a complete Open Source and Modular solution for MMO development.
 
 ### Solid base
 
-AzerothCore has a strong and solid base, coming from years of development. It is based on MaNGOS, TrinityCore and SunwellCore.
-We're improving this reliability, offering a project that follows specific versioning rules, allowing you to develop in the right way. Read More...
+AzerothCore has a strong and solid base, coming from years of development: it is based on MaNGOS, TrinityCore and SunwellCore.
+We're improving this reliability with continuous development and strict rules to get code merged into the master branch.
 
-### Playable
-Our main goal is to provide a fully working and playable server application. We will focus our stable revisions on final user experiences, instead of following strict development patterns like our predecessors.
-Of course we will work to improve the code in every new version that is under development.
+### Stability
+
+We make sure all changes pass the CIs before being merged into the master branch.
+
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core_matrix_build.yml"><img alt="Github CI Core Status" src="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core_matrix_build.yml/badge.svg"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Awindows-build+branch%3Amaster+event%3Apush"><img alt="Github CI Windows Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/windows-build/badge.svg?branch=master&event=push"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Amacos-build+branch%3Amaster+event%3Apush"><img alt="Github CI Mac Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/macos-build/badge.svg?branch=master&event=push"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Adocker-build+branch%3Amaster+event%3Apush"><img alt="Github CI Docker Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/docker-build/badge.svg?branch=master&event=push"></a>
 
 ### Open Source
-AzerothCore modules are released under GNU AGPL 3.0 and GNU GPL 2.0. Both of these licenses are totally free and open source. We believe in the free software, and we love cooperation.
 
-### Tested, reliable, updated
-SunwellCore, the father of AzerothCore, successfully ran with thousands of players for years. The goal of AzerothCore is to keep this game application updated, continuing its development.
+The new AzerothCore source components are released under the GNU AGPL 3.0 The old sources based on MaNGOS/TrinityCore are released under the GNU GPL 2.0, both those licenses are totally free and open source.
+
+### Blizzlike Content
+
+We strive to make all in-game content to be blizzlike. Therefore we have a high standard for fixes being made.
 
 ### Community-driven
-The main strength of AzerothCore is its community. Users can help us by improving our code base or simply by submitting any bug report. If you want to contribute, we'd love it!
 
-### Modular
-We try to make our software as modular as possible, because modular software is much easier to extend.
+AzerothCore has an active community of developers, contributors, and users who collaborate, share knowledge, and provide support through forums, Discord channels, and other communication platforms. If you want to contribute, we'd love it!
+
+### Customization
+
+AzerothCore is designed to be highly modular, allowing developers to extend and customize the game to suit their preferences or create unique gameplay experiences. This flexibility enables the addition of custom features, content, and modifications. [Read More...](the-modular-structure)
