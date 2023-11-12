@@ -1,3 +1,7 @@
+---
+redirect_from: "/sai"
+---
+
 # smart\_scripts
 
 [<-Back-to:World](database-world.md)
