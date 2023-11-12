@@ -188,10 +188,6 @@ A few examples:
 - `MaxPrimaryTradeSkill` => `AC_MAX_PRIMARY_TRADE_SKILL`
 - `AllowTwoSide.Interaction.Calendar` => `AC_ALLOW_TWO_SIDE_INTERACTION_CALENDAR`
 
-### Installing modules
-
-
-
 ### How to keep your AzerothCore updated with the latest changes
 
 First of all, you just need to use the `git` tool to update your repository by running the following command:
