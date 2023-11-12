@@ -1,6 +1,5 @@
 ---
 redirect_from: "/sai"
-redirect_from: "/smartai"
 ---
 
 # smart\_scripts
