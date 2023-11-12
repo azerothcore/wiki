@@ -1,5 +1,6 @@
 ---
 redirect_from: "/FAQ"
+tableofcontents: 1
 ---
 
 # Frequently Asked Questions
