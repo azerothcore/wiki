@@ -12,17 +12,17 @@ There are several ways to install AzerothCore, you need to choose **ONE**.
 
 These are the officially-supported and complete ways of installing AzerothCore, for any purposes (Windows, Linux, macOS).
 
-- [Azerothcore Classic Setup](#azerothcore-classic-setup) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
+- [Azerothcore Classic Installation (Recommended)](classic-installation.md) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purposes. This process gives more awareness of how AzerothCore is structured. See below in this page.
 
-- [Docker setup](install-with-docker.md) - an installation process based on Docker. Docker knowledge recommended. Limited support.
+- [AzerothCore Bash Dashboard setup (Limited Support)](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for both local development and production.
 
-- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) - simplest way of installing AzerothCore, recommended for both local development and production.
+- [Docker setup (Limited Support)](install-with-docker.md) - an installation process based on Docker. Docker knowledge recommended.
 
-### Install from pre-compiled images  (supported, limited usage)
+### Install from pre-compiled images (limited support, limited usage)
 
 - [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - an extremely simple way of installing AzerothCore. Currently, you can't install c++ modules, only Eluna scripts. Particularly  suitable for bug triaging, bug reporting or domestic usage.
 
-### Others (unsupported)
+### Community made (unsupported)
 
 These guides are made by community members and might not be up-to-date:
 
@@ -35,32 +35,6 @@ These guides are made by community members and might not be up-to-date:
 - [FreeBSD](freebsd.md)
 
 - [Visual Studio Code](vsc-requirements)
-
-## Azerothcore Classic Setup
-
-Every step of the guide is divided in three tabs regarding different operating systems (Linux, macOS and Windows).
-
-The guide has been divided into 8 steps, to make it more readable:
-
-1. [Requirements](requirements.md)
-
-1. [Core Installation](core-installation.md)
-
-1. [Server Setup](server-setup.md)
-
-1. [Database Installation](database-installation.md)
-
-1. [Networking](networking.md)
-
-1. [Final Server Steps](final-server-steps.md)
-
-1. [Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md)
-
-1. [Client Setup](client-setup.md)
-
-Each step can be read independently or you can read them neatly, to gradually get into it and better understand it all.
-
-*Tip: If this is your first time installing AzerothCore we recommend that you read every step carefully!*
 
 <br>
 
