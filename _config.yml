@@ -8,13 +8,13 @@ title: AzerothCore
 # (string) Description of your wiki
 description: Wiki and Documentation of the AzerothCore project
 # (boolean) Enable/disable wiki page list in sidebar
-show_wiki_pages: true
+show_wiki_pages: false
 # (integer) Maximum number of wiki page to shown in sidebar
 show_wiki_pages_limit: 10
 # (boolean) Enable/disable blog feature
 blog_feature: false
 # (boolean) Enable/disable wiki posts list in sidebar (needs blog_feature enabled)
-show_wiki_posts: true
+show_wiki_posts: false
 # (integer) Maximum number of wiki posts to shown in sidebar
 show_wiki_posts_limit: 10
 # from jekyll (read jekyll doc)
