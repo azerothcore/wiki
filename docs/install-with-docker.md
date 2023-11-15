@@ -133,6 +133,32 @@ UPDATE realmlist SET address='$SERVER PUBLIC IP ADDRESS';
 
 ## Procedures
 
+### Taking backups
+
+When running any kind of server that people depend on, it's important to take backups. For AzerothCore, taking backups is simple, as it's the same as taking a standard MySQL backup.
+
+For each database (typically `acore_auth`, `acore_characters`, and `acore_world`), you should run this command:
+
+```console
+$ mysqldump -h 127.0.0.1 -P3306 -u$DATABASE_USERNAME -p$PASSWORD DATABASE_NAME > ./DATABASE_NAME-$(date +%F).sql
+```
+
+Using the default settings for each database, the commands should look like this:
+
+```console
+$ mysqldump -h127.0.0.1 -P3306 -uroot -ppassword acore_auth > acore_auth-$(date +%F).sql
+$ mysqldump -h127.0.0.1 -P3306 -uroot -ppassword acore_characters > acore_characters-$(date +%F).sql
+$ mysqldump -h127.0.0.1 -P3306 -uroot -ppassword acore_world > acore_world-$(date +%F).sql
+```
+<!-- TODO Add equivalent command for powershell -->
+
+A few notes about these commands:
+
+- It's usually best to automate this command with a cron job (Linux/MacOS) or a scheduled event (in Windows).
+- The command `$(date +%F)` prints the date in "yyyy-mm-dd" format. This is useful so you can just run the command over and over again.
+- The defaults are designed to help someone get started as fast as possible. If you're running a system that people depend on, **you should not use the root user** (and the root user's password should be different) and instead there should be a user that's specifically used for backups.
+- For more information, we strongly recommend reading [MySQL's documentation on Backup and Recovery](https://dev.mysql.com/doc/refman/8.0/en/backup-and-recovery.html).
+
 ### Configuring AzerothCore in Containers
 
 Similar to most applications running in containers, AzerothCore can be configured with environment variables. You can find the valid configuration parameters and their description from the default configuration files for [the worldserver](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist) and the [authserver](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/authserver/authserver.conf.dist). Locally, these files can be found in the `env/dist/etc` directory after a build.
@@ -250,19 +276,27 @@ TODO
 
 The gist of it is to edit the `docker-compose.yml` (or create an override) to add additional `ac-worldserver` and `ac-db-import` services. They can be copied from the main sections, but they should be renamed so there isn't a collision.
 
-## More info
-
-### Adding Modules
-
-To add a module place the module directory inside of the `/azerothcore-wotlk/modules` directory.
-
-After adding a module you'll have to [rebuild the server](#installation).
-
-Configurations through environment variables work with modules, though if you prefer configuration files you'll have to place them in the `azerothcore-wotlk/env/dist/etc/modules` directory. If this modules directory doesn't exist, you'll have to manually create it.
-
-After rebuilding you'll need to [(re)start the containers](#installation) again.
 
 ## FAQ
+
+### How do I install modules?
+
+Installing modules for docker is just the same as installing modules for the classic install: Clone the module to `./modules` and re-run the build. The difference is that the command for docker isn't the same as classic. 
+
+To add a module, place the module directory inside of the `/azerothcore-wotlk/modules` directory.
+
+After adding a module you'll have to [rebuild the server](#installation) and restart the containers.
+
+For example, to install `mod-solocraft`:
+
+```console
+# Clone the module to `modules` with the name of the repository
+$ git clone https://github.com/azerothcore/mod-solocraft.git modules/mod-solocraft
+# Re-build Azerothcore
+$ docker compose up -d --build
+```
+
+Configurations through environment variables work with modules, though if you prefer configuration files you'll have to place them in the `azerothcore-wotlk/env/dist/etc/modules` directory. If this modules directory doesn't exist, you'll have to manually create it.
 
 ### Where are the logs for the server?
 
