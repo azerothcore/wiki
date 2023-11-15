@@ -34,7 +34,7 @@ SpellId from Spell.dbc or spell\_group id prefixed with "-". If spell is added t
 
 Enum SpellGroupSpecialFlags in core:
 
-| Flag  | Hex    | Name                                                     | Description                                                                                 |
+| Flag  | Hex    | Name                                                     | Comment                                                                                     |
 |-------|--------|----------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | 0     | 0x000  | SPELL\_GROUP\_SPECIAL\_FLAG\_NONE                        |                                                                                             |
 | 1     | 0x001  | SPELL\_GROUP\_SPECIAL\_FLAG\_ELIXIR\_BATTLE              |                                                                                             |
@@ -43,7 +43,7 @@ Enum SpellGroupSpecialFlags in core:
 | 4     | 0x004  | SPELL\_GROUP\_SPECIAL\_FLAG\_ELIXIR\_UNSTABLE            |                                                                                             |
 | 8     | 0x008  | SPELL\_GROUP\_SPECIAL\_FLAG\_ELIXIR\_SHATTRATH           |                                                                                             |
 | 15    | 0x00F  | SPELL\_GROUP\_SPECIAL\_FLAG\_STACK\_EXCLUSIVE\_MAX       |                                                                                             |
-| 16    | 0x010  | SPELL\_GROUP\_SPECIAL\_FLAG\_FORCED\_STRONGEST           | helpful flag if some spells have different auras, but only one should be present            |
+| 16    | 0x010  | SPELL\_GROUP\_SPECIAL\_FLAG\_FORCED\_STRONGEST           | Helpful flag if some spells have different auras, but only one should be present            |
 | 32    | 0x020  | SPELL\_GROUP\_SPECIAL\_FLAG\_SKIP\_STRONGER\_CHECK       |                                                                                             |
 | 64    | 0x040  | SPELL\_GROUP\_SPECIAL\_FLAG\_BASE\_AMOUNT\_CHECK         |                                                                                             |
 | 256   | 0x100  | SPELL\_GROUP\_SPECIAL\_FLAG\_PRIORITY1                   |                                                                                             |
@@ -52,4 +52,3 @@ Enum SpellGroupSpecialFlags in core:
 | 2048  | 0x800  | SPELL\_GROUP\_SPECIAL\_FLAG\_PRIORITY4                   |                                                                                             |
 | 4096  | 0x1000 | SPELL\_GROUP\_SPECIAL\_FLAG\_SAME\_SPELL\_CHECK          |                                                                                             |
 | 8192  | 0x2000 | SPELL\_GROUP\_SPECIAL\_FLAG\_SKIP\_STRONGER\_SAME\_SPELL |                                                                                             |
-| 16384 | 0x4000 | SPELL\_GROUP\_SPECIAL\_FLAG\_MAX                         |                                                                                             |
