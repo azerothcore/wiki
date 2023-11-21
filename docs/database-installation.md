@@ -9,13 +9,10 @@
 
 ### Creating the Databases and User
 
-First of all, you need to create the acore user using the script below.
+First of all, you need to create the acore user. You need to run the script below within a MySQL client or with the MySQL command-line interface (CLI). 
+You need to run the script as the **root** user of MySQL within a MySQL client or the MySQL cli.
 
 https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
-
-You can perform this with a MySQL client or with the MySQL command-line interface (CLI).
-
-You need to run the script above as the **root** user of MySQL within a MySQL client or the MySQL cli.
 
 *Note: Use the MySQL root user ONLY to run the script above, never run the core as root or administrator!*
 
