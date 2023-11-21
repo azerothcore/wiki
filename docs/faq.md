@@ -18,9 +18,6 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 - When should I update my source?
   - We recommend updating your core frequently, at least once a week, in order to benefit of latest core fixes and security patches.
 
-- How much RAM do I need for AzerothCore?
-  - You can find all RAM information [here](memory-usage).
-
 - What is "Blizzlike"?
   - AzerothCore is trying to replicate the Blizzard state for World of Warcraft. The term "Blizzlike" means that it is close enough to being a replication of what was on the Blizzard servers.
 
