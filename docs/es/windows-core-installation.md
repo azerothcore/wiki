@@ -2,179 +2,162 @@
 
 | Guía de Instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Instalación del Servidor >>](server-setup.md) |
+| Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
 
-## Software requerido
+## Software necesario
 
-Véase [Requisitos](requirements.md) antes de continuar.
+Consulta [Requisitos](requirements.md) antes de continuar.
 
-## Obtener y Compilar la fuente
+## Descarga y compilación del código fuente
 
-### Obtener el código fuente
+### Descarga del código
 
-1. Cree el directorio en donde almacenará los archivos. En esta guia usaremos **C:\Azerothcore**.
+1. Crea el directorio donde se ubicarán los archivos fuente. En esta guía, utilizaremos **C:\Azerothcore**.
 
-1. Haga click derecho dentro de la carpeta y seleccione **GitExt Clone...**
+2. Abre Github Desktop.
 
-1. Llene la información de las siguiente forma:
+3. Haz clic en **Archivo** -> **Clonar repositorio...** en la esquina superior izquierda.
 
+4. Haz clic en **URL**.
+
+5. Completa los datos de la siguiente manera:
+
+```text
+Repository URL or GitHub username and repository: https://github.com/azerothcore/azerothcore-wotlk
+Local path: C:\Azerothcore
 ```
-Repository to clone: https://github.com/azerothcore/azerothcore-wotlk
-Destination: C:\Azerothcore
-Subdirectory to create: <none>*
-Branch: master
-Repository type: Personal repository
-```
 
-Haga click en **Clone**. Dentro de pocos minutos los archivos de la fuente de AzerothCore serán clonados dentro de **C:\Azerothcore**.
+Click **Clone**. En pocos minutos, los archivos fuente de Azerothcore se clonarán en **C:\Azerothcore**.
 
-### Configurando y generando la solución para Visual C++ con CMAKE
+### Configuración y generación de la solución Visual C++ con CMake
 
-Antes de empezar, cree un nuevo directorio llamado **Build**. En esta guía usaremos **C:\Build**.
+Antes de comenzar, crea un nuevo directorio llamado **Build**. En esta guía, utilizaremos **C:\Build**.
 
-1. Abra CMake
+1. Abre CMake.
 
-1. Haga click en **Browse Source...** → Seleccione el directorio que contiene la fuente (**C:\Azerothcore**)
+2. Haz clic en **Examinar fuente...** → Selecciona el directorio fuente (**C:\Azerothcore**).
 
-1. Haga click en  **Browse Build...** → Seleccione la carpeta de la build (**C:\Build**)
+3. Haz clic en **Examinar construcción...** → Selecciona el directorio de construcción (**C:\Build**).
 
-1. Haga click en  **Configure**.
+4. Haz clic en **Configurar**.
 
-1. En el menú desplegable, seleccione la versión del compilador que descargó en [Requisitos](windows-requirements.md). Asegúrese de seleccionar **Win64** si etá trabajando con una compilación de 64-bits.
+5. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](windows-requirements.md). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
 
-1. Asegurese de marcar **Use default native compilers**.
+6. Asegúrate de que **Usar compiladores nativos predeterminados** esté marcado.
 
-1. Haga click en  **Finish**.
+7. Haz clic en **Finalizar**.
 
-1. Asegurese de marcar **TOOLS_BUILD**. Esto compilará los binarios necesarios para la extracción de archivos requeridos más adelante.
+8. Asegúrate de que **TOOLS_BUILD** esté configurado en `all`. Esto compilará los extractores necesarios más adelante en la configuración.
 
-1. Haga click en **Configure** otra vez. Siempre que tenga errores marcados en rojo en la ventana, deberá revisar los parametros y ejecutar **Configure**.
+9. Haz clic en **Configurar** nuevamente. Mientras haya error(es) en rojo en la ventana de registro, deberás verificar tus parámetros y volver a ejecutarlo.
 
-1. Haga click en **Generate**. Esto instalará los archivos seleccionados en la carpeta **C:\Build**.
+10. Haz clic en **Generar**. Esto instalará los archivos de construcción seleccionados en tu carpeta **C:\Build**.
 
-#### Algunos posibles errores y su solución
+#### Solución de algunos errores
 
-- Si CMake no encuentra MySQL, tendrá que configurar **MYSQL_INCLUDE_DIR = C:/XX/MySQL/MySQL Server X.X/include** y **MYSQL_LIBRARY = C:/XX/MySQL/MySQL Server X.X/lib(_XX)/libmysql.lib**.
+Si llegaras a encontrar errores en CMake, consulta [Errores comunes](common-errors#core-installation-errors).
 
-    - XX depende de qué versión de MySQL está usando.
-    
-    - (Si no ve los campos de MySQL en CMake, marque **Advanced box**).
-    
-- Si obtiene errores de vinculo (e.g "error LNK2019: unresolved external symbol mysql_server_init"), asegurese de que MYSQL_LIBRARY está configurada con el libmysql.lib que corresponde con su modo de compilación(x64 o 32 bits).
+### Compilación del código fuente
 
-    - (Si no ve los campos de MySQL en CMake, marque **Advanced box**).
+1. En CMake, presiona **Abrir proyecto** para abrir el archivo **AzerothCore.sln** directamente con Visual Studio.
 
-- Si obtiene un error como *CMake could NOT find OpenSSL*:
-    
-    - Marque **Advanced**.
-    
-    - Busque las dos entradas de OPENSSL en la lista y enrutelas con los directorios correspondientes:
+1. En el menú superior, haz clic en **Compilar** y selecciona **Administrador de configuraciones**.
 
-        - OPENSSL_ROOT_DIR es la ruta de instalación (por defecto, **C:/OpenSSL-Win32** o **C:/OpenSSL-Win64**)
-        
-        - OPENSSL_INCLUDE_DIR es la carpeta "include" en la ruta de instalación (por defecto **C:/OpenSSL-Win32/include** o **C:/OpenSSL-Win64/include**)
+    1. Establece la **Configuración de solución activa** en **RelWithDebInfo**.
 
-- Si obtiene un error como *Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
+    1. Establece la **Plataforma de solución activa** en **x64** y luego haz clic en Cerrar (la configuración se guarda automáticamente).
 
-    - Ubique su carpeta de Boost
+1. Haz clic con el botón derecho en **ALL_BUILD** en el Explorador de soluciones en la barra lateral derecha y selecciona **Limpiar**.
 
-        - Ejecute el archivo Bootstrap.bat
+1. Haz clic con el botón derecho en **ALL_BUILD** y selecciona **Compilar** (Ctrl + Shift + B).
 
-        - Ejecute el archivo b2.exe 
+    1. Si tu GUI no muestra el Explorador de soluciones, haz clic en el menú Compilar y selecciona **Limpiar solución**, y luego **Compilar**.
 
-### Compilando la fuente
+El tiempo de compilación varía de una máquina a otra, pero puedes esperar que tome entre 5 y 30 minutos.
 
-1. En CMake, presione **Open Project** para abrir la solución **AzerothCore.sln** directamente con Visual Studio.
+Si se te pide "Recargar archivos de construcción" durante o después de la compilación, hazlo.
 
-1. En el menú de arriba, haga click en **Build** y seleccione **Configuration Manager**.
+Cuando la compilación esté completa, encontrarás un mensaje en la salida que se parece a esto:
 
-1. Configure **Active Solution Configuration** con **RelWithDebInfo**.
-
-1. In the list menus below "Help", set **Active Solution Platform** to **x64** and then click Close (settings automatically save).
-
-    1. If you set 32-bit compilation during CMake configuration, select **x86**.
-
-1. Haga click derecho en **ALL_BUILD** en Solution Explorer a la derecha y seleccione **Clean**.
- 
-1. Haga click derecho en **ALL_BUILD** y seleccione **Build**. (Ctrl + Shift + B)
-
-    1. Si su interfaz (GUI) no muestra el Solution Explorer, haga click en el menú **Build** y seleccione **Clean Solution** luego **Build**.
-
-El tiempo que requerirá el proceso varía de una maquina a otra, pero puede tomar entre 5 y 30 minutos.
-
-Si se le solicita "Reload build files" durante o después de la compilación, hágalo.
-
-Cuando la Build esté terminada, recibirá un mensaje similar al siguiente:
-
-```
+```text
 ========== Build: 22 succeeded, 0 failed, 0 up-to-date, 1 skipped ==========
 ```
 
-Encontrará sus binarios recien compilados en **C:\Build\bin\RelWithDebInfo** o **C:\Build\bin\Debug**. Estos son los archivos usados para iniciar su servidor al final de esta guía.
+Encontrarás tus binarios recién compilados en la carpeta **C:\Build\bin\RelWithDebInfo** o **C:\Build\bin\Debug**. Estos se utilizan para ejecutar tu servidor al final de estas instrucciones.
 
-Necesitará los siguientes archivos en orden para que el core funcione apropiadamente:
+Necesitarás los siguientes archivos para que el núcleo funcione correctamente:
 
-```
+```text
 \configs\
 authserver.exe
 authserver.pbd
 worldserver.exe
 worldserver.pdb
 libmysql.dll
+
+---------
+Para OpenSSL 1.1.x
+
 libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
 ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
+
+---------
+Para OpenSSL 3.0 y versiones posteriores
+
+legacy.dll
+libcrypto-3.dll / libcrypto-3-x64.dll
+libssl-3.dll / libssl-3-x64.dll
 ```
 
-En la carpeta **configs** debería encontrar:
+En la carpeta **configs** deberías encontrar:
 
-```
+```text
 authserver.conf.dist
 worldserver.conf.dist
 ```
 
-Hay tres archivos DLL que deben ser añadidos manualmente a esta carpeta, los tendrá que copiar de los siguientes directorios:
+Hay dos/tres archivos DLL que deben agregarse manualmente a esta carpeta, y debes copiarlos desde los siguientes directorios de instalación/bin:
 
 **libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.x\lib\
 
-*Nota: Necesita la versión exacta de libmysql que corresponda con el MySQL que descargó. Por esta razón, no puede descargar el DLL de internet*
+*Nota: Necesitas la versión exacta de libmysql que corresponda al MySQL que has descargado. Debido a esto, no puedes descargar el DLL de la web y necesitas extraerlo de la carpeta.*
 
-OpenSLL _before_ versión 1.1.0:
+#### OpenSSL _antes_ de la versión 1.1.0:
 
-**libeay32.dll** y
-**ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depende de si su Core es 64-bit o 32-bit)*.
+**libeay32.dll** y **ssleay32.dll** → C:\OpenSSL-Win64\ o C:\OpenSSL-Win32\ *(depende de si tu núcleo es de 64 bits o 32 bits)*.
 
-En OpenSSL 1.1.0 y los más recientes, los nombres cambiaron:
+#### Nombres de OpenSSL 1.1.x han cambiado:
 
-Para la versión de 32-bits:
-**libssl-1_1.dll** y
-**libcrypto-1_1.dll** → C:\OpenSSL-Win32\bin
+**libssl-1_1-x64.dll** y **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
 
-Para la versión de 64-bits:
-**libssl-1_1-x64.dll** y
-**libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
+#### OpenSSL 3.0 y más reciente instalado, debes copiar:
 
-#### Sobre el reporte de la compilación
+**legacy.dll** → C:\OpenSSL-Win(32/64)\bin
 
-Los archivos pdb solo existirán si compiló en modo Debug o RelWithDebInfo, no es obligatorio, pero sí es recomendado compilar por lo menos en modo RelWithDebInfo para obtener los logs de los errores (crashlogs). Si compila en modo Release, los archivos pdb no son necesarios.
+**libcrypto-3-x64.dll** y **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin
 
-Para reportar los errores es OBLIGATORIO compilar en modo Debug o RelWithDebInfo.
+#### Acerca del registro de compilación e informe
+
+Los archivos pdb solo existen si compilar con la configuración Debug o RelWithDebInfo. No es obligatorio, pero se recomienda compilar el núcleo con al menos la configuración RelWithDebInfo para obtener registros de errores adecuados.
+
+Para informar sobre registros de errores, es OBLIGATORIO compilar con la configuración Debug o RelWithDebInfo.
 
 <br>
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
+fgdfgSi aún tienes problemas, verifica:
 
-* [Preguntas frecuentes](faq.md)
+* [FAQ](faq.md)
 
-* [Errores Comunes](common-errors.md)
+* [Errores comunes](common-errors.md)
 
 * [Cómo solicitar ayuda](how-to-ask-for-help.md)
 
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
+* [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte las 24 horas. Un miembro del personal te responderá cuando tenga tiempo.
 
 | Guía de Instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Instalación del Servidor >>](server-setup.md) |
+| Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
