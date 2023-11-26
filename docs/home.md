@@ -34,7 +34,7 @@ We're improving this reliability with continuous development and strict rules to
 
 We make sure all changes pass the CIs before being merged into the master branch.
 
-<a href="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core_matrix_build.yml"><img alt="Github CI Core Status" src="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core_matrix_build.yml/badge.svg"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core-build-nopch.yml"><img alt="Github CI Core Status" src="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core-build-nopch.yml/badge.svg?branch=master"></a>
 <a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Awindows-build+branch%3Amaster+event%3Apush"><img alt="Github CI Windows Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/windows-build/badge.svg?branch=master&event=push"></a>
 <a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Amacos-build+branch%3Amaster+event%3Apush"><img alt="Github CI Mac Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/macos-build/badge.svg?branch=master&event=push"></a>
 <a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Adocker-build+branch%3Amaster+event%3Apush"><img alt="Github CI Docker Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/docker-build/badge.svg?branch=master&event=push"></a>
