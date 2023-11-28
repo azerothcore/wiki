@@ -25,7 +25,6 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
 - ¿Cómo puedo contribuir?
   - Puede ayudar a solucionar problemas enviando solicitudes de extracción, lea más [aquí](contribute.md).
   - Puede ayudarnos probando nuestras [Solicitudes de extracción](contribute#how-to-test-a-pull-request) y participando en las [discusiones sobre problemas de github](https://github.com/azerothcore/azerothcore-wotlk/issues).
-  - Puede poner recompensas (dinero) en problemas o sugerencias que desee solucionar utilizando bountysource. Obtenga más información aquí: [Bountysource](bountysource.md)
   - Puede ayudar a mejorar la wiki enviando una [Solicitud de extracción](https://github.com/azerothcore/wiki).
 
 - ¿Por qué no fusionas mi solución?
