@@ -2,9 +2,9 @@
 
 [<-Back-to:World](database-world.md)
 
-This table holds information on what spells newly created characters should start out with if the PlayerStart.AllSpells setting in enabled in worldserver.conf. A character in this table is defined by his/her race and class combination.
+This table holds information on what spells newly created characters should start with if the PlayerStart.AllSpells setting is enabled in worldserver.conf. A character in this table is defined by his/her race and class combination.
 
-Please note you'll have to set PlayerStart.AllSpells to 1 in config, else this table will not have any effect.
+Please note you'll have to set PlayerStart.CustomSpells to 1 in config, if not, this table will not have any effect.
 
 ## Structure
 
