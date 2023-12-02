@@ -1,15 +1,14 @@
-# ENABLE GM POWERS
-
-To give yourself GM powers, you first need to enable this for your account. After creating an account and password to be able to login, apply the following:
-
-3 stands for the GM level (4 is max), -1 stands for ALL realms.
-
+---
+redirect_from: "/GM-Commands"
+---
 
 # GM Commands
 
 GM commands can be entered mainly in 2 ways. Either by typing it directly into the world console window. In the world console window the leading dot (.) is not mandantory, but you can use it. The other way is using the gm command ingame in the chat console of the wow client. There, all commands must start with a leading dot, f.ex.: .gm on
 
 Note: Some commands are working only by selecting a player or a creature. These commands can not be used in the world console.
+
+Some commands require higher security level. To grant this you need to use the `account set gmlevel` command through the console.
 
 | Command                              | Security | Syntax                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------------ | -------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
