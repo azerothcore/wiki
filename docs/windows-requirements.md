@@ -2,16 +2,17 @@
 
 | Installation Guide                                                                                                                      |                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
 | [<< Start: Installation Guide](installation.md)                                                                                         | [Step 2: Core Installation >>](core-installation.md) |
 
-|                                                                    |
-| :----------------------------------------------------------------- |
-| Boost ≥ 1.78                                                       |
-| MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)                         |
-| OpenSSL ≥ 3.0.x                                                    |
-| CMake ≥ 3.16                                                       |
-| MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)    |
+|                                                                 |
+| :-------------------------------------------------------------- |
+| Windows ≥ 10                                                    |
+| Boost ≥ 1.78                                                    |
+| MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)                      |
+| OpenSSL ≥ 3.0.x                                                 |
+| CMake ≥ 3.16                                                    |
+| MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview) |
 
 1. [Git](https://git-scm.com/download/win)
 
@@ -123,5 +124,5 @@ If you are still having problems, check:
 
 | Installation Guide                                                                                                                      |                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
 | [<< Start: Installation Guide](installation.md)                                                                                         | [Step 2: Core Installation >>](core-installation.md) |
