@@ -1,7 +1,6 @@
 # ENABLE GM POWERS
 
 To give yourself GM powers, you first need to enable this for your account. After creating an account and password to be able to login, apply the following:
-`account set gmlevel accountname 3 -1`
 
 3 stands for the GM level (4 is max), -1 stands for ALL realms.
 
