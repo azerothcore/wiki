@@ -32,11 +32,11 @@ vmap4assembler.exe
    - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
 
    - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
-
-1. Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
-
-2. Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
 {{site.data.alerts.end}}
+
+5. Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
+
+6. Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
 
 ## Setting up the configuration files
 
