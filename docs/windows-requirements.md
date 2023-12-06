@@ -104,7 +104,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">
     </a>
 
-{% include note.html content="Notice that this image shows the version number `1.72.0` - use your actual version number in your settings." %}
+{% include note.html content="Notice that this image shows the version number 1.72.0 - use your actual version number in your settings." %}
   
 <br>
 

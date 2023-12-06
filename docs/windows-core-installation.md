@@ -119,20 +119,20 @@ There are two/three DLL files that need to be manually added to this folder, and
 
 **libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.x\lib\
 
-*Note: You need the exact version of libmysql to correspond to the MySQL you have downloaded. Due to this you cannot download the DLL from the web and need to take it out of the folder.*
+{% include note.html content="You need the exact version of libmysql to correspond to the MySQL you have downloaded. Due to this you cannot download the DLL from the web and need to take it out of the folder. %}
 
 #### OpenSSL _before_ version 1.1.0:
 
-{% include callout.html content="**libeay32.dll** and **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*." type="primary" %}
+{% include callout.html content="<b>libeay32.dll</b> and <b>ssleay32.dll</b> → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ <i>(depends on if your core is 64-bit or 32-bit)</i>." type="primary" %}
 
 #### OpenSSL 1.1.x names have changed:
 
-{% include callout.html content="**libssl-1_1-x64.dll** and **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin" type="primary" %}
+{% include callout.html content="<b>libssl-1_1-x64.dll</b> and <b>libcrypto-1_1-x64.dll</b> → C:\OpenSSL-Win64\bin" type="primary" %}
 
 #### OpenSSL 3.0 and more recent installed, you need to copy:
 
-{% include callout.html content="**legacy.dll**  → C:\OpenSSL-Win(32/64)\bin<br/>
-**libcrypto-3-x64.dll** and **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin" type="primary" %}
+{% include callout.html content="<b>legacy.dll</b>  → C:\OpenSSL-Win(32/64)\bin<br/>
+<b>libcrypto-3-x64.dll</b> and <b>libssl-3-x64.dll</b> → C:\OpenSSL-Win64\bin" type="primary" %}
 
 #### About compilation log and report
 
@@ -144,7 +144,7 @@ pdb files only exist if you compile with Debug or RelWithDebInfo configuration. 
 
 ## Help
 
-If you are still having problems, check:
+If you are still having problems, check: 
 
 * [FAQ](faq.md)
 
