@@ -22,6 +22,7 @@ vmap4assembler.exe
 4. Launch extractor.bat and select your extractor options.
 
 {{site.data.alerts.important}}
+</br>
 - <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
 
 - Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
@@ -32,9 +33,9 @@ vmap4assembler.exe
 
 - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
 
-1. Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
+- Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
 
-2. Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
+- Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
 {{site.data.alerts.end}}
 
 ## Setting up the configuration files
