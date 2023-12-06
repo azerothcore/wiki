@@ -7,13 +7,14 @@
 
 **Table of contents**
 - [Download](#download) - Required/Optional (Not needed if you extract the files.)
-- [Extractors](#extractors) - Optional/Optiolan (Not needed if you download the files.)
+- [Extractors](#extractors) - Required/Optional (Not needed if you download the files.)
 - [Config Files](#config-files) - Required
 
 Now that you have the source compiled, you need to add some necessary files, by either downloading or extracting them.
 
 Some files are optional but highly recommended:
 
+{{site.data.alerts.important}}
 | Directory |                    |
 | :-------- | :----------------- |
 | dbc       | Mandatory          |
@@ -21,6 +22,7 @@ Some files are optional but highly recommended:
 | vmaps     | HIGHLY RECOMMENDED |
 | mmaps     | HIGHLY RECOMMENDED |
 | cameras   | Recommended        |
+{{site.data.alerts.end}}
 
 ## Download
 
