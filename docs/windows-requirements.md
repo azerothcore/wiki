@@ -34,7 +34,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html)
 
-{% include note.html content="MySQL ≥ 8.0 is recommended. Version 5.7 is deprecated and will soon not be supported." %}
+    {% include note.html content="MySQL ≥ 8.0 is recommended. Version 5.7 is deprecated and will soon not be supported." %}
 
     1. Download the Windows MSI Installer.
     
