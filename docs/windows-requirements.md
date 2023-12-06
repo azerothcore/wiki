@@ -5,14 +5,12 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
 | [<< Start: Installation Guide](installation.md)                                                                                         | [Step 2: Core Installation >>](core-installation.md) |
 
-|                                                                 |
-| :-------------------------------------------------------------- |
-| Windows ≥ 10                                                    |
-| Boost ≥ 1.78                                                    |
-| MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)                      |
-| OpenSSL ≥ 3.0.x (Ver. 3.1 and above are not supported.)         |
-| CMake ≥ 3.16                                                    |
-| MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview) |
+{% include callout.html content="Windows ≥ 10<br/>
+Boost ≥ 1.78<br/>
+MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)<br/>
+OpenSSL ≥ 3.0.x (Ver. 3.1 and above are not supported.)<br/>
+CMake ≥ 3.16<br/>
+MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
 1. [Git](https://git-scm.com/download/win)
 
@@ -20,11 +18,11 @@
     
         - During Git installation - Adjust your PATH environment. Pick "Git from the command line and also from 3rd-party software".
 
-1. [Github Desktop](https://desktop.github.com/)
+2. [Github Desktop](https://desktop.github.com/)
 
     1. Download the installer and follow the steps to set it up.
 
-1. Install the compiler / IDE [Visual Studio Community 2022 (ver 17)](https://visualstudio.microsoft.com/downloads/)
+3. Install the compiler / IDE [Visual Studio Community 2022 (ver 17)](https://visualstudio.microsoft.com/downloads/)
 
    You will need to install the C++ compiler.
    
@@ -34,31 +32,31 @@
    <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
-1. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (Recommended version: ≥ 8.0 with MySQL server configuration)
+4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (Recommended version: ≥ 8.0 with MySQL server configuration)
 
     1. Download the Windows MSI Installer.
     
-    1. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
+    2. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
     
-    1. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
+    3. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
     
-    1. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
+    4. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
     
-    1. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
+    5. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
 
-    1. Add MySQL to Environment Variables.
+    6. Add MySQL to Environment Variables.
     
         1. Go to Control Panel -> System
         
-        1. Go to Advanced System Settings
+        2. Go to Advanced System Settings
 
-        1. Go to Environment Variables
+        3. Go to Environment Variables
         
-        1. Under "Systemvariables" select **Path**
+        4. Under "Systemvariables" select **Path**
         
-        1. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
+        5. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
 
-1. Choose a database management tool
+5. Choose a database management tool
 
     - MySQL cli (Fastest)
     
@@ -72,19 +70,19 @@
 
     1. Try connecting to your database. You may be looking for "Connect to Host", "New Connection" or "Session Manager" depending on which program you use.
 
-    1. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
+    2. Create a new connection/session. The Hostname/IP address of "127.0.0.1" or "localhost" is fine if you installed MySQL on the same computer that you installed HeidiSQL or SQLYog. Simply fill in your root // whatever password and you should now be able to connect to your database.
 
-1. [CMake](https://cmake.org/download/)
+6. [CMake](https://cmake.org/download/)
 
     1. Download and install the **Latest Release** windows-x86_64.msi file, **NEVER the RC (Release Candidate) versions.**
     
-    1. We recommend to compile in 64 bits mode. 
+    2. We recommend to compile in 64 bits mode. 
 
-1. MySQL development files
+7. MySQL development files
 
     1. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib.
 
-1. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. (Ver. 3.1 and above are not supported.)
+8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. (Ver. 3.1 and above are not supported.)
 
     - Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
@@ -94,19 +92,19 @@
     - *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
       *when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
   
-1. [Boost](https://www.boost.org/).
+9. [Boost](https://www.boost.org/).
 
     1. Download the prebuilt Windows Binary for Visual Studio 2022
 
-    1. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download)
+    2. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download)
 
-    1. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
+    3. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
 
     <a href="/wiki/images/boost.jpg" target="_blank">
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">
     </a>
 
-    1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
+    4. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.
   
 <br>
 
