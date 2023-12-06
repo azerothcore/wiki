@@ -1,6 +1,6 @@
 tip: '<div class="alert alert-success" role="alert"><i class="fa-solid fa-lightbulb"></i> <b>Tip: </b>'
 note: '<div class="alert alert-info" role="alert"><i class="fa-solid fa-circle-info"></i> <b>Note: </b>'
-important: '<div class="alert alert-warning" role="alert"><i class="fa-solid fa-exclamation"></i> <b>Important: </b>'
+important: '<div class="alert alert-warning" role="alert"><i class="fa-solid fa-circle-exclamation"></i> <b>Important: </b>'
 warning: '<div class="alert alert-danger" role="alert"><i class="fa-solid fa-triangle-exclamation"></i> <b>Warning: </b>'
 end: '</div>'
 
