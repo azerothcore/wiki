@@ -969,12 +969,11 @@ body > .wrapper .pl-12 {
 */
 .darkmode-layer, .darkmode-toggle {
   z-index: 500;
-  background-color: #1b1b1b;
 }
 
 body.darkmode--activated img, body.darkmode--activated .darkmode-ignore {
   mix-blend-mode: difference;
-  background-color: #1b1b1b;
+  background-color: black;
 }
 
 .bs-callout {
