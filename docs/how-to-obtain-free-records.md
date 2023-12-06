@@ -40,7 +40,7 @@ LIMIT 1
 
 When running the query, we will get as a result in this case, the number **15**.
 
-**Note:** Currently, the value has changed, and now it is different. But at the time it was number 15.
+{% include note.html content="Currently, the value has changed, and now it is different. But at the time it was number 15." %}
 
 What we must do now is to check that this value is not being used, by means of a `SELECT`
 
@@ -70,4 +70,4 @@ To corroborate that the information is correct, I leave you the first 16 records
 
 As you can see, number 15 is available.
 
-**Note:** the table has many more attributes, but we show only some, so that the table would not be so extensive.
+{% include note.html content="The table has many more attributes, but we show only some, so that the table would not be so extensive." %}

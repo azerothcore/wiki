@@ -104,7 +104,6 @@ It's also a good practice to check the "File changes" tab to see that everything
 
 ![AzerothCore - Compare & pull request](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/13.png)
 
-**NOTE:** We do not respond well to leechers! If your fix comes from another organization or person 
-you should ALWAYS give credit to the original author and commit.
+{% include important.html content="We do not respond well to leechers! If your fix comes from another organization or person you should ALWAYS give credit to the original author and commit!" %}
 
 That's it!

@@ -79,7 +79,7 @@ git checkout master; git pull
 
 ### 3. Create a new branch
 
-**IMPORTANT:** never commit changes your `master` branch, it will make your fork messy.
+{% include important.html content="Never commit changes your <b>master</b> branch, it will make your fork messy." %}
 
 When creating a new branch, git will create a copy of your **current** branch. 
 Always make sure you are on `master` branch **before** creating a new branch by typing:
@@ -204,7 +204,7 @@ It's also a good practice to check the "File changes" tab to see that everything
 
 ![AzerothCore - Compare & pull request](http://www.azerothcore.org/wiki/assets/images/pr-tutorial/13.png)
 
-**NOTE:** We do not respond well to leechers! If your fix comes from another organization or person you should ALWAYS give credit to the original author and commit.
+{% include important.html content="We do not respond well to leechers! If your fix comes from another organization or person you should ALWAYS give credit to the original author and commit!" %}
 
 That's it!
 

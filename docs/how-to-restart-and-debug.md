@@ -28,8 +28,8 @@ You can use `./acore.sh run-worldserver` and `./acore.sh run-authserver`.
 
 They both work out of the box when you compile with the dashboard.
 
-**NOTE**: To enable GDB, you can use `AC_RESTARTER_WITHGDB=true` as an environment variable or by adding it to your `/conf/config.sh` file.
-If the server crashes after enabling GDB, you will find the crashdump file (gdb.txt) within the /env/ folder. **Keep in mind that you should compile your code with one of the following compilation types: Debug or RelWithDebInfo, otherwise GDB will not work properly**
+{% include note.html content="To enable GDB, you can use <b>AC_RESTARTER_WITHGDB=true</b> as an environment variable or by adding it to your <b>/conf/config.sh</b> file.</br>
+If the server crashes after enabling GDB, you will find the crashdump file (gdb.txt) within the /env/ folder. <b>Keep in mind that you should compile your code with one of the following compilation types: Debug or RelWithDebInfo, otherwise GDB will not work properly</b>" %}
 
 ### Using Docker (cross-platform)
 

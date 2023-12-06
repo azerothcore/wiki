@@ -7,7 +7,7 @@
 
 ## Extracting DBC, Maps, VMaps & MMaps
 
-1. Browse into your build directory (**C:\Build\bin\RelWithDebInfo\\** \*) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
+1. Browse into your build directory (**C:\Build\bin\RelWithDebInfo\\**) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
 ```
 mapextractor.exe
 mmaps_generator.exe
@@ -21,23 +21,21 @@ vmap4assembler.exe
 
 4. Launch extractor.bat and select your extractor options.
 
-**Important notes**
+{{site.data.alerts.important}}
+- <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
 
-- **dbc**, **maps** AND **vmaps** are needed to make server work properly!
-
-- Do not attempt to stop **vmaps** exctraction process. It is finished when it prints "Press any key...". It will create two new folders: **buildings** and **vmaps**. The **buildings** folder is completely useless post-running and can be safely deleted.
+- Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
  
-- Don't run another task before the 1st is finished or you will have errors.
+- Don't run another task before the first is finished or you will have errors.
 
 - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
 
-- **Optional but extremely recommended: Extract mmaps.** Do not attempt to stop this process while it is exctracting.
+- <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
 
-5. Create a new folder in **C:\Build\bin\RelWithDebInfo** \* called **Data**
+1. Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
 
-6. Move the vmaps, maps, dbc, cameras into the **Data** folder.
-
-\* Can be found in RelWithDebInfo, Debug or Release.
+2. Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
+{{site.data.alerts.end}}
 
 ## Setting up the configuration files
 

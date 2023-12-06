@@ -112,7 +112,7 @@ void OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2);
 void OnAnotherEvent(uint32 someArg);
 ```
 
-**NOTE:** for certain scripts the method declared inside the ScriptMgr class and the one declared into the related ScriptObject, don't always match. For instance: `OnLogin` is a hook from the PlayerScript that is declared as `OnPlayerLogin` when used inside the ScriptMgr class, thus avoid collisions with other methods since the ScriptMgr class collects hooks from allnthe ScriptObjects within the same list.
+{% include note.html content="for certain scripts the method declared inside the ScriptMgr class and the one declared into the related ScriptObject, don't always match. For instance: <b>OnLogin</b> is a hook from the PlayerScript that is declared as <b>OnPlayerLogin</b> when used inside the ScriptMgr class, thus avoid collisions with other methods since the ScriptMgr class collects hooks from allnthe ScriptObjects within the same list." %}
 
 #### Define your hooks
 
@@ -236,7 +236,7 @@ Some modules, such as the auto-balance, allows customizing certain part of their
 
 You can take a look at this file as an example: https://github.com/azerothcore/mod-autobalance/blob/master/src/AutoBalance.h
 
-**NOTE:** You also need to create your own ScriptMgr implementation and offer a singleton to allow calling your hooks.
+{% include note.html content="You also need to create your own ScriptMgr implementation and offer a singleton to allow calling your hooks." %}
 
 ### Final considerations
 

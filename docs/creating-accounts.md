@@ -41,7 +41,7 @@ account set gmlevel <user> <level> <realm>
 account set gmlevel admin 3 -1
 ```
 
-**Note:** (-1 for the all realms)
+{% include note.html content="Use -1 to select all realms, or specify the specific realm id." %}
 
 ## Changing password
 

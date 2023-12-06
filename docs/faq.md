@@ -67,7 +67,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - You will always get the latest version if you compile with "TOOLS".
 
 - What are Maps, VMaps, MMaps and DBCs?
-  - **Note that AzerothCore does not support and does not condone any form of modification to client files or private / public servers! AzerothCore in itself is meant for theory-crafting and learning.**
+  {% include note.html content="AzerothCore does not support and does not condone any form of modification to client files or private / public servers! AzerothCore in itself is meant for theory-crafting and learning." %}
   - Beside the core as binaries which give a fundamental and the individual client interpreting functions, definitions and commands, the core can be described as 'a body' with the following data forming it's 'anatomy':
     - **Maps**: Maps are **required to run AzerothCore**. Maps provide the physical values and data for the core to interpret. Based on these, the core has a layout that can be compared with each client. This includes area definitions.
     - **VMaps**: VMaps are **optional, but highly recommended**. VMaps ("Virtual Maps") calculate the possibility of line-of-sight, as an example. Based on their content, the server can (for example) calculate if spell casts are possible (e.g. if a wall is in between the target and caster or not).
