@@ -14,7 +14,6 @@ Now that you have the source compiled, you need to add some necessary files, by 
 
 Some files are optional but highly recommended:
 
-{{site.data.alerts.important}}
 | Directory |                    |
 | :-------- | :----------------- |
 | dbc       | Mandatory          |
@@ -22,7 +21,6 @@ Some files are optional but highly recommended:
 | vmaps     | HIGHLY RECOMMENDED |
 | mmaps     | HIGHLY RECOMMENDED |
 | cameras   | Recommended        |
-{{site.data.alerts.end}}
 
 ## Download
 
