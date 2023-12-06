@@ -14,7 +14,7 @@ Adding a module is an optional step to alter the blizzlike gameplay offered by A
     - Clone the repository using Git the same way AzerothCore was first cloned in the [Core Installation](core-installation.md). The repository should be cloned into the \modules\ directory. i.e E:\AzerothCore\modules\
     - Download the ZIP file from the catalog and extract it in the \modules\ directory. i.e E:\AzerothCore\modules\mod-anticheat
 
-{% include note.html content="If your module has a suffix i.e. "-master". This needs to be removed in order for the module to work!" %}
+{% include note.html content="If your module has a suffix i.e. -master. This needs to be removed in order for the module to work!" %}
 
 ## Recompiling
 
