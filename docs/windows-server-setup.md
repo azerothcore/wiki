@@ -23,19 +23,19 @@ vmap4assembler.exe
 
 {{site.data.alerts.important}}
 </br>
-- <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
+   - <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
 
-- Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
- 
-- Don't run another task before the first is finished or you will have errors.
+   - Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
+    
+   - Don't run another task before the first is finished or you will have errors.
 
-- If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
+   - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
 
-- <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
+   - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
 
-- Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
+1. Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
 
-- Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
+2. Move the vmaps, maps, dbc, cameras into the <b>Data</b> folder.
 {{site.data.alerts.end}}
 
 ## Setting up the configuration files
