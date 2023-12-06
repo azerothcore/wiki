@@ -123,23 +123,22 @@ There are two/three DLL files that need to be manually added to this folder, and
 
 #### OpenSSL _before_ version 1.1.0:
 
-**libeay32.dll** and **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*.
+{% include callout.html content="**libeay32.dll** and **ssleay32.dll** → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ *(depends on if your core is 64-bit or 32-bit)*." type="primary" %}
 
 #### OpenSSL 1.1.x names have changed:
 
-**libssl-1_1-x64.dll** and **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
+{% include callout.html content="**libssl-1_1-x64.dll** and **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin" type="primary" %}
 
 #### OpenSSL 3.0 and more recent installed, you need to copy:
 
-**legacy.dll**  → C:\OpenSSL-Win(32/64)\bin
-
-**libcrypto-3-x64.dll** and **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin
+{% include callout.html content="**legacy.dll**  → C:\OpenSSL-Win(32/64)\bin<br/>
+**libcrypto-3-x64.dll** and **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin" type="primary" %}
 
 #### About compilation log and report
 
 pdb files only exist if you compile with Debug or RelWithDebInfo configuration. It is not mandatory but it is recommended to compile core with at least the RelWithDebInfo configuration to get proper crash logs.
 
-To report crash logs it's MANDATORY to compile with Debug or RelWithDebInfo configuration.
+{% include important.html content="To report crash logs it's MANDATORY to compile with Debug or RelWithDebInfo configuration." %}
 
 <br>
 
