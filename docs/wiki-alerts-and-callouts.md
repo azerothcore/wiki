@@ -4,12 +4,14 @@
 
 Alerts can be added as following.
 
+{% raw %}
 ```
 {% include note.html content="Add content between quotes" %}
 {% include tip.html content="Add content between quotes" %}
 {% include important.html content="Add content between quotes" %}
 {% include warning.html content="Add content between quotes" %}
 ```
+{% endraw %}
 
 {% include note.html content="Add content between quotes" %}
 {% include tip.html content="Add content between quotes" %}
@@ -34,9 +36,11 @@ The include uses `markdown="span"` as an attribute, which means GFM will process
 
 ## Callouts
 
+{% raw %}
 ```
 {% include callout.html content="Add content between quotes" type="primary" %}
 ```
+{% endraw %}
 
 {% include callout.html content="Add content between quotes" type="primary" %}
 
