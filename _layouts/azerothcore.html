@@ -37,6 +37,8 @@
         <div class="git-wiki-page">
             {% include git-wiki/sections/tools/tools.html %}
 
+            {% include important.html content="OpenSSL 3.1 and newer does not work. Use version 1.1 or 3.0" %}
+
             {% if site.inc_before_toc %}
             {% include {{ site.inc_before_toc }} %}
             {% endif %}

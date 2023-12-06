@@ -10,7 +10,7 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## IMPORTANT NOTE
 
-{% include important.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your personal choice." %}
+{% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your personal choice." %}
 
 ## Getting started
 

@@ -131,7 +131,7 @@ The following steps must be verified:
 
 {% include tip.html content="For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
 
-{% include important.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
+{% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 
 <br>
 
