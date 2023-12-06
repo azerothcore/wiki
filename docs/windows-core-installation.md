@@ -119,7 +119,7 @@ There are two/three DLL files that need to be manually added to this folder, and
 
 **libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.x\lib\
 
-{% include note.html content="You need the exact version of libmysql to correspond to the MySQL you have downloaded. Due to this you cannot download the DLL from the web and need to take it out of the folder. %}
+{% include note.html content="You need the exact version of libmysql to correspond to the MySQL you have downloaded. Due to this you cannot download the DLL from the web and need to take it out of the folder." %}
 
 #### OpenSSL _before_ version 1.1.0:
 
