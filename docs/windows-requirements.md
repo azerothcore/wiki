@@ -32,7 +32,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
    <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
-4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html) (Recommended version: ≥ 8.0 with MySQL server configuration)
+4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html)
+
+{% include note.html content="MySQL ≥ 8.0 is recommended. Version 5.7 is deprecated and will soon not be supported." %}
 
     1. Download the Windows MSI Installer.
     
@@ -82,17 +84,17 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
     1. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib.
 
-8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version. (Ver. 3.1 and above are not supported.)
+8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
+
+{% include important.html content="Use version 1.1 or 3.0. 3.1 and above is not supported." %}
 
     - Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
-    - *Note #1: If you get a "Missing Microsoft Visual C++ .... Redistributable" error message while installing OpenSSL,*
-      *Download the [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)](https://aka.ms/vs/17/release/vc_redist.x64.exe) (1.7MB Installer) and install it.*
-       
-    - *Note #2: While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory")*
-      *when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for [Core Installation](windows-core-installation).*
+{% include note.html content="If you get the error 'Missing Microsoft Visual C++ .... Redistributable' while installing OpenSSL, download the <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)</a> (1.7MB Installer) and install it." %}
+
+{% include note.html content="While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory") when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for <a href="windows-core-installation">Core Installation</a>." %}
   
-9. [Boost](https://www.boost.org/).
+1. [Boost](https://www.boost.org/).
 
     1. Download the prebuilt Windows Binary for Visual Studio 2022
 
