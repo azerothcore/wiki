@@ -23,6 +23,7 @@ vmap4assembler.exe
 
 {{site.data.alerts.important}}
 </br>
+
    - <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
 
    - Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
