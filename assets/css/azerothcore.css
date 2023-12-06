@@ -973,7 +973,7 @@ body > .wrapper .pl-12 {
 
 body.darkmode--activated img, body.darkmode--activated .darkmode-ignore {
   mix-blend-mode: difference;
-  background-color: black;
+  background-color: #252525;
 }
 
 .bs-callout {
@@ -1071,6 +1071,7 @@ a[href^="http://"]:after, a[href^="https://"]:after {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
+  font-size: x-small;
   display: inline-block;
   text-decoration: none;
   padding-left: 3px;
