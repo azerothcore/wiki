@@ -22,12 +22,14 @@ If you need multiple paragraphs, enter `<br/>`.
 
 The include uses `markdown="span"` as an attribute, which means GFM will process the entire content as a span. You can’t use block elements such as `p` or `div` or `pre`. If you need these elements, you can either manually surround the content with the HTML from the include, or you can use these tags:
 
+{% raw %}
 ```
 {{site.data.alerts.note}}
 <p>Content</p>
 <a href="http://azerothcore.org">Webpage</a>
 {{site.data.alerts.end}}
 ```
+{% endraw %}
 
 {{site.data.alerts.note}}
 <p>Content</p>
