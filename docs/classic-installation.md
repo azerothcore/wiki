@@ -27,7 +27,7 @@ The guide has been divided into 8 steps, to make it more readable:
 
 Each step can be read independently or you can read them neatly in order, to gradually get into it and better understand it all.
 
-*Tip: If this is your first time installing AzerothCore we recommend that you read every step carefully!*
+{% include tip.html content="If this is your first time installing AzerothCore we recommend that you read every step carefully!" %}
 
 <br>
 
