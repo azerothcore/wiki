@@ -12,6 +12,8 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your personal choice." %}
 
+{% include important.html content="OpenSSL 3.1 and newer does not work. Use version 1.1 or 3.0" %}
+
 ## Getting started
 
 - [Installation Guide](installation.md)
