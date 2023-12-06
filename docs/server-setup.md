@@ -1,21 +1,21 @@
 # Server Setup
 
 | Installation Guide                                                                                                                      |                                                              |
-| :-                                                                                                                                      | :-                                                           |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation.md)                                                                                    | [Step 4: Database Installation >>](database-installation.md) |
 
 **Table of contents**
-- [Download](#download)
-- [Extractors](#extractors)
-- [Config Files](#config-files)
+- [Download](#download) - Required/Optional (Not needed if you extract the files.)
+- [Extractors](#extractors) - Optional/Optiolan (Not needed if you download the files.)
+- [Config Files](#config-files) - Required
 
 Now that you have the source compiled, you need to add some necessary files, by either downloading or extracting them.
 
 Some files are optional but highly recommended:
 
-| Directory	|                    |
-| :-        | :-                 |
+| Directory |                    |
+| :-------- | :----------------- |
 | dbc       | Mandatory          |
 | maps      | Mandatory          |
 | vmaps     | HIGHLY RECOMMENDED |
@@ -24,19 +24,17 @@ Some files are optional but highly recommended:
 
 ## Download
 
-If you do not want to extract these files using the extractors you can find download links here:
+If you intend to use an enUS client you can download the data files below. If you intend to use any other language client you will need to [extract](#extractors) the data yourself.
 
-Github link:
-
-<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Full data (v16) - from 02/01/2023 to now</a>
+<a href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i>Data files enUS (version 16)</a>
 
 1. Download the files above.
 
-1. Create a new folder within the build folder called **Data**. i.e windows: **C:\Build\bin\RelWithDebInfo\Data** or Linux: **$HOME/azeroth-server/data/**
+2. Create a new folder within the build folder called **Data**. i.e windows: **C:\Build\bin\RelWithDebInfo\Data** or Linux: **$HOME/azeroth-server/data/**
 
-1. Extract the files from the zip file and place them within the **Data** folder.
+3. Extract the files from the zip file and place them within the **Data** folder.
 
-1. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
+4. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
 
 ## Extractors
 
@@ -152,6 +150,6 @@ If you are still having problems, check:
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide                                                                                                                      |                                                              |
-| :-                                                                                                                                      | :-                                                           |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation.md)                                                                                    | [Step 4: Database Installation >>](database-installation.md) |
