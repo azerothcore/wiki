@@ -15,7 +15,7 @@ AzerothCore does not distribute a client. You will need to find your own clean 3
 
 - (Optional) If you wish to use the WoW Launcher.exe to run your client then you must change your set patchlist to the same IP/DNS name as your realmlist.
 
-**NOTE don't use localhost for address, if you need to connect to localhost use 127.0.0.1**
+{% include note.html content="Don't use localhost for address, if you need to connect to localhost use 127.0.0.1" %}
 
 <br>
 

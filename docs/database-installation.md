@@ -14,9 +14,9 @@ You need to run the script as the **root** user of MySQL within a MySQL client o
 
 https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
 
-*Note: Use the MySQL root user ONLY to run the script above, never run the core as root or administrator!*
+{% include important.html content="Use the MySQL root user ONLY to run the script above, never run the core as root or administrator!" %}
 
-*Tip: You can change the password of the user you are creating for increased security.*
+{% include tip.html content="You can change the password of the user you are creating for increased security." %}
 
 ## Populating the database
 
