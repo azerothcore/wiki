@@ -967,11 +967,7 @@ body > .wrapper .pl-12 {
   For dark mode
   https://darkmodejs.learn.uno/#debug 
 */
-.darkmode-layer, .darkmode-toggle {
-  z-index: 500;
-}
-
-.darkmode--activated p, .darkmode--activated li {
+.darkmode--activated, body.darkmode--activated {
   color: #1b1b1b;
 }
 
