@@ -86,9 +86,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
 
-{% include important.html content="Use version 1.1 or 3.0. 3.1 and above is not supported." %}
+    {% include important.html content="Use version 1.1 or 3.0. 3.1 and above is not supported." %}
 
-    - Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
+    1. Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
 {{site.data.alerts.note}}
 If you get the error 'Missing Microsoft Visual C++ .... Redistributable' while installing OpenSSL, download the <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)</a> (1.7MB Installer) and install it.
