@@ -54,9 +54,7 @@ Before you begin, create a new directory called **Build**. In this guide, we wil
 
 1. Click **Generate**. This will install the selected build files into your **C:\Build** folder.
 
-#### Some error fixes
-
-If you were to encounter errors in CMake see [Common Errors](common-errors#core-installation-errors).
+{% include note.html content="If you were to encounter errors in CMake see [Common Errors](common-errors#core-installation-errors)." %}
 
 ### Compiling the Source
 
