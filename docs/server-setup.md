@@ -129,9 +129,9 @@ The following steps must be verified:
 
 1. Edit it to the path of your folder. i.e **C:\Build\bin\RelWithDebInfo\Data**
 
-*Pro Tip: For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server.*
+{% include tip.html content="For most worldserver.conf setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
 
-*NOTE: The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice.*
+{% include note.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 
 <br>
 
