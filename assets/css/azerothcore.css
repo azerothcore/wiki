@@ -972,8 +972,8 @@ body > .wrapper .pl-12 {
 }
 
 body.darkmode--activated img, body.darkmode--activated .darkmode-ignore {
-  mix-blend-mode: darken;
-  background-color: #252525;
+  mix-blend-mode: difference;
+  background-color: black;
 }
 
 .bs-callout {
