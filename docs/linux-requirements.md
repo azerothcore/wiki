@@ -13,18 +13,18 @@
 | CMake ≥ 3.16 |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
+#### Ubuntu with MySQL 8.x
+
+```sh
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+```
+
 #### Ubuntu with MariaDB 10.x
 
 AzerothCore does only support MariaDB versions 10.6 and 10.5.
 
 ```sh
 sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
-```
-
-#### Ubuntu with MySQL 8.x
-
-```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
