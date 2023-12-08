@@ -18,7 +18,7 @@ These are the officially supported and complete ways of installing AzerothCore, 
 
 - [Docker setup <span class="badge badge-secondary">Limited Support</span>](install-with-docker.md) - an installation process based on Docker. Docker knowledge is recommended.
 
-### Install from pre-compiled images <span class="badge badge-info">Limited support</span> <span class="badge badge-info">Limited useage</span>
+### Install from pre-compiled images <span class="badge badge-info">Limited support and usage</span>
 
 - [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - a straightforward way of installing AzerothCore. Currently, you can't install C++ modules, only Eluna scripts. Particularly  suitable for bug triaging, bug reporting, or domestic usage.
 
