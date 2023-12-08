@@ -4,19 +4,19 @@ $ is relative to the source directory.
 
 ## Create and drop files
 
-All create and drop files are found in $\data\sql\create\ directory.
+All create and drop files are found in the $\data\sql\create\ directory.
 
-create_mysql.sql contains the queries to create the acore user and the databases.
+`create_mysql.sql` contains the queries to create the acore user and the databases.
 
-drop_mysql.sql revokes all permissions and drops the acore user and drops all databases. This is used for MySQL 5.7.
+`drop_mysql.sql` revokes all permissions and drops the acore user and drops all databases. This is used for MySQL 5.7.
 
-drop_mysql_8.sql drops the acore user and drops all databases. This is used for MySQL 8.0 or newer.
+`drop_mysql_8.sql` drops the acore user and drops all databases. This is used for MySQL 8.0 or newer.
 
 ## Base files
 
 All base files are found in the $\data\sql\base\ directory.
 
-These files contain the all the data from the latest squashed update files.
+These files contain all the data from the latest squashed update files.
 
 Files from this directory are automatically imported with the [Automatic Database Updater](database-installation#automatic-database-updater-default-recommended).
 
@@ -46,8 +46,8 @@ Files from this directory are automatically imported with the [Automatic Databas
 
 ## Archived files
 
-All archived files are found in $\data\sql\archive\ directory.
+All archived files are found in the $\data\sql\archive\ directory.
 
-All archived files are update files from previous database squashes.
+All archived files are updated files from previous database squashes.
 
 These files serve no real purpose.
