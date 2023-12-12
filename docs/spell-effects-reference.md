@@ -98,7 +98,7 @@ SPELL_EFFECT_PERSISTENT_AREA_AURA = 27
 - BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
 
 SPELL_EFFECT_SUMMON = 28
-- BasePoints: Number of summons
+- BasePoints: Number of summons (Spells that summon totems, like 38236 (Spitfire Totem) use BasePoints to set HP)
 - EffectMiscValueA: [Creature ID](creature_template.md)
 - EffectMiscValueB: [Summon Properties](summonproperties_dbc.md)
 - Radius: Spawn range
