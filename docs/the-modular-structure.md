@@ -36,7 +36,7 @@ This can be used, for example, to automatically execute SQL code that would add 
 
 To interact with our bash system, create and use `include.sh` in your root directory.
 
-The list of the CMake hooks is available [here](hooks-bash.md).
+The list of the Bash hooks is available [here](hooks-bash.md).
 
 ## How to create a module
 
