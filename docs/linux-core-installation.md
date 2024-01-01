@@ -84,6 +84,57 @@ make install
 
 <br>
 
+## Services
+systemd services might help you with managing your AzerothCore server. `/srv/azerothcore-wotlk` is intallation directory in following examples.
+
+### authserver.service
+```sh
+[Unit]
+Description=AzerothCore Authserver
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=azerothcore
+WorkingDirectory=/srv/azerothcore-wotlk
+ExecStart=/srv/azerothcore-wotlk/acore.sh run-authserver
+
+[Install]
+WantedBy=multi-user.target
+```
+### worldserver.service
+```sh
+[Unit]
+Description=AzerothCore Worldserver
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=azerothcore
+WorkingDirectory=/srv/azerothcore-wotlk
+ExecStart=/bin/screen -S worldserver -D -m /srv/azerothcore-wotlk/acore.sh run-worldserver
+
+[Install]
+WantedBy=multi-user.target
+```
+
+After you reload systemctl, you can start AzerothCore like this
+```sh
+sudo service worldserver start
+sudo service authserver start
+```
+Or stop it
+```sh
+sudo service worldserver stop
+sudo service authserver stop
+```
+
 ## Help
 
 If you are still having problems, check:
