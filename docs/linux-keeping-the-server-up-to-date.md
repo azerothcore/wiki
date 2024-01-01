@@ -24,7 +24,7 @@ Sometimes we add or remove files from the repository. At that point it is necess
 ## Using automation server
 If you would like to update AzerothCore using Jenkins, Teamcity or similar tool, following steps might help you.
 
-Add required commans to sudoers file. Services were created [in the Linux Core Installation](linux-core-installation.md#services)
+Add required commands to sudoers file. Services bellow were created [in the Linux Core Installation](linux-core-installation.md#services)
 ```sh
 sudo visudo
 
