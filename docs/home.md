@@ -12,7 +12,7 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your personal choice." %}
 
-{% include important.html content="OpenSSL 3.1 and newer does not work. Use version 1.1 or 3.0" %}
+{% include important.html content="OpenSSL 3.2 and newer does not work. Use version 1.1, 3.0, 3.1" %}
 
 ## Getting started
 
@@ -29,12 +29,12 @@ AzerothCore is a complete Open Source and Modular solution for MMO development.
 
 ### Solid base
 
-AzerothCore has a strong and solid base, coming from years of development: it is based on MaNGOS, TrinityCore and SunwellCore.
+AzerothCore has a solid base from years of development: it is based on MaNGOS, TrinityCore, and SunwellCore.
 We're improving this reliability with continuous development and strict rules to get code merged into the master branch.
 
 ### Stability
 
-We make sure all changes pass the CIs before being merged into the master branch.
+We ensure all changes pass the CIs before being merged into the master branch.
 
 <a href="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core-build-nopch.yml"><img alt="Github CI Core Status" src="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core-build-nopch.yml/badge.svg?branch=master"></a>
 <a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Awindows-build+branch%3Amaster+event%3Apush"><img alt="Github CI Windows Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/windows-build/badge.svg?branch=master&event=push"></a>
@@ -43,7 +43,7 @@ We make sure all changes pass the CIs before being merged into the master branch
 
 ### Open Source
 
-The new AzerothCore source components are released under the GNU AGPL 3.0 The old sources based on MaNGOS/TrinityCore are released under the GNU GPL 2.0, both those licenses are totally free and open source.
+The new AzerothCore source components are released under the GNU AGPL 3.0 The old sources based on MaNGOS/TrinityCore are released under the GNU GPL 2.0, both those licenses are free and open source.
 
 ### Blizzlike Content
 
