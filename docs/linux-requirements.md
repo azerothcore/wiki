@@ -23,6 +23,8 @@ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysq
 
 AzerothCore does only support MariaDB versions 10.6 and 10.5.
 
+{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
+
 ```sh
 sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
 ```
@@ -46,6 +48,8 @@ sudo apt install -y install libboost1.74-dev
 --- 
 /*
 #### Debian 10
+
+{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
