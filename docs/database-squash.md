@@ -12,6 +12,8 @@ We do this to update the base files so that a clean install of the server is don
 
 {% include caution.html content="These steps are only for project maintainers who intend to update base files." %}
 
+{% include important.html content="No SQL changes should be merged during the Base Squash." %}
+
 We ONLY squash into BASE files. We never move files.
 ARCHIVE dir is UNUSED.
 All update files ALWAYS exist in the updates dir.
