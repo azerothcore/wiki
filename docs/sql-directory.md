@@ -24,7 +24,7 @@ Files from this directory are automatically imported with the [Automatic Databas
 
 All update files are found in the $\data\sql\updates\ directory.
 
-These files contain all the new updates to the database since the last squash.
+These files contain all the updates committed.
 
 Files from this directory are automatically imported with the [Automatic Database Updater](database-installation#automatic-database-updater-default-recommended).
 
@@ -46,8 +46,8 @@ Files from this directory are automatically imported with the [Automatic Databas
 
 ## Archived files
 
-All archived files are found in the $\data\sql\archive\ directory.
+Unused Directory.
 
-All archived files are updated files from previous database squashes.
+## Old files
 
-These files serve no real purpose.
+All update files before ACDB 10.0.0 are stored here. From ACDB 10.0.0 a new method to update Base Files was introduced.
