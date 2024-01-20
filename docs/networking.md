@@ -36,6 +36,8 @@ You need to make sure that your **authserver** application directs incoming conn
         - Similar to the Public IP address, it's likely that you'll need to set up port forwards if you're hosting from a home network.
         - Additionally, you'll need to configure DNS to point to the server's public IP address. Setting up DNS is out of the scope of this guide, though your domain registrar or dynamic DNS provider should have this documentation available.
 
+{% include note.html content="If you are using HeidiSQL, make sure you are in the Data tab when you edit values." %}
+
  - MySQL CLI Commands (This step is not needed if you used a MySQL Manager like HeidiSQL)
     - `$ sudo mysql`
     - You should see a prompt change to mysql>
