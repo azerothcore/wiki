@@ -39,7 +39,9 @@ UPDATE `version` SET `db_version`='ACDB 335.11-dev', `cache_id`=11 LIMIT 1;
 </br>> Tables -> DROP + CREATE
 </br>> Data -> Delete + insert (truncate existing data)
 </br>> Max INSERT size -> 1024
-</br>This is so that no unexpected issues occur.%}
+</br>This is so that no unexpected issues occur." %}
 
 6. Move the exported table files into the base directory to update the existing files.
 7. Make a PR
+
+{% include important.html content="See https://github.com/azerothcore/azerothcore-wotlk/pull/18197 as a reference how to squash into Base files." %}
