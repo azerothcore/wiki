@@ -25,6 +25,7 @@ redirect_from: /documentation_index
 * [Core Scripts](core-scripts.md)
 * [Create accounts](creating-accounts)
 * [Create a module](create-a-module)
+* [Database Squash](database-squash)
 * [DBC Index](dbc-index.md)
 * [Directory structure](directory-structure.md)
 * [Doxygen Documentation](https://www.azerothcore.org/pages/doxygen/index.html)
