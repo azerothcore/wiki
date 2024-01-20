@@ -10,7 +10,7 @@ We do this to update the base files so that a clean install of the server is don
 
 ## How to
 
-{% include caution.html content="These steps are only for project maintainers who intend to update base files." %}
+{% include warning.html content="These steps are only for project maintainers who intend to update base files." %}
 
 {% include important.html content="No SQL changes should be merged during the Base Squash." %}
 
