@@ -51,7 +51,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 33   | La Tundra no tiene nada de aburrida                                            |
 | 34   | He paseado por el Fiordo                                                       |
 | 35   | El poder del Cementerio de Dragones                                            |
-| 36   | El imperio de Zul\'Drak                                                        |
+| 36   | El imperio de Zul'Drak                                                         |
 | 37   | Mi furia por las pardas                                                        |
 | 38   | La cima de Las Cumbres Tormentosas                                             |
 | 39   | Dentro de la Cuenca                                                            |
@@ -71,7 +71,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 55   | Batallas en la Cuenca de Arathi                                                |
 | 56   | Muertes en la Garganta Grito de Guerra                                         |
 | 57   | Muertes en el Valle de Alterac                                                 |
-| 58   | Muertes contra Drek\'Thar                                                      |
+| 58   | Muertes contra Drek'Thar                                                       |
 | 59   | Muertes en la Cuenca de Arathi                                                 |
 | 60   | Muertes propias                                                                |
 | 73   | Deshonrar la Cuenca                                                            |
@@ -264,7 +264,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 428  | Trueno furioso, espada bendita del Hijo del Viento                             |
 | 429  | Sulfuras, Mano de Ragnaros                                                     |
 | 430  | Oso de guerra Amani                                                            |
-| 431  | Mano de A\'dal                                                                 |
+| 431  | Mano de A'dal                                                                  |
 | 432  | Campeón de los naaru                                                           |
 | 433  | Gran mariscal                                                                  |
 | 434  | Mariscal de campo                                                              |
@@ -311,7 +311,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 479  | La Matanza de Stratholme                                                       |
 | 480  | Azjol-Nerub                                                                    |
 | 481  | Ahn’kahet: El Antiguo Reino                                                    |
-| 482  | Fortaleza de Drak\'Tharon                                                      |
+| 482  | Fortaleza de Drak'Tharon                                                       |
 | 483  | El Bastión Violeta                                                             |
 | 484  | Gundrak                                                                        |
 | 485  | Cámaras de Piedra                                                              |
@@ -321,8 +321,8 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 489  | Heroico: Fortaleza de Utgarde                                                  |
 | 490  | Heroico: El Nexo                                                               |
 | 491  | Heroico: Azjol-Nerub                                                           |
-| 492  | Heroico: Ahn\'kahet: El Antiguo Reino                                          |
-| 493  | Heroico: La Fortaleza de Drak\'Tharon                                          |
+| 492  | Heroico: Ahn'kahet: El Antiguo Reino                                           |
+| 493  | Heroico: La Fortaleza de Drak'Tharon                                           |
 | 494  | Heroico: El Bastión Violeta                                                    |
 | 495  | Heroico: Gundrak                                                               |
 | 496  | Heroico: Cámaras de Piedra                                                     |
@@ -370,8 +370,8 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 569  | El Arrabal Militar (25 j.)                                                     |
 | 572  | La muerte de Sapphiron (10 j.)                                                 |
 | 573  | La muerte de Sapphiron (25 j.)                                                 |
-| 574  | La derrota de Kel\'Thuzad (10 j.)                                              |
-| 575  | La derrota de Kel\'Thuzad (25 j.)                                              |
+| 574  | La derrota de Kel'Thuzad (10 j.)                                               |
+| 575  | La derrota de Kel'Thuzad (25 j.)                                               |
 | 576  | La caída de Naxxramas (10 j.)                                                  |
 | 577  | La caída de Naxxramas (25 j.)                                                  |
 | 578  | Los valientes (10 j.)                                                          |
@@ -399,7 +399,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 610  | ¡Muerte al Jefe de Guerra!                                                     |
 | 611  | Pezuña de Sangre sangrante                                                     |
 | 612  | Abajo con la Dama Oscura                                                       |
-| 613  | Asesinado en Quel\'Thalas                                                      |
+| 613  | Asesinado en Quel'Thalas                                                       |
 | 614  | ¡Por la Alianza!                                                               |
 | 615  | Asaltar Ventormenta                                                            |
 | 616  | ¡Muerte al Rey!                                                                |
@@ -424,7 +424,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 636  | Zahúrda Rajacieno                                                              |
 | 637  | Monasterio Escarlata                                                           |
 | 638  | Uldaman                                                                        |
-| 639  | Zul\'Farrak                                                                    |
+| 639  | Zul'Farrak                                                                     |
 | 640  | Maraudon                                                                       |
 | 641  | Templo Sumergido                                                               |
 | 642  | Profundidades de Roca Negra                                                    |
@@ -472,11 +472,11 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 684  | Guarida de Onyxia (Nivel 60)                                                   |
 | 685  | Guarida de Alanegra                                                            |
 | 686  | Núcleo de Magma                                                                |
-| 687  | Templo de Ahn\'Qiraj                                                           |
-| 688  | Zul\'Gurub                                                                     |
-| 689  | Ruinas de Ahn\'Qiraj                                                           |
+| 687  | Templo de Ahn'Qiraj                                                            |
+| 688  | Zul'Gurub                                                                      |
+| 689  | Ruinas de Ahn'Qiraj                                                            |
 | 690  | Karazhan                                                                       |
-| 691  | Zul\'Aman                                                                      |
+| 691  | Zul'Aman                                                                       |
 | 692  | Guarida de Gruul                                                               |
 | 693  | Guarida de Magtheridon                                                         |
 | 694  | Caverna Santuario Serpiente                                                    |
@@ -497,7 +497,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 712  | Escolta Grito de Guerra                                                        |
 | 713  | Centinela Ala de Plata                                                         |
 | 714  | El conquistador                                                                |
-| 725  | Thori\'dal, la furia de las estrellas                                          |
+| 725  | Thori'dal, la furia de las estrellas                                           |
 | 726  | Caja de cigalas mágicas de Tenacitas                                           |
 | 727  | A mí la caballería                                                             |
 | 728  | Durotar                                                                        |
@@ -564,7 +564,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 851  | Desierto de Tanaris                                                            |
 | 852  | Azshara                                                                        |
 | 853  | Frondavil                                                                      |
-| 854  | Cráter de Un\'Goro                                                             |
+| 854  | Cráter de Un'Goro                                                              |
 | 855  | Claro de la Luna                                                               |
 | 856  | Silithus                                                                       |
 | 857  | Cuna del Invierno                                                              |
@@ -578,7 +578,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 865  | Montañas Filospada                                                             |
 | 866  | Nagrand                                                                        |
 | 867  | Bosque de Terokkar                                                             |
-| 868  | Isla de Quel\'Danas                                                            |
+| 868  | Isla de Quel'Danas                                                             |
 | 869  | 50000 muertes con honor                                                        |
 | 870  | 100000 muertes con honor                                                       |
 | 871  | ¡Adelante, Almirante!                                                          |
@@ -594,7 +594,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 882  | Riendas de caballo de guerra ígneo                                             |
 | 883  | Riendas del Lord Cuervo                                                        |
 | 884  | Halcón zancudo blanco presto                                                   |
-| 885  | Cenizas de Al\'ar                                                              |
+| 885  | Cenizas de Al'ar                                                               |
 | 886  | Draco abisal presto                                                            |
 | 887  | Draco abisal despiadado                                                        |
 | 888  | Draco abisal vengativo                                                         |
@@ -609,7 +609,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 898  | Sobre alas abisales                                                            |
 | 899  | Qué guay, Kurenai                                                              |
 | 900  | El zar de Esporaggar                                                           |
-| 901  | Mag\'har de Draenor                                                            |
+| 901  | Mag'har de Draenor                                                             |
 | 902  | Oficial jefe Exaltado                                                          |
 | 903  | Shattrath dividida                                                             |
 | 905  | Superar al Viejo Barlo                                                         |
@@ -725,7 +725,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1065 | Veces que has hecho /saludar                                                   |
 | 1066 | Veces que has hecho /jaja                                                      |
 | 1067 | Veces que has tocado el violín más pequeño del mundo                           |
-| 1068 | Muertes de Keli\'dan el Ultrajador (El Horno de Sangre)                        |
+| 1068 | Muertes de Keli'dan el Ultrajador (El Horno de Sangre)                         |
 | 1069 | Muertes del príncipe-nexo Shaffar (Tumbas de maná)                             |
 | 1070 | Muertes del cazador de Época (La Fuga de Durnholde)                            |
 | 1071 | Muertes de Quagmirran (Recinto de los Esclavos)                                |
@@ -739,27 +739,27 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1079 | Muertes de Pathaleon el Calculador (El Mechanar)                               |
 | 1080 | Muertes del disidente de distorsión (El Invernáculo)                           |
 | 1081 | Muertes del presagista Cieloriss (El Arcatraz)                                 |
-| 1082 | Muertes de Kael\'thas Caminante del Sol (Bancal del Magister)                  |
+| 1082 | Muertes de Kael'thas Caminante del Sol (Bancal del Magister)                   |
 | 1083 | Muertes del príncipe Malchezaar (Karazhan)                                     |
-| 1084 | Muertes de Zul\'jin (Zul\'Aman)                                                |
+| 1084 | Muertes de Zul'jin (Zul'Aman)                                                  |
 | 1085 | Muertes de Gruul (Guarida de Gruul)                                            |
 | 1086 | Muertes de Magtheridon (Guarida de Magtheridon)                                |
 | 1087 | Muertes de Lady Vashj (Caverna Santuario Serpiente)                            |
-| 1088 | Muertes de Kael\'thas Caminante del Sol (Castillo Tempestad)                   |
+| 1088 | Muertes de Kael'thas Caminante del Sol (Castillo Tempestad)                    |
 | 1089 | Muertes de Illidan Tempestira (El Templo Oscuro)                               |
-| 1090 | Muertes de Kil\'jaeden (Meseta de La Fuente del Sol)                           |
+| 1090 | Muertes de Kil'jaeden (Meseta de La Fuente del Sol)                            |
 | 1091 | Muertes de Edwin VanCleef (Minas de la Muerte)                                 |
 | 1092 | Muertes del archimago Arugal (Castillo de Colmillo Oscuro)                     |
 | 1093 | Muertes del Comandante Escarlata Mograine (Mon. Escarlata)                     |
-| 1094 | Muertes del jefe Ukorz Cabellarena (Zul\'Farrak)                               |
+| 1094 | Muertes del jefe Ukorz Cabellarena (Zul'Farrak)                                |
 | 1095 | Muertes del Emperador D. Thaurissan (Prof. de Roca Negra)                      |
 | 1096 | Muertes del General Drakkisath (Cumbre de Roca Negra)                          |
 | 1097 | Muertes del Barón Osahendido (Stratholme)                                      |
 | 1098 | Muertes de Onyxia (Guarida de Onyxia)                                          |
 | 1099 | Muertes de Ragnaros (Núcleo de Magma)                                          |
 | 1100 | Muertes de Nefarian (Guarida de Alanegra)                                      |
-| 1101 | Muertes de C\'Thun (Templo de Ahn\'Qiraj)                                      |
-| 1102 | Muertes de Hakkar (Zul\'Gurub)                                                 |
+| 1101 | Muertes de C'Thun (Templo de Ahn'Qiraj)                                        |
+| 1102 | Muertes de Hakkar (Zul'Gurub)                                                  |
 | 1103 | Lich King: Mazmorras completadas (5 j.) (jefe final asesinado)                 |
 | 1104 | Lich King: Bandas completadas (10 j.) (jefe final asesinado)                   |
 | 1106 | Muertes en el Ojo de la Tormenta                                               |
@@ -787,7 +787,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1161 | Choca esos cinco: 2200                                                         |
 | 1162 | Una racha mejor                                                                |
 | 1164 | Todo cuenta                                                                    |
-| 1165 | Mi bolsa es \'\'gigantesca\'\'                                                 |
+| 1165 | Mi bolsa es ''gigantesca''                                                     |
 | 1166 | El que despoja manda                                                           |
 | 1167 | Maestro del Valle de Alterac                                                   |
 | 1168 | Maestro del Valle de Alterac                                                   |
@@ -829,16 +829,16 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1225 | Pescador de Terrallende                                                        |
 | 1229 | Revivido por druidas                                                           |
 | 1231 | Muertes de Keristrasza (El Nexo)                                               |
-| 1232 | Muertes de Anub\'arak (Azjol-Nerub)                                            |
+| 1232 | Muertes de Anub'arak (Azjol-Nerub)                                             |
 | 1233 | Muertes del Heraldo Volazj (Ahn’kahet: El Antiguo Reino)                       |
-| 1234 | Muertes del profeta Tharon\'ja (Fortaleza de Drak\'Tharon)                     |
+| 1234 | Muertes del profeta Tharon'ja (Fortaleza de Drak'Tharon)                       |
 | 1235 | Muertes de Cianigosa (El Bastión Violeta)                                      |
-| 1236 | Muertes de Gal\'darah (Gundrak)                                                |
+| 1236 | Muertes de Gal'darah (Gundrak)                                                 |
 | 1237 | Muertes de Sjonnir el Afilador (Cámaras de Piedra)                             |
 | 1238 | Muertes de Loken (Cámaras de Relámpagos)                                       |
 | 1239 | Muertes del Guardián-Ley Eregos (El Oculus)                                    |
 | 1240 | Muertes del Rey Ymiron (Pináculo de Utgarde)                                   |
-| 1241 | Derrotas de Mal\'Ganis (Cavernas del Tiempo: Stratholme)                       |
+| 1241 | Derrotas de Mal'Ganis (Cavernas del Tiempo: Stratholme)                        |
 | 1242 | Muertes de Ingvar el Desvalijador (Fortaleza de Utgarde)                       |
 | 1243 | Los peces no dejan huellas                                                     |
 | 1244 | Erudito                                                                        |
@@ -859,7 +859,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1264 | Tundra Boreal                                                                  |
 | 1265 | Cementerio de Dragones                                                         |
 | 1266 | Colinas Pardas                                                                 |
-| 1267 | Zul\'Drak                                                                      |
+| 1267 | Zul'Drak                                                                       |
 | 1268 | Cuenca de Sholazar                                                             |
 | 1269 | Las Cumbres Tormentosas                                                        |
 | 1270 | Corona de Hielo                                                                |
@@ -873,7 +873,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1279 | Flirtear con el desastre                                                       |
 | 1280 | Flirtear con el desastre                                                       |
 | 1281 | El resplandor rojo del cohete                                                  |
-| 1282 | Tra-la-la-la-Ogri\'la                                                          |
+| 1282 | Tra-la-la-la-Ogri'la                                                           |
 | 1283 | Maestro de mazmorra clásico                                                    |
 | 1284 | Maestro de mazmorras de Terrallende                                            |
 | 1285 | Banda clásica                                                                  |
@@ -910,14 +910,14 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1358 | La Tundra no tiene nada de aburrida                                            |
 | 1359 | El poder del Cementerio de Dragones                                            |
 | 1360 | Maestro cultural de Rasganorte                                                 |
-| 1361 | Muertes de Anub\'Rekhan (Naxxramas 10 j.)                                      |
+| 1361 | Muertes de Anub'Rekhan (Naxxramas 10 j.)                                       |
 | 1362 | Muertes de la Gran Viuda Faerlina (Naxxramas 10 j.)                            |
 | 1363 | Muertes de Maexxna (Naxxramas 10 j.)                                           |
 | 1364 | Muertes de Remendejo (Naxxramas 10 j.)                                         |
 | 1365 | Muertes de Noth el Pesteador (Naxxramas 10 j.)                                 |
 | 1366 | Muertes de Gothik el Cosechador (Naxxramas 10 j.)                              |
 | 1367 | Muertes de Remendejo (Naxxramas 25 j.)                                         |
-| 1368 | Muertes de Anub\'Rekhan (Naxxramas 25 j.)                                      |
+| 1368 | Muertes de Anub'Rekhan (Naxxramas 25 j.)                                       |
 | 1369 | Muertes de Heigan el Impuro (Naxxramas 10 j.)                                  |
 | 1370 | Muertes de Loatheb (Naxxramas 10 j.)                                           |
 | 1371 | Muertes de Grobbulus (Naxxramas 10 j.)                                         |
@@ -926,7 +926,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1374 | Muertes del Instructor Razuvious (Naxxramas 10 j.)                             |
 | 1375 | Muertes de Los Cuatro Jinetes (Naxxramas 10 j.)                                |
 | 1376 | Muertes de Sapphiron (Naxxramas 10 j.)                                         |
-| 1377 | Muertes de Kel\'Thuzad (Naxxramas 10 j.)                                       |
+| 1377 | Muertes de Kel'Thuzad (Naxxramas 10 j.)                                        |
 | 1378 | Muertes de Gluth (Naxxramas 25 j.)                                             |
 | 1379 | Muertes de Gothik el Cosechador (Naxxramas 25 j.)                              |
 | 1380 | Muertes de la Gran Viuda Faerlina (Naxxramas 25 j.)                            |
@@ -939,7 +939,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1387 | Muertes de Noth el Pesteador (Naxxramas 25 j.)                                 |
 | 1388 | Muertes de Thaddius (Naxxramas 25 j.)                                          |
 | 1389 | Muertes de Sapphiron (Naxxramas 25 j.)                                         |
-| 1390 | Muertes de Kel\'Thuzad (Naxxramas 25 j.)                                       |
+| 1390 | Muertes de Kel'Thuzad (Naxxramas 25 j.)                                        |
 | 1391 | Muertes de Malygos (10 j.)                                                     |
 | 1392 | Muertes de Sartharion (Cámara de los Aspectos 10 j.)                           |
 | 1393 | Muertes de Sartharion (Cámara de los Aspectos 25 j.)                           |
@@ -1002,16 +1002,16 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 1502 | Captura rápida                                                                 |
 | 1504 | Muertes de Ingvar el Desvalijador (Fortaleza de Utgarde H.)                    |
 | 1505 | Muertes de Keristrasza (El Nexo H.)                                            |
-| 1506 | Muertes de Anub\'arak (Azjol-Nerub H.)                                         |
-| 1507 | Muertes del Heraldo Volazj (Ahn\'Kahet: El Antiguo Reino H.)                   |
-| 1508 | Muertes del profeta Tharon\'ja (Fortaleza de Drak\'Tharon H.)                  |
+| 1506 | Muertes de Anub'arak (Azjol-Nerub H.)                                          |
+| 1507 | Muertes del Heraldo Volazj (Ahn'Kahet: El Antiguo Reino H.)                    |
+| 1508 | Muertes del profeta Tharon'ja (Fortaleza de Drak'Tharon H.)                    |
 | 1509 | Muertes de Cianigosa (El Bastión Violeta H.)                                   |
-| 1510 | Muertes de Gal\'darah (Gundrak H.)                                             |
+| 1510 | Muertes de Gal'darah (Gundrak H.)                                              |
 | 1511 | Muertes de Sjonnir el Afilador (Cámaras de Piedra H.)                          |
 | 1512 | Muertes de Loken (Cámaras de Relámpagos H.)                                    |
 | 1513 | Muertes del Guardián-Ley Eregos (El Oculus H.)                                 |
 | 1514 | Muertes del Rey Ymiron (Pináculo de Utgarde H.)                                |
-| 1515 | Derrotas de Mal\'Ganis (Cavernas del Tiempo H.: Stratholme)                    |
+| 1515 | Derrotas de Mal'Ganis (Cavernas del Tiempo H.: Stratholme)                     |
 | 1516 | El mejor pescador                                                              |
 | 1517 | Pescador de Rasganorte                                                         |
 | 1518 | Peces pescados                                                                 |
@@ -1325,7 +1325,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 2763 | Campeón Exaltado de Forjaz                                                     |
 | 2764 | Campeón Exaltado de Ventormenta                                                |
 | 2765 | Campeón Exaltado de Orgrimmar                                                  |
-| 2766 | Campeón Exaltado de Sen\'jin                                                   |
+| 2766 | Campeón Exaltado de Sen'jin                                                    |
 | 2767 | Campeón Exaltado de Ciudad de Lunargenta                                       |
 | 2768 | Campeón Exaltado de Cima del Trueno                                            |
 | 2769 | Campeón Exaltado de Entrañas                                                   |
@@ -1341,7 +1341,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 2781 | Campeón de Ventormenta                                                         |
 | 2782 | Campeón de la Alianza                                                          |
 | 2783 | Campeón de Orgrimmar                                                           |
-| 2784 | Campeón de Sen\'jin                                                            |
+| 2784 | Campeón de Sen'jin                                                             |
 | 2785 | Campeón de Ciudad de Lunargenta                                                |
 | 2786 | Campeón de Cima del Trueno                                                     |
 | 2787 | Campeón de Entrañas                                                            |
@@ -1503,7 +1503,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 3137 | Emalon el Vigía de la Tormenta (25 j.)                                         |
 | 3138 | Un fuego no tan amistoso (10 j.)                                               |
 | 3141 | Dos luces en la oscuridad (10 j.)                                              |
-| 3142 | Val\'anyr, Martillo de los antiguos reyes                                      |
+| 3142 | Val'anyr, Martillo de los antiguos reyes                                       |
 | 3157 | Tres luces en la oscuridad (10 j.)                                             |
 | 3158 | Una luz en la oscuridad (10 j.)                                                |
 | 3159 | Solo en la oscuridad (10 j.)                                                   |
@@ -1553,7 +1553,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 3576 | Ahora estamos cocinando                                                        |
 | 3577 | Ahora estamos cocinando                                                        |
 | 3578 | Pavonator                                                                      |
-| 3579 | \'\'¡GUERRA DE COMIDA!\'\'                                                     |
+| 3579 | ''¡GUERRA DE COMIDA!''                                                         |
 | 3580 | Riesgo del peregrino                                                           |
 | 3581 | Riesgo del peregrino                                                           |
 | 3582 | Hora del pavo de Terokkar                                                      |
@@ -1643,10 +1643,10 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 4037 | Victorias sobre los campeones de la facción (Prueba del Gran Cruzado 10 j.)    |
 | 4038 | Victorias sobre los campeones de la facción (Prueba del Cruzado 25 j.)         |
 | 4039 | Victorias sobre los campeones de la facción (Prueba del Gran Cruzado 25 j.)    |
-| 4040 | Muertes de las Gemelas Val\'kyr (Prueba del Cruzado 10 j.)                     |
-| 4041 | Muertes de las Gemelas Val\'kyr (Prueba del Gran Cruzado 10 j.)                |
-| 4042 | Muertes de las Gemelas Val\'kyr (Prueba del Cruzado 25 j.)                     |
-| 4043 | Muertes de las Gemelas Val\'kyr (Prueba del Gran Cruzado 25 j.)                |
+| 4040 | Muertes de las Gemelas Val'kyr (Prueba del Cruzado 10 j.)                      |
+| 4041 | Muertes de las Gemelas Val'kyr (Prueba del Gran Cruzado 10 j.)                 |
+| 4042 | Muertes de las Gemelas Val'kyr (Prueba del Cruzado 25 j.)                      |
+| 4043 | Muertes de las Gemelas Val'kyr (Prueba del Gran Cruzado 25 j.)                 |
 | 4044 | Veces que has completado la Prueba del Cruzado (10 j.)                         |
 | 4045 | Veces que has completado la Prueba del Gran Cruzado (10 j.)                    |
 | 4046 | Veces que has completado la Prueba del Cruzado (25 j.)                         |
@@ -1778,7 +1778,7 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 4648 | Muertes del Consejo de Príncipes de Sangre (Corona de Hielo 10 j.)             |
 | 4649 | Rescates de Valithria Caminasueños (Corona de Hielo 10 j.)                     |
 | 4650 | Muertes del profesor Putricidio (Corona de Hielo 10 j.)                        |
-| 4651 | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo 10 j.)               |
+| 4651 | Muertes de la Reina de Sangre Lana'thel (Corona de Hielo 10 j.)                |
 | 4652 | Muertes de Sindragosa (Corona de Hielo 10 j.)                                  |
 | 4653 | Victorias sobre el Rey Exánime (Corona de Hielo 10 j.)                         |
 | 4654 | Muertes de Lady Susurramuerte (Corona de Hielo heroica 10 j.)                  |
@@ -1807,9 +1807,9 @@ La tabla DBC contiene todos los logros disponibles dentro del juego.
 | 4677 | Muertes del profesor Putricidio (Corona de Hielo heroica 10 j.)                |
 | 4678 | Muertes del profesor Putricidio (Corona de Hielo 25 j.)                        |
 | 4679 | Muertes del profesor Putricidio (Corona de Hielo heroica 25 j.)                |
-| 4680 | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo heroica 10 j.)       |
-| 4681 | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo 25 j.)               |
-| 4682 | Muertes de la Reina de Sangre Lana\'thel (Corona de Hielo heroica 25 j.)       |
+| 4680 | Muertes de la Reina de Sangre Lana'thel (Corona de Hielo heroica 10 j.)        |
+| 4681 | Muertes de la Reina de Sangre Lana'thel (Corona de Hielo 25 j.)                |
+| 4682 | Muertes de la Reina de Sangre Lana'thel (Corona de Hielo heroica 25 j.)        |
 | 4683 | Muertes de Sindragosa (Corona de Hielo 25 j.)                                  |
 | 4684 | Muertes de Sindragosa (Corona de Hielo heroica 10 j.)                          |
 | 4685 | Muertes de Sindragosa (Corona de Hielo heroica 25 j.)                          |
