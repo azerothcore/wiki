@@ -37,7 +37,7 @@ Object's faction, if any. See [FactionTemplate](FactionTemplate)
 | 16    | 0x00000010 | GO\_FLAG\_NOT\_SELECTABLE   | Not selectable (Not even in GM-mode)                                                                                     |
 | 32    | 0x00000020 | GO\_FLAG\_NODESPAWN         | Never despawns. Typical for gameobjects with on/off state (doors for example)                                            |
 | 64    | 0x00000040 | GO\_FLAG\_TRIGGERED         | (GO_FLAG_AI_OBSTACLE) makes the client register the object in something called AIObstacleMgr, unknown what it does       |
-| 128   | 0x00000080 | GO\_FLAG\_FREEZE\_ANIMATION |                                                                                                                          |
+| 128   | 0x00000080 | GO\_FLAG\_FREEZE\_ANIMATION | unused from AzerothCore                                                                                                  |
 | 512   | 0x00000200 | GO\_FLAG\_DAMAGED           | Gameobject has been siege damaged                                                                                        |
 | 1024  | 0x00000400 | GO\_FLAG\_DESTROYED         | Gameobject has been destroyed                                                                                            |
 
