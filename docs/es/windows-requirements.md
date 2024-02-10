@@ -100,7 +100,7 @@
 
     1. [32bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.74.0/boost_1_74_0-msvc-14.2-32.exe/download)
 
-    1. Añada una variable de entorno "System", llamada "BOOST_ROOT" y como valor, ingrese el directorio de instalación de Boost. Por ejemplo: `E:/Programs/boost_1_74_0`. Es importante usar '**/**' y no '**\\**' al momento de señalar el directorio. (Asegurese de no quede un slash al final. (final de la ruta). Si sigue presentado inconvenientes, añada la misma variable de entorno en la sección de variables `USER`, tal como la siguiente imagen)
+    1. Añada una variable de entorno "System", llamada "Boost_ROOT" y como valor, ingrese el directorio de instalación de Boost. Por ejemplo: `E:/Programs/boost_1_74_0`. Es importante usar '**/**' y no '**\\**' al momento de señalar el directorio. (Asegurese de no quede un slash al final. (final de la ruta). Si sigue presentado inconvenientes, añada la misma variable de entorno en la sección de variables `USER`, tal como la siguiente imagen)
 
     <a href="/wiki/images/boost.jpg" target="_blank">
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">
