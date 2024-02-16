@@ -45,9 +45,9 @@ sudo apt install -y gcc-10 g++-10
 sudo apt install -y install libboost1.74-dev
 ```
 
---- 
-/*
-#### Debian 10
+---
+
+#### Debian 10 / Debian 12
 
 {% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
 
@@ -64,8 +64,8 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 ```sh
 apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
 ```
-*/
---- 
+
+---
 
 #### Check your clang version
 

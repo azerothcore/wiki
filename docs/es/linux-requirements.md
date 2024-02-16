@@ -41,9 +41,9 @@ sudo apt install -y gcc-10 g++-10
 sudo apt install -y install libboost1.74-dev
 ```
 
---- 
+---
 
-#### Debian 10
+#### Debian 10 / Debian 12
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
@@ -59,7 +59,7 @@ Recuerda que si eres el usuario `root` no es necesario usar `sudo`.
 apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
 ```
 
---- 
+---
 
 #### Verificar la versión de clang
 
