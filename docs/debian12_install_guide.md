@@ -184,7 +184,8 @@ account set gmlevel a 3 -1
 ## Maintainence
 ### Create Alias Command
 ```bash
-alias acoreupdate='
+touch ~/.bash_aliases
+echo "alias acoreupdate='
 screen -S world -p 0 -X stuff "saveall^m";
 screen -X -S "world" quit;
 git -C ~/azerothcore/modules/mod-anticheat pull;
@@ -193,7 +194,8 @@ cd ~/azerothcore/build;
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static;
 make -j $(nproc) install;
 screen -AmdS world ~/server/bin/worldserver;
-screen -r world;'
+screen -r world;'" > ~/.bash_aliases
+source ~/.bashrc
 ```
 
 - Now we can **save/exit** the worldserver, **pull** the latest changes from GitHub, **build** the updated core, and **restart** the worldserver all with one command.
