@@ -119,10 +119,6 @@ sudo service ssh restart
 ```
 
 ---
-## 5-Minute Break
- - Your **Debian12** server is fully set up and ready for AzerothCore. Crack open a Jolt cola and take a moment to revel in your accomplishments.
-
----
 
 ## AzerothCore Installation
 
@@ -173,8 +169,8 @@ screen -r world
 
 ### Create GM account
 ```bash
-account create a a
-account set gmlevel a 3 -1
+account create USERNAME PASSWORD
+account set gmlevel USERNAME 3 -1
 ```
 
 - **To exit screen:** Ctrl+A -> Ctrl+D
@@ -206,7 +202,7 @@ acoreupdate
 
 ## Finish!
 
-- You and your friends should now be able to connect to the AzerothCore server by setting your realmlist to the public IP address of the Debian12 server. ex: `set realmlist 0.0.0.0`
+- You should now be able to connect to the AzerothCore server by setting your realmlist to the public IP address of the Debian12 server. ex: `set realmlist 0.0.0.0`
 
 ---
 ## Common Problems
@@ -214,7 +210,7 @@ acoreupdate
 #### Auth/Worldserver wont even start.
 - Make sure you [created the .conf files](#Edit-Configs) and matched the password of the [SQL user](#Install-SQL-Database).
 #### Successful login but cant enter the realm.
-- Double check the [realm address.](#Change-Realm-IP)
+- Double check the [realm address.](#Set-Realm-IP)
 
 ---
 ##### Good things to know that this guide does not cover.
@@ -222,9 +218,7 @@ acoreupdate
 - Wordpress registration site & acore-cms plugin SOAP connection.
 - Automated database backups to Google Drive using cron and rclone.
 
-## Credits
-
-### This guide was made possible by...
+## Other Resources
 - [Official AzerothCore Installation Guide](https://www.azerothcore.org/wiki/installation)
-- [heyaapl's DigitalOcean Tutorial](https://www.azerothcore.org/wiki/digital-ocean-video-tutorial)
+- [heyaapl's Debian Tutorial](https://www.azerothcore.org/wiki/digital-ocean-video-tutorial)
 - [Digital Scriptorium's Video](https://www.youtube.com/watch?v=k4i4za1Scgg)
