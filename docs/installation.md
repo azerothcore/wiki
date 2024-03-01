@@ -26,6 +26,8 @@ These are the officially supported and complete ways of installing AzerothCore, 
 
 These guides are made by community members and might not be up-to-date:
 
+- [Debian 12](debian12-install-guide.md)
+
 - [Amazon Web Services](aws-tutorial.md)
 
 - [Digital Ocean droplet](digital-ocean-video-tutorial.md)
