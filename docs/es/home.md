@@ -2,21 +2,13 @@
 redirect_from: "/es"
 ---
 
-# Inicio
+Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/).
 
-Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/) con tecnología de [Drassil/Git-Wiki](https://github.com/Drassil/git-wiki)
-
-Leer en: [English :gb:](../home) [Spanish :es:](home)
+Leer en: [Inglés :gb:](home) [Español :es:](es/home)
 
 ## NOTA IMPORTANTE
 
-**ND: The Spanish guides and translations are not always up-to-date. If something feels off, or you encounter issues, circle back to the English page and you might find it updated.**
-
-**OpenSSL 3.x NO ES SOPORTADO. Utilice la versión que indica la guía de instalación.**
-
-**¡Ubuntu 22.0 y posteriores vienen con OpenSSL 3.x! Si desea utilizar Ubuntu, utilice una versión inferior o compile una versión inferior de OpenSSL**
-
-**El equipo y los propietarios de AzerothCore NO patrocinan ni apoyan en ningún caso los servidores públicos ilegales. Si usted utiliza estos proyectos para ejecutar un servidor público ilegal y no para probar y aprender es su propia elección personal.**
+{% include warning.html content="El equipo y los propietarios de AzerothCore NO patrocinan ni apoyan en ningún caso servidores públicos ilegales. Si utiliza estos proyectos para ejecutar un servidor público ilegal y no para probar y aprender, es su elección personal." %}
 
 ## Empezando
 
@@ -24,34 +16,40 @@ Leer en: [English :gb:](../home) [Spanish :es:](home)
 
 ## Documentación
 
-- [Índice de documentación](documentation-index.md)
+- [Índice de documentación](documentation_index) - Toda la documentación en un solo lugar
+- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Documentación del código
 
-## Descripción General
+## Descripción general
 
-AzerothCore es una solución completa de código abierto para MMO
+AzerothCore es una solución modular y de código abierto completa para el desarrollo de MMO.
 
-### Base Sólida
+### Base sólida
 
-AzerothCore tiene una base fuerte y sólida, fruto de años de desarrollo: se basa en MaNGOS, TrinityCore y SunwellCore.
-Estamos mejorando esta confiabilidad ofreciendo un proyecto que sigue reglas específicas de control de versiones, lo que le permite desarrollarse de la manera correcta.
+AzerothCore tiene una base sólida tras años de desarrollo: se basa en `MaNGOS`, `TrinityCore` y `SunwellCore`.
 
-### Reproducible
+Estamos mejorando esta confiabilidad con desarrollo continuo y reglas estrictas para fusionar el código en la rama maestra.
 
-Nuestro principal objetivo es proporcionar una aplicación de servidor completamente funcional y reproducible. Centraremos nuestras revisiones estables en las experiencias del usuario final, en lugar de seguir patrones de desarrollo estrictos como nuestros predecesores.
-Por supuesto trabajaremos para mejorar el código en cada nueva versión que se encuentre en etapa de desarrollo.
+### Estabilidad
 
-### Código Libre
+Nos aseguramos de que todos los cambios pasen los CI antes de fusionarse en la rama maestra.
 
-Los módulos de AzerothCore se publican bajo GNU AGPL 3.0 y GNU GPL 2.0, ambos licencias son totalmente gratuitos y de código abierto. Creemos en el software libre, amamos la cooperación.
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core-build-nopch.yml"><img alt="Github CI Core Status" src="https://github.com/azerothcore/azerothcore-wotlk/actions/workflows/core-build-nopch.yml/badge.svg?branch=master"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Awindows-build+branch%3Amaster+event%3Apush"><img alt="Github CI Windows Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/windows-build/badge.svg?branch=master&event=push"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Amacos-build+branch%3Amaster+event%3Apush"><img alt="Github CI Mac Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/macos-build/badge.svg?branch=master&event=push"></a>
+<a href="https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Adocker-build+branch%3Amaster+event%3Apush"><img alt="Github CI Docker Status" src="https://github.com/azerothcore/azerothcore-wotlk/workflows/docker-build/badge.svg?branch=master&event=push"></a>
 
-### Probado, Confiable, Actualizado
+### Fuente  de código abierto
 
-SunwellCore, el padre de AzerothCore, había estado trabajando con miles de jugadores durante años. El objetivo de AzerothCore es mantener actualizada esta aplicación de juego, continuando su desarrollo.
+Los nuevos componentes fuente de AzerothCore se publican bajo `GNU AGPL 3.0`. Las fuentes antiguas basadas en `MaNGOS`/`TrinityCore` se publican bajo `GNU GPL 2.0`, ambas licencias son gratuitas y de código abierto.
 
-### Impulsado por la Comunidad
+### Contenido tipo Blizzlike
 
-La principal fortaleza de AzerothCore es su comunidad. Los usuarios pueden ayudarnos mejorando nuestra base de código o simplemente enviando cualquier informe de error. Si quieres contribuir, ¡nos encantaría!
+Nos esforzamos por hacer que todo el contenido del juego sea blizzlike. Por lo tanto, tenemos un alto estándar para las correcciones que se realizan.
 
-### Modular
+### Impulsado por la comunidad
 
-Intentamos que nuestro software sea lo más modular posible, porque el software modular es mucho más fácil de ampliar.
+AzerothCore tiene una comunidad activa de desarrolladores, contribuyentes y usuarios que colaboran, comparten conocimientos y brindan soporte a través de foros, canales de Discord y otras plataformas de comunicación. Si quieres contribuir, ¡nos encantaría!
+
+### Personalización
+
+AzerothCore está diseñado para ser altamente modular, lo que permite a los desarrolladores ampliar y personalizar el juego para adaptarlo a sus preferencias o crear experiencias de juego únicas. Esta flexibilidad permite agregar características, contenido y modificaciones personalizadas. [Leer más...](la-estructura-modular)
