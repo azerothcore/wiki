@@ -4,7 +4,7 @@ redirect_from: "/"
 
 Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/).
 
-Leer en: [Inglés :gb:](home) [Español :es:](es/home)
+Leer en: [Inglés :gb:](home) [Español :es:](home)
 
 ## NOTA IMPORTANTE
 
@@ -12,11 +12,11 @@ Leer en: [Inglés :gb:](home) [Español :es:](es/home)
 
 ## Empezando
 
-- [Guía de instalación](es/installation.md)
+- [Guía de instalación](installation.md)
 
 ## Documentación
 
-- [Índice de documentación](es/documentation-index) - Toda la documentación en un solo lugar
+- [Índice de documentación](documentation-index) - Toda la documentación en un solo lugar
 - [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Documentación del código
 
 ## Descripción general
@@ -52,4 +52,4 @@ AzerothCore tiene una comunidad activa de desarrolladores, contribuyentes y usua
 
 ### Personalización
 
-AzerothCore está diseñado para ser altamente modular, lo que permite a los desarrolladores ampliar y personalizar el juego para adaptarlo a sus preferencias o crear experiencias de juego únicas. Esta flexibilidad permite agregar características, contenido y modificaciones personalizadas. [Leer más...](es/the-modular-structure)
+AzerothCore está diseñado para ser altamente modular, lo que permite a los desarrolladores ampliar y personalizar el juego para adaptarlo a sus preferencias o crear experiencias de juego únicas. Esta flexibilidad permite agregar características, contenido y modificaciones personalizadas. [Leer más...](the-modular-structure)
