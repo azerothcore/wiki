@@ -29,6 +29,7 @@ We don't use many native Electron features so usually you don't have to worry ab
 
 - [**NX**](https://nx.dev/) is the build system to manage the project and keep it modular by diving it into several libraries.
 It was originally born as an extension of the Angular CLI, today NX is a generic to manage all kinds of monorepo projects (also for projects not based on Angular).
+Among several features, we leverage the [affected](https://nx.dev/ci/features/affected) powerful command of NX to run checks (e.g. lint, test, ...) only to the parts of the application that have been modified and to those which depends on them.
 
 ## Testing
 
