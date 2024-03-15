@@ -10,11 +10,11 @@ Keira3 is built upon the following open source web technologies:
 
 - [**TypeScript**](http://www.typescriptlang.org/) is the main language of Keira3. It is a superset of JavaScript. 
 If you know JavaScript and have some basic knowledge of OOP languages like Java and C#, you will feel pretty familiar with TypeScript already.
-Otherwise you might find [this course](https://www.udemy.com/course/understanding-typescript/) helpful.
+Otherwise, you might find [this course](https://www.udemy.com/course/understanding-typescript/) helpful.
 If you don't know JavaScript at all, it would be better to get some basic knowledge first.
 
 - [**Angular**](https://angular.io/). This is the main framework behind Keira3. 
-We absolutely recommend to get familiar with it before getting your hands inside Keira3's code.
+We absolutely recommend getting familiar with it before getting your hands inside Keira3's code.
 If you are looking for a complete Angular course, we can recommend [this one](https://www.udemy.com/course/the-complete-guide-to-angular-2/).
 
 - We use [**SCSS**](https://sass-lang.com/) to style our UI. It's an extension of CSS.
@@ -22,10 +22,13 @@ Knowing the CSS fundamentals is required in order to be able to change the Keira
 SCSS should be quite intuitive for anyone who can understand CSS.
 
 - [**Bootstrap**](https://getbootstrap.com/) is the CSS framework used as a base for Keira3's style.
-You don't have to be a Bootstrap expert, however we recommend to be at least familiar with its [Grid system](https://getbootstrap.com/docs/4.5/layout/grid/) and Utilities like [spacing](https://getbootstrap.com/docs/4.5/utilities/spacing/).
+You don't have to be a Bootstrap expert, however we recommend being at least familiar with its [Grid system](https://getbootstrap.com/docs/5.3/layout/grid/) and Utilities like [spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/).
 
 - [**Electron**](https://electronjs.org/) is the software framework that allows building Desktop apps using web technologies.
 We don't use many native Electron features so usually you don't have to worry about it when developing Keira3.
+
+- [**NX**](https://nx.dev/) is the build system to manage the project and keep it modular by diving it into several libraries.
+It was originally born as an extension of the Angular CLI, today NX is a generic to manage all kinds of monorepo projects (also for projects not based on Angular).
 
 ## Testing
 
@@ -33,14 +36,16 @@ We use [test automation](https://en.wikipedia.org/wiki/Test_automation) in Keira
 
 More specifically, we have:
 
-- **Unit tests**. It's all `*.spec.ts` file, they run with `ng test`. We keep **100% coverage**.
+- **Unit tests**. It's all `*.spec.ts` file, they run with `npm run test`. We keep **100% coverage** and in [this is article](https://medium.com/@borzifrancesco/why-i-set-my-unit-test-coverage-threshold-to-100-4c7138276053) it is explained why this is important.
   This means that if you try to submit untested code, the CI build of your PR will fail. We use the [Angular testing framework](https://angular.io/guide/testing) for it.
 
-- **Integration tests**. It's all the `*.integration.spec.ts` file, they also run with `ng test`, together with the unit tests.
+- **Integration tests**. It's all the `*.integration.spec.ts` file, they also run with `npm run test`, together with the unit tests.
  You can see the integration tests of Keira3 almost like a set of e2e tests, the main difference is that all the DB interactions are mocked.
  The difference between unit tests and integration test is: in unit tests we test units by mocking all their dependencies, while in integration tests we test "big pieces" of Keira3 together (mocking only the DB). Mostly used to test the editors.
+
+- For both our unit and integration tests, we test components by doing Component DOM Testing. Check [this article](https://medium.com/@borzifrancesco/component-dom-testing-in-angular-0d2256414c06) for more information about it.
  
- - **E2E tests**. We have a tiny set of e2e tests based on [Playwright](https://playwright.dev/). For example, to check the sqlite integration. 
+- **E2E tests**. We have a tiny set of e2e tests based on [Playwright](https://playwright.dev/). For example, to check the sqlite integration. 
  The command `npm run e2e` will automatically serve the app and run the e2e tests.
  
  ### Why test automation?
@@ -51,40 +56,39 @@ More specifically, we have:
 
 ## Files structure
 
-Relevant directories:
+The project is entirely based on NX divinding the code into apps and libraries.
 
-- **e2e**: all e2e test cases, isolated from everything else;
+Apps:
 
-- **src/assets**: images and **global** style files (the components' style files are located in `src/app`);
+- **apps/keira-e2e**: all e2e test cases, isolated from everything else;
+- **apps/keira**: the main Angular app that imports code from `libs/*`
 
-- **src/app**: source code of the application as well as the unit and integration tests;
+Libraries:
 
-- **src/app/config**: app configuration files, like routing and library-specific configurations;
+- **libs/features**: source code of the main Keira3 features (each one isolated from the others in different libs). **RULE**: a feature can NOT import anything from another feature.
+If something is meant to be shared across features, then it must be placed under `libs/shared`;
 
-- **src/app/features**: source code of the main Keira3 features (each one isolated from the others). **RULE**: a feature can NOT import anything from another feature.
-If something is meant to be shared across features, then it must be placed under `src/app/shared`;
+- **libs/main**: libraries of components that don't belong to a specific feature, yet they are isolated. For example, the main wrapper component `MainWindowComponent`, the Sidebar, the Login window, etc...
 
-- **src/app/main**: components that don't belong to a specific feature, yet they are isolated. For example, the root component `AppComponent`, the Sidebar, the Login window, etc...
-
-- **src/app/shared**: all kinds of utilities, modules, components, services, abstract classes, testing utilities, etc... that **are meant to be used by more than 1 feature**;
+- **libs/shared**: all kinds of utilities, modules, components, services, abstract classes, testing utilities, etc...
 
 ## Architecture design and fundamentals
 
 Keira3 code is structured using [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) with techniques like [inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) and [generic types](https://www.typescriptlang.org/docs/handbook/generics.html) to maximise code reuse.
 
-Inside the directory `src/app/shared/abstract` there is a collection of abstract classes that are meant to be extended by the concrete Angular [Components](https://angular.io/guide/architecture-components) and [Services](https://angular.io/guide/architecture-services) which will implement the Keira3 features.
+Inside the directory `libs/shared/base-abstract-classes` there is a collection of abstract classes that are meant to be extended by the concrete Angular [Components](https://angular.io/guide/architecture-components) and [Services](https://angular.io/guide/architecture-services) which will implement the Keira3 features.
 
 *If you are not familiar with the terminology used so far, please check the above hyperlinks before proceeding.*
 
-Keira3 is [**modular**](https://en.wikipedia.org/wiki/Modular_programming), you can see it as a collection of features and shared utilities that are organised into [Angular Modules](https://angular.io/guide/architecture-modules).
+Keira3 is [**modular**](https://en.wikipedia.org/wiki/Modular_programming), you can see it as a collection of features and shared utilities that are organised into [NX apps and libraries](https://nx.dev/concepts/more-concepts/applications-and-libraries).
 
 ## Keira3 terminology and conventions
 
-Typically, Keira3 features are caraterised by the following elements.
+Typically, Keira3 features are characterised by the following elements.
 
 ### Table types
 
-All the definitions of the AzerothCore DB tables are defined in Keira3 inside `src/app/shared/types`.
+All the definitions of the AzerothCore DB tables are defined in Keira3 inside `libs/shared/acore-world-model`.
 
 If you want to create a new editor, you have to first create its definition there.
 
@@ -181,7 +185,7 @@ All you have to do to implement such selector is first definying the list values
 
 ![image](https://user-images.githubusercontent.com/75517/118694016-e7eaae00-b80b-11eb-8701-bc59c80ec3bd.png)
 
-All the options are located in `src/app/shared/constants/options` so you just need to create a new file like the above.
+All the options are located in `libs/shared/acore-world-model/src/options` so you just need to create a new file like the above.
 
 You then need to import the array of options, in this case `EXPANSIONS`, in the `.ts` file of your component and declare it as `PUBLIC READONLY` in order to make it available for the component's template:
 
@@ -207,11 +211,11 @@ The `FlagsSelectorBtnComponent` is another very useful reusable component which 
 
 Let's see, for example, how the field `dynamicflags` of `creature_template` is implemented.
 
-First you need to define the the list of (bit) values by creating an array of `Flag`:
+First you need to define the list of (bit) values by creating an array of `Flag`:
 
 ![image](https://user-images.githubusercontent.com/75517/118695616-aeb33d80-b80d-11eb-97cd-a6b7933b632d.png)
 
-All the flag values are located in `src/app/shared/constants/flags` so you can create a new file there, for example `dynamic-flags.ts` in our case.
+All the flag values are located in `libs/shared/acore-world-model/src/flags` so you can create a new file there, for example `dynamic-flags.ts` in our case.
 
 Basically you need to define what's the meaning of every single bit. Don't forge that bits typically start from zero.
 
@@ -240,7 +244,7 @@ This is the result:
 
 There are other selectors that allow the user to select values by doing a search either in the DB or in the DBC contained in the sqlite integrated in Keira3.
 
-You can find their implementations in `src/app/shared/modules/selectors` as well as examples of usage around the app.
+You can find their implementations in `libs/shared/selectors` as well as examples of usage around the app.
 
 ![image](https://user-images.githubusercontent.com/75517/118693136-10be7380-b80b-11eb-9721-081bf1f4128d.png)
 
