@@ -19,7 +19,7 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
 | Field                                    | Type        | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------------------------|-------------|------------|-----|------|---------|-------|---------|
 | [ID](#broadcast_text-ID)                 | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Language](#broadcast_text-Language)     | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [LanguageID](#broadcast_text-Language)   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [MaleText](#broadcast_text-MaleText)     | text        | SIGNED     |     | YES  | NULL    |       |         |
 | [FemaleText](#broadcast_text-FemaleText) | text        | SIGNED     |     | YES  | NULL    |       |         |
 | EmoteID1                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
@@ -28,9 +28,9 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
 | EmoteDelay1                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | EmoteDelay2                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | EmoteDelay3                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| SoundId                                  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| UnkEmoteID                               | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| Type                                     | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| SoundEntriesId                           | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| EmotesID                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Flags                                    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
 
 ### Description of the fields
@@ -41,7 +41,7 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
 
 The unique ID value for the text.
 
-### Language
+### LanguageID
 
 The language in what the text will be broadcasted.
 
@@ -71,11 +71,11 @@ The sounds played when the texts are broadcast.
 
 IDs from SoundEntries.dbc
 
-### UnkEmoteID
+### EmotesID
 
 An emote.
 
-### Type
+### Flags
 
  
 
