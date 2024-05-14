@@ -7,7 +7,7 @@
 
 ## Required software
 
-See [Requirements](windows-core-installation.md) before you continue.
+See [Requirements](windows-requirements.md) before you continue.
 
 ## Pulling & Compiling the source
 
