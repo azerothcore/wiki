@@ -10,6 +10,8 @@ This DBC contains Summon Properties (EffectMiscValueB) for Spell Effect SPELL_EF
 
 **Version is : 3.3.5a**
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 **Structure**
 
 | Field                | Type | Attributes | Key | Null | Default | Extra | Comment                                                                          |

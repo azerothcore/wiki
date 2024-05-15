@@ -6,6 +6,8 @@ redirect_from: "/Languages"
 
 [`Back-to:DBC`](dbc-index.md)
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 **DBC Structure - For Version 3.3.5a**
 
 This DBC contains languages that can be used in texts. The player must have competence in this language to understand what is written.

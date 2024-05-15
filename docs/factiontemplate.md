@@ -12,6 +12,8 @@ This DBC contains information on all of the individual factions. A faction entry
 
 **IMPORTANT: These values are only used for the [creature\_template](creature_template) and [gameobject\_template](gameobject\_template) tables.**
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 ## **Structure**
 
 | Field Nb | Name                                     | Type             |
