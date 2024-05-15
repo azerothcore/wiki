@@ -8,6 +8,8 @@ redirect_from: "/Holidays"
 
 [`Back-to:DBC`](dbc-index.md)
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 ## Structure
 
 | Column | Field                         | Type    | Notes                                                                              | Extra info                                                                 |

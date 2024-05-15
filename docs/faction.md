@@ -12,6 +12,7 @@ This DBC contains information on all of the base factions. These factions are un
 
 **IMPORTANT:** These values are used for **ALL** tables **EXCEPT** the [creature\_template](creature_template) and [gameobject\_template\_addon](gameobject_template_addon) tables.
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
 
 ## Structure
 

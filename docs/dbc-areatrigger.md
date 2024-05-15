@@ -12,6 +12,8 @@ This DBC contains information about the triggers of the in-game areas.
 
 **Version is : 3.3.5a**
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 ## Structure
 
 

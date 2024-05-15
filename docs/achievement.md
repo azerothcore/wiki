@@ -9,8 +9,10 @@ redirect_from: "/Achievement"
 **Achievement.dbc**
 
 This DBC contains all achievements.
-
+    
  **Version is : 3.3.5a**
+
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
 
 ## Structure
 

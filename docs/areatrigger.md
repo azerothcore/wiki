@@ -6,6 +6,8 @@
 
 This table contains trigger points for events in certain coordinates in the maps.
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)
+
 **Structure**
 
 | Field       | Type  | Attributes | Key | Null | Default | Extra          | Comment                                              |
