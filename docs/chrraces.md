@@ -6,6 +6,8 @@ This DBC contains all possible races, some of which are unused and unavailable t
 
 **Version is : 3.3.5a**
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 ### Structure
 
 | Column | Field                   | Type         | Notes                                                                                |

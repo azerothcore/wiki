@@ -7,7 +7,10 @@ redirect_from: "/TotemCategory"
 [`Back-to:DBC`](dbc-index.md)
 
 **TotemCategory.dbc**
+
 **Version is : 3.3.5a**
+
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
 
 ## Structure
 

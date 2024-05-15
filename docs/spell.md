@@ -13,6 +13,8 @@ These values are used by the core and a few spell\_\* tables.
 
 **Version 3.3.5**
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 ## **Structure**
 
 | ID  | Name                          | Type   |

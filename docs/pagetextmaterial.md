@@ -12,6 +12,8 @@ This DBC contains material used to display a gossip window for quest or page tex
 
 **Version is : 3.1.3**
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+
 ## Structure
 
 | Column | Field   | Type    |
