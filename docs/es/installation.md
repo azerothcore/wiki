@@ -12,7 +12,7 @@ Existen diferentes formas de instalar AzerothCore. Escoja solo **UNA**.
 
 Estas son las formas oficiales, con soporte y completas para instalar AzerothCore para cualquier propósito.
 
-- [Instalación clásica de Azerothcore (Windows, Linux, macOS)](#azerothcore-classic-setup) - la forma tradicional de instalar AzerothCore. Probada, recomendada para todos los sistemas operativos para todos los propósitos. Seguir este proceso ilustra de una mejor forma cómo está estructurado AzerothCore. Encontrará más información más adelante en esta página. 
+- [Instalación clásica de Azerothcore (Windows, Linux, macOS)](classic-installation.md) - la forma tradicional de instalar AzerothCore. Probada, recomendada para todos los sistemas operativos para todos los propósitos. Seguir este proceso ilustra de una mejor forma cómo está estructurado AzerothCore. Encontrará más información más adelante en esta página. 
 
 - [Instalación mediante Docker](install-with-docker.md) - un proceso de instalación simplificado, basado en Docker.
 

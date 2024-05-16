@@ -1,49 +1,49 @@
-# Classic Installation
+# Instalación clásica
 
-| Installation Guide | |
+| Guía de instalación | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation](installation.md) | [Step 1: Requirements >>](requirements.md) |
+| Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
+| [<< Comienza: Guía de instalación](installation.md) | [Paso 1: Requirements >>](requirements.md) |
 
-Every step of the guide is divided in three tabs regarding different operating systems (Linux, macOS and Windows).
+Cada paso de la guía está dividido en tres pestañas relacionadas con diferentes sistemas operativos (Linux, macOS y Windows).
 
-The guide has been divided into 8 steps, to make it more readable:
+La guía se ha dividido en 8 pasos, para hacerla más legible:
 
-1. [Requirements](requirements.md)
+1. [Requisitos](requirements.md)
 
-2. [Core Installation](core-installation.md)
+2. [Instalación Principal](core-installation.md)
 
-3. [Server Setup](server-setup.md)
+3. [Configuración del Servidor](server-setup.md)
 
-4. [Database Installation](database-installation.md)
+4. [Instalación de la Base de Datos](database-installation.md)
 
-5. [Networking](networking.md)
+5. [Red](networking.md)
 
-6. [Final Server Steps](final-server-steps.md)
+6. [Pasos finales](final-server-steps.md)
 
-7. [Keeping the Server Up-to-Date](keeping-the-server-up-to-date.md)
+7. [Mantener el servidor actualizado](keeping-the-server-up-to-date.md)
 
-8. [Client Setup](client-setup.md)
+8. [Configuración del Cliente](client-setup.md)
 
-Each step can be read independently or you can read them neatly in order, to gradually get into it and better understand it all.
+Cada paso se puede leer de forma independiente o puedes leerlos ordenadamente en orden, para ir entrando poco a poco en él y entenderlo mejor.
 
-{% include tip.html content="If this is your first time installing AzerothCore we recommend that you read every step carefully!" %}
+{% include tip.html content="Si es la primera vez que instalas AzerothCore, ¡te recomendamos que leas cada paso con atención!" %}
 
 <br>
 
-## Help
+## Ayuda
 
-If you are still having problems, check:
+Si sigue teniendo inconvenientes, revise:
 
-* [FAQ](faq.md)
+* [Preguntas frecuentes](faq.md)
 
-* [Common Errors](common-errors.md)
+* [Errores Comunes](common-errors.md)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [Cómo solicitar ayuda](how-to-ask-for-help.md)
 
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
+* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
 
-| Installation Guide | |
+| Guía de instalación | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation](installation.md) | [Step 1: Requirements >>](requirements.md) |
+| Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
+| [<< Comienza: Installation](installation.md) | [Paso 1: Requirements >>](requirements.md) |
