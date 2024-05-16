@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Comienza: Guía de instalación](installation.md) | [Paso 1: Requirements >>](requirements.md) |
+| [<< Comienza: Guía de instalación](installation.md) | [Paso 1: Requisitos >>](requirements.md) |
 
 Cada paso de la guía está dividido en tres pestañas relacionadas con diferentes sistemas operativos (Linux, macOS y Windows).
 
@@ -46,4 +46,4 @@ Si sigue teniendo inconvenientes, revise:
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Comienza: Installation](installation.md) | [Paso 1: Requirements >>](requirements.md) |
+| [<< Comienza: Installation](installation.md) | [Paso 1: Requisitos >>](requirements.md) |
