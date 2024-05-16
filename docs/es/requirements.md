@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Comienza: Guía de instalación](installation.md) | [Paso 2: Instalación del núcleo >>](core-installation.md) |
+| [<< Comienza: Guía de instalación](classic-installation.md) | [Paso 2: Instalación del núcleo >>](core-installation.md) |
 
 [Requisitos de Linux](linux-requirements.md)
 
@@ -28,4 +28,4 @@ Si sigue teniendo problemas, compruebe:
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Comienza: Guía de instalación](installation.md) | [Paso 2: Instalación del núcleo >>](core-installation.md) |
+| [<< Comienza: Guía de instalación](classic-installation.md) | [Paso 2: Instalación del núcleo >>](core-installation.md) |
