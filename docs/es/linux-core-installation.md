@@ -3,11 +3,11 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Instalación del Servidor >>](server-setup.md) |
+| [<< Paso 1: Requisitos](linux-requirements.md) | [Paso 3: Instalación del Servidor >>](server-setup.md) |
 
 ## Software requerido
 
-Véase [Requisitos](requirements.md) antes de continuar.
+Véase [Requisitos](linux-requirements.md) antes de continuar.
 
 ## Obtener el código fuente
 
@@ -99,4 +99,4 @@ If you are still having problems, check:
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: Requirements](linux-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |

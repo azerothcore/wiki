@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](installation.md) | [Paso 2: Instalación del núcleo >>](core-installation.md) |
+| [<< Inicio: Guía de instalación](classic-installation.md) | [Paso 2: Instalación del núcleo >>](macos-core-installation.md) |
 
 | |
 | :- |
@@ -63,4 +63,4 @@ Si todavía tiene problemas, compruebe:
 | Guía de instalación | |
 | :- | :- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](installation.md) | [Paso 2: Instalación del núcleo >>](core-installation.md) |
+| [<< Inicio: Guía de instalación](classic-installation.md) | [Paso 2: Instalación del núcleo >>](macos-core-installation.md) |
