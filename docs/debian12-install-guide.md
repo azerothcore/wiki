@@ -147,7 +147,7 @@ make -j $(nproc) install
 ```bash
 cp -n ~/server/etc/authserver.conf.dist ~/server/etc/authserver.conf
 cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
-sudo sed -i -E 's/DataDir = "."/DataDir = "\~\/server\/data"/' ~/server/etc/worldserver.conf
+sudo sed -i -E 's|^DataDir = .*$|DataDir = "../data"|' ~/server/etc/worldserver.conf
 sudo sed -i -E 's/= "127.0.0.1;3306;acore;acore;/= "127.0.0.1;3306;acore;NEWPASSWORD;/' ~/server/etc/*.conf
 ```
 - Change **NEWPASSWORD** to the password you used earlier during the [SQL database setup](#Install-SQL-Database).
