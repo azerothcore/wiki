@@ -254,7 +254,10 @@ I can't generate my CMake files, I get:
 ```
 Could NOT find Boost (missing: system filesystem program_options iostreams regex) (found suitable version "1.74.0", minimum required is "1.70")
 ```
-Locate your Boost folder
+
+Make sure the version you have installed is supported.
+
+If you did not download precompiled boost, locate your Boost folder
 1. Run the Bootstrap.bat file
 1. Run the b2.exe file 
 
