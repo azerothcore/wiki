@@ -71,7 +71,3 @@ Remember to:
 
 If you have encountered an issue and managed to solve it yourself, post the solution to help others!
 
-- https://stackoverflow.com/questions/54504153/clang-with-clion-cannot-get-compiler-information
-- https://stackoverflow.com/questions/56677483/use-typescripttolua-with-azerothcore-and-eluna-lua-engine
-- https://stackoverflow.com/questions/64948325/undefined-symbols-for-architecture-x86-64-when-writing-unit-tests-with-gtest-and
-- https://stackoverflow.com/questions/66723604/get-all-accounts-linked-to-a-certain-account-via-ip
