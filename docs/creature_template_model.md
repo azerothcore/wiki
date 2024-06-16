@@ -32,15 +32,15 @@ This table describes which model is assigned to a specific creature.
 
 ### Idx
 
-Index 0-3
+Index 0-3.
 
 ### CreatureDisplayID
 
-DisplayID from CreatureDisplayInfo.dbc
+DisplayID from CreatureDisplayInfo.dbc.
 
 ### DisplayScale
 
-Modifies the model scale
+Modifies the model scale.
 
 ### Probability
 
