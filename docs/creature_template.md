@@ -16,10 +16,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [difficulty_entry_3](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [KillCredit1](#killcredit1)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [KillCredit2](#killcredit2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [modelid1](#modelidx)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [modelid2](#modelidx)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [modelid3](#modelidx)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [modelid4](#modelidx)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
 | [name](#name)                                      | char(100)          | NO   | MUL | 0       |       |                                      |
 | [subname](#subname)                                | char(100)          | YES  |     | (NULL)  |       |                                      |
 | [IconName](#iconname)                              | char(100)          | YES  |     | (NULL)  |       |                                      |
@@ -72,7 +68,7 @@ This table contains the description of creatures. Each spawned creature is an in
 | [RegenHealth](#regenhealth)                        | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
 | [mechanic_immune_mask](#mechanicimmunemask)        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [spell_school_immune_mask](#spellschoolimmunemask) | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [flags_extra](#flags_extra)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [flags_extra](#flagsextra)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [ScriptName](#scriptname)                          | char(64)           | NO   |     |         |       |                                      |
 | [VerifiedBuild](#verifiedbuild)                    | SMALLINT           | YES  |     | 0       |       |                                      |
 
@@ -113,10 +109,6 @@ If this is a kill credit template -- one that is a dummy template that is used w
 #### KillCredit2
 
 If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the second [entry](#entry) of the creature that could be killed to give quest credit. If more than two creatures can be killed and count toward a single objective, an smart or C++ script will be required.
-
-#### modelidx
-
-A random graphical model that the client applies on this creature. Of course if you specify only one modelid and the rest will be equal to 0, model you have set won't be chosen randomly. This is a [creature_model_info.modelid](creature_model_info#modelid)
 
 #### name
 
