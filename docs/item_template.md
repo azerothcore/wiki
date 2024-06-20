@@ -485,7 +485,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 | 16         | 0x010       | ITEM_FLAG_DEPRECATED (NOT IMPLEMENTED) - Deprecated Item                                                                                                         |
 | 32         | 0x020       | Item can not be destroyed, except by using spell (item can be reagent for spell)                                                                                 |
 | 64         | 0x040       | ITEM_FLAG_PLAYERCAST (NOT IMPLEMENTED) - Item's spells are castable by players                                                                                   |
-| 128        | 0x080       | No default 30 seconds cooldown when equipped (for "On use" items)                                                                                                |
+| 128        | 0x080       | ITEM_FLAG_NO_EQUIP_COOLDOWN                                                                                                                                      |
 | 256        | 0x0100      | ITEM_FLAG_MULTI_LOOT_QUEST (NOT IMPLEMENTED)                                                                                                                     |
 | 512        | 0x0200      | Wrapper : Item can wrap other items                                                                                                                              |
 | 1024       | 0x0400      | ITEM_FLAG_USES_RESOURCES (NOT IMPLEMENTED)                                                                                                                       |
