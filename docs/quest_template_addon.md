@@ -138,3 +138,5 @@ This field is a bitmask and is for controlling server side quest functions. Bliz
 - 8: Only used for Dungeon Finder quests
 - 16: Makes the quest monthly
 - 32: The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
+- 64: Makes quest not share rewarded reputation with other allied factions
+- 128: Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed quests that are 'completed' right from the beginning.
