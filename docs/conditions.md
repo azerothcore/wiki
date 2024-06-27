@@ -953,18 +953,9 @@ and the other is just using an emote to appear dead. </p></td>
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-<br />
-<br />
-CONDITION_HP_VAL</td>
-<td><br />
-<br />
-<br />
-37</td>
-<td><br />
-<br />
-<br />
-HP value</td>
+<td>CONDITION_HP_VAL</td>
+<td>37</td>
+<td>HP value</td>
 <td>ComparisionType:
 <ul>
 <li>0 = HP must be equal</li>
@@ -976,14 +967,8 @@ HP value</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><br />
-<br />
-<br />
-CONDITION_HP_PCT</td>
-<td><br />
-<br />
-<br />
-38</td>
+<td>CONDITION_HP_PCT</td>
+<td>38</td>
 <td>Percentage of max HP</td>
 <td>ComparisionType:
 <ul>
@@ -1003,19 +988,15 @@ CONDITION_HP_PCT</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><br />
-CONDITION_IN_WATER</td>
-<td><br />
-40</td>
+<td>CONDITION_IN_WATER</td>
+<td>40</td>
 <td>Always 0 - Use NegativeCondition and the following settings:NegativeCondition = 0 If target needs to be on landNegativeCondition = 1 If target needs to be in water</td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><p><br />
-CONDITION_STAND_STATE</p></td>
-<td><br />
-42</td>
+<td>CONDITION_STAND_STATE</td>
+<td>42</td>
 <td>stateType (exact or any): 0 = <strong>Exact</strong> state used in ConditionValue2 1 = <strong>Any</strong> type of state in ConditionValue2</td>
 <td>Exact stand state, or generic state (stand / sit), depending on value 10 = Standing 1 = Sitting</td>
 <td>Always 0</td>
