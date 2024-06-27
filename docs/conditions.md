@@ -1069,10 +1069,24 @@ CONDITION_STAND_STATE</p></td>
 <td>Quest Objective Count</td>
 </tr>
 <tr class="even">
-<td><p>CONDITION_MAX</p></td>
+<td><p>CONDITION_DIFFICULTY_ID</p></td>
 <td>49</td>
-<td><br />
-</td>
+<td>Difficulty</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<tr class="odd">
+<td><p>CONDITION_QUEST_SATISFY_EXCLUSIVE</p></td>
+<td>101</td>
+<td>quest_id</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<tr class="even">
+<td><p>CONDITION_HAS_AURA_TYPE</p></td>
+<td>102</td>
+<td>aura_type</td>
+<td>Always 0</td>
+<td>Always 0</td>
+</tr>
 <td><br />
 </td>
 <td><br />
