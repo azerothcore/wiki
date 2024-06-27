@@ -1086,7 +1086,6 @@ CONDITION_STAND_STATE</p></td>
 <td>aura_type</td>
 <td>Always 0</td>
 <td>Always 0</td>
-</tr>
 <td><br />
 </td>
 <td><br />
