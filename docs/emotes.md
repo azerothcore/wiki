@@ -8,6 +8,7 @@ redirect_from: "/Emotes"
 
 This DBC contains emotes which can be used by NPCs.
 
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
 
 ## Structure
 

@@ -3,30 +3,30 @@
 This is a streamlined guide for installing AzerothCore to a Debian 12 server, securing it, and enabling one-command maintenance from your Windows PC.
 ## Table of Contents
 
-1. [Requirements](#Requirements)
-2. [Debian Setup](#Debian-Setup)
-    1. [First Login](#First-Login)
-    2. [Change Default Password](#Change-Default-Password)
-    3. [Change Default SSH Port](#Change-Default-SSH-Port)
-    4. [Setup Firewall](#Setup-Firewall)
-    5. [Get Dependencies](#Get-Dependencies)
-    6. [Install SQL Database](#Install-SQL-Database)
-3. [SSH Setup](#SSH-Setup)
-    1. [Key Generation](#Key-Generation)
-    2. [Key-Based Login Setup](#Key-based-Login-Setup)
-    3. [Disable Password Logins](#Disable-Password-Logins)
-4. [AzerothCore Installation](#AzerothCore-Installation)
-    1. [Clone Repository](#Clone-Repository)
-    2. [Get Data Files](#Get-Data-Files)
-    3. [Add Anticheat Module](#Add-Anticheat-Module)
-    4. [Build Core](#Build-Core)
-    5. [Edit Configs](#Edit-Configs)
-    6. [Set Realm IP](#Set-Realm-IP)
-    7. [Launch Server](#Launch-Server)
-    8. [Create GM account](#Create-GM-account)
-5. [Maintenance](#Maintenance)
-    1. [Create Alias Command](#Create-Alias-Command)
-    2. [Update AzerothCore](#Update-AzerothCore)
+1. [Requirements](#requirements)
+2. [Debian Setup](#debian-setup)
+    1. [First Login](#first-login)
+    2. [Change Default Password](#change-default-password)
+    3. [Change Default SSH Port](#change-default-ssh-port)
+    4. [Setup Firewall](#setup-firewall)
+    5. [Get Dependencies](#get-dependencies)
+    6. [Install SQL Database](#install-sql-database)
+3. [SSH Setup](#ssh-setup)
+    1. [Key Generation](#key-generation)
+    2. [Key-Based Login Setup](#key-based-login-setup)
+    3. [Disable Password Logins](#disable-password-logins)
+4. [AzerothCore Installation](#azerothcore-installation)
+    1. [Clone Repository](#clone-repository)
+    2. [Get Data Files](#get-data-files)
+    3. [Add Anticheat Module](#add-anticheat-module)
+    4. [Build Core](#build-core)
+    5. [Edit Configs](#edit-configs)
+    6. [Set Realm IP](#set-realm-ip)
+    7. [Launch Server](#launch-server)
+    8. [Create GM Account](#create-gm-account)
+5. [Maintenance](#maintenance)
+    1. [Create Alias Command](#create-alias-command)
+    2. [Update AzerothCore](#update-azerothcore)
 
 ## Requirements
 
@@ -147,10 +147,11 @@ make -j $(nproc) install
 ```bash
 cp -n ~/server/etc/authserver.conf.dist ~/server/etc/authserver.conf
 cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
-sudo sed -i -E 's/DataDir = "."/DataDir = "\~\/server\/data"/' ~/server/etc/worldserver.conf
+sudo sed -i -E 's|^DataDir = .*|DataDir = "/home/USERNAME/server/data"|' ~/server/etc/worldserver.conf
 sudo sed -i -E 's/= "127.0.0.1;3306;acore;acore;/= "127.0.0.1;3306;acore;NEWPASSWORD;/' ~/server/etc/*.conf
 ```
-- Change **NEWPASSWORD** to the password you used earlier during the [SQL database setup](#Install-SQL-Database).
+- Change **USERNAME** to your Debian user.
+- Change **NEWPASSWORD** to the password you used earlier during the [SQL database setup](#install-sql-database).
 ### Set Realm IP
 ```bash
 sudo mysql -u root -p
@@ -177,7 +178,7 @@ account set gmlevel USERNAME 3 -1
 - **To kill process:** Ctrl+C
 
 ---
-## Maintainence
+## Maintenance
 ### Create Alias Command
 ```bash
 touch ~/.bash_aliases
@@ -208,9 +209,9 @@ acoreupdate
 ## Common Problems
 
 #### Auth/Worldserver wont even start.
-- Make sure you [created the .conf files](#Edit-Configs) and matched the password of the [SQL user](#Install-SQL-Database).
+- Make sure you [created the .conf files](#edit-configs) and matched the password of the [SQL user](#install-sql-database).
 #### Successful login but cant enter the realm.
-- Double check the [realm address.](#Set-Realm-IP)
+- Double check the [realm address.](#set-realm-ip)
 
 ---
 ##### Good things to know that this guide does not cover.

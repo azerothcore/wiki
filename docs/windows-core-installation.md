@@ -3,11 +3,11 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: Requirements](windows-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
 
 ## Required software
 
-See [Requirements](requirements.md) before you continue.
+See [Requirements](windows-requirements.md) before you continue.
 
 ## Pulling & Compiling the source
 
@@ -159,4 +159,4 @@ If you are still having problems, check:
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: Requirements](windows-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |

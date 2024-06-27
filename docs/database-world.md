@@ -37,6 +37,7 @@
 - [creature_template](creature_template.md)
 - [creature_template_addon](creature_addon.md)
 - [creature_template_locale](creature_template_locale.md)
+- [creature_template_model](creature_template_model.md)
 - [creature_template_movement](creature_template_movement.md)
 - [creature_template_resistance](creature_template_resistance.md)
 - [creature_template_spell](creature_template_spell.md)

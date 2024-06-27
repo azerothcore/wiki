@@ -3,7 +3,7 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](installation.md) | [Step 2: Core Installation >>](core-installation.md) |
+| [<< Start: Installation Guide](classic-installation.md) | [Step 2: Core Installation >>](macos-core-installation.md) |
 
 | |
 | :- |
@@ -67,4 +67,4 @@ If you are still having problems, check:
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](installation.md) | [Step 2: Core Installation >>](core-installation.md) |
+| [<< Start: Installation Guide](classic-installation.md) | [Step 2: Core Installation >>](macos-core-installation.md) |

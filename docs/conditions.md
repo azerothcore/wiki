@@ -592,18 +592,8 @@ Two conditions with the same SourceType, SourceGroup and SourceEntry but with a
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-<br />
-<br />
-<br />
-<br />
-CONDITION_REPUTATION_RANK</td>
-<td><br />
-<br />
-<br />
-<br />
-<br />
-5</td>
+<td>CONDITION_REPUTATION_RANK</td>
+<td>5</td>
 <td><p><br />
 <br />
 <br />
@@ -672,10 +662,8 @@ Faction template ID from <a href="http://www.azerothcore.org/wiki/Faction">Fact
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-CONDITION_INSTANCE_INFO</td>
-<td><br />
-13</td>
+<td>CONDITION_INSTANCE_INFO</td>
+<td>13</td>
 <td><strong><br />
 entry</strong> (see corresponding source script files for info)</td>
 <td><strong><br />
@@ -693,10 +681,8 @@ data</strong> (see corresponding script source files for more info)</td>
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-CONDITION_CLASS</td>
-<td><br />
-15</td>
+<td>CONDITION_CLASS</td>
+<td>15</td>
 <td>Class mask from <a href="http://www.azerothcore.org/wiki/chrclasses">ChrClasses.dbc</a><br />
 Add flags together for all classes where condition is true.</td>
 <td>Always 0</td>
@@ -784,12 +770,9 @@ Add flags together for all races where condition is true.</td>
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-CONDITION_LEVEL</td>
-<td><br />
-27</td>
-<td><br />
-Player level (1-80 in 3.3.5)</td>
+<td>CONDITION_LEVEL</td>
+<td>27</td>
+<td>Player level (1-80 in 3.3.5)</td>
 <td>Optional: 0 = Level must be equal, 1 = Level must be higher, 2 = Level must be lower,<br />
 3 = Level must be higher or equal, 4 = Level must be lower or equal.</td>
 <td>Always 0</td>
@@ -816,12 +799,8 @@ Player level (1-80 in 3.3.5)</td>
 <td>GoState<br/><br/> 0 = ignore, 1 = Ready, 2 = Not Ready</td>
 </tr>
 <tr class="even">
-<td><br />
-<br />
-CONDITION_OBJECT_ENTRY_GUID</td>
-<td><br />
-<br />
-31</td>
+<td>CONDITION_OBJECT_ENTRY_GUID</td>
+<td>31</td>
 <td><p>TypeID. Available object types:<br />
 3 : TYPEID_UNIT<br />
 4 : TYPEID_PLAYER<br />
@@ -836,12 +815,8 @@ if TypeID = TYPEID_GAMEOBJECT =&gt; Gameobject entry from </a><a href="http://w
 <p>1 - 500k : creature / gameobject GUID</p></td>
 </tr>
 <tr class="odd">
-<td><br />
-<br />
-CONDITION_TYPE_MASK</td>
-<td><br />
-<br />
-32</td>
+<td>CONDITION_TYPE_MASK</td>
+<td>32</td>
 <td><p>TypeMask - a bitmask of following object types:<br />
 0x0008 - TYPEMASK_UNIT (8)<br />
 0x0010 - TYPEMASK_PLAYER (16)<br />
@@ -851,18 +826,9 @@ CONDITION_TYPE_MASK</td>
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-<br />
-<br />
-CONDITION_RELATION_TO</td>
-<td><br />
-<br />
-<br />
-33</td>
-<td><p><br />
-<br />
-<br />
-Target to which relation is checked.<br />
+<td>CONDITION_RELATION_TO</td>
+<td>33</td>
+<td><p>Target to which relation is checked.<br />
 - one of the ConditionTargets available in current <a href="#sourcetypeorreferenceid">SourceType</a></p></td>
 <td><p>RelationType - defines relation of current ConditionTarget to target specified in ConditionValue1.<br />
 0 - RELATION_SELF<br />
@@ -874,24 +840,9 @@ Target to which relation is checked.<br />
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><br />
-<br />
-<br />
-<br />
-<br />
-CONDITION_REACTION_TO</td>
-<td><br />
-<br />
-<br />
-<br />
-<br />
-34</td>
-<td><p><br />
-<br />
-<br />
-<br />
-<br />
-Target to which reaction is checked.<br />
+<td>CONDITION_REACTION_TO</td>
+<td>34</td>
+<td><p>Target to which reaction is checked.<br />
 - one of the ConditionTargets available in current <a href="#sourcetypeorreferenceid">SourceType</a></p></td>
 <td><pre><code>rankMask: This bitmask defines the reaction(s) of the current ConditionTarget
 to the target specified in ConditionValue1 (which are allowed).
@@ -907,25 +858,11 @@ Flags for the reactions are:
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-<br />
-<br />
-<br />
-CONDITION_DISTANCE_TO</td>
-<td><br />
-<br />
-<br />
-<br />
-35</td>
-<td><p><br />
-<br />
-<br />
-Target to which distance is checked<br />
+<td>CONDITION_DISTANCE_TO</td>
+<td>35</td>
+<td><p>Target to which distance is checked<br />
 - one of ConditionTargets available in current <a href="#sourcetypeorreferenceid">SourceType</a></p></td>
-<td><br />
-<br />
-<br />
-Distance.<br />
+<td>Distance.<br />
 Defines distance between current ConditionTarget and target specified in ConditionValue1</td>
 <td><p>ComparisionType:<br />
 0 = distance must be equal to ConditionValue2<br />
@@ -935,14 +872,8 @@ Defines distance between current ConditionTarget and target specified in Conditi
 4 = distance must be equal to or lower than ConditionValue2</p></td>
 </tr>
 <tr class="odd">
-<td><br />
-<br />
-<br />
-CONDITION_ALIVE</td>
-<td><br />
-<br />
-<br />
-36</td>
+<td>CONDITION_ALIVE</td>
+<td>36</td>
 <td>Always 0 - Use NegativeCondition and the following settings:
 <p>NegativeCondition = 0 if target needs to be ALIVE.<br />
 NegativeCondition = 1 if target needs to be DEAD.<br />
@@ -953,18 +884,9 @@ and the other is just using an emote to appear dead. </p></td>
 <td>Always 0</td>
 </tr>
 <tr class="even">
-<td><br />
-<br />
-<br />
-CONDITION_HP_VAL</td>
-<td><br />
-<br />
-<br />
-37</td>
-<td><br />
-<br />
-<br />
-HP value</td>
+<td>CONDITION_HP_VAL</td>
+<td>37</td>
+<td>HP value</td>
 <td>ComparisionType:
 <ul>
 <li>0 = HP must be equal</li>
@@ -976,14 +898,8 @@ HP value</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><br />
-<br />
-<br />
-CONDITION_HP_PCT</td>
-<td><br />
-<br />
-<br />
-38</td>
+<td>CONDITION_HP_PCT</td>
+<td>38</td>
 <td>Percentage of max HP</td>
 <td>ComparisionType:
 <ul>
@@ -1003,19 +919,15 @@ CONDITION_HP_PCT</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><br />
-CONDITION_IN_WATER</td>
-<td><br />
-40</td>
+<td>CONDITION_IN_WATER</td>
+<td>40</td>
 <td>Always 0 - Use NegativeCondition and the following settings:NegativeCondition = 0 If target needs to be on landNegativeCondition = 1 If target needs to be in water</td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
 <tr class="odd">
-<td><p><br />
-CONDITION_STAND_STATE</p></td>
-<td><br />
-42</td>
+<td>CONDITION_STAND_STATE</td>
+<td>42</td>
 <td>stateType (exact or any): 0 = <strong>Exact</strong> state used in ConditionValue2 1 = <strong>Any</strong> type of state in ConditionValue2</td>
 <td>Exact stand state, or generic state (stand / sit), depending on value 10 = Standing 1 = Sitting</td>
 <td>Always 0</td>
@@ -1069,14 +981,25 @@ CONDITION_STAND_STATE</p></td>
 <td>Quest Objective Count</td>
 </tr>
 <tr class="even">
-<td><p>CONDITION_MAX</p></td>
+<td>CONDITION_DIFFICULTY_ID</td>
 <td>49</td>
-<td><br />
-</td>
-<td><br />
-</td>
-<td><br />
-</td>
+<td>Difficulty</td>
+<td>Always 0</td>
+<td>Always 0</td>
+</tr>
+<tr class="odd">
+<td>CONDITION_QUEST_SATISFY_EXCLUSIVE</td>
+<td>101</td>
+<td>quest_id</td>
+<td>Always 0</td>
+<td>Always 0</td>
+</tr>
+<tr class="even">
+<td>CONDITION_HAS_AURA_TYPE</td>
+<td>102</td>
+<td>aura_type</td>
+<td>Always 0</td>
+<td>Always 0</td>
 </tr>
 </tbody>
 </table>

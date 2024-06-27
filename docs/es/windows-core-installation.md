@@ -3,11 +3,11 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
+| [<< Paso 1: Requisitos](windows-requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
 
 ## Software necesario
 
-Consulta [Requisitos](requirements.md) antes de continuar.
+Consulta [Requisitos](windows-requirements.md) antes de continuar.
 
 ## Descarga y compilación del código fuente
 
@@ -160,4 +160,4 @@ fgdfgSi aún tienes problemas, verifica:
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
+| [<< Paso 1: Requisitos](windows-requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
