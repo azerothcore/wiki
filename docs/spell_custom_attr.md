@@ -39,7 +39,7 @@ Spell custom attributes from the enumeration SpellCustomAttributes in SpellInfo
 | SPELL_ATTR0_CU_DIRECT_DAMAGE                 | 256        | 0x00000100 |                                                                       |
 | SPELL_ATTR0_CU_CHARGE                        | 512        | 0x00000200 |                                                                       |
 | SPELL_ATTR0_CU_PICKPOCKET                    | 1024       | 0x00000400 |                                                                       |
-| SPELL_ATTR0_CU_IGNORE_EVADE                  | 2048       | 0x00000800 |                                                                       |
+| SPELL_ATTR0_CU_IGNORE_EVADE                  | 2048       | 0x00000800 | Do not remove the specified aura upon evading                         |
 | SPELL_ATTR0_CU_NEGATIVE_EFF0                 | 4096       | 0x00001000 |                                                                       |
 | SPELL_ATTR0_CU_NEGATIVE_EFF1                 | 8192       | 0x00002000 |                                                                       |
 | SPELL_ATTR0_CU_NEGATIVE_EFF2                 | 16384      | 0x00004000 |                                                                       |
