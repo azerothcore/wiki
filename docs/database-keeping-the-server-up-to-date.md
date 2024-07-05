@@ -5,11 +5,11 @@
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
 | [<< Step 6: Final Server Steps](final-server-steps.md) | [Step 8: Client Setup >>](client-setup.md) |
 
-1. First make sure that your core is [up-to-date](keeping-the-server-up-to-date.md).
-
-If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
-
 ## Automatic Database Updater
+
+First, make sure that your core is [up-to-date](keeping-the-server-up-to-date.md).
+
+If you want to know how the SQL directory works or plan to make custom changes, such as installing a module, we recommend you read [this](sql-directory).
 
 By default, the Worldserver and Authserver will check for, and execute all new files into the database you specified in the config.
 
