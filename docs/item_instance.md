@@ -1,12 +1,12 @@
 # item\_instance
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`item\_instance\` table**
 
 This table holds individual item instance information for all items currently equipped in some kind of character bag or bank, in auction houses, in guild banks or in mails.
 
-**Structure**
+**Table Structure**
 
 | Field                  | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -80,7 +80,7 @@ The number of charges for each of the five possible spellcharges on an item, s
 
 ### enchantments
 
-Enchantments from SpellItemEnchantment.dbc see: [item_instance_enchantments](item_instance_enchantments.md)
+Enchantments from SpellItemEnchantment.dbc see: [item_instance_enchantments](item_instance_enchantments)
 
 ### randomPropertyId
 

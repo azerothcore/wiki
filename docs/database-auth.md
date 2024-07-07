@@ -1,37 +1,34 @@
 # Database Auth
 
 ## A
-- [account](account.md)
-- [account_access](account_access.md)
-- [account_banned](account_banned.md)
-- [account_muted](account_muted.md)
-- [autobroadcast](autobroadcast.md)
+- [account](account)
+- [account_access](account_access)
+- [account_banned](account_banned)
+- [account_muted](account_muted)
+- [autobroadcast](autobroadcast)
 
 ## B
-- [build_info](build_info.md)
+- [build_info](build_info)
 
 ## I
-- [ip_banned](ip_banned.md)
+- [ip_banned](ip_banned)
 
 ## L
-- [logs](logs.md)
-- [logs_ip_actions](logs_ip_actions.md)
+- [logs](logs)
+- [logs_ip_actions](logs_ip_actions)
 
 ## M
 
-- [motd](motd.md)
+- [motd](motd)
 
 ## R
-- [realmcharacters](realmcharacters.md)
-- [realmlist](realmlist.md)
+- [realmcharacters](realmcharacters)
+- [realmlist](realmlist)
 
 ## S
-- [secret_digest](secret_digest.md)
+- [secret_digest](secret_digest)
 
 ## U
-- [updates](updates.md)
-- [updates_include](updates_include.md)
-- [uptime](uptime.md)
-
-## V
-- [version_db_auth](version_db_auth.md)
+- [updates](updates)
+- [updates_include](updates_include)
+- [uptime](uptime)

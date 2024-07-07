@@ -1,12 +1,12 @@
 # mail\_items
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`mail\_items\` table**
 
 This table contains data regarding items from item\_instance which are being sent via email.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type | Attributes | Key | Null | Default | Extra | Comment                            |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |

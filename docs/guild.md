@@ -1,27 +1,27 @@
 # guild
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\` table**
 
 This table holds the main guild information. All created guilds or all guilds in the process of being created have a record in this table.
 
-**Structure**
+**Table Structure**
 
-| Field                | Type         | Attributes | Key | Null | Default | Extra  | Comment |
-| -------------------- | ------------ | ---------- | --- | ---- | ------- | ------ | ------- |
-| [guildid][1]         | INT          | UNSIGNED   | PRI | NO   | 0       |        |         |
-| [name][2]            | VARCHAR(24)  | SIGNED     |     | NO   | ''      |        |         |
-| [leaderguid][3]      | INT          | UNSIGNED   |     | NO   | 0       |        |         |
-| [EmblemStyle][4]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [EmblemColor][5]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [BorderStyle][6]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [BorderColor][7]     | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [BackgroundColor][8] | TINYINT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [info][9]            | VARCHAR(500) | SIGNED     |     | NO   | ''      |        |         |
-| [motd][10]           | VARCHAR(128) | SIGNED     |     | NO   | ''      |        |         |
-| [createdate][11]     | INT          | UNSIGNED   |     | NO   | 0       |        |         |
-| [BankMoney][12]      | BIGINT       | UNSIGNED   |     | NO   | 0       |        |         |
+| Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guildid][1]         | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [name][2]            | VARCHAR(24)  | SIGNED     |     | NO   | ''      |       |         |
+| [leaderguid][3]      | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [EmblemStyle][4]     | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [EmblemColor][5]     | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [BorderStyle][6]     | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [BorderColor][7]     | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [BackgroundColor][8] | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [info][9]            | VARCHAR(500) | SIGNED     |     | NO   | ''      |       |         |
+| [motd][10]           | VARCHAR(128) | SIGNED     |     | NO   | ''      |       |         |
+| [createdate][11]     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [BankMoney][12]      | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid
 [2]: #name

@@ -4,7 +4,7 @@ redirect_from: "/PageTextMaterial"
 
 # PageTextMaterial
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **PageTextMaterial.dbc**
 
@@ -12,7 +12,7 @@ This DBC contains material used to display a gossip window for quest or page tex
 
 **Version is : 3.1.3**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 

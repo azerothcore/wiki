@@ -1,6 +1,6 @@
 # character\_achievement
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_achievement\` table**
 
@@ -8,7 +8,7 @@ This table holds information on the achievements a character has earned/complete
 
 **Note:** if you delete a "realm first" achievement from the characters database, you have to reboot the server to take it into account.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

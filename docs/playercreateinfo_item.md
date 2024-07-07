@@ -1,20 +1,20 @@
 # playercreateinfo\_item
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`playercreateinfo\_item\` table**
 
 This table is used for any custom items that you might want to give to characters on creation. I used to be used to hold the normal items that characters get as well, but now that info is read from CharStartOutfit.dbc
 
-**Structure**
+**Table Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| :-----------|:----------|:-----------|:----|:-----|:--------|:------|:--------|
-| [race][1]   | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [class][2]  | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [itemid][3] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [amount][4] | SMALLINT  | UNSIGNED   |     | NO   | 1       |       |         |
-| [Note][5]   | VARCHAR   |            |     | YES  | NULL    |       |         |
+| Field       | Type      | Attributes | Key  | Null | Default | Extra | Comment |
+| :---------- | :-------- | :--------- | :--- | :--- | :------ | :---- | :------ |
+| [race][1]   | TINYINT   | UNSIGNED   | PRI  | NO   | 0       |       |         |
+| [class][2]  | TINYINT   | UNSIGNED   | PRI  | NO   | 0       |       |         |
+| [itemid][3] | MEDIUMINT | UNSIGNED   | PRI  | NO   | 0       |       |         |
+| [amount][4] | SMALLINT  | UNSIGNED   |      | NO   | 1       |       |         |
+| [Note][5]   | VARCHAR   |            |      | YES  | NULL    |       |         |
 
 [1]: #race
 [2]: #class

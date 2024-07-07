@@ -1,12 +1,12 @@
 # guild\_bank\_tab
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_bank\_tab\` table**
 
 This table holds information on all the tabs in use for all guilds that make use of the guild bank.
 
-**Structure**
+**Table Structure**
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |

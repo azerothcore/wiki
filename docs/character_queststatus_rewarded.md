@@ -1,12 +1,12 @@
 # character\_queststatus\_rewarded
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_queststatus\_rewarded\` table**
 
 This table holds information of **every** rewarded quest to a player.
 
-**Structure**
+**Table Structure**
 
 | Field       | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

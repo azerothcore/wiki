@@ -6,20 +6,20 @@ This table holds information about menu options a gossip NPC can have. Example
 
 ## Structure
 
-| Field                      | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------------|--------------|------------|-----|------|---------|-------|---------|
+| Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [MenuID][1]                | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [OptionID][2]              | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [OptionIcon][3]            | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionText][4]            | text         |            |     | YES  | NULL    |       |         |
+| [OptionText][4]            | text      |            |     | YES  | NULL    |       |         |
 | [OptionBroadcastTextID][5] | MEDIUMINT |            |     | NO   |         |       |         |
 | [OptionType][6]            | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [OptionNpcFlag][7]         | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [OptionNpcFlag][7]         | INT       | UNSIGNED   |     | NO   |         |       |         |
 | [ActionMenuID][8]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
 | [ActionPoiID][9]           | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
 | [BoxCoded][10]             | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [BoxMoney][11]             | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [BoxText][12]              | text         |            |     | YES  | NULL    |       |         |
+| [BoxMoney][11]             | INT       | UNSIGNED   |     | NO   |         |       |         |
+| [BoxText][12]              | text      |            |     | YES  | NULL    |       |         |
 | [BoxBroadcastTextID][13]   | MEDIUMINT |            |     | NO   |         |       |         |
 | [VerifiedBuild][14]        | SMALLINT  |            |     | NO   |         |       |         |
 
@@ -43,7 +43,7 @@ This table holds information about menu options a gossip NPC can have. Example
 ### MenuID
 
 Gossip entry from Gossip\_menu.entry this option is associated with.
-If this is the default gossip option for the selected NPC, verify that the NPC has this value in it's [creature\_template.gossip\_menu\_id](http://www.azerothcore.org/wiki/creature_template#creature_template-gossip_menu_id) .
+If this is the default gossip option for the selected NPC, verify that the NPC has this value in it's [creature\_template.gossip\_menu\_id](creature_template#gossipmenuid) .
 
 ### OptionID
 
@@ -52,19 +52,19 @@ Value increments by 1 if there are multiple options in the same gossip\_menu.
 
 ### OptionIcon
 
-| Name                      | ID | Description                                 |
-|---------------------------|----|---------------------------------------------|
-| GOSSIP\_ICON\_CHAT        | 0  | White chat bubble                           |
-| GOSSIP\_ICON\_VENDOR      | 1  | Brown bag                                   |
-| GOSSIP\_ICON\_TAXI        | 2  | Flight                                      |
-| GOSSIP\_ICON\_TRAINER     | 3  | Book                                        |
-| GOSSIP\_ICON\_INTERACT\_1 | 4  | Interaction wheel                           |
-| GOSSIP\_ICON\_INTERACT\_2 | 5  | Interaction wheel                           |
-| GOSSIP\_ICON\_MONEY\_BAG  | 6  | Brown bag with yellow dot (gold)            |
-| GOSSIP\_ICON\_TALK        | 7  | White chat bubble with black dots (**...**) |
-| GOSSIP\_ICON\_TABARD      | 8  | Tabard                                      |
-| GOSSIP\_ICON\_BATTLE      | 9  | Two swords                                  |
-| GOSSIP\_ICON\_DOT         | 10 | Yellow dot                                  |
+| Name                      | ID  | Description                                 |
+| ------------------------- | --- | ------------------------------------------- |
+| GOSSIP\_ICON\_CHAT        | 0   | White chat bubble                           |
+| GOSSIP\_ICON\_VENDOR      | 1   | Brown bag                                   |
+| GOSSIP\_ICON\_TAXI        | 2   | Flight                                      |
+| GOSSIP\_ICON\_TRAINER     | 3   | Book                                        |
+| GOSSIP\_ICON\_INTERACT\_1 | 4   | Interaction wheel                           |
+| GOSSIP\_ICON\_INTERACT\_2 | 5   | Interaction wheel                           |
+| GOSSIP\_ICON\_MONEY\_BAG  | 6   | Brown bag with yellow dot (gold)            |
+| GOSSIP\_ICON\_TALK        | 7   | White chat bubble with black dots (**...**) |
+| GOSSIP\_ICON\_TABARD      | 8   | Tabard                                      |
+| GOSSIP\_ICON\_BATTLE      | 9   | Two swords                                  |
+| GOSSIP\_ICON\_DOT         | 10  | Yellow dot                                  |
 
 ### OptionText
 
@@ -78,7 +78,7 @@ The ID of the same text in broadcast\_text.ID.
 ### OptionType
 
 | option_id Name                  | Value | npcflag Name (& comment)                                                    | npcflag value |
-|---------------------------------|-------|-----------------------------------------------------------------------------|---------------|
+| ------------------------------- | ----- | --------------------------------------------------------------------------- | ------------- |
 | GOSSIP_OPTION_NONE              | 0     | UNIT_NPC_FLAG_NONE                                                          | 0             |
 | GOSSIP_OPTION_GOSSIP            | 1     | UNIT_NPC_FLAG_GOSSIP                                                        | 1             |
 | GOSSIP_OPTION_QUESTGIVER        | 2     | UNIT_NPC_FLAG_QUESTGIVER                                                    | 2             |
@@ -104,15 +104,15 @@ The ID of the same text in broadcast\_text.ID.
 
 ### OptionNpcFlag
 
-This is the npcflag ([Creature\_template.npcflag](creature_template#creature_template-npcflag) ) that the NPC must have to have this option display. See comments (after //) in previous table)
+This is the npcflag ([Creature\_template.npcflag](creature_template#npcflag) that the NPC must have to have this option display. See comments (after //) in previous table)
 
 ### ActionMenuID
 
-If you want to create a sub-menu, this is the ID ([gossip\_menu.entry](http://www.azerothcore.org/wiki/gossip_menu#entry) / [gossip\_menu\_option.menu\_id](http://www.azerothcore.org/wiki/gossip_menu_option#menu_id)) to link to to create that sub-menu.
+If you want to create a sub-menu, this is the ID ([gossip\_menu.entry](gossip_menu#entry) / [gossip\_menu\_option.menu\_id](gossip_menu_option#menuid)) to link to to create that sub-menu.
 
 ### ActionPoiID
 
-If you want a POI (point of interest) to display on the minimap (like how a city guard places a marker when you ask directions), this is the \`entry\` from [Points\_of\_interest.entry](http://www.azerothcore.org/wiki/points_of_interest#entry)
+If you want a POI (point of interest) to display on the minimap (like how a city guard places a marker when you ask directions), this is the \`entry\` from [Points\_of\_interest.entry](points_of_interest#entry)
 
 ### BoxCoded
 
@@ -130,7 +130,7 @@ If BoxBroadCastTextID contains a valid broadcast\_text.ID, it links to broadcast
 
 ### BoxBroadcastTextID
 
-The ID of the same text in [broadcast\_text.ID](http://www.azerothcore.org/wiki/broadcast_text#broadcast_text-ID).
+The ID of the same text in [broadcast\_text.ID](broadcast_text#id).
 
 ### VerifiedBuild
 
@@ -142,4 +142,4 @@ If value is above 0 then it has been parsed with WDB files from that specific cl
 
 If value is -1 then it is just a place holder until proper data are found on WDBs.
 
-If value is [client Build](http://www.azerothcore.org/wiki/realmlist#gamebuild) then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.
+If value is [client Build](realmlist#gamebuild) then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.

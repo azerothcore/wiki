@@ -6,7 +6,7 @@
   
     1. Si muestra `Using World DB: ACDB 335.4-dev` entonces puede proceder a [Actualizar su fuente local](#update-your-local-source).
   
-    1. Si genera algo más para `Using World DB:` entonces primero debe seguir [esta guía sobre la actualización al último master](upgrade-from-pre-3.0.0-to-latest-master.md).
+    1. Si genera algo más para `Using World DB:` entonces primero debe seguir [esta guía sobre la actualización al último master](upgrade-from-pre-3.0.0-to-latest-master).
 
 También recomendamos encarecidamente seguir el canal de #announcements  en el discord de AzerothCore para que sepa sobre cualquier otro cambio importante en AzerothCore.
 
@@ -32,6 +32,6 @@ Debe importar los **nuevos** archivos de actualización de sql (ubicados en http
 
 Para automatizar este proceso, puede utilizar el script bash db-assembler `bash apps/db_assembler/db_assembler.sh`.
 
-Si es la primera vez que lo usa [LEA ESTO PRIMERO](database-installation.md) y configure correctamente su archivo `conf/config.sh`.
+Si es la primera vez que lo usa [LEA ESTO PRIMERO](database-installation) y configure correctamente su archivo `conf/config.sh`.
 
 ![](https://user-images.githubusercontent.com/75517/50738699-6912ee80-11d7-11e9-95ea-667baa0bda70.png)

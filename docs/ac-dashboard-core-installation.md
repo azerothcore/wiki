@@ -4,7 +4,7 @@ The AzerothCore bash dashboard is a collection of scripts that help with the ins
 It allows to easily install, update and execute AzerothCore on your machine in a tremendously small amount of steps.
 
 Installing a development or production private server has never been so easy before. 
-If you need any help just [ask a question](https://www.azerothcore.org/wiki/How-to-ask-for-help).
+If you need any help just [ask a question](How-to-ask-for-help).
 
 
 ## Requirements
@@ -139,7 +139,7 @@ Rebuild:
 
 Update the database:
 
-[https://www.azerothcore.org/wiki/database-keeping-the-server-up-to-date](https://www.azerothcore.org/wiki/database-keeping-the-server-up-to-date)
+[database-keeping-the-server-up-to-date](database-keeping-the-server-up-to-date)
 
 That's it.
 

@@ -1,6 +1,6 @@
 # ChrClasses.dbc
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 Éste archivo DBC contiene todas las clases jugables existentes dentro del juego.
 

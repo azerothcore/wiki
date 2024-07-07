@@ -1,17 +1,17 @@
 # pool\_quest
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`pool\_quest\` table**
 
 This table contains a list of quests that are tied to a specific pool.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]       | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [pool_entry][2]  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [pool_entry][2]  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
 | [description][3] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #entry

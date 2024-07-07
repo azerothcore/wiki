@@ -1,12 +1,12 @@
 # account\_tutorial
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`account\_tutorial\` table**
 
 This table is used to store the tutorial state of all the accounts.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type | Attributes | Key | Null | Default | Extra  | Comment            |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------ |

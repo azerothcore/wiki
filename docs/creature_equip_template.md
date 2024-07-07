@@ -1,6 +1,6 @@
 # creature\_equip\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 ## **Table: creature\_equip\_template**
 
@@ -8,8 +8,8 @@ This table contains all the equipment combinations that can be sent for each cre
 
 ## Structure
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment      |
-|-----------------|--------------|------------|-----|------|---------|-------|--------------|
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment      |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------ |
 | [CreatureID][1] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Unique entry |
 | [ID][2]         | TINYINT   | UNSIGNED   | PRI | NO   | 1       |       | Unique entry |
 | [ItemID1][3]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |              |

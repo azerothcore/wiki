@@ -1,6 +1,6 @@
 # guild\_bank\_right
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`guild\_bank\_right\`**
 

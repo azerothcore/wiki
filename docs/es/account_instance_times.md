@@ -1,6 +1,6 @@
 # account\_instance\_times
 
-[<-Volver a: Characters](database-characters.md)
+[<-Volver a: Characters](database-characters)
 
 **La tabla \`account\_instance\_times\`**
 

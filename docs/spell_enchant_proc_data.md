@@ -1,19 +1,19 @@
 # spell\_enchant\_proc\_data
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_enchant\_proc\` table**
 
 `table-no-description`
 
-**Structure**
+**Table Structure**
 
-| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------|---------|------------|-----|------|---------|-------|---------|
-| [entry][1]        | INT | UNSIGNED   |     | NO   | NULL    |       |         |
-| [customChance][2] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [PPMChance][3]    | FLOAT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [proxEx][4]       | FLOAT   | UNSIGNED   |     | NO   | 0       |       |         |
+| Field             | Type  | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]        | INT   | UNSIGNED   |     | NO   | NULL    |       |         |
+| [customChance][2] | INT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [PPMChance][3]    | FLOAT | UNSIGNED   |     | NO   | 0       |       |         |
+| [proxEx][4]       | FLOAT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #customchance

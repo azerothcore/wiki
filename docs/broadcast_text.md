@@ -14,24 +14,24 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
  
  **Most of the time, the values here are correct and your script needs to be fixed. Please ensure your script works correctly before suggesting changes to this table.**
 
-**Structure**
+**Table Structure**
 
-| Field                                    | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|------------------------------------------|-------------|------------|-----|------|---------|-------|---------|
-| [ID](#broadcast_text-ID)                 | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [LanguageID](#broadcast_text-Language)   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaleText](#broadcast_text-MaleText)     | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [FemaleText](#broadcast_text-FemaleText) | text        | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteID1                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteID2                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteID3                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteDelay1                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteDelay2                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmoteDelay3                              | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| SoundEntriesId                           | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| EmotesID                                 | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| Flags                                    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
+| Field                                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#broadcast_text-ID)                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [LanguageID](#broadcast_text-Language)   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [MaleText](#broadcast_text-MaleText)     | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [FemaleText](#broadcast_text-FemaleText) | text     | SIGNED     |     | YES  | NULL    |       |         |
+| EmoteID1                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteID2                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteID3                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteDelay1                              | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteDelay2                              | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EmoteDelay3                              | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| SoundEntriesId                           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| EmotesID                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Flags                                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
 
 ### Description of the fields
 

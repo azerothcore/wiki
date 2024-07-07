@@ -1,10 +1,10 @@
 # build\_info
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`build\_info\` table**
 
-**Structure**
+**Table Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 | --------------------- | ------------ | ---------- | --- | ---- | ------- | ----- |----------- |

@@ -1,6 +1,6 @@
 ﻿# log\_encounter
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../log_encounter) [Spanish :es:](log_encounter)
 

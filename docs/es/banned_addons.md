@@ -1,6 +1,6 @@
 ﻿# banned\_addons
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../banned_addons) [Spanish :es:](banned_addons)
 

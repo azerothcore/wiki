@@ -1,28 +1,28 @@
 # spell\_target\_position
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_target\_position\` table**
 
 This table holds coordinate information on where the player should be teleported to when a spell with target type: TARGET\_DST\_DB(17).
 
-**Structure**
+**Table Structure**
 
-| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment    |
-|-------------------------|--------------|------------|-----|------|---------|-------|------------|
+| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment    |
+| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
 | [id][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
 | [target_map][2]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |            |
-| [target_position_x][3]  | FLOAT        | SIGNED     |     | NO   | 0       |       |            |
-| [target_position_y][4]  | FLOAT        | SIGNED     |     | NO   | 0       |       |            |
-| [target_position_z][5]  | FLOAT        | SIGNED     |     | NO   | 0       |       |            |
-| [target_orientation][6] | FLOAT        | SIGNED     |     | NO   | 0       |       |            |
+| [target_position_x][3]  | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
+| [target_position_y][4]  | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
+| [target_position_z][5]  | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
+| [target_orientation][6] | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
 
 [1]: #id
-[2]: #target_map
-[3]: #target_position_x
-[4]: #target_position_y
-[5]: #target_position_z
-[6]: #target_orientation
+[2]: #targetmap
+[3]: #targetpositionx
+[4]: #targetpositiony
+[5]: #targetpositionz
+[6]: #targetorientation
 
 **Description of the fields**
 

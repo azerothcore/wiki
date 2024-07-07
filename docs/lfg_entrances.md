@@ -1,16 +1,16 @@
 # lfg\_entrances
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`lfg\_entrances\` table**
 
-`` Used by LFG system to teleport players on specified position. This table should be used instead of `areatrigger_teleport` tabe for all dungeons in the future. ``
+Used by LFG system to teleport players on specified position. This table should be used instead of \`areatrigger_teleport\` tabe for all dungeons in the future.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                |
-|------------------|--------------|------------|-----|------|---------|-------|------------------------|
-| [dungeonId][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       | Dungeon entry from dbc |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------------------- |
+| [dungeonId][1]   | INT          | UNSIGNED   | PRI | NO   | 0       |       | Dungeon entry from dbc |
 | [name][2]        | VARCHAR(255) |            |     | YES  | NULL    |       | Dungeon name from dbc  |
 | [position_x][3]  | FLOAT        |            |     | NO   | 0       |       |                        |
 | [position_y][4]  | FLOAT        |            |     | NO   | 0       |       |                        |

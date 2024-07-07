@@ -1,17 +1,17 @@
 # pool\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`pool\_template\` table**
 
 Each unique pool is defined in this table.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
-|------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
-| [entry][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Pool entry                            |
-| [max_limit][2]   | INT      | UNSIGNED   |     | NO   | 0       |       | Max number of objects (0) is no limit |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
+| [entry][1]       | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       | Pool entry                            |
+| [max_limit][2]   | INT          | UNSIGNED   |     | NO   | 0       |       | Max number of objects (0) is no limit |
 | [description][3] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |                                       |
 
 [1]: #entry

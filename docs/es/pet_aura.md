@@ -1,6 +1,6 @@
 ﻿# pet\_aura
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../pet_aura) [Spanish :es:](pet_aura)
 

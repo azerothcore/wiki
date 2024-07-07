@@ -2,11 +2,11 @@
 
 | Installation Guide | |
 | :- | :- |
-| [<< Step 1: VSC Requirements](vsc-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: VSC Requirements](vsc-requirements) | [Step 3: Server Setup >>](server-setup) |
 
 ## Required software
 
-See [Requirements](requirements.md) before you continue.
+See [Requirements](requirements) before you continue.
 
 ## Pulling & Compiling the source
 
@@ -40,7 +40,7 @@ Before you begin, create a new directory called **Build**. In this guide we will
 
 1. Click **Configure**.
 
-1. In the dropdown menu, choose the version of the compiler you downloaded in [Requirements](windows-requirements.md) section. Be sure to choose **Win64** version if you work on a 64-bit compilation.
+1. In the dropdown menu, choose the version of the compiler you downloaded in [Requirements](windows-requirements) section. Be sure to choose **Win64** version if you work on a 64-bit compilation.
 
 1. Make sure that **Use default native compilers** is checked.
 
@@ -137,4 +137,4 @@ To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
 
 | Installation Guide | |
 | :- | :- |
-| [<< Step 1: VSC Requirements](vsc-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: VSC Requirements](vsc-requirements) | [Step 3: Server Setup >>](server-setup) |

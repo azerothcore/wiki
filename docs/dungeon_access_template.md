@@ -1,20 +1,20 @@
 # dungeon\_access\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`dungeon\_access\_template\` table**
 
-**Structure**
+**Table Structure**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra                                         | Comment |
-|-----------------------------|--------------|------------|-----|------|---------|-----------------------------------------------|---------|
-| [id][1]                     | TINYINT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT                                |         |
-| [map_id][2]                 | MEDIUMINT    | UNSIGNED   | KEY | NO   |         | FK_dungeon_access_template__instance_template |         |
-| [difficulty][3]             | TINYINT      | UNSIGNED   |     | NO   | 0       |                                               |         |
-| [min_level][4]              | TINYINT      | UNSIGNED   |     | YES  | NULL    |                                               |         |
-| [max_level][5]              | TINYINT      | UNSIGNED   |     | YES  | NULL    |                                               |         |
-| [min_avg_item_level][6]     | SMALLINT     | UNSIGNED   |     | YES  | NULL    |                                               |         |
-| [comment][7]                | VARCHAR(255) |            |     | YES  | NULL    |                                               |         |
+| Field                   | Type         | Attributes | Key | Null | Default        | Extra                                         | Comment |
+| ----------------------- | ------------ | ---------- | --- | ---- | -------------- | --------------------------------------------- | ------- |
+| [id][1]                 | TINYINT      | UNSIGNED   | PRI | NO   | AUTO_INCREMENT |                                               |         |
+| [map_id][2]             | MEDIUMINT    | UNSIGNED   | KEY | NO   |                | FK_dungeon_access_template__instance_template |         |
+| [difficulty][3]         | TINYINT      | UNSIGNED   |     | NO   | 0              |                                               |         |
+| [min_level][4]          | TINYINT      | UNSIGNED   |     | YES  | NULL           |                                               |         |
+| [max_level][5]          | TINYINT      | UNSIGNED   |     | YES  | NULL           |                                               |         |
+| [min_avg_item_level][6] | SMALLINT     | UNSIGNED   |     | YES  | NULL           |                                               |         |
+| [comment][7]            | VARCHAR(255) |            |     | YES  | NULL           |                                               |         |
 
 [1]: #id
 [2]: #map_id

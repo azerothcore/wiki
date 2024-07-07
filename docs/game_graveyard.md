@@ -1,15 +1,17 @@
 # game_graveyard
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
-| Field                       | Type         |  Key | Null | Default |
-|-----------------------------|--------------|------|------|---------|
-| [ID](#ID)                   | INT      |  PRI | NO   | 0       |
-| [Map](#Map)                 | INT      |      | NO   | 0       |
-| [x](#x)                     | FLOAT        |      | NO   | 0       |
-| [y](#y)                     | FLOAT        |      | NO   | 0       |
-| [z](#z)                     | FLOAT        |      | NO   | 0       |
-| [Comment](#Comment)         | VARCHAR(255) |      | YES  | NULL    |
+**The \`game_graveyard\` table**
+
+| Field               | Type         | Key | Null | Default |
+| ------------------- | ------------ | --- | ---- | ------- |
+| [ID](#id)           | INT          | PRI | NO   | 0       |
+| [Map](#map)         | INT          |     | NO   | 0       |
+| [x](#x)             | FLOAT        |     | NO   | 0       |
+| [y](#y)             | FLOAT        |     | NO   | 0       |
+| [z](#z)             | FLOAT        |     | NO   | 0       |
+| [Comment](#omment) | VARCHAR(255) |     | YES  | NULL    |
 
 **Description of the fields**
 
@@ -34,4 +36,3 @@ The Z position of graveyard where the character's ghost gets teleported to.
 ### Comment
 
 Custom comment for this line.
-

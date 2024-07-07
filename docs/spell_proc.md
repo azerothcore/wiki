@@ -1,29 +1,29 @@
 # spell\_proc
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_proc\` table**
 
 This table holds information on what events (or procs) certain spells are activated. All spells in this table must have apply a SPELL\_AURA\_PROC\_TRIGGER\_SPELL (42) aura. Any entries in this table will overwrite the existing proc settings in the spell's DBC entry.
 
-**Structure**
+**Table Structure**
 
-| Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
-|-----------------------|-------------|------------|-----|------|---------|--------|---------|
-| [SpellId][1]          | INT     | SIGNED     | PRI | NO   | 0       | Unique |         |
+| Field                 | Type     | Attributes | Key | Null | Default | Extra  | Comment |
+| --------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------- |
+| [SpellId][1]          | INT      | SIGNED     | PRI | NO   | 0       | Unique |         |
 | [SchoolMask][2]       | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
 | [SpellFamilyName][3]  | SMALLINT | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyMask0][4] | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyMask1][5] | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyMask2][6] | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [ProcFlags][7]        | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellTypeMask][8]    | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellPhaseMask][9]   | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [HitMask][10]         | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [AttributesMask][11]  | INT     | UNSIGNED   |     | NO   | 0       |        |         |
-| [ProcsPerMinute][12]  | FLOAT       |            |     | NO   | 0       |        |         |
-| [Chance][13]          | FLOAT       |            |     | NO   | 0       |        |         |
-| [Cooldown][14]        | INT     | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyMask0][4] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyMask1][5] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellFamilyMask2][6] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [ProcFlags][7]        | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellTypeMask][8]    | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [SpellPhaseMask][9]   | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [HitMask][10]         | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [AttributesMask][11]  | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [ProcsPerMinute][12]  | FLOAT    |            |     | NO   | 0       |        |         |
+| [Chance][13]          | FLOAT    |            |     | NO   | 0       |        |         |
+| [Cooldown][14]        | INT      | UNSIGNED   |     | NO   | 0       |        |         |
 | [Charges][15]         | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #spellid
@@ -53,7 +53,7 @@ The Spell ID that is capable to proc on an event. (Can use negative spellId for 
 This field contains a bitmask that controls on what types of spells the proc can be triggered. For example if an aura procs only when the unit it is casted upon is hit by shadow spells (spell 34914). To combine spell schools, just add the bit values.
 
 | School ID | Bit | Name     |
-|-----------|-----|----------|
+| --------- | --- | -------- |
 | 0         | 1   | Physical |
 | 1         | 2   | Holy     |
 | 2         | 4   | Fire     |
@@ -67,7 +67,7 @@ This field contains a bitmask that controls on what types of spells the proc can
 This field controls what family name spells can proc the triggered spell.
 
 | ID  | Family Name  |
-|-----|--------------|
+| --- | ------------ |
 | 0   | Generic      |
 | 3   | Mage         |
 | 4   | Warrior      |
@@ -104,7 +104,7 @@ A bitmask controlling what events trigger the spell. To combine possible events,
 **Example:** 32+64=96 (PROC\_FLAG\_TAKEN\_MELEE\_SPELL\_HIT + PROC\_FLAG\_SUCCESSFUL\_RANGED\_HIT)
 
 | Event                                   | Flag     | Bit value  | Comment                                                      |
-|-----------------------------------------|----------|------------|--------------------------------------------------------------|
+| --------------------------------------- | -------- | ---------- | ------------------------------------------------------------ |
 | PROC_FLAG_NONE                          | 0        | 0x00000000 |                                                              |
 | PROC_FLAG_KILLED                        | 1        | 0x00000001 | Killed by agressor                                           |
 | PROC_FLAG_KILL_AND_GET_XP               | 2        | 0x00000002 | Kill that yields experience or honor                         |
@@ -137,7 +137,7 @@ A bitmask controlling what events trigger the spell. To combine possible events,
 Used to choose what types of spells may trigger the proc, to combine, just add the bit values.
 
 | Event                       | Flag | Bit        | Comment              |
-|-----------------------------|------|------------|----------------------|
+| --------------------------- | ---- | ---------- | -------------------- |
 | PROC_SPELL_TYPE_NONE        | 0    | 0x00000000 |                      |
 | PROC_SPELL_TYPE_DAMAGE      | 1    | 0x00000001 | only damaging spells |
 | PROC_SPELL_TYPE_HEAL        | 2    | 0x00000002 | only healing spells  |
@@ -149,7 +149,7 @@ Used to choose what types of spells may trigger the proc, to combine, just add t
 At which phase may the spell trigger the proc, Normally one of them is used at the same time, but they might be combined too.
 
 | Event                     | Flag | Bit        | Comment                                                     |
-|---------------------------|------|------------|-------------------------------------------------------------|
+| ------------------------- | ---- | ---------- | ----------------------------------------------------------- |
 | PROC_SPELL_PHASE_NONE     | 0    | 0x00000000 |                                                             |
 | PROC_SPELL_PHASE_CAST     | 1    | 0x00000001 | trigger when spell has just finished casting                |
 | PROC_SPELL_PHASE_HIT      | 2    | 0x00000002 | trigger when the spell hits its target                      |
@@ -161,7 +161,7 @@ At which phase may the spell trigger the proc, Normally one of them is used at t
 Used to add special conditions to spells, some spells might trigger only on critical strikes, for example.
 
 | Event                   | Flag  | Bit        | Comment                          |
-|-------------------------|-------|------------|----------------------------------|
+| ----------------------- | ----- | ---------- | -------------------------------- |
 | PROC\_HIT\_NONE         | 0     | 0x00000000 | (special see footnote)           |
 | PROC\_HIT\_NORMAL       | 1     | 0x00000001 | only non-critical hits           |
 | PROC\_HIT\_CRITICAL     | 2     | 0x00000002 | only critical hits               |
@@ -189,7 +189,7 @@ PROC\_HIT\_NONE will trigger on:
 Adds special behaviour to the proc, spell might trigger proc only if these conditions are fullfilled
 
 | Event                            | Flag | Bit       | Comment                                                                       |
-|----------------------------------|------|-----------|-------------------------------------------------------------------------------|
+| -------------------------------- | ---- | --------- | ----------------------------------------------------------------------------- |
 | PROC\_ATTR\_REQ\_EXP\_OR\_HONOR  | 1    | 0x0000001 | requires proc target to give exp or honor                                     |
 | PROC\_ATTR\_TRIGGERED\_CAN\_PROC | 2    | 0x0000002 | aura can proc even when spell is triggered by another                         |
 | PROC\_ATTR\_REQ\_MANA\_COST      | 4    | 0x0000004 | requires triggering spell to have a mana cost                                 |

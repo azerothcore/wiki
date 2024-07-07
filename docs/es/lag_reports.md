@@ -1,6 +1,6 @@
 # lag\_reports
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla `\lag\_reports\`**
 

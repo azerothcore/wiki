@@ -1,12 +1,12 @@
 # battleground\_deserters
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`battleground\_deserters\` table**
 
 This table holds datas about BattleGrounds deserters. To enable storing this kind of informations, set **Battleground.TrackDeserters.Enable = 1** in **worldserver.config** file.
 
-**Structure**
+**Table Structure**
 
 | Field         | Type     | Attributes | Key | Null | Default | Extra | Comment                   |
 | ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------- |

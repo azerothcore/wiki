@@ -5,9 +5,9 @@ tableofcontents: 1
 
 # Frequently Asked Questions
 
-If you have trouble installing or compiling AzerothCore read [Common Errors](common-errors.md).
+If you have trouble installing or compiling AzerothCore read [Common Errors](common-errors).
 
-| Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help.md) on how to proceed with your question in the best way. |
+| Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
 | --- |
 
 ## General-related FAQ
@@ -25,7 +25,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - Although we strive to provide blizzlike content we also value user experience. This means that we sometimes fix bugs or exploits which existed during retail at the time to provide a better overall experience for the players.
 
 - How can I contribute?
-  - You can help fixing issues by submitting Pull Requests, read more [here](contribute.md).
+  - You can help fixing issues by submitting Pull Requests, read more [here](contribute).
   - You can help us by testing our [Pull Requests](contribute#how-to-test-a-pull-request) and participating on the [github issues' discussions](https://github.com/azerothcore/azerothcore-wotlk/issues).
   - You can help improve the wiki by submitting a [Pull Request](https://github.com/azerothcore/wiki).
 
@@ -33,13 +33,13 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - All fixes must be reviewed by a dev. All devs don't know everything, so you need to wait until someone reviews it.
   - Some fixes requires testing and not all devs can test so you need to wait on someone else to test it.
   - They get merged eventually after getting the To Be Merged label.
-  - Maybe you are not following the [SQL/C++ standards](https://www.azerothcore.org/wiki/standard-operating-procedure).
-  - Read more in [Merge Process](merge-process.md).
+  - Maybe you are not following the [SQL/C++ standards](standard-operating-procedure).
+  - Read more in [Merge Process](merge-process).
 
 - How do I report a crash?
   - By pasting your crashlog into a PasteBin or Gist.
   - The crashlog **needs to come from a RelWithDebInfo or Debug compilation**. If it is from Release it is useless.
-  - [How to Restart and Debug](how-to-restart-and-debug.md).
+  - [How to Restart and Debug](how-to-restart-and-debug).
 
 - Do you support Repacks based on AzerothCore?
   - No. Repacks are NOT supported and we strongly suggest to not use them for [several reasons](https://www.mangosrumors.org/why-you-should-not-use-repacks-to-run-your-wow-server/). You can check [this tutorial](https://www.chromiecraft.com/how-to-install-a-wow-server-on-your-own-computer/) for an easy way of installing AC without using any repack.
@@ -50,7 +50,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - The database is updated nearly every day.
 
 - How do I update the database?
-  - You can find everything you need to keep the database up-to-date in this guide on [Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-date.md).
+  - You can find everything you need to keep the database up-to-date in this guide on [Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-date).
 
 ## Core-related FAQ
 
@@ -95,7 +95,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
 
 - How can I get a good crashlog on Windows?
   - Compile your core in RelWithDebInfo or Debug. A crashlog from Release will be useless.
-  - You can debug it yourself if you [Run worldserver and autherserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio.md).
+  - You can debug it yourself if you [Run worldserver and autherserver in Visual Studio](run-worldserver-and-authserver-in-visual-studio).
 
 ## Module-related FAQ
 
@@ -115,7 +115,7 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - Yes it does, but not with 100% sucess rate. Warden does not detect all hacks, not even on Retail.
 
 - How do I close an instance or battleground? How can I disable a spell?
-  - All disabling is handled in the [disables table](https://www.azerothcore.org/wiki/disables).
+  - All disabling is handled in the [disables table](disables).
 
-| Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help.md) on how to proceed with your question in the best way. |
+| Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
 | --- |

@@ -1,10 +1,10 @@
 # item\_loot_\storage
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`item\_loot_\storage\` table**
 
-**Structure**
+**Table Structure**
 
 | Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |

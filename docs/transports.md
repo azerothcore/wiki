@@ -1,19 +1,19 @@
 # transports
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`transports\` table**
 
 This table contains all type 15 transports (Boats and Zeppelins). All other transport types have their frame time read from TransportAnimation.dbc.
 
-**Structure**
+**Table Structure**
 
-| Field | Type | Attribute | Key | Null | Default | Extra | Comment
-:--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-[Guid][1] | INT | UNSIGNED | PRI | NO | | AUTO_INCREMENT |
-[Entry][2] | MEDIUMINT | UNSIGNED | UNIQUE | NO | 0 |
-[Name][3] | TEXT | | | YES | NULL |
-[ScriptName][4] | CHAR(64) | | | NO | ' '
+| Field           | Type      | Attributes | Key    | Null | Default        | Extra | Comment |
+| --------------- | --------- | ---------- | ------ | ---- | -------------- | ----- | ------- |
+| [Guid][1]       | INT       | UNSIGNED   | PRI    | NO   | AUTO_INCREMENT |       |         |
+| [Entry][2]      | MEDIUMINT | UNSIGNED   | UNIQUE | NO   | 0              |       |         |
+| [Name][3]       | TEXT      |            |        | YES  | NULL           |       |         |
+| [ScriptName][4] | CHAR(64)  |            |        | NO   | ' '            |       |         |
 
 [1]: #guid
 [2]: #entry

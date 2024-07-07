@@ -9,7 +9,7 @@ redirect_from: "/UpdateFields"
 **Block Value 2:** OBJECT_FIELD_TYPE:
 
 | Value | Description           |
-|-------|-----------------------|
+| ----- | --------------------- |
 | 3     | Item                  |
 | 7     | Bag                   |
 | 9     | Unit (creature)       |
@@ -24,7 +24,7 @@ redirect_from: "/UpdateFields"
 ### Creatures
 
 | Name                                             | Index    | DB Field Name                                               |
-|--------------------------------------------------|----------|-------------------------------------------------------------|
+| ------------------------------------------------ | -------- | ----------------------------------------------------------- |
 | UNIT_FIELD_CHARM                                 | 6-7      |                                                             |
 | UNIT_FIELD_SUMMON                                | 8-9      |                                                             |
 | UNIT_FIELD_CRITTER                               | 10-11    |                                                             |
@@ -118,7 +118,7 @@ redirect_from: "/UpdateFields"
 ### Gameobjects
 
 | Name                      | Index | DB Field Name                             |
-|---------------------------|-------|-------------------------------------------|
+| ------------------------- | ----- | ----------------------------------------- |
 | GAMEOBJECT_DISPLAYID      | 8     | gameobject_template.displayid             |
 | GAMEOBJECT_FLAGS          | 9     | gameobject_template.flags                 |
 | GAMEOBJECT_PARENTROTATION | 10-13 | gameobject.rotation1,rotation2,rotation3, |

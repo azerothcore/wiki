@@ -1,12 +1,12 @@
 # pet\_name\_generation\_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`pet\_name\_generation\_locale\` table**
 
 This table holds pieces of names (first and last half) that are use for pet name generation for locale.
 
-**Structure**
+**Table Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra          | Comment |
 | ----------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -26,7 +26,7 @@ This table holds pieces of names (first and last half) that are use for pet name
 
 ### ID
 
-The ID of the entry. This field must match [pet_name_generation.id](pet_name_generation.md#id)
+The ID of the entry. This field must match [pet_name_generation.id](pet_name_generation#id)
 
 ### Locale
 

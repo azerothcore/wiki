@@ -1,10 +1,10 @@
 # pool\_quest\_save
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`pool\_quest\_save\` table**
 
-**Structure**
+**Table Structure**
 
 | Field         | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |

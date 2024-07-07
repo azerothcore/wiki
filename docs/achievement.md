@@ -4,7 +4,7 @@ redirect_from: "/Achievement"
 
 # Achievement
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **Achievement.dbc**
 
@@ -12,7 +12,7 @@ This DBC contains all achievements.
     
  **Version is : 3.3.5a**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 

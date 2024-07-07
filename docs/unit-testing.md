@@ -27,7 +27,7 @@ make install -j 6
 We use [googletest](https://github.com/google/googletest) at AzerothCore as our testing framework. Some useful references that explain how it works are available at:
 
 - http://google.github.io/googletest/primer.html
-- https://github.com/google/googletest/blob/master/googlemock/README.md
+- https://github.com/google/googletest/blob/master/googlemock/README
 - https://github.com/nordlow/gtest-tutorial
 - https://google.github.io/googletest/gmock_for_dummies.html
 
@@ -56,7 +56,7 @@ src/test/server/game/Miscellaneous/FormulasTest.cpp
 
 We have some legacy code in AzerothCore that is tightly coupled and there are singletons that are impossible to mock without some refactoring.
 
-Following the [gmock guidelines](https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md), to mock a class you should first define its interface. Then you can create mocks and use them when unit testing.
+Following the [gmock guidelines](https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies), to mock a class you should first define its interface. Then you can create mocks and use them when unit testing.
 
 Examples of refactoring AzerothCore singletons to make them mockable (and improve the software architecture in general) are available:
 

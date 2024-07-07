@@ -1,6 +1,6 @@
 # item\_loot\_items
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`item\_loot\_items\` table**
 
@@ -9,21 +9,21 @@ Contains the items associated with a lootable inventory item such as a "watertig
 This table is populated the first time the player right-clicks to open an item. Rows are deleted when
 the player either removes an item or destroys the container item.
 
-**Structure**
+**Table Structure**
 
-| Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------|------------|------------|-----|------|---------|-------|---------|
-| [container_id][1]    | INT    | UNSIGNED   |     | NO   |         |       |         |
-| [item_id][2]         | INT    | UNSIGNED   |     | NO   |         |       |         |
-| [item_count][3]      | INT    |            |     | NO   |         |       |         |
+| Field                | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [container_id][1]    | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [item_id][2]         | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [item_count][3]      | INT     |            |     | NO   |         |       |         |
 | [follow_rules][4]    | TINYINT |            |     | NO   |         |       |         |
 | [ffa][5]             | TINYINT |            |     | NO   |         |       |         |
 | [blocked][6]         | TINYINT |            |     | NO   |         |       |         |
 | [counted][7]         | TINYINT |            |     | NO   |         |       |         |
 | [under_threshold][8] | TINYINT |            |     | NO   |         |       |         |
 | [needs_quest][9]     | TINYINT |            |     | NO   |         |       |         |
-| [rnd_prop][10]       | INT    |            |     | NO   |         |       |         |
-| [rnd_suffix][11]     | INT    |            |     | NO   |         |       |         |
+| [rnd_prop][10]       | INT     |            |     | NO   |         |       |         |
+| [rnd_suffix][11]     | INT     |            |     | NO   |         |       |         |
 
 [1]: #container_id
 [2]: #item_id

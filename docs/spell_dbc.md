@@ -1,6 +1,6 @@
 # spell\_dbc
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_dbc\` table**
 
@@ -8,13 +8,13 @@ This table contains data regarding serverside spells which are not to be found i
 
 **Spell\_Effect\_ID**
 
-- Effect\_IDs of [Effect1, Effect2 and/or Effect3](spell-effects-reference.md).
+- Effect\_IDs of [Effect1, Effect2 and/or Effect3](spell-effects-reference).
 
 **Spell\_Effect\_Apply\_Aura_ID**
 
-- EffectApplyAuraName\_IDs of [EffectApplyAuraName1, EffectApplyAuraName2 and/or EffectApplyAuraName3](spell-aura-reference.md).
+- EffectApplyAuraName\_IDs of [EffectApplyAuraName1, EffectApplyAuraName2 and/or EffectApplyAuraName3](spell-aura-reference).
 
-**Structure**
+**Table Structure**
 
 | Field                         | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -202,7 +202,7 @@ The id of the Spell.
 
 ### Effect
 
-[Effect1, Effect2 and Effect3. Effect\_ID of the Spell\_Effect. A Spell can only have up to three Spell\_Effects.](spell-effects-reference.md)
+[Effect1, Effect2 and Effect3. Effect\_ID of the Spell\_Effect. A Spell can only have up to three Spell\_Effects.](spell-effects-reference)
 
 ### EffectDieSides
 
@@ -234,7 +234,7 @@ The id of the Spell.
 
 ### EffectApplyAuraName
 
-[EffectApplyAuraName1, EffectApplyAuraName2 and EffectApplyAuraName3. EffectApplyAuraName\_ID of the Spell\_Effect\_Apply\_Aura.](spell-aura-reference.md)
+[EffectApplyAuraName1, EffectApplyAuraName2 and EffectApplyAuraName3. EffectApplyAuraName\_ID of the Spell\_Effect\_Apply\_Aura.](spell-aura-reference)
 
 ### EffectAmplitude
 

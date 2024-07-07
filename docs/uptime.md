@@ -1,12 +1,12 @@
 # uptime
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`uptime\` table**
 
 This table holds the server's uptime. The core will automatically update the latest entry's value until it crashes and a new record is added.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default     | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ----------- | ----- | ------- |

@@ -20,7 +20,7 @@ Para terminar el bloque de comentarios, escriba asterisco y luego barra diagonal
 
 Si te tomas unos minutos mientras escribes tu código para escribir bloques de comentarios, puedes indicar a los futuros desarrolladores lo que pretendías y hacerles la vida más productiva y fácil.
 
-Este es un ejemplo de un [Hook documentado](hooks-script.md) en nuestro `ScriptMgr.h`:
+Este es un ejemplo de un [Hook documentado](hooks-script) en nuestro `ScriptMgr.h`:
 
 ```cpp
 /**

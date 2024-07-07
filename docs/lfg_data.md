@@ -1,12 +1,12 @@
 # lfg\_data
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`lfg\_data\` table**
 
 This table contains saved data for LFG. This table is constantly in use by the core.
 
-**Structure**
+**Table Structure**
 
 | Field        | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

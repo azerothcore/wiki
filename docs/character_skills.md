@@ -1,12 +1,12 @@
 # character\_skills
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_skills\` table**
 
 This table holds a listing of all skill for each character.
 
-**Structure**
+**Table Structure**
 
 | Field      | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
 | ---------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

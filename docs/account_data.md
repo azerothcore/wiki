@@ -1,12 +1,12 @@
 # account\_data
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`account\_data\` table**
 
 Contains data about client account and settings.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment            |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |

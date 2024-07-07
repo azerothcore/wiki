@@ -3,7 +3,7 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 3: Configuración del Servidor](server-setup.md) | [Paso 5: Redes >>](networking.md) |
+| [<< Paso 3: Configuración del Servidor](server-setup) | [Paso 5: Redes >>](networking) |
 
 ## Creación de la Base de Datos en MySQL
 
@@ -40,11 +40,11 @@ Para editar el actualizador automático de bases de datos, encontrará las confi
 
 Si sigue teniendo inconvenientes, revise:
 
-* [Preguntas frecuentes](faq.md)
+* [Preguntas frecuentes](faq)
 
-* [Errores Comunes](common-errors.md)
+* [Errores Comunes](common-errors)
 
-* [Cómo solicitar ayuda](how-to-ask-for-help.md)
+* [Cómo solicitar ayuda](how-to-ask-for-help)
 
 * [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
 
@@ -52,4 +52,4 @@ Si sigue teniendo inconvenientes, revise:
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 3: Configuración del Servidor](server-setup.md) | [Paso 5: Redes >>](networking.md) |
+| [<< Paso 3: Configuración del Servidor](server-setup) | [Paso 5: Redes >>](networking) |

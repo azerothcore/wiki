@@ -1,18 +1,18 @@
 # worldstates
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`worldstates\` table**
 
 This table holds data the Core needs to handle variables (like timer for arena point automatic flush).
 
-**Structure**
+**Table Structure**
 
-| Field        | Type          | Attributes | Key | Null | Default | Extra | Comment |
-| -----------  | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]   | INT           | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [value][2]   | INT           | UNSIGNED   |     | NO   | 0       |       |         |
-| [comment][3] | TINYTEXT      | SIGNED     |     | YES  |         |       |         |
+| Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [value][2]   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [comment][3] | TINYTEXT | SIGNED     |     | YES  |         |       |         |
 
 [1]: #entry
 [2]: #value

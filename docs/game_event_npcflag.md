@@ -1,18 +1,18 @@
 # game\_event\_npcflag
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_npcflag\` table**
 
 This table contains npcflags that are to be added to an NPC when the specified event is active for the creature with the given guid.
 
-**Structure**
+**Table Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
-|-----------------|--------------|------------|-----|------|---------|-------|-------------------------|
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
 | [eventEntry][1] | TINYINT   | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
 | [guid][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                         |
-| [npcflag][3]    | INT      | UNSIGNED   |     | NO   | 0       |       |                         |
+| [npcflag][3]    | INT       | UNSIGNED   |     | NO   | 0       |       |                         |
 
 [1]: #evententry
 [2]: #guid

@@ -5,42 +5,42 @@ Contains template of all gameobjects
 ## Structure
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|--------------|------------|-----|------|---------|-------|---------|
-| entry          | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| type           | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| displayId      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| entry          | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| type           | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| displayId      | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
 | name           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
 | IconName       | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
 | castBarCaption | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
 | unk1           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
 | size           | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
-| data0          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data1          | INT      | UNSIGNED   |     | NO   | -1      |       |         |
-| data2          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data3          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data4          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data5          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data6          | INT      | UNSIGNED   |     | NO   | -1      |       |         |
-| data7          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data8          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data9          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data10         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data11         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data12         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data13         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data14         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data15         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data16         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data17         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data18         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data19         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data20         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data21         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data22         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| data23         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| data0          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data1          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
+| data2          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data3          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data4          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data5          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data6          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
+| data7          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data8          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data9          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data10         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data11         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data12         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data13         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data14         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data15         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data16         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data17         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data18         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data19         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data20         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data21         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data22         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
 | ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
-| WDBVerified    | SMALLINT  | SIGNED     |     | YES  | 1       |       |         |
+| WDBVerified    | SMALLINT     | SIGNED     |     | YES  | 1       |       |         |
 
 ## Description of the fields
 
@@ -51,7 +51,7 @@ Id of the gameobject template. `WDB-fields`
 ### type 
 
 | Name                                  | Value |
-|---------------------------------------|-------|
+| ------------------------------------- | ----- |
 | GAMEOBJECT_TYPE_DOOR                  | 0     |
 | GAMEOBJECT_TYPE_BUTTON                | 1     |
 | GAMEOBJECT_TYPE_QUESTGIVER            | 2     |
@@ -508,7 +508,7 @@ Object type not used
      
 
     | Value | Comment                     |
-    |-------|-----------------------------|
+    | ----- | --------------------------- |
     | 0     | 5 man normal, 10 man normal |
     | 1     | 5 man heroic, 25 normal     |
     | 2     | 10 man heroic               |

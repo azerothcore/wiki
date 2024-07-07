@@ -425,4 +425,4 @@ Ejemplo: `getAreaInfo` -> `GetAreaInfo`
 
 ### Cómo actualizar
 
-Para crear un nuevo registro de cambios, siga las instrucciones de nuestra [página wiki].(https://www.azerothcore.org/wiki/es/how-to-use-changelog)
+Para crear un nuevo registro de cambios, siga las instrucciones de nuestra [página wiki].(es/how-to-use-changelog)

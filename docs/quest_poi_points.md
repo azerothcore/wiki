@@ -1,19 +1,19 @@
 # quest\_poi\_points
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`quest\_poi\_points\` table**
 
 Comes from sniffs. Visually speaking, this table is used to identify the X and Y coordinates on the map (not the minimap - the main map) where a quest's question mark should appear. Use the ".gps" command where you are standing to find these coordinates. In order to see changes, ".reload quest\_poi", close Wow.exe, then delete your cache folder.
 
-**Structure**
+**Table Structure**
 
 | Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
-|--------------------|----------|------------|-----|------|---------|-------|---------|
-| [questid][1]       | INT  | unasigned  | PRI | NO   | 0       |       |         |
-| [idx2][2]          | INT  | unasigned  | PRI | NO   | 0       |       |         |
-| [x][3]             | INT  | unasigned  |     | NO   | 0       |       |         |
-| [y][4]             | INT  | unasigned  |     | NO   | 0       |       |         |
+| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [questid][1]       | INT      | unasigned  | PRI | NO   | 0       |       |         |
+| [idx2][2]          | INT      | unasigned  | PRI | NO   | 0       |       |         |
+| [x][3]             | INT      | unasigned  |     | NO   | 0       |       |         |
+| [y][4]             | INT      | unasigned  |     | NO   | 0       |       |         |
 | [VerifiedBuild][5] | SMALLINT | unasigned  |     | YES  | NULL    |       |         |
 
 [1]: #questid
@@ -39,7 +39,7 @@ Used to group multiple entries in the quest poi points to draw the polygon for t
 Example quest: Secreat Communication.
 
 | QuestID | idx1 | idx2 | x     | y    | VerifiedBuild |
-|---------|------|------|-------|------|---------------|
+| ------- | ---- | ---- | ----- | ---- | ------------- |
 | 8318    | 3    | 0    | -6231 | -51  | 0             |
 | 8318    | 3    | 1    | -6236 | -19  | 0             |
 | 8318    | 3    | 2    | -6241 | -52  | 0             |

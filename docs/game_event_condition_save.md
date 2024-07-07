@@ -1,10 +1,10 @@
 # game\_event\_condition\_save
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`game\_event\_condition\_save\` table**
 
-**Structure**
+**Table Structure**
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |

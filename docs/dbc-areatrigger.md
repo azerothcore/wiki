@@ -4,7 +4,7 @@ redirect_from: "/DBC-AreaTrigger"
 
 # AreaTrigger
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **AreaTrigger.dbc**
 
@@ -12,13 +12,13 @@ This DBC contains information about the triggers of the in-game areas.
 
 **Version is : 3.3.5a**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 
 
 | Column | Field             | Type    | Notes                                                |
-|--------|-------------------|---------|------------------------------------------------------|
+| ------ | ----------------- | ------- | ---------------------------------------------------- |
 | 1      | ID                | Integer |                                                      |
 | 2      | iRefID_[Map](Map) | Integer |                                                      |
 | 3      | X                 | Float   |                                                      |
@@ -36,7 +36,7 @@ This DBC contains information about the triggers of the in-game areas.
 ## Content
 
 | ID   | MapId | X             | Y             | Z           | Size      | Box_X      | Box_Y      | Box_Z      | Box_O    |
-|------|-------|---------------|---------------|-------------|-----------|------------|------------|------------|----------|
+| ---- | ----- | ------------- | ------------- | ----------- | --------- | ---------- | ---------- | ---------- | -------- |
 | 45   | 0     | 2924.379883   | -798.429016   | 161.610992  | 8.00      | 0.00       | 0.00       | 0.00       | 0.00     |
 | 71   | 0     | -10645.900391 | 1179.060059   | 48.178101   | 27.00     | 0.00       | 0.00       | 0.00       | 0.00     |
 | 78   | 0     | -11208.500000 | 1685.339966   | 25.761200   | 7.00      | 0.00       | 0.00       | 0.00       | 0.00     |

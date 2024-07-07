@@ -3,7 +3,7 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps.md) | [Step 8: Client Setup >>](client-setup.md) |
+| [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
 
 ## Keeping the source Up-to-Date
 
@@ -19,12 +19,12 @@ cd build
 make -j 8; make install
 ```
 
-Sometimes we add or remove files from the repository. At that point it is necessary to recompile the server, the same way as it was installed the first time [in the Linux Core Installation](linux-core-installation.md#configuring-for-compiling).
+Sometimes we add or remove files from the repository. At that point it is necessary to recompile the server, the same way as it was installed the first time [in the Linux Core Installation](linux-core-installation#configuring-for-compiling).
 
 ## Using automation server
 If you would like to update AzerothCore using Jenkins, Teamcity or similar tool, following steps might help you.
 
-Add required commands to sudoers file. Services bellow were created [in the Linux Core Installation](linux-core-installation.md#services)
+Add required commands to sudoers file. Services bellow were created [in the Linux Core Installation](linux-core-installation#services)
 ```sh
 sudo visudo
 
@@ -52,7 +52,7 @@ sudo service authserver start
 
 ## Keeping the Database Up-to-Date
 
-Read [Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-date.md)
+Read [Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-date)
 
 <br>
 
@@ -60,15 +60,15 @@ Read [Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps.md) | [Step 8: Client Setup >>](client-setup.md) |
+| [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |

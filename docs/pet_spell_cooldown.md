@@ -1,12 +1,12 @@
 # pet\_spell\_cooldown
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`pet\_spell\_cooldown\` table**
 
 This table holds information on pet spell cooldowns.
 
-**Structure**
+**Table Structure**
 
 | Field      | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
 | ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |

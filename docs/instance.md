@@ -1,12 +1,12 @@
 # instance
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`instance\` table**
 
 This table holds static information on all current instances that have not yet been reset.
 
-**Structure**
+**Table Structure**
 
 | Field                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

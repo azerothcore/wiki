@@ -1,6 +1,6 @@
 ﻿# character\_brew\_of\_the\_month
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../character_brew_of_the_month) [Spanish :es:](character_brew_of_the_month)
 

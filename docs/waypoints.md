@@ -1,24 +1,26 @@
 # waypoints
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
-###### **Used by [SAI](smart_scripts)**
+**The \`waypoints\` table**
 
-### Information
+Used by [SAI](smart_scripts)
 
 Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordinates. See also [Waypoints-Information](Waypoints-Information) for general information about waypoints.
 
-### Structure
+**Table Structure**
 
-| Field                            | Type         | Attributes | Key | Null | Default |
-|----------------------------------|--------------|------------|-----|------|---------|
+| Field                            | Type      | Attributes | Key | Null | Default |
+| -------------------------------- | --------- | ---------- | --- | ---- | ------- |
 | [entry](#entry)                  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
 | [pointid](#pointid)              | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
-| [position\_x](#position_x)       | FLOAT        |            |     | NO   | 0       |
-| [position\_y](#position_y)       | FLOAT        |            |     | NO   | 0       |
-| [position\_z](#position_z)       | FLOAT        |            |     | NO   | 0       |
-| [orientation](#orientation) | FLOAT | | | YES | NULL |
-| [point\_comment](#point_comment) | text         |            |     | YES  | NULL    |
+| [position\_x](#positionx)        | FLOAT     |            |     | NO   | 0       |
+| [position\_y](#positiony)        | FLOAT     |            |     | NO   | 0       |
+| [position\_z](#positionz)        | FLOAT     |            |     | NO   | 0       |
+| [orientation](#orientation)      | FLOAT     |            |     | YES  | NULL    |
+| [point\_comment](#point_comment) | text      |            |     | YES  | NULL    |
+
+**Description of the fields**
 
 #### entry
 
@@ -49,7 +51,7 @@ Text comment.
 ### Example Rows
 
 | entry | pointid | position\_x | position\_y | position\_z | point\_comment           |
-|-------|---------|-------------|-------------|-------------|--------------------------|
+| ----- | ------- | ----------- | ----------- | ----------- | ------------------------ |
 | 16208 | 1       | 6647.83     | -6344.92    | 9.13345     | Apothecary Enith point 1 |
 | 16208 | 2       | 6657.92     | -6345.96    | 15.3468     | Apothecary Enith point 2 |
 

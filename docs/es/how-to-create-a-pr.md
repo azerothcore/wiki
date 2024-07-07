@@ -6,7 +6,7 @@ redirect_from: "/How-to-create-a-PR"
 
 Esta guía explica cómo abrir PRs para enviar cualquier tipo de correciones (C++, SQL, etc...).
 
-Si sólo envías correcciones de DB, deberías probar nuestra nueva [simplificada manera de abrir una PR que contenga código SQL](https://www.azerothcore.org/wiki/how-to-create-a-db-pr).
+Si sólo envías correcciones de DB, deberías probar nuestra nueva [simplificada manera de abrir una PR que contenga código SQL](how-to-create-a-db-pr).
 
 ## Hacer sólo UNA VEZ: crear y clonar tu fork de AzerothCore
 

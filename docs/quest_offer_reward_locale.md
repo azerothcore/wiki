@@ -1,17 +1,17 @@
 # quest\_offer\_reward\_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`quest\_offer\_reward\_locale\` table**
 
-**Structure**
+**Table Structure**
 
-| Field              | Type        | Attribute | Key | Null | Default | Extra | Comment |
-|--------------------|-------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]            | INT     | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [locale][2]        | VARCHAR(4)  |           | PRI | NO   | NULL    |       |         |
-| [RewardText][3]    | text        |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | SMALLINT |           |     | NO   | 0       |       |         |
+| Field              | Type       | Attribute | Key | Null | Default | Extra | Comment |
+| ------------------ | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]            | INT        | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [locale][2]        | VARCHAR(4) |           | PRI | NO   | NULL    |       |         |
+| [RewardText][3]    | text       |           |     | YES  | NULL    |       |         |
+| [VerifiedBuild][4] | SMALLINT   |           |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #locale
@@ -29,17 +29,17 @@ Is the quest ID, obtained from quest_template
 It is the language in which you want to make the translation.
 You can choose from the following:
 
-| ID | Language |
-|----|----------|
-| 0  | enUS     |
-| 1  | koKR     |
-| 2  | frFR     |
-| 3  | deDE     |
-| 4  | zhCN     |
-| 5  | zhTW     |
-| 6  | esES     |
-| 7  | esMX     |
-| 8  | ruRU     |
+| ID  | Language |
+| --- | -------- |
+| 0   | enUS     |
+| 1   | koKR     |
+| 2   | frFR     |
+| 3   | deDE     |
+| 4   | zhCN     |
+| 5   | zhTW     |
+| 6   | esES     |
+| 7   | esMX     |
+| 8   | ruRU     |
 
 ### RewardText
 

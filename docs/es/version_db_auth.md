@@ -1,6 +1,6 @@
 ﻿# version\_db\_auth
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../version_db_auth) [Spanish :es:](version_db_auth)
 

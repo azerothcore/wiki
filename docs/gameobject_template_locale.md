@@ -1,46 +1,43 @@
-# gameobject\_template\_locale
+# gameobject_template_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
-**The \`gameobject\_template\_locale\` table**
+**The \`gameobject_template_locale\` table**
 
 This table is used to provide to localized clients with localized string for gameobjects.
 
-**Structure**
+**Table Structure**
 
-|                                                                        |              |                |         |          |             |           |             |
-|------------------------------------------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
-| **Field**                                                              | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| [entry](#gameobject_template_locale-entry)                             | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [name\_loc1](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc2](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc3](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc4](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc5](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc6](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc7](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [name\_loc8](#gameobject_template_locale-name_loc)                     | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc1](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc2](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc3](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc4](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc5](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc6](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc7](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
-| [castbarcaption\_loc8](#gameobject_template_locale-castbarcaption_loc) | VARCHAR(100) | SIGNED         |         | NO       | NULL        |           |             |
+| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry](#entry)                           | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [name_loc1](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc2](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc3](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc4](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc5](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc6](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc7](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [name_loc8](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc1](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc2](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc3](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc4](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc5](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc6](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc7](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| [castbarcaption_loc8](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
 
 **Description of the fields**
 
 ### entry
 
-This entry must be the same as  [gameobject\_template.entry](https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-entry) and then the row will be used to provide localization support for this gameobject record.
+This entry must be the same as  [gameobject_template.entry](gameobject_template#entry) and then the row will be used to provide localization support for this gameobject record.
 
-### name\_loc
+### name_loc
 
-Translated content for [gameobject\_template.name](https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-name) field for language X.
-See  [localization languages](https://trinitycore.atlassian.net/wiki/display/tc/Localization+lang) list to know which value to use for X.
+Translated content for [gameobject_template.name](gameobject_template#name) field for language X.
 
-### castbarcaption\_loc
+### castbarcaption_loc
 
-Translated content for  [gameobject\_template.castBarCaption](https://trinitycore.atlassian.net/wiki/display/tc/gameobject_template#gameobject_template-castBarCaption) field for language X.
-See  [localization languages](https://trinitycore.atlassian.net/wiki/display/tc/Localization+lang) list to know which value to use for X.
+Translated content for  [gameobject_template.castBarCaption](gameobject_template#castbarcaption) field for language X.

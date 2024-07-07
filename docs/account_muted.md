@@ -1,6 +1,6 @@
 # account\_muted
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`account\_muted\` table**
 
@@ -10,7 +10,7 @@ GM-Command: **.mute [$playerName] $timeInMinutes [$reason]**.
 
 Disable chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |

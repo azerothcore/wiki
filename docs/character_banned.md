@@ -1,12 +1,12 @@
 # character\_banned
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_banned\` table**
 
 This table lists all of the characters that have been banned along with the date when (or if) the ban will expire.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |

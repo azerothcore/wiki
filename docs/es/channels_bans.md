@@ -1,6 +1,6 @@
 ﻿# channels\_bans
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../channels_bans) [Spanish :es:](channels_bans)
 

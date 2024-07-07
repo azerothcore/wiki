@@ -1,15 +1,15 @@
 # player\_class\_stats
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`player\_class\_stats\` table**
 
 This table holds information on what values are applied to stats for characters as they level up. All of the values in this table signify only the base stats of a class at a specific level.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|---------|------------|-----|------|---------|-------|---------|
+| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [Class][1]     | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [Level][2]     | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [BaseHP][3]    | INT     | UNSIGNED   |     | NO   | 1       |       |         |
@@ -71,7 +71,7 @@ The base spirit to be applied to a character.
 ### Examples
 
 | Class | Level | BaseHP | BaseMana | Strength | Agility | Stamina | Intellect | Spirit |
-|-------|-------|--------|----------|----------|---------|---------|-----------|--------|
+| ----- | ----- | ------ | -------- | -------- | ------- | ------- | --------- | ------ |
 | 1     | 1     | 20     | 0        | 23       | 20      | 22      | 20        | 20     |
 | 2     | 1     | 28     | 60       | 22       | 20      | 22      | 20        | 21     |
 | 3     | 1     | 46     | 65       | 20       | 23      | 21      | 20        | 21     |

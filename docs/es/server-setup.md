@@ -3,7 +3,7 @@
 | Guía de instalación                                                                                                                                 |                                                                        |
 | :-                                                                                                                                                  | :-                                                                     |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation.md)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
+| [<< Paso 2: Instalación del Core](core-installation)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation) |
 
 Ahora que tiene el código fuente compilado, necesita añadir algunos archivos que son requeridos. Puede añadirlos ya sea descargándolos o extrayéndolos.
 
@@ -45,11 +45,11 @@ Si descargó los archivos anteriores, puede saltarse este paso e ir directamente
 
 Esta parte es simplemente un resúmen general del proceso total. Por favor, lea el que corresponda con su sistema operativo.
 
-[Linux](linux-server-setup.md)
+[Linux](linux-server-setup)
 
-[macOS](macos-server-setup.md)
+[macOS](macos-server-setup)
 
-[Windows](windows-server-setup.md)
+[Windows](windows-server-setup)
 
 AzerothCore requiere ciertos archivos extraidos del cliente de World of Warcraft. Se deben extraer de un cliente en versión 3.3.5a.
 
@@ -107,7 +107,7 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 Los siguientes pasos deben ser verificados: 
 
 - El nombre del Host (127.0.0.1) puede quedarse igual si usted instaló AzerothCore en el mismo computador en el que lo va a correr.
-  De lo contrario, siga las instrucciones en [Realmlist Table](realmlist.md). 
+  De lo contrario, siga las instrucciones en [Realmlist Table](realmlist). 
 
 - El puerto (3306) el el valor estándar configurado. Si usted lo cambia en la configuración de mysql, recuerde cambiarlo en donde corresponda.
   El nombre de usuario y la contraseña pueden variar. Usted puede escoger entre: 
@@ -132,15 +132,15 @@ Los siguientes pasos deben ser verificados:
 
 Si sigue teniendo problemas, compruebe:
 
-* [Preguntas frecuentes](faq.md)
+* [Preguntas frecuentes](faq)
 
-* [Errores Comunes](common-errors.md)
+* [Errores Comunes](common-errors)
 
-* [Cómo pedir ayuda](how-to-ask-for-help.md)
+* [Cómo pedir ayuda](how-to-ask-for-help)
 
 * [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), tenga en cuenta que no es un canal de soporte 24/7. Un miembro del staff member le responderá siempre que tenga tiempo.
 
 | Guía de instalación                                                                                                                                 |                                                                        |
 | :-                                                                                                                                                  | :-                                                                     |
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation.md)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation.md) |
+| [<< Paso 2: Instalación del Core](core-installation)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation) |

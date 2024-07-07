@@ -219,6 +219,6 @@ acoreupdate
 - Automated database backups to Google Drive using cron and rclone.
 
 ## Other Resources
-- [Official AzerothCore Installation Guide](https://www.azerothcore.org/wiki/installation)
-- [heyaapl's Debian Tutorial](https://www.azerothcore.org/wiki/digital-ocean-video-tutorial)
+- [Official AzerothCore Installation Guide](installation)
+- [heyaapl's Debian Tutorial](digital-ocean-video-tutorial)
 - [Digital Scriptorium's Video](https://www.youtube.com/watch?v=k4i4za1Scgg)

@@ -4,23 +4,23 @@ This table holds additional information on gameobjects.
 
 ## Structure
 
-| Field                                         | Type     | Attributes     | Key     | Null     | Default     | Extra     | Comment     |
-| --------------------------------------------- | -------- | -------------- | ------- | -------- | ----------- | --------- | ----------- |
-| [entry](#gameobject_template_addon-entry)     | INT      | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [faction](#gameobject_template_addon-faction) | SMALLINT | UNSIGNED       |         | NO       | 0           |           |             |
-| [flags](#gameobject_template_addon-flags)     | INT      | UNSIGNED       |         | NO       | 0           |           |             |
-| [mingold](#mingold)                           | INT      | UNSIGNED       |         | NO       | 0           |           |             |
-| [maxgold](#maxgold)                           | INT      | UNSIGNED       |         | NO       | 0           |           |             |
-| [artkit0](#artkit)                            | INT      |                |         |          | 0           |           |             |
-| [artkit1](#artkit)                            | INT      |                |         |          | 0           |           |             |
-| [artkit2](#artkit)                            | INT      |                |         |          | 0           |           |             |
-| [artkit3](#artkit)                            | INT      |                |         |          | 0           |           |             |
+| Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry](#entry)     | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [faction](#faction) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [flags](#flags)     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [mingold](#mingold) | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [maxgold](#maxgold) | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [artkit0](#artkit)  | INT      |            |     |      | 0       |       |         |
+| [artkit1](#artkit)  | INT      |            |     |      | 0       |       |         |
+| [artkit2](#artkit)  | INT      |            |     |      | 0       |       |         |
+| [artkit3](#artkit)  | INT      |            |     |      | 0       |       |         |
 
 ## Description of the fields
 
 ### entry
 
-ID of the game object, from [gameobject\_template.entry](gameobject_template.md#entry).
+ID of the game object, from [gameobject\_template.entry](gameobject_template#entry).
 
 ### faction
 

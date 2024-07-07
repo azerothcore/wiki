@@ -1,8 +1,8 @@
 ﻿# Preguntas frecuentes
 
-Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](common-errors.md).
+Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](common-errors).
 
-| ¿Estas preguntas frecuentes no respondieron a sus preguntas? Lea [Cómo pedir ayuda](how-to-ask-for-help.md) sobre cómo proceder con su pregunta de la mejor manera. |
+| ¿Estas preguntas frecuentes no respondieron a sus preguntas? Lea [Cómo pedir ayuda](how-to-ask-for-help) sobre cómo proceder con su pregunta de la mejor manera. |
 | --- |
 
 ## Preguntas frecuentes generales
@@ -23,7 +23,7 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
   - Aunque nos esforzamos por ofrecer contenido similar a una Blizzlike, también valoramos la experiencia del usuario. Esto significa que a veces corregimos errores o vulnerabilidades que existían durante la venta minorista en ese momento para brindar una mejor experiencia general a los jugadores.
 
 - ¿Cómo puedo contribuir?
-  - Puede ayudar a solucionar problemas enviando solicitudes de extracción, lea más [aquí](contribute.md).
+  - Puede ayudar a solucionar problemas enviando solicitudes de extracción, lea más [aquí](contribute).
   - Puede ayudarnos probando nuestras [Solicitudes de extracción](contribute#how-to-test-a-pull-request) y participando en las [discusiones sobre problemas de github](https://github.com/azerothcore/azerothcore-wotlk/issues).
   - Puede ayudar a mejorar la wiki enviando una [Solicitud de extracción](https://github.com/azerothcore/wiki).
 
@@ -31,13 +31,13 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
   - Todas las correcciones deben ser revisadas por un desarrollador. Todos los desarrolladores no lo saben todo, por lo que debe esperar hasta que alguien lo revise.
   - Algunas correcciones requieren pruebas y no todos los desarrolladores pueden probarlas, por lo que debe esperar a que alguien más las pruebe.
   - Se fusionan eventualmente después de obtener la etiqueta To Be Merged.
-  - Quizás no esté siguiendo los [estándares SQL/C++](https://www.azerothcore.org/wiki/standard-operating-procedure).
-  - Leer más en [Merge Process](merge-process.md).
+  - Quizás no esté siguiendo los [estándares SQL/C++](standard-operating-procedure).
+  - Leer más en [Merge Process](merge-process).
 
 - ¿Cómo informo de un accidente?
   - Pegando su registro de fallos en un PasteBin o Gist.
   - El registro de fallos **debe provenir de una compilación RelWithDebInfo o Debug**. Si es de Release, es inútil.
-  - [Cómo reiniciar y depurar](how-to-restart-and-debug.md).
+  - [Cómo reiniciar y depurar](how-to-restart-and-debug).
 
 - ¿Soportan Repacks basados ​​en AzerothCore?
   - No. NO se admiten reempaquetamientos y recomendamos encarecidamente no utilizarlos por [varias razones](https://www.mangosrumors.org/why-you-should-not-use-repacks-to-run-your-wow-server/). Puede consultar [este tutorial](https://www.chromiecraft.com/how-to-install-a-wow-server-on-your-own-computer/) para obtener una forma sencilla de instalar AC sin necesidad de volver a empaquetar.
@@ -49,7 +49,7 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
   - La base de datos se actualiza casi todos los días.
 
 - ¿Cómo actualizo la base de datos?
-  - Puede encontrar todo lo que necesita para mantener la base de datos actualizada en esta guía sobre [Base de datos que mantiene el servidor actualizado](database-keeping-the-server-up-to-date.md).
+  - Puede encontrar todo lo que necesita para mantener la base de datos actualizada en esta guía sobre [Base de datos que mantiene el servidor actualizado](database-keeping-the-server-up-to-date).
 
 ## Preguntas frecuentes relacionadas con el núcleo
 
@@ -95,7 +95,7 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
 
 - ¿Cómo puedo obtener un buen registro de fallos en Windows?
   - Compile su núcleo en RelWithDebInfo o Debug. Un registro de fallos de Release será inútil.
-  - Puede depurarlo usted mismo si [Ejecuta worldserver y autherserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio.md).
+  - Puede depurarlo usted mismo si [Ejecuta worldserver y autherserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio).
 
 ## Preguntas frecuentes relacionadas con el módulo
 
@@ -115,7 +115,7 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
   - Sí, pero no con una tasa de éxito del 100%. Warden no detecta todos los hacks, ni siquiera en Retail.
 
 - ¿Cómo cierro una instancia o campo de batalla? ¿Cómo puedo desactivar un hechizo?
-  - Todas las inhabilitaciones se manejan en la [tabla de inhabilitaciones](https://www.azerothcore.org/wiki/disables).
+  - Todas las inhabilitaciones se manejan en la [tabla de inhabilitaciones](disables).
 
-| ¿Estas preguntas frecuentes no respondieron a sus preguntas? Lea [Cómo pedir ayuda](how-to-ask-for-help.md) sobre cómo proceder con su pregunta de la mejor manera. |
+| ¿Estas preguntas frecuentes no respondieron a sus preguntas? Lea [Cómo pedir ayuda](how-to-ask-for-help) sobre cómo proceder con su pregunta de la mejor manera. |
 | --- |

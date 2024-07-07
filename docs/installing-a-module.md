@@ -3,7 +3,7 @@
 | Installation Guide |
 | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 8: Client Setup](client-setup.md) |
+| [<< Step 8: Client Setup](client-setup) |
 
 Adding a module is an optional step to alter the blizzlike gameplay offered by AzerothCore by default.
 
@@ -11,14 +11,14 @@ Adding a module is an optional step to alter the blizzlike gameplay offered by A
 
 1. Find a module of your needs in the [AzerothCore Catalogue](https://www.azerothcore.org/catalogue#/).
 2. Clone the repository
-    - Clone the repository using Git the same way AzerothCore was first cloned in the [Core Installation](core-installation.md). The repository should be cloned into the \modules\ directory. i.e E:\AzerothCore\modules\
+    - Clone the repository using Git the same way AzerothCore was first cloned in the [Core Installation](core-installation). The repository should be cloned into the \modules\ directory. i.e E:\AzerothCore\modules\
     - Download the ZIP file from the catalog and extract it in the \modules\ directory. i.e E:\AzerothCore\modules\mod-anticheat
 
 {% include note.html content="If your module has a suffix i.e. -master. This needs to be removed in order for the module to work!" %}
 
 ## Recompiling
 
-In order for your module to work you need to recompile the source. For an in-depth guide on how to recompile, read over [Core Installation](core-installation.md) again.
+In order for your module to work you need to recompile the source. For an in-depth guide on how to recompile, read over [Core Installation](core-installation) again.
 
 1. Reconfigure and regenerate CMake.
     - To make sure the module was correctly installed you can check if it can be found in the CMake logs under **\* Modules configuration (static)**
@@ -48,15 +48,15 @@ You should always check the README file of the module to see if any manual steps
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide |
 | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 8: Client Setup](client-setup.md) |
+| [<< Step 8: Client Setup](client-setup) |

@@ -1,37 +1,39 @@
 # account
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`account\` table**
 
-**Structure**
+`table-no-description`
 
-| Field                 | Type          | Attributes | Key | Null | Default           | Extra          | Comment    |
-| --------------------- | ------------- | ---------- | --- | ---- | ----------------- | -------------- | ---------- |
-| [id][1]               | INT           | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
-| [username][2]         | VARCHAR(32)   | SIGNED     | UNI | NO   | ''                |                |            |
-| [salt][3]             | BINARY(32)    | SIGNED     |     | NO   |                   |                |            |
-| [verifier][4]         | BINARY(32)    | SIGNED     |     | NO   |                   |                |            |
-| [session_key][5]      | BINARY(40)    | SIGNED     |     | YES  |                   |                |            |
-| [totp_secret][6]      | VARBINARY(100)| SIGNED     |     | YES  |                   |                |            |
-| [email][7]            | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
-| [reg_mail][8]         | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
-| [joindate][9]         | TIMESTAMP     | SIGNED     |     | NO   | CURRENT_TIMESTAMP |                |            |
-| [last_ip][10]         | VARCHAR(15)   | SIGNED     |     | NO   | 127.0.0.1         |                |            |
-| [last_attempt_ip][11] | VARCHAR(15)   | SIGNED     |     | NO   | 127.0.0.1         |                |            |
-| [failed_logins][12]   | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
-| [locked][13]          | TINYINT       | UNSIGNED   |     | NO   | 0                 |                |            |
-| [lock_country][14]    | VARCHAR(2)    | SIGNED     |     | NO   | 00                |                |            |
-| [last_login][15]      | TIMESTAMP     | SIGNED     |     | YES  |                   |                |            |
-| [online][16]          | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
-| [expansion][17]       | TINYINT       | UNSIGNED   |     | NO   | 2                 |                |            |
-| [mutetime][18]        | BIGINT        | SIGNED     |     | NO   | 0                 |                |            |
-| [mutereason][19]      | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
-| [muteby][20]          | VARCHAR(50)   | SIGNED     |     | NO   | ''                |                |            |
-| [locale][21]          | TINYINT       | UNSIGNED   |     | NO   | 0                 |                |            |
-| [os][22]              | VARCHAR(3)    | SIGNED     |     | NO   | ''                |                |            |
-| [recruiter][23]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
-| [totaltime][24]       | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
+**Table Structure**
+
+| Field                 | Type           | Attributes | Key | Null | Default           | Extra          | Comment    |
+| --------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ---------- |
+| [id][1]               | INT            | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
+| [username][2]         | VARCHAR(32)    | SIGNED     | UNI | NO   | ''                |                |            |
+| [salt][3]             | BINARY(32)     | SIGNED     |     | NO   |                   |                |            |
+| [verifier][4]         | BINARY(32)     | SIGNED     |     | NO   |                   |                |            |
+| [session_key][5]      | BINARY(40)     | SIGNED     |     | YES  |                   |                |            |
+| [totp_secret][6]      | VARBINARY(100) | SIGNED     |     | YES  |                   |                |            |
+| [email][7]            | VARCHAR(255)   | SIGNED     |     | NO   | ''                |                |            |
+| [reg_mail][8]         | VARCHAR(255)   | SIGNED     |     | NO   | ''                |                |            |
+| [joindate][9]         | TIMESTAMP      | SIGNED     |     | NO   | CURRENT_TIMESTAMP |                |            |
+| [last_ip][10]         | VARCHAR(15)    | SIGNED     |     | NO   | 127.0.0.1         |                |            |
+| [last_attempt_ip][11] | VARCHAR(15)    | SIGNED     |     | NO   | 127.0.0.1         |                |            |
+| [failed_logins][12]   | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
+| [locked][13]          | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |            |
+| [lock_country][14]    | VARCHAR(2)     | SIGNED     |     | NO   | 00                |                |            |
+| [last_login][15]      | TIMESTAMP      | SIGNED     |     | YES  |                   |                |            |
+| [online][16]          | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
+| [expansion][17]       | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |            |
+| [mutetime][18]        | BIGINT         | SIGNED     |     | NO   | 0                 |                |            |
+| [mutereason][19]      | VARCHAR(255)   | SIGNED     |     | NO   | ''                |                |            |
+| [muteby][20]          | VARCHAR(50)    | SIGNED     |     | NO   | ''                |                |            |
+| [locale][21]          | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |            |
+| [os][22]              | VARCHAR(3)     | SIGNED     |     | NO   | ''                |                |            |
+| [recruiter][23]       | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
+| [totaltime][24]       | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
 
 [1]: #id
 [2]: #username

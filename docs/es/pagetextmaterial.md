@@ -1,6 +1,6 @@
 # PageTextMaterial
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 **PageTextMaterial.dbc**
 

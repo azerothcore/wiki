@@ -117,7 +117,7 @@ To detach, press `ctrl+p` and `ctrl+q`. Do **NOT** try to detach using `ctrl+c` 
 If you got error message `the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'` 
 
 This command will automatically attach your terminal to the worldserver console. 
-Now you can run the `account create <user> <password>` command to create your first in-game account. There's [further information on the Creating Accounts page](creating-accounts.md).
+Now you can run the `account create <user> <password>` command to create your first in-game account. There's [further information on the Creating Accounts page](creating-accounts).
 
 ### Access database and update realmlist
 

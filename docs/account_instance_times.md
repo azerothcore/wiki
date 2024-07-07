@@ -1,12 +1,12 @@
 # account\_instance\_times
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`account\_instance\_times\` table**
 
 This table controls how many instances the account's characters have been in last 1 hour. If there is 5 records per account, the player won't be able to enter another instance.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |

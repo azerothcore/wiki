@@ -1,12 +1,12 @@
 # character\_homebind
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_homebind\` table**
 
 Contains information on the location where characters get teleported when they use their Hearthstone.
 
-**Structure**
+**Table Structure**
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

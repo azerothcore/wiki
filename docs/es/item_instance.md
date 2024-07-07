@@ -1,6 +1,6 @@
 # item\_instance
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`item\_instance\`**
 
@@ -80,7 +80,7 @@ El número de cargas para cada una de las cinco posibles cargas del hechizo en u
 
 ### enchantments
 
-Encantamientos desde SpellItemEnchantment.dbc. Véase [item_instance_enchantments](item_instance_enchantments.md)
+Encantamientos desde SpellItemEnchantment.dbc. Véase [item_instance_enchantments](item_instance_enchantments)
 
 ### randomPropertyId
 

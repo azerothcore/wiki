@@ -1,15 +1,15 @@
 # creature\_onkill\_reputation
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature\_onkill\_reputation\` table**
 
 This table controls the reputation given by creatures when killed by other players.
 
-**Structure**
+**Table Structure**
 
-| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment             |
-|---------------------------|--------------|------------|-----|------|---------|-------|---------------------|
+| Field                     | Type      | Attributes | Key | Null | Default | Extra | Comment             |
+| ------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------- |
 | [creature_id][1]          | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Creature Identifier |
 | [RewOnKillRepFaction1][2] | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
 | [RewOnKillRepFaction2][3] | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
@@ -46,16 +46,16 @@ The faction ID of the faction that the player will gain or lose points in. See F
 
 The maximum standing that the creature will award reputation until. If the player achieves this standing or any other standing higher than this, the creature will not award any reputation.
 
-| ID | Rank       |
-|----|------------|
-| 0  | Hated      |
-| 1  | Hostile    |
-| 2  | Unfriendly |
-| 3  | Neutral    |
-| 4  | Friendly   |
-| 5  | Honored    |
-| 6  | Revered    |
-| 7  | Exalted    |
+| ID  | Rank       |
+| --- | ---------- |
+| 0   | Hated      |
+| 1   | Hostile    |
+| 2   | Unfriendly |
+| 3   | Neutral    |
+| 4   | Friendly   |
+| 5   | Honored    |
+| 6   | Revered    |
+| 7   | Exalted    |
 
 ### IsTeamAward
 

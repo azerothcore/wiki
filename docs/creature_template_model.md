@@ -1,12 +1,12 @@
 # creature_template_model
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The `creature_template_model` table**
 
 This table describes which model is assigned to a specific creature.
 
-**Structure**
+**Table Structure**
 
 | Field                  | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

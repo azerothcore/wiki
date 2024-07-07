@@ -1,47 +1,46 @@
 # quest\_request\_items
 
-**Table: quest\_request\_items**
+[<-Back-to:World](database-world)
 
-**
-**This table basically handles 3 quest details:
+**The \`quest\_request\_items\` table**
+
+This table basically handles 3 quest details:
 
 1.  NPC Emote when quest is completed
 2.  NPC Emote when quest is incomplete
 3.  Completion text for quests requiring quest items
 
- 
+**Table Structure**
 
-| Field                                                       | Type         | Attributes        | Key | NULL | Default | Comment                                                                                                              |
-|-------------------------------------------------------------|--------------|-------------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
-| [ID](quest_request_items)                                   | MEDIUMINT | UNSIGNED          | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
-| [EmoteOnComplete](#quest_request_items-EmoteOnComplete)     | SMALLINT  | UNSIGNED          |     | NO   | 0       | Quest ender NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                    |
-| [EmoteOnIncomplete](#quest_request_items-EmoteOnIncomplete) | SMALLINT  | UNSIGNED          |     | NO   | 0       | Quest ender NPC Emote                                                                                                |
-| [CompletionText](#quest_request_items-CompletionText)       | text         | utf8\_general\_ci |     | YES  | NULL    | Quest completion text                                                                                                |
-| [VerifiedBuild](#quest_request_items-VerifiedBuild)         | SMALLINT  |                   |     | NO   | 0       | Game client Build number                                                                                             |
+| Field                                   | Type      | Attributes | Key | NULL | Default | Comment |
+| --------------------------------------- | --------- | ---------- | --- | ---- | ------- | ------- |
+| [ID](#id)                               | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |         |
+| [EmoteOnComplete](#emoteoncomplete)     | SMALLINT  | UNSIGNED   |     | NO   | 0       |         |
+| [EmoteOnIncomplete](#emoteonincomplete) | SMALLINT  | UNSIGNED   |     | NO   | 0       |         |
+| [CompletionText](#completiontext)       | text      |            |     | YES  | NULL    |         |
+| [VerifiedBuild](#verifiedbuild)         | SMALLINT  |            |     | NO   | 0       |         |
 
- 
+**Description of the fields**
 
-**Description of the fields:**
-
-### **ID**
+### ID
 
 Quest ID for quests showing a completion text upon turning in an item delivery quest.
 Primary Key for this table. Each quest ID must be unique.
 
-### **EmoteOnComplete**
+### EmoteOnComplete
 
-Emote (from [Emotes.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)) played by the quest ender NPC when all quest objectives are completed.
+Emote (from [Emotes.dbc](Emotes) played by the quest ender NPC when all quest objectives are completed.
 
-### **EmoteOnIncomplete**
+### EmoteOnIncomplete
 
 Emote (from [Emotes.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)) played by the quest ender NPC if any of the quest objectives are incomplete.
 
-### **CompletionText**
+### CompletionText
 
 Quest gossip text shown in the final gossip dialogue window when turning in an item delivery quest.
 The quest item(s) involved in the quest can either be provided by the quest giver or collected by the player.
 
-### **VerifiedBuild**
+### VerifiedBuild
 
 This field is used by the TrinityCore DB Team to determine whether a template has been verified from WDB files.
 

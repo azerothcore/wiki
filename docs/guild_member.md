@@ -1,12 +1,12 @@
 # guild\_member
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_member\` table**
 
 This table holds information on the members of all guilds, their ranks in the guild, and any notes made by them or by guild officers.
 
-**Structure**
+**Table Structure**
 
 | Field        | Type        | Attributes | Key    | Null | Default | Extra | Comment             |
 | ------------ | ----------- | ---------- | ------ | ---- | ------- | ----- | ------------------- |

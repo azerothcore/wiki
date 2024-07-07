@@ -1,7 +1,7 @@
 
 # item\_instance
 
-[<-Volver a:Item Instance](item-instance.md)
+[<-Volver a:Item Instance](item-instance)
 
 **Tabla \`item\_instance\enchantments`**
 

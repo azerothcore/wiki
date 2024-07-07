@@ -1,12 +1,12 @@
 # guild\_rank
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_rank\` table**
 
 This table holds the information on all of the ranks available in a guild along with their names and what rights a person with that rank has.
 
-**Structure**
+**Table Structure**
 
 | Field                | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |

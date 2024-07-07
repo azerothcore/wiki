@@ -1,6 +1,6 @@
 ﻿# character\_queststatus\_seasonal
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`character\_queststatus\_seasonal\`**
 

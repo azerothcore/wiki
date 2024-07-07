@@ -1,12 +1,12 @@
 # achievement\_dbc
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`achievement\_dbc\` table**
 
 Stores achievement data that is missing in [Achievement.dbc](Achievement)
 
-**Structure**
+**Table Structure**
 
 | Field                | Type | Attributes | Key | Null | Default | Extra | Comment                                                                          |
 | -------------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------------------------------------------- |

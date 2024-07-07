@@ -1,15 +1,15 @@
 # player\_race\_stats
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`player\_race\_stats\` table**
 
 This table holds information on modifiers for stat values applied to characters. All of the values in this table signify only the stat value modifiers based on the race of a character.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|---------|------------|-----|------|---------|-------|---------|
+| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [Race][1]      | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [Strength][2]  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [Agility][3]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |

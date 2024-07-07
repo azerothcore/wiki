@@ -1,6 +1,6 @@
 # Spell Effects Reference
 
-[<-Back-to:spell_dbc](spell_dbc.md)
+[<-Back-to:spell_dbc](spell_dbc)
 
 ### This page contains description regarding the usage of EffectMiscValue and other Spell Effects values.
 
@@ -9,9 +9,9 @@
 **Version is : 3.3.5a**
 
 ### Related Information
-[Summon Properties](summonproperties_dbc.md)
+[Summon Properties](summonproperties_dbc)
 
-[Spell Aura](spell-aura-reference.md)
+[Spell Aura](spell-aura-reference)
 
 # Spell Effect Names
 
@@ -31,7 +31,7 @@ SPELL_EFFECT_TELEPORT_UNITS = 5
 
 SPELL_EFFECT_APPLY_AURA = 6
 - BasePoints: Value of aura (depends on Aura ID)
-- EffectAura: [Spell Aura](spell-aura-reference.md)
+- EffectAura: [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_ENVIRONMENTAL_DAMAGE = 7
 - BasePoints: Base damage
@@ -88,19 +88,19 @@ SPELL_EFFECT_BLOCK = 23
 
 SPELL_EFFECT_CREATE_ITEM = 24
 - BasePoints: Number of items
-- EffectItemType: [Item ID](item_template.md)
+- EffectItemType: [Item ID](item_template)
 
 SPELL_EFFECT_WEAPON = 25
 
 SPELL_EFFECT_DEFENSE = 26
 
 SPELL_EFFECT_PERSISTENT_AREA_AURA = 27
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_SUMMON = 28
 - BasePoints: Number of summons (Sometimes used to set HP of summoned creature)
-- EffectMiscValueA: [Creature ID](creature_template.md)
-- EffectMiscValueB: [Summon Properties](summonproperties_dbc.md)
+- EffectMiscValueA: [Creature ID](creature_template)
+- EffectMiscValueB: [Summon Properties](summonproperties_dbc)
 - Radius: Spawn range
 
 SPELL_EFFECT_LEAP = 29
@@ -136,10 +136,10 @@ SPELL_EFFECT_OPEN_LOCK = 33
 - BasePoints: Required lockpicking skill level
 
 SPELL_EFFECT_SUMMON_CHANGE_ITEM = 34 // Weapons like Benedictions
-EffectItemType: New [Item ID](item_template.md)
+EffectItemType: New [Item ID](item_template)
 
 SPELL_EFFECT_APPLY_AREA_AURA_PARTY = 35
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_LEARN_SPELL = 36
 - TriggerSpell: Spell ID
@@ -158,7 +158,7 @@ SPELL_EFFECT_DISPEL = 38
 | 3  | Disease    | 7  | ALL          | 11 | Old Unseen      |
 
 SPELL_EFFECT_LANGUAGE = 39
-- EffectMiscValueA: [Language ID](languages.md)
+- EffectMiscValueA: [Language ID](languages)
 
 SPELL_EFFECT_DUAL_WIELD = 40
 
@@ -177,7 +177,7 @@ SPELL_EFFECT_TELEPORT_UNITS_FACE_CASTER = 43
 
 SPELL_EFFECT_SKILL_STEP = 44
 - BasePoints: Unknown
-- EffectMiscValueA: [Skill ID](skillline.md)
+- EffectMiscValueA: [Skill ID](skillline)
 
 SPELL_EFFECT_ADD_HONOR = 45
 - BasePoints: Honor points to reward
@@ -191,7 +191,7 @@ SPELL_EFFECT_STEALTH = 48
 SPELL_EFFECT_DETECT = 49
 
 SPELL_EFFECT_TRANS_DOOR = 50
-- EffectMiscValueA: [gameobject_template ID](gameobject_template.md)
+- EffectMiscValueA: [gameobject_template ID](gameobject_template)
 - gameobject_template's Data0 is the spell that is linked to the destination of the teleport when clicked.
 - Data0 entry = spell_target_position table
 
@@ -200,7 +200,7 @@ SPELL_EFFECT_FORCE_CRITICAL_HIT = 51 // Unused
 SPELL_EFFECT_GUARANTEE_HIT = 52 // Unused
 
 SPELL_EFFECT_ENCHANT_ITEM = 53
-- EffectItemType: [Item ID](item_template.md) (Scrolls/Inscription)
+- EffectItemType: [Item ID](item_template) (Scrolls/Inscription)
 - EffectMiscValueA: ID from SpellItemEnchantment.dbc
 - EffectMiscValueA: 14 = armor, 15 = weapon, tied to EffectItemType.
 
@@ -211,7 +211,7 @@ SPELL_EFFECT_TAMECREATURE = 55
 
 SPELL_EFFECT_SUMMON_PET = 56
 - Multiple: Relative to Caster level (e.g a value of -3 will be caster level -3) Does not currently work.
-- EffectMiscValueA: [Creature ID](creature_template.md)
+- EffectMiscValueA: [Creature ID](creature_template)
 
 SPELL_EFFECT_LEARN_PET_SPELL = 57
 - TriggerSpell: Spell ID
@@ -243,12 +243,12 @@ SPELL_EFFECT_TRIGGER_SPELL = 64
 - TriggerSpell: Spell ID
 
 SPELL_EFFECT_APPLY_AREA_AURA_RAID = 65
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 - EffectMiscValueA: Unknown
 
 SPELL_EFFECT_CREATE_MANA_GEM = 66
 - BasePoints: Number to refill
-- EffectItemType: [Item ID](item_template.md) to create/refill
+- EffectItemType: [Item ID](item_template) to create/refill
 
 SPELL_EFFECT_HEAL_MAX_HEALTH = 67
 
@@ -273,7 +273,7 @@ SPELL_EFFECT_HEAL_MECHANICAL = 75
 - BasePoints: Amount
 
 SPELL_EFFECT_SUMMON_OBJECT_WILD = 76
-- EffectMiscValueA: [gameobject_template ID](gameobject_template.md)
+- EffectMiscValueA: [gameobject_template ID](gameobject_template)
 
 SPELL_EFFECT_SCRIPT_EFFECT = 77 Assigned to a [Core Script](/wiki/core-scripts#spell-scripts) in the DB.
 
@@ -289,7 +289,7 @@ SPELL_EFFECT_CREATE_HOUSE = 81
 SPELL_EFFECT_BIND_SIGHT = 82
 
 SPELL_EFFECT_DUEL = 83
-- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) (Duel Flag)
+- EffectMiscValueA: [gameobject_template ID](gameobject_template) (Duel Flag)
 
 SPELL_EFFECT_STUCK = 84
 
@@ -314,7 +314,7 @@ SPELL_EFFECT_GAMEOBJECT_SET_DESTRUCTION_STATE = 89
 | 3  | Rebuilding |
 
 SPELL_EFFECT_KILL_CREDIT = 90
-- EffectMiscValueA: [Creature ID](creature_template.md)
+- EffectMiscValueA: [Creature ID](creature_template)
 
 SPELL_EFFECT_THREAT_ALL = 91 // Unused
 
@@ -352,16 +352,16 @@ SPELL_EFFECT_DISMISS_PET = 102
 
 SPELL_EFFECT_REPUTATION = 103
 - BasePoints: Reputation  Amount
-- EffectMiscValueA: ID from [faction.dbc](faction.md)
+- EffectMiscValueA: ID from [faction.dbc](faction)
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT1 = 104
-- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) 
+- EffectMiscValueA: [gameobject_template ID](gameobject_template) 
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT2 = 105
-- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) 
+- EffectMiscValueA: [gameobject_template ID](gameobject_template) 
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT3 = 106
-- EffectMiscValueA: [gameobject_template ID](gameobject_template.md) 
+- EffectMiscValueA: [gameobject_template ID](gameobject_template) 
 
 SPELL_EFFECT_SUMMON_OBJECT_SLOT4 = 107 // Unused
 
@@ -411,10 +411,10 @@ SPELL_EFFECT_SPIRIT_HEAL = 117
 
 SPELL_EFFECT_SKILL = 118
 - BasePoints: Unknown
-- EffectMiscValueA: [Skill ID](skillline.md)
+- EffectMiscValueA: [Skill ID](skillline)
 
 SPELL_EFFECT_APPLY_AREA_AURA_PET = 119
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_TELEPORT_GRAVEYARD = 120
 
@@ -439,10 +439,10 @@ SPELL_EFFECT_STEAL_BENEFICIAL_BUFF = 126
 SPELL_EFFECT_PROSPECTING = 127
 
 SPELL_EFFECT_APPLY_AREA_AURA_FRIEND = 128
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_APPLY_AREA_AURA_ENEMY = 129
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_REDIRECT_THREAT = 130
 - BasePoints: % Threat to redirect
@@ -458,7 +458,7 @@ SPELL_EFFECT_UNLEARN_SPECIALIZATION = 133
 - TriggerSpell: Spell ID
 
 SPELL_EFFECT_KILL_CREDIT2 = 134
-- EffectMiscValueA: [Creature ID](creature_template.md)
+- EffectMiscValueA: [Creature ID](creature_template)
 
 SPELL_EFFECT_CALL_PET = 135
 
@@ -489,7 +489,7 @@ SPELL_EFFECT_TRIGGER_SPELL_WITH_VALUE = 142
 - TriggerSpell: Spell ID
 
 SPELL_EFFECT_APPLY_AREA_AURA_OWNER = 143
-- BasePoints: Depends on [Spell Aura](spell-aura-reference.md)
+- BasePoints: Depends on [Spell Aura](spell-aura-reference)
 
 SPELL_EFFECT_KNOCK_BACK_DEST = 144
 - BasePoints: Distance
@@ -522,7 +522,7 @@ SPELL_EFFECT_SUMMON_RAF_FRIEND = 152
 - TriggerSpell: Spell ID (Summon)
 
 SPELL_EFFECT_CREATE_TAMED_PET = 153
-- EffectMiscValueA: [Creature ID](creature_template.md)
+- EffectMiscValueA: [Creature ID](creature_template)
 
 SPELL_EFFECT_DISCOVER_TAXI = 154
 - EffectMiscValueA: ID from TaxiNodes.dbc
@@ -533,7 +533,7 @@ SPELL_EFFECT_TITAN_GRIP = 155
 SPELL_EFFECT_ENCHANT_ITEM_PRISMATIC = 156
 
 SPELL_EFFECT_CREATE_ITEM_2 = 157
-- EffectItemType: [Item ID](item_template.md) to transform
+- EffectItemType: [Item ID](item_template) to transform
 - EffectMiscValueA: Unknown
 
 SPELL_EFFECT_MILLING = 158

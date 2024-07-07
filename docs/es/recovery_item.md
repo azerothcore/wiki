@@ -1,6 +1,6 @@
 ﻿# recovery\_item
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../recovery_item) [Spanish :es:](recovery_item)
 

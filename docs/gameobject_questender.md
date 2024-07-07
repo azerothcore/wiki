@@ -1,15 +1,15 @@
 # gameobject\_questender
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`gameobject\_questender\` table**
 
 Holds game object quest taker relations. The game objects in this table should all be of type QUESTGIVER (2).
 
-**Structure**
+**Table Structure**
 
-| Field      | Type         | Attributes | Key | Null | Default | Extra | Comment          |
-|------------|--------------|------------|-----|------|---------|-------|------------------|
+| Field      | Type      | Attributes | Key | Null | Default | Extra | Comment          |
+| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
 | [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                  |
 | [quest][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
 

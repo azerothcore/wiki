@@ -1,36 +1,36 @@
 # gameobject
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`gameobject\` table**
 
 This table holds the individual object data on each spawned game object in the world. This data along with the object's template data is read and used to instantiate the objects in the world.
 
-**Structure**
+**Table Structure**
 
-| Field               | Type       | Attributes | Key | Null | Default | Extra          | Comment                  |
-|---------------------|------------|------------|-----|------|---------|----------------|--------------------------|
-| [guid][1]           | INT        | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
-| [id][2]             | INT        | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
-| [map][3]            | SMALLINT   | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
-| [zoneId][4]         | SMALLINT   | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
-| [areaId][5]         | SMALLINT   | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
-| [spawnMask][6]      | TINYINT    | UNSIGNED   |     | NO   | 1       |                |                          |
-| [phaseMask][7]      | SMALLINT   | UNSIGNED   |     | NO   | 1       |                |                          |
-| [position_x][8]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [position_y][9]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [position_z][10]    | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [orientation][11]   | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation0][12]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation1][13]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation2][14]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation3][15]     | FLOAT      | SIGNED     |     | NO   | 0       |                |                          |
-| [spawntimesecs][16] | INT        | SIGNED     |     | NO   | 0       |                |                          |
-| [animprogress][17]  | TINYINT    | UNSIGNED   |     | NO   | 0       |                |                          |
-| [state][18]         | TINYINT    | UNSIGNED   |     | NO   | 1       |                |                          |
-| [ScriptName][19]    | CHAR       |            |     | YES  | ''      |                |                          |
-| [VerifiedBuild][20] | INT        | SIGNED     |     | YES  | NULL    |                | Not used by the core.    |
-| [Comment][21]       | TEXT       |            |     | YES  | NULL    |                |                          |
+| Field               | Type     | Attributes | Key | Null | Default | Extra          | Comment                  |
+| ------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------------------------ |
+| [guid][1]           | INT      | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
+| [id][2]             | INT      | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
+| [map][3]            | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
+| [zoneId][4]         | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
+| [areaId][5]         | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
+| [spawnMask][6]      | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                          |
+| [phaseMask][7]      | SMALLINT | UNSIGNED   |     | NO   | 1       |                |                          |
+| [position_x][8]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [position_y][9]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [position_z][10]    | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [orientation][11]   | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation0][12]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation1][13]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation2][14]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [rotation3][15]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
+| [spawntimesecs][16] | INT      | SIGNED     |     | NO   | 0       |                |                          |
+| [animprogress][17]  | TINYINT  | UNSIGNED   |     | NO   | 0       |                |                          |
+| [state][18]         | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                          |
+| [ScriptName][19]    | CHAR     |            |     | YES  | ''      |                |                          |
+| [VerifiedBuild][20] | INT      | SIGNED     |     | YES  | NULL    |                | Not used by the core.    |
+| [Comment][21]       | TEXT     |            |     | YES  | NULL    |                |                          |
 
 [1]: #guid
 [2]: #id
@@ -87,7 +87,7 @@ Controls under which difficulties the object is spawned.
 Just like flags you can add them as you wish so 3 would be: Spawned in 10/25 man normal versions of maps (pre 3.2 all maps)
 
 | Value | Comment                                                                              |
-|-------|--------------------------------------------------------------------------------------|
+| ----- | ------------------------------------------------------------------------------------ |
 | 0     | Not spawned                                                                          |
 | 1     | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
 | 2     | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |

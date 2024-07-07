@@ -1,12 +1,12 @@
 # character\_spell
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_spell\` table**
 
 Holds information for each character's spells.
 
-**Structure**
+**Table Structure**
 
 | Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

@@ -1,6 +1,6 @@
 ﻿# reserved\_name
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../reserved_name) [Spanish :es:](reserved_name)
 

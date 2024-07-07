@@ -1,15 +1,15 @@
 # game\_event\_arena\_seasons
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_arena\_seasons\` table**
 
 This information comes from sniffs and is NOT supposed to be changed.
 
-**Structure**
+**Table Structure**
 
-| Field           | Type       | Attributes | Key | Null | Default | Extra  | Comment                  |
-|-----------------|------------|------------|-----|------|---------|--------|--------------------------|
+| Field           | Type    | Attributes | Key | Null | Default | Extra  | Comment                  |
+| --------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
 | [eventEntry][1] | TINYINT | UNSIGNED   |     | NO   |         | Unique | Entry of the game event. |
 | [season][2]     | TINYINT | UNSIGNED   |     | NO   |         | Unique | Arena season number      |
 

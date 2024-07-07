@@ -1,17 +1,17 @@
 # creature_template_spell
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature_template_spell\` table**
 
-**Structure**
+**Table Structure**
 
-| Field | Type | Attribute | Key | Null | Default | Extra | Comment
-:--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-[CreatureID][1] | MEDIUMINT | UNSIGNED | PRI | NO
-[Index][2] | TINYINT | UNSIGNED | PRI | NO | 0
-[Spell][3] | MEDIUMINT | UNSIGNED | | YES | Null
-[VerifiedBuild][4] | SMALLINT | SIGNED | | YES | 0
+| Field              | Type      | Attribute | Key  | Null | Default | Extra | Comment |
+| ------------------ | --------- | --------- | ---- | ---- | ------- | ----- | ------- |
+| [CreatureID][1]    | MEDIUMINT | UNSIGNED  | PRI  | NO   |         |       |         |
+| [Index][2]         | TINYINT   | UNSIGNED  | PRI  | NO   | 0       |       |         |
+| [Spell][3]         | MEDIUMINT | UNSIGNED  |      | YES  | Null    |       |         |
+| [VerifiedBuild][4] | SMALLINT  | SIGNED    |      | YES  | 0       |       |         |
 
 [1]: #creatureid
 [2]: #index

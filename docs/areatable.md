@@ -4,7 +4,7 @@ redirect_from: "/AreaTable"
 
 # AreaTable
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **AreaTable.dbc**
 
@@ -12,7 +12,7 @@ This DBC contains the zone and subzone lists. For the purposes of this wiki arti
 
 **Version is : 3.3.5a**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 

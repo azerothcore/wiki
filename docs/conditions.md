@@ -1,12 +1,12 @@
 # conditions
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`conditions\` table**
 
 This table allows you to define conditions for various systems - Gossip, loot etc.
 
-**Structure**
+**Table Structure**
 
 <table>
 <tbody>

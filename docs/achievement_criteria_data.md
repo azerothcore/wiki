@@ -1,12 +1,12 @@
 # achievement\_criteria\_data
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`achievement\_criteria\_data\` table**
 
 This table contains the data that a player needs to obtain / complete in order to receive a given achievement.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |

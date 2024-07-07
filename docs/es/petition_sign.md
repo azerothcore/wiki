@@ -1,6 +1,6 @@
 ﻿# petition\_sign
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../petition_sign) [Spanish :es:](petition_sign)
 

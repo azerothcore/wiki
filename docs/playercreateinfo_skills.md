@@ -1,6 +1,6 @@
 # playercreateinfo\_skills
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 # playercreateinfo\_skills table
 

@@ -1,12 +1,12 @@
 # realmlist
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`realmlist\` table**
 
 This table sets up information on all available realms. Each row controls a different realm.
 
-**Structure**
+**Table Structure**
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 | -------------------------- | ------------ | ---------- | --- | ---- | ------------- | -------------- | ------- |

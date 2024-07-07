@@ -4,7 +4,7 @@
 
 Would you like to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute? You came to the right place!
 
-Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](https://www.azerothcore.org/wiki/How-to-ask-for-help) before asking for help.
+Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](How-to-ask-for-help) before asking for help.
 
 If while reading any of the tutorials linked on this page you find something that is not clear: let us know. We'll do our best to rephrase it and make it easier to be understood for beginners. Improving the docs is also a way to contribute!
 
@@ -47,9 +47,9 @@ Basically, there are 3 main ways to install AC:
 
 You can choose one setup, or even try more than one. You can find all the instructions here:
 
-- [azerothcore.org/wiki/Installation](https://www.azerothcore.org/wiki/Installation)
+- [azerothcore.org/wiki/Installation](Installation)
 
-Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help.md).
+Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help).
 
 Got your WoW server installed? Congratulations! Now let's see what you can do next.
 
@@ -59,7 +59,7 @@ Got your WoW server installed? Congratulations! Now let's see what you can do ne
 
 First of all, `set realmlist localhost` and join your own server using the `test1` account with password `a` (yes, one-letter password). This account is already `GM` so you can use the commands from this list:
 
-- [azerothcore.org/wiki/GM-Commands](https://www.azerothcore.org/wiki/GM-Commands)
+- [azerothcore.org/wiki/GM-Commands](GM-Commands)
 
 Get confident with the commands, you will need them for any administration, testing or development activities.
 
@@ -81,7 +81,7 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
-- [azerothcore.org/wiki/Update](https://www.azerothcore.org/wiki/Update)
+- [azerothcore.org/wiki/Update](Update)
 
 After you follow the update procedure, it is important to **verify** that:
 
@@ -96,7 +96,7 @@ A great way to start contributing is by testing PRs made by other contributors. 
 
 This topic is so important that there is a dedicated tutorial for it:
 
-- [azerothcore.org/wiki/How-to-test-a-PR](https://www.azerothcore.org/wiki/How-to-test-a-PR)
+- [azerothcore.org/wiki/How-to-test-a-PR](How-to-test-a-PR)
 
 ![image](https://user-images.githubusercontent.com/75517/109370244-d397b480-789f-11eb-9ac7-64d98ca0d33c.png)
 
@@ -127,7 +127,7 @@ You'll need a generic database management tool too in order to manage tables and
 
 Always read the documentation about every table that you deal with:
 
-- [azerothcore.org/wiki/database-world](https://www.azerothcore.org/wiki/database-world)
+- [azerothcore.org/wiki/database-world](database-world)
 
 ### SmartAI
 
@@ -137,7 +137,7 @@ In a nutshell, with SmartAI you can make an entity (for example a Creature) perf
 
 For example, you can make a creature cast a spell (action), when its health goes below 50% of its total health (event), against a random member of the party group (target).
 
-Technically the `smart_script` is just a table inside the world database (and its documentation can be found [here](https://www.azerothcore.org/wiki/smart_scripts)). Tools like Keira3 help you working with SmartAI using a practical graphic interface.
+Technically the `smart_script` is just a table inside the world database (and its documentation can be found [here](smart_scripts)). Tools like Keira3 help you working with SmartAI using a practical graphic interface.
 
 Try to open Keira3, look for any creature that has "SmartAI" as "AIName", open it and click on "SmartAI" on the right menu.
 You'll be prompted with a visual editor that will assist you when working with SmartAI.
@@ -163,7 +163,7 @@ if you understand how basic statements such as `SELECT`, `UPDATE`, `INSERT` and 
 
 You can submit your improvement via PR. Read this guide:
 
-- [How to create a Pull Request (PR)](https://www.azerothcore.org/wiki/how-to-create-a-pr)
+- [How to create a Pull Request (PR)](how-to-create-a-pr)
 
 ## Start contributing!
 

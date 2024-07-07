@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The [spell_dbc](spell_dbc.md) contains data regarding serverside spells which are not to be found in Client DBC files as well as **overrides** of the DBC that are meant to improve or fix any spell.
+The [spell_dbc](spell_dbc) contains data regarding serverside spells which are not to be found in Client DBC files as well as **overrides** of the DBC that are meant to improve or fix any spell.
 
 In order to add overrides for a spell in the `spell_dbc` table, you first need to import the base data about that spell from the Client DBC files (unless that spell has already been imported).
 
@@ -17,5 +17,5 @@ When submitting a PR with a `spell_dbc` fix for a certain spell, if that spell w
 
 ## How to import spells from the DBC files to the spell_dbc table
 
-To import data from Spell.dbc to our spell_dbc table, you can take a look at the general guide on [how to import data from DBC files](how-to-import-dbc-data-in-db.md).
+To import data from Spell.dbc to our spell_dbc table, you can take a look at the general guide on [how to import data from DBC files](how-to-import-dbc-data-in-db).
 You just need to use the same guidelines with by using the Spell.dbc file instead.

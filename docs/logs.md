@@ -1,6 +1,6 @@
 # logs
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`logs\` table**
 
@@ -11,7 +11,7 @@ Example db appender:
 Appender.DB=3,5,0
 ```
 
-**Structure**
+**Table Structure**
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -50,7 +50,7 @@ Logger.server=4,Console Server
 Depends on LogLevel in authserver.conf
 
 | Value | Description |
-|------ | ------------|
+| ----- | ----------- |
 | 1     | (Fatal)     |
 | 2     | (Error)     |
 | 3     | (Warning)   |

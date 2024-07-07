@@ -3,13 +3,13 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 5: Red](networking.md) | [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date.md) |
+| [<< Paso 5: Red](networking) | [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date) |
 
 ## Iniciando el Servidor
 
 - Ejecute authserver y worldserver en la carpeta de su build.
 
-Para información detallada sobre cómo configurar un reiniciador y un debugger, vaya a la página [cómo-reiniciar-y-depurar](how-to-restart-and-debug.md).
+Para información detallada sobre cómo configurar un reiniciador y un debugger, vaya a la página [cómo-reiniciar-y-depurar](how-to-restart-and-debug).
 
 **NUNCA cree una cuenta directamente en su base de datos a menos que esté TOTALMENTE SEGURO de que sabe lo que está haciendo y cómo hacerlo.**
 
@@ -28,10 +28,10 @@ Para información detallada sobre cómo configurar un reiniciador y un debugger,
 
 ## Creación de cuentas
 
-Lea [creación de cuentas](creating-accounts.md).
+Lea [creación de cuentas](creating-accounts).
 
 ## Configurando el acceso remoto
-Para propósitos de desarrollo, este paso no es necesario. Sin embaro, para incrementar la seguridad cuando usted quiera que otras personas creen cuentas, debería configurar un formulario de registro, de manera que no tenga que copiar y pegar sus contraseñas. Revise: [Acceso remoto](remote-access.md) sobre cómo enviar comandos al servidor.
+Para propósitos de desarrollo, este paso no es necesario. Sin embaro, para incrementar la seguridad cuando usted quiera que otras personas creen cuentas, debería configurar un formulario de registro, de manera que no tenga que copiar y pegar sus contraseñas. Revise: [Acceso remoto](remote-access) sobre cómo enviar comandos al servidor.
 
 <br>
 
@@ -39,11 +39,11 @@ Para propósitos de desarrollo, este paso no es necesario. Sin embaro, para incr
 
 Si sigue teniendo inconvenientes, revise:
 
-* [Preguntas frecuentes](faq.md)
+* [Preguntas frecuentes](faq)
 
-* [Errores Comunes](common-errors.md)
+* [Errores Comunes](common-errors)
 
-* [Cómo solicitar ayuda](how-to-ask-for-help.md)
+* [Cómo solicitar ayuda](how-to-ask-for-help)
 
 * [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
 
@@ -51,4 +51,4 @@ Si sigue teniendo inconvenientes, revise:
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 5: Red](networking.md) | [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date.md) |
+| [<< Paso 5: Red](networking) | [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date) |

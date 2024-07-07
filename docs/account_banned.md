@@ -1,12 +1,12 @@
 # account\_banned
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`account\_banned\` table**
 
 This table lists all of the accounts that have been banned along with the date when (or if) the ban will expire.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------- |

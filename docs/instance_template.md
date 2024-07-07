@@ -1,6 +1,6 @@
 # instance\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`instance\_template\` table**
 
@@ -8,12 +8,12 @@ This table has all the templates for every instance. When a group enters an inst
 
 If you want to change the spot you will start in when you enter/leave an instance, go to areatrigger\_teleport
 
-**Structure**
+**Table Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|--------------|------------|-----|------|---------|-------|---------|
-| [map][1]        | INT      | UNSIGNED   |     | NO   | NULL    |       |         |
-| [parent][2]     | BIGINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [map][1]        | INT          | UNSIGNED   |     | NO   | NULL    |       |         |
+| [parent][2]     | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
 | [script][3]     | VARCHAR(128) | SIGNED     |     | NO   | NULL    |       |         |
 | [allowMount][4] | tinyiny(1)   | SIGNED     |     | NO   | 0       |       |         |
 

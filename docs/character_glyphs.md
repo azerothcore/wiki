@@ -1,12 +1,12 @@
 # character\_glyphs
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_glyphs\` table**
 
 Contains all the individual glyph data for each character.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

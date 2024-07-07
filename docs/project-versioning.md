@@ -18,7 +18,7 @@ More in depth:
 
 * **PATCH** version when you make backwards-compatible bug and security fixes.
 
-* **PRERELEASE** this is such called "metadata" in semver standard. We use this part of the versioning while we work on **master** branch. Everytime a new feature or breaking change (on both code or db) is released, this number is increased to notify you regarding possible actions to take. Check [how to use the changelog](how-to-use-changelog.md).
+* **PRERELEASE** this is such called "metadata" in semver standard. We use this part of the versioning while we work on **master** branch. Everytime a new feature or breaking change (on both code or db) is released, this number is increased to notify you regarding possible actions to take. Check [how to use the changelog](how-to-use-changelog).
 
 ### PRERELEASE first
 

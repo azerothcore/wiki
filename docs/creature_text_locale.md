@@ -1,12 +1,12 @@
 # creature_text_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature_text_locale\` table**
 
 This table is used to provide to localized clients with localized string for creatures texts.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|

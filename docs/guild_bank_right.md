@@ -1,12 +1,12 @@
 # guild\_bank\_right
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_bank\_right\` table**
 
 This table hold informations regarding the right guild member have to withdraw, deposit etc at the guild bank.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -43,7 +43,7 @@ The permissions you want to give to a player of that rank on the tab. This is a 
 FLAGS:
 
 | Value | Description                                    |
-|------ | ---------------------------------------------- |
+| ----- | ---------------------------------------------- |
 | 1     | view items                                     |
 | 2     | deposit items                                  |
 | 4     | update item name shown when navigating the tab |

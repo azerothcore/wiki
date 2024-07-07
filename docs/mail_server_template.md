@@ -1,12 +1,12 @@
 # mail_server_template
 
-[<-Back-to:Character](database-character.md)
+[<-Back-to:Character](database-character)
 
 **The \`mail_server_template\` table**
 
 This table contains information for server mail to be sent to players that meet the requirement. Mails are sent OnLogin.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type    | Attributes | Key | Null | Default | Extra          | Comment |
 | ---------------- | ------- | ---------- | --- | ---- | ------- | -------------- | ------- |

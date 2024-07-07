@@ -1,18 +1,18 @@
 # spawn\_group\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spawn\_group\_template\` table**
 
 This table contains Spawn Group names and flags.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|--------------|------------|-----|------|---------|-------|---------|
-| [roupId][1]    | INT      | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [roupId][1]    | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
 | [roupName][2]  | VARCHAR(100) |            |     | NO   | NULL    |       |         |
-| [roupFlags][3] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [roupFlags][3] | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #roupid
 [2]: #roupname
@@ -33,7 +33,7 @@ This is a descriptive name for the group.
 These are the flags that will apply to the group.
 
 | Flag                                   | Number | Description                                                                                                                                          |
-|----------------------------------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SPAWNGROUP\_FLAG\_NONE                 | 0x00   | No flags applied                                                                                                                                     |
 | SPAWNGROUP\_FLAG\_SYSTEM               | 0x01   | This group is a system group (applies to standard groups 0-4)                                                                                        |
 | SPAWNGROUP\_FLAG\_COMPATIBILITY\_MODE  | 0x02   | This group will contain legacy objects/creatures that don't work with dynamic spawn changes                                                          |

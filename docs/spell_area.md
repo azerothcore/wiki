@@ -1,12 +1,12 @@
 # spell\_area
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_area\` table**
 
 This table is used to apply a specific spell aura to the player within an area in the game. When any player enters this area or somehow interacts with a quest, this aura will be handled accordingly.
 
-**Structure**
+**Table Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |

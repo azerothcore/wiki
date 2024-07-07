@@ -1,6 +1,6 @@
 ﻿# guild\_bank\_eventlog
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../guild_bank_eventlog) [Spanish :es:](guild_bank_eventlog)
 

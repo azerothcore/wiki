@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation.md) | [Paso 2: Instalación del núcleo >>](linux-core-installation.md) |
+| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del núcleo >>](linux-core-installation) |
 
 | |
 | :- |
@@ -130,15 +130,15 @@ sudo apt-get install g++-8 gcc-8
 
 Si todavía tiene problemas, compruebe:
 
-* [FAQ - Preguntas frecuentes](faq.md)
+* [FAQ - Preguntas frecuentes](faq)
 
-* [Errores comunes](common-errors.md)
+* [Errores comunes](common-errors)
 
-* [Cómo pedir ayuda](how-to-ask-for-help.md)
+* [Cómo pedir ayuda](how-to-ask-for-help)
 
 * [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff le responderá siempre que tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation.md) | [Paso 2: Instalación del núcleo >>](linux-core-installation.md) |
+| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del núcleo >>](linux-core-installation) |

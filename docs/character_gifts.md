@@ -1,12 +1,12 @@
 # character\_gifts
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_gifts\` table**
 
 This table holds data about wrapped/gift items.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |

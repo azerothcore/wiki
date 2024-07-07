@@ -2,7 +2,7 @@
 
 | Installation Guide | |
 | :- | :- |
-| [<< Start: Installation Guide](installation.md) | [Step 2: VSC Core Installation >>](windows-vsc-core-installation.md) |
+| [<< Start: Installation Guide](installation) | [Step 2: VSC Core Installation >>](windows-vsc-core-installation) |
 
 | |
 | :- |

@@ -1,12 +1,12 @@
 # character\_pet
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_pet\` table**
 
 This table holds the pet data for each pet summoned by anyone in the game.
 
-**Structure**
+**Table Structure**
 
 | Field               | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |

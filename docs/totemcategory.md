@@ -4,18 +4,18 @@ redirect_from: "/TotemCategory"
 
 # TotemCategory
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **TotemCategory.dbc**
 
 **Version is : 3.3.5a**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 
 | Column | Field        | Type         | Notes                                                                    |
-|--------|--------------|--------------|--------------------------------------------------------------------------|
+| ------ | ------------ | ------------ | ------------------------------------------------------------------------ |
 | 1      | ID           | Integer      |                                                                          |
 | 2-18   | sRefName     | String + Loc | Includes all kinds of component things.. not just totems                 |
 | 19     | Category     | Integer      | Which category the tool belongs to (1 = totems, 3 = enchanting rods etc) |
@@ -24,7 +24,7 @@ redirect_from: "/TotemCategory"
 ### For instance for totems:
 
 | Bit | Description |
-|-----|-------------|
+| --- | ----------- |
 | 0   | earth       |
 | 1   | air         |
 | 2   | fire        |
@@ -35,7 +35,7 @@ Master Totem has the bitmask 1111b, meaning it can be used instead of all four n
 ## **Content**
 
 | ID  | Name                     |
-|-----|--------------------------|
+| --- | ------------------------ |
 | 1   | Skinning Knife (OLD)     |
 | 2   | Earth Totem              |
 | 3   | Air Totem                |

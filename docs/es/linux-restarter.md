@@ -2,7 +2,7 @@
 
 Este tutorial le guiará a través de la creación de un script para reiniciar AzerothCore después de un apagado, reinicio o caída cuando se utiliza un servidor Linux.
 
-La forma más fácil de configurar un reiniciador es utilizando nuestros [scripts integrados o docker](how-to-restart-and-debug.md)
+La forma más fácil de configurar un reiniciador es utilizando nuestros [scripts integrados o docker](how-to-restart-and-debug)
 
 Sin embargo, el siguiente tipo le mostrará cómo crear su propio reiniciador desde cero.
 

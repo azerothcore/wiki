@@ -6,7 +6,7 @@ redirect_from: "/How-to-create-a-PR"
 
 This guide explains how to open PRs to submit any kind of fixes (C++, SQL, etc...).
 
-If you happen to submit only DB fixes, you might give it a try to our new [simplified way of opening a PR containing SQL code](https://www.azerothcore.org/wiki/how-to-create-a-db-pr).
+If you happen to submit only DB fixes, you might give it a try to our new [simplified way of opening a PR containing SQL code](how-to-create-a-db-pr).
 
 ## Do only ONCE: create and clone your AzerothCore fork
 
@@ -101,7 +101,7 @@ git checkout -b fix-issue-xxxx
 
 ### 4. Add your C++ changes (if any)
 
-Make sure all changes abides the [C++ Code Standards](cpp-code-standards.md)!
+Make sure all changes abides the [C++ Code Standards](cpp-code-standards)!
 
 If you don't have any C++ changes, you can skip this. Otherwise, open your editor and do them now! I'll wait...
 

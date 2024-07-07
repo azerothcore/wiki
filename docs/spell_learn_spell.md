@@ -1,6 +1,6 @@
 # spell\_learn\_spell
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_learn\_spell\` table**
 
@@ -8,10 +8,10 @@ This table holds information on spells that should be learned at the same time a
 
 NOTE: Spells with spell effects SPELL\_EFFECT\_LEARN\_SPELL should NOT be included in this table.
 
-**Structure**
+**Table Structure**
 
-| Field        | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|--------------|-------------|------------|-----|------|---------|-------|---------|
+| Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [entry][1]   | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [SpellID][2] | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Active][3]  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |

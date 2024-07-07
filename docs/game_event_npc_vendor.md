@@ -1,15 +1,15 @@
 # game\_event\_npc\_vendor
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_npc\_vendor\` table**
 
 This table allows you to change the items a vendor sells, or to create a [vendor list](npc_vendor) for an NPC who does not sell items unless an event is active.
 
-**Structure**
+**Table Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------|--------------|------------|-----|------|---------|-------|---------|
+| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [eventEntry][1]   | TINYINT   | SIGNED     |     | NO   | 0       |       |         |
 | [guid][2]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [slot][3]         | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |

@@ -1,6 +1,6 @@
 # Emotes
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 Este archivo DBC contiene emotes que pueden ser utilizados por los NPCs y jugadores dentro del juego.
 

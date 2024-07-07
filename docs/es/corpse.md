@@ -1,6 +1,6 @@
 ﻿# corpse
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../corpse) [Spanish :es:](corpse)
 

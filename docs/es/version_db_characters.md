@@ -1,6 +1,6 @@
 ﻿# version\_db\_characters
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../version_db_characters) [Spanish :es:](version_db_characters)
 

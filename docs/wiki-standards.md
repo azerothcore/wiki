@@ -26,7 +26,7 @@ THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct in
 
 ALL DATABASE TABLE FILES should be present in the correct DATABASE FILE.
 
-When adding/removing a table it should also be updated in `database-auth.md` `database-characters.md` `database-world.md`
+When adding/removing a table it should also be updated in `database-auth` `database-characters` `database-world`
 
 ## LINKING WITHIN THE WIKI
 
@@ -46,6 +46,6 @@ ALL FILES should be named the **exact same as the English versions**! Do not eve
 
 ## ARCHIVED PAGES: (Not yet implemented)
 
-ALL ARCHIVED PAGES that could potentially have some some value should be added to the `archive.md` list and links to these pages should be removed from other places in the wiki.
+ALL ARCHIVED PAGES that could potentially have some some value should be added to the `archive` list and links to these pages should be removed from other places in the wiki.
 
 They should also be moved into the /docs/archive/ folder.

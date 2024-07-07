@@ -1,23 +1,23 @@
 # quest\_poi
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`quest\_poi\` table**
 
 Comes from sniffs.
 
-**Structure**
+**Table Structure**
 
-| Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|---------------------|---------|------------|-----|------|---------|-------|---------|
-| [QuestID][1]        | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [id][2]             | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ObjectiveIndex][3] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [MapID][4]          | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [WorldMapAreaId][5] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Floor][6]          | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Priority][7]       | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags][8]          | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field               | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [QuestID][1]        | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [id][2]             | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ObjectiveIndex][3] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [MapID][4]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [WorldMapAreaId][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Floor][6]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Priority][7]       | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Flags][8]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #questid
 [2]: #id
@@ -52,7 +52,7 @@ The ID from [WorldMapArea.dbc](WorldMapArea).
 
 ### Floor
 
-This is the ID from [AreaTable.dbc](areatable.md) of the POI.
+This is the ID from [AreaTable.dbc](areatable) of the POI.
 
 ### Priority
 

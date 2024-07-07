@@ -1,6 +1,6 @@
 ﻿# log\_money
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../log_money) [Spanish :es:](log_money)
 

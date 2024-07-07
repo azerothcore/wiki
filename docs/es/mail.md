@@ -1,6 +1,6 @@
 ﻿# mail
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../mail) [Spanish :es:](mail)
 

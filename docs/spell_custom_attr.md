@@ -1,17 +1,17 @@
 # spell\_custom\_attr
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_custom\_attr\` table**
 
 Table used for storing custom spell attributes.
 
-**Structure**
+**Table Structure**
 
-| Field           | Type          | Attributes | Key | Null | Default | Extra | Comment               |
-|-----------------|---------------|------------|-----|------|---------|-------|-----------------------|
-| [spell_id][1]      | MEDIUMINT     | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
-| [attributes][2] | INT           | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment               |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | --------------------- |
+| [spell_id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
+| [attributes][2] | INT       | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
 [1]: #spell_id
 [2]: #attributes
@@ -27,7 +27,7 @@ Spell ID. See [Spell.dbc](spell_dbc) .
 Spell custom attributes from the enumeration SpellCustomAttributes in SpellInfo.h
 
 | Attributes                                   | Flag       | Bit value  | Comment                                                               |
-|----------------------------------------------|------------|------------|-----------------------------------------------------------------------|
+| -------------------------------------------- | ---------- | ---------- | --------------------------------------------------------------------- |
 | SPELL_ATTR0_CU_ENCHANT_PROC                  | 1          | 0x00000001 |                                                                       |
 | SPELL_ATTR0_CU_CONE_BACK                     | 2          | 0x00000002 |                                                                       |
 | SPELL_ATTR0_CU_CONE_LINE                     | 4          | 0x00000004 |                                                                       |

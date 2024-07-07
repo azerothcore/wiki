@@ -1,12 +1,12 @@
 # creature_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature_template\` table**
 
 This table contains the description of creatures. Each spawned creature is an instance of a template present in this table, this means every creature MUST be defined in this table.
 
-**Structure**
+**Table Structure**
 
 | Field                                              | Type               | Null | Key | Default | Extra | Comment                              |
 | -------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | ------------------------------------ |
@@ -531,7 +531,7 @@ This field is overridden by ScriptName field if both are set.
 | ArcherAI       | Creature casts spell from field spell1; chases the victim.                                          |
 | TurretAI       | Creature attacks using spell from field spell1; does not move.                                      |
 | VehicleAI      | Creature acts as player vehicle.                                                                    |
-| SmartAI        | Creature uses the "[smart_scripts](smart_scripts.md)" table to specify it's behaviour.              |
+| SmartAI        | Creature uses the "[smart_scripts](smart_scripts)" table to specify it's behaviour.              |
 
 #### MovementType
 
@@ -670,40 +670,40 @@ These flags control certain creature specific attributes. Flags can be added tog
 
 **Example:** 32+64=96
 
-| Flag       | Type                                                |            |                                                                                                                                                    |
-| ---------- | --------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1          | CREATURE_FLAG_EXTRA_INSTANCE_BIND                   | 0x00000001 | creature kill binds instance to killer and killer's group                                                                                          |
-| 2          | CREATURE_FLAG_EXTRA_CIVILIAN                        | 0x00000002 | creature does not aggro (ignore faction/reputation hostility)                                                                                      |
-| 4          | CREATURE_FLAG_EXTRA_NO_PARRY                        | 0x00000004 | creature does not parry                                                                                                                            |
-| 8          | CREATURE_FLAG_EXTRA_NO_PARRY_HASTEN                 | 0x00000008 | creature does not counter-attack at parry                                                                                                          |
-| 16         | CREATURE_FLAG_EXTRA_NO_BLOCK                        | 0x00000010 | creature does not block                                                                                                                            |
-| 32         | CREATURE_FLAG_EXTRA_NO_CRUSHING_BLOWS               | 0x00000020 | creature does not do crush-attacks                                                                                                                 |
-| 64         | CREATURE_FLAG_EXTRA_NO_XP                           | 0x00000040 | creature kill does not give XP                                                                                                                     |
-| 128        | CREATURE_FLAG_EXTRA_TRIGGER                         | 0x00000080 | creature is trigger-NPC (invisible to players only)                                                                                                |
-| 256        | CREATURE_FLAG_EXTRA_NO_TAUNT                        | 0x00000100 | creature is immune to taunt-auras and "attack me"-effects                                                                                          |
-| 512        | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | 0x00000200 | (CREATURE_FLAG_EXTRA_UNUSED_10 Not Implemented) creature won't update movement flags                                                               |
-| 1024       | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | 0x00000400 | creature will be only visible for dead players                                                                                                     |
-| 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | (CREATURE_FLAG_EXTRA_UNUSED_12 Not Implemented) creature will use offhand attacks                                                                  |
-| 4096       | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | 0x00001000 | players can't sell items to this vendor                                                                                                            |
-| 8192       | CREATURE_FLAG_EXTRA_IGNORE_COMBAT                   | 0x00002000 |                                                                                                                                                    |
-| 16384      | CREATURE_FLAG_EXTRA_WORLDEVENT                      | 0x00004000 | custom flag for world events (left room for merging)                                                                                               |
-| 32768      | CREATURE_FLAG_EXTRA_GUARD                           | 0x00008000 | creature is a guard (Will ignore feign death and vanish)                                                                                           |
-| 65536      | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH              | 0x00010000 | creature ignores feign death                                                                                                                       |
-| 131072     | CREATURE_FLAG_EXTRA_NO_CRIT                         | 0x00020000 | creature does not do critical strikes                                                                                                              |
-| 262144     | CREATURE_FLAG_EXTRA_NO_SKILL_GAINS                  | 0x00040000 | creature won't increase weapon skills                                                                                                              |
-| 524288     | CREATURE_FLAG_EXTRA_OBEYS_TAUNT_DIMINISHING_RETURNS | 0x00080000 | creature taunt is subject to diminishing returns                                                                                                   |
-| 1048576    | CREATURE_FLAG_EXTRA_ALL_DIMINISH                    | 0x00100000 | Creature is subject to all diminishing returns                                                                                                     |
-| 2097152    | CREATURE_FLAG_EXTRA_NO_PLAYER_DAMAGE_REQ            | 0x00200000 | creature does not need to take player damage for kill credit                                                                                       |
-| 4194304    | CREATURE_FLAG_EXTRA_AVOID_AOE                       | 0x00400000 | ignored by aoe attacks (for icc blood prince council npc - Dark Nucleus)                                                                           |
-| 8388608    | CREATURE_FLAG_EXTRA_NO_DODGE                        | 0x00800000 | target cannot dodge                                                                                                                                |
-| 16777216   | CREATURE_FLAG_EXTRA_MODULE                          | 0x01000000 | Used by module creatures to avoid blizzlike checks.                                                                                                |
-| 33554432   | CREATURE_FLAG_EXTRA_DONT_CALL_ASSISTANCE            | 0x02000000 | Prevents creatures from calling for assistance on initial aggro                                                                                    |
-| 67108864   | CREATURE_FLAG_EXTRA_IGNORE_ALL_ASSISTANCE_CALLS     | 0x04000000 | Prevents creature from responding to assistance calls                                                                                              |
-| 134217728  | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_SAI_ENTRY         | 0x08000000 | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                                         |
-| 268435456  | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | 0x10000000 | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error.             |
-| 536870912  | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | 0x20000000 | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                             |
-| 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                                         |
-| 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                                     |
+| Flag       | Type                                                |            |                                                                                                                                        |
+| ---------- | --------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| 1          | CREATURE_FLAG_EXTRA_INSTANCE_BIND                   | 0x00000001 | creature kill binds instance to killer and killer's group                                                                              |
+| 2          | CREATURE_FLAG_EXTRA_CIVILIAN                        | 0x00000002 | creature does not aggro (ignore faction/reputation hostility)                                                                          |
+| 4          | CREATURE_FLAG_EXTRA_NO_PARRY                        | 0x00000004 | creature does not parry                                                                                                                |
+| 8          | CREATURE_FLAG_EXTRA_NO_PARRY_HASTEN                 | 0x00000008 | creature does not counter-attack at parry                                                                                              |
+| 16         | CREATURE_FLAG_EXTRA_NO_BLOCK                        | 0x00000010 | creature does not block                                                                                                                |
+| 32         | CREATURE_FLAG_EXTRA_NO_CRUSHING_BLOWS               | 0x00000020 | creature does not do crush-attacks                                                                                                     |
+| 64         | CREATURE_FLAG_EXTRA_NO_XP                           | 0x00000040 | creature kill does not give XP                                                                                                         |
+| 128        | CREATURE_FLAG_EXTRA_TRIGGER                         | 0x00000080 | creature is trigger-NPC (invisible to players only)                                                                                    |
+| 256        | CREATURE_FLAG_EXTRA_NO_TAUNT                        | 0x00000100 | creature is immune to taunt-auras and "attack me"-effects                                                                              |
+| 512        | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | 0x00000200 | (CREATURE_FLAG_EXTRA_UNUSED_10 Not Implemented) creature won't update movement flags                                                   |
+| 1024       | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | 0x00000400 | creature will be only visible for dead players                                                                                         |
+| 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | (CREATURE_FLAG_EXTRA_UNUSED_12 Not Implemented) creature will use offhand attacks                                                      |
+| 4096       | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | 0x00001000 | players can't sell items to this vendor                                                                                                |
+| 8192       | CREATURE_FLAG_EXTRA_IGNORE_COMBAT                   | 0x00002000 |                                                                                                                                        |
+| 16384      | CREATURE_FLAG_EXTRA_WORLDEVENT                      | 0x00004000 | custom flag for world events (left room for merging)                                                                                   |
+| 32768      | CREATURE_FLAG_EXTRA_GUARD                           | 0x00008000 | creature is a guard (Will ignore feign death and vanish)                                                                               |
+| 65536      | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH              | 0x00010000 | creature ignores feign death                                                                                                           |
+| 131072     | CREATURE_FLAG_EXTRA_NO_CRIT                         | 0x00020000 | creature does not do critical strikes                                                                                                  |
+| 262144     | CREATURE_FLAG_EXTRA_NO_SKILL_GAINS                  | 0x00040000 | creature won't increase weapon skills                                                                                                  |
+| 524288     | CREATURE_FLAG_EXTRA_OBEYS_TAUNT_DIMINISHING_RETURNS | 0x00080000 | creature taunt is subject to diminishing returns                                                                                       |
+| 1048576    | CREATURE_FLAG_EXTRA_ALL_DIMINISH                    | 0x00100000 | Creature is subject to all diminishing returns                                                                                         |
+| 2097152    | CREATURE_FLAG_EXTRA_NO_PLAYER_DAMAGE_REQ            | 0x00200000 | creature does not need to take player damage for kill credit                                                                           |
+| 4194304    | CREATURE_FLAG_EXTRA_AVOID_AOE                       | 0x00400000 | ignored by aoe attacks (for icc blood prince council npc - Dark Nucleus)                                                               |
+| 8388608    | CREATURE_FLAG_EXTRA_NO_DODGE                        | 0x00800000 | target cannot dodge                                                                                                                    |
+| 16777216   | CREATURE_FLAG_EXTRA_MODULE                          | 0x01000000 | Used by module creatures to avoid blizzlike checks.                                                                                    |
+| 33554432   | CREATURE_FLAG_EXTRA_DONT_CALL_ASSISTANCE            | 0x02000000 | Prevents creatures from calling for assistance on initial aggro                                                                        |
+| 67108864   | CREATURE_FLAG_EXTRA_IGNORE_ALL_ASSISTANCE_CALLS     | 0x04000000 | Prevents creature from responding to assistance calls                                                                                  |
+| 134217728  | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_SAI_ENTRY         | 0x08000000 | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                             |
+| 268435456  | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | 0x10000000 | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error. |
+| 536870912  | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | 0x20000000 | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                 |
+| 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                             |
+| 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                         |
 
 #### ScriptName
 

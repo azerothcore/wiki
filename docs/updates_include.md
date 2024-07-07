@@ -1,12 +1,14 @@
 # updates_include
 
-[<-Back-to:Auth](database-auth.md)
-[<-Back-to:Characters](database-characters.md)
-[<-Back-to:World](database-world.md)
+[<-Back-to:Auth](database-auth)
+[<-Back-to:Characters](database-characters)
+[<-Back-to:World](database-world)
 
 **The \`updates_include\` table**
 
-**Structure**
+`table-no-description`
+
+**Table Structure**
 
 | Field      | Type         | Attributes               | Key | Null | Default  | Extra | Comment                                                         |
 | ---------- | ------------ | ------------------------ | --- | ---- | -------- | ----- | --------------------------------------------------------------- |

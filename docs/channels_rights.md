@@ -1,10 +1,10 @@
 # channels\_rights
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`channels\_rights\` table**
 
-**Structure**
+**Table Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |

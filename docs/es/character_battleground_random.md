@@ -1,6 +1,6 @@
 ﻿# character\_battleground\_random
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../character_battleground_random) [Spanish :es:](character_battleground_random)
 

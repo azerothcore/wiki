@@ -9,7 +9,7 @@ AzerothCore está compuesto por 2 servicios: `authserver` y `worldserver`.
 
 ## Cómo iniciar los servicios
 
-Tanto authserver como worldserver pueden iniciarse simplemente ejecutando los binarios compilados después de [completar la instalación](https://www.azerothcore.org/wiki/Installation).
+Tanto authserver como worldserver pueden iniciarse simplemente ejecutando los binarios compilados después de [completar la instalación](Installation).
 
 ## Cómo configurar un reinicio
 
@@ -35,7 +35,7 @@ Nuestro sistema docker integra los scripts anteriores dentro de `docker-compose`
 
 Además, nuestro `docker-compose` utiliza la función [política de reinicio](https://docs.docker.com/config/containers/start-containers-automatically/) para mantener los contenedores en funcionamiento.
 
-Para más información, consulte la documentación [Instalación con Docker](install-with-docker.md).
+Para más información, consulte la documentación [Instalación con Docker](install-with-docker).
 
 También encontrarás una guía sobre cómo depurar tu código utilizando VSCode combinado con su extensión Remote Docker.
 

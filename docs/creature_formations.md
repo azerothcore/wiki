@@ -1,12 +1,12 @@
 # creature\_formations
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature\_formations\` table**
 
 This table allows to group mobs. Members of group will follow others, and attack their targets.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type  | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |

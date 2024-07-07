@@ -1,19 +1,19 @@
 # spell\_script\_names
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_script\_names\` table**
 
 Holds the spell id to ScriptName pairings for use in spell scripts.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type     | Attributes | Key    | Null | Default | Extra | Comment |
-|-----------------|----------|------------|--------|------|---------|-------|---------|
-| [spell_id][1]   | INT  | SIGNED     | UNIQUE | NO   | NONE    |       |         |
+| --------------- | -------- | ---------- | ------ | ---- | ------- | ----- | ------- |
+| [spell_id][1]   | INT      | SIGNED     | UNIQUE | NO   | NONE    |       |         |
 | [ScriptName][2] | char(64) | UNSIGNED   | UNIQUE | NO   | NONE    |       |         |
 
-[1]: #spell_id
+[1]: #spellid
 [2]: #scriptname
 
 **Description of the fields**

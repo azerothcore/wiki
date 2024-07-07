@@ -1,6 +1,6 @@
 ﻿# log\_arena\_memberstats
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../log_arena_memberstats) [Spanish :es:](log_arena_memberstats)
 

@@ -1,10 +1,10 @@
 # guild\_member\_withdraw
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_member\_withdraw\` table**
 
-**Structure**
+**Table Structure**
 
 | Field      | Type  | Attributes | Key | Null | Default | Extra  | Comment |
 | ---------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |

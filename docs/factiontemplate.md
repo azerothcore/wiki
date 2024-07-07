@@ -6,18 +6,18 @@ redirect_from: "/FactionTemplate"
 
 **FactionTemplate.dbc**
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 This DBC contains information on all of the individual factions. A faction entry from this DBC contains all of the needed data to calculate hostility, friendliness, or neutrality to any other faction in this DBC.
 
 **IMPORTANT: These values are only used for the [creature\_template](creature_template) and [gameobject\_template](gameobject\_template) tables.**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
-## **Structure**
+## **Table Structure**
 
 | Field Nb | Name                                     | Type             |
-|----------|------------------------------------------|------------------|
+| -------- | ---------------------------------------- | ---------------- |
 | 1        | ID                                       | Int              |
 | 2        | Name (Ref to [Faction.dbc](Faction.dbc)) | Int              |
 | 4        | ourMask                                  | Bitmask (4 bits) |
@@ -36,12 +36,12 @@ If our faction doesn't have the other faction's ID in the enemy or friend factio
 
 First, let's define the four faction groups:
 
-| ID | Bit | Name                              |
-|----|-----|-----------------------------------|
-| 0  | 1   | All players (and pets)            |
-| 1  | 2   | Alliance players (and their pets) |
-| 2  | 4   | Horde players (and their pets)    |
-| 3  | 8   | Monster (Not a player nor a pet)  |
+| ID  | Bit | Name                              |
+| --- | --- | --------------------------------- |
+| 0   | 1   | All players (and pets)            |
+| 1   | 2   | Alliance players (and their pets) |
+| 2   | 4   | Horde players (and their pets)    |
+| 3   | 8   | Monster (Not a player nor a pet)  |
 
 The first mask (ourMask) defines what type of faction we are dealing with. Eg, faction 1 (PLAYER, Human) has 3 as ourMask; that means that it has the first two bits set so it classifies as both 'All players' and 'Alliance players'.
 
@@ -117,7 +117,7 @@ And these steps to calculate if faction A is friendly to faction B:
 **Version is : 3.3.5a**
 
 | ID   | Name                                | ourMask | friendlyMask | hostileMask | Enemy Factions      | Friend Factions   |
-|------|-------------------------------------|---------|--------------|-------------|---------------------|-------------------|
+| ---- | ----------------------------------- | ------- | ------------ | ----------- | ------------------- | ----------------- |
 | 1    | PLAYER, Human                       | 3       | 2            | 12          |                     |                   |
 | 2    | PLAYER, Orc                         | 5       | 4            | 10          |                     |                   |
 | 3    | PLAYER, Dwarf                       | 3       | 2            | 12          |                     |                   |

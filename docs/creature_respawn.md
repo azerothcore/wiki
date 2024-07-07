@@ -1,12 +1,12 @@
 # creature\_respawn
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`creature\_respawn\` table**
 
 This table holds the respawn time when creatures should be respawned in the world. In case of a server crash, this table holds the respawn data so that the creatures don't respawn immediately on server restart. How often the respawn time is saved for creatures can be controlled in worldserver.conf.dist at SaveRespawnTimeImmediately.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

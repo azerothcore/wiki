@@ -1,6 +1,6 @@
 # battleground\_deserters
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`battleground\_deserters\`**
 

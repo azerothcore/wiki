@@ -1,13 +1,13 @@
 # game\_weather
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **Table Structure**
 
 This table holds the percent chances for weather changes to occur in various zones. Not all zones can have their weather changed. For any given zone the percentage of all weather types for each season should total, and not exceed 100%.
 
-| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|---------------------------|--------------|------------|-----|------|---------|-------|---------|
+| Field                     | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [zone][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [spring_rain_chance][2]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [spring_snow_chance][3]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |

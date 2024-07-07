@@ -2,7 +2,7 @@
 
 ## Cómo instalar
 
-- [Guía de instalación tradicional](installation.md)
+- [Guía de instalación tradicional](installation)
 
 ## Ayuda
 
@@ -12,44 +12,44 @@
 
 ## Base de Datos
 
-- [Base de datos: auth](database-auth.md)
-- [Base de datos: characters](database-characters.md)
-- [Base de datos: world](database-world.md)
+- [Base de datos: auth](database-auth)
+- [Base de datos: characters](database-characters)
+- [Base de datos: world](database-world)
 
 ## Documentación
 
-- [Sistema Bash ](bash_system.md)
-- [Operaciones a nivel de bits](bit-and-bytes-tutorial.md)
-- [Registro de cambios](changelog.md)
-- [Opciones de CMake](cmake-options.md)
-- [Scripts del Core](core-scripts.md)
-- [Índice DBC](dbc-index.md)
-- [Estructura del directorio](directory-structure.md)
-- [Codigos de salida](exitcodes.md)
-- [Cómo depurar y reiniciar](how-to-restart-and-debug.md)
-- [IP2LOCATION](ip2location.md)
-- [Cofiguración de Logging](logging-configuration.md)
-- [Monitoreando AzerothCore con Grafana](monitoring-azerothcore-with-grafana.md)
-- [Tipos de datos MySQL/C++](mysqltypescpp.md)
-- [Versionado del proyecto](project-versioning.md)
+- [Sistema Bash ](bash_system)
+- [Operaciones a nivel de bits](bit-and-bytes-tutorial)
+- [Registro de cambios](changelog)
+- [Opciones de CMake](cmake-options)
+- [Scripts del Core](core-scripts)
+- [Índice DBC](dbc-index)
+- [Estructura del directorio](directory-structure)
+- [Codigos de salida](exitcodes)
+- [Cómo depurar y reiniciar](how-to-restart-and-debug)
+- [IP2LOCATION](ip2location)
+- [Cofiguración de Logging](logging-configuration)
+- [Monitoreando AzerothCore con Grafana](monitoring-azerothcore-with-grafana)
+- [Tipos de datos MySQL/C++](mysqltypescpp)
+- [Versionado del proyecto](project-versioning)
 - [Sniffing y Parsing](sniffing-and-parsing)
-- [Directorio SQL](sql-directory.md)
-- [Versionado de SQL](sql-versioning.md)
+- [Directorio SQL](sql-directory)
+- [Versionado de SQL](sql-versioning)
 
 ## Modelos y técnicas
 
-- [Herramientas útiles](useful-tools.md)
-- [Cómo importar información de DBC hacia SQL](how-to-import-dbc-data-in-db.md)
-- [Iniciar Worldserver y Authserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio.md)
-- [Snippets de SQL útiles](useful-sql.md)
-- [Cómo usar gperftool para analizar tu aplicación](how-to-use-gperftool.md)
+- [Herramientas útiles](useful-tools)
+- [Cómo importar información de DBC hacia SQL](how-to-import-dbc-data-in-db)
+- [Iniciar Worldserver y Authserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio)
+- [Snippets de SQL útiles](useful-sql)
+- [Cómo usar gperftool para analizar tu aplicación](how-to-use-gperftool)
 
 ## AzerothCore extendido
 
-- [Estructura modular](the-modular-structure.md)
-- [Hooks Bash](hooks-bash.md)
-- [Hooks Cmake](hooks-cmake.md)
-- [Hooks C++](hooks-script.md)
+- [Estructura modular](the-modular-structure)
+- [Hooks Bash](hooks-bash)
+- [Hooks Cmake](hooks-cmake)
+- [Hooks C++](hooks-script)
 
 ## Recursos externos
 

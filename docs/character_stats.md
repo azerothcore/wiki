@@ -1,13 +1,13 @@
 # character\_stats
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_stats\` table**
 
 This table holds information on all the stats regarding the character. Used for external applications such as websites.
 See worldserver.conf: PlayerSave.Stats.\*
 
-**Structure**
+**Table Structure**
 
 | Field                   | Type  | Attributes | Key | Null | Default | Extra | Comment                            |
 | ----------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |

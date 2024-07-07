@@ -3,7 +3,7 @@
 | Installation Guide                                                                                                                      |                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation.md)                                                                                         | [Step 2: Core Installation >>](windows-core-installation.md) |
+| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
@@ -118,15 +118,15 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide                                                                                                                      |                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation.md)                                                                                         | [Step 2: Core Installation >>](windows-core-installation.md) |
+| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |

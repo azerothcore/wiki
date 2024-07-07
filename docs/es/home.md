@@ -4,7 +4,7 @@ redirect_from: "/"
 
 Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/).
 
-Leer en: [Inglés :gb:](https://www.azerothcore.org/wiki/home) [Español :es:](home)
+Leer en: [Inglés :gb:](home) [Español :es:](home)
 
 ## NOTA IMPORTANTE
 
@@ -12,7 +12,7 @@ Leer en: [Inglés :gb:](https://www.azerothcore.org/wiki/home) [Español :es:](h
 
 ## Empezando
 
-- [Guía de instalación](installation.md)
+- [Guía de instalación](installation)
 
 ## Documentación
 

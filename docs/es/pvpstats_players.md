@@ -1,6 +1,6 @@
 ﻿# pvpstats\_players
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../pvpstats_players) [Spanish :es:](pvpstats_players)
 

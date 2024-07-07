@@ -3,7 +3,7 @@
 | Installation Guide                                                                                                                      |                                                              |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 2: Core Installation](core-installation.md)                                                                                    | [Step 4: Database Installation >>](database-installation.md) |
+| [<< Step 2: Core Installation](core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
 
 **Table of contents**
 - [Download](#download) - Required/Optional (Not needed if you extract the files.)
@@ -44,11 +44,11 @@ If you downloaded the files above you can skip this step and jump forward to [wo
 
 This part is just a general summary of the overall process - please read it in more detail for the OS you are working with.
 
-[Linux Server Setup](linux-server-setup.md)
+[Linux Server Setup](linux-server-setup)
 
-[macOS Server Setup](macos-server-setup.md)
+[macOS Server Setup](macos-server-setup)
 
-[Windows Server Setup](windows-server-setup.md)
+[Windows Server Setup](windows-server-setup)
 
 AzerothCore needs certain files extracted from the World of Warcraft client. You need to extract them from a 3.3.5a client.
 
@@ -112,7 +112,7 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 The following steps must be verified:
 
 - The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  If not, follow the instruction in [Realmlist Table](realmlist.md).
+  If not, follow the instruction in [Realmlist Table](realmlist).
 
 - The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
   The username and password can be variable. You can choose to either: 
@@ -135,21 +135,21 @@ The following steps must be verified:
 
 ### (Optional) Config options by environment variable
 
-It is possible to load config options via environment variables, which you can read about [here](config-overrides-with-env-var.md).
+It is possible to load config options via environment variables, which you can read about [here](config-overrides-with-env-var).
 
 ## Help
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide                                                                                                                      |                                                              |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 2: Core Installation](core-installation.md)                                                                                    | [Step 4: Database Installation >>](database-installation.md) |
+| [<< Step 2: Core Installation](core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |

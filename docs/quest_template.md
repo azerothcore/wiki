@@ -1,120 +1,120 @@
 # quest\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **Table: quest\_template**
 
 Contains all basic definitions of available quests.
 
-## **Structure**
+## **Table Structure**
 
-|  Field                            |  Type          |  Attribute  |  Key  |  Null  |  Default  |  Extra  |  Comment  |
-|-----------------------------------|----------------|-------------|-------|--------|-----------|---------|-----------|
-|  [ID][1]                          |  MEDIUMINT     |  UNSIGNED   |  PRI  |  NO    | 0         |         |           |
-|  [QuestType][2]                   |  TINYINT       |  UNSIGNED   |       |  NO    | 2         |         |           |
-|  [QuestLevel][3]                  |  SMALLINT      |             |       |  NO    | 1         |         |           |
-|  [MinLevel][4]                    |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [QuestSortID][5]                 |  SMALLINT      |             |       |  NO    | 0         |         |           |
-|  [QuestInfoID][6]                 |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [SuggestedGroupNum][7]           |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredFactionId1][8]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredFactionId2][9]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredFactionValue1][10]      |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RequiredFactionValue2][11]      |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardNextQuest][12]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardXPDifficulty][13]         |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardMoney][14]                |  INT           |             |       |  NO    | 0         |         |           |
-|  [RewardMoneyDifficulty][15]      |  INT           |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardDisplaySpell][16]         |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardSpell][17]                |  INT           |             |       |  NO    | 0         |         |           |
-|  [RewardHonor][18]                |  INT           |             |       |  NO    | 0         |         |           |
-|  [RewardKillHonor][19]            |  FLOAT         |             |       |  NO    | 0         |         |           |
-|  [StartItem][20]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [Flags][21]                      |  INT           |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredPlayerKills][22]        |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardItem1][23]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardAmount1][24]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardItem2][25]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardAmount2][26]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardItem3][27]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardAmount3][28]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardItem4][29]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardAmount4][30]              |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDrop1][31]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDropQuantity1][32]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDrop2][33]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDropQuantity2][34]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDrop3][35]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDropQuantity3][36]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDrop4][37]                  |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ItemDropQuantity4][38]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemID1][39]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemQuantity1][40]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemID2][41]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemQuantity2][42]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemID3][43]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemQuantity3][44]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemID4][45]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemQuantity4][46]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemID5][47]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemQuantity5][48]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemID6][49]        |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardChoiceItemQuantity6][50]  |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [POIContinent][51]               |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [POIx][52]                       |  FLOAT         |             |       |  NO    | 0         |         |           |
-|  [POIy][53]                       |  FLOAT         |             |       |  NO    | 0         |         |           |
-|  [POIPriority][54]                |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardTitle][55]                |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardTalents][56]              |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardArenaPoints][57]          |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardFactionID1][58]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardFactionValue1][59]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionOverride1][60]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionID2][61]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardFactionValue2][62]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionOverride2][63]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionID3][64]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardFactionValue3][65]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionOverride3][66]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionID4][67]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardFactionValue4][68]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionOverride4][69]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionID5][70]           |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RewardFactionValue5][71]        |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RewardFactionOverride5][72]     |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [TimeAllowed][73]                |  INT           |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [AllowableRaces][74]             |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [LogTitle][75]                   |  TEXT          |             |       |  YES   |           |         |           |
-|  [LogDescription][76]             |  TEXT          |             |       |  YES   |           |         |           |
-|  [QuestDescription][77]           |  TEXT          |             |       |  YES   |           |         |           |
-|  [AreaDescription][78]            |  TEXT          |             |       |  YES   |           |         |           |
-|  [QuestCompletionLog][79]         |  TEXT          |             |       |  YES   |           |         |           |
-|  [RequiredNpcOrGo1][80]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGo2][81]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGo3][82]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGo4][83]           |  MEDIUMINT     |             |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGoCount1][84]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGoCount2][85]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGoCount3][86]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredNpcOrGoCount4][87]      |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemId1][88]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemId2][89]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemId3][90]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemId4][91]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemId5][92]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemId6][93]            |  MEDIUMINT     |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemCount1][94]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemCount2][95]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemCount3][96]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemCount4][97]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemCount5][98]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [RequiredItemCount6][99]         |  SMALLINT      |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [Unknown0][100]                  |  TINYINT       |  UNSIGNED   |       |  NO    | 0         |         |           |
-|  [ObjectiveText1][101]            |  TEXT          |             |       |  YES   |           |         |           |
-|  [ObjectiveText2][102]            |  TEXT          |             |       |  YES   |           |         |           |
-|  [ObjectiveText3][103]            |  TEXT          |             |       |  YES   |           |         |           |
-|  [ObjectiveText4][104]            |  TEXT          |             |       |  YES   |           |         |           |
-|  [VerifiedBuild][105]             |  SMALLINT      |             |       |  YES   | 0         |         |           |
+| Field                           | Type      | Attribute | Key | Null | Default | Extra | Comment |
+| ------------------------------- | --------- | --------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]                         | MEDIUMINT | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [QuestType][2]                  | TINYINT   | UNSIGNED  |     | NO   | 2       |       |         |
+| [QuestLevel][3]                 | SMALLINT  |           |     | NO   | 1       |       |         |
+| [MinLevel][4]                   | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [QuestSortID][5]                | SMALLINT  |           |     | NO   | 0       |       |         |
+| [QuestInfoID][6]                | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [SuggestedGroupNum][7]          | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredFactionId1][8]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredFactionId2][9]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredFactionValue1][10]     | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RequiredFactionValue2][11]     | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardNextQuest][12]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardXPDifficulty][13]        | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardMoney][14]               | INT       |           |     | NO   | 0       |       |         |
+| [RewardMoneyDifficulty][15]     | INT       | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardDisplaySpell][16]        | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardSpell][17]               | INT       |           |     | NO   | 0       |       |         |
+| [RewardHonor][18]               | INT       |           |     | NO   | 0       |       |         |
+| [RewardKillHonor][19]           | FLOAT     |           |     | NO   | 0       |       |         |
+| [StartItem][20]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [Flags][21]                     | INT       | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredPlayerKills][22]       | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardItem1][23]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardAmount1][24]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardItem2][25]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardAmount2][26]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardItem3][27]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardAmount3][28]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardItem4][29]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardAmount4][30]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDrop1][31]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDropQuantity1][32]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDrop2][33]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDropQuantity2][34]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDrop3][35]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDropQuantity3][36]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDrop4][37]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [ItemDropQuantity4][38]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemID1][39]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity1][40] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemID2][41]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity2][42] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemID3][43]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity3][44] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemID4][45]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity4][46] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemID5][47]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity5][48] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemID6][49]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity6][50] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [POIContinent][51]              | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [POIx][52]                      | FLOAT     |           |     | NO   | 0       |       |         |
+| [POIy][53]                      | FLOAT     |           |     | NO   | 0       |       |         |
+| [POIPriority][54]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardTitle][55]               | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardTalents][56]             | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardArenaPoints][57]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardFactionID1][58]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardFactionValue1][59]       | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionOverride1][60]    | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionID2][61]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardFactionValue2][62]       | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionOverride2][63]    | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionID3][64]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardFactionValue3][65]       | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionOverride3][66]    | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionID4][67]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardFactionValue4][68]       | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionOverride4][69]    | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionID5][70]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RewardFactionValue5][71]       | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RewardFactionOverride5][72]    | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [TimeAllowed][73]               | INT       | UNSIGNED  |     | NO   | 0       |       |         |
+| [AllowableRaces][74]            | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [LogTitle][75]                  | TEXT      |           |     | YES  |         |       |         |
+| [LogDescription][76]            | TEXT      |           |     | YES  |         |       |         |
+| [QuestDescription][77]          | TEXT      |           |     | YES  |         |       |         |
+| [AreaDescription][78]           | TEXT      |           |     | YES  |         |       |         |
+| [QuestCompletionLog][79]        | TEXT      |           |     | YES  |         |       |         |
+| [RequiredNpcOrGo1][80]          | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RequiredNpcOrGo2][81]          | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RequiredNpcOrGo3][82]          | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RequiredNpcOrGo4][83]          | MEDIUMINT |           |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount1][84]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount2][85]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount3][86]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount4][87]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemId1][88]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemId2][89]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemId3][90]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemId4][91]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemId5][92]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemId6][93]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemCount1][94]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemCount2][95]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemCount3][96]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemCount4][97]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemCount5][98]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [RequiredItemCount6][99]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
+| [Unknown0][100]                 | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
+| [ObjectiveText1][101]           | TEXT      |           |     | YES  |         |       |         |
+| [ObjectiveText2][102]           | TEXT      |           |     | YES  |         |       |         |
+| [ObjectiveText3][103]           | TEXT      |           |     | YES  |         |       |         |
+| [ObjectiveText4][104]           | TEXT      |           |     | YES  |         |       |         |
+| [VerifiedBuild][105]            | SMALLINT  |           |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #questtype
@@ -234,7 +234,7 @@ The quest ID. This column is the Primary Key for the Table. Each quest ID must b
 Accepted values: 0, 1, 2 or 3. Their meaning is described in table below.
 
 | Value | Result                                                                                                   |
-|-------|----------------------------------------------------------------------------------------------------------|
+| ----- | -------------------------------------------------------------------------------------------------------- |
 | 0     | Quest is enabled, but it is auto-completed when accepted; this skips quest objectives and quest details. |
 | 1     | Quest is disabled (not yet implemented in the core).                                                     |
 | 2     | Quest is enabled (does not auto-complete).                                                               |
@@ -339,7 +339,7 @@ Items given by the quest giver at beginning of the quest. Items will be deleted 
 This flag field defines more specifically the type of quest it is. Aside from the daily flag and sharable flag, this field is used just for grouping purposes and NOT for any other quest requirements. The quest requirements are calculated from non-zero values in other quest template fields. Also, while some of these flags are known, others have yet an unknown purpose and the comments below is simply guesswork on them.
 
 | Flag       | Name                                 | Comments                                                                                                                                                               |
-|------------|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0          | QUEST_FLAGS_NONE                     | No flags, so no groups assigned to this quest.                                                                                                                         |
 | 1          | QUEST_FLAGS_STAY_ALIVE               | If the player dies, the quest is failed.                                                                                                                               |
 | 2          | QUEST_FLAGS_PARTY_ACCEPT             | Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest.              |

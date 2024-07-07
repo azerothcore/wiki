@@ -4,7 +4,7 @@ redirect_from: "/Spell"
 
 # Spell
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 # **Spell.dbc**
 
@@ -13,12 +13,12 @@ These values are used by the core and a few spell\_\* tables.
 
 **Version 3.3.5**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
-## **Structure**
+## **Table Structure**
 
 | ID  | Name                          | Type   |
-|-----|-------------------------------|--------|
+| --- | ----------------------------- | ------ |
 | 0   | Entry                         | uint   |
 | 1   | Category                      | uint   |
 | 2   | Dispel                        | uint   |
@@ -256,21 +256,21 @@ These values are used by the core and a few spell\_\* tables.
 
 ## **Category**
 
-| ID | Description   |
-|----|---------------|
-| 0  | Default       |
-| 1  | Summon guards |
-| 2  | Entry         |
-| 4  | Entry         |
+| ID  | Description   |
+| --- | ------------- |
+| 0   | Default       |
+| 1   | Summon guards |
+| 2   | Entry         |
+| 4   | Entry         |
 
 ## **powerType**
 
-| ID | Description |
-|----|-------------|
-| 0  | Mana        |
-| 1  | Rage        |
-| 2  | Focus       |
-| 3  | Energy      |
+| ID  | Description |
+| --- | ----------- |
+| 0   | Mana        |
+| 1   | Rage        |
+| 2   | Focus       |
+| 3   | Energy      |
 
 ## **RequiresSpellFocus**
 

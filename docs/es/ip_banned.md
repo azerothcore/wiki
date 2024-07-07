@@ -1,6 +1,6 @@
 ﻿# ip\_banned
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../ip_banned) [Spanish :es:](ip_banned)
 

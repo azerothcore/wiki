@@ -1,6 +1,6 @@
 ﻿# pet\_spell\_cooldown
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../pet_spell_cooldown) [Spanish :es:](pet_spell_cooldown)
 

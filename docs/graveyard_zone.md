@@ -1,6 +1,6 @@
 # graveyard\_zone
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`graveyard\_zone\` table**
 
@@ -10,15 +10,14 @@ This table is used to set what factions a given graveyard will accept, and also 
 
 For a list of all existing graveyard zones and their respective IDs, check out WorldSafeLocs.dbc
 
-**Structure**
+**Table Structure**
 
-|                                         |              |                |         |          |             |           |             |
-|-----------------------------------------|--------------|----------------|---------|----------|-------------|-----------|-------------|
-| **Field**                               | **Type**     | **Attributes** | **Key** | **Null** | **Default** | **Extra** | **Comment** |
-| ID                                      | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [GhostZone](#graveyard_zone-ghost_zone) | MEDIUMINT | UNSIGNED       | PRI     | NO       | 0           |           |             |
-| [Faction](#graveyard_zone-faction)      | SMALLINT  | UNSIGNED       |         | NO       | 0           |           |             |
-| Comment                                 | TEXT         |                |         |          |             |           |             |
+| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)               | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [GhostZone](#ghostzone) | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Faction](#faction)     | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Comment](#comment)     | TEXT      |            |     |      |         |       |         |
 
 **Description of the fields**
 
@@ -40,4 +39,6 @@ Graveyard's team.
 
 67 - Horde team only
 
-**Comment**
+### Comment
+
+`field-no-description|4`

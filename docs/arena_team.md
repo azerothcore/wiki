@@ -1,12 +1,12 @@
 # arena\_team
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`arena\_team\` table**
 
 This table holds the main ArenaTeam information. All created teams or all teams in the process of being created have a record in this table.
 
-**Structure**
+**Table Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ------ | ------- |

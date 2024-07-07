@@ -71,7 +71,7 @@ The value: `"Flags": 64` means "normal zone", we have to override it with `19456
 
 For the DBC documentation check [this wiki](https://wowdev.wiki/Category:DBC_WotLK)
 
-You can check the list of the flags [here](https://www.azerothcore.org/wiki/AreaTable)
+You can check the list of the flags [here](AreaTable)
 
 3. Export the SQL
 
@@ -94,5 +94,5 @@ UPDATE areatable_dbc SET Flags=19456 WHERE ID=616
 5. Create your PR
 
 If you are using this guide to fix a bug (not for customization purpose), 
-now you can create [your PR](https://www.azerothcore.org/wiki/How-to-create-a-PR) with the 2 queries above 
+now you can create [your PR](How-to-create-a-PR) with the 2 queries above 
 

@@ -1,6 +1,6 @@
 # character\_reputation
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`character\_reputation\`**
 

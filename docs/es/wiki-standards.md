@@ -22,7 +22,7 @@ El archivo debería iniciar siempre con `# Nombre del archivo`. (Esto para mostr
 
 Todos los archivos de las tablas de la Base de Datos deben estar presentes en el archivo de Base de Datos correcto.
 
-Al añadir o remover una tabla, también debe actualizarse en `database-auth.md` `database-characters.md` `database-world.md`
+Al añadir o remover una tabla, también debe actualizarse en `database-auth` `database-characters` `database-world`
 
 ## Enlaces dentro de la Wiki
 
@@ -38,6 +38,6 @@ Todos los archivos deben nombrarse **¡exactamente igual que las versiones en in
 
 ## Paginas archivadas: (Sin implementar aún)
 
-Todas las páginas archivadas que puedan, potencialmente, contener alguna clase de valor, deberían ser añadidas en la  lista `archive.md` y los enlaces a estas páginas deberían ser removidos de otros lugares en la Wiki.
+Todas las páginas archivadas que puedan, potencialmente, contener alguna clase de valor, deberían ser añadidas en la  lista `archive` y los enlaces a estas páginas deberían ser removidos de otros lugares en la Wiki.
 
 Deberían también ser movidas a la carpeta /docs/archive/.

@@ -1,15 +1,15 @@
 # game\_event\_seasonal\_questrelation
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_seasonal\_questrelation\` table**
 
 Holds information on the game event seasonal quest relations to allow for resetting of quests with ZoneOrSort of -22.
 
-**Structure**
+**Table Structure**
 
-| Field           | Type          | Attributes | Key | Null | Default | Extra | Comment                 |
-|-----------------|---------------|------------|-----|------|---------|-------|-------------------------|
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
 | [questId][1]    | INT       | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier        |
 | [eventEntry][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Entry of the game event |
 

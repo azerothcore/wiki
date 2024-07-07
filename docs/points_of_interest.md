@@ -1,22 +1,22 @@
 # points\_of\_interest
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`points\_of\_interest\` table**
 
 `table-no-description`
 
-**Structure**
+**Table Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|--------------|------------|-----|------|---------|-------|---------|
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [entry][1]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [x][2]          | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [y][3]          | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [x][2]          | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
+| [y][3]          | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
 | [icon][4]       | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [flags][5]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [Importance][6] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [icon_name][7]  | text         |            |     | NO   | NULL    |       |         |
+| [icon_name][7]  | text      |            |     | NO   | NULL    |       |         |
 
 [1]: #entry
 [2]: #x
@@ -43,7 +43,7 @@
 ### icon
 
 | Icon                      | Value | Description               |
-|---------------------------|-------|---------------------------|
+| ------------------------- | ----- | ------------------------- |
 | ICON\_POI\_BLANK          | 0     | Blank (not visible)       |
 | ICON\_POI\_GREY\_AV\_MINE | 1     | Grey mine lorry           |
 | ICON\_POI\_RED\_AV\_MINE  | 2     | Red mine lorry            |

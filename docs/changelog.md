@@ -453,4 +453,4 @@ Example: `getAreaInfo` -> `GetAreaInfo`
 
 ### How to upgrade
 
-To create a new changelog please follow the instructions on our [wiki page](https://www.azerothcore.org/wiki/how-to-use-changelog)
+To create a new changelog please follow the instructions on our [wiki page](how-to-use-changelog)

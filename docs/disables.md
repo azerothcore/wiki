@@ -1,12 +1,12 @@
 # disables
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`disables\` table**
 
 This table is used to disable dungeons/bgs/spells/etc.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |

@@ -1,6 +1,6 @@
 # arena\_team\_member
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`arena\_team\_member\`**
 

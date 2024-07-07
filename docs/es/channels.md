@@ -1,6 +1,6 @@
 # channels
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`channels\`**
 

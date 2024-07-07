@@ -1,6 +1,6 @@
 # item\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **Table Structure**
 
@@ -9,146 +9,146 @@ Holds information on every item that exists in the game. All items are created f
 (See additional information in the *ItemPrototype.h* file.)
 
 | Field                           | Type         | Attributes | Key | Null | Default | extra | Comment             |
-|---------------------------------|--------------|------------|-----|------|---------|-------|---------------------|
-| [entry][1]                      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                     |
-| [class][2]                      | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [subclass][3]                   | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [SoundOverrideSubclass][4]      | TINYINT   | SIGNED     |     | NO   | -1      |       |                     |
+| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------- |
+| [entry][1]                      | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |                     |
+| [class][2]                      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [subclass][3]                   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [SoundOverrideSubclass][4]      | TINYINT      | SIGNED     |     | NO   | -1      |       |                     |
 | [name][5]                       | VARCHAR(255) | SIGNED     |     | NO   | NULL    |       |                     |
-| [displayid][6]                  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Quality][7]                    | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Flags][8]                      | BIGINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [FlagsExtra][9]                 | INT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [BuyCount][10]                  | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                     |
-| [BuyPrice][11]                  | BIGINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [SellPrice][12]                 | INT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [InventoryType][13]             | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [AllowableClass][14]            | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [AllowableRace][15]             | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [ItemLevel][16]                 | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredLevel][17]             | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredSkill][18]             | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredSkillRank][19]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [requiredspell][20]             | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [requiredhonorrank][21]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredCityRank][22]          | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredReputationFaction][23] | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredReputationRank][24]    | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [maxcount][25]                  | INT      | SIGNED     |     | NO   | 0       |       |                     |
-| [stackable][26]                 | INT      | SIGNED     |     | NO   | 1       |       |                     |
-| [ContainerSlots][27]            | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [StatsCount][28]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_type1][29]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value1][30]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type2][31]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value2][32]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type3][33]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value3][34]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type4][35]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value4][36]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type5][37]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value5][38]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type6][39]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value6][40]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type7][41]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value7][42]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type8][43]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value8][44]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type9][45]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value9][46]               | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type10][47]               | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value10][48]              | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [ScalingStatDistribution][49]   | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [ScalingStatValue][50]          | INT       | UNSIGNED   |     | NO   | 0       |       |                     |
+| [displayid][6]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [Quality][7]                    | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [Flags][8]                      | BIGINT       | SIGNED     |     | NO   | 0       |       |                     |
+| [FlagsExtra][9]                 | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [BuyCount][10]                  | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                     |
+| [BuyPrice][11]                  | BIGINT       | SIGNED     |     | NO   | 0       |       |                     |
+| [SellPrice][12]                 | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [InventoryType][13]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [AllowableClass][14]            | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [AllowableRace][15]             | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [ItemLevel][16]                 | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredLevel][17]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredSkill][18]             | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredSkillRank][19]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [requiredspell][20]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [requiredhonorrank][21]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredCityRank][22]          | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredReputationFaction][23] | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredReputationRank][24]    | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [maxcount][25]                  | INT          | SIGNED     |     | NO   | 0       |       |                     |
+| [stackable][26]                 | INT          | SIGNED     |     | NO   | 1       |       |                     |
+| [ContainerSlots][27]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [StatsCount][28]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_type1][29]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value1][30]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type2][31]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value2][32]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type3][33]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value3][34]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type4][35]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value4][36]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type5][37]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value5][38]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type6][39]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value6][40]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type7][41]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value7][42]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type8][43]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value8][44]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type9][45]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value9][46]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_type10][47]               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stat_value10][48]              | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [ScalingStatDistribution][49]   | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [ScalingStatValue][50]          | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [dmg_min1][51]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [dmg_max1][52]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [dmg_type1][53]                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
+| [dmg_type1][53]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [dmg_min2][54]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [dmg_max2][55]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [dmg_type2][56]                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [armor][57]                     | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [holy_res][58]                  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [fire_res][59]                  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [nature_res][60]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [frost_res][61]                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [shadow_res][62]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [arcane_res][63]                | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [delay][64]                     | SMALLINT  | UNSIGNED   |     | NO   | 1000    |       |                     |
-| [ammo_type][65]                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
+| [dmg_type2][56]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [armor][57]                     | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [holy_res][58]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [fire_res][59]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [nature_res][60]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [frost_res][61]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [shadow_res][62]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [arcane_res][63]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [delay][64]                     | SMALLINT     | UNSIGNED   |     | NO   | 1000    |       |                     |
+| [ammo_type][65]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [RangedModRange][66]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellid_1][67]                 | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_1][68]            | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_1][69]            | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
+| [spellid_1][67]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spelltrigger_1][68]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcharges_1][69]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_1][70]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_1][71]           | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_1][72]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_1][73]   | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_2][74]                 | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_2][75]            | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_2][76]            | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
+| [spellcooldown_1][71]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellcategory_1][72]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcategorycooldown_1][73]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellid_2][74]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spelltrigger_2][75]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcharges_2][76]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_2][77]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_2][78]           | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_2][79]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_2][80]   | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_3][81]                 | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_3][82]            | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_3][83]            | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
+| [spellcooldown_2][78]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellcategory_2][79]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcategorycooldown_2][80]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellid_3][81]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spelltrigger_3][82]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcharges_3][83]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_3][84]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_3][85]           | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_3][86]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_3][87]   | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_4][88]                 | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_4][89]            | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_4][90]            | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
+| [spellcooldown_3][85]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellcategory_3][86]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcategorycooldown_3][87]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellid_4][88]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spelltrigger_4][89]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcharges_4][90]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_4][91]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_4][92]           | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_4][93]           | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_4][94]   | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_5][95]                 | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_5][96]            | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_5][97]            | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
+| [spellcooldown_4][92]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellcategory_4][93]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcategorycooldown_4][94]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellid_5][95]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spelltrigger_5][96]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcharges_5][97]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_5][98]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_5][99]           | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_5][100]          | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_5][101]  | INT      | SIGNED     |     | NO   | -1      |       |                     |
-| [bonding][102]                  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcooldown_5][99]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [spellcategory_5][100]          | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [spellcategorycooldown_5][101]  | INT          | SIGNED     |     | NO   | -1      |       |                     |
+| [bonding][102]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [description][103]              | VARCHAR(255) | SIGNED     |     | NO   | NULL    |       |                     |
-| [PageText][104]                 | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [LanguageID][105]               | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [PageMaterial][106]             | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [startquest][107]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [lockid][108]                   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Material][109]                 | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [sheath][110]                   | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RandomProperty][111]           | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [RandomSuffix][112]             | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [block][113]                    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [itemset][114]                  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [MaxDurability][115]            | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                     |
-| [area][116]                     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Map][117]                      | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [BagFamily][118]                | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [TotemCategory][119]            | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [socketColor_1][120]            | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_1][121]          | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [socketColor_2][122]            | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_2][123]          | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [socketColor_3][124]            | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_3][125]          | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [socketBonus][126]              | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [GemProperties][127]            | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [RequiredDisenchantSkill][128]  | SMALLINT  | SIGNED     |     | NO   | -1      |       |                     |
+| [PageText][104]                 | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [LanguageID][105]               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [PageMaterial][106]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [startquest][107]               | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [lockid][108]                   | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [Material][109]                 | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
+| [sheath][110]                   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RandomProperty][111]           | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [RandomSuffix][112]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [block][113]                    | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [itemset][114]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [MaxDurability][115]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [area][116]                     | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [Map][117]                      | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [BagFamily][118]                | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [TotemCategory][119]            | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketColor_1][120]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
+| [socketContent_1][121]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketColor_2][122]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
+| [socketContent_2][123]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketColor_3][124]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
+| [socketContent_3][125]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketBonus][126]              | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [GemProperties][127]            | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [RequiredDisenchantSkill][128]  | SMALLINT     | SIGNED     |     | NO   | -1      |       |                     |
 | [ArmorDamageModifier][129]      | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [duration][130]                 | INT      | UNSIGNED   |     | NO   | 0       |       | Duration in seconds |
-| [ItemLimitCategory][131]        | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [HolidayId][132]                | INT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [duration][130]                 | INT          | UNSIGNED   |     | NO   | 0       |       | Duration in seconds |
+| [ItemLimitCategory][131]        | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [HolidayId][132]                | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [ScriptName][133]               | VARCHAR(64)  | SIGNED     |     | NO   | NULL    |       |                     |
-| [DisenchantID][134]             | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                     |
-| [FoodType][135]                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
-| [minMoneyLoot][136]             | INT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [maxMoneyLoot][137]             | INT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [flagsCustom][138]              | INT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [VerifiedBuild][139]            | SMALLINT  | SIGNED     |     | YES  | 1       |       | (WDBVerified)       |
+| [DisenchantID][134]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [FoodType][135]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [minMoneyLoot][136]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [maxMoneyLoot][137]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [flagsCustom][138]              | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [VerifiedBuild][139]            | SMALLINT     | SIGNED     |     | YES  | 1       |       | (WDBVerified)       |
 
 [1]: #entry
 [2]: #class
@@ -298,32 +298,32 @@ The unique ID of the item.
 
 ### class
 
-| ID | Name                |
-|----|---------------------|
-| 0  | Consumable          |
-| 1  | Container           |
-| 2  | Weapon              |
-| 3  | Gem                 |
-| 4  | Armor               |
-| 5  | Reagent             |
-| 6  | Projectile          |
-| 7  | Trade Goods         |
-| 8  | Generic(OBSOLETE)   |
-| 9  | Recipe              |
-| 10 | Money(OBSOLETE)     |
-| 11 | Quiver              |
-| 12 | Quest               |
-| 13 | Key                 |
-| 14 | Permanent(OBSOLETE) |
-| 15 | Miscellaneous       |
-| 16 | Glyph               |
+| ID  | Name                |
+| --- | ------------------- |
+| 0   | Consumable          |
+| 1   | Container           |
+| 2   | Weapon              |
+| 3   | Gem                 |
+| 4   | Armor               |
+| 5   | Reagent             |
+| 6   | Projectile          |
+| 7   | Trade Goods         |
+| 8   | Generic(OBSOLETE)   |
+| 9   | Recipe              |
+| 10  | Money(OBSOLETE)     |
+| 11  | Quiver              |
+| 12  | Quest               |
+| 13  | Key                 |
+| 14  | Permanent(OBSOLETE) |
+| 15  | Miscellaneous       |
+| 16  | Glyph               |
 
 ### subclass
 
 The following table lists all available subclass and class combinations and the subclass name.
 
 | Class ID | Subclass ID | Subclass Name      | Comments                                              |
-|----------|-------------|--------------------|-------------------------------------------------------|
+| -------- | ----------- | ------------------ | ----------------------------------------------------- |
 | 0        | 0           | Consumable         | Usability in combat is decided by the spell assigned. |
 | 0        | 1           | Potion             |                                                       |
 | 0        | 2           | Elixir             |                                                       |
@@ -461,23 +461,23 @@ The model ID of the item. Each model has its own icon assigned so this field con
 
 The quality of the item.
 
-| ID | Color  | Quality                                   |
-|----|--------|-------------------------------------------|
-| 0  | Grey   | Poor                                      |
-| 1  | White  | Common                                    |
-| 2  | Green  | Uncommon                                  |
-| 3  | Blue   | Rare                                      |
-| 4  | Purple | Epic                                      |
-| 5  | Orange | Legendary                                 |
-| 6  | Red    | Artifact                                  |
-| 7  | Gold   | Heirlooms (or some Bind to Account items) |
+| ID  | Color  | Quality                                   |
+| --- | ------ | ----------------------------------------- |
+| 0   | Grey   | Poor                                      |
+| 1   | White  | Common                                    |
+| 2   | Green  | Uncommon                                  |
+| 3   | Blue   | Rare                                      |
+| 4   | Purple | Epic                                      |
+| 5   | Orange | Legendary                                 |
+| 6   | Red    | Artifact                                  |
+| 7   | Gold   | Heirlooms (or some Bind to Account items) |
 
 ### Flags
 
 Bitmask field that contains flags that the item has on it. As all other such fields, just add the flags together to combine them. Possible flags are listed below.
 
 | Flag       |             | Comments                                                                                                                                                         |
-|------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1          | 0x01        | ITEM_FLAG_NO_PICKUP (NOT IMPLEMENTED)                                                                                                                            |
 | 2          | 0x02        | Conjured item                                                                                                                                                    |
 | 4          | 0x04        | Openable (can be opened by right-click)                                                                                                                          |
@@ -514,7 +514,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 ### FlagsExtra
 
 | Flag    |           | Comments                                                         |
-|---------|-----------|------------------------------------------------------------------|
+| ------- | --------- | ---------------------------------------------------------------- |
 | 1       | 0x01      | Horde Only                                                       |
 | 2       | 0x02      | Alliance Only                                                    |
 | 4       | 0x04      | When item uses ExtendedCost in npc_vendor, gold is also required |
@@ -542,37 +542,37 @@ The price that the vendor will pay you for the item when you sell it and if it i
 
 In what slot the item can be equipped.
 
-| ID | Slot Name                                                                                                                              |
-|----|----------------------------------------------------------------------------------------------------------------------------------------|
-| 0  | Non equipable                                                                                                                          |
-| 1  | Head                                                                                                                                   |
-| 2  | Neck                                                                                                                                   |
-| 3  | Shoulder                                                                                                                               |
-| 4  | Shirt                                                                                                                                  |
-| 5  | Chest (see also Robe = 20)                                                                                                             |
-| 6  | Waist                                                                                                                                  |
-| 7  | Legs                                                                                                                                   |
-| 8  | Feet                                                                                                                                   |
-| 9  | Wrists                                                                                                                                 |
-| 10 | Hands                                                                                                                                  |
-| 11 | Finger                                                                                                                                 |
-| 12 | Trinket                                                                                                                                |
-| 13 | One-Hand (not to confuse with Off-Hand = 22)                                                                                           |
-| 14 | Shield (class = armor, not weapon even if in weapon slot)                                                                              |
-| 15 | Ranged (Bows) (see also Ranged right = 26)                                                                                             |
-| 16 | Back                                                                                                                                   |
-| 17 | Two-Hand                                                                                                                               |
-| 18 | Bag                                                                                                                                    |
-| 19 | Tabard                                                                                                                                 |
-| 20 | Robe (see also Chest = 5)                                                                                                              |
-| 21 | Main hand                                                                                                                              |
-| 22 | Off Hand weapons (see also One-Hand = 13)                                                                                              |
-| 23 | Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22) (class = armor, not weapon even if in weapon slot) |
-| 24 | Ammo                                                                                                                                   |
-| 25 | Thrown                                                                                                                                 |
-| 26 | Ranged right (Wands, Guns) (see also Ranged = 15)                                                                                      |
-| 27 | Quiver                                                                                                                                 |
-| 28 | Relic (class = armor, not weapon even if in weapon slot)                                                                               |
+| ID  | Slot Name                                                                                                                              |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| 0   | Non equipable                                                                                                                          |
+| 1   | Head                                                                                                                                   |
+| 2   | Neck                                                                                                                                   |
+| 3   | Shoulder                                                                                                                               |
+| 4   | Shirt                                                                                                                                  |
+| 5   | Chest (see also Robe = 20)                                                                                                             |
+| 6   | Waist                                                                                                                                  |
+| 7   | Legs                                                                                                                                   |
+| 8   | Feet                                                                                                                                   |
+| 9   | Wrists                                                                                                                                 |
+| 10  | Hands                                                                                                                                  |
+| 11  | Finger                                                                                                                                 |
+| 12  | Trinket                                                                                                                                |
+| 13  | One-Hand (not to confuse with Off-Hand = 22)                                                                                           |
+| 14  | Shield (class = armor, not weapon even if in weapon slot)                                                                              |
+| 15  | Ranged (Bows) (see also Ranged right = 26)                                                                                             |
+| 16  | Back                                                                                                                                   |
+| 17  | Two-Hand                                                                                                                               |
+| 18  | Bag                                                                                                                                    |
+| 19  | Tabard                                                                                                                                 |
+| 20  | Robe (see also Chest = 5)                                                                                                              |
+| 21  | Main hand                                                                                                                              |
+| 22  | Off Hand weapons (see also One-Hand = 13)                                                                                              |
+| 23  | Held in Off-Hand (tome, cane, flowers, torches, orbs etc... See also Off-Hand = 22) (class = armor, not weapon even if in weapon slot) |
+| 24  | Ammo                                                                                                                                   |
+| 25  | Thrown                                                                                                                                 |
+| 26  | Ranged right (Wands, Guns) (see also Ranged = 15)                                                                                      |
+| 27  | Quiver                                                                                                                                 |
+| 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               |
 
 ### AllowableClass
 
@@ -624,16 +624,16 @@ See the [Faction DBC file](Faction) for the IDs of all of the factions.
 
 The rank the player has to have with the faction from [RequiredReputationFaction](#item_template-RequiredReputationFaction).
 
-| ID | Rank       |
-|----|------------|
-| 0  | Hated      |
-| 1  | Hostile    |
-| 2  | Unfriendly |
-| 3  | Neutral    |
-| 4  | Friendly   |
-| 5  | Honored    |
-| 6  | Revered    |
-| 7  | Exalted    |
+| ID  | Rank       |
+| --- | ---------- |
+| 0   | Hated      |
+| 1   | Hostile    |
+| 2   | Unfriendly |
+| 3   | Neutral    |
+| 4   | Friendly   |
+| 5   | Honored    |
+| 6   | Revered    |
+| 7   | Exalted    |
 
 ### maxcount
 
@@ -656,52 +656,52 @@ When an item has entries in [stat\_type](#item_template-stat_type), this must be
 
 The type of stat to modify.
 
-| ID | Stat Type                                        |
-|----|--------------------------------------------------|
-| 0  | ITEM_MOD_MANA                                    |
-| 1  | ITEM_MOD_HEALTH                                  |
-| 3  | ITEM_MOD_AGILITY                                 |
-| 4  | ITEM_MOD_STRENGTH                                |
-| 5  | ITEM_MOD_INTELLECT                               |
-| 6  | ITEM_MOD_SPIRIT                                  |
-| 7  | ITEM_MOD_STAMINA                                 |
-| 12 | ITEM_MOD_DEFENSE_SKILL_RATING                    |
-| 13 | ITEM_MOD_DODGE_RATING                            |
-| 14 | ITEM_MOD_PARRY_RATING                            |
-| 15 | ITEM_MOD_BLOCK_RATING                            |
-| 16 | ITEM_MOD_HIT_MELEE_RATING                        |
-| 17 | ITEM_MOD_HIT_RANGED_RATING                       |
-| 18 | ITEM_MOD_HIT_SPELL_RATING                        |
-| 19 | ITEM_MOD_CRIT_MELEE_RATING                       |
-| 20 | ITEM_MOD_CRIT_RANGED_RATING                      |
-| 21 | ITEM_MOD_CRIT_SPELL_RATING                       |
-| 22 | ITEM_MOD_HIT_TAKEN_MELEE_RATING                  |
-| 23 | ITEM_MOD_HIT_TAKEN_RANGED_RATING                 |
-| 24 | ITEM_MOD_HIT_TAKEN_SPELL_RATING                  |
-| 25 | ITEM_MOD_CRIT_TAKEN_MELEE_RATING                 |
-| 26 | ITEM_MOD_CRIT_TAKEN_RANGED_RATING                |
-| 27 | ITEM_MOD_CRIT_TAKEN_SPELL_RATING                 |
-| 28 | ITEM_MOD_HASTE_MELEE_RATING                      |
-| 29 | ITEM_MOD_HASTE_RANGED_RATING                     |
-| 30 | ITEM_MOD_HASTE_SPELL_RATING                      |
-| 31 | ITEM_MOD_HIT_RATING                              |
-| 32 | ITEM_MOD_CRIT_RATING                             |
-| 33 | ITEM_MOD_HIT_TAKEN_RATING                        |
-| 34 | ITEM_MOD_CRIT_TAKEN_RATING                       |
-| 35 | ITEM_MOD_RESILIENCE_RATING                       |
-| 36 | ITEM_MOD_HASTE_RATING                            |
-| 37 | ITEM_MOD_EXPERTISE_RATING                        |
-| 38 | ITEM_MOD_ATTACK_POWER                            |
-| 39 | ITEM_MOD_RANGED_ATTACK_POWER                     |
-| 40 | ITEM_MOD_FERAL_ATTACK_POWER (not used as of 3.3) |
-| 41 | ITEM_MOD_SPELL_HEALING_DONE                      |
-| 42 | ITEM_MOD_SPELL_DAMAGE_DONE                       |
-| 43 | ITEM_MOD_MANA_REGENERATION                       |
-| 44 | ITEM_MOD_ARMOR_PENETRATION_RATING                |
-| 45 | ITEM_MOD_SPELL_POWER                             |
-| 46 | ITEM_MOD_ HEALTH_REGEN                           |
-| 47 | ITEM_MOD_SPELL_PENETRATION                       |
-| 48 | ITEM_MOD_BLOCK_VALUE                             |
+| ID  | Stat Type                                        |
+| --- | ------------------------------------------------ |
+| 0   | ITEM_MOD_MANA                                    |
+| 1   | ITEM_MOD_HEALTH                                  |
+| 3   | ITEM_MOD_AGILITY                                 |
+| 4   | ITEM_MOD_STRENGTH                                |
+| 5   | ITEM_MOD_INTELLECT                               |
+| 6   | ITEM_MOD_SPIRIT                                  |
+| 7   | ITEM_MOD_STAMINA                                 |
+| 12  | ITEM_MOD_DEFENSE_SKILL_RATING                    |
+| 13  | ITEM_MOD_DODGE_RATING                            |
+| 14  | ITEM_MOD_PARRY_RATING                            |
+| 15  | ITEM_MOD_BLOCK_RATING                            |
+| 16  | ITEM_MOD_HIT_MELEE_RATING                        |
+| 17  | ITEM_MOD_HIT_RANGED_RATING                       |
+| 18  | ITEM_MOD_HIT_SPELL_RATING                        |
+| 19  | ITEM_MOD_CRIT_MELEE_RATING                       |
+| 20  | ITEM_MOD_CRIT_RANGED_RATING                      |
+| 21  | ITEM_MOD_CRIT_SPELL_RATING                       |
+| 22  | ITEM_MOD_HIT_TAKEN_MELEE_RATING                  |
+| 23  | ITEM_MOD_HIT_TAKEN_RANGED_RATING                 |
+| 24  | ITEM_MOD_HIT_TAKEN_SPELL_RATING                  |
+| 25  | ITEM_MOD_CRIT_TAKEN_MELEE_RATING                 |
+| 26  | ITEM_MOD_CRIT_TAKEN_RANGED_RATING                |
+| 27  | ITEM_MOD_CRIT_TAKEN_SPELL_RATING                 |
+| 28  | ITEM_MOD_HASTE_MELEE_RATING                      |
+| 29  | ITEM_MOD_HASTE_RANGED_RATING                     |
+| 30  | ITEM_MOD_HASTE_SPELL_RATING                      |
+| 31  | ITEM_MOD_HIT_RATING                              |
+| 32  | ITEM_MOD_CRIT_RATING                             |
+| 33  | ITEM_MOD_HIT_TAKEN_RATING                        |
+| 34  | ITEM_MOD_CRIT_TAKEN_RATING                       |
+| 35  | ITEM_MOD_RESILIENCE_RATING                       |
+| 36  | ITEM_MOD_HASTE_RATING                            |
+| 37  | ITEM_MOD_EXPERTISE_RATING                        |
+| 38  | ITEM_MOD_ATTACK_POWER                            |
+| 39  | ITEM_MOD_RANGED_ATTACK_POWER                     |
+| 40  | ITEM_MOD_FERAL_ATTACK_POWER (not used as of 3.3) |
+| 41  | ITEM_MOD_SPELL_HEALING_DONE                      |
+| 42  | ITEM_MOD_SPELL_DAMAGE_DONE                       |
+| 43  | ITEM_MOD_MANA_REGENERATION                       |
+| 44  | ITEM_MOD_ARMOR_PENETRATION_RATING                |
+| 45  | ITEM_MOD_SPELL_POWER                             |
+| 46  | ITEM_MOD_ HEALTH_REGEN                           |
+| 47  | ITEM_MOD_SPELL_PENETRATION                       |
+| 48  | ITEM_MOD_BLOCK_VALUE                             |
 
 ### stat\_value
 
@@ -728,15 +728,15 @@ The maximum damage of the item.
 
 The damage type that the item uses.
 
-| ID | Damage Type |
-|----|-------------|
-| 0  | Physical    |
-| 1  | Holy        |
-| 2  | Fire        |
-| 3  | Nature      |
-| 4  | Frost       |
-| 5  | Shadow      |
-| 6  | Arcane      |
+| ID  | Damage Type |
+| --- | ----------- |
+| 0   | Physical    |
+| 1   | Holy        |
+| 2   | Fire        |
+| 3   | Nature      |
+| 4   | Frost       |
+| 5   | Shadow      |
+| 6   | Arcane      |
 
 ### armor
 
@@ -790,14 +790,14 @@ The spell ID of the spell that the item can cast or trigger.
 
 The type of trigger for the spell.
 
-| ID | Trigger Type      |
-|----|-------------------|
-| 0  | Use               |
-| 1  | On Equip          |
-| 2  | Chance on Hit     |
-| 4  | Soulstone         |
-| 5  | Use with no delay |
-| 6  | Learn Spell ID    |
+| ID  | Trigger Type      |
+| --- | ----------------- |
+| 0   | Use               |
+| 1   | On Equip          |
+| 2   | Chance on Hit     |
+| 4   | Soulstone         |
+| 5   | Use with no delay |
+| 6   | Learn Spell ID    |
 
 ### spellcharges
 
@@ -827,14 +827,14 @@ The bonding for the item.
 
 **Note:** To use the "Bind to Account" bonding, the item must have its `flags` set to 134217728 (minimum) and a `bonding` > 0 (ex: 1,2,3).
 
-| ID | Bonding Type         |
-|----|----------------------|
-| 0  | No bounds            |
-| 1  | Binds when picked up |
-| 2  | Binds when equipped  |
-| 3  | Binds when used      |
-| 4  | Quest item           |
-| 5  | Quest Item1          |
+| ID  | Bonding Type         |
+| --- | -------------------- |
+| 0   | No bounds            |
+| 1   | Binds when picked up |
+| 2   | Binds when equipped  |
+| 3   | Binds when used      |
+| 4   | Quest item           |
+| 5   | Quest Item1          |
 
 ### description
 
@@ -870,31 +870,31 @@ See the [Lock DBC file](Lock).
 
 The material that the item is made of. The value here affects the sound that the item makes when moved. Use -1 for consumable items like food, reagents, etc.
 
-| ID | Material    | Comment                |
-|----|-------------|------------------------|
-| -1 | Consumables | Food, reagents, etc... |
-| 0  | Not Defined |                        |
-| 1  | Metal       |                        |
-| 2  | Wood        |                        |
-| 3  | Liquid      |                        |
-| 4  | Jewelry     |                        |
-| 5  | Chain       |                        |
-| 6  | Plate       |                        |
-| 7  | Cloth       |                        |
-| 8  | Leather     |                        |
+| ID  | Material    | Comment                |
+| --- | ----------- | ---------------------- |
+| -1  | Consumables | Food, reagents, etc... |
+| 0   | Not Defined |                        |
+| 1   | Metal       |                        |
+| 2   | Wood        |                        |
+| 3   | Liquid      |                        |
+| 4   | Jewelry     |                        |
+| 5   | Chain       |                        |
+| 6   | Plate       |                        |
+| 7   | Cloth       |                        |
+| 8   | Leather     |                        |
 
 ### sheath
 
 Controls how the item is put away on the character. Press the 'Z' hotkey to sheath and unsheathe your weapons.
 
-| ID | Type              | Position                                         |
-|----|-------------------|--------------------------------------------------|
-| 1  | Two Handed Weapon | Diagonally across the back pointing downwards.   |
-| 2  | Staff             | Diagonally across the back pointing upwards.     |
-| 3  | One Handed        | On the left-hand side of the character's waist.  |
-| 4  | Shield            | On the middle of the character's back.           |
-| 5  | Enchanter's Rod   |                                                  |
-| 6  | Off hand          | On the right-hand side of the character's waist. |
+| ID  | Type              | Position                                         |
+| --- | ----------------- | ------------------------------------------------ |
+| 1   | Two Handed Weapon | Diagonally across the back pointing downwards.   |
+| 2   | Staff             | Diagonally across the back pointing upwards.     |
+| 3   | One Handed        | On the left-hand side of the character's waist.  |
+| 4   | Shield            | On the middle of the character's back.           |
+| 5   | Enchanter's Rod   |                                                  |
+| 6   | Off hand          | On the right-hand side of the character's waist. |
 
 ### RandomProperty
 
@@ -929,7 +929,7 @@ The ID of the map in which this item can be used. If you leave the map, the item
 If the item is a bag, this field is a bitmask controlling what types of items can be put in this bag. You can combine different types by adding up the bit numbers.
 
 | ID    | Bag Family Mask         |
-|-------|-------------------------|
+| ----- | ----------------------- |
 | 0     | None                    |
 | 1     | Arrows                  |
 | 2     | Bullets                 |
@@ -952,7 +952,7 @@ If the item is a bag, this field is a bitmask controlling what types of items ca
 Corresponds to the ID in the [TotemCategory DBC file](TotemCategory).
 
 | ID  | Name                     |
-|-----|--------------------------|
+| --- | ------------------------ |
 | 1   | Skinning Knife (OLD)     |
 | 2   | Earth Totem              |
 | 3   | Air Totem                |
@@ -990,12 +990,12 @@ Corresponds to the ID in the [TotemCategory DBC file](TotemCategory).
 
 The color of the socket that can be placed in this item.
 
-| ID | Color  |
-|----|--------|
-| 1  | Meta   |
-| 2  | Red    |
-| 4  | Yellow |
-| 8  | Blue   |
+| ID  | Color  |
+| --- | ------ |
+| 1   | Meta   |
+| 2   | Red    |
+| 4   | Yellow |
+| 8   | Blue   |
 
 ### socketContent
 
@@ -1006,7 +1006,7 @@ Amount of Gems of SocketColor1
 commonly used socket bonus IDs
 
 | ID   | Effect           |
-|------|------------------|
+| ---- | ---------------- |
 | 3312 | +8 Strength      |
 | 3313 | +8 Agility       |
 | 3305 | +12 Stamina      |
@@ -1057,16 +1057,16 @@ If this item is a food type item, this field defines what type of food it is for
 
 NOTE: Raw meat and fish is not the same as regular meat and fish. It seems that the last two types of diets include grey "poor" types of food that players have no use for but some pets seem to be able to eat. Also, those food types appeared in TBC so most likely only TBC pets will have those types of diets.
 
-| ID | Type     |
-|----|----------|
-| 1  | Meat     |
-| 2  | Fish     |
-| 3  | Cheese   |
-| 4  | Bread    |
-| 5  | Fungus   |
-| 6  | Fruit    |
-| 7  | Raw Meat |
-| 8  | Raw Fish |
+| ID  | Type     |
+| --- | -------- |
+| 1   | Meat     |
+| 2   | Fish     |
+| 3   | Cheese   |
+| 4   | Bread    |
+| 5   | Fungus   |
+| 6   | Fruit    |
+| 7   | Raw Meat |
+| 8   | Raw Fish |
 
 ### minMoneyLoot
 
@@ -1079,7 +1079,7 @@ If the item is a container that can contain money, then this field defines the m
 ### flagsCustom
 
 | Flag | Name                              | Comment                                                              |
-|------|-----------------------------------|----------------------------------------------------------------------|
+| ---- | --------------------------------- | -------------------------------------------------------------------- |
 | 1    | ITEM_FLAGS_CU_DURATION_REAL_TIME  | Item duration will tick even if player is offline                    |
 | 2    | ITEM_FLAGS_CU_IGNORE_QUEST_STATUS | No quest status will be checked when this item drops                 |
 | 4    | ITEM_FLAGS_CU_FOLLOW_LOOT_RULES   | Item will always follow group/master/need before greed looting rules |

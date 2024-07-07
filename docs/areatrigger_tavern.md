@@ -1,12 +1,12 @@
 # areatrigger\_tavern
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`areatrigger\_tavern\` table**
 
 Enable a trigger when player enters a city or tavern. This causes the player to enter a resting state.
 
-**Structure**
+**Table Structure**
 
 | Field     | Type      | Attributes | Key | Null | Default | Extra | Comment    |
 | --------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
