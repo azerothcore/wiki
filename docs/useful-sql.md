@@ -127,3 +127,13 @@ JOIN `gameobject` go ON got.entry = go.id
 WHERE name LIKE '%name-of-object%' 
 ORDER BY go.spawntimesecs
 ```
+
+### List items inside the inventory based on character guid
+Given a characters guid, show the inventory with the according count inside the item instance and the according name inside the item template.
+```sql
+SELECT ci.*, ii.itemEntry, it.name, ii.count
+FROM character_inventory ci
+JOIN item_instance ii ON ci.item = ii.guid
+JOIN acore_world.item_template it ON ii.itemEntry = it.entry
+WHERE ci.guid = xxxx;
+```
