@@ -25,11 +25,7 @@ In order for your module to work you need to recompile the source. For an in-dep
 
 2. Rebuild the core.
 
-The autoupdater will not automatically run any SQL Queries provided by the modules. Therefore you need to do one of two things:
-
-- Manually run the SQL files provided by the module.
-
-- Copy the SQL files to $/data/sql/custom/db_name/ directory for the autoupdater to recognize them.
+Your Worldserver will automatically run any SQL Queries provided by the Modules.
 
 You should always check the README file of the module to see if any manual steps are needed for the module to function properly.
 
