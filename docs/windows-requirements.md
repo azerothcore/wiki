@@ -8,7 +8,7 @@
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
 MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)<br/>
-OpenSSL ≥ 3.0.x (Ver. 3.1 and above are not supported.)<br/>
+OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
@@ -85,8 +85,6 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     1. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib.
 
 8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
-
-    {% include important.html content="Use version 1.1 or 3.0. 3.1 and above is not supported." %}
 
     1. Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
