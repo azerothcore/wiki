@@ -1,14 +1,14 @@
 # Windows Requirements
 
-| Installation Guide                                                                                                                      |                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
+| Installation Guide                                                                                                                      |                                                           |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                           |
+| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
-MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)<br/>
-OpenSSL ≥ 3.0.x (Ver. 3.1 and above are not supported.)<br/>
+MySQL ≥ 8.0.0<br/>
+OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
@@ -33,8 +33,6 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
    </a>
 
 4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html)
-
-    {% include note.html content="MySQL ≥ 8.0 is recommended. Version 5.7 is deprecated and will soon not be supported." %}
 
     1. Download the Windows MSI Installer.
     
@@ -86,9 +84,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
 
-    {% include important.html content="Use version 1.1 or 3.0. 3.1 and above is not supported." %}
-
-    1. Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
+    1. Find the 64-bit version by finding the latest 3.x.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
     {{site.data.alerts.note}}
     If you get the error 'Missing Microsoft Visual C++ .... Redistributable' while installing OpenSSL, download the <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)</a> (1.7MB Installer) and install it.
@@ -98,7 +94,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory") when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for <a href="windows-core-installation">Core Installation</a>.
     {{site.data.alerts.end}}
 
-1. [Boost](https://www.boost.org/).
+9. [Boost](https://www.boost.org/).
 
     1. Download the prebuilt Windows Binary for Visual Studio 2022
 
@@ -126,7 +122,7 @@ If you are still having problems, check:
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Installation Guide                                                                                                                      |                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
+| Installation Guide                                                                                                                      |                                                           |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                           |
+| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](windows-core-installation) |

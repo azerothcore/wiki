@@ -1,32 +1,22 @@
 # Linux Requirements
 
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                      |                                                         |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |
+| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](linux-core-installation) |
 
-| |
-| :- |
-| MySQL ≥ 5.7.0 |
-| Boost ≥ 1.74 |
-| OpenSSL ≥ 3.0.x |
-| CMake ≥ 3.16 |
+|                                                                                                    |
+| :------------------------------------------------------------------------------------------------- |
+| MySQL ≥ 8.0.0                                                                                      |
+| Boost ≥ 1.74                                                                                       |
+| OpenSSL ≥ 3.0.x                                                                                    |
+| CMake ≥ 3.16                                                                                       |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
 #### Ubuntu with MySQL 8.x
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
-```
-
-#### Ubuntu with MariaDB 10.x
-
-AzerothCore does only support MariaDB versions 10.6 and 10.5.
-
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
-
-```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -49,10 +39,8 @@ sudo apt install -y install libboost1.74-dev
 
 #### Debian 10 / Debian 12
 
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
-
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -62,7 +50,7 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 **Example:**
 
 ```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
+apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev -y
 ```
 
 ---
@@ -146,7 +134,7 @@ If you are still having problems, check:
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                      |                                                         |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |
+| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](linux-core-installation) |
