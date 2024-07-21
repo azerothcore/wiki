@@ -2,7 +2,7 @@
 
 El sistema ScriptAI implementado por AC utiliza una estrategia especial: [Patrón del observador](https://en.wikipedia.org/wiki/Observer_pattern) para implementar una programación dirigida por eventos que es también el **CORE** de nuestro sistema modular.
 
-Esta guía, junto con nuestro [sistema de módulos](create-a-module.md) te permite ampliar el AzerothCore sin parchearlo directamente. ¡Esto le permite actualizar su repositorio manteniendo sus adiciones y personalizaciones libres de conflictos!
+Esta guía, junto con nuestro [sistema de módulos](create-a-module) te permite ampliar el AzerothCore sin parchearlo directamente. ¡Esto le permite actualizar su repositorio manteniendo sus adiciones y personalizaciones libres de conflictos!
 
 ## Recursos
 
@@ -150,13 +150,13 @@ void CoreClass::SomeEvent()
 
 ## Documentar su hook
 
-Recuerda documentar tu nuevo hook siguiendo la guía [Cómo documentar tu código](how-to-document-code.md).
+Recuerda documentar tu nuevo hook siguiendo la guía [Cómo documentar tu código](how-to-document-code).
 
 Cuando creas un nuevo hook para publicarlo en el repo de `AzerothCore`, uno de los criterios de aceptación es escribir una documentación adecuada para él, para que otras personas sepan cómo usarlo correctamente. Así que, por favor, lee esa guía con atención.
 
 ### Escribir un registro de cambios
 
-Cuando creas o modificas cualquier hook, tienes que crear un nuevo changelog para explicar a la gente cómo adaptar su código y mantenerlos informados sobre estos cambios. Por favor, siga [esta guía](how-to-use-changelog.md) para aprender a hacerlo.
+Cuando creas o modificas cualquier hook, tienes que crear un nuevo changelog para explicar a la gente cómo adaptar su código y mantenerlos informados sobre estos cambios. Por favor, siga [esta guía](how-to-use-changelog) para aprender a hacerlo.
 
 ## Convenciones de nomenclatura
 

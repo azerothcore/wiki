@@ -1,12 +1,12 @@
 # guild\_bank\_item
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_bank\_item\` table**
 
 This table holds all item information for items that are stored in the guild bank.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |

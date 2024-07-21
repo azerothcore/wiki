@@ -1,21 +1,21 @@
 # dungeon\_access\_requirements
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`dungeon\_access\_requirements\` table**
 
-**Structure**
+**Table Structure**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------------------|--------------|------------|-----|------|---------|-------|---------|
-| [dungeon_access_id][1]      | TINYINT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [requirement_type][2]       | TINYINT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [requirement_id][3]         | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [requirement_note][4]       | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-| [faction][5]                | TINYINT      | UNSIGNED   |     | NO   | 2       |       |         |
-| [priority][6]               | TINYINT      | UNSIGNED   |     | YES  | NULL    |       |         |
-| [leader_only][7]            | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
-| [comment][8]                | VARCHAR(255) |            |     | YES  | NULL    |       |         |
+| Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [dungeon_access_id][1] | TINYINT      | UNSIGNED   | PRI | NO   |         |       |         |
+| [requirement_type][2]  | TINYINT      | UNSIGNED   | PRI | NO   |         |       |         |
+| [requirement_id][3]    | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
+| [requirement_note][4]  | VARCHAR(255) |            |     | YES  | NULL    |       |         |
+| [faction][5]           | TINYINT      | UNSIGNED   |     | NO   | 2       |       |         |
+| [priority][6]          | TINYINT      | UNSIGNED   |     | YES  | NULL    |       |         |
+| [leader_only][7]       | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
+| [comment][8]           | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 [1]: #dungeon_access_id
 [2]: #requirement_type
@@ -35,7 +35,7 @@ ID from [dungeon_access_template.id](dungeon_access_template#id).
 ### requirement_type
 
 | Value | Type        | Comment                         |
-|:------|:------------|:--------------------------------|
+| :---- | :---------- | :------------------------------ |
 | 0     | Achievement |                                 |
 | 1     | Quest       |                                 |
 | 2     | Item        | The item cannot be in the bank. |
@@ -50,11 +50,11 @@ The text that is shown if you try and enter the instance without meeting the req
 
 ### faction
 
-| Value | Comment     |
-|:------|:------------|
-| 0     | Alliance    |
-| 1     | Horde       |
-| 2     | Both        |
+| Value | Comment  |
+| :---- | :------- |
+| 0     | Alliance |
+| 1     | Horde    |
+| 2     | Both     |
 
 ### priority
 

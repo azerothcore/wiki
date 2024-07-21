@@ -1,6 +1,6 @@
 # achievement\_reward
 
-[<-Voler a: World](database-world.md)
+[<-Voler a: World](database-world)
 
 **La tabla \`achievement\_reward\`**
 

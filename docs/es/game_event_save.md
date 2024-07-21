@@ -1,6 +1,6 @@
 ﻿# game\_event\_save
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../game_event_save) [Spanish :es:](game_event_save)
 

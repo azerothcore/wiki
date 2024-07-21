@@ -1,6 +1,6 @@
 # creature\_addon
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature\_addon\` table**
 
@@ -10,7 +10,7 @@ NOTE: A creature\_addon record will override a creature\_template\_addon record 
 
 NOTICE: The data for this table is largely incomplete and is mostly just a regurgitation of what the client receives from the server. This article is a WIP as to what all the possible values are.
 
-**Structure**
+**Table Structure**
 
 | Field                        | Type          | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------- | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |

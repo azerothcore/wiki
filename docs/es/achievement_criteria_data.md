@@ -1,6 +1,6 @@
 # achievement\_criteria\_data
 
-[<-Volver a: World](database-world.md)
+[<-Volver a: World](database-world)
 
 **La tabla \`achievement\_criteria\_data\`**
 

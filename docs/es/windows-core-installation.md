@@ -3,11 +3,11 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](windows-requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
+| [<< Paso 1: Requisitos](windows-requirements) | [Paso 3: Configuración del Servidor >>](server-setup) |
 
 ## Software necesario
 
-Consulta [Requisitos](windows-requirements.md) antes de continuar.
+Consulta [Requisitos](windows-requirements) antes de continuar.
 
 ## Descarga y compilación del código fuente
 
@@ -42,7 +42,7 @@ Antes de comenzar, crea un nuevo directorio llamado **Build**. En esta guía, ut
 
 4. Haz clic en **Configurar**.
 
-5. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](windows-requirements.md). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
+5. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
 
 6. Asegúrate de que **Usar compiladores nativos predeterminados** esté marcado.
 
@@ -149,15 +149,15 @@ Para informar sobre registros de errores, es OBLIGATORIO compilar con la configu
 
 fgdfgSi aún tienes problemas, verifica:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Errores comunes](common-errors.md)
+* [Errores comunes](common-errors)
 
-* [Cómo solicitar ayuda](how-to-ask-for-help.md)
+* [Cómo solicitar ayuda](how-to-ask-for-help)
 
 * [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte las 24 horas. Un miembro del personal te responderá cuando tenga tiempo.
 
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](windows-requirements.md) | [Paso 3: Configuración del Servidor >>](server-setup.md) |
+| [<< Paso 1: Requisitos](windows-requirements) | [Paso 3: Configuración del Servidor >>](server-setup) |

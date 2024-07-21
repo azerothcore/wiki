@@ -1,8 +1,8 @@
 ﻿# updates_include
 
-[<-Volver a:Auth](database-auth.md)
-[<-Volver a:Characters](database-characters.md)
-[<-Volver a:World](database-world.md)
+[<-Volver a:Auth](database-auth)
+[<-Volver a:Characters](database-characters)
+[<-Volver a:World](database-world)
 
 **Tabla \`updates_include\`**
 

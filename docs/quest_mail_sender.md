@@ -1,15 +1,15 @@
 # quest\_mail\_sender
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`quest\_mail\_sender\` table**
 
-**Structure**
+**Table Structure**
 
-| Field                      | Type   | Attribute | Key | Null | Default | Extra | Comment |
-|----------------------------|--------|-----------|-----|------|---------|-------|---------|
-| [QuestId][1]               | INT | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [RewardMailSenderEntry][2] | INT | UNSIGNED  |     | NO   | 0       |       |         |
+| Field                      | Type | Attribute | Key | Null | Default | Extra | Comment |
+| -------------------------- | ---- | --------- | --- | ---- | ------- | ----- | ------- |
+| [QuestId][1]               | INT  | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [RewardMailSenderEntry][2] | INT  | UNSIGNED  |     | NO   | 0       |       |         |
 
 [1]: #questid
 [2]: #rewardmailsenderentry

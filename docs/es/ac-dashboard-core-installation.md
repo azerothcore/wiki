@@ -4,7 +4,7 @@ El panel de control Bash de Azeroth Core es una colección de scripts que ayudan
 
 Installar un servidor para desarrollo o producción nunca había sido tan fácil.
 
-Si necesita algún tipo de ayuda: [haga una pregunta](https://www.azerothcore.org/wiki/How-to-ask-for-help).
+Si necesita algún tipo de ayuda: [haga una pregunta](How-to-ask-for-help).
 
 
 ## Requisitos

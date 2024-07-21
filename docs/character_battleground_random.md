@@ -1,12 +1,12 @@
 # character\_battleground\_random
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_battleground\_random\` table**
 
 This table stores battlegrounds IDs for random battleground sessions.
 
-**Structure**
+**Table Structure**
 
 | Field     | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

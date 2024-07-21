@@ -29,7 +29,7 @@ CharacterDatabaseInfo = "127.0.0.1;3306;root;root;azerothcore_test_chars"
 
 ## Loading config values from environment variables
 
-It is possible to load config values from env vars, which is explained [here](config-overrides-with-env-var.md).
+It is possible to load config values from env vars, which is explained [here](config-overrides-with-env-var).
 
 ## Modules configuration
 

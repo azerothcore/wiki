@@ -1,12 +1,12 @@
 # areatrigger\_teleport
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`areatrigger\_teleport\` table**
 
 Contains all the teleport triggers definition. This table is used to complete .dbc file information.
 
-**Structure**
+**Table Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |

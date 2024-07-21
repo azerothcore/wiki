@@ -1,12 +1,12 @@
 # character\_battleground\_data
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_battleground\_data\` table**
 
 This table holds information for each character in a battleground. Also hold info about their last position before joining the battleground.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 |------------------|--------------|------------|-----|------|---------|-------|--------------------------|

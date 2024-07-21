@@ -1,12 +1,12 @@
 # character\_arena\_stats
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_arena\_stats\` table**
 
 This table holds information about character's matchmaker rating in all team types.
 
-**Structure**
+**Table Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |

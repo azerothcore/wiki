@@ -3,7 +3,7 @@
 | Guía de Instalación                                                                                                                                |                                                         |
 | :-                                                                                                                                                 | :-                                                      |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Inicio: Guía de Instalación](classic-installation.md)                                                                                                  | [Paso 2: Instalación del Core >>](windows-core-installation.md) |
+| [<< Inicio: Guía de Instalación](classic-installation)                                                                                                  | [Paso 2: Instalación del Core >>](windows-core-installation) |
 
 |                                                                             |
 | :-                                                                          |
@@ -114,15 +114,15 @@
 
 Si sigue teniendo inconvenientes, revise:
 
-* [Preguntas frecuentes](faq.md)
+* [Preguntas frecuentes](faq)
 
-* [Errores Comunes](common-errors.md)
+* [Errores Comunes](common-errors)
 
-* [Cómo solicitar ayuda](how-to-ask-for-help.md)
+* [Cómo solicitar ayuda](how-to-ask-for-help)
 
 * [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
 
 | Guía de Instalación                                                                                                                                |                                                         |
 | :-                                                                                                                                                 | :-                                                      |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Inicio: Guía de Instalación](classic-installation.md)                                                                                                  | [Paso 2: Instalación del Core >>](windows-core-installation.md) |
+| [<< Inicio: Guía de Instalación](classic-installation)                                                                                                  | [Paso 2: Instalación del Core >>](windows-core-installation) |

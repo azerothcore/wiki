@@ -1,49 +1,47 @@
 # quest\_details
 
- 
+[<-Back-to:World](database-world)
 
-**Table: quest\_details**
+**The \`quest_details\` table**
 
 This table handles Quest NPC emotes with emote delays.
 
- 
+**Table Structure**
 
-| Field                                         | Type         | Attributes | Key | NULL | Default | Comment                                                                                                              |
-|-----------------------------------------------|--------------|------------|-----|------|---------|----------------------------------------------------------------------------------------------------------------------|
-| [ID](#quest_details-ID)                       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID)) |
-| [Emote1](#quest_details-Emote1)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote2](#quest_details-Emote2)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote3](#quest_details-Emote3)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [Emote4](#quest_details-Emote4)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)                                          |
-| [EmoteDelay1](#quest_details-EmoteDelay1)     | INT      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay2](#quest_details-EmoteDelay2)     | INT      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay3](#quest_details-EmoteDelay3)     | INT      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [EmoteDelay4](#quest_details-EmoteDelay4)     | INT      | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                                                                                          |
-| [VerifiedBuild](#quest_details-VerifiedBuild) | SMALLINT  |            |     | NO   | 0       | Game client Build number or manually set value                                                                       |
+| Field                           | Type      | Attributes | Key | NULL | Default | Comment                                             |
+| ------------------------------- | --------- | ---------- | --- | ---- | ------- | --------------------------------------------------- |
+| [ID](#id)                       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](quest_template#id)) |
+| [Emote1](#emote1)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](Emotes)                           |
+| [Emote2](#emote2)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](Emotes)                           |
+| [Emote3](#emote3)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](Emotes)                           |
+| [Emote4](#emote4)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](Emotes)                           |
+| [EmoteDelay1](#emotedelay1)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
+| [EmoteDelay2](#emotedelay2)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
+| [EmoteDelay3](#emotedelay3)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
+| [EmoteDelay4](#emotedelay4)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
+| [VerifiedBuild](#verifiedbuild) | SMALLINT  |            |     | NO   | 0       | Game client Build number or manually set value      |
 
- 
-
-**Description of the fields:**
+**Description of the fields**
 
 ### ID
 
-Unique ID ([quest\_template.ID](https://trinitycore.atlassian.net/wiki/display/tc/quest_template#quest_template-ID))
+Unique ID ([quest\_template.ID](quest_template#id))
 
 ### Emote1
 
-Emote (from [Emotes.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)) played by NPC
+Emote (from [Emotes.dbc](Emotes)) played by NPC
 
 ### Emote2
 
-Emote (from [Emotes.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)) played by NPC
+Emote (from [Emotes.dbc](Emotes)) played by NPC
 
 ### Emote3
 
-Emote (from [Emotes.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)) played by NPC
+Emote (from [Emotes.dbc](Emotes)) played by NPC
 
 ### Emote4
 
-Emote (from [Emotes.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Emotes)) played by NPC
+Emote (from [Emotes.dbc](Emotes)) played by NPC
 
 ### EmoteDelay1
 
@@ -66,8 +64,8 @@ Emote delay in milliseconds
 This field is used by the TrinityCore DB Team to determine whether a template has been verified from WDB files.
 
 -   If value is 0, it has not been parsed yet.
--   If value is &gt; 0, it has been parsed with WDB files from that specific [Client Build](https://trinitycore.atlassian.net/wiki/display/tc/realmlist#realmlist-gamebuild).
+-   If value is &gt; 0, it has been parsed with WDB files from that specific [Client Build](realmlist#realmlist-gamebuild).
 -   If value is -1, it is just a place holder until proper data are found on WDBs.
--   If value is -[Client Build](https://trinitycore.atlassian.net/wiki/display/tc/realmlist#realmlist-gamebuild), it was parsed with WDB files from that specific [client build](https://trinitycore.atlassian.net/wiki/display/tc/realmlist#realmlist-gamebuild) and manually edited later for some specific necessity.
+-   If value is -[Client Build](realmlist#realmlist-gamebuild), it was parsed with WDB files from that specific [client build](realmlist#realmlist-gamebuild) and manually edited later for some specific necessity.
 
  

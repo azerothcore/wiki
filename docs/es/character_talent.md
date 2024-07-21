@@ -1,6 +1,6 @@
 ﻿# character\_talent
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../character_talent) [Spanish :es:](character_talent)
 

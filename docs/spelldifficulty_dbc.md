@@ -1,20 +1,20 @@
 # spelldifficulty\_dbc
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spelldifficulty\_dbc\` table**
 
 This table contains spell data regarding cpp scripts. The id is called in the script, and depending on what version of the dungeon/raid the characters are in, the proper spell ID will be casted by the creature.
 
-**Structure**
+**Table Structure**
 
-| Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|---------------|---------|------------|-----|------|---------|-------|---------|
-| [id][1]       | INT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [spellid0][2] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [spellid1][3] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [spellid2][4] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [spellid3][5] | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field         | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [id][1]       | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [spellid0][2] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [spellid1][3] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [spellid2][4] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [spellid3][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #spellid0

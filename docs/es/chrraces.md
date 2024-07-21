@@ -1,6 +1,6 @@
 # ChrRaces.dbc
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 Éste archivo DBC alberga todas las razas existentes, algunas de las cuales no son utilizadas y por ende no están disponibles para los jugadores.
 

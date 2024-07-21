@@ -2,7 +2,7 @@
 
 **Map.dbc**
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 Éste archivo DBC contiene la lista de mapas dentro del juego.
 

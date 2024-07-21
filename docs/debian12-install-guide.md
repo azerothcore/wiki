@@ -54,6 +54,7 @@ passwd
 sudo sed -i 's/^#Port 22\+$/Port 55022/' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 ```
+- Remember to use 55022 as the SSH port for subsequent connections.
 ### Setup Firewall
 ```bash
 sudo apt install ufw
@@ -78,16 +79,14 @@ sudo mysql_secure_installation
 sudo mysql -u root -p
 ```
 - Enter the root password you just set up.
+- This root user has remote access disabled, so we will create a new "acore" user for the SQL database.
 ```bash
 DROP USER IF EXISTS 'acore'@'localhost';
-CREATE USER 'acore'@'%' IDENTIFIED BY 'NEWPASSWORD';
+CREATE USER 'acore'@'%' IDENTIFIED BY 'SQLPASSWORD';
 GRANT ALL PRIVILEGES ON * . * TO 'acore'@'%';
-GRANT ALL PRIVILEGES ON `acore_world` . * TO 'acore'@'%';
-GRANT ALL PRIVILEGES ON `acore_characters` . * TO 'acore'@'%';
-GRANT ALL PRIVILEGES ON `acore_auth` . * TO 'acore'@'%';
 exit
 ```
-- Change **NEWPASSWORD** to something more secure.
+- Change **SQLPASSWORD** to something more secure.
 ---
 ## SSH Setup
 
@@ -98,18 +97,18 @@ ssh-keygen -t ed25519 -C "Debian12"
 cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
 ```
 #### Windows Private Key
-- Use **Filezilla** to connect to the server and navigate to `home/debian/ssh/`
+- Use **Filezilla** to connect to the server and navigate to `home/USERNAME/ssh/`
 - Copy the `id_ed25519` file to your PC and load it into **puttygen.exe** (located in the PuTTY folder) 
 - Generate a private key `.ppk` file. Store this file somewhere safe and make a backup.
 ### Key-based Login Setup
 #### PuTTY
-![PuTTY1](https://github.com/aradep/wiki/assets/61268368/1ccb09ec-2df2-4798-874b-6346bf237487)
-![PuTTY2](https://github.com/aradep/wiki/assets/61268368/6e5ebe8b-7416-4e69-a030-a88d13fde26e)
+![PuTTY1](https://github.com/azerothcore/wiki/assets/61268368/6210d43d-a7c4-4444-b896-4f23a2ee415f)
+![PuTTY2](https://github.com/azerothcore/wiki/assets/61268368/e39e5a4f-f93f-4a69-9d9c-785bd98afdbd)
 #### FileZilla
-![FileZilla](https://github.com/aradep/wiki/assets/61268368/83e35326-db88-4aed-828c-e29fa0cd167e)
+![FileZilla](https://github.com/azerothcore/wiki/assets/61268368/d45e952a-4f3b-4c38-9cdb-b72f5bc76651)
 #### HeidiSQL
-![HeidiSQL1](https://github.com/aradep/wiki/assets/61268368/f3b927dc-94f1-491e-a000-1125a0c1544f)
-![HeidiSQL2](https://github.com/aradep/wiki/assets/61268368/689de88e-8bf8-4171-af7c-710f296e793d)
+![HeidiSQL1](https://github.com/azerothcore/wiki/assets/61268368/9d693ba8-bd49-448c-92b4-2206b7e04e41)
+![HeidiSQL2](https://github.com/azerothcore/wiki/assets/61268368/4043857a-2d1e-4c5b-bb61-2d76ed8a5514)
 ### Disable Password Logins
 - **After confirming that key-based login works**, disable password logins to enhance SSH security.
 ```bash
@@ -148,15 +147,15 @@ make -j $(nproc) install
 cp -n ~/server/etc/authserver.conf.dist ~/server/etc/authserver.conf
 cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
 sudo sed -i -E 's|^DataDir = .*|DataDir = "/home/USERNAME/server/data"|' ~/server/etc/worldserver.conf
-sudo sed -i -E 's/= "127.0.0.1;3306;acore;acore;/= "127.0.0.1;3306;acore;NEWPASSWORD;/' ~/server/etc/*.conf
+sudo sed -i -E 's/= "127.0.0.1;3306;acore;acore;/= "127.0.0.1;3306;acore;SQLPASSWORD;/' ~/server/etc/*.conf
 ```
 - Change **USERNAME** to your Debian user.
-- Change **NEWPASSWORD** to the password you used earlier during the [SQL database setup](#install-sql-database).
+- Change **SQLPASSWORD** to the password for the acore database user.
 ### Set Realm IP
 ```bash
-sudo mysql -u root -p
+sudo mysql -u acore -p
 ```
-
+- Enter the password for the acore database user.
 ```sql
 UPDATE acore_auth.realmlist SET address = '0.0.0.0' WHERE id = 1;
 ```
@@ -209,7 +208,7 @@ acoreupdate
 ## Common Problems
 
 #### Auth/Worldserver wont even start.
-- Make sure you [created the .conf files](#edit-configs) and matched the password of the [SQL user](#install-sql-database).
+- Make sure you matched the password of the acore [SQL user](#install-sql-database) with the one in [the configs](#edit-configs)
 #### Successful login but cant enter the realm.
 - Double check the [realm address.](#set-realm-ip)
 
@@ -220,6 +219,6 @@ acoreupdate
 - Automated database backups to Google Drive using cron and rclone.
 
 ## Other Resources
-- [Official AzerothCore Installation Guide](https://www.azerothcore.org/wiki/installation)
-- [heyaapl's Debian Tutorial](https://www.azerothcore.org/wiki/digital-ocean-video-tutorial)
+- [Official AzerothCore Installation Guide](installation)
+- [heyaapl's Debian Tutorial](digital-ocean-video-tutorial)
 - [Digital Scriptorium's Video](https://www.youtube.com/watch?v=k4i4za1Scgg)

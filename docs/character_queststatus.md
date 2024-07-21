@@ -1,12 +1,12 @@
 # character\_queststatus
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_queststatus\` table**
 
 Holds information on the quest status of each character.
 
-**Structure**
+**Table Structure**
 
 | Field             | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------------- | -------- | ---------- | --- | ---- | ------- |------ | ------------------------ |

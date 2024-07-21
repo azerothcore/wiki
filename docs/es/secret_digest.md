@@ -1,6 +1,6 @@
 ﻿# secret\_digest
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../secret_digest) [Spanish :es:](secret_digest)
 

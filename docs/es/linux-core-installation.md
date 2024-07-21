@@ -3,11 +3,11 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](linux-requirements.md) | [Paso 3: Instalación del Servidor >>](server-setup.md) |
+| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Instalación del Servidor >>](server-setup) |
 
 ## Software requerido
 
-Véase [Requisitos](linux-requirements.md) antes de continuar.
+Véase [Requisitos](linux-requirements) antes de continuar.
 
 ## Obtener el código fuente
 
@@ -52,7 +52,7 @@ cd build
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
-Parameter explanation for advanced users [CMake options](cmake-options.md).
+Parameter explanation for advanced users [CMake options](cmake-options).
 
 At this point, you must be in your "build/" directory.
 
@@ -88,15 +88,15 @@ make install
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |

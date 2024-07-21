@@ -1,6 +1,6 @@
 ﻿# realmlist
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../realmlist) [Spanish :es:](realmlist)
 

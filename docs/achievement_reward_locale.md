@@ -1,12 +1,12 @@
 # achievement\_reward\_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`achievement\_reward\_locale\` table**
 
 It is the table that stores the translations of the table `achievement_reward`, so that the game client can display the messages in different languages.
 
-**Structure**
+**Table Structure**
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |

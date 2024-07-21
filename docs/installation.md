@@ -12,11 +12,11 @@ There are several ways to install AzerothCore, you need to choose **ONE**.
 
 These are the officially supported and complete ways of installing AzerothCore, for any purpose (Windows, Linux, macOS).
 
-- [AzerothCore Classic Installation](classic-installation.md) <span class="badge badge-success">Recommended</span> - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purpose. This process gives more awareness of how AzerothCore is structured. See below on this page.
+- [AzerothCore Classic Installation](classic-installation) <span class="badge badge-success">Recommended</span> - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purpose. This process gives more awareness of how AzerothCore is structured. See below on this page.
 
-- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation.md) <span class="badge badge-secondary">Limited Support</span> - the simplest way of installing AzerothCore, recommended for both local development and production.
+- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation) <span class="badge badge-secondary">Limited Support</span> - the simplest way of installing AzerothCore, recommended for both local development and production.
 
-- [Docker setup](install-with-docker.md) <span class="badge badge-secondary">Limited Support</span> - an installation process based on Docker. Docker knowledge is recommended.
+- [Docker setup](install-with-docker) <span class="badge badge-secondary">Limited Support</span> - an installation process based on Docker. Docker knowledge is recommended.
 
 ### Install from pre-compiled images <span class="badge badge-info">Limited support and usage</span>
 
@@ -26,15 +26,15 @@ These are the officially supported and complete ways of installing AzerothCore, 
 
 These guides are made by community members and might not be up-to-date:
 
-- [Debian 12](debian12-install-guide.md)
+- [Debian 12](debian12-install-guide)
 
-- [Amazon Web Services](aws-tutorial.md)
+- [Amazon Web Services](aws-tutorial)
 
-- [Digital Ocean droplet](digital-ocean-video-tutorial.md)
+- [Digital Ocean droplet](digital-ocean-video-tutorial)
 
-- [ArchLinux](arch-linux.md)
+- [ArchLinux](arch-linux)
 
-- [FreeBSD](freebsd.md)
+- [FreeBSD](freebsd)
 
 - [Visual Studio Code](vsc-requirements)
 
@@ -44,10 +44,10 @@ These guides are made by community members and might not be up-to-date:
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.

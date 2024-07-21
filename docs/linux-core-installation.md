@@ -3,11 +3,11 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
 
 ## Required software
 
-See [Requirements](linux-requirements.md) before you continue.
+See [Requirements](linux-requirements) before you continue.
 
 ## Getting the source code
 
@@ -52,7 +52,7 @@ cd build
 
 Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
-Parameter explanation for advanced users [CMake options](cmake-options.md).
+Parameter explanation for advanced users [CMake options](cmake-options).
 
 At this point, you must be in your "build/" directory.
 
@@ -139,15 +139,15 @@ sudo service authserver stop
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements.md) | [Step 3: Server Setup >>](server-setup.md) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |

@@ -1,27 +1,27 @@
 # quest\_template\_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`quest\_template\_locale\` table**
 
 This table is used to provide to localized clients with localized string for quest templates.
 
-**Structure**
+**Table Structure**
 
-| Field                | Type         | Attribute | Key | Null | Default | Extra | Comment |
-|----------------------|--------------|-----------|-----|------|---------|-------|---------|
-| [ID][1]              | MEDIUMINT | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [locale][2]          | VARCHAR(4)   |           | PRI | NO   |         |       |         |
-| [Title][3]           | text         |           |     | YES  |         |       |         |
-| [Details][4]         | text         |           |     | YES  |         |       |         |
-| [Objectives][5]      | text         |           |     | YES  |         |       |         |
-| [EndText][6]         | text         |           |     | YES  |         |       |         |
-| [CompletedText][7]   | text         |           |     | YES  |         |       |         |
-| [ObjectiveText1][8]  | text         |           |     | YES  |         |       |         |
-| [ObjectiveText2][9]  | text         |           |     | YES  |         |       |         |
-| [ObjectiveText3][10] | text         |           |     | YES  |         |       |         |
-| [ObjectiveText4][11] | text         |           |     | YES  |         |       |         |
-| [VerifiedBuild][12]  | SMALLINT  |           |     | YES  | 0       |       |         |
+| Field                | Type       | Attribute | Key | Null | Default | Extra | Comment |
+| -------------------- | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]              | MEDIUMINT  | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [locale][2]          | VARCHAR(4) |           | PRI | NO   |         |       |         |
+| [Title][3]           | text       |           |     | YES  |         |       |         |
+| [Details][4]         | text       |           |     | YES  |         |       |         |
+| [Objectives][5]      | text       |           |     | YES  |         |       |         |
+| [EndText][6]         | text       |           |     | YES  |         |       |         |
+| [CompletedText][7]   | text       |           |     | YES  |         |       |         |
+| [ObjectiveText1][8]  | text       |           |     | YES  |         |       |         |
+| [ObjectiveText2][9]  | text       |           |     | YES  |         |       |         |
+| [ObjectiveText3][10] | text       |           |     | YES  |         |       |         |
+| [ObjectiveText4][11] | text       |           |     | YES  |         |       |         |
+| [VerifiedBuild][12]  | SMALLINT   |           |     | YES  | 0       |       |         |
 
 [1]: #id
 [2]: #locale
@@ -44,17 +44,17 @@ This is the ID of the quest to be translated.
 
 ### locale
 
-| ID | Language |
-|----|----------|
-| 0  | enUS     |
-| 1  | koKR     |
-| 2  | frFR     |
-| 3  | deDE     |
-| 4  | zhCN     |
-| 5  | zhTW     |
-| 6  | esES     |
-| 7  | esMX     |
-| 8  | ruRU     |
+| ID  | Language |
+| --- | -------- |
+| 0   | enUS     |
+| 1   | koKR     |
+| 2   | frFR     |
+| 3   | deDE     |
+| 4   | zhCN     |
+| 5   | zhTW     |
+| 6   | esES     |
+| 7   | esMX     |
+| 8   | ruRU     |
 
 ### Title
 

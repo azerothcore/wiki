@@ -1,6 +1,6 @@
 # achievement\_dbc
 
-[<-Volver a: World](database-world.md)
+[<-Volver a: World](database-world)
 
 **La tabla \`achievement\_dbc\`**
 

@@ -1,6 +1,6 @@
 # character\_account\_data
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`character\_account\_data\`**
 

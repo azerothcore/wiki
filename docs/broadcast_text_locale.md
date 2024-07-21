@@ -9,19 +9,17 @@ This table will have **localized texts** for \`broadcast\_text\` table. Used in�
 Its purpose is (will be) used as a globalized table containing the localized texts as mentionned above.
 
 
-**Structure**
+**Table Structure**
 
-| Field                       | Type         |  Key | Null | Default | Extra | Comment |
-|-----------------------------|--------------|------|------|---------|-------|---------|
-| [ID](#ID)                   | MEDIUMINT |  PRI | NO   | 0       |       |         |
-| [locale](#locale)           | VARCHAR(4)   |  PRI | NO   | NULL    |       |         |
-| [MaleText](#MaleText)       | text         |      | YES  | NULL    |       |         |
-| [FemaleText](#FemaleText)   | text         |      | YES  | NULL    |       |         |
-| VerifiedBuild               | SMALLINT  |      | YES  | 0       |       |         |
+| Field                     | Type       | Key | Null | Default | Extra | Comment |
+| ------------------------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#ID)                 | MEDIUMINT  | PRI | NO   | 0       |       |         |
+| [locale](#locale)         | VARCHAR(4) | PRI | NO   | NULL    |       |         |
+| [MaleText](#MaleText)     | text       |     | YES  | NULL    |       |         |
+| [FemaleText](#FemaleText) | text       |     | YES  | NULL    |       |         |
+| VerifiedBuild             | SMALLINT   |     | YES  | 0       |       |         |
 
-### Description of the fields
-
- 
+**Description of the fields**
 
 ### ID
 
@@ -50,6 +48,4 @@ If value is above 0 then it has been parsed with WDB files from that specific cl
 
 If value is -1 then it is just a place holder until proper data are found on WDBs.
 
-If value is [-Client Build](https://www.azerothcore.org/wiki/realmlist "DB:Auth:realmlist") then it was parsed with WDB files from that specific [client build](https://www.azerothcore.org/wiki/realmlist#gamebuild "DB:Auth:realmlist") and manually edited later for some special necessity.
-
- 
+If value is -Client Build then it was parsed with WDB files from that specific [client build](realmlist#gamebuild "DB:Auth:realmlist") and manually edited later for some special necessity.

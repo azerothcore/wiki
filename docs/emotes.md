@@ -4,16 +4,16 @@ redirect_from: "/Emotes"
 
 # Emotes
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 This DBC contains emotes which can be used by NPCs.
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 
 | Column | Type  | Comment                                                                                                                                               |
-|--------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------ | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1      | long  | An ID for the emote. Must be unique.                                                                                                                  |
 | 2      | str   | A descriptive name for the emote.                                                                                                                     |
 | 3      | long  | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/AnimationData). This is the ID of the animation to play.                         |
@@ -29,7 +29,7 @@ Information on the structure this DBC file was taken from [here](https://web.arc
 When testing the NPC emotes listed below using the *.npc playemote \#* command, the NPC generally continuously plays the specified emote. When playing the emote through, for example, and SAI script, the NPC may use the emote differently.
 
 | ID  | Emote name                          | Comment                                       |
-|-----|-------------------------------------|-----------------------------------------------|
+| --- | ----------------------------------- | --------------------------------------------- |
 | 0   | ONESHOT_NONE                        | The NPC reverts to its normal standing state. |
 | 1   | ONESHOT_TALK(DNR)                   | The NPC plays the talking emote once.         |
 | 2   | ONESHOT_BOW                         | The NPC plays the bowing emote once.          |

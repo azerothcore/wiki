@@ -1,10 +1,10 @@
 # log\_encounter
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`log\_encounter\` table**
 
-**Structure**
+**Table Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

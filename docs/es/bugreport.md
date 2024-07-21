@@ -1,6 +1,6 @@
 ﻿# bugreport
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../bugreport) [Spanish :es:](bugreport)
 

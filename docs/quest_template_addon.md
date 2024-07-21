@@ -1,6 +1,6 @@
 # quest\_template\_addon
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **Table: quest\_template\_addon**
 
@@ -8,17 +8,17 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 **Structure:**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
-|-----------------------------|--------------|------------|-----|------|---------|-------|---------------------------------------|
+| Field                       | Type      | Attributes | Key | Null | Default | Extra | Comment                               |
+| --------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
 | [ID][1]                     | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
 | [MaxLevel][2]               | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
-| [AllowableClasses][3]       | INT      | UNSIGNED   |     | NO   |         |       |                                       |
+| [AllowableClasses][3]       | INT       | UNSIGNED   |     | NO   |         |       |                                       |
 | [SourceSpellID][4]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
 | [PrevQuestID][5]            | MEDIUMINT |            |     | NO   |         |       |                                       |
 | [NextQuestID][6]            | MEDIUMINT |            |     | NO   |         |       |                                       |
 | [ExclusiveGroup][7]         | MEDIUMINT |            |     | NO   |         |       |                                       |
 | [RewardMailTemplateID][8]   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
-| [RewardMailDelay][9]        | INT      | UNSIGNED   |     | NO   |         |       |                                       |
+| [RewardMailDelay][9]        | INT       | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredSkillID][10]       | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredSkillPoints][11]   | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredMinRepFaction][12] | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |

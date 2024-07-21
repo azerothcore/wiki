@@ -1,6 +1,6 @@
 # log\_arena\_fights
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`log\_arena\_fights\`**
 

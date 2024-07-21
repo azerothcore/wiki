@@ -3,7 +3,7 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 4: Instalación de la Base de Datos](database-installation.md) | [Paso 6: Pasos finales >>](final-server-steps.md) |
+| [<< Paso 4: Instalación de la Base de Datos](database-installation) | [Paso 6: Pasos finales >>](final-server-steps) |
 
 Esta guía está pensada para configuraciones avanzadas o para, simplemente, proveer más detalles en la configuración de su servidor para uso local o en linea. En general, la configuración por defecto explicada en la guía particular para cada sistema operativo debería funcionar para instalaciones simples.
 
@@ -37,11 +37,11 @@ Asegurese de que su aplicación **authserver** direcciona las conexiones entrant
 
 Si sigue teniendo inconvenientes, revise:
 
-* [Preguntas frecuentes](faq.md)
+* [Preguntas frecuentes](faq)
 
-* [Errores Comunes](common-errors.md)
+* [Errores Comunes](common-errors)
 
-* [Cómo solicitar ayuda](how-to-ask-for-help.md)
+* [Cómo solicitar ayuda](how-to-ask-for-help)
 
 * [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
 
@@ -49,4 +49,4 @@ Si sigue teniendo inconvenientes, revise:
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 4: Instalación de la Base de Datos](database-installation.md) | [Paso 6: Pasos finales del Servidor >>](final-server-steps.md) |
+| [<< Paso 4: Instalación de la Base de Datos](database-installation) | [Paso 6: Pasos finales del Servidor >>](final-server-steps) |

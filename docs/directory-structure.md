@@ -6,7 +6,7 @@ redirect_from: "/Directory-Structure"
 
 AzerothCore and our modules is following  directory structure standard from hw-core:
 
-<a href="https://github.com/HW-Core/directory-structure/blob/master/README.md" target="_blank">Standard Directory Structure</a>
+<a href="https://github.com/HW-Core/directory-structure/blob/master/README" target="_blank">Standard Directory Structure</a>
 
 This structure is conformed to our [modular architecture](The-Modular-Structure).
 
@@ -54,7 +54,7 @@ azerothcore/
   
   An example of data are the sql files, the assets etc.
   
-  You can learn more about the SQL Directory [here](sql-directory.md).
+  You can learn more about the SQL Directory [here](sql-directory).
     
 ### deps
   This is a domain-oriented folder structure. Therefore, all folders define a specific business domain . In this case each folder represent a standalone component that is needed by the project to work. All components are stored with a [monorepo strategy](https://en.wikipedia.org/wiki/Monorepo). All code that is generic and not related to the logic of Wotlk should be moved under a separated component of the deps layer and handled by a proper VCS.

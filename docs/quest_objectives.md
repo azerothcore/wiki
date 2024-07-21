@@ -1,25 +1,25 @@
 # quest\_objectives
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 Table: quest\_objectives
 
 This table provides answer for a very important question. What do I need to do in order to finish a quest?
 
-## Structure
+**Table Structure**
 
-| Field                  | Type         | Attributes | Null | Key | Default | Comment |
-|------------------------|--------------|------------|------|-----|---------|---------|
+| Field                  | Type      | Attributes | Null | Key | Default | Comment |
+| ---------------------- | --------- | ---------- | ---- | --- | ------- | ------- |
 | [ID][1]                | MEDIUMINT | UNSIGNED   | NO   | PRI | 0       |         |
 | [QuestID][2]           | MEDIUMINT | UNSIGNED   | NO   |     | 0       |         |
 | [Type][3]              | TINYINT   | UNSIGNED   | NO   |     | 0       |         |
 | [StorageIndex][4]      | TINYINT   | SIGNED     | NO   |     | 0       |         |
-| [ObjectID][5]          | INT      | SIGNED     | NO   |     | 0       |         |
-| [Amount][6]            | INT      | SIGNED     | NO   |     | 0       |         |
-| [Flags][7]             | INT      | UNSIGNED   | NO   |     | 0       |         |
-| [Flags2][8]            | INT      | UNSIGNED   | NO   |     | 0       |         |
-| [ProgressBarWeight][9] | FLOAT        |            | NO   |     | 0       |         |
-| [Description][10]      | text         |            | YES  |     | NULL    |         |
+| [ObjectID][5]          | INT       | SIGNED     | NO   |     | 0       |         |
+| [Amount][6]            | INT       | SIGNED     | NO   |     | 0       |         |
+| [Flags][7]             | INT       | UNSIGNED   | NO   |     | 0       |         |
+| [Flags2][8]            | INT       | UNSIGNED   | NO   |     | 0       |         |
+| [ProgressBarWeight][9] | FLOAT     |            | NO   |     | 0       |         |
+| [Description][10]      | text      |            | YES  |     | NULL    |         |
 | [VerifiedBuild][11]    | SMALLINT  | SIGNED     | NO   |     | 0       |         |
 
 [1]: #id
@@ -34,7 +34,7 @@ This table provides answer for a very important question. What do I need to do i
 [10]: #description
 [11]: #verifiedbuild
 
-## Description of the fields
+**Description of the fields**
 
 ### ID
 
@@ -46,26 +46,26 @@ The Quest Id from quest\_template.id
 
 ### Type
 
-| Type                                   | ID | ObjectID                  |
-|----------------------------------------|----|---------------------------|
-| QUEST_OBJECTIVE_MONSTER                | 0  | creature_template.entry   |
-| QUEST_OBJECTIVE_ITEM                   | 1  | itemID from Item.db2      |
-| QUEST_OBJECTIVE_GAMEOBJECT             | 2  | gameobject_template.entry |
-| QUEST_OBJECTIVE_TALKTO                 | 3  | creature_template.entry   |
-| QUEST_OBJECTIVE_CURRENCY               | 4  |                           |
-| QUEST_OBJECTIVE_LEARNSPELL             | 5  | SpellId Spell.db2         |
-| QUEST_OBJECTIVE_MIN_REPUTATION         | 6  | Faction                   |
-| QUEST_OBJECTIVE_MAX_REPUTATION         | 7  | Faction                   |
-| QUEST_OBJECTIVE_MONEY                  | 8  | Money                     |
-| QUEST_OBJECTIVE_PLAYERKILLS            | 9  |                           |
-| QUEST_OBJECTIVE_AREATRIGGER            | 10 |                           |
-| QUEST_OBJECTIVE_WINPETBATTLEAGAINSTNPC | 11 |                           |
-| QUEST_OBJECTIVE_DEFEATBATTLEPET        | 12 |                           |
-| QUEST_OBJECTIVE_WINPVPPETBATTLES       | 13 |                           |
-| QUEST_OBJECTIVE_CRITERIA_TREE          | 14 |                           |
-| QUEST_OBJECTIVE_PROGRESS_BAR           | 15 |                           |
-| QUEST_OBJECTIVE_HAVE_CURRENCY          | 16 |                           |
-| QUEST_OBJECTIVE_OBTAIN_CURRENCY        | 17 |                           |
+| Type                                   | ID  | ObjectID                  |
+| -------------------------------------- | --- | ------------------------- |
+| QUEST_OBJECTIVE_MONSTER                | 0   | creature_template.entry   |
+| QUEST_OBJECTIVE_ITEM                   | 1   | itemID from Item.db2      |
+| QUEST_OBJECTIVE_GAMEOBJECT             | 2   | gameobject_template.entry |
+| QUEST_OBJECTIVE_TALKTO                 | 3   | creature_template.entry   |
+| QUEST_OBJECTIVE_CURRENCY               | 4   |                           |
+| QUEST_OBJECTIVE_LEARNSPELL             | 5   | SpellId Spell.db2         |
+| QUEST_OBJECTIVE_MIN_REPUTATION         | 6   | Faction                   |
+| QUEST_OBJECTIVE_MAX_REPUTATION         | 7   | Faction                   |
+| QUEST_OBJECTIVE_MONEY                  | 8   | Money                     |
+| QUEST_OBJECTIVE_PLAYERKILLS            | 9   |                           |
+| QUEST_OBJECTIVE_AREATRIGGER            | 10  |                           |
+| QUEST_OBJECTIVE_WINPETBATTLEAGAINSTNPC | 11  |                           |
+| QUEST_OBJECTIVE_DEFEATBATTLEPET        | 12  |                           |
+| QUEST_OBJECTIVE_WINPVPPETBATTLES       | 13  |                           |
+| QUEST_OBJECTIVE_CRITERIA_TREE          | 14  |                           |
+| QUEST_OBJECTIVE_PROGRESS_BAR           | 15  |                           |
+| QUEST_OBJECTIVE_HAVE_CURRENCY          | 16  |                           |
+| QUEST_OBJECTIVE_OBTAIN_CURRENCY        | 17  |                           |
 
 ### StorageIndex
 
@@ -82,7 +82,7 @@ Displays how much players you need to kill before completing the quest.
 This flag field defines more specifically the type of objective it is.
 
 | Flag | Name                                                           | Description                                                                                                     |
-|------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| ---- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | 0    | QUEST\_OBJECTIVE\_FLAG\_NONE                                   | No flags                                                                                                        |
 | 1    | QUEST\_OBJECTIVE\_FLAG\_TRACKED\_ON\_MINIMAP                   | Client displays large yellow blob on minimap for creature/gameobject                                            |
 | 2    | QUEST\_OBJECTIVE\_FLAG\_SEQUENCED                              | Client will not see the objective displayed until all previous objectives are completed                         |

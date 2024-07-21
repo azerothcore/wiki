@@ -6,7 +6,7 @@ redirect_from: "/Directory-Structure"
 
 AzerothCore y nuestros módulos siguen la estructura de directorios estándar de hw-core:
 
-[Estructura estándar del directorio](https://github.com/HW-Core/directory-structure/blob/master/README.md)
+[Estructura estándar del directorio](https://github.com/HW-Core/directory-structure/blob/master/README)
 
 Esta estructura se ajusta a nuestra [arquitectura modular](The-Modular-Structure).
 
@@ -58,7 +58,7 @@ Todos los datos estáticos no compilados con las fuentes.
 
 Un ejemplo de datos son los archivos sql, los assets, etc.
 
-Puede obtener más información sobre el Directorio SQL [aquí](sql-directory.md).
+Puede obtener más información sobre el Directorio SQL [aquí](sql-directory).
 
 ### deps
 

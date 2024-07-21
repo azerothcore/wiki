@@ -1,17 +1,17 @@
 # banned\_addons
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`banned\_addons\` table**
 
-**Structure**
+**Table Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default           | Extra  | Comment |
-| -------------- | ------------ | ---------- | --- | ---- | ----------------- | ------ | ------- |
-| [Id][1]        | INT          | UNSIGNED   | PRI | NO   |                   |        |         |
-| [Name][2]      | VARCHAR(255) | SIGNED     |     | NO   |                   | UNIQUE |         |
-| [Version][3]   | VARCHAR(255) | SIGNED     |     | NO   | ''                | UNIQUE |         |
-| [Timestamp][4] | TIMESTAMP    | SIGNED     |     | NO   | CURRENT_TIMESTAMP |        |         |
+| Field          | Type         | Attributes | Key    | Null | Default           | Extra | Comment |
+| -------------- | ------------ | ---------- | ------ | ---- | ----------------- | ----- | ------- |
+| [Id][1]        | INT          | UNSIGNED   | PRI    | NO   | AUTO_INCREMENT    |       |         |
+| [Name][2]      | VARCHAR(255) |            | UNIQUE | NO   |                   |       |         |
+| [Version][3]   | VARCHAR(255) |            | UNIQUE | NO   | ''                |       |         |
+| [Timestamp][4] | TIMESTAMP    |            |        | NO   | CURRENT_TIMESTAMP |       |         |
 
 [1]: #id
 [2]: #name

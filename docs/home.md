@@ -14,7 +14,7 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## Getting started
 
-- [Installation Guide](installation.md)
+- [Installation Guide](installation)
 
 ## Documentation
 

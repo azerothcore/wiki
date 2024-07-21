@@ -1,15 +1,17 @@
 # game_graveyard_zone
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|--------------|------------|-----|------|---------|-------|---------|
+**The \`game_graveyard_zone\` table**
+
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]         | MEDIUMINT | unasigned  | PRI | NO   | 0       |       |         |
 | [ghost_zone][2] | MEDIUMINT | unasigned  | PRI | NO   | 0       |       |         |
 | [faction][3]    | SMALLINT  | unasigned  |     | NO   | 0       |       |         |
 
 [1]: #id
-[2]: #ghost_zone
+[2]: #ghostzone
 [3]: #faction
 
 **Description of the fields**

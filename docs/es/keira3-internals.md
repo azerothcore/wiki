@@ -186,7 +186,7 @@ Este es el resultado:
 
 ### FlagsSelectorBtnComponent
 
-El `FlagsSelectorBtnComponent` es otro componente reutilizable muy útil que permite al usuario componer un valor a partir de un conjunto de **flags** (máscara de bits), para un campo determinado. Si términos como bits, máscara de bits, flags, etc. te suenan raros, te recomendamos que leas [esta página](https://www.azerothcore.org/wiki/Bit-and_bytes-tutorial) para entender completamente cómo funcionan los valores de las flags.
+El `FlagsSelectorBtnComponent` es otro componente reutilizable muy útil que permite al usuario componer un valor a partir de un conjunto de **flags** (máscara de bits), para un campo determinado. Si términos como bits, máscara de bits, flags, etc. te suenan raros, te recomendamos que leas [esta página](Bit-and_bytes-tutorial) para entender completamente cómo funcionan los valores de las flags.
 
 Veamos, por ejemplo, cómo se implementa el campo `dynamicflags` de `creature_template`.
 

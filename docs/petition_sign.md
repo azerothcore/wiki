@@ -1,12 +1,12 @@
 # petition\_sign
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`petition\_sign\` table**
 
 This table holds information on all the signatures of a petition for either a guild or an arena team.
 
-**Structure**
+**Table Structure**
 
 | Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |

@@ -1,10 +1,10 @@
 # motd
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`motd\` table**
 
-**Structure**
+**Table Structure**
 
 | Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

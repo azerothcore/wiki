@@ -1,6 +1,6 @@
 # loot\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 # Tables**: \***\_loot\_template
 
@@ -14,18 +14,18 @@ Loot templates define only items in the loot. See comments about money drop in c
 
 ## Structure
 
-| Field               | Type               | Null | Key | Default | Extra | Comment |
-| ------------------- | ------------------ | ---- | --- | ------- | ----- | ------- |
-| [Entry][1]          | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
-| [Item][2]           | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
-| [Reference][3]      | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
-| [Chance][4]         | FLOAT              | NO   |     | 100     |       |         |
+| Field              | Type               | Null | Key | Default | Extra | Comment |
+| ------------------ | ------------------ | ---- | --- | ------- | ----- | ------- |
+| [Entry][1]         | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
+| [Item][2]          | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
+| [Reference][3]     | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |         |
+| [Chance][4]        | FLOAT              | NO   |     | 100     |       |         |
 | [QuestRequired][5] | bool               | NO   |     | 0       |       |         |
-| [LootMode][6]       | SMALLINT           | NO   |     | 1       |       |         |
-| [GroupId][7]        | TINYINT            | NO   | PRI | 0       |       |         |
-| [MinCount][8]       | MEDIUMINT          | NO   |     | 1       |       |         |
-| [MaxCount][9]       | TINYINT UNSIGNED   | NO   |     | 1       |       |         |
-| [Comment][10]       | VARCHAR            |      |     |         |       |         |
+| [LootMode][6]      | SMALLINT           | NO   |     | 1       |       |         |
+| [GroupId][7]       | TINYINT            | NO   | PRI | 0       |       |         |
+| [MinCount][8]      | MEDIUMINT          | NO   |     | 1       |       |         |
+| [MaxCount][9]      | TINYINT UNSIGNED   | NO   |     | 1       |       |         |
+| [Comment][10]      | VARCHAR            |      |     |         |       |         |
 
 [1]: #entry
 [2]: #item
@@ -42,21 +42,21 @@ Loot templates define only items in the loot. See comments about money drop in c
 
 The 11 tables have different relations with other DB tables.
 
-| Loot table                    | Field                         | Relation                                                                    | Related table                               | Field                                                                      | Comment                                                                                                                                                  |
-| ----------------------------- | ----------------------------- | --------------------------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fishing\_loot\_template       | no relation                   | [entry](#entry) is linked with ID of the fishing zone or area |                                             |                                                                            |                                                                                                                                                          |
-| creature\_loot\_template      | [entry](#entry) | many &lt;- many                                                             | [creature\_template](creature_template)     | [lootid](creature_template#lootid)                       |                                                                                                                                                          |
-| gameobject\_loot\_template    | [entry](#entry) | many &lt;- many                                                             | [gameobject\_template](gameobject_template) | [data1](gameobject_template#data0-23)                  | Only gameobject type 3 (GAMEOBJECT\_TYPE\_CHEST) or 25 (GAMEOBJECT\_TYPE\_FISHINGHOLE) use data1 as loot ID, for other types data1 is used in other ways |
-| item\_loot\_template          | [entry](#entry) | many &lt;- one                                                              | [item\_template](item_template)             | [entry](item_template#entry)                                 |                                                                                                                                                          |
-| disenchant\_loot\_template    | [entry](#entry) | many &lt;- many                                                             | [item\_template](item_template)             | [DisenchantID](item_template#disenchantid)                   |                                                                                                                                                          |
-| prospecting\_loot\_template   | [entry](#entry) | many &lt;- one                                                              | [item\_template](item_template)             | [entry](item_template#entry)                                 |                                                                                                                                                          |
-| milling\_loot\_template       | [entry](#entry) | many &lt;- one                                                              | [item\_template](item_template)             | [entry](item_template#entry)                                 |                                                                                                                                                          |
-| pickpocketing\_loot\_template | [entry](#entry) | many &lt;- many                                                             | [creature\_template](creature_template)     | [pickpocketloot](creature_template#pickpocketloot)       |                                                                                                                                                          |
-| player\_loot\_template        | no relation                   | [entry](#entry) is linked with player TeamID                   |                                             |                                                                            | 0 = Horde, 1 = Alliance                                                                                                                          |
-| skinning\_loot\_template      | [entry](#entry) | many &lt;- many                                                             | [creature\_template](creature_template)     | [skinloot](creature_template#skinloot)                   | Can also store minable/herbable items gathered from creatures                                                                                            |
-| quest\_mail\_loot\_template   | [entry](#entry) |                                                                             | [quest\_template](quest_template)           | [RewardMailTemplateId](quest_template#rewardmailtemplateid) |                                                                                                                                                          |
-| reference\_loot\_template     | [entry](#entry) | many &lt;- many                                                             | -   \_loot\_template                        | [-mincountOrRef](#mincountorref)                             | In case of negative mincountOrRef                                                                                                                        |
-| spell\_loot\_template         | [entry](#entry) | many &lt;- many                                                             | [Spell](spell) (DBC)                        | SpellId                                                                    |                                                                                                                                                          |
+| Loot table                    | Field           | Relation                                                      | Related table                               | Field                                                       | Comment                                                                                                                                                  |
+| ----------------------------- | --------------- | ------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fishing\_loot\_template       | no relation     | [entry](#entry) is linked with ID of the fishing zone or area |                                             |                                                             |                                                                                                                                                          |
+| creature\_loot\_template      | [entry](#entry) | many &lt;- many                                               | [creature\_template](creature_template)     | [lootid](creature_template#lootid)                          |                                                                                                                                                          |
+| gameobject\_loot\_template    | [entry](#entry) | many &lt;- many                                               | [gameobject\_template](gameobject_template) | [data1](gameobject_template#data0-23)                       | Only gameobject type 3 (GAMEOBJECT\_TYPE\_CHEST) or 25 (GAMEOBJECT\_TYPE\_FISHINGHOLE) use data1 as loot ID, for other types data1 is used in other ways |
+| item\_loot\_template          | [entry](#entry) | many &lt;- one                                                | [item\_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                          |
+| disenchant\_loot\_template    | [entry](#entry) | many &lt;- many                                               | [item\_template](item_template)             | [DisenchantID](item_template#disenchantid)                  |                                                                                                                                                          |
+| prospecting\_loot\_template   | [entry](#entry) | many &lt;- one                                                | [item\_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                          |
+| milling\_loot\_template       | [entry](#entry) | many &lt;- one                                                | [item\_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                          |
+| pickpocketing\_loot\_template | [entry](#entry) | many &lt;- many                                               | [creature\_template](creature_template)     | [pickpocketloot](creature_template#pickpocketloot)          |                                                                                                                                                          |
+| player\_loot\_template        | no relation     | [entry](#entry) is linked with player TeamID                  |                                             |                                                             | 0 = Horde, 1 = Alliance                                                                                                                                  |
+| skinning\_loot\_template      | [entry](#entry) | many &lt;- many                                               | [creature\_template](creature_template)     | [skinloot](creature_template#skinloot)                      | Can also store minable/herbable items gathered from creatures                                                                                            |
+| quest\_mail\_loot\_template   | [entry](#entry) |                                                               | [quest\_template](quest_template)           | [RewardMailTemplateId](quest_template#rewardmailtemplateid) |                                                                                                                                                          |
+| reference\_loot\_template     | [entry](#entry) | many &lt;- many                                               | -   \_loot\_template                        | [-mincountOrRef](#mincountorref)                            | In case of negative mincountOrRef                                                                                                                        |
+| spell\_loot\_template         | [entry](#entry) | many &lt;- many                                               | [Spell](spell) (DBC)                        | SpellId                                                     |                                                                                                                                                          |
 
 ## Description of the fields
 

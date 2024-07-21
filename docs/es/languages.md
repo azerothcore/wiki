@@ -1,6 +1,6 @@
 # Languages
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 **Estructura de los archivos DBC para la versión 3.3.5a**
 

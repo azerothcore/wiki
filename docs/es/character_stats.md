@@ -1,6 +1,6 @@
 # character\_stats
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`character\_stats\`**
 

@@ -1,6 +1,6 @@
 ﻿# pool\_quest\_save
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../pool_quest_save) [Spanish :es:](pool_quest_save)
 

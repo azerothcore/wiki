@@ -1,6 +1,6 @@
 # character\_entry\_point
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`character\_entry\_point\`**
 

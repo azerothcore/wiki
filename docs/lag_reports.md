@@ -1,12 +1,12 @@
 # lag\_reports
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The `\lag\_reports\` table**
 
 This table stores the lag reports made by players ingame (when they click on "Help Request").
 
-**Structure**
+**Table Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
 | --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |

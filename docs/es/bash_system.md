@@ -36,7 +36,7 @@ Nuestro sistema bash utiliza bibliotecas bash externas que son genéricas y no e
 
 ## GANCHOS:
 
-Interno [Sistema de gancho para bash](hooks-bash.md)
+Interno [Sistema de gancho para bash](hooks-bash)
 
 ## Otros recursos
 

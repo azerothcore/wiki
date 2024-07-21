@@ -1,35 +1,35 @@
-# scripts
+# Script tabless
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 # Tables: \*\*\*\_scripts
 
 This table format is used for 3 different tables to control possible scripts activated by different actions:
 
-**[spell\_scripts](spell_scripts):** Holds scripts that can be activated by spells with effect SPELL\_EFFECT\_SCRIPT\_EFFECT (77) or SPELL\_EFFECT\_DUMMY(3).
+**spell\_scripts:** Holds scripts that can be activated by spells with effect SPELL\_EFFECT\_SCRIPT\_EFFECT (77) or SPELL\_EFFECT\_DUMMY(3).
 
-**[event\_scripts](event_scripts):** Holds scripts activated whenever an event is activated, be it by an object or as the spell effect SPELL\_EFFECT\_SEND\_EVENT (61).
+**event\_scripts:** Holds scripts activated whenever an event is activated, be it by an object or as the spell effect SPELL\_EFFECT\_SEND\_EVENT (61).
 
-**[waypoint\_scripts](waypoint_scripts):** Holds scripts used in the [waypoint\_data](waypoint_data) table. See also [Waypoints-Information](Waypoints-Information) for general information about waypoints.
+**waypoint\_scripts:** Holds scripts used in the [waypoint\_data](waypoint_data) table. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
 NOTE: An entry in this table may have more than one row as a script may do more than just one action. Also each action the script may make can have a separate delay attached to it. In that case, the core will activate the appropriate action after the correct delay.
 
 **Table Structure**
 
-| Field                     | Comment
-|---------------------------|--------
-| [id](#id)                 |
-| [effIndex](#effindex)     | only used in [spell\_scripts](spell_scripts)
-| [delay](#delay)           |
-| [command](#command)       |
-| [datalong](#otherfields)  |
-| [datalong2](#otherfields) |
-| [dataint](#otherfields)   |
-| [x](#otherfields)         |
-| [y](#otherfields)         |
-| [z](#otherfields)         |
-| [o](#otherfields)         |
-| [guid](#guid)             | only used in [waypoint\_scripts](waypoint_scripts); acts as primary key and is set automatically using the [GM command](GM-Commands) 'wp event add'
+| Field                     | Type  | Attributes | Key | Null | Default | Extra                                                                                                                          | Comment |
+| ------------------------- | ----- | ---------- | --- | ---- | ------- | ------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| [id](#id)                 | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
+| [effIndex](#effindex)     | INT   | UNSIGNED   |     | NO   | 0       | only used in spell_scripts                                                                                                     |         |
+| [delay](#delay)           | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
+| [command](#command)       | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
+| [datalong](#otherfields)  | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
+| [datalong2](#otherfields) | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
+| [dataint](#otherfields)   | INT   |            |     | NO   | 0       |                                                                                                                                |         |
+| [x](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
+| [y](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
+| [z](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
+| [o](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
+| [guid](#guid)             | INT   |            | PRI | NO   | 0       | only used in waypoint_scripts; acts as primary key and is set automatically using the [GM command](gm-commands) 'wp event add' |         |
 
 ## **Description of the fields**
 
@@ -54,7 +54,7 @@ Delay in seconds before this current step of the script activates. 0 = instant.
 The type of action performed by the script after [delay](#delay) seconds have passed. The value of this field affects what other fields also need to be set. The following commands can be used:
 
 | Command | Name                                                               | Description                                                              |
-|---------|--------------------------------------------------------------------|--------------------------------------------------------------------------|
+| ------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | 0       | [TALK](#script_command_talk--0)                                    | Creature say/whisper/yell/textemote.                                     |
 | 1       | [EMOTE](#script_command_emote--1)                                  | Play emote on creature.                                                  |
 | 2       | [FIELD\_SET](#script_command_field_set--2)                         | Change the value at an index for the player.                             |
@@ -280,5 +280,5 @@ Depending on what command was used, the meaning and use for the following fields
 
 ### guid
 
-Exists only for 'waypoint_scripts' and acts there as primary key; it is set automatically using the [GM command](GM-Commands) 'wp event add'.
+Exists only for 'waypoint_scripts' and acts there as primary key; it is set automatically using the [GM command](gm-commands) 'wp event add'.
 

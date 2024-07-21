@@ -1,18 +1,18 @@
 # item\_enchantment\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`item\_enchantment\_template\` table**
 
 This table holds enchantment chance information for items that should have either a random property or a random suffix attached to them.
 
-**Structure**
+**Table Structure**
 
-| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------|--------------|------------|-----|------|---------|-------|---------|
+| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [entry][1]  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [ench][2]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [chance][3] | FLOAT        | UNSIGNED   |     | NO   | 0       |       |         |
+| [chance][3] | FLOAT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #ench
@@ -22,7 +22,7 @@ This table holds enchantment chance information for items that should have eithe
 
 ### entry
 
-This field ties in with EITHER RandomProperty OR RandomSuffix fields in the [item\_template](http://www.azerothcore.org/wiki/item_template) table. An item cannot have both of those fields set at non-zero values.
+This field ties in with EITHER RandomProperty OR RandomSuffix fields in the [item\_template](item_template) table. An item cannot have both of those fields set at non-zero values.
 
 ### ench
 

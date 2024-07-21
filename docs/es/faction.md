@@ -2,7 +2,7 @@
 
 **Faction.dbc**
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 Éste archivo DBC alberga información acerca de todas las facciones existentes dentro del juego; las mismas son únicas y representan una facción con la cual un jugador cualquiera puede obtener reputación.
 

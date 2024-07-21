@@ -1,12 +1,12 @@
 # ip\_banned
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`ip\_banned\` table**
 
 This table contains all of the banned IPs and the date when (or if) the ban will expire.
 
-**Structure**
+**Table Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default   | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | --------- | ----- | ------- |

@@ -1,18 +1,18 @@
 # pool\_gameobject
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`pool\_gameobject\` table**
 
 This table contains gameobjects that are tied to a specific pool.
 This table can only contain gameobjects that have a type of GAMEOBJECT\_TYPE\_CHEST, GAMEOBJECT\_TYPE\_GOOBER, GAMEOBJECT\_TYPE\_FISHINGHOLE.
 
-**Structure**
+**Table Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|------------------|--------------|------------|-----|------|---------|-------|---------|
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [pool_entry][2]  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [pool_entry][2]  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
 | [chance][3]      | FLOAT        | UNSIGNED   |     | NO   | 0       |       |         |
 | [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 

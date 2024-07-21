@@ -1,12 +1,12 @@
 # character\_queststatus\_weekly
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_queststatus\_weekly\` table**
 
 Holds information on the weekly quest status of every player. The timers reset at the same time the Raids reset.
 
-**Structure**
+**Table Structure**
 
 | Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 | ---------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

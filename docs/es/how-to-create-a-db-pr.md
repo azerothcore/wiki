@@ -5,7 +5,7 @@ redirect_from: "/How-to-create-a-DB-PR"
 # Como crear una Pull Request SQL en GitHub
 
 Esta es una guía simplificada para crear fácilmente Pull Request que contengan correcciones de la base de datos (código SQL) sin molestarse con la terminal, 
-una alternativa más fácil a la [manera tradicional de crear Pull Request](https://www.azerothcore.org/wiki/how-to-create-a-pr).
+una alternativa más fácil a la [manera tradicional de crear Pull Request](how-to-create-a-pr).
 Si quiere enviar correcciones en C++ o de otro tipo que no sea SQL, siga la otra guía.
 
 ## Hazlo sólo una vez: crea tu fork de AzerothCore

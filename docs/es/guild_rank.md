@@ -1,6 +1,6 @@
 # guild\_rank
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`guild\_rank\`**
 

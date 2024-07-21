@@ -2,7 +2,7 @@
 
 ## Introducción
 
-El [spell_dbc](spell_dbc.md) contiene datos sobre los hechizos del lado del servidor que no se encuentran en los archivos DBC del cliente, así como ** anulaciones ** del DBC que están destinadas a mejorar o corregir cualquier hechizo.
+El [spell_dbc](spell_dbc) contiene datos sobre los hechizos del lado del servidor que no se encuentran en los archivos DBC del cliente, así como ** anulaciones ** del DBC que están destinadas a mejorar o corregir cualquier hechizo.
 
 Para agregar anulaciones para un hechizo en la tabla `spell_dbc`, primero necesita importar los datos base sobre ese hechizo desde los archivos DBC del Cliente (a menos que ese hechizo ya haya sido importado).
 
@@ -15,5 +15,5 @@ Cuando envías un PR con una corrección de `spell_dbc` para un hechizo determin
 
 ## Cómo importar hechizos de los archivos DBC a la tabla spell_dbc
 
-Para importar datos de Spell.dbc a nuestra tabla spell_dbc, puede consultar la guía general sobre [cómo importar datos de archivos DBC](how-to-import-dbc-data-in-db.md).
+Para importar datos de Spell.dbc a nuestra tabla spell_dbc, puede consultar la guía general sobre [cómo importar datos de archivos DBC](how-to-import-dbc-data-in-db).
 Solo necesita usar las mismas pautas con el uso del archivo Spell.dbc en su lugar.

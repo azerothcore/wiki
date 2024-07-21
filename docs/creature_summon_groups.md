@@ -1,6 +1,6 @@
 # creature\_summon\_groups
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 # Table: creature\_summon\_groups
 
@@ -8,18 +8,18 @@ This table holds data about temporary summoned creatures. It is possible to grou
 
 ## Structure
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------|--------------|------------|-----|------|---------|-------|---------|
+| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [summonerId][1]   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [summonerType][2] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
 | [groupId][3]      | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
 | [entry][4]        | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [position_x][5]   | FLOAT        |            |     | NO   | 0       |       |         |
-| [position_y][6]   | FLOAT        |            |     | NO   | 0       |       |         |
-| [position_z][7]   | FLOAT        |            |     | NO   | 0       |       |         |
-| [orientation][8]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [position_x][5]   | FLOAT     |            |     | NO   | 0       |       |         |
+| [position_y][6]   | FLOAT     |            |     | NO   | 0       |       |         |
+| [position_z][7]   | FLOAT     |            |     | NO   | 0       |       |         |
+| [orientation][8]  | FLOAT     |            |     | NO   | 0       |       |         |
 | [summonType][9]   | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [summonTime][10]  | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [summonTime][10]  | INT       | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #summonerid
 [2]: #summonertype
@@ -43,7 +43,7 @@ Summoner's id depending on [summonerType](#creature_summon_groups-summonerType)
 Summoner's type:
 
 | Value | Type                     |
-|-------|--------------------------|
+| ----- | ------------------------ |
 | 0     | SUMMONER_TYPE_CREATURE   |
 | 1     | SUMMONER_TYPE_GAMEOBJECT |
 | 2     | SUMMONER_TYPE_MAP        |
@@ -75,7 +75,7 @@ Orientation the summoned creature will get when spawned
 ### summonType
 
 | Value | Name                                   | Comments                                                            |
-|-------|----------------------------------------|---------------------------------------------------------------------|
+| ----- | -------------------------------------- | ------------------------------------------------------------------- |
 | 1     | TEMPSUMMON_TIMED_OR_DEAD_DESPAWN       | Despawns after a specified time OR when the creature disappears     |
 | 2     | TEMPSUMMON_TIMED_OR_CORPSE_DESPAWN     | Despawns after a specified time OR when the creature dies           |
 | 3     | TEMPSUMMON_TIMED_DESPAWN               | Despawns after a specified time                                     |

@@ -1,6 +1,6 @@
 ﻿# logs
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../logs) [Spanish :es:](logs)
 

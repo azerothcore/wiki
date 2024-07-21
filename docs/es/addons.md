@@ -1,6 +1,6 @@
 ﻿# addons
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../addons) [Spanish :es:](addons)
 

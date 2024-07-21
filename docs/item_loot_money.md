@@ -1,6 +1,6 @@
 # item\_loot\_money
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`item\_loot\_money\` table**
 
@@ -10,12 +10,12 @@ such as a "Fat Sack of Coins"
 This table is populated the first time the player right-clicks to open an item. Rows are deleted when
 the player either removes the money or destroys the container item.
 
-**Structure**
+**Table Structure**
 
-| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------|---------|------------|-----|------|---------|-------|---------|
-| [container_id][1] | INT | UNSIGNED   |     | NO   | 0       |       |         |
-| [money][2]        | INT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field             | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [container_id][1] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [money][2]        | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #container_id
 [2]: #money

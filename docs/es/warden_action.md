@@ -1,6 +1,6 @@
 ﻿# warden\_action
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../warden_action) [Spanish :es:](warden_action)
 

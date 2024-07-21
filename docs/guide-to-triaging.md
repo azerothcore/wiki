@@ -120,15 +120,15 @@ This is a general (and by no means exhaustive) look at the sources we can use to
 ## Tools
 - The AC server/test environment, This is the basic testing tool. Try to keep your AC server as up-to-date as you can manage. Daily updates are a good idea, and you shouldn't go more than a week without updating. 
 
-- [GM commands](gm-commands.md) and macros - At a bare minimum you want to be familiar with the various cheats (no damage, speed, fly), `.go`, `.additem`, `.quest add` and so on. It can also be useful to setup various cheat and boost macros on your test account, so you can instantly setup and train a new character. When testing various class and racial issues you find yourself making and then deleting a lot of different characters, so automating the new character setup with macros can repay the time invested quite quickly. 
+- [GM commands](gm-commands) and macros - At a bare minimum you want to be familiar with the various cheats (no damage, speed, fly), `.go`, `.additem`, `.quest add` and so on. It can also be useful to setup various cheat and boost macros on your test account, so you can instantly setup and train a new character. When testing various class and racial issues you find yourself making and then deleting a lot of different characters, so automating the new character setup with macros can repay the time invested quite quickly. 
 
 - [Keira3](https://www.azerothcore.org/Keira3/) - this is the indispensable tool for triaging. Five minutes with Keira will save an hour of running around in the open world. It comes with a built-in SQL editor that you can use to run custom queries. It also has built-in tooltips on most data fields that can help understand what you're looking at. You can also use it to generate SQL for fixing things, although the SQL it generates should only be used as a starting point. This is because it often does not meet the preferred SQL standards for PRs regarding duplication of queries.
 
 - A generic SQL editor like [HeidiSQL](https://www.heidisql.com/) (warning, Windows only) is also useful. Keira doesn't access every single table in the AC database, just the most useful ones, so a tool like Heidi that gives you views of everything can be good for more obscure tables.
 
-- [AC Wiki tables](database-world.md), especially those covering the world database. These give you mportant information about the structure and fields of the DB. If you're puzzled about how something should work or what a flag means, the answer is often here.
+- [AC Wiki tables](database-world), especially those covering the world database. These give you mportant information about the structure and fields of the DB. If you're puzzled about how something should work or what a flag means, the answer is often here.
 
-- [Useful SQL snippets](useful-sql.md) - these are designed to be fast, easy to use tools for getting information about various potential issues out of the DB.
+- [Useful SQL snippets](useful-sql) - these are designed to be fast, easy to use tools for getting information about various potential issues out of the DB.
 
 - Learn to filter GitHub issues:
     - `type:issue label:"Needs Triage"` - finds all open issues
@@ -137,5 +137,5 @@ This is a general (and by no means exhaustive) look at the sources we can use to
 
 ## Other Links
 - [Current ChromieCraft version](https://github.com/chromiecraft/azerothcore-wotlk)
-- [ChromieCraft mods](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO.md)
+- [ChromieCraft mods](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO)
 - [How to triage](https://github.com/chromiecraft/chromiecraft#for-contributors-how-to-triagereport-bugs)

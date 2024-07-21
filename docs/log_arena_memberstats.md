@@ -1,10 +1,10 @@
 # log\_arena\_memberstats
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`log\_arena\_memberstats\` table**
 
-**Structure**
+**Table Structure**
 
 | Field          | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

@@ -1,7 +1,7 @@
 
 # Criterios de los Logros
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 **Achievement\_Criteria.dbc**
 

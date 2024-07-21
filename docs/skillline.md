@@ -4,7 +4,7 @@ redirect_from: "/SkillLine"
 
 # SkillLine
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **SkillLine.dbc**
 
@@ -12,12 +12,12 @@ This DBC contains all skills.
 
 **Version is : 3.3.5a**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 
 | Column | Field                    | Type         | Notes              |
-|--------|--------------------------|--------------|--------------------|
+| ------ | ------------------------ | ------------ | ------------------ |
 | 1      | ID                       | Integer      |                    |
 | 2      | iRefID_SkillLineCategory | Integer      |                    |
 | 3      | skillCostID              | Integer      |                    |
@@ -30,7 +30,7 @@ This DBC contains all skills.
 ## **Content**
 
 | ID  | CategoryId* | SkillCostId | Name                         | SpellIcon | AltVerb   | CanLink |
-|-----|-------------|-------------|------------------------------|-----------|-----------|---------|
+| --- | ----------- | ----------- | ---------------------------- | --------- | --------- | ------- |
 | 6   | 7           | 0           | Frost                        | 188       |           | 0       |
 | 8   | 7           | 0           | Fire                         | 183       |           | 0       |
 | 26  | 7           | 0           | Arms                         | 514       |           | 0       |
@@ -189,7 +189,7 @@ This field is from SkillLineCategory.dbc
 This in the content of this small dbc
 
 | Category Id | Name                |
-|-------------|---------------------|
+| ----------- | ------------------- |
 | 5           | Attributes          |
 | 6           | Weapon Skills       |
 | 7           | Class Skills        |

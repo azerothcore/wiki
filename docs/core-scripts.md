@@ -4,7 +4,7 @@ tableofcontents: 1
 
 # Core Scripts
 
-When dealing with Creature- and Spell scripts we should always use the new registry macros introduced in [this](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99) commit.
+When dealing with Creature-, GameObject- and Spell scripts we should always use the new registry macros introduced in [this](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99) commit.
 
 ## Creature Scripts
 
@@ -75,6 +75,40 @@ void AddSC_boss_lord_marrowgar()
 | GuardianAI     |
 | PetAI          |
 | NullCreatureAI |
+
+## GameObject Scripts
+
+### World Spawned GameObjects
+
+```cpp
+struct go_scripted_gameobject : public GameObjectAI
+{
+    go_scripted_gameobject(GameObject* go) : GameObjectAI(go) { }
+
+    void UpdateAI(uint32 const /*diff*/) override
+    {
+        /* Some code */
+    }
+}
+
+/* At the end of a script file you will find a place where we register all
+ * the scripts. */
+void AddSC_scripts()
+{
+    /* RegisterGameObjectAI(gameObjectScript); */
+    RegisterGameObjectAI(go_scripted_gameobject);
+}
+```
+
+### Instance Spawned GameObject
+
+If a gameobject is scripted inside an instance we register them as factory.
+
+To do this, in the headerfile of the instance we add this define:
+
+```cpp
+#define Register"IntanceName"GameObjectAI(ai_name) RegisterGameObjectAIWithFactory(ai_name, Get"InstanceName"AI)
+```
 
 ## Spell Scripts
 

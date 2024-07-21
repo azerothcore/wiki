@@ -1,17 +1,17 @@
 # group\_instance
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`group\_instance\` table**
 
 `table-no-description`
 
-**Structure**
+**Table Structure**
 
-| Field          | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|------------|------------|-----|------|---------|-------|---------|
-| [guid][1]      | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [instance][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]      | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [instance][2]  | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [permanent][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid

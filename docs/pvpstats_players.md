@@ -1,12 +1,12 @@
 # pvpstats\_players
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`pvpstats\_players\` table**
 
 This table holds datas about BattleGrounds scores. To enable storing this kind of informations, set **Battleground.StoreStatistics.Enable = 1** in **worldserver.config.dist** file.
 
-**Structure**
+**Table Structure**
 
 | Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |

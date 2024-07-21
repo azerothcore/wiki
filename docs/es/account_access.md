@@ -1,6 +1,6 @@
 ﻿# account\_access
 
-[<- Volver a: Auth](database-auth.md)
+[<- Volver a: Auth](database-auth)
 
 Leer en: [English :gb:](../account_access) [Español :es:](account_access)
 

@@ -1,12 +1,12 @@
 # character\_reputation
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_reputation\` table**
 
 This table holds the reputation information for each character.
 
-**Structure**
+**Table Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |

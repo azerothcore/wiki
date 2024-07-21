@@ -1,16 +1,16 @@
 # spell\_bonus\_data
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_bonus\_data\` table**
 
 Table used for storing custom damage/healing bonus coefficients.
 
-**Structure**
+**Table Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]        | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]        | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [direct_bonus][2] | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [dot_bonus][3]    | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [ap_bonus][4]     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |

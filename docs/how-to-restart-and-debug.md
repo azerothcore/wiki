@@ -12,7 +12,7 @@ Authserver and worldservers can be placed on different environments. However, in
 
 ## How to start the services
 
-Both authserver and worldserver can be started by simply running the compiled binaries after [completing the installation](https://www.azerothcore.org/wiki/Installation).
+Both authserver and worldserver can be started by simply running the compiled binaries after [completing the installation](Installation).
 
 ## How to configure a restarter
 
@@ -36,7 +36,7 @@ If the server crashes after enabling GDB, you will find the crashdump file (gdb.
 Our Docker system integrates the scripts above within the docker-compose. It means that enabling GDB works exactly in the same way in Docker too.
 Moreover our docker-compose uses the [restart-policy feature](https://docs.docker.com/config/containers/start-containers-automatically/) to keep the containers up and running.
 
-For more information, please refer to the [Install-with-Docker](install-with-docker.md) documentation. 
+For more information, please refer to the [Install-with-Docker](install-with-docker) documentation. 
 You will also find a guide on how to debug your code by using VSCode combined with its Remote Docker extension.
 
 ### Advanced restarter (only for bash)

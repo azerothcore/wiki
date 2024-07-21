@@ -12,9 +12,9 @@ Before start we suggest you to read [Documentation about modular structure](The-
 
 - Module template: [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
 - Script template: https://github.com/azerothcore/azerothcore-boilerplates
-- All the hooks in the core are listed in [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). If you need custom hooks, they can be added to the core by [sending a PR](https://www.azerothcore.org/wiki/How-to-create-a-PR).
+- All the hooks in the core are listed in [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). If you need custom hooks, they can be added to the core by [sending a PR](How-to-create-a-PR).
 
-- If you need to create a new hook for your module, please follow this guide: [How to create a new hook](hooks-script.md)
+- If you need to create a new hook for your module, please follow this guide: [How to create a new hook](hooks-script)
 
 ### **The Basis**
 
@@ -40,7 +40,7 @@ Note: we suggest to use the [directory structure](Directory-Structure) standards
 void AddMyCustomScripts();
 
 // Add all
-// cf. the naming convention https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master.md#how-to-upgrade-4
+// cf. the naming convention https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master#how-to-upgrade-4
 // additionally replace all '-' in the module folder name with '_' here
 void Addmod_my_customScripts()
 {

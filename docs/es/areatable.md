@@ -1,7 +1,7 @@
 
 # AreaTable
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 **AreaTable.dbc**
 

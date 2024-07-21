@@ -1,6 +1,6 @@
 # Errores comunes
 
-| ¿Esta página no respondió sus dudas? Lea [Cómo solicitar ayuda](how-to-ask-for-help.md) para saber cómo proceder con su pregunta de la mejor manera. |
+| ¿Esta página no respondió sus dudas? Lea [Cómo solicitar ayuda](how-to-ask-for-help) para saber cómo proceder con su pregunta de la mejor manera. |
 | --- |
 
 ## Errores relacionados con la base de datos
@@ -10,7 +10,7 @@
 [ERROR]: Table 'acore_world.table' doesn't exist
 Your database structure is not up to date. Please make sure you've executed all queries in the sql/updates folders.
 ```
-Simplemente no ha actualizado su base de datos. Necesita [Actualizar su base de datos](database-keeping-the-server-up-to-date.md).
+Simplemente no ha actualizado su base de datos. Necesita [Actualizar su base de datos](database-keeping-the-server-up-to-date).
 
 ---------------------------------------------------------
 
@@ -31,7 +31,7 @@ Para hacer esto, remueva el comentario de Logger.sql.driver y luego ejecute el W
 ```
 > Loaded 0 acore strings. DB table `acore_string` is empty.
 ```
-Esto sucede porque no tiene importada la base de datos en lo absoluto. Siga las instrucciones dadas en [Instalación de la base de datos](database-installation.md)
+Esto sucede porque no tiene importada la base de datos en lo absoluto. Siga las instrucciones dadas en [Instalación de la base de datos](database-installation)
 
 ---------------------------------------------------------
 
@@ -132,7 +132,7 @@ Recompile con herramientas (Tools), copie los extractores en la carpeta de WoW y
 ```
 Used MySQL library version (8.0.19 id 80019) does not match the version id used to compile AzerothCore (id 80024)
 ```` 
-Necesita usar exactamente la misma versión de libmysql.dll de la versión que usó para compilar su fuente. La obtiene de **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** o siga la [Guía de Instalación](https://www.azerothcore.org/wiki/windows-core-installation#compiling-the-source).
+Necesita usar exactamente la misma versión de libmysql.dll de la versión que usó para compilar su fuente. La obtiene de **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** o siga la [Guía de Instalación](windows-core-installation#compiling-the-source).
 
 ---------------------------------------------------------
 
@@ -229,5 +229,5 @@ Debe extraer los mapas (maps) primero.
 
 No. Son incompatibles.
 
-| ¿Esta página no respondió sus dudas? Lea [Cómo solicitar ayuda](how-to-ask-for-help.md) para saber cómo proceder con su pregunta de la mejor manera. |
+| ¿Esta página no respondió sus dudas? Lea [Cómo solicitar ayuda](how-to-ask-for-help) para saber cómo proceder con su pregunta de la mejor manera. |
 | --- |

@@ -1,6 +1,6 @@
 ﻿# character\_queststatus\_monthly
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../character_queststatus_monthly) [Spanish :es:](character_queststatus_monthly)
 

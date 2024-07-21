@@ -24,7 +24,7 @@ To end the comment block type asterik and then forward slash.
 
 By taking a few minutes as you are writing your code to write comment blocks you can tell future developers what you intended and make their life more productive and easier.
 
-This is an example of a documented [Hook](hooks-script.md) in our `ScriptMgr.h`:
+This is an example of a documented [Hook](hooks-script) in our `ScriptMgr.h`:
 
 ```cpp
 /**

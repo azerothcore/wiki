@@ -18,4 +18,4 @@ Puedes usar esto como base: https://github.com/azerothcore/azerothcore-boilerpla
 
 ## Cómo añadir tu script personalizado a AzerothCore
 
-Para que tu script sea compilado, lee el README.md **[aquí](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/scripts/Custom/README.md)**
+Para que tu script sea compilado, lee el README **[aquí](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/scripts/Custom/README)**

@@ -1,6 +1,6 @@
 ﻿# autobroadcast
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../autobroadcast) [Spanish :es:](autobroadcast)
 

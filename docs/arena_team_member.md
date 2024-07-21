@@ -1,12 +1,12 @@
 # arena\_team\_member
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`arena\_team\_member\` table**
 
 This table holds arena info about specific team members. All arena\_team members have a record in this table.
 
-**Structure**
+**Table Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |

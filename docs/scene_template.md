@@ -1,18 +1,18 @@
 # scene\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`scene\_template\` table**
 
 This table is used to store necessary data for scenes to run, e.g. ScriptPackageId and Flags.
 
-**Structure**
+**Table Structure**
 
 | Field                | Type     | Attributes | Key | Null | Default | Extra | Comment |
-|----------------------|----------|------------|-----|------|---------|-------|---------|
+| -------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [SceneId][1]         | in(10)   | UNSIGNED   | PRI | NO   | NONE    |       |         |
-| [Flags][2]           | INT  | UNSIGNED   |     | NO   | 16      |       |         |
-| [ScriptPackageId][3] | INT  | UNSIGNED   |     | NO   | NONE    |       |         |
+| [Flags][2]           | INT      | UNSIGNED   |     | NO   | 16      |       |         |
+| [ScriptPackageId][3] | INT      | UNSIGNED   |     | NO   | NONE    |       |         |
 | [ScriptName][4]      | char(64) | UNSIGNED   |     | NO   | ' '     |       |         |
 
 [1]: #sceneid
@@ -36,7 +36,7 @@ Use C++ hook to start them, e.g.:
 This flags handle behavior of scene.
 
 | Flag                                            | Int Value | Bit value  | Comment                                         |
-|-------------------------------------------------|-----------|------------|-------------------------------------------------|
+| ----------------------------------------------- | --------- | ---------- | ----------------------------------------------- |
 | SCENEFLAG\_NONE                                 | 0         | 0x00000000 |                                                 |
 | SCENEFLAG\_UNK1                                 | 1         | 0x00000001 | NYI                                             |
 | SCENEFLAG\_UNK2 \| (SCENEFLAG\_CANCLE\_AT\_END) | 2         | 0x00000002 | Scene is being canceled at SceneComplete // NYI |

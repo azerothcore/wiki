@@ -1,15 +1,15 @@
 # game\_event\_creature\_quest
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_creature\_quest\` table**
 
 This table holds information on quests that should only be available when an event is currently taking place.
 
-**Structure**
+**Table Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-|-----------------|--------------|------------|-----|------|---------|-------|--------------------------|
+| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
+| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
 | [eventEntry][1] | TINYINT   | UNSIGNED   |     | NO   |         |       | Entry of the game event. |
 | [id][2]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
 | [quest][3]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                          |

@@ -1,12 +1,12 @@
 # petition
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`petition\` table**
 
 This table holds information on all ongoing petitions for a guild or for an arena team.
 
-**Structure**
+**Table Structure**
 
 | Field             | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |

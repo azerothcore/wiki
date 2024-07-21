@@ -1,15 +1,15 @@
 # creature\_questender
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature\_questender\` table**
 
 Holds NPC quest ender relations on which NPCs finishes which quests.
 
-**Structure**
+**Table Structure**
 
-| Field      | Type         | Attributes | Key | Null | Default | Extra | Comment          |
-|------------|--------------|------------|-----|------|---------|-------|------------------|
+| Field      | Type      | Attributes | Key | Null | Default | Extra | Comment          |
+| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
 | [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
 | [quest][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
 

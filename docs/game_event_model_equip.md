@@ -1,17 +1,17 @@
 # game\_event\_model\_equip
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_model\_equip\` table**
 
 Contains all creature instances that need to change display id and/or equipment during defined game events.
 
-**Structure**
+**Table Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra  | Comment                  |
-|-------------------|--------------|------------|-----|------|---------|--------|--------------------------|
+| Field             | Type      | Attributes | Key | Null | Default | Extra  | Comment                  |
+| ----------------- | --------- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
 | [eventEntry][1]   | TINYINT   | SIGNED     |     | NO   | 0       |        | Entry of the game event. |
-| [guid][2]         | INT      | UNSIGNED   | PRI | NO   | 0       | Unique |                          |
+| [guid][2]         | INT       | UNSIGNED   | PRI | NO   | 0       | Unique |                          |
 | [modelid][3]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
 | [equipment_id][4] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
 

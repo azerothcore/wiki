@@ -1,20 +1,22 @@
 # spell\_linked\_spell
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`spell\_linked\_spell\` table**
 
 This table provides data for spell linking system, telling it which spells trigger what, and under which conditions.
 
-| Field              | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|--------------------|--------------|------------|-----|------|---------|-------|---------|
+**Table Structure**
+
+| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [spell_trigger][1] | MEDIUMINT | SIGNED     |     | NO   |         |       |         |
 | [spell_effect][2]  | MEDIUMINT | SIGNED     |     | NO   |         |       |         |
 | [type][3]          | SMALLINT  | UNSIGNED   |     | NO   |         |       |         |
-| [comment][4]       | text         |            |     | NO   |         |       |         |
+| [comment][4]       | text      |            |     | NO   |         |       |         |
 
-[1]: #spell_trigger
-[2]: #spell_effect
+[1]: #spelltrigger
+[2]: #spelleffect
 [3]: #type
 [4]: #comment
 
@@ -22,11 +24,11 @@ This table provides data for spell linking system, telling it which spells trigg
 
 ### spell\_trigger
 
-The spell, which when cast, will trigger the spell listed in [spell\_effect](#spell_linked_spell-spell_effect)
+The spell, which when cast, will trigger the spell listed in [spell\_effect](#spell_effect)
 
 ### spell\_ effect
 
-The spell that you want to be triggered. How this spell acts is determined by the [type](#spell_linked_spell-type) field.
+The spell that you want to be triggered. How this spell acts is determined by the [type](#type) field.
 
 ### type
 

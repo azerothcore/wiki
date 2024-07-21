@@ -1,10 +1,10 @@
 # character\_brew\_of\_the\_month
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_brew\_of\_the\_month\` table**
 
-**Structure**
+**Table Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment  |
 | ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------- |

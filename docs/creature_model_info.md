@@ -1,12 +1,12 @@
 # creature\_model\_info
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`creature\_model\_info\` table**
 
 This table contains all models of mobs, their gender and other information that are model related. This means that when a creature uses another model, this information will change as well.
 
-**Structure**
+**Table Structure**
 
 | Field                       | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |

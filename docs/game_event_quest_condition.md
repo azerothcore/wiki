@@ -1,19 +1,19 @@
 # game\_event\_quest\_condition
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_quest\_condition\` table**
 
 This table contains the mapping of a quest in a world event to the condition that it will fulfill. It also contains how much a given quest will add to a condition once that quest is completed by a player.
 
-**Structure**
+**Table Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|-------------------|--------------|------------|-----|------|---------|-------|---------|
+| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [eventEntry][1]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [quest][2]        | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [condition_id][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [num][4]          | FLOAT        | SIGNED     |     | YES  | 0       |       |         |
+| [num][4]          | FLOAT     | SIGNED     |     | YES  | 0       |       |         |
 
 [1]: #evententry
 [2]: #quest

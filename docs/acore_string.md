@@ -1,6 +1,6 @@
 # acore_string
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`acore_string\` table**
 
@@ -10,7 +10,7 @@ To see which locale IDs correspond to what languages, visit the Localization\_la
 
 NOTE: The % arguments need to stay in the exact same order as they are provided by default in the English translation.
 
-**Structure**
+**Table Structure**
 
 | Field                | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |

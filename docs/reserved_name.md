@@ -1,10 +1,12 @@
 # reserved\_name
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`reserved\_name\` table**
 
-**Structure**
+`table-no-description|0`
+
+**Table Structure**
 
 | Field     | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |

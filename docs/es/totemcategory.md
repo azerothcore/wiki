@@ -1,6 +1,6 @@
 # TotemCategory
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 **TotemCategory.dbc**
 **Version is : 3.3.5a**

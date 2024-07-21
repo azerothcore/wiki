@@ -1,10 +1,10 @@
 # guild\_bank\_eventlog
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`guild\_bank\_eventlog\` table**
 
-**Structure**
+**Table Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment                                     |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------------- |

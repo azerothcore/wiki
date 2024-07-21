@@ -1,6 +1,6 @@
 # guild\_eventlog
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`guild\_eventlog\`**
 

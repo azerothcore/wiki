@@ -3,7 +3,7 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 4: Database Installation](database-installation.md) | [Step 6: Final Server Steps >>](final-server-steps.md) |
+| [<< Step 4: Database Installation](database-installation) | [Step 6: Final Server Steps >>](final-server-steps) |
 
 This guide is intended for advanced setups or just to provide more details in setting up your realm for local or internet use. In general, the default setup explained in your particular OS-specific guide should be fine for simple setups.
 
@@ -51,15 +51,15 @@ You need to make sure that your **authserver** application directs incoming conn
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 4: Database Installation](database-installation.md) | [Step 6: Final Server Steps >>](final-server-steps.md) |
+| [<< Step 4: Database Installation](database-installation) | [Step 6: Final Server Steps >>](final-server-steps) |

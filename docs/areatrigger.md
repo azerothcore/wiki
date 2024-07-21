@@ -1,14 +1,14 @@
 # areatrigger
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`areatrigger\` table**
 
 This table contains trigger points for events in certain coordinates in the maps.
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)
 
-**Structure**
+**Table Structure**
 
 | Field       | Type  | Attributes | Key | Null | Default | Extra          | Comment                                              |
 | ----------- | ----- | ---------- | --- | ---- | ------- | -------------- | ---------------------------------------------------- |

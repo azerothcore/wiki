@@ -39,7 +39,7 @@ have been placed under /deps folder
 
 ## HOOKS:
 
-Internal [Hook system for bash](hooks-bash.md)
+Internal [Hook system for bash](hooks-bash)
 
 ## Other resources
 

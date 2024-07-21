@@ -1,12 +1,12 @@
 # holiday\_dates
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`holiday\_dates\` table**
 
 `table-no-description`
 
-**Structure**
+**Table Structure**
 
 | Field            | Type    | Attribute | Key | Null | Default | Extra | Comment |
 |:-----------------|---------|-----------|-----|------|---------|-------|---------|

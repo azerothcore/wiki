@@ -1,18 +1,18 @@
 # skill\_extra\_item\_template
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`skill\_extra\_item\_template\` table**
 
 This table holds information about when using certain profession spells, you have the chance of creating more than one copy of the item.
 
-**Structure**
+**Table Structure**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                            |
-|-----------------------------|--------------|------------|-----|------|---------|-------|------------------------------------|
+| Field                       | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
+| --------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
 | [spellId][1]                | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the item creation spell |
 | [requiredSpecialization][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Specialization spell id            |
-| [additionalCreateChance][3] | FLOAT        | SIGNED     |     | NO   | 0       |       | chance to create add               |
+| [additionalCreateChance][3] | FLOAT     | SIGNED     |     | NO   | 0       |       | chance to create add               |
 | [additionalMaxNum][4]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       | max num of adds                    |
 
 [1]: #spellid

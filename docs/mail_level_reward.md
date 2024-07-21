@@ -1,15 +1,15 @@
 # mail\_level\_reward
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`mail\_level\_reward\` table**
 
 On certain levels, you receive a mail with some text.
 
-**Structure**
+**Table Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|---------------------|--------------|------------|-----|------|---------|-------|---------|
+| Field               | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [level][1]          | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [raceMask][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [mailTemplateId][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |

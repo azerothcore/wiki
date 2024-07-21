@@ -1,12 +1,12 @@
 # account\_access
 
-[<-Back-to:Auth](database-auth.md)
+[<-Back-to:Auth](database-auth)
 
 **The \`account\_access\` table**
 
 This table holds security access level for any realm in [realmlist](realmlist) table.
 
-**Structure**
+**Table Structure**
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |

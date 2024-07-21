@@ -1,6 +1,6 @@
 # creature_template_movement
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 This table contains the description of creatures movements, where the creature can move and attack.
 
@@ -32,7 +32,7 @@ This table can be overriden by \`creature_movement_override\`
 
 #### CreatureId
 
-This is the [creature\_template.entry](http://www.azerothcore.org/wiki/creature_template#creature_template-entry) to which the script is linked to.
+This is the [creature\_template.entry](creature_template#entry) to which the script is linked to.
 
 #### Ground
 

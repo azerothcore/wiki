@@ -1,16 +1,16 @@
 # item\_set\_names\_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`item\_set\_names\_locale\` table**
 
 `table-no-description`
 
-**Structure**
+**Table Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-|----------------|--------------|------------|-----|------|---------|-------|---------|
-| [entry][1]     | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]     | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [name_loc1][2] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
 | [name_loc2][3] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
 | [name_loc3][4] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |

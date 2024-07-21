@@ -4,7 +4,7 @@ redirect_from: "/Achievement_Criteria"
 
 # Achievement Criteria
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
 **Achievement\_Criteria.dbc**
 
@@ -12,7 +12,7 @@ This DBC has been added with WoW 3.0.1.8303 and contains the needed criteria to
 
 **Version is : 3.3.5a**
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 

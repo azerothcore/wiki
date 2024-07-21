@@ -1,6 +1,6 @@
 # FactionTemplate
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 Éste archivo DBC alberga información acerca de todas las facciones individuales existentes dentro del juego. Una ID (Identificador Único) de una facción cualquiera dentro del propio archivo contiene todos los datos necesarios para calcular la hostilidad, amistad o neutralidad hacia cualquier otra facción.
 

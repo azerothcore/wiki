@@ -1,6 +1,6 @@
 # SkillLine
 
-[`Volver a:DBC`](dbc-index.md)
+[`Volver a:DBC`](dbc-index)
 
 **SkillLine.dbc**
 

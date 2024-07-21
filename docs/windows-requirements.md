@@ -3,12 +3,12 @@
 | Installation Guide                                                                                                                      |                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation.md)                                                                                         | [Step 2: Core Installation >>](windows-core-installation.md) |
+| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
 MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)<br/>
-OpenSSL ≥ 3.0.x (Ver. 3.1 and above are not supported.)<br/>
+OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
@@ -86,8 +86,6 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
 
-    {% include important.html content="Use version 1.1 or 3.0. 3.1 and above is not supported." %}
-
     1. Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
     {{site.data.alerts.note}}
@@ -118,15 +116,15 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 If you are still having problems, check:
 
-* [FAQ](faq.md)
+* [FAQ](faq)
 
-* [Common Errors](common-errors.md)
+* [Common Errors](common-errors)
 
-* [How to ask for help](how-to-ask-for-help.md)
+* [How to ask for help](how-to-ask-for-help)
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
 | Installation Guide                                                                                                                      |                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation.md)                                                                                         | [Step 2: Core Installation >>](windows-core-installation.md) |
+| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |

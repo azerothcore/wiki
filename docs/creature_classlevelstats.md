@@ -4,8 +4,8 @@
 
 This table contains the base values for creature health, mana, armor, attack power, ranged attack power, damage, and experience.
 
-| Field                  | Type        | Attributes | Null | Default | Extra | Comment |
-|------------------------|-------------|------------|------|---------|-------|---------|
+| Field                  | Type     | Attributes | Null | Default | Extra | Comment |
+| ---------------------- | -------- | ---------- | ---- | ------- | ----- | ------- |
 | [level][1]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
 | [class][2]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
 | [basehp0][3]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
@@ -15,10 +15,10 @@ This table contains the base values for creature health, mana, armor, attack pow
 | [basearmor][7]         | SMALLINT | UNSIGNED   | NO   |         |       |         |
 | [attackpower][8]       | SMALLINT | UNSIGNED   | NO   |         |       |         |
 | [rangedattackpower][9] | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [damage_base][10]      | FLOAT       |            | NO   |         |       |         |
-| [damage_exp1][11]      | FLOAT       |            | NO   |         |       |         |
-| [damage_exp2][12]      | FLOAT       |            | NO   |         |       |         |
-| [comment][13]          | text        |            | YES  | NULL    |       |         |
+| [damage_base][10]      | FLOAT    |            | NO   |         |       |         |
+| [damage_exp1][11]      | FLOAT    |            | NO   |         |       |         |
+| [damage_exp2][12]      | FLOAT    |            | NO   |         |       |         |
+| [comment][13]          | text     |            | YES  | NULL    |       |         |
 
 [1]: #level
 [2]: #class

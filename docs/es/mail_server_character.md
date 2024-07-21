@@ -1,6 +1,6 @@
 # mail_server_character
 
-[<-Volver a:Character](database-character.md)
+[<-Volver a:Character](database-character)
 
 **Tabla \`mail_server_character\`**
 

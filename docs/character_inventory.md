@@ -1,12 +1,12 @@
 # character\_inventory
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_inventory\` table**
 
 Contains all the character inventory data, including the bank data.
 
-**Structure**
+**Table Structure**
 
 | Field     | Type    | Attributes | Key    | Null | Default | Extra | Comment                       |
 | --------- | ------- | ---------- | ------ | ---- | ------- | ----- | ----------------------------- |

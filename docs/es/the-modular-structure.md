@@ -10,9 +10,9 @@ El resultado es tener siempre un núcleo limpio que es fácil de mantener y mant
 
 Para cambiar las características del juego, los módulos utilizan **script hooks**, que son una colección de funciones [implementadas en el núcleo: ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h) y son capaces de operar desde el principio del servidor (tan pronto como comienza la inicialización del Mundo).
 
-La lista de los hooks de scripts está disponible [aquí](Hooks-Script.md).
+La lista de los hooks de scripts está disponible [aquí](Hooks-Script).
 
-A veces necesitas añadir nuevos hooks para tu módulo personalizado, es absolutamente posible añadirlos al núcleo. Sólo hay unos pocos pasos necesarios para crear un nuevo hook, por favor, siga esta guía [aquí](https://www.azerothcore.org/wiki/hooks-script) para aprender cómo.
+A veces necesitas añadir nuevos hooks para tu módulo personalizado, es absolutamente posible añadirlos al núcleo. Sólo hay unos pocos pasos necesarios para crear un nuevo hook, por favor, siga esta guía [aquí](hooks-script) para aprender cómo.
 
 Cuando añadas nuevos hooks, no olvides [crear un PR](http://www.azerothcore.org/wiki/How-to-create-a-PR) con ellos. De esta manera, serán revisados por los desarrolladores de AzerothCore e incluidos en el repositorio oficial.
 
@@ -22,7 +22,7 @@ Los hooks de CMake permiten a los módulos ejecutar operaciones durante la fase 
 
 Así, los módulos pueden tener sus propios archivos de configuración y puedes **evitar parchear** el archivo `worldserver.conf.dist`.
 
-La lista de los hooks de CMake está disponible [aquí](hooks-cmake.md).
+La lista de los hooks de CMake está disponible [aquí](hooks-cmake).
 
 ### Bash hooks
 
@@ -32,7 +32,7 @@ Esto se puede utilizar, por ejemplo, para ejecutar automáticamente el código S
 
 Para interactuar con nuestro sistema bash, crea y utiliza `include.sh` en tu directorio raíz.
 
-La lista de los hooks de CMake está disponible [aquí](hooks-bash.md).
+La lista de los hooks de CMake está disponible [aquí](hooks-bash).
 
 ## Cómo crear un módulo
 

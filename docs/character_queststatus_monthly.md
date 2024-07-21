@@ -1,10 +1,10 @@
 # character\_queststatus\_monthly
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_queststatus\_monthly\` table**
 
-**Structure**
+**Table Structure**
 
 | Field       | Type | Attributes | Key | Null | Default | Extra  | Comment                  |
 | ----------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------------ |

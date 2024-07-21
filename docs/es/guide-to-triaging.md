@@ -122,15 +122,15 @@ Wowpedia a menudo agrega notas de parche relacionadas con un talento o habilidad
 
 - El servidor AC/entorno de pruebas, Esta es la herramienta básica de pruebas. Intenta mantener tu servidor AC tan actualizado como puedas. Las actualizaciones diarias son una buena idea, y no deberías pasar más de una semana sin actualizar.
 
-- [Comandos GM](gm-commands.md) y macros - Como mínimo, debes estar familiarizado con los distintos trucos (sin daño, velocidad, vuelo), `.go`, `.additem`, `.quest add`, etc. También puede ser útil configurar varias macros de trucos y potenciadores en tu cuenta de prueba, para que puedas configurar y entrenar al instante un nuevo personaje. Cuando se prueban varios problemas de clase y raza, te encuentras haciendo y luego borrando un montón de personajes diferentes, por lo que la automatización de la configuración de nuevos personajes con macros puede amortizar el tiempo invertido muy rápidamente.
+- [Comandos GM](gm-commands) y macros - Como mínimo, debes estar familiarizado con los distintos trucos (sin daño, velocidad, vuelo), `.go`, `.additem`, `.quest add`, etc. También puede ser útil configurar varias macros de trucos y potenciadores en tu cuenta de prueba, para que puedas configurar y entrenar al instante un nuevo personaje. Cuando se prueban varios problemas de clase y raza, te encuentras haciendo y luego borrando un montón de personajes diferentes, por lo que la automatización de la configuración de nuevos personajes con macros puede amortizar el tiempo invertido muy rápidamente.
 
 - [Keira3](https://www.azerothcore.org/Keira3/) - es la herramienta indispensable para el triaje. Cinco minutos con Keira te ahorrarán una hora de correr por el mundo abierto. Viene con un editor SQL incorporado que puedes utilizar para ejecutar consultas personalizadas. También tiene información sobre las herramientas incorporadas en la mayoría de los campos de datos que pueden ayudar a entender lo que estás viendo. También puedes usarlo para generar SQL para arreglar cosas, aunque el SQL que genera sólo debe usarse como punto de partida. Esto se debe a que a menudo no cumple con las normas SQL preferidas para los RP en cuanto a la duplicación de consultas.
 
 - Un editor SQL genérico como [HeidiSQL](https://www.heidisql.com/) (aviso, sólo para Windows) también es útil. Keira no accede a todas las tablas de la base de datos de AC, sólo a las más útiles, así que una herramienta como Heidi que te da vistas de todo puede ser buena para las tablas más oscuras.
 
-- [Base de datos: World](database-world.md), especialmente las que cubren la base de datos del mundo. En ellas encontrarás información importante sobre la estructura y los campos de la base de datos. Si tienes dudas sobre cómo debería funcionar algo o qué significa una bandera, la respuesta suele estar aquí.
+- [Base de datos: World](database-world), especialmente las que cubren la base de datos del mundo. En ellas encontrarás información importante sobre la estructura y los campos de la base de datos. Si tienes dudas sobre cómo debería funcionar algo o qué significa una bandera, la respuesta suele estar aquí.
 
-- [Fragmentos útiles de SQL](useful-sql.md) - están diseñados para ser herramientas rápidas y fáciles de usar para obtener información sobre varios problemas potenciales de la BD.
+- [Fragmentos útiles de SQL](useful-sql) - están diseñados para ser herramientas rápidas y fáciles de usar para obtener información sobre varios problemas potenciales de la BD.
 
 - Aprende a filtrar las cuestiones de GitHub:
     - `type:issue label: "Needs Triage"` - encuentra todas las cuestiones abiertas.
@@ -140,5 +140,5 @@ Wowpedia a menudo agrega notas de parche relacionadas con un talento o habilidad
 ## Otros enlaces
 
 - [Versión actual de ChromieCraft](https://github.com/chromiecraft/azerothcore-wotlk)
-- [Mods de ChromieCraft](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO.md)
+- [Mods de ChromieCraft](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO)
 - [Cómo hacer la evaluación de errores](https://github.com/chromiecraft/chromiecraft#for-contributors-how-to-triagereport-bugs)

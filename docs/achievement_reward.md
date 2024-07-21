@@ -1,12 +1,12 @@
 # achievement\_reward
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`achievement\_reward\` table**
 
 This table describes the reward that you will receive when you obtain a given achievement.
 
-**Structure**
+**Table Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |

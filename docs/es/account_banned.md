@@ -1,6 +1,6 @@
 ﻿# account\_banned
 
-[<-Volver a: Auth](database-auth.md)
+[<-Volver a: Auth](database-auth)
 
 Leer en: [English :gb:](../account_banned) [Español :es:](account_banned)
 

@@ -1,6 +1,6 @@
 ﻿# logs\_ip\_actions
 
-[<-Volver a:Auth](database-auth.md)
+[<-Volver a:Auth](database-auth)
 
 Leer en: [English :gb:](../logs_ip_actions) [Spanish :es:](logs_ip_actions)
 

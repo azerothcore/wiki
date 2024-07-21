@@ -1,6 +1,6 @@
 # item\_refund\_instance
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`item\_refund\_instance\`**
 

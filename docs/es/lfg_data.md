@@ -1,6 +1,6 @@
 ﻿# lfg\_data
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`lfg\_data\`**
 

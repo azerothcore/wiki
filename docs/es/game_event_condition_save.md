@@ -1,6 +1,6 @@
 ﻿# game\_event\_condition\_save
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`game\_event\_condition\_save\`**
 

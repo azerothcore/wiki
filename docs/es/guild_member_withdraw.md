@@ -1,6 +1,6 @@
 # guild\_member\_withdraw
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`guild\_member\_withdraw\`**
 

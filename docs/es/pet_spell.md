@@ -1,6 +1,6 @@
 ﻿# pet\_spell
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../pet_spell) [Spanish :es:](pet_spell)
 

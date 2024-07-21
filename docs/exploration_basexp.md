@@ -1,12 +1,12 @@
 # exploration_basexp
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
-<p>This table holds the base experience point information needed for when a player explores a new zone.</p>
+This table holds the base experience point information needed for when a player explores a new zone.
 
-| Field       | Type         | Attributes | Key | Null | Default |
-|-------------|--------------|------------|-----|------|---------|
-| [level][1]  | TINYINT   | unasigned  | PRI | NO   | 0       |
+| Field       | Type      | Attributes | Key | Null | Default |
+| ----------- | --------- | ---------- | --- | ---- | ------- |
+| [level][1]  | TINYINT   | UNSIGNED   | PRI | NO   | 0       |
 | [basexp][2] | MEDIUMINT | SIGNED     |     | NO   | 0       |
 
 [1]: #level

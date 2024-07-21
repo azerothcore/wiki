@@ -1,6 +1,6 @@
 ﻿# gm\_subsurvey
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../gm_subsurvey) [Spanish :es:](gm_subsurvey)
 

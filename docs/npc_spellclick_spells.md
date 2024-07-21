@@ -1,6 +1,6 @@
 # npc\_spellclick\_spells
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`npc\_spellclick\_spells\` table**
 
@@ -8,12 +8,12 @@ This table holds information about spells to be cast upon receiving CMSG\_SPELL
 
 That opcode is sent for quests in which you have to loot creatures, who are already dead at spawning. Examples are [Planning for the Future](http://www.wowhead.com/quest=11960) and [Rifle the bodies](http://www.wowhead.com/quest=11999).
 
-**Structure**
+**Table Structure**
 
-| Field           | Type        | Attributes | Key | Null | Default | Extra | Comment                                                                 |
-|-----------------|-------------|------------|-----|------|---------|-------|-------------------------------------------------------------------------|
-| [npc_entry][1]  | INT     | UNSIGNED   | PRI | NO   | NULL    |       | Reference to the creature_template table                                |
-| [spell_id][2]   | INT     | UNSIGNED   | PRI | NO   | NULL    |       | The ID of the spell to be cast                                          |
+| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment                                                                 |
+| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------- |
+| [npc_entry][1]  | INT      | UNSIGNED   | PRI | NO   | NULL    |       | Reference to the creature_template table                                |
+| [spell_id][2]   | INT      | UNSIGNED   | PRI | NO   | NULL    |       | The ID of the spell to be cast                                          |
 | [cast_flags][3] | TINYINT  | UNSIGNED   |     | NO   | NULL    |       | Who casts the spell on who, creature <=> player (values: 0-3)           |
 | [user_type][4]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Relation with summoner: 0-no 1-friendly 2-raid 3-party player can click |
 
@@ -46,7 +46,7 @@ Lower bit defines caster: 1=Clicker, 0=Clickee; higher bit defines target, same 
 You can use that table for the actual value:
 
 | Caster   | Target  | cast\_flags value |
-|----------|---------|-------------------|
+| -------- | ------- | ----------------- |
 | Creature | Clickee | 0                 |
 | Clicker  | Clickee | 1                 |
 | Clickee  | Clicker | 2                 |
@@ -57,7 +57,7 @@ You can use that table for the actual value:
 Relation with summoner: defines who is able to use this spellclick.
 
 | Value | Description |
-|-------|-------------|
+| ----- | ----------- |
 | 0     | Only self   |
 | 1     | Friendly    |
 | 2     | Raid        |

@@ -1,12 +1,12 @@
 # character\_social
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_social\` table**
 
 Contains data about character's friends/ignored list.
 
-**Structure**
+**Table Structure**
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                            |
 | ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |

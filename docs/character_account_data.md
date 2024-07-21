@@ -1,12 +1,12 @@
 # character\_account\_data
 
-[<-Back-to:Characters](database-characters.md)
+[<-Back-to:Characters](database-characters)
 
 **The \`character\_account\_data\` table**
 
 Contains data about character settings.
 
-**Structure**
+**Table Structure**
 
 | Field     | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |

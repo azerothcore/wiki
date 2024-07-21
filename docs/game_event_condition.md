@@ -1,21 +1,21 @@
 # game\_event\_condition
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`game\_event\_condition\` table**
 
 This table contains conditions to meet for the specified game event to be completed. Also contains the world state fields used for reporting the given conditions progress and/or max required value. This table will do absolutely nothing if you have not set the event to be a world event.
 
-**Structure**
+**Table Structure**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
-|-----------------------------|--------------|------------|-----|------|---------|-------|-------------------------|
-| [eventEntry][1]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
-| [condition_id][2]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |                         |
-| [req_num][3]                | FLOAT        | SIGNED     |     | YES  | 0       |       |                         |
-| [max_world_state_field][4]  | SMALLINT  | UNSIGNED   |     | NO   |         |       |                         |
-| [done_world_state_field][5] | SMALLINT  | UNSIGNED   |     | NO   |         |       |                         |
-| [description][6]            | VARCHAR(25)  | SIGNED     |     | NO   |         |       |                         |
+| Field                       | Type        | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [eventEntry][1]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
+| [condition_id][2]           | MEDIUMINT   | UNSIGNED   | PRI | NO   |         |       |                         |
+| [req_num][3]                | FLOAT       | SIGNED     |     | YES  | 0       |       |                         |
+| [max_world_state_field][4]  | SMALLINT    | UNSIGNED   |     | NO   |         |       |                         |
+| [done_world_state_field][5] | SMALLINT    | UNSIGNED   |     | NO   |         |       |                         |
+| [description][6]            | VARCHAR(25) | SIGNED     |     | NO   |         |       |                         |
 
 [1]: #evententry
 [2]: #condition_id

@@ -1,33 +1,33 @@
 # gossip\_menu\_option\_locale
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`gossip\_menu\_option\_locale\` table**
 
 `table-no-description`
 
-**Structure**
+**Table Structure**
 
-| Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
-|------------------------|-------------|------------|-----|------|---------|-------|---------|
+| Field                  | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [menu_id][1]           | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [id][2]                | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [option_text_loc1][3]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc2][4]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc3][5]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc4][6]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc5][7]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc6][8]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc7][9]  | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc8][10] | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc1][11]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc2][12]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc3][13]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc4][14]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc5][15]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc6][16]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc7][17]    | text        | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc8][18]    | text        | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc1][3]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc2][4]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc3][5]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc4][6]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc5][7]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc6][8]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc7][9]  | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [option_text_loc8][10] | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc1][11]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc2][12]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc3][13]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc4][14]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc5][15]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc6][16]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc7][17]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [box_text_loc8][18]    | text     | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #menu_id
 [2]: #id

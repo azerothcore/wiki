@@ -1,6 +1,6 @@
 ﻿# petition
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 Leer en: [English :gb:](../petition) [Spanish :es:](petition)
 

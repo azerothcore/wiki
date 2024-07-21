@@ -1,6 +1,6 @@
 # item\_loot_\storage
 
-[<-Volver a:Characters](database-characters.md)
+[<-Volver a:Characters](database-characters)
 
 **Tabla \`item\_loot_\storage\`**
 

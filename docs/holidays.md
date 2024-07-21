@@ -6,14 +6,14 @@ redirect_from: "/Holidays"
 
 ## holidays.dbc
 
-[`Back-to:DBC`](dbc-index.md)
+[`Back-to:DBC`](dbc-index)
 
-[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db.md)  
+[How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
 ## Structure
 
 | Column | Field                         | Type    | Notes                                                                              | Extra info                                                                 |
-|--------|-------------------------------|---------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| ------ | ----------------------------- | ------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | 0      | [eventID][1]                  | Integer | Holiday event ID                                                                   |                                                                            |
 | 1      | [eventStage1Duration][2]      | Integer | Stage1 event length (for stage1                                                    | either as preparation or main event. See eventSchedulerType for more info) |
 | 2      | [eventStage2Duration][3]      | Integer | Stage2 event length (for stage2                                                    | either as main event or cooldown. See eventSchedulerType for more info)    |

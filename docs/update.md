@@ -14,7 +14,7 @@ redirect_from: "/Update"
   
     1. If it outputs `Using World DB: ACDB 335.7-dev` then you can proceed to [Update your local source](#update-your-local-source).
   
-    1. If it outputs anything else for `Using World DB:` then you first need to follow [this guide on updating to latest master](upgrade-from-pre-3.0.0-to-latest-master.md).
+    1. If it outputs anything else for `Using World DB:` then you first need to follow [this guide on updating to latest master](upgrade-from-pre-3.0.0-to-latest-master).
 
 We'd also highly recommend following the #announcements channel on the AzerothCore discord so you'll know about any other important changes to AzerothCore.
 
@@ -38,4 +38,4 @@ For example, in Linux/Mac you just have to `cd build;` and run `make -j 8; make 
 
 You need to import the **new** sql update files (located at https://github.com/azerothcore/azerothcore-wotlk/tree/master/data/sql/updates) to each database.
 
-To automate this process, both the authserver and worldserver have database updaters inside of them as described [here](https://www.azerothcore.org/wiki/database-installation). This means that once you recompile your source, all you'd need to do is launch the authserver and worldserver as you would normally.
+To automate this process, both the authserver and worldserver have database updaters inside of them as described [here](database-installation). This means that once you recompile your source, all you'd need to do is launch the authserver and worldserver as you would normally.

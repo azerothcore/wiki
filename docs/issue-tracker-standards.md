@@ -33,7 +33,7 @@ Issue template:
 ```
 Thank you for taking the time to fill out a bug report. Remember to fill out all fields including the title above.
 An issue that is not properly filled out will be closed.
-You can read more about the standards for a bug report [here](https://www.azerothcore.org/wiki/issue-tracker-standards).
+You can read more about the standards for a bug report [here](issue-tracker-standards).
 
 **Current Behaviour**
 Description of the problem or issue here.

@@ -1,12 +1,12 @@
 # areatrigger\_scripts
 
-[<-Back-to:World](database-world.md)
+[<-Back-to:World](database-world)
 
 **The \`areatrigger\_scripts\` table**
 
 Allows for an area trigger to be scripted with Trinity Script.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |

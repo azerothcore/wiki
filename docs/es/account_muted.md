@@ -1,6 +1,6 @@
 ﻿# account\_muted
 
-[<-Volver a: Auth](database-auth.md)
+[<-Volver a: Auth](database-auth)
 
 Leer en: [English :gb:](../account_muted) [Español :es:](account_muted)
 
@@ -12,7 +12,7 @@ GM-Command: **.mute [$NombreDelJugador] $TiempoEnMinutos [$motivo]**.
 
 Desactiva la mensajería de chat para cualquier personaje de la cuenta $NombreDelJugador (o actualmente seleccionado) en $TiempoEnMinutos (minutos). El jugador puede estar desconectado.
 
-**Structure**
+**Table Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
