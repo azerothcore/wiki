@@ -11,10 +11,13 @@ waypoints, a type which was made specifically for SmartAI
 # Scripting a Simple Scripted Patrol
 
 For this we'll script a simple patrol RP, a script that plays every now and then on a timer and involves a path.
+
 When making blizzlike scripts, most of this data can be gathered in sniffs. Using tools like a parser, WDBE, or WaypointCreator we can extract waypoints, and then script in what actions are to be taken.
+
 In a parsed file, you can search for the unique creature GUID, and see what actions are done. For example, NPCFlag, UnitFlag, StandState, EmoteState and Oneshot Emotes all can be found in the parsed file. Some actions will eventually be hidden, but then we can get creative or even investigate further. In Black Temple, for example, there are creatures that execute an Eat Emote by casting a serverside spell, but that isn't common.
 
 The event we will be implementing contains only StandStates and spoken lines.
+
 First we detail what will happen and when:
 
 ```
@@ -64,7 +67,9 @@ INSERT INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `positio
 ```
 
 This is the waypoint patrol the creature is assigned to. I've shortened it to not contain columns we'll not use.
+
 The x,y,z values are self-explanatory. An orientation change requires an extra point copied from the one before, otherwise it's null. Delay will dictate the wait time after that waypoint is reached, as such, after the creature finishes the path on point 7, it will wait 3 minutes before starting the patrol again.
+
 I also added a few comments detailing what actions are taken on which waypoints. It's a simplified version of what we'll be writing in the Actionlist.
 
 ## Setting up the main events
@@ -74,6 +79,7 @@ I use Keira to edit SmartAI, so that's what we'll use in this tutorial.
 [Image of Editor
 
 Since we're using patrols, we'll use a special event, called WAYPOINT_DATA_REACHED. If we used Event 40 (WAYPOINT_REACHED), it would **not** work. Because it will only trigger on waypoints in the `waypoints` table, that is specific to SmartAI and we don't use for the more generic patrols such as this one.
+
 Keira will then generate an output we will copy and paste.
 
 ```
