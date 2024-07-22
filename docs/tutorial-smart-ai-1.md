@@ -112,3 +112,7 @@ So this is what will happen:
 2. When a point is reached, it'll fire the Event, checks if the point reached is 1 or 5, if so, the actions is played
 3. The action is taken and the creature is assigned an Actionlist, which will play a sequence of delayed actions
 4. Once the patrol is finished, it'll wait 3 minutes and then restart
+
+# Part 2: Event Phases and Combat (Voidhunter)
+
+# Part 3: Conditions (Shattered Hand Legionnaire)
