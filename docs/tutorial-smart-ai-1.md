@@ -84,8 +84,11 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (23600, 0, 1, 0, 108, 0, 100, 0, 5, 0, 0, 0, 0, 0, 80, 2360001, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Apprentice Morlann - On Point 5 of Path Any Reached - Run Script');
 ```
 
-This seems simpler than what I described in the comments. This is because we don't actually take the actions here. We'll use a different mechanic of SmartAI, called Actionlists, or Script9, which is a sequence of actions taken on timers provided. Thus we can make delayed actions much easier. Script IDs for Actionlists are, by convention, numbered CreatureEntry*100, adding +1 to every unique list.
-In here we use only one path ID so we leave it as 0, because we don't expect any other patrols.
+This seems simpler than what I described in the comments. This is because we don't actually take the actions here. We'll use a different mechanic of SmartAI, called Actionlists, or Script9, which is a sequence of actions taken on timers provided. Thus we can make delayed actions much easier. Script IDs for Actionlists are, by convention, numbered CreatureEntry*100, adding +1 to every unique list. Since we'll use 2 different sets of actions, we use the IDs 2360000 and 2360001.
+
+In the event parameters, we leave the pathId parameter as 0, because we don't expect any patrols other than the one we added, so if we didn't leave it as 0 it'd be a trivial check that would always return true anyways, so we'll ignore it.
+
+For the target parameters we'll leave it as 1, since the action to call Actionlists doesn't take any targets other than self.
 
 Now we'll open the Actionlist Editor and make both Scripts.
 
@@ -99,6 +102,10 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 (2360001, 9, 1, 0, 0, 0, 100, 0, 6000, 6000, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Apprentice Morlann - Actionlist - Say Line 2'),
 (2360001, 9, 2, 0, 0, 0, 100, 0, 6000, 6000, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 19, 23601, 0, 0, 0, 0, 0, 0, 0, 'Apprentice Morlann - Actionlist - Say Line 0 (Apprentice Garion)');
 ```
+
+Now here is the meat of the script. The first script is simple, with only talk actions taken.
+
+The second script plays an emote, makes Morlann, our creature, talk, then makes a *different* creature talk. When we use a target for the TALK action, and leave the third parameter as 0, we can remotely make the targeted creature(s) talk without making a more complex or burdensome script. The third parameter, when set to 1 and with a valid target, will for example address the target by its name or class, such as calling the player by name.
 
 So this is what will happen:
 1. The creature spawns and starts the patrol for the first time
