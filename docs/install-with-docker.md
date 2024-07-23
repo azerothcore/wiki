@@ -292,11 +292,15 @@ For example, to install `mod-solocraft`:
 ```console
 # Clone the module to `modules` with the name of the repository
 $ git clone https://github.com/azerothcore/mod-solocraft.git modules/mod-solocraft
+# Install SQL files (OPTIONAL)
+$ cp modules/mod-solocraft/data/sql/db-characters/mod_solo_craft.sql data/sql/custom/db_characters
 # Re-build Azerothcore
 $ docker compose up -d --build
 ```
 
 Configurations through environment variables work with modules, though if you prefer configuration files you'll have to place them in the `azerothcore-wotlk/env/dist/etc/modules` directory. If this modules directory doesn't exist, you'll have to manually create it.
+
+Note that SQL needs to be manually installed as well - this can be semi-automated by moving the SQL files to the respective directory under `data/sql/custom`, or you may execute the SQL file against the correct database.
 
 ### Where are the logs for the server?
 
