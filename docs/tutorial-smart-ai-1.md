@@ -119,6 +119,48 @@ So this is what will happen:
 3. The action is taken and the creature is assigned an Actionlist, which will play a sequence of delayed actions
 4. Once the patrol is finished, it'll wait 3 minutes and then restart
 
-# Part 2: Event Phases and Combat (Voidhunter)
+# Part 2: Event Phases and Links
+
+If you're looking online for SmartAI tutorials I'm assuming you're not here for simple combat like inserting 1 or 2 spells into a timer. I imagine you're here because you've assigned to yourself a creature behaviour that isn't just a level 4 boar. So from this we're going to look at the script of some Outland creatures that I find quite interesting. In Outland there are several Void creatures, the casters have a particularly script that's shared between them.
+
+At first, they only cast Shadow Bolt and have no special resistances. However once the player hits them with, for example, a Frostbolt, they'll cast a Damage Reduction: Frost spell on themselves, will say a line, then start casting Frostbolt right back at the player. So how do we implement that in SmartAI?
+
+I have an example ready: the Voidshrieker.
+
+![image](https://github.com/user-attachments/assets/8bb7f606-6eb0-49a3-a042-d9505e89d5e9)
+
+Unreadable, right? But I'll make it easier on your eyes and make a flowchart. But first we need to understand how Event Phases work.
+
+Simply put, phases allows us in one way to dictate what type of events can be played, as every event is assigned a phase. Phase 0 is the overarching phase. Anything placed in Phase 0 is played, regardless of which phase the creature is currently in.
+
+Setting up the creature's Event Phase is an action, and it resets when the creature evades, dies or respawns, so it's good to reset the Event Phase to what we want as well.
+
+Check id 2 of the script. On Aggro the Event Phase will be set to 1, so what events belong to the Event Phase 1 set?
+
+![image](https://github.com/user-attachments/assets/300c1c5b-d116-49c0-89ab-fcf023665b2b)
+
+These ones. After the Voidshrieker is hit by a spell of the schools above, it will play a sequence of actions, linked together with EVENT_LINK, then it will change its own phase. Notice that Event Phase 1 is only set On Aggro, so this behaviour can only be played ONCE per combat. If I hit it with a fire spell, the Event will play and change phase, so if I hit it again with a frost spell instead, it won't cast `Damage Reduction: Frost` because it's not in Phase 1, it's now in Phase 3.
+
+But what if I **wanted** to stack Damage Reductions? We can do that. Because Event Phases aren't mutually exclusive. They can overlap like Venn Diagrams. We'd use Action INC_EVENT_PHASE instead to increment Phase 3 into Phase 1, so the creature would be at Phase 1 and Phase 3 at the same time. We could work around the lines being spoken constantly by adding an Event Flag to them. Flag 1, which means the event will not repeat for the duration of this combat.
+
+P.S.: Event Flag 1 (No Repeat) resets once combat is over! To never reset and make sure the creature never plays the Event again, use flag 256 (Don't Reset)!
+
+With these events in hand we'll use them to make the creature cast different spells depending on which Phase it's in.
+
+![image](https://github.com/user-attachments/assets/a964b094-03dc-4081-8c0a-4340e38b82aa)
+
+All of these Events above are tied to timers, not triggers like On Spellhit. See `Cast 'Shadow Bolt`? That one is tied to two Event Phases, like in the Venn Diagram example I mentioned. If the player does not cast a spell, or is a warrior, for example, the Voidshrieker will cast Shadow Bolt by default, as well as casting it if the player did cast a Shadow Spell. And Psychic Scream? That one is tied to Event Phase 0, which means that no matter the Phase the creature is currently in, it'll run the timer and execute the event.
+
+The script looks ugly, yes. Maybe in the future we'll have an automatic flowchart to better visualize it. It's hard on the eyes and can confuse a lot of people, I know I was confused when I first saw it, but with practice you start to better understand SAI.
+
+Going back to the flowchart I didn't yet explain properly how these actions are linked to each other. In Part 1 I introduced the concept of Actionlists. This is similar.
+
+Links allows us to play several actions simultaneously (or almost so), so it'll not allow us to make delays, but it's also a very powerful tool. To work with it, you need to set the id of the Event that will be linked in the `link` field.
+
+![image](https://github.com/user-attachments/assets/9bba7650-a3b3-41a0-9279-9619049e5f37)
+
+As you can see, Event 3 links to Event 4, so when Event 3 is executed, Event 4 will automatically be executed as well. The event that is linked needs to be, necessarily, Event type 61, EVENT_LINK.
+
+Multiple Events can link to the same event. For example, if a creature says the same line after casting several different spells, all the spells can be linked to the same Talk Action.
 
 # Part 3: Conditions (Shattered Hand Legionnaire)
