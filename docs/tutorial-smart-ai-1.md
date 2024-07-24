@@ -132,13 +132,13 @@ I have an example ready: the Voidshrieker.
 
 ![image](https://github.com/user-attachments/assets/8bb7f606-6eb0-49a3-a042-d9505e89d5e9)
 
-Unreadable, right? But I'll make it easier on your eyes and make a flowchart. But first we need to understand how Event Phases work.
+Unreadable, right? But I'll try and make it easier to parse.But first we need to understand how Event Phases work.
 
 Simply put, phases allows us in one way to dictate what type of events can be played, as every event is assigned a phase. Phase 0 is the overarching phase. Anything placed in Phase 0 is played, regardless of which phase the creature is currently in.
 
 Setting up the creature's Event Phase is an action, and it resets when the creature evades, dies or respawns, so it's good to reset the Event Phase to what we want as well.
 
-Check id 2 of the script. On Aggro the Event Phase will be set to 1, so what events belong to the Event Phase 1 set?
+Check id 2 of the script. On Aggro the Event Phase will be set to 1, so what events belong to the Event Phase 1 set? In short, all of rows 3 through 18, a large chunk of the script.
 
 ![image](https://github.com/user-attachments/assets/300c1c5b-d116-49c0-89ab-fcf023665b2b)
 
