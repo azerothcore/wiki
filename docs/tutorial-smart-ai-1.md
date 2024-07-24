@@ -2,11 +2,14 @@
 
 ## What type of waypoint will I use?
 
+[WIP]
+
 SmartAI allows us to use 2 different waypoint tables:
 
 waypoint_data, which is used in cpp and in more general patrols
 waypoints, a type which was made specifically for SmartAI
 
+[WIP]
 
 # Scripting a Simple Scripted Patrol
 
@@ -76,7 +79,7 @@ I also added a few comments detailing what actions are taken on which waypoints.
 
 I use Keira to edit SmartAI, so that's what we'll use in this tutorial.
 
-[Image of Editor
+![image](https://github.com/user-attachments/assets/72296501-d8a0-4c01-a73a-d6a7c0824d22)
 
 Since we're using patrols, we'll use a special event, called WAYPOINT_DATA_REACHED. If we used Event 40 (WAYPOINT_REACHED), it would **not** work. Because it will only trigger on waypoints in the `waypoints` table, that is specific to SmartAI and we don't use for the more generic patrols such as this one.
 
@@ -163,4 +166,43 @@ As you can see, Event 3 links to Event 4, so when Event 3 is executed, Event 4 w
 
 Multiple Events can link to the same event. For example, if a creature says the same line after casting several different spells, all the spells can be linked to the same Talk Action.
 
-# Part 3: Conditions (Shattered Hand Legionnaire)
+# Part 3: Conditions, Unique AI and Data Set
+
+In Shattered Halls, there is a creature called the Shattered Hand Legionnaire.
+
+Well, there's actually 8 of them. And they. all. have. different. AI.
+
+The combat mechanics and spells they use are common between them. They all Enrage, they all Pummel casters, and they all cast Aura of Discipline.
+![image](https://github.com/user-attachments/assets/8c2c7f80-accc-465d-9460-fed7ce1fb393)
+
+
+But let's see, for example, the AI of GUID 151010, for that we check its guid-specific entry. Go to the SmartAI panel and search by entity like below.
+![image](https://github.com/user-attachments/assets/691c6ac9-3d1a-46bc-8d0e-8e24360a7f7e)
+
+You'll see several rows, all with ids numbered >1000, and with behaviour that is unique to this specific GUID
+![image](https://github.com/user-attachments/assets/591073eb-69f4-4ba4-9b6b-1c49ecc68fbf)
+
+Lines 1001 to 1004 are RP scripts. Focus on the ones below. For example, on the general script in the first image, we see that once the creature receives DATA SET, an action that allows us to communicate between creatures, it'll Enrage. Every other creature in this dungeon, once they die, has a script to SET DATA on the nearest Legionnaire, so that they all Enrage. But if you include this guid-specific script, this particular Legionnaire will not only Enrage, they'll also say a special line and Summon a creature. We then use Event Phases to allow only one creature to spawn at a time.
+
+Now, the important part is that usually these guid-specific scripts override the creature's normal script, making it so we have to copy over, creating a lot of bloat. But around the time we were rewriting Shattered Halls, a friend of mine added an extra flag to creatures, which will make them load both their general SmartAI tied to its entry, as well as the SmartAI tied to its guid.
+![image](https://github.com/user-attachments/assets/6acab45e-891e-4064-b892-1c986162ea54)
+
+This is extremely important, as A LOT of creatures have unique behaviours, so to avoid enormous amounts of useless rows, we use this flag. Be aware that we use ids 1000+ when making guid-specific SAI in these cases, because row ids MUST NOT OVERLAP!
+
+Now. Let's look at these summons. How do they work? Well, it just so happens that each one **also** has unique behaviour! Because several legionnaires spawn them at different positions. And each can do a different thing.
+![image](https://github.com/user-attachments/assets/3674d14e-b443-4e3f-a54d-65ea8351895f)
+
+The issue is that summons have no guid that we could create a guid-specific script for.
+
+The script above is for the summons, notice that when they are On Summoned, they execute several different scripts. Won't they overlap? They should, yes. But in this case they don't, because we use conditions.
+
+Conditions are very powerful tools, and we can tie them directly to SmartAI, for each and any row.
+![image](https://github.com/user-attachments/assets/2336eb9b-330c-4ca1-a74c-e605afd4e174)
+
+See where ConditionValue is 151010? That means that in SmartAI id 10 (11 - 1), that event will only play when the Invoker (in this case, the summoner) is the Legionnaire of GUID 151010.
+
+You should start seeing how much more powerful SmartAI can be now. Every single row can be conditioned. Want to create an event that only plays if the player is a Night Elf that is under the effects of Sprint and has a Thunderfury in the bank but not on their person? You can do that, for whatever reason. Conditions can take the Invoker or the Creature/Object itself as the target for the condition.
+
+Invokers are something that not all Events have. When using event OOC_LOS, which checks for a player entering the Line of Sight of our creature, the Invoker is the player that entered the Line of Sight, for example. When you Summon Creature, the Invoker is the summoner. Invokers can be used as a target_type as well. When the Event On Quest Accepted is executed, for example, it might be good to use Action 64 (STORE_TARGET_LIST) to save the Invoker or even the Invoker's whole party with target_type 16.
+
+You might question why guid-specific SAI is needed then if we could use conditions? It's because we'd to check every time the event is triggered. That might be okay for one or two creatures with guid-specific AI, but in Shadow Labyrinth, you have dozens. You'd have dozens to even a hundred checks every few seconds.
