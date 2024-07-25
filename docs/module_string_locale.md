@@ -8,12 +8,12 @@ This table holds information of string entries for modules.
 
 **Table Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment                      |
-| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------------------------- |
-| [module](#module) | VARCHAR(255) |            | PRI | NO   |         |       | module dir name, eg mod-cfbg |
-| [id](#id)         | INT          | UNSIGNED   | PRI | NO   |         |       |                              |
-| [locale](#locale) | TEXT         |            |     | NO   |         |       |                              |
-| [string](#string) | TEXT         |            |     | NO   |         |       |                              |
+| Field             | Type         | Attributes                              | Key | Null | Default | Extra | Comment                      |
+| ----------------- | ------------ | --------------------------------------- | --- | ---- | ------- | ----- | ---------------------------- |
+| [module](#module) | VARCHAR(255) |                                         | PRI | NO   |         |       | module dir name, eg mod-cfbg |
+| [id](#id)         | INT          | UNSIGNED                                | PRI | NO   |         |       |                              |
+| [locale](#locale) | ENUM         | koKR,frFR,deDE,zhCN,zhTW,esES,esMX,ruRU | PRI | NO   |         |       |                              |
+| [string](#string) | TEXT         |                                         |     | NO   |         |       |                              |
 
 **Description of the fields**
 
