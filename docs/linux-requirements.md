@@ -49,10 +49,10 @@ sudo apt install -y install libboost1.74-dev
 
 #### Debian 10 / Debian 12
 
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
+{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MariaDB or join the Discord to ask for help." %}
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev gnupg wget
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -62,7 +62,26 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 **Example:**
 
 ```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
+apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev gnupg wget -y
+```
+
+---
+
+#### Install MYSQL
+
+```sh
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+sudo dpkg -i ./mysql-apt-config_0.8.32-1_all.deb
+```
+
+Install the latest MYSQL-LTS release, e.g. select `MYSQL Server & Cluster` -> `mysql-8.4-lts`
+
+**Configure MYSQL:**
+
+Run `MYSQL secure installation` to assign a MYSQL root password:
+
+```sh
+sudo mysql_secure_installation
 ```
 
 ---
