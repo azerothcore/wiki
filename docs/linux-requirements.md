@@ -49,7 +49,6 @@ sudo apt install -y install libboost1.74-dev
 
 #### Debian 10 / Debian 12
 
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MariaDB or join the Discord to ask for help." %}
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev gnupg wget
