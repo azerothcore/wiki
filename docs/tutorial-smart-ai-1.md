@@ -1,3 +1,7 @@
+---
+tableofcontents: 1
+---
+
 # Introduction to SmartAI
 
 ## What type of waypoint will I use?
@@ -23,7 +27,7 @@ The event we will be implementing contains only StandStates and spoken lines.
 
 First we detail what will happen and when:
 
-```
+```sql
 UPDATE `creature` SET `MovementType` = 2 WHERE `id1` = 23600 AND `guid` = 18604;
 
 DELETE FROM `creature_addon` WHERE (`guid` IN (18604));
@@ -43,13 +47,13 @@ INSERT INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `positio
 
 Breaking down this line by line:
 
-```
+```sql
 UPDATE `creature` SET `MovementType` = 2 WHERE `id1` = 23600 AND `guid` = 18604;
 ```
 
 We're not placing a new creature, just adding behaviour to an existing one, so we will just modify its MovementType, which tells it will use the path set in its creature_addon entry.
 
-```
+```sql
 DELETE FROM `creature_addon` WHERE (`guid` IN (18604));
 INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `emote`, `visibilityDistanceType`, `auras`) VALUES
 (18604, 186040, 0, 0, 1, 0, 0, NULL);
@@ -57,7 +61,7 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 
 This is its creature_addon entry. Patrols have, by convention, ids equal to GUID*10. The most common value for bytes2, also known as SheateState, is 1, which represents the melee weapons of the creature. This also contains RP-related items such as lanterns, bottles and such.
 
-```
+```sql
 DELETE FROM `waypoint_data` WHERE `id` = 186040;
 INSERT INTO `waypoint_data` (`id`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `delay`) VALUES
 (186040, 1, -4044.12, -3393.59, 38.1363, NULL, 6000), -- 1s, Talk 0, 5s, Talk 1
@@ -85,7 +89,7 @@ Since we're using patrols, we'll use a special event, called WAYPOINT_DATA_REACH
 
 Keira will then generate an output we will copy and paste.
 
-```
+```sql
 UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = 23600;
 DELETE FROM `smart_scripts` WHERE (`source_type` = 0 AND `entryorguid` = 23600);
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
@@ -101,7 +105,7 @@ For the target parameters we'll leave it as 1, since the action to call Actionli
 
 Now we'll open the Actionlist Editor and make both Scripts.
 
-```
+```sql
 DELETE FROM `smart_scripts` WHERE (`source_type` = 9 AND `entryorguid` IN (2360000, 2360001));
 INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `event_param5`, `event_param6`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_param4`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
 (2360000, 9, 0, 0, 0, 0, 100, 0, 1000, 1000, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Apprentice Morlann - Actionlist - Say Line 0'),
