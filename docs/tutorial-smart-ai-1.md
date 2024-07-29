@@ -83,7 +83,7 @@ I use Keira to edit SmartAI, so that's what we'll use in this tutorial.
 
 [[assets/images/sai_tutorial/sai_tutor_1.png]]
 
-Since we're using patrols, we'll use a special event, called WAYPOINT_DATA_REACHED. If we used Event 40 (WAYPOINT_REACHED), it would **not** work. Because it will only trigger on waypoints in the `waypoints` table, that is specific to SmartAI and we don't use for the more generic patrols such as this one.
+Since we're using patrols, we'll use a special event, called WAYPOINT_DATA_REACHED. If we used Event 40 (WAYPOINT_REACHED), it would **not** work. Because it will only trigger on waypoints in the [waypoints](waypoints) table, that is specific to SmartAI and we don't use for the more generic patrols such as this one.
 
 Keira will then generate an output we will copy and paste.
 
