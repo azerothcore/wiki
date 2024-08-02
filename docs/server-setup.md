@@ -30,7 +30,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 1. Download the files above.
 
-2. Create a new folder within the build folder called **Data**. i.e windows: **C:\Build\bin\RelWithDebInfo\Data** or Linux: **$HOME/azeroth-server/data/**
+2. Create a new folder within the build folder called **Data**. i.e windows: **C:\Build\bin\RelWithDebInfo\Data** or Linux: **$HOME/azerothcore/data/**
 
 3. Extract the files from the zip file and place them within the **Data** folder.
 
