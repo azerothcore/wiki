@@ -49,13 +49,19 @@ The name of the realm. This will appear in the realm selection list as well as i
 
 ### address
 
-The public (WAN) or LAN IP address of the world server. Use 127.0.0.1 in this field if only you is connecting to the server (and it runs on the same machine as your client).
+The public (WAN) or LAN IP address of the world server. Use 127.0.0.1 in this field if only you is connecting to the server (and it runs on the same machine as your client). This is the address that clients will use to connect to the worldserver.
 
 Alternatively you can use a domain name like *example.com.*
 
 ### localAddress
 
-Mostly 127.0.0.1
+Usually 127.0.0.1 for local or simple installations.
+
+When a client connects, if the client address is within the same subnet as `localAddress` (according to `localSubnetMask`), this client will be served `localAddress` to connect to the worldserver, instead of `address`. This can be useful e.g. for resolving issues caused by local network clients having their connections routed outwards and back into your network, such as poor NAT implementations not handling port forwarding for non-external connections.
+
+### localSubnetMask
+
+Subnet mask in `255.255.255.0`-like format. Works in tandem with `localAddress`.
 
 ### port
 
