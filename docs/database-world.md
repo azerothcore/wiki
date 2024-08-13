@@ -112,6 +112,8 @@
 - [mail_level_reward](mail_level_reward)
 - [mail_loot_template](loot_template)
 - [milling_loot_template](loot_template)
+- [module_string](module_string)
+- [module_string_locale](module_string_locale)
 
 ## N
 - [npc_spellclick_spells](npc_spellclick_spells)
