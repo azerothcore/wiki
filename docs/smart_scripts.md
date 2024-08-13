@@ -511,6 +511,7 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 | TRIGGERED_FULL_MASK                           | 524287     | 0x0007FFFF | All triggered flags                                                                    |
 | TRIGGERED_IGNORE_EQUIPPED_ITEM_REQUIREMENT    | 524288     | 0x00080000 | Will ignore equipped item requirements                                                 |
 | TRIGGERED_NO_PERIODIC_RESET                   | 1048576    | 0x00100000 | Periodic aura tick wont be reset on override                                           |
+| TRIGGERED_IGNORE_EFFECTS                      | 2,097,152  | 0x00200000 | Ignore spell effects - used for ritual portals                                         |
 | TRIGGERED_FULL_DEBUG_MASK                     | 4294967295 | 0xFFFFFFFF |                                                                                        |
 
 **NOTICE:** If triggeredFlags = 0, cast will trigger with TRIGGERED_FULL_MASK = 524287.
