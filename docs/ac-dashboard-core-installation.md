@@ -55,7 +55,7 @@ NOTE: on Windows it must be executed as an administrator
 
 ### Set-up the database
 
-- Either connect to your MySQL database (with `sudo mysql -u root`) and manually create the `acore` MySQL user by running:
+- Connect to your MySQL database (with `sudo mysql -u root`) and manually create the `acore` MySQL user by running:
 
 ```
 DROP USER IF EXISTS 'acore'@'localhost';
@@ -105,6 +105,8 @@ The `worldserver` and `authserver` binaries are located in `azerothcore-wotlk/en
 
 You can either run them directly or use the restarter (see below).
 The first startup of the `worldserver` will install a full AzerothCore Database. No need to import any DB update at this point.
+
+Please also see [Networking](networking) and [Final Server Steps](final-server-steps).
 
 ### Restarter
 
