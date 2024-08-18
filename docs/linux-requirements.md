@@ -47,36 +47,29 @@ sudo apt install -y install libboost1.74-dev
 
 ---
 
-#### Debian 10 / Debian 12
+#### Debian 12
 
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
+apt-get update && apt-get install -y git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
-**Note:** If you add the option `-y` and at the end of the list, it will start installing them without the need for you to confirm.
-
-**Example:**
-
-```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget -y
-```
+**Note:** By using the option `-y`, it will start installing without the need for you to confirm.
 
 ---
 
 #### Install MYSQL
 
+Non-Interactive install using `DEBIAN_FRONTEND="noninteractive"` to install the latest MYSQL-LTS release, e.g. `mysql-8.4-lts` without any user prompts showing up.
+
 ```sh
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
-sudo dpkg -i ./mysql-apt-config_0.8.32-1_all.deb
+sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_0.8.32-1_all.deb
 sudo apt-get update
-sudo apt-get install mysql-server --yes
-sudo mysql_secure_installation --use-default
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server
 ```
-
-Install the latest MYSQL-LTS release, e.g. select `MYSQL Server & Cluster` -> `mysql-8.4-lts`
 
 ---
 
