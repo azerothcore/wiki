@@ -7,7 +7,7 @@
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
-MySQL ≥ 5.7.0 (Recommended version: ≥ 8.0)<br/>
+MySQL ≥ 8.0<br/>
 OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
@@ -33,8 +33,6 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
    </a>
 
 4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html)
-
-    {% include note.html content="MySQL ≥ 8.0 is recommended. Version 5.7 is deprecated and will soon not be supported." %}
 
     1. Download the Windows MSI Installer.
     
