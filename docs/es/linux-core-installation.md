@@ -34,7 +34,7 @@ Elija **UNO** de los siguientes metodos, ejecute uno de los siguientes comandos 
     git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
     ```
 
-Esto creará un directorio de `azerothcore-wotlk` que contiene los archivos fuente de AC.
+Esto creará un directorio de `azerothcore` que contiene los archivos fuente de AC.
 
 ## Compilación del código fuente
 
@@ -43,14 +43,12 @@ Esto creará un directorio de `azerothcore-wotlk` que contiene los archivos fuen
 To avoid issues with updates and colliding source builds, we create a specific build-directory, so we avoid any possible issues due to that (if any might occur)
 
 ```sh
-cd azerothcore
+cd $HOME/azerothcore
 mkdir build
 cd build
 ```
 
 ### Configuring for compiling
-
-Before running the CMake command, replace `$HOME/azeroth-server/` with the path of the server installation (where you want to place the compiled binaries).
 
 Parameter explanation for advanced users [CMake options](cmake-options).
 
@@ -65,7 +63,7 @@ echo $HOME
 **Note**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
 
 ```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azeroth-server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azerothcore/env/dist/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static
 ```
 
 To know the amount of cores available.
@@ -82,7 +80,15 @@ make -j 6
 make install
 ```
 
-<br>
+It may be useful to preserve these commands in a script or otherwise keep note of them for later. You will need to re-run all three commands again whenever you update AzerothCore or add new modules. For example:
+
+```sh
+#!/bin/bash
+
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/azerothcore/env/dist/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static &&
+make -j 6 &&
+make install
+```
 
 ## Help
 
