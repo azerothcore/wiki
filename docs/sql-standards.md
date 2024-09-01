@@ -257,7 +257,6 @@ We always use `DEFAULT` as the row format
 ### Dummy script for table
 
 ```sql
-
 DROP TABLE IF EXISTS `our_table_name`;
 CREATE TABLE `our_table_name` (
   `aColumnName` INT UNSIGNED NOT NULL DEFAULT '69' COMMENT 'ColumnComment',
