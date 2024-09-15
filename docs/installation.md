@@ -8,11 +8,11 @@ redirect_from: "/Installation"
 
 There are several ways to install AzerothCore, you need to choose **ONE**.
 
-### Install from the source <span class="badge badge-info">Supported</span>
+### Install from the source <span class="badge badge-success">Recommended</span>
 
 These are the officially supported and complete ways of installing AzerothCore, for any purpose (Windows, Linux, macOS).
 
-- [AzerothCore Classic Installation](classic-installation) <span class="badge badge-success">Recommended</span> - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purpose. This process gives more awareness of how AzerothCore is structured.
+- [AzerothCore Classic Installation](classic-installation) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purpose. This process gives more awareness of how AzerothCore is structured.
 
 ### Experimental installations <span class="badge badge-info">Limited support and usage</span>
 
