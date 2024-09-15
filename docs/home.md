@@ -21,6 +21,12 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 - [Documentation Index](documentation_index) - All documentation in one place
 - [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Code documentation
 
+### Database Structure
+
+- [Auth](database-auth)
+- [Characters](database-characters)
+- [World](database-world)
+
 ## Overview
 
 AzerothCore is a complete Open Source and Modular solution for MMO development.
