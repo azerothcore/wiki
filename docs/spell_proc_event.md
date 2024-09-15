@@ -44,7 +44,7 @@ The Spell ID that is capable of proc on an event. For ranked spells, use a negat
 ### SchoolMask
 This field contains a bitmask that controls which types of spells the proc can be triggered. For example, if an aura procs only when the unit it is cast upon is hit by shadow spells (spell 34914).
 
-| Fla                 | Bit  | Hex  | Comment         |
+| Flag                | Bit  | Hex  | Comment         |
 | ------------------- | ---- | ---- | --------------- |
 | SPELL_SCHOOL_NORMAL | 1    | 0x01 | Physical Damage |
 | SPELL_SCHOOL_HOLY   | 2    | 0x02 | Holy Damage     |
