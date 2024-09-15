@@ -1,3 +1,5 @@
+{% include warning.html content="This guide is out-dated as it refers to MariaDB, which is no longer supported." %}
+
 ## Introduction
 
 This tutorial will walk you through the entire AzerothCore server setup process, and will help get you familiar with using Debian and Command Line Interfaces (CLI). In this tutorial, we'll be going over the following:

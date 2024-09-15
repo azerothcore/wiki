@@ -19,16 +19,6 @@
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
-#### Ubuntu with MariaDB 10.x
-
-AzerothCore does only support MariaDB versions 10.6 and 10.5.
-
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
-
-```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
-```
-
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 **Note**: If you get the error **cannot find -lstdc++** you need to install `g++-12` and it's dependencies.

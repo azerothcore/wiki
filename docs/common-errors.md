@@ -132,9 +132,11 @@ You have not copied the necessary .dll files into the binaries directory.
 #### [ACE00043](#a-hreface00043ace00043a)
 Core doesn't start, I get:
 ```
-AzerothCore does not support MySQL versions below 5.7 and MariaDB versions below 10.5
+AzerothCore does not support MySQL versions below 8.0
 ```
-Upgrade your MySQL/MariaDB.
+Upgrade your MySQL.
+
+Note: AzerothCore does not support MariaDB.
 
 ---------------------------------------------------------
 
