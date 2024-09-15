@@ -10,11 +10,13 @@ There are several ways to install AzerothCore, you need to choose **ONE**.
 
 ### Install from the source <span class="badge badge-success">Recommended</span>
 
-These are the officially supported and complete ways of installing AzerothCore, for any purpose (Windows, Linux, macOS).
+This is the officially supported and complete way to install AzerothCore.
 
-- [AzerothCore Classic Installation](classic-installation) - the traditional way of installing AzerothCore. Recommended for Windows, MacOS, and Linux. This process gives more awareness of how AzerothCore is structured.
+- [AzerothCore Classic Installation](classic-installation) - Recommended for Windows, macOS, and Linux.
 
 ### Experimental installations <span class="badge badge-info">Limited support and usage</span>
+
+These guides are for experimental installations and have limited to no support.
 
 - [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation) - the simplest way to install.
 
