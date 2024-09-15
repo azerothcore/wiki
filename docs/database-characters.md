@@ -22,6 +22,7 @@
 - [channels_rights](channels_rights)
 - [character_account_data](character_account_data)
 - [character_achievement](character_achievement)
+- [character_achievement_offline_updates](character_achievement_offline_updates)
 - [character_achievement_progress](character_achievement_progress)
 - [character_action](character_action)
 - [character_arena_stats](character_arena_stats)
