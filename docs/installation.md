@@ -12,15 +12,15 @@ There are several ways to install AzerothCore, you need to choose **ONE**.
 
 These are the officially supported and complete ways of installing AzerothCore, for any purpose (Windows, Linux, macOS).
 
-- [AzerothCore Classic Installation](classic-installation) - the traditional way of installing AzerothCore. Battle-tested, recommended for all operating systems for any purpose. This process gives more awareness of how AzerothCore is structured.
+- [AzerothCore Classic Installation](classic-installation) - the traditional way of installing AzerothCore. Recommended for Windows, MacOS, and Linux. This process gives more awareness of how AzerothCore is structured.
 
 ### Experimental installations <span class="badge badge-info">Limited support and usage</span>
 
-- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation) <span class="badge badge-secondary">Limited Support</span> - the simplest way of installing AzerothCore, recommended for both local development and production.
+- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation) - the simplest way to install.
 
-- [Docker setup](install-with-docker) <span class="badge badge-secondary">Limited Support</span> - an installation process based on Docker. Docker knowledge is recommended.
+- [Docker setup](install-with-docker) - an installation process based on Docker. Previous docker knowledge is recommended.
 
-- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) <span class="badge badge-secondary">Limited Support</span> - a straightforward way of installing AzerothCore. Currently, you can't install C++ modules, only Eluna scripts. Suitable for bug triaging, bug reporting, or domestic usage.
+- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - a straightforward way of installing AzerothCore. Currently, you can't install C++ modules, only Eluna scripts. Suitable for bug triaging, bug reporting, or domestic usage.
 
 ### Community made <span class="badge badge-info">Unsupported</span>
 
