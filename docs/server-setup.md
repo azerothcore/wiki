@@ -2,7 +2,7 @@
 
 | Installation Guide                                                                                                                      |                                                              |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
 
 **Table of contents**
@@ -151,5 +151,5 @@ If you are still having problems, check:
 
 | Installation Guide                                                                                                                      |                                                              |
 | :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |

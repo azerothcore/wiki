@@ -2,7 +2,7 @@
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |
 
 | |
@@ -154,5 +154,5 @@ If you are still having problems, check:
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |

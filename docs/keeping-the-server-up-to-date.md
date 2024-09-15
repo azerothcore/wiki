@@ -2,7 +2,7 @@
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
 
 AzerothCore developers and contributors are always working on fixing and adding new features to the core. You can always find them [here](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
@@ -31,5 +31,5 @@ If you are still having problems, check:
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
