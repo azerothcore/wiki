@@ -131,12 +131,16 @@ Number of items given to the player (inserted in the player's bags) upon accepti
 
 This field is a bitmask and is for controlling server side quest functions. Blizzard keeps these data server-side and they are not sent to the client, so we have to populate the field manually.
 
-- 0: No extra requirements
-- 1: Makes the quest repeatable.
-- 2: Makes the quest only completable by some external event (an entry in [areatrigger\_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell\_scripts](scripts) with command 7 as some examples)
-- 4: Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.
-- 8: Only used for Dungeon Finder quests
-- 16: Makes the quest monthly
-- 32: The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
-- 64: Makes quest not share rewarded reputation with other allied factions
-- 128: Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed quests that are 'completed' right from the beginning.
+
+| SpecialFlags  | Description |
+| :---: | --- |
+| 0 | No extra requirements
+| 1 | Makes the quest repeatable.
+| 2 | Makes the quest only completable by some external event (an entry in [areatrigger\_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell\_scripts](scripts) with command 7 as some examples)
+| 4 | Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.
+| 8 | Only used for Dungeon Finder quests
+| 16 | Makes the quest monthly
+| 32 | The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
+| 64 | Makes quest not share rewarded reputation with other allied factions
+| 128 | Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed quests that are 'completed' right from the beginning.
+| 256 | This quest shouldn't count towards the Loremaster Achivement, quests that have the repeatable (1) flag will not count to the loremaster achivement (only the first time it's completed).
