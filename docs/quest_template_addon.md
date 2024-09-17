@@ -143,4 +143,4 @@ This field is a bitmask and is for controlling server side quest functions. Bliz
 | 32 | The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
 | 64 | Makes quest not share rewarded reputation with other allied factions
 | 128 | Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed quests that are 'completed' right from the beginning.
-| 256 | This quest shouldn't count towards the Loremaster Achivement, quests that have the repeatable (1) flag will not count to the loremaster achivement (only the first time it's completed).
+| 256 | This quest shouldn't count towards the Loremaster Achivement.
