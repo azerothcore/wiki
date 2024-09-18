@@ -53,13 +53,9 @@ The spell ID cast on player upon starting the quest.
 - **if value > 0:** Contains the previous quest id, that must be completed before this quest can be started.
 - **If value < 0:** Contains the parent quest id, that must be active before this quest can be started.
 
-See the [examples section](quest_template#examples-dealing-with-quests) for examples.
-
 ### **NextQuestID**
 
 Contains the next quest id, in case PrevQuestId of that other quest is not sufficient.
-
-See the [examples section](quest_template#examples-dealing-with-quests) for examples.
 
 ### **ExclusiveGroup**
 
@@ -79,7 +75,7 @@ If the quest gives as a reward an item from a possible list of items, the ID her
 
 ### **RewardMailDelay**
 
-How many seconds to wait until the mail is sent to the character that turned in a quest rewarding items from a loot template defined in [RewardMailTemplateId](quest_template#rewardmailtemplateid)
+How many seconds to wait until the mail is sent to the character that turned in a quest rewarding items from a loot template.
 
 ### **RequiredSkillID**
 
@@ -92,11 +88,11 @@ Skill points required to have in order to accept the quest.
 
 ### **RequiredMinRepFaction**
 
-Faction ID for reputation requirement. See [Faction.dbc](Faction)
+Faction ID for reputation requirement. See [Faction.dbc](Faction).
 
 ### **RequiredMaxRepFaction**
 
-The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](Faction)
+The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](Faction).
 
 ### **RequiredMinRepValue**
 
