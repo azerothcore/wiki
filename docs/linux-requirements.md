@@ -39,7 +39,6 @@ sudo apt install -y install libboost1.74-dev
 
 #### Debian 12
 
-
 ```sh
 apt-get update && apt-get install -y git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
 ```

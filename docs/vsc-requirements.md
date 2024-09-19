@@ -7,7 +7,7 @@
 | |
 | :- |
 | Boost ≥ 1.70 - 1.74          |
-| MySQL ≥ 5.7.0                |
+| MySQL ≥ 8.0.0                |
 | OpenSLL ≥ 1.0.x              |
 | CMake ≥ 3.16                 |
 | MS Visual Studio Build Tools |
