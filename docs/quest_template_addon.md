@@ -1,39 +1,38 @@
-# quest\_template\_addon
+# quest_template_addon
 
 [<-Back-to:World](database-world)
 
-**Table: quest\_template\_addon**
+**Table: quest_template_addon**
 
-Contains extra definitions like linking quests, dependencies and requirements for the quests defined in the [quest\_template](quest_template) table to become available to the player.
+Contains extra definitions like linking quests, dependencies and requirements for the quests defined in the [quest_template](quest_template) table to become available to the player.
 
 **Structure:**
 
-| Field                       | Type      | Attributes | Key | Null | Default | Extra | Comment                               |
-| --------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
-| [ID](#id)                    | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
-| [MaxLevel](#maxlevel)               | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
-| [AllowableClasses](#allowableclasses)       | INT       | UNSIGNED   |     | NO   |         |       |                                       |
-| [SourceSpellID](#sourcespellid)          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
-| [PrevQuestID](#prevquestid)            | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [NextQuestID](#nextquestid)            | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [ExclusiveGroup](#exclusivegroup)         | MEDIUMINT |            |     | NO   |         |       |                                       |
+| Field                                           | Type      | Attributes | Key | Null | Default | Extra | Comment                               |
+| ----------------------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
+| [ID](#id)                                       | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
+| [MaxLevel](#maxlevel)                           | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
+| [AllowableClasses](#allowableclasses)           | INT       | UNSIGNED   |     | NO   |         |       |                                       |
+| [SourceSpellID](#sourcespellid)                 | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
+| [PrevQuestID](#prevquestid)                     | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [NextQuestID](#nextquestid)                     | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [ExclusiveGroup](#exclusivegroup)               | MEDIUMINT |            |     | NO   |         |       |                                       |
 | [RewardMailTemplateID](#rewardmailtemplateid)   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
-| [RewardMailDelay](#rewardmaildelay)        | INT       | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredSkillID](#requiredskillid)       | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredSkillPoints](#requiredskillpoints)   | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RewardMailDelay](#rewardmaildelay)             | INT       | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredSkillID](#requiredskillid)             | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
+| [RequiredSkillPoints](#requiredskillpoints)     | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredMinRepFaction](#requiredminrepfaction) | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredMaxRepFaction](#requiredmaxrepfaction) | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredMinRepValue](#requiredminrepvalue)   | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [RequiredMaxRepValue](#requiredmaxrepvalue)   | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [ProvidedItemCount](#provideditemcount)     | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
-| [SpecialFlags](#specialflags)          | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
-
+| [RequiredMinRepValue](#requiredminrepvalue)     | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [RequiredMaxRepValue](#requiredmaxrepvalue)     | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [ProvidedItemCount](#provideditemcount)         | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
+| [SpecialFlags](#specialflags)                   | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
 
 **Description of the fields:**
 
 ### **ID**
 
-Unique quest ID, matching the same quest ID in [quest\_template.ID](quest_template#id)
+Unique quest ID, matching the same quest ID in [quest_template.ID](quest_template#id)
 
 ### **MaxLevel**
 
@@ -67,11 +66,11 @@ Allows to define a group of quests of which only one may be chosen and completed
 
 Allows to define a group of quests of which all must be completed and rewarded to start next quest. E.g. if quest 1000 dependent from one of quests 1200, 1201 and 1202 and all this quests have same negative exclusive group then all this quest must be completed and rewarded before quest 1000 can be started.
 
-Note: All quests that use an ExclusiveGroup must also have entries in [pool\_template](pool_template) and [pool\_quest](quest_template#examples-dealing-with-quests) for examples.
+Note: All quests that use an ExclusiveGroup must also have entries in [pool_template](pool_template) and [pool_quest](quest_template#examples-dealing-with-quests) for examples.
 
 ### **RewardMailTemplateID**
 
-If the quest gives as a reward an item from a possible list of items, the ID here corresponds to the proper loot template in [quest\_mail\_loot\_template](loot_template). According to the rules in that loot template, items "looted" will be sent by mail at the completion of the quest.
+If the quest gives as a reward an item from a possible list of items, the ID here corresponds to the proper loot template in [quest_mail_loot_template](loot_template). According to the rules in that loot template, items "looted" will be sent by mail at the completion of the quest.
 
 ### **RewardMailDelay**
 
@@ -110,16 +109,15 @@ Number of items given to the player (inserted in the player's bags) upon accepti
 
 This field is a bitmask and is for controlling server side quest functions. Blizzard keeps these data server-side and they are not sent to the client, so we have to populate the field manually.
 
-
-| SpecialFlags  | Description |
-| :---: | --- |
-| 0 | No extra requirements.
-| 1 | Makes the quest repeatable.
-| 2 | Makes the quest only completable by some external event (an entry in [areatrigger\_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell\_scripts](scripts) with command 7 as some examples).
-| 4 | Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.
-| 8 | Only used for Dungeon Finder quests.
-| 16 | Makes the quest monthly.
-| 32 | The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.
-| 64 | Makes quest not share rewarded reputation with other allied factions.
-| 128 | Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed. quests that are 'completed' right from the beginning.
-| 256 | This quest shouldn't count towards the Loremaster Achivement.
+| SpecialFlags | Description                                                                                                                                                                                                                              |
+| :----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      0       | No extra requirements.                                                                                                                                                                                                                   |
+|      1       | Makes the quest repeatable.                                                                                                                                                                                                              |
+|      2       | Makes the quest only completable by some external event (an entry in [areatrigger_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell_scripts](scripts) with command 7 as some examples). |
+|      4       | Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.                                                                                                                                               |
+|      8       | Only used for Dungeon Finder quests.                                                                                                                                                                                                     |
+|      16      | Makes the quest monthly.                                                                                                                                                                                                                 |
+|      32      | The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.                                                                                 |
+|      64      | Makes quest not share rewarded reputation with other allied factions.                                                                                                                                                                    |
+|     128      | Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed. quests that are 'completed' right from the beginning.                                                                             |
+|     256      | This quest shouldn't count towards the Loremaster Achivement.                                                                                                                                                                            |
