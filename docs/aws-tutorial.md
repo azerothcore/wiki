@@ -135,7 +135,7 @@ aws ec2 authorize-security-group-ingress --group-id $SECURITY_GROUP_ID --ip-perm
 
 ### Finding an AMI
 
- [Ubuntu 18.04 LTS](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-024a64a6685d05041) will be used for the guide but any Linux distribution should be fine. Keep in mind there may be small idiosyncrasies with differing distributions. Newer AMI releases of Ubuntu can be found [here](https://cloud-images.ubuntu.com/locator/ec2/) and other AMIs found on the [AWS Marketplace](https://aws.amazon.com/marketplace/ref=csl_ec2_ami). The AMI that is used for the guide is `ami-024a64a6685d05041`. Find more information on this image with:
+Latest Ubuntu LTS will be used for the guide but any Linux distribution supported by AzerothCore should be fine. Keep in mind there may be small idiosyncrasies with differing distributions. Newer AMI releases of Ubuntu can be found [here](https://cloud-images.ubuntu.com/locator/ec2/) and other AMIs found on the [AWS Marketplace](https://aws.amazon.com/marketplace/ref=csl_ec2_ami). The AMI that is used for the guide is `ami-024a64a6685d05041`. Find more information on this image with:
 
 ```bash
 aws ec2 describe-images --image-ids ami-024a64a6685d05041
