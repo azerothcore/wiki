@@ -1,13 +1,13 @@
 # Windows Requirements
 
-| Installation Guide                                                                                                                      |                                                           |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                           |
-| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](windows-core-installation) |
+| Installation Guide                                                                                                                      |                                                      |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                      |
+| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
-MySQL ≥ 8.0.0<br/>
+MySQL ≥ 8.0 (Recommended 8.4)<br/>
 OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
@@ -32,7 +32,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
    <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
-4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.0.html)
+4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.4.html)
 
     1. Download the Windows MSI Installer.
     
@@ -63,9 +63,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     - [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
     
     - [HeidiSQL](https://www.heidisql.com/download.php) (Best for beginners)
-    
-    - MySQL Workbench (already installed if you chose to install the full MySQL package)
-    
+        
     - [DBeaver](https://dbeaver.io/) (Multiplatform Database Management Tool)
 
     1. Try connecting to your database. You may be looking for "Connect to Host", "New Connection" or "Session Manager" depending on which program you use.
@@ -76,7 +74,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
     1. Download and install the **Latest Release** windows-x86_64.msi file, **NEVER the RC (Release Candidate) versions.**
     
-    2. We recommend to compile in 64 bits mode. 
+    2. We recommend compiling in 64-bit mode. 
 
 7. MySQL development files
 
@@ -122,7 +120,7 @@ If you are still having problems, check:
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Installation Guide                                                                                                                      |                                                           |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |                                                           |
-| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](windows-core-installation) |
+| Installation Guide                                                                                                                      |                                                      |
+| :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                      |
+| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |

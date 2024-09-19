@@ -2,7 +2,7 @@
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. | Optional |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. | Optional |
 | [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date) | [Step 9: Installing a Module >>](installing-a-module) |
 
 AzerothCore does not distribute a client. You will need to find your own clean 3.3.5a client on the internet.
@@ -33,5 +33,5 @@ If you are still having problems, check:
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date) | [Step 9: Installing a Module >>](installing-a-module) |

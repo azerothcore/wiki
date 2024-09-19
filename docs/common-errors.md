@@ -136,6 +136,8 @@ AzerothCore does not support MySQL versions below 8.0
 ```
 Upgrade your MySQL.
 
+Note: AzerothCore does not support MariaDB.
+
 ---------------------------------------------------------
 
 #### [ACE00044](#a-hreface00044ace00044a)

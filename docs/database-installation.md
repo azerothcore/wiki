@@ -2,7 +2,7 @@
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 3: Server Setup](server-setup) | [Step 5: Networking >>](networking) |
 
 ## Creating the Database in MySQL
@@ -54,5 +54,5 @@ If you are still having problems, check:
 
 | Installation Guide | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 3: Server Setup](server-setup) | [Step 5: Networking >>](networking) |

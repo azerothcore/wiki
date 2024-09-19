@@ -1,16 +1,16 @@
 # Linux Requirements
 
-| Installation Guide                                                                                                                      |                                                         |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](linux-core-installation) |
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |
 
-|                                                                                                    |
-| :------------------------------------------------------------------------------------------------- |
-| MySQL ≥ 8.0.0                                                                                      |
-| Boost ≥ 1.74                                                                                       |
-| OpenSSL ≥ 3.0.x                                                                                    |
-| CMake ≥ 3.16                                                                                       |
+| |
+| :- |
+| MySQL ≥ 5.7.0 |
+| Boost ≥ 1.74 |
+| OpenSSL ≥ 3.0.x |
+| CMake ≥ 3.16 |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
 #### Ubuntu with MySQL 8.x
@@ -37,20 +37,27 @@ sudo apt install -y install libboost1.74-dev
 
 ---
 
-#### Debian 10 / Debian 12
+#### Debian 12
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+apt-get update && apt-get install -y git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
-**Note:** If you add the option `-y` and at the end of the list, it will start installing them without the need for you to confirm.
+**Note:** By using the option `-y`, it will start installing without the need for you to confirm.
 
-**Example:**
+---
+
+#### Install MYSQL
+
+Non-Interactive install using `DEBIAN_FRONTEND="noninteractive"` to install the latest MYSQL-LTS release, e.g. `mysql-8.4-lts` without any user prompts showing up.
 
 ```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev -y
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_0.8.32-1_all.deb
+sudo apt-get update
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server
 ```
 
 ---
@@ -134,7 +141,7 @@ If you are still having problems, check:
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Installation Guide                                                                                                                      |                                                         |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](linux-core-installation) |
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |

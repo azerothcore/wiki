@@ -39,13 +39,13 @@
 **Description of the fields**
 
 ### Entry
-The Spell ID that is capable to proc on an event. (Can use negative spellId for ranked spells)
+The Spell ID that is capable of proc on an event. For ranked spells, use a negative Spell ID.
 
 ### SchoolMask
-This field contains a bitmask that controls on what types of spells the proc can be triggered. For example if an aura procs only when the unit it is casted upon is hit by shadow spells (spell 34914). To combine spell schools, just add the bit values.
+This field contains a bitmask that controls which types of spells the proc can be triggered. For example, if an aura procs only when the unit it is cast upon is hit by shadow spells (spell 34914).
 
-| Name                | Bit  | Hex  | Comment         |
-| :------------------ | :--- | :--- | :-------------- |
+| Flag                | Bit  | Hex  | Comment         |
+| ------------------- | ---- | ---- | --------------- |
 | SPELL_SCHOOL_NORMAL | 1    | 0x01 | Physical Damage |
 | SPELL_SCHOOL_HOLY   | 2    | 0x02 | Holy Damage     |
 | SPELL_FIRE          | 4    | 0x04 | Fire Damage     |
@@ -55,10 +55,10 @@ This field contains a bitmask that controls on what types of spells the proc can
 | SPELL_SCHOOL_ARCANE | 64   | 0x40 | Arcane Damage   |
 
 ### SpellFamilyName
-This fireld controls what family name spells can proc the triggered spell.
+This field controls what family name spells can proc the triggered spell.
 
 | ID   | Family Name  |
-| :--- | :----------- |
+| ---- | ------------ |
 | 0    | Generic      |
 | 3    | Mage         |
 | 4    | Warrior      |
@@ -82,13 +82,13 @@ This field controls what spells' family flags can proc the triggered spell (you 
 This field controls what spells' family flags can proc the triggered spell (you can find SpellFamilyFlags of some spell, using SpellWork).
 
 ### procFlags
-If non-zero, used to override the original spell ProcFlags in DBC.
+If non-zero, override the original spell ProcFlags in DBC.
 
-A bitmask controlling what events trigger the spell. To combine possible events, add the proc bits together.
+A bitmask controls what events trigger the spell. To combine possible events, add the proc bits together.
 
-| Event                                     | Bit      | Hex        | Comment                                                                                                    |
-| :---------------------------------------- | :------- | :--------- | :--------------------------------------------------------------------------------------------------------- |
-| PROC_FLAG_NONE                            | 0        | 0x00000000 |
+| Flag                                      | Bit      | Hex        | Comment                                                                                                    |
+| ----------------------------------------- | -------- | ---------- | ---------------------------------------------------------------------------------------------------------- |
+| PROC_FLAG_NONE                            | 0        | 0x00000000 |                                                                                                            |
 | PROC_FLAG_KILLED                          | 1        | 0x00000001 | Killed by aggressor                                                                                        |
 | PROC_FLAG_KILL                            | 2        | 0x00000002 | Kill that yields experience or honor                                                                       |
 | PROC_FLAG_DONE_MELEE_AUTO_ATTACK          | 4        | 0x00000004 | Successful melee attack hit                                                                                |
@@ -116,40 +116,41 @@ A bitmask controlling what events trigger the spell. To combine possible events,
 | PROC_FLAG_DEATH                           | 16777216 | 0x01000000 | Died in any way                                                                                            |
 
 ### procEx
-| procEx                      | Bit     | Hex       | Comment                                                                               |
-| :-------------------------- | :------ | :-------- | :------------------------------------------------------------------------------------ |
-| PROC_EX_NONE                | 0       | 0x0000000 | If none can tigger on Hit/Crit only (passive spells MUST defined by SpellFamily flag) |
-| PROC_EX_NORMAL_HIT          | 1       | 0x0000001 |
-| PROC_EX_CRITICAL_HIT        | 2       | 0x0000002 |
-| PROC_EX_MISS                | 4       | 0x0000004 |
-| PROC_EX_RESIST              | 8       | 0x0000008 |
-| PROC_EX_DODGE               | 16      | 0x0000010 |
-| PROC_EX_PARRY               | 32      | 0x0000020 |
-| PROC_EX_BLOCK               | 64      | 0x0000040 |
-| PROC_EX_EVADE               | 128     | 0x0000080 |
-| PROC_EX_IMMUNE              | 256     | 0x0000100 |
-| PROC_EX_DEFLECT             | 512     | 0x0000200 |
-| PROC_EX_ABSORB              | 1024    | 0x0000400 |
-| PROC_EX_REFLECT             | 2048    | 0x0000800 |
-| PROC_EX_INTERRUPT           | 4096    | 0x0001000 | Melee hit result can be Interrupt (not used)                                          |
-| PROC_EX_FULL_BLOCK          | 8192    | 0x0002000 | Block all attack damage                                                               |
-| PROC_EX_RESERVED2           | 16384   | 0x0004000 |
-| PROC_EX_NOT_ACTIVE_SPELL    | 32768   | 0x0008000 | Spell mustn't do damage/heal to proc                                                  |
-| PROC_EX_EX_TRIGGER_ALWAYS   | 65536   | 0x0010000 | If set trigger always no matter of hit result                                         |
-| PROC_EX_EX_ONE_TIME_TRIGGER | 131072  | 0x0020000 | If set trigger always but only one time (not implemented yet)                         |
-| PROC_EX_ONLY_ACTIVE_SPELL   | 262144  | 0x0040000 | Spell has to do damage/heal to proc                                                   |
-| PROC_EX_NO_OVERHEAL         | 524288  | 0x0080000 | Proc if heal did some work                                                            |
-| PROC_EX_NO_AURA_REFRESH     | 1048576 | 0x0100000 | Proc if aura was not refreshed                                                        |
+| Flag                        | Bit     | Hex       | Comment                                                                                |
+| --------------------------- | ------- | --------- | -------------------------------------------------------------------------------------- |
+| PROC_EX_NONE                | 0       | 0x0000000 | If none can trigger on Hit/Crit only (passive spells MUST defined by SpellFamily flag) |
+| PROC_EX_NORMAL_HIT          | 1       | 0x0000001 |                                                                                        |
+| PROC_EX_CRITICAL_HIT        | 2       | 0x0000002 |                                                                                        |
+| PROC_EX_MISS                | 4       | 0x0000004 |                                                                                        |
+| PROC_EX_RESIST              | 8       | 0x0000008 |                                                                                        |
+| PROC_EX_DODGE               | 16      | 0x0000010 |                                                                                        |
+| PROC_EX_PARRY               | 32      | 0x0000020 |                                                                                        |
+| PROC_EX_BLOCK               | 64      | 0x0000040 |                                                                                        |
+| PROC_EX_EVADE               | 128     | 0x0000080 |                                                                                        |
+| PROC_EX_IMMUNE              | 256     | 0x0000100 |                                                                                        |
+| PROC_EX_DEFLECT             | 512     | 0x0000200 |                                                                                        |
+| PROC_EX_ABSORB              | 1024    | 0x0000400 |                                                                                        |
+| PROC_EX_REFLECT             | 2048    | 0x0000800 |                                                                                        |
+| PROC_EX_INTERRUPT           | 4096    | 0x0001000 | Melee hit result can be Interrupt (not used)                                           |
+| PROC_EX_FULL_BLOCK          | 8192    | 0x0002000 | Block all attack damage                                                                |
+| PROC_EX_RESERVED2           | 16384   | 0x0004000 |                                                                                        |
+| PROC_EX_NOT_ACTIVE_SPELL    | 32768   | 0x0008000 | Spell mustn't do damage/heal to proc                                                   |
+| PROC_EX_EX_TRIGGER_ALWAYS   | 65536   | 0x0010000 | If set trigger always no matter of hit result                                          |
+| PROC_EX_EX_ONE_TIME_TRIGGER | 131072  | 0x0020000 | If set trigger always but only one time (not implemented yet)                          |
+| PROC_EX_ONLY_ACTIVE_SPELL   | 262144  | 0x0040000 | Spell has to do damage/heal to proc                                                    |
+| PROC_EX_NO_OVERHEAL         | 524288  | 0x0080000 | Proc if heal did some work                                                             |
+| PROC_EX_NO_AURA_REFRESH     | 1048576 | 0x0100000 | Proc if aura was not refreshed                                                         |
+| PROC_EX_ONLY_FIRST_TICK     | 2097152 | 0x0200000 | Proc only on first tick (in case of periodic spells)                                   |
 
 ### procPhase
 A bitmask for matching phase of a spellcast on which proc occurs.
 
-| procPhase               | Bit  | Hex       | Comment |
-| :---------------------- | :--- | :-------- | :------ |
-| PROC_SPELL_PHASE_NONE   | 0    | 0x0000000 |
-| PROC_SPELL_PHASE_CAST   | 1    | 0x0000001 |
-| PROC_SPELL_PHASE_HIT    | 2    | 0x0000002 |
-| PROC_SPELL_PHASE_FINISH | 4    | 0x0000004 |
+| Flag                    | Bit  | Hex       | Comment |
+| ----------------------- | ---- | --------- | ------- |
+| PROC_SPELL_PHASE_NONE   | 0    | 0x0000000 |         |
+| PROC_SPELL_PHASE_CAST   | 1    | 0x0000001 |         |
+| PROC_SPELL_PHASE_HIT    | 2    | 0x0000002 |         |
+| PROC_SPELL_PHASE_FINISH | 4    | 0x0000004 |         |
 
 ### ppmRate
 Proc per minute. If 0 the value will be taken from DBC.
@@ -160,7 +161,7 @@ ppmRate is a rate and therefore will not be guaranteed to prox X amount of times
 ```
 
 ### CustomChance
-If non-zero, chance for spell to trigger.
+If non-zero, chance for the spell to trigger.
 
 ### Cooldown
 Internal Cooldown (ICD) in milliseconds.

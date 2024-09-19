@@ -62,7 +62,7 @@ After you test the changes, you need to return in a clean state (as you were bef
 
 - On a **traditional setup**, you can delete your `acore_world` database and use the DB assembler to generate a new one
 
-- On a **docker setup**, you can destroy and recreate your containers using `docker-compose down` and `docker-compose up`.
+- On a **docker setup**, you can drop the `acore_world` database via HeidiSQL, and run `docker compose up` inside the azerothcore-wotlk directory, and you will be prompted to re-create the `acore_world` database (press enter)
 
 ## Reports
 

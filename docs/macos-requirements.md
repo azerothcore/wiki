@@ -1,9 +1,9 @@
 # macOS Requirements
 
-| Installation Guide                                                                                                                      |                                                         |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](macos-core-installation) |
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](macos-core-installation) |
 
 |               |
 | :------------ |
@@ -64,7 +64,7 @@ If you are still having problems, check:
 
 * [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
 
-| Installation Guide                                                                                                                      |                                                         |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                    | [Step 2: Core Installation >>](macos-core-installation) |
+| Installation Guide | |
+| :- | :- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](macos-core-installation) |

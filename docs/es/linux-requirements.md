@@ -12,15 +12,6 @@
 | CMake ≥ 3.16                                                                                       |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
 
-#### Ubuntu con MariaDB 10.x
-
-AzerothCore no soporta las versiones 10.6 y 10.5 de MariaDB.
-```
-
-```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
-```
-
 #### Ubuntu con MySQL 8.x
 
 ```sh
