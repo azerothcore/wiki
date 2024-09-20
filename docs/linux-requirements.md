@@ -40,7 +40,7 @@ sudo apt install -y install libboost1.74-dev
 #### Debian 12
 
 ```sh
-apt-get update && apt-get install -y git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
+apt-get update && apt-get install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -57,7 +57,7 @@ Non-Interactive install using `DEBIAN_FRONTEND="noninteractive"` to install the 
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
 sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_0.8.32-1_all.deb
 sudo apt-get update
-sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server libmysqlclient-dev
 ```
 
 ---
