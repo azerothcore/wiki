@@ -231,14 +231,13 @@ The quest ID. This column is the Primary Key for the Table. Each quest ID must b
 
 ### QuestType
 
-Accepted values: 0, 1, 2 or 3. Their meaning is described in table below.
+Accepted values: 0, 1 or 2. Their meaning is described in table below.
 
 | Value | Result                                                                                                   |
 | ----- | -------------------------------------------------------------------------------------------------------- |
 | 0     | Quest is enabled, but it is auto-completed when accepted; this skips quest objectives and quest details. |
 | 1     | Quest is disabled (not yet implemented in the core).                                                     |
 | 2     | Quest is enabled (does not auto-complete).                                                               |
-| 3     | Quest is a World Quest.                                                                                  |
 
 ### QuestLevel
 
