@@ -199,6 +199,18 @@ You can automatically create the tmux sessions and execute the `authserver` and 
 ```sh
 #!/usr/bin/env bash
 
+# ALLOW TMUX TO WAIT FOR MYSQL TO BE READY
+# YOU MUST CHANGE THE USER AND PASSWORD TO CORRESPOND WITH YOUR INSTALL
+    mysql_ready() {
+        mysqladmin ping --host=127.0.0.1 --user=YOURUSER --password=YOURPASSWORD > /dev/null 2>&1
+    }
+
+    while !(mysql_ready)
+    do
+       sleep 3
+       echo "waiting for mysql ..."
+    done
+
 # CHANGE THESE WITH THE CORRECT PATHS
 authserver="/path/to/azerothcore-wotlk/acore.sh run-authserver"
 worldserver="/path/to/azerothcore-wotlk/acore.sh run-worldserver"
