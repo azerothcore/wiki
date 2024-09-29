@@ -1,8 +1,8 @@
-# game\_event\_battleground\_holiday
+# game_event_battleground_holiday
 
 [<-Back-to:World](database-world)
 
-**The \`Game\_event\_battleground\_holiday\` table**
+**The \`Game_event_battleground_holiday\` table**
 
 This table is used to add a holiday to a battleground, for things like extra reputation / honor.
 
@@ -20,7 +20,7 @@ This table is used to add a holiday to a battleground, for things like extra rep
 
 ### eventEntry
 
-This is entry id of the game\_event that was setup to add the holiday.
+[game_event.eventEntry](game_event#eventEntry)
 
 ### bgflag
 
@@ -39,3 +39,12 @@ This is a bitmask field that decides which battle grounds are affected for this 
 | 512  | Strand of the Ancients |
 | 1024 | Dalaran Sewers         |
 | 2048 | The Ring of Valor      |
+
+| eventEntry | bgflag        | Comment (not part of the DB)          |
+| ---------- | ------------- | :------------------------------------ |
+| 18         | 2             | Call to Arms: Alterac Valley!         |
+| 19         | 4             | Call to Arms: Warsong Gulch!          |
+| 20         | 8             | Call to Arms: Arathi Basin!           |
+| 21         | 128           | Call to Arms: Eye of the Storm!       |
+| 53         | 512           | Call to Arms: Strand of the Ancients! |
+| 54         | 1 073 741 824 | Call to Arms: Isle of Conquest!       |
