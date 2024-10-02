@@ -30,33 +30,33 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 **Description of the fields:**
 
-### **ID**
+### ID
 
 Unique quest ID, matching the same quest ID in [quest_template.ID](quest_template#id)
 
-### **MaxLevel**
+### MaxLevel
 
 Maximum player level at which a character can get the quest.
 
-### **AllowableClasses**
+### AllowableClasses
 
 Classes required to get the quest. 0 means the quest is available for all classes.
 This field is a bitmask, you can combine class values. See [ChrClasses.dbc](chrclasses)
 
-### **SourceSpellID**
+### SourceSpellID
 
 The spell ID cast on player upon starting the quest.
 
-### **PrevQuestID**
+### PrevQuestID
 
 - **if value > 0:** Contains the previous quest id, that must be completed before this quest can be started.
 - **If value < 0:** Contains the parent quest id, that must be active before this quest can be started.
 
-### **NextQuestID**
+### NextQuestID
 
 Contains the next quest id, in case PrevQuestId of that other quest is not sufficient.
 
-### **ExclusiveGroup**
+### ExclusiveGroup
 
 - **if ExclusiveGroup > 0**
 
@@ -68,44 +68,44 @@ Allows to define a group of quests of which all must be completed and rewarded t
 
 Note: All quests that use an ExclusiveGroup must also have entries in [pool_template](pool_template) and [pool_quest](quest_template#examples-dealing-with-quests) for examples.
 
-### **RewardMailTemplateID**
+### RewardMailTemplateID
 
 If the quest gives as a reward an item from a possible list of items, the ID here corresponds to the proper loot template in [quest_mail_loot_template](loot_template). According to the rules in that loot template, items "looted" will be sent by mail at the completion of the quest.
 
-### **RewardMailDelay**
+### RewardMailDelay
 
 How many seconds to wait until the mail is sent to the character that turned in a quest rewarding items from a loot template.
 
-### **RequiredSkillID**
+### RequiredSkillID
 
 Skill required to know to accept the quest. See [SkillLine.dbc](SkillLine)
 0 means no skill is required.
 
-### **RequiredSkillPoints**
+### RequiredSkillPoints
 
 Skill points required to have in order to accept the quest.
 
-### **RequiredMinRepFaction**
+### RequiredMinRepFaction
 
 Faction ID for reputation requirement. See [Faction.dbc](Faction).
 
-### **RequiredMaxRepFaction**
+### RequiredMaxRepFaction
 
 The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](Faction).
 
-### **RequiredMinRepValue**
+### RequiredMinRepValue
 
 Players must have this reputation or higher in order to receive the quest.
 
-### **RequiredMaxRepValue**
+### RequiredMaxRepValue
 
 The maximum reputation value that the player can have with a faction and still get the quest. If the player has more reputation than the value in this field, the quest will not be able to be taken anymore.
 
-### **ProvidedItemCount**
+### ProvidedItemCount
 
 Number of items given to the player (inserted in the player's bags) upon accepting the quest.
 
-### **SpecialFlags**
+### SpecialFlags
 
 This field is a bitmask and is for controlling server side quest functions. Blizzard keeps these data server-side and they are not sent to the client, so we have to populate the field manually.
 
