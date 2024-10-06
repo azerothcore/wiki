@@ -2,6 +2,8 @@
 
 This is a quickstart guide for installing AzerothCore to a Debian 12 server, securing it, and enabling one-command maintenance from your Windows PC.
 
+{% include warning.html content="This guide is outdated - please refer to the [Installation Guide](installation)." %}
+
 ## Table of Contents
   - [Requirements](#requirements)
   - [Debian Setup](#debian-setup)
