@@ -7,11 +7,12 @@
 
 | |
 | :- |
-| MySQL ≥ 5.7.0 |
+| [MySQL](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 | Boost ≥ 1.74 |
 | OpenSSL ≥ 3.0.x |
 | CMake ≥ 3.16 |
-| Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
+| [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
+| [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
 #### Ubuntu with MySQL 8.x
 
@@ -21,19 +22,7 @@ sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysq
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
-**Note**: If you get the error **cannot find -lstdc++** you need to install `g++-12` and it's dependencies.
-
-To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
-
-**Note**: in older versions of Ubuntu like **18.04** you need to install `gcc-10` and `libboost1.74-dev`:
-
-```
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-sudo add-apt-repository -y ppa:mhier/libboost-latest
-sudo apt-get update
-sudo apt install -y gcc-10 g++-10
-sudo apt install -y install libboost1.74-dev
-```
+To configure MySQL in Ubuntu and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
 ---
 
@@ -68,23 +57,9 @@ sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server libmysqlcl
 clang --version
 ```
 
-Your `clang` version **MUST** be `10` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be equal or higher than the required version listed on the top of this page.
 
-For example, if you are using an older version of Ubuntu like 18.04, you need to install clang using:
-
-```sh
-sudo apt-get install clang-10.0
-```
-
-If you use another distro or version, search on google for how to install the right clang version for your system.
-
-Currently the project requires clang10 or higher.
-
-This is a way to upgrade and install version 11.
-
-The answer is detailed here:
-
-[How to install clang 11 on Debian](https://stackoverflow.com/questions/66223241/how-to-install-clang-11-on-debian)
+---
 
 #### Check your cmake version
 
@@ -92,42 +67,19 @@ The answer is detailed here:
 cmake --version
 ```
 
-Your `cmake` version **MUST** be `3.16` or higher.
-
-On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
-
-Remember that it is possible to update cmake, using Python.
-
-Install:
-
-```sh
-python -m pip install cmake
-```
-
-Update:
-
-```sh
-python -m pip install --upgrade cmake
-```
-
-#### Ensure that the gcc-8 headers are installed
-
-This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
-https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
-
-After
-
-```sh
-sudo apt-get update
-```
-
-you can install gcc-8: 
-
-```sh
-sudo apt-get install g++-8 gcc-8
-```
+Your `cmake` version **MUST** be equal or higher than the required version listed on the top of this page.
 
 ---
+
+#### Check your openssl version
+
+```sh
+openssl version
+```
+
+Your `openssl` version **MUST** be equal or higher than the required version listed on the top of this page.
+
+--
 
 ## Help
 
