@@ -9,10 +9,6 @@
 
 If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
 
-1. First make sure that your core is [up-to-date](keeping-the-server-up-to-date.md).
-
-If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
-
 ## Automatic Database Updater
 
 By default, the Worldserver and Authserver will check for, and execute all new files into the database you specified in the config.
