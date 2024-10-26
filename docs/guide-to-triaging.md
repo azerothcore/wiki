@@ -67,17 +67,6 @@ For the CC issue, you can tag it with 'Confirmed', 'Linked to AC', and a tag ind
 
 If you have the right permissions, also add the new AC issue to whichever project is relevant, usually the one matching the issue's level range.
 
-#### Priority Tags
-You can also set the perceived priority of an issue via tags. They are:
-
-| Tag Level | Description |
-|-----------|-------------|
-| **Critical** | Should only be used in the event of server-breaking bugs |
-| **High** | Game-breaking bugs with no workaround |
-| **Medium** | Game-breaking bugs that do have a workaround |
-| **Low** | More typical bugs with quests/items/NPCs, etc. Your 'standard' bug |
-| **Trivial** | Bugs that have no real impact on gameplay, typically cosmetic |
-
 ## Guidelines
 - **Use your judgement.** We are there to exercise our best judgement, not just as photocopiers. We have access to tools and information that most players don't, so we should be able to see more deeply into a problem than they can and make decisions accordingly.
 - **Generalize the problem.** Try to generalise or broaden a problem. If one unusual kind of item, NPC or spell is not working correctly, try checking other items of the same general type to see if they are broken as well. Ideally we want to capture the broadest possible range of errors that we can.
