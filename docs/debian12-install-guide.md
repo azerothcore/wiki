@@ -8,9 +8,9 @@ This is a quickstart guide for installing AzerothCore to a Debian 12 server, sec
     - [First Login](#first-login)
     - [Change Default SSH Port](#change-default-ssh-port)
     - [Setup Firewall](#setup-firewall)
-    - [Get MySQL](#get-mysql)
     - [Get Dependencies](#get-dependencies)
-    - [Install SQL Database](#install-sql-database)
+    - [Get MySQL](#get-mysql)
+    - [Setup SQL Database](#setup-sql-database)
   - [SSH Setup](#ssh-setup)
     - [Key Generation](#key-generation)
     - [Key-based Login Setup](#key-based-login-setup)
@@ -37,7 +37,8 @@ This is a quickstart guide for installing AzerothCore to a Debian 12 server, sec
 ##### [FileZilla](https://filezilla-project.org/download.php)
 - A Windows program for transferring files to/from the server. Used during [SSH Setup](#ssh-setup) to copy the generated key file to your PC.
 ##### [HeidiSQL](https://www.heidisql.com/)
-- A Windows program for connecting to the servers SQL database. Not used in this guide.
+- A Windows program for connecting to the servers SQL database. Not used in this guide. If you want to connect to your database using HeidiSQL, [read this](https://www.enovision.net/mysql-ssh-tunnel-heidisql)
+
 
 ---
 ## Debian Setup
@@ -61,38 +62,36 @@ sudo ufw allow 3724
 sudo ufw allow 8085
 sudo ufw enable
 ```
+### Get Dependencies
+```bash
+sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full screen fail2ban -y
+```
 ### Get MySQL
 ```bash
 mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
-sudo dpkg -i mysql-apt-config_0.8.32-1_all.deb
-```
-- MySQL Server & Cluster: mysql-8.4
-- MySQL Tools & Connectors: Enabled
-### Get Dependencies
-```bash
-sudo apt update && sudo apt install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev build-essential p7zip-full screen fail2ban -y
-```
-### Install SQL Database
-```bash
+sudo DEBIAN_FRONTEND="noninteractive" dpkg -i mysql-apt-config_0.8.32-1_all.deb
+sudo apt update && sudo apt install libmysqlclient-dev mysql-server -y
 sudo mysql_secure_installation
 ```
 - Validate password component:   N
-- Change the password for root:  Y
-  - Enter a password for the SQL root user.
+- Change the password for root:  N
 - Remove anonymous users:        Y
 - Disallow root login remotely:  Y
 - Remove test database:          Y
 - Reload privilege tables:       Y
+### Setup SQL Database
 ```bash
 sudo mysql -u root -p
 ```
-- Enter the root password you just set up.
-- This root user has remote access disabled, so we will create a new "acore" user for the SQL database.
+- Enter the root password you set in the previous step.
 ```bash
 DROP USER IF EXISTS 'acore'@'localhost';
-CREATE USER 'acore'@'%' IDENTIFIED BY 'SQLPASSWORD';
-GRANT ALL PRIVILEGES ON * . * TO 'acore'@'%';
+CREATE USER 'acore'@'localhost' IDENTIFIED BY 'SQLPASSWORD';
+GRANT ALL PRIVILEGES ON * . * TO 'acore'@'localhost';
+CREATE DATABASE `acore_world` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE `acore_characters` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE `acore_auth` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
 exit
 ```
 - Change **SQLPASSWORD** to something more secure.
@@ -136,7 +135,7 @@ cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
 ### Disable Password Logins
 - **After confirming that key-based login works**, disable password logins.
 ```bash
-sudo sed -i -E 's/#?PasswordAuthentication yes/PasswordAuthentication no/' ~/etc/ssh/sshd_config
+sudo sed -i -E 's/#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 sudo rm /etc/ssh/sshd_config.d/*
 sudo service ssh restart
 ```
@@ -152,7 +151,6 @@ git -C ~/ clone https://github.com/azerothcore/azerothcore-wotlk.git --branch ma
 ### Add Anticheat Module
 ```bash
 git -C ~/azerothcore/modules clone https://github.com/azerothcore/mod-anticheat
-cp -n ~/azerothcore/modules/mod-anticheat/conf/Anticheat.conf.dist ~/server/etc/Anticheat.conf 
 ```
 ### Get Data Files
 ```bash
@@ -170,13 +168,16 @@ make -j $(nproc) install
 ```bash
 cp -n ~/server/etc/authserver.conf.dist ~/server/etc/authserver.conf
 cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
+cp -n ~/azerothcore/modules/mod-anticheat/conf/Anticheat.conf.dist ~/server/etc/Anticheat.conf 
 sudo sed -i -E 's|^DataDir = .*|DataDir = "/home/USERNAME/server/data"|' ~/server/etc/worldserver.conf
-sudo sed -i -E 's/= "127.0.0.1;3306;acore;acore;/= "127.0.0.1;3306;acore;SQLPASSWORD;/' ~/server/etc/*.conf
+sudo sed -i -E 's|^LogsDir = .*|LogsDir = "/home/USERNAME/server/logs"|' ~/server/etc/*.conf
+sudo sed -i -E 's/= "127.0.0.1;3306;acore;[^;]*;/= "127.0.0.1;3306;acore;SQLPASSWORD;/' ~/server/etc/*.conf
 ```
 - Change **USERNAME** to your Debian user.
 - Change **SQLPASSWORD** to the password for the acore database user.
 ### Launch Server
 ```bash
+mkdir -p ~/server/logs
 screen -AmdS auth ~/server/bin/authserver
 screen -AmdS world ~/server/bin/worldserver
 screen -r world
@@ -185,6 +186,8 @@ screen -r world
 ### Create GM account
 ```bash
 account create USERNAME PASSWORD
+```
+```bash
 account set gmlevel USERNAME 3 -1
 ```
 - Detach from the worldserver screen with Ctrl+A -> Ctrl+D
@@ -229,7 +232,7 @@ acoreupdate
 ## Common Problems
 
 #### Auth/Worldserver wont even start.
-- Make sure you matched the password of the acore [SQL user](#install-sql-database) with the one in [the configs](#edit-configs)
+- Make sure you matched the password of the acore [SQL user](#setup-sql-database) with the one in [the configs](#edit-configs)
 #### Successful login but cant enter the realm.
 - Double check the [realm address.](#set-realm-ip)
 
