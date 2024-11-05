@@ -29,7 +29,7 @@
 
 ### ID
 
-ID that's used in [npc_vendor](npc_vendor#extendedcost).
+ID that's used in [ItemExtendedCost.dbc](itemextendedcost_dbc#id)
 
 ### HonorPoints
 
@@ -91,9 +91,11 @@ The amount of required for [ItemID_5](#itemid_5).
 
 The amount of required personal arena rating.
 
-### ItemPurchaseGroup
+### ItemPurchaseGroup 
 
-ID that's used in [ItemPurchaseGroup.dbc](itempurchasegroup.dbc#id).
+THIS IS UN-USED
+
+ID that's used in [ItemPurchaseGroup.dbc](itempurchasegroup.dbc#id). <br>All entries use "0". No more information
 
 ### DBC File Content
 
