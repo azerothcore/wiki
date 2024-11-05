@@ -42,7 +42,7 @@ The amount of required arena points.
 ### ArenaBracket
 
 | Value | Format |
-| ----- | ------ |
+| :-----: | :------: |
 | 0     | 2 v 2  |
 | 1     | 3 v 3  |
 | 2     | 5 v 5  |
@@ -95,7 +95,7 @@ The amount of required personal arena rating.
 
 ID that's used in [ItemPurchaseGroup.dbc](itempurchasegroup.dbc#id).
 
-### DBC File Cotent
+### DBC File Content
 
 <details>
 
