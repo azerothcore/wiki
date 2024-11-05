@@ -29,7 +29,7 @@
 
 ### ID
 
-ID that's used in [ItemExtendedCost.dbc](itemextendedcost_dbc#id)
+ID that's used in [npc_vendor](npc_vendor#extendedcost)
 
 ### HonorPoints
 
