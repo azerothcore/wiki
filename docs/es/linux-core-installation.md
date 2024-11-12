@@ -120,9 +120,10 @@ Set the user for the units to run as. The username used here is `azerothuser`, a
 export AC_UNIT_USER=azerothuser
 ```
 
-### authserver.service
+### ac-authserver.service
 
 ```sh
+sudo tee /etc/systemd/system/ac-authserver.service << EOF
 [Unit]
 Description=AzerothCore Authserver
 After=network.target
@@ -138,11 +139,13 @@ ExecStart=$AC_CODE_DIR/acore.sh run-authserver
 
 [Install]
 WantedBy=multi-user.target
+EOF
 ```
 
-### worldserver.service
+### ac-worldserver.service
 
 ```sh
+sudo tee /etc/systemd/system/ac-worldserver.service << EOF
 [Unit]
 Description=AzerothCore Worldserver
 After=network.target
@@ -158,27 +161,28 @@ ExecStart=/bin/screen -S worldserver -D -m $AC_CODE_DIR/acore.sh run-worldserver
 
 [Install]
 WantedBy=multi-user.target
+EOF
 ```
 
 systemd is made aware of these new service files with `systemd daemon-reload`. You can start AzerothCore like this:
 
 ```sh
-sudo service worldserver start
-sudo service authserver start
+sudo service ac-worldserver start
+sudo service ac-authserver start
 ```
 
 Or stop it:
 
 ```sh
-sudo service worldserver stop
-sudo service authserver stop
+sudo service ac-worldserver stop
+sudo service ac-authserver stop
 ```
 
 The servers can be set to automatically start when the system boots with:
 
 ```sh
-sudo systemctl enable authserver
-sudo systemctl enable worldserver
+sudo systemctl enable ac-authserver
+sudo systemctl enable ac-worldserver
 ```
 
 ## Help
