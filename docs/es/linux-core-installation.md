@@ -109,6 +109,75 @@ make -j$BUILD_CORES &&
 make install
 ```
 
+## Services
+
+systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
+
+The username used here is `azerothuser`, and should be substituted for your username.
+
+Since these commands won't be run with access to the user's variables, the install directory `$AC_CODE_DIR` must be fully expanded to, for example, `/home/azerothuser/azerothcore`. Run `echo $AC_CODE_DIR` as your user if you're not sure what this should be.
+
+### authserver.service
+
+```sh
+[Unit]
+Description=AzerothCore Authserver
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=azerothcore
+WorkingDirectory=$AC_CODE_DIR
+ExecStart=$AC_CODE_DIR/acore.sh run-authserver
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### worldserver.service
+
+```sh
+[Unit]
+Description=AzerothCore Worldserver
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=azerothcore
+WorkingDirectory=$AC_CODE_DIR
+ExecStart=/bin/screen -S worldserver -D -m $AC_CODE_DIR/acore.sh run-worldserver
+
+[Install]
+WantedBy=multi-user.target
+```
+
+systemd is made aware of these new service files with `systemd daemon-reload`. You can start AzerothCore like this:
+
+```sh
+sudo service worldserver start
+sudo service authserver start
+```
+
+Or stop it:
+
+```sh
+sudo service worldserver stop
+sudo service authserver stop
+```
+
+The servers can be set to automatically start when the system boots with:
+
+```sh
+sudo systemctl enable authserver
+sudo systemctl enable worldserver
+```
+
 ## Help
 
 If you are still having problems, check:
