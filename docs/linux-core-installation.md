@@ -114,9 +114,12 @@ make install
 
 systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
 
-The username used here is `azerothuser`, and should be substituted for your username.
-
 Since these commands won't be run with access to the user's variables, the install directory `$AC_CODE_DIR` must be fully expanded to, for example, `/home/azerothuser/azerothcore`. Run `echo $AC_CODE_DIR` as your user if you're not sure what this should be.
+
+Set the user for the units to run as. The username used here is `azerothuser`, and should be substituted for your username.
+```sh
+export AC_UNIT_USER=azerothuser
+```
 
 ### authserver.service
 
@@ -130,7 +133,7 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=azerothcore
+User=$AC_UNIT_USER
 WorkingDirectory=$AC_CODE_DIR
 ExecStart=$AC_CODE_DIR/acore.sh run-authserver
 
@@ -150,7 +153,7 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=azerothcore
+User=$AC_UNIT_USER
 WorkingDirectory=$AC_CODE_DIR
 ExecStart=/bin/screen -S worldserver -D -m $AC_CODE_DIR/acore.sh run-worldserver
 
