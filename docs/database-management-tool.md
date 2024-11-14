@@ -1,6 +1,6 @@
 # Database Management Tool
 
-- mysql cli (Fastest)
+- MySQL CLI (Fastest)
 
 - [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
 
