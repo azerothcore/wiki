@@ -1,67 +1,66 @@
 # Configuración del Servidor
 
-| Guía de instalación                                                                                                                                 |                                                                        |
-| :-                                                                                                                                                  | :-                                                                     |
-| Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation) |
+| Guía de Instalación                                                                                                                                      |                                                                     |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
+| Este artículo es parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 2: Instalación del Core](core-installation)                                                                                                     | [Paso 4: Instalación de la Base de Datos >>](database-installation) |
 
-Ahora que tiene el código fuente compilado, necesita añadir algunos archivos que son requeridos. Puede añadirlos ya sea descargándolos o extrayéndolos.
+**Tabla de contenido**
+- [Archivos de datos](#archivos-de-datos) - Requerido/Opcional (No es necesario si extraes los archivos).
+- [Extractores](#extractores) - Requerido/Opcional (No es necesario si descargas los archivos).
+- [Archivos de Configuración: Worldserver y Authserver](#archivos-de-configuración-worldserver-y-authserver) - Requerido
 
-Algunos archivos son opcionales pero ALTAMENTE recomendados:
+Ahora que tienes el código fuente compilado, necesitas agregar algunos archivos necesarios, ya sea descargándolos o extrayéndolos.
+
+Algunos archivos son opcionales, pero altamente recomendados:
 
 | Directorio |                       |
-| :-         | :-                    |
+| :--------- | :-------------------- |
 | dbc        | Obligatorio           |
 | maps       | Obligatorio           |
 | vmaps      | ALTAMENTE RECOMENDADO |
 | mmaps      | ALTAMENTE RECOMENDADO |
 | cameras    | Recomendado           |
 
-## Descarga
+## Archivos de datos
 
-Si no desea usar herramientas para extraer estos archivos, puede descargarlos:
+Si tienes la intención de usar un cliente enUS, puedes descargar los archivos de datos a continuación. Si deseas usar un cliente en otro idioma, necesitarás [extraer](#extractores) los datos tú mismo.
 
-Github link:
+<a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Archivos de datos enUS (AC Data v16)</a>
 
-<a href="https://github.com/wowgaming/client-data/releases/" target="_blank">Archivos completos (v13) - Dede 06/01/2022 a la fecha</a> (RECOMENDADO - Usado en el script de descarga automática en `/apps/`)
+1. Descarga los archivos de arriba.
 
-<!-- this link contains v10 -->
-<!-- Mega link:
+2. Crea una nueva carpeta dentro de la carpeta de compilación llamada **Data**. Es decir, en Windows: **C:\Build\bin\RelWithDebInfo\Data** o en Linux: **$HOME/azerothcore/data/**
 
-<a href="https://mega.nz/#F!pyYlkK6b!pNz-zhThXQIg0_rO5L_RsQ" target="_blank">DBC & maps for all versions</a> (ALTERNATIVE)
--->
+3. Extrae los archivos del archivo zip y colócalos dentro de la carpeta **Data**.
 
-1. Descargue los archivos de arriba.
+4. Edita la opción de configuración [DataDir](#updating-datadir) para que apunte a la ubicación de tu carpeta.
 
-1. Cree una nueva carpeta llamada **Data** dentro de la build. Por ejemplo: **E:\AzerothCore\RelWithDebInfo\Data**
+## Extractores
 
-1. Extraiga los archivos comprimidos, dentro de la carpeta **Data** que acabó de crearr.
+**(No es necesario si descargaste los archivos anteriores)**
 
-1. Edite la ruta en el valor de [DataDir](#config-files-worldserver-conf-.--authserver-conf) para que corresponda con la de su carpeta.
+Si descargaste los archivos anteriores, puedes saltarte este paso y continuar con [worldserver.conf y authserver.conf](#archivos-de-configuración-worldserver-y-authserver).
 
-## Extractores (No son necesarios si descargó los archivos anteriores)
+Esta parte es solo un resumen general del proceso. Por favor, léelo con más detalle según el sistema operativo con el que estés trabajando.
 
-Si descargó los archivos anteriores, puede saltarse este paso e ir directamente a [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
+[Configuración de servidor en Linux](linux-server-setup)
 
-Esta parte es simplemente un resúmen general del proceso total. Por favor, lea el que corresponda con su sistema operativo.
+[Configuración de servidor en macOS](macos-server-setup)
 
-[Linux](linux-server-setup)
+[Configuración de servidor en Windows](windows-server-setup)
 
-[macOS](macos-server-setup)
+AzerothCore necesita ciertos archivos extraídos del cliente de World of Warcraft. Debes extraerlos de un cliente 3.3.5a.
 
-[Windows](windows-server-setup)
+Por defecto, compilarás tu núcleo con herramientas y obtendrás los siguientes archivos ejecutables: **mapextractor**, **vmap4extractor**, **vmap4assembler**, **mmaps_generator** (.exe en Windows).
 
-AzerothCore requiere ciertos archivos extraidos del cliente de World of Warcraft. Se deben extraer de un cliente en versión 3.3.5a.
+Coloca los archivos junto a tu archivo binario de World of Warcraft (wow.exe en Windows) y ejecútalos.
 
-Por defecto, usted compilará su código con herramientas y obtendrá los siguientes archivos ejecutables: **mapextractor**, **vmap4extractor**, **vmap4assembler**, **mmaps_generator** (.exe en windows).
+Después de extraer todos los archivos necesarios, crea una carpeta llamada **Data** dentro del directorio **RelWithDebInfo** o **Debug** y coloca los archivos allí. Alternativamente, puedes especificar un directorio diferente donde deseas mantenerlos cambiando el valor de DataDir en el archivo worldserver.conf.
 
-Ubique estos archivos en la carpeta en donde se encuentre el archivo binario de World of Warcraft (wow.exe en windows) y ejecútelos.
+Si usas extractores de otros proyectos o ramas, ¡es casi seguro que tu AzerothCore no reconocerá los datos extraídos o ni siquiera funcionará!
 
-Después de extraer los archivos necesarios cree una carpeta llamada **Data** dentro del directorio **RelWithDebInfo** o **Debug** y ubique los archivos ahí dentro. De forma alternativa, puede especificar un directorio diferente en el que quiera guardar estos archvivos, cambiando el valor de DataDir en el archivo worldserver.conf.
-
-Si usted usa extractores de otros proyectos o ramas, es casi seguro que su instalación de AzerothCore no va a reconocer los archivos extraidos o no van a, siquiera, funcionar.!
-
-Cuando complete el proceso, recibirá el siguiente mensaje, el cual puede ignorar.
+Cuando esto esté completo, puedes recibir el siguiente mensaje, que se puede ignorar con seguridad:
 
 ```
 Processing Map 724
@@ -78,69 +77,75 @@ Extract V4.00 2012_02. Work complete. No errors.
 
 "**Unable to open wmo_list.txt! Nothing extracted.**"
 
-Necesita ejecutar Mapextractor.exe antes que makevmaps_simple.bat.
+Debes ejecutar Mapextractor.exe antes de makevmaps_simple.bat.
 
-## Archivos de configuración: worldserver.conf / authserver.conf
+## Archivos de Configuración: Worldserver y Authserver
+
+Cada vez que se recompila el núcleo, se crea un archivo de configuración .dist, donde se almacenan todas las opciones predeterminadas. Este archivo no tiene un propósito real, excepto para distribuir todas las opciones del núcleo.
 
 ### Creación de los archivos de configuración
 
-1. Haga copias de ambos archivos .dist .
+1. Ve a tu carpeta de configuraciones, por ejemplo, D:\build\bin\RelWithDebInfo\configs
 
-1. Para cada copia remueva la extensión .dist .
+2. Elimina la parte **.dist** de **worldserver.conf.dist** y **authserver.conf.dist**.
 
-Abra los archivos .dist y busque LoginDatabaseInfo, WorlDatabaseInfo y CharacterDatabaseInfo y registre su información de acceso a MySQL para que el servidor pueda accedera su base de datos.
+    - Deberías quedarte con **worldserver.conf** y **authserver.conf**.
 
-En un archivo recién compilado, tendrá los siguientes valores por defecto:
+Abre los archivos .conf y desplázate hasta **LoginDatabaseInfo**, **WorldDatabaseInfo** y **CharacterDatabaseInfo** e ingresa la información de inicio de sesión de MySQL para que el servidor pueda acceder a tu base de datos.
+
+En una configuración recién compilada, tendrás los siguientes valores por defecto:
 
 ```
-LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth" worldserver.conf / authserver.conf
-WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world" worldserver.conf
-CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters" worldserver.conf
+LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth"         -> worldserver.conf / authserver.conf
+WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world"        -> worldserver.conf
+CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters"   -> worldserver.conf
 ```
 
-Estos siguen la siguiente estructura:
+Esa parte de la configuración sigue este formato o estructura específica:
 
 ```
 Variablename = "MySQLIP;Port;Username;Password;database"  
-``` 
+```
 
-Los siguientes pasos deben ser verificados: 
+Los siguientes pasos deben ser verificados:
 
-- El nombre del Host (127.0.0.1) puede quedarse igual si usted instaló AzerothCore en el mismo computador en el que lo va a correr.
-  De lo contrario, siga las instrucciones en [Realmlist Table](realmlist). 
+- El nombre de host (127.0.0.1) puede mantenerse igual si AzerothCore se está instalando en la misma computadora donde ejecutas WoW.
+  Si no es así, sigue las instrucciones en [Tabla Realmlist](realmlist).
 
-- El puerto (3306) el el valor estándar configurado. Si usted lo cambia en la configuración de mysql, recuerde cambiarlo en donde corresponda.
-  El nombre de usuario y la contraseña pueden variar. Usted puede escoger entre: 
+- El puerto (3306) es el valor estándar configurado. Si cambiaste el puerto predeterminado en la configuración de MySQL, debes cambiarlo en consecuencia.
+  El nombre de usuario y la contraseña pueden ser variables. Puedes optar por:
 
-    - Usar los valores por defecto
+    - usar el par de nombre de usuario y contraseña predeterminados acore / acore.
 
-    - Crear un usuario y una contraseña unicos mediante la herramienta de gestión de bases de datos de su preferencia y asignar los permisos necesarios (los permisos para acceder a SELECT, INSERT, UPDATE, DELETE  son suficientes y es lo más seguro).
+    - crear un inicio de sesión único dentro de un Gestor de Usuarios en tu herramienta de gestión de bases de datos preferida (comúnmente identificado por un ícono que parece una persona o varias personas) y darle los permisos necesarios (los permisos SELECT, INSERT, UPDATE, DELETE son suficientes, y es mucho más seguro).
 
-### Actualizando DataDir
+### Actualización de DataDir
 
-1. En su archivo worldserver.conf ubique la opción **DataDir**.
+1. En tu archivo worldserver.conf, localiza la opción **DataDir**.
 
-1. Editela para que corresponda con la ruta de su carpeta. Ejemplo: **E:\AzerothCore\RelWithDebInfo\Data**
+2. Edítala con la ruta de tu carpeta. Por ejemplo, **C:\Build\bin\RelWithDebInfo\Data**
 
-*Consejo: Para la mayoría de los cambios en el archivo worldserver.conf, usted puede simplemente usar el comando .reload config dentro del juego, para ver los cambios instantaneamente sin reiniciar el servidor.*
+{% include tip.html content="Para la mayoría de los cambios en la configuración de worldserver.conf, simplemente puedes escribir .reload config en el juego para ver los cambios al instante sin reiniciar el servidor." %}
 
-*Nota: El equipo de  AzerothCore y los dueños EN NINGUN CASO patrocinan ni apoyan servidores ilegales públicos. Si usted decide usar este proyecto para lanzar un servidor ilegal público es estrictamente su decision personal.*
+{% include warning.html content="El equipo de AzerothCore y los propietarios NO patrocinan ni apoyan en ningún caso servidores públicos ilegales. Si utilizas estos proyectos para ejecutar un servidor público ilegal y no para pruebas o aprendizaje, es tu propia elección personal." %}
 
-<br>
+### (Opcional) Opciones de configuración mediante variables de entorno
+
+Es posible cargar opciones de configuración mediante variables de entorno, de las cuales puedes leer más [aquí](config-overrides-with-env-var).
 
 ## Ayuda
 
-Si sigue teniendo problemas, compruebe:
+Si aún tienes problemas, consulta:
 
-* [Preguntas frecuentes](faq)
+* [Preguntas frecuentes (FAQ)](faq)
 
-* [Errores Comunes](common-errors)
+* [Errores comunes](common-errors)
 
 * [Cómo pedir ayuda](how-to-ask-for-help)
 
-* [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), tenga en cuenta que no es un canal de soporte 24/7. Un miembro del staff member le responderá siempre que tenga tiempo.
+* [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del personal te responderá cuando tenga tiempo.
 
-| Guía de instalación                                                                                                                                 |                                                                        |
-| :-                                                                                                                                                  | :-                                                                     |
-| Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](core-installation)                                                                                             | [Paso 4: Instalación de la Base de Datos >>](database-installation) |
+| Guía de Instalación                                                                                                                                      |                                                                     |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------ |
+| Este artículo es parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 2: Instalación del Core](core-installation)                                                                                                     | [Paso 4: Instalación de la Base de Datos >>](database-installation) |
