@@ -129,7 +129,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 - http://www.slproweb.com/products/Win32OpenSSL.html
 
-{% include note.html content="Find the 64-bit version by finding the latest 3.x.x Win64 OpenSSL that is NOT the "light" version." %}
+{% include note.html content="Find the 64-bit version by finding the latest 3.x.x Win64 OpenSSL that is NOT the `light` version." %}
 
 ### Instalation
 
