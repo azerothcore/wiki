@@ -11,31 +11,31 @@
 | Field                             | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ID](#id)                         | INT     | UNSIGNED   | PRI | NO   | 0       |
-| [ItemID_1](#itemid_1)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_2](#itemid_2)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_3](#itemid_3)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_4](#itemid_4)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_5](#itemid_5)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_6](#itemid_6)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_7](#itemid_7)             | INT     | UNSIGNED   |     | NO   | 0       |
-| [ItemID_8](#itemid_8)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_1](#itemid1)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_2](#itemid2)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_3](#itemid3)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_4](#itemid4)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_5](#itemid5)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_6](#itemid6)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_7](#itemid7)             | INT     | UNSIGNED   |     | NO   | 0       |
+| [ItemID_8](#itemid8)             | INT     | UNSIGNED   |     | NO   | 0       |
 | [Name_Lang_enUS](#name_lang_enus) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_enGB](#name_lang_engb) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_koKR](#name_lang_kokr) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_frFR](#name_lang_frfr) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_deDE](#name_lang_dede) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_enCN](#name_lang_encn) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_zhCN](#name_lang_zhcn) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_enTW](#name_lang_entw) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_zhTW](#name_lang_zhtw) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_esES](#name_lang_eses) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_esMX](#name_lang_esmx) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_ruRU](#name_lang_ruru) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_ptPT](#name_lang_ptpt) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_ptBR](#name_lang_ptbr) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_itIT](#name_lang_itit) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_Unk](#name_lang_unk)   | VARCHAR | UNSIGNED   |     | YES  | NULL    |
-| [Name_Lang_Mask](#name_lang_mask) | INT     | UNSIGNED   |     | NO   | 0       |
+| [Name_Lang_enGB](#namelangengb) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_koKR](#namelangkokr) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_frFR](#namelangfrfr) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_deDE](#namelangdede) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_enCN](#namelangencn) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_zhCN](#namelangzhcn) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_enTW](#namelangentw) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_zhTW](#namelangzhtw) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_esES](#namelangeses) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_esMX](#namelangesmx) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_ruRU](#namelangruru) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_ptPT](#namelangptpt) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_ptBR](#namelangptbr) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_itIT](#namelangitit) | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_Unk](#namelangunk)   | VARCHAR | UNSIGNED   |     | YES  | NULL    |
+| [Name_Lang_Mask](#namelangmask) | INT     | UNSIGNED   |     | NO   | 0       |
 
 ### ID
 
