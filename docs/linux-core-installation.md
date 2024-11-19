@@ -96,9 +96,9 @@ make -j 6 &&
 make install
 ```
 
-## Services
+## (Optional) Systemd Services
 
-systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
+Systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
 
 The username used here is `azerothuser`, and should be substituted for your username.
 
@@ -163,6 +163,13 @@ The servers can be set to automatically start when the system boots with:
 ```sh
 sudo systemctl enable authserver
 sudo systemctl enable worldserver
+```
+
+You can inspect if the services started properly by inspecting the log entries from the systemd journal like so:
+
+```sh
+sudo journalctl authserver.service
+sudo journalctl worldserver.service
 ```
 
 ## Help
