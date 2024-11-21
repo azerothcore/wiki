@@ -4,7 +4,8 @@
 
 **The \`recovery\_item\` table**
 
-This table holds information about character's matchmaker rating in all team types.
+This table holds information about saved items into database when the player sells items to vendor
+Items which were kept back in the database after being deleted and are older than the specified amount of days, will be completely deleted.
 
 **Table Structure**
 
@@ -24,11 +25,13 @@ This table holds information about character's matchmaker rating in all team typ
 
 ### Id
 
-`field-no-description|1`
+The ordinal number of the record in this table.
 
 ### Guid
 
-`field-no-description|2`
+Character guid
+
+See [characters.guid](characters#guid).
 
 ### ItemEntry
 
