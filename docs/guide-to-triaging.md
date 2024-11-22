@@ -26,7 +26,7 @@ Once you have chosen an issue, start by searching for duplicates - quest names, 
 So now we have made sure this is a new bug, decide whether this is obviously incorrect behaviour, or if this might be caused by misunderstanding, misinterpretation, or ignorance of the game. This is often done by checking against the sources as listed below to determine if it is actually a bug at all. Some apparent bugs are intended behaviour, and other reports are caused by changes in the game - for example, what was correct behaviour in Vanilla might be incorrect in Wrath due to balancing changes.
 
 ### 4. Try to reproduce it
-If this is a genuine issue, try to follow the user's instructions to duplicate it. If the user didn't give you enough information to reproduce the problem, you can always ask them to clarify and tag the issue on the CC tracker as "Waiting for Feedback".
+If this is a genuine issue, try to follow the user's instructions to duplicate it. You can do this either in the CC PTR or your own AC local server. If the user didn't give you enough information to reproduce the problem, you can always ask them to clarify and tag the issue on the CC tracker as "Waiting for Feedback".
 
 If you can't make the behaviour reoccur on your own server, be aware that a vanilla AC server does not always behave the same way as the ChromieCraft server. There are numerous mods and other customisations on CC that can have unpredictable effects, and as a result bugs that are not reproduceable on a vanilla AC server are reported reasonably often. 
 
