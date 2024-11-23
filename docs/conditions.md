@@ -1001,6 +1001,13 @@ and the other is just using an emote to appear dead. </p></td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
+<tr class="odd">
+<td>CONDITION_WORLD_SCRIPT</td>
+<td>103</td>
+<td>conditionId</td>
+<td>state</td>
+<td>Always 0</td>
+</tr>
 </tbody>
 </table>
 
@@ -1488,6 +1495,13 @@ Note: it will show or hide spells in vehicle spell bar.
         -   0 = Standing
         -   1 = Sitting
     -   ConditionValue3: always 0
+
+**\*CONDITION\_WORLD\_SCRIPT **= 103****
+
+-   -   ConditionValue1: WorldStateCondition defined in WorldState.h
+    -   ConditionValue2: state or 0 (WORLD_STATE_CONDITION_STATE_NONE)
+    -   ConditionValue3: always 0
+        *NOTE: condition is true if WorldState::IsConditionFulfilled returns true*
 
 ### \***REFERENCE TEMPLATES**
 
