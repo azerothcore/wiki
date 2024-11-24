@@ -143,12 +143,3 @@ Pressumed reference name.
 
 Pressumed reference ID for the Language Mask.
 
-<details>
-
-<summary>Click to see the content </summary>
-
-| ID  | ItemID_1 | ItemID_2 | ItemID_3 | ItemID_4 | ItemID_5 | ItemID_6 | ItemID_7 | ItemID_8 | Name_Lang_enUS                   | Name_Lang_enGB | Name_Lang_koKR | Name_Lang_frFR | Name_Lang_deDE | Name_Lang_enCN | Name_Lang_zhCN | Name_Lang_enTW | Name_Lang_zhTW | Name_Lang_esES | Name_Lang_esMX | Name_Lang_ruRU | Name_Lang_ptPT | Name_Lang_ptBR | Name_Lang_itIT | Name_Lang_Unk | Name_Lang_Mask |
-| --- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------------------------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | ------------- | -------------- |
-| 1   | 34529    | 34530    | 33006    | 0        | 0        | 0        | 0        | 0        | Vengeful Gladiator Ranged Weapon |                |                |                |                |                |                |                |                |                |                |                |                |                |                |               | 16712190       |
-
-</details>
