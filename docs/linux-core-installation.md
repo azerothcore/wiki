@@ -3,7 +3,7 @@
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](linux-server-setup) |
 
 ## Installation directories
 
@@ -96,9 +96,9 @@ make -j 6 &&
 make install
 ```
 
-## Services
+## (Optional) Systemd Services
 
-systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
+Systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
 
 The username used here is `azerothuser`, and should be substituted for your username.
 
@@ -165,6 +165,13 @@ sudo systemctl enable authserver
 sudo systemctl enable worldserver
 ```
 
+You can inspect if the services started properly by inspecting the log entries from the systemd journal like so:
+
+```sh
+sudo journalctl authserver.service
+sudo journalctl worldserver.service
+```
+
 ## Help
 
 If you are still having problems, check:
@@ -180,4 +187,4 @@ If you are still having problems, check:
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](linux-server-setup) |
