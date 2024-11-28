@@ -29,10 +29,6 @@ Item [Name](item_template#name) used in [item_template](item_template)
 
 Which slot the Item will be equipped on.
 
-<details>
-
-<summary>Click to view</summary>
-
 | ID  | Slot Name                                                                                                                              |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | 0   | Non equipable                                                                                                                          |
@@ -64,8 +60,6 @@ Which slot the Item will be equipped on.
 | 26  | Ranged right (Wands, Guns) (see also Ranged = 15)                                                                                      |
 | 27  | Quiver                                                                                                                                 |
 | 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               
-
-</details>
 
 ### WDBVerified
 
