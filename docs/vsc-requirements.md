@@ -7,7 +7,7 @@
 | |
 | :- |
 | Boost ≥ 1.70 - 1.74          |
-| MySQL ≥ 5.7.0                |
+| MySQL ≥ 8.0.0                |
 | OpenSLL ≥ 1.0.x              |
 | CMake ≥ 3.16                 |
 | MS Visual Studio Build Tools |
@@ -22,8 +22,8 @@
 
    To do this, select **Desktop development for C++** under **Workloads -> Desktop & Mobile**.
 
-   <a href="../images/visualstudio_tools.png" target="_blank">
-   <img src="../images/visualstudio_tools.png" height="50%" width="50%">
+   <a href="/wiki/images/visualstudio_tools.png" target="_blank">
+   <img src="/wiki/images/visualstudio_tools.png" height="50%" width="50%">
    </a>
    
 1. [Visual Studio Code](https://code.visualstudio.com/)
@@ -32,11 +32,11 @@
 	1. Install extensions
 		1. Click **View**->**Extensions**
 		
-			<a href="../images/vsc_extensions.png.png" target="_blank"><img src="../images/vsc_extensions.png"></a>
+			<a href="/wiki/images/vsc_extensions.png.png" target="_blank"><img src="/wiki/images/vsc_extensions.png"></a>
 		1. In Search bar type **C/C++ Extension Pack**
 		1. Click on green install button	
 			
-			<a href="../images/visualstudio_tools.png" target="_blank"><img src="../images/vcs_extension_pack_install.png" height="50%" width="50%"></a>
+			<a href="/wiki/images/visualstudio_tools.png" target="_blank"><img src="/wiki/images/vcs_extension_pack_install.png" height="50%" width="50%"></a>
 
 1. [CMake](https://cmake.org/)
 
@@ -73,8 +73,8 @@
 
     1. Add an environment variable to "System" variable named "BOOST_ROOT" and as value your Boost installation directory, e.g `E:/Programs/boost_1_74_0`. Important is to use '**/**', not '**\\**'  when pointing to directory. (Make sure that it does not have a trailing slash (end of path). If you still get problems, add the same variable in the `USER` variables section too, like shown in the image below.)
 
-    <a href="../images/boost.jpg" target="_blank">
-    <img src="../images/boost.jpg" height="50%" width="50%">
+    <a href="/wiki/images/boost.jpg" target="_blank">
+    <img src="/wiki/images/boost.jpg" height="50%" width="50%">
     </a>
 
     1. Notice that this image shows the version number `1.72.0` - use your actual version number in your settings.

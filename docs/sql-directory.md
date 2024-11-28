@@ -8,9 +8,7 @@ All create and drop files are found in the $\data\sql\create\ directory.
 
 `create_mysql.sql` contains the queries to create the acore user and the databases.
 
-`drop_mysql.sql` revokes all permissions and drops the acore user and drops all databases. This is used for MySQL 5.7.
-
-`drop_mysql_8.sql` drops the acore user and drops all databases. This is used for MySQL 8.0 or newer.
+`drop_mysql.sql` drops the acore user and drops all databases.
 
 ## Base files
 

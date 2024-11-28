@@ -28,8 +28,8 @@ The Auth- and Worldserver checks and applies all needed database files at startu
 
 To edit the automatic database updater you will find the necessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
-1. Start Authserver.
-2. Start Worldserver.
+1. Start Authserver.exe, in the Build folder you created, under \bin\RelWithDebInfo or \bin\Debug folder.
+2. Start Worldserver.exe, in the same location.
 
 If you get the following message in your console press enter to create and populate the databases.
 

@@ -1,24 +1,19 @@
-# game\_event\_quest\_condition
+# game_event_quest_condition
 
 [<-Back-to:World](database-world)
 
-**The \`game\_event\_quest\_condition\` table**
+**The \`game_event_quest_condition\` table**
 
 This table contains the mapping of a quest in a world event to the condition that it will fulfill. It also contains how much a given quest will add to a condition once that quest is completed by a player.
 
 **Table Structure**
 
-| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [quest][2]        | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [condition_id][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [num][4]          | FLOAT     | SIGNED     |     | YES  | 0       |       |         |
-
-[1]: #evententry
-[2]: #quest
-[3]: #condition_id
-[4]: #num
+| Field                        | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [eventEntry](#evententry)    | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [quest](#quest)              | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [condition_id](#conditionid) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [num](#num)                  | FLOAT     | SIGNED     |     | YES  | 0       |       |         |
 
 **Description of the fields**
 
@@ -30,7 +25,7 @@ The event that is associated with this quest and condition.
 
 The quest that will trigger this condition.
 
-### condition\_id
+### condition_id
 
 The condition that will be triggered on quest complete.
 

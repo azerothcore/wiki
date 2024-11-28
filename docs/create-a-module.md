@@ -10,17 +10,17 @@ Before start we suggest you to read [Documentation about modular structure](The-
 
 ### Resources
 
-- Module template: [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
+- Module template (heavily recommended): [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
 - Script template: https://github.com/azerothcore/azerothcore-boilerplates
 - All the hooks in the core are listed in [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). If you need custom hooks, they can be added to the core by [sending a PR](How-to-create-a-PR).
-
+- Existing modules listed in the catalogue: [https://www.azerothcore.org/catalogue.html](https://www.azerothcore.org/catalogue.html)
 - If you need to create a new hook for your module, please follow this guide: [How to create a new hook](hooks-script)
 
 ### **The Basis**
 
-1. Create a folder inside modules/ directory
+1. Create a folder inside `modules/` directory
 
-2. Now you can develop add anything to the main project, such as some scripts or 
+2. Now you can develop add anything to the main project, such as some scripts or
 even an entire library
 
 Note: we suggest to use the [directory structure](Directory-Structure) standards of AzerothCore to better organize your modules and be familiar with main project.
@@ -33,7 +33,7 @@ Note: we suggest to use the [directory structure](Directory-Structure) standards
 
   For example ( Assuming you’ve created an src folder ):
 
-  **my_custom_loader.cpp**
+  `my_custom_loader.cpp`
 
  ```cpp
 // From SC
@@ -48,7 +48,7 @@ void Addmod_my_customScripts()
 }
 ```
 
-  NOTE: AddMyCustomScripts is composed by: 
+  NOTE: AddMyCustomScripts is composed by:
 
   Add (Prefix)
 
@@ -68,3 +68,7 @@ if you need to add a custom configuration file to your module that will be insta
 you are able to create base, updates and custom sql that will be automatically loaded in our db_assembler
 
 **work in progress….**
+
+### **Finished creating your module?**
+
+Publish your module to our catalogue: https://www.azerothcore.org/catalogue.html#/how-to

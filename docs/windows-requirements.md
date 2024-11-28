@@ -56,6 +56,8 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
         
         5. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
 
+       Make sure to find the MySQL development files; you'll need them later. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 8.4\lib.
+
 5. Choose a database management tool
 
     - MySQL cli (Fastest)
@@ -76,13 +78,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     
     2. We recommend compiling in 64-bit mode. 
 
-7. MySQL development files
+7. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
 
-    1. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib.
-
-8. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
-
-    1. Find the 64-bit version by finding the latest 3.0.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
+    1. Find the 64-bit version by finding the latest 3.x.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 
     {{site.data.alerts.note}}
     If you get the error 'Missing Microsoft Visual C++ .... Redistributable' while installing OpenSSL, download the <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Direct Download)</a> (1.7MB Installer) and install it.
@@ -92,13 +90,11 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory") when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for <a href="windows-core-installation">Core Installation</a>.
     {{site.data.alerts.end}}
 
-1. [Boost](https://www.boost.org/).
+8. [Boost](https://www.boost.org/).
 
-    1. Download the prebuilt Windows Binary for Visual Studio 2022
+    1. Download the prebuilt Windows Binary for Visual Studio 2022. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download)
 
-    2. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download)
-
-    3. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
+    2. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
 
     <a href="/wiki/images/boost.jpg" target="_blank">
     <img src="/wiki/images/boost.jpg" height="50%" width="50%">

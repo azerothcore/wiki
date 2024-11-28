@@ -1,4 +1,4 @@
-FROM ruby:2.7.0
+FROM ruby:latest
 
 ENV LC_ALL=C.UTF-8=value
 
