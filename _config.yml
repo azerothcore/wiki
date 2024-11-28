@@ -43,7 +43,7 @@ use_prose_io: false
 # - github : it uses internal github repository search
 # - google : it uses cse search bar, you need to configure google_cse_token
 #
-search_engine : "js"
+search_engine : "js_rss"
 # Setting google custom search engine for google
 # cse search bar (https://cse.google.it/cse/)
 google_cse_token:
