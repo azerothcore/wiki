@@ -1067,11 +1067,8 @@ div.alert code, h2 code {
 
 /* this part adds an icon after external links, using FontAwesome*/
 a[href^="http://"]:after, a[href^="https://"]:after {
-  font: var(--fa-font-solid);
-  display: inline-block;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
   content: "\f0c1";
+  font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   font-size: small;
