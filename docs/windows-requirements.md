@@ -6,7 +6,7 @@
 | [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
-Boost ≥ 1.78 up to 1.84<br/>
+Boost ≥ 1.78 up to 1.85<br/>
 MySQL ≥ 8.0 (Recommended 8.4)<br/>
 OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
