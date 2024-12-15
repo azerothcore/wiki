@@ -6,7 +6,7 @@
 | [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
-Boost ≥ 1.78<br/>
+Boost ≥ 1.78 up to 1.84<br/>
 MySQL ≥ 8.0 (Recommended 8.4)<br/>
 OpenSSL ≥ 3.x.x<br/>
 CMake ≥ 3.16<br/>
@@ -90,9 +90,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The Windows system directory") when given the choice of where to copy the OpenSSL DLLs. These DLLs will need to be located easily for <a href="windows-core-installation">Core Installation</a>.
     {{site.data.alerts.end}}
 
-8. [Boost](https://www.boost.org/).
+8. [Boost](https://boostorg.jfrog.io/artifactory/main/release/).
 
-    1. Download the prebuilt Windows Binary for Visual Studio 2022. [64bit](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download)
+    1. Download the prebuilt Windows Binary for Visual Studio 2022. [64bit, this version is 1.81 msvc 14.3](https://sourceforge.net/projects/boost/files/boost-binaries/1.81.0/boost_1_81_0-msvc-14.3-64.exe/download).
 
     2. Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**'  when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
 
