@@ -9,7 +9,7 @@
 | :------------ |
 | MacOS ≥ 11    |
 | OpenSSL ≥ 3.0 |
-| Boost ≥ 1.74 up to 1.84 |
+| Boost ≥ 1.74 up to 1.85 |
 | MySQL ≥ 8.0.0 |
 | CMake ≥ 3.16  |
 
