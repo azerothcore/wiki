@@ -35,6 +35,8 @@ account create admin admin
 account set gmlevel <user> <level> <realm>
 ```
 
+{% include note.html content="If the command was run while the account was logged in you need to relog for the security level to update properly." %}
+
 **Example:**
 
 ```
