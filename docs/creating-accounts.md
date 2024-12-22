@@ -35,6 +35,8 @@ account create admin admin
 account set gmlevel <user> <level> <realm>
 ```
 
+{% include note.html content="If you've ran this command while logged into the account, make sure you log-out and login back to your account otherwise it won't updated your GM Account Level." %}
+
 **Example:**
 
 ```
