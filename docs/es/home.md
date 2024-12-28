@@ -17,7 +17,7 @@ Leer en: [Inglés :gb:](home) [Español :es:](home)
 ## Documentación
 
 - [Índice de documentación](documentation-index) - Toda la documentación en un solo lugar
-- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Documentación del código
+- [Doxygen Docs](https://www.azerothcore.org/doxygen/) - Documentación del código
 
 ## Descripción general
 

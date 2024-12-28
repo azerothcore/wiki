@@ -19,7 +19,7 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 ## Documentation
 
 - [Documentation Index](documentation_index) - All documentation in one place
-- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Code documentation
+- [Doxygen Docs](https://www.azerothcore.org/doxygen) - Code documentation
 
 ### Database Structure
 

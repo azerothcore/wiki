@@ -28,7 +28,7 @@ redirect_from: /documentation_index
 * [Database Squash](database-squash)
 * [DBC Index](dbc-index)
 * [Directory structure](directory-structure)
-* [Doxygen Documentation](https://www.azerothcore.org/pages/doxygen/index.html)
+* [Doxygen Documentation](https://www.azerothcore.org/doxygen)
 * [Exit Codes](exitcodes)
 * [GM Commands](gm-commands)
 * [How to Debug and Restart](how-to-restart-and-debug)
