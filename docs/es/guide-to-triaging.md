@@ -140,5 +140,5 @@ Wowpedia a menudo agrega notas de parche relacionadas con un talento o habilidad
 ## Otros enlaces
 
 - [Versión actual de ChromieCraft](https://github.com/chromiecraft/azerothcore-wotlk)
-- [Mods de ChromieCraft](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO)
+- [Mods de ChromieCraft](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO.md)
 - [Cómo hacer la evaluación de errores](https://github.com/chromiecraft/chromiecraft#for-contributors-how-to-triagereport-bugs)

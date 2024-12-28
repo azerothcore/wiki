@@ -126,5 +126,5 @@ This is a general (and by no means exhaustive) look at the sources we can use to
 
 ## Other Links
 - [Current ChromieCraft version](https://github.com/chromiecraft/azerothcore-wotlk)
-- [ChromieCraft mods](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO)
+- [ChromieCraft mods](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO.md)
 - [How to triage](https://github.com/chromiecraft/chromiecraft#for-contributors-how-to-triagereport-bugs)
