@@ -9,7 +9,7 @@ These are the most useful tools for AzerothCore development.
 - [Unused Guid Search](https://github.com/azerothcore/Unused-Guid-Search) is a tool to find entry or GUID gaps in the database. Learn more about the tool [here](https://github.com/azerothcore/Unused-Guid-Search#readme).
 
 - [AzerothCore Flags Checker](https://www.azerothcore.org/flag-checker/) is a web-based tool to find all flags in a bitmask for creatures. Learn more about the tool [here](https://github.com/azerothcore/flag-checker#readme).
-- 
+
 - [WoW Database Editor](https://github.com/BAndysc/WoWDatabaseEditor) is an IDE for Smart Scripts and database editing. Learn more about the tool [here](https://github.com/BAndysc/WoWDatabaseEditor#readme)
 
 - [AoWoW](https://github.com/azerothcore/aowow) is an armory/database viewer adapted for AzerothCore. Learn more about the tool [here](https://github.com/azerothcore/aowow#readme)
