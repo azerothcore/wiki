@@ -9,7 +9,7 @@
 Boost ≥ 1.78<br/>
 MySQL ≥ 8.0 (Recommended 8.4)<br/>
 OpenSSL ≥ 3.x.x<br/>
-CMake ≥ 3.16<br/>
+CMake ≥ 3.27<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
 1. [Git](https://git-scm.com/download/win)
