@@ -314,3 +314,16 @@ static keyword always should be put as first
 static uint32 someVar = 5;
 static float const otherVar = 1.0f;
 ```
+
+### Header Guards
+
+All Header files should contain header guards
+
+```cpp
+#ifndef MY_HEADER_H
+#define MY_HEADER_H
+
+// Header content here
+
+#endif // MY_HEADER_H
+```
