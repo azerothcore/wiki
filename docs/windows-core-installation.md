@@ -100,13 +100,6 @@ libcrypto-3-x64.dll
 libssl-3-x64.dll
 ```
 
-In the **configs** folder you should find:
-
-```
-authserver.conf.dist
-worldserver.conf.dist
-```
-
 There are four DLL files that need to be manually added to this folder, and you need to copy them from the following directories:
 
 {% include callout.html content="<b>libmysql.dll</b> → C:\Program Files\MySQL\MySQL Server 8.x\lib" type="primary" %}
@@ -114,6 +107,13 @@ There are four DLL files that need to be manually added to this folder, and you 
 {% include note.html content="Your libmysql.dll version need to match the MySQL Server version you run. If you update your MySQL server you need to recompile the core and copy the new dll file over." %}
 
 {% include callout.html content="<b>legacy.dll</b>, <b>libcrypto-3-x64.dll</b> and <b>libssl-3-x64.dll</b> → C:\OpenSSL-Win64\bin" type="primary" %}
+
+In the **configs** folder you should find:
+
+```
+authserver.conf.dist
+worldserver.conf.dist
+```
 
 #### About compilation log and report
 
