@@ -71,7 +71,6 @@ sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libb
 ```bash
 export MYSQL_APT_CONFIG_VERSION=0.8.33-1
 ```
-- Download package, check signature, and install
 ```bash
 mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
 wget "https://dev.mysql.com/get/mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb"
@@ -81,8 +80,7 @@ gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-
 sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
 sudo apt update
 sudo DEBIAN_FRONTEND="noninteractive" apt install -y mysql-server libmysqlclient-dev
-rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all*
-unset MYSQL_APT_CONFIG_VERSION
+rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFIG_VERSION
 ```
 
 ### Setup SQL Database
