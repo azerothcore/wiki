@@ -10,7 +10,7 @@ El resultado es tener siempre un núcleo limpio que es fácil de mantener y mant
 
 Para cambiar las características del juego, los módulos utilizan **script hooks**, que son una colección de funciones [implementadas en el núcleo: ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h) y son capaces de operar desde el principio del servidor (tan pronto como comienza la inicialización del Mundo).
 
-La lista de los hooks de scripts está disponible [aquí](Hooks-Script).
+La lista de los hooks de scripts está disponible [aquí](hooks-script).
 
 A veces necesitas añadir nuevos hooks para tu módulo personalizado, es absolutamente posible añadirlos al núcleo. Sólo hay unos pocos pasos necesarios para crear un nuevo hook, por favor, siga esta guía [aquí](hooks-script) para aprender cómo.
 
