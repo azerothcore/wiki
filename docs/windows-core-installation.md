@@ -31,7 +31,7 @@ Local path: C:\Azerothcore
 Click **Clone**. Within a few minutes, Azerothcore's source files will be cloned into **C:\Azerothcore**.
 
 {{site.data.alerts.note}}
-When using `Github Desktop` if you encounter errors cloning either refering to `fatal: early EOF` or `fatal: fetch-pack: invalid index-pack output` or anything similiar right after the cloning or after a while, consider in using `git bash` to clone azerothcore-wotlk repository, you only need to do this once, updating the core can be done via `Github Desktop` with no issues.
+When using `Github Desktop` if you encounter errors cloning either refering to `fatal: early EOF` or `fatal: fetch-pack: invalid index-pack output` or anything similiar, right after starting the cloning or after a while, consider in using `git bash` to clone azerothcore-wotlk repository, you only need to do this once, updating the core can be done via `Github Desktop` with no issues.
 {{site.data.alerts.end}}
 
 ### In the case of errors during the cloning with `Github Desktop` follow the following steps:
