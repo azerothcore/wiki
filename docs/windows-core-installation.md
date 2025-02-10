@@ -30,6 +30,28 @@ Local path: C:\Azerothcore
 
 Click **Clone**. Within a few minutes, Azerothcore's source files will be cloned into **C:\Azerothcore**.
 
+{{site.data.alerts.note}}
+When using `Github Desktop` if you encounter errors cloning either refering to `fatal: early EOF` or `fatal: fetch-pack: invalid index-pack output` or anything similiar right after the cloning or after a while, consider in using `git bash` to clone azerothcore-wotlk repository, you only need to do this once, updating the core can be done via `Github Desktop` with no issues.
+{{site.data.alerts.end}}
+
+### In the case of errors during the cloning with `Github Desktop` follow the following steps:
+
+We are using `C:\Azerothcore` as the example directory.
+
+1. Open `Git Bash` as Adminstrator
+
+1. Type `cd C:` and press ENTER (instead of `C:` you can use the path `cd "F:\MyFolder\MyOtherFolder"` make sure the path is between quotes " ")
+
+1. Type `mkdir Azerothcore` and press ENTER
+
+1. Type `cd Azerothcore` and press ENTER
+
+1. Type `git clone https://github.com/azerothcore/azerothcore-wotlk` and press ENTER
+
+1. When the cloning finishes go back to your `Github Desktop` and `File` -> `Add local repository` -> `C:\Azerothcore\azerothcore-wotlk` (or use the choose button and use the windows interface.
+
+1. You're done with cloning the core.
+
 ### Configuring and generating Visual C++ solution with CMake
 
 Before you begin, create a new directory called **Build**. In this guide, we will use **C:\Build**.
