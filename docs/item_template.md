@@ -540,7 +540,11 @@ The price that the vendor will pay you for the item when you sell it and if it i
 
 ### InventoryType
 
-In what slot the item can be equipped.
+Which slot the Item will be equipped on.
+
+<details>
+
+<summary>Click to view</summary>
 
 | ID  | Slot Name                                                                                                                              |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -572,7 +576,9 @@ In what slot the item can be equipped.
 | 25  | Thrown                                                                                                                                 |
 | 26  | Ranged right (Wands, Guns) (see also Ranged = 15)                                                                                      |
 | 27  | Quiver                                                                                                                                 |
-| 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               |
+| 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               
+
+</details>                                                                          |
 
 ### AllowableClass
 
