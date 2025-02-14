@@ -1,4 +1,4 @@
-# How To Use Game Events
+# How to use game events
 
 This is a simple example that demonstrates how-to use the `game_event` and `game_event_creature` tables to trigger a repeating in-game event. This is a simple example, but it should be enough to give the reader a taste of what's required to start using in-game events.
 
