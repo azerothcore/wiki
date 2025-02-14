@@ -59,7 +59,7 @@ redirect_from: /documentation_index
 
 ## Tutorials
 
-* [How To Use Game Events](how-to-use-game-events)
+* [How to use game events](how-to-use-game-events)
 
 ## Extend AzerothCore
 
