@@ -40,19 +40,10 @@ jobs:
                 echo "Creating issue for PR #$PR_NUMBER..."
                 
                 # Use GITHUB_TOKEN so GitHub Actions Bot creates the issue
-                ISSUE_URL=$(GH_TOKEN="$GITHUB_TOKEN" gh issue create \
+                GH_TOKEN="$GITHUB_TOKEN" gh issue create \
                   --repo "$REPO_OWNER/$TARGET_REPO" \
                   --title "Wiki Update Needed: $PR_TITLE" \
-                  --body "A PR has been merged that requires a wiki update.\n\nPR: $PR_URL" \
-                  --json url | jq -r '.url')
-
-                echo "Issue created: $ISSUE_URL"
-
-                # Post a comment on the merged PR with a link to the issue
-                echo "Posting a comment on PR #$PR_NUMBER..."
-                GH_TOKEN="$GITHUB_TOKEN" gh pr comment $PR_NUMBER \
-                  --repo "$REPO_OWNER/$SOURCE_REPO" \
-                  --body "An issue has been opened on the wiki repo: [$ISSUE_URL]($ISSUE_URL)"
+                  --body "A PR has been merged that requires a wiki update. PR: $PR_URL"
               fi
             else
               echo "PR #$PR_NUMBER does not have the 'Requires WIKI Update' label. Skipping."
