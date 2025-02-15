@@ -1,0 +1,51 @@
+name: Requires WIKI Update
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # Runs every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  check-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get merged PRs with Requires WIKI Update label
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }} # Must have 'repo' scope
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Default token for GitHub Actions Bot
+          REPO_OWNER: "AzerothCore"
+          SOURCE_REPO: "azerothcore-wotlk"
+          TARGET_REPO: "wiki"
+        run: |
+          # Get the last 5 merged PRs (adjust as needed)
+          MERGED_PRS=$(GH_TOKEN="$PAT_TOKEN" gh pr list --repo "$REPO_OWNER/$SOURCE_REPO" --state merged --limit 5 --json number,title,labels,url)
+
+          echo "Checking PRs..."
+          echo "$MERGED_PRS" | jq -c '.[]' | while read -r PR; do
+            PR_NUMBER=$(echo "$PR" | jq -r '.number')
+            PR_TITLE=$(echo "$PR" | jq -r '.title')
+            PR_URL=$(echo "$PR" | jq -r '.url')
+            LABELS=$(echo "$PR" | jq -r '.labels[].name')
+
+            # Check if the PR has the required label
+            if echo "$LABELS" | grep -q "Requires WIKI Update"; then
+              echo "Checking for existing issue related to PR #$PR_NUMBER..."
+
+              # Search for existing issues in TARGET_REPO using GITHUB_TOKEN
+              EXISTING_ISSUE=$(gh issue list --repo "$REPO_OWNER/$TARGET_REPO" --state open --search "$PR_URL" --json title,url | jq -r '.[0].url')
+
+              if [[ -n "$EXISTING_ISSUE" && "$EXISTING_ISSUE" != "null" ]]; then
+                echo "An open issue already exists: $EXISTING_ISSUE"
+              else
+                echo "Creating issue for PR #$PR_NUMBER..."
+                
+                # Use GITHUB_TOKEN so GitHub Actions Bot creates the issue
+                GH_TOKEN="$GITHUB_TOKEN" gh issue create \
+                  --repo "$REPO_OWNER/$TARGET_REPO" \
+                  --title "Wiki Update Needed: $PR_TITLE" \
+                  --body "A PR has been merged that requires a wiki update. PR: $PR_URL"
+              fi
+            else
+              echo "PR #$PR_NUMBER does not have the 'Requires WIKI Update' label. Skipping."
+            fi
+          done
