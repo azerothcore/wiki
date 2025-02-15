@@ -11,6 +11,8 @@
 - [areatrigger_scripts](areatrigger_scripts)
 - [areatrigger_tavern](areatrigger_tavern)
 - [areatrigger_teleport](areatrigger_teleport)
+- [arena_season_reward](arena_season_reward)
+- [arena_season_reward_group](arena_season_reward_group)
 
 ## B
 - [battleground_template](battleground_template)

@@ -7,6 +7,7 @@
 - [addons](addons)
 - [arena_team](arena_team)
 - [arena_team_member](arena_team_member)
+- [active_arena_season](active_arena_season)
 - [auctionhouse](auctionhouse)
 
 ## B
