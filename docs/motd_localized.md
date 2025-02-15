@@ -1,4 +1,4 @@
-# motd
+# motd_localized
 
 [<-Back-to:Auth](database-auth)
 

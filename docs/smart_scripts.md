@@ -2,7 +2,7 @@
 redirect_from: "/sai"
 ---
 
-# smart\_scripts
+# smart_scripts
 
 [<-Back-to:World](database-world)
 
@@ -62,7 +62,7 @@ The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL la
 
 - EntryOrGuid > 0: `entry` of the creature / game object / etc.
 - EntryOrGuid < 0: `guid` of the creature / game object / etc.
-- **Depends on source\_type.**
+- **Depends on source_type.**
 
 When using GUID-specific SAI, the extra_flag DONT_OVERRIDE_SAI_ENTRY allows us to not require duplicating rows shared between all creatures of the same entry.
 
@@ -70,70 +70,70 @@ For example, you can keep all movement-related scripting in the GUID script, whi
 
 For creatures that use this flag, SAI row IDs cannot overlap, thus we use row IDs starting with 1000 and incrementing it (e.g. 1000, 1001, 1002, ...).
 
-### source\_type
+### source_type
 
 Object type: creature, game object, spell. see table below for values
 
-| Name                                   | Value |
-| -------------------------------------- | ----- |
-| SMART\_SCRIPT\_TYPE\_CREATURE          | 0     |
-| SMART\_SCRIPT\_TYPE\_GAMEOBJECT        | 1     |
-| SMART\_SCRIPT\_TYPE\_AREATRIGGER       | 2     |
-| SMART\_SCRIPT\_TYPE\_TIMED\_ACTIONLIST | 9     |
+| Name                               | Value |
+| ---------------------------------- | ----- |
+| SMART_SCRIPT_TYPE_CREATURE         | 0     |
+| SMART_SCRIPT_TYPE_GAMEOBJECT       | 1     |
+| SMART_SCRIPT_TYPE_AREATRIGGER      | 2     |
+| SMART_SCRIPT_TYPE_TIMED_ACTIONLIST | 9     |
 
 ### id
 
-Incremental id *bound* to each entryorguid & source\_type (0, 1, 2, ...).
+Incremental id *bound* to each entryorguid & source_type (0, 1, 2, ...).
 
 ### link
 
 Simple event linking;
 
-- Example: if id = 0 and link = 1; id 1 will only be able to occur if id = 0 was triggered (id 1 has to use event\_type SMART\_EVENT\_LINK).
-- Smart\_event to be used.
+- Example: if id = 0 and link = 1; id 1 will only be able to occur if id = 0 was triggered (id 1 has to use event_type SMART_EVENT_LINK).
+- Smart_event to be used.
 
 **Thanks to the use of links, you can execute several actions, keeping the same event.**
 
-### event\_phase\_mask
+### event_phase_mask
 
 When dealing with phases, *phase IDs* have to be used. There are 13 (12+1) different phases: 1, 2, ... 12 and the default 0.
 
 **Example:** The script is in phase 0 by default - If we want it to go to phase 1, we got two choices:
 
-- SMART\_ACTION\_INC\_PHASE by 1 or SMART\_ACTION\_SET\_PHASE 1
+- SMART_ACTION_INC_PHASE by 1 or SMART_ACTION_SET_PHASE 1
 
 If the script is in phase 0 and want to skip to phase 2:
 
-- SMART\_ACTION\_INC\_PHASE by 2 or SMART\_ACTION\_SET\_PHASE 2
+- SMART_ACTION_INC_PHASE by 2 or SMART_ACTION_SET_PHASE 2
 
 If the script is in phase 1 and want to skip to phase 2:
 
-- SMART\_ACTION\_INC\_PHASE by 1 or SMART\_ACTION\_SET\_PHASE 2
+- SMART_ACTION_INC_PHASE by 1 or SMART_ACTION_SET_PHASE 2
 
-| Name                             | Flag | Hex   | Comment                     |
-| -------------------------------- | ---- | ----- | --------------------------- |
-| SMART\_EVENT\_PHASE\_ALWAYS\_BIT | 0    | 0x000 | Means all phases (1 ... 12) |
-| SMART\_EVENT\_PHASE\_1           | 1    | 0x001 | Phase 1 only.               |
-| SMART\_EVENT\_PHASE\_2           | 2    | 0x002 | Phase 2 only.               |
-| SMART\_EVENT\_PHASE\_3           | 4    | 0x004 | Phase 3 only.               |
-| SMART\_EVENT\_PHASE\_4           | 8    | 0x008 | Phase 4 only.               |
-| SMART\_EVENT\_PHASE\_5           | 16   | 0x010 | Phase 5 only.               |
-| SMART\_EVENT\_PHASE\_6           | 32   | 0x020 | Phase 6 only.               |
-| SMART\_EVENT\_PHASE\_7           | 64   | 0x040 | Phase 7 only.               |
-| SMART\_EVENT\_PHASE\_8           | 128  | 0x080 | Phase 8 only.               |
-| SMART\_EVENT\_PHASE\_9           | 256  | 0x100 | Phase 9 only.               |
-| SMART\_EVENT\_PHASE\_10          | 512  | 0x200 | Phase 10 only.              |
-| SMART\_EVENT\_PHASE\_11          | 1024 | 0x400 | Phase 11 only.              |
-| SMART\_EVENT\_PHASE\_12          | 2048 | 0x800 | Phase 12 only.              |
+| Name                         | Flag | Hex   | Comment                     |
+| ---------------------------- | ---- | ----- | --------------------------- |
+| SMART_EVENT_PHASE_ALWAYS_BIT | 0    | 0x000 | Means all phases (1 ... 12) |
+| SMART_EVENT_PHASE_1          | 1    | 0x001 | Phase 1 only.               |
+| SMART_EVENT_PHASE_2          | 2    | 0x002 | Phase 2 only.               |
+| SMART_EVENT_PHASE_3          | 4    | 0x004 | Phase 3 only.               |
+| SMART_EVENT_PHASE_4          | 8    | 0x008 | Phase 4 only.               |
+| SMART_EVENT_PHASE_5          | 16   | 0x010 | Phase 5 only.               |
+| SMART_EVENT_PHASE_6          | 32   | 0x020 | Phase 6 only.               |
+| SMART_EVENT_PHASE_7          | 64   | 0x040 | Phase 7 only.               |
+| SMART_EVENT_PHASE_8          | 128  | 0x080 | Phase 8 only.               |
+| SMART_EVENT_PHASE_9          | 256  | 0x100 | Phase 9 only.               |
+| SMART_EVENT_PHASE_10         | 512  | 0x200 | Phase 10 only.              |
+| SMART_EVENT_PHASE_11         | 1024 | 0x400 | Phase 11 only.              |
+| SMART_EVENT_PHASE_12         | 2048 | 0x800 | Phase 12 only.              |
 
 - Event will only be able to occur if creature/GO is in this phase.
-- Example: If we want an event to only be able to occure in phase 1 and 4, **event\_phase\_mask** = 1+8 = 9
+- Example: If we want an event to only be able to occure in phase 1 and 4, **event_phase_mask** = 1+8 = 9
 
-### event\_chance
+### event_chance
 
 This is the probability of the event to occur as a percentage from 0-100. So, if you want the event to occur roughly half of the time, then set this to 50. 
 
-### event\_flags
+### event_flags
 
 | Name                            | Flag | Hex   | Comment                                        |
 | ------------------------------- | ---- | ----- | ---------------------------------------------- |
@@ -151,7 +151,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 - Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
 - Values can be added together (bitwise math).
 
-### event\_type
+### event_type
 
 | Name                              | Value | Param1                                                | Param2                      | Param3            | Param4                          | Param5          | Param6   | Comment                                                                      |
 | --------------------------------- | ----- | ----------------------------------------------------- | --------------------------- | ----------------- | ------------------------------- | --------------- | -------- | ---------------------------------------------------------------------------- |
@@ -234,7 +234,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMART_EVENT_WAYPOINT_DATA_REACHED | 108   | PointId (0 any)                                       | pathId (0 any)              |                   |                                 |                 |          | On Creature Waypoint Reached. Uses 'waypoint_data' table                     |
 | SMART_EVENT_WAYPOINT_DATA_ENDED   | 109   | PointId (0 any)                                       | pathId (0 any)              |                   |                                 |                 |          | On Creature Waypoint Finished. Uses 'waypoint_data' table                    |
 | SMART_EVENT_IS_IN_MELEE_RANGE     | 110   | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       | Distance        | Invert   | On Creature is in melee range of target                                      |
-### action\_type
+### action_type
 
 | Name                                            | Value | Param1                                                                                                                                                                                                                                                                                                                                                                                                                                 | Param2                                                                                               | Param3                                                                                                                     | Param4                                                                                        | Param5                                                                                                          | Param6                                             | Comment                                                                                                                                                                                                                                                                                                                                   |
 | ----------------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -447,7 +447,7 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMART_TARGET_CLOSEST_ENEMY          | 25    | maxDist                                             | playerOnly (0/1)                              |                                                        |                                       |          |          |          |                                                                                                                               | Any attackable target (creature or player) within maxDist                                                  |
 | SMART_TARGET_CLOSEST_FRIENDLY       | 26    | maxDist                                             | playerOnly (0/1)                              |                                                        |                                       |          |          |          |                                                                                                                               | Any friendly unit (creature, player or pet) within maxDist                                                 |
 | SMART_TARGET_LOOT_RECIPIENTS        | 27    |                                                     |                                               |                                                        |                                       |          |          |          |                                                                                                                               | All players that have tagged this creature (for kill credit)                                               |
-| SMART_TARGET_FARTHEST               | 28    | maxDist                                             | playerOnly (0/1)                              | isInLos (0/1)                                          |                                       |          |          |          |                                                                                                                               | Farthest unit on the threat list                                                                           |
+| SMART_TARGET_FARTHEST               | 28    | maxDist                                             | playerOnly (0/1)                              | isInLos (0/1)                                          | minDist                               |          |          |          |                                                                                                                               | Farthest unit on the threat list                                                                           |
 | SMART_TARGET_VEHICLE_PASSENGER      | 29    | seat number (vehicle can target it's own accessory) |                                               |                                                        |                                       |          |          |          |                                                                                                                               |                                                                                                            |
 | SMART_TARGET_PLAYER_WITH_AURA       | 201   | spellID                                             | Negative (0/1)                                | MaxDist                                                | MinDist                               |          |          |          | Number to resize the target list                                                                                              | Target players with or without aura                                                                        |
 | SMART_TARGET_RANDOM_POINT           | 202   | range (yards)                                       | amount (for summoning creature)               | self as middle (0/1)<br/>else use xyz                  |                                       |          |          |          |                                                                                                                               | This only works with SMART_ACTION_SUMMON_CREATURE,   SMART_ACTION_MOVE_TO_POS and SMART_ACTION_JUMP_TO_POS |
@@ -465,7 +465,7 @@ Commenting on SAI uses a template which is the following: (with an example)
 
 **Quick notes:**
 
-- Always update *creature\_template*,*gameobject\_template* or *areatrigger\_scripts* with:
+- Always update *creature_template*,*gameobject_template* or *areatrigger_scripts* with:
 
 ```sql
 UPDATE `creature_template` SET `AIName` = 'SmartAI' WHERE `entry` = y;
@@ -475,20 +475,20 @@ UPDATE `gameobject_template` SET `AIName` = 'SmartGameObjectAI' WHERE `entry` = 
 INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigger');
 ```
 
-- If the creature or GO is inside a dungeon, set *event\_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
+- If the creature or GO is inside a dungeon, set *event_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
 
-**In case of doubt about an *Event*, *Action\_or \_Target,\_check source code (\_src/server/game/AI/SmartScripts* files; mainly \*SmartScript.cpp**)
+**In case of doubt about an *Event*, *Action_or _Target,_check source code (_src/server/game/AI/SmartScripts* files; mainly \*SmartScript.cpp**)
 
 ### Cast Flags
 
-| Name                               | Flag | Hex   | Comment                                                                     |
-| ---------------------------------- | ---- | ----- | --------------------------------------------------------------------------- |
-| SMARTCAST\_INTERRUPT\_PREVIOUS     | 1    | 0x001 | Interrupt any spell casting                                                 |
-| SMARTCAST\_TRIGGERED               | 2    | 0x002 | Triggered (this makes spell cost zero mana and have no cast time)           |
-| SMARTCAST\_AURA\_NOT\_PRESENT      | 32   | 0x020 | Only casts the spell if the target does not have an aura from the spell     |
-| SMARTCAST\_COMBAT\_MOVE            | 64   | 0x040 | Prevent combat movement on cast, allow on fail range, mana, LOS             |
-| SMARTCAST\_THREATLIST\_NOT\_SINGLE | 128  | 0x080 | Only cast if the source's threatlist is higher than one. This includes pets |
-| SMARTCAST\_TARGET\_POWER\_MANA     | 256  | 0x100 | Only cast if the target has power type mana                                 |
+| Name                            | Flag | Hex   | Comment                                                                     |
+| ------------------------------- | ---- | ----- | --------------------------------------------------------------------------- |
+| SMARTCAST_INTERRUPT_PREVIOUS    | 1    | 0x001 | Interrupt any spell casting                                                 |
+| SMARTCAST_TRIGGERED             | 2    | 0x002 | Triggered (this makes spell cost zero mana and have no cast time)           |
+| SMARTCAST_AURA_NOT_PRESENT      | 32   | 0x020 | Only casts the spell if the target does not have an aura from the spell     |
+| SMARTCAST_COMBAT_MOVE           | 64   | 0x040 | Prevent combat movement on cast, allow on fail range, mana, LOS             |
+| SMARTCAST_THREATLIST_NOT_SINGLE | 128  | 0x080 | Only cast if the source's threatlist is higher than one. This includes pets |
+| SMARTCAST_TARGET_POWER_MANA     | 256  | 0x100 | Only cast if the target has power type mana                                 |
 
 ### Triggered Flags
 
@@ -521,91 +521,91 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 
 ### React States
 
-| Name              | Value | Comment                                                       |
-| ----------------- | ----- | ------------------------------------------------------------- |
-| REACT\_PASSIVE    | 0     | Does not defend or attack at all. Does nothing.               |
-| REACT\_DEFENSIVE  | 1     | Only attacks back when attacked.                              |
-| REACT\_AGGRESSIVE | 2     | Will attack if on threat list and in threat radius. (default) |
+| Name             | Value | Comment                                                       |
+| ---------------- | ----- | ------------------------------------------------------------- |
+| REACT_PASSIVE    | 0     | Does not defend or attack at all. Does nothing.               |
+| REACT_DEFENSIVE  | 1     | Only attacks back when attacked.                              |
+| REACT_AGGRESSIVE | 2     | Will attack if on threat list and in threat radius. (default) |
 
 ### Summon Types
 
-| Name                                        | Value | Comment                                                              |
-| ------------------------------------------- | ----- | -------------------------------------------------------------------- |
-| TEMPSUMMON\_TIMED\_OR\_DEAD\_DESPAWN        | 1     | Despawns after a specified time OR when the creature disappears.     |
-| TEMPSUMMON\_TIMED\_OR\_CORPSE\_DESPAWN      | 2     | Despawns after a specified time OR when the creature dies.           |
-| TEMPSUMMON\_TIMED\_DESPAWN                  | 3     | Despawns after a specified time.                                     |
-| TEMPSUMMON\_TIMED\_DESPAWN\_OUT\_OF\_COMBAT | 4     | Despawns after a specified time after the creature is out of combat. |
-| TEMPSUMMON\_CORPSE\_DESPAWN                 | 5     | Despawns instantly after death.                                      |
-| TEMPSUMMON\_CORPSE\_TIMED\_DESPAWN          | 6     | Despawns after a specified time after death.                         |
-| TEMPSUMMON\_DEAD\_DESPAWN                   | 7     | Despawns when the creature disappears.                               |
-| TEMPSUMMON\_MANUAL\_DESPAWN                 | 8     | Despawns when UnSummon() (or Force Despawn action) is called.        |
+| Name                                   | Value | Comment                                                              |
+| -------------------------------------- | ----- | -------------------------------------------------------------------- |
+| TEMPSUMMON_TIMED_OR_DEAD_DESPAWN       | 1     | Despawns after a specified time OR when the creature disappears.     |
+| TEMPSUMMON_TIMED_OR_CORPSE_DESPAWN     | 2     | Despawns after a specified time OR when the creature dies.           |
+| TEMPSUMMON_TIMED_DESPAWN               | 3     | Despawns after a specified time.                                     |
+| TEMPSUMMON_TIMED_DESPAWN_OUT_OF_COMBAT | 4     | Despawns after a specified time after the creature is out of combat. |
+| TEMPSUMMON_CORPSE_DESPAWN              | 5     | Despawns instantly after death.                                      |
+| TEMPSUMMON_CORPSE_TIMED_DESPAWN        | 6     | Despawns after a specified time after death.                         |
+| TEMPSUMMON_DEAD_DESPAWN                | 7     | Despawns when the creature disappears.                               |
+| TEMPSUMMON_MANUAL_DESPAWN              | 8     | Despawns when UnSummon() (or Force Despawn action) is called.        |
 
 ### Smart Follow Types
 
-| Name                               | Value | Comment                                                       |
-| ---------------------------------- | ----- | ------------------------------------------------------------- |
-| FOLLOW\_TYPE\_CIRCLE               | 1     | 360º Degrees around leader. 90º Degrees is the maximum angle. |
-| FOLLOW\_TYPE\_SEMI\_CIRCLE\_BEHIND | 2     | 180º Degrees behind leader.                                   |
-| FOLLOW\_TYPE\_SEMI\_CIRCLE\_FRONT  | 3     | 180º Degrees in front of leader.                              |
-| FOLLOW\_TYPE\_LINE                 | 4     | Front \-\> Back \-\> Front \-\> Back.                         |
-| FOLLOW\_TYPE\_COLUMN               | 5     | Left \-\> Right \-\> Left \-\> Right.                         |
-| FOLLOW\_TYPE\_ANGULAR              | 6     | Geese-like formation 135º and 225º degrees behind leader.     |
+| Name                           | Value | Comment                                                       |
+| ------------------------------ | ----- | ------------------------------------------------------------- |
+| FOLLOW_TYPE_CIRCLE             | 1     | 360º Degrees around leader. 90º Degrees is the maximum angle. |
+| FOLLOW_TYPE_SEMI_CIRCLE_BEHIND | 2     | 180º Degrees behind leader.                                   |
+| FOLLOW_TYPE_SEMI_CIRCLE_FRONT  | 3     | 180º Degrees in front of leader.                              |
+| FOLLOW_TYPE_LINE               | 4     | Front \-\> Back \-\> Front \-\> Back.                         |
+| FOLLOW_TYPE_COLUMN             | 5     | Left \-\> Right \-\> Left \-\> Right.                         |
+| FOLLOW_TYPE_ANGULAR            | 6     | Geese-like formation 135º and 225º degrees behind leader.     |
 
 ### Power Types
 
-| Name          | Value |
-| ------------- | ----- |
-| POWER\_MANA   | 0     |
-| POWER\_RAGE   | 1     |
-| POWER\_FOCUS  | 2     |
-| POWER\_ENERGY | 3     |
+| Name         | Value |
+| ------------ | ----- |
+| POWER_MANA   | 0     |
+| POWER_RAGE   | 1     |
+| POWER_FOCUS  | 2     |
+| POWER_ENERGY | 3     |
 
 ### Invoker:
 
 > white list of events that actually have an invoker passed to them
 
-> Actions like SMART\_ACTION\_INVOKER\_CAST and targets like SMART\_TARGET\_ACTION\_INVOKER will work only if the event is in this list:
+> Actions like SMART_ACTION_INVOKER_CAST and targets like SMART_TARGET_ACTION_INVOKER will work only if the event is in this list:
 
-- SMART\_EVENT\_AGGRO
-- SMART\_EVENT\_DEATH
-- SMART\_EVENT\_KILL
-- SMART\_EVENT\_SUMMONED\_UNIT
-- SMART\_EVENT\_SPELLHIT
-- SMART\_EVENT\_SPELLHIT\_TARGET
-- SMART\_EVENT\_DAMAGED
-- SMART\_EVENT\_RECEIVE\_HEAL
-- SMART\_EVENT\_RECEIVE\_EMOTE
-- SMART\_EVENT\_JUST\_SUMMONED
-- SMART\_EVENT\_DAMAGED\_TARGET
-- SMART\_EVENT\_SUMMON\_DESPAWNED
-- SMART\_EVENT\_PASSENGER\_BOARDED
-- SMART\_EVENT\_PASSENGER\_REMOVED
-- SMART\_EVENT\_GOSSIP\_HELLO
-- SMART\_EVENT\_GOSSIP\_SELECT
-- SMART\_EVENT\_ACCEPTED\_QUEST
-- SMART\_EVENT\_REWARD\_QUEST
-- SMART\_EVENT\_FOLLOW\_COMPLETED
-- SMART\_EVENT\_ON\_SPELLCLICK
-- SMART\_EVENT\_GO\_LOOT\_STATE\_CHANGED
-- SMART\_EVENT\_AREATRIGGER\_ONTRIGGER
-- SMART\_EVENT\_IC\_LOS
-- SMART\_EVENT\_OOC\_LOS
-- SMART\_EVENT\_DISTANCE\_CREATURE
-- SMART\_EVENT\_FRIENDLY\_HEALTH
-- SMART\_EVENT\_FRIENDLY\_HEALTH\_PCT
-- SMART\_EVENT\_FRIENDLY\_IS\_CC
-- SMART\_EVENT\_FRIENDLY\_MISSING\_BUFF
-- SMART\_EVENT\_ACTION\_DONE
-- SMART\_EVENT\_TARGET\_HEALTH\_PCT
-- SMART\_EVENT\_TARGET\_MANA\_PCT
-- SMART\_EVENT\_RANGE
-- SMART\_EVENT\_VICTIM\_CASTING
-- SMART\_EVENT\_TARGET\_BUFFED
-- SMART\_EVENT\_IS\_BEHIND\_TARGET
-- SMART\_EVENT\_INSTANCE\_PLAYER\_ENTER
-- SMART\_EVENT\_TRANSPORT\_ADDCREATURE
-- SMART\_EVENT\_DATA\_SET
-- SMART\_EVENT\_AREA\_CASTING
-- SMART\_EVENT\_AREA\_RANGE
-- SMART\_EVENT\_SUMMONED\_UNIT\_EVADE
-- SMART\_EVENT\_IS\_IN\_MELEE\_RANGE
+- SMART_EVENT_AGGRO
+- SMART_EVENT_DEATH
+- SMART_EVENT_KILL
+- SMART_EVENT_SUMMONED_UNIT
+- SMART_EVENT_SPELLHIT
+- SMART_EVENT_SPELLHIT_TARGET
+- SMART_EVENT_DAMAGED
+- SMART_EVENT_RECEIVE_HEAL
+- SMART_EVENT_RECEIVE_EMOTE
+- SMART_EVENT_JUST_SUMMONED
+- SMART_EVENT_DAMAGED_TARGET
+- SMART_EVENT_SUMMON_DESPAWNED
+- SMART_EVENT_PASSENGER_BOARDED
+- SMART_EVENT_PASSENGER_REMOVED
+- SMART_EVENT_GOSSIP_HELLO
+- SMART_EVENT_GOSSIP_SELECT
+- SMART_EVENT_ACCEPTED_QUEST
+- SMART_EVENT_REWARD_QUEST
+- SMART_EVENT_FOLLOW_COMPLETED
+- SMART_EVENT_ON_SPELLCLICK
+- SMART_EVENT_GO_LOOT_STATE_CHANGED
+- SMART_EVENT_AREATRIGGER_ONTRIGGER
+- SMART_EVENT_IC_LOS
+- SMART_EVENT_OOC_LOS
+- SMART_EVENT_DISTANCE_CREATURE
+- SMART_EVENT_FRIENDLY_HEALTH
+- SMART_EVENT_FRIENDLY_HEALTH_PCT
+- SMART_EVENT_FRIENDLY_IS_CC
+- SMART_EVENT_FRIENDLY_MISSING_BUFF
+- SMART_EVENT_ACTION_DONE
+- SMART_EVENT_TARGET_HEALTH_PCT
+- SMART_EVENT_TARGET_MANA_PCT
+- SMART_EVENT_RANGE
+- SMART_EVENT_VICTIM_CASTING
+- SMART_EVENT_TARGET_BUFFED
+- SMART_EVENT_IS_BEHIND_TARGET
+- SMART_EVENT_INSTANCE_PLAYER_ENTER
+- SMART_EVENT_TRANSPORT_ADDCREATURE
+- SMART_EVENT_DATA_SET
+- SMART_EVENT_AREA_CASTING
+- SMART_EVENT_AREA_RANGE
+- SMART_EVENT_SUMMONED_UNIT_EVADE
+- SMART_EVENT_IS_IN_MELEE_RANGE

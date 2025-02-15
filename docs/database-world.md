@@ -141,6 +141,7 @@
 - [player_factionchange_reputations](player_factionchange_reputations)
 - [player_factionchange_spells](player_factionchange_spells)
 - [player_factionchange_titles](player_factionchange_titles)
+- [player_loot_template](loot_template)
 - [player_race_stats](player_race_stats)
 - [player_xp_for_level](player_xp_for_level)
 - [playercreateinfo](playercreateinfo)

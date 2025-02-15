@@ -531,7 +531,7 @@ This field is overridden by ScriptName field if both are set.
 | ArcherAI       | Creature casts spell from field spell1; chases the victim.                                          |
 | TurretAI       | Creature attacks using spell from field spell1; does not move.                                      |
 | VehicleAI      | Creature acts as player vehicle.                                                                    |
-| SmartAI        | Creature uses the "[smart_scripts](smart_scripts)" table to specify it's behaviour.              |
+| SmartAI        | Creature uses the "[smart_scripts](smart_scripts)" table to specify it's behaviour.                 |
 
 #### MovementType
 
@@ -568,7 +568,7 @@ The formulas to calculate the damage output are:
 MINDAMAGE = ((([damage_base](creature_classlevelstats#damage_base) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
 MAXDAMAGE = (((([damage_base](creature_classlevelstats#damage_base) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
 
-damage_base comes from the creature_classlevelstats table and takes its value either from [damage\_base](creature_classlevelstats#damage_base), [damage\_exp1](creature_classlevelstats#damage_exp1) or [damage\_exp2](creature_classlevelstats#damage_exp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
+damage_base comes from the creature_classlevelstats table and takes its value either from [damage_base](creature_classlevelstats#damage_base), [damage_exp1](creature_classlevelstats#damage_exp1) or [damage_exp2](creature_classlevelstats#damage_exp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
 
 BaseAttackTime is either [BaseAttackTime](#baseattacktime) or [RangeAttackTime](#rangeattacktime) depending on the type of attack.
 
@@ -683,7 +683,7 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 256        | CREATURE_FLAG_EXTRA_NO_TAUNT                        | 0x00000100 | creature is immune to taunt-auras and "attack me"-effects                                                                              |
 | 512        | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | 0x00000200 | (CREATURE_FLAG_EXTRA_UNUSED_10 Not Implemented) creature won't update movement flags                                                   |
 | 1024       | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | 0x00000400 | creature will be only visible for dead players                                                                                         |
-| 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | creature will use offhand attacks                                                      |
+| 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | creature will use offhand attacks                                                                                                      |
 | 4096       | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | 0x00001000 | players can't sell items to this vendor                                                                                                |
 | 8192       | CREATURE_FLAG_EXTRA_IGNORE_COMBAT                   | 0x00002000 |                                                                                                                                        |
 | 16384      | CREATURE_FLAG_EXTRA_WORLDEVENT                      | 0x00004000 | custom flag for world events (left room for merging)                                                                                   |

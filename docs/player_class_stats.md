@@ -1,8 +1,8 @@
-# player\_class\_stats
+# player_class_stats
 
 [<-Back-to:World](database-world)
 
-**The \`player\_class\_stats\` table**
+**The \`player_class_stats\` table**
 
 This table holds information on what values are applied to stats for characters as they level up. All of the values in this table signify only the base stats of a class at a specific level.
 
@@ -83,10 +83,10 @@ The base spirit to be applied to a character.
 | 9     | 1     | 23     | 90       | 20       | 20      | 21      | 22        | 22     |
 | 11    | 1     | 44     | 60       | 21       | 20      | 20      | 22        | 22     |
 
-**Relation to [\`player\_race\_stats\`](player_race_stats)**
+**Relation to [\`player_race_stats\`](player_race_stats)**
 
-This table alone does not define the stats of a character at any level. The values from this table are combined with the values found in the `player\_race\_stats` table to apply the final stats to a character at any level.
+This table alone does not define the stats of a character at any level. The values from this table are combined with the values found in the `player_race_stats` table to apply the final stats to a character at any level.
 
-The way the final stat can be calculated is as follows: Take the base stat from this table and add the modifier for that stat from `player\_race\_stats`.
+The way the final stat can be calculated is as follows: Take the base stat from this table and add the modifier for that stat from `player_race_stats`.
 
 For example, a druid at level forty has a base strength stat of forty-six. Combining that with a night elf's strength modifier of negative four, you get a final value of forty-two.

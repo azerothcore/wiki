@@ -509,8 +509,38 @@ This will show or hide spells in vehicle spell bar.</td>
 </td>
 </tr>
 <tr class="even">
+<td>CONDITION_SOURCE_TYPE_PLAYER_LOOT_TEMPLATE</td>
+<td>28</td>
+<td>player_loot_template.entry</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td><br />
+</td>
+</tr>
+<tr class="odd">
+<td>CONDITION_SOURCE_TYPE_CREATURE_RESPAWN</td>
+<td>29</td>
+<td>enum-no-details|29</td>
+<td>enum-no-details|29</td>
+<td>enum-no-details|29</td>
+<td>enum-no-details|29</td>
+<td><br />
+</td>
+</tr>
+<tr class="even">
+<td>CONDITION_SOURCE_TYPE_CREATURE_VISIBILITY</td>
+<td>29</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td>0/1</td>
+<td><br />
+</td>
+</tr>
+<tr class="odd">
 <td>CONDITION_SOURCE_TYPE_MAX</td>
-<td>27</td>
+<td>31</td>
 <td><br />
 </td>
 <td><br />
