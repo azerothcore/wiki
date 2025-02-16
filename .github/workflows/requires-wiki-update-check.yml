@@ -11,14 +11,13 @@ jobs:
     steps:
       - name: Get merged PRs with Requires WIKI Update label
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }} # Must have 'repo' scope
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Default token for GitHub Actions Bot
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: "AzerothCore"
           SOURCE_REPO: "azerothcore-wotlk"
           TARGET_REPO: "wiki"
         run: |
           # Get the last 10 merged PRs (adjust as needed)
-          MERGED_PRS=$(GH_TOKEN="$PAT_TOKEN" gh pr list --repo "$REPO_OWNER/$SOURCE_REPO" --state merged --limit 10 --json number,title,labels,url)
+          MERGED_PRS=$(gh pr list --repo "$REPO_OWNER/$SOURCE_REPO" --state merged --limit 10 --json number,title,labels,url)
 
           echo "Checking PRs..."
           echo "$MERGED_PRS" | jq -c '.[]' | while read -r PR; do
