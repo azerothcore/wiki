@@ -17,7 +17,7 @@ jobs:
           TARGET_REPO: "wiki"
         run: |
           # Get the last 10 merged PRs (adjust as needed)
-          MERGED_PRS=$(gh pr list --repo "$REPO_OWNER/$SOURCE_REPO" --state merged --limit 10 --json number,title,labels,url)
+          MERGED_PRS=$(gh pr list --repo "$REPO_OWNER/$SOURCE_REPO" --state merged --search "sort:updated-desc" --limit 30 --json number,title,labels,url)
 
           echo "Checking PRs..."
           echo "$MERGED_PRS" | jq -c '.[]' | while read -r PR; do
