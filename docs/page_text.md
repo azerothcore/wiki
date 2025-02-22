@@ -10,10 +10,10 @@ This table holds the text for letter items or any items that when moused-over tu
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Text][2]          | longtext  | SIGNED     |     | NO   | NULL    |       |         |
-| [NextPageID][3]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild][4] | SMALLINT  | SIGNED     |     | YES  | 1       |       |         |
+| [ID][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Text][2]          | LONGTEXT  | SIGNED     |     | NO   |         |       |         |
+| [NextPageID][3]    | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [VerifiedBuild][4] | INT       | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #ID
 [2]: #Text
