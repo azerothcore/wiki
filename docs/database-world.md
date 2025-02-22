@@ -6,6 +6,7 @@
 - [achievement_reward](achievement_reward)
 - [achievement_reward_locale](achievement_reward_locale)
 - [acore_string](acore_string)
+- [antidos_opcode_policies](antidos_opcode_policies)
 - [areatrigger](areatrigger)
 - [areatrigger_involvedrelation](areatrigger_involvedrelation)
 - [areatrigger_scripts](areatrigger_scripts)

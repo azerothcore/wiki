@@ -4,7 +4,7 @@ tableofcontents: 1
 
 # Core Scripts
 
-When dealing with Creature-, GameObject- and Spell scripts we should always use the new registry macros introduced in [this](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99) commit.
+When dealing with Creature-, GameObject-, Spell- and Instancescripts we should always use the new registry macros introduced in [this](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99) and [this](https://github.com/azerothcore/azerothcore-wotlk/commit/8cc47ab1f174e82d74b2e17b4af13ded0f37a693) commit.
 
 ## Creature Scripts
 
@@ -240,6 +240,37 @@ void AddSC_item_spell_scripts()
 }
 ```
 
+## Instance Scripts
+
+```cpp
+#define RegisterInstanceScript(script_name, mapId) new GenericInstanceMapScript<script_name>(#script_name, mapId)
+```
+
+Example:
+```cpp
+// instance.cpp
+class instance_instance_script : public InstanceScript
+{
+public:
+    instance_instance_script(Map* map) : InstanceScript(map) { }
+
+    void SomeFunction(uint32 /*var*/)
+    {
+        /* Some code*/
+    }
+}
+
+void AddSC_instance()
+{
+    /* RegisterInstanceScript(script_name, mapId); */
+    RegisterInstanceScript(InstanceScriptName, InstanceMapID);
+}
+
+/* instance.h */
+#define InstanceScriptName "instance_instance_script"
+static constexpr uint32 InstanceMapID = 533;
+```
+
 ## Assigning Script in the Database
 
 All scripts are assigned in the world database.
@@ -286,3 +317,13 @@ DELETE FROM `spell_script_names` WHERE `spell_id` = 1 AND `ScriptName` = 'spell_
 ```
 
 The only time it is okay to only delete the ScriptName is when we are deleting or adding a new script in the core.
+
+### InstanceScripts
+
+| Table             | Column |
+| ----------------- | ------ |
+| instance_template | script |
+
+In **instance_template** we assign the script to the instance map id.
+
+The **script** is the the same as the assigned name for the instance. F.ex *instance_instance_script*.
