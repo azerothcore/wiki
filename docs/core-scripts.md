@@ -263,12 +263,8 @@ public:
 void AddSC_instance()
 {
     /* RegisterInstanceScript(script_name, mapId); */
-    RegisterInstanceScript(InstanceScriptName, InstanceMapID);
+    RegisterInstanceScript(instance_instance_script, 533);
 }
-
-/* instance.h */
-#define InstanceScriptName "instance_instance_script"
-static constexpr uint32 InstanceMapID = 533;
 ```
 
 ## Assigning Script in the Database
