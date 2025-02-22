@@ -256,7 +256,7 @@ public:
 
     void SomeFunction(uint32 /*var*/)
     {
-        /* Some code*/
+        /* Some code */
     }
 }
 
