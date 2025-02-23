@@ -30,6 +30,10 @@ Local path: C:\Azerothcore
 
 Click **Clone**. Within a few minutes, Azerothcore's source files will be cloned into **C:\Azerothcore**.
 
+#### Troubleshooting
+
+If you encounter an error like **fatal: early EOF** or **fatal: fetch-pack: invalid index-pack output** you can find a workaround here: [Common Errors ACE00105](common-errors#ace00105).
+
 ### Configuring and generating Visual C++ solution with CMake
 
 Before you begin, create a new directory called **Build**. In this guide, we will use **C:\Build**.

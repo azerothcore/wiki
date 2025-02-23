@@ -307,5 +307,16 @@ If you get an error that *CMake could NOT find OpenSSL*
 
 ---------------------------------------------------------
 
+[ACE00105](#ace00105)
+- If you encounter an error like **fatal: early EOF** or **fatal: fetch-pack: invalid index-pack output**
+  - Try updating your restarting your Github Desktop.
+  - Consider using Git Bash
+    - Run Git Bash
+    - Run `cd "D:/Path/To/Your/Dir/"`
+    - Run `git clone https://github.com/azerothcore/azerothcore-wotlk.git`
+    - Your repository will now be found in `D:/Path/To/Your/Dir/azerothcore-wotlk`
+
+---------------------------------------------------------
+
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
 | --------------------------------------------------------------------------------------------------------------------------------------------- |
