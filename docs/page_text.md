@@ -10,21 +10,21 @@ This table holds the text for letter items or any items that when moused-over tu
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Text][2]          | longtext  | SIGNED     |     | NO   | NULL    |       |         |
-| [NextPageID][3]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild][4] | SMALLINT  | SIGNED     |     | YES  | 1       |       |         |
+| [ID][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Text][2]          | LONGTEXT  | SIGNED     |     | NO   |         |       |         |
+| [NextPageID][3]    | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [VerifiedBuild][4] | INT       | SIGNED     |     | YES  | NULL    |       |         |
 
-[1]: #ID
-[2]: #Text
-[3]: #NextPageID
-[4]: #VerifiedBuild
+[1]: #id
+[2]: #text
+[3]: #nextpageid
+[4]: #verifiedbuild
 
 **Description of the fields**
 
 ### ID
 
-The ID of the text in the page. This number is unique to every text ID.
+Unique identifier
 
 ### Text
 
@@ -32,6 +32,6 @@ The actual text. The message in this field will be shown as the text on a page.
 
 ### NextPageID
 
-The ID of the next page's text [ID](#page_text-ID).
+The ID of the next page. [page_text.id](#id).
 
 ### VerifiedBuild

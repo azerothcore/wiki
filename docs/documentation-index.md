@@ -57,6 +57,10 @@ redirect_from: /documentation_index
 * [Wypoint information](waypoints-information)
 * [How to obtain free records](how-to-obtain-free-records)
 
+## Tutorials
+
+* [How to use game events](how-to-use-game-events)
+
 ## Extend AzerothCore
 
 * [The Modular Structure](the-modular-structure)
