@@ -59,7 +59,7 @@ Which slot the Item will be equipped on.
 | 25  | Thrown                                                                                                                                 |
 | 26  | Ranged right (Wands, Guns) (see also Ranged = 15)                                                                                      |
 | 27  | Quiver                                                                                                                                 |
-| 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               
+| 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               |                                                                             
 
 ### WDBVerified
 
