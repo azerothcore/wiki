@@ -212,6 +212,8 @@ Depending on what command was used, the meaning and use for the following fields
   - 1 - play direct sound to target (must be Player).
   - 2 - play sound with distance dependency to anyone.
   - 3 - play sound with distance dependency to target (must be Player).
+  - 4 - play sound within radius to anyone.
+- dataint: radius if datalong2 value is 4
 
 #### \*SCRIPT\_COMMAND\_CREATE\_ITEM = 17
 

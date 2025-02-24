@@ -57,7 +57,8 @@ Got your WoW server installed? Congratulations! Now let's see what you can do ne
 
 ## Access the game, learn the GM commands
 
-First of all, `set realmlist localhost` and join your own server using the `test1` account with password `a` (yes, one-letter password). This account is already `GM` so you can use the commands from this list:
+First of all, make sure your Client has their realmlist.wtf set to the following: `set realmlist localhost`. After this (assuming you've already setup AzerothCore) make sure you've a `GM` (Security of 2 or Higher) account created. If you haven't created an account or you're not sure follow this [Creating Accounts](creating-accounts).
+After this your `GM` account will be able to use the following commands from link with a list of all commands below:
 
 - [azerothcore.org/wiki/GM-Commands](GM-Commands)
 

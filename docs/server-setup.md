@@ -1,14 +1,14 @@
 # Server Setup
 
-| Installation Guide                                                                                                                      |                                                              |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
+| Installation Guide                                                                                                                   |                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
 
 **Table of contents**
-- [Download](#download) - Required/Optional (Not needed if you extract the files.)
+- [Data files](#data-files) - Required/Optional (Not needed if you extract the files.)
 - [Extractors](#extractors) - Required/Optional (Not needed if you download the files.)
-- [Config Files](#config-files) - Required
+- [Config Files: Worldserver and Authserver](#config-files-worldserver-and-authserver) - Required
 
 Now that you have the source compiled, you need to add some necessary files, by either downloading or extracting them.
 
@@ -22,7 +22,7 @@ Some files are optional but highly recommended:
 | mmaps     | HIGHLY RECOMMENDED |
 | cameras   | Recommended        |
 
-## Download
+## Data files
 
 If you intend to use an enUS client you can download the data files below. If you intend to use any other language client you will need to [extract](#extractors) the data yourself.
 
@@ -40,7 +40,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 **(Not needed if you downloaded the files above)**
 
-If you downloaded the files above you can skip this step and jump forward to [worldserver.conf / authserver.conf](#worldserverconf--authserverconf).
+If you downloaded the files above you can skip this step and jump forward to [worldserver.conf and authserver.conf](#config-files-worldserver-and-authserver).
 
 This part is just a general summary of the overall process - please read it in more detail for the OS you are working with.
 
@@ -79,9 +79,7 @@ Extract V4.00 2012_02. Work complete. No errors.
 
 You need to run Mapextractor.exe before the makevmaps_simple.bat.
 
-## Config Files
-
-The configuration, conf, files are where you configure your settings for the world- and authserver.
+## Config Files: Worldserver and Authserver
 
 Every time the core is recompiled a distributed, .dist, conf file will be made where all the default options are stored. This file serves no real purpose except for distributing all the options from the core.
 
@@ -98,12 +96,12 @@ Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, an
 On a newly compiled configuration, you will have the following values by default
 
 ```
-LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth" worldserver.conf / authserver.conf
-WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world" worldserver.conf
-CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters" worldserver.conf
+LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth"         -> worldserver.conf / authserver.conf
+WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world"        -> worldserver.conf
+CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters"   -> worldserver.conf
 ```
 
-They follow this structure:
+That part of the configuration follows this specific format or structure:
 
 ```
 Variablename = "MySQLIP;Port;Username;Password;database"  
@@ -131,25 +129,15 @@ The following steps must be verified:
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 
-<br>
-
 ### (Optional) Config options by environment variable
 
 It is possible to load config options via environment variables, which you can read about [here](config-overrides-with-env-var).
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide                                                                                                                      |                                                              |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
+| Installation Guide                                                                                                                   |                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
 | [<< Step 2: Core Installation](core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |

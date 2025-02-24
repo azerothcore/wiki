@@ -1,9 +1,9 @@
 # Final Server Steps
 
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                   |                                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 5: Networking](networking) | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
+| [<< Step 5: Networking](networking)                                                                                                  | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
 
 ## Starting the server
 
@@ -36,17 +36,9 @@ For development purposes, this step is not necessary. However, for increased sec
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                   |                                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 5: Networking](networking) | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
+| [<< Step 5: Networking](networking)                                                                                                  | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |

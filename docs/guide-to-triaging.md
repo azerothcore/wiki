@@ -26,7 +26,7 @@ Once you have chosen an issue, start by searching for duplicates - quest names, 
 So now we have made sure this is a new bug, decide whether this is obviously incorrect behaviour, or if this might be caused by misunderstanding, misinterpretation, or ignorance of the game. This is often done by checking against the sources as listed below to determine if it is actually a bug at all. Some apparent bugs are intended behaviour, and other reports are caused by changes in the game - for example, what was correct behaviour in Vanilla might be incorrect in Wrath due to balancing changes.
 
 ### 4. Try to reproduce it
-If this is a genuine issue, try to follow the user's instructions to duplicate it. If the user didn't give you enough information to reproduce the problem, you can always ask them to clarify and tag the issue on the CC tracker as "Waiting for Feedback".
+If this is a genuine issue, try to follow the user's instructions to duplicate it. You can do this either in the CC PTR or your own AC local server. If the user didn't give you enough information to reproduce the problem, you can always ask them to clarify and tag the issue on the CC tracker as "Waiting for Feedback".
 
 If you can't make the behaviour reoccur on your own server, be aware that a vanilla AC server does not always behave the same way as the ChromieCraft server. There are numerous mods and other customisations on CC that can have unpredictable effects, and as a result bugs that are not reproduceable on a vanilla AC server are reported reasonably often. 
 
@@ -66,17 +66,6 @@ For the AC issue, if you are copying an issue from CC then you can add the 'Conf
 For the CC issue, you can tag it with 'Confirmed', 'Linked to AC', and a tag indicating level range or Generic if that doesn't apply. Again, if there are other relevant tags such as 'Class Issue', feel free to add them.
 
 If you have the right permissions, also add the new AC issue to whichever project is relevant, usually the one matching the issue's level range.
-
-#### Priority Tags
-You can also set the perceived priority of an issue via tags. They are:
-
-| Tag Level | Description |
-|-----------|-------------|
-| **Critical** | Should only be used in the event of server-breaking bugs |
-| **High** | Game-breaking bugs with no workaround |
-| **Medium** | Game-breaking bugs that do have a workaround |
-| **Low** | More typical bugs with quests/items/NPCs, etc. Your 'standard' bug |
-| **Trivial** | Bugs that have no real impact on gameplay, typically cosmetic |
 
 ## Guidelines
 - **Use your judgement.** We are there to exercise our best judgement, not just as photocopiers. We have access to tools and information that most players don't, so we should be able to see more deeply into a problem than they can and make decisions accordingly.
@@ -137,5 +126,5 @@ This is a general (and by no means exhaustive) look at the sources we can use to
 
 ## Other Links
 - [Current ChromieCraft version](https://github.com/chromiecraft/azerothcore-wotlk)
-- [ChromieCraft mods](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO)
+- [ChromieCraft mods](https://github.com/chromiecraft/chromiecraft/blob/main/.github/CC_SERVER_INFO.md)
 - [How to triage](https://github.com/chromiecraft/chromiecraft#for-contributors-how-to-triagereport-bugs)

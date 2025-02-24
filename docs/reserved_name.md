@@ -18,4 +18,4 @@
 
 ### name
 
-Name to be reserevd
+Name to be reserved

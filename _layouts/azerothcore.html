@@ -37,14 +37,12 @@
         <div class="git-wiki-page">
             {% include git-wiki/sections/tools/tools.html %}
 
-            {% include important.html content="As of 19/09/24 all versions of MariaDB, MySQL 5.7 and 8.1 will no longer be supported. Consider upgrading to MySQL 8.0 or 8.4." %}
-
             {% if site.inc_before_toc %}
             {% include {{ site.inc_before_toc }} %}
             {% endif %}
             
             {% if page.tableofcontents %}
-            {% include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" h_min=1 h_max=3 ordered=1 %}
+            {% include git-wiki/components/toc/toc-lib.html title="Contents:" minHeaders=1 html=content sanitize=true class="inline_toc" h_min=1 h_max=2 ordered=1 %}
             {% endif %}
             
             {% if site.inc_after_toc %}

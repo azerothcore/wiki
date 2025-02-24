@@ -6,11 +6,14 @@
 - [achievement_reward](achievement_reward)
 - [achievement_reward_locale](achievement_reward_locale)
 - [acore_string](acore_string)
+- [antidos_opcode_policies](antidos_opcode_policies)
 - [areatrigger](areatrigger)
 - [areatrigger_involvedrelation](areatrigger_involvedrelation)
 - [areatrigger_scripts](areatrigger_scripts)
 - [areatrigger_tavern](areatrigger_tavern)
 - [areatrigger_teleport](areatrigger_teleport)
+- [arena_season_reward](arena_season_reward)
+- [arena_season_reward_group](arena_season_reward_group)
 
 ## B
 - [battleground_template](battleground_template)
@@ -139,6 +142,7 @@
 - [player_factionchange_reputations](player_factionchange_reputations)
 - [player_factionchange_spells](player_factionchange_spells)
 - [player_factionchange_titles](player_factionchange_titles)
+- [player_loot_template](loot_template)
 - [player_race_stats](player_race_stats)
 - [player_xp_for_level](player_xp_for_level)
 - [playercreateinfo](playercreateinfo)

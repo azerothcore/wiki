@@ -8,7 +8,7 @@ tableofcontents: 1
 If you have trouble installing or compiling AzerothCore read [Common Errors](common-errors).
 
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
-| --- |
+| --------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## General-related FAQ
 
@@ -85,10 +85,10 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - You can follow the [Core Installation](core-installation) guide to find the libraries.
 
 - I am missing the libraries for OpenSSL and can't seem to find them in the repository?
-  - For OpenSSL versions prior to 1.1.0 they will be named "libeay32.dll" and "ssleay32.dll".
-  - For OpenSSL versions 1.1.0 and more recent they are called:
-    - For 32bit installs: "libssl-1_1.dll" and "libcrypto-1_1.dll".
-    - for 64bit installs: "libssl-1_1-x64.dll" and "libcrypto-1_1-x64.dll"
+  - You need the following dlls:
+    - legacy.dll
+    - libcrypto-3-x64.dll
+    - libssl-3-x64.dll
   - You can follow the [Core Installation](core-installation) guide to find the libraries.
 
 ## Debug-related FAQ
@@ -118,4 +118,4 @@ If you have trouble installing or compiling AzerothCore read [Common Errors](com
   - All disabling is handled in the [disables table](disables).
 
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
-| --- |
+| --------------------------------------------------------------------------------------------------------------------------------------------- |

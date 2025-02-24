@@ -62,7 +62,7 @@ The global unique identifier for the game object. This field must be unique amon
 
 ### id
 
-The template ID of the gameobject. See [gameobject\_template.entry](http://www.azerothcore.org/wiki/gameobject_template#entry)
+The template ID of the gameobject. See [gameobject_template.entry](http://www.azerothcore.org/wiki/gameobject_template#entry)
 
 ### map
 
@@ -99,15 +99,15 @@ Just like flags you can add them as you wish so 3 would be: Spawned in 10/25 man
 
 This is a bitmask field that describes all the phases that this gameobject will appear in. Aura 261 determines the phase you can see. For example, if you had this aura <http://www.wowhead.com/?spell=55782>, you would be able to see gameobjects in phase 2. If you wanted the gameobject to be visible in both phase 1 and phase 2, you would set the phaseMask to 3.
 
-### position\_x
+### position_x
 
 The X position.
 
-### position\_y
+### position_y
 
 The Y position.
 
-### position\_z
+### position_z
 
 The Z position.
 
@@ -144,9 +144,9 @@ For chests or doors.
 
 ### ScriptName
 
-Same as gameobject\_template.scriptname.
+Same as gameobject_template.scriptname.
 
-A gameobject.scriptname record will override a [gameobject\_template.scriptname](gameobject_template#gameobject_template-scriptname) record.
+A gameobject.scriptname record will override a [gameobject_template.scriptname](gameobject_template#gameobject_template-scriptname) record.
 
 ### VerifiedBuild
 

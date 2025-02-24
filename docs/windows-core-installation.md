@@ -1,9 +1,9 @@
 # Windows Core Installation
 
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                   |                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](windows-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](windows-requirements)                                                                                      | [Step 3: Server Setup >>](server-setup) |
 
 ## Required software
 
@@ -29,6 +29,10 @@ Local path: C:\Azerothcore
 ```
 
 Click **Clone**. Within a few minutes, Azerothcore's source files will be cloned into **C:\Azerothcore**.
+
+#### Troubleshooting
+
+If you encounter an error like **fatal: early EOF** or **fatal: fetch-pack: invalid index-pack output** you can find a workaround here: [Common Errors ACE00105](common-errors#ace00105).
 
 ### Configuring and generating Visual C++ solution with CMake
 
@@ -95,20 +99,18 @@ authserver.pbd
 worldserver.exe
 worldserver.pdb
 libmysql.dll
-
----------
-For OpenSSL 1.1.x
-
-libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
-ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
-
----------
-For OpenSSL 3.0 and later
-
 legacy.dll
-libcrypto-3.dll / libcrypto-3-x64.dll
-libssl-3.dll / libssl-3-x64.dll
+libcrypto-3-x64.dll
+libssl-3-x64.dll
 ```
+
+There are four DLL files that need to be manually added to this folder, and you need to copy them from the following directories:
+
+{% include callout.html content="<b>libmysql.dll</b> → C:\Program Files\MySQL\MySQL Server 8.x\lib" type="primary" %}
+
+{% include note.html content="Your libmysql.dll version need to match the MySQL Server version you run. If you update your MySQL server you need to recompile the core and copy the new dll file over." %}
+
+{% include callout.html content="<b>legacy.dll</b>, <b>libcrypto-3-x64.dll</b> and <b>libssl-3-x64.dll</b> → C:\OpenSSL-Win64\bin" type="primary" %}
 
 In the **configs** folder you should find:
 
@@ -116,25 +118,6 @@ In the **configs** folder you should find:
 authserver.conf.dist
 worldserver.conf.dist
 ```
-
-There are two/three DLL files that need to be manually added to this folder, and you need to copy them from the following installation/bin directories:
-
-{% include callout.html content="<b>libmysql.dll</b> → C:\Program Files\MySQL\MySQL Server 8.x\lib" type="primary" %}
-
-{% include note.html content="You need the exact version of libmysql to correspond to the MySQL you have downloaded. Due to this you cannot download the DLL from the web and need to take it out of the folder." %}
-
-#### OpenSSL _before_ version 1.1.0:
-
-{% include callout.html content="<b>libeay32.dll</b> and <b>ssleay32.dll</b> → C:\OpenSSL-Win64\ or C:\OpenSSL-Win32\ <i>(depends on if your core is 64-bit or 32-bit)</i>." type="primary" %}
-
-#### OpenSSL 1.1.x names have changed:
-
-{% include callout.html content="<b>libssl-1_1-x64.dll</b> and <b>libcrypto-1_1-x64.dll</b> → C:\OpenSSL-Win64\bin" type="primary" %}
-
-#### OpenSSL 3.0 and more recent installed, you need to copy:
-
-{% include callout.html content="<b>legacy.dll</b>  → C:\OpenSSL-Win(32/64)\bin<br/>
-<b>libcrypto-3-x64.dll</b> and <b>libssl-3-x64.dll</b> → C:\OpenSSL-Win64\bin" type="primary" %}
 
 #### About compilation log and report
 
@@ -146,17 +129,9 @@ pdb files only exist if you compile with Debug or RelWithDebInfo configuration. 
 
 ## Help
 
-If you are still having problems, check: 
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                   |                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](windows-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](windows-requirements)                                                                                      | [Step 3: Server Setup >>](server-setup) |

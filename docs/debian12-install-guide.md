@@ -67,32 +67,32 @@ sudo ufw enable
 sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full screen fail2ban -y
 ```
 ### Get MySQL
+- Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) to verify the latest version.
+```bash
+export MYSQL_APT_CONFIG_VERSION=0.8.33-1
+```
 ```bash
 mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
-wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
-sudo DEBIAN_FRONTEND="noninteractive" dpkg -i mysql-apt-config_0.8.32-1_all.deb
-sudo apt update && sudo apt install libmysqlclient-dev mysql-server -y
-sudo mysql_secure_installation
+wget "https://dev.mysql.com/get/mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb"
+wget "https://dev.mysql.com/downloads/gpg/?file=mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb&p=37" -O mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
+gpg --keyserver keyserver.ubuntu.com --recv-keys A8D3785C
+gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+sudo apt update
+sudo DEBIAN_FRONTEND="noninteractive" apt install -y mysql-server libmysqlclient-dev
+rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFIG_VERSION
 ```
-- Validate password component:   N
-- Change the password for root:  N
-- Remove anonymous users:        Y
-- Disallow root login remotely:  Y
-- Remove test database:          Y
-- Reload privilege tables:       Y
+
 ### Setup SQL Database
 ```bash
-sudo mysql -u root -p
-```
-- Enter the root password you set in the previous step.
-```bash
+sudo mysql <<EOF
 DROP USER IF EXISTS 'acore'@'localhost';
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'SQLPASSWORD';
-GRANT ALL PRIVILEGES ON * . * TO 'acore'@'localhost';
-CREATE DATABASE `acore_world` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE `acore_characters` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE `acore_auth` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-exit
+GRANT ALL PRIVILEGES ON *.* TO 'acore'@'localhost';
+CREATE DATABASE \`acore_world\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE \`acore_characters\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE \`acore_auth\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+EOF
 ```
 - Change **SQLPASSWORD** to something more secure.
 ---
@@ -194,12 +194,9 @@ account set gmlevel USERNAME 3 -1
 
 ### Set Realm IP
 ```bash
-sudo mysql -u acore -p
-```
-- Enter the password for the acore database user.
-```sql
+sudo mysql <<EOF
 UPDATE acore_auth.realmlist SET address = '0.0.0.0' WHERE id = 1;
-exit
+EOF
 ```
 - Change **0.0.0.0** to the public IP address of your Debian12 server.
 ## Finish!

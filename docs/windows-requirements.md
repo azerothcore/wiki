@@ -1,15 +1,15 @@
 # Windows Requirements
 
-| Installation Guide                                                                                                                      |                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
+| Installation Guide                                                                                                                   |                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                           |
+| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
 MySQL ≥ 8.0 (Recommended 8.4)<br/>
 OpenSSL ≥ 3.x.x<br/>
-CMake ≥ 3.16<br/>
+CMake ≥ 3.27<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
 1. [Git](https://git-scm.com/download/win)
@@ -106,17 +106,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide                                                                                                                      |                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                      |
-| [<< Start: Installation Guide](classic-installation)                                                                                         | [Step 2: Core Installation >>](windows-core-installation) |
+| Installation Guide                                                                                                                   |                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                           |
+| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](windows-core-installation) |

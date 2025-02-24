@@ -4,11 +4,9 @@
 
 **The \`acore_string\` table**
 
-This table holds all of the strings used internally by the server. This table is provided with the main purpose of translation in mind.
+This table holds all of the strings used internally by the server. It is provided for the main purpose of translation.
 
 To see which locale IDs correspond to what languages, visit the Localization\_lang page.
-
-NOTE: The % arguments need to stay in the exact same order as they are provided by default in the English translation.
 
 **Table Structure**
 
@@ -33,7 +31,7 @@ NOTE: The % arguments need to stay in the exact same order as they are provided 
 
 ### entry
 
-The ID that the core uses to identify a string. These IDs are contained and used internally and need to correspond to what the core expects. The core will not operate if all IDs aren't in this table.
+The ID that the core uses to identify a string. These IDs are contained and used internally and must correspond to what the core expects. The core will not operate if all IDs aren't in this table.
 
 ### content\_default
 
@@ -41,4 +39,4 @@ The English translation (locale ID 0).
 
 ### locale\_nnNN
 
-The translation in another language depending on the locale name.
+The translation in another language depends on the locale name.

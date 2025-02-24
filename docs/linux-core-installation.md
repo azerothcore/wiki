@@ -1,9 +1,9 @@
 # Linux Core Installation
 
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                   |                                               |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](linux-requirements)                                                                                        | [Step 3: Server Setup >>](linux-server-setup) |
 
 ## Installation directories
 
@@ -110,9 +110,9 @@ make -j$BUILD_CORES &&
 make install
 ```
 
-## Services
+## (Optional) Systemd Services
 
-systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
+Systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
 
 Since these commands won't be run with access to the user's variables, the install directory `$AC_CODE_DIR` must be fully expanded to, for example, `/home/azerothuser/azerothcore`. Run `echo $AC_CODE_DIR` as your user if you're not sure what this should be.
 
@@ -186,19 +186,18 @@ sudo systemctl enable ac-authserver
 sudo systemctl enable ac-worldserver
 ```
 
+You can inspect if the services started properly by inspecting the log entries from the systemd journal like so:
+
+```sh
+sudo journalctl authserver.service
+sudo journalctl worldserver.service
+```
+
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
+| Installation Guide                                                                                                                   |                                               |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](linux-requirements)                                                                                        | [Step 3: Server Setup >>](linux-server-setup) |

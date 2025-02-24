@@ -28,7 +28,7 @@ redirect_from: /documentation_index
 * [Database Squash](database-squash)
 * [DBC Index](dbc-index)
 * [Directory structure](directory-structure)
-* [Doxygen Documentation](https://www.azerothcore.org/pages/doxygen/index.html)
+* [Doxygen Documentation](https://www.azerothcore.org/doxygen)
 * [Exit Codes](exitcodes)
 * [GM Commands](gm-commands)
 * [How to Debug and Restart](how-to-restart-and-debug)
@@ -56,6 +56,10 @@ redirect_from: /documentation_index
 * [Linux restarter](linux-restarter)
 * [Wypoint information](waypoints-information)
 * [How to obtain free records](how-to-obtain-free-records)
+
+## Tutorials
+
+* [How to use game events](how-to-use-game-events)
 
 ## Extend AzerothCore
 

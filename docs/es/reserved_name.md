@@ -2,11 +2,11 @@
 
 [<-Volver a:Characters](database-characters)
 
-Leer en: [English :gb:](../reserved_name) [Spanish :es:](reserved_name)
-
 **Tabla \`reserved\_name\`**
 
-**Estructura**
+`table-no-description|0`
+
+**Estructura de la Tabla**
 
 | Field     | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,4 +18,4 @@ Leer en: [English :gb:](../reserved_name) [Spanish :es:](reserved_name)
 
 ### name
 
-`campo-sin-descripción|1`
+Nombre a reservar
