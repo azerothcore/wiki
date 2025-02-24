@@ -3,7 +3,7 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Instalación del Servidor >>](server-setup) |
+| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Instalación del Servidor >>](linux-server-setup) |
 
 ## Software requerido
 
@@ -109,9 +109,9 @@ make -j$BUILD_CORES &&
 make install
 ```
 
-## Services
+## (Optional) Systemd Services
 
-systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
+Systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
 
 Since these commands won't be run with access to the user's variables, the install directory `$AC_CODE_DIR` must be fully expanded to, for example, `/home/azerothuser/azerothcore`. Run `echo $AC_CODE_DIR` as your user if you're not sure what this should be.
 
@@ -185,6 +185,13 @@ sudo systemctl enable ac-authserver
 sudo systemctl enable ac-worldserver
 ```
 
+You can inspect if the services started properly by inspecting the log entries from the systemd journal like so:
+
+```sh
+sudo journalctl ac-authserver.service
+sudo journalctl ac-worldserver.service
+```
+
 ## Help
 
 If you are still having problems, check:
@@ -200,4 +207,4 @@ If you are still having problems, check:
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](linux-server-setup) |

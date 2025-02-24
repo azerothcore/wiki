@@ -189,8 +189,8 @@ sudo systemctl enable ac-worldserver
 You can inspect if the services started properly by inspecting the log entries from the systemd journal like so:
 
 ```sh
-sudo journalctl authserver.service
-sudo journalctl worldserver.service
+sudo journalctl ac-authserver.service
+sudo journalctl ac-worldserver.service
 ```
 
 ## Help
