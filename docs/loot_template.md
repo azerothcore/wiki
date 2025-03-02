@@ -35,7 +35,7 @@
 | pickpocket_loot_template  | [creature_template.pickpocketloot](creature_template#pickpocketloot) |                                                                                           |
 | player_loot_template      | TeamID (0 Horde/1 Alliance)                                          | Only drops in BGs as insignia removal.                                                    |
 | prospecting_loot_template | [item_template.entry](item_template#entry)                           |                                                                                           |
-| reference_loot_template   | [\*_loot_tempalte.reference](loot_template#reference)                |                                                                                           |
+| reference_loot_template   | [\*_loot_template.reference](loot_template#reference)                |                                                                                           |
 | skinning_loot_template    | [creature_template.skinloot](creature_template#skinloot)             | Also includes minable/herbable loot from creatures                                        |
 | spell_loot_template       | SpellID                                                              |                                                                                           |
 
