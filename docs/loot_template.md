@@ -1,16 +1,16 @@
-# loot\_template
+# loot_template
 
 [<-Back-to:World](database-world)
 
-# Tables**: \***\_loot\_template
+# Tables**: \***_loot_template
 
 ## General
 
 Well, according to vocabulary the meaning of the word "loot" is good for corpse loot and may be for some gameobjects like chests but quite unfit for fishing "loot". Nevermind. We will use term "loot" here as "a set of items generated on an event for a player" and "loot definition" as "a set of rules for loot generation". And forget about vocabulary for a while.
 
-This table format is used for 12 different tables to generate different loot items for different things. The 12 tables are creature\_loot\_template, disenchant\_loot\_template, fishing\_loot\_template, gameobject\_loot\_template, item\_loot\_template, pickpocketing\_loot\_template, prospecting\_loot\_template, skinning\_loot\_template, quest\_mail\_loot\_template, reference\_loot\_template, milling\_loot\_template, spell\_loot\_template. The general description here is valid for all 12 because the loot system is the same for all eleven.
+This table format is used for 12 different tables to generate different loot items for different things. The 12 tables are creature_loot_template, disenchant_loot_template, fishing_loot_template, gameobject_loot_template, item_loot_template, pickpocketing_loot_template, prospecting_loot_template, skinning_loot_template, quest_mail_loot_template, reference_loot_template, milling_loot_template, spell_loot_template. The general description here is valid for all 12 because the loot system is the same for all eleven.
 
-Loot templates define only items in the loot. See comments about money drop in corpse, pickpocketing and luggage loot in [creature\_template](creature_template) and [item\_template](item_template).
+Loot templates define only items in the loot. See comments about money drop in corpse, pickpocketing and luggage loot in [creature_template](creature_template) and [item_template](item_template).
 
 ## Structure
 
@@ -42,21 +42,21 @@ Loot templates define only items in the loot. See comments about money drop in c
 
 The 11 tables have different relations with other DB tables.
 
-| Loot table                    | Field           | Relation                                                      | Related table                               | Field                                                       | Comment                                                                                                                                                  |
-| ----------------------------- | --------------- | ------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fishing\_loot\_template       | no relation     | [entry](#entry) is linked with ID of the fishing zone or area |                                             |                                                             |                                                                                                                                                          |
-| creature\_loot\_template      | [entry](#entry) | many &lt;- many                                               | [creature\_template](creature_template)     | [lootid](creature_template#lootid)                          |                                                                                                                                                          |
-| gameobject\_loot\_template    | [entry](#entry) | many &lt;- many                                               | [gameobject\_template](gameobject_template) | [data1](gameobject_template#data0-23)                       | Only gameobject type 3 (GAMEOBJECT\_TYPE\_CHEST) or 25 (GAMEOBJECT\_TYPE\_FISHINGHOLE) use data1 as loot ID, for other types data1 is used in other ways |
-| item\_loot\_template          | [entry](#entry) | many &lt;- one                                                | [item\_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                          |
-| disenchant\_loot\_template    | [entry](#entry) | many &lt;- many                                               | [item\_template](item_template)             | [DisenchantID](item_template#disenchantid)                  |                                                                                                                                                          |
-| prospecting\_loot\_template   | [entry](#entry) | many &lt;- one                                                | [item\_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                          |
-| milling\_loot\_template       | [entry](#entry) | many &lt;- one                                                | [item\_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                          |
-| pickpocketing\_loot\_template | [entry](#entry) | many &lt;- many                                               | [creature\_template](creature_template)     | [pickpocketloot](creature_template#pickpocketloot)          |                                                                                                                                                          |
-| player\_loot\_template        | no relation     | [entry](#entry) is linked with player TeamID                  |                                             |                                                             | 0 = Horde, 1 = Alliance                                                                                                                                  |
-| skinning\_loot\_template      | [entry](#entry) | many &lt;- many                                               | [creature\_template](creature_template)     | [skinloot](creature_template#skinloot)                      | Can also store minable/herbable items gathered from creatures                                                                                            |
-| quest\_mail\_loot\_template   | [entry](#entry) |                                                               | [quest\_template](quest_template)           | [RewardMailTemplateId](quest_template#rewardmailtemplateid) |                                                                                                                                                          |
-| reference\_loot\_template     | [entry](#entry) | many &lt;- many                                               | -   \_loot\_template                        | [-mincountOrRef](#mincountorref)                            | In case of negative mincountOrRef                                                                                                                        |
-| spell\_loot\_template         | [entry](#entry) | many &lt;- many                                               | [Spell](spell) (DBC)                        | SpellId                                                     |                                                                                                                                                          |
+| Loot table                  | Field           | Relation                                                      | Related table                              | Field                                                       | Comment                                                                                                                                              |
+| --------------------------- | --------------- | ------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fishing_loot_template       | no relation     | [entry](#entry) is linked with ID of the fishing zone or area |                                            |                                                             |                                                                                                                                                      |
+| creature_loot_template      | [entry](#entry) | many &lt;- many                                               | [creature_template](creature_template)     | [lootid](creature_template#lootid)                          |                                                                                                                                                      |
+| gameobject_loot_template    | [entry](#entry) | many &lt;- many                                               | [gameobject_template](gameobject_template) | [data1](gameobject_template#data0-23)                       | Only gameobject type 3 (GAMEOBJECT_TYPE_CHEST) or 25 (GAMEOBJECT_TYPE_FISHINGHOLE) use data1 as loot ID, for other types data1 is used in other ways |
+| item_loot_template          | [entry](#entry) | many &lt;- one                                                | [item_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                      |
+| disenchant_loot_template    | [entry](#entry) | many &lt;- many                                               | [item_template](item_template)             | [DisenchantID](item_template#disenchantid)                  |                                                                                                                                                      |
+| prospecting_loot_template   | [entry](#entry) | many &lt;- one                                                | [item_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                      |
+| milling_loot_template       | [entry](#entry) | many &lt;- one                                                | [item_template](item_template)             | [entry](item_template#entry)                                |                                                                                                                                                      |
+| pickpocketing_loot_template | [entry](#entry) | many &lt;- many                                               | [creature_template](creature_template)     | [pickpocketloot](creature_template#pickpocketloot)          |                                                                                                                                                      |
+| player_loot_template        | no relation     | [entry](#entry) is linked with player TeamID                  |                                            |                                                             | 0 = Horde, 1 = Alliance                                                                                                                              |
+| skinning_loot_template      | [entry](#entry) | many &lt;- many                                               | [creature_template](creature_template)     | [skinloot](creature_template#skinloot)                      | Can also store minable/herbable items gathered from creatures                                                                                        |
+| quest_mail_loot_template    | [entry](#entry) |                                                               | [quest_template](quest_template)           | [RewardMailTemplateId](quest_template#rewardmailtemplateid) |                                                                                                                                                      |
+| reference_loot_template     | [entry](#entry) | many &lt;- many                                               | -   _loot_template                         | [-mincountOrRef](#mincountorref)                            | In case of negative mincountOrRef                                                                                                                    |
+| spell_loot_template         | [entry](#entry) | many &lt;- many                                               | [Spell](spell) (DBC)                       | SpellId                                                     |                                                                                                                                                      |
 
 ## Description of the fields
 
@@ -231,9 +231,9 @@ These agreements are different for different loot tables. Mainly agreements defi
 
 ### Fishing haul
 
-For fishing\_loot\_template, ID is the zone or area ID from AreaTable.dbc (Note: Area IDs are not included in the link)
+For fishing_loot_template, ID is the zone or area ID from AreaTable.dbc (Note: Area IDs are not included in the link)
 
-Also an extra note on fishing\_loot\_template: if just one area ID is defined for a zone, then that whole zone ID is skipped and therefore all areas in that zone need to have entries in the table. Only when there doesn't exist any area entries for a zone does the core use the zone ID directly. Zone = Wetlands, Elwynn, etc; Area = Northshire, Lakeshire, etc.
+Also an extra note on fishing_loot_template: if just one area ID is defined for a zone, then that whole zone ID is skipped and therefore all areas in that zone need to have entries in the table. Only when there doesn't exist any area entries for a zone does the core use the zone ID directly. Zone = Wetlands, Elwynn, etc; Area = Northshire, Lakeshire, etc.
 
 When several zones uses the same loot definition then
 
@@ -252,7 +252,7 @@ When a fish is catched for a quest it becoms the *second* fish on the hook. Many
 
 ### Corpse loot
 
-For creature\_loot\_template basic approach is to use creature\_template.lootid equal to creature\_template.entry. But this results in great overhead in the loot table as
+For creature_loot_template basic approach is to use creature_template.lootid equal to creature_template.entry. But this results in great overhead in the loot table as
 
 - many creatures use the same loot definition (well, stats on sites are *similar* due to the nature of random roll)
 - even more creatures use same parts of loot definition
