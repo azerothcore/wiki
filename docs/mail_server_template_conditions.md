@@ -6,6 +6,8 @@
 
 Works together with [mail_server_template](mail_server_template).
 
+Note: Entries in this table will be deleted automatically when the referenced entry in [mail_server_template.id](mail_server_template#id) is deleted. CONSTRAINT `fk_mail_template_conditions`
+
 **Table Structure**
 
 | Field                            | Type | Attributes | Key | Null | Default | Extra          | Comment |
