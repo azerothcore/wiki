@@ -97,6 +97,8 @@
 - [mail](mail)
 - [mail_items](mail_items)
 - [mail_server_character](mail_server_character)
+- [mail_server_template_conditions](mail_server_template_conditions)
+- [mail_server_template_items](mail_server_template_items)
 - [mail_server_template](mail_server_template)
 
 ## P

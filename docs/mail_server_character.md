@@ -1,6 +1,6 @@
 # mail_server_character
 
-[<-Back-to:Character](database-character)
+[<-Back-to:Characters](database-characters)
 
 **The \`mail_server_character\` table**
 
