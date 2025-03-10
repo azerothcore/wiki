@@ -40,34 +40,34 @@ Optional comment to explain the link.
 
 # **Description of the linking effects**
 
-### type h1. 0 (CAST)
+### type 0 (CAST)
 
 **Trigger mode**
 
-\***spell\_trigger > 0:** "When *spell\_trigger* is cast..."
-\***spell\_trigger < 0:** "When the aura due to *spell\_trigger* is removed..."
+- \***spell\_trigger > 0:** "When *spell\_trigger* is cast..."
+- \***spell\_trigger < 0:** "When the aura due to *spell\_trigger* is removed..."
 
 **Effect**
 
-\***spell\_effect > 0:** *spell\_effect* is also cast (with triggered flag) on the same targets, on the caster if spell\_trigger has no target.
-\***spell\_effect < 0:** Auras due to *spell\_effect* are removed.
+- \***spell\_effect > 0:** *spell\_effect* is also cast (with triggered flag) on the same targets, on the caster if *spell\_trigger* has no target.
+- \***spell\_effect < 0:** Auras due to *spell\_effect* are removed.
 
 ### type 1 (HIT)
 
 **Trigger mode**
 
-For this mode *spell\_trigger* must be positive. Effect is executed when *spell\_trigger* hits a target. I suppose that if the *spell\_trigger* hits more than one target, the effect is executed for each target hit.
+- \***spell\_trigger > 0:** "Effect is executed when *spell\_trigger* hits a target. I suppose that if the *spell\_trigger* hits more than one target, the effect is executed for each target hit.
 
 **Effect**
 
-\***spell\_effect > 0:** *spell\_effect* is cast (with triggered flag) on the same target.
-\***spell\_effect < 0:** Auras due to *spell\_effect* are removed.
+- \***spell\_effect > 0:** *spell\_effect* is cast (with triggered flag) on the same target.
+- \***spell\_effect < 0:** Auras due to *spell\_effect* are removed.
 
-### type == 2 (AURA)
+### type 2 (AURA)
 
 **Trigger mode**
 
-For this mode *spell\_trigger* must be positive. Effect is executed when the aura *spell\_trigger* is applied **AND** when it is removed from a target.
+- \***spell\_trigger > 0:** "Effect is executed when the aura *spell\_trigger* is applied **AND** when it is removed from a target.
 
 **Effect**
 
