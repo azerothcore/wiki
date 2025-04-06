@@ -1,3 +1,8 @@
+---
+redirect_from: "/Update"
+redirect_from: "/update"
+---
+
 # Keeping the Server Up-to-Date
 
 | Installation Guide                                                                                                                   |                                         |
