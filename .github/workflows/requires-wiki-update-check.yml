@@ -2,7 +2,7 @@ name: Requires WIKI Update
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Runs every 30 minutes
+    - cron: "0 6 * * *" # Runs at 06:00 UTC
   workflow_dispatch:
 
 jobs:
