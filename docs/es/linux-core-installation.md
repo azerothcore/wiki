@@ -3,7 +3,7 @@
 | Guía de Instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Instalación del Servidor >>](linux-server-setup) |
+| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Instalación del Servidor >>](server-setup) |
 
 ## Software requerido
 
@@ -207,4 +207,4 @@ If you are still having problems, check:
 | Installation Guide | |
 | :- | :- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](linux-server-setup) |
+| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
