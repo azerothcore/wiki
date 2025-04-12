@@ -40,7 +40,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 **(Not needed if you downloaded the files above)**
 
-Go to your AzerothCore build directory (e.g. $HOME/build/bin/) and copy the following files to your World of Warcraft binaries directory.
+Go to your AzerothCore build directory (e.g. $AC_CODE_DIR/env/dist/) and copy the following files to your World of Warcraft binaries directory.
 
 * **map_extractor**
 * **mmaps_generator**
