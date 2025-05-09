@@ -89,5 +89,5 @@ pm2 start "gdb -x gdb.conf --batch ./worldserver"
 It should be enough to automatically restart, monitor, and utilize GDB with your server.
 
 
-  [1]: https://i.stack.imgur.com/EyIi7.png
+  [1]: assets/images/how-to-restart-and-debug/vscode-files-explorer.png
   [2]: https://pm2.keymetrics.io/
