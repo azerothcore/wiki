@@ -4,7 +4,7 @@
 
 **The \`player_shapeshift_model\` table**
 
-This table holds the information on what values are used for the druid shapeshift models, based on the shapeshift, race, character customisation and their gender.
+This table holds the information on what values are used for the druid shapeshift models, based on the shapeshift, race, character customization, and the gender of the player character.
 
 **Table Structure**
 
