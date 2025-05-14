@@ -4,7 +4,7 @@
 
 **The \`player_totem_model\` table**
 
-This table holds the information on what values are used for the shaman totem models, based on the totem, race, character customization, and the gender of the player character.
+This table holds the information on what values are used for the shaman totem models, based on the totem and race of the player character.
 
 **Table Structure**
 
