@@ -11,11 +11,11 @@ This table holds the information on what values are used for the druid shapeshif
 
 | Field                              | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| ShapeshiftID (#shapeshiftid)       | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| RaceID (#raceid)                   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| CustomizationID (#customizationid) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| GenderID (#genderid)               | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| ModelID (#modelid)                 | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [RaceID](#raceid)                   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [CustomizationID](#customizationid) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [GenderID](#genderid)               | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [ModelID](#modelid)                 | INT     | UNSIGNED   |     | NO   |         |       |         |
 
 **Description of the fields**
 
