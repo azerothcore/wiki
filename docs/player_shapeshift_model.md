@@ -60,7 +60,7 @@ If you're a Horde character (only Tauren with stock races), the customization ID
 | :---------------------------: | :---------: |
 |               0               |    Male     |
 |               1               |   Female    |
-|               2               |   Unknown   |
+|               2               |  Any gender |
 
 ### ModelID
 
