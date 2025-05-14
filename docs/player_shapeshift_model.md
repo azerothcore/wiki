@@ -6,7 +6,6 @@
 
 This table holds the information on what values are used for the druid shapeshift models, based on the shapeshift, race, character customization, and the gender of the player character.
 
-This change was introduced from the Pull request: [refactor(Core): Use database tables for Shaman totems and Druid shapeshift forms. (#22104)](https://github.com/azerothcore/azerothcore-wotlk/pull/22104)
 
 **Table Structure**
 
