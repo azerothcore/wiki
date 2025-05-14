@@ -47,7 +47,7 @@ Example below:
 | :----------: | :----: | :-------------------------------------------------: | :------: | :-----: | :-------------------------------------------: |
 |      5       |   4    |                          6                          |    2     |  29414  | Night Elf, any gender, bear colour: Dark Blue |
 
-If you're a Tauren it's works by using the [skin](characters#skin) as the value.
+If you're a Horde character (only Tauren with stock races), the customization ID is based off of [skin colour](characters#skin) of your character.
 
 | ShapeshiftID | RaceID | CustomizationID [[skin](characters#skin)] | GenderID | ModelID |                 Comment                 |
 | :----------: | :----: | :---------------------------------------: | :------: | :-----: | :-------------------------------------: |
