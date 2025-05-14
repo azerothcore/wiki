@@ -39,7 +39,7 @@ You also may refer to [chrraces](chrraces) "ID" column.
 
 ### CustomizationID
 
-If you're a Night Elf it's works by using the [haircolor](characters#haircolor) as the value.
+If you're an Alliance character (only Night Elves with stock races), the customization ID is based off of [haircolor](characters#haircolor) of your character.
 
 Example below:
 
