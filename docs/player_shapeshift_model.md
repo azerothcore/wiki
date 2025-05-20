@@ -6,7 +6,6 @@
 
 This table holds the information on what values are used for the druid shapeshift models, based on the shapeshift, race, character customization, and the gender of the player character.
 
-
 **Table Structure**
 
 | Field                              | Type    | Attributes | Key | Null | Default | Extra | Comment |
