@@ -1003,17 +1003,96 @@ Amount of Gems of SocketColor1
 
 ### socketBonus
 
-commonly used socket bonus IDs
+Commonly used socket bonus IDs
 
-| ID   | Effect           |
-| ---- | ---------------- |
-| 3312 | +8 Strength      |
-| 3313 | +8 Agility       |
-| 3305 | +12 Stamina      |
-| 3    | +8 Intellect     |
-| 2872 | +9 Healing       |
-| 3753 | +9 Spell Power   |
-| 3877 | +16 Attack Power |
+| ID   | Effect                     |
+| ---- | -------------------------- |
+| 3015 | +2 Strength                |
+| 2879 | +3 Strength                |
+| 2927 | +4 Strength                |
+| 3357 | +6 Strength                |
+| 3312 | +8 Strength                |
+| 3149 | +2 Agility                 |
+| 2893 | +3 Agility                 |
+| 2877 | +4 Agility                 |
+| 3355 | +6 Agility                 |
+| 3313 | +8 Agility                 |
+| 3164 | +3 Stamina                 |
+| 2895 | +4 Stamina                 |
+| 2882 | +6 Stamina                 |
+| 3307 | +9 Stamina                 |
+| 3766 | +12 Stamina                |
+| 3016 | +2 Intellect               |
+| 2863 | +3 Intellect               |
+| 2869 | +4 Intellect               |
+| 3310 | +6 Intellect               |
+| 3353 | +8 Intellect               |
+| 3097 | +2 Spirit                  |
+| 2866 | +3 Spirit                  |
+| 2890 | +4 Spirit                  |
+| 3311 | +6 Spirit                  |
+| 3352 | +8 Spirit                  |
+| 3114 | +4 Attack Power            |
+| 2973 | +6 Attack Power            |
+| 2936 | +8 Attack Power            |
+| 3764 | +12 Attack Power           |
+| 3877 | +16 Attack Power           |
+| 1597 | +32 Attack Power           |
+| 3153 | +2 Spell Power             |
+| 2974 | +4 Spell Power             |
+| 3752 | +5 Spell Power             |
+| 3602 | +7 Spell Power             |
+| 3753 | +9 Spell Power             |
+| 2941 | +2 Hit Rating              |
+| 2880 | +3 Hit Rating              |
+| 2908 | +4 Hit Rating              |
+| 3351 | +6 Hit Rating              |
+| 2844 | +8 Hit Rating              |
+| 3152 | +2 Critical Strike Rating  |
+| 3205 | +3 Critical Strike Rating  |
+| 3263 | +4 Critical Strike Rating  |
+| 3316 | +6 Critical Strike Rating  |
+| 3314 | +8 Critical Strike Rating  |
+| 3308 | +4 Haste Rating            |
+| 3309 | +6 Haste Rating            |
+| 3303 | +8 Haste Rating            |
+| 3094 | +4 Expertise Rating        |
+| 3362 | +6 Expertise Rating        |
+| 3778 | +8 Expertise Rating        |
+| 3765 | +4 Armor Penetration       |
+| 3880 | +6 Armor Penetration       |
+| 3882 | +8 Armor Penetration       |
+| 2976 | +2 Defense Rating          |
+| 2861 | +3 Defense Rating          |
+| 2932 | +4 Defense Rating          |
+| 3857 | +6 Defense Rating          |
+| 3302 | +8 Defense Rating          |
+| 2926 | +2 Dodge Rating            |
+| 2876 | +3 Dodge Rating            |
+| 2871 | +4 Dodge Rating            |
+| 3358 | +6 Dodge Rating            |
+| 3304 | +8 Dodge Rating            |
+| 2907 | +2 Parry Rating            |
+| 2870 | +3 Parry Rating            |
+| 3359 | +4 Parry Rating            |
+| 3871 | +6 Parry Rating            |
+| 3360 | +8 Parry Rating            |
+| 3017 | +3 Block Rating            |
+| 2972 | +4 Block Rating            |
+| 3361 | +6 Block Rating            |
+| 2975 | +5 Block Value             |
+| 2888 | +6 Block Value             |
+| 3363 | +9 Block Value             |
+| 2881 | +1 Mana per 5 sec          |
+| 2865 | +2 Mana per 5 sec          |
+| 2370 | +3 Mana per 5 sec          |
+| 2371 | +4 Mana per 5 sec          |
+| 2392 | +12 Mana per 5 sec         |
+| 2867 | +2 Resilience Rating       |
+| 2862 | +3 Resilience Rating       |
+| 2878 | +4 Resilience Rating       |
+| 3600 | +6 Resilience Rating       |
+| 3821 | +8 Resilience Rating       |
 
 ### GemProperties
 
