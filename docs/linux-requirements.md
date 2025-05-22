@@ -17,7 +17,7 @@
 #### Ubuntu with MySQL 8.x
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev wget
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
