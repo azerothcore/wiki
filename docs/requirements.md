@@ -1,5 +1,11 @@
 # Requirements
 
+> 💡 **Important Notice**  
+> As of **September 19, 2024**, both **MariaDB** and **MySQL versions 5.7 and 8.1** are no longer supported.  
+> 
+> ⚠️ **AC no longer supports MariaDB.**  
+> You will not be able to compile the core if you are running any of these unsupported versions.  
+
 | Installation Guide                                                                                                                   |                                                   |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
