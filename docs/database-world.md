@@ -144,6 +144,8 @@
 - [player_factionchange_titles](player_factionchange_titles)
 - [player_loot_template](loot_template)
 - [player_race_stats](player_race_stats)
+- [player_shapeshift_model](player_shapeshift_model)
+- [player_totem_model](player_totem_model)
 - [player_xp_for_level](player_xp_for_level)
 - [playercreateinfo](playercreateinfo)
 - [playercreateinfo_action](playercreateinfo_action)
