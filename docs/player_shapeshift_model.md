@@ -9,7 +9,7 @@ This table holds the information on what values are used for the druid shapeshif
 **Table Structure**
 
 | Field                              | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| ----------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [RaceID](#raceid)                   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [CustomizationID](#customizationid) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
