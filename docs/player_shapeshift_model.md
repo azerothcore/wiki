@@ -8,7 +8,7 @@ This table holds the information on what values are used for the druid shapeshif
 
 **Table Structure**
 
-| Field                              | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| Field                               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [RaceID](#raceid)                   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
@@ -20,22 +20,22 @@ This table holds the information on what values are used for the druid shapeshif
 
 ### ShapeshiftID
 
-| FormID |   Description    |
-| :----: | :--------------: |
-|   1    |     Cat Form     |
-|   5    |    Bear Form     |
-|   8    |  Dire Bear Form  |
-|   27   | Epic Flight Form |
-|   29   |   Flight Form    |
+| FormID | Description      |
+| ------ | ---------------- |
+| 1      | Cat Form         |
+| 5      | Bear Form        |
+| 8      | Dire Bear Form   |
+| 27     | Epic Flight Form |
+| 29     | Flight Form      |
 
 ### RaceID
 
 | RaceID | Description |
-| :----: | :---------: |
-|   4    |  Night Elf  |
-|   6    |   Tauren    |
+| ------ | ----------- |
+| 4      | Night Elf   |
+| 6      | Tauren      |
 
-You also may refer to [chrraces](chrraces) "ID" column.
+For `RaceID` you can refer to the [chrraces](chrraces) "ID" column.
 
 ### CustomizationID
 
@@ -46,13 +46,11 @@ If you're a Horde character (only Tauren with stock races), the customization ID
 ### GenderID
 
 | [GenderID](characters#gender) | Description |
-| :---------------------------: | :---------: |
-|               0               |    Male     |
-|               1               |   Female    |
-|               2               |  Any gender |
+| ----------------------------- | ----------- |
+| 0                             | Male        |
+| 1                             | Female      |
+| 2                             | Any gender  |
 
 ### ModelID
 
 Refer to [creature_model_info](#creature_model_info#displayid)
-
-

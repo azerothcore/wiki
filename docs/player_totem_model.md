@@ -19,23 +19,23 @@ This table holds the information on what values are used for the shaman totem mo
 ### TotemID
 
 | TotemID | Description |
-| :-----: | :---------: |
-|    1    | Fire Totem  |
-|    2    | Earth Totem |
-|    3    | Water Totem |
-|    4    |  Air Totem  |
+| ------- | ----------- |
+| 1       | Fire Totem  |
+| 2       | Earth Totem |
+| 3       | Water Totem |
+| 4       | Air Totem   |
 
 ### RaceID
 
 | RaceID | Description |
-| :----: | :---------: |
-|   2    |     Orc     |
-|   3    |    Dwarf    |
-|   6    |   Tauren    |
-|   8    |    Troll    |
-|   11   |   Draenei   |
+| ------ | :---------- |
+| 2      | Orc         |
+| 3      | Dwarf       |
+| 6      | Tauren      |
+| 8      | Troll       |
+| 11     | Draenei     |
 
-You also may refer to [chrraces](chrraces) "ID" column.
+For `RaceID` you can refer to the [chrraces](chrraces) "ID" column.
 
 ### ModelID
 
