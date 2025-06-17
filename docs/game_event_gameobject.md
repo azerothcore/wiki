@@ -1,30 +1,28 @@
-# game\_event\_gameobject
+# game_event_gameobject
 
 [<-Back-to:World](database-world)
 
-**The \`game\_event\_gameobject\` table**
+**The \`game_event_gameobject\` table**
 
 Contains all gameobjects instances that participate to any game event.
 
 **Table Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra  | Comment                                                             |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
-| [eventEntry][1] | TINYINT | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [guid][2]       | INT     | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
-
-[1]: #evententry
-[2]: #guid
+| Field                     | Type     | Attributes | Key | Null | Default | Extra  | Comment                                                             |
+| ------------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
+| [eventEntry](#evententry) | SMALLINT | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
+| [guid](#guid)             | INT      | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
 
 **Description of the fields**
 
 ### eventEntry
 
-Entry of the event (game\_event.eventEntry)
+Refers to: [game_event.entry](#game_event.entry).
 
-**Use**+\*eventEntry to have the gameobject added during the event
-**Use**-\*eventEntry to have it removed during the event
+Using a **positve** number will **add** the object to the event when is running.
+
+Using a **negative** number will **remove** the object to the event when is running.
 
 ### guid
 
-Guid of the gameobject participating in the event (gameobject.guid)
+Refers to: [gameobject.guid](#gameobject.guid).
