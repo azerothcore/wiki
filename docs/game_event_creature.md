@@ -17,7 +17,7 @@ Contains all creature instances that have to be spawned/unspawned during defined
 
 ### eventEntry
 
-Refers to: [game_event.entry](#game_event.entry).
+Refers to: [game_event.entry](game_event#entry).
 
 Using a **positve** number will **add** the creature to the event when is running.
 
@@ -25,4 +25,4 @@ Using a **negative** number will **remove** the creature to the event when is ru
 
 ### guid
 
-Refers to: [creature.guid](#creature.guid).
+Refers to: [creature.guid](creature#guid).
