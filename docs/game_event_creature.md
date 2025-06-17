@@ -23,7 +23,6 @@ Using a **positve** number will **add** the creature to the event when is runnin
 
 Using a **negative** number will **remove** the creature to the event when is running.
 
-
 ### guid
 
 Refers to: [creature.guid](#creature.guid).
