@@ -1,57 +1,51 @@
-# game\_event\_npc\_vendor
+# game_event_npc_vendor
 
 [<-Back-to:World](database-world)
 
-**The \`game\_event\_npc\_vendor\` table**
+**The \`game_event_npc_vendor\` table**
 
 This table allows you to change the items a vendor sells, or to create a [vendor list](npc_vendor) for an NPC who does not sell items unless an event is active.
 
 **Table Structure**
 
-| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1]   | TINYINT   | SIGNED     |     | NO   | 0       |       |         |
-| [guid][2]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [slot][3]         | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
-| [item][4]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [maxcount][5]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [incrtime][6]     | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExtendedCost][7] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #evententry
-[2]: #guid
-[3]: #slot
-[4]: #item
-[5]: #maxcount
-[6]: #incrtime
-[7]: #extendedcost
+| Field                         | Type      | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [eventEntry](#evententry)     | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
+| [guid](#guid)                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [slot](#slot)                 | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
+| [item](#item)                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [maxcount](#maxcount)         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [incrtime](#incrtime)         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ExtendedCost](#extendedcost) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 **Description of the fields**
 
 ### eventEntry
 
-This is the eventEntry from the game\_event table that you wish to setup a vendor list for while the event is running.
+Refers to: [game_event.entry](game_event#entry).
+
+Only a **positve** value can be used.
 
 ### guid
 
-This is the guid of the NPC that you wish to create a vendor list for.
+Refers to: [creature.guid](creature#guid).
 
 ### slot
 
-Position of the item when the vendor window opens (order from top-left to bottom.right of the window with values 0 and then 1,2,3,etc).
+Refer to: [npc_vendor.slot](npc_vendor#slot).
 
 ### item
 
-This is an item from the item\_template table.
+Refers to: [item_template.entry](item_template#entry).
 
 ### maxcount
 
-The maximum number of copies of the item the vendor has available to be sold before [incrtime](#game_event_npc_vendor-incrtime) is up. If 0, then it is an unlimited number of copies.
+Refer to: [npc_vendor.maxcount](npc_vendor#maxcount).
 
 ### incrtime
 
-Combined with [maxcount](#game_event_npc_vendor-maxcount), this field tells how often (in seconds) the vendor list is refreshed and the limited item copies are restocked. For limited item copies, every refresh, the quantity is increased by item\_template.BuyCount
+Refer to: [npc_vendor.incrtime](npc_vendor#incrtime).
 
 ### ExtendedCost
 
-The value here corresponds to the ID in ItemExtendedCost.dbc and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.
+Refer to: [npc_vendor.extendedcost](npc_vendor#extendedcost).
