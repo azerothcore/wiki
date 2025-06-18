@@ -33,7 +33,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 2. Create a new folder within the build folder called **data**. i.e **$AC_CODE_DIR/build/data/**
 
-3. Extract the files from the zip file and place them within the **data** folder.
+3. Extract the files from the zip file and place them within the **Data** folder.
 
 4. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
 
@@ -41,55 +41,39 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 **(Not needed if you downloaded the files above)**
 
-Go to your AzerothCore build directory (e.g. $AC_CODE_DIR/env/dist/) and copy the following files to your World of Warcraft binaries directory.
-
-* **map_extractor**
-* **mmaps_generator**
-* **vmap4_assembler**
-* **vmap4_extractor**
-
-**DBC and Maps files**
-
+1. Browse into your build directory (e.g. **$AC_CODE_DIR/env/dist/**) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
 ```
-cd <your WoW client directory>
-./map_extractor
+map_extractor
+mmaps_generator
+vmap4_assembler
+vmap4_extractor
 ```
 
-**Visual Maps (aka vmaps) Note: If you stop vmap4_extractor before finish you will need to delete the Buildings directory before start again.**
+2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.sh**" into your World of Warcraft folder with the previous files.
 
-You can also extract vmaps which will take quite a while depending on your machine (up to hours on ancient hardware).
+3. Create (mkdir) **mmaps** and **vmaps** folders in your World of Warcraft directory.
 
-```
-cd <your WoW client directory>
-./vmap4_extractor
-mkdir vmaps;
-./vmap4_assembler Buildings vmaps
-```
+4. Launch extractor.sh and select your extractor options.
+
+{{site.data.alerts.important}}
+</br>
+
+   - <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
+
+   - Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
+    
+   - Don't run another task before the first is finished or you will have errors.
+
+   - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
+
+   - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
+{{site.data.alerts.end}}
+
+5. You should already have a folder called <b>Data</b> in your <b>$AC_CODE_DIR/build/</b>, in the case you don't have it, create one (called <b>Data</b>)
+
+6. Move the extracted files <b>vmaps</b>, <b>maps</b>, <b>dbc</b> and <b>cameras</b> into the <b>Data</b> folder.
 
 When this is complete you will receive the following message which can be safely ignored.
-
-```
-Processing Map 724
-[################################################################]
-Extracting GameObject models...Extracting World\Wmo\Band\Final_Stage.wmo
-No such file.
-Couldn't open RootWmo!!!
-Done!
-  
-Extract V4.00 2012_02. Work complete. No errors.
-```
-
-**Movement Maps  (aka mmaps - optional RECOMMENDED)**
-
-Extracting mmaps will take quite a while depending on your machine (up to hours).
-
-```
-cd <your WoW client directory>
-mkdir mmaps;
-./mmaps_generator
-```
-
-Now that everything is completed, you need to copy **dbc**, **maps**, **vmaps** and **mmaps** folders to your AzerothCore build directory (e.g. **$AC_CODE_DIR/build/data/**.
 
 ## Config Files: Worldserver and Authserver
 
