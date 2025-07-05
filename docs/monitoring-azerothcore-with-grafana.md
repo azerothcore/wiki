@@ -10,7 +10,7 @@ tableofcontents: 1
 
 2. [Grafana](https://grafana.com/) - graph and a dashboard builder for visualizing time series metrics.
 
-{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1." %}
+{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1. However, you can use [Chronograf](#additional-visualizations-and-metrics-collection) to visulize it, but you need to set that up yourself. " %}
 
 {% include note.html content="We do not support Influx DB v3." %}
 
@@ -133,16 +133,6 @@ METRIC_EVENT("player_events", "Login", pCurrChar->GetName());
 METRIC_VALUE("update_time_diff", diff);
 ```
 
-## Additional visualizations and metrics collection
-
-InfluxDB is part of a bigger set of projects by [InfluxData](https://www.influxdata.com/) which integrate nicely with the DB:
-
-- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) can be used to collect system metrics like CPU, I/O, memory usage and other services such as MySQL – to display this info next to the AC metrics.
-
-- [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/) is an alternative to Grafana to graph and visualize time-series metrics.
-
-- [Kapacitator](https://www.influxdata.com/time-series-platform/kapacitor/) is able to process streaming data from InfluxDB to provide alerts, trigger events, detect anomalies or transform data.
-
 ## Additional Reading
 
 Lean more about InfluxDB and Grafana:
@@ -167,18 +157,14 @@ Initial Organization Name: Grafana
 Initial Bucket Name: worldserver
 ```
 
-1. Click Connections -> Add new connection
-2. Search for InfluxDB and select it
-3. Click "Add new data source"
-4. Fill in the required data below
-```
-Name: Influx
-Query language: Flux
-URL: http://127.0.0.1:8086/
-User: grafana
-Password: grafana
-Organization: Grafana
-Token: Your personal token
-Default Bucket: worldserver
-```
-5. Press Save & Test which should give you a green checkbox that says "datasource is working".
+[Use for example Chronograf to visualize the data.](#additional-visualizations-and-metrics-collection)
+
+## Additional visualizations and metrics collection
+
+InfluxDB is part of a bigger set of projects by [InfluxData](https://www.influxdata.com/) which integrate nicely with the DB:
+
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) can be used to collect system metrics like CPU, I/O, memory usage and other services such as MySQL – to display this info next to the AC metrics.
+
+- [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/) is an alternative to Grafana to graph and visualize time-series metrics.
+
+- [Kapacitator](https://www.influxdata.com/time-series-platform/kapacitor/) is able to process streaming data from InfluxDB to provide alerts, trigger events, detect anomalies or transform data.
