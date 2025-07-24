@@ -93,6 +93,3 @@ Or
 ```
 fix(DB/SAI): Add missing spells to Howling Prowler
 ```
-
-For SQL commits, content might be mixed. In that case, you may use the more predominant one. For example, if most of your SQL code is composed by
-smart_scripts (SAI), then use the SAI subscope, even if other tables are being used. If it is too diluted, then you may use the Misc subscope.
