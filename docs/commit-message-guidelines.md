@@ -9,7 +9,7 @@
 | fix(Scripts/Raid): Phase 2 of Ragnaros |
 | feat(Core/Players): Implement missing player flags |
 
-**Pay attention to not leave broken commit messages (e.g random spaces)**
+**Pay attention to not leave broken commit messages (e.g. random spaces)**
 
 ---
 
