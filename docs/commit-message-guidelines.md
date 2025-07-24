@@ -22,7 +22,7 @@ Explain **why** this change is being made and **what** it fixes.
 
 ---
 
-# ✍️ Co‑Author(s)
+# ✍️ Co-Author(s)
 If there are more authors, they can be mentioned like this:
 ```
 
