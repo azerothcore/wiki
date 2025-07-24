@@ -83,7 +83,7 @@ Follow the file names or content type:
 👉 For SQL commits:
 If the content is mixed, choose the most predominant table type.
 Example: if most edits are in smart_scripts, use SAI.
-If the changes are too diluted, use a general sub‑scope like Misc.
+If the changes are too diluted, use a general sub-scope like Misc.
 
 For example:
 ```
