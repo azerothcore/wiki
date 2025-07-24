@@ -1,6 +1,6 @@
 # Commit Message Guidelines
 
-## 📌 Title
+# 📌 Title
 **Type(Scope/Subscope):** _Commit ultra short explanation_
 
 | ✅ Examples (max 50 characters) |
@@ -13,7 +13,7 @@
 
 ---
 
-## 📖 Description
+# 📖 Description
 Explain **why** this change is being made and **what** it fixes.
 
 | ✅ Examples (max 72 chars per line) |
@@ -22,7 +22,7 @@ Explain **why** this change is being made and **what** it fixes.
 
 ---
 
-## ✍️ Co‑Author(s)
+# ✍️ Co‑Author(s)
 If there are more authors, they can be mentioned like this:
 ```
 
@@ -43,9 +43,9 @@ git commit --author="John Doe <john@example.com>" -m "Your commit message"
 
 ---
 
-## 📌 Extra Infos
+# 📌 Extra Infos
 
-### ✅ Types
+# ✅ Types
 - **feat**: new feature  
 - **fix**: bug fix  
 - **refactor**: refactoring production code (no change to functionality expected)
@@ -65,7 +65,7 @@ git commit --author="John Doe <john@example.com>" -m "Your commit message"
 
 ---
 
-📦 Scope and 🔧 Subscope
+# 📦 Scope and 🔧 Subscope
 Scope defines the main area affected:
 
 - Core (core related, framework files)
