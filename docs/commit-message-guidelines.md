@@ -5,9 +5,9 @@
 
 | ✅ Examples (max 50 characters) |
 |--------------------------------|
-| `fix(DB/SAI): Missing spell to NPC Hogger` |
-| `fix(Scripts/Raid): Phase 2 of Ragnaros` |
-| `feat(Core/Players): Implement missing player flags` |
+| fix(DB/SAI): Missing spell to NPC Hogger |
+| fix(Scripts/Raid): Phase 2 of Ragnaros |
+| feat(Core/Players): Implement missing player flags |
 
 **Pay attention to not leave broken commit messages (e.g random spaces)**
 
@@ -32,7 +32,7 @@ Co-authored-by: Name [name@example.com](mailto:name@example.com)
 
 **If you are cherry-picking commits, it is mandatory to refer the original author in your commit.**
 
-When you create a commit:
+When you create a commit (using the GIT Bash terminal), type:
 
 ``` 
 git commit --author="John Doe <john@example.com>" -m "Your commit message"
@@ -40,6 +40,8 @@ git commit --author="John Doe <john@example.com>" -m "Your commit message"
 
 ✔️ This sets the Author field in the commit to John Doe <john@example.com>
 ✔️ Your normal Git config user.name and user.email will still be used for the Committer field.
+
+If you are using GitHub Desktop, you may fill the co-author field, underneath the commit description box.
 
 ---
 
