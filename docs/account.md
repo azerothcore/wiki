@@ -8,33 +8,33 @@
 
 **Table Structure**
 
-| Field                             | Type             | Null | Default           | Extra          | Comment       |
-| --------------------------------- | ---------------- | ---- | ----------------- | -------------- | ------------- |
-| [id](#id)                         | INT UNSIGNED     | NO   |                   | AUTO_INCREMENT | Identifier    |
-| [username](#username)             | VARCHAR(32)      | NO   | ''                |                |               |
-| [salt](#salt)                     | BINARY(32)       | NO   |                   |                |               |
-| [verifier](#verifier)             | BINARY(32)       | NO   |                   |                |               |
-| [session_key](#sessionkey)        | BINARY(40)       | YES  |                   |                |               |
-| [totp_secret](#totpsecret)        | VARBINARY(100)   | YES  |                   |                |               |
-| [email](#email)                   | VARCHAR(255)     | NO   | ''                |                |               |
-| [reg_mail](#regmail)              | VARCHAR(255)     | NO   | ''                |                |               |
-| [joindate](#joindate)             | TIMESTAMP        | NO   | CURRENT_TIMESTAMP |                |               |
-| [last_ip](#lastip)                | VARCHAR(15)      | NO   | 127.0.0.1         |                |               |
-| [last_attempt_ip](#lastattemptip) | VARCHAR(15)      | NO   | 127.0.0.1         |                |               |
-| [failed_logins](#failedlogins)    | INT UNSIGNED     | NO   | 0                 |                |               |
-| [locked](#locked)                 | TINYINT UNSIGNED | NO   | 0                 |                |               |
-| [lock_country](#lockcountry)      | VARCHAR(2)       | NO   | 00                |                |               |
-| [last_login](#lastlogin)          | TIMESTAMP        | YES  |                   |                |               |
-| [online](#online)                 | INT UNSIGNED     | NO   | 0                 |                |               |
-| [expansion](#expansion)           | TINYINT UNSIGNED | NO   | 2                 |                |               |
-| [Flags](#flags)                   | INT UNSIGNED     | NO   | 0                 |                | Account Flags |
-| [mutetime](#mutetime)             | BIGINT           | NO   | 0                 |                |               |
-| [mutereason](#mutereason)         | VARCHAR(255)     | NO   | ''                |                |               |
-| [muteby](#muteby)                 | VARCHAR(50)      | NO   | ''                |                |               |
-| [locale](#locale)                 | TINYINT UNSIGNED | NO   | 0                 |                |               |
-| [os](#os)                         | VARCHAR(3)       | NO   | ''                |                |               |
-| [recruiter](#recruiter)           | INT UNSIGNED     | NO   | 0                 |                |               |
-| [totaltime](#totaltime)           | INT UNSIGNED     | NO   | 0                 |                |               |
+| Field                             | Type           | Attributes | Key | Null | Default           | Extra          | Comment       |
+| --------------------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ------------- |
+| [id](#id)                         | INT            | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier    |
+| [username](#username)             | VARCHAR(32)    |            | UNI | NO   | ''                |                |               |
+| [salt](#salt)                     | BINARY(32)     |            |     | NO   |                   |                |               |
+| [verifier](#verifier)             | BINARY(32)     |            |     | NO   |                   |                |               |
+| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  |                   |                |               |
+| [totp_secret](#totpsecret)        | VARBINARY(100) |            |     | YES  |                   |                |               |
+| [email](#email)                   | VARCHAR(255)   |            |     | NO   | ''                |                |               |
+| [reg_mail](#regmail)              | VARCHAR(255)   |            |     | NO   | ''                |                |               |
+| [joindate](#joindate)             | TIMESTAMP      |            |     | NO   | CURRENT_TIMESTAMP |                |               |
+| [last_ip](#lastip)                | VARCHAR(15)    |            |     | NO   | 127.0.0.1         |                |               |
+| [last_attempt_ip](#lastattemptip) | VARCHAR(15)    |            |     | NO   | 127.0.0.1         |                |               |
+| [failed_logins](#failedlogins)    | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
+| [locked](#locked)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
+| [lock_country](#lockcountry)      | VARCHAR(2)     |            |     | NO   | 00                |                |               |
+| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  |                   |                |               |
+| [online](#online)                 | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
+| [expansion](#expansion)           | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |               |
+| [Flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
+| [mutetime](#mutetime)             | BIGINT         |            |     | NO   | 0                 |                |               |
+| [mutereason](#mutereason)         | VARCHAR(255)   |            |     | NO   | ''                |                |               |
+| [muteby](#muteby)                 | VARCHAR(50)    |            |     | NO   | ''                |                |               |
+| [locale](#locale)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
+| [os](#os)                         | VARCHAR(3)     |            |     | NO   | ''                |                |               |
+| [recruiter](#recruiter)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
+| [totaltime](#totaltime)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 
 
 ## Description of the fields
