@@ -8,57 +8,34 @@
 
 **Table Structure**
 
-| Field                 | Type           | Attributes | Key | Null | Default           | Extra          | Comment    |
-| --------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ---------- |
-| [id][1]               | INT            | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier |
-| [username][2]         | VARCHAR(32)    | SIGNED     | UNI | NO   | ''                |                |            |
-| [salt][3]             | BINARY(32)     | SIGNED     |     | NO   |                   |                |            |
-| [verifier][4]         | BINARY(32)     | SIGNED     |     | NO   |                   |                |            |
-| [session_key][5]      | BINARY(40)     | SIGNED     |     | YES  |                   |                |            |
-| [totp_secret][6]      | VARBINARY(100) | SIGNED     |     | YES  |                   |                |            |
-| [email][7]            | VARCHAR(255)   | SIGNED     |     | NO   | ''                |                |            |
-| [reg_mail][8]         | VARCHAR(255)   | SIGNED     |     | NO   | ''                |                |            |
-| [joindate][9]         | TIMESTAMP      | SIGNED     |     | NO   | CURRENT_TIMESTAMP |                |            |
-| [last_ip][10]         | VARCHAR(15)    | SIGNED     |     | NO   | 127.0.0.1         |                |            |
-| [last_attempt_ip][11] | VARCHAR(15)    | SIGNED     |     | NO   | 127.0.0.1         |                |            |
-| [failed_logins][12]   | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
-| [locked][13]          | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |            |
-| [lock_country][14]    | VARCHAR(2)     | SIGNED     |     | NO   | 00                |                |            |
-| [last_login][15]      | TIMESTAMP      | SIGNED     |     | YES  |                   |                |            |
-| [online][16]          | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
-| [expansion][17]       | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |            |
-| [mutetime][18]        | BIGINT         | SIGNED     |     | NO   | 0                 |                |            |
-| [mutereason][19]      | VARCHAR(255)   | SIGNED     |     | NO   | ''                |                |            |
-| [muteby][20]          | VARCHAR(50)    | SIGNED     |     | NO   | ''                |                |            |
-| [locale][21]          | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |            |
-| [os][22]              | VARCHAR(3)     | SIGNED     |     | NO   | ''                |                |            |
-| [recruiter][23]       | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
-| [totaltime][24]       | INT            | UNSIGNED   |     | NO   | 0                 |                |            |
+| Field                             | Type             | Null | Default           | Extra          | Comment       |
+| --------------------------------- | ---------------- | ---- | ----------------- | -------------- | ------------- |
+| [id](#id)                         | INT UNSIGNED     | NO   |                   | AUTO_INCREMENT | Identifier    |
+| [username](#username)             | VARCHAR(32)      | NO   | ''                |                |               |
+| [salt](#salt)                     | BINARY(32)       | NO   |                   |                |               |
+| [verifier](#verifier)             | BINARY(32)       | NO   |                   |                |               |
+| [session_key](#sessionkey)        | BINARY(40)       | YES  |                   |                |               |
+| [totp_secret](#totpsecret)        | VARBINARY(100)   | YES  |                   |                |               |
+| [email](#email)                   | VARCHAR(255)     | NO   | ''                |                |               |
+| [reg_mail](#regmail)              | VARCHAR(255)     | NO   | ''                |                |               |
+| [joindate](#joindate)             | TIMESTAMP        | NO   | CURRENT_TIMESTAMP |                |               |
+| [last_ip](#lastip)                | VARCHAR(15)      | NO   | 127.0.0.1         |                |               |
+| [last_attempt_ip](#lastattemptip) | VARCHAR(15)      | NO   | 127.0.0.1         |                |               |
+| [failed_logins](#failedlogins)    | INT UNSIGNED     | NO   | 0                 |                |               |
+| [locked](#locked)                 | TINYINT UNSIGNED | NO   | 0                 |                |               |
+| [lock_country](#lockcountry)      | VARCHAR(2)       | NO   | 00                |                |               |
+| [last_login](#lastlogin)          | TIMESTAMP        | YES  |                   |                |               |
+| [online](#online)                 | INT UNSIGNED     | NO   | 0                 |                |               |
+| [expansion](#expansion)           | TINYINT UNSIGNED | NO   | 2                 |                |               |
+| [Flags](#flags)                   | INT UNSIGNED     | NO   | 0                 |                | Account Flags |
+| [mutetime](#mutetime)             | BIGINT           | NO   | 0                 |                |               |
+| [mutereason](#mutereason)         | VARCHAR(255)     | NO   | ''                |                |               |
+| [muteby](#muteby)                 | VARCHAR(50)      | NO   | ''                |                |               |
+| [locale](#locale)                 | TINYINT UNSIGNED | NO   | 0                 |                |               |
+| [os](#os)                         | VARCHAR(3)       | NO   | ''                |                |               |
+| [recruiter](#recruiter)           | INT UNSIGNED     | NO   | 0                 |                |               |
+| [totaltime](#totaltime)           | INT UNSIGNED     | NO   | 0                 |                |               |
 
-[1]: #id
-[2]: #username
-[3]: #salt
-[4]: #verifier
-[5]: #sessionkey
-[6]: #totpsecret
-[7]: #email
-[8]: #regmail
-[9]: #joindate
-[10]: #lastip
-[11]: #last_attemptip
-[12]: #failedlogins
-[13]: #locked
-[14]: #lockcountry
-[15]: #lastlogin
-[16]: #online
-[17]: #expansion
-[18]: #mutetime
-[19]: #mutereason
-[20]: #muteby
-[21]: #locale
-[22]: #os
-[23]: #recruiter
-[24]: #totaltime
 
 ## Description of the fields
 
@@ -170,6 +147,43 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | 0     | Classic                        |
 | 1     | The Burning Crusade (TBC)      |
 | 2     | Wrath of the Lich King (WotLK) |
+
+### Flags
+
+| Name                              | Description                           | Bit Value  |
+| --------------------------------- | ------------------------------------- | ---------- |
+| ACCOUNT_FLAG_GM                   | Account is GM                         | 1          |
+| ACCOUNT_FLAG_NOKICK               | UNK                                   | 2          |
+| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                   | 4          |
+| ACCOUNT_FLAG_TRIAL                | Trial account                         | 8          |
+| ACCOUNT_FLAG_CANCELLED            | UNK                                   | 16         |
+| ACCOUNT_FLAG_IGR                  | Internet Game Room (Internet café?)   | 32         |
+| ACCOUNT_FLAG_WHOLESALER           | UNK                                   | 64         |
+| ACCOUNT_FLAG_PRIVILEGED           | UNK                                   | 128        |
+| ACCOUNT_FLAG_EU_FORBID_ELV        | UNK                                   | 256        |
+| ACCOUNT_FLAG_EU_FORBID_BILLING    | UNK                                   | 512        |
+| ACCOUNT_FLAG_RESTRICTED           | UNK                                   | 1024       |
+| ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend (referer or referee) | 2048       |
+| ACCOUNT_FLAG_BLIZZARD             | UNK                                   | 4096       |
+| ACCOUNT_FLAG_RECURRING_BILLING    | UNK                                   | 8192       |
+| ACCOUNT_FLAG_NOELECTUP            | UNK                                   | 16384      |
+| ACCOUNT_FLAG_KR_CERTIFICATE       | Korean certificate?                   | 32768      |
+| ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition               | 65536      |
+| ACCOUNT_FLAG_DISABLE_VOICE        | Can't join voice chat                 | 131072     |
+| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Can't speak in voice chat             | 262144     |
+| ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection                | 524288     |
+| ACCOUNT_FLAG_EU_FORBID_CC         | UNK                                   | 1048576    |
+| ACCOUNT_FLAG_OPENBETA_DELL        | Dell XPS WoW Edition Promo            | 2097152    |
+| ACCOUNT_FLAG_PROPASS              | UNK                                   | 4194304    |
+| ACCOUNT_FLAG_PROPASS_LOCK         | Pro Pass (Arena Tournament)           | 8388608    |
+| ACCOUNT_FLAG_PENDING_UPGRADE      | UNK                                   | 16777216   |
+| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | UNK                                   | 33554432   |
+| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition             | 67108864   |
+| ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net account        | 134217728  |
+| ACCOUNT_FLAG_DEMOS                | UNK                                   | 268435456  |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight        | 536870912  |
+| ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNK (StarCraft II related?)           | 1073741824 |
+| ACCOUNT_FLAG_S2_TRIAL             | UNK (StarCraft II related?)           | 2147483648 |
 
 ### mutetime
 
