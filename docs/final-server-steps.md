@@ -38,10 +38,17 @@ If you want to see the `GM Commands` in your server, you can check your `acore_w
 
 You also may also refer to the wiki [GM Commands](gm-commands).
 
+Highely recommend also if you want to have a similiar expeirence of wowhead [wowgaming](https://wowgaming.github.io/) provides us with an similiar but focused on Azerothcore, wowgaming's [aowow](https://wowgaming.altervista.org/aowow/) version.
+
+This similiar version of wowhead, doesn't update with your changes, they use their own `Data` they provided previously in the server setup steps and they keep their website updated every week based on azerothcore's updates to the core.
+
 
 ## Setting up Remote Access
 For development purposes, this step is not necessary. However, for increased security when you want other people to make accounts you should set up a registration form, so you don't have to paste their passwords. Check out [Remote Access](remote-access) on how to send commands into the server.
 
+Also refer to [account](account) which provides some `php` examples how do Calculate, Get and Verify `SRP6` protocol, in the addition of trying to make a way to create or access account information related to Azerothcore.
+
+In addition to it we provide a [catologue](https://www.azerothcore.org/catalogue.html) mainly focused in modules created by the community, but you may find others like a Registration page.
 
 ## Help
 
