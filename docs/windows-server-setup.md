@@ -24,7 +24,7 @@ Some files are optional but highly recommended:
 
 ## Option 1: Download Pre-Extracted Files
 
-If you intend to use an enUS client you can download the data files below. If you intend to use any other language client you will need to [extract](#option-2-extract-files-yourself) the data yourself.
+If you intend to use an english (`enUS` or `enGB`) client you can download the data files below. If you intend to use any other language client you will need to [extract](#option-2-extract-files-yourself) the data yourself.
 
 <a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Data files enUS (AC Data v16)</a>
 
@@ -76,44 +76,42 @@ vmap4assembler.exe
 
 First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within C:\Build\bin\RelWithDebInfo\configs\ (may vary).
 
-Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
+You will need to go in the `Build` folder you created, under `\bin\RelWithDebInfo\configs` and make a copy and rename the copies to the following:
+`worldserver.conf.dist - Copy` to `worldserver.conf`
+`authserver.conf.dist - Copy` to `authserver.conf`
 
-On a newly compiled configuration, you will have the following values by default
-```
-LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth" worldserver.conf / authserver.conf
-WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world" worldserver.conf
-CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters" worldserver.conf
-```
+{% include tip.html content="In the case you made the copies and it still giving you errors because it doesnt find either config, make sure you've -Hide extensions for known file types- unchecked in your windows folder options, and you can validate if the file names are correct." %}
 
-They follow this structure:
 
-```
-Variablename = "MySQLIP;Port;Username;Password;database"  
-``` 
+## Updating DataDir / Data Directory
 
-The following steps must be verified:
+1. In your `worldserver.conf` file locate the `DataDir` option.
 
-- The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  If not, follow the instruction in [Realmlist Table](realmlist).
+2. Edit it to the path of your folder the following examples below:
+  - Current folder, if the `Data` folder is in the same place as your `authserver` and `worldserver` setting `DataDir = "./Data"`. 
 
-- The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
-  The username and password can be variable. You can choose to either: 
 
-    - use default acore / acore username and password pair.
+  - To relative / full path path: `DataDir = "C:\Build\bin\RelWithDebInfo\Data"`.
 
-    - create a unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it the necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
 
-### Updating DataDir
+For most `worldserver.conf` setting changes, you can simply type `.reload config` in-game to see changes instantly without restarting the server, the tables below are the tables that will take some effect after `.reload` command is executed.
 
-1. In your **worldserver.conf** file locate the **DataDir** option.
+| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
+|----------|----------|----------|----------|----------|
+| [acore_string](acore_string) | [achievement_criteria_data](achievement_criteria_data) | [command](command) | [creature_linked_respawn](creature_linked_respawn) | [creature_loot_template](creature_loot_template) |
+| [creature_movement_override](creature_movement_override) | [creature_onkill_reputation](creature_onkill_reputation) | [creature_questender](creature_questender) | [creature_queststarter](creature_queststarter) | [disables](disables) |
+| [dungeon_access_requirements](dungeon_access_requirements) | [dungeon_access_template](dungeon_access_template) | [event_scripts](event_scripts) | [game_event_npc_vendor](game_event_npc_vendor) | [game_graveyard](game_graveyard) |
+| [gameobject_loot_template](gameobject_loot_template) | [gameobject_queststarter](gameobject_queststarter) | [gameobject_questender](gameobject_questender) | [gossip_menu](gossip_menu) | [gossip_menu_option](gossip_menu_option) |
+| [graveyard_zone](graveyard_zone) | [item_enchantment_template](item_enchantment_template) | [item_loot_template](item_loot_template) | [item_set_names](item_set_names) | [module_string](module_string) |
+| [module_string_locale](module_string_locale) | [npc_vendor](npc_vendor) | [page_texts](page_texts) | [pickpocketing_loot_template](pickpocketing_loot_template) | [points_of_interest](points_of_interest) |
+| [quest_area_triggers](quest_area_triggers) | [quest_greeting](quest_greeting) | [quest_poi](quest_poi) | [quest_template](quest_template) | [reputation_reward_rate](reputation_reward_rate) |
+| [reputation_spillover_template](reputation_spillover_template) | [reference_loot_template](reference_loot_template) | [server_mail_template](server_mail_template) | [skinning_loot_template](skinning_loot_template) | [spell_scripts](spell_scripts) |
+| [waypoint_data](waypoint_data) | [waypoint_scripts](waypoint_scripts) | World config settings | AntiDos opcode policies |  |
 
-1. Edit it to the path of your folder. i.e **C:\Build\bin\RelWithDebInfo\Data**
-
-{% include tip.html content="For most **worldserver.conf** setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 
-### (Optional) Config options by environment variable
+## (Optional) Config options by environment variable
 
 It is possible to load config options via environment variables, which you can read about [here](config-overrides-with-env-var).
 
