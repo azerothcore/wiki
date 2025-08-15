@@ -26,7 +26,7 @@ Now you will either drag/run or copy-paste the content of the file [create_mysql
 
 {% include important.html content="The file above file is a Query or SQL file, is not a SQL script, for the case of DBeaver users that may get that confusion." %}
 
-{% include tip.html content="You can change the password of the user you are creating for increased security, either in the query file, execution or after in your Database client of choice." %}
+{% include tip.html content="You can change the password of the user you are creating, and you should for increased security, refering to the `acore` user, you can do this either in the query file, execution or after in your Database client of choice." %}
 
 ## Populating the database
 
