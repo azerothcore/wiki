@@ -28,6 +28,19 @@ Now you will either drag/run or copy-paste the content of the file [create_mysql
 
 {% include tip.html content="You can change the password of the user you are creating, and you should for increased security, refering to the acore user, you can do this either in the query file, execution or after in your Database client of choice." %}
 
+In the case you want you to use different information to connected to their respective database related to your `authserver` and `wolrdserver`.
+
+They follow this structure:
+`Variablename = "MySQLIP;Port;Username;Password;database"`
+The values below are the default, but you're free to change them, if you need or want, we don't recommend if you dont know what you're doing.
+
+```
+LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth" worldserver.conf / authserver.conf
+WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world" worldserver.conf
+CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters" worldserver.conf
+```
+
+
 ## Populating the database
 
 ### Automatic Database Updater (Recommended, specially for newer users.)
