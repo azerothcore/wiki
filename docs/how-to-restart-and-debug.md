@@ -49,4 +49,3 @@ Our Docker setup integrates the `startup-scripts` engine. This means that enabli
 
 For more information, please refer to the [Install with Docker](https://www.azerothcore.org/wiki/Install-with-Docker) documentation. You will also find a guide on how to debug your code by using VSCode combined with its Remote Docker extension.
 
-Similar code found with 1 license type
