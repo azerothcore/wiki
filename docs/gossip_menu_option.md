@@ -4,6 +4,8 @@
 
 This table holds information about menu options a gossip NPC can have. Examples of options: "Train me!", "I want to unlearn my talents"
 
+This table has `SMSG_NPC_TEXT_UPDATE`, `SMSG_GOSSIP_MESSAGE` packet and npccache.wdb (merged with others) cache file associated with: NPC dialogue, gossip menus, greetings. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 ## Structure
 
 | Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |

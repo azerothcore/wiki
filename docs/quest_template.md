@@ -6,6 +6,8 @@
 
 Contains all basic definitions of available quests.
 
+This table has `SMSG_QUEST_QUERY_RESPONSE` packet and questcache.wdb cache file associated with: Quest title, description, objectives, completion text. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 ## **Table Structure**
 
 | Field                           | Type      | Attribute | Key | Null | Default | Extra | Comment |

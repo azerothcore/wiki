@@ -6,6 +6,8 @@
 
 This table holds the text for letter items or any items that when moused-over turn the cursor into a magnifying glass and on right-click will open up a window where you can read the contents of the letter.
 
+This table has `SMSG_PAGE_TEXT_QUERY_RESPONSE` packet and pagetextcache.wdb cache file associated with: Book/scroll/plaque text. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 **Table Structure**
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
