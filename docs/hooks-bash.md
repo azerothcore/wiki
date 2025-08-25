@@ -71,12 +71,12 @@ registerHooks "ON_AFTER_CONFIG" my_config_hook
 
 You don't, it's ran automatically in [functions.sh](https://github.com/azerothcore/azerothcore-wotlk/blob/master/apps/compiler/includes/functions.sh) under the compiler folder.
 
-You will the `runHooks "ON_AFTER_CONFIG"` and  `runHooks "ON_AFTER_BUILD"`. But `runHooks "ON_AFTER_OPTIONS"` is currently unimplemented.
+You will the use the `runHooks "ON_AFTER_CONFIG"` or  `runHooks "ON_AFTER_BUILD"`. But `runHooks "ON_AFTER_OPTIONS"` is currently unimplemented.
 
 ## Troubleshooting
 
 - Make sure your hook function is defined before you register it.
-- Ensure the hook is actually called in the build scripts (example: `runHooks "ON_AFTER_BUILD"`.
+- Ensure the hook is actually called in the build scripts (example: `runHooks "ON_AFTER_BUILD"`).
 - If your hook doesn't run, check for typos in the hook registered name or function name.
 
 ## Pratical Example
