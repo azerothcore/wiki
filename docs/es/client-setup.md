@@ -17,7 +17,7 @@ Si necesita uan copia del cliente original, puede encontrar algunos torrents par
 
 - (Optional) Si queire usar el WoW Launcher.exe para ejecutar su cliente, entonces debe cambiar su patchlist por el mismo nombre de ip/dns que su realmlist.
 
-{% include note.html content=NOTA: No use "localhost" como dirección, si necesita conectarse a localhost use 127.0.0.1" %}
+{% include note.html content="NOTA: No use \"localhost\" como dirección, si necesita conectarse a localhost use 127.0.0.1" %}
 
 <br>
 
