@@ -91,7 +91,7 @@ Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 
 **TYPE\_VALUE**
 
--   Valor a comparar, requerido para el logro. Este valor es usado en conjunto con otro tipo. 
+-   Valor de comparación necesario para alcanzar el logro. Este valor se utiliza junto con otro tipo. (Ver valor2 para el tipo de comparación) 
 
 **TYPE\_T\_LEVEL**
 
@@ -155,7 +155,6 @@ Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 
 -   La fuente acá es una clase válida (paste class list). El value2 debe estar establecido también.
  
-
 **TYPE\_NTH\_BIRTHDAY**
 
 -   Numero de cumpleaños.
