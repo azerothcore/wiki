@@ -27,7 +27,7 @@
 | [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  |                   |                |               |
 | [online](#online)                 | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 | [expansion](#expansion)           | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |               |
-| [Flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
+| [flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
 | [mutetime](#mutetime)             | BIGINT         |            |     | NO   | 0                 |                |               |
 | [mutereason](#mutereason)         | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [muteby](#muteby)                 | VARCHAR(50)    |            |     | NO   | ''                |                |               |
@@ -36,6 +36,31 @@
 | [recruiter](#recruiter)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 | [totaltime](#totaltime)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 
+[1]: #id
+[2]: #username
+[3]: #salt
+[4]: #verifier
+[5]: #session_key
+[6]: #totp_secret
+[7]: #email
+[8]: #reg_mail
+[9]: #joindate
+[10]: #last_ip
+[11]: #last_attempt_ip
+[12]: #failed_logins
+[13]: #locked
+[14]: #lock_country
+[15]: #last_login
+[16]: #online
+[17]: #expansion
+[18]: #flags
+[19]: #mutetime
+[19]: #mutereason
+[20]: #muteby
+[21]: #locale
+[22]: #os
+[23]: #recruiter
+[24]: #totaltime
 
 ## Description of the fields
 
@@ -117,6 +142,9 @@ The date when the account was created.
 
 The last IP used by the person who logged in the account.
 
+### last\_attempt\_ip
+** TO BE FILLED IN **
+
 ### failed\_logins
 
 The number of failed logins attempted on the account.
@@ -125,14 +153,13 @@ The number of failed logins attempted on the account.
 
 Boolean 0 or 1 controlling if the account has been locked or not. This can be controlled with the ".account lock" GM command. If locked (1), the user can only log in with their [last_ip][11]. If unlocked (0), a user can log in from any IP, and their last_ip will be updated if it is different. ".Ban account" does not lock it.
 
+### locked\_country
+
+** TO BE FILLED IN **
+
 ### last\_login
 
 The date when the account was last logged into.
-
-### totaltime
-
-Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
-Stored in Unix Time.
 
 ### online
 
@@ -153,37 +180,37 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | Name                              | Description                           | Bit Value  |
 | --------------------------------- | ------------------------------------- | ---------- |
 | ACCOUNT_FLAG_GM                   | Account is GM                         | 1          |
-| ACCOUNT_FLAG_NOKICK               | UNK                                   | 2          |
+| ACCOUNT_FLAG_NOKICK               | UNKNOWN                               | 2          |
 | ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                   | 4          |
 | ACCOUNT_FLAG_TRIAL                | Trial account                         | 8          |
-| ACCOUNT_FLAG_CANCELLED            | UNK                                   | 16         |
+| ACCOUNT_FLAG_CANCELLED            | UNKNOWN                               | 16         |
 | ACCOUNT_FLAG_IGR                  | Internet Game Room (Internet café?)   | 32         |
-| ACCOUNT_FLAG_WHOLESALER           | UNK                                   | 64         |
-| ACCOUNT_FLAG_PRIVILEGED           | UNK                                   | 128        |
-| ACCOUNT_FLAG_EU_FORBID_ELV        | UNK                                   | 256        |
-| ACCOUNT_FLAG_EU_FORBID_BILLING    | UNK                                   | 512        |
-| ACCOUNT_FLAG_RESTRICTED           | UNK                                   | 1024       |
+| ACCOUNT_FLAG_WHOLESALER           | UNKNOWN                               | 64         |
+| ACCOUNT_FLAG_PRIVILEGED           | UNKNOWN                               | 128        |
+| ACCOUNT_FLAG_EU_FORBID_ELV        | UNKNOWN                               | 256        |
+| ACCOUNT_FLAG_EU_FORBID_BILLING    | UNKNOWN                               | 512        |
+| ACCOUNT_FLAG_RESTRICTED           | UNKNOWN                               | 1024       |
 | ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend (referer or referee) | 2048       |
-| ACCOUNT_FLAG_BLIZZARD             | UNK                                   | 4096       |
-| ACCOUNT_FLAG_RECURRING_BILLING    | UNK                                   | 8192       |
-| ACCOUNT_FLAG_NOELECTUP            | UNK                                   | 16384      |
+| ACCOUNT_FLAG_BLIZZARD             | UNKNOWN                               | 4096       |
+| ACCOUNT_FLAG_RECURRING_BILLING    | UNKNOWN                               | 8192       |
+| ACCOUNT_FLAG_NOELECTUP            | UNKNOWN                               | 16384      |
 | ACCOUNT_FLAG_KR_CERTIFICATE       | Korean certificate?                   | 32768      |
 | ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition               | 65536      |
 | ACCOUNT_FLAG_DISABLE_VOICE        | Can't join voice chat                 | 131072     |
 | ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Can't speak in voice chat             | 262144     |
 | ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection                | 524288     |
-| ACCOUNT_FLAG_EU_FORBID_CC         | UNK                                   | 1048576    |
-| ACCOUNT_FLAG_OPENBETA_DELL        | Dell XPS WoW Edition Promo            | 2097152    |
-| ACCOUNT_FLAG_PROPASS              | UNK                                   | 4194304    |
+| ACCOUNT_FLAG_EU_FORBID_CC         | UNKNOWN                               | 1048576    |
+| ACCOUNT_FLAG_OPENBETA_DELL        | Dell XPS WoW Edition Promotion        | 2097152    |
+| ACCOUNT_FLAG_PROPASS              | UNKNOWN                               | 4194304    |
 | ACCOUNT_FLAG_PROPASS_LOCK         | Pro Pass (Arena Tournament)           | 8388608    |
-| ACCOUNT_FLAG_PENDING_UPGRADE      | UNK                                   | 16777216   |
-| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | UNK                                   | 33554432   |
+| ACCOUNT_FLAG_PENDING_UPGRADE      | UNKNOWN                               | 16777216   |
+| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | UNKNOWN                               | 33554432   |
 | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition             | 67108864   |
 | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net account        | 134217728  |
-| ACCOUNT_FLAG_DEMOS                | UNK                                   | 268435456  |
+| ACCOUNT_FLAG_DEMOS                | UNKNOWN                               | 268435456  |
 | ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight        | 536870912  |
-| ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNK (StarCraft II related?)           | 1073741824 |
-| ACCOUNT_FLAG_S2_TRIAL             | UNK (StarCraft II related?)           | 2147483648 |
+| ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNKNOWN (StarCraft II related?)       | 1073741824 |
+| ACCOUNT_FLAG_S2_TRIAL             | UNKNOWN (StarCraft II related?)       | 2147483648 |
 
 ### mutetime
 
@@ -215,3 +242,8 @@ Stores information about client's OS. Used by Warden system.
 ### recruiter
 
 The account ID of another account. Used for recuit-a-friend system. See [account.id][1]
+
+### totaltime
+
+Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
+Stored in Unix Time.
