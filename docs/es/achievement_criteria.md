@@ -1,3 +1,6 @@
+---
+redirect_from: "/Achievement_Criteria"
+---
 
 # Criterios de los Logros
 
@@ -8,6 +11,8 @@
 Este tipo de DBC (DataBaseClient) fue añadido en la versión del WoW 3.0.1.8303 y contiene los criterios necesarios para obtener un logro.
 
 **Versión : 3.3.5a**
+
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)
 
 ## Estructura
 
@@ -158,7 +163,7 @@ Asesinado por una criatura.
 
 #### FALL\_WITHOUT\_DYING = 24
 
-Caer sin morir.
+Caer de altura sin morir.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -167,7 +172,7 @@ Caer sin morir.
 
 #### DEATHS\_FROM = 26
 
-Muertes desde:
+Causa de muerte:
 
 | Column | Field               | Type   |
 | ------ | ------------------- | ------ |
@@ -210,7 +215,7 @@ Hechizo lanzado 2.
 
 #### BG\_OBJECTIVE\_CAPTURE = 30
 
-Captura de Objetivo del Campo de Batalla
+Objetivos de captura del campo de batalla.
 
 | Column | Field    | Type    | Notes                         |
 | ------ | -------- | ------- | ----------------------------- |
@@ -228,7 +233,7 @@ Muerte honorable en un área.
 
 #### WIN\_ARENA = 32
 
-Arenas ganadas.
+Partidos de arena ganados.
 
 #### PLAY\_ARENA = 33
 
@@ -252,7 +257,7 @@ Item propio.
 
 #### WIN\_RATED\_ARENA = 37
 
-Ganar la arena clasificada
+Ganar la arena clasificada.
 
 | Column | Field  | Type    | Notes          |
 | ------ | ------ | ------- | -------------- |
@@ -262,7 +267,7 @@ Ganar la arena clasificada
 
 #### HIGHEST\_TEAM\_RATING = 38
 
-Mayor Índice de arena.
+Calificación más alta del equipo de la Arena.
 
 | Column | Field    | Type    | Notes   |
 | ------ | -------- | ------- | ------- |
@@ -270,7 +275,7 @@ Mayor Índice de arena.
 
 #### REACH\_TEAM\_RATING = 39
 
-Cantidad de Índice de arena.
+Arena team rating achieved.
 
 | Column | Field      | Type    | Notes   |
 | ------ | ---------- | ------- | ------- |
@@ -296,7 +301,7 @@ Item despojado.
 
 #### EXPLORE\_AREA = 43
 
-areaReference  **NO** es el índice de [AreaTable.dbc.](AreaTable), proviene de WorldMapOverlay.dbc.
+- areaReference  **NO** es el índice de [AreaTable.dbc.](AreaTable), proviene de WorldMapOverlay.dbc.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
@@ -328,9 +333,9 @@ Obtener reputación.
 | 4      | [Faction](Faction) | iRefID  |                                                                        |
 | 5      | reputationAmount   | Integer | Cantidad total de reputación, teniendo en cuenta que 42000 es exaltado |
 
-#### GAIN\_EXALTED\_REPUTATION= 47
+#### GAIN\_EXALTED\_REPUTATION = 47
 
-Obtener reputación exaltada.
+Ganó una reputación exaltada.
 
 | Column | Field                   | Type    |
 | ------ | ----------------------- | ------- |
@@ -339,7 +344,7 @@ Obtener reputación exaltada.
 
 #### VISIT\_BARBER\_SHOP = 48
 
-Visitar al peluquero.
+Visitas a la Barbería.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
@@ -350,17 +355,19 @@ Visitar al peluquero.
 
 Nivel de Item para ser considerado épico. Véase [itemlevel](item_template#itemlevel).
 
+- [ItemLevel](item_template#itemlevel)
+
 | Column | Field    | Type    |
 | ------ | -------- | ------- |
 | 4      | itemSlot | Integer |
 
 #### ROLL\_NEED\_ON\_LOOT = 50
 
-Número de dados necesarios para el botín.
+Número de tiradas necesarias para obtener botín.
 
 #### ROLL\_GREED\_ON\_LOOT = 51
 
-Número de dados necesarios en modo codicia para el botín.
+Número de tiradas de avaricia sobre el botín.
 
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
@@ -387,7 +394,7 @@ Muertes honorables por raza.
 
 #### DO\_EMOTE = 54
 
-[Emotes](emotes#ID).
+- ¿Dónde se almacena la información sobre el objetivo?
 
 | Column | Field           | Type    | Notes                                                           |
 | ------ | --------------- | ------- | --------------------------------------------------------------- |
@@ -400,7 +407,7 @@ Sanación realizada.
 
 #### GET\_KILLING\_BLOWS = 56
 
-Hacer Golpes de Gracia.
+Golpes mortales
 
 | Column | Field          | Type    | Notes                               |
 | ------ | -------------- | ------- | ----------------------------------- |
@@ -442,7 +449,7 @@ Activar cierto Objeto del Juego (GameObject), ya sea puerta, caja, etc.
 
 #### SPECIAL\_PVP\_KILL = 70
 
-¿Acaso son Criterios de Logros especiales almacenados en los DBC?
+- ¿Acaso son Criterios de Logros especiales almacenados en los DBC?
 
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
@@ -502,7 +509,7 @@ Mayor número de poder de hechizos.
 
 #### HIGHEST\_RATING = 100
 
-Mayor número.
+Calificación más alta.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -537,7 +544,7 @@ Muertes honorables obtenidas.
 
 #### ACCEPTED\_SUMMONS = 114
 
-Invocaciones aceptadas.
+Citación aceptada.
 
 | Column | Field                                       | Type    |
 | ------ | ------------------------------------------- | ------- |

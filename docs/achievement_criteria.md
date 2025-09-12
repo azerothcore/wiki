@@ -61,12 +61,16 @@ This information is retrieved from DBCStructure.h.
 
 #### REACH\_LEVEL = 5
 
+Reach a specified level.
+
 | Column | Field  | Type    |
 | ------ | ------ | ------- |
 | 4      | unused | Integer |
 | 5      | level  | Integer |
 
 #### REACH\_SKILL\_LEVEL = 7
+
+Reach a specified skill level.
 
 | Column | Field      | Type    | Notes                               |
 | ------ | ---------- | ------- | ----------------------------------- |
@@ -75,11 +79,15 @@ This information is retrieved from DBCStructure.h.
 
 #### COMPLETE\_ACHIEVEMENT = 8
 
+Complete an achievement.
+
 | Column | Field                      | Type   |
 | ------ | -------------------------- | ------ |
 | 4      | [Achievement](Achievement) | iRefID |
 
 #### COMPLETE\_QUEST\_COUNT = 9
+
+Complete a certain number of quests.
 
 | Column | Field           | Type    |
 | ------ | --------------- | ------- |
@@ -88,12 +96,16 @@ This information is retrieved from DBCStructure.h.
 
 #### COMPLETE\_DAILY\_QUEST\_DAILY = 10
 
+Complete a certain number of daily missions each day.
+
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
 | 4      | unused       | Integer |
 | 5      | numberOfDays | Integer |
 
 #### COMPLETE\_QUESTS\_IN\_ZONE = 11
+
+Complete a certain number of missions in an area.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -102,7 +114,11 @@ This information is retrieved from DBCStructure.h.
 
 #### DAMAGE\_DONE = 13
 
+Amount of damage dealt.
+
 #### COMPLETE\_DAILY\_QUEST = 14
+
+Complete a certain number of daily missions.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -111,7 +127,11 @@ This information is retrieved from DBCStructure.h.
 
 #### COMPLETE\_BATTLEGROUND = 15
 
+Battlefields completed.
+
 #### DEATH\_AT\_MAP = 16
+
+Death on a map.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
@@ -119,11 +139,15 @@ This information is retrieved from DBCStructure.h.
 
 #### DEATH\_IN\_DUNGEON = 18
 
+Death in a Dungeon.
+
 | Column | Field    | Type    |
 | ------ | -------- | ------- |
 | 4      | manLimit | Integer |
 
 #### COMPLETE\_RAID = 19
+
+Raid completed.
 
 | Column | Field     | Type    | Notes              |
 | ------ | --------- | ------- | ------------------ |
@@ -131,11 +155,15 @@ This information is retrieved from DBCStructure.h.
 
 #### KILLED\_BY\_CREATURE = 20
 
+Killed by a creature.
+
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
 | 4      | creatureEntry | Integer |
 
 #### FALL\_WITHOUT\_DYING = 24
+
+Fall height without dying.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -144,11 +172,15 @@ This information is retrieved from DBCStructure.h.
 
 #### DEATHS\_FROM = 26
 
+Death cause:
+
 | Column | Field               | Type   |
 | ------ | ------------------- | ------ |
 | 4      | EnvironmentalDamage | iRefID |
 
 #### COMPLETE\_QUEST = 27
+
+Quests complete.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
@@ -157,7 +189,11 @@ This information is retrieved from DBCStructure.h.
 
 #### BE\_SPELL\_TARGET = 28
 
+Spell cast on a player.
+
 #### BE\_SPELL\_TARGET2 = 69
+
+Spell cast on a player 2.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
@@ -166,7 +202,11 @@ This information is retrieved from DBCStructure.h.
 
 #### CAST\_SPELL = 29
 
+Spell cast.
+
 #### CAST\_SPELL2 = 110
+
+Spell cast 2.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
@@ -175,12 +215,16 @@ This information is retrieved from DBCStructure.h.
 
 #### BG\_OBJECTIVE\_CAPTURE = 30
 
+Battlefield capture objectives.
+
 | Column | Field    | Type    | Notes                       |
 | ------ | -------- | ------- | --------------------------- |
 | 4      | unknow   | Integer | value 42 = capture the flag |
 | 5      | count(?) | Integer | how many captures required  |
 
 #### HONORABLE\_KILL\_AT\_AREA = 31
+
+Honorable death in an area.
 
 | Column | Field             | Type    |
 | ------ | ----------------- | ------- |
@@ -189,7 +233,11 @@ This information is retrieved from DBCStructure.h.
 
 #### WIN\_ARENA = 32
 
+Arena matches won.
+
 #### PLAY\_ARENA = 33
+
+Arenas played
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
@@ -197,13 +245,19 @@ This information is retrieved from DBCStructure.h.
 
 #### LEARN\_SPELL = 34
 
+Learned spells.
+
 | Column | Field          | Type   |
 | ------ | -------------- | ------ |
 | 4      | [Spell](Spell) | iRefID |
 
 #### OWN\_ITEM = 36
 
+Own item.
+
 #### WIN\_RATED\_ARENA = 37
+
+Win the ranked arena.
 
 | Column | Field  | Type    | Notes      |
 | ------ | ------ | ------- | ---------- |
@@ -213,11 +267,15 @@ This information is retrieved from DBCStructure.h.
 
 #### HIGHEST\_TEAM\_RATING = 38
 
+Highest arena team rating.
+
 | Column | Field    | Type    | Notes   |
 | ------ | -------- | ------- | ------- |
 | 4      | teamtype | Integer | {2,3,5} |
 
 #### REACH\_TEAM\_RATING = 39
+
+Arena team rating achieved.
 
 | Column | Field      | Type    | Notes   |
 | ------ | ---------- | ------- | ------- |
@@ -226,6 +284,8 @@ This information is retrieved from DBCStructure.h.
 
 #### LEARN\_SKILL\_LEVEL = 40
 
+Learn skill level.
+
 | Column | Field      | Type    | Notes                                                                     |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------- |
 | 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine) or what?                                       |
@@ -233,7 +293,11 @@ This information is retrieved from DBCStructure.h.
 
 #### USE\_ITEM = 41
 
+Item used.
+
 #### LOOT\_ITEM = 42
+
+Item looted.
 
 #### EXPLORE\_AREA = 43
 
@@ -253,6 +317,8 @@ This information is retrieved from DBCStructure.h.
 
 #### BUY\_BANK\_SLOT = 45
 
+Buy boxes at the bank.
+
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
 | 4      | unused        | Integer |
@@ -260,12 +326,16 @@ This information is retrieved from DBCStructure.h.
 
 #### GAIN\_REPUTATION = 46
 
+Gain reputation.
+
 | Column | Field              | Type    | Notes                                       |
 | ------ | ------------------ | ------- | ------------------------------------------- |
 | 4      | [Faction](Faction) | iRefID  |                                             |
 | 5      | reputationAmount   | Integer | Total reputation amount, so 42000 = exalted |
 
-#### GAIN\_EXALTED\_REPUTATION= 47
+#### GAIN\_EXALTED\_REPUTATION = 47
+
+Gained exalted reputation.
 
 | Column | Field                   | Type    |
 | ------ | ----------------------- | ------- |
@@ -274,12 +344,16 @@ This information is retrieved from DBCStructure.h.
 
 #### VISIT\_BARBER\_SHOP = 48
 
+Visits to the Barber Shop.
+
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
 | 4      | unused         | Integer |
 | 5      | numberOfVisits | Integer |
 
 #### EQUIP\_EPIC\_ITEM = 49
+
+Item level to be considered epic. See [item level](item_template#itemlevel).
 
 - [ItemLevel](item_template#itemlevel)
 
@@ -289,7 +363,11 @@ This information is retrieved from DBCStructure.h.
 
 #### ROLL\_NEED\_ON\_LOOT = 50
 
+Number of need rolls on loot.
+
 #### ROLL\_GREED\_ON\_LOOT = 51
+
+Number of greed rolls on loot.
 
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
@@ -298,12 +376,16 @@ This information is retrieved from DBCStructure.h.
 
 #### HK\_CLASS = 52
 
+Honorable deaths by class.
+
 | Column | Field               | Type    |
 | ------ | ------------------- | ------- |
 | 4      | [Class](ChrClasses) | iRefID  |
 | 5      | count               | Integer |
 
 #### HK\_RACE = 53
+
+Honorable deaths by race.
 
 | Column | Field            | Type    |
 | ------ | ---------------- | ------- |
@@ -321,7 +403,11 @@ This information is retrieved from DBCStructure.h.
 
 #### HEALING\_DONE = 55
 
+Healing performed.
+
 #### GET\_KILLING\_BLOWS = 56
+
+Killing blows.
 
 | Column | Field          | Type    | Notes                      |
 | ------ | -------------- | ------- | -------------------------- |
@@ -332,6 +418,8 @@ This information is retrieved from DBCStructure.h.
 
 #### EQUIP\_ITEM = 57
 
+Equip Item.
+
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
 | 4      | [Item](Item) | iRefID  |
@@ -339,7 +427,11 @@ This information is retrieved from DBCStructure.h.
 
 #### MONEY\_FROM\_QUEST\_REWARD= 62
 
+Quest money earned (Measured in copper coins).
+
 #### LOOT\_MONEY = 67
+
+Money earned (Measured in copper coins).
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
@@ -347,6 +439,8 @@ This information is retrieved from DBCStructure.h.
 | 5      | goldInCopper | Integer |
 
 #### USE\_GAMEOBJECT = 68
+
+Activates a specific GameObject, be it a door, a box, etc.
 
 | Column | Field    | Type    |
 | ------ | -------- | ------- |
@@ -364,12 +458,16 @@ This information is retrieved from DBCStructure.h.
 
 #### FISH\_IN\_GAMEOBJECT = 72
 
+Fishing on a certain GameObject.
+
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
 | 4      | goEntry   | Integer |
 | 5      | lootCount | Integer |
 
 #### LEARN\_SKILLLINE\_SPELLS = 75
+
+Learn skill spells.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
@@ -378,6 +476,8 @@ This information is retrieved from DBCStructure.h.
 
 #### WIN\_DUEL = 76
 
+Win duel(s).
+
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
 | 4      | unused    | Integer |
@@ -385,11 +485,15 @@ This information is retrieved from DBCStructure.h.
 
 #### HIGHEST\_POWER = 96
 
+Highest power.
+
 | Column | Field     | Type    | Notes                                   |
 | ------ | --------- | ------- | --------------------------------------- |
 | 4      | powerType | Integer | 0=mana, 1=rage, 3=energy, 6=runic power |
 
 #### HIGHEST\_STAT = 97
+
+Highest statistic.
 
 | Column | Field    | Type    | Notes                                         |
 | ------ | -------- | ------- | --------------------------------------------- |
@@ -397,17 +501,23 @@ This information is retrieved from DBCStructure.h.
 
 #### HIGHEST\_SPELLPOWER = 98
 
+Highest Spellpower.
+
 | Column | Field       | Type   | Notes                                 |
 | ------ | ----------- | ------ | ------------------------------------- |
 | 4      | spellSchool | iRefID | [SkillLine](SkillLine) or Resistances |
 
 #### HIGHEST\_RATING = 100
 
+Highest rating.
+
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
 | 4      | ratingType | Integer |
 
 #### LOOT\_TYPE = 109
+
+Type of loot.
 
 | Column | Field         | Type    | Notes                                  |
 | ------ | ------------- | ------- | -------------------------------------- |
@@ -416,12 +526,16 @@ This information is retrieved from DBCStructure.h.
 
 #### LEARN\_SKILL\_LINE = 112
 
+Learn skill line.
+
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
 | 4      | [SkillLine](SkillLine) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### EARN\_HONORABLE\_KILL = 113
+
+Honorable kills obtained.
 
 | Column | Field     | Type    |
 | ------ | --------- | ------- |
@@ -430,12 +544,16 @@ This information is retrieved from DBCStructure.h.
 
 #### ACCEPTED\_SUMMONS = 114
 
+Accepted summons.
+
 | Column | Field                                       | Type    |
 | ------ | ------------------------------------------- | ------- |
 | 4      | unused                                      | Integer |
 | 5      | Here comes a 1 in, because it's a Statistic | Integer |
 
 #### ACHIVEMENTPOINTS\_REACHED = 115
+
+Achievement points achieved.
 
 | Column | Field  | Type    |
 | ------ | ------ | ------- |
@@ -445,6 +563,8 @@ This information is retrieved from DBCStructure.h.
 // This thing really confuses me... Maybe it is only used for "Over Ninethousand", because nowhere AchPoints are Specified
 
 #### RANDOM\_DUNGEON\_PLAYERCOUNT = 119
+
+Number of random dungeons.
 
 | Column | Field       | Type    |
 | ------ | ----------- | ------- |
