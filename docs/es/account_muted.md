@@ -2,8 +2,6 @@
 
 [<-Volver a: Auth](database-auth)
 
-Leer en: [English :gb:](../account_muted) [Español :es:](account_muted)
-
 **Tabla \`account\_muted\`**
 
 Esta tabla contiene los ID de cuentas cuyos personajes tienen asignado un baneo de chat (mute).
@@ -16,7 +14,7 @@ Desactiva la mensajería de chat para cualquier personaje de la cuenta $NombreDe
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Identificador único global |
 | [mutedate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
 | [mutetime][3]   | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
 | [mutedby][4]    | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
