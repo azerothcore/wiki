@@ -156,7 +156,6 @@ Depending on this value, it will determine how value1 and value2 are used.
 
 -   The Source here is a valid class (paste class list). value2 must also be set
  
-
 **TYPE\_NTH\_BIRTHDAY**
 
 -   Number of Birthday
