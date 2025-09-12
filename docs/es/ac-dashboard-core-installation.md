@@ -1,28 +1,31 @@
 ## Introducción
 
-El panel de control Bash de Azeroth Core es una colección de scripts que ayudan durante la instalación y mantenimiento del servidor basado en AC. Permiten facilidad en al instalación, actualización y ejecución de AzerothCore mediante una realmente baja cantidad de pasos.
+El panel de bash de AzerothCore es una colección de scripts que ayudan con la instalación y el mantenimiento de un servidor AzerothCore.
+Permite instalar, actualizar y ejecutar fácilmente AzerothCore en su máquina en una cantidad tremendamente pequeña de pasos.
 
-Installar un servidor para desarrollo o producción nunca había sido tan fácil.
-
-Si necesita algún tipo de ayuda: [haga una pregunta](How-to-ask-for-help).
+Instalar un servidor privado de desarrollo o producción nunca ha sido tan fácil.
+Si necesitas ayuda simplemente [haz una pregunta](How-to-ask-for-help).
 
 
 ## Requisitos
 
-Necesita tener [git](https://git-scm.com/) instalado en su máquina. 
-Ningún otro software require ser instalado manualmente.
+Necesita tener [git](https://git-scm.com/), [curl](https://curl.se/), [unzip](https://github.com/madler/unzip), [sudo](https://www.sudo.ws/) instalados en su máquina.
+No es necesario instalar manualmente ningún otro software.
 
-- debian/ubuntu-based: `apt update && apt install git`
+
+- basado en Debian/Ubuntu: `apt update && apt install git`
 - macOS: `brew install git`
+- Windows: descargar e instalar [Git para Windows](https://gitforwindows.org/)
 
 ### Notas
-- Para usuarios de macOS: instale y use la ultima verisón de bash para ejecutar los comandos del panel de control (`brew install bash`)
-- Para usuarios de Windows: Los comandos deben ser ejecutados dentro de la consola de "git bash" o una compatible por ejemplo: WSL, cywin, etc...
-  Sin embargo, se sugiere usar git bash ya que viene preinstalada con git para Windows (uno de nuestros requisitos).
+- Para usuarios de macOS: instale y use la última versión de bash para ejecutar los comandos del panel de control (`brew install bash`)
+- Para usuarios de Windows: los comandos deben ejecutarse dentro del shell "git bash" o un shell compatible con bash como WSL, cygwin, etc.
+  Sin embargo, se sugiere git bash porque está preinstalado con git para Windows (uno de nuestros requisitos).
 
-## Instalación
 
-### Obténga las fuentes de AzerothCore
+## Configuración
+
+### Obtenga las fuentes de AzerothCore
 
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-wotlk
@@ -30,16 +33,19 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-w
 
 ### Configuración
 
-Existe un archivo [conf/dist/config.sh](https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.sh) que contiene una configuración predeterminada. Échele un vistazo. La mayor parte de las configuraciones predefinidas le servirán. Sin embargo, puede copiarlas bajo `conf/config.sh` y cambiarlas como le parezca o lo requiera.
+Hay un archivo [conf/dist/config.sh](https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.sh) que contiene la configuración predeterminada. Échale un vistazo. 
+La mayor parte de las configuraciones predefinidas le servirán. Sin embargo, puede copiarlas bajo `conf/config.sh` y cambiarlas como le parezca o lo requiera.
 
 
-### Instalar todas las dependecias de AzerothCore
+### Instalar todas las dependencias de AzerothCore
 
 ```
 ./acore.sh install-deps
 ```
 
-### Construya todo desde cero
+NOTA: en Windows debe ejecutarse como administrador
+
+### Construye todo desde cero
 
 ```
 ./acore.sh compiler all
@@ -47,7 +53,7 @@ Existe un archivo [conf/dist/config.sh](https://github.com/azerothcore/azerothco
 
 ### Configurar la base de datos
 
-- Bien puede conectarse a su base de datos MySQL (con `sudo mysql -u root`) y crear manualmente el usuario de MySQL `acore` ejecutando:
+- - Conéctese a su base de datos MySQL (con `sudo mysql -u root`) y cree manualmente el usuario MySQL `acore` ejecutando:
 
 ```
 DROP USER IF EXISTS 'acore'@'localhost';
@@ -60,133 +66,134 @@ FLUSH PRIVILEGES;
 exit;
 ```
 
-*Nota:  aún cuando el usuario `acore` solo es accesible desde la conexión local, cambiar su contraseña por algo más seguro es una buena práctica.*
+*Nota: aunque el usuario `acore` solo es accesible desde localhost, es una buena práctica cambiar su contraseña a algo más seguro.*
 
-- O cambiar el `config.sh` para usar otro usuario de MySQL.
+### Descargue los últimos datos del cliente
 
-Luegoe ejecute:
-
-```
-./acore.sh db-assembler import-all
-```
-
-Esto va a instalar toda la base de datos de AzerothCore. No se necesita importar alguna actualización de la base de datos en este punto.
-
-### Descargar los archivos del cliente más recientes
-
-Ejecute:
+Obtenga los últimos datos de sus clientes:
 
 ```
 ./acore.sh client-data
 ```
 
-### Archivos de configuración del Servidor
+### Archivos de configuración del servidor
+
+Cree los dos archivos con los siguientes comandos. Contienen la configuración predeterminada para el servidor mundial y el servidor de autenticación. Si no desea modificarlos, basta con copiarlos.
 
 ```
 cp env/dist/etc/authserver.conf.dist env/dist/etc/authserver.conf
-```
-```
 cp env/dist/etc/worldserver.conf.dist env/dist/etc/worldserver.conf
 ```
 
 ### Resultado
 
-Si siguió los pasos anteriores, tendrá el servidor dentro del directorio `env/dist`.
+Si siguió lo anterior, obtendrá su servidor dentro del directorio `env/dist`.
 
-Los binarios `worldserver` y `authserver` están ubicados en `azerothcore-wotlk/env/dist/bin`.
+Los binarios `worldserver` y `authserver` se encuentran en `azerothcore-wotlk/env/dist/bin`.
 
-Bien puedes ejecutralos directamente, o usar el reiniciador (ver abajo).
+Puede ejecutarlos directamente o utilizar el reiniciador (ver a continuación).
+El primer inicio del servidor mundial instalará una base de datos completa de AzerothCore. No es necesario importar ninguna actualización de la base de datos en este momento.
+
+Consulte también [Redes](networking) y [Pasos finales del servidor](final-server-steps)
 
 ### Reiniciador
 
-El panel de control de  AzerothCore viene con un sistema de reinicio incorporado:
+El panel de control de AzerothCore viene con un paquete de reinicio incluido:
 
 ```
 ./acore.sh run-worldserver
 ```
 
+Espere hasta que se complete el proceso y luego ejecute:
+
 ```
 ./acore.sh run-authserver
 ```
 
-Para servidores de dedicados, tal vez usted quiera ejecutarlos dentro de sesiones multiplexer de la terminal, usando herrambientas como `tmux` (ver abajo).
+Para servidores dedicados, es posible que desees ejecutarlos dentro de sesiones de multiplexor de terminal usando herramientas como `tmux` (ver a continuación).
 
 
-## Como actualizar su servidor
+## Cómo actualizar su servidor
 
-Actualice las fuentes:
+Actualizar las fuentes:
 
 ```
 git pull
 ```
 
-Reconstruya:
+Reconstruir:
 ```
 ./acore.sh compiler build
 ```
 
-Actualice la base de datos:
+Actualizar la base de datos:
 
-```
-./acore.sh db-assembler import-updates
-```
+[base de datos-manteniendo-el-servidor-actualizado](database-keeping-the-server-up-to-date)
 
 Eso es todo.
 
 
 ## Consejos para servidores dedicados (de producción)
 
-### Copias de respaldo diarias via Telegram
+### Copias de seguridad diarias de tus bases de datos a través de Telegram
 
-Obtener copias de respaldo diarias de las bases de datos de su servidor directamente en su celular o computador
-via mensajes de[Telegram](https://telegram.org/)?
+¿Quieres recibir copias de seguridad diarias de las bases de datos de tu servidor privado directamente en tu teléfono o computadora a través de mensajes de [Telegram](https://telegram.org/)?
 
-Sí, es posible. Solamente use: [azerothcore/telegram-automated-db-backup](https://github.com/azerothcore/telegram-automated-db-backup)
+Sí, es posible. Solo usa: [azerothcore/telegram-automated-db-backup](https://github.com/azerothcore/telegram-automated-db-backup)
 
 ### Visual Studio Code SSH
 
-Puede instalar AzerothCore en un servidor de linux, con facilidad, sin usar ningún tipo de GUI (Interfáz gráfica de usuario). Simplemente conectese de forma remota via SSH, usando [Visual Studio Code](https://code.visualstudio.com/)
-y las extensiones [SSH](https://code.visualstudio.com/docs/remote/ssh)
-y [SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) de manera que se va a sentir como en casa.
+Puedes instalar AzerothCore fácilmente en un servidor Linux sin interfaz gráfica. Simplemente conéctate remotamente por SSH con [Visual Studio Code](https://code.visualstudio.com/) y las extensiones [SSH](https://code.visualstudio.com/docs/remote/ssh) y [SSH: Editar archivos de configuración](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) para que parezca que se ejecuta localmente.
 
-### Ejecutar AzerothCore dentro de sesiones Tmux Run AzerothCore inside Tmux sessions
+### Ejecutar AzerothCore dentro de las sesiones de Tmux
 
-Usted puede usar [tmux](https://github.com/tmux/tmux) como terminal multiplexer, 
-esto le permitirá administrar con facilidad los procesos dentro de un servidor sin GUI.
+Puede utilizar [tmux](https://github.com/tmux/tmux) como multiplexor de terminal, lo que le permitirá administrar fácilmente sus procesos dentro de un servidor sin GUI.
 
-Puede crear 2 sesiones y ejecutrar `worldserver` y `authserver` dentro de estas:
+Puede crear 2 sesiones y ejecutar los procesos `worldserver` y `authserver` dentro de ellas:
 
 - `tmux new -s world-session`
-- luego ejecute `./acore.sh run-worldserver` dentro de esta, luego salga.
+- Ahora ejecute `./acore.sh run-worldserver` dentro de él y luego sepárese de él.
 
 
 - `tmux new -s auth-session`
-- luego ejecute `./acore.sh run-authserver` dentro de esta,  luego salga.
+- Ahora ejecute `./acore.sh run-authserver` dentro de él y luego sepárese de él.
 
-Puede salir usando `CTRL+B+D`. De esta manera no finalizará el/los proceso.
-Si está conectado usando VsCode SSH, puede simplemente serrar la sesión de la terminal.
+Puedes desconectarte usando `CTRL+B+D` para salir de la sesión sin terminar el proceso.
+Si te conectas mediante VSCode SSH, puedes simplemente cerrar la sesión de terminal.
 
-Puede volver de nuevo a la sesión `world-session` usando:
+Puedes conectarte nuevamente a la sesión `world-session` usando:
 
 - `tmux attach -t world-session`
 
 Otros comandos útiles:
 
-- crear nueva sesión: `tmux new -s my_session`
-- listar todas las sesiones: `tmux ls`
-- finalizar una sesión: `tmux kill my_session` (or just attach to it and type `exit`)
+- crear una nueva sesión: `tmux new -s my_session`
+- finalizar todas las sesiones: `tmux ls`
+- matar una sesión: `tmux kill my_session` (o simplemente adjuntarlo y escribir `exit`)
 - finalizar TODAS las sesiones: `tmux kill-server`
 - ...más detalles disponibles en la [wiki de tmux](https://github.com/tmux/tmux/wiki)
 
 
-### Iniciar automáticamente las sesiones tmux en el arranque del sistema
+### Iniciar automáticamente las sesiones de tmux al iniciar el sistema
 
-Puede crear automáticamente las sesiones y ejecutar `authserver` y `worldserver` usando este sencillo script:
+Puede crear automáticamente las sesiones tmux y ejecutar `authserver` y `worldserver` usando este sencillo script:
 
 ```sh
 #!/usr/bin/env bash
 
-# CHANGE THESE WITH THE CORRECT PATHS
+# PERMITIR QUE TMUX ESPERE A QUE MYSQL ESTÉ LISTO
+# DEBES CAMBIAR EL USUARIO Y CONTRASEÑA PARA QUE CORRESPONDA A TU INSTALACIÓN
+    mysql_ready() {
+        mysqladmin ping --host=127.0.0.1 --user=YOURUSER --password=YOURPASSWORD > /dev/null 2>&1
+    }
+
+    while !(mysql_ready)
+    do
+       sleep 3
+       echo "esperando mysql..."
+    done
+
+# CAMBIE ESTOS CON LOS CAMINOS CORRECTOS
 authserver="/path/to/azerothcore-wotlk/acore.sh run-authserver"
 worldserver="/path/to/azerothcore-wotlk/acore.sh run-worldserver"
 
@@ -194,40 +201,40 @@ authserver_session="auth-session"
 worldserver_session="world-session"
 
 if tmux new-session -d -s $authserver_session; then
-    echo "Created authserver session: $authserver_session"
+    echo "Sesión de servidor de autenticación creada: $authserver_session"
 else
-    echo "Error when trying to create authserver session: $authserver_session"
+    echo "Error al intentar crear una sesión de servidor de autenticación: $authserver_session"
 fi
 
 if tmux new-session -d -s $worldserver_session; then
-    echo "Created worldserver session: $worldserver_session"
+    echo "Sesión de servidor mundial creada: $worldserver_session"
 else
-    echo "Error when trying to create worldserver session: $worldserver_session"
+    echo "Error al intentar crear una sesión de servidor mundial: $worldserver_session"
 fi
 
 if tmux send-keys -t $authserver_session "$authserver" C-m; then
-    echo "Executed \"$authserver\" inside $authserver_session"
-    echo "You can attach to $authserver_session and check the result using \"tmux attach -t $authserver_session\""
+    echo "Se ejecutó "$authserver" dentro de $authserver_session"
+    echo "Puede conectarse a la sesión del servidor $auth y verificar el resultado usando \"tmux attached -t $authserver_session\""
 else
-    echo "Error when executing \"$authserver\" inside $authserver_session"
+    echo "Error al ejecutar "$authserver" dentro de $authserver_session"
 fi
 
 if tmux send-keys -t $worldserver_session "$worldserver" C-m; then
-    echo "Executed \"$worldserver\" inside $worldserver_session"
-    echo "You can attach to $worldserver_session and check the result using \"tmux attach -t $worldserver_session\""
+    echo "Se ejecutó "$worldserver" dentro de $worldserver_session"
+    echo "Puede conectarse a $worldserver_session y verificar el resultado usando \"tmux attached -t $worldserver_session\""
 else
-    echo "Error when executing \"$worldserver\" inside $worldserver_session"
+    echo "Error al ejecutar "$worldserver" dentro de $worldserver_session"
 fi
 ```
 
-En sistemas unix, puede usar [crontab](https://en.wikipedia.org/wiki/Cron) 
-para ejecutrar el script automáticamente en el arranque del sistema:
+En sistemas Unix, puedes usar [crontab](https://es.wikipedia.org/wiki/Cron_(Unix))
+para ejecutar el script automáticamente al iniciar el sistema:
 
 ```
 crontab -e
 ```
 
-luego, añada esta linea (remplace `/path/to/startup.sh` con la ruta de donde está ubicado el script script):
+luego agrega esta línea (reemplaza `/path/to/startup.sh` con la ruta donde colocaste el script anterior):
 
 ```
 @reboot /bin/bash /path/to/startup.sh

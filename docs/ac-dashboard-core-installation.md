@@ -25,7 +25,7 @@ No other software is required to be installed manually.
 
 ## Setup
 
-### Get the AC sources
+### Get the AzerothCore sources
 
 ```
 git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-wotlk
@@ -33,13 +33,11 @@ git clone https://github.com/azerothcore/azerothcore-wotlk.git; cd azerothcore-w
 
 ### Configuration
 
-There is a [conf/dist/config.sh](https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.sh) 
-file containing a default configuration. Have a look at it. 
-Most of the configuration defaults will probably work for your case, 
-but you can copy it under `conf/config.sh` and change values as you please.
+There is a [conf/dist/config.sh](https://github.com/azerothcore/azerothcore-wotlk/blob/master/conf/dist/config.sh) file containing a default configuration. Have a look at it. 
+Most of the configuration defaults will probably work for your case, but you can copy it under `conf/config.sh` and change values as you please.
 
 
-### Install all AC dependencies
+### Install all AzerothCore dependencies
 
 ```
 ./acore.sh install-deps
@@ -68,8 +66,7 @@ FLUSH PRIVILEGES;
 exit;
 ```
 
-*Note:  even though the `acore` user is only accessible from localhost, 
-it is a good practice to change its password to something more secure.*
+*Note:  even though the `acore` user is only accessible from localhost, it is a good practice to change its password to something more secure.*
 
 ### Download the latest client data
 
@@ -81,16 +78,7 @@ Get the latest client data:
 
 ### Server config files
 
-create these 2 files. They contain the default configuration for the worldserver and authserver, if you don't wish to modify simply copying them is enough.
-
-#### Linux and Mac
-
-```
-cp env/dist/etc/authserver.conf.dist env/dist/etc/authserver.conf
-cp env/dist/etc/worldserver.conf.dist env/dist/etc/worldserver.conf
-```
-
-#### Windows and Mac
+Create the two files listed below. They contain the default configuration for the worldserver and authserver. If you don't wish to modify, simply copying them is enough.
 
 ```
 cp env/dist/configs/authserver.conf.dist env/dist/configs/authserver.conf
@@ -122,8 +110,7 @@ Wait until the process is completed then run:
 ./acore.sh run-authserver
 ```
 
-For dedicated servers, 
-you may want to run them inside terminal multiplexer sessions using tools like `tmux` (see below).
+For dedicated servers, you may want to run them inside terminal multiplexer sessions using tools like `tmux` (see below).
 
 
 ## How to update your server
@@ -150,31 +137,26 @@ That's it.
 
 ### Daily backups of your databases via Telegram
 
-Getting daily backups of your private server databases directly to your phone/computer 
-via [Telegram](https://telegram.org/) messages?
+Getting daily backups of your private server databases directly to your phone/computer via [Telegram](https://telegram.org/) messages?
 
 Yes, that's possible. Just use: [azerothcore/telegram-automated-db-backup](https://github.com/azerothcore/telegram-automated-db-backup)
 
 ### Visual Studio Code SSH
 
-You can easily install AzerothCore in a linux server without any kind of GUI,
-simply connecting remotely via ssh using [Visual Studio Code](https://code.visualstudio.com/)
-and the [SSH](https://code.visualstudio.com/docs/remote/ssh)
-and the [SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) extensions so you'll feel just like at home.
+You can easily install AzerothCore in a linux server without any kind of GUI. Simply connecting remotely via ssh with [Visual Studio Code](https://code.visualstudio.com/) and the [SSH](https://code.visualstudio.com/docs/remote/ssh) and [SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit) extensions so you'll feel like it's running locally.
 
 ### Run AzerothCore inside Tmux sessions
 
-You can use [tmux](https://github.com/tmux/tmux) as terminal multiplexer, 
-it will allow you to easily manage your processes inside a server with no GUI.
+You can use [tmux](https://github.com/tmux/tmux) as terminal multiplexer, it will allow you to easily manage your processes inside a server with no GUI.
 
 You can create 2 sessions and run the `worldserver` and `authserver` processes inside them:
 
 - `tmux new -s world-session`
-- now run the `./acore.sh run-worldserver` inside it, then detach from it
+- now run the `./acore.sh run-worldserver` inside it, then detach from it.
 
 
 - `tmux new -s auth-session`
-- now run the `./acore.sh run-authserver` inside it, then detach from it
+- now run the `./acore.sh run-authserver` inside it, then detach from it.
 
 You can detach using `CTRL+B+D` to exit the session without killing the process.
 If connected using VSCode SSH, you can just close the terminal session.
