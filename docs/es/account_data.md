@@ -10,7 +10,7 @@ Contiene información sobre las cuentas y configuraciones.
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment            |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |
-| [accountId][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Account Identifier |
+| [accountId][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Identificador de cuenta |
 | [type][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                    |
 | [time][3]      | INT     | UNSIGNED   |     | NO   | 0       |       |                    |
 | [data][4]      | BLOB    | SIGNED     |     | NO   |         |       |                    |
@@ -28,11 +28,11 @@ El [account.id](account#id).
 
 ### type
 
-| Value | Description                   |
-| ----- | ----------------------------- |
-| 0     | Global-account config cache   |
-| 2     | Global-account bindings cache |
-| 4     | Global-account macros cache   |
+| Value | Description                             |
+| ----- | --------------------------------------- |
+| 0     | Caché de configuración de cuenta global |
+| 2     | Caché de enlaces de cuentas globales    |
+| 4     | Caché de macros de cuenta global        |
 
 ### time
 
