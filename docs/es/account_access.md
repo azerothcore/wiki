@@ -2,8 +2,6 @@
 
 [<- Volver a: Auth](database-auth)
 
-Leer en: [English :gb:](../account_access) [Español :es:](account_access)
-
 **Tabla \`account\_access\`**
 
 Esta tabla contiene el nivel de acceso de seguridad para cualquier reino en la tabla [realmlist](realmlist).
@@ -37,5 +35,3 @@ El nivel de seguridad de la cuenta. Los diferentes niveles tienen acceso a difer
 El [ID del reino](realmlist#id).
 
 ### comment
-
-Un campo opcional, para brindar más información sobre el registro.
