@@ -2,8 +2,6 @@
 
 [<-Volver a: Auth](database-auth)
 
-Leer en: [English :gb:](../account_banned) [Español :es:](account_banned)
-
 **Tabla \`account\_banned\`**
 
 Esta tabla enumera todas las cuentas que han sido baneadas junto con la fecha en la que (en tal caso) expirase el baneo.
