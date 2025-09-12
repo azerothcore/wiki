@@ -29,9 +29,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 - https://git-scm.com/download/win
 
-### Instalation
+### Installation
 
-- Run the standalone Installer
+- Run the standalone installer
 
 {% include note.html content="During the installation, you will be prompt to Adjust your PATH environment. Pick 'Git from the command line and also from 3rd-party software'." %}
 
@@ -41,7 +41,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 - https://desktop.github.com
 
-### Instalation
+### Installation
 
 - Download the installer and follow the steps to set it up.
 
@@ -70,7 +70,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 - https://dev.mysql.com/downloads/mysql/8.4.html
 
-### Instalation
+### Installation
 
 1. Run the Windows MSI Installer.
 2. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
@@ -85,9 +85,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
    3. Go to Environment Variables
    4. Under "Systemvariables" select **Path**
-   5. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
+   5. Edit and add your install path of MySQL. For example: **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
 
-{% include note.html content="MySQL development files: These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib. You will need them later on for the server." %}
+{% include note.html content="MySQL development files: These files are shipped with MySQL Server. Search for them in the program files directory: MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 5.7\lib. You will need them later on for the server." %}
 
 ## [MySQL Client](#mysql-client)
 
@@ -97,13 +97,13 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 - MySQL CLI (Fastest, comes with your MySQL Instalation)
 
-- [DBeaver](https://dbeaver.io/) (Multiplatform Database Management Tool)
+- [DBeaver](https://dbeaver.io/) (Multi-platform Database Management Tool)
 
 - [SQLYog Community Edition](https://github.com/webyog/sqlyog-community/wiki/Downloads)
 
 {% include note.html content="You only have to pick one of the options on top." %}
 
-### Instalation
+### Installation
 
 1. Try connecting to your database. You may be looking for "Connect to Host", "New Connection" or "Session Manager" depending on which program you use.
 
@@ -117,7 +117,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 {% include note.html content="NEVER download and install the RC (Release Candidate), ALWAYS the Latest Release" %}
 
-### Instalation
+### Installation
 
 - Run the Windows MSI Installer.
 
@@ -131,7 +131,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 {% include note.html content="Find the 64-bit version by finding the latest 3.x.x Win64 OpenSSL that is NOT the `light` version." %}
 
-### Instalation
+### Installation
 
 - Run the Windows EXE/MSI Installer.
 
@@ -153,7 +153,7 @@ While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The
 
 {% include note.html content="You only have to pick one of the options on top. The one that has the specific number, it's direct download to that version." %}
 
-### Instalation
+### Installation
 
 - Add an environment variable to the "System" variable named "BOOST_ROOT" and with the value being your Boost installation directory, e.g. `C:/local/boost_1_81_0`. Important is to use '**/**', not '**\\**' when pointing to the directory. (Make sure that it does not have a trailing slash (end of the path). If you still get problems, add the same variable in the `USER` variables section too, as shown in the image below.)
 
