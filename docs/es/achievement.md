@@ -1,3 +1,6 @@
+---
+redirect_from: "/Achievement"
+---
 
 # Logros
 
@@ -8,6 +11,8 @@
 La tabla DBC contiene todos los logros disponibles dentro del juego.
 
  **Versión: 3.3.5a**
+
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)  
 
 ## Estructura
 
