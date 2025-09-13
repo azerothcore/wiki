@@ -1,6 +1,6 @@
 # achievement\_reward
 
-[<-Voler a: World](database-world)
+[<-Voler a:World](database-world)
 
 **La tabla \`achievement\_reward\`**
 
@@ -8,16 +8,16 @@ Esta tabla describe al recompensa que recibirá cuando alcance determinado logro
 
 **Estructura**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TitleA][2]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [TitleH][3]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemID][4]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Sender][5]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Subject][6]        | VARCHAR(255) |            |     | YES  |         |       |         |
-| [Body][7]           | text         |            |     | YES  |         |       |         |
-| [MailTemplateID][8] | MEDIUMINT    | UNSIGNED   |     | YES  | 0       |       |         |
+| Campo               | Tipo         | Atributos  | Llave | Nulo | Por defecto | Extra | Comentario |
+| ------------------- | ------------ | ---------- | ----- | ---- | ----------- | ----- | ---------- |
+| [ID][1]             | MEDIUMINT    | UNSIGNED   | PRI   | NO   | 0           |       |            |
+| [TitleA][2]         | MEDIUMINT    | UNSIGNED   |       | NO   | 0           |       |            |
+| [TitleH][3]         | MEDIUMINT    | UNSIGNED   |       | NO   | 0           |       |            |
+| [ItemID][4]         | MEDIUMINT    | UNSIGNED   |       | NO   | 0           |       |            |
+| [Sender][5]         | MEDIUMINT    | UNSIGNED   |       | NO   | 0           |       |            |
+| [Subject][6]        | VARCHAR(255) |            |       | YES  |             |       |            |
+| [Body][7]           | text         |            |       | YES  |             |       |            |
+| [MailTemplateID][8] | MEDIUMINT    | UNSIGNED   |       | YES  | 0           |       |            |
 
 [1]: #id
 [2]: #titlea
@@ -56,7 +56,7 @@ Este es el asunto del correo que el jugador recibirá.
 
 ### Body
 
-Este es el cuerpo (texto) del correo que el jugador recibirá. This is the body (text) of the mail that the player will receive.
+Este es el cuerpo (texto) del correo que el jugador recibirá.
 
 ### MailTemplateID
 
@@ -64,7 +64,7 @@ ID de la plantilla de `MailTemplate.dbc` del correo que el jugador recibirá. Pa
 
 ### Ejemplo
 
-| ID  | TitleA | TitleH | ItemID | Sender | Subject             |
-| --- | ------ | ------ | ------ | ------ | ------------------- |
-| 13  | 0      | 0      | 41426  | 16128  | Level 80            |
-| 45  | 0      | 0      | 43348  | 28070  | You've Been Around! |
+| ID  | TitleA | TitleH | ItemID | Sender | Subject               |
+| --- | ------ | ------ | ------ | ------ | --------------------- |
+| 13  | 0      | 0      | 41426  | 16128  | Nivel 80              |
+| 45  | 0      | 0      | 43348  | 28070  | ¡Has estado por aquí! |

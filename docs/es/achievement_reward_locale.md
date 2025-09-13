@@ -1,6 +1,6 @@
 # achievement\_reward\_locale
 
-[<-Regresar a: Mundo](database-world)
+[<-Voler a:World](database-world)
 
 **La \`achievement\_reward\_locale\` mesa**
 
