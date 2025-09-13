@@ -8,12 +8,12 @@ Esta tabla contiene el nivel de acceso de seguridad para cualquier reino en la t
 
 **Estructura**
 
-| Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]      | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [gmlevel][2] | TINYINT      | UNSIGNED   |     | NO   |         |       |         |
-| [RealmID][3] | INT          | SIGNED     | PRI | NO   | -1      |       |         |
-| [comment][4] | VARCHAR(255) | SIGNED     |     | YES  | ''      |       |         |
+| Campo        | Tipo         | Atributos  | Llave | Null | Por defecto | Extra | Comentario |
+| ------------ | ------------ | ---------- | ----- | ---- | ----------- | ----- | ---------- |
+| [id][1]      | INT          | UNSIGNED   | PRI   | NO   |             |       |            |
+| [gmlevel][2] | TINYINT      | UNSIGNED   |       | NO   |             |       |            |
+| [RealmID][3] | INT          | SIGNED     | PRI   | NO   | -1          |       |            |
+| [comment][4] | VARCHAR(255) | SIGNED     |       | YES  | ''          |       |            |
 
 [1]: #id
 [2]: #gmlevel

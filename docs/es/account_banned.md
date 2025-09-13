@@ -8,14 +8,14 @@ Esta tabla enumera todas las cuentas que han sido baneadas junto con la fecha en
 
 **Estructura**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment    |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [id][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       | Account id |
-| [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |            |
-| [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |            |
-| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |            |
-| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |            |
-| [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |            |
+| Campo          | Tipo         | Atributos  | Llave | Null | Por defecto | Extra | Comentario   |
+| -------------- | ------------ | ---------- | ----- | ---- | ----------- | ----- | ------------ |
+| [id][1]        | INT          | UNSIGNED   | PRI   | NO   | 0           |       | ID de cuenta |
+| [bandate][2]   | INT          | UNSIGNED   | PRI   | NO   | 0           |       |              |
+| [unbandate][3] | INT          | UNSIGNED   |       | NO   | 0           |       |              |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED     |       | NO   |             |       |              |
+| [banreason][5] | VARCHAR(255) | SIGNED     |       | NO   |             |       |              |
+| [active][6]    | TINYINT      | UNSIGNED   |       | NO   | 1           |       |              |
 
 [1]: #id
 [2]: #bandate

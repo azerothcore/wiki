@@ -8,12 +8,12 @@ Contiene información sobre las cuentas y configuraciones.
 
 **Estructura**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment            |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |
-| [accountId][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Identificador de cuenta |
-| [type][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                    |
-| [time][3]      | INT     | UNSIGNED   |     | NO   | 0       |       |                    |
-| [data][4]      | BLOB    | SIGNED     |     | NO   |         |       |                    |
+| Campo          | Tipo    | Atributos | Llave | Null | Por defecto | Extra | Comentario                |
+| -------------- | ------- | --------- | ----- | ---- | ----------- | ----- | ------------------------- |
+| [accountId][1] | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de cuenta   |
+| [type][2]      | TINYINT | UNSIGNED  | PRI   | NO   | 0           |       |                           |
+| [time][3]      | INT     | UNSIGNED  |       | NO   | 0           |       |                           |
+| [data][4]      | BLOB    | SIGNED    |       | NO   |             |       |                           |
 
 [1]: #accountid
 [2]: #type

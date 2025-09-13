@@ -8,11 +8,11 @@ Esta tabla controla en que tantas instancias han estado los personajes de la cue
 
 **Estructura**
 
-| Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [accountId][1]   | INT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [instanceId][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [releaseTime][3] | BIGINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Campo            | Tipo   | Atributos | Key | Nulo | Por defecto | Extra | Comentario |
+| ---------------- | ------ | --------- | --- | ---- | ----------- | ----- | ---------- |
+| [accountId][1]   | INT    | UNSIGNED  | PRI | NO   |             |       |            |
+| [instanceId][2]  | INT    | UNSIGNED  | PRI | NO   | 0           |       |            |
+| [releaseTime][3] | BIGINT | UNSIGNED  |     | NO   | 0           |       |            |
 
 [1]: #accountid
 [2]: #instanceid

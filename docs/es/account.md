@@ -8,33 +8,33 @@
 
 **Estructura**
 
-| Field                             | Type           | Attributes | Key | Null | Default           | Extra          | Comment       |
-| --------------------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ------------- |
-| [id](#id)                         | INT            | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier    |
-| [username](#username)             | VARCHAR(32)    |            | UNI | NO   | ''                |                |               |
-| [salt](#salt)                     | BINARY(32)     |            |     | NO   |                   |                |               |
-| [verifier](#verifier)             | BINARY(32)     |            |     | NO   |                   |                |               |
-| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  |                   |                |               |
-| [totp_secret](#totpsecret)        | VARBINARY(100) |            |     | YES  |                   |                |               |
-| [email](#email)                   | VARCHAR(255)   |            |     | NO   | ''                |                |               |
-| [reg_mail](#regmail)              | VARCHAR(255)   |            |     | NO   | ''                |                |               |
-| [joindate](#joindate)             | TIMESTAMP      |            |     | NO   | CURRENT_TIMESTAMP |                |               |
-| [last_ip](#lastip)                | VARCHAR(15)    |            |     | NO   | 127.0.0.1         |                |               |
-| [last_attempt_ip](#lastattemptip) | VARCHAR(15)    |            |     | NO   | 127.0.0.1         |                |               |
-| [failed_logins](#failedlogins)    | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
-| [locked](#locked)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
-| [lock_country](#lockcountry)      | VARCHAR(2)     |            |     | NO   | 00                |                |               |
-| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  |                   |                |               |
-| [online](#online)                 | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
-| [expansion](#expansion)           | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |               |
-| [Flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Banderas de cuenta |
-| [mutetime](#mutetime)             | BIGINT         |            |     | NO   | 0                 |                |               |
-| [mutereason](#mutereason)         | VARCHAR(255)   |            |     | NO   | ''                |                |               |
-| [muteby](#muteby)                 | VARCHAR(50)    |            |     | NO   | ''                |                |               |
-| [locale](#locale)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
-| [os](#os)                         | VARCHAR(3)     |            |     | NO   | ''                |                |               |
-| [recruiter](#recruiter)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
-| [totaltime](#totaltime)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
+| Campo                             | Tipo           | Atributos | Llave | Null | por defecto       | Extra          | Comentario           |
+| --------------------------------- | -------------- | --------- | ----  | ---- | ----------------- | -------------- | -------------------- |
+| [id](#id)                         | INT            | UNSIGNED  | PRI   | NO   |                   | AUTO_INCREMENT | Identifier           |
+| [username](#username)             | VARCHAR(32)    |           | UNI   | NO   | ''                |                |                      |
+| [salt](#salt)                     | BINARY(32)     |           |       | NO   |                   |                |                      |
+| [verifier](#verifier)             | BINARY(32)     |           |       | NO   |                   |                |                      |
+| [session_key](#sessionkey)        | BINARY(40)     |           |       | YES  |                   |                |                      |
+| [totp_secret](#totpsecret)        | VARBINARY(100) |           |       | YES  |                   |                |                      |
+| [email](#email)                   | VARCHAR(255)   |           |       | NO   | ''                |                |                      |
+| [reg_mail](#regmail)              | VARCHAR(255)   |           |       | NO   | ''                |                |                      |
+| [joindate](#joindate)             | TIMESTAMP      |           |       | NO   | CURRENT_TIMESTAMP |                |                      |
+| [last_ip](#lastip)                | VARCHAR(15)    |           |       | NO   | 127.0.0.1         |                |                      |
+| [last_attempt_ip](#lastattemptip) | VARCHAR(15)    |           |       | NO   | 127.0.0.1         |                |                      |
+| [failed_logins](#failedlogins)    | INT            | UNSIGNED  |       | NO   | 0                 |                |                      |
+| [locked](#locked)                 | TINYINT        | UNSIGNED  |       | NO   | 0                 |                |                      |
+| [lock_country](#lockcountry)      | VARCHAR(2)     |           |       | NO   | 00                |                |                      |
+| [last_login](#lastlogin)          | TIMESTAMP      |           |       | YES  |                   |                |                      |
+| [online](#online)                 | INT            | UNSIGNED  |       | NO   | 0                 |                |                      |
+| [expansion](#expansion)           | TINYINT        | UNSIGNED  |       | NO   | 2                 |                |                      |
+| [Flags](#flags)                   | INT            | UNSIGNED  |       | NO   | 0                 |                | Banderas de cuenta   |
+| [mutetime](#mutetime)             | BIGINT         |           |       | NO   | 0                 |                |                      |
+| [mutereason](#mutereason)         | VARCHAR(255)   |           |       | NO   | ''                |                |                      |
+| [muteby](#muteby)                 | VARCHAR(50)    |           |       | NO   | ''                |                |                      |
+| [locale](#locale)                 | TINYINT        | UNSIGNED  |       | NO   | 0                 |                |                      |
+| [os](#os)                         | VARCHAR(3)     |           |       | NO   | ''                |                |                      |
+| [recruiter](#recruiter)           | INT            | UNSIGNED  |       | NO   | 0                 |                |                      |
+| [totaltime](#totaltime)           | INT            | UNSIGNED  |       | NO   | 0                 |                |                      |
 
 [1]: #id
 [2]: #username
@@ -177,40 +177,40 @@ Entero 0, 1 o 2 que controla si el cliente conectado a la cuenta tiene alguna ot
 
 ### Flags
 
-| Name                              | Description                                       | Bit Value  |
-| --------------------------------- | ------------------------------------------------- | ---------- |
-| ACCOUNT_FLAG_GM                   | La cuenta es GM                                   | 1          |
-| ACCOUNT_FLAG_NOKICK               | DESCONOCIDO                                       | 2          |
-| ACCOUNT_FLAG_COLLECTOR            | Edición de coleccionista                          | 4          |
-| ACCOUNT_FLAG_TRIAL                | Cuenta de prueba                                  | 8          |
-| ACCOUNT_FLAG_CANCELLED            | DESCONOCIDO                                       | 16         |
-| ACCOUNT_FLAG_IGR                  | Sala de juegos de Internet (¿cibercafé?)          | 32         |
-| ACCOUNT_FLAG_WHOLESALER           | DESCONOCIDO                                       | 64         |
-| ACCOUNT_FLAG_PRIVILEGED           | DESCONOCIDO                                       | 128        |
-| ACCOUNT_FLAG_EU_FORBID_ELV        | DESCONOCIDO                                       | 256        |
-| ACCOUNT_FLAG_EU_FORBID_BILLING    | DESCONOCIDO                                       | 512        |
-| ACCOUNT_FLAG_RESTRICTED           | DESCONOCIDO                                       | 1024       |
-| ACCOUNT_FLAG_REFERRAL             | Recluta-un-amigo (referente o árbitro)            | 2048       |
-| ACCOUNT_FLAG_BLIZZARD             | DESCONOCIDO                                       | 4096       |
-| ACCOUNT_FLAG_RECURRING_BILLING    | DESCONOCIDO                                       | 8192       |
-| ACCOUNT_FLAG_NOELECTUP            | DESCONOCIDO                                       | 16384      |
-| ACCOUNT_FLAG_KR_CERTIFICATE       | ¿Certificado coreano?                             | 32768      |
-| ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Edición de coleccionista                      | 65536      |
-| ACCOUNT_FLAG_DISABLE_VOICE        | No puedo unirme al chat de voz                    | 131072     |
-| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | No puedo hablar en el chat de voz                 | 262144     |
-| ACCOUNT_FLAG_REFERRAL_RESURRECT   | Pergamino de la Resurrección                      | 524288     |
-| ACCOUNT_FLAG_EU_FORBID_CC         | DESCONOCIDO                                       | 1048576    |
-| ACCOUNT_FLAG_OPENBETA_DELL        | Promoción de la edición Dell XPS WoW              | 2097152    |
-| ACCOUNT_FLAG_PROPASS              | DESCONOCIDO                                       | 4194304    |
-| ACCOUNT_FLAG_PROPASS_LOCK         | Pase Pro (Torneo Arena)                           | 8388608    |
-| ACCOUNT_FLAG_PENDING_UPGRADE      | DESCONOCIDO                                       | 16777216   |
-| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | DESCONOCIDO                                       | 33554432   |
-| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Edición de coleccionista                    | 67108864   |
-| ACCOUNT_FLAG_OVERMIND_LINKED      | Vinculado con la cuenta de Battle.net             | 134217728  |
-| ACCOUNT_FLAG_DEMOS                | DESCONOCIDO                                       | 268435456  |
-| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Permitido crear Caballero de la Muerte            | 536870912  |
-| ACCOUNT_FLAG_S2_REQUIRE_IGR       | DESCONOCIDO (¿Está relacionado con StarCraft II?) | 1073741824 |
-| ACCOUNT_FLAG_S2_TRIAL             | DESCONOCIDO (¿Está relacionado con StarCraft II?) | 2147483648 |
+| Nombre                            | Descripción                                       | Valor de bit  |
+| --------------------------------- | ------------------------------------------------- | ------------- |
+| ACCOUNT_FLAG_GM                   | La cuenta es GM                                   | 1             |
+| ACCOUNT_FLAG_NOKICK               | DESCONOCIDO                                       | 2             |
+| ACCOUNT_FLAG_COLLECTOR            | Edición de coleccionista                          | 4             |
+| ACCOUNT_FLAG_TRIAL                | Cuenta de prueba                                  | 8             |
+| ACCOUNT_FLAG_CANCELLED            | DESCONOCIDO                                       | 16            |
+| ACCOUNT_FLAG_IGR                  | Sala de juegos de Internet (¿cibercafé?)          | 32            |
+| ACCOUNT_FLAG_WHOLESALER           | DESCONOCIDO                                       | 64            |
+| ACCOUNT_FLAG_PRIVILEGED           | DESCONOCIDO                                       | 128           |
+| ACCOUNT_FLAG_EU_FORBID_ELV        | DESCONOCIDO                                       | 256           |
+| ACCOUNT_FLAG_EU_FORBID_BILLING    | DESCONOCIDO                                       | 512           |
+| ACCOUNT_FLAG_RESTRICTED           | DESCONOCIDO                                       | 1024          |
+| ACCOUNT_FLAG_REFERRAL             | Recluta-un-amigo (referente o árbitro)            | 2048          |
+| ACCOUNT_FLAG_BLIZZARD             | DESCONOCIDO                                       | 4096          |
+| ACCOUNT_FLAG_RECURRING_BILLING    | DESCONOCIDO                                       | 8192          |
+| ACCOUNT_FLAG_NOELECTUP            | DESCONOCIDO                                       | 16384         |
+| ACCOUNT_FLAG_KR_CERTIFICATE       | ¿Certificado coreano?                             | 32768         |
+| ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Edición de coleccionista                      | 65536         |
+| ACCOUNT_FLAG_DISABLE_VOICE        | No puedo unirme al chat de voz                    | 131072        |
+| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | No puedo hablar en el chat de voz                 | 262144        |  
+| ACCOUNT_FLAG_REFERRAL_RESURRECT   | Pergamino de la Resurrección                      | 524288        |
+| ACCOUNT_FLAG_EU_FORBID_CC         | DESCONOCIDO                                       | 1048576       |
+| ACCOUNT_FLAG_OPENBETA_DELL        | Promoción de la edición Dell XPS WoW              | 2097152       |
+| ACCOUNT_FLAG_PROPASS              | DESCONOCIDO                                       | 4194304       |
+| ACCOUNT_FLAG_PROPASS_LOCK         | Pase Pro (Torneo Arena)                           | 8388608       |
+| ACCOUNT_FLAG_PENDING_UPGRADE      | DESCONOCIDO                                       | 16777216      |
+| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | DESCONOCIDO                                       | 33554432      |
+| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Edición de coleccionista                    | 67108864      |
+| ACCOUNT_FLAG_OVERMIND_LINKED      | Vinculado con la cuenta de Battle.net             | 134217728     |
+| ACCOUNT_FLAG_DEMOS                | DESCONOCIDO                                       | 268435456     |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Permitido crear Caballero de la Muerte            | 536870912     |
+| ACCOUNT_FLAG_S2_REQUIRE_IGR       | DESCONOCIDO (¿Está relacionado con StarCraft II?) | 1073741824    |
+| ACCOUNT_FLAG_S2_TRIAL             | DESCONOCIDO (¿Está relacionado con StarCraft II?) | 2147483648    |
 
 ### mutetime
 

@@ -8,17 +8,17 @@ Esta tabla es usada para almacenar el estado de los tutoriales de todas las cuen
 
 **Estructura**
 
-| Field          | Type | Attributes | Key | Null | Default | Extra  | Comment            |
-| -------------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------ |
-| [accountId][1] | INT  | UNSIGNED   | PRI | NO   | 0       | Unique | Account Identifier |
-| [tut0][2]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut1][3]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut2][4]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut3][5]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut4][6]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut5][7]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut6][8]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut7][9]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| Campo          | Tipo | Atributos | Llave | Nulo | Por defecto | Extra  | Comentario              |
+| -------------- | ---- | --------- | ----- | ---- | ----------- | ------ | ----------------------- |
+| [accountId][1] | INT  | UNSIGNED  | PRI   | NO   | 0           | Unique | Identificador de cuenta |
+| [tut0][2]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut1][3]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut2][4]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut3][5]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut4][6]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut5][7]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut6][8]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
+| [tut7][9]      | INT  | UNSIGNED  |       | NO   | 0           |        |                         |
 
 [1]: #accountid
 [2]: #tut0

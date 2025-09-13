@@ -8,13 +8,13 @@ Esta tabla contiene la información que un jugador necesita obtener / completar 
 
 **Estructura**
 
-| Field            | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [criteria_id][1] | MEDIUMINT |            | PRI | NO   |         |       |         |
-| [type][2]        | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [value1][3]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [value2][4]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ScriptName][5]  | char(64)  |            |     | NO   |         |       |         |
+| Campo            | Tipo      | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ---------------- | --------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [criteria_id][1] | MEDIUMINT |           | PRI   | NO   |             |       |            |
+| [type][2]        | TINYINT   | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [value1][3]      | MEDIUMINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [value2][4]      | MEDIUMINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [ScriptName][5]  | char(64)  |           |       | NO   |             |       |            |
 
 [1]: #criteria_id
 [2]: #type
@@ -32,7 +32,7 @@ Esta es la ID de[Achievement\_Criteria.dbc](Achievement+Criteria).
 
 Dpendiendo de este valor, será determinado cómo son usados value1 y value2.
 
-| Type | Name                      |
+| Tipo | Nombre                    |
 | ---- | ------------------------- |
 | 0    | TYPE_NONE                 |
 | 1    | TYPE_T_CREATURE           |

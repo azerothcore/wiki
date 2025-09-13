@@ -10,15 +10,15 @@ GM-Command: **.mute [$NombreDelJugador] $TiempoEnMinutos [$motivo]**.
 
 Desactiva la mensajería de chat para cualquier personaje de la cuenta $NombreDelJugador (o actualmente seleccionado) en $TiempoEnMinutos (minutos). El jugador puede estar desconectado.
 
-**Table Structure**
+**Estructura de la tabla**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Identificador único global |
-| [mutedate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [mutetime][3]   | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mutedby][4]    | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
-| [mutereason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
+| Campo           | Tipo         | Atributos  | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| --------------- | ------------ | ---------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]       | INT          | UNSIGNED   | PRI   | NO   | 0           |       | Identificador único global |
+| [mutedate][2]   | INT          | UNSIGNED   | PRI   | NO   | 0           |       |                            |
+| [mutetime][3]   | INT          | UNSIGNED   |       | NO   | 0           |       |                            |
+| [mutedby][4]    | VARCHAR(50)  | SIGNED     |       | NO   |             |       |                            |
+| [mutereason][5] | VARCHAR(255) | SIGNED     |       | NO   |             |       |                            |
 
 [1]: #guid
 [2]: #mutedate
