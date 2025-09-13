@@ -24,7 +24,7 @@ It is the table that stores the translations of the table `achievement_reward`, 
 
 ### ID
 
-It is the [ID](achievement_reward#id) of the achievement obtained from `achievement_reward`
+It is the [ID](achievement_reward#id) of the achievement obtained from `achievement_reward`.
 
 ### Locale
 
@@ -44,11 +44,11 @@ This is the language of the gaming client.
 
 ### Subject
 
-It is the text of the column [Subject](achievement_reward#subject) of the table `achievement_reward`
+It is the text of the column [Subject](achievement_reward#subject) of the table `achievement_reward`.
 
 ### Text
 
-It is the text of the column [Body](achievement_reward#body) of the table `achievement_reward`
+It is the text of the column [Body](achievement_reward#body) of the table `achievement_reward`.
 
 ### Example
 ```sql
