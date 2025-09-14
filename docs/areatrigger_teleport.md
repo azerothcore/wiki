@@ -42,19 +42,19 @@ Target map of the trigger (see Maps.dbc).
 
 ### target\_position\_x
 
-X coordinate for the target destination of the trigger
+X coordinate for the target destination of the trigger.
 
 ### target\_position\_y
 
-Y coordinate for the target destination of the trigger
+Y coordinate for the target destination of the trigger.
 
 ### target\_position\_z
 
-Z coordinate for the target destination of the trigger
+Z coordinate for the target destination of the trigger.
 
 ### target\_orientation
 
-Orientation the player will get when appearing at this location
+Orientation the player will get when appearing at this location.
 
 ### Examples
 
