@@ -8,7 +8,7 @@ Habilitar un disparador para finalizar una condición de una misión (explorar).
 
 Si hay un registro en la tabla para una misión, esta no se completará hasta que el jugador active este disparador de área. La misión no termina necesariamente después de eso, pero se cumple esa condición. Si la única condición de la misión es explorar un área, se completará.
 
-## Estructura
+**Estructura**
 
 | Campo      | Tipo      | Atributos | Llave | Nulo | Por defecto | Extra | Comentarios             |
 | ---------- | --------- | --------- | ----- | ---- | ----------- | ----- | ----------------------- |

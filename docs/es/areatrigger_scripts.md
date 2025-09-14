@@ -2,7 +2,7 @@
 
 [<-Voler a:World](database-world)
 
-**The \`areatrigger\_scripts\` table**
+**La \`areatrigger\_scripts\` tabla**
 
 Permite que un disparador de área sea programado con Trinity Script.
 
