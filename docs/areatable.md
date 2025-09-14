@@ -66,8 +66,6 @@ This DBC contains the zone and subzone lists. For the purposes of this wiki arti
 | 0x08000000 | AREA_FLAG_WINTERGRASP_2  | Wintergrasp and it's subzones                                                                                                                                                                  |
 | 0x20000000 | AREA_FLAG_CANNOT_FLY     | not allowed to fly, only used in Dalaran areas (zone 4395)                                                                                                                                     |
 
-**It's complete! 2307 records**
-
 ## Content
 
 | Field Nb | Name                                                 | MapID | AreaID |

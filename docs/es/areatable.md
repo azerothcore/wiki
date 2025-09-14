@@ -1,3 +1,6 @@
+---
+redirect_from: "/AreaTable"
+---
 
 # AreaTable
 
@@ -8,6 +11,8 @@
 El DBC contiene en su interior las listas de zonas y subzonas existentes dentro del juego. Para fines de este artículo en la wiki, se incluirá la ID de cada zona, junto con sus respectivos nombres, mapID y AreaID de la zona en cuestión.
 
 **Versión 3.3.5a**
+
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)  
 
 ## Estructura
 
@@ -28,8 +33,6 @@ El DBC contiene en su interior las listas de zonas y subzonas existentes dentro 
 **Descripción de los Campos**
 
 ## Flags
-
-Marcadores o 'Flags'.
 
 | Valor      | Nombre                   | Notas                                                                                                                                                                                                                                          |
 | ---------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
