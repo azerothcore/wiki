@@ -1,6 +1,6 @@
 # acore_string
 
-[<-Back-to:World](database-world)
+[<-Voler a:World](database-world)
 
 **La \`acore_string\` tabla**
 
