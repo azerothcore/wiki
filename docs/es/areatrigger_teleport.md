@@ -1,8 +1,8 @@
 # areatrigger\_teleport
 
-[<-Back-to:World](database-world)
+[<-Voler a:World](database-world)
 
-**The \`areatrigger\_teleport\` table**
+**La \`areatrigger\_teleport\` tabla**
 
 Contiene todas las definiciones de los activadores de teletransporte. Esta tabla se utiliza para completar la información del archivo .dbc.
 

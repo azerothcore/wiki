@@ -43,7 +43,7 @@ This contains the radius of activation of the trigger.
 
 ### Length, Width, Height and Orientation
 
-these fields contain the values for the physics and behavior of a given trigger.
+These fields contain the values for the physics and behavior of a given trigger.
 
 ### Example
 
