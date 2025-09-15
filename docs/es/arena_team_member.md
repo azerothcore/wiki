@@ -8,15 +8,15 @@ La tabla alberga información acerca de los miembros específicos del Equipo de 
 
 **Estructura**
 
-| Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [arenaTeamId][1]    | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [guid][2]           | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [weekGames][3]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [weekWins][4]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [seasonGames][5]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [seasonWins][6]     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [personalRating][7] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Campo               | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ------------------- | -------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [arenaTeamId][1]    | INT      | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [guid][2]           | INT      | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [weekGames][3]      | SMALLINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [weekWins][4]       | SMALLINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [seasonGames][5]    | SMALLINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [seasonWins][6]     | SMALLINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [personalRating][7] | SMALLINT | UNSIGNED  |       | NO   | 0           |       |            |
 
 [1]: #arenateamid
 [2]: #guid
