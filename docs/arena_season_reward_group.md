@@ -35,7 +35,7 @@ Arena season ID
 
 Determines how rankings are evaluated
 
-| value | comment                                        |
+| Value | Comment                                        |
 | ----- | ---------------------------------------------- |
 | pct   | percentage-based (e.g., top 20% of the ladder) |
 | abs   | absolute position-based (e.g., top 10 players) |
