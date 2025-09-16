@@ -60,7 +60,7 @@ Before any server instances are created a [key-pair](https://docs.aws.amazon.com
 aws ec2 create-key-pair --key-name AzCore-KP --query 'KeyMaterial' --output text > ~/AzCore-KP.pem
 ```
 
-The key-pair will be saved into the $HOME directory. Make sure to keep this newly created `AzCore-KP.pem` file safe as **this file cannot be remade** after it is created. If the key-pair is lost after linking it to any EC2 instances they will need to be remade with a new key-pair. The key-pair is used to SSH into the instance and there are no ways to remove access from the key-pair without ultimately deleting the EC2 instance! Before the key-pair can be used the permissions must be set with :
+The key-pair will be saved into the $HOME directory. Make sure to keep this newly created `AzCore-KP.pem` file safe as **this file cannot be remade** after it is created. If the key-pair is lost after linking it to any EC2 instances they will need to be remade with a new key-pair. The key-pair is used to SSH into the instance and there are no ways to remove access from the key-pair without ultimately deleting the EC2 instance! Before the key-pair can be used the permissions must be set with:
 
 ```bash
 chmod 400 ~/AzCore-KP.pem
@@ -181,7 +181,7 @@ This will provide an Allocation ID. Now using the Instance ID which can be found
 aws ec2 associate-address --allocation-id $ALLOC_ID --instance-id $INSTANCE_ID
 ```
 
-*If a domain is desired for connection consider [Amazons Route 53](https://aws.amazon.com/route53/) service. They can be found as low as 12$ per year.*
+*If a domain is desired for connection consider [Amazons Route 53](https://aws.amazon.com/route53/) service. They can be found as low as $12 per year.*
 
 ------
 
@@ -194,7 +194,7 @@ Describe the instance with `aws ec2 describe-instances` and find the `PublicDnsN
 Access the server using the command
 
 ```bash
-SSH -i "~/AzCore-KP.pem" ubuntu@$PublicDnsName
+ssh -i "~/AzCore-KP.pem" ubuntu@$PublicDnsName
 ```
 
 ### Installing AzerothCore
@@ -219,7 +219,7 @@ This can take a while depending on upload speed. The $CMAKE_INSTALL_PREFIX will 
 
 Now untar it with:
 
-```bas
+```bash
 tar xfv $CMAKE_INSTALL_PREFIX/data.tar.gz --strip-components=2
 ```
 

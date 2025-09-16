@@ -38,7 +38,7 @@ Verifique que awscli se haya instalado correctamente ingresando `aws --version`.
 
 ### Configuración de AWS-CLI
 
-Se requerirá una clave de acceso y una identificación. Esto se puede encontrar en [Credenciales de seguridad de AWS] (https://console.aws.amazon.com/iam/home#/security_credentials) y seleccionando el botón Claves de acceso> Crear nueva clave de acceso. ** Mantenga esta clave segura, ya que puede usarse para realizar cualquier acción en una cuenta de AWS **. Se considera una buena práctica permitir el acceso a través de un [Usuario de IAM] (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html), especialmente si los privilegios de AWS se compartirán con otra persona. Una vez que se haya obtenido la clave, úsela para otorgar credenciales a aws-cli usando el comando:
+Se requerirá una clave de acceso y una identificación. Esto se puede encontrar en [Credenciales de seguridad de AWS] (https://console.aws.amazon.com/iam/home#/security_credentials) y seleccionando el botón Claves de acceso> Crear nueva clave de acceso. **Mantenga esta clave segura, ya que puede usarse para realizar cualquier acción en una cuenta de AWS**. Se considera una buena práctica permitir el acceso a través de un [Usuario de IAM] (https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html), especialmente si los privilegios de AWS se compartirán con otra persona. Una vez que se haya obtenido la clave, úsela para otorgar credenciales a aws-cli usando el comando:
 
 ```bash
 aws configure
@@ -135,7 +135,7 @@ aws ec2 authorize-security-group-ingress --group-id $SECURITY_GROUP_ID --ip-perm
 
 ### Encontrar una AMI
 
- [Ubuntu 18.04 LTS](https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-024a64a6685d05041) se utilizará para la guía, pero cualquier distribución de Linux debería estar bien. Tenga en cuenta que puede haber pequeñas idiosincrasias con distribuciones diferentes. Se pueden encontrar versiones de AMI más recientes de Ubuntu [aquí](https://cloud-images.ubuntu.com/locator/ec2/) y otras AMI que se encuentran en  [AWS Marketplace](https://aws.amazon.com/marketplace/ref=csl_ec2_ami). La AMI que se utiliza para la guía es `ami-024a64a6685d05041`. Encuentre más información sobre esta imagen con:
+Ubuntu LTS se utilizará para la guía, pero cualquier distribución de Linux debería estar bien. Tenga en cuenta que puede haber pequeñas idiosincrasias con distribuciones diferentes. Se pueden encontrar versiones de AMI más recientes de Ubuntu [aquí](https://cloud-images.ubuntu.com/locator/ec2/) y otras AMI que se encuentran en  [AWS Marketplace](https://aws.amazon.com/marketplace/ref=csl_ec2_ami). La AMI que se utiliza para la guía es `ami-024a64a6685d05041`. Encuentre más información sobre esta imagen con:
 
 ```bash
 aws ec2 describe-images --image-ids ami-024a64a6685d05041
@@ -181,7 +181,7 @@ Esto proporcionará un ID de asignación. Ahora, usando el ID de instancia que s
 aws ec2 associate-address --allocation-id $ALLOC_ID --instance-id $INSTANCE_ID
 ```
 
-*Si se desea un dominio para la conexión, considere el servicio [Amazons Route 53] (https://aws.amazon.com/route53/). Se pueden encontrar a tan solo 12$ por año.*
+*Si se desea un dominio para la conexión, considere el servicio [Amazons Route 53] (https://aws.amazon.com/route53/). Se pueden encontrar a tan solo $12 por año.*
 
 ------
 
@@ -194,7 +194,7 @@ Describe la instancia con `aws ec2 describe-instances` y busca el `PublicDnsName
 Accede al servidor usando el comando:
 
 ```bash
-SSH -i "~/AzCore-KP.pem" ubuntu@$PublicDnsName
+ssh -i "~/AzCore-KP.pem" ubuntu@$PublicDnsName
 ```
 
 ### Instalación de AzerothCore
@@ -219,7 +219,7 @@ Esto puede llevar un tiempo dependiendo de la velocidad de carga. $CMAKE_INSTALL
 
 Ahora descomprímelo con:
 
-```bas
+```bash
 tar xfv $CMAKE_INSTALL_PREFIX/data.tar.gz --strip-components=2
 ```
 
@@ -236,7 +236,6 @@ curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/do
 ```
 
 Ejecute `nano $CMAKEINSTALL_PREFIX/data/` y guarde este script como un archivo .`sh` en el directorio de datos y ejecute `chmod -x $filename.sh` para hacerlo ejecutable. El script descargará un [newest_data](https://mega.nz/#F!Am4DBKCR!o9Qj_xFLfsg4sczqg0xq2A) desde Google Drive [upload](https://drive.google.com/open?id=12XIh3rqm3ukpSKQtMop44U4XCYb6kdda). *nota: recomiendo verificar que los valores de la suma de comprobación SHA256 coincidan entre la carga mega y la carga de la unidad de Google. De lo contrario, los archivos no se manipulan ni se modifican.*
-
 
 ### Configuración de la base de datos
 
