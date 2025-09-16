@@ -40,15 +40,14 @@ You can choose from the following:
 
 | ID  | Language |
 | --- | -------- |
-| 1   | koKR     |
-| 2   | frFR     |
-| 3   | deDE     |
-| 4   | zhCN     |
-| 5   | zhTW     |
-| 6   | esES     |
-| 7   | esMX     |
-| 8   | ruRU     |
-
+| 1   | ko\_KR   |
+| 2   | fr\_FR   |
+| 3   | de\_DE   |
+| 4   | zh\_CN   |
+| 5   | zh\_TW   |
+| 6   | es\_ES   |
+| 7   | es\_MX   |
+| 8   | ru\_RU   |
 
 ### text
 
