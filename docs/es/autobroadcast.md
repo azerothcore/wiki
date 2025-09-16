@@ -2,20 +2,18 @@
 
 [<-Volver a:Auth](database-auth)
 
-Leer en: [English :gb:](../autobroadcast) [Spanish :es:](autobroadcast)
-
 **Tabla \`autobroadcast\`**
 
 Esta tabla contiene las entradas de autobroadcast para tus reinos. Los valores como su actividad, posición y temporizador (\*.On, \*.Center, \*.Timer) se definen dentro de [worldserver.conf](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/worldserver/worldserver.conf.dist). Se eligen al azar, en función de su tamaño.
 
 **Estructura**
 
-| Field        | Type     | Attributes | Key | Null | Default | Extra          | Comment |
-| ------------ | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [realmid][1] | INT      | SIGNED     | PRI | NO   | -1      |                |         |
-| [id][2]      | TINYINT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [weight][3]  | TINYINT  | UNSIGNED   |     | YES  | 1       |                |         |
-| [text][4]    | LONGTEXT | SIGNED     |     | NO   |         |                |         |
+| Campo        | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra          | Comentario |
+| ------------ | -------- | --------- | ----- | ---- | ----------- | -------------- | ---------- |
+| [realmid][1] | INT      | SIGNED    | PRI   | NO   | -1          |                |            |
+| [id][2]      | TINYINT  | UNSIGNED  | PRI   | NO   |             | AUTO_INCREMENT |            |
+| [weight][3]  | TINYINT  | UNSIGNED  |       | YES  | 1           |                |            |
+| [text][4]    | LONGTEXT | SIGNED    |       | NO   |             |                |            |
 
 [1]: #realmid
 [2]: #id
