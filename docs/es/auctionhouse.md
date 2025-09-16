@@ -54,12 +54,6 @@ GUID del propietario (jugador) del Item subastado. Véase [characters.guid](char
 
 Precio de compra del Item medido en monedas de cobre. Divide por 100 para obtener plata y por 100 de nuevo para obtener oro.
 
-Ejemplo:
-
-23 de oro (230000 en monedas de cobre).
-
-7 de plata (700 en monedas de cobre)
-
 ### time
 
 Hora de finalización de la subasta, medido en [Tiempo Unix](https://es.wikipedia.org/wiki/Tiempo_Unix) (Número de segundos desde las 00:00 del 1 de enero de 1970).
