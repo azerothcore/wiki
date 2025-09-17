@@ -18,7 +18,7 @@ Razones:
 
 ## Solicitudes de extracción (PR)
 
-- [Sincroniza tu fork](http://www.azerothcore.org/wiki/Syncing-your-fork) antes de abrir un PR.
+- Actualiza tu bifurcación a la última rama Master.
 
 Razones:
 
