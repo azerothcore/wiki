@@ -8,11 +8,11 @@ La tabla alberga datos acerca de los desertores en los Campos de Batalla. Para p
 
 **Estructura**
 
-| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment                   |
-| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------- |
-| [guid][1]     | INT      | UNSIGNED   |     | NO   |         |       | characters.guid           |
-| [type][2]     | TINYINT  | UNSIGNED   |     | NO   |         |       | type of the desertion     |
-| [datetime][3] | DATETIME | SIGNED     |     | NO   |         |       | datetime of the desertion |
+| Campo         | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                   |
+| ------------- | -------- | --------- | ----- | ---- | ----------- | ----- | ---------------------------- |
+| [guid][1]     | INT      | UNSIGNED  |       | NO   |             |       | characters.guid              |
+| [type][2]     | TINYINT  | UNSIGNED  |       | NO   |             |       | tipo de deserción            |
+| [datetime][3] | DATETIME | SIGNED    |       | NO   |             |       | fecha y hora de la deserción |
 
 [1]: #guid
 [2]: #type

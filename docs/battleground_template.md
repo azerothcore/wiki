@@ -68,7 +68,7 @@ Controls the minimum number of players that need to join the battleground on eac
 
 Controls how many players from each team can join the battleground.
 
-NOTE2: If left to be 0, trinity will use the default DBC value.
+NOTE: If left to be 0, trinity will use the default DBC value.
 
 ### MinLvl
 
