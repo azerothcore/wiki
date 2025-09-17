@@ -46,7 +46,7 @@ Gender of the creature
 | 1     | Female      |
 | 2     | None        |
 
-Note: do not modify this field without sniffs or talking to Kinzcool before (ref commit: http://git.io/T7RLmA).
+Note: do not modify this field without sniffs (ref commit: http://git.io/T7RLmA).
 
 ### DisplayID_Other_Gender
 
