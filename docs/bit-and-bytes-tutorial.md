@@ -8,12 +8,6 @@ redirect_from: "/Bit-and_bytes-tutorial"
 
 In computing, numbers are internally represented in binary. This means, when you use an integer type for a variable, this will internally be represented as a summation or concatenation of zeros and ones.
 
-![Byte](http://schoolcoders.com/w/images/0/07/Byte.png)
-
-You could also view it like this:
-
-![Hobbyte](https://ih0.redbubble.net/image.474456834.0620/ap,550x550,12x12,1,transparent,t.u1.png)
-
 This is also true for booleans! If you had a bit that equaled to 1 or a boolean that was equal to true, there would be no difference in the value of both variables.
 
 While this is true for the value output, a boolean does take up an entire byte.
@@ -24,7 +18,7 @@ As you might know, a single bit represents one 0 or one 1. A concatenation of ei
 
 
 
-``` c++
+```c++
 // This is the same as saying that 2^N = x, for example
 2^0=1
 2^1=2
@@ -62,7 +56,7 @@ The reason why the unsigned int will always store more positive values vs a sign
 
 Now imagine you want to create a program that holds a state, which is based on multiple values:
 
-``` c++
+```c++
 // Store the current state of this program
 bool firstValue = true;
 bool secondValue = false;
@@ -71,7 +65,7 @@ bool secondValue = false;
 
 Or instead use a single integer variable and use each bit of its internal 8 bits to represent the different true and falses.
 
-``` c++
+```c++
 // 00000101
 int maskValue = 5;
 ```
@@ -92,7 +86,7 @@ Bitmasking allows the user to:
 ### Bitwise AND "&"
 Operating with bits is pretty similar to setting up conditions between two variables. Lets say we have, for example:
 
-``` C++
+```c++
 if (1 && !0)
   printf('This condition is true');
 ```
@@ -105,7 +99,7 @@ Any value that is not 0 will always be the same as true. This means that:
 
 This way we can compare 2 bits values and if they are both true, we can keep the bit's value and get an end result likewise:
 
-``` C++
+```c++
 255 &= 1
 
 // This will result in 255 becoming 1 due to 
@@ -142,7 +136,7 @@ The point in using & in bit operations is often acompanied by another bit operat
 
 What ~ allows you to do is to invert the bitmask, for example:
 
-``` C++
+```c++
 255 &= ~1; // This will make 255 turn into 254 because:
 (255) -> 1 1 1 1 1 1 1 1
 (1)   -> 0 0 0 0 0 0 0 1 // First bit is true
@@ -179,7 +173,7 @@ Adding a new flag to a bitmask is easier than removing them.
 
 This concept is applied just like the OR in a condition:
 
-``` C++
+```c++
 
 if (true || false)
   printf("This condition is true");
@@ -193,7 +187,7 @@ else if (false || false)
 
 Just like two conditions, you can compare 2 bits and get a new bitmask because, if one of either bits is true, this bit value will become true. In other words, if you have 1 or 0 the new bitmask value will be 1, for example:
 
-``` C++
+```c++
 // Here we initialize MyState with 5 aka 00000101 if we talk in bit language
 int MyState = 5;
 
@@ -224,7 +218,7 @@ You might be confused with what just happened.
 
 Well, we just compared bit from first mask and bit from second mask and compared them. If they are diferent then the final value is true. This is how it would look like programmatically:
 
-``` C++
+```c++
 // Compare the values from mask 1 and 2
 // If they are different then the XOR condition is true
 for (int i = 0; i < 8; ++i)

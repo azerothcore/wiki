@@ -1,14 +1,12 @@
-﻿# Tutorial de Bits y Bytes 
+﻿---
+redirect_from: "/Bit-and_bytes-tutorial"
+---
+
+# Tutorial de Bits y Bytes 
 
 ## Introducción
 
 En informática, los números se representan internamente en binario. Esto significa que, cuando usa un tipo entero para una variable, esto se representará internamente como una suma o concatenación de ceros y unos.
-
-![Byte](http://schoolcoders.com/w/images/0/07/Byte.png)
-
-También puede verlo así:
-
-![Hobbyte](https://ih0.redbubble.net/image.474456834.0620/ap,550x550,12x12,1,transparent,t.u1.png)
 
 ¡Esto también es cierto para los booleanos! Si tuviera un bit que fuera igual a 1 o un booleano que fuera igual a verdadero, no habría diferencia en el valor de ambas variables.
 
@@ -20,7 +18,7 @@ Como sabrá, un solo bit representa un 0 o un 1. Una concatenación de ocho de e
 
 
 
-``` c++
+```c++
 // Esto es lo mismo que decir que 2^N=x, por ejemplo
 2^0=1
 2^1=2
@@ -59,7 +57,7 @@ La razón por la que el int sin signo siempre almacenará más valores positivos
 
 Ahora imagina que quieres crear un programa que contenga un estado, que se basa en varios valores:
 
-``` c++
+```c++
 // Almacena el estado actual de este programa
 bool firstValue = true;
 bool secondValue = false;
@@ -68,7 +66,7 @@ bool secondValue = false;
 
 O en su lugar, use una única variable entera y use cada bit de sus 8 bits internos para representar los diferentes verdaderos y falsos.
 
-``` c++
+```c++
 // 00000101
 int maskValue = 5;
 ```
@@ -89,7 +87,7 @@ El enmascaramiento de bits permite al usuario:
 ### Bitwise AND "&"
 Operar con bits es bastante similar a configurar condiciones entre dos variables. Digamos que tenemos, por ejemplo:
 
-``` C++
+```c++
 if (1 && !0)
   printf('Esta condición es verdadera');
 ```
@@ -102,7 +100,7 @@ Cualquier valor que no sea 0 siempre será el mismo que verdadero. Esto signific
 
 De esta manera podemos comparar los valores de 2 bits y si ambos son verdaderos, podemos mantener el valor del bit y obtener un resultado final de la misma manera:
 
-``` C++
+```c++
 255 &= 1
 
 // Esto dará como resultado que 255 se convierta en 1 debido a
@@ -139,7 +137,7 @@ El punto en el uso de & en operaciones de bits suele ir acompañado de otro car�
 
 Lo que ~ te permite hacer es invertir la máscara de bits, por ejemplo:
 
-``` C++
+```c++
 255 &= ~1; // Esto hará que 255 se convierta en 254 porque:
 (255) -> 1 1 1 1 1 1 1 1
 (1)   -> 0 0 0 0 0 0 0 1 // El primer bit es verdadero
@@ -176,7 +174,7 @@ Agregar una nueva bandera a una máscara de bits es más fácil que eliminarlos.
 
 Este concepto se aplica como el OR en una condición:
 
-``` C++
+```c++
 
 if (true || false)
   printf("Esta condición es verdadera");
@@ -190,7 +188,7 @@ else if (false || false)
 
 Al igual que con dos condiciones, puede comparar 2 bits y obtener una nueva máscara de bits porque, si uno de los bits es verdadero, este valor de bit se convertirá en verdadero. En otras palabras, si tiene 1 o 0, el nuevo valor de la máscara de bits será 1, por ejemplo:
 
-``` C++
+```c++
 // Aquí inicializamos MyState con 5 también conocido como 00000101 si hablamos en lenguaje de bits
 int MyState = 5;
 
@@ -221,7 +219,7 @@ Podría confundirse con lo que acaba de suceder.
 
 Bueno, solo comparamos el bit de la primera máscara y el bit de la segunda máscara y los comparamos. Si son diferentes, el valor final es verdadero. Así es como se vería programáticamente:
 
-``` C++
+```c++
 // Compara los valores de la máscara 1 y 2
 // Si son diferentes, la condición XOR es verdadera
 for (int i = 0; i < 8; ++i)
