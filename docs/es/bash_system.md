@@ -2,8 +2,7 @@
 
 AzerothCore utiliza un sistema bash avanzado que nos permite automatizar procesos como la **compilación de fuentes, la instalación de módulos, la configuración de la base de datos, etc.**
 
-Por ahora, estamos usando bash en lugar de Python para reducir las dependencias externas, ya que BASH es un lenguaje de scripting multiplataforma que ya está incluido.
-con ** OSX, Linux y Windows ** (a través de GIT BASH que le pedimos que instale en nuestros requisitos).
+Por ahora, estamos usando bash en lugar de Python para reducir las dependencias externas, ya que BASH es un lenguaje de scripting multiplataforma que ya está incluido con **OSX, Linux y Windows** (a través de GIT BASH que le pedimos que instale en nuestros requisitos).
 
 Puede leer la documentación oficial de bash aquí: https://tldp.org/LDP/abs/html/index.html
 
@@ -12,7 +11,7 @@ Puede leer la documentación oficial de bash aquí: https://tldp.org/LDP/abs/htm
 Nuestros scripts de bash relacionados con azerothcore se pueden encontrar dentro de la carpeta /app, pero también creamos un script llamado **acore.sh** dentro de la carpeta raíz.
 Este script ejecuta un panel que contiene los comandos para ejecutar todos los scripts relacionados con la carpeta /app.
 
-run `./acore.sh --help` para ver la lista completa de los comandos disponibles.
+Ejecute `./acore.sh --help` para obtener la lista completa de comandos disponibles.
 
 ### Configuración
 
@@ -20,7 +19,7 @@ La carpeta /conf disponible en el directorio raíz de nuestro proyecto se utiliz
 
 ### Modo interactivo
 
-ejecute `./acore.sh`  y puede usar el panel en modo interactivo: puede navegar dentro del menú y submenú del panel y ejecutar el comando que necesita
+ejecute `./acore.sh`  y puede usar el panel en modo interactivo: puede navegar dentro del menú y submenú del panel y ejecutar el comando que necesita.
 
 ### Argumentos de comando
 
