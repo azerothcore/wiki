@@ -2,18 +2,16 @@
 
 [<-Volver a:Characters](database-characters)
 
-Leer en: [English :gb:](../banned_addons) [Spanish :es:](banned_addons)
-
 **Tabla \`banned\_addons\`**
 
 **Estructura**
 
-| Field          | Type         | Attributes | Key | Null | Default           | Extra  | Comment |
-| -------------- | ------------ | ---------- | --- | ---- | ----------------- | ------ | ------- |
-| [Id][1]        | INT          | UNSIGNED   | PRI | NO   |                   |        |         |
-| [Name][2]      | VARCHAR(255) | SIGNED     |     | NO   |                   | UNIQUE |         |
-| [Version][3]   | VARCHAR(255) | SIGNED     |     | NO   | ''                | UNIQUE |         |
-| [Timestamp][4] | TIMESTAMP    | SIGNED     |     | NO   | CURRENT_TIMESTAMP |        |         |
+| Campo          | Tipo         | Atributos | Llave | Nulo | Por defecto       | Extra  | Comentario |
+| -------------- | ------------ | --------- | ----- | ---- | ----------------- | ------ | ---------- |
+| [Id][1]        | INT          | UNSIGNED  | PRI   | NO   |                   |        |            |
+| [Name][2]      | VARCHAR(255) | SIGNED    |       | NO   |                   | UNIQUE |            |
+| [Version][3]   | VARCHAR(255) | SIGNED    |       | NO   | ''                | UNIQUE |            |
+| [Timestamp][4] | TIMESTAMP    | SIGNED    |       | NO   | CURRENT_TIMESTAMP |        |            |
 
 [1]: #id
 [2]: #name
