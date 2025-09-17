@@ -2,8 +2,6 @@
 
 **The \`broadcast\_text\` table**
 
- 
-
 This table (ref <https://github.com/TrinityCore/TrinityCore/commit/60e87db>) will have **everything** you need for your scripts' texts, such as: [gossips](gossip_menu_option), [creature texts](creature_text) and [npc\_text](npc_text)s.
 
 Its purpose is (will be) used as a globalized table containing the texts as mentionned above, and things like their sounds, their emotes and the languages in which the texts should be said.
@@ -34,8 +32,6 @@ All the values are from sniffs (ADBVerified) so, don't add things in it - Kinzco
 | WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
 
 ### Description of the fields
-
- 
 
 ### ID
 
@@ -77,8 +73,6 @@ An emote.
 
 ### Flags
 
- 
-
 #### WDBVerified
 
 This field was used to determine whether a template has been verified from WDB files (ADB files for this one).
@@ -91,4 +85,3 @@ If value is -1 then it is just a place holder until proper data are found on WDB
 
 If value is -Client Build then it was parsed with WDB files from that specific [client build](http://archive.trinitycore.info/DB:Auth:realmlist#gamebuild "DB:Auth:realmlist") and manually edited later for some special necessity.
 
- 
