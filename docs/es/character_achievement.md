@@ -10,11 +10,11 @@ La tabla alberga información sobre aquellos logros que un personaje ha obtenido
 
 **Estructura**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [achievement][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [date][3]        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Campo            | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ---------------- | -------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [guid][1]        | INT      | UNSIGNED  | PRI   | NO   |             |       |            |
+| [achievement][2] | SMALLINT | UNSIGNED  | PRI   | NO   |             |       |            |
+| [date][3]        | INT      | UNSIGNED  |       | NO   | 0           |       |            |
 
 [1]: #guid
 [2]: #achievement

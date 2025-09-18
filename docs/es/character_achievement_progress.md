@@ -34,4 +34,4 @@ Criterios de [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### date
 
-La fecha en la que se obtuvo este logro. Consulte [Calculadora de marcas de tiempo de Unix](http://www.unixtimestamp.com/index.php).
+La fecha en la que se obtuvo este logro. Véase [Marca de Tiempo Unix](http://www.unixtimestamp.com/index.php).
