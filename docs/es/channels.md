@@ -8,15 +8,15 @@ La tabla alberga información y configuración de aquellos canales de chat cread
 
 **Estructura**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [channelId][1]  | INT          | SIGNED     | PRI | NO   |         | AUTO_INCREMENT |         |
-| [name][2]       | VARCHAR(128) | SIGNED     |     | NO   |         |                |         |
-| [team][3]       | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [announce][4]   | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
-| [ownership][5]  | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
-| [password][6]   | VARCHAR(32)  | SIGNED     |     | YES  |         |                |         |
-| [lastUsed][7]   | INT          | UNSIGNED   |     | NO   |         |                |         |
+| Campo           | Tipo         | Atributos | Llave | Nulo | Por defecto | Extra          | Comentario |
+| --------------- | ------------ | --------- | ----- | ---- | ----------- | -------------- | ---------- |
+| [channelId][1]  | INT          | SIGNED    | PRI   | NO   |             | AUTO_INCREMENT |            |
+| [name][2]       | VARCHAR(128) | SIGNED    |       | NO   |             |                |            |
+| [team][3]       | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [announce][4]   | TINYINT      | UNSIGNED  |       | NO   | 1           |                |            |
+| [ownership][5]  | TINYINT      | UNSIGNED  |       | NO   | 1           |                |            |
+| [password][6]   | VARCHAR(32)  | SIGNED    |       | YES  |             |                |            |
+| [lastUsed][7]   | INT          | UNSIGNED  |       | NO   |             |                |            |
 
 [1]: #channelid
 [2]: #name
