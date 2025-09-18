@@ -8,12 +8,12 @@ Alberga información acerca de la configuración de los personajes del jugador.
 
 **Estructura**
 
-| Field     | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2] | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [time][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [data][4] | BLOB    | SIGNED     |     | NO   |         |       |         |
+| Campo     | Tipo    | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| --------- | ------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [guid][1] | INT     | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [type][2] | TINYINT | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [time][3] | INT     | UNSIGNED  |       | NO   | 0           |       |            |
+| [data][4] | BLOB    | SIGNED    |       | NO   |             |       |            |
 
 [1]: #guid
 [2]: #type
