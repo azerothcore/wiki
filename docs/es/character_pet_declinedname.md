@@ -6,15 +6,15 @@
 
 **Estructura**
 
-| Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]            | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [owner][2]         | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [genitive][3]      | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [dative][4]        | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [accusative][5]    | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [instrumental][6]  | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [prepositional][7] | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+| Campo              | Tipo        | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ------------------ | ----------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [id][1]            | INT         | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [owner][2]         | INT         | UNSIGNED  |       | NO   | 0           |       |            |
+| [genitive][3]      | VARCHAR(12) | SIGNED    |       | NO   | NULL        |       |            |
+| [dative][4]        | VARCHAR(12) | SIGNED    |       | NO   | NULL        |       |            |
+| [accusative][5]    | VARCHAR(12) | SIGNED    |       | NO   | NULL        |       |            |
+| [instrumental][6]  | VARCHAR(12) | SIGNED    |       | NO   | NULL        |       |            |
+| [prepositional][7] | VARCHAR(12) | SIGNED    |       | NO   | NULL        |       |            |
 
 [1]: #id
 [2]: #owner
@@ -28,28 +28,29 @@
 
 ### id
 
-ID o dentificador de la mascota.
+`field-no-description|1`
 
 ### owner
 
-ID o Identificador del jugador.
+`field-no-description|2`
 
 ### genitive
 
-https://es.wikipedia.org/wiki/Caso_genitivo
+`field-no-description|3`
 
 ### dative
 
-https://es.wikipedia.org/wiki/Caso_dativo
+`field-no-description|4`
 
 ### accusative
 
-https://es.wikipedia.org/wiki/Caso_acusativo
+`field-no-description|5`
 
 ### instrumental
 
-https://es.wikipedia.org/wiki/Caso_instrumental
+`field-no-description|6`
 
 ### prepositional
 
-https://es.wikipedia.org/wiki/Sintagma_preposicional
+`field-no-description|7`
+
