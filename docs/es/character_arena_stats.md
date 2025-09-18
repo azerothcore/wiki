@@ -4,16 +4,16 @@
 
 **Tabla \`character\_arena\_stats\`**
 
-La tabla alberga información acerca de la puntuación del personaje (MMR) en todos los tipos de equipos.
+Esta tabla contiene información sobre la calificación de emparejamiento del personaje en todos los tipos de equipo.
 
 **Estructura**
 
-| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]             | INT         | UNSIGNED   | PRI | NO   |         |       |         |
-| [slot][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [matchmakerRating][3] | SMALLINT    | UNSIGNED   |     | NO   |         |       |         |
-| [maxMMR][4]           | SMALLINT    | SIGNED     |     | NO   |         |       |         |
+| Campo                 | Tipo        | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| --------------------- | ----------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [guid][1]             | INT         | UNSIGNED  | PRI   | NO   |             |       |            |
+| [slot][2]             | TINYINT     | UNSIGNED  | PRI   | NO   |             |       |            |
+| [matchmakerRating][3] | SMALLINT    | UNSIGNED  |       | NO   |             |       |            |
+| [maxMMR][4]           | SMALLINT    | SIGNED    |       | NO   |             |       |            |
 
 [1]: #guid
 [2]: #slot
@@ -38,7 +38,7 @@ GUID o Identificador Global Único del personaje. Véase [characters.guid](chara
 
 ### matchmakerRating
 
-Clasificación por Emparejamiento del jugador.[MMR](https://es.wikipedia.org/wiki/Emparejamiento_(videojuegos))
+Calificación del emparejador del jugador.
 
 ### maxMMR
 
