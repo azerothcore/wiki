@@ -8,12 +8,12 @@ Alberga datos de instancia para los personajes en cuestión.
 
 **Estructura**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]      | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [instance][2]  | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [permanent][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [extended][4]  | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| Campo          | Tipo    | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| -------------- | ------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [guid][1]      | INT     | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [instance][2]  | INT     | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [permanent][3] | TINYINT | UNSIGNED  |       | NO   | 0           |       |            |
+| [extended][4]  | TINYINT | UNSIGNED  |       | NO   |             |       |            |
 
 [1]: #guid
 [2]: #instance
