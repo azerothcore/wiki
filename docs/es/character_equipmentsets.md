@@ -8,33 +8,33 @@ La tabla alberga información acerca de la configuración del Gestor de Equipami
 
 **Estructura**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [guid][1]        | INT          | SIGNED     |     | NO   |         | UNIQUE         |         |
-| [setguid][2]     | BIGINT       | SIGNED     | PRI | NO   |         | UNIQUE         |         |
-| [setindex][3]    | TINYINT      | UNSIGNED   |     | NO   |         | UNIQUE         |         |
-| [name][4]        | VARCHAR(31)  | SIGNED     |     | NO   |         |                |         |
-| [iconname][5]    | VARCHAR(100) | SIGNED     |     | NO   |         |                |         |
-| [ignore_mask][6] | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item0][7]       | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item1][8]       | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item2][9]       | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item3][10]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item4][11]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item5][12]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item6][13]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item7][14]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item8][15]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item9][16]      | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item10][17]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item11][18]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item12][19]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item13][20]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item14][21]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item15][22]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item16][23]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item17][24]     | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [item18][25]     | INT          | UNSIGNED   |     | NO   |         |                |         |
+| Campo            | Tipo         | Atributos | Llave | Nulo | Por defecto | Extra          | Comentario |
+| ---------------- | ------------ | --------- | ----- | ---- | ----------- | -------------- | ---------- |
+| [guid][1]        | INT          | SIGNED    |       | NO   |             | UNIQUE         |            |
+| [setguid][2]     | BIGINT       | SIGNED    | PRI   | NO   |             | UNIQUE         |            |
+| [setindex][3]    | TINYINT      | UNSIGNED  |       | NO   |             | UNIQUE         |            |
+| [name][4]        | VARCHAR(31)  | SIGNED    |       | NO   |             |                |            |
+| [iconname][5]    | VARCHAR(100) | SIGNED    |       | NO   |             |                |            |
+| [ignore_mask][6] | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item0][7]       | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item1][8]       | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item2][9]       | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item3][10]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item4][11]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item5][12]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item6][13]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item7][14]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item8][15]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item9][16]      | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item10][17]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item11][18]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item12][19]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item13][20]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item14][21]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item15][22]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item16][23]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item17][24]     | INT          | UNSIGNED  |       | NO   |             |                |            |
+| [item18][25]     | INT          | UNSIGNED  |       | NO   |             |                |            |
 
 [1]: #guid
 [2]: #setguid
@@ -86,13 +86,13 @@ Nombre tomado de [ItemDisplayInfo.dbc](ItemDisplayInfo.dbc), columna número 6.
 
 ### ignore\_mask
 
-`field-no-description|6` (¿Máscara de bits acaso?)
+`field-no-description|6`
 
 ### item
 
 Valores tomados de [item\_instance.guid](item_instance#guid).
 
-| ID | Name           |
+| ID | Nombre         |
 | -- | -------------- |
 | 0  | Cabeza         |
 | 1  | Cuello         |
@@ -113,5 +113,3 @@ Valores tomados de [item\_instance.guid](item_instance#guid).
 | 16 | Segunda mano   |
 | 17 | Reliquia       |
 | 18 | Tabardo        |
-
-Recordemos que son en total 19 columnas con este mismo nombre, en cada una de ellas se asigna el GUID o Identificador Global único del Item extraído desde [item\_instance.guid](item_instance#guid), no de [item_template](item_template#entry).
