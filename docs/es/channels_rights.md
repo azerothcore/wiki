@@ -6,14 +6,14 @@
 
 **Estructura**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name][1]         | VARCHAR(128) | SIGNED     | PRI | NO   |         |       |         |
-| [flags][2]        | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [speakdelay][3]   | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [joinmessage][4]  | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
-| [delaymessage][5] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
-| [moderators][6]   | TEXT         | SIGNED     |     | YES  |         |       |         |
+| Campo             | Tipo         | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ----------------- | ------------ | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [name][1]         | VARCHAR(128) | SIGNED    | PRI   | NO   |             |       |            |
+| [flags][2]        | INT          | UNSIGNED  |       | NO   |             |       |            |
+| [speakdelay][3]   | INT          | UNSIGNED  |       | NO   |             |       |            |
+| [joinmessage][4]  | VARCHAR(255) | SIGNED    |       | NO   | ''          |       |            |
+| [delaymessage][5] | VARCHAR(255) | SIGNED    |       | NO   | ''          |       |            |
+| [moderators][6]   | TEXT         | SIGNED    |       | YES  |             |       |            |
 
 [1]: #name
 [2]: #flags
