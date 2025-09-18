@@ -6,17 +6,17 @@
 
 **Estructura**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment  |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | -------- |
-| [id][1]          | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |          |
-| [creator][2]     | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [title][3]       | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
-| [description][4] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
-| [type][5]        | TINYINT      | UNSIGNED   |     | NO   | 4       |       |          |
-| [dungeon][6]     | INT          | SIGNED     |     | NO   | -1      |       |          |
-| [eventtime][7]   | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [flags][8]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [time2][9]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
+| Campo            | Tipo         | Atributos | Llave | Nulo | Por defecto | Extra | Comentario  |
+| ---------------- | ------------ | --------- | ----- | ---- | ----------- | ----- | ----------- |
+| [id][1]          | BIGINT       | UNSIGNED  | PRI   | NO   | 0           |       |             |
+| [creator][2]     | INT          | UNSIGNED  |       | NO   | 0           |       |             |
+| [title][3]       | VARCHAR(255) | SIGNED    |       | NO   | ''          |       |             |
+| [description][4] | VARCHAR(255) | SIGNED    |       | NO   | ''          |       |             |
+| [type][5]        | TINYINT      | UNSIGNED  |       | NO   | 4           |       |             |
+| [dungeon][6]     | INT          | SIGNED    |       | NO   | -1          |       |             |
+| [eventtime][7]   | INT          | UNSIGNED  |       | NO   | 0           |       |             |
+| [flags][8]       | INT          | UNSIGNED  |       | NO   | 0           |       |             |
+| [time2][9]       | INT          | UNSIGNED  |       | NO   | 0           |       |             |
 
 [1]: #id
 [3]: #creator
@@ -32,36 +32,36 @@
 
 ### id
 
-`field-no-description|1` (ID del calendario)
+`field-no-description|1`
 
 ### creator
 
-`field-no-description|2` (¿GUID del creador?)
+`field-no-description|2`
 
 ### title
 
-`field-no-description|3` (Título del mismo)
+`field-no-description|3`
 
 ### description
 
-`field-no-description|4` (Descripción del mismo)
+`field-no-description|4`
 
 ### type
 
-`field-no-description|5` (¿Tipo del mismo? Se desconoce de dónde puede extraerse aquella información)
+`field-no-description|5`
 
 ### dungeon
 
-`field-no-description|6` (¿Evento de Mazmorra o Raid?)
+`field-no-description|6`
 
 ### eventtime
 
-`field-no-description|7` (¿Tiempo hasta que llegue el evento?)
+`field-no-description|7`
 
 ### flags
 
-`field-no-description|8` (Marcadores o "flags" del evento)
+`field-no-description|8`
 
 ### time2
 
-`field-no-description|9` (¿Tiempo hasta que finalice el evento?)
+`field-no-description|9`
