@@ -8,14 +8,14 @@ Alberga información acerca de la ubicación hacia la que son teletransportados 
 
 **Estructura**
 
-| Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]   | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mapId][2]  | SMALLINT    | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
-| [zoneId][3] | SMALLINT    | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
-| [posX][4]   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
-| [posY][5]   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
-| [posZ][6]   | FLOAT       | SIGNED     |     | NO   | 0       |       |                          |
+| Campo       | Tipo        | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| ----------- | ----------- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]   | INT         | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [mapId][2]  | SMALLINT    | UNSIGNED  |       | NO   | 0           |       | Identificador de mapa      |
+| [zoneId][3] | SMALLINT    | UNSIGNED  |       | NO   | 0           |       | Identificador de zona      |
+| [posX][4]   | FLOAT       | SIGNED    |       | NO   | 0           |       |                            |
+| [posY][5]   | FLOAT       | SIGNED    |       | NO   | 0           |       |                            |
+| [posZ][6]   | FLOAT       | SIGNED    |       | NO   | 0           |       |                            |
 
 [1]: #guid
 [2]: #mapid
