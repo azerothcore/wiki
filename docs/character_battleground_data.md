@@ -4,7 +4,7 @@
 
 **The \`character\_battleground\_data\` table**
 
-This table holds information for each character in a battleground. Also hold info about their last position before joining the battleground.
+This table holds information for each character in a battleground. Also holds info about their last position before joining the battleground.
 
 **Table Structure**
 
@@ -46,7 +46,7 @@ This is the battleground instanceId. It's shared with [instance.id](instance_213
 
 ### team
 
-teamId:
+Team ID.
 
 | ID  | Description |
 |-----|-------------|
