@@ -8,14 +8,14 @@ La tabla lista a todos aquellos personajes que han sido baneados, junto con la f
 
 **Estructura**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]      | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
-| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
-| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
-| [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                          |
+| Campo          | Tipo         | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| -------------- | ------------ | --------- | ----- | ---- | ----------- | ----- | ------------------------   |
+| [guid][1]      | INT          | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [bandate][2]   | INT          | UNSIGNED  | PRI   | NO   | 0           |       |                            |
+| [unbandate][3] | INT          | UNSIGNED  |       | NO   | 0           |       |                            |
+| [bannedby][4]  | VARCHAR(50)  | SIGNED    |       | NO   |             |       |                            |
+| [banreason][5] | VARCHAR(255) | SIGNED    |       | NO   |             |       |                            |
+| [active][6]    | TINYINT      | UNSIGNED  |       | NO   | 1           |       |                            |
 
 [1]: #guid
 [2]: #bandate
@@ -44,7 +44,7 @@ Nombre del personaje con los privilegios necesarios para del comando '.ban', que
 
 ### banreason
 
-Motivo del baneo (opcional).
+El motivo de la prohibición.
 
 ### active
 
