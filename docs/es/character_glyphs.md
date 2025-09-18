@@ -8,16 +8,16 @@ Alberga todos los datos de aquellos glifos individuales para cada personaje en l
 
 **Estructura**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [talentGroup][2] | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [glyph1][3]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph2][4]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph3][5]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph4][6]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph5][7]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph6][8]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| Campo            | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ---------------- | -------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [guid][1]        | INT      | UNSIGNED  | PRI   | NO   |             |       |            |
+| [talentGroup][2] | TINYINT  | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [glyph1][3]      | SMALLINT | UNSIGNED  |       | YES  | 0           |       |            |
+| [glyph2][4]      | SMALLINT | UNSIGNED  |       | YES  | 0           |       |            |
+| [glyph3][5]      | SMALLINT | UNSIGNED  |       | YES  | 0           |       |            |
+| [glyph4][6]      | SMALLINT | UNSIGNED  |       | YES  | 0           |       |            |
+| [glyph5][7]      | SMALLINT | UNSIGNED  |       | YES  | 0           |       |            |
+| [glyph6][8]      | SMALLINT | UNSIGNED  |       | YES  | 0           |       |            |
 
 [1]: #guid
 [2]: #talentgroup
