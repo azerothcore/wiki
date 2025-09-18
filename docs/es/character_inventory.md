@@ -8,12 +8,12 @@ Alberga todos los datos del inventario del personaje, incluyendo los datos del b
 
 **Estructura**
 
-| Field     | Type    | Attributes | Key    | Null | Default | Extra | Comment                       |
-| --------- | ------- | ---------- | ------ | ---- | ------- | ----- | ----------------------------- |
-| [guid][1] | INT     | UNSIGNED   | Unique | NO   | 0       |       | Global Unique Identifier      |
-| [bag][2]  | INT     | UNSIGNED   |        | NO   | 0       |       |                               |
-| [slot][3] | TINYINT | UNSIGNED   |        | NO   | 0       |       |                               |
-| [item][4] | INT     | UNSIGNED   | PRI    | NO   | 0       |       | Item Global Unique Identifier |
+| Campo     | Tipo    | Atributos | Llave    | Nulo | Por defecto | Extra | Comentario                              |
+| --------- | ------- | --------- | -------- | ---- | ----------- | ----- | --------------------------------------- |
+| [guid][1] | INT     | UNSIGNED  | Unique   | NO   | 0           |       | Identificador único global              |
+| [bag][2]  | INT     | UNSIGNED  |          | NO   | 0           |       |                                         |
+| [slot][3] | TINYINT | UNSIGNED  |          | NO   | 0           |       |                                         |
+| [item][4] | INT     | UNSIGNED  | PRI      | NO   | 0           |       | Identificador único global del artículo |
 
 [1]: #guid
 [2]: #bag
