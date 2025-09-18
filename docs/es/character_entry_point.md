@@ -6,16 +6,16 @@
 
 **Estructura**
 
-| Field           | Type  | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT   | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [joinX][2]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinY][3]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinZ][4]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinO][5]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinMapId][6]  | INT   | UNSIGNED   |     | YES  | 0       |       | Map Identifier           |
-| [taxiPath][7]   | TEXT  | SIGNED     |     | NO   | 0       |       |                          |
-| [mountSpell][8] | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
+| Campo           | Tipo  | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| --------------- | ----- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]       | INT   | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [joinX][2]      | FLOAT | SIGNED    |       | NO   | 0           |       |                            |
+| [joinY][3]      | FLOAT | SIGNED    |       | NO   | 0           |       |                            |
+| [joinZ][4]      | FLOAT | SIGNED    |       | NO   | 0           |       |                            |
+| [joinO][5]      | FLOAT | SIGNED    |       | NO   | 0           |       |                            |
+| [joinMapId][6]  | INT   | UNSIGNED  |       | YES  | 0           |       | Identificador de mapa      |
+| [taxiPath][7]   | TEXT  | SIGNED    |       | NO   | 0           |       |                            |
+| [mountSpell][8] | INT   | UNSIGNED  |       | NO   | 0           |       |                            |
 
 [1]: #guid
 [2]: #joinx
@@ -34,28 +34,28 @@ GUID o Identificador Global Único.
 
 ### joinX
 
-Posición cartesiana en X.
+`field-no-description|2`
 
 ### joinY
 
-Posición cartesiana en Y.
+`field-no-description|3`
 
 ### joinZ
 
-Posición cartesiana en Z.
+`field-no-description|4`
 
 ### joinO
 
-Orientación del personaje (Según las medidas de pi: 3.1415...).
+`field-no-description|5`
 
 ### joinMapId
 
-ID del mapa en cuestión. Véase [Map.dbc](map) columna número 1.
+Identificador de mapa.
 
 ### taxiPath
 
-Identificador (ID) del TaxiPath, véase TaxiPath.dbc columna número 1.
+`field-no-description|7`
 
 ### mountSpell
 
-ID del aura de la montura.
+`field-no-description|8`
