@@ -6,16 +6,16 @@
 
 **Estructura**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment  |
-| ---------------- |------------- |----------- | --- | ---- | ------- | ----- | -------- |
-| [id][1]          | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |          |
-| [event][2]       | BIGINT       | UNSIGNED   |     | NO   | 0       |       |          |
-| [invitee][3]     | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [sender][4]      | INT          | UNSIGNED   |     | NO   | ''      |       |          |
-| [status][5]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |          |
-| [statustime][6]  | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [rank][7]        | TINYINT      | UNSIGNED   |     | NO   | 0       |       |          |
-| [text][8]        | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
+| Campo            | Tipo         | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ---------------- |------------- |---------- | ----- | ---- | ----------- | ----- | ---------- |
+| [id][1]          | BIGINT       | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [event][2]       | BIGINT       | UNSIGNED  |       | NO   | 0           |       |            |
+| [invitee][3]     | INT          | UNSIGNED  |       | NO   | 0           |       |            |
+| [sender][4]      | INT          | UNSIGNED  |       | NO   | ''          |       |            |
+| [status][5]      | TINYINT      | UNSIGNED  |       | NO   | 0           |       |            |
+| [statustime][6]  | INT          | UNSIGNED  |       | NO   | 0           |       |            |
+| [rank][7]        | TINYINT      | UNSIGNED  |       | NO   | 0           |       |            |
+| [text][8]        | VARCHAR(255) | SIGNED    |       | NO   | ''          |       |            |
 
 [1]: #id
 [2]: #event
