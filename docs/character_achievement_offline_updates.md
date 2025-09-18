@@ -4,7 +4,7 @@
 
 **The \`character_achievement_offline_updates\` table**
 
-Stores updates to character achievements when the character was offline
+Stores updates to character achievements when the character was offline.
 
 **Table Structure**
 
