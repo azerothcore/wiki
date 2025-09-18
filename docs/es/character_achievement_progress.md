@@ -6,12 +6,12 @@
 
 **Estructura**
 
-| Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]     | INT         | UNSIGNED   | PRI | NO   |         |       |         |
-| [criteria][2] | SMALLINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [counter][3]  | INT         | UNSIGNED   |     | NO   |         |       |         |
-| [date][4]     | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| Campo         | Tipo        | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ------------- | ----------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [guid][1]     | INT         | UNSIGNED  | PRI   | NO   |             |       |            |
+| [criteria][2] | SMALLINT    | UNSIGNED  | PRI   | NO   |             |       |            |
+| [counter][3]  | INT         | UNSIGNED  |       | NO   |             |       |            |
+| [date][4]     | INT         | UNSIGNED  |       | NO   | 0           |       |            |
 
 [1]: #guid
 [2]: #criteria
@@ -34,4 +34,4 @@ Criterios de [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### date
 
-La fecha en la que se obtuvo este logro. Consulte [Unix timestamp Calculator](http://www.unixtimestamp.com/index.php).
+La fecha en la que se obtuvo este logro. Consulte [Calculadora de marcas de tiempo de Unix](http://www.unixtimestamp.com/index.php).

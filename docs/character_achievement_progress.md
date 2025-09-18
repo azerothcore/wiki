@@ -34,4 +34,4 @@ Criteria from [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### date
 
-The date when this achievement was earned. See [Unix timestamp Calculator](http://www.unixtimestamp.com/index.php).
+The date when this achievement was earned. See [Unix timestamp calculator](http://www.unixtimestamp.com/index.php).
