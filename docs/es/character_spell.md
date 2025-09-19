@@ -8,11 +8,11 @@ Contiene información para los hechizos de cada personaje.
 
 **Estructura**
 
-| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
-| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]     | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier         |
-| [specMask][3] | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                          |
+| Campo         | Tipo      | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| ------------- | --------- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]     | INT       | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [spell][2]    | MEDIUMINT | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de hechizo   |
+| [specMask][3] | TINYINT   | UNSIGNED  |       | NO   | 1           |       |                            |
 
 [1]: #guid
 [2]: #spell
