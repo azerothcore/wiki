@@ -8,11 +8,11 @@ Esta tabla contiene información de ** cada ** misión recompensada para un juga
 
 **Estructura**
 
-| Field       | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]   | INT        | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2]  | INT        | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [active][3] | TINYINT    | UNSIGNED   |     | NO   | 1       |       |                          |
+| Campo       | Tipo       | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| ----------- | ---------- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]   | INT        | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [quest][2]  | INT        | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de misión    |
+| [active][3] | TINYINT    | UNSIGNED  |       | NO   | 1           |       |                            |
 
 [1]: #guid
 [2]: #quest
