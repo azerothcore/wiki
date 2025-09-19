@@ -8,11 +8,11 @@ Contiene información sobre el estado de la misión de temporada (misiones con Z
 
 **Estructura**
 
-| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [event][3] | INT     | UNSIGNED   |     | NO   | 0       |       | Event Identifier         |
+| Campo      | Tipo    | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| ---------- | ------- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]  | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [quest][2] | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de misión    |
+| [event][3] | INT     | UNSIGNED  |       | NO   | 0           |       | Identificador de evento    |
 
 [1]: #guid
 [2]: #quest
