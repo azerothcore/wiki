@@ -8,11 +8,11 @@ Contiene información sobre el estado de las misiones diarias de cada jugador. L
 
 **Estructura**
 
-| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-|----------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [time][3]  | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| Campo      | Tipo    | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+|----------- | ------- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]  | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [quest][2] | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de misión    |
+| [time][3]  | INT     | UNSIGNED  |       | NO   | 0           |       |                            |
 
 [1]: #guid
 [2]: #quest
