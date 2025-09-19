@@ -9,39 +9,39 @@ Véase worldserver.conf: PlayerSave.Stats.\*
 
 **Estructura**
 
-| Field                   | Type  | Attributes | Key | Null | Default | Extra | Comment                            |
-| ----------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [guid][1]               | INT   | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
-| [maxhealth][2]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower1][3]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower2][4]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower3][5]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower4][6]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower5][7]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower6][8]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [maxpower7][9]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [strength][10]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [agility][11]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [stamina][12]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [intellect][13]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [spirit][14]            | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [armor][15]             | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resHoly][16]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resFire][17]           | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resNature][18]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resFrost][19]          | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resShadow][20]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resArcane][21]         | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [blockPct][22]          | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
-| [dodgePct][23]          | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
-| [parryPct][24]          | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
-| [critPct][25]           | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
-| [rangedCritPct][26]     | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
-| [spellCritPct][27]      | FLOAT | SIGNED     |     | NO   | 0       |       |                                    |
-| [attackPower][28]       | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [rangedAttackPower][29] | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [spellPower][30]        | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [resilience][31]        | INT   | UNSIGNED   |     | NO   | 0       |       |                                    |
+| Campo                   | Tipo  | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                             |
+| ----------------------- | ----- | --------- | ----- | ---- | ----------- | ----- | -------------------------------------- |
+| [guid][1]               | INT   | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global, parte baja |
+| [maxhealth][2]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower1][3]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower2][4]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower3][5]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower4][6]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower5][7]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower6][8]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [maxpower7][9]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [strength][10]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [agility][11]           | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [stamina][12]           | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [intellect][13]         | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [spirit][14]            | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [armor][15]             | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resHoly][16]           | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resFire][17]           | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resNature][18]         | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resFrost][19]          | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resShadow][20]         | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resArcane][21]         | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [blockPct][22]          | FLOAT | SIGNED    |       | NO   | 0           |       |                                        |
+| [dodgePct][23]          | FLOAT | SIGNED    |       | NO   | 0           |       |                                        |
+| [parryPct][24]          | FLOAT | SIGNED    |       | NO   | 0           |       |                                        |
+| [critPct][25]           | FLOAT | SIGNED    |       | NO   | 0           |       |                                        |
+| [rangedCritPct][26]     | FLOAT | SIGNED    |       | NO   | 0           |       |                                        |
+| [spellCritPct][27]      | FLOAT | SIGNED    |       | NO   | 0           |       |                                        |
+| [attackPower][28]       | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [rangedAttackPower][29] | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [spellPower][30]        | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [resilience][31]        | INT   | UNSIGNED  |       | NO   | 0           |       |                                        |
 
 [1]: #guid
 [2]: #maxhealth
