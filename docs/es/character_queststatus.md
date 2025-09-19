@@ -8,24 +8,24 @@ Contiene información sobre el estado de misiones de cada personaje.
 
 **Estructura**
 
-| Field             | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------------- | -------- | ---------- | --- | ---- | ------- |------ | ------------------------ |
-| [guid][1]         | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [status][3]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                          |
-| [explored][4]     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                          |
-| [timer][5]        | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mobcount1][6]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mobcount2][7]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mobcount3][8]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mobcount4][9]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [itemcount1][10]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [itemcount2][11]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [itemcount3][12]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [itemcount4][13]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [itemcount5][14]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [itemcount6][15]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [playercount][16] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
+| Campo             | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| ----------------- | -------- | --------- | ----- | ---- | ----------- |------ | -------------------------- |
+| [guid][1]         | INT      | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [quest][2]        | INT      | UNSIGNED  | PRI   | NO   | 0           |       | Quest Identifier           |
+| [status][3]       | TINYINT  | UNSIGNED  |       | NO   | 0           |       |                            |
+| [explored][4]     | TINYINT  | UNSIGNED  |       | NO   | 0           |       |                            |
+| [timer][5]        | INT      | UNSIGNED  |       | NO   | 0           |       |                            |
+| [mobcount1][6]    | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [mobcount2][7]    | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [mobcount3][8]    | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [mobcount4][9]    | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [itemcount1][10]  | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [itemcount2][11]  | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [itemcount3][12]  | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [itemcount4][13]  | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [itemcount5][14]  | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [itemcount6][15]  | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
+| [playercount][16] | SMALLINT | UNSIGNED  |       | NO   | 0           |       |                            |
 
 [1]: #guid
 [2]: #quest
@@ -60,7 +60,7 @@ El estado actual de la misión.
 
 **Valores posibles**
 
-| Value | Status                     | Comments                                                              |
+| Valor | Estado                     | Comentario                                                              |
 | ----- | -------------------------- | --------------------------------------------------------------------- |
 | 0     | QUEST\_STATUS\_NONE        | La misión no se muestra en la lista de misiones; por defecto          |
 | 1     | QUEST\_STATUS\_COMPLETE    | La misión no ha sido completada todavía                               |
