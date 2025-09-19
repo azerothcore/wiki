@@ -8,25 +8,25 @@ La tabla alberga datos de cada mascota invocada por cualquier jugador dentro del
 
 **Estructura**
 
-| Field               | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]             | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [entry][2]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [owner][3]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [modelid][4]        | INT         | UNSIGNED   |     | YES  | 0       |       |         |
-| [CreatedBySpell][5] | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [PetType][6]        | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [level][7]          | SMALLINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [exp][8]            | INT         | UNSIGNED   |     | NO   | 1       |       |         |
-| [Reactstate][9]     | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [name][10]          | VARCHAR(21) | SIGNED     |     | NO   | 0       |       |         |
-| [renamed][11]       | TINYINT     | UNSIGNED   |     | NO   | Pet     |       |         |
-| [slot][12]          | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [curhealth][13]     | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [curmana][14]       | INT         | UNSIGNED   |     | NO   | 1       |       |         |
-| [curhappiness][15]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [savetime][16]      | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [abdata][17]        | TEXT        | SIGNED     |     | YES  | 0       |       |         |
+| Campo               | Tipo        | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| ------------------- | ----------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [id][1]             | INT         | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [entry][2]          | INT         | UNSIGNED  |       | NO   | 0           |       |            |
+| [owner][3]          | INT         | UNSIGNED  |       | NO   | 0           |       |            |
+| [modelid][4]        | INT         | UNSIGNED  |       | Sí   | 0           |       |            |
+| [CreatedBySpell][5] | MEDIUMINT   | UNSIGNED  |       | NO   | 0           |       |            |
+| [PetType][6]        | TINYINT     | UNSIGNED  |       | NO   | 0           |       |            |
+| [level][7]          | SMALLINT    | UNSIGNED  |       | NO   | 0           |       |            |
+| [exp][8]            | INT         | UNSIGNED  |       | NO   | 1           |       |            |
+| [Reactstate][9]     | TINYINT     | UNSIGNED  |       | NO   | 0           |       |            |
+| [name][10]          | VARCHAR(21) | SIGNED    |       | NO   | 0           |       |            |
+| [renamed][11]       | TINYINT     | UNSIGNED  |       | NO   | Mascota     |       |            |
+| [slot][12]          | TINYINT     | UNSIGNED  |       | NO   | 0           |       |            |
+| [curhealth][13]     | INT         | UNSIGNED  |       | NO   | 0           |       |            |
+| [curmana][14]       | INT         | UNSIGNED  |       | NO   | 1           |       |            |
+| [curhappiness][15]  | INT         | UNSIGNED  |       | NO   | 0           |       |            |
+| [savetime][16]      | INT         | UNSIGNED  |       | NO   | 0           |       |            |
+| [abdata][17]        | TEXT        | SIGNED    |       | Sí   | 0           |       |            |
 
 [1]: #id
 [2]: #entry
@@ -118,4 +118,4 @@ La hora en que se guardó la mascota por última vez, medido en tiempo Unix.
 
 ### abdata
 
-`field-no-description|17` (¿?)
+`field-no-description|17`
