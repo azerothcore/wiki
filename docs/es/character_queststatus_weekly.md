@@ -8,10 +8,10 @@ Contiene información sobre el estado de las misiones semanales de cada jugador.
 
 **Estructura**
 
-| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
+| Campo      | Tipo    | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                 |
+| ---------- | ------- | --------- | ----- | ---- | ----------- | ----- | -------------------------- |
+| [guid][1]  | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global |
+| [quest][2] | INT     | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de misión    |
 
 [1]: #guid
 [2]: #quest
