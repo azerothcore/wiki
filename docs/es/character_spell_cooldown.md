@@ -8,13 +8,13 @@ Mantiene la recarga de hechizos restantes de los personajes o del hechizo de un 
 
 **Estructura**
 
-| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
-| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [guid][1]     | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
-| [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier                   |
-| [item][3]     | INT       | UNSIGNED   |     | NO   | 0       |       | Item Identifier                    |
-| [time][4]     | INT       | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [needSend][5] | INT       | UNSIGNED   |     | NO   | 1       |       |                                    |
+| Campo         | Tipo      | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                             |
+| ------------- | --------- | --------- | ----- | ---- | ----------- | ----- | -------------------------------------- |
+| [guid][1]     | INT       | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global, parte baja |
+| [spell][2]    | MEDIUMINT | UNSIGNED  | PRI   | NO   | 0           |       | Identificador de hechizo               |
+| [item][3]     | INT       | UNSIGNED  |       | NO   | 0           |       | Identificador del artículo             |
+| [time][4]     | INT       | UNSIGNED  |       | NO   | 0           |       |                                        |
+| [needSend][5] | INT       | UNSIGNED  |       | NO   | 1           |       |                                        |
 
 [1]: #guid
 [2]: #spell
