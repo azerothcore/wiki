@@ -8,12 +8,12 @@ Contiene datos acerca de la lista de amigos/ignorados del personaje dado.
 
 **Estructura**
 
-| Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                            |
-| ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [guid][1]   | INT         | UNSIGNED   | PRI | NO   | 0       |       | Character Global Unique Identifier |
-| [friend][2] | INT         | UNSIGNED   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
-| [flags][3]  | TINYINT     | UNSIGNED   | PRI | NO   | 0       |       | Friend Flags                       |
-| [note][4]   | VARCHAR(48) | SIGNED     |     | NO   | ''      |       | Friend Note                        |
+| Campo       | Tipo        | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                             |
+| ----------- | ----------- | --------- | ----- | ---- | ----------- | ----- | -------------------------------------- |
+| [guid][1]   | INT         | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global de carácter |
+| [friend][2] | INT         | UNSIGNED  | PRI   | NO   | 0           |       | Identificador único global de amigo    |
+| [flags][3]  | TINYINT     | UNSIGNED  | PRI   | NO   | 0           |       | Banderas de amigos                     |
+| [note][4]   | VARCHAR(48) | SIGNED    |       | NO   | ''          |       | Nota de amigo                          |
 
 [1]: #guid
 [2]: #friend
@@ -32,7 +32,7 @@ El Identificador Global Único o GUID del amigo/ignorado. Véase [characters.gui
 
 ### flags
 
-| Value | Description                                                                                       |
+| Valor | Descripción                                                                                       |
 |------ | ------------------------------------------------------------------------------------------------- |
 | 0     | Identificador no usado - anteriormente funcionaba como amigo o bloqueado (eliminado/desbloqueado) |
 | 1     | Añadido como amigo                                                                                |
