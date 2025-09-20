@@ -5,9 +5,9 @@
 | Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
 | [<< Comienza: Guía de instalación](installation) | [Paso 1: Requisitos >>](requirements) |
 
-Cada paso de la guía está dividido en tres pestañas relacionadas con diferentes sistemas operativos (Linux, macOS y Windows).
+La guía se ha dividido en 9 pasos, para hacerla más legible.
 
-La guía se ha dividido en 8 pasos, para hacerla más legible:
+{% include tip.html content="Si es la primera vez que instalas AzerothCore, ¡te recomendamos que leas cada paso con atención!" %}
 
 1. [Requisitos](requirements)
 
@@ -25,23 +25,13 @@ La guía se ha dividido en 8 pasos, para hacerla más legible:
 
 8. [Configuración del Cliente](client-setup)
 
-Cada paso se puede leer de forma independiente o puedes leerlos ordenadamente en orden, para ir entrando poco a poco en él y entenderlo mejor.
-
-{% include tip.html content="Si es la primera vez que instalas AzerothCore, ¡te recomendamos que leas cada paso con atención!" %}
+9. [(Opcional) Instalación de un módulo](installing-a-module)
 
 <br>
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
-
-* [Preguntas frecuentes](faq)
-
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
+{% include help_es.html %}
 
 | Guía de instalación | |
 | :- | :- |
