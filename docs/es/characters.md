@@ -8,86 +8,86 @@ La tabla contiene información estática vital para cada personaje. Su función 
 
 **Estructura**
 
-| Field                      | Type         | Attributes | Key | Null | Default           | Extra  | Comment                  |
-| -------------------------- | ------------ | ---------- | --- | ---- | ----------------- | ------ | ------------------------ |
-| [guid][1]                  | INT          | UNSIGNED   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
-| [account][2]               | INT          | UNSIGNED   |     | NO   | 0                 |        | Account Identifier       |
-| [name][3]                  | VARCHAR(12)  | SIGNED     |     | NO   |                   |        |                          |
-| [race][4]                  | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [class][5]                 | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [gender][6]                | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [level][7]                 | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [xp][8]                    | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [money][9]                 | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [skin][10]                 | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [face][11]                 | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [hairStyle][12]            | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [hairColor][13]            | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [facialStyle][14]          | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [bankSlots][15]            | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [restState][16]            | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [playerflags][17]          | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [position_x][18]           | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [position_y][19]           | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [position_z][20]           | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [map][21]                  | SMALLINT     | UNSIGNED   |     | NO   | 0                 |        | Map Identifier           |
-| [instance_id][22]          | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [instance_mode_mask][23]   | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [orientation][24]          | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [taximask][25]             | TEXT         | SIGNED     |     | NO   |                   |        |                          |
-| [online][26]               | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [cinematic][27]            | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [totaltime][28]            | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [leveltime][29]            | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [logout_time][30]          | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [is_logout_resting][31]    | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [rest_bonus][32]           | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [resettalents_cost][33]    | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [resettalents_time][34]    | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [trans_x][35]              | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [trans_y][36]              | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [trans_z][37]              | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [trans_o][38]              | FLOAT        | SIGNED     |     | NO   | 0                 |        |                          |
-| [transguid][39]            | MEDIUMINT    | SIGNED     |     | NO   | 0                 |        |                          |
-| [extra_flags][40]          | SMALLINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [stable_slots][41]         | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [at_login][42]             | SMALLINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [zone][43]                 | SMALLINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [death_expire_time][44]    | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [taxi_path][45]            | TEXT         | SIGNED     |     | YES  |                   |        |                          |
-| [arenaPoints][46]          | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [totalHonorPoints][47]     | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [todayHonorPoints][48]     | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [yesterdayHonorPoints][49] | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [totalKills][50]           | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [todayKills][51]           | SMALLINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [yesterdayKills][52]       | SMALLINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [chosenTitle][53]          | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [knownCurrencies][54]      | BIGINT       | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [watchedFaction][55]       | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [drunk][56]                | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [health][57]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power1][58]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power2][59]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power3][60]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power4][61]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power5][62]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power6][63]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power7][64]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [latency][65]              | MEDIUMINT    | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [talentGroupsCount][66]    | TINYINT      | UNSIGNED   |     | NO   | 1                 |        |                          |
-| [activeTalentGroup][67]    | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [exploredZones][68]        | LONGTEXT     | SIGNED     |     | YES  |                   |        |                          |
-| [equipmentCache][69]       | LONGTEXT     | SIGNED     |     | YES  |                   |        |                          |
-| [ammoId][70]               | INT          | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [knownTitles][71]          | LONGTEXT     | SIGNED     |     | YES  |                   |        |                          |
-| [actionBars][72]           | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [grantableLevels][73]      | TINYINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [order][74]                | TINYINT      | SIGNED     |     | YES  |                   |        |                          |
-| [creation_date][75]        | TIMESTAMP    | SIGNED     |     | NO   | CURRENT_TIMESTAMP |        |                          |
-| [deleteInfos_Account][76]  | INT          | UNSIGNED   |     | YES  |                   |        |                          |
-| [deleteInfos_Name][77]     | VARCHAR(12)  | SIGNED     |     | YES  |                   |        |                          |
-| [deleteDate][78]           | INT          | UNSIGNED   |     | YES  |                   |        |                          |
+| Campo                      | Tipo         | Atributos | Llave | Nulo | Por defecto       | Extra  | Comentario                 |
+| -------------------------- | ------------ | --------- | ----- | ---- | ----------------- | ------ | -------------------------- |
+| [guid][1]                  | INT          | UNSIGNED  | PRI   | NO   | 0                 | Único  | Identificador único global |
+| [account][2]               | INT          | UNSIGNED  |       | NO   | 0                 |        | Identificador de cuenta    |
+| [name][3]                  | VARCHAR(12)  | SIGNED    |       | NO   |                   |        |                            |
+| [race][4]                  | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [class][5]                 | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [gender][6]                | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [level][7]                 | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [xp][8]                    | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [money][9]                 | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [skin][10]                 | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [face][11]                 | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [hairStyle][12]            | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [hairColor][13]            | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [facialStyle][14]          | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [bankSlots][15]            | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [restState][16]            | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [playerflags][17]          | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [position_x][18]           | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [position_y][19]           | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [position_z][20]           | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [map][21]                  | SMALLINT     | UNSIGNED  |       | NO   | 0                 |        | Identificador de mapa      |
+| [instance_id][22]          | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [instance_mode_mask][23]   | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [orientation][24]          | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [taximask][25]             | TEXT         | SIGNED    |       | NO   |                   |        |                            |
+| [online][26]               | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [cinematic][27]            | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [totaltime][28]            | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [leveltime][29]            | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [logout_time][30]          | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [is_logout_resting][31]    | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [rest_bonus][32]           | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [resettalents_cost][33]    | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [resettalents_time][34]    | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [trans_x][35]              | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [trans_y][36]              | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [trans_z][37]              | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [trans_o][38]              | FLOAT        | SIGNED    |       | NO   | 0                 |        |                            |
+| [transguid][39]            | MEDIUMINT    | SIGNED    |       | NO   | 0                 |        |                            |
+| [extra_flags][40]          | SMALLINT     | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [stable_slots][41]         | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [at_login][42]             | SMALLINT     | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [zone][43]                 | SMALLINT     | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [death_expire_time][44]    | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [taxi_path][45]            | TEXT         | SIGNED    |       | YES  |                   |        |                            |
+| [arenaPoints][46]          | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [totalHonorPoints][47]     | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [todayHonorPoints][48]     | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [yesterdayHonorPoints][49] | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [totalKills][50]           | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [todayKills][51]           | SMALLINT     | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [yesterdayKills][52]       | SMALLINT     | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [chosenTitle][53]          | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [knownCurrencies][54]      | BIGINT       | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [watchedFaction][55]       | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [drunk][56]                | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [health][57]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power1][58]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power2][59]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power3][60]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power4][61]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power5][62]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power6][63]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [power7][64]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [latency][65]              | MEDIUMINT    | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [talentGroupsCount][66]    | TINYINT      | UNSIGNED  |       | NO   | 1                 |        |                            |
+| [activeTalentGroup][67]    | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [exploredZones][68]        | LONGTEXT     | SIGNED    |       | YES  |                   |        |                            |
+| [equipmentCache][69]       | LONGTEXT     | SIGNED    |       | YES  |                   |        |                            |
+| [ammoId][70]               | INT          | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [knownTitles][71]          | LONGTEXT     | SIGNED    |       | YES  |                   |        |                            |
+| [actionBars][72]           | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [grantableLevels][73]      | TINYINT      | UNSIGNED  |       | NO   | 0                 |        |                            |
+| [order][74]                | TINYINT      | SIGNED    |       | YES  |                   |        |                            |
+| [creation_date][75]        | TIMESTAMP    | SIGNED    |       | NO   | CURRENT_TIMESTAMP |        |                            |
+| [deleteInfos_Account][76]  | INT          | UNSIGNED  |       | YES  |                   |        |                            |
+| [deleteInfos_Name][77]     | VARCHAR(12)  | SIGNED    |       | YES  |                   |        |                            |
+| [deleteDate][78]           | INT          | UNSIGNED  |       | YES  |                   |        |                            |
   
 [1]: #guid
 [2]: #account
@@ -241,17 +241,17 @@ facialHair = playerBytes2 % 256
 
 ### bankSlots
 
-Cantidad de casillas en el banco.
+`field-no-description|15`
 
 ### restState
 
-Estado de reposo.
+`field-no-description|16`
 
 ### playerFlags
 
 Una 'Máscara de Bits/Tabla de Bits' o BitMask que representan aquellos marcadores que posée el jugador. Cada bit controla un marcador distinto, y para combinar marcadores puedes sumar cada marcador que desées uno por uno, activando en efecto los respectivos bits.
 
-| Flag     |            | Name                          | Comment                                                                                                                     |
+| Bandera  |            | Nombre                        | Comentario                                                                                                                  |
 | -------- | ---------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | 1        | 0x00000001 | PLAYER_FLAGS_GROUP_LEADER     |                                                                                                                             |
 | 2        | 0x00000002 | PLAYER_FLAGS_AFK              |                                                                                                                             |
@@ -304,12 +304,12 @@ ID de la instancia en la que se encuentra el personaje y a la que está vinculad
 
 La dificultad actual de la mazmorra en la que se encuentra el jugador. Este campo es una Máscara/Tabla de bits. Los valores son asignados juntos, sin embargo, sólo dos de los cuatro deben ser usados a la vez. Cabe recalcar que ésta descripción puede no ser ciento por ciento correcta.
 
-| Flag | Comment       |
-| ---- | ------------- |
-| 0    | Normal        |
-| 1    | Heróico       |
-| 16   | 10 Jugadores  |
-| 32   | 25 Jugadores  |
+| Bandera | Comentario    |
+| ------- | ------------- |
+| 0       | Normal        |
+| 1       | Heróico       |
+| 16      | 10 Jugadores  |
+| 32      | 25 Jugadores  |
 
 ### orientation
 
@@ -353,7 +353,7 @@ El coste para restablecer los talentos del personaje, medido en monedas de cobre
 
 ### resettalents\_time
 
-Cantidad de veces en las que se han restablecido los talentos del personaje.
+`field-no-description|34`
 
 ### trans\_x
 
@@ -379,16 +379,16 @@ Globally Unique Identifier o Identificador Único global del transporte en el qu
 
 Éstos Marcadores o 'flags' controlan ciertos atributos específicos del jugador, en su mayoría características del GM.
 
-| Flag |            | Name                           | Description                                                                               |
-| ---- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------- |
-| 1    | 0x00000001 | PLAYER_EXTRA_GM_ON             | Define el estado del GM                                                                   |
-| 2    | 0x00000002 | PLAYER_EXTRA_GM_ACCEPT_TICKETS | EN DESUSO Define si el personaje acepta tickets                                           |
-| 4    | 0x00000004 | PLAYER_EXTRA_ACCEPT_WHISPERS   | Define si acepta susurros                                                                 |
-| 8    | 0x00000008 | PLAYER_EXTRA_TAXICHEAT         | Establece un TaxiCheat                                                                    |
-| 16   | 0x00000010 | PLAYER_EXTRA_GM_INVISIBLE      | Define la visibilidad del GM                                                              |
-| 32   | 0x00000020 | PLAYER_EXTRA_GM_CHAT           | Muestra el ícono del GM en los mensajes del chat                                          |
-| 64   | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marca si el jugador ya tiene una montura voladora de 310% de velocidad                    |
-| 256  | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Almacena el estado de muerte en CjC (PvP) hasta la creación del cadáver dentro del juego  |
+| Bandera |            | Nombre                         | Descripción                                                                               |
+| ------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------- |
+| 1       | 0x00000001 | PLAYER_EXTRA_GM_ON             | Define el estado del GM                                                                   |
+| 2       | 0x00000002 | PLAYER_EXTRA_GM_ACCEPT_TICKETS | EN DESUSO Define si el personaje acepta tickets                                           |
+| 4       | 0x00000004 | PLAYER_EXTRA_ACCEPT_WHISPERS   | Define si acepta susurros                                                                 |
+| 8       | 0x00000008 | PLAYER_EXTRA_TAXICHEAT         | Establece un TaxiCheat                                                                    |
+| 16      | 0x00000010 | PLAYER_EXTRA_GM_INVISIBLE      | Define la visibilidad del GM                                                              |
+| 32      | 0x00000020 | PLAYER_EXTRA_GM_CHAT           | Muestra el ícono del GM en los mensajes del chat                                          |
+| 64      | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marca si el jugador ya tiene una montura voladora de 310% de velocidad                    |
+| 256     | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Almacena el estado de muerte en CjC (PvP) hasta la creación del cadáver dentro del juego  |
 
 ### stable\_slots
 
@@ -398,16 +398,16 @@ Las ranuras disponibles (compradas) en el Maestro de Establo.
 
 Este campo es una Máscara/Tabla de Bits, cuya función es controlar las diferentes acciones que se llevan a cabo una vez que el jugador inicie sesión con el personaje.
 
-| Flag |      | Name                       | Description                                               |
-| ---- | ---- | -------------------------- | --------------------------------------------------------- |
-| 1    | 0x01 | AT_LOGIN_RENAME            | Forzar el cambio de nombre del personaje                  |
-| 2    | 0x02 | AT_LOGIN_RESET_SPELLS      | Restablecer los hechizos (también las profesiones)        |
-| 4    | 0x04 | AT_LOGIN_RESET_TALENTS     | Restablecer los talentos                                  |
-| 8    | 0x08 | AT_LOGIN_CUSTOMIZE         | Personalizar el personaje                                 |
-| 16   | 0x10 | AT_LOGIN_RESET_PET_TALENTS | Restablecer los talentos de la mascota                    |
-| 32   | 0x20 | AT_LOGIN_FIRST             | Fijar y remover después del primer inicio de sesión       |
-| 64   | 0x40 | AT_LOGIN_CHANGE_FACTION    | Cambiar de facción                                        |
-| 128  | 0x80 | AT_LOGIN_CHANGE_RACE       | Cambiar de raza                                           |
+| Bandera |      | Nombre                     | Descripción                                               |
+| ------- | ---- | -------------------------- | --------------------------------------------------------- |
+| 1       | 0x01 | AT_LOGIN_RENAME            | Forzar el cambio de nombre del personaje                  |
+| 2       | 0x02 | AT_LOGIN_RESET_SPELLS      | Restablecer los hechizos (también las profesiones)        |
+| 4       | 0x04 | AT_LOGIN_RESET_TALENTS     | Restablecer los talentos                                  |
+| 8       | 0x08 | AT_LOGIN_CUSTOMIZE         | Personalizar el personaje                                 |
+| 16      | 0x10 | AT_LOGIN_RESET_PET_TALENTS | Restablecer los talentos de la mascota                    |
+| 32      | 0x20 | AT_LOGIN_FIRST             | Fijar y remover después del primer inicio de sesión       |
+| 64      | 0x40 | AT_LOGIN_CHANGE_FACTION    | Cambiar de facción                                        |
+| 128     | 0x80 | AT_LOGIN_CHANGE_RACE       | Cambiar de raza                                           |
 
 Para crear acciones múltiples en esta casila, sume los valores entre sí.
 
@@ -480,15 +480,15 @@ Estado de salud actual del personaje.
 
 Poder actual del personaje (Desde el momento en el que se guardó el personaje).
 
-| Field  | Power name   |
-| ------ | ------------ |
-| power1 | Maná         |
-| power2 | ira          |
-| power3 | Focus        |
-| power4 | Energía      |
-| power5 | Felicidad    |
-| power6 | Runas        |
-| power7 | Poder rúnico |
+| Campo  | Nombre del poder |
+| ------ | ---------------- |
+| power1 | Maná             |
+| power2 | ira              |
+| power3 | Focus            |
+| power4 | Energía          |
+| power5 | Felicidad        |
+| power6 | Runas            |
+| power7 | Poder rúnico     |
 
 (Recordemos que son 7 columnas, dependiendo del poder que esté utilizando su clase estará almacemado el valor del mismo en la respectiva casilla)
 
@@ -545,12 +545,12 @@ Por lo que el 29bit almacena el título. Esto sería 2 ^ 29 = 536870912. Este b
 
 Una Máscara/Tabla de bits que contiene las barras de acción visibles para el jugador.
 
-| Flag |            | Comment                   |
-| ---- | ---------- | ------------------------- |
-| 1    | 0x00000001 | Barra inferior izquierda  |
-| 2    | 0x00000002 | Barra inferior derecha    |
-| 4    | 0x00000004 | Barra derecha             |
-| 8    | 0x00000008 | Barra derecha 2           |
+| Bandera |            | Comentario                |
+| ------- | ---------- | ------------------------- |
+| 1       | 0x00000001 | Barra inferior izquierda  |
+| 2       | 0x00000002 | Barra inferior derecha    |
+| 4       | 0x00000004 | Barra derecha             |
+| 8       | 0x00000008 | Barra derecha 2           |
 
 ### grantableLevels
 
