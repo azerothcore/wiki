@@ -251,7 +251,7 @@ No.
 ## Core installation errors
 
 #### [ACE00100](#ace00100)
-If MySQL is not found by CMake it is required to set 
+If MySQL is not found by CMake it is required to set
 
 **MYSQL_INCLUDE_DIR = C:/XX/MySQL/MySQL Server X.X/include** and 
 
@@ -290,7 +290,7 @@ If you get an error that *CMake could NOT find OpenSSL*
 
         - Run the Bootstrap.bat file
 
-        - Run the b2.exe file 
+        - Run the b2.exe file
 
 ---------------------------------------------------------
 
