@@ -48,20 +48,20 @@ If you are using GitHub Desktop, you may fill the co-author field, underneath th
 # 📌 Extra Infos
 
 # ✅ Types
-- **feat**: new feature  
+- **feat**: new feature
 - **fix**: bug fix  
 - **refactor**: refactoring production code (no change to functionality expected)
-- **style**: formatting, missing semicolons, etc; no code change  
-- **docs**: changes to documentation  
-- **chore**: updating bash scripts, git files etc; no production code change  
+- **style**: formatting, missing semicolons, etc; no code change
+- **docs**: changes to documentation
+- **chore**: updating bash scripts, git files etc; no production code change
 
 **Remember:**
-- ✅ Capitalize the subject line  
-- ✅ Use the **imperative mood** in the subject line  
+- ✅ Capitalize the subject line
+- ✅ Use the **imperative mood** in the subject line
 - ✅ Do not end the subject line with a period  
-- ✅ Separate subject from body with a blank line  
-- ✅ Use the body to explain **what** and **why** rather than **how**  
-- ✅ Can use multiple lines with `-` for bullet points in body  
+- ✅ Separate subject from body with a blank line
+- ✅ Use the body to explain **what** and **why** rather than **how**
+- ✅ Can use multiple lines with `-` for bullet points in body
 
 **More info:** [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
 
