@@ -6,17 +6,17 @@ redirect_from: "/Contribute"
 
 Puedes contribuir de varias formas a AzerothCore:
 
-- [Comentando un problema abierto](Contribute#how-to-comment-an-issue)
+- [Comentando un problema abierto](#how-to-comment-an-issue)
 
-- [Abriendo un problema](Contribute#how-to-open-an-issue)
+- [Abriendo un problema](#how-to-open-an-issue)
 
-- [Prueba de una solicitud de extracción](How-to-test-a-PR)
+- [Prueba de una solicitud de extracción](#how-to-test-a-pull-request)
 
 - [Prueba de cambios solo de base de datos](How-to-test-DB-only-changes)
 
-- [Creando una solicitud de extracción](Contribute#how-to-create-a-pull-request)
+- [Creando una solicitud de extracción](#how-to-create-a-pull-request)
 
-- [Mejorando nuestra wiki](Contribute#improve-the-wiki)
+- [Mejorando nuestra wiki](#improve-the-wiki)
 
 ## Información general
 
