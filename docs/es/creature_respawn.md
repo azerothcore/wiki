@@ -8,12 +8,12 @@ La tabla alberga la hora de reaparición de las criaturas en el mundo. En caso d
 
 **Estructura**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [respawnTime][2] | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mapId][3]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [instanceId][4]  | INT      | UNSIGNED   | PRI | NO   | 0       |       | Instance Identifier      |
+| Campo            | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra | Comentario                  |
+| ---------------- | -------- | --------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]        | INT      | UNSIGNED  | PRI | NO   | 0       |       | Global Unique Identifier |
+| [respawnTime][2] | INT      | UNSIGNED  |     | NO   | 0       |       |                          |
+| [mapId][3]       | SMALLINT | UNSIGNED  |     | NO   | 0       |       |                          |
+| [instanceId][4]  | INT      | UNSIGNED  | PRI | NO   | 0       |       | Instance Identifier      |
 
 [1]: #guid
 [2]: #respawntime
