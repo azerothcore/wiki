@@ -22,12 +22,12 @@ account create admin admin
 
 ## Para establecer el nivel de seguridad de su cuenta
 
-| Level | Security Level    |
-|-------|-------------------|
-| 0     | SEC_PLAYER        |
-| 1     | SEC_MODERATOR     |
-| 2     | SEC_GAMEMASTER    |
-| 3     | SEC_ADMINISTRATOR |
+| Nivel | Nivel de seguridad |
+|-------|--------------------|
+| 0     | SEC_PLAYER         |
+| 1     | SEC_MODERATOR      |
+| 2     | SEC_GAMEMASTER     |
+| 3     | SEC_ADMINISTRATOR  |
 
 ```
 account set gmlevel <user> <level> <realm>
@@ -35,11 +35,15 @@ account set gmlevel <user> <level> <realm>
 
 **Ejemplo:**
 
+{% include note.html content="Si el comando se ejecutó mientras la cuenta estaba iniciada sesión, deberá volver a iniciar sesión para que el nivel de seguridad se actualice correctamente." %}
+
 ```
 account set gmlevel admin 3 -1
 ```
 
 **Nota:** (-1 para todos los reinos)
+
+{% include note.html content="Utilice -1 para seleccionar todos los reinos o especificar el ID del reino específico." %}
 
 ## Cambio de contraseña
 
