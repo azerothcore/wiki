@@ -33,6 +33,7 @@ GUID of group leader
 ## memberGUID
 
 GUID of group member. NOTE: Is required to have an entry with `leaderGUID` and `memberGUID` with the `leaderGUID` in order to make the group work.
+
 Example:
 
 * Leader = 1
