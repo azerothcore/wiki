@@ -1,3 +1,7 @@
+---
+redirect_from: "/Create-a-Module"
+---
+
 # Crear un módulo
 
 ## **Cómo crear un módulo**
@@ -6,10 +10,10 @@ Antes de empezar te sugerimos que leas la [Documentación sobre la estructura mo
 
 ### Recursos
 
-- Plantilla del módulo: [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
+- Plantilla de módulo (muy recomendable): [https://github.com/azerothcore/skeleton-module](https://github.com/azerothcore/skeleton-module)
 - Plantilla de scripts: https://github.com/azerothcore/azerothcore-boilerplates
 - Todos los hooks del núcleo se enumeran en [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). Si necesita hooks personalizados, pueden añadirse al núcleo mediante [enviando un PR](How-to-create-a-PR).
-
+- Módulos existentes listados en el catálogo: [https://www.azerothcore.org/catalogue.html](https://www.azerothcore.org/catalogue.html)
 - Si necesita crear un nuevo hook para su módulo, siga esta guía: [Cómo crear un nuevo hook](hooks-script)
 
 ### **La base**
@@ -18,7 +22,7 @@ Antes de empezar te sugerimos que leas la [Documentación sobre la estructura mo
 
 2. Ahora puedes desarrollar añadir cualquier cosa al proyecto principal, como algunos scripts o incluso una biblioteca entera
 
-**Nota:** sugerimos utilizar la [estructura de directorios](Directory-Structure) estándares de AzerothCore para organizar mejor sus módulos y familiarizarse con el proyecto principal.
+Nota: sugerimos utilizar la [estructura de directorios](Directory-Structure) estándares de AzerothCore para organizar mejor sus módulos y familiarizarse con el proyecto principal.
 
 ### **Añadir el primer script**
 
@@ -26,30 +30,30 @@ Antes de empezar te sugerimos que leas la [Documentación sobre la estructura mo
 
 2. Después de crear tu script tienes que crear un archivo .cpp para manejar la carga del script.
 
-Por ejemplo (suponiendo que haya creado una carpeta `src`):
+  Por ejemplo (suponiendo que haya creado una carpeta src):
 
-**my_custom_loader.cpp**
+  `my_custom_loader.cpp`
 
-```cpp
-// Desde SC
-void AddMyCustomScripts();
+  ```cpp
+  // De SC
+  void AddMyCustomScripts();
 
-// Añadir todo
-// Véase la convención de nomenclatura https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master#how-to-upgrade-4
-// además, sustituya aquí todos los "-" del nombre de la carpeta del módulo por "_".
-void Addmod_my_customScripts()
-{
+  // Agregar todo
+  // cf. la convención de nomenclatura https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master#how-to-upgrade-4
+  // Además, reemplace todos los '-' en el nombre de la carpeta del módulo con '_' aquí
+  void Addmod_my_customScripts()
+  {
     AddMyCustomScripts();
-}
-```
+  }
+  ```
 
-NOTA: AddMyCustomScripts está compuesto por:
+  NOTE: AddMyCustomScripts está compuesto por:
 
-- Add (prefijo)
+  Agregar (Prefijo)
 
-MyCustom (Un identificador de nombre único para su script para evitar colisiones de funciones)
+  MyCustom (un identificador de nombre único para su script para evitar colisiones de funciones)
 
-Scripts (Sufijo)
+  Scripts (sufijo)
 
 ### **Crear un archivo de configuración personalizado**
 
@@ -63,3 +67,7 @@ si necesita añadir un archivo de configuración personalizado a su módulo que 
 Puedes crear bases, actualizaciones y sql personalizados que se cargarán automáticamente en nuestro db_assembler
 
 **trabajo en curso....**
+
+### **¿Terminaste de crear tu módulo?**
+
+Publica tu módulo en nuestro catálogo: https://www.azerothcore.org/catalogue.html#/how-to

@@ -20,8 +20,7 @@ Before start we suggest you to read [Documentation about modular structure](The-
 
 1. Create a folder inside `modules/` directory
 
-2. Now you can develop add anything to the main project, such as some scripts or
-even an entire library
+2. Now you can develop add anything to the main project, such as some scripts or even an entire library
 
 Note: we suggest to use the [directory structure](Directory-Structure) standards of AzerothCore to better organize your modules and be familiar with main project.
 
@@ -35,18 +34,18 @@ Note: we suggest to use the [directory structure](Directory-Structure) standards
 
   `my_custom_loader.cpp`
 
- ```cpp
-// From SC
-void AddMyCustomScripts();
+  ```cpp
+  // From SC
+  void AddMyCustomScripts();
 
-// Add all
-// cf. the naming convention https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master#how-to-upgrade-4
-// additionally replace all '-' in the module folder name with '_' here
-void Addmod_my_customScripts()
-{
+  // Add all
+  // cf. the naming convention https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master#how-to-upgrade-4
+  // additionally replace all '-' in the module folder name with '_' here
+  void Addmod_my_customScripts()
+  {
     AddMyCustomScripts();
-}
-```
+  }
+  ```
 
   NOTE: AddMyCustomScripts is composed by:
 
@@ -65,7 +64,7 @@ if you need to add a custom configuration file to your module that will be insta
 
 ### **Add your db files to db_assembler**
 
-you are able to create base, updates and custom sql that will be automatically loaded in our db_assembler
+You are able to create base, updates and custom sql that will be automatically loaded in our db_assembler
 
 **work in progress….**
 
