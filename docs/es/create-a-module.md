@@ -1,5 +1,5 @@
 ---
-redirect_from: "/Create-a-Module"
+redirect_from: "/es/Create-a-Module"
 ---
 
 # Crear un módulo
