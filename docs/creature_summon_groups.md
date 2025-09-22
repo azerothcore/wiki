@@ -2,11 +2,11 @@
 
 [<-Back-to:World](database-world)
 
-# Table: creature\_summon\_groups
+**The creature\_summon\_groups Table**
 
 This table holds data about temporary summoned creatures. It is possible to group summons and create boss waves of adds etc.
 
-## Structure
+**Table Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
