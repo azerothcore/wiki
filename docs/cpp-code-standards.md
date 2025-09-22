@@ -185,21 +185,21 @@ enum class Spell : uint32
 
 All constants that we store have a standardized prefix.
 
-| PREFIX | Comment  |
-| :----- | :------- |
-| SPELL_ | Spell ID |
-| NPC_   | [creature_template.entry](creature_template#entry) |
-| ITEM_  | [item_template.entry](item_template#entry) |
-| GO_    | [gameobject_template.entry](gameobject_template#entry) |
-| QUEST_ | [quest_template.id](quest_template#id) |
-| SAY_   | [creature_text.GroupID](creature_text#groupid) |
-| EMOTE_ | [creature_text.GroupID](creature_text#groupid) Different prefix from SAY_ to show that this is an emote. |
-| MODEL_ | Creature model, DisplayID |
-| XX_G   | Heroic mode prefix (goes after the other prefix) XX is the max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
+| PREFIX  | Comment                                                                                                                                 |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| SPELL_  | Spell ID                                                                                                                                |
+| NPC_    | [creature_template.entry](creature_template#entry)                                                                                      |
+| ITEM_   | [item_template.entry](item_template#entry)                                                                                              |
+| GO_     | [gameobject_template.entry](gameobject_template#entry)                                                                                  |
+| QUEST_  | [quest_template.id](quest_template#id)                                                                                                  |
+| SAY_    | [creature_text.GroupID](creature_text#groupid)                                                                                          |
+| EMOTE_  | [creature_text.GroupID](creature_text#groupid) Different prefix from SAY_ to show that this is an emote.                                |
+| MODEL_  | Creature model, DisplayID                                                                                                               |
+| XX_G    | Heroic mode prefix (goes after the other prefix) XX is the max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc)|
 | RAID_XX | Raid mode prefix (goes before the other prefix) XX is the max man amount from mode. (OBSOLETE AS OF PATCH 3.2 WITH SpellDifficulty.dbc) |
-| EVENT_ | Event/Encounter identifier for instances |
-| DATA_  | Identifiers in instance used for GUIDs/data not being event/encounter |
-| ACHIEV_ | Achievement ID |
+| EVENT_  | Event/Encounter identifier for instances                                                                                                |
+| DATA_   | Identifiers in instance used for GUIDs/data not being event/encounter                                                                   |
+| ACHIEV_ | Achievement ID                                                                                                                          |
 
 Correct:
 
