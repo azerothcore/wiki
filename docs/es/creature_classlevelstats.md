@@ -1,24 +1,24 @@
 # creature\_classlevelstats
 
-**Table Structure**
+**Estructura**
 
 This table contains the base values for creature health, mana, armor, attack power, ranged attack power, damage, and experience.
 
-| Field                  | Type     | Attributes | Null | Default | Extra | Comment |
-| ---------------------- | -------- | ---------- | ---- | ------- | ----- | ------- |
-| [level][1]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
-| [class][2]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
-| [basehp0][3]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basehp1][4]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basehp2][5]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basemana][6]          | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basearmor][7]         | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [attackpower][8]       | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [rangedattackpower][9] | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [damage_base][10]      | FLOAT    |            | NO   |         |       |         |
-| [damage_exp1][11]      | FLOAT    |            | NO   |         |       |         |
-| [damage_exp2][12]      | FLOAT    |            | NO   |         |       |         |
-| [comment][13]          | text     |            | YES  | NULL    |       |         |
+| Campo                  | Tipo     | Atributos | Nulo | Por defecto | Extra | Comentario |
+| ---------------------- | -------- | --------- | ---- | ----------- | ----- | ---------- |
+| [level][1]             | TINYINT  | UNSIGNED  | NO   |             |       |            |
+| [class][2]             | TINYINT  | UNSIGNED  | NO   |             |       |            |
+| [basehp0][3]           | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [basehp1][4]           | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [basehp2][5]           | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [basemana][6]          | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [basearmor][7]         | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [attackpower][8]       | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [rangedattackpower][9] | SMALLINT | UNSIGNED  | NO   |             |       |            |
+| [damage_base][10]      | FLOAT    |           | NO   |             |       |            |
+| [damage_exp1][11]      | FLOAT    |           | NO   |             |       |            |
+| [damage_exp2][12]      | FLOAT    |           | NO   |             |       |            |
+| [comment][13]          | text     |           | Si   | NULL        |       |            |
 
 [1]: #level
 [2]: #class
@@ -38,52 +38,52 @@ This table contains the base values for creature health, mana, armor, attack pow
 
 ### level
 
-Level of the creature.
+Nivel de la criatura.
 
 ### class
 
-Class of the creature. This is a reference to the [unit\_class](creature_template#creature_template-unit_class) field in the [creature\_template](creature_template) table.
+Clase de la criatura. Esta es una referencia al campo [unit\_class](creature_template#creature_template-unit_class) de la tabla [creature\_template](creature_template).
 
 ### basehp0
 
-Base health for the creature if creature\_template.exp value is set to 0. This value is multiplied by [creature\_template.Health\_mod](creature_template#health_mod)  to determine the creature's final health.
+Salud base de la criatura si el valor de creature\_template.exp se establece en 0. Este valor se multiplica por [creature\_template.Health\_mod](creature_template#health_mod) para determinar la salud final de la criatura.
 
 ### basehp1
 
-Base health for the creature if creature\_template.exp value is set to 1. This value is multiplied by [creature\_template.Health\_mod](creature_template#health_mod)  to determine the creature's final health.
+Salud base de la criatura si el valor de creature\_template.exp está establecido en 1. Este valor se multiplica por [creature\_template.Health\_mod](creature_template#health_mod) para determinar la salud final de la criatura.
 
 ### basehp2
 
-Base health for the creature if creature\_template.exp value is set to 2. This value is multiplied by [creature\_template.Health\_mod](creature_template#health_mod)  to determine the creature's final health.
+Salud base de la criatura si el valor de creature\_template.exp se establece en 2. Este valor se multiplica por [creature\_template.Health\_mod](creature_template#health_mod) para determinar la salud final de la criatura.
 
 ### basemana
 
-Base mana for the creature. This value is multiplied by  [creature\_template.Mana\_mod](creature_template#mana_mod) to determine the creature's final mana.
+Maná base de la criatura. Este valor se multiplica por [creature\_template.Mana\_mod](creature_template#mana_mod) para determinar el maná final de la criatura.
 
 ### basearmor
 
-Base armor for the creature. This value is multiplied by creature\_template.Armor\_mod to determine the creature's final armor.
+Armadura base de la criatura. Este valor se multiplica por la plantilla de creature.Armor\_mod para determinar la armadura final de la criatura.
 
 ### attackpower
 
-Base attack power for the creature.
+Poder de ataque base de la criatura.
 
 ### rangedattackpower
 
-Base ranged attack power for the creature.
+Poder de ataque a distancia base de la criatura.
 
 ### damage\_base
 
-Modifier used to calculate the damage output of a creature. This field is used if a creature's [exp](creature_template#exp) is set to 0. See [DamageModifier](creature_template#damagemodifier) for more information.
+Modificador utilizado para calcular el daño de una criatura. Este campo se usa si la [exp](creature_template#exp) de una criatura es 0. Consulta [DamageModifier](creature_template#damagemodifier) ​​para más información.
 
 ### damage\_exp1
 
-Modifier used to calculate the damage output of a creature. This field is used if a creature's [exp](creature_template#exp) is set to 1. See [DamageModifier](creature_template#damagemodifier) for more information.
+Modificador utilizado para calcular el daño de una criatura. Este campo se usa si la [exp](creature_template#exp) de una criatura es 1. Consulta [DamageModifier](creature_template#damagemodifier) ​​para más información.
 
 ### damage\_exp2
 
-Modifier used to calculate the damage output of a creature. This field is used if a creature's [exp](creature_template#exp) is set to 2. See [DamageModifier](creature_template#damagemodifier) for more information.
+Modificador utilizado para calcular el daño de una criatura. Este campo se usa si la [exp](creature_template#exp) de una criatura es 2. Consulta [DamageModifier](creature_template#damagemodifier) ​​para más información.
 
 ### comment
 
-A comment describing the purpose of the record (entry).
+Un comentario que describe el propósito del registro (entrada).
