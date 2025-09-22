@@ -2,11 +2,11 @@
 
 [<-Back-to:World](database-world)
 
-## **Table: creature\_equip\_template**
+## **The creature\_equip\_template table**
 
 This table contains all the equipment combinations that can be sent for each creature.
 
-## Structure
+**Table Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment      |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------ |
