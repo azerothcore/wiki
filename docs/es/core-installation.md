@@ -15,15 +15,7 @@
 
 ## Ayuda
 
-Si aún tiene problemas, verifique:
-
-* [Preguntas Frecuentes](faq)
-
-* [Errores Comunes](common-errors)
-
-* [Cómo pedir ayuda](how-to-ask-for-help)
-
-* [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del personal le responderá siempre que tenga tiempo.
+{% include help_es.html %}
 
 | Guía de Instalación | |
 | :- | :- |
