@@ -1,4 +1,4 @@
-# conditions
+# Conditions
 
 [<-Back-to:World](database-world)
 
@@ -211,7 +211,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 
 ### SourceTypeOrReferenceId
 
-if negative, then it is a reference template.
+If negative, then it is a reference template.
 
 <table>
 <thead>
@@ -425,8 +425,8 @@ Spell ID from <a href="http://www.azerothcore.org/wiki/Spell">Spell.dbc</a></td
 <td><br />
 <br />
 <br />
-0 = spell Caster<br />
-1 =  Explicit Target of the spell (only for spells which take the object selected by caster into account)</td>
+0 = Spell Caster<br />
+1 = Explicit Target of the spell (only for spells which take the object selected by caster into account)</td>
 <td><ul>
 <li>This source type allows you to define caster/explicit target requirements for spell to be cast.</li>
 <li>Explicit target of the spell is the target which is selected by player during cast, not all spells take that target into account. non-explicit targets of the spell (the ones which are selected by spell like area or nearby targets for example) are not affected by this condition source type, if you want to affect those use CONDITION_SOURCE_TYPE_SPELL_IMPLICIT_TARGET instead.</li>
@@ -441,7 +441,7 @@ Spell ID from <a href="http://www.azerothcore.org/wiki/Spell">Spell.dbc</a></td
 <td>Spell (<a href="http://www.azerothcore.org/wiki/npc_spellclick_spells#spell_id">npc_spellclick_spells.spell_id</a>)</td>
 <td>Always 0</td>
 <td>0 = Clicker<br />
-1 =  Spellclick target (clickee)</td>
+1 = Spellclick target (clickee)</td>
 <td><br />
 </td>
 </tr>
@@ -472,7 +472,8 @@ CONDITION_SOURCE_TYPE_VEHICLE_SPELL</td>
 <td><br />
 Spell ID from <a href="http://www.azerothcore.org/wiki/Spell">Spell.dbc</a></td>
 <td>Always 0</td>
-<td>0 = Player for whom spell bar is shown1 =  Vehicle creature</td>
+<td>0 = Player for whom spell bar is shown
+1 = Vehicle creature</td>
 <td><br />
 This will show or hide spells in vehicle spell bar.</td>
 </tr>
@@ -630,7 +631,7 @@ Two conditions with the same SourceType, SourceGroup and SourceEntry but with a
 <br />
 <br />
 Faction template ID from <a href="http://www.azerothcore.org/wiki/Faction">Faction.dbc</a></p></td>
-<td><pre><code>rank:
+<td><pre><code>Rank:
   1 = Hated
   2 = Hostile
   4 = Unfriendly
@@ -645,7 +646,7 @@ Faction template ID from <a href="http://www.azerothcore.org/wiki/Faction">Fact
 <tr class="odd">
 <td>CONDITION_TEAM</td>
 <td>6</td>
-<td>Team id :Alliance = 469 / Horde = 67</td>
+<td>Team id: Alliance = 469 / Horde = 67</td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
@@ -673,7 +674,7 @@ Faction template ID from <a href="http://www.azerothcore.org/wiki/Faction">Fact
 <tr class="odd">
 <td>CONDITION_DRUNKENSTATE</td>
 <td>10</td>
-<td>Sober=0; Tipsy=1, Drunk=2, Smashed=3</td>
+<td>Sober = 0, Tipsy = 1, Drunk = 2, Smashed = 3</td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
@@ -698,10 +699,10 @@ Faction template ID from <a href="http://www.azerothcore.org/wiki/Faction">Fact
 entry</strong> (see corresponding source script files for info)</td>
 <td><strong><br />
 data</strong> (see corresponding script source files for more info)</td>
-<td><p>0=INSTANCE_INFO_DATA</p>
-<p>1=INSTANCE_INFO_GUID_DATA</p>
-<p>2=INSTANCE_INFO_BOSS_STATE</p>
-<p>3=INSTANCE_INFO_DATA64</p></td>
+<td><p>0 = INSTANCE_INFO_DATA</p>
+<p>1 = INSTANCE_INFO_GUID_DATA</p>
+<p>2 = INSTANCE_INFO_BOSS_STATE</p>
+<p>3 = INSTANCE_INFO_DATA64</p></td>
 </tr>
 <tr class="odd">
 <td>CONDITION_QUEST_NONE</td>
@@ -766,7 +767,7 @@ Add flags together for all races where condition is true.</td>
 <td>CONDITION_MAPID</td>
 <td>22</td>
 <td><p>Map entry from Map.dbc</p>
-<p>(0=Eastern Kingdoms, 1=Kalimdor, - and so on.)</p></td>
+<p>(0 = Eastern Kingdoms, 1 = Kalimdor, - and so on.)</p></td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
@@ -819,7 +820,7 @@ Add flags together for all races where condition is true.</td>
 <td>29</td>
 <td>Creature entry from <a href="http://www.azerothcore.org/wiki/creature_template#creature_template-entry">creature_template.entry</a></td>
 <td>Distance in yards</td>
-<td>Alive=0 / Dead=1</td>
+<td>Alive = 0 / Dead = 1</td>
 </tr>
 <tr class="odd">
 <td>CONDITION_NEAR_GAMEOBJECT</td>
@@ -874,8 +875,7 @@ if TypeID = TYPEID_GAMEOBJECT =&gt; Gameobject entry from </a><a href="http://w
 <td>34</td>
 <td><p>Target to which reaction is checked.<br />
 - one of the ConditionTargets available in current <a href="#sourcetypeorreferenceid">SourceType</a></p></td>
-<td><pre><code>rankMask: This bitmask defines the reaction(s) of the current ConditionTarget
-to the target specified in ConditionValue1 (which are allowed).
+<td><pre><code>rankMask: This bitmask defines the reaction(s) of the current ConditionTarget to the target specified in ConditionValue1 (which are allowed).
 Flags for the reactions are:
   1 = Hated
   2 = Hostile
@@ -907,9 +907,9 @@ Defines distance between current ConditionTarget and target specified in Conditi
 <td>Always 0 - Use NegativeCondition and the following settings:
 <p>NegativeCondition = 0 if target needs to be ALIVE.<br />
 NegativeCondition = 1 if target needs to be DEAD.<br />
-NOTE: A creature corpse and a creature that_looks_dead<br />
+NOTE: A creature corpse and a creature that _looks_ dead<br />
 are two different things. One is actually dead<br />
-and the other is just using an emote to appear dead. </p></td>
+and the other is just using an emote to appear dead.</p></td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
@@ -1059,7 +1059,7 @@ See below
 
 ### NegativeCondition
 
-If set to 1, the condition will be "inverted"
+If set to 1, the condition will be "inverted".
 
 Example: CONDITION\_AURA with NegativeCondition will be true when the player does NOT have the aura.
 
@@ -1083,7 +1083,7 @@ The ScriptName this condition uses, if any.
 
 ### Comment
 
-Explanation of this condition or reference
+Explanation of this condition or reference.
 
 ### Explanation of condition types
 
@@ -1111,10 +1111,10 @@ The content of the [SourceGroup](#conditions-SourceGroup) and [SourceEntry](#con
 
 Notes:
 
--   this condition source type allows to define a filter for possible spell effect targets, so only targets matching condition will be selected as implicit targets of the spell. Only target types: *AREA*, *NEARBY* and *CONE* are allowed to be filtered. This source type affects only targets selected by spell, it doesn't affect spell target selected by player on cast, to affect that target use CONDITION\_SOURCE\_TYPE\_SPELL.
--   to restrict targets to player's only use CONDITION\_TYPEMASK with TYPEMASK\_PLAYER + TYPEMASK\_CORPSE to allow targeting dead players.
--   remember that conditions with the same value ElseGroup will be used to make logical AND check, so to allow different targets for the same spell effect you have to set ElseGroup respectively.
--   if you're looking for old CONDITION\_SOURCE\_TYPE\_SPELL\_SCRIPT\_TARGET - use this condition source type instead
+-   This condition source type allows to define a filter for possible spell effect targets, so only targets matching condition will be selected as implicit targets of the spell. Only target types: *AREA*, *NEARBY* and *CONE* are allowed to be filtered. This source type affects only targets selected by spell, it doesn't affect spell target selected by player on cast, to affect that target use CONDITION\_SOURCE\_TYPE\_SPELL.
+-   To restrict targets to player's only use CONDITION\_TYPEMASK with TYPEMASK\_PLAYER + TYPEMASK\_CORPSE to allow targeting dead players.
+-   Remember that conditions with the same value ElseGroup will be used to make logical AND check, so to allow different targets for the same spell effect you have to set ElseGroup respectively.
+-   If you're looking for old CONDITION\_SOURCE\_TYPE\_SPELL\_SCRIPT\_TARGET - use this condition source type instead
 
 \***CONDITION\_SOURCE\_TYPE\_GOSSIP\_MENU = 14**
 
@@ -1152,10 +1152,10 @@ Note: creature entry must be a vehicle. Example: If this is used with CONDITION\
 
 Notes:
 
--   this source type allows you to define caster/explicit target requirements for spell to be cast.
--   explicit target of the spell is the target which is selected by player during cast, not all spells take that target into account. non-explicit targets of the spell (the ones which are selected by spell like area or nearby targets for example) are not affected by this condition source type, if you want to affect those use CONDITION\_SOURCE\_TYPE\_SPELL\_IMPLICIT\_TARGET instead.
--   if you're looking for old CONDITION\_SOURCE\_TYPE\_ITEM\_REQUIRED\_TARGET - use this condition source type instead (ConditionTarget = 1 allows you to set requirements for a given spell, so to use this condition type you need spellid of the spell cast on item use)
--   remember that conditions with the same value ElseGroup will be used to make logical AND check, so to allow different targets for the same spell effect you have to set ElseGroup respectively.
+-   This source type allows you to define caster/explicit target requirements for spell to be cast.
+-   Explicit target of the spell is the target which is selected by player during cast, not all spells take that target into account. non-explicit targets of the spell (the ones which are selected by spell like area or nearby targets for example) are not affected by this condition source type, if you want to affect those use CONDITION\_SOURCE\_TYPE\_SPELL\_IMPLICIT\_TARGET instead.
+-   If you're looking for old CONDITION\_SOURCE\_TYPE\_ITEM\_REQUIRED\_TARGET - use this condition source type instead (ConditionTarget = 1 allows you to set requirements for a given spell, so to use this condition type you need spellid of the spell cast on item use)
+-   Remember that conditions with the same value ElseGroup will be used to make logical AND check, so to allow different targets for the same spell effect you have to set ElseGroup respectively.
 
 \***CONDITION\_SOURCE\_TYPE\_SPELL\_CLICK\_EVENT = 18**
 
@@ -1204,8 +1204,8 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_SOURCE\_TYPE\_SPELL\_PROC = 24**
 
--   -   SourceGroup: always 0
-    -   SourceEntry: spell id of aura which triggers the proc
+-   -   SourceGroup: Always 0
+    -   SourceEntry: Spell id of aura which triggers the proc
     -   ConditionTarget:
         -   0 - Actor
         -   1 - ActionTarget
@@ -1218,15 +1218,15 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_AURA = 1**
 
--   -   ConditionValue1: spell (Spell Id from [Spell.dbc](Spell))
-    -   ConditionValue2: effect index (0-2)
+-   -   ConditionValue1: Spell (Spell Id from [Spell.dbc](Spell))
+    -   ConditionValue2: Effect index (0-2)
     -   ConditionValue3: always 0
 
 \***CONDITION\_ITEM = 2**
 
 -   -   ConditionValue1: item entry ([item\_template.entry](http://www.azerothcore.org/wiki/item_template#entry))
     -   ConditionValue2: item count
-    -   ConditionValue3: in bank? (true=1)
+    -   ConditionValue3: in bank? (true = 1)
 
 \***CONDITION\_ITEM\_EQUIPPED = 3**
 
