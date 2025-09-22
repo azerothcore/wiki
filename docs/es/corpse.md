@@ -2,31 +2,29 @@
 
 [<-Volver a:Characters](database-characters)
 
-Leer en: [English :gb:](../corpse) [Spanish :es:](corpse)
-
 **Tabla \`corpse\`**
 
 **Estructura**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra  | Comment                            |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ------ | ---------------------------------- |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |        | Character Global Unique Identifier |
-| [posX][2]        | FLOAT    | SIGNED     |     | NO   | 0       |        |                                    |
-| [posY][3]        | FLOAT    | SIGNED     |     | NO   | 0       |        |                                    |
-| [posZ][4]        | FLOAT    | SIGNED     |     | NO   | 0       |        |                                    |
-| [orientation][5] | FLOAT    | SIGNED     |     | NO   | 0       |        |                                    |
-| [mapId][6]       | SMALLINT | UNSIGNED   |     | NO   | 0       |        | Map Identifier                     |
-| [phaseMask][7]   | INT      | UNSIGNED   |     | NO   | 1       |        |                                    |
-| [displayId][8]   | INT      | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [itemCache][9]   | TEXT     | SIGNED     |     | NO   |         |        |                                    |
-| [bytes1][10]     | INT      | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [bytes2][11]     | INT      | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [guildId][12]    | INT      | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [flags][13]      | TINYINT  | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [dynFlags][14]   | TINYINT  | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [time][15]       | INT      | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [corpseType][16] | TINYINT  | UNSIGNED   |     | NO   | 0       |        |                                    |
-| [instanceId][17] | INT      | UNSIGNED   |     | NO   | 0       |        | Instance Identifier                |
+| Campo            | Tipo     | Atributos | Llave | Nulo | Por defecto | Extra  | Comentario                             |
+| ---------------- | -------- | --------- | ----- | ---- | ----------- | ------ | -------------------------------------- |
+| [guid][1]        | INT      | UNSIGNED  | PRI   | NO   | 0           |        | Identificador único global de carácter |
+| [posX][2]        | FLOAT    | SIGNED    |       | NO   | 0           |        |                                        |
+| [posY][3]        | FLOAT    | SIGNED    |       | NO   | 0           |        |                                        |
+| [posZ][4]        | FLOAT    | SIGNED    |       | NO   | 0           |        |                                        |
+| [orientation][5] | FLOAT    | SIGNED    |       | NO   | 0           |        |                                        |
+| [mapId][6]       | SMALLINT | UNSIGNED  |       | NO   | 0           |        | Identificador de mapa                  |
+| [phaseMask][7]   | INT      | UNSIGNED  |       | NO   | 1           |        |                                        |
+| [displayId][8]   | INT      | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [itemCache][9]   | TEXT     | SIGNED    |       | NO   |             |        |                                        |
+| [bytes1][10]     | INT      | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [bytes2][11]     | INT      | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [guildId][12]    | INT      | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [flags][13]      | TINYINT  | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [dynFlags][14]   | TINYINT  | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [time][15]       | INT      | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [corpseType][16] | TINYINT  | UNSIGNED  |       | NO   | 0           |        |                                        |
+| [instanceId][17] | INT      | UNSIGNED  |       | NO   | 0           |        | Identificador de instancia             |
 
 [1]: #guid
 [2]: #posx
