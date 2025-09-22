@@ -1,8 +1,12 @@
+---
+tableofcontents: 1
+---
+
 # Scripts básicos
 
-Cuando se trata de scripts de criaturas y hechizos, siempre debemos utilizar las nuevas macros de registro introducidas en el commit [this](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99).
+Al trabajar con scripts de criaturas, objetos de juego, hechizos e instancias, siempre debemos usar las nuevas macros de registro introducidas en [este](https://github.com/azerothcore/azerothcore-wotlk/commit/430fa147fd340223400f6df968d0726510bb1c99) y [este](https://github.com/azerothcore/azerothcore-wotlk/commit/8cc47ab1f174e82d74b2e17b4af13ded0f37a693) commit.
 
-## Creature Scripts
+## Scripts de criaturas
 
 ### Criaturas en el mundo
 
@@ -63,13 +67,48 @@ void AddSC_boss_lord_marrowgar()
 
 ### Diferentes tipos de IA de criaturas
 
-- CreatureAI
-- BossAI
-- GuardianAI
-- PetAI
-- NullCreatureAI
+| Nombre         |
+| -------------- |
+| CriaturaAI     |
+| BossAI         |
+| GuardianAI     |
+| PetAI          |
+| NullCreatureAI |
 
-## Spell Scripts
+## Scripts de GameObject
+
+### Objetos del juego generados por el mundo
+
+```cpp
+struct go_scripted_gameobject : public GameObjectAI
+{
+    go_scripted_gameobject(GameObject* go) : GameObjectAI(go) { }
+
+    void UpdateAI(uint32 const /*diff*/) override
+    {
+        /*Algo de código*/
+    }
+}
+
+/* Al final de un archivo de script encontrarás un lugar donde registramos todos los scripts. */
+void AddSC_scripts()
+{
+    /* RegisterGameObjectAI(gameObjectScript); */
+    RegisterGameObjectAI(go_scripted_gameobject);
+}
+```
+
+### Instancia generada GameObject
+
+Si un objeto de juego se programa dentro de una instancia, lo registramos como fábrica.
+
+Para ello, en el archivo de encabezado de la instancia, añadimos esta definición:
+
+```cpp
+#define Register"IntanceName"GameObjectAI(ai_name) RegisterGameObjectAIWithFactory(ai_name, Get"InstanceName"AI)
+```
+
+## Guiones de hechizos
 
 ### Validación de los hechizos utilizados en un script
 
@@ -199,6 +238,33 @@ void AddSC_item_spell_scripts()
 }
 ```
 
+## Scripts de instancia
+
+```cpp
+#define RegisterInstanceScript(script_name, mapId) new GenericInstanceMapScript<script_name>(#script_name, mapId)
+```
+
+Example:
+```cpp
+// instance.cpp
+class instance_instance_script : public InstanceScript
+{
+public:
+    instance_instance_script(Map* map) : InstanceScript(map) { }
+
+    void SomeFunction(uint32 /*var*/)
+    {
+        /* Algo de código */
+    }
+}
+
+void AddSC_instance()
+{
+    /* RegisterInstanceScript(script_name, mapId); */
+    RegisterInstanceScript(instance_instance_script, 533);
+}
+```
+
 ## Asignación de scripts en la base de datos
 
 Todos los guiones se asignan en la base de datos `world`.
@@ -207,7 +273,7 @@ Todos los guiones se asignan en la base de datos `world`.
 
 Los CreatureScripts se pueden asignar en dos tablas.
 
-| Table             | Column     |
+| Tabla             | Columna    |
 | ----------------- | ---------- |
 | creature_template | ScriptName |
 | creature          | ScriptName |
@@ -220,7 +286,7 @@ Los CreatureScripts se pueden asignar en dos tablas.
 
 Los SpellScripts se asignan en una tabla.
 
-| Table              | Column1  | Column2    |
+| Tabla              | Columna1 | Columna2   |
 | ------------------ | -------- | ---------- |
 | spell_script_names | spell_id | ScriptName |
 
@@ -242,3 +308,13 @@ DELETE FROM `spell_script_names` WHERE `spell_id`=1 AND `ScriptName`='spell_pri_
 ```
 
 El único momento en el que está bien borrar sólo el ScriptName es cuando estamos borrando o añadiendo un nuevo script en el núcleo.
+
+### InstanceScripts
+
+| Tabla             | Columna |
+| ----------------- | ------- |
+| instance_template | script  |
+
+En **instance_template**, asignamos el script al ID del mapa de la instancia.
+
+El **script** coincide con el nombre asignado a la instancia. Por ejemplo, *instance_instance_script*.

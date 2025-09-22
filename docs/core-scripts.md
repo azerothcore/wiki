@@ -158,7 +158,7 @@ void AddSC_priest_spell_scripts()
 }
 ```
 
-### Spell- and Aurascript Pairs
+### Spell - and Aurascript Pairs
 
 For SpellScripts and AuraScripts that pair together, we script them by themselves and link them at the registry.
 
