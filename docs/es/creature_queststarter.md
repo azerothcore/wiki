@@ -1,10 +1,10 @@
-# creature\_questender
+# creature\_queststarter
 
 [<-Volver a:World](database-world)
 
-**Tabla \`creature\_questender\`**
+**Tabla \`creature\_queststarter\`**
 
-Holds NPC quest ender relations on which NPCs finishes which quests.
+Contiene las relaciones entre los NPC que otorgan misiones y qué NPC inician determinadas misiones.
 
 **Estructura**
 
@@ -24,4 +24,4 @@ El ID de la criatura. Ver [creature\_template.entry](http://www.azerothcore.org/
 
 ### quest
 
-El ID de la misión que la criatura completa. Ver [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id)
+El ID de la misión que inicia la criatura. Ver [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id)
