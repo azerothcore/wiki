@@ -122,7 +122,7 @@ The subname of the creature that appears in &lt;&gt; below the creature's name.
 
 Used to tell the player what kind of NPC this creature is.
 
-| IconName           | description                                                                        |
+| IconName           | Description                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------- |
 | **Directions**     | Used for guards and teleporter NPC's.                                              |
 | **Gunner**         | Indicator of a turret NPC/Player Controlled.                                       |
@@ -158,7 +158,7 @@ The maximum level of the creature if the creature has a level range. When added 
 
 The expansion table the creatures health value is taken from. Values are from 0 to 2. See creature_classlevelstats.
 
-| exp | name                   |
+| exp | Name                   |
 | --- | ---------------------- |
 | 0   | Classic                |
 | 1   | The Burning Crusade    |
@@ -179,17 +179,17 @@ A bitmask that represents what NPC flags the creature has. Each bit controls a d
 | 1        | 0x00000001 | Gossip             | If creature has more gossip options, add this flag to bring up a menu.           |
 | 2        | 0x00000002 | Quest Giver        | Any creature giving or taking quests needs to have this flag.                    |
 | 16       | 0x00000010 | Trainer            | Allows the creature to have a trainer list to teach spells                       |
-| 32       | 0x00000020 | Class Trainer      | Is class trainer                                                                 |
-| 64       | 0x00000040 | Profession Trainer | Is profession trainer                                                            |
-| 128      | 0x00000080 | Vendor             | Is vendor (generic) Any creature selling items needs to have this flag.          |
-| 256      | 0x00000100 | Vendor Ammo        | Is vendor (ammo)                                                                 |
-| 512      | 0x00000200 | Vendor Food        | Is vendor (food)                                                                 |
-| 1024     | 0x00000400 | Vendor Poison      | Is vendor (poison)                                                               |
-| 2048     | 0x00000800 | Vendor Reagent     | Is vendor (Reagent)                                                              |
+| 32       | 0x00000020 | Class Trainer      | Is a class trainer                                                                 |
+| 64       | 0x00000040 | Profession Trainer | Is a profession trainer                                                            |
+| 128      | 0x00000080 | Vendor             | Is a vendor (generic) Any creature selling items needs to have this flag.          |
+| 256      | 0x00000100 | Vendor Ammo        | Is a vendor (ammo)                                                                 |
+| 512      | 0x00000200 | Vendor Food        | Is a vendor (food)                                                                 |
+| 1024     | 0x00000400 | Vendor Poison      | Is a vendor (poison)                                                               |
+| 2048     | 0x00000800 | Vendor Reagent     | Is a vendor (Reagent)                                                              |
 | 4096     | 0x00001000 | Repairer           | Creatures with this flag can repair items.                                       |
 | 8192     | 0x00002000 | Flight Master      | Any creature serving as flight master has this.                                  |
 | 16384    | 0x00004000 | Spirit Healer      | Makes the creature invisible to alive characters and has the resurrect function. |
-| 32768    | 0x00008000 | Spirit Guide       | Is spirit guide                                                                  |
+| 32768    | 0x00008000 | Spirit Guide       | Is a spirit guide                                                                  |
 | 65536    | 0x00010000 | Innkeeper          | Creatures with this flag can set hearthstone locations.                          |
 | 131072   | 0x00020000 | Banker             | Creatures with this flag can show the bank                                       |
 | 262144   | 0x00040000 | Petitioner         | Handles guild/arena petitions                                                    |
@@ -197,7 +197,7 @@ A bitmask that represents what NPC flags the creature has. Each bit controls a d
 | 1048576  | 0x00100000 | Battlemaster       | Creatures with this flag port players to battlegrounds.                          |
 | 2097152  | 0x00200000 | Auctioneer         | Allows creature to display auction list.                                         |
 | 4194304  | 0x00400000 | Stable Master      | Has the option to stable pets for hunters.                                       |
-| 8388608  | 0x00800000 | Guild Banker       | Is guild banker                                                                  |
+| 8388608  | 0x00800000 | Guild Banker       | Is a guild banker                                                                  |
 | 16777216 | 0x01000000 | Spellclick         | Needs data on npc_spellclick_spells table                                        |
 | 67108864 | 0x04000000 | Mailbox            | NPC will act like a mailbox (opens mailbox with right-click)                     |
 
@@ -296,13 +296,13 @@ Allows the manual application of unit flags to creatures. Again this is a bitmas
 
 | Flag       |            | Name                                    | Comments                                                                                                                                                                                                                                     |
 | ---------- | ---------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1          | 0x00000001 | UNIT_FLAG_SERVER_CONTROLLED             | set only when unit movement is controlled by server - by SPLINE/MONSTER_MOVE packets, together with UNIT_FLAG_STUNNED; only set to units controlled by client; client function CGUnit_C::IsClientControlled returns false when set for owner |
+| 1          | 0x00000001 | UNIT_FLAG_SERVER_CONTROLLED             | Set only when unit movement is controlled by server - by SPLINE/MONSTER_MOVE packets, together with UNIT_FLAG_STUNNED; only set to units controlled by client; client function CGUnit_C::IsClientControlled returns false when set for owner |
 | 2          | 0x00000002 | UNIT_FLAG_NON_ATTACKABLE                | Not attackable                                                                                                                                                                                                                               |
 | 4          | 0x00000004 | UNIT_FLAG_DISABLE_MOVE                  |                                                                                                                                                                                                                                              |
 | 8          | 0x00000008 | UNIT_FLAG_PLAYER_CONTROLLED             | Controlled by player, use _IMMUNE_TO_PC instead of _IMMUNE_TO_NPC                                                                                                                                                                            |
 | 16         | 0x00000010 | UNIT_FLAG_RENAME                        |                                                                                                                                                                                                                                              |
 | 32         | 0x00000020 | UNIT_FLAG_PREPARATION                   | Don't take reagents for spells with SPELL_ATTR_EX5_NO_REAGENT_WHILE_PREP                                                                                                                                                                     |
-| 64         | 0x00000040 | UNIT_FLAG_UNK_6                         | not sure what it does, but it is needed to cast nontriggered spells in smart_scripts                                                                                                                                                         |
+| 64         | 0x00000040 | UNIT_FLAG_UNK_6                         | Not sure what it does, but it is needed to cast nontriggered spells in smart_scripts                                                                                                                                                         |
 | 128        | 0x00000080 | UNIT_FLAG_NOT_ATTACKABLE_1              | ?? (UNIT_FLAG_PLAYER_CONTROLLED                                                                                                                                                                                                              |
 | 256        | 0x00000100 | UNIT_FLAG_IMMUNE_TO_PC                  | Disables combat/assistance with PlayerCharacters (PC)                                                                                                                                                                                        |
 | 512        | 0x00000200 | UNIT_FLAG_IMMUNE_TO_NPC                 | Disables combat/assistance with NonPlayerCharacters (NPC)                                                                                                                                                                                    |
@@ -345,7 +345,7 @@ Allows additional application of unit flags to creatures. Again, this is a bitma
 | 64     | 0x00000040 | UNIT_FLAG2_FORCE_MOVEMENT             |                                                                             |
 | 128    | 0x00000080 | UNIT_FLAG2_DISARM_OFFHAND             |                                                                             |
 | 256    | 0x00000100 | UNIT_FLAG2_DISABLE_PRED_STATS         | Player has disabled predicted stats (Used by raid frames)                   |
-| 1024   | 0x00000400 | UNIT_FLAG2_DISARM_RANGED              | this does not disable ranged weapon display (maybe additional flag needed?) |
+| 1024   | 0x00000400 | UNIT_FLAG2_DISARM_RANGED              | This does not disable ranged weapon display (maybe additional flag needed?) |
 | 2048   | 0x00000800 | UNIT_FLAG2_REGENERATE_POWER           |                                                                             |
 | 4096   | 0x00001000 | UNIT_FLAG2_RESTRICT_PARTY_INTERACTION | Restrict interaction to party or raid                                       |
 | 8192   | 0x00002000 | UNIT_FLAG2_PREVENT_SPELL_CLICK        | Prevent spellclick                                                          |
@@ -353,7 +353,7 @@ Allows additional application of unit flags to creatures. Again, this is a bitma
 | 32768  | 0x00008000 | UNIT_FLAG2_CANNOT_TURN                |                                                                             |
 | 65536  | 0x00010000 | UNIT_FLAG2_UNK2                       |                                                                             |
 | 131072 | 0x00020000 | UNIT_FLAG2_PLAY_DEATH_ANIM            | Plays special death animation upon death                                    |
-| 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | allows casting spells with AttributesEx7 & SPELL_ATTR7_IS_CHEAT_SPELL       |
+| 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | Allows casting spells with AttributesEx7 & SPELL_ATTR7_IS_CHEAT_SPELL       |
 
 #### dynamicflags
 
