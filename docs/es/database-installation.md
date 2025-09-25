@@ -9,45 +9,40 @@
 
 ### Creación de la Base de Datos y el Usuario
 
-Primero que todo, necesita crear el usuario acore usando el siguiente script.
+Primero, debe crear el usuario acore. Debe ejecutar el siguiente script en un cliente MySQL o con la interfaz de línea de comandos (CLI) de MySQL.
+Debe ejecutar el script como usuario **root** de MySQL dentro de un cliente MySQL o la CLI de MySQL.
 
 https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
 
-Puede realizarlo con un cliente de MySQL o con la interfaz de comandos de MySQL (CLI).
+{% include important_es.html content="Utilice el usuario root de MySQL SOLAMENTE para ejecutar el script anterior, ¡nunca ejecute el núcleo como root o administrador!" %}
 
-Necesitará usar una cuenta root de MySQL con su cliente de  MySQL o con MySQL CLI antes de empezar a correr el servidor y usar alguno de esos archivos. (use un usuario root de MySQL solo para importar uno de esos archivos, NUNCA inicie el servidor con usuario root o administrator).
-
-*Consejo: Puede cambiar la contraseña del usario que está creando para incrementar la seguridad.*
+{% include tip_es.html content="Puedes cambiar la contraseña del usuario que estás creando para mayor seguridad." %}
 
 ## Cargan de información a la Base de Datos
 
-Puede hacer esto de dos maneras:
-- Automatic Database Updater (Actualizador autmático de la base datos: predeterminado, recomendado)
+Si desea saber cómo funciona el directorio SQL o planea realizar cambios personalizados, le recomendamos leer [esto](sql-directory).
 
-Si quiere saber cómo funciona el directorio SQL o planea hacer cambios custom, le recomendamos leer [esto](sql-directory).
+### Actualizador automático de bases de datos
 
-### Automatic Database Updater (Actualizador autmático de bases de datos: predeterminado, recomendado)
+La autorización y Worldserver verifican y aplican todos los archivos de base de datos necesarios al inicio.
 
-Por defecto, Worldserver y Authserver van a revisar e importar los nuevos archivos dentro de la base de datos que estén especificados en la configuración.
+Para editar el actualizador automático de la base de datos, encontrará las configuraciones necesarias en authserver.conf y worldserver.conf en **CONFIGURACIÓN DE ACTUALIZACIÓN**.
 
-Esta es la forma recomendada y la más facil, para asegurarse de que siempre tiene la base de datos al día con el Core.
+1. Inicie Authserver.exe, en la carpeta Build que creó, en la carpeta \bin\RelWithDebInfo o \bin\Debug.
+2. Inicie Worldserver.exe, en la misma ubicación.
 
-Para editar el actualizador automático de bases de datos, encontrará las configuraciones necesarias en authserver.conf y worldserver.conf en la opción [UPDATE SETTINGS](https://github.com/azerothcore/azerothcore-wotlk/commit/2d2857ce81db5297eb63d388d2e2f252ef52412d#diff-56b141374cf0384a2887c9fd490c6a79a3d2f31fb020ee0e423a5685344b59d3R30).
+Si recibe el siguiente mensaje en su consola, presione Enter para crear y completar las bases de datos.
+
+```
+Database "acore_auth" does not exist
+Do you want to create it? [yes (default) / no]:
+```
 
 <br>
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
-
-* [Preguntas frecuentes](faq)
-
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
-
+{% include help_es.html %}
 
 | Guía de Instalación | |
 | :- | :- |

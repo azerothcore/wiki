@@ -58,7 +58,9 @@ google_cse_token:
 # git-wiki includes some internal themes that you can choose
 # check _layouts folder
 #
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
 highlighter: rouge
 encoding: UTF-8
 
@@ -107,6 +109,17 @@ plugins:
  - jekyll-avatar
  - jemoji
  - jekyll-mentions
+ - jekyll-remote-theme
+ - jekyll-github-metadata
+ - jekyll-coffeescript
+ - jekyll-commonmark-ghpages
+ - jekyll-gist
+ - jekyll-paginate
+ - jekyll-relative-links
+ - jekyll-optional-front-matter
+ - jekyll-readme-index
+ - jekyll-default-layout
+ - jekyll-titles-from-headings
 
 exclude: ['wiki']
 

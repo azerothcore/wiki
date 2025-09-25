@@ -9,7 +9,7 @@
 
 ### Creating the Databases and User
 
-First of all, you need to create the acore user. You need to run the script below within a MySQL client or with the MySQL command-line interface (CLI). 
+First of all, you need to create the acore user. You need to run the script below within a MySQL client or with the MySQL command-line interface (CLI).
 You need to run the script as the **root** user of MySQL within a MySQL client or the MySQL cli.
 
 https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
@@ -24,7 +24,7 @@ If you want to know how the SQL directory works or plan to have custom changes w
 
 #### Automatic Database Updater
 
-The Auth- and Worldserver checks and applies all needed database files at startup.
+The Authorization and Worldserver checks and applies all needed database files at startup.
 
 To edit the automatic database updater you will find the necessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
