@@ -1,6 +1,6 @@
 # creature\_text
 
-# Tabla: creature\_text
+# Tabla creature\_text
 
 **Descripción breve:**
 

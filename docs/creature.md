@@ -173,7 +173,7 @@ The movement type associated with the creature. Usually the same as its [Movemen
 
 ### npcflag
 
-Same as [creature_template.npcflag](creature_template#creature_template-npcflag) .
+Same as [creature_template.npcflag](creature_template#creature_template-npcflag).
 
 NOTE: A creature.npcflag record will override a [creature_template.npcflag](creature_template#creature_template-npcflag) record.
 
