@@ -1,21 +1,25 @@
-# Base de datos: World
-
-La base de datos del mundo tiene información básicamente relacionada con criaturas, objetos, ítems, diálogos, textos e incluso se pueden hacer scripts a través de la tabla `smart_scripts`. También tiene traducciones, logros, eventos... Actualmente estamos trabajando para revisar estas tablas e intentar actualizar aquellas que no tienen la información correcta. Por ello, si detectas algún error en alguna de ellas, te invitamos a abrir una [incidencia](https://github.com/azerothcore/wiki/issues), aportando la información oportuna, para que podamos actualizarla. También te invitamos a crear un [pull request](https://github.com/azerothcore/wiki/pulls), con las modificaciones correspondientes, para que podamos analizar el código e incorporarlo si es correcto. Actualmente, estamos trabajando en la actualización. En el próximo [Actualizar base de datos-mundo](https://github.com/azerothcore/wiki/issues/357)
-
+## A
 - [achievement_criteria_data](achievement_criteria_data)
 - [achievement_dbc](achievement_dbc)
 - [achievement_reward](achievement_reward)
 - [achievement_reward_locale](achievement_reward_locale)
 - [acore_string](acore_string)
+- [antidos_opcode_policies](antidos_opcode_policies)
 - [areatrigger](areatrigger)
 - [areatrigger_involvedrelation](areatrigger_involvedrelation)
 - [areatrigger_scripts](areatrigger_scripts)
 - [areatrigger_tavern](areatrigger_tavern)
 - [areatrigger_teleport](areatrigger_teleport)
+- [arena_season_reward](arena_season_reward)
+- [arena_season_reward_group](arena_season_reward_group)
+
+## B
 - [battleground_template](battleground_template)
 - [battlemaster_entry](battlemaster_entry)
 - [broadcast_text](broadcast_text)
 - [broadcast_text_locale](broadcast_text_locale)
+
+## C
 - [command](command)
 - [conditions](conditions)
 - [creature](creature)
@@ -34,18 +38,27 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [creature_template](creature_template)
 - [creature_template_addon](creature_addon)
 - [creature_template_locale](creature_template_locale)
+- [creature_template_model](creature_template_model)
 - [creature_template_movement](creature_template_movement)
 - [creature_template_resistance](creature_template_resistance)
 - [creature_template_spell](creature_template_spell)
 - [creature_text](creature_text)
 - [creature_text_locale](creature_text_locale)
+
+## D
 - [disables](disables)
 - [disenchant_loot_template](loot_template)
 - [dungeon_access_requirements](dungeon_access_requirements)
 - [dungeon_access_template](dungeon_access_template)
-- [event_scripts](event_scripts)
+
+## E
+- [event_scripts](scripts)
 - [exploration_basexp](exploration_basexp)
+
+## F
 - [fishing_loot_template](loot_template)
+
+## G
 - [game_event](game_event)
 - [game_event_arena_seasons](game_event_arena_seasons)
 - [game_event_battleground_holiday](game_event_battleground_holiday)
@@ -77,7 +90,11 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [gossip_menu_option](gossip_menu_option)
 - [gossip_menu_option_locale](gossip_menu_option_locale)
 - [graveyard_zone](graveyard_zone)
+
+## H
 - [holiday_dates](holiday_dates)
+
+## I
 - [instance_encounters](instance_encounters)
 - [instance_template](instance_template)
 - [item_enchantment_template](item_enchantment_template)
@@ -86,22 +103,35 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [item_set_names_locale](item_set_names_locale)
 - [item_template](item_template)
 - [item_template_locale](item_template_locale)
+
+## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards)
 - [lfg_dungeon_template](lfg_dungeon_template)
 - [linked_respawn](linked_respawn)
+
+## M
 - [mail_level_reward](mail_level_reward)
 - [mail_loot_template](loot_template)
 - [milling_loot_template](loot_template)
+- [module_string](module_string)
+- [module_string_locale](module_string_locale)
+
+## N
 - [npc_spellclick_spells](npc_spellclick_spells)
 - [npc_text](npc_text)
 - [npc_text_locale](npc_text_locale)
 - [npc_trainer](npc_trainer)
 - [npc_vendor](npc_vendor)
+
+## O
 - [outdoorpvp_template](outdoorpvp_template)
+
+## P
 - [page_text](page_text)
 - [page_text_locale](page_text_locale)
 - [pet_levelstats](pet_levelstats)
 - [pet_name_generation](pet_name_generation)
+- [pet_name_generation_locale](pet_name_generation_locale)
 - [pickpocketing_loot_template](loot_template)
 - [player_class_stats](player_class_stats)
 - [player_factionchange_achievement](player_factionchange_achievement)
@@ -110,6 +140,7 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [player_factionchange_reputations](player_factionchange_reputations)
 - [player_factionchange_spells](player_factionchange_spells)
 - [player_factionchange_titles](player_factionchange_titles)
+- [player_loot_template](loot_template)
 - [player_race_stats](player_race_stats)
 - [player_xp_for_level](player_xp_for_level)
 - [playercreateinfo](playercreateinfo)
@@ -125,6 +156,8 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [pool_quest](pool_quest)
 - [pool_template](pool_template)
 - [prospecting_loot_template](loot_template)
+
+## Q
 - [quest_details](quest_details)
 - [quest_greeting](quest_greeting)
 - [quest_greeting_locale](quest_greeting_locale)
@@ -139,11 +172,15 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [quest_template](quest_template)
 - [quest_template_addon](quest_template_addon)
 - [quest_template_locale](quest_template_locale)
+
+## R
 - [reference_loot_template](loot_template)
 - [reputation_reward_rate](reputation_reward_rate)
 - [reputation_spillover_template](reputation_spillover_template)
 - [script_waypoint](scripts)
 - [\*\*\_scripts](scripts)
+
+## S
 - [skill_discovery_template](skill_discovery_template)
 - [skill_extra_item_template](skill_extra_item_template)
 - [skill_fishing_base_level](skill_fishing_base_level)
@@ -151,6 +188,7 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [smart_scripts](smart_scripts)
 - [spell_area](spell_area)
 - [spell_bonus_data](spell_bonus_data)
+- [spell_cooldown_overrides](spell_cooldown_overrides)
 - [spell_custom_attr](spell_custom_attr)
 - [spell_dbc](spell_dbc)
 - [spell_enchant_proc_data](spell_enchant_proc_data)
@@ -169,13 +207,21 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [spell_target_position](spell_target_position)
 - [spell_threat](spell_threat)
 - [spelldifficulty_dbc](spelldifficulty_dbc)
+- [summonproperties_dbc](summonproperties_dbc)
+
+## T
 - [transports](transports)
+
+## U
 - [updates](updates)
 - [updates_include](updates_include)
+
+## V
 - [vehicle_accessory](vehicle_accessory)
 - [vehicle_template_accessory](vehicle_template_accessory)
 - [version](version)
-- [version_db_world](version_db_world)
+
+## W
 - [warden_checks](warden_checks)
 - [waypoint_data](waypoint_data)
 - [waypoint_scripts](scripts)

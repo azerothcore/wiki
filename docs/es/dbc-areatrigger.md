@@ -1,3 +1,7 @@
+---
+redirect_from: "/DBC-AreaTrigger"
+---
+
 # AreaTrigger
 
 [`Volver a:DBC`](dbc-index)
