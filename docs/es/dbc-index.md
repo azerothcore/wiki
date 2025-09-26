@@ -1,7 +1,5 @@
 # DBC Index
 
-Índice de los Archivos de la Base de Datos del Cliente (DataBaseClient).
-
 * [Achievement](achievement)
 * [Achievement_Criteria](achievement_criteria)
 * [AreaTable](areatable)
@@ -16,5 +14,6 @@
 * [Map](map)
 * [PageTextMaterial](pagetextmaterial)
 * [SkillLine](skillline)
+* [SummonProperties](summonproperties_dbc)
 * [Spell](spell)
 * [TotemCategory](totemcategory)
