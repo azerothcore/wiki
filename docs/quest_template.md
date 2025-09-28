@@ -262,7 +262,8 @@ These values are ID taken from [QuestInfo.dbc](QuestInfo)
 | Value | Result       |
 | ----- | ------------ |
 | 0     | None         |
-| 21    | Group        |
+| 1     | Group        |
+| 21    | Life         |
 | 41    | PvP          |
 | 62    | Raid         |
 | 81    | Dungeon      |
