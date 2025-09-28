@@ -259,6 +259,21 @@ if **value &lt; 0** then (**-value**) is quest sort id: (in general profession o
 
 These values are ID taken from [QuestInfo.dbc](QuestInfo)
 
+| Value | Result       |
+| ----- | ------------ |
+| 0     | None         |
+| 1     | Group        |
+| 21    | Life         |
+| 41    | PvP          |
+| 62    | Raid         |
+| 81    | Dungeon      |
+| 82    | Event        |
+| 83    | Legendary    |
+| 84    | Escort       |
+| 85    | Heroic       |
+| 88    | Raid (10)    |
+| 89    | Raid (25)    |
+
 ### SuggestedGroupNum
 
 Recommended number of players to do the quest together.
