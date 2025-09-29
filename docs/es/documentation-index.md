@@ -1,58 +1,86 @@
-# Índice de la Documentación
+---
+redirect_from: /documentation_index
+---
+
+# Índice de documentación
 
 ## Cómo instalar
 
-- [Guía de instalación tradicional](installation)
+* [Guía de instalación](installation)
+* [Instalación de un módulo](installing-a-module)
 
-## Ayuda
+## Base de datos
 
-- [Preguntas frecuentes](faq)
-- [Errores comunes](common-errors)
-- [Procedimiento Operativo Estándar](standard-operating-procedure)
-
-## Base de Datos
-
-- [Base de datos: auth](database-auth)
-- [Base de datos: characters](database-characters)
-- [Base de datos: world](database-world)
+* [Autenticación de base de datos](database-auth)
+* [Caracteres de base de datos](database-characters)
+* [Mundo DB](database-world)
 
 ## Documentación
 
-- [Sistema Bash ](bash_system)
-- [Operaciones a nivel de bits](bit-and-bytes-tutorial)
-- [Registro de cambios](changelog)
-- [Opciones de CMake](cmake-options)
-- [Scripts del Core](core-scripts)
-- [Índice DBC](dbc-index)
-- [Estructura del directorio](directory-structure)
-- [Codigos de salida](exitcodes)
-- [Cómo depurar y reiniciar](how-to-restart-and-debug)
-- [IP2LOCATION](ip2location)
-- [Cofiguración de Logging](logging-configuration)
-- [Monitoreando AzerothCore con Grafana](monitoring-azerothcore-with-grafana)
-- [Tipos de datos MySQL/C++](mysqltypescpp)
-- [Versionado del proyecto](project-versioning)
-- [Sniffing y Parsing](sniffing-and-parsing)
-- [Directorio SQL](sql-directory)
-- [Versionado de SQL](sql-versioning)
+* [Sistema Bash](bash_system)
+* [Operaciones bit a bit](bit-and-bytes-tutorial)
+* [Registro de cambios](changelog)
+* [Opciones de CMake](cmake-options)
+* [Anulaciones de configuración con variables de entorno](config-overrides-with-env-var)
+* [Scripts básicos](core-scripts)
+* [Crear cuentas](creating-accounts)
+* [Crear un módulo](create-a-module)
+* [Base de datos Squash](database-squash)
+* [Índice DBC](dbc-index)
+* [Estructura del directorio](directory-structure)
+* [Documentación de Doxygen](https://www.azerothcore.org/doxygen)
+* [Códigos de salida](exitcodes)
+* [Comandos del GM](gm-commands)
+* [Cómo depurar y reiniciar](how-to-restart-and-debug)
+* [Cómo utilizar Warden Payload Manager](how-to-use-warden-payload-mgr)
+* [Cómo trabajar con archivos Conf](how-to-work-with-conf-files)
+* [IP2LOCATION](ip2location)
+* [Configuración de registro](logging-configuration)
+* [Monitoreo de AzerothCore con Grafana](monitoring-azerothcore-with-grafana)
+* [Tipos de MySQL (C++)](mysqltypescpp)
+* [Versiones del proyecto](project-versioning)
+* [Acceso remoto](remote-access)
+* [Olfateo y análisis](sniffing-and-parsing)
+* [Referencia de efectos de hechizos](spell-effects-reference)
+* [Referencia del aura de hechizo](spell-aura-reference)
+* [Directorio SQL](sql-directory)
+* [Control de versiones de SQL](sql-versioning)
 
-## Modelos y técnicas
+## Recetas y técnicas
 
-- [Herramientas útiles](useful-tools)
-- [Cómo importar información de DBC hacia SQL](how-to-import-dbc-data-in-db)
-- [Iniciar Worldserver y Authserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio)
-- [Snippets de SQL útiles](useful-sql)
-- [Cómo usar gperftool para analizar tu aplicación](how-to-use-gperftool)
+* [Herramientas útiles](useful-tools)
+* [Cómo importar datos DBC a SQL](how-to-import-dbc-data-in-db)
+* [Ejecutar Worldserver y Authserver en Visual Studio](run-worldserver-and-authserver-in-visual-studio)
+* [Fragmentos de SQL útiles](useful-sql)
+* [Cómo usar gperftool para analizar tu aplicación](how-to-use-gperftool)
+* [Reiniciador de Linux](linux-restarter)
+* [Información de puntos de referencia](waypoints-information)
+* [Cómo obtener registros gratuitos](how-to-obtain-free-records)
 
-## AzerothCore extendido
+## Tutorials
 
-- [Estructura modular](the-modular-structure)
-- [Hooks Bash](hooks-bash)
-- [Hooks Cmake](hooks-cmake)
-- [Hooks C++](hooks-script)
+* [Cómo utilizar los eventos del juego](how-to-use-game-events)
+
+## Extend AzerothCore
+
+* [The Modular Structure](the-modular-structure)
+* [Crear un guión](create-a-script)
+* [Ganchos Bash](hooks-bash)
+* [Ganchos Cmake](hooks-cmake)
+* [Ganchos C++](hooks-script)
+
+## Ayuda
+
+* [FAQ](faq)
+* [Errores comunes](common-errors)
+* [Procedimiento operativo estándar](standard-operating-procedure)
+* [Cómo pedir ayuda](how-to-ask-for-help)
+* [Mejores prácticas](best-practices)
 
 ## Recursos externos
 
-<a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guías y consejos de nuestro foro</a>
+* <a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guías y consejos de nuestro foro</a>
+* <a href="https://wowdev.wiki/Category:DBC_WotLK" target="_blank">Documentación de DBC</a>
 
-<a href="https://wowdev.wiki/Category:DBC_WotLK" target="_blank">Documentación de DBC</a>
+## Documentos wiki
+* [Alertas y llamadas de Wiki](wiki-alerts-and-callouts)
