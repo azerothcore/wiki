@@ -88,7 +88,7 @@ If sourceType = DISABLE_TYPE_SPELL: Specifies who the spell is disabled for.
 | 1     | Spell disabled for players                                                                    |
 | 2     | Spell disabled for creatures                                                                  |
 | 4     | Spell disabled for pets                                                                       |
-| 8     | Spell completely disabled (used for no logner existing spells in DBCs)                        |
+| 8     | Spell completely disabled (used for no longer existing spells in DBCs)                        |
 | 16    | Spell disabled for MapId                                                                      |
 | 32    | Spell disabled for AreaId                                                                     |
 | 64    | Line of Sight (LOS) is disabled for this spell (replaces "vmap.ignoreSpellIds" config option) |
@@ -139,7 +139,7 @@ This will disable vMaps on whole Kalimdor.
 
 ***If sourceType = DISABLE_TYPE_LOOT:***
 
-No flags needed just add the entry to the table with \`flags\`=0.
+No flags needed just add the entry to the table with \`flags\`= 0.
 
 ### params_0
 
