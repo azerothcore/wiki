@@ -1,9 +1,14 @@
+---
+redirect_from: "/Emotes"
+---
+
 # Emotes
 
 [`Volver a:DBC`](dbc-index)
 
 Este archivo DBC contiene emotes que pueden ser utilizados por los NPCs y jugadores dentro del juego.
 
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)
 
 ## Estructura
 
