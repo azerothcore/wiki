@@ -45,13 +45,13 @@ This is a quickstart guide for installing AzerothCore to a Debian 12 server from
 ### First Login
 
 - Use **PuTTY** to connect to your Debian server using the IP address and login credentials supplied by the hosting provider.
-  <details><summary>If you're logging in as root...</summary>
+  <details><summary>If you're logged in as root...</summary>
     
     #### Create a new user with sudo privileges and switch to it.
     ```bash
     read -p "New username: " USERNAME
-    sudo adduser "$USERNAME"
-    sudo usermod -aG sudo "$USERNAME"
+    adduser "$USERNAME"
+    usermod -aG sudo "$USERNAME"
     su - "$USERNAME"
     ```
     #### Disable remote root login
@@ -105,7 +105,7 @@ rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFI
 ### Setup SQL Database
 ```bash
 # Set Password
-while true; do read -s -p "Set an SQL password: " MYSQL_PASSWORD && echo; read -s -p "Re-enter password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
+while true; do read -s -p "Set an SQL password: " MYSQL_PASSWORD && echo; read -s -p "Retype SQL password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
 # Make User & Databases
 sudo mysql <<EOF
 DROP USER IF EXISTS 'acore'@'localhost';
