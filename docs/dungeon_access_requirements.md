@@ -35,7 +35,7 @@ ID from [dungeon_access_template.id](dungeon_access_template#id).
 ### requirement_type
 
 | Value | Type        | Comment                         |
-| :---- | :---------- | :------------------------------ |
+| ----- | ----------- | ------------------------------- |
 | 0     | Achievement |                                 |
 | 1     | Quest       |                                 |
 | 2     | Item        | The item cannot be in the bank. |
@@ -51,7 +51,7 @@ The text that is shown if you try and enter the instance without meeting the req
 ### faction
 
 | Value | Comment  |
-| :---- | :------- |
+| ----- | -------- |
 | 0     | Alliance |
 | 1     | Horde    |
 | 2     | Both     |

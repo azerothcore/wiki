@@ -54,7 +54,7 @@ redirect_from: /documentation_index
 * [Useful SQL Snippets](useful-sql)
 * [How to use gperftool to analyse your app](how-to-use-gperftool)
 * [Linux restarter](linux-restarter)
-* [Wypoint information](waypoints-information)
+* [Waypoint information](waypoints-information)
 * [How to obtain free records](how-to-obtain-free-records)
 
 ## Tutorials
