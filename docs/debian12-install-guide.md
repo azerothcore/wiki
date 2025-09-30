@@ -45,6 +45,7 @@ This is a quickstart guide for installing AzerothCore to a Debian 12 server from
 ### First Login
 
 - Use **PuTTY** to connect to your Debian server using the IP address and login credentials supplied by the hosting provider.
+- For each step copy the entire code block and paste it into the PuTTY terminal with right click, then hit enter.
   <details><summary>If you're logged in as root...</summary>
     
     #### Create a new user with sudo privileges and switch to it.
