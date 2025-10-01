@@ -6,7 +6,7 @@
 
 **IMPORTANTE: Los valores a continuación sólo tienen un uso particular para las tablas [creature_template](creature_template) y [gameobject_template](gameobject_template).**
 
-**Versión 3.3.5a**
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)  
 
 ## **Estructura**
 
@@ -107,6 +107,8 @@ Ahora, éstos son los pasos para calcular si la facción A es amistosa con la fa
     - Si el resultado no es 0, entonces la facción A es amistosa con la facción B
 
 # **Contenido**
+
+**La versión es : 3.3.5a**
 
 | ID   | Nombre                                    | Máscara de bits propia | Máscara de bits amistosos | Máscara de bits hostiles | Facciones enemigas  | Facciones amistosas |
 |------|-------------------------------------------|------------------------|---------------------------|--------------------------|---------------------|---------------------|
