@@ -13,9 +13,6 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
 - ¿Cuándo debo actualizar mi fuente?
   - Recomendamos actualizar su núcleo con frecuencia, al menos una vez a la semana, para beneficiarse de las últimas correcciones de núcleo y parches de seguridad.
 
-- ¿Cuánta RAM necesito para AzerothCore?
-  - Puede encontrar toda la información de RAM [aquí](memory-usage).
-
 - ¿Qué es "Blizzlike"?
   - AzerothCore está intentando replicar el estado de Blizzard para World of Warcraft. El término "Blizzlike" significa que está lo suficientemente cerca de ser una réplica de lo que había en los servidores de Blizzard.
 
@@ -61,13 +58,12 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
 - ¿No puedo ejecutar los extractores en plataformas Windows, simplemente desaparece cuando hago clic en él?
   - Comprenda que es una herramienta de **línea de comandos**, no una herramienta GUI. Esto significa que debe utilizar la línea de comandos en Windows (por ejemplo, "Símbolo del sistema") en lugar de hacer doble clic en ella.
 
-
 - ¿Por qué no puedo ejecutar mis extractores MAP / DBC más antiguos?
   - Se actualizan por una razón y le darán errores cuando inicie Worldserver si no extrae con la última versión.
   - Siempre obtendrá la última versión si compila con "TOOLS"
 
 - ¿Qué son Maps, VMaps, MMaps y DBCs?
-  - Tenga en cuenta que AzerothCore no admite ni aprueba ninguna forma de modificación en los archivos del cliente o en los servidores públicos o privados. AzerothCore en sí mismo está diseñado para la elaboración de teorías y el aprendizaje.**
+{% include note_es.html content="Tenga en cuenta que AzerothCore no admite ni aprueba ninguna forma de modificación en los archivos del cliente o en los servidores públicos o privados. AzerothCore en sí mismo está diseñado para la elaboración de teorías y el aprendizaje."%}
   - Además del núcleo como binarios que dan una interpretación fundamental e individual al cliente, funciones, definiciones y comandos, el núcleo se puede describir como 'un cuerpo' con los siguientes datos que forman su 'anatomía':
     - **Maps**: Los Maps son **necesarios para ejecutar AzerothCore**. Los mapas proporcionan los valores físicos y los datos para que el núcleo los interprete. En base a estos, el núcleo tiene un diseño que se puede comparar con cada cliente. Esto incluye definiciones de área.
     - **VMaps**: Los VMaps son **opcionales, pero muy recomendables**. VMaps ("Mapas virtuales") calcula la posibilidad de línea de visión, como ejemplo. Según su contenido, el servidor puede (por ejemplo) calcular si es posible lanzar hechizos (por ejemplo, si hay una pared entre el objetivo y el lanzador o no).
@@ -85,10 +81,10 @@ Si tiene problemas para instalar o compilar AzerothCore, lea [Errores comunes](c
   - Puede seguir la guía [Instalación básica](core-installation) para encontrar las bibliotecas.
 
 - ¿Me faltan las bibliotecas para OpenSSL y parece que no puedo encontrarlas en el repositorio?
-  - Para las versiones de OpenSSL anteriores a 1.1.0, se denominarán "libeay32.dll" y "ssleay32.dll".
-  - Para las versiones 1.1.0 y más recientes de OpenSSL se denominan:
-    - Para instalaciones de 32 bits: "libssl-1_1.dll" y "libcrypto-1_1.dll".
-    - Para instalaciones de 64 bits: "libssl-1_1-x64.dll" y "libcrypto-1_1-x64.dll".
+  - Necesitas las siguientes dlls:
+    - legacy.dll
+    - libcrypto-3-x64.dll
+    - libssl-3-x64.dll 
   - Puede seguir la guía [Instalación básica](core-installation) para encontrar las bibliotecas.
 
 ## Preguntas frecuentes relacionadas con la depuración
