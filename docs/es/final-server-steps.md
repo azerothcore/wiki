@@ -11,14 +11,13 @@
 
 Para información detallada sobre cómo configurar un reiniciador y un debugger, vaya a la página [cómo-reiniciar-y-depurar](how-to-restart-and-debug).
 
-**NUNCA cree una cuenta directamente en su base de datos a menos que esté TOTALMENTE SEGURO de que sabe lo que está haciendo y cómo hacerlo.**
+{% include warning_es.html content="NUNCA cree una cuenta directamente en su base de datos a menos que esté TOTALMENTE SEGURO de que sabe lo que está haciendo y cómo hacerlo."%}
 
 - Luego cree su cuenta de inicio de sesión escribiendo directamente en la ventana **worldserver** usando el comando GM **account create**. Sintáxis: (ver ejemplos posteriores)
 
 - Si desea asignar la cuenta como GM, escriba en la ventana worldserver: **account set gmlevel $cuenta #nivel #id del reino** en donde **$cuenta** es la el nombre de la cuenta a cambiar, **#nivel** puede ser 0-4 y **#id del reino** el el ID del reino. Establecer un **#nivel** de "3" equivale a una cuenta de nivel GM (numeros más altos = mayor acceso), y "-1" como id del reino significa "para todos los reinos".
 
-*Consejo: Abra su base de datos **acore_world** y busque la tabla **command**. Esto muestra una lista completa de comandos, sus descripciones y el nivel de seguridad.*
-*Esta será siempre la lista más actualizada que podrá encontrar, asumiendo que mantiene la base de datos y el Core actualizados.*
+{% include tip_es.html content="Abre tu base de datos <b>acore_world</b> y busca la tabla <b>comando</b>. Esta muestra una lista completa de comandos GM, descripciones y niveles de seguridad.<br/>Esta siempre será la lista más actualizada que puedas encontrar, siempre que mantengas tu base de datos y tu núcleo actualizados." %}
 
 - Minimize las ventanas del servidor y ejecute **WoW** (nunca ejecute WoW usando el launcher a menos que haya editado la opción patchlist del realmlist.wtf).
 
@@ -37,16 +36,7 @@ Para propósitos de desarrollo, este paso no es necesario. Sin embaro, para incr
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
-
-* [Preguntas frecuentes](faq)
-
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
-
+{% include help_es.html %}
 
 | Guía de Instalación | |
 | :- | :- |
