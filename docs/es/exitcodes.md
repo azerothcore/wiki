@@ -11,11 +11,11 @@ enum ShutdownExitCode
 };
 ```
 
-`SHUTDOWN_EXIT_CODE` es llamado cuando se utilizan los comandos **.server shutdown**, **.server idleshutdown**, **.server exit** o si el [m_serviceStatus == 0](https://github.com/azerothcore/azerothcore-wotlk/blob/a594bf5b290e5476c61bab29809a079e93c5daa2/src/server/worldserver/Main.cpp#L575-L581) para Windows.
+SHUTDOWN_EXIT_CODE se llama cuando se utilizan los comandos **.server shutdown**, **.server idleshutdown**, **.server exit** o si [m_serviceStatus == 0](https://github.com/azerothcore/azerothcore-wotlk/blob/a594bf5b290e5476c61bab29809a079e93c5daa2/src/server/worldserver/Main.cpp#L575-L581) para Windows.
 
-`ERROR_EXIT_CODE` es llamado cuando el servidor falla. Esto puede deberse a un desbordamiento de guid/id/entry, a que [Network.Threads](https://github.com/azerothcore/azerothcore-wotlk/blob/a594bf5b290e5476c61bab29809a079e93c5daa2/src/server/worldserver/worldserver.conf.dist#L2909-L2913) sea <= 0 o a que el servidor no pueda inicializar la red.
+RESTART_EXIT_CODE se llama cuando se utilizan los comandos **.server restart** y **.server idlerestart**.
 
-`RESTART_EXIT_CODE` se llama cuando se utilizan los comandos **.server restart** y **.server idlerestart**.
+ERROR_EXIT_CODE se ejecuta cuando el servidor falla. Esto puede deberse a un desbordamiento de guid/id/entry, a que [Network.Threads](https://github.com/azerothcore/azerothcore-wotlk/blob/a594bf5b290e5476c61bab29809a079e93c5daa2/src/server/worldserver/worldserver.conf.dist#L2909-L2913) sea <= 0 o a que el servidor no pueda inicializar la red.
 
 La mejor manera de saber dónde se llaman todos los códigos de salida es encontrarlos en el código fuente.
 
@@ -38,6 +38,6 @@ El argumento puede tomar un valor entre 0 - 125 que le permite emitir un código
 
 El hecho de que el Worldserver envíe códigos de salida le permite crear un script externo que puede actuar cuando lee un código de salida específico que se muestra.
 
-Por ejemplo, es posible escribir un script para reiniciar automáticamente si el Worldserver envía `RESTART_EXIT_CODE`.
+Por ejemplo, es posible escribir un script para reiniciar automáticamente si el Worldserver envía RESTART_EXIT_CODE.
 
 Puede ver [esta](https://github.com/azerothcore/azerothcore-exitcode-script) secuencia de comandos por lotes para Windows.
