@@ -6,7 +6,7 @@
 
 **Estructura**
 
-| Campo              | Tipo      | Atributo | Llave  | Nulo | Por defecto | Extra | Comentario |
+| Campo              | Tipo      | Atributo  | Llave  | Nulo | Por defecto | Extra | Comentario |
 | ------------------ | --------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
 | [CreatureID][1]    | MEDIUMINT | UNSIGNED  | PRI   | NO   |             |       |            |
 | [Index][2]         | TINYINT   | UNSIGNED  | PRI   | NO   | 0           |       |            |

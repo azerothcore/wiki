@@ -6,11 +6,11 @@
 
 **Estructura**
 
-| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1]   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [condition_id][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [done][3]         | FLOAT   | SIGNED     |     | YES  | 0       |       |         |
+| Campo             | Tipo    | Atributo  | Llave | Nulo | Por defecto | Extra | Comentario |
+| ----------------- | ------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [eventEntry][1]   | TINYINT | UNSIGNED  | PRI   | NO   |             |       |            |
+| [condition_id][2] | INT     | UNSIGNED  | PRI   | NO   | 0           |       |            |
+| [done][3]         | FLOAT   | SIGNED    |       | SI   | 0           |       |            |
 
 [1]: #evententry
 [2]: #conditionid
