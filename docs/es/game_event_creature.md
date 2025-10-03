@@ -13,7 +13,7 @@ Contiene todas las instancias de criaturas que deben generarse o desgenerarse du
 | [eventEntry](#evententry) | SMALLINT | SIGNED    |       | NO   |             |        | Entrada del evento del juego. Colocar una entrada negativa para eliminarla durante el evento. |
 | [guid](#guid)             | INT      | UNSIGNED  | PRI   | NO   |             | Unique |                                                                                               |
 
-**Description of the fields**
+**Descripción de los campos**
 
 ### eventEntry
 
