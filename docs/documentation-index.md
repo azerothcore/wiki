@@ -20,6 +20,7 @@ redirect_from: /documentation_index
 * [Bash system](bash_system)
 * [Bitwise operations](bit-and-bytes-tutorial)
 * [Changelog](changelog)
+* [Client Cache (wdb)](docs/client-cache-wdb.md)
 * [CMake options](cmake-options)
 * [Config Overrides with Env Var](config-overrides-with-env-var)
 * [Core Scripts](core-scripts)
