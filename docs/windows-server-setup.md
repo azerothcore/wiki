@@ -94,19 +94,7 @@ You will need to go in the `Build` folder you created, under `\bin\RelWithDebInf
   - To relative / full path path: `DataDir = "C:\Build\bin\RelWithDebInfo\Data"`.
 
 
-For most `worldserver.conf` setting changes, you can simply type `.reload config` in-game to see changes instantly without restarting the server, the tables below are the tables that will take some effect after `.reload` command is executed.
-
-| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
-|----------|----------|----------|----------|----------|
-| [acore_string](acore_string) | [achievement_criteria_data](achievement_criteria_data) | [command](command) | [creature_linked_respawn](creature_linked_respawn) | [creature_loot_template](creature_loot_template) |
-| [creature_movement_override](creature_movement_override) | [creature_onkill_reputation](creature_onkill_reputation) | [creature_questender](creature_questender) | [creature_queststarter](creature_queststarter) | [disables](disables) |
-| [dungeon_access_requirements](dungeon_access_requirements) | [dungeon_access_template](dungeon_access_template) | [event_scripts](event_scripts) | [game_event_npc_vendor](game_event_npc_vendor) | [game_graveyard](game_graveyard) |
-| [gameobject_loot_template](gameobject_loot_template) | [gameobject_queststarter](gameobject_queststarter) | [gameobject_questender](gameobject_questender) | [gossip_menu](gossip_menu) | [gossip_menu_option](gossip_menu_option) |
-| [graveyard_zone](graveyard_zone) | [item_enchantment_template](item_enchantment_template) | [item_loot_template](item_loot_template) | [item_set_names](item_set_names) | [module_string](module_string) |
-| [module_string_locale](module_string_locale) | [npc_vendor](npc_vendor) | [page_texts](page_texts) | [pickpocketing_loot_template](pickpocketing_loot_template) | [points_of_interest](points_of_interest) |
-| [quest_area_triggers](quest_area_triggers) | [quest_greeting](quest_greeting) | [quest_poi](quest_poi) | [quest_template](quest_template) | [reputation_reward_rate](reputation_reward_rate) |
-| [reputation_spillover_template](reputation_spillover_template) | [reference_loot_template](reference_loot_template) | [server_mail_template](server_mail_template) | [skinning_loot_template](skinning_loot_template) | [spell_scripts](spell_scripts) |
-| [waypoint_data](waypoint_data) | [waypoint_scripts](waypoint_scripts) | World config settings | AntiDos opcode policies |  |
+For most `worldserver.conf` setting changes, you can simply type `.reload config` in-game to see changes instantly without restarting the server.
 
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
