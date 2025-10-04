@@ -6,6 +6,8 @@
 
 This table contains the texts that are used for gossip. More research needs to be done on this table.
 
+This table has `SMSG_NPC_TEXT_UPDATE`, `SMSG_GOSSIP_MESSAGE` packet and npccache.wdb (merged with others) cache file associated with: NPC dialogue, gossip menus, greetings. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 | Field         | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | ID            | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
