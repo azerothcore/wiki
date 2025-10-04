@@ -11,7 +11,7 @@ This guide is intended for advanced setups or just to provide more details in se
 
 For the majority of the cases the default configuration values for `LoginDatabaseInfo`, `CharacterDatabaseInfo` and `WorldDatabaseInfo` should be left alone as `127.0.0.1` (also known as `localhost`, the current machine hosting/running the `authserver` and `worldserver`), the same goes for `BindIP` should be left alone as well as `0.0.0.0`.
 
-If you need to connect to your database from one external machine, read [this](https://www.enovision.net/mysql-ssh-tunnel-heidisql) instead open ports to the MySQL server.
+If you need to connect to your database from one external machine, read [this](https://www.enovision.net/mysql-ssh-tunnel-heidisql) instead of opening ports to the MySQL server.
 
 ### Port Forwarding (Incoming / Inbound)
 
