@@ -46,6 +46,8 @@ This similiar version of wowhead, doesn't update with your changes, they use the
 ## Setting up Remote Access
 For development purposes, this step is not necessary. However, for increased security when you want other people to make accounts you should set up a registration form, so you don't have to paste their passwords. Check out [Remote Access](remote-access) on how to send commands into the server.
 
+## Example of a local Registration without the Terminal
+
 Also refer to [account](account) which provides some `php` examples how do Calculate, Get and Verify `SRP6` protocol, in the addition of trying to make a way to create or access account information related to Azerothcore.
 
 In addition to it we provide a [catologue](https://www.azerothcore.org/catalogue.html) mainly focused in modules created by the community, but you may find others like a Registration page.
