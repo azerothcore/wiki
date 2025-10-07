@@ -32,7 +32,7 @@ Refers to: [creature.guid](creature#guid).
 
 ### slot
 
-Refer to: [npc_vendor.slot](npc_vendor#slot).
+refers to: [npc_vendor.slot](npc_vendor#slot).
 
 ### item
 
@@ -40,12 +40,12 @@ Refers to: [item_template.entry](item_template#entry).
 
 ### maxcount
 
-Refer to: [npc_vendor.maxcount](npc_vendor#maxcount).
+refers to: [npc_vendor.maxcount](npc_vendor#maxcount).
 
 ### incrtime
 
-Refer to: [npc_vendor.incrtime](npc_vendor#incrtime).
+refers to: [npc_vendor.incrtime](npc_vendor#incrtime).
 
 ### ExtendedCost
 
-Refer to: [npc_vendor.extendedcost](npc_vendor#extendedcost).
+refers to: [npc_vendor.extendedcost](npc_vendor#extendedcost).
