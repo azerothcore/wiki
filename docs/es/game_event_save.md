@@ -8,11 +8,11 @@ Leer en: [English :gb:](../game_event_save) [Spanish :es:](game_event_save)
 
 **Estructura**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [state][2]      | TINYINT | UNSIGNED   |     | NO   | 1       |       |         |
-| [next_start][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Campo           | Tipo    | Atributos | Llave | Nulo | Por defecto | Extra | Comentario |
+| --------------- | ------- | --------- | ----- | ---- | ----------- | ----- | ---------- |
+| [eventEntry][1] | TINYINT | UNSIGNED  | PRI   | NO   |             |       |            |
+| [state][2]      | TINYINT | UNSIGNED  |       | NO   | 1           |       |            |
+| [next_start][3] | INT     | UNSIGNED  |       | NO   | 0           |       |            |
 
 [1]: #evententry
 [2]: #state

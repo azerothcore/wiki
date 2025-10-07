@@ -33,6 +33,6 @@ Refers to [creature_model_info.displayid](creature_model_info#displayid) to chan
 
 ### equipment_id
 
-Refers to [creature_equip_template.creatureid](creature_equip_template#creatureid) to change when the event running.
+Refers to: [creature_equip_template.creatureid](creature_equip_template#creatureid) to change when the event running.
 
 If you don't want to add or change the current equipment being used, set the value to `0`, It will use [creature_equip_template](creature_equip_template#CreatureID) for the [creature_template](creature_template#entry) where it matches with [creature.id1](creature#id1) from [creature.guid](creature#guid).
