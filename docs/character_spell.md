@@ -30,4 +30,9 @@ The spell ID. See [Spell.dbc](spell) column 1.
 
 ### specMask
 
-Boolean 1 or 0 signifying whether the spell is active (appears in the spell book).
+Bitmask saving the specs using the spell.
+| Value | Type                              |
+| ----- | --------------------------------- |
+| 1     | First Spec                        |
+| 2     | Second Spec                       |
+| 3     | Both Specs                        |
