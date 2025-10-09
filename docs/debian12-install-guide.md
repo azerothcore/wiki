@@ -80,7 +80,7 @@ sudo ufw enable
 ```
 ### Get Dependencies
 ```bash
-sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full screen fail2ban -y
+sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full nodejs npm fail2ban -y && sudo npm install pm2 -g
 ```
 ### Get MySQL
 - Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) to verify the latest version.
@@ -105,12 +105,9 @@ rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFI
 
 ### Setup SQL Database
 ```bash
-# Set Password
-while true; do read -s -p "Set an SQL password: " MYSQL_PASSWORD && echo; read -s -p "Retype SQL password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
-# Make User & Databases
 sudo mysql <<EOF
 DROP USER IF EXISTS 'acore'@'localhost';
-CREATE USER 'acore'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
+CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
 CREATE DATABASE IF NOT EXISTS \`acore_world\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
 CREATE DATABASE IF NOT EXISTS \`acore_characters\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
 CREATE DATABASE IF NOT EXISTS \`acore_auth\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
@@ -201,18 +198,16 @@ cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
 cp -n ~/azerothcore/modules/mod-anticheat/conf/Anticheat.conf.dist ~/server/etc/Anticheat.conf
 # Data Directory
 sudo sed -i -E "s|^DataDir = .*|DataDir = \"/home/$USER/server/data\"|" ~/server/etc/worldserver.conf
+# Logs Directory
 sudo sed -i -E "s|^LogsDir = .*|LogsDir = \"/home/$USER/server/logs\"|" ~/server/etc/*.conf
-# SQL Connection
-sudo sed -i -E "s|= \"127.0.0.1;3306;acore;[^;]*;|= \"127.0.0.1;3306;acore;${MYSQL_PASSWORD};|" ~/server/etc/*.conf
-# Cleanup
-unset MYSQL_PASSWORD
+mkdir -p ~/server/logs
 ```
 ### Launch Server
 ```bash
-mkdir -p ~/server/logs
-screen -AmdS auth ~/server/bin/authserver
-screen -AmdS world ~/server/bin/worldserver
-screen -r world
+pm2 start $HOME/server/bin/authserver --name authserver -- -c $HOME/server/etc/authserver.conf
+pm2 start $HOME/server/bin/worldserver --name worldserver -- -c $HOME/server/etc/worldserver.conf
+pm2 save
+pm2 attach $(pm2 id worldserver | tr -d '[][:space:]')
 ```
 ### Create GM account
 ```bash
@@ -221,7 +216,7 @@ account create USERNAME PASSWORD
 ```bash
 account set gmlevel USERNAME 3 -1
 ```
-- Detach from the worldserver screen with Ctrl+A -> Ctrl+D
+- Detach from the worldserver with Ctrl+C.
 
 ### Set Realm IP
 ```bash
@@ -240,23 +235,73 @@ EOF
 
 ## Maintenance
 
-### Create Alias Command
+### Change SQL Password
+- This changes the password for the acore database user. The guide uses default "acore/acore" SQL credentials.
 ```bash
-touch ~/.bash_aliases
-echo "alias acoreupdate='
-screen -S world -p 0 -X stuff "saveall^m";
-screen -X -S "world" quit;
+# Prompt for new password
+while true; do read -s -p "Set a new SQL password: " MYSQL_PASSWORD && echo; read -s -p "Retype SQL password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
+# Update SQL user
+sudo mysql <<EOF
+ALTER USER 'acore'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
+FLUSH PRIVILEGES;
+EOF
+# Update configs
+sudo sed -i -E "s|= \"127.0.0.1;3306;acore;[^;]*;|= \"127.0.0.1;3306;acore;${MYSQL_PASSWORD};|" ~/server/etc/*.conf
+# Cleanup
+unset MYSQL_PASSWORD
+```
+### Modify Config Files
+- This script can be extended to include all your preferred config settings. Running it will **delete the .conf files** and remake them from the .dist before applying changes.
+```bash
+# File Paths
+AUTH_CONF="$HOME/server/etc/authserver.conf"
+WORLD_CONF="$HOME/server/etc/worldserver.conf"
+ANTICHEAT_CONF="$HOME/server/etc/modules/Anticheat.conf"
+# Remove old and create new from .dist
+rm -f "$AUTH_CONF"; cp "$AUTH_CONF.dist" "$AUTH_CONF"
+rm -f "$WORLD_CONF"; cp "$WORLD_CONF.dist" "$WORLD_CONF"
+rm -f "$ANTICHEAT_CONF"; cp "$ANTICHEAT_CONF.dist" "$ANTICHEAT_CONF"
+# Authserver.conf
+declare -A auth_settings=(
+    ["LogsDir"]="$HOME/server/data"
+)
+# Worldserver.conf
+declare -A world_settings=(
+    ["DataDir"]="$HOME/server/data"
+    ["LogsDir"]="$HOME/server/logs"
+    ["StartPlayerLevel"]="1"
+)
+# Anticheat.conf
+declare -A anticheat_settings=(
+    ["LogsDir"]="$HOME/server/logs"
+)
+# Apply changes
+for key in "${!auth_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1${auth_settings[$key]}|" "$AUTH_CONF"; done
+for key in "${!world_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1${world_settings[$key]}|" "$WORLD_CONF"; done
+for key in "${!anticheat_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1${anticheat_settings[$key]}|" "$ANTICHEAT_CONF"; done
+```
+### Core Update Command
+- This creates a shortcut command to automate the core update process. 
+```bash
+cat <<'EOF' >> ~/.bash_aliases
+alias acoreupdate='
+WORLD_ID=$(pm2 id worldserver | tr -d "[][:space:]");
 git -C ~/azerothcore/modules/mod-anticheat pull;
 git -C ~/azerothcore pull;
 cd ~/azerothcore/build;
 cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static;
 make -j $(nproc) install;
-screen -AmdS world ~/server/bin/worldserver;
-screen -r world;'" > ~/.bash_aliases
-source ~/.bashrc
+pm2 send "$WORLD_ID" "saveall";
+pm2 send "$WORLD_ID" "server restart 10";
+echo "Restarting worldserver in 10 seconds..."
+sleep 12;
+pm2 restart "$WORLD_ID";
+pm2 attach "$WORLD_ID";'
+EOF
+source ~/.bash_aliases
 ```
 
-- Now we can **save/exit** the worldserver, **pull** the latest changes from GitHub, **build** the updated core, and **restart** the worldserver all with one command.
+- Now you can save/exit the worldserver, pull the latest changes from GitHub, build the updated core, and restart the worldserver all with one command:
 ### Update AzerothCore
 ```bash
 acoreupdate
@@ -266,7 +311,8 @@ acoreupdate
 
 #### Successful login but cant enter the realm.
 - Double check the [realm address.](#set-realm-ip)
-
+#### Crash loop causing incomplete error logs.
+- Stop worldserver with `pm2 stop` and start it with `pm2 start --no-autorestart` to get a full error log.
 ---
 ##### Good things to know that this guide does not cover.
 - Domain name and DNS setup for *"set realmlist logon.server.com"*
