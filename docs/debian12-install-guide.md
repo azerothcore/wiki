@@ -285,18 +285,18 @@ for key in "${!anticheat_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1
 ```bash
 cat <<'EOF' >> ~/.bash_aliases
 alias acoreupdate='
-WORLD_ID=$(pm2 id worldserver | tr -d "[][:space:]");
-git -C ~/azerothcore/modules/mod-anticheat pull;
-git -C ~/azerothcore pull;
-cd ~/azerothcore/build;
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static;
-make -j $(nproc) install;
-pm2 send "$WORLD_ID" "saveall";
-pm2 send "$WORLD_ID" "server restart 10";
+WORLD_ID=$(pm2 id worldserver | tr -d "[][:space:]")
+git -C ~/azerothcore/modules/mod-anticheat pull
+git -C ~/azerothcore pull &&
+cd ~/azerothcore/build &&
+cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static &&
+make -j $(nproc) install &&
+pm2 send "$WORLD_ID" "saveall" &&
+pm2 send "$WORLD_ID" "server restart 10" &&
 echo "Restarting worldserver in 10 seconds..."
-sleep 12;
-pm2 restart "$WORLD_ID";
-pm2 attach "$WORLD_ID";'
+sleep 12 &&
+pm2 restart "$WORLD_ID" &&
+pm2 attach "$WORLD_ID"'
 EOF
 source ~/.bash_aliases
 ```
