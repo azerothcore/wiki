@@ -301,7 +301,7 @@ EOF
 source ~/.bash_aliases
 ```
 
-- Now you can save/exit the worldserver, pull the latest changes from GitHub, build the updated core, and restart the worldserver all with one command:
+- Now you can pull the latest changes from GitHub, build the updated core, and restart the worldserver all with one command:
 ### Update AzerothCore
 ```bash
 acoreupdate
