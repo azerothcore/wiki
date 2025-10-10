@@ -285,18 +285,42 @@ for key in "${!anticheat_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1
 ```bash
 cat <<'EOF' >> ~/.bash_aliases
 alias acoreupdate='
-WORLD_ID=$(pm2 id worldserver | tr -d "[][:space:]")
-git -C ~/azerothcore/modules/mod-anticheat pull
-git -C ~/azerothcore pull &&
-cd ~/azerothcore/build &&
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static &&
-make -j $(nproc) install &&
-pm2 send "$WORLD_ID" "saveall" &&
-pm2 send "$WORLD_ID" "server restart 10" &&
-echo "Restarting worldserver in 10 seconds..."
-sleep 12 &&
-pm2 restart "$WORLD_ID" &&
-pm2 attach "$WORLD_ID"'
+WORLD_ID="$(pm2 id worldserver | tr -d "[][:space:]")"
+CORE_UPDATED=0
+
+# Helper: Check for updates
+update_repo() {
+    local REPO_PATH="$1"
+    git -C "$REPO_PATH" fetch origin
+    LOCAL_HASH=$(git -C "$REPO_PATH" rev-parse HEAD)
+    REMOTE_HASH=$(git -C "$REPO_PATH" rev-parse "@{upstream}")
+    if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+        git -C "$REPO_PATH" pull
+        CORE_UPDATED=1
+    fi
+}
+
+# Helper: Build and restart
+update_core() {
+    cd "$HOME/azerothcore/build" &&
+    cmake ../ -DCMAKE_INSTALL_PREFIX="$HOME"/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static &&
+    make -j "$(nproc)" install &&
+    pm2 send "$WORLD_ID" "saveall" &&
+    pm2 send "$WORLD_ID" "server restart 10" &&
+    echo "Restarting worldserver in 10 seconds..." &&
+    sleep 12 &&
+    pm2 restart "$WORLD_ID" &&
+    pm2 attach "$WORLD_ID"
+}
+
+# Check for updates
+update_repo "$HOME/azerothcore"
+update_repo "$HOME/azerothcore/modules/mod-anticheat"
+##### Add your modules here #####
+
+# Build and restart
+if [ "$CORE_UPDATED" -eq 1 ]; then update_core; else echo "AzerothCore is up-to-date."; fi
+'
 EOF
 source ~/.bash_aliases
 ```
