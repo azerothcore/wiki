@@ -253,32 +253,37 @@ unset MYSQL_PASSWORD
 ### Modify Config Files
 - This script can be extended to include all your preferred config settings. Running it will **delete the .conf files** and remake them from the .dist before applying changes.
 ```bash
-# File Paths
-AUTH_CONF="$HOME/server/etc/authserver.conf"
-WORLD_CONF="$HOME/server/etc/worldserver.conf"
-ANTICHEAT_CONF="$HOME/server/etc/modules/Anticheat.conf"
-# Remove old and create new from .dist
-rm -f "$AUTH_CONF"; cp "$AUTH_CONF.dist" "$AUTH_CONF"
-rm -f "$WORLD_CONF"; cp "$WORLD_CONF.dist" "$WORLD_CONF"
-rm -f "$ANTICHEAT_CONF"; cp "$ANTICHEAT_CONF.dist" "$ANTICHEAT_CONF"
+#!/bin/bash
+# Helper: Reset and update configs
+update_config() {
+    local config_file="$1"
+    declare -n settings="$2"
+    cp -f "${config_file}.dist" "$config_file"
+    for key in "${!settings[@]}"; do
+        sudo sed -i -E "s|^($key\s*=\s*).*|\1${settings[$key]}|" "$config_file"
+    done
+}
 # Authserver.conf
 declare -A auth_settings=(
-    ["LogsDir"]="$HOME/server/data"
+    ["DataDir"]="\"$HOME/server/data\""
 )
 # Worldserver.conf
 declare -A world_settings=(
-    ["DataDir"]="$HOME/server/data"
-    ["LogsDir"]="$HOME/server/logs"
+    ["DataDir"]="\"$HOME/server/data\""
+    ["LogsDir"]="\"$HOME/server/logs\""
     ["StartPlayerLevel"]="1"
 )
 # Anticheat.conf
 declare -A anticheat_settings=(
-    ["LogsDir"]="$HOME/server/logs"
+    ["LogsDir"]="\"$HOME/server/logs\""
 )
-# Apply changes
-for key in "${!auth_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1${auth_settings[$key]}|" "$AUTH_CONF"; done
-for key in "${!world_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1${world_settings[$key]}|" "$WORLD_CONF"; done
-for key in "${!anticheat_settings[@]}"; do sudo sed -i -E "s|^($key\s*=\s*).*|\1${anticheat_settings[$key]}|" "$ANTICHEAT_CONF"; done
+#### Add your modules here ####
+
+# Apply updates
+update_config "$HOME/server/etc/authserver.conf" auth_settings
+update_config "$HOME/server/etc/worldserver.conf" world_settings
+update_config "$HOME/server/etc/modules/Anticheat.conf" anticheat_settings
+#### Add your modules here ####
 ```
 ### Core Update Command
 - This creates a shortcut command to automate the core update process. 
