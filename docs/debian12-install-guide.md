@@ -249,7 +249,7 @@ update_config() {
 }
 # Authserver.conf
 declare -A auth_settings=(
-    ["DataDir"]="\"$HOME/server/data\""
+    ["LogsDir"]="\"$HOME/server/logs\""
 )
 # Worldserver.conf
 declare -A world_settings=(
