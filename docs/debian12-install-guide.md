@@ -188,6 +188,8 @@ mkdir -p ~/server/logs
 ```bash
 pm2 start $HOME/server/bin/authserver --name authserver -- -c $HOME/server/etc/authserver.conf
 pm2 start $HOME/server/bin/worldserver --name worldserver -- -c $HOME/server/etc/worldserver.conf
+startup_cmd=$(pm2 startup | grep sudo)
+eval "$startup_cmd"
 pm2 save
 pm2 attach $(pm2 id worldserver | tr -d '[][:space:]')
 ```
