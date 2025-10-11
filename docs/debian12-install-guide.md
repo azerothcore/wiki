@@ -87,15 +87,15 @@ rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFI
 
 ### Setup SQL Database
 ```bash
-sudo mysql <<EOF
+sudo mysql <<'EOF'
 DROP USER IF EXISTS 'acore'@'localhost';
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
-CREATE DATABASE IF NOT EXISTS \`acore_world\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE IF NOT EXISTS \`acore_characters\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE IF NOT EXISTS \`acore_auth\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-GRANT ALL PRIVILEGES ON \`acore_world\`.* TO 'acore'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON \`acore_characters\`.* TO 'acore'@'localhost' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON \`acore_auth\`.* TO 'acore'@'localhost' WITH GRANT OPTION;
+CREATE DATABASE IF NOT EXISTS `acore_world` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `acore_characters` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `acore_auth` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+GRANT ALL PRIVILEGES ON `acore_world`.* TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `acore_characters`.* TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `acore_auth`.* TO 'acore'@'localhost' WITH GRANT OPTION;
 EOF
 ```
 ---
@@ -177,7 +177,7 @@ make -j $(nproc) install
 # Copy .dist
 cp -n ~/server/etc/authserver.conf.dist ~/server/etc/authserver.conf
 cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
-cp -n ~/azerothcore/modules/mod-anticheat/conf/Anticheat.conf.dist ~/server/etc/Anticheat.conf
+cp -n ~/server/etc/modules/Anticheat.conf.dist ~/server/etc/modules/Anticheat.conf
 # Data Directory
 sudo sed -i -E "s|^DataDir = .*|DataDir = \"/home/$USER/server/data\"|" ~/server/etc/worldserver.conf
 # Logs Directory
@@ -204,8 +204,8 @@ account set gmlevel USERNAME 3 -1
 
 ### Set Realm IP
 ```bash
-sudo mysql <<EOF
-UPDATE acore_auth.realmlist SET address = 'x.x.x.x' WHERE id = 1;
+sudo mysql <<'EOF'
+UPDATE `acore_auth`.`realmlist` SET `address` = 'x.x.x.x' WHERE `id` = 1;
 EOF
 ```
 - Change **x.x.x.x** to the public IP address of your Debian12 server.
