@@ -27,7 +27,7 @@ Read [creating accounts](creating-accounts).
 
 - Open your `wow.exe` not any launcher of any sort.
 
-- Login into your account by using your `username` and `password` the e-mail functionality doesn't work (as a login into client) for AzerothCore.
+- Log in using the user/pass you just created.
 
 - The AzerothCore realm should be selectable. Log in, create a character, and you're all done!
 
