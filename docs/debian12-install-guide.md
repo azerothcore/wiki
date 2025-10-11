@@ -303,7 +303,7 @@ update_repo() {
 # Helper: Build and restart
 update_core() {
     cd "$HOME/azerothcore/build" &&
-    cmake ../ -DCMAKE_INSTALL_PREFIX="$HOME"/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static &&
+    cmake ../ -DCMAKE_INSTALL_PREFIX="$HOME/server/" -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static &&
     make -j "$(nproc)" install &&
     pm2 send "$WORLD_ID" "saveall" &&
     pm2 send "$WORLD_ID" "server restart 10" &&
