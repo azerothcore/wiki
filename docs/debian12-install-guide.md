@@ -87,7 +87,7 @@ rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFI
 
 ### Setup SQL Database
 ```bash
-sudo mysql <<'EOF'
+sudo mysql <<EOF
 DROP USER IF EXISTS 'acore'@'localhost';
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
 CREATE DATABASE IF NOT EXISTS `acore_world` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
@@ -188,8 +188,7 @@ mkdir -p ~/server/logs
 ```bash
 pm2 start $HOME/server/bin/authserver --name authserver -- -c $HOME/server/etc/authserver.conf
 pm2 start $HOME/server/bin/worldserver --name worldserver -- -c $HOME/server/etc/worldserver.conf
-startup_cmd=$(pm2 startup | grep sudo)
-eval "$startup_cmd"
+eval "$(pm2 startup | grep sudo)"
 pm2 save
 pm2 attach $(pm2 id worldserver | tr -d '[][:space:]')
 ```
@@ -204,7 +203,7 @@ account set gmlevel USERNAME 3 -1
 
 ### Set Realm IP
 ```bash
-sudo mysql <<'EOF'
+sudo mysql <<EOF
 UPDATE `acore_auth`.`realmlist` SET `address` = 'x.x.x.x' WHERE `id` = 1;
 EOF
 ```
