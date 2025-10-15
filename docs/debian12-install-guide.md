@@ -87,7 +87,7 @@ rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFI
 
 ### Setup SQL Database
 ```bash
-sudo mysql <<EOF
+sudo mysql <<'EOF'
 DROP USER IF EXISTS 'acore'@'localhost';
 CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
 CREATE DATABASE IF NOT EXISTS `acore_world` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
@@ -162,9 +162,10 @@ git -C ~/azerothcore/modules clone https://github.com/azerothcore/mod-anticheat
 ```
 ### Get Data Files
 ```bash
-mkdir -p ~/server/data && cd ~/server/data
-wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
-7z x data.zip && rm data.zip
+cd ~/server &&
+wget https://github.com/wowgaming/client-data/releases/download/v17/data.zip &&
+7z x data.zip && rm data.zip &&
+mv Data data
 ```
 ### Build Core
 ```bash
@@ -203,7 +204,7 @@ account set gmlevel USERNAME 3 -1
 
 ### Set Realm IP
 ```bash
-sudo mysql <<EOF
+sudo mysql <<'EOF'
 UPDATE `acore_auth`.`realmlist` SET `address` = 'x.x.x.x' WHERE `id` = 1;
 EOF
 ```
@@ -224,7 +225,7 @@ EOF
 # Prompt for new password
 while true; do read -s -p "Set a new SQL password: " MYSQL_PASSWORD && echo; read -s -p "Retype SQL password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
 # Update SQL user
-sudo mysql <<EOF
+sudo mysql <<'EOF'
 ALTER USER 'acore'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 FLUSH PRIVILEGES;
 EOF
