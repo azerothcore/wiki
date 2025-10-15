@@ -225,7 +225,7 @@ EOF
 # Prompt for new password
 while true; do read -s -p "Set a new SQL password: " MYSQL_PASSWORD && echo; read -s -p "Retype SQL password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
 # Update SQL user
-sudo mysql <<'EOF'
+sudo mysql <<EOF
 ALTER USER 'acore'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
 FLUSH PRIVILEGES;
 EOF
