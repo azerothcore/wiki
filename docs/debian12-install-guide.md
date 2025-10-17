@@ -1,29 +1,13 @@
 # AzerothCore Debian 12 Install Guide
 
-This is a quickstart guide for installing AzerothCore to a Debian 12 server, securing it, and enabling one-command maintenance from your Windows PC.
+This is a quickstart guide for installing AzerothCore to a Debian 12 server from your Windows PC. For a more in-depth tutorial, see the [official AzerothCore Installation Guide](installation).
+
 
 ## Table of Contents
   - [Requirements](#requirements)
   - [Debian Setup](#debian-setup)
-    - [First Login](#first-login)
-    - [Change Default SSH Port](#change-default-ssh-port)
-    - [Setup Firewall](#setup-firewall)
-    - [Get Dependencies](#get-dependencies)
-    - [Get MySQL](#get-mysql)
-    - [Setup SQL Database](#setup-sql-database)
   - [SSH Setup](#ssh-setup)
-    - [Key Generation](#key-generation)
-    - [Key-based Login Setup](#key-based-login-setup)
-    - [Disable Password Logins](#disable-password-logins)
   - [AzerothCore Installation](#azerothcore-installation)
-    - [Clone Repository](#clone-repository)
-    - [Add Anticheat Module](#add-anticheat-module)
-    - [Get Data Files](#get-data-files)
-    - [Build Core](#build-core)
-    - [Edit Configs](#edit-configs)
-    - [Set Realm IP](#set-realm-ip)
-    - [Launch Server](#launch-server)
-    - [Create GM account](#create-gm-account)
   - [Maintenance](#maintenance)
   - [Common Problems](#common-problems)
   - [Other Resources](#other-resources)
@@ -33,25 +17,39 @@ This is a quickstart guide for installing AzerothCore to a Debian 12 server, sec
 - A Windows program for sending commands to the server.
 ##### [Debian 12](https://www.ovhcloud.com/en-ca/vps/)
 - A server with Debian 12 installed. (ex: 4gb/4core VPS from OVH)
-### Optional
-##### [FileZilla](https://filezilla-project.org/download.php)
-- A Windows program for transferring files to/from the server. Used during [SSH Setup](#ssh-setup) to copy the generated key file to your PC.
-##### [HeidiSQL](https://www.heidisql.com/)
-- A Windows program for connecting to the servers SQL database. Not used in this guide. If you want to connect to your database using HeidiSQL, [read this](https://www.enovision.net/mysql-ssh-tunnel-heidisql)
 
+#### Optional
+  ##### [HeidiSQL](https://www.heidisql.com/)
+  - A Windows program for connecting to the servers SQL database. Not used in this guide. If you want to connect to your database using HeidiSQL, [read this](https://www.enovision.net/mysql-ssh-tunnel-heidisql)
 
 ---
 ## Debian Setup
 ### First Login
 
-- Use **PuTTY** to connect to your Debian server using the IP address and login credentials supplied by the hosting provider. (If you are logging in as root, first create a new user with sudo privileges and switch to it.)
-- Copy the following code blocks and paste them into the PuTTY terminal with right click, then hit enter.
+- Use **PuTTY** to connect to your Debian server using the IP address and login credentials supplied by the hosting provider.
+- For each step copy the entire code block and paste it into the PuTTY terminal with right click, then hit enter.
+  <details><summary>If you're logged in as root...</summary>
+    
+    #### Create a new user with sudo privileges and switch to it.
+    ```bash
+    read -p "New username: " USERNAME
+    adduser "$USERNAME"
+    usermod -aG sudo "$USERNAME"
+    su - "$USERNAME"
+    ```
+    #### Disable remote root login
+    ```bash
+    sudo sed -i 's/^#\?PermitRootLogin .*/PermitRootLogin no/' /etc/ssh/sshd_config
+    sudo systemctl reload ssh
+    ```
+  </details>
+
 ### Change Default SSH Port
 ```bash
 sudo sed -i 's/^#Port 22\+$/Port 55022/' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 ```
-- Remember to use 55022 as the SSH port from now on.
+*(Remember to use 55022 as the SSH port from now on)*
 ### Setup Firewall
 ```bash
 sudo apt install ufw
@@ -64,40 +62,51 @@ sudo ufw enable
 ```
 ### Get Dependencies
 ```bash
-sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full screen fail2ban -y
+sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full nodejs npm fail2ban -y && sudo npm install pm2 -g
 ```
 ### Get MySQL
 - Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) to verify the latest version.
 ```bash
-export MYSQL_APT_CONFIG_VERSION=0.8.33-1
-```
-```bash
+# Version
+MYSQL_APT_CONFIG_VERSION=0.8.34-1
+# # # # #
 mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
+# Download
 wget "https://dev.mysql.com/get/mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb"
 wget "https://dev.mysql.com/downloads/gpg/?file=mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb&p=37" -O mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
+# Verify
 gpg --keyserver keyserver.ubuntu.com --recv-keys A8D3785C
 gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+# Install
 sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
 sudo apt update
 sudo DEBIAN_FRONTEND="noninteractive" apt install -y mysql-server libmysqlclient-dev
+# Cleanup
 rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFIG_VERSION
 ```
 
 ### Setup SQL Database
 ```bash
-sudo mysql <<EOF
+sudo mysql <<'EOF'
 DROP USER IF EXISTS 'acore'@'localhost';
-CREATE USER 'acore'@'localhost' IDENTIFIED BY 'SQLPASSWORD';
-GRANT ALL PRIVILEGES ON *.* TO 'acore'@'localhost';
-CREATE DATABASE \`acore_world\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE \`acore_characters\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE \`acore_auth\` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'acore'@'localhost' IDENTIFIED BY 'acore' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0;
+CREATE DATABASE IF NOT EXISTS `acore_world` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `acore_characters` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS `acore_auth` DEFAULT CHARACTER SET UTF8MB4 COLLATE utf8mb4_unicode_ci;
+GRANT ALL PRIVILEGES ON `acore_world`.* TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `acore_characters`.* TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `acore_auth`.* TO 'acore'@'localhost' WITH GRANT OPTION;
 EOF
 ```
-- Change **SQLPASSWORD** to something more secure.
 ---
+
 ## SSH Setup
-This is an optional step that involves creating a key file and disabling password-based SSH logins to increase security of the Debian server and SQL database.
+This is an **optional** step that involves creating a key file and disabling password-based SSH logins to increase security of the Debian server and SQL database.
+
+<details><summary>▫️▫️▫️</summary>
+  
+### FileZilla
+  - This step requires [FileZilla](https://filezilla-project.org/download.php), a Windows program for transferring files to/from the server.
 
 ### Key Generation
 #### Debian Public Key
@@ -139,11 +148,10 @@ sudo sed -i -E 's/#?PasswordAuthentication yes/PasswordAuthentication no/' /etc/
 sudo rm /etc/ssh/sshd_config.d/*
 sudo service ssh restart
 ```
+</details>
 
 ---
-
 ## AzerothCore Installation
-
 ### Clone Repository
 ```bash
 git -C ~/ clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
@@ -154,8 +162,9 @@ git -C ~/azerothcore/modules clone https://github.com/azerothcore/mod-anticheat
 ```
 ### Get Data Files
 ```bash
-mkdir -p ~/server/data && cd ~/server/data
-wget https://github.com/wowgaming/client-data/releases/download/v16/data.zip
+rm -rf ~/server/data &&
+mkdir -p ~/server/data && cd ~/server/data &&
+wget https://github.com/wowgaming/client-data/releases/download/v17/data.zip &&
 7z x data.zip && rm data.zip
 ```
 ### Build Core
@@ -166,23 +175,24 @@ make -j $(nproc) install
 ```
 ### Edit Configs
 ```bash
+# Copy .dist
 cp -n ~/server/etc/authserver.conf.dist ~/server/etc/authserver.conf
 cp -n ~/server/etc/worldserver.conf.dist ~/server/etc/worldserver.conf
-cp -n ~/azerothcore/modules/mod-anticheat/conf/Anticheat.conf.dist ~/server/etc/Anticheat.conf 
-sudo sed -i -E 's|^DataDir = .*|DataDir = "/home/USERNAME/server/data"|' ~/server/etc/worldserver.conf
-sudo sed -i -E 's|^LogsDir = .*|LogsDir = "/home/USERNAME/server/logs"|' ~/server/etc/*.conf
-sudo sed -i -E 's/= "127.0.0.1;3306;acore;[^;]*;/= "127.0.0.1;3306;acore;SQLPASSWORD;/' ~/server/etc/*.conf
+cp -n ~/server/etc/modules/Anticheat.conf.dist ~/server/etc/modules/Anticheat.conf
+# Data Directory
+sudo sed -i -E "s|^DataDir = .*|DataDir = \"/home/$USER/server/data\"|" ~/server/etc/worldserver.conf
+# Logs Directory
+sudo sed -i -E "s|^LogsDir = .*|LogsDir = \"/home/$USER/server/logs\"|" ~/server/etc/*.conf
+mkdir -p ~/server/logs
 ```
-- Change **USERNAME** to your Debian user.
-- Change **SQLPASSWORD** to the password for the acore database user.
 ### Launch Server
 ```bash
-mkdir -p ~/server/logs
-screen -AmdS auth ~/server/bin/authserver
-screen -AmdS world ~/server/bin/worldserver
-screen -r world
+pm2 start $HOME/server/bin/authserver --name authserver -- -c $HOME/server/etc/authserver.conf
+pm2 start $HOME/server/bin/worldserver --name worldserver -- -c $HOME/server/etc/worldserver.conf
+eval "$(pm2 startup | grep sudo)"
+pm2 save
+pm2 attach $(pm2 id worldserver | tr -d '[][:space:]')
 ```
-
 ### Create GM account
 ```bash
 account create USERNAME PASSWORD
@@ -190,56 +200,139 @@ account create USERNAME PASSWORD
 ```bash
 account set gmlevel USERNAME 3 -1
 ```
-- Detach from the worldserver screen with Ctrl+A -> Ctrl+D
+- Detach from the worldserver with Ctrl+C.
 
 ### Set Realm IP
 ```bash
-sudo mysql <<EOF
-UPDATE acore_auth.realmlist SET address = '0.0.0.0' WHERE id = 1;
+sudo mysql <<'EOF'
+UPDATE `acore_auth`.`realmlist` SET `address` = 'x.x.x.x' WHERE `id` = 1;
 EOF
 ```
-- Change **0.0.0.0** to the public IP address of your Debian12 server.
+- Change **x.x.x.x** to the public IP address of your Debian12 server.
 ## Finish!
 
-- You should now be able to log into AzerothCore by setting your realmlist to the public IP address of the Debian12 server. ex: `set realmlist 0.0.0.0`
+- You should now be able to log into AzerothCore by setting your WoW clients realmlist.wtf to the public IP address of the Debian12 server. ex: `set realmlist 12.345.67.890`
+
+</details>
+
 ---
+
 ## Maintenance
-### Create Alias Command
+
+### Change SQL Password
+- This changes the password for the acore database user. The guide uses default "acore/acore" SQL credentials.
 ```bash
-touch ~/.bash_aliases
-echo "alias acoreupdate='
-screen -S world -p 0 -X stuff "saveall^m";
-screen -X -S "world" quit;
-git -C ~/azerothcore/modules/mod-anticheat pull;
-git -C ~/azerothcore pull;
-cd ~/azerothcore/build;
-cmake ../ -DCMAKE_INSTALL_PREFIX=$HOME/server/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static;
-make -j $(nproc) install;
-screen -AmdS world ~/server/bin/worldserver;
-screen -r world;'" > ~/.bash_aliases
-source ~/.bashrc
+# Prompt for new password
+while true; do read -s -p "Set a new SQL password: " MYSQL_PASSWORD && echo; read -s -p "Retype SQL password: " MYSQL_PASSWORD_CONFIRM && echo; [ "$MYSQL_PASSWORD" = "$MYSQL_PASSWORD_CONFIRM" ] && break || echo "Passwords did not match."; done; unset MYSQL_PASSWORD_CONFIRM
+# Update SQL user
+sudo mysql <<EOF
+ALTER USER 'acore'@'localhost' IDENTIFIED BY '${MYSQL_PASSWORD}';
+FLUSH PRIVILEGES;
+EOF
+# Update configs
+sudo sed -i -E "s|= \"127.0.0.1;3306;acore;[^;]*;|= \"127.0.0.1;3306;acore;${MYSQL_PASSWORD};|" ~/server/etc/*.conf
+# Cleanup
+unset MYSQL_PASSWORD
+```
+### Modify Config Files
+- This script can be extended to include all your preferred config settings. Running it will **delete the .conf files** and remake them from the .dist before applying changes.
+```bash
+#!/bin/bash
+# Helper: Reset and update configs
+update_config() {
+    local config_file="$1"
+    declare -n settings="$2"
+    cp -f "${config_file}.dist" "$config_file"
+    for key in "${!settings[@]}"; do
+        sudo sed -i -E "s|^($key\s*=\s*).*|\1${settings[$key]}|" "$config_file"
+    done
+}
+# Authserver.conf
+declare -A auth_settings=(
+    ["LogsDir"]="\"$HOME/server/logs\""
+)
+# Worldserver.conf
+declare -A world_settings=(
+    ["DataDir"]="\"$HOME/server/data\""
+    ["LogsDir"]="\"$HOME/server/logs\""
+    ["StartPlayerLevel"]="1"
+)
+# Anticheat.conf
+declare -A anticheat_settings=(
+    ["LogsDir"]="\"$HOME/server/logs\""
+)
+#### Add your modules here ####
+
+# Apply updates
+update_config "$HOME/server/etc/authserver.conf" auth_settings
+update_config "$HOME/server/etc/worldserver.conf" world_settings
+update_config "$HOME/server/etc/modules/Anticheat.conf" anticheat_settings
+#### Add your modules here ####
+```
+### Core Update Command
+- This creates a shortcut command to automate the core update process. 
+```bash
+cat <<'EOF' >> ~/.bash_aliases
+alias acoreupdate='
+WORLD_ID="$(pm2 id worldserver | tr -d "[][:space:]")"
+CORE_UPDATED=0
+
+# Helper: Check for updates
+update_repo() {
+    local REPO_PATH="$1"
+    git -C "$REPO_PATH" fetch origin
+    LOCAL_HASH=$(git -C "$REPO_PATH" rev-parse HEAD)
+    REMOTE_HASH=$(git -C "$REPO_PATH" rev-parse "@{upstream}")
+    if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+        git -C "$REPO_PATH" pull
+        CORE_UPDATED=1
+    fi
+}
+
+# Helper: Build and restart
+update_core() {
+    cd "$HOME/azerothcore/build" &&
+    cmake ../ -DCMAKE_INSTALL_PREFIX="$HOME/server/" -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=db-only -DSCRIPTS=static -DMODULES=static &&
+    make -j "$(nproc)" install &&
+    pm2 send "$WORLD_ID" "saveall" &&
+    pm2 send "$WORLD_ID" "server restart 10" &&
+    echo "Restarting worldserver in 10 seconds..." &&
+    sleep 12 &&
+    pm2 restart "$WORLD_ID" &&
+    pm2 attach "$WORLD_ID"
+}
+
+# Check for updates
+update_repo "$HOME/azerothcore"
+update_repo "$HOME/azerothcore/modules/mod-anticheat"
+##### Add your modules here #####
+
+# Build and restart
+if [ "$CORE_UPDATED" -eq 1 ]; then update_core; else echo "AzerothCore is up-to-date."; fi
+'
+EOF
+source ~/.bash_aliases
 ```
 
-- Now we can **save/exit** the worldserver, **pull** the latest changes from GitHub, **build** the updated core, and **restart** the worldserver all with one command.
+- Now you can pull the latest changes from GitHub, build the updated core, and restart the worldserver all with one command:
 ### Update AzerothCore
-```
+```bash
 acoreupdate
 ```
 ---
-## Common Problems
+### Common Problems
 
-#### Auth/Worldserver wont even start.
-- Make sure you matched the password of the acore [SQL user](#setup-sql-database) with the one in [the configs](#edit-configs)
 #### Successful login but cant enter the realm.
 - Double check the [realm address.](#set-realm-ip)
-
+#### Crash loop causing incomplete error logs.
+- Stop worldserver with `pm2 stop` and start it with `pm2 start --no-autorestart` to get a full error log.
 ---
 ##### Good things to know that this guide does not cover.
 - Domain name and DNS setup for *"set realmlist logon.server.com"*
 - Wordpress registration site & acore-cms plugin SOAP connection.
 - Automated database backups to Google Drive using cron and rclone.
 
-## Other Resources
+### Other Resources
 - [Official AzerothCore Installation Guide](installation)
 - [heyaapl's Debian Tutorial](digital-ocean-video-tutorial)
 - [Digital Scriptorium's Video](https://www.youtube.com/watch?v=k4i4za1Scgg)
