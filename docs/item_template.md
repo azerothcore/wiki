@@ -8,6 +8,8 @@ Holds information on every item that exists in the game. All items are created f
 
 (See additional information in the *ItemPrototype.h* file.)
 
+This table has `SMSG_ITEM_QUERY_RESPONSE` packet and itemcache.wdb cache file associated with: Item name, description, stats, display ID, quality, icons. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 | Field                           | Type         | Attributes | Key | Null | Default | extra | Comment             |
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------- |
 | [entry][1]                      | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |                     |
