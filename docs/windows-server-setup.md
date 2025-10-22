@@ -20,7 +20,7 @@ Some files are optional but highly recommended:
 | maps      | Mandatory          |
 | vmaps     | HIGHLY RECOMMENDED |
 | mmaps     | HIGHLY RECOMMENDED |
-| cameras   | Recommended        |
+| Cameras   | Recommended        |
 
 ## Option 1: Download Pre-Extracted Files
 
@@ -42,15 +42,17 @@ If you intend to use an english (`enUS` or `enGB`) client you can download the d
 
 1. Browse into your build directory (**C:\Build\bin\RelWithDebInfo\\**) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
 ```
-mapextractor.exe
+map_extractor.exe
 mmaps_generator.exe
-vmap4extractor.exe
-vmap4assembler.exe
+vmap4_extractor.exe
+vmap4_assembler.exe
 ```
 
 2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.
 
 3. Create **mmaps** and **vmaps** folders in your World of Warcraft directory.
+
+Note: To be able to generate your mmaps you will have to have present the `mmaps-config.yaml` in the same place as your `mmaps_generator.exe`, you can find the YAML file in `C:\Azerothcore\src\tools\mmaps_generator`.
 
 4. Launch extractor.bat and select your extractor options.
 
