@@ -20,7 +20,7 @@ Some files are optional but highly recommended:
 | maps      | Mandatory          |
 | vmaps     | HIGHLY RECOMMENDED |
 | mmaps     | HIGHLY RECOMMENDED |
-| cameras   | Recommended        |
+| Cameras   | Recommended        |
 
 ## Option 1: Download Pre-Extracted Files
 
@@ -57,6 +57,7 @@ mmaps_generator
 vmap4_assembler
 vmap4_extractor
 ```
+Note: To be able to generate your mmaps you will have to have present the file `mmaps-config.yaml` in the same place as your `mmaps_generator`, you can find the YAML file in `$AC_CODE_DIR/src/tools/mmaps_generator`.
 
 2. Browse into **$AC_CODE_DIR/apps/extractor/** and copy "**extractor.sh**" into your World of Warcraft folder with the previous files.
 
