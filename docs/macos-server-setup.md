@@ -48,7 +48,7 @@ vmap4_assembler
 vmap4_extractor
 ```
 
-Note: To be able to generate your mmaps you will have to have present the file `mmaps-config.yaml` in the same place as your `mmaps_generator`, you can find the YAML file in `$HOME/Azerothcore/src/tools/mmaps_generator`, if you wish to customise some mmaps settings refer to [mmaps-config](mmaps-config) page.
+Note: To be able to generate your mmaps you will have to have present the file `mmaps-config.yaml` in the same place as your `mmaps_generator`, in the case it's not present automatically, you can find the YAML file in `$HOME/Azerothcore/src/tools/mmaps_generator`, if you wish to customise some mmaps settings refer to [mmaps-config](mmaps-config) page.
 
 
 **DBC and Maps files**

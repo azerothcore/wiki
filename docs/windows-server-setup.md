@@ -52,7 +52,7 @@ vmap4_assembler.exe
 
 3. Create **mmaps** and **vmaps** folders in your World of Warcraft directory.
 
-Note: To be able to generate your mmaps you will have to have present the file `mmaps-config.yaml` in the same place as your `mmaps_generator.exe`, you can find the YAML file in `C:\Azerothcore\src\tools\mmaps_generator`, if you wish to customise some mmaps settings refer to [mmaps-config](mmaps-config) page.
+Note: To be able to generate your mmaps you will have to have present the file `mmaps-config.yaml` in the same place as your `mmaps_generator.exe`, in the case it's not present automatically, you can find the YAML file in `C:\Azerothcore\src\tools\mmaps_generator`, if you wish to customise some mmaps settings refer to [mmaps-config](mmaps-config) page.
 
 4. Launch extractor.bat and select your extractor options.
 
