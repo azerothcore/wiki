@@ -20,7 +20,7 @@ Some files are optional but highly recommended:
 | maps      | Mandatory          |
 | vmaps     | HIGHLY RECOMMENDED |
 | mmaps     | HIGHLY RECOMMENDED |
-| cameras   | Recommended        |
+| Cameras   | Recommended        |
 
 ## Option 1: Download Pre-Extracted Files
 
@@ -40,12 +40,16 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 **(Not needed if you downloaded the files above)**
 
-Go to your AzerothCore build directory (e.g. $HOME/azeroth-server/bin/) and copy the following files to your World of Warcraft binaries directory.
+1. Browse into your install directory (e.g. **$HOME/azeroth-server/bin/**) and copy the following files into your World of Warcraft folder (where the Wow.exe is located).
+```
+map_extractor
+mmaps_generator
+vmap4_assembler
+vmap4_extractor
+```
 
-* **mapextractor**
-* **mmaps_generator**
-* **vmap4assembler**
-* **vmap4extractor**
+Note: To be able to generate your mmaps you will have to have present the file `mmaps-config.yaml` in the same place as your `mmaps_generator`, you can find the YAML file in `$HOME/Azerothcore/src/tools/mmaps_generator`.
+
 
 **DBC and Maps files**
 
