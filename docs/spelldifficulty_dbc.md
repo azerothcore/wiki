@@ -4,17 +4,19 @@
 
 **The \`spelldifficulty\_dbc\` table**
 
-This table contains spell data regarding cpp scripts. The id is called in the script, and depending on what version of the dungeon/raid the characters are in, the proper spell ID will be casted by the creature.
+This table determines which spell ID should be used depending on the dungeon or raid difficulty.  
+
+{% include note.html content="The EPIC difficulty value exists but is currently unused." %}
 
 **Table Structure**
 
 | Field         | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ID][1]       | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [DifficultySpellID_1][2] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [DifficultySpellID_2][3] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [DifficultySpellID_3][4] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [DifficultySpellID_4][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [DifficultySpellID_1][2] | INT  | UNSIGNED   |     | NO   | 0       |       | Spell ID for normal dungeon / 10-player normal raid |
+| [DifficultySpellID_2][3] | INT  | UNSIGNED   |     | NO   | 0       |       | Spell ID for heroic dungeon / 25-player normal raid |
+| [DifficultySpellID_3][4] | INT  | UNSIGNED   |     | NO   | 0       |       | Spell ID for epic dungeon (unused) / 10-player heroic raid |
+| [DifficultySpellID_4][5] | INT  | UNSIGNED   |     | NO   | 0       |       | Spell ID for 25-player heroic raid |
 
 [1]: #id
 [2]: #difficultyspellid_1
@@ -24,22 +26,21 @@ This table contains spell data regarding cpp scripts. The id is called in the sc
 
 **Description of the fields**
 
-### id
-
-id referenced in the cpp script for the creature AI.
+### ID
+Spell ID reference in scripts/SmartAI
 
 ### DifficultySpellID_1
 
-Spell ID to be used in normal dungeon (or normal 10men raid).
+Spell ID to be used in normal dungeon or 10-player normal raid.
 
 ### DifficultySpellID_2
 
-Spell ID to be used in heroic dungeon (or normal 25men raid).
+Spell ID to be used in heroic dungeon or 25-player normal raid.
 
 ### DifficultySpellID_3
 
-Spell ID to be used in heroic 10men raid.
+Spell ID to be used in epic dungeon (unused) or 10-player heroic raid.
 
 ### DifficultySpellID_4
 
-Spell ID to be used in heroic 25men raid.
+Spell ID to be used in 25-player heroic raid.
