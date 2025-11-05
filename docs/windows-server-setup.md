@@ -26,7 +26,7 @@ Some files are optional but highly recommended:
 
 If you intend to use an enUS client you can download the data files below. If you intend to use any other language client you will need to [extract](#option-2-extract-files-yourself) the data yourself.
 
-<a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Data files enUS (AC Data v17)</a>
+<a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Data files enUS (AC Data v18.0)</a>
 
 1. Download the files above.
 
