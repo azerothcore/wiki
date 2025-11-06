@@ -68,7 +68,7 @@ sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libb
 - Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) to verify the latest version.
 ```bash
 # Version
-MYSQL_APT_CONFIG_VERSION=0.8.34-1
+MYSQL_APT_CONFIG_VERSION=0.8.36-1
 # # # # #
 mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
 # Download
@@ -164,7 +164,7 @@ git -C ~/azerothcore/modules clone https://github.com/azerothcore/mod-anticheat
 ```bash
 rm -rf ~/server/data &&
 mkdir -p ~/server/data && cd ~/server/data &&
-wget https://github.com/wowgaming/client-data/releases/download/v17/data.zip &&
+wget https://github.com/wowgaming/client-data/releases/download/v18.0/data.zip &&
 7z x data.zip && rm data.zip
 ```
 ### Build Core
