@@ -20,11 +20,11 @@ Some files are optional but highly recommended:
 | maps      | Mandatory          |
 | vmaps     | HIGHLY RECOMMENDED |
 | mmaps     | HIGHLY RECOMMENDED |
-| cameras   | Recommended        |
+| Cameras   | Recommended        |
 
 ## Option 1: Download Pre-Extracted Files
 
-If you intend to use an enUS client you can download the data files below. If you intend to use any other language client you will need to [extract](#option-2-extract-files-yourself) the data yourself.
+If you intend to use an english (`enUS` or `enGB`) client you can download the data files below. If you intend to use any other language client you will need to [extract](#option-2-extract-files-yourself) the data yourself.
 
 <a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Data files enUS (AC Data v18)</a>
 
@@ -42,15 +42,17 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 1. Browse into your build directory (**C:\Build\bin\RelWithDebInfo\\**) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
 ```
-mapextractor.exe
+map_extractor.exe
 mmaps_generator.exe
-vmap4extractor.exe
-vmap4assembler.exe
+vmap4_extractor.exe
+vmap4_assembler.exe
 ```
 
 2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.
 
 3. Create **mmaps** and **vmaps** folders in your World of Warcraft directory.
+
+Note: To be able to generate your mmaps you will have to have present the `mmaps-config.yaml` in the same place as your `mmaps_generator.exe`, you can find the YAML file in `C:\Azerothcore\src\tools\mmaps_generator`.
 
 4. Launch extractor.bat and select your extractor options.
 
@@ -76,44 +78,30 @@ vmap4assembler.exe
 
 First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within C:\Build\bin\RelWithDebInfo\configs\ (may vary).
 
-Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
+You will need to go in the `Build` folder you created, under `\bin\RelWithDebInfo\configs` and make a copy and rename the copies to the following:
+`worldserver.conf.dist - Copy` to `worldserver.conf`
+`authserver.conf.dist - Copy` to `authserver.conf`
 
-On a newly compiled configuration, you will have the following values by default
-```
-LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth" worldserver.conf / authserver.conf
-WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world" worldserver.conf
-CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters" worldserver.conf
-```
+{% include tip.html content="In the case you made the copies and it still giving you errors because it doesnt find either config, make sure you've -Hide extensions for known file types- unchecked in your windows folder options, and you can validate if the file names are correct." %}
 
-They follow this structure:
 
-```
-Variablename = "MySQLIP;Port;Username;Password;database"  
-``` 
+## Updating DataDir / Data Directory
 
-The following steps must be verified:
+1. In your `worldserver.conf` file locate the `DataDir` option.
 
-- The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  If not, follow the instruction in [Realmlist Table](realmlist).
+2. Edit it to the path of your folder the following examples below:
+  - Current folder, if the `Data` folder is in the same place as your `authserver` and `worldserver` setting `DataDir = "./Data"`. 
 
-- The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
-  The username and password can be variable. You can choose to either: 
 
-    - use default acore / acore username and password pair.
+  - To relative / full path path: `DataDir = "C:\Build\bin\RelWithDebInfo\Data"`.
 
-    - create a unique login within a User Manager within your preferred database management tool (commonly identified by an icon that looks like a person or people) and give it the necessary permissions (SELECT, INSERT, UPDATE, DELETE permissions are sufficient, and is much safer).
 
-### Updating DataDir
+For most `worldserver.conf` setting changes, you can simply type `.reload config` in-game to see changes instantly without restarting the server.
 
-1. In your **worldserver.conf** file locate the **DataDir** option.
-
-1. Edit it to the path of your folder. i.e **C:\Build\bin\RelWithDebInfo\Data**
-
-{% include tip.html content="For most **worldserver.conf** setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 
-### (Optional) Config options by environment variable
+## (Optional) Config options by environment variable
 
 It is possible to load config options via environment variables, which you can read about [here](config-overrides-with-env-var).
 

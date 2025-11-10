@@ -7,36 +7,63 @@
 
 ## Creating the Database in MySQL
 
-### Creating the Databases and User
+You will download or copy the contents of [create_mysql.sql](https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql).
 
-First of all, you need to create the acore user. You need to run the script below within a MySQL client or with the MySQL command-line interface (CLI). 
-You need to run the script as the **root** user of MySQL within a MySQL client or the MySQL cli.
+Using the created super-user (by default is `root`) you will open any of database client refered in the requirements page (HeidiSQL, MySQL command-line interface [CLI], etc... or others your choice).
 
-https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
+Now you will either drag/run or copy-paste the content of the file [create_mysql.sql](https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql).
 
-{% include important.html content="Use the MySQL root user ONLY to run the script above, never run the core as root or administrator!" %}
+### HeidiSQL (most popular for newer users of MySQL).
+- Into your `Query` tab and press the blue "play" button or pressing `F9` (by default) to run the query.
 
-{% include tip.html content="You can change the password of the user you are creating for increased security." %}
+
+### MySQL CLI (most popular for linux users.)
+- In your terminal of choice (example given for `CMD` of Windows, which is recommended to be ran as `Administrator`) 
+`mysql -u YourSuperUsername -h 127.0.0.1 -p < "YourPath/create_mysql.sql"` 
+
+(This will prompt your password after being executed, in the safe side make sure the path is between "" and using / in the case is giving you `Access is denied` or `The system cannont find the file specified` check your path and file.extension in the case you do have the permissions or that you've executed as `Administrator`)
+
+
+{% include important.html content="The file above file is a Query or SQL file, is not a SQL script, for the case of DBeaver users that may get that confusion." %}
+
+{% include tip.html content="You can change the password of the user you are creating, and you should for increased security, refering to the acore user, you can do this either in the query file, execution or after in your Database client of choice." %}
+
+In the case you want you to use different information to connected to their respective database related to your `authserver` and `wolrdserver`.
+
+They follow this structure:
+`Variablename = "MySQLIP;Port;Username;Password;database"`
+The values below are the default, but you're free to change them, if you need or want, we don't recommend if you dont know what you're doing.
+
+```
+LoginDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_auth" worldserver.conf / authserver.conf
+WorldDatabaseInfo     = "127.0.0.1;3306;acore;acore;acore_world" worldserver.conf
+CharacterDatabaseInfo = "127.0.0.1;3306;acore;acore;acore_characters" worldserver.conf
+```
+
 
 ## Populating the database
 
-If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
+### Automatic Database Updater (Recommended, specially for newer users.)
 
-#### Automatic Database Updater
+The `authserver` and `worldserver` checks and applies all needed database files at startup.
 
-The Auth- and Worldserver checks and applies all needed database files at startup.
+To edit the automatic database updater you can find it in `authserver.conf` and `worldserver.conf` under **AUTOUPDATER** OR **UPDATE SETTINGS**.
 
-To edit the automatic database updater you will find the necessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
+1. Start `authserver`, in the `Build` folder you created, under `\bin\RelWithDebInfo` (for Windows) or `env/dist/bin` (for Linux).
+2. Start `worldserver` in the same location.
 
-1. Start Authserver.exe, in the Build folder you created, under \bin\RelWithDebInfo or \bin\Debug folder.
-2. Start Worldserver.exe, in the same location.
+If you get the following message in your console press ENTER to create and populate the databases (for: `acore_auth`, `acore_characters` or `acore_world`).
 
-If you get the following message in your console press enter to create and populate the databases.
-
+Example:
 ```
 Database "acore_auth" does not exist
 Do you want to create it? [yes (default) / no]:
 ```
+
+If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory), for manual or automatic execution.
+
+{% include tip.html content="If you wish ever to start any of the databases from scratch, you always drop their databases and let them re-create and re-populate, keep in mind if you drop a database you WILL LOOSE everything in it, highly recommend if you have any custom changes SQL or Modules changes, backup your database before executing the queries and/or adding the modules, any SQL changes you should save the queries outside of the database in the case you wish to use them again in the future." %}
+
 
 <br>
 
