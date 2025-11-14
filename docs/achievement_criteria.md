@@ -316,7 +316,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field           | Type    | Notes                                                           |
 | ------ | --------------- | ------- | --------------------------------------------------------------- |
-| 4      | [Emote](Emotes) | iRefID  |                                                                 |
+| 4      | [Emote](emotes) | iRefID  |                                                                 |
 | 5      | count           | Integer | count of emotes, always required special target or requirements |
 
 #### HEALING\_DONE = 55

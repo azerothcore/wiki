@@ -391,7 +391,7 @@ Muertes honorables por raza.
 
 | Column | Field           | Type    | Notes                                                           |
 | ------ | --------------- | ------- | --------------------------------------------------------------- |
-| 4      | [Emote](Emotes) | iRefID  |                                                                 |
+| 4      | [Emote](emotes) | iRefID  |                                                                 |
 | 5      | count           | Integer | Número de emotes, siempre se requiere un objetivo (jugador) o requisitos especiales. |
 
 #### HEALING\_DONE = 55
