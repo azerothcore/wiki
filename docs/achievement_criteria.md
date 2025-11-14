@@ -184,7 +184,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field             | Type    |
 | ------ | ----------------- | ------- |
-| 4      | [Area](AreaTable) | iRefID  |
+| 4      | [Area](areatable) | iRefID  |
 | 5      | killCount         | Integer |
 
 #### WIN\_ARENA = 32
@@ -237,7 +237,7 @@ This information is retrieved from DBCStructure.h.
 
 #### EXPLORE\_AREA = 43
 
-- This areaReference is **NOT** the index from [AreaTable.dbc.](AreaTable) It's from WorldMapOverlay.dbc.
+- This areaReference is **NOT** the index from [AreaTable.dbc.](areatable) It's from WorldMapOverlay.dbc.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |

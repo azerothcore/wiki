@@ -223,7 +223,7 @@ Muerte honorable en un área.
 
 | Column | Field             | Type    |
 | ------ | ----------------- | ------- |
-| 4      | [Area](AreaTable) | iRefID  |
+| 4      | [Area](areatable) | iRefID  |
 | 5      | killCount         | Integer |
 
 #### WIN\_ARENA = 32
@@ -296,7 +296,7 @@ Item despojado.
 
 #### EXPLORE\_AREA = 43
 
-areaReference  **NO** es el índice de [AreaTable.dbc.](AreaTable), proviene de WorldMapOverlay.dbc.
+areaReference  **NO** es el índice de [AreaTable.dbc.](areatable), proviene de WorldMapOverlay.dbc.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |

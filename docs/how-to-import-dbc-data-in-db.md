@@ -71,7 +71,7 @@ The value: `"Flags": 64` means "normal zone", we have to override it with `19456
 
 For the DBC documentation check [this wiki](https://wowdev.wiki/Category:DBC_WotLK)
 
-You can check the list of the flags [here](AreaTable)
+You can check the list of the flags [here](areatable)
 
 3. Export the SQL
 

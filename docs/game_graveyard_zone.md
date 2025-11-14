@@ -20,7 +20,7 @@
 Graveyard's ID. See [WorldSafeLocs.dbc](WorldSafelocs)
 
 ### ghost_zone
-Zone's ID of ghost position before teleportation to graveyard. See [AreaTable.dbc](AreaTable)
+Zone's ID of ghost position before teleportation to graveyard. See [AreaTable.dbc](areatable)
 
 ### faction
 Graveyard's team.

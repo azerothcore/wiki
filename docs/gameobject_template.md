@@ -405,7 +405,7 @@ No data used, all are always 0
 
 -   data0: minLevel
 -   data1: maxLevel
--   data2: areaID (From [AreaTable.dbc](AreaTable))
+-   data2: areaID (From [AreaTable.dbc](areatable))
 
 **GAMEOBJECT\_TYPE\_FLAGSTAND = 24**
 

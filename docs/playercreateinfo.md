@@ -44,7 +44,7 @@ The map ID. See [Map.dbc](map)
 
 ### zone
 
-The zone ID. See [AreaTable.dbc](AreaTable)
+The zone ID. See [AreaTable.dbc](areatable)
 
 ### position\_x
 
