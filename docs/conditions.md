@@ -1104,7 +1104,7 @@ The content of the [SourceGroup](#conditions-SourceGroup) and [SourceEntry](#con
 \***CONDITION\_SOURCE\_TYPE\_SPELL\_IMPLICIT\_TARGET = 13**
 
 -   -   SourceGroup: mask of effects to be affected by condition (1 - EFFECT\_0, 2 - EFFECT\_1, 4 - EFFECT\_2 - don't use wowhead to get number of effects, data from wowhead sometimes doesn't match real effect number)
-    -   SourceEntry: spell (Spell Id from  [Spell.dbc](Spell).)
+    -   SourceEntry: spell (Spell Id from  [Spell.dbc](spell).)
     -   ConditionTarget:
         -   0 - Potential target of the spell
         -   1 - Caster of the spell
@@ -1145,7 +1145,7 @@ Note: creature entry must be a vehicle. Example: If this is used with CONDITION\
 \***CONDITION\_SOURCE\_TYPE\_SPELL = 17**
 
 -   -   SourceGroup: always 0
-    -   SourceEntry: spell (Spell Id from [Spell.dbc](Spell))
+    -   SourceEntry: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionTarget:
         -   0 - Caster of the spell
         -   1 - Explicit target of the spell (only for spells which take object selected by caster into account)
@@ -1180,7 +1180,7 @@ Notes:
 \***CONDITION\_SOURCE\_TYPE\_VEHICLE\_SPELL = 21**
 
 -   -   SourceGroup: creature entry ([creature\_template.entry](http://www.azerothcore.org/wiki/creature_template#creature_template-entry))
-    -   SourceEntry: spell (Spell Id from [Spell.dbc](Spell))
+    -   SourceEntry: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionTarget:
         -   0 - Player for which spell bar is shown
         -   1 - Vehicle creature
@@ -1218,7 +1218,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_AURA = 1**
 
--   -   ConditionValue1: spell (Spell Id from [Spell.dbc](Spell))
+-   -   ConditionValue1: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionValue2: effect index (0-2)
     -   ConditionValue3: always 0
 
@@ -1367,7 +1367,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_SPELL = 25**
 
--   -   ConditionValue1: spell (Spell Id from [Spell.dbc](Spell))
+-   -   ConditionValue1: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 

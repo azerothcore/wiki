@@ -28,7 +28,7 @@ This table holds coordinate information on where the player should be teleported
 
 ### id
 
-The spell ID. See [Spell.dbc](Spell)
+The spell ID. See [Spell.dbc](spell)
 
 ### target\_map
 

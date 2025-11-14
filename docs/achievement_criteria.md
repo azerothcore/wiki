@@ -161,7 +161,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
-| 4      | [Spell](Spell) | iRefID  |
+| 4      | [Spell](spell) | iRefID  |
 | 5      | spellCount     | Integer |
 
 #### CAST\_SPELL = 29
@@ -170,7 +170,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
-| 4      | [Spell](Spell) | iRefID  |
+| 4      | [Spell](spell) | iRefID  |
 | 5      | castCount      | Integer |
 
 #### BG\_OBJECTIVE\_CAPTURE = 30
@@ -199,7 +199,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field          | Type   |
 | ------ | -------------- | ------ |
-| 4      | [Spell](Spell) | iRefID |
+| 4      | [Spell](spell) | iRefID |
 
 #### OWN\_ITEM = 36
 

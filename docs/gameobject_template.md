@@ -222,7 +222,7 @@ Object type not used
 - data0: open (LockId from [Lock.dbc](Lock) )
 - data1: level (npc equivalent level for casted spell)
 - data2: diameter (so radius \* 2)
-- data3: spell (Spell Id from [Spell.dbc](Spell))
+- data3: spell (Spell Id from [Spell.dbc](spell))
 - data4: type (0 trap with no despawn after cast. 1 trap despawns after cast. 2 bomb casts on spawn)
 - data5: cooldown (time in seconds)
 - data6:  ? (unknown flag)
@@ -368,10 +368,10 @@ Only one Gameobject with this type (35591) and no data data
 **GAMEOBJECT\_TYPE\_RITUAL = 18**
 
 -   data0: casters?
--   data1: spell (Spell Id from [Spell.dbc](Spell))
--   data2: animSpell (Spell Id from [Spell.dbc](Spell))
+-   data1: spell (Spell Id from [Spell.dbc](spell))
+-   data2: animSpell (Spell Id from [Spell.dbc](spell))
 -   data3: ritualPersistent (Boolean flag)
--   data4: casterTargetSpell (Spell Id from [Spell.dbc](Spell))
+-   data4: casterTargetSpell (Spell Id from [Spell.dbc](spell))
 -   data5: casterTargetSpellTargets (Boolean flag)
 -   data6: castersGrouped (Boolean flag)
 -   data7: ritualNoTargetCheck
@@ -392,7 +392,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_SPELLCASTER = 22**
 
--   data0: spell (Spell Id from [Spell.dbc](Spell))
+-   data0: spell (Spell Id from [Spell.dbc](spell))
 -   data1: charges
 -   data2: partyOnly (Boolean flag, need to be in group to use it)
 -   data3: allowMounted
@@ -410,10 +410,10 @@ No data used, all are always 0
 **GAMEOBJECT\_TYPE\_FLAGSTAND = 24**
 
 -   data0: open (LockId from [Lock.dbc](Lock))
--   data1: pickupSpell (Spell Id from [Spell.dbc](Spell))
+-   data1: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data2: radius (distance)
--   data3: returnAura (Spell Id from [Spell.dbc](Spell))
--   data4: returnSpell (Spell Id from [Spell.dbc](Spell))
+-   data3: returnAura (Spell Id from [Spell.dbc](spell))
+-   data4: returnSpell (Spell Id from [Spell.dbc](spell))
 -   data5: noDamageImmune (Boolean flag)
 -   data6: openTextID
 -   data7: losOK (Boolean flag)
@@ -435,7 +435,7 @@ No data used, all are always 0
 
 -   data0: open (LockId from [Lock.dbc](Lock))
 -   data1: eventID (Unknown Event ID)
--   data2: pickupSpell (Spell Id from [Spell.dbc](Spell))
+-   data2: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data3: noDamageImmune (Boolean flag)
 -   data4: openTextID
 -   data5: playerCast
@@ -485,7 +485,7 @@ Object type not used
 
 -   data0: startOpen (Boolean flag)
 -   data1: radius (Distance)
--   data2: auraID1 (Spell Id from [Spell.dbc](Spell))
+-   data2: auraID1 (Spell Id from [Spell.dbc](spell))
 -   data3: conditionID1 (Unknown ID)
 -   data4: auraID2
 -   data5: conditionID2
