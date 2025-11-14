@@ -942,7 +942,7 @@ If the item is a bag, this field is a bitmask controlling what types of items ca
 
 ### TotemCategory
 
-Corresponds to the ID in the [TotemCategory DBC file](TotemCategory).
+Corresponds to the ID in the [TotemCategory DBC file](totemcategory).
 
 | ID  | Name                     |
 | --- | ------------------------ |
