@@ -26,7 +26,7 @@ Definitions of instance encounters. Used by LFG.
 
 ### entry
 
-Unique entry from [DungeonEncounter.dbc](DungeonEncounter)
+Unique entry from [DungeonEncounter.dbc](dungeonencounter)
 
 ### creditType
 
