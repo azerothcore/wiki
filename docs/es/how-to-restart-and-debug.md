@@ -9,7 +9,7 @@ AzerothCore está compuesto por 2 servicios: `authserver` y `worldserver`.
 
 ## Cómo iniciar los servicios
 
-Tanto authserver como worldserver pueden iniciarse simplemente ejecutando los binarios compilados después de [completar la instalación](Installation).
+Tanto authserver como worldserver pueden iniciarse simplemente ejecutando los binarios compilados después de [completar la instalación](installation).
 
 ## Cómo configurar un reinicio
 

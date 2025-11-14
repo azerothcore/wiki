@@ -47,7 +47,7 @@ Basically, there are 3 main ways to install AC:
 
 You can choose one setup, or even try more than one. You can find all the instructions here:
 
-- [azerothcore.org/wiki/Installation](Installation)
+- [azerothcore.org/wiki/Installation](installation)
 
 Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help).
 
