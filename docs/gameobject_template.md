@@ -334,7 +334,7 @@ Object type not used
 **GAMEOBJECT\_TYPE\_CAMERA = 13**
 
 -   data0: open (LockId from [Lock.dbc](lock))
--   data1: camera (Cinematic entry from [CinematicCamera.dbc](CinematicCamera))
+-   data1: camera (Cinematic entry from [CinematicCamera.dbc](cinematiccamera))
 -   data2: eventID
 -   data3: openTextID
 -   data4: conditionID1
