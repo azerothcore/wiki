@@ -1242,7 +1242,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_REPUTATION\_RANK = 5**
 
--   -   ConditionValue1: faction template ID (from [Faction.dbc](Faction))
+-   -   ConditionValue1: faction template ID (from [Faction.dbc](faction))
     -   ConditionValue2: rank (Hated - 1, Hostile - 2, Unfriendly - 4, Neutral - 8, Friendly - 16, Honored - 32, Revered - 64, Exalted - 128) Flags can be added together for all ranks the condition should be true in.
     -   ConditionValue3: always 0
 

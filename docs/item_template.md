@@ -616,7 +616,7 @@ Its use is unknown. All items have 0.
 
 The faction template ID  of the faction that the player has to have a certain ranking with. If this value is 0, the faction of the seller of the item is used.
 
-See the [Faction DBC file](Faction) for the IDs of all of the factions.
+See the [Faction DBC file](faction) for the IDs of all of the factions.
 
 ### RequiredReputationRank
 

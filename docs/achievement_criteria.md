@@ -262,7 +262,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field              | Type    | Notes                                       |
 | ------ | ------------------ | ------- | ------------------------------------------- |
-| 4      | [Faction](Faction) | iRefID  |                                             |
+| 4      | [Faction](faction) | iRefID  |                                             |
 | 5      | reputationAmount   | Integer | Total reputation amount, so 42000 = exalted |
 
 #### GAIN\_EXALTED\_REPUTATION= 47

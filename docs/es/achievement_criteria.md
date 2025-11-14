@@ -325,7 +325,7 @@ Obtener reputación.
 
 | Column | Field              | Type    | Notes                                                                  |
 | ------ | ------------------ | ------- | ---------------------------------------------------------------------- |
-| 4      | [Faction](Faction) | iRefID  |                                                                        |
+| 4      | [Faction](faction) | iRefID  |                                                                        |
 | 5      | reputationAmount   | Integer | Cantidad total de reputación, teniendo en cuenta que 42000 es exaltado |
 
 #### GAIN\_EXALTED\_REPUTATION= 47
