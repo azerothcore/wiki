@@ -383,7 +383,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_AUCTIONHOUSE = 20**
 
--   data0: actionHouseID (From [AuctionHouse.dbc](AuctionHouse) ?)
+-   data0: actionHouseID (From [AuctionHouse.dbc](auctionhouse) ?)
 
 **GAMEOBJECT\_TYPE\_GUARDPOST = 21**
 
