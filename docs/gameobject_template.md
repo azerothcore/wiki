@@ -263,7 +263,7 @@ Object type not used
 
 -   data0: pageID ([page\_text.entry](page_text_2130246.html#page_text-entry))
 -   data1: language (from  [Languages.dbc](languages))
--   data2: pageMaterial ([PageTextMaterial.dbc](PageTextMaterial))
+-   data2: pageMaterial ([PageTextMaterial.dbc](pagetextmaterial))
 -   data3: allowMounted
 -   data4: conditionID1
 -   data5: NeverUsableWhileMounted

@@ -847,7 +847,7 @@ See the [Languages DBC file](languages) for the IDs of all of the languages.
 
 The background texture that appears in the page text window.
 
-See the [PageTextMaterial DBC file](PageTextMaterial) for the IDs of all of the material types.
+See the [PageTextMaterial DBC file](pagetextmaterial) for the IDs of all of the material types.
 
 ### startquest
 
