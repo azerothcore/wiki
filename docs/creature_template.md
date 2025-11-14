@@ -166,7 +166,7 @@ The expansion table the creatures health value is taken from. Values are from 0 
 
 #### faction
 
-The faction of the creature. See [FactionTemplate](FactionTemplate). Just because more than one faction has the same name, the inter-faction relationships can be different.
+The faction of the creature. See [FactionTemplate](factiontemplate). Just because more than one faction has the same name, the inter-faction relationships can be different.
 
 Note: This field also controls the creature family assistance mechanic. Only creatures with the same faction will assist each other.
 

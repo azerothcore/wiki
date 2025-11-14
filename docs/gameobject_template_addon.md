@@ -24,7 +24,7 @@ ID of the game object, from [gameobject\_template.entry](gameobject_template#ent
 
 ### faction
 
-Object's faction, if any. See [FactionTemplate](FactionTemplate)
+Object's faction, if any. See [FactionTemplate](factiontemplate)
 
 ### flags
 
