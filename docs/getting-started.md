@@ -82,7 +82,7 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
-- [azerothcore.org/wiki/Update](Update)
+- [azerothcore.org/wiki/Update](update)
 
 After you follow the update procedure, it is important to **verify** that:
 
