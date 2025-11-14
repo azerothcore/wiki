@@ -22,11 +22,11 @@ Table used by the core to group different ranks of spells (the gray text seen on
 
 ### first\_spell\_id
 
-SpellId from [Spell.dbc](Spell) which is first rank of spell rank chain. It identifies the whole chain.
+SpellId from [Spell.dbc](spell) which is first rank of spell rank chain. It identifies the whole chain.
 
 ### spell\_id
 
-SpellId from [Spell.dbc](Spell).
+SpellId from [Spell.dbc](spell).
 
 ### rank
 

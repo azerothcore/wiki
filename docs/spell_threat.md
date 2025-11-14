@@ -20,7 +20,7 @@ This table holds threat values on all spells that should either give or take awa
 
 ### entry
 
-The spell ID. See [Spell.dbc](Spell).
+The spell ID. See [Spell.dbc](spell).
 
 ### Threat
 

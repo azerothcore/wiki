@@ -22,7 +22,7 @@ Clicking on the label above will show you the list of all PRs that need to be te
 
 You need to:
 
-- have AzerothCore installed in your system (see [Installation](Installation)).
+- have AzerothCore installed in your system (see [Installation](installation)).
 - have a GitHub account, you can [register one here](https://github.com/join) for free.
 
 ### What if the PR has only DB changes?

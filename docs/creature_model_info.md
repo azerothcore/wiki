@@ -26,7 +26,7 @@ This table contains all models of mobs, their gender and other information that 
 
 ### DisplayID
 
-Display ID from [CreatureDisplayInfo.dbc](CreatureDisplayInfo)
+Display ID from [CreatureDisplayInfo.dbc](creaturedisplayinfo)
 
 ### BoundingRadius
 

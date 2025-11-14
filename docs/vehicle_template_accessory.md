@@ -38,7 +38,7 @@ Entry from [creature_template](creature_template#entry) to be used as the rider/
 
 ### seat\_id
 
-Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](VehicleSeat).
+Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](vehicleseat).
 
 ### minion
 

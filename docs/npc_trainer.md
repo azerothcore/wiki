@@ -25,7 +25,7 @@ Usually, this would be an entry of a creature referring to [creature\_template.e
 
 ### SpellID
 
-The spell ID is from [Spell.dbc](Spell). If the ID is negative, it's a reference pointing to the positive value of the ID.
+The spell ID is from [Spell.dbc](spell). If the ID is negative, it's a reference pointing to the positive value of the ID.
 
 ### MoneyCost
 

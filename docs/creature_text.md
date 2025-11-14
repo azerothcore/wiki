@@ -136,7 +136,7 @@ The text the creature will say.
 
 ### Language
 
-Value from [Languages.dbc](Languages) (+ the wiki table from the dbc file). When set to 0, the current default language will be used.
+Value from [Languages.dbc](languages) (+ the wiki table from the dbc file). When set to 0, the current default language will be used.
 
 ### Probability
 
@@ -146,7 +146,7 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 
 ### Emote
 
-The emote that the creature plays when the text is executed. Value to use in this field can be obtained from the [emote.dbc](Emotes)
+The emote that the creature plays when the text is executed. Value to use in this field can be obtained from the [emote.dbc](emotes)
 
 ### Duration
 
