@@ -421,7 +421,7 @@ Tiempo en el cual el personaje del jugador puede ser resucitado en caso de caíd
 
 ### taxi\_path
 
-Almacena la ruta del taxi actual del personaje ([TaxiPath.dbc](TaxiPath)) si el jugador se desconecta mientras se encuentre en uno.
+Almacena la ruta del taxi actual del personaje ([TaxiPath.dbc](taxipath)) si el jugador se desconecta mientras se encuentre en uno.
 
 ### arenaPoints
 

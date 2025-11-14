@@ -421,7 +421,7 @@ Time when a character can be resurrected in case of a server crash or client exi
 
 ### taxi\_path
 
-Stores the players current taxi path ([TaxiPath.dbc](TaxiPath)) if logged off while on one.
+Stores the players current taxi path ([TaxiPath.dbc](taxipath)) if logged off while on one.
 
 ### arenaPoints
 
