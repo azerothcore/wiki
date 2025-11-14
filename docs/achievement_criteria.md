@@ -77,7 +77,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field                      | Type   |
 | ------ | -------------------------- | ------ |
-| 4      | [Achievement](Achievement) | iRefID |
+| 4      | [Achievement](achievement) | iRefID |
 
 #### COMPLETE\_QUEST\_COUNT = 9
 

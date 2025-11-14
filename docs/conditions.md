@@ -1319,7 +1319,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_ACHIEVEMENT = 17**
 
--   -   ConditionValue1: achievement ID from [Achievement.dbc](Achievement)
+-   -   ConditionValue1: achievement ID from [Achievement.dbc](achievement)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
@@ -1503,7 +1503,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_REALM\_ACHIEVEMENT = 39**
 
--   -   ConditionValue1: achievement ID from [Achievement.dbc](Achievement)
+-   -   ConditionValue1: achievement ID from [Achievement.dbc](achievement)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
