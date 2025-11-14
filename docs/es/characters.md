@@ -457,7 +457,7 @@ Título actual, utilizando el campo bit_index (En orden de juego o InGameOrder d
 
 ### knownCurrencies
 
-Monedas/distintivos/insignias conocidas (Aquello que debe figurar en la pestaña Monedas), Máscara/Tabla de bits (sumatoria de Marcadores o 'flags) de BitIndexes, véase [CurrencyTypes.dbc](CurrencyTypes).
+Monedas/distintivos/insignias conocidas (Aquello que debe figurar en la pestaña Monedas), Máscara/Tabla de bits (sumatoria de Marcadores o 'flags) de BitIndexes, véase [CurrencyTypes.dbc](currencytypes).
 
 ### watchedFaction
 

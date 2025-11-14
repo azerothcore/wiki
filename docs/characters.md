@@ -457,7 +457,7 @@ Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](charti
 
 ### knownCurrencies
 
-Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](CurrencyTypes).
+Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](currencytypes).
 
 ### watchedFaction
 
