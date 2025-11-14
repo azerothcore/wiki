@@ -51,7 +51,7 @@ Esta información es recuperada de DBCStructure.h.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
-| 4      | [Map](Map) | iRefID  |
+| 4      | [Map](map) | iRefID  |
 | 5      | winCount   | Integer |
 
 #### REACH\_LEVEL = 5
@@ -130,7 +130,7 @@ Muerte en un mapa.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
-| 4      | [Map](Map) | iRefID |
+| 4      | [Map](map) | iRefID |
 
 #### DEATH\_IN\_DUNGEON = 18
 
@@ -236,7 +236,7 @@ Arenas jugadas.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
-| 4      | [Map](Map) | iRefID |
+| 4      | [Map](map) | iRefID |
 
 #### LEARN\_SPELL = 34
 

@@ -32,7 +32,7 @@ The spell ID. See [Spell.dbc](spell)
 
 ### target\_map
 
-Map where the player should be teleported to. See [Map.dbc](Map).
+Map where the player should be teleported to. See [Map.dbc](map).
 
 ### target\_position\_x
 

@@ -40,7 +40,7 @@ The character's class. `ChrClasses.dbc`
 
 ### map
 
-The map ID. See [Map.dbc](Map)
+The map ID. See [Map.dbc](map)
 
 ### zone
 

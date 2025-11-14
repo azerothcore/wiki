@@ -493,7 +493,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_DUNGEONDIFFICULTY = 31**
 
--   data0: mapID (From [Map.dbc](Map))
+-   data0: mapID (From [Map.dbc](map))
 -   data1: difficulty
 -   data2: DifficultyHeroic
 -   data3: DifficultyEpic

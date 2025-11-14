@@ -44,7 +44,7 @@ if -1 than position of npc where you can complete quest
 
 ### MapID
 
-The Map id from [Map.dbc](Map)
+The Map id from [Map.dbc](map)
 
 ### WorldMapAreaId
 

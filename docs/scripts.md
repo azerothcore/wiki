@@ -130,7 +130,7 @@ Depending on what command was used, the meaning and use for the following fields
 #### \*SCRIPT\_COMMAND\_TELEPORT\_TO = 6
 
 - source or target: Player (datalong2 0) or Creature (datalong2 1).
-- datalong: Target Map ID. See [Map.dbc](Map)
+- datalong: Target Map ID. See [Map.dbc](map)
 - x: Teleport target x coordinate.
 - y: Teleport target y coordinate.
 - z: Teleport target z coordinate.

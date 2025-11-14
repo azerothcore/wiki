@@ -56,7 +56,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
-| 4      | [Map](Map) | iRefID  |
+| 4      | [Map](map) | iRefID  |
 | 5      | winCount   | Integer |
 
 #### REACH\_LEVEL = 5
@@ -115,7 +115,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
-| 4      | [Map](Map) | iRefID |
+| 4      | [Map](map) | iRefID |
 
 #### DEATH\_IN\_DUNGEON = 18
 
@@ -193,7 +193,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
-| 4      | [Map](Map) | iRefID |
+| 4      | [Map](map) | iRefID |
 
 #### LEARN\_SPELL = 34
 
