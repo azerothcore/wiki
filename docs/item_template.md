@@ -1113,7 +1113,7 @@ For example, for Healthstone, there are several items like "Lesser Healthstone, 
 
 ### HolidayId
 
-See the [Holidays DBC file](Holidays) for the IDs of all of the holidays.
+See the [Holidays DBC file](holidays) for the IDs of all of the holidays.
 
 ### ScriptName
 
