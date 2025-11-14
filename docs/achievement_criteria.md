@@ -334,7 +334,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
-| 4      | [Item](Item) | iRefID  |
+| 4      | [Item](item) | iRefID  |
 | 5      | itemCount    | Integer |
 
 #### MONEY\_FROM\_QUEST\_REWARD= 62
