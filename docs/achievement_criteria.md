@@ -300,7 +300,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field               | Type    |
 | ------ | ------------------- | ------- |
-| 4      | [Class](ChrClasses) | iRefID  |
+| 4      | [Class](chrclasses) | iRefID  |
 | 5      | count               | Integer |
 
 #### HK\_RACE = 53

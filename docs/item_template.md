@@ -576,7 +576,7 @@ Which slot the Item will be equipped on.
 
 Bitmask controlling which classes can use this item. Add ids together to combine class possibilities. Use -1 if all classes can use it.
 
-See the [ChrClasses DBC file](ChrClasses) for the IDs of the classes.
+See the [ChrClasses DBC file](chrclasses) for the IDs of the classes.
 
 ### AllowableRace
 
