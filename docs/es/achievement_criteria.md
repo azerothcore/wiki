@@ -304,7 +304,7 @@ areaReference  **NO** es el índice de [AreaTable.dbc.](areatable), proviene de 
 
 #### OWN\_RANK = 44
 
-Este rango **NO** es el índice de [CharTitles.dbc](CharTitles)
+Este rango **NO** es el índice de [CharTitles.dbc](chartitles)
 
 | Column | Field | Type    |
 | ------ | ----- | ------- |

@@ -453,7 +453,7 @@ La cantidad de jugadores que el personaje mató ayer.
 
 ### chosenTitle
 
-Título actual, utilizando el campo bit_index (En orden de juego o InGameOrder dentro de [CharTitles.dbc](CharTitles)).
+Título actual, utilizando el campo bit_index (En orden de juego o InGameOrder dentro de [CharTitles.dbc](chartitles)).
 
 ### knownCurrencies
 
@@ -518,7 +518,7 @@ Equipamiento del personaje y alijo de la bolsa.
 
 ### knownTitles
 
-Contiene datos acerca de los títulos conocidos por el jugador almacenados en enteros de 6 x 16bit. Para calcular dónde se encuentra un título conocido en alguno de éstos 6 enteros se hace lo siguiente: Seleccionamos uno de los títulos en [CharTitles.dbc](CharTitles), a continuación tomamos el título de Archimago por ejemplo:
+Contiene datos acerca de los títulos conocidos por el jugador almacenados en enteros de 6 x 16bit. Para calcular dónde se encuentra un título conocido en alguno de éstos 6 enteros se hace lo siguiente: Seleccionamos uno de los títulos en [CharTitles.dbc](chartitles), a continuación tomamos el título de Archimago por ejemplo:
 
 | TitleID | UnkRef? | MaleTitle   | FemaleTitle | InGameOrder |
 | ------- | ------- | ----------- | ----------- | ----------- |

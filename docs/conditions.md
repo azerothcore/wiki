@@ -1325,7 +1325,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_TITLE = 18**
 
--   -   ConditionValue1: title ID from [CharTitles.dbc](CharTitles)
+-   -   ConditionValue1: title ID from [CharTitles.dbc](chartitles)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 

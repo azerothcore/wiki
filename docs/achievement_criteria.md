@@ -245,7 +245,7 @@ This information is retrieved from DBCStructure.h.
 
 #### OWN\_RANK = 44
 
-- This rank is **NOT** the index from [CharTitles.dbc](CharTitles)
+- This rank is **NOT** the index from [CharTitles.dbc](chartitles)
 
 | Column | Field | Type    |
 | ------ | ----- | ------- |
