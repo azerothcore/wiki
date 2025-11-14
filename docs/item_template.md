@@ -594,7 +594,7 @@ The level that a player must be to equip the item.
 
 ### RequiredSkill
 
-The skill required to use this item. See the [SkillLine DBC file](SkillLine) for IDs which can be used here.
+The skill required to use this item. See the [SkillLine DBC file](skillline) for IDs which can be used here.
 
 ### RequiredSkillRank
 

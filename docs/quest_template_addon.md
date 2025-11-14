@@ -78,7 +78,7 @@ How many seconds to wait until the mail is sent to the character that turned in 
 
 ### RequiredSkillID
 
-Skill required to know to accept the quest. See [SkillLine.dbc](SkillLine)
+Skill required to know to accept the quest. See [SkillLine.dbc](skillline)
 0 means no skill is required.
 
 ### RequiredSkillPoints

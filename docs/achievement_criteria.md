@@ -70,7 +70,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field      | Type    | Notes                               |
 | ------ | ---------- | ------- | ----------------------------------- |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine) or what? |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](skillline) or what? |
 | 5      | skillLevel | Integer |                                     |
 
 #### COMPLETE\_ACHIEVEMENT = 8
@@ -228,7 +228,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field      | Type    | Notes                                                                     |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------- |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine) or what?                                       |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](skillline) or what?                                       |
 | 5      | skillLevel | Integer | apprentice=1, journeyman=2, expert=3, artisan=4, master=5, grand master=6 |
 
 #### USE\_ITEM = 41
@@ -373,7 +373,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
-| 4      | [SkillLine](SkillLine) | iRefID  |
+| 4      | [SkillLine](skillline) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### WIN\_DUEL = 76
@@ -399,7 +399,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field       | Type   | Notes                                 |
 | ------ | ----------- | ------ | ------------------------------------- |
-| 4      | spellSchool | iRefID | [SkillLine](SkillLine) or Resistances |
+| 4      | spellSchool | iRefID | [SkillLine](skillline) or Resistances |
 
 #### HIGHEST\_RATING = 100
 
@@ -418,7 +418,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
-| 4      | [SkillLine](SkillLine) | iRefID  |
+| 4      | [SkillLine](skillline) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### EARN\_HONORABLE\_KILL = 113

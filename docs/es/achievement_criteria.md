@@ -69,7 +69,7 @@ Alcanza un nivel especificado en habilidad.
 
 | Column | Field      | Type    | Notes                               |
 | ------ | ---------- | ------- | ----------------------------------- |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine)?         |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](skillline)?         |
 | 5      | skillLevel | Integer |                                     |
 
 #### COMPLETE\_ACHIEVEMENT = 8
@@ -283,7 +283,7 @@ Aprender nivel de habilidad.
 
 | Column | Field      | Type    | Notes                                                                    |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------ |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine)?                                              |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](skillline)?                                              |
 | 5      | skillLevel | Integer | Aprendiz=1. Oficial=2. Experto=3. Artesano=4. Maestro=5. Gran Maestro=6. |
 
 #### USE\_ITEM = 41
@@ -464,7 +464,7 @@ Aprender hechizos de habilidad.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
-| 4      | [SkillLine](SkillLine) | iRefID  |
+| 4      | [SkillLine](skillline) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### WIN\_DUEL = 76
@@ -498,7 +498,7 @@ Mayor número de poder de hechizos.
 
 | Column | Field       | Type   | Notes                                 |
 | ------ | ----------- | ------ | ------------------------------------- |
-| 4      | spellSchool | iRefID | [SkillLine](SkillLine) o resistencias |
+| 4      | spellSchool | iRefID | [SkillLine](skillline) o resistencias |
 
 #### HIGHEST\_RATING = 100
 
@@ -523,7 +523,7 @@ Aprender línea de habilidad.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
-| 4      | [SkillLine](SkillLine) | iRefID  |
+| 4      | [SkillLine](skillline) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### EARN\_HONORABLE\_KILL = 113

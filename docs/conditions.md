@@ -1254,7 +1254,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_SKILL = 7**
 
--   -   ConditionValue1: skill required, see [SkillLine.dbc](SkillLine)
+-   -   ConditionValue1: skill required, see [SkillLine.dbc](skillline)
     -   ConditionValue2: skill value
     -   ConditionValue3: always 0
 
