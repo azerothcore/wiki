@@ -582,7 +582,7 @@ See the [ChrClasses DBC file](ChrClasses) for the IDs of the classes.
 
 Bitmask controlling which races can use this item. Add ids together to combine race possibilities. Use -1 for all races.
 
-See the [ChrRaces DBC file](ChrRaces) for the IDs of the races.
+See the [ChrRaces DBC file](chrraces) for the IDs of the races.
 
 ### ItemLevel
 

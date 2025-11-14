@@ -307,7 +307,7 @@ This information is retrieved from DBCStructure.h.
 
 | Column | Field            | Type    |
 | ------ | ---------------- | ------- |
-| 4      | [Race](ChrRaces) | iRefID  |
+| 4      | [Race](chrraces) | iRefID  |
 | 5      | count            | Integer |
 
 #### DO\_EMOTE = 54
