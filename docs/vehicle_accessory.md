@@ -39,7 +39,7 @@ Flying vehicles must have InhabitType set to (4 - Flying).
 
 ### seat\_id
 
-Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](VehicleSeat)
+Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](vehicleseat)
 
 ### minion
 
