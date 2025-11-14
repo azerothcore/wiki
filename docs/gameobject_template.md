@@ -219,7 +219,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_TRAP = 6**
 
-- data0: open (LockId from [Lock.dbc](Lock) )
+- data0: open (LockId from [Lock.dbc](lock) )
 - data1: level (npc equivalent level for casted spell)
 - data2: diameter (so radius \* 2)
 - data3: spell (Spell Id from [Spell.dbc](spell))
@@ -270,7 +270,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_GOOBER = 10**
 
--   data0: open (LockId from [Lock.dbc](Lock))
+-   data0: open (LockId from [Lock.dbc](lock))
 -   data1: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 -   data2: eventID (event\_script id)
 -   data3:  Time in ms before the initial state is restored
@@ -333,7 +333,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_CAMERA = 13**
 
--   data0: open (LockId from [Lock.dbc](Lock))
+-   data0: open (LockId from [Lock.dbc](lock))
 -   data1: camera (Cinematic entry from [CinematicCamera.dbc](CinematicCamera))
 -   data2: eventID
 -   data3: openTextID
@@ -409,7 +409,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_FLAGSTAND = 24**
 
--   data0: open (LockId from [Lock.dbc](Lock))
+-   data0: open (LockId from [Lock.dbc](lock))
 -   data1: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data2: radius (distance)
 -   data3: returnAura (Spell Id from [Spell.dbc](spell))
@@ -433,7 +433,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_FLAGDROP = 26**
 
--   data0: open (LockId from [Lock.dbc](Lock))
+-   data0: open (LockId from [Lock.dbc](lock))
 -   data1: eventID (Unknown Event ID)
 -   data2: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data3: noDamageImmune (Boolean flag)
