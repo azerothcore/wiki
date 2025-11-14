@@ -841,7 +841,7 @@ The ID referring to the text that the item will show (if it is a book or a lette
 
 The language that the item text is written in.
 
-See the [Languages DBC file](Languages) for the IDs of all of the languages.
+See the [Languages DBC file](languages) for the IDs of all of the languages.
 
 ### PageMaterial
 
