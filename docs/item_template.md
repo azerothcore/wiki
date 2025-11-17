@@ -887,7 +887,7 @@ Controls how the item is put away on the character. Press the 'Z' hotkey to shea
 | 3   | One Handed        | On the left-hand side of the character's waist.  |
 | 4   | Shield            | On the middle of the character's back.           |
 | 5   | Enchanter's Rod   |                                                  |
-| 6   | Off hand          | On the right-hand side of the character's waist. |
+| 7   | Off hand          | On the right-hand side of the character's waist. |
 
 ### RandomProperty
 
