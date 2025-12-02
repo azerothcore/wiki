@@ -27,6 +27,7 @@
 - [creature](creature)
 - [creature_addon](creature_addon)
 - [creature_classlevelstats](creature_classlevelstats)
+- [creature_default_trainer](creature_default_trainer)
 - [creature_equip_template](creature_equip_template)
 - [creature_formations](creature_formations)
 - [creature_loot_template](loot_template)
@@ -122,7 +123,6 @@
 - [npc_spellclick_spells](npc_spellclick_spells)
 - [npc_text](npc_text)
 - [npc_text_locale](npc_text_locale)
-- [npc_trainer](npc_trainer)
 - [npc_vendor](npc_vendor)
 
 ## O
@@ -213,6 +213,9 @@
 
 ## T
 - [transports](transports)
+- [trainer](trainer)
+- [trainer_locale](trainer_locale)
+- [trainer_spell](trainer_spell)
 
 ## U
 - [updates](updates)
