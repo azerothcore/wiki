@@ -203,7 +203,19 @@ The character name with the rights to the .mute command that give the mute.
 
 ### locale
 
-The locale used by the client logged into this account. If multiple locale data has been configured and added to the world servers, the world servers will return the proper locale strings to the client. See [localization IDs](Localization_lang)
+The locale used by the client logged into this account. If multiple locale data has been configured and added to the world servers, the world servers will return the proper locale strings to the client.
+
+| ID  | Language |
+| --- | -------- |
+| 0   | enUS     |
+| 1   | koKR     |
+| 2   | frFR     |
+| 3   | deDE     |
+| 4   | zhCN     |
+| 5   | zhTW     |
+| 6   | esES     |
+| 7   | esMX     |
+| 8   | ruRU     |
 
 ### os
 
