@@ -164,7 +164,7 @@ git -C ~/azerothcore/modules clone https://github.com/azerothcore/mod-anticheat
 ```bash
 rm -rf ~/server/data &&
 mkdir -p ~/server/data && cd ~/server/data &&
-wget https://github.com/wowgaming/client-data/releases/download/v18.0/data.zip &&
+wget https://github.com/wowgaming/client-data/releases/download/v19/data.zip &&
 7z x data.zip && rm data.zip
 ```
 ### Build Core
