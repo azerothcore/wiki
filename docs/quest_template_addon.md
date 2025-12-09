@@ -68,6 +68,8 @@ Allows to define a group of quests of which all must be completed and rewarded t
 
 Note: All quests that use an ExclusiveGroup must also have entries in [pool_template](pool_template) and [pool_quest](quest_template#examples-dealing-with-quests) for examples.
 
+**Important:** ExclusiveGroup should NOT be used for breadcrumb quests. Use [conditions](conditions#breadcrumb-quests) instead to properly handle optional lead-in quests.
+
 ### RewardMailTemplateID
 
 If the quest gives as a reward an item from a possible list of items, the ID here corresponds to the proper loot template in [quest_mail_loot_template](loot_template). According to the rules in that loot template, items "looted" will be sent by mail at the completion of the quest.
