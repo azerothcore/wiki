@@ -16,15 +16,16 @@ Rebuild the changes you pulled.
 
 ```sh
 cd build
-make -j 8; make install
+make -j$(nproc --all); make install
 ```
+_You can replace `-j$(nproc -all)` with the number of cores to build with. For example: -j 2_
 
 Sometimes we add or remove files from the repository. At that point it is necessary to recompile the server, the same way as it was installed the first time [in the Linux Core Installation](linux-core-installation#configuring-for-compiling).
 
 ## Using automation server
 If you would like to update AzerothCore using Jenkins, Teamcity or similar tool, following steps might help you.
 
-Add required commands to sudoers file. Services bellow were created [in the Linux Core Installation](linux-core-installation#services)
+Add required commands to sudoers file. Services bellow were created [in the Linux Core Installation](linux-core-installation#optional-systemd-services)
 ```sh
 sudo visudo
 
