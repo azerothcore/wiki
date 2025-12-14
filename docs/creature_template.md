@@ -42,10 +42,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [unit_flags2](#unitflags2)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [dynamicflags](#dynamicflags)                      | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [family](#family)                                  | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_type](#trainertype)                       | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_spell](#trainerspell)                     | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [trainer_class](#trainerclass)                     | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [trainer_race](#trainerrace)                       | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [type](#type)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [type_flags](#typeflags)                           | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
@@ -400,29 +396,6 @@ The family this creature belongs to.
 | 23. | Imp          | 44. | Wasp           |
 | 24. | Bat          | 45. | Core Hound     |
 | 25. | Hyena        | 46. | Spirit Beast   |
-
-#### trainer_type
-
-If the NPC is a trainer (has the trainer flag), then this field controls what kind of trainer it is. Both this field and the related field must be filled in for a trainer to work correctly.
-
-| ID  | Type                     | Related Field                   | Comments            |
-| --- | ------------------------ | ------------------------------- | ------------------- |
-| 0   | TRAINER_TYPE_CLASS       | [trainer_class](#trainer_class) | Trains class spells |
-| 1   | TRAINER_TYPE_MOUNTS      | [trainer_race](#trainer_race)   | Trains riding skill |
-| 2   | TRAINER_TYPE_TRADESKILLS | [trainer_spell](#trainer_spell) | Trains professions  |
-| 3   | TRAINER_TYPE_PETS        | [trainer_class](#trainer_class) | Trains pet skills   |
-
-#### trainer_spell
-
-If the NPC is a trainer that teaches professions ([trainer_type](#trainer_type) = 2), then the player must already know the spell ID specified here to be able to talk to this NPC.
-
-#### trainer_class
-
-If the NPC is a class trainer or a pet trainer ([trainer_type](#trainer_type) = 0 or 3), then the player's class must be the same as the value specified here to talk to this trainer. For pet trainers, this value must be 3 (hunter). See [characters.class](characters#class)
-
-#### trainer_race
-
-If the NPC is a mount trainer ([trainer_type](#trainer_type) = 1), then the player's race must be the same as the value specified here to talk to this trainer. See [characters.race](characters#race)
 
 #### type
 
