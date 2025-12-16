@@ -56,6 +56,21 @@ This will create an `azerothcore` directory in your home folder containing the A
 
 ## Compiling the source code
 
+> [!WARNING]
+> When using recent versions of Debian or Ubuntu, there's an automatic update checking and install that can brake the functioning of the server!
+> In fact, MySQL for example can be automatically updated (while the server is running!), so `authserver` and `worldserver` instantly crash and this situation may cause a loss of playtime.
+>
+> So, to avoid this, just do this:
+> 1. edit the file `sudo nano /etc/apt/apt.conf.d/20auto-upgrades`
+> 2. comment all the lines
+> 3. reboot
+>
+> This will prevent the system to update some useful programs and crashes your game server
+> 
+> links:  
+> https://discord.com/channels/217589275766685707/1255602330431127753/1369358673465442405
+> https://discord.com/channels/217589275766685707/555424966137479180/1445387284768620554
+
 ### Creating the build-directory
 
 To avoid issues with updates and colliding source builds, we create a specific build-directory, so we avoid any possible issues due to that (if any might occur)
