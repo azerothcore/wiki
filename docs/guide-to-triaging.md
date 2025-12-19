@@ -79,8 +79,8 @@ If you have the right permissions, also add the new AC issue to whichever projec
 ## Sources
 
 > [!IMPORTANT]
-> We aim to emulate 3.3.5 behaviour. Where original 3.3.5 sources are available, they take precedence.
-> Otherwise, we work with the sources at our disposal, applying our own discretion and judgement.
+> We aim to emulate 3.3.5 behaviour. Verified and validated original 3.3.5 sources take precedence where available.  
+> Where such sources are absent or conflicting, we exercise our own discretion and judgement, to analyze and validate the most accurate source.
 
 This is a general (and by no means exhaustive) look at the sources we can use to try to understand if a bug is valid or not. They include:
 
