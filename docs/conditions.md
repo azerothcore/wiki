@@ -1551,3 +1551,31 @@ Note: it will show or hide spells in vehicle spell bar.
 
 -   0 (If target needs to be on land)
 
+### Breadcrumb Quests
+
+Breadcrumb quests are optional quests that lead players to a quest hub or NPC but can be skipped if the player goes directly to the destination. Unlike mutually exclusive quests, a breadcrumb should only become unavailable after the player picks up or completes the main quest - NOT vice versa.
+
+**Do NOT use [ExclusiveGroup](quest_template_addon#exclusivegroup)** for breadcrumb quests. ExclusiveGroup makes quests mutually exclusive in both directions, which breaks quest progression if the player does the breadcrumb first.
+
+**Correct approach:** Use CONDITION_SOURCE_TYPE_QUEST_AVAILABLE (19) with CONDITION_QUESTTAKEN (9) and CONDITION_QUESTREWARDED (8) to hide the breadcrumb when the main quest is taken or completed.
+
+**Example:** Quest 11287 "Find Sage Mistwalker" is a breadcrumb leading to quest 11286 "The Artifacts of Steel Gate". Players can skip the breadcrumb and go directly to 11286.
+
+```sql
+-- Make breadcrumb unavailable if main quest is taken or rewarded
+DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId` = 19 AND `SourceEntry` = 11287;
+INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
+(19, 0, 11287, 0, 0, 9, 0, 11286, 0, 0, 1, 0, 0, '', 'Find Sage Mistwalker - Not available if The Artifacts of Steel Gate is taken'),
+(19, 0, 11287, 0, 0, 8, 0, 11286, 0, 0, 1, 0, 0, '', 'Find Sage Mistwalker - Not available if The Artifacts of Steel Gate is rewarded');
+```
+
+**Explanation:**
+- `SourceTypeOrReferenceId = 19`: CONDITION_SOURCE_TYPE_QUEST_AVAILABLE - controls when quest appears
+- `SourceEntry = 11287`: The breadcrumb quest ID
+- `ConditionTypeOrReference = 9`: CONDITION_QUESTTAKEN - checks if quest is in player's log
+- `ConditionTypeOrReference = 8`: CONDITION_QUESTREWARDED - checks if quest was completed
+- `ConditionValue1 = 11286`: The main quest ID to check against
+- `NegativeCondition = 1`: Inverts the condition (quest NOT available if condition is true)
+
+Both conditions are in ElseGroup 0, so they act as a logical AND - the breadcrumb is only available if the player has NOT taken AND has NOT been rewarded the main quest.
+
