@@ -1,19 +1,11 @@
----
-tableofcontents: 1
----
-
 # Introduction to SmartAI
 
-## What type of waypoint will I use?
+## Table of Contents
+- [Part I: Scripting a Simple Scripted Patrol](#part-i-scripting-a-simple-scripted-patrol)
+- [Part II: Event Phases and Links](#part-ii-event-phases-and-links)
+- [Part III: Conditions, Unique AI and Data Set](#part-iii-conditions-unique-ai-and-data-set)
 
-[WIP]
-
-SmartAI allows us to use 2 different waypoint tables:
-
-waypoint_data, which is used in cpp and in more general patrols
-waypoints, a type which was made specifically for SmartAI
-
-[WIP]
+---
 
 ## Part I: Scripting a Simple Scripted Patrol
 
@@ -81,9 +73,9 @@ I also added a few comments detailing what actions are taken on which waypoints.
 
 I use Keira to edit SmartAI, so that's what we'll use in this tutorial.
 
-[[assets/images/sai_tutorial/sai_tutor_1.png]]
+![Keira Editor](assets/images/sai_tutorial/sai_tutor_1.png)
 
-Since we're using patrols, we'll use a special event, called WAYPOINT_DATA_REACHED. If we used Event 40 (WAYPOINT_REACHED), it would **not** work. Because it will only trigger on waypoints in the [waypoints](waypoints) table, that is specific to SmartAI and we don't use for the more generic patrols such as this one.
+Since we're using patrols, we'll use a, event called WAYPOINT_REACHED. We could also use MOVEMENTINFORM, especially useful when we're dealing with single points rather than full paths.
 
 Keira will then generate an output we will copy and paste.
 
@@ -132,7 +124,7 @@ At first, they only cast Shadow Bolt and have no special resistances. However on
 
 I have an example ready: the Voidshrieker.
 
-[[assets/images/sai_tutorial/sai_tutor_2.png]]
+![Voidshrieker Script](assets/images/sai_tutorial/sai_tutor_2.png)
 
 Unreadable, right? But I'll try and make it easier to parse.But first we need to understand how Event Phases work.
 
@@ -142,7 +134,7 @@ Setting up the creature's Event Phase is an action, and it resets when the creat
 
 Check id 2 of the script. On Aggro the Event Phase will be set to 1, so what events belong to the Event Phase 1 set? In short, all of rows 3 through 18, a large chunk of the script.
 
-[[assets/images/sai_tutorial/sai_tutor_3.png]]
+![Event Phase Logic](assets/images/sai_tutorial/sai_tutor_3.png)
 
 These ones. After the Voidshrieker is hit by a spell of the schools above, it will play a sequence of actions, linked together with EVENT_LINK, then it will change its own phase. Notice that Event Phase 1 is only set On Aggro, so this behaviour can only be played ONCE per combat. If I hit it with a fire spell, the Event will play and change phase, so if I hit it again with a frost spell instead, it won't cast `Damage Reduction: Frost` because it's not in Phase 1, it's now in Phase 3.
 
@@ -152,7 +144,7 @@ P.S.: Event Flag 1 (No Repeat) resets once combat is over! To never reset and ma
 
 With these events in hand we'll use them to make the creature cast different spells depending on which Phase it's in.
 
-[[assets/images/sai_tutorial/sai_tutor_4.png]]
+![Spell Cast Events](assets/images/sai_tutorial/sai_tutor_4.png)
 
 All of these Events above are tied to timers, not triggers like On Spellhit. See `Cast 'Shadow Bolt`? That one is tied to two Event Phases, like in the Venn Diagram example I mentioned. If the player does not cast a spell, or is a warrior, for example, the Voidshrieker will cast Shadow Bolt by default, as well as casting it if the player did cast a Shadow Spell. And Psychic Scream? That one is tied to Event Phase 0, which means that no matter the Phase the creature is currently in, it'll run the timer and execute the event.
 
@@ -162,7 +154,7 @@ Going back to the flowchart I didn't yet explain properly how these actions are 
 
 Links allows us to play several actions simultaneously (or almost so), so it'll not allow us to make delays, but it's also a very powerful tool. To work with it, you need to set the id of the Event that will be linked in the `link` field.
 
-[[assets/images/sai_tutorial/sai_tutor_5.png]]
+[Linked Events](assets/images/sai_tutorial/sai_tutor_5.png)
 
 As you can see, Event 3 links to Event 4, so when Event 3 is executed, Event 4 will automatically be executed as well. The event that is linked needs to be, necessarily, Event type 61, EVENT_LINK.
 
@@ -176,27 +168,27 @@ Well, there's actually 8 of them. And they. all. have. different. AI.
 
 The combat mechanics and spells they use are common between them. They all Enrage, they all Pummel casters, and they all cast Aura of Discipline.
 
-[[assets/images/sai_tutorial/sai_tutor_6.png]]
+![Shattered Hand Legionnaire](assets/images/sai_tutorial/sai_tutor_6.png)
 
 But let's see, for example, the AI of GUID 151010, for that we check its guid-specific entry. Go to the SmartAI panel and search by entity like below.
 
-[[assets/images/sai_tutorial/sai_tutor_7.png]]
+![SmartAI Search Panel](assets/images/sai_tutorial/sai_tutor_7.png)
 
 You'll see several rows, all with ids numbered >1000, and with behaviour that is unique to this specific GUID
 
-[[assets/images/sai_tutorial/sai_tutor_8.png]]
+![GUID Specific Scripts](assets/images/sai_tutorial/sai_tutor_8.png)
 
 Lines 1001 to 1004 are RP scripts. Focus on the ones below. For example, on the general script in the first image, we see that once the creature receives DATA SET, an action that allows us to communicate between creatures, it'll Enrage. Every other creature in this dungeon, once they die, has a script to SET DATA on the nearest Legionnaire, so that they all Enrage. But if you include this guid-specific script, this particular Legionnaire will not only Enrage, they'll also say a special line and Summon a creature. We then use Event Phases to allow only one creature to spawn at a time.
 
 Now, the important part is that usually these guid-specific scripts override the creature's normal script, making it so we have to copy over, creating a lot of bloat. But around the time we were rewriting Shattered Halls, a friend of mine added an extra flag to creatures, which will make them load both their general SmartAI tied to its entry, as well as the SmartAI tied to its guid.
 
-[[assets/images/sai_tutorial/sai_tutor_9.png]]
+![Creature Template Flags](assets/images/sai_tutorial/sai_tutor_9.png)
 
 This is extremely important, as A LOT of creatures have unique behaviours, so to avoid enormous amounts of useless rows, we use this flag. Be aware that we use ids 1000+ when making guid-specific SAI in these cases, because row ids MUST NOT OVERLAP!
 
 Now. Let's look at these summons. How do they work? Well, it just so happens that each one **also** has unique behaviour! Because several legionnaires spawn them at different positions. And each can do a different thing.
 
-[[assets/images/sai_tutorial/sai_tutor_10.png]]
+![Summon Scripts](assets/images/sai_tutorial/sai_tutor_10.png)
 
 The issue is that summons have no guid that we could create a guid-specific script for.
 
@@ -204,7 +196,7 @@ The script above is for the summons, notice that when they are On Summoned, they
 
 Conditions are very powerful tools, and we can tie them directly to SmartAI, for each and any row.
 
-[[assets/images/sai_tutorial/sai_tutor_11.png]]
+![Conditions Panel](assets/images/sai_tutorial/sai_tutor_11.png)
 
 See where ConditionValue is 151010? That means that in SmartAI id 10 (11 - 1), that event will only play when the Invoker (in this case, the summoner) is the Legionnaire of GUID 151010.
 
