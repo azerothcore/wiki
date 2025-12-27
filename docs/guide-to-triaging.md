@@ -26,7 +26,7 @@ Once you have chosen an issue, start by searching for duplicates - quest names, 
 So now we have made sure this is a new bug, decide whether this is obviously incorrect behaviour, or if this might be caused by misunderstanding, misinterpretation, or ignorance of the game. This is often done by checking against the sources as listed below to determine if it is actually a bug at all. Some apparent bugs are intended behaviour, and other reports are caused by changes in the game - for example, what was correct behaviour in Vanilla might be incorrect in Wrath due to balancing changes.
 
 ### 4. Try to reproduce it
-If this is a genuine issue, try to follow the user's instructions to duplicate it. If the user didn't give you enough information to reproduce the problem, you can always ask them to clarify and tag the issue on the CC tracker as "Waiting for Feedback".
+If this is a genuine issue, try to follow the user's instructions to duplicate it. You can do this either in the CC PTR or your own AC local server. If the user didn't give you enough information to reproduce the problem, you can always ask them to clarify and tag the issue on the CC tracker as "Waiting for Feedback".
 
 If you can't make the behaviour reoccur on your own server, be aware that a vanilla AC server does not always behave the same way as the ChromieCraft server. There are numerous mods and other customisations on CC that can have unpredictable effects, and as a result bugs that are not reproduceable on a vanilla AC server are reported reasonably often. 
 
@@ -67,17 +67,6 @@ For the CC issue, you can tag it with 'Confirmed', 'Linked to AC', and a tag ind
 
 If you have the right permissions, also add the new AC issue to whichever project is relevant, usually the one matching the issue's level range.
 
-#### Priority Tags
-You can also set the perceived priority of an issue via tags. They are:
-
-| Tag Level | Description |
-|-----------|-------------|
-| **Critical** | Should only be used in the event of server-breaking bugs |
-| **High** | Game-breaking bugs with no workaround |
-| **Medium** | Game-breaking bugs that do have a workaround |
-| **Low** | More typical bugs with quests/items/NPCs, etc. Your 'standard' bug |
-| **Trivial** | Bugs that have no real impact on gameplay, typically cosmetic |
-
 ## Guidelines
 - **Use your judgement.** We are there to exercise our best judgement, not just as photocopiers. We have access to tools and information that most players don't, so we should be able to see more deeply into a problem than they can and make decisions accordingly.
 - **Generalize the problem.** Try to generalise or broaden a problem. If one unusual kind of item, NPC or spell is not working correctly, try checking other items of the same general type to see if they are broken as well. Ideally we want to capture the broadest possible range of errors that we can.
@@ -88,6 +77,11 @@ You can also set the perceived priority of an issue via tags. They are:
 - **Be polite.** When someone submits a bug report, they are doing us a favour. They've taken the time to make a GitHub account and type up a bug report to try to help us. The least we can do is be professional and courteous in return. 
 
 ## Sources
+
+> [!IMPORTANT]
+> We aim to emulate 3.3.5 behaviour. Verified and validated original 3.3.5 sources take precedence where available.  
+> Where such sources are absent or conflicting, we exercise our own discretion and judgement, to analyze and validate the most accurate source.
+
 This is a general (and by no means exhaustive) look at the sources we can use to try to understand if a bug is valid or not. They include:
 
 - [TBC Wowhead](http://tbc.wowhead.com/) or [Current Wowhead](https://www.wowhead.com/) - Wowhead is a important if flawed source of data, both because of the site's own data and the comments that users have made on it. The Wowhead comments are probably the largest single set of information on individual quests and items we have, which is why it's a pity that so much of it is utter rubbish. 
@@ -137,5 +131,5 @@ This is a general (and by no means exhaustive) look at the sources we can use to
 
 ## Other Links
 - [Current ChromieCraft version](https://github.com/chromiecraft/azerothcore-wotlk)
-- [ChromieCraft mods](https://raw.githubusercontent.com/chromiecraft/chromiecraft/main/.github/CC_SERVER_INFO)
+- [ChromieCraft mods](https://github.com/chromiecraft/chromiecraft/blob/main/.github/CC_SERVER_INFO.md)
 - [How to triage](https://github.com/chromiecraft/chromiecraft#for-contributors-how-to-triagereport-bugs)

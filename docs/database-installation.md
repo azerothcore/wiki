@@ -1,9 +1,9 @@
 # Database Installation
 
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 3: Server Setup](server-setup) | [Step 5: Networking >>](networking) |
+| Installation Guide                                                                                                                   |                                     |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Step 3: Server Setup](server-setup)                                                                                              | [Step 5: Networking >>](networking) |
 
 ## Creating the Database in MySQL
 
@@ -28,8 +28,8 @@ The Auth- and Worldserver checks and applies all needed database files at startu
 
 To edit the automatic database updater you will find the necessary settings in authserver.conf and worldserver.conf under **UPDATE SETTINGS**.
 
-1. Start Authserver.
-2. Start Worldserver.
+1. Start Authserver.exe, in the Build folder you created, under \bin\RelWithDebInfo or \bin\Debug folder.
+2. Start Worldserver.exe, in the same location.
 
 If you get the following message in your console press enter to create and populate the databases.
 
@@ -42,17 +42,9 @@ Do you want to create it? [yes (default) / no]:
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 3: Server Setup](server-setup) | [Step 5: Networking >>](networking) |
+| Installation Guide                                                                                                                   |                                     |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Step 3: Server Setup](server-setup)                                                                                              | [Step 5: Networking >>](networking) |

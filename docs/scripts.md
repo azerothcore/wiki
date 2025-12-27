@@ -35,7 +35,7 @@ NOTE: An entry in this table may have more than one row as a script may do more 
 
 ### id
 
-For **spell\_scripts**, it is the spell ID. See [Spell.dbc](Spell)
+For **spell\_scripts**, it is the spell ID. See [Spell.dbc](spell)
 
 For **event\_scripts**, it is the event ID. There doesn't exist currently a full list of events. In any case, the event IDs are taken directly from gameobject WDB data or spell effect data. If both a gameobject and a spell activate the same event, the IDs will match.
 
@@ -130,7 +130,7 @@ Depending on what command was used, the meaning and use for the following fields
 #### \*SCRIPT\_COMMAND\_TELEPORT\_TO = 6
 
 - source or target: Player (datalong2 0) or Creature (datalong2 1).
-- datalong: Target Map ID. See [Map.dbc](Map)
+- datalong: Target Map ID. See [Map.dbc](map)
 - x: Teleport target x coordinate.
 - y: Teleport target y coordinate.
 - z: Teleport target z coordinate.
@@ -185,14 +185,14 @@ Depending on what command was used, the meaning and use for the following fields
 #### \*SCRIPT\_COMMAND\_REMOVE\_AURA = 14
 
 - source (datalong2 != 0) or target (datalong2 h1. 0): Unit.
-- datalong: Spell ID. See [Spell.dbc](Spell)
+- datalong: Spell ID. See [Spell.dbc](spell)
 - datalong2: If value &gt; 0, then remove from the source; otherwise remove from the target.
 
 #### \*SCRIPT\_COMMAND\_CAST\_SPELL = 15
 
 - source: Unit.
 - target: Unit.
-- datalong: Spell ID. See [Spell.dbc](Spell)
+- datalong: Spell ID. See [Spell.dbc](spell)
 - datalong2:
   - 0 - Source-&gt;Target
   - 1 - Source-&gt;Source (Self cast, use for dummy spells)
@@ -212,6 +212,8 @@ Depending on what command was used, the meaning and use for the following fields
   - 1 - play direct sound to target (must be Player).
   - 2 - play sound with distance dependency to anyone.
   - 3 - play sound with distance dependency to target (must be Player).
+  - 4 - play sound within radius to anyone.
+- dataint: radius if datalong2 value is 4
 
 #### \*SCRIPT\_COMMAND\_CREATE\_ITEM = 17
 

@@ -1,15 +1,15 @@
 # Requisitos macOS
 
-| Guía de instalación | |
-| :- | :- |
+| Guía de instalación                                                                                                                             |                                                              |
+| :---------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del núcleo >>](macos-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation)                                                                                          | [Paso 2: Instalación del núcleo >>](macos-core-installation) |
 
-| |
-| :- |
-| Boost ≥ 1.70 |
-| MySQL ≥ 5.7.0 |
-| CMake ≥ 3.16 |
+|               |
+| :------------ |
+| Boost ≥ 1.70  |
+| MySQL ≥ 8.0.0 |
+| CMake ≥ 3.16  |
 
 - Instala XCode usando la App Store, luego abre la terminal y escribe:
 
@@ -60,7 +60,7 @@ Si todavía tiene problemas, compruebe:
 
 * [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff le responderá siempre que tenga tiempo.
 
-| Guía de instalación | |
-| :- | :- |
+| Guía de instalación                                                                                                                             |                                                              |
+| :---------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del núcleo >>](macos-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation)                                                                                          | [Paso 2: Instalación del núcleo >>](macos-core-installation) |

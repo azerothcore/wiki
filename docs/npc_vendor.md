@@ -60,4 +60,4 @@ Combined with [maxcount](#maxcount), this field tells how often (in seconds) the
 
 ### ExtendedCost
 
-The value here corresponds to the ID in [ItemExtendedCost.dbc](NO_LINK_YET) and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.
+The value here corresponds to the ID in [ItemExtendedCost.dbc](itemextendedcost_dbc#id) and that ID controls the item's non monetary price, be it honor points, arena points, different types of badges or any combination of the above.

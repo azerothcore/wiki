@@ -17,7 +17,7 @@ Leer en: [Inglés :gb:](home) [Español :es:](home)
 ## Documentación
 
 - [Índice de documentación](documentation-index) - Toda la documentación en un solo lugar
-- [Doxygen Docs](https://www.azerothcore.org/pages/doxygen/) - Documentación del código
+- [Doxygen Docs](https://www.azerothcore.org/doxygen/) - Documentación del código
 
 ## Descripción general
 
@@ -53,3 +53,17 @@ AzerothCore tiene una comunidad activa de desarrolladores, contribuyentes y usua
 ### Personalización
 
 AzerothCore está diseñado para ser altamente modular, lo que permite a los desarrolladores ampliar y personalizar el juego para adaptarlo a sus preferencias o crear experiencias de juego únicas. Esta flexibilidad permite agregar características, contenido y modificaciones personalizadas. [Leer más...](the-modular-structure)
+
+<br>
+
+## Ayuda
+
+Si sigue teniendo inconvenientes, revise:
+
+* [Preguntas frecuentes](faq.md)
+
+* [Errores Comunes](common-errors.md)
+
+* [Cómo solicitar ayuda](how-to-ask-for-help.md)
+
+* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.

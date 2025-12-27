@@ -18,7 +18,7 @@ For those PRs there is a simpler way to test them, which will be explained in th
 
 This tutorial assumes that you:
 
-- have a **recent** version of AzerothCore installed in your system (either using the [traditional setup](Installation) or the [Docker setup](Install-with-Docker)). We recommend using latest `master`.
+- have a **recent** version of AzerothCore installed in your system (either using the [traditional setup](installation) or the [Docker setup](Install-with-Docker)). We recommend using latest `master`.
 - have a GitHub account, you can [register one here](https://github.com/join) for free.
 - have a database client such as [HeidiSQL](https://www.heidisql.com/), Navicat or similar.
 
@@ -62,7 +62,7 @@ After you test the changes, you need to return in a clean state (as you were bef
 
 - On a **traditional setup**, you can delete your `acore_world` database and use the DB assembler to generate a new one
 
-- On a **docker setup**, you can destroy and recreate your containers using `docker-compose down` and `docker-compose up`.
+- On a **docker setup**, you can drop the `acore_world` database via HeidiSQL, and run `docker compose up` inside the azerothcore-wotlk directory, and you will be prompted to re-create the `acore_world` database (press enter)
 
 ## Reports
 

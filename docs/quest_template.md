@@ -231,14 +231,13 @@ The quest ID. This column is the Primary Key for the Table. Each quest ID must b
 
 ### QuestType
 
-Accepted values: 0, 1, 2 or 3. Their meaning is described in table below.
+Accepted values: 0, 1 or 2. Their meaning is described in table below.
 
 | Value | Result                                                                                                   |
 | ----- | -------------------------------------------------------------------------------------------------------- |
 | 0     | Quest is enabled, but it is auto-completed when accepted; this skips quest objectives and quest details. |
 | 1     | Quest is disabled (not yet implemented in the core).                                                     |
 | 2     | Quest is enabled (does not auto-complete).                                                               |
-| 3     | Quest is a World Quest.                                                                                  |
 
 ### QuestLevel
 
@@ -258,7 +257,22 @@ if **value &lt; 0** then (**-value**) is quest sort id: (in general profession o
 
 ### QuestInfoID
 
-These values are ID taken from [QuestInfo.dbc](QuestInfo)
+These values are ID taken from [QuestInfo.dbc](questinfo)
+
+| Value | Result       |
+| ----- | ------------ |
+| 0     | None         |
+| 1     | Group        |
+| 21    | Life         |
+| 41    | PvP          |
+| 62    | Raid         |
+| 81    | Dungeon      |
+| 82    | Event        |
+| 83    | Legendary    |
+| 84    | Escort       |
+| 85    | Heroic       |
+| 88    | Raid (10)    |
+| 89    | Raid (25)    |
 
 ### SuggestedGroupNum
 
@@ -317,7 +331,7 @@ Spell that is shown to be casted on quest completion in the quest log. Note that
 
 ### RewardSpell
 
-Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpellCast](quest_template#rewardspellcast) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
+Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](quest_template#rewardspell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
 NOTE: This field comes straight from the WDB and should not be changed.
 

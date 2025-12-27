@@ -87,7 +87,7 @@ List of few known values and what their visual effects on the creature
 
 Emote ID that the creature should continually perform.
 
-List of often used emote IDs and what they do can be found [here](Emotes).
+List of often used emote IDs and what they do can be found [here](emotes).
 
 ### aiAnimKit / movementAnimKit / meleeAnimKit
 

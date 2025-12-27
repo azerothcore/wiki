@@ -7,6 +7,7 @@
 - [addons](addons)
 - [arena_team](arena_team)
 - [arena_team_member](arena_team_member)
+- [active_arena_season](active_arena_season)
 - [auctionhouse](auctionhouse)
 
 ## B
@@ -22,6 +23,7 @@
 - [channels_rights](channels_rights)
 - [character_account_data](character_account_data)
 - [character_achievement](character_achievement)
+- [character_achievement_offline_updates](character_achievement_offline_updates)
 - [character_achievement_progress](character_achievement_progress)
 - [character_action](character_action)
 - [character_arena_stats](character_arena_stats)
@@ -95,6 +97,8 @@
 - [mail](mail)
 - [mail_items](mail_items)
 - [mail_server_character](mail_server_character)
+- [mail_server_template_conditions](mail_server_template_conditions)
+- [mail_server_template_items](mail_server_template_items)
 - [mail_server_template](mail_server_template)
 
 ## P

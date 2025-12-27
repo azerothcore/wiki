@@ -1,15 +1,11 @@
 # Database Keeping the Server Up-to-Date
 
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
+| Installation Guide                                                                                                                   |                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Step 6: Final Server Steps](final-server-steps)                                                                                  | [Step 8: Client Setup >>](client-setup) |
 
 1. First make sure that your core is [up-to-date](keeping-the-server-up-to-date).
-
-If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
-
-1. First make sure that your core is [up-to-date](keeping-the-server-up-to-date.md).
 
 If you want to know how the SQL directory works or plan to have custom changes we recommend you read [this](sql-directory).
 
@@ -25,17 +21,9 @@ To edit the automatic database updater you will find the necessary settings in a
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
+| Installation Guide                                                                                                                   |                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Step 6: Final Server Steps](final-server-steps)                                                                                  | [Step 8: Client Setup >>](client-setup) |

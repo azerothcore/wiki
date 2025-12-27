@@ -1,17 +1,18 @@
 # Linux Requirements
 
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |
+| Installation Guide                                                                                                                   |                                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](linux-core-installation) |
 
-| |
-| :- |
-| MySQL ≥ 5.7.0 |
-| Boost ≥ 1.74 |
-| OpenSSL ≥ 3.0.x |
-| CMake ≥ 3.16 |
-| Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
+|                                                                                 |
+| :------------------------------------------------------------------------------ |
+| [MySQL](https://github.com/azerothcore/azerothcore-wotlk/security/policy)       |
+| Boost ≥ 1.74                                                                    |
+| OpenSSL ≥ 3.0.x                                                                 |
+| CMake ≥ 3.16                                                                    |
+| [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy)          |
+| [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
 #### Ubuntu with MySQL 8.x
 
@@ -19,50 +20,53 @@
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
-#### Ubuntu with MariaDB 10.x
-
-AzerothCore does only support MariaDB versions 10.6 and 10.5.
-
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
-
-```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
-```
-
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
-**Note**: If you get the error **cannot find -lstdc++** you need to install `g++-12` and it's dependencies.
-
-To configure MySQL in Ubuntu 18.04 and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
-
-**Note**: in older versions of Ubuntu like **18.04** you need to install `gcc-10` and `libboost1.74-dev`:
-
-```
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-sudo add-apt-repository -y ppa:mhier/libboost-latest
-sudo apt-get update
-sudo apt install -y gcc-10 g++-10
-sudo apt install -y install libboost1.74-dev
-```
+To configure MySQL in Ubuntu and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
 ---
 
-#### Debian 10 / Debian 12
-
-{% include note.html content="Some users experience issues when starting the servers while having MariaDB and MySQL installed at the same time. If you experience this issue try to uninstall MySQL or join the Discord to ask for help." %}
+#### Debian 12
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
+apt-get update && apt-get install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
-**Note:** If you add the option `-y` and at the end of the list, it will start installing them without the need for you to confirm.
+**Note:** By using the option `-y`, it will start installing without the need for you to confirm.
 
-**Example:**
+---
+
+##### Install MySQL
+
+1. Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) page to verify and download the latest script version.
+```sh
+export MYSQL_APT_CONFIG_VERSION=0.8.33-1
+```
+
+1. Download the latest MySQL repository information package.
 
 ```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
+wget https://dev.mysql.com/get/mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+```
+
+1. (Recommended) Verify config authenticity. If you encounter any issues with this step, please refer to: https://dev.mysql.com/doc/refman/8.4/en/checking-gpg-signature.html
+```sh
+wget "https://dev.mysql.com/downloads/gpg/?file=mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb&p=37" -O mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
+gpg --keyserver pgp.mit.edu --recv-keys A8D3785C
+gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
+```
+
+1. Non-Interactive install using `DEBIAN_FRONTEND="noninteractive"` to install the latest MYSQL-LTS release, e.g. `mysql-8.4-lts` without any user prompts showing up.
+
+```sh
+sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+rm -v ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+unset MYSQL_APT_CONFIG_VERSION
+sudo apt-get update
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server libmysqlclient-dev
 ```
 
 ---
@@ -73,23 +77,9 @@ apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlc
 clang --version
 ```
 
-Your `clang` version **MUST** be `10` or higher ([here](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) you can check the versions that run in our Github Actions pipeline, we recommend to use one of those versions).
+Your `clang` version **MUST** be equal or higher than the required version listed on the top of this page.
 
-For example, if you are using an older version of Ubuntu like 18.04, you need to install clang using:
-
-```sh
-sudo apt-get install clang-10.0
-```
-
-If you use another distro or version, search on google for how to install the right clang version for your system.
-
-Currently the project requires clang10 or higher.
-
-This is a way to upgrade and install version 11.
-
-The answer is detailed here:
-
-[How to install clang 11 on Debian](https://stackoverflow.com/questions/66223241/how-to-install-clang-11-on-debian)
+---
 
 #### Check your cmake version
 
@@ -97,56 +87,25 @@ The answer is detailed here:
 cmake --version
 ```
 
-Your `cmake` version **MUST** be `3.16` or higher.
-
-On an older version of Ubuntu (example: 16.04), you can follow the instructions here in order to install the latest cmake version. On debian you would need to use the backports sources or build Cmake manually.
-
-Remember that it is possible to update cmake, using Python.
-
-Install:
-
-```sh
-python -m pip install cmake
-```
-
-Update:
-
-```sh
-python -m pip install --upgrade cmake
-```
-
-#### Ensure that the gcc-8 headers are installed
-
-This is an issue if for example using an older version of Ubuntu like 16.04. There you have to add the PPA "Toolchain test builds":
-https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
-
-After
-
-```sh
-sudo apt-get update
-```
-
-you can install gcc-8: 
-
-```sh
-sudo apt-get install g++-8 gcc-8
-```
+Your `cmake` version **MUST** be equal or higher than the required version listed on the top of this page.
 
 ---
 
+#### Check your openssl version
+
+```sh
+openssl version
+```
+
+Your `openssl` version **MUST** be equal or higher than the required version listed on the top of this page.
+
+--
+
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](linux-core-installation) |
+| Installation Guide                                                                                                                   |                                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](linux-core-installation) |

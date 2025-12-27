@@ -6,17 +6,21 @@ tableofcontents: 1
 
 ## Required Software
 
-1. [Influx DB](https://www.influxdata.com/products/influxdb-overview/) 1.x - a time-series data storage.
+1. [Influx DB](https://www.influxdata.com/products/influxdb-overview/) - a time-series data storage.
 
-1. [Grafana](https://grafana.com/) - graph and a dashboard builder for visualizing time series metrics.
+2. [Grafana](https://grafana.com/) - graph and a dashboard builder for visualizing time series metrics.
+
+{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1. However, you can use [Chronograf](#additional-visualizations-and-metrics-collection) to visulize it, but you need to set that up yourself. " %}
+
+{% include note.html content="We do not support Influx DB v3." %}
 
 ### Installing Influx DB
 
 1. Download and install InfuxDB version 1.x from https://portal.influxdata.com/downloads/ for your operating system. (Version 2.x is currently not supported.)
 
-1. Start InfuxDB
+2. Start InfuxDB
 
-1. Create a user and a database in InfluxDB using the Influx CLI and executing the commands below:
+3. Create a user and a database in InfluxDB using the Influx CLI and executing the commands below:
 
 ```sql
 CREATE DATABASE worldserver
@@ -24,19 +28,21 @@ CREATE USER grafana WITH PASSWORD 'grafana'
 GRANT READ ON worldserver TO grafana
 ```
 
+4. The token you get after creating a user is very important, both in grafana and in the worldserver config.
+
 ### Installing Grafana
 
 1. Download and install Grafana from https://grafana.com/docs/grafana/latest/installation/
 
-1. Open the dashboard at http://localhost:3000
+2. Open the dashboard at http://localhost:3000
 
-1. Login with username *admin* and password *admin* (defaults can be changed in Grafana's .ini file. In newer versions of Grafana you will be prompted to change this at first login.)
+3. Login with username *admin* and password *admin* (defaults can be changed in Grafana's .ini file. In newer versions of Grafana you will be prompted to change this at first login.)
 
-1. Hover the cogwheel and select Data Sources
+4. Hover the cogwheel and select Data Sources
 
-1. Search for InfluxDB and select.
+5. Search for InfluxDB and select.
 
-1. Fill in the required data below.
+6. Fill in the required data below.
 
 ```
 Name: Influx
@@ -127,16 +133,6 @@ METRIC_EVENT("player_events", "Login", pCurrChar->GetName());
 METRIC_VALUE("update_time_diff", diff);
 ```
 
-## Additional visualizations and metrics collection
-
-InfluxDB is part of a bigger set of projects by [InfluxData](https://www.influxdata.com/) which integrate nicely with the DB:
-
-- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) can be used to collect system metrics like CPU, I/O, memory usage and other services such as MySQL – to display this info next to the AC metrics.
-
-- [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/) is an alternative to Grafana to graph and visualize time-series metrics.
-
-- [Kapacitator](https://www.influxdata.com/time-series-platform/kapacitor/) is able to process streaming data from InfluxDB to provide alerts, trigger events, detect anomalies or transform data.
-
 ## Additional Reading
 
 Lean more about InfluxDB and Grafana:
@@ -148,3 +144,27 @@ Lean more about InfluxDB and Grafana:
 * [Grafana live demo](http://play.grafana.org/)
 * [Adding InfluxDB to Grafana](http://docs.grafana.org/datasources/influxdb/)
 
+## InfluxDB v2
+
+1. Download InfluxDB v2
+2. Start InfluxDB
+3. Head to http://127.0.0.1:8086
+4. Create User
+```
+Username: grafana
+Password: grafana
+Initial Organization Name: Grafana
+Initial Bucket Name: worldserver
+```
+
+[Use for example Chronograf to visualize the data.](#additional-visualizations-and-metrics-collection)
+
+## Additional visualizations and metrics collection
+
+InfluxDB is part of a bigger set of projects by [InfluxData](https://www.influxdata.com/) which integrate nicely with the DB:
+
+- [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) can be used to collect system metrics like CPU, I/O, memory usage and other services such as MySQL – to display this info next to the AC metrics.
+
+- [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/) is an alternative to Grafana to graph and visualize time-series metrics.
+
+- [Kapacitator](https://www.influxdata.com/time-series-platform/kapacitor/) is able to process streaming data from InfluxDB to provide alerts, trigger events, detect anomalies or transform data.

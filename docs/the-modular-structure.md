@@ -14,7 +14,7 @@ This results in always having a clean core that is easy to maintain and to keep 
 
 In order to change game features, modules use **script hooks**, which are a collection of functions [implemented into the core](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h) and are able to operate from the very beginning of the server (as soon as the World initialization starts).
 
-The list of the script hooks is available [here](Hooks-Script).
+The list of the script hooks is available [here](hooks-script).
 
 Sometimes you need to add new hooks for your custom module, it's absolutely possible to add them to the core. There are just a few steps needed in order to create a new hook, please follow this guide [here](hooks-script) to learn how.
 

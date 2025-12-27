@@ -13,7 +13,7 @@
 
 
 [1]: #realmid
-[2]: #username
+[2]: #text
 
 ## Description of the fields
 

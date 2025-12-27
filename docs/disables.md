@@ -28,59 +28,59 @@ This table is used to disable dungeons/bgs/spells/etc.
 
 ### sourceType
 
-| Value | Type                                 |
-| ----- | ------------------------------------ |
-| 0     | DISABLE\_TYPE\_SPELL                 |
-| 1     | DISABLE\_TYPE\_QUEST                 |
-| 2     | DISABLE\_TYPE\_MAP                   |
-| 3     | DISABLE\_TYPE\_BATTLEGROUND          |
-| 4     | DISABLE\_TYPE\_ACHIEVEMENT\_CRITERIA |
-| 5     | DISABLE\_TYPE\_OUTDOORPVP            |
-| 6     | DISABLE\_TYPE\_VMAP                  |
-| 7     | DISABLE\_TYPE\_MMAP                  |
-| 8     | DISABLE\_TYPE\_LFG\_MAP              |
-| 9     | DISABLE\_TYPE\_GAME\_EVENT           |
-| 10    | DISABLE\_TYPE\_LOOT                  |
+| Value | Type                              |
+| ----- | --------------------------------- |
+| 0     | DISABLE_TYPE_SPELL                |
+| 1     | DISABLE_TYPE_QUEST                |
+| 2     | DISABLE_TYPE_MAP                  |
+| 3     | DISABLE_TYPE_BATTLEGROUND         |
+| 4     | DISABLE_TYPE_ACHIEVEMENT_CRITERIA |
+| 5     | DISABLE_TYPE_OUTDOORPVP           |
+| 6     | DISABLE_TYPE_VMAP                 |
+| 7     | DISABLE_TYPE_MMAP                 |
+| 8     | DISABLE_TYPE_LFG_MAP              |
+| 9     | DISABLE_TYPE_GAME_EVENT           |
+| 10    | DISABLE_TYPE_LOOT                 |
 
 ### entry
 
 Entry of Spell/Quest/Map/BG/Achievement/Map/GameEvent/Item.
 
-***If sourceType = DISABLE\_TYPE\_SPELL:***
+***If sourceType = DISABLE_TYPE_SPELL:***
 
 Entry of Spell
 
-***If sourceType = DISABLE\_TYPE\_QUEST:***
+***If sourceType = DISABLE_TYPE_QUEST:***
 
 [quest_template.id](quest_template#id)
 
-***If sourceType = DISABLE\_TYPE\_MAP:***
+***If sourceType = DISABLE_TYPE_MAP:***
 
-***If sourceType = DISABLE\_TYPE\_VMAP:***
+***If sourceType = DISABLE_TYPE_VMAP:***
 
-***If sourceType = DISABLE\_TYPE\_MMAP:***
+***If sourceType = DISABLE_TYPE_MMAP:***
 
-***If sourceType = DISABLE\_TYPE\_OUTDOORPVP:***
+***If sourceType = DISABLE_TYPE_OUTDOORPVP:***
 
-***If sourceType = DISABLE\_TYPE\_LFG\_MAP:***
+***If sourceType = DISABLE_TYPE_LFG_MAP:***
 
 Entry of Map
 
-***If sourceType = DISABLE\_TYPE\_ACHIEVEMENT\_CRITERIA:***
+***If sourceType = DISABLE_TYPE_ACHIEVEMENT_CRITERIA:***
 
 Entry of Achievement
 
-***If sourceType = DISABLE\_TYPE\_GAME\_EVENT:***
+***If sourceType = DISABLE_TYPE_GAME_EVENT:***
 
 [game_event.eventEntry](game_event#evententry)
 
-***If sourceType = DISABLE\_TYPE\_LOOT:***
+***If sourceType = DISABLE_TYPE_LOOT:***
 
 [item_template.entry](item_template#entry)
 
 ### flags
 
-If sourceType = DISABLE\_TYPE\_SPELL: Specifies who the spell is disabled for.
+If sourceType = DISABLE_TYPE_SPELL: Specifies who the spell is disabled for.
 
 | Value | Type                                                                                          |
 | ----- | --------------------------------------------------------------------------------------------- |
@@ -97,7 +97,7 @@ Example: INSERT INTO \`disables\` VALUES (0, 8921, (1+16+32), "571,1", "1519", "
 
 This will disable spell Moonfire (8921) for players in maps 571,1 and area 1519.
 
-***If sourceType = DISABLE\_TYPE\_MAP:***
+***If sourceType = DISABLE_TYPE_MAP:***
 
 Specifies what type of map is disabled (5man/10man/heroic/etc).
 
@@ -110,44 +110,44 @@ Specifies what type of map is disabled (5man/10man/heroic/etc).
 
 The value is a bitmask of VALID modes for the specific map, 15 is as such NOT a valid mask on certain maps, only those actually found possible for the respective map.
 
-***If sourceType = DISABLE\_TYPE\_VMAP:***
+***If sourceType = DISABLE_TYPE_VMAP:***
 
 Specifies on which map should be vMap disabled
 
-| Value | Type                    |
-| ----- | ----------------------- |
-| 1     | VMAP\_DISABLE\_AREAFLAG |
-| 2     | VMAP\_DISABLE\_HEIGHT   |
-| 4     | VMAP\_DISABLE\_LOS      |
-| 8     | VMAP\_LIQUIDSTATUS      |
+| Value | Type                  |
+| ----- | --------------------- |
+| 1     | VMAP_DISABLE_AREAFLAG |
+| 2     | VMAP_DISABLE_HEIGHT   |
+| 4     | VMAP_DISABLE_LOS      |
+| 8     | VMAP_LIQUIDSTATUS     |
 
 Example: INSERT INTO \`disables\` VALUES (6, 1, (2 + 4), 0, 0, "Disable Kalimdor vMaps");
 
 This will disable vMaps on whole Kalimdor.
 
-***If sourceType = DISABLE\_TYPE\_QUEST:***
+***If sourceType = DISABLE_TYPE_QUEST:***
 
-***If sourceType = DISABLE\_TYPE\_ACHIEVEMENT\_CRITERIA:***
+***If sourceType = DISABLE_TYPE_ACHIEVEMENT_CRITERIA:***
 
-***If sourceType = DISABLE\_TYPE\_OUTDOORPVP:***
+***If sourceType = DISABLE_TYPE_OUTDOORPVP:***
 
-***If sourceType = DISABLE\_TYPE\_MMAP:***
+***If sourceType = DISABLE_TYPE_MMAP:***
 
-***If sourceType = DISABLE\_TYPE\_LFG\_MAP:***
+***If sourceType = DISABLE_TYPE_LFG_MAP:***
 
-***If sourceType = DISABLE\_TYPE\_GAME\_EVENT:***
+***If sourceType = DISABLE_TYPE_GAME_EVENT:***
 
-***If sourceType = DISABLE\_TYPE\_LOOT:***
+***If sourceType = DISABLE_TYPE_LOOT:***
 
 No flags needed just add the entry to the table with \`flags\`=0.
 
-### params\_0
+### params_0
 
-MapId if DISABLE\_TYPE\_SPELL used, 0 for all maps.
+MapId if DISABLE_TYPE_SPELL used, 0 for all maps.
 
-### params\_1
+### params_1
 
-AreaId if DISABLE\_TYPE\_SPELL used, 0 for all areas.
+AreaId if DISABLE_TYPE_SPELL used, 0 for all areas.
 
 ### comment
 

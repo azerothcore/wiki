@@ -1,17 +1,17 @@
 # macOS Requirements
 
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](macos-core-installation) |
+| Installation Guide                                                                                                                   |                                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](macos-core-installation) |
 
-| |
-| :- |
-| MacOS ≥ 11 |
+|               |
+| :------------ |
+| MacOS ≥ 11    |
 | OpenSSL ≥ 3.0 |
-| Boost ≥ 1.70 |
-| MySQL ≥ 5.7.0 |
-| CMake ≥ 3.16 |
+| Boost ≥ 1.74  |
+| MySQL ≥ 8.0.0 |
+| CMake ≥ 3.16  |
 
 - Install XCode using the App Store, then open the terminal and type:
 
@@ -54,17 +54,9 @@ brew install --cask sequel-ace
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation) | [Step 2: Core Installation >>](macos-core-installation) |
+| Installation Guide                                                                                                                   |                                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](macos-core-installation) |

@@ -84,7 +84,7 @@ The Third ID of the [template](creature_template#creature_template-entry) that i
 
 ### map
 
-The ID of the [map](Map) that the creature is spawned on.
+The ID of the [map](map) that the creature is spawned on.
 
 ### zoneId
 
@@ -121,25 +121,25 @@ The creature will spawn in only the 10 and 25 man heroic versions of the map tha
 
 This is a bit-mask field that describes all the phases that a creature will appear in. Aura 261 determines the phase you can see. For example, if you had this aura <http://www.wowhead.com/?spell=55782>, you would be able to see creatures in phase 2. If you wanted the creature to be visible in both phase 1 and phase 2, you would set the phase-mask to 3.
 
-### equipment\_id
+### equipment_id
 
-The ID as defined within [creature\_equip\_template](creature_equip_template) corresponding to the [entry](creature_template). The value essential defines the equip:
+The ID as defined within [creature_equip_template](creature_equip_template) corresponding to the [entry](creature_template). The value essential defines the equip:
 
--   **-1**: A random equip from the set of equips in [creature\_equip\_template](creature_equip_template) will be chosen.
+-   **-1**: A random equip from the set of equips in [creature_equip_template](creature_equip_template) will be chosen.
 -   **0**: No equipment defined.
--   **1+**: The individual id within creature\_equip\_template.
+-   **1+**: The individual id within creature_equip_template.
 
 If creature spawned with `.npc add`, then this value will be set automatically (0 if nothing in creature_equip_template).
 
-### position\_x
+### position_x
 
 The X position of the creatures spawn point.
 
-### position\_y
+### position_y
 
 The Y position of the creatures spawn point.
 
-### position\_z
+### position_z
 
 The Z position of the creatures spawn point.
 
@@ -173,31 +173,31 @@ The movement type associated with the creature. Usually the same as its [Movemen
 
 ### npcflag
 
-Same as [creature\_template.npcflag](creature_template#creature_template-npcflag) .
+Same as [creature_template.npcflag](creature_template#creature_template-npcflag) .
 
-NOTE: A creature.npcflag record will override a [creature\_template.npcflag](creature_template#creature_template-npcflag) record.
+NOTE: A creature.npcflag record will override a [creature_template.npcflag](creature_template#creature_template-npcflag) record.
 
-### unit\_flags
+### unit_flags
 
-Same as creature\_template.unit\_flags.
+Same as creature_template.unit_flags.
 
 Note:
 
-A creature.unit\_flags record will override a [creature\_template.unit\_flags](creature_template#creature_template-unit_flags) record.
+A creature.unit_flags record will override a [creature_template.unit_flags](creature_template#creature_template-unit_flags) record.
 
 ### dynamicflags
 
-Same as creature\_template.dynamicflags.
+Same as creature_template.dynamicflags.
 
 Note:
 
-A creature.dynamicflags record will override a [creature\_template.dynamicflags](creature_template#creature_template-dynamicflags) record.
+A creature.dynamicflags record will override a [creature_template.dynamicflags](creature_template#creature_template-dynamicflags) record.
 
 ### ScriptName
 
-Same as creature\_template.scriptname.
+Same as creature_template.scriptname.
 
-A creature.scriptname record will override a [creature\_template.scriptname](creature_template#creature_template-scriptname) record.
+A creature.scriptname record will override a [creature_template.scriptname](creature_template#creature_template-scriptname) record.
 
 ### VerifiedBuild
 

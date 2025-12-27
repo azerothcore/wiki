@@ -509,8 +509,38 @@ This will show or hide spells in vehicle spell bar.</td>
 </td>
 </tr>
 <tr class="even">
+<td>CONDITION_SOURCE_TYPE_PLAYER_LOOT_TEMPLATE</td>
+<td>28</td>
+<td>player_loot_template.entry</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td><br />
+</td>
+</tr>
+<tr class="odd">
+<td>CONDITION_SOURCE_TYPE_CREATURE_RESPAWN</td>
+<td>29</td>
+<td>enum-no-details|29</td>
+<td>enum-no-details|29</td>
+<td>enum-no-details|29</td>
+<td>enum-no-details|29</td>
+<td><br />
+</td>
+</tr>
+<tr class="even">
+<td>CONDITION_SOURCE_TYPE_CREATURE_VISIBILITY</td>
+<td>29</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td>Always 0</td>
+<td>0/1</td>
+<td><br />
+</td>
+</tr>
+<tr class="odd">
 <td>CONDITION_SOURCE_TYPE_MAX</td>
-<td>27</td>
+<td>31</td>
 <td><br />
 </td>
 <td><br />
@@ -1001,6 +1031,13 @@ and the other is just using an emote to appear dead. </p></td>
 <td>Always 0</td>
 <td>Always 0</td>
 </tr>
+<tr class="odd">
+<td>CONDITION_WORLD_SCRIPT</td>
+<td>103</td>
+<td>conditionId</td>
+<td>state</td>
+<td>Always 0</td>
+</tr>
 </tbody>
 </table>
 
@@ -1067,7 +1104,7 @@ The content of the [SourceGroup](#conditions-SourceGroup) and [SourceEntry](#con
 \***CONDITION\_SOURCE\_TYPE\_SPELL\_IMPLICIT\_TARGET = 13**
 
 -   -   SourceGroup: mask of effects to be affected by condition (1 - EFFECT\_0, 2 - EFFECT\_1, 4 - EFFECT\_2 - don't use wowhead to get number of effects, data from wowhead sometimes doesn't match real effect number)
-    -   SourceEntry: spell (Spell Id from  [Spell.dbc](Spell).)
+    -   SourceEntry: spell (Spell Id from  [Spell.dbc](spell).)
     -   ConditionTarget:
         -   0 - Potential target of the spell
         -   1 - Caster of the spell
@@ -1108,7 +1145,7 @@ Note: creature entry must be a vehicle. Example: If this is used with CONDITION\
 \***CONDITION\_SOURCE\_TYPE\_SPELL = 17**
 
 -   -   SourceGroup: always 0
-    -   SourceEntry: spell (Spell Id from [Spell.dbc](Spell))
+    -   SourceEntry: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionTarget:
         -   0 - Caster of the spell
         -   1 - Explicit target of the spell (only for spells which take object selected by caster into account)
@@ -1143,7 +1180,7 @@ Notes:
 \***CONDITION\_SOURCE\_TYPE\_VEHICLE\_SPELL = 21**
 
 -   -   SourceGroup: creature entry ([creature\_template.entry](http://www.azerothcore.org/wiki/creature_template#creature_template-entry))
-    -   SourceEntry: spell (Spell Id from [Spell.dbc](Spell))
+    -   SourceEntry: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionTarget:
         -   0 - Player for which spell bar is shown
         -   1 - Vehicle creature
@@ -1181,7 +1218,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_AURA = 1**
 
--   -   ConditionValue1: spell (Spell Id from [Spell.dbc](Spell))
+-   -   ConditionValue1: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionValue2: effect index (0-2)
     -   ConditionValue3: always 0
 
@@ -1205,7 +1242,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_REPUTATION\_RANK = 5**
 
--   -   ConditionValue1: faction template ID (from [Faction.dbc](Faction))
+-   -   ConditionValue1: faction template ID (from [Faction.dbc](faction))
     -   ConditionValue2: rank (Hated - 1, Hostile - 2, Unfriendly - 4, Neutral - 8, Friendly - 16, Honored - 32, Revered - 64, Exalted - 128) Flags can be added together for all ranks the condition should be true in.
     -   ConditionValue3: always 0
 
@@ -1217,7 +1254,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_SKILL = 7**
 
--   -   ConditionValue1: skill required, see [SkillLine.dbc](SkillLine)
+-   -   ConditionValue1: skill required, see [SkillLine.dbc](skillline)
     -   ConditionValue2: skill value
     -   ConditionValue3: always 0
 
@@ -1282,13 +1319,13 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_ACHIEVEMENT = 17**
 
--   -   ConditionValue1: achievement ID from [Achievement.dbc](Achievement)
+-   -   ConditionValue1: achievement ID from [Achievement.dbc](achievement)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
 \***CONDITION\_TITLE = 18**
 
--   -   ConditionValue1: title ID from [CharTitles.dbc](CharTitles)
+-   -   ConditionValue1: title ID from [CharTitles.dbc](chartitles)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
@@ -1330,7 +1367,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_SPELL = 25**
 
--   -   ConditionValue1: spell (Spell Id from [Spell.dbc](Spell))
+-   -   ConditionValue1: spell (Spell Id from [Spell.dbc](spell))
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
@@ -1466,7 +1503,7 @@ Note: it will show or hide spells in vehicle spell bar.
 
 \***CONDITION\_REALM\_ACHIEVEMENT = 39**
 
--   -   ConditionValue1: achievement ID from [Achievement.dbc](Achievement)
+-   -   ConditionValue1: achievement ID from [Achievement.dbc](achievement)
     -   ConditionValue2: always 0
     -   ConditionValue3: always 0
 
@@ -1488,6 +1525,13 @@ Note: it will show or hide spells in vehicle spell bar.
         -   0 = Standing
         -   1 = Sitting
     -   ConditionValue3: always 0
+
+**\*CONDITION\_WORLD\_SCRIPT **= 103****
+
+-   -   ConditionValue1: WorldStateCondition defined in WorldState.h
+    -   ConditionValue2: state or 0 (WORLD_STATE_CONDITION_STATE_NONE)
+    -   ConditionValue3: always 0
+        *NOTE: condition is true if WorldState::IsConditionFulfilled returns true*
 
 ### \***REFERENCE TEMPLATES**
 

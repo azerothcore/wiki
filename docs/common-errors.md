@@ -5,7 +5,7 @@ tableofcontents: 1
 # Common Errors
 
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
-| --- |
+| --------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Database-related errors
 
@@ -56,49 +56,6 @@ This can mean several things:
 3. You are trying to use a custom patch or module but have forgotten to update your database.
 4. You are trying to use an SQL patch from another project.
 
----------------------------------------------------------
-
-## Database Update-related errors
-
-#### [ACE00020](#a-hreface00020ace00020a)
-My DB Assembler closes and does not import all updates, I get:
-```
-ERROR 1054 (42522) at line 14062: Unknown column 'resistance2' in 'field list'
-```
-This error is because you have manually changed the database structure and is conflicting with updates.
-
-The easiest way to fix it is by dropping your database and importing it again.
-
----------------------------------------------------------
-
-#### [ACE0021](#a-hreface00021ace00021a)
-My DB Assembler closes and does not import all updates, I get:
-
-This can be due to several reasons:
-
-1. You have the wrong credentials set up for the DB Assembler.
-2. Your Database structure has been modified manually and is conflicting with the updates. Fix this by dropping the database.
-
----------------------------------------------------------
-
-#### [ACE00022](#a-hreface00022ace00022a)
- My DB Assembler closes and does not import all updates, I get:
-```
-ERROR 1067 (42000) at line 181: Invalid default value for 'start_time'.
-```
-Disable MySQL strict mode, read [How to turn on/off MySQL strict mode in localhost (xampp)? StackOverflow](https://stackoverflow.com/questions/40881773/how-to-turn-on-off-mysql-strict-mode-in-localhost-xampp).
-
-------------------------------------------------------------------------------------------------------------------
-
-#### [ACE00023](#a-hreface00023ace00023a)
-My Worldserver closes when autoupdater, I get:
-```
-ERROR 2013 (HY000) at line 4: Lost connection to MySQL server during query
-```
-This is most likely due to your MySQL server's max_allowed_packet setting is too low. See [this](https://docs.oracle.com/cd/E19509-01/820-6323/gicxk/index.html) or run the command `SET GLOBAL max_allowed_packet=1073741824;` in your SQL client (HeidiSQL, SQLyog, etc.) to update your max_allowed_packet.
-
-**This value will reset the next time your SQL server restarts and it may be necessary to run this query again in the future.** 
-
 ## Core-related Errors
 
 #### [ACE00040](#a-hreface00040ace00040a)
@@ -125,16 +82,18 @@ The code execution cannot proceed because libmysql.dll was not found. Reinstalli
 
 Or similar error.
 ```
-You have not copied the necessary .dll files into the binaries directory.
+You have not copied the necessary .dll files into the binaries directory. See [Core Installation](core-installation).
 
 ---------------------------------------------------------
 
 #### [ACE00043](#a-hreface00043ace00043a)
 Core doesn't start, I get:
 ```
-AzerothCore does not support MySQL versions below 5.7 and MariaDB versions below 10.5
+AzerothCore does not support MySQL versions below 8.0
 ```
-Upgrade your MySQL/MariaDB.
+Upgrade your MySQL.
+
+Note: AzerothCore does not support MariaDB.
 
 ---------------------------------------------------------
 
@@ -161,7 +120,7 @@ I get an error when WorldServer is starting:
 ```
 Used MySQL library version (8.0.19 id 80019) does not match the version id used to compile AzerothCore (id 80024)
 ```` 
-You need to use the exact version of libmysql.dll as the version you used to compile your source with. You get it from **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** or by following the [installation guide](windows-core-installation#compiling-the-source).
+You need to use the exact version of libmysql.dll as the version you used to compile your source with. You get it from **C:\Program Files\MySQL\MySQL Server 8.x\lib\** or by following the [installation guide](windows-core-installation#compiling-the-source).
 
 This is due to that you have updated your MySQL server but have not recompiled and added the new libmysql.dll file.
 
@@ -348,5 +307,16 @@ If you get an error that *CMake could NOT find OpenSSL*
 
 ---------------------------------------------------------
 
+[ACE00105](#ace00105)
+- If you encounter an error like **fatal: early EOF** or **fatal: fetch-pack: invalid index-pack output**
+  - Try updating your restarting your Github Desktop.
+  - Consider using Git Bash
+    - Run Git Bash
+    - Run `cd "D:/Path/To/Your/Dir/"`
+    - Run `git clone https://github.com/azerothcore/azerothcore-wotlk.git`
+    - Your repository will now be found in `D:/Path/To/Your/Dir/azerothcore-wotlk`
+
+---------------------------------------------------------
+
 | Did this FAQ not answer your questions? Read [How to ask for help](how-to-ask-for-help) on how to proceed with your question in the best way. |
-| --- |
+| --------------------------------------------------------------------------------------------------------------------------------------------- |

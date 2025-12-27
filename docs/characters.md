@@ -421,7 +421,7 @@ Time when a character can be resurrected in case of a server crash or client exi
 
 ### taxi\_path
 
-Stores the players current taxi path ([TaxiPath.dbc](TaxiPath)) if logged off while on one.
+Stores the players current taxi path ([TaxiPath.dbc](taxipath)) if logged off while on one.
 
 ### arenaPoints
 
@@ -453,11 +453,11 @@ The amount of players this character killed yesterday.
 
 ### chosenTitle
 
-Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](CharTitles)).
+Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](chartitles)).
 
 ### knownCurrencies
 
-Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](CurrencyTypes).
+Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](currencytypes).
 
 ### watchedFaction
 
@@ -516,7 +516,7 @@ Character's equipment and bag cache.
 
 ### knownTitles
 
-Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](CharTitles), take Archmage title for example:
+Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](chartitles), take Archmage title for example:
 
 | TitleID | UnkRef? | MaleTitle   | FemaleTitle | InGameOrder |
 | ------- | ------- | ----------- | ----------- | ----------- |

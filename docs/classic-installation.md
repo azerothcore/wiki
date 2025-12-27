@@ -1,13 +1,13 @@
 # Classic Installation
 
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation](installation) | [Step 1: Requirements >>](requirements) |
+| Installation Guide                                                                                                                   |                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation](installation)                                                                                               | [Step 1: Requirements >>](requirements) |
 
-Every step of the guide is divided in three tabs regarding different operating systems (Linux, macOS and Windows).
+The guide has been divided into 9 steps, to make it more readable.
 
-The guide has been divided into 8 steps, to make it more readable:
+{% include tip.html content="Each step can be read independently. If it is your first time installing AzerothCore we recommend you read every step carefully." %}
 
 1. [Requirements](requirements)
 
@@ -25,25 +25,15 @@ The guide has been divided into 8 steps, to make it more readable:
 
 8. [Client Setup](client-setup)
 
-Each step can be read independently or you can read them neatly in order, to gradually get into it and better understand it all.
-
-{% include tip.html content="If this is your first time installing AzerothCore we recommend that you read every step carefully!" %}
+9. [(Optional) Installing a Module](installing-a-module)
 
 <br>
 
 ## Help
 
-If you are still having problems, check:
+{% include help.html %}
 
-* [FAQ](faq)
-
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
-| :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click on the previous link to easily move between the steps. |
-| [<< Start: Installation](installation) | [Step 1: Requirements >>](requirements) |
+| Installation Guide                                                                                                                   |                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Start: Installation](installation)                                                                                               | [Step 1: Requirements >>](requirements) |

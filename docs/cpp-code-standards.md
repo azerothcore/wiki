@@ -36,6 +36,8 @@ Settings -> Preferences -> Language -> Tab size: 4, Replace by space: checked
 
 Always comment on code where it is not typical repeated code and where the code is not self-explanatory.
 
+Avoid including hyperlinks in code comments, as they may become outdated or broken over time. If a link is relevant, include it in the pull request description instead—it can be referenced later via Git history.
+
 Comments should either be placed directly above the code, or directly beside it.
 
 ```cpp
@@ -313,4 +315,17 @@ static keyword always should be put as first
 ```cpp
 static uint32 someVar = 5;
 static float const otherVar = 1.0f;
+```
+
+### Header Guards
+
+All Header files should contain header guards
+
+```cpp
+#ifndef MY_HEADER_H
+#define MY_HEADER_H
+
+// Header content here
+
+#endif // MY_HEADER_H
 ```

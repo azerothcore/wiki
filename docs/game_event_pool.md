@@ -1,30 +1,28 @@
-# game\_event\_pool
+# game_event_pool
 
 [<-Back-to:World](database-world)
 
-**The \`game\_event\_pool\` table**
+**The \`game_event_pool\` table**
 
 This table determines if a given pool is active for a given game event.
 
 **Table Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra  | Comment                                                             |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
-| [eventEntry][1] | TINYINT   | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [pool_entry][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
-
-[1]: #evententry
-[2]: #pool_entry
+| Field                     | Type      | Attributes | Key | Null | Default | Extra  | Comment                                                             |
+| ------------------------- | --------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
+| [eventEntry](#evententry) | SMALLINT  | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
+| [pool_entry](#pool_entry) | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
 
 **Description of the fields**
 
 ### eventEntry
 
-This is the ID of the event.
+Refers to: [game_event.entry](game_event#entry).
 
--   +event adds the pool
--   -event removed the pool
+Using a **positve** number will **add** the pool to the event when is running.
 
-### pool\_entry
+Using a **negative** number will **remove** the pool to the event when is running.
 
-This is ID of the pool that you want either active or removed for the event.
+### pool_entry
+
+Refers to: [pool_pool.pool_id](pool_pool#pool_id).

@@ -20,4 +20,4 @@ Actualizar al último master:
 
 **Nota**: si está utilizando su propio fork of AC, como de costumbre, debe [sincronizarla](Syncing-your-fork)
 
-Ahora actualice su **núcleo y base de datos** (nuevamente) como [lo hace normalmente](Update).
+Ahora actualice su **núcleo y base de datos** (nuevamente) como [lo hace normalmente](update).

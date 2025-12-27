@@ -34,12 +34,12 @@ An additional identifier for each individual entry, enabling multiple equipment
 
 ### ItemID1
 
-This is the item number of the equipment used in the right hand from [Item.dbc](Item).
+This is the item number of the equipment used in the right hand from [Item.dbc](item).
 
 ### ItemID2
 
-This is the item number of the equipment used in the left hand from [Item.dbc](Item).
+This is the item number of the equipment used in the left hand from [Item.dbc](item).
 
 ### ItemID3
 
-This is the item number of the equipment used in the ranged slot from [Item.dbc](Item).
+This is the item number of the equipment used in the ranged slot from [Item.dbc](item).

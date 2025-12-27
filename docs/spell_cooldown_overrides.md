@@ -21,7 +21,7 @@ Used to give NPC spells cooldowns for mindcontroll.
 
 ### Id
 
-Spell ID from [Spell.dbc](Spell)
+Spell ID from [Spell.dbc](spell)
 
 ### RecoveryTime
 

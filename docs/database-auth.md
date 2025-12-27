@@ -6,6 +6,7 @@
 - [account_banned](account_banned)
 - [account_muted](account_muted)
 - [autobroadcast](autobroadcast)
+- [autobroadcast_locale](autobroadcast_locale)
 
 ## B
 - [build_info](build_info)

@@ -40,7 +40,7 @@ This table holds the percent chances for weather changes to occur in various zon
 
 ### zone
 
-This field contains the zone id from the [AreaTable DBC file](AreaTable) that you wish to change the weather for.
+This field contains the zone id from the [AreaTable DBC file](areatable) that you wish to change the weather for.
 
 ### spring\_rain\_chance
 

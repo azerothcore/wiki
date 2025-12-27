@@ -36,7 +36,7 @@ This table is used to apply a specific spell aura to the player within an area i
 
 ### spell
 
-The spell ID of the spell to be casted on the player. See [Spell.dbc](Spell).
+The spell ID of the spell to be casted on the player. See [Spell.dbc](spell).
 
 ### area
 

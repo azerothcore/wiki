@@ -1,25 +1,16 @@
 # Requisitos de Linux
 
-| Guía de instalación | |
-| :- | :- |
+| Guía de instalación                                                                                                                             |                                                              |
+| :---------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del núcleo >>](linux-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation)                                                                                          | [Paso 2: Instalación del núcleo >>](linux-core-installation) |
 
-| |
-| :- |
-| MySQL ≥ 5.7.0 |
-| Boost ≥ 1.67 |
-| CMake ≥ 3.16 |
+|                                                                                                    |
+| :------------------------------------------------------------------------------------------------- |
+| MySQL ≥ 8.0.0                                                                                      |
+| Boost ≥ 1.67                                                                                       |
+| CMake ≥ 3.16                                                                                       |
 | Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
-
-#### Ubuntu con MariaDB 10.x
-
-AzerothCore no soporta las versiones 10.6 y 10.5 de MariaDB.
-```
-
-```sh
-sudo apt update && sudo apt full-upgrade -y && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev mariadb-server mariadb-client libmariadb-dev libmariadb-dev-compat
-```
 
 #### Ubuntu con MySQL 8.x
 
@@ -138,7 +129,7 @@ Si todavía tiene problemas, compruebe:
 
 * [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff le responderá siempre que tenga tiempo.
 
-| Guía de instalación | |
-| :- | :- |
+| Guía de instalación                                                                                                                             |                                                              |
+| :---------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del núcleo >>](linux-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation)                                                                                          | [Paso 2: Instalación del núcleo >>](linux-core-installation) |

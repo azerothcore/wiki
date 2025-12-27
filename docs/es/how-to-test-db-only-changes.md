@@ -14,7 +14,7 @@ Para estos PRs hay una forma más sencilla de probarlos, que se explicará en es
 
 Este tutorial asume que usted:
 
-- Tiene una versión **reciente** de AzerothCore instalada en tu sistema (ya sea usando la [instalación tradicional](Installation) o la [instalación Docker](Install-with-Docker)). Recomendamos utilizar la última versión de `master`.
+- Tiene una versión **reciente** de AzerothCore instalada en tu sistema (ya sea usando la [instalación tradicional](installation) o la [instalación Docker](Install-with-Docker)). Recomendamos utilizar la última versión de `master`.
 - Tiene una cuenta en GitHub, puede [registrar una aquí](https://github.com/join) de forma gratuita.
 - Tiene un cliente de base de datos como [HeidiSQL](https://www.heidisql.com/), Navicat o similar.
 

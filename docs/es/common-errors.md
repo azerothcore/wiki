@@ -106,9 +106,9 @@ Usted no copió el archivo .dll necesario dentro del directorio de los binarios 
 
 **ACE00043** El Core no inicia, me aparece el siguiente error:
 ```
-AzerothCore does not support MySQL versions below 5.7 and MariaDB versions below 10.5
+AzerothCore does not support MySQL versions below 8.0
 ```
-Actualice su MySQL/MariaDB.
+Actualice su MySQL.
 
 ---------------------------------------------------------
 
