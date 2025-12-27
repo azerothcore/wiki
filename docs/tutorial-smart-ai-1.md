@@ -118,11 +118,11 @@ So this is what will happen:
 
 ## Part II: Event Phases and Links
 
-If you're looking online for SmartAI tutorials I'm assuming you're not here for simple combat like inserting 1 or 2 spells into a timer. I imagine you're here because you've assigned to yourself a creature behaviour that isn't just a level 4 boar. So from this we're going to look at the script of some Outland creatures that I find quite interesting. In Outland there are several Void creatures, the casters have a particularly script that's shared between them.
+Most enemy creatures are fairly simple, following one or two timers and casting a couple of spells, which is easy enough to do in a few minutes. The power of SmartAI does not come from following simple spell timers. To illustrate an example, we're going to look at the script of some Outland creatures that I find quite interesting. In Outland there are several Void creatures, of which the casters have a particular script structure that's shared between them.
 
 At first, they only cast Shadow Bolt and have no special resistances. However once the player hits them with, for example, a Frostbolt, they'll cast a Damage Reduction: Frost spell on themselves, will say a line, then start casting Frostbolt right back at the player. So how do we implement that in SmartAI?
 
-I have an example ready: the Voidshrieker.
+A ready example we can use is the Voidshrieker.
 
 ![Voidshrieker Script](assets/images/sai_tutorial/sai_tutor_2.png)
 
@@ -138,9 +138,9 @@ Check id 2 of the script. On Aggro the Event Phase will be set to 1, so what eve
 
 These ones. After the Voidshrieker is hit by a spell of the schools above, it will play a sequence of actions, linked together with EVENT_LINK, then it will change its own phase. Notice that Event Phase 1 is only set On Aggro, so this behaviour can only be played ONCE per combat. If I hit it with a fire spell, the Event will play and change phase, so if I hit it again with a frost spell instead, it won't cast `Damage Reduction: Frost` because it's not in Phase 1, it's now in Phase 3.
 
-But what if I **wanted** to stack Damage Reductions? We can do that. Because Event Phases aren't mutually exclusive. They can overlap like Venn Diagrams. We'd use Action INC_EVENT_PHASE instead to increment Phase 3 into Phase 1, so the creature would be at Phase 1 and Phase 3 at the same time. We could work around the lines being spoken constantly by adding an Event Flag to them. Flag 1, which means the event will not repeat for the duration of this combat.
+Futhermore, while not shown in this example, Event Phases are a mask, not a enum value. Meaning that we can layer event phases on top of each other. If we wanted, we could make the Voidshrieker stack resistances and be able to cast the full elemental gradient of spells by accumulating event phases rather than replacing them.
 
-P.S.: Event Flag 1 (No Repeat) resets once combat is over! To never reset and make sure the creature never plays the Event again, use flag 256 (Don't Reset)!
+P.S.: Event Flag 1 (No Repeat) resets once combat is over! To never reset and make sure the creature never EVER plays the Event again, use flag 256 (Don't Reset)!
 
 With these events in hand we'll use them to make the creature cast different spells depending on which Phase it's in.
 
@@ -148,17 +148,17 @@ With these events in hand we'll use them to make the creature cast different spe
 
 All of these Events above are tied to timers, not triggers like On Spellhit. See `Cast 'Shadow Bolt`? That one is tied to two Event Phases, like in the Venn Diagram example I mentioned. If the player does not cast a spell, or is a warrior, for example, the Voidshrieker will cast Shadow Bolt by default, as well as casting it if the player did cast a Shadow Spell. And Psychic Scream? That one is tied to Event Phase 0, which means that no matter the Phase the creature is currently in, it'll run the timer and execute the event.
 
-The script looks ugly, yes. Maybe in the future we'll have an automatic flowchart to better visualize it. It's hard on the eyes and can confuse a lot of people, I know I was confused when I first saw it, but with practice you start to better understand SAI.
-
 Going back to the flowchart I didn't yet explain properly how these actions are linked to each other. In Part 1 I introduced the concept of Actionlists. This is similar.
 
-Links allows us to play several actions simultaneously (or almost so), so it'll not allow us to make delays, but it's also a very powerful tool. To work with it, you need to set the id of the Event that will be linked in the `link` field.
+Links allows us to play several actions in order instantenously, so it'll not allow us to make delays. To work with it, you need to set the id of the Event that will be linked in the `link` field.
 
 [Linked Events](assets/images/sai_tutorial/sai_tutor_5.png)
 
 As you can see, Event 3 links to Event 4, so when Event 3 is executed, Event 4 will automatically be executed as well. The event that is linked needs to be, necessarily, Event type 61, EVENT_LINK.
 
 Multiple Events can link to the same event. For example, if a creature says the same line after casting several different spells, all the spells can be linked to the same Talk Action.
+
+If we make too many links, they make it harder to maintain the script, since changing one row might require changing all of them. For more than one link in a series, I oftentimes like to use Timed Actionlists instead, using TimerType 2 to make sure it plays in combat as well. This makes it easier to encapsulate mini-scripts within the main creature script, without making spaghetti links.
 
 ## Part III: Conditions, Unique AI and Data Set
 
@@ -178,13 +178,13 @@ You'll see several rows, all with ids numbered >1000, and with behaviour that is
 
 ![GUID Specific Scripts](assets/images/sai_tutorial/sai_tutor_8.png)
 
-Lines 1001 to 1004 are RP scripts. Focus on the ones below. For example, on the general script in the first image, we see that once the creature receives DATA SET, an action that allows us to communicate between creatures, it'll Enrage. Every other creature in this dungeon, once they die, has a script to SET DATA on the nearest Legionnaire, so that they all Enrage. But if you include this guid-specific script, this particular Legionnaire will not only Enrage, they'll also say a special line and Summon a creature. We then use Event Phases to allow only one creature to spawn at a time.
+Lines 1001 to 1004 are RP scripts. Focus on the ones below. For example, on the general script in the first image, we see that once the creature receives DATA SET -- an action that allows us to communicate between creatures -- it'll Enrage. Every other creature in this dungeon, once they die, has a script to SET DATA on the nearest Legionnaire, so that they all Enrage. But if you include this guid-specific script, this particular Legionnaire will not only Enrage, they'll also say a special line and Summon a creature in an unique position. We then use Event Phases to allow only one creature to spawn at a time.
 
 Now, the important part is that usually these guid-specific scripts override the creature's normal script, making it so we have to copy over, creating a lot of bloat. But around the time we were rewriting Shattered Halls, a friend of mine added an extra flag to creatures, which will make them load both their general SmartAI tied to its entry, as well as the SmartAI tied to its guid.
 
 ![Creature Template Flags](assets/images/sai_tutorial/sai_tutor_9.png)
 
-This is extremely important, as A LOT of creatures have unique behaviours, so to avoid enormous amounts of useless rows, we use this flag. Be aware that we use ids 1000+ when making guid-specific SAI in these cases, because row ids MUST NOT OVERLAP!
+This is extremely important, as A LOT of creatures have unique behaviours, so to avoid enormous amounts of useless rows, we use this flag. Be aware that we use ids 1000+ when making guid-specific SAI in these cases, because row ids should not overlap!
 
 Now. Let's look at these summons. How do they work? Well, it just so happens that each one **also** has unique behaviour! Because several legionnaires spawn them at different positions. And each can do a different thing.
 
@@ -200,7 +200,7 @@ Conditions are very powerful tools, and we can tie them directly to SmartAI, for
 
 See where ConditionValue is 151010? That means that in SmartAI id 10 (11 - 1), that event will only play when the Invoker (in this case, the summoner) is the Legionnaire of GUID 151010.
 
-You should start seeing how much more powerful SmartAI can be now. Every single row can be conditioned. Want to create an event that only plays if the player is a Night Elf that is under the effects of Sprint and has a Thunderfury in the bank but not on their person? You can do that, for whatever reason. Conditions can take the Invoker or the Creature/Object itself as the target for the condition.
+You should start seeing how much more powerful SmartAI can be now. Every single row can be conditioned. Another interesting case study is a quest object which detects how far the player has progressed so that it can perform lines and spawn creatures. In it, every time the player interacts the script is called, but it only goes through when conditions are met. 
 
 Invokers are something that not all Events have. When using event OOC_LOS, which checks for a player entering the Line of Sight of our creature, the Invoker is the player that entered the Line of Sight, for example. When you Summon Creature, the Invoker is the summoner. Invokers can be used as a target_type as well. When the Event On Quest Accepted is executed, for example, it might be good to use Action 64 (STORE_TARGET_LIST) to save the Invoker or even the Invoker's whole party with target_type 16.
 
