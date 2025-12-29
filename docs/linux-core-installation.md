@@ -57,7 +57,7 @@ This will create an `azerothcore` directory in your home folder containing the A
 ## Compiling the source code
 
 > [!WARNING]
-> When using recent versions of Debian or Ubuntu, there's an automatic update checking and install that can brake the functioning of the server!
+> When using recent versions of Debian or Ubuntu, there's an automatic update checking and install that can break the functioning of the server!
 > In fact, MySQL for example can be automatically updated (while the server is running!), so `authserver` and `worldserver` instantly crash and this situation may cause a loss of playtime.
 >
 > So, to avoid this, just do this:
