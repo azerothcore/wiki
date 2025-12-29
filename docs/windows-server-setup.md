@@ -46,7 +46,7 @@ mapextractor.exe
 mmaps_generator.exe
 vmap4extractor.exe
 vmap4assembler.exe
-for mmaps_generator.exe, you need to have mmaps-config.yaml from C:\azerothcore\src\tools\mmaps_generator, it's necessary for extracting the movement maps (sry for my english ;) )
+mmaps-config.yaml
 ```
 
 2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.
