@@ -46,6 +46,7 @@ mapextractor.exe
 mmaps_generator.exe
 vmap4extractor.exe
 vmap4assembler.exe
+mmaps-config.yaml
 ```
 
 2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.
