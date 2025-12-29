@@ -84,7 +84,7 @@ The ID of the same text in broadcast\_text.ID.
 | GOSSIP_OPTION_QUESTGIVER        | 2     | UNIT_NPC_FLAG_QUESTGIVER                                                    | 2             |
 | GOSSIP_OPTION_VENDOR            | 3     | UNIT_NPC_FLAG_VENDOR (Make sure there is npc_vendor data for this creature) | 128           |
 | GOSSIP_OPTION_TAXIVENDOR        | 4     | UNIT_NPC_FLAG_TAXIVENDOR                                                    | 8192          |
-| GOSSIP_OPTION_TRAINER           | 5     | UNIT_NPC_FLAG_TRAINER (Remember to set trainer_class in creature_template)  | 16            |
+| GOSSIP_OPTION_TRAINER           | 5     | UNIT_NPC_FLAG_TRAINER (Remember to set a (TrainerId, CreatureId) in creature_default_trainer)  | 16            |
 | GOSSIP_OPTION_SPIRITHEALER      | 6     | UNIT_NPC_FLAG_SPIRITHEALER                                                  | 16384         |
 | GOSSIP_OPTION_SPIRITGUIDE       | 7     | UNIT_NPC_FLAG_SPIRITGUIDE                                                   | 32768         |
 | GOSSIP_OPTION_INNKEEPER         | 8     | UNIT_NPC_FLAG_INNKEEPER                                                     | 65536         |
