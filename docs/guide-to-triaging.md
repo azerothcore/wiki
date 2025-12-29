@@ -77,6 +77,11 @@ If you have the right permissions, also add the new AC issue to whichever projec
 - **Be polite.** When someone submits a bug report, they are doing us a favour. They've taken the time to make a GitHub account and type up a bug report to try to help us. The least we can do is be professional and courteous in return. 
 
 ## Sources
+
+> [!IMPORTANT]
+> We aim to emulate 3.3.5 behaviour. Verified and validated original 3.3.5 sources take precedence where available.  
+> Where such sources are absent or conflicting, we exercise our own discretion and judgement, to analyze and validate the most accurate source.
+
 This is a general (and by no means exhaustive) look at the sources we can use to try to understand if a bug is valid or not. They include:
 
 - [TBC Wowhead](http://tbc.wowhead.com/) or [Current Wowhead](https://www.wowhead.com/) - Wowhead is a important if flawed source of data, both because of the site's own data and the comments that users have made on it. The Wowhead comments are probably the largest single set of information on individual quests and items we have, which is why it's a pity that so much of it is utter rubbish. 
