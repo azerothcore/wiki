@@ -30,7 +30,9 @@ The spell ID. See [Spell.dbc](spell) column 1.
 
 ### specMask
 
-| Value | Data               | 
-| ----- | ------------------ |
-| 0     | is the first spec  | 
-| 1     | is the second spec |
+Bitmask saving the specs using the talent.
+| Value | Type                              |
+| ----- | --------------------------------- |
+| 1     | First Spec                        |
+| 2     | Second Spec                       |
+| 3     | Both Specs                        |

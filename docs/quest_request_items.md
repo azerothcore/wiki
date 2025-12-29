@@ -29,7 +29,7 @@ Primary Key for this table. Each quest ID must be unique.
 
 ### EmoteOnComplete
 
-Emote (from [Emotes.dbc](Emotes) played by the quest ender NPC when all quest objectives are completed.
+Emote (from [Emotes.dbc](emotes) played by the quest ender NPC when all quest objectives are completed.
 
 ### EmoteOnIncomplete
 

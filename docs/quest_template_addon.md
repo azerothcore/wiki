@@ -78,7 +78,7 @@ How many seconds to wait until the mail is sent to the character that turned in 
 
 ### RequiredSkillID
 
-Skill required to know to accept the quest. See [SkillLine.dbc](SkillLine)
+Skill required to know to accept the quest. See [SkillLine.dbc](skillline)
 0 means no skill is required.
 
 ### RequiredSkillPoints
@@ -87,11 +87,11 @@ Skill points required to have in order to accept the quest.
 
 ### RequiredMinRepFaction
 
-Faction ID for reputation requirement. See [Faction.dbc](Faction).
+Faction ID for reputation requirement. See [Faction.dbc](faction).
 
 ### RequiredMaxRepFaction
 
-The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](Faction).
+The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](faction).
 
 ### RequiredMinRepValue
 

@@ -24,4 +24,4 @@ Update to latest master:
 
 **Note**: if you are using your own fork of AC, as usual, you have to [sync it](Syncing-your-fork)
 
-Now update your **core and database** (again) as [you normally do](Update).
+Now update your **core and database** (again) as [you normally do](update).

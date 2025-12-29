@@ -30,4 +30,9 @@ La identificación del hechizo. Consulte la columna 1 de[Spell.dbc](spell).
 
 ### specMask
 
-Boolean 1 or 0 que significa si el hechizo está activo (aparece en el libro de hechizos).
+Máscara de bits que guarda las especificaciones utilizando el hechizo.
+| Value | Type                              |
+| ----- | --------------------------------- |
+| 1     | Primera especificación            |
+| 2     | Segunda especificación            |
+| 3     | Ambas especificaciones            |

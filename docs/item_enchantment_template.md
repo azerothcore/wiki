@@ -26,7 +26,7 @@ This field ties in with EITHER RandomProperty OR RandomSuffix fields in the [ite
 
 ### ench
 
-The enchantment to apply on the item. If the entry for the current row is used in RandomProperty, then this field points to the ID in ItemRandomProperties.dbc. If the entry is used in RandomSuffix, then this field points to the ID in [ItemRandomSuffix.dbc](ItemRandomSuffix).
+The enchantment to apply on the item. If the entry for the current row is used in RandomProperty, then this field points to the ID in ItemRandomProperties.dbc. If the entry is used in RandomSuffix, then this field points to the ID in [ItemRandomSuffix.dbc](itemrandomsuffix).
 
 ### chance
 

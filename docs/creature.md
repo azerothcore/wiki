@@ -84,7 +84,7 @@ The Third ID of the [template](creature_template#creature_template-entry) that i
 
 ### map
 
-The ID of the [map](Map) that the creature is spawned on.
+The ID of the [map](map) that the creature is spawned on.
 
 ### zoneId
 

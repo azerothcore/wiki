@@ -47,7 +47,7 @@ Basically, there are 3 main ways to install AC:
 
 You can choose one setup, or even try more than one. You can find all the instructions here:
 
-- [azerothcore.org/wiki/Installation](Installation)
+- [azerothcore.org/wiki/Installation](installation)
 
 Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help).
 
@@ -82,7 +82,7 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
-- [azerothcore.org/wiki/Update](Update)
+- [azerothcore.org/wiki/Update](update)
 
 After you follow the update procedure, it is important to **verify** that:
 

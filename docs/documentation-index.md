@@ -60,6 +60,7 @@ redirect_from: /documentation_index
 ## Tutorials
 
 * [How to use game events](how-to-use-game-events)
+* [Introduction to SmartAI](introduction-to-smartai)
 
 ## Extend AzerothCore
 

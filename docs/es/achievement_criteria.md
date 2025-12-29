@@ -51,7 +51,7 @@ Esta información es recuperada de DBCStructure.h.
 
 | Column | Field      | Type    |
 | ------ | ---------- | ------- |
-| 4      | [Map](Map) | iRefID  |
+| 4      | [Map](map) | iRefID  |
 | 5      | winCount   | Integer |
 
 #### REACH\_LEVEL = 5
@@ -69,7 +69,7 @@ Alcanza un nivel especificado en habilidad.
 
 | Column | Field      | Type    | Notes                               |
 | ------ | ---------- | ------- | ----------------------------------- |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine)?         |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](skillline)?         |
 | 5      | skillLevel | Integer |                                     |
 
 #### COMPLETE\_ACHIEVEMENT = 8
@@ -78,7 +78,7 @@ Completa un logro.
 
 | Column | Field                      | Type   |
 | ------ | -------------------------- | ------ |
-| 4      | [Achievement](Achievement) | iRefID |
+| 4      | [Achievement](achievement) | iRefID |
 
 #### COMPLETE\_QUEST\_COUNT = 9
 
@@ -130,7 +130,7 @@ Muerte en un mapa.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
-| 4      | [Map](Map) | iRefID |
+| 4      | [Map](map) | iRefID |
 
 #### DEATH\_IN\_DUNGEON = 18
 
@@ -192,7 +192,7 @@ Hechizo lanzado a un jugador 2.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
-| 4      | [Spell](Spell) | iRefID  |
+| 4      | [Spell](spell) | iRefID  |
 | 5      | spellCount     | Integer |
 
 #### CAST\_SPELL = 29
@@ -205,7 +205,7 @@ Hechizo lanzado 2.
 
 | Column | Field          | Type    |
 | ------ | -------------- | ------- |
-| 4      | [Spell](Spell) | iRefID  |
+| 4      | [Spell](spell) | iRefID  |
 | 5      | castCount      | Integer |
 
 #### BG\_OBJECTIVE\_CAPTURE = 30
@@ -223,7 +223,7 @@ Muerte honorable en un área.
 
 | Column | Field             | Type    |
 | ------ | ----------------- | ------- |
-| 4      | [Area](AreaTable) | iRefID  |
+| 4      | [Area](areatable) | iRefID  |
 | 5      | killCount         | Integer |
 
 #### WIN\_ARENA = 32
@@ -236,7 +236,7 @@ Arenas jugadas.
 
 | Column | Field      | Type   |
 | ------ | ---------- | ------ |
-| 4      | [Map](Map) | iRefID |
+| 4      | [Map](map) | iRefID |
 
 #### LEARN\_SPELL = 34
 
@@ -244,7 +244,7 @@ Hechizos aprendidos.
 
 | Column | Field          | Type   |
 | ------ | -------------- | ------ |
-| 4      | [Spell](Spell) | iRefID |
+| 4      | [Spell](spell) | iRefID |
 
 #### OWN\_ITEM = 36
 
@@ -283,7 +283,7 @@ Aprender nivel de habilidad.
 
 | Column | Field      | Type    | Notes                                                                    |
 | ------ | ---------- | ------- | ------------------------------------------------------------------------ |
-| 4      | skillID    | iRefID  | [SkillLine.dbc](SkillLine)?                                              |
+| 4      | skillID    | iRefID  | [SkillLine.dbc](skillline)?                                              |
 | 5      | skillLevel | Integer | Aprendiz=1. Oficial=2. Experto=3. Artesano=4. Maestro=5. Gran Maestro=6. |
 
 #### USE\_ITEM = 41
@@ -296,7 +296,7 @@ Item despojado.
 
 #### EXPLORE\_AREA = 43
 
-areaReference  **NO** es el índice de [AreaTable.dbc.](AreaTable), proviene de WorldMapOverlay.dbc.
+areaReference  **NO** es el índice de [AreaTable.dbc.](areatable), proviene de WorldMapOverlay.dbc.
 
 | Column | Field         | Type    |
 | ------ | ------------- | ------- |
@@ -304,7 +304,7 @@ areaReference  **NO** es el índice de [AreaTable.dbc.](AreaTable), proviene de 
 
 #### OWN\_RANK = 44
 
-Este rango **NO** es el índice de [CharTitles.dbc](CharTitles)
+Este rango **NO** es el índice de [CharTitles.dbc](chartitles)
 
 | Column | Field | Type    |
 | ------ | ----- | ------- |
@@ -325,7 +325,7 @@ Obtener reputación.
 
 | Column | Field              | Type    | Notes                                                                  |
 | ------ | ------------------ | ------- | ---------------------------------------------------------------------- |
-| 4      | [Faction](Faction) | iRefID  |                                                                        |
+| 4      | [Faction](faction) | iRefID  |                                                                        |
 | 5      | reputationAmount   | Integer | Cantidad total de reputación, teniendo en cuenta que 42000 es exaltado |
 
 #### GAIN\_EXALTED\_REPUTATION= 47
@@ -373,7 +373,7 @@ Muertes honorables por clase.
 
 | Column | Field               | Type    |
 | ------ | ------------------- | ------- |
-| 4      | [Class](ChrClasses) | iRefID  |
+| 4      | [Class](chrclasses) | iRefID  |
 | 5      | count               | Integer |
 
 #### HK\_RACE = 53
@@ -382,7 +382,7 @@ Muertes honorables por raza.
 
 | Column | Field            | Type    |
 | ------ | ---------------- | ------- |
-| 4      | [Race](ChrRaces) | iRefID  |
+| 4      | [Race](chrraces) | iRefID  |
 | 5      | count            | Integer |
 
 #### DO\_EMOTE = 54
@@ -391,7 +391,7 @@ Muertes honorables por raza.
 
 | Column | Field           | Type    | Notes                                                           |
 | ------ | --------------- | ------- | --------------------------------------------------------------- |
-| 4      | [Emote](Emotes) | iRefID  |                                                                 |
+| 4      | [Emote](emotes) | iRefID  |                                                                 |
 | 5      | count           | Integer | Número de emotes, siempre se requiere un objetivo (jugador) o requisitos especiales. |
 
 #### HEALING\_DONE = 55
@@ -415,7 +415,7 @@ Equipar Item.
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
-| 4      | [Item](Item) | iRefID  |
+| 4      | [Item](item) | iRefID  |
 | 5      | itemCount    | Integer |
 
 #### MONEY\_FROM\_QUEST\_REWARD= 62
@@ -464,7 +464,7 @@ Aprender hechizos de habilidad.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
-| 4      | [SkillLine](SkillLine) | iRefID  |
+| 4      | [SkillLine](skillline) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### WIN\_DUEL = 76
@@ -498,7 +498,7 @@ Mayor número de poder de hechizos.
 
 | Column | Field       | Type   | Notes                                 |
 | ------ | ----------- | ------ | ------------------------------------- |
-| 4      | spellSchool | iRefID | [SkillLine](SkillLine) o resistencias |
+| 4      | spellSchool | iRefID | [SkillLine](skillline) o resistencias |
 
 #### HIGHEST\_RATING = 100
 
@@ -523,7 +523,7 @@ Aprender línea de habilidad.
 
 | Column | Field                  | Type    |
 | ------ | ---------------------- | ------- |
-| 4      | [SkillLine](SkillLine) | iRefID  |
+| 4      | [SkillLine](skillline) | iRefID  |
 | 5      | spellCount             | Integer |
 
 #### EARN\_HONORABLE\_KILL = 113

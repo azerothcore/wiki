@@ -32,7 +32,9 @@ El id del hechizo. Ver [Spell.dbc](spell) columna 1.
 
 ### specMask
 
-| Value | Data               | 
-| ----- | ------------------ |
-| 0     | is the first spec  | 
-| 1     | is the second spec |
+Máscara de bits que guarda las especificaciones utilizando el talent.
+| Value | Type                              |
+| ----- | --------------------------------- |
+| 1     | Primera especificación            |
+| 2     | Segunda especificación            |
+| 3     | Ambas especificaciones            |

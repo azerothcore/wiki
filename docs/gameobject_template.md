@@ -219,10 +219,10 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_TRAP = 6**
 
-- data0: open (LockId from [Lock.dbc](Lock) )
+- data0: open (LockId from [Lock.dbc](lock) )
 - data1: level (npc equivalent level for casted spell)
 - data2: diameter (so radius \* 2)
-- data3: spell (Spell Id from [Spell.dbc](Spell))
+- data3: spell (Spell Id from [Spell.dbc](spell))
 - data4: type (0 trap with no despawn after cast. 1 trap despawns after cast. 2 bomb casts on spawn)
 - data5: cooldown (time in seconds)
 - data6:  ? (unknown flag)
@@ -262,15 +262,15 @@ Object type not used
 **GAMEOBJECT\_TYPE\_TEXT = 9**
 
 -   data0: pageID ([page\_text.entry](page_text_2130246.html#page_text-entry))
--   data1: language (from  [Languages.dbc](Languages))
--   data2: pageMaterial ([PageTextMaterial.dbc](PageTextMaterial))
+-   data1: language (from  [Languages.dbc](languages))
+-   data2: pageMaterial ([PageTextMaterial.dbc](pagetextmaterial))
 -   data3: allowMounted
 -   data4: conditionID1
 -   data5: NeverUsableWhileMounted
 
 **GAMEOBJECT\_TYPE\_GOOBER = 10**
 
--   data0: open (LockId from [Lock.dbc](Lock))
+-   data0: open (LockId from [Lock.dbc](lock))
 -   data1: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 -   data2: eventID (event\_script id)
 -   data3:  Time in ms before the initial state is restored
@@ -333,8 +333,8 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_CAMERA = 13**
 
--   data0: open (LockId from [Lock.dbc](Lock))
--   data1: camera (Cinematic entry from [CinematicCamera.dbc](CinematicCamera))
+-   data0: open (LockId from [Lock.dbc](lock))
+-   data1: camera (Cinematic entry from [CinematicCamera.dbc](cinematiccamera))
 -   data2: eventID
 -   data3: openTextID
 -   data4: conditionID1
@@ -345,7 +345,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_MOTRANSPORT = 15**
 
--   data0: taxiPathID (Id from [TaxiPath.dbc](TaxiPath))
+-   data0: taxiPathID (Id from [TaxiPath.dbc](taxipath))
 -   data1: moveSpeed
 -   data2: accelRate
 -   data3: startEventID
@@ -368,10 +368,10 @@ Only one Gameobject with this type (35591) and no data data
 **GAMEOBJECT\_TYPE\_RITUAL = 18**
 
 -   data0: casters?
--   data1: spell (Spell Id from [Spell.dbc](Spell))
--   data2: animSpell (Spell Id from [Spell.dbc](Spell))
+-   data1: spell (Spell Id from [Spell.dbc](spell))
+-   data2: animSpell (Spell Id from [Spell.dbc](spell))
 -   data3: ritualPersistent (Boolean flag)
--   data4: casterTargetSpell (Spell Id from [Spell.dbc](Spell))
+-   data4: casterTargetSpell (Spell Id from [Spell.dbc](spell))
 -   data5: casterTargetSpellTargets (Boolean flag)
 -   data6: castersGrouped (Boolean flag)
 -   data7: ritualNoTargetCheck
@@ -383,7 +383,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_AUCTIONHOUSE = 20**
 
--   data0: actionHouseID (From [AuctionHouse.dbc](AuctionHouse) ?)
+-   data0: actionHouseID (From [AuctionHouse.dbc](auctionhouse) ?)
 
 **GAMEOBJECT\_TYPE\_GUARDPOST = 21**
 
@@ -392,7 +392,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_SPELLCASTER = 22**
 
--   data0: spell (Spell Id from [Spell.dbc](Spell))
+-   data0: spell (Spell Id from [Spell.dbc](spell))
 -   data1: charges
 -   data2: partyOnly (Boolean flag, need to be in group to use it)
 -   data3: allowMounted
@@ -405,15 +405,15 @@ No data used, all are always 0
 
 -   data0: minLevel
 -   data1: maxLevel
--   data2: areaID (From [AreaTable.dbc](AreaTable))
+-   data2: areaID (From [AreaTable.dbc](areatable))
 
 **GAMEOBJECT\_TYPE\_FLAGSTAND = 24**
 
--   data0: open (LockId from [Lock.dbc](Lock))
--   data1: pickupSpell (Spell Id from [Spell.dbc](Spell))
+-   data0: open (LockId from [Lock.dbc](lock))
+-   data1: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data2: radius (distance)
--   data3: returnAura (Spell Id from [Spell.dbc](Spell))
--   data4: returnSpell (Spell Id from [Spell.dbc](Spell))
+-   data3: returnAura (Spell Id from [Spell.dbc](spell))
+-   data4: returnSpell (Spell Id from [Spell.dbc](spell))
 -   data5: noDamageImmune (Boolean flag)
 -   data6: openTextID
 -   data7: losOK (Boolean flag)
@@ -433,9 +433,9 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_FLAGDROP = 26**
 
--   data0: open (LockId from [Lock.dbc](Lock))
+-   data0: open (LockId from [Lock.dbc](lock))
 -   data1: eventID (Unknown Event ID)
--   data2: pickupSpell (Spell Id from [Spell.dbc](Spell))
+-   data2: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data3: noDamageImmune (Boolean flag)
 -   data4: openTextID
 -   data5: playerCast
@@ -485,7 +485,7 @@ Object type not used
 
 -   data0: startOpen (Boolean flag)
 -   data1: radius (Distance)
--   data2: auraID1 (Spell Id from [Spell.dbc](Spell))
+-   data2: auraID1 (Spell Id from [Spell.dbc](spell))
 -   data3: conditionID1 (Unknown ID)
 -   data4: auraID2
 -   data5: conditionID2
@@ -493,7 +493,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_DUNGEONDIFFICULTY = 31**
 
--   data0: mapID (From [Map.dbc](Map))
+-   data0: mapID (From [Map.dbc](map))
 -   data1: difficulty
 -   data2: DifficultyHeroic
 -   data3: DifficultyEpic

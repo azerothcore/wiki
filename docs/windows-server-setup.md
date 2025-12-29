@@ -26,7 +26,7 @@ Some files are optional but highly recommended:
 
 If you intend to use an enUS client you can download the data files below. If you intend to use any other language client you will need to [extract](#option-2-extract-files-yourself) the data yourself.
 
-<a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Data files enUS (AC Data v16)</a>
+<a class="no-icon" href="https://github.com/wowgaming/client-data/releases/" target="_blank"><i class="fa-solid fa-download"></i> Data files enUS (AC Data v19)</a>
 
 1. Download the files above.
 
@@ -46,6 +46,7 @@ mapextractor.exe
 mmaps_generator.exe
 vmap4extractor.exe
 vmap4assembler.exe
+mmaps-config.yaml
 ```
 
 2. Browse into **C:\Azerothcore\apps\extractor** and copy "**extractor.bat**" into your World of Warcraft folder with the previous files.
