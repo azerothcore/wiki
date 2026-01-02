@@ -77,7 +77,6 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [gossip_menu_option](gossip_menu_option)
 - [gossip_menu_option_locale](gossip_menu_option_locale)
 - [graveyard_zone](graveyard_zone)
-- [holiday_dates](holiday_dates)
 - [instance_encounters](instance_encounters)
 - [instance_template](instance_template)
 - [item_enchantment_template](item_enchantment_template)

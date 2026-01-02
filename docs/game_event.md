@@ -31,9 +31,13 @@ Entry of the event. Keep it as low as possible and prevent making holes in the l
 
 Absolute start date of the event. The event will start occurring only if the local time at the server is after the one set here.
 
+{% include note.html content="For events linked to holidays with dynamic date calculation (Easter, Lunar New Year, Thanksgiving, etc.), start_time is automatically computed on server startup and overrides any value set in the database. See the Dynamic Holiday System section below." %}
+
 ### end_time
 
 Absolute end date of the event. The event will stop occurring if the local time at the server is after the one set here.
+
+{% include note.html content="For events linked to holidays with dynamic date calculation, end_time is automatically computed based on the event length and start_time." %}
 
 ### occurrence
 
@@ -66,4 +70,41 @@ This is a boolean field that determines if this game event is a world event or n
 | 0     | Don't announce the Event                           |
 | 1     | Announce the description of the Event to the world |
 | 2     | Use the `event.announce` settings from the config  |
+
+## Dynamic Holiday System
+
+Some holidays occur on dates that vary from year to year. For these holidays, the server automatically calculates the correct dates on startup using astronomical algorithms and calendar rules.
+
+### Dynamically Calculated Holidays
+
+| Holiday ID | Holiday Name | Calculation Method |
+| ---------- | ------------ | ------------------ |
+| 141 | Feast of Winter Veil | 6 days before winter solstice (Dec 15-16) |
+| 181 | Noblegarden | Day after Easter Sunday |
+| 201 | Children's Week | First Monday on or after April 25 |
+| 283 | Harvest Festival | 2 days before autumn equinox |
+| 301 | Hallow's End | Fixed Oct 18 |
+| 321 | Lunar Festival | Day before Chinese New Year (astronomical lunar calculation) |
+| 324 | Midsummer Fire Festival | Fixed Jun 21 |
+| 327 | Brewfest | First Saturday on or after Sept 15, minus 7 days |
+| 335 | Love is in the Air | First Monday on or after Feb 3 |
+| 341 | Day of the Dead | Fixed Nov 1 |
+| 372 | Pilgrim's Bounty | 4th Thursday of November minus 4 days |
+| 374 | Darkmoon Faire (Elwynn) | First Sunday of Mar/Jun/Sep/Dec minus 2 days |
+| 375 | Darkmoon Faire (Mulgore) | First Sunday of Jan/Apr/Jul/Oct minus 2 days |
+| 376 | Darkmoon Faire (Terokkar) | First Sunday of Feb/May/Aug/Nov minus 2 days |
+
+### How It Works
+
+1. On server startup, `GameEventMgr::LoadHolidayDates()` iterates through all holiday rules
+2. For each holiday, dates are calculated for multiple years (current year ± several years)
+3. The calculated dates are written to the `Holidays.dbc` Date[] array for calendar display
+4. The corresponding game_event's `start_time` and `end_time` are updated to match the next occurrence
+5. Events automatically re-schedule after each occurrence completes
+
+### Notes
+
+- The `holiday_dates` database table has been **removed** - all dates are now calculated dynamically
+- Calendar dates are populated for ~4 years to ensure the in-game calendar displays correctly
+- Darkmoon Faire has multiple occurrences per year, rotating monthly between Mulgore (Jan), Terokkar (Feb), Elwynn (Mar), and repeating
 
