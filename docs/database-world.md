@@ -94,9 +94,6 @@
 - [gossip_menu_option_locale](gossip_menu_option_locale)
 - [graveyard_zone](graveyard_zone)
 
-## H
-- [holiday_dates](holiday_dates)
-
 ## I
 - [instance_encounters](instance_encounters)
 - [instance_template](instance_template)
