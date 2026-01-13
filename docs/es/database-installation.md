@@ -26,7 +26,7 @@ Puede hacer esto de dos maneras:
 
 Si quiere saber cómo funciona el directorio SQL o planea hacer cambios custom, le recomendamos leer [esto](sql-directory).
 
-### Automatic Database Updater (Actualizador autmático de bases de datos: predeterminado, recomendado)
+### Actualizador automático de bases de datos
 
 Por defecto, Worldserver y Authserver van a revisar e importar los nuevos archivos dentro de la base de datos que estén especificados en la configuración.
 
