@@ -20,12 +20,11 @@ This table holds information on what events (or procs) certain spells are activa
 | [SpellTypeMask][8]    | INT      | UNSIGNED   |     | NO   | 0       |        |         |
 | [SpellPhaseMask][9]   | INT      | UNSIGNED   |     | NO   | 0       |        |         |
 | [HitMask][10]         | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [AttributesMask][11]     | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [DisableEffectsMask][12] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [ProcsPerMinute][13]     | FLOAT    |            |     | NO   | 0       |        |         |
-| [Chance][14]             | FLOAT    |            |     | NO   | 0       |        |         |
-| [Cooldown][15]           | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [Charges][16]            | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
+| [AttributesMask][11]  | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [ProcsPerMinute][12]  | FLOAT    |            |     | NO   | 0       |        |         |
+| [Chance][13]          | FLOAT    |            |     | NO   | 0       |        |         |
+| [Cooldown][14]        | INT      | UNSIGNED   |     | NO   | 0       |        |         |
+| [Charges][15]         | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
 
 [1]: #spellid
 [2]: #schoolmask
@@ -38,11 +37,10 @@ This table holds information on what events (or procs) certain spells are activa
 [9]: #spellphasemask
 [10]: #hitmask
 [11]: #attributesmask
-[12]: #disableeffectsmask
-[13]: #procsperminute
-[14]: #chance
-[15]: #cooldown
-[16]: #charges
+[12]: #procsperminute
+[13]: #chance
+[14]: #cooldown
+[15]: #charges
 
 **Description of the fields**
 
@@ -188,27 +186,18 @@ PROC\_HIT\_NONE will trigger on:
 
 ### AttributesMask
 
-Adds special behaviour to the proc, spell might trigger proc only if these conditions are fulfilled.
+Adds special behaviour to the proc, spell might trigger proc only if these conditions are fullfilled
 
-| Event                                   | Flag | Bit       | Comment                                                                                  |
-| --------------------------------------- | ---- | --------- | ---------------------------------------------------------------------------------------- |
-| PROC\_ATTR\_REQ\_EXP\_OR\_HONOR         | 1    | 0x0000001 | requires proc target to give exp or honor for aura proc                                  |
-| PROC\_ATTR\_TRIGGERED\_CAN\_PROC        | 2    | 0x0000002 | aura can proc even with triggered spells                                                 |
-| PROC\_ATTR\_REQ\_MANA\_COST             | 4    | 0x0000004 | requires triggering spell to have a mana cost for aura proc                              |
-| PROC\_ATTR\_REQ\_SPELLMOD               | 8    | 0x0000008 | requires triggering spell to be affected by proccing aura to drop charges                |
-| PROC\_ATTR\_USE\_STACKS\_FOR\_CHARGES   | 16   | 0x0000010 | consuming proc drops a stack from proccing aura instead of charge                        |
-| PROC\_ATTR\_REDUCE\_PROC\_60            | 128  | 0x0000080 | aura should have a reduced chance to proc if level of proc actor > 60                    |
-| PROC\_ATTR\_CANT\_PROC\_FROM\_ITEM\_CAST| 256  | 0x0000100 | do not allow aura proc if proc is caused by a spell casted by item                       |
-
-### DisableEffectsMask
-
-Bitmask to explicitly disable specific aura effects from triggering the proc. This allows fine-grained control over which effects of a multi-effect aura can proc.
-
-| Effect | Flag | Comment                                |
-| ------ | ---- | -------------------------------------- |
-| 0      | 1    | Disables aura proc effect 0            |
-| 1      | 2    | Disables aura proc effect 1            |
-| 2      | 4    | Disables aura proc effect 2            |
+| Event                            | Flag | Bit       | Comment                                                                       |
+| -------------------------------- | ---- | --------- | ----------------------------------------------------------------------------- |
+| PROC\_ATTR\_REQ\_EXP\_OR\_HONOR  | 1    | 0x0000001 | requires proc target to give exp or honor                                     |
+| PROC\_ATTR\_TRIGGERED\_CAN\_PROC | 2    | 0x0000002 | aura can proc even when spell is triggered by another                         |
+| PROC\_ATTR\_REQ\_MANA\_COST      | 4    | 0x0000004 | requires triggering spell to have a mana cost                                 |
+| PROC\_ATTR\_REQ\_SPELLMOD        | 8    | 0x0000008 | requires triggering spell to be affected by aura SpellId (only for mod drops) |
+| PROC\_ATTR\_DISABLE\_EFF\_0      | 16   | 0x0000010 | explicitly disables aura proc effect 0                                        |
+| PROC\_ATTR\_DISABLE\_EFF\_1      | 32   | 0x0000020 | explicitly disables aura proc effect 1                                        |
+| PROC\_ATTR\_DISABLE\_EFF\_2      | 64   | 0x0000040 | explicitly disables aura proc effect 2                                        |
+| PROC\_ATTR\_REDUCE\_PROC\_60     | 128  | 0x0000080 | aura has a reduced chance to proc if level of proc actor > 60                 |
 
 ### ProcsPerMinute
 
