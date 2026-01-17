@@ -2,6 +2,8 @@
 
 Contains template of all gameobjects
 
+This table has `SMSG_GAMEOBJECT_QUERY_RESPONSE` packet and gameobjectcache.wdb cache file associated with: Gameobject name, display ID, type. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 ## Structure
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
