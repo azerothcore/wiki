@@ -180,7 +180,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-systemd is made aware of these new service files with `systemd daemon-reload`. You can start AzerothCore like this:
+systemd is made aware of these new service files with `systemctl daemon-reload`. You can start AzerothCore like this:
 
 ```sh
 sudo service ac-worldserver start
