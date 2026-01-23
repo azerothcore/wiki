@@ -6,6 +6,8 @@
 
 This table is used for displaying gossip when a player talks to an NPC with [npcflag](creature_template#npcflag) set.
 
+This table has `SMSG_NPC_TEXT_UPDATE`, `SMSG_GOSSIP_MESSAGE` packet and npccache.wdb (merged with others) cache file associated with: NPC dialogue, gossip menus, greetings. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
 **Table Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
