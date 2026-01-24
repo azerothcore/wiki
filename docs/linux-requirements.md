@@ -26,10 +26,10 @@ To configure MySQL in Ubuntu and similar (set `root` password and other settings
 
 ---
 
-#### Debian 12
+#### Debian 12 & 13
 
 ```sh
-apt-get update && apt-get install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
+apt-get update && apt-get install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget screen
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
@@ -42,7 +42,7 @@ Remember that if you are using the `root` user, it is not necessary to use `sudo
 
 1. Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) page to verify and download the latest script version.
 ```sh
-export MYSQL_APT_CONFIG_VERSION=0.8.33-1
+export MYSQL_APT_CONFIG_VERSION=0.8.36-1
 ```
 
 1. Download the latest MySQL repository information package.
