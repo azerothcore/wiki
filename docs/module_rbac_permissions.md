@@ -95,14 +95,32 @@ std::vector<ChatCommand> GetCommands() const override
 }
 ```
 
-### Step 4: Assign to roles
+### Step 4: Assign permissions
 
-To make your module commands available to specific roles, insert into [rbac_linked_permissions](rbac_linked_permissions) using a subquery to resolve the global ID:
+Module permissions need to be assigned to roles or accounts before anyone can use them.
+
+**Assign to a role** — link the module permissions into a command role via [rbac_linked_permissions](rbac_linked_permissions). Everyone who inherits that role will gain access:
 
 ```sql
--- Grant mod-example commands to GM role (197)
+-- Grant all mod-example commands to the GM Commands role (197)
 INSERT IGNORE INTO `rbac_linked_permissions` (`id`, `linkedId`)
 SELECT 197, `global_id`
 FROM `module_rbac_permissions`
 WHERE `module` = 'mod-example';
+```
+
+**Assign to a specific account** — insert into [rbac_account_permissions](rbac_account_permissions) or use the `.rbac` command in-game:
+
+```sql
+-- Grant mod-example's first command to account 5 on all realms
+INSERT INTO `rbac_account_permissions` (`accountId`, `permissionId`, `granted`, `realmId`)
+SELECT 5, `global_id`, 1, -1
+FROM `module_rbac_permissions`
+WHERE `module` = 'mod-example' AND `id` = 1;
+```
+
+Or in-game, once you know the global ID (e.g. 100001):
+
+```
+.rbac account grant 5 100001
 ```
