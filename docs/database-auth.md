@@ -20,9 +20,15 @@
 
 ## M
 
+- [module_rbac_permissions](module_rbac_permissions)
 - [motd](motd)
 
 ## R
+- [rbac](rbac)
+- [rbac_account_permissions](rbac_account_permissions)
+- [rbac_default_permissions](rbac_default_permissions)
+- [rbac_linked_permissions](rbac_linked_permissions)
+- [rbac_permissions](rbac_permissions)
 - [realmcharacters](realmcharacters)
 - [realmlist](realmlist)
 
