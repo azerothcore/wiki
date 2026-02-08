@@ -10,11 +10,8 @@ This table defines the parent-child relationships between permissions. When a pe
 
 | Field         | Type | Attributes | Key | Null | Default | Extra | Comment              |
 | ------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------- |
-| [id][1]       | INT  | UNSIGNED   | PRI | NO   |         |       | Permission id        |
-| [linkedId][2] | INT  | UNSIGNED   | PRI | NO   |         |       | Linked Permission id |
-
-[1]: #id
-[2]: #linkedid
+| [id](#id)             | INT  | UNSIGNED   | PRI | NO   |         |       | Permission id        |
+| [linkedId](#linkedid) | INT  | UNSIGNED   | PRI | NO   |         |       | Linked Permission id |
 
 Both fields have a foreign key to [rbac_permissions.id](rbac_permissions#id) with `ON DELETE CASCADE`.
 

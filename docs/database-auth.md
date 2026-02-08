@@ -24,7 +24,6 @@
 - [motd](motd)
 
 ## R
-- [rbac](rbac)
 - [rbac_account_permissions](rbac_account_permissions)
 - [rbac_default_permissions](rbac_default_permissions)
 - [rbac_linked_permissions](rbac_linked_permissions)

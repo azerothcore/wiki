@@ -12,15 +12,10 @@ For a system overview, see [RBAC](rbac).
 
 | Field             | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [accountId][1]    | INT        | UNSIGNED   | PRI | NO   |         |       | Account id               |
-| [permissionId][2] | INT        | UNSIGNED   | PRI | NO   |         |       | Permission id            |
-| [granted][3]      | TINYINT(1) | SIGNED     |     | NO   | 1       |       | Granted = 1, Denied = 0  |
-| [realmId][4]      | INT        | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all   |
-
-[1]: #accountid
-[2]: #permissionid
-[3]: #granted
-[4]: #realmid
+| [accountId](#accountid)       | INT        | UNSIGNED   | PRI | NO   |         |       | Account id               |
+| [permissionId](#permissionid) | INT        | UNSIGNED   | PRI | NO   |         |       | Permission id            |
+| [granted](#granted)           | TINYINT(1) | SIGNED     |     | NO   | 1       |       | Granted = 1, Denied = 0  |
+| [realmId](#realmid)           | INT        | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all   |
 
 The `accountId` field has a foreign key to [account.id](account#id) with `ON DELETE CASCADE`.
 The `permissionId` field has a foreign key to [rbac_permissions.id](rbac_permissions#id) with `ON DELETE CASCADE`.

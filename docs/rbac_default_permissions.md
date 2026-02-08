@@ -12,13 +12,9 @@ For a system overview, see [RBAC](rbac).
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [secId][1]        | INT     | UNSIGNED   | PRI | NO   |         |       | Security Level id        |
-| [permissionId][2] | INT     | UNSIGNED   | PRI | NO   |         |       | Permission id            |
-| [realmId][3]      | INT     | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all   |
-
-[1]: #secid
-[2]: #permissionid
-[3]: #realmid
+| [secId](#secid)               | INT     | UNSIGNED   | PRI | NO   |         |       | Security Level id        |
+| [permissionId](#permissionid) | INT     | UNSIGNED   | PRI | NO   |         |       | Permission id            |
+| [realmId](#realmid)           | INT     | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all   |
 
 The `permissionId` field has a foreign key to [rbac_permissions.id](rbac_permissions#id).
 

@@ -12,11 +12,8 @@ For a system overview, see [RBAC](rbac).
 
 | Field    | Type         | Attributes | Key | Null | Default | Extra | Comment       |
 | -------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------- |
-| [id][1]  | INT          | UNSIGNED   | PRI | NO   | 0       |       | Permission id |
-| [name][2]| VARCHAR(100) | SIGNED     |     | NO   |         |       | Permission name |
-
-[1]: #id
-[2]: #name
+| [id](#id)     | INT          | UNSIGNED   | PRI | NO   | 0       |       | Permission id   |
+| [name](#name) | VARCHAR(100) | SIGNED     |     | NO   |         |       | Permission name |
 
 **Description of the fields**
 
