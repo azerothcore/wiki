@@ -14,7 +14,7 @@ For a system overview, see [RBAC](rbac).
 | -------------- | ------------ | ---------- | ------ | ---- | ------- | -------------- | ------------------------------------ |
 | [module](#module)       | VARCHAR(255) | SIGNED     | PRI    | NO   |         |                | Module dir name, e.g. mod-cfbg       |
 | [id](#id)               | INT          | UNSIGNED   | PRI    | NO   |         |                | Module-local permission id           |
-| [global_id](#global_id) | INT          | UNSIGNED   | UNIQUE | NO   |         | AUTO_INCREMENT | Auto-assigned global permission ID   |
+| [global_id](#globalid)  | INT          | UNSIGNED   | UNIQUE | NO   |         | AUTO_INCREMENT | Auto-assigned global permission ID   |
 | [name](#name)           | VARCHAR(100) | SIGNED     |        | NO   |         |                | Permission name                      |
 
 The primary key is the composite `(module, id)`, which prevents cross-module ID collisions. The `global_id` column has a separate `UNIQUE` index and auto-increments starting at 100000.
