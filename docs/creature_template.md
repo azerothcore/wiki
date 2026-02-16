@@ -6,6 +6,9 @@
 
 This table contains the description of creatures. Each spawned creature is an instance of a template present in this table, this means every creature MUST be defined in this table.
 
+This table has `SMSG_CREATURE_QUERY_RESPONSE` packet and creaturecache.wdb cache file associated with: Creature name, subname/title, display ID, type. To see more information about: [Client Cache (wdb)](client-cache-wdb).
+
+
 **Table Structure**
 
 | Field                                              | Type               | Null | Key | Default | Extra | Comment                              |
