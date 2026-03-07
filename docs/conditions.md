@@ -376,7 +376,8 @@ CONDITION_SOURCE_TYPE_SPELL_IMPLICIT_TARGET</td>
 <td>Always 0</td>
 <td><p>0 = Player<br />
 1 = WorldObject</p></td>
-<td><br />
+<td>
+The core iterates over all TextIDs for that menu from smallest to largest and keeps overwriting TextID when conditions pass, so the last matching row wins.
 </td>
 </tr>
 <tr class="even">
