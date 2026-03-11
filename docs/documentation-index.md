@@ -39,6 +39,7 @@ redirect_from: /documentation_index
 * [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana)
 * [MySQL types (C++)](mysqltypescpp)
 * [Project Versioning](project-versioning)
+* [RBAC](rbac)
 * [Remote Access](remote-access)
 * [Sniffing & Parsing](sniffing-and-parsing)
 * [Spell Effects Reference](spell-effects-reference)
