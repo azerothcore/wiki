@@ -329,3 +329,13 @@ All Header files should contain header guards
 
 #endif // MY_HEADER_H
 ```
+
+### Text Output
+
+All C++ script/system/command text output must use [acore_string](acore_string) whenever possible (e.g., ChatHandler messages, script system messages).
+
+NPC dialog, emotes, and other in-game text that is managed via database text systems (such as `creature_text`, `broadcast_text`, etc.) should continue to use those systems instead of `acore_string`.
+
+When adding new strings, localization must be provided for all available languages.
+
+**Tip:** You may use AI to assist with translating localization strings.
