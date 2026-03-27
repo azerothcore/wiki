@@ -1039,6 +1039,19 @@ and the other is just using an emote to appear dead. </p></td>
 <td>state</td>
 <td>Always 0</td>
 </tr>
+<tr class="even">
+<td>CONDITION_AI_DATA</td>
+<td>104</td>
+<td>dataId (true if AI::GetData(uint32 dataId) returns value)</td>
+<td>value</td>
+<td>Always 0</td>
+<tr class="odd">
+<td>CONDITION_RANDOM_DUNGEON</td>
+<td>105</td>
+<td>checkDifficulty</td>
+<td>difficulty</td>
+<td>Always 0</td>
+</tr>
 </tbody>
 </table>
 
@@ -1533,6 +1546,14 @@ Note: it will show or hide spells in vehicle spell bar.
     -   ConditionValue2: state or 0 (WORLD_STATE_CONDITION_STATE_NONE)
     -   ConditionValue3: always 0
         *NOTE: condition is true if WorldState::IsConditionFulfilled returns true*
+
+**\*CONDITION\_RANDOM\_DUNGEON **= 105****
+
+Returns true when the player is queued for a random dungeon via the LFG/RDF system.
+
+- - `ConditionValue1`: 0 = do not check difficulty; 1 = check difficulty (`ConditionValue2`). 
+  - `ConditionValue2`: if `ConditionValue1 = 1`, compares against the player's current map difficulty. Value must be less than `MAX_DIFFICULTY`
+  - `ConditionValue3`: always 0
 
 ### \***REFERENCE TEMPLATES**
 
