@@ -21,6 +21,7 @@ redirect_from: /documentation_index
 * [Bitwise operations](bit-and-bytes-tutorial)
 * [Changelog](changelog)
 * [CMake options](cmake-options)
+* [Config Merger Tool](config-merger)
 * [Config Overrides with Env Var](config-overrides-with-env-var)
 * [Core Scripts](core-scripts)
 * [Create accounts](creating-accounts)
