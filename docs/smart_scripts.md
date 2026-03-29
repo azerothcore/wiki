@@ -491,8 +491,9 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 | SMARTCAST_AURA_NOT_PRESENT      | 32   | 0x020 | Only casts the spell if the target does not have an aura from the spell     |
 | SMARTCAST_COMBAT_MOVE           | 64   | 0x040 | Prevent combat movement on cast, allow on fail range, mana, LOS             |
 | SMARTCAST_THREATLIST_NOT_SINGLE | 128  | 0x080 | Only cast if the source's threatlist is higher than one. This includes pets |
-| SMARTCAST_TARGET_POWER_MANA     | 256  | 0x100 | Only cast if the target has power type mana                                 |
-| SMARTCAST_MAIN_SPELL            | 1024 | 0x400 | Use with SMARTCAST_COMBAT_MOVE to set attack distance based on spell range  |
+| SMARTCAST_TARGET_POWER_MANA          | 256  | 0x100 | Only cast if the target has power type mana                                                        |
+| SMARTCAST_ENABLE_COMBAT_MOVE_ON_LOS  | 512  | 0x200 | Enable combat chase movement when the spell fails due to line-of-sight. Use with SMARTCAST_COMBAT_MOVE. |
+| SMARTCAST_MAIN_SPELL                 | 1024 | 0x400 | Use with SMARTCAST_COMBAT_MOVE to set attack distance based on spell range                         |
 
 ### Triggered Flags
 
