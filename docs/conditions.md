@@ -633,6 +633,14 @@ Note: it will show or hide spells in vehicle spell bar.
     -   ConditionValue3: always 0
         *NOTE: condition is true if WorldState::IsConditionFulfilled returns true*
 
+**CONDITION\_AI\_DATA = 104**
+
+Returns true when `AI::GetData(ConditionValue1)` returns the value specified in `ConditionValue2`. Works on both creatures and gameobjects using SmartAI. Data is stored via `SMART_ACTION_SET_DATA`.
+
+-   -   ConditionValue1: dataId — the key passed to `AI::GetData()`
+    -   ConditionValue2: expected value — the value to compare against the result
+    -   ConditionValue3: always 0
+
 **CONDITION\_RANDOM\_DUNGEON = 105**
 
 Returns true when the player is queued for a random dungeon via the LFG/RDF system.
