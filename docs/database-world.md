@@ -86,6 +86,7 @@
 - [gameobject_questender](gameobject_questender)
 - [gameobject_questitem](gameobject_questitem)
 - [gameobject_queststarter](gameobject_queststarter)
+- [gameobject_summon_groups](gameobject_summon_groups)
 - [gameobject_template](gameobject_template)
 - [gameobject_template_addon](gameobject_template_addon)
 - [gameobject_template_locale](gameobject_template_locale)
