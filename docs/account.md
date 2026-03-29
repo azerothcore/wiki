@@ -89,7 +89,7 @@ Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php
 
 ### session\_key
 
-`field-no-description|5`
+The session key used for encrypting the current authenticated session. Populated on login and cleared on logout.
 
 ### totp\_secret
 

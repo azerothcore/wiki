@@ -41,4 +41,4 @@ Graveyard's team.
 
 ### Comment
 
-`field-no-description|4`
+A human-readable comment describing this graveyard zone entry.

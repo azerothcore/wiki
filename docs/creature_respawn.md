@@ -32,7 +32,7 @@ The time when the creature should be respawned in Unix time.
 
 ### mapId
 
-`field-no-description|3`
+The map ID where this creature respawn entry applies.
 
 ### instance
 

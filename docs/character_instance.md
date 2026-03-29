@@ -36,4 +36,4 @@ Boolean 0 or 1 controlling if the player has been bound to the instance. A playe
 
 ### extended
 
-`field-no-description|4`
+Boolean (0 or 1). If 1, the player has extended this instance's reset timer for an additional reset cycle.

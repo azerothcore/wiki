@@ -63,4 +63,4 @@ The W (scalar) component of the quaternion rotation. Default is 1, which togethe
 
 ### invisibilityValue
 
-field-no-description|3
+The detection value required to see this invisible gameobject. Works in conjunction with [invisibilityType](#invisibilitytype).

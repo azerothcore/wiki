@@ -201,7 +201,6 @@
 - [spell_mixology](spell_mixology)
 - [spell_pet_auras](spell_pet_auras)
 - [spell_proc](spell_proc)
-- [spell_proc_event](spell_proc_event)
 - [spell_ranks](spell_ranks)
 - [spell_required](spell_required)
 - [spell_script_names](spell_script_names)

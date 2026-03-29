@@ -36,6 +36,6 @@ This is an arbitrary to describe the transport entry.
 
 ### ScriptName
 
-`field-no-description|4`
+The script name for this transport. References a script in ScriptDev or SmartAI.
 
 **Note:** Transports have their own map: https://wow.tools/dbc/?dbc=map&build=3.3.5.12340#page=1&colFilter[1]=Transport

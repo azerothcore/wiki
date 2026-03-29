@@ -37,4 +37,4 @@ Mail ID to be send. See [MailTemplate.dbc](mailtemplate)
 
 ### senderEntry
 
-`field-no-description|4`
+The creature entry ID of the NPC that sends the reward mail. See [creature_template.entry](creature_template#entry).

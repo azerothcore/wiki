@@ -30,4 +30,4 @@ The [pool](pool_template#entry) that this quest is in. Refers to [pool\_template
 
 ### description
 
-`field-no-description|3`
+A human-readable description or comment for this pool quest entry.
