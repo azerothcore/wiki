@@ -39,4 +39,22 @@ Unique ID.
 | Reputation  | faction id                                                                                                                  | 0-7 (Hated, Hostile, Unfriendly, Neutral, Friendly, Honored, Revered, Exalted) |
 | Faction     | 0/1 (Alliance/Horde)                                                                                                        | always 0                                                                       |
 | Race        | Bitmask (Human 1, Orc 2, Dwarf 4, Night Elf 8, Undead 16, Tauren 32, Gnome 64, Troll 128, Blood Elf 512, Draenei 1024)      | always 0                                                                       |
-| Class       | Bitmask (Warrior 1, Paladin 2, Hunter 4, Rogue 8, Priest 16, Death Knight 32, Shaman 64, Mage 128, Warlock 256, Druid 1024) | always 0                                                                       |
+| Class        | Bitmask (Warrior 1, Paladin 2, Hunter 4, Rogue 8, Priest 16, Death Knight 32, Shaman 64, Mage 128, Warlock 256, Druid 1024) | always 0                                                                       |
+| AccountFlags | Bitmask of account flags (see below)                                                                                        | always 0                                                                       |
+
+#### AccountFlags values
+
+| Flag                            | Value      | Description                         |
+| ------------------------------- | ---------- | ------------------------------------ |
+| ACCOUNT_FLAG_GM                 | 0x1        | Account is GM                        |
+| ACCOUNT_FLAG_COLLECTOR          | 0x4        | Collector's Edition                  |
+| ACCOUNT_FLAG_TRIAL              | 0x8        | Trial account                        |
+| ACCOUNT_FLAG_IGR                | 0x20       | Internet Game Room                   |
+| ACCOUNT_FLAG_REFERRAL           | 0x800      | Recruit-A-Friend                     |
+| ACCOUNT_FLAG_EXPANSION_COLLECTOR | 0x10000   | TBC Collector's Edition              |
+| ACCOUNT_FLAG_DISABLE_VOICE      | 0x20000    | Cannot join voice chat               |
+| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK | 0x40000   | Cannot speak in voice chat           |
+| ACCOUNT_FLAG_REFERRAL_RESURRECT | 0x80000    | Scroll of Resurrection               |
+| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | 0x4000000 | WotLK Collector's Edition           |
+| ACCOUNT_FLAG_OVERMIND_LINKED    | 0x8000000  | Linked with Battle.net               |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK    | 0x20000000 | Has a level 55+ character on account |
