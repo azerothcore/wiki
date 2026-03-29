@@ -228,5 +228,6 @@
 ## W
 - [warden_checks](warden_checks)
 - [waypoint_data](waypoint_data)
+- [waypoint_data_addon](waypoint_data_addon)
 - [waypoint_scripts](scripts)
 - [waypoints](waypoints)
