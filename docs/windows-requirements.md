@@ -22,7 +22,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
     1. Download the installer and follow the steps to set it up.
 
-3. Install the compiler / IDE [Visual Studio Community 2022 (ver 17)](https://visualstudio.microsoft.com/downloads/)
+3. Install the compiler / IDE [Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
 
    You will need to install the C++ compiler.
    
