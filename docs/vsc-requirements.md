@@ -16,7 +16,7 @@
    
    1. You will need Git installed. You can get the latest version here https://git-scm.com/download/win
    
-1. Install [Visual Studio 2019 Build Tools](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)
+1. Install [Visual Studio 2022 Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)
 
    You will need to install the C++ compiler.
 

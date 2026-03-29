@@ -160,7 +160,7 @@ AzerothCore requiere GCC 8.0 o una versión mayor y CLang 7 o una versión mayor
 
 **ACE00062** No puedo instalar AzerothCore en Windows XP/Vista
 
-AzerothCore requiere [Visual Studio 2019](https://docs.microsoft.com/en-us/visualstudio/releases/2019/system-requirements), por lo tanto,  necesita actualizar a Windows 7 o superior.
+AzerothCore requiere [Visual Studio 2022](https://docs.microsoft.com/en-us/visualstudio/releases/2022/system-requirements), por lo tanto, necesita actualizar a Windows 10 o superior.
 
 ---------------------------------------------------------
 

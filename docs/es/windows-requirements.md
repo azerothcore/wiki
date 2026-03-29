@@ -17,7 +17,7 @@
 
     1. Necesitará tener Git instalado. Puede obtener la [versión más reciente](https://sourceforge.net/projects/gitextensions/).
 
-1. Instale el compilador / IDE [Visual Studio (17) Community 2020](https://visualstudio.microsoft.com/downloads/)
+1. Instale el compilador / IDE [Visual Studio Community 2022](https://visualstudio.microsoft.com/downloads/)
 
    Necesitará instalar el compilador de C++.
    
