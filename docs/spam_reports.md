@@ -14,9 +14,9 @@ This table stores spam reports submitted by players in-game (e.g. reporting spam
 | [SpamType](#spamtype)                           | TINYINT  | UNSIGNED   |     | NO   |         |                | 0 = mail, 1 = chat, 2 = calendar     |
 | [SpammerGuid](#spammerguid)                     | INT      | UNSIGNED   |     | NO   | 0       |                | GUID of the reported player          |
 | [Unk1](#unk1)                                   | INT      | UNSIGNED   |     | YES  | 0       |                |                                      |
-| [MailIdOrMessageType](#mailIdOrMessageType)     | INT      | UNSIGNED   |     | YES  | 0       |                | Mail ID or message type              |
+| [MailIdOrMessageType](#mailidormessagetype)     | INT      | UNSIGNED   |     | YES  | 0       |                | Mail ID or message type              |
 | [ChannelId](#channelid)                         | INT      | UNSIGNED   |     | YES  | NULL    |                | Only used if SpamType = 1 (chat)     |
-| [SecondsSinceMessage](#secondssinceMessage)     | INT      | UNSIGNED   |     | YES  | NULL    |                | Only used if SpamType = 1 (chat)     |
+| [SecondsSinceMessage](#secondssincemessage)     | INT      | UNSIGNED   |     | YES  | NULL    |                | Only used if SpamType = 1 (chat)     |
 | [Description](#description)                    | LONGTEXT |            |     | YES  | NULL    |                | Description or context of the report |
 | [Time](#time)                                   | INT      | SIGNED     |     | YES  | NULL    |                | Time of report as Unix timestamp     |
 
