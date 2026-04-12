@@ -95,7 +95,7 @@ You will need the following files in order for the core to function properly:
 ```
 \configs\
 authserver.exe
-authserver.pbd
+authserver.pdb
 worldserver.exe
 worldserver.pdb
 libmysql.dll
