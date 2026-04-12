@@ -111,7 +111,7 @@ I get an error when the WorldServer is running:
 ```
 Map file './maps/0004331.map' is from an incompatible map version (MAPS v9), MAPS v10 is expected
 ```
-Pull the source, recompile tools, copy the extractors to your wow binaries and recreate the maps using the updated mapextractor. Then repl#ace your old map files with the new ones.
+Pull the source, recompile tools, copy the extractors to your wow binaries and recreate the maps using the updated mapextractor. Then replace your old map files with the new ones.
 
 ---------------------------------------------------------
 
@@ -135,7 +135,7 @@ This is usually due to mixing 32/64bit DLLs with your compiled binaries. Your DL
 
 ---------------------------------------------------------
 
-#### [ACE00048](#a-hreface00047ace00047a)
+#### [ACE00048](#a-hreface00048ace00048a)
 I get an error when I am trying to start Worldserver or Authserver
 ```
 {}DatabaseInfo is not specified in configuration file!
@@ -192,7 +192,7 @@ Use google or buy a book to learn the operating system you are using.
 #### [ACE00065](#a-hreface00065ace00065a)
 I can't compile, I get:
 ```
-fatal error C1060: compiler is out of heap sp#ace
+fatal error C1060: compiler is out of heap space
 C1076: compiler limit : internal heap limit reached; use /Zm to specify a higher limit
 ```
 Read [How to: Enable a 64-Bit, x64 hosted MSVC toolset on the command line. Microsoft](https://docs.microsoft.com/en-us/cpp/build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line?redirectedfrom=MSDN&view=msvc-160).

@@ -233,7 +233,7 @@ To use gdb in the docker containers:
 
 5. Restart and rebuild your containers, and the worldserver should now be running with gdb
 
-If the server crashes, you will find the crashdump file (`gdb.txt`) within the `/azerothcore` folder. This can be copied out with the `docker cp ac-worldserver:/azerothcore/gdb.txt ./gdb.txt` command.v
+If the server crashes, you will find the crashdump file (`gdb.txt`) within the `/azerothcore` folder. This can be copied out with the `docker cp ac-worldserver:/azerothcore/gdb.txt ./gdb.txt` command.
 
 ### .devcontainer support
 

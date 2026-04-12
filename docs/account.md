@@ -226,4 +226,4 @@ Stores information about client's OS. Used by Warden system.
 
 ### recruiter
 
-The account ID of another account. Used for recuit-a-friend system. See [account.id][1]
+The account ID of another account. Used for recruit-a-friend system. See [account.id][1]

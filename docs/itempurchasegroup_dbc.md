@@ -43,103 +43,103 @@ ID that's used in [ItemExtendedCost.dbc](itemextendedcost_dbc#id).
 
 ### ItemID_1
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_1](#itemid_1).
+[Entry](item_template#entry) of item required for this entry [ItemID_1](#itemid_1).
 
 ### ItemID_2
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_2](#itemid_2).
+[Entry](item_template#entry) of item required for this entry [ItemID_2](#itemid_2).
 
 ### ItemID_3
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_3](#itemid_3).
+[Entry](item_template#entry) of item required for this entry [ItemID_3](#itemid_3).
 
 ### ItemID_4
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_4](#itemid_3).
+[Entry](item_template#entry) of item required for this entry [ItemID_4](#itemid_4).
 
 ### ItemID_5
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_5](#itemid_5).
+[Entry](item_template#entry) of item required for this entry [ItemID_5](#itemid_5).
 
 ### ItemID_6
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_6](#itemid_6).
+[Entry](item_template#entry) of item required for this entry [ItemID_6](#itemid_6).
 
 ### ItemID_7
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_7](#itemid_7).
+[Entry](item_template#entry) of item required for this entry [ItemID_7](#itemid_7).
 
 ### ItemID_8
 
-[Entry](item_template#entry) of item required to for this entry [ItemID_8](#itemid_8).
+[Entry](item_template#entry) of item required for this entry [ItemID_8](#itemid_8).
 
 ### Name_Lang_enUS
 
-Pressumed reference name.
+Presumed reference name.
 
 Example: "Vengeful Gladiator Ranged Weapon"
 
 ### Name_Lang_enGB
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_koKR
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_frFR
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_deDE
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_enCN
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_zhCN
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_enTW
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_zhTW
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_esES
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_esMX
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_ruRU
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_ptPT
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_ptBR
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_itIT
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_Unk
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_Mask
 
-Pressumed reference ID for the Language Mask.
+Presumed reference ID for the Language Mask.
 

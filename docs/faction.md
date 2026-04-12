@@ -46,11 +46,9 @@ This DBC contains information on all of the base factions. These factions are un
 
 ### Content
 
-Note: When refering to a faction IDexample a creature's [faction](creature_template#faction) this refering to
+When referring to a creature's [faction](creature_template#faction) we use the [ID](#id) value.
 
-When refering to a creature's [faction](creature_template#faction) we use the [ID](#id) value.
-
-When refering to a reputation gain (example: `.modify reputation`) we use [Faction](#faction) value.
+When referring to a reputation gain (example: `.modify reputation`) we use [Faction](#faction) value.
 
 | [ID](#id) | [Faction](#faction) |            Faction Name             |   Reputation Index    |
 | :-------: | :-----------------: | :---------------------------------: | :-------------------: |

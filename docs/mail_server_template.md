@@ -8,7 +8,7 @@ This table contains information for server mail to be sent to players that meet 
 
 Works alongside
 - [mail_server_template_items](mail_server_template_items) to attach items to the mail.
-- [mail_server_template_conditions](mail_server_template_conditions) to create conditions to recieve the mail.
+- [mail_server_template_conditions](mail_server_template_conditions) to create conditions to receive the mail.
 
 **Table Structure**
 
