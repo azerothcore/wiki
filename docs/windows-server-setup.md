@@ -34,7 +34,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 3. Extract the files from the zip file and place them within the **Data** folder.
 
-4. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
+4. Edit the [DataDir](#updating-datadir) config option to the location of your folder.
 
 ## Option 2: Extract Files Yourself
 
@@ -60,13 +60,13 @@ mmaps-config.yaml
 
    - <b>dbc</b>, <b>maps</b> AND <b>vmaps</b> are needed to make server work properly!
 
-   - Do not attempt to stop <b>vmaps</b> exctraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b> The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
+   - Do not attempt to stop the <b>vmaps</b> extraction process. It is finished when it prints "Press any key...". It will create two new folders: <b>buildings</b> and <b>vmaps</b>. The <b>buildings</b> folder is completely useless post-running and can be safely deleted.
     
    - Don't run another task before the first is finished or you will have errors.
 
    - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
 
-   - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is exctracting.
+   - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is extracting.
 {{site.data.alerts.end}}
 
 5. Create a new folder in <b>C:\Build\bin\RelWithDebInfo</b> called <b>Data</b>
@@ -75,7 +75,7 @@ mmaps-config.yaml
 
 ## Config Files: Worldserver and Authserver
 
-First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within C:\Build\bin\RelWithDebInfo\configs\ (may vary).
+First, find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within C:\Build\bin\RelWithDebInfo\configs\ (may vary).
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 

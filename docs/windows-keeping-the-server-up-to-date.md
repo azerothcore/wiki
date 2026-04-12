@@ -7,9 +7,9 @@
 
 ## Keeping the source Up-to-Date
 
-Open your AzerothCore repository in GitExtensions.
+Open your AzerothCore repository in GitHub Desktop.
 
-1. Click on the blue down arrow (Pull - merge).
+1. Click **Fetch origin** at the top, then click **Pull origin** when it appears.
 
 This will sync your local repo to the latest commits from the azerothcore-wotlk repository.
 
