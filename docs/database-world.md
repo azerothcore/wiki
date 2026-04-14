@@ -188,6 +188,8 @@
 - [skill_fishing_base_level](skill_fishing_base_level)
 - [skinning_loot_template](loot_template)
 - [smart_scripts](smart_scripts)
+- [spawn_group](spawn_group)
+- [spawn_group_template](spawn_group_template)
 - [spell_area](spell_area)
 - [spell_bonus_data](spell_bonus_data)
 - [spell_cooldown_overrides](spell_cooldown_overrides)
