@@ -84,7 +84,9 @@ When enabled, the creature follows a smooth catmullrom spline curve through wayp
 
 ### action
 
-ID of the action to be performed. See [waypoint\_scripts.id](waypoint_scripts).
+If positive, it's the ID of the action to be performed. See [waypoint\_scripts.id](waypoint_scripts).
+
+If negative, it sends DoAction(-action) to the creature (-123 \-\> DoAction(123)), which can be used in cpp and SAI scripts.
 
 ### action\_chance
 
