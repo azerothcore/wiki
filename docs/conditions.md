@@ -140,6 +140,7 @@ Two conditions with the same SourceType, SourceGroup and SourceEntry but with a 
 | CONDITION_WORLD_SCRIPT             | 103   | conditionId                                                                                                                                                                                                                                                                                                                                 | state                                                                                                                                                                                                                                                                                                                                                                                                               | Always 0                                                                                                                                                                                                                                                                                                |
 | CONDITION_AI_DATA                  | 104   | dataId (true if AI::GetData(uint32 dataId) returns value)                                                                                                                                                                                                                                                                                   | value                                                                                                                                                                                                                                                                                                                                                                                                               | Always 0                                                                                                                                                                                                                                                                                                |
 | CONDITION_RANDOM_DUNGEON           | 105   | checkDifficulty                                                                                                                                                                                                                                                                                                                             | difficulty                                                                                                                                                                                                                                                                                                                                                                                                          | Always 0                                                                                                                                                                                                                                                                                                |
+| CONDITION_UNIT_IN_COMBAT           | 106   | Always 0                                                                                                                                                                                                                                                                                                                                    | Always 0                                                                                                                                                                                                                                                                                                                                                                                                            | Always 0                                                                                                                                                                                                                                                                                                |
 
 ### ConditionTarget
 
@@ -663,6 +664,19 @@ Returns true when the player is queued for a random dungeon via the LFG/RDF syst
 - - `ConditionValue1`: 0 = do not check difficulty; 1 = check difficulty (`ConditionValue2`).
   - `ConditionValue2`: if `ConditionValue1 = 1`, compares against the player's current map difficulty. Value must be less than `MAX_DIFFICULTY`
   - `ConditionValue3`: always 0
+
+**CONDITION\_UNIT\_IN\_COMBAT = 106**
+
+Returns true when the target unit is currently engaged in combat.
+
+-   -   ConditionValue1: always 0
+    -   ConditionValue2: always 0
+    -   ConditionValue3: always 0
+    -   NegativeCondition:
+        -   0 (true if target IS in combat)
+        -   1 (true if target is NOT in combat)
+
+*Can be used with `CONDITION_SOURCE_TYPE_GOSSIP_HELLO` (type 20) and `NegativeCondition = 1` (ConditionTarget = 1 to target the creature) to prevent players from opening the gossip menu of specific creatures while they are in combat.*
 
 ### \***REFERENCE TEMPLATES**
 
