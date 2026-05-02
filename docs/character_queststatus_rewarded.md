@@ -30,4 +30,4 @@ The quest ID of the rewarded quest. See [quest\_template.id](quest_template#id).
 
 ### active
 
-`field-no-description|3`
+Always set to 1. Used internally to filter active rewarded quests when loading character data.

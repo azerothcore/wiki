@@ -105,7 +105,7 @@ Another example could be: you can't have a row in `quest_template_addon` without
 
 ### Editor
 
-An Editor is typically linked to a table. For example, the ***Creature*** -> ***Trainer*** editor allows you to edit the `npc_trainer` table.
+An Editor is typically linked to a table. For example, the ***Creature*** -> ***Vendor*** editor allows you to edit the `npc_vendor` table.
 
 There are 2 main types of Editors in Keira3:
 

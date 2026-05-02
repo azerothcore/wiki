@@ -22,7 +22,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
     1. Download the installer and follow the steps to set it up.
 
-3. Install the compiler / IDE [Visual Studio Community 2022 (ver 17)](https://visualstudio.microsoft.com/downloads/)
+3. Install the compiler / IDE [Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
 
    You will need to install the C++ compiler.
    
@@ -52,11 +52,11 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
         3. Go to Environment Variables
         
-        4. Under "Systemvariables" select **Path**
+        4. Under "System variables" select **Path**
         
-        5. Edit and add your install path of MySQL, i.e **C:\Program Files\MySQL\MySQL Server 8.0\bin\\**
+        5. Edit and add your install path of MySQL, e.g. **C:\Program Files\MySQL\MySQL Server 8.4\bin\\**
 
-       Make sure to find the MySQL development files; you'll need them later. These files are shipped with MySQL Server, search for them in the program files directory, MySQL\MySQL Server 8.0\lib / MySQL\MySQL Server 8.4\lib.
+       Make sure to find the MySQL development files; you'll need them later. These files are shipped with MySQL Server, search for them in the program files directory, e.g. MySQL\MySQL Server 8.4\lib.
 
 5. Choose a database management tool
 

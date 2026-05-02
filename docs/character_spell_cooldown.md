@@ -42,4 +42,4 @@ The time when the spell cooldown will finish, measured in [Unix time](http://en.
 
 ### needSend
 
-`field-no-description|5`
+Boolean (0 or 1). If 1, the cooldown entry needs to be sent to the client on next login.

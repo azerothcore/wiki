@@ -10,15 +10,15 @@ tableofcontents: 1
 
 2. [Grafana](https://grafana.com/) - graph and a dashboard builder for visualizing time series metrics.
 
-{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1. However, you can use [Chronograf](#additional-visualizations-and-metrics-collection) to visulize it, but you need to set that up yourself. " %}
+{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1. However, you can use [Chronograf](#additional-visualizations-and-metrics-collection) to visualize it, but you need to set that up yourself. " %}
 
 {% include note.html content="We do not support Influx DB v3." %}
 
 ### Installing Influx DB
 
-1. Download and install InfuxDB version 1.x from https://portal.influxdata.com/downloads/ for your operating system. (Version 2.x is currently not supported.)
+1. Download and install InfluxDB version 1.x from https://portal.influxdata.com/downloads/ for your operating system. (Version 2.x is currently not supported.)
 
-2. Start InfuxDB
+2. Start InfluxDB
 
 3. Create a user and a database in InfluxDB using the Influx CLI and executing the commands below:
 
@@ -64,7 +64,7 @@ Database: worldserver User: grafana Password: grafana
 
 1. Edit `Metric.ConnectionInfo` with connection details (e.g "127.0.0.1;8086;worldserver")
 
-1. Start worldserver, the dashboard should now start recieving values.
+1. Start worldserver, the dashboard should now start receiving values.
 
 ## Implemented and planned metrics
 
@@ -72,9 +72,9 @@ Implemented (✔) and planned (❌) metrics:
 
 ### Technical oriented
 
-* I/O networking trafic
+* I/O networking traffic
     * Packets sent ❌
-    * Packets recieved ✔
+    * Packets received ✔
     * Average ping ❌
     * Traffic in ❌
     * Traffic out ❌

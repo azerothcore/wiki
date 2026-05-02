@@ -27,6 +27,7 @@
 - [creature](creature)
 - [creature_addon](creature_addon)
 - [creature_classlevelstats](creature_classlevelstats)
+- [creature_default_trainer](creature_default_trainer)
 - [creature_equip_template](creature_equip_template)
 - [creature_formations](creature_formations)
 - [creature_loot_template](loot_template)
@@ -85,6 +86,7 @@
 - [gameobject_questender](gameobject_questender)
 - [gameobject_questitem](gameobject_questitem)
 - [gameobject_queststarter](gameobject_queststarter)
+- [gameobject_summon_groups](gameobject_summon_groups)
 - [gameobject_template](gameobject_template)
 - [gameobject_template_addon](gameobject_template_addon)
 - [gameobject_template_locale](gameobject_template_locale)
@@ -92,9 +94,6 @@
 - [gossip_menu_option](gossip_menu_option)
 - [gossip_menu_option_locale](gossip_menu_option_locale)
 - [graveyard_zone](graveyard_zone)
-
-## H
-- [holiday_dates](holiday_dates)
 
 ## I
 - [instance_encounters](instance_encounters)
@@ -122,7 +121,6 @@
 - [npc_spellclick_spells](npc_spellclick_spells)
 - [npc_text](npc_text)
 - [npc_text_locale](npc_text_locale)
-- [npc_trainer](npc_trainer)
 - [npc_vendor](npc_vendor)
 
 ## O
@@ -190,6 +188,8 @@
 - [skill_fishing_base_level](skill_fishing_base_level)
 - [skinning_loot_template](loot_template)
 - [smart_scripts](smart_scripts)
+- [spawn_group](spawn_group)
+- [spawn_group_template](spawn_group_template)
 - [spell_area](spell_area)
 - [spell_bonus_data](spell_bonus_data)
 - [spell_cooldown_overrides](spell_cooldown_overrides)
@@ -203,7 +203,6 @@
 - [spell_mixology](spell_mixology)
 - [spell_pet_auras](spell_pet_auras)
 - [spell_proc](spell_proc)
-- [spell_proc_event](spell_proc_event)
 - [spell_ranks](spell_ranks)
 - [spell_required](spell_required)
 - [spell_script_names](spell_script_names)
@@ -214,6 +213,9 @@
 - [summonproperties_dbc](summonproperties_dbc)
 
 ## T
+- [trainer](trainer)
+- [trainer_locale](trainer_locale)
+- [trainer_spell](trainer_spell)
 - [transports](transports)
 
 ## U
@@ -228,5 +230,6 @@
 ## W
 - [warden_checks](warden_checks)
 - [waypoint_data](waypoint_data)
+- [waypoint_data_addon](waypoint_data_addon)
 - [waypoint_scripts](scripts)
 - [waypoints](waypoints)

@@ -75,7 +75,7 @@ Boolean 1 or 0 representing if the character has explored what was needed to exp
 
 ### timer
 
-`field-no-description|5`
+The time remaining (in milliseconds) for the timed quest. Used only for quests with a time limit.
 
 ### mobcount
 

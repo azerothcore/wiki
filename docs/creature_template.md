@@ -42,10 +42,6 @@ This table contains the description of creatures. Each spawned creature is an in
 | [unit_flags2](#unitflags2)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [dynamicflags](#dynamicflags)                      | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [family](#family)                                  | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_type](#trainertype)                       | TINYINT            | NO   |     | 0       |       |                                      |
-| [trainer_spell](#trainerspell)                     | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [trainer_class](#trainerclass)                     | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [trainer_race](#trainerrace)                       | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [type](#type)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [type_flags](#typeflags)                           | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [lootid](#lootid)                                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
@@ -66,8 +62,7 @@ This table contains the description of creatures. Each spawned creature is an in
 | [RacialLeader](#racialleader)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [movementId](#movementid)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [RegenHealth](#regenhealth)                        | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
-| [mechanic_immune_mask](#mechanicimmunemask)        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [spell_school_immune_mask](#spellschoolimmunemask) | INT UNSIGNED       | NO   |     | 0       |       |                                      |
+| [CreatureImmunitiesId](#creatureimmunitiesid)      | INT UNSIGNED       | NO   |     | 0       |       | Reference to creature_immunities table |
 | [flags_extra](#flagsextra)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
 | [ScriptName](#scriptname)                          | char(64)           | NO   |     |         |       |                                      |
 | [VerifiedBuild](#verifiedbuild)                    | SMALLINT           | YES  |     | 0       |       |                                      |
@@ -401,29 +396,6 @@ The family this creature belongs to.
 | 24. | Bat          | 45. | Core Hound     |
 | 25. | Hyena        | 46. | Spirit Beast   |
 
-#### trainer_type
-
-If the NPC is a trainer (has the trainer flag), then this field controls what kind of trainer it is. Both this field and the related field must be filled in for a trainer to work correctly.
-
-| ID  | Type                     | Related Field                   | Comments            |
-| --- | ------------------------ | ------------------------------- | ------------------- |
-| 0   | TRAINER_TYPE_CLASS       | [trainer_class](#trainer_class) | Trains class spells |
-| 1   | TRAINER_TYPE_MOUNTS      | [trainer_race](#trainer_race)   | Trains riding skill |
-| 2   | TRAINER_TYPE_TRADESKILLS | [trainer_spell](#trainer_spell) | Trains professions  |
-| 3   | TRAINER_TYPE_PETS        | [trainer_class](#trainer_class) | Trains pet skills   |
-
-#### trainer_spell
-
-If the NPC is a trainer that teaches professions ([trainer_type](#trainer_type) = 2), then the player must already know the spell ID specified here to be able to talk to this NPC.
-
-#### trainer_class
-
-If the NPC is a class trainer or a pet trainer ([trainer_type](#trainer_type) = 0 or 3), then the player's class must be the same as the value specified here to talk to this trainer. For pet trainers, this value must be 3 (hunter). See [characters.class](characters#class)
-
-#### trainer_race
-
-If the NPC is a mount trainer ([trainer_type](#trainer_type) = 1), then the player's race must be the same as the value specified here to talk to this trainer. See [characters.race](characters#race)
-
 #### type
 
 The type of the creature.
@@ -606,63 +578,11 @@ We have no idea what this field does. It is passed directly to the client.
 
 Boolean '1' or '0' controlling whether the creature should regenerate it's health or not.
 
-#### mechanic_immune_mask
+#### CreatureImmunitiesId
 
-This makes the creature immune to specific spell natures. See Spell.dbc at row effect_X_mechanic_id.
+Reference to the `creature_immunities` table which centralises spell- and mechanic-based immunities.
 
-Uses references from SpellMechanic.dbc.
-
-| Flag       |            | Type                     | Comment                                                  |
-| ---------- | ---------- | ------------------------ | -------------------------------------------------------- |
-| 1          | 0x00000001 | MECHANIC_CHARM           |                                                          |
-| 2          | 0x00000002 | MECHANIC_DISORIENTED     |                                                          |
-| 4          | 0x00000004 | MECHANIC_DISARM          |                                                          |
-| 8          | 0x00000008 | MECHANIC_DISTRACT        |                                                          |
-| 16         | 0x00000010 | MECHANIC_FEAR            |                                                          |
-| 32         | 0x00000020 | MECHANIC_GRIP            | Death Grip and similar effects                           |
-| 64         | 0x00000040 | MECHANIC_ROOT            |                                                          |
-| 128        | 0x00000080 | MECHANIC_SLOW_ATTACK     |                                                          |
-| 256        | 0x00000100 | MECHANIC_SILENCE         |                                                          |
-| 512        | 0x00000200 | MECHANIC_SLEEP           |                                                          |
-| 1024       | 0x00000400 | MECHANIC_SNARE           |                                                          |
-| 2048       | 0x00000800 | MECHANIC_STUN            |                                                          |
-| 4096       | 0x00001000 | MECHANIC_FREEZE          |                                                          |
-| 8192       | 0x00002000 | MECHANIC_KNOCKOUT        | Incapacitate effects such as Repetance (Paladin)         |
-| 16384      | 0x00004000 | MECHANIC_BLEED           |                                                          |
-| 32768      | 0x00008000 | MECHANIC_BANDAGE         | Healing etc.                                             |
-| 65536      | 0x00010000 | MECHANIC_POLYMORPH       |                                                          |
-| 131072     | 0x00020000 | MECHANIC_BANISH          |                                                          |
-| 262144     | 0x00040000 | MECHANIC_SHIELD          |                                                          |
-| 524288     | 0x00080000 | MECHANIC_SHACKLE         | Shackle Undead only                                      |
-| 1048576    | 0x00100000 | MECHANIC_MOUNT           | Any effect that summons a mount                          |
-| 2097152    | 0x00200000 | MECHANIC_INFECTED        | Frost Fever, Blood Plague etc.                           |
-| 4194304    | 0x00400000 | MECHANIC_TURN            | e.g. Turn Evil                                           |
-| 8388608    | 0x00800000 | MECHANIC_HORROR          | e.g. Death Coil (Warlock)                                |
-| 16777216   | 0x01000000 | MECHANIC_INVULNERABILITY | Forbearance, Nether Protection, Diplomatic Immunity only |
-| 33554432   | 0x02000000 | MECHANIC_INTERRUPT       |                                                          |
-| 67108864   | 0x04000000 | MECHANIC_DAZE            |                                                          |
-| 134217728  | 0x08000000 | MECHANIC_DISCOVERY       | Any Create Item effect                                   |
-| 268435456  | 0x10000000 | MECHANIC_IMMUNE_SHIELD   | Divine Shield, Ice Block, Hand of Protection...          |
-| 536870912  | 0x20000000 | MECHANIC_SAPPED          |                                                          |
-| 1073741824 | 0x40000000 | MECHANIC_ENRAGED         |                                                          |
-
-To combine immunities just add values. Immune to everything corresponds to the value 2147483647 (0x3FFF FFFF).
-
-#### spell_school_immune_mask 
-
-This makes the creature immune to specific spell schools.
-
-| Flag | Type                |
-| ---- | ------------------- |
-| 1    | SPELL_SCHOOL_NORMAL |
-| 2    | SPELL_SCHOOL_HOLY   |
-| 4    | SPELL_SCHOOL_FIRE   |
-| 8    | SPELL_SCHOOL_NATURE |
-| 16   | SPELL_SCHOOL_FROST  |
-| 32   | SPELL_SCHOOL_SHADOW |
-| 64   | SPELL_SCHOOL_ARCANE |
-
-To combine immunities just add values. Immune to everything corresponds to the value 127.
+For the detailed list of mechanics and spell-school bits, see [creature_immunities](creature_immunities.md).
 
 #### flags_extra
 
@@ -685,7 +605,7 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 1024       | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | 0x00000400 | creature will be only visible for dead players                                                                                         |
 | 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | creature will use offhand attacks                                                                                                      |
 | 4096       | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | 0x00001000 | players can't sell items to this vendor                                                                                                |
-| 8192       | CREATURE_FLAG_EXTRA_IGNORE_COMBAT                   | 0x00002000 |                                                                                                                                        |
+| 8192       | CREATURE_FLAG_EXTRA_CANNOT_ENTER_COMBAT             | 0x00002000 | creature cannot enter combat (will not attack or be attacked)                                                                          |
 | 16384      | CREATURE_FLAG_EXTRA_WORLDEVENT                      | 0x00004000 | custom flag for world events (left room for merging)                                                                                   |
 | 32768      | CREATURE_FLAG_EXTRA_GUARD                           | 0x00008000 | creature is a guard (Will ignore feign death and vanish)                                                                               |
 | 65536      | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH              | 0x00010000 | creature ignores feign death                                                                                                           |

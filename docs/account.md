@@ -89,7 +89,7 @@ Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php
 
 ### session\_key
 
-`field-no-description|5`
+The session key used for encrypting the current authenticated session. Populated on login and cleared on logout.
 
 ### totp\_secret
 
@@ -226,4 +226,4 @@ Stores information about client's OS. Used by Warden system.
 
 ### recruiter
 
-The account ID of another account. Used for recuit-a-friend system. See [account.id][1]
+The account ID of another account. Used for recruit-a-friend system. See [account.id][1]

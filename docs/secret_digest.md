@@ -22,4 +22,4 @@ The id digest.
 
 ### digest
 
-`field-no-description|2`
+The stored HMAC-SHA1 digest value used to verify integrity.

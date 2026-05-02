@@ -68,71 +68,71 @@ ID references to the [itemset_dbc](#id) entries.
 
 ### Name_Lang_enUS
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_enGB
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_koKR
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_frFR
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_deDE
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_enCN
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_zhCN
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_enTW
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_zhTW
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_esES
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_esMX
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_ruRU
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_ptPT
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_ptBR
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_itIT
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_Unk
 
-Pressumed reference name.
+Presumed reference name.
 
 ### Name_Lang_Mask
 
-Pressumed reference ID for the Language Mask.
+Presumed reference ID for the Language Mask.
 
 ### ItemID_1
 
@@ -148,7 +148,7 @@ Pressumed reference ID for the Language Mask.
 
 ### ItemID_4
 
-[Entry](item_template#entry) of the item for the item set [ItemID_4](#itemid_3).
+[Entry](item_template#entry) of the item for the item set [ItemID_4](#itemid_4).
 
 ### ItemID_5
 
@@ -236,35 +236,35 @@ Pressumed reference ID for the Language Mask.
 
 ### SetThreshold_1
 
-How many pieces of the Item Set you need refering to [SetSpellID_1](#setspellid_1)
+How many pieces of the Item Set you need referring to [SetSpellID_1](#setspellid_1)
 
 ### SetThreshold_2
 
-How many pieces of the Item Set you need refering to [SetSpellID_2](#setspellid_2)
+How many pieces of the Item Set you need referring to [SetSpellID_2](#setspellid_2)
 
 ### SetThreshold_3
 
-How many pieces of the Item Set you need refering to [SetSpellID_3](#setspellid_3)
+How many pieces of the Item Set you need referring to [SetSpellID_3](#setspellid_3)
 
 ### SetThreshold_4
 
-How many pieces of the Item Set you need refering to [SetSpellID_4](#setspellid_4)
+How many pieces of the Item Set you need referring to [SetSpellID_4](#setspellid_4)
 
 ### SetThreshold_5
 
-How many pieces of the Item Set you need refering to [SetSpellID_5](#setspellid_5)
+How many pieces of the Item Set you need referring to [SetSpellID_5](#setspellid_5)
 
 ### SetThreshold_6
 
-How many pieces of the Item Set you need refering to [SetSpellID_6](#setspellid_6)
+How many pieces of the Item Set you need referring to [SetSpellID_6](#setspellid_6)
 
 ### SetThreshold_7
 
-How many pieces of the Item Set you need refering to [SetSpellID_7](#setspellid_7)
+How many pieces of the Item Set you need referring to [SetSpellID_7](#setspellid_7)
 
 ### SetThreshold_8
 
-How many pieces of the Item Set you need refering to [SetSpellID_8](#setspellid_8)
+How many pieces of the Item Set you need referring to [SetSpellID_8](#setspellid_8)
 
 ### RequiredSkill
 

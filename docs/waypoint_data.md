@@ -8,19 +8,21 @@ This table contains all the path data for creatures that use waypoints and waypo
 
 **Table Structure**
 
-| Field                           | Type      | Attributes | Key | Null | Default |
-| ------------------------------- | --------- | ---------- | --- | ---- | ------- |
-| [id](#id)                       | INT       | UNSIGNED   | PRI | NO   | 0       |
-| [point](#point)                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
-| [position\_x](#positionx)       | FLOAT     |            |     | NO   | 0       |
-| [position\_y](#positiony)       | FLOAT     |            |     | NO   | 0       |
-| [position\_z](#positionz)       | FLOAT     |            |     | NO   | 0       |
-| [orientation](#orientation)     | FLOAT     |            |     | YES  | NULL    |
-| [delay](#delay)                 | INT       | UNSIGNED   |     | NO   | 0       |
-| [move\_type](#movetype)         | INT       |            |     | NO   | 0       |
-| [action](#action)               | INT       |            |     | NO   | 0       |
-| [action\_chance](#actionchance) | SMALLINT  |            |     | NO   | 100     |
-| [wpguid](#wpguid)               | INT       | UNSIGNED   |     | NO   | 0       |
+| Field                                 | Type      | Attributes | Key | Null | Default |
+| ------------------------------------- | --------- | ---------- | --- | ---- | ------- |
+| [id](#id)                             | INT       | UNSIGNED   | PRI | NO   | 0       |
+| [point](#point)                       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
+| [position\_x](#positionx)             | FLOAT     |            |     | NO   | 0       |
+| [position\_y](#positiony)             | FLOAT     |            |     | NO   | 0       |
+| [position\_z](#positionz)             | FLOAT     |            |     | NO   | 0       |
+| [orientation](#orientation)           | FLOAT     |            |     | YES  | NULL    |
+| [velocity](#velocity)                 | FLOAT     |            |     | NO   | 0       |
+| [delay](#delay)                       | INT       | UNSIGNED   |     | NO   | 0       |
+| [smoothTransition](#smoothtransition) | TINYINT   |            |     | NO   | 0       |
+| [move\_type](#movetype)               | INT       |            |     | NO   | 0       |
+| [action](#action)                     | INT       |            |     | NO   | 0       |
+| [action\_chance](#actionchance)       | SMALLINT  |            |     | NO   | 100     |
+| [wpguid](#wpguid)                     | INT       | UNSIGNED   |     | NO   | 0       |
 
 **Description of the fields**
 
@@ -54,17 +56,31 @@ The Z coordinate of the destination waypoint.
 
 The orientation of the creature. (North = 0.0; South = π (3.14159))
 
+### velocity
+
+Overrides the creature's default movement speed for this waypoint. Set to `0` to use the default speed.
+
 ### delay
 
 Time to wait (in ms) between each point.
 
+### smoothTransition
+
+When enabled, the creature follows a smooth catmullrom spline curve through waypoints instead of stopping and turning sharply at each point. Custom intermediate spline points can be added via the [waypoint\_data\_addon](waypoint_data_addon) table.
+
+| Value | Description                                          |
+| ----- | ---------------------------------------------------- |
+| 0     | Disabled (default) — creature stops at each waypoint |
+| 1     | Enabled — smooth spline curve between waypoints      |
+
 ### move\_type
 
-|      |     |
-| ---- | --- |
-| Walk | 0   |
-| Run  | 1   |
-| Fly  | 2   |
+| Value | Name    | Description                                                    |
+| ----- | ------- | -------------------------------------------------------------- |
+| 0     | Walk    | Creature moves at walking speed.                               |
+| 1     | Run     | Creature moves at running speed (default).                     |
+| 2     | Land    | Sets animation tier to Ground (used when landing from flight). |
+| 3     | Takeoff | Sets animation tier to Hover (used when taking off).           |
 
 ### action
 
@@ -82,7 +98,7 @@ This field holds the GUID of the waypoint visual when you enable the visual mode
 
 ### Example Rows
 
-| Id    | Point | Position\_x | Position\_y | Position\_z | Orientation | Delay | Move\_type | Action | Action\_chance | wpguid |
-| ----- | ----- | ----------- | ----------- | ----------- | ----------- | ----- | ---------- | ------ | -------------- | ------ |
-| 20160 | 1     | -4998       | -1167       | 501657      | 0           | 10000 | 0          | 0      | 100            | 0      |
-| 20160 | 2     | -4958.38    | -1199.34    | 501659      | 0           | 0     | 0          | 0      | 100            | 0      |
+| Id    | Point | Position\_x | Position\_y | Position\_z | Orientation | Velocity | Delay | SmoothTransition | Move\_type | Action | Action\_chance | wpguid |
+| ----- | ----- | ----------- | ----------- | ----------- | ----------- | -------- | ----- | ---------------- | ---------- | ------ | -------------- | ------ |
+| 20160 | 1     | -4998       | -1167       | 501657      | 0           | 0        | 10000 | 0                | 0          | 0      | 100            | 0      |
+| 20160 | 2     | -4958.38    | -1199.34    | 501659      | 0           | 0        | 0     | 0                | 0          | 0      | 100            | 0      |
