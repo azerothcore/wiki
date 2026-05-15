@@ -2,257 +2,525 @@
 
 This is a collection of notes aiming to explain the internals of Keira3 for development purposes.
 
-If you just want to use Keira3, you don't need any of the following. If you want to modify Keira3, for example to improve it or to add new features, you may find this page useful.
+If you just want to *use* Keira3, you don't need any of the following — head to the [Keira3 website](https://www.azerothcore.org/Keira3/) instead.
 
 ## Main technologies
 
 Keira3 is built upon the following open source web technologies:
 
-- [**TypeScript**](http://www.typescriptlang.org/) is the main language of Keira3. It is a superset of JavaScript. 
-If you know JavaScript and have some basic knowledge of OOP languages like Java and C#, you will feel pretty familiar with TypeScript already.
-Otherwise, you might find [this course](https://www.udemy.com/course/understanding-typescript/) helpful.
-If you don't know JavaScript at all, it would be better to get some basic knowledge first.
+- [**TypeScript**](http://www.typescriptlang.org/) is the main language of Keira3. It is a superset of JavaScript.
+  If you know JavaScript and have some basic knowledge of OOP languages like Java and C#, you will feel pretty familiar with TypeScript already.
+  Otherwise, you might find [this course](https://www.udemy.com/course/understanding-typescript/) helpful.
+  If you don't know JavaScript at all, it would be better to get some basic knowledge first.
 
-- [**Angular**](https://angular.io/). This is the main framework behind Keira3. 
-We absolutely recommend getting familiar with it before getting your hands inside Keira3's code.
-If you are looking for a complete Angular course, we can recommend [this one](https://www.udemy.com/course/the-complete-guide-to-angular-2/).
+- [**Angular**](https://angular.dev/). This is the main framework behind Keira3.
+  We absolutely recommend getting familiar with it before getting your hands inside Keira3's code.
+  Keira3 uses **modern Angular**: **standalone components** (no NgModules), **OnPush** change detection (enforced via the `@angular-eslint/prefer-on-push-component-change-detection` lint rule), **zoneless** change detection (`provideZonelessChangeDetection()`), **Angular Signals** for reactive state, and the `inject()` function for dependency injection (instead of constructor injection).
+  If you are looking for a complete Angular course, we can recommend [this one](https://www.udemy.com/course/the-complete-guide-to-angular-2/).
 
-- We use [**SCSS**](https://sass-lang.com/) to style our UI. It's an extension of CSS.
-Knowing the CSS fundamentals is required in order to be able to change the Keira3's interface.
-SCSS should be quite intuitive for anyone who can understand CSS.
+- [**SCSS**](https://sass-lang.com/) for styling. It's an extension of CSS.
+  Knowing the CSS fundamentals is required in order to be able to change the Keira3's interface.
 
 - [**Bootstrap**](https://getbootstrap.com/) is the CSS framework used as a base for Keira3's style.
-You don't have to be a Bootstrap expert, however we recommend being at least familiar with its [Grid system](https://getbootstrap.com/docs/5.3/layout/grid/) and Utilities like [spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/).
+  You don't have to be a Bootstrap expert, however we recommend being at least familiar with its [Grid system](https://getbootstrap.com/docs/5.3/layout/grid/) and Utilities like [spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/).
+  We also use a few **ngx-bootstrap** modules (`Modal`, `Tabs`, `Tooltip`, `Dropdown`) and the `ngx-toastr` library for notifications.
 
 - [**Electron**](https://electronjs.org/) is the software framework that allows building Desktop apps using web technologies.
-We don't use many native Electron features so usually you don't have to worry about it when developing Keira3.
+  The Electron main process lives in the project root (`main.ts` → compiled to `main.js`); the Angular code never talks to `mysql2`/`sqlite3`/`ssh2` directly but through `window.require(...)` guarded by `ElectronService.isElectron()`.
 
-- [**NX**](https://nx.dev/) is the build system to manage the project and keep it modular by diving it into several libraries.
-It was originally born as an extension of the Angular CLI, today NX is a generic to manage all kinds of monorepo projects (also for projects not based on Angular).
-Among several features, we leverage the [affected](https://nx.dev/ci/features/affected) powerful command of NX to run checks (e.g. lint, test, ...) only to the parts of the application that have been modified and to those which depend on them.
+- [**Nx**](https://nx.dev/) is the build system that manages the monorepo and keeps the project modular by dividing it into several libraries.
+  Among several features, we leverage the powerful [affected](https://nx.dev/ci/features/affected) command of Nx to run checks (e.g. lint, test, ...) only against the parts of the application that have been modified and those which depend on them.
+
+- [**Squel**](https://hiddentao.com/squel/) is the SQL builder used by `MysqlQueryService` to generate every UPDATE/INSERT/DELETE query Keira3 produces.
+
+- [**@ngx-translate**](https://github.com/ngx-translate/core) powers i18n; translation files live in `apps/keira/src/assets/i18n/*.json`. The language picker is `@keira/shared/switch-language`.
 
 ## Testing
 
 We use [test automation](https://en.wikipedia.org/wiki/Test_automation) in Keira3 in our development cycle. For every PR/commit, our CI automatically runs a lot of automated tests.
 
-More specifically, we have:
+### Test runner
 
-- **Unit tests**. It's all `*.spec.ts` file, they run with `npm run test`. We keep **100% coverage** and in [this is article](https://medium.com/@borzifrancesco/why-i-set-my-unit-test-coverage-threshold-to-100-4c7138276053) it is explained why this is important.
-  This means that if you try to submit untested code, the CI build of your PR will fail. We use the [Angular testing framework](https://angular.io/guide/testing) for it.
+Keira3 runs unit and integration tests with **[Vitest](https://vitest.dev/)** on top of `@analogjs/vite-plugin-angular`. Every library has its own `vitest.config.ts` that wraps the shared `vitest.base.config.ts` in the workspace root:
 
-- **Integration tests**. It's all the `*.integration.spec.ts` file, they also run with `npm run test`, together with the unit tests.
- You can see the integration tests of Keira3 almost like a set of e2e tests, the main difference is that all the DB interactions are mocked.
- The difference between unit tests and integration test is: in unit tests we test units by mocking all their dependencies, while in integration tests we test "big pieces" of Keira3 together (mocking only the DB). Mostly used to test the editors.
+```ts
+// libs/features/creature/vitest.config.ts
+import { createVitestConfig } from '../../../vitest.base.config';
 
-- For both our unit and integration tests, we test components by doing Component DOM Testing. Check [this article](https://medium.com/@borzifrancesco/component-dom-testing-in-angular-0d2256414c06) for more information about it.
- 
-- **E2E tests**. We have a tiny set of e2e tests based on [Playwright](https://playwright.dev/). For example, to check the sqlite integration. 
- The command `npm run e2e` will automatically serve the app and run the e2e tests.
- 
- ### Why test automation?
- 
- Because every time you modify your app, you never know if you are breaking any existing functionality unless you manually test everything again and again.
- 
- When you have automated tests in place, you are still not 100% sure about not breaking existing stuff, but at least they can give you some assurance.
+export default createVitestConfig({ coverageDir: 'coverage/libs/features/creature' });
+```
 
-## Files structure
+Use native Vitest APIs in specs: `vi.fn()`, `vi.spyOn(obj, 'method').mockReturnValue(...)`, `vi.spyOn(obj, 'method').mockImplementation(...)`, `expect.any(...)`, `expect.objectContaining(...)`, `it.skip` / `describe.skip`. For class mocking we use [`ts-mockito`](https://github.com/NagRock/ts-mockito).
 
-The project is entirely based on NX divinding the code into apps and libraries.
+### Categories of tests
 
-Apps:
+- **Unit tests** (`*.spec.ts`): run with `npm run test` (which delegates to `nx affected:test`).
+  Each unit test mocks all dependencies and asserts the unit's behaviour in isolation.
+  We keep **100% coverage** ([this article](https://medium.com/@borzifrancesco/why-i-set-my-unit-test-coverage-threshold-to-100-4c7138276053) explains why). The thresholds (`statements`, `lines`, `branches`, `functions` all at `100`) are enforced in `vitest.base.config.ts`. Submitting untested code will make CI fail.
 
-- **apps/keira-e2e**: all e2e test cases, isolated from everything else;
-- **apps/keira**: the main Angular app that imports code from `libs/*`
+- **Integration tests** (`*.integration.spec.ts`): also run with `npm run test`, alongside the unit tests.
+  Think of these as e2e tests where only the **DB layer** is mocked. They test an editor as a whole: form ↔ service ↔ query generation. They mostly live next to the editor components and follow a **PageObject** pattern via classes exported from `@keira/shared/test-utils`:
+  - `PageObject` — base class, wraps `ComponentFixture` via `ngx-page-object-model`;
+  - `EditorPageObject<T>` — adds `changeAllFields`, query-output assertions, etc.;
+  - `MultiRowEditorPageObject<T>` — adds row-grid helpers (add/edit/delete/select row);
+  - `SelectPageObject<T>` — for `Select*` components;
+  - `QueryOutputComponentPage`, `translateModule` test helper, miscellaneous DOM helpers in `test-helpers`.
 
-Libraries:
+- Components are tested using **Component DOM Testing**. See [this article](https://medium.com/@borzifrancesco/component-dom-testing-in-angular-0d2256414c06) for context.
 
-- **libs/features**: source code of the main Keira3 features (each one isolated from the others in different libs). **RULE**: a feature can NOT import anything from another feature.
-If something is meant to be shared across features, then it must be placed under `libs/shared`;
+- **E2E tests** live in `apps/keira-e2e/` and use [Playwright](https://playwright.dev/). Today there is mostly a smoke test that checks the SQLite integration. `npm run e2e` runs them; you need `npm run build:prod` first.
 
-- **libs/main**: libraries of components that don't belong to a specific feature, yet they are isolated. For example, the main wrapper component `MainWindowComponent`, the Sidebar, the Login window, etc...
+### Why test automation?
 
-- **libs/shared**: all kinds of utilities, modules, components, services, abstract classes, testing utilities, etc...
+Because every time you modify your app, you never know if you are breaking any existing functionality unless you manually test everything again and again. Automated tests don't make you 100% safe, but they catch the obvious regressions.
+
+## File structure
+
+The project is an Nx monorepo with apps in `apps/` and libraries in `libs/`. Library names use the pattern `keira-<scope>-<name>` (e.g. `keira-features-creature`, `keira-shared-utils`). All library path aliases are declared in `tsconfig.base.json` under `@keira/*` (e.g. `@keira/shared/acore-world-model`, `@keira/features/creature`).
+
+### Apps (`apps/`)
+
+- **`apps/keira`** — the main Angular app. Bootstraps in `src/main.ts`, registers global providers (HTTP, translate, hash-based router, toastr, modals, dropdowns, tabs, ui-switch, highlight.js) and binds the routes. The whole route table is in `src/app/routes.ts`. Routing uses **hash location** (`withHashLocation()`) because Electron loads the bundle from `file://`.
+- **`apps/keira-e2e`** — Playwright tests for the packaged Electron app.
+
+### Library scopes (`libs/`)
+
+```
+app (scope:app-keira)
+  └─ main-window (scope:main-window)
+       └─ features (scope:features)
+            └─ shared (scope:shared)
+```
+
+This dependency graph is enforced via the `@nx/enforce-module-boundaries` ESLint rule (see `.eslintrc.json`). A feature can only import from `shared`; `main-window` can import from `features` and `shared`; shared libs can only import from other shared libs.
+
+#### `libs/features/` (scope: `features`)
+
+Each editor "domain" is its own library. A feature **cannot** import anything from another feature — if you need to share something, move it to `libs/shared`. Current features:
+
+`creature`, `quest`, `item`, `gameobject`, `spell`, `smart-scripts`, `conditions`, `gossip`, `trainer`, `texts`, `other-loots`, `dashboard`, `sql-editor`, `game-tele`, `unused-guid-search`.
+
+#### `libs/main/` (scope: `main-window`)
+
+Shell components that aren't tied to a specific feature:
+
+- `connection-window` — the login screen (MySQL credentials, optional SSH tunnel, optional SSL).
+- `main-window` — the main shell after a successful login. Contains the sidebar, sidebar items, the routed `<router-outlet />`, the logout button, and the "unsaved" indicator that reads each feature handler's signal.
+
+#### `libs/shared/` (scope: `shared`)
+
+| Library | Purpose |
+| --- | --- |
+| `acore-world-model` | All TypeScript models for AzerothCore DB rows (entities), plus `options/*` arrays (for dropdowns) and `flags/*` arrays (for bitmasks). New tables get their definition added here first. |
+| `base-abstract-classes` | Editor / handler / select base classes (see [Architecture](#architecture-design-and-fundamentals)). |
+| `base-editor-components` | Reusable UI building blocks shared by every editor: `TopBarComponent`, `EditorButtonsComponent`, `QueryOutputComponent` (+ `QueryErrorComponent`), `CreateComponent`, `HighlightjsWrapperComponent`, `IconComponent`/`IconService`, `ModalConfirmComponent`. |
+| `common-services` | `ElectronService` (wraps `window.require`), `ConfigService` (in-memory app config like debug mode), `LocationService`. |
+| `config` | Static configuration: `KEIRA_APP_CONFIG_TOKEN`, Squel config, datatable config, highlight.js config, toastr config, ui-switch config. |
+| `constants` | Shared types (`TableRow`, `Option`, `Flag`, `Class`, `StringKeys<T>`, etc.) and project-wide constants (`WIKI_BASE_URL`, `KEIRA3_REPO_URL`, …). |
+| `db-layer` | `MysqlService` (mysql2 + ssh2 tunnel), `SqliteService` (read-only SQLite for bundled DBC data), `BaseQueryService`, `MysqlQueryService` (the heart of SQL generation, uses Squel), `SqliteQueryService`. |
+| `login-config` | `LoginConfigService` + `LocalStorageService` — persists previously used DB connection profiles (without password). |
+| `loot-editor` | The `LootEditorComponent` and `ReferenceViewerComponent` (used by every `*_loot_template` editor). |
+| `model-3d-viewer` | The in-app 3D model preview (uses `ZamModelViewer` script + jQuery). |
+| `preview` | `PreviewHelperService` and constants used by the tooltip previews (creature, item, quest preview boxes). |
+| `sai-editor` | Reusable Smart-AI editor: editor service, comment generator, action/event/target constants, timed action list, sai-top-bar, `SaiHandlerService`. Used both by `smart-scripts` and embedded as a sub-editor in `creature` and `gameobject`. |
+| `selectors` | All reusable modal selectors (see [Selectors](#selectors)). |
+| `switch-language` | Language picker component + service, used by `connection-window`. |
+| `test-utils` | Page Object base classes and helpers used by integration tests. |
+| `utils` | Generic helpers: `compareObjFn`, `getNumberOrString`, `getPartial`, `ModelForm` type, `SubscriptionHandler` (base class that auto-unsubscribes in `ngOnDestroy`). |
 
 ## Architecture design and fundamentals
 
-Keira3 code is structured using [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) with techniques like [inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) and [generic types](https://www.typescriptlang.org/docs/handbook/generics.html) to maximise code reuse.
+Keira3 is structured using [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) with [inheritance](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) and [generic types](https://www.typescriptlang.org/docs/handbook/generics.html) to maximise code reuse.
 
-Inside the directory `libs/shared/base-abstract-classes` there is a collection of abstract classes that are meant to be extended by the concrete Angular [Components](https://angular.io/guide/architecture-components) and [Services](https://angular.io/guide/architecture-services) which will implement the Keira3 features.
+The directory `libs/shared/base-abstract-classes/src` contains a collection of abstract classes meant to be extended by concrete Angular [Components](https://angular.dev/guide/components) and [Services](https://angular.dev/guide/di) which implement Keira3 features.
 
-*If you are not familiar with the terminology used so far, please check the above hyperlinks before proceeding.*
+### Class hierarchy
 
-Keira3 is [**modular**](https://en.wikipedia.org/wiki/Modular_programming), you can see it as a collection of features and shared utilities that are organised into [NX apps and libraries](https://nx.dev/concepts/more-concepts/applications-and-libraries).
+```
+SubscriptionHandler (@keira/shared/utils)
+├── EditorService<T>                       — generic editor base, holds form + diff/full query state
+│   ├── SingleRowEditorService<T>          — one row per entity (UPDATE diff queries)
+│   │   └── SingleRowComplexKeyEditorService<T>   — composite primary key
+│   ├── MultiRowEditorService<T>           — multiple rows per entity (DELETE+INSERT)
+│   │   └── MultiRowComplexKeyEditorService<T>
+│   └── MultiRowExternalEditorService<T>   — child editor controlled from a parent
+│
+├── HandlerService<T>                      — selection state + unsaved signals
+│   └── ComplexKeyHandlerService<T>        — composite-key main entity
+│
+└── SearchService<T>
+    └── SelectService<T>                   — base for `Select*Service` classes
+        └── (per-feature `Select*Service`)
+
+EditorComponent<T> (Angular)
+├── SingleRowEditorComponent<T>
+└── MultiRowEditorComponent<T>
+    └── LootTemplateComponent<T>           — *_loot_template editors
+        └── LootTemplateIdComponent<T>     — loot-template ID variants
+
+SelectComponent<T>                          — base for `Select*Component` classes
+SelectComplexKeyComponent<T>                — composite-key variant
+```
+
+All of these are exported from `@keira/shared/base-abstract-classes`.
 
 ## Keira3 terminology and conventions
 
-Typically, Keira3 features are characterised by the following elements.
-
 ### Table types
 
-All the definitions of the AzerothCore DB tables are defined in Keira3 inside `libs/shared/acore-world-model`.
+All definitions of AzerothCore DB tables live in `libs/shared/acore-world-model`:
 
-If you want to create a new editor, you have to first create its definition there.
+- `src/entities/*.type.ts` — TypeScript classes for each table row, plus exported `*_TABLE`, `*_ID`, `*_NAME`, `*_SEARCH_FIELDS` constants.
+- `src/options/*.ts` — `Option[]` arrays for dropdowns (single-value selectors).
+- `src/flags/*.ts` — `Flag[]` arrays for bitmask selectors.
+
+**To add support for a new table, create its definition file here first**, then re-export it from `src/index.ts`.
 
 ### The Main Entity
 
-For example ***Creature*** is a main entity. Whether you want to modify a vendor (`npc_vendor`) or a loot of a creature (`creature_loot_template`), you still have to select (or create) a Creature.
+For example, ***Creature*** is a main entity. Whether you want to modify a vendor (`npc_vendor`) or a creature loot (`creature_loot_template`), you still have to select (or create) a Creature first.
 
-There is always a table (and so also an Editor) for the Main Entity. For creatures it's `creature_template`.
+There is always a table (and so also an Editor) for the Main Entity. For creatures it's `creature_template`. You can't have an `npc_vendor` row without linking it to an existing entry of `creature_template`.
 
-You can't have a vendor, loot, etc... without having a creature first. In other words, you can't have an `npc_vendor` row without linking it to an existing entry of `creature_template`.
+Another example: you can't have a row in `quest_template_addon` without linking it to an existing row of `quest_template`. Because `quest_template` is the Main Entity of the Quest editors.
 
-Another example could be: you can't have a row in `quest_template_addon` without linking it to an existing row of `quest_template`. Because `quest_template` is the Main Entity of the Quest editors.
+Main-entity services set `protected override isMainEntity = true;`.
 
 ### Editor
 
-An Editor is typically linked to a table. For example, the ***Creature*** -> ***Vendor*** editor allows you to edit the `npc_vendor` table.
+An Editor is typically linked to a table. For example, the ***Creature*** → ***Vendor*** editor allows you to edit the `npc_vendor` table.
 
-There are 2 main types of Editors in Keira3:
+There are 2 main types of editors (plus complex-key variants for composite primary keys).
 
 #### Single-row editors
 
-They are the editors of tables containing **ONE row for each entity**.
+Editors of tables with **one row per entity** (e.g. `creature_template_addon`). Every row is identified by a single primary key — the ID of the selected entity. In the DB those columns have inconsistent names (`id`, `ID`, `entry`, `Entry`, …); in Keira3 we always call this `entityIdField`.
 
-For example, the table `creature_template_addon` can have only ONE row for each creature. You can never have 2 rows pointing to the same creature in this table.
-
-Every row is uniquely identified by a primary key, that is the ID of the selected entity. Typically in the DB they are called `id`, `ID`, `entry`, `Entry`, etc... yes, they are completely inconsistent, but that's what we inherited from MaNGOS/TrinityCore. In Keira3 we call it just `entityIdField`.
+Diffs are generated as `UPDATE … SET … WHERE id = ?` queries by `MysqlQueryService.getUpdateQuery()`.
 
 #### Multi-row editors
 
-They are the editors containing **MULTIPLE rows for each entity**.
+Editors of tables with **multiple rows per entity** (e.g. `npc_vendor`). Every row has two keys; in Keira3 we call them `entityIdField` and `entitySecondIdField`. For `npc_vendor`, `entityIdField` is the Creature ID and `entitySecondIdField` is the Item ID. A few tables also need an `_entityExtraIdField` (when the secondary key alone isn't unique).
 
-For example, the table `npc_vendor` can have multiple rows that belongs to the same Creature. Every row of `npc_vendor` represents a specific Item that is sold by a specific Creature. And a Creature can sell 0, 1 or many items. Then every Creature can have 0, 1 or many rows in the `npc_vendor` table. Makes sense right?
+Diff persistence uses `DELETE … WHERE entityIdField = ?` + `INSERT INTO … VALUES …` so that the whole set of rows for that entity is replaced atomically.
 
-Every row has 2 primary keys, typically (but not always) called `id` and `guid`. In Keira3 we always call them `entityIdField` and 
-`entitySecondIdField`. The `entityIdField` is the ID of the selected entity.
+#### Complex-key editors
 
-Back to the example of `npc_vendor`:
+A few tables (e.g. `smart_scripts`) have composite primary keys (`entryorguid`, `source_type`, `id`). For these we use the **complex-key** variants — `SingleRowComplexKeyEditorService<T>` / `MultiRowComplexKeyEditorService<T>` and `SelectComplexKeyComponent<T>` / `ComplexKeyHandlerService<T>` — which extend the base classes and handle the composite key as an object that gets serialised to JSON.
 
-- `entityIdField` would be the ID of the Creature
-- `entitySecondIdField` would be the ID of the Item
+#### Editor Component and Service
 
-#### Editor's Component and Service
+Every Editor has its own Component and Service:
 
-Every Editor in Keira3 has its own [Component](https://angular.io/guide/architecture-components) and [Service](https://angular.io/guide/architecture-services) counterparts, where:
+- the **Editor Component** is the "UI part" — typically a thin template binding form controls. Standalone, OnPush.
+- the **Editor Service** holds the logic and **state** for the current row(s). It rebuilds the SQL queries (`_diffQuery`, `_fullQuery`) every time the user edits a field, by reacting to `form.valueChanges`.
 
-- you can see an **Editor Component** as the "UI part" of the Editor. It reflects the status of the table being edited and contains a form that allows the user to change its properties. Components are typically "dumb" (without much logic code) and are mostly about the HTML code. Of course it's linked to the Editor Service;
+A concrete single-row Editor Service usually only needs to declare `_entityClass`, `_entityTable`, `_entityIdField` (and optionally `_entityNameField` and `isMainEntity`):
 
-- the **Editor Service** contains all the logic that powers an Editor, as well as the **status** for the current table being edited. It's responsible for calling the `QueryService` whenever the user edits any property in order to re-generate the SQL queries.
+```ts
+import { Injectable, inject } from '@angular/core';
+import { SingleRowEditorService } from '@keira/shared/base-abstract-classes';
+import { CREATURE_TEMPLATE_ID, CREATURE_TEMPLATE_NAME, CREATURE_TEMPLATE_TABLE, CreatureTemplate } from '@keira/shared/acore-world-model';
+import { CreatureHandlerService } from '../creature-handler.service';
 
-In order to maximise code reuse, the following abstract classes have been created:
+@Injectable({ providedIn: 'root' })
+export class CreatureTemplateService extends SingleRowEditorService<CreatureTemplate> {
+  protected override readonly handlerService = inject(CreatureHandlerService);
+  protected override _entityClass = CreatureTemplate;
+  protected override _entityTable = CREATURE_TEMPLATE_TABLE;
+  protected override _entityIdField = CREATURE_TEMPLATE_ID;
+  protected override _entityNameField = CREATURE_TEMPLATE_NAME;
+  protected override isMainEntity = true;
 
-- `EditorService`: base of all Editor Services;
-- `SingleRowEditorService`: extends `EditorService`, base of all Single-row Editor Services (e.g. `CreatureTemplateService` extends this class);
-- `MultiRowEditorService`: extends `EditorService`, base of all Multi-row Editor Services (e.g. `CreatureLootTemplateService` extends this class);
+  constructor() {
+    super();
+    this.init();
+  }
+}
+```
 
-- `EditorComponent`: base of all Editor Components
-- `SingleRowEditorComponent`: extends `EditorComponent`, base of all Single-row Editor Components (e.g. `CreatureTemplateComponent` extends this class);
-- `MultiRowEditorComponent`: extends `EditorComponent`, base of all Multi-row Editor Components (e.g. `CreatureLootTemplateComponent` extends this class);
+A multi-row Editor Service additionally declares `_entitySecondIdField` (and optionally `_entityExtraIdField`).
 
 ### Handler
 
-Handlers are services responsible for holding statuses such as:
+Handlers are services that hold cross-editor state for a main entity:
 
-- which entity has been selected (for example, when you select a Creature, the ID of the creature is kept inside the `CreatureHandlerService`)
-- which editors are left with unsaved changes
+- which entity has been selected (e.g. when you select a Creature, the ID is kept inside `CreatureHandlerService._selected`);
+- which editors have unsaved changes — tracked with **Angular Signals** inside `_statusMap[tableName]`, exposed publicly via `is*Unsaved` readonly signals (consumed by the sidebar to show the "unsaved" dot);
+- the route guard: handlers are registered as `canActivate` guards on their editor routes — they redirect to `/` when no entity is selected.
 
-Group of editors that refer to the same main entity should share **one Handler**. For example, all Creature Editors refer to the `CreatureHandlerService`, all Quest Editors refer to the `QuestHandlerService`, and so on...
+A group of editors that refer to the same main entity shares **one Handler**. All Creature editors use `CreatureHandlerService`; all Quest editors use `QuestHandlerService`, and so on. `creature` additionally uses `SaiCreatureHandlerService` for embedded SAI editing.
 
-All Handlers classes extend the `HandlerService` abstract class.
+All Handler classes extend `HandlerService` (or `ComplexKeyHandlerService` for composite-key main entities).
+
+### Select components
+
+Each main entity has a `Select*Component` + `Select*Service` pair (e.g. `SelectQuestComponent` + `SelectQuestService`):
+
+- `Select*Service` extends `SelectService<T>` and only needs to declare `entityTable`, `entityIdField`, optionally `entityNameField`, and a `fieldList` (the searchable fields).
+- `Select*Component` extends `SelectComponent<T>` and renders the search form + results table (uses `@siemens/ngx-datatable`). Selecting a row calls `handlerService.select(false, id, name)`.
+
+The "Create new" button (`CreateComponent`) calls `handlerService.select(true, newId)` to enter an editor in "new entity" mode.
 
 ## Selectors
 
-There are several kinds of selectors which allow the user to easily select a value for a given field.
-
-Selectors are typically available to the user by clicking on the button with three dots:
+Selectors let the user pick a value for a given field without leaving the editor. They appear as the small **`...`** button next to a numeric input:
 
 ![image](https://user-images.githubusercontent.com/75517/118693269-351a5000-b80b-11eb-81b5-15065634a5b4.png)
 
-There are three main types of selectors, listed below.
+All selector components live in `libs/shared/selectors/src/selectors/` and are exported from `@keira/shared/selectors`.
 
 ### SingleValueSelectorBtnComponent
 
-The `SingleValueSelectorBtnComponent` is a reusable component which can be used to allow the user to select a **single value** from a list of values, for a given field.
-
-Let's check for example the `exp` field of `creature_template`, allowing to specify ONE value:
+`SingleValueSelectorBtnComponent` lets the user select a **single value** from a list, for a given field. For example, the `exp` field of `creature_template`:
 
 ```
 0 - Classic
-1 - TBC
-2 - WOTLK
+1 - The Burning Crusade
+2 - Wrath of The Lich King
 ```
 
-All you have to do to implement such selector is first definying the list values by creating an array of `Option`:
+Define the list as an array of `Option` in `libs/shared/acore-world-model/src/options/`:
 
-![image](https://user-images.githubusercontent.com/75517/118694016-e7eaae00-b80b-11eb-8701-bc59c80ec3bd.png)
+```ts
+// libs/shared/acore-world-model/src/options/expansion.ts
+import { Option } from '@keira/shared/constants';
 
-All the options are located in `libs/shared/acore-world-model/src/options` so you just need to create a new file like the above.
+export const EXPANSION: Option[] = [
+  { value: 0, name: 'Classic' },
+  { value: 1, name: 'The Burning Crusade' },
+  { value: 2, name: 'Wrath of The Lich King' },
+];
+```
 
-You then need to import the array of options, in this case `EXPANSIONS`, in the `.ts` file of your component and declare it as `PUBLIC READONLY` in order to make it available for the component's template:
+Import the array in the component, expose it as `protected readonly`, and add `SingleValueSelectorBtnComponent` to the standalone component's `imports`:
 
-![image](https://user-images.githubusercontent.com/75517/118694375-4dd73580-b80c-11eb-8f22-4f2ec76bfe68.png)
+```ts
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreatureTemplate, EXPANSION } from '@keira/shared/acore-world-model';
+import { SingleRowEditorComponent } from '@keira/shared/base-abstract-classes';
+import { SingleValueSelectorBtnComponent } from '@keira/shared/selectors';
 
-Now you can use it in the `.html` template of the component by adding the `keira-single-value-selector-btn` html element and passing the following properties:
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'keira-creature-template',
+  templateUrl: './creature-template.component.html',
+  imports: [FormsModule, ReactiveFormsModule, SingleValueSelectorBtnComponent /* , ... */],
+})
+export class CreatureTemplateComponent extends SingleRowEditorComponent<CreatureTemplate> {
+  protected readonly EXPANSION = EXPANSION;
+  // ...
+}
+```
 
-- `[control]` the form control, example `editorService.form.controls.exp` (note: `exp` is the name of the field)
-- `[config]` an object specifying the `options` and `name` property
-- `[modalClass]` the class of the modal, so you can change the modal size, e.g. `modal-md` or `modal-lg` (optional)
+Use it in the template via `keira-single-value-selector-btn`:
 
-![image](https://user-images.githubusercontent.com/75517/118693601-7c084580-b80b-11eb-9a6d-8833d6581920.png)
+- `[control]` the form control, e.g. `editorService.form.controls.exp`;
+- `[config]` an object specifying `options` and `name`;
+- `[modalClass]` optional, the CSS class of the modal (e.g. `modal-md`, `modal-lg`).
 
-This is the result:
+```html
+<div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+  <label class="control-label" for="exp">exp</label>
+  <keira-single-value-selector-btn
+    [control]="editorService.form.controls.exp"
+    [config]="{ options: EXPANSION, name: 'exp' }"
+    [modalClass]="'modal-md'"
+  />
+  <input [formControlName]="'exp'" id="exp" type="number" class="form-control form-control-sm" />
+</div>
+```
 
-<img src="https://user-images.githubusercontent.com/75517/118694803-c1794280-b80c-11eb-9099-00758983ca2e.png" width=300>
+Result:
 
-<img src="https://user-images.githubusercontent.com/75517/118694841-cf2ec800-b80c-11eb-8719-b770a7fd0c98.png" width=500>
+![image](https://user-images.githubusercontent.com/75517/118694803-c1794280-b80c-11eb-9099-00758983ca2e.png){width=300}
+
+![image](https://user-images.githubusercontent.com/75517/118694841-cf2ec800-b80c-11eb-8719-b770a7fd0c98.png){width=500}
 
 ### FlagsSelectorBtnComponent
 
-The `FlagsSelectorBtnComponent` is another very useful reusable component which allows the user to compose a value from a set of **flags** (bitmask), for a given field. If terms like bits, bitmask, flags, etc.. sounds weird to you, we recommend to read [this page](Bit-and_bytes-tutorial) to fully understand how flag values work.
+`FlagsSelectorBtnComponent` lets the user compose a value from a set of **flags** (bitmask). If terms like *bits*, *bitmask*, *flags* sound unfamiliar, [this page](https://en.wikipedia.org/wiki/Bit_field) explains them.
 
-Let's see, for example, how the field `dynamicflags` of `creature_template` is implemented.
+Define the list of bits as a `Flag[]` in `libs/shared/acore-world-model/src/flags/`:
 
-First you need to define the list of (bit) values by creating an array of `Flag`:
+```ts
+// libs/shared/acore-world-model/src/flags/dynamic-flags.ts
+import { Flag } from '@keira/shared/constants';
 
-![image](https://user-images.githubusercontent.com/75517/118695616-aeb33d80-b80d-11eb-97cd-a6b7933b632d.png)
+export const DYNAMIC_FLAGS: Flag[] = [
+  { bit: 0, name: 'LOOTABLE' },
+  { bit: 1, name: 'TRACK_UNIT - Creature’s location will be seen as a small dot in the minimap' },
+  { bit: 2, name: 'TAPPED - Makes creatures name appear grey (Lua_UnitIsTapped)' },
+  { bit: 3, name: 'TAPPED_BY_PLAYER - Lua_UnitIsTappedByPlayer usually used by PCVs (Player Controlled Vehicles' },
+  { bit: 4, name: 'SPECIALINFO' },
+  { bit: 5, name: 'DEAD - Makes the creature appear dead (this DOES NOT make the creature’s name grey or not attack players).' },
+  { bit: 6, name: 'REFER_A_FRIEND' },
+  { bit: 7, name: 'TAPPED_BY_ALL_THREAT_LIST - Lua_UnitIsTappedByAllThreatList' },
+];
+```
 
-All the flag values are located in `libs/shared/acore-world-model/src/flags` so you can create a new file there, for example `dynamic-flags.ts` in our case.
+Bits start from zero. Then expose `DYNAMIC_FLAGS` and import `FlagsSelectorBtnComponent` in the component:
 
-Basically you need to define what's the meaning of every single bit. Don't forge that bits typically start from zero.
+```ts
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CreatureTemplate, DYNAMIC_FLAGS } from '@keira/shared/acore-world-model';
+import { SingleRowEditorComponent } from '@keira/shared/base-abstract-classes';
+import { FlagsSelectorBtnComponent } from '@keira/shared/selectors';
 
-Then you need to import the `DYNAMIC_FLAGS` array in the component's `.ts` file and make it available for its `.html` template by declaring it `PUBLIC READONLY`:
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'keira-creature-template',
+  templateUrl: './creature-template.component.html',
+  imports: [FlagsSelectorBtnComponent /* , ... */],
+})
+export class CreatureTemplateComponent extends SingleRowEditorComponent<CreatureTemplate> {
+  protected readonly DYNAMIC_FLAGS = DYNAMIC_FLAGS;
+  // ...
+}
+```
 
-![image](https://user-images.githubusercontent.com/75517/118696084-339e5700-b80e-11eb-951d-0b8f7acf1052.png)
+Template:
 
-Now you just need to use it in the html by adding the `keira-flags-selector-btn` component there:
+```html
+<div class="form-group col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+  <label class="control-label" for="dynamicflags">dynamicflags</label>
+  <keira-flags-selector-btn
+    [control]="editorService.form.controls.dynamicflags"
+    [disabled]="editorService.form.controls.dynamicflags.disabled"
+    [config]="{ flags: DYNAMIC_FLAGS, name: 'dynamicflags' }"
+  />
+  <input [formControlName]="'dynamicflags'" id="dynamicflags" type="number" class="form-control form-control-sm" />
+</div>
+```
 
-![image](https://user-images.githubusercontent.com/75517/118695922-02258b80-b80e-11eb-9c29-ec6ae693d13c.png)
+Inputs:
 
-The attributes for this component are:
+- `[control]` the form control (e.g. `editorService.form.controls.dynamicflags`);
+- `[config]` an object specifying `flags` and `name`;
+- `[modalClass]` optional CSS class of the modal.
 
-- `[control]` the form control, example `editorService.form.controls.dynamicflags` (note: `dynamicflags` is the name of the field)
-- `[config]` an object specifying the `options` and `name` property
-- `[modalClass]` the class of the modal, so you can change the modal size, e.g. `modal-md` or `modal-lg` (optional)
+Result:
 
-This is the result:
-
-<img src="https://user-images.githubusercontent.com/75517/118697264-685ede00-b80f-11eb-9609-6b4af903bcdc.png" width=300>
+![image](https://user-images.githubusercontent.com/75517/118697264-685ede00-b80f-11eb-9609-6b4af903bcdc.png){width=300}
 
 ![image](https://user-images.githubusercontent.com/75517/118697333-790f5400-b80f-11eb-8795-cdeae8ebfd64.png)
 
-
 ### Other selectors
 
-There are other selectors that allow the user to select values by doing a search either in the DB or in the DBC contained in the sqlite integrated in Keira3.
+There are many other selectors that search either the MySQL world DB or the bundled SQLite DBC data. Find their implementations in `libs/shared/selectors/src/selectors/`:
 
-You can find their implementations in `libs/shared/selectors` as well as examples of usage around the app.
-
-![image](https://user-images.githubusercontent.com/75517/118693136-10be7380-b80b-11eb-9721-081bf1f4128d.png)
+- `area-selector` — DBC area search.
+- `base-selector` — the shared base used by every selector (extends `SearchService`).
+- `boolean-option-selector` — quick yes/no toggle as a selector.
+- `creature-selector` — search creatures in `creature_template`.
+- `faction-selector` — DBC factions.
+- `flags-selector` — generic bitmask picker (used by `FlagsSelectorBtnComponent`).
+- `game-tele-selector` — teleport locations.
+- `gameobject-selector` — search gameobjects in `gameobject_template`.
+- `generic-option-selector` — quick dropdown variant.
+- `holiday-selector` — DBC holidays.
+- `icon-selector` — DBC spell icons.
+- `item-enchantment-selector` — DBC item enchantments.
+- `item-extended-cost-selector` — DBC item extended cost.
+- `item-limit-category-selector` — DBC item limit categories.
+- `item-selector` — search items in `item_template`.
+- `language-selector` — in-game languages.
+- `map-selector` — DBC maps.
+- `npc-text-selector` — `npc_text` search.
+- `quest-selector` — search quests in `quest_template`.
+- `single-value-selector` — generic single-value picker (used by `SingleValueSelectorBtnComponent`).
+- `skill-selector` — DBC skills.
+- `sound-entries-selector` — DBC sound entries.
+- `spell-selector` — DBC spells.
 
 Example: the **item-selector**.
 
 ![image](https://user-images.githubusercontent.com/75517/118697495-a2c87b00-b80f-11eb-9db4-69357704d5f5.png)
 
-You can use it whenever an Item ID is needed:
+```html
+<div class="form-group col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2">
+  <label class="control-label" for="item">
+    <keira-icon [itemId]="editorService.form.controls.item.value" />
+    item
+  </label>
+  <keira-item-selector-btn
+    [control]="editorService.form.controls.item"
+    [disabled]="editorService.form.controls.item.disabled"
+    [config]="{ name: 'item' }"
+  />
+  <input [formControlName]="'item'" id="item" type="number" class="form-control form-control-sm" />
+</div>
+```
 
-![image](https://user-images.githubusercontent.com/75517/118697570-bbd12c00-b80f-11eb-9959-feb7186dab45.png)
+## Database layer
+
+`@keira/shared/db-layer` exposes two service families:
+
+- **`MysqlService`** — wraps `mysql2` (and optionally `ssh2` for SSH tunnels). Holds the live `Connection`, exposes `connectionLost$`, performs reconnection. Only loaded inside Electron (the web preview mode at `npm run ng:serve:web` does not have a real DB).
+- **`SqliteService`** — wraps `sqlite3` against a bundled, read-only `.sqlite` file (`KEIRA_APP_CONFIG.sqlitePath`) that ships with the AzerothCore DBC data used by selectors (icons, spells, maps, factions, etc.).
+
+Both expose `dbQuery<T>(queryString)` returning an `Observable<T[]>`.
+
+On top of those, two **query** services build and execute domain SQL:
+
+- **`MysqlQueryService` extends `BaseQueryService`** — the heart of Keira3. Every editor calls into it.
+  - `getUpdateQuery<T>(table, idField, currentRow, newRow)` — diffs two row objects and produces a single `UPDATE … SET … WHERE`.
+  - `getFullDeleteInsertQuery<T>(table, rows, idField, [secondIdField], [extraIdField])` — produces a `DELETE` followed by `INSERT INTO … VALUES (...)` for multi-row tables.
+  - `query<T>(sql)` — runs a custom query.
+  - Specialised helpers for quest reward reputation, SAI scripts, max-id lookup, etc.
+  - Uses **Squel** (`squel.update(squelConfig).table(...)`, `squel.select(squelConfig).from(...)`, etc.). The `squelConfig` from `@keira/shared/config` standardises the SQL flavour and formatting.
+- **`SqliteQueryService`** — reads from the bundled DBC sqlite (areas, factions, holidays, icons, etc.). Heavily used by selectors.
+
+## Application flow
+
+1. Electron boots `main.js` (compiled from `main.ts`) which creates a `BrowserWindow` and loads either `http://localhost:4200` (dev) or `dist/browser/index.html` (prod).
+2. Angular bootstraps `AppComponent` (`apps/keira/src/app/app.component.ts`). It mounts `keira-connection-window` (login) until `MysqlService.connectionEstablished === true`, then switches to `keira-main-window`.
+3. `MainWindowComponent` renders the sidebar + `<router-outlet />`. Routes live in `apps/keira/src/app/routes.ts`. Most editor routes have `canActivate: [SomeHandlerService]`.
+4. A user picks a row via a `Select*Component`, which calls `handlerService.select(...)`. The router navigates to the main editor for that entity.
+5. The editor component triggers `editorService.reload(...)`, which reads from MySQL, populates the form, and starts listening to `form.valueChanges` to rebuild diff/full queries on every change.
+6. The user clicks "Execute" or "Save" → `editorService.save(...)` runs the diff query against MySQL, then reloads the entity.
+
+## Adding a new editor: a checklist
+
+Use this as a recipe when adding a new editor for a DB table. (Especially useful for AI agents.)
+
+1. **Model the table** in `libs/shared/acore-world-model/src/entities/<table-name>.type.ts`:
+  - Export a TypeScript class with public fields matching the DB columns and default values.
+  - Export string constants for the table name and key column(s): `<NAME>_TABLE`, `<NAME>_ID`, optionally `<NAME>_NAME`, `<NAME>_SEARCH_FIELDS`.
+  - Re-export the file from `libs/shared/acore-world-model/src/index.ts`.
+
+2. **Decide the editor flavour**:
+  - One row per main-entity → `SingleRowEditorService<T>` + `SingleRowEditorComponent<T>`.
+  - Many rows per main-entity → `MultiRowEditorService<T>` + `MultiRowEditorComponent<T>`.
+  - Composite PK → the `*ComplexKey*` variants.
+  - `*_loot_template` table → extend `LootTemplateComponent<T>` or `LootTemplateIdComponent<T>`.
+
+3. **Pick a feature library**. If it belongs under an existing main entity (creature, item, quest, …) put it there. Otherwise create a new feature lib under `libs/features/<name>` (mirror `libs/features/game-tele` for a minimal example) and register its tag `"tags": ["scope:features"]` in `project.json`.
+
+4. **Create the service**: extend the right base class, set `_entityClass` / `_entityTable` / `_entityIdField` (and `_entitySecondIdField` for multi-row). Inject the feature's `*HandlerService`. Call `this.init()` in the constructor.
+
+5. **Create the component**: extend the matching base component, inject the service via `editorService` and the `*HandlerService` via `handlerService`. Build the template using `keira-top-bar`, `keira-query-output`, and field inputs (with selectors where appropriate).
+
+6. **Wire up the handler**: add the new `*_TABLE` to the handler's `_statusMap` and expose an `is*Unsaved` signal so the sidebar can show the dot.
+
+7. **Route it**: add the component to `apps/keira/src/app/routes.ts`, with `canActivate: [TheHandlerService]`. Re-export the component from the feature library's `src/index.ts`.
+
+8. **Add the sidebar entry** for the new editor in `libs/main/main-window/src/sidebar/...`.
+
+9. **Tests**: write a `.service.spec.ts` (unit) and a `.integration.spec.ts` (uses a `*PageObject` extending `EditorPageObject`/`MultiRowEditorPageObject`). 100% coverage is enforced — verify with `nx test <project-name>`.
+
+## Tips
+
+- **Path aliases**: imports across libraries always use `@keira/<scope>/<name>` — never relative paths between libs. The full map lives in `tsconfig.base.json`.
+- **No NgModules**: every component is `standalone: true` and lists its own `imports: [...]`. If you add a new dependency to a template (a directive, a selector component, a pipe), remember to add it to that `imports` array.
+- **OnPush is mandatory** (ESLint enforced). After mutating state from a callback (HTTP, RxJS, etc.) you may need `changeDetectorRef.markForCheck()` — the base `EditorService` already does this in `save`/`reload`.
+- **Console rules**: only `console.warn`, `console.info`, `console.error` are allowed (`no-console` rule). Use `ToastrService` for user-facing messages.
+- **Module boundaries**: a feature cannot import another feature. If you find yourself wanting to, the code should move to `libs/shared`. Same for shared → only depends on other shared libs.
+- **Squel is a global** (`declare const squel: ...`) in `mysql-query.service.ts`. Tests pull it in via the Vitest setup so no extra import is needed.
+- **Tests live next to the code**: `foo.service.ts` ↔ `foo.service.spec.ts`. Integration tests use the `.integration.spec.ts` suffix and rely on the Page Object pattern from `@keira/shared/test-utils`.
+- **Run only affected projects**: `npm run lint` and `npm run test` use `nx affected:*`. For a single project use `nx lint <name>` / `nx test <name>` (e.g. `nx test keira-features-creature`).
+- **Hash routing**: links inside the app should use the router (`routerLink`) — full URLs include a `#` because Electron loads from `file://`.
+- **Hot-reload dev**: `npm start` runs `nx serve keira` and Electron together. For pure browser dev (no Electron, no DB) use `npm run ng:serve:web` — the SQLite/MySQL services no-op outside Electron.
+- **Coverage threshold is 100%** — code without tests will fail CI. If a branch is genuinely untestable, use `/* istanbul ignore next */` (already used in many places) and justify it.
+- **Formatting**: Prettier with 140-char width, single quotes, trailing commas. The `format-staged` script runs via Husky's pre-commit hook.
