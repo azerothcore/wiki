@@ -21,6 +21,7 @@
 - [channels](channels)
 - [channels_bans](channels_bans)
 - [channels_rights](channels_rights)
+- [chat_filter](chat_filter)
 - [character_account_data](character_account_data)
 - [character_achievement](character_achievement)
 - [character_achievement_offline_updates](character_achievement_offline_updates)
