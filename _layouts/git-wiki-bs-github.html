@@ -19,7 +19,7 @@
     {% include git-wiki/sections/head/styles.html %}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/united/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/github.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/github.css' | relative_url }}{% if site.github.build_revision %}?v={{ site.github.build_revision }}{% endif %}">
 
     {% if site.inc_after_head %}
     {% include {{ site.inc_after_head }} %}

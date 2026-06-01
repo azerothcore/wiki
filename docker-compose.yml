@@ -1,7 +1,8 @@
 version: '3.7'
 services:
   github-wiki-theme:
-    build: 
+    profiles: [github]
+    build:
       context: .
       dockerfile: .env-files/Dockerfile.github
     ports:
@@ -12,9 +13,10 @@ services:
     volumes:
      - .:/srv/jekyll
      - github_site:/srv/jekyll/_site
-    command: bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload
+    command: bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload --baseurl /wiki
   gitlab-wiki-theme:
-    build: 
+    profiles: [gitlab]
+    build:
       context: .
       dockerfile: .env-files/Dockerfile.gitlab
     ports:
@@ -25,7 +27,7 @@ services:
     volumes:
      - .:/srv/jekyll
      - gitlab_site:/srv/jekyll/_site
-    command: 'bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload'
+    command: 'bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload --baseurl /wiki'
 volumes: 
   github_site:
   gitlab_site:
