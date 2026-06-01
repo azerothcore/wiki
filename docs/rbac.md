@@ -41,7 +41,7 @@ A convenience view `vw_rbac` joins the linked and default tables for easier quer
 | 1–53 | Gameplay permissions | Instant logout, skip queue, join BG/arena/dungeon finder |
 | 192–195 | Security-level roles | Administrator (192), Gamemaster (193), Moderator (194), Player (195) |
 | 196–199 | Command roles | Admin Commands (196), GM Commands (197), Mod Commands (198), Player Commands (199) |
-| 200–924 | Individual command permissions | One per `.command` |
+| 200–925 | Individual command permissions | One per `.command` |
 | 100000+ | Module permissions | Auto-assigned via [module_rbac_permissions](module_rbac_permissions) |
 
 ## Role Hierarchy
