@@ -1,6 +1,6 @@
 FROM ruby:latest
 
-ENV LC_ALL=C.UTF-8=value
+ENV LC_ALL=C.UTF-8
 
 ADD . /srv/jekyll
 
