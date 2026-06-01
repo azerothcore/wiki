@@ -1,4 +1,4 @@
-# spell\_cone
+# spell_cone
 
 [<-Back-to:World](database-world)
 
@@ -21,6 +21,6 @@ If no override exists, the core falls back to `spell_dbc.ConeRadius`, then to le
 
 Spell identifier this row applies to.
 
-### cone\_radius
+### cone_radius
 
 Cone radius (in yards) used by cone-angle calculation (90° base + object-size adjustment).
