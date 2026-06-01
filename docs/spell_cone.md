@@ -13,7 +13,7 @@ If no override exists, the core falls back to `spell_dbc.ConeRadius`, then to le
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell identifier |
-| [cone_radius](#cone_radius) | FLOAT | SIGNED | | NO | 1 | | Cone radius override (yards) |
+| [cone_radius](#cone_radius) | FLOAT | SIGNED | | NO | 1 | | Cone radius override (yards, schema default is 1) |
 
 **Description of the fields**
 
