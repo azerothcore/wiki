@@ -192,6 +192,7 @@
 - [spawn_group_template](spawn_group_template)
 - [spell_area](spell_area)
 - [spell_bonus_data](spell_bonus_data)
+- [spell_cone](spell_cone)
 - [spell_cooldown_overrides](spell_cooldown_overrides)
 - [spell_custom_attr](spell_custom_attr)
 - [spell_dbc](spell_dbc)
