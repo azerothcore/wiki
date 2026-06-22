@@ -481,7 +481,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 | 0x04       | 4          |                                  | Openable (can be opened by right-click)                                                                                              |
 | 0x08       | 8          | ITEM_FLAG_HEROIC_TOOLTIP         | (NOT IMPLEMENTED) - Makes green "Heroic" text appear on item                                                                         |
 | 0x10       | 16         | ITEM_FLAG_DEPRECATED             | (NOT IMPLEMENTED) - Deprecated Item                                                                                                  |
-| 0x20       | 32         |                                  | Item can not be destroyed, except by using spell (item can be reagent for spell)                                                    |
+| 0x20       | 32         |                                  | Item cannot be destroyed, except by using spell (item can be reagent for spell)                                                     |
 | 0x40       | 64         | ITEM_FLAG_PLAYERCAST             | (NOT IMPLEMENTED) - Item's spells are castable by players                                                                            |
 | 0x80       | 128        | ITEM_FLAG_NO_EQUIP_COOLDOWN      |                                                                                                                                      |
 | 0x0100     | 256        | ITEM_FLAG_MULTI_LOOT_QUEST       | (NOT IMPLEMENTED)                                                                                                                    |
@@ -495,7 +495,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 | 0x010000   | 65536      | ITEM_FLAG_REAL_DURATION          | (NOT IMPLEMENTED) - Probably real time duration. Implemented in another column `flagsCustom`                                        |
 | 0x020000   | 131072     | ITEM_FLAG_NO_CREATOR             | (NOT IMPLEMENTED OR PARTIALLY) - Maybe to remove the "Made by XX" message on crafted/summoned item or for signing charters         |
 | 0x040000   | 262144     |                                  | Item can be prospected                                                                                                               |
-| 0x080000   | 524288     |                                  | Unique equipped (player can only have one equipped at the same time but as many as he wants in his bags, if maxcount = 1, it will still display Unique-Equipped) |
+| 0x080000   | 524288     |                                  | Unique equipped (player can only have one equipped at the same time but as many as they want in their bags, if maxcount = 1, it will still display Unique-Equipped) |
 | 0x0100000  | 1048576    | ITEM_FLAG_IGNORE_FOR_AURAS       | (NOT IMPLEMENTED) - ??                                                                                                               |
 | 0x0200000  | 2097152    |                                  | Item can be used during arena match                                                                                                  |
 | 0x0400000  | 4194304    |                                  | Throwable (for tooltip ingame)                                                                                                       |
