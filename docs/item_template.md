@@ -513,15 +513,15 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 
 | Flag       | Bit        | Name                                                | Comment                                 |
 | ---------- | ---------- | --------------------------------------------------- | --------------------------------------- |
-| 0x00000001 | 1          | ITEM_FLAG2_FACTION_HORDE                            | Only Horde can equip, loot, or buy back this item |
-| 0x00000002 | 2          | ITEM_FLAG2_FACTION_ALLIANCE                         | Only Alliance can equip, loot, or buy back this item |
-| 0x00000004 | 4          | ITEM_FLAG2_DONT_IGNORE_BUY_PRICE                    | When item uses extended cost, gold is also required |
+| 0x00000001 | 1          | ITEM_FLAG2_FACTION_HORDE                            | Horde Only                              |
+| 0x00000002 | 2          | ITEM_FLAG2_FACTION_ALLIANCE                         | Alliance Only                           |
+| 0x00000004 | 4          | ITEM_FLAG2_DONT_IGNORE_BUY_PRICE                    | When item uses ExtendedCost in npc_vendor, gold is also required |
 | 0x00000008 | 8          | ITEM_FLAG2_CLASSIFY_AS_CASTER                       | NYI - Unused in item_template           |
 | 0x00000010 | 16         | ITEM_FLAG2_CLASSIFY_AS_PHYSICAL                     | NYI                                     |
 | 0x00000020 | 32         | ITEM_FLAG2_EVERYONE_CAN_ROLL_NEED                   | Anyone can roll need                    |
 | 0x00000040 | 64         | ITEM_FLAG2_NO_TRADE_BIND_ON_ACQUIRE                 | NYI - Unused in item_template           |
 | 0x00000080 | 128        | ITEM_FLAG2_CAN_TRADE_BIND_ON_ACQUIRE                | NYI - Unused in item_template           |
-| 0x00000100 | 256        | ITEM_FLAG2_CAN_ONLY_ROLL_GREED                      | Need rolls disallowed, only Greed / Disenchant / Pass |
+| 0x00000100 | 256        | ITEM_FLAG2_CAN_ONLY_ROLL_GREED                      | Makes need roll for this item disabled  |
 | 0x00000200 | 512        | ITEM_FLAG2_CASTER_WEAPON                            | NYI                                     |
 | 0x00000400 | 1024       | ITEM_FLAG2_DELETE_ON_LOGIN                          | NYI - Unused in item_template           |
 | 0x00000800 | 2048       | ITEM_FLAG2_INTERNAL_ITEM                            | NYI - Unused in item_template           |
