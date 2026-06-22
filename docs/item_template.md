@@ -516,7 +516,7 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 | 1       | 0x01      | Horde Only                                                       |
 | 2       | 0x02      | Alliance Only                                                    |
 | 4       | 0x04      | When item uses ExtendedCost in npc_vendor, gold is also required |
-| 32      | 0x020     | Anyone can roll need                                             |
+| 32      | 0x020     | Everyone can roll need on this item                              |
 | 256     | 0x0100    | Makes need roll for this item disabled                           |
 | 512     | 0x0200    | NEED_ROLL_DISABLED                                               |
 | 16384   | 0x04000   | HAS_NORMAL_PRICE                                                 |
