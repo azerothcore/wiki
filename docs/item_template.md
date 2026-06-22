@@ -480,10 +480,10 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 | 0x02       | 2          |                                  | Conjured item                                                                                                                        |
 | 0x04       | 4          |                                  | Openable (can be opened by right-click)                                                                                              |
 | 0x08       | 8          | ITEM_FLAG_HEROIC_TOOLTIP         | (NOT IMPLEMENTED) - Makes green "Heroic" text appear on item                                                                         |
-| 0x010      | 16         | ITEM_FLAG_DEPRECATED             | (NOT IMPLEMENTED) - Deprecated Item                                                                                                  |
-| 0x020      | 32         |                                  | Item can not be destroyed, except by using spell (item can be reagent for spell)                                                    |
-| 0x040      | 64         | ITEM_FLAG_PLAYERCAST             | (NOT IMPLEMENTED) - Item's spells are castable by players                                                                            |
-| 0x080      | 128        | ITEM_FLAG_NO_EQUIP_COOLDOWN      |                                                                                                                                      |
+| 0x10       | 16         | ITEM_FLAG_DEPRECATED             | (NOT IMPLEMENTED) - Deprecated Item                                                                                                  |
+| 0x20       | 32         |                                  | Item can not be destroyed, except by using spell (item can be reagent for spell)                                                    |
+| 0x40       | 64         | ITEM_FLAG_PLAYERCAST             | (NOT IMPLEMENTED) - Item's spells are castable by players                                                                            |
+| 0x80       | 128        | ITEM_FLAG_NO_EQUIP_COOLDOWN      |                                                                                                                                      |
 | 0x0100     | 256        | ITEM_FLAG_MULTI_LOOT_QUEST       | (NOT IMPLEMENTED)                                                                                                                    |
 | 0x0200     | 512        |                                  | Wrapper : Item can wrap other items                                                                                                  |
 | 0x0400     | 1024       | ITEM_FLAG_USES_RESOURCES         | (NOT IMPLEMENTED)                                                                                                                    |
@@ -504,10 +504,10 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 | 0x02000000 | 33554432   |                                  | Profession recipes: can only be looted if you meet requirements and don't already know it                                           |
 | 0x04000000 | 67108864   |                                  | Item cannot be used in arena                                                                                                         |
 | 0x08000000 | 134217728  |                                  | Bind to Account (Requires to set Bonding > 0)                                                                                        |
-| 0x010000000 | 268435456 | ITEM_FLAG_NO_REAGENT_COST        | Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents`)                                          |
-| 0x020000000 | 536870912 |                                  | Millable                                                                                                                             |
-| 0x040000000 | 1073741824 | ITEM_FLAG_REPORT_TO_GUILD_CHAT  | (NOT IMPLEMENTED)                                                                                                                    |
-| 0x080000000 | 2147483648 | ITEM_FLAG_NO_PROGRESSIVE_LOOT   | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x10000000 | 268435456  | ITEM_FLAG_NO_REAGENT_COST        | Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents`)                                          |
+| 0x20000000 | 536870912  |                                  | Millable                                                                                                                             |
+| 0x40000000 | 1073741824 | ITEM_FLAG_REPORT_TO_GUILD_CHAT   | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x80000000 | 2147483648 | ITEM_FLAG_NO_PROGRESSIVE_LOOT    | (NOT IMPLEMENTED)                                                                                                                    |
 
 ### FlagsExtra
 
