@@ -511,19 +511,40 @@ Bitmask field that contains flags that the item has on it. As all other such fie
 
 ### FlagsExtra
 
-| Flag    |           | Comments                                                         |
-| ------- | --------- | ---------------------------------------------------------------- |
-| 1       | 0x01      | Horde Only                                                       |
-| 2       | 0x02      | Alliance Only                                                    |
-| 4       | 0x04      | When item uses ExtendedCost in npc_vendor, gold is also required |
-| 32      | 0x020     | Allows all players to roll need on this item, regardless of use restrictions |
-| 256     | 0x0100    | Makes need roll for this item disabled                           |
-| 512     | 0x0200    | NEED_ROLL_DISABLED                                               |
-| 16384   | 0x04000   | HAS_NORMAL_PRICE                                                 |
-| 131072  | 0x020000  | BNET_ACCOUNT_BOUND (seems useless on 3.3.5a)                     |
-| 2097152 | 0x0200000 | CANNOT_BE_TRANSMOG                                               |
-| 4194304 | 0x0400000 | CANNOT_TRANSMOG                                                  |
-| 8388608 | 0x0800000 | CAN_TRANSMOG                                                     |
+| Flag       |            | Comments                                                                                             |
+| ---------- | ---------- | ---------------------------------------------------------------------------------------------------- |
+| 1          | 0x00000001 | ITEM_FLAG2_FACTION_HORDE - Only Horde can equip, loot, or buy back this item                       |
+| 2          | 0x00000002 | ITEM_FLAG2_FACTION_ALLIANCE - Only Alliance can equip, loot, or buy back this item                 |
+| 4          | 0x00000004 | ITEM_FLAG2_DONT_IGNORE_BUY_PRICE - When item uses extended cost, gold is also required             |
+| 8          | 0x00000008 | ITEM_FLAG2_CLASSIFY_AS_CASTER - NYI - Unused in item_template                                       |
+| 16         | 0x00000010 | ITEM_FLAG2_CLASSIFY_AS_PHYSICAL - NYI                                                                |
+| 32         | 0x00000020 | ITEM_FLAG2_EVERYONE_CAN_ROLL_NEED - Anyone can roll need                                             |
+| 64         | 0x00000040 | ITEM_FLAG2_NO_TRADE_BIND_ON_ACQUIRE - NYI - Unused in item_template                                 |
+| 128        | 0x00000080 | ITEM_FLAG2_CAN_TRADE_BIND_ON_ACQUIRE - NYI - Unused in item_template                                |
+| 256        | 0x00000100 | ITEM_FLAG2_CAN_ONLY_ROLL_GREED - Need rolls disallowed, only Greed / Disenchant / Pass             |
+| 512        | 0x00000200 | ITEM_FLAG2_CASTER_WEAPON - NYI                                                                       |
+| 1024       | 0x00000400 | ITEM_FLAG2_DELETE_ON_LOGIN - NYI - Unused in item_template                                           |
+| 2048       | 0x00000800 | ITEM_FLAG2_INTERNAL_ITEM - NYI - Unused in item_template                                             |
+| 4096       | 0x00001000 | ITEM_FLAG2_NO_VENDOR_VALUE - NYI - Unused in item_template                                           |
+| 8192       | 0x00002000 | ITEM_FLAG2_SHOW_BEFORE_DISCOVERED - NYI                                                              |
+| 16384      | 0x00004000 | ITEM_FLAG2_OVERRIDE_GOLD_COST - NYI - Unused in item_template                                        |
+| 32768      | 0x00008000 | ITEM_FLAG2_IGNORE_DEFAULT_RATED_BG_RESTRICTIONS - NYI                                                |
+| 65536      | 0x00010000 | ITEM_FLAG2_NOT_USABLE_IN_RATED_BG - NYI                                                              |
+| 131072     | 0x00020000 | ITEM_FLAG2_BNET_ACCOUNT_TRADE_OK - NYI                                                               |
+| 262144     | 0x00040000 | ITEM_FLAG2_CONFIRM_BEFORE_USE - NYI - Unused in item_template                                        |
+| 524288     | 0x00080000 | ITEM_FLAG2_REEVALUATE_BONDING_ON_TRANSFORM - NYI - Unused in item_template                          |
+| 1048576    | 0x00100000 | ITEM_FLAG2_NO_TRANSFORM_ON_CHARGE_DEPLETION - NYI - Unused in item_template                         |
+| 2097152    | 0x00200000 | ITEM_FLAG2_NO_ALTER_ITEM_VISUAL - NYI                                                                |
+| 4194304    | 0x00400000 | ITEM_FLAG2_NO_SOURCE_FOR_ITEM_VISUAL - NYI                                                           |
+| 8388608    | 0x00800000 | ITEM_FLAG2_IGNORE_QUALITY_FOR_ITEM_VISUAL_SOURCE - NYI - Unused in item_template                    |
+| 16777216   | 0x01000000 | ITEM_FLAG2_NO_DURABILITY - NYI - Unused in item_template                                             |
+| 33554432   | 0x02000000 | ITEM_FLAG2_ROLE_TANK - NYI - Unused in item_template                                                 |
+| 67108864   | 0x04000000 | ITEM_FLAG2_ROLE_HEALER - NYI - Unused in item_template                                               |
+| 134217728  | 0x08000000 | ITEM_FLAG2_ROLE_DAMAGE - NYI - Unused in item_template                                               |
+| 268435456  | 0x10000000 | ITEM_FLAG2_CAN_DROP_IN_CHALLENGE_MODE - NYI - Unused in item_template                               |
+| 536870912  | 0x20000000 | ITEM_FLAG2_NEVER_STACK_IN_LOOT_UI - NYI - Unused in item_template                                    |
+| 1073741824 | 0x40000000 | ITEM_FLAG2_DISENCHANT_TO_LOOT_TABLE - NYI - Unused in item_template                                  |
+| 2147483648 | 0x80000000 | ITEM_FLAG2_USED_IN_A_TRADESKILL - NYI - Unused in item_template                                      |
 
 ### BuyCount
 
