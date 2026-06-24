@@ -12,20 +12,27 @@ Works alongside
 
 **Table Structure**
 
-| Field               | Type    | Attributes | Key | Null | Default | Extra          | Comment |
-| ------------------- | ------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [id](#id)           | INT     | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [moneyA](#moneya)   | INT     | UNSIGNED   |     | NO   | 0       |                |         |
-| [moneyH](#moneyh)   | INT     | UNSIGNED   |     | NO   | 0       |                |         |
-| [subject](#subject) | TEXT    |            |     | NO   |         |                |         |
-| [body](#body)       | TEXT    |            |     | NO   |         |                |         |
-| [active](#active)   | TINYINT | UNSIGNED   |     | NO   | 1       |                |         |
+| Field                     | Type    | Attributes | Key | Null | Default | Extra          | Comment                                            |
+| ------------------------- | ------- | ---------- | --- | ---- | ------- | -------------- | -------------------------------------------------- |
+| [id](#id)                 | INT     | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |                                                    |
+| [senderEntry](#senderentry) | INT    | UNSIGNED   |     | NO   | 0       |                | Entry from creature_template. 0 = Customer Support |
+| [moneyA](#moneya)         | INT     | UNSIGNED   |     | NO   | 0       |                |                                                    |
+| [moneyH](#moneyh)         | INT     | UNSIGNED   |     | NO   | 0       |                |                                                    |
+| [subject](#subject)       | TEXT    |            |     | NO   |         |                |                                                    |
+| [body](#body)             | TEXT    |            |     | NO   |         |                |                                                    |
+| [active](#active)         | TINYINT | UNSIGNED   |     | NO   | 1       |                |                                                    |
 
 **Description of the fields**
 
 ### id
 
 Unique ID.
+
+### senderEntry
+
+[creature_template.entry](creature_template#entry) used as the mail sender.
+
+Set to `0` to keep using the default **Customer Support** sender.
 
 ### moneyA
 
