@@ -15,7 +15,7 @@ Works alongside
 | Field                     | Type    | Attributes | Key | Null | Default | Extra          | Comment                                            |
 | ------------------------- | ------- | ---------- | --- | ---- | ------- | -------------- | -------------------------------------------------- |
 | [id](#id)                 | INT     | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |                                                    |
-| [senderEntry](#senderentry) | INT    | UNSIGNED   |     | NO   | 0       |                | Entry from creature_template. 0 = Customer Support |
+| [senderEntry](#senderEntry) | INT    | UNSIGNED   |     | NO   | 0       |                | Entry from creature_template. 0 = Customer Support |
 | [moneyA](#moneya)         | INT     | UNSIGNED   |     | NO   | 0       |                |                                                    |
 | [moneyH](#moneyh)         | INT     | UNSIGNED   |     | NO   | 0       |                |                                                    |
 | [subject](#subject)       | TEXT    |            |     | NO   |         |                |                                                    |
