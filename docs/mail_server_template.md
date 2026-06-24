@@ -28,7 +28,6 @@ Works alongside
 
 Unique ID.
 
-<a id="senderentry"></a>
 ### senderEntry
 
 [creature_template.entry](creature_template#entry) used as the mail sender.
