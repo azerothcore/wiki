@@ -17,6 +17,7 @@ redirect_from: /documentation_index
 
 ## Documentation
 
+* [Agentic Engineering](agentic-engineering)
 * [Bash system](bash_system)
 * [Bitwise operations](bit-and-bytes-tutorial)
 * [Changelog](changelog)
