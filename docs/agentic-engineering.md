@@ -55,13 +55,13 @@ It has been battle-tested with Claude Code and is designed to work with any agen
 
 Install it with one command:
 
-```
+```bash
 git clone https://github.com/eai-org/agent-toolkit.git && cd agent-toolkit && ./install.sh
 ```
 
 Keep it up to date with:
 
-```
+```bash
 cd agent-toolkit && git pull && ./install.sh
 ```
 
