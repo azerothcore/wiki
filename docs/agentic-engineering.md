@@ -1,6 +1,6 @@
 # Agentic Engineering at AzerothCore
 
-> **TL;DR:** use AI as much as you like. Stay in control: review, understand, test and take responsibility for every line you submit. PRs that are clearly unreviewed AI output may be closed without a detailed review.
+{% include important.html content="Use AI as much as you like. Stay in control: review, understand, test and take responsibility for every line you submit. PRs that are clearly unreviewed AI output may be closed without a detailed review." %}
 
 ## AI at AzerothCore
 
