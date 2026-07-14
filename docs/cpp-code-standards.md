@@ -53,7 +53,7 @@ if (a == b)
 
 Trailing whitespace is not allowed.
 
-You should also not have unneeded spaces within a bracket. 
+You should also not have unneeded spaces within a bracket.
 
 Wrong:
 
@@ -329,6 +329,36 @@ All Header files should contain header guards
 
 #endif // MY_HEADER_H
 ```
+
+### Includes
+
+Every header must be **self-contained**: it must compile on its own, without depending on other headers being included before it. This prevents hidden fragile dependencies. If "A" needs "B" and "C", it should include "B" & "C". It shouldn't only include "B", just because "B" happened to include "C" right now. "A" should also not include anything it doesn't directly use.
+
+Includes are written as a single block with no blank lines inside it, ordered as follows:
+
+1. The file's own header first in the .cpp (if the .cpp needs to include its own header).
+2. All other project headers, in alphabetical order.
+3. All library headers, in alphabetical order.
+
+ItemEnchantmentMgr.cpp example:
+
+```cpp
+#include "ItemEnchantmentMgr.h"   // The file's own header, first
+#include "DBCStores.h"            // then project headers, alphabetically
+#include "DatabaseEnv.h"
+#include "Log.h"
+#include "ObjectMgr.h"
+#include "QueryResult.h"
+#include "Timer.h"
+#include "Util.h"
+#include <cmath>                  // then library headers, alphabetically
+#include <functional>
+#include <vector>
+```
+
+Alphabetical ordering is case-sensitive (ASCII order, matching clang-format's default): uppercase letters sort before lowercase. Above, `DBCStores.h` precedes `DatabaseEnv.h` because the uppercase `B` sorts before the lowercase `a`.
+
+Project headers use quotes (`"..."`); library headers (C++ standard library, boost, etc.) use angle brackets (`<...>`).
 
 ### Text Output
 
