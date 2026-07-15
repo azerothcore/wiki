@@ -94,7 +94,7 @@ Básicamente necesitas **recompilar tus fuentes** y **actualizar la BD**.
 
 ### Utilizando la configuración tradicional
 
-Si está utilizando la instalación tradicional, tiene que volver a compilar siguiendo los pasos de la [3) Compilación](instalación#3-compilación) de la guía de instalación principal.
+Si está utilizando la instalación tradicional, tiene que volver a compilar siguiendo los pasos de la [3) Compilación](installation#3-compiling) de la guía de instalación principal.
 
 También necesita actualizar su DB. Puede utilizar el ensamblador de BD para hacerlo, pero normalmente es más rápido importar manualmente los archivos sql pendientes que incluye el PR. Estos archivos se encuentran en `data/sql/updates/pending_db_*`.
 
