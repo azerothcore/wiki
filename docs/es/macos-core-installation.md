@@ -1,34 +1,34 @@
 # Instalación del Core en macOS
 
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](macos-requirements) | [Paso 3: Configuración del Servidor >>](server-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](es/macos-requirements) | [Paso 3: Configuración del servidor >>](es/macos-server-setup) |
 
 ## Software necesario
 
-Consulta [Requisitos](macos-requirements) antes de continuar.
+Consulta [Requisitos](es/macos-requirements) antes de continuar.
 
-### Descarga del código
+## Obtener el código fuente
 
-Elija **UNO** del siguiente método, ejecute uno de los siguientes comandos `git ...` en su terminal.
+Elige **UNO** de los siguientes métodos; ejecuta uno de los comandos `git ...` de abajo en tu terminal.
 
 
-1. Clonar solo la rama maestra + historial completo (tamaño más pequeño - recomendado):
+1. Clonar solo la rama master + historial completo (menor tamaño - recomendado):
 
     ```sh
     git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
     ```
 
-1. Clonar solo la rama maestra + sin historial previo (tamaño más pequeño):
+1. Clonar solo la rama master + sin historial previo (el menor tamaño):
 
     ```sh
     git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
     ```
 
-    Nota: Si desea recuperar el historial completo, utilice `git fetch --unshallow`.
+    Nota: Si quieres recuperar el historial completo, usa `git fetch --unshallow`.
 
-1. Clona todas las ramas y todo el historial:
+1. Clonar todas las ramas y todo el historial:
 
     ```sh
     git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
@@ -36,11 +36,11 @@ Elija **UNO** del siguiente método, ejecute uno de los siguientes comandos `git
 
 Esto creará un directorio `azerothcore-wotlk` que contiene los archivos fuente de AC.
 
-## Compilando el código fuente
+## Compilación del código fuente
 
-### Creando el directorio de compilación
+### Crear el directorio de build
 
-Para evitar problemas con las actualizaciones y compilaciones de fuentes en conflicto, creamos un directorio de compilación específico, de modo que evitamos cualquier posible problema debido a eso (si es que puede ocurrir alguno).
+Para evitar problemas con las actualizaciones y builds de código que colisionen, creamos un directorio de build específico, así evitamos cualquier posible problema por eso (si llegara a ocurrir alguno)
 
 ```sh
 cd azerothcore
@@ -48,22 +48,19 @@ mkdir build
 cd build
 ```
 
-### Configurando para compilar
+### Configurar para compilar {#configuring-for-compiling}
 
+Los directorios que Homebrew usa para instalar paquetes difieren entre las Mac con CPU Apple Silicon y las que tienen CPU Intel. Asegúrate de ejecutar el comando CMake correcto para tu máquina. Puedes ver tu tipo de CPU en `Acerca de este Mac`. Los comandos de abajo están etiquetados según el tipo de CPU correspondiente.
 
-Los directorios que utiliza Homebrew para instalar paquetes difieren entre las Mac que tienen CPU Apple Silicon y aquellas que tienen CPU Intel. Asegúrese de ejecutar el comando CMake correcto para su máquina. Puede ver su tipo de CPU en `Acerca de esta Mac`. Los comandos siguientes están etiquetados para el tipo de CPU correspondiente.
+Antes de ejecutar el comando CMake, reemplaza `$HOME/azeroth-server/` con la ruta de instalación del servidor (donde quieras colocar los binarios compilados).
 
-
-Antes de ejecutar el comando CMake, reemplace `$HOME/azeroth-server/` con la ruta de instalación del servidor (donde desea colocar los archivos binarios compilados).
-
-Explicación de parámetros para usuarios avanzados [Opciones de CMake](cmake-options).
-
+Explicación de los parámetros para usuarios avanzados: [Opciones de CMake](es/cmake-options).
 
 En este punto, debes estar en tu directorio "build/".
 
-**Nota**: en el siguiente comando, la variable `$HOME` es la ruta del **usuario actual**, por lo que si ha iniciado sesión como root, $HOME será "/root".
+**Nota**: en el siguiente comando la variable `$HOME` es la ruta del **usuario actual**, así que si has iniciado sesión como root, $HOME será "/root".
 
-Para CPU APPLE SILICON::
+Para CPU APPLE SILICON:
 ```sh
 export OPENSSL_ROOT_DIR=$(brew --prefix openssl@3)
 cmake ../ \
@@ -101,21 +98,16 @@ make -j `nproc`
 make install
 ```
 
-<br>
-
 ## Ayuda
 
-Si todavía tiene problemas, compruebe:
+Si sigues teniendo problemas, comprueba:
 
-* [FAQ - Preguntas frecuentes](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores comunes](common-errors)
-
-* [Cómo pedir ayuda](how-to-ask-for-help)
-
-* [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff le responderá siempre que tenga tiempo.
-
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](macos-requirements) | [Paso 3: Configuración del Servidor >>](server-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](es/macos-requirements) | [Paso 3: Configuración del servidor >>](es/macos-server-setup) |

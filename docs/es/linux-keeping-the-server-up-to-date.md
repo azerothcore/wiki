@@ -1,32 +1,32 @@
 # Linux: mantener el servidor actualizado
 
-| Guía de Instalación                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 6: Pasos finales del servidor](final-server-steps)                                                                                  | [Paso 8: Configuración del cliente >>](client-setup) |
+| Guía de instalación | |
+| :- | :- |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |
 
-## Mantener la fuente actualizada
+## Mantener el código fuente actualizado
 
 ```sh
 cd ~/azerothcore/
 git pull origin master
 ```
 
-Reconstruya los cambios que realizó.
+Reconstruye los cambios que descargaste.
 
 ```sh
 cd build
 make -j$(nproc --all); make install
 ```
-_Puedes reemplazar `-j$(nproc -all)` con el número de núcleos que se usarán para la compilación. Por ejemplo: -j 2_
+_Puedes reemplazar `-j$(nproc -all)` con el número de cores con los que compilar. Por ejemplo: -j 2_
 
-A veces añadimos o eliminamos archivos del repositorio. En ese momento, es necesario recompilar el servidor, tal como se instaló la primera vez [en la instalación de Linux Core](linux-core-installation#configuring-for-compiling).
+A veces añadimos o eliminamos archivos del repositorio. En ese momento es necesario recompilar el servidor, tal como se instaló la primera vez [en la Instalación del Core en Linux](es/linux-core-installation#configuring-for-compiling).
 
-## Usando el servidor de automatización
-Si desea actualizar AzerothCore usando Jenkins, Teamcity o una herramienta similar, los siguientes pasos pueden ayudarlo.
+## Usar un servidor de automatización
 
-Agregue los comandos necesarios al archivo sudoers (sudo). Los servicios a continuación se crearon [en la instalación de Linux Core](linux-core-installation#optional-systemd-services).
+Si quieres actualizar AzerothCore usando Jenkins, Teamcity o una herramienta similar, los siguientes pasos pueden ayudarte.
 
+Añade los comandos necesarios al archivo sudoers. Los servicios de abajo se crearon [en la Instalación del Core en Linux](es/linux-core-installation#optional-systemd-services)
 ```sh
 sudo visudo
 
@@ -37,7 +37,7 @@ sudo visudo
 %sudo ALL=NOPASSWD: /srv/azerothcore-wotlk/acore.sh compiler all
 ```
 
-Ejecutar comandos en Jenkins/Teamcity
+Ejecuta los comandos en Jenkins/Teamcity
 ```sh
 sudo service worldserver stop
 sudo service authserver stop
@@ -54,15 +54,18 @@ sudo service authserver start
 
 ## Mantener la base de datos actualizada
 
-Leer [Base de datos: Manteniendo el servidor actualizado](database-keeping-the-server-up-to-date)
-
-<br>
+Lee [Base de datos: mantener el servidor actualizado](es/database-keeping-the-server-up-to-date)
 
 ## Ayuda
 
-{% include help.html %}
+Si sigues teniendo problemas, comprueba:
 
-| Guía de instalación                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 6: Pasos finales del servidor](final-server-steps)                                                                                  | [Paso 8: Configuración del cliente >>](client-setup) |
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
+
+| Guía de instalación | |
+| :- | :- |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |

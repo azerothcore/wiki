@@ -1,35 +1,30 @@
-﻿# Mantener el servidor actualizado
+# Mantener el servidor actualizado
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 6: Pasos finales del servidor](final-server-steps) | [Paso 8: Configuración del cliente >>](client-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |
 
-Los desarrolladores y colaboradores de AzerothCore siempre están trabajando para corregir y agregar nuevas funciones al núcleo. Siempre puede encontrarlos [aquí](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
+Los desarrolladores y colaboradores de AzerothCore siempre están trabajando en corregir y añadir nuevas funciones al core. Siempre puedes encontrarlas [aquí](https://github.com/azerothcore/azerothcore-wotlk/commits/master).
 
-[Linux - Manteniendo el servidor actualizado](linux-keeping-the-server-up-to-date)
+[Linux: mantener el servidor actualizado](es/linux-keeping-the-server-up-to-date)
 
-[macOS - Mantener el servidor actualizado](macos-keeping-the-server-up-to-date)
+[macOS: mantener el servidor actualizado](es/macos-keeping-the-server-up-to-date)
 
-[Windows - Mantener el servidor actualizado](windows-keeping-the-server-up-to-date)
+[Windows: mantener el servidor actualizado](es/windows-keeping-the-server-up-to-date)
 
-[Base de datos - Mantener el servidor actualizado](database-keeping-the-server-up-to-date)
-
-<br>
+[Base de datos: mantener el servidor actualizado](es/database-keeping-the-server-up-to-date)
 
 ## Ayuda
 
-Si aún tiene problemas, verifique:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
-
-* [Errores comunes](common-errors)
-
-* [Cómo pedir ayuda](how-to-ask-for-help)
-
-* [Únase a nuestro Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Paso 6: Pasos finales del servidor](final-server-steps) | [Paso 8: Configuración del cliente >>](client-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |

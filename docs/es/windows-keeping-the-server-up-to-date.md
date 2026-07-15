@@ -1,42 +1,36 @@
-# Windows: Mantener actualizado el Servidor
+# Windows: Mantener el servidor actualizado
 
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 6: Pasos finales](final-server-steps) | [Paso 8: Configuración del Cliente >>](client-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |
 
-## Mantener actualizada la fuente
+## Mantener el código fuente actualizado
 
-Abra su repositorio de AzerothCore en GitExtensions.
+Abre tu repositorio de AzerothCore en GitHub Desktop.
 
-1. Haga click en la flecha azul (Pull - merge).
+1. Haz click en **Fetch origin** arriba, luego haz click en **Pull origin** cuando aparezca.
 
-Esto sincronizará su repositorio local con los ultimos commits del repositorio de Azerothcore-wotlk.
+Esto sincronizará tu repositorio local con los últimos commits del repositorio azerothcore-wotlk.
 
-1. Ahora necesitará volver a ejecutar *CMake Configure* y *Generate* para actualizar los archivos de su solución (.sln).
+1. Ahora necesitarás volver a ejecutar CMake Configure y Generate para actualizar los archivos de tu solución (.sln).
 
-1. Compile la fuente descargada como se explica en [Instalación del Core en Windows](windows-core-installation#compiling-the-source)
+1. Compila el código fuente descargado como se explica en [Instalación del Core en Windows](es/windows-core-installation#compiling-the-source)
 
-## Mantener actualizada la base de datos
+## Mantener la base de datos actualizada
 
-Lea [Base de datos: Mantener actualizado el Servidor](database-keeping-the-server-up-to-date)
-
-<br>
+Lee [Base de datos: mantener el servidor actualizado](es/database-keeping-the-server-up-to-date)
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
-
-
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 6: Pasos finales](final-server-steps) | [Paso 8: Configuración del Cliente >>](client-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |

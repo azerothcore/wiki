@@ -2,74 +2,49 @@
 redirect_from: "/Installation"
 ---
 
-# Guía de instalación 
+# Guía de instalación
 
-## Escogiendo una configuación
+## Eligiendo una instalación
 
-Existen diferentes formas de instalar AzerothCore. Escoja solo **UNA**.
+Hay varias formas de instalar AzerothCore, necesitas elegir **UNA**.
 
-### Completa (con soporte, recomendada)
+### Instalación desde el código fuente (Recomendada)
 
-Estas son las formas oficiales, con soporte y completas para instalar AzerothCore para cualquier propósito.
+Esta es la forma oficialmente soportada y completa de instalar AzerothCore.
 
-- [Instalación clásica de Azerothcore (Windows, Linux, macOS)](classic-installation) - la forma tradicional de instalar AzerothCore. Probada, recomendada para todos los sistemas operativos para todos los propósitos. Seguir este proceso ilustra de una mejor forma cómo está estructurado AzerothCore. Encontrará más información más adelante en esta página. 
+- [Instalación clásica de AzerothCore](es/classic-installation) - Recomendada para Windows, macOS y Linux.
 
-- [Instalación mediante Docker](install-with-docker) - un proceso de instalación simplificado, basado en Docker.
+### Instalaciones experimentales (soporte y uso limitados)
 
-- [Instalación de AzerothCore mediante el Panel de Control Bash (Bash Dashboard)](ac-dashboard-core-installation) - Es la forma más sencilla de instalar AzerothCore. Recommendada para **Linux** tanto para desarrollo local como para producción. Actualmente no se recomienda para Windows o macOs.
+Estas guías son para instalaciones experimentales y tienen soporte limitado o nulo.
 
-### Mínima (con soporte, con limitaciones)
+- [Instalación con el Dashboard Bash de AzerothCore](es/ac-dashboard-core-installation) - la forma más sencilla de instalar.
 
-- [Instalación mediante Docker, pre-compilada](https://www.azerothcore.org/acore-docker/) - Una forma extremadamente sencilla de instalación. Apropiada para clasificación de bugs, reporte de bugs o uso personal/doméstico.
+- [Instalación con Docker](es/install-with-docker) - un proceso de instalación basado en Docker. Se recomienda tener conocimientos previos de Docker.
 
-### Otras (sin soporte)
+- [Instalación con Docker pre-compilado](https://www.azerothcore.org/acore-docker/) - una forma sencilla de instalar AzerothCore. Actualmente no puedes instalar módulos C++, solo scripts de Eluna. Adecuada para clasificación de bugs, reporte de bugs o uso doméstico.
 
-Estas guias están hechas por la comunidad y pueden estar desactualizadas.
+### Hechas por la comunidad (sin soporte)
 
-- [Amazon Web Services](aws-tutorial)
+Ten en cuenta que estas guías están hechas por miembros de la comunidad y podrían no estar actualizadas:
 
-- [Digital Ocean droplet](digital-ocean-video-tutorial)
+- [Debian 12](es/debian12-install-guide)
 
-- [ArchLinux](arch-linux)
+- [Amazon Web Services](es/aws-tutorial)
 
-- [FreeBSD](freebsd)
+- [Digital Ocean droplet](es/digital-ocean-video-tutorial)
 
-## Instalación clásica de AzerothCore
+- [ArchLinux](es/arch-linux)
 
-Cada paso de esta guía está dividido en tres secciones, según cada sistema operativo (Linux, macOS and Windows).
+- [FreeBSD](es/freebsd)
 
-La guía se divide en 8 pasos, para facilitar su lectura.
-
-1. [Requisitos](requirements)
-
-1. [Insalación del Core](core-installation)
-
-1. [Configuración del servidor](server-setup)
-
-1. [Instalación de la base de datos](database-installation)
-
-1. [Configuración de red](networking)
-
-1. [Pasos finales](final-server-steps)
-
-1. [Cómo mantener el servidor actualizado](keeping-the-server-up-to-date)
-
-1. [Configuración del cliente](client-setup)
-
-Cada paso puede leerse de forma independiente o puede leer la guía cuidadosa y secuencialmente, de manera que los conceptos se internalicen gradualmente y haya un mejor entendimiento geneal.
-
-*Consejo: Si esta es su primera vez instalando AzerothCore, le recomendamos leer cada paso detenidamente!*
-
-<br>
+- [Visual Studio Code](es/vsc-requirements)
 
 ## Ayuda
 
-Si sigue teniendo problemas, compruebe:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
-
-* [Errores Comunes](common-errors)
-
-* [Cómo pedir ayuda](how-to-ask-for-help)
-
-* [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), tenga en cuenta que no es un canal de soporte 24/7. Un miembro del staff member le responderá siempre que tenga tiempo.
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.

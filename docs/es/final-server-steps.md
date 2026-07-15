@@ -1,54 +1,48 @@
-# Pasos finales
+# Pasos finales del servidor
 
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 5: Red](networking) | [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 5: Red](es/networking) | [Paso 7: Mantener el servidor actualizado >>](es/keeping-the-server-up-to-date) |
 
-## Iniciando el Servidor
+## Iniciar el servidor
 
-- Ejecute authserver y worldserver en la carpeta de su build.
+- Ejecuta authserver y worldserver en tu carpeta de build.
 
-Para información detallada sobre cómo configurar un reiniciador y un debugger, vaya a la página [cómo-reiniciar-y-depurar](how-to-restart-and-debug).
+Para información detallada sobre cómo configurar un reiniciador y un debugger, ve a la página [how-to-restart-and-debug](es/how-to-restart-and-debug)
 
-**NUNCA cree una cuenta directamente en su base de datos a menos que esté TOTALMENTE SEGURO de que sabe lo que está haciendo y cómo hacerlo.**
+{% include warning.html content="¡NUNCA crees una cuenta directamente en tu base de datos a menos que estés ABSOLUTAMENTE SEGURO de que sabes qué hacer y cómo hacerlo!" %}
 
-- Luego cree su cuenta de inicio de sesión escribiendo directamente en la ventana **worldserver** usando el comando GM **account create**. Sintáxis: (ver ejemplos posteriores)
+- Luego, crea tu cuenta de acceso escribiendo directamente en la ventana de **worldserver** el comando GM **account create**. Sintaxis: (ver ejemplos abajo)
 
-- Si desea asignar la cuenta como GM, escriba en la ventana worldserver: **account set gmlevel $cuenta #nivel #id del reino** en donde **$cuenta** es la el nombre de la cuenta a cambiar, **#nivel** puede ser 0-4 y **#id del reino** el el ID del reino. Establecer un **#nivel** de "3" equivale a una cuenta de nivel GM (numeros más altos = mayor acceso), y "-1" como id del reino significa "para todos los reinos".
+- Si quieres asignar la cuenta como GM, escribe en la ventana de worldserver: **account set gmlevel $account #level #realmid**, donde **$account** es el nombre de la cuenta a cambiar, **#level** puede ser 0-4 y **#realmid** es el ID del reino. Establecer un **#level** de "3" es el nivel de cuenta GM (números más altos = mayor acceso), y "-1" es el ID del reino que significa "todos los reinos".
 
-*Consejo: Abra su base de datos **acore_world** y busque la tabla **command**. Esto muestra una lista completa de comandos, sus descripciones y el nivel de seguridad.*
-*Esta será siempre la lista más actualizada que podrá encontrar, asumiendo que mantiene la base de datos y el Core actualizados.*
+{% include tip.html content="Abre tu base de datos **acore_world** y busca la tabla **command**. Muestra una lista completa de comandos GM, sus descripciones y niveles de seguridad.<br/>Esta será siempre la lista más actualizada que puedas encontrar, asumiendo que mantienes tu base de datos y el Core actualizados." %}
 
-- Minimize las ventanas del servidor y ejecute **WoW** (nunca ejecute WoW usando el launcher a menos que haya editado la opción patchlist del realmlist.wtf).
+- Minimiza tus servidores y ejecuta **WoW** (nunca ejecutes WoW usando el Launcher a menos que hayas editado la opción patchlist del realmlist.wtf de arriba).
 
-- Ingrese usando el usuario y contraseña que acabó de crear.
+- Inicia sesión con el usuario/contraseña que acabas de crear.
 
-- El reino AzerothCore debería poderse seleccionar. Ingrese, cree un nuevo personaje y ¡eso es todo!
+- El reino de AzerothCore debería poder seleccionarse. Inicia sesión, crea un personaje y ¡listo!
 
-## Creación de cuentas
+## Crear una cuenta
 
-Lea [creación de cuentas](creating-accounts).
+Lee [creación de cuentas](es/creating-accounts).
 
-## Configurando el acceso remoto
-Para propósitos de desarrollo, este paso no es necesario. Sin embaro, para incrementar la seguridad cuando usted quiera que otras personas creen cuentas, debería configurar un formulario de registro, de manera que no tenga que copiar y pegar sus contraseñas. Revise: [Acceso remoto](remote-access) sobre cómo enviar comandos al servidor.
+## Configurar el acceso remoto
 
-<br>
+Para propósitos de desarrollo, este paso no es necesario. Sin embargo, para mayor seguridad cuando quieras que otras personas creen cuentas, deberías configurar un formulario de registro, así no tienes que pegar sus contraseñas. Consulta [Acceso remoto](es/remote-access) sobre cómo enviar comandos al servidor.
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
-
-
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 5: Red](networking) | [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 5: Red](es/networking) | [Paso 7: Mantener el servidor actualizado >>](es/keeping-the-server-up-to-date) |

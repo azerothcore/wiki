@@ -1,4 +1,4 @@
-﻿# account
+# account
 
 [<-Volver a: Auth](database-auth)
 
@@ -27,6 +27,7 @@ Leer en: [English :gb:](../account) [Español :es:](account)
 | [last_login][15]      | TIMESTAMP     | SIGNED     |     | YES  |                   |                |            |
 | [online][16]          | INT           | UNSIGNED   |     | NO   | 0                 |                |            |
 | [expansion][17]       | TINYINT       | UNSIGNED   |     | NO   | 2                 |                |            |
+| [Flags](#flags)       | INT           | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
 | [mutetime][18]        | BIGINT        | SIGNED     |     | NO   | 0                 |                |            |
 | [mutereason][19]      | VARCHAR(255)  | SIGNED     |     | NO   | ''                |                |            |
 | [muteby][20]          | VARCHAR(50)   | SIGNED     |     | NO   | ''                |                |            |
@@ -112,7 +113,7 @@ Para obtener el verificador hay que calcular:
 
 ### session\_key
 
-`campo-sin-descripción|5`
+La clave de sesión utilizada para cifrar la sesión autenticada actual. Se rellena al iniciar sesión y se borra al cerrar sesión.
 
 ### totp\_secret
 
@@ -170,6 +171,43 @@ Entero 0, 1 o 2 que controla si el cliente conectado a la cuenta tiene alguna ot
 | 0     | Classic                        |
 | 1     | The Burning Crusade (TBC)      |
 | 2     | Wrath of the Lich King (WotLK) |
+
+### Flags
+
+| Nombre                            | Descripción                                  | Valor de bit |
+| --------------------------------- | -------------------------------------------- | ------------ |
+| ACCOUNT_FLAG_GM                   | La cuenta es GM                              | 1            |
+| ACCOUNT_FLAG_NOKICK               | No se desconectará mientras esté AFK         | 2            |
+| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                          | 4            |
+| ACCOUNT_FLAG_TRIAL                | Cuenta de prueba                             | 8            |
+| ACCOUNT_FLAG_CANCELLED            | Desconocido                                  | 16           |
+| ACCOUNT_FLAG_IGR                  | Internet Game Room (¿cibercafé?)             | 32           |
+| ACCOUNT_FLAG_WHOLESALER           | Desconocido                                  | 64           |
+| ACCOUNT_FLAG_PRIVILEGED           | Desconocido                                  | 128          |
+| ACCOUNT_FLAG_EU_FORBID_ELV        | Desconocido                                  | 256          |
+| ACCOUNT_FLAG_EU_FORBID_BILLING    | Desconocido                                  | 512          |
+| ACCOUNT_FLAG_RESTRICTED           | Desconocido                                  | 1024         |
+| ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend (reclutador o reclutado)    | 2048         |
+| ACCOUNT_FLAG_BLIZZARD             | Desconocido                                  | 4096         |
+| ACCOUNT_FLAG_RECURRING_BILLING    | Desconocido                                  | 8192         |
+| ACCOUNT_FLAG_NOELECTUP            | Desconocido                                  | 16384        |
+| ACCOUNT_FLAG_KR_CERTIFICATE       | ¿Certificado coreano?                        | 32768        |
+| ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition                      | 65536        |
+| ACCOUNT_FLAG_DISABLE_VOICE        | No puede unirse al chat de voz               | 131072       |
+| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | No puede hablar en el chat de voz            | 262144       |
+| ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection                       | 524288       |
+| ACCOUNT_FLAG_EU_FORBID_CC         | Desconocido                                  | 1048576      |
+| ACCOUNT_FLAG_OPENBETA_DELL        | Dell XPS WoW Edition Promo                   | 2097152      |
+| ACCOUNT_FLAG_PROPASS              | Desconocido                                  | 4194304      |
+| ACCOUNT_FLAG_PROPASS_LOCK         | Pro Pass (Torneo de Arena)                   | 8388608      |
+| ACCOUNT_FLAG_PENDING_UPGRADE      | Desconocido                                  | 16777216     |
+| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | Desconocido                                  | 33554432     |
+| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition                    | 67108864     |
+| ACCOUNT_FLAG_OVERMIND_LINKED      | Vinculada con una cuenta de Battle.net       | 134217728    |
+| ACCOUNT_FLAG_DEMOS                | Desconocido                                  | 268435456    |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Permite crear Death Knight                   | 536870912    |
+| ACCOUNT_FLAG_S2_REQUIRE_IGR       | Desconocido (¿relacionado con StarCraft II?) | 1073741824   |
+| ACCOUNT_FLAG_S2_TRIAL             | Desconocido (¿relacionado con StarCraft II?) | 2147483648   |
 
 ### mutetime
 
