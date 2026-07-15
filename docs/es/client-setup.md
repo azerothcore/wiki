@@ -1,40 +1,32 @@
-# Configuración del Cliente
+# Configuración del cliente
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. | Opcional |
+| [<< Paso 7: Mantener el servidor actualizado](es/keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](es/installing-a-module) |
 
+AzerothCore no distribuye un cliente. Necesitarás encontrar tu propio cliente 3.3.5a limpio en internet.
 
+- Abre el archivo realmlist.wtf dentro de tu carpeta **WoW\Data**. La IP en el archivo realmlist.wtf debería ser exactamente la misma dirección IP que introdujiste en la tabla realmlist previamente.
 
-Si necesita uan copia del cliente original, puede encontrar algunos torrents para su descarga aquí: https://wowgaming.github.io/wiki-en/wotlk-home.html#client
+    - Cambia la primera línea por `set realmlist <dirección IP usada en la tabla realmlist>`
 
-- Abra el archivo realmlist.wtf dentro de su carpeta **WoW\Data**. La IP en el archivo realmlist.wtf debería ser exactamente la misma dirección IP que ingresó en la tabla realmlist previamente.
+    - Ejemplo: set realmlist 127.0.0.1
 
-    - Cambie la primera linea por: `set realmlist <IP la dirección IP usada en la tabla realmlist>`
-    
-    - Ejemplo: `set realmlist 127.0.0.1`
+- (Opcional) Si quieres usar el WoW Launcher.exe para ejecutar tu cliente, entonces debes cambiar tu patchlist al mismo nombre de IP/DNS que tu realmlist.
 
-- (Optional) Si queire usar el WoW Launcher.exe para ejecutar su cliente, entonces debe cambiar su patchlist por el mismo nombre de ip/dns que su realmlist.
-
-{% include note.html content="NOTA: No use \"localhost\" como dirección, si necesita conectarse a localhost use 127.0.0.1" %}
-
-<br>
+{% include note.html content="No uses localhost como dirección; si necesitas conectarte a localhost usa 127.0.0.1" %}
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
-
-
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-[Paso 7: Mantener actualizado el Servidor >>](keeping-the-server-up-to-date) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 7: Mantener el servidor actualizado](es/keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](es/installing-a-module) |
