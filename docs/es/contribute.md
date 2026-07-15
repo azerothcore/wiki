@@ -1,4 +1,4 @@
-﻿---
+---
 redirect_from: "/Contribute"
 ---
 
@@ -6,59 +6,59 @@ redirect_from: "/Contribute"
 
 Puedes contribuir de varias formas a AzerothCore:
 
-- [Comentando un problema abierto](Contribute#how-to-comment-an-issue)
+- [Comentar un issue abierto](#how-to-comment-an-issue)
 
-- [Abriendo un problema](Contribute#how-to-open-an-issue)
+- [Abrir un issue](#how-to-open-an-issue)
 
-- [Prueba de una solicitud de extracción](How-to-test-a-PR)
+- [Probar un pull request](#how-to-test-a-pull-request)
 
-- [Prueba de cambios solo de base de datos](How-to-test-DB-only-changes)
+- [Probar cambios solo de base de datos](es/how-to-test-db-only-changes)
 
-- [Creando una solicitud de extracción](Contribute#how-to-create-a-pull-request)
+- [Crear un pull request](#how-to-create-a-pull-request)
 
-- [Mejorando nuestra wiki](Contribute#improve-the-wiki)
+- [Mejorar nuestra wiki](#improve-the-wiki)
 
 ## Información general
 
 Para contribuir, obviamente necesitas una cuenta de github.
 
-## Cómo comentar un problema
+## Cómo comentar un issue {#how-to-comment-an-issue}
 
-Puede ayudar mucho revisando los [problemas](https://github.com/azerothcore/azerothcore-wotlk/issues) y uniéndose a sus discusiones.
+Puedes ayudar mucho revisando los [issues](https://github.com/azerothcore/azerothcore-wotlk/issues) y uniéndote a sus discusiones.
 
-Una cosa que puede hacer es actualizar su núcleo y verificar si el problema sigue siendo válido en su revisión, luego puede escribir un comentario **que incluya el hash de confirmación**.
+Una cosa que puedes hacer es actualizar tu core y comprobar si el issue sigue siendo válido en tu revisión; luego puedes escribir un comentario **incluyendo el hash del commit**.
 
-## Cómo abrir un problema
+## Cómo abrir un issue {#how-to-open-an-issue}
 
-osas importantes que hacer antes de informar un error:
+Cosas importantes que hacer antes de reportar un bug:
 
-**1) Actualice su núcleo a la última revisión de AzerothCore y compruebe si el error sigue ahí.**
+**1) Actualiza tu core a la última revisión de AzerothCore y comprueba si el bug sigue estando presente**
 
-**2) Busque entre los [problemas](https://github.com/azerothcore/azerothcore-wotlk/issues) para verificar si alguien ya informó el error, en ese caso solo tiene que comentar el problema para confirmar el error (incluida su revisión principal)**
+**2) Busca entre los [issues](https://github.com/azerothcore/azerothcore-wotlk/issues) para verificar si alguien ya reportó el bug; en ese caso solo tienes que comentar el issue para confirmar el bug (incluyendo tu revisión del core)**
 
-Si **(y solo si)** el error aún no se ha informado, puede [abrir un problema](https://github.com/azerothcore/azerothcore-wotlk/issues/new) e incluir:
+Si **(y solo si)** el bug aún no ha sido reportado, puedes [abrir un issue](https://github.com/azerothcore/azerothcore-wotlk/issues/new) e incluir:
 
-- La **descripción del error**, incluidos los **enlaces** útiles y **ID/GUID/nombres** de cualquier entidad relacionada (NPC, hechizos, objetos de juego, etc.)
-- La **revisión del núcleo (hash de confirmación)** del AzerothCore en el que está ejecutando, **no escriba solo la "última versión"** incluso si acaba de actualizar su núcleo.
-- Si se trata de un problema de compilación, sería útil conocer también su **sistema operativo** y **versión del compilador**.
+- la **descripción del bug**, incluidos cualquier **enlace** útil e **IDs/GUIDs/nombres** de cualquier entidad relacionada (NPCs, hechizos, gameobjects, etc.)
+- la **revisión del core (hash del commit)** del AzerothCore en el que lo estás ejecutando, **no escribas solo "la última versión"** aunque acabes de actualizar tu core
+- si se trata de un problema de build, sería útil conocer también tu **sistema operativo** y **versión del compilador**
 
-## Cómo probar una solicitud de extracción
+## Cómo probar un Pull Request {#how-to-test-a-pull-request}
 
-- Lea [Cómo probar un PR](How-to-test-a-PR).
+- Lee [Cómo probar un PR](es/how-to-test-a-pr).
 
-## Cómo crear una solicitud de extracción
+## Cómo crear un Pull Request {#how-to-create-a-pull-request}
 
-- Lea [Cómo crear un PR](How-to-create-a-PR).
-- Alternativamente, también puede consultar [este tutorial más simple](How-to-create-a-DB-PR) sobre cómo abrir PR que contienen código SQL a través de GitHub.
+- Lee [Cómo crear un PR](es/how-to-create-a-pr).
+- Alternativamente, también puedes consultar [este tutorial más simple](es/how-to-create-a-db-pr) sobre cómo abrir pull requests que contienen código SQL a través de GitHub.
 
 ### Dando crédito al autor del código
 
-Si desea enviar un código escrito por otra persona, puede otorgarle créditos al autor cuando se comente:
+Si quieres enviar código escrito por otra persona, puedes dar créditos al autor cuando haces el commit:
 
-`git commit --author="AuthorName <authoremail@address.com>" -am "Confirma el mensaje aquí"`
+`git commit --author="AuthorName <authoremail@address.com>" -am "Commit message here"`
 
-Actualización: desafortunadamente, al fusionar un PR aplastando el comentario, GitHub establece automáticamente al autor del compromiso resultante como la persona que abrió el PR. Por esta razón, mencione al autor original (y comprometa, si corresponde) en la descripción del PR.
+Actualización: desafortunadamente, al fusionar un PR mediante squash del commit, GitHub establece automáticamente como autor del commit resultante a la persona que abrió el PR. Por este motivo, menciona al autor original (y al commit, si corresponde) en la descripción del PR.
 
-## Mejora la Wiki
+## Mejora la Wiki {#improve-the-wiki}
 
-¿Quieres mejorar o agregar una página a nuestro wiki? ¡Bien! Discutámoslo usando [nuestro chat](https://discord.gg/PaqQRkd).
+¿Quieres mejorar o agregar una página a nuestra wiki? ¡Bien! Discutámoslo usando [nuestro chat](https://discord.gg/PaqQRkd).

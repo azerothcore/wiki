@@ -1,163 +1,138 @@
 # Instalación del Core en Windows
 
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](windows-requirements) | [Paso 3: Configuración del Servidor >>](server-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](es/windows-requirements) | [Paso 3: Configuración del servidor >>](es/windows-server-setup) |
 
 ## Software necesario
 
-Consulta [Requisitos](windows-requirements) antes de continuar.
+Consulta [Requisitos](es/windows-requirements) antes de continuar.
 
 ## Descarga y compilación del código fuente
 
 ### Descarga del código
 
-1. Crea el directorio donde se ubicarán los archivos fuente. En esta guía, utilizaremos **C:\Azerothcore**.
+1. Crea el directorio donde se ubicarán los archivos fuente. En esta guía, usaremos **C:\Azerothcore**.
 
-2. Abre Github Desktop.
+1. Abre Github Desktop
 
-3. Haz clic en **Archivo** -> **Clonar repositorio...** en la esquina superior izquierda.
+1. Haz clic en **File** -> **Clone repository...** en la esquina superior izquierda
 
-4. Haz clic en **URL**.
+1. Haz clic en **URL**
 
-5. Completa los datos de la siguiente manera:
+1. Rellena los datos de la siguiente manera:
 
-```text
+```
 Repository URL or GitHub username and repository: https://github.com/azerothcore/azerothcore-wotlk
 Local path: C:\Azerothcore
 ```
 
-Click **Clone**. En pocos minutos, los archivos fuente de Azerothcore se clonarán en **C:\Azerothcore**.
+Haz clic en **Clone**. En pocos minutos, los archivos fuente de Azerothcore se clonarán en **C:\Azerothcore**.
+
+#### Solución de problemas
+
+Si te encuentras con un error como **fatal: early EOF** o **fatal: fetch-pack: invalid index-pack output**, puedes encontrar una solución alternativa aquí: [Errores comunes ACE00105](es/common-errors#ace00105).
 
 ### Configuración y generación de la solución Visual C++ con CMake
 
-Antes de comenzar, crea un nuevo directorio llamado **Build**. En esta guía, utilizaremos **C:\Build**.
+Antes de comenzar, crea un nuevo directorio llamado **Build**. En esta guía, usaremos **C:\Build**.
 
-1. Abre CMake.
+1. Abre CMake
 
-2. Haz clic en **Examinar fuente...** → Selecciona el directorio fuente (**C:\Azerothcore**).
+1. Haz clic en **Browse Source...** → Selecciona el directorio fuente (**C:\Azerothcore**)
 
-3. Haz clic en **Examinar construcción...** → Selecciona el directorio de construcción (**C:\Build**).
+1. Haz clic en **Browse Build...** → Selecciona el directorio de build (**C:\Build**)
 
-4. Haz clic en **Configurar**.
+1. Haz clic en **Configure**.
 
-5. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
+1. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](es/windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
 
-6. Asegúrate de que **Usar compiladores nativos predeterminados** esté marcado.
+1. Asegúrate de que **Use default native compilers** esté marcado.
 
-7. Haz clic en **Finalizar**.
+1. Haz clic en **Finish**.
 
-8. Asegúrate de que **TOOLS_BUILD** esté configurado en `all`. Esto compilará los extractores necesarios más adelante en la configuración.
+1. Asegúrate de que **TOOLS_BUILD** esté configurado en `all`. Esto compilará los extractores necesarios más adelante en la configuración.
 
-9. Haz clic en **Configurar** nuevamente. Mientras haya error(es) en rojo en la ventana de registro, deberás verificar tus parámetros y volver a ejecutarlo.
+1. Haz clic en **Configure** de nuevo. Mientras haya error(es) en rojo en la ventana de registro, deberás revisar tus parámetros y volver a ejecutarlo.
 
-10. Haz clic en **Generar**. Esto instalará los archivos de construcción seleccionados en tu carpeta **C:\Build**.
+1. Haz clic en **Generate**. Esto instalará los archivos de build seleccionados en tu carpeta **C:\Build**.
 
-#### Solución de algunos errores
+{% include note.html content="Si te encuentras con errores en CMake, consulta [Errores comunes](es/common-errors#core-installation-errors)." %}
 
-Si llegaras a encontrar errores en CMake, consulta [Errores comunes](common-errors#core-installation-errors).
+### Compilación del código fuente {#compiling-the-source}
 
-### Compilación del código fuente
+1. En CMake, presiona **Open Project** para abrir el archivo **AzerothCore.sln** directamente con Visual Studio.
 
-1. En CMake, presiona **Abrir proyecto** para abrir el archivo **AzerothCore.sln** directamente con Visual Studio.
+1. En el menú superior, haz clic en **Build** y selecciona **Configuration Manager**.
 
-1. En el menú superior, haz clic en **Compilar** y selecciona **Administrador de configuraciones**.
+    1. Establece **Active Solution Configuration** en **RelWithDebInfo**.
 
-    1. Establece la **Configuración de solución activa** en **RelWithDebInfo**.
+    1. Establece **Active Solution Platform** en **x64** y luego haz clic en Close (la configuración se guarda automáticamente).
 
-    1. Establece la **Plataforma de solución activa** en **x64** y luego haz clic en Cerrar (la configuración se guarda automáticamente).
+1. Haz clic derecho en **ALL_BUILD** en el Solution Explorer de la barra lateral derecha y selecciona **Clean**.
 
-1. Haz clic con el botón derecho en **ALL_BUILD** en el Explorador de soluciones en la barra lateral derecha y selecciona **Limpiar**.
+1. Haz clic derecho en **ALL_BUILD** y selecciona **Build**. (Ctrl + Shift + B)
 
-1. Haz clic con el botón derecho en **ALL_BUILD** y selecciona **Compilar** (Ctrl + Shift + B).
+    1. Si tu GUI no muestra el Solution Explorer, haz clic en el menú Build y selecciona **Clean Solution**, y luego **Build**.
 
-    1. Si tu GUI no muestra el Explorador de soluciones, haz clic en el menú Compilar y selecciona **Limpiar solución**, y luego **Compilar**.
+El tiempo de build varía de una máquina a otra, pero puedes esperar que tome entre 5 y 30 minutos.
 
-El tiempo de compilación varía de una máquina a otra, pero puedes esperar que tome entre 5 y 30 minutos.
+Si se te pide "Reload build files" durante o después de la compilación, hazlo.
 
-Si se te pide "Recargar archivos de construcción" durante o después de la compilación, hazlo.
+Cuando el build esté completo, encontrarás en la salida un mensaje similar a este:
 
-Cuando la compilación esté completa, encontrarás un mensaje en la salida que se parece a esto:
-
-```text
+```
 ========== Build: 22 succeeded, 0 failed, 0 up-to-date, 1 skipped ==========
 ```
 
-Encontrarás tus binarios recién compilados en la carpeta **C:\Build\bin\RelWithDebInfo** o **C:\Build\bin\Debug**. Estos se utilizan para ejecutar tu servidor al final de estas instrucciones.
+Encontrarás tus binarios recién compilados en la carpeta **C:\Build\bin\RelWithDebInfo** o **C:\Build\bin\Debug**. Todos se usan para ejecutar tu servidor al final de estas instrucciones.
 
-Necesitarás los siguientes archivos para que el núcleo funcione correctamente:
+Necesitarás los siguientes archivos para que el core funcione correctamente:
 
-```text
+```
 \configs\
 authserver.exe
-authserver.pbd
+authserver.pdb
 worldserver.exe
 worldserver.pdb
 libmysql.dll
-
----------
-Para OpenSSL 1.1.x
-
-libeay32.dll / libcrypto-1_1.dll / libcrypto-1_1-x64.dll
-ssleay32.dll / libssl-1_1.dll / libssl-1_1-x64.dll
-
----------
-Para OpenSSL 3.0 y versiones posteriores
-
 legacy.dll
-libcrypto-3.dll / libcrypto-3-x64.dll
-libssl-3.dll / libssl-3-x64.dll
+libcrypto-3-x64.dll
+libssl-3-x64.dll
 ```
+
+Hay cuatro archivos DLL que deben añadirse manualmente a esta carpeta, y debes copiarlos desde los siguientes directorios:
+
+{% include callout.html content="**libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.4\lib" type="primary" %}
+
+{% include note.html content="La versión de tu libmysql.dll debe coincidir con la versión de MySQL Server que ejecutas. Si actualizas tu servidor MySQL, necesitas recompilar el core y copiar el nuevo archivo dll." %}
+
+{% include callout.html content="**legacy.dll**, **libcrypto-3-x64.dll** y **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin" type="primary" %}
 
 En la carpeta **configs** deberías encontrar:
 
-```text
+```
 authserver.conf.dist
 worldserver.conf.dist
 ```
 
-Hay dos/tres archivos DLL que deben agregarse manualmente a esta carpeta, y debes copiarlos desde los siguientes directorios de instalación/bin:
-
-**libmysql.dll** → C:\Program Files\MySQL\MySQL Server 8.x\lib\
-
-*Nota: Necesitas la versión exacta de libmysql que corresponda al MySQL que has descargado. Debido a esto, no puedes descargar el DLL de la web y necesitas extraerlo de la carpeta.*
-
-#### OpenSSL _antes_ de la versión 1.1.0:
-
-**libeay32.dll** y **ssleay32.dll** → C:\OpenSSL-Win64\ o C:\OpenSSL-Win32\ *(depende de si tu núcleo es de 64 bits o 32 bits)*.
-
-#### Nombres de OpenSSL 1.1.x han cambiado:
-
-**libssl-1_1-x64.dll** y **libcrypto-1_1-x64.dll** → C:\OpenSSL-Win64\bin
-
-#### OpenSSL 3.0 y más reciente instalado, debes copiar:
-
-**legacy.dll** → C:\OpenSSL-Win(32/64)\bin
-
-**libcrypto-3-x64.dll** y **libssl-3-x64.dll** → C:\OpenSSL-Win64\bin
-
 #### Acerca del registro de compilación e informe
 
-Los archivos pdb solo existen si compilar con la configuración Debug o RelWithDebInfo. No es obligatorio, pero se recomienda compilar el núcleo con al menos la configuración RelWithDebInfo para obtener registros de errores adecuados.
+Los archivos pdb solo existen si compilas con la configuración Debug o RelWithDebInfo. No es obligatorio, pero se recomienda compilar el core con al menos la configuración RelWithDebInfo para obtener crash logs adecuados.
 
-Para informar sobre registros de errores, es OBLIGATORIO compilar con la configuración Debug o RelWithDebInfo.
-
-<br>
+{% include important.html content="Para reportar crash logs es OBLIGATORIO compilar con la configuración Debug o RelWithDebInfo." %}
 
 ## Ayuda
 
-fgdfgSi aún tienes problemas, verifica:
+Si sigues teniendo problemas, comprueba:
 
-* [FAQ](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte las 24 horas. Un miembro del personal te responderá cuando tenga tiempo.
-
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo forma parte de la Guía de Instalación. Puedes leerlo por separado o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](windows-requirements) | [Paso 3: Configuración del Servidor >>](server-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](es/windows-requirements) | [Paso 3: Configuración del servidor >>](es/windows-server-setup) |
