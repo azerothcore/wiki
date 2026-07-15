@@ -1,55 +1,53 @@
-# Instalación de la Base de Datos
+# Instalación de la base de datos
 
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 3: Configuración del Servidor](server-setup) | [Paso 5: Redes >>](networking) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 3: Configuración del servidor](es/server-setup) | [Paso 5: Red >>](es/networking) |
 
-## Creación de la Base de Datos en MySQL
+## Crear la base de datos en MySQL
 
-### Creación de la Base de Datos y el Usuario
+### Crear las bases de datos y el usuario
 
-Primero que todo, necesita crear el usuario acore usando el siguiente script.
+Primero, necesitas crear el usuario acore. Necesitas ejecutar el script de abajo dentro de un cliente de MySQL o con la interfaz de línea de comandos (CLI) de MySQL.
+Necesitas ejecutar el script como el usuario **root** de MySQL dentro de un cliente de MySQL o de la CLI de MySQL.
 
 https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/create_mysql.sql
 
-Puede realizarlo con un cliente de MySQL o con la interfaz de comandos de MySQL (CLI).
+{% include important.html content="¡Usa el usuario root de MySQL SOLO para ejecutar el script de arriba; nunca ejecutes el core como root o administrador!" %}
 
-Necesitará usar una cuenta root de MySQL con su cliente de  MySQL o con MySQL CLI antes de empezar a correr el servidor y usar alguno de esos archivos. (use un usuario root de MySQL solo para importar uno de esos archivos, NUNCA inicie el servidor con usuario root o administrator).
+{% include tip.html content="Puedes cambiar la contraseña del usuario que estás creando para mayor seguridad." %}
 
-*Consejo: Puede cambiar la contraseña del usario que está creando para incrementar la seguridad.*
+## Cargar datos en la base de datos
 
-## Cargan de información a la Base de Datos
+Si quieres saber cómo funciona el directorio SQL o planeas hacer cambios personalizados, te recomendamos leer [esto](es/sql-directory).
 
-Puede hacer esto de dos maneras:
-- Automatic Database Updater (Actualizador autmático de la base datos: predeterminado, recomendado)
+#### Actualizador automático de la base de datos
 
-Si quiere saber cómo funciona el directorio SQL o planea hacer cambios custom, le recomendamos leer [esto](sql-directory).
+El Auth- y el Worldserver comprueban y aplican todos los archivos de base de datos necesarios al iniciar.
 
-### Actualizador automático de bases de datos
+Para editar el actualizador automático de la base de datos, encontrarás las configuraciones necesarias en authserver.conf y worldserver.conf bajo **UPDATE SETTINGS**.
 
-Por defecto, Worldserver y Authserver van a revisar e importar los nuevos archivos dentro de la base de datos que estén especificados en la configuración.
+1. Inicia Authserver.exe, en la carpeta Build que creaste, dentro de \bin\RelWithDebInfo o \bin\Debug.
+2. Inicia Worldserver.exe, en la misma ubicación.
 
-Esta es la forma recomendada y la más facil, para asegurarse de que siempre tiene la base de datos al día con el Core.
+Si obtienes el siguiente mensaje en tu consola, presiona enter para crear y poblar las bases de datos.
 
-Para editar el actualizador automático de bases de datos, encontrará las configuraciones necesarias en authserver.conf y worldserver.conf en la opción [UPDATE SETTINGS](https://github.com/azerothcore/azerothcore-wotlk/commit/2d2857ce81db5297eb63d388d2e2f252ef52412d#diff-56b141374cf0384a2887c9fd490c6a79a3d2f31fb020ee0e423a5685344b59d3R30).
-
-<br>
+```
+Database "acore_auth" does not exist
+Do you want to create it? [yes (default) / no]:
+```
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
-
-
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 3: Configuración del Servidor](server-setup) | [Paso 5: Redes >>](networking) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 3: Configuración del servidor](es/server-setup) | [Paso 5: Red >>](es/networking) |
