@@ -1,4 +1,4 @@
-﻿# character\_gifts
+# character\_gifts
 
 [<-Volver a:Characters](database-characters)
 
@@ -36,6 +36,6 @@ La entrada del artículo. Consulte [item\_template.entry](item_template#entry).
 
 ### flags
 
-`campo-sin-descripción|4`
+Las flags de proto del artículo regalado en el momento en que se envolvió.
 
 *Nota para futuras investigaciones: max flags 13369920? FieldFlags of ProtoFlags?*

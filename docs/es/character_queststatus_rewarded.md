@@ -1,10 +1,10 @@
-﻿# character\_queststatus\_rewarded
+# character\_queststatus\_rewarded
 
 [<-Volver a:Characters](database-characters)
 
 **Tabla \`character\_queststatus\_rewarded\`**
 
-Esta tabla contiene información de ** cada ** misión recompensada para un jugador.
+Esta tabla contiene información de **cada** misión recompensada para un jugador.
 
 **Estructura**
 
@@ -30,4 +30,4 @@ El ID de misión de la misión recompensada. Ver [quest\_template.id](quest_temp
 
 ### active
 
-`campo-sin-descripción|3`
+Siempre establecido en 1. Se usa internamente para filtrar las misiones recompensadas activas al cargar los datos del personaje.
