@@ -11,8 +11,8 @@ This table defines reusable option rulesets for creature text groups. Each rules
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment                                  |
 |------------------------|--------------|------------|-----|------|---------|-------|------------------------------------------|
 | [SetID][1]             | TINYINT      | UNSIGNED   | PRI | NO   |         |       |                                          |
-| [Cooldown][2]          | INT          | UNSIGNED   |     | NO   | 0       |       | Group cooldown in ms before it can fire again |
-| [TriggerChance][3]     | TINYINT      | UNSIGNED   |     | NO   | 100     |       | 0-100 pct chance to fire at all          |
+| [Cooldown][2]          | INT          | UNSIGNED   |     | NO   | 0       |       | Group cooldown in milliseconds before it can fire again |
+| [TriggerChance][3]     | TINYINT      | UNSIGNED   |     | NO   | 100     |       | 0-100 percent chance to fire at all      |
 | [PlayerOnly][4]        | TINYINT      | UNSIGNED   |     | NO   | 0       |       | Only fire if target is a player          |
 | [comment][5]           | VARCHAR(255) |            |     | YES  |         |       |                                          |
 
