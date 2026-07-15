@@ -181,7 +181,7 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition             | 67108864   |
 | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net account        | 134217728  |
 | ACCOUNT_FLAG_DEMOS                | UNK                                   | 268435456  |
-| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight        | 536870912  |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight. Automatically set when the account first meets the `CharacterCreating.MinLevelForHeroicCharacter` requirement; once set, overrides that requirement. | 536870912  |
 | ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNK (StarCraft II related?)           | 1073741824 |
 | ACCOUNT_FLAG_S2_TRIAL             | UNK (StarCraft II related?)           | 2147483648 |
 
