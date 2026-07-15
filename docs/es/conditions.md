@@ -1,6 +1,6 @@
 # conditions
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 **Tabla \`conditions\`**
 

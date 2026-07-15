@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](es/classic-installation) | [Paso 2: Instalación del Core >>](es/windows-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del Core >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
@@ -84,7 +84,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (Sin preview)" type="info" 
 
     {% include note.html content="Si obtienes el error 'Missing Microsoft Visual C++ .... Redistributable' al instalar OpenSSL, descarga el [Microsoft Visual C++ 2017/2019/2022 Redistributable Package (x64) (Descarga directa)](https://aka.ms/vs/17/release/vc_redist.x64.exe) (instalador de 1.7MB) e instálalo." %}
 
-    {% include note.html content="Al instalar OpenSSL, elige el directorio de binarios de OpenSSL (/bin), NO el directorio del sistema de Windows, cuando te den a elegir dónde copiar las DLL de OpenSSL. Estas DLL deberán poder localizarse fácilmente para la [Instalación del Core](es/windows-core-installation)." %}
+    {% include note.html content="Al instalar OpenSSL, elige el directorio de binarios de OpenSSL (/bin), NO el directorio del sistema de Windows, cuando te den a elegir dónde copiar las DLL de OpenSSL. Estas DLL deberán poder localizarse fácilmente para la [Instalación del Core](windows-core-installation)." %}
 
 8. [Boost](https://www.boost.org/).
 
@@ -102,12 +102,12 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (Sin preview)" type="info" 
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](es/classic-installation) | [Paso 2: Instalación del Core >>](es/windows-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation) | [Paso 2: Instalación del Core >>](windows-core-installation) |

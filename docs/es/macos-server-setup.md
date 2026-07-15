@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](es/macos-core-installation) | [Paso 4: Instalación de la base de datos >>](es/database-installation) |
+| [<< Paso 2: Instalación del Core](macos-core-installation) | [Paso 4: Instalación de la base de datos >>](database-installation) |
 
 **Tabla de contenidos**
 - [Archivos de datos del cliente (descargar pre-extraídos)](#option-1-download-pre-extracted-files)
@@ -112,7 +112,7 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 Deben verificarse los siguientes pasos:
 
 - El hostname (127.0.0.1) puede quedarse igual si AzerothCore se está instalando en el mismo equipo en el que ejecutas WoW.
-  Si no, sigue las instrucciones de la [tabla Realmlist](es/realmlist).
+  Si no, sigue las instrucciones de la [tabla Realmlist](realmlist).
 
 - El puerto (3306) es el valor estándar configurado. Si cambiaste el puerto por defecto en tu configuración de MySQL, debes cambiarlo en consecuencia.
   El usuario y la contraseña pueden variar. Puedes elegir entre:
@@ -133,18 +133,18 @@ Deben verificarse los siguientes pasos:
 
 ### (Opcional) Opciones de configuración por variable de entorno
 
-Es posible cargar opciones de configuración mediante variables de entorno, sobre lo que puedes leer [aquí](es/config-overrides-with-env-var).
+Es posible cargar opciones de configuración mediante variables de entorno, sobre lo que puedes leer [aquí](config-overrides-with-env-var).
 
 ## Ayuda
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 2: Instalación del Core](es/macos-core-installation) | [Paso 4: Instalación de la base de datos >>](es/database-installation) |
+| [<< Paso 2: Instalación del Core](macos-core-installation) | [Paso 4: Instalación de la base de datos >>](database-installation) |

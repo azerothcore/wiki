@@ -1,6 +1,6 @@
 # outdoorpvp_template
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 **Tabla \`outdoorpvp_template\`**
 

@@ -47,4 +47,4 @@ Si el servidor falla después de habilitar GDB, encontrarás el archivo crashdum
 
 Nuestra configuración de Docker integra el motor `startup-scripts`. Esto significa que habilitar GDB y gestionar los reinicios también funciona sin problemas dentro del entorno de Docker. Además, nuestro docker-compose.yml usa la [funcionalidad de restart-policy](https://docs.docker.com/config/containers/start-containers-automatically/) para mantener automáticamente los contenedores en funcionamiento tras un fallo o un reinicio del sistema.
 
-Para más información, consulta la documentación de [Instalación con Docker](es/install-with-docker). También encontrarás una guía sobre cómo depurar tu código usando VSCode combinado con su extensión Remote Docker.
+Para más información, consulta la documentación de [Instalación con Docker](install-with-docker). También encontrarás una guía sobre cómo depurar tu código usando VSCode combinado con su extensión Remote Docker.

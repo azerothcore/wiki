@@ -18,7 +18,7 @@ Con más detalle:
 
 * Versión **PATCH** cuando haces arreglos de bugs y de seguridad retrocompatibles.
 
-* **PRERELEASE** esto es lo que se llama "metadata" en el estándar semver. Usamos esta parte del versionado mientras trabajamos en la rama **master**. Cada vez que se lanza una nueva funcionalidad o un cambio que rompe compatibilidad (tanto en código como en BD), este número se incrementa para notificarte sobre posibles acciones a realizar. Consulta [cómo usar el changelog](es/how-to-use-changelog).
+* **PRERELEASE** esto es lo que se llama "metadata" en el estándar semver. Usamos esta parte del versionado mientras trabajamos en la rama **master**. Cada vez que se lanza una nueva funcionalidad o un cambio que rompe compatibilidad (tanto en código como en BD), este número se incrementa para notificarte sobre posibles acciones a realizar. Consulta [cómo usar el changelog](how-to-use-changelog).
 
 ### PRERELEASE primero
 

@@ -3,7 +3,7 @@
 Todos los cambios que rompen compatibilidad/notables de este proyecto se documentarán en el archivo `/docs/changelog/master`.
 
 El formato se basa en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-y este proyecto se adhiere al [Versionado Semántico](es/project-versioning).
+y este proyecto se adhiere al [Versionado Semántico](project-versioning).
 
 **Este changelog debería proporcionar una forma sencilla para que los desarrolladores actualicen su propio código que está conectado a AzerothCore** (p. ej. módulos, APIs, scripts, etc.)
 No es una forma de llevar un registro de TODOS los cambios realizados (para eso tenemos el historial de git). Por tanto, solo 2 reglas de oro a seguir:

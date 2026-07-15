@@ -4,7 +4,7 @@ El dashboard Bash de AzerothCore es una colección de scripts que ayudan con la 
 Permite instalar, actualizar y ejecutar AzerothCore fácilmente en tu máquina en una cantidad de pasos tremendamente pequeña.
 
 Instalar un servidor privado de desarrollo o producción nunca había sido tan fácil.
-Si necesitas cualquier ayuda, simplemente [haz una pregunta](es/how-to-ask-for-help).
+Si necesitas cualquier ayuda, simplemente [haz una pregunta](how-to-ask-for-help).
 
 
 ## Requisitos
@@ -104,7 +104,7 @@ Los binarios `worldserver` y `authserver` están ubicados en `azerothcore-wotlk/
 Puedes ejecutarlos directamente o usar el reiniciador (ver abajo).
 El primer arranque del `worldserver` instalará una base de datos completa de AzerothCore. No es necesario importar ninguna actualización de la base de datos en este punto.
 
-Consulta también [Red](es/networking) y [Pasos finales del servidor](es/final-server-steps).
+Consulta también [Red](networking) y [Pasos finales del servidor](final-server-steps).
 
 ### Reiniciador
 
@@ -139,7 +139,7 @@ Reconstruye:
 
 Actualiza la base de datos:
 
-[database-keeping-the-server-up-to-date](es/database-keeping-the-server-up-to-date)
+[database-keeping-the-server-up-to-date](database-keeping-the-server-up-to-date)
 
 Eso es todo.
 

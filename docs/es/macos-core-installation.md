@@ -3,11 +3,11 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](es/macos-requirements) | [Paso 3: Configuración del servidor >>](es/macos-server-setup) |
+| [<< Paso 1: Requisitos](macos-requirements) | [Paso 3: Configuración del servidor >>](macos-server-setup) |
 
 ## Software necesario
 
-Consulta [Requisitos](es/macos-requirements) antes de continuar.
+Consulta [Requisitos](macos-requirements) antes de continuar.
 
 ## Obtener el código fuente
 
@@ -54,7 +54,7 @@ Los directorios que Homebrew usa para instalar paquetes difieren entre las Mac c
 
 Antes de ejecutar el comando CMake, reemplaza `$HOME/azeroth-server/` con la ruta de instalación del servidor (donde quieras colocar los binarios compilados).
 
-Explicación de los parámetros para usuarios avanzados: [Opciones de CMake](es/cmake-options).
+Explicación de los parámetros para usuarios avanzados: [Opciones de CMake](cmake-options).
 
 En este punto, debes estar en tu directorio "build/".
 
@@ -102,12 +102,12 @@ make install
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](es/macos-requirements) | [Paso 3: Configuración del servidor >>](es/macos-server-setup) |
+| [<< Paso 1: Requisitos](macos-requirements) | [Paso 3: Configuración del servidor >>](macos-server-setup) |

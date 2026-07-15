@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 4: Instalación de la base de datos](es/database-installation) | [Paso 6: Pasos finales del servidor >>](es/final-server-steps) |
+| [<< Paso 4: Instalación de la base de datos](database-installation) | [Paso 6: Pasos finales del servidor >>](final-server-steps) |
 
 Esta guía está pensada para configuraciones avanzadas o simplemente para dar más detalles sobre cómo configurar tu reino para uso local o por internet. En general, la configuración por defecto explicada en la guía específica de tu sistema operativo debería ser suficiente para instalaciones simples.
 
@@ -50,12 +50,12 @@ Necesitas asegurarte de que tu aplicación **authserver** dirija las conexiones 
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 4: Instalación de la base de datos](es/database-installation) | [Paso 6: Pasos finales del servidor >>](es/final-server-steps) |
+| [<< Paso 4: Instalación de la base de datos](database-installation) | [Paso 6: Pasos finales del servidor >>](final-server-steps) |

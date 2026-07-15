@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. | Opcional |
-| [<< Paso 7: Mantener el servidor actualizado](es/keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](es/installing-a-module) |
+| [<< Paso 7: Mantener el servidor actualizado](keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](installing-a-module) |
 
 AzerothCore no distribuye un cliente. Necesitarás encontrar tu propio cliente 3.3.5a limpio en internet.
 
@@ -21,12 +21,12 @@ AzerothCore no distribuye un cliente. Necesitarás encontrar tu propio cliente 3
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 7: Mantener el servidor actualizado](es/keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](es/installing-a-module) |
+| [<< Paso 7: Mantener el servidor actualizado](keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](installing-a-module) |

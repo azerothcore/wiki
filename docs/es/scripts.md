@@ -1,6 +1,6 @@
 # Tablas de scripts
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 # Tablas: \*\*\*\_scripts
 

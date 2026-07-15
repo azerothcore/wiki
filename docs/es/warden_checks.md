@@ -1,6 +1,6 @@
 # warden\_checks
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 **Tabla \`warden\_checks\`**
 

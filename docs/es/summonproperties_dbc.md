@@ -1,8 +1,8 @@
 # summonproperties\_dbc
 
-[`Back-to:Spell Effects Reference`](es/spell-effects-reference)
+[`Back-to:Spell Effects Reference`](spell-effects-reference)
 
-[`Back-to:DBC`](es/dbc-index)
+[`Back-to:DBC`](dbc-index)
 
 **Tabla \`summonproperties\_dbc\`**
 
@@ -10,7 +10,7 @@ Este DBC contiene las Summon Properties (EffectMiscValueB) para el Spell Effect 
 
 **La versión es: 3.3.5a**
 
-[Cómo importar datos DBC a mi base de datos](es/how-to-import-dbc-data-in-db)  
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)  
 
 **Estructura**
 
@@ -49,7 +49,7 @@ Este es el ID de SummonProperties.dbc.
 
 ### Faction
 
-ID de [Faction.dbc](es/faction).
+ID de [Faction.dbc](faction).
 
 ### Title
 

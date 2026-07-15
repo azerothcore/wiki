@@ -14,7 +14,7 @@ Solo queremos que pidas soporte de **la forma apropiada**. Por favor, lee este d
 
 ## Preguntas frecuentes y errores comunes
 
-Primero, te recomendamos leer las [Preguntas frecuentes](es/faq) y los [Errores comunes](es/common-errors) para encontrar la solución a tu problema.
+Primero, te recomendamos leer las [Preguntas frecuentes](faq) y los [Errores comunes](common-errors) para encontrar la solución a tu problema.
 
 ## ¿Por qué es tan importante "la forma apropiada"?
 
