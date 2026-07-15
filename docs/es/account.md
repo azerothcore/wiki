@@ -205,7 +205,7 @@ Entero 0, 1 o 2 que controla si el cliente conectado a la cuenta tiene alguna ot
 | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition                    | 67108864     |
 | ACCOUNT_FLAG_OVERMIND_LINKED      | Vinculada con una cuenta de Battle.net       | 134217728    |
 | ACCOUNT_FLAG_DEMOS                | Desconocido                                  | 268435456    |
-| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Permite crear Death Knight                   | 536870912    |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Permite crear Death Knight. Se establece automáticamente cuando la cuenta cumple por primera vez el requisito `CharacterCreating.MinLevelForHeroicCharacter`; una vez establecida, anula dicho requisito. | 536870912    |
 | ACCOUNT_FLAG_S2_REQUIRE_IGR       | Desconocido (¿relacionado con StarCraft II?) | 1073741824   |
 | ACCOUNT_FLAG_S2_TRIAL             | Desconocido (¿relacionado con StarCraft II?) | 2147483648   |
 
