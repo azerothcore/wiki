@@ -1,16 +1,18 @@
 # Requisitos de Linux
 
-| Guía de instalación                                                                                                                             |                                                              |
-| :---------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
-| Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation)                                                                                          | [Paso 2: Instalación del núcleo >>](linux-core-installation) |
+| Guía de instalación | |
+| :- | :- |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Inicio: Guía de instalación](es/classic-installation) | [Paso 2: Instalación del Core >>](es/linux-core-installation) |
 
-|                                                                                                    |
-| :------------------------------------------------------------------------------------------------- |
-| MySQL ≥ 8.0.0                                                                                      |
-| Boost ≥ 1.67                                                                                       |
-| CMake ≥ 3.16                                                                                       |
-| Clang ≥ [10](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) |
+| |
+| :- |
+| [MySQL](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
+| Boost ≥ 1.74 |
+| OpenSSL ≥ 3.0.x |
+| CMake ≥ 3.16 |
+| [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
+| [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
 #### Ubuntu con MySQL 8.x
 
@@ -18,118 +20,97 @@
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
-Recuerda que si eres el usuario `root` no es necesario usar `sudo`.
+Recuerda que si usas el usuario `root`, no es necesario usar `sudo`.
 
-Para configurar MySQL en Ubuntu 18.04 y similares (establecer la contraseña `root` y otros ajustes) lea [esta guía](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
+Para configurar MySQL en Ubuntu y similares (establecer la contraseña de `root` y otros ajustes), lee [esta guía](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
 
-**Nota**: en versiones antiguas de Ubuntu como la **18.04** necesitas instalar `gcc-10` y `libboost1.74-dev`:
+---
 
+#### Debian 12 y 13
+
+```sh
+apt-get update && apt-get install -y git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget screen
 ```
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-sudo add-apt-repository -y ppa:mhier/libboost-latest
+
+Recuerda que si usas el usuario `root`, no es necesario usar `sudo`.
+
+**Nota:** Al usar la opción `-y`, comenzará la instalación sin necesidad de que confirmes.
+
+---
+
+##### Instalar MySQL
+
+1. Visita la página del [repositorio APT de MySQL](https://dev.mysql.com/downloads/repo/apt/) para verificar y descargar la última versión del script.
+```sh
+export MYSQL_APT_CONFIG_VERSION=0.8.36-1
+```
+
+1. Descarga el último paquete de información del repositorio de MySQL.
+
+```sh
+wget https://dev.mysql.com/get/mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+```
+
+1. (Recomendado) Verifica la autenticidad de la configuración. Si tienes algún problema con este paso, consulta: https://dev.mysql.com/doc/refman/8.4/en/checking-gpg-signature.html
+```sh
+wget "https://dev.mysql.com/downloads/gpg/?file=mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb&p=37" -O mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
+gpg --keyserver pgp.mit.edu --recv-keys A8D3785C
+gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
+```
+
+1. Instalación no interactiva usando `DEBIAN_FRONTEND="noninteractive"` para instalar la última versión MYSQL-LTS, p. ej. `mysql-8.4-lts`, sin que aparezca ningún prompt al usuario.
+
+```sh
+sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+rm -v ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+unset MYSQL_APT_CONFIG_VERSION
 sudo apt-get update
-sudo apt install -y gcc-10 g++-10
-sudo apt install -y install libboost1.74-dev
+sudo DEBIAN_FRONTEND="noninteractive" apt-get install -y mysql-server libmysqlclient-dev
 ```
 
 ---
 
-#### Debian 10 / Debian 12
-
-```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev
-```
-
-Recuerda que si eres el usuario `root` no es necesario usar `sudo`.
-
-**Nota:** Si añades la opción `-y` al final de la lista de comandos, comenzará a instalarlos sin necesidad de que confirmes.
-
-**Ejemplo:**
-
-```sh
-apt-get update && apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mariadb-server libboost-all-dev -y
-```
-
----
-
-#### Verificar la versión de clang
+#### Comprueba tu versión de clang
 
 ```sh
 clang --version
 ```
 
-La versión de `clang` **DEBE** ser `10` o superior ([aquí](https://github.com/azerothcore/azerothcore-wotlk/actions?query=workflow%3Acore-build) puedes comprobar las versiones que se ejecutan en nuestro canal de acciones de Github, te recomendamos que utilices una de esas versiones).
+Tu versión de `clang` **DEBE** ser igual o superior a la versión requerida que aparece al inicio de esta página.
 
-Por ejemplo, si estás usando una versión antigua de Ubuntu como la 18.04, necesitas instalar clang usando:
+---
 
-```sh
-sudo apt-get install clang-10.0
-```
-
-Si usas otra distro o versión, busca en google cómo instalar la versión de clang adecuada para tu sistema.
-
-Actualmente el proyecto requiere clang10 o superior.
-
-Esta es una forma de actualizar e instalar la versión 11.
-
-La respuesta se detalla aquí:
-
-[Cómo instalar clang 11 en Debian](https://stackoverflow.com/questions/66223241/how-to-install-clang-11-on-debian)
-
-#### Verificar la versión de cmake
+#### Comprueba tu versión de cmake
 
 ```sh
 cmake --version
 ```
 
-La versión de `cmake` **DEBE** ser `3.16` o superior.
+Tu versión de `cmake` **DEBE** ser igual o superior a la versión requerida que aparece al inicio de esta página.
 
-En una versión más antigua de Ubuntu (ejemplo: 16.04), puede seguir las instrucciones aquí para instalar la última versión de cmake. En Debian necesitarás usar las fuentes de backports o construir Cmake manualmente.
+---
 
-Recuerde que es posible actualizar cmake usando Python.
-
-Instalar:
+#### Comprueba tu versión de openssl
 
 ```sh
-python -m pip install cmake
+openssl version
 ```
 
-Actualizar:
+Tu versión de `openssl` **DEBE** ser igual o superior a la versión requerida que aparece al inicio de esta página.
 
-```sh
-python -m pip install --upgrade cmake
-```
-
-#### Asegúrese de que las cabeceras de gcc-8 están instaladas
-
-Esto es un problema si, por ejemplo, se utiliza una versión antigua de Ubuntu como la 16.04. Ahí tienes que añadir el PPA "Toolchain test builds":
-https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
-
-Después
-
-```sh
-sudo apt-get update
-```
-
-puedes instalar gcc-8: 
-
-```sh
-sudo apt-get install g++-8 gcc-8
-```
+---
 
 ## Ayuda
 
-Si todavía tiene problemas, compruebe:
+Si sigues teniendo problemas, comprueba:
 
-* [FAQ - Preguntas frecuentes](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Errores comunes](common-errors)
-
-* [Cómo pedir ayuda](how-to-ask-for-help)
-
-* [Únase a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff le responderá siempre que tenga tiempo.
-
-| Guía de instalación                                                                                                                             |                                                              |
-| :---------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
-| Este articulo es una parte de la guía de instalación. Puedes leerlo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Inicio: Guía de instalación](classic-installation)                                                                                          | [Paso 2: Instalación del núcleo >>](linux-core-installation) |
+| Guía de instalación | |
+| :- | :- |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Inicio: Guía de instalación](es/classic-installation) | [Paso 2: Instalación del Core >>](es/linux-core-installation) |

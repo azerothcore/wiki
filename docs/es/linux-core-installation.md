@@ -1,58 +1,79 @@
 # Instalación del Core en Linux
 
-| Guía de Instalación | |
+| Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de Instalación. Puede leerlo solo o hacer click en los links previos para navegar con facilidad entre los pasos. |
-| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Instalación del Servidor >>](server-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](es/linux-requirements) | [Paso 3: Configuración del servidor >>](es/linux-server-setup) |
 
-## Software requerido
+## Directorios de instalación
 
-Véase [Requisitos](linux-requirements) antes de continuar.
+Los siguientes pasos instalarán AzerothCore en `$AC_CODE_DIR`. Por defecto será `$HOME/azerothcore`. Esta ruta puede cambiarse a cualquier otra ubicación a la que el usuario tenga acceso, si se desea.
 
-## Obtener el código fuente
+El usuario `azerothuser` también se usará en algunos ejemplos. De nuevo, puede cambiarse por lo que se desee.
 
-Elija **UNO** de los siguientes metodos, ejecute uno de los siguientes comandos `git ...` en su terminal.
-
-
-1. Clonar solo la rama master + el historial completo (Menor tamaño - recomendado):
-
-    ```sh
-    git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore
-    ```
-
-1. Clonar solo la rama master sin historial previo (el menor tamaño):
-
-    ```sh
-    git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch azerothcore --depth 1
-    ```
-
-    Nota: si usted quiere obtener el historial completo, use `git fetch --unshallow`.
-
-1. Clonar todas las ramas y todo el historial:
-
-    ```sh
-    git clone https://github.com/azerothcore/azerothcore-wotlk.git azerothcore
-    ```
-
-Esto creará un directorio de `azerothcore` que contiene los archivos fuente de AC.
-
-## Compilación del código fuente
-
-### Creación del directorio de la build
-
-**Note**: in the following command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root". You can check the state of the environment variable, as follows:
+**Nota**: en el siguiente comando la variable `$HOME` es la ruta del **usuario actual**, así que si has iniciado sesión como root, $HOME será "/root". Puedes comprobar el estado de la variable de entorno así:
 
 ```sh
 echo $HOME
 ```
 
-Configure the install directory as follows:
+Configura el directorio de instalación así:
 
 ```sh
 export AC_CODE_DIR=$HOME/azerothcore
 ```
 
-To avoid issues with updates and colliding source builds, we create a specific build-directory, so we avoid any possible issues due to that (if any might occur)
+## Software necesario
+
+Consulta [Requisitos](es/linux-requirements) antes de continuar.
+
+## Obtener el código fuente
+
+Elige **UNO** de los siguientes métodos; ejecuta uno de los comandos `git ...` de abajo en tu terminal.
+
+
+1. Clonar solo la rama master + historial completo (menor tamaño - recomendado):
+
+    ```sh
+    git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch $AC_CODE_DIR
+    ```
+
+1. Clonar solo la rama master + sin historial previo (el menor tamaño):
+
+    ```sh
+    git clone https://github.com/azerothcore/azerothcore-wotlk.git --branch master --single-branch $AC_CODE_DIR --depth 1
+    ```
+
+    Nota: Si quieres recuperar el historial completo, usa `git fetch --unshallow`.
+
+1. Clonar todas las ramas y todo el historial:
+
+    ```sh
+    git clone https://github.com/azerothcore/azerothcore-wotlk.git $AC_CODE_DIR
+    ```
+
+Esto creará un directorio `azerothcore` en tu carpeta home que contiene los archivos fuente de AC.
+
+## Compilación del código fuente
+
+> [!WARNING]
+> Cuando uses versiones recientes de Debian o Ubuntu, ¡existe una comprobación e instalación automática de actualizaciones que puede romper el funcionamiento del servidor!
+> De hecho, MySQL por ejemplo puede actualizarse automáticamente (¡mientras el servidor está en ejecución!), por lo que `authserver` y `worldserver` se cierran al instante y esta situación puede causar pérdida de tiempo de juego.
+>
+> Así que, para evitarlo, simplemente haz esto:
+> 1. edita el archivo `sudo nano /etc/apt/apt.conf.d/20auto-upgrades`
+> 2. comenta todas las líneas
+> 3. reinicia
+>
+> Esto evitará que el sistema actualice algunos programas útiles y cierre tu servidor de juego
+>
+> enlaces:
+> https://discord.com/channels/217589275766685707/1255602330431127753/1369358673465442405
+> https://discord.com/channels/217589275766685707/555424966137479180/1445387284768620554
+
+### Crear el directorio de build
+
+Para evitar problemas con las actualizaciones y builds de código que colisionen, creamos un directorio de build específico, así evitamos cualquier posible problema por eso (si llegara a ocurrir alguno)
 
 ```sh
 cd $AC_CODE_DIR
@@ -60,45 +81,40 @@ mkdir build
 cd build
 ```
 
-### Configuring for compiling
+### Configurar para compilar {#configuring-for-compiling}
 
-Parameter explanation for advanced users [CMake options](cmake-options).
+Explicación de los parámetros para usuarios avanzados: [Opciones de CMake](es/cmake-options).
 
-At this point, you must be in your "build/" directory.
+En este punto, debes estar en tu directorio `$AC_CODE_DIR/build`.
 
-**Note**: in the following command the variable `$HOME` is the path of the **current user**, so if you are logged as root, $HOME will be "/root". You can check the state of the environment variable, as follows:
 
-```sh
-echo $HOME
-```
-
-**Note**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
+**Nota**: en caso de que uses un paquete no predeterminado para `clang`, necesitas reemplazarlo en consecuencia. Por ejemplo, si instalaste `clang-6.0`, tienes que reemplazar `clang` por `clang-6.0` y `clang++` por `clang++-6.0`
 
 ```sh
-cmake ../ -DCMAKE_INSTALL_PREFIX=$AC_CODE_DIR/env/dist/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static
+cmake ../ -DCMAKE_INSTALL_PREFIX=$AC_CODE_DIR/env/dist/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static
 ```
 
-To know the amount of cores available.
-You can use the following command
+Para saber la cantidad de cores disponibles,
+puedes usar el siguiente comando
 
 ```sh
 nproc --all
 ```
 
-Set the number of cores to build with, replacing the command with the number of threads you want to execute, if applicable:
+Establece el número de cores con los que compilar, reemplazando el comando con el número de hilos que quieras ejecutar, si aplica:
 
 ```sh
 export BUILD_CORES=`nproc | awk '{print $1 - 1}'`
 ```
 
-Then, type:
+Luego, escribe:
 
 ```sh
 make -j$BUILD_CORES
 make install
 ```
 
-It may be useful to preserve these commands in a script or otherwise keep note of them for later. You will need to re-run all three commands again whenever you update AzerothCore or add new modules. For example:
+Puede ser útil conservar estos comandos en un script o anotarlos para más adelante. Necesitarás volver a ejecutar los tres comandos cada vez que actualices AzerothCore o añadas nuevos módulos. Por ejemplo:
 
 ```sh
 #!/bin/bash
@@ -109,13 +125,13 @@ make -j$BUILD_CORES &&
 make install
 ```
 
-## (Optional) Systemd Services
+## (Opcional) Servicios de Systemd {#optional-systemd-services}
 
-Systemd services can help you with managing your AzerothCore server. The service files shown below must be installed by `root` in most distros. The appropriate location on most distros is `/etc/systemd/system`.
+Los servicios de systemd pueden ayudarte a gestionar tu servidor de AzerothCore. Los archivos de servicio que se muestran abajo deben instalarse como `root` en la mayoría de las distros. La ubicación apropiada en la mayoría de las distros es `/etc/systemd/system`.
 
-Since these commands won't be run with access to the user's variables, the install directory `$AC_CODE_DIR` must be fully expanded to, for example, `/home/azerothuser/azerothcore`. Run `echo $AC_CODE_DIR` as your user if you're not sure what this should be.
+Dado que estos comandos no se ejecutarán con acceso a las variables del usuario, el directorio de instalación `$AC_CODE_DIR` debe expandirse completamente a, por ejemplo, `/home/azerothuser/azerothcore`. Ejecuta `echo $AC_CODE_DIR` como tu usuario si no estás seguro de cuál debería ser.
 
-Set the user for the units to run as. The username used here is `azerothuser`, and should be substituted for your username.
+Establece el usuario con el que se ejecutarán las units. El nombre de usuario usado aquí es `azerothuser`, y debe sustituirse por tu nombre de usuario.
 ```sh
 export AC_UNIT_USER=azerothuser
 ```
@@ -164,47 +180,44 @@ WantedBy=multi-user.target
 EOF
 ```
 
-systemd is made aware of these new service files with `systemd daemon-reload`. You can start AzerothCore like this:
+systemd toma conocimiento de estos nuevos archivos de servicio con `systemctl daemon-reload`. Puedes iniciar AzerothCore así:
 
 ```sh
 sudo service ac-worldserver start
 sudo service ac-authserver start
 ```
 
-Or stop it:
+O detenerlo:
 
 ```sh
 sudo service ac-worldserver stop
 sudo service ac-authserver stop
 ```
 
-The servers can be set to automatically start when the system boots with:
+Los servidores pueden configurarse para que se inicien automáticamente cuando el sistema arranca con:
 
 ```sh
 sudo systemctl enable ac-authserver
 sudo systemctl enable ac-worldserver
 ```
 
-You can inspect if the services started properly by inspecting the log entries from the systemd journal like so:
+Puedes revisar si los servicios se iniciaron correctamente inspeccionando las entradas de log del journal de systemd así:
 
 ```sh
 sudo journalctl ac-authserver.service
 sudo journalctl ac-worldserver.service
 ```
 
-## Help
+## Ayuda
 
-If you are still having problems, check:
+Si sigues teniendo problemas, comprueba:
 
-* [FAQ](faq)
+- [Preguntas frecuentes](es/faq)
+- [Errores comunes](es/common-errors)
+- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
-* [Common Errors](common-errors)
-
-* [How to ask for help](how-to-ask-for-help)
-
-* [Join our Discord Server](https://discord.gg/gkt4y2x), but it is not a 24/7 support channel. A staff member will answer you whenever they have time.
-
-| Installation Guide | |
+| Guía de instalación | |
 | :- | :- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements) | [Step 3: Server Setup >>](server-setup) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Paso 1: Requisitos](es/linux-requirements) | [Paso 3: Configuración del servidor >>](es/linux-server-setup) |
