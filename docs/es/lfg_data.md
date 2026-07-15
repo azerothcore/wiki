@@ -1,4 +1,4 @@
-﻿# lfg\_data
+# lfg\_data
 
 [<-Volver a:Characters](database-characters)
 
