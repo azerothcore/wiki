@@ -358,7 +358,7 @@ ItemEnchantmentMgr.cpp example:
 
 Alphabetical ordering is case-sensitive (ASCII order, matching clang-format's default): uppercase letters sort before lowercase. Above, `DBCStores.h` precedes `DatabaseEnv.h` because the uppercase `B` sorts before the lowercase `a`.
 
-Project headers use quotes (`"..."`); library headers (C++ standard library, boost, etc.) use angle brackets (`<...>`).
+Project headers use quotes (`"..."`); library headers (C++ standard library, boost, etc.) use angle brackets (`<...>`). A third-party library bundled into the codebase, such as G3D, is the exception and uses quotes.
 
 ### Text Output
 
