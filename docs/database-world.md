@@ -47,6 +47,8 @@
 - [creature_template_spell](creature_template_spell)
 - [creature_text](creature_text)
 - [creature_text_locale](creature_text_locale)
+- [creature_text_option_sets](creature_text_option_sets)
+- [creature_text_options](creature_text_options)
 
 ## D
 - [disables](disables)
