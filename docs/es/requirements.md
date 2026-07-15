@@ -4,7 +4,7 @@
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Inicio: Instalación clásica](es/classic-installation) | [Paso 2: Instalación del Core >>](es/core-installation) |
 
 [Requisitos de Linux](es/linux-requirements)
@@ -24,5 +24,5 @@ Si sigues teniendo problemas, comprueba:
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Inicio: Instalación clásica](es/classic-installation) | [Paso 2: Instalación del Core >>](es/core-installation) |

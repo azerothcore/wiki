@@ -2,14 +2,14 @@
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |
 
 ## Mantener el código fuente actualizado
 
 Abre tu repositorio de AzerothCore en GitHub Desktop.
 
-1. Haz clic en **Fetch origin** arriba, luego haz clic en **Pull origin** cuando aparezca.
+1. Haz click en **Fetch origin** arriba, luego haz click en **Pull origin** cuando aparezca.
 
 Esto sincronizará tu repositorio local con los últimos commits del repositorio azerothcore-wotlk.
 
@@ -32,5 +32,5 @@ Si sigues teniendo problemas, comprueba:
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Paso 6: Pasos finales del servidor](es/final-server-steps) | [Paso 8: Configuración del cliente >>](es/client-setup) |

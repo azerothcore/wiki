@@ -2,7 +2,7 @@
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Paso 1: Requisitos](es/linux-requirements) | [Paso 3: Configuración del servidor >>](es/linux-server-setup) |
 
 ## Directorios de instalación
@@ -219,5 +219,5 @@ Si sigues teniendo problemas, comprueba:
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Paso 1: Requisitos](es/linux-requirements) | [Paso 3: Configuración del servidor >>](es/linux-server-setup) |

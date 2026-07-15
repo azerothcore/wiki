@@ -2,7 +2,7 @@
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. | Opcional |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. | Opcional |
 | [<< Paso 7: Mantener el servidor actualizado](es/keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](es/installing-a-module) |
 
 AzerothCore no distribuye un cliente. Necesitarás encontrar tu propio cliente 3.3.5a limpio en internet.
@@ -28,5 +28,5 @@ Si sigues teniendo problemas, comprueba:
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Paso 7: Mantener el servidor actualizado](es/keeping-the-server-up-to-date) | [Paso 9: Instalar un módulo >>](es/installing-a-module) |

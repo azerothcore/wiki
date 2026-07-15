@@ -2,7 +2,7 @@
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Inicio: Guía de instalación](es/classic-installation) | [Paso 2: Instalación del Core >>](es/windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
@@ -36,9 +36,9 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (Sin preview)" type="info" 
 
     1. Descarga el instalador MSI de Windows.
 
-    2. Baja hasta el fondo y haz clic en "No thanks, just take me to the downloads!"
+    2. Baja hasta el fondo y haz click en "No thanks, just take me to the downloads!"
 
-    3. Cuando la instalación esté casi terminada, asegúrate de que "Launch the MySQL Instance Configuration Wizard" esté marcado, luego haz clic en "Finish".
+    3. Cuando la instalación esté casi terminada, asegúrate de que "Launch the MySQL Instance Configuration Wizard" esté marcado, luego haz click en "Finish".
 
     4. Cuando se abra el MySQL Instance Configuration Wizard, la mayoría de las opciones por defecto están bien, pero recuerda el usuario y la contraseña que uses (root // lo que sea). Los necesitarás para iniciar sesión en tu herramienta de gestión de base de datos elegida (abajo) para importar archivos SQL más adelante.
 
@@ -109,5 +109,5 @@ Si sigues teniendo problemas, comprueba:
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer clic en el enlace anterior para moverte fácilmente entre los pasos. |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
 | [<< Inicio: Guía de instalación](es/classic-installation) | [Paso 2: Instalación del Core >>](es/windows-core-installation) |
