@@ -1,94 +1,72 @@
 ---
-redirect_from: "/How-to-ask-for-help"
+redirect_from: "/es/How-to-ask-for-help"
 ---
 
-# Cómo solicitar ayuda
+# Cómo pedir ayuda
 
-## Necesita ayuda?
+## ¿Necesitas ayuda?
 
-Necesita soporte para AzerothCore? No se preocupe, ¡estamos felices de ayudarle!
+¿Necesitas soporte con AzerothCore? ¡No te preocupes, estaremos encantados de ayudarte!
 
-Ya se que tenga inconvenientes instalando AzerothCore, o que quiera resolver otras dudas comunes, **we will help you**.
+Ya sea que tengas problemas instalando AzerothCore, o que quieras hacer preguntas de tipo how-to o de ayuda genérica, **te ayudaremos**.
 
-Solo queremos que pregunte o pida soporte de **la forma apropiada**. Por favor, lea este documento antes de pedir cualquier tipo de ayuda.
+Solo queremos que pidas soporte de **la forma apropiada**. Por favor, lee este documento antes de pedir cualquier ayuda.
 
-## Preguntas frecuentes & Errores comunes
+## Preguntas frecuentes y errores comunes
 
-Primero que todo, le recomendamos que lea los apartados [Preguntas Frecuentes](faq) y [Errores Comunes](common-errors) posiblemente ahí esté la respuesta a su inconveniente.
+Primero, te recomendamos leer las [Preguntas frecuentes](es/faq) y los [Errores comunes](es/common-errors) para encontrar la solución a tu problema.
 
-## Por qué "la forma apropiada" es tan importante?
+## ¿Por qué es tan importante "la forma apropiada"?
 
-Si usted pregunta algo directamente en el chat, se puede perder con facilidad y no recibir respuesta alguna, a menos que haya alguien conectado en ese preciso momento y que esté en la posibilidad de contestar.
+Si haces una pregunta directamente en el chat, puede perderse fácilmente y quizás nunca recibas ayuda, a menos que haya alguien conectado en ese momento concreto que pueda ayudarte.
 
-If you put your question on StackOverflow it will **stay** there and someone can help you at any moment. You can also link your question in the chat to give it more visibility. Doesn't make sense for you? Just keep reading.
+Si pones tu pregunta en StackOverflow, **permanecerá** ahí y alguien podrá ayudarte en cualquier momento. También puedes enlazar tu pregunta en el chat para darle más visibilidad. ¿No te parece que tiene sentido? Sigue leyendo.
 
-Además, la mayoría de las preguntas son repetitivas. Por esta razón, necesitamso una manera eficiente de manejar todas las peticiones de soporte. Usamos StackOverflow para preguntas de soporte y GitHub para reporte de bugs.
+Además, la mayoría de las preguntas que hacen los usuarios son repetitivas. Así que necesitamos una forma eficiente de manejar todas las solicitudes de soporte. Usamos StackOverflow para preguntas de soporte y GitHub para reportes de bugs.
 
-Suena complicado? Para nada! **solo siga leyendo**.
+¿Suena complicado? ¡Para nada! **Sigue leyendo**.
 
-## Reporte de Bugs
+## Reportes de bugs
 
-¿Un elemento del juego (Por ejemplo: spell/quest/talent/etc..) no funciona como debería?
+¿Una funcionalidad del juego (p. ej. spell/quest/talent/etc..) no funciona como debería?
 
-Felicitaciones! Ha encontrado un bug. Por favor, busque entre los [reportes existentes](https://github.com/azerothcore/azerothcore-wotlk/issues). Hay una probabilidad alta de que alguien más ya haya reportado el mismo bug que usted encontró. En tal caso, le pedimos amablemente que lo "confirme" dejando un comentario.
+¡Felicidades! Acabas de encontrar un bug; por favor busca entre los [issues existentes](https://github.com/azerothcore/azerothcore-wotlk/issues). Hay buenas probabilidades de que alguien más ya haya reportado el mismo bug que encontraste; en ese caso te pedimos amablemente que lo "confirmes" dejando un comentario.
 
 Ejemplo:
-![Ejemplo de busqueda de reporte de AzerothCore](https://user-images.githubusercontent.com/75517/51130957-9b9f9580-182e-11e9-8f7f-11aa5d7b6d67.png)
+![Ejemplo de búsqueda de issues en AzerothCore](https://user-images.githubusercontent.com/75517/51130957-9b9f9580-182e-11e9-8f7f-11aa5d7b6d67.png)
 
-Si después de buscar un reporte existente no encontró ninguno, entonces debería [abrir un nuevo reporte (issue)](https://github.com/azerothcore/azerothcore-wotlk/issues/new).
+Si después de buscar un reporte de issue existente no encontraste ninguno, entonces deberías [abrir un nuevo issue](https://github.com/azerothcore/azerothcore-wotlk/issues/new).
 
 ## Otras solicitudes de soporte
 
-- Obtuvo errores mientras instalaba AzerothCore?
-- Hay algo en la documentación que no está del todo claro?
-- Quiere saber cómo hacer algo específico con AzerothCore?
-- ¿Está intentando algo como implementar algo nuevo, arreglar un bug, etc...?
-- Tiene preguntas sobre C++ o SQL que son relacionadas con AzerothCore u otros modulos custom de AC?
+- ¿Estás obteniendo un error mientras instalas AzerothCore?
+- ¿Hay algo en la documentación que no te queda claro?
+- ¿Quieres saber cómo hacer algo específico con AzerothCore?
+- ¿Estás intentando hacer algo como implementar una nueva funcionalidad, corregir un bug, etc...?
+- ¿Tienes preguntas sobre código C++ o SQL relacionado con AzerothCore u otros módulos custom de AC?
 
-Este tipo de preguntas son consideradas preguntas de soporte y son maneadas a través de [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore). **Lea abajo**
+Este tipo de preguntas se consideran preguntas de soporte y se gestionan a través de nuestro [foro de soporte](https://discord.gg/gkt4y2x) de Discord.
 
-### Necesito registrarme en StackOverflow?
+### Busca entre las preguntas existentes
 
-**No ecesariamente!** Si tiene GitHub, Google o a Facebook, ya puede iniciar sesión en en [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore) (haga click em **_Log in_** en la parte superior derecha del sitio).
+Hay buenas probabilidades de que tu pregunta ya la haya hecho alguien más, así que por favor **búscala** antes de publicar un nuevo hilo.
 
-![imagen](https://user-images.githubusercontent.com/75517/101984531-45d60100-3c82-11eb-8b57-a2c15421d732.png)
+Puedes hacerlo buscando por palabras clave u ordenando por tags específicos.
 
+### Cómo hacer preguntas nuevas
 
-### Busque dentro de las preguntas existentes
+Si no encuentras la respuesta a tu problema, deberías abrir un nuevo post.
 
-Hay una alta posibilidad de que su pregunta ya haya sido hecha por alguien más. Por favor **busquela** en [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore).
+Recuerda:
 
-Por ejemplo, está obteniendo errores de MySQL? busquelos bajo el tag **[azerothcore]**
+- Añade un título descriptivo.
+  - Ejemplo **malo**: `I got DB error pls help me`.
+  - Ejemplo **bueno**: `After importing the SQL updates, I get the error "XXX"`
 
-![image](https://user-images.githubusercontent.com/75517/51131779-f0dca680-1830-11e9-8ccc-ef10ee8855a6.png)
+- Elige uno o varios tags que encajen con tu post.
 
-Oh, ya hay una pregunta! Y tiene respuesta! Abrámosla!
+- Sé lo más descriptivo posible en tu post para ayudar a los demás a ayudarte.
 
+### ¡Comparte tu conocimiento!
 
-### Como hacer preguntas nuevas
-
-¿Qué tal si no existe una pregunta relacionada con mi problema específico? **Entonces [abramos una nueva consulta](https://stackoverflow.com/questions/ask?tags=azerothcore)**.
-
-Recuerde:
-
-- Añadir un mensaje suficientemente descriptivo.
-  - **Mal** ejemplo: `I got DB error plz help me`. (`Tuve un error con la base de datos plz ayudenme`)
-  - **Buen** ejemplo: `After importing the sql updates, I get the error "XXX"` (`Luego de importar las actulizaciones de SQL, me apareció el error "XXX"`)
-
-- No olvide el tag  **[azerothcore]**!
-  - ![image](https://user-images.githubusercontent.com/75517/51132313-364da380-1832-11e9-8483-3bb6898d438a.png)
-
-- Es útil añadir **4 tags más** de acuerdo con la categoría de su pregunta (por ejemplo: `c++`, `cmake`, `docker`, `mysql`, `sql`, etc... ).
-
-- Linkee su pregunta en el canal de soporte (#support-general) del [Chat de Discord](https://discordapp.com/invite/gkt4y2x)
-
-- Lea: [stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
-
-
-### Comparta su conocimiento!
-
-¿Tiene algo para compartir con la cumunidad? ¿Cree que alguna información podría ser útil para alguien más  (o incluso para usted mismo en el futuro)? ¿Solucionó algún problema que ha tomado tiempo resolver? 
-
-Haga una pregunta en StackOverflow y luego ¡**respondala para usted mismo**! ¿Eso es permitido? ¡Sí, lo es! Lea esto:
-
-[https://stackoverflow.com/help/self-answer](https://stackoverflow.com/help/self-answer)
+Si te has encontrado con un problema y lograste resolverlo por ti mismo, ¡publica la solución para ayudar a los demás!
