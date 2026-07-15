@@ -1,6 +1,6 @@
 # scene\_template
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 **Tabla \`scene\_template\`**
 

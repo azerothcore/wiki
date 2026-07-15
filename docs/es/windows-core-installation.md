@@ -3,11 +3,11 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](es/windows-requirements) | [Paso 3: Configuración del servidor >>](es/windows-server-setup) |
+| [<< Paso 1: Requisitos](windows-requirements) | [Paso 3: Configuración del servidor >>](windows-server-setup) |
 
 ## Software necesario
 
-Consulta [Requisitos](es/windows-requirements) antes de continuar.
+Consulta [Requisitos](windows-requirements) antes de continuar.
 
 ## Descarga y compilación del código fuente
 
@@ -32,7 +32,7 @@ Haz click en **Clone**. En pocos minutos, los archivos fuente de Azerothcore se 
 
 #### Solución de problemas
 
-Si te encuentras con un error como **fatal: early EOF** o **fatal: fetch-pack: invalid index-pack output**, puedes encontrar una solución alternativa aquí: [Errores comunes ACE00105](es/common-errors#ace00105).
+Si te encuentras con un error como **fatal: early EOF** o **fatal: fetch-pack: invalid index-pack output**, puedes encontrar una solución alternativa aquí: [Errores comunes ACE00105](common-errors#ace00105).
 
 ### Configuración y generación de la solución Visual C++ con CMake
 
@@ -46,7 +46,7 @@ Antes de comenzar, crea un nuevo directorio llamado **Build**. En esta guía, us
 
 1. Haz click en **Configure**.
 
-1. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](es/windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
+1. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
 
 1. Asegúrate de que **Use default native compilers** esté marcado.
 
@@ -58,7 +58,7 @@ Antes de comenzar, crea un nuevo directorio llamado **Build**. En esta guía, us
 
 1. Haz click en **Generate**. Esto instalará los archivos de build seleccionados en tu carpeta **C:\Build**.
 
-{% include note.html content="Si te encuentras con errores en CMake, consulta [Errores comunes](es/common-errors#core-installation-errors)." %}
+{% include note.html content="Si te encuentras con errores en CMake, consulta [Errores comunes](common-errors#core-installation-errors)." %}
 
 ### Compilación del código fuente {#compiling-the-source}
 
@@ -127,12 +127,12 @@ Los archivos pdb solo existen si compilas con la configuración Debug o RelWithD
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](es/windows-requirements) | [Paso 3: Configuración del servidor >>](es/windows-server-setup) |
+| [<< Paso 1: Requisitos](windows-requirements) | [Paso 3: Configuración del servidor >>](windows-server-setup) |

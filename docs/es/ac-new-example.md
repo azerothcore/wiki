@@ -3,7 +3,7 @@
 | Guía de instalación                                                                                                                   |                                                           |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
 | Este artículo forma parte de la Guía de instalación. Puedes leerlo por separado o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |                                                           |
-| [<< Inicio: Guía de instalación](es/classic-installation)                                                                                 | [Paso 2: Instalación del Core >>](es/windows-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation)                                                                                 | [Paso 2: Instalación del Core >>](windows-core-installation) |
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
@@ -182,15 +182,15 @@ While installing OpenSSL, choose The OpenSSL binaries (/bin) directory (NOT "The
 
 Si sigues teniendo problemas, revisa:
 
-- [FAQ](es/faq)
+- [FAQ](faq)
 
-- [Errores comunes](es/common-errors)
+- [Errores comunes](common-errors)
 
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación                                                                                                                   |                                                           |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
 | Este artículo forma parte de la Guía de instalación. Puedes leerlo por separado o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |                                                           |
-| [<< Inicio: Guía de instalación](es/classic-installation)                                                                                 | [Paso 2: Instalación del Core >>](es/windows-core-installation) |
+| [<< Inicio: Guía de instalación](classic-installation)                                                                                 | [Paso 2: Instalación del Core >>](windows-core-installation) |

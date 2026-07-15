@@ -227,7 +227,7 @@ El nombre del personaje con los derechos o el poder sobre el comando .mute que d
 
 ### locale
 
-La configuración regional utilizada por el cliente conectado a esta cuenta. Si se han configurado y añadido múltiples datos de localización a los servidores mundiales, éstos devolverán al cliente las cadenas de localización adecuadas. Ver [IDs de localización](es/Localization_lang)
+La configuración regional utilizada por el cliente conectado a esta cuenta. Si se han configurado y añadido múltiples datos de localización a los servidores mundiales, éstos devolverán al cliente las cadenas de localización adecuadas. Ver [IDs de localización](Localization_lang)
 
 ### os
 

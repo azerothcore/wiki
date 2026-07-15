@@ -4,7 +4,7 @@ redirect_from: "/sai"
 
 # smart_scripts
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 La tabla `smart_scripts` tiene 31 atributos. Sirve para hacer scripts en lenguaje SQL. Lo importante es analizar siempre cuál es el evento que motiva la ejecución de una acción y, por supuesto, cuál es el objetivo. Como recomendación, puedes revisar los scripts que ya están dentro de la tabla para entender cómo funciona. La ventaja, por la que varios usan este método, es que no se requiere compilar al añadir registros; con reiniciar el servidor, si está bien programado, puedes apreciar los cambios. Otra razón es la portabilidad, pero eso depende del punto de vista del desarrollador y de la respuesta que puedas obtener.
 

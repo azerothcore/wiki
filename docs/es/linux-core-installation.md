@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](es/linux-requirements) | [Paso 3: Configuración del servidor >>](es/linux-server-setup) |
+| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Configuración del servidor >>](linux-server-setup) |
 
 ## Directorios de instalación
 
@@ -25,7 +25,7 @@ export AC_CODE_DIR=$HOME/azerothcore
 
 ## Software necesario
 
-Consulta [Requisitos](es/linux-requirements) antes de continuar.
+Consulta [Requisitos](linux-requirements) antes de continuar.
 
 ## Obtener el código fuente
 
@@ -83,7 +83,7 @@ cd build
 
 ### Configurar para compilar {#configuring-for-compiling}
 
-Explicación de los parámetros para usuarios avanzados: [Opciones de CMake](es/cmake-options).
+Explicación de los parámetros para usuarios avanzados: [Opciones de CMake](cmake-options).
 
 En este punto, debes estar en tu directorio `$AC_CODE_DIR/build`.
 
@@ -212,12 +212,12 @@ sudo journalctl ac-worldserver.service
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 1: Requisitos](es/linux-requirements) | [Paso 3: Configuración del servidor >>](es/linux-server-setup) |
+| [<< Paso 1: Requisitos](linux-requirements) | [Paso 3: Configuración del servidor >>](linux-server-setup) |

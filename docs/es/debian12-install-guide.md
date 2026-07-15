@@ -1,6 +1,6 @@
 # Guía de instalación de AzerothCore en Debian 12
 
-Esta es una guía de inicio rápido para instalar AzerothCore en un servidor Debian 12 desde tu PC con Windows. Para un tutorial más detallado, consulta la [Guía de instalación oficial de AzerothCore](es/installation).
+Esta es una guía de inicio rápido para instalar AzerothCore en un servidor Debian 12 desde tu PC con Windows. Para un tutorial más detallado, consulta la [Guía de instalación oficial de AzerothCore](installation).
 
 
 ## Tabla de contenidos
@@ -333,6 +333,6 @@ acoreupdate
 - Backups automáticos de la base de datos a Google Drive usando cron y rclone.
 
 ### Otros recursos {#other-resources}
-- [Guía de instalación oficial de AzerothCore](es/installation)
-- [Tutorial de Debian de heyaapl](es/digital-ocean-video-tutorial)
+- [Guía de instalación oficial de AzerothCore](installation)
+- [Tutorial de Debian de heyaapl](digital-ocean-video-tutorial)
 - [Video de Digital Scriptorium](https://www.youtube.com/watch?v=k4i4za1Scgg)

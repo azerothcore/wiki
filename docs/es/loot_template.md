@@ -1,6 +1,6 @@
 # loot_template
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 **Las tablas \*_loot_template**
 

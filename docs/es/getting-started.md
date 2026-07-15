@@ -4,7 +4,7 @@
 
 ¿Te gustaría aprender sobre AzerothCore (AC), configurar tu servidor de WoW por primera vez, entender cómo modificarlo y ser capaz de contribuir? ¡Has llegado al lugar correcto!
 
-Empezar con la emulación de WoW puede resultar complicado al principio, pero no te preocupes, estaremos ahí para ayudarte en caso de que encuentres algún problema o tengas alguna pregunta. Solo lee [esta página](es/How-to-ask-for-help) antes de pedir ayuda.
+Empezar con la emulación de WoW puede resultar complicado al principio, pero no te preocupes, estaremos ahí para ayudarte en caso de que encuentres algún problema o tengas alguna pregunta. Solo lee [esta página](How-to-ask-for-help) antes de pedir ayuda.
 
 Si mientras lees cualquiera de los tutoriales enlazados en esta página encuentras algo que no está claro: háznoslo saber. Haremos lo posible por reformularlo y hacerlo más fácil de entender para los principiantes. ¡Mejorar la documentación también es una forma de contribuir!
 
@@ -47,7 +47,7 @@ Básicamente, hay 3 formas principales de instalar AC:
 
 Puedes elegir una configuración, o incluso probar más de una. Puedes encontrar todas las instrucciones aquí:
 
-- [azerothcore.org/wiki/Installation](es/installation)
+- [azerothcore.org/wiki/Installation](installation)
 
 Si encuentras algún problema o duda al intentar instalar tu servidor de AC, [pídenos ayuda](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help).
 
@@ -57,10 +57,10 @@ Si encuentras algún problema o duda al intentar instalar tu servidor de AC, [p�
 
 ## Accede al juego, aprende los comandos GM
 
-Antes que nada, asegúrate de que tu cliente tenga su realmlist.wtf configurado con lo siguiente: `set realmlist localhost`. Después de esto (asumiendo que ya has configurado AzerothCore) asegúrate de tener creada una cuenta `GM` (con seguridad de 2 o superior). Si no has creado una cuenta o no estás seguro, sigue esto: [Crear cuentas](es/creating-accounts).
+Antes que nada, asegúrate de que tu cliente tenga su realmlist.wtf configurado con lo siguiente: `set realmlist localhost`. Después de esto (asumiendo que ya has configurado AzerothCore) asegúrate de tener creada una cuenta `GM` (con seguridad de 2 o superior). Si no has creado una cuenta o no estás seguro, sigue esto: [Crear cuentas](creating-accounts).
 Después de esto tu cuenta `GM` podrá usar los siguientes comandos, con un enlace a una lista de todos los comandos abajo:
 
-- [azerothcore.org/wiki/GM-Commands](es/GM-Commands)
+- [azerothcore.org/wiki/GM-Commands](GM-Commands)
 
 Toma confianza con los comandos, los necesitarás para cualquier actividad de administración, testing o desarrollo.
 
@@ -82,7 +82,7 @@ Lanzamos mejoras a AzerothCore a diario. Deberías aprender cómo actualizar tu 
 
 Por eso es **muy importante** que actualices tu servidor de AzerothCore regularmente. Te recomendamos hacerlo al menos una vez por semana. Lee esta guía:
 
-- [azerothcore.org/wiki/Update](es/update)
+- [azerothcore.org/wiki/Update](update)
 
 Después de seguir el procedimiento de actualización, es importante **verificar** que:
 
@@ -97,7 +97,7 @@ Una gran forma de empezar a contribuir es probando los PRs hechos por otros cola
 
 Este tema es tan importante que hay un tutorial dedicado a él:
 
-- [azerothcore.org/wiki/How-to-test-a-PR](es/How-to-test-a-PR)
+- [azerothcore.org/wiki/How-to-test-a-PR](How-to-test-a-PR)
 
 ![image](https://user-images.githubusercontent.com/75517/109370244-d397b480-789f-11eb-9ac7-64d98ca0d33c.png)
 
@@ -120,7 +120,7 @@ Keira3 genera automáticamente el código SQL necesario para crear o cambiar cos
 
 Necesitarás también una herramienta genérica de gestión de bases de datos para gestionar las tablas y sus contenidos.
 
-- [Herramienta de gestión de bases de datos](es/database-management-tool)
+- [Herramienta de gestión de bases de datos](database-management-tool)
 
 ![AzerothCore world database viewed with sequel-ace](https://user-images.githubusercontent.com/75517/109370368-42750d80-78a0-11eb-946c-c0831a02b52b.png)
 
@@ -128,7 +128,7 @@ Necesitarás también una herramienta genérica de gestión de bases de datos pa
 
 Lee siempre la documentación sobre cada tabla con la que trabajes:
 
-- [azerothcore.org/wiki/database-world](es/database-world)
+- [azerothcore.org/wiki/database-world](database-world)
 
 ### SmartAI
 
@@ -138,7 +138,7 @@ En pocas palabras, con SmartAI puedes hacer que una entidad (por ejemplo una Cre
 
 Por ejemplo, puedes hacer que una creature lance un hechizo (acción), cuando su salud baje por debajo del 50% de su salud total (evento), contra un miembro aleatorio del grupo (objetivo).
 
-Técnicamente, el `smart_script` es solo una tabla dentro de la base de datos world (y su documentación se puede encontrar [aquí](es/smart_scripts)). Herramientas como Keira3 te ayudan a trabajar con SmartAI usando una interfaz gráfica práctica.
+Técnicamente, el `smart_script` es solo una tabla dentro de la base de datos world (y su documentación se puede encontrar [aquí](smart_scripts)). Herramientas como Keira3 te ayudan a trabajar con SmartAI usando una interfaz gráfica práctica.
 
 Intenta abrir Keira3, busca cualquier creature que tenga "SmartAI" como "AIName", ábrela y haz click en "SmartAI" en el menú de la derecha.
 Se te presentará un editor visual que te asistirá al trabajar con SmartAI.
@@ -164,7 +164,7 @@ si entiendes cómo funcionan sentencias básicas como `SELECT`, `UPDATE`, `INSER
 
 Puedes enviar tu mejora mediante un PR. Lee esta guía:
 
-- [Cómo crear un Pull Request (PR)](es/how-to-create-a-pr)
+- [Cómo crear un Pull Request (PR)](how-to-create-a-pr)
 
 ## ¡Empieza a contribuir!
 

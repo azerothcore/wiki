@@ -1,6 +1,6 @@
 # command
 
-[<-Volver a: World](es/database-world)
+[<-Volver a: World](database-world)
 
 **Tabla `command`**
 
@@ -22,7 +22,7 @@ Contiene información de ayuda y de seguridad para los comandos. Esta tabla NO c
 
 ### name
 
-El nombre del comando. Ver: [comandos incluidos](es/gm-commands)
+El nombre del comando. Ver: [comandos incluidos](gm-commands)
 
 ### security
 

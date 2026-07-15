@@ -2,11 +2,11 @@
 
 | Guía de instalación | |
 | :- | :- |
-| [<< Paso 1: Requisitos de VSC](es/vsc-requirements) | [Paso 3: Configuración del servidor >>](es/server-setup) |
+| [<< Paso 1: Requisitos de VSC](vsc-requirements) | [Paso 3: Configuración del servidor >>](server-setup) |
 
 ## Software requerido
 
-Consulta los [Requisitos](es/requirements) antes de continuar.
+Consulta los [Requisitos](requirements) antes de continuar.
 
 ## Descargar y compilar la fuente
 
@@ -40,7 +40,7 @@ Antes de empezar, crea un nuevo directorio llamado **Build**. En esta guía usar
 
 1. Haz click en **Configure**.
 
-1. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](es/windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
+1. En el menú desplegable, elige la versión del compilador que descargaste en la sección de [Requisitos](windows-requirements). Asegúrate de elegir la versión **Win64** si trabajas en una compilación de 64 bits.
 
 1. Asegúrate de que **Use default native compilers** esté marcado.
 
@@ -137,4 +137,4 @@ Para reportar crashlogs es OBLIGATORIO compilar en modo Debug o RelWithDebInfo.
 
 | Guía de instalación | |
 | :- | :- |
-| [<< Paso 1: Requisitos de VSC](es/vsc-requirements) | [Paso 3: Configuración del servidor >>](es/server-setup) |
+| [<< Paso 1: Requisitos de VSC](vsc-requirements) | [Paso 3: Configuración del servidor >>](server-setup) |

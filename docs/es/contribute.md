@@ -12,7 +12,7 @@ Puedes contribuir de varias formas a AzerothCore:
 
 - [Probar un pull request](#how-to-test-a-pull-request)
 
-- [Probar cambios solo de base de datos](es/how-to-test-db-only-changes)
+- [Probar cambios solo de base de datos](how-to-test-db-only-changes)
 
 - [Crear un pull request](#how-to-create-a-pull-request)
 
@@ -44,12 +44,12 @@ Si **(y solo si)** el bug aún no ha sido reportado, puedes [abrir un issue](htt
 
 ## Cómo probar un Pull Request {#how-to-test-a-pull-request}
 
-- Lee [Cómo probar un PR](es/how-to-test-a-pr).
+- Lee [Cómo probar un PR](how-to-test-a-pr).
 
 ## Cómo crear un Pull Request {#how-to-create-a-pull-request}
 
-- Lee [Cómo crear un PR](es/how-to-create-a-pr).
-- Alternativamente, también puedes consultar [este tutorial más simple](es/how-to-create-a-db-pr) sobre cómo abrir pull requests que contienen código SQL a través de GitHub.
+- Lee [Cómo crear un PR](how-to-create-a-pr).
+- Alternativamente, también puedes consultar [este tutorial más simple](how-to-create-a-db-pr) sobre cómo abrir pull requests que contienen código SQL a través de GitHub.
 
 ### Dando crédito al autor del código
 

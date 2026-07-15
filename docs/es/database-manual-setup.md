@@ -8,7 +8,7 @@ redirect_from: "/Database-Manual-Setup"
 
 ### Cliente MySQL
 
-Para configurar tu base de datos, puedes usar el cliente MySQL que prefieras. Algunos ejemplos [aquí](es/Database-client).
+Para configurar tu base de datos, puedes usar el cliente MySQL que prefieras. Algunos ejemplos [aquí](Database-client).
 
 Asumiremos que ya sabes cómo realizar las tareas básicas como crear una nueva base de datos, seleccionar una base de datos e importar un archivo de volcado SQL. Si no lo sabes, no te preocupes: es muy fácil y encontrarás muchas guías en Google, sea cual sea el cliente MySQL que uses.
 

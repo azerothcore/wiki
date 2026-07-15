@@ -1,6 +1,6 @@
 # group\_instance
 
-[<-Volver a: Characters](es/database-characters)
+[<-Volver a: Characters](database-characters)
 
 **Tabla \`group\_instance\`**
 

@@ -117,7 +117,7 @@ Para separarte (detach), presiona `ctrl+p` y `ctrl+q`. **NO** intentes separarte
 Si obtienes el mensaje de error `the input device is not a TTY.  If you are using mintty, try prefixing the command with 'winpty'`
 
 Este comando adjuntará automáticamente tu terminal a la consola del worldserver.
-Ahora puedes ejecutar el comando `account create <user> <password>` para crear tu primera cuenta dentro del juego. Hay [más información en la página de Creación de cuentas](es/creating-accounts).
+Ahora puedes ejecutar el comando `account create <user> <password>` para crear tu primera cuenta dentro del juego. Hay [más información en la página de Creación de cuentas](creating-accounts).
 
 ### Acceder a la base de datos y actualizar el realmlist
 

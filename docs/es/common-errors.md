@@ -4,7 +4,7 @@ tableofcontents: 1
 
 # Errores comunes
 
-| ¿Esta página no respondió a tus dudas? Lee [Cómo pedir ayuda](es/how-to-ask-for-help) sobre cómo proceder con tu pregunta de la mejor manera. |
+| ¿Esta página no respondió a tus dudas? Lee [Cómo pedir ayuda](how-to-ask-for-help) sobre cómo proceder con tu pregunta de la mejor manera. |
 | --- |
 
 ## Errores relacionados con la base de datos
@@ -16,7 +16,7 @@ No puedo iniciar mi Auth/WorldServer, me aparece:
 [ERROR]: Table 'acore_world.table' doesn't exist
 Your database structure is not up to date. Please make sure you've executed all queries in the sql/updates folders.
 ```
-Simplemente no estás actualizado y necesitas [actualizar tu base de datos](es/database-keeping-the-server-up-to-date).
+Simplemente no estás actualizado y necesitas [actualizar tu base de datos](database-keeping-the-server-up-to-date).
 
 ---
 
@@ -41,7 +41,7 @@ No puedo iniciar mi Auth/WorldServer, me aparece:
 ```
 > Loaded 0 acore strings. DB table `acore_string` is empty.
 ```
-Esto se debe a que no has importado la base de datos en absoluto. Sigue las instrucciones de [Instalación de la base de datos](es/database-installation)
+Esto se debe a que no has importado la base de datos en absoluto. Sigue las instrucciones de [Instalación de la base de datos](database-installation)
 
 ---
 
@@ -89,7 +89,7 @@ The code execution cannot proceed because libmysql.dll was not found. Reinstalli
 
 Or similar error.
 ```
-No has copiado los archivos .dll necesarios en el directorio de los binarios. Consulta [Instalación del Core](es/core-installation).
+No has copiado los archivos .dll necesarios en el directorio de los binarios. Consulta [Instalación del Core](core-installation).
 
 ---
 
@@ -131,7 +131,7 @@ Me aparece un error cuando inicia el WorldServer:
 ```
 Used MySQL library version (8.0.19 id 80019) does not match the version id used to compile AzerothCore (id 80024)
 ```
-Necesitas usar exactamente la misma versión de libmysql.dll que la versión que usaste para compilar tu código fuente. La obtienes de **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** o siguiendo la [guía de instalación](es/windows-core-installation#compiling-the-source).
+Necesitas usar exactamente la misma versión de libmysql.dll que la versión que usaste para compilar tu código fuente. La obtienes de **C:\Program Files\MySQL\MySQL Server 8.x\lib\\** o siguiendo la [guía de instalación](windows-core-installation#compiling-the-source).
 
 Esto se debe a que has actualizado tu servidor MySQL pero no has recompilado ni añadido el nuevo archivo libmysql.dll.
 
@@ -331,7 +331,7 @@ Si obtienes un error de que *CMake could NOT find OpenSSL*
 
         - Especifica la ruta a git.exe, p. ej. `C:/Program Files/Git/cmd/git.exe`
 
-    - Si no tienes git.exe, necesitas instalar git. Consulta [requisitos](es/requirements)
+    - Si no tienes git.exe, necesitas instalar git. Consulta [requisitos](requirements)
 
 ---
 
@@ -347,5 +347,5 @@ Si obtienes un error de que *CMake could NOT find OpenSSL*
 
 ---
 
-| ¿Esta página no respondió a tus dudas? Lee [Cómo pedir ayuda](es/how-to-ask-for-help) sobre cómo proceder con tu pregunta de la mejor manera. |
+| ¿Esta página no respondió a tus dudas? Lee [Cómo pedir ayuda](how-to-ask-for-help) sobre cómo proceder con tu pregunta de la mejor manera. |
 | --- |

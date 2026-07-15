@@ -3,7 +3,7 @@
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 3: Configuración del servidor](es/server-setup) | [Paso 5: Red >>](es/networking) |
+| [<< Paso 3: Configuración del servidor](server-setup) | [Paso 5: Red >>](networking) |
 
 ## Crear la base de datos en MySQL
 
@@ -20,7 +20,7 @@ https://github.com/azerothcore/azerothcore-wotlk/blob/master/data/sql/create/cre
 
 ## Cargar datos en la base de datos
 
-Si quieres saber cómo funciona el directorio SQL o planeas hacer cambios personalizados, te recomendamos leer [esto](es/sql-directory).
+Si quieres saber cómo funciona el directorio SQL o planeas hacer cambios personalizados, te recomendamos leer [esto](sql-directory).
 
 #### Actualizador automático de la base de datos
 
@@ -42,12 +42,12 @@ Do you want to create it? [yes (default) / no]:
 
 Si sigues teniendo problemas, comprueba:
 
-- [Preguntas frecuentes](es/faq)
-- [Errores comunes](es/common-errors)
-- [Cómo pedir ayuda](es/how-to-ask-for-help)
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
 - [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 3: Configuración del servidor](es/server-setup) | [Paso 5: Red >>](es/networking) |
+| [<< Paso 3: Configuración del servidor](server-setup) | [Paso 5: Red >>](networking) |

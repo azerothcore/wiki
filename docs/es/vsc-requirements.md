@@ -2,7 +2,7 @@
 
 | Guía de instalación | |
 | :- | :- |
-| [<< Inicio: Guía de instalación](es/installation) | [Paso 2: Instalación del Core con VSC >>](es/windows-vsc-core-installation) |
+| [<< Inicio: Guía de instalación](installation) | [Paso 2: Instalación del Core con VSC >>](windows-vsc-core-installation) |
 
 | |
 | :- |
@@ -59,7 +59,7 @@
        *Si necesitas soporte de 32 bits, descarga e instala el [Microsoft Visual C++ 2008 Redistributable Package (x86)](http://www.microsoft.com/en-us/download/details.aspx?id=15336).*
        
     1. *Nota #2: Al instalar OpenSSL, elige el directorio de binarios de OpenSSL (/bin) (NO "The Windows system directory")*
-       *cuando se te dé a elegir dónde copiar las DLLs de OpenSSL. Estas DLLs deberán poder localizarse fácilmente para la [Instalación del Core](es/windows-core-installation).*
+       *cuando se te dé a elegir dónde copiar las DLLs de OpenSSL. Estas DLLs deberán poder localizarse fácilmente para la [Instalación del Core](windows-core-installation).*
 
 1. [Boost](https://www.boost.org/).
 
