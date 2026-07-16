@@ -14,7 +14,17 @@
 | [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 | [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
-#### Ubuntu con MySQL 8.x
+#### Ubuntu 26.04 con MySQL
+
+```sh
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+```
+
+Recuerda que si usas el usuario `root`, no es necesario usar `sudo`.
+
+---
+
+#### Ubuntu 24.04 con MySQL 8.x
 
 ```sh
 sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev

@@ -31,7 +31,7 @@ El primer paso es siempre instalar un servidor de WoW local en tu propia máquin
 Déjame dejar clara una cosa: **TODOS los sistemas operativos son compatibles con AzerothCore**.
 Así que puedes instalar AzerothCore con éxito en GNU/Linux, macOS o Windows sin ningún problema.
 
-Sin embargo, puedo decirte que si usas una distribución de Linux como **Ubuntu 20.04**, el proceso va a ser más fácil. Si quieres instalar Ubuntu, puedes descargarlo [aquí](https://ubuntu.com/download/desktop) y puedes encontrar muchos tutoriales online sobre cómo hacerlo. Hay un buen tutorial sobre cómo ejecutar WoW en Linux [aquí](https://www.mangosrumors.org/how-to-run-wow-on-linux/).
+Sin embargo, puedo decirte que si usas una distribución de Linux como **Ubuntu 26.04**, el proceso va a ser más fácil. Si quieres instalar Ubuntu, puedes descargarlo [aquí](https://ubuntu.com/download/desktop) y puedes encontrar muchos tutoriales online sobre cómo hacerlo. Hay un buen tutorial sobre cómo ejecutar WoW en Linux [aquí](https://www.mangosrumors.org/how-to-run-wow-on-linux/).
 
 ¿Te gustaría quedarte con **Windows** o **macOS**? Está absolutamente bien.
 
