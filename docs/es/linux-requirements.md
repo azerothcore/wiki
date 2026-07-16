@@ -14,15 +14,27 @@
 | [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 | [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
-#### Ubuntu con MySQL 8.x
+#### Ubuntu 26.04
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
 Recuerda que si usas el usuario `root`, no es necesario usar `sudo`.
 
-Para configurar MySQL en Ubuntu y similares (establecer la contraseña de `root` y otros ajustes), lee [esta guía](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
+Ubuntu 26.04 ya ofrece paquetes de MySQL compatibles en los repositorios por defecto, así que el comando anterior es suficiente.
+
+---
+
+#### Ubuntu 24.04
+
+```sh
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
+```
+
+Recuerda que si usas el usuario `root`, no es necesario usar `sudo`.
+
+Ubuntu 24.04 no incluye la versión recomendada de MySQL en sus repositorios por defecto. Después de instalar los paquetes base anteriores, sigue los pasos de **Instalar MySQL** que aparecen más abajo para instalar MySQL 8.4 LTS.
 
 ---
 
