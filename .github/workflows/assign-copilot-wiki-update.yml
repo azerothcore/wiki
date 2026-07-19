@@ -1,0 +1,80 @@
+name: Assign Copilot to Wiki Update issues
+
+# Automatically assigns the GitHub Copilot coding agent to issues opened by the
+# "Requires WIKI Update" workflow (titled "Wiki Update Needed: ..."). Copilot then
+# reads the linked azerothcore-wotlk PR, drafts the wiki changes, and opens a PR.
+#
+# NOTE: this only kicks off the agent. Merging is left to a human on purpose.
+#
+# Requirements:
+#   - The Copilot coding agent must be enabled for the org/repo. If it is not,
+#     "copilot-swe-agent" will not appear in suggestedActors and the job exits early.
+#   - The default GITHUB_TOKEN can assign the agent. If assignment does not reliably
+#     trigger a run, swap in a PAT / GitHub App token via secrets.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign-copilot:
+    # Case-insensitive match: the generator uses "Wiki Update Needed:" but some
+    # existing issues use "Wiki Update needed:". Match either.
+    if: startsWith(github.event.issue.title, 'Wiki Update')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign the Copilot coding agent
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          NAME: ${{ github.event.repository.name }}
+          ISSUE_ID: ${{ github.event.issue.node_id }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+
+          # Guard against title variants without hard-failing the run.
+          title="${{ github.event.issue.title }}"
+          shopt -s nocasematch
+          if [[ "$title" != "Wiki Update Needed"* ]]; then
+            echo "Title '$title' does not look like a wiki-update issue. Skipping."
+            exit 0
+          fi
+          shopt -u nocasematch
+
+          # Resolve the Copilot bot's actor ID (must advertise CAN_BE_ASSIGNED).
+          echo "Resolving copilot-swe-agent actor id..."
+          BOT_ID=$(gh api graphql -f query='
+            query($owner:String!,$name:String!){
+              repository(owner:$owner,name:$name){
+                suggestedActors(capabilities:[CAN_BE_ASSIGNED], first:100){
+                  nodes {
+                    login
+                    __typename
+                    ... on Bot  { id }
+                    ... on User { id }
+                  }
+                }
+              }
+            }' -F owner="$OWNER" -F name="$NAME" \
+            --jq '.data.repository.suggestedActors.nodes[]
+                  | select(.login=="copilot-swe-agent") | .id')
+
+          if [[ -z "${BOT_ID:-}" ]]; then
+            echo "::warning::Copilot coding agent is not available as an assignee on $OWNER/$NAME."
+            echo "Enable Copilot coding agent for this repo/org, then re-run."
+            exit 0
+          fi
+
+          echo "Assigning Copilot to issue #$ISSUE_NUMBER..."
+          gh api graphql -f query='
+            mutation($assignableId:ID!,$actorIds:[ID!]!){
+              replaceActorsForAssignable(input:{assignableId:$assignableId, actorIds:$actorIds}){
+                assignable { ... on Issue { number } }
+              }
+            }' -F assignableId="$ISSUE_ID" -F actorIds="$BOT_ID"
+
+          echo "Done. Copilot will open a PR shortly."
