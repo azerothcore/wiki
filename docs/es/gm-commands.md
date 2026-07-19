@@ -18,6 +18,10 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | account 2fa remove | 0 | `.account 2fa remove` | Elimina la autenticación 2fa. |
 | account create | 4 | `.account create $account $password [$email]` | Crea una cuenta y le establece una contraseña, con el email como valor opcional. |
 | account delete | 4 | `.account delete $account` | Elimina la cuenta con todos los personajes. |
+| account flag | 2 | `.account flag $subcommand` | Escribe .account flag para ver la lista de posibles subcomandos o .help account flag $subcommand para ver información sobre los subcomandos. |
+| account flag list | 2 | `.account flag list [$account]` | Lista todos los AccountFlag actualmente establecidos en $account. Por defecto muestra tu propia cuenta si no se proporciona ningún argumento. |
+| account flag add | 3 | `.account flag add $account $flag` | Establece un AccountFlag en $account. $flag es un nombre simbólico en su forma completa (p. ej. ACCOUNT_FLAG_TRIAL) o forma corta (p. ej. TRIAL). ACCOUNT_FLAG_GM se gestiona automáticamente y no puede modificarse manualmente. |
+| account flag remove | 3 | `.account flag remove $account $flag` | Elimina un AccountFlag de $account. $flag es un nombre simbólico en su forma completa (p. ej. ACCOUNT_FLAG_TRIAL) o forma corta (p. ej. TRIAL). ACCOUNT_FLAG_GM se gestiona automáticamente y no puede modificarse manualmente. |
 | account lock country | 0 | `.account lock country [on/off]` | Permite el login a la cuenta solo desde el país usado actualmente o elimina este requisito. |
 | account lock ip | 0 | `.account lock ip [on/off]` | Permite el login a la cuenta solo desde la IP usada actualmente o elimina este requisito. |
 | account lock | 0 | `.account lock [on/off]` | Permite el login a la cuenta solo desde la IP usada actualmente o elimina este requisito. |
