@@ -624,6 +624,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | server set difftime | 4 | `.server set difftime $time` | Cada $time (en milisegundos) se escribe el update time diff en el archivo de log. |
 | server set loglevel | 4 | `.server set loglevel $facility $name $loglevel` | $facility puede tomar los valores: appender (a) o logger (l). $loglevel puede tomar los valores: disabled (0), trace (1), debug (2), info (3), warn (4), error (5) o fatal (6). |
 | server set motd | 3 | `.server set motd Optional($realmId) $MOTD` | Establece el Mensaje del día del servidor para el $realmId especificado. Si no se proporciona $realmId, se actualizará para el realm actual. Usa $realmId -1 para establecer el motd para todos los realms. |
+| server set security | 4 | `.server set security $level` | Establece el nivel de seguridad de cuenta mínimo (0 = jugador, 1 = moderador, 2 = gamemaster, 3 = administrador) permitido para iniciar sesión en el realm actual. Actualiza realmlist.allowedSecurityLevel y se aplica de inmediato. |
 | server shutdown cancel | 3 | `.server shutdown cancel` | Cancela el temporizador de reinicio/apagado, si lo hay. |
 | server shutdown | 3 | `.server shutdown #delay [#exit_code]` | Apaga el servidor tras #delay segundos. Usa #exit_code para cambiar el código de salida, por defecto = 0. |
 | server togglequerylog | 4 | `.server togglequerylog` | Alterna el log de consultas SQL on/off. |
