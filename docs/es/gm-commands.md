@@ -257,6 +257,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | gobject | 2 | `.gobject $subcommand` | Escribe .gobject para ver la lista de posibles subcomandos o .help gobject $subcommand para ver información sobre los subcomandos. |
 | gps | 1 | `.gps [$name\$shift-link]` | Muestra la información de posición de un personaje o creature seleccionado (también si se proporciona el nombre de jugador $name, para el jugador nombrado, o si se proporciona un shift-link de creature/gameobject, para la creature/gameobject señalado si está cargado). La información de posición incluye X, Y, Z y orientación, map Id y zone Id. |
 | group disband | 2 | `.group disband [$characterName]` | Disuelve el grupo del personaje dado. |
+| group invites | 2 | `.group invites [on/off]` | Activa/desactiva la aceptación de invitaciones de grupo. Si no se proporciona ningún argumento, muestra el estado de aceptación actual. |
 | group join | 2 | `.group join $AnyCharacterNameFromGroup [$CharacterName]` | Añade al grupo del jugador $AnyCharacterNameFromGroup al jugador $CharacterName (o al seleccionado). |
 | group leader | 2 | `.group leader [$characterName]` | Establece al personaje dado como líder de su grupo. |
 | group list | 2 | `.group list [$CharacterName]` | Lista todos los miembros del grupo/party en el que está el jugador. |
