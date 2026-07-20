@@ -47,7 +47,7 @@ Each phase runs in a fresh, focused session, which gives you better output and c
 
 Everything on this page is agent-agnostic.
 
-Most of our devs use CLI tools such as **Claude Code**, but there are also cheaper alternatives featuring open-source models such as [Kimi Code](https://www.kimi.com/code), [**OpenCode**](https://opencode.ai/) and others.
+Most of our devs use CLI tools such as **Claude Code**, but there are also cheaper alternatives featuring open-source models such as [**Kimi Code**](https://www.kimi.com/code), [OpenCode](https://opencode.ai/) and others.
 
 ## The agent-toolkit
 
