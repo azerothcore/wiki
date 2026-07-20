@@ -180,7 +180,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | debug spawnvehicle | 3 | `.debug spawnvehicle #entry [#vehicleid]` | Spawnea un vehículo con la creature template #entry y el #vehicleid opcional. |
 | debug threat | 3 | `.debug threat` | Devuelve la lista de amenaza de una creature dada. |
 | debug unitstate | 3 | `.debug unitstate [#unitstate]` | Establece #unitstate para la unidad seleccionada. Si no se especifica ningún parámetro, muestra el unit state y el react state de la unidad. |
-| debug update | 3 | `.debug update #index #value` | Establece el valor entero sin signo de 32 bits del objetivo en el índice dado al valor dado. |
+| debug update | 3 | `.debug update #index [#value]` | Lee o escribe el campo de actualización bruto de 32 bits en #index de la unidad seleccionada. Sin #value, muestra el valor actual; con #value, lo establece. Escribir un valor no válido puede bloquear el servidor. Los #index válidos son los enums \*\_FIELD en src/server/game/Entities/Object/Updates/UpdateFields.h (UNIT\_FIELD\_\* para criaturas, PLAYER\_FIELD\_\* para jugadores). |
 | debug uws | 3 | `.debug uws #worldstate #value` | Envía la actualización de world state para #worldstate y #value al jugador actual. |
 | debug visibilitydata | 3 | `.debug visibilitydata` | Muestra información de depuración relacionada con la visibilidad de objetos alrededor del jugador. |
 | debug zonestats | 1 | `.debug zonestats [$playerName]` | Muestra la cantidad de jugadores en la zona actual del jugador. |
