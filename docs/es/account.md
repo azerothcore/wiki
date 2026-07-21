@@ -178,7 +178,7 @@ Entero 0, 1 o 2 que controla si el cliente conectado a la cuenta tiene alguna ot
 | --------------------------------- | -------------------------------------------- | ------------ |
 | ACCOUNT_FLAG_GM                   | La cuenta es GM                              | 1            |
 | ACCOUNT_FLAG_NOKICK               | No se desconectará mientras esté AFK         | 2            |
-| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                          | 4            |
+| ACCOUNT_FLAG_COLLECTOR            | Edición de coleccionista (otorga un vale de regalo inicial al crear un personaje) | 4            |
 | ACCOUNT_FLAG_TRIAL                | Cuenta de prueba                             | 8            |
 | ACCOUNT_FLAG_CANCELLED            | Desconocido                                  | 16           |
 | ACCOUNT_FLAG_IGR                  | Internet Game Room (¿cibercafé?)             | 32           |
