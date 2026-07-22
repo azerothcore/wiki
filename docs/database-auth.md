@@ -22,6 +22,7 @@
 
 - [module_rbac_permissions](module_rbac_permissions)
 - [motd](motd)
+- [motd_localized](motd_localized)
 
 ## R
 - [rbac_account_permissions](rbac_account_permissions)

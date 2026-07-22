@@ -18,6 +18,7 @@ Comes from sniffs.
 | [Floor][6]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [Priority][7]       | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [Flags][8]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [VerifiedBuild][9]  | INT  |            |     | YES  | NULL    |       |         |
 
 [1]: #questid
 [2]: #id
@@ -27,6 +28,7 @@ Comes from sniffs.
 [6]: #floor
 [7]: #priority
 [8]: #flags
+[9]: #verifiedbuild
 
 **Description of the fields**
 
@@ -48,7 +50,7 @@ The Map id from [Map.dbc](map)
 
 ### WorldMapAreaId
 
-The ID from [WorldMapArea.dbc](worldmaparea).
+The ID from [WorldMapArea.dbc](https://wowdev.wiki/DB/WorldMapArea).
 
 ### Floor
 
@@ -61,3 +63,7 @@ This is the ID from [AreaTable.dbc](areatable) of the POI.
 ### Flags
 
 `field-no-description|8`
+
+### VerifiedBuild
+
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.

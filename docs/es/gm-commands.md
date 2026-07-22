@@ -18,6 +18,10 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | account 2fa remove | 0 | `.account 2fa remove` | Elimina la autenticación 2fa. |
 | account create | 4 | `.account create $account $password [$email]` | Crea una cuenta y le establece una contraseña, con el email como valor opcional. |
 | account delete | 4 | `.account delete $account` | Elimina la cuenta con todos los personajes. |
+| account flag | 2 | `.account flag $subcommand` | Escribe .account flag para ver la lista de posibles subcomandos o .help account flag $subcommand para ver información sobre los subcomandos. |
+| account flag list | 2 | `.account flag list [$account]` | Lista todos los AccountFlag actualmente establecidos en $account. Por defecto muestra tu propia cuenta si no se proporciona ningún argumento. |
+| account flag add | 3 | `.account flag add $account $flag` | Establece un AccountFlag en $account. $flag es un nombre simbólico en su forma completa (p. ej. ACCOUNT_FLAG_TRIAL) o forma corta (p. ej. TRIAL). ACCOUNT_FLAG_GM se gestiona automáticamente y no puede modificarse manualmente. |
+| account flag remove | 3 | `.account flag remove $account $flag` | Elimina un AccountFlag de $account. $flag es un nombre simbólico en su forma completa (p. ej. ACCOUNT_FLAG_TRIAL) o forma corta (p. ej. TRIAL). ACCOUNT_FLAG_GM se gestiona automáticamente y no puede modificarse manualmente. |
 | account lock country | 0 | `.account lock country [on/off]` | Permite el login a la cuenta solo desde el país usado actualmente o elimina este requisito. |
 | account lock ip | 0 | `.account lock ip [on/off]` | Permite el login a la cuenta solo desde la IP usada actualmente o elimina este requisito. |
 | account lock | 0 | `.account lock [on/off]` | Permite el login a la cuenta solo desde la IP usada actualmente o elimina este requisito. |
@@ -176,7 +180,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | debug spawnvehicle | 3 | `.debug spawnvehicle #entry [#vehicleid]` | Spawnea un vehículo con la creature template #entry y el #vehicleid opcional. |
 | debug threat | 3 | `.debug threat` | Devuelve la lista de amenaza de una creature dada. |
 | debug unitstate | 3 | `.debug unitstate [#unitstate]` | Establece #unitstate para la unidad seleccionada. Si no se especifica ningún parámetro, muestra el unit state y el react state de la unidad. |
-| debug update | 3 | `.debug update #index #value` | Establece el valor entero sin signo de 32 bits del objetivo en el índice dado al valor dado. |
+| debug update | 3 | `.debug update #index [#value]` | Lee o escribe el campo de actualización bruto de 32 bits en #index de la unidad seleccionada. Sin #value, muestra el valor actual; con #value, lo establece. Escribir un valor no válido puede bloquear el servidor. Los #index válidos son los enums \*\_FIELD en src/server/game/Entities/Object/Updates/UpdateFields.h (UNIT\_FIELD\_\* para criaturas, PLAYER\_FIELD\_\* para jugadores). |
 | debug uws | 3 | `.debug uws #worldstate #value` | Envía la actualización de world state para #worldstate y #value al jugador actual. |
 | debug visibilitydata | 3 | `.debug visibilitydata` | Muestra información de depuración relacionada con la visibilidad de objetos alrededor del jugador. |
 | debug zonestats | 1 | `.debug zonestats [$playerName]` | Muestra la cantidad de jugadores en la zona actual del jugador. |
@@ -257,6 +261,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | gobject | 2 | `.gobject $subcommand` | Escribe .gobject para ver la lista de posibles subcomandos o .help gobject $subcommand para ver información sobre los subcomandos. |
 | gps | 1 | `.gps [$name\$shift-link]` | Muestra la información de posición de un personaje o creature seleccionado (también si se proporciona el nombre de jugador $name, para el jugador nombrado, o si se proporciona un shift-link de creature/gameobject, para la creature/gameobject señalado si está cargado). La información de posición incluye X, Y, Z y orientación, map Id y zone Id. |
 | group disband | 2 | `.group disband [$characterName]` | Disuelve el grupo del personaje dado. |
+| group invites | 2 | `.group invites [on/off]` | Activa/desactiva la aceptación de invitaciones de grupo. Si no se proporciona ningún argumento, muestra el estado de aceptación actual. |
 | group join | 2 | `.group join $AnyCharacterNameFromGroup [$CharacterName]` | Añade al grupo del jugador $AnyCharacterNameFromGroup al jugador $CharacterName (o al seleccionado). |
 | group leader | 2 | `.group leader [$characterName]` | Establece al personaje dado como líder de su grupo. |
 | group list | 2 | `.group list [$CharacterName]` | Lista todos los miembros del grupo/party en el que está el jugador. |
@@ -623,6 +628,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | server set difftime | 4 | `.server set difftime $time` | Cada $time (en milisegundos) se escribe el update time diff en el archivo de log. |
 | server set loglevel | 4 | `.server set loglevel $facility $name $loglevel` | $facility puede tomar los valores: appender (a) o logger (l). $loglevel puede tomar los valores: disabled (0), trace (1), debug (2), info (3), warn (4), error (5) o fatal (6). |
 | server set motd | 3 | `.server set motd Optional($realmId) $MOTD` | Establece el Mensaje del día del servidor para el $realmId especificado. Si no se proporciona $realmId, se actualizará para el realm actual. Usa $realmId -1 para establecer el motd para todos los realms. |
+| server set security | 4 | `.server set security $level` | Establece el nivel de seguridad de cuenta mínimo (0 = jugador, 1 = moderador, 2 = gamemaster, 3 = administrador) permitido para iniciar sesión en el realm actual. Actualiza realmlist.allowedSecurityLevel y se aplica de inmediato. |
 | server shutdown cancel | 3 | `.server shutdown cancel` | Cancela el temporizador de reinicio/apagado, si lo hay. |
 | server shutdown | 3 | `.server shutdown #delay [#exit_code]` | Apaga el servidor tras #delay segundos. Usa #exit_code para cambiar el código de salida, por defecto = 0. |
 | server togglequerylog | 4 | `.server togglequerylog` | Alterna el log de consultas SQL on/off. |

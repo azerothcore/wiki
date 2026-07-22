@@ -245,7 +245,7 @@ This information is retrieved from DBCStructure.h.
 
 #### OWN\_RANK = 44
 
-- This rank is **NOT** the index from [CharTitles.dbc](chartitles)
+- This rank is **NOT** the index from [CharTitles.dbc](https://wowdev.wiki/DB/CharTitles)
 
 | Column | Field | Type    |
 | ------ | ----- | ------- |
@@ -328,13 +328,13 @@ This information is retrieved from DBCStructure.h.
 | 4      | unused         | Integer |                            |
 | 5      | count          | Integer |                            |
 | 6      | flag           | Integer | 3 for battleground healing |
-| 7      | [Map](Map.dbc) | iRefID  |                            |
+| 7      | [Map](map) | iRefID  |                            |
 
 #### EQUIP\_ITEM = 57
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
-| 4      | [Item](item) | iRefID  |
+| 4      | [Item](item_template) | iRefID  |
 | 5      | itemCount    | Integer |
 
 #### MONEY\_FROM\_QUEST\_REWARD= 62

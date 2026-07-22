@@ -17,7 +17,7 @@ This table is used to apply a specific spell aura to the player within an area i
 | [aura_spell][5]         | MEDIUMINT | SIGNED     | PRI | NO   |         |       |         |
 | [racemask][6]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [gender][7]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [flags][8]              | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [autocast][8]           | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [quest_start_status][9] | INT       | UNSIGNED   |     | NO   |         |       |         |
 | [quest_end_status][10]  | INT       | UNSIGNED   |     | NO   |         |       |         |
 
@@ -28,7 +28,7 @@ This table is used to apply a specific spell aura to the player within an area i
 [5]: #aura_spell
 [6]: #racemask
 [7]: #gender
-[8]: #flags
+[8]: #autocast
 [9]: #quest_start_status
 [10]: #quest_end_status
 
@@ -72,7 +72,7 @@ This ID is automatically called from [ChrRaces.dbc](chrraces). The bitmask is e
 
 The gender type this entry applies to. 0 = Male, 1 = Female, 2 = Any.
 
-### flags
+### autocast
 
 | Flag | Value | Name                          | Comment                                                                                                                   |
 | ---- | ----- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- |

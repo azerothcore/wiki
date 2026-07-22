@@ -11,6 +11,7 @@
 | [containerGUID][1]      | INT     | UNSIGNED   |     | NO   |         |       |         |
 | [itemid][2]             | INT     | UNSIGNED   |     | NO   |         |       |         |
 | [count][3]              | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [item_index][13]        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [randomPropertyId][4]   | INT     | SIGNED     |     | NO   |         |       |         |
 | [randomSuffix][5]       | INT     | UNSIGNED   |     | NO   |         |       |         |
 | [follow_loot_rules][6]  | TINYINT | UNSIGNED   |     | NO   |         |       |         |
@@ -33,6 +34,7 @@
 [10]: #isunderthreshold
 [11]: #needsquest
 [12]: #conditionlootid
+[13]: #item_index
 
 **Description of the fields**
 
@@ -47,6 +49,10 @@
 ### count
 
 `field-no-description|3`
+
+### item_index
+
+Index used to distinguish multiple stored stacks of the same item within the same container.
 
 ### randomPropertyId
 

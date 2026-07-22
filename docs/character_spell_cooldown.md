@@ -12,6 +12,7 @@ Holds the remaining cooldowns from either character spells or item spells for ea
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
 | [guid][1]     | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
 | [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier                   |
+| [category][6] | INT       | UNSIGNED   |     | YES  | 0       |       | Spell category                     |
 | [item][3]     | INT       | UNSIGNED   |     | NO   | 0       |       | Item Identifier                    |
 | [time][4]     | INT       | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [needSend][5] | INT       | UNSIGNED   |     | NO   | 1       |       |                                    |
@@ -21,6 +22,7 @@ Holds the remaining cooldowns from either character spells or item spells for ea
 [3]: #item
 [4]: #time
 [5]: #needsend
+[6]: #category
 
 **Description of the fields**
 
@@ -31,6 +33,10 @@ The character guid. See [characters.guid](characters#guid).
 ### spell
 
 The spell ID. See [Spell.dbc](spell) column 1.
+
+### category
+
+Spell category the cooldown belongs to (category cooldowns are shared by all spells of the same category). `0` if the spell has no category.
 
 ### item
 

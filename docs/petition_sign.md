@@ -12,6 +12,7 @@ This table holds information on all the signatures of a petition for either a gu
 | ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ownerguid][1]      | INT     | UNSIGNED   |     | NO   |         |       |         |
 | [petitionguid][2]   | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [petition_id][6]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [playerguid][3]     | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [player_account][4] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [type][5]           | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
@@ -21,6 +22,7 @@ This table holds information on all the signatures of a petition for either a gu
 [3]: #playerguid
 [4]: #playeraccount
 [5]: #type
+[6]: #petition_id
 
 **Description of the fields**
 
@@ -31,6 +33,10 @@ The GUID of the owner that is trying to make the guild/arena team. See [characte
 ### petitionguid
 
 The GUID of the charter item. See [item\_template.guid](item_template#guid).
+
+### petition_id
+
+Sequential identifier of the petition being signed. Matches [petition.petition_id](petition#petition_id).
 
 ### playerguid
 

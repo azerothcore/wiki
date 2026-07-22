@@ -13,7 +13,7 @@ Note: Entries in this table will be deleted automatically when the referenced en
 | Field                            | Type | Attributes | Key | Null | Default | Extra          | Comment |
 | -------------------------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
 | [id](#id)                        | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templatetID](#templateid)       | INT  | UNSIGNED   |     | NO   |         |                |         |
+| [templateID](#templateid)        | INT  | UNSIGNED   |     | NO   |         |                |         |
 | [conditionType](#conditiontype)  | ENUM |            |     | NO   |         |                |         |
 | [conditionValue](#conditiontype) | INT  | UNSIGNED   |     | NO   |         |                |         |
 | [conditionState](#conditiontype) | INT  | UNSIGNED   |     | NO   | 0       |                |         |

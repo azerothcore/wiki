@@ -257,7 +257,7 @@ if **value &lt; 0** then (**-value**) is quest sort id: (in general profession o
 
 ### QuestInfoID
 
-These values are ID taken from [QuestInfo.dbc](questinfo)
+These values are ID taken from [QuestInfo.dbc](https://wowdev.wiki/DB/QuestInfo)
 
 | Value | Result       |
 | ----- | ------------ |

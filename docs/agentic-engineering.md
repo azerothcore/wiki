@@ -45,7 +45,9 @@ Each phase runs in a fresh, focused session, which gives you better output and c
 
 ## Pick your agent
 
-Everything on this page is agent-agnostic. Most of our devs use CLI tools such as **Claude Code**; alternatives include [**OpenCode**](https://opencode.ai/) and similar tools that include free models, if a paid subscription isn't an option. If you prefer working inside your editor, VS Code or other IDE extensions work as well.
+Everything on this page is agent-agnostic.
+
+Most of our devs use CLI tools such as **Claude Code**, but there are also cheaper alternatives featuring open-source models such as [**Kimi Code**](https://www.kimi.com/code), [OpenCode](https://opencode.ai/) and others.
 
 ## The agent-toolkit
 

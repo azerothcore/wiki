@@ -84,7 +84,7 @@ When enabled, the creature follows a smooth catmullrom spline curve through wayp
 
 ### action
 
-ID of the action to be performed. See [waypoint\_scripts.id](waypoint_scripts).
+ID of the action to be performed. See [waypoint\_scripts.id](scripts#id).
 
 ### action\_chance
 

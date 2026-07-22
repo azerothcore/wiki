@@ -29,7 +29,7 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 | SoundEntriesId                           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | EmotesID                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | Flags                                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
+| VerifiedBuild                            | SMALLINT |            |     | YES  | 0       |       |         |
 
 ### Description of the fields
 
@@ -77,7 +77,7 @@ An emote.
 
  
 
-#### WDBVerified
+#### VerifiedBuild
 
 This field was used to determine whether a template has been verified from WDB files (ADB files for this one).
 

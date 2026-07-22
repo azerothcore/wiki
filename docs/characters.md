@@ -88,6 +88,8 @@ This table holds vital static information for each character. It is used to crea
 | [deleteInfos_Account][76]  | INT         | UNSIGNED   |     | YES  |                   |        |                          |
 | [deleteInfos_Name][77]     | VARCHAR(12) | SIGNED     |     | YES  |                   |        |                          |
 | [deleteDate][78]           | INT         | UNSIGNED   |     | YES  |                   |        |                          |
+| [innTriggerId][79]         | INT         | UNSIGNED   |     | NO   |                   |        |                          |
+| [extraBonusTalentCount][80] | INT        |            |     | NO   | 0                 |        |                          |
   
 [1]: #guid
 [2]: #account
@@ -167,6 +169,8 @@ This table holds vital static information for each character. It is used to crea
 [76]: #deleteinfosaccount
 [77]: #deleteinfosname
 [78]: #deletedate
+[79]: #inntriggerid
+[80]: #extrabonustalentcount
 
 **Description of the fields**
 
@@ -421,7 +425,7 @@ Time when a character can be resurrected in case of a server crash or client exi
 
 ### taxi\_path
 
-Stores the players current taxi path ([TaxiPath.dbc](taxipath)) if logged off while on one.
+Stores the players current taxi path ([TaxiPath.dbc](https://wowdev.wiki/DB/TaxiPath)) if logged off while on one.
 
 ### arenaPoints
 
@@ -453,11 +457,11 @@ The amount of players this character killed yesterday.
 
 ### chosenTitle
 
-Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](chartitles)).
+Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](https://wowdev.wiki/DB/CharTitles)).
 
 ### knownCurrencies
 
-Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](currencytypes).
+Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](https://wowdev.wiki/DB/CurrencyTypes).
 
 ### watchedFaction
 
@@ -516,7 +520,7 @@ Character's equipment and bag cache.
 
 ### knownTitles
 
-Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](chartitles), take Archmage title for example:
+Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](https://wowdev.wiki/DB/CharTitles), take Archmage title for example:
 
 | TitleID | UnkRef? | MaleTitle   | FemaleTitle | InGameOrder |
 | ------- | ------- | ----------- | ----------- | ----------- |
@@ -573,3 +577,11 @@ Stores the name of character if the character is deleted and CharDelete.Method i
 ### deleteDate
 
 Stores the date when the character was deleted and CharDelete.Method in worldserver.conf.dist is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
+
+### innTriggerId
+
+The area trigger id of the inn where the character is currently bound to rest (set when resting at an inn). `0` if not resting at an inn.
+
+### extraBonusTalentCount
+
+Number of extra talent points granted to the character beyond those earned from levelling.

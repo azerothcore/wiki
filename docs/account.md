@@ -154,7 +154,7 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | --------------------------------- | ------------------------------------- | ---------- |
 | ACCOUNT_FLAG_GM                   | Account is GM                         | 1          |
 | ACCOUNT_FLAG_NOKICK               | Will not be logged out while AFK      | 2          |
-| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                   | 4          |
+| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition (grants a starter gift voucher when creating a character) | 4          |
 | ACCOUNT_FLAG_TRIAL                | Trial account                         | 8          |
 | ACCOUNT_FLAG_CANCELLED            | UNK                                   | 16         |
 | ACCOUNT_FLAG_IGR                  | Internet Game Room (Internet café?)   | 32         |

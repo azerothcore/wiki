@@ -26,11 +26,11 @@ This table holds information on what default actions a brand new character shoul
 
 ### race
 
-The character's [race](ChrRaces#content).
+The character's [race](chrraces#content).
 
 ### class
 
-The character's [class](ChrClasses#content).
+The character's [class](chrclasses#content).
 
 ### button
 

@@ -1,6 +1,6 @@
 # quest\_tracker
 
-[<-Back-to:Character](database-character)
+[<-Back-to:Character](database-characters)
 
 **The \`quest\_tracker\` table**
 

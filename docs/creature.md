@@ -9,9 +9,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | Field                 | Type     | Attributes | Key | Null | Default | Extra          | Comment                                 |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | --------------------------------------- |
 | [guid][1]             | INT      | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                |
-| [id1][2]              | INT      | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [id2][3]              | INT      | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [id3][4]              | INT      | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
+| [id][2]               | INT      | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
 | [map][5]              | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Map Identifier                          |
 | [zoneId][6]           | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                         |
 | [areaId][7]           | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Area Identifier                         |
@@ -37,9 +35,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [Comment][27]         | TEXT     |            |     | YES  | NULL    |                | Not used by the core.                   |
 
 [1]: #guid
-[2]: #id1
-[3]: #id2
-[4]: #id3
+[2]: #id
 [5]: #map
 [6]: #zoneId
 [7]: #areaId
@@ -70,17 +66,11 @@ Contains individual creature spawn data for each individual spawn of each indivi
 
 A unique identifier given to each creature to distinguish one creature from another. Two creatures can NOT have same GUID.
 
-### id1
+### id
 
-The Main ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
+The ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
 
-### id2
-
-The Secondary ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
-
-### id3
-
-The Third ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
+To let a single spawn point pick from more than one template (the old `id1`/`id2`/`id3` behaviour), add the additional entries in [creature_multispawn](creature_multispawn) keyed by this creature's `guid`.
 
 ### map
 

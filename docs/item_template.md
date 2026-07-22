@@ -879,7 +879,7 @@ The ID of the quest that this item will start if right-clicked. See [quest\_temp
 
 The lock entry ID that this item (which serves as a key) is tied to. This field is used in key-door mechanics.
 
-See the [Lock DBC file](lock).
+See the [Lock DBC file](https://wowdev.wiki/DB/Lock).
 
 ### Material
 

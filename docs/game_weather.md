@@ -21,6 +21,7 @@ This table holds the percent chances for weather changes to occur in various zon
 | [winter_rain_chance][11]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [winter_snow_chance][12]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [winter_storm_chance][13] | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [ScriptName][14]          | CHAR(64)  |            |     | NO   |         |       |         |
 
 [1]: #zone
 [2]: #spring_rain_chance
@@ -35,6 +36,7 @@ This table holds the percent chances for weather changes to occur in various zon
 [11]: #winter_rain_chance
 [12]: #winter_snow_chance
 [13]: #winter_storm_chance
+[14]: #scriptname
 
 **Field Descriptions**
 
@@ -89,3 +91,7 @@ Percentage chance for snow to occur in the Winter
 ### winter\_storm\_chance
 
 Percentage chance for a sand storm to occur in the Winter
+
+### ScriptName
+
+Name of the script associated with this zone's weather, registered in the core to allow custom weather handling.
