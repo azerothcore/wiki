@@ -185,7 +185,7 @@
 - [reference_loot_template](loot_template)
 - [reputation_reward_rate](reputation_reward_rate)
 - [reputation_spillover_template](reputation_spillover_template)
-- [script_waypoint](scripts)
+- [script_waypoint](script_waypoint)
 - [\*\*\_scripts](scripts)
 
 ## S
