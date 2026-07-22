@@ -49,6 +49,7 @@
 - [character_queststatus_seasonal](character_queststatus_seasonal)
 - [character_queststatus_weekly](character_queststatus_weekly)
 - [character_reputation](character_reputation)
+- [character_settings](character_settings)
 - [character_skills](character_skills)
 - [character_social](character_social)
 - [character_spell](character_spell)
@@ -81,6 +82,7 @@
 ## I
 - [instance](instance)
 - [instance_reset](instance_reset)
+- [instance_saved_go_state_data](instance_saved_go_state_data)
 - [item_instance](item_instance)
 - [item_loot_storage](item_loot_storage)
 - [item_refund_instance](item_refund_instance)
@@ -109,6 +111,7 @@
 - [petition](petition)
 - [petition_sign](petition_sign)
 - [pool_quest_save](pool_quest_save)
+- [profanity_name](profanity_name)
 - [pvpstats_battlegrounds](pvpstats_battlegrounds)
 - [pvpstats_players](pvpstats_players)
 
@@ -128,4 +131,5 @@
 
 ## W
 - [warden_action](warden_action)
+- [world_state](world_state)
 - [worldstates](worldstates)
