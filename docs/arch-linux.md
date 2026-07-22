@@ -33,6 +33,9 @@ gpg --recv-keys B7B3B788A8D3785C
 
 Build and install the AUR package:
 
+> {% include note.html content="This pacakge builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
+
+
 ```sh
 mkdir -p ~/AUR
 cd ~/AUR

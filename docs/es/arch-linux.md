@@ -33,6 +33,8 @@ gpg --recv-keys B7B3B788A8D3785C
 
 Construye e instala el paquete de AUR:
 
+> {% include note.html content="Este paquete compila MySQL desde el código fuente. Probablemente necesitarás al menos 4 gigabytes de memoria para que la compilación tenga éxito." %}
+
 ```sh
 mkdir -p ~/AUR
 cd ~/AUR
