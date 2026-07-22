@@ -36,15 +36,15 @@ An additional identifier for each individual entry, enabling multiple equipment
 
 ### ItemID1
 
-This is the item number of the equipment used in the right hand from [Item.dbc](item).
+This is the item number of the equipment used in the right hand from [Item.dbc](https://wowdev.wiki/DB/Item).
 
 ### ItemID2
 
-This is the item number of the equipment used in the left hand from [Item.dbc](item).
+This is the item number of the equipment used in the left hand from [Item.dbc](https://wowdev.wiki/DB/Item).
 
 ### ItemID3
 
-This is the item number of the equipment used in the ranged slot from [Item.dbc](item).
+This is the item number of the equipment used in the ranged slot from [Item.dbc](https://wowdev.wiki/DB/Item).
 
 ### VerifiedBuild
 

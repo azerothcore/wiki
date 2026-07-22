@@ -121,7 +121,7 @@ Now you can run the `account create <user> <password>` command to create your fi
 
 ### Access database and update realmlist
 
-To access your MySQL database we recommend clients like [HeidiSQL](https://www.heidisql.com/) (for Windows/Linux+Wine) or [SequelPro](https://www.sequelpro.com/) (for macOS). Use `root` as user and `127.0.0.1` as default host.
+To access your MySQL database we recommend clients like [HeidiSQL](https://www.heidisql.com/) (for Windows/Linux+Wine) or [DBeaver](https://dbeaver.io/) (cross-platform). Use `root` as user and `127.0.0.1` as default host.
 The default password of the root DB user will be `password`.
 
 Unless your server installation is on the same machine as your client, you might want to update the `realmlist` address in the `acore_auth` database with your server's public or private IP address :

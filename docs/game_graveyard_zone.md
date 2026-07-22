@@ -17,7 +17,7 @@
 **Description of the fields**
 
 ### id
-Graveyard's ID. See [WorldSafeLocs.dbc](worldsafelocs)
+Graveyard's ID. See [WorldSafeLocs.dbc](https://wowdev.wiki/DB/WorldSafeLocs)
 
 ### ghost_zone
 Zone's ID of ghost position before teleportation to graveyard. See [AreaTable.dbc](areatable)

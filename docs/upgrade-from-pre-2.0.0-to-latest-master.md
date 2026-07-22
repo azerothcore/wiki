@@ -22,6 +22,6 @@ Update to latest master:
 
 `git checkout master; git pull;`
 
-**Note**: if you are using your own fork of AC, as usual, you have to [sync it](Syncing-your-fork)
+**Note**: if you are using your own fork of AC, as usual, you have to [sync it](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
 
 Now update your **core and database** (again) as [you normally do](update).
