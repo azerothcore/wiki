@@ -33,11 +33,4 @@ cd mysql
 makepkg -si
 ```
 
-## Install *AzerothCore*
-After that you can install [azerothcore](https://aur.archlinux.org/packages/azerothcore/) package:
-
-```
-git clone https://aur.archlinux.org/azerothcore.git
-cd azerothcore
-makepkg -si
-```
+From here you can now follow the Classic Installation guide.
