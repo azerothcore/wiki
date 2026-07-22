@@ -40,7 +40,7 @@ Contains template of all gameobjects
 | data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
 | ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
-| WDBVerified    | SMALLINT     | SIGNED     |     | YES  | 1       |       |         |
+| VerifiedBuild    | INT          |            |     | YES  | NULL    |       |         |
 
 ## Description of the fields
 
@@ -570,4 +570,4 @@ Note: Only `SmartGameObjectAI` can be used in this field, do not use `SmartAI`
 
 Name of the script this object uses if needed
 
-`WDBVerified`
+`VerifiedBuild`

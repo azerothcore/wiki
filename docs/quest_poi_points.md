@@ -10,17 +10,19 @@ Comes from sniffs. Visually speaking, this table is used to identify the X and Y
 
 | Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [questid][1]       | INT      | unasigned  | PRI | NO   | 0       |       |         |
-| [idx2][2]          | INT      | unasigned  | PRI | NO   | 0       |       |         |
-| [x][3]             | INT      | unasigned  |     | NO   | 0       |       |         |
-| [y][4]             | INT      | unasigned  |     | NO   | 0       |       |         |
-| [VerifiedBuild][5] | SMALLINT | unasigned  |     | YES  | NULL    |       |         |
+| [questid][1]       | INT      | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [Idx1][6]          | INT      | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [idx2][2]          | INT      | UNSIGNED  | PRI | NO   | 0       |       |         |
+| [x][3]             | INT      | UNSIGNED  |     | NO   | 0       |       |         |
+| [y][4]             | INT      | UNSIGNED  |     | NO   | 0       |       |         |
+| [VerifiedBuild][5] | SMALLINT | UNSIGNED  |     | YES  | NULL    |       |         |
 
 [1]: #questid
 [2]: #idx2
 [3]: #x
 [4]: #y
 [5]: #verifiedbuild
+[6]: #idx1
 
 **Description of the fields**
 

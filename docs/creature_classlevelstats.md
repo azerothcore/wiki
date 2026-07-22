@@ -18,6 +18,11 @@ This table contains the base values for creature health, mana, armor, attack pow
 | [damage_base][10]      | FLOAT    |            | NO   |         |       |         |
 | [damage_exp1][11]      | FLOAT    |            | NO   |         |       |         |
 | [damage_exp2][12]      | FLOAT    |            | NO   |         |       |         |
+| [Strength][14]         | INT      |            | NO   | 0       |       |         |
+| [Agility][15]          | INT      |            | NO   | 0       |       |         |
+| [Stamina][16]          | INT      |            | NO   | 0       |       |         |
+| [Intellect][17]        | INT      |            | NO   | 0       |       |         |
+| [Spirit][18]           | INT      |            | NO   | 0       |       |         |
 | [comment][13]          | text     |            | YES  | NULL    |       |         |
 
 [1]: #level
@@ -33,6 +38,11 @@ This table contains the base values for creature health, mana, armor, attack pow
 [11]: #damage_exp1
 [12]: #damage_exp2
 [13]: #comment
+[14]: #strength
+[15]: #agility
+[16]: #stamina
+[17]: #intellect
+[18]: #spirit
 
 **Field Descriptions**
 
@@ -83,6 +93,26 @@ Modifier used to calculate the damage output of a creature. This field is used i
 ### damage\_exp2
 
 Modifier used to calculate the damage output of a creature. This field is used if a creature's [exp](creature_template#exp) is set to 2. See [DamageModifier](creature_template#damagemodifier) for more information.
+
+### Strength
+
+Base Strength for the creature at this level and class.
+
+### Agility
+
+Base Agility for the creature at this level and class.
+
+### Stamina
+
+Base Stamina for the creature at this level and class.
+
+### Intellect
+
+Base Intellect for the creature at this level and class.
+
+### Spirit
+
+Base Spirit for the creature at this level and class.
 
 ### comment
 

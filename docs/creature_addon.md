@@ -20,9 +20,6 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 | [bytes1][4]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
 | [bytes2][5]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
 | [emote][6]                   | INT           | UNSIGNED   |     | NO   |         |       |         |
-| [aiAnimKit][7]               | SMALLINT      | SIGNED     |     | NO   |         |       |         |
-| [movementAnimKit][8]         | SMALLINT      | SIGNED     |     | NO   |         |       |         |
-| [meleeAnimKit][9]            | SMALLINT      | SIGNED     |     | NO   |         |       |         |
 | [visibilityDistanceType][10] | TINYINT       | UNSIGNED   |     | NO   |         |       |         |
 | [auras][11]                  | text          |            |     | YES  |         |       |         |
 
@@ -32,9 +29,6 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 [4]: #bytes1
 [5]: #bytes2
 [6]: #emote
-[7]: #aianimkit
-[8]: #movementanimkit
-[9]: #meleeanimkit
 [10]: #visibilityDistanceType
 [11]: #auras
 
@@ -88,10 +82,6 @@ List of few known values and what their visual effects on the creature
 Emote ID that the creature should continually perform.
 
 List of often used emote IDs and what they do can be found [here](emotes).
-
-### aiAnimKit / movementAnimKit / meleeAnimKit
-
-AnimKit ID from AnimKit.db2 that is applied on creature when spawned.
 
 ### visibilityDistanceType
 

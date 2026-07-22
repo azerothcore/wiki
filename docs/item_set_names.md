@@ -13,7 +13,7 @@
 | [entry](#entry)                 | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
 | [name](#name)                   | VARCHAR(255) | SIGNED     |     | NO   |         |       |         |
 | [InventoryType](#inventorytype) | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [WDBVerified](#wdbverified)     | SMALLINT     | UNSIGNED   |     | NO   | 1       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |         |
 
 **Description of the fields**
 
@@ -61,7 +61,7 @@ Which slot the Item will be equipped on.
 | 27  | Quiver                                                                                                                                 |
 | 28  | Relic (class = armor, not weapon even if in weapon slot)                                                                               |                                                                             
 
-### WDBVerified
+### VerifiedBuild
 
 This field was used to determine whether a template has been verified from WDB files.
 

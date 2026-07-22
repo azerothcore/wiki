@@ -15,12 +15,14 @@ This table contains all the equipment combinations that can be sent for each cre
 | [ItemID1][3]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |              |
 | [ItemID2][4]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |              |
 | [ItemID3][5]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |              |
+| [VerifiedBuild][6] | INT    |            |     | YES  | NULL    |       |              |
 
 [1]: #creatureid
 [2]: #id
 [3]: #itemid1
 [4]: #itemid2
 [5]: #itemid3
+[6]: #verifiedbuild
 
 ## Description of the fields
 
@@ -43,3 +45,7 @@ This is the item number of the equipment used in the left hand from [Item.dbc](
 ### ItemID3
 
 This is the item number of the equipment used in the ranged slot from [Item.dbc](item).
+
+### VerifiedBuild
+
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.

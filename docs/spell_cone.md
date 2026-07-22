@@ -4,16 +4,16 @@
 
 **The `spell_cone` table**
 
-This table stores cone-radius overrides used by cone target selection.
-When a row exists, the value from `spell_cone.cone_radius` is used for cone radius calculation.
-If no override exists, the core falls back to `spell_dbc.ConeRadius`, then to legacy hardcoded spell handling.
+This table stores cone-angle overrides used by cone target selection.
+When a row exists, the value from `spell_cone.ConeDegrees` is used as the cone angle (in degrees).
+If no override exists, the core falls back to legacy hardcoded spell handling.
 
 **Table Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell identifier |
-| [cone_radius](#cone_radius) | FLOAT | SIGNED | | NO | 1 | | Cone radius override (yards, schema default is 1) |
+| [ConeDegrees](#conedegrees) | SMALLINT | | | NO | 60 | | Cone angle in degrees |
 
 **Description of the fields**
 
@@ -21,6 +21,6 @@ If no override exists, the core falls back to `spell_dbc.ConeRadius`, then to le
 
 Spell identifier this row applies to.
 
-### cone_radius
+### ConeDegrees
 
-Cone radius (in yards) used by cone-angle calculation (90° base + object-size adjustment).
+Cone angle in degrees used by cone target selection. Schema default is 60.

@@ -10,19 +10,23 @@ This table holds coordinate information on where the player should be teleported
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment    |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [id][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
-| [target_map][2]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |            |
-| [target_position_x][3]  | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
-| [target_position_y][4]  | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
-| [target_position_z][5]  | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
-| [target_orientation][6] | FLOAT     | SIGNED     |     | NO   | 0       |       |            |
+| [id][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
+| [EffectIndex][7]   | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |            |
+| [MapID][2]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |            |
+| [PositionX][3]     | FLOAT     |            |     | NO   | 0       |       |            |
+| [PositionY][4]     | FLOAT     |            |     | NO   | 0       |       |            |
+| [PositionZ][5]     | FLOAT     |            |     | NO   | 0       |       |            |
+| [Orientation][6]   | FLOAT     |            |     | NO   | 0       |       |            |
+| [VerifiedBuild][8] | INT       |            |     | YES  | NULL    |       |            |
 
 [1]: #id
-[2]: #targetmap
-[3]: #targetpositionx
-[4]: #targetpositiony
-[5]: #targetpositionz
-[6]: #targetorientation
+[2]: #mapid
+[3]: #positionx
+[4]: #positiony
+[5]: #positionz
+[6]: #orientation
+[7]: #effectindex
+[8]: #verifiedbuild
 
 **Description of the fields**
 
@@ -30,22 +34,30 @@ This table holds coordinate information on where the player should be teleported
 
 The spell ID. See [Spell.dbc](spell)
 
-### target\_map
+### EffectIndex
+
+The spell effect index this target position applies to.
+
+### MapID
 
 Map where the player should be teleported to. See [Map.dbc](map).
 
-### target\_position\_x
+### PositionX
 
 X coordinate for the target destination of the spell.
 
-### target\_position\_y
+### PositionY
 
 Y coordinate for the target destination of the spell.
 
-### target\_position\_z
+### PositionZ
 
 Z coordinate for the target destination of the spell.
 
-### target\_orientation
+### Orientation
 
 Orientation the player will get when appearing at this location
+
+### VerifiedBuild
+
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.

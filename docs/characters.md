@@ -88,6 +88,8 @@ This table holds vital static information for each character. It is used to crea
 | [deleteInfos_Account][76]  | INT         | UNSIGNED   |     | YES  |                   |        |                          |
 | [deleteInfos_Name][77]     | VARCHAR(12) | SIGNED     |     | YES  |                   |        |                          |
 | [deleteDate][78]           | INT         | UNSIGNED   |     | YES  |                   |        |                          |
+| [innTriggerId][79]         | INT         | UNSIGNED   |     | NO   |                   |        |                          |
+| [extraBonusTalentCount][80] | INT        |            |     | NO   | 0                 |        |                          |
   
 [1]: #guid
 [2]: #account
@@ -167,6 +169,8 @@ This table holds vital static information for each character. It is used to crea
 [76]: #deleteinfosaccount
 [77]: #deleteinfosname
 [78]: #deletedate
+[79]: #inntriggerid
+[80]: #extrabonustalentcount
 
 **Description of the fields**
 
@@ -573,3 +577,11 @@ Stores the name of character if the character is deleted and CharDelete.Method i
 ### deleteDate
 
 Stores the date when the character was deleted and CharDelete.Method in worldserver.conf.dist is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
+
+### innTriggerId
+
+The area trigger id of the inn where the character is currently bound to rest (set when resting at an inn). `0` if not resting at an inn.
+
+### extraBonusTalentCount
+
+Number of extra talent points granted to the character beyond those earned from levelling.

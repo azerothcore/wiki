@@ -1,67 +1,39 @@
-# gossip\_menu\_option\_locale
+# gossip_menu_option_locale
 
 [<-Back-to:World](database-world)
 
-**The \`gossip\_menu\_option\_locale\` table**
+**The \`gossip_menu_option_locale\` table**
 
-`table-no-description`
+This table is used to provide localized clients with localized strings for gossip menu options.
 
 **Table Structure**
 
-| Field                  | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [menu_id][1]           | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [id][2]                | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [option_text_loc1][3]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc2][4]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc3][5]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc4][6]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc5][7]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc6][8]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc7][9]  | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [option_text_loc8][10] | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc1][11]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc2][12]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc3][13]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc4][14]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc5][15]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc6][16]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc7][17]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [box_text_loc8][18]    | text     | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #menu_id
-[2]: #id
-[3]: #option_text_loc1
-[4]: #option_text_loc2
-[5]: #option_text_loc3
-[6]: #option_text_loc4
-[7]: #option_text_loc5
-[8]: #option_text_loc6
-[9]: #option_text_loc7
-[10]: #option_text_loc8
-[11]: #box_text_loc1
-[12]: #box_text_loc2
-[13]: #box_text_loc3
-[14]: #box_text_loc4
-[15]: #box_text_loc5
-[16]: #box_text_loc6
-[17]: #box_text_loc7
-[18]: #box_text_loc8
+| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [MenuID](#menuid) | INT | UNSIGNED | PRI | NO | 0 |  |  |
+| [OptionID](#optionid) | SMALLINT | UNSIGNED | PRI | NO | 0 |  |  |
+| [Locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
+| [OptionText](#optiontext) | TEXT |  |  | YES |  |  |  |
+| [BoxText](#boxtext) | TEXT |  |  | YES |  |  |  |
 
 **Description of the fields**
 
-### menu\_id
+### MenuID
 
-`field-no-description|1`
+This must match [gossip_menu_option.MenuID](gossip_menu_option#menuid).
 
-### id
+### OptionID
 
-`field-no-description|2`
+This must match [gossip_menu_option.OptionID](gossip_menu_option#optionid). Together with MenuID it identifies the option to localize.
 
-### option\_text\_loc
+### Locale
 
-`field-no-description|3`
+The locale (language code) for this row. There is one row per non-default locale, so a single record can have up to 8 translated variants here. Valid values: `koKR`, `frFR`, `deDE`, `zhCN`, `zhTW`, `esES`, `esMX`, `ruRU`. The default `enUS` text is stored in the base table, not here.
 
-### box\_text\_loc
+### OptionText
 
-`field-no-description|4`
+Translated [gossip_menu_option.OptionText](gossip_menu_option#optiontext) for this locale.
+
+### BoxText
+
+Translated [gossip_menu_option.BoxText](gossip_menu_option#boxtext) for this locale.

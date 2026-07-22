@@ -14,7 +14,8 @@
 | [joinZ][4]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
 | [joinO][5]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
 | [joinMapId][6]  | INT   | UNSIGNED   |     | YES  | 0       |       | Map Identifier           |
-| [taxiPath][7]   | TEXT  | SIGNED     |     | NO   | 0       |       |                          |
+| [taxiPath0][7]  | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
+| [taxiPath1][9]  | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
 | [mountSpell][8] | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
@@ -23,7 +24,8 @@
 [4]: #joinz
 [5]: #joino
 [6]: #joinmapid
-[7]: #taxipath
+[7]: #taxipath0
+[9]: #taxipath1
 [8]: #mountspell
 
 **Description of the fields**
@@ -52,9 +54,13 @@ Global Unique Identifier.
 
 Map Identifier.
 
-### taxiPath
+### taxiPath0
 
-`field-no-description|7`
+The source node of the taxi (flight) path the character was on when the entry point was saved.
+
+### taxiPath1
+
+The destination node of the taxi (flight) path the character was on when the entry point was saved.
 
 ### mountSpell
 

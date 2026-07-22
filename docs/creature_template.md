@@ -28,9 +28,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [speed_walk](#speedwalk)                           | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speedrun)                             | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
 | [speed_swim](#speedswim)                           | FLOAT              | NO   |     | 1       |       |                                      |
-| [speed_swim](#speedflight)                         | FLOAT              | NO   |     | 1       |       |                                      |
+| [speed_flight](#speedflight)                       | FLOAT              | NO   |     | 1       |       |                                      |
 | [detection_range](#detectionrange)                 | FLOAT              | NO   |     | 20      |       |                                      |
-| [scale](#scale)                                    | FLOAT              | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                            | TINYINT            | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)                  | INT UNSIGNED       | NO   |     | 0       |       |                                      |
@@ -217,10 +216,6 @@ Controls how fast the creature can fly.
 #### detection_range
 
 Controls the range at which creatures detect and see players.
-
-#### scale
-
-If non-zero, this field defines the size of how the model of the creature appears ingame. If zero, it will use default model size taken from the DBC.
 
 #### rank
 

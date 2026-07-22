@@ -4,40 +4,36 @@
 
 **The \`gameobject_template_locale\` table**
 
-This table is used to provide to localized clients with localized string for gameobjects.
+This table is used to provide localized clients with localized strings for gameobjects.
 
 **Table Structure**
 
-| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                           | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [name_loc1](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc2](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc3](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc4](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc5](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc6](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc7](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc8](#nameloc)                     | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc1](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc2](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc3](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc4](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc5](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc6](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc7](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [castbarcaption_loc8](#castbarcaptionloc) | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
+| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry](#entry) | INT | UNSIGNED | PRI | NO | 0 |  |  |
+| [locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
+| [name](#name) | TEXT |  |  | YES |  |  |  |
+| [castBarCaption](#castbarcaption) | TEXT |  |  | YES |  |  |  |
+| [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
 **Description of the fields**
 
 ### entry
 
-This entry must be the same as  [gameobject_template.entry](gameobject_template#entry) and then the row will be used to provide localization support for this gameobject record.
+This must match [gameobject_template.entry](gameobject_template#entry). The row provides localization for that gameobject_template record.
 
-### name_loc
+### locale
 
-Translated content for [gameobject_template.name](gameobject_template#name) field for language X.
+The locale (language code) for this row. There is one row per non-default locale, so a single record can have up to 8 translated variants here. Valid values: `koKR`, `frFR`, `deDE`, `zhCN`, `zhTW`, `esES`, `esMX`, `ruRU`. The default `enUS` text is stored in the base table, not here.
 
-### castbarcaption_loc
+### name
 
-Translated content for  [gameobject_template.castBarCaption](gameobject_template#castbarcaption) field for language X.
+Translated [gameobject_template.name](gameobject_template#name) for this locale.
+
+### castBarCaption
+
+Translated [gameobject_template.castBarCaption](gameobject_template#castbarcaption) for this locale.
+
+### VerifiedBuild
+
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.
