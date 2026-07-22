@@ -1,36 +1,51 @@
 # Arch Linux Install
-This guide assumes you will follow the Linux Classic Installation guide. This page will get all the dependencies you will need to compelete that setup.
+This page covers Arch Linux-specific dependency setup for AzerothCore. It is intended to be used together with the [Linux Classic Installation](classic-installation) guide.
 
-{% include warning.html content="The AzerothCore package in the AUR is very out of date and not reccommended" %}
+{% include warning.html content="The AzerothCore package in the AUR is very out of date and not recommended." %}
 
-## Installing Arch
-This is not meant to be a comprehensive guide on how to install Arch, and you should refer to the fantastic guides at [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide).
+## Before you begin
+- This guide does not explain how to install Arch Linux itself.
+- Make sure your system is up to date and you have a normal user with `sudo` privileges.
+- The [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide) is the best source for general Arch installation and package management.
 
-## Install dependencies
-
-### Install *base-devel*
-All you need to install AUR packages is [*base-devel*](https://www.archlinux.org/groups/x86_64/base-devel/) and [*git*](https://www.archlinux.org/packages/?name=git), you can install them with *pacman*:
+Make sure your system is fully up to date, and if you update the kernel, please reboot into the new kernel before continuing.
+```sh
+sudo pacman -Syu
 ```
-$ sudo pacman --needed -S base-devel git cmake clang boost
+
+## Required packages
+Install the core development packages needed to build AzerothCore:
+
+```sh
+sudo pacman -Syu --needed base-devel git cmake clang boost
 ```
 
-## Installing MySQL
-You cannot directly install mysql through pacman, so we will utilize the AUR for this step. You can use a helper of your choice if you would like to, but these instructions will just directly invoke and install the package.
+## MySQL on Arch Linux
+AzerothCore requires Oracle MySQL. Oracle MySQL is not available from the official Arch repositories, so this guide installs it from the AUR.
 
-In order to install the mysql package, we will need to import the signing key of Oracle first.
-{% include warning.html content="Trusting keys is always up to the user to verify that the key being trusted should be. If you have any doubts or concerns, stop here and use a different installation method." %}
-```
+> {% include warning.html content="Trusting keys is always up to the user to verify that the key being trusted should be. If you have any doubts or concerns, stop here and use a different installation method." %}
+
+Import the MySQL signing key:
+
+```sh
 gpg --recv-keys B7B3B788A8D3785C
 ```
 
-Now we can install MySQL
+Build and install the AUR package:
 
-```
-mkdir ~/AUR
+```sh
+mkdir -p ~/AUR
 cd ~/AUR
 git clone https://aur.archlinux.org/mysql.git
 cd mysql
 makepkg -si
 ```
 
-From here you can now follow the Classic Installation guide.
+After installation, enable and start MySQL:
+
+```sh
+sudo systemctl enable --now mysql.service
+```
+
+## Next steps
+Once your database server is installed and running, continue with the [Linux Classic Installation](classic-installation) guide to compile AzerothCore and finish configuration.
