@@ -56,4 +56,4 @@ makepkg -si
 ```
 
 ## Next steps
-Once your database server is installed and running, continue with the [Linux Classic Installation](classic-installation) guide to compile AzerothCore and finish configuration.
+Once your database server is installed, continue with the [Linux Classic Installation](classic-installation) guide to compile AzerothCore and finish configuration.

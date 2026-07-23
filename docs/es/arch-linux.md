@@ -62,4 +62,4 @@ makepkg -si
 
 ## Siguientes pasos
 
-Una vez que tu servidor de base de datos esté instalado y en funcionamiento, continúa con la guía [Instalación clásica en Linux](classic-installation) para compilar AzerothCore y finalizar la configuración.
+Una vez que tu servidor de base de datos esté instalado, continúa con la guía [Instalación clásica en Linux](classic-installation) para compilar AzerothCore y finalizar la configuración.
