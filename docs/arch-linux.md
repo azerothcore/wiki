@@ -33,7 +33,7 @@ gpg --recv-keys B7B3B788A8D3785C
 
 Build and install the AUR package:
 
-> {% include note.html content="This pacakge builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
+> {% include note.html content="This package builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
 
 
 ```sh
@@ -44,11 +44,19 @@ cd mysql
 makepkg -si
 ```
 
-After installation, enable and start MySQL:
+After installation, initialize MySQL:
 
 ```sh
-sudo systemctl enable --now mysql.service
+sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 ```
+
+This will print out a temporary password. Make note of this for the root user for later in setting up the server.
+
+```sh
+sudo systemctl enable --now mysqld
+```
+
+MySQL is now initialized and ready for setup.
 
 ## Next steps
 Once your database server is installed and running, continue with the [Linux Classic Installation](classic-installation) guide to compile AzerothCore and finish configuration.
