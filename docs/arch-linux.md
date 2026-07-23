@@ -55,19 +55,5 @@ cd mysql
 makepkg -si
 ```
 
-After installation, initialize MySQL:
-
-```sh
-sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-```
-
-This will print out a temporary password. Make note of this for the root user for later in setting up the server.
-
-```sh
-sudo systemctl enable --now mysqld
-```
-
-MySQL is now initialized and ready for setup.
-
 ## Next steps
 Once your database server is installed and running, continue with the [Linux Classic Installation](classic-installation) guide to compile AzerothCore and finish configuration.

@@ -1,4 +1,4 @@
-# Instalación en Arch Linux
+﻿# Instalación en Arch Linux
 
 Esta página trata la configuración de dependencias específicas de Arch Linux para AzerothCore. Está pensada para usarse junto con la guía [Instalación clásica en Linux](classic-installation).
 
@@ -59,20 +59,6 @@ git clone https://aur.archlinux.org/mysql.git
 cd mysql
 makepkg -si
 ```
-
-Después de la instalación, inicializa MySQL:
-
-```sh
-sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-```
-
-Esto imprimirá una contraseña temporal. Toma nota de ella para el usuario root para más adelante al configurar el servidor.
-
-```sh
-sudo systemctl enable --now mysqld
-```
-
-MySQL ahora está inicializado y listo para su configuración.
 
 ## Siguientes pasos
 
