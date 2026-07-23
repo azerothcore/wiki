@@ -38,6 +38,18 @@ gpg --recv-keys B7B3B788A8D3785C
 
 Construye e instala el paquete del AUR:
 
+Antes de compilar, comprueba si hay paquetes MariaDB instalados que puedan entrar en conflicto con Oracle MySQL:
+
+```sh
+pacman -Qs mariadb || true
+```
+
+Si están presentes paquetes MariaDB (o relacionados), elimínalos antes de continuar para evitar conflictos:
+
+```sh
+sudo pacman -Rns mariadb
+```
+
 > {% include note.html content="Este paquete construye MySQL desde el código fuente. Probablemente necesitarás al menos 4 Gigabytes de memoria para que la compilación tenga éxito." %}
 
 ```sh

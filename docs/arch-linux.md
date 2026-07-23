@@ -33,8 +33,19 @@ gpg --recv-keys B7B3B788A8D3785C
 
 Build and install the AUR package:
 
-> {% include note.html content="This package builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
+Before building, check for any installed MariaDB packages which can conflict with Oracle MySQL:
 
+```sh
+pacman -Qs mariadb || true
+```
+
+If MariaDB (or related packages) are present, remove them before proceeding to avoid conflicts:
+
+```sh
+sudo pacman -Rns mariadb
+```
+
+> {% include note.html content="This package builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
 
 ```sh
 mkdir -p ~/AUR
