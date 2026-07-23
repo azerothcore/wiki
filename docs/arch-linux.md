@@ -1,20 +1,59 @@
 # Arch Linux Install
-If you are an Arch Linux user you can  install  it from AUR ([Arch User Repository](https://wiki.archlinux.org/index.php/Arch_User_Repository))
+This page covers Arch Linux-specific dependency setup for AzerothCore. It is intended to be used together with the [Linux Classic Installation](classic-installation) guide.
 
-## Install dependencies
+{% include warning.html content="The AzerothCore package in the AUR is very out of date and not recommended." %}
 
-### Install *base-devel*
-All you need to install AUR packages is [*base-devel*](https://www.archlinux.org/groups/x86_64/base-devel/) and [*git*](https://www.archlinux.org/packages/?name=git), you can install them with *pacman*:
+## Before you begin
+- This guide does not explain how to install Arch Linux itself.
+- Make sure your system is up to date and you have a normal user with `sudo` privileges.
+- The [Arch Wiki](https://wiki.archlinux.org/title/Installation_guide) is the best source for general Arch installation and package management.
+
+Make sure your system is fully up to date, and if you update the kernel, please reboot into the new kernel before continuing.
+```sh
+sudo pacman -Syu
 ```
-$ sudo pacman -S base-devel git
+
+## Required packages
+Install the core development packages needed to build AzerothCore:
+
+```sh
+sudo pacman -Syu --needed base-devel git cmake clang boost
 ```
 
-## Install *AzerothCore*
-After that you can install [azerothcore](https://aur.archlinux.org/packages/azerothcore/) package:
+## MySQL on Arch Linux
+AzerothCore requires Oracle MySQL. Oracle MySQL is not available from the official Arch repositories, so this guide installs it from the AUR.
 
+> {% include warning.html content="Trusting keys is always up to the user to verify that the key being trusted should be. If you have any doubts or concerns, stop here and use a different installation method." %}
+
+Import the MySQL signing key:
+
+```sh
+gpg --recv-keys B7B3B788A8D3785C
 ```
-git clone https://aur.archlinux.org/azerothcore.git
-cd azerothcore
+
+Build and install the AUR package:
+
+Before building, check for any installed MariaDB packages which can conflict with Oracle MySQL:
+
+```sh
+pacman -Qs mariadb || true
+```
+
+If MariaDB (or related packages) are present, remove them before proceeding to avoid conflicts:
+
+```sh
+sudo pacman -Rns mariadb
+```
+
+> {% include note.html content="This package builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
+
+```sh
+mkdir -p ~/AUR
+cd ~/AUR
+git clone https://aur.archlinux.org/mysql.git
+cd mysql
 makepkg -si
 ```
-Moreover, if you want you can use [*yay*](https://github.com/Jguer/yay) as AUR package manager to install AUR packages.
+
+## Next steps
+Once your database server is installed, continue with the [Linux Classic Installation](classic-installation) guide to compile AzerothCore and finish configuration.
