@@ -42,4 +42,4 @@ Player's matchmaker rating.
 
 ### maxMMR
 
-`field-no-description|4`
+The maximum matchmaker rating (MMR) this character has reached in this arena slot.

@@ -1,4 +1,4 @@
-﻿# character\_achievement\_progress
+# character\_achievement\_progress
 
 [<-Volver a:Characters](database-characters)
 
@@ -30,7 +30,7 @@ Criterios de [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### counter
 
-`campo-sin-descripción|3`
+El recuento del progreso actual hacia la finalización del criterio del logro.
 
 ### date
 

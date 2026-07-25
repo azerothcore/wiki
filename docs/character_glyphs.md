@@ -32,7 +32,7 @@ Contains all the individual glyph data for each character.
 
 ### guid
 
-The GUID of the character. See [characters.guid](characters.guid).
+The GUID of the character. See [characters.guid](characters#guid).
 
 ### talentGroup
 

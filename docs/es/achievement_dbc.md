@@ -4,7 +4,7 @@
 
 **La tabla \`achievement\_dbc\`**
 
-Almacena la información de los logrso que falta en in [Achievement.dbc](Achievement)
+Almacena la información de los logrso que falta en in [Achievement.dbc](achievement)
 
 **Estructura**
 

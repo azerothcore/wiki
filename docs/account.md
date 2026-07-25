@@ -89,7 +89,7 @@ Make sure the PHP GMP extension is loaded! Uncomment `extension=gmp` in your php
 
 ### session\_key
 
-`field-no-description|5`
+The session key used for encrypting the current authenticated session. Populated on login and cleared on logout.
 
 ### totp\_secret
 
@@ -153,8 +153,8 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | Name                              | Description                           | Bit Value  |
 | --------------------------------- | ------------------------------------- | ---------- |
 | ACCOUNT_FLAG_GM                   | Account is GM                         | 1          |
-| ACCOUNT_FLAG_NOKICK               | UNK                                   | 2          |
-| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                   | 4          |
+| ACCOUNT_FLAG_NOKICK               | Will not be logged out while AFK      | 2          |
+| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition (grants a starter gift voucher when creating a character) | 4          |
 | ACCOUNT_FLAG_TRIAL                | Trial account                         | 8          |
 | ACCOUNT_FLAG_CANCELLED            | UNK                                   | 16         |
 | ACCOUNT_FLAG_IGR                  | Internet Game Room (Internet café?)   | 32         |
@@ -181,7 +181,7 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition             | 67108864   |
 | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net account        | 134217728  |
 | ACCOUNT_FLAG_DEMOS                | UNK                                   | 268435456  |
-| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight        | 536870912  |
+| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight. Automatically set when the account first meets the `CharacterCreating.MinLevelForHeroicCharacter` requirement; once set, overrides that requirement. | 536870912  |
 | ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNK (StarCraft II related?)           | 1073741824 |
 | ACCOUNT_FLAG_S2_TRIAL             | UNK (StarCraft II related?)           | 2147483648 |
 
@@ -203,7 +203,19 @@ The character name with the rights to the .mute command that give the mute.
 
 ### locale
 
-The locale used by the client logged into this account. If multiple locale data has been configured and added to the world servers, the world servers will return the proper locale strings to the client. See [localization IDs](Localization_lang)
+The locale used by the client logged into this account. If multiple locale data has been configured and added to the world servers, the world servers will return the proper locale strings to the client.
+
+| ID  | Language |
+| --- | -------- |
+| 0   | enUS     |
+| 1   | koKR     |
+| 2   | frFR     |
+| 3   | deDE     |
+| 4   | zhCN     |
+| 5   | zhTW     |
+| 6   | esES     |
+| 7   | esMX     |
+| 8   | ruRU     |
 
 ### os
 
@@ -214,4 +226,4 @@ Stores information about client's OS. Used by Warden system.
 
 ### recruiter
 
-The account ID of another account. Used for recuit-a-friend system. See [account.id][1]
+The account ID of another account. Used for recruit-a-friend system. See [account.id][1]

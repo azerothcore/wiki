@@ -1,45 +1,39 @@
-# item\_template\_locale
+# item_template_locale
 
 [<-Back-to:World](database-world)
 
-**The \`item\_template\_locale\` table**
+**The \`item_template_locale\` table**
 
-This table is used to provide to localized clients with localized string for items.
+This table is used to provide localized clients with localized strings for items.
 
 **Table Structure**
 
-| Field                               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                     | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [name_loc1](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc2](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc3](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc4](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc5](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc6](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc7](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [name_loc8](#nameloc)               | VARCHAR(100) | SIGNED     |     | NO   | NULL    |       |         |
-| [description_loc1](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc2](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc3](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc4](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc5](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc6](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc7](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
-| [description_loc8](#descriptionloc) | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
+| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id) | INT | UNSIGNED | PRI | NO | 0 |  |  |
+| [locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
+| [Name](#name) | TEXT |  |  | YES |  |  |  |
+| [Description](#description) | TEXT |  |  | YES |  |  |  |
+| [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
 **Description of the fields**
 
-### entry
+### ID
 
-This entry must be the same as  [item\_template.entry](item_template#entry) and then the row will be used to provide localization support for this creature record.
+This must match [item_template.entry](item_template#entry).
 
-### name_loc
+### locale
 
-Translated content for [item\_template.name](item_template#name) field for language X.
-See localization languages list to know which value to use for X.
+The locale (language code) for this row. There is one row per non-default locale, so a single record can have up to 8 translated variants here. Valid values: `koKR`, `frFR`, `deDE`, `zhCN`, `zhTW`, `esES`, `esMX`, `ruRU`. The default `enUS` text is stored in the base table, not here.
 
-### description_loc
+### Name
 
-Translated content for  [item\_template.description](item_template#description) field for language X.
-See localization languages list to know which value to use for X.
+Translated [item_template.name](item_template#name) for this locale.
+
+### Description
+
+Translated [item_template.description](item_template#description) for this locale.
+
+### VerifiedBuild
+
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.

@@ -20,7 +20,7 @@ This DBC contains information about the triggers of the in-game areas.
 | Column | Field             | Type    | Notes                                                |
 | ------ | ----------------- | ------- | ---------------------------------------------------- |
 | 1      | ID                | Integer |                                                      |
-| 2      | iRefID_[Map](Map) | Integer |                                                      |
+| 2      | iRefID_[Map](map) | Integer |                                                      |
 | 3      | X                 | Float   |                                                      |
 | 4      | Y                 | Float   |                                                      |
 | 5      | Z                 | Float   |                                                      |

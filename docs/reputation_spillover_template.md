@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world)
 
-**The \`reputation\_spillover\_rate\` table**
+**The \`reputation\_spillover\_template\` table**
 
 `table-no-description|0`
 
@@ -13,7 +13,7 @@
 | [faction][1]   | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [faction1][2]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_1][3]    | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| [rank1][4]     | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [rank_1][4]    | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [faction2][5]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_2][6]    | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
 | [rank_2][7]    | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
@@ -23,6 +23,12 @@
 | [faction4][11] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [rate_4][12]   | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
 | [rank_4][13]   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [faction5][14] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [rate_5][15]   | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [rank_5][16]   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [faction6][17] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [rate_6][18]   | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [rank_6][19]   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #faction
 [2]: #faction1-4
@@ -37,6 +43,12 @@
 [11]: #faction1-4
 [12]: #rate1-4
 [13]: #rank1-4
+[14]: #faction1-4
+[15]: #rate1-4
+[16]: #rank1-4
+[17]: #faction1-4
+[18]: #rate1-4
+[19]: #rank1-4
 
 **Description of the fields**
 

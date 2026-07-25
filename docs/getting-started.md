@@ -31,7 +31,7 @@ The first step is always installing a local WoW server in your own machine. And 
 Let me be clear about one thing: **ALL operating systems are supported by AzerothCore**.
 So you can successfully install AzerothCore GNU/Linux, macOS or Windows without any issue.
 
-However, I can tell you if you use a Linux distribution such as **Ubuntu 20.04**, the process is going to be easier. If you would like to install Ubuntu, you can download it from [here](https://ubuntu.com/download/desktop) and you can find plenty of tutorials online about how to do it. There is a nice tutorial about running WoW on Linux [here](https://www.mangosrumors.org/how-to-run-wow-on-linux/).
+However, I can tell you if you use a Linux distribution such as **Ubuntu 26.04**, the process is going to be easier. If you would like to install Ubuntu, you can download it from [here](https://ubuntu.com/download/desktop) and you can find plenty of tutorials online about how to do it. There is a nice tutorial about running WoW on Linux [here](https://www.mangosrumors.org/how-to-run-wow-on-linux/).
 
 Would you like to stick with **Windows** or **macOS**? That's absolutely fine.
 
@@ -47,7 +47,7 @@ Basically, there are 3 main ways to install AC:
 
 You can choose one setup, or even try more than one. You can find all the instructions here:
 
-- [azerothcore.org/wiki/Installation](Installation)
+- [azerothcore.org/wiki/Installation](installation)
 
 Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help).
 
@@ -82,7 +82,7 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
-- [azerothcore.org/wiki/Update](Update)
+- [azerothcore.org/wiki/Update](update)
 
 After you follow the update procedure, it is important to **verify** that:
 

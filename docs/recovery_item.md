@@ -15,11 +15,13 @@ Items which were kept back in the database after being deleted and are older tha
 | [Guid][2]      | INT       | UNSIGNED   |     | NO   | 0       |                |         |
 | [ItemEntry][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                |         |
 | [Count][4]     | INT       | UNSIGNED   |     | NO   | 0       |                |         |
+| [DeleteDate][5] | INT      | UNSIGNED   |     | YES  | NULL    |                |         |
 
 [1]: #id
 [2]: #guid
 [3]: #itementry
 [4]: #count
+[5]: #deletedate
 
 **Description of the fields**
 
@@ -40,3 +42,7 @@ See [item_template.entry](item_template#entry).
 ### Count
 
 The amount of items.
+
+### DeleteDate
+
+Unix timestamp of when the item was deleted. Used to determine when the record is old enough to be purged permanently. `NULL` if not set.

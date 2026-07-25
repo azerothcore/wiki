@@ -18,7 +18,7 @@
 
 ### achievementId
 
-Don't know, but surely taken from [Achievement.dbc](Achievement)
+Don't know, but surely taken from [Achievement.dbc](achievement)
 
 ### dungeonId
 

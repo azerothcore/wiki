@@ -24,7 +24,7 @@ All update files are found in the $\data\sql\updates\ directory.
 
 These files contain all the updates committed.
 
-Files from this directory are automatically imported with the [Automatic Database Updater](database-installation#automatic-database-updater-default-recommended).
+Files from this directory are automatically imported with the [Automatic Database Updater](database-installation#automatic-database-updater).
 
 ## Pending update files
 

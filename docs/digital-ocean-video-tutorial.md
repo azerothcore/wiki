@@ -1,4 +1,4 @@
-{% include warning.html content="This guide is out-dated as it refers to MariaDB, which is no longer supported." %}
+{% include warning.html content="This guide is out-dated. It targets Debian 9 and its install command pulls packages that are no longer used or available (MariaDB, the removed ACE library <code>libace</code>, <code>libssl1.0-dev</code>, <code>g++-7</code>), so the build steps below will not work on a current system. Do not follow the installation commands here. For an up-to-date VPS setup, use the [Debian 12 Install Guide](debian12-install-guide) or the main [Installation Guide](installation)." %}
 
 ## Introduction
 

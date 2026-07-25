@@ -107,7 +107,7 @@ INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_
 
 ### Compact queries
 
-We always keep the code as compact as possible to limit the size of the files and decrease the number of queries needed to run.
+We always aim to keep the code as compact as possible, reducing file size and minimising the number of queries required. While this is generally good practice, bundling queries in a way that complicates review is counterproductive. For instance, mixing different SAI entities makes the code significantly harder to review and more prone to user error, so try to keep the queries compact, but not at the expense of making them harder to review.
 
 Wrong:
 

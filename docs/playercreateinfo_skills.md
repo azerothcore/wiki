@@ -34,7 +34,7 @@ One or more character's class. See [ChrClasses.dbc](chrclasses).
 
 ### Spell
 
-Skill id. See [Skill.dbc](SkillLine)
+Skill id. See [Skill.dbc](skillline)
 
 ### Rank
 

@@ -34,7 +34,7 @@ One or more character's class. See [ChrClasses.dbc](chrclasses)
 
 ### Spell
 
-Spell id. See [Spell.dbc](Spell)
+Spell id. See [Spell.dbc](spell)
 
 ### Note
 

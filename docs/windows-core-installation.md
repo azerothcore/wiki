@@ -95,7 +95,7 @@ You will need the following files in order for the core to function properly:
 ```
 \configs\
 authserver.exe
-authserver.pbd
+authserver.pdb
 worldserver.exe
 worldserver.pdb
 libmysql.dll
@@ -106,7 +106,7 @@ libssl-3-x64.dll
 
 There are four DLL files that need to be manually added to this folder, and you need to copy them from the following directories:
 
-{% include callout.html content="<b>libmysql.dll</b> → C:\Program Files\MySQL\MySQL Server 8.x\lib" type="primary" %}
+{% include callout.html content="<b>libmysql.dll</b> → C:\Program Files\MySQL\MySQL Server 8.4\lib" type="primary" %}
 
 {% include note.html content="Your libmysql.dll version need to match the MySQL Server version you run. If you update your MySQL server you need to recompile the core and copy the new dll file over." %}
 

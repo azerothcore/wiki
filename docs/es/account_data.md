@@ -40,4 +40,4 @@ Tiempo de la última modificación en Unixtime.
 
 ### data
 
-No es posible escribir uan descripción. Usted simplemente tiene que enteder su información.
+No se puede escribir una descripción. Simplemente tienes que entender que son datos.

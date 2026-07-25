@@ -24,7 +24,7 @@ The [channel.id](channels#channelid).
 
 ### playerGUID
 
-`field-no-description|2`
+The GUID of the banned player. See [characters.guid](characters#guid).
 
 ### banTime
 

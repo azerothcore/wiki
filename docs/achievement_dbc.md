@@ -4,7 +4,7 @@
 
 **The \`achievement\_dbc\` table**
 
-Stores achievement data that is missing in [Achievement.dbc](Achievement)
+Stores achievement data that is missing in [Achievement.dbc](achievement)
 
 **Table Structure**
 

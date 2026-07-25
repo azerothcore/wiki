@@ -32,7 +32,7 @@ The time when the game object should be respawned in Unix time.
 
 ### mapid
 
-`field-no-description|3`
+The map ID where this gameobject respawn entry applies.
 
 ### instanceId
 

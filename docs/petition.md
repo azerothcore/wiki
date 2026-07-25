@@ -12,6 +12,7 @@ This table holds information on all ongoing petitions for a guild or for an aren
 | ----------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ownerguid][1]    | INT         | UNSIGNED   | PRI | NO   |         |       |         |
 | [petitionguid][2] | INT         | UNSIGNED   |     | YES  | 0       |       |         |
+| [petition_id][5]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 | [name][3]         | VARCHAR(24) | SIGNED     |     | NO   |         |       |         |
 | [type][4]         | TINYINT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 
@@ -19,6 +20,7 @@ This table holds information on all ongoing petitions for a guild or for an aren
 [2]: #petitionguid
 [3]: #name
 [4]: #type
+[5]: #petition_id
 
 **Description of the fields**
 
@@ -29,6 +31,10 @@ The petition's owner's GUID. See [characters.guid](characters#guid).
 ### petitionguid
 
 The GUID of the petition item. See [item\_instance.guid](item_instance#guid).
+
+### petition_id
+
+Sequential identifier of the petition, unique per petition. Used to reference the petition independently of the charter item GUID.
 
 ### name
 

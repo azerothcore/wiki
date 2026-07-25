@@ -14,7 +14,7 @@
 | Columna | Campo             | Tipo    | Notas                                                                              |
 |---------|-------------------|---------|------------------------------------------------------------------------------------|
 | 1       | ID                | Integer | Identificador (ID)                                                                 |
-| 2       | iRefID_[Map](Map) | Integer | Identificador (ID) del mapa en cuestión. Véase [map](map)                       |
+| 2       | iRefID_[Map](map) | Integer | Identificador (ID) del mapa en cuestión. Véase [map](map)                       |
 | 3       | X                 | Float   | Coordenadas en X del trigger                                                       |
 | 4       | Y                 | Float   | Coordenadas en Y del trigger                                                       |
 | 5       | Z                 | Float   | Coordenadas en Z del trigger                                                       |

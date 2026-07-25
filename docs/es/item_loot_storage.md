@@ -1,10 +1,8 @@
 # item\_loot_\storage
 
-[<-Volver a:Characters](database-characters)
+[<-Volver a: Characters](database-characters)
 
 **Tabla \`item\_loot_\storage\`**
-
-Aparentemente esta tabla "almacena el botín de Items" que serán despojados.
 
 **Estructura**
 
@@ -40,48 +38,48 @@ Aparentemente esta tabla "almacena el botín de Items" que serán despojados.
 
 ### containerGUID
 
-`field-no-description|1` (GUID o Identificador Global Único del contenedor en cuestión)
+`campo-sin-descripción|1` (GUID o Identificador Global Único del contenedor en cuestión)
 
 ### itemid
 
-`field-no-description|2` (¿ID del Item? Se desconoce si la ID se extrae de item_instance o item_template (posiblemente de item_instance))
+`campo-sin-descripción|2` (¿ID del Item? Se desconoce si la ID se extrae de item_instance o item_template (posiblemente de item_instance))
 
 ### count
 
-`field-no-description|3` (Posiblemente la cantidad de los mismos)
+`campo-sin-descripción|3` (Posiblemente la cantidad de los mismos)
 
 ### randomPropertyId
 
-`field-no-description|4` (¿Aquella ID de alguna propiedad aleatoria para Item?)
+`campo-sin-descripción|4` (¿Aquella ID de alguna propiedad aleatoria para Item?)
 
 ### randomSuffix
 
-`field-no-description|5` (¿Sufijo aleatorio?)
+`campo-sin-descripción|5` (¿Sufijo aleatorio?)
 
 ### follow\_loot\_rules
 
-`field-no-description|6` (Posiblemente ligado a las reglas de loot para despojar el Item)
+`campo-sin-descripción|6` (Posiblemente ligado a las reglas de loot para despojar el Item)
 
 ### freeforall
 
-`field-no-description|7` (¿Despojo libre del Item?)
+`campo-sin-descripción|7` (¿Despojo libre del Item?)
 
 ### is\_blocked
 
-`field-no-description|8` (¿Está bloqueado?)
+`campo-sin-descripción|8` (¿Está bloqueado?)
 
 ### is\_counted
 
-`field-no-description|9` (¿Está contado?)
+`campo-sin-descripción|9` (¿Está contado?)
 
 ### is\_underthreshold
 
-`field-no-description|10` (¿Se encuentra bajo un límite o umbral?)
+`campo-sin-descripción|10` (¿Se encuentra bajo un límite o umbral?)
 
 ### needs\_quest
 
-`field-no-description|11` (¿Necesita una misión para ser despojado?)
+`campo-sin-descripción|11` (¿Necesita una misión para ser despojado?)
 
 ### conditionLootId
 
-`field-no-description|12` (¿ID de las condiciones de despojo?)
+`campo-sin-descripción|12` (¿ID de las condiciones de despojo?)

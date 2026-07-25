@@ -18,6 +18,7 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 | [position\_y](#positiony)        | FLOAT     |            |     | NO   | 0       |
 | [position\_z](#positionz)        | FLOAT     |            |     | NO   | 0       |
 | [orientation](#orientation)      | FLOAT     |            |     | YES  | NULL    |
+| [delay](#delay)                  | INT       | UNSIGNED   |     | NO   | 0       |
 | [point\_comment](#point_comment) | text      |            |     | YES  | NULL    |
 
 **Description of the fields**
@@ -43,6 +44,12 @@ The Y coordinate of the destination waypoint.
 The Z coordinate of the destination waypoint.
 
 #### orientation
+
+The orientation (facing) the creature should have at this waypoint. `NULL` leaves the facing unchanged.
+
+#### delay
+
+Time in milliseconds the creature waits at this waypoint before moving to the next one.
 
 #### point\_comment
 

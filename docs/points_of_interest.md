@@ -10,33 +10,33 @@
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [x][2]          | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
-| [y][3]          | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
-| [icon][4]       | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [flags][5]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ID][1]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [PositionX][2]  | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
+| [PositionY][3]  | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
+| [Icon][4]       | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Flags][5]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [Importance][6] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [icon_name][7]  | text      |            |     | NO   | NULL    |       |         |
+| [Name][7]       | text      |            |     | NO   | NULL    |       |         |
 
-[1]: #entry
-[2]: #x
-[3]: #y
+[1]: #id
+[2]: #positionx
+[3]: #positiony
 [4]: #icon
 [5]: #flags
 [6]: #importance
-[7]: #icon_name
+[7]: #name
 
 **Description of the fields**
 
-### entry
+### ID
 
 `field-no-description|1`
 
-### x
+### PositionX
 
 `field-no-description|2`
 
-### y
+### PositionY
 
 `field-no-description|3`
 
@@ -86,7 +86,7 @@
 | ICON\_POI\_RWHORSE        | 39    | Red and White Horse       |
 | ICON\_POI\_REDHORSE       | 40    | Red Horse                 |
 
-### flags
+### Flags
 
 `field-no-description|5`
 
@@ -94,6 +94,6 @@
 
 `field-no-description|6`
 
-### icon
+### Name
 
-`field-no-description|7`
+The name of the point of interest shown to the player.

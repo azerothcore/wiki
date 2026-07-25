@@ -32,7 +32,7 @@ If nonzero, this field controls what spell must be specifically used to trigger 
 
 ### reqSkillValue
 
-`field-no-description|3`
+The minimum skill level required in the relevant profession to be able to discover this recipe.
 
 ### chance
 

@@ -225,6 +225,8 @@ tar xfv $CMAKE_INSTALL_PREFIX/data.tar.gz --strip-components=2
 
 It should now be unpacked into `$CMAKE_INSTALL_PREFIX/data/`
 
+{% include warning.html content="The Google Drive and MEGA download links in this section are outdated and no longer available." %}
+
 Alternatively, borrowed from [stackoverflow](https://stackoverflow.com/a/49444877) and with much better download performance:
 
 ```bash

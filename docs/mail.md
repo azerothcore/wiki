@@ -24,7 +24,6 @@ This table contains main data about all mails in the game.
 | [money][12]         | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [cod][13]           | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [checked][14]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [auctionId][14]     | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 
 [1]: #id
 [2]: #messagetype
@@ -40,7 +39,6 @@ This table contains main data about all mails in the game.
 [12]: #money
 [13]: #cod
 [14]: #checked
-[15]: #auctionid
 
 **Description of the fields**
 
@@ -76,11 +74,11 @@ Id from MailTemplate.dbc
 
 ### sender
 
-In this field is entered sender [character.guid](character#guid).
+In this field is entered sender [characters.guid](characters#guid).
 
 ### receiver
 
-Here is receiver's [character.guid](character#guid).
+Here is receiver's [characters.guid](characters#guid).
 
 ### subject
 
@@ -173,14 +171,3 @@ when is set to 1, that field \`money\` stores gold for COD.
 | 4    | MAIL_CHECK_MASK_COPIED      |
 | 8    | MAIL_CHECK_MASK_COD_PAYMENT |
 | 16   | MAIL_CHECK_MASK_HAS_BODY    |
-
-### auctionId
-
-Only if [stationery][3] is 62.
-
-Lot id from AuctionHouse. Can be negative vector in case of delayed mail with money sended by Auction to Lot-owner.
-For example: 
-
-[auctionId][14] = 777 : mail to Lot-owner, contains money for sended Lot id 777. Delivered money.
-
-[auctionId][14] = -777 : mail contains info that Lot id 777 is sold. Money will be delivered in next mail, time of deliver is set in [`deliver_time`][11] field.

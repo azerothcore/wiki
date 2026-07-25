@@ -2,48 +2,41 @@
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Comienza: Guía de instalación](installation) | [Paso 1: Requisitos >>](requirements) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Inicio: Instalación](installation) | [Paso 1: Requisitos >>](requirements) |
 
-Cada paso de la guía está dividido en tres pestañas relacionadas con diferentes sistemas operativos (Linux, macOS y Windows).
+La guía se ha dividido en 9 pasos, para hacerla más legible.
 
-La guía se ha dividido en 8 pasos, para hacerla más legible:
+{% include tip.html content="Cada paso puede leerse de forma independiente. Si es la primera vez que instalas AzerothCore, te recomendamos que leas cada paso con atención." %}
 
 1. [Requisitos](requirements)
 
-2. [Instalación Principal](core-installation)
+2. [Instalación del Core](core-installation)
 
-3. [Configuración del Servidor](server-setup)
+3. [Configuración del servidor](server-setup)
 
-4. [Instalación de la Base de Datos](database-installation)
+4. [Instalación de la base de datos](database-installation)
 
 5. [Red](networking)
 
-6. [Pasos finales](final-server-steps)
+6. [Pasos finales del servidor](final-server-steps)
 
 7. [Mantener el servidor actualizado](keeping-the-server-up-to-date)
 
-8. [Configuración del Cliente](client-setup)
+8. [Configuración del cliente](client-setup)
 
-Cada paso se puede leer de forma independiente o puedes leerlos ordenadamente en orden, para ir entrando poco a poco en él y entenderlo mejor.
-
-{% include tip.html content="Si es la primera vez que instalas AzerothCore, ¡te recomendamos que leas cada paso con atención!" %}
-
-<br>
+9. [(Opcional) Instalar un módulo](installing-a-module)
 
 ## Ayuda
 
-Si sigue teniendo inconvenientes, revise:
+Si sigues teniendo problemas, comprueba:
 
-* [Preguntas frecuentes](faq)
-
-* [Errores Comunes](common-errors)
-
-* [Cómo solicitar ayuda](how-to-ask-for-help)
-
-* [Unase a nuestro discord](https://discord.gg/gkt4y2x). Aunque no es un canal de soporte 24/7, un miembro del staff le responderá siempre que tenga tiempo.
+- [Preguntas frecuentes](faq)
+- [Errores comunes](common-errors)
+- [Cómo pedir ayuda](how-to-ask-for-help)
+- [Únete a nuestro servidor de Discord](https://discord.gg/gkt4y2x), pero no es un canal de soporte 24/7. Un miembro del staff te responderá cuando tenga tiempo.
 
 | Guía de instalación | |
 | :- | :- |
-| Este artículo es una parte de la Guía de Instalación. Puede leerlo solo o hacer clic en el enlace anterior para moverse fácilmente entre los pasos. |
-| [<< Comienza: Installation](installation) | [Paso 1: Requisitos >>](requirements) |
+| Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
+| [<< Inicio: Instalación](installation) | [Paso 1: Requisitos >>](requirements) |

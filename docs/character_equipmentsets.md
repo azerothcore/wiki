@@ -86,7 +86,7 @@ Name taken from ItemDisplayInfo.dbc, column 6.
 
 ### ignore\_mask
 
-`field-no-description|6`
+A bitmask of equipment slot indices that should be ignored (left unchanged) when this equipment set is applied. Each bit corresponds to an equipment slot index.
 
 ### item
 

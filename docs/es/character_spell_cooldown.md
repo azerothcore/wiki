@@ -42,4 +42,4 @@ El tiempo en que terminará la recarga del hechizo, medido en [Tiempo Unix](http
 
 ### needSend
 
-`Campo-sin-descripción|5`
+Booleano (0 o 1). Si es 1, la entrada de recarga debe enviarse al cliente en el siguiente inicio de sesión.

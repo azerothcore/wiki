@@ -24,7 +24,7 @@ This table holds information about when using certain profession spells, you hav
 
 ### spellId
 
-The spell ID that creates the item. See [Spell.dbc](Spell)
+The spell ID that creates the item. See [Spell.dbc](spell)
 
 ### requiredSpecialization
 

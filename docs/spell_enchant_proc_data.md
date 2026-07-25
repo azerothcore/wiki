@@ -13,12 +13,14 @@
 | [entry][1]        | INT   | UNSIGNED   |     | NO   | NULL    |       |         |
 | [customChance][2] | INT   | UNSIGNED   |     | NO   | 0       |       |         |
 | [PPMChance][3]    | FLOAT | UNSIGNED   |     | NO   | 0       |       |         |
-| [proxEx][4]       | FLOAT | UNSIGNED   |     | NO   | 0       |       |         |
+| [procEx][4]       | INT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [attributeMask][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #customchance
 [3]: #ppmchance
-[4]: #proxex
+[4]: #procex
+[5]: #attributemask
 
 **Description of the fields**
 
@@ -37,3 +39,7 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 ### procEx
 
 `field-no-description|4`
+
+### attributeMask
+
+`field-no-description|5`

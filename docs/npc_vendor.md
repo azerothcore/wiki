@@ -26,6 +26,7 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 | [maxcount][4]     | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
 | [incrtime][5]     | INT       | UNSIGNED   |     | NO   | 0       |       |         |
 | [ExtendedCost][6] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [VerifiedBuild][7] | INT      |            |     | YES  | NULL    |       |         |
 
 [1]: #entry
 [2]: #slot
@@ -33,6 +34,7 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 [4]: #maxcount
 [5]: #incrtime
 [6]: #extendedcost
+[7]: #verifiedbuild
 
 
 ## Field Descriptions

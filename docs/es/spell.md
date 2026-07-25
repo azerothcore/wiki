@@ -1,15 +1,21 @@
+---
+redirect_from: "/Spell"
+---
+
 # Spell
 
-[`Volver a:DBC`](dbc-index)
+[`Volver a: DBC`](dbc-index)
 
 # **Spell.dbc**
 
-Éste archivo DBC alberga la mayor parte de información acerca de todos los hechizos existentes.
-Los valores son usados por el núcleo del emulador y por algunas tablas spell\_\* de hechizos.
+Este archivo DBC alberga la mayor parte de información acerca de todos los hechizos existentes.
+Los valores son usados por el core del emulador y por algunas tablas spell\_\* de hechizos.
 
 **Versión 3.3.5**
 
-## *Estructura**
+[Cómo importar datos DBC a mi base de datos](how-to-import-dbc-data-in-db)  
+
+## **Estructura**
 
 | ID  | Nombre                        | Tipo   |
 |-----|-------------------------------|--------|
@@ -259,8 +265,6 @@ Los valores son usados por el núcleo del emulador y por algunas tablas spell\_\
 
 ## **powerType**
 
-Tipo de poder:
-
 | ID | Descripción |
 |----|-------------|
 | 0  | Maná        |
@@ -270,5 +274,5 @@ Tipo de poder:
 
 ## **RequiresSpellFocus**
 
-Indica que este hechizo en particular necesita un 'GO' cerca de (por ejemplo, forjas para funcionar (en caso de que sea un hechizo de profesión)).
-El objeto requerido para que el hechizo funcione posée el tipo 'GAMEOBJECT\_TYPE\_SPELLFOCUS' y dentro de la columna 'data0' en GameObject_template coincide justamente con el valor de 'RequiresSpellFocus'.
+Indica que este hechizo necesita un GO cerca (p. ej. forjas).
+El objeto requerido tiene el tipo GAMEOBJECT\_TYPE\_SPELLFOCUS y su data0 coincide con el valor de RequiresSpellFocus.

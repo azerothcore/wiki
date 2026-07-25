@@ -30,7 +30,7 @@ Criteria from [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### counter
 
-`field-no-description|3`
+The current progress count towards completing the achievement criteria.
 
 ### date
 

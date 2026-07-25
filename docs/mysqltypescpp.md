@@ -4,204 +4,36 @@ redirect_from: "/MySQLtypesC++"
 
 # MySQL Types C++
 
-<div id="main-content" data-inline-comments-target="true" class="wiki-content">
-    <div class="table-wrap">
-        <table class="confluenceTable" resolved="">
-            <thead>
-                <tr>
-                    <th colspan="4" class="confluenceTh">Mapping from types used in SQL queries</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th class="confluenceTh">
-                        <p>MySQL type</p>
-                        <th class="confluenceTh">Core type
-                    </th>
-                    <th class="confluenceTh">Example code</th>
-                    <th colspan="1" class="confluenceTh">Variable operators</th>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">BIGINT</td>
-                    <td colspan="1" class="confluenceTd">int64</td>
-                    <td colspan="1" class="confluenceTd"><code>int64 val = fields[n].GetInt64();</code></td>
-                    <td colspan="1" class="confluenceTd">%I64d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Capital i)</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">BIGINT UNSIGNED</td>
-                    <td colspan="1" class="confluenceTd">uint64</td>
-                    <td colspan="1" class="confluenceTd"><code><span>uint64 val = fields[n].GetUInt64();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd">%I64u&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Capital i)</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">INT</td>
-                    <td colspan="1" class="confluenceTd">int32</td>
-                    <td colspan="1" class="confluenceTd"><code><span>int32 val = fields[n].GetInt32();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd"><span>%u</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">INT UNSIGNED</td>
-                    <td colspan="1" class="confluenceTd">uint32</td>
-                    <td colspan="1" class="confluenceTd"><code><span>uint32 val = fields[n].GetUInt32();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd"><span>%u</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">MEDIUMINT</td>
-                    <td colspan="1" class="confluenceTd">int32</td>
-                    <td colspan="1" class="confluenceTd"><code><span>int32 val = fields[n].GetInt32();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd"><span>%u</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">MEDIUMINT UNSIGNED</td>
-                    <td colspan="1" class="confluenceTd">uint32</td>
-                    <td colspan="1" class="confluenceTd"><code><span>uint32 val = fields[n].GetUInt32();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd"><span>%u</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">SMALLINT</td>
-                    <td colspan="1" class="confluenceTd">int16</td>
-                    <td colspan="1" class="confluenceTd"><code><span>int16 val = fields[n].GetInt16();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">SMALLINT UNSIGNED</td>
-                    <td colspan="1" class="confluenceTd">uint16</td>
-                    <td colspan="1" class="confluenceTd"><code><span>uint16 val = fields[n].GetUInt16();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">TINYINT</td>
-                    <td colspan="1" class="confluenceTd">int8</td>
-                    <td colspan="1" class="confluenceTd"><code><span>int16 val = fields[n].GetInt16();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">TINYINT UNSIGNED</td>
-                    <td colspan="1" class="confluenceTd">uint8</td>
-                    <td colspan="1" class="confluenceTd"><code><span>uint8 val = fields[n].GetUInt8();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">FLOAT</td>
-                    <td rowspan="2" class="confluenceTd">float</td>
-                    <td rowspan="2" class="confluenceTd"><code>float val = fields[n].GetFLOAT();</code></td>
-                    <td colspan="1" class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">FLOAT UNSIGNED</td>
-                    <td class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="confluenceTd">DOUBLE</td>
-                    <td rowspan="2" class="confluenceTd">double</td>
-                    <td rowspan="2" class="confluenceTd"><code>double val = fields[n].GetDouble();</code></td>
-                    <td colspan="1" class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="confluenceTd">DOUBLE UNSIGNED</td>
-                    <td class="confluenceTd">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">text</td>
-                    <td rowspan="6" class="confluenceTd">
-                        <p style="text-align: center;"><span>string (std::string)</span></p>
-                        <p style="text-align: center;"><span>or</span></p>
-                        <p style="text-align: center;"><span>cstring (char const*)</span></p>
-                    </td>
-                    <td rowspan="6" class="confluenceTd">
-                        <p><code>std::string text = fields[n].GetString();</code></p>
-                        <p><code>char const* text = fields[n].GetCString();</code></p>
-                    </td>
-                    <td colspan="1" class="confluenceTd">%s</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">longtext</td>
-                    <td class="confluenceTd"><span>%s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd"><span style="color: rgb(68,68,68);">tinytext</span></td>
-                    <td class="confluenceTd"><span style="color: rgb(68,68,68);"><span>%s</span></span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">char(k)</td>
-                    <td class="confluenceTd"><span>%s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">VARCHAR(k)</td>
-                    <td class="confluenceTd"><span>%s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">blob</td>
-                    <td class="confluenceTd"><span>%s</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">COUNT(x)</td>
-                    <td colspan="1" class="confluenceTd">uint64</td>
-                    <td colspan="1" class="confluenceTd"><code><span>uint64 count = fields[n].GetUInt64();</span></code>
-                    </td>
-                    <td colspan="1" class="confluenceTd">%UI64FMT*</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">MAX(x)</td>
-                    <td rowspan="2" class="confluenceTd">uint32 or int32</td>
-                    <td rowspan="2" class="confluenceTd">
-                        <p><code>uint32 minmax = fields[n].GetUInt32();</code></p>
-                        <p><code>int32 minmax = fields[n].GetInt32();</code></p>
-                    </td>
-                    <td colspan="1" class="confluenceTd">%u</td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">MIN(x)</td>
-                    <td class="confluenceTd"><span>%u</span></td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">SUM(x)</td>
-                    <td colspan="1" class="confluenceTd">
-                        <p style="text-align: center;">string (std::string)</p>
-                        <p style="text-align: center;">or</p>
-                        <p style="text-align: center;">cstring (char const*)</p>
-                    </td>
-                    <td colspan="1" class="confluenceTd">
-                        <p><code>INT sum;</code></p>
-                        <p><code>if (const char* ch = fields[n].GetCString())</code></p>
-                        <p><code> sum = atoi(ch);</code></p>
-                    </td>
-                    <td colspan="1" class="confluenceTd">
-                        <p>%s</p>
-                        <p>&nbsp;</p>
-                        <p>%s</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="1" class="confluenceTd">UNIX_TIMESTAMP(x)</td>
-                    <td colspan="1" class="confluenceTd">uint64</td>
-                    <td colspan="1" class="confluenceTd"><code>uint64 unix_time = fields[n].GetUInt64();</code></td>
-                    <td colspan="1" class="confluenceTd">
-                        <p>&nbsp;</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p>1* %UI64FMT does not work with acore_string</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true"
-        data-macro-name="code" data-macro-id="">
-        <div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Example</b></div>
-        <div class="codeContent panelContent pdl"></div>
-	</div>
-</div>
-		
+| MySQL type         | Core type                                     | Example code                                                                                | Variable operators |
+| ------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------ |
+| BIGINT             | int64                                         | `int64 val = fields[n].GetInt64();`                                                         | %I64d (Capital i)  |
+| BIGINT UNSIGNED    | uint64                                        | `uint64 val = fields[n].GetUInt64();`                                                       | %I64u (Capital i)  |
+| INT                | int32                                         | `int32 val = fields[n].GetInt32();`                                                         | %u                 |
+| INT UNSIGNED       | uint32                                        | `uint32 val = fields[n].GetUInt32();`                                                       | %u                 |
+| MEDIUMINT          | int32                                         | `int32 val = fields[n].GetInt32();`                                                         | %u                 |
+| MEDIUMINT UNSIGNED | uint32                                        | `uint32 val = fields[n].GetUInt32();`                                                       | %u                 |
+| SMALLINT           | int16                                         | `int16 val = fields[n].GetInt16();`                                                         |                    |
+| SMALLINT UNSIGNED  | uint16                                        | `uint16 val = fields[n].GetUInt16();`                                                       |                    |
+| TINYINT            | int8                                          | `int16 val = fields[n].GetInt16();`                                                         |                    |
+| TINYINT UNSIGNED   | uint8                                         | `uint8 val = fields[n].GetUInt8();`                                                         |                    |
+| FLOAT              | float                                         | `float val = fields[n].GetFLOAT();`                                                         |                    |
+| FLOAT UNSIGNED     | float                                         | `float val = fields[n].GetFLOAT();`                                                         |                    |
+| DOUBLE             | double                                        | `double val = fields[n].GetDouble();`                                                       |                    |
+| DOUBLE UNSIGNED    | double                                        | `double val = fields[n].GetDouble();`                                                       |                    |
+| text               | string (std::string) or cstring (char const*) | `std::string text = fields[n].GetString();`<br>`char const* text = fields[n].GetCString();` | %s                 |
+| longtext           | string (std::string) or cstring (char const*) | `std::string text = fields[n].GetString();`<br>`char const* text = fields[n].GetCString();` | %s                 |
+| tinytext           | string (std::string) or cstring (char const*) | `std::string text = fields[n].GetString();`<br>`char const* text = fields[n].GetCString();` | %s                 |
+| char(k)            | string (std::string) or cstring (char const*) | `std::string text = fields[n].GetString();`<br>`char const* text = fields[n].GetCString();` | %s                 |
+| VARCHAR(k)         | string (std::string) or cstring (char const*) | `std::string text = fields[n].GetString();`<br>`char const* text = fields[n].GetCString();` | %s                 |
+| blob               | string (std::string) or cstring (char const*) | `std::string text = fields[n].GetString();`<br>`char const* text = fields[n].GetCString();` | %s                 |
+| COUNT(x)           | uint64                                        | `uint64 count = fields[n].GetUInt64();`                                                     | %UI64FMT*          |
+| MAX(x)             | uint32 or int32                               | `uint32 minmax = fields[n].GetUInt32();`<br>`int32 minmax = fields[n].GetInt32();`          | %u                 |
+| MIN(x)             | uint32 or int32                               | `uint32 minmax = fields[n].GetUInt32();`<br>`int32 minmax = fields[n].GetInt32();`          | %u                 |
+| SUM(x)             | string (std::string) or cstring (char const*) | `INT sum;`<br>`if (const char* ch = fields[n].GetCString())`<br>`    sum = atoi(ch);`       | %s                 |
+| UNIX_TIMESTAMP(x)  | uint64                                        | `uint64 unix_time = fields[n].GetUInt64();`                                                 |                    |
+
+\* %UI64FMT does not work with acore_string
+
 ```cpp
 // world database query                           0      1      2      3        4
 QueryResult result = WorldDatabase.Query("SELECT guid, entry, name, period, ScriptName FROM transports");
@@ -213,7 +45,7 @@ do
     std::string name = fields[2].GetString();
     uint32 period    = fields[3].GetUInt32();
     uint32 scriptId  = sObjectMgr->GetScriptId(fields[4].GetCString());
-     
+
     // ...
 }
 while (result->NextRow());

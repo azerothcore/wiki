@@ -36,6 +36,6 @@ The entry of the item. See [item\_template.entry](item_template#entry).
 
 ### flags
 
-`field-no-description|4`
+The item proto flags of the gifted item at the time it was wrapped.
 
 *Note for future research: max flags 13369920? FieldFlags of ProtoFlags?*

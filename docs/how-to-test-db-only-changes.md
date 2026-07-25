@@ -18,7 +18,7 @@ For those PRs there is a simpler way to test them, which will be explained in th
 
 This tutorial assumes that you:
 
-- have a **recent** version of AzerothCore installed in your system (either using the [traditional setup](Installation) or the [Docker setup](Install-with-Docker)). We recommend using latest `master`.
+- have a **recent** version of AzerothCore installed in your system (either using the [traditional setup](installation) or the [Docker setup](Install-with-Docker)). We recommend using latest `master`.
 - have a GitHub account, you can [register one here](https://github.com/join) for free.
 - have a database client such as [HeidiSQL](https://www.heidisql.com/), Navicat or similar.
 

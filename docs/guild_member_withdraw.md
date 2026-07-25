@@ -9,7 +9,7 @@
 | Field      | Type  | Attributes | Key | Null | Default | Extra  | Comment |
 | ---------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
 | [guid][1]  | INT   | UNSIGNED   | PRI | NO   |         |        |         |
-| [tab1][2]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab0][2]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
 | [tab1][3]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
 | [tab2][4]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
 | [tab3][5]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |

@@ -52,7 +52,7 @@ The difficulty of the current instance.
 
 ### completedEncounters
 
-`field-no-description|5`
+A bitmask of boss encounters that have been completed in this instance. Each bit corresponds to a boss encounter defined in the instance script.
 
 ### data
 

@@ -17,6 +17,7 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 | [PrevQuestID](#prevquestid)                     | MEDIUMINT |            |     | NO   |         |       |                                       |
 | [NextQuestID](#nextquestid)                     | MEDIUMINT |            |     | NO   |         |       |                                       |
 | [ExclusiveGroup](#exclusivegroup)               | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [BreadcrumbForQuestId](#breadcrumbforquestid)   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                                       |
 | [RewardMailTemplateID](#rewardmailtemplateid)   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
 | [RewardMailDelay](#rewardmaildelay)             | INT       | UNSIGNED   |     | NO   |         |       |                                       |
 | [RequiredSkillID](#requiredskillid)             | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
@@ -68,6 +69,15 @@ Allows to define a group of quests of which all must be completed and rewarded t
 
 Note: All quests that use an ExclusiveGroup must also have entries in [pool_template](pool_template) and [pool_quest](quest_template#examples-dealing-with-quests) for examples.
 
+### BreadcrumbForQuestId
+
+If set, indicates that this quest is a breadcrumb leading to the quest with the specified ID. The two quests become mutually exclusive:
+
+- This quest (the breadcrumb) becomes unavailable if the target quest is taken, complete, or rewarded.
+- The target quest becomes unavailable if this quest is in progress or complete (but not if rewarded — completing the breadcrumb unlocks the target quest).
+
+This single field replaces the need for multiple condition entries. `0` means no breadcrumb relationship.
+
 ### RewardMailTemplateID
 
 If the quest gives as a reward an item from a possible list of items, the ID here corresponds to the proper loot template in [quest_mail_loot_template](loot_template). According to the rules in that loot template, items "looted" will be sent by mail at the completion of the quest.
@@ -78,7 +88,7 @@ How many seconds to wait until the mail is sent to the character that turned in 
 
 ### RequiredSkillID
 
-Skill required to know to accept the quest. See [SkillLine.dbc](SkillLine)
+Skill required to know to accept the quest. See [SkillLine.dbc](skillline)
 0 means no skill is required.
 
 ### RequiredSkillPoints
@@ -87,11 +97,11 @@ Skill points required to have in order to accept the quest.
 
 ### RequiredMinRepFaction
 
-Faction ID for reputation requirement. See [Faction.dbc](Faction).
+Faction ID for reputation requirement. See [Faction.dbc](faction).
 
 ### RequiredMaxRepFaction
 
-The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](Faction).
+The Faction ID for the faction that controls the maximum reputation value that the player can have and still get the quest. See [Faction.dbc](faction).
 
 ### RequiredMinRepValue
 

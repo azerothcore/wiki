@@ -1,37 +1,38 @@
 ---
-redirect_from: "/CMake-options"
+redirect_from: "/es/CMake-options"
 ---
 
 # Opciones de CMake
 
 ## RENDIMIENTO
 
-Si quieres desactivar las optimizaciones de rendimiento, añade esta flag `-DENABLE_EXTRAS=0`.
+Si quieres desactivar las optimizaciones de rendimiento, añade esta flag: `-DENABLE_EXTRAS=0`
 
-Sólo es necesario si estás depurando.
+Solo es necesario si estás depurando.
 
-## EXTRA LOGS
+## LOGS ADICIONALES
 
-Si desea activar los registros adicionales, añada esta flag: `-DENABLE_EXTRA_LOGS=1`.
+Si quieres activar los logs adicionales, añade esta flag: `-DENABLE_EXTRA_LOGS=1`
 
-Nota: Será un uso intensivo de la CPU.
+Nota: Hará un uso intensivo de la CPU.
 
 ## ADVERTENCIAS
 
-Habilitar todas las advertencias al compilar: `-DWITH_WARNINGS=1`
+Habilita todas las advertencias al compilar: `-DWITH_WARNINGS=1`
 
 ## Cabeceras precompiladas (PCH)
 
-Desactivar todos los usos de PCH: `-DNOPCH=1`
+Desactivar todos los usos de PCH:
+
+`-DNOPCH=1`
 
 O uno por uno:
-
 ```
 -DUSE_COREPCH=0
 -DUSE_SCRIPTPCH=0
 ```
 
-Puede aumentar los tiempos de construcción.
+Puede aumentar los tiempos de build.
 
 ## OTRAS OPCIONES
 

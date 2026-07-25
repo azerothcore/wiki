@@ -1,4 +1,4 @@
-﻿# pool\_quest\_save
+# pool\_quest\_save
 
 [<-Volver a:Characters](database-characters)
 

@@ -79,7 +79,7 @@ Used to group items within the same loot template.
 - If the total [chance](#chance) for the group is 100 then one item will always drop.
 - If the total [chance](#chance) for the group is less than 100, then there is a risk of empty loot.
 
-Referenced loot can not be a part of a group.
+Referenced loot can be a part of a group, just like items. When a reference is grouped, it competes with the other entries in that group, and only one entry (item or reference) will be selected. If the reference wins the roll, the entire referenced template is processed.
 
 **Note: The client can only display 16 items in the loot windows, this includes gold. Therefore it is not recomended to use more than 16 groups.**
 
