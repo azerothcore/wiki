@@ -21,3 +21,4 @@ See [wiki standards](wiki-standards#archived-pages) for how to archive a page.
 | [How to spot DB struct diff commits](how-to-spot-db-struct-diff-commits) | 2026-07-26 | TrinityCore import workflow no longer used |
 | [Project Versioning](project-versioning) | 2026-07-26 | Release table and support phases no longer reflect the project, see the [releases](https://github.com/azerothcore/azerothcore-wotlk/releases) on GitHub |
 | [TrinityCore to AzerothCore Character & Auth Migration Tool](trinitycore-to-azerothcore-characters-migration) | 2026-07-26 | Migration tool and steps are unmaintained |
+| [Upgrade from pre 2.0.0 to latest master](upgrade-from-pre-2.0.0-to-latest-master) | 2026-07-26 | One-off upgrade path off the pre-2.0.0 release line, no longer a realistic starting point. Already unlinked from the rest of the wiki. Use [Keeping the Server Up-to-Date](keeping-the-server-up-to-date) |
