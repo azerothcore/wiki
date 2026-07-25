@@ -13,6 +13,7 @@ Consulta [estándares de la wiki](wiki-standards#paginas-archivadas) para saber 
 | Página | Archivada | Motivo |
 | ------ | --------- | ------ |
 | [Importando datos a la tabla spell_dbc](importing-spell-dbc) | 2026-07-26 | Marcada como no vigente, se conserva como referencia |
+| [Registro de cambios](changelog) | 2026-07-26 | Registro de los grandes cambios de la API, ya no se mantiene actualizado. La entrada más reciente, `6.0.0-dev.1`, apunta a un commit de febrero de 2022 |
 | [Configuración manual de la base de datos](database-manual-setup) | 2026-07-26 | Se basa en el script `db_assembler`, eliminado del core en 2023. Usa la guía de [Instalación de la BD](database-installation) |
 | [Videotutorial de droplet en Digital Ocean](digital-ocean-video-tutorial) | 2026-07-26 | Apunta a Debian 9, sus pasos de instalación ya no funcionan. Usa la [Guía de instalación de Debian 12](debian12-install-guide) |
 | [Variable de entorno](environment-variable) | 2026-07-26 | Guía del PATH de MySQL en Windows, sustituida por la [Guía de instalación](installation) |

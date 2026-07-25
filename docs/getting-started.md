@@ -172,7 +172,7 @@ If you mastered some of the above parts, there is already **A LOT** you can do t
 For example:
 
 - Help the developers by testing PRs and giving your feedback
-- Do some bug triaging by confirming issues and helping us to identify and close the invalid reports
+- Do some bug triaging by confirming issues and helping us to identify and close the invalid reports, see the [Guide to Triaging](guide-to-triaging)
 - You can also help by [triaging the bugs coming from the players of ChromieCraft](https://github.com/chromiecraft/chromiecraft) (our child-project)
 - Report any bug that you may find yourself
 - Try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that (e.g. using SmartAI or other embedded editors). Being this an open-source project, you can find plenty of examples on our main GitHub repository
