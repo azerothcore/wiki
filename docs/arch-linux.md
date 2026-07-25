@@ -23,7 +23,7 @@ sudo pacman -Syu --needed base-devel git cmake clang boost
 ## MySQL on Arch Linux
 AzerothCore requires Oracle MySQL. Oracle MySQL is not available from the official Arch repositories, so this guide installs it from the AUR.
 
-> {% include warning.html content="Trusting keys is always up to the user to verify that the key being trusted should be. If you have any doubts or concerns, stop here and use a different installation method." %}
+{% include warning.html content="Trusting keys is always up to the user to verify that the key being trusted should be. If you have any doubts or concerns, stop here and use a different installation method." %}
 
 Import the MySQL signing key:
 
@@ -45,7 +45,7 @@ If MariaDB (or related packages) are present, remove them before proceeding to a
 sudo pacman -Rns mariadb
 ```
 
-> {% include note.html content="This package builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
+{% include note.html content="This package builds MySQL from source. You will likely need at least 4 Gigabytes of memory for the compile to succeed." %}
 
 ```sh
 mkdir -p ~/AUR
