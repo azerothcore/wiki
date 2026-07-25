@@ -44,8 +44,12 @@ ALL TRANSLATIONS should be in a sub-directory of /docs/ with the shortened local
 
 ALL FILES should be named the **exact same as the English versions**! Do not ever translate the file names, only the contents within.
 
-## ARCHIVED PAGES: (Not yet implemented)
+## ARCHIVED PAGES:
 
-ALL ARCHIVED PAGES that could potentially have some some value should be added to the `archive` list and links to these pages should be removed from other places in the wiki.
+ALL ARCHIVED PAGES that could potentially have some some value should be added to the [archive](archive) list and links to these pages should be removed from other places in the wiki.
 
-They should also be moved into the /docs/archive/ folder.
+They should also be moved into the /docs/archive/ folder. Translations of an archived page are moved into the archive folder of their own locale, i.e. /docs/es/archive/, keeping the exact same file name as the English version.
+
+Pages in an archive folder keep the url they had before they were archived, so links from outside the wiki do not break, and they automatically get an archive notice at the top of the page.
+
+If a locale gets its first archived page, you need to allow the directory path in `_config.yml`, the same way it is done for translations.

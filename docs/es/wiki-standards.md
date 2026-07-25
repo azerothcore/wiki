@@ -36,8 +36,12 @@ Todas las traducciones deberían estar en un sub directorio de /docs/ con el loc
 
 Todos los archivos deben nombrarse **¡exactamente igual que las versiones en inglés. exact same as the English versions!** Nunca traduzca los nombres de los archivos, solo el contenido dentro de ellos..
 
-## Paginas archivadas: (Sin implementar aún)
+## Paginas archivadas:
 
-Todas las páginas archivadas que puedan, potencialmente, contener alguna clase de valor, deberían ser añadidas en la  lista `archive` y los enlaces a estas páginas deberían ser removidos de otros lugares en la Wiki.
+Todas las páginas archivadas que puedan, potencialmente, contener alguna clase de valor, deberían ser añadidas en la lista [archive](archive) y los enlaces a estas páginas deberían ser removidos de otros lugares en la Wiki.
 
-Deberían también ser movidas a la carpeta /docs/archive/.
+Deberían también ser movidas a la carpeta /docs/archive/. Las traducciones de una página archivada se mueven a la carpeta archive de su propio locale, por ejemplo /docs/es/archive/, manteniendo exactamente el mismo nombre de archivo que la versión en inglés.
+
+Las páginas dentro de una carpeta archive conservan la url que tenían antes de ser archivadas, así que los enlaces desde fuera de la Wiki no se rompen, y reciben automáticamente un aviso de archivado en la parte superior de la página.
+
+Si un locale recibe su primera página archivada, debes habilitar la ruta al directorio en `_config.yml`, igual que se hace con las traducciones.
