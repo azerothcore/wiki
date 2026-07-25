@@ -31,7 +31,6 @@
 - [Cofiguración de Logging](logging-configuration)
 - [Monitoreando AzerothCore con Grafana](monitoring-azerothcore-with-grafana)
 - [Tipos de datos MySQL/C++](mysqltypescpp)
-- [Versionado del proyecto](project-versioning)
 - [Sniffing y Parsing](sniffing-and-parsing)
 - [Directorio SQL](sql-directory)
 - [Versionado de SQL](sql-versioning)

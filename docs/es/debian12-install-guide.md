@@ -334,5 +334,4 @@ acoreupdate
 
 ### Otros recursos {#other-resources}
 - [Guía de instalación oficial de AzerothCore](installation)
-- [Tutorial de Debian de heyaapl](digital-ocean-video-tutorial)
 - [Video de Digital Scriptorium](https://www.youtube.com/watch?v=k4i4za1Scgg)

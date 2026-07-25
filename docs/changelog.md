@@ -450,7 +450,3 @@ Example: `getAreaInfo` -> `GetAreaInfo`
 
 ### Added
 - Created new changelog system.
-
-### How to upgrade
-
-To create a new changelog please follow the instructions on our [wiki page](how-to-use-changelog)

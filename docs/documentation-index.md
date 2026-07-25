@@ -41,7 +41,6 @@ redirect_from: /documentation_index
 * [Logging Configuration](logging-configuration)
 * [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana)
 * [MySQL types (C++)](mysqltypescpp)
-* [Project Versioning](project-versioning)
 * [RBAC](rbac)
 * [Remote Access](remote-access)
 * [Sniffing & Parsing](sniffing-and-parsing)

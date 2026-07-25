@@ -1,4 +1,4 @@
-{% include warning.html content="This guide is out-dated as it refers to MariaDB, which is no longer supported." %}
+{% include warning.html content="Esta guía usa MariaDB, que ya no está soportado. Para una instalación en VPS actualizada, usa la [Guía de instalación de Debian 12](debian12-install-guide) o la [Guía de instalación](installation) principal." %}
 
 ## Introducción
 
