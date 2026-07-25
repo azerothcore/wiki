@@ -51,6 +51,11 @@
 - [Hooks Cmake](hooks-cmake)
 - [Hooks C++](hooks-script)
 
+## Documentación del wiki
+
+- [Estándares de la Wiki](wiki-standards)
+- [Archivo](archive)
+
 ## Recursos externos
 
 <a href="https://github.com/azerothcore/azerothcore-wotlk/discussions/categories/guides-tips" target="_blank">Guías y consejos de nuestro foro</a>

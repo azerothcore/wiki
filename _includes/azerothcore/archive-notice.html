@@ -1,0 +1,8 @@
+<div class="alert alert-warning" role="alert">
+    <i class="fa-solid fa-box-archive"></i>
+    {% if page.url contains '/es/' %}
+    <b>Archivado:</b> Esta página ya no se mantiene y se conserva únicamente como referencia histórica. Su contenido puede ser inexacto o estar obsoleto. Consulta el <a href="archive">archivo</a> para ver el resto de páginas archivadas.
+    {% else %}
+    <b>Archived:</b> This page is no longer maintained and is kept for historical reference only. Its content may be inaccurate or out of date. See the <a href="archive">archive</a> for the other archived pages.
+    {% endif %}
+</div>

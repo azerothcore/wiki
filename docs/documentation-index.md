@@ -90,3 +90,5 @@ redirect_from: /documentation_index
 ## Wiki docs
 
 * [Wiki Alerts and Callouts](wiki-alerts-and-callouts)
+* [Wiki Standards](wiki-standards)
+* [Archive](archive)
