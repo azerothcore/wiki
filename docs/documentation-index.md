@@ -33,11 +33,13 @@ redirect_from: /documentation_index
 * [Directory structure](directory-structure)
 * [Doxygen Documentation](https://www.azerothcore.org/doxygen)
 * [Exit Codes](exitcodes)
+* [Getting Started](getting-started)
 * [GM Commands](gm-commands)
 * [How to Debug and Restart](how-to-restart-and-debug)
 * [How to Use Warden Payload Manager](how-to-use-warden-payload-mgr)
 * [How to work with Conf Files](how-to-work-with-conf-files)
 * [IP2LOCATION](ip2location)
+* [Keira3 Internals](keira3-internals)
 * [Logging Configuration](logging-configuration)
 * [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana)
 * [MySQL types (C++)](mysqltypescpp)
@@ -46,8 +48,11 @@ redirect_from: /documentation_index
 * [Sniffing & Parsing](sniffing-and-parsing)
 * [Spell Effects Reference](spell-effects-reference)
 * [Spell Aura Reference](spell-aura-reference)
+* [Spell System](spell_system)
 * [SQL Directory](sql-directory)
 * [SQL Versioning](sql-versioning)
+* [Unit testing](unit-testing)
+* [UpdateFields](updatefields)
 
 ## Recipes & Techniques
 

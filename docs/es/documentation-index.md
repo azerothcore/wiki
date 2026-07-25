@@ -26,14 +26,19 @@
 - [Índice DBC](dbc-index)
 - [Estructura del directorio](directory-structure)
 - [Codigos de salida](exitcodes)
+- [Primeros pasos](getting-started)
 - [Cómo depurar y reiniciar](how-to-restart-and-debug)
 - [IP2LOCATION](ip2location)
+- [Interioridades de Keira3](keira3-internals)
 - [Cofiguración de Logging](logging-configuration)
 - [Monitoreando AzerothCore con Grafana](monitoring-azerothcore-with-grafana)
 - [Tipos de datos MySQL/C++](mysqltypescpp)
 - [Sniffing y Parsing](sniffing-and-parsing)
+- [Sistema de hechizos](spell_system)
 - [Directorio SQL](sql-directory)
 - [Versionado de SQL](sql-versioning)
+- [Pruebas unitarias](unit-testing)
+- [UpdateFields](updatefields)
 
 ## Modelos y técnicas
 

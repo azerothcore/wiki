@@ -109,6 +109,7 @@
 - [item_set_names_locale](item_set_names_locale)
 - [item_template](item_template)
 - [item_template_locale](item_template_locale)
+- [itemset_dbc](itemset_dbc)
 
 ## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards)

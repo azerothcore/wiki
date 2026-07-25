@@ -14,6 +14,7 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## Getting started
 
+- [Getting Started](getting-started) - Learn what AzerothCore is and how to work with it
 - [Installation Guide](installation)
 
 ## Documentation

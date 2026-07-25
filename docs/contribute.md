@@ -50,6 +50,7 @@ If **(and only if)** the bug hasn't been reported yet, you can [open an issue](h
 
 - Read [How to create a PR](How-to-create-a-PR).
 - Alternatively, you can also check [this simpler tutorial](How-to-create-a-DB-PR) about opening PRs containing SQL code via GitHub.
+- Follow the [commit message guidelines](commit-message-guidelines) when writing your commits.
 
 ### Giving credit to the author of code
 

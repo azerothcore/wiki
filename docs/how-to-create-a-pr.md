@@ -235,6 +235,8 @@ fix(DB/Creature): Deadmines - Mr. Smite no longer resets
 
 You can refer to a commit like [this one](https://github.com/azerothcore/azerothcore-wotlk/commit/afc33e7b285efd717dcd4ce75b590d99f2bcbdf6) as an example.
 
+See the [commit message guidelines](commit-message-guidelines) for the accepted types, scopes and more examples.
+
 #### Commit and push with GitHub Desktop
 
 At the bottom left, fill the **Summary** field with the commit message and, optionally, use the

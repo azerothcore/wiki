@@ -50,6 +50,7 @@ Si **(y solo si)** el bug aún no ha sido reportado, puedes [abrir un issue](htt
 
 - Lee [Cómo crear un PR](how-to-create-a-pr).
 - Alternativamente, también puedes consultar [este tutorial más simple](how-to-create-a-db-pr) sobre cómo abrir pull requests que contienen código SQL a través de GitHub.
+- Sigue las [pautas para mensajes de commit](commit-message-guidelines) al escribir tus commits.
 
 ### Dando crédito al autor del código
 

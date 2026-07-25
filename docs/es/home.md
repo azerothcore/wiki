@@ -12,6 +12,7 @@ Leer en: [Inglés :gb:](home) [Español :es:](home)
 
 ## Empezando
 
+- [Primeros pasos](getting-started) - Qué es AzerothCore y cómo trabajar con él
 - [Guía de instalación](installation)
 
 ## Documentación

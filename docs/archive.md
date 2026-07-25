@@ -13,6 +13,7 @@ See [wiki standards](wiki-standards#archived-pages) for how to archive a page.
 | Page | Archived | Reason |
 | ---- | -------- | ------ |
 | [Importing data to the spell_dbc table](importing-spell-dbc) | 2026-07-26 | Marked as not in use, kept for reference |
+| [Database Manual Setup](database-manual-setup) | 2026-07-26 | Built around the `db_assembler` script, removed from the core in 2023. Use the [Database Installation](database-installation) guide |
 | [Digital Ocean droplet video tutorial](digital-ocean-video-tutorial) | 2026-07-26 | Targets Debian 9, its install steps no longer work. Use the [Debian 12 Install Guide](debian12-install-guide) |
 | [Environment Variable](environment-variable) | 2026-07-26 | Windows MySQL PATH walkthrough, superseded by the [Installation Guide](installation) |
 | [How to use changelog](how-to-use-changelog) | 2026-07-26 | Changelogs are no longer used, the last entry dates back to 2023 |
