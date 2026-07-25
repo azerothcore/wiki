@@ -233,7 +233,7 @@ for example:
 fix(DB/Creature): Deadmines - Mr. Smite no longer resets
 ```
 
-You can refer to a commit like [this one](https://github.com/azerothcore/mod-npc-beastmaster/commit/53cf90233091db2191b522f0fa7c4b6009dca22e) as an example.
+You can refer to a commit like [this one](https://github.com/azerothcore/azerothcore-wotlk/commit/afc33e7b285efd717dcd4ce75b590d99f2bcbdf6) as an example.
 
 #### Commit and push with GitHub Desktop
 
