@@ -10,7 +10,7 @@ redirect_from: "/FactionTemplate"
 
 This DBC contains information on all of the individual factions. A faction entry from this DBC contains all of the needed data to calculate hostility, friendliness, or neutrality to any other faction in this DBC.
 
-**IMPORTANT: These values are only used for the [creature\_template](creature_template) and [gameobject\_template](gameobject\_template) tables.**
+**IMPORTANT: These values are only used for the [creature\_template](creature_template) and [gameobject\_template](gameobject_template) tables.**
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 

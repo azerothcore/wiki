@@ -4,7 +4,7 @@
 
 **The \`waypoint\_data\` table**
 
-This table contains all the path data for creatures that use waypoints and waypoint scripts directly in their creature addon definition. See also [Waypoints-Information](Waypoints-Information) for general information about waypoints.
+This table contains all the path data for creatures that use waypoints and waypoint scripts directly in their creature addon definition. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
 **Table Structure**
 

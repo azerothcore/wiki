@@ -14,7 +14,7 @@ You need first to update your server to [this commit](https://github.com/azeroth
 
 `git checkout 1fc22a74088e235e78fa02decbaf0864899477d7`
 
-Now update your **database** as [you normally do](Update#3-update-the-database).
+Now update your **database** as [you normally do](database-keeping-the-server-up-to-date).
 
 ### Step 2. Upgrade to latest master
 
@@ -24,4 +24,4 @@ Update to latest master:
 
 **Note**: if you are using your own fork of AC, as usual, you have to [sync it](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
 
-Now update your **core and database** (again) as [you normally do](update).
+Now update your **core and database** (again) as [you normally do](keeping-the-server-up-to-date).

@@ -30,7 +30,7 @@ Stores achievement data that is missing in [Achievement.dbc](achievement)
 
 ### ID
 
-This is the ID of the achievement from [Achievement\_Criteria.dbc](Achievement+Criteria) (2nd column)
+This is the ID of the achievement from [Achievement\_Criteria.dbc](achievement_criteria) (2nd column)
 
 ### requiredFaction
 

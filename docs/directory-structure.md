@@ -8,7 +8,7 @@ AzerothCore and our modules is following  directory structure standard from hw-c
 
 <a href="https://github.com/HW-Core/directory-structure/blob/master/README" target="_blank">Standard Directory Structure</a>
 
-This structure is conformed to our [modular architecture](The-Modular-Structure).
+This structure is conformed to our [modular architecture](the-modular-structure).
 
 azerothcore/
 
@@ -63,7 +63,7 @@ azerothcore/
   An example of deps are the 3rd party library such as acelib and the g3dlite lib, but also libraries created by the azerothcore organization for a generic purpose.
 
 ### modules
-  This is a domain-oriented folder structure. In fact, the principal benefit of this structure is its modularity. Each folder represent a standalone [module](The-Modular-Structure)/plugin that is optional and can be used to extend core functionalities. All modules are stored with a multi-repo strategy and they are git-ignored by default.
+  This is a domain-oriented folder structure. In fact, the principal benefit of this structure is its modularity. Each folder represent a standalone [module](the-modular-structure)/plugin that is optional and can be used to extend core functionalities. All modules are stored with a multi-repo strategy and they are git-ignored by default.
   
   An example of module are the transmog, the autobalance, the crossbattlegrounds etc.
 

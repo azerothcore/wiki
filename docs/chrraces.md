@@ -82,4 +82,4 @@ Both factions = 1791 (0 may work)
 
 ### How do I get the values?
 
-If you want to learn how bits work you can read the [bit-and-bytes tutorial](Bit-and_bytes-tutorial).
+If you want to learn how bits work you can read the [bit-and-bytes tutorial](bit-and-bytes-tutorial).

@@ -6,7 +6,7 @@
 
 Used by [SAI](smart_scripts)
 
-Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordinates. See also [Waypoints-Information](Waypoints-Information) for general information about waypoints.
+Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordinates. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
 **Table Structure**
 

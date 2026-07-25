@@ -30,7 +30,7 @@ Contains all the teleport triggers definition. This table is used to complete .d
 
 ### ID
 
-This is the trigger identifier, it must match with the one from [AreaTrigger.dbc](DBC-AreaTrigger)
+This is the trigger identifier, it must match with the one from [AreaTrigger.dbc](dbc-areatrigger)
 
 ### name
 

@@ -34,7 +34,7 @@ The GUID of the player. See [characters.guid](characters#guid).
 
 ### rank
 
-The rank that the player has in the guild. See [guild\_rank.rid](Guild_rank#rid).
+The rank that the player has in the guild. See [guild\_rank.rid](guild_rank#rid).
 
 ### pnote
 
