@@ -332,7 +332,7 @@ All Header files should contain header guards
 
 ### Includes
 
-Every header must be **self-contained**: it must compile on its own, without depending on other headers being included before it. This prevents hidden fragile dependencies. If "A" needs "B" and "C", it should include "B" & "C". It shouldn't only include "B", just because "B" happened to include "C" right now. "A" should also not include anything it doesn't directly use.
+Every header must be **self-contained**: it must compile on its own, without depending on other headers being included before it. This prevents hidden fragile dependencies. If `A` needs `B` and `C`, it should include both `B` and `C`. It shouldn't only include `B` just because `B` happens to include `C` right now. `A` should also not include anything it doesn't directly use.
 
 Includes are written as a single block with no blank lines inside it, ordered as follows:
 
@@ -356,9 +356,36 @@ ItemEnchantmentMgr.cpp example:
 #include <vector>
 ```
 
-Alphabetical ordering is case-sensitive (ASCII order, matching clang-format's default): uppercase letters sort before lowercase. Above, `DBCStores.h` precedes `DatabaseEnv.h` because the uppercase `B` sorts before the lowercase `a`.
+Alphabetical ordering is case-sensitive (ASCII order): uppercase letters sort before lowercase. Above, `DBCStores.h` precedes `DatabaseEnv.h` because the uppercase `B` sorts before the lowercase `a`.
 
-Project headers use quotes (`"..."`); library headers (C++ standard library, boost, etc.) use angle brackets (`<...>`). A third-party library bundled into the codebase, such as G3D, is the exception and uses quotes.
+Project headers use quotes (`"..."`); library headers (C++ standard library, boost, etc.) use angle brackets (`<...>`). A third-party library bundled into the codebase, such as G3D, is the exception and uses quotes, but it still sorts with the library headers rather than with the project headers.
+
+WaypointDefines.h example:
+
+```cpp
+#include "Define.h"          // project headers, alphabetically
+#include "G3D/Vector3.h"     // then library headers, alphabetically
+#include <optional>
+#include <vector>
+```
+
+Conditionally compiled includes are the exception to the single-block rule. Keep every unconditional include together in one sorted block, then place `#if` / `#ifdef` guarded includes after it, separated by a blank line. Do not break up the sorted block to keep a guarded include next to a related one.
+
+Errors.cpp example (shortened):
+
+```cpp
+#include "Errors.h"
+#include "Duration.h"
+#include <cstdio>
+#include <cstdlib>
+#include <thread>
+
+#if AC_PLATFORM == AC_PLATFORM_WINDOWS
+#include <Windows.h>
+#endif
+```
+
+Only guard an include when the header itself is platform or configuration specific. Never wrap an ordinary include in a guard to work around a build error elsewhere, and never leave out an include because some other header happens to pull it in under the current configuration, that is exactly the hidden dependency the self-contained rule prevents.
 
 ### Text Output
 
