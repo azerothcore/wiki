@@ -14,11 +14,12 @@ Read in: [English :gb:](home) [Spanish :es:](es/home)
 
 ## Getting started
 
+- [Getting Started](getting-started) - Learn what AzerothCore is and how to work with it
 - [Installation Guide](installation)
 
 ## Documentation
 
-- [Documentation Index](documentation_index) - All documentation in one place
+- [Documentation Index](documentation-index) - All documentation in one place
 - [Doxygen Docs](https://www.azerothcore.org/doxygen) - Up-to-date API and source code documentation.
 
 ### Database Structure

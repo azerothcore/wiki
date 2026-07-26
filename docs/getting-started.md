@@ -4,7 +4,7 @@
 
 Would you like to learn about AzerothCore (AC), setup your WoW server for the first time, understand how to modify it and become able to contribute? You came to the right place!
 
-Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](How-to-ask-for-help) before asking for help.
+Getting started with WoW emulation might be tricky at first, but don't worry, we will be there to help you in case you encounter any issue or have any questions to ask. Just read [this page](how-to-ask-for-help) before asking for help.
 
 If while reading any of the tutorials linked on this page you find something that is not clear: let us know. We'll do our best to rephrase it and make it easier to be understood for beginners. Improving the docs is also a way to contribute!
 
@@ -47,7 +47,7 @@ Basically, there are 3 main ways to install AC:
 
 You can choose one setup, or even try more than one. You can find all the instructions here:
 
-- [azerothcore.org/wiki/Installation](installation)
+- [azerothcore.org/wiki/installation](installation)
 
 Should you encounter any issue or doubt while trying to install your AC server, [ask us for help](https://github.com/azerothcore/wiki/blob/master/docs/how-to-ask-for-help).
 
@@ -60,7 +60,7 @@ Got your WoW server installed? Congratulations! Now let's see what you can do ne
 First of all, make sure your Client has their realmlist.wtf set to the following: `set realmlist localhost`. After this (assuming you've already setup AzerothCore) make sure you've a `GM` (Security of 2 or Higher) account created. If you haven't created an account or you're not sure follow this [Creating Accounts](creating-accounts).
 After this your `GM` account will be able to use the following commands from link with a list of all commands below:
 
-- [azerothcore.org/wiki/GM-Commands](GM-Commands)
+- [azerothcore.org/wiki/gm-commands](gm-commands)
 
 Get confident with the commands, you will need them for any administration, testing or development activities.
 
@@ -82,7 +82,7 @@ We release improvements to AzerothCore on a daily basis. You should learn how to
 
 So it is **very important** that you update your AzerothCore server regularly. We recommend you to do it at least once a week. Read this guide:
 
-- [azerothcore.org/wiki/Update](update)
+- [azerothcore.org/wiki/keeping-the-server-up-to-date](keeping-the-server-up-to-date)
 
 After you follow the update procedure, it is important to **verify** that:
 
@@ -97,7 +97,7 @@ A great way to start contributing is by testing PRs made by other contributors. 
 
 This topic is so important that there is a dedicated tutorial for it:
 
-- [azerothcore.org/wiki/How-to-test-a-PR](How-to-test-a-PR)
+- [azerothcore.org/wiki/how-to-test-a-pr](how-to-test-a-pr)
 
 ![image](https://user-images.githubusercontent.com/75517/109370244-d397b480-789f-11eb-9ac7-64d98ca0d33c.png)
 
@@ -172,7 +172,7 @@ If you mastered some of the above parts, there is already **A LOT** you can do t
 For example:
 
 - Help the developers by testing PRs and giving your feedback
-- Do some bug triaging by confirming issues and helping us to identify and close the invalid reports
+- Do some bug triaging by confirming issues and helping us to identify and close the invalid reports, see the [Guide to Triaging](guide-to-triaging)
 - You can also help by [triaging the bugs coming from the players of ChromieCraft](https://github.com/chromiecraft/chromiecraft) (our child-project)
 - Report any bug that you may find yourself
 - Try to fix bugs, a lot of them can just be fixed with some SQL and you can use Keira3 for that (e.g. using SmartAI or other embedded editors). Being this an open-source project, you can find plenty of examples on our main GitHub repository

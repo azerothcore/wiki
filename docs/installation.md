@@ -32,8 +32,6 @@ Beware these guides are made by community members and might not be up-to-date:
 
 - [Amazon Web Services](aws-tutorial)
 
-- [Digital Ocean droplet](digital-ocean-video-tutorial)
-
 - [ArchLinux](arch-linux)
 
 - [FreeBSD](freebsd)

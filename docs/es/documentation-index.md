@@ -20,21 +20,25 @@
 
 - [Sistema Bash ](bash_system)
 - [Operaciones a nivel de bits](bit-and-bytes-tutorial)
-- [Registro de cambios](changelog)
 - [Opciones de CMake](cmake-options)
 - [Scripts del Core](core-scripts)
 - [Índice DBC](dbc-index)
 - [Estructura del directorio](directory-structure)
 - [Codigos de salida](exitcodes)
+- [Primeros pasos](getting-started)
+- [Guía de evaluación de errores](guide-to-triaging)
 - [Cómo depurar y reiniciar](how-to-restart-and-debug)
 - [IP2LOCATION](ip2location)
+- [Interioridades de Keira3](keira3-internals)
 - [Cofiguración de Logging](logging-configuration)
 - [Monitoreando AzerothCore con Grafana](monitoring-azerothcore-with-grafana)
 - [Tipos de datos MySQL/C++](mysqltypescpp)
-- [Versionado del proyecto](project-versioning)
 - [Sniffing y Parsing](sniffing-and-parsing)
+- [Sistema de hechizos](spell_system)
 - [Directorio SQL](sql-directory)
 - [Versionado de SQL](sql-versioning)
+- [Pruebas unitarias](unit-testing)
+- [UpdateFields](updatefields)
 
 ## Modelos y técnicas
 
@@ -50,6 +54,11 @@
 - [Hooks Bash](hooks-bash)
 - [Hooks Cmake](hooks-cmake)
 - [Hooks C++](hooks-script)
+
+## Documentación del wiki
+
+- [Estándares de la Wiki](wiki-standards)
+- [Archivo](archive)
 
 ## Recursos externos
 

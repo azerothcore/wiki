@@ -53,6 +53,10 @@
             {% include {{ site.inc_before_content }} %}
             {% endif %}
 
+            {% if page.archived %}
+            {% include azerothcore/archive-notice.html %}
+            {% endif %}
+
             <div id="git-wiki-content">
                 {{ content }}
             </div>

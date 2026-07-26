@@ -56,7 +56,7 @@ The GUID of the player who casted the aura. See [characters.guid](characters#gui
 
 ### itemGuid
 
-The GUID of the item which casted the aura. See [item\_instance.guid](item\_instance#guid).
+The GUID of the item which casted the aura. See [item\_instance.guid](item_instance#guid).
 
 ### spell
 

@@ -53,7 +53,7 @@ Special bars are used for stances, auras, pets, stealth, and other similar speci
 
 ### action
 
-Depending on the type value, this could be either the [spell ID](Spell#id), the [item ID](item_template#entry) or macro ID.
+Depending on the type value, this could be either the [spell ID](spell#id), the [item ID](item_template#entry) or macro ID.
 
 ### type
 

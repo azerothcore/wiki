@@ -1,9 +1,10 @@
 <!---
 Provide a general summary of your changes in the Title above.
-Make sure you have read the WIKI STANDARDS before you submit a PR that changes, adds or removes a wiki page.
-English: https://www.azerothcore.org/wiki/wiki-standards
-Spanish: https://www.azerothcore.org/wiki/es/wiki-standards
 -->
+
+> [!IMPORTANT]
+> Every pull request that adds, changes or removes a wiki page must follow the **WIKI STANDARDS**.
+> Read them first: https://www.azerothcore.org/wiki/wiki-standards
 
 ### Description
 

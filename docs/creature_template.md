@@ -577,7 +577,7 @@ Boolean '1' or '0' controlling whether the creature should regenerate it's healt
 
 Reference to the `creature_immunities` table which centralises spell- and mechanic-based immunities.
 
-For the detailed list of mechanics and spell-school bits, see [creature_immunities](creature_immunities.md).
+For the detailed list of mechanics and spell-school bits, see [creature_immunities](creature_immunities).
 
 #### flags_extra
 

@@ -26,7 +26,7 @@ This table contains the data that a player needs to obtain / complete in order t
 
 ### criteria\_id
 
-This is the ID from [Achievement\_Criteria.dbc](Achievement+Criteria).
+This is the ID from [Achievement\_Criteria.dbc](achievement_criteria).
 
 ### type
 

@@ -75,6 +75,22 @@ defaults:
       path: "docs/es"
     values:
       permalink: /es/:basename
+ # archived pages keep the url they had before they were archived,
+ # they only get flagged so the layout can show the archive notice
+ -
+    scope:
+      locale: "en"
+      path: "docs/archive"
+    values:
+      permalink: /:basename
+      archived: true
+ -
+    scope:
+      locale: "es"
+      path: "docs/es/archive"
+    values:
+      permalink: /es/:basename
+      archived: true
  -
     scope:
       path: "" # an empty string here means all files in the project

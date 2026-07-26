@@ -3,7 +3,7 @@
 All breaking/notable changes to this project will be documented in the `/docs/changelog/master` file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](project-versioning).
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 **This changelog should provide an easy way for the developers to upgrade their own code which is connected to AzerothCore** (e.g. modules, APIs, scripts etc.)
 It's not a way to keep track of ALL the changes made (we have the git history for that). Therefore, just 2 golden rules to follow:

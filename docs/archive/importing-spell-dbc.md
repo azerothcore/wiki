@@ -1,5 +1,3 @@
-# ARCHIVED - NOT IN USE. SAVED FOR HISTORY LESSONS
-
 # Importing data to the spell_dbc table
 
 ## Introduction

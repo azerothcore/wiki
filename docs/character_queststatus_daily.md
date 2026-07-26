@@ -26,7 +26,7 @@ The character GUID. See [characters.guid](characters#guid).
 
 ### quest
 
-The quest ID of the daily quest. See [quest\_template.entry](quest\_template#entry).
+The quest ID of the daily quest. See [quest\_template.entry](quest_template#entry).
 
 ### time
 

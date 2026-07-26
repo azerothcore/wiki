@@ -422,7 +422,3 @@ Ejemplo: `getAreaInfo` -> `GetAreaInfo`
 ### Añadido
 
 - Se ha creado un nuevo sistema de registro de cambios.
-
-### Cómo actualizar
-
-Para crear un nuevo registro de cambios, siga las instrucciones de nuestra [página wiki].(es/how-to-use-changelog)

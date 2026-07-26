@@ -109,6 +109,8 @@
 - [item_set_names_locale](item_set_names_locale)
 - [item_template](item_template)
 - [item_template_locale](item_template_locale)
+- [itemextendedcost_dbc](itemextendedcost_dbc)
+- [itemset_dbc](itemset_dbc)
 
 ## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards)
