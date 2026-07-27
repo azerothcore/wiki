@@ -7,6 +7,7 @@ redirect_from: /documentation_index
 ## How to Install
 
 * [Installation Guide](installation)
+* [Optional additions](optional-additions)
 * [Installing a module](installing-a-module)
 
 ## Database

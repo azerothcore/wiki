@@ -3,7 +3,7 @@
 | Guía de instalación |
 | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 8: Configuración del cliente](client-setup) |
+| [<< Paso 9: Añadidos opcionales](optional-additions) |
 
 Añadir un módulo es un paso opcional para alterar la jugabilidad blizzlike que ofrece AzerothCore por defecto.
 
@@ -50,4 +50,4 @@ Si sigues teniendo problemas, comprueba:
 | Guía de instalación |
 | :- |
 | Este artículo es parte de la Guía de instalación. Puedes leerlo solo o hacer click en el enlace anterior para moverte fácilmente entre los pasos. |
-| [<< Paso 8: Configuración del cliente](client-setup) |
+| [<< Paso 9: Añadidos opcionales](optional-additions) |

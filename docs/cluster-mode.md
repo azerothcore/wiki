@@ -1,5 +1,10 @@
 # Cluster Mode
 
+| Installation Guide                                                                                                                   |
+| :----------------------------------------------------------------------------------------------------------------------------------- |
+| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
+| [<< Step 9: Optional Additions](optional-additions)                                                                                  |
+
 {% include warning.html content="Cluster mode is <b>experimental</b> and still under development." %}
 
 ## Overview

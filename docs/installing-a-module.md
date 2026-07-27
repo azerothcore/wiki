@@ -3,7 +3,7 @@
 | Installation Guide                                                                                                                   |
 | :----------------------------------------------------------------------------------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 8: Client Setup](client-setup)                                                                                              |
+| [<< Step 9: Optional Additions](optional-additions)                                                                                  |
 
 Adding a module is an optional step to alter the blizzlike gameplay offered by AzerothCore by default.
 
@@ -47,4 +47,4 @@ You should always check the README file of the module to see if any manual steps
 | Installation Guide                                                                                                                   |
 | :----------------------------------------------------------------------------------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 8: Client Setup](client-setup)                                                                                              |
+| [<< Step 9: Optional Additions](optional-additions)                                                                                  |

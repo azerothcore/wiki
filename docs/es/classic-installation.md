@@ -25,7 +25,7 @@ La guía se ha dividido en 9 pasos, para hacerla más legible.
 
 8. [Configuración del cliente](client-setup)
 
-9. [(Opcional) Instalar un módulo](installing-a-module)
+9. [Añadidos opcionales](optional-additions) - módulos y modo clúster
 
 ## Ayuda
 
