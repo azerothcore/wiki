@@ -20,6 +20,7 @@ redirect_from: /documentation_index
 * [Agentic Engineering](agentic-engineering)
 * [Bash system](bash_system)
 * [Bitwise operations](bit-and-bytes-tutorial)
+* [Cluster Mode (ToCloud9)](cluster-mode)
 * [Client Cache (wdb)](client-cache-wdb)
 * [CMake options](cmake-options)
 * [Config Merger Tool](config-merger)
