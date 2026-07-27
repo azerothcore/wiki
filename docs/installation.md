@@ -10,19 +10,19 @@ There are several ways to install AzerothCore, you need to choose **ONE**.
 
 ### Install from the source <span class="badge badge-success">Recommended</span>
 
-This is the officially supported and complete way to install AzerothCore.
+This is the officially supported and complete way to install AzerothCore. Recommended for Windows, macOS, and Linux.
 
-- [AzerothCore Classic Installation](classic-installation) - Recommended for Windows, macOS, and Linux.
+- [AzerothCore Classic Installation](classic-installation)
 
 ### Experimental installations <span class="badge badge-info">Limited support and usage</span>
 
 These guides are for experimental installations and have limited to no support.
 
-- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation) - the simplest way to install.
+- [AzerothCore Bash Dashboard setup](ac-dashboard-core-installation)
 
-- [Docker setup](install-with-docker) - an installation process based on Docker. Previous docker knowledge is recommended.
+- [Docker setup](install-with-docker)
 
-- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/) - a straightforward way of installing AzerothCore. Currently, you can't install C++ modules, only Eluna scripts. Suitable for bug triaging, bug reporting, or domestic usage.
+- [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/)
 
 ### Community made <span class="badge badge-info">Unsupported</span>
 
