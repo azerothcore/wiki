@@ -13,7 +13,7 @@ Contains all creature instances that need to change display id and/or equipment 
 | [eventEntry](#evententry)     | SMALLINT  | SIGNED     |     | NO   | 0       |        | Entry of the game event. |
 | [guid](#guid)                 | INT       | UNSIGNED   | PRI | NO   | 0       | Unique |                          |
 | [modelid](#modelid)           | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
-| [equipment_id](#equipment_id) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
+| [equipment_id](#equipmentid)  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
 
 **Description of the fields**
 

@@ -20,7 +20,7 @@ This table holds information on all ongoing petitions for a guild or for an aren
 [2]: #petitionguid
 [3]: #name
 [4]: #type
-[5]: #petition_id
+[5]: #petitionid
 
 **Description of the fields**
 

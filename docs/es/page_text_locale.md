@@ -26,4 +26,4 @@ Este entry debe ser el mismo que [page\_text.entry](#page_text#entry) y entonces
 
 ### Name
 
-Contenido traducido del campo [page\_text.text](#page_text#text) para el idioma X.
+Contenido traducido del campo [page\_text.text](page_text#text) para el idioma X.

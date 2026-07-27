@@ -36,4 +36,4 @@ El nivel de skill mínimo requerido en la profesión correspondiente para poder 
 
 ### chance
 
-La probabilidad, en porcentaje, de que una receta se "descubra" automáticamente, ya sea por el uso de cualquier receta o por el uso de la receta específica definida en [reqSpell](#skill_discovery_template-reqSpell)
+La probabilidad, en porcentaje, de que una receta se "descubra" automáticamente, ya sea por el uso de cualquier receta o por el uso de la receta específica definida en [reqSpell](#reqspell)

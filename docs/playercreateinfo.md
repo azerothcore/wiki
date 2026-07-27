@@ -23,9 +23,9 @@ This table holds the start positions of each class-race combinations for all new
 [2]: #class
 [3]: #map
 [4]: #zone
-[5]: #position_x
-[6]: #position_y
-[7]: #position_z
+[5]: #positionx
+[6]: #positiony
+[7]: #positionz
 [8]: #orientation
 
 **Description of the fields**

@@ -14,7 +14,7 @@ Contiene información sobre qué NPC puede iniciar qué campo de batalla o arena
 | [bg_template][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Batleground template id |
 
 [1]: #entry
-[2]: #bg_template
+[2]: #bgtemplate
 
 **Descripción de los campos**
 

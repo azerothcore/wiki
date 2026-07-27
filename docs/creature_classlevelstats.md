@@ -34,9 +34,9 @@ This table contains the base values for creature health, mana, armor, attack pow
 [7]: #basearmor
 [8]: #attackpower
 [9]: #rangedattackpower
-[10]: #damage_base
-[11]: #damage_exp1
-[12]: #damage_exp2
+[10]: #damagebase
+[11]: #damageexp1
+[12]: #damageexp2
 [13]: #comment
 [14]: #strength
 [15]: #agility
@@ -52,7 +52,7 @@ Level of the creature.
 
 ### class
 
-Class of the creature. This is a reference to the [unit\_class](creature_template#creature_template-unit_class) field in the [creature\_template](creature_template) table.
+Class of the creature. This is a reference to the [unit\_class](creature_template#unitclass) field in the [creature\_template](creature_template) table.
 
 ### basehp0
 

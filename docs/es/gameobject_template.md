@@ -128,7 +128,7 @@ El tamaño del objeto debe establecerse porque los modelos gráficos pueden remu
 
 ### data0-23
 
-El contenido de los campos data depende del [tipo de gameobject](#gameobject_template-type)
+El contenido de los campos data depende del [tipo de gameobject](#type)
 
 *Los valores de estos campos provienen de WDB y no deben cambiarse.*
 
@@ -151,7 +151,7 @@ El contenido de los campos data depende del [tipo de gameobject](#gameobject_tem
 - data0: startOpen (State)
 - data1: open (LockId de Lock.dbc)
 - data2: autoClose (flag largo desconocido)
-- data3: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (GO generado de tipo 6))
+- data3: linkedTrap ([gameobject\_template.entry](#entry) (GO generado de tipo 6))
 - data4: noDamageImmune (flag booleano)
 - data5: large? (flag booleano)
 - data6: openTextID (Text ID desconocido)
@@ -183,7 +183,7 @@ El contenido de los campos data depende del [tipo de gameobject](#gameobject_tem
 - data4: minRestock (Mín. de intentos de saqueo con éxito para Minería, Herboristería, etc.)
 - data5: maxRestock (Máx. de intentos de saqueo con éxito para Minería, Herboristería, etc.)
 - data6: lootedEvent (Event ID de la tabla event\_scripts)
-- data7: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (GO generado de tipo 6))
+- data7: linkedTrap ([gameobject\_template.entry](#entry) (GO generado de tipo 6))
 - data8: questID ([quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) de misión completada)
 - data9: level (nivel mínimo requerido para abrir este gameobject)
 - data10: losOK (flag booleano)
@@ -251,7 +251,7 @@ Tipo de objeto sin usar
 
 - data0: spellFocusType (de SpellFocusObject.dbc; el valor también aparece como RequiresSpellFocus en [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
 - data1: diameter (o sea radio\*2)
-- data2: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (GO generado de tipo 6))
+- data2: linkedTrap ([gameobject\_template.entry](#entry) (GO generado de tipo 6))
 - data3: serverOnly? (Siempre 0)
 - data4: questID (requiere una [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) activa para funcionar)
 - data5: large? (flag booleano)
@@ -282,7 +282,7 @@ Tipo de objeto sin usar
 -   data9: pageMaterial (PageTextMaterial.dbc)
 -   data10: spell (Spell Id de Spell.dbc)
 -   data11: noDamageImmune (flag booleano)
--   data12: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (GO generado de tipo 6))
+-   data12: linkedTrap ([gameobject\_template.entry](#entry) (GO generado de tipo 6))
 -   data13: large? (flag booleano)
 -   data14: openTextID (ID desconocido)
 -   data15: closeTextID (ID desconocido)

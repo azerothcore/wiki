@@ -39,4 +39,4 @@ For `RaceID` you can refer to the [chrraces](chrraces) "ID" column.
 
 ### ModelID
 
-Refer to [creature_model_info](#creature_model_info#displayid)
+Refer to [creature_model_info](creature_model_info#displayid)

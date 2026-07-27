@@ -18,10 +18,10 @@ Table used for storing custom damage/healing bonus coefficients.
 | [comments][6]     | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #entry
-[2]: #direct_bonus
-[3]: #dot_bonus
-[4]: #ap_bonus
-[5]: #ap_dot_bonus
+[2]: #directbonus
+[3]: #dotbonus
+[4]: #apbonus
+[5]: #apdotbonus
 [6]: #comments
 
 **Description of the fields**

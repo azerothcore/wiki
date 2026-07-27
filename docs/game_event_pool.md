@@ -11,7 +11,7 @@ This table determines if a given pool is active for a given game event.
 | Field                     | Type      | Attributes | Key | Null | Default | Extra  | Comment                                                             |
 | ------------------------- | --------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
 | [eventEntry](#evententry) | SMALLINT  | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [pool_entry](#pool_entry) | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
+| [pool_entry](#poolentry)  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
 
 **Description of the fields**
 
@@ -25,4 +25,4 @@ Using a **negative** number will **remove** the pool to the event when is runnin
 
 ### pool_entry
 
-Refers to: [pool_pool.pool_id](pool_pool#pool_id).
+Refers to: [pool_pool.pool_id](pool_pool#poolid).

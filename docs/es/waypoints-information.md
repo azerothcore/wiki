@@ -2,7 +2,7 @@
 
 ### Diferentes tipos de rutas de waypoints
 
-- Las rutas de los puntos de ruta adjuntadas directamente a una criatura a través de [creature_addon.path_id](creature_addon#path_id) utilizan las tablas [waypoint_data](waypoint_data) y [waypoint_scripts](waypoint_scripts). Se pueden añadir utilizando el comando de GM `.wp`.
+- Las rutas de los puntos de ruta adjuntadas directamente a una criatura a través de [creature_addon.path_id](creature_addon#pathid) utilizan las tablas [waypoint_data](waypoint_data) y [waypoint_scripts](waypoint_scripts). Se pueden añadir utilizando el comando de GM `.wp`.
 - [SmartAI](smart_scripts) utilizan rutas de waypoints definidas en la tabla [waypoints](waypoints).
 - La tabla [script_waypoint](script_waypoint) contiene rutas de waypoints para [CreatureAI](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/AI/ScriptedAI/ScriptedCreature.h#L159).
 
@@ -20,8 +20,8 @@
   - ```move```: Mueve el waypoint seleccionado a la posición del GM.
   - ```delay```: Cambia el [retraso](waypoint_data#delay) del waypoint seleccionado.
   - ```action```: Cambiar la [acción](scripts#id) del waypoint seleccionado.
-  - ```action_chance```: Cambia la [action_chance](waypoint_data#action_chance) del waypoint seleccionado.
-  - ```move_type```: Cambia el [tipo de movimiento](waypoint_data#move_type) del waypoint seleccionado (0: caminar, 1: correr, 2: volar).
+  - ```action_chance```: Cambia la [action_chance](waypoint_data#actionchance) del waypoint seleccionado.
+  - ```move_type```: Cambia el [tipo de movimiento](waypoint_data#movetype) del waypoint seleccionado (0: caminar, 1: correr, 2: volar).
 - ```.wp event```: Modificar el waypoint [acciones](scripts#id), opciones:
   - ```add``` [guid](scripts#guid): Añade una nueva acción con el GUID especificado (¡no confundir con el GUID de la criatura!). Si no se especifica un GUID, se genera uno nuevo automáticamente.
   - ```listid``` [acción](scripts#id): Muestra información sobre el id de la acción especificada.

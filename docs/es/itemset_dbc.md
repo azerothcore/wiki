@@ -136,135 +136,135 @@ ID de referencia presumido para la máscara de idioma (Language Mask).
 
 ### ItemID_1
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_1](#itemid_1).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_1](#itemid1).
 
 ### ItemID_2
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_2](#itemid_2).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_2](#itemid2).
 
 ### ItemID_3
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_3](#itemid_3).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_3](#itemid3).
 
 ### ItemID_4
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_4](#itemid_4).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_4](#itemid4).
 
 ### ItemID_5
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_5](#itemid_5).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_5](#itemid5).
 
 ### ItemID_6
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_6](#itemid_6).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_6](#itemid6).
 
 ### ItemID_7
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_7](#itemid_7).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_7](#itemid7).
 
 ### ItemID_8
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_8](#itemid_8).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_8](#itemid8).
 
 ### ItemID_9
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_9](#itemid_9).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_9](#itemid9).
 
 ### ItemID_10
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_10](#itemid_10).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_10](#itemid10).
 
 ### ItemID_11
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_11](#itemid_11).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_11](#itemid11).
 
 ### ItemID_12
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_12](#itemid_12).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_12](#itemid12).
 
 ### ItemID_13
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_13](#itemid_13).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_13](#itemid13).
 
 ### ItemID_14
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_14](#itemid_14).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_14](#itemid14).
 
 ### ItemID_15
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_15](#itemid_15).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_15](#itemid15).
 
 ### ItemID_16
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_16](#itemid_16).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_16](#itemid16).
 
 ### ItemID_17
 
-[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_17](#itemid_17).
+[Entry](item_template#entry) del objeto para el conjunto de objetos [ItemID_17](#itemid17).
 
 ### SetSpellID_1
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_1](#itemid_1).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_1](#itemid1).
 
 ### SetSpellID_2
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_2](#itemid_2).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_2](#itemid2).
 
 ### SetSpellID_3
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_3](#itemid_3).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_3](#itemid3).
 
 ### SetSpellID_4
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_4](#itemid_4).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_4](#itemid4).
 
 ### SetSpellID_5
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_5](#itemid_5).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_5](#itemid5).
 
 ### SetSpellID_6
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_6](#itemid_6).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_6](#itemid6).
 
 ### SetSpellID_7
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_7](#itemid_7).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_7](#itemid7).
 
 ### SetSpellID_8
 
-[Entry](spell#entry) del hechizo que se usa en [ItemID_8](#itemid_8).
+[Entry](spell#entry) del hechizo que se usa en [ItemID_8](#itemid8).
 
 ### SetThreshold_1
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_1](#setspellid_1)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_1](#setspellid1)
 
 ### SetThreshold_2
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_2](#setspellid_2)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_2](#setspellid2)
 
 ### SetThreshold_3
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_3](#setspellid_3)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_3](#setspellid3)
 
 ### SetThreshold_4
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_4](#setspellid_4)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_4](#setspellid4)
 
 ### SetThreshold_5
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_5](#setspellid_5)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_5](#setspellid5)
 
 ### SetThreshold_6
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_6](#setspellid_6)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_6](#setspellid6)
 
 ### SetThreshold_7
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_7](#setspellid_7)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_7](#setspellid7)
 
 ### SetThreshold_8
 
-Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_8](#setspellid_8)
+Cuántas piezas del conjunto de objetos necesitas en referencia a [SetSpellID_8](#setspellid8)
 
 ### RequiredSkill
 

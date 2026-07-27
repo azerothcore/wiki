@@ -26,8 +26,8 @@ AVISO: los datos de esta tabla están en gran parte incompletos y son en su mayo
 | [visibilityDistanceType][10] | TINYINT       | UNSIGNED   |     | NO   |         |       |         |
 | [auras][11]                  | text          |            |     | YES  |         |       |         |
 
-[1]: #guid/entry
-[2]: #path_id
+[1]: #guidentry
+[2]: #pathid
 [3]: #mount
 [4]: #bytes1
 [5]: #bytes2

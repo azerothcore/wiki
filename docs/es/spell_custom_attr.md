@@ -13,7 +13,7 @@ Tabla usada para almacenar atributos de hechizo personalizados.
 | [spell_id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
 | [attributes][2] | INT       | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
-[1]: #spell_id
+[1]: #spellid
 [2]: #attributes
 
 **Descripción de los campos**

@@ -23,8 +23,8 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 | [visibilityDistanceType][10] | TINYINT       | UNSIGNED   |     | NO   |         |       |         |
 | [auras][11]                  | text          |            |     | YES  |         |       |         |
 
-[1]: #guid/entry
-[2]: #path_id
+[1]: #guidentry
+[2]: #pathid
 [3]: #mount
 [4]: #bytes1
 [5]: #bytes2
@@ -37,7 +37,7 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 ### guid/entry
 
 For creature\_addon, this field signifies a unique creature guid. It will affect just that creature whose GUID matches the one specified here.
-For creature\_template\_addon, this field signifies the [creature\_template.entry](creature_template#creature_template-entry). It will affect all spawned creatures using that template entry.
+For creature\_template\_addon, this field signifies the [creature\_template.entry](creature_template#entry). It will affect all spawned creatures using that template entry.
 
 ### path\_id
 

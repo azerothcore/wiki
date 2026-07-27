@@ -24,8 +24,8 @@ This is a link to the event entry in the game\_event table.
 
 ### condition\_id
 
-See [game\_event\_condition.condition\_id](game_event_condition#condition_id).
+See [game\_event\_condition.condition\_id](game_event_condition#conditionid).
 
 ### done
 
-Indicates how much has been done. See [game\_event\_condition.req\_num](game_event_condition#req_num).
+Indicates how much has been done. See [game\_event\_condition.req\_num](game_event_condition#reqnum).

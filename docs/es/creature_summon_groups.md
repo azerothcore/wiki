@@ -26,9 +26,9 @@ Esta tabla contiene datos sobre criaturas invocadas temporalmente. Es posible ag
 [2]: #summonertype
 [3]: #groupid
 [4]: #entry
-[5]: #position_x
-[6]: #position_y
-[7]: #position_z
+[5]: #positionx
+[6]: #positiony
+[7]: #positionz
 [8]: #orientation
 [9]: #summontype
 [10]: #summontime

@@ -15,10 +15,10 @@ Basically all item changes made when player changes faction.
 | [horde_id][5]         | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [horde_comment][6]    | TEXT |            |     | NO   |         |       |         |
 
-[2]: #alliance_id
-[3]: #alliance_comment
-[5]: #horde_id
-[6]: #horde_comment
+[2]: #allianceid
+[3]: #alliancecomment
+[5]: #hordeid
+[6]: #hordecomment
 
 **Description of the fields**
 

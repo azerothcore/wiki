@@ -12,7 +12,7 @@ Table used to group spells for varius checks in the core. One spell may be added
 | [spell_id][2]     | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #id
-[2]: #spell_id
+[2]: #spellid
 
 **Description of the fields**
 

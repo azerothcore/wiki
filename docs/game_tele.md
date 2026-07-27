@@ -17,9 +17,9 @@ This table contains a list of teleport locations that can be used with the *.tel
 | [name][7]        | VARCHAR(100) | SIGNED     |     | NO   | NULL    |                |
 
 [1]: #id
-[2]: #position_x
-[3]: #position_y
-[4]: #position_z
+[2]: #positionx
+[3]: #positiony
+[4]: #positionz
 [5]: #orientation
 [6]: #map
 [7]: #name

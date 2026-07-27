@@ -16,11 +16,11 @@ Incluye información sobre la versión actual del core y de la base de datos.
 | [script_version][4] | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Version of scripts DB           |
 | [cache_id][5]       | INT          | SIGNED     |     | YES  | 0       |       | Minor DB version                |
 
-[1]: #core_version
-[2]: #core_revision
-[3]: #db_version
-[4]: #script_version
-[5]: #cache_id
+[1]: #coreversion
+[2]: #corerevision
+[3]: #dbversion
+[4]: #scriptversion
+[5]: #cacheid
 
 **Descripción de los campos**
 

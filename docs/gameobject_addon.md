@@ -15,10 +15,10 @@
 | [invisibilityValue][7]         | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
-[2]: #parent_rotation0
-[3]: #parent_rotation1
-[4]: #parent_rotation2
-[5]: #parent_rotation3
+[2]: #parentrotation0
+[3]: #parentrotation1
+[4]: #parentrotation2
+[5]: #parentrotation3
 [6]: #invisibilitytype
 [7]: #invisibilityvalue
 

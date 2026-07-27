@@ -16,7 +16,7 @@ This table contains the data that a player needs to obtain / complete in order t
 | [value2][4]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [ScriptName][5]  | char(64)  |            |     | NO   |         |       |         |
 
-[1]: #criteria_id
+[1]: #criteriaid
 [2]: #type
 [3]: #value1
 [4]: #value2

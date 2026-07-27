@@ -327,7 +327,7 @@ ID refers to one of the money factor included in [MoneyFactor](quest_money_rewar
 
 ### RewardDisplaySpell
 
-Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](#quest_template-RewardSpell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
+Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](#rewardspell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
 
 ### RewardSpell
 

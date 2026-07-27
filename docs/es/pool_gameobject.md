@@ -17,7 +17,7 @@ Esta tabla solo puede contener gameobjects que tengan un tipo GAMEOBJECT\_TYPE\_
 | [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 [1]: #guid
-[2]: #pool_entry
+[2]: #poolentry
 [3]: #chance
 [4]: #description
 

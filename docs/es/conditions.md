@@ -74,7 +74,7 @@ Ver arriba.
 
 ### ElseGroup
 
-Permite construir condiciones agrupadas: todas las entradas pertenecientes a la misma condición (mismo [SourceType](#conditions-SourceTypeOrReferenceId), [SourceGroup](#conditions-SourceGroup) y [SourceEntry](#conditions-SourceEntry)) que comparten el mismo número en ElseGroup definen un grupo. La **condición completa** se cumple cuando **cualquiera de sus grupos** se cumple (OR lógico). El **grupo** se cumple cuando **todas sus entradas se cumplen** (AND lógico).
+Permite construir condiciones agrupadas: todas las entradas pertenecientes a la misma condición (mismo [SourceType](#sourcetypeorreferenceid), [SourceGroup](#sourcegroup) y [SourceEntry](#sourceentry)) que comparten el mismo número en ElseGroup definen un grupo. La **condición completa** se cumple cuando **cualquiera de sus grupos** se cumple (OR lógico). El **grupo** se cumple cuando **todas sus entradas se cumplen** (AND lógico).
 
 Ejemplo:
 
@@ -166,13 +166,13 @@ Ejemplo: CONDITION\_AURA con NegativeCondition será verdadera cuando el jugador
 
 ### ErrorType
 
-Id de [/src/server/game/Miscellaneous/SharedDefines.h#L830](https://github.com/azerothcore/azerothcore-wotlk/blob/97e65bd4479272106bba87364d35233d2e4bd2ef/src/server/game/Miscellaneous/SharedDefines.h#L830). Solo se mostrará para el siguiente [source type](#conditions-SourceTypeOrReferenceId) de condición:
+Id de [/src/server/game/Miscellaneous/SharedDefines.h#L830](https://github.com/azerothcore/azerothcore-wotlk/blob/97e65bd4479272106bba87364d35233d2e4bd2ef/src/server/game/Miscellaneous/SharedDefines.h#L830). Solo se mostrará para el siguiente [source type](#sourcetypeorreferenceid) de condición:
 
 CONDITION\_SOURCE\_TYPE\_SPELL = 17
 
 ### ErrorTextId
 
-Id de [/src/server/game/Miscellaneous/SharedDefines.h#L1024](https://github.com/azerothcore/azerothcore-wotlk/blob/97e65bd4479272106bba87364d35233d2e4bd2ef/src/server/game/Miscellaneous/SharedDefines.h#L1024). Solo se mostrará para el siguiente [source type](#conditions-SourceTypeOrReferenceId) de condición:
+Id de [/src/server/game/Miscellaneous/SharedDefines.h#L1024](https://github.com/azerothcore/azerothcore-wotlk/blob/97e65bd4479272106bba87364d35233d2e4bd2ef/src/server/game/Miscellaneous/SharedDefines.h#L1024). Solo se mostrará para el siguiente [source type](#sourcetypeorreferenceid) de condición:
 
 CONDITION\_SOURCE\_TYPE\_SPELL = 17
 
@@ -188,7 +188,7 @@ Explicación de esta condición o referencia
 
 ### Explicación de los tipos de condición
 
-El contenido de los campos [SourceGroup](#conditions-SourceGroup) y [SourceEntry](#conditions-SourceEntry) depende de [SourceTypeOrReferenceId](#conditions-SourceTypeOrReferenceId)
+El contenido de los campos [SourceGroup](#sourcegroup) y [SourceEntry](#sourceentry) depende de [SourceTypeOrReferenceId](#sourcetypeorreferenceid)
 
 **CONDITION\_SOURCE\_TYPE\_NONE = 0**
 
@@ -684,7 +684,7 @@ Devuelve true cuando la unidad objetivo está actualmente en combate.
     -   SourceGroup  : siempre 0
     -   SourceEntry  : siempre 0
     -   ElseGroup  : modificador OR
-    -   ConditionTypeOrReference: [ConditionTypeOrReference](#conditions-ConditionTypeOrReference)
+    -   ConditionTypeOrReference: [ConditionTypeOrReference](#conditiontypeorreference)
     -   ConditionValue1  : ver arriba
     -   ConditionValue2  : ver arriba
     -   ConditionValue3  : ver arriba

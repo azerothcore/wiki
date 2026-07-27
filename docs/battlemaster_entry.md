@@ -14,7 +14,7 @@ Holds information on which NPC can start what battleground or arena.
 | [bg_template][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Batleground template id |
 
 [1]: #entry
-[2]: #bg_template
+[2]: #bgtemplate
 
 **Description of the fields**
 

@@ -20,7 +20,7 @@ This table is used to provide localized clients with localized strings for creat
 
 ### entry
 
-This must match [creature_template.entry](creature_template#creature_template-entry). The row provides localization for that creature_template record.
+This must match [creature_template.entry](creature_template#entry). The row provides localization for that creature_template record.
 
 ### locale
 

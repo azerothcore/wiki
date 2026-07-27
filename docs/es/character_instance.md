@@ -32,7 +32,7 @@ Identificador (ID) de la instancia correspondiente. Véase [instance.id](instan
 
 ### permanent
 
-Booleano del 0 al 1 que controla si el jugador ha sido vinculado en alguna instancia en particular. Un jugador está vinculado a la instancia sólo cuando él (o su Grupo/Raid) asesina a una criatura con el marcador o 'flag' CREATURE\_FLAG\_EXTRA\_INSTANCE\_BIND establecido en el campo [flags\_extras](creature_template#creature_template-flags_extra).
+Booleano del 0 al 1 que controla si el jugador ha sido vinculado en alguna instancia en particular. Un jugador está vinculado a la instancia sólo cuando él (o su Grupo/Raid) asesina a una criatura con el marcador o 'flag' CREATURE\_FLAG\_EXTRA\_INSTANCE\_BIND establecido en el campo [flags\_extras](creature_template#flagsextra).
 
 ### extended
 

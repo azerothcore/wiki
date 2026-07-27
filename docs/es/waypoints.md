@@ -18,7 +18,7 @@ Contiene datos de waypoints, permitiendo a las creatures moverse a ciertas coord
 | [position\_y](#positiony)        | FLOAT     |            |     | NO   | 0       |
 | [position\_z](#positionz)        | FLOAT     |            |     | NO   | 0       |
 | [orientation](#orientation)      | FLOAT     |            |     | YES  | NULL    |
-| [point\_comment](#point_comment) | text      |            |     | YES  | NULL    |
+| [point\_comment](#pointcomment)  | text      |            |     | YES  | NULL    |
 
 **Descripción de los campos**
 

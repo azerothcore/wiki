@@ -72,15 +72,15 @@ Un identificador único que se le da a cada criatura para distinguir una criatur
 
 ### id1
 
-El ID principal de la [plantilla](creature_template#creature_template-entry) que se usa al instanciar esta criatura.
+El ID principal de la [plantilla](creature_template#entry) que se usa al instanciar esta criatura.
 
 ### id2
 
-El ID secundario de la [plantilla](creature_template#creature_template-entry) que se usa al instanciar esta criatura.
+El ID secundario de la [plantilla](creature_template#entry) que se usa al instanciar esta criatura.
 
 ### id3
 
-El tercer ID de la [plantilla](creature_template#creature_template-entry) que se usa al instanciar esta criatura.
+El tercer ID de la [plantilla](creature_template#entry) que se usa al instanciar esta criatura.
 
 ### map
 
@@ -153,11 +153,11 @@ El tiempo de reaparición, en segundos, de la criatura.
 
 ### wander_distance
 
-La distancia máxima a la que la criatura puede generarse desde su punto de generación. También controla cuán lejos puede caminar la criatura desde su punto de generación si su [MovementType](#creature-MovementType) = 1.
+La distancia máxima a la que la criatura puede generarse desde su punto de generación. También controla cuán lejos puede caminar la criatura desde su punto de generación si su [MovementType](#movementtype) = 1.
 
 ### currentwaypoint
 
-El [waypoint](waypoint_data#waypoint_data-point) actual en el que está la criatura, si lo hay.
+El [waypoint](waypoint_data#point) actual en el que está la criatura, si lo hay.
 
 ### curhealth
 
@@ -169,13 +169,13 @@ El maná con el que se generará la criatura.
 
 ### MovementType
 
-El tipo de movimiento asociado a la criatura. Normalmente el mismo que su [MovementType](creature_template#creature_template-MovementType), pero puede ser diferente.
+El tipo de movimiento asociado a la criatura. Normalmente el mismo que su [MovementType](creature_template#movementtype), pero puede ser diferente.
 
 ### npcflag
 
-Igual que [creature_template.npcflag](creature_template#creature_template-npcflag) .
+Igual que [creature_template.npcflag](creature_template#npcflag) .
 
-NOTA: Un registro de creature.npcflag sobrescribirá a un registro de [creature_template.npcflag](creature_template#creature_template-npcflag).
+NOTA: Un registro de creature.npcflag sobrescribirá a un registro de [creature_template.npcflag](creature_template#npcflag).
 
 ### unit_flags
 
@@ -183,7 +183,7 @@ Igual que creature_template.unit_flags.
 
 Nota:
 
-Un registro de creature.unit_flags sobrescribirá a un registro de [creature_template.unit_flags](creature_template#creature_template-unit_flags).
+Un registro de creature.unit_flags sobrescribirá a un registro de [creature_template.unit_flags](creature_template#unitflags).
 
 ### dynamicflags
 
@@ -191,13 +191,13 @@ Igual que creature_template.dynamicflags.
 
 Nota:
 
-Un registro de creature.dynamicflags sobrescribirá a un registro de [creature_template.dynamicflags](creature_template#creature_template-dynamicflags).
+Un registro de creature.dynamicflags sobrescribirá a un registro de [creature_template.dynamicflags](creature_template#dynamicflags).
 
 ### ScriptName
 
 Igual que creature_template.scriptname.
 
-Un registro de creature.scriptname sobrescribirá a un registro de [creature_template.scriptname](creature_template#creature_template-scriptname).
+Un registro de creature.scriptname sobrescribirá a un registro de [creature_template.scriptname](creature_template#scriptname).
 
 ### VerifiedBuild
 

@@ -15,7 +15,7 @@ Esta tabla contiene una lista de quests que están ligadas a un pool concreto.
 | [description][3] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #entry
-[2]: #pool_entry
+[2]: #poolentry
 [3]: #description
 
 **Descripción de los campos**

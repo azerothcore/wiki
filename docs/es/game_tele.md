@@ -17,9 +17,9 @@ Esta tabla contiene una lista de ubicaciones de teletransporte que se pueden usa
 | [name][7]        | VARCHAR(100) | SIGNED     |     | NO   | NULL    |                |
 
 [1]: #id
-[2]: #position_x
-[3]: #position_y
-[4]: #position_z
+[2]: #positionx
+[3]: #positiony
+[4]: #positionz
 [5]: #orientation
 [6]: #map
 [7]: #name

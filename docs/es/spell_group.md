@@ -13,8 +13,8 @@ Tabla usada para agrupar hechizos para varias comprobaciones en el core. Un hech
 | [special_flag][3] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
-[2]: #spell_id
-[3]: #special_flag
+[2]: #spellid
+[3]: #specialflag
 
 **Descripción de los campos**
 

@@ -15,7 +15,7 @@ Each unique pool is defined in this table.
 | [description][3] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |                                       |
 
 [1]: #entry
-[2]: #max_limit
+[2]: #maxlimit
 [3]: #description
 
 **Description of the fields**

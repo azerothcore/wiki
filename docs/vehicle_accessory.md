@@ -19,8 +19,8 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 | [summontimer][7]     | INT       | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #guid
-[2]: #accessory_entry
-[3]: #seat_id
+[2]: #accessoryentry
+[3]: #seatid
 [4]: #minion
 [5]: #description
 [6]: #summontype

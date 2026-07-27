@@ -39,9 +39,9 @@ This table holds the individual object data on each spawned game object in the w
 [5]: #areaId
 [6]: #spawnmask
 [7]: #phasemask
-[8]: #position_x
-[9]: #position_y
-[10]: #position_z
+[8]: #positionx
+[9]: #positiony
+[10]: #positionz
 [11]: #orientation
 [12]: #rotation0
 [13]: #rotation1
@@ -146,7 +146,7 @@ For chests or doors.
 
 Same as gameobject_template.scriptname.
 
-A gameobject.scriptname record will override a [gameobject_template.scriptname](gameobject_template#gameobject_template-scriptname) record.
+A gameobject.scriptname record will override a [gameobject_template.scriptname](gameobject_template#scriptname) record.
 
 ### VerifiedBuild
 

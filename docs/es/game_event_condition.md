@@ -21,7 +21,7 @@ Esta tabla contiene las condiciones que se deben cumplir para que el evento de j
 
 ### eventEntry
 
-Este es un enlace al entry del evento en la tabla [game_event](#game_event#evententry).
+Este es un enlace al entry del evento en la tabla [game_event](game_event#evententry).
 
 ### condition_id
 

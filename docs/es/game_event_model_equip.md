@@ -13,7 +13,7 @@ Contiene todas las instancias de creature que necesitan cambiar su display id y/
 | [eventEntry](#evententry)     | SMALLINT  | SIGNED     |     | NO   | 0       |        | Entry del evento de juego. |
 | [guid](#guid)                 | INT       | UNSIGNED   | PRI | NO   | 0       | Unique |                          |
 | [modelid](#modelid)           | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
-| [equipment_id](#equipment_id) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
+| [equipment_id](#equipmentid)  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
 
 **Descripción de los campos**
 

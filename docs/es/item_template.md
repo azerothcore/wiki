@@ -205,14 +205,14 @@ Contiene información sobre cada objeto que existe en el juego. Todos los objeto
 [54]: #dmg_max2
 [55]: #dmg_type2
 [56]: #armor
-[57]: #holy_res
-[58]: #fire_res
-[59]: #nature_res
-[60]: #frost_res
-[61]: #shadow_res
-[62]: #arcane_res
+[57]: #holyres
+[58]: #fireres
+[59]: #natureres
+[60]: #frostres
+[61]: #shadowres
+[62]: #arcaneres
 [63]: #delay
-[64]: #ammo_type
+[64]: #ammotype
 [65]: #rangedmodrange
 [66]: #spellid_1
 [67]: #spelltrigger_1
@@ -642,7 +642,7 @@ Ver el [archivo DBC Faction](faction) para los IDs de todas las facciones.
 
 ### RequiredReputationRank
 
-El rango que el jugador debe tener con la facción de [RequiredReputationFaction](#item_template-RequiredReputationFaction).
+El rango que el jugador debe tener con la facción de [RequiredReputationFaction](#requiredreputationfaction).
 
 | ID  | Rank       |
 | --- | ---------- |
@@ -820,7 +820,7 @@ El número de veces que el objeto puede lanzar el hechizo. Si es 0, entonces son
 
 ### spellppmRate
 
-La tasa de procs por minuto que controla con qué frecuencia se activa el hechizo (si [\#spelltrigger](#item_template-spelltrigger) == 2).
+La tasa de procs por minuto que controla con qué frecuencia se activa el hechizo (si [\#spelltrigger](#spelltrigger) == 2).
 
 ### spellcooldown
 
@@ -913,11 +913,11 @@ Controla cómo se guarda el objeto en el personaje. Pulsa la tecla 'Z' para enfu
 
 ### RandomProperty
 
-El número de este campo apunta a [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) y determina la probabilidad de que un objeto tenga una propiedad aleatoria adjunta cuando aparece por primera vez. Este campo y el campo [RandomSuffix](#item_template-RandomSuffix) NO pueden tener ambos valores distintos de cero. O se rellena uno, o el otro. Además, la fuente principal del número de este campo son los WDB.
+El número de este campo apunta a [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) y determina la probabilidad de que un objeto tenga una propiedad aleatoria adjunta cuando aparece por primera vez. Este campo y el campo [RandomSuffix](#randomsuffix) NO pueden tener ambos valores distintos de cero. O se rellena uno, o el otro. Además, la fuente principal del número de este campo son los WDB.
 
 ### RandomSuffix
 
-El número de este campo apunta a [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) y determina la probabilidad de que un objeto tenga un sufijo aleatorio adjunto cuando aparece por primera vez. Este campo y el campo [RandomProperty](#item_template-RandomProperty) NO pueden tener ambos valores distintos de cero. O se rellena uno, o el otro. Además, la fuente principal del número de este campo son los WDB.
+El número de este campo apunta a [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) y determina la probabilidad de que un objeto tenga un sufijo aleatorio adjunto cuando aparece por primera vez. Este campo y el campo [RandomProperty](#randomproperty) NO pueden tener ambos valores distintos de cero. O se rellena uno, o el otro. Además, la fuente principal del número de este campo son los WDB.
 
 ### block
 

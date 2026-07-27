@@ -6,7 +6,7 @@ redirect_from: "/Waypoints-Information"
 
 ### Different kinds of waypoint paths
 
-- Waypoint paths directly attached to a creature via [creature_addon.path_id](creature_addon#path_id) use the tables [waypoint_data](waypoint_data) and [waypoint_scripts](scripts). They can be added and manipulated using the GM '.wp' commands.
+- Waypoint paths directly attached to a creature via [creature_addon.path_id](creature_addon#pathid) use the tables [waypoint_data](waypoint_data) and [waypoint_scripts](scripts). They can be added and manipulated using the GM '.wp' commands.
 - [SmartAI](smart_scripts) uses waypoint paths defined in table [waypoints](waypoints).
 - The table [script_waypoint](script_waypoint) contains waypoint paths for [CreatureAI](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/AI/ScriptedAI/ScriptedCreature.h#L159).
 
@@ -24,8 +24,8 @@ redirect_from: "/Waypoints-Information"
   - ```move```: Move the selected waypoint to the position of the GM.
   - ```delay```: Change the [delay](waypoint_data#delay) of the selected waypoint.
   - ```action```: Change the [action](scripts#id) of the selected waypoint.
-  - ```action_chance```: Change the [action_chance](waypoint_data#action_chance) of the selected waypoint.
-  - ```move_type```: Change the [move_type](waypoint_data#move_type) of the selected waypoint (0: walk, 1: run, 2: fly).
+  - ```action_chance```: Change the [action_chance](waypoint_data#actionchance) of the selected waypoint.
+  - ```move_type```: Change the [move_type](waypoint_data#movetype) of the selected waypoint (0: walk, 1: run, 2: fly).
 - ```.wp event```: Modify the waypoint [actions](scripts#id), options:
   - ```add``` [guid](scripts#guid): Add a new action with the specified GUID (not to be confused with the creature GUID!). If no GUID is specified a new one is generated automatically.
   - ```listid``` [action](scripts#id): Show information about the specified action id.

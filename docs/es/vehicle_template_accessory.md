@@ -19,8 +19,8 @@ Los registros de esta tabla pueden ser sobrescritos por la tabla [vehicle\_acces
 | [summontimer][7]     | INT       | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #entry
-[2]: #accessory_entry
-[3]: #seat_id
+[2]: #accessoryentry
+[3]: #seatid
 [4]: #minion
 [5]: #description
 [6]: #summontype

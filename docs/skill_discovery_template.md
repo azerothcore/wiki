@@ -36,4 +36,4 @@ The minimum skill level required in the relevant profession to be able to discov
 
 ### chance
 
-The chance, in percent, that a recipe has of being automatically "discovered", whether by any recipe use or by the specific recipe use defined in [reqSpell](#skill_discovery_template-reqSpell)
+The chance, in percent, that a recipe has of being automatically "discovered", whether by any recipe use or by the specific recipe use defined in [reqSpell](#reqspell)

@@ -39,9 +39,9 @@ Esta tabla contiene los datos individuales de cada objeto de juego generado en e
 [5]: #areaId
 [6]: #spawnmask
 [7]: #phasemask
-[8]: #position_x
-[9]: #position_y
-[10]: #position_z
+[8]: #positionx
+[9]: #positiony
+[10]: #positionz
 [11]: #orientation
 [12]: #rotation0
 [13]: #rotation1
@@ -146,7 +146,7 @@ Para cofres o puertas.
 
 Igual que gameobject_template.scriptname.
 
-Un registro de gameobject.scriptname sobrescribirá a un registro de [gameobject_template.scriptname](gameobject_template#gameobject_template-scriptname).
+Un registro de gameobject.scriptname sobrescribirá a un registro de [gameobject_template.scriptname](gameobject_template#scriptname).
 
 ### VerifiedBuild
 

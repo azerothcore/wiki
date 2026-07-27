@@ -19,7 +19,7 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 | [position\_z](#positionz)        | FLOAT     |            |     | NO   | 0       |
 | [orientation](#orientation)      | FLOAT     |            |     | YES  | NULL    |
 | [delay](#delay)                  | INT       | UNSIGNED   |     | NO   | 0       |
-| [point\_comment](#point_comment) | text      |            |     | YES  | NULL    |
+| [point\_comment](#pointcomment)  | text      |            |     | YES  | NULL    |
 
 **Description of the fields**
 

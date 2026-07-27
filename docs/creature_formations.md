@@ -23,8 +23,8 @@ This table allows to group mobs. Members of group will follow others, and attack
 [3]: #dist
 [4]: #angle
 [5]: #groupai
-[6]: #point_1
-[7]: #point_2
+[6]: #point1
+[7]: #point2
 
 ## leaderGUID
 

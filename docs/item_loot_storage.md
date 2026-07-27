@@ -34,7 +34,7 @@
 [10]: #isunderthreshold
 [11]: #needsquest
 [12]: #conditionlootid
-[13]: #item_index
+[13]: #itemindex
 
 **Description of the fields**
 

@@ -139,7 +139,7 @@ Se usa para indicar al jugador qué tipo de NPC es esta criatura.
 
 #### gossip_menu_id
 
-El ID de gossip de esta criatura. Este campo se obtiene del sniff (update fields). Si no puedes sniffear este valor y necesitas inventar uno, debe ser &gt; 50000. Este campo es el enlace a [gossip_menu.MenuID](gossip_menu#menu_id).
+El ID de gossip de esta criatura. Este campo se obtiene del sniff (update fields). Si no puedes sniffear este valor y necesitas inventar uno, debe ser &gt; 50000. Este campo es el enlace a [gossip_menu.MenuID](gossip_menu#menuid).
 
 #### minlevel
 
@@ -238,7 +238,7 @@ El rango de la criatura:
 
 **Nota 2:** Los tiempos de reaparición pueden modificarse en otros dos sitios: [Creature.spawntimesecs](creature#spawntimesecs) (solo para ese GUID concreto de la criatura) y en el archivo worldserver.conf bajo la opción "Corpse.Decay" (para TODAS las criaturas del mismo rango). El `spawntimesecs` por defecto para todas las criaturas generadas es de 300 segundos (5 minutos). Por ejemplo, usar el comando ".npc add" para generar un NPC "Normal" le dará un tiempo de reaparición por defecto de 6 minutos (spawntimesecs + tiempo de Corpse.Decay). Además, la criatura debe descomponerse (decay) primero antes de poder reaparecer. Por esta razón, el tiempo de descomposición del cadáver de la criatura es también su tiempo mínimo de reaparición, ya que poner el Creature.spawntimesecs de la criatura = 0 eliminará el tiempo de reaparición por defecto. En el ejemplo de arriba, poner el spawntimesecs de nuestro NPC Normal = 0 hará que el tiempo de reaparición de la criatura disminuya de 6 minutos a 60 segundos.
 
-**Nota 3:** Si quieres que la criatura muestre una calavera o "??" en el retrato (a menudo con jefes), pon los [type_flags](#type_flags) a 4.
+**Nota 3:** Si quieres que la criatura muestre una calavera o "??" en el retrato (a menudo con jefes), pon los [type_flags](#typeflags) a 4.
 
 #### dmgschool
 
@@ -458,15 +458,15 @@ Este campo puede controlar si un mob puede minarse, herborizarse o saquearse por
 
 #### lootid
 
-El ID de la plantilla de botín que esta criatura debe usar para generar botines. Ver [creature_loot_template.entry](loot_template#loot_template-entry)
+El ID de la plantilla de botín que esta criatura debe usar para generar botines. Ver [creature_loot_template.entry](loot_template#entry)
 
 #### pickpocketloot
 
-El ID de la plantilla de botín de robo (pickpocketing) que esta criatura debe usar para generar botines de robo. Ver [pickpocketing_loot_template.entry](loot_template#loot_template-entry)
+El ID de la plantilla de botín de robo (pickpocketing) que esta criatura debe usar para generar botines de robo. Ver [pickpocketing_loot_template.entry](loot_template#entry)
 
 #### skinloot
 
-El ID de la plantilla de botín de desollado (skinning) que esta criatura debe usar para generar botines de desollado. Ver [skinning_loot_template.entry](loot_template#loot_template-entry)
+El ID de la plantilla de botín de desollado (skinning) que esta criatura debe usar para generar botines de desollado. Ver [skinning_loot_template.entry](loot_template#entry)
 
 #### PetSpellDataId
 
@@ -537,10 +537,10 @@ Se usa para modificar el daño Mínimo/Máximo de una criatura.
 
 Las fórmulas para calcular la producción de daño son:
 
-MINDAMAGE = ((([damage_base](creature_classlevelstats#damage_base) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
-MAXDAMAGE = (((([damage_base](creature_classlevelstats#damage_base) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
+MINDAMAGE = ((([damage_base](creature_classlevelstats#damagebase) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
+MAXDAMAGE = (((([damage_base](creature_classlevelstats#damagebase) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
 
-damage_base proviene de la tabla creature_classlevelstats y toma su valor de [damage_base](creature_classlevelstats#damage_base), [damage_exp1](creature_classlevelstats#damage_exp1) o [damage_exp2](creature_classlevelstats#damage_exp2) según el valor de la criatura en [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
+damage_base proviene de la tabla creature_classlevelstats y toma su valor de [damage_base](creature_classlevelstats#damagebase), [damage_exp1](creature_classlevelstats#damageexp1) o [damage_exp2](creature_classlevelstats#damageexp2) según el valor de la criatura en [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
 
 BaseAttackTime es [BaseAttackTime](#baseattacktime) o [RangeAttackTime](#rangeattacktime) dependiendo del tipo de ataque.
 

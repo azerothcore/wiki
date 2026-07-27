@@ -15,10 +15,10 @@ Basically all spell changes made when player changes faction.
 | [horde_id][2]    | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [horde_comment][4] | TEXT |          |     | NO   |         |       |         |
 
-[1]: #alliance_id
-[2]: #horde_id
-[3]: #alliance_comment
-[4]: #horde_comment
+[1]: #allianceid
+[2]: #hordeid
+[3]: #alliancecomment
+[4]: #hordecomment
 
 **Description of the fields**
 

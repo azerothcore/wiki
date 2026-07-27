@@ -22,7 +22,7 @@ This table holds information on all the signatures of a petition for either a gu
 [3]: #playerguid
 [4]: #playeraccount
 [5]: #type
-[6]: #petition_id
+[6]: #petitionid
 
 **Description of the fields**
 
@@ -36,7 +36,7 @@ The GUID of the charter item. See [item\_template.guid](item_template#guid).
 
 ### petition_id
 
-Sequential identifier of the petition being signed. Matches [petition.petition_id](petition#petition_id).
+Sequential identifier of the petition being signed. Matches [petition.petition_id](petition#petitionid).
 
 ### playerguid
 

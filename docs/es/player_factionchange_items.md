@@ -17,11 +17,11 @@ Básicamente todos los cambios de items que se hacen cuando un jugador cambia de
 | [horde_id][5]    | INT  | SIGNED     | PRI | NO   |         |       |         |
 | [commentH][6]    | INT  | SIGNED     |     |      |         |       |         |
 
-[1]: #race_a
-[2]: #alliance_id
+[1]: #racea
+[2]: #allianceid
 [3]: #commenta
-[4]: #race_h
-[5]: #horde_id
+[4]: #raceh
+[5]: #hordeid
 [6]: #commenth
 
 **Descripción de los campos**

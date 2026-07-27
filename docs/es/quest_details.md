@@ -64,8 +64,8 @@ Retraso del emote en milisegundos
 Este campo lo usa el equipo de BD de TrinityCore para determinar si una plantilla ha sido verificada a partir de archivos WDB.
 
 -   Si el valor es 0, aún no ha sido parseada.
--   Si el valor es &gt; 0, ha sido parseada con archivos WDB de esa [Client Build](realmlist#realmlist-gamebuild) específica.
+-   Si el valor es &gt; 0, ha sido parseada con archivos WDB de esa [Client Build](realmlist#gamebuild) específica.
 -   Si el valor es -1, es solo un marcador de posición hasta que se encuentren datos adecuados en los WDB.
--   Si el valor es -[Client Build](realmlist#realmlist-gamebuild), fue parseada con archivos WDB de esa [build de cliente](realmlist#realmlist-gamebuild) específica y editada manualmente después por alguna necesidad específica.
+-   Si el valor es -[Client Build](realmlist#gamebuild), fue parseada con archivos WDB de esa [build de cliente](realmlist#gamebuild) específica y editada manualmente después por alguna necesidad específica.
 
  

@@ -327,7 +327,7 @@ El ID hace referencia a uno de los factores de dinero incluidos en [MoneyFactor]
 
 ### RewardDisplaySpell
 
-Hechizo que se muestra como lanzado al completar la misión en el registro de misiones. Ten en cuenta que este hechizo NO se lanzará si [RewardSpell](#quest_template-RewardSpell) es distinto de cero. En su lugar se lanzará el hechizo del otro campo, en cuyo caso el hechizo de aquí solo sirve de visual en el registro de misiones.
+Hechizo que se muestra como lanzado al completar la misión en el registro de misiones. Ten en cuenta que este hechizo NO se lanzará si [RewardSpell](#rewardspell) es distinto de cero. En su lugar se lanzará el hechizo del otro campo, en cuyo caso el hechizo de aquí solo sirve de visual en el registro de misiones.
 
 ### RewardSpell
 

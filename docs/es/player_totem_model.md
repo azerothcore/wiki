@@ -39,4 +39,4 @@ Para `RaceID` puedes consultar la columna "ID" de [chrraces](chrraces).
 
 ### ModelID
 
-Consulta [creature_model_info](#creature_model_info#displayid)
+Consulta [creature_model_info](creature_model_info#displayid)

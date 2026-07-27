@@ -13,7 +13,7 @@ Si no existe ninguna sobrescritura, el core recurre a `spell_dbc.ConeRadius`, y 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell identifier |
-| [cone_radius](#cone_radius) | FLOAT | SIGNED | | NO | 1 | | Cone radius override (yards, schema default is 1) |
+| [cone_radius](#coneradius)  | FLOAT | SIGNED | | NO | 1 | | Cone radius override (yards, schema default is 1) |
 
 **Descripción de los campos**
 

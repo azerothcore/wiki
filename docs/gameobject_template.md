@@ -128,7 +128,7 @@ Object's size must be set because graphic models can be resample. `WDB-fields`
 
 ### data0-23
 
-The content of the data fields depends on the [gameobject type](#gameobject_template-type)
+The content of the data fields depends on the [gameobject type](#type)
 
 *Values for these fields come from WDB and are not to be changed.*
 
@@ -151,7 +151,7 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 - data0: startOpen (State)
 - data1: open (LockId from Lock.dbc)
 - data2: autoClose (long unknown flag)
-- data3: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data3: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data4: noDamageImmune (Boolean flag)
 - data5: large? (Boolean flag)
 - data6: openTextID (Unknown Text ID)
@@ -183,7 +183,7 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 - data4: minRestock (Min successful loot attempts for Mining, Herbalism etc)
 - data5: maxRestock (Max successful loot attempts for Mining, Herbalism etc)
 - data6: lootedEvent (Event ID from table event\_scripts)
-- data7: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data7: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data8: questID ([quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) of completed quest)
 - data9: level (minimal level required to open this gameobject)
 - data10: losOK (Boolean flag)
@@ -251,7 +251,7 @@ Object type not used
 
 - data0: spellFocusType (from SpellFocusObject.dbc; value also appears as RequiresSpellFocus in [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
 - data1: diameter (so radius\*2)
-- data2: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data2: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data3: serverOnly? (Always 0)
 - data4: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 - data5: large? (Boolean flag)
@@ -282,7 +282,7 @@ Object type not used
 -   data9: pageMaterial (PageTextMaterial.dbc)
 -   data10: spell (Spell Id from Spell.dbc)
 -   data11: noDamageImmune (Boolean flag)
--   data12: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+-   data12: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 -   data13: large? (Boolean flag)
 -   data14: openTextID (Unknown ID)
 -   data15: closeTextID (Unknown ID)

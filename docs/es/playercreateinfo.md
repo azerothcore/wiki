@@ -23,9 +23,9 @@ Esta tabla contiene las posiciones de inicio de cada combinación clase-raza par
 [2]: #class
 [3]: #map
 [4]: #zone
-[5]: #position_x
-[6]: #position_y
-[7]: #position_z
+[5]: #positionx
+[6]: #positiony
+[7]: #positionz
 [8]: #orientation
 
 **Descripción de los campos**

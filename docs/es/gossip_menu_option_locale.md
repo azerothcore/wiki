@@ -29,7 +29,7 @@
 | [box_text_loc7][17]    | text     | SIGNED     |     | YES  | NULL    |       |         |
 | [box_text_loc8][18]    | text     | SIGNED     |     | YES  | NULL    |       |         |
 
-[1]: #menu_id
+[1]: #menuid
 [2]: #id
 [3]: #option_text_loc1
 [4]: #option_text_loc2

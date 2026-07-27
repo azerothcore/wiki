@@ -14,7 +14,7 @@ Esta tabla contiene los eventos que deben haberse completado para iniciar el eve
 | [prerequisite_event][2] | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 
 [1]: #evententry
-[2]: #prerequisite_event
+[2]: #prerequisiteevent
 
 **Descripción de los campos**
 
@@ -24,4 +24,4 @@ Este es el evento que empezará cuando todos los eventos prerrequisito se hayan 
 
 ### prerequisite\_event
 
-Este es el evento que debe completarse antes de que empiece el siguiente [evento](#game_event_prerequisite-eventEntry).
+Este es el evento que debe completarse antes de que empiece el siguiente [evento](#evententry).

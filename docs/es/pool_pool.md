@@ -15,8 +15,8 @@ Esta es la tabla de pools de pools. Puedes crear un pool con una probabilidad de
 | [chance][3]      | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [description][4] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
 
-[1]: #pool_id
-[2]: #mother_pool
+[1]: #poolid
+[2]: #motherpool
 [3]: #chance
 [4]: #description
 

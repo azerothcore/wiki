@@ -23,9 +23,9 @@ Esta tabla se usa para aplicar un aura de hechizo específica al jugador dentro 
 
 [1]: #spell
 [2]: #area
-[3]: #quest_start
-[4]: #quest_end
-[5]: #aura_spell
+[3]: #queststart
+[4]: #questend
+[5]: #auraspell
 [6]: #racemask
 [7]: #gender
 [8]: #flags
@@ -56,9 +56,9 @@ Si se establece, este valor (más o menos el ID de aura de hechizo de Spell.dbc)
 
 El valor tiene el siguiente efecto:
 
-- **< 0**  (valores negativos) Si el jugador tiene el aura **-aura\_spell** entonces el [spell](#spell_area-spell) no se activará.
+- **< 0**  (valores negativos) Si el jugador tiene el aura **-aura\_spell** entonces el [spell](#spell) no se activará.
 -   **0**   esta columna se ignora.
-- **> 0**  (valores positivos) Si el jugador no tiene el aura **aura\_spell** entonces el [spell](#spell_area-spell) no se activará.
+- **> 0**  (valores positivos) Si el jugador no tiene el aura **aura\_spell** entonces el [spell](#spell) no se activará.
 
 ### racemask
 

@@ -20,11 +20,11 @@ Contains all the teleport triggers definition. This table is used to complete .d
 
 [1]: #id
 [2]: #name
-[3]: #target_map
-[4]: #target_position_x
-[5]: #target_position_y
-[6]: #target_position_z
-[7]: #target_orientation
+[3]: #targetmap
+[4]: #targetpositionx
+[5]: #targetpositiony
+[6]: #targetpositionz
+[7]: #targetorientation
 
 **Description of the fields**
 

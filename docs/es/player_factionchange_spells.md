@@ -13,8 +13,8 @@ Básicamente todos los cambios de spells que se hacen cuando un jugador cambia d
 | [alliance_id][1] | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [horde_id][2]    | INT  | SIGNED     | PRI | NO   |         |       |         |
 
-[1]: #alliance_id
-[2]: #horde_id
+[1]: #allianceid
+[2]: #hordeid
 
 **Descripción de los campos**
 

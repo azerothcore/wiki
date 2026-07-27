@@ -53,4 +53,4 @@ Si eres un personaje de la Horda (solo taurens con razas estándar), el ID de pe
 
 ### ModelID
 
-Consulta [creature_model_info](#creature_model_info#displayid)
+Consulta [creature_model_info](creature_model_info#displayid)

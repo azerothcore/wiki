@@ -24,8 +24,8 @@ Para ver a qué idiomas corresponden los IDs de localización, visita la página
 | [locale_ruRU][3]     | text      |            |     | YES  |         |       |         |
 
 [1]: #entry
-[2]: #content\_default
-[3]: #locale\_nnNN
+[2]: #contentdefault
+[3]: #localennnn
 
 **Descripción de los campos**
 

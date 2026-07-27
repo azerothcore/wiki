@@ -60,7 +60,7 @@ The GUID of the character who has ownership of this item. See [characters.guid](
 
 ### giftCreatorGuid
 
-[Characters.guid](characters#guid) of character who created the [item](character_gifts#item_guid).
+[Characters.guid](characters#guid) of character who created the [item](character_gifts#itemguid).
 
 ### count
 

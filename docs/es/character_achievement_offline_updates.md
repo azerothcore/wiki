@@ -11,7 +11,7 @@ Almacena las actualizaciones de los logros de un personaje cuando el personaje e
 | Field                       | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [guid](#guid)               | INT     | UNSIGNED   | IDX | NO   |         |       |         |
-| [update_type](#update_type) | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| [update_type](#updatetype)  | TINYINT | UNSIGNED   |     | NO   |         |       |         |
 | [arg1](#arg1)               | INT     | UNSIGNED   |     | NO   |         |       |         |
 | [arg2](#arg2)               | INT     | UNSIGNED   |     | YES  | NULL    |       |         |
 | [arg3](#arg3)               | INT     | UNSIGNED   |     | YES  | NULL    |       |         |

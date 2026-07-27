@@ -60,7 +60,7 @@ GUID del personaje quien posée este Item. Véase [characters.guid](characters#g
 
 ### giftCreatorGuid
 
-[Characters.guid](characters#guid) del personaje quien creó el [item](character_gifts#item_guid).
+[Characters.guid](characters#guid) del personaje quien creó el [item](character_gifts#itemguid).
 
 ### count
 

@@ -23,18 +23,18 @@ Esta tabla contiene las probabilidades porcentuales de que ocurran cambios de cl
 | [winter_storm_chance][13] | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #zone
-[2]: #spring_rain_chance
-[3]: #spring_snow_chance
-[4]: #spring_storm_chance
-[5]: #summer_rain_chance
-[6]: #summer_snow_chance
-[7]: #summer_storm_chance
-[8]: #fall_rain_chance
-[9]: #fall_snow_chance
-[10]: #fall_storm_chance
-[11]: #winter_rain_chance
-[12]: #winter_snow_chance
-[13]: #winter_storm_chance
+[2]: #springrainchance
+[3]: #springsnowchance
+[4]: #springstormchance
+[5]: #summerrainchance
+[6]: #summersnowchance
+[7]: #summerstormchance
+[8]: #fallrainchance
+[9]: #fallsnowchance
+[10]: #fallstormchance
+[11]: #winterrainchance
+[12]: #wintersnowchance
+[13]: #winterstormchance
 
 **Descripción de los campos**
 

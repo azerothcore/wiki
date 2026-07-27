@@ -53,4 +53,4 @@ If you're a Horde character (only Tauren with stock races), the customization ID
 
 ### ModelID
 
-Refer to [creature_model_info](#creature_model_info#displayid)
+Refer to [creature_model_info](creature_model_info#displayid)

@@ -17,11 +17,11 @@
 | [comment][7]            | VARCHAR(255) |            |     | YES  | NULL           |                                               |         |
 
 [1]: #id
-[2]: #map_id
+[2]: #mapid
 [3]: #difficulty
-[4]: #min_level
-[5]: #max_level
-[6]: #min_avg_item_level
+[4]: #minlevel
+[5]: #maxlevel
+[6]: #minavgitemlevel
 [7]: #comment
 
 **Descripción de los campos**

@@ -21,14 +21,14 @@
 | [name_loc8][9] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
 
 [1]: #entry
-[2]: #name_loc1
-[3]: #name_loc2
-[4]: #name_loc3
-[5]: #name_loc4
-[6]: #name_loc5
-[7]: #name_loc6
-[8]: #name_loc7
-[9]: #name_loc8
+[2]: #nameloc1
+[3]: #nameloc2
+[4]: #nameloc3
+[5]: #nameloc4
+[6]: #nameloc5
+[7]: #nameloc6
+[8]: #nameloc7
+[9]: #nameloc8
 
 **Descripción de los campos**
 

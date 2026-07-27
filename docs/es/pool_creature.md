@@ -16,7 +16,7 @@ Esta tabla contiene una lista de creatures que están ligadas a un pool concreto
 | [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 [1]: #guid
-[2]: #pool_entry
+[2]: #poolentry
 [3]: #chance
 [4]: #description
 

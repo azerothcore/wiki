@@ -21,7 +21,7 @@ Esta tabla controla la reputación que otorgan las criaturas cuando son asesinad
 | [RewOnKillRepValue2][9]   | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
 | [TeamDependent][10]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
 
-[1]: #creature_id
+[1]: #creatureid
 [2]: #rewonkillrepfaction1
 [3]: #rewonkillrepfaction2
 [4]: #maxstanding1

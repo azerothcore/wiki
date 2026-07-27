@@ -23,8 +23,8 @@ Esta tabla permite agrupar mobs. Los miembros del grupo seguirán a los demás y
 [3]: #dist
 [4]: #angle
 [5]: #groupai
-[6]: #point_1
-[7]: #point_2
+[6]: #point1
+[7]: #point2
 
 ## leaderGUID
 

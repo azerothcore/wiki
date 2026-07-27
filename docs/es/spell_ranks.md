@@ -14,8 +14,8 @@ Tabla usada por el core para agrupar diferentes rangos de hechizos (el texto gri
 | [spell_id][2]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [rank][3]           | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 
-[1]: #first_spell_id
-[2]: #spell_id
+[1]: #firstspellid
+[2]: #spellid
 [3]: #rank
 
 **Descripción de los campos**

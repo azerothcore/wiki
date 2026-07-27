@@ -23,9 +23,9 @@ This table is used to apply a specific spell aura to the player within an area i
 
 [1]: #spell
 [2]: #area
-[3]: #quest_start
-[4]: #quest_end
-[5]: #aura_spell
+[3]: #queststart
+[4]: #questend
+[5]: #auraspell
 [6]: #racemask
 [7]: #gender
 [8]: #autocast
@@ -56,9 +56,9 @@ If set, this value (plus or minus aura spell ID from Spell.dbc) imposes addition
 
 The value has the following effect:
 
-- **< 0**  (negative values) If the player has aura **-aura\_spell** then the [spell](#spell_area-spell) will not be activated.
+- **< 0**  (negative values) If the player has aura **-aura\_spell** then the [spell](#spell) will not be activated.
 -   **0**   this column is ignored.
-- **> 0**  (positive values) If the player has no aura **aura\_spell** then the [spell](#spell_area-spell) will not be activated.
+- **> 0**  (positive values) If the player has no aura **aura\_spell** then the [spell](#spell) will not be activated.
 
 ### racemask
 

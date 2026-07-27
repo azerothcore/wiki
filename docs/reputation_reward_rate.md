@@ -20,13 +20,13 @@ Holds reputation multipliers for specific factions.
 | [spell_rate][4]    | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
 
 [1]: #faction
-[2]: #quest_rate
-[3]: #creature_rate
-[4]: #spell_rate
-[5]: #quest_daily_rate
-[6]: #quest_weekly_rate
-[7]: #quest_monthly_rate
-[8]: #quest_repeatable_rate
+[2]: #questrate
+[3]: #creaturerate
+[4]: #spellrate
+[5]: #questdailyrate
+[6]: #questweeklyrate
+[7]: #questmonthlyrate
+[8]: #questrepeatablerate
 
 **Description of the fields**
 

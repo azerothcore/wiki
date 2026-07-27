@@ -15,7 +15,7 @@ This table contains a list of quests that are tied to a specific pool.
 | [description][3] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #entry
-[2]: #pool_entry
+[2]: #poolentry
 [3]: #description
 
 **Description of the fields**

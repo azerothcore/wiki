@@ -68,7 +68,7 @@ A unique identifier given to each creature to distinguish one creature from anot
 
 ### id
 
-The ID of the [template](creature_template#creature_template-entry) that is used when instantiating this creature.
+The ID of the [template](creature_template#entry) that is used when instantiating this creature.
 
 To let a single spawn point pick from more than one template (the old `id1`/`id2`/`id3` behaviour), add the additional entries in [creature_multispawn](creature_multispawn) keyed by this creature's `guid`.
 
@@ -143,11 +143,11 @@ The respawn time, in seconds, of the creature.
 
 ### wander_distance
 
-The maximum distance that the creature may spawn from its spawn point. Also controls how far away the creature can walk from its spawn point if its [MovementType](#creature-MovementType) = 1.
+The maximum distance that the creature may spawn from its spawn point. Also controls how far away the creature can walk from its spawn point if its [MovementType](#movementtype) = 1.
 
 ### currentwaypoint
 
-The current [waypoint](waypoint_data#waypoint_data-point) that the creature is on, if any.
+The current [waypoint](waypoint_data#point) that the creature is on, if any.
 
 ### curhealth
 
@@ -159,13 +159,13 @@ The mana that the creature will spawn with.
 
 ### MovementType
 
-The movement type associated with the creature. Usually the same as its [MovementType](creature_template#creature_template-MovementType), but it can be different.
+The movement type associated with the creature. Usually the same as its [MovementType](creature_template#movementtype), but it can be different.
 
 ### npcflag
 
-Same as [creature_template.npcflag](creature_template#creature_template-npcflag) .
+Same as [creature_template.npcflag](creature_template#npcflag) .
 
-NOTE: A creature.npcflag record will override a [creature_template.npcflag](creature_template#creature_template-npcflag) record.
+NOTE: A creature.npcflag record will override a [creature_template.npcflag](creature_template#npcflag) record.
 
 ### unit_flags
 
@@ -173,7 +173,7 @@ Same as creature_template.unit_flags.
 
 Note:
 
-A creature.unit_flags record will override a [creature_template.unit_flags](creature_template#creature_template-unit_flags) record.
+A creature.unit_flags record will override a [creature_template.unit_flags](creature_template#unitflags) record.
 
 ### dynamicflags
 
@@ -181,13 +181,13 @@ Same as creature_template.dynamicflags.
 
 Note:
 
-A creature.dynamicflags record will override a [creature_template.dynamicflags](creature_template#creature_template-dynamicflags) record.
+A creature.dynamicflags record will override a [creature_template.dynamicflags](creature_template#dynamicflags) record.
 
 ### ScriptName
 
 Same as creature_template.scriptname.
 
-A creature.scriptname record will override a [creature_template.scriptname](creature_template#creature_template-scriptname) record.
+A creature.scriptname record will override a [creature_template.scriptname](creature_template#scriptname) record.
 
 ### VerifiedBuild
 

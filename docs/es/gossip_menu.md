@@ -20,7 +20,7 @@ Esta tabla se usa para mostrar gossip cuando un jugador habla con un NPC que tie
 
 ### MenuID
 
-Esto debe coincidir con el entry que añadiste a [creature\_template.gossip\_menu\_id](creature_template#gossip_menu_id). Esto también
+Esto debe coincidir con el entry que añadiste a [creature\_template.gossip\_menu\_id](creature_template#gossipmenuid). Esto también
 agrupa las opciones de gossip\_menu\_option y muestra todas las opciones asociadas a este ID.
 
 **Nota:** Si añades tus propias opciones de menú personalizadas, es práctica común empezar con un ID igual o superior a 90 000 para asegurarte de que no entre en conflicto con otros gossip menu id.

@@ -19,10 +19,10 @@ This table determines which spell ID should be used depending on the dungeon or 
 | [DifficultySpellID_4][5] | INT  | UNSIGNED   |     | NO   | 0       |       | Spell ID for 25-player heroic raid |
 
 [1]: #id
-[2]: #difficultyspellid_1
-[3]: #difficultyspellid_2
-[4]: #difficultyspellid_3
-[5]: #difficultyspellid_4
+[2]: #difficultyspellid1
+[3]: #difficultyspellid2
+[4]: #difficultyspellid3
+[5]: #difficultyspellid4
 
 **Description of the fields**
 

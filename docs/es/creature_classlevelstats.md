@@ -29,9 +29,9 @@ Esta tabla contiene los valores base de vida, maná, armadura, poder de ataque, 
 [7]: #basearmor
 [8]: #attackpower
 [9]: #rangedattackpower
-[10]: #damage_base
-[11]: #damage_exp1
-[12]: #damage_exp2
+[10]: #damagebase
+[11]: #damageexp1
+[12]: #damageexp2
 [13]: #comment
 
 **Descripción de los campos**

@@ -15,10 +15,10 @@ Includes information on current core and database version.
 | [db_version][3]     | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Version of world DB             |
 | [cache_id][5]       | INT          | SIGNED     |     | YES  | 0       |       | Minor DB version                |
 
-[1]: #core_version
-[2]: #core_revision
-[3]: #db_version
-[5]: #cache_id
+[1]: #coreversion
+[2]: #corerevision
+[3]: #dbversion
+[5]: #cacheid
 
 **Description of the fields**
 

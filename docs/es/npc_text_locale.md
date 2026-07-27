@@ -148,4 +148,4 @@ Este id debe ser el mismo que [npc\_text.ID](npc_text#id) y entonces la fila se 
 
 ### Text_loc
 
-Contenido traducido para el campo correspondiente [npc\_text.text0 \_0](npc_text#text0_0-to-text7_0) - [npc\_text-text7\_1](npc_text#text0_0-to-text7_1) para el idioma X.
+Contenido traducido para el campo correspondiente [npc\_text.text0 \_0](npc_text#text00-to-text70) - [npc\_text-text7\_1](npc_text#text0_0-to-text7_1) para el idioma X.

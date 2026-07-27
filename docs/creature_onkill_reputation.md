@@ -21,7 +21,7 @@ This table controls the reputation given by creatures when killed by other playe
 | [RewOnKillRepValue2][9]   | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
 | [TeamDependent][10]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
 
-[1]: #creature_id
+[1]: #creatureid
 [2]: #rewonkillrepfaction1
 [3]: #rewonkillrepfaction2
 [4]: #maxstanding1
@@ -36,7 +36,7 @@ This table controls the reputation given by creatures when killed by other playe
 
 ### creature\_id
 
-The template ID of the creature. See [creature\_template.entry](creature_template#creature_template-entry)
+The template ID of the creature. See [creature\_template.entry](creature_template#entry)
 
 ### RewOnKillRepFaction
 
@@ -64,7 +64,7 @@ Boolean 0 or 1 that controls if the player receives the reputation not only to t
 -   0: Player receives reputation only for the faction
 -   1: Player receives reputation both for the faction and the faction's team
 
-NOTE: The reputation value that the player gains for the team (if the field is 1) is half of the value specified in [RewOnKillRepValue](#creature_onkill_reputation-RewOnKillRepValue)
+NOTE: The reputation value that the player gains for the team (if the field is 1) is half of the value specified in [RewOnKillRepValue](#rewonkillrepvalue)
 
 ### RewOnKillRepValue
 

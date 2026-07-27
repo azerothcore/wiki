@@ -17,10 +17,10 @@ Ese opcode se envía para misiones en las que tienes que saquear criaturas que y
 | [cast_flags][3] | TINYINT  | UNSIGNED   |     | NO   | NULL    |       | Who casts the spell on who, creature <=> player (values: 0-3)           |
 | [user_type][4]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Relation with summoner: 0-no 1-friendly 2-raid 3-party player can click |
 
-[1]: #npc_entry
-[2]: #spell_id
-[3]: #cast_flags
-[4]: #user_type
+[1]: #npcentry
+[2]: #spellid
+[3]: #castflags
+[4]: #usertype
 
 **Descripción de los campos**
 

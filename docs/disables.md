@@ -20,8 +20,8 @@ This table is used to disable dungeons/bgs/spells/etc.
 [1]: #sourcetype
 [2]: #entry
 [3]: #flags
-[4]: #params_0
-[5]: #params_1
+[4]: #params0
+[5]: #params1
 [6]: #comment
 
 **Description of the fields**
