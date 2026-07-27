@@ -1,5 +1,7 @@
 # VSC Requirements
 
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 | Installation Guide | |
 | :- | :- |
 | [<< Start: Installation Guide](installation) | [Step 2: VSC Core Installation >>](windows-vsc-core-installation) |

@@ -1,5 +1,7 @@
 # Hosting AzerothCore via Amazon AWS
 
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 Preface: The goal with this guide is for it to be mostly via a command line. There is also the [AWS Console](https://aws.amazon.com/console/) that some will find more intuitive, however, for guide longevity (as the AWS Console UI may change) the aws-cli tool will be recommended. Also included will be grep commands to receive only the required output. If the entire output is desired simply remove the `| grep` and everything after it.
 
 ------

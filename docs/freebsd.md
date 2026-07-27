@@ -1,5 +1,7 @@
 # FreeBSD
 
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 ## Install Dependencies
 You need to install the build and runtime dependancies:
 

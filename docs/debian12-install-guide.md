@@ -1,5 +1,7 @@
 # AzerothCore Debian 12 Install Guide
 
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 This is a quickstart guide for installing AzerothCore to a Debian 12 server from your Windows PC. For a more in-depth tutorial, see the [official AzerothCore Installation Guide](installation).
 
 

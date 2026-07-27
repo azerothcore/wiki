@@ -1,4 +1,7 @@
 # Arch Linux Install
+
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 This page covers Arch Linux-specific dependency setup for AzerothCore. It is intended to be used together with the [Linux Classic Installation](classic-installation) guide.
 
 {% include warning.html content="The AzerothCore package in the AUR is very out of date and not recommended." %}
