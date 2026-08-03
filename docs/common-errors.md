@@ -160,7 +160,7 @@ Reinstall Git for Windows and select "Git from the command line and also 3rd par
 #### ACE00061
 I cannot install AzerothCore on CentOS/Ubuntu/Debian etc.
 
-AzerothCore requires GCC 8.0 or higher and CLang 7 or higher.
+Your distribution is likely too old to provide a supported compiler. Ubuntu 22.04 and older are not supported anymore: use Ubuntu 24.04 or 26.04, or Debian 12/13. See the [supported versions](https://github.com/azerothcore/azerothcore-wotlk/security/policy) for the exact GCC and CLang requirements.
 
 ---------------------------------------------------------
 
@@ -219,6 +219,23 @@ Make sure the version you have installed is supported.
 If you did not download precompiled boost, locate your Boost folder
 1. Run the Bootstrap.bat file
 1. Run the b2.exe file 
+
+---------------------------------------------------------
+
+#### ACE00068
+I can't generate my CMake files on Ubuntu 26.04, I get:
+```
+The C++ compiler "/usr/bin/clang++" is not able to compile a simple test program.
+/usr/bin/x86_64-linux-gnu-ld.bfd: cannot find -lstdc++: No such file or directory
+```
+
+Clang links against the GCC toolchain, and on Ubuntu 26.04 clang 21 picks GCC 16 while the default `g++` is GCC 15, so the C++ development files it needs are not installed. Install them:
+
+```sh
+sudo apt-get install -y libstdc++-16-dev
+```
+
+If clang picks another version, run `clang++ -v` and install the `libstdc++-<version>-dev` matching the `Selected GCC installation` line of the output.
 
 ## Extractor-related errors
 

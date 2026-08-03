@@ -8,9 +8,14 @@ In short: thread-friendly heap-checker, heap-profiler, and cpu-profiler.
 
 ## Install (Ubuntu):
 
-Run in a terminal: `sudo apt-get install google-perftools libgoogle-perftools-dev`
+Run in a terminal:
+
+- Ubuntu 26.04: `sudo apt-get install libgoogle-perftools-dev`
+- Ubuntu 24.04: `sudo apt-get install google-perftools libgoogle-perftools-dev`
 
 Note: dependencies above are already installed in our docker file
+
+Ubuntu 26.04 dropped the `google-perftools` package, which is the one providing the `google-pprof` command used at the end of this page. Install the [pprof](https://github.com/google/pprof) tool separately there (`go install github.com/google/pprof@latest`) and use `pprof` instead of `google-pprof`.
 
 ## Usage (with the AzerothCore dashboard):
 
