@@ -17,12 +17,14 @@
 #### Ubuntu 26.04
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libstdc++-16-dev default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
 Ubuntu 26.04 already provides supported MySQL packages through the default repositories, so the command above is enough.
+
+`libstdc++-16-dev` is needed because clang 21 (the default on 26.04) links against the GCC 16 toolchain, while the default `g++` is GCC 15 and only brings the GCC 15 C++ development files. Without it, CMake fails with `cannot find -lstdc++` ([ACE00068](common-errors#ace00068)). If a future Ubuntu update changes the GCC version clang picks, run `clang++ -v` and install the `libstdc++-<version>-dev` matching the `Selected GCC installation` line.
 
 ---
 
