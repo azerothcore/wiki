@@ -460,6 +460,7 @@ Esta es la probabilidad de que ocurra el evento como porcentaje de 0 a 100. Así
 | SMART_TARGET_SUMMONED_CREATURES | 204 | [creature_template.Entry](creature_template#entry) | | | | | | | | |
 | SMART_TARGET_INSTANCE_STORAGE | 205 | data index | Type (creature (1), gameobject (2)) | | | | | | | |
 | SMART_TARGET_FORMATION | 206 | Type (0: members only, 1: leader only, 2: all) | creature_template.entry (0: Any) | ExcludeSelf (0/1) | | | | | | Apunta a los miembros de la formación de la creature. |
+| SMART_TARGET_SHARED_OWNER_ENTITIES | 207 | Type (creature (1), gameobject (2)) | Filtro por entry (0: cualquiera) | MaxDist (0: visibility range) | | | | | | Apunta a creatures u objetos de juego que comparten el mismo propietario, encantador o invocador que el origen; excluye el propio objeto origen y no devuelve nada si el origen no tiene propietario. |
 
 ### comment
 
