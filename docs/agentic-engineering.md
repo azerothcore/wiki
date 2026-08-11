@@ -21,6 +21,7 @@ AI-assisted contributions are welcome, and they are held to the same bar as any 
 3. **Be transparent.** The PR template asks whether AI was involved; answer honestly.
 4. **Sound like a human.** Issues, PR descriptions and review replies should read like you wrote them. Nobody enjoys talking to a wall of generated text.
 5. **Respect reviewers' time.** Low-effort AI-generated PRs create more work than they save. PRs that are clearly unreviewed AI output may be closed without a detailed review.
+6. **Run a [/self-review session](https://www.azerothcore.org/wiki/agentic-self-review)** and include the generated report in your PR. The AC Staff can reject any PR that does not include such a report.
 
 Why so explicit? In the past, we received a wave of AI-generated PRs that were never properly engineered, or even understood, by their authors.
 We appreciate every contribution effort, but this creates chaos and a heavy burden on the staff reviewing them. The rest of this page shows a better way.
