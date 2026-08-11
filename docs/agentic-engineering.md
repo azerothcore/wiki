@@ -133,7 +133,7 @@ This launches an interactive review process that gives you suggestions and lets 
 
 Read the questions **carefully** and select the changes you think are necessary.
 
-At the end of the process, it produces a `<slug>.SELF-REVIEW.md` document that you must upload to the PR so maintainers can review it.
+At the end of the process, it produces a `<slug>.SELF-REVIEW.md` document that you must copy-paste verbatim as a comment on your PR so maintainers can review it.
 
 **This step is mandatory, DO NOT SKIP THIS.**
 
