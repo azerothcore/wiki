@@ -120,7 +120,23 @@ Execute the plan `.claude/plans/XXXXX-some-issue-title/XXXXX-some-issue-title.PL
 
 (or run the review in a later prompt).
 
-**5. Open the PR.** When you're ready, the agent can fill in the AC PR template for you:
+**5. Let AI review your code with /self-review**:
+
+Select a **powerful model** (e.g. Fable, Opus, or similar). Do NOT use cheap models for this step.
+
+```
+/self-review
+```
+
+This launches an interactive review process that gives you suggestions and lets you choose which ones to apply.
+
+Read the questions **carefully** and select the changes you think are necessary.
+
+At the end of the process, it produces a `<slug>.SELF-REVIEW.md` document that you must upload to the PR so maintainers can review it.
+
+**This step is mandatory, DO NOT SKIP THIS.**
+
+**6. Open the PR.** When you're ready, the agent can fill in the AC PR template for you:
 
 ```
 /generate-pr-description
@@ -128,7 +144,9 @@ Execute the plan `.claude/plans/XXXXX-some-issue-title/XXXXX-some-issue-title.PL
 
 Then do the part the agent can't: test your change in game, read the final diff top to bottom, and open the PR.
 
-**6. Handle the review.** When comments come in, `/fetch-pr-review` collects them into a document and `/refine-pr-review` walks you through them one by one (address, partially address, or push back) with drafted replies.
+Don't forget to copy-paste the contents of the `<slug>.SELF-REVIEW.md` file generated in the previous step.
+
+**7. Handle the review.** When comments come in, `/fetch-pr-review` collects them into a document and `/refine-pr-review` walks you through them one by one (address, partially address, or push back) with drafted replies.
 
 ## Habits that pay off
 
