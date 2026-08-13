@@ -41,7 +41,7 @@ Used this way, AI is one of the best programming tutors you'll ever have, and ev
 Throwing a one-line prompt at an agent and pushing whatever comes out is how you end up in rule 5 above.
 What works is a structured process where *you* make the decisions and the agent does the legwork.
 
-Our recommended workflow is called [**RPA (Refine-Plan-Act)**](https://medium.com/engineering-in-the-age-of-ai/the-refine-plan-act-pattern-for-agentic-ai-coding-59ee013e4427): split the work into phases, each producing a small document that you read, correct and approve before moving on.
+Our recommended workflow is called [**RPAC (Refine-Plan-Act-Consolidate)**](https://medium.com/engineering-in-the-age-of-ai/the-refine-plan-act-pattern-for-agentic-ai-coding-59ee013e4427): split the work into phases, each producing a small document that you read, correct and approve before moving on.
 Each phase runs in a fresh, focused session, which gives you better output and costs fewer tokens (more on that below).
 
 ## Pick your agent
