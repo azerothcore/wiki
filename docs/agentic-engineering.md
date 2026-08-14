@@ -214,7 +214,8 @@ The workflow and habits on this page are covered in more depth in these write-up
 - [An approach to agentic skills](https://medium.com/engineering-in-the-age-of-ai/my-approach-to-agentic-skills-e08dc6c0d1cd): the philosophy behind self-improve and continuously teaching your agents
 - [Context-aware notifications for multi-tasking developers](https://medium.com/engineering-in-the-age-of-ai/ai-notify-context-aware-notifications-for-multi-tasking-developers-3614635398ec): the story behind ai-notify
 - [Keep your AI agent’s memory clean and organized with memory-doctor](https://medium.com/engineering-in-the-age-of-ai/keep-your-ai-agents-memory-clean-and-organized-with-memory-doctor-a79f7174f257)
-- The agentic **Refine-Plan-Act** (RPA) pattern: explained [in theory](https://medium.com/engineering-in-the-age-of-ai/the-refine-plan-act-pattern-for-agentic-ai-coding-59ee013e4427) and [in practice](https://medium.com/engineering-in-the-age-of-ai/how-i-use-ai-agents-to-solve-programming-tasks-daily-2a68a5828b8e)
+- The agentic **Refine-Plan-Act-Consolidate** (RPAC) pattern: explained [in theory](https://medium.com/engineering-in-the-age-of-ai/the-refine-plan-act-pattern-for-agentic-ai-coding-59ee013e4427) and [in practice](https://medium.com/engineering-in-the-age-of-ai/how-i-use-ai-agents-to-solve-programming-tasks-daily-2a68a5828b8e)
+- [Use AI to assist you with both sides of code reviews](https://medium.com/engineering-in-the-age-of-ai/let-ai-speed-up-both-sides-of-your-code-reviews-while-you-stay-in-full-control-3b059506ef39)
 
 ## Wrap-up
 
