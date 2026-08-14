@@ -222,3 +222,9 @@ The workflow and habits on this page are covered in more depth in these write-up
 AI doesn't replace understanding the codebase; it rewards it. Used with the workflow above, it makes contributing to AzerothCore faster, more fun, and honestly one of the best ways to level up as a developer.
 
 Questions, ideas or feedback? Come talk to us on Discord. This page will keep evolving, and suggestions to improve it are always welcome.
+
+## For people who do not speak English
+
+Use [this rule](https://github.com/eai-org/agent-toolkit/blob/main/docs/use-my-mothertongue-rule.md) to make your agent talk to you in your own language while still generating artefacts in English.
+
+You can just give your AI agent that link, mention your native language, and ask the agent to install it.
