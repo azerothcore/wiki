@@ -14,6 +14,8 @@ You can contribute in several ways to AzerothCore:
 
 - [Testing DB-only changes](how-to-test-db-only-changes)
 
+- [Live e2e tests](live-e2e)
+
 - [Creating a pull request](#how-to-create-a-pull-request)
 
 - [Improving our wiki](#improve-the-wiki)
@@ -45,6 +47,7 @@ If **(and only if)** the bug hasn't been reported yet, you can [open an issue](h
 ## How to test a Pull Request
 
 - Read [How to test a PR](how-to-test-a-pr).
+- Official PRs also run [live e2e tests](live-e2e) against a full auth + world + MySQL stack. That does not replace in-game testing.
 
 ## How to create a Pull Request
 

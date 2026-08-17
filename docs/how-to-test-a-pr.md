@@ -109,6 +109,8 @@ To make sure you are correctly running your server with the PR, check the date a
 
 Now log in game and do your tests!
 
+Official PRs also run [live e2e tests](live-e2e) in CI (full authserver + worldserver, protocol bots). That is extra coverage. It does not replace the in-game checks on this page.
+
 ## What needs to be tested?
 
 Instructions about what needs to be tested in the scope of a PR should be provided by the PR's author in the PR description. If that is not the case, feel free to leave a comment in the PR description asking for testing istructions.
