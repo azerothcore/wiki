@@ -50,7 +50,8 @@ You need a running authserver, worldserver, and MySQL, plus Go 1.26+.
 
 ```bash
 cd e2e
-# copy e2e/.env.example and export E2E_* (auth addr + DSNs)
+cp .env.example .env   # edit auth addr + DSNs
+set -a; source .env; set +a
 go test -tags=e2e ./... -count=1 -v -timeout 120m -parallel 1 -p 1
 ```
 
