@@ -14,7 +14,7 @@ This does **not** replace [testing a PR in game](how-to-test-a-pr). It is extra 
 
 On a pull request against `azerothcore/azerothcore-wotlk` (not forks, not drafts), and again on every push to `master`:
 
-1. The usual `nopch-build` job compiles real `authserver` and `worldserver` (ubuntu-24.04, clang-18, no PCH) and uploads those binaries.
+1. The usual `nopch-build` job compiles real `authserver` and `worldserver` (no PCH) and uploads those binaries.
 2. The `e2e full` job starts MySQL and applies the normal AC database and client-data setup.
 3. It boots **those same binaries**. `worldserver` listens on 8085, `authserver` on 3724. The job waits until both ports accept connections.
 4. It runs `go test -tags=e2e` from `e2e/` against that realm.
