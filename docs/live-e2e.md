@@ -12,18 +12,18 @@ This does **not** replace [testing a PR in game](how-to-test-a-pr). It is extra 
 
 ## What CI does
 
-On a pull request against `azerothcore/azerothcore-wotlk` (not forks, not drafts):
+On a pull request against `azerothcore/azerothcore-wotlk` (not forks, not drafts), and again on every push to `master`:
 
 1. The usual `nopch-build` job compiles real `authserver` and `worldserver` (ubuntu-24.04, clang-18, no PCH) and uploads those binaries.
 2. The `e2e full` job starts MySQL and applies the normal AC database and client-data setup.
 3. It boots **those same binaries**. `worldserver` listens on 8085, `authserver` on 3724. The job waits until both ports accept connections.
 4. It runs `go test -tags=e2e` from `e2e/` against that realm.
 
-So the pipeline runs a **full** AC stack from the PR's binaries, then talks to it as a client. There is no partial worldserver and no mocked combat.
+So the pipeline runs a **full** AC stack from those binaries, then talks to it as a client. There is no partial worldserver and no mocked combat.
 
 A comment in the workflow about "dry-run" is only about the CMake/compile path. The tests themselves always hit a live process.
 
-Merge to `master` keeps the clang-18 build and does **not** run the suite again. Official CI already ran it on the PR.
+The `master` run is the same full suite, not a smoke subset. That catches flakes and cases where an older PR was green against an older `master` but breaks once it lands with later commits.
 
 You can also start the suite by hand with `workflow_dispatch` (`scope=full` or `scope=smoke`).
 
