@@ -290,7 +290,7 @@ Esta es la probabilidad de que ocurra el evento como porcentaje de 0 a 100. Así
 | SMART_ACTION_SUMMON_GO | 50 | gameobject_template.entry | De-spawn time in seconds. | targetSummon (0/1) | summonType (0 - after a specified time OR when the summoner dies, 1 - after a specified time) | | | Spawnea un gameobject, usa target_type para establecer la posición de spawn; si se especifica una entidad como target y también se establecen coordenadas (target x,y,z), esas coordenadas se manejan como offset desde la posición del target; si targetSummon es 1, el target invocará el GO en la posición del actor |
 | SMART_ACTION_KILL_UNIT | 51 | | | | | | | Mata la creature. |
 | SMART_ACTION_ACTIVATE_TAXI | 52 | TaxiID | | | | | | Envía al jugador a una ruta de vuelo. Tienes que estar cerca del Flight Master que da el Taxi ID que necesitas. |
-| SMART_ACTION_ESCORT_START | 53 | forcedMovement (0: none, 1: walk, 2: run) | waypoints.entry | canRepeat | quest_template.id | despawntime | ReactState (0=Passive, 1=Defensive, 2=Aggressive) | La creature inicia el movimiento de Escort. Usa la tabla waypoints para crear el movimiento. |
+| SMART_ACTION_ESCORT_START | 53 | forcedMovement (0: none, 1: walk, 2: run, 3: fly) | waypoints.entry | canRepeat | quest_template.id | despawntime | ReactState (0=Passive, 1=Defensive, 2=Aggressive) | La creature inicia el movimiento de Escort. Usa la tabla waypoints para crear el movimiento. |
 | SMART_ACTION_ESCORT_PAUSE | 54 | time (in ms) | | | | | | La creature pausa su movimiento de Escort durante el tiempo dado. |
 | SMART_ACTION_ESCORT_STOP | 55 | despawnTime | quest_template.id | fail (0/1) | | | | La creature detiene su movimiento de Escort. |
 | SMART_ACTION_ADD_ITEM | 56 | item_template.entry | count | | | | | Añade item(s) al jugador. |
@@ -350,7 +350,7 @@ Esta es la probabilidad de que ocurra el evento como porcentaje de 0 a 100. Así
 | SMART_ACTION_REMOVE_POWER | 110 | Power type | Power to remove | | | | | |
 | SMART_ACTION_GAME_EVENT_STOP | 111 | game_event.eventEntry | | | | | | |
 | SMART_ACTION_GAME_EVENT_START | 112 | game_event.eventEntry | | | | | | |
-| SMART_ACTION_START_CLOSEST_WAYPOINT | 113 | pathId1 | pathId2 | repeat (0: no, 1: yes) | forcedMovement (0: none, 1: walk, 2: run) | pathSource (0: waypoint_data, 1: SmartScript waypoints) | | La creature inicia el movimiento de Waypoint usando el path id más cercano en el rango entre pathId1 y pathId2. Usa la tabla waypoints para crear el movimiento. |
+| SMART_ACTION_START_CLOSEST_WAYPOINT | 113 | pathId1 | pathId2 | repeat (0: no, 1: yes) | forcedMovement (0: none, 1: walk, 2: run, 3: fly) | pathSource (0: waypoint_data, 1: SmartScript waypoints) | | La creature inicia el movimiento de Waypoint usando el path id más cercano en el rango entre pathId1 y pathId2. Usa la tabla waypoints para crear el movimiento. |
 | SMART_ACTION_RISE_UP | 114 | distance | | | | | | Se mueve hacia arriba la distancia especificada (advertencia: TC 3.3.5 usa otra acción aquí: SMART_ACTION_MOVE_OFFSET) |
 | SMART_ACTION_RANDOM_SOUND | 115 | soundId1 | soundId2 | soundId3 | soundId4 | onlySelf (0/1) | distance | |
 | SMART_ACTION_SET_CORPSE_DELAY | 116 | timer (secs) | | | | | | |
@@ -618,4 +618,3 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 - SMART_EVENT_AREA_RANGE
 - SMART_EVENT_SUMMONED_UNIT_EVADE
 - SMART_EVENT_IS_IN_MELEE_RANGE
-
