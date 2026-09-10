@@ -1,8 +1,8 @@
-# AzerothCore Debian 12 Install Guide
+# AzerothCore Debian 13 Install Guide
 
 {% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
 
-This is a quickstart guide for installing AzerothCore to a Debian 12 server from your Windows PC. For a more in-depth tutorial, see the [official AzerothCore Installation Guide](installation).
+This is a quickstart guide for installing AzerothCore to a Debian 13 server from your Windows PC. For a more in-depth tutorial, see the [official AzerothCore Installation Guide](installation).
 
 
 ## Table of Contents
@@ -17,8 +17,8 @@ This is a quickstart guide for installing AzerothCore to a Debian 12 server from
 ## Requirements
 ##### [PuTTY](https://www.putty.org/)
 - A Windows program for sending commands to the server.
-##### [Debian 12](https://www.ovhcloud.com/en-ca/vps/)
-- A server with Debian 12 installed. (ex: 4gb/4core VPS from OVH)
+##### [Debian 13](https://www.ovhcloud.com/en-ca/vps/)
+- A server with Debian 13 installed. (ex: 4core/8gb VPS from OVH)
 
 #### Optional
   ##### [HeidiSQL](https://www.heidisql.com/)
@@ -67,22 +67,23 @@ sudo ufw enable
 sudo apt update && sudo apt install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget p7zip-full nodejs npm fail2ban -y && sudo npm install pm2 -g
 ```
 ### Get MySQL
-- Visit the [MySQL APT repository](https://dev.mysql.com/downloads/repo/apt/) to verify the latest version.
 ```bash
 # Version
 MYSQL_APT_CONFIG_VERSION=0.8.36-1
-# # # # #
-mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
 # Download
+mkdir -p ~/mysqlpackages && cd ~/mysqlpackages
 wget "https://dev.mysql.com/get/mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb"
 wget "https://dev.mysql.com/downloads/gpg/?file=mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb&p=37" -O mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc
-# Verify
+# Verify and Install
 gpg --keyserver keyserver.ubuntu.com --recv-keys A8D3785C
-gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
-# Install
-sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
-sudo apt update
-sudo DEBIAN_FRONTEND="noninteractive" apt install -y mysql-server libmysqlclient-dev
+if gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb; then
+    sudo DEBIAN_FRONTEND="noninteractive" dpkg -i ./mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb
+    sudo apt update
+    sudo DEBIAN_FRONTEND="noninteractive" apt install --only-upgrade -y mysql-apt-config
+    sudo DEBIAN_FRONTEND="noninteractive" apt install -y mysql-server libmysqlclient-dev
+else
+    echo "GPG signature check failed. Skipping installation."
+fi
 # Cleanup
 rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFIG_VERSION
 ```
@@ -166,7 +167,7 @@ git -C ~/azerothcore/modules clone https://github.com/azerothcore/mod-anticheat
 ```bash
 rm -rf ~/server/data &&
 mkdir -p ~/server/data && cd ~/server/data &&
-wget https://github.com/wowgaming/client-data/releases/download/v19/data.zip &&
+wget https://github.com/wowgaming/client-data/releases/download/v20.0/data.zip &&
 7z x data.zip && rm data.zip
 ```
 ### Build Core
