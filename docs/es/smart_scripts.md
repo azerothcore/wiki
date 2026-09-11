@@ -283,7 +283,7 @@ Esta es la probabilidad de que ocurra el evento como porcentaje de 0 a 100. Así
 | SMART_ACTION_MOUNT_TO_ENTRY_OR_MODEL | 43 | creature_template.entry | creature_template.modelidx | | | | | Monta en el entry de creature (param1) O monta en el display de creature (param2) O ambos = 0 para desmontar |
 | SMART_ACTION_SET_INGAME_PHASE_MASK | 44 | creature.phaseMask | | | | | | |
 | SMART_ACTION_SET_DATA | 45 | Field | Data | | | | | Establece data para el objetivo, se puede usar con SMART_EVENT_DATA_SET |
-| SMART_ACTION_MOVE_FORWARD | 46 | distance | | | | | | Mueve a uno mismo hacia delante la distancia especificada (point movement) |
+| SMART_ACTION_MOVE_FORWARD | 46 | distance | | | | | | Mueve la(s) criatura(s) objetivo hacia delante la distancia especificada (point movement); usa SMART_TARGET_SELF para mover a la propia fuente |
 | SMART_ACTION_SET_VISIBILITY | 47 | 0/1 | | | | | | Hace a la creature Visible = 1 o Invisible = 0 |
 | SMART_ACTION_SET_ACTIVE | 48 | 0/1 | | | | | | Si una creature o GO se establece como activa, seguirá activa aunque no haya ningún jugador cerca. Ten cuidado, ya que necesita recursos adicionales (CPU/RAM) para mantenerla activa (otros objetos/creatures cercanos permanecen activos). |
 | SMART_ACTION_ATTACK_START | 49 | | | | | | | Permite los golpes cuerpo a cuerpo básicos a la creature. |
