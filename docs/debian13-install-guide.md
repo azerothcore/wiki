@@ -82,7 +82,7 @@ if gpg --verify mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all.deb.asc mysql-a
     sudo DEBIAN_FRONTEND="noninteractive" apt install --only-upgrade -y mysql-apt-config
     sudo DEBIAN_FRONTEND="noninteractive" apt install -y mysql-server libmysqlclient-dev
 else
-    echo "GPG signature check failed. Skipping installation."
+    echo -e "ERROR: GPG signature check failed. MySQL was NOT installed.\nRetry using MYSQL_APT_CONFIG_VERSION=0.8.36-1\nIf issue persists, downloads may be corrupted or compromised."
 fi
 # Cleanup
 rm -v mysql-apt-config_${MYSQL_APT_CONFIG_VERSION}_all* && unset MYSQL_APT_CONFIG_VERSION
