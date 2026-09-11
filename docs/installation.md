@@ -28,7 +28,7 @@ These guides are for experimental installations and have limited to no support.
 
 Beware these guides are made by community members and might not be up-to-date:
 
-- [Debian 12](debian12-install-guide)
+- [Debian 13](debian13-install-guide)
 
 - [Amazon Web Services](aws-tutorial)
 
