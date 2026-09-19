@@ -63,11 +63,76 @@ if you need to add a custom configuration file to your module that will be insta
 1. Add a file with the extension `.conf.dist` in folder `./conf`
 2. Done. Yes, really, that's all there is to it.
 
-### **Add your db files to db_assembler**
+### **Add your own database**
 
-you are able to create base, updates and custom sql that will be automatically loaded in our db_assembler
+Modules can now own a complete database without any core-side registration.
 
-**work in progress….**
+The usual flow is:
+
+1. Derive your pool from `ModuleDatabasePool`
+2. Set the connection string with `SetConnectionInfo(...)`
+3. Open the pool in `DatabaseScript::OnModuleDatabasesLoading()`
+4. Run `ModuleDBUpdater::Create(...)`, `ModuleDBUpdater::Populate(...)` and `ModuleDBUpdater::Update(...)`
+5. Call `PrepareStatements()` after the schema is ready
+6. Keep the pool alive with `OnModuleDatabasesKeepAlive()` and close it with `OnModuleDatabasesClosing()`
+
+```cpp
+class MyModuleDatabasePool : public ModuleDatabasePool
+{
+protected:
+    MySQLConnection* CreateConnection(MySQLConnectionInfo& info) override
+    {
+        return new MyModuleDatabaseConnection(info);
+    }
+};
+
+class MyModuleDatabaseScript : public DatabaseScript
+{
+public:
+    MyModuleDatabaseScript() : DatabaseScript("MyModuleDatabaseScript") { }
+
+    bool OnModuleDatabasesLoading() override
+    {
+        std::string const modulePath = "/path/to/modules/mod-my-module";
+
+        _pool.SetConnectionInfo("127.0.0.1;3306;acore;acore;mod_my_module", 1);
+
+        if (_pool.Open() != 0)
+            return false;
+
+        if (!ModuleDBUpdater::Create(_pool))
+            return false;
+
+        DBUpdaterInfo const info
+        {
+            "MyModule",
+            modulePath,
+            modulePath + "/data/sql/base/",
+            "mymodule"
+        };
+
+        if (!ModuleDBUpdater::Populate(_pool, info) || !ModuleDBUpdater::Update(_pool, info))
+            return false;
+
+        return _pool.PrepareStatements();
+    }
+
+    void OnModuleDatabasesKeepAlive() override
+    {
+        _pool.KeepAlive();
+    }
+
+    void OnModuleDatabasesClosing() override
+    {
+        _pool.Close();
+    }
+
+private:
+    MyModuleDatabasePool _pool;
+};
+```
+
+Keep the SQL files inside your module repository and point `DBUpdaterInfo` to them. The updater follows the same base/update workflow used by the core databases, so your module can create, populate and update its own schema during startup.
 
 ### **Finished creating your module?**
 

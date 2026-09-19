@@ -14,6 +14,18 @@ This guide, together with our [module system](create-a-module) lets you extend t
 
 The list of the hooks can be found inside the [ScriptMgr.h file](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
+### Database hooks
+
+Modules that need their own database should use `DatabaseScript`.
+
+The most relevant hooks are:
+
+- `OnModuleDatabasesLoading()` to open the pool, create/populate/update the schema and abort startup by returning `false` on failure
+- `OnModuleDatabasesKeepAlive()` to ping the module-owned connections during the world keep-alive tick
+- `OnModuleDatabasesClosing()` to close the pool during shutdown
+- `OnDatabaseGetDBRevision()` to expose your module database revision in `.server info`
+- `OnDatabaseWarnAboutSyncQueries(bool apply)` if your module wants to mirror the core synchronous-query warning state
+
 ### Glossary
 
 * **Hook**: A function that is declared inside a **_ScriptObject_** and that is defined by the **_Listeners_**
