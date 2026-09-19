@@ -93,7 +93,7 @@ public:
 
     bool OnModuleDatabasesLoading() override
     {
-        std::string const modulePath = "/path/to/modules/mod-my-module";
+        std::string const modulePath = ResolveModulePath();
 
         _pool.SetConnectionInfo("127.0.0.1;3306;acore;acore;mod_my_module", 1);
 
@@ -128,11 +128,12 @@ public:
     }
 
 private:
+    std::string ResolveModulePath() const;
     MyModuleDatabasePool _pool;
 };
 ```
 
-Keep the SQL files inside your module repository and point `DBUpdaterInfo` to them. The updater follows the same base/update workflow used by the core databases, so your module can create, populate and update its own schema during startup.
+Keep the SQL files inside your module repository and point `DBUpdaterInfo` to them. In the example above, `ResolveModulePath()` stands for whichever mechanism your module already uses to locate its own source tree. The updater follows the same base/update workflow used by the core databases, so your module can create, populate and update its own schema during startup.
 
 ### **Finished creating your module?**
 
