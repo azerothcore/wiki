@@ -70,6 +70,22 @@ Correcto:
 UPDATE `creature_loot_template` SET `Chance` = 100 WHERE `entry` = 3 AND `item` = 884;
 ```
 
+### DELETE y UPDATE de spawns
+
+Para las tablas de spawns (`creature`, `gameobject`), las sentencias `DELETE` y `UPDATE` deben apuntar únicamente a esa tabla y filtrar tanto por `id` como por `guid` en la cláusula `WHERE`. Usa `=`, `IN` o `BETWEEN`, pero nunca `OR`.
+
+Incorrecto:
+
+```sql
+UPDATE `creature` SET `spawntimesecs` = 300 WHERE `guid` = 12345;
+```
+
+Correcto:
+
+```sql
+UPDATE `creature` SET `spawntimesecs` = 300 WHERE `id` = 1234 AND `guid` = 12345;
+```
+
 ### Variables
 
 Las variables pueden ser buenas cuando cambias la misma entry en varios lugares, para evitar errores.

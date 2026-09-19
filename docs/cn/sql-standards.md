@@ -70,6 +70,22 @@ UPDATE `creature_loot_template` SET `Chance` = 100 WHERE `item` = 884;
 UPDATE `creature_loot_template` SET `Chance` = 100 WHERE `entry` = 3 AND `item` = 884;
 ```
 
+### Spawn 的 DELETE 与 UPDATE
+
+对于 spawn 表（`creature`、`gameobject`），`DELETE` 和 `UPDATE` 语句都必须只作用于该表本身，并且在 `WHERE` 子句中同时按 `id` 和 `guid` 进行过滤。可以使用 `=`、`IN` 或 `BETWEEN`，但绝不能使用 `OR`。
+
+错误示例：
+
+```sql
+UPDATE `creature` SET `spawntimesecs` = 300 WHERE `guid` = 12345;
+```
+
+正确示例：
+
+```sql
+UPDATE `creature` SET `spawntimesecs` = 300 WHERE `id` = 1234 AND `guid` = 12345;
+```
+
 ### 变量
 
 当你在多个地方修改同一个条目时，使用变量可以避免出错。
