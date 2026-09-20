@@ -47,7 +47,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | Tipo de script | Úsalo para | Hooks de ejemplo |
 | --- | --- | --- |
 | `AccountScript` | Login de cuenta y eventos de administración de cuentas | `OnAccountLogin`, `OnPasswordChange`, `CanAccountCreateCharacter` |
-| `GuildScript` | Eventos de hermandad y comportamiento del banco de guild | `OnGuildAddMember`, `OnGuildDisband`, `CanGuildSendBankList` |
+| `GuildScript` | Eventos de hermandad y comportamiento del banco de hermandad | `OnGuildAddMember`, `OnGuildDisband`, `CanGuildSendBankList` |
 | `GroupScript` | Invitaciones a grupos, expulsiones y validaciones de cola de BG | `OnGroupAddMember`, `OnGroupDisband`, `CanGroupJoinBattlegroundQueue` |
 | `GlobalScript` | Hooks transversales usados por varios sistemas | `OnArenaWeekReset`, `OnLoadSpellCustomAttr`, `OnBeforeSetBossState` |
 | `MovementHandlerScript` | Paquetes de movimiento del jugador | `OnPlayerMove` |
