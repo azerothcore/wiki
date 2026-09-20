@@ -120,9 +120,7 @@ Use the full [Hooks C++ Reference](hooks-script-reference) when you need exact s
 - `OnBattlegroundStart`, `OnQueueUpdate`, `OnBattlegroundEnd`: battleground flow hooks.
 - `OnBeforeSendJoinMessageArenaQueue` / `OnBeforeSendExitMessageArenaQueue`: arena queue messaging hooks.
 - `OnArenaStart`, `OnBeforeArenaCheckWinConditions`: `ArenaScript` hooks for arena match flow and win-condition handling.
-- `CanAddMember`: `ArenaScript` pre-validation hook for arena team membership rules before a member is accepted.
-- `OnAddMember`: `ArenaScript` hook that runs after a member is added to an arena team.
-- `OnGetArenaPoints`, `OnGetSlotByType`: `ArenaTeamScript` hooks for arena team point and slot calculations.
+- Arena team management: `CanAddMember` is the `ArenaScript` pre-validation hook for membership rules, `OnAddMember` runs after a member is added, and `OnGetArenaPoints` / `OnGetSlotByType` are `ArenaTeamScript` hooks for point and slot calculations.
 - `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: guild and group lifecycle hooks.
 
 #### Economy, loot and support systems
