@@ -14,7 +14,7 @@ Para los otros sistemas de hooks, consulta [Hooks Bash](hooks-bash) y [Hooks Cma
 
 Las secciones siguientes están organizadas por tipo de script y reflejan las declaraciones de [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
 
-Algunos nombres conservan intencionadamente la grafía exacta de `ScriptMgr.h`, incluidas formas heredadas como `AnticheatSetCanFlybyServer` y `AnticheatSetJumpingbyOpcode`.
+Todos los nombres y firmas de hooks de esta página se copian de `ScriptMgr.h` y deben tratarse como la superficie canónica del API, incluso cuando un identificador del core conserva una grafía heredada como `AnticheatSetCanFlybyServer` o `AnticheatSetJumpingbyOpcode`.
 
 ### `ServerScript` (6 firmas)
 
