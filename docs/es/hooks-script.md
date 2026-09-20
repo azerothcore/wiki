@@ -76,6 +76,62 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 
 Para manejadores específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Scripts del Core](core-scripts) y la documentación del [sistema de hechizos](https://www.azerothcore.org/wiki/es/spell_system).
 
+### Qué hacen los hooks más comunes
+
+Usa la [Referencia de hooks C++](hooks-script-reference) cuando necesites las firmas exactas. Usa las notas de abajo cuando quieras entender rápidamente **cuándo** se ejecuta un hook y **para qué** suele utilizarse.
+
+#### Inicio, apagado y flujo global
+
+- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: se ejecutan antes o después de cargar la configuración del mundo. Son útiles cuando tu módulo necesita inspeccionar o ajustar comportamiento alrededor de valores de configuración.
+- `OnStartup` / `OnShutdown`: se ejecutan durante el arranque y el apagado del servidor. Úsalos para inicialización del módulo, limpieza final o informes.
+- `OnWorldUpdate`: se ejecuta dentro del bucle de actualización del mundo. Úsalo solo para lógica periódica ligera.
+- `OnBeforeWorldInitialized`: se ejecuta antes de que el mundo termine de inicializarse. Es útil cuando necesitas preparar estado temprano en el arranque.
+
+#### Eventos del jugador y del gameplay
+
+- `OnPlayerLogin`, `OnPlayerFirstLogin`, `OnPlayerLogout`: hooks del ciclo de vida de la sesión del jugador.
+- `OnPlayerGiveXP`, `OnPlayerLevelChanged`, `OnPlayerCompleteQuest`: hooks de progresión para recompensas personalizadas, escalado o reglas de progreso.
+- `OnPlayerBeforeTeleport`: se ejecuta antes de realizar un teletransporte y puede usarse para bloquear o modificar comportamiento relacionado con el teletransporte.
+- `OnPlayerCanUseItem`, `OnPlayerCanEquipItem`, `OnPlayerCanSellItem`: hooks de validación para aplicar restricciones personalizadas.
+- `OnPlayerBeforeSendChatMessage` / `OnPlayerCanUseChat`: hooks para filtrado y moderación del chat.
+
+#### Criaturas, gameobjects y mapas
+
+- `GetCreatureAI` / `GetGameObjectAI`: asocian una clase de IA personalizada a un script de criatura o gameobject.
+- `OnGossipHello`, `OnGossipSelect`, `OnQuestAccept`, `OnQuestReward`: hooks comunes de interacción para NPCs, ítems y gameobjects.
+- `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate`: hooks del ciclo de vida de mapas para sistemas que afectan a todo el mapa.
+- `CreateInstanceScript`: crea el `InstanceScript` usado por un mapa de instancia.
+- `OnAreaTrigger`: se ejecuta cuando un jugador activa un area trigger.
+
+#### Combate, hechizos y fórmulas
+
+- `OnHeal`, `OnDamage`, `OnUnitDeath`: hooks genéricos de combate de unidad usados por sistemas globales de combate.
+- `OnSpellCheckCast`, `OnSpellCast`, `OnSpellPrepare`: hooks globales del flujo de hechizos expuestos por `SpellSC`.
+- `OnHonorCalculation`, `OnGainCalculation`, `OnAfterArenaRatingCalculation`: hooks de fórmulas para cálculos numéricos del core.
+- `OnLoadSpellCustomAttr`: permite a los módulos ajustar atributos personalizados de hechizos durante la inicialización de datos de hechizos.
+
+#### Battlegrounds, arena y sistemas sociales
+
+- `OnBattlegroundStart`, `OnQueueUpdate`, `OnBattlegroundEnd`: hooks del flujo de battlegrounds.
+- `OnBeforeSendJoinMessageArenaQueue` / `OnBeforeSendExitMessageArenaQueue`: hooks de mensajes de cola de arena.
+- `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints`: hooks para personalización de arena y arena teams.
+- `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: hooks del ciclo de vida de guilds y grupos.
+
+#### Economía, loot y sistemas de soporte
+
+- `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail`: hooks de comportamiento de la casa de subastas.
+- `OnLootMoney`: se ejecuta cuando se entrega dinero procedente del loot.
+- `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve`: hooks del flujo de tickets de GM.
+- `OnBeforeMailDraftSendMailTo`: hook de personalización del correo antes de enviar un mensaje.
+
+#### Hooks de módulo y base de datos
+
+- `OnModuleDatabasesLoading`: abre conexiones propias del módulo, inicializa el esquema y puede abortar el arranque si hace falta.
+- `OnAfterDatabasesLoaded`: se ejecuta después de completar la carga de bases de datos y sirve para inicialización adicional.
+- `OnModuleDatabasesKeepAlive`: mantiene activas las conexiones de base de datos del módulo durante la ejecución.
+- `OnModuleDatabasesClosing`: cierra las conexiones propias del módulo durante el apagado.
+- `OnDatabaseGetDBRevision`: expone la revisión de la base de datos del módulo en `.server info`.
+
 ### Hooks de base de datos
 
 Los módulos que necesitan su propia base de datos deben usar `DatabaseScript`.

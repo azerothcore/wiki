@@ -80,6 +80,62 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 
 For spell-specific handlers implemented with `SpellScript`, `AuraScript` and registration macros, see [Core Scripts](core-scripts) and the [Spell system](https://www.azerothcore.org/wiki/spell_system) documentation.
 
+### What the most common hooks do
+
+Use the full [Hooks C++ Reference](hooks-script-reference) when you need exact signatures. Use the notes below when you want to quickly understand **when** a hook runs and **why** you would use it.
+
+#### Startup, shutdown and global flow
+
+- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: run before or after world configuration is loaded. Useful when your module needs to inspect or alter behavior around config values.
+- `OnStartup` / `OnShutdown`: run during server startup and shutdown. Use them for module initialization, final cleanup or reporting.
+- `OnWorldUpdate`: runs on the world update loop. Use it only for lightweight periodic logic.
+- `OnBeforeWorldInitialized`: runs before the world finishes initializing. Useful when you need to prepare state early in the boot sequence.
+
+#### Player and gameplay events
+
+- `OnPlayerLogin`, `OnPlayerFirstLogin`, `OnPlayerLogout`: player session lifecycle hooks.
+- `OnPlayerGiveXP`, `OnPlayerLevelChanged`, `OnPlayerCompleteQuest`: progression hooks for custom rewards, scaling or progression rules.
+- `OnPlayerBeforeTeleport`: runs before a teleport is executed and can be used to block or alter teleport-related behavior.
+- `OnPlayerCanUseItem`, `OnPlayerCanEquipItem`, `OnPlayerCanSellItem`: validation hooks that let you enforce custom restrictions.
+- `OnPlayerBeforeSendChatMessage` / `OnPlayerCanUseChat`: chat filtering and moderation hooks.
+
+#### Creatures, gameobjects and maps
+
+- `GetCreatureAI` / `GetGameObjectAI`: bind a custom AI class to a creature or gameobject script.
+- `OnGossipHello`, `OnGossipSelect`, `OnQuestAccept`, `OnQuestReward`: common interaction hooks for NPCs, items and gameobjects.
+- `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate`: map lifecycle hooks for map-wide systems.
+- `CreateInstanceScript`: creates the `InstanceScript` used by an instance map.
+- `OnAreaTrigger`: runs when a player activates an area trigger.
+
+#### Combat, spells and formulas
+
+- `OnHeal`, `OnDamage`, `OnUnitDeath`: generic unit combat hooks used by combat-wide systems.
+- `OnSpellCheckCast`, `OnSpellCast`, `OnSpellPrepare`: global spell pipeline hooks exposed through `SpellSC`.
+- `OnHonorCalculation`, `OnGainCalculation`, `OnAfterArenaRatingCalculation`: formula hooks for core numeric calculations.
+- `OnLoadSpellCustomAttr`: lets modules adjust spell custom attributes during spell data initialization.
+
+#### Battlegrounds, arena and social systems
+
+- `OnBattlegroundStart`, `OnQueueUpdate`, `OnBattlegroundEnd`: battleground flow hooks.
+- `OnBeforeSendJoinMessageArenaQueue` / `OnBeforeSendExitMessageArenaQueue`: arena queue messaging hooks.
+- `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints`: arena and arena team customization hooks.
+- `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: guild and group lifecycle hooks.
+
+#### Economy, loot and support systems
+
+- `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail`: auction house behavior hooks.
+- `OnLootMoney`: runs when money is awarded from loot.
+- `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve`: GM ticket workflow hooks.
+- `OnBeforeMailDraftSendMailTo`: mail customization hook before a message is sent.
+
+#### Module and database hooks
+
+- `OnModuleDatabasesLoading`: open module-owned connections, initialize schema and fail startup if needed.
+- `OnAfterDatabasesLoaded`: runs after database loading completes, useful for follow-up initialization.
+- `OnModuleDatabasesKeepAlive`: keep module database connections alive during runtime.
+- `OnModuleDatabasesClosing`: close module-owned connections during shutdown.
+- `OnDatabaseGetDBRevision`: expose your module database revision to `.server info`.
+
 ### Database hooks
 
 Modules that need their own database should use `DatabaseScript`.
