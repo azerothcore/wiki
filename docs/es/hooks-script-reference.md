@@ -8,8 +8,6 @@ Esta página es una instantánea versionada de las declaraciones de hooks expues
 
 > Sincronizada con [`ScriptMgr.h` en el commit del core `e1823bb2db751a7cc0a90a8543e778449ebf7d84`](https://github.com/azerothcore/azerothcore-wotlk/blob/e1823bb2db751a7cc0a90a8543e778449ebf7d84/src/server/game/Scripting/ScriptMgr.h).
 
-Para ver las declaraciones de hooks más recientes, consulta el [`ScriptMgr.h` actual de la rama seguida por la wiki](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). Ese archivo del core sigue siendo la fuente de verdad.
-
 Para una introducción al sistema de scripting y una guía para añadir nuevos hooks, consulta la [guía de hooks C++](hooks-script).
 
 Para los otros sistemas de hooks, consulta [Hooks Bash](hooks-bash) y [Hooks Cmake](hooks-cmake).
