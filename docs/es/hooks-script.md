@@ -66,7 +66,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `PetScript` | Estadísticas, talentos y validaciones de mascotas | `OnInitStatsForLevel`, `CanResetTalents` |
 | `SpellSC` | Hooks globales del sistema de hechizos expuestos por `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
 
-Para handlers específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Core Scripts](core-scripts) y la documentación del [Spell system](spell_system).
+Para handlers específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Core Scripts](core-scripts) y la documentación del [sistema de hechizos](spell_system).
 
 ### Hooks de base de datos
 
