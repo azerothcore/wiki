@@ -34,7 +34,7 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | Script type | Use it for | Example hooks |
 | --- | --- | --- |
 | `MapScript` | Map creation, unloading and per-map updates | `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate` |
-| `InstanceMapScript` | Creating an `InstanceScript` for an instance map | `CreateInstanceScript` |
+| `InstanceMapScript` | Providing the `InstanceScript` implementation for an instance map | `CreateInstanceScript` |
 | `PlayerScript` | Player login, progression, inventory, chat, battlegrounds and many other player events | `OnPlayerLogin`, `OnPlayerGiveXP`, `OnPlayerBeforeTeleport` |
 | `UnitScript` | Generic combat and aura events for any unit | `OnHeal`, `OnDamage`, `OnUnitDeath` |
 | `CreatureScript` | NPC gossip, quests and custom `CreatureAI` binding | `OnGossipHello`, `OnQuestReward`, `GetCreatureAI` |
@@ -59,7 +59,7 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | `MovementHandlerScript` | Player movement packets | `OnPlayerMove` |
 | `AllCreatureScript` | Hooks that run for every creature | `OnBeforeCreatureSelectLevel`, `OnCreatureSaveToDB` |
 | `AllGameObjectScript` | Hooks that run for every gameobject | `OnGameObjectSaveToDB` |
-| `AllMapScript` | Instance creation/destruction helpers | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
+| `AllMapScript` | Cross-instance hooks for instance script creation and instance destruction | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
 | `BattlefieldScript` | Outdoor battlefield events | `OnBattlefieldPlayerEnterZone`, `OnBattlefieldWarEnd` |
 | `BGScript` | Battleground and queue flow | `OnBattlegroundStart`, `OnQueueUpdate`, `OnBeforeSendJoinMessageArenaQueue` |
 | `ArenaScript` / `ArenaTeamScript` | Arena-specific rules and ratings | `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints` |
@@ -86,7 +86,7 @@ Use the full [Hooks C++ Reference](hooks-script-reference) when you need exact s
 
 #### Startup, shutdown and global flow
 
-- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: run before or after world configuration is loaded. Useful when your module needs to inspect or alter behavior around config values.
+- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: run before configuration loading starts or after it finishes. Use `OnBeforeConfigLoad` for pre-load behavior and `OnAfterConfigLoad` to react to values that are already loaded.
 - `OnStartup` / `OnShutdown`: run during server startup and shutdown. Use them for module initialization, final cleanup or reporting.
 - `OnWorldUpdate`: runs on the world update loop. Use it only for lightweight periodic logic.
 - `OnBeforeWorldInitialized`: runs before the world finishes initializing. Useful when you need to prepare state early in the boot sequence.

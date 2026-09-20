@@ -30,7 +30,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | Tipo de script | Úsalo para | Hooks de ejemplo |
 | --- | --- | --- |
 | `MapScript` | Creación de mapas, descarga y actualizaciones por mapa | `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate` |
-| `InstanceMapScript` | Crear un `InstanceScript` para un mapa de instancia | `CreateInstanceScript` |
+| `InstanceMapScript` | Proporcionar la implementación de `InstanceScript` para un mapa de instancia | `CreateInstanceScript` |
 | `PlayerScript` | Login, progreso, inventario, chat, campos de batalla y muchos otros eventos del jugador | `OnPlayerLogin`, `OnPlayerGiveXP`, `OnPlayerBeforeTeleport` |
 | `UnitScript` | Eventos genéricos de combate y auras para cualquier unidad | `OnHeal`, `OnDamage`, `OnUnitDeath` |
 | `CreatureScript` | Gossip de NPC, quests y asociación con `CreatureAI` personalizado | `OnGossipHello`, `OnQuestReward`, `GetCreatureAI` |
@@ -55,7 +55,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `MovementHandlerScript` | Paquetes de movimiento del jugador | `OnPlayerMove` |
 | `AllCreatureScript` | Hooks que se ejecutan para todas las criaturas | `OnBeforeCreatureSelectLevel`, `OnCreatureSaveToDB` |
 | `AllGameObjectScript` | Hooks que se ejecutan para todos los gameobjects | `OnGameObjectSaveToDB` |
-| `AllMapScript` | Helpers para creación y destrucción de instancias | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
+| `AllMapScript` | Hooks transversales para la creación de `InstanceScript` y la destrucción de instancias | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
 | `BattlefieldScript` | Eventos de battlefields exteriores | `OnBattlefieldPlayerEnterZone`, `OnBattlefieldWarEnd` |
 | `BGScript` | Flujo de battlegrounds y colas | `OnBattlegroundStart`, `OnQueueUpdate`, `OnBeforeSendJoinMessageArenaQueue` |
 | `ArenaScript` / `ArenaTeamScript` | Reglas y ratings específicos de arena | `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints` |
@@ -82,7 +82,7 @@ Usa la [Referencia de hooks C++](hooks-script-reference) cuando necesites las fi
 
 #### Inicio, apagado y flujo global
 
-- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: se ejecutan antes o después de cargar la configuración del mundo. Son útiles cuando tu módulo necesita inspeccionar o ajustar comportamiento alrededor de valores de configuración.
+- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: se ejecutan antes de que empiece la carga de configuración o después de que termine. Usa `OnBeforeConfigLoad` para comportamiento previo a la carga y `OnAfterConfigLoad` para reaccionar a valores que ya fueron cargados.
 - `OnStartup` / `OnShutdown`: se ejecutan durante el arranque y el apagado del servidor. Úsalos para inicialización del módulo, limpieza final o informes.
 - `OnWorldUpdate`: se ejecuta dentro del bucle de actualización del mundo. Úsalo solo para lógica periódica ligera.
 - `OnBeforeWorldInitialized`: se ejecuta antes de que el mundo termine de inicializarse. Es útil cuando necesitas preparar estado temprano en el arranque.
