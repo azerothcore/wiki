@@ -62,7 +62,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `GameEventScript` | Eventos de juego estacionales o programados | `OnGameEventStart`, `OnGameEventStop` |
 | `MailScript` | Personalización del envío de correo | `OnBeforeMailDraftSendMailTo` |
 | `AchievementScript` | Flujo de logros y criterios | `SetRealmCompleted`, `CanCheckCriteria` |
-| `AchievementCriteriaScript` | Validaciones de criterios ligadas a un ID asociado a un script | `OnCriteriaCheck` |
+| `AchievementCriteriaScript` | Validaciones de criterios vinculadas a un ID controlado por un script | `OnCriteriaCheck` |
 | `PetScript` | Estadísticas, talentos y validaciones de mascotas | `OnInitStatsForLevel`, `CanResetTalents` |
 | `SpellSC` | Hooks globales del sistema de hechizos expuestos por `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
 
