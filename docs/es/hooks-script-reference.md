@@ -2,11 +2,13 @@
 tableofcontents: 1
 ---
 
-# Referencia de hooks C++
+# Referencia versionada de hooks C++
 
-Esta página refleja las declaraciones de hooks expuestas por `ScriptMgr.h` en AzerothCore. Úsala como referencia exhaustiva de los nombres y firmas de los hooks de C++ disponibles actualmente en el core.
+Esta página es una instantánea versionada de las declaraciones de hooks expuestas por `ScriptMgr.h` en AzerothCore. Úsala como referencia auditable de los nombres y firmas de hooks de C++ capturados en la revisión del core con la que fue sincronizada.
 
 > Sincronizada con [`ScriptMgr.h` en el commit del core `e1823bb2db751a7cc0a90a8543e778449ebf7d84`](https://github.com/azerothcore/azerothcore-wotlk/blob/e1823bb2db751a7cc0a90a8543e778449ebf7d84/src/server/game/Scripting/ScriptMgr.h).
+
+Para ver las declaraciones de hooks más recientes, consulta el [`ScriptMgr.h` actual de la rama seguida por la wiki](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h). Ese archivo del core sigue siendo la fuente de verdad.
 
 Para una introducción al sistema de scripting y una guía para añadir nuevos hooks, consulta la [guía de hooks C++](hooks-script).
 
@@ -14,7 +16,7 @@ Para los otros sistemas de hooks, consulta [Hooks Bash](hooks-bash) y [Hooks Cma
 
 ## Catálogo completo de ScriptMgr
 
-Las secciones siguientes están organizadas por tipo de script y reflejan las declaraciones de [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/e1823bb2db751a7cc0a90a8543e778449ebf7d84/src/server/game/Scripting/ScriptMgr.h).
+Las secciones siguientes están organizadas por tipo de script y reflejan la revisión fijada de `ScriptMgr.h` enlazada arriba.
 
 Esta página refleja los nombres y firmas de hooks de `ScriptMgr.h`, pero `ScriptMgr.h` sigue siendo la fuente de verdad si alguna vez la wiki queda desincronizada. Aquí se conservan intencionadamente grafías heredadas del core como `AnticheatSetCanFlybyServer` y `AnticheatSetJumpingbyOpcode`.
 
