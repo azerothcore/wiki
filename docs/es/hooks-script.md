@@ -115,7 +115,8 @@ Usa la [Referencia de hooks C++](hooks-script-reference) cuando necesites las fi
 
 - `OnBattlegroundStart`, `OnQueueUpdate`, `OnBattlegroundEnd`: hooks del flujo de battlegrounds.
 - `OnBeforeSendJoinMessageArenaQueue` / `OnBeforeSendExitMessageArenaQueue`: hooks de mensajes de cola de arena.
-- `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints`: hooks para personalización de arena y arena teams.
+- `OnArenaStart`, `CanAddMember`: hooks de `ArenaScript` para el flujo de partidas de arena y las reglas de miembros.
+- `OnGetArenaPoints`, `OnGetSlotByType`: hooks de `ArenaTeamScript` para el cálculo de puntos y slots de arena teams.
 - `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: hooks del ciclo de vida de guilds y grupos.
 
 #### Economía, loot y sistemas de soporte
