@@ -16,7 +16,7 @@ Las secciones siguientes están organizadas por tipo de script y reflejan las de
 
 Esta página refleja los nombres y firmas de hooks de `ScriptMgr.h`, pero `ScriptMgr.h` sigue siendo la fuente de verdad si alguna vez la wiki queda desincronizada. Aquí se conservan intencionadamente grafías heredadas del core como `AnticheatSetCanFlybyServer` y `AnticheatSetJumpingbyOpcode`.
 
-Esta referencia se preparó a partir de la versión de `ScriptMgr.h` de la rama `master` enlazada arriba. Siempre que AzerothCore añada, elimine o renombre hooks allí, esta página debe actualizarse dentro del mismo cambio de la wiki.
+Esta referencia se preparó a partir de la fuente `ScriptMgr.h` enlazada arriba. Siempre que AzerothCore añada, elimine o renombre hooks allí, esta página debe actualizarse dentro del mismo cambio de la wiki.
 
 ### `ServerScript` (6 firmas)
 
