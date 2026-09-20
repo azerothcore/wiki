@@ -8,7 +8,7 @@ Esta guía, junto con nuestro [sistema de módulos](create-a-module) te permite 
 
 ### Lista de hooks
 
-La lista de los hooks se encuentra dentro del archivo [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
+El catálogo completo de hooks está documentado en [Referencia de hooks C++](hooks-script-reference) y refleja las declaraciones del archivo [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
 
 ### Referencia de hooks
 
@@ -37,6 +37,8 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `GameObjectScript` | Gossip de gameobjects, cambios de estado y asociación con `GameObjectAI` personalizado | `OnGossipHello`, `OnGameObjectStateChanged`, `GetGameObjectAI` |
 | `ItemScript` | Uso de ítems, quests de ítems y gossip de ítems | `OnItemUse`, `OnQuestAccept`, `OnGossipSelect` |
 | `AreaTriggerScript` | Activación de area triggers | `OnAreaTrigger` |
+| `BattlegroundScript` | Creación de implementaciones personalizadas de battlegrounds | `CreateBattleground` |
+| `OutdoorPvPScript` | Creación de implementaciones personalizadas de outdoor PvP | `CreateOutdoorPvP` |
 | `VehicleScript` | Ciclo de vida de vehículos, asientos y pasajeros | `OnInstall`, `OnAddPassenger`, `OnRemovePassenger` |
 | `DynamicObjectScript` | Actualizaciones de objetos dinámicos | `OnDynamicObjectUpdate` |
 | `TransportScript` | Movimiento de transportes y pasajeros | `OnTransportUpdate`, `OnAddPassenger`, `OnRelocate` |
@@ -60,6 +62,11 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `AuctionHouseScript` | Eventos de subastas y comportamiento del correo de subastas | `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail` |
 | `ConditionScript` | Validaciones de condiciones personalizadas | `OnConditionCheck` |
 | `GameEventScript` | Eventos de juego estacionales o programados | `OnGameEventStart`, `OnGameEventStop` |
+| `WorldObjectScript` | Ciclo de vida genérico de world objects y actualizaciones de mapa | `OnWorldObjectCreate`, `OnWorldObjectDestroy`, `OnWorldObjectUpdate` |
+| `LootScript` | Eventos relacionados con el loot | `OnLootMoney` |
+| `TicketScript` | Eventos del ciclo de vida de tickets de GM | `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve` |
+| `MiscScript` | Hooks transversales de objetos, ítems y utilidades | `OnConstructObject`, `OnItemCreate`, `CanApplySoulboundFlag` |
+| `CommandSC` | Handlers internos de ejecución de comandos | `OnHandleDevCommand`, `OnTryExecuteCommand`, `OnBeforeIsInvokerVisible` |
 | `MailScript` | Personalización del envío de correo | `OnBeforeMailDraftSendMailTo` |
 | `AchievementScript` | Flujo de logros y criterios | `SetRealmCompleted`, `CanCheckCriteria` |
 | `AchievementCriteriaScript` | Validaciones de criterios vinculadas a un ID controlado por un script | `OnCriteriaCheck` |

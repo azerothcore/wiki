@@ -79,6 +79,7 @@ redirect_from: /documentation_index
 * [Hooks Bash](hooks-bash)
 * [Hooks Cmake](hooks-cmake)
 * [Hooks C++](hooks-script)
+* [Hooks C++ Reference](hooks-script-reference)
 
 ## Help
 

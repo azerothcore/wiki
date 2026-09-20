@@ -12,7 +12,7 @@ This guide, together with our [module system](create-a-module) lets you extend t
 
 ### Hook List
 
-The list of the hooks can be found inside the [ScriptMgr.h file](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
+The full hook catalog is documented in [Hooks C++ Reference](hooks-script-reference) and mirrors the declarations in the [ScriptMgr.h file](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
 
 ### Hook reference
 
@@ -41,6 +41,8 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | `GameObjectScript` | GameObject gossip, state changes and custom `GameObjectAI` binding | `OnGossipHello`, `OnGameObjectStateChanged`, `GetGameObjectAI` |
 | `ItemScript` | Item use, item quests and item gossip | `OnItemUse`, `OnQuestAccept`, `OnGossipSelect` |
 | `AreaTriggerScript` | Area trigger activation | `OnAreaTrigger` |
+| `BattlegroundScript` | Creating custom battleground implementations | `CreateBattleground` |
+| `OutdoorPvPScript` | Creating custom outdoor PvP implementations | `CreateOutdoorPvP` |
 | `VehicleScript` | Vehicle seat and passenger lifecycle | `OnInstall`, `OnAddPassenger`, `OnRemovePassenger` |
 | `DynamicObjectScript` | Dynamic object updates | `OnDynamicObjectUpdate` |
 | `TransportScript` | Transport movement and passengers | `OnTransportUpdate`, `OnAddPassenger`, `OnRelocate` |
@@ -64,6 +66,11 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | `AuctionHouseScript` | Auction events and auction mail behavior | `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail` |
 | `ConditionScript` | Custom condition checks | `OnConditionCheck` |
 | `GameEventScript` | Seasonal or scheduled game events | `OnGameEventStart`, `OnGameEventStop` |
+| `WorldObjectScript` | Generic world object lifecycle and map updates | `OnWorldObjectCreate`, `OnWorldObjectDestroy`, `OnWorldObjectUpdate` |
+| `LootScript` | Loot-related events | `OnLootMoney` |
+| `TicketScript` | GM ticket lifecycle events | `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve` |
+| `MiscScript` | Cross-cutting object, item and utility hooks | `OnConstructObject`, `OnItemCreate`, `CanApplySoulboundFlag` |
+| `CommandSC` | Internal command execution handlers | `OnHandleDevCommand`, `OnTryExecuteCommand`, `OnBeforeIsInvokerVisible` |
 | `MailScript` | Mail delivery customization | `OnBeforeMailDraftSendMailTo` |
 | `AchievementScript` | Achievement and criteria flow | `SetRealmCompleted`, `CanCheckCriteria` |
 | `AchievementCriteriaScript` | Criteria checks bound to a scripted ID | `OnCriteriaCheck` |
