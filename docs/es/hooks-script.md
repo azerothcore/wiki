@@ -74,7 +74,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `PetScript` | Estadísticas, talentos y validaciones de mascotas | `OnInitStatsForLevel`, `CanResetTalents` |
 | `SpellSC` | Hooks globales del sistema de hechizos expuestos por `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
 
-Para manejadores específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Scripts del Core](core-scripts) y la documentación del [sistema de hechizos](https://www.azerothcore.org/wiki/es/spell_system).
+Para manejadores específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Scripts del Core](core-scripts) y la documentación del [sistema de hechizos](spell_system).
 
 ### Qué hacen los hooks más comunes
 
