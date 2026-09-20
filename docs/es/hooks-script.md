@@ -10,6 +10,76 @@ Esta guía, junto con nuestro [sistema de módulos](create-a-module) te permite 
 
 La lista de los hooks se encuentra dentro del archivo [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
+### Referencia de hooks
+
+AzerothCore agrupa sus hooks de C++ por **script type** dentro de `ScriptMgr.h`.
+
+Elige el tipo de script que coincida con el subsistema que quieres extender y luego revisa esa clase en `ScriptMgr.h` para ver las firmas completas y la lista completa de callbacks disponibles.
+
+#### Hooks de ciclo de vida y del servidor
+
+| Script type | Úsalo para | Hooks de ejemplo |
+| --- | --- | --- |
+| `ServerScript` | Inicio de red, sockets y filtrado de paquetes | `OnNetworkStart`, `CanPacketReceive`, `CanPacketSend` |
+| `WorldScript` | Ciclo de vida del servidor, carga de configuración y actualizaciones del mundo | `OnBeforeConfigLoad`, `OnStartup`, `OnShutdown` |
+| `FormulaScript` | Fórmulas de juego y cálculo de ratings | `OnHonorCalculation`, `OnGainCalculation`, `OnAfterArenaRatingCalculation` |
+| `CommandScript` | Registrar comandos de chat | `GetChatCommands` |
+
+#### Hooks de entidades y mapas
+
+| Script type | Úsalo para | Hooks de ejemplo |
+| --- | --- | --- |
+| `MapScript` | Creación de mapas, descarga y actualizaciones por mapa | `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate` |
+| `InstanceMapScript` | Crear un `InstanceScript` para un mapa de instancia | `CreateInstanceScript` |
+| `PlayerScript` | Login, progreso, inventario, chat, campos de batalla y muchos otros eventos del jugador | `OnPlayerLogin`, `OnPlayerGiveXP`, `OnPlayerBeforeTeleport` |
+| `UnitScript` | Eventos genéricos de combate y auras para cualquier unidad | `OnHeal`, `OnDamage`, `OnUnitDeath` |
+| `CreatureScript` | Gossip de NPC, quests y asociación con `CreatureAI` personalizado | `OnGossipHello`, `OnQuestReward`, `GetCreatureAI` |
+| `GameObjectScript` | Gossip de gameobjects, cambios de estado y asociación con `GameObjectAI` personalizado | `OnGossipHello`, `OnGameObjectStateChanged`, `GetGameObjectAI` |
+| `ItemScript` | Uso de ítems, quests de ítems y gossip de ítems | `OnItemUse`, `OnQuestAccept`, `OnGossipSelect` |
+| `AreaTriggerScript` | Activación de area triggers | `OnAreaTrigger` |
+| `VehicleScript` | Ciclo de vida de vehículos, asientos y pasajeros | `OnInstall`, `OnAddPassenger`, `OnRemovePassenger` |
+| `DynamicObjectScript` | Actualizaciones de objetos dinámicos | `OnDynamicObjectUpdate` |
+| `TransportScript` | Movimiento de transportes y pasajeros | `OnTransportUpdate`, `OnAddPassenger`, `OnRelocate` |
+| `WeatherScript` | Cambios de clima y ticks | `OnWeatherChange`, `OnWeatherUpdate` |
+
+#### Hooks de sistemas y reglas del juego
+
+| Script type | Úsalo para | Hooks de ejemplo |
+| --- | --- | --- |
+| `AccountScript` | Login de cuenta y eventos de administración de cuentas | `OnAccountLogin`, `OnPasswordChange`, `CanAccountCreateCharacter` |
+| `GuildScript` | Eventos de hermandad y comportamiento del banco de guild | `OnGuildAddMember`, `OnGuildDisband`, `CanGuildSendBankList` |
+| `GroupScript` | Invitaciones a grupos, expulsiones y validaciones de cola de BG | `OnGroupAddMember`, `OnGroupDisband`, `CanGroupJoinBattlegroundQueue` |
+| `GlobalScript` | Hooks transversales usados por varios sistemas | `OnArenaWeekReset`, `OnLoadSpellCustomAttr`, `OnBeforeSetBossState` |
+| `MovementHandlerScript` | Paquetes de movimiento del jugador | `OnPlayerMove` |
+| `AllCreatureScript` | Hooks que se ejecutan para todas las criaturas | `OnBeforeCreatureSelectLevel`, `OnCreatureSaveToDB` |
+| `AllGameObjectScript` | Hooks que se ejecutan para todos los gameobjects | `OnGameObjectSaveToDB` |
+| `AllMapScript` | Helpers para creación y destrucción de instancias | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
+| `BattlefieldScript` | Eventos de battlefields exteriores | `OnBattlefieldPlayerEnterZone`, `OnBattlefieldWarEnd` |
+| `BGScript` | Flujo de battlegrounds y colas | `OnBattlegroundStart`, `OnQueueUpdate`, `OnBeforeSendJoinMessageArenaQueue` |
+| `ArenaScript` / `Arena Team Script` | Reglas y ratings específicos de arena | `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints` |
+| `AuctionHouseScript` | Eventos de subastas y comportamiento del correo de subastas | `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail` |
+| `ConditionScript` | Validaciones de condiciones personalizadas | `OnConditionCheck` |
+| `GameEventScript` | Eventos de juego estacionales o programados | `OnGameEventStart`, `OnGameEventStop` |
+| `MailScript` | Personalización del envío de correo | `OnBeforeMailDraftSendMailTo` |
+| `AchievementScript` | Flujo de logros y criterios | `SetRealmCompleted`, `CanCheckCriteria` |
+| `AchievementCriteriaScript` | Validaciones de criterios ligadas a un ID scriptado | `OnCriteriaCheck` |
+| `PetScript` | Estadísticas, talentos y validaciones de mascotas | `OnInitStatsForLevel`, `CanResetTalents` |
+| `SpellSC` | Hooks globales del sistema de hechizos expuestos por `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
+
+Para handlers específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Core Scripts](core-scripts) y la documentación del [Spell system](spell_system).
+
+### Hooks de base de datos
+
+Los módulos que necesitan su propia base de datos deben usar `DatabaseScript`.
+
+Los hooks más relevantes son:
+
+- `OnModuleDatabasesLoading()` para abrir el pool, crear/poblar/actualizar el esquema y abortar el arranque devolviendo `false` si falla
+- `OnModuleDatabasesKeepAlive()` para hacer ping a las conexiones del módulo durante el tick de keep-alive del mundo
+- `OnModuleDatabasesClosing()` para cerrar el pool durante el apagado
+- `OnDatabaseGetDBRevision()` para mostrar la revisión de la base de datos del módulo en `.server info`
+- `OnDatabaseWarnAboutSyncQueries(bool apply)` si tu módulo quiere reflejar el estado de advertencia del core sobre consultas síncronas
+
 ### Glosario
 
 - **Hook**: Una función que se declara dentro de un **_ScriptObject_** y que es definida por el **_Listeners_**

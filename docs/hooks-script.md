@@ -14,6 +14,64 @@ This guide, together with our [module system](create-a-module) lets you extend t
 
 The list of the hooks can be found inside the [ScriptMgr.h file](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
 
+### Hook reference
+
+AzerothCore groups its C++ hooks by **script type** inside `ScriptMgr.h`.
+
+Pick the script type that matches the subsystem you want to extend, then inspect that class in `ScriptMgr.h` for the complete signatures and the full list of available callbacks.
+
+#### Lifecycle and server hooks
+
+| Script type | Use it for | Example hooks |
+| --- | --- | --- |
+| `ServerScript` | Network startup, sockets and packet filtering | `OnNetworkStart`, `CanPacketReceive`, `CanPacketSend` |
+| `WorldScript` | Server lifecycle, config loading and world updates | `OnBeforeConfigLoad`, `OnStartup`, `OnShutdown` |
+| `FormulaScript` | Gameplay formulas and rating calculations | `OnHonorCalculation`, `OnGainCalculation`, `OnAfterArenaRatingCalculation` |
+| `CommandScript` | Registering chat commands | `GetChatCommands` |
+
+#### Entity and map hooks
+
+| Script type | Use it for | Example hooks |
+| --- | --- | --- |
+| `MapScript` | Map creation, unloading and per-map updates | `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate` |
+| `InstanceMapScript` | Creating an `InstanceScript` for an instance map | `CreateInstanceScript` |
+| `PlayerScript` | Player login, progression, inventory, chat, battlegrounds and many other player events | `OnPlayerLogin`, `OnPlayerGiveXP`, `OnPlayerBeforeTeleport` |
+| `UnitScript` | Generic combat and aura events for any unit | `OnHeal`, `OnDamage`, `OnUnitDeath` |
+| `CreatureScript` | NPC gossip, quests and custom `CreatureAI` binding | `OnGossipHello`, `OnQuestReward`, `GetCreatureAI` |
+| `GameObjectScript` | GameObject gossip, state changes and custom `GameObjectAI` binding | `OnGossipHello`, `OnGameObjectStateChanged`, `GetGameObjectAI` |
+| `ItemScript` | Item use, item quests and item gossip | `OnItemUse`, `OnQuestAccept`, `OnGossipSelect` |
+| `AreaTriggerScript` | Area trigger activation | `OnAreaTrigger` |
+| `VehicleScript` | Vehicle seat and passenger lifecycle | `OnInstall`, `OnAddPassenger`, `OnRemovePassenger` |
+| `DynamicObjectScript` | Dynamic object updates | `OnDynamicObjectUpdate` |
+| `TransportScript` | Transport movement and passengers | `OnTransportUpdate`, `OnAddPassenger`, `OnRelocate` |
+| `WeatherScript` | Weather changes and ticks | `OnWeatherChange`, `OnWeatherUpdate` |
+
+#### Systems and game-rule hooks
+
+| Script type | Use it for | Example hooks |
+| --- | --- | --- |
+| `AccountScript` | Account login and account management events | `OnAccountLogin`, `OnPasswordChange`, `CanAccountCreateCharacter` |
+| `GuildScript` | Guild events and guild bank behavior | `OnGuildAddMember`, `OnGuildDisband`, `CanGuildSendBankList` |
+| `GroupScript` | Group invites, removals and battleground queue checks | `OnGroupAddMember`, `OnGroupDisband`, `CanGroupJoinBattlegroundQueue` |
+| `GlobalScript` | Cross-cutting hooks used by multiple systems | `OnArenaWeekReset`, `OnLoadSpellCustomAttr`, `OnBeforeSetBossState` |
+| `MovementHandlerScript` | Player movement packets | `OnPlayerMove` |
+| `AllCreatureScript` | Hooks that run for every creature | `OnBeforeCreatureSelectLevel`, `OnCreatureSaveToDB` |
+| `AllGameObjectScript` | Hooks that run for every gameobject | `OnGameObjectSaveToDB` |
+| `AllMapScript` | Instance creation/destruction helpers | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
+| `BattlefieldScript` | Outdoor battlefield events | `OnBattlefieldPlayerEnterZone`, `OnBattlefieldWarEnd` |
+| `BGScript` | Battleground and queue flow | `OnBattlegroundStart`, `OnQueueUpdate`, `OnBeforeSendJoinMessageArenaQueue` |
+| `ArenaScript` / `Arena Team Script` | Arena-specific rules and ratings | `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints` |
+| `AuctionHouseScript` | Auction events and auction mail behavior | `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail` |
+| `ConditionScript` | Custom condition checks | `OnConditionCheck` |
+| `GameEventScript` | Seasonal or scheduled game events | `OnGameEventStart`, `OnGameEventStop` |
+| `MailScript` | Mail delivery customization | `OnBeforeMailDraftSendMailTo` |
+| `AchievementScript` | Achievement and criteria flow | `SetRealmCompleted`, `CanCheckCriteria` |
+| `AchievementCriteriaScript` | Criteria checks bound to a scripted ID | `OnCriteriaCheck` |
+| `PetScript` | Pet stats, talents and unlearn checks | `OnInitStatsForLevel`, `CanResetTalents` |
+| `SpellSC` | Global spell-system hooks exposed through `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
+
+For spell-specific handlers implemented with `SpellScript`, `AuraScript` and registration macros, see [Core Scripts](core-scripts) and the [Spell system](spell_system) documentation.
+
 ### Database hooks
 
 Modules that need their own database should use `DatabaseScript`.
