@@ -213,7 +213,7 @@ void OnRelocate(Transport* transport, uint32 waypointId, uint32 mapId, float x, 
 bool OnCriteriaCheck(uint32 scriptId, Player* source, Unit* target, uint32 criteria_id);
 ```
 
-### `PlayerScript` (189 firmas)
+### `PlayerScript` (190 firmas)
 
 ```cpp
 void OnPlayerJustDied(Player* player);
