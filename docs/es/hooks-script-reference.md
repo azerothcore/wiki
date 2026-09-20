@@ -2,6 +2,8 @@
 tableofcontents: 1
 ---
 
+<!-- Nota para editores: mantén esta instantánea y el enlace fijado al commit de ScriptMgr.h sincronizados cada vez que cambie el catálogo de hooks. -->
+
 # Referencia versionada de hooks C++
 
 Esta página es una instantánea versionada de las declaraciones de hooks expuestas por `ScriptMgr.h` en AzerothCore. Úsala como referencia auditable de los nombres y firmas de hooks de C++ capturados en la revisión del core con la que fue sincronizada.
