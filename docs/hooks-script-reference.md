@@ -16,6 +16,8 @@ The sections below are organized by script type and mirror the declarations in [
 
 This page mirrors the hook names and signatures from `ScriptMgr.h`, but `ScriptMgr.h` remains the source of truth if the wiki ever falls out of sync. Legacy upstream spellings such as `AnticheatSetCanFlybyServer` and `AnticheatSetJumpingbyOpcode` are intentionally preserved here.
 
+This reference was assembled from the `master` branch version of `ScriptMgr.h` linked above. Whenever AzerothCore adds, removes or renames hook declarations there, this page should be updated in the same wiki change.
+
 ### `ServerScript` (6 signatures)
 
 ```cpp
