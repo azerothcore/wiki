@@ -71,6 +71,7 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | `TicketScript` | GM ticket lifecycle events | `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve` |
 | `MiscScript` | Cross-cutting object, item and utility hooks | `OnConstructObject`, `OnItemCreate`, `CanApplySoulboundFlag` |
 | `CommandSC` | Internal command execution handlers | `OnHandleDevCommand`, `OnTryExecuteCommand`, `OnBeforeIsInvokerVisible` |
+| `DatabaseScript` | Module-owned database lifecycle and revision hooks | `OnModuleDatabasesLoading`, `OnAfterDatabasesLoaded`, `OnDatabaseGetDBRevision` |
 | `MailScript` | Mail delivery customization | `OnBeforeMailDraftSendMailTo` |
 | `AchievementScript` | Achievement and criteria flow | `SetRealmCompleted`, `CanCheckCriteria` |
 | `AchievementCriteriaScript` | Criteria checks bound to a scripted ID | `OnCriteriaCheck` |

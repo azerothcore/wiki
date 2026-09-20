@@ -67,6 +67,7 @@ Elige el tipo de script que coincida con el subsistema que quieres extender y lu
 | `TicketScript` | Eventos del ciclo de vida de tickets de GM | `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve` |
 | `MiscScript` | Hooks transversales de objetos, ítems y utilidades | `OnConstructObject`, `OnItemCreate`, `CanApplySoulboundFlag` |
 | `CommandSC` | Handlers internos de ejecución de comandos | `OnHandleDevCommand`, `OnTryExecuteCommand`, `OnBeforeIsInvokerVisible` |
+| `DatabaseScript` | Hooks del ciclo de vida y de revisión de bases de datos de módulos | `OnModuleDatabasesLoading`, `OnAfterDatabasesLoaded`, `OnDatabaseGetDBRevision` |
 | `MailScript` | Personalización del envío de correo | `OnBeforeMailDraftSendMailTo` |
 | `AchievementScript` | Flujo de logros y criterios | `SetRealmCompleted`, `CanCheckCriteria` |
 | `AchievementCriteriaScript` | Validaciones de criterios vinculadas a un ID controlado por un script | `OnCriteriaCheck` |
