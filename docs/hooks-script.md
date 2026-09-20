@@ -122,7 +122,8 @@ Use the full [Hooks C++ Reference](hooks-script-reference) when you need exact s
 - `OnArenaStart`, `OnBeforeArenaCheckWinConditions`: `ArenaScript` hooks for arena match flow and win-condition handling.
 - `CanAddMember`, `OnAddMember`: `ArenaScript` hooks specifically for `ArenaTeam` membership validation and post-add handling.
 - `OnBeforeArenaTeamMemberUpdate`: `ArenaScript` hook for `ArenaTeam` member update logic such as rating or stat updates.
-- `OnGetArenaPoints`, `OnGetSlotByType`, `OnSetArenaMaxPlayersPerTeam`: `ArenaTeamScript` hooks for slot resolution and arena-point settings exposed by the arena team system.
+- `OnGetPoints`: `ArenaScript` hook for arena-team point calculation based on member rating.
+- `OnGetArenaPoints`, `OnGetSlotByType`, `OnSetArenaMaxPlayersPerTeam`: `ArenaTeamScript` hooks for arena-team slot, queue and max-player settings.
 - `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: guild and group lifecycle hooks.
 
 #### Economy, loot and support systems

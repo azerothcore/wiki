@@ -118,7 +118,8 @@ Usa la [Referencia de hooks C++](hooks-script-reference) cuando necesites las fi
 - `OnArenaStart`, `OnBeforeArenaCheckWinConditions`: hooks de `ArenaScript` para el flujo de partidas de arena y la validación de condiciones de victoria.
 - `CanAddMember`, `OnAddMember`: hooks de `ArenaScript` específicamente para validación de membresía de `ArenaTeam` y manejo posterior a añadir un miembro.
 - `OnBeforeArenaTeamMemberUpdate`: hook de `ArenaScript` para la lógica de actualización de miembros de `ArenaTeam`, como rating o estadísticas.
-- `OnGetArenaPoints`, `OnGetSlotByType`, `OnSetArenaMaxPlayersPerTeam`: hooks de `ArenaTeamScript` para resolución de slots y ajustes de puntos de arena expuestos por el sistema de arena teams.
+- `OnGetPoints`: hook de `ArenaScript` para el cálculo de puntos del arena team en función del rating del miembro.
+- `OnGetArenaPoints`, `OnGetSlotByType`, `OnSetArenaMaxPlayersPerTeam`: hooks de `ArenaTeamScript` para configuración de slots, colas y máximo de jugadores del sistema de arena teams.
 - `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: hooks del ciclo de vida de guilds y grupos.
 
 #### Economía, loot y sistemas de soporte
