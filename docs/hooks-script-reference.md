@@ -6,6 +6,8 @@ tableofcontents: 1
 
 This page mirrors the hook declarations exposed by `ScriptMgr.h` in AzerothCore. Use it as the exhaustive reference for the C++ hook names and signatures currently available from the core.
 
+> Synced against [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h) at core commit `e1823bb2db751a7cc0a90a8543e778449ebf7d84`.
+
 For an introduction to the scripting system and guidance on adding new hooks, see the [C++ hooks guide](hooks-script).
 
 For the other hook systems, see [Hooks Bash](hooks-bash) and [Hooks Cmake](hooks-cmake).

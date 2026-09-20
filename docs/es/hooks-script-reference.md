@@ -6,6 +6,8 @@ tableofcontents: 1
 
 Esta página refleja las declaraciones de hooks expuestas por `ScriptMgr.h` en AzerothCore. Úsala como referencia exhaustiva de los nombres y firmas de los hooks de C++ disponibles actualmente en el core.
 
+> Sincronizada con [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h) en el commit del core `e1823bb2db751a7cc0a90a8543e778449ebf7d84`.
+
 Para una introducción al sistema de scripting y una guía para añadir nuevos hooks, consulta la [guía de hooks C++](hooks-script).
 
 Para los otros sistemas de hooks, consulta [Hooks Bash](hooks-bash) y [Hooks Cmake](hooks-cmake).
