@@ -4,7 +4,7 @@ tableofcontents: 1
 
 <!-- Editor note: keep this snapshot and the pinned ScriptMgr.h commit link below in sync whenever the hook catalog changes. -->
 
-# Hooks C++ Reference Snapshot
+# Hooks C++ Reference
 
 This page is a versioned snapshot of the hook declarations exposed by `ScriptMgr.h` in AzerothCore. Use it as an auditable reference for the C++ hook names and signatures captured at the synced core revision.
 
