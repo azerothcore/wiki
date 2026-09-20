@@ -14,7 +14,7 @@ For the other hook systems, see [Hooks Bash](hooks-bash) and [Hooks Cmake](hooks
 
 ## Full ScriptMgr catalog
 
-The sections below are organized by script type and mirror the declarations in [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
+The sections below are organized by script type and mirror the declarations in [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/e1823bb2db751a7cc0a90a8543e778449ebf7d84/src/server/game/Scripting/ScriptMgr.h).
 
 This page mirrors the hook names and signatures from `ScriptMgr.h`, but `ScriptMgr.h` remains the source of truth if the wiki ever falls out of sync. Legacy upstream spellings such as `AnticheatSetCanFlybyServer` and `AnticheatSetJumpingbyOpcode` are intentionally preserved here.
 

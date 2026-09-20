@@ -14,7 +14,7 @@ Para los otros sistemas de hooks, consulta [Hooks Bash](hooks-bash) y [Hooks Cma
 
 ## Catálogo completo de ScriptMgr
 
-Las secciones siguientes están organizadas por tipo de script y reflejan las declaraciones de [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
+Las secciones siguientes están organizadas por tipo de script y reflejan las declaraciones de [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/e1823bb2db751a7cc0a90a8543e778449ebf7d84/src/server/game/Scripting/ScriptMgr.h).
 
 Esta página refleja los nombres y firmas de hooks de `ScriptMgr.h`, pero `ScriptMgr.h` sigue siendo la fuente de verdad si alguna vez la wiki queda desincronizada. Aquí se conservan intencionadamente grafías heredadas del core como `AnticheatSetCanFlybyServer` y `AnticheatSetJumpingbyOpcode`.
 
