@@ -62,7 +62,8 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | `AllMapScript` | Cross-instance hooks for instance script creation and instance destruction | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
 | `BattlefieldScript` | Outdoor battlefield events | `OnBattlefieldPlayerEnterZone`, `OnBattlefieldWarEnd` |
 | `BGScript` | Battleground and queue flow | `OnBattlegroundStart`, `OnQueueUpdate`, `OnBeforeSendJoinMessageArenaQueue` |
-| `ArenaScript` / `ArenaTeamScript` | Arena-specific rules and ratings | `OnArenaStart`, `CanAddMember`, `OnGetArenaPoints` |
+| `ArenaScript` | Arena match rules and member update behavior | `OnArenaStart`, `OnBeforeArenaCheckWinConditions`, `OnAddMember` |
+| `ArenaTeamScript` | Arena team slot and point calculations | `OnGetSlotByType`, `OnGetArenaPoints`, `OnSetArenaMaxPlayersPerTeam` |
 | `AuctionHouseScript` | Auction events and auction mail behavior | `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail` |
 | `ConditionScript` | Custom condition checks | `OnConditionCheck` |
 | `GameEventScript` | Seasonal or scheduled game events | `OnGameEventStart`, `OnGameEventStop` |
