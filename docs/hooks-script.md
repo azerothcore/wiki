@@ -70,7 +70,7 @@ Pick the script type that matches the subsystem you want to extend, then inspect
 | `PetScript` | Pet stats, talents and unlearn checks | `OnInitStatsForLevel`, `CanResetTalents` |
 | `SpellSC` | Global spell-system hooks exposed through `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
 
-For spell-specific handlers implemented with `SpellScript`, `AuraScript` and registration macros, see [Core Scripts](core-scripts) and the [Spell system](spell_system) documentation.
+For spell-specific handlers implemented with `SpellScript`, `AuraScript` and registration macros, see [Core Scripts](core-scripts) and the [Spell system](https://www.azerothcore.org/wiki/spell_system) documentation.
 
 ### Database hooks
 
