@@ -6,7 +6,7 @@ tableofcontents: 1
 
 This page mirrors the hook declarations exposed by `ScriptMgr.h` in AzerothCore. Use it as the exhaustive reference for the C++ hook names and signatures currently available from the core.
 
-For an introduction to the scripting system and guidance on adding new hooks, see [The ScriptAI system](hooks-script).
+For an introduction to the scripting system and guidance on adding new hooks, see the [C++ hooks guide](hooks-script).
 
 For the other hook systems, see [Hooks Bash](hooks-bash) and [Hooks Cmake](hooks-cmake).
 
