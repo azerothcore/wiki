@@ -8,7 +8,138 @@ Esta guía, junto con nuestro [sistema de módulos](create-a-module) te permite 
 
 ### Lista de hooks
 
-La lista de los hooks se encuentra dentro del archivo [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h)
+El catálogo completo de hooks está documentado en [Referencia de hooks C++](hooks-script-reference) y refleja las declaraciones del archivo [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
+
+### Referencia de hooks
+
+AzerothCore agrupa sus hooks de C++ por **tipo de script** dentro de `ScriptMgr.h`.
+
+Elige el tipo de script que coincida con el subsistema que quieres extender y luego revisa esa clase en `ScriptMgr.h` para ver las firmas completas y la lista completa de callbacks disponibles.
+
+#### Hooks de ciclo de vida y del servidor
+
+| Tipo de script | Úsalo para | Hooks de ejemplo |
+| --- | --- | --- |
+| `ServerScript` | Inicio de red, sockets y filtrado de paquetes | `OnNetworkStart`, `CanPacketReceive`, `CanPacketSend` |
+| `WorldScript` | Ciclo de vida del servidor, carga de configuración y actualizaciones del mundo | `OnBeforeConfigLoad`, `OnStartup`, `OnShutdown` |
+| `FormulaScript` | Fórmulas de juego y cálculo de ratings | `OnHonorCalculation`, `OnGainCalculation`, `OnAfterArenaRatingCalculation` |
+| `CommandScript` | Registrar comandos de chat | `GetChatCommands` |
+
+#### Hooks de entidades y mapas
+
+| Tipo de script | Úsalo para | Hooks de ejemplo |
+| --- | --- | --- |
+| `MapScript` | Creación de mapas, descarga y actualizaciones por mapa | `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate` |
+| `InstanceMapScript` | Proporcionar la implementación de `InstanceScript` para un mapa de instancia | `CreateInstanceScript` |
+| `PlayerScript` | Login, progreso, inventario, chat, campos de batalla y muchos otros eventos del jugador | `OnPlayerLogin`, `OnPlayerGiveXP`, `OnPlayerBeforeTeleport` |
+| `UnitScript` | Eventos genéricos de combate y auras para cualquier unidad | `OnHeal`, `OnDamage`, `OnUnitDeath` |
+| `CreatureScript` | Gossip de NPC, quests y asociación con `CreatureAI` personalizado | `OnGossipHello`, `OnQuestReward`, `GetCreatureAI` |
+| `GameObjectScript` | Gossip de gameobjects, cambios de estado y asociación con `GameObjectAI` personalizado | `OnGossipHello`, `OnGameObjectStateChanged`, `GetGameObjectAI` |
+| `ItemScript` | Uso de ítems, quests de ítems y gossip de ítems | `OnItemUse`, `OnQuestAccept`, `OnGossipSelect` |
+| `AreaTriggerScript` | Activación de area triggers | `OnAreaTrigger` |
+| `BattlegroundScript` | Creación de implementaciones personalizadas de battlegrounds | `CreateBattleground` |
+| `OutdoorPvPScript` | Creación de implementaciones personalizadas de outdoor PvP | `CreateOutdoorPvP` |
+| `VehicleScript` | Ciclo de vida de vehículos, asientos y pasajeros | `OnInstall`, `OnAddPassenger`, `OnRemovePassenger` |
+| `DynamicObjectScript` | Actualizaciones de objetos dinámicos | `OnDynamicObjectUpdate` |
+| `TransportScript` | Movimiento de transportes y pasajeros | `OnTransportUpdate`, `OnAddPassenger`, `OnRelocate` |
+| `WeatherScript` | Cambios de clima y ticks | `OnWeatherChange`, `OnWeatherUpdate` |
+
+#### Hooks de sistemas y reglas del juego
+
+| Tipo de script | Úsalo para | Hooks de ejemplo |
+| --- | --- | --- |
+| `AccountScript` | Login de cuenta y eventos de administración de cuentas | `OnAccountLogin`, `OnPasswordChange`, `CanAccountCreateCharacter` |
+| `GuildScript` | Eventos de hermandad y comportamiento del banco de hermandad | `OnGuildAddMember`, `OnGuildDisband`, `CanGuildSendBankList` |
+| `GroupScript` | Invitaciones a grupos, expulsiones y validaciones de cola de BG | `OnGroupAddMember`, `OnGroupDisband`, `CanGroupJoinBattlegroundQueue` |
+| `GlobalScript` | Hooks transversales usados por varios sistemas | `OnArenaWeekReset`, `OnLoadSpellCustomAttr`, `OnBeforeSetBossState` |
+| `MovementHandlerScript` | Paquetes de movimiento del jugador | `OnPlayerMove` |
+| `AllCreatureScript` | Hooks que se ejecutan para todas las criaturas | `OnBeforeCreatureSelectLevel`, `OnCreatureSaveToDB` |
+| `AllGameObjectScript` | Hooks que se ejecutan para todos los gameobjects | `OnGameObjectSaveToDB` |
+| `AllMapScript` | Hooks transversales para la creación de `InstanceScript` y la destrucción de instancias | `OnBeforeCreateInstanceScript`, `OnDestroyInstance` |
+| `BattlefieldScript` | Eventos de battlefields exteriores | `OnBattlefieldPlayerEnterZone`, `OnBattlefieldWarEnd` |
+| `BGScript` | Flujo de battlegrounds y colas | `OnBattlegroundStart`, `OnQueueUpdate`, `OnBeforeSendJoinMessageArenaQueue` |
+| `ArenaScript` | Reglas de las partidas de arena y comportamiento de actualización de miembros | `OnArenaStart`, `OnBeforeArenaCheckWinConditions`, `OnAddMember` |
+| `ArenaTeamScript` | Cálculo de slots y puntos de arena teams | `OnGetSlotByType`, `OnGetArenaPoints`, `OnSetArenaMaxPlayersPerTeam` |
+| `AuctionHouseScript` | Eventos de subastas y comportamiento del correo de subastas | `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail` |
+| `ConditionScript` | Validaciones de condiciones personalizadas | `OnConditionCheck` |
+| `GameEventScript` | Eventos de juego estacionales o programados | `OnGameEventStart`, `OnGameEventStop` |
+| `WorldObjectScript` | Ciclo de vida genérico de world objects y actualizaciones de mapa | `OnWorldObjectCreate`, `OnWorldObjectDestroy`, `OnWorldObjectUpdate` |
+| `LootScript` | Eventos relacionados con el loot | `OnLootMoney` |
+| `TicketScript` | Eventos del ciclo de vida de tickets de GM | `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve` |
+| `MiscScript` | Hooks transversales de objetos, ítems y utilidades | `OnConstructObject`, `OnItemCreate`, `CanApplySoulboundFlag` |
+| `CommandSC` | Manejadores internos de ejecución de comandos | `OnHandleDevCommand`, `OnTryExecuteCommand`, `OnBeforeIsInvokerVisible` |
+| `DatabaseScript` | Hooks del ciclo de vida y de revisión de bases de datos de módulos | `OnModuleDatabasesLoading`, `OnAfterDatabasesLoaded`, `OnDatabaseGetDBRevision` |
+| `MailScript` | Personalización del envío de correo | `OnBeforeMailDraftSendMailTo` |
+| `AchievementScript` | Flujo de logros y criterios | `SetRealmCompleted`, `CanCheckCriteria` |
+| `AchievementCriteriaScript` | Validaciones de criterios vinculadas a un ID controlado por un script | `OnCriteriaCheck` |
+| `PetScript` | Estadísticas, talentos y validaciones de mascotas | `OnInitStatsForLevel`, `CanResetTalents` |
+| `SpellSC` | Hooks globales del sistema de hechizos expuestos por `ScriptMgr` | `OnSpellCheckCast`, `OnSpellCast`, `OnCalcMaxDuration` |
+
+Para manejadores específicos de hechizos implementados con `SpellScript`, `AuraScript` y macros de registro, consulta [Scripts del Core](core-scripts) y la documentación del [sistema de hechizos](spell_system).
+
+### Qué hacen los hooks más comunes
+
+Usa la [Referencia de hooks C++](hooks-script-reference) cuando necesites las firmas exactas. Usa las notas de abajo cuando quieras entender rápidamente **cuándo** se ejecuta un hook y **para qué** suele utilizarse.
+
+#### Inicio, apagado y flujo global
+
+- `OnBeforeConfigLoad` / `OnAfterConfigLoad`: se ejecutan antes de que empiece la carga de configuración o después de que termine. Usa `OnBeforeConfigLoad` para comportamiento previo a la carga y `OnAfterConfigLoad` para reaccionar a valores que ya fueron cargados.
+- `OnStartup` / `OnShutdown`: se ejecutan durante el arranque y el apagado del servidor. Úsalos para inicialización del módulo, limpieza final o informes.
+- `OnWorldUpdate`: se ejecuta dentro del bucle de actualización del mundo. Úsalo solo para lógica periódica ligera.
+- `OnBeforeWorldInitialized`: se ejecuta antes de que el mundo termine de inicializarse. Es útil cuando necesitas preparar estado temprano en el arranque.
+
+#### Eventos del jugador y del gameplay
+
+- `OnPlayerLogin`, `OnPlayerFirstLogin`, `OnPlayerLogout`: hooks del ciclo de vida de la sesión del jugador.
+- `OnPlayerGiveXP`, `OnPlayerLevelChanged`, `OnPlayerCompleteQuest`: hooks de progresión para recompensas personalizadas, escalado o reglas de progreso.
+- `OnPlayerBeforeTeleport`: se ejecuta antes de realizar un teletransporte y puede usarse para bloquear o modificar comportamiento relacionado con el teletransporte.
+- `OnPlayerCanUseItem`, `OnPlayerCanEquipItem`, `OnPlayerCanSellItem`: hooks de validación para aplicar restricciones personalizadas.
+- `OnPlayerBeforeSendChatMessage` / `OnPlayerCanUseChat`: hooks para filtrado y moderación del chat.
+
+#### Criaturas, gameobjects y mapas
+
+- `GetCreatureAI` / `GetGameObjectAI`: asocian una clase de IA personalizada a un script de criatura o gameobject.
+- `OnGossipHello`, `OnGossipSelect`, `OnQuestAccept`, `OnQuestReward`: hooks comunes de interacción para NPCs, ítems y gameobjects.
+- `OnCreateMap`, `OnPlayerEnterMap`, `OnMapUpdate`: hooks del ciclo de vida de mapas para sistemas que afectan a todo el mapa.
+- `CreateInstanceScript`: crea el `InstanceScript` usado por un mapa de instancia.
+- `OnAreaTrigger`: se ejecuta cuando un jugador activa un area trigger.
+
+#### Combate, hechizos y fórmulas
+
+- `OnHeal`, `OnDamage`, `OnUnitDeath`: hooks genéricos de combate de unidad usados por sistemas globales de combate.
+- `OnSpellCheckCast`, `OnSpellCast`, `OnSpellPrepare`: hooks globales del flujo de hechizos expuestos por `SpellSC`.
+- `OnHonorCalculation`, `OnGainCalculation`, `OnAfterArenaRatingCalculation`: hooks de fórmulas para cálculos numéricos del core.
+- `OnLoadSpellCustomAttr`: permite a los módulos ajustar atributos personalizados de hechizos durante la inicialización de datos de hechizos.
+
+#### Battlegrounds, arena y sistemas sociales
+
+- `OnBattlegroundStart`, `OnQueueUpdate`, `OnBattlegroundEnd`: hooks del flujo de battlegrounds.
+- `OnBeforeSendJoinMessageArenaQueue` / `OnBeforeSendExitMessageArenaQueue`: hooks de mensajes de cola de arena.
+- `OnArenaStart`, `OnBeforeArenaCheckWinConditions`: hooks de `ArenaScript` para el flujo de partidas de arena y la validación de condiciones de victoria.
+- `CanAddMember`, `OnAddMember`: hooks de `ArenaScript` específicamente para validación de membresía de `ArenaTeam` y manejo posterior a añadir un miembro.
+- `OnBeforeArenaTeamMemberUpdate`: hook de `ArenaScript` para la lógica de actualización de miembros de `ArenaTeam`, como rating o estadísticas.
+- `OnGetPoints`: hook de `ArenaScript` para el cálculo de puntos del arena team en función del rating del miembro.
+- `OnGetArenaPoints`, `OnGetSlotByType`, `OnSetArenaMaxPlayersPerTeam`: hooks de `ArenaTeamScript` para configuración de slots, colas y máximo de jugadores del sistema de arena teams.
+- `OnGuildAddMember`, `OnGroupAddMember`, `OnGroupDisband`: hooks del ciclo de vida de guilds y grupos.
+
+#### Economía, loot y sistemas de soporte
+
+- `OnAuctionAdd`, `OnAuctionExpire`, `OnBeforeAuctionHouseMgrSendAuctionWonMail`: hooks de comportamiento de la casa de subastas.
+- `OnLootMoney`: se ejecuta cuando se entrega dinero procedente del loot.
+- `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve`: hooks del flujo de tickets de GM.
+- `OnBeforeMailDraftSendMailTo`: hook de personalización del correo antes de enviar un mensaje.
+
+### Hooks de base de datos
+
+Los módulos que necesitan su propia base de datos deben usar `DatabaseScript`.
+
+Los hooks más relevantes son:
+
+- `OnModuleDatabasesLoading()` para abrir el pool, crear/poblar/actualizar el esquema y abortar el arranque devolviendo `false` si falla
+- `OnModuleDatabasesKeepAlive()` para hacer ping a las conexiones del módulo durante el tick de keep-alive del mundo
+- `OnModuleDatabasesClosing()` para cerrar el pool durante el apagado
+- `OnDatabaseGetDBRevision()` para mostrar la revisión de la base de datos del módulo en `.server info`
+- `OnDatabaseWarnAboutSyncQueries(bool apply)` si tu módulo quiere reflejar el estado de advertencia del core sobre consultas síncronas
 
 ### Glosario
 

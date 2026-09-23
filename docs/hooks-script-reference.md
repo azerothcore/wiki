@@ -1,0 +1,719 @@
+---
+tableofcontents: 1
+---
+
+<!-- Editor note: keep this snapshot and the pinned ScriptMgr.h commit link below in sync whenever the hook catalog changes. -->
+
+# Hooks C++ Reference
+
+This page is a versioned snapshot of the hook declarations exposed by `ScriptMgr.h` in AzerothCore. Use it as an auditable reference for the C++ hook names and signatures captured at the synced core revision.
+
+> Synced against [`ScriptMgr.h` at core commit `e1823bb2db751a7cc0a90a8543e778449ebf7d84`](https://github.com/azerothcore/azerothcore-wotlk/blob/e1823bb2db751a7cc0a90a8543e778449ebf7d84/src/server/game/Scripting/ScriptMgr.h).
+
+For an introduction to the scripting system and guidance on adding new hooks, see the [C++ hooks guide](hooks-script).
+
+For the other hook systems, see [Hooks Bash](hooks-bash) and [Hooks Cmake](hooks-cmake).
+
+## Full ScriptMgr catalog
+
+The sections below are organized by script type and mirror the pinned `ScriptMgr.h` revision linked above.
+
+This page mirrors the hook names and signatures from `ScriptMgr.h`, but `ScriptMgr.h` remains the source of truth if the wiki ever falls out of sync. Legacy upstream spellings such as `AnticheatSetCanFlybyServer` and `AnticheatSetJumpingbyOpcode` are intentionally preserved here.
+
+This reference was assembled from the `ScriptMgr.h` source linked above. Whenever AzerothCore adds, removes or renames hook declarations there, this page should be updated in the same wiki change.
+
+### `ServerScript` (6 signatures)
+
+```cpp
+void OnNetworkStart(Acore::Asio::IoContext& ioContext);
+void OnNetworkStop();
+void OnSocketOpen(std::shared_ptr<WorldSocket> const& socket);
+void OnSocketClose(std::shared_ptr<WorldSocket> const& socket);
+bool CanPacketReceive(WorldSession* session, WorldPacket const& packet);
+bool CanPacketSend(WorldSession* session, WorldPacket const& packet);
+```
+
+### `WorldScript` (13 signatures)
+
+```cpp
+void OnLoadCustomDatabaseTable();
+void OnOpenStateChange(bool open);
+void OnBeforeConfigLoad(bool reload);
+void OnAfterConfigLoad(bool reload);
+void OnBeforeFinalizePlayerWorldSession(uint32& cacheVersion);
+void OnMotdChange(std::string& newMotd, LocaleConstant& locale);
+void OnShutdownInitiate(ShutdownExitCode code, ShutdownMask mask);
+void OnShutdownCancel();
+void OnWorldUpdate(uint32 diff);
+void OnStartup();
+void OnShutdown();
+void OnBeforeWorldInitialized();
+void OnAfterUnloadAllMaps();
+```
+
+### `FormulaScript` (9 signatures)
+
+```cpp
+void OnHonorCalculation(float& honor, uint8 level, float multiplier);
+void OnGrayLevelCalculation(uint8& grayLevel, uint8 playerLevel);
+void OnColorCodeCalculation(XPColorChar& color, uint8 playerLevel, uint8 mobLevel);
+void OnZeroDifferenceCalculation(uint8& diff, uint8 playerLevel);
+void OnBaseGainCalculation(uint32& gain, uint8 playerLevel, uint8 mobLevel, ContentLevels content);
+void OnGainCalculation(uint32& gain, Player* player, Unit* unit);
+void OnGroupRateCalculation(float& rate, uint32 count, bool isRaid);
+void OnAfterArenaRatingCalculation(Battleground* const bg, int32& winnerMatchmakerChange, int32& loserMatchmakerChange, int32& winnerChange, int32& loserChange);
+void OnBeforeUpdatingPersonalRating(int32& mod, uint32 type);
+```
+
+### `MapScript` (7 signatures)
+
+```cpp
+void OnCreateMap(Map* map);
+void OnDestroyMap(Map* map);
+void OnLoadGridMap(Map* map, GridTerrainData* gmap, uint32 gx, uint32 gy);
+void OnUnloadGridMap(Map* map, GridTerrainData* gmap, uint32 gx, uint32 gy);
+void OnPlayerEnterMap(Map* map, Player* player);
+void OnPlayerLeaveMap(Map* map, Player* player);
+void OnMapUpdate(Map* map, uint32 diff);
+```
+
+### `InstanceMapScript` (1 signature)
+
+```cpp
+InstanceScript* CreateInstanceScript(InstanceMap* map);
+```
+
+### `ItemScript` (7 signatures)
+
+```cpp
+bool OnQuestAccept(Player* player, Item* item, Quest const* quest);
+bool OnItemUse(Player* player, Item* item, SpellCastTargets const& targets);
+bool OnItemExpire(Player* player, ItemTemplate const* proto);
+bool OnItemRemove(Player* player, Item* item);
+bool OnCastItemCombatSpell(Player* player, Unit* victim, SpellInfo const* spellInfo, Item* item);
+void OnGossipSelect(Player* player, Item* item, uint32 sender, uint32 action);
+void OnGossipSelectCode(Player* player, Item* item, uint32 sender, uint32 action, char const* code);
+```
+
+### `CreatureScript` (13 signatures)
+
+```cpp
+bool OnGossipHello(Player* player, Creature* creature);
+bool OnGossipSelect(Player* player, Creature* creature, uint32 sender, uint32 action);
+bool OnGossipSelectCode(Player* player, Creature* creature, uint32 sender, uint32 action, char const* code);
+bool OnQuestAccept(Player* player, Creature* creature, Quest const* quest);
+bool OnQuestSelect(Player* player, Creature* creature, Quest const* quest);
+bool OnQuestComplete(Player* player, Creature* creature, Quest const* quest);
+bool OnQuestReward(Player* player, Creature* creature, Quest const* quest, uint32 opt);
+uint32 GetDialogStatus(Player* player, Creature* creature);
+CreatureAI* GetCreatureAI(Creature* creature);
+void OnCreatureUpdate(Creature* creature, uint32 diff);
+void OnCreatureAddWorld(Creature* creature);
+void OnCreatureRemoveWorld(Creature* creature);
+void OnFfaPvpStateUpdate(Creature* creature, bool InPvp);
+```
+
+### `GameObjectScript` (15 signatures)
+
+```cpp
+bool OnGossipHello(Player* player, GameObject* go);
+bool OnGossipSelect(Player* player, GameObject* go, uint32 sender, uint32 action);
+bool OnGossipSelectCode(Player* player, GameObject* go, uint32 sender, uint32 action, char const* code);
+bool OnQuestAccept(Player* player, GameObject* go, Quest const* quest);
+bool OnQuestReward(Player* player, GameObject* go, Quest const* quest, uint32 opt);
+uint32 GetDialogStatus(Player* player, GameObject* go);
+void OnGameObjectDestroyed(GameObject* go, Player* player);
+void OnGameObjectDamaged(GameObject* go, Player* player);
+void OnGameObjectModifyHealth(GameObject* go, Unit* attackerOrHealer, int32& change, SpellInfo const* spellInfo);
+void OnGameObjectLootStateChanged(GameObject* go, uint32 state, Unit* unit);
+void OnGameObjectStateChanged(GameObject* go, uint32 state);
+void OnGameObjectUpdate(GameObject* go, uint32 diff);
+GameObjectAI* GetGameObjectAI(GameObject* go);
+void OnGameObjectAddWorld(GameObject* go);
+void OnGameObjectRemoveWorld(GameObject* go);
+```
+
+### `AreaTriggerScript` (1 signature)
+
+```cpp
+bool OnAreaTrigger(Player* player, AreaTrigger const* trigger);
+```
+
+### `BattlegroundScript` (1 signature)
+
+```cpp
+Battleground* CreateBattleground(BattlegroundTypeId typeId);
+```
+
+### `OutdoorPvPScript` (1 signature)
+
+```cpp
+OutdoorPvP* CreateOutdoorPvP(OutdoorPvPData const* data);
+```
+
+### `CommandScript` (1 signature)
+
+```cpp
+std::vector<Acore::ChatCommands::ChatCommandBuilder> GetChatCommands();
+```
+
+### `WeatherScript` (2 signatures)
+
+```cpp
+void OnWeatherChange(Weather* weather, WeatherState state, float grade);
+void OnWeatherUpdate(Weather* weather, uint32 diff);
+```
+
+### `AuctionHouseScript` (11 signatures)
+
+```cpp
+void OnAuctionAdd(AuctionHouseObject* ah, AuctionEntry* entry);
+void OnAuctionRemove(AuctionHouseObject* ah, AuctionEntry* entry);
+void OnAuctionSuccessful(AuctionHouseObject* ah, AuctionEntry* entry);
+void OnAuctionExpire(AuctionHouseObject* ah, AuctionEntry* entry);
+void OnBeforeAuctionHouseMgrSendAuctionWonMail(AuctionHouseMgr* auctionHouseMgr, AuctionEntry* auction, Player* bidder, uint32& bidder_accId, bool& sendNotification, bool& updateAchievementCriteria, bool& sendMail);
+void OnBeforeAuctionHouseMgrSendAuctionSalePendingMail(AuctionHouseMgr* auctionHouseMgr, AuctionEntry* auction, Player* owner, uint32& owner_accId, bool& sendMail);
+void OnBeforeAuctionHouseMgrSendAuctionSuccessfulMail(AuctionHouseMgr* auctionHouseMgr, AuctionEntry* auction, Player* owner, uint32& owner_accId, uint32& profit, bool& sendNotification, bool& updateAchievementCriteria, bool& sendMail);
+void OnBeforeAuctionHouseMgrSendAuctionExpiredMail(AuctionHouseMgr* auctionHouseMgr, AuctionEntry* auction, Player* owner, uint32& owner_accId, bool& sendNotification, bool& sendMail);
+void OnBeforeAuctionHouseMgrSendAuctionOutbiddedMail(AuctionHouseMgr* auctionHouseMgr, AuctionEntry* auction, Player* oldBidder, uint32& oldBidder_accId, Player* newBidder, uint32& newPrice, bool& sendNotification, bool& sendMail);
+void OnBeforeAuctionHouseMgrSendAuctionCancelledToBidderMail(AuctionHouseMgr* auctionHouseMgr, AuctionEntry* auction, Player* bidder, uint32& bidder_accId, bool& sendMail);
+void OnBeforeAuctionHouseMgrUpdate();
+```
+
+### `ConditionScript` (1 signature)
+
+```cpp
+bool OnConditionCheck(Condition* condition, ConditionSourceInfo& sourceInfo);
+```
+
+### `VehicleScript` (6 signatures)
+
+```cpp
+void OnInstall(Vehicle* veh);
+void OnUninstall(Vehicle* veh);
+void OnReset(Vehicle* veh);
+void OnInstallAccessory(Vehicle* veh, Creature* accessory);
+void OnAddPassenger(Vehicle* veh, Unit* passenger, int8 seatId);
+void OnRemovePassenger(Vehicle* veh, Unit* passenger);
+```
+
+### `DynamicObjectScript` (1 signature)
+
+```cpp
+void OnDynamicObjectUpdate(DynamicObject* dynobj, uint32 diff);
+```
+
+### `TransportScript` (5 signatures)
+
+```cpp
+void OnAddPassenger(Transport* transport, Player* player);
+void OnAddCreaturePassenger(Transport* transport, Creature* creature);
+void OnRemovePassenger(Transport* transport, Player* player);
+void OnTransportUpdate(Transport* transport, uint32 diff);
+void OnRelocate(Transport* transport, uint32 waypointId, uint32 mapId, float x, float y, float z);
+```
+
+### `AchievementCriteriaScript` (1 signature)
+
+```cpp
+bool OnCriteriaCheck(uint32 scriptId, Player* source, Unit* target, uint32 criteria_id);
+```
+
+### `PlayerScript` (189 signatures)
+
+```cpp
+void OnPlayerJustDied(Player* player);
+void OnPlayerCalculateTalentsPoints(Player const* player, uint32& talentPointsForLevel);
+void OnPlayerReleasedGhost(Player* player);
+void OnPlayerSendInitialPacketsBeforeAddToMap(Player* player, WorldPacket& data);
+void OnPlayerBeforeUpdate(Player* player, uint32 p_time);
+void OnPlayerUpdate(Player* player, uint32 p_time);
+void OnPlayerPVPKill(Player* killer, Player* killed);
+void OnPlayerPVPFlagChange(Player* player, bool state);
+void OnPlayerCreatureKill(Player* killer, Creature* killed);
+void OnPlayerCreatureKilledByPet(Player* petOwner, Creature* killed);
+void OnPlayerKilledByCreature(Creature* killer, Player* killed);
+void OnPlayerLevelChanged(Player* player, uint8 oldLevel);
+void OnPlayerFreeTalentPointsChanged(Player* player, uint32 newPoints);
+void OnPlayerTalentsReset(Player* player, bool noCost);
+bool OnPlayerCanLearnTalent(Player* player, TalentEntry const* talent, uint32 rank);
+void OnPlayerAfterSpecSlotChanged(Player* player, uint8 newSlot);
+void OnPlayerMoneyChanged(Player* player, int32& amount);
+void OnPlayerBeforeLootMoney(Player* player, Loot* loot);
+void OnPlayerBeforeSendLoot(Player* player, ObjectGuid lootGuid, Loot* loot);
+void OnPlayerGiveXP(Player* player, uint32& amount, Unit* victim, uint8 xpSource);
+bool OnPlayerReputationChange(Player* player, uint32 factionID, int32& standing, bool incremental);
+void OnPlayerReputationRankChange(Player* player, uint32 factionID, ReputationRank newRank, ReputationRank oldRank, bool increased);
+void OnPlayerGiveReputation(Player* player, int32 factionID, float& amount, ReputationSource repSource);
+void OnPlayerLearnSpell(Player* player, uint32 spellID);
+void OnPlayerForgotSpell(Player* player, uint32 spellID);
+void OnPlayerDuelRequest(Player* target, Player* challenger);
+void OnPlayerDuelStart(Player* player1, Player* player2);
+void OnPlayerDuelEnd(Player* winner, Player* loser, DuelCompleteType type);
+void OnPlayerBeforeSendChatMessage(Player* player, uint32& type, uint32& lang, std::string& msg);
+void OnPlayerEmote(Player* player, uint32 emote);
+void OnPlayerTextEmote(Player* player, uint32 textEmote, uint32 emoteNum, ObjectGuid guid);
+void OnPlayerSpellCast(Player* player, Spell* spell, bool skipCheck);
+void OnPlayerLogin(Player* player);
+void OnPlayerLoadFromDB(Player* player);
+void OnPlayerBeforeLogout(Player* player);
+void OnPlayerLogout(Player* player);
+void OnPlayerCreate(Player* player);
+void OnPlayerSave(Player* player);
+void OnPlayerDelete(ObjectGuid guid, uint32 accountId);
+void OnPlayerFailedDelete(ObjectGuid guid, uint32 accountId);
+void OnPlayerBindToInstance(Player* player, Difficulty difficulty, uint32 mapid, bool permanent);
+void OnPlayerUpdateZone(Player* player, uint32 newZone, uint32 newArea);
+void OnPlayerUpdateArea(Player* player, uint32 oldArea, uint32 newArea);
+bool OnPlayerBeforeTeleport(Player* player, uint32 mapid, float x, float y, float z, float orientation, uint32 options, Unit* target);
+void OnPlayerUpdateFaction(Player* player);
+void OnPlayerAddToBattleground(Player* player, Battleground* bg);
+void OnPlayerQueueRandomDungeon(Player* player, uint32 & rDungeonId);
+void OnPlayerRemoveFromBattleground(Player* player, Battleground* bg);
+void OnPlayerAchievementComplete(Player* player, AchievementEntry const* achievement);
+bool OnPlayerBeforeAchievementComplete(Player* player, AchievementEntry const* achievement);
+void OnPlayerCriteriaProgress(Player* player, AchievementCriteriaEntry const* criteria);
+bool OnPlayerBeforeCriteriaProgress(Player* player, AchievementCriteriaEntry const* criteria);
+void OnPlayerAchievementSave(CharacterDatabaseTransaction trans, Player* player, uint16 achiId, CompletedAchievementData achiData);
+void OnPlayerCriteriaSave(CharacterDatabaseTransaction trans, Player* player, uint16 critId, CriteriaProgress criteriaData);
+void OnPlayerGossipSelect(Player* player, uint32 menu_id, uint32 sender, uint32 action);
+void OnPlayerGossipSelectCode(Player* player, uint32 menu_id, uint32 sender, uint32 action, char const* code);
+void OnPlayerBeingCharmed(Player* player, Unit* charmer, uint32 oldFactionId, uint32 newFactionId);
+void OnPlayerAfterSetVisibleItemSlot(Player* player, uint8 slot, Item* item);
+void OnPlayerAfterMoveItemFromInventory(Player* player, Item* it, uint8 bag, uint8 slot, bool update);
+void OnPlayerAfterMoveItemToInventory(Player* player, Item* it, bool update);
+void OnPlayerEquip(Player* player, Item* it, uint8 bag, uint8 slot, bool update);
+void OnPlayerUnequip(Player* player, Item* it);
+void OnPlayerJoinBG(Player* player);
+void OnPlayerJoinArena(Player* player);
+void OnPlayerGetMaxPersonalArenaRatingRequirement(Player const* player, uint32 minSlot, uint32& maxArenaRating) const;
+void OnPlayerLootItem(Player* player, Item* item, uint32 count, ObjectGuid lootguid);
+void OnPlayerBeforeFillQuestLootItem(Player* player, LootItem& item);
+void OnPlayerStoreNewItem(Player* player, Item* item, uint32 count);
+void OnPlayerCreateItem(Player* player, Item* item, uint32 count);
+void OnPlayerQuestRewardItem(Player* player, Item* item, uint32 count);
+bool OnPlayerCanPlaceAuctionBid(Player* player, AuctionEntry* auction);
+void OnPlayerGroupRollRewardItem(Player* player, Item* item, uint32 count, RollVote voteType, Roll* roll);
+bool OnPlayerBeforeOpenItem(Player* player, Item* item);
+bool OnPlayerBeforeQuestComplete(Player* player, uint32 quest_id);
+void OnPlayerQuestComputeXP(Player* player, Quest const* quest, uint32& xpValue);
+void OnPlayerBeforeDurabilityRepair(Player* player, ObjectGuid npcGUID, ObjectGuid itemGUID, float& discountMod, uint8 guildBank);
+void OnPlayerBeforeBuyItemFromVendor(Player* player, ObjectGuid vendorguid, uint32 vendorslot, uint32& item, uint8 count, uint8 bag, uint8 slot);
+void OnPlayerBeforeStoreOrEquipNewItem(Player* player, uint32 vendorslot, uint32& item, uint8 count, uint8 bag, uint8 slot, ItemTemplate const* pProto, Creature* pVendor, VendorItem const* crItem, bool bStore);
+void OnPlayerAfterStoreOrEquipNewItem(Player* player, uint32 vendorslot, Item* item, uint8 count, uint8 bag, uint8 slot, ItemTemplate const* pProto, Creature* pVendor, VendorItem const* crItem, bool bStore);
+void OnPlayerAfterUpdateMaxPower(Player* player, Powers& power, float& value);
+void OnPlayerAfterUpdateMaxHealth(Player* player, float& value);
+void OnPlayerBeforeUpdateAttackPowerAndDamage(Player* player, float& level, float& val2, bool ranged);
+void OnPlayerAfterUpdateAttackPowerAndDamage(Player* player, float& level, float& base_attPower, float& attPowerMod, float& attPowerMultiplier, bool ranged);
+void OnPlayerBeforeInitTalentForLevel(Player* player, uint8& level, uint32& talentPointsForLevel);
+void OnPlayerFirstLogin(Player* player);
+void OnPlayerSetMaxLevel(Player* player, uint32& maxPlayerLevel);
+void OnPlayerCompleteQuest(Player* player, Quest const* quest);
+void OnPlayerBattlegroundDesertion(Player* player, BattlegroundDesertionType const desertionType);
+bool OnPlayerCanJoinInBattlegroundQueue(Player* player, ObjectGuid BattlemasterGuid, BattlegroundTypeId BGTypeID, uint8 joinAsGroup, GroupJoinBattlegroundResult& err);
+bool OnPlayerShouldBeRewardedWithMoneyInsteadOfExp(Player* player);
+void OnPlayerBeforeTempSummonInitStats(Player* player, TempSummon* tempSummon, uint32& duration);
+void OnPlayerBeforeGuardianInitStatsForLevel(Player* player, Guardian* guardian, CreatureTemplate const* cinfo, PetType& petType);
+void OnPlayerAfterGuardianInitStatsForLevel(Player* player, Guardian* guardian);
+void OnPlayerBeforeLoadPetFromDB(Player* player, uint32& petentry, uint32& petnumber, bool& current, bool& forceLoadFromDB);
+bool OnPlayerCanJoinInArenaQueue(Player* player, ObjectGuid BattlemasterGuid, uint8 arenaslot, BattlegroundTypeId BGTypeID, uint8 joinAsGroup, uint8 IsRated, GroupJoinBattlegroundResult& err);
+bool OnPlayerCanBattleFieldPort(Player* player, uint8 arenaType, BattlegroundTypeId BGTypeID, uint8 action);
+bool OnPlayerCanGroupInvite(Player* player, std::string& membername);
+bool OnPlayerCanGroupAccept(Player* player, Group* group);
+bool OnPlayerCanSellItem(Player* player, Item* item, Creature* creature);
+bool OnPlayerCanSendMail(Player* player, ObjectGuid receiverGuid, ObjectGuid mailbox, std::string& subject, std::string& body, uint32 money, uint32 COD, Item* item);
+void OnPlayerPetitionBuy(Player* player, Creature* creature, uint32& charterid, uint32& cost, uint32& type);
+void OnPlayerPetitionShowList(Player* player, Creature* creature, uint32& CharterEntry, uint32& CharterDispayID, uint32& CharterCost);
+void OnPlayerRewardKillRewarder(Player* player, KillRewarder* rewarder, bool isDungeon, float& rate);
+bool OnPlayerCanGiveMailRewardAtGiveLevel(Player* player, uint8 level);
+void OnPlayerDeleteFromDB(CharacterDatabaseTransaction trans, uint32 guid);
+bool OnPlayerCanRepopAtGraveyard(Player* player);
+std::optional<bool> OnPlayerIsClass(Player const* player, Classes playerClass, ClassContext context);
+void OnPlayerGetMaxSkillValue(Player* player, uint32 skill, int32& result, bool IsPure);
+bool OnPlayerHasActivePowerType(Player const* player, Powers power);
+void OnPlayerUpdateGatheringSkill(Player* player, uint32 skillId, uint32 currentLevel, uint32 gray, uint32 green, uint32 yellow, uint32& gain);
+void OnPlayerUpdateCraftingSkill(Player* player, SkillLineAbilityEntry const* skill, uint32 currentLevel, uint32& gain);
+bool OnPlayerUpdateFishingSkill(Player* player, int32 skill, int32 zone_skill, int32 chance, int32 roll);
+bool OnPlayerCanAreaExploreAndOutdoor(Player* player);
+void OnPlayerVictimRewardBefore(Player* player, Player* victim, uint32& killer_title, int32& victim_rank);
+void OnPlayerVictimRewardAfter(Player* player, Player* victim, uint32& killer_title, int32& victim_rank, float& honor_f);
+void OnPlayerCustomScalingStatValueBefore(Player* player, ItemTemplate const* proto, uint8 slot, bool apply, uint32& CustomScalingStatValue);
+void OnPlayerCustomScalingStatValue(Player* player, ItemTemplate const* proto, uint32& statType, int32& val, uint8 itemProtoStatNumber, uint32 ScalingStatValue, ScalingStatValuesEntry const* ssv);
+void OnPlayerApplyItemModsBefore(Player* player, uint8 slot, bool apply, uint8 itemProtoStatNumber, uint32 statType, int32& val);
+void OnPlayerApplyEnchantmentItemModsBefore(Player* player, Item* item, EnchantmentSlot slot, bool apply, uint32 enchant_spell_id, uint32& enchant_amount);
+void OnPlayerApplyWeaponDamage(Player* player, uint8 slot, ItemTemplate const* proto, float& minDamage, float& maxDamage, uint8 damageIndex);
+bool OnPlayerCanArmorDamageModifier(Player* player);
+void OnPlayerGetFeralApBonus(Player* player, int32& feral_bonus, int32 dpsMod, ItemTemplate const* proto, ScalingStatValuesEntry const* ssv);
+bool OnPlayerCanApplyWeaponDependentAuraDamageMod(Player* player, Item* item, WeaponAttackType attackType, AuraEffect const* aura, bool apply);
+bool OnPlayerCanApplyEquipSpell(Player* player, SpellInfo const* spellInfo, Item* item, bool apply, bool form_change);
+bool OnPlayerCanApplyEquipSpellsItemSet(Player* player, ItemSetEffect* eff);
+bool OnPlayerCanCastItemCombatSpell(Player* player, Unit* target, WeaponAttackType attType, uint32 procVictim, uint32 procEx, Item* item, ItemTemplate const* proto);
+bool OnPlayerCanCastItemUseSpell(Player* player, Item* item, SpellCastTargets const& targets, uint8 cast_count, uint32 glyphIndex);
+void OnPlayerApplyAmmoBonuses(Player* player, ItemTemplate const* proto, float& currentAmmoDPS);
+bool OnPlayerCanEquipItem(Player* player, uint8 slot, uint16& dest, Item* pItem, bool swap, bool not_loading);
+bool OnPlayerCanUnequipItem(Player* player, uint16 pos, bool swap);
+bool OnPlayerCanUseItem(Player* player, ItemTemplate const* proto, InventoryResult& result);
+bool OnPlayerCanSaveEquipNewItem(Player* player, Item* item, uint16 pos, bool update);
+bool OnPlayerCanApplyEnchantment(Player* player, Item* item, EnchantmentSlot slot, bool apply, bool apply_dur, bool ignore_condition);
+void OnPlayerGetQuestRate(Player* player, float& result);
+bool OnPlayerPassedQuestKilledMonsterCredit(Player* player, Quest const* qinfo, uint32 entry, uint32 real_entry, ObjectGuid guid);
+bool OnPlayerCheckItemInSlotAtLoadInventory(Player* player, Item* item, uint8 slot, uint8& err, uint16& dest);
+bool OnPlayerNotVisibleGloballyFor(Player* player, Player const* u);
+void OnPlayerGetArenaPersonalRating(Player* player, uint8 slot, uint32& result);
+void OnPlayerFfaPvpStateUpdate(Player* player, bool result);
+void OnPlayerGetArenaTeamId(Player* player, uint8 slot, uint32& result);
+void OnPlayerIsFFAPvP(Player* player, bool& result);
+void OnPlayerIsPvP(Player* player, bool& result);
+void OnPlayerGetMaxSkillValueForLevel(Player* player, uint16& result);
+bool OnPlayerNotSetArenaTeamInfoField(Player* player, uint8 slot, ArenaTeamInfoType type, uint32 value);
+bool OnPlayerCanJoinLfg(Player* player, uint8 roles, lfg::LfgDungeonSet& dungeons, std::string const& comment);
+bool OnPlayerCanEnterMap(Player* player, MapEntry const* entry, InstanceTemplate const* instance, MapDifficulty const* mapDiff, bool loginCheck);
+bool OnPlayerCanInitTrade(Player* player, Player* target);
+bool OnPlayerCanSetTradeItem(Player* player, Item* tradedItem, uint8 tradeSlot);
+void OnPlayerSetServerSideVisibility(Player* player, ServerSideVisibilityType& type, AccountTypes& sec);
+void OnPlayerSetServerSideVisibilityDetect(Player* player, ServerSideVisibilityType& type, AccountTypes& sec);
+void OnPlayerResurrect(Player* player, float restore_percent, bool& applySickness);
+void OnPlayerBeforeChooseGraveyard(Player* player, TeamId teamId, bool nearCorpse, uint32& graveyardOverride);
+bool OnPlayerCanUseChat(Player* player, uint32 type, uint32 language, std::string& msg);
+bool OnPlayerCanUseChat(Player* player, uint32 type, uint32 language, std::string& msg, Player* receiver);
+bool OnPlayerCanUseChat(Player* player, uint32 type, uint32 language, std::string& msg, Group* group);
+bool OnPlayerCanUseChat(Player* player, uint32 type, uint32 language, std::string& msg, Guild* guild);
+bool OnPlayerCanUseChat(Player* player, uint32 type, uint32 language, std::string& msg, Channel* channel);
+void OnPlayerLearnTalents(Player* player, uint32 talentId, uint32 talentRank, uint32 spellid);
+void OnPlayerEnterCombat(Player* player, Unit* enemy);
+void OnPlayerLeaveCombat(Player* player);
+void OnPlayerQuestAbandon(Player* player, uint32 questId);
+void OnPlayerQuestAccept(Player* player, Quest const* quest);
+bool OnPlayerCanSendErrorAlreadyLooted(Player* player);
+void OnPlayerAfterCreatureLoot(Player* player);
+void OnPlayerAfterCreatureLootMoney(Player* player);
+bool OnPlayerCanFlyInZone(Player* player, uint32 mapId, uint32 zoneId, SpellInfo const* bySpell);
+bool OnPlayerCanUpdateSkill(Player* player, uint32 skillId);
+void OnPlayerBeforeUpdateSkill(Player* player, uint32 skill_id, uint32& value, uint32 max, uint32 step);
+void OnPlayerUpdateSkill(Player* player, uint32 skillId, uint32 value, uint32 max, uint32 step, uint32 newValue);
+void OnPlayerSetSkill(Player* player, uint32 skillId, uint32 value, uint32 max, uint32 step, uint32 newValue);
+bool OnPlayerCanResurrect(Player* player);
+bool OnPlayerCanGiveLevel(Player* player, uint8 newLevel);
+void OnPlayerSendListInventory(Player* player, ObjectGuid vendorGuid, uint32& vendorEntry);
+void OnPlayerGetReputationPriceDiscount(Player const* player, Creature const* creature, float& discount);
+void OnPlayerGetReputationPriceDiscount(Player const* player, FactionTemplateEntry const* factionTemplate, float& discount);
+void OnPlayerLearnTaxiNode(Player const* player, uint32 nodeId);
+void OnPlayerBeforeGetLevelForXPGain(Player const* player, uint8& level);
+void OnPlayerAfterTakeItemFromMail(Player* player, Item* item, uint32 count);
+bool OnPlayerCanLearnSpell(Player* player, uint32 spellId);
+void OnPlayerBeforeReceiveSpellListFromTrainer(Player* player, Creature* trainer, WorldPackets::NPC::TrainerList& trainerList);
+void OnPlayerGetTrainerSpellState(Player const* player, uint32 trainerId, uint32 spellId, Trainer::SpellState& state);
+void OnPlayerAfterTrainSpell(Player* player, Creature* trainer, uint32 spellId);
+void AnticheatSetCanFlybyServer(Player* player, bool apply);
+void AnticheatSetUnderACKmount(Player* player);
+void AnticheatSetRootACKUpd(Player* player);
+void AnticheatUpdateMovementInfo(Player* player, MovementInfo const& movementInfo);
+void AnticheatSetJumpingbyOpcode(Player* player, bool jump);
+bool AnticheatHandleDoubleJump(Player* player, Unit* mover);
+bool AnticheatCheckMovementInfo(Player* player, MovementInfo const& movementInfo, Unit* mover, bool jump);
+```
+
+### `AccountScript` (9 signatures)
+
+```cpp
+void OnAccountLogin(uint32 accountId);
+void OnBeforeAccountDelete(uint32 accountId);
+void OnLastIpUpdate(uint32 accountId, std::string ip);
+void OnFailedAccountLogin(uint32 accountId);
+void OnEmailChange(uint32 accountId);
+void OnFailedEmailChange(uint32 accountId);
+void OnPasswordChange(uint32 accountId);
+void OnFailedPasswordChange(uint32 accountId);
+bool CanAccountCreateCharacter(uint32 accountId, uint8 charRace, uint8 charClass);
+```
+
+### `GuildScript` (11 signatures)
+
+```cpp
+void OnGuildAddMember(Guild* guild, Player* player, uint8& plRank);
+void OnGuildRemoveMember(Guild* guild, Player* player, bool isDisbanding, bool isKicked);
+void OnGuildMOTDChanged(Guild* guild, std::string const& newMotd);
+void OnGuildInfoChanged(Guild* guild, std::string const& newInfo);
+void OnGuildCreate(Guild* guild, Player* leader, std::string const& name);
+void OnGuildDisband(Guild* guild);
+void OnGuildMemberWitdrawMoney(Guild* guild, Player* player, uint32& amount, bool isRepair);
+void OnGuildMemberDepositMoney(Guild* guild, Player* player, uint32& amount);
+void OnGuildEvent(Guild* guild, uint8 eventType, ObjectGuid::LowType playerGuid1, ObjectGuid::LowType playerGuid2, uint8 newRank);
+void OnGuildBankEvent(Guild* guild, uint8 eventType, uint8 tabId, ObjectGuid::LowType playerGuid, uint32 itemOrMoney, uint16 itemStackCount, uint8 destTabId);
+bool CanGuildSendBankList(Guild const* guild, WorldSession* session, uint8 tabId, bool sendAllSlots);
+```
+
+### `GroupScript` (7 signatures)
+
+```cpp
+void OnGroupAddMember(Group* group, ObjectGuid guid);
+void OnGroupInviteMember(Group* group, ObjectGuid guid);
+void OnGroupRemoveMember(Group* group, ObjectGuid guid, RemoveMethod method, ObjectGuid kicker, char const* reason);
+void OnGroupChangeLeader(Group* group, ObjectGuid newLeaderGuid, ObjectGuid oldLeaderGuid);
+void OnGroupDisband(Group* group);
+bool CanGroupJoinBattlegroundQueue(Group const* group, Player* member, Battleground const* bgTemplate, uint32 MinPlayerCount, bool isRated, uint32 arenaSlot);
+void OnCreate(Group* group, Player* leader);
+```
+
+### `GlobalScript` (21 signatures)
+
+```cpp
+void OnGlobalItemDelFromDB(CharacterDatabaseTransaction trans, ObjectGuid::LowType itemGuid);
+void OnGlobalMirrorImageDisplayItem(Item const* item, uint32& display);
+void OnBeforeUpdateArenaPoints(ArenaTeam* at, std::map<ObjectGuid, uint32>& ap);
+void OnArenaWeekReset();
+void OnAfterRefCount(Player const* player, Loot& loot, bool canRate, uint16 lootMode, LootStoreItem* LootStoreItem, uint32& maxcount, LootStore const& store);
+void OnAfterCalculateLootGroupAmount(Player const* player, Loot& loot, uint16 lootMode, uint32& groupAmount, LootStore const& store);
+void OnBeforeDropAddItem(Player const* player, Loot& loot, bool canRate, uint16 lootMode, LootStoreItem* LootStoreItem, LootStore const& store);
+bool OnItemRoll(Player const* player, LootStoreItem const* LootStoreItem, float& chance, Loot& loot, LootStore const& store);
+bool OnBeforeLootEqualChanced(Player const* player, LootStoreItemList EqualChanced, Loot& loot, LootStore const& store);
+void OnInitializeLockedDungeons(Player* player, uint8& level, uint32& lockData, lfg::LFGDungeonData const* dungeon);
+void OnAfterInitializeLockedDungeons(Player* player);
+void OnAfterUpdateEncounterState(Map* map, EncounterCreditType type, uint32 creditEntry, Unit* source, Difficulty difficulty_fixed, DungeonEncounterList const* encounters, uint32 dungeonCompleted, bool updated);
+void OnBeforeWorldObjectSetPhaseMask(WorldObject const* worldObject, uint32& oldPhaseMask, uint32& newPhaseMask, bool& useCombinedPhases, bool& update);
+bool OnIsAffectedBySpellModCheck(SpellInfo const* affectSpell, SpellInfo const* checkSpell, SpellModifier const* mod);
+bool OnSpellHealingBonusTakenNegativeModifiers(Unit const* target, Unit const* caster, SpellInfo const* spellInfo, float& val);
+void OnLoadSpellCustomAttr(SpellInfo* spell);
+bool OnAllowedForPlayerLootCheck(Player const* player, ObjectGuid source);
+bool OnAllowedToLootContainerCheck(Player const* player, ObjectGuid source);
+void OnInstanceIdRemoved(uint32 instanceId);
+void OnBeforeSetBossState(uint32 id, EncounterState newState, EncounterState oldState, Map* instance);
+void AfterInstanceGameObjectCreate(Map* instance, GameObject* go);
+```
+
+### `UnitScript` (22 signatures)
+
+```cpp
+void OnHeal(Unit* healer, Unit* reciever, uint32& gain);
+void OnDamage(Unit* attacker, Unit* victim, uint32& damage);
+void ModifyPeriodicDamageAurasTick(Unit* target, Unit* attacker, uint32& damage, SpellInfo const* spellInfo);
+void ModifyMeleeDamage(Unit* target, Unit* attacker, uint32& damage);
+void ModifySpellDamageTaken(Unit* target, Unit* attacker, int32& damage, SpellInfo const* spellInfo);
+void ModifyHealReceived(Unit* target, Unit* healer, uint32& addHealth, SpellInfo const* spellInfo);
+uint32 DealDamage(Unit* AttackerUnit, Unit* pVictim, uint32 damage, DamageEffectType damagetype);
+void OnBeforeRollMeleeOutcomeAgainst(Unit const* attacker, Unit const* victim, WeaponAttackType attType, int32& attackerMaxSkillValueForLevel, int32& victimMaxSkillValueForLevel, int32& attackerWeaponSkill, int32& victimDefenseSkill, int32& crit_chance, int32& miss_chance, int32& dodge_chance, int32& parry_chance, int32& block_chance);
+void OnAuraApply(Unit* /*unit*/, Aura* /*aura*/);
+void OnAuraRemove(Unit* unit, AuraApplication* aurApp, AuraRemoveMode mode);
+bool IfNormalReaction(Unit const* unit, Unit const* target, ReputationRank& repRank);
+bool CanSetPhaseMask(Unit const* unit, uint32 newPhaseMask, bool update);
+bool IsCustomBuildValuesUpdate(Unit const* unit, uint8 updateType, ByteBuffer& fieldBuffer, Player const* target, uint16 index);
+bool ShouldTrackValuesUpdatePosByIndex(Unit const* unit, uint8 updateType, uint16 index);
+void OnPatchValuesUpdate(Unit const* unit, ByteBuffer& valuesUpdateBuf, BuildValuesCachePosPointers& posPointers, Player* target);
+void OnUnitUpdate(Unit* unit, uint32 diff);
+void OnDisplayIdChange(Unit* unit, uint32 displayId);
+void OnUnitEnterEvadeMode(Unit* unit, uint8 why);
+void OnUnitEnterCombat(Unit* unit, Unit* victim);
+void OnUnitExitCombat(Unit* unit);
+void OnUnitDeath(Unit* unit, Unit* killer);
+void OnUnitSetShapeshiftForm(Unit* unit, uint8 form);
+```
+
+### `MovementHandlerScript` (1 signature)
+
+```cpp
+void OnPlayerMove(Player* player, MovementInfo movementInfo, uint32 opcode);
+```
+
+### `AllCreatureScript` (3 signatures)
+
+```cpp
+void OnBeforeCreatureSelectLevel(CreatureTemplate const* cinfo, Creature* creature, uint8& level);
+void OnCreatureSelectLevel(CreatureTemplate const* cinfo, Creature* creature);
+void OnCreatureSaveToDB(Creature* creature);
+```
+
+### `AllGameObjectScript` (1 signature)
+
+```cpp
+void OnGameObjectSaveToDB(GameObject* go);
+```
+
+### `AllMapScript` (2 signatures)
+
+```cpp
+void OnBeforeCreateInstanceScript(InstanceMap* instanceMap, InstanceScript** instanceData, bool load, std::string data, uint32 completedEncounterMask);
+void OnDestroyInstance(MapInstanced* mapInstanced, Map* map);
+```
+
+### `BattlefieldScript` (7 signatures)
+
+```cpp
+void OnBattlefieldPlayerEnterZone(Battlefield* bf, Player* player);
+void OnBattlefieldPlayerLeaveZone(Battlefield* bf, Player* player);
+void OnBattlefieldPlayerJoinWar(Battlefield* bf, Player* player);
+void OnBattlefieldPlayerLeaveWar(Battlefield* bf, Player* player);
+void OnBattlefieldBeforeInvitePlayerToWar(Battlefield* bf, Player* player);
+void OnBattlefieldWarEnd(Battlefield* bf, bool endByTimer);
+void OnBattlefieldPlayerKill(Battlefield* bf, Player* killer, Player* victim);
+```
+
+### `BGScript` (19 signatures)
+
+```cpp
+void OnBattlegroundStart(Battleground* bg);
+void OnBattlegroundEndReward(Battleground* bg, Player* player, TeamId winnerTeamId);
+void OnBattlegroundUpdate(Battleground* bg, uint32 diff);
+void OnBattlegroundAddPlayer(Battleground* bg, Player* player);
+void OnBattlegroundBeforeAddPlayer(Battleground* bg, Player* player);
+void OnBattlegroundRemovePlayerAtLeave(Battleground* bg, Player* player);
+void OnQueueUpdate(BattlegroundQueue* queue, uint32 diff, BattlegroundTypeId bgTypeId, BattlegroundBracketId bracket_id, uint8 arenaType, bool isRated, uint32 arenaRating);
+bool OnQueueUpdateValidity(BattlegroundQueue* queue, uint32 diff, BattlegroundTypeId bgTypeId, BattlegroundBracketId bracket_id, uint8 arenaType, bool isRated, uint32 arenaRating);
+bool CanFillPlayersToBG(BattlegroundQueue* queue, Battleground* bg, BattlegroundBracketId bracket_id);
+bool IsCheckNormalMatch(BattlegroundQueue* queue, Battleground* bgTemplate, BattlegroundBracketId bracket_id, uint32 minPlayers, uint32 maxPlayers);
+bool CanSendMessageBGQueue(BattlegroundQueue* queue, Player* leader, Battleground* bg, PvPDifficultyEntry const* bracketEntry);
+bool OnBeforeSendJoinMessageArenaQueue(BattlegroundQueue* queue, Player* leader, GroupQueueInfo* ginfo, PvPDifficultyEntry const* bracketEntry, bool isRated);
+bool OnBeforeSendExitMessageArenaQueue(BattlegroundQueue* queue, GroupQueueInfo* ginfo);
+void OnBattlegroundEnd(Battleground* bg, TeamId winnerTeamId);
+void OnBattlegroundDestroy(Battleground* bg);
+void OnBattlegroundCreate(Battleground* bg);
+void OnBattlegroundSetup(Battleground* bg);
+bool CanAddGroupToMatchingPool(BattlegroundQueue* queue, GroupQueueInfo* group, uint32 poolPlayerCount, Battleground* bg, BattlegroundBracketId bracketId);
+bool GetPlayerMatchmakingRating(ObjectGuid playerGuid, BattlegroundTypeId bgTypeId, float& outRating);
+```
+
+### `ArenaTeamScript` (5 signatures)
+
+```cpp
+void OnGetSlotByType(const uint32 type, uint8& slot);
+void OnGetArenaPoints(ArenaTeam* at, float& points);
+void OnArenaTypeIDToQueueID(const BattlegroundTypeId bgTypeId, const uint8 arenaType, uint32& queueTypeID);
+void OnArenaQueueIdToArenaType(const BattlegroundQueueTypeId bgQueueTypeId, uint8& ArenaType);
+void OnSetArenaMaxPlayersPerTeam(const uint8 arenaType, uint32& maxPlayerPerTeam);
+```
+
+### `SpellSC` (15 signatures)
+
+```cpp
+void OnCalcMaxDuration(Aura const* aura, int32& maxDuration);
+void OnSpellCheckCast(Spell* spell, bool strict, SpellCastResult& res);
+bool CanPrepare(Spell* spell, SpellCastTargets const* targets, AuraEffect const* triggeredByAura);
+bool CanScalingEverything(Spell* spell);
+bool CanSelectSpecTalent(Spell* spell);
+void OnScaleAuraUnitAdd(Spell* spell, Unit* target, uint32 effectMask, bool checkIfValid, bool implicit, uint8 auraScaleMask, TargetInfo& targetInfo);
+void OnRemoveAuraScaleTargets(Spell* spell, TargetInfo& targetInfo, uint8 auraScaleMask, bool& needErase);
+void OnBeforeAuraRankForLevel(SpellInfo const* spellInfo, SpellInfo const* latestSpellInfo, uint8 level);
+void OnIsAuraExclusiveBySpecificWith(SpellInfo const* spellInfo, SpellInfo const* otherSpellInfo, bool& isExclusive);
+void OnDummyEffect(WorldObject* caster, uint32 spellID, SpellEffIndex effIndex, GameObject* gameObjTarget);
+void OnDummyEffect(WorldObject* caster, uint32 spellID, SpellEffIndex effIndex, Creature* creatureTarget);
+void OnDummyEffect(WorldObject* caster, uint32 spellID, SpellEffIndex effIndex, Item* itemTarget);
+void OnSpellCastCancel(Spell* spell, Unit* caster, SpellInfo const* spellInfo, bool bySelf);
+void OnSpellCast(Spell* spell, Unit* caster, SpellInfo const* spellInfo, bool skipCheck);
+void OnSpellPrepare(Spell* spell, Unit* caster, SpellInfo const* spellInfo);
+```
+
+### `GameEventScript` (3 signatures)
+
+```cpp
+void OnGameEventStart(uint16 EventID);
+void OnGameEventStop(uint16 EventID);
+void OnGameEventCheck(uint16 EventID);
+```
+
+### `MailScript` (1 signature)
+
+```cpp
+void OnBeforeMailDraftSendMailTo(MailDraft* mailDraft, MailReceiver const& receiver, MailSender const& sender, MailCheckMask& checked, uint32& deliver_delay, uint32& custom_expiration, bool& deleteMailItemsFromDB, bool& sendMail);
+```
+
+### `AchievementScript` (5 signatures)
+
+```cpp
+void SetRealmCompleted(AchievementEntry const* achievement);
+bool IsCompletedCriteria(AchievementMgr* mgr, AchievementCriteriaEntry const* achievementCriteria, AchievementEntry const* achievement, CriteriaProgress const* progress);
+bool IsRealmCompleted(AchievementGlobalMgr const* globalmgr, AchievementEntry const* achievement, std::chrono::system_clock::time_point completionTime);
+void OnBeforeCheckCriteria(AchievementMgr* mgr, AchievementCriteriaEntryList const* achievementCriteriaList);
+bool CanCheckCriteria(AchievementMgr* mgr, AchievementCriteriaEntry const* achievementCriteria);
+```
+
+### `PetScript` (6 signatures)
+
+```cpp
+void OnInitStatsForLevel(Guardian* guardian, uint8 petlevel);
+void OnCalculateMaxTalentPointsForLevel(Pet* pet, uint8 level, uint8& points);
+bool CanUnlearnSpellSet(Pet* pet, uint32 level, uint32 spell);
+bool CanUnlearnSpellDefault(Pet* pet, SpellInfo const* spellInfo);
+bool CanResetTalents(Pet* pet);
+void OnPetAddToWorld(Pet* pet);
+```
+
+### `ArenaScript` (8 signatures)
+
+```cpp
+bool CanAddMember(ArenaTeam* team, ObjectGuid PlayerGuid);
+void OnGetPoints(ArenaTeam* team, uint32 memberRating, float& points);
+bool CanSaveToDB(ArenaTeam* team);
+bool OnBeforeArenaCheckWinConditions(Battleground* const bg);
+void OnArenaStart(Battleground* const bg);
+bool OnBeforeArenaTeamMemberUpdate(ArenaTeam* team, Player* player, bool won, uint32 opponentMatchmakerRating, int32 matchmakerChange);
+bool CanSaveArenaStatsForMember(ArenaTeam* team, ObjectGuid playerGuid);
+void OnAddMember(ArenaTeam* team, ArenaTeamMember& member);
+```
+
+### `MiscScript` (18 signatures)
+
+```cpp
+void OnConstructObject(Object* origin);
+void OnDestructObject(Object* origin);
+void OnConstructPlayer(Player* origin);
+void OnDestructPlayer(Player* origin);
+void OnConstructGroup(Group* origin);
+void OnDestructGroup(Group* origin);
+void OnConstructInstanceSave(InstanceSave* origin);
+void OnDestructInstanceSave(InstanceSave* origin);
+void OnItemCreate(Item* item, ItemTemplate const* itemProto, Player const* owner);
+bool CanApplySoulboundFlag(Item* item, ItemTemplate const* proto);
+bool CanItemApplyEquipSpell(Player* player, Item* item);
+bool CanSendAuctionHello(WorldSession const* session, ObjectGuid guid, Creature* creature);
+void ValidateSpellAtCastSpell(Player* player, uint32& oldSpellId, uint32& spellId, uint8& castCount, uint8& castFlags);
+void OnPlayerSetPhase(AuraEffect const* auraEff, AuraApplication const* aurApp, uint8 mode, bool apply, uint32& newPhase);
+void ValidateSpellAtCastSpellResult(Player* player, Unit* mover, Spell* spell, uint32 oldSpellId, uint32 spellId);
+void OnAfterLootTemplateProcess(Loot* loot, LootTemplate const* tab, LootStore const& store, Player* lootOwner, bool personal, bool noEmptyError, uint16 lootMode);
+void OnInstanceSave(InstanceSave* instanceSave);
+void GetDialogStatus(Player* player, Object* questgiver);
+```
+
+### `CommandSC` (3 signatures)
+
+```cpp
+void OnHandleDevCommand(Player* player, bool& enable);
+bool OnTryExecuteCommand(ChatHandler& handler, std::string_view cmdStr);
+bool OnBeforeIsInvokerVisible(std::string name, Acore::Impl::ChatCommands::CommandPermissions permissions, ChatHandler const& who);
+```
+
+### `DatabaseScript` (7 signatures)
+
+```cpp
+bool OnModuleDatabasesLoading();
+void OnAfterDatabasesLoaded(uint32 updateFlags);
+void OnAfterDatabaseLoadCreatureTemplates(std::vector<CreatureTemplate*> creatureTemplateStore);
+void OnModuleDatabasesKeepAlive();
+void OnModuleDatabasesClosing();
+void OnDatabaseWarnAboutSyncQueries(bool apply);
+void OnDatabaseGetDBRevision(std::map<std::string, std::string>& revisions);
+```
+
+### `WorldObjectScript` (5 signatures)
+
+```cpp
+void OnWorldObjectDestroy(WorldObject* object);
+void OnWorldObjectCreate(WorldObject* object);
+void OnWorldObjectSetMap(WorldObject* object, Map* map);
+void OnWorldObjectResetMap(WorldObject* object);
+void OnWorldObjectUpdate(WorldObject* object, uint32 diff);
+```
+
+### `LootScript` (1 signature)
+
+```cpp
+void OnLootMoney(Player* player, uint32 gold);
+```
+
+### `TicketScript` (5 signatures)
+
+```cpp
+void OnTicketCreate(GmTicket* ticket);
+void OnTicketUpdateLastChange(GmTicket* ticket);
+void OnTicketClose(GmTicket* ticket);
+void OnTicketStatusUpdate(GmTicket* ticket);
+void OnTicketResolve(GmTicket* ticket);
+```

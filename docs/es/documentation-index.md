@@ -54,6 +54,7 @@
 - [Hooks Bash](hooks-bash)
 - [Hooks Cmake](hooks-cmake)
 - [Hooks C++](hooks-script)
+- [Referencia de hooks C++](hooks-script-reference)
 
 ## Documentación del wiki
 
