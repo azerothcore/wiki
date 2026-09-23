@@ -129,14 +129,6 @@ Usa la [Referencia de hooks C++](hooks-script-reference) cuando necesites las fi
 - `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve`: hooks del flujo de tickets de GM.
 - `OnBeforeMailDraftSendMailTo`: hook de personalización del correo antes de enviar un mensaje.
 
-#### Hooks de módulo y base de datos
-
-- `OnModuleDatabasesLoading`: abre conexiones propias del módulo, inicializa el esquema y puede abortar el arranque si hace falta.
-- `OnAfterDatabasesLoaded`: se ejecuta después de completar la carga de bases de datos y sirve para inicialización adicional.
-- `OnModuleDatabasesKeepAlive`: mantiene activas las conexiones de base de datos del módulo durante la ejecución.
-- `OnModuleDatabasesClosing`: cierra las conexiones propias del módulo durante el apagado.
-- `OnDatabaseGetDBRevision`: expone la revisión de la base de datos del módulo en `.server info`.
-
 ### Hooks de base de datos
 
 Los módulos que necesitan su propia base de datos deben usar `DatabaseScript`.

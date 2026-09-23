@@ -133,14 +133,6 @@ Use the full [Hooks C++ Reference](hooks-script-reference) when you need exact s
 - `OnTicketCreate`, `OnTicketStatusUpdate`, `OnTicketResolve`: GM ticket workflow hooks.
 - `OnBeforeMailDraftSendMailTo`: mail customization hook before a message is sent.
 
-#### Module and database hooks
-
-- `OnModuleDatabasesLoading`: open module-owned connections, initialize schema and fail startup if needed.
-- `OnAfterDatabasesLoaded`: runs after database loading completes, useful for follow-up initialization.
-- `OnModuleDatabasesKeepAlive`: keep module database connections alive during runtime.
-- `OnModuleDatabasesClosing`: close module-owned connections during shutdown.
-- `OnDatabaseGetDBRevision`: expose your module database revision to `.server info`.
-
 ### Database hooks
 
 Modules that need their own database should use `DatabaseScript`.
