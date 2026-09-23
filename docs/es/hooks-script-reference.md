@@ -219,7 +219,7 @@ void OnRelocate(Transport* transport, uint32 waypointId, uint32 mapId, float x, 
 bool OnCriteriaCheck(uint32 scriptId, Player* source, Unit* target, uint32 criteria_id);
 ```
 
-### `PlayerScript` (190 firmas)
+### `PlayerScript` (189 firmas)
 
 ```cpp
 void OnPlayerJustDied(Player* player);
@@ -286,7 +286,7 @@ void OnPlayerEquip(Player* player, Item* it, uint8 bag, uint8 slot, bool update)
 void OnPlayerUnequip(Player* player, Item* it);
 void OnPlayerJoinBG(Player* player);
 void OnPlayerJoinArena(Player* player);
-void OnPlayerGetMaxPersonalArenaRatingRequirement(Player const* player, uint32 minSlot, uint32& maxArenaRating);
+void OnPlayerGetMaxPersonalArenaRatingRequirement(Player const* player, uint32 minSlot, uint32& maxArenaRating) const;
 void OnPlayerLootItem(Player* player, Item* item, uint32 count, ObjectGuid lootguid);
 void OnPlayerBeforeFillQuestLootItem(Player* player, LootItem& item);
 void OnPlayerStoreNewItem(Player* player, Item* item, uint32 count);
@@ -436,7 +436,7 @@ void OnGuildMOTDChanged(Guild* guild, std::string const& newMotd);
 void OnGuildInfoChanged(Guild* guild, std::string const& newInfo);
 void OnGuildCreate(Guild* guild, Player* leader, std::string const& name);
 void OnGuildDisband(Guild* guild);
-void OnGuildMemberWithdrawMoney(Guild* guild, Player* player, uint32& amount, bool isRepair);
+void OnGuildMemberWitdrawMoney(Guild* guild, Player* player, uint32& amount, bool isRepair);
 void OnGuildMemberDepositMoney(Guild* guild, Player* player, uint32& amount);
 void OnGuildEvent(Guild* guild, uint8 eventType, ObjectGuid::LowType playerGuid1, ObjectGuid::LowType playerGuid2, uint8 newRank);
 void OnGuildBankEvent(Guild* guild, uint8 eventType, uint8 tabId, ObjectGuid::LowType playerGuid, uint32 itemOrMoney, uint16 itemStackCount, uint8 destTabId);
@@ -484,7 +484,7 @@ void AfterInstanceGameObjectCreate(Map* instance, GameObject* go);
 ### `UnitScript` (22 firmas)
 
 ```cpp
-void OnHeal(Unit* healer, Unit* receiver, uint32& gain);
+void OnHeal(Unit* healer, Unit* reciever, uint32& gain);
 void OnDamage(Unit* attacker, Unit* victim, uint32& damage);
 void ModifyPeriodicDamageAurasTick(Unit* target, Unit* attacker, uint32& damage, SpellInfo const* spellInfo);
 void ModifyMeleeDamage(Unit* target, Unit* attacker, uint32& damage);
