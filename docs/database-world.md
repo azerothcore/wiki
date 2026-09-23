@@ -22,6 +22,7 @@
 - [broadcast_text_locale](broadcast_text_locale)
 
 ## C
+- [charsections_dbc](charsections_dbc)
 - [command](command)
 - [conditions](conditions)
 - [creature](creature)
@@ -60,6 +61,7 @@
 - [dungeon_access_template](dungeon_access_template)
 
 ## E
+- [emotestextsound_dbc](emotestextsound_dbc)
 - [event_scripts](scripts)
 - [exploration_basexp](exploration_basexp)
 
