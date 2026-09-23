@@ -49,7 +49,22 @@ The model ID of the mount to be used to make the creature appear mounted. The va
 
 ### bytes1
 
-The value here overrides the value for the creature's unit field UNIT\_FIELD\_BYTES\_1.
+The value here overrides the value for the creature's unit field `UNIT_FIELD_BYTES_1`. It packs four
+bytes, little-endian:
+
+`bytes1 = standState | (petTalents << 8) | (standFlags << 16) | (animTier << 24)`
+
+- byte 0, `& 0xFF` = stand state: standing, sitting, sleeping, kneeling, submerged
+- byte 1, `<< 8` = pet talent points: unused on creatures, always 0
+- byte 2, `<< 16` = stand flags: creep, untrackable
+- byte 3, `<< 24` = animation tier: 0 Ground, 1 AlwaysStand (`AnimTier` calls it Swim), 2 Hover, 3 Fly, 4 Submerged
+
+Setting a single field is one shift, so an animation tier of Fly is `3 << 24` = 50331648 and Hover is
+`2 << 24` = 33554432. Fields combine with OR, for example kneeling while flying is `0x03000008` =
+50331656. `0` leaves the creature standing, with no stand flags and the ground tier.
+
+The tier only changes how the client animates the creature; walking, flying and hovering come from
+the movement flags, from [creature\_template\_movement](creature_template_movement) or from a script.
 
 List of known values and what their visual effects on the creature
 
