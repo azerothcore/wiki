@@ -34,6 +34,8 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
    <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
+   {% include note.html content="Notice that this image shows an outdated/unsupported version. But the steps are the same with later versions." %}
+
 4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.4.html)
 
     1. Download the Windows MSI Installer.
