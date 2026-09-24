@@ -1,6 +1,6 @@
 # Windows Requirements
 
-{% include important.html content="**MySQL 26.x.x** is **not supported**. Use **MySQL 8.4 LTS** instead." %}
+{% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
 
 | Installation Guide                                                                                                                   |                                                           |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |

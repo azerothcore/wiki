@@ -1,6 +1,6 @@
 # Requisitos de macOS
 
-{% include important.html content="**MySQL 26.x.x** no es compatible. Usa **MySQL 8.4 LTS** en su lugar." %}
+{% include important.html content="<b>MySQL 26.x.x</b> no es compatible. Usa <b>MySQL 8.4 LTS</b> en su lugar." %}
 
 | Guía de instalación | |
 | :- | :- |
