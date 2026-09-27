@@ -27,7 +27,6 @@ The unique permission identifier. ID ranges are:
 | 192–195 | Security-level roles (Administrator, Gamemaster, Moderator, Player) |
 | 196–199 | Command roles (Admin Commands, GM Commands, Mod Commands, Player Commands) |
 | 200–925 | Individual command permissions (one per `.command`) |
-| 100000+ | Module permissions (auto-assigned via [module_rbac_permissions](module_rbac_permissions)) |
 
 ### name
 

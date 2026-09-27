@@ -30,7 +30,6 @@ The RBAC system is built on four concepts:
 | [rbac_linked_permissions](rbac_linked_permissions) | Links roles to their child permissions |
 | [rbac_default_permissions](rbac_default_permissions) | Maps security levels to default roles |
 | [rbac_account_permissions](rbac_account_permissions) | Per-account overrides (grant/deny) |
-| [module_rbac_permissions](module_rbac_permissions) | Module-registered permissions |
 
 A convenience view `vw_rbac` joins the linked and default tables for easier querying.
 
@@ -42,7 +41,6 @@ A convenience view `vw_rbac` joins the linked and default tables for easier quer
 | 192–195 | Security-level roles | Administrator (192), Gamemaster (193), Moderator (194), Player (195) |
 | 196–199 | Command roles | Admin Commands (196), GM Commands (197), Mod Commands (198), Player Commands (199) |
 | 200–925 | Individual command permissions | One per `.command` |
-| 100000+ | Module permissions | Auto-assigned via [module_rbac_permissions](module_rbac_permissions) |
 
 ## Role Hierarchy
 
@@ -101,9 +99,3 @@ The `.rbac` commands allow live management of account permissions without restar
 | `.rbac list [permId]` | 206 | List all permissions, or show details for a specific permission |
 
 Changes take effect immediately for online players.
-
-## Module Integration
-
-Modules can register their own RBAC permissions using the [module_rbac_permissions](module_rbac_permissions) table. Each module uses local IDs (1, 2, 3, ...) that are automatically mapped to global IDs starting at 100000, avoiding conflicts with core permission IDs and between modules.
-
-See [module_rbac_permissions](module_rbac_permissions) for the full integration guide.

@@ -20,7 +20,6 @@
 
 ## M
 
-- [module_rbac_permissions](module_rbac_permissions)
 - [motd](motd)
 - [motd_localized](motd_localized)
 
