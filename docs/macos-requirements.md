@@ -23,14 +23,14 @@ xcode-select --install
 
 - Install the package manager [Homebrew](http://brew.sh/)
 
-Use brew it to install the required packages:
+Use brew to install the required packages:
 
 ```sh
 brew update
 ```
 
 ```sh
-brew install openssl@3 readline cmake boost coreutils bash bash-completion coreutils
+brew install openssl@3 readline cmake boost coreutils bash bash-completion
 ```
 
 This will install bash 5+, you might need to restart your terminal.

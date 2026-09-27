@@ -31,7 +31,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 1. Download archive `data.zip`.
 
-2. Extract the archive directly into the default **$AC_CODE_DIR/env/dist/bin/** directory as specified by DataDir option in **wordserver.conf**. You may choose another folder, but you'll need edit your the [DataDir](#updating-datadir) config option to the location of your folder.
+2. Extract the archive directly into the default **$AC_CODE_DIR/env/dist/bin/** directory as specified by DataDir option in **worldserver.conf**. You may choose another folder, but you'll need to edit the [DataDir](#updating-datadir) config option to the location of your folder.
 
 Default folder structure of **$AC_CODE_DIR/env/dist/bin** (as displayed by `tree -L 1`):
 ```
@@ -56,6 +56,7 @@ map_extractor
 mmaps_generator
 vmap4_assembler
 vmap4_extractor
+mmaps-config.yaml
 ```
 
 2. Browse into **$AC_CODE_DIR/apps/extractor/** and copy "**extractor.sh**" into your World of Warcraft folder with the previous files.
@@ -73,19 +74,19 @@ vmap4_extractor
 
    - Don't run another task before the first is finished or you will have errors.
 
-   - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
+   - If you stop vmap4_extractor before finish you will need to delete the Buildings directory before start again.
 
    - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is extracting.
 {{site.data.alerts.end}}
 
 
-5. Move the extracted files <b>vmaps</b>, <b>maps</b>, <b>dbc</b> and <b>Cameras</b> into the <b>$AC_CODE_DIR/env/dist/bin/</b> folder or a directory of your choice (remember to update your the [DataDir](#updating-datadir))
+5. Move the extracted files <b>vmaps</b>, <b>maps</b>, <b>dbc</b> and <b>Cameras</b> into the <b>$AC_CODE_DIR/env/dist/bin/</b> folder or a directory of your choice (remember to update the [DataDir](#updating-datadir))
 
 When this is complete you will receive the following message which can be safely ignored.
 
 ## Config Files: Worldserver and Authserver
 
-First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within the install directory **$AC_CODE_DIR/env/dist/etc/**.
+First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within the install directory **$AC_CODE_DIR/env/dist/etc/**.
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
@@ -104,8 +105,8 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 
 The following steps must be verified:
 
-- The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  If not, follow the instruction in [Realmlist Table](realmlist).
+- The hostname (127.0.0.1) is the address of your MySQL server. It can stay the same if MySQL runs on the same machine as the authserver and worldserver. If not, use the IP address of the MySQL server.
+  This is not the address players connect to. That is set in the [realmlist table](realmlist).
 
 - The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
   The username and password can be variable. You can choose to either:

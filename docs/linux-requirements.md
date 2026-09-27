@@ -14,7 +14,7 @@
 | OpenSSL ≥ 3.0.x                                                                 |
 | CMake ≥ 3.16                                                                    |
 | [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy)          |
-| [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
+| [GCC ≥ 15 / Clang ≥ 18](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
 #### Ubuntu 26.04
 
@@ -115,7 +115,7 @@ openssl version
 
 Your `openssl` version **MUST** be equal or higher than the required version listed on the top of this page.
 
---
+---
 
 ## Help
 

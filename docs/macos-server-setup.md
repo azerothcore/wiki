@@ -34,7 +34,7 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 3. Extract the files from the zip file and place them within the **data** folder.
 
-4. Edit your the [DataDir](#updating-datadir) config option to the location of your folder.
+4. Edit the [DataDir](#updating-datadir) config option to the location of your folder.
 
 ## Option 2: Extract Files Yourself
 
@@ -42,27 +42,28 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 Go to your AzerothCore build directory (e.g. $HOME/azeroth-server/bin/) and copy the following files to your World of Warcraft binaries directory.
 
-* **mapextractor**
+* **map_extractor**
 * **mmaps_generator**
-* **vmap4assembler**
-* **vmap4extractor**
+* **vmap4_assembler**
+* **vmap4_extractor**
+* **mmaps-config.yaml**
 
 **DBC and Maps files**
 
 ```
 cd <your WoW client directory>
-./mapextractor
+./map_extractor
 ```
 
-**Visual Maps (aka vmaps) Note: If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.**
+**Visual Maps (aka vmaps) Note: If you stop vmap4_extractor before finish you will need to delete the Buildings directory before start again.**
 
 You can also extract vmaps which will take quite a while depending on your machine (up to hours on ancient hardware).
 
 ```
 cd <your WoW client directory>
-./vmap4extractor
+./vmap4_extractor
 mkdir vmaps;
-./vmap4assembler Buildings vmaps
+./vmap4_assembler Buildings vmaps
 ```
 
 When this is complete you will receive the following message which can be safely ignored.
@@ -92,7 +93,7 @@ Now that everything is completed, you need to copy **dbc**, **maps**, **vmaps** 
 
 ## Config Files: Worldserver and Authserver
 
-First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies their namesakes without the .dist extension. You can find them within /build/configs/ (may vary).
+First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within /build/configs/ (may vary).
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
@@ -111,8 +112,8 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 
 The following steps must be verified:
 
-- The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  If not, follow the instruction in [Realmlist Table](realmlist).
+- The hostname (127.0.0.1) is the address of your MySQL server. It can stay the same if MySQL runs on the same machine as the authserver and worldserver. If not, use the IP address of the MySQL server.
+  This is not the address players connect to. That is set in the [realmlist table](realmlist).
 
 - The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
   The username and password can be variable. You can choose to either: 

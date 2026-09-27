@@ -88,7 +88,7 @@ Parameter explanation for advanced users [CMake options](cmake-options).
 At this point, you must be in your `$AC_CODE_DIR/build` directory.
 
 
-**Note**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-6.0` then you have to replace `clang` with `clang-6.0` and `clang++` with `clang++-6.0`
+**Note**: in case you use a non-default package for `clang`, you need to replace it accordingly. For example, if you installed `clang-18` then you have to replace `clang` with `clang-18` and `clang++` with `clang++-18`
 
 ```sh
 cmake ../ -DCMAKE_INSTALL_PREFIX=$AC_CODE_DIR/env/dist/ -DCMAKE_C_COMPILER=/usr/bin/clang -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DWITH_WARNINGS=1 -DTOOLS_BUILD=all -DSCRIPTS=static -DMODULES=static

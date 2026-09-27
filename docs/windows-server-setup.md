@@ -42,10 +42,10 @@ If you intend to use an enUS client you can download the data files below. If yo
 
 1. Browse into your build directory (**C:\Build\bin\RelWithDebInfo\\**) and copy the following files into your World of Warcraft folder (where the wow.exe is located).
 ```
-mapextractor.exe
+map_extractor.exe
 mmaps_generator.exe
-vmap4extractor.exe
-vmap4assembler.exe
+vmap4_extractor.exe
+vmap4_assembler.exe
 mmaps-config.yaml
 ```
 
@@ -64,7 +64,7 @@ mmaps-config.yaml
     
    - Don't run another task before the first is finished or you will have errors.
 
-   - If you stop vmap4extractor before finish you will need to delete the Buildings directory before start again.
+   - If you stop vmap4_extractor before finish you will need to delete the Buildings directory before start again.
 
    - <b>Optional but extremely recommended: Extract mmaps.</b> Do not attempt to stop this process while it is extracting.
 {{site.data.alerts.end}}
@@ -94,8 +94,8 @@ Variablename = "MySQLIP;Port;Username;Password;database"
 
 The following steps must be verified:
 
-- The hostname (127.0.0.1) can stay the same if AzerothCore is being installed on the same computer that you run WoW on.
-  If not, follow the instruction in [Realmlist Table](realmlist).
+- The hostname (127.0.0.1) is the address of your MySQL server. It can stay the same if MySQL runs on the same machine as the authserver and worldserver. If not, use the IP address of the MySQL server.
+  This is not the address players connect to. That is set in the [realmlist table](realmlist).
 
 - The port (3306) is the standard configured value. If you changed the default port in your MySQL settings, you must change it accordingly.
   The username and password can be variable. You can choose to either: 

@@ -29,7 +29,7 @@ You need to make sure that your **authserver** application directs incoming conn
 
     - 127.0.0.1 - Also known as "localhost". Leave this setting alone here and in your configs, if you've installed AzerothCore on the same computer you run WoW on, and only you are connecting to it.
 
-    - Public IP address – If you want other people to connect to your server, use your external IP. Visit http://www.whatismyip.com/ to find your external IP address. 
+    - Public IP address – If you want other people to connect to your server, use your external IP. Visit https://www.whatismyip.com/ to find your external IP address. 
         -  If you're hosting it from a home network you'll likely need to set up the proper port forwards, which isn't covered within the scope of this guide. https://portforward.com has guides for most routers, and your Internet Service Provider should be able to assist with this. 
     
     - Fully qualified domain name - (mydomain.com or warcraft.mydomain.com) Similar to an external IP address, this would be used if you want other people to connect to your server with the added benefit of not needing to track a potentially dynamic IP address. 
@@ -41,9 +41,11 @@ You need to make sure that your **authserver** application directs incoming conn
 {% include note.html content="If you are using HeidiSQL, make sure you are in the Data tab when you edit values." %}
 
  - MySQL CLI Commands (This step is not needed if you used a MySQL Manager like HeidiSQL)
-    - `$ sudo mysql`
+    - Log in as the MySQL root user:
+        - Linux: `sudo mysql`
+        - Windows and macOS, or Linux if your root user has a password: `mysql -u root -p`
     - You should see a prompt change to mysql>
-    - `use acore_auth`;
+    - `use acore_auth;`
     - **Replace your IP with the one you've chosen to use from above**
     - `UPDATE realmlist SET address = '[your_ip]' WHERE id = 1;`
     - exit
