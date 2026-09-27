@@ -40,7 +40,7 @@ Note: we suggest to use the [directory structure](directory-structure) standards
 void AddMyCustomScripts();
 
 // Add all
-// cf. the naming convention https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master#how-to-upgrade-4
+// cf. the naming convention in 4.0.0-dev.6: https://github.com/azerothcore/azerothcore-wotlk/blob/master/doc/changelog/master.md#how-to-upgrade-11
 // additionally replace all '-' in the module folder name with '_' here
 void Addmod_my_customScripts()
 {
