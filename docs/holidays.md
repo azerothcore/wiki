@@ -10,75 +10,100 @@ redirect_from: "/Holidays"
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)  
 
+This DBC defines the holidays shown in the in-game calendar and when they take place. A [game\_event](game_event) is linked to a holiday with its `holiday` column.
+
 ## Structure
 
-| Column | Field                         | Type    | Notes                                                                              | Extra info                                                                 |
-| ------ | ----------------------------- | ------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 0      | [eventID][1]                  | Integer | Holiday event ID                                                                   |                                                                            |
-| 1      | [eventStage1Duration][2]      | Integer | Stage1 event length (for stage1                                                    | either as preparation or main event. See eventSchedulerType for more info) |
-| 2      | [eventStage2Duration][3]      | Integer | Stage2 event length (for stage2                                                    | either as main event or cooldown. See eventSchedulerType for more info)    |
-| 11     | [eventDate][4]                | Integer | Packed blizzdate - Epochdate=01.01.2000-00:00 - Year is discarded if column12 is 0 |                                                                            |
-| 37     | [Region][5]                   | integer | ??? (needs more research)                                                          |                                                                            |
-| 38     | [Looping][6]                  | integer | ??? (needs more research - used only on Call To Arms events)                       | 283 - Call to Arms: Alterac Valley                                         |
-|        |                               |         |                                                                                    | 284 - Call to Arms: Warsong Gulch                                          |
-|        |                               |         |                                                                                    | 285 - Call to Arms: Arathi Basin                                           |
-|        |                               |         |                                                                                    | 353 - Call to Arms: Eye of the Storm                                       |
-|        |                               |         |                                                                                    | 400 - Call to Arms: Strand of the Ancient                                  |
-|        |                               |         |                                                                                    | 420 - Call to Arms: Isle of Conquest                                       |
-| 39     | [calendarFlags][7]            | integer | ??? (needs more research)                                                          |                                                                            |
-| 49     | [eventCalendarName][8]        | iRefID  | Ref to Loc in HolidayNames.dbc                                                     |                                                                            |
-| 50     | [eventCalendarDescription][9] | iRefID  | Ref to Loc in HolidayDescriptions.dbc                                              |                                                                            |
-| 51     | [eventCalendarOverlay][10]    | String  | Overlay texture used for ingame calendar event-decorations                         |                                                                            |
-| 52     | [priority][11]                | Integer | ??? (needs more research)                                                          |                                                                            |
-| 53     | [eventSchedulerType][12]      | Integer | Definition of which timer is used, see eventSchedulerType below                    | -1: repeat, yearly                                                         |
-|        |                               |         |                                                                                    | 0: repeat, weekly                                                          |
-|        |                               |         |                                                                                    | 1: repeat, use defined dates                                               |
-|        |                               |         |                                                                                    | 2: repeat, hourly                                                          |
-| 54     | [eventFlags][13]              | Integer | ??? (needs more research)                                                          |                                                                            |
+| Column | Field                                                  | Type    | Notes                                                 |
+| ------ | ------------------------------------------------------ | ------- | ----------------------------------------------------- |
+| 0      | [ID](#id)                                              | Integer | Holiday ID                                            |
+| 1-10   | [Duration1-10](#duration1-10)                          | Integer | Length of each stage in hours                         |
+| 11-36  | [Date1-26](#date1-26)                                  | Integer | Packed start dates                                    |
+| 37     | [Region](#region)                                      | Integer | Region                                                |
+| 38     | [Looping](#looping)                                    | Integer | 1 if the holiday repeats back to back                 |
+| 39-48  | [CalendarFlags1-10](#calendarflags1-10)                | Integer | Calendar flags for each stage                         |
+| 49     | [HolidayNameID](#holidaynameid)                        | Integer | Ref to HolidayNames.dbc                               |
+| 50     | [HolidayDescriptionID](#holidaydescriptionid)          | Integer | Ref to HolidayDescriptions.dbc                        |
+| 51     | [TextureFilename](#texturefilename)                    | String  | Calendar texture                                      |
+| 52     | [Priority](#priority)                                  | Integer | Calendar priority                                     |
+| 53     | [CalendarFilterType](#calendarfiltertype)              | Integer | Kind of holiday, see below                            |
+| 54     | [Flags](#flags)                                        | Integer | Flags                                                 |
 
-[1]: #eventid
-[2]: #eventstage1duration
-[3]: #eventstage2duration
-[4]: #eventdate
-[5]: #region
-[6]: #looping
-[7]: #calendarflags
-[8]: #eventcalendarname
-[9]: #eventcalendardescription
-[10]: #eventcalendaroverlay
-[11]: #priority
-[12]: #eventschedulertype
-[13]: #eventflags
+### ID
 
-### eventID
+The holiday ID. This is the value used in [game\_event.holiday](game_event#holiday) and [item\_template.HolidayId](item_template#holidayid).
 
-### eventStage1Duration
+### Duration1-10
 
-### eventStage2Duration
+The length in hours of each stage of the holiday. Most holidays only use the first stage. Holidays with more than one stage, like the Call to Arms battleground weekends, use one duration per stage.
 
-### eventDate
+A game event picks which stage it is with the `holidayStage` column of [game\_event](game_event). The stage starts after all the stages before it have ended.
+
+### Date1-26
+
+The start dates of the holiday, packed into one integer:
+
+| Bits  | Value                                           |
+| ----- | ----------------------------------------------- |
+| 0-5   | Minute                                          |
+| 6-10  | Hour                                            |
+| 11-13 | Day of the week                                 |
+| 14-19 | Day of the month, starting at 0                 |
+| 20-23 | Month, starting at 0                            |
+| 24-28 | Year, counted from 2000. 31 means every year    |
+
+The dates in the DBC only cover the years around the release of the client. For the main holidays, the core calculates the dates of the current and upcoming years when the server starts. A `start_time` in the current year or later in [game\_event](game_event) overrides the calculated date. See [Dynamic Holiday System](game_event#dynamic-holiday-system).
 
 ### Region
 
+The World of Warcraft region the holiday is for. It is sent to the client with the calendar data.
+
 ### Looping
 
-### calendarFlags
+1 if the holiday repeats back to back, with no pause between the end of the last stage and the start of the first one. Used by the Call to Arms battleground weekends:
 
-### eventCalendarName
+| ID  | Holiday                                  |
+| --- | ---------------------------------------- |
+| 283 | Call to Arms: Alterac Valley             |
+| 284 | Call to Arms: Warsong Gulch              |
+| 285 | Call to Arms: Arathi Basin               |
+| 353 | Call to Arms: Eye of the Storm           |
+| 400 | Call to Arms: Strand of the Ancients     |
+| 420 | Call to Arms: Isle of Conquest           |
 
-### eventCalendarDescription
+The core repeats a looping holiday every time the sum of all its stage durations has passed, starting from the first date.
 
-### eventCalendarOverlay
+### CalendarFlags1-10
 
-### priority
+Flags for each stage of the holiday. They are sent to the client with the calendar data and are not used by the core.
 
-## eventSchedulerType
-```
-eventSchedulerType defines what kind of timer is used for when the event is to stop, start etc. - and if it uses different stages during it's "buildup"-phase (2 stages available)
--1: event repeats every year based on column11, column12 etc dates - length and possible event stages is taken from the information given in column1 and column2 (adjusted in DBC to keep it in line with **yearly** changes) - if column12=0, use DATE only from field11
-0: event repeats every 7 days, with a duration of <eventStage1Duration> hours (hardcoded startdate serverside depending on eventID)
-1: event repeats based on column11, column12 etc values (see -1) - if <eventStage2Duration> exists, use <eventStage1Duration> as event prestage length
-2: event repeats every X hours (with <eventStage2Duration> being the eventPause/eventWait timer)
-```
+### HolidayNameID
 
-### eventFlags
+ID of the holiday's name in HolidayNames.dbc. Not loaded by the core.
+
+### HolidayDescriptionID
+
+ID of the holiday's description in HolidayDescriptions.dbc. Not loaded by the core.
+
+### TextureFilename
+
+Name of the texture the in-game calendar shows on the days of the holiday.
+
+### Priority
+
+Sent to the client with the calendar data.
+
+### CalendarFilterType
+
+The core uses it to set how often the linked game event repeats.
+
+| Value | Effect                                                                                  |
+| ----- | --------------------------------------------------------------------------------------- |
+| -1    | The event repeats every year.                                                           |
+| 0     | The event repeats every 7 days.                                                         |
+| 1     | The event only takes place on the defined dates. Used by the Darkmoon Faire.            |
+| 2     | No repeat interval is set from this value. Looping holidays use [Looping](#looping).    |
+
+### Flags
+
+0 for the Darkmoon Faire, the Fishing Contest and the Wrath of the Lich King launch event, 1 for all other holidays. Not loaded by the core.
