@@ -40,15 +40,26 @@ Each ordinal set of 3 Id is used for a different purpose.
 | PROP_ENCHANTMENT_SLOT_4    | 11      |
 
 ### PERM_ENCHANTMENT_SLOT
-  This Enchantment is part of the Items design.
-  
+
+Permanent enchantments, for example from the Enchanting profession or an armor kit.
+
 ### TEMP_ENCHANTMENT_SLOT
+
+Temporary enchantments that wear off after a while, for example poisons, weapon oils and sharpening stones.
+
 ### SOCK_ENCHANTMENT_SLOT
-  Enchantments applied to the Item via a profession like blacksmithing sockets.
-  
-### BONUS_ENCHANTMENT_SLOT        
-### PRISMATIC_ENCHANTMENT_SLOT    
-### PROP_ENCHANTMENT_SLOT       
+
+`SOCK_ENCHANTMENT_SLOT` to `SOCK_ENCHANTMENT_SLOT_3`. The gems placed in the item's sockets, one slot per socket.
+
+### BONUS_ENCHANTMENT_SLOT
+
+The socket bonus, which is active when the gems match the colors of the sockets.
+
+### PRISMATIC_ENCHANTMENT_SLOT
+
+The extra prismatic socket some items get, for example from an Eternal Belt Buckle.
+
+### PROP_ENCHANTMENT_SLOT
   Random Enchatments Some Items receive on creation. 
   
   These Slots are dependent on either a Random Suffix or the RandomProperty in [item_template](item_template).   

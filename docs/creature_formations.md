@@ -76,7 +76,9 @@ Sets group member behaviors, values are:
 | 0x200 | 512 | GROUP_AI_FLAG_FOLLOW_LEADER                | Noone assists noone and member follow the leader               |
 |       | 515 |                                            | Everyone assists everyone and member follow the leader         |
 
-## point\_1  
+## point\_1
+
+Used together with [point\_2](#point2), see below.
 
 ## point\_2
 

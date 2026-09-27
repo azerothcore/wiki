@@ -31,8 +31,6 @@
 
 ### VerifiedBuild
 
-### VerifiedBuild
-
 This field is used to determine if the data originates from verified sniffs.
 
 If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.

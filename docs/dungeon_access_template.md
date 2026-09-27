@@ -63,3 +63,5 @@ Min average ilvl required to enter the instance.
 **Note:** this requirement only applies to the Dungeon Finder and the Raid Browser, not to a dungeon/raid portal (and it's blizzlike). This also means a guild could try to clear a raid while being undergeared :)
 
 ### comment
+
+A description of the row. Not used by the core.

@@ -5,8 +5,7 @@
 [`Back-to:spell_dbc`](spell_dbc)
 
 
-### This page contains description regarding the usage of EffectMiscValue and other Spell Aura values.
-### Contains only Spell Auras that have known usage of EffectMiscValue or other unconventional values.
+This page describes how spell auras use EffectMiscValue and other spell aura values. It only lists the auras that have a known use of EffectMiscValue or other unusual values.
 
 **Version is : 3.3.5a**
 

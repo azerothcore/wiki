@@ -67,3 +67,5 @@ Priority order for the requirement, sorted by type. 0 is the highest priority.
 1 = Only check the requirement for the party leader.
 
 ### comment
+
+A description of the row. Not used by the core.

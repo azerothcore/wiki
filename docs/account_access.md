@@ -35,3 +35,5 @@ The account security level. Different levels have access to different commands. 
 The [Realm ID](realmlist#id).
 
 ### comment
+
+A description of the row. Not used by the core.

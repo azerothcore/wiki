@@ -98,6 +98,12 @@ In other words, it is the text that accompanies the counters.
 
 ### VerifiedBuild
 
+This field is used to determine if this translation originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.
+
 ### Example
 ```sql
 DELETE FROM `quest_template_locale` WHERE `ID`=62 AND `locale`="esES";

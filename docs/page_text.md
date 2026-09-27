@@ -35,3 +35,9 @@ The actual text. The message in this field will be shown as the text on a page.
 The ID of the next page. [page_text.id](#id).
 
 ### VerifiedBuild
+
+This field is used to determine if this page originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.

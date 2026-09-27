@@ -2,9 +2,7 @@
 
 [<-Back-to:spell_dbc](spell_dbc)
 
-### This page contains description regarding the usage of EffectMiscValue and other Spell Effects values.
-
-### Contains the list of all Spell Effects.
+This page contains the list of all spell effects, and describes how they use EffectMiscValue and other spell effect values.
 
 **Version is : 3.3.5a**
 

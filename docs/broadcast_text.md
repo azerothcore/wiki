@@ -31,7 +31,7 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 | Flags                                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | VerifiedBuild                            | SMALLINT |            |     | YES  | 0       |       |         |
 
-### Description of the fields
+**Description of the fields**
 
  
 
@@ -75,7 +75,7 @@ An emote.
 
 ### Flags
 
- 
+Loaded by the core, but not used.
 
 ### VerifiedBuild
 
