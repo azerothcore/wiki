@@ -64,7 +64,7 @@ The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL la
 - EntryOrGuid < 0: `guid` of the creature / game object / etc.
 - **Depends on source_type.**
 
-When using GUID-specific SAI, the extra_flag DONT_OVERRIDE_SAI_ENTRY allows us to not require duplicating rows shared between all creatures of the same entry.
+When using GUID-specific SAI, the extra_flag DONT_OVERRIDE_ENTRY_SAI allows us to not require duplicating rows shared between all creatures of the same entry.
 
 For example, you can keep all movement-related scripting in the GUID script, while combat scripting is handled by the ENTRY script.
 
