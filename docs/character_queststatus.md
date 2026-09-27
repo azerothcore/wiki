@@ -52,7 +52,7 @@ The GUID of the character. See [characters.guid](characters#guid).
 
 ### quest
 
-The quest ID. See [quest\_template.entry](quest_template#id).
+The quest ID. See [quest\_template.ID](quest_template#id).
 
 ### status
 

@@ -82,6 +82,6 @@ This DBC contains all possible player classes.
 
 > Value
 
-Value designates the bitmask used in various places of the core and database (quest_template.RequiresClasses etc).
+Value designates the bitmask used in various places of the core and database (quest_template_addon.AllowableClasses etc).
 
 The formula for it is: **Value = 1 << (ID - 1);**

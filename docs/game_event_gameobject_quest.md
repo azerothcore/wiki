@@ -26,7 +26,7 @@ The Gameobject ID. See gameobject\_template.entry
 
 ### quest
 
-The quest ID. See quest\_template.entry
+The quest ID. See [quest\_template.ID](quest_template#id)
 
 ### eventEntry
 

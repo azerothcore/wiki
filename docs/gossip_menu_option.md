@@ -108,7 +108,7 @@ This is the npcflag ([Creature\_template.npcflag](creature_template#npcflag) tha
 
 ### ActionMenuID
 
-If you want to create a sub-menu, this is the ID ([gossip\_menu.entry](gossip_menu#menuid) / [gossip\_menu\_option.menu\_id](gossip_menu_option#menuid)) to link to to create that sub-menu.
+If you want to create a sub-menu, this is the ID ([gossip\_menu.MenuID](gossip_menu#menuid) / [gossip\_menu\_option.MenuID](gossip_menu_option#menuid)) to link to to create that sub-menu.
 
 ### ActionPoiID
 

@@ -56,23 +56,23 @@ Class of the creature. This is a reference to the [unit\_class](creature_templat
 
 ### basehp0
 
-Base health for the creature if creature\_template.exp value is set to 0. This value is multiplied by [creature\_template.Health\_mod](creature_template#healthmodifier)  to determine the creature's final health.
+Base health for the creature if creature\_template.exp value is set to 0. This value is multiplied by [creature\_template.HealthModifier](creature_template#healthmodifier)  to determine the creature's final health.
 
 ### basehp1
 
-Base health for the creature if creature\_template.exp value is set to 1. This value is multiplied by [creature\_template.Health\_mod](creature_template#healthmodifier)  to determine the creature's final health.
+Base health for the creature if creature\_template.exp value is set to 1. This value is multiplied by [creature\_template.HealthModifier](creature_template#healthmodifier)  to determine the creature's final health.
 
 ### basehp2
 
-Base health for the creature if creature\_template.exp value is set to 2. This value is multiplied by [creature\_template.Health\_mod](creature_template#healthmodifier)  to determine the creature's final health.
+Base health for the creature if creature\_template.exp value is set to 2. This value is multiplied by [creature\_template.HealthModifier](creature_template#healthmodifier)  to determine the creature's final health.
 
 ### basemana
 
-Base mana for the creature. This value is multiplied by  [creature\_template.Mana\_mod](creature_template#manamodifier) to determine the creature's final mana.
+Base mana for the creature. This value is multiplied by  [creature\_template.ManaModifier](creature_template#manamodifier) to determine the creature's final mana.
 
 ### basearmor
 
-Base armor for the creature. This value is multiplied by creature\_template.Armor\_mod to determine the creature's final armor.
+Base armor for the creature. This value is multiplied by [creature\_template.ArmorModifier](creature_template#armormodifier) to determine the creature's final armor.
 
 ### attackpower
 

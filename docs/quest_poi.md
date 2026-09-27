@@ -38,7 +38,7 @@ The Quest Id from [quest\_template.id](quest_template#id)
 
 ### id
 
-Used to group multiple entries from quest\_poi\_points.id it is the id of the POI.
+Used to group multiple entries from quest\_poi\_points.Idx1 it is the id of the POI.
 
 ### ObjectiveIndex
 

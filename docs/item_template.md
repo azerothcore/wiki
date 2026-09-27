@@ -857,7 +857,7 @@ The description that appears in orange letters at the bottom of the item tooltip
 
 ### PageText
 
-The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See [page\_text.entry](http://www.azerothcore.org/wiki/page_text#entry)
+The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See [page\_text.ID](page_text#id)
 
 ### LanguageID
 
