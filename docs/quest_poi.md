@@ -58,11 +58,11 @@ This is the ID from [AreaTable.dbc](areatable) of the POI.
 
 ### Priority
 
-`field-no-description|7`
+Sent to the client with the POI. Its exact effect is not known.
 
 ### Flags
 
-`field-no-description|8`
+Sent to the client with the POI. Its exact effect is not known.
 
 ### VerifiedBuild
 

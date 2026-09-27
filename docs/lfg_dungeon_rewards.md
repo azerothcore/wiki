@@ -4,7 +4,7 @@
 
 **The \`lfg\_dungeon\_rewards\` table**
 
-`table-no-description|0`
+The quests that give the rewards for finishing a random dungeon in the Dungeon Finder, by level.
 
 **Table Structure**
 

@@ -26,24 +26,24 @@
 
 ### surveyId
 
-`field-no-description|1`
+The unique ID of the survey.
 
 ### guid
 
-`field-no-description|2`
+GUID of the character that filled in the survey. See [characters.guid](characters#guid).
 
 ### mainSurvey
 
-`field-no-description|3`
+ID of the survey from GMSurveySurveys.dbc.
 
 ### comment
 
-`field-no-description|4`
+The comment the player wrote.
 
 ### createTime
 
-`field-no-description|5`
+The time the survey was sent, in Unix time.
 
 ### maxMMR
 
-`field-no-description|6`
+Not set by the core.

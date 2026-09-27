@@ -4,7 +4,7 @@
 
 **The \`spell_mixology\` table**
 
-`table-no-description`
+Bonus the Alchemy talent Mixology gives to elixirs and flasks. Players with Mixology who know the recipe of the elixir or flask get a stronger effect and double duration.
 
 **Table Structure**
 
@@ -17,8 +17,8 @@
 
 ### entry
 
-`field-no-description|1`
+The spell ID of the elixir or flask effect.
 
 ### pctMod
 
-`field-no-description|2`
+Bonus in percent added to the effects of the spell, for example 30 makes them 30% stronger.

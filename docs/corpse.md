@@ -52,64 +52,75 @@ The character guid. See [characters.guid](characters#guid).
 
 ### posX
 
-`field-no-description|2`
+X position of the corpse.
 
 ### posY
 
-`field-no-description|3`
+Y position of the corpse.
 
 ### posZ
 
-`field-no-description|4`
+Z position of the corpse.
 
 ### orientation
 
-`field-no-description|5`
+Orientation of the corpse.
 
 ### mapId
 
-`field-no-description|6`
+The map the corpse is on. See [Map.dbc](map).
 
 ### phaseMask
 
-`field-no-description|7`
+The phases the corpse is visible in.
 
 ### displayId
 
-`field-no-description|8`
+The character's native display ID, so the corpse looks like the character.
 
 ### itemCache
 
-`field-no-description|9`
+The items the character was wearing, so the corpse shows them. One value per equipment slot, separated by spaces. Each value is `displayId | (InventoryType << 24)` of the item, or 0 for an empty slot. Bones have no items.
 
 ### bytes1
 
-`field-no-description|10`
+Appearance of the character: `(race << 8) | (gender << 16) | (skin << 24)`.
 
 ### bytes2
 
-`field-no-description|11`
+Appearance of the character: `face | (hairStyle << 8) | (hairColor << 16) | (facialHair << 24)`.
 
 ### guildId
 
-`field-no-description|12`
+The guild of the character. See [guild.guildid](guild#guildid).
 
 ### flags
 
-`field-no-description|13`
+| Flag | Name                   | Description                                   |
+| ---- | ---------------------- | --------------------------------------------- |
+| 1    | CORPSE_FLAG_BONES      | The corpse is bones.                          |
+| 2    | CORPSE_FLAG_UNK1       |                                               |
+| 4    | CORPSE_FLAG_UNK2       | Set on every corpse.                          |
+| 8    | CORPSE_FLAG_HIDE_HELM  | The character had their helm hidden.          |
+| 16   | CORPSE_FLAG_HIDE_CLOAK | The character had their cloak hidden.         |
+| 32   | CORPSE_FLAG_LOOTABLE   | Other players can loot the corpse, in battlegrounds and in Wintergrasp during battle. |
 
 ### dynFlags
 
-`field-no-description|14`
+1 (`CORPSE_DYNFLAG_LOOTABLE`) if the corpse can be looted right now, otherwise 0.
 
 ### time
 
-`field-no-description|15`
+The time the corpse was created, in Unix time.
 
 ### corpseType
 
-`field-no-description|16`
+| Value | Type                       | Description                                         |
+| ----- | -------------------------- | --------------------------------------------------- |
+| 0     | CORPSE_BONES               | Bones left after the character was resurrected.     |
+| 1     | CORPSE_RESURRECTABLE_PVE   | Corpse of a character killed in PvE.                |
+| 2     | CORPSE_RESURRECTABLE_PVP   | Corpse of a character killed in PvP.                |
 
 ### instanceId
 
-`field-no-description|17`
+The instance the corpse is in, 0 if the map is not an instance.

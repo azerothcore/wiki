@@ -36,19 +36,19 @@ Global Unique Identifier.
 
 ### joinX
 
-`field-no-description|2`
+X position the character is sent back to.
 
 ### joinY
 
-`field-no-description|3`
+Y position the character is sent back to.
 
 ### joinZ
 
-`field-no-description|4`
+Z position the character is sent back to.
 
 ### joinO
 
-`field-no-description|5`
+Orientation the character is sent back to.
 
 ### joinMapId
 
@@ -64,4 +64,4 @@ The destination node of the taxi (flight) path the character was on when the ent
 
 ### mountSpell
 
-`field-no-description|8`
+The mount spell the character was using, which is cast again when they return.

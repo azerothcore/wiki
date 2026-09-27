@@ -4,7 +4,7 @@
 
 **The \`arena_season_reward\` table**
 
-`table-no-description`
+The rewards of each [arena\_season\_reward\_group](arena_season_reward_group). Items are sent by mail, achievements are completed for every member of the team who gets the reward.
 
 **Table Structure**
 

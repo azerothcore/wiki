@@ -245,11 +245,18 @@ facialHair = playerBytes2 % 256
 
 ### bankSlots
 
-`field-no-description|15`
+Number of bank bag slots the character has bought.
 
 ### restState
 
-`field-no-description|16`
+| Value | State                                    |
+| ----- | ---------------------------------------- |
+| 1     | Rested                                   |
+| 2     | Normal, not linked with Recruit-a-Friend |
+| 3     | Tired                                    |
+| 4     | Tired, 50% experience                    |
+| 5     | Exhausted, 25% experience                |
+| 6     | Linked with Recruit-a-Friend             |
 
 ### playerFlags
 
@@ -357,7 +364,7 @@ The cost for the character to reset its talents, measured in copper.
 
 ### resettalents\_time
 
-`field-no-description|34`
+The time the character last reset their talents, in Unix time. Used to lower the reset cost over time.
 
 ### trans\_x
 

@@ -38,36 +38,36 @@ The client build.
 
 ### majorVersion
 
-`field-no-description|2`
+Major version of the client, for example 3 for 3.3.5a.
 
 ### minorVersion
 
-`field-no-description|3`
+Minor version of the client, for example 3 for 3.3.5a.
 
 ### bugfixVersion
 
-`field-no-description|4`
+Bugfix version of the client, for example 5 for 3.3.5a.
 
 ### hotfixVersion
 
-`field-no-description|5`
+Hotfix letter of the client, for example a for 3.3.5a.
 
 ### winAuthSeed
 
-`field-no-description|6`
+Not used by the core.
 
 ### win64AuthSeed
 
-`field-no-description|7`
+Not used by the core.
 
 ### mac64AuthSeed
 
-`field-no-description|8`
+Not used by the core.
 
 ### winChecksumSeed
 
-`field-no-description|9`
+Hash, as a hex string, used to check the Windows client executable when it logs in. If empty, the check is skipped.
 
 ### macChecksumSeed
 
-`field-no-description|10`
+Hash, as a hex string, used to check the Mac client executable when it logs in. If empty, the check is skipped.

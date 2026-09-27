@@ -26,24 +26,24 @@
 
 ### guid
 
-`field-no-description|1`
+GUID of the character. See [characters.guid](characters#guid).
 
 ### genitive
 
-`field-no-description|2`
+The name in the genitive case.
 
 ### dative
 
-`field-no-description|3`
+The name in the dative case.
 
 ### accusative
 
-`field-no-description|4`
+The name in the accusative case.
 
 ### instrumental
 
-`field-no-description|5`
+The name in the instrumental case.
 
 ### prepositional
 
-`field-no-description|6`
+The name in the prepositional case.

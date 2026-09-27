@@ -18,8 +18,8 @@
 
 ### guid
 
-`field-no-description|1`
+GUID of the character. See [characters.guid](characters#guid).
 
 ### lastEventId
 
-`field-no-description|2`
+The Brew of the Month [game event](game_event) the character last got a mail for. Characters with the Brew of the Month achievement get one mail per month when they log in during that month's event.

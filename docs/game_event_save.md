@@ -20,12 +20,21 @@
 
 ### eventEntry
 
-`field-no-description|1`
+The game event. See [game\_event.eventEntry](game_event#evententry).
 
 ### state
 
-`field-no-description|2`
+The state of a world event:
+
+| Value | State                      | Description                                                    |
+| ----- | -------------------------- | -------------------------------------------------------------- |
+| 0     | GAMEEVENT_NORMAL           | Standard game event.                                           |
+| 1     | GAMEEVENT_WORLD_INACTIVE   | Not started yet.                                               |
+| 2     | GAMEEVENT_WORLD_CONDITIONS | Waiting for its conditions to be met.                          |
+| 3     | GAMEEVENT_WORLD_NEXTPHASE  | Conditions are met, waiting for the next event to start.       |
+| 4     | GAMEEVENT_WORLD_FINISHED   | The next events have started.                                  |
+| 5     | GAMEEVENT_INTERNAL         | Never handled by the event update.                             |
 
 ### next\_start
 
-`field-no-description|3`
+The time the event moves to its next state, in Unix time. 0 if not set.

@@ -4,7 +4,7 @@
 
 **The \`spell\_enchant\_proc\` table**
 
-`table-no-description`
+Changes how often and when weapon enchantments proc their spell.
 
 **Table Structure**
 
@@ -30,7 +30,7 @@ Enchantment ID from SpellItemEnchantment.dbc
 
 ### customChance
 
-`field-no-description|2`
+Proc chance in percent. Overrides the chance from the enchantment. 0 to not change it.
 
 ### PPMChance
 
@@ -38,8 +38,11 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 
 ### procEx
 
-`field-no-description|4`
+If set, the enchantment only procs on hits that match one of these hit results (`PROC_EX_*` flags, for example a normal hit or a critical hit). If 0, it procs on any hit that does damage.
 
 ### attributeMask
 
-`field-no-description|5`
+| Flag | Name                        | Description                                                     |
+| ---- | --------------------------- | --------------------------------------------------------------- |
+| 1    | ENCHANT_PROC_ATTR_EXCLUSIVE | Does not proc while the target already has the aura from the caster. |
+| 2    | ENCHANT_PROC_ATTR_WHITE_HIT | Only procs from white hits, not from abilities.                 |

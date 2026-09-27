@@ -22,16 +22,16 @@
 
 ### Id
 
-`field-no-description|1`
+The unique ID of the entry.
 
 ### Name
 
-`field-no-description|2`
+The name of the addon. The server sends this list to the client, which then disables the addon.
 
 ### Version
 
-`field-no-description|3`
+The version of the addon to ban. Empty bans all versions.
 
 ### Timestamp
 
-`field-no-description|4`
+The time the entry was added or last changed.

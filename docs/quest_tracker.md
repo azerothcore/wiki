@@ -30,7 +30,7 @@
 
 ### id
 
-`field-no-description|1`
+The quest. See [quest\_template.ID](quest_template#id).
 
 ### character\_guid
 
@@ -50,12 +50,12 @@ When the quest was abandoned.
 
 ### completed\_by\_gm
 
-`field-no-description|6`
+1 if the quest was completed with the `.quest complete` GM command.
 
 ### core\_hash
 
-`field-no-description|7`
+The commit hash of the core when the quest was accepted.
 
 ### core\_revision
 
-`field-no-description|8`
+The revision of the core when the quest was accepted.

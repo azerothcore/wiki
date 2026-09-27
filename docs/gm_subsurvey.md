@@ -24,16 +24,16 @@ This table contains the answers to the survey questions. It's linked to `gm_surv
 
 ### surveyId
 
-`field-no-description|1`
+The survey the answer belongs to. See [gm\_survey.surveyId](gm_survey#surveyid).
 
 ### questionId
 
-`field-no-description|2`
+ID of the question from GMSurveyQuestions.dbc.
 
 ### answer
 
-`field-no-description|3`
+The rating the player chose for the question.
 
 ### answerComment
 
-`field-no-description|4`
+The comment the player wrote for the question.

@@ -34,40 +34,40 @@
 
 ### fight\_id
 
-`field-no-description|1`
+The arena match. See [log\_arena\_fights.fight\_id](log_arena_fights#fightid).
 
 ### member\_id
 
-`field-no-description|2`
+Number of the player in the match, starting at 1.
 
 ### name
 
-`field-no-description|3`
+Name of the character.
 
 ### guid
 
-`field-no-description|4`
+GUID of the character. See [characters.guid](characters#guid).
 
 ### team
 
-`field-no-description|5`
+ID of the arena team the player fought for. See [arena\_team.arenaTeamId](arena_team#arenateamid).
 
 ### account
 
-`field-no-description|6`
+Account of the player. See [account.id](account#id).
 
 ### ip
 
-`field-no-description|7`
+IP of the player.
 
 ### damage
 
-`field-no-description|8`
+Damage the player did in the match.
 
 ### heal
 
-`field-no-description|9`
+Healing the player did in the match.
 
 ### kblows
 
-`field-no-description|10`
+Killing blows the player got in the match.

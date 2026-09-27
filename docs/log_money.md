@@ -33,39 +33,39 @@
 
 ### sender\_acc
 
-`field-no-description|1`
+Account of the player who gave the money. See [account.id](account#id).
 
 ### sender\_guid
 
-`field-no-description|2`
+GUID of the character who gave the money. See [characters.guid](characters#guid).
 
 ### sender\_name
 
-`field-no-description|3`
+Name of the character who gave the money.
 
 ### sender\_ip
 
-`field-no-description|4`
+IP of the player who gave the money.
 
 ### receiver\_acc
 
-`field-no-description|5`
+Account of the player who got the money. See [account.id](account#id).
 
 ### receiver\_name
 
-`field-no-description|6`
+Name of the character who got the money.
 
 ### money
 
-`field-no-description|7`
+The amount of money in copper.
 
 ### topic
 
-`field-no-description|8`
+Details of the transfer, for example the mail subject, the auction or the guild bank.
 
 ### date
 
-`field-no-description|9`
+The date and time of the transfer.
 
 ### type
 

@@ -26,24 +26,24 @@
 
 ### time
 
-`field-no-description|1`
+The date and time the boss was killed.
 
 ### map
 
-`field-no-description|2`
+The map of the encounter. See [Map.dbc](map).
 
 ### difficulty
 
-`field-no-description|3`
+The difficulty of the map.
 
 ### creditType
 
-`field-no-description|4`
+0 if the encounter was credited by killing a creature, 1 if it was credited by a spell.
 
 ### creditEntry
 
-`field-no-description|5`
+The creature entry or spell ID that credited the encounter.
 
 ### playersInfo
 
-`field-no-description|6`
+One line per player in the map, with the name, GUID, account, IP, guild, position and the auras on the player as `spell(effectMask)`.

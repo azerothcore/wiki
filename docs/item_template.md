@@ -1120,7 +1120,7 @@ If set to -1, the item can't be disenchanted.
 
 ### ArmorDamageModifier
 
-`field-no-description|76`
+Part of the item's [armor](#armor) that counts as bonus armor. It is taken off the base armor and added back as bonus armor, so effects that increase the armor from items only affect the rest.
 
 ### duration
 

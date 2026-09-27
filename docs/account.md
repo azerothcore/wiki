@@ -4,7 +4,7 @@
 
 **The \`account\` table**
 
-`table-no-description`
+Holds the accounts that can log in to the server.
 
 **Table Structure**
 

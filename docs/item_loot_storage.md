@@ -40,15 +40,15 @@
 
 ### containerGUID
 
-`field-no-description|1`
+GUID of the container item the loot is in, for example a clam or a lockbox. See [item\_instance.guid](item_instance#guid).
 
 ### itemid
 
-`field-no-description|2`
+The item entry. See [item\_template.entry](item_template#entry).
 
 ### count
 
-`field-no-description|3`
+Number of items.
 
 ### item_index
 
@@ -56,36 +56,36 @@ Index used to distinguish multiple stored stacks of the same item within the sam
 
 ### randomPropertyId
 
-`field-no-description|4`
+The random property of the item. See [item\_instance.randomPropertyId](item_instance#randompropertyid).
 
 ### randomSuffix
 
-`field-no-description|5`
+The random suffix factor of the item.
 
 ### follow\_loot\_rules
 
-`field-no-description|6`
+1 if the item follows the group loot rules.
 
 ### freeforall
 
-`field-no-description|7`
+1 if every player can loot their own copy of the item.
 
 ### is\_blocked
 
-`field-no-description|8`
+1 if the item is blocked while the group rolls for it.
 
 ### is\_counted
 
-`field-no-description|9`
+1 if the item has been counted for the loot.
 
 ### is\_underthreshold
 
-`field-no-description|10`
+1 if the item quality is below the group loot threshold.
 
 ### needs\_quest
 
-`field-no-description|11`
+1 if the item is a quest item.
 
 ### conditionLootId
 
-`field-no-description|12`
+The SourceGroup of the [conditions](conditions) of the item, 0 if the item has no conditions.

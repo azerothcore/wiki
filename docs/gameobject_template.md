@@ -120,7 +120,7 @@ Shows unique text in the object's casting bar when the object is used. `WDB-fiel
 
 ### unk1
 
-`field-no-description|7`
+A string sent to the client with the gameobject data. Its use is not known.
 
 ### size
 

@@ -4,7 +4,7 @@
 
 **The \`spell\_pet\_auras\` table**
 
-`table-no-description`
+Auras that a spell of the owner applies to their pet, for example talents that improve the pet.
 
 **Table Structure**
 
@@ -24,16 +24,16 @@
 
 ### spell
 
-`field-no-description|1`
+The spell of the owner. It must have a dummy effect or a dummy aura.
 
 ### effectId
 
-`field-no-description|2`
+The effect of the spell that applies the pet aura.
 
 ### pet
 
-`field-no-description|3`
+Entry of the pet that gets the aura. 0 for all pets. See [creature\_template.entry](creature_template#entry).
 
 ### aura
 
-`field-no-description|4`
+The aura applied to the pet.

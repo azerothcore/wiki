@@ -62,11 +62,11 @@ GUID of the Player.
 
 ### ItemOrMoney
 
-`field-no-description|6`
+The item entry for item events, or the amount of money in copper for money events.
 
 ### ItemStackCount
 
-`field-no-description|7`
+The number of items for item events.
 
 ### DestTabId
 

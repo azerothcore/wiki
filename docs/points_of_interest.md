@@ -4,7 +4,7 @@
 
 **The \`points\_of\_interest\` table**
 
-`table-no-description`
+Points of interest that gossip options can mark on the player's minimap, for example when a city guard gives directions. See [gossip\_menu\_option.ActionPoiID](gossip_menu_option#actionpoiid).
 
 **Table Structure**
 
@@ -30,15 +30,15 @@
 
 ### ID
 
-`field-no-description|1`
+The unique ID of the point of interest.
 
 ### PositionX
 
-`field-no-description|2`
+X position of the point on the map.
 
 ### PositionY
 
-`field-no-description|3`
+Y position of the point on the map.
 
 ### icon
 
@@ -88,11 +88,11 @@
 
 ### Flags
 
-`field-no-description|5`
+Sent to the client with the point. Its exact effect is not known, most points use 99.
 
 ### Importance
 
-`field-no-description|6`
+Sent to the client with the point. Its exact effect is not known.
 
 ### Name
 

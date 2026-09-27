@@ -91,11 +91,11 @@ This field controls what spells' family flags can proc the triggered spell.
 
 ### SpellFamilyMask1
 
-`field-no-description|5`
+Second 32 bits of the spell family mask. See [SpellFamilyMask0](#spellfamilymask0).
 
 ### SpellFamilyMask2
 
-`field-no-description|6`
+Third 32 bits of the spell family mask. See [SpellFamilyMask0](#spellfamilymask0).
 
 ### ProcFlags
 

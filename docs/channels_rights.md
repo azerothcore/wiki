@@ -26,24 +26,34 @@
 
 ### name
 
-`field-no-description|1`
+Name of the channel the rights apply to.
 
 ### flags
 
-`field-no-description|2`
+| Flag | Name                               | Description                                          |
+| ---- | ---------------------------------- | ---------------------------------------------------- |
+| 1    | CHANNEL_RIGHT_FORCE_NO_ANNOUNCEMENTS | Join and leave announcements are turned off.        |
+| 2    | CHANNEL_RIGHT_FORCE_ANNOUNCEMENTS  | Join and leave announcements are turned on.          |
+| 4    | CHANNEL_RIGHT_NO_OWNERSHIP         | The channel has no owner.                            |
+| 8    | CHANNEL_RIGHT_CANT_SPEAK           | Only moderators can speak.                           |
+| 16   | CHANNEL_RIGHT_CANT_BAN             | Nobody can be banned from the channel.               |
+| 32   | CHANNEL_RIGHT_CANT_KICK            | Nobody can be kicked from the channel.               |
+| 64   | CHANNEL_RIGHT_CANT_MUTE            | Nobody can be muted in the channel.                  |
+| 128  | CHANNEL_RIGHT_CANT_CHANGE_PASSWORD | The password can not be changed.                     |
+| 256  | CHANNEL_RIGHT_DONT_PRESERVE        | The channel is not saved to the database.            |
 
 ### speakdelay
 
-`field-no-description|3`
+Loaded by the core, but not used.
 
 ### joinmessage
 
-`field-no-description|4`
+Message sent to a player when they join the channel.
 
 ### delaymessage
 
-`field-no-description|5`
+Loaded by the core, but not used.
 
 ### moderators
 
-`field-no-description|6`
+Account IDs, separated by spaces, that are always moderators of the channel.

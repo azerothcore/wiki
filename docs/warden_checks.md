@@ -27,28 +27,38 @@ Unique ID, automatically incremented by 1
 
 ### type
 
-`field-no-description|2`
+| Value | Check          | Description                                          |
+| ----- | -------------- | ---------------------------------------------------- |
+| 87    | TIMING_CHECK   | Checks that the tick count function is not detoured. |
+| 113   | DRIVER_CHECK   | Checks that a driver is not loaded.                  |
+| 126   | PROC_CHECK     | Checks that a function is not detoured.              |
+| 139   | LUA_EVAL_CHECK | Runs a Lua check in the client.                      |
+| 152   | MPQ_CHECK      | Checks that an MPQ file is not modified.             |
+| 178   | PAGE_CHECK_A   | Scans all memory pages for a hash.                   |
+| 191   | PAGE_CHECK_B   | Scans the memory pages of modules for a hash.        |
+| 217   | MODULE_CHECK   | Checks that a module is not injected.                |
+| 243   | MEM_CHECK      | Checks that a piece of memory is not modified.       |
 
 ### data
 
-`field-no-description|3`
+Data for the check as a hex string, for example the seed and hash of a page or module check.
 
 ### str
 
-`field-no-description|4`
+String for the check, for example the module, file or driver name, or the Lua code.
 
 ### address
 
-`field-no-description|5`
+Memory address the check reads from.
 
 ### length
 
-`field-no-description|6`
+Number of bytes the check reads.
 
 ### result
 
-`field-no-description|7`
+The expected result as a hex string. The check fails if the client returns something else.
 
 ### comment
 
-`field-no-description|8` 
+A description of the check.

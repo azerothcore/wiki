@@ -32,36 +32,47 @@
 
 ### id
 
-`field-no-description|1`
+The unique ID of the event.
 
 ### creator
 
-`field-no-description|2`
+GUID of the character that created the event. See [characters.guid](characters#guid).
 
 ### title
 
-`field-no-description|3`
+The title of the event.
 
 ### description
 
-`field-no-description|4`
+The description of the event.
 
 ### type
 
-`field-no-description|5`
+| Value | Type    |
+| ----- | ------- |
+| 0     | Raid    |
+| 1     | Dungeon |
+| 2     | PvP     |
+| 3     | Meeting |
+| 4     | Other   |
 
 ### dungeon
 
-`field-no-description|6`
+ID from LFGDungeons.dbc of the dungeon or raid the event is for. -1 if none.
 
 ### eventtime
 
-`field-no-description|7`
+The time the event starts, in Unix time.
 
 ### flags
 
-`field-no-description|8`
+| Flag  | Name                          | Description                                           |
+| ----- | ----------------------------- | ----------------------------------------------------- |
+| 1     | CALENDAR_FLAG_ALL_ALLOWED     |                                                       |
+| 16    | CALENDAR_FLAG_INVITES_LOCKED  | Invites can not be changed.                           |
+| 64    | CALENDAR_FLAG_WITHOUT_INVITES | Guild announcement without invites.                   |
+| 1024  | CALENDAR_FLAG_GUILD_EVENT     | Guild event, all members of the guild can sign up.    |
 
 ### time2
 
-`field-no-description|9`
+The start time in the time zone of the creator, in Unix time.

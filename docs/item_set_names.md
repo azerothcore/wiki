@@ -4,7 +4,7 @@
 
 **The \`item_set_names\` table**
 
-`table-no-description`
+Names of the items that are part of an item set. The server sends them to the client, which shows them in the set list of the tooltip, also for set pieces the player has never seen.
 
 **Table Structure**
 
