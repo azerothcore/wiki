@@ -162,17 +162,17 @@ For fields in the database where we work with flags, it is always preferred that
 Wrong:
 
 ```sql
-UPDATE `creature_template` SET `mechanic_immune_mask` = 617299803 WHERE `entry` = 7727;
+UPDATE `creature_template` SET `unit_flags` = 770 WHERE `entry` = 7727;
 ```
 
 Correct:
 
 ```sql
 -- Adding flags
-UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`|64|256|1024 WHERE `entry` = 7727;
+UPDATE `creature_template` SET `unit_flags`=`unit_flags`|2|256|512 WHERE `entry` = 7727;
 
 -- Removing flags
-UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`&~(64|256|1024) WHERE `entry` = 7727;
+UPDATE `creature_template` SET `unit_flags`=`unit_flags`&~(2|256|512) WHERE `entry` = 7727;
 ```
 
 ## Tables and Columns
