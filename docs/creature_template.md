@@ -546,7 +546,9 @@ BaseVariance is either [BaseVariance](#basevariance) or [RangeVariance](#rangeva
 
 #### ExperienceModifier
 
-TODO!
+Used to modify the experience a player gets for killing the creature. The base experience is multiplied by this value, for example 2 gives double experience and 0 gives none.
+
+Elite creatures already give double experience before this modifier is applied. Use the `CREATURE_FLAG_EXTRA_NO_XP` flag in [flags\_extra](#flagsextra) to make a creature give no experience at all.
 
 #### RacialLeader
 
