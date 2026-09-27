@@ -35,8 +35,8 @@ This table holds the individual object data on each spawned game object in the w
 [1]: #guid
 [2]: #id
 [3]: #map
-[4]: #zoneId
-[5]: #areaId
+[4]: #zoneid
+[5]: #areaid
 [6]: #spawnmask
 [7]: #phasemask
 [8]: #positionx
@@ -117,11 +117,30 @@ The orientation. (North = 0, South = 3.14159)
 
 ### rotation0
 
+The X value of the quaternion that sets the rotation of the gameobject. rotation0, rotation1, rotation2 and rotation3 together are the X, Y, Z and W values of the quaternion.
+
+Each value must be between -1 and 1, and together they must form a unit quaternion (rotation0² + rotation1² + rotation2² + rotation3² = 1). If they do not, the core ignores them and only rotates the gameobject by its [orientation](#orientation).
+
+For a gameobject that is only turned around the Z axis, which is most of them:
+
+- rotation0 = 0
+- rotation1 = 0
+- rotation2 = sin([orientation](#orientation) / 2)
+- rotation3 = cos([orientation](#orientation) / 2)
+
+The `.gobject turn` command sets the rotation in game.
+
 ### rotation1
+
+The Y value of the rotation quaternion. See [rotation0](#rotation0).
 
 ### rotation2
 
+The Z value of the rotation quaternion. See [rotation0](#rotation0).
+
 ### rotation3
+
+The W value of the rotation quaternion. See [rotation0](#rotation0).
 
 ### spawntimesecs
 
