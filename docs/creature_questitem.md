@@ -7,7 +7,7 @@
 Holds NPC quest ender relations on which NPCs finishes which quests.
 | Field                           | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureEntry](#creatureEntry) | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [CreatureEntry](#creatureentry) | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Idx](#idx)                     | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [ItemId](#itemid)               | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [VerifiedBuild](#verifiedbuild) | INT  |            |     | YES  | NULL    |       |         |

@@ -37,8 +37,8 @@ Contains individual creature spawn data for each individual spawn of each indivi
 [1]: #guid
 [2]: #id
 [5]: #map
-[6]: #zoneId
-[7]: #areaId
+[6]: #zoneid
+[7]: #areaid
 [8]: #spawnmask
 [9]: #phasemask
 [10]: #equipmentid

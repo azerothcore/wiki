@@ -39,7 +39,7 @@
 [11]: #bytes2
 [12]: #guildid
 [13]: #flags
-[14]: #dynFlags
+[14]: #dynflags
 [15]: #time
 [16]: #corpsetype
 [17]: #instanceid

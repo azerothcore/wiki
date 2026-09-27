@@ -16,7 +16,7 @@ Note: Entries in this table will be deleted automatically when the referenced en
 | [mailId][2] | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 
 [1]: #guid
-[2]: #mailId
+[2]: #mailid
 
 **Description of the fields**
 

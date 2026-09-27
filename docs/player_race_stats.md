@@ -17,12 +17,12 @@ This table holds information on modifiers for stat values applied to characters.
 | [Intellect][5] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [Spirit][6]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
-[1]: #Race
-[2]: #Strength
-[3]: #Agility
-[4]: #Stamina
-[5]: #Intellect
-[6]: #Spirit
+[1]: #race
+[2]: #strength
+[3]: #agility
+[4]: #stamina
+[5]: #intellect
+[6]: #spirit
 
 **Description of the fields**
 

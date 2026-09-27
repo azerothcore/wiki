@@ -12,7 +12,7 @@
 | [lastEventId][2] | INT  | UNSIGNED   |     | NO   | 0       |       |          |
 
 [1]: #guid
-[2]: #lastEventId
+[2]: #lasteventid
 
 **Description of the fields**
 

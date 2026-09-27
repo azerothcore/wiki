@@ -24,7 +24,7 @@ Holds information on the game event seasonal quest relations to allow for resett
 
 ### event
 
-[game_event.eventEntry](game_event#eventEntry)
+[game_event.eventEntry](game_event#evententry)
 
 <details>
 

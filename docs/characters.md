@@ -136,13 +136,13 @@ This table holds vital static information for each character. It is used to crea
 [43]: #zone
 [44]: #deathexpiretime
 [45]: #taxipath
-[46]: #arenaPoints
+[46]: #arenapoints
 [47]: #totalhonorpoints
 [48]: #todayhonorpoints
 [49]: #yesterdayhonorpoints
 [50]: #totalkills
 [51]: #todaykills
-[52]: #yesterdayKills
+[52]: #yesterdaykills
 [53]: #chosentitle
 [54]: #knowncurrencies
 [55]: #watchedfaction
@@ -161,7 +161,7 @@ This table holds vital static information for each character. It is used to crea
 [68]: #exploredzones
 [69]: #equipmentcache
 [70]: #ammoid
-[71]: #knownTitles
+[71]: #knowntitles
 [72]: #actionbars
 [73]: #grantablelevels
 [74]: #order
