@@ -4,7 +4,7 @@
 
 **The \`spell\_target\_position\` table**
 
-This table holds coordinate information on where the player should be teleported to when a spell with target type: TARGET\_DST\_DB(17).
+This table holds coordinate information on where the player should be teleported to when a spell with target type: TARGET\_DEST\_DB(17).
 
 **Table Structure**
 

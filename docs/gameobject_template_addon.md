@@ -53,4 +53,4 @@ Maximum money, in copper, that the gameobject can drop when accessed / used.
 
 GameObjectArtKit.dbc ID
 
-Updates display if object is activated by SPELL_EFFCT_ACTIVATE_OBJECT with MiscValue 19 - 22.
+Updates display if object is activated by SPELL_EFFECT_ACTIVATE_OBJECT with MiscValue 19 - 22.
