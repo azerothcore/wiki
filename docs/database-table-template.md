@@ -36,15 +36,11 @@ What the table is for and how the core uses it.
 
 **Table Structure**
 
-| Field          | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]        | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Name][2]      | VARCHAR(50) |            |     | NO   |         |       |         |
-| [some_flag][3] | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #id
-[2]: #name
-[3]: #someflag
+| Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][#id]              | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Name][#name]          | VARCHAR(50) |            |     | NO   |         |       |         |
+| [some_flag][#someflag] | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 **Description of the fields**
 
@@ -60,11 +56,11 @@ What the name is used for.
 
 What the flag controls.
 
-| Value | Name       | Description          |
-| ----- | ---------- | -------------------- |
-| 0     | FLAG_NONE  | No effect.           |
-| 1     | FLAG_ONE   | What this flag does. |
-| 2     | FLAG_TWO   | What this flag does. |
+| Value | Name      | Description          |
+| ----- | --------- | -------------------- |
+| 0     | FLAG_NONE | No effect.           |
+| 1     | FLAG_ONE  | What this flag does. |
+| 2     | FLAG_TWO  | What this flag does. |
 ```
 
 After adding the page, add the table to the list on [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world).
