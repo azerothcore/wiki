@@ -24,9 +24,9 @@ This table provides data for spell linking system, telling it which spells trigg
 
 ### spell\_trigger
 
-The spell, which when cast, will trigger the spell listed in [spell\_effect](#spell_effect)
+The spell, which when cast, will trigger the spell listed in [spell\_effect](#spelleffect)
 
-### spell\_ effect
+### spell\_effect
 
 The spell that you want to be triggered. How this spell acts is determined by the [type](#type) field.
 

@@ -46,11 +46,11 @@ This DBC contains information on all of the base factions. These factions are un
 
 ### Content
 
-When referring to a creature's [faction](creature_template#faction) we use the [ID](#id) value.
+When referring to a creature's [faction](creature_template#faction) we use the ID value.
 
 When referring to a reputation gain (example: `.modify reputation`) we use [Faction](#faction) value.
 
-| [ID](#id) | [Faction](#faction) |            Faction Name             |   Reputation Index    |
+| ID | [Faction](#faction) |            Faction Name             |   Reputation Index    |
 | :-------: | :-----------------: | :---------------------------------: | :-------------------: |
 |     1     |          1          |            PLAYER, Human            | Can't have reputation |
 |     2     |          2          |             PLAYER, Orc             | Can't have reputation |

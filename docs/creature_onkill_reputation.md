@@ -22,14 +22,14 @@ This table controls the reputation given by creatures when killed by other playe
 | [TeamDependent][10]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
 
 [1]: #creatureid
-[2]: #rewonkillrepfaction1
-[3]: #rewonkillrepfaction2
-[4]: #maxstanding1
-[5]: #isteamaward1
-[6]: #rewonkillrepvalue1
-[7]: #maxstanding2
-[8]: #isteamaward2
-[9]: #rewonkillrepvalue2
+[2]: #rewonkillrepfaction
+[3]: #rewonkillrepfaction
+[4]: #maxstanding
+[5]: #isteamaward
+[6]: #rewonkillrepvalue
+[7]: #maxstanding
+[8]: #isteamaward
+[9]: #rewonkillrepvalue
 [10]: #teamdependent
 
 **Description of the fields**

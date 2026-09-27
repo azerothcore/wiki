@@ -204,35 +204,35 @@ Presumed reference ID for the Language Mask.
 
 ### SetSpellID_1
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_1](#itemid1).
+[Entry](spell) of the Spell that's used on [ItemID_1](#itemid1).
 
 ### SetSpellID_2
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_2](#itemid2).
+[Entry](spell) of the Spell that's used on [ItemID_2](#itemid2).
 
 ### SetSpellID_3
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_3](#itemid3).
+[Entry](spell) of the Spell that's used on [ItemID_3](#itemid3).
 
 ### SetSpellID_4
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_4](#itemid4).
+[Entry](spell) of the Spell that's used on [ItemID_4](#itemid4).
 
 ### SetSpellID_5
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_5](#itemid5).
+[Entry](spell) of the Spell that's used on [ItemID_5](#itemid5).
 
 ### SetSpellID_6
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_6](#itemid6).
+[Entry](spell) of the Spell that's used on [ItemID_6](#itemid6).
 
 ### SetSpellID_7
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_7](#itemid7).
+[Entry](spell) of the Spell that's used on [ItemID_7](#itemid7).
 
 ### SetSpellID_8
 
-[Entry](spell#entry) of the Spell that's used on [ItemID_8](#itemid8).
+[Entry](spell) of the Spell that's used on [ItemID_8](#itemid8).
 
 ### SetThreshold_1
 
@@ -268,7 +268,7 @@ How many pieces of the Item Set you need referring to [SetSpellID_8](#setspellid
 
 ### RequiredSkill
 
-[ID](skillline#id) of the Skill that's required of the Item Set.
+[ID](skillline) of the Skill that's required of the Item Set.
 
 ### RequiredSkillRank
 

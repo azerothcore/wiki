@@ -17,7 +17,7 @@ Contains all gameobjects instances that participate to any game event.
 
 ### eventEntry
 
-Refers to: [game_event.entry](game_event#entry).
+Refers to: [game_event.entry](game_event#evententry).
 
 Using a **positve** number will **add** the object to the event when is running.
 

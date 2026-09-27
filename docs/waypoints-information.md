@@ -34,13 +34,13 @@ redirect_from: "/Waypoints-Information"
     - ```setid``` [action](scripts#id): Set a new action id.
     - ```delay``` [delay](scripts#delay): Set a specific delay before the script activates.
     - ```command``` [command](scripts#command): Set the command for this script.
-    - ```datalong``` [datalong](scripts#datalong): Set the datalong for this script.
-    - ```datalong2``` [datalong2](scripts#datalong2): Set the datalong2 for this script.
-    - ```dataint``` [dataint](scripts#dataint): Set the dataint for this script.
-    - ```posx``` [posx](scripts#posx): Set the posx for this script.
-    - ```posy``` [posy](scripts#posy): Set the posy for this script.
-    - ```posz``` [posz](scripts#posz): Set the posz for this script.
-    - ```orientation``` [orientation](scripts#orientation): Set the orientation for this script.
+    - ```datalong``` [datalong](scripts#otherfields): Set the datalong for this script.
+    - ```datalong2``` [datalong2](scripts#otherfields): Set the datalong2 for this script.
+    - ```dataint``` [dataint](scripts#otherfields): Set the dataint for this script.
+    - ```posx``` [posx](scripts#otherfields): Set the posx for this script.
+    - ```posy``` [posy](scripts#otherfields): Set the posy for this script.
+    - ```posz``` [posz](scripts#otherfields): Set the posz for this script.
+    - ```orientation``` [orientation](scripts#otherfields): Set the orientation for this script.
 
 ### Example for path creation using GM '.wp' commands
 

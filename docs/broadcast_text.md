@@ -17,7 +17,7 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 | Field                                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ID](#id)                                | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [LanguageID](#broadcast_text-Language)   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [LanguageID](#languageid)   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [MaleText](#maletext)                    | text     | SIGNED     |     | YES  | NULL    |       |         |
 | [FemaleText](#femaletext)                | text     | SIGNED     |     | YES  | NULL    |       |         |
 | EmoteID1                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |

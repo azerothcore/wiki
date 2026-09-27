@@ -29,8 +29,8 @@ This table is used to apply a specific spell aura to the player within an area i
 [6]: #racemask
 [7]: #gender
 [8]: #autocast
-[9]: #quest_start_status
-[10]: #quest_end_status
+[9]: #queststartstatus-questendstatus
+[10]: #queststartstatus-questendstatus
 
 **Description of the fields**
 

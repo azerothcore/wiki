@@ -275,7 +275,7 @@ SPELL_EFFECT_HEAL_MECHANICAL = 75
 SPELL_EFFECT_SUMMON_OBJECT_WILD = 76
 - EffectMiscValueA: [gameobject_template ID](gameobject_template)
 
-SPELL_EFFECT_SCRIPT_EFFECT = 77 Assigned to a [Core Script](/wiki/core-scripts#spell-scripts) in the DB.
+SPELL_EFFECT_SCRIPT_EFFECT = 77 Assigned to a [Core Script](core-scripts#spell-scripts) in the DB.
 
 SPELL_EFFECT_ATTACK = 78
 

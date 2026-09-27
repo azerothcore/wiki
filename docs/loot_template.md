@@ -28,7 +28,7 @@
 | creature_loot_template    | [creature_template.lootid](creature_template#lootid)                 | Usually the same as [creature_template.entry](creature_template#entry)                    |
 | disenchant_loot_template  | [item_template.DisenchantID](item_template#disenchantid)             |                                                                                           |
 | fishing_loot_template     | area id                                                              |                                                                                           |
-| gameobject_loot_template  | [gameobject_template.data1](gameobject_template#data023)             | Need to have gamobject type GAMEOBJECT_TYPE_CHEST (3) or GAMEOBJECT_TYPE_FISHINGHOLE (25) |
+| gameobject_loot_template  | [gameobject_template.data1](gameobject_template#data0-23)             | Need to have gamobject type GAMEOBJECT_TYPE_CHEST (3) or GAMEOBJECT_TYPE_FISHINGHOLE (25) |
 | item_loot_template        | [item_template.entry](item_template#entry)                           |                                                                                           |
 | mail_loot_template        | mail template id                                                     |                                                                                           |
 | milling_loot_template     | [item_template.entry](item_template#entry)                           |                                                                                           |

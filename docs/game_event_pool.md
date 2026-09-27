@@ -17,7 +17,7 @@ This table determines if a given pool is active for a given game event.
 
 ### eventEntry
 
-Refers to: [game_event.entry](game_event#entry).
+Refers to: [game_event.entry](game_event#evententry).
 
 Using a **positve** number will **add** the pool to the event when is running.
 

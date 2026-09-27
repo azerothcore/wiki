@@ -10,7 +10,7 @@
 | ---------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ---------- |
 | [id](#id)              | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Identifier |
 | [type](#type)          | LONGTEXT | SIGNED     |     | NO   |         |                |            |
-| [content](#conent)     | LONGTEXT | SIGNED     |     | NO   |         |                |            | 
+| [content](#content)     | LONGTEXT | SIGNED     |     | NO   |         |                |            | 
 | [State](#state)        | TINYINT  | SIGNED     |     | NO   | 1       |                |            | 
 | [Assignee](#assignee)  | VARCHAR(255) |        |     | YES  | NULL    |                |            | 
 | [Comment](#comment)    | LONGTEXT |            |     | YES  | NULL    |                |            | 
