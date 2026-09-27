@@ -38,9 +38,9 @@ What the table is for and how the core uses it.
 
 | Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][#id]              | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Name][#name]          | VARCHAR(50) |            |     | NO   |         |       |         |
-| [some_flag][#someflag] | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [ID](#id)              | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Name](#name)          | VARCHAR(50) |            |     | NO   |         |       |         |
+| [some_flag](#someflag) | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 **Description of the fields**
 
