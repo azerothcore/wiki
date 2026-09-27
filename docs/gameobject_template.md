@@ -70,9 +70,9 @@ Id of the gameobject template. `WDB-fields`
 | GAMEOBJECT_TYPE_MO_TRANSPORT          | 15    |
 | GAMEOBJECT_TYPE_DUEL_ARBITER          | 16    |
 | GAMEOBJECT_TYPE_FISHINGNODE           | 17    |
-| GAMEOBJECT_TYPE_RITUAL                | 18    |
+| GAMEOBJECT_TYPE_SUMMONING_RITUAL      | 18    |
 | GAMEOBJECT_TYPE_MAILBOX               | 19    |
-| GAMEOBJECT_TYPE_AUCTIONHOUSE          | 20    |
+| GAMEOBJECT_TYPE_DO_NOT_USE            | 20    |
 | GAMEOBJECT_TYPE_GUARDPOST             | 21    |
 | GAMEOBJECT_TYPE_SPELLCASTER           | 22    |
 | GAMEOBJECT_TYPE_MEETINGSTONE          | 23    |
@@ -80,7 +80,7 @@ Id of the gameobject template. `WDB-fields`
 | GAMEOBJECT_TYPE_FISHINGHOLE           | 25    |
 | GAMEOBJECT_TYPE_FLAGDROP              | 26    |
 | GAMEOBJECT_TYPE_MINI_GAME             | 27    |
-| GAMEOBJECT_TYPE_LOTTERY_KIOSK         | 28    |
+| GAMEOBJECT_TYPE_DO_NOT_USE_2          | 28    |
 | GAMEOBJECT_TYPE_CAPTURE_POINT         | 29    |
 | GAMEOBJECT_TYPE_AURA_GENERATOR        | 30    |
 | GAMEOBJECT_TYPE_DUNGEON_DIFFICULTY    | 31    |
@@ -343,7 +343,7 @@ Object type not used
 
 No data used, all are always 0
 
-**GAMEOBJECT\_TYPE\_MOTRANSPORT = 15**
+**GAMEOBJECT\_TYPE\_MO\_TRANSPORT = 15**
 
 -   data0: taxiPathID (Id from [TaxiPath.dbc](https://wowdev.wiki/DB/TaxiPath))
 -   data1: moveSpeed
@@ -365,7 +365,7 @@ Only one Gameobject with this type (21680) and no data data
 
 Only one Gameobject with this type (35591) and no data data
 
-**GAMEOBJECT\_TYPE\_RITUAL = 18**
+**GAMEOBJECT\_TYPE\_SUMMONING\_RITUAL = 18**
 
 -   data0: casters?
 -   data1: spell (Spell Id from [Spell.dbc](spell))
@@ -381,7 +381,9 @@ Only one Gameobject with this type (35591) and no data data
 
 No data used, all are always 0
 
-**GAMEOBJECT\_TYPE\_AUCTIONHOUSE = 20**
+**GAMEOBJECT\_TYPE\_DO\_NOT\_USE = 20**
+
+An auction house type in the client, not used by the core.
 
 -   data0: actionHouseID (From [AuctionHouse.dbc](auctionhouse) ?)
 
@@ -444,17 +446,17 @@ No data used, all are always 0
 -   data8: InfiniteAOI
 -   data9: cooldown
 
-**GAMEOBJECT\_TYPE\_MINIGAME = 27**
+**GAMEOBJECT\_TYPE\_MINI\_GAME = 27**
 
 Object type not used. Reused in core for CUSTOM\_TELEPORT
 
 -   data0: [areatrigger\_teleport.id](http://www.azerothcore.org/wiki/areatrigger_teleport#id)
 
-**GAMEOBJECT\_TYPE\_LOTTERYKIOSK = 28**
+**GAMEOBJECT\_TYPE\_DO\_NOT\_USE\_2 = 28**
 
 Object type not used
 
-**GAMEOBJECT\_TYPE\_CAPTUREPOINT = 29**
+**GAMEOBJECT\_TYPE\_CAPTURE\_POINT = 29**
 
 -   data0: radius (Distance)
 -   data1: spell (Unknown ID, not a spell id in dbc file, maybe server only side spell)
@@ -481,7 +483,7 @@ Object type not used
 -   data22: killbonustime
 -   data23: speedWorldState1
 
-**GAMEOBJECT\_TYPE\_AURAGENERATOR = 30**
+**GAMEOBJECT\_TYPE\_AURA\_GENERATOR = 30**
 
 -   data0: startOpen (Boolean flag)
 -   data1: radius (Distance)
@@ -491,7 +493,7 @@ Object type not used
 -   data5: conditionID2
 -   data6: serverOnly
 
-**GAMEOBJECT\_TYPE\_DUNGEONDIFFICULTY = 31**
+**GAMEOBJECT\_TYPE\_DUNGEON\_DIFFICULTY = 31**
 
 -   data0: mapID (From [Map.dbc](map))
 -   data1: difficulty
