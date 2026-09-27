@@ -14,7 +14,7 @@ Note: Entries in this table will be deleted automatically when the referenced en
 | ------------------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
 | [id](#id)                 | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
 | [templateID](#templateid) | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [faction](#moneyh)        | ENUM |            |     | NO   |         |                |         |
+| [faction](#faction)       | ENUM |            |     | NO   |         |                |         |
 | [item](#item)             | INT  | UNSIGNED   |     | NO   |         |                |         |
 | [itemCount](#itemcount)   | INT  | UNSIGNED   |     | NO   |         |                |         |
 
