@@ -15,7 +15,7 @@ See [wiki standards](wiki-standards#archived-pages) for how to archive a page.
 | [Importing data to the spell_dbc table](importing-spell-dbc) | 2026-07-26 | Marked as not in use, kept for reference |
 | [Changelog](changelog) | 2026-07-26 | Log of big API changes, no longer kept up to date. The newest entry, `6.0.0-dev.1`, points at a commit from February 2022 |
 | [Database Manual Setup](database-manual-setup) | 2026-07-26 | Built around the `db_assembler` script, removed from the core in 2023. Use the [Database Installation](database-installation) guide |
-| [Digital Ocean droplet video tutorial](digital-ocean-video-tutorial) | 2026-07-26 | Targets Debian 9, its install steps no longer work. Use the [Debian 12 Install Guide](debian12-install-guide) |
+| [Digital Ocean droplet video tutorial](digital-ocean-video-tutorial) | 2026-07-26 | Targets Debian 9, its install steps no longer work. Use the [Debian 13 Install Guide](debian13-install-guide) |
 | [Environment Variable](environment-variable) | 2026-07-26 | Windows MySQL PATH walkthrough, superseded by the [Installation Guide](installation) |
 | [How to use changelog](how-to-use-changelog) | 2026-07-26 | Changelogs are no longer used, the last entry dates back to 2023 |
 | [How to find TrinityCore commits of specific code addition](how-to-find-trinitycore-commits-of-specific-code-addition) | 2026-07-26 | TrinityCore import workflow no longer used |
