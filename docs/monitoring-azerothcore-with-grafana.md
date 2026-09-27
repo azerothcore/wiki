@@ -62,7 +62,7 @@ Database: worldserver User: grafana Password: grafana
 
 1. Set `Metric.Enable` = 1
 
-1. Edit `Metric.ConnectionInfo` with connection details (e.g "127.0.0.1;8086;worldserver")
+1. Set `Metric.InfluxDB.Connection` to the connection details of InfluxDB (e.g "127.0.0.1;8086;worldserver"). The dashboards from `/apps/grafana` only work with InfluxDB v1, so leave `Metric.InfluxDB.v2` = 0
 
 1. Start worldserver, the dashboard should now start receiving values.
 
