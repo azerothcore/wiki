@@ -8,15 +8,13 @@ The creature\_addon and creature\_template\_addon tables define different things
 
 NOTE: A creature\_addon record will override a creature\_template\_addon record should they overlap on the same creature.
 
-NOTICE: The data for this table is largely incomplete and is mostly just a regurgitation of what the client receives from the server. This article is a WIP as to what all the possible values are.
-
 **Table Structure**
 
 | Field                        | Type          | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------- | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid/entry][1]              | INT/MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [guid/entry][1]              | INT           | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [path_id][2]                 | INT           | UNSIGNED   |     | NO   |         |       |         |
-| [mount][3]                   | MEDIUMINT     | UNSIGNED   |     | NO   |         |       |         |
+| [mount][3]                   | INT           | UNSIGNED   |     | NO   | 0       |       |         |
 | [bytes1][4]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
 | [bytes2][5]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
 | [emote][6]                   | INT           | UNSIGNED   |     | NO   |         |       |         |
@@ -29,7 +27,7 @@ NOTICE: The data for this table is largely incomplete and is mostly just a regur
 [4]: #bytes1
 [5]: #bytes2
 [6]: #emote
-[10]: #visibilityDistanceType
+[10]: #visibilitydistancetype
 [11]: #auras
 
 **Description of the fields**
@@ -66,31 +64,32 @@ Setting a single field is one shift, so an animation tier of Fly is `3 << 24` = 
 The tier only changes how the client animates the creature; walking, flying and hovering come from
 the movement flags, from [creature\_template\_movement](creature_template_movement) or from a script.
 
-List of known values and what their visual effects on the creature
+Stand states, used in byte 0:
 
-- 1 = Sitting
-- 2 = Sit chair
-- 3 = Sleep
-- 4 = Sit low chair
-- 5 = Sit medium chair
-- 6 = Sit high chair
-- 7 = Shows health bar as empty (combine with the state dead emote to make a creature look dead)
-- 8 = Makes the mob kneel
-- 9 = Submerges the creature below the ground
-- 54432 = Hover mode
-- 50331648 = Hover mode 2
+| Value | Stand state      | Notes                                                                                   |
+| ----- | ---------------- | --------------------------------------------------------------------------------------- |
+| 0     | Stand            |                                                                                         |
+| 1     | Sit              |                                                                                         |
+| 2     | Sit chair        |                                                                                         |
+| 3     | Sleep            |                                                                                         |
+| 4     | Sit low chair    |                                                                                         |
+| 5     | Sit medium chair |                                                                                         |
+| 6     | Sit high chair   |                                                                                         |
+| 7     | Dead             | Shows the creature as dead. Combine with the state dead [emote](#emote) to make it look dead. |
+| 8     | Kneel            |                                                                                         |
+| 9     | Submerged        | Submerges the creature below the ground.                                                |
 
 ### bytes2
 
-The value here overrides the value for the creature's unit field UNIT\_FIELD\_BYTES\_2.
+The value here overrides the value for the creature's unit field UNIT\_FIELD\_BYTES\_2. The core only uses the first byte, which sets how the creature holds its weapons. The other bytes are ignored.
 
-NOTE: //creatures always have melee weapon ready if any unless specified otherwise
+| Value | Sheath state         | Effect                                                         |
+| ----- | -------------------- | -------------------------------------------------------------- |
+| 0     | SHEATH\_STATE\_UNARMED | Weapons are not drawn, they are shown on the sides or back.  |
+| 1     | SHEATH\_STATE\_MELEE   | Melee weapons are drawn and held in the hands.                 |
+| 2     | SHEATH\_STATE\_RANGED  | Ranged weapon is drawn, melee weapons are shown on the sides.  |
 
-List of few known values and what their visual effects on the creature
-
-- 0 = STATE\_UNARMED (not prepared weapon, weapons on the sides/back)
-- 1 = STATE\_MELEE (prepared melee weapon in hands)
-- 2 = STATE\_RANGED (prepared ranged weapon in hands, melee weapons on the sides)
+If bytes2 is 0, the creature keeps its default, which is to have its melee weapons drawn.
 
 ### emote
 
@@ -102,16 +101,20 @@ List of often used emote IDs and what they do can be found [here](emotes).
 
 This field controls the visibility distance for creatures:
 
-- Normal = 0,  100.0f  // default visible distance, 100 yards on continents
-- Tiny = 1,  25.0f
-- Small = 2,  50.0f
-- Large = 3, 200.0f
-- Gigantic = 4, 400.0f
-- Infinite = 5, SIZE_OF_GRIDS // max distance for visible objects)
+| Value | Name     | Distance                            |
+| ----- | -------- | ----------------------------------- |
+| 0     | Normal   | 100 yards, the default on continents |
+| 1     | Tiny     | 25 yards                            |
+| 2     | Small    | 50 yards                            |
+| 3     | Large    | 200 yards                           |
+| 4     | Gigantic | 400 yards                           |
+| 5     | Infinite | 533 yards                           |
+
+With Normal, the creature uses the visibility distance of the map.
 
 ### auras
 
-This field controls any auras to be applied on the creature (both in effect and visually). To apply multiple auras, you can add more aura entries, separating each entry by a space. Remember that if a spell applies multiple auras.
+This field controls any auras to be applied on the creature (both in effect and visually). The value is a list of spell IDs separated by spaces. Spells that do not exist and duplicate spells are skipped, and an error is logged.
 
 List of useful aura entries (examples):
 
