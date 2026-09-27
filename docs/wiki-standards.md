@@ -28,6 +28,8 @@ ALL DATABASE TABLE FILES should be present in the correct DATABASE FILE.
 
 When adding/removing a table it should also be updated in `database-auth` `database-characters` `database-world`
 
+ALL DATABASE TABLE FILES should follow the [Database Table Template](database-table-template), and every column should have a description.
+
 ## LINKING WITHIN THE WIKI
 
 When linking to a page in the wiki we use relative links. (`[home](home#overview)`).
