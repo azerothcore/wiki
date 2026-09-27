@@ -270,25 +270,25 @@ A bitmask that represents what Player flags the player has. Each bit controls a 
 | 8        | 0x00000008 | PLAYER_FLAGS_GM               |                                                                                   |
 | 16       | 0x00000010 | PLAYER_FLAGS_GHOST            |                                                                                   |
 | 32       | 0x00000020 | PLAYER_FLAGS_RESTING          |                                                                                   |
-| 64       | 0x00000040 | PLAYER_FLAGS_UNK7             |                                                                                   |
-| 128      | 0x00000080 | PLAYER_FLAGS_UNK8             | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                             |
+| 64       | 0x00000040 | PLAYER_FLAGS_UNK6             |                                                                                   |
+| 128      | 0x00000080 | PLAYER_FLAGS_UNK7             | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                             |
 | 256      | 0x00000100 | PLAYER_FLAGS_CONTESTED_PVP    | Player has been involved in a PvP combat and will be attacked by contested guards |
 | 512      | 0x00000200 | PLAYER_FLAGS_IN_PVP           |                                                                                   |
 | 1024     | 0x00000400 | PLAYER_FLAGS_HIDE_HELM        |                                                                                   |
 | 2048     | 0x00000800 | PLAYER_FLAGS_HIDE_CLOAK       |                                                                                   |
-| 4096     | 0x00001000 | PLAYER_FLAGS_PLAYED_LONG_TIME | played long time                                                                  |
-| 8192     | 0x00002000 | PLAYER_FLAGS_TOO_LONG         | played too long time                                                              |
+| 4096     | 0x00001000 | PLAYER_FLAGS_PARTIAL_PLAY_TIME | played long time                                                                  |
+| 8192     | 0x00002000 | PLAYER_FLAGS_NO_PLAY_TIME     | played too long time                                                              |
 | 16384    | 0x00004000 | PLAYER_FLAGS_IS_OUT_OF_BOUNDS |                                                                                   |
 | 32768    | 0x00008000 | PLAYER_FLAGS_DEVELOPER        | prefix for something?                                                             |
-| 65536    | 0x00010000 | PLAYER_FLAGS_UNK17            | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                |
+| 65536    | 0x00010000 | PLAYER_FLAGS_UNK16            | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                |
 | 131072   | 0x00020000 | PLAYER_FLAGS_TAXI_BENCHMARK   | taxi benchmark mode (on/off) (2.0.1)                                              |
 | 262144   | 0x00040000 | PLAYER_FLAGS_PVP_TIMER        | 3.0.2, pvp timer active (after you disable pvp manually)                          |
-| 524288   | 0x00080000 | PLAYER_FLAGS_UNK20            |                                                                                   |
-| 1048576  | 0x00100000 | PLAYER_FLAGS_UNK21            |                                                                                   |
-| 2097152  | 0x00200000 | PLAYER_FLAGS_UNK22            |                                                                                   |
+| 524288   | 0x00080000 | PLAYER_FLAGS_UBER             |                                                                                   |
+| 1048576  | 0x00100000 | PLAYER_FLAGS_UNK20            |                                                                                   |
+| 2097152  | 0x00200000 | PLAYER_FLAGS_UNK21            |                                                                                   |
 | 4194304  | 0x00400000 | PLAYER_FLAGS_COMMENTATOR2     |                                                                                   |
 | 8388608  | 0x00800000 | PLAYER_ALLOW_ONLY_ABILITY     | used by bladestorm and killing spree                                              |
-| 16777216 | 0x01000000 | PLAYER_FLAGS_UNK25            | disabled all melee ability on tab include autoattack                              |
+| 16777216 | 0x01000000 | PLAYER_FLAGS_UNK24            | disabled all melee ability on tab include autoattack                              |
 | 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN       |                                                                                   |
 
 ### position\_x
@@ -393,13 +393,16 @@ These flags control certain player specific attributes, mostly GM features.
 | Flag |            | Name                           | Description                                         |
 | ---- | ---------- | ------------------------------ | --------------------------------------------------- |
 | 1    | 0x00000001 | PLAYER_EXTRA_GM_ON             | Defines GM state                                    |
-| 2    | 0x00000002 | PLAYER_EXTRA_GM_ACCEPT_TICKETS | NO LONGER USED Defines if tickets are accepted      |
 | 4    | 0x00000004 | PLAYER_EXTRA_ACCEPT_WHISPERS   | Defines if whispers are accepted                    |
 | 8    | 0x00000008 | PLAYER_EXTRA_TAXICHEAT         | Sets taxicheat                                      |
 | 16   | 0x00000010 | PLAYER_EXTRA_GM_INVISIBLE      | Defines GM visibility                               |
 | 32   | 0x00000020 | PLAYER_EXTRA_GM_CHAT           | Show GM badge in chat messages                      |
 | 64   | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marks if player already has 310% speed flying mount |
+| 128  | 0x00000080 | PLAYER_EXTRA_SPECTATOR_ON      | Marks if the player is an arena spectator           |
 | 256  | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Store PvP death status until corpse creating        |
+| 1024 | 0x00000400 | PLAYER_EXTRA_SHOW_DK_PET       | Shows the ghoul on the character select screen      |
+| 2048 | 0x00000800 | PLAYER_EXTRA_GM_SPECTATOR      | GM is spectating                                    |
+| 4096 | 0x00001000 | PLAYER_EXTRA_DECLINE_GROUP_INVITES | The player declines all group invites           |
 
 ### stable\_slots
 
