@@ -38,7 +38,7 @@ Algunos comandos requieren un nivel de seguridad más alto. Para concederlo nece
 | achievement add | 2 | `.achievement add $achievement` | Añade un achievement al jugador seleccionado. $achievement: puede ser el id del achievement o un enlace de achievement. |
 | achievement checkall | 3 | `.achievement checkall` | Comprueba todos los criterios de achievement del jugador seleccionado. |
 | achievement | 2 | `.achievement $subcommand` | Escribe .achievement para ver la lista de posibles subcomandos o .help achievement $subcommand para ver información sobre los subcomandos. |
-| additem | 2 | `.additem Optional(playerName/playerGUID) #itemid/[#itemname]/#itemLink #itemcount` | Añade el item especificado a ti, al personaje seleccionado o al nombre/GUID de personaje especificado. Si #itemCount es negativo, eliminarás el #itemID. |
+| additem | 2 | `.additem Optional(playerName/playerGUID) #itemid/[#itemname]/#itemLink #itemcount` | Añade el item especificado a ti, al personaje seleccionado o al nombre/GUID de personaje especificado. Si #itemCount es negativo, eliminarás el #itemID y la salida mostrará el GUID del personaje, si está conectado o desconectado, y cuántos ejemplares del item le quedan. |
 | additem set | 2 | `.additem set #itemsetid` | Añade los items del itemset con id #itemsetid al inventario tuyo o del personaje seleccionado. Añadirá un ejemplar de cada item del itemset. |
 | announce | 2 | `.announce $MessageToBroadcast` | Envía un mensaje global a todos los jugadores online en el log de chat. |
 | appear | 1 | `.appear [$charactername]` | Teletranspórtate al personaje dado. Especifica el nombre del personaje o haz click en su retrato, p. ej. cuando estés en un grupo. El personaje puede estar offline. |
