@@ -103,7 +103,7 @@ If non-zero, used to override the original spell ProcFlags in DBC.
 
 A bitmask controlling what events trigger the spell. To combine possible events, add the proc bits together.
 
-**Example:** 32+64=96 (PROC\_FLAG\_TAKEN\_MELEE\_SPELL\_HIT + PROC\_FLAG\_SUCCESSFUL\_RANGED\_HIT)
+**Example:** 32+64=96 (PROC\_FLAG\_TAKEN\_SPELL\_MELEE\_DMG\_CLASS + PROC\_FLAG\_DONE\_RANGED\_AUTO\_ATTACK)
 
 | Event                                     | Flag     | Bit value  | Comment                                                           |
 | ----------------------------------------- | -------- | ---------- | ----------------------------------------------------------------- |
