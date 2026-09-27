@@ -37,17 +37,17 @@ azerothcore/
 ### apps
   Utilities and applications with an higher level of awareness compared to modules. They can act in the lifecycle operations of the project such as the CI, the installation of modules, database migration etc.
   
-  An example of app is our db_assembler that is able to create and upgrade your database installation.
+  An example of app is the installer in `apps/installer`, which `acore.sh` uses to install the dependencies, compile the core and manage modules.
 
 ### bin  
   Contains binaries/scripts for this project. This folder can be placed inside the PATH env variable of your OS allowing you to integrate the project CLI scripts with your shell.
   
-  An example is the azerothcore dashboard script, that allows you to directly run the installer app, the db_assembler and the other tools that come with the azerothcore repo.
+  An example is `bin/acore-installer`, a shortcut to the same installer that `acore.sh` runs.
 
 ### conf  
   The configuration files needed by the apps/ and other tools included in our repo. It's not the folder where the worldserver and authserver conf files are stored because the conf/ folder is used only for the repository and it's not compiled.
   
-  An example of configuration file is the conf.sh.dist. It's an all-in-one conf used by our apps such as the dashboard, the compiler, the db_assembler etc.
+  An example of configuration file is `conf/dist/config.sh`. It's the conf used by the apps such as the installer and the compiler. To change a setting, copy it to `conf/config.sh` and edit the copy.
 
 ### data 
   All static data not compiled with the sources.
