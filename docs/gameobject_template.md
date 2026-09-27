@@ -261,7 +261,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_TEXT = 9**
 
--   data0: pageID ([page\_text.entry](page_text#id))
+-   data0: pageID ([page\_text.ID](page_text#id))
 -   data1: language (from  [Languages.dbc](languages))
 -   data2: pageMaterial ([PageTextMaterial.dbc](pagetextmaterial))
 -   data3: allowMounted
