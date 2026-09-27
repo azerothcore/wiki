@@ -6,222 +6,115 @@
 
 Contains all basic definitions of available quests.
 
-## **Table Structure**
+**Table Structure**
 
-| Field                           | Type      | Attribute | Key | Null | Default | Extra | Comment |
-| ------------------------------- | --------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]                         | MEDIUMINT | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [QuestType][2]                  | TINYINT   | UNSIGNED  |     | NO   | 2       |       |         |
-| [QuestLevel][3]                 | SMALLINT  |           |     | NO   | 1       |       |         |
-| [MinLevel][4]                   | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [QuestSortID][5]                | SMALLINT  |           |     | NO   | 0       |       |         |
-| [QuestInfoID][6]                | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [SuggestedGroupNum][7]          | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredFactionId1][8]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredFactionId2][9]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredFactionValue1][10]     | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RequiredFactionValue2][11]     | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardNextQuest][12]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardXPDifficulty][13]        | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardMoney][14]               | INT       |           |     | NO   | 0       |       |         |
-| [RewardMoneyDifficulty][15]     | INT       | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardDisplaySpell][16]        | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardSpell][17]               | INT       |           |     | NO   | 0       |       |         |
-| [RewardHonor][18]               | INT       |           |     | NO   | 0       |       |         |
-| [RewardKillHonor][19]           | FLOAT     |           |     | NO   | 0       |       |         |
-| [StartItem][20]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [Flags][21]                     | INT       | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredPlayerKills][22]       | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardItem1][23]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardAmount1][24]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardItem2][25]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardAmount2][26]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardItem3][27]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardAmount3][28]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardItem4][29]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardAmount4][30]             | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDrop1][31]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDropQuantity1][32]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDrop2][33]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDropQuantity2][34]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDrop3][35]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDropQuantity3][36]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDrop4][37]                 | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [ItemDropQuantity4][38]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemID1][39]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity1][40] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemID2][41]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity2][42] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemID3][43]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity3][44] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemID4][45]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity4][46] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemID5][47]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity5][48] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemID6][49]       | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity6][50] | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [POIContinent][51]              | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [POIx][52]                      | FLOAT     |           |     | NO   | 0       |       |         |
-| [POIy][53]                      | FLOAT     |           |     | NO   | 0       |       |         |
-| [POIPriority][54]               | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardTitle][55]               | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardTalents][56]             | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardArenaPoints][57]         | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardFactionID1][58]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardFactionValue1][59]       | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionOverride1][60]    | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionID2][61]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardFactionValue2][62]       | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionOverride2][63]    | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionID3][64]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardFactionValue3][65]       | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionOverride3][66]    | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionID4][67]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardFactionValue4][68]       | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionOverride4][69]    | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionID5][70]          | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RewardFactionValue5][71]       | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RewardFactionOverride5][72]    | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [TimeAllowed][73]               | INT       | UNSIGNED  |     | NO   | 0       |       |         |
-| [AllowableRaces][74]            | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [LogTitle][75]                  | TEXT      |           |     | YES  |         |       |         |
-| [LogDescription][76]            | TEXT      |           |     | YES  |         |       |         |
-| [QuestDescription][77]          | TEXT      |           |     | YES  |         |       |         |
-| [AreaDescription][78]           | TEXT      |           |     | YES  |         |       |         |
-| [QuestCompletionLog][79]        | TEXT      |           |     | YES  |         |       |         |
-| [RequiredNpcOrGo1][80]          | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RequiredNpcOrGo2][81]          | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RequiredNpcOrGo3][82]          | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RequiredNpcOrGo4][83]          | MEDIUMINT |           |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount1][84]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount2][85]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount3][86]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount4][87]     | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemId1][88]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemId2][89]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemId3][90]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemId4][91]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemId5][92]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemId6][93]           | MEDIUMINT | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemCount1][94]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemCount2][95]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemCount3][96]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemCount4][97]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemCount5][98]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [RequiredItemCount6][99]        | SMALLINT  | UNSIGNED  |     | NO   | 0       |       |         |
-| [Unknown0][100]                 | TINYINT   | UNSIGNED  |     | NO   | 0       |       |         |
-| [ObjectiveText1][101]           | TEXT      |           |     | YES  |         |       |         |
-| [ObjectiveText2][102]           | TEXT      |           |     | YES  |         |       |         |
-| [ObjectiveText3][103]           | TEXT      |           |     | YES  |         |       |         |
-| [ObjectiveText4][104]           | TEXT      |           |     | YES  |         |       |         |
-| [VerifiedBuild][105]            | SMALLINT  |           |     | YES  | 0       |       |         |
-
-[1]: #id
-[2]: #questtype
-[3]: #questlevel
-[4]: #minlevel
-[5]: #questsortid
-[6]: #questinfoid
-[7]: #suggestedgroupnum
-[8]: #requiredfactionid1
-[9]: #requiredfactionid2
-[10]: #requiredfactionvalue1
-[11]: #requiredfactionvalue2
-[12]: #rewardnextquest
-[13]: #rewardxpdifficulty
-[14]: #rewardmoney
-[15]: #rewardmoneydifficulty
-[16]: #rewarddisplayspell
-[17]: #rewardspell
-[18]: #rewardhonor
-[19]: #rewardkillhonor
-[20]: #startitem
-[21]: #flags
-[22]: #requiredplayerkills
-[23]: #rewarditem1
-[24]: #rewardamount1
-[25]: #rewarditem2
-[26]: #rewardamount2
-[27]: #rewarditem3
-[28]: #rewardamount3
-[29]: #rewarditem4
-[30]: #rewardamount4
-[31]: #itemdrop1
-[32]: #itemdropquantity1
-[33]: #itemdrop2
-[34]: #itemdropquantity2
-[35]: #itemdrop3
-[36]: #itemdropquantity3
-[37]: #itemdrop4
-[38]: #itemdropquantity4
-[39]: #rewardchoiceitemid1
-[40]: #rewardchoiceitemquantity1
-[41]: #rewardchoiceitemid2
-[42]: #rewardchoiceitemquantity2
-[43]: #rewardchoiceitemid3
-[44]: #rewardchoiceitemquantity3
-[45]: #rewardchoiceitemid4
-[46]: #rewardchoiceitemquantity4
-[47]: #rewardchoiceitemid5
-[48]: #rewardchoiceitemquantity5
-[49]: #rewardchoiceitemid6
-[50]: #rewardchoiceitemquantity6
-[51]: #poicontinent
-[52]: #poix
-[53]: #poiy
-[54]: #poipriority
-[55]: #rewardtitle
-[56]: #rewardtalents
-[57]: #rewardarenapoints
-[58]: #rewardfactionid1
-[59]: #rewardfactionvalue1
-[60]: #rewardfactionoverride1
-[61]: #rewardfactionid2
-[62]: #rewardfactionvalue2
-[63]: #rewardfactionoverride2
-[64]: #rewardfactionid3
-[65]: #rewardfactionvalue3
-[66]: #rewardfactionoverride3
-[67]: #rewardfactionid4
-[68]: #rewardfactionvalue4
-[69]: #rewardfactionoverride4
-[70]: #rewardfactionid5
-[71]: #rewardfactionvalue5
-[72]: #rewardfactionoverride5
-[73]: #timeallowed
-[74]: #allowableraces
-[75]: #logtitle
-[76]: #logdescription
-[77]: #questdescription
-[78]: #areadescription
-[79]: #questcompletionlog
-[80]: #requirednpcorgo1
-[81]: #requirednpcorgo2
-[82]: #requirednpcorgo3
-[83]: #requirednpcorgo4
-[84]: #requirednpcorgocount1
-[85]: #requirednpcorgocount2
-[86]: #requirednpcorgocount3
-[87]: #requirednpcorgocount4
-[88]: #requireditemid1
-[89]: #requireditemid2
-[90]: #requireditemid3
-[91]: #requireditemid4
-[92]: #requireditemid5
-[93]: #requireditemid6
-[94]: #requireditemcount1
-[95]: #requireditemcount2
-[96]: #requireditemcount3
-[97]: #requireditemcount4
-[98]: #requireditemcount5
-[99]: #requireditemcount6
-[100]: #unknown0
-[101]: #objectivetext1
-[102]: #objectivetext2
-[103]: #objectivetext3
-[104]: #objectivetext4
-[105]: #verifiedbuild
-
+| Field                                                   | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)                                               | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [QuestType](#questtype)                                 | TINYINT  | UNSIGNED   |     | NO   | 2       |       |         |
+| [QuestLevel](#questlevel)                               | SMALLINT |            |     | NO   | 1       |       |         |
+| [MinLevel](#minlevel)                                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [QuestSortID](#questsortid)                             | SMALLINT |            |     | NO   | 0       |       |         |
+| [QuestInfoID](#questinfoid)                             | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [SuggestedGroupNum](#suggestedgroupnum)                 | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredFactionId1](#requiredfactionid1)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredFactionId2](#requiredfactionid2)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredFactionValue1](#requiredfactionvalue1)         | INT      |            |     | NO   | 0       |       |         |
+| [RequiredFactionValue2](#requiredfactionvalue2)         | INT      |            |     | NO   | 0       |       |         |
+| [RewardNextQuest](#rewardnextquest)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardXPDifficulty](#rewardxpdifficulty)               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardMoney](#rewardmoney)                             | INT      |            |     | NO   | 0       |       |         |
+| [RewardMoneyDifficulty](#rewardmoneydifficulty)         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardDisplaySpell](#rewarddisplayspell)               | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardSpell](#rewardspell)                             | INT      |            |     | NO   | 0       |       |         |
+| [RewardHonor](#rewardhonor)                             | INT      |            |     | NO   | 0       |       |         |
+| [RewardKillHonor](#rewardkillhonor)                     | FLOAT    |            |     | NO   | 0       |       |         |
+| [StartItem](#startitem)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [Flags](#flags)                                         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredPlayerKills](#requiredplayerkills)             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardItem1](#rewarditem1)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardAmount1](#rewardamount1)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardItem2](#rewarditem2)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardAmount2](#rewardamount2)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardItem3](#rewarditem3)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardAmount3](#rewardamount3)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardItem4](#rewarditem4)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardAmount4](#rewardamount4)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDrop1](#itemdrop1)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDropQuantity1](#itemdropquantity1)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDrop2](#itemdrop2)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDropQuantity2](#itemdropquantity2)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDrop3](#itemdrop3)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDropQuantity3](#itemdropquantity3)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDrop4](#itemdrop4)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemDropQuantity4](#itemdropquantity4)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemID1](#rewardchoiceitemid1)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity1](#rewardchoiceitemquantity1) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemID2](#rewardchoiceitemid2)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity2](#rewardchoiceitemquantity2) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemID3](#rewardchoiceitemid3)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity3](#rewardchoiceitemquantity3) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemID4](#rewardchoiceitemid4)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity4](#rewardchoiceitemquantity4) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemID5](#rewardchoiceitemid5)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity5](#rewardchoiceitemquantity5) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemID6](#rewardchoiceitemid6)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardChoiceItemQuantity6](#rewardchoiceitemquantity6) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [POIContinent](#poicontinent)                           | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [POIx](#poix)                                           | FLOAT    |            |     | NO   | 0       |       |         |
+| [POIy](#poiy)                                           | FLOAT    |            |     | NO   | 0       |       |         |
+| [POIPriority](#poipriority)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardTitle](#rewardtitle)                             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardTalents](#rewardtalents)                         | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardArenaPoints](#rewardarenapoints)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardFactionID1](#rewardfactionid1)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardFactionValue1](#rewardfactionvalue1)             | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionOverride1](#rewardfactionoverride1)       | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionID2](#rewardfactionid2)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardFactionValue2](#rewardfactionvalue2)             | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionOverride2](#rewardfactionoverride2)       | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionID3](#rewardfactionid3)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardFactionValue3](#rewardfactionvalue3)             | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionOverride3](#rewardfactionoverride3)       | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionID4](#rewardfactionid4)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardFactionValue4](#rewardfactionvalue4)             | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionOverride4](#rewardfactionoverride4)       | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionID5](#rewardfactionid5)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RewardFactionValue5](#rewardfactionvalue5)             | INT      |            |     | NO   | 0       |       |         |
+| [RewardFactionOverride5](#rewardfactionoverride5)       | INT      |            |     | NO   | 0       |       |         |
+| [TimeAllowed](#timeallowed)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [AllowableRaces](#allowableraces)                       | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [LogTitle](#logtitle)                                   | TEXT     |            |     | YES  |         |       |         |
+| [LogDescription](#logdescription)                       | TEXT     |            |     | YES  |         |       |         |
+| [QuestDescription](#questdescription)                   | TEXT     |            |     | YES  |         |       |         |
+| [AreaDescription](#areadescription)                     | TEXT     |            |     | YES  |         |       |         |
+| [QuestCompletionLog](#questcompletionlog)               | TEXT     |            |     | YES  |         |       |         |
+| [RequiredNpcOrGo1](#requirednpcorgo1)                   | INT      |            |     | NO   | 0       |       |         |
+| [RequiredNpcOrGo2](#requirednpcorgo2)                   | INT      |            |     | NO   | 0       |       |         |
+| [RequiredNpcOrGo3](#requirednpcorgo3)                   | INT      |            |     | NO   | 0       |       |         |
+| [RequiredNpcOrGo4](#requirednpcorgo4)                   | INT      |            |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount1](#requirednpcorgocount1)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount2](#requirednpcorgocount2)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount3](#requirednpcorgocount3)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredNpcOrGoCount4](#requirednpcorgocount4)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemId1](#requireditemid1)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemId2](#requireditemid2)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemId3](#requireditemid3)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemId4](#requireditemid4)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemId5](#requireditemid5)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemId6](#requireditemid6)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemCount1](#requireditemcount1)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemCount2](#requireditemcount2)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemCount3](#requireditemcount3)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemCount4](#requireditemcount4)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemCount5](#requireditemcount5)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [RequiredItemCount6](#requireditemcount6)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Unknown0](#unknown0)                                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [ObjectiveText1](#objectivetext1)                       | TEXT     |            |     | YES  |         |       |         |
+| [ObjectiveText2](#objectivetext2)                       | TEXT     |            |     | YES  |         |       |         |
+| [ObjectiveText3](#objectivetext3)                       | TEXT     |            |     | YES  |         |       |         |
+| [ObjectiveText4](#objectivetext4)                       | TEXT     |            |     | YES  |         |       |         |
+| [VerifiedBuild](#verifiedbuild)                         | INT      |            |     | YES  |         |       |         |
 
 **Description of the fields**
 
@@ -241,7 +134,7 @@ Accepted values: 0, 1 or 2. Their meaning is described in table below.
 
 ### QuestLevel
 
-Level of quest. Player receives full experience amount only if their level is less than or equal to Level+5. If Level is set to -1, the player's level will be used as (Quest)Level for the experience calculation.
+Level of the quest. It sets the quest's color in the quest log and the experience it rewards, see [RewardXPDifficulty](#rewardxpdifficulty). If set to -1, the player's level is used as the quest level.
 
 ### MinLevel
 
@@ -253,249 +146,251 @@ This field defines under what category the quest falls in the quest log.
 
 If **value &gt; 0** then value is Zone IDs taken from AreaTable.dbc.
 
-if **value &lt; 0** then (**-value**) is quest sort id: (in general profession or class quests. Also see [RequiredSkillPoints](#quest_template-RequiredSkillPoints) ) Value is ID from QuestSort.dbc
+If **value &lt; 0** then (**-value**) is an ID from QuestSort.dbc, in general profession, class or holiday quests. Also see [RequiredSkillPoints](quest_template_addon#requiredskillpoints).
 
 ### QuestInfoID
 
 These values are ID taken from [QuestInfo.dbc](https://wowdev.wiki/DB/QuestInfo)
 
-| Value | Result       |
-| ----- | ------------ |
-| 0     | None         |
-| 1     | Group        |
-| 21    | Life         |
-| 41    | PvP          |
-| 62    | Raid         |
-| 81    | Dungeon      |
-| 82    | Event        |
-| 83    | Legendary    |
-| 84    | Escort       |
-| 85    | Heroic       |
-| 88    | Raid (10)    |
-| 89    | Raid (25)    |
+| Value | Result    |
+| ----- | --------- |
+| 0     | None      |
+| 1     | Group     |
+| 21    | Life      |
+| 41    | PvP       |
+| 62    | Raid      |
+| 81    | Dungeon   |
+| 82    | Event     |
+| 83    | Legendary |
+| 84    | Escort    |
+| 85    | Heroic    |
+| 88    | Raid (10) |
+| 89    | Raid (25) |
+
+A quest can only be completed inside a raid group if it is a Raid, Raid (10) or Raid (25) quest, unless `Quests.IgnoreRaid` is enabled in `worldserver.conf`.
 
 ### SuggestedGroupNum
 
 Recommended number of players to do the quest together.
 
-### RewardFactionId1
+### RequiredFactionId1
 
-Faction Id (from Faction.dbc) for which the quest give reputation points.
-Number of gain or lost reputation points for Faction at quest completion. This is special reputation rewarding. Normal reputation reward to quest rewarding creature faction calculated and added automatically.
+Faction ID from Faction.dbc for a reputation objective. The quest is complete once the player's reputation with this faction reaches [RequiredFactionValue1](#requiredfactionvalue1). The faction and value are shown in the quest log.
 
-### RewardFactionId2
+### RequiredFactionId2
 
-Faction Id (from Faction.dbc) for which the quest give reputation points.
-Number of gain or lost reputation points for Faction at quest completion. This is special reputation rewarding. Normal reputation reward to quest rewarding creature faction calculated and added automatically.
+Faction ID from Faction.dbc for a second reputation objective, used for the opposing faction. The quest is complete once the player's reputation with this faction reaches [RequiredFactionValue2](#requiredfactionvalue2).
 
-### RewardFactionValueId1
+Unlike the first objective, the player can only accept the quest while their reputation with this faction is below the value.
 
-This field is used for reputation lookup in QuestFactionReward.dbc if quest_template#RewardFactionValueId is 0. Value X in this field indicates RepX column of QuestFactionReward.dbc. If RewardRepValueId is positive, reputation from the first row of QuestFactionReward.dbc will be used, for negative values the second row is used.
+### RequiredFactionValue1
 
-### RewardFactionValueId2
-This field is used for reputation lookup in QuestFactionReward.dbc if quest_template#RewardFactionValueId is 0. Value X in this field indicates RepX column of QuestFactionReward.dbc. If RewardRepValueId is positive, reputation from the first row of QuestFactionReward.dbc will be used, for negative values the second row is used.
+The reputation value the player needs with [RequiredFactionId1](#requiredfactionid1). Has no effect if RequiredFactionId1 is 0.
+
+### RequiredFactionValue2
+
+The reputation value the player needs with [RequiredFactionId2](#requiredfactionid2). Has no effect if RequiredFactionId2 is 0.
 
 ### RewardNextQuest
 
-** RewardNextQuest (Old field name: NextQuestIdChain)**
-
-The quest entry from a **creature** or **gameobject** that ends a quest and starts a new one. The result is, that if you end the quest, the new quest instantly appears from the quest giver.
-
-See the [examples section](#quest_template-Examples) for examples.
+The [ID](#id) of a quest that the same creature or gameobject offers right after this quest is turned in. When the player completes this quest, the next quest opens immediately without the player having to talk to the quest giver again.
 
 ### RewardXPDifficulty
 
-According to the [Level](#quest_template-Level), the basic experience with index *RewardXPDifficulty* is taken from QuestXP.dbc.
+Index (0-9) of the experience column in QuestXP.dbc. The base experience is read from the row of the [QuestLevel](#questlevel) and this column.
 
-This field also controls the XP given as the XP is calculated from the value in this field by the following formula. If the quest is repeatable, XP will be given only once. The total XP that a character will receive is also affected by the level difference between the character's level and the quest's level.
+The experience is then reduced by the difference between the player's level and the quest level:
 
-The formula for calculating XP from the value in this field:
-- **QuestLevel &gt;= 65:** XP = RewMoneyMaxLevel / 6.0
-- **QuestLevel h1. 64:** XP = RewMoneyMaxLevel / 4.8
-- **QuestLevel 63:** XP = RewMoneyMaxLevel / 3.6
-- **QuestLevel h1. 62:** XP = RewMoneyMaxLevel / 2.4
-- **QuestLevel 61:** XP = RewMoneyMaxLevel / 1.2
-- **QuestLevel &lt;= 60:** XP = RewMoneyMaxLevel / 0.6
+| Player level              | Experience |
+| ------------------------- | ---------- |
+| QuestLevel + 5 or lower   | 100%       |
+| QuestLevel + 6            | 80%        |
+| QuestLevel + 7            | 60%        |
+| QuestLevel + 8            | 40%        |
+| QuestLevel + 9            | 20%        |
+| QuestLevel + 10 or higher | 10%        |
+
+A repeatable quest only gives experience the first time, unless it is a daily, weekly, monthly or Dungeon Finder quest. At the maximum level, the experience is converted to money instead, 6 copper per experience point, unless the quest has the `QUEST_FLAGS_NO_MONEY_FROM_XP` flag.
 
 ### RewardMoney
 
-Money earned by completing the quest (if value &gt; 0) or money requirement to complete the quest (if value &lt; 0) .
+Money earned by completing the quest (if value &gt; 0) or money requirement to complete the quest (if value &lt; 0).
 
 ### RewardMoneyDifficulty
 
-ID refers to one of the money factor included in [MoneyFactor](quest_money_reward) ordered by level.
+ID refers to one of the money factor included in [quest\_money\_reward](quest_money_reward) ordered by level. If set, the money reward is taken from there based on the player's level instead of from [RewardMoney](#rewardmoney).
 
 ### RewardDisplaySpell
 
-Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](#rewardspell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
+Spell that is shown to be cast on quest completion in the quest log. Note that this spell will NOT be cast if [RewardSpell](#rewardspell) is non-zero. The spell in the other field will be cast instead, in which case the spell here only serves as the visual in the quest log.
 
 ### RewardSpell
 
-Spell that is shown to be casted on quest completion in the quest log. Note that this spell will NOT be casted if [RewardSpell](quest_template#rewardspell) is non-zero. The spell in the other field will be casted instead, in which case the spell here only serves as the visual in the quest log.
+Spell cast on the player when the quest is rewarded. If set, it is cast instead of [RewardDisplaySpell](#rewarddisplayspell).
 
-NOTE: This field comes straight from the WDB and should not be changed.
+The quest giver casts the spell on the player, unless the spell teaches a spell, creates an item or can only be self cast. Then the player casts it on themself.
 
 ### RewardHonor
 
-Number of honorable kill honor rewarded for completing this quest.
-
-Example: An example value is 15 for quest 8388: At level 80 an honorable kill is 124 honor worth. Multiply this with 15 and you receive 1860, after the multiplication the value is rounded up. So the honor rewarded at level 80 is 1860 for this quest.
+A fixed amount of honor rewarded for completing this quest. It is added on top of the honor from [RewardKillHonor](#rewardkillhonor).
 
 ### RewardKillHonor
 
+Honor rewarded for completing this quest, counted in honorable kills. The honor of one honorable kill depends on the player's level, so the reward grows with the player's level.
 
 ### StartItem
 
-Items given by the quest giver at beginning of the quest. Items will be deleted when quest is abandoned.
+Item given by the quest giver at the beginning of the quest. The item will be deleted when the quest is abandoned. The number of items is set in [ProvidedItemCount](quest_template_addon#provideditemcount).
 
 ### Flags
 
-This flag field defines more specifically the type of quest it is. Aside from the daily flag and sharable flag, this field is used just for grouping purposes and NOT for any other quest requirements. The quest requirements are calculated from non-zero values in other quest template fields. Also, while some of these flags are known, others have yet an unknown purpose and the comments below is simply guesswork on them.
+This flag field defines more specifically the type of quest it is. The quest requirements are calculated from non-zero values in other quest template fields.
 
-| Flag       | Name                                 | Comments                                                                                                                                                               |
-| ---------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0          | QUEST_FLAGS_NONE                     | No flags, so no groups assigned to this quest.                                                                                                                         |
-| 1          | QUEST_FLAGS_STAY_ALIVE               | If the player dies, the quest is failed.                                                                                                                               |
-| 2          | QUEST_FLAGS_PARTY_ACCEPT             | Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest.              |
-| 4          | QUEST_FLAGS_EXPLORATION              | Involves the activation of an areatrigger.                                                                                                                             |
-| 8          | QUEST_FLAGS_SHARABLE                 | Allows the quest to be shared with other players.                                                                                                                      |
-| 16         | QUEST_FLAGS_HAS_CONDITION            | Not used currently                                                                                                                                                     |
-| 32         | QUEST_FLAGS_HIDE_REWARD_POI          | Not used currently: Unsure of content                                                                                                                                  |
-| 64         | QUEST_FLAGS_RAID                     | Can be completed while in raid                                                                                                                                         |
-| 128        | QUEST_FLAGS_TBC                      | Not used currently: Available if TBC expansion enabled only                                                                                                            |
-| 256        | QUEST_FLAGS_NO_MONEY_FROM_XP         | Not used currently: Experience is not converted to gold at max level                                                                                                   |
-| 512        | QUEST_FLAGS_HIDDEN_REWARDS           | Item and monetary rewards are hidden in the initial quest details page and in the quest log but will appear once ready to be rewarded.                                 |
-| 1024       | QUEST_FLAGS_TRACKING                 | These quests are automatically rewarded on quest complete and they will never appear in quest log client side.                                                         |
-| 2048       | QUEST_FLAGS_DEPRECATE_REPUTATION     | Not used currently                                                                                                                                                     |
-| 4096       | QUEST_FLAGS_DAILY                    | Daily repeatable quests (only flag that the core applies specific behavior for)                                                                                        |
-| 8192       | QUEST_FLAGS_FLAGS_PVP                | Having this quest in log forces PvP flag                                                                                                                               |
-| 16384      | QUEST_FLAGS_UNAVAILABLE              | Used on quests that are not generically available                                                                                                                      |
-| 32768      | QUEST_FLAGS_WEEKLY                   | Weekly repeatable quests (only flag that the core applies specific behavior for)                                                                                       |
-| 65536      | QUEST_FLAGS_AUTOCOMPLETE             | Auto complete                                                                                                                                                          |
-| 131072     | QUEST_FLAGS_DISPLAY_ITEM_IN_TRACKER  | Displays usable item in quest tracker                                                                                                                                  |
-| 262144     | QUEST_FLAGS_OBJ_TEXT                 | Use Objective text as Complete text                                                                                                                                    |
-| 524288     | QUEST_FLAGS_AUTO_ACCEPT              | The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag. Maybe blizz used to use it, or will use it in the future. |
-| 1048576    | QUEST_FLAGS_PLAYER_CAST_ON_ACCEPT    | Quests with this flag player submit automatically by special button in player GUI                                                                                      |
-| 2097152    | QUEST_FLAGS_PLAYER_CAST_ON_COMPLETE  | Automatically suggestion of accepting quest. Not from npc.                                                                                                             |
-| 4194304    | QUEST_FLAGS_UPDATE_PHASE_SHIFT       |                                                                                                                                                                        |
-| 8388608    | QUEST_FLAGS_SOR_WHITELIST            |                                                                                                                                                                        |
-| 16777216   | QUEST_FLAGS_LAUNCH_GOSSIP_COMPLETE   |                                                                                                                                                                        |
-| 54432      | QUEST_FLAGS_REMOVE_EXTRA_GET_ITEMS   |                                                                                                                                                                        |
-| 67108864   | QUEST_FLAGS_HIDE_UNTIL_DISCOVERED    |                                                                                                                                                                        |
-| 134217728  | QUEST_FLAGS_PORTRAIT_IN_QUEST_LOG    |                                                                                                                                                                        |
-| 268435456  | QUEST_FLAGS_SHOW_ITEM_WHEN_COMPLETED |                                                                                                                                                                        |
-| 536870912  | QUEST_FLAGS_LAUNCH_GOSSIP_ACCEPT     |                                                                                                                                                                        |
-| 1073741824 | QUEST_FLAGS_ITEMS_GLOW_WHEN_DONE     |                                                                                                                                                                        |
-| 2147483648 | QUEST_FLAGS_FAIL_ON_LOGOUT           |                                                                                                                                                                        |
+| Flag   | Name                                | Comments                                                                                                                                              |
+| ------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0      | QUEST_FLAGS_NONE                    | No flags.                                                                                                                                             |
+| 1      | QUEST_FLAGS_STAY_ALIVE              | If the player dies, the quest is failed.                                                                                                              |
+| 2      | QUEST_FLAGS_PARTY_ACCEPT            | Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest. |
+| 4      | QUEST_FLAGS_EXPLORATION             | Involves the activation of an areatrigger.                                                                                                            |
+| 8      | QUEST_FLAGS_SHARABLE                | Allows the quest to be shared with other players.                                                                                                     |
+| 16     | QUEST_FLAGS_HAS_CONDITION           | Not used currently.                                                                                                                                   |
+| 32     | QUEST_FLAGS_HIDE_REWARD_POI         | Not used currently.                                                                                                                                   |
+| 64     | QUEST_FLAGS_RAID                    | Not used by the core. Use [QuestInfoID](#questinfoid) to make a raid quest.                                                                            |
+| 128    | QUEST_FLAGS_TBC                     | Not used currently: Available if TBC expansion enabled only.                                                                                          |
+| 256    | QUEST_FLAGS_NO_MONEY_FROM_XP        | Experience is not converted to money at the maximum level.                                                                                            |
+| 512    | QUEST_FLAGS_HIDDEN_REWARDS          | Item and monetary rewards are hidden in the initial quest details page and in the quest log but will appear once ready to be rewarded.                |
+| 1024   | QUEST_FLAGS_TRACKING                | These quests are automatically rewarded on quest complete and they will never appear in quest log client side.                                        |
+| 2048   | QUEST_FLAGS_DEPRECATE_REPUTATION    | Not used currently.                                                                                                                                   |
+| 4096   | QUEST_FLAGS_DAILY                   | Daily repeatable quest.                                                                                                                               |
+| 8192   | QUEST_FLAGS_FLAGS_PVP               | Having this quest in log forces PvP flag.                                                                                                             |
+| 16384  | QUEST_FLAGS_UNAVAILABLE             | Used on quests that are not generically available.                                                                                                    |
+| 32768  | QUEST_FLAGS_WEEKLY                  | Weekly repeatable quest.                                                                                                                              |
+| 65536  | QUEST_FLAGS_AUTOCOMPLETE            | Auto complete.                                                                                                                                        |
+| 131072 | QUEST_FLAGS_DISPLAY_ITEM_IN_TRACKER | Displays usable item in quest tracker.                                                                                                                |
+| 262144 | QUEST_FLAGS_OBJ_TEXT                | Use Objective text as Complete text.                                                                                                                  |
+| 524288 | QUEST_FLAGS_AUTO_ACCEPT             | The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag.                                          |
 
-Like all flag based fields, **QuestFlags** can be added for the different types of quest.
+Like all flag based fields, **Flags** can be added for the different types of quest. Higher flags were added in later expansions and are not used in 3.3.5a.
 
 Note that some flags may not be supported by core.
 
 ### RequiredPlayerKills
 
-Displays how much players you need to kill betd class=td class=a class=/td data-linked-resource-default-alias=fore completing the quest.
+Number of enemy players the player needs to kill to complete the quest.
 
 ### RewardItem1
 
-[item Id 1](item_template#entry) given for reward (no choice).
+[Item ID](item_template#entry) given as a reward. All RewardItem items are given, the player does not choose between them.
 
 ### RewardAmount1
 
-Amount to be obtained from the above-mentioned item
+Number of [RewardItem1](#rewarditem1) items given.
 
 ### RewardItem2
 
-[item Id 2](item_template#entry) given for reward (no choice).
+See [RewardItem1](#rewarditem1).
 
 ### RewardAmount2
 
-Amount to be obtained from the above-mentioned item
+Number of [RewardItem2](#rewarditem2) items given.
 
 ### RewardItem3
 
-[item Id 3](item_template#entry) given for reward (no choice).
+See [RewardItem1](#rewarditem1).
 
 ### RewardAmount3
 
-Amount to be obtained from the above-mentioned item
+Number of [RewardItem3](#rewarditem3) items given.
 
 ### RewardItem4
 
-[item Id 4](item_template#entry) given for reward (no choice).
+See [RewardItem1](#rewarditem1).
 
 ### RewardAmount4
 
-Amount to be obtained from the above-mentioned item
+Number of [RewardItem4](#rewarditem4) items given.
 
 ### ItemDrop1
 
+[Item ID](item_template#entry) of an item the player needs while on the quest, but that is not a quest objective, for example an item that has to be used on a target. Creatures and gameobjects only drop the item while the player has fewer than the needed amount.
 
+When the quest is completed or abandoned, the core removes these items from the player if they are quest items.
 
 ### ItemDropQuantity1
 
-
+The maximum number of [ItemDrop1](#itemdrop1) items the player can pick up, and the number the core removes when the quest ends. If 0, the item's stack size is used as the maximum.
 
 ### ItemDrop2
 
-
+See [ItemDrop1](#itemdrop1).
 
 ### ItemDropQuantity2
 
-
+See [ItemDropQuantity1](#itemdropquantity1).
 
 ### ItemDrop3
 
-
+See [ItemDrop1](#itemdrop1).
 
 ### ItemDropQuantity3
 
-
+See [ItemDropQuantity1](#itemdropquantity1).
 
 ### ItemDrop4
 
-
+See [ItemDrop1](#itemdrop1).
 
 ### ItemDropQuantity4
 
-
+See [ItemDropQuantity1](#itemdropquantity1).
 
 ### RewardChoiceItemID1
 
-
+[Item ID](item_template#entry) of an item the player can choose as a reward. The player picks one of the RewardChoiceItemID items.
 
 ### RewardChoiceItemQuantity1
 
+Number of [RewardChoiceItemID1](#rewardchoiceitemid1) items given if the player chooses it.
 
 ### RewardChoiceItemID2
 
+See [RewardChoiceItemID1](#rewardchoiceitemid1).
 
 ### RewardChoiceItemQuantity2
 
+Number of [RewardChoiceItemID2](#rewardchoiceitemid2) items given if the player chooses it.
 
 ### RewardChoiceItemID3
 
+See [RewardChoiceItemID1](#rewardchoiceitemid1).
 
 ### RewardChoiceItemQuantity3
 
+Number of [RewardChoiceItemID3](#rewardchoiceitemid3) items given if the player chooses it.
 
 ### RewardChoiceItemID4
 
+See [RewardChoiceItemID1](#rewardchoiceitemid1).
 
 ### RewardChoiceItemQuantity4
 
+Number of [RewardChoiceItemID4](#rewardchoiceitemid4) items given if the player chooses it.
 
 ### RewardChoiceItemID5
 
+See [RewardChoiceItemID1](#rewardchoiceitemid1).
 
 ### RewardChoiceItemQuantity5
 
+Number of [RewardChoiceItemID5](#rewardchoiceitemid5) items given if the player chooses it.
 
 ### RewardChoiceItemID6
 
+See [RewardChoiceItemID1](#rewardchoiceitemid1).
 
 ### RewardChoiceItemQuantity6
 
+Number of [RewardChoiceItemID6](#rewardchoiceitemid6) items given if the player chooses it.
 
 ### POIContinent
 
@@ -511,74 +406,106 @@ Y coordinate of quest POI.
 
 ### POIPriority
 
-TODO
+Sent to the client together with the POI. Its exact effect in the client is not known.
 
 ### RewardTitle
 
+ID from CharTitles.dbc of a title the player gets when the quest is rewarded.
 
 ### RewardTalents
 
+Number of extra talent points the player gets when the quest is rewarded.
 
 ### RewardArenaPoints
 
+Number of arena points the player gets when the quest is rewarded.
 
 ### RewardFactionID1
 
+Faction ID from Faction.dbc that the player gets reputation with when the quest is rewarded.
+
+This is on top of the reputation the player gets for turning the quest in to a creature of a faction.
 
 ### RewardFactionValue1
 
+Sets the amount of reputation for [RewardFactionID1](#rewardfactionid1) by looking it up in QuestFactionReward.dbc. The value is the column (1-9) to use. A positive value uses the first row, which gives reputation. A negative value uses the second row, which removes reputation.
+
+Only used if [RewardFactionOverride1](#rewardfactionoverride1) is 0.
 
 ### RewardFactionOverride1
 
+The amount of reputation for [RewardFactionID1](#rewardfactionid1), multiplied by 100. For example, 25000 gives 250 reputation and -2500 removes 25 reputation. If set, [RewardFactionValue1](#rewardfactionvalue1) is ignored.
 
 ### RewardFactionID2
 
+See [RewardFactionID1](#rewardfactionid1).
 
 ### RewardFactionValue2
 
-
-### ItemDrop
-
+See [RewardFactionValue1](#rewardfactionvalue1).
 
 ### RewardFactionOverride2
 
+See [RewardFactionOverride1](#rewardfactionoverride1).
 
 ### RewardFactionID3
 
-
-### ItemDropQuantity
-
-The maximum number of copies of the item in ItemDrop that can be picked up (and dropped by the core).
+See [RewardFactionID1](#rewardfactionid1).
 
 ### RewardFactionValue3
 
+See [RewardFactionValue1](#rewardfactionvalue1).
 
 ### RewardFactionOverride3
 
+See [RewardFactionOverride1](#rewardfactionoverride1).
 
 ### RewardFactionID4
 
+See [RewardFactionID1](#rewardfactionid1).
 
 ### RewardFactionValue4
 
+See [RewardFactionValue1](#rewardfactionvalue1).
 
 ### RewardFactionOverride4
 
+See [RewardFactionOverride1](#rewardfactionoverride1).
 
 ### RewardFactionID5
 
+See [RewardFactionID1](#rewardfactionid1).
 
 ### RewardFactionValue5
 
+See [RewardFactionValue1](#rewardfactionvalue1).
 
 ### RewardFactionOverride5
 
+See [RewardFactionOverride1](#rewardfactionoverride1).
 
 ### TimeAllowed
 
+Time in seconds the player has to complete the quest. If the time runs out, the quest fails. 0 means no time limit.
 
 ### AllowableRaces
 
+Bitmask of the races that can take the quest. 0 means all races.
+
+| Value | Race      |
+| ----- | --------- |
+| 1     | Human     |
+| 2     | Orc       |
+| 4     | Dwarf     |
+| 8     | Night Elf |
+| 16    | Undead    |
+| 32    | Tauren    |
+| 64    | Gnome     |
+| 128   | Troll     |
+| 512   | Blood Elf |
+| 1024  | Draenei   |
+
+Add the values together to allow several races. For example, 1101 allows all Alliance races and 690 allows all Horde races.
 
 ### LogTitle
 
@@ -590,59 +517,128 @@ Objectives of the quest. If empty, quest is an auto-complete quest that can be i
 
 ### QuestDescription
 
-The quest text. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
+The quest text. You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replaced with any synonym you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam)
 
 ### AreaDescription
 
+An extra objective line shown in the quest log for objectives that are not kills or items, such as exploring an area or escorting a creature. For example, "Scout through the Fargodeep Mine".
+
+These objectives are completed by an areatrigger, a spell or a script, see the `QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT` flag in [quest\_template\_addon.SpecialFlags](quest_template_addon#specialflags).
 
 ### QuestCompletionLog
 
-Text sent to player when the player tries to talk to the NPC with the quest active but incomplete. (The text under the "Progress" title in Wowhead.) You can use certain placeholders that will be filled in in-game: $B - line break, $N - name, $R - race, $C - class, $Gmale:female; (male and female can be replace with any synonymn you want, but the order must stay the same. IE: boy:girl / man:woman / sir:madam / dude:chick)
+Text shown in the quest log when all objectives are done, for example "Return to Marshal McBride in Northshire Abbey." You can use the same placeholders as in [QuestDescription](#questdescription).
 
 ### RequiredNpcOrGo1
+
+- Value &gt; 0: required [creature\_template](creature_template) ID the player needs to kill or cast on in order to complete the quest.
+- Value &lt; 0: required [gameobject\_template](gameobject_template) ID the player needs to cast on in order to complete the quest.
+- If the quest has the `QUEST_SPECIAL_FLAGS_CAST` flag in [quest\_template\_addon.SpecialFlags](quest_template_addon#specialflags), the objective is to cast a spell on the target instead of killing it.
+
 ### RequiredNpcOrGo2
+
+See [RequiredNpcOrGo1](#requirednpcorgo1).
+
 ### RequiredNpcOrGo3
+
+See [RequiredNpcOrGo1](#requirednpcorgo1).
+
 ### RequiredNpcOrGo4
 
-- Value &gt; 0:required creature\_template ID the player needs to kill/cast on in order to complete the quest.
-- Value &lt; 0:required gameobject\_template ID the player needs to cast on in order to complete the quest.
-- If\*RequiredSpellCast\*is != 0, the objective is to cast on target, else kill.
-
-NOTE: If RequiredSpellCast is != 0 and the spell has effects Send Event or Quest Complete, this field may be left empty.
+See [RequiredNpcOrGo1](#requirednpcorgo1).
 
 ### RequiredNpcOrGoCount1
+
+The number of times the creature or gameobject in [RequiredNpcOrGo1](#requirednpcorgo1) must be killed or cast upon.
+
 ### RequiredNpcOrGoCount2
+
+See [RequiredNpcOrGoCount1](#requirednpcorgocount1).
+
 ### RequiredNpcOrGoCount3
+
+See [RequiredNpcOrGoCount1](#requirednpcorgocount1).
+
 ### RequiredNpcOrGoCount4
 
-The number of times the creature or gameobject must be killed or casted upon.
+See [RequiredNpcOrGoCount1](#requirednpcorgocount1).
 
 ### RequiredItemId1
+
+[Item ID](item_template#entry) of an item the player needs to complete the quest.
+
 ### RequiredItemId2
+
+See [RequiredItemId1](#requireditemid1).
+
 ### RequiredItemId3
+
+See [RequiredItemId1](#requireditemid1).
+
 ### RequiredItemId4
+
+See [RequiredItemId1](#requireditemid1).
+
 ### RequiredItemId5
+
+See [RequiredItemId1](#requireditemid1).
+
 ### RequiredItemId6
 
-[Id](item_template#entry) of required item to complete the quest.
+See [RequiredItemId1](#requireditemid1).
 
 ### RequiredItemCount1
+
+Number of [RequiredItemId1](#requireditemid1) items the player needs.
+
 ### RequiredItemCount2
+
+See [RequiredItemCount1](#requireditemcount1).
+
 ### RequiredItemCount3
+
+See [RequiredItemCount1](#requireditemcount1).
+
 ### RequiredItemCount4
+
+See [RequiredItemCount1](#requireditemcount1).
+
 ### RequiredItemCount5
+
+See [RequiredItemCount1](#requireditemcount1).
+
 ### RequiredItemCount6
 
-Amount of required items
+See [RequiredItemCount1](#requireditemcount1).
 
 ### Unknown0
 
+Not used by the core.
 
 ### ObjectiveText1
+
+Used to define non-standard objective texts that show up in the quest log, for example "Heal fallen warrior". The count from [RequiredNpcOrGoCount1](#requirednpcorgocount1) is added after the text.
+
 ### ObjectiveText2
+
+See [ObjectiveText1](#objectivetext1).
+
 ### ObjectiveText3
+
+See [ObjectiveText1](#objectivetext1).
+
 ### ObjectiveText4
 
-Used to define non-standard objective texts, that show up in the questlog. Example, "Heal fallen warrior" and the number gets added by Count values.
+See [ObjectiveText1](#objectivetext1).
 
 ### VerifiedBuild
+
+This field is used by the TrinityDB Team to determine whether a template has been verified from WDB files.
+
+If value is 0 then it has not been parsed yet.
+
+If value is above 0 then it has been parsed with WDB files from that specific client build.
+
+If value is -1 then it is just a place holder until proper data are found on WDBs.
+
+If value is -Client Build then it was parsed with WDB files from that specific client build and manually edited later for some special necessity.
