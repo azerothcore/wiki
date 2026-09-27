@@ -59,6 +59,8 @@ Holiday ID from  [Holidays DBC file](holidays). This is sent to the client to u
 
 The stage of the [holiday](#holiday) this event is for. A holiday with more than one stage, like the Call to Arms battleground weekends, can have one game event per stage. The event's start time and length are taken from that stage of the holiday. 0 if the event is not linked to a holiday.
 
+The event with the highest stage of a holiday is its main stage. The holiday only counts as active while that event runs, so a building stage that starts days before a holiday like Brewfest or the Darkmoon Faire does not count. A stage the holiday does not have is reset to 0 with an error.
+
 ### description
 
 String containing the name of the event displayed in console each time it starts or stops.

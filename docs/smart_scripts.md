@@ -560,6 +560,7 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 | FOLLOW_TYPE_LINE               | 4     | Front \-\> Back \-\> Front \-\> Back.                         |
 | FOLLOW_TYPE_COLUMN             | 5     | Left \-\> Right \-\> Left \-\> Right.                         |
 | FOLLOW_TYPE_ANGULAR            | 6     | Geese-like formation 135º and 225º degrees behind leader.     |
+| FOLLOW_TYPE_SINGLE_FILE        | 7     | Directly behind leader with increasing distance.              |
 
 ### Power Types
 

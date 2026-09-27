@@ -6,7 +6,7 @@
 
 This table has the same columns as [Achievement.dbc](achievement). The core loads it after the DBC file: a row adds an achievement that is not in Achievement.dbc, or replaces the achievement with the same [ID](#id).
 
-The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use.
+The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
 **Table Structure**
 

@@ -6,7 +6,7 @@
 
 This table has the same columns as Spell.dbc. The core loads it after the DBC file: a row adds a spell that is not in Spell.dbc, for example a serverside spell, or replaces the spell with the same [ID](#id).
 
-The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use.
+The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
 **Table Structure**
 
