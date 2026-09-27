@@ -32,6 +32,8 @@ GUID of the group. See [groups.guid](groups#guid).
 
 GUID of the character member of the group. See [characters.guid](characters#guid).
 
+### memberFlags
+
 | Name                   | Value | Unique |
 | ---------------------- | ----- | ------ |
 | MEMBER_FLAG_ASSISTANT  | 0x01  |        |

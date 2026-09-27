@@ -18,7 +18,7 @@ This table holds information on what skills newly created characters should star
 
 [1]: #racemask
 [2]: #classmask
-[3]: #spell
+[3]: #skill
 [4]: #rank
 [5]: #comment
 
@@ -32,7 +32,7 @@ One or more character's race. See [ChrRaces.dbc](chrraces).
 
 One or more character's class. See [ChrClasses.dbc](chrclasses).
 
-### Spell
+### skill
 
 Skill id. See [Skill.dbc](skillline)
 

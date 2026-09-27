@@ -11,11 +11,11 @@
 | [id][1]         | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [event][2]      | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
 | [invitee][3]    | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [sender][4]     | INT          | UNSIGNED   |     | NO   | ''      |       |         |
+| [sender][4]     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [status][5]     | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [statustime][6] | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [rank][7]       | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [text][8]       | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
+| [text][8]       | VARCHAR(255) |            |     | NO   | ''      |       |         |
 
 [1]: #id
 [2]: #event
@@ -30,32 +30,49 @@
 
 ### id
 
-`field-no-description|1`
+The unique ID of the invite.
 
 ### event
 
-`field-no-description|2`
+The calendar event the invite is for. See [calendar\_events.id](calendar_events#id).
 
 ### invitee
 
-`field-no-description|3`
+GUID of the invited character. See [characters.guid](characters#guid).
 
 ### sender
 
-`field-no-description|4`
+GUID of the character that sent the invite. See [characters.guid](characters#guid).
 
 ### status
 
-`field-no-description|5`
+| Value | Status        |
+| ----- | ------------- |
+| 0     | Invited       |
+| 1     | Accepted      |
+| 2     | Declined      |
+| 3     | Confirmed     |
+| 4     | Out           |
+| 5     | Standby       |
+| 6     | Signed up     |
+| 7     | Not signed up |
+| 8     | Tentative     |
+| 9     | Removed       |
+
+### statustime
+
+The time the [status](#status) was last changed, in Unix time.
 
 ### rank
 
-`field-no-description|6`
+| Value | Rank      |
+| ----- | --------- |
+| 0     | Player    |
+| 1     | Moderator |
+| 2     | Owner     |
 
-### eventtime
-
-`field-no-description|7`
+The owner and moderators can invite other characters and change the event.
 
 ### text
 
-`field-no-description|8`
+A note added to the invite.

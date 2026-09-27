@@ -20,7 +20,7 @@ Used to give NPC spells cooldowns for mindcontroll.
 
 **Description of the fields**
 
-### DungionId
+### dungeonId
 
 Unique id from LFGDungeons.dbc
 
@@ -28,15 +28,15 @@ Unique id from LFGDungeons.dbc
 
 Dungeon Name
 
-### poisition_x
+### position_x
 
 `field-no-description|3`
 
-### poisition_y
+### position_y
 
 `field-no-description|4`
 
-### poisition_z
+### position_z
 
 `field-no-description|5`
 

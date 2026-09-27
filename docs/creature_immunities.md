@@ -109,10 +109,19 @@ See [spell aura reference](spell-aura-reference)
 
 ### ImmuneAoE
 
-previously 
-- `creature_flags.extra` `+4194304` AVOID_AOE - ignored by aoe attacks (for icc blood prince council npc - Dark Nucleus)`
+If 1, the creature can not be hit by area of effect spells. The `CREATURE_FLAG_EXTRA_AVOID_AOE` flag (`+4194304`) in [creature\_template.flags\_extra](creature_template#flagsextra) has the same effect.
+
+### ImmuneChain
+
+If 1, the creature can not be hit by chain effects that jump from another target, like Chain Lightning.
+
+### Comment
+
+A description of the entry. Not used by the core.
 
 **Examples**
+
+Old [flags\_extra](creature_template#flagsextra) values and the Effects and Auras that replace them:
 
 - NO_TAUNT `creature_flags.extra` `+256` : Effects ATTACK_ME `114` and MOD_TAUNT Auras `11`
 - IMMUNITY_KNOCKBACK `creature_flags.extra` `+1073741824` : EFFECT_KNOCK_BACK, EFFECT_KNOCK_BACK_DEST, EFFECT_PULL_TOWARDS, EFFECT_PULL_TOWARDS_DEST Effects `98,124,144,145`

@@ -18,13 +18,13 @@ This table holds the respawn time when creatures should be respawned in the worl
 [1]: #guid
 [2]: #respawntime
 [3]: #mapid
-[4]: #instance
+[4]: #instanceid
 
 **Description of the fields**
 
 ### guid
 
-The character guid. See [characters.guid](characters#guid).
+The GUID of the creature spawn. See [creature.guid](creature#guid).
 
 ### respawnTime
 
@@ -34,6 +34,6 @@ The time when the creature should be respawned in Unix time.
 
 The map ID where this creature respawn entry applies.
 
-### instance
+### instanceId
 
 If the creature was killed in an instance, this field holds the instance ID where this creature should be respawned. Each instance is different depending on the group so this field is vital in keeping track of which creatures should be respawned for which players at what time.

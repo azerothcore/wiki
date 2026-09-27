@@ -38,7 +38,7 @@ The localized text that the male creature will broadcast, or male players can r
 
 The localized text that the female creature will broadcast, or female players can read from gossip menu.
 
-#### WDBVerified
+### VerifiedBuild
 
 This field is used by the AzerothCore Team to determine whether a template has been verified from WDB files (ADB files for this one).
 

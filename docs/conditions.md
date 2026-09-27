@@ -72,6 +72,13 @@ See above.
 
 See above.
 
+### SourceId
+
+Only used by two source types, and must be 0 for all others:
+
+- `CONDITION_SOURCE_TYPE_SMART_EVENT` (22): the [smart\_scripts.source\_type](smart_scripts#sourcetype) of the script.
+- `CONDITION_SOURCE_TYPE_OBJECT_VISIBILITY` (30): the GUID of a single creature or gameobject spawn, or 0 for all spawns of the entry.
+
 ### ElseGroup
 
 Allows building grouped conditions - all entries belonging to the same condition (same [SourceType](#sourcetypeorreferenceid), [SourceGroup](#sourcegroup) and [SourceEntry](#sourceentry)) that share the same number in ElseGroup, define one group. The **entire condition** is met when **any of its groups** is met (logical OR). The **group** is met when **all of its entries are met** (logical AND).

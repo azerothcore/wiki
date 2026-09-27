@@ -63,7 +63,7 @@ IDs from Emotes.dbc
 
 The delays of the broadcast emotes.
 
-### SoundId
+### SoundEntriesId
 
 The sounds played when the texts are broadcast.
 
@@ -77,7 +77,7 @@ An emote.
 
  
 
-#### VerifiedBuild
+### VerifiedBuild
 
 This field was used to determine whether a template has been verified from WDB files (ADB files for this one).
 

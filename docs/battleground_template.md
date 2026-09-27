@@ -98,10 +98,22 @@ The location where the horde players get teleported to when the battleground fir
 
 The orientation of the horde players upon teleport into the battleground. North is 0, south is Pi (3.14159).
 
+### StartMaxDist
+
+Maximum distance in yards a player can be from their team's start location before the battleground starts. Players who move further are teleported back to the start location. 0 turns the check off.
+
 ### Weight
 
 Determines what battleground(s) will be more frequently chosen when using Random Battleground.
 For example: If you want AV to be less often chosen, give 2 and for all other give 3.
+
+### ScriptName
+
+Name of the script the battleground uses.
+
+### Comment
+
+Name of the battleground. Only used to make the table easier to read.
 
 ### Example
 

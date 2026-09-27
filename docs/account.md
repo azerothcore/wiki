@@ -117,6 +117,10 @@ The date when the account was created.
 
 The last IP used by the person who logged in the account.
 
+### last\_attempt\_ip
+
+The IP of the last attempt to log in to the world server with this account, whether it worked or not. The `.account lock ip` command locks the account to this IP. If `AllowLoggingIPAddressesInDatabase` is disabled in the config, 0.0.0.0 is stored instead.
+
 ### failed\_logins
 
 The number of failed logins attempted on the account.
@@ -124,6 +128,10 @@ The number of failed logins attempted on the account.
 ### locked
 
 Boolean 0 or 1 controlling if the account has been locked or not. This can be controlled with the ".account lock" GM command. If locked (1), the user can only log in with their [last_ip][11]. If unlocked (0), a user can log in from any IP, and their last_ip will be updated if it is different. ".Ban account" does not lock it.
+
+### lock\_country
+
+The two-letter country code the account is locked to, set with the `.account lock country` command. The auth server only allows logins from IPs in this country. `00` means the account is not locked to a country.
 
 ### last\_login
 
