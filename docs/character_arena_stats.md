@@ -36,7 +36,7 @@ Arena slot index:
 | 1     | 3v3         |
 | 2     | 5v5         |
 
-### matchmakerRating
+### matchMakerRating
 
 Player's matchmaker rating.
 
