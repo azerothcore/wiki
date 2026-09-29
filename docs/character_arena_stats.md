@@ -12,7 +12,7 @@ This table holds information about character's matchmaker rating in all team typ
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [guid][1]             | INT         | UNSIGNED   | PRI | NO   |         |       |         |
 | [slot][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [matchmakerRating][3] | SMALLINT    | UNSIGNED   |     | NO   |         |       |         |
+| [matchMakerRating][3] | SMALLINT    | UNSIGNED   |     | NO   |         |       |         |
 | [maxMMR][4]           | SMALLINT    | SIGNED     |     | NO   |         |       |         |
 
 [1]: #guid
