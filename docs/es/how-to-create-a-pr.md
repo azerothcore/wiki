@@ -174,6 +174,8 @@ git commit
 Se te pedirá que especifique un mensaje de confirmación apropiado. Por favor, siga las pautas de formato aquí (= cada línea que empieza por un # que será ignorado en el mensaje de confirmación), y puede referirse a una confirmación como [esto](https://github.com/azerothcore/mod-npc-beastmaster/commit/53cf90233091db2191b522f0fa7c4b6009dca22e) como un ejemplo.
 Si estas usando `Nano`, pressiona [ctrl]+[x] y escribe yes para guardar y salir (los otros comandos estan escritos abajo de la interfaz en `Nano`, y pueden ser encontrados facilmente en la net o escribiendo `man nano` en la terminal).
 
+Consulta las [pautas para mensajes de commit](commit-message-guidelines) para ver los tipos, ámbitos y ejemplos aceptados.
+
 Verifica que estás satisfecho usando `git show`. Y sal usando [q]. Si no estas satisfecho, puedes hacer un recommit al **último commit local** escribiendo `git commit --amend`.
 
 Ahora es el momento de hacer un push remotamente. 

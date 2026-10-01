@@ -19,7 +19,7 @@ Basically all achievement changes made when player changes faction.
 
 ### alliance_id
 
-This is the alliance achievement ID. If you convert to horde and your achievements have a record in his table, they will be converted to [\#horde_id](##hordeid)
+This is the alliance achievement ID. If you convert to horde and your achievements have a record in his table, they will be converted to [\#horde_id](#hordeid)
 
 ### alliance_comment
 

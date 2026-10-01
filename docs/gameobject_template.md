@@ -40,7 +40,7 @@ Contains template of all gameobjects
 | data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
 | ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
-| WDBVerified    | SMALLINT     | SIGNED     |     | YES  | 1       |       |         |
+| VerifiedBuild    | INT          |            |     | YES  | NULL    |       |         |
 
 ## Description of the fields
 
@@ -70,9 +70,9 @@ Id of the gameobject template. `WDB-fields`
 | GAMEOBJECT_TYPE_MO_TRANSPORT          | 15    |
 | GAMEOBJECT_TYPE_DUEL_ARBITER          | 16    |
 | GAMEOBJECT_TYPE_FISHINGNODE           | 17    |
-| GAMEOBJECT_TYPE_RITUAL                | 18    |
+| GAMEOBJECT_TYPE_SUMMONING_RITUAL      | 18    |
 | GAMEOBJECT_TYPE_MAILBOX               | 19    |
-| GAMEOBJECT_TYPE_AUCTIONHOUSE          | 20    |
+| GAMEOBJECT_TYPE_DO_NOT_USE            | 20    |
 | GAMEOBJECT_TYPE_GUARDPOST             | 21    |
 | GAMEOBJECT_TYPE_SPELLCASTER           | 22    |
 | GAMEOBJECT_TYPE_MEETINGSTONE          | 23    |
@@ -80,7 +80,7 @@ Id of the gameobject template. `WDB-fields`
 | GAMEOBJECT_TYPE_FISHINGHOLE           | 25    |
 | GAMEOBJECT_TYPE_FLAGDROP              | 26    |
 | GAMEOBJECT_TYPE_MINI_GAME             | 27    |
-| GAMEOBJECT_TYPE_LOTTERY_KIOSK         | 28    |
+| GAMEOBJECT_TYPE_DO_NOT_USE_2          | 28    |
 | GAMEOBJECT_TYPE_CAPTURE_POINT         | 29    |
 | GAMEOBJECT_TYPE_AURA_GENERATOR        | 30    |
 | GAMEOBJECT_TYPE_DUNGEON_DIFFICULTY    | 31    |
@@ -120,7 +120,7 @@ Shows unique text in the object's casting bar when the object is used. `WDB-fiel
 
 ### unk1
 
-`field-no-description|7`
+A string sent to the client with the gameobject data. Its use is not known.
 
 ### size
 
@@ -128,7 +128,7 @@ Object's size must be set because graphic models can be resample. `WDB-fields`
 
 ### data0-23
 
-The content of the data fields depends on the [gameobject type](#gameobject_template-type)
+The content of the data fields depends on the [gameobject type](#type)
 
 *Values for these fields come from WDB and are not to be changed.*
 
@@ -151,7 +151,7 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 - data0: startOpen (State)
 - data1: open (LockId from Lock.dbc)
 - data2: autoClose (long unknown flag)
-- data3: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data3: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data4: noDamageImmune (Boolean flag)
 - data5: large? (Boolean flag)
 - data6: openTextID (Unknown Text ID)
@@ -164,7 +164,7 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 - data0: open (LockId from Lock.dbc)
 - data1: questList (unknown ID)
 - data2: pageMaterial (PageTextMaterial.dbc)
-- data3: gossipID (gossip\_menu\_option.menu\_id)
+- data3: gossipID ([gossip\_menu\_option.MenuID](gossip_menu_option#menuid))
 - data4: customAnim (unknown value from 1 to 4)
 - data5: noDamageImmune (Boolean flag)
 - data6: openTextID (broadcast\_text ID)
@@ -183,7 +183,7 @@ The content of the data fields depends on the [gameobject type](#gameobject_temp
 - data4: minRestock (Min successful loot attempts for Mining, Herbalism etc)
 - data5: maxRestock (Max successful loot attempts for Mining, Herbalism etc)
 - data6: lootedEvent (Event ID from table event\_scripts)
-- data7: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data7: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data8: questID ([quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) of completed quest)
 - data9: level (minimal level required to open this gameobject)
 - data10: losOK (Boolean flag)
@@ -219,7 +219,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_TRAP = 6**
 
-- data0: open (LockId from [Lock.dbc](lock) )
+- data0: open (LockId from [Lock.dbc](https://wowdev.wiki/DB/Lock) )
 - data1: level (npc equivalent level for casted spell)
 - data2: diameter (so radius \* 2)
 - data3: spell (Spell Id from [Spell.dbc](spell))
@@ -251,7 +251,7 @@ Object type not used
 
 - data0: spellFocusType (from SpellFocusObject.dbc; value also appears as RequiresSpellFocus in [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
 - data1: diameter (so radius\*2)
-- data2: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+- data2: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data3: serverOnly? (Always 0)
 - data4: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 - data5: large? (Boolean flag)
@@ -261,7 +261,7 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_TEXT = 9**
 
--   data0: pageID ([page\_text.entry](page_text_2130246.html#page_text-entry))
+-   data0: pageID ([page\_text.ID](page_text#id))
 -   data1: language (from  [Languages.dbc](languages))
 -   data2: pageMaterial ([PageTextMaterial.dbc](pagetextmaterial))
 -   data3: allowMounted
@@ -270,19 +270,19 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_GOOBER = 10**
 
--   data0: open (LockId from [Lock.dbc](lock))
+-   data0: open (LockId from [Lock.dbc](https://wowdev.wiki/DB/Lock))
 -   data1: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)
 -   data2: eventID (event\_script id)
 -   data3:  Time in ms before the initial state is restored
 -   data4: customAnim (unknown)
 -   data5: consumable (Boolean flag controling if gameobject will despawn or not)
 -   data6: cooldown (time is seconds)
--   data7: pageID ([page\_text.entry](http://www.azerothcore.org/wiki/page_text#entry))
+-   data7: pageID ([page\_text.ID](page_text#id))
 -   data8: language (from Languages.dbc)
 -   data9: pageMaterial (PageTextMaterial.dbc)
 -   data10: spell (Spell Id from Spell.dbc)
 -   data11: noDamageImmune (Boolean flag)
--   data12: linkedTrap ([gameobject\_template.entry](#gameobject_template-entry) (Spawned GO type 6))
+-   data12: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 -   data13: large? (Boolean flag)
 -   data14: openTextID (Unknown ID)
 -   data15: closeTextID (Unknown ID)
@@ -333,8 +333,8 @@ Object type not used
 
 **GAMEOBJECT\_TYPE\_CAMERA = 13**
 
--   data0: open (LockId from [Lock.dbc](lock))
--   data1: camera (Cinematic entry from [CinematicCamera.dbc](cinematiccamera))
+-   data0: open (LockId from [Lock.dbc](https://wowdev.wiki/DB/Lock))
+-   data1: camera (Cinematic entry from [CinematicCamera.dbc](https://wowdev.wiki/DB/CinematicCamera))
 -   data2: eventID
 -   data3: openTextID
 -   data4: conditionID1
@@ -343,9 +343,9 @@ Object type not used
 
 No data used, all are always 0
 
-**GAMEOBJECT\_TYPE\_MOTRANSPORT = 15**
+**GAMEOBJECT\_TYPE\_MO\_TRANSPORT = 15**
 
--   data0: taxiPathID (Id from [TaxiPath.dbc](taxipath))
+-   data0: taxiPathID (Id from [TaxiPath.dbc](https://wowdev.wiki/DB/TaxiPath))
 -   data1: moveSpeed
 -   data2: accelRate
 -   data3: startEventID
@@ -365,7 +365,7 @@ Only one Gameobject with this type (21680) and no data data
 
 Only one Gameobject with this type (35591) and no data data
 
-**GAMEOBJECT\_TYPE\_RITUAL = 18**
+**GAMEOBJECT\_TYPE\_SUMMONING\_RITUAL = 18**
 
 -   data0: casters?
 -   data1: spell (Spell Id from [Spell.dbc](spell))
@@ -381,7 +381,9 @@ Only one Gameobject with this type (35591) and no data data
 
 No data used, all are always 0
 
-**GAMEOBJECT\_TYPE\_AUCTIONHOUSE = 20**
+**GAMEOBJECT\_TYPE\_DO\_NOT\_USE = 20**
+
+An auction house type in the client, not used by the core.
 
 -   data0: actionHouseID (From [AuctionHouse.dbc](auctionhouse) ?)
 
@@ -409,7 +411,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_FLAGSTAND = 24**
 
--   data0: open (LockId from [Lock.dbc](lock))
+-   data0: open (LockId from [Lock.dbc](https://wowdev.wiki/DB/Lock))
 -   data1: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data2: radius (distance)
 -   data3: returnAura (Spell Id from [Spell.dbc](spell))
@@ -433,7 +435,7 @@ No data used, all are always 0
 
 **GAMEOBJECT\_TYPE\_FLAGDROP = 26**
 
--   data0: open (LockId from [Lock.dbc](lock))
+-   data0: open (LockId from [Lock.dbc](https://wowdev.wiki/DB/Lock))
 -   data1: eventID (Unknown Event ID)
 -   data2: pickupSpell (Spell Id from [Spell.dbc](spell))
 -   data3: noDamageImmune (Boolean flag)
@@ -444,17 +446,17 @@ No data used, all are always 0
 -   data8: InfiniteAOI
 -   data9: cooldown
 
-**GAMEOBJECT\_TYPE\_MINIGAME = 27**
+**GAMEOBJECT\_TYPE\_MINI\_GAME = 27**
 
 Object type not used. Reused in core for CUSTOM\_TELEPORT
 
 -   data0: [areatrigger\_teleport.id](http://www.azerothcore.org/wiki/areatrigger_teleport#id)
 
-**GAMEOBJECT\_TYPE\_LOTTERYKIOSK = 28**
+**GAMEOBJECT\_TYPE\_DO\_NOT\_USE\_2 = 28**
 
 Object type not used
 
-**GAMEOBJECT\_TYPE\_CAPTUREPOINT = 29**
+**GAMEOBJECT\_TYPE\_CAPTURE\_POINT = 29**
 
 -   data0: radius (Distance)
 -   data1: spell (Unknown ID, not a spell id in dbc file, maybe server only side spell)
@@ -481,7 +483,7 @@ Object type not used
 -   data22: killbonustime
 -   data23: speedWorldState1
 
-**GAMEOBJECT\_TYPE\_AURAGENERATOR = 30**
+**GAMEOBJECT\_TYPE\_AURA\_GENERATOR = 30**
 
 -   data0: startOpen (Boolean flag)
 -   data1: radius (Distance)
@@ -491,7 +493,7 @@ Object type not used
 -   data5: conditionID2
 -   data6: serverOnly
 
-**GAMEOBJECT\_TYPE\_DUNGEONDIFFICULTY = 31**
+**GAMEOBJECT\_TYPE\_DUNGEON\_DIFFICULTY = 31**
 
 -   data0: mapID (From [Map.dbc](map))
 -   data1: difficulty
@@ -570,4 +572,10 @@ Note: Only `SmartGameObjectAI` can be used in this field, do not use `SmartAI`
 
 Name of the script this object uses if needed
 
-`WDBVerified`
+### VerifiedBuild
+
+This field is used to determine if this gameobject template originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.

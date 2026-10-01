@@ -4,7 +4,7 @@
 
 **The \`warden\_action\` table**
 
-`table-no-description`
+Overrides the action taken when a player fails a [Warden check](warden_checks).
 
 **Table Structure**
 
@@ -20,8 +20,12 @@
 
 ### wardenid
 
-`field-no-description|1`
+The check. See [warden\_checks.id](warden_checks#id).
 
 ### action
 
-`field-no-description|2`
+| Value | Action |
+| ----- | ------ |
+| 0     | Log    |
+| 1     | Kick   |
+| 2     | Ban    |

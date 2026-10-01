@@ -55,34 +55,34 @@ The type of action performed by the script after [delay](#delay) seconds have pa
 
 | Command | Name                                                               | Description                                                              |
 | ------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| 0       | [TALK](#script_command_talk--0)                                    | Creature say/whisper/yell/textemote.                                     |
-| 1       | [EMOTE](#script_command_emote--1)                                  | Play emote on creature.                                                  |
-| 2       | [FIELD\_SET](#script_command_field_set--2)                         | Change the value at an index for the player.                             |
-| 3       | [MOVE\_TO](#script_command_move_to--3)                             | Relocate creature to a destination.                                      |
-| 4       | [FLAG\_SET](#script_command_flag_set--4)                           | Turns on bits on a flag field at an index for the player.                |
-| 5       | [FLAG\_REMOVE](#script_command_flag_remove--5)                     | Turns off bits on a flag field at an index for the player.               |
-| 6       | [TELEPORT\_TO](#script_command_teleport_to--6)                     | Teleports the player to a location.                                      |
-| 7       | [QUEST\_EXPLORED](#script_command_quest_explored--7)               | Satisfies the explore requirement for a quest.                           |
-| 8       | [KILL\_CREDIT](#script_command_kill_credit--8)                     | Gives kill credit to the player.                                         |
-| 9       | [RESPAWN\_GAMEOBJECT](#script_command_respawn_gameobject--9)       | Spawns a despawned gameobject.                                           |
-| 10      | [TEMP\_SUMMON\_CREATURE](#script_command_temp_summon_creature--10) | Temporarily summons a creature.                                          |
-| 11      | [OPEN\_DOOR](#script_command_open_door--11)                        | Opens a door gameobject (type h1. 0).                                    |
-| 12      | [CLOSE\_DOOR](#script_command_close_door--12)                      | Closes a door gameobject (type 0).                                       |
-| 13      | [ACTIVATE\_OBJECT](#script_command_activate_object--13)            | Activates an object.                                                     |
-| 14      | [REMOVE\_AURA](#script_command_remove_aura--14)                    | Removes an aura due to a spell.                                          |
-| 15      | [CAST\_SPELL](#script_command_cast_spell--15)                      | Casts a spell.                                                           |
-| 16      | [PLAY\_SOUND](#script_command_play_sound--16)                      | Plays a sound.                                                           |
-| 17      | [CREATE\_ITEM](#script_command_create_item--17)                    | Creates specified amount of items for the player.                        |
-| 18      | [DESPAWN\_SELF](#script_command_despawn_self--18)                  | Forces creature to despawn.                                              |
-| 20      | [LOAD\_PATH](#script_command_load_path--20)                        | Load path to unit, then unit starts waypoint movement.                   |
-| 21      | [CALLSCRIPT\_TO\_UNIT](#script_command_callscript_to_unit--21)     | Calls script from one of \*\_scripts table with given unit as source.    |
-| 22      | [KILL](#script_command_kill--22)                                   | Changes state of the creature to dead and optionally removes its corpse. |
-| 30      | [ORIENTATION](#script_command_orientation--30)                     | Changes unit's orientation (Used in Waypoint Scripts)                    |
-| 31      | [EQUIP](#script_command_equip--31)                                 | Sets creature equipment.                                                 |
-| 32      | [MODEL](#script_command_model--32)                                 | Sets creature model.                                                     |
-| 33      | [CLOSE\_GOSSIP](#script_command_close_gossip--33)                  | Closes gossip window. This command is only used for Gossip Scripts.      |
-| 34      | [PLAYMOVIE](#script_command_playmovie--34)                         | Plays movie.                                                             |
-| 35      | [MOVEMENT](#script_command_movement--35)                           | Change movement type.                                                    |
+| 0       | [TALK](#scriptcommandtalk--0)                                      | Creature say/whisper/yell/textemote.                                     |
+| 1       | [EMOTE](#scriptcommandemote--1)                                    | Play emote on creature.                                                  |
+| 2       | [FIELD\_SET](#scriptcommandfieldset--2)                            | Change the value at an index for the player.                             |
+| 3       | [MOVE\_TO](#scriptcommandmoveto--3)                                | Relocate creature to a destination.                                      |
+| 4       | [FLAG\_SET](#scriptcommandflagset--4)                              | Turns on bits on a flag field at an index for the player.                |
+| 5       | [FLAG\_REMOVE](#scriptcommandflagremove--5)                        | Turns off bits on a flag field at an index for the player.               |
+| 6       | [TELEPORT\_TO](#scriptcommandteleportto--6)                        | Teleports the player to a location.                                      |
+| 7       | [QUEST\_EXPLORED](#scriptcommandquestexplored--7)                  | Satisfies the explore requirement for a quest.                           |
+| 8       | [KILL\_CREDIT](#scriptcommandkillcredit--8)                        | Gives kill credit to the player.                                         |
+| 9       | [RESPAWN\_GAMEOBJECT](#scriptcommandrespawngameobject--9)          | Spawns a despawned gameobject.                                           |
+| 10      | [TEMP\_SUMMON\_CREATURE](#scriptcommandtempsummoncreature--10)     | Temporarily summons a creature.                                          |
+| 11      | [OPEN\_DOOR](#scriptcommandopendoor--11)                           | Opens a door gameobject (type h1. 0).                                    |
+| 12      | [CLOSE\_DOOR](#scriptcommandclosedoor--12)                         | Closes a door gameobject (type 0).                                       |
+| 13      | [ACTIVATE\_OBJECT](#scriptcommandactivateobject--13)               | Activates an object.                                                     |
+| 14      | [REMOVE\_AURA](#scriptcommandremoveaura--14)                       | Removes an aura due to a spell.                                          |
+| 15      | [CAST\_SPELL](#scriptcommandcastspell--15)                         | Casts a spell.                                                           |
+| 16      | [PLAY\_SOUND](#scriptcommandplaysound--16)                         | Plays a sound.                                                           |
+| 17      | [CREATE\_ITEM](#scriptcommandcreateitem--17)                       | Creates specified amount of items for the player.                        |
+| 18      | [DESPAWN\_SELF](#scriptcommanddespawnself--18)                     | Forces creature to despawn.                                              |
+| 20      | [LOAD\_PATH](#scriptcommandloadpath--20)                           | Load path to unit, then unit starts waypoint movement.                   |
+| 21      | [CALLSCRIPT\_TO\_UNIT](#scriptcommandcallscripttounit--21)         | Calls script from one of \*\_scripts table with given unit as source.    |
+| 22      | [KILL](#scriptcommandkill--22)                                     | Changes state of the creature to dead and optionally removes its corpse. |
+| 30      | [ORIENTATION](#scriptcommandorientation--30)                       | Changes unit's orientation (Used in Waypoint Scripts)                    |
+| 31      | [EQUIP](#scriptcommandequip--31)                                   | Sets creature equipment.                                                 |
+| 32      | [MODEL](#scriptcommandmodel--32)                                   | Sets creature model.                                                     |
+| 33      | [CLOSE\_GOSSIP](#scriptcommandclosegossip--33)                     | Closes gossip window. This command is only used for Gossip Scripts.      |
+| 34      | [PLAYMOVIE](#scriptcommandplaymovie--34)                           | Plays movie.                                                             |
+| 35      | [MOVEMENT](#scriptcommandmovement--35)                             | Change movement type.                                                    |
 
 ### OtherFields
 

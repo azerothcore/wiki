@@ -1,69 +1,34 @@
-# item\_set\_names\_locale
+# item_set_names_locale
 
 [<-Back-to:World](database-world)
 
-**The \`item\_set\_names\_locale\` table**
+**The \`item_set_names_locale\` table**
 
-`table-no-description`
+This table is used to provide localized clients with localized strings for item set names.
 
 **Table Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]     | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [name_loc1][2] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc2][3] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc3][4] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc4][5] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc5][6] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc6][7] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc7][8] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-| [name_loc8][9] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
-
-[1]: #entry
-[2]: #name_loc1
-[3]: #name_loc2
-[4]: #name_loc3
-[5]: #name_loc4
-[6]: #name_loc5
-[7]: #name_loc6
-[8]: #name_loc7
-[9]: #name_loc8
+| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id) | INT | UNSIGNED | PRI | NO | 0 |  |  |
+| [locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
+| [Name](#name) | TEXT |  |  | YES |  |  |  |
+| [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
 **Description of the fields**
 
-### gentry
+### ID
 
-`field-no-description|1`
+This must match [item_set_names.entry](item_set_names#entry).
 
-### name\_loc1
+### locale
 
-`field-no-description|2`
+The locale (language code) for this row. There is one row per non-default locale, so a single record can have up to 8 translated variants here. Valid values: `koKR`, `frFR`, `deDE`, `zhCN`, `zhTW`, `esES`, `esMX`, `ruRU`. The default `enUS` text is stored in the base table, not here.
 
-### name\_loc2
+### Name
 
-`field-no-description|3`
+Translated [item_set_names.name](item_set_names#name) for this locale.
 
-### name\_loc3
+### VerifiedBuild
 
-`field-no-description|4`
-
-### name\_loc4
-
-`field-no-description|5`
-
-### name\_loc5
-
-`field-no-description|6`
-
-### name\_loc6
-
-`field-no-description|7`
-
-### name\_loc7
-
-`field-no-description|8`
-
-### name\_loc8
-
-`field-no-description|9`
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.

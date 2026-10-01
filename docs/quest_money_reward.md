@@ -10,17 +10,17 @@ This table enables dynamically rewarding money dependent on player's level.
 
 | Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Level](#Level)   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Money0](#Money0) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money1](#Money1) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money2](#Money2) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money3](#Money3) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money4](#Money4) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money5](#Money5) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money6](#Money6) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money7](#Money7) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money8](#Money8) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money9](#Money9) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Level](#level)   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Money0](#money0) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money1](#money1) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money2](#money2) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money3](#money3) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money4](#money4) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money5](#money5) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money6](#money6) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money7](#money7) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money8](#money8) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [Money9](#money9) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 **Description of the fields:**
 

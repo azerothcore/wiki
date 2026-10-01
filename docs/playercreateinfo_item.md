@@ -20,7 +20,7 @@ This table is used for any custom items that you might want to give to character
 [2]: #class
 [3]: #itemid
 [4]: #amount
-[5]: #Note
+[5]: #note
 
 **Description of the fields**
 

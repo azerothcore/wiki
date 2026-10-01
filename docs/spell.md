@@ -275,4 +275,4 @@ These values are used by the core and a few spell\_\* tables.
 ## **RequiresSpellFocus**
 
 Indicates that this spell needs a GO near (e.g. forges).
-Required object has the type GAMEOBJECT\_TYPE\_SPELLFOCUS and data0 matches the RequiresSpellFocus value.
+Required object has the type GAMEOBJECT\_TYPE\_SPELL\_FOCUS and data0 matches the RequiresSpellFocus value.

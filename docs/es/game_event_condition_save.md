@@ -24,8 +24,8 @@ Este es un enlace a la entrada del evento en la tabla del game\_event.
 
 ### condition\_id
 
-Consulte  [game\_event\_condition.condition\_id](game_event_condition#condition_id).
+Consulte  [game\_event\_condition.condition\_id](game_event_condition#conditionid).
 
 ### done
 
-Indica cuánto se ha hecho. Consulte[game\_event\_condition.req\_num](game_event_condition#req_num).
+Indica cuánto se ha hecho. Consulte[game\_event\_condition.req\_num](game_event_condition#reqnum).

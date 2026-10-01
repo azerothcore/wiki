@@ -67,7 +67,7 @@ Allows to define a group of quests of which only one may be chosen and completed
 
 Allows to define a group of quests of which all must be completed and rewarded to start next quest. E.g. if quest 1000 dependent from one of quests 1200, 1201 and 1202 and all this quests have same negative exclusive group then all this quest must be completed and rewarded before quest 1000 can be started.
 
-Note: All quests that use an ExclusiveGroup must also have entries in [pool_template](pool_template) and [pool_quest](quest_template#examples-dealing-with-quests) for examples.
+Note: All quests that use an ExclusiveGroup must also have entries in [pool_template](pool_template) and [pool_quest](pool_quest).
 
 ### BreadcrumbForQuestId
 

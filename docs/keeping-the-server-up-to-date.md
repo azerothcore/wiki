@@ -1,6 +1,7 @@
 ---
-redirect_from: "/Update"
-redirect_from: "/update"
+redirect_from:
+  - "/Update"
+  - "/update"
 ---
 
 # Keeping the Server Up-to-Date

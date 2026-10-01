@@ -14,7 +14,7 @@ This table contains events that must have been completed to start the given even
 | [prerequisite_event][2] | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 
 [1]: #evententry
-[2]: #prerequisite_event
+[2]: #prerequisiteevent
 
 **Description of the fields**
 
@@ -24,4 +24,4 @@ This is the event that will start when all prerequisite events have been complet
 
 ### prerequisite\_event
 
-The is the event that must be completed before the next [event](#game_event_prerequisite-eventEntry) will start.
+The is the event that must be completed before the next [event](#evententry) will start.

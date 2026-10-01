@@ -20,7 +20,7 @@ This table is used to add a holiday to a battleground, for things like extra rep
 
 ### eventEntry
 
-[game_event.eventEntry](game_event#eventEntry)
+[game_event.eventEntry](game_event#evententry)
 
 ### bgflag
 

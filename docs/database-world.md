@@ -22,6 +22,7 @@
 - [broadcast_text_locale](broadcast_text_locale)
 
 ## C
+- [charsections_dbc](charsections_dbc)
 - [command](command)
 - [conditions](conditions)
 - [creature](creature)
@@ -30,13 +31,16 @@
 - [creature_default_trainer](creature_default_trainer)
 - [creature_equip_template](creature_equip_template)
 - [creature_formations](creature_formations)
+- [creature_immunities](creature_immunities)
 - [creature_loot_template](loot_template)
 - [creature_model_info](creature_model_info)
 - [creature_movement_override](creature_template_movement)
+- [creature_multispawn](creature_multispawn)
 - [creature_onkill_reputation](creature_onkill_reputation)
 - [creature_questender](creature_questender)
 - [creature_questitem](creature_questitem)
 - [creature_queststarter](creature_queststarter)
+- [creature_sparring](creature_sparring)
 - [creature_summon_groups](creature_summon_groups)
 - [creature_template](creature_template)
 - [creature_template_addon](creature_addon)
@@ -47,6 +51,8 @@
 - [creature_template_spell](creature_template_spell)
 - [creature_text](creature_text)
 - [creature_text_locale](creature_text_locale)
+- [creature_text_option_sets](creature_text_option_sets)
+- [creature_text_options](creature_text_options)
 
 ## D
 - [disables](disables)
@@ -55,6 +61,7 @@
 - [dungeon_access_template](dungeon_access_template)
 
 ## E
+- [emotestextsound_dbc](emotestextsound_dbc)
 - [event_scripts](scripts)
 - [exploration_basexp](exploration_basexp)
 
@@ -104,6 +111,8 @@
 - [item_set_names_locale](item_set_names_locale)
 - [item_template](item_template)
 - [item_template_locale](item_template_locale)
+- [itemextendedcost_dbc](itemextendedcost_dbc)
+- [itemset_dbc](itemset_dbc)
 
 ## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards)
@@ -147,6 +156,7 @@
 - [player_xp_for_level](player_xp_for_level)
 - [playercreateinfo](playercreateinfo)
 - [playercreateinfo_action](playercreateinfo_action)
+- [playercreateinfo_cast_spell](playercreateinfo_cast_spell)
 - [playercreateinfo_item](playercreateinfo_item)
 - [playercreateinfo_skills](playercreateinfo_skills)
 - [playercreateinfo_spell_custom](playercreateinfo_spell_custom)
@@ -179,25 +189,28 @@
 - [reference_loot_template](loot_template)
 - [reputation_reward_rate](reputation_reward_rate)
 - [reputation_spillover_template](reputation_spillover_template)
-- [script_waypoint](scripts)
+- [script_waypoint](script_waypoint)
 - [\*\*\_scripts](scripts)
 
 ## S
 - [skill_discovery_template](skill_discovery_template)
 - [skill_extra_item_template](skill_extra_item_template)
 - [skill_fishing_base_level](skill_fishing_base_level)
+- [skill_perfect_item_template](skill_perfect_item_template)
 - [skinning_loot_template](loot_template)
 - [smart_scripts](smart_scripts)
 - [spawn_group](spawn_group)
 - [spawn_group_template](spawn_group_template)
 - [spell_area](spell_area)
 - [spell_bonus_data](spell_bonus_data)
+- [spell_cone](spell_cone)
 - [spell_cooldown_overrides](spell_cooldown_overrides)
 - [spell_custom_attr](spell_custom_attr)
 - [spell_dbc](spell_dbc)
 - [spell_enchant_proc_data](spell_enchant_proc_data)
 - [spell_group](spell_group)
 - [spell_group_stack_rules](spell_group_stack_rules)
+- [spell_jump_distance](spell_jump_distance)
 - [spell_linked_spell](spell_linked_spell)
 - [spell_loot_template](loot_template)
 - [spell_mixology](spell_mixology)
@@ -224,6 +237,7 @@
 
 ## V
 - [vehicle_accessory](vehicle_accessory)
+- [vehicle_seat_addon](vehicle_seat_addon)
 - [vehicle_template_accessory](vehicle_template_accessory)
 - [version](version)
 

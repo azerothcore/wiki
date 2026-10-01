@@ -4,51 +4,120 @@
 
 **The \`achievement\_dbc\` table**
 
-Stores achievement data that is missing in [Achievement.dbc](achievement)
+This table has the same columns as [Achievement.dbc](achievement). The core loads it after the DBC file: a row adds an achievement that is not in Achievement.dbc, or replaces the achievement with the same [ID](#id).
+
+The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
 **Table Structure**
 
-| Field                | Type | Attributes | Key | Null | Default | Extra | Comment                                                                          |
-| -------------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------------------------------------------- |
-| [ID][1]              | INT  | UNSIGNED   | PRI | NO   |         |       |                                                                                  |
-| [requiredFaction][2] | INT  | SIGNED     |     | NO   | -1      |       |                                                                                  |
-| [mapID][3]           | INT  | SIGNED     |     | NO   | -1      |       |                                                                                  |
-| [points][4]          | INT  | UNSIGNED   |     | NO   | 0       |       | Achievement points awarded for completing the achievement, has no use serverside |
-| [flags][5]           | INT  | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
-| [count][6]           | INT  | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
-| [refAchievement][7]  | INT  | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
-
-[1]: #id
-[2]: #requiredfaction
-[3]: #mapid
-[4]: #points
-[5]: #flags
-[6]: #count
-[7]: #refachievement
+| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)                                 | INT          |            | PRI | NO   | 0       |       |         |
+| [Faction](#faction)                       | INT          |            |     | NO   | 0       |       |         |
+| [Instance_Id](#instanceid)                | INT          |            |     | NO   | 0       |       |         |
+| [Supercedes](#supercedes)                 | INT          |            |     | NO   | 0       |       |         |
+| [Title_Lang_enUS](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_enGB](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_koKR](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_frFR](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_deDE](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_enCN](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_zhCN](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_enTW](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_zhTW](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_esES](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_esMX](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_ruRU](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_ptPT](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_ptBR](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_itIT](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_Unk](#titlelang)              | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Title_Lang_Mask](#titlelang)             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [Description_Lang_enUS](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_enGB](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_koKR](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_frFR](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_deDE](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_enCN](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_enTW](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_esES](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_esMX](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_itIT](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [Category](#category)                     | INT          |            |     | NO   | 0       |       |         |
+| [Points](#points)                         | INT          |            |     | NO   | 0       |       |         |
+| [Ui_Order](#uiorder)                      | INT          |            |     | NO   | 0       |       |         |
+| [Flags](#flags)                           | INT          |            |     | NO   | 0       |       |         |
+| [IconID](#iconid)                         | INT          |            |     | NO   | 0       |       |         |
+| [Reward_Lang_enUS](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_enGB](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_koKR](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_frFR](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_deDE](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_enCN](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_zhCN](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_enTW](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_zhTW](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_esES](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_esMX](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_ruRU](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_ptPT](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_ptBR](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_itIT](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_Unk](#rewardlang)            | VARCHAR(100) |            |     | YES  | NULL    |       |         |
+| [Reward_Lang_Mask](#rewardlang)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [Minimum_Criteria](#minimumcriteria)      | INT          |            |     | NO   | 0       |       |         |
+| [Shares_Criteria](#sharescriteria)        | INT          |            |     | NO   | 0       |       |         |
 
 **Description of the fields**
 
 ### ID
 
-This is the ID of the achievement from [Achievement\_Criteria.dbc](Achievement+Criteria) (2nd column)
+The ID of the achievement. [Achievement\_Criteria.dbc](achievement_criteria) links criteria to it.
 
-### requiredFaction
+### Faction
 
-| Condition | Faction |
-| --------- | ------- |
-| Both      | -1      |
-| Horde     | 0       |
-| Alliance  | 1       |
+| Value | Faction |
+| ----- | ------- |
+| -1    | Both    |
+| 0     | Horde   |
+| 1     | Alliance |
 
-### mapID
+### Instance\_Id
 
-Condition: Player must be on that map to be allowed criteria updates (-1 if not set)
+Map ID the player must be on for the criteria to update. -1 if not set.
 
-### points
+### Supercedes
 
-Achievement points awarded for completing the achievement, has no use serverside
+ID of the achievement this one follows in a series. Not used by the core.
 
-### flags
+### Title\_Lang
+
+`Title_Lang_enUS` to `Title_Lang_Unk`, one column per client locale, and `Title_Lang_Mask`. The name of the achievement. The mask is not used by the core.
+
+### Description\_Lang
+
+`Description_Lang_enUS` to `Description_Lang_Unk` and `Description_Lang_Mask`. The description of the achievement. Not used by the core.
+
+### Category
+
+ID from Achievement\_Category.dbc of the category the achievement is listed under.
+
+### Points
+
+Achievement points awarded for completing the achievement. Has no use serverside.
+
+### Ui\_Order
+
+Position of the achievement in its category. Not used by the core.
+
+### Flags
 
 | Name                               | Value      | Comment                                                                                              |
 | ---------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------- |
@@ -63,10 +132,18 @@ Achievement points awarded for completing the achievement, has no use serverside
 | ACHIEVEMENT_FLAG_REALM_FIRST_REACH | 0x00000100 |                                                                                                      |
 | ACHIEVEMENT_FLAG_REALM_FIRST_KILL  | 0x00000200 |                                                                                                      |
 
-### count
+### IconID
 
-Should always be 1.
+ID from SpellIcon.dbc of the achievement's icon. Not used by the core.
 
-### refAchievement
+### Reward\_Lang
 
-Should always be 0.
+`Reward_Lang_enUS` to `Reward_Lang_Unk` and `Reward_Lang_Mask`. The reward text, for example "Reward: Title - Explorer". Not used by the core.
+
+### Minimum\_Criteria
+
+Number of criteria that must be completed to earn the achievement. 0 means all criteria.
+
+### Shares\_Criteria
+
+ID of another achievement whose criteria this achievement uses. 0 if the achievement has its own criteria.

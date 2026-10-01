@@ -4,7 +4,7 @@
 
 **The \`locales\_points\_of\_interest\` table**
 
-`table-no-description`
+Translations of the names in [points\_of\_interest](points_of_interest).
 
 **Table Structure**
 
@@ -19,17 +19,15 @@
 
 ### ID
 
-`field-no-description|1`
+The point of interest. See [points\_of\_interest.ID](points_of_interest#id).
 
 ### locale
 
-`field-no-description|2`
+The locale of the translation, for example `deDE`.
 
 ### Name
 
-`field-no-description|3`
-
-### VerifiedBuild
+The translated name of the point.
 
 ### VerifiedBuild
 

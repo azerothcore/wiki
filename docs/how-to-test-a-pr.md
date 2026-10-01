@@ -27,7 +27,7 @@ You need to:
 
 ### What if the PR has only DB changes?
 
-Some PRs have only database changes (no C++ changes). If that's the case, there is a [simplified procedure to test such changes](How-to-test-DB-only-changes).
+Some PRs have only database changes (no C++ changes). If that's the case, there is a [simplified procedure to test such changes](how-to-test-db-only-changes).
 
 If you're not sure, just keep reading here and do the traditional PR test which will work for all kind of PRs.
 
@@ -80,7 +80,7 @@ Basically you need to **recompile your sources** and **update the DB**.
 
 ### Using traditional setup
 
-If you are using the traditional setup, you have to recompile following the steps of the [3) Compiling](Installation#3-compiling) from the main setup guide.
+If you are using the traditional setup, you have to recompile following the steps of the [Core Installation](core-installation) from the main setup guide.
 
 You also need to update your DB. You can use the DB assembler to do that, but usually it's quicker to just manually importing the pending sql file(s) that the PR includes. Such file(s) are located under `data/sql/updates/pending_db_*`.
 
@@ -108,6 +108,8 @@ then to launch the server you have to destroy and recreate the containers using 
 To make sure you are correctly running your server with the PR, check the date and branch name in the output of the `server info` command. They should match with the PR.
 
 Now log in game and do your tests!
+
+Official PRs also run [live e2e tests](live-e2e) in CI (full authserver + worldserver, protocol bots). That is extra coverage. It does not replace the in-game checks on this page.
 
 ## What needs to be tested?
 

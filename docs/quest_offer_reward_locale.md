@@ -47,6 +47,12 @@ This is the text that is displayed when the quest is delivered. That is, before 
 
 ### VerifiedBuild
 
+This field is used to determine if this translation originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.
+
 ### Example
 ```sql
 DELETE FROM `quest_offer_reward_locale` WHERE `ID`=2 AND `locale`='esES';

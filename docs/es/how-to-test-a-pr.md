@@ -18,12 +18,12 @@ Al hacer clic en la etiqueta de arriba se mostrará la lista de todos los PRs qu
 
 Es necesario:
 
-- Tener AzerothCore instalado en tu sistema (ver [Instalación](es/installation)).
+- Tener AzerothCore instalado en tu sistema (ver [Instalación](installation)).
 - Tener una cuenta en GitHub, puede [registrar una aquí](https://github.com/join) de forma gratuita.
 
 ### ¿Y si el PR sólo tiene cambios en la BD (base de datos)?
 
-Algunos PRs sólo tienen cambios en la base de datos (sin cambios en C++). Si ese es el caso, hay un [procedimiento simplificado para probar esos cambios](es/How-to-test-DB-only-changes).
+Algunos PRs sólo tienen cambios en la base de datos (sin cambios en C++). Si ese es el caso, hay un [procedimiento simplificado para probar esos cambios](How-to-test-DB-only-changes).
 
 Si no estás seguro, sigue leyendo aquí y haz la prueba tradicional de PR que servirá para todo tipo de PR.
 
@@ -94,7 +94,7 @@ Básicamente necesitas **recompilar tus fuentes** y **actualizar la BD**.
 
 ### Utilizando la configuración tradicional
 
-Si está utilizando la instalación tradicional, tiene que volver a compilar siguiendo los pasos de la [3) Compilación](es/instalación#3-compilación) de la guía de instalación principal.
+Si está utilizando la instalación tradicional, tiene que volver a compilar siguiendo los pasos de la [3) Compilación](installation#3-compiling) de la guía de instalación principal.
 
 También necesita actualizar su DB. Puede utilizar el ensamblador de BD para hacerlo, pero normalmente es más rápido importar manualmente los archivos sql pendientes que incluye el PR. Estos archivos se encuentran en `data/sql/updates/pending_db_*`.
 
@@ -129,6 +129,9 @@ Entonces para lanzar el servidor tienes que destruir y recrear los contenedores 
 Para asegurarse de que está ejecutando correctamente su servidor con el PR, compruebe la fecha y el nombre de la rama en la salida del comando `server info`. Deben coincidir con el PR.
 
 Ahora entra en el juego y haz tus pruebas.
+
+Los PRs oficiales también ejecutan [pruebas e2e en vivo](live-e2e) en CI (authserver + worldserver completo, bots de protocolo). Eso es cobertura extra. No reemplaza las verificaciones dentro del juego de esta página.
+
 
 ## ¿Qué hay que probar?
 

@@ -1,0 +1,569 @@
+# gameobject\_template
+
+包含所有游戏对象（gameobject）的模板
+
+## 结构
+
+| 字段          | 类型         | 属性     | 键 | 空 | 默认值 | 额外 | 注释 |
+| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| entry          | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| type           | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| displayId      | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
+| name           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| IconName       | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| castBarCaption | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| unk1           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| size           | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
+| data0          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data1          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
+| data2          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data3          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data4          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data5          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data6          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
+| data7          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data8          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data9          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data10         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data11         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data12         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data13         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data14         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data15         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data16         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data17         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data18         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data19         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data20         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data21         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data22         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
+| ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
+| VerifiedBuild    | INT          |            |     | YES  | NULL    |       |         |
+
+## 字段说明
+
+### entry
+
+游戏对象模板的 ID。`WDB-fields`
+
+### type
+
+| 名称                                  | 值 |
+| ------------------------------------- | ----- |
+| GAMEOBJECT_TYPE_DOOR                  | 0     |
+| GAMEOBJECT_TYPE_BUTTON                | 1     |
+| GAMEOBJECT_TYPE_QUESTGIVER            | 2     |
+| GAMEOBJECT_TYPE_CHEST                 | 3     |
+| GAMEOBJECT_TYPE_BINDER                | 4     |
+| GAMEOBJECT_TYPE_GENERIC               | 5     |
+| GAMEOBJECT_TYPE_TRAP                  | 6     |
+| GAMEOBJECT_TYPE_CHAIR                 | 7     |
+| GAMEOBJECT_TYPE_SPELL_FOCUS           | 8     |
+| GAMEOBJECT_TYPE_TEXT                  | 9     |
+| GAMEOBJECT_TYPE_GOOBER                | 10    |
+| GAMEOBJECT_TYPE_TRANSPORT             | 11    |
+| GAMEOBJECT_TYPE_AREADAMAGE            | 12    |
+| GAMEOBJECT_TYPE_CAMERA                | 13    |
+| GAMEOBJECT_TYPE_MAP_OBJECT            | 14    |
+| GAMEOBJECT_TYPE_MO_TRANSPORT          | 15    |
+| GAMEOBJECT_TYPE_DUEL_ARBITER          | 16    |
+| GAMEOBJECT_TYPE_FISHINGNODE           | 17    |
+| GAMEOBJECT_TYPE_RITUAL                | 18    |
+| GAMEOBJECT_TYPE_MAILBOX               | 19    |
+| GAMEOBJECT_TYPE_AUCTIONHOUSE          | 20    |
+| GAMEOBJECT_TYPE_GUARDPOST             | 21    |
+| GAMEOBJECT_TYPE_SPELLCASTER           | 22    |
+| GAMEOBJECT_TYPE_MEETINGSTONE          | 23    |
+| GAMEOBJECT_TYPE_FLAGSTAND             | 24    |
+| GAMEOBJECT_TYPE_FISHINGHOLE           | 25    |
+| GAMEOBJECT_TYPE_FLAGDROP              | 26    |
+| GAMEOBJECT_TYPE_MINI_GAME             | 27    |
+| GAMEOBJECT_TYPE_LOTTERY_KIOSK         | 28    |
+| GAMEOBJECT_TYPE_CAPTURE_POINT         | 29    |
+| GAMEOBJECT_TYPE_AURA_GENERATOR        | 30    |
+| GAMEOBJECT_TYPE_DUNGEON_DIFFICULTY    | 31    |
+| GAMEOBJECT_TYPE_BARBER_CHAIR          | 32    |
+| GAMEOBJECT_TYPE_DESTRUCTIBLE_BUILDING | 33    |
+| GAMEOBJECT_TYPE_GUILD_BANK            | 34    |
+| GAMEOBJECT_TYPE_TRAPDOOR              | 35    |
+
+### displayId
+
+从 GameObjectDisplayInfo.dbc 发送给客户端的图形模型 ID。`WDB-fields`
+
+### name
+
+对象的名称。`WDB-fields`
+
+### IconName
+
+工作方式与 creature\_template 的 IconName 完全相同。
+
+可用的 iconname
+
+- Taxi
+- Talk
+- Attack
+- Directions
+- Quest
+
+尝试让 Quest（黄色感叹号）正常工作可能会遇到一些小问题。
+不过，其余列出的图标均可正常工作。
+
+`WDB-fields`
+
+### castBarCaption
+
+当对象被使用时，在对象的施法条中显示唯一文本。`WDB-fields`
+
+### unk1
+
+`field-no-description|7`
+
+### size
+
+必须设置对象的大小，因为图形模型可以被缩放。`WDB-fields`
+
+### data0-23
+
+data 字段的内容取决于[游戏对象类型](#type)
+
+*这些字段的值来自 WDB，不应更改。*
+
+**GAMEOBJECT\_TYPE\_DOOR = 0**
+
+- data0: startOpen（布尔标志）
+- data1: open（来自 Lock.dbc 的 LockId）
+- data2: autoClose（以毫秒为单位的时间）
+- data3: noDamageImmune（布尔标志）
+- data4: openTextID（未知文本 ID）
+- data5: closeTextID（未知文本 ID）
+- data6: 被寻路（pathfinding）忽略
+- data7: Conditionid1
+- data8: 门是不透明的
+- data9: Gigantic AOI
+- data10: Infinite AOI
+
+**GAMEOBJECT\_TYPE\_BUTTON = 1**
+
+- data0: startOpen（状态）
+- data1: open（来自 Lock.dbc 的 LockId）
+- data2: autoClose（长的未知标志）
+- data3: linkedTrap（[gameobject\_template.entry](#entry)（生成的 GO 类型 6））
+- data4: noDamageImmune（布尔标志）
+- data5: large?（布尔标志）
+- data6: openTextID（未知文本 ID）
+- data7: closeTextID（未知文本 ID）
+- data8: losOK（布尔标志）
+- data9: Conditionid1
+
+**GAMEOBJECT\_TYPE\_QUESTGIVER = 2**
+
+- data0: open（来自 Lock.dbc 的 LockId）
+- data1: questList（未知 ID）
+- data2: pageMaterial（PageTextMaterial.dbc）
+- data3: gossipID（gossip\_menu\_option.menu\_id）
+- data4: customAnim（1 到 4 之间的未知值）
+- data5: noDamageImmune（布尔标志）
+- data6: openTextID（broadcast\_text ID）
+- data7: losOK（布尔标志）
+- data8: allowMounted（布尔标志）
+- data9: large?（布尔标志）
+- data10: Conditionid1
+- data11: 骑乘时永远无法使用
+
+**GAMEOBJECT\_TYPE\_CHEST = 3**
+
+- data0: open（来自 Lock.dbc 的 LockId）
+- data1: chestLoot（[gameobject\_loot\_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)）`WDB-fields`
+- data2: chestRestockTime（以秒为单位的时间）
+- data3: consumable（状态：布尔标志）
+- data4: minRestock（采矿、采药等的最低成功拾取次数）
+- data5: maxRestock（采矿、采药等的最高成功拾取次数）
+- data6: lootedEvent（来自 event\_scripts 表的事件 ID）
+- data7: linkedTrap（[gameobject\_template.entry](#entry)（生成的 GO 类型 6））
+- data8: questID（已完成任务的 [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id)）
+- data9: level（打开此游戏对象所需的最低等级）
+- data10: losOK（布尔标志）
+- data11: leaveLoot（布尔标志）
+- data12: notInCombat（布尔标志）
+- data13: log loot（布尔标志）
+- data14: openTextID（未知 ID）
+- data15: 使用组拾取规则（布尔标志）
+- data16: 浮动提示框
+- data17: conditionid1
+- data18: xplevel
+- data19: xpDifficulty
+- data20: lootlevel
+- data21: 组经验
+- data22: 伤害免疫
+- data23: trivialSkillLow
+
+**GAMEOBJECT\_TYPE\_BINDER = 4**
+
+未使用的对象类型
+
+**GAMEOBJECT\_TYPE\_GENERIC = 5**
+
+- data0: floatingTooltip（布尔标志）
+- data1: highlight（布尔标志）
+- data2: serverOnly?（始终为 0）
+- data3: large?（布尔标志）
+- data4: floatOnWater（布尔标志）
+- data5: questID（需要处于激活状态的 [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) 才能生效）
+- data6: conditionID1
+- data7: LargeAOI
+- data8: UseGarrisonOwnerGuildColors
+
+**GAMEOBJECT\_TYPE\_TRAP = 6**
+
+- data0: open（来自 [Lock.dbc](https://wowdev.wiki/DB/Lock) 的 LockId）
+- data1: level（所施放法术对应的 npc 等效等级）
+- data2: diameter（即半径 \* 2）
+- data3: spell（来自 [Spell.dbc](spell) 的法术 ID）
+- data4: type（0 = 施法后不消失的陷阱。1 = 施法后消失的陷阱。2 = 生成时施放的炸弹）
+- data5: cooldown（以秒为单位的时间）
+- data6: ?（未知标志）
+- data7: startDelay?（以秒为单位的时间）
+- data8: serverOnly?（始终为 0）
+- data9: stealthed（布尔标志）
+- data10: large?（布尔标志）
+- data11: stealthAffected（布尔标志）
+- data12: openTextID（未知 ID）
+- data13: closeTextID
+- data14: IgnoreTotems
+- data15: conditionID1
+- data16: playerCast
+- data17: SummonerTriggered
+- data18: requireLOS
+
+**GAMEOBJECT\_TYPE\_CHAIR = 7**
+
+- data0: chairslots（可以坐上去的玩家数量）
+- data1: height
+- data2: onlyCreatorUse
+- data3: triggeredEvent
+- data4: conditionID1
+
+**GAMEOBJECT\_TYPE\_SPELL\_FOCUS = 8**
+
+- data0: spellFocusType（来自 SpellFocusObject.dbc；该值也会作为 RequiresSpellFocus 出现在 [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell) 中）
+- data1: diameter（即半径\*2）
+- data2: linkedTrap（[gameobject\_template.entry](#entry)（生成的 GO 类型 6））
+- data3: serverOnly?（始终为 0）
+- data4: questID（需要处于激活状态的 [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) 才能生效）
+- data5: large?（布尔标志）
+- data6: floatingTooltip（布尔标志）
+- data7: floatOnWater
+- data8: conditionID1
+
+**GAMEOBJECT\_TYPE\_TEXT = 9**
+
+-   data0: pageID（[page\_text.entry](page_text_2130246.html#page_text-entry)）
+-   data1: language（来自 [Languages.dbc](languages)）
+-   data2: pageMaterial（[PageTextMaterial.dbc](pagetextmaterial)）
+-   data3: allowMounted
+-   data4: conditionID1
+-   data5: NeverUsableWhileMounted
+
+**GAMEOBJECT\_TYPE\_GOOBER = 10**
+
+-   data0: open（来自 [Lock.dbc](https://wowdev.wiki/DB/Lock) 的 LockId）
+-   data1: questID（需要处于激活状态的 [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) 才能生效）
+-   data2: eventID（event\_script id）
+-   data3: 恢复到初始状态前的时间（以毫秒为单位）
+-   data4: customAnim（未知）
+-   data5: consumable（控制游戏对象是否会消失的布尔标志）
+-   data6: cooldown（以秒为单位的时间）
+-   data7: pageID（[page\_text.entry](http://www.azerothcore.org/wiki/page_text#entry)）
+-   data8: language（来自 Languages.dbc）
+-   data9: pageMaterial（PageTextMaterial.dbc）
+-   data10: spell（来自 Spell.dbc 的法术 ID）
+-   data11: noDamageImmune（布尔标志）
+-   data12: linkedTrap（[gameobject\_template.entry](#entry)（生成的 GO 类型 6））
+-   data13: large?（布尔标志）
+-   data14: openTextID（未知 ID）
+-   data15: closeTextID（未知 ID）
+-   data16: losOK（布尔标志）（与战场有些关联）
+-   data19: gossipID - 使用时施放该法术
+-   data20: AllowMultiInteract
+-   data21: floatOnWater
+-   data22: conditionID1
+-   data23: playerCast
+
+**GAMEOBJECT\_TYPE\_TRANSPORT = 11**
+
+-   data0: Timeto2ndfloor
+-   data1: startOpen
+-   data2: autoClose
+-   data3: Reached1stfloor
+-   data4: Reached2ndfloor
+-   data5: SpawnMap
+-   data6: Timeto3rdfloor
+-   data7: Reached3rdfloor
+-   data8: Timeto4rdfloor
+-   data9: Reached4rdfloor
+-   data10: Timeto5rdfloor
+-   data11: Reached5rdfloor
+-   data12: Timeto6rdfloor
+-   data13: Reached6rdfloor
+-   data14: Timeto7rdfloor
+-   data15: Reached7rdfloor
+-   data16: Timeto8rdfloor
+-   data17: Reached8rdfloor
+-   data18: Timeto9rdfloor
+-   data19: Reached9rdfloor
+-   data20: Timeto10rdfloor
+-   data21: Reached10rdfloor
+-   data22: onlychargeheightcheck
+-   data23: onlychargetimecheck
+
+**GAMEOBJECT\_TYPE\_AREADAMAGE = 12**
+
+-   data0: open
+-   data1: radius
+-   data2: damageMin
+-   data3: damageMax
+-   data4: damageSchool
+-   data5: autoClose
+-   data6: openTextID
+-   data7: closeTextID
+
+**GAMEOBJECT\_TYPE\_CAMERA = 13**
+
+-   data0: open（来自 [Lock.dbc](https://wowdev.wiki/DB/Lock) 的 LockId）
+-   data1: camera（来自 [CinematicCamera.dbc](https://wowdev.wiki/DB/CinematicCamera) 的过场动画条目）
+-   data2: eventID
+-   data3: openTextID
+-   data4: conditionID1
+
+**GAMEOBJECT\_TYPE\_MAPOBJECT = 14**
+
+不使用任何数据，全部始终为 0
+
+**GAMEOBJECT\_TYPE\_MOTRANSPORT = 15**
+
+-   data0: taxiPathID（来自 [TaxiPath.dbc](https://wowdev.wiki/DB/TaxiPath) 的 ID）
+-   data1: moveSpeed
+-   data2: accelRate
+-   data3: startEventID
+-   data4: stopEventID
+-   data5: transportPhysics
+-   data6: SpawnMap
+-   data7: worldState1
+-   data8: allowstopping
+-   data9: InitStopped
+-   data10: TrueInfiniteAOI
+
+**GAMEOBJECT\_TYPE\_DUELFLAG = 16**
+
+只有一个此类型的游戏对象（21680），且没有 data 数据
+
+**GAMEOBJECT\_TYPE\_FISHINGNODE = 17**
+
+只有一个此类型的游戏对象（35591），且没有 data 数据
+
+**GAMEOBJECT\_TYPE\_RITUAL = 18**
+
+-   data0: casters?
+-   data1: spell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data2: animSpell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data3: ritualPersistent（布尔标志）
+-   data4: casterTargetSpell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data5: casterTargetSpellTargets（布尔标志）
+-   data6: castersGrouped（布尔标志）
+-   data7: ritualNoTargetCheck
+-   data8: conditionID1
+
+**GAMEOBJECT\_TYPE\_MAILBOX = 19**
+
+不使用任何数据，全部始终为 0
+
+**GAMEOBJECT\_TYPE\_AUCTIONHOUSE = 20**
+
+-   data0: actionHouseID（来自 [AuctionHouse.dbc](auctionhouse) ?）
+
+**GAMEOBJECT\_TYPE\_GUARDPOST = 21**
+
+-   data0: CreatureID
+-   data1: unk
+
+**GAMEOBJECT\_TYPE\_SPELLCASTER = 22**
+
+-   data0: spell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data1: charges
+-   data2: partyOnly（布尔标志，需要在队伍中才能使用）
+-   data3: allowMounted
+-   data4: GiganticAOI
+-   data5: conditionID1
+-   data6: playerCast
+-   data7: NeverUsableWhileMounted
+
+**GAMEOBJECT\_TYPE\_MEETINGSTONE = 23**
+
+-   data0: minLevel
+-   data1: maxLevel
+-   data2: areaID（来自 [AreaTable.dbc](areatable)）
+
+**GAMEOBJECT\_TYPE\_FLAGSTAND = 24**
+
+-   data0: open（来自 [Lock.dbc](https://wowdev.wiki/DB/Lock) 的 LockId）
+-   data1: pickupSpell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data2: radius（距离）
+-   data3: returnAura（来自 [Spell.dbc](spell) 的法术 ID）
+-   data4: returnSpell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data5: noDamageImmune（布尔标志）
+-   data6: openTextID
+-   data7: losOK（布尔标志）
+-   data8: conditionID1
+-   data9: playerCast
+-   data10: GiganticAOI
+-   data11: InfiniteAOI
+-   data12: cooldown
+
+**GAMEOBJECT\_TYPE\_FISHINGHOLE = 25**
+
+-   data0: radius（距离）
+-   data1: chestLoot（[gameobject\_loot\_template.entry](http://www.azerothcore.org/wiki/loot_template#loot_template-Entry)）
+-   data2: minRestock
+-   data3: maxRestock
+-   data4: open
+
+**GAMEOBJECT\_TYPE\_FLAGDROP = 26**
+
+-   data0: open（来自 [Lock.dbc](https://wowdev.wiki/DB/Lock) 的 LockId）
+-   data1: eventID（未知事件 ID）
+-   data2: pickupSpell（来自 [Spell.dbc](spell) 的法术 ID）
+-   data3: noDamageImmune（布尔标志）
+-   data4: openTextID
+-   data5: playerCast
+-   data6: ExpireDuration
+-   data7: GiganticAOI
+-   data8: InfiniteAOI
+-   data9: cooldown
+
+**GAMEOBJECT\_TYPE\_MINIGAME = 27**
+
+对象类型未使用。在核心中被重新用作 CUSTOM\_TELEPORT
+
+-   data0: [areatrigger\_teleport.id](http://www.azerothcore.org/wiki/areatrigger_teleport#id)
+
+**GAMEOBJECT\_TYPE\_LOTTERYKIOSK = 28**
+
+对象类型未使用
+
+**GAMEOBJECT\_TYPE\_CAPTUREPOINT = 29**
+
+-   data0: radius（距离）
+-   data1: spell（未知 ID，不是 dbc 文件中的法术 ID，可能只是服务器端的法术）
+-   data2: worldState1
+-   data3: worldstate2
+-   data4: winEventID1（未知事件 ID）
+-   data5: winEventID2（未知事件 ID）
+-   data6: contestedEventID1（未知事件 ID）
+-   data7: contestedEventID2（未知事件 ID）
+-   data8: progressEventID1（未知事件 ID）
+-   data9: progressEventID2（未知事件 ID）
+-   data10: neutralEventID1（未知事件 ID）
+-   data11: neutralEventID2（未知事件 ID）
+-   data12: neutralPercent
+-   data13: worldstate3
+-   data14: minSuperiority
+-   data15: maxSuperiority
+-   data16: minTime（以秒为单位）
+-   data17: maxTime（以秒为单位）
+-   data18: large?（布尔标志）
+-   data19: highlight
+-   data20: startingValue
+-   data21: unidirectional
+-   data22: killbonustime
+-   data23: speedWorldState1
+
+**GAMEOBJECT\_TYPE\_AURAGENERATOR = 30**
+
+-   data0: startOpen（布尔标志）
+-   data1: radius（距离）
+-   data2: auraID1（来自 [Spell.dbc](spell) 的法术 ID）
+-   data3: conditionID1（未知 ID）
+-   data4: auraID2
+-   data5: conditionID2
+-   data6: serverOnly
+
+**GAMEOBJECT\_TYPE\_DUNGEONDIFFICULTY = 31**
+
+-   data0: mapID（来自 [Map.dbc](map)）
+-   data1: difficulty
+-   data2: DifficultyHeroic
+-   data3: DifficultyEpic
+-   data4: DifficultyLegendary
+-   data5: HeroicAttachment
+-   data6: ChallengeAttachment
+-   data7: DifficultyAnimations
+-   data8: LargeAOI
+-   data9: GiganticAOI
+-   data10: Legacy
+
+    | 值 | 注释                     |
+    | ----- | --------------------------- |
+    | 0     | 5 人普通，10 人普通 |
+    | 1     | 5 人英雄，25 人普通     |
+    | 2     | 10 人英雄               |
+    | 3     | 25 人英雄               |
+
+**GAMEOBJECT\_TYPE\_BARBER\_CHAIR = 32**
+
+-   data0: chairheight
+-   data1: HeightOffset
+-   data2: SitAnimKit
+
+**GAMEOBJECT\_TYPE\_DESTRUCTIBLE\_BUILDING = 33**
+
+-   data0: intactNumHits
+-   data1: creditProxyCreature
+-   data2: state1Name
+-   data3: intactEvent
+-   data4: damagedDisplayId
+-   data5: damagedNumHits
+-   data6: empty3
+-   data7: empty4
+-   data8: empty5
+-   data9: damagedEvent
+-   data10: destroyedDisplayId
+-   data11: empty7
+-   data12: empty8
+-   data13: empty9
+-   data14: destroyedEvent
+-   data15: empty10
+-   data16: debuildingTimeSecs
+-   data17: empty11
+-   data18: destructibleData
+-   data19: rebuildingEvent
+-   data20: empty12
+-   data21: empty13
+-   data22: damageEvent
+-   data23: empty14
+
+**GAMEOBJECT\_TYPE\_GUILD\_BANK = 34**
+
+不使用任何 data 数据，全部始终为 0
+
+**GAMEOBJECT\_TYPE\_TRAPDOOR = 35**
+
+-   data0: whenToPause
+-   data1: startOpen
+-   data2: autoClose
+-   data3: BlocksPathsDown
+-   data4: PathBlockerBump
+
+### AIName
+
+如果同时设置了此字段和 ScriptName 字段，则 ScriptName 字段会覆盖此字段。
+注意：此字段中只能使用 `SmartGameObjectAI`，不要使用 `SmartAI`
+
+### ScriptName
+
+此对象在需要时使用的脚本的名称
+
+`VerifiedBuild`

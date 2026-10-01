@@ -40,52 +40,52 @@
 
 ### fight\_id
 
-`field-no-description|1`
+The unique ID of the arena match.
 
 ### time
 
-`field-no-description|2`
+The date and time the match ended.
 
 ### type
 
-`field-no-description|3`
+The arena type: 2 for 2v2, 3 for 3v3 and 5 for 5v5.
 
 ### duration
 
-`field-no-description|4`
+Length of the match in seconds, counted from when the gates opened.
 
 ### winner
 
-`field-no-description|5`
+ID of the winning arena team. See [arena\_team.arenaTeamId](arena_team#arenateamid).
 
 ### loser
 
-`field-no-description|6`
+ID of the losing arena team. See [arena\_team.arenaTeamId](arena_team#arenateamid).
 
 ### winner\_tr
 
-`field-no-description|7`
+Team rating of the winning team before the match.
 
 ### winner\_mmr
 
-`field-no-description|8`
+Matchmaker rating of the winning team before the match.
 
 ### winner\_tr\_change
 
-`field-no-description|9`
+How much the team rating of the winning team changed.
 
 ### loser\_tr
 
-`field-no-description|10`
+Team rating of the losing team before the match.
 
 ### loser\_mmr
 
-`field-no-description|11`
+Matchmaker rating of the losing team before the match.
 
 ### loser\_tr\_change
 
-`field-no-description|12`
+How much the team rating of the losing team changed.
 
 ### curronline
 
-`field-no-description|13`
+Number of players online on the server when the match ended.

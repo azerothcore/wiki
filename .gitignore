@@ -6,4 +6,4 @@ Gemfile.lock
 
 .idea/*
 
-.claude
+.claude/

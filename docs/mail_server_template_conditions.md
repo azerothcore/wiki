@@ -13,7 +13,7 @@ Note: Entries in this table will be deleted automatically when the referenced en
 | Field                            | Type | Attributes | Key | Null | Default | Extra          | Comment |
 | -------------------------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
 | [id](#id)                        | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templatetID](#templateid)       | INT  | UNSIGNED   |     | NO   |         |                |         |
+| [templateID](#templateid)        | INT  | UNSIGNED   |     | NO   |         |                |         |
 | [conditionType](#conditiontype)  | ENUM |            |     | NO   |         |                |         |
 | [conditionValue](#conditiontype) | INT  | UNSIGNED   |     | NO   |         |                |         |
 | [conditionState](#conditiontype) | INT  | UNSIGNED   |     | NO   | 0       |                |         |
@@ -41,6 +41,14 @@ Unique ID.
 | Race        | Bitmask (Human 1, Orc 2, Dwarf 4, Night Elf 8, Undead 16, Tauren 32, Gnome 64, Troll 128, Blood Elf 512, Draenei 1024)      | always 0                                                                       |
 | Class        | Bitmask (Warrior 1, Paladin 2, Hunter 4, Rogue 8, Priest 16, Death Knight 32, Shaman 64, Mage 128, Warlock 256, Druid 1024) | always 0                                                                       |
 | AccountFlags | Bitmask of account flags (see below)                                                                                        | always 0                                                                       |
+
+### conditionValue
+
+The value the condition checks, see the table in [conditionType](#conditiontype).
+
+### conditionState
+
+The state the condition checks, see the table in [conditionType](#conditiontype).
 
 #### AccountFlags values
 

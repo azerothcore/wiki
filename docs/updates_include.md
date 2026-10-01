@@ -6,7 +6,7 @@
 
 **The \`updates_include\` table**
 
-`table-no-description`
+The directories the database updater looks in for SQL update files. The table is in the auth, characters and world databases.
 
 **Table Structure**
 

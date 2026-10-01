@@ -1,5 +1,7 @@
 # macOS Requirements
 
+{% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
+
 | Installation Guide                                                                                                                   |                                                         |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
@@ -21,14 +23,14 @@ xcode-select --install
 
 - Install the package manager [Homebrew](http://brew.sh/)
 
-Use brew it to install the required packages:
+Use brew to install the required packages:
 
 ```sh
 brew update
 ```
 
 ```sh
-brew install openssl@3 readline cmake boost coreutils bash bash-completion coreutils
+brew install openssl@3 readline cmake boost coreutils bash bash-completion
 ```
 
 This will install bash 5+, you might need to restart your terminal.

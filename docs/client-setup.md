@@ -3,11 +3,11 @@
 | Installation Guide                                                                                                                   |                                                       |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. | Optional                                              |
-| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date)                                                            | [Step 9: Installing a Module >>](installing-a-module) |
+| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date)                                                            | [Step 9: Optional Additions >>](optional-additions) |
 
 AzerothCore does not distribute a client. You will need to find your own clean 3.3.5a client on the internet.
 
-- Open the realmlist.wtf file inside your **WoW\Data** folder. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
+- Open the realmlist.wtf file inside your **WoW\Data\\&lt;locale&gt;** folder, for example **WoW\Data\enUS** or **WoW\Data\enGB**. The IP in the realmlist.wtf file should be exactly the same as the IP address you entered in the realmlist table previously.
 
     - Change the first line to `set realmlist <IP address used in realmlist table>`
     
@@ -26,4 +26,4 @@ AzerothCore does not distribute a client. You will need to find your own clean 3
 | Installation Guide                                                                                                                   |                                                       |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date)                                                            | [Step 9: Installing a Module >>](installing-a-module) |
+| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date)                                                            | [Step 9: Optional Additions >>](optional-additions) |

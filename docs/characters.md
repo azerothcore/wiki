@@ -88,6 +88,8 @@ This table holds vital static information for each character. It is used to crea
 | [deleteInfos_Account][76]  | INT         | UNSIGNED   |     | YES  |                   |        |                          |
 | [deleteInfos_Name][77]     | VARCHAR(12) | SIGNED     |     | YES  |                   |        |                          |
 | [deleteDate][78]           | INT         | UNSIGNED   |     | YES  |                   |        |                          |
+| [innTriggerId][79]         | INT         | UNSIGNED   |     | NO   |                   |        |                          |
+| [extraBonusTalentCount][80] | INT        |            |     | NO   | 0                 |        |                          |
   
 [1]: #guid
 [2]: #account
@@ -134,13 +136,13 @@ This table holds vital static information for each character. It is used to crea
 [43]: #zone
 [44]: #deathexpiretime
 [45]: #taxipath
-[46]: #arenaPoints
+[46]: #arenapoints
 [47]: #totalhonorpoints
 [48]: #todayhonorpoints
 [49]: #yesterdayhonorpoints
 [50]: #totalkills
 [51]: #todaykills
-[52]: #yesterdayKills
+[52]: #yesterdaykills
 [53]: #chosentitle
 [54]: #knowncurrencies
 [55]: #watchedfaction
@@ -159,7 +161,7 @@ This table holds vital static information for each character. It is used to crea
 [68]: #exploredzones
 [69]: #equipmentcache
 [70]: #ammoid
-[71]: #knownTitles
+[71]: #knowntitles
 [72]: #actionbars
 [73]: #grantablelevels
 [74]: #order
@@ -167,6 +169,8 @@ This table holds vital static information for each character. It is used to crea
 [76]: #deleteinfosaccount
 [77]: #deleteinfosname
 [78]: #deletedate
+[79]: #inntriggerid
+[80]: #extrabonustalentcount
 
 **Description of the fields**
 
@@ -241,11 +245,18 @@ facialHair = playerBytes2 % 256
 
 ### bankSlots
 
-`field-no-description|15`
+Number of bank bag slots the character has bought.
 
 ### restState
 
-`field-no-description|16`
+| Value | State                                    |
+| ----- | ---------------------------------------- |
+| 1     | Rested                                   |
+| 2     | Normal, not linked with Recruit-a-Friend |
+| 3     | Tired                                    |
+| 4     | Tired, 50% experience                    |
+| 5     | Exhausted, 25% experience                |
+| 6     | Linked with Recruit-a-Friend             |
 
 ### playerFlags
 
@@ -259,25 +270,25 @@ A bitmask that represents what Player flags the player has. Each bit controls a 
 | 8        | 0x00000008 | PLAYER_FLAGS_GM               |                                                                                   |
 | 16       | 0x00000010 | PLAYER_FLAGS_GHOST            |                                                                                   |
 | 32       | 0x00000020 | PLAYER_FLAGS_RESTING          |                                                                                   |
-| 64       | 0x00000040 | PLAYER_FLAGS_UNK7             |                                                                                   |
-| 128      | 0x00000080 | PLAYER_FLAGS_UNK8             | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                             |
+| 64       | 0x00000040 | PLAYER_FLAGS_UNK6             |                                                                                   |
+| 128      | 0x00000080 | PLAYER_FLAGS_UNK7             | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                             |
 | 256      | 0x00000100 | PLAYER_FLAGS_CONTESTED_PVP    | Player has been involved in a PvP combat and will be attacked by contested guards |
 | 512      | 0x00000200 | PLAYER_FLAGS_IN_PVP           |                                                                                   |
 | 1024     | 0x00000400 | PLAYER_FLAGS_HIDE_HELM        |                                                                                   |
 | 2048     | 0x00000800 | PLAYER_FLAGS_HIDE_CLOAK       |                                                                                   |
-| 4096     | 0x00001000 | PLAYER_FLAGS_PLAYED_LONG_TIME | played long time                                                                  |
-| 8192     | 0x00002000 | PLAYER_FLAGS_TOO_LONG         | played too long time                                                              |
+| 4096     | 0x00001000 | PLAYER_FLAGS_PARTIAL_PLAY_TIME | played long time                                                                  |
+| 8192     | 0x00002000 | PLAYER_FLAGS_NO_PLAY_TIME     | played too long time                                                              |
 | 16384    | 0x00004000 | PLAYER_FLAGS_IS_OUT_OF_BOUNDS |                                                                                   |
 | 32768    | 0x00008000 | PLAYER_FLAGS_DEVELOPER        | prefix for something?                                                             |
-| 65536    | 0x00010000 | PLAYER_FLAGS_UNK17            | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                |
+| 65536    | 0x00010000 | PLAYER_FLAGS_UNK16            | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                |
 | 131072   | 0x00020000 | PLAYER_FLAGS_TAXI_BENCHMARK   | taxi benchmark mode (on/off) (2.0.1)                                              |
 | 262144   | 0x00040000 | PLAYER_FLAGS_PVP_TIMER        | 3.0.2, pvp timer active (after you disable pvp manually)                          |
-| 524288   | 0x00080000 | PLAYER_FLAGS_UNK20            |                                                                                   |
-| 1048576  | 0x00100000 | PLAYER_FLAGS_UNK21            |                                                                                   |
-| 2097152  | 0x00200000 | PLAYER_FLAGS_UNK22            |                                                                                   |
+| 524288   | 0x00080000 | PLAYER_FLAGS_UBER             |                                                                                   |
+| 1048576  | 0x00100000 | PLAYER_FLAGS_UNK20            |                                                                                   |
+| 2097152  | 0x00200000 | PLAYER_FLAGS_UNK21            |                                                                                   |
 | 4194304  | 0x00400000 | PLAYER_FLAGS_COMMENTATOR2     |                                                                                   |
 | 8388608  | 0x00800000 | PLAYER_ALLOW_ONLY_ABILITY     | used by bladestorm and killing spree                                              |
-| 16777216 | 0x01000000 | PLAYER_FLAGS_UNK25            | disabled all melee ability on tab include autoattack                              |
+| 16777216 | 0x01000000 | PLAYER_FLAGS_UNK24            | disabled all melee ability on tab include autoattack                              |
 | 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN       |                                                                                   |
 
 ### position\_x
@@ -353,7 +364,7 @@ The cost for the character to reset its talents, measured in copper.
 
 ### resettalents\_time
 
-`field-no-description|34`
+The time the character last reset their talents, in Unix time. Used to lower the reset cost over time.
 
 ### trans\_x
 
@@ -382,13 +393,16 @@ These flags control certain player specific attributes, mostly GM features.
 | Flag |            | Name                           | Description                                         |
 | ---- | ---------- | ------------------------------ | --------------------------------------------------- |
 | 1    | 0x00000001 | PLAYER_EXTRA_GM_ON             | Defines GM state                                    |
-| 2    | 0x00000002 | PLAYER_EXTRA_GM_ACCEPT_TICKETS | NO LONGER USED Defines if tickets are accepted      |
 | 4    | 0x00000004 | PLAYER_EXTRA_ACCEPT_WHISPERS   | Defines if whispers are accepted                    |
 | 8    | 0x00000008 | PLAYER_EXTRA_TAXICHEAT         | Sets taxicheat                                      |
 | 16   | 0x00000010 | PLAYER_EXTRA_GM_INVISIBLE      | Defines GM visibility                               |
 | 32   | 0x00000020 | PLAYER_EXTRA_GM_CHAT           | Show GM badge in chat messages                      |
 | 64   | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marks if player already has 310% speed flying mount |
+| 128  | 0x00000080 | PLAYER_EXTRA_SPECTATOR_ON      | Marks if the player is an arena spectator           |
 | 256  | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Store PvP death status until corpse creating        |
+| 1024 | 0x00000400 | PLAYER_EXTRA_SHOW_DK_PET       | Shows the ghoul on the character select screen      |
+| 2048 | 0x00000800 | PLAYER_EXTRA_GM_SPECTATOR      | GM is spectating                                    |
+| 4096 | 0x00001000 | PLAYER_EXTRA_DECLINE_GROUP_INVITES | The player declines all group invites           |
 
 ### stable\_slots
 
@@ -421,7 +435,7 @@ Time when a character can be resurrected in case of a server crash or client exi
 
 ### taxi\_path
 
-Stores the players current taxi path ([TaxiPath.dbc](taxipath)) if logged off while on one.
+Stores the players current taxi path ([TaxiPath.dbc](https://wowdev.wiki/DB/TaxiPath)) if logged off while on one.
 
 ### arenaPoints
 
@@ -453,11 +467,11 @@ The amount of players this character killed yesterday.
 
 ### chosenTitle
 
-Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](chartitles)).
+Current title, using the bit_index field (InGameOrder in [CharTitles.dbc](https://wowdev.wiki/DB/CharTitles)).
 
 ### knownCurrencies
 
-Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](currencytypes).
+Known currencies (what to be listed in the Currency tab), bitmask of BitIndexes, see [CurrencyTypes.dbc](https://wowdev.wiki/DB/CurrencyTypes).
 
 ### watchedFaction
 
@@ -516,7 +530,7 @@ Character's equipment and bag cache.
 
 ### knownTitles
 
-Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](chartitles), take Archmage title for example:
+Contains data about known Titles stored in 6 x 16bit integers. To calculate where a knownTitle is in one of those 6 integers you do the following: We select one of the titles from [CharTitles.dbc](https://wowdev.wiki/DB/CharTitles), take Archmage title for example:
 
 | TitleID | UnkRef? | MaleTitle   | FemaleTitle | InGameOrder |
 | ------- | ------- | ----------- | ----------- | ----------- |
@@ -573,3 +587,11 @@ Stores the name of character if the character is deleted and CharDelete.Method i
 ### deleteDate
 
 Stores the date when the character was deleted and CharDelete.Method in worldserver.conf.dist is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
+
+### innTriggerId
+
+The area trigger id of the inn where the character is currently bound to rest (set when resting at an inn). `0` if not resting at an inn.
+
+### extraBonusTalentCount
+
+Number of extra talent points granted to the character beyond those earned from levelling.

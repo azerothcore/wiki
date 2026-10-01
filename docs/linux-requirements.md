@@ -1,5 +1,7 @@
 # Linux Requirements
 
+{% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
+
 | Installation Guide                                                                                                                   |                                                         |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
@@ -12,17 +14,31 @@
 | OpenSSL ≥ 3.0.x                                                                 |
 | CMake ≥ 3.16                                                                    |
 | [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy)          |
-| [GCC / CLang](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
+| [GCC ≥ 15 / Clang ≥ 18](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
 
-#### Ubuntu with MySQL 8.x
+#### Ubuntu 26.04
 
 ```sh
-sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libstdc++-16-dev default-libmysqlclient-dev libssl-dev libbz2-dev libreadline-dev libncurses-dev mysql-server libboost-all-dev
 ```
 
 Remember that if you are using the `root` user, it is not necessary to use `sudo`.
 
-To configure MySQL in Ubuntu and similar (set `root` password and other settings) read [this guide](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04).
+Ubuntu 26.04 already provides supported MySQL packages through the default repositories, so the command above is enough.
+
+`libstdc++-16-dev` is needed because clang 21 (the default on 26.04) links against the GCC 16 toolchain, while the default `g++` is GCC 15 and only brings the GCC 15 C++ development files. Without it, CMake fails with `cannot find -lstdc++` ([ACE00068](common-errors#ace00068)). If a future Ubuntu update changes the GCC version clang picks, run `clang++ -v` and install the `libstdc++-<version>-dev` matching the `Selected GCC installation` line.
+
+---
+
+#### Ubuntu 24.04
+
+```sh
+sudo apt-get update && sudo apt-get install git cmake make gcc g++ clang libssl-dev libbz2-dev libreadline-dev libncurses-dev libboost-all-dev lsb-release gnupg wget
+```
+
+Remember that if you are using the `root` user, it is not necessary to use `sudo`.
+
+Ubuntu 24.04 does not ship the recommended MySQL release in its default repositories. After installing the base packages above, follow the **Install MySQL** steps below to install MySQL 8.4 LTS.
 
 ---
 
@@ -99,7 +115,7 @@ openssl version
 
 Your `openssl` version **MUST** be equal or higher than the required version listed on the top of this page.
 
---
+---
 
 ## Help
 

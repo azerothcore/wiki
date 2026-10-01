@@ -13,10 +13,10 @@ Its purpose is (will be) used as a globalized table containing the localized tex
 
 | Field                     | Type       | Key | Null | Default | Extra | Comment |
 | ------------------------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#ID)                 | MEDIUMINT  | PRI | NO   | 0       |       |         |
+| [ID](#id)                 | MEDIUMINT  | PRI | NO   | 0       |       |         |
 | [locale](#locale)         | VARCHAR(4) | PRI | NO   | NULL    |       |         |
-| [MaleText](#MaleText)     | text       |     | YES  | NULL    |       |         |
-| [FemaleText](#FemaleText) | text       |     | YES  | NULL    |       |         |
+| [MaleText](#maletext)     | text       |     | YES  | NULL    |       |         |
+| [FemaleText](#femaletext) | text       |     | YES  | NULL    |       |         |
 | VerifiedBuild             | SMALLINT   |     | YES  | 0       |       |         |
 
 **Description of the fields**
@@ -38,7 +38,7 @@ The localized text that the male creature will broadcast, or male players can r
 
 The localized text that the female creature will broadcast, or female players can read from gossip menu.
 
-#### WDBVerified
+### VerifiedBuild
 
 This field is used by the AzerothCore Team to determine whether a template has been verified from WDB files (ADB files for this one).
 

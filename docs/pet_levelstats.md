@@ -20,6 +20,8 @@ This table holds information on individual pet base stats based on level.
 | [sta](#sta)                       | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
 | [inte](#inte)                     | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
 | [spi](#spi)                       | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
+| [min\_dmg](#mindmg)               | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| [max\_dmg](#maxdmg)               | INT       | UNSIGNED   |     | NO   | 0       |       |         |
 
 **Description of the fields**
 
@@ -62,3 +64,11 @@ The base intellect of the pet at currently selected [level](#level), calculated 
 ### spi
 
 The base spirit of the pet at currently selected [level](#level), calculated through core.
+
+### min\_dmg
+
+The minimum base melee damage of the pet at the currently selected [level](#level).
+
+### max\_dmg
+
+The maximum base melee damage of the pet at the currently selected [level](#level).

@@ -16,7 +16,7 @@ This table holds data about wrapped/gift items.
 | [flags][4]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
-[2]: #item_guid
+[2]: #itemguid
 [3]: #entry
 [4]: #flags
 

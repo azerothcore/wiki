@@ -24,8 +24,8 @@ To see which locale IDs correspond to what languages, visit the Localization\_la
 | [locale_ruRU][3]     | text      |            |     | YES  |         |       |         |
 
 [1]: #entry
-[2]: #content\_default
-[3]: #locale\_nnNN
+[2]: #contentdefault
+[3]: #localennnn
 
 **Description of the fields**
 

@@ -60,7 +60,7 @@ The GUID of the character who has ownership of this item. See [characters.guid](
 
 ### giftCreatorGuid
 
-[Characters.guid](characters#guid) of character who created the [item](character_gifts#item_guid).
+[Characters.guid](characters#guid) of character who created the [item](character_gifts#itemguid).
 
 ### count
 
@@ -68,7 +68,7 @@ Current number of item copies in the stack.
 
 ### duration
 
-`field-no-description|6`
+Time in seconds before the item disappears, for items with a limited duration. 0 if the item does not expire.
 
 ### charges
 
@@ -76,7 +76,14 @@ The number of charges for each of the five possible spellcharges on an item, s
 
 ### flags
 
-`field-no-description|8`
+| Flag | Name                          | Description                                          |
+| ---- | ----------------------------- | ---------------------------------------------------- |
+| 1    | ITEM_FIELD_FLAG_SOULBOUND     | The item is soulbound.                               |
+| 4    | ITEM_FIELD_FLAG_UNLOCKED      | The item had a lock that has been opened.            |
+| 8    | ITEM_FIELD_FLAG_WRAPPED       | The item is wrapped and contains another item.       |
+| 256  | ITEM_FIELD_FLAG_BOP_TRADEABLE | The soulbound item can still be traded for a while.  |
+| 512  | ITEM_FIELD_FLAG_READABLE      | Right clicking the item opens a text page.           |
+| 4096 | ITEM_FIELD_FLAG_REFUNDABLE    | The item can still be returned to the vendor.        |
 
 ### enchantments
 
@@ -84,7 +91,7 @@ Enchantments from SpellItemEnchantment.dbc see: [item_instance_enchantments](ite
 
 ### randomPropertyId
 
-`field-no-description|10`
+The random enchantment of the item. A positive value is an ID from ItemRandomProperties.dbc, a negative value is an ID from ItemRandomSuffix.dbc. 0 if none.
 
 ### durability
 

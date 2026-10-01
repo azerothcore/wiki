@@ -17,13 +17,13 @@
 | [leader_only][7]       | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
 | [comment][8]           | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
-[1]: #dungeon_access_id
-[2]: #requirement_type
-[3]: #requirement_id
-[4]: #requirement_note
+[1]: #dungeonaccessid
+[2]: #requirementtype
+[3]: #requirementid
+[4]: #requirementnote
 [5]: #faction
 [6]: #priority
-[7]: #leader_only
+[7]: #leaderonly
 [8]: #comment
 
 **Description of the fields**
@@ -67,3 +67,5 @@ Priority order for the requirement, sorted by type. 0 is the highest priority.
 1 = Only check the requirement for the party leader.
 
 ### comment
+
+A description of the row. Not used by the core.

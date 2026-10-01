@@ -4,7 +4,7 @@ The AzerothCore bash dashboard is a collection of scripts that help with the ins
 It allows to easily install, update and execute AzerothCore on your machine in a tremendously small amount of steps.
 
 Installing a development or production private server has never been so easy before. 
-If you need any help just [ask a question](How-to-ask-for-help).
+If you need any help just [ask a question](how-to-ask-for-help).
 
 
 ## Requirements

@@ -14,7 +14,7 @@
 
 [1]: #channelid
 [2]: #playerguid
-[3]: #banTime
+[3]: #bantime
 
 **Description of the fields**
 
@@ -28,4 +28,4 @@ The GUID of the banned player. See [characters.guid](characters#guid).
 
 ### banTime
 
-The ban time of de [channel](channels#channelId).
+The ban time of de [channel](channels#channelid).

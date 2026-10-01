@@ -24,20 +24,15 @@ Id of group in [spell\_group](spell_group#id) table. The spell\_group may contai
 
 ### stack\_rule
 
-Enum SpellGroupStackFlags in core:
+Enum `SpellGroupStackRule` in the core:
 
-| Id  |       | Stack Rule Name                              | Description                                  |
-| --- | ----- | -------------------------------------------- | -------------------------------------------- |
-| 0   | 0x00  | SPELL\_GROUP\_STACK\_RULE\_DEFAULT           | No stacking rule defined - placeholder       |
-| 1   | 0x01  | SPELL\_GROUP\_STACK\_RULE\_EXCLUSIVE         | Auras from group can't stack with each other |
-| 2   | 0x02  | SPELL\_GROUP\_STACK\_FLAG\_NOT\_SAME\_CASTER |                                              |
-| 4   | 0x04  | SPELL\_GROUP\_STACK\_FLAG\_FLAGGED           |                                              |
-| 8   | 0x08  | SPELL\_GROUP\_STACK\_FLAG\_NEVER\_STACK      |                                              |
-| 10  | 0x10  | SPELL\_GROUP\_STACK\_FLAG\_EFFECT\_EXCLUSIVE |                                              |
-| 20  | 0x20  | SPELL\_GROUP\_STACK\_FLAG\_MAX               |                                              |
-|     |       | // Internal use                              |                                              |
-| 100 | 0x100 | SPELL\_GROUP\_STACK\_FLAG\_FORCED\_STRONGEST |                                              |
-| 200 | 0x200 | SPELL\_GROUP\_STACK\_FLAG\_FORCED\_WEAKEST   |                                              |
+| Value | Name                                                | Description                                                                                                        |
+| ----- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| 0     | SPELL\_GROUP\_STACK\_RULE\_DEFAULT                   | No stacking rule, the auras stack normally.                                                                         |
+| 1     | SPELL\_GROUP\_STACK\_RULE\_EXCLUSIVE                 | Auras from the group can not stack with each other. A new aura replaces the old one.                               |
+| 2     | SPELL\_GROUP\_STACK\_RULE\_EXCLUSIVE\_FROM\_SAME\_CASTER | Auras from the group can not stack with each other when they come from the same caster.                         |
+| 3     | SPELL\_GROUP\_STACK\_RULE\_EXCLUSIVE\_SAME\_EFFECT     | The auras stack, but for effects of the same type only the strongest one is used.                                   |
+| 4     | SPELL\_GROUP\_STACK\_RULE\_EXCLUSIVE\_HIGHEST         | Only the strongest aura from the group is kept. A weaker aura can not be applied while a stronger one is active.     |
 
 ### description
 

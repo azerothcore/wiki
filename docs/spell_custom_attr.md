@@ -13,7 +13,7 @@ Table used for storing custom spell attributes.
 | [spell_id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
 | [attributes][2] | INT       | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
-[1]: #spell_id
+[1]: #spellid
 [2]: #attributes
 
 **Description of the fields**

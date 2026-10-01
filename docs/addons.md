@@ -18,8 +18,8 @@
 
 ### name
 
-`field-no-description|1`
+The name of the addon.
 
 ### crc
 
-`field-no-description|2`
+The CRC the client sent for the addon.

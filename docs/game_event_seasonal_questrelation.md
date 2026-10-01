@@ -18,13 +18,13 @@ Holds information on the game event seasonal quest relations to allow for resett
 
 **Description of the fields**
 
-### quest
+### questId
 
 [quest_template.ID](quest_template#id)
 
-### event
+### eventEntry
 
-[game_event.eventEntry](game_event#eventEntry)
+[game_event.eventEntry](game_event#evententry)
 
 <details>
 

@@ -2,12 +2,12 @@
 
 Las variables de entorno pueden sobrescribir los valores de configuración.
 
-Por defecto, el núcleo escuchará los valores de configuración en este orden:
+Por defecto, el core escuchará los valores de configuración en este orden:
 
 ```
 1. Variables de entorno
 2. Archivo .conf
-3. Valores base definidos en el núcleo
+3. Valores base definidos en el core
 ```
 
 Las claves de las variables de entorno se generan automáticamente en base a las claves definidas en el archivo .conf.

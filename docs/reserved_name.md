@@ -4,7 +4,7 @@
 
 **The \`reserved\_name\` table**
 
-`table-no-description|0`
+Names that players can not give to their characters.
 
 **Table Structure**
 

@@ -9,7 +9,7 @@
 | Field      | Type  | Attributes | Key | Null | Default | Extra  | Comment |
 | ---------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
 | [guid][1]  | INT   | UNSIGNED   | PRI | NO   |         |        |         |
-| [tab1][2]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| [tab0][2]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
 | [tab1][3]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
 | [tab2][4]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
 | [tab3][5]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
@@ -30,12 +30,12 @@
 
 ### guid
 
-`field-no-description|1`
+GUID of the guild member. See [characters.guid](characters#guid).
 
 ### tab
 
-`field-no-description|2-7`
+`tab0` to `tab5`. Number of item stacks the member has taken out of each guild bank tab today. Reset every day.
 
 ### money
 
-`field-no-description|8`
+Money the member has taken out of the guild bank today, in copper. Reset every day.

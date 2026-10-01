@@ -22,7 +22,7 @@ This table allows you to change the items a vendor sells, or to create a [vendor
 
 ### eventEntry
 
-Refers to: [game_event.entry](game_event#entry).
+Refers to: [game_event.eventEntry](game_event#evententry).
 
 Only a **positve** value can be used.
 

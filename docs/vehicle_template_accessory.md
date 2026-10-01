@@ -19,8 +19,8 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 | [summontimer][7]     | INT       | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #entry
-[2]: #accessory_entry
-[3]: #seat_id
+[2]: #accessoryentry
+[3]: #seatid
 [4]: #minion
 [5]: #description
 [6]: #summontype
@@ -38,7 +38,7 @@ Entry from [creature_template](creature_template#entry) to be used as the rider/
 
 ### seat\_id
 
-Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](vehicleseat).
+Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](https://wowdev.wiki/DB/VehicleSeat).
 
 ### minion
 

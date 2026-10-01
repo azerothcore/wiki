@@ -4,7 +4,7 @@
 
 **The \`arena_season_reward_group\` table**
 
-`table-no-description`
+Defines which arena teams get rewards at the end of an arena season. Teams need at least 30 games in the season, and members need to have played at least 30% of their team's games. The rewards of each group are in [arena\_season\_reward](arena_season_reward).
 
 **Table Structure**
 
@@ -42,23 +42,23 @@ Determines how rankings are evaluated
 
 ### min_criteria
 
-`field-no-description|4`
+Start of the ranking range. With `pct`, a percentage of all teams sorted by rating, for example 0 for the top of the ladder. With `abs`, the rank of the first team, for example 1 for the best team.
 
 ### max_criteria
 
-`field-no-description|5`
+End of the ranking range. With `pct`, a percentage of all teams, for example 0.5 for the top 0.5%. With `abs`, the rank of the last team to get the reward.
 
 ### reward_mail_template_id
 
-`field-no-description|6`
+ID from MailTemplate.dbc of the mail that sends the item and money rewards. If 0, [reward\_mail\_subject](#rewardmailsubject) and [reward\_mail\_body](#rewardmailbody) are used.
 
 ### reward_mail_subject
 
-`field-no-description|7`
+Subject of the reward mail, if no [reward\_mail\_template\_id](#rewardmailtemplateid) is set.
 
 ### reward_mail_body
 
-`field-no-description|8`
+Text of the reward mail, if no [reward\_mail\_template\_id](#rewardmailtemplateid) is set.
 
 ### gold_reward
 

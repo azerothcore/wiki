@@ -117,4 +117,4 @@ The time when the pet was last saved, in Unix time.
 
 ### abdata
 
-`field-no-description|17`
+The action bar of the pet. Ten pairs of `type action` separated by spaces, one pair per button: the type of the button and the spell or command on it.

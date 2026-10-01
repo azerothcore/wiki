@@ -18,8 +18,7 @@ This table add greeting behavior to an NPC or an Gameobject.
 
 [1]: #id
 [2]: #type
-[3]: #greetemotetype
-[4]: #greetemotedelay
+[3]: #locale
 [5]: #greeting
 [6]: #verifiedbuild
 

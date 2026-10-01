@@ -108,11 +108,11 @@ This is the npcflag ([Creature\_template.npcflag](creature_template#npcflag) tha
 
 ### ActionMenuID
 
-If you want to create a sub-menu, this is the ID ([gossip\_menu.entry](gossip_menu#entry) / [gossip\_menu\_option.menu\_id](gossip_menu_option#menuid)) to link to to create that sub-menu.
+If you want to create a sub-menu, this is the ID ([gossip\_menu.MenuID](gossip_menu#menuid) / [gossip\_menu\_option.MenuID](gossip_menu_option#menuid)) to link to to create that sub-menu.
 
 ### ActionPoiID
 
-If you want a POI (point of interest) to display on the minimap (like how a city guard places a marker when you ask directions), this is the \`entry\` from [Points\_of\_interest.entry](points_of_interest#entry)
+If you want a POI (point of interest) to display on the minimap (like how a city guard places a marker when you ask directions), this is the \`entry\` from [Points\_of\_interest.entry](points_of_interest#id)
 
 ### BoxCoded
 

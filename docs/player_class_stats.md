@@ -20,15 +20,15 @@ This table holds information on what values are applied to stats for characters 
 | [Intellect][8] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [Spirit][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
-[1]: #Class
-[2]: #Level
-[3]: #BaseHP
-[4]: #BaseMana
-[5]: #Strength
-[6]: #Agility
-[7]: #Stamina
-[8]: #Intellect
-[9]: #Spirit
+[1]: #class
+[2]: #level
+[3]: #basehp
+[4]: #basemana
+[5]: #strength
+[6]: #agility
+[7]: #stamina
+[8]: #intellect
+[9]: #spirit
 
 **Description of the fields**
 

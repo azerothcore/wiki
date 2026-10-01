@@ -1,5 +1,7 @@
 # Windows VSC Core Installation
 
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 | Installation Guide | |
 | :- | :- |
 | [<< Step 1: VSC Requirements](vsc-requirements) | [Step 3: Server Setup >>](server-setup) |

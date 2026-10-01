@@ -1,0 +1,62 @@
+name: Ready & ping when Copilot PR is done
+
+# When the Copilot coding agent finishes a wiki-update PR it renames the PR from
+# "[WIP] ..." to a real title (but leaves it as a draft). This workflow detects
+# that completion, marks the PR ready for review, requests the maintainer's review,
+# and pings them with a comment.
+#
+# Change REVIEWER below to whoever should be notified.
+
+on:
+  pull_request:
+    types: [edited, ready_for_review]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  ready-and-ping:
+    # Only Copilot's branches, and only once the "[WIP]" prefix is gone
+    # (i.e. the agent has finished and named the PR properly).
+    if: >
+      startsWith(github.event.pull_request.head.ref, 'copilot/') &&
+      !startsWith(github.event.pull_request.title, '[WIP]')
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+      PR: ${{ github.event.pull_request.number }}
+      REVIEWER: Kitzunu # <-- who to notify
+      EVENT: ${{ github.event.action }}
+      OLD_TITLE: ${{ github.event.changes.title.from }}
+    steps:
+      - name: Mark ready, request review, and ping
+        run: |
+          set -euo pipefail
+
+          # On 'edited' events, only act on the exact edit where the title
+          # transitioned OUT of "[WIP]" — ignore Copilot's mid-run body edits.
+          if [[ "$EVENT" == "edited" && "$OLD_TITLE" != \[WIP\]* ]]; then
+            echo "Title did not just transition out of [WIP]; nothing to do."
+            exit 0
+          fi
+
+          # Idempotency: don't notify twice (later edits would re-trigger this).
+          if gh pr view "$PR" --repo "$REPO" --json comments \
+               --jq '.comments[].body' | grep -q 'copilot-ready-notified'; then
+            echo "Already notified for PR #$PR; skipping."
+            exit 0
+          fi
+
+          # Take the PR out of draft (no-op if it is already ready).
+          gh pr ready "$PR" --repo "$REPO" || echo "PR #$PR was already ready."
+
+          # Request the maintainer's review (tolerate if already requested).
+          gh pr edit "$PR" --repo "$REPO" --add-reviewer "$REVIEWER" || true
+
+          # Ping. The HTML comment is the dedupe marker checked above.
+          gh pr comment "$PR" --repo "$REPO" --body "$(cat <<EOF
+          @$REVIEWER Copilot has finished this wiki update — the PR is out of draft and ready for your review. ✅
+          <!-- copilot-ready-notified -->
+          EOF
+          )"

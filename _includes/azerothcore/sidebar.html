@@ -1,4 +1,4 @@
-﻿<div class="sidebar-wrapper">
+<div class="sidebar-wrapper">
     <script language= "JavaScript">
         $(document).ready(function() {
             const url = window.location;
@@ -6,6 +6,10 @@
             if (lang == 'es')
             {
                 document.getElementById('es').style.display = 'inline';
+            }
+            else if (lang == 'cn')
+            {
+                document.getElementById('cn').style.display = 'inline';
             }
             else
             {
@@ -29,7 +33,7 @@
                 <li><a href="/wiki/final-server-steps">Final Server Steps</a></li>
                 <li><a href="/wiki/keeping-the-server-up-to-date">Keeping the server up to date</a></li>
                 <li><a href="/wiki/client-setup">Client Setup</a></li>
-                <li><a href="/wiki/installing-a-module">Installing a module</a></li>
+                <li><a href="/wiki/optional-additions">Optional additions</a></li>
             </ul>
             <b>Documentation:</b>
             <ul>
@@ -50,8 +54,10 @@
                 <li><a href="/wiki/guide-to-triaging">Guide to bug triaging</a></li>
                 <li><a href="/wiki/contribute">How to contribute </a></li>
                 <li><a href="/wiki/how-to-create-a-pr">How to create a PR</a></li>
+                <li><a href="/wiki/how-to-create-a-db-pr">How to create a DB PR via GitHub</a></li>
                 <li><a href="/wiki/how-to-test-a-pr">How to test a PR</a></li>
                 <li><a href="/wiki/how-to-test-db-only-changes">How to test DB-only changes</a></li>
+                <li><a href="/wiki/live-e2e">Live e2e tests</a></li>
             </ul>
         </div>
         <div id="es" style="display: none">
@@ -110,6 +116,61 @@
                     <li><a href="/wiki/es/remote-access">Acceso remoto</a></li>
                     <li><a href="/wiki/es/waypoints-information">Información sobre waypoints</a></li>
                     <li><a href="/wiki/es/how-to-obtain-free-records">Cómo obtener registros libres</a></li>
+                </details>
+            </ul>
+         </div>
+        <div id="cn" style="display: none">
+            <b>安装：</b>
+            <ul>
+                <li><a href="/wiki/cn/installation">安装指南</a></li>
+            </ul>
+            <a href="/wiki/cn/classic-installation"><b>经典安装指南：</b></a>
+            <ul>
+                <li><a href="/wiki/cn/requirements">系统要求</a></li>
+                <li><a href="/wiki/cn/core-installation">核心安装</a></li>
+                <li><a href="/wiki/cn/server-setup">服务器配置</a></li>
+                <li><a href="/wiki/cn/database-installation">数据库安装</a></li>
+                <li><a href="/wiki/cn/networking">网络</a></li>
+                <li><a href="/wiki/cn/final-server-steps">最终服务器步骤</a></li>
+                <li><a href="/wiki/cn/keeping-the-server-up-to-date">保持服务器更新</a></li>
+                <li><a href="/wiki/cn/client-setup">客户端配置</a></li>
+            </ul>
+            <b>文档：</b>
+            <ul>
+                <li><a href="/wiki/cn/documentation-index">文档索引</a></li>
+                <li><a href="/wiki/cn/standard-operating-procedure">标准操作流程</a></li>
+            </ul>
+            <b>数据库：</b>
+            <ul>
+                <li><a href="/wiki/cn/database-auth">Auth 数据库</a></li>
+                <li><a href="/wiki/cn/database-characters">Characters 数据库</a></li>
+                <li><a href="/wiki/cn/database-world">World 数据库</a></li>
+            </ul>
+            <b>贡献：</b>
+            <ul>
+                <li><a href="/wiki/cn/contribute">如何贡献</a></li>
+                <li><a href="/wiki/cn/how-to-create-a-pr">如何创建 PR</a></li>
+                <li><a href="/wiki/cn/how-to-create-a-db-pr">如何通过 GitHub 创建数据库 PR</a></li>
+                <li><a href="/wiki/cn/how-to-test-a-pr">如何测试 PR</a></li>
+                <li><a href="/wiki/cn/how-to-test-db-only-changes">如何测试仅数据库的更改</a></li>
+                <li><a href="/wiki/cn/how-to-document-code">如何编写代码文档</a></li>
+                <li><a href="/wiki/cn/guide-to-triaging">Bug 分类指南</a></li>
+            </ul>
+            <b>其他：</b>
+            <ul>
+                <details><summary>更多内容</summary>
+                    <li><a href="/wiki/cn/how-to-ask-for-help">如何寻求帮助</a></li>
+                    <li><a href="/wiki/cn/best-practices">最佳实践</a></li>
+                    <li><a href="/wiki/cn/faq">常见问题</a></li>
+                    <li><a href="/wiki/cn/creating-accounts">创建账号</a></li>
+                    <li><a href="/wiki/cn/create-a-module">创建模块</a></li>
+                    <li><a href="/wiki/cn/create-a-script">创建你的第一个脚本</a></li>
+                    <li><a href="/wiki/cn/how-to-work-with-conf-files">处理配置文件（.conf 与 .conf.dist）</a></li>
+                    <li><a href="/wiki/cn/linux-restarter">Linux 自动重启</a></li>
+                    <li><a href="/wiki/cn/gm-commands">GM 命令</a></li>
+                    <li><a href="/wiki/cn/remote-access">远程访问</a></li>
+                    <li><a href="/wiki/cn/waypoints-information">路径点信息</a></li>
+                    <li><a href="/wiki/cn/how-to-obtain-free-records">如何获取免费记录</a></li>
                 </details>
             </ul>
          </div>

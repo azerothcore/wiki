@@ -34,6 +34,12 @@ Or one by one:
 
 May increase build times.
 
+## LIBSIDECAR
+
+Build against the real `libsidecar` instead of the built-in stub: `-DUSE_REAL_LIBSIDECAR=1`
+
+Only needed for [Cluster Mode](cluster-mode). The shared library must be placed in `deps/libsidecar` first.
+
 ## OTHER OPTIONS
 
 Other options are available here:

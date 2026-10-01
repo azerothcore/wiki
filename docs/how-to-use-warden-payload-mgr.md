@@ -16,7 +16,7 @@ To access the payload manager you have to have access to a Player reference.
 
 **Example(C++):**
 ```cpp
-void OnLogin(Player* player) override
+void OnPlayerLogin(Player* player) override
 {
 	if (!player)
 	{
@@ -110,7 +110,7 @@ std::vector<std::string> Split(const std::string& s, char delimiter)
     return tokens;
 }
 
-void PlayerScript::OnBeforeSendChatMessage(Player* player, uint32& type, uint32& lang, std::string& msg)
+void OnPlayerBeforeSendChatMessage(Player* player, uint32& type, uint32& lang, std::string& msg) override
 {
     if (!player)
     {

@@ -15,18 +15,20 @@ This table contains all models of mobs, their gender and other information that 
 | [CombatReach][3]            | float   |            |     | NO   | 0       |       |         |
 | [Gender][4]                 | tinyint | unsigned   |     | NO   | 2       |       |         |
 | [DisplayID_Other_Gender][5] | int     | unsigned   |     | NO   | 0       |       |         |
+| [VerifiedBuild][6]          | mediumint |          |     | YES  | NULL    |       |         |
 
 [1]: #displayid
 [2]: #boundingradius
 [3]: #combatreach
 [4]: #gender
 [5]: #displayidothergender
+[6]: #verifiedbuild
 
 **Description of the fields**
 
 ### DisplayID
 
-Display ID from [CreatureDisplayInfo.dbc](creaturedisplayinfo)
+Display ID from [CreatureDisplayInfo.dbc](https://wowdev.wiki/DB/CreatureDisplayInfo)
 
 ### BoundingRadius
 
@@ -52,3 +54,7 @@ Note: do not modify this field without sniffs (ref commit: http://git.io/T7RLmA)
 
 Point to Creature\_model\_info.modelid.
 When the entry is gender male (0) or female (1), this value can point to the opposite gender counterpart.
+
+### VerifiedBuild
+
+Client build this row was verified against (from WDB/ADB extraction). `NULL` if not applicable.

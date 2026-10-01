@@ -25,20 +25,20 @@ Spell ID from [Spell.dbc](spell)
 
 ### RecoveryTime
 
-`field-no-description|2`
+Replaces the cooldown of the spell, in milliseconds. See [spell\_dbc.RecoveryTime](spell_dbc#recoverytime).
 
 ### CategoryRecoveryTime
 
-`field-no-description|3`
+Replaces the category cooldown of the spell, in milliseconds. See [spell\_dbc.CategoryRecoveryTime](spell_dbc#categoryrecoverytime).
 
 ### StartRecoveryTime
 
-`field-no-description|4`
+Replaces the global cooldown the spell starts, in milliseconds. See [spell\_dbc.StartRecoveryTime](spell_dbc#startrecoverytime).
 
 ### StartRecoveryCategory
 
-`field-no-description|5`
+Replaces the global cooldown category of the spell. See [spell\_dbc.StartRecoveryCategory](spell_dbc#startrecoverycategory).
 
 ### Comment
 
-`field-no-description|6`
+A description of the entry. Not used by the core.

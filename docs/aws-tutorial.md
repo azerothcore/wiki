@@ -1,5 +1,7 @@
 # Hosting AzerothCore via Amazon AWS
 
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
 Preface: The goal with this guide is for it to be mostly via a command line. There is also the [AWS Console](https://aws.amazon.com/console/) that some will find more intuitive, however, for guide longevity (as the AWS Console UI may change) the aws-cli tool will be recommended. Also included will be grep commands to receive only the required output. If the entire output is desired simply remove the `| grep` and everything after it.
 
 ------
@@ -224,6 +226,8 @@ tar xfv $CMAKE_INSTALL_PREFIX/data.tar.gz --strip-components=2
 ```
 
 It should now be unpacked into `$CMAKE_INSTALL_PREFIX/data/`
+
+{% include warning.html content="The Google Drive and MEGA download links in this section are outdated and no longer available." %}
 
 Alternatively, borrowed from [stackoverflow](https://stackoverflow.com/a/49444877) and with much better download performance:
 

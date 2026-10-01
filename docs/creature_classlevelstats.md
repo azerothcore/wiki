@@ -18,6 +18,11 @@ This table contains the base values for creature health, mana, armor, attack pow
 | [damage_base][10]      | FLOAT    |            | NO   |         |       |         |
 | [damage_exp1][11]      | FLOAT    |            | NO   |         |       |         |
 | [damage_exp2][12]      | FLOAT    |            | NO   |         |       |         |
+| [Strength][14]         | INT      |            | NO   | 0       |       |         |
+| [Agility][15]          | INT      |            | NO   | 0       |       |         |
+| [Stamina][16]          | INT      |            | NO   | 0       |       |         |
+| [Intellect][17]        | INT      |            | NO   | 0       |       |         |
+| [Spirit][18]           | INT      |            | NO   | 0       |       |         |
 | [comment][13]          | text     |            | YES  | NULL    |       |         |
 
 [1]: #level
@@ -29,10 +34,15 @@ This table contains the base values for creature health, mana, armor, attack pow
 [7]: #basearmor
 [8]: #attackpower
 [9]: #rangedattackpower
-[10]: #damage_base
-[11]: #damage_exp1
-[12]: #damage_exp2
+[10]: #damagebase
+[11]: #damageexp1
+[12]: #damageexp2
 [13]: #comment
+[14]: #strength
+[15]: #agility
+[16]: #stamina
+[17]: #intellect
+[18]: #spirit
 
 **Field Descriptions**
 
@@ -42,27 +52,27 @@ Level of the creature.
 
 ### class
 
-Class of the creature. This is a reference to the [unit\_class](creature_template#creature_template-unit_class) field in the [creature\_template](creature_template) table.
+Class of the creature. This is a reference to the [unit\_class](creature_template#unitclass) field in the [creature\_template](creature_template) table.
 
 ### basehp0
 
-Base health for the creature if creature\_template.exp value is set to 0. This value is multiplied by [creature\_template.Health\_mod](creature_template#health_mod)  to determine the creature's final health.
+Base health for the creature if creature\_template.exp value is set to 0. This value is multiplied by [creature\_template.HealthModifier](creature_template#healthmodifier)  to determine the creature's final health.
 
 ### basehp1
 
-Base health for the creature if creature\_template.exp value is set to 1. This value is multiplied by [creature\_template.Health\_mod](creature_template#health_mod)  to determine the creature's final health.
+Base health for the creature if creature\_template.exp value is set to 1. This value is multiplied by [creature\_template.HealthModifier](creature_template#healthmodifier)  to determine the creature's final health.
 
 ### basehp2
 
-Base health for the creature if creature\_template.exp value is set to 2. This value is multiplied by [creature\_template.Health\_mod](creature_template#health_mod)  to determine the creature's final health.
+Base health for the creature if creature\_template.exp value is set to 2. This value is multiplied by [creature\_template.HealthModifier](creature_template#healthmodifier)  to determine the creature's final health.
 
 ### basemana
 
-Base mana for the creature. This value is multiplied by  [creature\_template.Mana\_mod](creature_template#mana_mod) to determine the creature's final mana.
+Base mana for the creature. This value is multiplied by  [creature\_template.ManaModifier](creature_template#manamodifier) to determine the creature's final mana.
 
 ### basearmor
 
-Base armor for the creature. This value is multiplied by creature\_template.Armor\_mod to determine the creature's final armor.
+Base armor for the creature. This value is multiplied by [creature\_template.ArmorModifier](creature_template#armormodifier) to determine the creature's final armor.
 
 ### attackpower
 
@@ -83,6 +93,26 @@ Modifier used to calculate the damage output of a creature. This field is used i
 ### damage\_exp2
 
 Modifier used to calculate the damage output of a creature. This field is used if a creature's [exp](creature_template#exp) is set to 2. See [DamageModifier](creature_template#damagemodifier) for more information.
+
+### Strength
+
+Base Strength for the creature at this level and class.
+
+### Agility
+
+Base Agility for the creature at this level and class.
+
+### Stamina
+
+Base Stamina for the creature at this level and class.
+
+### Intellect
+
+Base Intellect for the creature at this level and class.
+
+### Spirit
+
+Base Spirit for the creature at this level and class.
 
 ### comment
 

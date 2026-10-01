@@ -17,11 +17,11 @@
 | [comment][7]            | VARCHAR(255) |            |     | YES  | NULL           |                                               |         |
 
 [1]: #id
-[2]: #map_id
+[2]: #mapid
 [3]: #difficulty
-[4]: #min_level
-[5]: #max_level
-[6]: #min_avg_item_level
+[4]: #minlevel
+[5]: #maxlevel
+[6]: #minavgitemlevel
 [7]: #comment
 
 **Description of the fields**
@@ -63,3 +63,5 @@ Min average ilvl required to enter the instance.
 **Note:** this requirement only applies to the Dungeon Finder and the Raid Browser, not to a dungeon/raid portal (and it's blizzlike). This also means a guild could try to clear a raid while being undergeared :)
 
 ### comment
+
+A description of the row. Not used by the core.

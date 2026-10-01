@@ -25,7 +25,7 @@ The guide has been divided into 9 steps, to make it more readable.
 
 8. [Client Setup](client-setup)
 
-9. [(Optional) Installing a Module](installing-a-module)
+9. [Optional Additions](optional-additions) - modules and cluster mode
 
 <br>
 

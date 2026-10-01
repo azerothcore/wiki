@@ -26,9 +26,9 @@ This table holds data about temporary summoned creatures. It is possible to grou
 [2]: #summonertype
 [3]: #groupid
 [4]: #entry
-[5]: #position_x
-[6]: #position_y
-[7]: #position_z
+[5]: #positionx
+[6]: #positiony
+[7]: #positionz
 [8]: #orientation
 [9]: #summontype
 [10]: #summontime
@@ -38,7 +38,7 @@ This table holds data about temporary summoned creatures. It is possible to grou
 
 ### summonerId
 
-Summoner's id depending on [summonerType](#creature_summon_groups-summonerType)
+Summoner's id depending on [summonerType](#summonertype)
 
 ### summonerType
 
@@ -52,7 +52,7 @@ Summoner's type:
 
 ### groupId
 
-Group identificator, all creatures with the same [groupId](#creature_summon_groups-groupId) will be summoned at once
+Group identificator, all creatures with the same [groupId](#groupid) will be summoned at once
 
 ### entry
 

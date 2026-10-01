@@ -60,7 +60,7 @@ The effect index of the spell from which the aura came from. A spell has up to t
 
 ### recalculateMask
 
-`field-no-description|5`
+Bitmask of the aura effects whose amount is recalculated, one bit per effect index.
 
 ### stackCount
 
@@ -72,7 +72,7 @@ The modifier value associated with the aura.
 
 ### base\_amount
 
-`field-no-description|10-12`
+The base amount of each effect of the aura.
 
 ### maxDuration
 

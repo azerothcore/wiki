@@ -19,8 +19,8 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 | [summontimer][7]     | INT       | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
 
 [1]: #guid
-[2]: #accessory_entry
-[3]: #seat_id
+[2]: #accessoryentry
+[3]: #seatid
 [4]: #minion
 [5]: #description
 [6]: #summontype
@@ -39,7 +39,7 @@ Flying vehicles must have InhabitType set to (4 - Flying).
 
 ### seat\_id
 
-Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](vehicleseat)
+Vehicle seat in witch the accessory should be spawned. See [VehicleSeat.dbc](https://wowdev.wiki/DB/VehicleSeat)
 
 ### minion
 

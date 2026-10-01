@@ -17,20 +17,20 @@ This table is used to apply a specific spell aura to the player within an area i
 | [aura_spell][5]         | MEDIUMINT | SIGNED     | PRI | NO   |         |       |         |
 | [racemask][6]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [gender][7]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [flags][8]              | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
+| [autocast][8]           | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
 | [quest_start_status][9] | INT       | UNSIGNED   |     | NO   |         |       |         |
 | [quest_end_status][10]  | INT       | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #spell
 [2]: #area
-[3]: #quest_start
-[4]: #quest_end
-[5]: #aura_spell
+[3]: #queststart
+[4]: #questend
+[5]: #auraspell
 [6]: #racemask
 [7]: #gender
-[8]: #flags
-[9]: #quest_start_status
-[10]: #quest_end_status
+[8]: #autocast
+[9]: #queststartstatus-questendstatus
+[10]: #queststartstatus-questendstatus
 
 **Description of the fields**
 
@@ -56,9 +56,9 @@ If set, this value (plus or minus aura spell ID from Spell.dbc) imposes addition
 
 The value has the following effect:
 
-- **< 0**  (negative values) If the player has aura **-aura\_spell** then the [spell](#spell_area-spell) will not be activated.
+- **< 0**  (negative values) If the player has aura **-aura\_spell** then the [spell](#spell) will not be activated.
 -   **0**   this column is ignored.
-- **> 0**  (positive values) If the player has no aura **aura\_spell** then the [spell](#spell_area-spell) will not be activated.
+- **> 0**  (positive values) If the player has no aura **aura\_spell** then the [spell](#spell) will not be activated.
 
 ### racemask
 
@@ -72,21 +72,12 @@ This ID is automatically called from [ChrRaces.dbc](chrraces). The bitmask is e
 
 The gender type this entry applies to. 0 = Male, 1 = Female, 2 = Any.
 
-### flags
+### autocast
 
-| Flag | Value | Name                          | Comment                                                                                                                   |
-| ---- | ----- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 1    | 0x01  | SPELL\_AREA\_FLAG\_AUTOCAST   | If the spell should be automatically applied when the character enters the area. Also prevents the user from removing it. |
-| 2    | 0x02  | SPELL\_AREA\_FLAG\_AUTOREMOVE | If the spell should be automatically removed when the character is **inside** the area (only works with quest updates)    |
+1 if the aura is applied automatically when the player enters the area and meets the other requirements. 0 if the spell is only allowed to be cast in the area, for example by an item or a script.
 
-Note: Spell is allways removed on leaving area, SPELL\_AREA\_FLAG\_AUTOREMOVE does not effect this.
+The aura is always removed when the player leaves the area.
 
-Example:
-
-- flags = 0 : Spell not added on enter (must be added manually), not automatically removed on quest update, but removed on leave.
-- flags = 1 : Spell is automatically applied on enter, not automatically removed on quest update, but removed on leave.
-- flags = 2 : Spell not added on enter (must be added manually), automatically removed on quest update and removed on leave.
-- flags = 3 : (Default) Spell is automatically applied on enter, automatically removed on quest update and removed on leave.
 
 ### quest\_start\_status, quest\_end\_status
 

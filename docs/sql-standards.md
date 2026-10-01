@@ -70,6 +70,22 @@ Correct:
 UPDATE `creature_loot_template` SET `Chance` = 100 WHERE `entry` = 3 AND `item` = 884;
 ```
 
+### Spawn DELETE & UPDATE
+
+For spawn tables (`creature`, `gameobject`), both `DELETE` and `UPDATE` statements must target that table alone and filter on both `id` and `guid` in the `WHERE` clause. Use `=`, `IN`, or `BETWEEN`, but never `OR`.
+
+Wrong:
+
+```sql
+UPDATE `creature` SET `spawntimesecs` = 300 WHERE `guid` = 12345;
+```
+
+Correct:
+
+```sql
+UPDATE `creature` SET `spawntimesecs` = 300 WHERE `id` = 1234 AND `guid` = 12345;
+```
+
 ### Variables
 
 Variables can be good when you change the same entry in several places to avoid mistakes.
@@ -146,17 +162,17 @@ For fields in the database where we work with flags, it is always preferred that
 Wrong:
 
 ```sql
-UPDATE `creature_template` SET `mechanic_immune_mask` = 617299803 WHERE `entry` = 7727;
+UPDATE `creature_template` SET `unit_flags` = 770 WHERE `entry` = 7727;
 ```
 
 Correct:
 
 ```sql
 -- Adding flags
-UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`|64|256|1024 WHERE `entry` = 7727;
+UPDATE `creature_template` SET `unit_flags`=`unit_flags`|2|256|512 WHERE `entry` = 7727;
 
 -- Removing flags
-UPDATE `creature_template` SET `mechanic_immune_mask`=`mechanic_immune_mask`&~(64|256|1024) WHERE `entry` = 7727;
+UPDATE `creature_template` SET `unit_flags`=`unit_flags`&~(2|256|512) WHERE `entry` = 7727;
 ```
 
 ## Tables and Columns

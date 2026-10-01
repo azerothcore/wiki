@@ -7,6 +7,7 @@ redirect_from: /documentation_index
 ## How to Install
 
 * [Installation Guide](installation)
+* [Optional additions](optional-additions)
 * [Installing a module](installing-a-module)
 
 ## Database
@@ -17,9 +18,11 @@ redirect_from: /documentation_index
 
 ## Documentation
 
+* [Agentic Engineering](agentic-engineering)
 * [Bash system](bash_system)
 * [Bitwise operations](bit-and-bytes-tutorial)
-* [Changelog](changelog)
+* [Cluster Mode (ToCloud9)](cluster-mode)
+* [Client Cache (wdb)](client-cache-wdb)
 * [CMake options](cmake-options)
 * [Config Merger Tool](config-merger)
 * [Config Overrides with Env Var](config-overrides-with-env-var)
@@ -31,21 +34,27 @@ redirect_from: /documentation_index
 * [Directory structure](directory-structure)
 * [Doxygen Documentation](https://www.azerothcore.org/doxygen)
 * [Exit Codes](exitcodes)
+* [Getting Started](getting-started)
 * [GM Commands](gm-commands)
+* [Guide to Triaging](guide-to-triaging)
 * [How to Debug and Restart](how-to-restart-and-debug)
 * [How to Use Warden Payload Manager](how-to-use-warden-payload-mgr)
 * [How to work with Conf Files](how-to-work-with-conf-files)
 * [IP2LOCATION](ip2location)
+* [Keira3 Internals](keira3-internals)
 * [Logging Configuration](logging-configuration)
 * [Monitoring AzerothCore with Grafana](monitoring-azerothcore-with-grafana)
 * [MySQL types (C++)](mysqltypescpp)
-* [Project Versioning](project-versioning)
+* [RBAC](rbac)
 * [Remote Access](remote-access)
 * [Sniffing & Parsing](sniffing-and-parsing)
 * [Spell Effects Reference](spell-effects-reference)
 * [Spell Aura Reference](spell-aura-reference)
+* [Spell System](spell_system)
 * [SQL Directory](sql-directory)
 * [SQL Versioning](sql-versioning)
+* [Unit testing](unit-testing)
+* [UpdateFields](updatefields)
 
 ## Recipes & Techniques
 
@@ -55,7 +64,7 @@ redirect_from: /documentation_index
 * [Useful SQL Snippets](useful-sql)
 * [How to use gperftool to analyse your app](how-to-use-gperftool)
 * [Linux restarter](linux-restarter)
-* [Wypoint information](waypoints-information)
+* [Waypoint information](waypoints-information)
 * [How to obtain free records](how-to-obtain-free-records)
 
 ## Tutorials
@@ -70,6 +79,7 @@ redirect_from: /documentation_index
 * [Hooks Bash](hooks-bash)
 * [Hooks Cmake](hooks-cmake)
 * [Hooks C++](hooks-script)
+* [Hooks C++ Reference](hooks-script-reference)
 
 ## Help
 
@@ -87,3 +97,5 @@ redirect_from: /documentation_index
 ## Wiki docs
 
 * [Wiki Alerts and Callouts](wiki-alerts-and-callouts)
+* [Wiki Standards](wiki-standards)
+* [Archive](archive)

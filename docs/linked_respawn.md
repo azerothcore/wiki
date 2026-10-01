@@ -29,7 +29,7 @@ This is the guid of the [creature](creature#guid) or [gameobject](gameobject#gui
 
 This is the guid of the [creature](creature#guid) or [gameobject](gameobject#guid) (boss most likely) that you want to link to.
 
-### linkedType
+### linkType
 
 | Value | Dependent  | Master     |
 | ----- | ---------- | ---------- |

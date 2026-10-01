@@ -1,5 +1,7 @@
 # Windows Requirements
 
+{% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
+
 | Installation Guide                                                                                                                   |                                                           |
 | :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
 | This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                           |
@@ -9,7 +11,7 @@
 Boost ≥ 1.78<br/>
 MySQL ≥ 8.0 (Recommended 8.4)<br/>
 OpenSSL ≥ 3.x.x<br/>
-CMake ≥ 3.27<br/>
+CMake ≥ 3.16<br/>
 MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %}
 
 1. [Git](https://git-scm.com/download/win)
@@ -32,15 +34,17 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
    <img src="/wiki/images/visualstudio.jpg" height="50%" width="50%">
    </a>
 
+   {% include note.html content="Notice that this image shows an outdated/unsupported version. But the steps are the same with later versions." %}
+
 4. [MySQL Server Community Edition](https://dev.mysql.com/downloads/mysql/8.4.html)
 
     1. Download the Windows MSI Installer.
     
     2. Scroll down to the bottom and click on "No thanks, just take me to the downloads!"
     
-    3. When the installation is almost done, make sure "Launch the MySQL Instance Configuration Wizard" is checked, then click "Finish".
+    3. When the installation is almost done, make sure "Run MySQL Configurator" is checked, then click "Finish".
     
-    4. When the MySQL Instance Configuration Wizard launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
+    4. When MySQL Configurator launches, most default options are fine, but remember the username and password you use (root // whatever). You will need them to log into your chosen database management tool (below) in order to import SQL files later.
     
     5. To test if MySQL is set up correctly, hit CTRL+ALT+DEL on your keyboard, enter the Task Manager, and select the "Services" tab. In the list of services you should see "MySQL" with a status of "Running".
 
@@ -78,7 +82,7 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
     
     2. We recommend compiling in 64-bit mode. 
 
-7. [OpenSSL](http://www.slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
+7. [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) Download the 64bit version.
 
     1. Find the 64-bit version by finding the latest 3.x.x Win64 OpenSSL that is NOT the "light" version. (Example: Win64 OpenSSL v3.0.7)
 

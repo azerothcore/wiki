@@ -5,8 +5,7 @@
 [`Back-to:spell_dbc`](spell_dbc)
 
 
-### This page contains description regarding the usage of EffectMiscValue and other Spell Aura values.
-### Contains only Spell Auras that have known usage of EffectMiscValue or other unconventional values.
+This page describes how spell auras use EffectMiscValue and other spell aura values. It only lists the auras that have a known use of EffectMiscValue or other unusual values.
 
 **Version is : 3.3.5a**
 
@@ -309,7 +308,7 @@ SPELL_AURA_MOD_ATTACK_POWER_OF_STAT_PERCENT = 268
 SPELL_AURA_MOD_IGNORE_TARGET_RESIST_MODIFIERS = 269
 - EffectMiscValueA: [School Mask](#school-mask)
 
-SPELL_AURA_MOD_ABILITY_IGNORE_TARGET_RESIS
+SPELL_AURA_MOD_ABILITY_IGNORE_TARGET_RESIST = 270
 - EffectMiscValueA: [School Mask](#school-mask)
 
 SPELL_AURA_MOD_DAMAGE_FROM_CASTER = 271

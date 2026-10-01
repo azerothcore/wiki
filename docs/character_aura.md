@@ -56,7 +56,7 @@ The GUID of the player who casted the aura. See [characters.guid](characters#gui
 
 ### itemGuid
 
-The GUID of the item which casted the aura. See [item\_instance.guid](item\_instance#guid).
+The GUID of the item which casted the aura. See [item\_instance.guid](item_instance#guid).
 
 ### spell
 
@@ -68,7 +68,7 @@ The effect index of the spell from which the aura came from. A spell has up to t
 
 ### recalculateMask
 
-`field-no-description|5`
+Bitmask of the aura effects whose amount is recalculated, one bit per effect index.
 
 ### stackcount
 
@@ -80,15 +80,15 @@ The modifier value associated with the aura.
 
 ### base\_amount0
 
-`field-no-description|11`
+The base amount of the first effect of the aura.
 
 ### base\_amount1
 
-`field-no-description|12`
+The base amount of the second effect of the aura.
 
 ### base\_amount2
 
-`field-no-description|13`
+The base amount of the third effect of the aura.
 
 ### maxduration
 

@@ -21,8 +21,13 @@
 ## M
 
 - [motd](motd)
+- [motd_localized](motd_localized)
 
 ## R
+- [rbac_account_permissions](rbac_account_permissions)
+- [rbac_default_permissions](rbac_default_permissions)
+- [rbac_linked_permissions](rbac_linked_permissions)
+- [rbac_permissions](rbac_permissions)
 - [realmcharacters](realmcharacters)
 - [realmlist](realmlist)
 

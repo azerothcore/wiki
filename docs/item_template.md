@@ -176,79 +176,79 @@ Holds information on every item that exists in the game. All items are created f
 [25]: #maxcount
 [26]: #stackable
 [27]: #containerslots
-[28]: #stat_type1
-[29]: #stat_value1
-[30]: #stat_type2
-[31]: #stat_value2
-[32]: #stat_type3
-[33]: #stat_value3
-[34]: #stat_type4
-[35]: #stat_value4
-[36]: #stat_type5
-[37]: #stat_value5
-[38]: #stat_type6
-[39]: #stat_value6
-[40]: #stat_type7
-[41]: #stat_value7
-[42]: #stat_type8
-[43]: #stat_value8
-[44]: #stat_type9
-[45]: #stat_value9
-[46]: #stat_type10
-[47]: #stat_value10
+[28]: #stattype
+[29]: #statvalue
+[30]: #stattype
+[31]: #statvalue
+[32]: #stattype
+[33]: #statvalue
+[34]: #stattype
+[35]: #statvalue
+[36]: #stattype
+[37]: #statvalue
+[38]: #stattype
+[39]: #statvalue
+[40]: #stattype
+[41]: #statvalue
+[42]: #stattype
+[43]: #statvalue
+[44]: #stattype
+[45]: #statvalue
+[46]: #stattype
+[47]: #statvalue
 [48]: #scalingstatdistribution
 [49]: #scalingstatvalue
-[50]: #dmg_min1
-[51]: #dmg_max1
-[52]: #dmg_type1
-[53]: #dmg_min2
-[54]: #dmg_max2
-[55]: #dmg_type2
+[50]: #dmgmin
+[51]: #dmgmax
+[52]: #dmgtype
+[53]: #dmgmin
+[54]: #dmgmax
+[55]: #dmgtype
 [56]: #armor
-[57]: #holy_res
-[58]: #fire_res
-[59]: #nature_res
-[60]: #frost_res
-[61]: #shadow_res
-[62]: #arcane_res
+[57]: #holyres
+[58]: #fireres
+[59]: #natureres
+[60]: #frostres
+[61]: #shadowres
+[62]: #arcaneres
 [63]: #delay
-[64]: #ammo_type
+[64]: #ammotype
 [65]: #rangedmodrange
-[66]: #spellid_1
-[67]: #spelltrigger_1
-[68]: #spellcharges_1
-[69]: #spellppmrate_1
-[70]: #spellcooldown_1
-[71]: #spellcategory_1
-[72]: #spellcategorycooldown_1
-[73]: #spellid_2
-[74]: #spelltrigger_2
-[75]: #spellcharges_2
-[76]: #spellppmrate_2
-[77]: #spellcooldown_2
-[78]: #spellcategory_2
-[79]: #spellcategorycooldown_2
-[80]: #spellid_3
-[81]: #spelltrigger_3
-[82]: #spellcharges_3
-[83]: #spellppmrate_3
-[84]: #spellcooldown_3
-[85]: #spellcategory_3
-[86]: #spellcategorycooldown_3
-[87]: #spellid_4
-[88]: #spelltrigger_4
-[89]: #spellcharges_4
-[90]: #spellppmrate_4
-[91]: #spellcooldown_4
-[92]: #spellcategory_4
-[93]: #spellcategorycooldown_4
-[94]: #spellid_5
-[95]: #spelltrigger_5
-[96]: #spellcharges_5
-[97]: #spellppmrate_5
-[98]: #spellcooldown_5
-[99]: #spellcategory_5
-[100]: #spellcategorycooldown_5
+[66]: #spellid
+[67]: #spelltrigger
+[68]: #spellcharges
+[69]: #spellppmrate
+[70]: #spellcooldown
+[71]: #spellcategory
+[72]: #spellcategorycooldown
+[73]: #spellid
+[74]: #spelltrigger
+[75]: #spellcharges
+[76]: #spellppmrate
+[77]: #spellcooldown
+[78]: #spellcategory
+[79]: #spellcategorycooldown
+[80]: #spellid
+[81]: #spelltrigger
+[82]: #spellcharges
+[83]: #spellppmrate
+[84]: #spellcooldown
+[85]: #spellcategory
+[86]: #spellcategorycooldown
+[87]: #spellid
+[88]: #spelltrigger
+[89]: #spellcharges
+[90]: #spellppmrate
+[91]: #spellcooldown
+[92]: #spellcategory
+[93]: #spellcategorycooldown
+[94]: #spellid
+[95]: #spelltrigger
+[96]: #spellcharges
+[97]: #spellppmrate
+[98]: #spellcooldown
+[99]: #spellcategory
+[100]: #spellcategorycooldown
 [101]: #bonding
 [102]: #description
 [103]: #pagetext
@@ -267,12 +267,12 @@ Holds information on every item that exists in the game. All items are created f
 [116]: #map
 [117]: #bagfamily
 [118]: #totemcategory
-[119]: #socketcolor_1
-[120]: #socketcontent_1
-[121]: #socketcolor_2
-[122]: #socketcontent_2
-[123]: #socketcolor_3
-[124]: #socketcontent_3
+[119]: #socketcolor
+[120]: #socketcontent
+[121]: #socketcolor
+[122]: #socketcontent
+[123]: #socketcolor
+[124]: #socketcontent
 [125]: #socketbonus
 [126]: #gemproperties
 [127]: #requireddisenchantskill
@@ -474,55 +474,77 @@ The quality of the item.
 
 Bitmask field that contains flags that the item has on it. As all other such fields, just add the flags together to combine them. Possible flags are listed below.
 
-| Flag       |             | Comments                                                                                                                                                         |
-| ---------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1          | 0x01        | ITEM_FLAG_NO_PICKUP (NOT IMPLEMENTED)                                                                                                                            |
-| 2          | 0x02        | Conjured item                                                                                                                                                    |
-| 4          | 0x04        | Openable (can be opened by right-click)                                                                                                                          |
-| 8          | 0x08        | ITEM_FLAG_HEROIC_TOOLTIP (NOT IMPLEMENTED) - Makes green "Heroic" text appear on item                                                                            |
-| 16         | 0x010       | ITEM_FLAG_DEPRECATED (NOT IMPLEMENTED) - Deprecated Item                                                                                                         |
-| 32         | 0x020       | Item can not be destroyed, except by using spell (item can be reagent for spell)                                                                                 |
-| 64         | 0x040       | ITEM_FLAG_PLAYERCAST (NOT IMPLEMENTED) - Item's spells are castable by players                                                                                   |
-| 128        | 0x080       | ITEM_FLAG_NO_EQUIP_COOLDOWN                                                                                                                                      |
-| 256        | 0x0100      | ITEM_FLAG_MULTI_LOOT_QUEST (NOT IMPLEMENTED)                                                                                                                     |
-| 512        | 0x0200      | Wrapper : Item can wrap other items                                                                                                                              |
-| 1024       | 0x0400      | ITEM_FLAG_USES_RESOURCES (NOT IMPLEMENTED)                                                                                                                       |
-| 2048       | 0x0800      | Item is party loot and can be looted by all                                                                                                                      |
-| 4096       | 0x01000     | Item is refundable                                                                                                                                               |
-| 8192       | 0x02000     | Charter (Arena or Guild)                                                                                                                                         |
-| 16384      | 0x04000     | ITEM_FLAG_HAS_TEXT (NOT IMPLEMENTED) - Only readable items have this (but not all)                                                                               |
-| 32768      | 0x08000     | ITEM_FLAG_NO_DISENCHANT (NOT IMPLEMENTED) - If enabled, prevent disenchanting. Implemented in another column `RequiredDisenchantSkill`                           |
-| 65536      | 0x010000    | ITEM_FLAG_REAL_DURATION (NOT IMPLEMENTED) - Probably real time duration. Implemented in another column `flagsCustom`                                             |
-| 131072     | 0x020000    | ITEM_FLAG_NO_CREATOR (NOT IMPLEMENTED OR PARTIALLY) - Maybe to remove the "Made by XX" message on crafted/summoned item or for signing charters                  |
-| 262144     | 0x040000    | Item can be prospected                                                                                                                                           |
-| 524288     | 0x080000    | Unique equipped (player can only have one equipped at the same time but as many as he wants in his bags, if maxcount = 1, it will still display Unique-Equipped) |
-| 1048576    | 0x0100000   | ITEM_FLAG_IGNORE_FOR_AURAS (NOT IMPLEMENTED) - ??                                                                                                                |
-| 2097152    | 0x0200000   | Item can be used during arena match                                                                                                                              |
-| 4194304    | 0x0400000   | Throwable (for tooltip ingame)                                                                                                                                   |
-| 8388608    | 0x0800000   | Item can be used in shapeshift forms                                                                                                                             |
-| 16777216   | 0x01000000  | ITEM_FLAG_HAS_QUEST_GLOW (NOT IMPLEMENTED)                                                                                                                       |
-| 33554432   | 0x02000000  | Profession recipes: can only be looted if you meet requirements and don't already know it                                                                        |
-| 67108864   | 0x04000000  | Item cannot be used in arena                                                                                                                                     |
-| 134217728  | 0x08000000  | Bind to Account (Requires to set Bonding > 0)                                                                                                                    |
-| 268435456  | 0x010000000 | Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents` and the flag is called ITEM_FLAG_NO_REAGENT_COST)                      |
-| 536870912  | 0x020000000 | Millable                                                                                                                                                         |
-| 1073741824 | 0x040000000 | ITEM_FLAG_REPORT_TO_GUILD_CHAT (NOT IMPLEMENTED)                                                                                                                 |
-| 2147483648 | 0x080000000 | ITEM_FLAG_NO_PROGRESSIVE_LOOT (NOT IMPLEMENTED)                                                                                                                  |
+| Flag       | Bit        | Name                             | Comment                                                                                                                              |
+| ---------- | ---------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 0x01       | 1          | ITEM_FLAG_NO_PICKUP              | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x02       | 2          |                                  | Conjured item                                                                                                                        |
+| 0x04       | 4          |                                  | Openable (can be opened by right-click)                                                                                              |
+| 0x08       | 8          | ITEM_FLAG_HEROIC_TOOLTIP         | (NOT IMPLEMENTED) - Makes green "Heroic" text appear on item                                                                         |
+| 0x10       | 16         | ITEM_FLAG_DEPRECATED             | (NOT IMPLEMENTED) - Deprecated Item                                                                                                  |
+| 0x20       | 32         |                                  | Item cannot be destroyed, except by using spell (item can be reagent for spell)                                                     |
+| 0x40       | 64         | ITEM_FLAG_PLAYERCAST             | (NOT IMPLEMENTED) - Item's spells are castable by players                                                                            |
+| 0x80       | 128        | ITEM_FLAG_NO_EQUIP_COOLDOWN      |                                                                                                                                      |
+| 0x0100     | 256        | ITEM_FLAG_MULTI_LOOT_QUEST       | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x0200     | 512        |                                  | Wrapper : Item can wrap other items                                                                                                  |
+| 0x0400     | 1024       | ITEM_FLAG_USES_RESOURCES         | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x0800     | 2048       |                                  | Item is party loot and can be looted by all                                                                                          |
+| 0x01000    | 4096       |                                  | Item is refundable                                                                                                                   |
+| 0x02000    | 8192       |                                  | Charter (Arena or Guild)                                                                                                             |
+| 0x04000    | 16384      | ITEM_FLAG_HAS_TEXT               | (NOT IMPLEMENTED) - Only readable items have this (but not all)                                                                      |
+| 0x08000    | 32768      | ITEM_FLAG_NO_DISENCHANT          | (NOT IMPLEMENTED) - If enabled, prevent disenchanting. Implemented in another column `RequiredDisenchantSkill`                      |
+| 0x010000   | 65536      | ITEM_FLAG_REAL_DURATION          | (NOT IMPLEMENTED) - Probably real time duration. Implemented in another column `flagsCustom`                                        |
+| 0x020000   | 131072     | ITEM_FLAG_NO_CREATOR             | (NOT IMPLEMENTED OR PARTIALLY) - Maybe to remove the "Made by XX" message on crafted/summoned item or for signing charters         |
+| 0x040000   | 262144     |                                  | Item can be prospected                                                                                                               |
+| 0x080000   | 524288     |                                  | Unique equipped (player can only have one equipped at the same time but as many as they want in their bags, if maxcount = 1, it will still display Unique-Equipped) |
+| 0x0100000  | 1048576    | ITEM_FLAG_IGNORE_FOR_AURAS       | (NOT IMPLEMENTED) - ??                                                                                                               |
+| 0x0200000  | 2097152    |                                  | Item can be used during arena match                                                                                                  |
+| 0x0400000  | 4194304    |                                  | Throwable (for tooltip ingame)                                                                                                       |
+| 0x0800000  | 8388608    |                                  | Item can be used in shapeshift forms                                                                                                 |
+| 0x01000000 | 16777216   | ITEM_FLAG_HAS_QUEST_GLOW         | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x02000000 | 33554432   |                                  | Profession recipes: can only be looted if you meet requirements and don't already know it                                           |
+| 0x04000000 | 67108864   |                                  | Item cannot be used in arena                                                                                                         |
+| 0x08000000 | 134217728  |                                  | Bind to Account (Requires to set Bonding > 0)                                                                                        |
+| 0x10000000 | 268435456  | ITEM_FLAG_NO_REAGENT_COST        | Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents`)                                          |
+| 0x20000000 | 536870912  |                                  | Millable                                                                                                                             |
+| 0x40000000 | 1073741824 | ITEM_FLAG_REPORT_TO_GUILD_CHAT   | (NOT IMPLEMENTED)                                                                                                                    |
+| 0x80000000 | 2147483648 | ITEM_FLAG_NO_PROGRESSIVE_LOOT    | (NOT IMPLEMENTED)                                                                                                                    |
 
 ### FlagsExtra
 
-| Flag    |           | Comments                                                         |
-| ------- | --------- | ---------------------------------------------------------------- |
-| 1       | 0x01      | Horde Only                                                       |
-| 2       | 0x02      | Alliance Only                                                    |
-| 4       | 0x04      | When item uses ExtendedCost in npc_vendor, gold is also required |
-| 256     | 0x0100    | Makes need roll for this item disabled                           |
-| 512     | 0x0200    | NEED_ROLL_DISABLED                                               |
-| 16384   | 0x04000   | HAS_NORMAL_PRICE                                                 |
-| 131072  | 0x020000  | BNET_ACCOUNT_BOUND (seems useless on 3.3.5a)                     |
-| 2097152 | 0x0200000 | CANNOT_BE_TRANSMOG                                               |
-| 4194304 | 0x0400000 | CANNOT_TRANSMOG                                                  |
-| 8388608 | 0x0800000 | CAN_TRANSMOG                                                     |
+| Flag       | Bit        | Name                                                | Comment                                 |
+| ---------- | ---------- | --------------------------------------------------- | --------------------------------------- |
+| 0x00000001 | 1          | ITEM_FLAG2_FACTION_HORDE                            | Horde Only                              |
+| 0x00000002 | 2          | ITEM_FLAG2_FACTION_ALLIANCE                         | Alliance Only                           |
+| 0x00000004 | 4          | ITEM_FLAG2_DONT_IGNORE_BUY_PRICE                    | When item uses ExtendedCost in npc_vendor, gold is also required |
+| 0x00000008 | 8          | ITEM_FLAG2_CLASSIFY_AS_CASTER                       | NYI - Unused in item_template           |
+| 0x00000010 | 16         | ITEM_FLAG2_CLASSIFY_AS_PHYSICAL                     | NYI                                     |
+| 0x00000020 | 32         | ITEM_FLAG2_EVERYONE_CAN_ROLL_NEED                   | Anyone can roll need                    |
+| 0x00000040 | 64         | ITEM_FLAG2_NO_TRADE_BIND_ON_ACQUIRE                 | NYI - Unused in item_template           |
+| 0x00000080 | 128        | ITEM_FLAG2_CAN_TRADE_BIND_ON_ACQUIRE                | NYI - Unused in item_template           |
+| 0x00000100 | 256        | ITEM_FLAG2_CAN_ONLY_ROLL_GREED                      | Makes need roll for this item disabled  |
+| 0x00000200 | 512        | ITEM_FLAG2_CASTER_WEAPON                            | NYI                                     |
+| 0x00000400 | 1024       | ITEM_FLAG2_DELETE_ON_LOGIN                          | NYI - Unused in item_template           |
+| 0x00000800 | 2048       | ITEM_FLAG2_INTERNAL_ITEM                            | NYI - Unused in item_template           |
+| 0x00001000 | 4096       | ITEM_FLAG2_NO_VENDOR_VALUE                          | NYI - Unused in item_template           |
+| 0x00002000 | 8192       | ITEM_FLAG2_SHOW_BEFORE_DISCOVERED                   | NYI                                     |
+| 0x00004000 | 16384      | ITEM_FLAG2_OVERRIDE_GOLD_COST                       | NYI - Unused in item_template           |
+| 0x00008000 | 32768      | ITEM_FLAG2_IGNORE_DEFAULT_RATED_BG_RESTRICTIONS     | NYI                                     |
+| 0x00010000 | 65536      | ITEM_FLAG2_NOT_USABLE_IN_RATED_BG                   | NYI                                     |
+| 0x00020000 | 131072     | ITEM_FLAG2_BNET_ACCOUNT_TRADE_OK                    | NYI                                     |
+| 0x00040000 | 262144     | ITEM_FLAG2_CONFIRM_BEFORE_USE                       | NYI - Unused in item_template           |
+| 0x00080000 | 524288     | ITEM_FLAG2_REEVALUATE_BONDING_ON_TRANSFORM          | NYI - Unused in item_template           |
+| 0x00100000 | 1048576    | ITEM_FLAG2_NO_TRANSFORM_ON_CHARGE_DEPLETION         | NYI - Unused in item_template           |
+| 0x00200000 | 2097152    | ITEM_FLAG2_NO_ALTER_ITEM_VISUAL                     | NYI                                     |
+| 0x00400000 | 4194304    | ITEM_FLAG2_NO_SOURCE_FOR_ITEM_VISUAL                | NYI                                     |
+| 0x00800000 | 8388608    | ITEM_FLAG2_IGNORE_QUALITY_FOR_ITEM_VISUAL_SOURCE    | NYI - Unused in item_template           |
+| 0x01000000 | 16777216   | ITEM_FLAG2_NO_DURABILITY                            | NYI - Unused in item_template           |
+| 0x02000000 | 33554432   | ITEM_FLAG2_ROLE_TANK                                | NYI - Unused in item_template           |
+| 0x04000000 | 67108864   | ITEM_FLAG2_ROLE_HEALER                              | NYI - Unused in item_template           |
+| 0x08000000 | 134217728  | ITEM_FLAG2_ROLE_DAMAGE                              | NYI - Unused in item_template           |
+| 0x10000000 | 268435456  | ITEM_FLAG2_CAN_DROP_IN_CHALLENGE_MODE               | NYI - Unused in item_template           |
+| 0x20000000 | 536870912  | ITEM_FLAG2_NEVER_STACK_IN_LOOT_UI                   | NYI - Unused in item_template           |
+| 0x40000000 | 1073741824 | ITEM_FLAG2_DISENCHANT_TO_LOOT_TABLE                 | NYI - Unused in item_template           |
+| 0x80000000 | 2147483648 | ITEM_FLAG2_USED_IN_A_TRADESKILL                     | NYI - Unused in item_template           |
 
 ### BuyCount
 
@@ -620,7 +642,7 @@ See the [Faction DBC file](faction) for the IDs of all of the factions.
 
 ### RequiredReputationRank
 
-The rank the player has to have with the faction from [RequiredReputationFaction](#item_template-RequiredReputationFaction).
+The rank the player has to have with the faction from [RequiredReputationFaction](#requiredreputationfaction).
 
 | ID  | Rank       |
 | --- | ---------- |
@@ -798,7 +820,7 @@ The number of times that the item can cast the spell. If 0, then infinite charge
 
 ### spellppmRate
 
-The proc per minute rate controlling how often the spell is triggered (if [\#spelltrigger](#item_template-spelltrigger) == 2).
+The proc per minute rate controlling how often the spell is triggered (if [\#spelltrigger](#spelltrigger) == 2).
 
 ### spellcooldown
 
@@ -835,7 +857,7 @@ The description that appears in orange letters at the bottom of the item tooltip
 
 ### PageText
 
-The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See [page\_text.entry](http://www.azerothcore.org/wiki/page_text#entry)
+The ID referring to the text that the item will show (if it is a book or a letter, etc). The item will have a magnifying glass cursor in the game and will show the text when right-clicked. See [page\_text.ID](page_text#id)
 
 ### LanguageID
 
@@ -857,7 +879,7 @@ The ID of the quest that this item will start if right-clicked. See [quest\_temp
 
 The lock entry ID that this item (which serves as a key) is tied to. This field is used in key-door mechanics.
 
-See the [Lock DBC file](lock).
+See the [Lock DBC file](https://wowdev.wiki/DB/Lock).
 
 ### Material
 
@@ -891,11 +913,11 @@ Controls how the item is put away on the character. Press the 'Z' hotkey to shea
 
 ### RandomProperty
 
-The number in this field points to [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) and ties in an item's chance at having a random property attached to it when it shows up for the first time. This field and the [RandomSuffix](#item_template-RandomSuffix) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
+The number in this field points to [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) and ties in an item's chance at having a random property attached to it when it shows up for the first time. This field and the [RandomSuffix](#randomsuffix) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
 
 ### RandomSuffix
 
-The number in this field points to [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) and ties in an item's chance at having a random suffix attached to it when it shows up for the first time. This field and the [RandomProperty](#item_template-RandomProperty) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
+The number in this field points to [item\_enchantment\_template.entry](http://www.azerothcore.org/wiki/item_enchantment_template#entry) and ties in an item's chance at having a random suffix attached to it when it shows up for the first time. This field and the [RandomProperty](#randomproperty) field CANNOT both have non-zero values. Either one is filled, or the other. Also, the primary source for the number in this field are WDBs.
 
 ### block
 
@@ -1098,7 +1120,7 @@ If set to -1, the item can't be disenchanted.
 
 ### ArmorDamageModifier
 
-`field-no-description|76`
+Part of the item's [armor](#armor) that counts as bonus armor. It is taken off the base armor and added back as bonus armor, so effects that increase the armor from items only affect the rest.
 
 ### duration
 
@@ -1150,11 +1172,11 @@ If the item is a container that can contain money, then this field defines the m
 
 ### flagsCustom
 
-| Flag | Name                              | Comment                                                              |
-| ---- | --------------------------------- | -------------------------------------------------------------------- |
-| 1    | ITEM_FLAGS_CU_DURATION_REAL_TIME  | Item duration will tick even if player is offline                    |
-| 2    | ITEM_FLAGS_CU_IGNORE_QUEST_STATUS | No quest status will be checked when this item drops                 |
-| 4    | ITEM_FLAGS_CU_FOLLOW_LOOT_RULES   | Item will always follow group/master/need before greed looting rules |
+| Flag       | Bit | Name                              | Comment                                                              |
+| ---------- | --- | --------------------------------- | -------------------------------------------------------------------- |
+| 0x00000001 | 1   | ITEM_FLAGS_CU_DURATION_REAL_TIME  | Item duration will tick even if player is offline                    |
+| 0x00000002 | 2   | ITEM_FLAGS_CU_IGNORE_QUEST_STATUS | No quest status will be checked when this item drops                 |
+| 0x00000004 | 4   | ITEM_FLAGS_CU_FOLLOW_LOOT_RULES   | Item will always follow group/master/need before greed looting rules |
 
 ### VerifiedBuild
 

@@ -28,9 +28,8 @@ This table contains the description of creatures. Each spawned creature is an in
 | [speed_walk](#speedwalk)                           | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
 | [speed_run](#speedrun)                             | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
 | [speed_swim](#speedswim)                           | FLOAT              | NO   |     | 1       |       |                                      |
-| [speed_swim](#speedflight)                         | FLOAT              | NO   |     | 1       |       |                                      |
+| [speed_flight](#speedflight)                       | FLOAT              | NO   |     | 1       |       |                                      |
 | [detection_range](#detectionrange)                 | FLOAT              | NO   |     | 20      |       |                                      |
-| [scale](#scale)                                    | FLOAT              | NO   |     | 1       |       |                                      |
 | [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
 | [dmgschool](#dmgschool)                            | TINYINT            | NO   |     | 0       |       |                                      |
 | [BaseAttackTime](#baseattacktime)                  | INT UNSIGNED       | NO   |     | 0       |       |                                      |
@@ -139,7 +138,7 @@ Used to tell the player what kind of NPC this creature is.
 
 #### gossip_menu_id
 
-The gossip ID of this creature. This field is obtained from sniff (update fields). If you can not sniff this value, and need to make one up, it must be &gt; 50000. This field is the link to [gossip_menu.MenuID](gossip_menu#menu_id).
+The gossip ID of this creature. This field is obtained from sniff (update fields). If you can not sniff this value, and need to make one up, it must be &gt; 50000. This field is the link to [gossip_menu.MenuID](gossip_menu#menuid).
 
 #### minlevel
 
@@ -218,10 +217,6 @@ Controls how fast the creature can fly.
 
 Controls the range at which creatures detect and see players.
 
-#### scale
-
-If non-zero, this field defines the size of how the model of the creature appears ingame. If zero, it will use default model size taken from the DBC.
-
 #### rank
 
 The rank of the creature:
@@ -238,7 +233,7 @@ The rank of the creature:
 
 **Note 2:** Respawn times can be modified in two other places: [Creature.spawntimesecs](creature#spawntimesecs) (only for that single GUID of the creature) and in the worldserver.conf file under the "Corpse.Decay" settings (for ALL creatures of the same rank). The default \`spawntimesecs\` for all spawned creatures is 300 seconds (5 minutes). For example, using the ".npc add" command to spawn a "Normal" NPC will give it a default respawn time of 6 minutes (spawntimesecs + Corpse.Decay time). Also, the creature must decay first before it can respawn. For this reason, the Corpse Decay Time of the creature is also it's minimum respawn time, since setting the creature's Creature.spawntimesecs = 0 will remove the Default Respawn Time. In the example above, setting our Normal NPC's spawntimesecs = 0 will mean the creature's respawn time decreases from 6 minutes to 60 seconds.
 
-**Note 3:** If you want the creature to show a skull or "??" in the portrait (often with Bosses), set the [type_flags](#type_flags) to 4.
+**Note 3:** If you want the creature to show a skull or "??" in the portrait (often with Bosses), set the [type_flags](#typeflags) to 4.
 
 #### dmgschool
 
@@ -296,7 +291,7 @@ Allows the manual application of unit flags to creatures. Again this is a bitmas
 | 4          | 0x00000004 | UNIT_FLAG_DISABLE_MOVE                  |                                                                                                                                                                                                                                              |
 | 8          | 0x00000008 | UNIT_FLAG_PLAYER_CONTROLLED             | Controlled by player, use _IMMUNE_TO_PC instead of _IMMUNE_TO_NPC                                                                                                                                                                            |
 | 16         | 0x00000010 | UNIT_FLAG_RENAME                        |                                                                                                                                                                                                                                              |
-| 32         | 0x00000020 | UNIT_FLAG_PREPARATION                   | Don't take reagents for spells with SPELL_ATTR_EX5_NO_REAGENT_WHILE_PREP                                                                                                                                                                     |
+| 32         | 0x00000020 | UNIT_FLAG_PREPARATION                   | Don't take reagents for spells with SPELL_ATTR5_NO_REAGENT_COST_WITH_AURA                                                                                                                                                                     |
 | 64         | 0x00000040 | UNIT_FLAG_UNK_6                         | not sure what it does, but it is needed to cast nontriggered spells in smart_scripts                                                                                                                                                         |
 | 128        | 0x00000080 | UNIT_FLAG_NOT_ATTACKABLE_1              | ?? (UNIT_FLAG_PLAYER_CONTROLLED                                                                                                                                                                                                              |
 | 256        | 0x00000100 | UNIT_FLAG_IMMUNE_TO_PC                  | Disables combat/assistance with PlayerCharacters (PC)                                                                                                                                                                                        |
@@ -348,7 +343,7 @@ Allows additional application of unit flags to creatures. Again, this is a bitma
 | 32768  | 0x00008000 | UNIT_FLAG2_CANNOT_TURN                |                                                                             |
 | 65536  | 0x00010000 | UNIT_FLAG2_UNK2                       |                                                                             |
 | 131072 | 0x00020000 | UNIT_FLAG2_PLAY_DEATH_ANIM            | Plays special death animation upon death                                    |
-| 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | allows casting spells with AttributesEx7 & SPELL_ATTR7_IS_CHEAT_SPELL       |
+| 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | allows casting spells with AttributesEx7 & SPELL_ATTR7_DEBUG_SPELL       |
 
 #### dynamicflags
 
@@ -426,7 +421,7 @@ This field can control whether a mob is minable or herbable or lootable by engin
 | 1          | 0x00000001 | CREATURE_TYPE_FLAG_TAMEABLE                          | Makes the mob tameable (must also be a beast and have family set)                          |
 | 2          | 0x00000002 | CREATURE_TYPE_FLAG_VISIBLE_TO_GHOSTS                 | Creature are also visible for not alive player. Allow gossip interaction if npcflag allow? |
 | 4          | 0x00000004 | CREATURE_TYPE_FLAG_BOSS_MOB                          | Changes creature's visible level to "??" in the creature's portrait - Immune to Knockback. |
-| 8          | 0x00000008 | CREATURE_TYPE_FLAG_DO_NOT_PLAY_WOUND_PARRY_ANIMATION | Does not play wound animation on parry.                                                    |
+| 8          | 0x00000008 | CREATURE_TYPE_FLAG_DO_NOT_PLAY_WOUND_ANIM            | Does not play wound animation on parry.                                                    |
 | 16         | 0x00000010 | CREATURE_TYPE_FLAG_NO_FACTION_TOOLTIP                | Hides tooltip faction.                                                                     |
 | 32         | 0x00000020 | CREATURE_TYPE_FLAG_MORE_AUDIBLE                      |                                                                                            |
 | 64         | 0x00000040 | CREATURE_TYPE_FLAG_SPELL_ATTACKABLE                  | Spell attackable.                                                                          |
@@ -445,7 +440,7 @@ This field can control whether a mob is minable or herbable or lootable by engin
 | 524288     | 0x00080000 | CREATURE_TYPE_FLAG_COLLIDE_WITH_MISSILES             | Projectiles can collide with this creature - interacts with TARGET_DEST_TRAJ               |
 | 1048576    | 0x00100000 | CREATURE_TYPE_FLAG_NO_NAME_PLATE                     | Hides nameplate.                                                                           |
 | 2097152    | 0x00200000 | CREATURE_TYPE_FLAG_DO_NOT_PLAY_MOUNTED_ANIMATIONS    | Does not play mounted animations.                                                          |
-| 4194304    | 0x00400000 | CREATURE_TYPE_FLAG_IS_LINK_ALL                       |                                                                                            |
+| 4194304    | 0x00400000 | CREATURE_TYPE_FLAG_LINK_ALL                          |                                                                                            |
 | 8388608    | 0x00800000 | CREATURE_TYPE_FLAG_INTERACT_ONLY_WITH_CREATOR        | Can only interact with its creator.                                                        |
 | 16777216   | 0x01000000 | CREATURE_TYPE_FLAG_DO_NOT_PLAY_UNIT_EVENT_SOUNDS     |                                                                                            |
 | 33554432   | 0x02000000 | CREATURE_TYPE_FLAG_HAS_NO_SHADOW_BLOB                |                                                                                            |
@@ -454,19 +449,19 @@ This field can control whether a mob is minable or herbable or lootable by engin
 | 268435456  | 0x10000000 | CREATURE_TYPE_FLAG_DO_NOT_SHEATHE                    |                                                                                            |
 | 536870912  | 0x20000000 | CREATURE_TYPE_FLAG_DO_NOT_TARGET_ON_INTERACTION      |                                                                                            |
 | 1073741824 | 0x40000000 | CREATURE_TYPE_FLAG_DO_NOT_RENDER_OBJECT_NAME         |                                                                                            |
-| 2147483648 | 0x80000000 | CREATURE_TYPE_FLAG_UNIT_IS_QUEST_BOSS                |                                                                                            |
+| 2147483648 | 0x80000000 | CREATURE_TYPE_FLAG_QUEST_BOSS                        |                                                                                            |
 
 #### lootid
 
-The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](loot_template#loot_template-entry)
+The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](loot_template#entry)
 
 #### pickpocketloot
 
-The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](loot_template#loot_template-entry)
+The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](loot_template#entry)
 
 #### skinloot
 
-The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](loot_template#loot_template-entry)
+The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](loot_template#entry)
 
 #### PetSpellDataId
 
@@ -537,10 +532,10 @@ Used to modify the Minimum/Maximum damage of a creature.
 
 The formulas to calculate the damage output are:
 
-MINDAMAGE = ((([damage_base](creature_classlevelstats#damage_base) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
-MAXDAMAGE = (((([damage_base](creature_classlevelstats#damage_base) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
+MINDAMAGE = ((([damage_base](creature_classlevelstats#damagebase) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
+MAXDAMAGE = (((([damage_base](creature_classlevelstats#damagebase) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
 
-damage_base comes from the creature_classlevelstats table and takes its value either from [damage_base](creature_classlevelstats#damage_base), [damage_exp1](creature_classlevelstats#damage_exp1) or [damage_exp2](creature_classlevelstats#damage_exp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
+damage_base comes from the creature_classlevelstats table and takes its value either from [damage_base](creature_classlevelstats#damagebase), [damage_exp1](creature_classlevelstats#damageexp1) or [damage_exp2](creature_classlevelstats#damageexp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
 
 BaseAttackTime is either [BaseAttackTime](#baseattacktime) or [RangeAttackTime](#rangeattacktime) depending on the type of attack.
 
@@ -551,7 +546,9 @@ BaseVariance is either [BaseVariance](#basevariance) or [RangeVariance](#rangeva
 
 #### ExperienceModifier
 
-TODO!
+Used to modify the experience a player gets for killing the creature. The base experience is multiplied by this value, for example 2 gives double experience and 0 gives none.
+
+Elite creatures already give double experience before this modifier is applied. Use the `CREATURE_FLAG_EXTRA_NO_XP` flag in [flags\_extra](#flagsextra) to make a creature give no experience at all.
 
 #### RacialLeader
 
@@ -582,7 +579,7 @@ Boolean '1' or '0' controlling whether the creature should regenerate it's healt
 
 Reference to the `creature_immunities` table which centralises spell- and mechanic-based immunities.
 
-For the detailed list of mechanics and spell-school bits, see [creature_immunities](creature_immunities.md).
+For the detailed list of mechanics and spell-school bits, see [creature_immunities](creature_immunities).
 
 #### flags_extra
 
@@ -601,7 +598,7 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 64         | CREATURE_FLAG_EXTRA_NO_XP                           | 0x00000040 | creature kill does not give XP                                                                                                         |
 | 128        | CREATURE_FLAG_EXTRA_TRIGGER                         | 0x00000080 | creature is trigger-NPC (invisible to players only)                                                                                    |
 | 256        | CREATURE_FLAG_EXTRA_NO_TAUNT                        | 0x00000100 | creature is immune to taunt-auras and "attack me"-effects                                                                              |
-| 512        | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | 0x00000200 | (CREATURE_FLAG_EXTRA_UNUSED_10 Not Implemented) creature won't update movement flags                                                   |
+| 512        | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | 0x00000200 | Creature won't update movement flags                                                   |
 | 1024       | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | 0x00000400 | creature will be only visible for dead players                                                                                         |
 | 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | creature will use offhand attacks                                                                                                      |
 | 4096       | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | 0x00001000 | players can't sell items to this vendor                                                                                                |
@@ -619,7 +616,7 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 16777216   | CREATURE_FLAG_EXTRA_MODULE                          | 0x01000000 | Used by module creatures to avoid blizzlike checks.                                                                                    |
 | 33554432   | CREATURE_FLAG_EXTRA_DONT_CALL_ASSISTANCE            | 0x02000000 | Prevents creatures from calling for assistance on initial aggro                                                                        |
 | 67108864   | CREATURE_FLAG_EXTRA_IGNORE_ALL_ASSISTANCE_CALLS     | 0x04000000 | Prevents creature from responding to assistance calls                                                                                  |
-| 134217728  | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_SAI_ENTRY         | 0x08000000 | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                             |
+| 134217728  | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_ENTRY_SAI         | 0x08000000 | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                             |
 | 268435456  | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | 0x10000000 | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error. |
 | 536870912  | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | 0x20000000 | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                 |
 | 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                             |

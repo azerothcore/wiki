@@ -20,7 +20,7 @@ This information comes from sniffs and is NOT supposed to be changed.
 
 ### eventEntry
 
-[game_event.eventEntry](game_event#eventEntry)
+[game_event.eventEntry](game_event#evententry)
 
 ### season
 

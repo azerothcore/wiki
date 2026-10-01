@@ -32,36 +32,49 @@
 
 ### id
 
-`field-no-description|1`
+The unique ID of the entry.
 
 ### account\_id
 
-`field-no-description|2`
+The account. See [account.id](account#id).
 
 ### character\_guid
 
-`field-no-description|3`
+GUID of the character, 0 for account actions. See [characters.guid](characters#guid).
 
 ### type
 
-`field-no-description|4`
+| Value | Action                     |
+| ----- | -------------------------- |
+| 0     | Account login              |
+| 1     | Failed account login       |
+| 2     | Password change            |
+| 3     | Failed password change     |
+| 4     | Email change               |
+| 5     | Failed email change        |
+| 7     | Character created          |
+| 8     | Character login            |
+| 9     | Character logout           |
+| 10    | Character deleted          |
+| 11    | Failed character delete    |
+| 12    | Unknown action             |
 
 ### ip
 
-`field-no-description|5`
+IP the action came from.
 
 ### systemnote
 
-`field-no-description|6`
+Note added by the core, for example the account and character names.
 
 ### unixtime
 
-`field-no-description|7`
+The time of the action, in Unix time.
 
 ### time
 
-`field-no-description|8`
+The time of the action.
 
 ### comment
 
-`field-no-description|9`
+A comment that can be added by hand. Not used by the core.

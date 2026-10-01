@@ -85,6 +85,7 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [item_set_names_locale](item_set_names_locale)
 - [item_template](item_template)
 - [item_template_locale](item_template_locale)
+- [itemset_dbc](itemset_dbc)
 - [lfg_dungeon_rewards](lfg_dungeon_rewards)
 - [lfg_dungeon_template](lfg_dungeon_template)
 - [linked_respawn](linked_respawn)

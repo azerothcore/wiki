@@ -6,7 +6,7 @@
 
 **The \`updates\` table**
 
-`table-no-description`
+Lists the SQL update files the database updater has applied to this database. The table is in the auth, characters and world databases.
 
 **Table Structure**
 

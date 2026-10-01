@@ -33,7 +33,7 @@ Mask required to receive mail.
 
 ### mailTemplateId
 
-Mail ID to be send. See [MailTemplate.dbc](mailtemplate)
+Mail ID to be send. See [MailTemplate.dbc](https://wowdev.wiki/DB/MailTemplate)
 
 ### senderEntry
 

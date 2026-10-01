@@ -13,10 +13,10 @@ This table holds definitions for all game events that are activated or deactivat
 | [eventEntry](#evententry)    | TINYINT      | UNSIGNED   | PRI | NO   |         | Unique | Entry of the game event                                                                                                              |
 | [start_time](#starttime)     | TIMESTAMP    |            |     | YES  | NULL    |        | Absolute start date, the event will never start before                                                                               |
 | [end_time](#endtime)         | TIMESTAMP    |            |     | YES  | NULL    |        | Absolute end date, the event will never start after; if NULL it will be implicitly set to 2 years in the future on each server start |
-| [occurrence](#occurrence)    | BIGINT       | UNSIGNED   |     | NO   |         |        | Delay in minutes between occurrences of the event                                                                                    |
+| [occurence](#occurence)      | BIGINT       | UNSIGNED   |     | NO   |         |        | Delay in minutes between occurrences of the event                                                                                    |
 | [length](#length)            | BIGINT       | UNSIGNED   |     | NO   |         |        | Length in minutes of the event                                                                                                       |
 | [holiday](#holiday)          | MEDIUMINT    | UNSIGNED   |     | NO   |         |        | Client side holiday id (from dbc)                                                                                                    |
-| [holidayStage](holidaystage) | TINYINT      | UNSIGNED   |     | NO   |         |        |                                                                                                                                      |
+| holidayStage | TINYINT      | UNSIGNED   |     | NO   |         |        |                                                                                                                                      |
 | [description](#description)  | VARCHAR(255) | SIGNED     |     | YES  | NULL    |        | Description of the event displayed in console                                                                                        |
 | [world_event](#worldevent)   | TINYINT      | UNSIGNED   |     | NO   |         |        | 0 if normal event, 1 if world event                                                                                                  |
 | [announce](#announce)        | TINYINT      | UNSIGNED   |     | YES  | 2       |        | 0 dont announce, 1 announce, 2 value from config                                                                                     |
@@ -39,7 +39,7 @@ Absolute end date of the event. The event will stop occurring if the local time 
 
 {% include note.html content="For events linked to holidays with dynamic date calculation, end_time is automatically computed based on the event length and start_time." %}
 
-### occurrence
+### occurence
 
 Number of minutes between 2 occurrences of the event. (2880 = 2 days, 1440 = 1 day, etc)
 
@@ -54,6 +54,12 @@ This value must be lower than occurrence one or the event will never stop.
 ### holiday
 
 Holiday ID from  [Holidays DBC file](holidays). This is sent to the client to update the calender.
+
+### holidayStage
+
+The stage of the [holiday](#holiday) this event is for. A holiday with more than one stage, like the Call to Arms battleground weekends, can have one game event per stage. The event's start time and length are taken from that stage of the holiday. 0 if the event is not linked to a holiday.
+
+The event with the highest stage of a holiday is its main stage. The holiday only counts as active while that event runs, so a building stage that starts days before a holiday like Brewfest or the Darkmoon Faire does not count. A stage the holiday does not have is reset to 0 with an error.
 
 ### description
 

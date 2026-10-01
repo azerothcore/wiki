@@ -102,6 +102,11 @@ This information is retrieved from DBCStructure.h.
 
 #### DAMAGE\_DONE = 13
 
+| Column | Field  | Type    |
+| ------ | ------ | ------- |
+| 4      | unused | Integer |
+| 5      | count  | Integer |
+
 #### COMPLETE\_DAILY\_QUEST = 14
 
 | Column | Field      | Type    |
@@ -110,6 +115,10 @@ This information is retrieved from DBCStructure.h.
 | 5      | questCount | Integer |
 
 #### COMPLETE\_BATTLEGROUND = 15
+
+| Column | Field      | Type   |
+| ------ | ---------- | ------ |
+| 4      | [Map](map) | iRefID |
 
 #### DEATH\_AT\_MAP = 16
 
@@ -157,6 +166,8 @@ This information is retrieved from DBCStructure.h.
 
 #### BE\_SPELL\_TARGET = 28
 
+Uses the same columns as BE\_SPELL\_TARGET2 below.
+
 #### BE\_SPELL\_TARGET2 = 69
 
 | Column | Field          | Type    |
@@ -165,6 +176,8 @@ This information is retrieved from DBCStructure.h.
 | 5      | spellCount     | Integer |
 
 #### CAST\_SPELL = 29
+
+Uses the same columns as CAST\_SPELL2 below.
 
 #### CAST\_SPELL2 = 110
 
@@ -189,6 +202,11 @@ This information is retrieved from DBCStructure.h.
 
 #### WIN\_ARENA = 32
 
+| Column | Field      | Type    |
+| ------ | ---------- | ------- |
+| 4      | [Map](map) | iRefID  |
+| 5      | count      | Integer |
+
 #### PLAY\_ARENA = 33
 
 | Column | Field      | Type   |
@@ -202,6 +220,11 @@ This information is retrieved from DBCStructure.h.
 | 4      | [Spell](spell) | iRefID |
 
 #### OWN\_ITEM = 36
+
+| Column | Field                 | Type    |
+| ------ | --------------------- | ------- |
+| 4      | [Item](item_template) | iRefID  |
+| 5      | itemCount             | Integer |
 
 #### WIN\_RATED\_ARENA = 37
 
@@ -233,7 +256,17 @@ This information is retrieved from DBCStructure.h.
 
 #### USE\_ITEM = 41
 
+| Column | Field                 | Type    |
+| ------ | --------------------- | ------- |
+| 4      | [Item](item_template) | iRefID  |
+| 5      | itemCount             | Integer |
+
 #### LOOT\_ITEM = 42
+
+| Column | Field                 | Type    |
+| ------ | --------------------- | ------- |
+| 4      | [Item](item_template) | iRefID  |
+| 5      | itemCount             | Integer |
 
 #### EXPLORE\_AREA = 43
 
@@ -245,7 +278,7 @@ This information is retrieved from DBCStructure.h.
 
 #### OWN\_RANK = 44
 
-- This rank is **NOT** the index from [CharTitles.dbc](chartitles)
+- This rank is **NOT** the index from [CharTitles.dbc](https://wowdev.wiki/DB/CharTitles)
 
 | Column | Field | Type    |
 | ------ | ----- | ------- |
@@ -289,6 +322,8 @@ This information is retrieved from DBCStructure.h.
 
 #### ROLL\_NEED\_ON\_LOOT = 50
 
+Uses the same columns as ROLL\_GREED\_ON\_LOOT below.
+
 #### ROLL\_GREED\_ON\_LOOT = 51
 
 | Column | Field     | Type    |
@@ -321,6 +356,11 @@ This information is retrieved from DBCStructure.h.
 
 #### HEALING\_DONE = 55
 
+| Column | Field  | Type    |
+| ------ | ------ | ------- |
+| 4      | unused | Integer |
+| 5      | count  | Integer |
+
 #### GET\_KILLING\_BLOWS = 56
 
 | Column | Field          | Type    | Notes                      |
@@ -328,16 +368,21 @@ This information is retrieved from DBCStructure.h.
 | 4      | unused         | Integer |                            |
 | 5      | count          | Integer |                            |
 | 6      | flag           | Integer | 3 for battleground healing |
-| 7      | [Map](Map.dbc) | iRefID  |                            |
+| 7      | [Map](map) | iRefID  |                            |
 
 #### EQUIP\_ITEM = 57
 
 | Column | Field        | Type    |
 | ------ | ------------ | ------- |
-| 4      | [Item](item) | iRefID  |
+| 4      | [Item](item_template) | iRefID  |
 | 5      | itemCount    | Integer |
 
 #### MONEY\_FROM\_QUEST\_REWARD= 62
+
+| Column | Field        | Type    |
+| ------ | ------------ | ------- |
+| 4      | unused       | Integer |
+| 5      | goldInCopper | Integer |
 
 #### LOOT\_MONEY = 67
 

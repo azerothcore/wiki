@@ -73,11 +73,11 @@ If [lootMethod](groups#lootmethod) is not 2, then it's group leader's guid.
 
 ### lootThreshold
 
-`field-no-description|5`
+The lowest item quality that is rolled for. See [item\_template.Quality](item_template#quality).
 
 ### icon
 
-`field-no-description|6-13`
+`icon1` to `icon8`. GUID of the unit marked with each raid target icon (star, circle, diamond, triangle, moon, square, cross and skull).
 
 ### groupType
 
@@ -92,12 +92,20 @@ If [lootMethod](groups#lootmethod) is not 2, then it's group leader's guid.
 
 ### difficulty
 
-`field-no-description|15`
+| Value | Dungeon difficulty |
+| ----- | ------------------ |
+| 0     | Normal             |
+| 1     | Heroic             |
 
 ### raiddifficulty
 
-`field-no-description|16`
+| Value | Raid difficulty   |
+| ----- | ----------------- |
+| 0     | 10 player         |
+| 1     | 25 player         |
+| 2     | 10 player heroic  |
+| 3     | 25 player heroic  |
 
 ### masterLooterGuid
 
-`field-no-description|17`
+GUID of the master looter, if the loot method is master loot. See [characters.guid](characters#guid).

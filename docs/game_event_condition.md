@@ -21,7 +21,7 @@ This table contains conditions to meet for the specified game event to be comple
 
 ### eventEntry
 
-This is a link to the event entry in the [game_event](#game_event#evententry) table.
+This is a link to the event entry in the [game_event](game_event#evententry) table.
 
 ### condition_id
 

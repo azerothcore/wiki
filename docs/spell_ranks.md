@@ -14,8 +14,8 @@ Table used by the core to group different ranks of spells (the gray text seen on
 | [spell_id][2]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [rank][3]           | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 
-[1]: #first_spell_id
-[2]: #spell_id
+[1]: #firstspellid
+[2]: #spellid
 [3]: #rank
 
 **Description of the fields**

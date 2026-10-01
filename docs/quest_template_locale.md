@@ -58,19 +58,23 @@ This is the ID of the quest to be translated.
 
 ### Title
 
-The title of the quest in the respective language.
+Translation of [quest\_template.LogTitle](quest_template#logtitle).
 
 ### Details
 
-Detail of the quest.
+Translation of [quest\_template.QuestDescription](quest_template#questdescription).
 
 ### Objectives
 
-This is the text that is displayed when it is completed.
+Translation of [quest\_template.LogDescription](quest_template#logdescription).
 
 ### EndText
 
-This is the text that is displayed until the quest is completed.
+Translation of [quest\_template.AreaDescription](quest_template#areadescription).
+
+### CompletedText
+
+Translation of [quest\_template.QuestCompletionLog](quest_template#questcompletionlog).
 
 ### ObjectiveText1
 
@@ -93,6 +97,12 @@ This is objective 4 of the search.
 In other words, it is the text that accompanies the counters.
 
 ### VerifiedBuild
+
+This field is used to determine if this translation originates from verified sniffs.
+
+If value is 0 then it has not been parsed yet or it has been inherited from an older DB or another Core.
+
+If value is above 0 then it has been parsed with sniffs from that specific client build.
 
 ### Example
 ```sql

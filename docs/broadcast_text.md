@@ -16,10 +16,10 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 
 | Field                                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#broadcast_text-ID)                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [LanguageID](#broadcast_text-Language)   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaleText](#broadcast_text-MaleText)     | text     | SIGNED     |     | YES  | NULL    |       |         |
-| [FemaleText](#broadcast_text-FemaleText) | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [ID](#id)                                | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [LanguageID](#languageid)   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [MaleText](#maletext)                    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [FemaleText](#femaletext)                | text     | SIGNED     |     | YES  | NULL    |       |         |
 | EmoteID1                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | EmoteID2                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | EmoteID3                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
@@ -29,9 +29,9 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 | SoundEntriesId                           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | EmotesID                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | Flags                                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| WDBVerified                              | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
+| VerifiedBuild                            | SMALLINT |            |     | YES  | 0       |       |         |
 
-### Description of the fields
+**Description of the fields**
 
  
 
@@ -63,7 +63,7 @@ IDs from Emotes.dbc
 
 The delays of the broadcast emotes.
 
-### SoundId
+### SoundEntriesId
 
 The sounds played when the texts are broadcast.
 
@@ -75,9 +75,9 @@ An emote.
 
 ### Flags
 
- 
+Loaded by the core, but not used.
 
-#### WDBVerified
+### VerifiedBuild
 
 This field was used to determine whether a template has been verified from WDB files (ADB files for this one).
 
