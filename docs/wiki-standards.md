@@ -38,6 +38,15 @@ A NOTICE BOX is added with an include. There are four alerts and one callout:
 ```
 {% endraw %}
 
+Preview:
+
+{% include note.html content="Extra information the reader may want." %}
+{% include tip.html content="An optional shortcut or a better way to do something." %}
+{% include important.html content="Something the reader must know before going on." %}
+{% include warning.html content="Something that can break the server or lose data." %}
+{% include callout.html content="A highlighted block without a label." type="primary" %}
+
+
 THE CALLOUT `type` is one of `danger`, `default`, `primary`, `success`, `info` or `warning`. See [Wiki Alerts and Callouts](wiki-alerts-and-callouts) for how each one looks.
 
 THE TEXT in `content` is HTML, not markdown. Markdown written there is shown as plain characters, for example `**bold**` shows the asterisks. Use these tags instead:
@@ -55,6 +64,29 @@ ONLY INLINE TAGS work in `content`. Paragraphs, lists, tables and code blocks do
 
 KEEP EACH INCLUDE on one line, with an empty line before and after it.
 
+### Version requirements box
+
+A LIST OF REQUIRED VERSIONS, as at the top of each requirements page, is an `info` callout with one requirement per line. End every line except the last with `<br/>`. This is the one include that may span several lines:
+
+{% raw %}
+```
+{% include callout.html content="Windows ≥ 10<br/>
+Boost ≥ 1.78<br/>
+MySQL ≥ 8.0 (Recommended 8.4)<br/>
+CMake ≥ 3.16" type="info" %}
+```
+{% endraw %}
+
+Preview:
+
+{% include callout.html content="Windows ≥ 10<br/>
+Boost ≥ 1.78<br/>
+MySQL ≥ 8.0 (Recommended 8.4)<br/>
+CMake ≥ 3.16" type="info" %}
+
+
+DO NOT USE a table for this list.
+
 ### The help list
 
 THE STANDARD "still having problems" LIST is added with an include that takes no content:
@@ -64,6 +96,11 @@ THE STANDARD "still having problems" LIST is added with an include that takes no
 {% include help.html %}
 ```
 {% endraw %}
+
+Preview:
+
+{% include help.html %}
+
 
 ### Line breaks in tables
 
@@ -81,6 +118,15 @@ The folded content, written in markdown.
 
 </details>
 ```
+
+Preview:
+
+<details>
+<summary>Click to show the full log</summary>
+
+The folded content, written in markdown.
+
+</details>
 
 ### Images with a size
 
@@ -101,6 +147,51 @@ ALL DATABASE TABLE FILES should be present in the correct DATABASE FILE.
 When adding/removing a table it should also be updated in `database-auth` `database-characters` `database-world` and in `database-index`
 
 ALL DATABASE TABLE FILES should follow the [Database Table Template](database-table-template), and every column should have a description.
+
+## INSTALLATION GUIDE PAGES
+
+EVERY STEP of the installation guide has the same navigation at the top and at the bottom of the page: one sentence, then the previous and the next step.
+
+```markdown
+# Server Setup
+
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 2: Core Installation](core-installation) | [Step 4: Database Installation >>](database-installation) |
+| :-- | --: |
+```
+
+Preview:
+
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 2: Core Installation](core-installation) | [Step 4: Database Installation >>](database-installation) |
+| :-- | --: |
+
+THE NAVIGATION comes directly after the title. Notice boxes and everything else go below it, so the navigation is in the same place on every step.
+
+ON A STEP PAGE THAT ONLY LINKS to the Linux, macOS and Windows pages, those three links come directly after the navigation, and notice boxes go below the links. That keeps the links in the same place when moving from one step to the next.
+
+ON THE LINUX, macOS AND WINDOWS PAGES of a step, the previous and next links stay on the same operating system (Windows Core Installation goes back to Windows Requirements). Add a middle link, `[Choose another OS](step-page)`, that goes to the step's own page, and use `| :-- | :-: | --: |` so it is centred. On the first step there is no previous page for the operating system, so its previous link goes to the step's own page and no middle link is needed.
+
+THE TWO LINKS are a table with a header row only. The wiki shows such a table at full width with two equal halves. The second row sets the alignment: `:--` is left, `--:` is right and `:-:` is centre. Leave a cell empty when there is no previous or no next step.
+
+## COMMUNITY-MADE GUIDES
+
+EVERY GUIDE listed under "Community made" on the [Installation Guide](installation) starts with this note, directly after the title. On a page with step navigation, the note comes directly after the navigation. If the guide has several pages, put it on each page:
+
+{% raw %}
+```
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+```
+{% endraw %}
+
+Preview:
+
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+
+
+WHEN YOU ADD a community-made guide, add this note to it and list the guide under "Community made" on the Installation Guide.
 
 ## LINKING WITHIN THE WIKI
 

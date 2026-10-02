@@ -1,9 +1,9 @@
 # Database Keeping the Server Up-to-Date
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps)                                                                                  | [Step 8: Client Setup >>](client-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
+| :-- | --: |
 
 1. First make sure that your core is [up-to-date](keeping-the-server-up-to-date).
 
@@ -40,17 +40,15 @@ The tool is part of the **tools** build list, so it can be compiled on its own:
 
 ### Using the Database Updater
 
-The tool is installed next to the other binaries (for example `env/dist/bin/dbimport` on Linux, or `dbimport.exe` in your build output folder on Windows) and reads its own configuration file, **dbimport.conf**, which is created from `dbimport.conf.dist` in the same way as the other config files.
+The tool is installed next to the other binaries (for example `env/dist/bin/dbimport` on Linux, or `dbimport.exe` in your build output folder on Windows) and reads its own configuration file, **dbimport.conf**, which is created from [`dbimport.conf.dist`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/tools/dbimport/dbimport.conf.dist) in the same way as the other config files.
 
 `dbimport.conf` contains the same **UPDATE SETTINGS** as authserver.conf and worldserver.conf (`Updates.EnableDatabases`, `Updates.AutoSetup`, `Updates.Redundancy`, `Updates.AllowedModules`, ...) plus the MySQL connection settings, so make sure those match your server configuration.
-
-<br>
 
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps)                                                                                  | [Step 8: Client Setup >>](client-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 6: Final Server Steps](final-server-steps) | [Step 8: Client Setup >>](client-setup) |
+| :-- | --: |

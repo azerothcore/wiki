@@ -14,7 +14,7 @@ This is the officially supported and complete way to install AzerothCore. Recomm
 
 - [AzerothCore Classic Installation](classic-installation)
 
-### Experimental installations <span class="badge badge-info">Limited support and usage</span>
+### Experimental installations <span class="badge badge-warning">Limited support</span>
 
 These guides are for experimental installations and have limited to no support.
 
@@ -24,7 +24,7 @@ These guides are for experimental installations and have limited to no support.
 
 - [Docker pre-compiled setup](https://www.azerothcore.org/acore-docker/)
 
-### Community made <span class="badge badge-info">Unsupported</span>
+### Community made <span class="badge badge-danger">Unsupported</span>
 
 Beware these guides are made by community members and might not be up-to-date:
 
@@ -37,8 +37,6 @@ Beware these guides are made by community members and might not be up-to-date:
 - [FreeBSD](freebsd)
 
 - [Visual Studio Code](vsc-requirements)
-
-<br>
 
 ## Help
 

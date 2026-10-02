@@ -1,20 +1,20 @@
 # Linux Requirements
 
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](requirements) | [Step 2: Core Installation >>](linux-core-installation) |
+| :-- | --: |
+
+{% include important.html content="<b>MariaDB</b> (any version) and <b>MySQL versions 5.7 and 8.1</b> are <b>not supported</b> by AzerothCore." %}
+
 {% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
 
-| Installation Guide                                                                                                                   |                                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](linux-core-installation) |
-
-|                                                                                 |
-| :------------------------------------------------------------------------------ |
-| [MySQL](https://github.com/azerothcore/azerothcore-wotlk/security/policy)       |
-| Boost ≥ 1.74                                                                    |
-| OpenSSL ≥ 3.0.x                                                                 |
-| CMake ≥ 3.16                                                                    |
-| [OS](https://github.com/azerothcore/azerothcore-wotlk/security/policy)          |
-| [GCC ≥ 15 / Clang ≥ 18](https://github.com/azerothcore/azerothcore-wotlk/security/policy) |
+{% include callout.html content="<a href='https://github.com/azerothcore/azerothcore-wotlk/security/policy'>MySQL</a><br/>
+Boost ≥ 1.74<br/>
+OpenSSL ≥ 3.0.x<br/>
+CMake ≥ 3.16<br/>
+<a href='https://github.com/azerothcore/azerothcore-wotlk/security/policy'>OS</a><br/>
+<a href='https://github.com/azerothcore/azerothcore-wotlk/security/policy'>GCC ≥ 15 / Clang ≥ 18</a>" type="info" %}
 
 #### Ubuntu 26.04
 
@@ -121,7 +121,7 @@ Your `openssl` version **MUST** be equal or higher than the required version lis
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](linux-core-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](requirements) | [Step 2: Core Installation >>](linux-core-installation) |
+| :-- | --: |

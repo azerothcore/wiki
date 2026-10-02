@@ -1,9 +1,9 @@
 # Database Installation
 
-| Installation Guide                                                                                                                   |                                     |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 3: Server Setup](server-setup)                                                                                              | [Step 5: Networking >>](networking) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 3: Server Setup](server-setup) | [Step 5: Networking >>](networking) |
+| :-- | --: |
 
 ## Creating the Database in MySQL
 
@@ -38,13 +38,11 @@ Database "acore_auth" does not exist
 Do you want to create it? [yes (default) / no]:
 ```
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                     |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 3: Server Setup](server-setup)                                                                                              | [Step 5: Networking >>](networking) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 3: Server Setup](server-setup) | [Step 5: Networking >>](networking) |
+| :-- | --: |

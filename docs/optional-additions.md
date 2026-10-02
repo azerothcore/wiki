@@ -1,9 +1,9 @@
 # Optional Additions
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. | Optional                                |
-| [<< Step 8: Client Setup](client-setup)                                                                                              |                                         |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 8: Client Setup](client-setup) |  |
+| :-- | --: |
 
 At this point you have a working AzerothCore server. Everything below is **optional** - pick whatever fits your server, or skip this step entirely.
 
@@ -25,13 +25,11 @@ Pick this only if you are experimenting with a large, horizontally scaled setup.
 
 - [Cluster Mode](cluster-mode)
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                         |
-| [<< Step 8: Client Setup](client-setup)                                                                                              |                                         |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 8: Client Setup](client-setup) |  |
+| :-- | --: |

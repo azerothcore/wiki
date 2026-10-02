@@ -1,9 +1,9 @@
 # Windows Server Setup
 
-| Installation Guide                                                                                                                   |                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 2: Core Installation](windows-core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 2: Core Installation](windows-core-installation) | [Choose another OS](server-setup) | [Step 4: Database Installation >>](database-installation) |
+| :-- | :-: | --: |
 
 **Table of contents**
 - [Client Data Files (Download Pre-Extracted)](#option-1-download-pre-extracted-files)
@@ -75,7 +75,7 @@ mmaps-config.yaml
 
 ## Config Files: Worldserver and Authserver
 
-First, find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within C:\Build\bin\RelWithDebInfo\configs\ (may vary).
+First, find the two default config files (named **[worldserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist)** and **[authserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/authserver/authserver.conf.dist)**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within C:\Build\bin\RelWithDebInfo\configs\ (may vary).
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
@@ -122,7 +122,7 @@ It is possible to load config options via environment variables, which you can r
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 2: Core Installation](windows-core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 2: Core Installation](windows-core-installation) | [Choose another OS](server-setup) | [Step 4: Database Installation >>](database-installation) |
+| :-- | :-: | --: |
