@@ -6,7 +6,7 @@
 
 This table holds pieces of names (first and last half) that are use for pet name generation.
 
-**Table Structure**
+**Table: pet\_name\_generation's Structure**
 
 | Field      | Type      | Attributes | Key | Null | Default | Extra          | Comment |
 | ---------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -20,7 +20,7 @@ This table holds pieces of names (first and last half) that are use for pet name
 [3]: #entry
 [4]: #half
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

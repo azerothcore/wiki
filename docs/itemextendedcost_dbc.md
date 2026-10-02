@@ -1,10 +1,10 @@
-# itemextendedcost_dbc
+# itemextendedcost\_dbc
 
 [<-Back-to:World](database-world)
 
-**The \`itemextendedcost_dbc\` table**
+**The \`itemextendedcost\_dbc\` table**
 
-**Table Structure**
+**Table: itemextendedcost\_dbc's Structure**
 
 | Field                                       | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -25,7 +25,7 @@
 | [RequiredArenaRating](#requiredarenarating) | INT  | UNSIGNED   |     | NO   | 0       |
 | [ItemPurchaseGroup](#itempurchasegroup)     | INT  | UNSIGNED   |     | NO   | 0       |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

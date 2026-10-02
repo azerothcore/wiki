@@ -6,7 +6,7 @@
 
 This table holds the text for letter items or any items that when moused-over turn the cursor into a magnifying glass and on right-click will open up a window where you can read the contents of the letter.
 
-**Table Structure**
+**Table: page\_text's Structure**
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds the text for letter items or any items that when moused-over tu
 [3]: #nextpageid
 [4]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

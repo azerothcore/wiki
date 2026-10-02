@@ -6,7 +6,7 @@
 
 This table holds the reputation information for each character.
 
-**Table Structure**
+**Table: character\_reputation's Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -20,7 +20,7 @@ This table holds the reputation information for each character.
 [3]: #standing
 [4]: #flags
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

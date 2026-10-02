@@ -6,7 +6,7 @@
 
 This table holds data about gameobjects that are temporarily summoned as a group. It works similarly to [creature\_summon\_groups](creature_summon_groups) but for gameobjects.
 
-## Structure
+**Table: gameobject\_summon\_groups's Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -25,7 +25,7 @@ This table holds data about gameobjects that are temporarily summoned as a group
 | [respawnTime](#respawntime)   | INT          | UNSIGNED   |     | NO   | 120     |       |         |
 | [Comment](#comment)           | VARCHAR(255) |            |     | NO   | ''      |       |         |
 
-## Description of the fields
+**Description of the table's fields**
 
 ### summonerId
 

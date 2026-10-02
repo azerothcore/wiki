@@ -6,7 +6,7 @@
 
 This table holds data about wrapped/gift items.
 
-**Table Structure**
+**Table: character\_gifts's Structure**
 
 | Field          | Type | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds data about wrapped/gift items.
 [3]: #entry
 [4]: #flags
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

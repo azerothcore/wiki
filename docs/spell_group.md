@@ -6,6 +6,8 @@
 
 Table used to group spells for varius checks in the core. One spell may be added to many groups, but can occur in one group only once.
 
+**Table: spell\_group's Structure**
+
 | Field             | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]           | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
@@ -14,7 +16,7 @@ Table used to group spells for varius checks in the core. One spell may be added
 [1]: #id
 [2]: #spellid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

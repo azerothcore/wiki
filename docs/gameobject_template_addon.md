@@ -1,8 +1,10 @@
 # gameobject\_template\_addon
 
+[<-Back-to:World](database-world)
+
 This table holds additional information on gameobjects.
 
-## Structure
+**Table: gameobject\_template\_addon's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +18,7 @@ This table holds additional information on gameobjects.
 | [artkit2](#artkit)  | INT      |            |     |      | 0       |       |         |
 | [artkit3](#artkit)  | INT      |            |     |      | 0       |       |         |
 
-## Description of the fields
+**Description of the table's fields**
 
 ### entry
 

@@ -4,7 +4,7 @@
 
 **The \`game\_event\_condition\_save\` table**
 
-**Table Structure**
+**Table: game\_event\_condition\_save's Structure**
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@
 [2]: #conditionid
 [3]: #done
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

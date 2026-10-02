@@ -4,7 +4,7 @@
 
 **The \`character\_pet\_declinedname\` table**
 
-**Table Structure**
+**Table: character\_pet\_declinedname's Structure**
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@
 [6]: #instrumental
 [7]: #prepositional
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

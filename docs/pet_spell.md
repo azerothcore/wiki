@@ -6,7 +6,7 @@
 
 This table holds information on individual pet spells.
 
-**Table Structure**
+**Table: pet\_spell's Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -18,7 +18,7 @@ This table holds information on individual pet spells.
 [2]: #spell
 [3]: #active
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

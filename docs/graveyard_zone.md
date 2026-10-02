@@ -10,7 +10,7 @@ This table is used to set what factions a given graveyard will accept, and also 
 
 For a list of all existing graveyard zones and their respective IDs, check out WorldSafeLocs.dbc
 
-**Table Structure**
+**Table: graveyard\_zone's Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -19,7 +19,7 @@ For a list of all existing graveyard zones and their respective IDs, check out W
 | [Faction](#faction)     | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [Comment](#comment)     | TEXT      |            |     |      |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

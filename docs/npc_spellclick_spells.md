@@ -8,7 +8,7 @@ This table holds information about spells to be cast upon receiving CMSG\_SPELL
 
 That opcode is sent for quests in which you have to loot creatures, who are already dead at spawning. Examples are [Planning for the Future](http://www.wowhead.com/quest=11960) and [Rifle the bodies](http://www.wowhead.com/quest=11999).
 
-**Table Structure**
+**Table: npc\_spellclick\_spells's Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra | Comment                                                                 |
 | --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ That opcode is sent for quests in which you have to loot creatures, who are alre
 [3]: #castflags
 [4]: #usertype
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### npc\_entry
 

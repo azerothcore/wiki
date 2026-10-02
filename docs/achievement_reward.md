@@ -6,7 +6,7 @@
 
 This table describes the reward that you will receive when you obtain a given achievement.
 
-**Table Structure**
+**Table: achievement\_reward's Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -28,7 +28,7 @@ This table describes the reward that you will receive when you obtain a given ac
 [7]: #body
 [8]: #mailtemplateid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

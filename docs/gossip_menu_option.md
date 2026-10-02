@@ -1,10 +1,12 @@
 # gossip\_menu\_option
 
+[<-Back-to:World](database-world)
+
 **Table: gossip\_menu\_option**
 
 This table holds information about menu options a gossip NPC can have. Examples of options: "Train me!", "I want to unlearn my talents"
 
-## Structure
+**Table: gossip\_menu\_option's Structure**
 
 | Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -38,7 +40,7 @@ This table holds information about menu options a gossip NPC can have. Example
 [13]: #boxbroadcasttextid
 [14]: #verifiedbuild
 
-## Description of the fields
+**Description of the table's fields**
 
 ### MenuID
 

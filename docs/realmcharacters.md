@@ -7,7 +7,7 @@
 This table holds information on the number of characters each account has for each realm.
 The data in this table is maintained by the core.
 
-**Table Structure**
+**Table: realmcharacters's Structure**
 
 | Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -19,7 +19,7 @@ The data in this table is maintained by the core.
 [2]: #acctid
 [3]: #numchars
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### realmid
 

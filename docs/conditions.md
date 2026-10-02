@@ -6,7 +6,7 @@
 
 This table allows you to define conditions for various systems - Gossip, loot etc.
 
-**Table Structure**
+**Table: conditions's Structure**
 
 | Field                                                 | Type               | Null | Key | Default | Extra | Comment                                                                          |
 | ----------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | -------------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ This table allows you to define conditions for various systems - Gossip, loot et
 | [ScriptName](#scriptname)                             | char(64) SIGNED    | NO   |     | ' '     |       |                                                                                  |
 | [Comment](#comment)                                   | VARCHAR(255)       | YES  |     | NULL    |       |                                                                                  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### SourceTypeOrReferenceId
 

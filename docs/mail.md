@@ -6,7 +6,7 @@
 
 This table contains main data about all mails in the game.
 
-**Table Structure**
+**Table: mail's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment                            |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -40,7 +40,7 @@ This table contains main data about all mails in the game.
 [13]: #cod
 [14]: #checked
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

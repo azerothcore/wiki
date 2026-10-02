@@ -6,7 +6,7 @@
 
 This table defines spawn group templates with their names and behavior flags. Spawn groups allow logical grouping of creature and gameobject spawns with per-group control over respawn behavior.
 
-**Table Structure**
+**Table: spawn\_group\_template's Structure**
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@ This table defines spawn group templates with their names and behavior flags. Sp
 | [groupName](#groupname)   | VARCHAR(100) |            |     | NO   | NULL    |       |         |
 | [groupFlags](#groupflags) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### groupId
 

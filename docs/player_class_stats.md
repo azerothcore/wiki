@@ -1,12 +1,12 @@
-# player_class_stats
+# player\_class\_stats
 
 [<-Back-to:World](database-world)
 
-**The \`player_class_stats\` table**
+**The \`player\_class\_stats\` table**
 
 This table holds information on what values are applied to stats for characters as they level up. All of the values in this table signify only the base stats of a class at a specific level.
 
-**Table Structure**
+**Table: player\_class\_stats's Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -30,7 +30,7 @@ This table holds information on what values are applied to stats for characters 
 [8]: #intellect
 [9]: #spirit
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Class
 

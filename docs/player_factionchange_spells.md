@@ -6,7 +6,7 @@
 
 Basically all spell changes made when player changes faction.
 
-**Table Structure**
+**Table: player\_factionchange\_spells's Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ Basically all spell changes made when player changes faction.
 [3]: #alliancecomment
 [4]: #hordecomment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance\_id
 

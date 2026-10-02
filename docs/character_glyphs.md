@@ -6,7 +6,7 @@
 
 Contains all the individual glyph data for each character.
 
-**Table Structure**
+**Table: character\_glyphs's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -28,7 +28,7 @@ Contains all the individual glyph data for each character.
 [7]: #glyph
 [8]: #glyph
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

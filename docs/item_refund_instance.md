@@ -6,7 +6,7 @@
 
 This table serves as a receipt of refundable purchases during a 2 hour ingame time window. It holds information on what currency was spent to purchase the item.
 
-**Table Structure**
+**Table: item\_refund\_instance's Structure**
 
 | Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment     |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ----------- |
@@ -20,7 +20,7 @@ This table serves as a receipt of refundable purchases during a 2 hour ingame ti
 [3]: #paidmoney
 [4]: #paidextendedcost
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### item\_guid
 

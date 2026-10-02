@@ -4,7 +4,7 @@
 
 **The \`channels\_bans\` table**
 
-**Table Structure**
+**Table: channels\_bans's Structure**
 
 | Field           | Type  | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -16,7 +16,7 @@
 [2]: #playerguid
 [3]: #bantime
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### channelId
 

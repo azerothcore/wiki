@@ -6,7 +6,7 @@
 
 When a player gains or loses reputation with a faction, this table lets a part of it spill over to other factions. A row here replaces the spillover defined in Faction.dbc for that faction.
 
-**Table Structure**
+**Table: reputation\_spillover\_template's Structure**
 
 | Field          | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -50,7 +50,7 @@ When a player gains or loses reputation with a faction, this table lets a part o
 [18]: #rate1-6
 [19]: #rank1-6
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### faction
 

@@ -6,7 +6,7 @@
 
 Records in this table can be overwritten by [vehicle\_accessory](vehicle_accessory) table
 
-**Table Structure**
+**Table: vehicle\_template\_accessory's Structure**
 
 | Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                                      |
 | -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------- |
@@ -26,7 +26,7 @@ Records in this table can be overwritten by [vehicle\_accessory](vehicle_accesso
 [6]: #summontype
 [7]: #summontimer
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

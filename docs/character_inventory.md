@@ -6,7 +6,7 @@
 
 Contains all the character inventory data, including the bank data.
 
-**Table Structure**
+**Table: character\_inventory's Structure**
 
 | Field     | Type    | Attributes | Key    | Null | Default | Extra | Comment                       |
 | --------- | ------- | ---------- | ------ | ---- | ------- | ----- | ----------------------------- |
@@ -20,7 +20,7 @@ Contains all the character inventory data, including the bank data.
 [3]: #slot
 [4]: #item
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

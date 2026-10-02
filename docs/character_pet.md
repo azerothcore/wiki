@@ -6,7 +6,7 @@
 
 This table holds the pet data for each pet summoned by anyone in the game.
 
-**Table Structure**
+**Table: character\_pet's Structure**
 
 | Field               | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -46,7 +46,7 @@ This table holds the pet data for each pet summoned by anyone in the game.
 [16]: #savetime
 [17]: #abdata
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

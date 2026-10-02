@@ -6,7 +6,7 @@
 
 This table hold informations regarding the right guild member have to withdraw, deposit etc at the guild bank.
 
-**Table Structure**
+**Table: guild\_bank\_right's Structure**
 
 | Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table hold informations regarding the right guild member have to withdraw, 
 [4]: #gbright
 [5]: #slotperday
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

@@ -4,7 +4,7 @@
 
 **The \`character\_achievement\_progress\` table**
 
-**Table Structure**
+**Table: character\_achievement\_progress's Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@
 [3]: #counter
 [4]: #date
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

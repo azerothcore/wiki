@@ -1,6 +1,8 @@
 # creature\_classlevelstats
 
-**Table Structure**
+[<-Back-to:World](database-world)
+
+**Table: creature\_classlevelstats's Structure**
 
 This table contains the base values for creature health, mana, armor, attack power, ranged attack power, damage, and experience.
 
@@ -44,7 +46,7 @@ This table contains the base values for creature health, mana, armor, attack pow
 [17]: #intellect
 [18]: #spirit
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### level
 

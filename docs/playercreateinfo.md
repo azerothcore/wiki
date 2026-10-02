@@ -6,7 +6,7 @@
 
 This table holds the start positions of each class-race combinations for all newly created characters.
 
-**Table Structure**
+**Table: playercreateinfo's Structure**
 
 | Field            | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -28,7 +28,7 @@ This table holds the start positions of each class-race combinations for all new
 [7]: #positionz
 [8]: #orientation
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### race
 

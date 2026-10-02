@@ -1,10 +1,8 @@
 # quest\_request\_items\_locale
 
-**Table: quest\_request\_items\_locale**
-
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: quest\_request\_items\_locale's Structure**
 
 | Field               | Type       | Attribute | Key | Null | Default | Extra | Comment |
 | ------------------- | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +16,7 @@
 [3]: #completiontext
 [4]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

@@ -1,10 +1,10 @@
-# outdoorpvp_template
+# outdoorpvp\_template
 
 [<-Back-to:World](database-world)
 
-**The \`outdoorpvp_template\` table**
+**The \`outdoorpvp\_template\` table**
 
-**Table Structure**
+**Table: outdoorpvp\_template's Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@
 [2]: #scriptname
 [3]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### TypeId
 Id defined in the emulator for each PvP zone in the world.

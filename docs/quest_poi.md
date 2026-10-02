@@ -6,7 +6,7 @@
 
 Comes from sniffs.
 
-**Table Structure**
+**Table: quest\_poi's Structure**
 
 | Field               | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -30,7 +30,7 @@ Comes from sniffs.
 [8]: #flags
 [9]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### QuestID
 

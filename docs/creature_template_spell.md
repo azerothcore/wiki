@@ -1,10 +1,10 @@
-# creature_template_spell
+# creature\_template\_spell
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template_spell\` table**
+**The \`creature\_template\_spell\` table**
 
-**Table Structure**
+**Table: creature\_template\_spell's Structure**
 
 | Field              | Type      | Attribute | Key  | Null | Default | Extra | Comment |
 | ------------------ | --------- | --------- | ---- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@
 [3]: #spell
 [4]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

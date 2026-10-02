@@ -8,7 +8,7 @@ This table has the same columns as [Achievement.dbc](achievement). The core load
 
 The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
-**Table Structure**
+**Table: achievement\_dbc's Structure**
 
 | Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -75,7 +75,7 @@ The core reads every column in order, so a row must have a value for all of them
 | [Minimum_Criteria](#minimumcriteria)      | INT          |            |     | NO   | 0       |       |         |
 | [Shares_Criteria](#sharescriteria)        | INT          |            |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

@@ -6,7 +6,7 @@
 
 This table holds pieces of names (first and last half) that are use for pet name generation for locale.
 
-**Table Structure**
+**Table: pet\_name\_generation\_locale's Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra          | Comment |
 | ----------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -22,7 +22,7 @@ This table holds pieces of names (first and last half) that are use for pet name
 [4]: #entry
 [5]: #half
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

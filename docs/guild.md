@@ -6,7 +6,7 @@
 
 This table holds the main guild information. All created guilds or all guilds in the process of being created have a record in this table.
 
-**Table Structure**
+**Table: guild's Structure**
 
 | Field                | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -36,7 +36,7 @@ This table holds the main guild information. All created guilds or all guilds in
 [11]: #createdate
 [12]: #bankmoney
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

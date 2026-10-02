@@ -6,7 +6,7 @@
 
 Holds the remaining cooldowns from either character spells or item spells for each character.
 
-**Table Structure**
+**Table: character\_spell\_cooldown's Structure**
 
 | Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -24,7 +24,7 @@ Holds the remaining cooldowns from either character spells or item spells for ea
 [5]: #needsend
 [6]: #category
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

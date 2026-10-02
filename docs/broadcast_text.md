@@ -1,5 +1,7 @@
 # broadcast\_text
 
+[<-Back-to:World](database-world)
+
 **The \`broadcast\_text\` table**
 
  
@@ -12,7 +14,7 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
  
  **Most of the time, the values here are correct and your script needs to be fixed. Please ensure your script works correctly before suggesting changes to this table.**
 
-**Table Structure**
+**Table: broadcast\_text's Structure**
 
 | Field                                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -31,7 +33,7 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 | Flags                                    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | VerifiedBuild                            | SMALLINT |            |     | YES  | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
  
 

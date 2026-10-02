@@ -1,12 +1,12 @@
-# page_text_locale
+# page\_text\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`page_text_locale\` table**
+**The \`page\_text\_locale\` table**
 
 This table is used to provide localized clients with localized strings for page_texts.
 
-**Table Structure**
+**Table: page\_text\_locale's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@ This table is used to provide localized clients with localized strings for page_
 | [Text](#text) | TEXT |  |  | YES |  |  |  |
 | [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

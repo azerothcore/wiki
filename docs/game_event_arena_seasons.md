@@ -1,12 +1,12 @@
-# game_event_arena_seasons
+# game\_event\_arena\_seasons
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_arena_seasons\` table**
+**The \`game\_event\_arena\_seasons\` table**
 
 This information comes from sniffs and is NOT supposed to be changed.
 
-**Table Structure**
+**Table: game\_event\_arena\_seasons's Structure**
 
 | Field           | Type    | Attributes | Key | Null | Default | Extra  | Comment                  |
 | --------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
@@ -16,7 +16,7 @@ This information comes from sniffs and is NOT supposed to be changed.
 [1]: #evententry
 [2]: #season
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

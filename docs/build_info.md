@@ -4,7 +4,7 @@
 
 **The \`build\_info\` table**
 
-**Table Structure**
+**Table: build\_info's Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 | --------------------- | ------------ | ---------- | --- | ---- | ------- | ----- |----------- |
@@ -30,7 +30,7 @@
 [9]: #winchecksumseed
 [10]: #macchecksumseed
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### build
 

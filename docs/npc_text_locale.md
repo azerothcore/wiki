@@ -1,12 +1,12 @@
-# npc_text_locale
+# npc\_text\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`npc_text_locale\` table**
+**The \`npc\_text\_locale\` table**
 
 This table is used to provide localized clients with localized strings for npc_texts.
 
-**Table Structure**
+**Table: npc\_text\_locale's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -29,7 +29,7 @@ This table is used to provide localized clients with localized strings for npc_t
 | [Text7_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
 | [Text7_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

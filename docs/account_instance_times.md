@@ -6,7 +6,7 @@
 
 This table controls how many instances the account's characters have been in last 1 hour. If there is 5 records per account, the player won't be able to enter another instance.
 
-**Table Structure**
+**Table: account\_instance\_times's Structure**
 
 | Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ This table controls how many instances the account's characters have been in las
 [2]: #instanceid
 [3]: #releasetime
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### accountId
 

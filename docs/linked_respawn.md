@@ -7,7 +7,7 @@
 This table links trash mobs to bosses so that if you kill the boss, the trash do not respawn before the instance is reset.
 Gameobjects can be linked too!
 
-**Table Structure**
+**Table: linked\_respawn's Structure**
 
 | Field           | Type    | Attributes | Key | Null | Default | Extra | Comment            |
 | --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |
@@ -19,7 +19,7 @@ Gameobjects can be linked too!
 [2]: #linkedguid
 [3]: #linktype
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

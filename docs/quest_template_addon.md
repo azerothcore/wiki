@@ -1,4 +1,4 @@
-# quest_template_addon
+# quest\_template\_addon
 
 [<-Back-to:World](database-world)
 
@@ -6,7 +6,7 @@
 
 Contains extra definitions like linking quests, dependencies and requirements for the quests defined in the [quest_template](quest_template) table to become available to the player.
 
-**Structure:**
+**Table: quest\_template\_addon's Structure**
 
 | Field                                           | Type      | Attributes | Key | Null | Default | Extra | Comment                               |
 | ----------------------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
@@ -29,7 +29,7 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 | [ProvidedItemCount](#provideditemcount)         | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
 | [SpecialFlags](#specialflags)                   | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### ID
 

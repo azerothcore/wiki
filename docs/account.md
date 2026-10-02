@@ -6,7 +6,7 @@
 
 Holds the accounts that can log in to the server.
 
-**Table Structure**
+**Table: account's Structure**
 
 | Field                             | Type           | Attributes | Key | Null | Default           | Extra          | Comment       |
 | --------------------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ------------- |
@@ -37,7 +37,7 @@ Holds the accounts that can log in to the server.
 | [totaltime](#totaltime)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 
 
-## Description of the fields
+**Description of the table's fields**
 
 ### id
 

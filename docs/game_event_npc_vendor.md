@@ -1,12 +1,12 @@
-# game_event_npc_vendor
+# game\_event\_npc\_vendor
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_npc_vendor\` table**
+**The \`game\_event\_npc\_vendor\` table**
 
 This table allows you to change the items a vendor sells, or to create a [vendor list](npc_vendor) for an NPC who does not sell items unless an event is active.
 
-**Table Structure**
+**Table: game\_event\_npc\_vendor's Structure**
 
 | Field                         | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ This table allows you to change the items a vendor sells, or to create a [vendor
 | [incrtime](#incrtime)         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [ExtendedCost](#extendedcost) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

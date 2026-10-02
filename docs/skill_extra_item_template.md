@@ -6,7 +6,7 @@
 
 This table holds information about when using certain profession spells, you have the chance of creating more than one copy of the item.
 
-**Table Structure**
+**Table: skill\_extra\_item\_template's Structure**
 
 | Field                       | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
 | --------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -20,7 +20,7 @@ This table holds information about when using certain profession spells, you hav
 [3]: #additionalcreatechance
 [4]: #additionalmaxnum
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spellId
 

@@ -6,7 +6,7 @@
 
 This table holds enchantment chance information for items that should have either a random property or a random suffix attached to them.
 
-**Table Structure**
+**Table: item\_enchantment\_template's Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ This table holds enchantment chance information for items that should have eithe
 [2]: #ench
 [3]: #chance
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

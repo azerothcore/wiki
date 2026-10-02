@@ -4,7 +4,7 @@
 
 **The \`channels\_rights\` table**
 
-**Table Structure**
+**Table: channels\_rights's Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@
 [5]: #delaymessage
 [6]: #moderators
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 

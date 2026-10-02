@@ -6,7 +6,7 @@
 
 This table sets up information on all available realms. Each row controls a different realm.
 
-**Table Structure**
+**Table: realmlist's Structure**
 
 | Field                      | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
 | -------------------------- | ------------ | ---------- | --- | ---- | ------------- | -------------- | ------- |
@@ -35,7 +35,7 @@ This table sets up information on all available realms. Each row controls a diff
 [10]: #population
 [11]: #gamebuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

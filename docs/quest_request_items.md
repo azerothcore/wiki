@@ -10,7 +10,7 @@ This table basically handles 3 quest details:
 2.  NPC Emote when quest is incomplete
 3.  Completion text for quests requiring quest items
 
-**Table Structure**
+**Table: quest\_request\_items's Structure**
 
 | Field                                   | Type      | Attributes | Key | NULL | Default | Comment |
 | --------------------------------------- | --------- | ---------- | --- | ---- | ------- | ------- |
@@ -20,7 +20,7 @@ This table basically handles 3 quest details:
 | [CompletionText](#completiontext)       | text      |            |     | YES  | NULL    |         |
 | [VerifiedBuild](#verifiedbuild)         | SMALLINT  |            |     | NO   | 0       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

@@ -4,7 +4,7 @@
 
 **The \`log\_money\` table**
 
-**Table Structure**
+**Table: log\_money's Structure**
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment                                              |
 | ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------------------- |
@@ -29,7 +29,7 @@
 [8]: #topic
 [9]: #date
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### sender\_acc
 

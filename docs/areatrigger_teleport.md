@@ -6,7 +6,7 @@
 
 Contains all the teleport triggers definition. This table is used to complete .dbc file information.
 
-**Table Structure**
+**Table: areatrigger\_teleport's Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@ Contains all the teleport triggers definition. This table is used to complete .d
 [6]: #targetpositionz
 [7]: #targetorientation
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

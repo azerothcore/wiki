@@ -6,7 +6,7 @@
 
 This table allows to group mobs. Members of group will follow others, and attack their targets.
 
-**Table Structure**
+**Table: creature\_formations's Structure**
 
 | Field           | Type  | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -25,6 +25,8 @@ This table allows to group mobs. Members of group will follow others, and attack
 [5]: #groupai
 [6]: #point1
 [7]: #point2
+
+**Description of the table's fields**
 
 ## leaderGUID
 

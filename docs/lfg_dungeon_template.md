@@ -1,12 +1,12 @@
-# lfg_dungeon_template
+# lfg\_dungeon\_template
 
 [<-Back-to:World](database-world)
 
-**The \`lfg_dungeon_template\` table**
+**The \`lfg\_dungeon\_template\` table**
 
 Used to give NPC spells cooldowns for mindcontroll.
 
-**Table Structure**
+**Table: lfg\_dungeon\_template's Structure**
 
 | Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment                        |
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------ |
@@ -18,7 +18,7 @@ Used to give NPC spells cooldowns for mindcontroll.
 | [orientation](#orientation)     | FLOAT        |            |     | NO   | 0       |       |                                |
 | [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |                                |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### dungeonId
 

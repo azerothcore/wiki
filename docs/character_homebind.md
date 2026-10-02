@@ -6,7 +6,7 @@
 
 Contains information on the location where characters get teleported when they use their Hearthstone.
 
-**Table Structure**
+**Table: character\_homebind's Structure**
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -24,7 +24,7 @@ Contains information on the location where characters get teleported when they u
 [5]: #posy
 [6]: #posz
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

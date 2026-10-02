@@ -1,12 +1,12 @@
-# creature_immunities
+# creature\_immunities
 
 [<-Back-to:World](database-world)
 
-**The `creature_immunities` table**
+**The \`creature\_immunities\` table**
 
 This table centralises creature and spell immunities. `creature_template.CreatureImmunitiesId` points to an entry in this table. Spells may also reference a `creature_immunities` entry via Aura Id 147 (`SPELL_AURA_MECHANIC_IMMUNITY_MASK`) where `misc` stores the referenced id.
 
-**Table Structure**
+**Table: creature\_immunities's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table centralises creature and spell immunities. `creature_template.Creatur
 | [ImmuneChain](#immunechain) | TINYINT(1) | | | NO | 0 | | Blocks chain effects (boolean) |
 | [Comment](#comment) | MEDIUMTEXT | | | NO | (NULL) | | Free-text description |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

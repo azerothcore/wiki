@@ -6,7 +6,7 @@
 
 This table holds information on modifiers for stat values applied to characters. All of the values in this table signify only the stat value modifiers based on the race of a character.
 
-**Table Structure**
+**Table: player\_race\_stats's Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table holds information on modifiers for stat values applied to characters.
 [5]: #intellect
 [6]: #spirit
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Race
 

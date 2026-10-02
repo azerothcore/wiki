@@ -6,7 +6,7 @@
 
 Points of interest that gossip options can mark on the player's minimap, for example when a city guard gives directions. See [gossip\_menu\_option.ActionPoiID](gossip_menu_option#actionpoiid).
 
-**Table Structure**
+**Table: points\_of\_interest's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@ Points of interest that gossip options can mark on the player's minimap, for exa
 [6]: #importance
 [7]: #name
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

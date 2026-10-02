@@ -6,7 +6,7 @@
 
 This table holds the server's uptime. The core will automatically update the latest entry's value until it crashes and a new record is added.
 
-**Table Structure**
+**Table: uptime's Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default     | Extra | Comment |
 | ------------------- | ------------ | ---------- | --- | ---- | ----------- | ----- | ------- |
@@ -30,7 +30,7 @@ This table holds the server's uptime. The core will automatically update the lat
 [8]: #exitcode
 [9]: #shutdownreason
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### realmid
 

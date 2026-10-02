@@ -7,7 +7,7 @@
 This table holds information on all the stats regarding the character. Used for external applications such as websites.
 See worldserver.conf: PlayerSave.Stats.\*
 
-**Table Structure**
+**Table: character\_stats's Structure**
 
 | Field                   | Type  | Attributes | Key | Null | Default | Extra | Comment                            |
 | ----------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -75,7 +75,7 @@ See worldserver.conf: PlayerSave.Stats.\*
 [30]: #spellpower
 [31]: #resilience
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

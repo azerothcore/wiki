@@ -6,7 +6,7 @@
 
 This table holds the re-spawn time when game objects should be re spawned in the world. In case of a server crash, this table holds the re-spawn data so that the game objects don't re-spawn immediately on server restart. How often the re-spawn time is saved for game objects can be controlled in trinitycore.conf at SaveRespawnTimeImmediately. Usually the only objects that despawn and need to be re-spawned are chests and doors.
 
-**Table Structure**
+**Table: gameobject\_respawn's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -20,7 +20,7 @@ This table holds the re-spawn time when game objects should be re spawned in the
 [3]: #mapid
 [4]: #instanceid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

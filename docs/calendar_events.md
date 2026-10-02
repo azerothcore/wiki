@@ -4,7 +4,7 @@
 
 **The \`calendar\_events\` table**
 
-**Table Structure**
+**Table: calendar\_events's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment  |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | -------- |
@@ -28,7 +28,7 @@
 [9]: #flags
 [10]: #time2
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

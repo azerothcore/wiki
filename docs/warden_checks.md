@@ -6,7 +6,7 @@
 
 This table contains data related to the use of the anti-cheat tool Warden, which can be enabled in Worldserver.conf
 
-**Table Structure**
+**Table: warden\_checks's Structure**
 
 | Field                             | Type        | Attributes | Key | NULL | Default         | Comment                                   |
 | --------------------------------- | ----------- | ---------- | --- | ---- | --------------- | ----------------------------------------- |
@@ -19,7 +19,7 @@ This table contains data related to the use of the anti-cheat tool Warden, which
 | [result](#result)                 | VARCHAR(24) |            |     | YES  | NULL            |                                           |
 | [comment](#comment)               | VARCHAR(50) |            |     | YES  | NULL            |                                           |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### id
 

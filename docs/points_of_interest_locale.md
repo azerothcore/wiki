@@ -2,11 +2,11 @@
 
 [<-Back-to:World](database-world)
 
-**The \`locales\_points\_of\_interest\` table**
+**The \`points\_of\_interest\_locale\` table**
 
 Translations of the names in [points\_of\_interest](points_of_interest).
 
-**Table Structure**
+**Table: points\_of\_interest\_locale's Structure**
 
 | Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@ Translations of the names in [points\_of\_interest](points_of_interest).
 | [Name](#name)                   | TEXT       |            |     | YES  | NULL    |       |         |
 | [VerifiedBuild](#verifiedbuild) | INT        |            |     | YES  | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

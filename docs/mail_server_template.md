@@ -1,8 +1,8 @@
-# mail_server_template
+# mail\_server\_template
 
 [<-Back-to:Characters](database-characters)
 
-**The \`mail_server_template\` table**
+**The \`mail\_server\_template\` table**
 
 This table contains information for server mail to be sent to players that meet the requirement. Mails are sent OnLogin.
 
@@ -10,7 +10,7 @@ Works alongside
 - [mail_server_template_items](mail_server_template_items) to attach items to the mail.
 - [mail_server_template_conditions](mail_server_template_conditions) to create conditions to receive the mail.
 
-**Table Structure**
+**Table: mail\_server\_template's Structure**
 
 | Field                     | Type    | Attributes | Key | Null | Default | Extra          | Comment                                            |
 | ------------------------- | ------- | ---------- | --- | ---- | ------- | -------------- | -------------------------------------------------- |
@@ -22,7 +22,7 @@ Works alongside
 | [body](#body)             | TEXT    |            |     | NO   |         |                |                                                    |
 | [active](#active)         | TINYINT | UNSIGNED   |     | NO   | 1       |                |                                                    |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

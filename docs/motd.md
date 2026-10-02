@@ -4,7 +4,7 @@
 
 **The \`motd\` table**
 
-**Table Structure**
+**Table: motd's Structure**
 
 | Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@
 [1]: #realmid
 [2]: #text
 
-## Description of the fields
+**Description of the table's fields**
 
 ### realmid
 

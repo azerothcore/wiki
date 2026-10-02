@@ -2,13 +2,13 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The \`gm\_tickets\` table**
+**The \`gm\_ticket\` table**
 
 This table stores all tickets.
 
 Note: do not insert directly into most of these columns, else the client won't update the ticket status until table reload and a logout.
 
-**Table Structure**
+**Table: gm\_ticket's Structure**
 
 | Field                  | Type        | Attributes | Key | Null | Default        | Extra | Comment                                    |
 | ---------------------- | ----------- | ---------- | --- | ---- | -------------- | ----- | ------------------------------------------ |
@@ -54,7 +54,7 @@ Note: do not insert directly into most of these columns, else the client won't u
 [19]: #needmorehelp
 [20]: #resolvedby
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Id
 

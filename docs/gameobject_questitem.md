@@ -1,10 +1,10 @@
-# gameobject_questitem
+# gameobject\_questitem
 
 [<-Back-to:World](database-world)
 
-**The \`gameobject_questitem\` table**
+**The \`gameobject\_questitem\` table**
 
-**Table Structure**
+**Table: gameobject\_questitem's Structure**
 
 | Field                               | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -13,7 +13,7 @@
 | [ItemId](#itemid)                   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [VerifiedBuild](#verifiedbuild)     | INT  | UNSIGNED   |     | YES  | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### GameObjectEntry
 

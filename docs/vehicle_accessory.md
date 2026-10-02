@@ -6,7 +6,7 @@
 
 This table is used to tell the server to spawn an additional NPC with this vehicle.
 
-**Table Structure**
+**Table: vehicle\_accessory's Structure**
 
 | Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                                      |
 | -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------- |
@@ -26,7 +26,7 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 [6]: #summontype
 [7]: #summontimer
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

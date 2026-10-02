@@ -6,7 +6,7 @@
 
 Contains all information about the currently ongoing auctions in the auction houses. It controls what items are put up for auction and who put it up, who is the highest bidder, etc.
 
-**Table Structure**
+**Table: auctionhouse's Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -32,7 +32,7 @@ Contains all information about the currently ongoing auctions in the auction hou
 [9]: #startbid
 [10]: #deposit
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

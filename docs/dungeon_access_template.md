@@ -4,7 +4,7 @@
 
 **The \`dungeon\_access\_template\` table**
 
-**Table Structure**
+**Table: dungeon\_access\_template's Structure**
 
 | Field                   | Type         | Attributes | Key | Null | Default        | Extra                                         | Comment |
 | ----------------------- | ------------ | ---------- | --- | ---- | -------------- | --------------------------------------------- | ------- |
@@ -24,7 +24,7 @@
 [6]: #minavgitemlevel
 [7]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

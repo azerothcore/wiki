@@ -1,10 +1,10 @@
 # quest\_tracker
 
-[<-Back-to:Character](database-characters)
+[<-Back-to:Characters](database-characters)
 
 **The \`quest\_tracker\` table**
 
-**Table Structure**
+**Table: quest\_tracker's Structure**
 
 | Field                    | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@
 [7]: #corehash
 [8]: #corerevision
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

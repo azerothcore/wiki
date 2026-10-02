@@ -1,5 +1,7 @@
 # creature\_text
 
+[<-Back-to:World](database-world)
+
 # Table: creature\_text
 
 **Short Description:**
@@ -54,7 +56,7 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 
 *to be continued...*
 
-## Structure
+**Table: creature\_text's Structure**
 
 | Field                 | Type         | Attributes      | Key | Null | Default | Extra | Comment                 |
 |-----------------------|--------------|-----------------|-----|------|---------|-------|-------------------------|
@@ -86,7 +88,7 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 [12]: #textrange
 [13]: #comment
 
-## Description of the fields
+**Description of the table's fields**
 
 ### CreatureID
 

@@ -6,7 +6,7 @@
 
 This table stores battlegrounds IDs for random battleground sessions.
 
-**Table Structure**
+**Table: character\_battleground\_random's Structure**
 
 | Field     | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@ This table stores battlegrounds IDs for random battleground sessions.
 
 [1]: #guid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -6,7 +6,7 @@
 
 Holds reputation multipliers for specific factions.
 
-**Table Structure**
+**Table: reputation\_reward\_rate's Structure**
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -28,7 +28,7 @@ Holds reputation multipliers for specific factions.
 [7]: #questmonthlyrate
 [8]: #questrepeatablerate
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### faction
 

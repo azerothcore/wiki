@@ -6,7 +6,7 @@
 
 This table contains all type 15 transports (Boats and Zeppelins). All other transport types have their frame time read from TransportAnimation.dbc.
 
-**Table Structure**
+**Table: transports's Structure**
 
 | Field           | Type      | Attributes | Key    | Null | Default        | Extra | Comment |
 | --------------- | --------- | ---------- | ------ | ---- | -------------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table contains all type 15 transports (Boats and Zeppelins). All other tran
 [3]: #name
 [4]: #scriptname
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

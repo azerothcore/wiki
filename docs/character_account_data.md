@@ -6,7 +6,7 @@
 
 Contains data about character settings.
 
-**Table Structure**
+**Table: character\_account\_data's Structure**
 
 | Field     | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ Contains data about character settings.
 [3]: #time
 [4]: #data
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

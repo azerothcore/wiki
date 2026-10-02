@@ -6,7 +6,7 @@
 
 Overrides the action taken when a player fails a [Warden check](warden_checks).
 
-**Table Structure**
+**Table: warden\_action's Structure**
 
 | Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ Overrides the action taken when a player fails a [Warden check](warden_checks).
 [1]: #wardenid
 [2]: #action
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### wardenid
 

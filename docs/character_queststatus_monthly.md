@@ -4,7 +4,7 @@
 
 **The \`character\_queststatus\_monthly\` table**
 
-**Table Structure**
+**Table: character\_queststatus\_monthly's Structure**
 
 | Field       | Type | Attributes | Key | Null | Default | Extra  | Comment                  |
 | ----------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
@@ -14,7 +14,7 @@
 [1]: #guid
 [2]: #quest
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

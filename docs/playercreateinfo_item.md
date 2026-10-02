@@ -6,7 +6,7 @@
 
 This table is used for any custom items that you might want to give to characters on creation. I used to be used to hold the normal items that characters get as well, but now that info is read from CharStartOutfit.dbc
 
-**Table Structure**
+**Table: playercreateinfo\_item's Structure**
 
 | Field       | Type      | Attributes | Key  | Null | Default | Extra | Comment |
 | :---------- | :-------- | :--------- | :--- | :--- | :------ | :---- | :------ |
@@ -22,7 +22,7 @@ This table is used for any custom items that you might want to give to character
 [4]: #amount
 [5]: #note
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### race
 

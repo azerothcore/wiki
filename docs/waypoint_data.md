@@ -6,7 +6,7 @@
 
 This table contains all the path data for creatures that use waypoints and waypoint scripts directly in their creature addon definition. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
-**Table Structure**
+**Table: waypoint\_data's Structure**
 
 | Field                                 | Type      | Attributes | Key | Null | Default |
 | ------------------------------------- | --------- | ---------- | --- | ---- | ------- |
@@ -24,7 +24,7 @@ This table contains all the path data for creatures that use waypoints and waypo
 | [action\_chance](#actionchance)       | SMALLINT  |            |     | NO   | 100     |
 | [wpguid](#wpguid)                     | INT       | UNSIGNED   |     | NO   | 0       |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

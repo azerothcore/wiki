@@ -2,11 +2,11 @@
 
 [<-Back-to:World](database-world)
 
-**The \`spell\_enchant\_proc\` table**
+**The \`spell\_enchant\_proc\_data\` table**
 
 Changes how often and when weapon enchantments proc their spell.
 
-**Table Structure**
+**Table: spell\_enchant\_proc\_data's Structure**
 
 | Field             | Type  | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ Changes how often and when weapon enchantments proc their spell.
 [4]: #procex
 [5]: #attributemask
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

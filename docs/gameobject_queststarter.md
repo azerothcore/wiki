@@ -6,7 +6,7 @@
 
 Holds game object quest giver relations. The game objects in this table should all be of type QUESTGIVER (2).
 
-**Table Structure**
+**Table: gameobject\_queststarter's Structure**
 
 | Field      | Type      | Attributes | Key | Null | Default | Extra | Comment          |
 | ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
@@ -16,7 +16,7 @@ Holds game object quest giver relations. The game objects in this table should a
 [1]: #id
 [2]: #quest
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

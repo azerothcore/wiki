@@ -2,11 +2,11 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The `spam_reports` table**
+**The \`spam\_reports\` table**
 
 This table stores spam reports submitted by players in-game (e.g. reporting spam in chat, mail, or calendar). Logging of spam reports can be enabled via the `LogSpamReports` option in `worldserver.conf`.
 
-**Table Structure**
+**Table: spam\_reports's Structure**
 
 | Field                                           | Type     | Attributes | Key | Null | Default | Extra          | Comment                              |
 | ----------------------------------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------------------------------------ |
@@ -20,7 +20,7 @@ This table stores spam reports submitted by players in-game (e.g. reporting spam
 | [Description](#description)                    | LONGTEXT |            |     | YES  | NULL    |                | Description or context of the report |
 | [Time](#time)                                   | INT      | SIGNED     |     | YES  | NULL    |                | Time of report as Unix timestamp     |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

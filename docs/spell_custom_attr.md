@@ -6,7 +6,7 @@
 
 Table used for storing custom spell attributes.
 
-**Table Structure**
+**Table: spell\_custom\_attr's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment               |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | --------------------- |
@@ -16,7 +16,7 @@ Table used for storing custom spell attributes.
 [1]: #spellid
 [2]: #attributes
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell_id
 

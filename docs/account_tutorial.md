@@ -6,7 +6,7 @@
 
 This table is used to store the tutorial state of all the accounts.
 
-**Table Structure**
+**Table: account\_tutorial's Structure**
 
 | Field          | Type | Attributes | Key | Null | Default | Extra  | Comment            |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------ |
@@ -30,7 +30,7 @@ This table is used to store the tutorial state of all the accounts.
 [8]: #tut0-7
 [9]: #tut0-7
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### accountId
 

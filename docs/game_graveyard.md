@@ -1,8 +1,10 @@
-# game_graveyard
+# game\_graveyard
 
 [<-Back-to:World](database-world)
 
-**The \`game_graveyard\` table**
+**The \`game\_graveyard\` table**
+
+**Table: game\_graveyard's Structure**
 
 | Field               | Type         | Key | Null | Default |
 | ------------------- | ------------ | --- | ---- | ------- |
@@ -13,7 +15,7 @@
 | [z](#z)             | FLOAT        |     | NO   | 0       |
 | [Comment](#comment) | VARCHAR(255) |     | YES  | NULL    |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 Graveyard's ID. See [WorldSafeLocs.dbc](https://wowdev.wiki/DB/WorldSafeLocs)

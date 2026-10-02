@@ -2,11 +2,11 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The `\lag\_reports\` table**
+**The \`lag\_reports\` table**
 
 This table stores the lag reports made by players ingame (when they click on "Help Request").
 
-**Table Structure**
+**Table: lag\_reports's Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
 | --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -30,7 +30,7 @@ This table stores the lag reports made by players ingame (when they click on "He
 [8]: #latency
 [9]: #createtime
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### reportId
 

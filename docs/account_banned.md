@@ -6,7 +6,7 @@
 
 This table lists all of the accounts that have been banned along with the date when (or if) the ban will expire.
 
-**Table Structure**
+**Table: account\_banned's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment    |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------- |
@@ -24,7 +24,7 @@ This table lists all of the accounts that have been banned along with the date w
 [5]: #banreason
 [6]: #active
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

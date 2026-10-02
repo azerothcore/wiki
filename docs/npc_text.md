@@ -1,8 +1,8 @@
-# npc_text
+# npc\_text
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: npc\_text's Structure**
 
 This table contains the texts that are used for gossip. More research needs to be done on this table.
 
@@ -99,7 +99,7 @@ This table contains the texts that are used for gossip. More research needs to b
 | em7_5            | SMALLINT  | UNSIGNED |     | NO  | 0       |     |         |
 | VerifiedBuild    | INT       |          |     | YES | NULL    |     |         |
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### ID
 

@@ -6,7 +6,7 @@
 
 Contains the instance data for characters.
 
-**Table Structure**
+**Table: character\_instance's Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ Contains the instance data for characters.
 [3]: #permanent
 [4]: #extended
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

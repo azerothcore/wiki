@@ -1,10 +1,10 @@
-# game_event
+# game\_event
 
 [<-Back-to:World](database-world)
 
-**The \`game_event\` table**
+**The \`game\_event\` table**
 
-**Table Structure**
+**Table: game\_event's Structure**
 
 This table holds definitions for all game events that are activated or deactivated automatically by the Game Event System in the core.
 
@@ -21,7 +21,7 @@ This table holds definitions for all game events that are activated or deactivat
 | [world_event](#worldevent)   | TINYINT      | UNSIGNED   |     | NO   |         |        | 0 if normal event, 1 if world event                                                                                                  |
 | [announce](#announce)        | TINYINT      | UNSIGNED   |     | YES  | 2       |        | 0 dont announce, 1 announce, 2 value from config                                                                                     |
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### eventEntry
 

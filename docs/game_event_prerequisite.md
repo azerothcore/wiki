@@ -6,7 +6,7 @@
 
 This table contains events that must have been completed to start the given event. You can have more than one event that must be completed before the next will start.
 
-**Table Structure**
+**Table: game\_event\_prerequisite's Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ This table contains events that must have been completed to start the given even
 [1]: #evententry
 [2]: #prerequisiteevent
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

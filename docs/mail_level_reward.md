@@ -6,7 +6,7 @@
 
 On certain levels, you receive a mail with some text.
 
-**Table Structure**
+**Table: mail\_level\_reward's Structure**
 
 | Field               | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ On certain levels, you receive a mail with some text.
 [3]: #mailtemplateid
 [4]: #senderentry
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### level
 

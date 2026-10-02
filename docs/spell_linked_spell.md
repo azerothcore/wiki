@@ -6,7 +6,7 @@
 
 This table provides data for spell linking system, telling it which spells trigger what, and under which conditions.
 
-**Table Structure**
+**Table: spell\_linked\_spell's Structure**
 
 | Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table provides data for spell linking system, telling it which spells trigg
 [3]: #type
 [4]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell\_trigger
 

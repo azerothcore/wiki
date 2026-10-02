@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: game\_tele's Structure**
 
 This table contains a list of teleport locations that can be used with the *.tele* command in-game. Entries in this table can be added/deleted manually or with the *.tele add* and *.tele delete* commands.
 
@@ -24,7 +24,7 @@ This table contains a list of teleport locations that can be used with the *.tel
 [6]: #map
 [7]: #name
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### id
 

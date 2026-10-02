@@ -6,7 +6,7 @@
 
 This table maps individual creature and gameobject spawns to their spawn groups. Each spawn can belong to one group, which controls its respawn behavior through the flags defined in [spawn\_group\_template](spawn_group_template).
 
-**Table Structure**
+**Table: spawn\_group's Structure**
 
 | Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@ This table maps individual creature and gameobject spawns to their spawn groups.
 | [spawnType](#spawntype) | TINYINT | UNSIGNED   | PRI | NO   | NULL    |       |         |
 | [spawnId](#spawnid)     | INT     | UNSIGNED   | PRI | NO   | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### groupId
 

@@ -1,4 +1,4 @@
-# loot_template
+# loot\_template
 
 [<-Back-to:World](database-world)
 

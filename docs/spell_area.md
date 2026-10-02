@@ -6,7 +6,7 @@
 
 This table is used to apply a specific spell aura to the player within an area in the game. When any player enters this area or somehow interacts with a quest, this aura will be handled accordingly.
 
-**Table Structure**
+**Table: spell\_area's Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -32,7 +32,7 @@ This table is used to apply a specific spell aura to the player within an area i
 [9]: #queststartstatus-questendstatus
 [10]: #queststartstatus-questendstatus
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell
 

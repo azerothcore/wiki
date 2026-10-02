@@ -1,12 +1,12 @@
-# item_template_locale
+# item\_template\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`item_template_locale\` table**
+**The \`item\_template\_locale\` table**
 
 This table is used to provide localized clients with localized strings for items.
 
-**Table Structure**
+**Table: item\_template\_locale's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ This table is used to provide localized clients with localized strings for items
 | [Description](#description) | TEXT |  |  | YES |  |  |  |
 | [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

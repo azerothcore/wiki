@@ -6,7 +6,7 @@
 
 This table holds info about player's equipment manager settings.
 
-**Table Structure**
+**Table: character\_equipmentsets's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra  | Comment |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -62,7 +62,7 @@ This table holds info about player's equipment manager settings.
 [24]: #item
 [25]: #item
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

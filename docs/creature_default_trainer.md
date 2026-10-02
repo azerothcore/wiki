@@ -1,17 +1,17 @@
-# creature_default_trainer
+# creature\_default\_trainer
 
 [<-Back-to:World](database-world)
 
-**The \`creature_default_trainer\` table**
+**The \`creature\_default\_trainer\` table**
 
-**Table Structure**
+**Table: creature\_default\_trainer's Structure**
 
 | Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [CreatureId](#creatureid) | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [TrainerId](#trainerid)   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureId
 

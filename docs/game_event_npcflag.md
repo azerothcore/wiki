@@ -6,7 +6,7 @@
 
 This table contains npcflags that are to be added to an NPC when the specified event is active for the creature with the given guid.
 
-**Table Structure**
+**Table: game\_event\_npcflag's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
@@ -18,7 +18,7 @@ This table contains npcflags that are to be added to an NPC when the specified e
 [2]: #guid
 [3]: #npcflag
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

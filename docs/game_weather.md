@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: game\_weather's Structure**
 
 This table holds the percent chances for weather changes to occur in various zones. Not all zones can have their weather changed. For any given zone the percentage of all weather types for each season should total, and not exceed 100%.
 
@@ -38,7 +38,7 @@ This table holds the percent chances for weather changes to occur in various zon
 [13]: #winterstormchance
 [14]: #scriptname
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### zone
 

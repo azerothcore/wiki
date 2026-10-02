@@ -6,7 +6,7 @@
 
 This table holds arena info about specific team members. All arena\_team members have a record in this table.
 
-**Table Structure**
+**Table: arena\_team\_member's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@ This table holds arena info about specific team members. All arena\_team members
 [6]: #seasonwins
 [7]: #personalrating
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### arenaTeamId
 

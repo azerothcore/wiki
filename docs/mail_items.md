@@ -6,7 +6,7 @@
 
 This table contains data regarding items from item\_instance which are being sent via email.
 
-**Table Structure**
+**Table: mail\_items's Structure**
 
 | Field          | Type | Attributes | Key | Null | Default | Extra | Comment                            |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -18,7 +18,7 @@ This table contains data regarding items from item\_instance which are being sen
 [2]: #itemguid
 [3]: #receiver
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### mail\_id
 

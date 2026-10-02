@@ -6,7 +6,7 @@
 
 This table contains all models of mobs, their gender and other information that are model related. This means that when a creature uses another model, this information will change as well.
 
-**Table Structure**
+**Table: creature\_model\_info's Structure**
 
 | Field                       | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table contains all models of mobs, their gender and other information that 
 [5]: #displayidothergender
 [6]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### DisplayID
 

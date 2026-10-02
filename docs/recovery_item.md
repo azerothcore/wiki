@@ -7,7 +7,7 @@
 This table holds information about saved items into database when the player sells items to vendor
 Items which were kept back in the database after being deleted and are older than the specified amount of days, will be completely deleted.
 
-**Table Structure**
+**Table: recovery\_item's Structure**
 
 | Field          | Type      | Attributes | Key | Null | Default | Extra          | Comment |
 | -------------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -23,7 +23,7 @@ Items which were kept back in the database after being deleted and are older tha
 [4]: #count
 [5]: #deletedate
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Id
 

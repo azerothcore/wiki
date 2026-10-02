@@ -6,7 +6,7 @@
 
 This table holds information on all the signatures of a petition for either a guild or an arena team.
 
-**Table Structure**
+**Table: petition\_sign's Structure**
 
 | Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table holds information on all the signatures of a petition for either a gu
 [5]: #type
 [6]: #petitionid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ownerguid
 

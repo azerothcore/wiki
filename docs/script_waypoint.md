@@ -6,7 +6,7 @@
 
 This table contains waypoint paths used by creatures driven by scripted AI (`CreatureAI`). It is the scripted-AI counterpart to [waypoint\_data](waypoint_data) (used by creatures via their [creature\_addon](creature_addon)) and to [waypoints](waypoints) (used by [SmartAI](smart_scripts)). See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
-**Table Structure**
+**Table: script\_waypoint's Structure**
 
 | Field                             | Type | Attributes | Key | Null | Default |
 | --------------------------------- | ---- | ---------- | --- | ---- | ------- |
@@ -18,7 +18,7 @@ This table contains waypoint paths used by creatures driven by scripted AI (`Cre
 | [waittime](#waittime)             | INT  | UNSIGNED   |     | NO   | 0       |
 | [point\_comment](#pointcomment)   | TEXT |            |     | YES  | NULL    |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

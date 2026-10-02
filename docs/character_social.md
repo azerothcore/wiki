@@ -6,7 +6,7 @@
 
 Contains data about character's friends/ignored list.
 
-**Table Structure**
+**Table: character\_social's Structure**
 
 | Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                            |
 | ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -20,7 +20,7 @@ Contains data about character's friends/ignored list.
 [3]: #flags
 [4]: #note
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

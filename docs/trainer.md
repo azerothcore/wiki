@@ -6,7 +6,7 @@
 
 This table contains the unique trainer template.
 
-**Table Structure**
+**Table: trainer's Structure**
 
 | Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ This table contains the unique trainer template.
 | [Greeting](#greeting)           | MEDIUMTEXT |            |     | NO   |         |       |         |
 | [VerifiedBuild](#verifiedbuild) | INT        |            |     | YES  | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

@@ -1,12 +1,12 @@
-# item_set_names
+# item\_set\_names
 
 [<-Back-to:World](database-world)
 
-**The \`item_set_names\` table**
+**The \`item\_set\_names\` table**
 
 Names of the items that are part of an item set. The server sends them to the client, which shows them in the set list of the tooltip, also for set pieces the player has never seen.
 
-**Table Structure**
+**Table: item\_set\_names's Structure**
 
 | Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@ Names of the items that are part of an item set. The server sends them to the cl
 | [InventoryType](#inventorytype) | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Entry
 

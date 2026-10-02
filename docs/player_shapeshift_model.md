@@ -1,12 +1,12 @@
-# player_shapeshift_model
+# player\_shapeshift\_model
 
 [<-Back-to:World](database-world)
 
-**The \`player_shapeshift_model\` table**
+**The \`player\_shapeshift\_model\` table**
 
 This table holds the information on what values are used for the druid shapeshift models, based on the shapeshift, race, character customization, and the gender of the player character.
 
-**Table Structure**
+**Table: player\_shapeshift\_model's Structure**
 
 | Field                               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ This table holds the information on what values are used for the druid shapeshif
 | [GenderID](#genderid)               | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
 | [ModelID](#modelid)                 | INT     | UNSIGNED   |     | NO   |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ShapeshiftID
 

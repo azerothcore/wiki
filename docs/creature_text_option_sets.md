@@ -6,7 +6,7 @@
 
 This table defines reusable option rulesets for creature text groups. Each ruleset controls cooldown, trigger chance, and player-only filtering for `SendChat()`. Rulesets are assigned to specific (CreatureID, GroupID) pairs via the [creature\_text\_options](creature_text_options) table.
 
-## Structure
+**Table: creature\_text\_option\_sets's Structure**
 
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment                                  |
 |------------------------|--------------|------------|-----|------|---------|-------|------------------------------------------|
@@ -22,7 +22,7 @@ This table defines reusable option rulesets for creature text groups. Each rules
 [4]: #playeronly
 [5]: #comment
 
-## Description of the fields
+**Description of the table's fields**
 
 ### SetID
 

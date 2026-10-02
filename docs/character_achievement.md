@@ -8,7 +8,7 @@ This table holds information on the achievements a character has earned/complete
 
 **Note:** if you delete a "realm first" achievement from the characters database, you have to reboot the server to take it into account.
 
-**Table Structure**
+**Table: character\_achievement's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds information on the achievements a character has earned/complete
 [2]: #achievement
 [3]: #date
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

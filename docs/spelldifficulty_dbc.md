@@ -8,7 +8,7 @@ This table determines which spell ID should be used depending on the dungeon or 
 
 {% include note.html content="The EPIC difficulty value exists but is currently unused." %}
 
-**Table Structure**
+**Table: spelldifficulty\_dbc's Structure**
 
 | Field         | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table determines which spell ID should be used depending on the dungeon or 
 [4]: #difficultyspellid3
 [5]: #difficultyspellid4
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 Spell ID reference in scripts/SmartAI

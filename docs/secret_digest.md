@@ -4,7 +4,7 @@
 
 **The \`secret\_digest\` table**
 
-**Table Structure**
+**Table: secret\_digest's Structure**
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@
 [1]: #id
 [2]: #digest
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

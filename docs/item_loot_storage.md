@@ -1,10 +1,10 @@
-# item\_loot_\storage
+# item\_loot\_storage
 
 [<-Back-to:Characters](database-characters)
 
-**The \`item\_loot_\storage\` table**
+**The \`item\_loot\_storage\` table**
 
-**Table Structure**
+**Table: item\_loot\_storage's Structure**
 
 | Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -36,7 +36,7 @@
 [12]: #conditionlootid
 [13]: #itemindex
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### containerGUID
 

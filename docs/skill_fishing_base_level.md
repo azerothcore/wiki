@@ -6,7 +6,7 @@
 
 This table controls the minimum skill level required in fishing to fish in a certain area.
 
-**Table Structure**
+**Table: skill\_fishing\_base\_level's Structure**
 
 | Field      | Type         | Attributes | Key | Null | Default | Extra | Comment                      |
 |------------|--------------|------------|-----|------|---------|-------|------------------------------|
@@ -16,7 +16,7 @@ This table controls the minimum skill level required in fishing to fish in a cer
 [1]: #entry
 [2]: #skill
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

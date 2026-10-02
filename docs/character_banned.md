@@ -6,7 +6,7 @@
 
 This table lists all of the characters that have been banned along with the date when (or if) the ban will expire.
 
-**Table Structure**
+**Table: character\_banned's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -24,7 +24,7 @@ This table lists all of the characters that have been banned along with the date
 [5]: #banreason
 [6]: #active
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

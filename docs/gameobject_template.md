@@ -1,8 +1,10 @@
 # gameobject\_template
 
+[<-Back-to:World](database-world)
+
 Contains template of all gameobjects
 
-## Structure
+**Table: gameobject\_template's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -42,7 +44,7 @@ Contains template of all gameobjects
 | ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
 | VerifiedBuild    | INT          |            |     | YES  | NULL    |       |         |
 
-## Description of the fields
+**Description of the table's fields**
 
 ### entry
 

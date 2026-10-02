@@ -6,7 +6,7 @@
 
 Auras that a spell of the owner applies to their pet, for example talents that improve the pet.
 
-**Table Structure**
+**Table: spell\_pet\_auras's Structure**
 
 | Field         | Type      | Attributes | Key | Null | Default | Extra | Comment         |
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | --------------- |
@@ -20,7 +20,7 @@ Auras that a spell of the owner applies to their pet, for example talents that i
 [3]: #pet
 [4]: #aura
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell
 

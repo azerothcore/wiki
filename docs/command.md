@@ -2,11 +2,11 @@
 
 [<-Back-to:World](database-world)
 
-**The `command` table**
+**The \`command\` table**
 
 Holds help and security information for commands. This table does NOT create new commands, it only sets / overrides security and provides help.
 
-**Table Structure**
+**Table: command's Structure**
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ Holds help and security information for commands. This table does NOT create new
 [2]: #security
 [3]: #help
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 

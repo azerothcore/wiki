@@ -2,13 +2,13 @@
 
 [<-Back-to:World](database-world)
 
-**The \`playercreateinfo_spell_custom\` table**
+**The \`playercreateinfo\_spell\_custom\` table**
 
 This table holds information on what spells newly created characters should start with if the PlayerStart.AllSpells setting is enabled in worldserver.conf. A character in this table is defined by his/her race and class combination.
 
 Please note you'll have to set PlayerStart.CustomSpells to 1 in config, if not, this table will not have any effect.
 
-**Table Structure**
+**Table: playercreateinfo\_spell\_custom's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ Please note you'll have to set PlayerStart.CustomSpells to 1 in config, if not, 
 [3]: #spell
 [4]: #note
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### racemask
 

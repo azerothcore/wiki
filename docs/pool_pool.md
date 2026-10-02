@@ -6,7 +6,7 @@
 
 This is the pool of pools table. You can create a pool with a chance of a range of pools in that pool being activated.
 
-**Table Structure**
+**Table: pool\_pool's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This is the pool of pools table. You can create a pool with a chance of a range 
 [3]: #chance
 [4]: #description
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### pool\_id
 

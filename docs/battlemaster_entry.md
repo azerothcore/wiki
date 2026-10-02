@@ -6,7 +6,7 @@
 
 Holds information on which NPC can start what battleground or arena.
 
-**Table Structure**
+**Table: battlemaster\_entry's Structure**
 
 | Field            | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
 | ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
@@ -16,7 +16,7 @@ Holds information on which NPC can start what battleground or arena.
 [1]: #entry
 [2]: #bgtemplate
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

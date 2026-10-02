@@ -6,7 +6,7 @@
 
 This table holds information on the members of all guilds, their ranks in the guild, and any notes made by them or by guild officers.
 
-**Table Structure**
+**Table: guild\_member's Structure**
 
 | Field        | Type        | Attributes | Key    | Null | Default | Extra | Comment             |
 | ------------ | ----------- | ---------- | ------ | ---- | ------- | ----- | ------------------- |
@@ -22,7 +22,7 @@ This table holds information on the members of all guilds, their ranks in the gu
 [4]: #pnote
 [5]: #offnote
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

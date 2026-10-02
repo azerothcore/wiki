@@ -6,7 +6,7 @@
 
 This table holds information on quests that should only be available when an event is currently taking place.
 
-**Table Structure**
+**Table: game\_event\_gameobject\_quest's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
@@ -18,7 +18,7 @@ This table holds information on quests that should only be available when an eve
 [2]: #id
 [3]: #quest
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

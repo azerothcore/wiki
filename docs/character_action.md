@@ -6,7 +6,7 @@
 
 Contains all the individual button data for each character. A button is any of the places in the GUI where you can place for example a spell, item, or macro as a shortcut.
 
-**Table Structure**
+**Table: character\_action's Structure**
 
 | Field       | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ Contains all the individual button data for each character. A button is any of t
 [4]: #action
 [5]: #type
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

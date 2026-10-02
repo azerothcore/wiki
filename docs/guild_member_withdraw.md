@@ -4,7 +4,7 @@
 
 **The \`guild\_member\_withdraw\` table**
 
-**Table Structure**
+**Table: guild\_member\_withdraw's Structure**
 
 | Field      | Type  | Attributes | Key | Null | Default | Extra  | Comment |
 | ---------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -26,7 +26,7 @@
 [7]: #tab
 [8]: #money
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

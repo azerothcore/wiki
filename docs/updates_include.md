@@ -1,14 +1,14 @@
-# updates_include
+# updates\_include
 
 [<-Back-to:Auth](database-auth)
 [<-Back-to:Characters](database-characters)
 [<-Back-to:World](database-world)
 
-**The \`updates_include\` table**
+**The \`updates\_include\` table**
 
 The directories the database updater looks in for SQL update files. The table is in the auth, characters and world databases.
 
-**Table Structure**
+**Table: updates\_include's Structure**
 
 | Field      | Type         | Attributes               | Key | Null | Default  | Extra | Comment                                                         |
 | ---------- | ------------ | ------------------------ | --- | ---- | -------- | ----- | --------------------------------------------------------------- |
@@ -18,7 +18,7 @@ The directories the database updater looks in for SQL update files. The table is
 [1]: #path
 [2]: #state
 
-## Description of the fields
+**Description of the table's fields**
 
 ### path
 

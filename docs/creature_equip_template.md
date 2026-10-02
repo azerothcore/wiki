@@ -6,7 +6,7 @@
 
 This table contains all the equipment combinations that can be sent for each creature.
 
-## Structure
+**Table: creature\_equip\_template's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment      |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------ |
@@ -24,7 +24,7 @@ This table contains all the equipment combinations that can be sent for each cre
 [5]: #itemid3
 [6]: #verifiedbuild
 
-## Description of the fields
+**Description of the table's fields**
 
 ### CreatureID
 

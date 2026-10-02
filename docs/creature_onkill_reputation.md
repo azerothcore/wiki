@@ -6,7 +6,7 @@
 
 This table controls the reputation given by creatures when killed by other players.
 
-**Table Structure**
+**Table: creature\_onkill\_reputation's Structure**
 
 | Field                     | Type      | Attributes | Key | Null | Default | Extra | Comment             |
 | ------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------- |
@@ -32,7 +32,7 @@ This table controls the reputation given by creatures when killed by other playe
 [9]: #rewonkillrepvalue
 [10]: #teamdependent
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### creature\_id
 

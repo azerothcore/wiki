@@ -6,7 +6,7 @@
 
 Enable a trigger when player enters a city or tavern. This causes the player to enter a resting state.
 
-**Table Structure**
+**Table: areatrigger\_tavern's Structure**
 
 | Field     | Type      | Attributes | Key | Null | Default | Extra | Comment    |
 | --------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
@@ -18,7 +18,7 @@ Enable a trigger when player enters a city or tavern. This causes the player to 
 [2]: #name
 [3]: #faction
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

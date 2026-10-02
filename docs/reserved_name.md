@@ -6,7 +6,7 @@
 
 Names that players can not give to their characters.
 
-**Table Structure**
+**Table: reserved\_name's Structure**
 
 | Field     | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@ Names that players can not give to their characters.
  
 [1]: #name
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 

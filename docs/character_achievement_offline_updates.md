@@ -1,12 +1,12 @@
-# character_achievement_offline_updates
+# character\_achievement\_offline\_updates
 
 [<-Back-to:Characters](database-characters)
 
-**The \`character_achievement_offline_updates\` table**
+**The \`character\_achievement\_offline\_updates\` table**
 
 Stores updates to character achievements when the character was offline
 
-**Table Structure**
+**Table: character\_achievement\_offline\_updates's Structure**
 
 | Field                       | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ Stores updates to character achievements when the character was offline
 | [arg2](#arg2)               | INT     | UNSIGNED   |     | YES  | NULL    |       |         |
 | [arg3](#arg3)               | INT     | UNSIGNED   |     | YES  | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

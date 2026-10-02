@@ -1,10 +1,10 @@
-# motd_localized
+# motd\_localized
 
 [<-Back-to:Auth](database-auth)
 
-**The \`motd_localized\` table**
+**The \`motd\_localized\` table**
 
-**Table Structure**
+**Table: motd\_localized's Structure**
 
 | Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -17,7 +17,7 @@
 [2]: #locale
 [3]: #text
 
-## Description of the fields
+**Description of the table's fields**
 
 ### realmid
 

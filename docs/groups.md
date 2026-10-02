@@ -6,7 +6,7 @@
 
 This table holds basic info about groups.
 
-**Table Structure**
+**Table: groups's Structure**
 
 | Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -46,7 +46,7 @@ This table holds basic info about groups.
 [16]: #raiddifficulty
 [17]: #masterlooterguid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

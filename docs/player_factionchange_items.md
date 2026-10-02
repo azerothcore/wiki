@@ -6,7 +6,7 @@
 
 Basically all item changes made when player changes faction.
 
-**Table Structure**
+**Table: player\_factionchange\_items's Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ Basically all item changes made when player changes faction.
 [5]: #hordeid
 [6]: #hordecomment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance\_id
 

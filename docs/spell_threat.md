@@ -6,7 +6,7 @@
 
 This table holds threat values on all spells that should either give or take away threat.
 
-**Table Structure**
+**Table: spell\_threat's Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds threat values on all spells that should either give or take awa
 [3]: #pctmod
 [4]: #appctmod
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

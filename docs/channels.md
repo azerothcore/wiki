@@ -6,7 +6,7 @@
 
 Information and settings for ingame, player-based chat channels (not affecting the default system channels).
 
-**Table Structure**
+**Table: channels's Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra          | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -26,7 +26,7 @@ Information and settings for ingame, player-based chat channels (not affecting t
 [6]: #password
 [7]: #lastused
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### channelId
 

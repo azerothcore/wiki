@@ -6,7 +6,7 @@
 
 Contains all the individual talent data for each character. This is only used as a storage table, values get read from here and written to character\_spell, and vice-versa, when a player switches specs.
 
-**Table Structure**
+**Table: character\_talent's Structure**
 
 | Field         | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ Contains all the individual talent data for each character. This is only used as
 [2]: #spell
 [3]: #specmask
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

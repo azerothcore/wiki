@@ -6,7 +6,7 @@
 
 This table contains the data that a player needs to obtain / complete in order to receive a given achievement.
 
-**Table Structure**
+**Table: achievement\_criteria\_data's Structure**
 
 | Field            | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table contains the data that a player needs to obtain / complete in order t
 [4]: #value2
 [5]: #scriptname
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### criteria\_id
 

@@ -4,7 +4,7 @@
 
 **The \`log\_arena\_memberstats\` table**
 
-**Table Structure**
+**Table: log\_arena\_memberstats's Structure**
 
 | Field          | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -30,7 +30,7 @@
 [9]: #heal
 [10]: #kblows
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### fight\_id
 

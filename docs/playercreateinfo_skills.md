@@ -6,7 +6,7 @@
 
 This table holds information on what skills newly created characters should start out with. A character in this table is defined by his/her race and class combination.
 
-## Structure
+**Table: playercreateinfo\_skills's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table holds information on what skills newly created characters should star
 [4]: #rank
 [5]: #comment
 
-## Description of the fields
+**Description of the table's fields**
 
 ### racemask
 

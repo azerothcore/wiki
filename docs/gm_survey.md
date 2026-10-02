@@ -4,7 +4,7 @@
 
 **The \`gm\_survey\` table**
 
-**Table Structure**
+**Table: gm\_survey's Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default        | Extra | Comment |
 | --------------- | -------- | ---------- | --- | ---- | -------------- | ----- | ------- |
@@ -22,7 +22,7 @@
 [5]: #createtime
 [6]: #maxmmr
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### surveyId
 

@@ -6,7 +6,7 @@
 
 This table holds information of **every** rewarded quest to a player.
 
-**Table Structure**
+**Table: character\_queststatus\_rewarded's Structure**
 
 | Field       | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -18,7 +18,7 @@ This table holds information of **every** rewarded quest to a player.
 [2]: #quest
 [3]: #active
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

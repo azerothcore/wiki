@@ -1,4 +1,4 @@
-# creature_template_movement
+# creature\_template\_movement
 
 [<-Back-to:World](database-world)
 
@@ -6,7 +6,7 @@ This table contains the description of creatures movements, where the creature c
 
 This table can be overriden by \`creature_movement_override\`
 
-**Table Structure**
+**Table: creature\_template\_movement's Structure**
 
 | Field                      | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -28,7 +28,7 @@ This table can be overriden by \`creature_movement_override\`
 [7]: #random
 [8]: #interactionpausetimer
 
-**Description of the fields**
+**Description of the table's fields**
 
 #### CreatureId
 

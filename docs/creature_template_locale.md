@@ -1,12 +1,12 @@
-# creature_template_locale
+# creature\_template\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template_locale\` table**
+**The \`creature\_template\_locale\` table**
 
 This table is used to provide localized clients with localized strings for creatures.
 
-**Table Structure**
+**Table: creature\_template\_locale's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ This table is used to provide localized clients with localized strings for creat
 | [Title](#title) | TEXT |  |  | YES |  |  |  |
 | [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

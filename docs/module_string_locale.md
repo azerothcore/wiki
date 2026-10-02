@@ -1,4 +1,4 @@
-# module_string_locale
+# module\_string\_locale
 
 [<-Back-to:World](database-world)
 
@@ -6,7 +6,7 @@
 
 This table holds information of string entries for modules.
 
-**Table Structure**
+**Table: module\_string\_locale's Structure**
 
 | Field             | Type         | Attributes                              | Key | Null | Default | Extra | Comment                      |
 | ----------------- | ------------ | --------------------------------------- | --- | ---- | ------- | ----- | ---------------------------- |
@@ -15,7 +15,7 @@ This table holds information of string entries for modules.
 | [locale](#locale) | ENUM         | koKR,frFR,deDE,zhCN,zhTW,esES,esMX,ruRU | PRI | NO   |         |       |                              |
 | [string](#string) | TEXT         |                                         |     | NO   |         |       |                              |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### module
 

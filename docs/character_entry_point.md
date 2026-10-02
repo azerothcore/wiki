@@ -4,7 +4,7 @@
 
 **The \`character\_entry\_point\` table**
 
-**Table Structure**
+**Table: character\_entry\_point's Structure**
 
 | Field           | Type  | Attributes | Key | Null | Default | Extra | Comment                  |
 | --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -28,7 +28,7 @@
 [9]: #taxipath1
 [8]: #mountspell
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

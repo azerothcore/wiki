@@ -16,7 +16,7 @@ Special costs (honor, tokens etc...) are defined in this table in the column [Ex
 If you open the vendor's window in GM mode, you will see all the items sold by the vendor. If you disable GM mode, you will see the items sold like a normal player (ex: if you can't use an item and cannot trade it, you won't see it listed).
 
 
-## Table Structure
+**Table: npc\_vendor's Structure**
 
 | Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -37,7 +37,7 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 [7]: #verifiedbuild
 
 
-## Field Descriptions
+**Description of the table's fields**
 
 ### entry
 

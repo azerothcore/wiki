@@ -1,12 +1,12 @@
-# playercreateinfo_cast_spell
+# playercreateinfo\_cast\_spell
 
 [<-Back-to:World](database-world)
 
-**The `playercreateinfo_cast_spell` table**
+**The \`playercreateinfo\_cast\_spell\` table**
 
 Defines spells that are cast on a character immediately upon creation, filtered by race and class bitmasks. This complements [playercreateinfo_spell_custom](playercreateinfo_spell_custom), which grants spells as *known* rather than casting them.
 
-**Table Structure**
+**Table: playercreateinfo\_cast\_spell's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@ Defines spells that are cast on a character immediately upon creation, filtered 
 | [spell](#spell) | INT | UNSIGNED |  | NO | 0 |  |  |
 | [note](#note) | VARCHAR(255) |  |  | YES | (NULL) |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### raceMask
 

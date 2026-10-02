@@ -1,12 +1,12 @@
-# quest_greeting_locale
+# quest\_greeting\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`quest_greeting_locale\` table**
+**The \`quest\_greeting\_locale\` table**
 
 This table add greeting behavior to an NPC or an Gameobject.
 
-**Table Structure**
+**Table: quest\_greeting\_locale's Structure**
 
 | Field              | Type       | Attributes | Key | NULL | Default | Comment |
 | ------------------ | ---------- | ---------- | --- | ---- | ------- | ------- |
@@ -22,7 +22,7 @@ This table add greeting behavior to an NPC or an Gameobject.
 [5]: #greeting
 [6]: #verifiedbuild
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### ID
 

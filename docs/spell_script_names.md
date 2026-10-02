@@ -6,7 +6,7 @@
 
 Holds the spell id to ScriptName pairings for use in spell scripts.
 
-**Table Structure**
+**Table: spell\_script\_names's Structure**
 
 | Field           | Type     | Attributes | Key    | Null | Default | Extra | Comment |
 | --------------- | -------- | ---------- | ------ | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ Holds the spell id to ScriptName pairings for use in spell scripts.
 [1]: #spellid
 [2]: #scriptname
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell\_id
 

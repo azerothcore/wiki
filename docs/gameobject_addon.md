@@ -1,8 +1,10 @@
-# gameobject_addon
+# gameobject\_addon
 
 [<-Back-to:World](database-world)
 
-**The \`gameobject_addon\` table**
+**The \`gameobject\_addon\` table**
+
+**Table: gameobject\_addon's Structure**
 
 | Field                          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +24,7 @@
 [6]: #invisibilitytype
 [7]: #invisibilityvalue
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

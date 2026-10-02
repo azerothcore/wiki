@@ -4,7 +4,7 @@
 
 **The \`character\_brew\_of\_the\_month\` table**
 
-**Table Structure**
+**Table: character\_brew\_of\_the\_month's Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment  |
 | ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------- |
@@ -14,7 +14,7 @@
 [1]: #guid
 [2]: #lasteventid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

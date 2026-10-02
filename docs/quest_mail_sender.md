@@ -4,7 +4,7 @@
 
 **The \`quest\_mail\_sender\` table**
 
-**Table Structure**
+**Table: quest\_mail\_sender's Structure**
 
 | Field                      | Type | Attribute | Key | Null | Default | Extra | Comment |
 | -------------------------- | ---- | --------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@
 [1]: #questid
 [2]: #rewardmailsenderentry
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### QuestId
 

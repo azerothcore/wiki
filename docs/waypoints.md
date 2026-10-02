@@ -8,7 +8,7 @@ Used by [SAI](smart_scripts)
 
 Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordinates. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
-**Table Structure**
+**Table: waypoints's Structure**
 
 | Field                            | Type      | Attributes | Key | Null | Default |
 | -------------------------------- | --------- | ---------- | --- | ---- | ------- |
@@ -21,7 +21,7 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 | [delay](#delay)                  | INT       | UNSIGNED   |     | NO   | 0       |
 | [point\_comment](#pointcomment)  | text      |            |     | YES  | NULL    |
 
-**Description of the fields**
+**Description of the table's fields**
 
 #### entry
 

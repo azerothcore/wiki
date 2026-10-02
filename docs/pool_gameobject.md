@@ -7,7 +7,7 @@
 This table contains gameobjects that are tied to a specific pool.
 This table can only contain gameobjects that have a type of GAMEOBJECT\_TYPE\_CHEST, GAMEOBJECT\_TYPE\_GOOBER, GAMEOBJECT\_TYPE\_FISHINGHOLE.
 
-**Table Structure**
+**Table: pool\_gameobject's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -21,7 +21,7 @@ This table can only contain gameobjects that have a type of GAMEOBJECT\_TYPE\_CH
 [3]: #chance
 [4]: #description
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

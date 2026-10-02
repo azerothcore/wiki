@@ -6,7 +6,7 @@
 
 This table holds information on all the tabs in use for all guilds that make use of the guild bank.
 
-**Table Structure**
+**Table: guild\_bank\_tab's Structure**
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table holds information on all the tabs in use for all guilds that make use
 [4]: #tabicon
 [5]: #tabtext
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

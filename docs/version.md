@@ -6,7 +6,7 @@
 
 Includes information on current core and database version.
 
-**Table Structure**
+**Table: version's Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                         |
 | ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------- |
@@ -20,7 +20,7 @@ Includes information on current core and database version.
 [3]: #dbversion
 [5]: #cacheid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### core\_version
 

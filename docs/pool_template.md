@@ -6,7 +6,7 @@
 
 Each unique pool is defined in this table.
 
-**Table Structure**
+**Table: pool\_template's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
@@ -18,7 +18,7 @@ Each unique pool is defined in this table.
 [2]: #maxlimit
 [3]: #description
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

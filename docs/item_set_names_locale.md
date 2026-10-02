@@ -1,12 +1,12 @@
-# item_set_names_locale
+# item\_set\_names\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`item_set_names_locale\` table**
+**The \`item\_set\_names\_locale\` table**
 
 This table is used to provide localized clients with localized strings for item set names.
 
-**Table Structure**
+**Table: item\_set\_names\_locale's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@ This table is used to provide localized clients with localized strings for item 
 | [Name](#name) | TEXT |  |  | YES |  |  |  |
 | [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

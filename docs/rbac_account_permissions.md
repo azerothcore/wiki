@@ -8,7 +8,7 @@ This table stores per-account permission overrides. Use it to grant or deny spec
 
 For a system overview, see [RBAC](rbac).
 
-**Table Structure**
+**Table: rbac\_account\_permissions's Structure**
 
 | Field             | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -20,7 +20,7 @@ For a system overview, see [RBAC](rbac).
 The `accountId` field has a foreign key to [account.id](account#id) with `ON DELETE CASCADE`.
 The `permissionId` field has a foreign key to [rbac_permissions.id](rbac_permissions#id) with `ON DELETE CASCADE`.
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### accountId
 

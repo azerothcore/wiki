@@ -6,7 +6,7 @@
 
 Holds information for each character's spells.
 
-**Table Structure**
+**Table: character\_spell's Structure**
 
 | Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -18,7 +18,7 @@ Holds information for each character's spells.
 [2]: #spell
 [3]: #specmask
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -1,12 +1,12 @@
-# creature_template_model
+# creature\_template\_model
 
 [<-Back-to:World](database-world)
 
-**The `creature_template_model` table**
+**The \`creature\_template\_model\` table**
 
 This table describes which model is assigned to a specific creature.
 
-**Table Structure**
+**Table: creature\_template\_model's Structure**
 
 | Field                  | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table describes which model is assigned to a specific creature.
 [5]: #probability
 [6]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

@@ -8,7 +8,7 @@ This table contains trigger points for events in certain coordinates in the maps
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)
 
-**Table Structure**
+**Table: areatrigger's Structure**
 
 | Field       | Type  | Attributes | Key | Null | Default | Extra          | Comment                                              |
 | ----------- | ----- | ---------- | --- | ---- | ------- | -------------- | ---------------------------------------------------- |
@@ -23,7 +23,7 @@ This table contains trigger points for events in certain coordinates in the maps
 | height      | FLOAT |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
 | orientation | FLOAT |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Entry
 

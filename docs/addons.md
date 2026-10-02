@@ -4,7 +4,7 @@
 
 **The \`addons\` table**
 
-**Table Structure**
+**Table: addons's Structure**
 
 | Field     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@
 [1]: #name
 [2]: #crc
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 

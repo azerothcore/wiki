@@ -6,7 +6,7 @@
 
 Contains information about the different battlegrounds, like how many players are needed to start, how many can be inside the same one, and the locations where each side starts.
 
-**Table Structure**
+**Table: battleground\_template's Structure**
 
 | Field                  | Type      | Atributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | --------- | --------- | --- | ---- | ------- | ----- | ------- |
@@ -38,7 +38,7 @@ Contains information about the different battlegrounds, like how many players ar
 [12]: #scriptname
 [13]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

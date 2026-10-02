@@ -1,5 +1,7 @@
 # broadcast\_text\_locale
 
+[<-Back-to:World](database-world)
+
 **The \`broadcast\_text\_locale\` table**
 
 Â 
@@ -9,7 +11,7 @@ This table will have **localized texts** for \`broadcast\_text\` table. Used inÂ
 Its purpose is (will be) used as a globalized table containing the localized texts as mentionned above.
 
 
-**Table Structure**
+**Table: broadcast\_text\_locale's Structure**
 
 | Field                     | Type       | Key | Null | Default | Extra | Comment |
 | ------------------------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -19,7 +21,7 @@ Its purpose is (will be) used as a globalized table containing the localized tex
 | [FemaleText](#femaletext) | text       |     | YES  | NULL    |       |         |
 | VerifiedBuild             | SMALLINT   |     | YES  | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

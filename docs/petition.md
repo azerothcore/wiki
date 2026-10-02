@@ -6,7 +6,7 @@
 
 This table holds information on all ongoing petitions for a guild or for an arena team.
 
-**Table Structure**
+**Table: petition's Structure**
 
 | Field             | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table holds information on all ongoing petitions for a guild or for an aren
 [4]: #type
 [5]: #petitionid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ownerguid
 

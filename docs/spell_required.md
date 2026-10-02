@@ -6,7 +6,7 @@
 
 Table used to add restrictions for learning spells from trainer. Player can't learn spell 'spell\_id' till he learns 'req\_spell', when he loses 'req\_spell' 'spell\_id' will be lost too. Table is used also for profession specialisations as specialisations require profession of certain rank to learn.
 
-**Table Structure**
+**Table: spell\_required's Structure**
 
 | Field          | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ Table used to add restrictions for learning spells from trainer. Player can't le
 [1]: #spellid
 [2]: #reqspell
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell\_id
 

@@ -6,7 +6,7 @@
 
 Definitions of instance encounters. Used by LFG.
 
-**Table Structure**
+**Table: instance\_encounters's Structure**
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                 |
 | ------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ Definitions of instance encounters. Used by LFG.
 [4]: #lastencounterdungeon
 [5]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

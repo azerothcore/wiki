@@ -6,7 +6,7 @@
 
 Provides custom intermediate spline interpolation points for waypoint paths that have `smoothTransition = 1` set in [waypoint\_data](waypoint_data). These points shape the catmullrom spline curve a creature follows between its main waypoints.
 
-**Table Structure**
+**Table: waypoint\_data\_addon's Structure**
 
 | Field                                   | Type | Attributes | Key | Null | Default |
 | --------------------------------------- | ---- | ---------- | --- | ---- | ------- |
@@ -17,7 +17,7 @@ Provides custom intermediate spline interpolation points for waypoint paths that
 | [PositionY](#positiony)                 | FLOAT |           |     | NO   | 0       |
 | [PositionZ](#positionz)                 | FLOAT |           |     | NO   | 0       |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### PathID
 

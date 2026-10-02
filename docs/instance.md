@@ -6,7 +6,7 @@
 
 This table holds static information on all current instances that have not yet been reset.
 
-**Table Structure**
+**Table: instance's Structure**
 
 | Field                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table holds static information on all current instances that have not yet b
 [5]: #completedencounters
 [6]: #data
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

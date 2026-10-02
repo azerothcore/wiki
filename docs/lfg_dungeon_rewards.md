@@ -6,7 +6,7 @@
 
 The quests that give the rewards for finishing a random dungeon in the Dungeon Finder, by level.
 
-**Table Structure**
+**Table: lfg\_dungeon\_rewards's Structure**
 
 | Field              | Type    | Attributes | Key | Null | Default | Extra | Comment                                                                                         |
 | ------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ The quests that give the rewards for finishing a random dungeon in the Dungeon F
 [3]: #firstquestid
 [6]: #otherquestid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### dungeonId
 

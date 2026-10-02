@@ -1,12 +1,12 @@
-# creature_template
+# creature\_template
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template\` table**
+**The \`creature\_template\` table**
 
 This table contains the description of creatures. Each spawned creature is an instance of a template present in this table, this means every creature MUST be defined in this table.
 
-**Table Structure**
+**Table: creature\_template's Structure**
 
 | Field                                              | Type               | Null | Key | Default | Extra | Comment                              |
 | -------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | ------------------------------------ |
@@ -68,7 +68,7 @@ This table contains the description of creatures. Each spawned creature is an in
 
 ---
 
-**Description of the fields**
+**Description of the table's fields**
 
 #### entry
 

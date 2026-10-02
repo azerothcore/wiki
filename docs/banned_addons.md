@@ -4,7 +4,7 @@
 
 **The \`banned\_addons\` table**
 
-**Table Structure**
+**Table: banned\_addons's Structure**
 
 | Field          | Type         | Attributes | Key    | Null | Default           | Extra | Comment |
 | -------------- | ------------ | ---------- | ------ | ---- | ----------------- | ----- | ------- |
@@ -18,7 +18,7 @@
 [3]: #version
 [4]: #timestamp
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Id
 

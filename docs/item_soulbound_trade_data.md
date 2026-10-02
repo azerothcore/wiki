@@ -2,11 +2,11 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The \`item\_soulbound\_trade\_data**
+**The \`item\_soulbound\_trade\_data\` table**
 
 This table stores information about which players can trade soulbound items between each other.
 
-**Table Structure**
+**Table: item\_soulbound\_trade\_data's Structure**
 
 | Field              | Type | Attributes | Key | Null | Default | Extra | Comment                                                                 |
 | ------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------- |
@@ -16,7 +16,7 @@ This table stores information about which players can trade soulbound items betw
 [1]: #itemguid
 [2]: #allowedplayers
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### itemGuid
 

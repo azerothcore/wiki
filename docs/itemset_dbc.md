@@ -1,10 +1,10 @@
-# itemset_dbc
+# itemset\_dbc
 
 [<-Back-to:World](database-world)
 
-**The \`itemset_dbc\` table**
+**The \`itemset\_dbc\` table**
 
-**Table Structure**
+**Table: itemset\_dbc's Structure**
 
 | Field                                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -61,6 +61,8 @@
 | [SetThreshold_8](#setthreshold8)       | INT     | SIGNED     |     | NO   | 0       |       |         |
 | [RequiredSkill](#requiredskill)         | INT     | SIGNED     |     | NO   | 0       |       |         |
 | [RequiredSkillRank](#requiredskillrank) | INT     | SIGNED     |     | NO   | 0       |
+
+**Description of the table's fields**
 
 ### ID
 

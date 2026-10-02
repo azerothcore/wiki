@@ -6,7 +6,7 @@
 
 This table contains a list of creatures that are tied to a specific pool.
 
-**Table Structure**
+**Table: pool\_creature's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table contains a list of creatures that are tied to a specific pool.
 [3]: #chance
 [4]: #description
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -6,7 +6,7 @@
 
 This table is used to disable dungeons/bgs/spells/etc.
 
-**Table Structure**
+**Table: disables's Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ This table is used to disable dungeons/bgs/spells/etc.
 [5]: #params1
 [6]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### sourceType
 

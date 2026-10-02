@@ -1,10 +1,10 @@
-# autobroadcast_locale
+# autobroadcast\_locale
 
 [<-Back-to:Auth](database-auth)
 
-**The \`autobroadcast_locale\` table**
+**The \`autobroadcast\_locale\` table**
 
-**Table Structure**
+**Table: autobroadcast\_locale's Structure**
 
 | Field        | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -19,7 +19,7 @@
 [3]: #locale
 [4]: #text
 
-## Description of the fields
+**Description of the table's fields**
 
 ### realmid
 

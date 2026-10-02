@@ -6,7 +6,7 @@
 
 This table is used for displaying gossip when a player talks to an NPC with [npcflag](creature_template#npcflag) set.
 
-**Table Structure**
+**Table: gossip\_menu's Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ This table is used for displaying gossip when a player talks to an NPC with [np
 [1]: #menuid
 [2]: #textid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### MenuID
 

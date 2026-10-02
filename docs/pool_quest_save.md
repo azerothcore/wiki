@@ -4,7 +4,7 @@
 
 **The \`pool\_quest\_save\` table**
 
-**Table Structure**
+**Table: pool\_quest\_save's Structure**
 
 | Field         | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -14,7 +14,7 @@
 [1]: #poolid
 [2]: #questid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### pool\_id
 

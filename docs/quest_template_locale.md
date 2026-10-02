@@ -6,7 +6,7 @@
 
 This table is used to provide to localized clients with localized string for quest templates.
 
-**Table Structure**
+**Table: quest\_template\_locale's Structure**
 
 | Field                | Type       | Attribute | Key | Null | Default | Extra | Comment |
 | -------------------- | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
@@ -36,7 +36,7 @@ This table is used to provide to localized clients with localized string for que
 [11]: #objectivetext4
 [12]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

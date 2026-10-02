@@ -4,7 +4,7 @@
 
 **The \`calendar\_invites\` table**
 
-**Table Structure**
+**Table: calendar\_invites's Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@
 [7]: #rank
 [8]: #text
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

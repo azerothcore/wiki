@@ -6,7 +6,7 @@
 
 This table holds a listing of all skill for each character.
 
-**Table Structure**
+**Table: character\_skills's Structure**
 
 | Field      | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
 | ---------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -20,7 +20,7 @@ This table holds a listing of all skill for each character.
 [3]: #value
 [4]: #max
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

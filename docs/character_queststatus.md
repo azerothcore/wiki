@@ -6,7 +6,7 @@
 
 Holds information on the quest status of each character.
 
-**Table Structure**
+**Table: character\_queststatus's Structure**
 
 | Field             | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
 | ----------------- | -------- | ---------- | --- | ---- | ------- |------ | ------------------------ |
@@ -44,7 +44,7 @@ Holds information on the quest status of each character.
 [15]: #itemcount
 [16]: #playercount
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

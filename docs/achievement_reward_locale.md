@@ -6,7 +6,7 @@
 
 It is the table that stores the translations of the table `achievement_reward`, so that the game client can display the messages in different languages.
 
-**Table Structure**
+**Table: achievement\_reward\_locale's Structure**
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ It is the table that stores the translations of the table `achievement_reward`, 
 [3]: #subject
 [4]: #text
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

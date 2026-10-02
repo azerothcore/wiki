@@ -4,7 +4,7 @@
 
 **The \`log\_encounter\` table**
 
-**Table Structure**
+**Table: log\_encounter's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@
 [5]: #creditentry
 [6]: #playersinfo
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### time
 

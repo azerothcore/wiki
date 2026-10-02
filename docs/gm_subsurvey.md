@@ -6,7 +6,7 @@
 
 This table contains the answers to the survey questions. It's linked to `gm_survey`.
 
-**Table Structure**
+**Table: gm\_subsurvey's Structure**
 
 | Field              | Type | Attributes | Key | Null | Default        | Extra | Comment |
 | ------------------ | ---- | ---------- | --- | ---- | -------------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table contains the answers to the survey questions. It's linked to `gm_surv
 [3]: #answer
 [4]: #answercomment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### surveyId
 

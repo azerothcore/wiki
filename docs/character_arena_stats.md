@@ -6,7 +6,7 @@
 
 This table holds information about character's matchmaker rating in all team types.
 
-**Table Structure**
+**Table: character\_arena\_stats's Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds information about character's matchmaker rating in all team typ
 [3]: #matchmakerrating
 [4]: #maxmmr
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -6,7 +6,7 @@
 
 This table holds all item information for items that are stored in the guild bank.
 
-**Table Structure**
+**Table: guild\_bank\_item's Structure**
 
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds all item information for items that are stored in the guild ban
 [3]: #slotid
 [4]: #itemguid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

@@ -6,7 +6,7 @@
 
 This table holds data the Core needs to handle variables (like timer for arena point automatic flush).
 
-**Table Structure**
+**Table: worldstates's Structure**
 
 | Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ This table holds data the Core needs to handle variables (like timer for arena p
 [2]: #value
 [3]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

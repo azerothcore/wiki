@@ -13,7 +13,7 @@ When `SendChat()` is called for a creature text group, the engine automatically:
 
 If any check fails, the text is silently skipped. If all checks pass, the text fires and the cooldown timer is started.
 
-## Structure
+**Table: creature\_text\_options's Structure**
 
 | Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
 |------------------------|---------|------------|-----|------|---------|-------|---------|
@@ -25,7 +25,7 @@ If any check fails, the text is silently skipped. If all checks pass, the text f
 [2]: #groupid
 [3]: #optionsetid
 
-## Description of the fields
+**Description of the table's fields**
 
 ### CreatureID
 

@@ -6,7 +6,7 @@
 
 Contains aura information that is loaded when a character is loaded, so the auras that were on the character when it logged out are still kept when it logs back in. A spell can have up to three auras, one in each of its effects.
 
-**Table Structure**
+**Table: character\_aura's Structure**
 
 | Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                       |
 | -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
@@ -44,7 +44,7 @@ Contains aura information that is loaded when a character is loaded, so the aura
 [15]: #remaintime
 [16]: #remaincharges
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

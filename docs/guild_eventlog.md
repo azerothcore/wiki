@@ -4,7 +4,7 @@
 
 **The \`guild\_eventlog\` table**
 
-**Table Structure**
+**Table: guild\_eventlog's Structure**
 
 | Field            | Type    | Attributes | Key | Null | Default | Extra | Comment                                     |
 | ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------------- |
@@ -24,7 +24,7 @@
 [6]: #newrank
 [7]: #timestamp
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

@@ -1,12 +1,12 @@
-# vehicle_seat_addon
+# vehicle\_seat\_addon
 
 [<-Back-to:World](database-world)
 
-**The `vehicle_seat_addon` table**
+**The \`vehicle\_seat\_addon\` table**
 
 Provides per-seat overrides for vehicle seats. `SeatEntry` references a `VehicleSeat.dbc` entry and the remaining columns override the seat orientation and the position/parameters used when a passenger exits the seat.
 
-**Table Structure**
+**Table: vehicle\_seat\_addon's Structure**
 
 | Field | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ Provides per-seat overrides for vehicle seats. `SeatEntry` references a `Vehicle
 | [ExitParamO](#exitparamo) | FLOAT | SIGNED |  | YES | 0 |  |  |
 | [ExitParamValue](#exitparamvalue) | TINYINT(1) | SIGNED |  | YES | 0 |  |  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### SeatEntry
 

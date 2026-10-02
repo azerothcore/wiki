@@ -4,7 +4,7 @@
 
 **The \`pet\_aura\` table**
 
-**Table Structure**
+**Table: pet\_aura's Structure**
 
 | Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                       |
 | -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
@@ -40,7 +40,7 @@
 [14]: #remaintime
 [15]: #remaincharges
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

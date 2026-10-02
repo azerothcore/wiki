@@ -8,7 +8,7 @@ This table has all the templates for every instance. When a group enters an inst
 
 If you want to change the spot you will start in when you enter/leave an instance, go to areatrigger\_teleport
 
-**Table Structure**
+**Table: instance\_template's Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ If you want to change the spot you will start in when you enter/leave an instanc
 [3]: #script
 [4]: #allowmount
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### map
 

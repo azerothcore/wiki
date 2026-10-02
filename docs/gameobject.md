@@ -6,7 +6,7 @@
 
 This table holds the individual object data on each spawned game object in the world. This data along with the object's template data is read and used to instantiate the objects in the world.
 
-**Table Structure**
+**Table: gameobject's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra          | Comment                  |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------------------------ |
@@ -54,7 +54,7 @@ This table holds the individual object data on each spawned game object in the w
 [20]: #verifiedbuild
 [21]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

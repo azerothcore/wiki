@@ -1,12 +1,12 @@
-# creature_text_locale
+# creature\_text\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`creature_text_locale\` table**
+**The \`creature\_text\_locale\` table**
 
 This table is used to provide to localized clients with localized string for creatures texts.
 
-**Table Structure**
+**Table: creature\_text\_locale's Structure**
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 |-----------------|------------|------------|-----|------|---------|-------|---------|
@@ -22,7 +22,7 @@ This table is used to provide to localized clients with localized string for cre
 [4]: #locale
 [5]: #text
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

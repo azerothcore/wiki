@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: creature's Structure**
 
 Contains individual creature spawn data for each individual spawn of each individual creature in the game world.
 
@@ -60,7 +60,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 [26]: #createobject
 [27]: #comment
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### guid
 

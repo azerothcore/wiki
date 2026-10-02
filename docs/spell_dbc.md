@@ -8,7 +8,7 @@ This table has the same columns as Spell.dbc. The core loads it after the DBC fi
 
 The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
-**Table Structure**
+**Table: spell\_dbc's Structure**
 
 | Field                                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -247,7 +247,7 @@ The core reads every column in order, so a row must have a value for all of them
 | [SpellDescriptionVariableID](#spelldescriptionvariableid) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [SpellDifficultyID](#spelldifficultyid)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 Columns that end in `_1`, `_2` or `_3` hold one value per spell effect, and are described together. The core loads the columns that are not marked "Not used by the core", the others only need to be filled in so the row matches the layout of Spell.dbc.
 

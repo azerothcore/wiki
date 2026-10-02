@@ -1,10 +1,10 @@
-# creature_template_resistance
+# creature\_template\_resistance
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template_resistance\` table**
+**The \`creature\_template\_resistance\` table**
 
-**Table Structure**
+**Table: creature\_template\_resistance's Structure**
 
 | Field              | Type      | Attribute | Key | Null | Default | Extra | Comment |
 | ------------------ | --------- | --------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@
 [3]: #resistance
 [4]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

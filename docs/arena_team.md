@@ -6,7 +6,7 @@
 
 This table holds the main ArenaTeam information. All created teams or all teams in the process of being created have a record in this table.
 
-**Table Structure**
+**Table: arena\_team's Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------------- | ----------- | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -42,7 +42,7 @@ This table holds the main ArenaTeam information. All created teams or all teams 
 [14]: #borderstyle
 [15]: #bordercolor
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### arenaTeamId
 

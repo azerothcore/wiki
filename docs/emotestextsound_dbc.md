@@ -10,7 +10,7 @@ This DBC links a text emote (from [EmotesText.dbc](emotes)) to the sound played 
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)
 
-**Table Structure**
+**Table: emotestextsound\_dbc's Structure**
 
 | Field             | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@ This DBC links a text emote (from [EmotesText.dbc](emotes)) to the sound played 
 [4]: #sexid
 [5]: #soundid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

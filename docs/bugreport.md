@@ -4,7 +4,7 @@
 
 **The \`bugreport\` table**
 
-**Table Structure**
+**Table: bugreport's Structure**
 
 | Field                  | Type     | Attributes | Key | Null | Default | Extra          | Comment    |
 | ---------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ---------- |
@@ -15,7 +15,7 @@
 | [Assignee](#assignee)  | VARCHAR(255) |        |     | YES  | NULL    |                |            | 
 | [Comment](#comment)    | LONGTEXT |            |     | YES  | NULL    |                |            | 
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

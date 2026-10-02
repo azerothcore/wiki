@@ -6,7 +6,7 @@
 
 This table contains all of the banned IPs and the date when (or if) the ban will expire.
 
-**Table Structure**
+**Table: ip\_banned's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default   | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | --------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table contains all of the banned IPs and the date when (or if) the ban will
 [4]: #bannedby
 [5]: #banreason
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ip
 

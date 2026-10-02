@@ -6,7 +6,7 @@
 
 This table holds data about temporary summoned creatures. It is possible to group summons and create boss waves of adds etc.
 
-## Structure
+**Table: creature\_summon\_groups's Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -34,7 +34,7 @@ This table holds data about temporary summoned creatures. It is possible to grou
 [10]: #summontime
 [11]: #comment
 
-## **Description of the fields**
+**Description of the table's fields**
 
 ### summonerId
 

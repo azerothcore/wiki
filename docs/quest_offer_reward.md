@@ -6,7 +6,7 @@
 
 This table is used for quests offering rewards without any required quest items (no item delivery involved).
 
-**Table Structure**
+**Table: quest\_offer\_reward's Structure**
 
 | Field                           | Type      | Attributes | Key | NULL | Default | Comment                                             |
 | ------------------------------- | --------- | ---------- | --- | ---- | ------- | --------------------------------------------------- |
@@ -22,7 +22,7 @@ This table is used for quests offering rewards without any required quest items 
 | [RewardText](#rewardtext)       | TEXT      |            |     | YES  | NULL    | Quest gossip text, single quest dialogue            |
 | [VerifiedBuild](#verifiedbuild) | SMALLINT  |            |     | NO   | 0       | Game client Build number or manually set value      |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### ID
 

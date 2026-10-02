@@ -1,12 +1,12 @@
-# trainer_spell
+# trainer\_spell
 
 [<-Back-to:World](database-world)
 
-**The \`trainer_spell\` table**
+**The \`trainer\_spell\` table**
 
 This table contains the trainer spell entries.
 
-**Table Structure**
+**Table: trainer\_spell's Structure**
 
 | Field                           | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -21,7 +21,7 @@ This table contains the trainer spell entries.
 | [ReqLevel](#reqlevel)           | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [VerifiedBuild](#verifiedbuild) | INT     |            |     | YES  | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### TrainerId
 

@@ -8,7 +8,7 @@
 
 Lists the SQL update files the database updater has applied to this database. The table is in the auth, characters and world databases.
 
-**Table Structure**
+**Table: updates's Structure**
 
 | Field          | Type         | Attributes               | Key | Null | Default           | Extra | Comment                                               |
 | -------------- | ------------ | ------------------------ | --- | ---- | ----------------- | ----- | ----------------------------------------------------- |
@@ -25,7 +25,7 @@ Lists the SQL update files the database updater has applied to this database. Th
 [5]: #speed
 
 
-## Description of the fields
+**Description of the table's fields**
 
 ### name
 

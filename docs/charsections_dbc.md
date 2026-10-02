@@ -10,7 +10,7 @@ This DBC contains the character customization sections (skin, face, facial hair,
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)
 
-**Table Structure**
+**Table: charsections\_dbc's Structure**
 
 | Field                 | Type | Attributes | Key | Null | Default | Extra | Comment           |
 | --------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ----------------- |
@@ -33,7 +33,7 @@ This DBC contains the character customization sections (skin, face, facial hair,
 [6]: #variationindex
 [7]: #colorindex
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

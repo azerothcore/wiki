@@ -6,7 +6,7 @@
 
 This table holds individual item instance information for all items currently equipped in some kind of character bag or bank, in auction houses, in guild banks or in mails.
 
-**Table Structure**
+**Table: item\_instance's Structure**
 
 | Field                  | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -40,7 +40,7 @@ This table holds individual item instance information for all items currently eq
 [13]: #playedtime
 [14]: #text
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

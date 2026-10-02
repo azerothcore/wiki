@@ -1,12 +1,12 @@
-# arena_season_reward_group
+# arena\_season\_reward\_group
 
 [<-Back-to:World](database-world)
 
-**The \`arena_season_reward_group\` table**
+**The \`arena\_season\_reward\_group\` table**
 
 Defines which arena teams get rewards at the end of an arena season. Teams need at least 30 games in the season, and members need to have played at least 30% of their team's games. The rewards of each group are in [arena\_season\_reward](arena_season_reward).
 
-**Table Structure**
+**Table: arena\_season\_reward\_group's Structure**
 
 | Field                                            | Type         | Attributes | Key | Null | Default | Extra          | Comment                                                                                                                                                |
 | ------------------------------------------------ | ------------ | ---------- | --- | ---- | ------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -21,7 +21,7 @@ Defines which arena teams get rewards at the end of an arena season. Teams need 
 | [gold_reward](#goldreward)                       | INT          | UNSIGNED   |     | NO   |         |                |                                                                                                                                                        |
 
 
-## Description of the fields
+**Description of the table's fields**
 
 ### id
 

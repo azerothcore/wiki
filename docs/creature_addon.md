@@ -8,7 +8,7 @@ The creature\_addon and creature\_template\_addon tables define different things
 
 NOTE: A creature\_addon record will override a creature\_template\_addon record should they overlap on the same creature.
 
-**Table Structure**
+**Table: creature\_addon's Structure**
 
 | Field                        | Type          | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------------- | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -30,7 +30,7 @@ NOTE: A creature\_addon record will override a creature\_template\_addon record 
 [10]: #visibilitydistancetype
 [11]: #auras
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid/entry
 

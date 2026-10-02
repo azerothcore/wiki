@@ -11,7 +11,7 @@ Example db appender:
 Appender.DB=3,5,0
 ```
 
-**Table Structure**
+**Table: logs's Structure**
 
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -27,7 +27,7 @@ Appender.DB=3,5,0
 [4]: #level
 [5]: #string
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### time
 

@@ -4,7 +4,7 @@
 
 **The \`quest\_offer\_reward\_locale\` table**
 
-**Table Structure**
+**Table: quest\_offer\_reward\_locale's Structure**
 
 | Field              | Type       | Attribute | Key | Null | Default | Extra | Comment |
 | ------------------ | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@
 [3]: #rewardtext
 [4]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

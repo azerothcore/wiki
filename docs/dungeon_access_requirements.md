@@ -4,7 +4,7 @@
 
 **The \`dungeon\_access\_requirements\` table**
 
-**Table Structure**
+**Table: dungeon\_access\_requirements's Structure**
 
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -26,7 +26,7 @@
 [7]: #leaderonly
 [8]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### dungeon_access_id
 

@@ -6,7 +6,7 @@
 
 Holds information on the daily quest status of every player. The quest must have type = 87 or the 4096 flag at QuestFlags.
 
-**Table Structure**
+**Table: character\_queststatus\_daily's Structure**
 
 | Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 |----------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -18,7 +18,7 @@ Holds information on the daily quest status of every player. The quest must have
 [2]: #quest
 [3]: #time
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

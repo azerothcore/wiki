@@ -6,7 +6,7 @@
 
 This table holds datas about BattleGrounds scores. To enable storing this kind of informations, set **Battleground.StoreStatistics.Enable = 1** in **worldserver.config.dist** file.
 
-**Table Structure**
+**Table: pvpstats\_battlegrounds's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra          | Comment |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
@@ -22,7 +22,7 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 [4]: #type
 [5]: #date
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

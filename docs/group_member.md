@@ -6,7 +6,7 @@
 
 This table holds info about group members.
 
-**Table Structure**
+**Table: group\_member's Structure**
 
 | Field            | Type    | Attributes | Key | Null | Default | Extra  | Comment |
 | ---------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -22,7 +22,7 @@ This table holds info about group members.
 [4]: #subgroup
 [5]: #roles
 
-**Description of the fields**
+**Description of the table's fields**
 
 #### guid
 

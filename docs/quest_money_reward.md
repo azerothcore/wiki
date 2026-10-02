@@ -6,7 +6,7 @@
 
 This table enables dynamically rewarding money dependent on player's level.
 
-**Table Structure**
+**Table: quest\_money\_reward's Structure**
 
 | Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table enables dynamically rewarding money dependent on player's level.
 | [Money8](#money8) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [Money9](#money9) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### Level
 

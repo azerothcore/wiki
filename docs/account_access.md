@@ -6,7 +6,7 @@
 
 This table holds security access level for any realm in [realmlist](realmlist) table.
 
-**Table Structure**
+**Table: account\_access's Structure**
 
 | Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -20,7 +20,7 @@ This table holds security access level for any realm in [realmlist](realmlist) t
 [3]: #realmid
 [4]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

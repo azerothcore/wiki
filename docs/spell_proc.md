@@ -6,7 +6,7 @@
 
 This table holds information on what events (or procs) certain spells are activated. All spells in this table must have apply a SPELL\_AURA\_PROC\_TRIGGER\_SPELL (42) aura. Any entries in this table will overwrite the existing proc settings in the spell's DBC entry.
 
-**Table Structure**
+**Table: spell\_proc's Structure**
 
 | Field                 | Type     | Attributes | Key | Null | Default | Extra  | Comment |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------- |
@@ -44,7 +44,7 @@ This table holds information on what events (or procs) certain spells are activa
 [15]: #cooldown
 [16]: #charges
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### SpellId
 

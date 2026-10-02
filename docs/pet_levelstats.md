@@ -6,7 +6,7 @@
 
 This table holds information on individual pet base stats based on level.
 
-**Table Structure**
+**Table: pet\_levelstats's Structure**
 
 | Field                             | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -23,7 +23,7 @@ This table holds information on individual pet base stats based on level.
 | [min\_dmg](#mindmg)               | INT       | UNSIGNED   |     | NO   | 0       |       |         |
 | [max\_dmg](#maxdmg)               | INT       | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### creature\_entry
 

@@ -2,7 +2,7 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: item\_template's Structure**
 
 Holds information on every item that exists in the game. All items are created from their template stored in this table.
 
@@ -288,7 +288,7 @@ Holds information on every item that exists in the game. All items are created f
 [137]: #flagscustom
 [138]: #verifiedbuild
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### entry
 

@@ -1,8 +1,10 @@
-# exploration_basexp
+# exploration\_basexp
 
 [<-Back-to:World](database-world)
 
 This table holds the base experience point information needed for when a player explores a new zone.
+
+**Table: exploration\_basexp's Structure**
 
 | Field       | Type      | Attributes | Key | Null | Default |
 | ----------- | --------- | ---------- | --- | ---- | ------- |
@@ -12,7 +14,7 @@ This table holds the base experience point information needed for when a player 
 [1]: #level
 [2]: #basexp
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### level
 The player level.

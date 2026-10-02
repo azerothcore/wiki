@@ -1,4 +1,4 @@
-# characters 
+# characters
 
 [<-Back-to:Characters](database-characters)
 
@@ -6,7 +6,7 @@
 
 This table holds vital static information for each character. It is used to create the player objects in-game.
 
-**Table Structure**
+**Table: characters's Structure**
 
 | Field                      | Type        | Attributes | Key | Null | Default           | Extra  | Comment                  |
 | -------------------------- | ----------- | ---------- | --- | ---- | ----------------- | ------ | ------------------------ |
@@ -172,7 +172,7 @@ This table holds vital static information for each character. It is used to crea
 [79]: #inntriggerid
 [80]: #extrabonustalentcount
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

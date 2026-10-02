@@ -6,7 +6,7 @@
 
 This table contains a list of quests that are tied to a specific pool.
 
-**Table Structure**
+**Table: pool\_quest's Structure**
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -18,7 +18,7 @@ This table contains a list of quests that are tied to a specific pool.
 [2]: #poolentry
 [3]: #description
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

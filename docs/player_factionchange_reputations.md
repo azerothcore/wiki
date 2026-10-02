@@ -1,12 +1,12 @@
-# player_factionchange_reputations
+# player\_factionchange\_reputations
 
 [<-Back-to:World](database-world)
 
-**The \`player_factionchange_reputations\` table**
+**The \`player\_factionchange\_reputations\` table**
 
 Basically all faction/reputation changes made when player changes faction.
 
-**Table Structure**
+**Table: player\_factionchange\_reputations's Structure**
 
 | Field                                | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -15,7 +15,7 @@ Basically all faction/reputation changes made when player changes faction.
 | [horde_id](#hordeid)                 | INT  | SIGNED     | PRI | NO   |         |       |         |
 | [horde_comment](#hordecomment)       | TEXT |            |     | YES  | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance_id
 

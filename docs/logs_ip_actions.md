@@ -4,7 +4,7 @@
 
 **The \`logs\_ip\_actions\` table**
 
-**Table Structure**
+**Table: logs\_ip\_actions's Structure**
 
 | Field               | Type        | Attributes | Key | Null | Default           | Extra | Comment                       |
 | ------------------- | ----------- | ---------- | --- | ---- | ----------------- | ----- | ----------------------------- |
@@ -28,7 +28,7 @@
 [8]: #time
 [9]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

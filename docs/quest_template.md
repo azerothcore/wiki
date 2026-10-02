@@ -6,7 +6,7 @@
 
 Contains all basic definitions of available quests.
 
-**Table Structure**
+**Table: quest\_template's Structure**
 
 | Field                                                   | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -116,7 +116,7 @@ Contains all basic definitions of available quests.
 | [ObjectiveText4](#objectivetext4)                       | TEXT     |            |     | YES  |         |       |         |
 | [VerifiedBuild](#verifiedbuild)                         | INT      |            |     | YES  |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

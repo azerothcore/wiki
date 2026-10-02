@@ -6,7 +6,7 @@
 
 Table used for storing custom damage/healing bonus coefficients.
 
-**Table Structure**
+**Table: spell\_bonus\_data's Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -24,7 +24,7 @@ Table used for storing custom damage/healing bonus coefficients.
 [5]: #apdotbonus
 [6]: #comments
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

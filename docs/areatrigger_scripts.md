@@ -6,7 +6,7 @@
 
 Allows for an area trigger to be scripted with Trinity Script.
 
-**Table Structure**
+**Table: areatrigger\_scripts's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -16,7 +16,7 @@ Allows for an area trigger to be scripted with Trinity Script.
 [1]: #entry
 [2]: #scriptname
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

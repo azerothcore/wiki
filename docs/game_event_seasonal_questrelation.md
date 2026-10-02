@@ -6,7 +6,7 @@
 
 Holds information on the game event seasonal quest relations to allow for resetting of quests with ZoneOrSort of -22.
 
-**Table Structure**
+**Table: game\_event\_seasonal\_questrelation's Structure**
 
 | Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
 | --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
@@ -16,7 +16,7 @@ Holds information on the game event seasonal quest relations to allow for resett
 [1]: #questid
 [2]: #evententry
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### questId
 

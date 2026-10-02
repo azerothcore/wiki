@@ -6,7 +6,7 @@
 
 This table contains saved data for LFG. This table is constantly in use by the core.
 
-**Table Structure**
+**Table: lfg\_data's Structure**
 
 | Field        | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -18,7 +18,7 @@ This table contains saved data for LFG. This table is constantly in use by the c
 [2]: #dungeon
 [3]: #state
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

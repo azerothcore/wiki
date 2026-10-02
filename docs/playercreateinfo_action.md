@@ -2,11 +2,11 @@
 
 [<-Back-to:World](database-world)
 
-**The \`playercreateinfo_action\` table**
+**The \`playercreateinfo\_action\` table**
 
 This table holds information on what default actions a brand new character should start out with. Each race-class combination can have a different default starting setup.
 
-**Table Structure**
+**Table: playercreateinfo\_action's Structure**
 
 | Field       | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -22,7 +22,7 @@ This table holds information on what default actions a brand new character shoul
 [4]: #action
 [5]: #type
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### race
 

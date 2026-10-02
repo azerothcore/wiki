@@ -6,7 +6,7 @@
 
 This table holds information on pet spell cooldowns.
 
-**Table Structure**
+**Table: pet\_spell\_cooldown's Structure**
 
 | Field      | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
 | ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -20,7 +20,7 @@ This table holds information on pet spell cooldowns.
 [3]: #time
 [4]: #category
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

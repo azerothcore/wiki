@@ -4,7 +4,7 @@
 
 **The \`character\_declinedname\` table**
 
-**Table Structure**
+**Table: character\_declinedname's Structure**
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
@@ -22,7 +22,7 @@
 [5]: #instrumental
 [6]: #prepositional
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

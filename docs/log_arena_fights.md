@@ -4,7 +4,7 @@
 
 **The \`log\_arena\_fights\` table**
 
-**Table Structure**
+**Table: log\_arena\_fights's Structure**
 
 | Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -36,7 +36,7 @@
 [12]: #losertrchange
 [13]: #curronline
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### fight\_id
 

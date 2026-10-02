@@ -1,14 +1,14 @@
-# acore_string
+# acore\_string
 
 [<-Back-to:World](database-world)
 
-**The \`acore_string\` table**
+**The \`acore\_string\` table**
 
 This table holds all of the strings used internally by the server. It is provided for the main purpose of translation.
 
 To see which locale IDs correspond to what languages, visit the Localization\_lang page.
 
-**Table Structure**
+**Table: acore\_string's Structure**
 
 | Field                | Type      | Attributes | Key | Null | Default | Extra | Comment |
 | -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -27,7 +27,7 @@ To see which locale IDs correspond to what languages, visit the Localization\_la
 [2]: #contentdefault
 [3]: #localennnn
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

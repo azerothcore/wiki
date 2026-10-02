@@ -6,7 +6,7 @@
 
 This table holds coordinate information on where the player should be teleported to when a spell with target type: TARGET\_DEST\_DB(17).
 
-**Table Structure**
+**Table: spell\_target\_position's Structure**
 
 | Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment    |
 | ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
@@ -28,7 +28,7 @@ This table holds coordinate information on where the player should be teleported
 [7]: #effectindex
 [8]: #verifiedbuild
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 
