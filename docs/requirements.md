@@ -1,6 +1,6 @@
 # Requirements
 
-{% include important.html content="As of **September 19, 2024**, **MariaDB** and **MySQL versions 5.7 and 8.1** are no longer supported." %}
+{% include important.html content="<b>MariaDB</b> (any version) and <b>MySQL versions 5.7 and 8.1</b> are <b>not supported</b> by AzerothCore." %}
 
 {% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
 
