@@ -4,9 +4,14 @@ AzerothCore uses three databases. This page lists each one with all of its table
 
 The client DBC files are documented separately in the [DBC Index](dbc-index).
 
+<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!d[0].open;d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button><span class="table-count" data-db="all" data-label=" table pages in total"></span>
+
 ## Auth
 
 Accounts, realms and access rights. It is shared by the authserver and every worldserver. See also the [Auth database page](database-auth).
+
+<details>
+<summary>Show the Auth tables<span class="table-count" data-db="auth"></span></summary>
 
 - [account](account)
 - [account_access](account_access)
@@ -31,9 +36,14 @@ Accounts, realms and access rights. It is shared by the authserver and every wor
 - [updates_include](updates_include)
 - [uptime](uptime)
 
+</details>
+
 ## Characters
 
 Everything that belongs to players: characters, items, guilds, mail and other saved state. See also the [Characters database page](database-characters).
+
+<details>
+<summary>Show the Characters tables<span class="table-count" data-db="characters"></span></summary>
 
 - [account_data](account_data)
 - [account_instance_times](account_instance_times)
@@ -144,9 +154,14 @@ Everything that belongs to players: characters, items, guilds, mail and other sa
 - [world_state](world_state)
 - [worldstates](worldstates)
 
+</details>
+
 ## World
 
 The game content: creatures, gameobjects, quests, items, spells, scripts and the `_dbc` override tables. See also the [World database page](database-world).
+
+<details>
+<summary>Show the World tables<span class="table-count" data-db="world"></span></summary>
 
 - [achievement_category_dbc](achievement_category_dbc)
 - [achievement_criteria_data](achievement_criteria_data)
@@ -460,3 +475,5 @@ The game content: creatures, gameobjects, quests, items, spells, scripts and the
 - [wmoareatable_dbc](wmoareatable_dbc)
 - [worldmaparea_dbc](worldmaparea_dbc)
 - [worldmapoverlay_dbc](worldmapoverlay_dbc)
+
+</details>

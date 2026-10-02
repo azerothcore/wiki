@@ -1210,10 +1210,13 @@ body > .wrapper .lang-switch {
   margin-bottom: 12px;
 }
 
-body > .wrapper .lang-btn {
+body > .wrapper .lang-btn,
+body > .wrapper a.lang-btn:hover,
+body > .wrapper a.lang-btn:focus {
   background-color: #f6f8fa;
   border: 1px solid #d1d5da;
   border-radius: 6px;
+  color: #24292e;
   display: inline-block;
   font-size: 0.9em;
   margin-right: 4px;
@@ -1221,18 +1224,30 @@ body > .wrapper .lang-btn {
   text-decoration: none;
 }
 
-body > .wrapper a.lang-btn:hover {
+/* Hover lights the button up; the current language has a coloured border */
+body > .wrapper a.lang-btn:hover,
+body > .wrapper a.lang-btn:focus {
+  background-color: #cfe2f8;
   border-color: #0366d6;
 }
 
+body > .wrapper a.lang-btn.lang-current,
+body > .wrapper a.lang-btn.lang-current:hover,
 body > .wrapper .lang-current {
-  border-color: #0366d6;
+  background-color: #f6f8fa;
+  border: 2px solid #0366d6;
   font-weight: 600;
+  padding: 2px 9px;
 }
 
 body > .wrapper .lang-missing {
   cursor: not-allowed;
   opacity: 0.45;
+}
+
+/* The flag does not show its own tooltip, so the whole button shows the button's message */
+body > .wrapper .lang-btn img {
+  pointer-events: none;
 }
 
 /* Sidebar logo: the site name is part of the logo link, larger and not styled as a link */
@@ -1330,4 +1345,31 @@ body > .wrapper h3:has(> .badge) {
   gap: 12px;
   margin-top: 32px;
   padding-bottom: 8px;
+}
+
+/* "Expand all" button and fold lines on index pages */
+body > .wrapper #git-wiki-content .details-toggle {
+  background: #f6f8fa;
+  border: 1px solid #b4bac1;
+  border-radius: 6px;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 14px;
+  min-width: 9em;
+  text-align: center;
+}
+body > .wrapper #git-wiki-content .details-toggle:hover {
+  background: #e9ecef;
+}
+body > .wrapper #git-wiki-content details > summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Table counts filled in by the sidebar script */
+body > .wrapper .table-count {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.7;
 }

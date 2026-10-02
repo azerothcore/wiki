@@ -96,11 +96,11 @@
             </ul>
             <b>Database:</b>
             <ul>
-                <li><a href="/wiki/database-index">Index</a>
+                <li><a href="/wiki/database-index">Index</a><span class="table-count" data-db="all"></span>
                     <ul>
-                        <li><a href="/wiki/database-auth">Auth</a></li>
-                        <li><a href="/wiki/database-characters">Characters</a></li>
-                        <li><a href="/wiki/database-world">World</a></li>
+                        <li><a href="/wiki/database-auth">Auth</a><span class="table-count" data-db="auth"></span></li>
+                        <li><a href="/wiki/database-characters">Characters</a><span class="table-count" data-db="characters"></span></li>
+                        <li><a href="/wiki/database-world">World</a><span class="table-count" data-db="world"></span></li>
                     </ul>
                 </li>
             </ul>
@@ -231,3 +231,40 @@
          </div>
     </div>
 </div>
+<script>
+/* Table counts next to the database links: read from the Database Index, kept for a day */
+(function () {
+    var KEY = "ac-table-counts", DAY = 86400000;
+    function count(doc) {
+        var c = { all: 0 };
+        doc.querySelectorAll("details .table-count[data-db]").forEach(function (s) {
+            var n = s.closest("details").querySelectorAll("li").length;
+            c[s.getAttribute("data-db")] = n;
+            c.all += n;
+        });
+        return c.all ? c : null;
+    }
+    function show(c) {
+        document.querySelectorAll(".table-count[data-db]").forEach(function (s) {
+            var n = c[s.getAttribute("data-db")];
+            if (n) s.textContent = " (" + n + (s.getAttribute("data-label") || "") + ")";
+        });
+    }
+    function save(c) {
+        try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), c: c })); } catch (e) {}
+    }
+    function run() {
+        var here = count(document);
+        if (here) { save(here); show(here); return; }
+        try {
+            var s = JSON.parse(localStorage.getItem(KEY));
+            if (s && Date.now() - s.t < DAY) { show(s.c); return; }
+        } catch (e) {}
+        fetch("{{ site.baseurl }}/database-index").then(function (r) { return r.text(); }).then(function (h) {
+            var c = count(new DOMParser().parseFromString(h, "text/html"));
+            if (c) { save(c); show(c); }
+        }).catch(function () {});
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
+})();
+</script>
