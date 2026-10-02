@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+# Serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
+
+cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
+
+JEKYLL_PORT=4000
+# 127.0.0.1 is reachable from this computer only. Run with JEKYLL_HOST=0.0.0.0
+# to let other devices on the network open it.
+JEKYLL_HOST="${JEKYLL_HOST:-127.0.0.1}"
+JEKYLL_BASEURL=/wiki
+
+# Run "test_locally.sh clean" to force a full rebuild.
+JEKYLL_CONFIG=_config.yml,_config.local.yml
+JEKYLL_CLEAN=0
+[ "$1" = "clean" ] && JEKYLL_CLEAN=1
+
+# Walk up to the site root, so Jekyll is never started from the wrong folder.
+depth=0
+while [ ! -f "_config.yml" ]; do
+    depth=$((depth + 1))
+    if [ "$depth" -ge 10 ] || [ "$PWD" = "/" ]; then
+        echo "Could not find _config.yml - put this script in or below the wiki folder."
+        exit 1
+    fi
+    cd ..
+done
+
+echo "Site root: $PWD"
+echo
+
+# Jekyll 3 only loads the github-pages plugins (theme, markdown) when a file
+# named Gemfile is in the site root, so copy it there. It is git-ignored.
+[ -f Gemfile ] || cp .env-files/Gemfile.github Gemfile
+export BUNDLE_GEMFILE="$PWD/Gemfile"
+
+# "clean" throws away the previous build, to force a full rebuild.
+if [ "$JEKYLL_CLEAN" = "1" ]; then
+    rm -rf _site .jekyll-metadata
+fi
+
+for tool in git ruby bundle; do
+    command -v "$tool" || echo "$tool: not found"
+done
+if ! command -v bundle >/dev/null 2>&1; then
+    echo
+    echo "Bundler was not found. Install Ruby (https://jekyllrb.com/docs/installation/) and run: gem install bundler"
+    exit 1
+fi
+echo
+
+if ! bundle check >/dev/null 2>&1; then
+    echo "Installing gems..."
+    bundle install || { echo; echo "bundle install failed - see the messages above."; exit 1; }
+    echo
+fi
+
+# Stop an old server still holding the port, or it keeps serving the old build.
+old_pids=""
+if command -v lsof >/dev/null 2>&1; then
+    old_pids=$(lsof -ti "tcp:$JEKYLL_PORT" -sTCP:LISTEN 2>/dev/null)
+elif command -v fuser >/dev/null 2>&1; then
+    old_pids=$(fuser "$JEKYLL_PORT/tcp" 2>/dev/null)
+fi
+if [ -n "$old_pids" ]; then
+    for pid in $old_pids; do
+        echo "Stopping old server (PID $pid)..."
+        kill "$pid" 2>/dev/null
+    done
+    sleep 1
+fi
+
+echo "Open http://localhost:$JEKYLL_PORT$JEKYLL_BASEURL/home when the server is ready. Press Ctrl+C to stop it."
+echo
+
+exec bundle exec jekyll serve --host "$JEKYLL_HOST" --port "$JEKYLL_PORT" --baseurl "$JEKYLL_BASEURL" --config "$JEKYLL_CONFIG" --incremental --verbose

@@ -1,0 +1,3 @@
+# test_locally.sh must keep LF line endings, or bash cannot run it.
+test_locally.sh text eol=lf
+test_locally.bat text eol=crlf
