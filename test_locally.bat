@@ -3,6 +3,9 @@ rem Serves the wiki locally. Open http://localhost:4000/wiki/home when it is rea
 
 cd /d "%~dp0"
 
+rem Start of the timer for the "Total time" line printed after the build.
+for /f %%T in ('ruby -e "print Time.now.to_i" 2^>nul') do set T_START=%%T
+
 set JEKYLL_PORT=4000
 rem 127.0.0.1 is reachable from this computer only. Set JEKYLL_HOST=0.0.0.0
 rem before running to let other devices on the network open it.
@@ -83,5 +86,26 @@ if "%FOUND_OLD%"=="1" timeout /t 1 /nobreak >nul
 echo Open http://localhost:%JEKYLL_PORT%%JEKYLL_BASEURL%/home when the server is ready. Press Ctrl+C to stop it.
 echo.
 
-call bundle exec jekyll serve --host %JEKYLL_HOST% --port %JEKYLL_PORT% --baseurl %JEKYLL_BASEURL% --config %JEKYLL_CONFIG% --incremental --verbose
+rem Build first, so the total time can be printed, then serve what was built.
+call bundle exec jekyll build --baseurl %JEKYLL_BASEURL% --config %JEKYLL_CONFIG% --incremental --verbose
+if errorlevel 1 (
+    echo.
+    echo The build failed - see the messages above.
+    pause
+    exit /b 1
+)
+
+for /f %%T in ('ruby -e "print Time.now.to_i" 2^>nul') do set T_END=%%T
+if defined T_START if defined T_END (
+    set /a T_TOTAL=T_END-T_START
+    set /a T_MIN=T_TOTAL/60
+    set /a T_SEC=T_TOTAL%%60
+)
+echo.
+if defined T_TOTAL echo Total time from start to finished build: %T_MIN% min %T_SEC% s (%T_TOTAL% seconds^)
+if "%~1"=="" (echo Options used: none - English only, reusing the previous build) else (echo Options used: %*)
+echo Open http://localhost:%JEKYLL_PORT%%JEKYLL_BASEURL%/home - press Ctrl+C to stop the server.
+echo.
+
+call bundle exec jekyll serve --skip-initial-build --host %JEKYLL_HOST% --port %JEKYLL_PORT% --baseurl %JEKYLL_BASEURL% --config %JEKYLL_CONFIG% --incremental --verbose
 pause

@@ -33,7 +33,7 @@ Requires [Ruby](https://jekyllrb.com/docs/installation/) and Bundler (`gem insta
 
 The script installs the gems if needed, stops any old server still running on port 4000, and serves the site. Then open `http://localhost:4000/wiki/home`.
 
-The first run can be slow, because Jekyll has to generate more than 500 pages. `--verbose` is enabled by default, so each page is printed as it is built and you can see that Jekyll has not hung. If you would rather not see the build progress, remove `--verbose` from the last line of the script.
+The first run can be slow, because Jekyll has to generate more than 500 pages (see [Build times](#build-times)). `--verbose` is enabled by default, so each page is printed as it is built and you can see that Jekyll has not hung. If you would rather not see the build progress, remove `--verbose` from the last line of the script.
 
 ##### Options
 
@@ -60,6 +60,19 @@ bash test_locally.sh all
 bash test_locally.sh clean
 bash test_locally.sh all clean
 ```
+
+##### Build times
+
+When the build finishes, the script prints how long it took and which options were used. These are the times measured so far:
+
+| System | Command | Pages | Time |
+| :----- | :------ | :---- | :--- |
+| Windows 11 | `test_locally.bat clean` | about 560 (English only) | about 6 minutes |
+| Windows 11 | `test_locally.bat all clean` | about 1,500 (English and 2 translations) | about 40 minutes |
+| Ubuntu 24.04 | `bash test_locally.sh clean` | about 560 (English only) | about 8 minutes |
+| Ubuntu 24.04 | `bash test_locally.sh all clean` | about 1,500 (English and 2 translations) | about 54 minutes |
+
+After the first build, saving a page only rebuilds that page, which takes about 10 seconds.
 
 The site is served on `127.0.0.1`, so only your own computer can open it. To let other devices on your network reach it, set `JEKYLL_HOST=0.0.0.0` before running the script:
 

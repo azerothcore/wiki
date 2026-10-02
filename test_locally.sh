@@ -3,6 +3,9 @@
 
 cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
 
+# Start of the timer for the "Total time" line printed after the build.
+T_START=$(date +%s)
+
 JEKYLL_PORT=4000
 # 127.0.0.1 is reachable from this computer only. Run with JEKYLL_HOST=0.0.0.0
 # to let other devices on the network open it.
@@ -75,4 +78,15 @@ fi
 echo "Open http://localhost:$JEKYLL_PORT$JEKYLL_BASEURL/home when the server is ready. Press Ctrl+C to stop it."
 echo
 
-exec bundle exec jekyll serve --host "$JEKYLL_HOST" --port "$JEKYLL_PORT" --baseurl "$JEKYLL_BASEURL" --config "$JEKYLL_CONFIG" --incremental --verbose
+# Build first, so the total time can be printed, then serve what was built.
+bundle exec jekyll build --baseurl "$JEKYLL_BASEURL" --config "$JEKYLL_CONFIG" --incremental --verbose \
+    || { echo; echo "The build failed - see the messages above."; exit 1; }
+
+T_TOTAL=$(( $(date +%s) - T_START ))
+echo
+echo "Total time from start to finished build: $((T_TOTAL / 60)) min $((T_TOTAL % 60)) s ($T_TOTAL seconds)"
+echo "Options used: ${*:-none - English only, reusing the previous build}"
+echo "Open http://localhost:$JEKYLL_PORT$JEKYLL_BASEURL/home - press Ctrl+C to stop the server."
+echo
+
+exec bundle exec jekyll serve --skip-initial-build --host "$JEKYLL_HOST" --port "$JEKYLL_PORT" --baseurl "$JEKYLL_BASEURL" --config "$JEKYLL_CONFIG" --incremental --verbose
