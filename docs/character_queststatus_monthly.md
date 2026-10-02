@@ -6,10 +6,10 @@
 
 **Table: character\_queststatus\_monthly's Structure**
 
-| Field       | Type | Attributes | Key | Null | Default | Extra  | Comment                  |
-| ----------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
-| [guid][1]   | INT  | UNSIGNED   | PRI | NO   | 0       |        | Global Unique Identifier |
-| [quest][2]  | INT  | UNSIGNED   | PRI | NO   | 0       |        | Quest Identifier         |
+| Field      | Type | Attributes | Key | Null | Default | Extra | Comment                  |
+| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]  | INT  | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
 
 [1]: #guid
 [2]: #quest

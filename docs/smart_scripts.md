@@ -42,7 +42,7 @@ The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL la
 | [target_y][10]        | FLOAT    | SIGNED     |     | NO   | 0       |       |               |
 | [target_z][10]        | FLOAT    | SIGNED     |     | NO   | 0       |       |               |
 | [target_o][10]        | FLOAT    | SIGNED     |     | NO   | 0       |       |               |
-| [comment][11]         | text     |            |     | NO   |         |       | Event Comment |
+| [comment][11]         | TEXT     |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid
 [2]: #sourcetype

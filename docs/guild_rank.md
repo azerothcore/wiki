@@ -12,8 +12,8 @@ This table holds the information on all of the ranks available in a guild along 
 | -------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [guildid][1]         | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [rid][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [rname][3]           | VARCHAR(20) | SIGNED     |     | NO   | "       |       |         |
-| [rights][4]          | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [rname][3]           | VARCHAR(20) |            |     | NO   | ''      |       |         |
+| [rights][4]          | INT         | UNSIGNED   |     | YES  | 0       |       |         |
 | [BankMoneyPerDay][5] | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guildid

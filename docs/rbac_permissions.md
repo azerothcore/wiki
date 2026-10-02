@@ -10,10 +10,10 @@ For a system overview, see [RBAC](rbac).
 
 **Table: rbac\_permissions's Structure**
 
-| Field    | Type         | Attributes | Key | Null | Default | Extra | Comment       |
-| -------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------- |
+| Field         | Type         | Attributes | Key | Null | Default | Extra | Comment         |
+| ------------- | ------------ | ---------- | --- | ---- | ------- | ----- | --------------- |
 | [id](#id)     | INT          | UNSIGNED   | PRI | NO   | 0       |       | Permission id   |
-| [name](#name) | VARCHAR(100) | SIGNED     |     | NO   |         |       | Permission name |
+| [name](#name) | VARCHAR(100) |            |     | NO   |         |       | Permission name |
 
 **Description of the table's fields**
 

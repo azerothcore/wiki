@@ -8,14 +8,14 @@ Provides custom intermediate spline interpolation points for waypoint paths that
 
 **Table: waypoint\_data\_addon's Structure**
 
-| Field                                   | Type | Attributes | Key | Null | Default |
-| --------------------------------------- | ---- | ---------- | --- | ---- | ------- |
-| [PathID](#pathid)                       | INT  | UNSIGNED   | PRI | NO   |         |
-| [PointID](#pointid)                     | INT  | UNSIGNED   | PRI | NO   |         |
-| [SplinePointIndex](#splinepointindex)   | INT  | UNSIGNED   | PRI | NO   |         |
-| [PositionX](#positionx)                 | FLOAT |           |     | NO   | 0       |
-| [PositionY](#positiony)                 | FLOAT |           |     | NO   | 0       |
-| [PositionZ](#positionz)                 | FLOAT |           |     | NO   | 0       |
+| Field                                 | Type  | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [PathID](#pathid)                     | INT   | UNSIGNED   | PRI | NO   |         |       |         |
+| [PointID](#pointid)                   | INT   | UNSIGNED   | PRI | NO   |         |       |         |
+| [SplinePointIndex](#splinepointindex) | INT   | UNSIGNED   | PRI | NO   |         |       |         |
+| [PositionX](#positionx)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| [PositionY](#positiony)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| [PositionZ](#positionz)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
 
 **Description of the table's fields**
 

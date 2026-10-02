@@ -17,9 +17,9 @@ Appender.DB=3,5,0
 | ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [time][1]   | INT          | UNSIGNED   |     | NO   |         |       |         |
 | [realm][2]  | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [type][3]   | VARCHAR(250) | SIGNED     |     | NO   |         |       |         |
+| [type][3]   | VARCHAR(250) |            |     | NO   |         |       |         |
 | [level][4]  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [string][5] | TEXT         | SIGNED     |     | YES  |         |       |         |
+| [string][5] | TEXT         |            |     | YES  | NULL    |       |         |
 
 [1]: #time
 [2]: #realm

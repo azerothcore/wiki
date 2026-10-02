@@ -12,12 +12,12 @@ This table contains main data about all mails in the game.
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
 | [id][1]             | INT      | UNSIGNED   | PRI | NO   | 0       |       | Identifier                         |
 | [messageType][2]    | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [stationery][3]     | TINYINT  | UNSIGNED   |     | NO   | 41      |       |                                    |
+| [stationery][3]     | TINYINT  | SIGNED     |     | NO   | 41      |       |                                    |
 | [mailTemplateId][4] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [sender][5]         | INT      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
-| [receiver][6]       | INT      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
-| [subject][7]        | LONGTEXT | SIGNED     |     | YES  |         |       |                                    |
-| [body][8]           | LONGTEXT | SIGNED     |     | YES  |         |       |                                    |
+| [receiver][6]       | INT      | UNSIGNED   | MUL | NO   | 0       |       | Character Global Unique Identifier |
+| [subject][7]        | LONGTEXT |            |     | YES  | NULL    |       |                                    |
+| [body][8]           | LONGTEXT |            |     | YES  | NULL    |       |                                    |
 | [has_items][9]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [expire_time][10]   | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [deliver_time][11]  | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |

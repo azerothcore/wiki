@@ -6,26 +6,26 @@
 
 This table contains the base values for creature health, mana, armor, attack power, ranged attack power, damage, and experience.
 
-| Field                  | Type     | Attributes | Null | Default | Extra | Comment |
-| ---------------------- | -------- | ---------- | ---- | ------- | ----- | ------- |
-| [level][1]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
-| [class][2]             | TINYINT  | UNSIGNED   | NO   |         |       |         |
-| [basehp0][3]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basehp1][4]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basehp2][5]           | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basemana][6]          | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [basearmor][7]         | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [attackpower][8]       | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [rangedattackpower][9] | SMALLINT | UNSIGNED   | NO   |         |       |         |
-| [damage_base][10]      | FLOAT    |            | NO   |         |       |         |
-| [damage_exp1][11]      | FLOAT    |            | NO   |         |       |         |
-| [damage_exp2][12]      | FLOAT    |            | NO   |         |       |         |
-| [Strength][14]         | INT      |            | NO   | 0       |       |         |
-| [Agility][15]          | INT      |            | NO   | 0       |       |         |
-| [Stamina][16]          | INT      |            | NO   | 0       |       |         |
-| [Intellect][17]        | INT      |            | NO   | 0       |       |         |
-| [Spirit][18]           | INT      |            | NO   | 0       |       |         |
-| [comment][13]          | text     |            | YES  | NULL    |       |         |
+| Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [level][1]             | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [class][2]             | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [basehp0][3]           | INT     | UNSIGNED   |     | NO   | 1       |       |         |
+| [basehp1][4]           | INT     | UNSIGNED   |     | NO   | 1       |       |         |
+| [basehp2][5]           | INT     | UNSIGNED   |     | NO   | 1       |       |         |
+| [basemana][6]          | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [basearmor][7]         | INT     | UNSIGNED   |     | NO   | 1       |       |         |
+| [attackpower][8]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [rangedattackpower][9] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [damage_base][10]      | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
+| [damage_exp1][11]      | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
+| [damage_exp2][12]      | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
+| [Strength][14]         | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Agility][15]          | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Stamina][16]          | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Intellect][17]        | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Spirit][18]           | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [comment][13]          | TEXT    |            |     | YES  | NULL    |       |         |
 
 [1]: #level
 [2]: #class

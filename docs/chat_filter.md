@@ -10,10 +10,10 @@ The filter is controlled by the `ChatFilter.Whisper`, `ChatFilter.Say`, `ChatFil
 
 **Table: chat\_filter's Structure**
 
-| Field     | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-| --------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [ID](#id) | INT          | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [Word](#word) | VARCHAR(255) | SIGNED     |     | NO   |         |                |         |
+| Field         | Type         | Attributes | Key | Null | Default | Extra          | Comment |
+| ------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [ID](#id)     | INT          | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
+| [Word](#word) | VARCHAR(255) |            |     | NO   |         |                |         |
 
 **Description of the table's fields**
 

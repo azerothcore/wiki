@@ -12,8 +12,8 @@ This table holds information on all ongoing petitions for a guild or for an aren
 | ----------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ownerguid][1]    | INT         | UNSIGNED   | PRI | NO   |         |       |         |
 | [petitionguid][2] | INT         | UNSIGNED   |     | YES  | 0       |       |         |
-| [petition_id][5]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [name][3]         | VARCHAR(24) | SIGNED     |     | NO   |         |       |         |
+| [petition_id][5]  | INT         | UNSIGNED   | MUL | NO   | 0       |       |         |
+| [name][3]         | VARCHAR(24) |            |     | NO   |         |       |         |
 | [type][4]         | TINYINT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #ownerguid

@@ -8,12 +8,12 @@ This table contains the mapping of a quest in a world event to the condition tha
 
 **Table: game\_event\_quest\_condition's Structure**
 
-| Field                        | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry](#evententry)    | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [quest](#quest)              | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [condition_id](#conditionid) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [num](#num)                  | FLOAT     | SIGNED     |     | YES  | 0       |       |         |
+| Field                        | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
+| ---------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [eventEntry](#evententry)    | TINYINT | UNSIGNED   |     | NO   |         |       | Entry of the game event. |
+| [quest](#quest)              | INT     | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [condition_id](#conditionid) | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| [num](#num)                  | FLOAT   | SIGNED     |     | YES  | 0       |       |                          |
 
 **Description of the table's fields**
 

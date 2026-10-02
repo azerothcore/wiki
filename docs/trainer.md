@@ -13,8 +13,8 @@ This table contains the unique trainer template.
 | [Id](#id)                       | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Type](#type)                   | TINYINT    | UNSIGNED   |     | NO   | 2       |       |         |
 | [Requirement](#requirement)     | MEDIUMINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [Greeting](#greeting)           | MEDIUMTEXT |            |     | NO   |         |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT        |            |     | YES  | 0       |       |         |
+| [Greeting](#greeting)           | MEDIUMTEXT |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        | SIGNED     |     | YES  | 0       |       |         |
 
 **Description of the table's fields**
 

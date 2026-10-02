@@ -13,13 +13,13 @@ Its purpose is (will be) used as a globalized table containing the localized tex
 
 **Table: broadcast\_text\_locale's Structure**
 
-| Field                     | Type       | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | MEDIUMINT  | PRI | NO   | 0       |       |         |
-| [locale](#locale)         | VARCHAR(4) | PRI | NO   | NULL    |       |         |
-| [MaleText](#maletext)     | text       |     | YES  | NULL    |       |         |
-| [FemaleText](#femaletext) | text       |     | YES  | NULL    |       |         |
-| VerifiedBuild             | SMALLINT   |     | YES  | 0       |       |         |
+| Field                     | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)                 | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [locale](#locale)         | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [MaleText](#maletext)     | TEXT       |            |     | YES  | NULL    |       |         |
+| [FemaleText](#femaletext) | TEXT       |            |     | YES  | NULL    |       |         |
+| VerifiedBuild             | SMALLINT   | SIGNED     |     | YES  | 0       |       |         |
 
 **Description of the table's fields**
 

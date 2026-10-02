@@ -10,14 +10,14 @@ This table holds data about temporary summoned creatures. It is possible to grou
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [summonerId][1]   | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
+| [summonerId][1]   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [summonerType][2] | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [groupId][3]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [entry][4]        | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [position_x][5]   | FLOAT        |            |     | NO   | 0       |       |         |
-| [position_y][6]   | FLOAT        |            |     | NO   | 0       |       |         |
-| [position_z][7]   | FLOAT        |            |     | NO   | 0       |       |         |
-| [orientation][8]  | FLOAT        |            |     | NO   | 0       |       |         |
+| [entry][4]        | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [position_x][5]   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [position_y][6]   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [position_z][7]   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [orientation][8]  | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [summonType][9]   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [summonTime][10]  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [Comment][11]     | VARCHAR(255) |            |     | NO   | ''      |       |         |

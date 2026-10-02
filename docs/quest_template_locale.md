@@ -8,20 +8,20 @@ This table is used to provide to localized clients with localized string for que
 
 **Table: quest\_template\_locale's Structure**
 
-| Field                | Type       | Attribute | Key | Null | Default | Extra | Comment |
-| -------------------- | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]              | MEDIUMINT  | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [locale][2]          | VARCHAR(4) |           | PRI | NO   |         |       |         |
-| [Title][3]           | text       |           |     | YES  |         |       |         |
-| [Details][4]         | text       |           |     | YES  |         |       |         |
-| [Objectives][5]      | text       |           |     | YES  |         |       |         |
-| [EndText][6]         | text       |           |     | YES  |         |       |         |
-| [CompletedText][7]   | text       |           |     | YES  |         |       |         |
-| [ObjectiveText1][8]  | text       |           |     | YES  |         |       |         |
-| [ObjectiveText2][9]  | text       |           |     | YES  |         |       |         |
-| [ObjectiveText3][10] | text       |           |     | YES  |         |       |         |
-| [ObjectiveText4][11] | text       |           |     | YES  |         |       |         |
-| [VerifiedBuild][12]  | SMALLINT   |           |     | YES  | 0       |       |         |
+| Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]              | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [locale][2]          | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [Title][3]           | TEXT       |            |     | YES  | NULL    |       |         |
+| [Details][4]         | TEXT       |            |     | YES  | NULL    |       |         |
+| [Objectives][5]      | TEXT       |            |     | YES  | NULL    |       |         |
+| [EndText][6]         | TEXT       |            |     | YES  | NULL    |       |         |
+| [CompletedText][7]   | TEXT       |            |     | YES  | NULL    |       |         |
+| [ObjectiveText1][8]  | TEXT       |            |     | YES  | NULL    |       |         |
+| [ObjectiveText2][9]  | TEXT       |            |     | YES  | NULL    |       |         |
+| [ObjectiveText3][10] | TEXT       |            |     | YES  | NULL    |       |         |
+| [ObjectiveText4][11] | TEXT       |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild][12]  | INT        | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #id
 [2]: #locale

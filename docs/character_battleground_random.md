@@ -8,9 +8,9 @@ This table stores battlegrounds IDs for random battleground sessions.
 
 **Table: character\_battleground\_random's Structure**
 
-| Field     | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1] | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field     | Type | Attributes | Key | Null | Default | Extra | Comment |
+| --------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1] | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #guid
 

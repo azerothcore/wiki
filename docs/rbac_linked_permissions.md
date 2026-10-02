@@ -8,8 +8,8 @@ This table defines the parent-child relationships between permissions. When a pe
 
 **Table: rbac\_linked\_permissions's Structure**
 
-| Field         | Type | Attributes | Key | Null | Default | Extra | Comment              |
-| ------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------- |
+| Field                 | Type | Attributes | Key | Null | Default | Extra | Comment              |
+| --------------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------- |
 | [id](#id)             | INT  | UNSIGNED   | PRI | NO   |         |       | Permission id        |
 | [linkedId](#linkedid) | INT  | UNSIGNED   | PRI | NO   |         |       | Linked Permission id |
 

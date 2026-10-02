@@ -9,8 +9,8 @@ This table is used to provide to localized clients with localized string for cre
 **Table: creature\_text\_locale's Structure**
 
 | Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|------------|------------|-----|------|---------|-------|---------|
-| [CreatureID][1] | MEDIUMINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| --------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [CreatureID][1] | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [GroupID][2]    | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [ID][3]         | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Locale][4]     | VARCHAR(4) |            | PRI | NO   |         |       |         |

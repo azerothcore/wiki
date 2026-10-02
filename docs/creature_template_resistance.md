@@ -6,12 +6,12 @@
 
 **Table: creature\_template\_resistance's Structure**
 
-| Field              | Type      | Attribute | Key | Null | Default | Extra | Comment |
-| ------------------ | --------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]    | MEDIUMINT | UNSIGNED  | PRI | NO   |         |       |         |
-| [School][2]        | TINYINT   | UNSIGNED  | PRI | NO   |         |       |         |
-| [Resistance][3]    | SMALLINT  | SIGNED    |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | SMALLINT  | SIGNED    |     | YES  | 0       |       |         |
+| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [CreatureID][1]    | INT      | UNSIGNED   | PRI | NO   |         |       |         |
+| [School][2]        | TINYINT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [Resistance][3]    | SMALLINT | SIGNED     |     | YES  | NULL    |       |         |
+| [VerifiedBuild][4] | INT      | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #creatureid
 [2]: #school

@@ -12,11 +12,11 @@ Used to give NPC spells cooldowns for mindcontroll.
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------ |
 | [dungeonId](#dungeonid)         | INT          | UNSIGNED   | PRI | NO   | 0       |       | Unique id from LFGDungeons.dbc |
 | [name](#name)                   | VARCHAR(255) |            |     | YES  | NULL    |       |                                |
-| [position_x](#positionx)        | FLOAT        |            |     | NO   | 0       |       |                                |
-| [position_y](#positiony)        | FLOAT        |            |     | NO   | 0       |       |                                |
-| [position_z](#positionz)        | FLOAT        |            |     | NO   | 0       |       |                                |
-| [orientation](#orientation)     | FLOAT        |            |     | NO   | 0       |       |                                |
-| [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |                                |
+| [position_x](#positionx)        | FLOAT        | SIGNED     |     | NO   | 0       |       |                                |
+| [position_y](#positiony)        | FLOAT        | SIGNED     |     | NO   | 0       |       |                                |
+| [position_z](#positionz)        | FLOAT        | SIGNED     |     | NO   | 0       |       |                                |
+| [orientation](#orientation)     | FLOAT        | SIGNED     |     | NO   | 0       |       |                                |
+| [VerifiedBuild](#verifiedbuild) | INT          | SIGNED     |     | YES  | NULL    |       |                                |
 
 **Description of the table's fields**
 

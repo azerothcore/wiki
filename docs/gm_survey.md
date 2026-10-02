@@ -6,14 +6,14 @@
 
 **Table: gm\_survey's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default        | Extra | Comment |
-| --------------- | -------- | ---------- | --- | ---- | -------------- | ----- | ------- |
-| [surveyId][1]   | INT      | UNSIGNED   | PRI | NO   | AUTO_INCREMENT |       |         |
-| [guid][2]       | INT      | UNSIGNED   |     | NO   | 0              |       |         |
-| [mainSurvey][3] | INT      | UNSIGNED   |     | NO   | 0              |       |         |
-| [comment][4]    | LONGTEXT | SIGNED     |     | NO   |                |       |         |
-| [createTime][5] | INT      | UNSIGNED   |     | NO   | 0              |       |         |
-| [maxMMR][6]     | SMALLINT | SIGNED     |     | NO   |                |       |         |
+| Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
+| --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [surveyId][1]   | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
+| [guid][2]       | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| [mainSurvey][3] | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| [comment][4]    | LONGTEXT |            |     | NO   |         |                |         |
+| [createTime][5] | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| [maxMMR][6]     | SMALLINT | SIGNED     |     | NO   |         |                |         |
 
 [1]: #surveyid
 [2]: #guid

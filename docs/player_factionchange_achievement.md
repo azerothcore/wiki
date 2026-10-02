@@ -12,7 +12,7 @@ Basically all achievement changes made when player changes faction.
 | ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [alliance_id](#allianceid)           | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [alliance_comment](#alliancecomment) | TEXT |            |     | YES  | NULL    |       |         |
-| [horde_id](#hordeid)                 | INT  | SIGNED     | PRI | NO   |         |       |         |
+| [horde_id](#hordeid)                 | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [horde_comment](#hordecomment)       | TEXT |            |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**

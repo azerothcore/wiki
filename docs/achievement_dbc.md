@@ -12,10 +12,10 @@ The core reads every column in order, so a row must have a value for all of them
 
 | Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          |            | PRI | NO   | 0       |       |         |
-| [Faction](#faction)                       | INT          |            |     | NO   | 0       |       |         |
-| [Instance_Id](#instanceid)                | INT          |            |     | NO   | 0       |       |         |
-| [Supercedes](#supercedes)                 | INT          |            |     | NO   | 0       |       |         |
+| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
+| [Faction](#faction)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Instance_Id](#instanceid)                | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Supercedes](#supercedes)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [Title_Lang_enUS](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Title_Lang_enGB](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Title_Lang_koKR](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
@@ -50,11 +50,11 @@ The core reads every column in order, so a row must have a value for all of them
 | [Description_Lang_itIT](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
 | [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Category](#category)                     | INT          |            |     | NO   | 0       |       |         |
-| [Points](#points)                         | INT          |            |     | NO   | 0       |       |         |
-| [Ui_Order](#uiorder)                      | INT          |            |     | NO   | 0       |       |         |
-| [Flags](#flags)                           | INT          |            |     | NO   | 0       |       |         |
-| [IconID](#iconid)                         | INT          |            |     | NO   | 0       |       |         |
+| [Category](#category)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Points](#points)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Ui_Order](#uiorder)                      | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Flags](#flags)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [IconID](#iconid)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [Reward_Lang_enUS](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_enGB](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_koKR](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
@@ -72,8 +72,8 @@ The core reads every column in order, so a row must have a value for all of them
 | [Reward_Lang_itIT](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_Unk](#rewardlang)            | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_Mask](#rewardlang)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Minimum_Criteria](#minimumcriteria)      | INT          |            |     | NO   | 0       |       |         |
-| [Shares_Criteria](#sharescriteria)        | INT          |            |     | NO   | 0       |       |         |
+| [Minimum_Criteria](#minimumcriteria)      | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Shares_Criteria](#sharescriteria)        | INT          | SIGNED     |     | NO   | 0       |       |         |
 
 **Description of the table's fields**
 

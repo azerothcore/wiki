@@ -12,7 +12,7 @@
 | [LogGuid][2]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Log record identificator - auxiliary column |
 | [TabId][3]          | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       | Guild bank TabId                            |
 | [EventType][4]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       | Event type                                  |
-| [PlayerGuid][5]     | INT      | UNSIGNED   |     | NO   | 0       |       |                                             |
+| [PlayerGuid][5]     | INT      | UNSIGNED   | MUL | NO   | 0       |       |                                             |
 | [ItemOrMoney][6]    | INT      | UNSIGNED   |     | NO   | 0       |       |                                             |
 | [ItemStackCount][7] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                             |
 | [DestTabId][8]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       | Destination Tab Id                          |

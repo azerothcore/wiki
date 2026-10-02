@@ -8,13 +8,13 @@ This table holds info about group members.
 
 **Table: group\_member's Structure**
 
-| Field            | Type    | Attributes | Key | Null | Default | Extra  | Comment |
-| ---------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------- |
-| [guid][1]        | INT     | UNSIGNED   |     | NO   |         |        |         |
-| [memberGuid][2]  | INT     | UNSIGNED   | PRI | NO   |         | Unique |         |
-| [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
-| [subgroup][4]    | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
-| [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
+| Field            | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]        | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [memberGuid][2]  | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [subgroup][4]    | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #memberguid

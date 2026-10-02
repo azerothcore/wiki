@@ -8,11 +8,11 @@ Holds information on the seasonal quest (quests with ZoneOrSort of -22) status o
 
 **Table: character\_queststatus\_seasonal's Structure**
 
-| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [event][3] | INT     | UNSIGNED   |     | NO   | 0       |       | Event Identifier         |
+| Field      | Type | Attributes | Key | Null | Default | Extra | Comment                  |
+| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]  | INT  | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [quest][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
+| [event][3] | INT  | UNSIGNED   |     | NO   | 0       |       | Event Identifier         |
 
 [1]: #guid
 [2]: #quest

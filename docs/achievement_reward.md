@@ -10,14 +10,14 @@ This table describes the reward that you will receive when you obtain a given ac
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TitleA][2]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [TitleH][3]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemID][4]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Sender][5]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Subject][6]        | VARCHAR(255) |            |     | YES  |         |       |         |
-| [Body][7]           | text         |            |     | YES  |         |       |         |
-| [MailTemplateID][8] | MEDIUMINT    | UNSIGNED   |     | YES  | 0       |       |         |
+| [ID][1]             | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [TitleA][2]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [TitleH][3]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [ItemID][4]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [Sender][5]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [Subject][6]        | VARCHAR(255) |            |     | YES  | NULL    |       |         |
+| [Body][7]           | TEXT         |            |     | YES  | NULL    |       |         |
+| [MailTemplateID][8] | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #titlea

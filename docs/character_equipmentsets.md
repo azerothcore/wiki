@@ -8,33 +8,33 @@ This table holds info about player's equipment manager settings.
 
 **Table: character\_equipmentsets's Structure**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra  | Comment |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ------ | ------- |
-| [guid][1]        | INT          | SIGNED     |     | NO   |         | UNIQUE |         |
-| [setguid][2]     | BIGINT       | SIGNED     | PRI | NO   |         | UNIQUE |         |
-| [setindex][3]    | TINYINT      | UNSIGNED   |     | NO   |         | UNIQUE |         |
-| [name][4]        | VARCHAR(31)  | SIGNED     |     | NO   |         |        |         |
-| [iconname][5]    | VARCHAR(100) | SIGNED     |     | NO   |         |        |         |
-| [ignore_mask][6] | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item0][7]       | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item1][8]       | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item2][9]       | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item3][10]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item4][11]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item5][12]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item6][13]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item7][14]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item8][15]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item9][16]      | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item10][17]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item11][18]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item12][19]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item13][20]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item14][21]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item15][22]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item16][23]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item17][24]     | INT          | UNSIGNED   |     | NO   |         |        |         |
-| [item18][25]     | INT          | UNSIGNED   |     | NO   |         |        |         |
+| Field            | Type         | Attributes | Key | Null | Default | Extra          | Comment |
+| ---------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [guid][1]        | INT          | SIGNED     | MUL | NO   | 0       |                |         |
+| [setguid][2]     | BIGINT       | SIGNED     | PRI | NO   |         | AUTO_INCREMENT |         |
+| [setindex][3]    | TINYINT      | UNSIGNED   | MUL | NO   | 0       |                |         |
+| [name][4]        | VARCHAR(31)  |            |     | NO   |         |                |         |
+| [iconname][5]    | VARCHAR(100) |            |     | NO   |         |                |         |
+| [ignore_mask][6] | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item0][7]       | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item1][8]       | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item2][9]       | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item3][10]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item4][11]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item5][12]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item6][13]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item7][14]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item8][15]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item9][16]      | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item10][17]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item11][18]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item12][19]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item13][20]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item14][21]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item15][22]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item16][23]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item17][24]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
+| [item18][25]     | INT          | UNSIGNED   |     | NO   | 0       |                |         |
 
 [1]: #guid
 [2]: #setguid

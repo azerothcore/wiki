@@ -8,16 +8,16 @@ Holds reputation multipliers for specific factions.
 
 **Table: reputation\_reward\_rate's Structure**
 
-| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [faction][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [quest_rate][2]    | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
-| [quest_daily_rate][5] | FLOAT  | SIGNED     |     | NO   | 1       |       |         |
-| [quest_weekly_rate][6] | FLOAT | SIGNED     |     | NO   | 1       |       |         |
-| [quest_monthly_rate][7] | FLOAT | SIGNED    |     | NO   | 1       |       |         |
-| [quest_repeatable_rate][8] | FLOAT | SIGNED |     | NO   | 1       |       |         |
-| [creature_rate][3] | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
-| [spell_rate][4]    | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
+| Field                      | Type  | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [faction][1]               | INT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [quest_rate][2]            | FLOAT | SIGNED     |     | NO   | 1       |       |         |
+| [quest_daily_rate][5]      | FLOAT | SIGNED     |     | NO   | 1       |       |         |
+| [quest_weekly_rate][6]     | FLOAT | SIGNED     |     | NO   | 1       |       |         |
+| [quest_monthly_rate][7]    | FLOAT | SIGNED     |     | NO   | 1       |       |         |
+| [quest_repeatable_rate][8] | FLOAT | SIGNED     |     | NO   | 1       |       |         |
+| [creature_rate][3]         | FLOAT | SIGNED     |     | NO   | 1       |       |         |
+| [spell_rate][4]            | FLOAT | SIGNED     |     | NO   | 1       |       |         |
 
 [1]: #faction
 [2]: #questrate

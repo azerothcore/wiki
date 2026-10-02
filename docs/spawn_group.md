@@ -10,9 +10,9 @@ This table maps individual creature and gameobject spawns to their spawn groups.
 
 | Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [groupId](#groupid)     | INT     | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [spawnType](#spawntype) | TINYINT | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [spawnId](#spawnid)     | INT     | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [groupId](#groupid)     | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [spawnType](#spawntype) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [spawnId](#spawnid)     | INT     | UNSIGNED   | PRI | NO   |         |       |         |
 
 **Description of the table's fields**
 

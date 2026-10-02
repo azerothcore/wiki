@@ -15,11 +15,11 @@ If any check fails, the text is silently skipped. If all checks pass, the text f
 
 **Table: creature\_text\_options's Structure**
 
-| Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
-|------------------------|---------|------------|-----|------|---------|-------|---------|
-| [CreatureID][1]        | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [GroupID][2]           | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionSetID][3]       | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| Field            | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [CreatureID][1]  | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [GroupID][2]     | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [OptionSetID][3] | TINYINT | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #creatureid
 [2]: #groupid

@@ -8,11 +8,11 @@ This table holds information on individual pet spells.
 
 **Table: pet\_spell's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]   | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [spell][2]  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier         |
-| [active][3] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                          |
+| Field       | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
+| ----------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]   | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [spell][2]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier         |
+| [active][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #spell

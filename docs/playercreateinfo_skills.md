@@ -10,11 +10,11 @@ This table holds information on what skills newly created characters should star
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [racemask][1]  | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [classmask][2] | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [raceMask][1]  | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [classMask][2] | INT          | UNSIGNED   | PRI | NO   |         |       |         |
 | [skill][3]     | SMALLINT     | UNSIGNED   | PRI | NO   |         |       |         |
 | [rank][4]      | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Comment][5]   | VARCHAR(255) |            |     | YES  |         |       |         |
+| [comment][5]   | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 [1]: #racemask
 [2]: #classmask

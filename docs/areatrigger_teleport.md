@@ -8,15 +8,15 @@ Contains all the teleport triggers definition. This table is used to complete .d
 
 **Table: areatrigger\_teleport's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Name][2]               | text      |            | MUL | YES  |         |       |         |
-| [target_map][3]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [target_position_x][4]  | FLOAT     |            |     | NO   | 0       |       |         |
-| [target_position_y][5]  | FLOAT     |            |     | NO   | 0       |       |         |
-| [target_position_z][6]  | FLOAT     |            |     | NO   | 0       |       |         |
-| [target_orientation][7] | FLOAT     |            |     | NO   | 0       |       |         |
+| Field                   | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Name][2]               | TEXT     |            | MUL | YES  | NULL    |       |         |
+| [target_map][3]         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [target_position_x][4]  | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [target_position_y][5]  | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [target_position_z][6]  | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [target_orientation][7] | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #name

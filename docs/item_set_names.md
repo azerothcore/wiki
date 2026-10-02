@@ -10,10 +10,10 @@ Names of the items that are part of an item set. The server sends them to the cl
 
 | Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                 | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [name](#name)                   | VARCHAR(255) | SIGNED     |     | NO   |         |       |         |
+| [entry](#entry)                 | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [name](#name)                   | VARCHAR(255) |            |     | NO   | ''      |       |         |
 | [InventoryType](#inventorytype) | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT          | SIGNED     |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

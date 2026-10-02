@@ -9,12 +9,12 @@
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]            | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [owner][2]         | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [genitive][3]      | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [dative][4]        | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [accusative][5]    | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [instrumental][6]  | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [prepositional][7] | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+| [owner][2]         | INT         | UNSIGNED   | MUL | NO   | 0       |       |         |
+| [genitive][3]      | VARCHAR(12) |            |     | NO   | ''      |       |         |
+| [dative][4]        | VARCHAR(12) |            |     | NO   | ''      |       |         |
+| [accusative][5]    | VARCHAR(12) |            |     | NO   | ''      |       |         |
+| [instrumental][6]  | VARCHAR(12) |            |     | NO   | ''      |       |         |
+| [prepositional][7] | VARCHAR(12) |            |     | NO   | ''      |       |         |
 
 [1]: #id
 [2]: #owner

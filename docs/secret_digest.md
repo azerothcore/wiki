@@ -9,7 +9,7 @@
 | Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]     | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [digest][2] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+| [digest][2] | VARCHAR(100) |            |     | NO   |         |       |         |
 
 [1]: #id
 [2]: #digest

@@ -10,9 +10,9 @@ Each unique pool is defined in this table.
 
 | Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
 | ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
-| [entry][1]       | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       | Pool entry                            |
+| [entry][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Pool entry                            |
 | [max_limit][2]   | INT          | UNSIGNED   |     | NO   | 0       |       | Max number of objects (0) is no limit |
-| [description][3] | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |                                       |
+| [description][3] | VARCHAR(255) |            |     | YES  | NULL    |       |                                       |
 
 [1]: #entry
 [2]: #maxlimit

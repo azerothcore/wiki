@@ -8,13 +8,13 @@ This table is used to provide localized clients with localized strings for creat
 
 **Table: creature\_template\_locale's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry) | INT | UNSIGNED | PRI | NO | 0 |  |  |
-| [locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
-| [Name](#name) | TEXT |  |  | YES |  |  |  |
-| [Title](#title) | TEXT |  |  | YES |  |  |  |
-| [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
+| Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry](#entry)                 | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [Name](#name)                   | TEXT       |            |     | YES  | NULL    |       |         |
+| [Title](#title)                 | TEXT       |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        | SIGNED     |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

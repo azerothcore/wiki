@@ -6,14 +6,14 @@
 
 **Table: bugreport's Structure**
 
-| Field                  | Type     | Attributes | Key | Null | Default | Extra          | Comment    |
-| ---------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ---------- |
-| [id](#id)              | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Identifier |
-| [type](#type)          | LONGTEXT | SIGNED     |     | NO   |         |                |            |
-| [content](#content)     | LONGTEXT | SIGNED     |     | NO   |         |                |            | 
-| [State](#state)        | TINYINT  | SIGNED     |     | NO   | 1       |                |            | 
-| [Assignee](#assignee)  | VARCHAR(255) |        |     | YES  | NULL    |                |            | 
-| [Comment](#comment)    | LONGTEXT |            |     | YES  | NULL    |                |            | 
+| Field                 | Type         | Attributes | Key | Null | Default | Extra          | Comment    |
+| --------------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ---------- |
+| [id](#id)             | INT          | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Identifier |
+| [type](#type)         | LONGTEXT     |            |     | NO   |         |                |            |
+| [content](#content)   | LONGTEXT     |            |     | NO   |         |                |            |
+| [State](#state)       | TINYINT      | SIGNED     |     | NO   | 1       |                |            |
+| [Assignee](#assignee) | VARCHAR(255) |            |     | YES  | NULL    |                |            |
+| [Comment](#comment)   | LONGTEXT     |            |     | YES  | NULL    |                |            |
 
 **Description of the table's fields**
 

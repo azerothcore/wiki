@@ -10,13 +10,13 @@ This table holds the individual object data on each spawned game object in the w
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra          | Comment                  |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------------------------ |
-| [guid][1]           | INT      | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
+| [guid][1]           | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Global Unique Identifier |
 | [id][2]             | INT      | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
 | [map][3]            | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
 | [zoneId][4]         | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
 | [areaId][5]         | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
 | [spawnMask][6]      | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                          |
-| [phaseMask][7]      | SMALLINT | UNSIGNED   |     | NO   | 1       |                |                          |
+| [phaseMask][7]      | INT      | UNSIGNED   |     | NO   | 1       |                |                          |
 | [position_x][8]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
 | [position_y][9]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
 | [position_z][10]    | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
@@ -27,8 +27,8 @@ This table holds the individual object data on each spawned game object in the w
 | [rotation3][15]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
 | [spawntimesecs][16] | INT      | SIGNED     |     | NO   | 0       |                |                          |
 | [animprogress][17]  | TINYINT  | UNSIGNED   |     | NO   | 0       |                |                          |
-| [state][18]         | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                          |
-| [ScriptName][19]    | CHAR     |            |     | YES  | ''      |                |                          |
+| [state][18]         | TINYINT  | UNSIGNED   |     | NO   | 0       |                |                          |
+| [ScriptName][19]    | CHAR(64) |            |     | YES  | ''      |                |                          |
 | [VerifiedBuild][20] | INT      | SIGNED     |     | YES  | NULL    |                | Not used by the core.    |
 | [Comment][21]       | TEXT     |            |     | YES  | NULL    |                |                          |
 

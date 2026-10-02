@@ -11,7 +11,7 @@
 | [GameObjectEntry](#gameobjectentry) | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Idx](#idx)                         | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [ItemId](#itemid)                   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild)     | INT  | UNSIGNED   |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)     | INT  | SIGNED     |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

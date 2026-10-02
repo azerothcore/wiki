@@ -8,10 +8,10 @@ This table contains events that must have been completed to start the given even
 
 **Table: game\_event\_prerequisite's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1]         | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [prerequisite_event][2] | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment                 |
+| ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [eventEntry][1]         | TINYINT | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
+| [prerequisite_event][2] | INT     | UNSIGNED   | PRI | NO   |         |       |                         |
 
 [1]: #evententry
 [2]: #prerequisiteevent

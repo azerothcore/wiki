@@ -12,8 +12,8 @@ This table hold the locale of the trainer template.
 | ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [Id](#id)                       | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [locale](#locale)               | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Greeting_lang](#greetinglang)  | MEDIUMTEXT | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT        |            |     | YES  | 0       |       |         |
+| [Greeting_lang](#greetinglang)  | MEDIUMTEXT |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        | SIGNED     |     | YES  | 0       |       |         |
 
 **Description of the table's fields**
 

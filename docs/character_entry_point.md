@@ -13,7 +13,7 @@
 | [joinY][3]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
 | [joinZ][4]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
 | [joinO][5]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinMapId][6]  | INT   | UNSIGNED   |     | YES  | 0       |       | Map Identifier           |
+| [joinMapId][6]  | INT   | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
 | [taxiPath0][7]  | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
 | [taxiPath1][9]  | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
 | [mountSpell][8] | INT   | UNSIGNED   |     | NO   | 0       |       |                          |

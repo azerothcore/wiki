@@ -14,8 +14,8 @@ Holds the accounts that can log in to the server.
 | [username](#username)             | VARCHAR(32)    |            | UNI | NO   | ''                |                |               |
 | [salt](#salt)                     | BINARY(32)     |            |     | NO   |                   |                |               |
 | [verifier](#verifier)             | BINARY(32)     |            |     | NO   |                   |                |               |
-| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  |                   |                |               |
-| [totp_secret](#totpsecret)        | VARBINARY(100) |            |     | YES  |                   |                |               |
+| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  | NULL              |                |               |
+| [totp_secret](#totpsecret)        | VARBINARY(128) |            |     | YES  | NULL              |                |               |
 | [email](#email)                   | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [reg_mail](#regmail)              | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [joindate](#joindate)             | TIMESTAMP      |            |     | NO   | CURRENT_TIMESTAMP |                |               |
@@ -24,11 +24,11 @@ Holds the accounts that can log in to the server.
 | [failed_logins](#failedlogins)    | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 | [locked](#locked)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
 | [lock_country](#lockcountry)      | VARCHAR(2)     |            |     | NO   | 00                |                |               |
-| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  |                   |                |               |
+| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  | NULL              |                |               |
 | [online](#online)                 | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 | [expansion](#expansion)           | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |               |
 | [Flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
-| [mutetime](#mutetime)             | BIGINT         |            |     | NO   | 0                 |                |               |
+| [mutetime](#mutetime)             | BIGINT         | SIGNED     |     | NO   | 0                 |                |               |
 | [mutereason](#mutereason)         | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [muteby](#muteby)                 | VARCHAR(50)    |            |     | NO   | ''                |                |               |
 | [locale](#locale)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |

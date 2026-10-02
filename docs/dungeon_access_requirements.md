@@ -6,16 +6,16 @@
 
 **Table: dungeon\_access\_requirements's Structure**
 
-| Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [dungeon_access_id][1] | TINYINT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [requirement_type][2]  | TINYINT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [requirement_id][3]    | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [requirement_note][4]  | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-| [faction][5]           | TINYINT      | UNSIGNED   |     | NO   | 2       |       |         |
-| [priority][6]          | TINYINT      | UNSIGNED   |     | YES  | NULL    |       |         |
-| [leader_only][7]       | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
-| [comment][8]           | VARCHAR(255) |            |     | YES  | NULL    |       |         |
+| Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                                                  |
+| ---------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | -------------------------------------------------------------------------------------------------------- |
+| [dungeon_access_id][1] | TINYINT      | UNSIGNED   | PRI | NO   |         |       | ID from dungeon_access_template                                                                          |
+| [requirement_type][2]  | TINYINT      | UNSIGNED   | PRI | NO   |         |       | 0 = achiev, 1 = quest, 2 = item                                                                          |
+| [requirement_id][3]    | INT          | UNSIGNED   | PRI | NO   |         |       | Achiev/quest/item ID                                                                                     |
+| [requirement_note][4]  | VARCHAR(255) |            |     | YES  | NULL    |       | Optional msg shown ingame to player if he cannot enter. You can add extra info                           |
+| [faction][5]           | TINYINT      | UNSIGNED   |     | NO   | 2       |       | 0 = Alliance, 1 = Horde, 2 = Both factions                                                               |
+| [priority][6]          | TINYINT      | UNSIGNED   |     | YES  | NULL    |       | Priority order for the requirement, sorted by type. 0 is the highest priority                            |
+| [leader_only][7]       | TINYINT      | SIGNED     |     | NO   | 0       |       | 0 = check the requirement for the player trying to enter, 1 = check the requirement for the party leader |
+| [comment][8]           | VARCHAR(255) |            |     | YES  | NULL    |       |                                                                                                          |
 
 [1]: #dungeonaccessid
 [2]: #requirementtype

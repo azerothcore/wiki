@@ -8,10 +8,10 @@ This table is used for displaying gossip when a player talks to an NPC with [np
 
 **Table: gossip\_menu's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [MenuID][1] | SMALLINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TextID][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field       | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ----------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [MenuID][1] | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [TextID][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #menuid
 [2]: #textid

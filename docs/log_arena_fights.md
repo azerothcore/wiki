@@ -9,7 +9,7 @@
 | Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [fight_id][1]         | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [time][2]             | DATETIME | SIGNED     |     | NO   |         |       |         |
+| [time][2]             | DATETIME |            |     | NO   |         |       |         |
 | [type][3]             | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
 | [duration][4]         | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [winner][5]           | INT      | UNSIGNED   |     | NO   |         |       |         |
@@ -19,8 +19,8 @@
 | [winner_tr_change][9] | SMALLINT | SIGNED     |     | NO   |         |       |         |
 | [loser_tr][10]        | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
 | [loser_mmr][11]       | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [loser_tr_change][12] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [currOnline][13]      | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [loser_tr_change][12] | SMALLINT | SIGNED     |     | NO   |         |       |         |
+| [currOnline][13]      | INT      | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #fightid
 [2]: #time

@@ -10,13 +10,13 @@ Lists the SQL update files the database updater has applied to this database. Th
 
 **Table: updates's Structure**
 
-| Field          | Type         | Attributes               | Key | Null | Default           | Extra | Comment                                               |
-| -------------- | ------------ | ------------------------ | --- | ---- | ----------------- | ----- | ----------------------------------------------------- |
-| [name][1]      | VARCHAR(200) |                          | PRI | NO   |                   |       | Filename with extension of the update.                |
-| [hash][2]      | CHAR(40)     |                          |     | YES  | ''                |       | SHA1 hash of the sql file.                            |
-| [state][3]     | ENUM         | RELEASED,CUSTOM,ARCHIVED |     | NO   | RELEASED          |       | Defines if an update is released, custom or archived. |
-| [timestamp][4] | TIMESTAMP    |                          |     | NO   | CURRENT_TIMESTAMP |       | Timestamp when the query was applied.                 |
-| [speed][5]     | INT          | UNSIGNED                 |     | NO   | 0                 |       | Time the query takes to apply in ms.                  |
+| Field          | Type         | Attributes                              | Key | Null | Default           | Extra | Comment                                       |
+| -------------- | ------------ | --------------------------------------- | --- | ---- | ----------------- | ----- | --------------------------------------------- |
+| [name][1]      | VARCHAR(200) |                                         | PRI | NO   |                   |       | filename with extension of the update.        |
+| [hash][2]      | CHAR(40)     |                                         |     | YES  | ''                |       | sha1 hash of the sql file.                    |
+| [state][3]     | ENUM         | RELEASED,CUSTOM,MODULE,ARCHIVED,PENDING |     | NO   | RELEASED          |       | defines if an update is released or archived. |
+| [timestamp][4] | TIMESTAMP    |                                         |     | NO   | CURRENT_TIMESTAMP |       | timestamp when the query was applied.         |
+| [speed][5]     | INT          | UNSIGNED                                |     | NO   | 0                 |       | time the query takes to apply in ms.          |
 
 [1]: #name
 [2]: #hash

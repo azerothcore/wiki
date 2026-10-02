@@ -13,9 +13,9 @@ This table describes which model is assigned to a specific creature.
 | [CreatureID][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
 | [Idx][2]               | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [CreatureDisplayID][3] | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [DisplayScale][4]      | FLOAT    |            |     | NO   | 1       |       |         |
-| [Probability][5]       | FLOAT    |            |     | NO   | 0       |       |         |
-| [VerifiedBuild][6]     | SMALLINT |            |     | YES  |         |       |         |
+| [DisplayScale][4]      | FLOAT    | SIGNED     |     | NO   | 1       |       |         |
+| [Probability][5]       | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [VerifiedBuild][6]     | INT      | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #creatureid
 [2]: #idx

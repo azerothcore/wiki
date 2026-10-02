@@ -6,10 +6,10 @@
 
 **Table: character\_brew\_of\_the\_month's Structure**
 
-| Field            | Type | Attributes | Key | Null | Default | Extra | Comment  |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------- |
-| [guid][1]        | INT  | UNSIGNED   | PRI | NO   |         |       |          |
-| [lastEventId][2] | INT  | UNSIGNED   |     | NO   | 0       |       |          |
+| Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]        | INT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [lastEventId][2] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #lasteventid

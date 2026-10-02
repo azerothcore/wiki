@@ -6,11 +6,11 @@
 
 **Table: channels\_bans's Structure**
 
-| Field           | Type  | Attributes | Key | Null | Default | Extra  | Comment |
-| --------------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
-| [channelId][1]  | INT   | UNSIGNED   | PRI | NO   |         |        |         |
-| [playerGUID][2] | INT   | UNSIGNED   | PRI | NO   |         |        |         |
-| [banTime][3]    | INT   | UNSIGNED   |     | NO   |         |        |         |
+| Field           | Type | Attributes | Key | Null | Default | Extra | Comment |
+| --------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [channelId][1]  | INT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [playerGUID][2] | INT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [banTime][3]    | INT  | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #channelid
 [2]: #playerguid

@@ -8,13 +8,13 @@ This table holds information on the members of all guilds, their ranks in the gu
 
 **Table: guild\_member's Structure**
 
-| Field        | Type        | Attributes | Key    | Null | Default | Extra | Comment             |
-| ------------ | ----------- | ---------- | ------ | ---- | ------- | ----- | ------------------- |
-| [guildid][1] | INT         | UNSIGNED   |        | NO   |         |       | Guild Identificator |
-| [guid][2]    | INT         | UNSIGNED   | Unique | NO   |         |       |                     |
-| [rank][3]    | TINYINT     | UNSIGNED   |        | NO   |         |       |                     |
-| [pnote][4]   | VARCHAR(31) | SIGNED     |        | NO   |         |       |                     |
-| [offnote][5] | VARCHAR(31) | SIGNED     |        | NO   |         |       |                     |
+| Field        | Type        | Attributes | Key | Null | Default | Extra | Comment             |
+| ------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------- |
+| [guildid][1] | INT         | UNSIGNED   | MUL | NO   |         |       | Guild Identificator |
+| [guid][2]    | INT         | UNSIGNED   | UNI | NO   |         |       |                     |
+| [rank][3]    | TINYINT     | UNSIGNED   |     | NO   |         |       |                     |
+| [pnote][4]   | VARCHAR(31) |            |     | NO   | ''      |       |                     |
+| [offnote][5] | VARCHAR(31) |            |     | NO   | ''      |       |                     |
 
 [1]: #guildid
 [2]: #guid

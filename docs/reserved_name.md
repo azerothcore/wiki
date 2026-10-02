@@ -10,7 +10,7 @@ Names that players can not give to their characters.
 
 | Field     | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | --------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name][1] | VARCHAR(12) | SIGNED     | PRI | NO   | ''      |       |         |
+| [name][1] | VARCHAR(12) |            | PRI | NO   |         |       |         |
  
 [1]: #name
 

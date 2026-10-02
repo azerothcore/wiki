@@ -6,12 +6,12 @@
 
 **Table: character\_achievement\_progress's Structure**
 
-| Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]     | INT         | UNSIGNED   | PRI | NO   |         |       |         |
-| [criteria][2] | SMALLINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [counter][3]  | INT         | UNSIGNED   |     | NO   |         |       |         |
-| [date][4]     | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]     | INT      | UNSIGNED   | PRI | NO   |         |       |         |
+| [criteria][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [counter][3]  | INT      | UNSIGNED   |     | NO   |         |       |         |
+| [date][4]     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #criteria

@@ -8,9 +8,9 @@
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [TypeId][1]     | TINYINT  | unasigned  | PRI | NO   |         |       |         |
-| [ScriptName][2] | char(64) | SIGNED     |     | NO   | 0       |       |         |
-| [comment][3]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+| [TypeId][1]     | TINYINT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [ScriptName][2] | CHAR(64) |            |     | NO   | ''      |       |         |
+| [comment][3]    | TEXT     |            |     | YES  | NULL    |       |         |
 
 [1]: #typeid
 [2]: #scriptname

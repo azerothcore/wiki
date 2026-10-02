@@ -8,12 +8,12 @@ This table contains all type 15 transports (Boats and Zeppelins). All other tran
 
 **Table: transports's Structure**
 
-| Field           | Type      | Attributes | Key    | Null | Default        | Extra | Comment |
-| --------------- | --------- | ---------- | ------ | ---- | -------------- | ----- | ------- |
-| [Guid][1]       | INT       | UNSIGNED   | PRI    | NO   | AUTO_INCREMENT |       |         |
-| [Entry][2]      | MEDIUMINT | UNSIGNED   | UNIQUE | NO   | 0              |       |         |
-| [Name][3]       | TEXT      |            |        | YES  | NULL           |       |         |
-| [ScriptName][4] | CHAR(64)  |            |        | NO   | ' '            |       |         |
+| Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
+| --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
+| [guid][1]       | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
+| [entry][2]      | INT      | UNSIGNED   | UNI | NO   | 0       |                |         |
+| [name][3]       | TEXT     |            |     | YES  | NULL    |                |         |
+| [ScriptName][4] | CHAR(64) |            |     | NO   | ''      |                |         |
 
 [1]: #guid
 [2]: #entry

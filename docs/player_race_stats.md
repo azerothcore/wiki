@@ -11,11 +11,11 @@ This table holds information on modifiers for stat values applied to characters.
 | Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [Race][1]      | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [Strength][2]  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Agility][3]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Stamina][4]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Intellect][5] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Spirit][6]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [Strength][2]  | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Agility][3]   | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Stamina][4]   | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Intellect][5] | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [Spirit][6]    | INT     | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #race
 [2]: #strength

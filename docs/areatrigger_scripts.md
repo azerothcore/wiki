@@ -8,10 +8,10 @@ Allows for an area trigger to be scripted with Trinity Script.
 
 **Table: areatrigger\_scripts's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]      | MEDIUMINT |            | PRI | NO   |         |       |         |
-| [ScriptName][2] | char(64)  |            |     | NO   |         |       |         |
+| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]      | INT      | SIGNED     | PRI | NO   |         |       |         |
+| [ScriptName][2] | CHAR(64) |            |     | NO   |         |       |         |
 
 [1]: #entry
 [2]: #scriptname

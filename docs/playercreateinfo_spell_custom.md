@@ -14,8 +14,8 @@ Please note you'll have to set PlayerStart.CustomSpells to 1 in config, if not, 
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [racemask][1]  | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [classmask][2] | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Spell][3]     | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Note][4]      | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
+| [Spell][3]     | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Note][4]      | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 [1]: #racemask
 [2]: #classmask

@@ -8,41 +8,41 @@ Contains template of all gameobjects
 
 | Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| entry          | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
+| entry          | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
 | type           | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| displayId      | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| name           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| IconName       | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| castBarCaption | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| unk1           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
+| displayId      | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| name           | VARCHAR(100) |            | MUL | NO   | ''      |       |         |
+| IconName       | VARCHAR(100) |            |     | NO   | ''      |       |         |
+| castBarCaption | VARCHAR(100) |            |     | NO   | ''      |       |         |
+| unk1           | VARCHAR(100) |            |     | NO   | ''      |       |         |
 | size           | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
-| data0          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data1          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
-| data2          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data3          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data4          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data5          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data6          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
-| data7          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data8          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data9          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data10         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data11         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data12         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data13         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data14         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data15         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data16         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data17         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data18         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data19         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data20         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data21         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data22         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
-| ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
-| VerifiedBuild    | INT          |            |     | YES  | NULL    |       |         |
+| Data0          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data1          | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Data2          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data3          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data4          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data5          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data6          | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Data7          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data8          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data9          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data10         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data11         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data12         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data13         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data14         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data15         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data16         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data17         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data18         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data19         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data20         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data21         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data22         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| AIName         | CHAR(64)     |            |     | NO   | ''      |       |         |
+| ScriptName     | VARCHAR(64)  |            |     | NO   | ''      |       |         |
+| VerifiedBuild  | INT          | SIGNED     |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

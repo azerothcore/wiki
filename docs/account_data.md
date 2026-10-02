@@ -13,7 +13,7 @@ Contains data about client account and settings.
 | [accountId][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Account Identifier |
 | [type][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                    |
 | [time][3]      | INT     | UNSIGNED   |     | NO   | 0       |       |                    |
-| [data][4]      | BLOB    | SIGNED     |     | NO   |         |       |                    |
+| [data][4]      | BLOB    |            |     | NO   |         |       |                    |
 
 [1]: #accountid
 [2]: #type

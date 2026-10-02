@@ -6,15 +6,15 @@
 
 **Table: dungeon\_access\_template's Structure**
 
-| Field                   | Type         | Attributes | Key | Null | Default        | Extra                                         | Comment |
-| ----------------------- | ------------ | ---------- | --- | ---- | -------------- | --------------------------------------------- | ------- |
-| [id][1]                 | TINYINT      | UNSIGNED   | PRI | NO   | AUTO_INCREMENT |                                               |         |
-| [map_id][2]             | MEDIUMINT    | UNSIGNED   | KEY | NO   |                | FK_dungeon_access_template__instance_template |         |
-| [difficulty][3]         | TINYINT      | UNSIGNED   |     | NO   | 0              |                                               |         |
-| [min_level][4]          | TINYINT      | UNSIGNED   |     | YES  | NULL           |                                               |         |
-| [max_level][5]          | TINYINT      | UNSIGNED   |     | YES  | NULL           |                                               |         |
-| [min_avg_item_level][6] | SMALLINT     | UNSIGNED   |     | YES  | NULL           |                                               |         |
-| [comment][7]            | VARCHAR(255) |            |     | YES  | NULL           |                                               |         |
+| Field                   | Type         | Attributes | Key | Null | Default | Extra          | Comment                                                                                                                       |
+| ----------------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| [id][1]                 | TINYINT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | The dungeon template ID                                                                                                       |
+| [map_id][2]             | INT          | UNSIGNED   | MUL | YES  | NULL    |                | Map ID from instance_template                                                                                                 |
+| [difficulty][3]         | TINYINT      | UNSIGNED   |     | NO   | 0       |                | 5 man: 0 = normal, 1 = heroic, 2 = epic (not implemented) \| 10 man: 0 = normal, 2 = heroic \| 25 man: 1 = normal, 3 = heroic |
+| [min_level][4]          | TINYINT      | UNSIGNED   |     | YES  | NULL    |                |                                                                                                                               |
+| [max_level][5]          | TINYINT      | UNSIGNED   |     | YES  | NULL    |                |                                                                                                                               |
+| [min_avg_item_level][6] | SMALLINT     | UNSIGNED   |     | YES  | NULL    |                | Min average ilvl required to enter                                                                                            |
+| [comment][7]            | VARCHAR(255) |            |     | YES  | NULL    |                | Dungeon Name 5/10/25/40 man - Normal/Heroic                                                                                   |
 
 [1]: #id
 [2]: #mapid

@@ -12,13 +12,13 @@ Comes from sniffs.
 | ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [QuestID][1]        | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [id][2]             | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ObjectiveIndex][3] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [ObjectiveIndex][3] | INT  | SIGNED     |     | NO   | 0       |       |         |
 | [MapID][4]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [WorldMapAreaId][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [Floor][6]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [Priority][7]       | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 | [Flags][8]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild][9]  | INT  |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild][9]  | INT  | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #questid
 [2]: #id

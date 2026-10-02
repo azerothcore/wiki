@@ -4,12 +4,12 @@
 
 **Table: quest\_request\_items\_locale's Structure**
 
-| Field               | Type       | Attribute | Key | Null | Default | Extra | Comment |
-| ------------------- | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | INT        | UNSIGNED  | PRI | NO   |         |       |         |
-| [locale][2]         | VARCHAR(4) |           | PRI | NO   |         |       |         |
-| [CompletionText][3] | text       |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4]  | SMALLINT   |           |     | NO   |         |       |         |
+| Field               | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]             | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [locale][2]         | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [CompletionText][3] | TEXT       |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild][4]  | INT        | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #id
 [2]: #locale

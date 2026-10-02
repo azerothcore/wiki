@@ -8,12 +8,12 @@ This table holds information on pet spell cooldowns.
 
 **Table: pet\_spell\_cooldown's Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
-| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [guid][1]  | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
-| [spell][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier                   |
-| [category][4] | INT    | UNSIGNED   |     | YES  | 0       |       | Spell category                     |
-| [time][3]  | INT       | UNSIGNED   |     | NO   | 0       |       |                                    |
+| Field         | Type | Attributes | Key | Null | Default | Extra | Comment                            |
+| ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
+| [guid][1]     | INT  | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
+| [spell][2]    | INT  | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier                   |
+| [category][4] | INT  | UNSIGNED   |     | YES  | 0       |       | Spell category                     |
+| [time][3]     | INT  | UNSIGNED   |     | NO   | 0       |       |                                    |
 
 [1]: #guid
 [2]: #spell

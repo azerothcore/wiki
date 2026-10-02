@@ -8,10 +8,10 @@ This information comes from sniffs and is NOT supposed to be changed.
 
 **Table: game\_event\_arena\_seasons's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra  | Comment                  |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
-| [eventEntry][1] | TINYINT | UNSIGNED   |     | NO   |         | Unique | Entry of the game event. |
-| [season][2]     | TINYINT | UNSIGNED   |     | NO   |         | Unique | Arena season number      |
+| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [eventEntry][1] | TINYINT | UNSIGNED   |     | NO   |         |       | Entry of the game event |
+| [season][2]     | TINYINT | UNSIGNED   | MUL | NO   |         |       | Arena season number     |
 
 [1]: #evententry
 [2]: #season

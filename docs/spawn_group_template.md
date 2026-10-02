@@ -10,8 +10,8 @@ This table defines spawn group templates with their names and behavior flags. Sp
 
 | Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [groupId](#groupid)       | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [groupName](#groupname)   | VARCHAR(100) |            |     | NO   | NULL    |       |         |
+| [groupId](#groupid)       | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [groupName](#groupname)   | VARCHAR(100) |            |     | NO   |         |       |         |
 | [groupFlags](#groupflags) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 
 **Description of the table's fields**

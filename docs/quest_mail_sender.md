@@ -6,10 +6,10 @@
 
 **Table: quest\_mail\_sender's Structure**
 
-| Field                      | Type | Attribute | Key | Null | Default | Extra | Comment |
-| -------------------------- | ---- | --------- | --- | ---- | ------- | ----- | ------- |
-| [QuestId][1]               | INT  | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [RewardMailSenderEntry][2] | INT  | UNSIGNED  |     | NO   | 0       |       |         |
+| Field                      | Type | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [QuestId][1]               | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [RewardMailSenderEntry][2] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #questid
 [2]: #rewardmailsenderentry

@@ -10,7 +10,7 @@ This table stores the lag reports made by players ingame (when they click on "He
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
 | --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [reportId][1]   | INT      | UNSIGNED   | PRI | NO   |         | Auto Increment |         |
+| [reportId][1]   | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
 | [guid][2]       | INT      | UNSIGNED   |     | NO   | 0       |                |         |
 | [lagType][3]    | TINYINT  | UNSIGNED   |     | NO   | 0       |                |         |
 | [mapId][4]      | SMALLINT | UNSIGNED   |     | NO   | 0       |                |         |

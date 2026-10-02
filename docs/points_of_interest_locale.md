@@ -11,9 +11,9 @@ Translations of the names in [points\_of\_interest](points_of_interest).
 | Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [ID](#id)                       | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale](#locale)               | VARCHAR(4) |            |     |      |         |       |         |
+| [locale](#locale)               | VARCHAR(4) |            | PRI | NO   |         |       |         |
 | [Name](#name)                   | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT        |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        | SIGNED     |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

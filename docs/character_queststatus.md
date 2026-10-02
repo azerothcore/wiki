@@ -9,7 +9,7 @@ Holds information on the quest status of each character.
 **Table: character\_queststatus's Structure**
 
 | Field             | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------------- | -------- | ---------- | --- | ---- | ------- |------ | ------------------------ |
+| ----------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
 | [guid][1]         | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
 | [quest][2]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
 | [status][3]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                          |

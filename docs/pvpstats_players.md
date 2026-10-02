@@ -8,22 +8,22 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 
 **Table: pvpstats\_players's Structure**
 
-| Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [battleground_id][1]       | BIGINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [character_guid][2]        | INT       | UNSIGNED   | PRI | NO   |         |       |         |
-| [winner][3]                | BIT       | SIGNED     |     | NO   |         |       |         |
-| [score_killing_blows][4]   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [score_deaths][5]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [score_honorable_kills][6] | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [score_bonus_honor][7]     | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [score_damage_done][8]     | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [score_healing_done][9]    | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [attr_1][10]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [attr_2][11]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [attr_3][12]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [attr_4][13]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [attr_5][14]               | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                      | Type   | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [battleground_id][1]       | BIGINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [character_guid][2]        | INT    | UNSIGNED   | PRI | NO   |         |       |         |
+| [winner][3]                | BIT(1) |            |     | NO   |         |       |         |
+| [score_killing_blows][4]   | INT    | UNSIGNED   |     | YES  | NULL    |       |         |
+| [score_deaths][5]          | INT    | UNSIGNED   |     | YES  | NULL    |       |         |
+| [score_honorable_kills][6] | INT    | UNSIGNED   |     | YES  | NULL    |       |         |
+| [score_bonus_honor][7]     | INT    | UNSIGNED   |     | YES  | NULL    |       |         |
+| [score_damage_done][8]     | INT    | UNSIGNED   |     | YES  | NULL    |       |         |
+| [score_healing_done][9]    | INT    | UNSIGNED   |     | YES  | NULL    |       |         |
+| [attr_1][10]               | INT    | UNSIGNED   |     | YES  | 0       |       |         |
+| [attr_2][11]               | INT    | UNSIGNED   |     | YES  | 0       |       |         |
+| [attr_3][12]               | INT    | UNSIGNED   |     | YES  | 0       |       |         |
+| [attr_4][13]               | INT    | UNSIGNED   |     | YES  | 0       |       |         |
+| [attr_5][14]               | INT    | UNSIGNED   |     | YES  | 0       |       |         |
 
 [1]: #battlegroundid
 [2]: #characterguid

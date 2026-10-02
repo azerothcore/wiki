@@ -14,7 +14,7 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 | [winner_faction][2] | TINYINT  | SIGNED     |     | NO   |         |                |         |
 | [bracket_id][3]     | TINYINT  | UNSIGNED   |     | NO   |         |                |         |
 | [type][4]           | TINYINT  | UNSIGNED   |     | NO   |         |                |         |
-| [date][5]           | DATETIME | SIGNED     |     | NO   |         |                |         |
+| [date][5]           | DATETIME |            |     | NO   |         |                |         |
 
 [1]: #id
 [2]: #winnerfaction

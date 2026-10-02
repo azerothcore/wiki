@@ -10,9 +10,9 @@ Holds help and security information for commands. This table does NOT create new
 
 | Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name][1]     | VARCHAR(50) | SIGNED     | PRI | NO   | NULL    |       |         |
+| [name][1]     | VARCHAR(50) |            | PRI | NO   | ''      |       |         |
 | [security][2] | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [help][3]     | longtext    | SIGNED     |     | YES  | NULL    |       |         |
+| [help][3]     | LONGTEXT    |            |     | YES  | NULL    |       |         |
 
 [1]: #name
 [2]: #security

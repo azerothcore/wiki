@@ -8,12 +8,12 @@ The quests that give the rewards for finishing a random dungeon in the Dungeon F
 
 **Table: lfg\_dungeon\_rewards's Structure**
 
-| Field              | Type    | Attributes | Key | Null | Default | Extra | Comment                                                                                         |
-| ------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
-| [dungeonId][1]     | INT     | UNSIGNED   | PRI | NO   | 0       |       | Dungeon entry from dbc                                                                          |
-| [maxlevel][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       | Max level at which this reward is rewarded                                                      |
-| [firstQuestId][3]  | INT     | UNSIGNED   |     | NO   | 0       |       | Quest id with rewards for first dungeon this day                                                |
-| [otherQuestId][6]  | INT     | UNSIGNED   |     | NO   | 0       |       | Quest id with rewards for Nth dungeon this day                                                  |
+| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment                                          |
+| ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------------------ |
+| [dungeonId][1]    | INT     | UNSIGNED   | PRI | NO   | 0       |       | Dungeon entry from dbc                           |
+| [maxLevel][2]     | TINYINT | UNSIGNED   | PRI | NO   | 0       |       | Max level at which this reward is rewarded       |
+| [firstQuestId][3] | INT     | UNSIGNED   |     | NO   | 0       |       | Quest id with rewards for first dungeon this day |
+| [otherQuestId][6] | INT     | UNSIGNED   |     | NO   | 0       |       | Quest id with rewards for Nth dungeon this day   |
 
 [1]: #dungeonid
 [2]: #maxlevel

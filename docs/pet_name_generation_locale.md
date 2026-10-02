@@ -8,13 +8,13 @@ This table holds pieces of names (first and last half) that are use for pet name
 
 **Table: pet\_name\_generation\_locale's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra          | Comment |
-| ----------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [ID][1]     | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    | Auto increment |         |
-| [locale][2] | VARCHAR   |            |     | NO   |         |                |         |
-| [word][3]   | tinytext  | SIGNED     |     | NO   | NULL    |                |         |
-| [entry][4]  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                |         |
-| [half][5]   | TINYINT   | SIGNED     |     | NO   | 0       |                |         |
+| Field       | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]     | INT        | UNSIGNED   | PRI | NO   |         |       |         |
+| [Locale][2] | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [Word][3]   | TINYTEXT   |            |     | NO   |         |       |         |
+| [Entry][4]  | INT        | UNSIGNED   |     | NO   | 0       |       |         |
+| [Half][5]   | TINYINT    | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #locale

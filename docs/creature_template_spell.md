@@ -6,12 +6,12 @@
 
 **Table: creature\_template\_spell's Structure**
 
-| Field              | Type      | Attribute | Key  | Null | Default | Extra | Comment |
-| ------------------ | --------- | --------- | ---- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]    | MEDIUMINT | UNSIGNED  | PRI  | NO   |         |       |         |
-| [Index][2]         | TINYINT   | UNSIGNED  | PRI  | NO   | 0       |       |         |
-| [Spell][3]         | MEDIUMINT | UNSIGNED  |      | YES  | Null    |       |         |
-| [VerifiedBuild][4] | SMALLINT  | SIGNED    |      | YES  | 0       |       |         |
+| Field              | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [CreatureID][1]    | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [Index][2]         | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [Spell][3]         | INT     | UNSIGNED   |     | YES  | NULL    |       |         |
+| [VerifiedBuild][4] | INT     | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #creatureid
 [2]: #index

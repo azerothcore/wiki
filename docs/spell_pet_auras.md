@@ -8,12 +8,12 @@ Auras that a spell of the owner applies to their pet, for example talents that i
 
 **Table: spell\_pet\_auras's Structure**
 
-| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment         |
-| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | --------------- |
-| [spell][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       | dummy spell id  |
-| [effectId][2] | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |                 |
-| [pet][3]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | pet id; 0 = all |
-| [aura][4]     | MEDIUMINT | UNSIGNED   |     | NO   | NULL    |       | pet aura id     |
+| Field         | Type    | Attributes | Key | Null | Default | Extra | Comment         |
+| ------------- | ------- | ---------- | --- | ---- | ------- | ----- | --------------- |
+| [spell][1]    | INT     | UNSIGNED   | PRI | NO   |         |       | dummy spell id  |
+| [effectId][2] | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                 |
+| [pet][3]      | INT     | UNSIGNED   | PRI | NO   | 0       |       | pet id; 0 = all |
+| [aura][4]     | INT     | UNSIGNED   |     | NO   |         |       | pet aura id     |
 
 [1]: #spell
 [2]: #effectid

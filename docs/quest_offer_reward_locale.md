@@ -6,12 +6,12 @@
 
 **Table: quest\_offer\_reward\_locale's Structure**
 
-| Field              | Type       | Attribute | Key | Null | Default | Extra | Comment |
-| ------------------ | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | INT        | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [locale][2]        | VARCHAR(4) |           | PRI | NO   | NULL    |       |         |
-| [RewardText][3]    | text       |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | SMALLINT   |           |     | NO   | 0       |       |         |
+| Field              | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]            | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [locale][2]        | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [RewardText][3]    | TEXT       |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild][4] | INT        | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #id
 [2]: #locale

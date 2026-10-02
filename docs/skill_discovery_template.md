@@ -8,12 +8,12 @@ This table controls the so called "discovery" system of learning spells. This sy
 
 **Table: skill\_discovery\_template's Structure**
 
-| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment                           |
-| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | --------------------------------- |
-| [spellId][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the discoverable spell |
-| [reqSpell][2]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | spell requirement                 |
-| [reqSkillValue][3] | SMALLINT  | UNSIGNED   |     | NO   | 0       |       | skill points requirement          |
-| [chance][4]        | FLOAT     | SIGNED     |     | NO   | 0       |       | chance to discover                |
+| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment                           |
+| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | --------------------------------- |
+| [spellId][1]       | INT      | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the discoverable spell |
+| [reqSpell][2]      | INT      | UNSIGNED   | PRI | NO   | 0       |       | spell requirement                 |
+| [reqSkillValue][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       | skill points requirement          |
+| [chance][4]        | FLOAT    | SIGNED     |     | NO   | 0       |       | chance to discover                |
 
 [1]: #spellid
 [2]: #reqspell

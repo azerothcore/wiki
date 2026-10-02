@@ -8,12 +8,12 @@ This table provides data for spell linking system, telling it which spells trigg
 
 **Table: spell\_linked\_spell's Structure**
 
-| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spell_trigger][1] | MEDIUMINT | SIGNED     |     | NO   |         |       |         |
-| [spell_effect][2]  | MEDIUMINT | SIGNED     |     | NO   |         |       |         |
-| [type][3]          | SMALLINT  | UNSIGNED   |     | NO   |         |       |         |
-| [comment][4]       | text      |            |     | NO   |         |       |         |
+| Field              | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [spell_trigger][1] | INT     | SIGNED     | MUL | NO   |         |       |         |
+| [spell_effect][2]  | INT     | SIGNED     |     | NO   | 0       |       |         |
+| [type][3]          | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [comment][4]       | TEXT    |            |     | NO   |         |       |         |
 
 [1]: #spelltrigger
 [2]: #spelleffect

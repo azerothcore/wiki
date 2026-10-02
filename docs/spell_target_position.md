@@ -8,16 +8,16 @@ This table holds coordinate information on where the player should be teleported
 
 **Table: spell\_target\_position's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment    |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [id][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
-| [EffectIndex][7]   | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |            |
-| [MapID][2]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |            |
-| [PositionX][3]     | FLOAT     |            |     | NO   | 0       |       |            |
-| [PositionY][4]     | FLOAT     |            |     | NO   | 0       |       |            |
-| [PositionZ][5]     | FLOAT     |            |     | NO   | 0       |       |            |
-| [Orientation][6]   | FLOAT     |            |     | NO   | 0       |       |            |
-| [VerifiedBuild][8] | INT       |            |     | YES  | NULL    |       |            |
+| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment    |
+| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ---------- |
+| [ID][1]            | INT      | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
+| [EffectIndex][7]   | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |            |
+| [MapID][2]         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |            |
+| [PositionX][3]     | FLOAT    | SIGNED     |     | NO   | 0       |       |            |
+| [PositionY][4]     | FLOAT    | SIGNED     |     | NO   | 0       |       |            |
+| [PositionZ][5]     | FLOAT    | SIGNED     |     | NO   | 0       |       |            |
+| [Orientation][6]   | FLOAT    | SIGNED     |     | NO   | 0       |       |            |
+| [VerifiedBuild][8] | INT      | SIGNED     |     | YES  | NULL    |       |            |
 
 [1]: #id
 [2]: #mapid

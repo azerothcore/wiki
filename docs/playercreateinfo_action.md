@@ -12,7 +12,7 @@ This table holds information on what default actions a brand new character shoul
 | ----------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [race][1]   | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [class][2]  | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [button][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [button][3] | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [action][4] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [type][5]   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 

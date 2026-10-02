@@ -16,7 +16,7 @@ This table holds arena info about specific team members. All arena\_team members
 | [weekWins][4]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [seasonGames][5]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [seasonWins][6]     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [personalRating][7] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [personalRating][7] | SMALLINT | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #arenateamid
 [2]: #guid

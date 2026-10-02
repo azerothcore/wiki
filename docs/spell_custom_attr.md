@@ -8,10 +8,10 @@ Table used for storing custom spell attributes.
 
 **Table: spell\_custom\_attr's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment               |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | --------------------- |
-| [spell_id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
-| [attributes][2] | INT       | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
+| Field           | Type | Attributes | Key | Null | Default | Extra | Comment               |
+| --------------- | ---- | ---------- | --- | ---- | ------- | ----- | --------------------- |
+| [spell_id][1]   | INT  | UNSIGNED   | PRI | NO   | 0       |       | spell id              |
+| [attributes][2] | INT  | UNSIGNED   |     | NO   | 0       |       | SpellCustomAttributes |
 
 [1]: #spellid
 [2]: #attributes

@@ -8,10 +8,10 @@ Holds NPC quest giver relations on which NPCs start which quests.
 
 **Table: creature\_queststarter's Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra | Comment          |
-| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
-| [quest][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
+| Field      | Type | Attributes | Key | Null | Default | Extra | Comment          |
+| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------- |
+| [id][1]    | INT  | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
+| [quest][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
 
 [1]: #id
 [2]: #quest

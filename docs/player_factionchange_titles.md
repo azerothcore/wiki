@@ -10,10 +10,10 @@ Determines which title should be swapped during a faction change.
 
 | Field                                | Type | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id](#allianceid)           | INT  |            | PRI | NO   |         |       |         |
-| [alliance_comment](#alliancecomment) | TEXT |            | PRI | YES  | NULL    |       |         |
-| [horde_id](#hordeid)                 | INT  |            | PRI | NO   |         |       |         |
-| [horde_comment](#hordecomment)       | TEXT |            | PRI | YES  | NULL    |       |         |
+| [alliance_id](#allianceid)           | INT  | SIGNED     | PRI | NO   |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |            |     | YES  | NULL    |       |         |
+| [horde_id](#hordeid)                 | INT  | SIGNED     | PRI | NO   |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |            |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

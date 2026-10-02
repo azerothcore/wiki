@@ -8,14 +8,14 @@ This table add greeting behavior to an NPC or an Gameobject.
 
 **Table: quest\_greeting's Structure**
 
-| Field                | Type      | Attributes | Key | NULL | Default | Comment |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ------- |
-| [ID][1]              | MEDIUMINT | UNSIGNED   | Yes | NO   | 0       |         |
-| [Type][2]            | TINYINT   | UNSIGNED   | Yes | NO   | 0       |         |
-| [GreetEmoteType][3]  | SMALLINT  | UNSIGNED   | NO  | NO   | 0       |         |
-| [GreetEmoteDelay][4] | INT       | UNSIGNED   | NO  | NO   | 0       |         |
-| [Greeting][5]        | TEXT      |            | NO  | YES  | NULL    |         |
-| [VerifiedBuild][6]   | SMALLINT  | SIGNED     | NO  | NO   | 0       |         |
+| Field                | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID][1]              | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [type][2]            | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [GreetEmoteType][3]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [GreetEmoteDelay][4] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [Greeting][5]        | TEXT     |            |     | YES  | NULL    |       |         |
+| [VerifiedBuild][6]   | INT      | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #id
 [2]: #type

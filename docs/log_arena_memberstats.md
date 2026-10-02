@@ -10,11 +10,11 @@
 | -------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [fight_id][1]  | INT      | UNSIGNED   | PRI | NO   |         |       |         |
 | [member_id][2] | TINYINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [name][3]      | CHAR(20) | SIGNED     |     | NO   |         |       |         |
+| [name][3]      | CHAR(20) |            |     | NO   |         |       |         |
 | [guid][4]      | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [team][5]      | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [account][6]   | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [ip][7]        | CHAR(15) | SIGNED     |     | NO   |         |       |         |
+| [ip][7]        | CHAR(15) |            |     | NO   |         |       |         |
 | [damage][8]    | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [heal][9]      | INT      | UNSIGNED   |     | NO   |         |       |         |
 | [kblows][10]   | INT      | UNSIGNED   |     | NO   |         |       |         |

@@ -8,17 +8,17 @@ This table holds the server's uptime. The core will automatically update the lat
 
 **Table: uptime's Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default     | Extra | Comment |
-| ------------------- | ------------ | ---------- | --- | ---- | ----------- | ----- | ------- |
-| [realmid][1]        | INT          | UNSIGNED   | PRI | NO   |             |       |         |
-| [starttime][2]      | INT          | UNSIGNED   | PRI | NO   | 0           |       |         |
-| [uptime][3]         | INT          | UNSIGNED   |     | NO   | 0           |       |         |
-| [EndTime][6]        | INT          | UNSIGNED   |     | YES  | NULL        |       |         |
-| [maxplayers][4]     | SMALLINT     | UNSIGNED   |     | NO   | 0           |       |         |
-| [revision][5]       | VARCHAR(255) |            |     | NO   | AzerothCore |       |         |
-| [ShutdownType][7]   | TINYINT      | UNSIGNED   |     | NO   | 0           |       |         |
-| [ExitCode][8]       | TINYINT      | UNSIGNED   |     | YES  | NULL        |       |         |
-| [ShutdownReason][9] | VARCHAR(255) |            |     | NO   | ''          |       |         |
+| Field               | Type         | Attributes | Key | Null | Default     | Extra | Comment                                           |
+| ------------------- | ------------ | ---------- | --- | ---- | ----------- | ----- | ------------------------------------------------- |
+| [realmid][1]        | INT          | UNSIGNED   | PRI | NO   |             |       |                                                   |
+| [starttime][2]      | INT          | UNSIGNED   | PRI | NO   | 0           |       |                                                   |
+| [uptime][3]         | INT          | UNSIGNED   |     | NO   | 0           |       |                                                   |
+| [EndTime][6]        | INT          | UNSIGNED   |     | YES  | NULL        |       |                                                   |
+| [maxplayers][4]     | SMALLINT     | UNSIGNED   |     | NO   | 0           |       |                                                   |
+| [revision][5]       | VARCHAR(255) |            |     | NO   | AzerothCore |       |                                                   |
+| [ShutdownType][7]   | TINYINT      | UNSIGNED   |     | NO   | 0           |       | 0 = unknown, 1 = shutdown, 2 = restart, 3 = error |
+| [ExitCode][8]       | TINYINT      | UNSIGNED   |     | YES  | NULL        |       |                                                   |
+| [ShutdownReason][9] | VARCHAR(255) |            |     | NO   | ''          |       |                                                   |
 
 [1]: #realmid
 [2]: #starttime

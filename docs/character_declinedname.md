@@ -9,11 +9,11 @@
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
 | ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
 | [guid][1]          | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [genitive][2]      | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
-| [dative][3]        | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
-| [accusative][4]    | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
-| [instrumental][5]  | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
-| [prepositional][6] | VARCHAR(15) | SIGNED     |     | NO   | ''      |       |                          |
+| [genitive][2]      | VARCHAR(15) |            |     | NO   | ''      |       |                          |
+| [dative][3]        | VARCHAR(15) |            |     | NO   | ''      |       |                          |
+| [accusative][4]    | VARCHAR(15) |            |     | NO   | ''      |       |                          |
+| [instrumental][5]  | VARCHAR(15) |            |     | NO   | ''      |       |                          |
+| [prepositional][6] | VARCHAR(15) |            |     | NO   | ''      |       |                          |
 
 [1]: #guid
 [2]: #genitive

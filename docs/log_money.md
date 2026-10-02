@@ -6,28 +6,18 @@
 
 **Table: log\_money's Structure**
 
-| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment                                              |
-| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------------------- |
-| [sender_acc][1]    | INT       | UNSIGNED   |     | NO   |         |       |                                                      |
-| [sender_guid][2]   | INT       | UNSIGNED   |     | NO   |         |       |                                                      |
-| [sender_name][3]   | CHAR(32)  | SIGNED     |     | NO   |         |       |                                                      |
-| [sender_ip][4]     | CHAR(32)  | SIGNED     |     | NO   |         |       |                                                      |
-| [receiver_acc][5]  | INT       | UNSIGNED   |     | NO   |         |       |                                                      |
-| [receiver_name][6] | CHAR(32)  | SIGNED     |     | NO   |         |       |                                                      |
-| [money][7]         | BIGINT    | UNSIGNED   |     | NO   |         |       |                                                      |
-| [topic][8]         | CHAR(255) | SIGNED     |     | NO   |         |       |                                                      |
-| [date][9]          | DATETIME  | SIGNED     |     | NO   |         |       |                                                      |
-| [type][10]         | TINYINT   | SIGNED     |     | NO   |         |       | 1=COD,2=AH,3=GB DEPOSIT,4=GB WITHDRAW,5=MAIL,6=TRADE |
-
-[1]: #senderacc
-[2]: #senderguid
-[3]: #sendername
-[4]: #senderip
-[5]: #receiveracc
-[6]: #receivername
-[7]: #money
-[8]: #topic
-[9]: #date
+| Field                          | Type     | Attributes | Key | Null | Default | Extra | Comment                                              |
+| ------------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------------------- |
+| [sender_acc](#senderacc)       | INT      | UNSIGNED   |     | NO   |         |       |                                                      |
+| [sender_guid](#senderguid)     | INT      | UNSIGNED   |     | NO   |         |       |                                                      |
+| [sender_name](#sendername)     | TEXT     |            |     | NO   |         |       |                                                      |
+| [sender_ip](#senderip)         | TEXT     |            |     | NO   |         |       |                                                      |
+| [receiver_acc](#receiveracc)   | INT      | UNSIGNED   |     | NO   |         |       |                                                      |
+| [receiver_name](#receivername) | TEXT     |            |     | NO   |         |       |                                                      |
+| [money](#money)                | BIGINT   | UNSIGNED   |     | NO   |         |       |                                                      |
+| [topic](#topic)                | TEXT     |            |     | NO   |         |       |                                                      |
+| [date](#date)                  | DATETIME |            |     | NO   |         |       |                                                      |
+| [type](#type)                  | TINYINT  | SIGNED     |     | NO   |         |       | 1=COD,2=AH,3=GB DEPOSIT,4=GB WITHDRAW,5=MAIL,6=TRADE |
 
 **Description of the table's fields**
 

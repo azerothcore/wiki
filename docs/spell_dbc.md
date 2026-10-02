@@ -12,7 +12,7 @@ The core reads every column in order, so a row must have a value for all of them
 
 | Field                                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                                 | INT          |            | PRI | NO   | 0       |       |         |
+| [ID](#id)                                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
 | [Category](#category)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [DispelType](#dispeltype)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [Mechanic](#mechanic)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
@@ -25,9 +25,9 @@ The core reads every column in order, so a row must have a value for all of them
 | [AttributesEx6](#attributesex6)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [AttributesEx7](#attributesex7)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [ShapeshiftMask](#shapeshiftmask)                         | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [unk_320_2](#unk320)                                      | INT          |            |     | NO   | 0       |       |         |
+| [unk_320_2](#unk320)                                      | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [ShapeshiftExclude](#shapeshiftexclude)                   | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [unk_320_3](#unk320)                                      | INT          |            |     | NO   | 0       |       |         |
+| [unk_320_3](#unk320)                                      | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [Targets](#targets)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [TargetCreatureType](#targetcreaturetype)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [RequiresSpellFocus](#requiresspellfocus)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
@@ -53,48 +53,48 @@ The core reads every column in order, so a row must have a value for all of them
 | [BaseLevel](#baselevel)                                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [SpellLevel](#spelllevel)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [DurationIndex](#durationindex)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [PowerType](#powertype)                                   | INT          |            |     | NO   | 0       |       |         |
+| [PowerType](#powertype)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [ManaCost](#manacost)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [ManaCostPerLevel](#manacostperlevel)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [ManaPerSecond](#manapersecond)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [ManaPerSecondPerLevel](#manapersecondperlevel)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [RangeIndex](#rangeindex)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Speed](#speed)                                           | FLOAT        |            |     | NO   | 0       |       |         |
+| [Speed](#speed)                                           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [ModalNextSpell](#modalnextspell)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [CumulativeAura](#cumulativeaura)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [Totem_1](#totem)                                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [Totem_2](#totem)                                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Reagent_1](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_2](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_3](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_4](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_5](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_6](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_7](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_8](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_1](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_2](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_3](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_4](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_5](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_6](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_7](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_8](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [EquippedItemClass](#equippeditemclass)                   | INT          |            |     | NO   | 0       |       |         |
-| [EquippedItemSubclass](#equippeditemsubclass)             | INT          |            |     | NO   | 0       |       |         |
-| [EquippedItemInvTypes](#equippediteminvtypes)             | INT          |            |     | NO   | 0       |       |         |
+| [Reagent_1](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_2](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_3](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_4](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_5](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_6](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_7](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Reagent_8](#reagent)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_1](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_2](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_3](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_4](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_5](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_6](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_7](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [ReagentCount_8](#reagentcount)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EquippedItemClass](#equippeditemclass)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EquippedItemSubclass](#equippeditemsubclass)             | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EquippedItemInvTypes](#equippediteminvtypes)             | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [Effect_1](#effect)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [Effect_2](#effect)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [Effect_3](#effect)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectDieSides_1](#effectdiesides)                       | INT          |            |     | NO   | 0       |       |         |
-| [EffectDieSides_2](#effectdiesides)                       | INT          |            |     | NO   | 0       |       |         |
-| [EffectDieSides_3](#effectdiesides)                       | INT          |            |     | NO   | 0       |       |         |
-| [EffectRealPointsPerLevel_1](#effectrealpointsperlevel)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectRealPointsPerLevel_2](#effectrealpointsperlevel)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectRealPointsPerLevel_3](#effectrealpointsperlevel)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectBasePoints_1](#effectbasepoints)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectBasePoints_2](#effectbasepoints)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectBasePoints_3](#effectbasepoints)                   | INT          |            |     | NO   | 0       |       |         |
+| [EffectDieSides_1](#effectdiesides)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectDieSides_2](#effectdiesides)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectDieSides_3](#effectdiesides)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectRealPointsPerLevel_1](#effectrealpointsperlevel)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectRealPointsPerLevel_2](#effectrealpointsperlevel)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectRealPointsPerLevel_3](#effectrealpointsperlevel)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectBasePoints_1](#effectbasepoints)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectBasePoints_2](#effectbasepoints)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectBasePoints_3](#effectbasepoints)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [EffectMechanic_1](#effectmechanic)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectMechanic_2](#effectmechanic)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectMechanic_3](#effectmechanic)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
@@ -113,27 +113,27 @@ The core reads every column in order, so a row must have a value for all of them
 | [EffectAuraPeriod_1](#effectauraperiod)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectAuraPeriod_2](#effectauraperiod)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectAuraPeriod_3](#effectauraperiod)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectMultipleValue_1](#effectmultiplevalue)             | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectMultipleValue_2](#effectmultiplevalue)             | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectMultipleValue_3](#effectmultiplevalue)             | FLOAT        |            |     | NO   | 0       |       |         |
+| [EffectMultipleValue_1](#effectmultiplevalue)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMultipleValue_2](#effectmultiplevalue)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMultipleValue_3](#effectmultiplevalue)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [EffectChainTargets_1](#effectchaintargets)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectChainTargets_2](#effectchaintargets)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectChainTargets_3](#effectchaintargets)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectItemType_1](#effectitemtype)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectItemType_2](#effectitemtype)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectItemType_3](#effectitemtype)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectMiscValue_1](#effectmiscvalue)                     | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValue_2](#effectmiscvalue)                     | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValue_3](#effectmiscvalue)                     | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValueB_1](#effectmiscvalueb)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValueB_2](#effectmiscvalueb)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValueB_3](#effectmiscvalueb)                   | INT          |            |     | NO   | 0       |       |         |
+| [EffectMiscValue_1](#effectmiscvalue)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMiscValue_2](#effectmiscvalue)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMiscValue_3](#effectmiscvalue)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMiscValueB_1](#effectmiscvalueb)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMiscValueB_2](#effectmiscvalueb)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectMiscValueB_3](#effectmiscvalueb)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [EffectTriggerSpell_1](#effecttriggerspell)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectTriggerSpell_2](#effecttriggerspell)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectTriggerSpell_3](#effecttriggerspell)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectPointsPerCombo_1](#effectpointspercombo)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectPointsPerCombo_2](#effectpointspercombo)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectPointsPerCombo_3](#effectpointspercombo)           | FLOAT        |            |     | NO   | 0       |       |         |
+| [EffectPointsPerCombo_1](#effectpointspercombo)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectPointsPerCombo_2](#effectpointspercombo)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectPointsPerCombo_3](#effectpointspercombo)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [EffectSpellClassMaskA_1](#effectspellclassmaska)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectSpellClassMaskA_2](#effectspellclassmaska)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [EffectSpellClassMaskA_3](#effectspellclassmaska)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
@@ -228,22 +228,22 @@ The core reads every column in order, so a row must have a value for all of them
 | [DefenseType](#defensetype)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [PreventionType](#preventiontype)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [StanceBarOrder](#stancebarorder)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectChainAmplitude_1](#effectchainamplitude)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectChainAmplitude_2](#effectchainamplitude)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectChainAmplitude_3](#effectchainamplitude)           | FLOAT        |            |     | NO   | 0       |       |         |
+| [EffectChainAmplitude_1](#effectchainamplitude)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectChainAmplitude_2](#effectchainamplitude)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectChainAmplitude_3](#effectchainamplitude)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [MinFactionID](#minfactionid)                             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [MinReputation](#minreputation)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [RequiredAuraVision](#requiredauravision)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [RequiredTotemCategoryID_1](#requiredtotemcategoryid)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [RequiredTotemCategoryID_2](#requiredtotemcategoryid)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredAreasID](#requiredareasid)                       | INT          |            |     | NO   | 0       |       |         |
+| [RequiredAreasID](#requiredareasid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [SchoolMask](#schoolmask)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [RuneCostID](#runecostid)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [SpellMissileID](#spellmissileid)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [PowerDisplayID](#powerdisplayid)                         | INT          |            |     | NO   | 0       |       |         |
-| [EffectBonusMultiplier_1](#effectbonusmultiplier)         | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectBonusMultiplier_2](#effectbonusmultiplier)         | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectBonusMultiplier_3](#effectbonusmultiplier)         | FLOAT        |            |     | NO   | 0       |       |         |
+| [PowerDisplayID](#powerdisplayid)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [EffectBonusMultiplier_1](#effectbonusmultiplier)         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectBonusMultiplier_2](#effectbonusmultiplier)         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [EffectBonusMultiplier_3](#effectbonusmultiplier)         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
 | [SpellDescriptionVariableID](#spelldescriptionvariableid) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 | [SpellDifficultyID](#spelldifficultyid)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 

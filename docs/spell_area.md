@@ -8,18 +8,18 @@ This table is used to apply a specific spell aura to the player within an area i
 
 **Table: spell\_area's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spell][1]              | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [area][2]               | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [quest_start][3]        | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [quest_end][4]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [aura_spell][5]         | MEDIUMINT | SIGNED     | PRI | NO   |         |       |         |
-| [racemask][6]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [gender][7]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [autocast][8]           | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [quest_start_status][9] | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [quest_end_status][10]  | INT       | UNSIGNED   |     | NO   |         |       |         |
+| Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [spell][1]              | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [area][2]               | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [quest_start][3]        | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [quest_end][4]          | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [aura_spell][5]         | INT     | SIGNED     | PRI | NO   | 0       |       |         |
+| [racemask][6]           | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [gender][7]             | TINYINT | UNSIGNED   | PRI | NO   | 2       |       |         |
+| [autocast][8]           | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [quest_start_status][9] | INT     | SIGNED     |     | NO   | 64      |       |         |
+| [quest_end_status][10]  | INT     | SIGNED     |     | NO   | 11      |       |         |
 
 [1]: #spell
 [2]: #area

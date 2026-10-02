@@ -10,9 +10,9 @@ This table contains data regarding items from item\_instance which are being sen
 
 | Field          | Type | Attributes | Key | Null | Default | Extra | Comment                            |
 | -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [mail_id][1]   | INT  | UNSIGNED   |     | NO   | 0       |       |                                    |
+| [mail_id][1]   | INT  | UNSIGNED   | MUL | NO   | 0       |       |                                    |
 | [item_guid][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |                                    |
-| [receiver][3]  | INT  | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
+| [receiver][3]  | INT  | UNSIGNED   | MUL | NO   | 0       |       | Character Global Unique Identifier |
 
 [1]: #mailid
 [2]: #itemguid

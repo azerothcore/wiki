@@ -8,10 +8,10 @@ Table used to add restrictions for learning spells from trainer. Player can't le
 
 **Table: spell\_required's Structure**
 
-| Field          | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spell_id][1]  | MEDIUMINT | SIGNED     | PRI | NO   | 0       |       |         |
-| [req_spell][2] | MEDIUMINT | SIGNED     | PRI | NO   | 0       |       |         |
+| Field          | Type | Attributes | Key | Null | Default | Extra | Comment |
+| -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [spell_id][1]  | INT  | SIGNED     | PRI | NO   | 0       |       |         |
+| [req_spell][2] | INT  | SIGNED     | PRI | NO   | 0       |       |         |
 
 [1]: #spellid
 [2]: #reqspell

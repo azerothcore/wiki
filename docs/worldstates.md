@@ -12,7 +12,7 @@ This table holds data the Core needs to handle variables (like timer for arena p
 | ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [entry][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [value][2]   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [comment][3] | TINYTEXT | SIGNED     |     | YES  |         |       |         |
+| [comment][3] | TINYTEXT |            |     | YES  | NULL    |       |         |
 
 [1]: #entry
 [2]: #value

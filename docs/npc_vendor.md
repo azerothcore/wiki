@@ -18,15 +18,15 @@ If you open the vendor's window in GM mode, you will see all the items sold by t
 
 **Table: npc\_vendor's Structure**
 
-| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]        | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [slot][2]         | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
-| [item][3]         | MEDIUMINT | SIGNED     | PRI | NO   | 0       |       |         |
-| [maxcount][4]     | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [incrtime][5]     | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExtendedCost][6] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [VerifiedBuild][7] | INT      |            |     | YES  | NULL    |       |         |
+| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]         | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [slot][2]          | SMALLINT | SIGNED     | MUL | NO   | 0       |       |         |
+| [item][3]          | INT      | SIGNED     | PRI | NO   | 0       |       |         |
+| [maxcount][4]      | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [incrtime][5]      | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ExtendedCost][6]  | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [VerifiedBuild][7] | INT      | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #entry
 [2]: #slot

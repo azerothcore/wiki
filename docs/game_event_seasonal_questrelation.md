@@ -8,10 +8,10 @@ Holds information on the game event seasonal quest relations to allow for resett
 
 **Table: game\_event\_seasonal\_questrelation's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
-| [questId][1]    | INT       | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier        |
-| [eventEntry][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Entry of the game event |
+| Field           | Type | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------- | ---- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [questId][1]    | INT  | UNSIGNED   | PRI | NO   |         |       | Quest Identifier        |
+| [eventEntry][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       | Entry of the game event |
 
 [1]: #questid
 [2]: #evententry

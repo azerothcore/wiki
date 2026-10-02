@@ -11,7 +11,7 @@ Table used by the core to group different ranks of spells (the gray text seen on
 | Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [first_spell_id][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [spell_id][2]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [spell_id][2]       | INT     | UNSIGNED   | UNI | NO   | 0       |       |         |
 | [rank][3]           | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 
 [1]: #firstspellid

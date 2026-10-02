@@ -10,9 +10,9 @@ This table holds information on all the signatures of a petition for either a gu
 
 | Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ownerguid][1]      | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [petitionguid][2]   | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [petition_id][6]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [ownerguid][1]      | INT     | UNSIGNED   | MUL | NO   |         |       |         |
+| [petitionguid][2]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [petition_id][6]    | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [playerguid][3]     | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [player_account][4] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 | [type][5]           | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |

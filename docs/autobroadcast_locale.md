@@ -6,12 +6,12 @@
 
 **Table: autobroadcast\_locale's Structure**
 
-| Field        | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [realmid][1] | INT         |            | PRI | NO   |         |       |         |
-| [id][2]      | INT         |            | PRI | NO   |         |       |         |
-| [locale][3]  | VARCHAR(4)  |            | PRI | NO   |         |       |         |
-| [text][4]    | VARCHAR(45) |            |     | YES  |         |       |         |
+| Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [realmid][1] | INT        | SIGNED     | PRI | NO   |         |       |         |
+| [id][2]      | INT        | SIGNED     | PRI | NO   |         |       |         |
+| [locale][3]  | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [text][4]    | LONGTEXT   |            |     | NO   |         |       |         |
 
 
 [1]: #realmid

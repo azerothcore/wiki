@@ -12,21 +12,21 @@ This table holds the pet data for each pet summoned by anyone in the game.
 | ------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [id][1]             | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [entry][2]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [owner][3]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| [owner][3]          | INT         | UNSIGNED   | MUL | NO   | 0       |       |         |
 | [modelid][4]        | INT         | UNSIGNED   |     | YES  | 0       |       |         |
-| [CreatedBySpell][5] | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [CreatedBySpell][5] | INT         | UNSIGNED   |     | YES  | 0       |       |         |
 | [PetType][6]        | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [level][7]          | SMALLINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [exp][8]            | INT         | UNSIGNED   |     | NO   | 1       |       |         |
+| [level][7]          | SMALLINT    | UNSIGNED   |     | NO   | 1       |       |         |
+| [exp][8]            | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 | [Reactstate][9]     | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [name][10]          | VARCHAR(21) | SIGNED     |     | NO   | 0       |       |         |
-| [renamed][11]       | TINYINT     | UNSIGNED   |     | NO   | Pet     |       |         |
-| [slot][12]          | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [curhealth][13]     | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [curmana][14]       | INT         | UNSIGNED   |     | NO   | 1       |       |         |
+| [name][10]          | VARCHAR(21) |            |     | NO   | Pet     |       |         |
+| [renamed][11]       | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| [slot][12]          | TINYINT     | UNSIGNED   | MUL | NO   | 0       |       |         |
+| [curhealth][13]     | INT         | UNSIGNED   |     | NO   | 1       |       |         |
+| [curmana][14]       | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 | [curhappiness][15]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
 | [savetime][16]      | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [abdata][17]        | TEXT        | SIGNED     |     | YES  | 0       |       |         |
+| [abdata][17]        | TEXT        |            |     | YES  | NULL    |       |         |
 
 [1]: #id
 [2]: #entry

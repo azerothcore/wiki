@@ -8,11 +8,11 @@ Stores arbitrary per-character settings as keyed data blobs. Modules and subsyst
 
 **Table: character\_settings's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid](#guid) | INT | UNSIGNED | PRI | NO |  |  |  |
-| [source](#source) | VARCHAR(40) |  | PRI | NO |  |  |  |
-| [data](#data) | TEXT |  |  | YES | (NULL) |  |  |
+| Field             | Type        | Attributes | Key | Null | Default | Extra | Comment |
+| ----------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid](#guid)     | INT         | UNSIGNED   | PRI | NO   |         |       |         |
+| [source](#source) | VARCHAR(40) |            | PRI | NO   |         |       |         |
+| [data](#data)     | TEXT        |            |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

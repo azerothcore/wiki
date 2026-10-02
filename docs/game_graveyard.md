@@ -6,14 +6,14 @@
 
 **Table: game\_graveyard's Structure**
 
-| Field               | Type         | Key | Null | Default |
-| ------------------- | ------------ | --- | ---- | ------- |
-| [ID](#id)           | INT          | PRI | NO   | 0       |
-| [Map](#map)         | INT          |     | NO   | 0       |
-| [x](#x)             | FLOAT        |     | NO   | 0       |
-| [y](#y)             | FLOAT        |     | NO   | 0       |
-| [z](#z)             | FLOAT        |     | NO   | 0       |
-| [Comment](#comment) | VARCHAR(255) |     | YES  | NULL    |
+| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)           | INT          | SIGNED     | PRI | NO   | 0       |       |         |
+| [Map](#map)         | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [x](#x)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [y](#y)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [z](#z)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| [Comment](#comment) | VARCHAR(255) |            |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

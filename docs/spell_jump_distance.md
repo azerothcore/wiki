@@ -9,10 +9,10 @@ This table stores per-spell chain hop distance overrides. When present, the serv
 
 **Table: spell\_jump\_distance's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell id (links to Spell.dbc) |
-| [JumpDistance](#jumpdistance) | FLOAT | SIGNED | | NO | 0 | | Max hop distance in yards |
+| Field                         | Type  | Attributes | Key | Null | Default | Extra | Comment                   |
+| ----------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------------------------- |
+| [ID](#id)                     | INT   | UNSIGNED   | PRI | NO   |         |       | spell id                  |
+| [JumpDistance](#jumpdistance) | FLOAT | SIGNED     |     | NO   | 0       |       | max hop distance in yards |
 
 **Description of the table's fields**
 

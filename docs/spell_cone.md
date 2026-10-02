@@ -10,10 +10,10 @@ If no override exists, the core falls back to legacy hardcoded spell handling.
 
 **Table: spell\_cone's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell identifier |
-| [ConeDegrees](#conedegrees) | SMALLINT | | | NO | 60 | | Cone angle in degrees |
+| Field                       | Type     | Attributes | Key | Null | Default | Extra | Comment               |
+| --------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | --------------------- |
+| [ID](#id)                   | INT      | UNSIGNED   | PRI | NO   |         |       | Spell ID              |
+| [ConeDegrees](#conedegrees) | SMALLINT | SIGNED     |     | NO   | 60      |       | Cone angle in degrees |
 
 **Description of the table's fields**
 

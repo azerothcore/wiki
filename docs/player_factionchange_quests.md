@@ -8,10 +8,10 @@ Determains what quest should be changed during a faction change
 
 **Table: player\_factionchange\_quests's Structure**
 
-| Field                      | Type | Attributes | Key        | Null | Default | Extra | Comment |
-| -------------------------- | ---- | ---------- | ---------- | ---- | ------- | ----- | ------- |
-| [alliance_id](#allianceid) | INT  | UNSIGNED   | PRI UNIQUE | NO   |         |       |         |
-| [horde_id](#hordeid)       | INT  | UNSIGNED   | PRI UNIQUE | NO   |         |       |         |
+| Field                      | Type | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [alliance_id](#allianceid) | INT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [horde_id](#hordeid)       | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 
 **Description of the table's fields**
 

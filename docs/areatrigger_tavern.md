@@ -8,11 +8,11 @@ Enable a trigger when player enters a city or tavern. This causes the player to 
 
 **Table: areatrigger\_tavern's Structure**
 
-| Field     | Type      | Attributes | Key | Null | Default | Extra | Comment    |
-| --------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [id][1]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
-| [name][2] | text      |            |     | YES  |         |       |            |
-| [faction][3] | INT    | UNSIGNED   |     | NO   | 0       |       |            |
+| Field        | Type | Attributes | Key | Null | Default | Extra | Comment    |
+| ------------ | ---- | ---------- | --- | ---- | ------- | ----- | ---------- |
+| [id][1]      | INT  | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
+| [name][2]    | TEXT |            |     | YES  | NULL    |       |            |
+| [faction][3] | INT  | UNSIGNED   |     | NO   | 0       |       |            |
 
 [1]: #id
 [2]: #name

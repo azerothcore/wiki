@@ -8,11 +8,11 @@ This table contains npcflags that are to be added to an NPC when the specified e
 
 **Table: game\_event\_npcflag's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
-| [eventEntry][1] | TINYINT   | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
-| [guid][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                         |
-| [npcflag][3]    | INT       | UNSIGNED   |     | NO   | 0       |       |                         |
+| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
+| [guid][2]       | INT     | UNSIGNED   | PRI | NO   | 0       |       |                         |
+| [npcflag][3]    | INT     | UNSIGNED   |     | NO   | 0       |       |                         |
 
 [1]: #evententry
 [2]: #guid

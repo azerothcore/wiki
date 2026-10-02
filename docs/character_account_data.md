@@ -13,7 +13,7 @@ Contains data about character settings.
 | [guid][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [type][2] | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [time][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [data][4] | BLOB    | SIGNED     |     | NO   |         |       |         |
+| [data][4] | BLOB    |            |     | NO   |         |       |         |
 
 [1]: #guid
 [2]: #type

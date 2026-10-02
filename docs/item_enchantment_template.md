@@ -8,11 +8,11 @@ This table holds enchantment chance information for items that should have eithe
 
 **Table: item\_enchantment\_template's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ench][2]   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [chance][3] | FLOAT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field       | Type  | Attributes | Key | Null | Default | Extra | Comment |
+| ----------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]  | INT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ench][2]   | INT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [chance][3] | FLOAT | SIGNED     |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #ench

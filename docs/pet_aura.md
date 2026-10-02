@@ -6,23 +6,23 @@
 
 **Table: pet\_aura's Structure**
 
-| Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                       |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
-| [guid][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier      |
-| [casterGuid][2]      | BIGINT    | UNSIGNED   | PRI | NO   | 0       |       | Full Global Unique Identifier |
-| [spell][3]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [effectMask][4]      | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [recalculateMask][5] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                               |
-| [stackCount][6]      | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                               |
-| [amount0][7]         | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [amount1][8]         | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [amount2][9]         | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [base_amount0][10]   | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [base_amount1][11]   | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [base_amount2][12]   | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [maxDuration][13]    | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [remainTime][14]     | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [remainCharges][15]  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                               |
+| Field                | Type    | Attributes | Key | Null | Default | Extra | Comment                       |
+| -------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
+| [guid][1]            | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier      |
+| [casterGuid][2]      | BIGINT  | UNSIGNED   | PRI | NO   | 0       |       | Full Global Unique Identifier |
+| [spell][3]           | INT     | UNSIGNED   | PRI | NO   | 0       |       |                               |
+| [effectMask][4]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                               |
+| [recalculateMask][5] | TINYINT | UNSIGNED   |     | NO   | 0       |       |                               |
+| [stackCount][6]      | TINYINT | UNSIGNED   |     | NO   | 1       |       |                               |
+| [amount0][7]         | INT     | SIGNED     |     | YES  | NULL    |       |                               |
+| [amount1][8]         | INT     | SIGNED     |     | YES  | NULL    |       |                               |
+| [amount2][9]         | INT     | SIGNED     |     | YES  | NULL    |       |                               |
+| [base_amount0][10]   | INT     | SIGNED     |     | YES  | NULL    |       |                               |
+| [base_amount1][11]   | INT     | SIGNED     |     | YES  | NULL    |       |                               |
+| [base_amount2][12]   | INT     | SIGNED     |     | YES  | NULL    |       |                               |
+| [maxDuration][13]    | INT     | SIGNED     |     | NO   | 0       |       |                               |
+| [remainTime][14]     | INT     | SIGNED     |     | NO   | 0       |       |                               |
+| [remainCharges][15]  | TINYINT | UNSIGNED   |     | NO   | 0       |       |                               |
 
 [1]: #guid
 [2]: #casterguid

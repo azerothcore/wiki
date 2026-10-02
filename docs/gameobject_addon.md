@@ -6,15 +6,15 @@
 
 **Table: gameobject\_addon's Structure**
 
-| Field                          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]                      | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [parent_rotation0][2]          | FLOAT   |            |     | NO   | 0       |       |         |
-| [parent_rotation1][3]          | FLOAT   |            |     | NO   | 0       |       |         |
-| [parent_rotation2][4]          | FLOAT   |            |     | NO   | 0       |       |         |
-| [parent_rotation3][5]          | FLOAT   |            |     | NO   | 1       |       |         |
-| [invisibilityType][6]          | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [invisibilityValue][7]         | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]              | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [parent_rotation0][2]  | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
+| [parent_rotation1][3]  | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
+| [parent_rotation2][4]  | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
+| [parent_rotation3][5]  | FLOAT   | SIGNED     |     | NO   | 1       |       |         |
+| [invisibilityType][6]  | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [invisibilityValue][7] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #parentrotation0

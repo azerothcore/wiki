@@ -6,16 +6,16 @@
 
 **Table: guild\_member\_withdraw's Structure**
 
-| Field      | Type  | Attributes | Key | Null | Default | Extra  | Comment |
-| ---------- | ----- | ---------- | --- | ---- | ------- | ------ | ------- |
-| [guid][1]  | INT   | UNSIGNED   | PRI | NO   |         |        |         |
-| [tab0][2]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [tab1][3]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [tab2][4]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [tab3][5]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [tab4][6]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [tab5][7]  | INT   | UNSIGNED   |     | NO   | 0       |        |         |
-| [money][8] | INT   | UNSIGNED   |     | NO   | 0       |        |         |
+| Field      | Type | Attributes | Key | Null | Default | Extra | Comment |
+| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]  | INT  | UNSIGNED   | PRI | NO   |         |       |         |
+| [tab0][2]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [tab1][3]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [tab2][4]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [tab3][5]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [tab4][6]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [tab5][7]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [money][8] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #tab

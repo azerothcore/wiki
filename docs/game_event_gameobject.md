@@ -8,10 +8,10 @@ Contains all gameobjects instances that participate to any game event.
 
 **Table: game\_event\_gameobject's Structure**
 
-| Field                     | Type     | Attributes | Key | Null | Default | Extra  | Comment                                                             |
-| ------------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
-| [eventEntry](#evententry) | SMALLINT | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [guid](#guid)             | INT      | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
+| Field                     | Type     | Attributes | Key | Null | Default | Extra | Comment                                                             |
+| ------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------------------------------------- |
+| [eventEntry](#evententry) | SMALLINT | SIGNED     | PRI | NO   |         |       | Entry of the game event. Put negative entry to remove during event. |
+| [guid](#guid)             | INT      | UNSIGNED   | PRI | NO   |         |       |                                                                     |
 
 **Description of the table's fields**
 

@@ -8,16 +8,16 @@ This table can be overriden by \`creature_movement_override\`
 
 **Table: creature\_template\_movement's Structure**
 
-| Field                      | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureId][1]            | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Ground][2]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
-| [Swim][3]                  | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
-| [Flight][4]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
-| [Rooted][5]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
-| [Chase][6]                 | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
-| [Random][7]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
-| [InteractionPauseTimer][8] | TINYINT | UNSIGNED   |     | YES  | NULL    |       |         |
+| Field                      | Type    | Attributes | Key | Null | Default | Extra | Comment                                                                                  |
+| -------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------------------------------------------------------- |
+| [CreatureId][1]            | INT     | UNSIGNED   | PRI | NO   | 0       |       |                                                                                          |
+| [Ground][2]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |                                                                                          |
+| [Swim][3]                  | TINYINT | UNSIGNED   |     | YES  | NULL    |       |                                                                                          |
+| [Flight][4]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |                                                                                          |
+| [Rooted][5]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |                                                                                          |
+| [Chase][6]                 | TINYINT | UNSIGNED   |     | YES  | NULL    |       |                                                                                          |
+| [Random][7]                | TINYINT | UNSIGNED   |     | YES  | NULL    |       |                                                                                          |
+| [InteractionPauseTimer][8] | INT     | UNSIGNED   |     | YES  | NULL    |       | Time (in milliseconds) during which creature will not move after interaction with player |
 
 [1]: #creatureid
 [2]: #ground

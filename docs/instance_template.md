@@ -12,10 +12,10 @@ If you want to change the spot you will start in when you enter/leave an instanc
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [map][1]        | INT          | UNSIGNED   |     | NO   | NULL    |       |         |
-| [parent][2]     | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [script][3]     | VARCHAR(128) | SIGNED     |     | NO   | NULL    |       |         |
-| [allowMount][4] | tinyiny(1)   | SIGNED     |     | NO   | 0       |       |         |
+| [map][1]        | SMALLINT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [parent][2]     | SMALLINT     | UNSIGNED   |     | NO   |         |       |         |
+| [script][3]     | VARCHAR(128) |            |     | NO   | ''      |       |         |
+| [allowMount][4] | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #map
 [2]: #parent

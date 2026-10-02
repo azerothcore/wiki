@@ -10,10 +10,10 @@ If there is a record in the table for a quest, then the quest will not be comple
 
 **Table: areatrigger\_involvedrelation's Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra | Comments         |
-| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
-| [quest][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Quest Identifier |
+| Field      | Type | Attributes | Key | Null | Default | Extra | Comment          |
+| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------- |
+| [id][1]    | INT  | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
+| [quest][2] | INT  | UNSIGNED   |     | NO   | 0       |       | Quest Identifier |
 
 [1]: #id
 [2]: #quest

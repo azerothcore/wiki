@@ -10,8 +10,8 @@ Overrides the action taken when a player fails a [Warden check](warden_checks).
 
 | Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [wardenId][1] | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [action][2]   | TINYINT  | UNSIGNED   |     | YES  |         |       |         |
+| [wardenId][1] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
+| [action][2]   | TINYINT  | UNSIGNED   |     | YES  | NULL    |       |         |
 
 [1]: #wardenid
 [2]: #action

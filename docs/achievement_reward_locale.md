@@ -10,10 +10,10 @@ It is the table that stores the translations of the table `achievement_reward`, 
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
 | ------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]      | MEDIUMINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [ID][1]      | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [Locale][2]  | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Subject][3] | text       |            |     | YES  |         |       |         |
-| [Text][4]    | text       |            |     | YES  |         |       |         |
+| [Subject][3] | TEXT       |            |     | YES  | NULL    |       |         |
+| [Text][4]    | TEXT       |            |     | YES  | NULL    |       |         |
 
 [1]: #id
 [2]: #locale

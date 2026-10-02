@@ -8,13 +8,13 @@ Changes how often and when weapon enchantments proc their spell.
 
 **Table: spell\_enchant\_proc\_data's Structure**
 
-| Field             | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]        | INT   | UNSIGNED   |     | NO   | NULL    |       |         |
-| [customChance][2] | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [PPMChance][3]    | FLOAT | UNSIGNED   |     | NO   | 0       |       |         |
-| [procEx][4]       | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [attributeMask][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| Field              | Type  | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------ | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]         | INT   | UNSIGNED   | PRI | NO   |         |       |         |
+| [customChance][2]  | INT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [PPMChance][3]     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| [procEx][4]        | INT   | UNSIGNED   |     | NO   | 0       |       |         |
+| [attributeMask][5] | INT   | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #entry
 [2]: #customchance

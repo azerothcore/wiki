@@ -8,17 +8,17 @@ This table centralises creature and spell immunities. `creature_template.Creatur
 
 **Table: creature\_immunities's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id) | MEDIUMINT | UNSIGNED | PRI | NO | 0 | | Identifier |
-| [SchoolMask](#schoolmask) | TINYINT | UNSIGNED | | NO | 0 | | Bitmask of spell schools |
-| [DispelTypeMask](#dispeltypemask) | SMALLINT | UNSIGNED | | NO | 0 | | Dispel-type mask |
-| [MechanicsMask](#mechanicsmask) | BIGINT | UNSIGNED | | NO | 0 | | Bitmask of mechanic immunities |
-| [Effects](#effects) | MEDIUMTEXT | | | NO | (NULL) | | Effect ids or list blocked by this entry |
-| [Auras](#auras) | MEDIUMTEXT | | | NO | (NULL) | | Aura ids or list blocked by this entry |
-| [ImmuneAoE](#immuneaoe) | TINYINT(1) | | | NO | 0 | | Blocks area of effect spells (boolean) |
-| [ImmuneChain](#immunechain) | TINYINT(1) | | | NO | 0 | | Blocks chain effects (boolean) |
-| [Comment](#comment) | MEDIUMTEXT | | | NO | (NULL) | | Free-text description |
+| Field                             | Type       | Attributes | Key | Null | Default | Extra | Comment                                  |
+| --------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------- |
+| [ID](#id)                         | INT        | SIGNED     | PRI | NO   |         |       | Identifier                               |
+| [SchoolMask](#schoolmask)         | TINYINT    | SIGNED     |     | NO   | 0       |       | Bitmask of spell schools                 |
+| [DispelTypeMask](#dispeltypemask) | SMALLINT   | SIGNED     |     | NO   | 0       |       | Dispel-type mask                         |
+| [MechanicsMask](#mechanicsmask)   | BIGINT     | SIGNED     |     | NO   | 0       |       | Bitmask of mechanic immunities           |
+| [Effects](#effects)               | MEDIUMTEXT |            |     | NO   |         |       | Effect ids or list blocked by this entry |
+| [Auras](#auras)                   | MEDIUMTEXT |            |     | NO   |         |       | Aura ids or list blocked by this entry   |
+| [ImmuneAoE](#immuneaoe)           | TINYINT(1) | SIGNED     |     | NO   | 0       |       | Blocks area of effect spells (boolean)   |
+| [ImmuneChain](#immunechain)       | TINYINT(1) | SIGNED     |     | NO   | 0       |       | Blocks chain effects (boolean)           |
+| [Comment](#comment)               | MEDIUMTEXT |            |     | NO   |         |       | Free-text description                    |
 
 **Description of the table's fields**
 

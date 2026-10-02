@@ -14,7 +14,7 @@ Notes: The table doesn't affect persistent area auras stacking or passive auras 
 | --------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
 | [group\_id](#groupid)       | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
 | [stack\_rule](#stackrule)   | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
-| [description](#description) | VARCHAR(150) |            |     | NO   |         |       |         |
+| [description](#description) | VARCHAR(150) |            |     | NO   | ''      |       |         |
 
 **Description of the table's fields**
 

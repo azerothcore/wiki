@@ -8,10 +8,10 @@ This table controls the minimum skill level required in fishing to fish in a cer
 
 **Table: skill\_fishing\_base\_level's Structure**
 
-| Field      | Type         | Attributes | Key | Null | Default | Extra | Comment                      |
-|------------|--------------|------------|-----|------|---------|-------|------------------------------|
-| [entry][1] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Area identifier              |
-| [skill][2] | SMALLINT  | SIGNED     |     | NO   | 0       |       | Base skill level requirement |
+| Field      | Type     | Attributes | Key | Null | Default | Extra | Comment                      |
+| ---------- | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------- |
+| [entry][1] | INT      | UNSIGNED   | PRI | NO   | 0       |       | Area identifier              |
+| [skill][2] | SMALLINT | SIGNED     |     | NO   | 0       |       | Base skill level requirement |
 
 [1]: #entry
 [2]: #skill

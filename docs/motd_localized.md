@@ -6,11 +6,11 @@
 
 **Table: motd\_localized's Structure**
 
-| Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [realmid][1] | INT      | SIGNED     | PRI | NO   |         |       |         |
-| [locale][2]  | VARCHAR(4) |          |     | NO   |         |       |         |
-| [text][3]    | LONGTEXT |            |     | YES   | NULL |       |         |
+| Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
+| ------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [realmid][1] | INT        | SIGNED     | PRI | NO   |         |       |         |
+| [locale][2]  | VARCHAR(4) |            | PRI | NO   |         |       |         |
+| [text][3]    | LONGTEXT   |            |     | YES  | NULL    |       |         |
 
 
 [1]: #realmid

@@ -8,22 +8,22 @@ This table holds information about menu options a gossip NPC can have. Example
 
 **Table: gossip\_menu\_option's Structure**
 
-| Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [MenuID][1]                | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionID][2]              | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionIcon][3]            | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionText][4]            | text      |            |     | YES  | NULL    |       |         |
-| [OptionBroadcastTextID][5] | MEDIUMINT |            |     | NO   |         |       |         |
-| [OptionType][6]            | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [OptionNpcFlag][7]         | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [ActionMenuID][8]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [ActionPoiID][9]           | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [BoxCoded][10]             | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [BoxMoney][11]             | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [BoxText][12]              | text      |            |     | YES  | NULL    |       |         |
-| [BoxBroadcastTextID][13]   | MEDIUMINT |            |     | NO   |         |       |         |
-| [VerifiedBuild][14]        | SMALLINT  |            |     | NO   |         |       |         |
+| Field                      | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [MenuID][1]                | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [OptionID][2]              | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [OptionIcon][3]            | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [OptionText][4]            | TEXT     |            |     | YES  | NULL    |       |         |
+| [OptionBroadcastTextID][5] | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [OptionType][6]            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [OptionNpcFlag][7]         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ActionMenuID][8]          | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ActionPoiID][9]           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [BoxCoded][10]             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [BoxMoney][11]             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [BoxText][12]              | TEXT     |            |     | YES  | NULL    |       |         |
+| [BoxBroadcastTextID][13]   | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [VerifiedBuild][14]        | INT      | SIGNED     |     | YES  | NULL    |       |         |
 
 [1]: #menuid
 [2]: #optionid

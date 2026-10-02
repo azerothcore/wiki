@@ -8,12 +8,12 @@
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [time][1]        | DATATIME | SIGNED     |     | NO   |         |       |         |
+| [time][1]        | DATETIME |            |     | NO   |         |       |         |
 | [map][2]         | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
 | [difficulty][3]  | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
 | [creditType][4]  | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
 | [creditEntry][5] | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [playersInfo][6] | TEXT     | SIGNED     |     | NO   |         |       |         |
+| [playersInfo][6] | TEXT     |            |     | NO   |         |       |         |
 
 [1]: #time
 [2]: #map

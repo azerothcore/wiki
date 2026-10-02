@@ -10,9 +10,9 @@ The rewards of each [arena\_season\_reward\_group](arena_season_reward_group). I
 
 | Field                | Type | Attributes       | Key | Null | Default     | Extra | Comment                                                      |
 | -------------------- | ---- | ---------------- | --- | ---- | ----------- | ----- | ------------------------------------------------------------ |
-| [group_id](#groupid) | INT  |                  | PRI | NO   |             |       | id from arena_season_reward_group table                      |
+| [group_id](#groupid) | INT  | SIGNED           | PRI | NO   |             |       | id from arena_season_reward_group table                      |
 | [type](#type)        | ENUM | achievement,item | PRI | NO   | achievement |       |                                                              |
-| [entry](#entry)      | INT  | UNSIGNED         | PRI | NO   | pct         |       | For item type - item entry, for achievement - achevement id. |
+| [entry](#entry)      | INT  | UNSIGNED         | PRI | NO   |             |       | For item type - item entry, for achievement - achevement id. |
 
 
 **Description of the table's fields**

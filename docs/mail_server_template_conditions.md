@@ -10,13 +10,13 @@ Note: Entries in this table will be deleted automatically when the referenced en
 
 **Table: mail\_server\_template\_conditions's Structure**
 
-| Field                            | Type | Attributes | Key | Null | Default | Extra          | Comment |
-| -------------------------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [id](#id)                        | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templateID](#templateid)        | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [conditionType](#conditiontype)  | ENUM |            |     | NO   |         |                |         |
-| [conditionValue](#conditiontype) | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [conditionState](#conditiontype) | INT  | UNSIGNED   |     | NO   | 0       |                |         |
+| Field                            | Type | Attributes                                                                  | Key | Null | Default | Extra          | Comment |
+| -------------------------------- | ---- | --------------------------------------------------------------------------- | --- | ---- | ------- | -------------- | ------- |
+| [id](#id)                        | INT  | UNSIGNED                                                                    | PRI | NO   |         | AUTO_INCREMENT |         |
+| [templateID](#templateid)        | INT  | UNSIGNED                                                                    | MUL | NO   |         |                |         |
+| [conditionType](#conditiontype)  | ENUM | Level,PlayTime,Quest,Achievement,Reputation,Faction,Race,Class,AccountFlags |     | NO   |         |                |         |
+| [conditionValue](#conditiontype) | INT  | UNSIGNED                                                                    |     | NO   |         |                |         |
+| [conditionState](#conditiontype) | INT  | UNSIGNED                                                                    |     | NO   | 0       |                |         |
 
 **Description of the table's fields**
 

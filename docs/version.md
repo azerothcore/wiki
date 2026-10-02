@@ -8,12 +8,12 @@ Includes information on current core and database version.
 
 **Table: version's Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                         |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------- |
-| [core_version][1]   | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       | Core revision dumped at startup |
-| [core_revision][2]  | VARCHAR(120) |            |     | YES  | NULL    |       | Core revision hash              |
-| [db_version][3]     | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Version of world DB             |
-| [cache_id][5]       | INT          | SIGNED     |     | YES  | 0       |       | Minor DB version                |
+| Field              | Type         | Attributes | Key | Null | Default | Extra | Comment                          |
+| ------------------ | ------------ | ---------- | --- | ---- | ------- | ----- | -------------------------------- |
+| [core_version][1]  | VARCHAR(255) |            | PRI | NO   | ''      |       | Core revision dumped at startup. |
+| [core_revision][2] | VARCHAR(120) |            |     | YES  | NULL    |       | Core revision hash               |
+| [db_version][3]    | VARCHAR(120) |            |     | YES  | NULL    |       | Version of world DB.             |
+| [cache_id][5]      | INT          | SIGNED     |     | YES  | 0       |       | Minor DB version                 |
 
 [1]: #coreversion
 [2]: #corerevision

@@ -8,12 +8,12 @@ This table holds threat values on all spells that should either give or take awa
 
 **Table: spell\_threat's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       |                                           |
-| [flatMod][2]  | INT       | SIGNED     |     | YES  | NULL    |       |                                           |
-| [pctMod][3]   | FLOAT     |            |     | NO   | 1       |       | threat multiplier for damage/healing      |
-| [apPctMod][4] | FLOAT     |            |     | NO   | 0       |       | additional threat bonus from attack power |
+| Field         | Type  | Attributes | Key | Null | Default | Extra | Comment                                   |
+| ------------- | ----- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------- |
+| [entry][1]    | INT   | UNSIGNED   | PRI | NO   |         |       |                                           |
+| [flatMod][2]  | INT   | SIGNED     |     | YES  | NULL    |       |                                           |
+| [pctMod][3]   | FLOAT | SIGNED     |     | NO   | 1       |       | threat multiplier for damage/healing      |
+| [apPctMod][4] | FLOAT | SIGNED     |     | NO   | 0       |       | additional threat bonus from attack power |
 
 [1]: #entry
 [2]: #flatmod

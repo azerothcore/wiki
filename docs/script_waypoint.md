@@ -8,15 +8,15 @@ This table contains waypoint paths used by creatures driven by scripted AI (`Cre
 
 **Table: script\_waypoint's Structure**
 
-| Field                             | Type | Attributes | Key | Null | Default |
-| --------------------------------- | ---- | ---------- | --- | ---- | ------- |
-| [entry](#entry)                   | INT  | UNSIGNED   | PRI | NO   | 0       |
-| [pointid](#pointid)               | INT  | UNSIGNED   | PRI | NO   | 0       |
-| [location\_x](#locationx)         | FLOAT |           |     | NO   | 0       |
-| [location\_y](#locationy)         | FLOAT |           |     | NO   | 0       |
-| [location\_z](#locationz)         | FLOAT |           |     | NO   | 0       |
-| [waittime](#waittime)             | INT  | UNSIGNED   |     | NO   | 0       |
-| [point\_comment](#pointcomment)   | TEXT |            |     | YES  | NULL    |
+| Field                           | Type  | Attributes | Key | Null | Default | Extra | Comment                 |
+| ------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [entry](#entry)                 | INT   | UNSIGNED   | PRI | NO   | 0       |       | creature_template entry |
+| [pointid](#pointid)             | INT   | UNSIGNED   | PRI | NO   | 0       |       |                         |
+| [location\_x](#locationx)       | FLOAT | SIGNED     |     | NO   | 0       |       |                         |
+| [location\_y](#locationy)       | FLOAT | SIGNED     |     | NO   | 0       |       |                         |
+| [location\_z](#locationz)       | FLOAT | SIGNED     |     | NO   | 0       |       |                         |
+| [waittime](#waittime)           | INT   | UNSIGNED   |     | NO   | 0       |       | waittime in millisecs   |
+| [point\_comment](#pointcomment) | TEXT  |            |     | YES  | NULL    |       |                         |
 
 **Description of the table's fields**
 

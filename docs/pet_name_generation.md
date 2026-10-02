@@ -8,12 +8,12 @@ This table holds pieces of names (first and last half) that are use for pet name
 
 **Table: pet\_name\_generation's Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra          | Comment |
-| ---------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    | Auto increment |         |
-| [word][2]  | tinytext  | SIGNED     |     | NO   | NULL    |                |         |
-| [entry][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                |         |
-| [half][4]  | TINYINT   | SIGNED     |     | NO   | 0       |                |         |
+| Field      | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ---------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [id][1]    | INT      | UNSIGNED   | PRI | NO   |         |       |         |
+| [word][2]  | TINYTEXT |            |     | NO   |         |       |         |
+| [entry][3] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [half][4]  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #id
 [2]: #word

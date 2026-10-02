@@ -8,8 +8,8 @@ Basically all item changes made when player changes faction.
 
 **Table: player\_factionchange\_items's Structure**
 
-| Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| Field                 | Type | Attributes | Key | Null | Default | Extra | Comment |
+| --------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [alliance_id][2]      | INT  | UNSIGNED   | PRI | NO   |         |       |         |
 | [alliance_comment][3] | TEXT |            |     | NO   |         |       |         |
 | [horde_id][5]         | INT  | UNSIGNED   | PRI | NO   |         |       |         |
