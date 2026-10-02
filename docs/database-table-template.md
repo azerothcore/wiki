@@ -9,8 +9,8 @@ A table page has these parts, in this order:
 1. **Title**: the table name exactly as it is in the database, with underscores escaped (`# creature\_addon`).
 2. **Back link**: a link to the database the table belongs to: [Auth](database-auth), [Characters](database-characters) or [World](database-world).
 3. **Summary**: a short description of what the table is for and how the core uses it.
-4. **Table Structure**: one row per column, with the column name linking to its description below. Copy the type, attributes, key, null and default values from the table's `CREATE TABLE` in the core, and keep the columns in the same order.
-5. **Description of the fields**: one `###` heading per column, in the same order as the structure table.
+4. **Table: table\_name's Structure**: one row per column, with the column name linking to its description below. Copy the type, attributes, key, null and default values from the table's `CREATE TABLE` in the core, and keep the columns in the same order.
+5. **Description of the table's fields**: one `###` heading per column, in the same order as the structure table.
 
 ## Describing the fields
 
@@ -34,7 +34,7 @@ Copy this into the new page and replace the placeholders.
 
 What the table is for and how the core uses it.
 
-**Table Structure**
+**Table: table\_name's Structure**
 
 | Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -42,7 +42,7 @@ What the table is for and how the core uses it.
 | [Name](#name)          | VARCHAR(50) |            |     | NO   |         |       |         |
 | [some_flag](#someflag) | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 
