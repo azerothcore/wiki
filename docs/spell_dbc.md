@@ -569,19 +569,27 @@ Not used by the core.
 
 ### Name\_Lang
 
-`Name_Lang_enUS` to `Name_Lang_Unk`, one column per client locale, and `Name_Lang_Mask`. The name of the spell. The mask is not used by the core.
+`Name_Lang_enUS` to `Name_Lang_Unk` and `Name_Lang_Mask`. The name of the spell. The mask is not used by the core.
+
+The text columns are the 16 locale slots of the file. The core reads them by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Name_Lang_enUS` = enUS, `Name_Lang_enGB` = koKR, `Name_Lang_koKR` = frFR, `Name_Lang_frFR` = deDE, `Name_Lang_deDE` = zhCN, `Name_Lang_enCN` = zhTW, `Name_Lang_zhCN` = esES, `Name_Lang_enTW` = esMX, `Name_Lang_zhTW` = ruRU. The remaining text columns, `Name_Lang_esES` to `Name_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### NameSubtext\_Lang
 
 `NameSubtext_Lang_enUS` to `NameSubtext_Lang_Unk` and `NameSubtext_Lang_Mask`. The rank text of the spell, for example "Rank 1". The mask is not used by the core.
 
+The text columns are the 16 locale slots of the file. The core reads them by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `NameSubtext_Lang_enUS` = enUS, `NameSubtext_Lang_enGB` = koKR, `NameSubtext_Lang_koKR` = frFR, `NameSubtext_Lang_frFR` = deDE, `NameSubtext_Lang_deDE` = zhCN, `NameSubtext_Lang_enCN` = zhTW, `NameSubtext_Lang_zhCN` = esES, `NameSubtext_Lang_enTW` = esMX, `NameSubtext_Lang_zhTW` = ruRU. The remaining text columns, `NameSubtext_Lang_esES` to `NameSubtext_Lang_Unk`, are not supported in 3.3.5a and are not used.
+
 ### Description\_Lang
 
 `Description_Lang_enUS` to `Description_Lang_Unk` and `Description_Lang_Mask`. The description of the spell. Not used by the core.
 
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Description_Lang_enUS` = enUS, `Description_Lang_enGB` = koKR, `Description_Lang_koKR` = frFR, `Description_Lang_frFR` = deDE, `Description_Lang_deDE` = zhCN, `Description_Lang_enCN` = zhTW, `Description_Lang_zhCN` = esES, `Description_Lang_enTW` = esMX, `Description_Lang_zhTW` = ruRU. The remaining text columns, `Description_Lang_esES` to `Description_Lang_Unk`, are not supported in 3.3.5a and are not used.
+
 ### AuraDescription\_Lang
 
 `AuraDescription_Lang_enUS` to `AuraDescription_Lang_Unk` and `AuraDescription_Lang_Mask`. The tooltip of the aura. Not used by the core.
+
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `AuraDescription_Lang_enUS` = enUS, `AuraDescription_Lang_enGB` = koKR, `AuraDescription_Lang_koKR` = frFR, `AuraDescription_Lang_frFR` = deDE, `AuraDescription_Lang_deDE` = zhCN, `AuraDescription_Lang_enCN` = zhTW, `AuraDescription_Lang_zhCN` = esES, `AuraDescription_Lang_enTW` = esMX, `AuraDescription_Lang_zhTW` = ruRU. The remaining text columns, `AuraDescription_Lang_esES` to `AuraDescription_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### ManaCostPct
 

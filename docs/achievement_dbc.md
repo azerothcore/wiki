@@ -99,11 +99,15 @@ ID of the achievement this one follows in a series. Not used by the core.
 
 ### Title\_Lang
 
-`Title_Lang_enUS` to `Title_Lang_Unk`, one column per client locale, and `Title_Lang_Mask`. The name of the achievement. The mask is not used by the core.
+`Title_Lang_enUS` to `Title_Lang_Unk` and `Title_Lang_Mask`. The name of the achievement. The mask is not used by the core.
+
+The text columns are the 16 locale slots of the file. The core reads them by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Title_Lang_enUS` = enUS, `Title_Lang_enGB` = koKR, `Title_Lang_koKR` = frFR, `Title_Lang_frFR` = deDE, `Title_Lang_deDE` = zhCN, `Title_Lang_enCN` = zhTW, `Title_Lang_zhCN` = esES, `Title_Lang_enTW` = esMX, `Title_Lang_zhTW` = ruRU. The remaining text columns, `Title_Lang_esES` to `Title_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### Description\_Lang
 
 `Description_Lang_enUS` to `Description_Lang_Unk` and `Description_Lang_Mask`. The description of the achievement. Not used by the core.
+
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Description_Lang_enUS` = enUS, `Description_Lang_enGB` = koKR, `Description_Lang_koKR` = frFR, `Description_Lang_frFR` = deDE, `Description_Lang_deDE` = zhCN, `Description_Lang_enCN` = zhTW, `Description_Lang_zhCN` = esES, `Description_Lang_enTW` = esMX, `Description_Lang_zhTW` = ruRU. The remaining text columns, `Description_Lang_esES` to `Description_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### Category
 
@@ -139,6 +143,8 @@ ID from SpellIcon.dbc of the achievement's icon. Not used by the core.
 ### Reward\_Lang
 
 `Reward_Lang_enUS` to `Reward_Lang_Unk` and `Reward_Lang_Mask`. The reward text, for example "Reward: Title - Explorer". Not used by the core.
+
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Reward_Lang_enUS` = enUS, `Reward_Lang_enGB` = koKR, `Reward_Lang_koKR` = frFR, `Reward_Lang_frFR` = deDE, `Reward_Lang_deDE` = zhCN, `Reward_Lang_enCN` = zhTW, `Reward_Lang_zhCN` = esES, `Reward_Lang_enTW` = esMX, `Reward_Lang_zhTW` = ruRU. The remaining text columns, `Reward_Lang_esES` to `Reward_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### Minimum\_Criteria
 

@@ -72,71 +72,71 @@ ID references to the [itemset_dbc](#id) entries.
 
 ### Name_Lang_enUS
 
-Presumed reference name.
+The name of the item set in the enUS locale. The core reads the locale columns by position, not by name, and this is column 1 of the 16, which is the slot for enUS.
 
 ### Name_Lang_enGB
 
-Presumed reference name.
+The name of the item set in the koKR locale. The core reads the locale columns by position, not by name, and this is column 2 of the 16, which is the slot for koKR.
 
 ### Name_Lang_koKR
 
-Presumed reference name.
+The name of the item set in the frFR locale. The core reads the locale columns by position, not by name, and this is column 3 of the 16, which is the slot for frFR.
 
 ### Name_Lang_frFR
 
-Presumed reference name.
+The name of the item set in the deDE locale. The core reads the locale columns by position, not by name, and this is column 4 of the 16, which is the slot for deDE.
 
 ### Name_Lang_deDE
 
-Presumed reference name.
+The name of the item set in the zhCN locale. The core reads the locale columns by position, not by name, and this is column 5 of the 16, which is the slot for zhCN.
 
 ### Name_Lang_enCN
 
-Presumed reference name.
+The name of the item set in the zhTW locale. The core reads the locale columns by position, not by name, and this is column 6 of the 16, which is the slot for zhTW.
 
 ### Name_Lang_zhCN
 
-Presumed reference name.
+The name of the item set in the esES locale. The core reads the locale columns by position, not by name, and this is column 7 of the 16, which is the slot for esES.
 
 ### Name_Lang_enTW
 
-Presumed reference name.
+The name of the item set in the esMX locale. The core reads the locale columns by position, not by name, and this is column 8 of the 16, which is the slot for esMX.
 
 ### Name_Lang_zhTW
 
-Presumed reference name.
+The name of the item set in the ruRU locale. The core reads the locale columns by position, not by name, and this is column 9 of the 16, which is the slot for ruRU.
 
 ### Name_Lang_esES
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_esMX
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_ruRU
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_ptPT
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_ptBR
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_itIT
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_Unk
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_Mask
 
-Presumed reference ID for the Language Mask.
+The locale mask of the name. Not used by the core.
 
 ### ItemID_1
 
