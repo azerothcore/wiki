@@ -4,6 +4,8 @@
 
 **The \`corpse\` table**
 
+Holds the corpses of dead player characters that are in the world.
+
 **Table: corpse's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                            |

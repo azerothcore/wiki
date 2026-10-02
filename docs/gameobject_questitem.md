@@ -4,6 +4,8 @@
 
 **The \`gameobject\_questitem\` table**
 
+Holds the quest items a gameobject can drop, so the client can show them in the gameobject's tooltip.
+
 **Table: gameobject\_questitem's Structure**
 
 | Field                               | Type | Attributes | Key | Null | Default | Extra | Comment |

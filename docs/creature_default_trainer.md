@@ -4,6 +4,8 @@
 
 **The \`creature\_default\_trainer\` table**
 
+Links a creature to the trainer in the [trainer](trainer) table that it uses.
+
 **Table: creature\_default\_trainer's Structure**
 
 | Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |

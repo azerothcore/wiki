@@ -32,7 +32,7 @@ Display ID from [CreatureDisplayInfo.dbc](https://wowdev.wiki/DB/CreatureDispla
 
 ### BoundingRadius
 
-This field is unused. It's purpose is currently unknown. It may or may not be linked to path-finding.
+The bounding radius of the model. The core multiplies it by the creature's scale and sends the result to the client as the unit's bounding radius.
 
 ### CombatReach
 

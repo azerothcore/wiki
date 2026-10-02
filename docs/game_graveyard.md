@@ -4,6 +4,8 @@
 
 **The \`game\_graveyard\` table**
 
+Holds the graveyard locations: map and coordinates.
+
 **Table: game\_graveyard's Structure**
 
 | Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |

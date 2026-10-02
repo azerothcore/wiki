@@ -4,6 +4,8 @@
 
 **The \`game\_event\_condition\_save\` table**
 
+Stores the saved progress of game event conditions.
+
 **Table: game\_event\_condition\_save's Structure**
 
 | Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |

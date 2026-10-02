@@ -4,6 +4,8 @@
 
 **The \`pet\_aura\` table**
 
+Stores the auras a pet had when it was saved, so they can be restored when the pet is loaded again.
+
 **Table: pet\_aura's Structure**
 
 | Field                | Type    | Attributes | Key | Null | Default | Extra | Comment                       |

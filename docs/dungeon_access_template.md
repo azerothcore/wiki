@@ -4,6 +4,8 @@
 
 **The \`dungeon\_access\_template\` table**
 
+Holds the dungeons and difficulties that have entry limits, with their level and item level limits. The detailed requirements are in [dungeon_access_requirements](dungeon_access_requirements).
+
 **Table: dungeon\_access\_template's Structure**
 
 | Field                   | Type         | Attributes | Key | Null | Default | Extra          | Comment                                                                                                                       |

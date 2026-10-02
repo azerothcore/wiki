@@ -4,6 +4,8 @@
 
 **The \`bugreport\` table**
 
+Stores the bug reports and suggestions that players submit in game, together with a state, an assignee and a comment for following them up.
+
 **Table: bugreport's Structure**
 
 | Field                 | Type         | Attributes | Key | Null | Default | Extra          | Comment    |

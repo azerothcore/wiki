@@ -4,6 +4,8 @@
 
 **The \`autobroadcast\_locale\` table**
 
+Holds translations of the messages in [autobroadcast](autobroadcast), one row per realm, message and client locale.
+
 **Table: autobroadcast\_locale's Structure**
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |

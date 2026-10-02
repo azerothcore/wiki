@@ -4,6 +4,8 @@
 
 **The \`motd\` table**
 
+Holds the message of the day for each realm. A realm id of -1 applies to all realms.
+
 **Table: motd's Structure**
 
 | Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |

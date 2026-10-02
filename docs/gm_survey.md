@@ -4,6 +4,8 @@
 
 **The \`gm\_survey\` table**
 
+Stores the GM surveys players fill in after a ticket is closed. Surveys are only offered when `GM.TicketSystem.ChanceOfGMSurvey` in worldserver.conf is above 0.
+
 **Table: gm\_survey's Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |

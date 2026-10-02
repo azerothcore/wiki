@@ -4,6 +4,8 @@
 
 **The \`gameobject\_addon\` table**
 
+Holds additional data for individual gameobject spawns.
+
 **Table: gameobject\_addon's Structure**
 
 | Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |

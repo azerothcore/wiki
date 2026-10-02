@@ -4,6 +4,8 @@
 
 **The \`calendar\_invites\` table**
 
+Holds the invitations to the events in [calendar_events](calendar_events) and each invited player's response.
+
 **Table: calendar\_invites's Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |

@@ -4,6 +4,8 @@
 
 **The \`guild\_member\_withdraw\` table**
 
+Holds how much each guild member has withdrawn from the guild bank today, per tab and in money.
+
 **Table: guild\_member\_withdraw's Structure**
 
 | Field      | Type | Attributes | Key | Null | Default | Extra | Comment |

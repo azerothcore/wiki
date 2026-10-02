@@ -4,6 +4,8 @@
 
 **The \`game\_event\_save\` table**
 
+Stores the saved state and next start time of world events, the game events that progress through conditions.
+
 **Table: game\_event\_save's Structure**
 
 | Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |

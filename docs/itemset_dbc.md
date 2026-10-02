@@ -4,6 +4,8 @@
 
 **The \`itemset\_dbc\` table**
 
+Holds rows that override or add to the data the core loads from ItemSet.dbc.
+
 **Table: itemset\_dbc's Structure**
 
 | Field                                   | Type         | Attributes | Key | Null | Default | Extra | Comment |

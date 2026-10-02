@@ -4,6 +4,8 @@
 
 **The \`motd\_localized\` table**
 
+Holds translations of the message of the day in [motd](motd), per realm and client locale.
+
 **Table: motd\_localized's Structure**
 
 | Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |

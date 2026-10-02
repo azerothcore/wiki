@@ -4,6 +4,8 @@
 
 **The \`channels\_rights\` table**
 
+Holds settings applied to chat channels by name: flags, speak delay, join message, delay message and moderators.
+
 **Table: channels\_rights's Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |

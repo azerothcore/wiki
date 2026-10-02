@@ -4,6 +4,8 @@
 
 **The \`banned\_addons\` table**
 
+Holds the client interface addons that are banned on the server.
+
 **Table: banned\_addons's Structure**
 
 | Field          | Type         | Attributes | Key | Null | Default           | Extra                       | Comment |

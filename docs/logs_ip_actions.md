@@ -4,6 +4,8 @@
 
 **The \`logs\_ip\_actions\` table**
 
+Logs the IP address used for account and character actions. It is only filled when `Allow.IP.Based.Action.Logging` is enabled in worldserver.conf.
+
 **Table: logs\_ip\_actions's Structure**
 
 | Field               | Type        | Attributes | Key | Null | Default           | Extra          | Comment                       |

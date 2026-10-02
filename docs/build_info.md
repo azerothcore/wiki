@@ -4,6 +4,8 @@
 
 **The \`build\_info\` table**
 
+Holds data about each client build. The core uses it to check whether a connecting client is supported.
+
 **Table: build\_info's Structure**
 
 | Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment    |

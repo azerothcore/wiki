@@ -4,6 +4,8 @@
 
 **The \`pool\_quest\_save\` table**
 
+Stores which quests of each quest pool are currently active.
+
 **Table: pool\_quest\_save's Structure**
 
 | Field         | Type | Attributes | Key | Null | Default | Extra | Comment |

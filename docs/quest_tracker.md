@@ -4,6 +4,8 @@
 
 **The \`quest\_tracker\` table**
 
+Records when characters accept, complete and abandon quests, to help find bugged quests. It is only filled when `Quests.EnableQuestTracker` is enabled in worldserver.conf.
+
 **Table: quest\_tracker's Structure**
 
 | Field                    | Type         | Attributes | Key | Null | Default | Extra | Comment |

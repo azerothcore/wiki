@@ -4,6 +4,8 @@
 
 **The \`character\_achievement\_progress\` table**
 
+Holds each character's progress on achievement criteria.
+
 **Table: character\_achievement\_progress's Structure**
 
 | Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |

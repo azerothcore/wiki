@@ -4,6 +4,8 @@
 
 **The \`guild\_bank\_eventlog\` table**
 
+Logs player actions on the guild bank. The entries are shown in the guild bank log in game.
+
 **Table: guild\_bank\_eventlog's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment                                     |

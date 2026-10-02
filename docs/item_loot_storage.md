@@ -4,6 +4,8 @@
 
 **The \`item\_loot\_storage\` table**
 
+Stores the loot that is still inside item containers that have been opened but not fully looted.
+
 **Table: item\_loot\_storage's Structure**
 
 | Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |

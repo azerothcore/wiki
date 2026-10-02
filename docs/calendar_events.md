@@ -4,6 +4,8 @@
 
 **The \`calendar\_events\` table**
 
+Holds the events players create in the in-game calendar.
+
 **Table: calendar\_events's Structure**
 
 | Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |

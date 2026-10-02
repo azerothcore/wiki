@@ -4,6 +4,8 @@
 
 **The \`quest\_offer\_reward\_locale\` table**
 
+Holds translations of the reward text in [quest_offer_reward](quest_offer_reward).
+
 **Table: quest\_offer\_reward\_locale's Structure**
 
 | Field              | Type       | Attributes | Key | Null | Default | Extra | Comment |

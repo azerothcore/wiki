@@ -4,6 +4,8 @@
 
 **The \`quest\_mail\_sender\` table**
 
+Holds an alternative sender for a quest's reward mail. Without a row here, the mail comes from the quest giver.
+
 **Table: quest\_mail\_sender's Structure**
 
 | Field                      | Type | Attributes | Key | Null | Default | Extra | Comment |

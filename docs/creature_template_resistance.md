@@ -4,6 +4,8 @@
 
 **The \`creature\_template\_resistance\` table**
 
+Holds the resistance of a creature template to each spell school.
+
 **Table: creature\_template\_resistance's Structure**
 
 | Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |

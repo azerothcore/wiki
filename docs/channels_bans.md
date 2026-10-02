@@ -4,6 +4,8 @@
 
 **The \`channels\_bans\` table**
 
+Holds the players banned from chat channels, with the time each ban expires. The core removes expired bans.
+
 **Table: channels\_bans's Structure**
 
 | Field           | Type | Attributes | Key | Null | Default | Extra | Comment |

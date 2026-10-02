@@ -4,6 +4,8 @@
 
 **The \`log\_arena\_memberstats\` table**
 
+Logs the result of each player in the arena matches recorded in [log_arena_fights](log_arena_fights).
+
 **Table: log\_arena\_memberstats's Structure**
 
 | Field          | Type     | Attributes | Key | Null | Default | Extra | Comment |

@@ -4,6 +4,8 @@
 
 **The \`character\_entry\_point\` table**
 
+Stores where a character was before the core teleported it into a battleground or a Dungeon Finder dungeon: position, map, taxi path and mount. The core uses it to send the character back afterwards.
+
 **Table: character\_entry\_point's Structure**
 
 | Field           | Type  | Attributes | Key | Null | Default | Extra | Comment                  |

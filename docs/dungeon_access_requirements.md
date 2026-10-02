@@ -4,6 +4,8 @@
 
 **The \`dungeon\_access\_requirements\` table**
 
+Holds the requirements a player must meet to enter a dungeon listed in [dungeon_access_template](dungeon_access_template).
+
 **Table: dungeon\_access\_requirements's Structure**
 
 | Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                                                  |

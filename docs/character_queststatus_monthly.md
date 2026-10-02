@@ -4,6 +4,8 @@
 
 **The \`character\_queststatus\_monthly\` table**
 
+Holds the monthly quests each character has completed in the current month.
+
 **Table: character\_queststatus\_monthly's Structure**
 
 | Field      | Type | Attributes | Key | Null | Default | Extra | Comment                  |

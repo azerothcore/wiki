@@ -4,6 +4,8 @@
 
 **The \`creature\_template\_spell\` table**
 
+Holds the spells assigned to a creature template. They are used by the creature's AI, or by a player who controls the creature.
+
 **Table: creature\_template\_spell's Structure**
 
 | Field              | Type    | Attributes | Key | Null | Default | Extra | Comment |

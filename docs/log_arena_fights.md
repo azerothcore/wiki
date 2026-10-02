@@ -4,6 +4,8 @@
 
 **The \`log\_arena\_fights\` table**
 
+Logs each arena match: time, type, duration, the two teams and their rating changes.
+
 **Table: log\_arena\_fights's Structure**
 
 | Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment |

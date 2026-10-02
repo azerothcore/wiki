@@ -4,6 +4,8 @@
 
 **The \`log\_encounter\` table**
 
+Logs completed encounters: time, map, difficulty, the credit given and the players involved.
+
 **Table: log\_encounter's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |

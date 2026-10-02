@@ -4,6 +4,8 @@
 
 **The \`guild\_eventlog\` table**
 
+Logs guild events. The entries are shown in the guild log in game.
+
 **Table: guild\_eventlog's Structure**
 
 | Field            | Type    | Attributes | Key | Null | Default | Extra | Comment                                     |

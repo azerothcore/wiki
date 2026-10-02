@@ -4,6 +4,8 @@
 
 **The \`outdoorpvp\_template\` table**
 
+Links each outdoor PvP zone type to the script that handles it.
+
 **Table: outdoorpvp\_template's Structure**
 
 | Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |

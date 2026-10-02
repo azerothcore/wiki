@@ -2,6 +2,8 @@
 
 [<-Back-to:World](database-world)
 
+Holds translations of the completion text in [quest_request_items](quest_request_items).
+
 **Table: quest\_request\_items\_locale's Structure**
 
 | Field               | Type       | Attributes | Key | Null | Default | Extra | Comment |

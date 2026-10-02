@@ -4,6 +4,8 @@
 
 **The \`itemextendedcost\_dbc\` table**
 
+Holds rows that override or add to the data the core loads from ItemExtendedCost.dbc.
+
 **Table: itemextendedcost\_dbc's Structure**
 
 | Field                                       | Type | Attributes | Key | Null | Default | Extra | Comment |

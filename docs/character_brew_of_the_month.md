@@ -4,6 +4,8 @@
 
 **The \`character\_brew\_of\_the\_month\` table**
 
+Stores, for each character, the last Brew of the Month event the core recorded for it.
+
 **Table: character\_brew\_of\_the\_month's Structure**
 
 | Field            | Type | Attributes | Key | Null | Default | Extra | Comment |

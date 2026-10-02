@@ -4,6 +4,8 @@
 
 **The \`character\_pet\_declinedname\` table**
 
+Holds the declined (grammatical case) forms of pet names. The Russian client creates them when `DeclinedNames` is enabled in worldserver.conf, which is also the default when the realm zone is Russian.
+
 **Table: character\_pet\_declinedname's Structure**
 
 | Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |

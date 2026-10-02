@@ -4,6 +4,8 @@
 
 **The \`log\_money\` table**
 
+Logs money moved through mail, trade, the auction house and the guild bank, with the sender, the receiver, the amount and the type of transfer.
+
 **Table: log\_money's Structure**
 
 | Field                          | Type     | Attributes | Key | Null | Default | Extra | Comment                                              |

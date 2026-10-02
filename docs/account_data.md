@@ -40,4 +40,4 @@ Time of last modification in Unixtime.
 
 ### data
 
-No description can be written. You just must understand it's data.
+The data itself, as the client sent it. What it contains depends on [type](#type).

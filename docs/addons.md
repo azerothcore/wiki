@@ -4,6 +4,8 @@
 
 **The \`addons\` table**
 
+Holds the CRC of each standard Blizzard client addon the server knows about. The core checks the addons a client reports at login against it.
+
 **Table: addons's Structure**
 
 | Field     | Type         | Attributes | Key | Null | Default | Extra | Comment |
