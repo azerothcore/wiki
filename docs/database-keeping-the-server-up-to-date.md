@@ -34,9 +34,9 @@ The tool is part of the **tools** build list, so it can be compiled on its own:
 - `-DTOOLS_BUILD=db-only` builds `dbimport` and none of the other tools (the map/vmap/mmap extractors)
 - `-DAPPS_BUILD=none` skips the Authserver and Worldserver
 
-{% include tip.html content="TOOLS_BUILD defaults to `none`, so if you want the updater you have to ask for it explicitly. The full list of accepted values is `none`, `all`, `db-only` and `maps-only` for TOOLS_BUILD, and `none`, `all`, `auth-only` and `world-only` for APPS_BUILD." %}
+{% include tip.html content="TOOLS_BUILD defaults to <code>none</code>, so if you want the updater you have to ask for it explicitly. The full list of accepted values is <code>none</code>, <code>all</code>, <code>db-only</code> and <code>maps-only</code> for TOOLS_BUILD, and <code>none</code>, <code>all</code>, <code>auth-only</code> and <code>world-only</code> for APPS_BUILD." %}
 
-{% include important.html content="Module SQL files are only applied if the modules are present in the `modules/` folder when you run cmake, and are not disabled. Use the same MODULES value you use for your server build, otherwise the updater will not know about your modules." %}
+{% include important.html content="Module SQL files are only applied if the modules are present in the <code>modules/</code> folder when you run cmake, and are not disabled. Use the same MODULES value you use for your server build, otherwise the updater will not know about your modules." %}
 
 ### Using the Database Updater
 

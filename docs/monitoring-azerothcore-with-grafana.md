@@ -10,7 +10,7 @@ tableofcontents: 1
 
 2. [Grafana](https://grafana.com/) - graph and a dashboard builder for visualizing time series metrics.
 
-{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1. However, you can use [Chronograf](#additional-visualizations-and-metrics-collection) to visualize it, but you need to set that up yourself. " %}
+{% include note.html content="While we do support sending metrics, and connecting to Influx DB v2, our Grafana dashboard setups do not. Therefore, to visualize the data with Grafana you do need to run Infux DB v1. However, you can use <a href='#additional-visualizations-and-metrics-collection'>Chronograf</a> to visualize it, but you need to set that up yourself. " %}
 
 {% include note.html content="We do not support Influx DB v3." %}
 

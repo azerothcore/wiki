@@ -1,6 +1,6 @@
 # charsections\_dbc
 
-[`Back-to:DBC`](dbc-index)
+[<-Back-to:World](database-world)
 
 **The \`charsections\_dbc\` table**
 

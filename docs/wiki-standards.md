@@ -18,6 +18,78 @@ ALL FILES must be UTF-8 encoded to work on the wiki.
 
 TO ENSURE EASY MAINTENANCE, all files must be written in `markdown` format. HTML is not allowed!
 
+THE ONLY EXCEPTIONS are listed under [HTML EXCEPTIONS](#html-exceptions) below.
+
+## HTML EXCEPTIONS
+
+HTML IS ALLOWED ONLY in the cases below. Everywhere else use markdown: `**bold**`, not `<b>bold</b>`.
+
+### Notice boxes
+
+A NOTICE BOX is added with an include. There are four alerts and one callout:
+
+{% raw %}
+```
+{% include note.html content="Extra information the reader may want." %}
+{% include tip.html content="An optional shortcut or a better way to do something." %}
+{% include important.html content="Something the reader must know before going on." %}
+{% include warning.html content="Something that can break the server or lose data." %}
+{% include callout.html content="A highlighted block without a label." type="primary" %}
+```
+{% endraw %}
+
+THE CALLOUT `type` is one of `danger`, `default`, `primary`, `success`, `info` or `warning`. See [Wiki Alerts and Callouts](wiki-alerts-and-callouts) for how each one looks.
+
+THE TEXT in `content` is HTML, not markdown. Markdown written there is shown as plain characters, for example `**bold**` shows the asterisks. Use these tags instead:
+
+| To get       | Write                                   |
+| ------------ | --------------------------------------- |
+| Bold         | `<b>text</b>`                           |
+| Inline code  | `<code>text</code>`                     |
+| A link       | `<a href='page-name'>text</a>`          |
+| A line break | `<br/>`                                 |
+
+THE `content` VALUE is wrapped in double quotes, so it must not contain a double quote. Use single quotes for HTML attributes (`href='...'`) and `&quot;` for a quotation mark in the text.
+
+ONLY INLINE TAGS work in `content`. Paragraphs, lists, tables and code blocks do not. If a box needs them, use the long form described in [Wiki Alerts and Callouts](wiki-alerts-and-callouts).
+
+KEEP EACH INCLUDE on one line, with an empty line before and after it.
+
+### The help list
+
+THE STANDARD "still having problems" LIST is added with an include that takes no content:
+
+{% raw %}
+```
+{% include help.html %}
+```
+{% endraw %}
+
+### Line breaks in tables
+
+A TABLE CELL cannot contain a new line, so use `<br>` to break a line inside a cell.
+
+### Collapsible sections
+
+LONG OUTPUT OR OPTIONAL STEPS can be folded away with `<details>` and `<summary>`. Leave an empty line after the `<summary>` line and before `</details>`, so the markdown between them is rendered:
+
+```
+<details>
+<summary>Click to show the full log</summary>
+
+The folded content, written in markdown.
+
+</details>
+```
+
+### Images with a size
+
+USE MARKDOWN for images (`![description](url)`). Use `<img>` only when the image needs a fixed width or height, and always give it an `alt` text:
+
+```
+<img src="url" alt="description" width="400">
+```
+
 ## FILE HEADERS
 
 THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct info in the browser tab.)

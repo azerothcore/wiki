@@ -123,7 +123,7 @@ The following steps must be verified:
 
 1. Edit DataDir to the absolute or relative path of your folder. e.g, **/home/acore/azerothcore/data/** or **./data**
 
-{% include tip.html content="For most **worldserver.conf** setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
+{% include tip.html content="For most <b>worldserver.conf</b> setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 

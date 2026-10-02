@@ -1,8 +1,8 @@
 # summonproperties\_dbc
 
-[`Back-to:Spell Effects Reference`](spell-effects-reference)
+[<-Back-to:World](database-world)
 
-[`Back-to:DBC`](dbc-index)
+See also the [Spell Effects Reference](spell-effects-reference).
 
 **The \`summonproperties\_dbc\` table**
 
