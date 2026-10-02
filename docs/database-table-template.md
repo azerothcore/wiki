@@ -85,4 +85,4 @@ What the flag controls.
 | 2     | FLAG_TWO  | What this flag does. |
 ```
 
-After adding the page, add the table to the list on [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world).
+After adding the page, add the table to the list on [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world), and to the same database on the [Database Index](database-index).

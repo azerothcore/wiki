@@ -12,9 +12,10 @@ redirect_from: /documentation_index
 
 ## Database
 
-* [DB auth](database-auth)
-* [DB characters](database-characters)
-* [DB world](database-world)
+* [Database Index](database-index)
+  * [DB auth](database-auth)
+  * [DB characters](database-characters)
+  * [DB world](database-world)
 
 ## Documentation
 
@@ -98,4 +99,5 @@ redirect_from: /documentation_index
 
 * [Wiki Alerts and Callouts](wiki-alerts-and-callouts)
 * [Wiki Standards](wiki-standards)
+* [Database Table Template](database-table-template)
 * [Archive](archive)

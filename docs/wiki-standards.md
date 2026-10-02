@@ -98,7 +98,7 @@ THE FILE  SHOULD ALWAYS START WITH `# File Name`. (This is to display correct in
 
 ALL DATABASE TABLE FILES should be present in the correct DATABASE FILE.
 
-When adding/removing a table it should also be updated in `database-auth` `database-characters` `database-world`
+When adding/removing a table it should also be updated in `database-auth` `database-characters` `database-world` and in `database-index`
 
 ALL DATABASE TABLE FILES should follow the [Database Table Template](database-table-template), and every column should have a description.
 
