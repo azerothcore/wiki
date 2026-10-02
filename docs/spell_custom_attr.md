@@ -24,7 +24,7 @@ Spell ID. See [Spell.dbc](spell_dbc) .
 
 ### attributes
 
-Spell custom attributes from the enumeration SpellCustomAttributes in SpellInfo.h
+Spell custom attributes from the enumeration SpellCustomAttributes in [SpellInfo.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellInfo.h)
 
 | Attributes                                   | Flag       | Bit value  | Comment                                                               |
 | -------------------------------------------- | ---------- | ---------- | --------------------------------------------------------------------- |

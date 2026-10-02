@@ -486,7 +486,7 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 
 - If the creature or GO is inside a dungeon, set *event_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
 
-**In case of doubt about an *Event*, *Action_or _Target,_check source code (_src/server/game/AI/SmartScripts* files; mainly \*SmartScript.cpp**)
+**In case of doubt about an *Event*, *Action_or _Target,_check source code (_src/server/game/AI/SmartScripts* files; mainly \*[SmartScript.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/AI/SmartScripts/SmartScript.cpp)**)
 
 ### Cast Flags
 

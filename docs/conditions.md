@@ -651,7 +651,7 @@ Note: This condition controls visibility of creatures and game objects based on 
 
 **CONDITION\_WORLD\_SCRIPT = 103**
 
--   -   ConditionValue1: WorldStateCondition defined in WorldState.h
+-   -   ConditionValue1: WorldStateCondition defined in [WorldState.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/World/WorldState.h)
     -   ConditionValue2: state or 0 (WORLD_STATE_CONDITION_STATE_NONE)
     -   ConditionValue3: always 0
         *NOTE: condition is true if WorldState::IsConditionFulfilled returns true*

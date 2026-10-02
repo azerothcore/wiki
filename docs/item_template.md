@@ -6,7 +6,7 @@
 
 Holds information on every item that exists in the game. All items are created from their template stored in this table.
 
-(See additional information in the *ItemPrototype.h* file.)
+(See additional information in the *[ItemTemplate.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Item/ItemTemplate.h)* file.)
 
 | Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment             |
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------- |

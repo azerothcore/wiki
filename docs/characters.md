@@ -586,7 +586,7 @@ Stores the name of character if the character is deleted and CharDelete.Method i
 
 ### deleteDate
 
-Stores the date when the character was deleted and CharDelete.Method in worldserver.conf.dist is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
+Stores the date when the character was deleted and CharDelete.Method in [worldserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist) is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
 
 ### innTriggerId
 

@@ -340,7 +340,7 @@ Includes are written as a single block with no blank lines inside it, ordered as
 2. All other project headers, in alphabetical order.
 3. All library headers, in alphabetical order.
 
-ItemEnchantmentMgr.cpp example:
+[ItemEnchantmentMgr.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Item/ItemEnchantmentMgr.cpp) example:
 
 ```cpp
 #include "ItemEnchantmentMgr.h"   // The file's own header, first
@@ -356,11 +356,11 @@ ItemEnchantmentMgr.cpp example:
 #include <vector>
 ```
 
-Alphabetical ordering is case-sensitive (ASCII order): uppercase letters sort before lowercase. Above, `DBCStores.h` precedes `DatabaseEnv.h` because the uppercase `B` sorts before the lowercase `a`.
+Alphabetical ordering is case-sensitive (ASCII order): uppercase letters sort before lowercase. Above, [`DBCStores.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/DataStores/DBCStores.h) precedes [`DatabaseEnv.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/database/Database/DatabaseEnv.h) because the uppercase `B` sorts before the lowercase `a`.
 
 Project headers use quotes (`"..."`); library headers (C++ standard library, boost, etc.) use angle brackets (`<...>`). A third-party library bundled into the codebase, such as G3D, is the exception and uses quotes, but it still sorts with the library headers rather than with the project headers.
 
-WaypointDefines.h example:
+[WaypointDefines.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Movement/Waypoints/WaypointDefines.h) example:
 
 ```cpp
 #include "Define.h"          // project headers, alphabetically
@@ -371,7 +371,7 @@ WaypointDefines.h example:
 
 Conditionally compiled includes are the exception to the single-block rule. Keep every unconditional include together in one sorted block, then place `#if` / `#ifdef` guarded includes after it, separated by a blank line. Do not break up the sorted block to keep a guarded include next to a related one.
 
-Errors.cpp example (shortened):
+[Errors.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/common/Debugging/Errors.cpp) example (shortened):
 
 ```cpp
 #include "Errors.h"

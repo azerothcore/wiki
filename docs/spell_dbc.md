@@ -269,35 +269,35 @@ The mechanic of the spell, for example stun or root. Used for immunities and dim
 
 ### Attributes
 
-Flags from the `SpellAttr0` enum (`SPELL_ATTR0_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr0` enum (`SPELL_ATTR0_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx
 
-Flags from the `SpellAttr1` enum (`SPELL_ATTR1_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr1` enum (`SPELL_ATTR1_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx2
 
-Flags from the `SpellAttr2` enum (`SPELL_ATTR2_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr2` enum (`SPELL_ATTR2_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx3
 
-Flags from the `SpellAttr3` enum (`SPELL_ATTR3_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr3` enum (`SPELL_ATTR3_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx4
 
-Flags from the `SpellAttr4` enum (`SPELL_ATTR4_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr4` enum (`SPELL_ATTR4_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx5
 
-Flags from the `SpellAttr5` enum (`SPELL_ATTR5_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr5` enum (`SPELL_ATTR5_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx6
 
-Flags from the `SpellAttr6` enum (`SPELL_ATTR6_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr6` enum (`SPELL_ATTR6_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx7
 
-Flags from the `SpellAttr7` enum (`SPELL_ATTR7_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr7` enum (`SPELL_ATTR7_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### ShapeshiftMask
 
@@ -313,7 +313,7 @@ Bitmask of the shapeshift forms the caster can not be in to cast the spell. Uses
 
 ### Targets
 
-Flags for the kinds of targets the spell can be cast on (`TARGET_FLAG_*` in `SpellInfo.h`), for example a unit, an item or a location.
+Flags for the kinds of targets the spell can be cast on (`TARGET_FLAG_*` in [`SpellInfo.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellInfo.h)), for example a unit, an item or a location.
 
 ### TargetCreatureType
 
@@ -329,7 +329,7 @@ If 1, a player caster must face the target to cast the spell.
 
 ### CasterAuraState
 
-Aura state (`AURA_STATE_*` in `SharedDefines.h`) the caster must have to cast the spell.
+Aura state (`AURA_STATE_*` in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h)) the caster must have to cast the spell.
 
 ### TargetAuraState
 
@@ -373,11 +373,11 @@ Cooldown in milliseconds that is started for all spells in the same [Category](#
 
 ### InterruptFlags
 
-Flags for what interrupts the cast (`SPELL_INTERRUPT_FLAG_*` in `SpellDefines.h`), for example movement or taking damage.
+Flags for what interrupts the cast (`SPELL_INTERRUPT_FLAG_*` in [`SpellDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellDefines.h)), for example movement or taking damage.
 
 ### AuraInterruptFlags
 
-Flags for what removes the aura from the target (`AURA_INTERRUPT_FLAG_*` in `SpellDefines.h`).
+Flags for what removes the aura from the target (`AURA_INTERRUPT_FLAG_*` in [`SpellDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellDefines.h)).
 
 ### ChannelInterruptFlags
 
@@ -493,7 +493,7 @@ Mechanic of the effect. Overrides the spell's [Mechanic](#mechanic) for this eff
 
 ### ImplicitTargetA
 
-Target type of the effect (`TARGET_*` in `SharedDefines.h`), for example the caster or the selected target.
+Target type of the effect (`TARGET_*` in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h)), for example the caster or the selected target.
 
 ### ImplicitTargetB
 

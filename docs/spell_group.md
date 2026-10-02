@@ -23,7 +23,7 @@ Table used to group spells for varius checks in the core. One spell may be added
 Group identifier
 Rules of assigning id:
 
--   if group is going to be used in core code, use first avalible entry below 1000 and add enum value to SpellGroup enum in SpellMgr.h
+-   if group is going to be used in core code, use first avalible entry below 1000 and add enum value to SpellGroup enum in [SpellMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellMgr.h)
 -   if group is not going to be used in core code, use lowest avalible entry higher than 1000
 
 ### spell\_id

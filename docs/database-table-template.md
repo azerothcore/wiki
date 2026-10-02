@@ -40,7 +40,7 @@ The structure table always has these eight columns: Field, Type, Attributes, Key
 Tables whose name ends in `_dbc` hold rows that replace or add to the data the core loads from a client `.dbc` file. Their pages follow the same layout, with these additions:
 
 - The summary names the `.dbc` file the table belongs to.
-- Each description says whether the core reads the column. The format string of the file in `DBCfmt.h` shows this.
+- Each description says whether the core reads the column. The format string of the file in [`DBCfmt.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/DataStores/DBCfmt.h) shows this.
 - The 16 text columns of a localized field are read by position, not by name, and only the nine locales in the core's `LocaleConstant` list are supported in 3.3.5a. Say this in the description, because the column names suggest otherwise.
 
 ## Template
