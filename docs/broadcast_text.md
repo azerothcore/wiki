@@ -16,22 +16,22 @@ Its purpose is (will be) used as a globalized table containing the texts as ment
 
 **Table: broadcast\_text's Structure**
 
-| Field                     | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [LanguageID](#languageid) | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| [MaleText](#maletext)     | LONGTEXT |            |     | YES  | NULL    |       |         |
-| [FemaleText](#femaletext) | LONGTEXT |            |     | YES  | NULL    |       |         |
-| EmoteID1                  | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteID2                  | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteID3                  | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteDelay1               | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteDelay2               | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| EmoteDelay3               | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| SoundEntriesId            | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| EmotesID                  | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| Flags                     | INT      | SIGNED     |     | YES  | NULL    |       |         |
-| VerifiedBuild             | SMALLINT | SIGNED     |     | YES  | 0       |       |         |
+| Field                             | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| --------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)                         | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [LanguageID](#languageid)         | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [MaleText](#maletext)             | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [FemaleText](#femaletext)         | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [EmoteID1](#emoteid1-3)           | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [EmoteID2](#emoteid1-3)           | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [EmoteID3](#emoteid1-3)           | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [EmoteDelay1](#emotedelay1-3)     | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [EmoteDelay2](#emotedelay1-3)     | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [EmoteDelay3](#emotedelay1-3)     | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [SoundEntriesId](#soundentriesid) | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [EmotesID](#emotesid)             | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [Flags](#flags)                   | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)   | SMALLINT | SIGNED     |     | YES  | 0       |       |         |
 
 **Description of the table's fields**
 

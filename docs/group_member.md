@@ -24,11 +24,11 @@ This table holds info about group members.
 
 **Description of the table's fields**
 
-#### guid
+### guid
 
 GUID of the group. See [groups.guid](groups#guid).
 
-#### memberGuid
+### memberGuid
 
 GUID of the character member of the group. See [characters.guid](characters#guid).
 

@@ -23,35 +23,35 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 
 **Description of the table's fields**
 
-#### entry
+### entry
 
 Path ID. Standard way of assigning an ID is [creature\_template.entry](creature_template#entry) * 100, but any random number can be used here.
 
-#### pointid
+### pointid
 
 Unique ID for each waypoint. Starts at 1 and increases with each waypoint.
 
-#### position\_x
+### position\_x
 
 The X coordinate of the destination waypoint.
 
-#### position\_y
+### position\_y
 
 The Y coordinate of the destination waypoint.
 
-#### position\_z
+### position\_z
 
 The Z coordinate of the destination waypoint.
 
-#### orientation
+### orientation
 
 The orientation (facing) the creature should have at this waypoint. `NULL` leaves the facing unchanged.
 
-#### delay
+### delay
 
 Time in milliseconds the creature waits at this waypoint before moving to the next one.
 
-#### point\_comment
+### point\_comment
 
 Text comment.
 

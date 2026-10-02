@@ -6,98 +6,98 @@
 
 This table contains the texts that are used for gossip. More research needs to be done on this table.
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| ID               | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| text0_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text0_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID0 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang0            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability0     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em0_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em0_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em0_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em0_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em0_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em0_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text1_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text1_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID1 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang1            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability1     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em1_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em1_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em1_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em1_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em1_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em1_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text2_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text2_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID2 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang2            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability2     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em2_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em2_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em2_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em2_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em2_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em2_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text3_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text3_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID3 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang3            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability3     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em3_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em3_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em3_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em3_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em3_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em3_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text4_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text4_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID4 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang4            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability4     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em4_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em4_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em4_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em4_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em4_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em4_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text5_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text5_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID5 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang5            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability5     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em5_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em5_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em5_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em5_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em5_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em5_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text6_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text6_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID6 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang6            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability6     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em6_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em6_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em6_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em6_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em6_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em6_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| text7_0          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| text7_1          | LONGTEXT |            |     | YES  | NULL    |       |         |
-| BroadcastTextID7 | INT      | SIGNED     |     | NO   | 0       |       |         |
-| lang7            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| Probability7     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| em7_0            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em7_1            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em7_2            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em7_3            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em7_4            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| em7_5            | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| VerifiedBuild    | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| Field                                                     | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| --------------------------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [ID](#id)                                                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [text0_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text0_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID0](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang0](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability0](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em0_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em0_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em0_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em0_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em0_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em0_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text1_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text1_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID1](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang1](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability1](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em1_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em1_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em1_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em1_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em1_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em1_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text2_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text2_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID2](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang2](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability2](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em2_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em2_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em2_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em2_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em2_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em2_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text3_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text3_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID3](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang3](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability3](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em3_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em3_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em3_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em3_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em3_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em3_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text4_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text4_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID4](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang4](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability4](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em4_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em4_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em4_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em4_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em4_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em4_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text5_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text5_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID5](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang5](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability5](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em5_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em5_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em5_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em5_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em5_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em5_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text6_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text6_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID6](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang6](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability6](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em6_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em6_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em6_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em6_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em6_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em6_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [text7_0](#text00-to-text70)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [text7_1](#text01-to-text71)                              | LONGTEXT |            |     | YES  | NULL    |       |         |
+| [BroadcastTextID7](#broadcasttextid0-to-broadcasttextid7) | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [lang7](#lang0-to-lang7)                                  | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [Probability7](#probability0-to-probability7)             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [em7_0](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em7_1](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em7_2](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em7_3](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em7_4](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [em7_5](#em00-5-to-em70-5)                                | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)                           | INT      | SIGNED     |     | YES  | NULL    |       |         |
 
 **Description of the table's fields**
 

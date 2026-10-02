@@ -30,11 +30,11 @@ This table can be overriden by \`creature_movement_override\`
 
 **Description of the table's fields**
 
-#### CreatureId
+### CreatureId
 
 This is the [creature\_template.entry](creature_template#entry) to which the script is linked to.
 
-#### Ground
+### Ground
 
 | State | Value |
 | ----- | ----- |
@@ -42,14 +42,14 @@ This is the [creature\_template.entry](creature_template#entry) to which the scr
 | Run   | 1     |
 | Hover | 2     |
 
-#### Swim
+### Swim
 
 | State | Value |
 | ----- | ----- |
 | None  | 0     |
 | Swim  | 1     |
 
-#### Flight
+### Flight
 
 | State          | Value |
 | -------------- | ----- |
@@ -57,7 +57,7 @@ This is the [creature\_template.entry](creature_template#entry) to which the scr
 | DisableGravity | 1     |
 | CanFly         | 2     |
 
-#### Rooted
+### Rooted
 
 | State  | Value |
 | ------ | ----- |
@@ -70,7 +70,7 @@ Rooted creature that doesn't fall once dead must use \`Ground\`=1, \`Swim\`=0, \
 
 Rooted creature that falls once dead must use \`Ground\`=0, \`Swim\`=0, \`Flight\`=1, \`Rooted\`=1
 
-#### Chase
+### Chase
 
 | State      | Value |
 | ---------- | ----- |
@@ -78,7 +78,7 @@ Rooted creature that falls once dead must use \`Ground\`=0, \`Swim\`=0, \`Flight
 | CanWalk    | 1     |
 | AlwaysWalk | 2     |
 
-#### Random
+### Random
 
 | State     | Value |
 | --------- | ----- |
@@ -86,6 +86,6 @@ Rooted creature that falls once dead must use \`Ground\`=0, \`Swim\`=0, \`Flight
 | CanRun    | 1     |
 | AlwaysRun | 2     |
 
-#### InteractionPauseTimer
+### InteractionPauseTimer
 
 Time (in milliseconds) during which creature will not move after interaction with player.

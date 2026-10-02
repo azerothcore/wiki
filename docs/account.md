@@ -137,11 +137,6 @@ The two-letter country code the account is locked to, set with the `.account loc
 
 The date when the account was last logged into.
 
-### totaltime
-
-Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
-Stored in Unix Time.
-
 ### online
 
 Boolean 0 or 1 controlling if the account is currently logged in and online.
@@ -235,3 +230,8 @@ Stores information about client's OS. Used by Warden system.
 ### recruiter
 
 The account ID of another account. Used for recruit-a-friend system. See [account.id][1]
+
+### totaltime
+
+Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
+Stored in Unix Time.

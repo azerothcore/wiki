@@ -44,6 +44,6 @@ Mute duration in minutes.
 
 Nickname of GM/moderator who issued the mute.
 
-#### mutereason
+### mutereason
 
 Text field with description of mute's reason.

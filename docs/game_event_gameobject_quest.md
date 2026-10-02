@@ -20,6 +20,10 @@ This table holds information on quests that should only be available when an eve
 
 **Description of the table's fields**
 
+### eventEntry
+
+The event ID. See game\_event.eventEntry
+
 ### id
 
 The Gameobject ID. See gameobject\_template.entry
@@ -27,7 +31,3 @@ The Gameobject ID. See gameobject\_template.entry
 ### quest
 
 The quest ID. See [quest\_template.ID](quest_template#id)
-
-### eventEntry
-
-The event ID. See game\_event.eventEntry

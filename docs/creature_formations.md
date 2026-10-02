@@ -28,11 +28,11 @@ This table allows to group mobs. Members of group will follow others, and attack
 
 **Description of the table's fields**
 
-## leaderGUID
+### leaderGUID
 
 GUID of group leader
 
-## memberGUID
+### memberGUID
 
 GUID of group member. NOTE: Is required to have an entry with `leaderGUID` and `memberGUID` with the `leaderGUID` in order to make the group work.
 Example:
@@ -46,13 +46,13 @@ Example:
 | 1          | 2          |
 | 1          | 3          |
 
-## dist
+### dist
 
 Maximum distance between group leader and member
 
 Value must be >=0. If the value does not meet the condition the SQL will fail on `creature_formations_chk_1`.
 
-## angle
+### angle
 
 Angle between leader and member
 Note: Only degrees are used! Values should be between 0 and 360
@@ -61,7 +61,7 @@ Note: Only degrees are used! Values should be between 0 and 360
 
 Value must be >=0. If the value does not meet the condition the SQL will fail on `creature_formations_chk_1`.
 
-## groupAI
+### groupAI
 
 Sets group member behaviors, values are:
 
@@ -78,11 +78,11 @@ Sets group member behaviors, values are:
 | 0x200 | 512 | GROUP_AI_FLAG_FOLLOW_LEADER                | Noone assists noone and member follow the leader               |
 |       | 515 |                                            | Everyone assists everyone and member follow the leader         |
 
-## point\_1
+### point\_1
 
 Used together with [point\_2](#point2), see below.
 
-## point\_2
+### point\_2
 
 These values are used to set leaderGUID pre ending path points for memberGUID's where the path is a straight return path and memberGUID's should not crossover to other side of leaderGUID on direction change.
 
