@@ -35,13 +35,48 @@ The script installs the gems if needed, stops any old server still running on po
 
 The first run can be slow, because Jekyll has to generate more than 500 pages. `--verbose` is enabled by default, so each page is printed as it is built and you can see that Jekyll has not hung. If you would rather not see the build progress, remove `--verbose` from the last line of the script.
 
-The script uses `_config.local.yml` on top of `_config.yml`. That file leaves out the translations to keep the build short; remove `docs/es` and `docs/cn` from its `exclude` list to build them too.
+##### Options
 
-Run it with `clean` (`test_locally.bat clean`) to throw away the previous build and rebuild everything. Do this if a page looks stale or wrong.
+Add these words after the script name. They can be combined, in any order.
+
+| Option  | What it does |
+| :------ | :----------- |
+| *(none)* | Builds the English pages only, reusing the previous build. This is the fast, everyday mode. |
+| `all`   | Also builds the Spanish and Chinese translations. That is about 1,500 pages, so it takes much longer. |
+| `clean` | Throws away the previous build and rebuilds everything. Use it if a page looks stale or wrong. |
+
+Windows:
+
+```
+test_locally.bat all
+test_locally.bat clean
+test_locally.bat all clean
+```
+
+Linux and macOS:
+
+```bash
+bash test_locally.sh all
+bash test_locally.sh clean
+bash test_locally.sh all clean
+```
+
+The site is served on `127.0.0.1`, so only your own computer can open it. To let other devices on your network reach it, set `JEKYLL_HOST=0.0.0.0` before running the script:
+
+Windows:
+
+```
+set "JEKYLL_HOST=0.0.0.0"
+test_locally.bat
+```
+
+Linux and macOS:
+
+```bash
+JEKYLL_HOST=0.0.0.0 bash test_locally.sh
+```
 
 Local previews do not create the redirects from old page addresses, because on Windows and macOS those would overwrite the real pages.
-
-The site is served on `127.0.0.1`, so only your own computer can open it. Set `JEKYLL_HOST=0.0.0.0` before running the script if other devices on your network need to reach it.
 
 #### Manually
 

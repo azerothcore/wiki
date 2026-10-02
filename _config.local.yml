@@ -7,7 +7,3 @@ plugins:
  - jekyll-avatar
  - jemoji
  - jekyll-mentions
-
-# Leaves out the translations, which cuts the build to about a third.
-# Remove 'docs/es' and 'docs/cn' from this list to build them too.
-exclude: ['wiki', 'test_locally.bat', 'test_locally.sh', 'Gemfile', 'Gemfile.lock', 'docs/es', 'docs/cn']

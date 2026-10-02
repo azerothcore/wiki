@@ -9,10 +9,13 @@ JEKYLL_PORT=4000
 JEKYLL_HOST="${JEKYLL_HOST:-127.0.0.1}"
 JEKYLL_BASEURL=/wiki
 
-# Run "test_locally.sh clean" to force a full rebuild.
-JEKYLL_CONFIG=_config.yml,_config.local.yml
+# Options: "all" also builds the translations, "clean" forces a full rebuild.
+JEKYLL_CONFIG=_config.yml,_config.local.yml,_config.local.en.yml
 JEKYLL_CLEAN=0
-[ "$1" = "clean" ] && JEKYLL_CLEAN=1
+for arg in "$@"; do
+    [ "$arg" = "all" ] && JEKYLL_CONFIG=_config.yml,_config.local.yml
+    [ "$arg" = "clean" ] && JEKYLL_CLEAN=1
+done
 
 # Walk up to the site root, so Jekyll is never started from the wrong folder.
 depth=0

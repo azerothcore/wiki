@@ -9,10 +9,13 @@ rem before running to let other devices on the network open it.
 if not defined JEKYLL_HOST set JEKYLL_HOST=127.0.0.1
 set JEKYLL_BASEURL=/wiki
 
-rem Run "test_locally.bat clean" to force a full rebuild.
-set JEKYLL_CONFIG=_config.yml,_config.local.yml
+rem Options: "all" also builds the translations, "clean" forces a full rebuild.
+set JEKYLL_CONFIG=_config.yml,_config.local.yml,_config.local.en.yml
 set JEKYLL_CLEAN=0
-if /i "%~1"=="clean" set JEKYLL_CLEAN=1
+for %%A in (%*) do (
+    if /i "%%~A"=="all" set JEKYLL_CONFIG=_config.yml,_config.local.yml
+    if /i "%%~A"=="clean" set JEKYLL_CLEAN=1
+)
 
 rem Walk up to the site root, so Jekyll is never started from the wrong folder.
 set DEPTH=0
