@@ -10,37 +10,37 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: itemrandomsuffix\_dbc's Structure**
 
-| Field                             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                         | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelang)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelang)        | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelang)       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [InternalName](#internalname)     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Enchantment_1](#enchantment)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Enchantment_2](#enchantment)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Enchantment_3](#enchantment)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Enchantment_4](#enchantment)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Enchantment_5](#enchantment)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AllocationPct_1](#allocationpct) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AllocationPct_2](#allocationpct) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AllocationPct_3](#allocationpct) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AllocationPct_4](#allocationpct) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AllocationPct_5](#allocationpct) | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                             | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT          |          | NO   | PRI | 0       |       |         |
+| [Name_Lang_enUS](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelang)       | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelang)        | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelang)       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [InternalName](#internalname)     | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Enchantment_1](#enchantment)     | INT          |          | NO   |     | 0       |       |         |
+| [Enchantment_2](#enchantment)     | INT          |          | NO   |     | 0       |       |         |
+| [Enchantment_3](#enchantment)     | INT          |          | NO   |     | 0       |       |         |
+| [Enchantment_4](#enchantment)     | INT          |          | NO   |     | 0       |       |         |
+| [Enchantment_5](#enchantment)     | INT          |          | NO   |     | 0       |       |         |
+| [AllocationPct_1](#allocationpct) | INT          |          | NO   |     | 0       |       |         |
+| [AllocationPct_2](#allocationpct) | INT          |          | NO   |     | 0       |       |         |
+| [AllocationPct_3](#allocationpct) | INT          |          | NO   |     | 0       |       |         |
+| [AllocationPct_4](#allocationpct) | INT          |          | NO   |     | 0       |       |         |
+| [AllocationPct_5](#allocationpct) | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

@@ -10,36 +10,36 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: creaturemodeldata\_dbc's Structure**
 
-| Field                                             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                         | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Flags](#flags)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ModelName](#modelname)                           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SizeClass](#sizeclass)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ModelScale](#modelscale)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [BloodID](#bloodid)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [FootprintTextureID](#footprinttextureid)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [FootprintTextureLength](#footprinttexturelength) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [FootprintTextureWidth](#footprinttexturewidth)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [FootprintParticleScale](#footprintparticlescale) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [FoleyMaterialID](#foleymaterialid)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [FootstepShakeSize](#footstepshakesize)           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [DeathThudShakeSize](#deaththudshakesize)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SoundID](#soundid)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CollisionWidth](#collisionwidth)                 | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CollisionHeight](#collisionheight)               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MountHeight](#mountheight)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMinX](#geoboxminx)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMinY](#geoboxminy)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMinZ](#geoboxminz)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMaxX](#geoboxmaxx)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMaxY](#geoboxmaxy)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMaxZ](#geoboxmaxz)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [WorldEffectScale](#worldeffectscale)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [AttachedEffectScale](#attachedeffectscale)       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MissileCollisionRadius](#missilecollisionradius) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MissileCollisionPush](#missilecollisionpush)     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MissileCollisionRaise](#missilecollisionraise)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| Field                                             | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                         | INT          |     | NO   | PRI | 0       |       |         |
+| [Flags](#flags)                                   | INT          |     | NO   |     | 0       |       |         |
+| [ModelName](#modelname)                           | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [SizeClass](#sizeclass)                           | INT          |     | NO   |     | 0       |       |         |
+| [ModelScale](#modelscale)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [BloodID](#bloodid)                               | INT          |     | NO   |     | 0       |       |         |
+| [FootprintTextureID](#footprinttextureid)         | INT          |     | NO   |     | 0       |       |         |
+| [FootprintTextureLength](#footprinttexturelength) | FLOAT        |     | NO   |     | 0       |       |         |
+| [FootprintTextureWidth](#footprinttexturewidth)   | FLOAT        |     | NO   |     | 0       |       |         |
+| [FootprintParticleScale](#footprintparticlescale) | FLOAT        |     | NO   |     | 0       |       |         |
+| [FoleyMaterialID](#foleymaterialid)               | INT          |     | NO   |     | 0       |       |         |
+| [FootstepShakeSize](#footstepshakesize)           | INT          |     | NO   |     | 0       |       |         |
+| [DeathThudShakeSize](#deaththudshakesize)         | INT          |     | NO   |     | 0       |       |         |
+| [SoundID](#soundid)                               | INT          |     | NO   |     | 0       |       |         |
+| [CollisionWidth](#collisionwidth)                 | FLOAT        |     | NO   |     | 0       |       |         |
+| [CollisionHeight](#collisionheight)               | FLOAT        |     | NO   |     | 0       |       |         |
+| [MountHeight](#mountheight)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMinX](#geoboxminx)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMinY](#geoboxminy)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMinZ](#geoboxminz)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMaxX](#geoboxmaxx)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMaxY](#geoboxmaxy)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMaxZ](#geoboxmaxz)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [WorldEffectScale](#worldeffectscale)             | FLOAT        |     | NO   |     | 0       |       |         |
+| [AttachedEffectScale](#attachedeffectscale)       | FLOAT        |     | NO   |     | 0       |       |         |
+| [MissileCollisionRadius](#missilecollisionradius) | FLOAT        |     | NO   |     | 0       |       |         |
+| [MissileCollisionPush](#missilecollisionpush)     | FLOAT        |     | NO   |     | 0       |       |         |
+| [MissileCollisionRaise](#missilecollisionraise)   | FLOAT        |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

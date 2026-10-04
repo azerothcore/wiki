@@ -8,10 +8,10 @@ Holds information about the current arena season.
 
 **Table: active\_arena\_season's Structure**
 
-| Field                        | Type    | Attributes | Key | Null | Default | Extra | Comment                                            |
-| ---------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------------- |
-| [season_id](#seasonid)       | TINYINT | UNSIGNED   |     | NO   |         |       |                                                    |
-| [season_state](#seasonstate) | TINYINT | UNSIGNED   |     | NO   |         |       | Supported 2 states: 0 - disabled; 1 - in progress. |
+| Field                        | Type    |          | Null | Key | Default | Extra | Comment                                            |
+| :--------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------------- |
+| [season_id](#seasonid)       | TINYINT | UNSIGNED | NO   |     |         |       |                                                    |
+| [season_state](#seasonstate) | TINYINT | UNSIGNED | NO   |     |         |       | Supported 2 states: 0 - disabled; 1 - in progress. |
 
 **Description of the table's fields**
 

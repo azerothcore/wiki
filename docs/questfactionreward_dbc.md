@@ -10,19 +10,19 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: questfactionreward\_dbc's Structure**
 
-| Field                        | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                    | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Difficulty_1](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_2](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_3](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_4](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_5](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_6](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_7](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_8](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_9](#difficulty)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty_10](#difficulty) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                        | Type |     | Null | Key | Default | Extra | Comment |
+| :--------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                    | INT  |     | NO   | PRI | 0       |       |         |
+| [Difficulty_1](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_2](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_3](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_4](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_5](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_6](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_7](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_8](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_9](#difficulty)  | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty_10](#difficulty) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

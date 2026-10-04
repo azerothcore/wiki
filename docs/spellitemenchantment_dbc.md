@@ -10,46 +10,46 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: spellitemenchantment\_dbc's Structure**
 
-| Field                                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                               | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Charges](#charges)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Effect_1](#effect)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Effect_2](#effect)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Effect_3](#effect)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectPointsMin_1](#effectpointsmin)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectPointsMin_2](#effectpointsmin)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectPointsMin_3](#effectpointsmin)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectPointsMax_1](#effectpointsmax)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectPointsMax_2](#effectpointsmax)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectPointsMax_3](#effectpointsmax)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectArg_1](#effectarg)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectArg_2](#effectarg)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EffectArg_3](#effectarg)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelang)              | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelang)             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemVisual](#itemvisual)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Src_ItemID](#srcitemid)                | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Condition_Id](#conditionid)            | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [RequiredSkillID](#requiredskillid)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [RequiredSkillRank](#requiredskillrank) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MinLevel](#minlevel)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                   | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                               | INT          |          | NO   | PRI | 0       |       |         |
+| [Charges](#charges)                     | INT          |          | NO   |     | 0       |       |         |
+| [Effect_1](#effect)                     | INT          |          | NO   |     | 0       |       |         |
+| [Effect_2](#effect)                     | INT          |          | NO   |     | 0       |       |         |
+| [Effect_3](#effect)                     | INT          |          | NO   |     | 0       |       |         |
+| [EffectPointsMin_1](#effectpointsmin)   | INT          |          | NO   |     | 0       |       |         |
+| [EffectPointsMin_2](#effectpointsmin)   | INT          |          | NO   |     | 0       |       |         |
+| [EffectPointsMin_3](#effectpointsmin)   | INT          |          | NO   |     | 0       |       |         |
+| [EffectPointsMax_1](#effectpointsmax)   | INT          |          | NO   |     | 0       |       |         |
+| [EffectPointsMax_2](#effectpointsmax)   | INT          |          | NO   |     | 0       |       |         |
+| [EffectPointsMax_3](#effectpointsmax)   | INT          |          | NO   |     | 0       |       |         |
+| [EffectArg_1](#effectarg)               | INT          |          | NO   |     | 0       |       |         |
+| [EffectArg_2](#effectarg)               | INT          |          | NO   |     | 0       |       |         |
+| [EffectArg_3](#effectarg)               | INT          |          | NO   |     | 0       |       |         |
+| [Name_Lang_enUS](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelang)             | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelang)              | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelang)             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ItemVisual](#itemvisual)               | INT          |          | NO   |     | 0       |       |         |
+| [Flags](#flags)                         | INT          |          | NO   |     | 0       |       |         |
+| [Src_ItemID](#srcitemid)                | INT          |          | NO   |     | 0       |       |         |
+| [Condition_Id](#conditionid)            | INT          |          | NO   |     | 0       |       |         |
+| [RequiredSkillID](#requiredskillid)     | INT          |          | NO   |     | 0       |       |         |
+| [RequiredSkillRank](#requiredskillrank) | INT          |          | NO   |     | 0       |       |         |
+| [MinLevel](#minlevel)                   | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

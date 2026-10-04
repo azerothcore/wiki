@@ -10,16 +10,16 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: skillraceclassinfo\_dbc's Structure**
 
-| Field                             | Type | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                         | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [SkillID](#skillid)               | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RaceMask](#racemask)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ClassMask](#classmask)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MinLevel](#minlevel)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SkillTierID](#skilltierid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SkillCostIndex](#skillcostindex) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                             | Type |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT  |     | NO   | PRI | 0       |       |         |
+| [SkillID](#skillid)               | INT  |     | NO   |     | 0       |       |         |
+| [RaceMask](#racemask)             | INT  |     | NO   |     | 0       |       |         |
+| [ClassMask](#classmask)           | INT  |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                   | INT  |     | NO   |     | 0       |       |         |
+| [MinLevel](#minlevel)             | INT  |     | NO   |     | 0       |       |         |
+| [SkillTierID](#skilltierid)       | INT  |     | NO   |     | 0       |       |         |
+| [SkillCostIndex](#skillcostindex) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

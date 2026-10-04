@@ -10,19 +10,19 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: taxipathnode\_dbc's Structure**
 
-| Field                                 | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                             | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [PathID](#pathid)                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [NodeIndex](#nodeindex)               | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ContinentID](#continentid)           | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LocX](#locx)                         | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [LocY](#locy)                         | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [LocZ](#locz)                         | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [Delay](#delay)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ArrivalEventID](#arrivaleventid)     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [DepartureEventID](#departureeventid) | INT   | SIGNED     |     | NO   | 0       |       |         |
+| Field                                 | Type  |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------ | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                             | INT   |     | NO   | PRI | 0       |       |         |
+| [PathID](#pathid)                     | INT   |     | NO   |     | 0       |       |         |
+| [NodeIndex](#nodeindex)               | INT   |     | NO   |     | 0       |       |         |
+| [ContinentID](#continentid)           | INT   |     | NO   |     | 0       |       |         |
+| [LocX](#locx)                         | FLOAT |     | NO   |     | 0       |       |         |
+| [LocY](#locy)                         | FLOAT |     | NO   |     | 0       |       |         |
+| [LocZ](#locz)                         | FLOAT |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                       | INT   |     | NO   |     | 0       |       |         |
+| [Delay](#delay)                       | INT   |     | NO   |     | 0       |       |         |
+| [ArrivalEventID](#arrivaleventid)     | INT   |     | NO   |     | 0       |       |         |
+| [DepartureEventID](#departureeventid) | INT   |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

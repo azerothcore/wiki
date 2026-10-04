@@ -8,11 +8,11 @@ This table holds the information on what values are used for the shaman totem mo
 
 **Table: player\_totem\_model's Structure**
 
-| Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [TotemID](#totemid) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [RaceID](#raceid)   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [ModelID](#modelid) | INT     | UNSIGNED   |     | NO   |         |       |         |
+| Field               | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [TotemID](#totemid) | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [RaceID](#raceid)   | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [ModelID](#modelid) | INT     | UNSIGNED | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

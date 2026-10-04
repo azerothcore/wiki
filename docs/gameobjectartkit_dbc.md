@@ -10,16 +10,16 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: gameobjectartkit\_dbc's Structure**
 
-| Field                          | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                      | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Texture_1](#texture)          | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Texture_2](#texture)          | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Texture_3](#texture)          | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Attach_Model_1](#attachmodel) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Attach_Model_2](#attachmodel) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Attach_Model_3](#attachmodel) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Attach_Model_4](#attachmodel) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                          | Type |     | Null | Key | Default | Extra | Comment |
+| :----------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                      | INT  |     | NO   | PRI | 0       |       |         |
+| [Texture_1](#texture)          | INT  |     | NO   |     | 0       |       |         |
+| [Texture_2](#texture)          | INT  |     | NO   |     | 0       |       |         |
+| [Texture_3](#texture)          | INT  |     | NO   |     | 0       |       |         |
+| [Attach_Model_1](#attachmodel) | INT  |     | NO   |     | 0       |       |         |
+| [Attach_Model_2](#attachmodel) | INT  |     | NO   |     | 0       |       |         |
+| [Attach_Model_3](#attachmodel) | INT  |     | NO   |     | 0       |       |         |
+| [Attach_Model_4](#attachmodel) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

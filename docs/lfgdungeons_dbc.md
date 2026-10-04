@@ -10,57 +10,57 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: lfgdungeons\_dbc's Structure**
 
-| Field                                     | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelang)               | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelang)                | TEXT |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelang)               | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [MinLevel](#minlevel)                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MaxLevel](#maxlevel)                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Target_Level](#targetlevel)              | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Target_Level_Min](#targetlevelmin)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Target_Level_Max](#targetlevelmax)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MapID](#mapid)                           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty](#difficulty)                 | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TypeID](#typeid)                         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Faction](#faction)                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TextureFilename](#texturefilename)       | TEXT |            |     | YES  | NULL    |       |         |
-| [ExpansionLevel](#expansionlevel)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Order_Index](#orderindex)                | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Group_Id](#groupid)                      | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Description_Lang_enUS](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enGB](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_koKR](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_frFR](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_deDE](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enCN](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhCN](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enTW](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhTW](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esES](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esMX](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ruRU](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptPT](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptBR](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_itIT](#descriptionlang) | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Unk](#descriptionlang)  | TEXT |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Mask](#descriptionlang) | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                                     | Type |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                 | INT  |          | NO   | PRI | 0       |       |         |
+| [Name_Lang_enUS](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelang)               | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelang)                | TEXT |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelang)               | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [MinLevel](#minlevel)                     | INT  |          | NO   |     | 0       |       |         |
+| [MaxLevel](#maxlevel)                     | INT  |          | NO   |     | 0       |       |         |
+| [Target_Level](#targetlevel)              | INT  |          | NO   |     | 0       |       |         |
+| [Target_Level_Min](#targetlevelmin)       | INT  |          | NO   |     | 0       |       |         |
+| [Target_Level_Max](#targetlevelmax)       | INT  |          | NO   |     | 0       |       |         |
+| [MapID](#mapid)                           | INT  |          | NO   |     | 0       |       |         |
+| [Difficulty](#difficulty)                 | INT  |          | NO   |     | 0       |       |         |
+| [Flags](#flags)                           | INT  |          | NO   |     | 0       |       |         |
+| [TypeID](#typeid)                         | INT  |          | NO   |     | 0       |       |         |
+| [Faction](#faction)                       | INT  |          | NO   |     | 0       |       |         |
+| [TextureFilename](#texturefilename)       | TEXT |          | YES  |     | NULL    |       |         |
+| [ExpansionLevel](#expansionlevel)         | INT  |          | NO   |     | 0       |       |         |
+| [Order_Index](#orderindex)                | INT  |          | NO   |     | 0       |       |         |
+| [Group_Id](#groupid)                      | INT  |          | NO   |     | 0       |       |         |
+| [Description_Lang_enUS](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enGB](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_koKR](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_frFR](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_deDE](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enCN](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhCN](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enTW](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhTW](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esES](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esMX](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ruRU](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptPT](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptBR](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_itIT](#descriptionlang) | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Unk](#descriptionlang)  | TEXT |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Mask](#descriptionlang) | INT  | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

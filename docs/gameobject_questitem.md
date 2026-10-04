@@ -8,12 +8,12 @@ Holds the quest items a gameobject can drop, so the client can show them in the 
 
 **Table: gameobject\_questitem's Structure**
 
-| Field                               | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [GameObjectEntry](#gameobjectentry) | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Idx](#idx)                         | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ItemId](#itemid)                   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild)     | INT  | SIGNED     |     | YES  | NULL    |       |         |
+| Field                               | Type |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [GameObjectEntry](#gameobjectentry) | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Idx](#idx)                         | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [ItemId](#itemid)                   | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)     | INT  |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

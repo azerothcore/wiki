@@ -8,9 +8,9 @@ List of disallowed name fragments used by the profanity name filter to reject ch
 
 **Table: profanity\_name's Structure**
 
-| Field         | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name](#name) | VARCHAR(12) |            | PRI | NO   |         |       |         |
+| Field         | Type        |     | Null | Key | Default | Extra | Comment |
+| :------------ | :---------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [name](#name) | VARCHAR(12) |     | NO   | PRI |         |       |         |
 
 **Description of the table's fields**
 

@@ -8,12 +8,12 @@ Holds NPC quest ender relations on which NPCs finishes which quests.
 
 **Table: creature\_questitem's Structure**
 
-| Field                           | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureEntry](#creatureentry) | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Idx](#idx)                     | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ItemId](#itemid)               | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT  | SIGNED     |     | YES  | NULL    |       |         |
+| Field                           | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureEntry](#creatureentry) | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Idx](#idx)                     | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [ItemId](#itemid)               | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT  |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

@@ -10,15 +10,15 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: cinematiccamera\_dbc's Structure**
 
-| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [model](#model)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [soundEntry](#soundentry) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [locationX](#locationx)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [locationY](#locationy)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [locationZ](#locationz)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [rotation](#rotation)     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
+| Field                     | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT          |     | NO   | PRI | 0       |       |         |
+| [model](#model)           | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [soundEntry](#soundentry) | INT          |     | NO   |     | 0       |       |         |
+| [locationX](#locationx)   | FLOAT        |     | NO   |     | 0       |       |         |
+| [locationY](#locationy)   | FLOAT        |     | NO   |     | 0       |       |         |
+| [locationZ](#locationz)   | FLOAT        |     | NO   |     | 0       |       |         |
+| [rotation](#rotation)     | FLOAT        |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

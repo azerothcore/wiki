@@ -10,32 +10,32 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: scalingstatvalues\_dbc's Structure**
 
-| Field                                         | Type | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                     | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Charlevel](#charlevel)                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ShoulderBudget](#shoulderbudget)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TrinketBudget](#trinketbudget)               | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [WeaponBudget1H](#weaponbudget1h)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RangedBudget](#rangedbudget)                 | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ClothShoulderArmor](#clothshoulderarmor)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [LeatherShoulderArmor](#leathershoulderarmor) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MailShoulderArmor](#mailshoulderarmor)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PlateShoulderArmor](#plateshoulderarmor)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [WeaponDPS1H](#weapondps1h)                   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [WeaponDPS2H](#weapondps2h)                   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellcasterDPS1H](#spellcasterdps1h)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellcasterDPS2H](#spellcasterdps2h)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RangedDPS](#rangeddps)                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [WandDPS](#wanddps)                           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellPower](#spellpower)                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrimaryBudget](#primarybudget)               | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TertiaryBudget](#tertiarybudget)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ClothCloakArmor](#clothcloakarmor)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ClothChestArmor](#clothchestarmor)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [LeatherChestArmor](#leatherchestarmor)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MailChestArmor](#mailchestarmor)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PlateChestArmor](#platechestarmor)           | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                                         | Type |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                     | INT  |     | NO   | PRI | 0       |       |         |
+| [Charlevel](#charlevel)                       | INT  |     | NO   |     | 0       |       |         |
+| [ShoulderBudget](#shoulderbudget)             | INT  |     | NO   |     | 0       |       |         |
+| [TrinketBudget](#trinketbudget)               | INT  |     | NO   |     | 0       |       |         |
+| [WeaponBudget1H](#weaponbudget1h)             | INT  |     | NO   |     | 0       |       |         |
+| [RangedBudget](#rangedbudget)                 | INT  |     | NO   |     | 0       |       |         |
+| [ClothShoulderArmor](#clothshoulderarmor)     | INT  |     | NO   |     | 0       |       |         |
+| [LeatherShoulderArmor](#leathershoulderarmor) | INT  |     | NO   |     | 0       |       |         |
+| [MailShoulderArmor](#mailshoulderarmor)       | INT  |     | NO   |     | 0       |       |         |
+| [PlateShoulderArmor](#plateshoulderarmor)     | INT  |     | NO   |     | 0       |       |         |
+| [WeaponDPS1H](#weapondps1h)                   | INT  |     | NO   |     | 0       |       |         |
+| [WeaponDPS2H](#weapondps2h)                   | INT  |     | NO   |     | 0       |       |         |
+| [SpellcasterDPS1H](#spellcasterdps1h)         | INT  |     | NO   |     | 0       |       |         |
+| [SpellcasterDPS2H](#spellcasterdps2h)         | INT  |     | NO   |     | 0       |       |         |
+| [RangedDPS](#rangeddps)                       | INT  |     | NO   |     | 0       |       |         |
+| [WandDPS](#wanddps)                           | INT  |     | NO   |     | 0       |       |         |
+| [SpellPower](#spellpower)                     | INT  |     | NO   |     | 0       |       |         |
+| [PrimaryBudget](#primarybudget)               | INT  |     | NO   |     | 0       |       |         |
+| [TertiaryBudget](#tertiarybudget)             | INT  |     | NO   |     | 0       |       |         |
+| [ClothCloakArmor](#clothcloakarmor)           | INT  |     | NO   |     | 0       |       |         |
+| [ClothChestArmor](#clothchestarmor)           | INT  |     | NO   |     | 0       |       |         |
+| [LeatherChestArmor](#leatherchestarmor)       | INT  |     | NO   |     | 0       |       |         |
+| [MailChestArmor](#mailchestarmor)             | INT  |     | NO   |     | 0       |       |         |
+| [PlateChestArmor](#platechestarmor)           | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

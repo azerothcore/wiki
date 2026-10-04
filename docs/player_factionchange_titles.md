@@ -8,12 +8,12 @@ Determines which title should be swapped during a faction change.
 
 **Table: player\_factionchange\_titles's Structure**
 
-| Field                                | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id](#allianceid)           | INT  | SIGNED     | PRI | NO   |         |       |         |
-| [alliance_comment](#alliancecomment) | TEXT |            |     | YES  | NULL    |       |         |
-| [horde_id](#hordeid)                 | INT  | SIGNED     | PRI | NO   |         |       |         |
-| [horde_comment](#hordecomment)       | TEXT |            |     | YES  | NULL    |       |         |
+| Field                                | Type |     | Null | Key | Default | Extra | Comment |
+| :----------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [alliance_id](#allianceid)           | INT  |     | NO   | PRI |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |     | YES  |     | NULL    |       |         |
+| [horde_id](#hordeid)                 | INT  |     | NO   | PRI |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |     | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

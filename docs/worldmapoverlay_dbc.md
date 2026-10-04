@@ -10,25 +10,25 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: worldmapoverlay\_dbc's Structure**
 
-| Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                       | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [MapAreaID](#mapareaid)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_1](#areaid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_2](#areaid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_3](#areaid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_4](#areaid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MapPointX](#mappointx)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MapPointY](#mappointy)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [TextureName](#texturename)     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [TextureWidth](#texturewidth)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [TextureHeight](#textureheight) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [OffsetX](#offsetx)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [OffsetY](#offsety)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HitRectTop](#hitrecttop)       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HitRectLeft](#hitrectleft)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HitRectBottom](#hitrectbottom) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HitRectRight](#hitrectright)   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                           | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT          |     | NO   | PRI | 0       |       |         |
+| [MapAreaID](#mapareaid)         | INT          |     | NO   |     | 0       |       |         |
+| [AreaID_1](#areaid)             | INT          |     | NO   |     | 0       |       |         |
+| [AreaID_2](#areaid)             | INT          |     | NO   |     | 0       |       |         |
+| [AreaID_3](#areaid)             | INT          |     | NO   |     | 0       |       |         |
+| [AreaID_4](#areaid)             | INT          |     | NO   |     | 0       |       |         |
+| [MapPointX](#mappointx)         | INT          |     | NO   |     | 0       |       |         |
+| [MapPointY](#mappointy)         | INT          |     | NO   |     | 0       |       |         |
+| [TextureName](#texturename)     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [TextureWidth](#texturewidth)   | INT          |     | NO   |     | 0       |       |         |
+| [TextureHeight](#textureheight) | INT          |     | NO   |     | 0       |       |         |
+| [OffsetX](#offsetx)             | INT          |     | NO   |     | 0       |       |         |
+| [OffsetY](#offsety)             | INT          |     | NO   |     | 0       |       |         |
+| [HitRectTop](#hitrecttop)       | INT          |     | NO   |     | 0       |       |         |
+| [HitRectLeft](#hitrectleft)     | INT          |     | NO   |     | 0       |       |         |
+| [HitRectBottom](#hitrectbottom) | INT          |     | NO   |     | 0       |       |         |
+| [HitRectRight](#hitrectright)   | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

@@ -10,23 +10,23 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: light\_dbc's Structure**
 
-| Field                             | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                         | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [ContinentID](#continentid)       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [X](#x)                           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [Y](#y)                           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [Z](#z)                           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [FalloffStart](#falloffstart)     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [FalloffEnd](#falloffend)         | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_1](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_2](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_3](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_4](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_5](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_6](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_7](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [LightParamsID_8](#lightparamsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
+| Field                             | Type  |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT   |     | NO   | PRI | 0       |       |         |
+| [ContinentID](#continentid)       | INT   |     | NO   |     | 0       |       |         |
+| [X](#x)                           | FLOAT |     | NO   |     | 0       |       |         |
+| [Y](#y)                           | FLOAT |     | NO   |     | 0       |       |         |
+| [Z](#z)                           | FLOAT |     | NO   |     | 0       |       |         |
+| [FalloffStart](#falloffstart)     | FLOAT |     | NO   |     | 0       |       |         |
+| [FalloffEnd](#falloffend)         | FLOAT |     | NO   |     | 0       |       |         |
+| [LightParamsID_1](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_2](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_3](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_4](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_5](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_6](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_7](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
+| [LightParamsID_8](#lightparamsid) | INT   |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

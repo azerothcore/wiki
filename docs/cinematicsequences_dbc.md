@@ -10,18 +10,18 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: cinematicsequences\_dbc's Structure**
 
-| Field               | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)           | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [SoundID](#soundid) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_1](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_2](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_3](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_4](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_5](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_6](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_7](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Camera_8](#camera) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field               | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)           | INT  |     | NO   | PRI | 0       |       |         |
+| [SoundID](#soundid) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_1](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_2](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_3](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_4](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_5](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_6](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_7](#camera) | INT  |     | NO   |     | 0       |       |         |
+| [Camera_8](#camera) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

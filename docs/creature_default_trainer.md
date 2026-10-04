@@ -8,10 +8,10 @@ Links a creature to the trainer in the [trainer](trainer) table that it uses.
 
 **Table: creature\_default\_trainer's Structure**
 
-| Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureId](#creatureid) | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [TrainerId](#trainerid)   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                     | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureId](#creatureid) | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [TrainerId](#trainerid)   | INT  | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

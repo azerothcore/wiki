@@ -10,41 +10,41 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: lock\_dbc's Structure**
 
-| Field               | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)           | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Type_1](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_2](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_3](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_4](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_5](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_6](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_7](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type_8](#type)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_1](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_2](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_3](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_4](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_5](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_6](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_7](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Index_8](#index)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_1](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_2](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_3](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_4](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_5](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_6](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_7](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Skill_8](#skill)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_1](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_2](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_3](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_4](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_5](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_6](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_7](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Action_8](#action) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field               | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)           | INT  |     | NO   | PRI | 0       |       |         |
+| [Type_1](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_2](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_3](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_4](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_5](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_6](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_7](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Type_8](#type)     | INT  |     | NO   |     | 0       |       |         |
+| [Index_1](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_2](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_3](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_4](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_5](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_6](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_7](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Index_8](#index)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_1](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_2](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_3](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_4](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_5](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_6](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_7](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Skill_8](#skill)   | INT  |     | NO   |     | 0       |       |         |
+| [Action_1](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_2](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_3](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_4](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_5](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_6](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_7](#action) | INT  |     | NO   |     | 0       |       |         |
+| [Action_8](#action) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

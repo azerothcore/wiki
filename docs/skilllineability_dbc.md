@@ -10,22 +10,22 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: skilllineability\_dbc's Structure**
 
-| Field                                                 | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                             | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [SkillLine](#skillline)                               | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spell](#spell)                                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RaceMask](#racemask)                                 | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ClassMask](#classmask)                               | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ExcludeRace](#excluderace)                           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ExcludeClass](#excludeclass)                         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MinSkillLineRank](#minskilllinerank)                 | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SupercededBySpell](#supercededbyspell)               | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [AcquireMethod](#acquiremethod)                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TrivialSkillLineRankHigh](#trivialskilllinerankhigh) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TrivialSkillLineRankLow](#trivialskilllineranklow)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [CharacterPoints_1](#characterpoints)                 | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [CharacterPoints_2](#characterpoints)                 | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                                                 | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                             | INT  |     | NO   | PRI | 0       |       |         |
+| [SkillLine](#skillline)                               | INT  |     | NO   |     | 0       |       |         |
+| [Spell](#spell)                                       | INT  |     | NO   |     | 0       |       |         |
+| [RaceMask](#racemask)                                 | INT  |     | NO   |     | 0       |       |         |
+| [ClassMask](#classmask)                               | INT  |     | NO   |     | 0       |       |         |
+| [ExcludeRace](#excluderace)                           | INT  |     | NO   |     | 0       |       |         |
+| [ExcludeClass](#excludeclass)                         | INT  |     | NO   |     | 0       |       |         |
+| [MinSkillLineRank](#minskilllinerank)                 | INT  |     | NO   |     | 0       |       |         |
+| [SupercededBySpell](#supercededbyspell)               | INT  |     | NO   |     | 0       |       |         |
+| [AcquireMethod](#acquiremethod)                       | INT  |     | NO   |     | 0       |       |         |
+| [TrivialSkillLineRankHigh](#trivialskilllinerankhigh) | INT  |     | NO   |     | 0       |       |         |
+| [TrivialSkillLineRankLow](#trivialskilllineranklow)   | INT  |     | NO   |     | 0       |       |         |
+| [CharacterPoints_1](#characterpoints)                 | INT  |     | NO   |     | 0       |       |         |
+| [CharacterPoints_2](#characterpoints)                 | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

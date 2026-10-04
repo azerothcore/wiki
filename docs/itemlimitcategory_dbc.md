@@ -10,28 +10,28 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: itemlimitcategory\_dbc's Structure**
 
-| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                   | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Quantity](#quantity)       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                   | INT          |          | NO   | PRI | 0       |       |         |
+| [Name_Lang_enUS](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Quantity](#quantity)       | INT          |          | NO   |     | 0       |       |         |
+| [Flags](#flags)             | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

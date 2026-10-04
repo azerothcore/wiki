@@ -10,15 +10,15 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: transportanimation\_dbc's Structure**
 
-| Field                       | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                   | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [TransportID](#transportid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [TimeIndex](#timeindex)     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [PosX](#posx)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [PosY](#posy)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [PosZ](#posz)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [SequenceID](#sequenceid)   | INT   | SIGNED     |     | NO   | 0       |       |         |
+| Field                       | Type  |     | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                   | INT   |     | NO   | PRI | 0       |       |         |
+| [TransportID](#transportid) | INT   |     | NO   |     | 0       |       |         |
+| [TimeIndex](#timeindex)     | INT   |     | NO   |     | 0       |       |         |
+| [PosX](#posx)               | FLOAT |     | NO   |     | 0       |       |         |
+| [PosY](#posy)               | FLOAT |     | NO   |     | 0       |       |         |
+| [PosZ](#posz)               | FLOAT |     | NO   |     | 0       |       |         |
+| [SequenceID](#sequenceid)   | INT   |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

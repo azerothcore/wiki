@@ -10,16 +10,16 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: areagroup\_dbc's Structure**
 
-| Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [AreaID_1](#areaid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_2](#areaid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_3](#areaid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_4](#areaid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_5](#areaid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID_6](#areaid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [NextAreaID](#nextareaid) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                     | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT  |     | NO   | PRI | 0       |       |         |
+| [AreaID_1](#areaid)       | INT  |     | NO   |     | 0       |       |         |
+| [AreaID_2](#areaid)       | INT  |     | NO   |     | 0       |       |         |
+| [AreaID_3](#areaid)       | INT  |     | NO   |     | 0       |       |         |
+| [AreaID_4](#areaid)       | INT  |     | NO   |     | 0       |       |         |
+| [AreaID_5](#areaid)       | INT  |     | NO   |     | 0       |       |         |
+| [AreaID_6](#areaid)       | INT  |     | NO   |     | 0       |       |         |
+| [NextAreaID](#nextareaid) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

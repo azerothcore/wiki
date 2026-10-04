@@ -12,13 +12,13 @@ This table basically handles 3 quest details:
 
 **Table: quest\_request\_items's Structure**
 
-| Field                                   | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                               | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [EmoteOnComplete](#emoteoncomplete)     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [EmoteOnIncomplete](#emoteonincomplete) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [CompletionText](#completiontext)       | TEXT     |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild](#verifiedbuild)         | INT      | SIGNED     |     | YES  | NULL    |       |         |
+| Field                                   | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                               | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [EmoteOnComplete](#emoteoncomplete)     | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [EmoteOnIncomplete](#emoteonincomplete) | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [CompletionText](#completiontext)       | TEXT     |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)         | INT      |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

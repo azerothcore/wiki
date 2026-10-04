@@ -10,40 +10,40 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: spellvisual\_dbc's Structure**
 
-| Field                                                         | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                                     | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [PrecastKit](#precastkit)                                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [CastKit](#castkit)                                           | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ImpactKit](#impactkit)                                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [StateKit](#statekit)                                         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [StateDoneKit](#statedonekit)                                 | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ChannelKit](#channelkit)                                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [HasMissile](#hasmissile)                                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileModel](#missilemodel)                                 | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissilePathType](#missilepathtype)                           | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileDestinationAttachment](#missiledestinationattachment) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileSound](#missilesound)                                 | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [AnimEventSoundID](#animeventsoundid)                         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                                               | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [CasterImpactKit](#casterimpactkit)                           | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [TargetImpactKit](#targetimpactkit)                           | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileAttachment](#missileattachment)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileFollowGroundHeight](#missilefollowgroundheight)       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileFollowGroundDropSpeed](#missilefollowgrounddropspeed) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileFollowGroundApproach](#missilefollowgroundapproach)   | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileFollowGroundFlags](#missilefollowgroundflags)         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileMotion](#missilemotion)                               | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileTargetingKit](#missiletargetingkit)                   | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [InstantAreaKit](#instantareakit)                             | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ImpactAreaKit](#impactareakit)                               | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [PersistentAreaKit](#persistentareakit)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [MissileCastOffsetX](#missilecastoffsetx)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [MissileCastOffsetY](#missilecastoffsety)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [MissileCastOffsetZ](#missilecastoffsetz)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [MissileImpactOffsetX](#missileimpactoffsetx)                 | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [MissileImpactOffsetY](#missileimpactoffsety)                 | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [MissileImpactOffsetZ](#missileimpactoffsetz)                 | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| Field                                                         | Type  |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------------------------------ | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                                     | INT   |     | NO   | PRI | 0       |       |         |
+| [PrecastKit](#precastkit)                                     | INT   |     | NO   |     | 0       |       |         |
+| [CastKit](#castkit)                                           | INT   |     | NO   |     | 0       |       |         |
+| [ImpactKit](#impactkit)                                       | INT   |     | NO   |     | 0       |       |         |
+| [StateKit](#statekit)                                         | INT   |     | NO   |     | 0       |       |         |
+| [StateDoneKit](#statedonekit)                                 | INT   |     | NO   |     | 0       |       |         |
+| [ChannelKit](#channelkit)                                     | INT   |     | NO   |     | 0       |       |         |
+| [HasMissile](#hasmissile)                                     | INT   |     | NO   |     | 0       |       |         |
+| [MissileModel](#missilemodel)                                 | INT   |     | NO   |     | 0       |       |         |
+| [MissilePathType](#missilepathtype)                           | INT   |     | NO   |     | 0       |       |         |
+| [MissileDestinationAttachment](#missiledestinationattachment) | INT   |     | NO   |     | 0       |       |         |
+| [MissileSound](#missilesound)                                 | INT   |     | NO   |     | 0       |       |         |
+| [AnimEventSoundID](#animeventsoundid)                         | INT   |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                                               | INT   |     | NO   |     | 0       |       |         |
+| [CasterImpactKit](#casterimpactkit)                           | INT   |     | NO   |     | 0       |       |         |
+| [TargetImpactKit](#targetimpactkit)                           | INT   |     | NO   |     | 0       |       |         |
+| [MissileAttachment](#missileattachment)                       | INT   |     | NO   |     | 0       |       |         |
+| [MissileFollowGroundHeight](#missilefollowgroundheight)       | INT   |     | NO   |     | 0       |       |         |
+| [MissileFollowGroundDropSpeed](#missilefollowgrounddropspeed) | INT   |     | NO   |     | 0       |       |         |
+| [MissileFollowGroundApproach](#missilefollowgroundapproach)   | INT   |     | NO   |     | 0       |       |         |
+| [MissileFollowGroundFlags](#missilefollowgroundflags)         | INT   |     | NO   |     | 0       |       |         |
+| [MissileMotion](#missilemotion)                               | INT   |     | NO   |     | 0       |       |         |
+| [MissileTargetingKit](#missiletargetingkit)                   | INT   |     | NO   |     | 0       |       |         |
+| [InstantAreaKit](#instantareakit)                             | INT   |     | NO   |     | 0       |       |         |
+| [ImpactAreaKit](#impactareakit)                               | INT   |     | NO   |     | 0       |       |         |
+| [PersistentAreaKit](#persistentareakit)                       | INT   |     | NO   |     | 0       |       |         |
+| [MissileCastOffsetX](#missilecastoffsetx)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [MissileCastOffsetY](#missilecastoffsety)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [MissileCastOffsetZ](#missilecastoffsetz)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [MissileImpactOffsetX](#missileimpactoffsetx)                 | FLOAT |     | NO   |     | 0       |       |         |
+| [MissileImpactOffsetY](#missileimpactoffsety)                 | FLOAT |     | NO   |     | 0       |       |         |
+| [MissileImpactOffsetZ](#missileimpactoffsetz)                 | FLOAT |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

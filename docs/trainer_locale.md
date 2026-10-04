@@ -8,12 +8,12 @@ This table hold the locale of the trainer template.
 
 **Table: trainer\_locale's Structure**
 
-| Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Id](#id)                       | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale](#locale)               | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Greeting_lang](#greetinglang)  | MEDIUMTEXT |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT        | SIGNED     |     | YES  | 0       |       |         |
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Id](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Greeting_lang](#greetinglang)  | MEDIUMTEXT |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | 0       |       |         |
 
 **Description of the table's fields**
 

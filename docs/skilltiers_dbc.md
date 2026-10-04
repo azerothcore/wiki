@@ -10,41 +10,41 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: skilltiers\_dbc's Structure**
 
-| Field              | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)          | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Cost_1](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_2](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_3](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_4](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_5](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_6](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_7](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_8](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_9](#cost)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_10](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_11](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_12](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_13](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_14](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_15](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost_16](#cost)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_1](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_2](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_3](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_4](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_5](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_6](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_7](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_8](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_9](#value)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_10](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_11](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_12](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_13](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_14](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_15](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Value_16](#value) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field              | Type |     | Null | Key | Default | Extra | Comment |
+| :----------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)          | INT  |     | NO   | PRI | 0       |       |         |
+| [Cost_1](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_2](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_3](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_4](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_5](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_6](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_7](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_8](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_9](#cost)    | INT  |     | NO   |     | 0       |       |         |
+| [Cost_10](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Cost_11](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Cost_12](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Cost_13](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Cost_14](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Cost_15](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Cost_16](#cost)   | INT  |     | NO   |     | 0       |       |         |
+| [Value_1](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_2](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_3](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_4](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_5](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_6](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_7](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_8](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_9](#value)  | INT  |     | NO   |     | 0       |       |         |
+| [Value_10](#value) | INT  |     | NO   |     | 0       |       |         |
+| [Value_11](#value) | INT  |     | NO   |     | 0       |       |         |
+| [Value_12](#value) | INT  |     | NO   |     | 0       |       |         |
+| [Value_13](#value) | INT  |     | NO   |     | 0       |       |         |
+| [Value_14](#value) | INT  |     | NO   |     | 0       |       |         |
+| [Value_15](#value) | INT  |     | NO   |     | 0       |       |         |
+| [Value_16](#value) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

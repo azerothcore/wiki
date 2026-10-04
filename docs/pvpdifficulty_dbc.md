@@ -10,14 +10,14 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: pvpdifficulty\_dbc's Structure**
 
-| Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [MapID](#mapid)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RangeIndex](#rangeindex) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MinLevel](#minlevel)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [MaxLevel](#maxlevel)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Difficulty](#difficulty) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                     | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT  |     | NO   | PRI | 0       |       |         |
+| [MapID](#mapid)           | INT  |     | NO   |     | 0       |       |         |
+| [RangeIndex](#rangeindex) | INT  |     | NO   |     | 0       |       |         |
+| [MinLevel](#minlevel)     | INT  |     | NO   |     | 0       |       |         |
+| [MaxLevel](#maxlevel)     | INT  |     | NO   |     | 0       |       |         |
+| [Difficulty](#difficulty) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

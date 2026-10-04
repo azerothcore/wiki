@@ -10,66 +10,66 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: vehicleseat\_dbc's Structure**
 
-| Field                                               | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                           | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [Flags](#flags)                                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [AttachmentID](#attachmentid)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [AttachmentOffsetX](#attachmentoffsetx)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [AttachmentOffsetY](#attachmentoffsety)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [AttachmentOffsetZ](#attachmentoffsetz)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterPreDelay](#enterpredelay)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterSpeed](#enterspeed)                           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterGravity](#entergravity)                       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterMinDuration](#enterminduration)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterMaxDuration](#entermaxduration)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterMinArcHeight](#enterminarcheight)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterMaxArcHeight](#entermaxarcheight)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [EnterAnimStart](#enteranimstart)                   | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [EnterAnimLoop](#enteranimloop)                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [RideAnimStart](#rideanimstart)                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [RideAnimLoop](#rideanimloop)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [RideUpperAnimStart](#rideupperanimstart)           | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [RideUpperAnimLoop](#rideupperanimloop)             | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ExitPreDelay](#exitpredelay)                       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitSpeed](#exitspeed)                             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitGravity](#exitgravity)                         | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitMinDuration](#exitminduration)                 | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitMaxDuration](#exitmaxduration)                 | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitMinArcHeight](#exitminarcheight)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitMaxArcHeight](#exitmaxarcheight)               | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [ExitAnimStart](#exitanimstart)                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ExitAnimLoop](#exitanimloop)                       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ExitAnimEnd](#exitanimend)                         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [PassengerYaw](#passengeryaw)                       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [PassengerPitch](#passengerpitch)                   | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [PassengerRoll](#passengerroll)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [PassengerAttachmentID](#passengerattachmentid)     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleEnterAnim](#vehicleenteranim)               | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleExitAnim](#vehicleexitanim)                 | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleRideAnimLoop](#vehiclerideanimloop)         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleEnterAnimBone](#vehicleenteranimbone)       | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleExitAnimBone](#vehicleexitanimbone)         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleRideAnimLoopBone](#vehiclerideanimloopbone) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleEnterAnimDelay](#vehicleenteranimdelay)     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleExitAnimDelay](#vehicleexitanimdelay)       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleAbilityDisplay](#vehicleabilitydisplay)     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [EnterUISoundID](#enteruisoundid)                   | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [ExitUISoundID](#exituisoundid)                     | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [UiSkin](#uiskin)                                   | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [FlagsB](#flagsb)                                   | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [CameraEnteringDelay](#cameraenteringdelay)         | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraEnteringDuration](#cameraenteringduration)   | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraExitingDelay](#cameraexitingdelay)           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraExitingDuration](#cameraexitingduration)     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraOffsetX](#cameraoffsetx)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraOffsetY](#cameraoffsety)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraOffsetZ](#cameraoffsetz)                     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraPosChaseRate](#cameraposchaserate)           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraFacingChaseRate](#camerafacingchaserate)     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraEnteringZoom](#cameraenteringzoom)           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraSeatZoomMin](#cameraseatzoommin)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [CameraSeatZoomMax](#cameraseatzoommax)             | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| Field                                               | Type  |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------------------------- | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                           | INT   |     | NO   | PRI | 0       |       |         |
+| [Flags](#flags)                                     | INT   |     | NO   |     | 0       |       |         |
+| [AttachmentID](#attachmentid)                       | INT   |     | NO   |     | 0       |       |         |
+| [AttachmentOffsetX](#attachmentoffsetx)             | FLOAT |     | NO   |     | 0       |       |         |
+| [AttachmentOffsetY](#attachmentoffsety)             | FLOAT |     | NO   |     | 0       |       |         |
+| [AttachmentOffsetZ](#attachmentoffsetz)             | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterPreDelay](#enterpredelay)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterSpeed](#enterspeed)                           | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterGravity](#entergravity)                       | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterMinDuration](#enterminduration)               | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterMaxDuration](#entermaxduration)               | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterMinArcHeight](#enterminarcheight)             | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterMaxArcHeight](#entermaxarcheight)             | FLOAT |     | NO   |     | 0       |       |         |
+| [EnterAnimStart](#enteranimstart)                   | INT   |     | NO   |     | 0       |       |         |
+| [EnterAnimLoop](#enteranimloop)                     | INT   |     | NO   |     | 0       |       |         |
+| [RideAnimStart](#rideanimstart)                     | INT   |     | NO   |     | 0       |       |         |
+| [RideAnimLoop](#rideanimloop)                       | INT   |     | NO   |     | 0       |       |         |
+| [RideUpperAnimStart](#rideupperanimstart)           | INT   |     | NO   |     | 0       |       |         |
+| [RideUpperAnimLoop](#rideupperanimloop)             | INT   |     | NO   |     | 0       |       |         |
+| [ExitPreDelay](#exitpredelay)                       | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitSpeed](#exitspeed)                             | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitGravity](#exitgravity)                         | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitMinDuration](#exitminduration)                 | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitMaxDuration](#exitmaxduration)                 | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitMinArcHeight](#exitminarcheight)               | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitMaxArcHeight](#exitmaxarcheight)               | FLOAT |     | NO   |     | 0       |       |         |
+| [ExitAnimStart](#exitanimstart)                     | INT   |     | NO   |     | 0       |       |         |
+| [ExitAnimLoop](#exitanimloop)                       | INT   |     | NO   |     | 0       |       |         |
+| [ExitAnimEnd](#exitanimend)                         | INT   |     | NO   |     | 0       |       |         |
+| [PassengerYaw](#passengeryaw)                       | FLOAT |     | NO   |     | 0       |       |         |
+| [PassengerPitch](#passengerpitch)                   | FLOAT |     | NO   |     | 0       |       |         |
+| [PassengerRoll](#passengerroll)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [PassengerAttachmentID](#passengerattachmentid)     | INT   |     | NO   |     | 0       |       |         |
+| [VehicleEnterAnim](#vehicleenteranim)               | INT   |     | NO   |     | 0       |       |         |
+| [VehicleExitAnim](#vehicleexitanim)                 | INT   |     | NO   |     | 0       |       |         |
+| [VehicleRideAnimLoop](#vehiclerideanimloop)         | INT   |     | NO   |     | 0       |       |         |
+| [VehicleEnterAnimBone](#vehicleenteranimbone)       | INT   |     | NO   |     | 0       |       |         |
+| [VehicleExitAnimBone](#vehicleexitanimbone)         | INT   |     | NO   |     | 0       |       |         |
+| [VehicleRideAnimLoopBone](#vehiclerideanimloopbone) | INT   |     | NO   |     | 0       |       |         |
+| [VehicleEnterAnimDelay](#vehicleenteranimdelay)     | FLOAT |     | NO   |     | 0       |       |         |
+| [VehicleExitAnimDelay](#vehicleexitanimdelay)       | FLOAT |     | NO   |     | 0       |       |         |
+| [VehicleAbilityDisplay](#vehicleabilitydisplay)     | INT   |     | NO   |     | 0       |       |         |
+| [EnterUISoundID](#enteruisoundid)                   | INT   |     | NO   |     | 0       |       |         |
+| [ExitUISoundID](#exituisoundid)                     | INT   |     | NO   |     | 0       |       |         |
+| [UiSkin](#uiskin)                                   | INT   |     | NO   |     | 0       |       |         |
+| [FlagsB](#flagsb)                                   | INT   |     | NO   |     | 0       |       |         |
+| [CameraEnteringDelay](#cameraenteringdelay)         | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraEnteringDuration](#cameraenteringduration)   | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraExitingDelay](#cameraexitingdelay)           | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraExitingDuration](#cameraexitingduration)     | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraOffsetX](#cameraoffsetx)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraOffsetY](#cameraoffsety)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraOffsetZ](#cameraoffsetz)                     | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraPosChaseRate](#cameraposchaserate)           | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraFacingChaseRate](#camerafacingchaserate)     | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraEnteringZoom](#cameraenteringzoom)           | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraSeatZoomMin](#cameraseatzoommin)             | FLOAT |     | NO   |     | 0       |       |         |
+| [CameraSeatZoomMax](#cameraseatzoommax)             | FLOAT |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

@@ -8,12 +8,12 @@ Names of the items that are part of an item set. The server sends them to the cl
 
 **Table: item\_set\_names's Structure**
 
-| Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                 | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [name](#name)                   | VARCHAR(255) |            |     | NO   | ''      |       |         |
-| [InventoryType](#inventorytype) | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT          | SIGNED     |     | YES  | NULL    |       |         |
+| Field                           | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [name](#name)                   | VARCHAR(255) |          | NO   |     | ''      |       |         |
+| [InventoryType](#inventorytype) | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT          |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

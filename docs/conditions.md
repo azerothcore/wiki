@@ -8,23 +8,23 @@ This table allows you to define conditions for various systems - Gossip, loot et
 
 **Table: conditions's Structure**
 
-| Field                                                 | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                          |
-| ----------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | -------------------------------------------------------------------------------- |
-| [SourceTypeOrReferenceId](#sourcetypeorreferenceid)   | INT          | SIGNED     | PRI | NO   | 0       |       |                                                                                  |
-| [SourceGroup](#sourcegroup)                           | INT          | UNSIGNED   | PRI | NO   | 0       |       |                                                                                  |
-| [SourceEntry](#sourceentry)                           | INT          | SIGNED     | PRI | NO   | 0       |       |                                                                                  |
-| [SourceId](#sourceid)                                 | INT          | SIGNED     | PRI | NO   | 0       |       | [smart_scripts.source_type](smart_scripts#sourcetype) \|\| 0 for everything else |
-| [ElseGroup](#elsegroup)                               | INT          | UNSIGNED   | PRI | NO   | 0       |       |                                                                                  |
-| [ConditionTypeOrReference](#conditiontypeorreference) | INT          | SIGNED     | PRI | NO   | 0       |       |                                                                                  |
-| [ConditionTarget](#conditiontarget)                   | TINYINT      | UNSIGNED   | PRI | NO   | 0       |       |                                                                                  |
-| [ConditionValue1](#conditionvalue1)                   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                                                                                  |
-| [ConditionValue2](#conditionvalue2)                   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                                                                                  |
-| [ConditionValue3](#conditionvalue3)                   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                                                                                  |
-| [NegativeCondition](#negativecondition)               | TINYINT      | UNSIGNED   |     | NO   | 0       |       | Boolean 0 or 1 (if [NegativeCondition](#negativecondition))                      |
-| [ErrorType](#errortype)                               | INT          | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
-| [ErrorTextId](#errortextid)                           | INT          | UNSIGNED   |     | NO   | 0       |       |                                                                                  |
-| [ScriptName](#scriptname)                             | CHAR(64)     |            |     | NO   | ''      |       |                                                                                  |
-| [Comment](#comment)                                   | VARCHAR(255) |            |     | YES  | NULL    |       |                                                                                  |
+| Field                                                 | Type         |          | Null | Key | Default | Extra | Comment                                                                          |
+| :---------------------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------------------------------------------- |
+| [SourceTypeOrReferenceId](#sourcetypeorreferenceid)   | INT          |          | NO   | PRI | 0       |       |                                                                                  |
+| [SourceGroup](#sourcegroup)                           | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [SourceEntry](#sourceentry)                           | INT          |          | NO   | PRI | 0       |       |                                                                                  |
+| [SourceId](#sourceid)                                 | INT          |          | NO   | PRI | 0       |       | [smart_scripts.source_type](smart_scripts#sourcetype) \|\| 0 for everything else |
+| [ElseGroup](#elsegroup)                               | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionTypeOrReference](#conditiontypeorreference) | INT          |          | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionTarget](#conditiontarget)                   | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionValue1](#conditionvalue1)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionValue2](#conditionvalue2)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionValue3](#conditionvalue3)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [NegativeCondition](#negativecondition)               | TINYINT      | UNSIGNED | NO   |     | 0       |       | Boolean 0 or 1 (if [NegativeCondition](#negativecondition))                      |
+| [ErrorType](#errortype)                               | INT          | UNSIGNED | NO   |     | 0       |       |                                                                                  |
+| [ErrorTextId](#errortextid)                           | INT          | UNSIGNED | NO   |     | 0       |       |                                                                                  |
+| [ScriptName](#scriptname)                             | CHAR(64)     |          | NO   |     | ''      |       |                                                                                  |
+| [Comment](#comment)                                   | VARCHAR(255) |          | YES  |     | NULL    |       |                                                                                  |
 
 **Description of the table's fields**
 

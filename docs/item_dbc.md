@@ -10,16 +10,16 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: item\_dbc's Structure**
 
-| Field                                                 | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                             | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [ClassID](#classid)                                   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SubclassID](#subclassid)                             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_Override_Subclassid](#soundoverridesubclassid) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Material](#material)                                 | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [DisplayInfoID](#displayinfoid)                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [InventoryType](#inventorytype)                       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SheatheType](#sheathetype)                           | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                                                 | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                             | INT  |     | NO   | PRI | 0       |       |         |
+| [ClassID](#classid)                                   | INT  |     | NO   |     | 0       |       |         |
+| [SubclassID](#subclassid)                             | INT  |     | NO   |     | 0       |       |         |
+| [Sound_Override_Subclassid](#soundoverridesubclassid) | INT  |     | NO   |     | 0       |       |         |
+| [Material](#material)                                 | INT  |     | NO   |     | 0       |       |         |
+| [DisplayInfoID](#displayinfoid)                       | INT  |     | NO   |     | 0       |       |         |
+| [InventoryType](#inventorytype)                       | INT  |     | NO   |     | 0       |       |         |
+| [SheatheType](#sheathetype)                           | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

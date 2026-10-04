@@ -10,53 +10,53 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: liquidtype\_dbc's Structure**
 
-| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Name](#name)                             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Flags](#flags)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Type](#type)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SoundID](#soundid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SpellID](#spellid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MaxDarkenDepth](#maxdarkendepth)         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [FogDarkenintensity](#fogdarkenintensity) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [AmbDarkenintensity](#ambdarkenintensity) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [DirDarkenintensity](#dirdarkenintensity) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [LightID](#lightid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ParticleScale](#particlescale)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [ParticleMovement](#particlemovement)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ParticleTexSlots](#particletexslots)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MaterialID](#materialid)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Texture_1](#texture)                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_2](#texture)                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_3](#texture)                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_4](#texture)                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_5](#texture)                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_6](#texture)                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Color_1](#color)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Color_2](#color)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Float_1](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_2](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_3](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_4](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_5](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_6](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_7](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_8](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_9](#float)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_10](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_11](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_12](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_13](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_14](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_15](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_16](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_17](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Float_18](#float)                        | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Int_1](#int)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Int_2](#int)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Int_3](#int)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Int_4](#int)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                     | Type         |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                 | INT          |     | NO   | PRI | 0       |       |         |
+| [Name](#name)                             | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Flags](#flags)                           | INT          |     | NO   |     | 0       |       |         |
+| [Type](#type)                             | INT          |     | NO   |     | 0       |       |         |
+| [SoundID](#soundid)                       | INT          |     | NO   |     | 0       |       |         |
+| [SpellID](#spellid)                       | INT          |     | NO   |     | 0       |       |         |
+| [MaxDarkenDepth](#maxdarkendepth)         | FLOAT        |     | NO   |     | 0       |       |         |
+| [FogDarkenintensity](#fogdarkenintensity) | FLOAT        |     | NO   |     | 0       |       |         |
+| [AmbDarkenintensity](#ambdarkenintensity) | FLOAT        |     | NO   |     | 0       |       |         |
+| [DirDarkenintensity](#dirdarkenintensity) | FLOAT        |     | NO   |     | 0       |       |         |
+| [LightID](#lightid)                       | INT          |     | NO   |     | 0       |       |         |
+| [ParticleScale](#particlescale)           | FLOAT        |     | NO   |     | 0       |       |         |
+| [ParticleMovement](#particlemovement)     | INT          |     | NO   |     | 0       |       |         |
+| [ParticleTexSlots](#particletexslots)     | INT          |     | NO   |     | 0       |       |         |
+| [MaterialID](#materialid)                 | INT          |     | NO   |     | 0       |       |         |
+| [Texture_1](#texture)                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_2](#texture)                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_3](#texture)                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_4](#texture)                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_5](#texture)                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_6](#texture)                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Color_1](#color)                         | INT          |     | NO   |     | 0       |       |         |
+| [Color_2](#color)                         | INT          |     | NO   |     | 0       |       |         |
+| [Float_1](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_2](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_3](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_4](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_5](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_6](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_7](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_8](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_9](#float)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_10](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_11](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_12](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_13](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_14](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_15](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_16](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_17](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Float_18](#float)                        | FLOAT        |     | NO   |     | 0       |       |         |
+| [Int_1](#int)                             | INT          |     | NO   |     | 0       |       |         |
+| [Int_2](#int)                             | INT          |     | NO   |     | 0       |       |         |
+| [Int_3](#int)                             | INT          |     | NO   |     | 0       |       |         |
+| [Int_4](#int)                             | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

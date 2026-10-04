@@ -8,10 +8,10 @@ Bonus the Alchemy talent Mixology gives to elixirs and flasks. Players with Mixo
 
 **Table: spell\_mixology's Structure**
 
-| Field             | Type  | Attributes | Key | Null | Default | Extra | Comment          |
-| ----------------- | ----- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [entry](#entry)   | INT   | UNSIGNED   | PRI | NO   |         |       |                  |
-| [pctMod](#pctmod) | FLOAT | SIGNED     |     | NO   | 30      |       | bonus multiplier |
+| Field             | Type  |          | Null | Key | Default | Extra | Comment          |
+| :---------------- | :---- | :------- | :--: | :-: | :-----: | :---: | :--------------- |
+| [entry](#entry)   | INT   | UNSIGNED | NO   | PRI |         |       |                  |
+| [pctMod](#pctmod) | FLOAT |          | NO   |     | 30      |       | bonus multiplier |
 
 **Description of the table's fields**
 

@@ -10,13 +10,13 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: gemproperties\_dbc's Structure**
 
-| Field                          | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                      | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Enchant_Id](#enchantid)       | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Maxcount_Inv](#maxcountinv)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Maxcount_Item](#maxcountitem) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Type](#type)                  | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                          | Type |     | Null | Key | Default | Extra | Comment |
+| :----------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                      | INT  |     | NO   | PRI | 0       |       |         |
+| [Enchant_Id](#enchantid)       | INT  |     | NO   |     | 0       |       |         |
+| [Maxcount_Inv](#maxcountinv)   | INT  |     | NO   |     | 0       |       |         |
+| [Maxcount_Item](#maxcountitem) | INT  |     | NO   |     | 0       |       |         |
+| [Type](#type)                  | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

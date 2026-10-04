@@ -10,27 +10,27 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: destructiblemodeldata\_dbc's Structure**
 
-| Field                                                       | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                                   | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [State0Wmo](#state0wmo)                                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State0DestructionDoodadSet](#state0destructiondoodadset)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State0ImpactEffectDoodadSet](#state0impacteffectdoodadset) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State0AmbientDoodadSet](#state0ambientdoodadset)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State1Wmo](#state1wmo)                                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State1DestructionDoodadSet](#state1destructiondoodadset)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State1ImpactEffectDoodadSet](#state1impacteffectdoodadset) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State1AmbientDoodadSet](#state1ambientdoodadset)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State2Wmo](#state2wmo)                                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State2DestructionDoodadSet](#state2destructiondoodadset)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State2ImpactEffectDoodadSet](#state2impacteffectdoodadset) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State2AmbientDoodadSet](#state2ambientdoodadset)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State3Wmo](#state3wmo)                                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State3DestructionDoodadSet](#state3destructiondoodadset)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State3ImpactEffectDoodadSet](#state3impacteffectdoodadset) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [State3AmbientDoodadSet](#state3ambientdoodadset)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Field17](#field)                                           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Field18](#field)                                           | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                                                       | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                                   | INT  |     | NO   | PRI | 0       |       |         |
+| [State0Wmo](#state0wmo)                                     | INT  |     | NO   |     | 0       |       |         |
+| [State0DestructionDoodadSet](#state0destructiondoodadset)   | INT  |     | NO   |     | 0       |       |         |
+| [State0ImpactEffectDoodadSet](#state0impacteffectdoodadset) | INT  |     | NO   |     | 0       |       |         |
+| [State0AmbientDoodadSet](#state0ambientdoodadset)           | INT  |     | NO   |     | 0       |       |         |
+| [State1Wmo](#state1wmo)                                     | INT  |     | NO   |     | 0       |       |         |
+| [State1DestructionDoodadSet](#state1destructiondoodadset)   | INT  |     | NO   |     | 0       |       |         |
+| [State1ImpactEffectDoodadSet](#state1impacteffectdoodadset) | INT  |     | NO   |     | 0       |       |         |
+| [State1AmbientDoodadSet](#state1ambientdoodadset)           | INT  |     | NO   |     | 0       |       |         |
+| [State2Wmo](#state2wmo)                                     | INT  |     | NO   |     | 0       |       |         |
+| [State2DestructionDoodadSet](#state2destructiondoodadset)   | INT  |     | NO   |     | 0       |       |         |
+| [State2ImpactEffectDoodadSet](#state2impacteffectdoodadset) | INT  |     | NO   |     | 0       |       |         |
+| [State2AmbientDoodadSet](#state2ambientdoodadset)           | INT  |     | NO   |     | 0       |       |         |
+| [State3Wmo](#state3wmo)                                     | INT  |     | NO   |     | 0       |       |         |
+| [State3DestructionDoodadSet](#state3destructiondoodadset)   | INT  |     | NO   |     | 0       |       |         |
+| [State3ImpactEffectDoodadSet](#state3impacteffectdoodadset) | INT  |     | NO   |     | 0       |       |         |
+| [State3AmbientDoodadSet](#state3ambientdoodadset)           | INT  |     | NO   |     | 0       |       |         |
+| [Field17](#field)                                           | INT  |     | NO   |     | 0       |       |         |
+| [Field18](#field)                                           | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

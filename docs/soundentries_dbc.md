@@ -10,38 +10,38 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: soundentries\_dbc's Structure**
 
-| Field                                             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                         | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [SoundType](#soundtype)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Name](#name)                                     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_1](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_2](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_3](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_4](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_5](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_6](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_7](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_8](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_9](#file)                                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [File_10](#file)                                  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Freq_1](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_2](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_3](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_4](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_5](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_6](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_7](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_8](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_9](#freq)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Freq_10](#freq)                                  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [DirectoryBase](#directorybase)                   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Volumefloat](#volumefloat)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MinDistance](#mindistance)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [DistanceCutoff](#distancecutoff)                 | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [EAXDef](#eaxdef)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SoundEntriesAdvancedID](#soundentriesadvancedid) | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                             | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                         | INT          |     | NO   | PRI | 0       |       |         |
+| [SoundType](#soundtype)                           | INT          |     | NO   |     | 0       |       |         |
+| [Name](#name)                                     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_1](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_2](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_3](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_4](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_5](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_6](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_7](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_8](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_9](#file)                                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [File_10](#file)                                  | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Freq_1](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_2](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_3](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_4](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_5](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_6](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_7](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_8](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_9](#freq)                                   | INT          |     | NO   |     | 0       |       |         |
+| [Freq_10](#freq)                                  | INT          |     | NO   |     | 0       |       |         |
+| [DirectoryBase](#directorybase)                   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Volumefloat](#volumefloat)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                                   | INT          |     | NO   |     | 0       |       |         |
+| [MinDistance](#mindistance)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [DistanceCutoff](#distancecutoff)                 | FLOAT        |     | NO   |     | 0       |       |         |
+| [EAXDef](#eaxdef)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SoundEntriesAdvancedID](#soundentriesadvancedid) | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

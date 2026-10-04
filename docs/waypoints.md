@@ -10,16 +10,16 @@ Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordi
 
 **Table: waypoints's Structure**
 
-| Field                           | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                 | INT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [pointid](#pointid)             | INT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [position\_x](#positionx)       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [position\_y](#positiony)       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [position\_z](#positionz)       | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [orientation](#orientation)     | FLOAT | SIGNED     |     | YES  | NULL    |       |         |
-| [delay](#delay)                 | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [point\_comment](#pointcomment) | TEXT  |            |     | YES  | NULL    |       |         |
+| Field                           | Type  |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [pointid](#pointid)             | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [position\_x](#positionx)       | FLOAT |          | NO   |     | 0       |       |         |
+| [position\_y](#positiony)       | FLOAT |          | NO   |     | 0       |       |         |
+| [position\_z](#positionz)       | FLOAT |          | NO   |     | 0       |       |         |
+| [orientation](#orientation)     | FLOAT |          | YES  |     | NULL    |       |         |
+| [delay](#delay)                 | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [point\_comment](#pointcomment) | TEXT  |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

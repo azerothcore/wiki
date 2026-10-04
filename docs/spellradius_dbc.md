@@ -10,12 +10,12 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: spellradius\_dbc's Structure**
 
-| Field                             | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                         | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [Radius](#radius)                 | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [RadiusPerLevel](#radiusperlevel) | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [RadiusMax](#radiusmax)           | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| Field                             | Type  |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT   |     | NO   | PRI | 0       |       |         |
+| [Radius](#radius)                 | FLOAT |     | NO   |     | 0       |       |         |
+| [RadiusPerLevel](#radiusperlevel) | FLOAT |     | NO   |     | 0       |       |         |
+| [RadiusMax](#radiusmax)           | FLOAT |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

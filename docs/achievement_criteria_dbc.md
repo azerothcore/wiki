@@ -10,39 +10,39 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: achievement\_criteria\_dbc's Structure**
 
-| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Achievement_Id](#achievementid)          | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Type](#type)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Asset_Id](#assetid)                      | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Quantity](#quantity)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Start_Event](#startevent)                | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Start_Asset](#startasset)                | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Fail_Event](#failevent)                  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Fail_Asset](#failasset)                  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Description_Lang_enUS](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enGB](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_koKR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_frFR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_deDE](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enCN](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enTW](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esES](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esMX](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_itIT](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags](#flags)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Timer_Start_Event](#timerstartevent)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Timer_Asset_Id](#timerassetid)           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Timer_Time](#timertime)                  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Ui_Order](#uiorder)                      | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                 | INT          |          | NO   | PRI | 0       |       |         |
+| [Achievement_Id](#achievementid)          | INT          |          | NO   |     | 0       |       |         |
+| [Type](#type)                             | INT          |          | NO   |     | 0       |       |         |
+| [Asset_Id](#assetid)                      | INT          |          | NO   |     | 0       |       |         |
+| [Quantity](#quantity)                     | INT          |          | NO   |     | 0       |       |         |
+| [Start_Event](#startevent)                | INT          |          | NO   |     | 0       |       |         |
+| [Start_Asset](#startasset)                | INT          |          | NO   |     | 0       |       |         |
+| [Fail_Event](#failevent)                  | INT          |          | NO   |     | 0       |       |         |
+| [Fail_Asset](#failasset)                  | INT          |          | NO   |     | 0       |       |         |
+| [Description_Lang_enUS](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enGB](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_koKR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_frFR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_deDE](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enCN](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enTW](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esES](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esMX](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_itIT](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Flags](#flags)                           | INT          |          | NO   |     | 0       |       |         |
+| [Timer_Start_Event](#timerstartevent)     | INT          |          | NO   |     | 0       |       |         |
+| [Timer_Asset_Id](#timerassetid)           | INT          |          | NO   |     | 0       |       |         |
+| [Timer_Time](#timertime)                  | INT          |          | NO   |     | 0       |       |         |
+| [Ui_Order](#uiorder)                      | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

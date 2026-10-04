@@ -8,13 +8,13 @@ This table holds the information on what values are used for the druid shapeshif
 
 **Table: player\_shapeshift\_model's Structure**
 
-| Field                               | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [RaceID](#raceid)                   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [CustomizationID](#customizationid) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [GenderID](#genderid)               | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [ModelID](#modelid)                 | INT     | UNSIGNED   |     | NO   |         |       |         |
+| Field                               | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [RaceID](#raceid)                   | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [CustomizationID](#customizationid) | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [GenderID](#genderid)               | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [ModelID](#modelid)                 | INT     | UNSIGNED | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

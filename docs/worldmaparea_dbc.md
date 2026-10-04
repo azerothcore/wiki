@@ -10,19 +10,19 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: worldmaparea\_dbc's Structure**
 
-| Field                                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                   | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [MapID](#mapid)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID](#areaid)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaName](#areaname)                       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [LocLeft](#locleft)                         | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [LocRight](#locright)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [LocTop](#loctop)                           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [LocBottom](#locbottom)                     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [DisplayMapID](#displaymapid)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [DefaultDungeonFloor](#defaultdungeonfloor) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ParentWorldMapID](#parentworldmapid)       | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                       | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                   | INT          |     | NO   | PRI | 0       |       |         |
+| [MapID](#mapid)                             | INT          |     | NO   |     | 0       |       |         |
+| [AreaID](#areaid)                           | INT          |     | NO   |     | 0       |       |         |
+| [AreaName](#areaname)                       | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [LocLeft](#locleft)                         | FLOAT        |     | NO   |     | 0       |       |         |
+| [LocRight](#locright)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [LocTop](#loctop)                           | FLOAT        |     | NO   |     | 0       |       |         |
+| [LocBottom](#locbottom)                     | FLOAT        |     | NO   |     | 0       |       |         |
+| [DisplayMapID](#displaymapid)               | INT          |     | NO   |     | 0       |       |         |
+| [DefaultDungeonFloor](#defaultdungeonfloor) | INT          |     | NO   |     | 0       |       |         |
+| [ParentWorldMapID](#parentworldmapid)       | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

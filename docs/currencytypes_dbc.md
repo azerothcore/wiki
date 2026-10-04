@@ -10,12 +10,12 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: currencytypes\_dbc's Structure**
 
-| Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [ItemID](#itemid)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [CategoryID](#categoryid) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [BitIndex](#bitindex)     | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                     | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT  |     | NO   | PRI | 0       |       |         |
+| [ItemID](#itemid)         | INT  |     | NO   |     | 0       |       |         |
+| [CategoryID](#categoryid) | INT  |     | NO   |     | 0       |       |         |
+| [BitIndex](#bitindex)     | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

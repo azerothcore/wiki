@@ -10,11 +10,11 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: namesprofanity\_dbc's Structure**
 
-| Field                       | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                   | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [Pattern](#pattern)         | TINYTEXT |            |     | NO   |         |       |         |
-| [LanguagueID](#languagueid) | TINYINT  | SIGNED     |     | NO   |         |       |         |
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                   | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [Pattern](#pattern)         | TINYTEXT |          | NO   |     |         |       |         |
+| [LanguagueID](#languagueid) | TINYINT  |          | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

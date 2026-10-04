@@ -10,36 +10,36 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: wmoareatable\_dbc's Structure**
 
-| Field                                                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                                   | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [WMOID](#wmoid)                                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [NameSetID](#namesetid)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [WMOGroupID](#wmogroupid)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SoundProviderPref](#soundproviderpref)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SoundProviderPrefUnderwater](#soundproviderprefunderwater) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AmbienceID](#ambienceid)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ZoneMusic](#zonemusic)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [IntroSound](#introsound)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaTableID](#areatableid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaName_Lang_enUS](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_enGB](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_koKR](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_frFR](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_deDE](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_enCN](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_zhCN](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_enTW](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_zhTW](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_esES](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_esMX](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_ruRU](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_ptPT](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_ptBR](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_itIT](#areanamelang)                         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_Unk](#areanamelang)                          | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AreaName_Lang_Mask](#areanamelang)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                                                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                                   | INT          |          | NO   | PRI | 0       |       |         |
+| [WMOID](#wmoid)                                             | INT          |          | NO   |     | 0       |       |         |
+| [NameSetID](#namesetid)                                     | INT          |          | NO   |     | 0       |       |         |
+| [WMOGroupID](#wmogroupid)                                   | INT          |          | NO   |     | 0       |       |         |
+| [SoundProviderPref](#soundproviderpref)                     | INT          |          | NO   |     | 0       |       |         |
+| [SoundProviderPrefUnderwater](#soundproviderprefunderwater) | INT          |          | NO   |     | 0       |       |         |
+| [AmbienceID](#ambienceid)                                   | INT          |          | NO   |     | 0       |       |         |
+| [ZoneMusic](#zonemusic)                                     | INT          |          | NO   |     | 0       |       |         |
+| [IntroSound](#introsound)                                   | INT          |          | NO   |     | 0       |       |         |
+| [Flags](#flags)                                             | INT          |          | NO   |     | 0       |       |         |
+| [AreaTableID](#areatableid)                                 | INT          |          | NO   |     | 0       |       |         |
+| [AreaName_Lang_enUS](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_enGB](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_koKR](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_frFR](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_deDE](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_enCN](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_zhCN](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_enTW](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_zhTW](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_esES](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_esMX](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_ruRU](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_ptPT](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_ptBR](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_itIT](#areanamelang)                         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_Unk](#areanamelang)                          | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AreaName_Lang_Mask](#areanamelang)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

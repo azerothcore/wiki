@@ -8,12 +8,12 @@ Implements the *perfection* crafting system (originally from The Burning Crusade
 
 **Table: skill\_perfect\_item\_template's Structure**
 
-| Field                                             | Type  | Attributes | Key | Null | Default | Extra | Comment                                   |
-| ------------------------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------- |
-| [spellId](#spellid)                               | INT   | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the item creation spell        |
-| [requiredSpecialization](#requiredspecialization) | INT   | UNSIGNED   |     | NO   | 0       |       | Specialization spell id                   |
-| [perfectCreateChance](#perfectcreatechance)       | FLOAT | SIGNED     |     | NO   | 0       |       | chance to create the perfect item instead |
-| [perfectItemType](#perfectitemtype)               | INT   | UNSIGNED   |     | NO   | 0       |       | perfect item type to create instead       |
+| Field                                             | Type  |          | Null | Key | Default | Extra | Comment                                   |
+| :------------------------------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :---------------------------------------- |
+| [spellId](#spellid)                               | INT   | UNSIGNED | NO   | PRI | 0       |       | SpellId of the item creation spell        |
+| [requiredSpecialization](#requiredspecialization) | INT   | UNSIGNED | NO   |     | 0       |       | Specialization spell id                   |
+| [perfectCreateChance](#perfectcreatechance)       | FLOAT |          | NO   |     | 0       |       | chance to create the perfect item instead |
+| [perfectItemType](#perfectitemtype)               | INT   | UNSIGNED | NO   |     | 0       |       | perfect item type to create instead       |
 
 **Description of the table's fields**
 

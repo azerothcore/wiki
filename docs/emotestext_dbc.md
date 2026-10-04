@@ -10,27 +10,27 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: emotestext\_dbc's Structure**
 
-| Field                      | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                  | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Name](#name)              | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [EmoteID](#emoteid)        | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_1](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_2](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_3](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_4](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_5](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_6](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_7](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_8](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_9](#emotetext)  | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_10](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_11](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_12](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_13](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_14](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_15](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteText_16](#emotetext) | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                      | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                  | INT          |     | NO   | PRI | 0       |       |         |
+| [Name](#name)              | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [EmoteID](#emoteid)        | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_1](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_2](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_3](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_4](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_5](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_6](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_7](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_8](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_9](#emotetext)  | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_10](#emotetext) | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_11](#emotetext) | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_12](#emotetext) | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_13](#emotetext) | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_14](#emotetext) | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_15](#emotetext) | INT          |     | NO   |     | 0       |       |         |
+| [EmoteText_16](#emotetext) | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

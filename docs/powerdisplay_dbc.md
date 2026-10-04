@@ -10,14 +10,14 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: powerdisplay\_dbc's Structure**
 
-| Field                                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                   | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [ActualType](#actualtype)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [GlobalstringBaseTag](#globalstringbasetag) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Red](#red)                                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [Green](#green)                             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [Blue](#blue)                               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                   | INT          |          | NO   | PRI | 0       |       |         |
+| [ActualType](#actualtype)                   | INT          |          | NO   |     | 0       |       |         |
+| [GlobalstringBaseTag](#globalstringbasetag) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Red](#red)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [Green](#green)                             | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [Blue](#blue)                               | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

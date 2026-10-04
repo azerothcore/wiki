@@ -10,12 +10,12 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: taxipath\_dbc's Structure**
 
-| Field                         | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                     | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [FromTaxiNode](#fromtaxinode) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ToTaxiNode](#totaxinode)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Cost](#cost)                 | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                         | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                     | INT  |     | NO   | PRI | 0       |       |         |
+| [FromTaxiNode](#fromtaxinode) | INT  |     | NO   |     | 0       |       |         |
+| [ToTaxiNode](#totaxinode)     | INT  |     | NO   |     | 0       |       |         |
+| [Cost](#cost)                 | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

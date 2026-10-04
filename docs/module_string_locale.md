@@ -8,12 +8,12 @@ This table holds information of string entries for modules.
 
 **Table: module\_string\_locale's Structure**
 
-| Field             | Type         | Attributes                              | Key | Null | Default | Extra | Comment                                           |
-| ----------------- | ------------ | --------------------------------------- | --- | ---- | ------- | ----- | ------------------------------------------------- |
-| [module](#module) | VARCHAR(255) |                                         | PRI | NO   |         |       | Corresponds to an existing entry in module_string |
-| [id](#id)         | INT          | UNSIGNED                                | PRI | NO   |         |       | Corresponds to an existing entry in module_string |
-| [locale](#locale) | ENUM         | koKR,frFR,deDE,zhCN,zhTW,esES,esMX,ruRU | PRI | NO   |         |       |                                                   |
-| [string](#string) | TEXT         |                                         |     | NO   |         |       |                                                   |
+| Field             | Type         |                                         | Null | Key | Default | Extra | Comment                                           |
+| :---------------- | :----------- | :-------------------------------------- | :--: | :-: | :-----: | :---: | :------------------------------------------------ |
+| [module](#module) | VARCHAR(255) |                                         | NO   | PRI |         |       | Corresponds to an existing entry in module_string |
+| [id](#id)         | INT          | UNSIGNED                                | NO   | PRI |         |       | Corresponds to an existing entry in module_string |
+| [locale](#locale) | ENUM         | koKR,frFR,deDE,zhCN,zhTW,esES,esMX,ruRU | NO   | PRI |         |       |                                                   |
+| [string](#string) | TEXT         |                                         | NO   |     |         |       |                                                   |
 
 **Description of the table's fields**
 

@@ -10,62 +10,62 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: areapoi\_dbc's Structure**
 
-| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Importance](#importance)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_1](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_2](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_3](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_4](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_5](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_6](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_7](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_8](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Icon_9](#icon)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [FactionID](#factionid)                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [X](#x)                                   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Y](#y)                                   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Z](#z)                                   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [ContinentID](#continentid)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [AreaID](#areaid)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelang)               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelang)                | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelang)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Description_Lang_enUS](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enGB](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_koKR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_frFR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_deDE](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enCN](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enTW](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esES](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esMX](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_itIT](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [WorldStateID](#worldstateid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [WorldMapLink](#worldmaplink)             | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                 | INT          |          | NO   | PRI | 0       |       |         |
+| [Importance](#importance)                 | INT          |          | NO   |     | 0       |       |         |
+| [Icon_1](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_2](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_3](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_4](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_5](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_6](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_7](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_8](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [Icon_9](#icon)                           | INT          |          | NO   |     | 0       |       |         |
+| [FactionID](#factionid)                   | INT          |          | NO   |     | 0       |       |         |
+| [X](#x)                                   | FLOAT        |          | NO   |     | 0       |       |         |
+| [Y](#y)                                   | FLOAT        |          | NO   |     | 0       |       |         |
+| [Z](#z)                                   | FLOAT        |          | NO   |     | 0       |       |         |
+| [ContinentID](#continentid)               | INT          |          | NO   |     | 0       |       |         |
+| [Flags](#flags)                           | INT          |          | NO   |     | 0       |       |         |
+| [AreaID](#areaid)                         | INT          |          | NO   |     | 0       |       |         |
+| [Name_Lang_enUS](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelang)               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelang)                | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelang)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Description_Lang_enUS](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enGB](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_koKR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_frFR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_deDE](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enCN](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enTW](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esES](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esMX](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_itIT](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [WorldStateID](#worldstateid)             | INT          |          | NO   |     | 0       |       |         |
+| [WorldMapLink](#worldmaplink)             | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

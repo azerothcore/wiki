@@ -10,63 +10,63 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: holidays\_dbc's Structure**
 
-| Field                                         | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                     | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Duration_1](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_2](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_3](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_4](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_5](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_6](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_7](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_8](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_9](#duration)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Duration_10](#duration)                      | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_1](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_2](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_3](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_4](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_5](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_6](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_7](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_8](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_9](#date)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_10](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_11](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_12](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_13](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_14](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_15](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_16](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_17](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_18](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_19](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_20](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_21](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_22](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_23](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_24](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_25](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Date_26](#date)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Region](#region)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Looping](#looping)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_1](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_2](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_3](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_4](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_5](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_6](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_7](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_8](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_9](#calendarflags)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFlags_10](#calendarflags)            | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HolidayNameID](#holidaynameid)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HolidayDescriptionID](#holidaydescriptionid) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [TextureFilename](#texturefilename)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Priority](#priority)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CalendarFilterType](#calendarfiltertype)     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                         | Type         |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                     | INT          |     | NO   | PRI | 0       |       |         |
+| [Duration_1](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_2](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_3](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_4](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_5](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_6](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_7](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_8](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_9](#duration)                       | INT          |     | NO   |     | 0       |       |         |
+| [Duration_10](#duration)                      | INT          |     | NO   |     | 0       |       |         |
+| [Date_1](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_2](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_3](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_4](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_5](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_6](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_7](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_8](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_9](#date)                               | INT          |     | NO   |     | 0       |       |         |
+| [Date_10](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_11](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_12](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_13](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_14](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_15](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_16](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_17](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_18](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_19](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_20](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_21](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_22](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_23](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_24](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_25](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Date_26](#date)                              | INT          |     | NO   |     | 0       |       |         |
+| [Region](#region)                             | INT          |     | NO   |     | 0       |       |         |
+| [Looping](#looping)                           | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_1](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_2](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_3](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_4](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_5](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_6](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_7](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_8](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_9](#calendarflags)             | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFlags_10](#calendarflags)            | INT          |     | NO   |     | 0       |       |         |
+| [HolidayNameID](#holidaynameid)               | INT          |     | NO   |     | 0       |       |         |
+| [HolidayDescriptionID](#holidaydescriptionid) | INT          |     | NO   |     | 0       |       |         |
+| [TextureFilename](#texturefilename)           | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Priority](#priority)                         | INT          |     | NO   |     | 0       |       |         |
+| [CalendarFilterType](#calendarfiltertype)     | INT          |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                               | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

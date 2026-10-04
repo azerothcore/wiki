@@ -8,11 +8,11 @@ Persists the saved state of gameobjects inside a bound instance (for example doo
 
 **Table: instance\_saved\_go\_state\_data's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment          |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [id](#id)       | INT     | UNSIGNED   | PRI | NO   |         |       | instance.id      |
-| [guid](#guid)   | INT     | UNSIGNED   | PRI | NO   |         |       | gameobject.guid  |
-| [state](#state) | TINYINT | UNSIGNED   |     | YES  | 0       |       | gameobject.state |
+| Field           | Type    |          | Null | Key | Default | Extra | Comment          |
+| :-------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :--------------- |
+| [id](#id)       | INT     | UNSIGNED | NO   | PRI |         |       | instance.id      |
+| [guid](#guid)   | INT     | UNSIGNED | NO   | PRI |         |       | gameobject.guid  |
+| [state](#state) | TINYINT | UNSIGNED | YES  |     | 0       |       | gameobject.state |
 
 **Description of the table's fields**
 

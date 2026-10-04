@@ -8,12 +8,12 @@ This table is used to provide localized clients with localized strings for page_
 
 **Table: page\_text\_locale's Structure**
 
-| Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                       | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale](#locale)               | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Text](#text)                   | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT        | SIGNED     |     | YES  | NULL    |       |         |
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Text](#text)                   | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

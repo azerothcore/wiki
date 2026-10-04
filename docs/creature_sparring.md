@@ -8,10 +8,10 @@ Stores the sparring health threshold for a creature. While sparring, a creature 
 
 **Table: creature\_sparring's Structure**
 
-| Field                       | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [GUID](#guid)               | INT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [SparringPCT](#sparringpct) | FLOAT | SIGNED     |     | NO   |         |       |         |
+| Field                       | Type  |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [GUID](#guid)               | INT   | UNSIGNED | NO   | PRI |         |       |         |
+| [SparringPCT](#sparringpct) | FLOAT |          | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

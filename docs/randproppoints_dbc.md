@@ -10,24 +10,24 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: randproppoints\_dbc's Structure**
 
-| Field                   | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)               | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Epic_1](#epic)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Epic_2](#epic)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Epic_3](#epic)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Epic_4](#epic)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Epic_5](#epic)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Superior_1](#superior) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Superior_2](#superior) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Superior_3](#superior) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Superior_4](#superior) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Superior_5](#superior) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Good_1](#good)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Good_2](#good)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Good_3](#good)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Good_4](#good)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Good_5](#good)         | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                   | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)               | INT  |     | NO   | PRI | 0       |       |         |
+| [Epic_1](#epic)         | INT  |     | NO   |     | 0       |       |         |
+| [Epic_2](#epic)         | INT  |     | NO   |     | 0       |       |         |
+| [Epic_3](#epic)         | INT  |     | NO   |     | 0       |       |         |
+| [Epic_4](#epic)         | INT  |     | NO   |     | 0       |       |         |
+| [Epic_5](#epic)         | INT  |     | NO   |     | 0       |       |         |
+| [Superior_1](#superior) | INT  |     | NO   |     | 0       |       |         |
+| [Superior_2](#superior) | INT  |     | NO   |     | 0       |       |         |
+| [Superior_3](#superior) | INT  |     | NO   |     | 0       |       |         |
+| [Superior_4](#superior) | INT  |     | NO   |     | 0       |       |         |
+| [Superior_5](#superior) | INT  |     | NO   |     | 0       |       |         |
+| [Good_1](#good)         | INT  |     | NO   |     | 0       |       |         |
+| [Good_2](#good)         | INT  |     | NO   |     | 0       |       |         |
+| [Good_3](#good)         | INT  |     | NO   |     | 0       |       |         |
+| [Good_4](#good)         | INT  |     | NO   |     | 0       |       |         |
+| [Good_5](#good)         | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

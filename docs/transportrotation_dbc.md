@@ -10,15 +10,15 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: transportrotation\_dbc's Structure**
 
-| Field                           | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                       | INT   | SIGNED     | PRI | NO   | 0       |       |         |
-| [GameObjectsID](#gameobjectsid) | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [TimeIndex](#timeindex)         | INT   | SIGNED     |     | NO   | 0       |       |         |
-| [RotX](#rotx)                   | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [RotY](#roty)                   | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [RotZ](#rotz)                   | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [RotW](#rotw)                   | FLOAT | SIGNED     |     | NO   | 0       |       |         |
+| Field                           | Type  |     | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :---- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT   |     | NO   | PRI | 0       |       |         |
+| [GameObjectsID](#gameobjectsid) | INT   |     | NO   |     | 0       |       |         |
+| [TimeIndex](#timeindex)         | INT   |     | NO   |     | 0       |       |         |
+| [RotX](#rotx)                   | FLOAT |     | NO   |     | 0       |       |         |
+| [RotY](#roty)                   | FLOAT |     | NO   |     | 0       |       |         |
+| [RotZ](#rotz)                   | FLOAT |     | NO   |     | 0       |       |         |
+| [RotW](#rotw)                   | FLOAT |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

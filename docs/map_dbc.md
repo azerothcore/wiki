@@ -10,74 +10,74 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: map\_dbc's Structure**
 
-| Field                                             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                         | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Directory](#directory)                           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [InstanceType](#instancetype)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                                   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [PVP](#pvp)                                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MapName_Lang_enUS](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_enGB](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_koKR](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_frFR](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_deDE](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_enCN](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_zhCN](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_enTW](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_zhTW](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_esES](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_esMX](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_ruRU](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_ptPT](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_ptBR](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_itIT](#mapnamelang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_Unk](#mapnamelang)                  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapName_Lang_Mask](#mapnamelang)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AreaTableID](#areatableid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MapDescription0_Lang_enUS](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_enGB](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_koKR](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_frFR](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_deDE](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_enCN](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_zhCN](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_enTW](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_zhTW](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_esES](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_esMX](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_ruRU](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_ptPT](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_ptBR](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_itIT](#mapdescription0lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_Unk](#mapdescription0lang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapDescription0_Lang_Mask](#mapdescription0lang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [MapDescription1_Lang_enUS](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_enGB](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_koKR](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_frFR](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_deDE](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_enCN](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_zhCN](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_enTW](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_zhTW](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_esES](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_esMX](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_ruRU](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_ptPT](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_ptBR](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_itIT](#mapdescription1lang) | TEXT         |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_Unk](#mapdescription1lang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MapDescription1_Lang_Mask](#mapdescription1lang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [LoadingScreenID](#loadingscreenid)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MinimapIconScale](#minimapiconscale)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CorpseMapID](#corpsemapid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CorpseX](#corpsex)                               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CorpseY](#corpsey)                               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [TimeOfDayOverride](#timeofdayoverride)           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ExpansionID](#expansionid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [RaidOffset](#raidoffset)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MaxPlayers](#maxplayers)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                             | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                         | INT          |          | NO   | PRI | 0       |       |         |
+| [Directory](#directory)                           | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [InstanceType](#instancetype)                     | INT          |          | NO   |     | 0       |       |         |
+| [Flags](#flags)                                   | INT          |          | NO   |     | 0       |       |         |
+| [PVP](#pvp)                                       | INT          |          | NO   |     | 0       |       |         |
+| [MapName_Lang_enUS](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_enGB](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_koKR](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_frFR](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_deDE](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_enCN](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_zhCN](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_enTW](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_zhTW](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_esES](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_esMX](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_ruRU](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_ptPT](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_ptBR](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_itIT](#mapnamelang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_Unk](#mapnamelang)                  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapName_Lang_Mask](#mapnamelang)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AreaTableID](#areatableid)                       | INT          |          | NO   |     | 0       |       |         |
+| [MapDescription0_Lang_enUS](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_enGB](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_koKR](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_frFR](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_deDE](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_enCN](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_zhCN](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_enTW](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_zhTW](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_esES](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_esMX](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_ruRU](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_ptPT](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_ptBR](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_itIT](#mapdescription0lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_Unk](#mapdescription0lang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapDescription0_Lang_Mask](#mapdescription0lang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [MapDescription1_Lang_enUS](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_enGB](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_koKR](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_frFR](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_deDE](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_enCN](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_zhCN](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_enTW](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_zhTW](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_esES](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_esMX](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_ruRU](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_ptPT](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_ptBR](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_itIT](#mapdescription1lang) | TEXT         |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_Unk](#mapdescription1lang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [MapDescription1_Lang_Mask](#mapdescription1lang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [LoadingScreenID](#loadingscreenid)               | INT          |          | NO   |     | 0       |       |         |
+| [MinimapIconScale](#minimapiconscale)             | FLOAT        |          | NO   |     | 0       |       |         |
+| [CorpseMapID](#corpsemapid)                       | INT          |          | NO   |     | 0       |       |         |
+| [CorpseX](#corpsex)                               | FLOAT        |          | NO   |     | 0       |       |         |
+| [CorpseY](#corpsey)                               | FLOAT        |          | NO   |     | 0       |       |         |
+| [TimeOfDayOverride](#timeofdayoverride)           | INT          |          | NO   |     | 0       |       |         |
+| [ExpansionID](#expansionid)                       | INT          |          | NO   |     | 0       |       |         |
+| [RaidOffset](#raidoffset)                         | INT          |          | NO   |     | 0       |       |         |
+| [MaxPlayers](#maxplayers)                         | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

@@ -10,15 +10,15 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: emotes\_dbc's Structure**
 
-| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [EmoteSlashCommand](#emoteslashcommand)   | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AnimID](#animid)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteFlags](#emoteflags)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteSpecProc](#emotespecproc)           | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EmoteSpecProcParam](#emotespecprocparam) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [EventSoundID](#eventsoundid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                     | Type         |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                 | INT          |     | NO   | PRI | 0       |       |         |
+| [EmoteSlashCommand](#emoteslashcommand)   | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [AnimID](#animid)                         | INT          |     | NO   |     | 0       |       |         |
+| [EmoteFlags](#emoteflags)                 | INT          |     | NO   |     | 0       |       |         |
+| [EmoteSpecProc](#emotespecproc)           | INT          |     | NO   |     | 0       |       |         |
+| [EmoteSpecProcParam](#emotespecprocparam) | INT          |     | NO   |     | 0       |       |         |
+| [EventSoundID](#eventsoundid)             | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

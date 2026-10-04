@@ -10,24 +10,24 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: creaturedisplayinfo\_dbc's Structure**
 
-| Field                                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                       | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [ModelID](#modelid)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SoundID](#soundid)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ExtendedDisplayInfoID](#extendeddisplayinfoid) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CreatureModelScale](#creaturemodelscale)       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CreatureModelAlpha](#creaturemodelalpha)       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [TextureVariation_1](#texturevariation)         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [TextureVariation_2](#texturevariation)         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [TextureVariation_3](#texturevariation)         | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [PortraitTextureName](#portraittexturename)     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [BloodLevel](#bloodlevel)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [BloodID](#bloodid)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [NPCSoundID](#npcsoundid)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ParticleColorID](#particlecolorid)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [CreatureGeosetData](#creaturegeosetdata)       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ObjectEffectPackageID](#objecteffectpackageid) | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                           | Type         |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                       | INT          |     | NO   | PRI | 0       |       |         |
+| [ModelID](#modelid)                             | INT          |     | NO   |     | 0       |       |         |
+| [SoundID](#soundid)                             | INT          |     | NO   |     | 0       |       |         |
+| [ExtendedDisplayInfoID](#extendeddisplayinfoid) | INT          |     | NO   |     | 0       |       |         |
+| [CreatureModelScale](#creaturemodelscale)       | FLOAT        |     | NO   |     | 0       |       |         |
+| [CreatureModelAlpha](#creaturemodelalpha)       | INT          |     | NO   |     | 0       |       |         |
+| [TextureVariation_1](#texturevariation)         | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [TextureVariation_2](#texturevariation)         | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [TextureVariation_3](#texturevariation)         | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [PortraitTextureName](#portraittexturename)     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [BloodLevel](#bloodlevel)                       | INT          |     | NO   |     | 0       |       |         |
+| [BloodID](#bloodid)                             | INT          |     | NO   |     | 0       |       |         |
+| [NPCSoundID](#npcsoundid)                       | INT          |     | NO   |     | 0       |       |         |
+| [ParticleColorID](#particlecolorid)             | INT          |     | NO   |     | 0       |       |         |
+| [CreatureGeosetData](#creaturegeosetdata)       | INT          |     | NO   |     | 0       |       |         |
+| [ObjectEffectPackageID](#objecteffectpackageid) | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

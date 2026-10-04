@@ -8,11 +8,11 @@ This table maps individual creature and gameobject spawns to their spawn groups.
 
 **Table: spawn\_group's Structure**
 
-| Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [groupId](#groupid)     | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [spawnType](#spawntype) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [spawnId](#spawnid)     | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| Field                   | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [groupId](#groupid)     | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [spawnType](#spawntype) | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [spawnId](#spawnid)     | INT     | UNSIGNED | NO   | PRI |         |       |         |
 
 **Description of the table's fields**
 

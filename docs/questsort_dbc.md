@@ -10,26 +10,26 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: questsort\_dbc's Structure**
 
-| Field                               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                           | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [SortName_Lang_enUS](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_enGB](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_koKR](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_frFR](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_deDE](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_enCN](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_zhCN](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_enTW](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_zhTW](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_esES](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_esMX](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_ruRU](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_ptPT](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_ptBR](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_itIT](#sortnamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_Unk](#sortnamelang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [SortName_Lang_Mask](#sortnamelang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                               | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                           | INT          |          | NO   | PRI | 0       |       |         |
+| [SortName_Lang_enUS](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_enGB](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_koKR](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_frFR](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_deDE](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_enCN](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_zhCN](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_enTW](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_zhTW](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_esES](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_esMX](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_ruRU](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_ptPT](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_ptBR](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_itIT](#sortnamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_Unk](#sortnamelang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [SortName_Lang_Mask](#sortnamelang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

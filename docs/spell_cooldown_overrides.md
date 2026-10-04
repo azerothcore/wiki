@@ -8,14 +8,14 @@ Used to give NPC spells cooldowns for mindcontroll.
 
 **Table: spell\_cooldown\_overrides's Structure**
 
-| Field                                           | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Id](#id)                                       | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [RecoveryTime](#recoverytime)                   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [CategoryRecoveryTime](#categoryrecoverytime)   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [StartRecoveryTime](#startrecoverytime)         | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [StartRecoveryCategory](#startrecoverycategory) | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [Comment](#comment)                             | TEXT |            |     | YES  | NULL    |       |         |
+| Field                                           | Type |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Id](#id)                                       | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [RecoveryTime](#recoverytime)                   | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [CategoryRecoveryTime](#categoryrecoverytime)   | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [StartRecoveryTime](#startrecoverytime)         | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [StartRecoveryCategory](#startrecoverycategory) | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [Comment](#comment)                             | TEXT |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

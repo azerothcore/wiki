@@ -10,13 +10,13 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: spellrunecost\_dbc's Structure**
 
-| Field                     | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Blood](#blood)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Unholy](#unholy)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Frost](#frost)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RunicPower](#runicpower) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                     | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT  |     | NO   | PRI | 0       |       |         |
+| [Blood](#blood)           | INT  |     | NO   |     | 0       |       |         |
+| [Unholy](#unholy)         | INT  |     | NO   |     | 0       |       |         |
+| [Frost](#frost)           | INT  |     | NO   |     | 0       |       |         |
+| [RunicPower](#runicpower) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

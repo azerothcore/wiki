@@ -10,30 +10,30 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: scalingstatdistribution\_dbc's Structure**
 
-| Field                 | Type | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)             | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [StatID_1](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_2](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_3](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_4](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_5](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_6](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_7](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_8](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_9](#statid)   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [StatID_10](#statid)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_1](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_2](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_3](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_4](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_5](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_6](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_7](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_8](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_9](#bonus)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Bonus_10](#bonus)    | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Maxlevel](#maxlevel) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                 | Type |     | Null | Key | Default | Extra | Comment |
+| :-------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)             | INT  |     | NO   | PRI | 0       |       |         |
+| [StatID_1](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_2](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_3](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_4](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_5](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_6](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_7](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_8](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_9](#statid)   | INT  |     | NO   |     | 0       |       |         |
+| [StatID_10](#statid)  | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_1](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_2](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_3](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_4](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_5](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_6](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_7](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_8](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_9](#bonus)     | INT  |     | NO   |     | 0       |       |         |
+| [Bonus_10](#bonus)    | INT  |     | NO   |     | 0       |       |         |
+| [Maxlevel](#maxlevel) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

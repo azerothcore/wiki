@@ -10,17 +10,17 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: creaturespelldata\_dbc's Structure**
 
-| Field                           | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                       | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Spells_1](#spells)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_2](#spells)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_3](#spells)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_4](#spells)             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Availability_1](#availability) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Availability_2](#availability) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Availability_3](#availability) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Availability_4](#availability) | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                           | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT  |     | NO   | PRI | 0       |       |         |
+| [Spells_1](#spells)             | INT  |     | NO   |     | 0       |       |         |
+| [Spells_2](#spells)             | INT  |     | NO   |     | 0       |       |         |
+| [Spells_3](#spells)             | INT  |     | NO   |     | 0       |       |         |
+| [Spells_4](#spells)             | INT  |     | NO   |     | 0       |       |         |
+| [Availability_1](#availability) | INT  |     | NO   |     | 0       |       |         |
+| [Availability_2](#availability) | INT  |     | NO   |     | 0       |       |         |
+| [Availability_3](#availability) | INT  |     | NO   |     | 0       |       |         |
+| [Availability_4](#availability) | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

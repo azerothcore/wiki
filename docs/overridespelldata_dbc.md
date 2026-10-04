@@ -10,20 +10,20 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: overridespelldata\_dbc's Structure**
 
-| Field                | Type | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)            | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [Spells_1](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_2](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_3](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_4](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_5](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_6](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_7](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_8](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_9](#spells)  | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Spells_10](#spells) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)      | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)            | INT  |     | NO   | PRI | 0       |       |         |
+| [Spells_1](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_2](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_3](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_4](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_5](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_6](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_7](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_8](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_9](#spells)  | INT  |     | NO   |     | 0       |       |         |
+| [Spells_10](#spells) | INT  |     | NO   |     | 0       |       |         |
+| [Flags](#flags)      | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

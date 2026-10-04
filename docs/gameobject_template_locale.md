@@ -8,13 +8,13 @@ This table is used to provide localized clients with localized strings for gameo
 
 **Table: gameobject\_template\_locale's Structure**
 
-| Field                             | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                   | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale](#locale)                 | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [name](#name)                     | TEXT       |            |     | YES  | NULL    |       |         |
-| [castBarCaption](#castbarcaption) | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild](#verifiedbuild)   | INT        | SIGNED     |     | YES  | NULL    |       |         |
+| Field                             | Type       |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                   | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)                 | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [name](#name)                     | TEXT       |          | YES  |     | NULL    |       |         |
+| [castBarCaption](#castbarcaption) | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

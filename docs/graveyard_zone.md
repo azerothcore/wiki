@@ -12,12 +12,12 @@ For a list of all existing graveyard zones and their respective IDs, check out W
 
 **Table: graveyard\_zone's Structure**
 
-| Field                   | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)               | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [GhostZone](#ghostzone) | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Faction](#faction)     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Comment](#comment)     | TEXT     |            |     | YES  | NULL    |       |         |
+| Field                   | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)               | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [GhostZone](#ghostzone) | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Faction](#faction)     | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [Comment](#comment)     | TEXT     |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

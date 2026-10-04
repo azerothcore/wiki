@@ -10,13 +10,13 @@ Note: Entries in this table will be deleted automatically when the referenced en
 
 **Table: mail\_server\_template\_items's Structure**
 
-| Field                     | Type | Attributes     | Key | Null | Default | Extra          | Comment |
-| ------------------------- | ---- | -------------- | --- | ---- | ------- | -------------- | ------- |
-| [id](#id)                 | INT  | UNSIGNED       | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templateID](#templateid) | INT  | UNSIGNED       | MUL | NO   |         |                |         |
-| [faction](#faction)       | ENUM | Alliance,Horde |     | NO   |         |                |         |
-| [item](#item)             | INT  | UNSIGNED       |     | NO   |         |                |         |
-| [itemCount](#itemcount)   | INT  | UNSIGNED       |     | NO   |         |                |         |
+| Field                     | Type |                | Null | Key | Default | Extra          | Comment |
+| :------------------------ | :--- | :------------- | :--: | :-: | :-----: | :------------: | :------ |
+| [id](#id)                 | INT  | UNSIGNED       | NO   | PRI |         | AUTO_INCREMENT |         |
+| [templateID](#templateid) | INT  | UNSIGNED       | NO   | MUL |         |                |         |
+| [faction](#faction)       | ENUM | Alliance,Horde | NO   |     |         |                |         |
+| [item](#item)             | INT  | UNSIGNED       | NO   |     |         |                |         |
+| [itemCount](#itemcount)   | INT  | UNSIGNED       | NO   |     |         |                |         |
 
 **Description of the table's fields**
 

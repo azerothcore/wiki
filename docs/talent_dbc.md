@@ -10,31 +10,31 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: talent\_dbc's Structure**
 
-| Field                               | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                           | INT  | SIGNED     | PRI | NO   | 0       |       |         |
-| [TabID](#tabid)                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [TierID](#tierid)                   | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [ColumnIndex](#columnindex)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_1](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_2](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_3](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_4](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_5](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_6](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_7](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_8](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [SpellRank_9](#spellrank)           | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrereqTalent_1](#prereqtalent)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrereqTalent_2](#prereqtalent)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrereqTalent_3](#prereqtalent)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrereqRank_1](#prereqrank)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrereqRank_2](#prereqrank)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [PrereqRank_3](#prereqrank)         | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [RequiredSpellID](#requiredspellid) | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [CategoryMask_1](#categorymask)     | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [CategoryMask_2](#categorymask)     | INT  | SIGNED     |     | NO   | 0       |       |         |
+| Field                               | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                           | INT  |     | NO   | PRI | 0       |       |         |
+| [TabID](#tabid)                     | INT  |     | NO   |     | 0       |       |         |
+| [TierID](#tierid)                   | INT  |     | NO   |     | 0       |       |         |
+| [ColumnIndex](#columnindex)         | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_1](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_2](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_3](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_4](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_5](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_6](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_7](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_8](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [SpellRank_9](#spellrank)           | INT  |     | NO   |     | 0       |       |         |
+| [PrereqTalent_1](#prereqtalent)     | INT  |     | NO   |     | 0       |       |         |
+| [PrereqTalent_2](#prereqtalent)     | INT  |     | NO   |     | 0       |       |         |
+| [PrereqTalent_3](#prereqtalent)     | INT  |     | NO   |     | 0       |       |         |
+| [PrereqRank_1](#prereqrank)         | INT  |     | NO   |     | 0       |       |         |
+| [PrereqRank_2](#prereqrank)         | INT  |     | NO   |     | 0       |       |         |
+| [PrereqRank_3](#prereqrank)         | INT  |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                     | INT  |     | NO   |     | 0       |       |         |
+| [RequiredSpellID](#requiredspellid) | INT  |     | NO   |     | 0       |       |         |
+| [CategoryMask_1](#categorymask)     | INT  |     | NO   |     | 0       |       |         |
+| [CategoryMask_2](#categorymask)     | INT  |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

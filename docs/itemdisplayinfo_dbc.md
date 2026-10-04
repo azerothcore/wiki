@@ -10,33 +10,33 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: itemdisplayinfo\_dbc's Structure**
 
-| Field                                 | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                             | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [ModelName_1](#modelname)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [ModelName_2](#modelname)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [ModelTexture_1](#modeltexture)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [ModelTexture_2](#modeltexture)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [InventoryIcon_1](#inventoryicon)     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [InventoryIcon_2](#inventoryicon)     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [GeosetGroup_1](#geosetgroup)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [GeosetGroup_2](#geosetgroup)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [GeosetGroup_3](#geosetgroup)         | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Flags](#flags)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SpellVisualID](#spellvisualid)       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [GroupSoundIndex](#groupsoundindex)   | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HelmetGeosetVis_1](#helmetgeosetvis) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [HelmetGeosetVis_2](#helmetgeosetvis) | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Texture_1](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_2](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_3](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_4](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_5](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_6](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_7](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Texture_8](#texture)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [ItemVisual](#itemvisual)             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [ParticleColorID](#particlecolorid)   | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                 | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                             | INT          |     | NO   | PRI | 0       |       |         |
+| [ModelName_1](#modelname)             | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [ModelName_2](#modelname)             | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [ModelTexture_1](#modeltexture)       | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [ModelTexture_2](#modeltexture)       | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [InventoryIcon_1](#inventoryicon)     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [InventoryIcon_2](#inventoryicon)     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [GeosetGroup_1](#geosetgroup)         | INT          |     | NO   |     | 0       |       |         |
+| [GeosetGroup_2](#geosetgroup)         | INT          |     | NO   |     | 0       |       |         |
+| [GeosetGroup_3](#geosetgroup)         | INT          |     | NO   |     | 0       |       |         |
+| [Flags](#flags)                       | INT          |     | NO   |     | 0       |       |         |
+| [SpellVisualID](#spellvisualid)       | INT          |     | NO   |     | 0       |       |         |
+| [GroupSoundIndex](#groupsoundindex)   | INT          |     | NO   |     | 0       |       |         |
+| [HelmetGeosetVis_1](#helmetgeosetvis) | INT          |     | NO   |     | 0       |       |         |
+| [HelmetGeosetVis_2](#helmetgeosetvis) | INT          |     | NO   |     | 0       |       |         |
+| [Texture_1](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_2](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_3](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_4](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_5](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_6](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_7](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [Texture_8](#texture)                 | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [ItemVisual](#itemvisual)             | INT          |     | NO   |     | 0       |       |         |
+| [ParticleColorID](#particlecolorid)   | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

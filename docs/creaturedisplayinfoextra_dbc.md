@@ -10,29 +10,29 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: creaturedisplayinfoextra\_dbc's Structure**
 
-| Field                               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                           | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [DisplayRaceID](#displayraceid)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [DisplaySexID](#displaysexid)       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SkinID](#skinid)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [FaceID](#faceid)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [HairStyleID](#hairstyleid)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [HairColorID](#haircolorid)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [FacialHairID](#facialhairid)       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay1](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay2](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay3](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay4](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay5](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay6](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay7](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay8](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay9](#npcitemdisplay)  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay10](#npcitemdisplay) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NPCItemDisplay11](#npcitemdisplay) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags](#flags)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [BakeName](#bakename)               | VARCHAR(100) |            |     | NO   |         |       |         |
+| Field                               | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                           | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [DisplayRaceID](#displayraceid)     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [DisplaySexID](#displaysexid)       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SkinID](#skinid)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [FaceID](#faceid)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [HairStyleID](#hairstyleid)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [HairColorID](#haircolorid)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [FacialHairID](#facialhairid)       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay1](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay2](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay3](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay4](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay5](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay6](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay7](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay8](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay9](#npcitemdisplay)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay10](#npcitemdisplay) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NPCItemDisplay11](#npcitemdisplay) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Flags](#flags)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [BakeName](#bakename)               | VARCHAR(100) |          | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

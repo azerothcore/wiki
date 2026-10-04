@@ -10,48 +10,48 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: vehicle\_dbc's Structure**
 
-| Field                                               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                           | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Flags](#flags)                                     | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [TurnSpeed](#turnspeed)                             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [PitchSpeed](#pitchspeed)                           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [PitchMin](#pitchmin)                               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [PitchMax](#pitchmax)                               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_1](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_2](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_3](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_4](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_5](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_6](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_7](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [SeatID_8](#seatid)                                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MouseLookOffsetPitch](#mouselookoffsetpitch)       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CameraFadeDistScalarMin](#camerafadedistscalarmin) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CameraFadeDistScalarMax](#camerafadedistscalarmax) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [CameraPitchOffset](#camerapitchoffset)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [FacingLimitRight](#facinglimitright)               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [FacingLimitLeft](#facinglimitleft)                 | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtTurnLingering](#mssltrgtturnlingering)     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtPitchLingering](#mssltrgtpitchlingering)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtMouseLingering](#mssltrgtmouselingering)   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtEndOpacity](#mssltrgtendopacity)           | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtArcSpeed](#mssltrgtarcspeed)               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtArcRepeat](#mssltrgtarcrepeat)             | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtArcWidth](#mssltrgtarcwidth)               | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtImpactRadius_1](#mssltrgtimpactradius)     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtImpactRadius_2](#mssltrgtimpactradius)     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtArcTexture](#mssltrgtarctexture)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MsslTrgtImpactTexture](#mssltrgtimpacttexture)     | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MsslTrgtImpactModel_1](#mssltrgtimpactmodel)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [MsslTrgtImpactModel_2](#mssltrgtimpactmodel)       | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [CameraYawOffset](#camerayawoffset)                 | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [UilocomotionType](#uilocomotiontype)               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [MsslTrgtImpactTexRadius](#mssltrgtimpacttexradius) | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [VehicleUIIndicatorID](#vehicleuiindicatorid)       | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [PowerDisplayID_1](#powerdisplayid)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [PowerDisplayID_2](#powerdisplayid)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [PowerDisplayID_3](#powerdisplayid)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                               | Type         |     | Null | Key | Default | Extra | Comment |
+| :-------------------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                           | INT          |     | NO   | PRI | 0       |       |         |
+| [Flags](#flags)                                     | INT          |     | NO   |     | 0       |       |         |
+| [TurnSpeed](#turnspeed)                             | FLOAT        |     | NO   |     | 0       |       |         |
+| [PitchSpeed](#pitchspeed)                           | FLOAT        |     | NO   |     | 0       |       |         |
+| [PitchMin](#pitchmin)                               | FLOAT        |     | NO   |     | 0       |       |         |
+| [PitchMax](#pitchmax)                               | FLOAT        |     | NO   |     | 0       |       |         |
+| [SeatID_1](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_2](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_3](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_4](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_5](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_6](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_7](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [SeatID_8](#seatid)                                 | INT          |     | NO   |     | 0       |       |         |
+| [MouseLookOffsetPitch](#mouselookoffsetpitch)       | FLOAT        |     | NO   |     | 0       |       |         |
+| [CameraFadeDistScalarMin](#camerafadedistscalarmin) | FLOAT        |     | NO   |     | 0       |       |         |
+| [CameraFadeDistScalarMax](#camerafadedistscalarmax) | FLOAT        |     | NO   |     | 0       |       |         |
+| [CameraPitchOffset](#camerapitchoffset)             | FLOAT        |     | NO   |     | 0       |       |         |
+| [FacingLimitRight](#facinglimitright)               | FLOAT        |     | NO   |     | 0       |       |         |
+| [FacingLimitLeft](#facinglimitleft)                 | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtTurnLingering](#mssltrgtturnlingering)     | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtPitchLingering](#mssltrgtpitchlingering)   | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtMouseLingering](#mssltrgtmouselingering)   | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtEndOpacity](#mssltrgtendopacity)           | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtArcSpeed](#mssltrgtarcspeed)               | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtArcRepeat](#mssltrgtarcrepeat)             | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtArcWidth](#mssltrgtarcwidth)               | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtImpactRadius_1](#mssltrgtimpactradius)     | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtImpactRadius_2](#mssltrgtimpactradius)     | FLOAT        |     | NO   |     | 0       |       |         |
+| [MsslTrgtArcTexture](#mssltrgtarctexture)           | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [MsslTrgtImpactTexture](#mssltrgtimpacttexture)     | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [MsslTrgtImpactModel_1](#mssltrgtimpactmodel)       | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [MsslTrgtImpactModel_2](#mssltrgtimpactmodel)       | VARCHAR(100) |     | YES  |     | NULL    |       |         |
+| [CameraYawOffset](#camerayawoffset)                 | FLOAT        |     | NO   |     | 0       |       |         |
+| [UilocomotionType](#uilocomotiontype)               | INT          |     | NO   |     | 0       |       |         |
+| [MsslTrgtImpactTexRadius](#mssltrgtimpacttexradius) | FLOAT        |     | NO   |     | 0       |       |         |
+| [VehicleUIIndicatorID](#vehicleuiindicatorid)       | INT          |     | NO   |     | 0       |       |         |
+| [PowerDisplayID_1](#powerdisplayid)                 | INT          |     | NO   |     | 0       |       |         |
+| [PowerDisplayID_2](#powerdisplayid)                 | INT          |     | NO   |     | 0       |       |         |
+| [PowerDisplayID_3](#powerdisplayid)                 | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

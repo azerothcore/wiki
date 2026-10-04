@@ -8,18 +8,18 @@ This table contains the trainer spell entries.
 
 **Table: trainer\_spell's Structure**
 
-| Field                           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [TrainerId](#trainerid)         | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [SpellId](#spellid)             | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [MoneyCost](#moneycost)         | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [ReqSkillLine](#reqskillline)   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [ReqSkillRank](#reqskillrank)   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [ReqAbility1](#reqability)      | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [ReqAbility2](#reqability)      | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [ReqAbility3](#reqability)      | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [ReqLevel](#reqlevel)           | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT     | SIGNED     |     | YES  | 0       |       |         |
+| Field                           | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [TrainerId](#trainerid)         | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [SpellId](#spellid)             | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [MoneyCost](#moneycost)         | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [ReqSkillLine](#reqskillline)   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [ReqSkillRank](#reqskillrank)   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [ReqAbility1](#reqability)      | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [ReqAbility2](#reqability)      | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [ReqAbility3](#reqability)      | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [ReqLevel](#reqlevel)           | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT     |          | YES  |     | 0       |       |         |
 
 **Description of the table's fields**
 

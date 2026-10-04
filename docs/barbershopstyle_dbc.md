@@ -10,48 +10,48 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: barbershopstyle\_dbc's Structure**
 
-| Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [Type](#type)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [DisplayName_Lang_enUS](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_enGB](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_koKR](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_frFR](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_deDE](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_enCN](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_zhCN](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_enTW](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_zhTW](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_esES](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_esMX](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_ruRU](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_ptPT](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_ptBR](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_itIT](#displaynamelang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_Unk](#displaynamelang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [DisplayName_Lang_Mask](#displaynamelang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Description_Lang_enUS](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enGB](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_koKR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_frFR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_deDE](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enCN](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enTW](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esES](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esMX](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_itIT](#descriptionlang) | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Cost_Modifier](#costmodifier)            | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [Race](#race)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sex](#sex)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Data](#data)                             | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                 | INT          |          | NO   | PRI | 0       |       |         |
+| [Type](#type)                             | INT          |          | NO   |     | 0       |       |         |
+| [DisplayName_Lang_enUS](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_enGB](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_koKR](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_frFR](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_deDE](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_enCN](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_zhCN](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_enTW](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_zhTW](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_esES](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_esMX](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_ruRU](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_ptPT](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_ptBR](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_itIT](#displaynamelang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_Unk](#displaynamelang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [DisplayName_Lang_Mask](#displaynamelang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Description_Lang_enUS](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enGB](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_koKR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_frFR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_deDE](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enCN](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhCN](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enTW](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhTW](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esES](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esMX](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ruRU](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptPT](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptBR](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_itIT](#descriptionlang) | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Cost_Modifier](#costmodifier)            | FLOAT        |          | NO   |     | 0       |       |         |
+| [Race](#race)                             | INT          |          | NO   |     | 0       |       |         |
+| [Sex](#sex)                               | INT          |          | NO   |     | 0       |       |         |
+| [Data](#data)                             | INT          |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

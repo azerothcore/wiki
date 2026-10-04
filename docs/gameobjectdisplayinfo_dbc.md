@@ -10,27 +10,27 @@ See [How to import DBC data inside the AC database](how-to-import-dbc-data-in-db
 
 **Table: gameobjectdisplayinfo\_dbc's Structure**
 
-| Field                                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                       | INT          | SIGNED     | PRI | NO   | 0       |       |         |
-| [ModelName](#modelname)                         | VARCHAR(200) |            |     | YES  | NULL    |       |         |
-| [Sound_1](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_2](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_3](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_4](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_5](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_6](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_7](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_8](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_9](#sound)                               | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [Sound_10](#sound)                              | INT          | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMinX](#geoboxminx)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMinY](#geoboxminy)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMinZ](#geoboxminz)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMaxX](#geoboxmaxx)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMaxY](#geoboxmaxy)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [GeoBoxMaxZ](#geoboxmaxz)                       | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [ObjectEffectPackageID](#objecteffectpackageid) | INT          | SIGNED     |     | NO   | 0       |       |         |
+| Field                                           | Type         |     | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                       | INT          |     | NO   | PRI | 0       |       |         |
+| [ModelName](#modelname)                         | VARCHAR(200) |     | YES  |     | NULL    |       |         |
+| [Sound_1](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_2](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_3](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_4](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_5](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_6](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_7](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_8](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_9](#sound)                               | INT          |     | NO   |     | 0       |       |         |
+| [Sound_10](#sound)                              | INT          |     | NO   |     | 0       |       |         |
+| [GeoBoxMinX](#geoboxminx)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMinY](#geoboxminy)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMinZ](#geoboxminz)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMaxX](#geoboxmaxx)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMaxY](#geoboxmaxy)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [GeoBoxMaxZ](#geoboxmaxz)                       | FLOAT        |     | NO   |     | 0       |       |         |
+| [ObjectEffectPackageID](#objecteffectpackageid) | INT          |     | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

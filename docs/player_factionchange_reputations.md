@@ -8,12 +8,12 @@ Basically all faction/reputation changes made when player changes faction.
 
 **Table: player\_factionchange\_reputations's Structure**
 
-| Field                                | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id](#allianceid)           | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [alliance_comment](#alliancecomment) | TEXT |            |     | YES  | NULL    |       |         |
-| [horde_id](#hordeid)                 | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [horde_comment](#hordecomment)       | TEXT |            |     | YES  | NULL    |       |         |
+| Field                                | Type |          | Null | Key | Default | Extra | Comment |
+| :----------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [alliance_id](#allianceid)           | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |          | YES  |     | NULL    |       |         |
+| [horde_id](#hordeid)                 | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

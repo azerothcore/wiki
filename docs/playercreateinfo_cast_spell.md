@@ -8,12 +8,12 @@ Defines spells that are cast on a character immediately upon creation, filtered 
 
 **Table: playercreateinfo\_cast\_spell's Structure**
 
-| Field                   | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [raceMask](#racemask)   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [classMask](#classmask) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [spell](#spell)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [note](#note)           | VARCHAR(255) |            |     | YES  | NULL    |       |         |
+| Field                   | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [raceMask](#racemask)   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [classMask](#classmask) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [spell](#spell)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [note](#note)           | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

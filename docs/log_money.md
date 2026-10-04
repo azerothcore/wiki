@@ -8,18 +8,18 @@ Logs money moved through mail, trade, the auction house and the guild bank, with
 
 **Table: log\_money's Structure**
 
-| Field                          | Type     | Attributes | Key | Null | Default | Extra | Comment                                              |
-| ------------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------------------- |
-| [sender_acc](#senderacc)       | INT      | UNSIGNED   |     | NO   |         |       |                                                      |
-| [sender_guid](#senderguid)     | INT      | UNSIGNED   |     | NO   |         |       |                                                      |
-| [sender_name](#sendername)     | TEXT     |            |     | NO   |         |       |                                                      |
-| [sender_ip](#senderip)         | TEXT     |            |     | NO   |         |       |                                                      |
-| [receiver_acc](#receiveracc)   | INT      | UNSIGNED   |     | NO   |         |       |                                                      |
-| [receiver_name](#receivername) | TEXT     |            |     | NO   |         |       |                                                      |
-| [money](#money)                | BIGINT   | UNSIGNED   |     | NO   |         |       |                                                      |
-| [topic](#topic)                | TEXT     |            |     | NO   |         |       |                                                      |
-| [date](#date)                  | DATETIME |            |     | NO   |         |       |                                                      |
-| [type](#type)                  | TINYINT  | SIGNED     |     | NO   |         |       | 1=COD,2=AH,3=GB DEPOSIT,4=GB WITHDRAW,5=MAIL,6=TRADE |
+| Field                          | Type     |          | Null | Key | Default | Extra | Comment                                              |
+| :----------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :--------------------------------------------------- |
+| [sender_acc](#senderacc)       | INT      | UNSIGNED | NO   |     |         |       |                                                      |
+| [sender_guid](#senderguid)     | INT      | UNSIGNED | NO   |     |         |       |                                                      |
+| [sender_name](#sendername)     | TEXT     |          | NO   |     |         |       |                                                      |
+| [sender_ip](#senderip)         | TEXT     |          | NO   |     |         |       |                                                      |
+| [receiver_acc](#receiveracc)   | INT      | UNSIGNED | NO   |     |         |       |                                                      |
+| [receiver_name](#receivername) | TEXT     |          | NO   |     |         |       |                                                      |
+| [money](#money)                | BIGINT   | UNSIGNED | NO   |     |         |       |                                                      |
+| [topic](#topic)                | TEXT     |          | NO   |     |         |       |                                                      |
+| [date](#date)                  | DATETIME |          | NO   |     |         |       |                                                      |
+| [type](#type)                  | TINYINT  |          | NO   |     |         |       | 1=COD,2=AH,3=GB DEPOSIT,4=GB WITHDRAW,5=MAIL,6=TRADE |
 
 **Description of the table's fields**
 

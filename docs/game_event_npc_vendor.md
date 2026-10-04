@@ -8,15 +8,15 @@ This table allows you to change the items a vendor sells, or to create a [vendor
 
 **Table: game\_event\_npc\_vendor's Structure**
 
-| Field                         | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [eventEntry](#evententry)     | SMALLINT | SIGNED     | PRI | NO   |         |       | Entry of the game event. |
-| [guid](#guid)                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [slot](#slot)                 | SMALLINT | SIGNED     | MUL | NO   | 0       |       |                          |
-| [item](#item)                 | INT      | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [maxcount](#maxcount)         | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [incrtime](#incrtime)         | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [ExtendedCost](#extendedcost) | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
+| Field                         | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :---------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [eventEntry](#evententry)     | SMALLINT |          | NO   | PRI |         |       | Entry of the game event. |
+| [guid](#guid)                 | INT      | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [slot](#slot)                 | SMALLINT |          | NO   | MUL | 0       |       |                          |
+| [item](#item)                 | INT      | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [maxcount](#maxcount)         | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [incrtime](#incrtime)         | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [ExtendedCost](#extendedcost) | INT      | UNSIGNED | NO   |     | 0       |       |                          |
 
 **Description of the table's fields**
 
