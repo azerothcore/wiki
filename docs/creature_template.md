@@ -8,63 +8,63 @@ This table contains the description of creatures. Each spawned creature is an in
 
 **Table: creature\_template's Structure**
 
-| Field                                         | Type      | Attributes | Key | Null | Default | Extra | Comment                                |
-| --------------------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | -------------------------------------- |
-| [entry](#entry)                               | INT       | UNSIGNED   | PRI | NO   | 0       |       |                                        |
-| [difficulty_entry_1](#difficultyentryx)       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [difficulty_entry_2](#difficultyentryx)       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [difficulty_entry_3](#difficultyentryx)       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [KillCredit1](#killcredit1)                   | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [KillCredit2](#killcredit2)                   | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [name](#name)                                 | CHAR(100) |            | MUL | NO   | 0       |       |                                        |
-| [subname](#subname)                           | CHAR(100) |            |     | YES  | NULL    |       |                                        |
-| [IconName](#iconname)                         | CHAR(100) |            |     | YES  | NULL    |       |                                        |
-| [gossip_menu_id](#gossipmenuid)               | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [minlevel](#minlevel)                         | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                                        |
-| [maxlevel](#maxlevel)                         | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                                        |
-| [exp](#exp)                                   | SMALLINT  | SIGNED     |     | NO   | 0       |       |                                        |
-| [faction](#faction)                           | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [npcflag](#npcflag)                           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [speed_walk](#speedwalk)                      | FLOAT     | SIGNED     |     | NO   | 1       |       | Result of 2.5/2.5, most common value   |
-| [speed_run](#speedrun)                        | FLOAT     | SIGNED     |     | NO   | 1.14286 |       | Result of 8.0/7.0, most common value   |
-| [speed_swim](#speedswim)                      | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [speed_flight](#speedflight)                  | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [detection_range](#detectionrange)            | FLOAT     | SIGNED     |     | NO   | 20      |       |                                        |
-| [rank](#rank)                                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [dmgschool](#dmgschool)                       | TINYINT   | SIGNED     |     | NO   | 0       |       |                                        |
-| [DamageModifier](#damagemodifier)             | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [BaseAttackTime](#baseattacktime)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [RangeAttackTime](#rangeattacktime)           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [BaseVariance](#basevariance)                 | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [RangeVariance](#rangevariance)               | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [unit_class](#unitclass)                      | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [unit_flags](#unitflags)                      | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [unit_flags2](#unitflags2)                    | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [dynamicflags](#dynamicflags)                 | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [family](#family)                             | TINYINT   | SIGNED     |     | NO   | 0       |       |                                        |
-| [type](#type)                                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [type_flags](#typeflags)                      | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [lootid](#lootid)                             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [pickpocketloot](#pickpocketloot)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [skinloot](#skinloot)                         | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [PetSpellDataId](#petspelldataid)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [VehicleId](#vehicleid)                       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [mingold](#mingold)                           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [maxgold](#maxgold)                           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [AIName](#ainame)                             | CHAR(64)  |            |     | NO   | ''      |       |                                        |
-| [MovementType](#movementtype)                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [HoverHeight](#hoverheight)                   | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [HealthModifier](#healthmodifier)             | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [ManaModifier](#manamodifier)                 | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [ArmorModifier](#armormodifier)               | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [ExperienceModifier](#experiencemodifier)     | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
-| [RacialLeader](#racialleader)                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [movementId](#movementid)                     | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [RegenHealth](#regenhealth)                   | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                                        |
-| [CreatureImmunitiesId](#creatureimmunitiesid) | INT       | SIGNED     |     | NO   | 0       |       | Reference to creature_immunities table |
-| [flags_extra](#flagsextra)                    | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
-| [ScriptName](#scriptname)                     | CHAR(64)  |            |     | NO   | ''      |       |                                        |
-| [VerifiedBuild](#verifiedbuild)               | INT       | SIGNED     |     | YES  | NULL    |       |                                        |
+| Field                                         | Type      |          | Null | Key | Default | Extra | Comment                                |
+| :-------------------------------------------- | :-------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------- |
+| [entry](#entry)                               | INT       | UNSIGNED | NO   | PRI | 0       |       |                                        |
+| [difficulty_entry_1](#difficultyentryx)       | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [difficulty_entry_2](#difficultyentryx)       | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [difficulty_entry_3](#difficultyentryx)       | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [KillCredit1](#killcredit1)                   | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [KillCredit2](#killcredit2)                   | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [name](#name)                                 | CHAR(100) |          | NO   | MUL | 0       |       |                                        |
+| [subname](#subname)                           | CHAR(100) |          | YES  |     | NULL    |       |                                        |
+| [IconName](#iconname)                         | CHAR(100) |          | YES  |     | NULL    |       |                                        |
+| [gossip_menu_id](#gossipmenuid)               | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [minlevel](#minlevel)                         | TINYINT   | UNSIGNED | NO   |     | 1       |       |                                        |
+| [maxlevel](#maxlevel)                         | TINYINT   | UNSIGNED | NO   |     | 1       |       |                                        |
+| [exp](#exp)                                   | SMALLINT  |          | NO   |     | 0       |       |                                        |
+| [faction](#faction)                           | SMALLINT  | UNSIGNED | NO   |     | 0       |       |                                        |
+| [npcflag](#npcflag)                           | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [speed_walk](#speedwalk)                      | FLOAT     |          | NO   |     | 1       |       | Result of 2.5/2.5, most common value   |
+| [speed_run](#speedrun)                        | FLOAT     |          | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value   |
+| [speed_swim](#speedswim)                      | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [speed_flight](#speedflight)                  | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [detection_range](#detectionrange)            | FLOAT     |          | NO   |     | 20      |       |                                        |
+| [rank](#rank)                                 | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                        |
+| [dmgschool](#dmgschool)                       | TINYINT   |          | NO   |     | 0       |       |                                        |
+| [DamageModifier](#damagemodifier)             | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [BaseAttackTime](#baseattacktime)             | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [RangeAttackTime](#rangeattacktime)           | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [BaseVariance](#basevariance)                 | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [RangeVariance](#rangevariance)               | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [unit_class](#unitclass)                      | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                        |
+| [unit_flags](#unitflags)                      | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [unit_flags2](#unitflags2)                    | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [dynamicflags](#dynamicflags)                 | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [family](#family)                             | TINYINT   |          | NO   |     | 0       |       |                                        |
+| [type](#type)                                 | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                        |
+| [type_flags](#typeflags)                      | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [lootid](#lootid)                             | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [pickpocketloot](#pickpocketloot)             | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [skinloot](#skinloot)                         | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [PetSpellDataId](#petspelldataid)             | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [VehicleId](#vehicleid)                       | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [mingold](#mingold)                           | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [maxgold](#maxgold)                           | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [AIName](#ainame)                             | CHAR(64)  |          | NO   |     | ''      |       |                                        |
+| [MovementType](#movementtype)                 | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                        |
+| [HoverHeight](#hoverheight)                   | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [HealthModifier](#healthmodifier)             | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [ManaModifier](#manamodifier)                 | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [ArmorModifier](#armormodifier)               | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [ExperienceModifier](#experiencemodifier)     | FLOAT     |          | NO   |     | 1       |       |                                        |
+| [RacialLeader](#racialleader)                 | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                        |
+| [movementId](#movementid)                     | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [RegenHealth](#regenhealth)                   | TINYINT   | UNSIGNED | NO   |     | 1       |       |                                        |
+| [CreatureImmunitiesId](#creatureimmunitiesid) | INT       |          | NO   |     | 0       |       | Reference to creature_immunities table |
+| [flags_extra](#flagsextra)                    | INT       | UNSIGNED | NO   |     | 0       |       |                                        |
+| [ScriptName](#scriptname)                     | CHAR(64)  |          | NO   |     | ''      |       |                                        |
+| [VerifiedBuild](#verifiedbuild)               | INT       |          | YES  |     | NULL    |       |                                        |
 
 ---
 
@@ -168,8 +168,8 @@ Note: This field also controls the creature family assistance mechanic. Only cre
 
 A bitmask that represents what NPC flags the creature has. Each bit controls a different flag and to combine flags, you can add each flag that you want, in effect activating the respective bits.
 
-| Flag     |            | Name               | Comment                                                                          |
-| -------- | ---------- | ------------------ | -------------------------------------------------------------------------------- |
+| Value    | Hex        | Flag               | Comment                                                                          |
+| :------- | :--------: | :----------------- | :------------------------------------------------------------------------------- |
 | 1        | 0x00000001 | Gossip             | If creature has more gossip options, add this flag to bring up a menu.           |
 | 2        | 0x00000002 | Quest Giver        | Any creature giving or taking quests needs to have this flag.                    |
 | 16       | 0x00000010 | Trainer            | Allows the creature to have a trainer list to teach spells                       |
@@ -290,7 +290,7 @@ Non-custom creatures should always leave this at 1.
 
 This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to [exp](#exp), [HealthModifier](#healthmodifier), and [ManaModifier](#manamodifier). Not setting this value will report a minor warning in the "DB_Errors.log".
 
-| Value | Name          | Power Shown                                            |
+| Value | Name          | Comment                                                |
 | ----- | ------------- | ------------------------------------------------------ |
 | 1     | CLASS_WARRIOR | health only (equal to rogue)                           |
 | 2     | CLASS_PALADIN | health & mana (more health than mage but less mana)    |
@@ -301,14 +301,14 @@ This is the creature's class, and it dictates levels of health and mana. Also no
 
 Allows the manual application of unit flags to creatures. Again this is a bitmask field and to apply more than one flag, just add the different numbers. Some possible flags are:
 
-| Flag       |            | Name                                    | Comments                                                                                                                                                                                                                                     |
-| ---------- | ---------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Value      | Hex        | Flag                                    | Comment                                                                                                                                                                                                                                      |
+| :--------- | :--------: | :-------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1          | 0x00000001 | UNIT_FLAG_SERVER_CONTROLLED             | set only when unit movement is controlled by server - by SPLINE/MONSTER_MOVE packets, together with UNIT_FLAG_STUNNED; only set to units controlled by client; client function CGUnit_C::IsClientControlled returns false when set for owner |
 | 2          | 0x00000002 | UNIT_FLAG_NON_ATTACKABLE                | Not attackable                                                                                                                                                                                                                               |
 | 4          | 0x00000004 | UNIT_FLAG_DISABLE_MOVE                  |                                                                                                                                                                                                                                              |
 | 8          | 0x00000008 | UNIT_FLAG_PLAYER_CONTROLLED             | Controlled by player, use _IMMUNE_TO_PC instead of _IMMUNE_TO_NPC                                                                                                                                                                            |
 | 16         | 0x00000010 | UNIT_FLAG_RENAME                        |                                                                                                                                                                                                                                              |
-| 32         | 0x00000020 | UNIT_FLAG_PREPARATION                   | Don't take reagents for spells with SPELL_ATTR5_NO_REAGENT_COST_WITH_AURA                                                                                                                                                                     |
+| 32         | 0x00000020 | UNIT_FLAG_PREPARATION                   | Don't take reagents for spells with SPELL_ATTR5_NO_REAGENT_COST_WITH_AURA                                                                                                                                                                    |
 | 64         | 0x00000040 | UNIT_FLAG_UNK_6                         | not sure what it does, but it is needed to cast nontriggered spells in smart_scripts                                                                                                                                                         |
 | 128        | 0x00000080 | UNIT_FLAG_NOT_ATTACKABLE_1              | ?? (UNIT_FLAG_PLAYER_CONTROLLED                                                                                                                                                                                                              |
 | 256        | 0x00000100 | UNIT_FLAG_IMMUNE_TO_PC                  | Disables combat/assistance with PlayerCharacters (PC)                                                                                                                                                                                        |
@@ -341,8 +341,8 @@ Allows the manual application of unit flags to creatures. Again this is a bitmas
 Allows additional application of unit flags to creatures. Again, this is a bitmask field and to apply more than one flag, just add the different numbers. Some possible flags are:
 
 
-| Flag   |            | Name                                  | Comments                                                                    |
-| ------ | ---------- | ------------------------------------- | --------------------------------------------------------------------------- |
+| Value  | Hex        | Flag                                  | Comment                                                                     |
+| :----- | :--------: | :------------------------------------ | :-------------------------------------------------------------------------- |
 | 1      | 0x00000001 | UNIT_FLAG2_FEIGN_DEATH                |                                                                             |
 | 2      | 0x00000002 | UNIT_FLAG2_HIDE_BODY                  | Hide unit model (show only player equip)                                    |
 | 4      | 0x00000004 | UNIT_FLAG2_IGNORE_REPUTATION          |                                                                             |
@@ -360,7 +360,7 @@ Allows additional application of unit flags to creatures. Again, this is a bitma
 | 32768  | 0x00008000 | UNIT_FLAG2_CANNOT_TURN                |                                                                             |
 | 65536  | 0x00010000 | UNIT_FLAG2_UNK2                       |                                                                             |
 | 131072 | 0x00020000 | UNIT_FLAG2_PLAY_DEATH_ANIM            | Plays special death animation upon death                                    |
-| 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | allows casting spells with AttributesEx7 & SPELL_ATTR7_DEBUG_SPELL       |
+| 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | allows casting spells with AttributesEx7 & SPELL_ATTR7_DEBUG_SPELL          |
 
 ### dynamicflags
 
@@ -369,17 +369,17 @@ Flags that control visual appearance of the creature.
 A few known flags and their use are:
 
 
-| Flag |      | Name                                   | Comments                                                                                            |
-| ---- | ---- | -------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| 0    | 0x00 | UNIT_DYNFLAG_NONE                      |                                                                                                     |
-| 1    | 0x01 | UNIT_DYNFLAG_LOOTABLE                  |                                                                                                     |
-| 2    | 0x02 | UNIT_DYNFLAG_TRACK_UNIT                | Creature's location will be seen as a small dot in the minimap                                      |
-| 4    | 0x04 | UNIT_DYNFLAG_TAPPED                    | Makes creatures name appear grey (Lua_UnitIsTapped)                                                 |
-| 8    | 0x08 | UNIT_DYNFLAG_TAPPED_BY_PLAYER          | Lua_UnitIsTappedByPlayer usually used by PCVs (Player Controlled Vehicles)                          |
-| 16   | 0x10 | UNIT_DYNFLAG_SPECIALINFO               |                                                                                                     |
-| 32   | 0x20 | UNIT_DYNFLAG_DEAD                      | Makes the creature appear dead (this DOES NOT make the creature's name grey or not attack players). |
-| 64   | 0x40 | UNIT_DYNFLAG_REFER_A_FRIEND            |                                                                                                     |
-| 128  | 0x80 | UNIT_DYNFLAG_TAPPED_BY_ALL_THREAT_LIST | Lua_UnitIsTappedByAllThreatList                                                                     |
+| Value | Hex  | Flag                                   | Comment                                                                                             |
+| :---- | :--: | :------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| 0     | 0x00 | UNIT_DYNFLAG_NONE                      |                                                                                                     |
+| 1     | 0x01 | UNIT_DYNFLAG_LOOTABLE                  |                                                                                                     |
+| 2     | 0x02 | UNIT_DYNFLAG_TRACK_UNIT                | Creature's location will be seen as a small dot in the minimap                                      |
+| 4     | 0x04 | UNIT_DYNFLAG_TAPPED                    | Makes creatures name appear grey (Lua_UnitIsTapped)                                                 |
+| 8     | 0x08 | UNIT_DYNFLAG_TAPPED_BY_PLAYER          | Lua_UnitIsTappedByPlayer usually used by PCVs (Player Controlled Vehicles)                          |
+| 16    | 0x10 | UNIT_DYNFLAG_SPECIALINFO               |                                                                                                     |
+| 32    | 0x20 | UNIT_DYNFLAG_DEAD                      | Makes the creature appear dead (this DOES NOT make the creature's name grey or not attack players). |
+| 64    | 0x40 | UNIT_DYNFLAG_REFER_A_FRIEND            |                                                                                                     |
+| 128   | 0x80 | UNIT_DYNFLAG_TAPPED_BY_ALL_THREAT_LIST | Lua_UnitIsTappedByAllThreatList                                                                     |
 
 ### family
 
@@ -433,8 +433,8 @@ The type of the creature.
 
 This field can control whether a mob is minable or herbable or lootable by engineer. If it is either of those three, then the loot given when it is skinned/mined will be stored in the [skinning_loot_template](loot_template) table. It also controls, whether this mob can be tamed by a hunter. Other fields have no special meaning on the serverside. The entire field will be send to the client in SMSG_CREATURE_QUERY_RESPONSE
 
-| Flag       |            | Name                                                 | Comments                                                                                   |
-| ---------- | ---------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Value      | Hex        | Flag                                                 | Comment                                                                                    |
+| :--------- | :--------: | :--------------------------------------------------- | :----------------------------------------------------------------------------------------- |
 | 1          | 0x00000001 | CREATURE_TYPE_FLAG_TAMEABLE                          | Makes the mob tameable (must also be a beast and have family set)                          |
 | 2          | 0x00000002 | CREATURE_TYPE_FLAG_VISIBLE_TO_GHOSTS                 | Creature are also visible for not alive player. Allow gossip interaction if npcflag allow? |
 | 4          | 0x00000004 | CREATURE_TYPE_FLAG_BOSS_MOB                          | Changes creature's visible level to "??" in the creature's portrait - Immune to Knockback. |
@@ -586,40 +586,40 @@ These flags control certain creature specific attributes. Flags can be added tog
 
 **Example:** 32+64=96
 
-| Flag       | Type                                                |            |                                                                                                                                        |
-| ---------- | --------------------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| 1          | CREATURE_FLAG_EXTRA_INSTANCE_BIND                   | 0x00000001 | creature kill binds instance to killer and killer's group                                                                              |
-| 2          | CREATURE_FLAG_EXTRA_CIVILIAN                        | 0x00000002 | creature does not aggro (ignore faction/reputation hostility)                                                                          |
-| 4          | CREATURE_FLAG_EXTRA_NO_PARRY                        | 0x00000004 | creature does not parry                                                                                                                |
-| 8          | CREATURE_FLAG_EXTRA_NO_PARRY_HASTEN                 | 0x00000008 | creature does not counter-attack at parry                                                                                              |
-| 16         | CREATURE_FLAG_EXTRA_NO_BLOCK                        | 0x00000010 | creature does not block                                                                                                                |
-| 32         | CREATURE_FLAG_EXTRA_NO_CRUSHING_BLOWS               | 0x00000020 | creature does not do crush-attacks                                                                                                     |
-| 64         | CREATURE_FLAG_EXTRA_NO_XP                           | 0x00000040 | creature kill does not give XP                                                                                                         |
-| 128        | CREATURE_FLAG_EXTRA_TRIGGER                         | 0x00000080 | creature is trigger-NPC (invisible to players only)                                                                                    |
-| 256        | CREATURE_FLAG_EXTRA_NO_TAUNT                        | 0x00000100 | creature is immune to taunt-auras and "attack me"-effects                                                                              |
-| 512        | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | 0x00000200 | Creature won't update movement flags                                                   |
-| 1024       | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | 0x00000400 | creature will be only visible for dead players                                                                                         |
-| 2048       | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | 0x00000800 | creature will use offhand attacks                                                                                                      |
-| 4096       | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | 0x00001000 | players can't sell items to this vendor                                                                                                |
-| 8192       | CREATURE_FLAG_EXTRA_CANNOT_ENTER_COMBAT             | 0x00002000 | creature cannot enter combat (will not attack or be attacked)                                                                          |
-| 16384      | CREATURE_FLAG_EXTRA_WORLDEVENT                      | 0x00004000 | custom flag for world events (left room for merging)                                                                                   |
-| 32768      | CREATURE_FLAG_EXTRA_GUARD                           | 0x00008000 | creature is a guard (Will ignore feign death and vanish)                                                                               |
-| 65536      | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH              | 0x00010000 | creature ignores feign death                                                                                                           |
-| 131072     | CREATURE_FLAG_EXTRA_NO_CRIT                         | 0x00020000 | creature does not do critical strikes                                                                                                  |
-| 262144     | CREATURE_FLAG_EXTRA_NO_SKILL_GAINS                  | 0x00040000 | creature won't increase weapon skills                                                                                                  |
-| 524288     | CREATURE_FLAG_EXTRA_OBEYS_TAUNT_DIMINISHING_RETURNS | 0x00080000 | creature taunt is subject to diminishing returns                                                                                       |
-| 1048576    | CREATURE_FLAG_EXTRA_ALL_DIMINISH                    | 0x00100000 | Creature is subject to all diminishing returns                                                                                         |
-| 2097152    | CREATURE_FLAG_EXTRA_NO_PLAYER_DAMAGE_REQ            | 0x00200000 | creature does not need to take player damage for kill credit                                                                           |
-| 4194304    | CREATURE_FLAG_EXTRA_AVOID_AOE                       | 0x00400000 | ignored by aoe attacks (for icc blood prince council npc - Dark Nucleus)                                                               |
-| 8388608    | CREATURE_FLAG_EXTRA_NO_DODGE                        | 0x00800000 | target cannot dodge                                                                                                                    |
-| 16777216   | CREATURE_FLAG_EXTRA_MODULE                          | 0x01000000 | Used by module creatures to avoid blizzlike checks.                                                                                    |
-| 33554432   | CREATURE_FLAG_EXTRA_DONT_CALL_ASSISTANCE            | 0x02000000 | Prevents creatures from calling for assistance on initial aggro                                                                        |
-| 67108864   | CREATURE_FLAG_EXTRA_IGNORE_ALL_ASSISTANCE_CALLS     | 0x04000000 | Prevents creature from responding to assistance calls                                                                                  |
-| 134217728  | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_ENTRY_SAI         | 0x08000000 | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                             |
-| 268435456  | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | 0x10000000 | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error. |
-| 536870912  | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | 0x20000000 | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                 |
-| 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                             |
-| 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                         |
+| Value      | Hex        | Flag                                                | Comment                                                                                                                                |
+| :--------- | :--------: | :-------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
+| 1          | 0x00000001 | CREATURE_FLAG_EXTRA_INSTANCE_BIND                   | creature kill binds instance to killer and killer's group                                                                              |
+| 2          | 0x00000002 | CREATURE_FLAG_EXTRA_CIVILIAN                        | creature does not aggro (ignore faction/reputation hostility)                                                                          |
+| 4          | 0x00000004 | CREATURE_FLAG_EXTRA_NO_PARRY                        | creature does not parry                                                                                                                |
+| 8          | 0x00000008 | CREATURE_FLAG_EXTRA_NO_PARRY_HASTEN                 | creature does not counter-attack at parry                                                                                              |
+| 16         | 0x00000010 | CREATURE_FLAG_EXTRA_NO_BLOCK                        | creature does not block                                                                                                                |
+| 32         | 0x00000020 | CREATURE_FLAG_EXTRA_NO_CRUSHING_BLOWS               | creature does not do crush-attacks                                                                                                     |
+| 64         | 0x00000040 | CREATURE_FLAG_EXTRA_NO_XP                           | creature kill does not give XP                                                                                                         |
+| 128        | 0x00000080 | CREATURE_FLAG_EXTRA_TRIGGER                         | creature is trigger-NPC (invisible to players only)                                                                                    |
+| 256        | 0x00000100 | CREATURE_FLAG_EXTRA_NO_TAUNT                        | creature is immune to taunt-auras and "attack me"-effects                                                                              |
+| 512        | 0x00000200 | CREATURE_FLAG_EXTRA_NO_MOVE_FLAGS_UPDATE            | Creature won't update movement flags                                                                                                   |
+| 1024       | 0x00000400 | CREATURE_FLAG_EXTRA_GHOST_VISIBILITY                | creature will be only visible for dead players                                                                                         |
+| 2048       | 0x00000800 | CREATURE_FLAG_EXTRA_USE_OFFHAND_ATTACK              | creature will use offhand attacks                                                                                                      |
+| 4096       | 0x00001000 | CREATURE_FLAG_EXTRA_NO_SELL_VENDOR                  | players can't sell items to this vendor                                                                                                |
+| 8192       | 0x00002000 | CREATURE_FLAG_EXTRA_CANNOT_ENTER_COMBAT             | creature cannot enter combat (will not attack or be attacked)                                                                          |
+| 16384      | 0x00004000 | CREATURE_FLAG_EXTRA_WORLDEVENT                      | custom flag for world events (left room for merging)                                                                                   |
+| 32768      | 0x00008000 | CREATURE_FLAG_EXTRA_GUARD                           | creature is a guard (Will ignore feign death and vanish)                                                                               |
+| 65536      | 0x00010000 | CREATURE_FLAG_EXTRA_IGNORE_FEIGN_DEATH              | creature ignores feign death                                                                                                           |
+| 131072     | 0x00020000 | CREATURE_FLAG_EXTRA_NO_CRIT                         | creature does not do critical strikes                                                                                                  |
+| 262144     | 0x00040000 | CREATURE_FLAG_EXTRA_NO_SKILL_GAINS                  | creature won't increase weapon skills                                                                                                  |
+| 524288     | 0x00080000 | CREATURE_FLAG_EXTRA_OBEYS_TAUNT_DIMINISHING_RETURNS | creature taunt is subject to diminishing returns                                                                                       |
+| 1048576    | 0x00100000 | CREATURE_FLAG_EXTRA_ALL_DIMINISH                    | Creature is subject to all diminishing returns                                                                                         |
+| 2097152    | 0x00200000 | CREATURE_FLAG_EXTRA_NO_PLAYER_DAMAGE_REQ            | creature does not need to take player damage for kill credit                                                                           |
+| 4194304    | 0x00400000 | CREATURE_FLAG_EXTRA_AVOID_AOE                       | ignored by aoe attacks (for icc blood prince council npc - Dark Nucleus)                                                               |
+| 8388608    | 0x00800000 | CREATURE_FLAG_EXTRA_NO_DODGE                        | target cannot dodge                                                                                                                    |
+| 16777216   | 0x01000000 | CREATURE_FLAG_EXTRA_MODULE                          | Used by module creatures to avoid blizzlike checks.                                                                                    |
+| 33554432   | 0x02000000 | CREATURE_FLAG_EXTRA_DONT_CALL_ASSISTANCE            | Prevents creatures from calling for assistance on initial aggro                                                                        |
+| 67108864   | 0x04000000 | CREATURE_FLAG_EXTRA_IGNORE_ALL_ASSISTANCE_CALLS     | Prevents creature from responding to assistance calls                                                                                  |
+| 134217728  | 0x08000000 | CREATURE_FLAG_EXTRA_DONT_OVERRIDE_ENTRY_SAI         | Allows creatures to use both GUID and ENTRY specific SAI without one overwriting the other                                             |
+| 268435456  | 0x10000000 | CREATURE_FLAG_EXTRA_DUNGEON_BOSS                    | Creature is a dungeon boss. This flag is generically set by core during runtime. Setting this in database will give you startup error. |
+| 536870912  | 0x20000000 | CREATURE_FLAG_EXTRA_IGNORE_PATHFINDING              | Creature will ignore pathfinding. This is like disabling Mmaps, only for one creature.                                                 |
+| 1073741824 | 0x40000000 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | creature will immune all knockback effects                                                                                             |
+| 2147483648 | 0x80000000 | CREATURE_FLAG_EXTRA_HARD_RESET                      | Creature will despawn on evade                                                                                                         |
 
 ### ScriptName
 

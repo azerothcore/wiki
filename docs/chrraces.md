@@ -39,38 +39,38 @@ This DBC contains all possible races, some of which are unused and unavailable t
 
 ### Content
 
-| ID  | Value   | Name               |
-| --- | ------- | ------------------ |
-| 1   | 1       | Human              |
-| 2   | 2       | Orc                |
-| 3   | 4       | Dwarf              |
-| 4   | 8       | Night Elf          |
-| 5   | 16      | Undead             |
-| 6   | 32      | Tauren             |
-| 7   | 64      | Gnome              |
-| 8   | 128     | Troll              |
-| 9   | 256     | Goblin             |
-| 10  | 512     | Blood Elf          |
-| 11  | 1024    | Draenei            |
-| 12  | 2048    | Fel Orc            |
-| 13  | 4096    | Naga               |
-| 14  | 8192    | Broken             |
-| 15  | 16384   | Skeleton           |
-| 16  | 32768   | Vrykul             |
-| 17  | 65536   | Tuskarr            |
-| 18  | 131072  | Forest Troll       |
-| 19  | 262144  | Taunka             |
-| 20  | 524288  | Northrend Skeleton |
-| 21  | 1048576 | Ice Troll          |
+| Value   | Hex        | Flag               | Race ID |
+| :------ | :--------: | :----------------- | :------ |
+| 1       | 0x00000001 | Human              | 1       |
+| 2       | 0x00000002 | Orc                | 2       |
+| 4       | 0x00000004 | Dwarf              | 3       |
+| 8       | 0x00000008 | Night Elf          | 4       |
+| 16      | 0x00000010 | Undead             | 5       |
+| 32      | 0x00000020 | Tauren             | 6       |
+| 64      | 0x00000040 | Gnome              | 7       |
+| 128     | 0x00000080 | Troll              | 8       |
+| 256     | 0x00000100 | Goblin             | 9       |
+| 512     | 0x00000200 | Blood Elf          | 10      |
+| 1024    | 0x00000400 | Draenei            | 11      |
+| 2048    | 0x00000800 | Fel Orc            | 12      |
+| 4096    | 0x00001000 | Naga               | 13      |
+| 8192    | 0x00002000 | Broken             | 14      |
+| 16384   | 0x00004000 | Skeleton           | 15      |
+| 32768   | 0x00008000 | Vrykul             | 16      |
+| 65536   | 0x00010000 | Tuskarr            | 17      |
+| 131072  | 0x00020000 | Forest Troll       | 18      |
+| 262144  | 0x00040000 | Taunka             | 19      |
+| 524288  | 0x00080000 | Northrend Skeleton | 20      |
+| 1048576 | 0x00100000 | Ice Troll          | 21      |
 
 ### Flags
 
-| Flag | Description  |
-| ---- | ------------ |
-| 1    | Not playable |
-| 2    | Bare feet    |
-| 4    | Can mount    |
-| 8    | Has bald     |
+| Value | Hex  | Flag         | Comment |
+| :---- | :--: | :----------- | :------ |
+| 1     | 0x01 | Not playable |         |
+| 2     | 0x02 | Bare feet    |         |
+| 4     | 0x04 | Can mount    |         |
+| 8     | 0x08 | Has bald     |         |
 
 
 ### Faction values

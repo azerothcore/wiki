@@ -36,12 +36,12 @@ If our faction doesn't have the other faction's ID in the enemy or friend factio
 
 First, let's define the four faction groups:
 
-| ID  | Bit | Name                              |
-| --- | --- | --------------------------------- |
-| 0   | 1   | All players (and pets)            |
-| 1   | 2   | Alliance players (and their pets) |
-| 2   | 4   | Horde players (and their pets)    |
-| 3   | 8   | Monster (Not a player nor a pet)  |
+| Value | Hex  | Flag                              | Faction Group ID |
+| :---- | :--: | :-------------------------------- | :--------------- |
+| 1     | 0x01 | All players (and pets)            | 0                |
+| 2     | 0x02 | Alliance players (and their pets) | 1                |
+| 4     | 0x04 | Horde players (and their pets)    | 2                |
+| 8     | 0x08 | Monster (Not a player nor a pet)  | 3                |
 
 The first mask (ourMask) defines what type of faction we are dealing with. Eg, faction 1 (PLAYER, Human) has 3 as ourMask; that means that it has the first two bits set so it classifies as both 'All players' and 'Alliance players'.
 
