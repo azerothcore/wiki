@@ -25,7 +25,8 @@ LOG_DIR = Path(__file__).resolve().parent / "logs"
 
 # Default docs folder; another one can be given as the first argument.
 DOCS = Path(__file__).resolve().parent.parent / "docs"
-BACK_LINK = re.compile(r"\]\(database-(%s)\)" % "|".join(DATABASES))
+# A back link is a line that holds nothing but the link.
+BACK_LINK = re.compile(r"(?m)^\[[^\]]+\]\(database-(%s)\)\s*$" % "|".join(DATABASES))
 ENTRY = re.compile(r"^- \[([^\]]+)\]\(([^)]+)\)\s*$")
 
 
@@ -125,11 +126,11 @@ def update_dbc_index(folder, check):
     entry = re.compile(r"^[*-] \[([^\]]+)\]\(([^)]+)\)\s*$")
     rows = [i for i, l in enumerate(lines) if entry.match(l)]
     listed = {entry.match(lines[i]).group(2) for i in rows}
-    back_link = "](%s)" % path.stem
+    back_link = re.compile(r"(?m)^\[[^\]]+\]\(%s\)\s*$" % re.escape(path.stem))
     added = []
     for page in sorted(folder.glob("*.md")):
         head = page.read_text(encoding="utf-8-sig", errors="replace").splitlines()[:15]
-        if page.stem in listed or page.name.startswith("database-") or back_link not in "\n".join(head):
+        if page.stem in listed or page.name.startswith("database-") or not back_link.search("\n".join(head)):
             continue
         title = next((l[2:].strip() for l in head if l.startswith("# ")), page.stem)
         title = re.sub(r"\.dbc$", "", title.replace("\\", ""))
