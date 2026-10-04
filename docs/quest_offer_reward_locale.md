@@ -8,17 +8,12 @@ Holds translations of the reward text in [quest_offer_reward](quest_offer_reward
 
 **Table: quest\_offer\_reward\_locale's Structure**
 
-| Field              | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale][2]        | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [RewardText][3]    | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | INT        | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #locale
-[3]: #rewardtext
-[4]: #verifiedbuild
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [RewardText](#rewardtext)       | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

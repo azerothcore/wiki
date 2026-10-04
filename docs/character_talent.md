@@ -8,15 +8,11 @@ Contains all the individual talent data for each character. This is only used as
 
 **Table: character\_talent's Structure**
 
-| Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]     | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [spell][2]    | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [specMask][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #guid
-[2]: #spell
-[3]: #specmask
+| Field                 | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)         | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [spell](#spell)       | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [specMask](#specmask) | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

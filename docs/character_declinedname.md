@@ -8,21 +8,14 @@ Holds the declined (grammatical case) forms of character names. The Russian clie
 
 **Table: character\_declinedname's Structure**
 
-| Field              | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-| ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]          | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [genitive][2]      | VARCHAR(15) |            |     | NO   | ''      |       |                          |
-| [dative][3]        | VARCHAR(15) |            |     | NO   | ''      |       |                          |
-| [accusative][4]    | VARCHAR(15) |            |     | NO   | ''      |       |                          |
-| [instrumental][5]  | VARCHAR(15) |            |     | NO   | ''      |       |                          |
-| [prepositional][6] | VARCHAR(15) |            |     | NO   | ''      |       |                          |
-
-[1]: #guid
-[2]: #genitive
-[3]: #dative
-[4]: #accusative
-[5]: #instrumental
-[6]: #prepositional
+| Field                           | Type        |          | Null | Key | Default | Extra | Comment                  |
+| :------------------------------ | :---------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)                   | INT         | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [genitive](#genitive)           | VARCHAR(15) |          | NO   |     | ''      |       |                          |
+| [dative](#dative)               | VARCHAR(15) |          | NO   |     | ''      |       |                          |
+| [accusative](#accusative)       | VARCHAR(15) |          | NO   |     | ''      |       |                          |
+| [instrumental](#instrumental)   | VARCHAR(15) |          | NO   |     | ''      |       |                          |
+| [prepositional](#prepositional) | VARCHAR(15) |          | NO   |     | ''      |       |                          |
 
 **Description of the table's fields**
 

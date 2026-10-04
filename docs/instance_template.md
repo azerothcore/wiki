@@ -10,17 +10,12 @@ If you want to change the spot you will start in when you enter/leave an instanc
 
 **Table: instance\_template's Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [map][1]        | SMALLINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [parent][2]     | SMALLINT     | UNSIGNED   |     | NO   |         |       |         |
-| [script][3]     | VARCHAR(128) |            |     | NO   | ''      |       |         |
-| [allowMount][4] | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #map
-[2]: #parent
-[3]: #script
-[4]: #allowmount
+| Field                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [map](#map)               | SMALLINT     | UNSIGNED | NO   | PRI |         |       |         |
+| [parent](#parent)         | SMALLINT     | UNSIGNED | NO   |     |         |       |         |
+| [script](#script)         | VARCHAR(128) |          | NO   |     | ''      |       |         |
+| [allowMount](#allowmount) | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

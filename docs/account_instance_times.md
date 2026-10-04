@@ -8,15 +8,11 @@ This table controls how many instances the account's characters have been in las
 
 **Table: account\_instance\_times's Structure**
 
-| Field            | Type   | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [accountId][1]   | INT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [instanceId][2]  | INT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [releaseTime][3] | BIGINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #accountid
-[2]: #instanceid
-[3]: #releasetime
+| Field                       | Type   |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :----- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [accountId](#accountid)     | INT    | UNSIGNED | NO   | PRI |         |       |         |
+| [instanceId](#instanceid)   | INT    | UNSIGNED | NO   | PRI | 0       |       |         |
+| [releaseTime](#releasetime) | BIGINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

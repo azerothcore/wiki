@@ -8,21 +8,14 @@ Comes from sniffs. Visually speaking, this table is used to identify the X and Y
 
 **Table: quest\_poi\_points's Structure**
 
-| Field              | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [QuestID][1]       | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Idx1][6]          | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Idx2][2]          | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [X][3]             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [Y][4]             | INT  | SIGNED     |     | NO   | 0       |       |         |
-| [VerifiedBuild][5] | INT  | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #questid
-[2]: #idx2
-[3]: #x
-[4]: #y
-[5]: #verifiedbuild
-[6]: #idx1
+| Field                           | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [QuestID](#questid)             | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Idx1](#idx1)                   | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Idx2](#idx2)                   | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [X](#x)                         | INT  |          | NO   |     | 0       |       |         |
+| [Y](#y)                         | INT  |          | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT  |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

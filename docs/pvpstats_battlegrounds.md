@@ -8,19 +8,13 @@ This table holds datas about BattleGrounds scores. To enable storing this kind o
 
 **Table: pvpstats\_battlegrounds's Structure**
 
-| Field               | Type     | Attributes | Key | Null | Default | Extra          | Comment |
-| ------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [id][1]             | BIGINT   | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [winner_faction][2] | TINYINT  | SIGNED     |     | NO   |         |                |         |
-| [bracket_id][3]     | TINYINT  | UNSIGNED   |     | NO   |         |                |         |
-| [type][4]           | TINYINT  | UNSIGNED   |     | NO   |         |                |         |
-| [date][5]           | DATETIME |            |     | NO   |         |                |         |
-
-[1]: #id
-[2]: #winnerfaction
-[3]: #bracketid
-[4]: #type
-[5]: #date
+| Field                            | Type     |          | Null | Key | Default | Extra          | Comment |
+| :------------------------------- | :------- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [id](#id)                        | BIGINT   | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [winner_faction](#winnerfaction) | TINYINT  |          | NO   |     |         |                |         |
+| [bracket_id](#bracketid)         | TINYINT  | UNSIGNED | NO   |     |         |                |         |
+| [type](#type)                    | TINYINT  | UNSIGNED | NO   |     |         |                |         |
+| [date](#date)                    | DATETIME |          | NO   |     |         |                |         |
 
 **Description of the table's fields**
 

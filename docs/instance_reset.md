@@ -8,15 +8,11 @@ Date and time when heroic and raid instances will be reset (i.e. instances which
 
 **Table: instance\_reset's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [mapid][1]      | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [difficulty][2] | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [resettime][3]  | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #mapid
-[2]: #difficulty
-[3]: #resettime
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [mapid](#mapid)           | SMALLINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [difficulty](#difficulty) | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [resettime](#resettime)   | INT      | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

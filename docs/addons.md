@@ -8,13 +8,10 @@ Holds the CRC of each standard Blizzard client addon the server knows about. The
 
 **Table: addons's Structure**
 
-| Field     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name][1] | VARCHAR(120) |            | PRI | NO   | ''      |       |         |
-| [crc][2]  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #name
-[2]: #crc
+| Field         | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [name](#name) | VARCHAR(120) |          | NO   | PRI | ''      |       |         |
+| [crc](#crc)   | INT          | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

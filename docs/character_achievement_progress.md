@@ -8,17 +8,12 @@ Holds each character's progress on achievement criteria.
 
 **Table: character\_achievement\_progress's Structure**
 
-| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]     | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [criteria][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [counter][3]  | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [date][4]     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #guid
-[2]: #criteria
-[3]: #counter
-[4]: #date
+| Field                 | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)         | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [criteria](#criteria) | SMALLINT | UNSIGNED | NO   | PRI |         |       |         |
+| [counter](#counter)   | INT      | UNSIGNED | NO   |     |         |       |         |
+| [date](#date)         | INT      | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

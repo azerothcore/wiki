@@ -10,13 +10,10 @@ The directories the database updater looks in for SQL update files. The table is
 
 **Table: updates\_include's Structure**
 
-| Field      | Type         | Attributes                       | Key | Null | Default  | Extra | Comment                                                         |
-| ---------- | ------------ | -------------------------------- | --- | ---- | -------- | ----- | --------------------------------------------------------------- |
-| [path][1]  | VARCHAR(200) |                                  | PRI | NO   |          |       | directory to include. $ means relative to the source directory. |
-| [state][2] | ENUM         | RELEASED,ARCHIVED,CUSTOM,PENDING |     | NO   | RELEASED |       | defines if the directory contains released or archived updates. |
-
-[1]: #path
-[2]: #state
+| Field           | Type         |                                  | Null | Key | Default  | Extra | Comment                                                         |
+| :-------------- | :----------- | :------------------------------- | :--: | :-: | :------: | :---: | :-------------------------------------------------------------- |
+| [path](#path)   | VARCHAR(200) |                                  | NO   | PRI |          |       | directory to include. $ means relative to the source directory. |
+| [state](#state) | ENUM         | RELEASED,ARCHIVED,CUSTOM,PENDING | NO   |     | RELEASED |       | defines if the directory contains released or archived updates. |
 
 **Description of the table's fields**
 

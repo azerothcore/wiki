@@ -9,15 +9,11 @@ Gameobjects can be linked too!
 
 **Table: linked\_respawn's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment            |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |
-| [guid][1]       | INT     | UNSIGNED   | PRI | NO   |         |       | dependent creature |
-| [linkedGuid][2] | INT     | UNSIGNED   |     | NO   |         |       | master creature    |
-| [linkType][3]   | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                    |
-
-[1]: #guid
-[2]: #linkedguid
-[3]: #linktype
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment            |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :----------------- |
+| [guid](#guid)             | INT     | UNSIGNED | NO   | PRI |         |       | dependent creature |
+| [linkedGuid](#linkedguid) | INT     | UNSIGNED | NO   |     |         |       | master creature    |
+| [linkType](#linktype)     | TINYINT | UNSIGNED | NO   | PRI | 0       |       |                    |
 
 **Description of the table's fields**
 

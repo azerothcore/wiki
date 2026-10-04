@@ -8,21 +8,14 @@ This table contains all the equipment combinations that can be sent for each cre
 
 **Table: creature\_equip\_template's Structure**
 
-| Field              | Type    | Attributes | Key | Null | Default | Extra | Comment      |
-| ------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------------ |
-| [CreatureID][1]    | INT     | UNSIGNED   | PRI | NO   | 0       |       | Unique entry |
-| [ID][2]            | TINYINT | UNSIGNED   | PRI | NO   | 1       |       | Unique entry |
-| [ItemID1][3]       | INT     | UNSIGNED   |     | NO   | 0       |       |              |
-| [ItemID2][4]       | INT     | UNSIGNED   |     | NO   | 0       |       |              |
-| [ItemID3][5]       | INT     | UNSIGNED   |     | NO   | 0       |       |              |
-| [VerifiedBuild][6] | INT     | SIGNED     |     | YES  | NULL    |       |              |
-
-[1]: #creatureid
-[2]: #id
-[3]: #itemid1
-[4]: #itemid2
-[5]: #itemid3
-[6]: #verifiedbuild
+| Field                           | Type    |          | Null | Key | Default | Extra | Comment      |
+| :------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :----------- |
+| [CreatureID](#creatureid)       | INT     | UNSIGNED | NO   | PRI | 0       |       | Unique entry |
+| [ID](#id)                       | TINYINT | UNSIGNED | NO   | PRI | 1       |       | Unique entry |
+| [ItemID1](#itemid1)             | INT     | UNSIGNED | NO   |     | 0       |       |              |
+| [ItemID2](#itemid2)             | INT     | UNSIGNED | NO   |     | 0       |       |              |
+| [ItemID3](#itemid3)             | INT     | UNSIGNED | NO   |     | 0       |       |              |
+| [VerifiedBuild](#verifiedbuild) | INT     |          | YES  |     | NULL    |       |              |
 
 **Description of the table's fields**
 

@@ -8,23 +8,15 @@ Points of interest that gossip options can mark on the player's minimap, for exa
 
 **Table: points\_of\_interest's Structure**
 
-| Field           | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]         | INT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [PositionX][2]  | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [PositionY][3]  | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [Icon][4]       | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags][5]      | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [Importance][6] | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [Name][7]       | TEXT  |            |     | NO   |         |       |         |
-
-[1]: #id
-[2]: #positionx
-[3]: #positiony
-[4]: #icon
-[5]: #flags
-[6]: #importance
-[7]: #name
+| Field                     | Type  |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [PositionX](#positionx)   | FLOAT |          | NO   |     | 0       |       |         |
+| [PositionY](#positiony)   | FLOAT |          | NO   |     | 0       |       |         |
+| [Icon](#icon)             | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [Flags](#flags)           | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [Importance](#importance) | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [Name](#name)             | TEXT  |          | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

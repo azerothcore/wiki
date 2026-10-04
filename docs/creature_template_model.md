@@ -8,21 +8,14 @@ This table describes which model is assigned to a specific creature.
 
 **Table: creature\_template\_model's Structure**
 
-| Field                  | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [Idx][2]               | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [CreatureDisplayID][3] | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [DisplayScale][4]      | FLOAT    | SIGNED     |     | NO   | 1       |       |         |
-| [Probability][5]       | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| [VerifiedBuild][6]     | INT      | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #creatureid
-[2]: #idx
-[3]: #creaturedisplayid
-[4]: #displayscale
-[5]: #probability
-[6]: #verifiedbuild
+| Field                                   | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureID](#creatureid)               | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [Idx](#idx)                             | SMALLINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [CreatureDisplayID](#creaturedisplayid) | INT      | UNSIGNED | NO   |     |         |       |         |
+| [DisplayScale](#displayscale)           | FLOAT    |          | NO   |     | 1       |       |         |
+| [Probability](#probability)             | FLOAT    |          | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)         | INT      |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

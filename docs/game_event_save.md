@@ -8,15 +8,11 @@ Stores the saved state and next start time of world events, the game events that
 
 **Table: game\_event\_save's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [state][2]      | TINYINT | UNSIGNED   |     | NO   | 1       |       |         |
-| [next_start][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #evententry
-[2]: #state
-[3]: #nextstart
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [eventEntry](#evententry) | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [state](#state)           | TINYINT | UNSIGNED | NO   |     | 1       |       |         |
+| [next_start](#nextstart)  | INT     | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

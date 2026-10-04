@@ -10,20 +10,13 @@ Lists the SQL update files the database updater has applied to this database. Th
 
 **Table: updates's Structure**
 
-| Field          | Type         | Attributes                              | Key | Null | Default           | Extra | Comment                                       |
-| -------------- | ------------ | --------------------------------------- | --- | ---- | ----------------- | ----- | --------------------------------------------- |
-| [name][1]      | VARCHAR(200) |                                         | PRI | NO   |                   |       | filename with extension of the update.        |
-| [hash][2]      | CHAR(40)     |                                         |     | YES  | ''                |       | sha1 hash of the sql file.                    |
-| [state][3]     | ENUM         | RELEASED,CUSTOM,MODULE,ARCHIVED,PENDING |     | NO   | RELEASED          |       | defines if an update is released or archived. |
-| [timestamp][4] | TIMESTAMP    |                                         |     | NO   | CURRENT_TIMESTAMP |       | timestamp when the query was applied.         |
-| [speed][5]     | INT          | UNSIGNED                                |     | NO   | 0                 |       | time the query takes to apply in ms.          |
-
-[1]: #name
-[2]: #hash
-[3]: #state
-[4]: #timestamp
-[5]: #speed
-
+| Field                   | Type         |                                         | Null | Key | Default           | Extra | Comment                                       |
+| :---------------------- | :----------- | :-------------------------------------- | :--: | :-: | :---------------: | :---: | :-------------------------------------------- |
+| [name](#name)           | VARCHAR(200) |                                         | NO   | PRI |                   |       | filename with extension of the update.        |
+| [hash](#hash)           | CHAR(40)     |                                         | YES  |     | ''                |       | sha1 hash of the sql file.                    |
+| [state](#state)         | ENUM         | RELEASED,CUSTOM,MODULE,ARCHIVED,PENDING | NO   |     | RELEASED          |       | defines if an update is released or archived. |
+| [timestamp](#timestamp) | TIMESTAMP    |                                         | NO   |     | CURRENT_TIMESTAMP |       | timestamp when the query was applied.         |
+| [speed](#speed)         | INT          | UNSIGNED                                | NO   |     | 0                 |       | time the query takes to apply in ms.          |
 
 **Description of the table's fields**
 

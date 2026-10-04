@@ -8,17 +8,12 @@ Holds the resistance of a creature template to each spell school.
 
 **Table: creature\_template\_resistance's Structure**
 
-| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]    | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [School][2]        | TINYINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [Resistance][3]    | SMALLINT | SIGNED     |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | INT      | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #creatureid
-[2]: #school
-[3]: #resistance
-[4]: #verifiedbuild
+| Field                           | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureID](#creatureid)       | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [School](#school)               | TINYINT  | UNSIGNED | NO   | PRI |         |       |         |
+| [Resistance](#resistance)       | SMALLINT |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

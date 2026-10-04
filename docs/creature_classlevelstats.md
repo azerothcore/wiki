@@ -6,45 +6,26 @@
 
 This table contains the base values for creature health, mana, armor, attack power, ranged attack power, damage, and experience.
 
-| Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [level][1]             | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [class][2]             | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [basehp0][3]           | INT     | UNSIGNED   |     | NO   | 1       |       |         |
-| [basehp1][4]           | INT     | UNSIGNED   |     | NO   | 1       |       |         |
-| [basehp2][5]           | INT     | UNSIGNED   |     | NO   | 1       |       |         |
-| [basemana][6]          | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [basearmor][7]         | INT     | UNSIGNED   |     | NO   | 1       |       |         |
-| [attackpower][8]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [rangedattackpower][9] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [damage_base][10]      | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
-| [damage_exp1][11]      | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
-| [damage_exp2][12]      | FLOAT   | SIGNED     |     | NO   | 0       |       |         |
-| [Strength][14]         | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [Agility][15]          | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [Stamina][16]          | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [Intellect][17]        | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [Spirit][18]           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [comment][13]          | TEXT    |            |     | YES  | NULL    |       |         |
-
-[1]: #level
-[2]: #class
-[3]: #basehp0
-[4]: #basehp1
-[5]: #basehp2
-[6]: #basemana
-[7]: #basearmor
-[8]: #attackpower
-[9]: #rangedattackpower
-[10]: #damagebase
-[11]: #damageexp1
-[12]: #damageexp2
-[13]: #comment
-[14]: #strength
-[15]: #agility
-[16]: #stamina
-[17]: #intellect
-[18]: #spirit
+| Field                                   | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [level](#level)                         | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [class](#class)                         | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [basehp0](#basehp0)                     | INT     | UNSIGNED | NO   |     | 1       |       |         |
+| [basehp1](#basehp1)                     | INT     | UNSIGNED | NO   |     | 1       |       |         |
+| [basehp2](#basehp2)                     | INT     | UNSIGNED | NO   |     | 1       |       |         |
+| [basemana](#basemana)                   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [basearmor](#basearmor)                 | INT     | UNSIGNED | NO   |     | 1       |       |         |
+| [attackpower](#attackpower)             | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [rangedattackpower](#rangedattackpower) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [damage_base](#damagebase)              | FLOAT   |          | NO   |     | 0       |       |         |
+| [damage_exp1](#damageexp1)              | FLOAT   |          | NO   |     | 0       |       |         |
+| [damage_exp2](#damageexp2)              | FLOAT   |          | NO   |     | 0       |       |         |
+| [Strength](#strength)                   | INT     |          | NO   |     | 0       |       |         |
+| [Agility](#agility)                     | INT     |          | NO   |     | 0       |       |         |
+| [Stamina](#stamina)                     | INT     |          | NO   |     | 0       |       |         |
+| [Intellect](#intellect)                 | INT     |          | NO   |     | 0       |       |         |
+| [Spirit](#spirit)                       | INT     |          | NO   |     | 0       |       |         |
+| [comment](#comment)                     | TEXT    |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

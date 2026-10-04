@@ -8,19 +8,13 @@ Changes how often and when weapon enchantments proc their spell.
 
 **Table: spell\_enchant\_proc\_data's Structure**
 
-| Field              | Type  | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ----- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]         | INT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [customChance][2]  | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [PPMChance][3]     | FLOAT | SIGNED     |     | NO   | 0       |       |         |
-| [procEx][4]        | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [attributeMask][5] | INT   | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #entry
-[2]: #customchance
-[3]: #ppmchance
-[4]: #procex
-[5]: #attributemask
+| Field                           | Type  |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT   | UNSIGNED | NO   | PRI |         |       |         |
+| [customChance](#customchance)   | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [PPMChance](#ppmchance)         | FLOAT |          | NO   |     | 0       |       |         |
+| [procEx](#procex)               | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [attributeMask](#attributemask) | INT   | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

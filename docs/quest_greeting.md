@@ -8,21 +8,14 @@ This table add greeting behavior to an NPC or an Gameobject.
 
 **Table: quest\_greeting's Structure**
 
-| Field                | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]              | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2]            | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [GreetEmoteType][3]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [GreetEmoteDelay][4] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [Greeting][5]        | TEXT     |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild][6]   | INT      | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #type
-[3]: #greetemotetype
-[4]: #greetemotedelay
-[5]: #greeting
-[6]: #verifiedbuild
+| Field                               | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                           | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [type](#type)                       | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [GreetEmoteType](#greetemotetype)   | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [GreetEmoteDelay](#greetemotedelay) | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [Greeting](#greeting)               | TEXT     |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)     | INT      |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

@@ -8,15 +8,11 @@ Holds the players banned from chat channels, with the time each ban expires. The
 
 **Table: channels\_bans's Structure**
 
-| Field           | Type | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [channelId][1]  | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [playerGUID][2] | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [banTime][3]    | INT  | UNSIGNED   |     | NO   |         |       |         |
-
-[1]: #channelid
-[2]: #playerguid
-[3]: #bantime
+| Field                     | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [channelId](#channelid)   | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [playerGUID](#playerguid) | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [banTime](#bantime)       | INT  | UNSIGNED | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

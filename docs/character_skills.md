@@ -8,17 +8,12 @@ This table holds a listing of all skill for each character.
 
 **Table: character\_skills's Structure**
 
-| Field      | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT      | UNSIGNED   | PRI | NO   |         |       | Global Unique Identifier |
-| [skill][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |                          |
-| [value][3] | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
-| [max][4]   | SMALLINT | UNSIGNED   |     | NO   |         |       |                          |
-
-[1]: #guid
-[2]: #skill
-[3]: #value
-[4]: #max
+| Field           | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :-------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)   | INT      | UNSIGNED | NO   | PRI |         |       | Global Unique Identifier |
+| [skill](#skill) | SMALLINT | UNSIGNED | NO   | PRI |         |       |                          |
+| [value](#value) | SMALLINT | UNSIGNED | NO   |     |         |       |                          |
+| [max](#max)     | SMALLINT | UNSIGNED | NO   |     |         |       |                          |
 
 **Description of the table's fields**
 

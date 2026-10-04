@@ -10,15 +10,11 @@ This table holds information on the achievements a character has earned/complete
 
 **Table: character\_achievement's Structure**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [achievement][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [date][3]        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #guid
-[2]: #achievement
-[3]: #date
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)               | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [achievement](#achievement) | SMALLINT | UNSIGNED | NO   | PRI |         |       |         |
+| [date](#date)               | INT      | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

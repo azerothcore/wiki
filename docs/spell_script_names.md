@@ -8,13 +8,10 @@ Holds the spell id to ScriptName pairings for use in spell scripts.
 
 **Table: spell\_script\_names's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spell_id][1]   | INT      | SIGNED     | MUL | NO   |         |       |         |
-| [ScriptName][2] | CHAR(64) |            |     | NO   |         |       |         |
-
-[1]: #spellid
-[2]: #scriptname
+| Field                     | Type     |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [spell_id](#spellid)      | INT      |     | NO   | MUL |         |       |         |
+| [ScriptName](#scriptname) | CHAR(64) |     | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

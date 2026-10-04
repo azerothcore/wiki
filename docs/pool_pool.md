@@ -8,17 +8,12 @@ This is the pool of pools table. You can create a pool with a chance of a range 
 
 **Table: pool\_pool's Structure**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [pool_id][1]     | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [mother_pool][2] | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [chance][3]      | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-
-[1]: #poolid
-[2]: #motherpool
-[3]: #chance
-[4]: #description
+| Field                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [pool_id](#poolid)          | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [mother_pool](#motherpool)  | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [chance](#chance)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [description](#description) | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

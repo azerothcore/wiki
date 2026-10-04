@@ -9,15 +9,11 @@ The data in this table is maintained by the core.
 
 **Table: realmcharacters's Structure**
 
-| Field         | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [realmid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [acctid][2]   | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [numchars][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #realmid
-[2]: #acctid
-[3]: #numchars
+| Field                 | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [realmid](#realmid)   | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [acctid](#acctid)     | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [numchars](#numchars) | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

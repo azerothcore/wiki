@@ -8,25 +8,16 @@ This table describes the reward that you will receive when you obtain a given ac
 
 **Table: achievement\_reward's Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TitleA][2]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [TitleH][3]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemID][4]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Sender][5]         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Subject][6]        | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-| [Body][7]           | TEXT         |            |     | YES  | NULL    |       |         |
-| [MailTemplateID][8] | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #id
-[2]: #titlea
-[3]: #titleh
-[4]: #itemid
-[5]: #sender
-[6]: #subject
-[7]: #body
-[8]: #mailtemplateid
+| Field                             | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [TitleA](#titlea)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [TitleH](#titleh)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ItemID](#itemid)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Sender](#sender)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Subject](#subject)               | VARCHAR(255) |          | YES  |     | NULL    |       |         |
+| [Body](#body)                     | TEXT         |          | YES  |     | NULL    |       |         |
+| [MailTemplateID](#mailtemplateid) | INT          | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

@@ -8,13 +8,10 @@ Stores a digest of each server secret, such as the TOTP master secret, so the co
 
 **Table: secret\_digest's Structure**
 
-| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]     | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [digest][2] | VARCHAR(100) |            |     | NO   |         |       |         |
-
-[1]: #id
-[2]: #digest
+| Field             | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)         | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [digest](#digest) | VARCHAR(100) |          | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

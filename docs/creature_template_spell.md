@@ -8,17 +8,12 @@ Holds the spells assigned to a creature template. They are used by the creature'
 
 **Table: creature\_template\_spell's Structure**
 
-| Field              | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]    | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [Index][2]         | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Spell][3]         | INT     | UNSIGNED   |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | INT     | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #creatureid
-[2]: #index
-[3]: #spell
-[4]: #verifiedbuild
+| Field                           | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureID](#creatureid)       | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [Index](#index)                 | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Spell](#spell)                 | INT     | UNSIGNED | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT     |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

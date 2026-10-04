@@ -8,17 +8,12 @@ This table holds the text for letter items or any items that when moused-over tu
 
 **Table: page\_text's Structure**
 
-| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Text][2]          | LONGTEXT |            |     | NO   |         |       |         |
-| [NextPageID][3]    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild][4] | INT      | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #text
-[3]: #nextpageid
-[4]: #verifiedbuild
+| Field                           | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Text](#text)                   | LONGTEXT |          | NO   |     |         |       |         |
+| [NextPageID](#nextpageid)       | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

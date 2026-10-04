@@ -8,19 +8,13 @@ This table holds information on what default actions a brand new character shoul
 
 **Table: playercreateinfo\_action's Structure**
 
-| Field       | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [race][1]   | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [class][2]  | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [button][3] | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [action][4] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [type][5]   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #race
-[2]: #class
-[3]: #button
-[4]: #action
-[5]: #type
+| Field             | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [race](#race)     | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [class](#class)   | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [button](#button) | SMALLINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [action](#action) | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [type](#type)     | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

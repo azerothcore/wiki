@@ -8,17 +8,12 @@ Contains data about client account and settings.
 
 **Table: account\_data's Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment            |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------ |
-| [accountId][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Account Identifier |
-| [type][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |                    |
-| [time][3]      | INT     | UNSIGNED   |     | NO   | 0       |       |                    |
-| [data][4]      | BLOB    |            |     | NO   |         |       |                    |
-
-[1]: #accountid
-[2]: #type
-[3]: #time
-[4]: #data
+| Field                   | Type    |          | Null | Key | Default | Extra | Comment            |
+| :---------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :----------------- |
+| [accountId](#accountid) | INT     | UNSIGNED | NO   | PRI | 0       |       | Account Identifier |
+| [type](#type)           | TINYINT | UNSIGNED | NO   | PRI | 0       |       |                    |
+| [time](#time)           | INT     | UNSIGNED | NO   |     | 0       |       |                    |
+| [data](#data)           | BLOB    |          | NO   |     |         |       |                    |
 
 **Description of the table's fields**
 

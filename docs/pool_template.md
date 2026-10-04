@@ -8,15 +8,11 @@ Each unique pool is defined in this table.
 
 **Table: pool\_template's Structure**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment                               |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
-| [entry][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Pool entry                            |
-| [max_limit][2]   | INT          | UNSIGNED   |     | NO   | 0       |       | Max number of objects (0) is no limit |
-| [description][3] | VARCHAR(255) |            |     | YES  | NULL    |       |                                       |
-
-[1]: #entry
-[2]: #maxlimit
-[3]: #description
+| Field                       | Type         |          | Null | Key | Default | Extra | Comment                               |
+| :-------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------ |
+| [entry](#entry)             | INT          | UNSIGNED | NO   | PRI | 0       |       | Pool entry                            |
+| [max_limit](#maxlimit)      | INT          | UNSIGNED | NO   |     | 0       |       | Max number of objects (0) is no limit |
+| [description](#description) | VARCHAR(255) |          | YES  |     | NULL    |       |                                       |
 
 **Description of the table's fields**
 

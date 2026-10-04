@@ -8,19 +8,13 @@ This table add greeting behavior to an NPC or an Gameobject.
 
 **Table: quest\_greeting\_locale's Structure**
 
-| Field              | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2]          | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale][3]        | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Greeting][5]      | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild][6] | INT        | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #type
-[3]: #locale
-[5]: #greeting
-[6]: #verifiedbuild
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [type](#type)                   | TINYINT    | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Greeting](#greeting)           | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

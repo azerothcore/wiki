@@ -12,19 +12,13 @@ Disable chat messaging for any character from account of character $playerName (
 
 **Table: account\_muted's Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mutedate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [mutetime][3]   | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mutedby][4]    | VARCHAR(50)  |            |     | NO   |         |       |                          |
-| [mutereason][5] | VARCHAR(255) |            |     | NO   |         |       |                          |
-
-[1]: #guid
-[2]: #mutedate
-[3]: #mutetime
-[4]: #mutedby
-[5]: #mutereason
+| Field                     | Type         |          | Null | Key | Default | Extra | Comment                  |
+| :------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)             | INT          | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [mutedate](#mutedate)     | INT          | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [mutetime](#mutetime)     | INT          | UNSIGNED | NO   |     | 0       |       |                          |
+| [mutedby](#mutedby)       | VARCHAR(50)  |          | NO   |     |         |       |                          |
+| [mutereason](#mutereason) | VARCHAR(255) |          | NO   |     |         |       |                          |
 
 **Description of the table's fields**
 

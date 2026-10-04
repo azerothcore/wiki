@@ -8,21 +8,14 @@ This table holds information on all the signatures of a petition for either a gu
 
 **Table: petition\_sign's Structure**
 
-| Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ownerguid][1]      | INT     | UNSIGNED   | MUL | NO   |         |       |         |
-| [petitionguid][2]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [petition_id][6]    | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [playerguid][3]     | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [player_account][4] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [type][5]           | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #ownerguid
-[2]: #petitionguid
-[3]: #playerguid
-[4]: #playeraccount
-[5]: #type
-[6]: #petitionid
+| Field                            | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ownerguid](#ownerguid)          | INT     | UNSIGNED | NO   | MUL |         |       |         |
+| [petitionguid](#petitionguid)    | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [petition_id](#petitionid)       | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [playerguid](#playerguid)        | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [player_account](#playeraccount) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [type](#type)                    | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

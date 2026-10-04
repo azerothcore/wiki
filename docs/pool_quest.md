@@ -8,15 +8,11 @@ This table contains a list of quests that are tied to a specific pool.
 
 **Table: pool\_quest's Structure**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [pool_entry][2]  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [description][3] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-
-[1]: #entry
-[2]: #poolentry
-[3]: #description
+| Field                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)             | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [pool_entry](#poolentry)    | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [description](#description) | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

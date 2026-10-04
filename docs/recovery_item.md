@@ -9,19 +9,13 @@ Items which were kept back in the database after being deleted and are older tha
 
 **Table: recovery\_item's Structure**
 
-| Field           | Type | Attributes | Key | Null | Default | Extra          | Comment |
-| --------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [Id][1]         | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [Guid][2]       | INT  | UNSIGNED   | MUL | NO   | 0       |                |         |
-| [ItemEntry][3]  | INT  | UNSIGNED   |     | YES  | 0       |                |         |
-| [Count][4]      | INT  | UNSIGNED   |     | NO   | 0       |                |         |
-| [DeleteDate][5] | INT  | UNSIGNED   |     | YES  | NULL    |                |         |
-
-[1]: #id
-[2]: #guid
-[3]: #itementry
-[4]: #count
-[5]: #deletedate
+| Field                     | Type |          | Null | Key | Default | Extra          | Comment |
+| :------------------------ | :--- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [Id](#id)                 | INT  | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [Guid](#guid)             | INT  | UNSIGNED | NO   | MUL | 0       |                |         |
+| [ItemEntry](#itementry)   | INT  | UNSIGNED | YES  |     | 0       |                |         |
+| [Count](#count)           | INT  | UNSIGNED | NO   |     | 0       |                |         |
+| [DeleteDate](#deletedate) | INT  | UNSIGNED | YES  |     | NULL    |                |         |
 
 **Description of the table's fields**
 

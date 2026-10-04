@@ -8,33 +8,20 @@ This table is used to provide to localized clients with localized string for que
 
 **Table: quest\_template\_locale's Structure**
 
-| Field                | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]              | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale][2]          | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Title][3]           | TEXT       |            |     | YES  | NULL    |       |         |
-| [Details][4]         | TEXT       |            |     | YES  | NULL    |       |         |
-| [Objectives][5]      | TEXT       |            |     | YES  | NULL    |       |         |
-| [EndText][6]         | TEXT       |            |     | YES  | NULL    |       |         |
-| [CompletedText][7]   | TEXT       |            |     | YES  | NULL    |       |         |
-| [ObjectiveText1][8]  | TEXT       |            |     | YES  | NULL    |       |         |
-| [ObjectiveText2][9]  | TEXT       |            |     | YES  | NULL    |       |         |
-| [ObjectiveText3][10] | TEXT       |            |     | YES  | NULL    |       |         |
-| [ObjectiveText4][11] | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild][12]  | INT        | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #locale
-[3]: #title
-[4]: #details
-[5]: #objectives
-[6]: #endtext
-[7]: #completedtext
-[8]: #objectivetext1
-[9]: #objectivetext2
-[10]: #objectivetext3
-[11]: #objectivetext4
-[12]: #verifiedbuild
+| Field                             | Type       |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)                 | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Title](#title)                   | TEXT       |          | YES  |     | NULL    |       |         |
+| [Details](#details)               | TEXT       |          | YES  |     | NULL    |       |         |
+| [Objectives](#objectives)         | TEXT       |          | YES  |     | NULL    |       |         |
+| [EndText](#endtext)               | TEXT       |          | YES  |     | NULL    |       |         |
+| [CompletedText](#completedtext)   | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText1](#objectivetext1) | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText2](#objectivetext2) | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText3](#objectivetext3) | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText4](#objectivetext4) | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

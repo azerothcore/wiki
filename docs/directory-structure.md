@@ -12,25 +12,15 @@ This structure is conformed to our [modular architecture](the-modular-structure)
 
 azerothcore/
 
-├── [apps][1]<br/>
-├── [bin][2]<br/>
-├── [conf][3]<br/>
-├── [data][4]<br/>
-├── [deps][5]<br/>
-├── [env][6]<br/>
-├── [modules][7]<br/>
-├── [src][8]<br/>
-└── [var][9]<br/>
-
-[1]: #apps
-[2]: #bin
-[3]: #conf
-[4]: #data
-[5]: #deps
-[6]: #env
-[7]: #modules
-[8]: #src
-[9]: #var
+├── [apps](#apps)<br/>
+├── [bin](#bin)<br/>
+├── [conf](#conf)<br/>
+├── [data](#data)<br/>
+├── [deps](#deps)<br/>
+├── [env](#env)<br/>
+├── [modules](#modules)<br/>
+├── [src](#src)<br/>
+└── [var](#var)<br/>
 
 ##  AzerothCore Wotlk directory structure in detail:
 

@@ -8,17 +8,12 @@ Contains all the character inventory data, including the bank data.
 
 **Table: character\_inventory's Structure**
 
-| Field     | Type    | Attributes | Key | Null | Default | Extra | Comment                       |
-| --------- | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
-| [guid][1] | INT     | UNSIGNED   | MUL | NO   | 0       |       | Global Unique Identifier      |
-| [bag][2]  | INT     | UNSIGNED   |     | NO   | 0       |       |                               |
-| [slot][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |                               |
-| [item][4] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Item Global Unique Identifier |
-
-[1]: #guid
-[2]: #bag
-[3]: #slot
-[4]: #item
+| Field         | Type    |          | Null | Key | Default | Extra | Comment                       |
+| :------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :---------------------------- |
+| [guid](#guid) | INT     | UNSIGNED | NO   | MUL | 0       |       | Global Unique Identifier      |
+| [bag](#bag)   | INT     | UNSIGNED | NO   |     | 0       |       |                               |
+| [slot](#slot) | TINYINT | UNSIGNED | NO   |     | 0       |       |                               |
+| [item](#item) | INT     | UNSIGNED | NO   | PRI | 0       |       | Item Global Unique Identifier |
 
 **Description of the table's fields**
 

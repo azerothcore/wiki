@@ -8,31 +8,19 @@ This table holds data about temporary summoned creatures. It is possible to grou
 
 **Table: creature\_summon\_groups's Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [summonerId][1]   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [summonerType][2] | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [groupId][3]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [entry][4]        | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [position_x][5]   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [position_y][6]   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [position_z][7]   | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [orientation][8]  | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [summonType][9]   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [summonTime][10]  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Comment][11]     | VARCHAR(255) |            |     | NO   | ''      |       |         |
-
-[1]: #summonerid
-[2]: #summonertype
-[3]: #groupid
-[4]: #entry
-[5]: #positionx
-[6]: #positiony
-[7]: #positionz
-[8]: #orientation
-[9]: #summontype
-[10]: #summontime
-[11]: #comment
+| Field                         | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [summonerId](#summonerid)     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [summonerType](#summonertype) | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [groupId](#groupid)           | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [entry](#entry)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [position_x](#positionx)      | FLOAT        |          | NO   |     | 0       |       |         |
+| [position_y](#positiony)      | FLOAT        |          | NO   |     | 0       |       |         |
+| [position_z](#positionz)      | FLOAT        |          | NO   |     | 0       |       |         |
+| [orientation](#orientation)   | FLOAT        |          | NO   |     | 0       |       |         |
+| [summonType](#summontype)     | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [summonTime](#summontime)     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Comment](#comment)           | VARCHAR(255) |          | NO   |     | ''      |       |         |
 
 **Description of the table's fields**
 
@@ -94,4 +82,3 @@ Timer linked to summontype
 ### Comment
 
 Comment
-

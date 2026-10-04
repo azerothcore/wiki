@@ -8,23 +8,15 @@ This table allows to group mobs. Members of group will follow others, and attack
 
 **Table: creature\_formations's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [leaderGUID][1] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [memberGUID][2] | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [dist][3]       | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| [angle][4]      | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| [groupAI][5]    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [point_1][6]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [point_2][7]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #leaderguid
-[2]: #memberguid
-[3]: #dist
-[4]: #angle
-[5]: #groupai
-[6]: #point1
-[7]: #point2
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [leaderGUID](#leaderguid) | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [memberGUID](#memberguid) | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [dist](#dist)             | FLOAT    |          | NO   |     | 0       |       |         |
+| [angle](#angle)           | FLOAT    |          | NO   |     | 0       |       |         |
+| [groupAI](#groupai)       | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [point_1](#point1)        | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [point_2](#point2)        | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

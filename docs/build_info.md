@@ -8,29 +8,18 @@ Holds data about each client build. The core uses it to check whether a connecti
 
 **Table: build\_info's Structure**
 
-| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment    |
-| --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [build][1]            | INT         | SIGNED     | PRI | NO   |         |       | Identifier |
-| [majorVersion][2]     | INT         | SIGNED     |     | YES  | NULL    |       |            |
-| [minorVersion][3]     | INT         | SIGNED     |     | YES  | NULL    |       |            |
-| [bugfixVersion][4]    | INT         | SIGNED     |     | YES  | NULL    |       |            |
-| [hotfixVersion][5]    | CHAR(3)     |            |     | YES  | NULL    |       |            |
-| [winAuthSeed][6]      | VARCHAR(32) |            |     | YES  | NULL    |       |            |
-| [win64AuthSeed][7]    | VARCHAR(32) |            |     | YES  | NULL    |       |            |
-| [mac64AuthSeed][8]    | VARCHAR(32) |            |     | YES  | NULL    |       |            |
-| [winChecksumSeed][9]  | VARCHAR(40) |            |     | YES  | NULL    |       |            |
-| [macChecksumSeed][10] | VARCHAR(40) |            |     | YES  | NULL    |       |            |
-
-[1]: #build
-[2]: #majorversion
-[3]: #minorversion
-[4]: #bugfixversion
-[5]: #hotfixversion
-[6]: #winauthseed
-[7]: #win64authseed
-[8]: #mac64authseed
-[9]: #winchecksumseed
-[10]: #macchecksumseed
+| Field                               | Type        |     | Null | Key | Default | Extra | Comment    |
+| :---------------------------------- | :---------- | :-- | :--: | :-: | :-----: | :---: | :--------- |
+| [build](#build)                     | INT         |     | NO   | PRI |         |       | Identifier |
+| [majorVersion](#majorversion)       | INT         |     | YES  |     | NULL    |       |            |
+| [minorVersion](#minorversion)       | INT         |     | YES  |     | NULL    |       |            |
+| [bugfixVersion](#bugfixversion)     | INT         |     | YES  |     | NULL    |       |            |
+| [hotfixVersion](#hotfixversion)     | CHAR(3)     |     | YES  |     | NULL    |       |            |
+| [winAuthSeed](#winauthseed)         | VARCHAR(32) |     | YES  |     | NULL    |       |            |
+| [win64AuthSeed](#win64authseed)     | VARCHAR(32) |     | YES  |     | NULL    |       |            |
+| [mac64AuthSeed](#mac64authseed)     | VARCHAR(32) |     | YES  |     | NULL    |       |            |
+| [winChecksumSeed](#winchecksumseed) | VARCHAR(40) |     | YES  |     | NULL    |       |            |
+| [macChecksumSeed](#macchecksumseed) | VARCHAR(40) |     | YES  |     | NULL    |       |            |
 
 **Description of the table's fields**
 

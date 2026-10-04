@@ -6,17 +6,12 @@ Holds translations of the completion text in [quest_request_items](quest_request
 
 **Table: quest\_request\_items\_locale's Structure**
 
-| Field               | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale][2]         | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [CompletionText][3] | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4]  | INT        | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #locale
-[3]: #completiontext
-[4]: #verifiedbuild
+| Field                             | Type       |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)                 | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [CompletionText](#completiontext) | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

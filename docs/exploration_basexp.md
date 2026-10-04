@@ -6,13 +6,10 @@ This table holds the base experience point information needed for when a player 
 
 **Table: exploration\_basexp's Structure**
 
-| Field       | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [level][1]  | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [basexp][2] | INT     | SIGNED     |     | NO   | 0       |       |         |
-
-[1]: #level
-[2]: #basexp
+| Field             | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [level](#level)   | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [basexp](#basexp) | INT     |          | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

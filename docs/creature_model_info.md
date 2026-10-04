@@ -8,21 +8,14 @@ This table contains all models of mobs, their gender and other information that 
 
 **Table: creature\_model\_info's Structure**
 
-| Field                       | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [DisplayID][1]              | INT       | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [BoundingRadius][2]         | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
-| [CombatReach][3]            | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
-| [Gender][4]                 | TINYINT   | UNSIGNED   |     | NO   | 2       |       |         |
-| [DisplayID_Other_Gender][5] | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild][6]          | MEDIUMINT | SIGNED     |     | YES  | NULL    |       |         |
-
-[1]: #displayid
-[2]: #boundingradius
-[3]: #combatreach
-[4]: #gender
-[5]: #displayidothergender
-[6]: #verifiedbuild
+| Field                                           | Type      |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :-------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [DisplayID](#displayid)                         | INT       | UNSIGNED | NO   | PRI | 0       |       |         |
+| [BoundingRadius](#boundingradius)               | FLOAT     |          | NO   |     | 0       |       |         |
+| [CombatReach](#combatreach)                     | FLOAT     |          | NO   |     | 0       |       |         |
+| [Gender](#gender)                               | TINYINT   | UNSIGNED | NO   |     | 2       |       |         |
+| [DisplayID_Other_Gender](#displayidothergender) | INT       | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)                 | MEDIUMINT |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

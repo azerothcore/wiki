@@ -8,19 +8,13 @@ This table holds pieces of names (first and last half) that are use for pet name
 
 **Table: pet\_name\_generation\_locale's Structure**
 
-| Field       | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]     | INT        | UNSIGNED   | PRI | NO   |         |       |         |
-| [Locale][2] | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Word][3]   | TINYTEXT   |            |     | NO   |         |       |         |
-| [Entry][4]  | INT        | UNSIGNED   |     | NO   | 0       |       |         |
-| [Half][5]   | TINYINT    | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #id
-[2]: #locale
-[3]: #word
-[4]: #entry
-[5]: #half
+| Field             | Type       |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)         | INT        | UNSIGNED | NO   | PRI |         |       |         |
+| [Locale](#locale) | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Word](#word)     | TINYTEXT   |          | NO   |     |         |       |         |
+| [Entry](#entry)   | INT        | UNSIGNED | NO   |     | 0       |       |         |
+| [Half](#half)     | TINYINT    | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

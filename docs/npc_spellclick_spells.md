@@ -10,17 +10,12 @@ That opcode is sent for quests in which you have to loot creatures, who are alre
 
 **Table: npc\_spellclick\_spells's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment                                                                                               |
-| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------------------------------------- |
-| [npc_entry][1]  | INT      | UNSIGNED   | PRI | NO   |         |       | reference to creature_template                                                                        |
-| [spell_id][2]   | INT      | UNSIGNED   | PRI | NO   |         |       | spell which should be casted                                                                          |
-| [cast_flags][3] | TINYINT  | UNSIGNED   |     | NO   |         |       | first bit defines caster: 1=player, 0=creature; second bit defines target, same mapping as caster bit |
-| [user_type][4]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | relation with summoner: 0-no 1-friendly 2-raid 3-party player can click                               |
-
-[1]: #npcentry
-[2]: #spellid
-[3]: #castflags
-[4]: #usertype
+| Field                    | Type     |          | Null | Key | Default | Extra | Comment                                                                                               |
+| :----------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :---------------------------------------------------------------------------------------------------- |
+| [npc_entry](#npcentry)   | INT      | UNSIGNED | NO   | PRI |         |       | reference to creature_template                                                                        |
+| [spell_id](#spellid)     | INT      | UNSIGNED | NO   | PRI |         |       | spell which should be casted                                                                          |
+| [cast_flags](#castflags) | TINYINT  | UNSIGNED | NO   |     |         |       | first bit defines caster: 1=player, 0=creature; second bit defines target, same mapping as caster bit |
+| [user_type](#usertype)   | SMALLINT | UNSIGNED | NO   |     | 0       |       | relation with summoner: 0-no 1-friendly 2-raid 3-party player can click                               |
 
 **Description of the table's fields**
 

@@ -8,17 +8,12 @@ This table contains a list of creatures that are tied to a specific pool.
 
 **Table: pool\_creature's Structure**
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [pool_entry][2]  | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [chance][3]      | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [description][4] | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-
-[1]: #guid
-[2]: #poolentry
-[3]: #chance
-[4]: #description
+| Field                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)               | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [pool_entry](#poolentry)    | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [chance](#chance)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [description](#description) | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

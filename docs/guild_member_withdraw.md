@@ -8,25 +8,16 @@ Holds how much each guild member has withdrawn from the guild bank today, per ta
 
 **Table: guild\_member\_withdraw's Structure**
 
-| Field      | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]  | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [tab0][2]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [tab1][3]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [tab2][4]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [tab3][5]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [tab4][6]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [tab5][7]  | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [money][8] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #guid
-[2]: #tab
-[3]: #tab
-[4]: #tab
-[5]: #tab
-[6]: #tab
-[7]: #tab
-[8]: #money
+| Field           | Type |          | Null | Key | Default | Extra | Comment |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)   | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [tab0](#tab)    | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [tab1](#tab)    | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [tab2](#tab)    | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [tab3](#tab)    | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [tab4](#tab)    | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [tab5](#tab)    | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [money](#money) | INT  | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 

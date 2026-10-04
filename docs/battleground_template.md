@@ -8,35 +8,21 @@ Contains information about the different battlegrounds, like how many players ar
 
 **Table: battleground\_template's Structure**
 
-| Field                  | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]                | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [MinPlayersPerTeam][2] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaxPlayersPerTeam][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [MinLvl][4]            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaxLvl][5]            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [AllianceStartLoc][6]  | INT      | UNSIGNED   |     | YES  | NULL    |       |         |
-| [AllianceStartO][7]    | FLOAT    | SIGNED     |     | NO   |         |       |         |
-| [HordeStartLoc][8]     | INT      | UNSIGNED   |     | YES  | NULL    |       |         |
-| [HordeStartO][9]       | FLOAT    | SIGNED     |     | NO   |         |       |         |
-| [StartMaxDist][10]     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
-| [Weight][11]           | TINYINT  | UNSIGNED   |     | NO   | 1       |       |         |
-| [ScriptName][12]       | CHAR(64) |            |     | NO   | ''      |       |         |
-| [Comment][13]          | CHAR(38) |            |     | NO   |         |       |         |
-
-[1]: #id
-[2]: #minplayersperteam
-[3]: #maxplayersperteam
-[4]: #minlvl
-[5]: #maxlvl
-[6]: #alliancestartloc
-[7]: #alliancestarto
-[8]: #hordestartloc
-[9]: #hordestarto
-[10]: #startmaxdist
-[11]: #weight
-[12]: #scriptname
-[13]: #comment
+| Field                                   | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                               | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [MinPlayersPerTeam](#minplayersperteam) | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [MaxPlayersPerTeam](#maxplayersperteam) | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [MinLvl](#minlvl)                       | TINYINT  | UNSIGNED | NO   |     | 0       |       |         |
+| [MaxLvl](#maxlvl)                       | TINYINT  | UNSIGNED | NO   |     | 0       |       |         |
+| [AllianceStartLoc](#alliancestartloc)   | INT      | UNSIGNED | YES  |     | NULL    |       |         |
+| [AllianceStartO](#alliancestarto)       | FLOAT    |          | NO   |     |         |       |         |
+| [HordeStartLoc](#hordestartloc)         | INT      | UNSIGNED | YES  |     | NULL    |       |         |
+| [HordeStartO](#hordestarto)             | FLOAT    |          | NO   |     |         |       |         |
+| [StartMaxDist](#startmaxdist)           | FLOAT    |          | NO   |     | 0       |       |         |
+| [Weight](#weight)                       | TINYINT  | UNSIGNED | NO   |     | 1       |       |         |
+| [ScriptName](#scriptname)               | CHAR(64) |          | NO   |     | ''      |       |         |
+| [Comment](#comment)                     | CHAR(38) |          | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

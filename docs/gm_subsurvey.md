@@ -8,17 +8,12 @@ This table contains the answers to the survey questions. It's linked to `gm_surv
 
 **Table: gm\_subsurvey's Structure**
 
-| Field              | Type | Attributes | Key | Null | Default | Extra          | Comment |
-| ------------------ | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [surveyId][1]      | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [questionId][2]    | INT  | UNSIGNED   | PRI | NO   | 0       |                |         |
-| [answer][3]        | INT  | UNSIGNED   |     | NO   | 0       |                |         |
-| [answerComment][4] | TEXT |            |     | NO   |         |                |         |
-
-[1]: #surveyid
-[2]: #questionid
-[3]: #answer
-[4]: #answercomment
+| Field                           | Type |          | Null | Key | Default | Extra          | Comment |
+| :------------------------------ | :--- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [surveyId](#surveyid)           | INT  | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [questionId](#questionid)       | INT  | UNSIGNED | NO   | PRI | 0       |                |         |
+| [answer](#answer)               | INT  | UNSIGNED | NO   |     | 0       |                |         |
+| [answerComment](#answercomment) | TEXT |          | NO   |     |         |                |         |
 
 **Description of the table's fields**
 

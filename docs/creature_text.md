@@ -58,35 +58,21 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 
 **Table: creature\_text's Structure**
 
-| Field                 | Type         | Attributes | Key | Null | Default | Extra | Comment                 |
-| --------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ----------------------- |
-| [CreatureID][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | creature_template entry |
-| [GroupID][2]          | TINYINT      | UNSIGNED   | PRI | NO   | 0       |       |                         |
-| [ID][3]               | TINYINT      | UNSIGNED   | PRI | NO   | 0       |       |                         |
-| [Text][4]             | LONGTEXT     |            |     | YES  | NULL    |       |                         |
-| [Type][5]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                         |
-| [Language][6]         | TINYINT      | SIGNED     |     | NO   | 0       |       |                         |
-| [Probability][7]      | FLOAT        | SIGNED     |     | NO   | 0       |       |                         |
-| [Emote][8]            | INT          | UNSIGNED   |     | NO   | 0       |       |                         |
-| [Duration][9]         | INT          | UNSIGNED   |     | NO   | 0       |       |                         |
-| [Sound][10]           | INT          | UNSIGNED   |     | NO   | 0       |       |                         |
-| [BroadcastTextId][11] | INT          | SIGNED     |     | NO   | 0       |       |                         |
-| [TextRange][12]       | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                         |
-| [comment][13]         | VARCHAR(255) |            |     | YES  | ''      |       |                         |
-
-[1]: #creatureid
-[2]: #groupid
-[3]: #id
-[4]: #text
-[5]: #type
-[6]: #language
-[7]: #probability
-[8]: #emote
-[9]: #duration
-[10]: #sound
-[11]: #broadcasttextid
-[12]: #textrange
-[13]: #comment
+| Field                               | Type         |          | Null | Key | Default | Extra | Comment                 |
+| :---------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :---------------------- |
+| [CreatureID](#creatureid)           | INT          | UNSIGNED | NO   | PRI | 0       |       | creature_template entry |
+| [GroupID](#groupid)                 | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |                         |
+| [ID](#id)                           | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |                         |
+| [Text](#text)                       | LONGTEXT     |          | YES  |     | NULL    |       |                         |
+| [Type](#type)                       | TINYINT      | UNSIGNED | NO   |     | 0       |       |                         |
+| [Language](#language)               | TINYINT      |          | NO   |     | 0       |       |                         |
+| [Probability](#probability)         | FLOAT        |          | NO   |     | 0       |       |                         |
+| [Emote](#emote)                     | INT          | UNSIGNED | NO   |     | 0       |       |                         |
+| [Duration](#duration)               | INT          | UNSIGNED | NO   |     | 0       |       |                         |
+| [Sound](#sound)                     | INT          | UNSIGNED | NO   |     | 0       |       |                         |
+| [BroadcastTextId](#broadcasttextid) | INT          |          | NO   |     | 0       |       |                         |
+| [TextRange](#textrange)             | TINYINT      | UNSIGNED | NO   |     | 0       |       |                         |
+| [comment](#comment)                 | VARCHAR(255) |          | YES  |     | ''      |       |                         |
 
 **Description of the table's fields**
 

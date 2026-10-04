@@ -8,19 +8,13 @@ This table holds information on what skills newly created characters should star
 
 **Table: playercreateinfo\_skills's Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [raceMask][1]  | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [classMask][2] | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [skill][3]     | SMALLINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [rank][4]      | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [comment][5]   | VARCHAR(255) |            |     | YES  | NULL    |       |         |
-
-[1]: #racemask
-[2]: #classmask
-[3]: #skill
-[4]: #rank
-[5]: #comment
+| Field                   | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [raceMask](#racemask)   | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [classMask](#classmask) | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [skill](#skill)         | SMALLINT     | UNSIGNED | NO   | PRI |         |       |         |
+| [rank](#rank)           | SMALLINT     | UNSIGNED | NO   |     | 0       |       |         |
+| [comment](#comment)     | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

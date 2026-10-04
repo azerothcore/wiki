@@ -8,15 +8,11 @@ This table holds datas about BattleGrounds deserters. To enable storing this kin
 
 **Table: battleground\_deserters's Structure**
 
-| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment                   |
-| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------- |
-| [guid][1]     | INT      | UNSIGNED   |     | NO   |         |       | characters.guid           |
-| [type][2]     | TINYINT  | UNSIGNED   |     | NO   |         |       | type of the desertion     |
-| [datetime][3] | DATETIME |            |     | NO   |         |       | datetime of the desertion |
-
-[1]: #guid
-[2]: #type
-[3]: #datetime
+| Field                 | Type     |          | Null | Key | Default | Extra | Comment                   |
+| :-------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------------------------ |
+| [guid](#guid)         | INT      | UNSIGNED | NO   |     |         |       | characters.guid           |
+| [type](#type)         | TINYINT  | UNSIGNED | NO   |     |         |       | type of the desertion     |
+| [datetime](#datetime) | DATETIME |          | NO   |     |         |       | datetime of the desertion |
 
 **Description of the table's fields**
 

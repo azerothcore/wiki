@@ -8,23 +8,15 @@ This table is used to tell the server to spawn an additional NPC with this vehic
 
 **Table: vehicle\_accessory's Structure**
 
-| Field                | Type    | Attributes | Key | Null | Default | Extra | Comment                                      |
-| -------------------- | ------- | ---------- | --- | ---- | ------- | ----- | -------------------------------------------- |
-| [guid][1]            | INT     | UNSIGNED   | PRI | NO   | 0       |       |                                              |
-| [accessory_entry][2] | INT     | UNSIGNED   |     | NO   | 0       |       |                                              |
-| [seat_id][3]         | TINYINT | SIGNED     | PRI | NO   | 0       |       |                                              |
-| [minion][4]          | TINYINT | UNSIGNED   |     | NO   | 0       |       |                                              |
-| [description][5]     | TEXT    |            |     | NO   |         |       |                                              |
-| [summontype][6]      | TINYINT | UNSIGNED   |     | NO   | 6       |       | see enum TempSummonType                      |
-| [summontimer][7]     | INT     | UNSIGNED   |     | NO   | 30000   |       | timer, only relevant for certain summontypes |
-
-[1]: #guid
-[2]: #accessoryentry
-[3]: #seatid
-[4]: #minion
-[5]: #description
-[6]: #summontype
-[7]: #summontimer
+| Field                              | Type    |          | Null | Key | Default | Extra | Comment                                      |
+| :--------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------- |
+| [guid](#guid)                      | INT     | UNSIGNED | NO   | PRI | 0       |       |                                              |
+| [accessory_entry](#accessoryentry) | INT     | UNSIGNED | NO   |     | 0       |       |                                              |
+| [seat_id](#seatid)                 | TINYINT |          | NO   | PRI | 0       |       |                                              |
+| [minion](#minion)                  | TINYINT | UNSIGNED | NO   |     | 0       |       |                                              |
+| [description](#description)        | TEXT    |          | NO   |     |         |       |                                              |
+| [summontype](#summontype)          | TINYINT | UNSIGNED | NO   |     | 6       |       | see enum TempSummonType                      |
+| [summontimer](#summontimer)        | INT     | UNSIGNED | NO   |     | 30000   |       | timer, only relevant for certain summontypes |
 
 **Description of the table's fields**
 

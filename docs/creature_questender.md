@@ -8,13 +8,10 @@ Holds NPC quest ender relations on which NPCs finishes which quests.
 
 **Table: creature\_questender's Structure**
 
-| Field      | Type | Attributes | Key | Null | Default | Extra | Comment          |
-| ---------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [id][1]    | INT  | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
-| [quest][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
-
-[1]: #id
-[2]: #quest
+| Field           | Type |          | Null | Key | Default | Extra | Comment          |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :--------------- |
+| [id](#id)       | INT  | UNSIGNED | NO   | PRI | 0       |       | Identifier       |
+| [quest](#quest) | INT  | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier |
 
 **Description of the table's fields**
 

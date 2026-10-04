@@ -12,19 +12,13 @@ This DBC links a text emote (from [EmotesText.dbc](emotes)) to the sound played 
 
 **Table: emotestextsound\_dbc's Structure**
 
-| Field             | Type | Attributes | Key | Null | Default | Extra | Comment        |
-| ----------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------- |
-| [ID][1]           | INT  | SIGNED     | PRI | NO   | 0       |       | Unique ID      |
-| [EmotesTextID][2] | INT  | SIGNED     |     | NO   | 0       |       | Text emote ID  |
-| [RaceID][3]       | INT  | SIGNED     |     | NO   | 0       |       |                |
-| [SexID][4]        | INT  | SIGNED     |     | NO   | 0       |       |                |
-| [SoundID][5]      | INT  | SIGNED     |     | NO   | 0       |       | Sound entry ID |
-
-[1]: #id
-[2]: #emotestextid
-[3]: #raceid
-[4]: #sexid
-[5]: #soundid
+| Field                         | Type |     | Null | Key | Default | Extra | Comment        |
+| :---------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------------- |
+| [ID](#id)                     | INT  |     | NO   | PRI | 0       |       | Unique ID      |
+| [EmotesTextID](#emotestextid) | INT  |     | NO   |     | 0       |       | Text emote ID  |
+| [RaceID](#raceid)             | INT  |     | NO   |     | 0       |       |                |
+| [SexID](#sexid)               | INT  |     | NO   |     | 0       |       |                |
+| [SoundID](#soundid)           | INT  |     | NO   |     | 0       |       | Sound entry ID |
 
 **Description of the table's fields**
 

@@ -8,13 +8,10 @@ Includes information on how much experience needed for next level. Comes from sn
 
 **Table: player\_xp\_for\_level's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Level][1]      | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [Experience][2] | INT     | UNSIGNED   |     | NO   |         |       |         |
-
-[1]: #level
-[2]: #experience
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Level](#level)           | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [Experience](#experience) | INT     | UNSIGNED | NO   |     |         |       |         |
 
 **Description of the table's fields**
 

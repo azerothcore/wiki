@@ -8,43 +8,25 @@ This table holds the pet data for each pet summoned by anyone in the game.
 
 **Table: character\_pet's Structure**
 
-| Field               | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]             | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [entry][2]          | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [owner][3]          | INT         | UNSIGNED   | MUL | NO   | 0       |       |         |
-| [modelid][4]        | INT         | UNSIGNED   |     | YES  | 0       |       |         |
-| [CreatedBySpell][5] | INT         | UNSIGNED   |     | YES  | 0       |       |         |
-| [PetType][6]        | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [level][7]          | SMALLINT    | UNSIGNED   |     | NO   | 1       |       |         |
-| [exp][8]            | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [Reactstate][9]     | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [name][10]          | VARCHAR(21) |            |     | NO   | Pet     |       |         |
-| [renamed][11]       | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [slot][12]          | TINYINT     | UNSIGNED   | MUL | NO   | 0       |       |         |
-| [curhealth][13]     | INT         | UNSIGNED   |     | NO   | 1       |       |         |
-| [curmana][14]       | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [curhappiness][15]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [savetime][16]      | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [abdata][17]        | TEXT        |            |     | YES  | NULL    |       |         |
-
-[1]: #id
-[2]: #entry
-[3]: #owner
-[4]: #modelid
-[5]: #createdbyspell
-[6]: #pettype
-[7]: #level
-[8]: #exp
-[9]: #reactstate
-[10]: #name
-[11]: #renamed
-[12]: #slot
-[13]: #curhealth
-[14]: #curmana
-[15]: #curhappiness
-[16]: #savetime
-[17]: #abdata
+| Field                             | Type        |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :---------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                         | INT         | UNSIGNED | NO   | PRI | 0       |       |         |
+| [entry](#entry)                   | INT         | UNSIGNED | NO   |     | 0       |       |         |
+| [owner](#owner)                   | INT         | UNSIGNED | NO   | MUL | 0       |       |         |
+| [modelid](#modelid)               | INT         | UNSIGNED | YES  |     | 0       |       |         |
+| [CreatedBySpell](#createdbyspell) | INT         | UNSIGNED | YES  |     | 0       |       |         |
+| [PetType](#pettype)               | TINYINT     | UNSIGNED | NO   |     | 0       |       |         |
+| [level](#level)                   | SMALLINT    | UNSIGNED | NO   |     | 1       |       |         |
+| [exp](#exp)                       | INT         | UNSIGNED | NO   |     | 0       |       |         |
+| [Reactstate](#reactstate)         | TINYINT     | UNSIGNED | NO   |     | 0       |       |         |
+| [name](#name)                     | VARCHAR(21) |          | NO   |     | Pet     |       |         |
+| [renamed](#renamed)               | TINYINT     | UNSIGNED | NO   |     | 0       |       |         |
+| [slot](#slot)                     | TINYINT     | UNSIGNED | NO   | MUL | 0       |       |         |
+| [curhealth](#curhealth)           | INT         | UNSIGNED | NO   |     | 1       |       |         |
+| [curmana](#curmana)               | INT         | UNSIGNED | NO   |     | 0       |       |         |
+| [curhappiness](#curhappiness)     | INT         | UNSIGNED | NO   |     | 0       |       |         |
+| [savetime](#savetime)             | INT         | UNSIGNED | NO   |     | 0       |       |         |
+| [abdata](#abdata)                 | TEXT        |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

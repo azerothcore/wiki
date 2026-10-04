@@ -10,13 +10,10 @@ Note: Entries in this table will be deleted automatically when the referenced en
 
 **Table: mail\_server\_character's Structure**
 
-| Field       | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]   | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [mailId][2] | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-
-[1]: #guid
-[2]: #mailid
+| Field             | Type |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)     | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [mailId](#mailid) | INT  | UNSIGNED | NO   | PRI |         |       |         |
 
 **Description of the table's fields**
 

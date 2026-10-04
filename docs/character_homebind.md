@@ -8,21 +8,14 @@ Contains information on the location where characters get teleported when they u
 
 **Table: character\_homebind's Structure**
 
-| Field       | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mapId][2]  | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Map Identifier           |
-| [zoneId][3] | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Zone Identifier          |
-| [posX][4]   | FLOAT    | SIGNED     |     | NO   | 0       |       |                          |
-| [posY][5]   | FLOAT    | SIGNED     |     | NO   | 0       |       |                          |
-| [posZ][6]   | FLOAT    | SIGNED     |     | NO   | 0       |       |                          |
-
-[1]: #guid
-[2]: #mapid
-[3]: #zoneid
-[4]: #posx
-[5]: #posy
-[6]: #posz
+| Field             | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :---------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)     | INT      | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [mapId](#mapid)   | SMALLINT | UNSIGNED | NO   |     | 0       |       | Map Identifier           |
+| [zoneId](#zoneid) | SMALLINT | UNSIGNED | NO   |     | 0       |       | Zone Identifier          |
+| [posX](#posx)     | FLOAT    |          | NO   |     | 0       |       |                          |
+| [posY](#posy)     | FLOAT    |          | NO   |     | 0       |       |                          |
+| [posZ](#posz)     | FLOAT    |          | NO   |     | 0       |       |                          |
 
 **Description of the table's fields**
 

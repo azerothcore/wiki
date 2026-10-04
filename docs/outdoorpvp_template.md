@@ -8,15 +8,11 @@ Links each outdoor PvP zone type to the script that handles it.
 
 **Table: outdoorpvp\_template's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [TypeId][1]     | TINYINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [ScriptName][2] | CHAR(64) |            |     | NO   | ''      |       |         |
-| [comment][3]    | TEXT     |            |     | YES  | NULL    |       |         |
-
-[1]: #typeid
-[2]: #scriptname
-[3]: #comment
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [TypeId](#typeid)         | TINYINT  | UNSIGNED | NO   | PRI |         |       |         |
+| [ScriptName](#scriptname) | CHAR(64) |          | NO   |     | ''      |       |         |
+| [comment](#comment)       | TEXT     |          | YES  |     | NULL    |       |         |
 
 **Description of the table's fields**
 

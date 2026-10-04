@@ -8,17 +8,12 @@ This table holds the re-spawn time when game objects should be re spawned in the
 
 **Table: gameobject\_respawn's Structure**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [respawnTime][2] | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mapId][3]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [instanceId][4]  | INT      | UNSIGNED   | PRI | NO   | 0       |       | Instance Identifier      |
-
-[1]: #guid
-[2]: #respawntime
-[3]: #mapid
-[4]: #instanceid
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)               | INT      | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [respawnTime](#respawntime) | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [mapId](#mapid)             | SMALLINT | UNSIGNED | NO   |     | 0       |       |                          |
+| [instanceId](#instanceid)   | INT      | UNSIGNED | NO   | PRI | 0       |       | Instance Identifier      |
 
 **Description of the table's fields**
 
