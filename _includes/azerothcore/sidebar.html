@@ -268,3 +268,41 @@
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
 })();
 </script>
+<script>
+/* A link to something inside a closed fold opens the fold first */
+(function () {
+    function reveal() {
+        var id = decodeURIComponent(location.hash.slice(1));
+        var el = id && document.getElementById(id);
+        if (!el) return;
+        for (var p = el.parentElement; p; p = p.parentElement) if (p.tagName === "DETAILS") p.open = true;
+        el.scrollIntoView({ block: "center" });
+        el.classList.add("anchor-hit");
+        setTimeout(function () { el.classList.remove("anchor-hit"); }, 2500);
+    }
+    window.addEventListener("hashchange", reveal);
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", reveal); else reveal();
+})();
+/* Hold the middle mouse button on a table that scrolls sideways and drag to move it */
+(function () {
+    var box = null, x = 0, y = 0;
+    document.addEventListener("mousedown", function (e) {
+        if (e.button !== 1 || !e.target.closest) return;
+        var t = e.target.closest("#git-wiki-content table");
+        if (!t || t.scrollWidth <= t.clientWidth) return;
+        box = t; x = e.clientX; y = e.clientY;
+        document.body.classList.add("table-drag");
+        e.preventDefault();
+    });
+    document.addEventListener("mousemove", function (e) {
+        if (!box) return;
+        box.scrollLeft -= e.clientX - x;
+        window.scrollBy(0, y - e.clientY);
+        x = e.clientX; y = e.clientY;
+    });
+    document.addEventListener("mouseup", function () {
+        box = null;
+        document.body.classList.remove("table-drag");
+    });
+})();
+</script>

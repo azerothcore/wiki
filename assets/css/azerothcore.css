@@ -1393,3 +1393,14 @@ body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:n
 body > .wrapper #git-wiki-content table:has(tbody tr) th {
   background-color: #f6f8fa;
 }
+
+/* Row reached through a link, and dragging a wide table with the middle mouse button */
+body > .wrapper #git-wiki-content .anchor-hit {
+  background-color: #fff3b0;
+  border-radius: 3px;
+}
+body.table-drag,
+body.table-drag * {
+  cursor: grabbing !important;
+  user-select: none;
+}
