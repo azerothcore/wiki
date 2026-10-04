@@ -137,7 +137,7 @@ plugins:
  - jemoji
  - jekyll-mentions
 
-exclude: ['wiki', 'test_locally.bat', 'test_locally.sh', 'Gemfile', 'Gemfile.lock']
+exclude: ['wiki', 'tools', 'Gemfile', 'Gemfile.lock']
 
 
 #

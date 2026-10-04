@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
 
-cd "$(dirname "${BASH_SOURCE[0]}")" || exit 1
+# The script lives in tools; the wiki is one folder up.
+cd "$(dirname "${BASH_SOURCE[0]}")/.." || exit 1
 
 # Start of the timer for the "Total time" line printed after the build.
 T_START=$(date +%s)
@@ -39,9 +40,9 @@ echo
 [ -f Gemfile ] || cp .env-files/Gemfile.github Gemfile
 export BUNDLE_GEMFILE="$PWD/Gemfile"
 
-# "clean" throws away the previous build, to force a full rebuild.
+# "clean" throws away the previous build and the cached theme, to force a full rebuild.
 if [ "$JEKYLL_CLEAN" = "1" ]; then
-    rm -rf _site .jekyll-metadata
+    rm -rf _site .jekyll-metadata .theme-cache
 fi
 
 for tool in git ruby bundle; do
@@ -79,6 +80,8 @@ echo "Open http://localhost:$JEKYLL_PORT$JEKYLL_BASEURL/home when the server is 
 echo
 
 # Build first, so the total time can be printed, then serve what was built.
+# Keeps the theme in .theme-cache so unchanged pages are skipped on the next run.
+export RUBYOPT="-r./tools/local_theme_cache.rb"
 bundle exec jekyll build --baseurl "$JEKYLL_BASEURL" --config "$JEKYLL_CONFIG" --incremental --verbose \
     || { echo; echo "The build failed - see the messages above."; exit 1; }
 

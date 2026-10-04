@@ -1,7 +1,8 @@
 @echo off
 rem Serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
 
-cd /d "%~dp0"
+rem The script lives in tools; the wiki is one folder up.
+cd /d "%~dp0.."
 
 rem Start of the timer for the "Total time" line printed after the build.
 for /f %%T in ('ruby -e "print Time.now.to_i" 2^>nul') do set T_START=%%T
@@ -43,10 +44,11 @@ rem named Gemfile is in the site root, so copy it there. It is git-ignored.
 if not exist "Gemfile" copy /y ".env-files\Gemfile.github" "Gemfile" >nul
 set BUNDLE_GEMFILE=%cd%\Gemfile
 
-rem "clean" throws away the previous build, to force a full rebuild.
+rem "clean" throws away the previous build and the cached theme, to force a full rebuild.
 if "%JEKYLL_CLEAN%"=="1" (
     if exist "_site" rmdir /s /q "_site"
     if exist ".jekyll-metadata" del ".jekyll-metadata"
+    if exist ".theme-cache" rmdir /s /q ".theme-cache"
 )
 
 where git
@@ -87,6 +89,8 @@ echo Open http://localhost:%JEKYLL_PORT%%JEKYLL_BASEURL%/home when the server is
 echo.
 
 rem Build first, so the total time can be printed, then serve what was built.
+rem Keeps the theme in .theme-cache so unchanged pages are skipped on the next run.
+set RUBYOPT=-r./tools/local_theme_cache.rb
 call bundle exec jekyll build --baseurl %JEKYLL_BASEURL% --config %JEKYLL_CONFIG% --incremental --verbose
 if errorlevel 1 (
     echo.

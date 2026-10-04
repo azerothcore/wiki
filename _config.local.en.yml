@@ -1,2 +1,2 @@
 # Used by test_locally unless it is run with "all": leaves out the translations to keep the build short.
-exclude: ['wiki', 'test_locally.bat', 'test_locally.sh', 'Gemfile', 'Gemfile.lock', 'docs/es', 'docs/cn']
+exclude: ['wiki', 'tools', 'Gemfile', 'Gemfile.lock', 'docs/es', 'docs/cn']
