@@ -1426,3 +1426,36 @@ body > .wrapper #git-wiki-content .cmd-list table td:last-child {
   white-space: normal;
   width: 100%;
 }
+
+/* Sidebar arrow button (wide screens only; small screens keep the theme's own menu button) */
+#sidebar-fold {
+  display: none;
+}
+@media (min-width: 961px) {
+  #sidebar-fold {
+    background: #f6f8fa;
+    border: 1px solid #b4bac1;
+    border-radius: 0 6px 6px 0;
+    border-left: 0;
+    color: #24292e;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    left: 0;
+    line-height: 1;
+    padding: 10px 7px;
+    position: fixed;
+    top: 12px;
+    z-index: 5;
+  }
+  #sidebar-fold:hover {
+    background: #cfe2f8;
+  }
+  body.sidebar-collapsed > .wrapper > header#git-wiki-sidebar {
+    display: none !important;
+  }
+  body.sidebar-collapsed > .wrapper > .git-wiki-page,
+  body.sidebar-collapsed > .wrapper > .row:has(> .col > footer) {
+    padding-left: 40px;
+  }
+}

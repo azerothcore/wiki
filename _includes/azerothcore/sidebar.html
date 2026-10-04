@@ -306,3 +306,32 @@
     });
 })();
 </script>
+<script>
+/* Arrow button that hides or shows the sidebar on wide screens.
+   A page with "sidebar: collapsed" in its front matter starts with it hidden. */
+(function () {
+    var KEY = "ac-sidebar:" + location.pathname, startHidden = {% if page.sidebar == "collapsed" %}true{% else %}false{% endif %};
+    function saved() { try { return sessionStorage.getItem(KEY); } catch (e) { return null; } }
+    function apply(hidden, btn) {
+        document.body.classList.toggle("sidebar-collapsed", hidden);
+        if (btn) {
+            btn.textContent = hidden ? "\u00BB" : "\u00AB";
+            btn.title = hidden ? "Show the sidebar" : "Hide the sidebar";
+            btn.setAttribute("aria-label", btn.title);
+        }
+    }
+    function init() {
+        var s = saved(), hidden = s === null ? startHidden : s === "1";
+        var btn = document.createElement("button");
+        btn.type = "button"; btn.id = "sidebar-fold";
+        btn.addEventListener("click", function () {
+            hidden = !hidden;
+            try { sessionStorage.setItem(KEY, hidden ? "1" : "0"); } catch (e) {}
+            apply(hidden, btn);
+        });
+        document.body.appendChild(btn);
+        apply(hidden, btn);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>

@@ -1,5 +1,6 @@
 ---
 redirect_from: "/sai"
+sidebar: collapsed
 ---
 
 # smart\_scripts
@@ -46,7 +47,7 @@ The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL la
 
 **Description of the table's fields**
 
-<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!d[0].open;d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button>
+<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!Array.prototype.every.call(d,function(e){return e.open});d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button>
 
 ### entryorguid
 
