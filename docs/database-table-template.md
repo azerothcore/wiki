@@ -126,7 +126,7 @@ What the flag controls.
 
 ## After adding the page
 
-A new table page has to be linked from two lists. Both are in alphabetical order.
+A new table page has to be linked from two lists. Both are in alphabetical order. The script `tools/update_table_lists.py` in the wiki repository adds the lines for you: run `python tools/update_table_lists.py`, or add `--check` to only see what is missing. By hand, the steps are:
 
 1. **The page of its database**: [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world). Add `- [table_name](table_name)` under the heading of its first letter, and add that heading if the letter is new.
 2. **The [Database Index](database-index)**: add the same line inside the folded list of that database.
