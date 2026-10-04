@@ -4,7 +4,7 @@ AzerothCore uses three databases. This page lists each one with all of its table
 
 The client DBC files are documented separately in the [DBC Index](dbc-index).
 
-<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!d[0].open;d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button><span class="table-count" data-db="all" data-label=" table pages in total"></span>
+<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!Array.prototype.every.call(d,function(e){return e.open});d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button><span class="table-count" data-db="all" data-label=" table pages in total"></span>
 
 ## Auth
 

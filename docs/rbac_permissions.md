@@ -42,7 +42,7 @@ A human-readable name describing the permission. Follows conventions:
 
 These are the permissions a clean AzerothCore database comes with. *Constant* is the name the core uses for the permission in [RBAC.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Accounts/RBAC.h). *Granted by* is the role that includes the permission in [rbac_linked_permissions](rbac_linked_permissions); a permission with no role is not given to anyone by default.
 
-<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!d[0].open;d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button>
+<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!Array.prototype.every.call(d,function(e){return e.open});d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button>
 
 <details>
 <summary>Gameplay permissions (ID 1 to 53)</summary>
