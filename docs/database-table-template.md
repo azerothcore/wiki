@@ -35,6 +35,30 @@ The structure table always has these eight columns, in the order MySQL lists the
 - When a column refers to another table, link to that table's field, for example [creature\_template.entry](creature_template#entry).
 - Link anchors are the column name in lowercase with underscores removed, so the `path_id` column links to `#pathid`.
 
+## Column alignment
+
+The second row of a table, the one made of dashes, sets how each column is aligned. Always write it with the colons, so the alignment does not depend on the theme:
+
+| Dashes row | Alignment | Use it for |
+| :--------- | :-------- | :--------- |
+| `:---`     | left      | Names, types, text, comments and the decimal Value of a list. |
+| `:--:`     | centre    | Short fixed values that are compared down the column: Null, Key, Default, Extra and Hex. |
+| `---:`     | right     | Not used in table pages. |
+
+The examples on this page already have the right dashes row, so copy it together with the header.
+
+## Value lists
+
+A field that takes one value out of a fixed list gets a table with these three columns:
+
+| Value | Name           | Comment                 |
+| :---- | :------------- | :---------------------- |
+| 0     | EXAMPLE_NONE   | What the value means    |
+| 1     | EXAMPLE_FIRST  |                         |
+| 2     | EXAMPLE_SECOND |                         |
+
+Use the name the value has in the core, or a short label when the core has no name for it.
+
 ## Bitmask tables
 
 A field that holds flags gets a table with these four columns, in this order:
@@ -93,11 +117,18 @@ What the name is used for.
 
 What the flag controls.
 
-| Value | Name      | Description          |
-| ----- | --------- | -------------------- |
-| 0     | FLAG_NONE | No effect.           |
-| 1     | FLAG_ONE  | What this flag does. |
-| 2     | FLAG_TWO  | What this flag does. |
+| Value | Hex  | Flag      | Comment              |
+| :---- | :--: | :-------- | :------------------- |
+| 1     | 0x01 | FLAG_ONE  | What this flag does. |
+| 2     | 0x02 | FLAG_TWO  | What this flag does. |
+| 4     | 0x04 | FLAG_FOUR | What this flag does. |
 ```
 
-After adding the page, add the table to the list on [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world), and to the same database on the [Database Index](database-index).
+## After adding the page
+
+A new table page has to be linked from two lists. Both are in alphabetical order.
+
+1. **The page of its database**: [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world). Add `- [table_name](table_name)` under the heading of its first letter, and add that heading if the letter is new.
+2. **The [Database Index](database-index)**: add the same line inside the folded list of that database.
+
+The number of tables shown in the sidebar and on the Database Index is counted from the lists on the Database Index, so there is nothing else to update.
