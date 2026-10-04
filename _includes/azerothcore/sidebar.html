@@ -335,3 +335,28 @@
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
 </script>
+<script>
+/* Notice shown on an English page after the 404 page sent the reader here
+   because the Spanish or Chinese version does not exist. It fades after a minute. */
+(function () {
+    var TEXT = {
+        es: "Esta p\u00e1gina a\u00fan no est\u00e1 traducida al espa\u00f1ol, as\u00ed que se te ha redirigido a la versi\u00f3n en ingl\u00e9s.",
+        cn: "\u6b64\u9875\u9762\u5c1a\u672a\u7ffb\u8bd1\u6210\u7b80\u4f53\u4e2d\u6587\uff0c\u5df2\u4e3a\u60a8\u8df3\u8f6c\u5230\u82f1\u6587\u9875\u9762\u3002"
+    };
+    function show() {
+        var lang = null;
+        try { lang = sessionStorage.getItem("ac-lang-fallback"); sessionStorage.removeItem("ac-lang-fallback"); } catch (e) {}
+        if (!lang || !TEXT[lang]) return;
+        var box = document.createElement("div"), close = document.createElement("button");
+        box.id = "lang-fallback"; box.setAttribute("role", "status"); box.lang = lang === "cn" ? "zh-CN" : lang;
+        box.appendChild(document.createTextNode(TEXT[lang]));
+        close.type = "button"; close.textContent = "\u00d7"; close.setAttribute("aria-label", "Close");
+        function hide() { box.classList.add("lang-fallback-hide"); setTimeout(function () { box.remove(); }, 700); }
+        close.addEventListener("click", hide);
+        box.appendChild(close);
+        document.body.appendChild(box);
+        setTimeout(hide, 60000);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", show); else show();
+})();
+</script>

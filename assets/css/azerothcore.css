@@ -1459,3 +1459,35 @@ body > .wrapper #git-wiki-content .cmd-list table td:last-child {
     padding-left: 40px;
   }
 }
+
+/* Notice after a missing translation sent the reader to the English page */
+#lang-fallback {
+  background: #fff8c5;
+  border: 1px solid #d4a72c;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #24292e;
+  left: 50%;
+  max-width: 90%;
+  opacity: 1;
+  padding: 10px 40px 10px 16px;
+  position: fixed;
+  top: 12px;
+  transform: translateX(-50%);
+  transition: opacity 0.6s;
+  z-index: 10;
+}
+#lang-fallback.lang-fallback-hide {
+  opacity: 0;
+}
+#lang-fallback button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
