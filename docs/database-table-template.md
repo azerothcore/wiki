@@ -14,13 +14,13 @@ A table page has these parts, in this order:
 
 ## Filling in the structure table
 
-The structure table always has these eight columns: Field, Type, Attributes, Key, Null, Default, Extra and Comment.
+The structure table always has these eight columns, in the order MySQL lists them: Field, Type, a second Type column with an empty header, Null, Key, Default, Extra and Comment. Copy the header and the alignment row from the example below: Null, Key, Default and Extra are centred, the rest is left-aligned.
 
-- **Field**: the column name exactly as it is in the database, linking to its description.
+- **Field**: the column name exactly as it is in the database, linking to its description. Write the link inline, `[name](#name)`, not as a numbered reference (`[name][1]`).
 - **Type**: the type in uppercase, without the display width of integers: `INT`, not `int(10)`. Keep the length of text types: `VARCHAR(50)`.
-- **Attributes**: `UNSIGNED` or `SIGNED` for number columns, empty for text columns. For an `ENUM`, list its values here.
-- **Key**: `PRI`, `UNI` or `MUL`, as MySQL shows it for the column, or empty.
+- **Second Type column (empty header)**: `UNSIGNED` for unsigned number columns, empty for everything else. A signed column is not marked, as in MySQL. For an `ENUM`, list its values here.
 - **Null**: `YES` or `NO`.
+- **Key**: `PRI`, `UNI` or `MUL`, as MySQL shows it for the column, or empty.
 - **Default**: the default value, `NULL` when the default is null, `''` for an empty string, or empty when the column has no default.
 - **Extra**: `AUTO_INCREMENT` and similar, or empty.
 - **Comment**: the column comment from the database, if it has one.
@@ -34,6 +34,21 @@ The structure table always has these eight columns: Field, Type, Attributes, Key
 - When a column is a flag field, list each flag with its value, and explain that flags are added together.
 - When a column refers to another table, link to that table's field, for example [creature\_template.entry](creature_template#entry).
 - Link anchors are the column name in lowercase with underscores removed, so the `path_id` column links to `#pathid`.
+
+## Bitmask tables
+
+A field that holds flags gets a table with these four columns, in this order:
+
+| Value | Hex  | Flag            | Comment                          |
+| :---- | :--: | :-------------- | :------------------------------- |
+| 1     | 0x01 | EXAMPLE_FLAG_A  | What the core does with the flag |
+| 2     | 0x02 | EXAMPLE_FLAG_B  |                                  |
+| 4     | 0x04 | EXAMPLE_FLAG_C  |                                  |
+
+- **Value**: the decimal value, as it is stored in the database.
+- **Hex**: the same value in hexadecimal, centred. Every row of a table has the same number of digits: enough for its biggest value, rounded up to 2, 4, 8 or 16 digits (`0x01`, `0x0001`, `0x00000001`).
+- **Flag**: the name of the flag in the core, or a short label when the core has no name for it.
+- **Comment**: what the flag does. Leave it empty when there is nothing to add. When the flag belongs to an ID, such as a class or a race, this column holds that ID and is named after it: `Class ID`, `Race ID`.
 
 ## DBC tables
 
@@ -58,11 +73,11 @@ What the table is for and how the core uses it.
 
 **Table: table\_name's Structure**
 
-| Field                  | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)              | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Name](#name)          | VARCHAR(50) |            |     | NO   |         |       |         |
-| [some_flag](#someflag) | TINYINT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                  | Type        |          | Null | Key | Default | Extra | Comment |
+| :--------------------- | :---------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)              | INT         | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Name](#name)          | VARCHAR(50) |          | NO   |     |         |       |         |
+| [some_flag](#someflag) | TINYINT     | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 
