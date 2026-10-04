@@ -1373,3 +1373,23 @@ body > .wrapper .table-count {
   font-weight: 400;
   opacity: 0.7;
 }
+
+/* Structure tables: full width, only the Comment column wraps */
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) {
+  display: table;
+  width: 100%;
+}
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) th,
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) td {
+  white-space: nowrap;
+}
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) th:nth-child(8),
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) td:nth-child(8) {
+  white-space: normal;
+  width: 100%;
+}
+
+/* Header row uses the same shade as the striped rows */
+body > .wrapper #git-wiki-content table:has(tbody tr) th {
+  background-color: #f6f8fa;
+}
