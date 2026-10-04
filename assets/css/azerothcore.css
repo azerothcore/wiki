@@ -1404,3 +1404,25 @@ body.table-drag * {
   cursor: grabbing !important;
   user-select: none;
 }
+
+/* GM command lists: every column is as wide as its content, Description takes the rest.
+   A long syntax wraps inside its own box instead of pushing Description away. */
+body > .wrapper #git-wiki-content .cmd-list table th,
+body > .wrapper #git-wiki-content .cmd-list table td {
+  white-space: nowrap;
+}
+body > .wrapper #git-wiki-content .cmd-list table td code {
+  display: inline-block;
+  max-width: 380px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  width: max-content;
+  word-break: normal;
+}
+body > .wrapper #git-wiki-content .cmd-list table th:last-child,
+body > .wrapper #git-wiki-content .cmd-list table td:last-child {
+  min-width: 300px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  width: 100%;
+}

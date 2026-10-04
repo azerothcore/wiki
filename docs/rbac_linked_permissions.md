@@ -44,10 +44,10 @@ Linked permissions are expanded recursively during [permission resolution](rbac#
 
 These are the links a clean AzerothCore database comes with, grouped by the parent permission. *Comment* is the name of the linked permission in [rbac_permissions](rbac_permissions).
 
-<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!d[0].open;d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button>
+<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!Array.prototype.every.call(d,function(e){return e.open});d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button>
 
 <details>
-<summary>192 - Role: Sec Level Administrator</summary>
+<summary id="role-192">192 - Role: Sec Level Administrator</summary>
 
 | id  | linkedId | Comment                                              |
 | :-- | :------- | :--------------------------------------------------- |
@@ -61,7 +61,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>193 - Role: Sec Level Gamemaster</summary>
+<summary id="role-193">193 - Role: Sec Level Gamemaster</summary>
 
 | id  | linkedId | Comment                                         |
 | :-- | :------- | :---------------------------------------------- |
@@ -75,7 +75,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>194 - Role: Sec Level Moderator</summary>
+<summary id="role-194">194 - Role: Sec Level Moderator</summary>
 
 | id  | linkedId | Comment                                                        |
 | :-- | :------- | :------------------------------------------------------------- |
@@ -122,7 +122,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>195 - Role: Sec Level Player</summary>
+<summary id="role-195">195 - Role: Sec Level Player</summary>
 
 | id  | linkedId | Comment                                                       |
 | :-- | :------- | :------------------------------------------------------------ |
@@ -137,7 +137,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>196 - Role: Administrator Commands</summary>
+<summary id="role-196">196 - Role: Administrator Commands</summary>
 
 | id  | linkedId | Comment                                        |
 | :-- | :------- | :--------------------------------------------- |
@@ -367,7 +367,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>197 - Role: Gamemaster Commands</summary>
+<summary id="role-197">197 - Role: Gamemaster Commands</summary>
 
 | id  | linkedId | Comment                             |
 | :-- | :------- | :---------------------------------- |
@@ -671,7 +671,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>198 - Role: Moderator Commands</summary>
+<summary id="role-198">198 - Role: Moderator Commands</summary>
 
 | id  | linkedId | Comment                           |
 | :-- | :------- | :-------------------------------- |
@@ -721,7 +721,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>199 - Role: Player Commands</summary>
+<summary id="role-199">199 - Role: Player Commands</summary>
 
 | id  | linkedId | Comment                       |
 | :-- | :------- | :---------------------------- |
@@ -762,7 +762,7 @@ These are the links a clean AzerothCore database comes with, grouped by the pare
 </details>
 
 <details>
-<summary>300 - Command: debug</summary>
+<summary id="role-300">300 - Command: debug</summary>
 
 | id  | linkedId | Comment                 |
 | :-- | :------- | :---------------------- |
