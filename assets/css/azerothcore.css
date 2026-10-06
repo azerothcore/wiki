@@ -1077,3 +1077,501 @@ a[href^="http://"]:after, a[href^="https://"]:after {
   text-decoration: none;
   padding-left: 3px;
 } */
+
+/* Sidebar: collapsible sections and nested lists */
+body > .wrapper .sidebar-wrapper {
+  padding-left: 10px;
+  padding-right: 8px;
+}
+
+body > .wrapper .sidebar-wrapper ul,
+body > .wrapper .sidebar-wrapper ol {
+  margin-bottom: 10px;
+  padding-left: 1.2em;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold {
+  list-style: none;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary {
+  cursor: pointer;
+  margin-left: -1.2em;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold ol,
+body > .wrapper .sidebar-wrapper li.sidebar-fold ul,
+body > .wrapper .sidebar-wrapper ul ul {
+  font-size: 0.95em;
+  margin: 4px 0 8px;
+  padding-left: 1.3em;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold ol {
+  list-style-type: decimal;
+}
+
+body > .wrapper .sidebar-wrapper ul > li:not(.sidebar-fold) {
+  list-style: none;
+  margin-left: -1.2em;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary {
+  list-style: none;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Dot and fold arrow drawn at the same size and position */
+body > .wrapper .sidebar-wrapper ul > li:not(.sidebar-fold)::before,
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-right: 0.6em;
+  vertical-align: 0.05em;
+  background: currentColor;
+}
+
+body > .wrapper .sidebar-wrapper ul > li:not(.sidebar-fold)::before {
+  border-radius: 50%;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary::before {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details[open] > summary::before {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold li {
+  margin: 2px 0;
+}
+
+body > .wrapper .sidebar-wrapper .sidebar-hint {
+  display: block;
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Top of every page: language buttons on the left, the page tools
+   (Add new, Edit, ...) on the right and the search box under the tools */
+body > .wrapper #tools-buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-bottom: 12px;
+}
+
+body > .wrapper #tools-buttons .lang-switch {
+  flex: 1 1 auto;
+  float: none;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+body > .wrapper #tools-buttons .git-wiki-tools {
+  display: flex;
+  flex: 0 1 auto;
+  margin-left: auto;
+}
+
+/* Each tool link is centred in its own box, between the separator lines */
+body > .wrapper #tools-buttons .tools-element {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 3px 12px;
+}
+
+body > .wrapper #tools-buttons .git-wiki-search {
+  flex: 0 0 100%;
+  margin: 0;
+  text-align: right;
+}
+
+/* Heading underline: thicker and with more contrast */
+body > .wrapper h1,
+body > .wrapper h2 {
+  border-bottom: 2px solid #b4bac1;
+}
+
+/* Tables: no borders, only a line under the header row and row shading */
+body > .wrapper table td,
+body > .wrapper table th {
+  border: 0;
+  padding: 8px 14px;
+}
+
+body > .wrapper table th {
+  border-bottom: 2px solid #b4bac1;
+}
+
+body > .wrapper table tr {
+  border-top: 0;
+}
+
+
+/* A table with only a header row is a previous/next navigation bar:
+   full width, with equal columns. The alignment comes from the page. */
+body > .wrapper table:not(:has(tbody tr)) {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+body > .wrapper table:not(:has(tbody tr)) th {
+  border-bottom: 0;
+  font-weight: 400;
+  padding: 2px 0;
+}
+
+/* Language buttons above the page (_includes/azerothcore/languages.html) */
+body > .wrapper .lang-switch {
+  float: left;
+  margin-bottom: 12px;
+}
+
+body > .wrapper .lang-btn,
+body > .wrapper a.lang-btn:hover,
+body > .wrapper a.lang-btn:focus {
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  color: #24292e;
+  display: inline-block;
+  font-size: 0.9em;
+  margin-right: 4px;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+
+/* Hover lights the button up; the current language has a coloured border */
+body > .wrapper a.lang-btn:hover,
+body > .wrapper a.lang-btn:focus {
+  background-color: #cfe2f8;
+  border-color: #0366d6;
+}
+
+body > .wrapper a.lang-btn.lang-current,
+body > .wrapper a.lang-btn.lang-current:hover,
+body > .wrapper .lang-current {
+  background-color: #f6f8fa;
+  border: 2px solid #0366d6;
+  font-weight: 600;
+  padding: 2px 9px;
+}
+
+body > .wrapper .lang-missing {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+/* The flag does not show its own tooltip, so the whole button shows the button's message */
+body > .wrapper .lang-btn img {
+  pointer-events: none;
+}
+
+/* Sidebar logo: the site name is part of the logo link, larger and not styled as a link */
+body > .wrapper .git-wiki-main-logo a,
+body > .wrapper .git-wiki-main-logo a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+body > .wrapper .git-wiki-main-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+body > .wrapper .git-wiki-main-logo h1 {
+  color: inherit;
+  font-size: 40px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Honour the alignment set in a Markdown table (:--, :-:, --:) */
+body > .wrapper table th[align="left"],
+body > .wrapper table td[align="left"] {
+  text-align: left;
+}
+
+body > .wrapper table th[align="center"],
+body > .wrapper table td[align="center"] {
+  text-align: center;
+}
+
+body > .wrapper table th[align="right"],
+body > .wrapper table td[align="right"] {
+  text-align: right;
+}
+
+/* Footer: same left edge as the page content on every page.
+   The page content is indented 320px to clear the sidebar; the footer sits
+   outside that block, so its row gets the same indent. */
+body > .wrapper .row:has(> .col > footer) {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 961px) {
+  body > .wrapper .row:has(> .col > footer) {
+    padding-left: 320px;
+  }
+}
+
+body > .wrapper .col:has(> footer) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body > .wrapper footer {
+  float: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+/* Badges: rounded labels with white text on a strong colour.
+   Dark mode inverts every colour, so the dark-mode values below are the
+   inverse of what is shown (black shows as white, and so on). */
+body > .wrapper .badge {
+  border-radius: 999px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  padding: 5px 12px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+body > .wrapper .badge-success { background-color: #1a7f37; }
+body > .wrapper .badge-info    { background-color: #0969da; }
+body > .wrapper .badge-warning { background-color: #9a6700; }
+body > .wrapper .badge-danger  { background-color: #cf222e; }
+
+body.darkmode--activated > .wrapper .badge         { color: #000; }
+body.darkmode--activated > .wrapper .badge-success { background-color: #e580c8; }
+body.darkmode--activated > .wrapper .badge-info    { background-color: #f69625; }
+body.darkmode--activated > .wrapper .badge-warning { background-color: #6598ff; }
+body.darkmode--activated > .wrapper .badge-danger  { background-color: #30ddd1; }
+
+body > .wrapper h2:has(> .badge),
+body > .wrapper h3:has(> .badge) {
+  align-items: center;
+  border-bottom: 1px solid #dfe2e5;
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  padding-bottom: 8px;
+}
+
+/* "Expand all" button and fold lines on index pages */
+body > .wrapper #git-wiki-content .details-toggle {
+  background: #f6f8fa;
+  border: 1px solid #b4bac1;
+  border-radius: 6px;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 14px;
+  min-width: 9em;
+  text-align: center;
+}
+body > .wrapper #git-wiki-content .details-toggle:hover {
+  background: #e9ecef;
+}
+body > .wrapper #git-wiki-content details > summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Table counts filled in by the sidebar script */
+body > .wrapper .table-count {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* Structure tables: full width, only the Comment column wraps */
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) {
+  display: table;
+  width: 100%;
+}
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) th,
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) td {
+  white-space: nowrap;
+}
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) th:nth-child(8),
+body > .wrapper #git-wiki-content table:has(th:nth-child(8):last-child):has(th:nth-child(5)[align="center"]) td:nth-child(8) {
+  white-space: normal;
+  width: 100%;
+}
+
+/* Header row uses the same shade as the striped rows */
+body > .wrapper #git-wiki-content table:has(tbody tr) th {
+  background-color: #f6f8fa;
+}
+
+/* Row reached through a link, and dragging a wide table with the middle mouse button */
+body > .wrapper #git-wiki-content .anchor-hit {
+  background-color: #fff3b0;
+  border-radius: 3px;
+}
+body.table-drag,
+body.table-drag * {
+  cursor: grabbing !important;
+  user-select: none;
+}
+
+/* GM command lists: every column is as wide as its content, Description takes the rest.
+   A long syntax wraps inside its own box instead of pushing Description away. */
+body > .wrapper #git-wiki-content .cmd-list table th,
+body > .wrapper #git-wiki-content .cmd-list table td {
+  white-space: nowrap;
+}
+body > .wrapper #git-wiki-content .cmd-list table td code {
+  display: inline-block;
+  max-width: 380px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  width: max-content;
+  word-break: normal;
+}
+body > .wrapper #git-wiki-content .cmd-list table th:last-child,
+body > .wrapper #git-wiki-content .cmd-list table td:last-child {
+  min-width: 300px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  width: 100%;
+}
+
+/* Sidebar arrow button (wide screens only; small screens keep the theme's own menu button) */
+#sidebar-fold {
+  display: none;
+}
+@media (min-width: 961px) {
+  #sidebar-fold {
+    background: #f6f8fa;
+    border: 1px solid #b4bac1;
+    border-radius: 0 6px 6px 0;
+    border-left: 0;
+    color: #24292e;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    left: 0;
+    line-height: 1;
+    padding: 10px 7px;
+    position: fixed;
+    top: 12px;
+    z-index: 5;
+  }
+  #sidebar-fold:hover {
+    background: #cfe2f8;
+  }
+  body.sidebar-collapsed > .wrapper > header#git-wiki-sidebar {
+    display: none !important;
+  }
+  body.sidebar-collapsed > .wrapper > .git-wiki-page,
+  body.sidebar-collapsed > .wrapper > .row:has(> .col > footer) {
+    padding-left: 40px;
+  }
+}
+
+/* Notice after a missing translation sent the reader to the English page */
+#lang-fallback {
+  background: #fff8c5;
+  border: 1px solid #d4a72c;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #24292e;
+  left: 50%;
+  max-width: 90%;
+  opacity: 1;
+  padding: 10px 40px 10px 16px;
+  position: fixed;
+  top: 12px;
+  transform: translateX(-50%);
+  transition: opacity 0.6s;
+  z-index: 10;
+}
+#lang-fallback.lang-fallback-hide {
+  opacity: 0;
+}
+#lang-fallback button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+/* Letter headings inside a folded list get the same line as the h2 letter headings */
+body > .wrapper #git-wiki-content details h3 {
+  border-bottom: 2px solid #b4bac1;
+  padding-bottom: 0.3em;
+}
+
+/* DBC Index bullets */
+body > .wrapper li.dbc-columns,
+body > .wrapper li.dbc-documented,
+body > .wrapper li:has(> a[title="Columns only"]),
+body > .wrapper li:has(> a[title="Documented"]) {
+  list-style: none;
+}
+body > .wrapper li.dbc-columns::before,
+body > .wrapper li.dbc-documented::before,
+body > .wrapper li:has(> a[title="Columns only"])::before,
+body > .wrapper li:has(> a[title="Documented"])::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: -1.2em;
+  margin-right: 0.6em;
+  vertical-align: 0.05em;
+  background: currentColor;
+  border-radius: 50%;
+}
+body > .wrapper li.dbc-columns::before,
+body > .wrapper li:has(> a[title="Columns only"])::before {
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  transform: scale(1.35);
+}
+body > .wrapper ul.dbc-legend {
+  margin-bottom: 1em;
+}
+body > .wrapper .hide-columns-only li:has(> a[title="Columns only"]),
+body > .wrapper .hide-columns-only h2:has(+ ul):not(:has(+ ul a[title="Documented"])),
+body > .wrapper .hide-columns-only h2 + ul:not(.dbc-legend):not(:has(a[title="Documented"])) {
+  display: none;
+}
+
+/* Hex values in the centred column of flag tables stay on one line */
+body > .wrapper #git-wiki-content td[align="center"] > code,
+body > .wrapper #git-wiki-content td[style*="center"] > code {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
