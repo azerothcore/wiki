@@ -1,0 +1,564 @@
+# Database Index
+
+AzerothCore uses three databases. This page lists each one with all of its tables. The tables of each database are also listed on its own page: [Auth](database-auth), [Characters](database-characters) and [World](database-world).
+
+The 246 client DBC files are documented separately in the [DBC Index](dbc-index).
+
+<ul class="dbc-legend">
+<li class="dbc-documented">(Dot) is a page with comments or descriptions of its columns.</li>
+<li class="dbc-columns">(Diamond) is a page that only has the names and types of the columns.</li>
+</ul>
+
+<button type="button" class="details-toggle" onclick="var d=document.querySelectorAll('#git-wiki-content details'),o=!Array.prototype.every.call(d,function(e){return e.open});d.forEach(function(e){e.open=o});this.textContent=o?'Collapse all':'Expand all'">Expand all</button><span class="table-count" data-db="all" data-label=" table pages in total"></span>
+
+## Auth
+
+Accounts, realms and access rights. It is shared by the authserver and every worldserver. See also the [Auth database page](database-auth).
+
+<details>
+<summary>Show the Auth tables<span class="table-count" data-db="auth"></span></summary>
+
+### A
+- [account](account "Documented")
+- [account_access](account_access "Documented")
+- [account_banned](account_banned "Documented")
+- [account_muted](account_muted "Documented")
+- [autobroadcast](autobroadcast "Documented")
+- [autobroadcast_locale](autobroadcast_locale "Documented")
+
+### B
+- [build_info](build_info "Documented")
+
+### I
+- [ip_banned](ip_banned "Documented")
+
+### L
+- [logs](logs "Documented")
+- [logs_ip_actions](logs_ip_actions "Documented")
+
+### M
+- [motd](motd "Documented")
+- [motd_localized](motd_localized "Documented")
+
+### R
+- [rbac_account_permissions](rbac_account_permissions "Documented")
+- [rbac_default_permissions](rbac_default_permissions "Documented")
+- [rbac_linked_permissions](rbac_linked_permissions "Documented")
+- [rbac_permissions](rbac_permissions "Documented")
+- [realmcharacters](realmcharacters "Documented")
+- [realmlist](realmlist "Documented")
+
+### S
+- [secret_digest](secret_digest "Documented")
+
+### U
+- [updates](updates "Documented")
+- [updates_include](updates_include "Documented")
+- [uptime](uptime "Documented")
+
+</details>
+
+## Characters
+
+Everything that belongs to players: characters, items, guilds, mail and other saved state. See also the [Characters database page](database-characters).
+
+<details>
+<summary>Show the Characters tables<span class="table-count" data-db="characters"></span></summary>
+
+### A
+- [account_data](account_data "Documented")
+- [account_instance_times](account_instance_times "Documented")
+- [account_tutorial](account_tutorial "Documented")
+- [active_arena_season](active_arena_season "Documented")
+- [addons](addons "Documented")
+- [arena_team](arena_team "Documented")
+- [arena_team_member](arena_team_member "Documented")
+- [auctionhouse](auctionhouse "Documented")
+
+### B
+- [banned_addons](banned_addons "Documented")
+- [battleground_deserters](battleground_deserters "Documented")
+- [bugreport](bugreport "Documented")
+
+### C
+- [calendar_events](calendar_events "Documented")
+- [calendar_invites](calendar_invites "Documented")
+- [channels](channels "Documented")
+- [channels_bans](channels_bans "Documented")
+- [channels_rights](channels_rights "Documented")
+- [character_account_data](character_account_data "Documented")
+- [character_achievement](character_achievement "Documented")
+- [character_achievement_offline_updates](character_achievement_offline_updates "Documented")
+- [character_achievement_progress](character_achievement_progress "Documented")
+- [character_action](character_action "Documented")
+- [character_arena_stats](character_arena_stats "Documented")
+- [character_aura](character_aura "Documented")
+- [character_banned](character_banned "Documented")
+- [character_battleground_random](character_battleground_random "Documented")
+- [character_brew_of_the_month](character_brew_of_the_month "Documented")
+- [character_declinedname](character_declinedname "Documented")
+- [character_entry_point](character_entry_point "Documented")
+- [character_equipmentsets](character_equipmentsets "Documented")
+- [character_gifts](character_gifts "Documented")
+- [character_glyphs](character_glyphs "Documented")
+- [character_homebind](character_homebind "Documented")
+- [character_instance](character_instance "Documented")
+- [character_inventory](character_inventory "Documented")
+- [character_pet](character_pet "Documented")
+- [character_pet_declinedname](character_pet_declinedname "Documented")
+- [character_queststatus](character_queststatus "Documented")
+- [character_queststatus_daily](character_queststatus_daily "Documented")
+- [character_queststatus_monthly](character_queststatus_monthly "Documented")
+- [character_queststatus_rewarded](character_queststatus_rewarded "Documented")
+- [character_queststatus_seasonal](character_queststatus_seasonal "Documented")
+- [character_queststatus_weekly](character_queststatus_weekly "Documented")
+- [character_reputation](character_reputation "Documented")
+- [character_settings](character_settings "Documented")
+- [character_skills](character_skills "Documented")
+- [character_social](character_social "Documented")
+- [character_spell](character_spell "Documented")
+- [character_spell_cooldown](character_spell_cooldown "Documented")
+- [character_stats](character_stats "Documented")
+- [character_talent](character_talent "Documented")
+- [characters](characters "Documented")
+- [chat_filter](chat_filter "Documented")
+- [corpse](corpse "Documented")
+- [creature_respawn](creature_respawn "Documented")
+
+### G
+- [game_event_condition_save](game_event_condition_save "Documented")
+- [game_event_save](game_event_save "Documented")
+- [gameobject_respawn](gameobject_respawn "Documented")
+- [gm_subsurvey](gm_subsurvey "Documented")
+- [gm_survey](gm_survey "Documented")
+- [gm_ticket](gm_ticket "Documented")
+- [group_member](group_member "Documented")
+- [groups](groups "Documented")
+- [guild](guild "Documented")
+- [guild_bank_eventlog](guild_bank_eventlog "Documented")
+- [guild_bank_item](guild_bank_item "Documented")
+- [guild_bank_right](guild_bank_right "Documented")
+- [guild_bank_tab](guild_bank_tab "Documented")
+- [guild_eventlog](guild_eventlog "Documented")
+- [guild_member](guild_member "Documented")
+- [guild_member_withdraw](guild_member_withdraw "Documented")
+- [guild_rank](guild_rank "Documented")
+
+### I
+- [instance](instance "Documented")
+- [instance_reset](instance_reset "Documented")
+- [instance_saved_go_state_data](instance_saved_go_state_data "Documented")
+- [item_instance](item_instance "Documented")
+- [item_loot_storage](item_loot_storage "Documented")
+- [item_refund_instance](item_refund_instance "Documented")
+- [item_soulbound_trade_data](item_soulbound_trade_data "Documented")
+
+### L
+- [lag_reports](lag_reports "Documented")
+- [lfg_data](lfg_data "Documented")
+- [log_arena_fights](log_arena_fights "Documented")
+- [log_arena_memberstats](log_arena_memberstats "Documented")
+- [log_encounter](log_encounter "Documented")
+- [log_money](log_money "Documented")
+
+### M
+- [mail](mail "Documented")
+- [mail_items](mail_items "Documented")
+- [mail_server_character](mail_server_character "Documented")
+- [mail_server_template](mail_server_template "Documented")
+- [mail_server_template_conditions](mail_server_template_conditions "Documented")
+- [mail_server_template_items](mail_server_template_items "Documented")
+
+### P
+- [pet_aura](pet_aura "Documented")
+- [pet_spell](pet_spell "Documented")
+- [pet_spell_cooldown](pet_spell_cooldown "Documented")
+- [petition](petition "Documented")
+- [petition_sign](petition_sign "Documented")
+- [pool_quest_save](pool_quest_save "Documented")
+- [profanity_name](profanity_name "Documented")
+- [pvpstats_battlegrounds](pvpstats_battlegrounds "Documented")
+- [pvpstats_players](pvpstats_players "Documented")
+
+### Q
+- [quest_tracker](quest_tracker "Documented")
+
+### R
+- [recovery_item](recovery_item "Documented")
+- [reserved_name](reserved_name "Documented")
+
+### S
+- [spam_reports](spam_reports "Documented")
+
+### U
+- [updates](updates "Documented")
+- [updates_include](updates_include "Documented")
+
+### W
+- [warden_action](warden_action "Documented")
+- [world_state](world_state "Documented")
+- [worldstates](worldstates "Documented")
+
+</details>
+
+## World
+
+The game content: creatures, gameobjects, quests, items, spells, scripts and the `_dbc` override tables. See also the [World database page](database-world).
+
+<details>
+<summary>Show the World tables<span class="table-count" data-db="world"></span></summary>
+
+### A
+- [achievement_category_dbc](achievement_category_dbc "Documented")
+- [achievement_criteria_data](achievement_criteria_data "Documented")
+- [achievement_criteria_dbc](achievement_criteria_dbc "Documented")
+- [achievement_dbc](achievement_dbc "Documented")
+- [achievement_reward](achievement_reward "Documented")
+- [achievement_reward_locale](achievement_reward_locale "Documented")
+- [acore_string](acore_string "Documented")
+- [antidos_opcode_policies](antidos_opcode_policies "Documented")
+- [areagroup_dbc](areagroup_dbc "Documented")
+- [areapoi_dbc](areapoi_dbc "Documented")
+- [areatable_dbc](areatable_dbc "Documented")
+- [areatrigger](areatrigger "Documented")
+- [areatrigger_involvedrelation](areatrigger_involvedrelation "Documented")
+- [areatrigger_scripts](areatrigger_scripts "Documented")
+- [areatrigger_tavern](areatrigger_tavern "Documented")
+- [areatrigger_teleport](areatrigger_teleport "Documented")
+- [arena_season_reward](arena_season_reward "Documented")
+- [arena_season_reward_group](arena_season_reward_group "Documented")
+- [auctionhouse_dbc](auctionhouse_dbc "Documented")
+
+### B
+- [bankbagslotprices_dbc](bankbagslotprices_dbc "Documented")
+- [barbershopstyle_dbc](barbershopstyle_dbc "Documented")
+- [battleground_template](battleground_template "Documented")
+- [battlemaster_entry](battlemaster_entry "Documented")
+- [battlemasterlist_dbc](battlemasterlist_dbc "Documented")
+- [broadcast_text](broadcast_text "Documented")
+- [broadcast_text_locale](broadcast_text_locale "Documented")
+
+### C
+- [charsections_dbc](charsections_dbc "Documented")
+- [charstartoutfit_dbc](charstartoutfit_dbc "Documented")
+- [chartitles_dbc](chartitles_dbc "Documented")
+- [chatchannels_dbc](chatchannels_dbc "Documented")
+- [chrclasses_dbc](chrclasses_dbc "Documented")
+- [chrraces_dbc](chrraces_dbc "Documented")
+- [cinematiccamera_dbc](cinematiccamera_dbc "Documented")
+- [cinematicsequences_dbc](cinematicsequences_dbc "Documented")
+- [command](command "Documented")
+- [conditions](conditions "Documented")
+- [creature](creature "Documented")
+- [creature_addon](creature_addon "Documented")
+- [creature_classlevelstats](creature_classlevelstats "Documented")
+- [creature_default_trainer](creature_default_trainer "Documented")
+- [creature_equip_template](creature_equip_template "Documented")
+- [creature_formations](creature_formations "Documented")
+- [creature_immunities](creature_immunities "Documented")
+- [creature_loot_template](loot_template "Documented")
+- [creature_model_info](creature_model_info "Documented")
+- [creature_movement_override](creature_template_movement "Documented")
+- [creature_multispawn](creature_multispawn "Documented")
+- [creature_onkill_reputation](creature_onkill_reputation "Documented")
+- [creature_questender](creature_questender "Documented")
+- [creature_questitem](creature_questitem "Documented")
+- [creature_queststarter](creature_queststarter "Documented")
+- [creature_sparring](creature_sparring "Documented")
+- [creature_summon_groups](creature_summon_groups "Documented")
+- [creature_template](creature_template "Documented")
+- [creature_template_addon](creature_addon "Documented")
+- [creature_template_locale](creature_template_locale "Documented")
+- [creature_template_model](creature_template_model "Documented")
+- [creature_template_movement](creature_template_movement "Documented")
+- [creature_template_resistance](creature_template_resistance "Documented")
+- [creature_template_spell](creature_template_spell "Documented")
+- [creature_text](creature_text "Documented")
+- [creature_text_locale](creature_text_locale "Documented")
+- [creature_text_option_sets](creature_text_option_sets "Documented")
+- [creature_text_options](creature_text_options "Documented")
+- [creaturedisplayinfo_dbc](creaturedisplayinfo_dbc "Documented")
+- [creaturedisplayinfoextra_dbc](creaturedisplayinfoextra_dbc "Documented")
+- [creaturefamily_dbc](creaturefamily_dbc "Documented")
+- [creaturemodeldata_dbc](creaturemodeldata_dbc "Documented")
+- [creaturespelldata_dbc](creaturespelldata_dbc "Documented")
+- [creaturetype_dbc](creaturetype_dbc "Documented")
+- [currencytypes_dbc](currencytypes_dbc "Documented")
+
+### D
+- [destructiblemodeldata_dbc](destructiblemodeldata_dbc "Documented")
+- [disables](disables "Documented")
+- [disenchant_loot_template](loot_template "Documented")
+- [dungeon_access_requirements](dungeon_access_requirements "Documented")
+- [dungeon_access_template](dungeon_access_template "Documented")
+- [dungeonencounter_dbc](dungeonencounter_dbc "Documented")
+- [durabilitycosts_dbc](durabilitycosts_dbc "Documented")
+- [durabilityquality_dbc](durabilityquality_dbc "Documented")
+
+### E
+- [emotes_dbc](emotes_dbc "Documented")
+- [emotestext_dbc](emotestext_dbc "Documented")
+- [emotestextsound_dbc](emotestextsound_dbc "Documented")
+- [event_scripts](scripts "Documented")
+- [exploration_basexp](exploration_basexp "Documented")
+
+### F
+- [faction_dbc](faction_dbc "Documented")
+- [factiontemplate_dbc](factiontemplate_dbc "Documented")
+- [fishing_loot_template](loot_template "Documented")
+
+### G
+- [game_event](game_event "Documented")
+- [game_event_arena_seasons](game_event_arena_seasons "Documented")
+- [game_event_battleground_holiday](game_event_battleground_holiday "Documented")
+- [game_event_condition](game_event_condition "Documented")
+- [game_event_creature](game_event_creature "Documented")
+- [game_event_creature_quest](game_event_creature_quest "Documented")
+- [game_event_gameobject](game_event_gameobject "Documented")
+- [game_event_gameobject_quest](game_event_gameobject_quest "Documented")
+- [game_event_model_equip](game_event_model_equip "Documented")
+- [game_event_npc_vendor](game_event_npc_vendor "Documented")
+- [game_event_npcflag](game_event_npcflag "Documented")
+- [game_event_pool](game_event_pool "Documented")
+- [game_event_prerequisite](game_event_prerequisite "Documented")
+- [game_event_quest_condition](game_event_quest_condition "Documented")
+- [game_event_seasonal_questrelation](game_event_seasonal_questrelation "Documented")
+- [game_graveyard](game_graveyard "Documented")
+- [game_tele](game_tele "Documented")
+- [game_weather](game_weather "Documented")
+- [gameobject](gameobject "Documented")
+- [gameobject_addon](gameobject_addon "Documented")
+- [gameobject_loot_template](loot_template "Documented")
+- [gameobject_questender](gameobject_questender "Documented")
+- [gameobject_questitem](gameobject_questitem "Documented")
+- [gameobject_queststarter](gameobject_queststarter "Documented")
+- [gameobject_summon_groups](gameobject_summon_groups "Documented")
+- [gameobject_template](gameobject_template "Documented")
+- [gameobject_template_addon](gameobject_template_addon "Documented")
+- [gameobject_template_locale](gameobject_template_locale "Documented")
+- [gameobjectartkit_dbc](gameobjectartkit_dbc "Documented")
+- [gameobjectdisplayinfo_dbc](gameobjectdisplayinfo_dbc "Documented")
+- [gemproperties_dbc](gemproperties_dbc "Documented")
+- [glyphproperties_dbc](glyphproperties_dbc "Documented")
+- [glyphslot_dbc](glyphslot_dbc "Documented")
+- [gossip_menu](gossip_menu "Documented")
+- [gossip_menu_option](gossip_menu_option "Documented")
+- [gossip_menu_option_locale](gossip_menu_option_locale "Documented")
+- [graveyard_zone](graveyard_zone "Documented")
+- [gtbarbershopcostbase_dbc](gtbarbershopcostbase_dbc "Documented")
+- [gtchancetomeleecrit_dbc](gtchancetomeleecrit_dbc "Documented")
+- [gtchancetomeleecritbase_dbc](gtchancetomeleecritbase_dbc "Documented")
+- [gtchancetospellcrit_dbc](gtchancetospellcrit_dbc "Documented")
+- [gtchancetospellcritbase_dbc](gtchancetospellcritbase_dbc "Documented")
+- [gtcombatratings_dbc](gtcombatratings_dbc "Documented")
+- [gtnpcmanacostscaler_dbc](gtnpcmanacostscaler_dbc "Documented")
+- [gtoctclasscombatratingscalar_dbc](gtoctclasscombatratingscalar_dbc "Documented")
+- [gtoctregenhp_dbc](gtoctregenhp_dbc "Documented")
+- [gtregenhpperspt_dbc](gtregenhpperspt_dbc "Documented")
+- [gtregenmpperspt_dbc](gtregenmpperspt_dbc "Documented")
+
+### H
+- [holidays_dbc](holidays_dbc "Documented")
+
+### I
+- [instance_encounters](instance_encounters "Documented")
+- [instance_template](instance_template "Documented")
+- [item_dbc](item_dbc "Documented")
+- [item_enchantment_template](item_enchantment_template "Documented")
+- [item_loot_template](loot_template "Documented")
+- [item_set_names](item_set_names "Documented")
+- [item_set_names_locale](item_set_names_locale "Documented")
+- [item_template](item_template "Documented")
+- [item_template_locale](item_template_locale "Documented")
+- [itembagfamily_dbc](itembagfamily_dbc "Documented")
+- [itemdisplayinfo_dbc](itemdisplayinfo_dbc "Documented")
+- [itemextendedcost_dbc](itemextendedcost_dbc "Documented")
+- [itemlimitcategory_dbc](itemlimitcategory_dbc "Documented")
+- [itemrandomproperties_dbc](itemrandomproperties_dbc "Documented")
+- [itemrandomsuffix_dbc](itemrandomsuffix_dbc "Documented")
+- [itemset_dbc](itemset_dbc "Documented")
+
+### L
+- [lfg_dungeon_rewards](lfg_dungeon_rewards "Documented")
+- [lfg_dungeon_template](lfg_dungeon_template "Documented")
+- [lfgdungeons_dbc](lfgdungeons_dbc "Documented")
+- [light_dbc](light_dbc "Documented")
+- [linked_respawn](linked_respawn "Documented")
+- [liquidtype_dbc](liquidtype_dbc "Documented")
+- [lock_dbc](lock_dbc "Documented")
+
+### M
+- [mail_level_reward](mail_level_reward "Documented")
+- [mail_loot_template](loot_template "Documented")
+- [mailtemplate_dbc](mailtemplate_dbc "Documented")
+- [map_dbc](map_dbc "Documented")
+- [mapdifficulty_dbc](mapdifficulty_dbc "Documented")
+- [milling_loot_template](loot_template "Documented")
+- [module_string](module_string "Documented")
+- [module_string_locale](module_string_locale "Documented")
+- [movie_dbc](movie_dbc "Documented")
+
+### N
+- [namesprofanity_dbc](namesprofanity_dbc "Documented")
+- [namesreserved_dbc](namesreserved_dbc "Documented")
+- [npc_spellclick_spells](npc_spellclick_spells "Documented")
+- [npc_text](npc_text "Documented")
+- [npc_text_locale](npc_text_locale "Documented")
+- [npc_vendor](npc_vendor "Documented")
+
+### O
+- [outdoorpvp_template](outdoorpvp_template "Documented")
+- [overridespelldata_dbc](overridespelldata_dbc "Documented")
+
+### P
+- [page_text](page_text "Documented")
+- [page_text_locale](page_text_locale "Documented")
+- [pet_levelstats](pet_levelstats "Documented")
+- [pet_name_generation](pet_name_generation "Documented")
+- [pet_name_generation_locale](pet_name_generation_locale "Documented")
+- [pickpocketing_loot_template](loot_template "Documented")
+- [player_class_stats](player_class_stats "Documented")
+- [player_factionchange_achievement](player_factionchange_achievement "Documented")
+- [player_factionchange_items](player_factionchange_items "Documented")
+- [player_factionchange_quests](player_factionchange_quests "Documented")
+- [player_factionchange_reputations](player_factionchange_reputations "Documented")
+- [player_factionchange_spells](player_factionchange_spells "Documented")
+- [player_factionchange_titles](player_factionchange_titles "Documented")
+- [player_loot_template](loot_template "Documented")
+- [player_race_stats](player_race_stats "Documented")
+- [player_shapeshift_model](player_shapeshift_model "Documented")
+- [player_totem_model](player_totem_model "Documented")
+- [player_xp_for_level](player_xp_for_level "Documented")
+- [playercreateinfo](playercreateinfo "Documented")
+- [playercreateinfo_action](playercreateinfo_action "Documented")
+- [playercreateinfo_cast_spell](playercreateinfo_cast_spell "Documented")
+- [playercreateinfo_item](playercreateinfo_item "Documented")
+- [playercreateinfo_skills](playercreateinfo_skills "Documented")
+- [playercreateinfo_spell_custom](playercreateinfo_spell_custom "Documented")
+- [points_of_interest](points_of_interest "Documented")
+- [points_of_interest_locale](points_of_interest_locale "Documented")
+- [pool_creature](pool_creature "Documented")
+- [pool_gameobject](pool_gameobject "Documented")
+- [pool_pool](pool_pool "Documented")
+- [pool_quest](pool_quest "Documented")
+- [pool_template](pool_template "Documented")
+- [powerdisplay_dbc](powerdisplay_dbc "Documented")
+- [prospecting_loot_template](loot_template "Documented")
+- [pvpdifficulty_dbc](pvpdifficulty_dbc "Documented")
+
+### Q
+- [quest_details](quest_details "Documented")
+- [quest_greeting](quest_greeting "Documented")
+- [quest_greeting_locale](quest_greeting_locale "Documented")
+- [quest_mail_sender](quest_mail_sender "Documented")
+- [quest_money_reward](quest_money_reward "Documented")
+- [quest_offer_reward](quest_offer_reward "Documented")
+- [quest_offer_reward_locale](quest_offer_reward_locale "Documented")
+- [quest_poi](quest_poi "Documented")
+- [quest_poi_points](quest_poi_points "Documented")
+- [quest_request_items](quest_request_items "Documented")
+- [quest_request_items_locale](quest_request_items_locale "Documented")
+- [quest_template](quest_template "Documented")
+- [quest_template_addon](quest_template_addon "Documented")
+- [quest_template_locale](quest_template_locale "Documented")
+- [questfactionreward_dbc](questfactionreward_dbc "Documented")
+- [questsort_dbc](questsort_dbc "Documented")
+- [questxp_dbc](questxp_dbc "Documented")
+
+### R
+- [randproppoints_dbc](randproppoints_dbc "Documented")
+- [reference_loot_template](loot_template "Documented")
+- [reputation_reward_rate](reputation_reward_rate "Documented")
+- [reputation_spillover_template](reputation_spillover_template "Documented")
+
+### S
+- [scalingstatdistribution_dbc](scalingstatdistribution_dbc "Documented")
+- [scalingstatvalues_dbc](scalingstatvalues_dbc "Documented")
+- [script_waypoint](script_waypoint "Documented")
+- [skill_discovery_template](skill_discovery_template "Documented")
+- [skill_extra_item_template](skill_extra_item_template "Documented")
+- [skill_fishing_base_level](skill_fishing_base_level "Documented")
+- [skill_perfect_item_template](skill_perfect_item_template "Documented")
+- [skillline_dbc](skillline_dbc "Documented")
+- [skilllineability_dbc](skilllineability_dbc "Documented")
+- [skillraceclassinfo_dbc](skillraceclassinfo_dbc "Documented")
+- [skilltiers_dbc](skilltiers_dbc "Documented")
+- [skinning_loot_template](loot_template "Documented")
+- [smart_scripts](smart_scripts "Documented")
+- [soundentries_dbc](soundentries_dbc "Documented")
+- [spawn_group](spawn_group "Documented")
+- [spawn_group_template](spawn_group_template "Documented")
+- [spell_area](spell_area "Documented")
+- [spell_bonus_data](spell_bonus_data "Documented")
+- [spell_cone](spell_cone "Documented")
+- [spell_cooldown_overrides](spell_cooldown_overrides "Documented")
+- [spell_custom_attr](spell_custom_attr "Documented")
+- [spell_dbc](spell_dbc "Documented")
+- [spell_enchant_proc_data](spell_enchant_proc_data "Documented")
+- [spell_group](spell_group "Documented")
+- [spell_group_stack_rules](spell_group_stack_rules "Documented")
+- [spell_jump_distance](spell_jump_distance "Documented")
+- [spell_linked_spell](spell_linked_spell "Documented")
+- [spell_loot_template](loot_template "Documented")
+- [spell_mixology](spell_mixology "Documented")
+- [spell_pet_auras](spell_pet_auras "Documented")
+- [spell_proc](spell_proc "Documented")
+- [spell_ranks](spell_ranks "Documented")
+- [spell_required](spell_required "Documented")
+- [spell_script_names](spell_script_names "Documented")
+- [spell_scripts](scripts "Documented")
+- [spell_target_position](spell_target_position "Documented")
+- [spell_threat](spell_threat "Documented")
+- [spellcasttimes_dbc](spellcasttimes_dbc "Documented")
+- [spellcategory_dbc](spellcategory_dbc "Documented")
+- [spelldifficulty_dbc](spelldifficulty_dbc "Documented")
+- [spellduration_dbc](spellduration_dbc "Documented")
+- [spellfocusobject_dbc](spellfocusobject_dbc "Documented")
+- [spellitemenchantment_dbc](spellitemenchantment_dbc "Documented")
+- [spellitemenchantmentcondition_dbc](spellitemenchantmentcondition_dbc "Documented")
+- [spellradius_dbc](spellradius_dbc "Documented")
+- [spellrange_dbc](spellrange_dbc "Documented")
+- [spellrunecost_dbc](spellrunecost_dbc "Documented")
+- [spellshapeshiftform_dbc](spellshapeshiftform_dbc "Documented")
+- [spellvisual_dbc](spellvisual_dbc "Documented")
+- [stableslotprices_dbc](stableslotprices_dbc "Documented")
+- [summonproperties_dbc](summonproperties_dbc "Documented")
+
+### T
+- [talent_dbc](talent_dbc "Documented")
+- [talenttab_dbc](talenttab_dbc "Documented")
+- [taxinodes_dbc](taxinodes_dbc "Documented")
+- [taxipath_dbc](taxipath_dbc "Documented")
+- [taxipathnode_dbc](taxipathnode_dbc "Documented")
+- [teamcontributionpoints_dbc](teamcontributionpoints_dbc "Documented")
+- [totemcategory_dbc](totemcategory_dbc "Documented")
+- [trainer](trainer "Documented")
+- [trainer_locale](trainer_locale "Documented")
+- [trainer_spell](trainer_spell "Documented")
+- [transportanimation_dbc](transportanimation_dbc "Documented")
+- [transportrotation_dbc](transportrotation_dbc "Documented")
+- [transports](transports "Documented")
+
+### U
+- [updates](updates "Documented")
+- [updates_include](updates_include "Documented")
+
+### V
+- [vehicle_accessory](vehicle_accessory "Documented")
+- [vehicle_dbc](vehicle_dbc "Documented")
+- [vehicle_seat_addon](vehicle_seat_addon "Documented")
+- [vehicle_template_accessory](vehicle_template_accessory "Documented")
+- [vehicleseat_dbc](vehicleseat_dbc "Documented")
+- [version](version "Documented")
+
+### W
+- [warden_checks](warden_checks "Documented")
+- [waypoint_data](waypoint_data "Documented")
+- [waypoint_data_addon](waypoint_data_addon "Documented")
+- [waypoint_scripts](scripts "Documented")
+- [waypoints](waypoints "Documented")
+- [wmoareatable_dbc](wmoareatable_dbc "Documented")
+- [worldmaparea_dbc](worldmaparea_dbc "Documented")
+- [worldmapoverlay_dbc](worldmapoverlay_dbc "Documented")
+
+</details>

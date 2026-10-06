@@ -6,19 +6,15 @@
 
 This table holds data the Core needs to handle variables (like timer for arena point automatic flush).
 
-**Table Structure**
+**Table: worldstates's Structure**
 
-| Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]   | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [value][2]   | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [comment][3] | TINYTEXT | SIGNED     |     | YES  |         |       |         |
+| Field               | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)     | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [value](#value)     | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [comment](#comment) | TINYTEXT |          | YES  |     | NULL    |       |         |
 
-[1]: #entry
-[2]: #value
-[3]: #comment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 
@@ -39,7 +35,6 @@ AV\_STORMPIKE\_LIEUTENANTS = 950, // $962w Stormpike Commander(s) and $950w Stor
 AV\_STORMPIKE\_COMMANDERS = 962, // $962w Stormpike Commander(s) and $950w Stormpike Lieutenant(s).  
 AV\_UNK\_01 = 964, // $964w, young $c.  
 AV\_UNK\_02 = 966, // $966w, young $c.  
-
 
 AV\_STONEHEART\_H\_C = 1301, //over ac  
 AV\_STONEHEART\_A\_C = 1302, //Stoneheart Grave  
@@ -108,14 +103,12 @@ AV\_FROSTWOLFE\_UNUSED = 1393,
 AV\_TOWERPOINT\_UNUSED = 1394,  
 AV\_ICEBLOOD\_UNUSED = 1395,
 
-
 BG\_WS\_FLAG\_UNK\_ALLIANCE = 1545, // unk, set to 1 on alliance flag pickup... // ???  
 BG\_WS\_FLAG\_UNK\_HORDE = 1546, // unk, set to 1 on horde flag pickup, after drop it's -1 // ???  
 BG\_WS\_FLAG\_UNK\_01 = 1547, // unk // ???  
 BG\_WS\_FLAG\_CAPTURES\_ALLIANCE = 1581, // alliance flag captures  
 BG\_WS\_FLAG\_CAPTURES\_HORDE = 1582, // horde flag captures  
 BG\_WS\_FLAG\_CAPTURES\_MAX = 1601, // unk (max flag captures?)
-
 
 BG\_AB\_OP\_STABLE\_STATE\_ALIENCE = 1767, //Stable map state (ALIENCE)  
 BG\_AB\_OP\_STABLE\_STATE\_HORDE = 1768, //Stable map state (HORDE)  
@@ -143,7 +136,6 @@ BG\_AB\_OP\_LUMBERMILL\_STATE\_HORDE = 1793, //Lumber Mill map state (HORDE)
 BG\_AB\_OP\_LUMBERMILL\_STATE\_CON\_ALI = 1794, //Lumber Mill map state (CON ALIENCE)  
 BG\_AB\_OP\_LUMBERMILL\_STATE\_CON\_HOR = 1795, //Lumber Mill map state (CON HORDE)
 
-
 BG\_AB\_OP\_STABLE\_ICON = 1842, //Stable map icon (NONE)  
 BG\_AB\_OP\_GOLDMINE\_ICON = 1843, //Gold Mine map icon (NONE)  
 BG\_AB\_OP\_LUMBERMILL\_ICON = 1844, //Lumber Mill map icon (NONE)  
@@ -151,10 +143,8 @@ BG\_AB\_OP\_FARM\_ICON = 1845, //Farm map icon (NONE)
 BG\_AB\_OP\_BLACKSMITH\_ICON = 1846, //Blacksmith map icon (NONE)  
 BG\_AB\_UNK\_01 = 1861, // default value 2 // ???
 
-
 BG\_AB\_OP\_RESOURCES\_WARNING = 1955, // warning limit (1800)  
 AV\_SNOWFALL\_N = 1966, //over aa //Neutral //Snowfall Grave
-
 
 AQ\_WORLDSTATE\_ALLIANCE\_COPPERBAR\_CURRENT = 1997,  
 AQ\_WORLDSTATE\_SHARED\_COPPERBAR\_REQUIRE = 1998,  
@@ -207,14 +197,12 @@ AQ\_WORLDSTATE\_HORDE\_LEANWOLF\_REQUIRE = 2096,
 AQ\_WORLDSTATE\_ALLIANCE\_ROASTRAPTOR\_CURRENT = 2098,  
 AQ\_WORLDSTATE\_ALLIANCE\_ROASTRAPTOR\_REQUIRE = 2099,
 
-
 AQ\_WORLDSTATE\_ALLIANCE\_SPOTYELLOW\_CURRENT = 2101,  
 AQ\_WORLDSTATE\_HORDE\_SPOTYELLOW\_CURRENT = 2102,  
 AQ\_WORLDSTATE\_SHARED\_SPOTYELLOW\_REQUIRE = 2103,  
 AQ\_WORLDSTATE\_HORDE\_BAKEDSALMON\_CURRENT = 2105,  
 AQ\_WORLDSTATE\_HORDE\_BAKEDSALMON\_REQUIRE = 2106,  
 AQ\_WORLDSTATE\_TRANSITION\_DAYS\_REMAINING = 2113,  
-
 
 EVENT\_LOVE\_VOTES\_THRALL = 2200, // Here are the final standings!$B$BThrall: $2200w$B$BCairne: $2201w$B$BSylvanas: $2202w$B$BTotal Horde: $2207w$B$B$BBolvar: $2203w$B$BMagni: $2204w$B$BTyrande: $2205w$B$BTotal Alliance: $2206w$B$BThe Horde and the Alliance tied in total votes!  
 EVENT\_LOVE\_VOTES\_CAIRNE = 2201,  
@@ -225,9 +213,7 @@ EVENT\_LOVE\_VOTES\_TYRANDE = 2205,
 EVENT\_LOVE\_TOTAL\_ALLIANCE = 2206,  
 EVENT\_LOVE\_TOTAL\_HORDE = 2207,
 
-
 WORLDSTATE\_SI\_BATTLES\_WON = 2219, // We have won $2219W battles against the Scourge. Gird yourself, $n, for this war is far from over. & We have won $2219W battles against the Scourge. Take heart, $n. While many battles lie ahead, heroes, heroes from every realm have risen to fight them. & We have won $2219W battles against the Scourge. Stand firm, $n! We must persevere!  
-
 
 SCOURGE\_EVENT\_WORLDSTATE\_WINTERSPRING = 2259, // 2259 - Icon on map  
 SCOURGE\_EVENT\_WORLDSTATE\_AZSHARA = 2260, // 2260 - Icon on map  
@@ -235,7 +221,6 @@ SCOURGE\_EVENT\_WORLDSTATE\_BLASTED\_LANDS = 2261, // 2261 - Icon on map
 SCOURGE\_EVENT\_WORLDSTATE\_BURNING\_STEPPES = 2262, // 2262 - Icon on map  
 SCOURGE\_EVENT\_WORLDSTATE\_TANARIS = 2263, // 2263 - Icon on map  
 SCOURGE\_EVENT\_WORLDSTATE\_EASTERN\_PLAGUELANDS = 2264, // 2264 - Icon on map  
-
 
 WORLDSTATE\_SI\_AZSHARA\_REMAINING = 2279, // The Scourge infestation grows in Azshara. Every able bodied warrior is needed to stem the tide of their invasion.$B$BNumber of Necropolises remaining: $2279W  
 WORLDSTATE\_SI\_BLASTED\_LANDS\_REMAINING = 2280, // The Scourge infestation grows in the Blasted Lands. Every able bodied warrior is needed to stem the tide of their invasion.$B$BNumber of Necropolises remaining: $2280W  
@@ -245,25 +230,20 @@ WORLDSTATE\_SI\_TANARIS = 2283, // It seems the army of the Scourge has come to 
 WORLDSTATE\_SI\_WINTERSPRING = 2284, // Indeed, the hills of Winterspring are currently attempting to withstand a renewed Scourge assault. Your assistance would help them greatly.$B$BNumber of Necropolises remaining: $2284W  
 WORLDSTATE\_SI\_UNK = 2285, // saved world state is: $2285W // ???  
 
-
 SI\_GATHERED\_A = 2313, // ally silithyst gathered  
 SI\_GATHERED\_H = 2314, // horde silithyst gathered  
 SI\_SILITHYST\_MAX = 2317, // max silithyst  
-
 
 AQ\_SANDWORM\_N = 2322,
 AQ\_SANDWORM\_S = 2323,  
 AQ\_SANDWORM\_SW = 2324,  
 AQ\_SANDWORM\_E = 2325,
 
-
 EP\_UI\_TOWER\_COUNT\_A = 2327,  
 EP\_UI\_TOWER\_COUNT\_H = 2328,  
 
-
 BG\_WS\_FLAG\_STATE\_HORDE = 2338, // horde (0 - hide, 1 - flag ok, 2 - flag picked up (flashing), 3 - flag picked up (not flashing)  
 BG\_WS\_FLAG\_STATE\_ALLIANCE = 2339, // alliance (0 - hide, 1 - flag ok, 2 - flag picked up (flashing), 3 - flag picked up (not flashing)  
-
 
 EP\_NPT\_N = 2352, // default value 1  
 EP\_PWT\_N\_H = 2353, // 2367 not present! use neutral!  
@@ -285,7 +265,6 @@ GENERAL\_WORLDSTATES\_13 = 2367, // default value 1 // grey horde not in dbc! se
 GENERAL\_WORLDSTATES\_11 = 2368, // default value 0 // ???  
 GENERAL\_WORLDSTATES\_12 = 2369, // default value 0 // ???  
 
-
 EP\_PWT\_A = 2370, // default value 0  
 EP\_PWT\_H = 2371, // default value 0  
 EP\_NPT\_A = 2372, // default value 0  
@@ -297,19 +276,15 @@ GENERAL\_WORLDSTATES\_05 = 2377, // default value 0 // ???
 EP\_CGT\_A = 2378, // default value 0  
 EP\_CGT\_H = 2379, // default value 0  
 
-
 GENERAL\_WORLDSTATES\_01 = 2426, //SendInitWorldStates // 10 2426 // // default value 0 // ???  
 GENERAL\_WORLDSTATES\_02 = 2427, // Progress: %2427w //SendInitWorldStates // 13 2427 // default value 50 // ???  
 GENERAL\_WORLDSTATES\_03 = 2428, //SendInitWorldStates // 14 2428 // default value 50 // ???  
 
-
 OHF\_INCENDIARY\_BOMBS\_SET = 2436, // Incendiary Bombs Set = %2436w/5 // Number of Incendiary Bombs Placed in Durnholde // <http://www.wowhead.com/quest=29598/tarethas-diversion>  
 OHF\_INVADING ENEMIES = 2454, // Invading Enemies = %2454w  
 
-
 HP\_UI\_TOWER\_COUNT\_A = 2476,  
 HP\_UI\_TOWER\_COUNT\_H = 2478,  
-
 
 HP\_UI\_SHOW\_ALLY\_OVERLOOK\_ICON = 2480, // default value 0  
 HP\_UI\_SHOW\_THE\_OVERLOOK\_ARROW = 2481, // default value 1  
@@ -317,7 +292,6 @@ HP\_UI\_SHOW\_NEUTRAL\_OVERLOOK\_ICON = 2482, // default value 0
 HP\_UI\_ALLY\_BROKEN\_HILL\_ICON = 2483, // default value 0  
 HP\_UI\_ABOVE\_BROKEN\_HILL\_ICON = 2484, // default value 1  
 HP\_UI\_NEUTRAL\_BROKEN\_HILL\_ICON = 2485, // default value 0  
-
 
 HP\_UI\_TOWER\_DISPLAY\_H = 2489,  
 HP\_UI\_TOWER\_DISPLAY\_A = 2490,  
@@ -327,16 +301,13 @@ NA\_UI\_UNK\_1 = 2494, // default value 0 // ???
 NA\_UI\_OUTLAND\_01 = 2495, // Outland // default value 0 // Last Winner: Alliance // Controlled: %2476w InterfaceWorldStateFrameAllianceTower  
 NA\_UI\_UNK\_2 = 2497, // default value 0 // ???  
 
-
 NA\_UI\_ALLIANCE\_GUARDS\_SHOW = 2502,  
 NA\_UI\_HORDE\_GUARDS\_SHOW = 2503,  
-
 
 TF\_UI\_LOCKED\_DISPLAY\_NEUTRAL = 2508, // neutral locked time show  
 TF\_UI\_LOCKED\_TIME\_HOURS = 2509, // locked time remaining minutes  
 TF\_UI\_LOCKED\_TIME\_MINUTES\_SECOND\_DIGIT = 2510, // locked time remaining seconds second digit  
 TF\_UI\_LOCKED\_TIME\_MINUTES\_FIRST\_DIGIT = 2512, // locked time remaining seconds first digit // default value 5  
-
 
 ZM\_UNK\_3 = 2527, // default value 0 // ???  
 ZM\_UNK\_2 = 2528, // default value 0 // ???  
@@ -345,14 +316,11 @@ ZM\_UNK\_6 = 2533, // default value 0 // ???
 ZM\_UNK\_5 = 2534, // default value 0 // ???  
 ZM\_UNK\_4 = 2535, // default value 0 // ???  
 
-
 COT\_OPENING\_THE\_DARK\_PORTAL\_MEDIVHS\_SHIELD\_REMANING = 2540, // Medivh's Shield Remaining: %2540w%  
-
 
 BATTLEGROUND\_BLADES\_EDGE\_ARENA\_GOLD = 2547, // 7 gold  
 BATTLEGROUND\_BLADES\_EDGE\_ARENA\_GREEN = 2547, // 8 green  
 BATTLEGROUND\_BLADES\_EDGE\_ARENA\_SHOW = 2547, // 9 show // default value 1 // ???  
-
 
 ZM\_UI\_TOWER\_WEST\_A = 2555,  
 ZM\_UI\_TOWER\_WEST\_H = 2556,  
@@ -361,24 +329,19 @@ ZM\_UI\_TOWER\_EAST\_A = 2558,
 ZM\_UI\_TOWER\_EAST\_H = 2559,  
 ZM\_UI\_TOWER\_EAST\_N = 2560,  
 
-
 GENERAL\_WORLDSTATES\_14 = 2565,// 2565 unk, constant? // default value = 142  
-
 
 BATTLEGROUND\_NAGRAND\_ARENA\_GOLD = 2575, // 7 gold // default value 0 // ???  
 BATTLEGROUND\_NAGRAND\_ARENA\_GREEN = 2576, // 8 green // default value 0 // ???  
 BATTLEGROUND\_NAGRAND\_ARENA\_SHOW = 2577, // 9 show // default value 1 // ???  
 
-
 TF\_UI\_TOWERS\_CONTROLLED\_DISPLAY = 2620, // show towers controlled  
 TF\_UI\_TOWER\_COUNT\_A = 2621, // ally towers controlled // default value 5  
 TF\_UI\_TOWER\_COUNT\_H = 2622, // horde towers controlled  
 
-
 TF\_UI\_SHOW CAPTURE BAR = 2623, // show capture bar  
 TF\_UI\_CAPTURE\_BAR\_NEUTRAL = 2624, // capture bar pos  
 TF\_UI\_CAPTURE\_BAR\_POS = 2625, // capture bar pos  
-
 
 ZM\_MAP\_TOWER\_WEST\_A = 2644,  
 ZM\_MAP\_TOWER\_WEST\_H = 2645,  
@@ -413,7 +376,6 @@ NA\_MAP\_HALAA\_ALLIANCE = 2673,
 NA\_MAP\_HALAA\_NEU\_A = 2676,  
 NA\_MAP\_HALAA\_NEU\_H = 2677,  
 
-
 TF\_TOWER\_NUM\_01 = 2681, // NW Neutral  
 TF\_TOWER\_NUM\_02 = 2682, // NW Horde  
 TF\_TOWER\_NUM\_03 = 2683, // NW Ally  
@@ -431,7 +393,6 @@ TF\_TOWER\_NUM\_13 = 2694, // SE Ally
 TF\_TOWER\_NUM\_14 = 2695, // SE Horde  
 TF\_TOWER\_NUM\_15 = 2696,  
 
-
 PROGRESS\_BAR\_SHOW = 2718, //1 init, 0 druhy send - bez messagu, 1 = controlled aliance  
 PROGRESS\_BAR\_STATUS = 2719, //50 init!, 48 ... hordak bere .. 33 .. 0 = full 100% hordacky, 100 = full alliance  
 PROGRESS\_BAR\_PERCENT\_GREY = 2720, //100 = empty (only grey), 0 = blue|red (no grey)  
@@ -448,7 +409,6 @@ DRAENEI\_RUINS\_UNCONTROL = 2731, // Draenei uncontrolled (1 - yes, 0 - no)
 DRAENEI\_RUINS\_ALLIANCE\_CONTROL = 2732, // Draenei - Alliance control  
 DRAENEI\_RUINS\_HORDE\_CONTROL = 2733, // Draenei - Horde control  
 
-
 EYE\_OF\_THE\_STORM\_BE\_TOWER\_CONFLICT = 2735, // default value 0 // "Blood Elf Tower",,,,,,,,,,,,,,,,0xFF01FE,"In Conflict",,,,,,,,,,,,,,,,0xFF01FE,2735,,  
 EYE\_OF\_THE\_STORM\_BE\_TOWER\_CONFLICT2 = 2736, // default value 0 // "Blood Elf Tower",,,,,,,,,,,,,,,,0xFF01FE,"In Conflict",,,,,,,,,,,,,,,,0xFF01FE,2736,,  
 EYE\_OF\_THE\_STORM\_03 = 2737, // default value 0 // Draenei - Horde conflict  
@@ -458,55 +418,43 @@ EYE\_OF\_THE\_STORM\_06 = 2740, // default value 0 // Fel Reaver - Horde conflic
 EYE\_OF\_THE\_STORM\_07 = 2741, // default value 0 // Mage Tower - Alliance conflict  
 EYE\_OF\_THE\_STORM\_08 = 2742, // default value 0 // Mage Tower - Horde conflict  
 
-
 EY\_ALLIANCE\_RESOURCES = 2749,  
 EY\_HORDE\_RESOURCES = 2750,  
 EY\_ALLIANCE\_BASE = 2752, // Alliance Bases  
 EY\_HORDE\_BASE = 2753, // Horde Bases  
 
-
 NETHERSTORM\_FLAG = 2757, // Flag (1 - show, 0 - hide) - doesn't work exactly this way!  
-
 
 NA\_MAP\_WYVERN\_SOUTH\_NEU\_H = 2760,  
 NA\_MAP\_WYVERN\_WEST\_NEU\_H = 2761,  
 NA\_MAP\_WYVERN\_NORTH\_NEU\_H = 2762,  
 NA\_MAP\_WYVERN\_EAST\_NEU\_H = 2763,  
 
-
 TF\_UI\_LOCKED\_DISPLAY\_ALLIANCE = 2767, // ally locked time show  
 TF\_UI\_LOCKED\_DISPLAY\_HORDE = 2768, // horde locked time show  
-
 
 NETHERSTORM\_FLAG\_STATE\_ALLIANCE = 2769, // //set to 2 when flag is picked up, and to 1 if it is dropped / Alliance top-stats (1 - show, 0 - hide) // 02 -&gt; alliance picked up the flag // default value 1  
 NETHERSTORM\_FLAG\_STATE\_HORDE = 2770, // default value 1 // Horde top-stats (1 - show, 0 - hide) // 02 -&gt; horde picked up the flag  
 
-
 COT\_OPENING\_THE\_DARK\_PORTAL\_TIME\_RIFTS\_OPENED = 2784, // Time Rifts Opened: %2784w/18  
-
 
 BATTELGROUND\_RUINS\_OF\_LORDAERNON\_GOLD = 3000, // 7 gold // ???  
 BATTELGROUND\_RUINS\_OF\_LORDAERNON\_GREEN = 3000, // 8 green // ???  
 BATTELGROUND\_RUINS\_OF\_LORDAERNON\_SHOW = 3002, // 9 show // default value 1 // ???  
-
 
 QUEST\_BREAK\_THE\_BLOCKADE\_MINUTES\_AWAY = 3078, // Our stolen zeppelin's less than $3078w minutes away. // quest=11153 <https://www.wowhead.com/quest=11153/break-the-blockade>  
 EYE\_OF\_THE\_STORM\_09 = 3085, // default value 379 // ???  
 QUEST\_BREAK\_THE\_BLOCKADE\_DWARFS\_ACTIVATED = 3094, // There are $3094W activated dwarves!  
 QUEST\_BREAK\_THE\_BLOCKADE\_TOTAL\_INJURED = 3096, // We did it boys! Now back to the Grim Guzzler and we'll drink to the $3096W that were injured! // RETREAT!! We've already lost $3096W and we can't afford to lose any more!!  
 
-
 BG\_AV\_Alliance\_Score = 3127,  
 BG\_AV\_Horde\_Score = 3128,  
 BG\_AV\_SHOW\_H\_SCORE = 3133,  
 BG\_AV\_SHOW\_A\_SCORE = 3134,  
 
-
 QUEST\_UNK\_01\_TOTAL\_CASUALTIES = 3151, // RETREAT!! We've taken a beating and had $3151W casualties! We can't keep taking these losses! FALL BACK!! // We did it boys! Now back to the Grim Guzzler and we'll drink to the $3151W that were injured!  
 
-
 ARENA\_SEASON\_IN\_PROGRESS = 3191, // CONFIG\_ARENA\_SEASON\_IN\_PROGRESS // Arena season in progress, 0 - end of season //SendInitWorldStates  
-
 
 QUEST\_DISCOVERING\_PERCENT\_RAZORTHORN\_ROOTS = 3223, // Good day to you, $c.$b$bThere's much to be done to assist in the effort here. Sadly, there's very little I can do for you until I get all of my supplies.$b$bI've now got $3223w percent of the razorthorn roots I need to get started. Any assistance you provide will be well worth the effort, I assure you. // The alchemy lab is not quite yet ready, $n. Mar'nah says that she is $3223w percent done with its assembly, however.$B$BIf you would   like to help her with that, you will find her inside the inn at the Sun's Reach Harbor. // quest=11522 <http://www.wowhead.com/quest=11520/discovering-your-roots>  
 QUEST\_MAKING READY\_TOTAL\_GOAL = 3228, // <http://www.wowhead.com/npc=25046/smith-hauthaa> // Hello, $r.$b$bLet's get busy! No sense waiting around for supplies that may never arrive.$b$bI need my anvil in order to outfit our troops properly. Right now It's $3228w percent complete.$b$bAnd when the anvil is completed, there will be many more powerful items that I will be able to smith for you. // Last I heard from Hauthaa, she indicated that we are $3228w percent of the way there.$B$BI cannot   express how vital it is to our efforts that we get them created. Our men and women are going to need better armor and weapons, and the anvil and forge are the key to that.$B$BYou will find the smith behind the Sun's Reach Armory, $n.  
@@ -518,7 +466,6 @@ QUEST\_UNK\_05\_GATE\_2\_TOTAL\_GOAL = 3257, // Rohendor has been obliterated. O
 QUEST\_UNK\_02\_SUNWELL\_PORTAL\_PERCENT\_COMPLETED = 3269, // If we are to be successful in the creation of a portal to the Isle of Quel'Danas, and the Sunwell which rests upon it, we must acquire an energy source powerful enough to ignite the portal.$B$BWe are $3269w percent completed with our efforts. Will you assist us, $c?  
 QUEST\_UNK\_06\_TOTAL\_GOAL = 3275, // I'm gathering funds to build a monument in honor of those who've died in the war. It is important to not forget the sacrifices we've made to achieve victory.$B$BWe are $3275w percent done with this goal.  
 
-
 SUNS\_REACH\_ARMORY\_ENEMY = 3414, // 2098,0,0,0,0,0,0,0,0,0,0,0,12683.2001953,-6957.77978516,15.5542001724,530,516,4080,"Sun's Reach Armory",,,,,,,,,,,,,,,,0xFF01FE,"Held by the enemy",,,,,,,,,,,,,,,,0xFF01FE,3414,,  
 SUNS\_REACH\_ARMORY\_SHATTERED\_SUN = 3415, // 2099,0,0,0,0,0,0,0,0,0,0,0,12683.2998047,-6957.79980469,15.5542001724,530,516,4080,"Sun's Reach Armory",,,,,,,,,,,,,,,,0xFF01FE,"Shattered Sun Offensive",,,,,,,,,,,,,,,,0xFF01FE,3415,,  
 SUNS\_REACH\_HARBOR\_ENEMY = 3416, // 2100,0,0,0,0,0,0,0,0,0,0,0,12825.5996094,-7015.24023438,18.5926990509,530,516,4080,"Sun's Reach Harbor",,,,,,,,,,,,,,,,0xFF01FE,"Held by the enemy",,,,,,,,,,,,,,,,0xFF01FE,3416,,  
@@ -526,23 +473,17 @@ SUNS\_REACH\_HARBOR\_SHATTERED\_SUN = 3417, // 2101,0,0,0,0,0,0,0,0,0,0,0,12825.
 SUNS\_REACH\_SANCTUM\_ENEMY = 3418, // 2096,0,0,0,0,0,0,0,0,0,0,0,12787.2998047,-6885.54003906,13.3893995285,530,516,4080,"Sun's Reach Sanctum",,,,,,,,,,,,,,,,0xFF01FE,"Held by the enemy",,,,,,,,,,,,,,,,0xFF01FE,3418,,  
 SUNS\_REACH\_SANCTUM\_SHATTERED\_SUN = 3419, // 2097,0,0,0,0,0,0,0,0,0,0,0,12787.4003906,-6885.60009766,13.3893995285,530,516,4080,"Sun's Reach Sanctum",,,,,,,,,,,,,,,,0xFF01FE,"Shattered Sun Offensive",,,,,,,,,,,,,,,,0xFF01FE,3419,,  
 
-
 COT\_WORLDSTATE\_SHOW\_CRATES = 3479,  
 COT\_WORLDSTATE\_CRATES\_REVEALED = 3480,  
 
-
 OCULUS\_WORLD\_STATE\_CENTRIFUGE\_CONSTRUCT\_AMOUNT = 3486 // $3486W Centrifuge Constructs remain. We must find and destroy them to disable Varos Cloudstrider's protective shield. The constructs should be about halfway up The Oculus, on the Band of Acceleration.  
-
 
 BATTLEFIELD\_WG\_WORLD\_STATE\_VEHICLE\_H = 3490,  
 BATTLEFIELD\_WG\_WORLD\_STATE\_MAX\_VEHICLE\_H = 3491,  
 
-
 COT\_WORLDSTATE\_WAVE\_COUNT = 3504,  
 
-
 OCULUS\_WORLD\_STATE\_CENTRIFUGE\_CONSTRUCT\_SHOW = 3524,  
-
 
 BG\_SA\_TIMER\_MINS = 3559,  
 BG\_SA\_TIMER\_SEC\_TENS = 3560,  
@@ -550,19 +491,16 @@ BG\_SA\_TIMER\_SEC\_DECS = 3561,
 BG\_SA\_ENABLE\_TIMER = 3564,  
 BG\_SA\_BONUS\_TIMER = 3571,  
 
-
 // 2106,0,45,0,0,0,0,0,0,0,0,0,2279.16992188,1138.85998535,138.046005249,595,259,4100,"Elder's Square Gate",,,,,,,,,,,,,,,,0xFF01FE,"Elder's Square Gate",,,,,,,,,,,,,,,,0xFF01FE,3581,,  
 // 2107,0,45,0,0,0,0,0,0,0,0,0,2184.2800293,1236.68994141,136.48399353,595,259,4100,"Festival Lane Gate",,,,,,,,,,,,,,,,0xFF01FE,"Festival Lane Gate",,,,,,,,,,,,,,,,0xFF01FE,3582,,  
 // 2109,0,45,0,0,0,0,0,0,0,0,0,2122.57006836,1354.60998535,131.48399353,595,259,4100,"King's Square Fountain",,,,,,,,,,,,,,,,0xFF01FE,"King's Square Fountain",,,,,,,,,,,,,,,,0xFF01FE,3583,,  
 // 2108,0,45,0,0,0,0,0,0,0,0,0,2225.75,1331.91003418,127.005996704,595,259,4100,"Market Row Gate",,,,,,,,,,,,,,,,0xFF01FE,"Market Row Gate",,,,,,,,,,,,,,,,0xFF01FE,3584,,  
 // 2105,0,45,0,0,0,0,0,0,0,0,0,2355.43994141,1195.52001953,130.520996094,595,259,4100,"Town Hall",,,,,,,,,,,,,,,,0xFF01FE,"Town Hall",,,,,,,,,,,,,,,,0xFF01FE,3585,,  
 
-
 ARENA\_WORLD\_STATE\_ALIVE\_PLAYERS\_GREEN = 3600,  
 ARENA\_WORLD\_STATE\_ALIVE\_PLAYERS\_GOLD = 3601  
 ARENA\_WORLD\_STATE\_ALIVE\_PLAYERS\_SHOW = 3610, // default value 1 // ???  
 //BG\_RING\_OF\_VALOR\_WORLD\_STATE = 3610, // default value 1 // ???  
-
 
 BG\_SA\_PURPLE\_GATEWS = 3614, // 2111,0,105,106,107,105,106,107,74,75,76,0,1216.32995605,79.1828994751,53.3525009155,607,647,4384,"Gate of the Purple Amethyst",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3614,,  
 BG\_SA\_RED\_GATEWS = 3617, // 2114,0,77,78,79,77,78,79,74,75,76,0,1232.38000488,-210.044006348,55.118598938,607,935,4384,"Gate of the Red Sun",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3617,,  
@@ -582,14 +520,11 @@ BG\_SA\_RIGHT\_GY\_ALLIANCE = 3636, // 2130,0,15,0,0,0,0,0,0,0,0,0,1338.91003418
 BG\_SA\_CENTER\_GY\_ALLIANCE = 3637, // 2134,0,15,0,0,0,0,0,0,0,0,0,1220.39001465,-70.6196975708,70.4493026733,607,959,4384,"South Graveyard",,,,,,,,,,,,,,,,0xFF01FE,"Alliance Controlled",,,,,,,,,,,,,,,,0xFF01FE,3637,,  
 BG\_SA\_YELLOW\_GATEWS = 3638, // 2135,0,102,103,104,102,103,104,74,75,76,0,1058.7199707,-107.526000977,81.8201980591,607,959,4384,"Gate of the Yellow Moon",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3638,,  
 
-
 CHRISTMAS\_EVENT\_MINUTES\_BEFORE\_CHRISTMAS = 3658, // Only $3658E shopping minutes before Christmas!  
 CHRISTMAS\_EVENT\_MINUTES\_REMAINING = 3659, // Well then, there are only $3659E minutes left to party!  
 
-
 BATTLEFIELD\_WG\_WORLD\_STATE\_VEHICLE\_A = 3680,  
 BATTLEFIELD\_WG\_WORLD\_STATE\_MAX\_VEHICLE\_A = 3681,  
-
 
 WORLDSTATE\_WORKSHOP\_K\_W = 3698, // 2150,0,65,66,67,68,69,70,71,72,73,0,5390.87988281,2979.47998047,442.290985107,571,903,4197,"Fortress Vehicle Workshop (W)",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3698,,  
 WORLDSTATE\_WORKSHOP\_K\_E = 3699, // 2149,0,65,66,67,68,69,70,71,72,73,0,5389.97021484,2712.17993164,442.118011475,571,903,4197,"Fortress Vehicle Workshop (E)",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3699,,  
@@ -602,9 +537,7 @@ WORLDSTATE\_WORKSHOP\_SE = 3703, // 2151,0,65,66,67,68,69,70,71,72,73,0,4360.350
 // 2142,0,6,54,55,10,52,53,11,50,51,0,4397.97021484,2822.60009766,458.842010498,571,903,4197,"Winter's Edge Tower",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3705,,  
 // 2143,0,6,54,55,10,52,53,11,50,51,0,4458.95019531,1944.13000488,488.205993652,571,903,4197,"Flamewatch Tower",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3706,,  
 
-
 BATTLEFIELD\_WG\_WORLD\_STATE\_SHOW\_WORLDSTATE = 3710,  
-
 
 // 2199,0,101,0,0,0,0,0,0,0,0,0,5048.52001953,2847.41992188,392.942993164,571,903,4197,"PvP Activity Detected",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FE,3723,,  
 // 2200,0,101,0,0,0,0,0,0,0,0,0,4484.43994141,2826.66992188,394.625,571,903,4197,"PvP Activity Detected",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FE,3724,,  
@@ -645,7 +578,6 @@ BATTLEFIELD\_WG\_WORLD\_STATE\_SHOW\_WORLDSTATE = 3710,
 // 2262,0,101,0,0,0,0,0,0,0,0,0,4489.00976563,4028.88989258,411.912994385,571,903,4197,"PvP Activity Detected",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FE,3799,,  
 // 2263,0,101,0,0,0,0,0,0,0,0,0,4696.33007813,3806.98999023,362.268005371,571,903,4197,"PvP Activity Detected",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FE,3796,,  
 
-
 // 2246,0,74,75,76,77,78,79,80,81,82,0,5394.58007813,2841.48999023,418.914001465,571,903,4197,"Wintergrasp Fortress",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3773,,  
 // 2229,0,74,75,76,77,78,79,80,81,82,0,5162.54003906,2841.25,438.039001465,571,1927,4197,"Wintergrasp Fortress Gate",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3763,,  
 // 2146,0,6,54,55,10,52,53,11,50,51,0,5279.47021484,2632.11010742,462.265014648,571,903,4197,"Wintergrasp Fortress Tower (NE)",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3712,,  
@@ -676,15 +608,12 @@ BATTLEFIELD\_WG\_WORLD\_STATE\_SHOW\_WORLDSTATE = 3710,
 // 2244,0,92,93,94,95,96,97,98,99,100,0,5343.66015625,2771.01000977,432.82699585,571,391,4197,"Wintergrasp Fortress Wall",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FE,3771,,  
 // 2245,0,92,93,94,95,96,97,98,99,100,0,5384.39990234,2772.5300293,433.743988037,571,391,4197,"Wintergrasp Fortress Wall",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3772,,  
 
-
 WG\_FORTRESS\_GRAVEYARD = 3773, // 2268,0,8,8,8,13,13,13,15,15,15,0,5538.37988281,2894.84008789,517.054992676,571,903,4197,"Fortress Graveyard",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3773,,  
-
 
 WG\_CLOCKWORLDSTATE = 3781,  
 BFTU\_TIME\_MIN\_03 = 3782, // // The next battle begins in $3975w:$3976w$3782w:$3784w$3785w.  
 BFTU\_TIME\_MIN\_04 = 3784,  
 BFTU\_TIME\_MIN\_05 = 3785,  
-
 
 BATTLEFIELD\_WG\_WORLD\_STATE\_ACTIVE = 3801,  
 BATTLEFIELD\_WG\_WORLD\_STATE\_DEFENDER = 3802,  
@@ -692,52 +621,40 @@ BATTLEFIELD\_WG\_WORLD\_STATE\_ATTACKER = 3803,
 2264,0,48,46,101,0,0,0,0,0,0,0,5121.37988281,2845.13989258,405.680999756,571,424,4197,"Wintergrasp",,,,,,,,,,,,,,,,0xFF01FE,"Control of Wintergrasp",,,,,,,,,,,,,,,,0xFF01FE,3804,,  
 2142,0,6,54,55,10,52,53,11,50,51,0,4397.97021484,2822.60009766,458.842010498,571,903,4197,"Winter's Edge Tower",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3705,,  
 
-
 VH\_WORLD\_STATE\_WAVE\_COUNT = 3810,  
 VH\_WORLD\_STATE\_PRISON\_STATE = 3815,  
 VH\_WORLD\_STATE\_SHOW = 3816,  
 
-
 BG\_SA\_ANCIENT\_GATEWS = 3849, // 2292,0,80,81,82,77,78,79,74,75,76,0,881.70300293,-108.355007,109.834999084,607,959,4384,"Chamber of Ancient Relics",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FC,3849,,  
-
 
 BATTLE\_FOR\_THE\_UNDERCITY\_UI\_BATTLE\_BEGUN = 3875, // The battle for Undercity has begun!  
 BATTLE\_FOR\_THE\_UNDERCITY\_UI\_TIME\_REMANING = 3876,  
 BATTLE\_FOR\_THE\_UNDERCITY\_TIME\_REMANING = 3877, // %3877w minutes until the battle for the Undercity begins!  
 
-
 3885 // unknown  
-
 
 ARENA\_SEASON\_ID = 3901, // CONFIG\_ARENA\_SEASON\_ID // SendInitWorldStates  
 
-
 TIME\_UNTIL\_CHRISTMAS = 3930, // Days is $3930e. // Time until Christmas: $3930d.  
-
 
 COT\_WORLDSTATE\_TIME\_GUARDIAN = 3931,  
 COT\_WORLDSTATE\_TIME\_GUARDIAN\_SHOW = 3932,  
 
-
 BFTU\_TIME\_MIN\_01 = 3975,// The next battle begins in $3975w:$3976w$3782w:$3784w$3785w. // quest=13267 <http://www.wowhead.com/quest=13267/the-battle-for-the-undercity>  
 BFTU\_TIME\_MIN\_02 = 3976,  
-
 
 BATTLEFIELD\_WG\_WORLD\_STATE\_ATTACKED\_H = 4022,  
 BATTLEFIELD\_WG\_WORLD\_STATE\_ATTACKED\_A = 4023,  
 BATTLEFIELD\_WG\_WORLD\_STATE\_DEFENDED\_H = 4024,  
 BATTLEFIELD\_WG\_WORLD\_STATE\_DEFENDED\_A = 4025,  
 
-
 ULDUAR\_WORLD\_STATE\_ALGALON\_DESPAWN\_TIMER = 4131, // default value 60  
 ULDUAR\_WORLD\_STATE\_ALGALON\_TIMER\_ENABLED = 4132,  
-
 
 // 2332,0,10,52,53,6,0,0,0,0,0,0,-79.7774963379,89.0569992065,483.743011475,603,903,4445,"Tower of Flames",,,,,,,,,,,,,,,,0xFF01FE,"Provides power to Mimiron's Inferno",,,,,,,,,,,,,,,,0xFF01FE,4195,,  
 // 2333,0,10,52,53,6,0,0,0,0,0,0,82.2553024292,-392.476013184,460.160003662,603,903,4445,"Tower of Frost",,,,,,,,,,,,,,,,0xFF01FE,"Provides power to Hodir's Fury",,,,,,,,,,,,,,,,0xFF01FE,4196,,  
 // 2331,0,10,52,53,6,0,0,0,0,0,0,-223.332000732,-299.079986572,418.652008057,603,903,4273,"Tower of Life",,,,,,,,,,,,,,,,0xFF01FE,"Supplies power to Freya's Ward",,,,,,,,,,,,,,,,0xFF01FE,4053,,  
 // 2334,0,10,52,53,6,0,0,0,0,0,0,341.265991211,317.850006104,459.083007813,603,903,4445,"Tower of Storms",,,,,,,,,,,,,,,,0xFF01FE,"Provides power to Thorim's Hammer",,,,,,,,,,,,,,,,0xFF01FE,4197,,  
-
 
 BG\_IC\_ALLIANCE\_RENFORT\_SET = 4221,  
 BG\_IC\_HORDE\_RENFORT\_SET = 4222,  
@@ -750,7 +667,6 @@ BG\_IC\_UNK1 = 4243,
 BG\_IC\_UNK2 = 4345,  
 BG\_WS\_STATE\_TIMER\_ACTIVE = 4247,  
 BG\_WS\_STATE\_TIMER = 4248,  
-
 
 EVENT\_ARENA\_TOURNAMENT\_COUNTDOWN = 4262, // Countdown to February 16th, 2007: $4262d$BRaw number: $4262e // The goblin Steamwheedle Fighting Circuit is beginning soon. They're holding practice matches in their arenas now, but ranking fights begin in $4262d. // <https://web.archive.org/web/20070903121702/http://www.wowarmory.com/arena-tournament.xml>  
 BG\_IC\_WORKSHOP\_CONFLICT\_H = 4293,  
@@ -776,7 +692,6 @@ BG\_IC\_REFINERY\_CONFLICT\_H = 4312,
 BG\_IC\_REFINERY\_CONTROLLED\_A = 4314,  
 BG\_IC\_REFINERY\_CONTROLLED\_H = 4313,  
 
-
 BG\_IC\_GATE\_FRONT\_H\_WS\_CLOSED = 4317,  
 BG\_IC\_GATE\_WEST\_H\_WS\_CLOSED = 4318,  
 BG\_IC\_GATE\_EAST\_H\_WS\_CLOSED = 4319,  
@@ -790,7 +705,6 @@ BG\_IC\_GATE\_EAST\_A\_WS\_CLOSED = 4326,
 BG\_IC\_GATE\_WEST\_A\_WS\_CLOSED = 4327,  
 BG\_IC\_GATE\_FRONT\_A\_WS\_CLOSED = 4328,
 
-
 BG\_IC\_ALLIANCE\_KEEP\_CONTROLLED\_A = 4339,  
 BG\_IC\_ALLIANCE\_KEEP\_CONTROLLED\_H = 4340,  
 BG\_IC\_ALLIANCE\_KEEP\_UNCONTROLLED = 4341,  
@@ -802,11 +716,9 @@ BG\_IC\_HORDE\_KEEP\_UNCONTROLLED = 4346,
 BG\_IC\_HORDE\_KEEP\_CONFLICT\_A = 4347,  
 BG\_IC\_HORDE\_KEEP\_CONFLICT\_H = 4348,
 
-
 BG\_SA\_ALLY\_ATTACKS = 4352,  
 BG\_SA\_HORDE\_ATTACKS = 4353,  
 WG\_CLOCKWORLDSTATE = 4354, // Greetings, $c.$B$BWhen the Alliance controls Wintergrasp Fortress, I will open a portal for those who wish to travel there.$B$BThe next battle begins in $4354k.  
-
 
 // 2377,0,80,0,0,0,0,0,0,0,0,0,352.003479004,-901.043395996,49.9881515503,628,943,4710,"Alliance Gate",,,,,,,,,,,,,,,,0xFF01FE,"East Gate",,,,,,,,,,,,,,,,0xFF01FE,4326,,  
 // 2378,0,82,0,0,0,0,0,0,0,0,0,411.385406494,-833.796875,49.3037834167,628,943,4710,"Alliance Gate",,,,,,,,,,,,,,,,0xFF01FE,"Destroyed",,,,,,,,,,,,,,,,0xFF01FE,4323,,  
@@ -856,7 +768,6 @@ WG\_CLOCKWORLDSTATE = 4354, // Greetings, $c.$B$BWhen the Alliance controls Wint
 // 2348,0,139,0,0,0,0,0,0,0,0,0,772.734375,-805.51739502,6.61754703522,628,943,4710,"Workshop",,,,,,,,,,,,,,,,0xFF01FE,"In Conflict",,,,,,,,,,,,,,,,0xFF01FE,4293,,  
 // 2349,0,135,0,0,0,0,0,0,0,0,0,772.734375,-805.51739502,6.61754703522,628,943,4710,"Workshop",,,,,,,,,,,,,,,,0xFF01FE,"Uncontrolled",,,,,,,,,,,,,,,,0xFF01FE,4294,,  
 
-
 EVENT\_ELEMENTALS\_FIRES\_EXTINGUISHED = 4857, // Fires Extinguished: $4857W/$4864W  
 EVENT\_ELEMENTALS\_FURIOUS\_FIRE\_ELEMENTALS\_TOTAL = 4562, // Furious Fire Elementals Killed: $4582W/$4862W // 4862 default value 1000  
 EVENT\_ELEMENTALS\_SEARING\_FIRE\_ELEMENTALS\_TOTAL = 4563, // Searing Fire Elementals Killed: $4584W/$4863W // 4863 default value 300  
@@ -865,10 +776,8 @@ QUEST\_ASSAULT\_ON\_BASH\_IR\_LANDING\_TIME = 4581, // We are launching an assau
 EVENT\_ELEMENTALS\_FURIOUS\_FIRE\_ELEMENTALS\_KILLED = 4582, // Furious Fire Elementals Killed: $4582W/$4862W  
 EVENT\_ELEMENTALS\_SEARING\_FIRE\_ELEMENTALS\_KILLED = 4584, // Searing Fire Elementals Killed: $4584W/$4863W  
 
-
 HOR\_WORLD\_STATE\_HOR\_WAVES\_ENABLED = 4884,  
 HOR\_WORLD\_STATE\_HOR\_WAVE\_COUNT = 4882,  
-
 
 ICC\_WORLDSTATE\_SHOW\_TIMER = 4903,  
 ICC\_WORLDSTATE\_EXECUTION\_TIME = 4904,  
@@ -877,13 +786,10 @@ ICC\_WORLDSTATE\_SHOW\_ATTEMPTS = 4940,
 ICC\_WORLDSTATE\_ATTEMPTS\_REMAINING = 4941,  
 ICC\_WORLDSTATE\_ATTEMPTS\_MAX = 4942,  
 
-
 RS\_WORLDSTATE\_CORPOREALITY\_MATERIAL = 5049,  
 RS\_WORLDSTATE\_CORPOREALITY\_TWILIGHT = 5050,  
 RS\_WORLDSTATE\_CORPOREALITY\_TOGGLE = 5051,  
 
-
 EVENT\_ECHO\_ISLES\_TIME = 5071, // De Echo Isles attack be startin' soon!$B$BSit back and relax, dis song will be over in anotha $5071W minutes and then we'd be going. // Okay! We're running a little behind, but the assaut is SCHEDULED to start in $5071W minutes.$B$BI mean, everything looks ready to go, and the Gyrocopters, Mechanotanks and Infantry are all here.$B$BIt looks like Mekkatorque is waiting on a few more things before the assault begins. Let's hope we start on time or I may lose my job!  
-
 
 ARENA\_RANKED\_MATCHES\_TIME = 6318, // Ranked arena matches start again in $6318d.$B$BWould-be champions are already busy honing their skills and acquiring the best gear they can. Are you going to be ready?  

@@ -1,18 +1,17 @@
 # VSC Requirements
 
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Start: Installation Guide](installation) | [Step 2: VSC Core Installation >>](windows-vsc-core-installation) |
+| :-- | --: |
+
 {% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
 
-| Installation Guide | |
-| :- | :- |
-| [<< Start: Installation Guide](installation) | [Step 2: VSC Core Installation >>](windows-vsc-core-installation) |
-
-| |
-| :- |
-| Boost ≥ 1.78                 |
-| MySQL ≥ 8.0 (Recommended 8.4) |
-| OpenSSL ≥ 3.x.x              |
-| CMake ≥ 3.27                 |
-| MS Visual Studio Build Tools ≥ 2022 |
+{% include callout.html content="Boost ≥ 1.78<br/>
+MySQL ≥ 8.0 (Recommended 8.4)<br/>
+OpenSSL ≥ 3.x.x<br/>
+CMake ≥ 3.27<br/>
+MS Visual Studio Build Tools ≥ 2022" type="info" %}
 
 1. Git Extensions
    

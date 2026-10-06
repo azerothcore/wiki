@@ -1,28 +1,22 @@
-# quest_greeting_locale
+# quest\_greeting\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`quest_greeting_locale\` table**
+**The \`quest\_greeting\_locale\` table**
 
 This table add greeting behavior to an NPC or an Gameobject.
 
-**Table Structure**
+**Table: quest\_greeting\_locale's Structure**
 
-| Field              | Type       | Attributes | Key | NULL | Default | Comment |
-| ------------------ | ---------- | ---------- | --- | ---- | ------- | ------- |
-| [ID][1]            | MEDIUMINT  | UNSIGNED   | Yes | NO   | 0       |         |
-| [Type][2]          | TINYINT    | UNSIGNED   | Yes | NO   | 0       |         |
-| [locale][3]        | VARCHAR(4) |            | NO  | NO   |         |         |
-| [Greeting][5]      | TEXT       |            | NO  | YES  | NULL    |         |
-| [VerifiedBuild][6] | SMALLINT   | SIGNED     | NO  | NO   | 0       |         |
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [type](#type)                   | TINYINT    | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Greeting](#greeting)           | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
-[1]: #id
-[2]: #type
-[3]: #locale
-[5]: #greeting
-[6]: #verifiedbuild
-
-**Description of the fields:**
+**Description of the table's fields**
 
 ### ID
 

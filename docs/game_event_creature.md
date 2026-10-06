@@ -1,19 +1,19 @@
-# game_event_creature
+# game\_event\_creature
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_creature\` table**
+**The \`game\_event\_creature\` table**
 
 Contains all creature instances that have to be spawned/unspawned during defined game events.
 
-**Table Structure**
+**Table: game\_event\_creature's Structure**
 
-| Field                     | Type     | Attributes | Key | Null | Default | Extra  | Comment                                                             |
-| ------------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
-| [eventEntry](#evententry) | SMALLINT | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [guid](#guid)             | INT      | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment                                                             |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------------------------------ |
+| [eventEntry](#evententry) | SMALLINT |          | NO   | PRI |         |       | Entry of the game event. Put negative entry to remove during event. |
+| [guid](#guid)             | INT      | UNSIGNED | NO   | PRI |         |       |                                                                     |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

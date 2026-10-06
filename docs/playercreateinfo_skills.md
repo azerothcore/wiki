@@ -6,23 +6,17 @@
 
 This table holds information on what skills newly created characters should start out with. A character in this table is defined by his/her race and class combination.
 
-## Structure
+**Table: playercreateinfo\_skills's Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [racemask][1]  | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [classmask][2] | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [skill][3]     | SMALLINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [rank][4]      | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Comment][5]   | VARCHAR(255) |            |     | YES  |         |       |         |
+| Field                   | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [raceMask](#racemask)   | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [classMask](#classmask) | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [skill](#skill)         | SMALLINT     | UNSIGNED | NO   | PRI |         |       |         |
+| [rank](#rank)           | SMALLINT     | UNSIGNED | NO   |     | 0       |       |         |
+| [comment](#comment)     | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
-[1]: #racemask
-[2]: #classmask
-[3]: #skill
-[4]: #rank
-[5]: #comment
-
-## Description of the fields
+**Description of the table's fields**
 
 ### racemask
 

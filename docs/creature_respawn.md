@@ -4,23 +4,18 @@
 
 **The \`creature\_respawn\` table**
 
-This table holds the respawn time when creatures should be respawned in the world. In case of a server crash, this table holds the respawn data so that the creatures don't respawn immediately on server restart. How often the respawn time is saved for creatures can be controlled in worldserver.conf.dist at SaveRespawnTimeImmediately.
+This table holds the respawn time when creatures should be respawned in the world. In case of a server crash, this table holds the respawn data so that the creatures don't respawn immediately on server restart. How often the respawn time is saved for creatures can be controlled in [worldserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist) at SaveRespawnTimeImmediately.
 
-**Table Structure**
+**Table: creature\_respawn's Structure**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [respawnTime][2] | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mapId][3]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [instanceId][4]  | INT      | UNSIGNED   | PRI | NO   | 0       |       | Instance Identifier      |
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)               | INT      | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [respawnTime](#respawntime) | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [mapId](#mapid)             | SMALLINT | UNSIGNED | NO   |     | 0       |       |                          |
+| [instanceId](#instanceid)   | INT      | UNSIGNED | NO   | PRI | 0       |       | Instance Identifier      |
 
-[1]: #guid
-[2]: #respawntime
-[3]: #mapid
-[4]: #instanceid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

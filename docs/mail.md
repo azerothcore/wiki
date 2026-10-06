@@ -6,41 +6,26 @@
 
 This table contains main data about all mails in the game.
 
-**Table Structure**
+**Table: mail's Structure**
 
-| Field               | Type     | Attributes | Key | Null | Default | Extra | Comment                            |
-| ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [id][1]             | INT      | UNSIGNED   | PRI | NO   | 0       |       | Identifier                         |
-| [messageType][2]    | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [stationery][3]     | TINYINT  | UNSIGNED   |     | NO   | 41      |       |                                    |
-| [mailTemplateId][4] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [sender][5]         | INT      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
-| [receiver][6]       | INT      | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
-| [subject][7]        | LONGTEXT | SIGNED     |     | YES  |         |       |                                    |
-| [body][8]           | LONGTEXT | SIGNED     |     | YES  |         |       |                                    |
-| [has_items][9]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [expire_time][10]   | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [deliver_time][11]  | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [money][12]         | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [cod][13]           | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [checked][14]       | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
+| Field                             | Type     |          | Null | Key | Default | Extra | Comment                            |
+| :-------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :--------------------------------- |
+| [id](#id)                         | INT      | UNSIGNED | NO   | PRI | 0       |       | Identifier                         |
+| [messageType](#messagetype)       | TINYINT  | UNSIGNED | NO   |     | 0       |       |                                    |
+| [stationery](#stationery)         | TINYINT  |          | NO   |     | 41      |       |                                    |
+| [mailTemplateId](#mailtemplateid) | SMALLINT | UNSIGNED | NO   |     | 0       |       |                                    |
+| [sender](#sender)                 | INT      | UNSIGNED | NO   |     | 0       |       | Character Global Unique Identifier |
+| [receiver](#receiver)             | INT      | UNSIGNED | NO   | MUL | 0       |       | Character Global Unique Identifier |
+| [subject](#subject)               | LONGTEXT |          | YES  |     | NULL    |       |                                    |
+| [body](#body)                     | LONGTEXT |          | YES  |     | NULL    |       |                                    |
+| [has_items](#hasitems)            | TINYINT  | UNSIGNED | NO   |     | 0       |       |                                    |
+| [expire_time](#expiretime)        | INT      | UNSIGNED | NO   |     | 0       |       |                                    |
+| [deliver_time](#delivertime)      | INT      | UNSIGNED | NO   |     | 0       |       |                                    |
+| [money](#money)                   | INT      | UNSIGNED | NO   |     | 0       |       |                                    |
+| [cod](#cod)                       | INT      | UNSIGNED | NO   |     | 0       |       |                                    |
+| [checked](#checked)               | TINYINT  | UNSIGNED | NO   |     | 0       |       |                                    |
 
-[1]: #id
-[2]: #messagetype
-[3]: #stationery
-[4]: #mailtemplateid
-[5]: #sender
-[6]: #receiver
-[7]: #subject
-[8]: #body
-[9]: #hasitems
-[10]: #expiretime
-[11]: #delivertime
-[12]: #money
-[13]: #cod
-[14]: #checked
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 
@@ -84,7 +69,7 @@ Here is receiver's [characters.guid](characters#guid).
 
 Here is stored mail subject.
 
-If [stationery][3] is 62, subject has formatted data:
+If [stationery](#stationery) is 62, subject has formatted data:
 
 `itemEntry:0:response:lotId:itemCount`
 
@@ -108,12 +93,11 @@ If [stationery][3] is 62, subject has formatted data:
 
 -    **itemCount**: amount of item at this Lot
 
-
 ### body
 
 The text contained in the mail. Max length is 8000 characters.
 
-If [stationery][3] is 62, body has formatted data:
+If [stationery](#stationery) is 62, body has formatted data:
 
 `hexID:bid:buyout:deposit:cut:delay:eta`
 
@@ -133,8 +117,6 @@ If [stationery][3] is 62, body has formatted data:
 
 This formatted data seen only in mail with notification about successful auction or about pending mail with money.
 
-
-
 ### has_items
 
 Default: 0,
@@ -145,7 +127,7 @@ For items look at [mail\_items](mail_items) table.
 
 ### expire\_time
 
-Here is timestamp which stores date for auto-return mail to sender or delete if [stationery][3] is 62 (AuctionHouse).
+Here is timestamp which stores date for auto-return mail to sender or delete if [stationery](#stationery) is 62 (AuctionHouse).
 
 ### deliver\_time
 
@@ -163,11 +145,11 @@ when is set to 1, that field \`money\` stores gold for COD.
 
 ### checked
 
-| Flag | Comment                     |
-| ---- | --------------------------- |
-| 0    | MAIL_CHECK_MASK_NONE        |
-| 1    | MAIL_CHECK_MASK_READ        |
-| 2    | MAIL_CHECK_MASK_RETURNED    |
-| 4    | MAIL_CHECK_MASK_COPIED      |
-| 8    | MAIL_CHECK_MASK_COD_PAYMENT |
-| 16   | MAIL_CHECK_MASK_HAS_BODY    |
+| Value | Hex    | Flag                        | Comment                                               |
+| :---- | :----: | :-------------------------- | :---------------------------------------------------- |
+| 0     | `0x00` | MAIL_CHECK_MASK_NONE        | No flag                                               |
+| 1     | `0x01` | MAIL_CHECK_MASK_READ        | The mail was read                                     |
+| 2     | `0x02` | MAIL_CHECK_MASK_RETURNED    | The mail was returned, it cannot be returned again    |
+| 4     | `0x04` | MAIL_CHECK_MASK_COPIED      | The mail was copied, its items cannot be copied again |
+| 8     | `0x08` | MAIL_CHECK_MASK_COD_PAYMENT | The mail is the payment of a cash on delivery mail    |
+| 16    | `0x10` | MAIL_CHECK_MASK_HAS_BODY    | The mail has body text                                |

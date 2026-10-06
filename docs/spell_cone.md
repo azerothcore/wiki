@@ -1,21 +1,21 @@
-# spell_cone
+# spell\_cone
 
 [<-Back-to:World](database-world)
 
-**The `spell_cone` table**
+**The \`spell\_cone\` table**
 
 This table stores cone-angle overrides used by cone target selection.
 When a row exists, the value from `spell_cone.ConeDegrees` is used as the cone angle (in degrees).
 If no override exists, the core falls back to legacy hardcoded spell handling.
 
-**Table Structure**
+**Table: spell\_cone's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell identifier |
-| [ConeDegrees](#conedegrees) | SMALLINT | | | NO | 60 | | Cone angle in degrees |
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment               |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :-------------------- |
+| [ID](#id)                   | INT      | UNSIGNED | NO   | PRI |         |       | Spell ID              |
+| [ConeDegrees](#conedegrees) | SMALLINT |          | NO   |     | 60      |       | Cone angle in degrees |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

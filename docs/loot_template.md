@@ -1,4 +1,4 @@
-# loot_template
+# loot\_template
 
 [<-Back-to:World](database-world)
 
@@ -6,18 +6,18 @@
 
 **Table Structure**
 
-| Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment                       |
-| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
-| [Entry](#entry)                 | INT          | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [Item](#item)                   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [Reference](#reference)         | INT          |            |     | NO   | 0       |       |                               |
-| [Chance](#chance)               | FLOAT        |            |     | NO   | 0       |       |                               |
-| [QuestRequired](#questrequired) | TINYINT      |            |     | NO   | 0       |       |                               |
-| [LootMode](#lootmode)           | SMALLINT     | UNSIGNED   |     | NO   | 1       |       |                               |
-| [GroupId](#groupid)             | TINYINT      | UNSIGNED   |     | NO   | 0       |       | PRI in creature_loot_template |
-| [MinCount](#mincount)           | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                               |
-| [MaxCount](#maxcount)           | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                               |
-| [Comment](#comment)             | VARCHAR(255) |            |     | YES  | NULL    |       | TEXT in player_loot_template  |
+| Field                           | Type         |          | Null | Key | Default | Extra | Comment                       |
+| :------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :---------------------------- |
+| [Entry](#entry)                 | INT          | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [Item](#item)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [Reference](#reference)         | INT          |          | NO   |     | 0       |       |                               |
+| [Chance](#chance)               | FLOAT        |          | NO   |     | 0       |       |                               |
+| [QuestRequired](#questrequired) | TINYINT      |          | NO   |     | 0       |       |                               |
+| [LootMode](#lootmode)           | SMALLINT     | UNSIGNED | NO   |     | 1       |       |                               |
+| [GroupId](#groupid)             | TINYINT      | UNSIGNED | NO   |     | 0       |       | PRI in creature_loot_template |
+| [MinCount](#mincount)           | TINYINT      | UNSIGNED | NO   |     | 1       |       |                               |
+| [MaxCount](#maxcount)           | TINYINT      | UNSIGNED | NO   |     | 1       |       |                               |
+| [Comment](#comment)             | VARCHAR(255) |          | YES  |     | NULL    |       | TEXT in player_loot_template  |
 
 **Description of the fields**
 

@@ -6,21 +6,16 @@
 
 Contains the instance data for characters.
 
-**Table Structure**
+**Table: character\_instance's Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]      | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [instance][2]  | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [permanent][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [extended][4]  | TINYINT | UNSIGNED   |     | NO   |         |       |         |
+| Field                   | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)           | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [instance](#instance)   | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [permanent](#permanent) | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [extended](#extended)   | TINYINT | UNSIGNED | NO   |     |         |       |         |
 
-[1]: #guid
-[2]: #instance
-[3]: #permanent
-[4]: #extended
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

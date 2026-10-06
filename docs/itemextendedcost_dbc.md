@@ -1,31 +1,33 @@
-# itemextendedcost_dbc
+# itemextendedcost\_dbc
 
 [<-Back-to:World](database-world)
 
-**The \`itemextendedcost_dbc\` table**
+**The \`itemextendedcost\_dbc\` table**
 
-**Table Structure**
+Holds rows that override or add to the data the core loads from ItemExtendedCost.dbc.
 
-| Field                                       | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                   | INT  | UNSIGNED   | PRI | NO   | 0       |
-| [HonorPoints](#honorpoints)                 | INT  | UNSIGNED   |     | NO   | 0       |
-| [ArenaPoints](#arenapoints)                 | INT  | UNSIGNED   |     | NO   | 0       |
-| [ArenaBracket](#arenabracket)               | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemID_1](#itemid1)                        | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemID_2](#itemid2)                        | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemID_3](#itemid3)                        | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemID_4](#itemid4)                        | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemID_5](#itemid5)                        | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemCount_1](#itemcount1)                  | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemCount_2](#itemcount2)                  | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemCount_3](#itemcount3)                  | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemCount_4](#itemcount4)                  | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemCount_5](#itemcount5)                  | INT  | UNSIGNED   |     | NO   | 0       |
-| [RequiredArenaRating](#requiredarenarating) | INT  | UNSIGNED   |     | NO   | 0       |
-| [ItemPurchaseGroup](#itempurchasegroup)     | INT  | UNSIGNED   |     | NO   | 0       |
+**Table: itemextendedcost\_dbc's Structure**
 
-**Description of the fields**
+| Field                                       | Type |     | Null | Key | Default | Extra | Comment |
+| :------------------------------------------ | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                   | INT  |     | NO   | PRI | 0       |       |         |
+| [HonorPoints](#honorpoints)                 | INT  |     | NO   |     | 0       |       |         |
+| [ArenaPoints](#arenapoints)                 | INT  |     | NO   |     | 0       |       |         |
+| [ArenaBracket](#arenabracket)               | INT  |     | NO   |     | 0       |       |         |
+| [ItemID_1](#itemid1)                        | INT  |     | NO   |     | 0       |       |         |
+| [ItemID_2](#itemid2)                        | INT  |     | NO   |     | 0       |       |         |
+| [ItemID_3](#itemid3)                        | INT  |     | NO   |     | 0       |       |         |
+| [ItemID_4](#itemid4)                        | INT  |     | NO   |     | 0       |       |         |
+| [ItemID_5](#itemid5)                        | INT  |     | NO   |     | 0       |       |         |
+| [ItemCount_1](#itemcount1)                  | INT  |     | NO   |     | 0       |       |         |
+| [ItemCount_2](#itemcount2)                  | INT  |     | NO   |     | 0       |       |         |
+| [ItemCount_3](#itemcount3)                  | INT  |     | NO   |     | 0       |       |         |
+| [ItemCount_4](#itemcount4)                  | INT  |     | NO   |     | 0       |       |         |
+| [ItemCount_5](#itemcount5)                  | INT  |     | NO   |     | 0       |       |         |
+| [RequiredArenaRating](#requiredarenarating) | INT  |     | NO   |     | 0       |       |         |
+| [ItemPurchaseGroup](#itempurchasegroup)     | INT  |     | NO   |     | 0       |       |         |
+
+**Description of the table's fields**
 
 ### ID
 

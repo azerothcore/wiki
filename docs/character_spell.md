@@ -6,19 +6,15 @@
 
 Holds information for each character's spells.
 
-**Table Structure**
+**Table: character\_spell's Structure**
 
-| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
-| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]     | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier         |
-| [specMask][3] | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                          |
+| Field                 | Type    |          | Null | Key | Default | Extra | Comment                  |
+| :-------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)         | INT     | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [spell](#spell)       | INT     | UNSIGNED | NO   | PRI | 0       |       | Spell Identifier         |
+| [specMask](#specmask) | TINYINT | UNSIGNED | NO   |     | 1       |       |                          |
 
-[1]: #guid
-[2]: #spell
-[3]: #specmask
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -1,19 +1,19 @@
-# game_event_gameobject
+# game\_event\_gameobject
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_gameobject\` table**
+**The \`game\_event\_gameobject\` table**
 
 Contains all gameobjects instances that participate to any game event.
 
-**Table Structure**
+**Table: game\_event\_gameobject's Structure**
 
-| Field                     | Type     | Attributes | Key | Null | Default | Extra  | Comment                                                             |
-| ------------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
-| [eventEntry](#evententry) | SMALLINT | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [guid](#guid)             | INT      | UNSIGNED   | PRI | NO   |         | Unique |                                                                     |
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment                                                             |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------------------------------ |
+| [eventEntry](#evententry) | SMALLINT |          | NO   | PRI |         |       | Entry of the game event. Put negative entry to remove during event. |
+| [guid](#guid)             | INT      | UNSIGNED | NO   | PRI |         |       |                                                                     |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

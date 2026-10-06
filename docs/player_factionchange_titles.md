@@ -1,21 +1,21 @@
-# player_factionchange_titles
+# player\_factionchange\_titles
 
 [<-Back-to:World](database-world)
 
-**The \`spell_cooldown_overrides\` table**
+**The \`player\_factionchange\_titles\` table**
 
 Determines which title should be swapped during a faction change.
 
-**Table Structure**
+**Table: player\_factionchange\_titles's Structure**
 
-| Field                                | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id](#allianceid)           | INT  |            | PRI | NO   |         |       |         |
-| [alliance_comment](#alliancecomment) | TEXT |            | PRI | YES  | NULL    |       |         |
-| [horde_id](#hordeid)                 | INT  |            | PRI | NO   |         |       |         |
-| [horde_comment](#hordecomment)       | TEXT |            | PRI | YES  | NULL    |       |         |
+| Field                                | Type |     | Null | Key | Default | Extra | Comment |
+| :----------------------------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [alliance_id](#allianceid)           | INT  |     | NO   | PRI |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |     | YES  |     | NULL    |       |         |
+| [horde_id](#hordeid)                 | INT  |     | NO   | PRI |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |     | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance_id
 

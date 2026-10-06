@@ -2,20 +2,20 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The `chat_filter` table**
+**The \`chat\_filter\` table**
 
 This table stores reserved words used by the core chat filter. When a matching entry is found, the message is blocked using case-insensitive substring matching.
 
 The filter is controlled by the `ChatFilter.Whisper`, `ChatFilter.Say`, `ChatFilter.Yell`, and `ChatFilter.Emote` settings in `worldserver.conf`. Manage entries in-game with `.chatfilter list`, `.chatfilter add`, `.chatfilter remove`, and `.reload chat_filter`.
 
-**Table Structure**
+**Table: chat\_filter's Structure**
 
-| Field     | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-| --------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [ID](#id) | INT          | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [Word](#word) | VARCHAR(255) | SIGNED     |     | NO   |         |                |         |
+| Field         | Type         |          | Null | Key | Default | Extra          | Comment |
+| :------------ | :----------- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [ID](#id)     | INT          | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [Word](#word) | VARCHAR(255) |          | NO   |     |         |                |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 
