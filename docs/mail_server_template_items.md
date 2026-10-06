@@ -1,24 +1,24 @@
-# mail_server_template_items
+# mail\_server\_template\_items
 
 [<-Back-to:Characters](database-characters)
 
-**The \`mail_server_template_items\` table**
+**The \`mail\_server\_template\_items\` table**
 
 Works together with [mail_server_template](mail_server_template).
 
 Note: Entries in this table will be deleted automatically when the referenced entry in [mail_server_template.id](mail_server_template#id) is deleted. CONSTRAINT `fk_mail_template`
 
-**Table Structure**
+**Table: mail\_server\_template\_items's Structure**
 
-| Field                     | Type | Attributes | Key | Null | Default | Extra          | Comment |
-| ------------------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [id](#id)                 | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templateID](#templateid) | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [faction](#faction)       | ENUM |            |     | NO   |         |                |         |
-| [item](#item)             | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [itemCount](#itemcount)   | INT  | UNSIGNED   |     | NO   |         |                |         |
+| Field                     | Type |                | Null | Key | Default | Extra          | Comment |
+| :------------------------ | :--- | :------------- | :--: | :-: | :-----: | :------------: | :------ |
+| [id](#id)                 | INT  | UNSIGNED       | NO   | PRI |         | AUTO_INCREMENT |         |
+| [templateID](#templateid) | INT  | UNSIGNED       | NO   | MUL |         |                |         |
+| [faction](#faction)       | ENUM | Alliance,Horde | NO   |     |         |                |         |
+| [item](#item)             | INT  | UNSIGNED       | NO   |     |         |                |         |
+| [itemCount](#itemcount)   | INT  | UNSIGNED       | NO   |     |         |                |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

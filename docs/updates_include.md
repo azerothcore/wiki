@@ -1,24 +1,21 @@
-# updates_include
+# updates\_include
 
 [<-Back-to:Auth](database-auth)
 [<-Back-to:Characters](database-characters)
 [<-Back-to:World](database-world)
 
-**The \`updates_include\` table**
+**The \`updates\_include\` table**
 
 The directories the database updater looks in for SQL update files. The table is in the auth, characters and world databases.
 
-**Table Structure**
+**Table: updates\_include's Structure**
 
-| Field      | Type         | Attributes               | Key | Null | Default  | Extra | Comment                                                         |
-| ---------- | ------------ | ------------------------ | --- | ---- | -------- | ----- | --------------------------------------------------------------- |
-| [path][1]  | VARCHAR(200) |                          | PRI | NO   |          |       | Directory to include. $ means relative to the source directory. |
-| [state][2] | ENUM         | RELEASED,CUSTOM,ARCHIVED |     | NO   | RELEASED |       | Defines if the directory contains released or archived updates. |
+| Field           | Type         |                                  | Null | Key | Default  | Extra | Comment                                                         |
+| :-------------- | :----------- | :------------------------------- | :--: | :-: | :------: | :---: | :-------------------------------------------------------------- |
+| [path](#path)   | VARCHAR(200) |                                  | NO   | PRI |          |       | directory to include. $ means relative to the source directory. |
+| [state](#state) | ENUM         | RELEASED,ARCHIVED,CUSTOM,PENDING | NO   |     | RELEASED |       | defines if the directory contains released or archived updates. |
 
-[1]: #path
-[2]: #state
-
-## Description of the fields
+**Description of the table's fields**
 
 ### path
 

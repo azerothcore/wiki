@@ -6,21 +6,16 @@
 
 Basically all spell changes made when player changes faction.
 
-**Table Structure**
+**Table: player\_factionchange\_spells's Structure**
 
-| Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id][1] | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [alliance_comment][3] | TEXT |        |     | NO   |         |       |         |
-| [horde_id][2]    | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [horde_comment][4] | TEXT |          |     | NO   |         |       |         |
+| Field                                | Type |          | Null | Key | Default | Extra | Comment |
+| :----------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [alliance_id](#allianceid)           | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |          | NO   |     |         |       |         |
+| [horde_id](#hordeid)                 | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |          | NO   |     |         |       |         |
 
-[1]: #allianceid
-[2]: #hordeid
-[3]: #alliancecomment
-[4]: #hordecomment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance\_id
 

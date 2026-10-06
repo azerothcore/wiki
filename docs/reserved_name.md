@@ -6,15 +6,14 @@
 
 Names that players can not give to their characters.
 
-**Table Structure**
+**Table: reserved\_name's Structure**
 
-| Field     | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| --------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name][1] | VARCHAR(12) | SIGNED     | PRI | NO   | ''      |       |         |
+| Field         | Type        |     | Null | Key | Default | Extra | Comment |
+| :------------ | :---------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [name](#name) | VARCHAR(12) |     | NO   | PRI |         |       |         |
  
-[1]: #name
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 

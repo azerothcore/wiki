@@ -4,21 +4,18 @@
 
 **The \`banned\_addons\` table**
 
-**Table Structure**
+Holds the client interface addons that are banned on the server.
 
-| Field          | Type         | Attributes | Key    | Null | Default           | Extra | Comment |
-| -------------- | ------------ | ---------- | ------ | ---- | ----------------- | ----- | ------- |
-| [Id][1]        | INT          | UNSIGNED   | PRI    | NO   | AUTO_INCREMENT    |       |         |
-| [Name][2]      | VARCHAR(255) |            | UNIQUE | NO   |                   |       |         |
-| [Version][3]   | VARCHAR(255) |            | UNIQUE | NO   | ''                |       |         |
-| [Timestamp][4] | TIMESTAMP    |            |        | NO   | CURRENT_TIMESTAMP |       |         |
+**Table: banned\_addons's Structure**
 
-[1]: #id
-[2]: #name
-[3]: #version
-[4]: #timestamp
+| Field                   | Type         |          | Null | Key | Default           | Extra                       | Comment |
+| :---------------------- | :----------- | :------- | :--: | :-: | :---------------: | :-------------------------: | :------ |
+| [Id](#id)               | INT          | UNSIGNED | NO   | PRI |                   | AUTO_INCREMENT              |         |
+| [Name](#name)           | VARCHAR(255) |          | NO   | MUL |                   |                             |         |
+| [Version](#version)     | VARCHAR(255) |          | NO   |     | ''                |                             |         |
+| [Timestamp](#timestamp) | TIMESTAMP    |          | NO   |     | CURRENT_TIMESTAMP | ON UPDATE CURRENT_TIMESTAMP |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Id
 

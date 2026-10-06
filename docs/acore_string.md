@@ -1,33 +1,29 @@
-# acore_string
+# acore\_string
 
 [<-Back-to:World](database-world)
 
-**The \`acore_string\` table**
+**The \`acore\_string\` table**
 
 This table holds all of the strings used internally by the server. It is provided for the main purpose of translation.
 
 To see which locale IDs correspond to what languages, visit the Localization\_lang page.
 
-**Table Structure**
+**Table: acore\_string's Structure**
 
-| Field                | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [content_default][2] | text      |            |     | NO   |         |       |         |
-| [locale_koKR][3]     | text      |            |     | YES  |         |       |         |
-| [locale_frFR][3]     | text      |            |     | YES  |         |       |         |
-| [locale_deDE][3]     | text      |            |     | YES  |         |       |         |
-| [locale_zhCN][3]     | text      |            |     | YES  |         |       |         |
-| [locale_zhTW][3]     | text      |            |     | YES  |         |       |         |
-| [locale_esES][3]     | text      |            |     | YES  |         |       |         |
-| [locale_esMX][3]     | text      |            |     | YES  |         |       |         |
-| [locale_ruRU][3]     | text      |            |     | YES  |         |       |         |
+| Field                              | Type |          | Null | Key | Default | Extra | Comment |
+| :--------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                    | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [content_default](#contentdefault) | TEXT |          | NO   |     |         |       |         |
+| [locale_koKR](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_frFR](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_deDE](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_zhCN](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_zhTW](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_esES](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_esMX](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
+| [locale_ruRU](#localennnn)         | TEXT |          | YES  |     | NULL    |       |         |
 
-[1]: #entry
-[2]: #contentdefault
-[3]: #localennnn
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

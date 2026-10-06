@@ -6,27 +6,19 @@
 
 Points of interest that gossip options can mark on the player's minimap, for example when a city guard gives directions. See [gossip\_menu\_option.ActionPoiID](gossip_menu_option#actionpoiid).
 
-**Table Structure**
+**Table: points\_of\_interest's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [PositionX][2]  | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
-| [PositionY][3]  | FLOAT     | SIGNED     |     | NO   | 0       |       |         |
-| [Icon][4]       | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags][5]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Importance][6] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Name][7]       | text      |            |     | NO   | NULL    |       |         |
+| Field                     | Type  |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                 | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [PositionX](#positionx)   | FLOAT |          | NO   |     | 0       |       |         |
+| [PositionY](#positiony)   | FLOAT |          | NO   |     | 0       |       |         |
+| [Icon](#icon)             | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [Flags](#flags)           | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [Importance](#importance) | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [Name](#name)             | TEXT  |          | NO   |     |         |       |         |
 
-[1]: #id
-[2]: #positionx
-[3]: #positiony
-[4]: #icon
-[5]: #flags
-[6]: #importance
-[7]: #name
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

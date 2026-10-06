@@ -8,21 +8,16 @@ This table has all the templates for every instance. When a group enters an inst
 
 If you want to change the spot you will start in when you enter/leave an instance, go to areatrigger\_teleport
 
-**Table Structure**
+**Table: instance\_template's Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [map][1]        | INT          | UNSIGNED   |     | NO   | NULL    |       |         |
-| [parent][2]     | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [script][3]     | VARCHAR(128) | SIGNED     |     | NO   | NULL    |       |         |
-| [allowMount][4] | tinyiny(1)   | SIGNED     |     | NO   | 0       |       |         |
+| Field                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [map](#map)               | SMALLINT     | UNSIGNED | NO   | PRI |         |       |         |
+| [parent](#parent)         | SMALLINT     | UNSIGNED | NO   |     |         |       |         |
+| [script](#script)         | VARCHAR(128) |          | NO   |     | ''      |       |         |
+| [allowMount](#allowmount) | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #map
-[2]: #parent
-[3]: #script
-[4]: #allowmount
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### map
 

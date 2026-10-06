@@ -6,38 +6,38 @@
 
 Holds the accounts that can log in to the server.
 
-**Table Structure**
+**Table: account's Structure**
 
-| Field                             | Type           | Attributes | Key | Null | Default           | Extra          | Comment       |
-| --------------------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ------------- |
-| [id](#id)                         | INT            | UNSIGNED   | PRI | NO   |                   | AUTO_INCREMENT | Identifier    |
-| [username](#username)             | VARCHAR(32)    |            | UNI | NO   | ''                |                |               |
-| [salt](#salt)                     | BINARY(32)     |            |     | NO   |                   |                |               |
-| [verifier](#verifier)             | BINARY(32)     |            |     | NO   |                   |                |               |
-| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  |                   |                |               |
-| [totp_secret](#totpsecret)        | VARBINARY(100) |            |     | YES  |                   |                |               |
-| [email](#email)                   | VARCHAR(255)   |            |     | NO   | ''                |                |               |
-| [reg_mail](#regmail)              | VARCHAR(255)   |            |     | NO   | ''                |                |               |
-| [joindate](#joindate)             | TIMESTAMP      |            |     | NO   | CURRENT_TIMESTAMP |                |               |
-| [last_ip](#lastip)                | VARCHAR(15)    |            |     | NO   | 127.0.0.1         |                |               |
-| [last_attempt_ip](#lastattemptip) | VARCHAR(15)    |            |     | NO   | 127.0.0.1         |                |               |
-| [failed_logins](#failedlogins)    | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
-| [locked](#locked)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
-| [lock_country](#lockcountry)      | VARCHAR(2)     |            |     | NO   | 00                |                |               |
-| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  |                   |                |               |
-| [online](#online)                 | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
-| [expansion](#expansion)           | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |               |
-| [Flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
-| [mutetime](#mutetime)             | BIGINT         |            |     | NO   | 0                 |                |               |
-| [mutereason](#mutereason)         | VARCHAR(255)   |            |     | NO   | ''                |                |               |
-| [muteby](#muteby)                 | VARCHAR(50)    |            |     | NO   | ''                |                |               |
-| [locale](#locale)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
-| [os](#os)                         | VARCHAR(3)     |            |     | NO   | ''                |                |               |
-| [recruiter](#recruiter)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
-| [totaltime](#totaltime)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
+| Field                             | Type           |          | Null | Key | Default           | Extra          | Comment       |
+| :-------------------------------- | :------------- | :------- | :--: | :-: | :---------------: | :------------: | :------------ |
+| [id](#id)                         | INT            | UNSIGNED | NO   | PRI |                   | AUTO_INCREMENT | Identifier    |
+| [username](#username)             | VARCHAR(32)    |          | NO   | UNI | ''                |                |               |
+| [salt](#salt)                     | BINARY(32)     |          | NO   |     |                   |                |               |
+| [verifier](#verifier)             | BINARY(32)     |          | NO   |     |                   |                |               |
+| [session_key](#sessionkey)        | BINARY(40)     |          | YES  |     | NULL              |                |               |
+| [totp_secret](#totpsecret)        | VARBINARY(128) |          | YES  |     | NULL              |                |               |
+| [email](#email)                   | VARCHAR(255)   |          | NO   |     | ''                |                |               |
+| [reg_mail](#regmail)              | VARCHAR(255)   |          | NO   |     | ''                |                |               |
+| [joindate](#joindate)             | TIMESTAMP      |          | NO   |     | CURRENT_TIMESTAMP |                |               |
+| [last_ip](#lastip)                | VARCHAR(15)    |          | NO   |     | 127.0.0.1         |                |               |
+| [last_attempt_ip](#lastattemptip) | VARCHAR(15)    |          | NO   |     | 127.0.0.1         |                |               |
+| [failed_logins](#failedlogins)    | INT            | UNSIGNED | NO   |     | 0                 |                |               |
+| [locked](#locked)                 | TINYINT        | UNSIGNED | NO   |     | 0                 |                |               |
+| [lock_country](#lockcountry)      | VARCHAR(2)     |          | NO   |     | 00                |                |               |
+| [last_login](#lastlogin)          | TIMESTAMP      |          | YES  |     | NULL              |                |               |
+| [online](#online)                 | INT            | UNSIGNED | NO   |     | 0                 |                |               |
+| [expansion](#expansion)           | TINYINT        | UNSIGNED | NO   |     | 2                 |                |               |
+| [Flags](#flags)                   | INT            | UNSIGNED | NO   |     | 0                 |                | Account Flags |
+| [mutetime](#mutetime)             | BIGINT         |          | NO   |     | 0                 |                |               |
+| [mutereason](#mutereason)         | VARCHAR(255)   |          | NO   |     | ''                |                |               |
+| [muteby](#muteby)                 | VARCHAR(50)    |          | NO   |     | ''                |                |               |
+| [locale](#locale)                 | TINYINT        | UNSIGNED | NO   |     | 0                 |                |               |
+| [os](#os)                         | VARCHAR(3)     |          | NO   |     | ''                |                |               |
+| [recruiter](#recruiter)           | INT            | UNSIGNED | NO   |     | 0                 |                |               |
+| [totaltime](#totaltime)           | INT            | UNSIGNED | NO   |     | 0                 |                |               |
 
 
-## Description of the fields
+**Description of the table's fields**
 
 ### id
 
@@ -137,11 +137,6 @@ The two-letter country code the account is locked to, set with the `.account loc
 
 The date when the account was last logged into.
 
-### totaltime
-
-Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
-Stored in Unix Time.
-
 ### online
 
 Boolean 0 or 1 controlling if the account is currently logged in and online.
@@ -158,40 +153,40 @@ Integer 0, 1 or 2 controlling if the client logged in on the account has any exp
 
 ### Flags
 
-| Name                              | Description                           | Bit Value  |
-| --------------------------------- | ------------------------------------- | ---------- |
-| ACCOUNT_FLAG_GM                   | Account is GM                         | 1          |
-| ACCOUNT_FLAG_NOKICK               | Will not be logged out while AFK      | 2          |
-| ACCOUNT_FLAG_COLLECTOR            | Collector's Edition (grants a starter gift voucher when creating a character) | 4          |
-| ACCOUNT_FLAG_TRIAL                | Trial account                         | 8          |
-| ACCOUNT_FLAG_CANCELLED            | UNK                                   | 16         |
-| ACCOUNT_FLAG_IGR                  | Internet Game Room (Internet café?)   | 32         |
-| ACCOUNT_FLAG_WHOLESALER           | UNK                                   | 64         |
-| ACCOUNT_FLAG_PRIVILEGED           | UNK                                   | 128        |
-| ACCOUNT_FLAG_EU_FORBID_ELV        | UNK                                   | 256        |
-| ACCOUNT_FLAG_EU_FORBID_BILLING    | UNK                                   | 512        |
-| ACCOUNT_FLAG_RESTRICTED           | UNK                                   | 1024       |
-| ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend (referer or referee) | 2048       |
-| ACCOUNT_FLAG_BLIZZARD             | UNK                                   | 4096       |
-| ACCOUNT_FLAG_RECURRING_BILLING    | UNK                                   | 8192       |
-| ACCOUNT_FLAG_NOELECTUP            | UNK                                   | 16384      |
-| ACCOUNT_FLAG_KR_CERTIFICATE       | Korean certificate?                   | 32768      |
-| ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition               | 65536      |
-| ACCOUNT_FLAG_DISABLE_VOICE        | Can't join voice chat                 | 131072     |
-| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Can't speak in voice chat             | 262144     |
-| ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection                | 524288     |
-| ACCOUNT_FLAG_EU_FORBID_CC         | UNK                                   | 1048576    |
-| ACCOUNT_FLAG_OPENBETA_DELL        | Dell XPS WoW Edition Promo            | 2097152    |
-| ACCOUNT_FLAG_PROPASS              | UNK                                   | 4194304    |
-| ACCOUNT_FLAG_PROPASS_LOCK         | Pro Pass (Arena Tournament)           | 8388608    |
-| ACCOUNT_FLAG_PENDING_UPGRADE      | UNK                                   | 16777216   |
-| ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | UNK                                   | 33554432   |
-| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition             | 67108864   |
-| ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net account        | 134217728  |
-| ACCOUNT_FLAG_DEMOS                | UNK                                   | 268435456  |
-| ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight. Automatically set when the account first meets the `CharacterCreating.MinLevelForHeroicCharacter` requirement; once set, overrides that requirement. | 536870912  |
-| ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNK (StarCraft II related?)           | 1073741824 |
-| ACCOUNT_FLAG_S2_TRIAL             | UNK (StarCraft II related?)           | 2147483648 |
+| Value      | Hex          | Flag                              | Comment                                                                                                                                                                              |
+| :--------- | :----------: | :-------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1          | `0x00000001` | ACCOUNT_FLAG_GM                   | Account is GM                                                                                                                                                                        |
+| 2          | `0x00000002` | ACCOUNT_FLAG_NOKICK               | Will not be logged out while AFK                                                                                                                                                     |
+| 4          | `0x00000004` | ACCOUNT_FLAG_COLLECTOR            | Collector's Edition (grants a starter gift voucher when creating a character)                                                                                                        |
+| 8          | `0x00000008` | ACCOUNT_FLAG_TRIAL                | Trial account                                                                                                                                                                        |
+| 16         | `0x00000010` | ACCOUNT_FLAG_CANCELLED            | UNK                                                                                                                                                                                  |
+| 32         | `0x00000020` | ACCOUNT_FLAG_IGR                  | Internet Game Room (Internet café?)                                                                                                                                                  |
+| 64         | `0x00000040` | ACCOUNT_FLAG_WHOLESALER           | UNK                                                                                                                                                                                  |
+| 128        | `0x00000080` | ACCOUNT_FLAG_PRIVILEGED           | UNK                                                                                                                                                                                  |
+| 256        | `0x00000100` | ACCOUNT_FLAG_EU_FORBID_ELV        | UNK                                                                                                                                                                                  |
+| 512        | `0x00000200` | ACCOUNT_FLAG_EU_FORBID_BILLING    | UNK                                                                                                                                                                                  |
+| 1024       | `0x00000400` | ACCOUNT_FLAG_RESTRICTED           | UNK                                                                                                                                                                                  |
+| 2048       | `0x00000800` | ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend (referer or referee)                                                                                                                                                |
+| 4096       | `0x00001000` | ACCOUNT_FLAG_BLIZZARD             | UNK                                                                                                                                                                                  |
+| 8192       | `0x00002000` | ACCOUNT_FLAG_RECURRING_BILLING    | UNK                                                                                                                                                                                  |
+| 16384      | `0x00004000` | ACCOUNT_FLAG_NOELECTUP            | UNK                                                                                                                                                                                  |
+| 32768      | `0x00008000` | ACCOUNT_FLAG_KR_CERTIFICATE       | Korean certificate?                                                                                                                                                                  |
+| 65536      | `0x00010000` | ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition                                                                                                                                                              |
+| 131072     | `0x00020000` | ACCOUNT_FLAG_DISABLE_VOICE        | Can't join voice chat                                                                                                                                                                |
+| 262144     | `0x00040000` | ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Can't speak in voice chat                                                                                                                                                            |
+| 524288     | `0x00080000` | ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection                                                                                                                                                               |
+| 1048576    | `0x00100000` | ACCOUNT_FLAG_EU_FORBID_CC         | UNK                                                                                                                                                                                  |
+| 2097152    | `0x00200000` | ACCOUNT_FLAG_OPENBETA_DELL        | Dell XPS WoW Edition Promo                                                                                                                                                           |
+| 4194304    | `0x00400000` | ACCOUNT_FLAG_PROPASS              | UNK                                                                                                                                                                                  |
+| 8388608    | `0x00800000` | ACCOUNT_FLAG_PROPASS_LOCK         | Pro Pass (Arena Tournament)                                                                                                                                                          |
+| 16777216   | `0x01000000` | ACCOUNT_FLAG_PENDING_UPGRADE      | UNK                                                                                                                                                                                  |
+| 33554432   | `0x02000000` | ACCOUNT_FLAG_RETAIL_FROM_TRIAL    | UNK                                                                                                                                                                                  |
+| 67108864   | `0x04000000` | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition                                                                                                                                                            |
+| 134217728  | `0x08000000` | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net account                                                                                                                                                       |
+| 268435456  | `0x10000000` | ACCOUNT_FLAG_DEMOS                | UNK                                                                                                                                                                                  |
+| 536870912  | `0x20000000` | ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Allowed to create Death Knight. Automatically set when the account first meets the `CharacterCreating.MinLevelForHeroicCharacter` requirement; once set, overrides that requirement. |
+| 1073741824 | `0x40000000` | ACCOUNT_FLAG_S2_REQUIRE_IGR       | UNK (StarCraft II related?)                                                                                                                                                          |
+| 2147483648 | `0x80000000` | ACCOUNT_FLAG_S2_TRIAL             | UNK (StarCraft II related?)                                                                                                                                                          |
 
 ### mutetime
 
@@ -235,3 +230,8 @@ Stores information about client's OS. Used by Warden system.
 ### recruiter
 
 The account ID of another account. Used for recruit-a-friend system. See [account.id][1]
+
+### totaltime
+
+Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
+Stored in Unix Time.

@@ -6,24 +6,24 @@
 
 This table holds information on individual pet base stats based on level.
 
-**Table Structure**
+**Table: pet\_levelstats's Structure**
 
-| Field                             | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [creature\_entry](#creatureentry) | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [level](#level)                   | TINYINT   | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [hp](#hp)                         | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [mana](#mana)                     | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [armor](#armor)                   | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [str](#str)                       | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [agi](#agi)                       | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [sta](#sta)                       | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [inte](#inte)                     | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [spi](#spi)                       | SMALLINT  | UNSIGNED   |     | NO   | NULL    |       |         |
-| [min\_dmg](#mindmg)               | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [max\_dmg](#maxdmg)               | INT       | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                             | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [creature\_entry](#creatureentry) | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [level](#level)                   | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [hp](#hp)                         | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [mana](#mana)                     | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [armor](#armor)                   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [str](#str)                       | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [agi](#agi)                       | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [sta](#sta)                       | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [inte](#inte)                     | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [spi](#spi)                       | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [min\_dmg](#mindmg)               | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [max\_dmg](#maxdmg)               | INT     | UNSIGNED | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### creature\_entry
 

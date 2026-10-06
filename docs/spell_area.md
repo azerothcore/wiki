@@ -6,33 +6,22 @@
 
 This table is used to apply a specific spell aura to the player within an area in the game. When any player enters this area or somehow interacts with a quest, this aura will be handled accordingly.
 
-**Table Structure**
+**Table: spell\_area's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spell][1]              | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [area][2]               | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [quest_start][3]        | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [quest_end][4]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [aura_spell][5]         | MEDIUMINT | SIGNED     | PRI | NO   |         |       |         |
-| [racemask][6]           | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [gender][7]             | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [autocast][8]           | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [quest_start_status][9] | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [quest_end_status][10]  | INT       | UNSIGNED   |     | NO   |         |       |         |
+| Field                                                  | Type    |          | Null | Key | Default | Extra | Comment |
+| :----------------------------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [spell](#spell)                                        | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [area](#area)                                          | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [quest_start](#queststart)                             | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [quest_end](#questend)                                 | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [aura_spell](#auraspell)                               | INT     |          | NO   | PRI | 0       |       |         |
+| [racemask](#racemask)                                  | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [gender](#gender)                                      | TINYINT | UNSIGNED | NO   | PRI | 2       |       |         |
+| [autocast](#autocast)                                  | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [quest_start_status](#queststartstatus-questendstatus) | INT     |          | NO   |     | 64      |       |         |
+| [quest_end_status](#queststartstatus-questendstatus)   | INT     |          | NO   |     | 11      |       |         |
 
-[1]: #spell
-[2]: #area
-[3]: #queststart
-[4]: #questend
-[5]: #auraspell
-[6]: #racemask
-[7]: #gender
-[8]: #autocast
-[9]: #queststartstatus-questendstatus
-[10]: #queststartstatus-questendstatus
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell
 
@@ -77,7 +66,6 @@ The gender type this entry applies to. 0 = Male, 1 = Female, 2 = Any.
 1 if the aura is applied automatically when the player enters the area and meets the other requirements. 0 if the spell is only allowed to be cast in the area, for example by an item or a script.
 
 The aura is always removed when the player leaves the area.
-
 
 ### quest\_start\_status, quest\_end\_status
 

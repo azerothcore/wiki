@@ -6,33 +6,22 @@
 
 Contains all information about the currently ongoing auctions in the auction houses. It controls what items are put up for auction and who put it up, who is the highest bidder, etc.
 
-**Table Structure**
+**Table: auctionhouse's Structure**
 
-| Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]          | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [houseid][2]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [itemguid][3]    | INT  | UNSIGNED   | UNI | NO   | 0       |       |         |
-| [itemowner][4]   | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [buyoutprice][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [time][6]        | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [buyguid][7]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [lastbid][8]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [startbid][9]    | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [deposit][10]    | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                       | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                   | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [houseid](#houseid)         | TINYINT | UNSIGNED | NO   |     | 7       |       |         |
+| [itemguid](#itemguid)       | INT     | UNSIGNED | NO   | UNI | 0       |       |         |
+| [itemowner](#itemowner)     | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [buyoutprice](#buyoutprice) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [time](#time)               | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [buyguid](#buyguid)         | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [lastbid](#lastbid)         | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [startbid](#startbid)       | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [deposit](#deposit)         | INT     | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #id
-[2]: #houseid
-[3]: #itemguid
-[4]: #itemowner
-[5]: #buyoutprice
-[6]: #time
-[7]: #buyguid
-[8]: #lastbid
-[9]: #startbid
-[10]: #deposit
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 
