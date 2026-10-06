@@ -8,169 +8,89 @@ This table holds vital static information for each character. It is used to crea
 
 **Table: characters's Structure**
 
-| Field                       | Type        | Attributes | Key | Null | Default           | Extra | Comment                  |
-| --------------------------- | ----------- | ---------- | --- | ---- | ----------------- | ----- | ------------------------ |
-| [guid][1]                   | INT         | UNSIGNED   | PRI | NO   | 0                 |       | Global Unique Identifier |
-| [account][2]                | INT         | UNSIGNED   | MUL | NO   | 0                 |       | Account Identifier       |
-| [name][3]                   | VARCHAR(12) |            | MUL | NO   |                   |       |                          |
-| [race][4]                   | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [class][5]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [gender][6]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [level][7]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [xp][8]                     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [money][9]                  | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [skin][10]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [face][11]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [hairStyle][12]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [hairColor][13]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [facialStyle][14]           | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [bankSlots][15]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [restState][16]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [playerFlags][17]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [position_x][18]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [position_y][19]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [position_z][20]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [map][21]                   | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       | Map Identifier           |
-| [instance_id][22]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [instance_mode_mask][23]    | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [orientation][24]           | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [taximask][25]              | TEXT        |            |     | NO   |                   |       |                          |
-| [online][26]                | TINYINT     | UNSIGNED   | MUL | NO   | 0                 |       |                          |
-| [cinematic][27]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [totaltime][28]             | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [leveltime][29]             | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [logout_time][30]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [is_logout_resting][31]     | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [rest_bonus][32]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [resettalents_cost][33]     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [resettalents_time][34]     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [trans_x][35]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [trans_y][36]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [trans_z][37]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [trans_o][38]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
-| [transguid][39]             | INT         | SIGNED     |     | YES  | 0                 |       |                          |
-| [extra_flags][40]           | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [stable_slots][41]          | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [at_login][42]              | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [zone][43]                  | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [death_expire_time][44]     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [taxi_path][45]             | TEXT        |            |     | YES  | NULL              |       |                          |
-| [arenaPoints][46]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [totalHonorPoints][47]      | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [todayHonorPoints][48]      | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [yesterdayHonorPoints][49]  | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [totalKills][50]            | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [todayKills][51]            | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [yesterdayKills][52]        | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [chosenTitle][53]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [knownCurrencies][54]       | BIGINT      | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [watchedFaction][55]        | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [drunk][56]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [health][57]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power1][58]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power2][59]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power3][60]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power4][61]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power5][62]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power6][63]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [power7][64]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [latency][65]               | INT         | UNSIGNED   |     | YES  | 0                 |       |                          |
-| [talentGroupsCount][66]     | TINYINT     | UNSIGNED   |     | NO   | 1                 |       |                          |
-| [activeTalentGroup][67]     | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [exploredZones][68]         | LONGTEXT    |            |     | YES  | NULL              |       |                          |
-| [equipmentCache][69]        | LONGTEXT    |            |     | YES  | NULL              |       |                          |
-| [ammoId][70]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [knownTitles][71]           | LONGTEXT    |            |     | YES  | NULL              |       |                          |
-| [actionBars][72]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [grantableLevels][73]       | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
-| [order][74]                 | TINYINT     | SIGNED     |     | YES  | NULL              |       |                          |
-| [creation_date][75]         | TIMESTAMP   |            |     | NO   | CURRENT_TIMESTAMP |       |                          |
-| [deleteInfos_Account][76]   | INT         | UNSIGNED   |     | YES  | NULL              |       |                          |
-| [deleteInfos_Name][77]      | VARCHAR(12) |            |     | YES  | NULL              |       |                          |
-| [deleteDate][78]            | INT         | UNSIGNED   |     | YES  | NULL              |       |                          |
-| [innTriggerId][79]          | INT         | UNSIGNED   |     | NO   |                   |       |                          |
-| [extraBonusTalentCount][80] | INT         | SIGNED     |     | NO   | 0                 |       |                          |
+| Field                                           | Type        |          | Null | Key | Default           | Extra | Comment                  |
+| :---------------------------------------------- | :---------- | :------- | :--: | :-: | :---------------: | :---: | :----------------------- |
+| [guid](#guid)                                   | INT         | UNSIGNED | NO   | PRI | 0                 |       | Global Unique Identifier |
+| [account](#account)                             | INT         | UNSIGNED | NO   | MUL | 0                 |       | Account Identifier       |
+| [name](#name)                                   | VARCHAR(12) |          | NO   | MUL |                   |       |                          |
+| [race](#race)                                   | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [class](#class)                                 | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [gender](#gender)                               | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [level](#level)                                 | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [xp](#xp)                                       | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [money](#money)                                 | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [skin](#skin)                                   | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [face](#face)                                   | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [hairStyle](#hairstyle)                         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [hairColor](#haircolor)                         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [facialStyle](#facialstyle)                     | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [bankSlots](#bankslots)                         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [restState](#reststate)                         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [playerFlags](#playerflags)                     | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [position_x](#positionx)                        | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [position_y](#positiony)                        | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [position_z](#positionz)                        | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [map](#map)                                     | SMALLINT    | UNSIGNED | NO   |     | 0                 |       | Map Identifier           |
+| [instance_id](#instanceid)                      | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [instance_mode_mask](#instancemodemask)         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [orientation](#orientation)                     | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [taximask](#taximask)                           | TEXT        |          | NO   |     |                   |       |                          |
+| [online](#online)                               | TINYINT     | UNSIGNED | NO   | MUL | 0                 |       |                          |
+| [cinematic](#cinematic)                         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [totaltime](#totaltime)                         | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [leveltime](#leveltime)                         | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [logout_time](#logouttime)                      | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [is_logout_resting](#islogoutresting)           | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [rest_bonus](#restbonus)                        | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [resettalents_cost](#resettalentscost)          | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [resettalents_time](#resettalentstime)          | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [trans_x](#transx)                              | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [trans_y](#transy)                              | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [trans_z](#transz)                              | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [trans_o](#transo)                              | FLOAT       |          | NO   |     | 0                 |       |                          |
+| [transguid](#transguid)                         | INT         |          | YES  |     | 0                 |       |                          |
+| [extra_flags](#extraflags)                      | SMALLINT    | UNSIGNED | NO   |     | 0                 |       |                          |
+| [stable_slots](#stableslots)                    | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [at_login](#atlogin)                            | SMALLINT    | UNSIGNED | NO   |     | 0                 |       |                          |
+| [zone](#zone)                                   | SMALLINT    | UNSIGNED | NO   |     | 0                 |       |                          |
+| [death_expire_time](#deathexpiretime)           | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [taxi_path](#taxipath)                          | TEXT        |          | YES  |     | NULL              |       |                          |
+| [arenaPoints](#arenapoints)                     | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [totalHonorPoints](#totalhonorpoints)           | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [todayHonorPoints](#todayhonorpoints)           | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [yesterdayHonorPoints](#yesterdayhonorpoints)   | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [totalKills](#totalkills)                       | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [todayKills](#todaykills)                       | SMALLINT    | UNSIGNED | NO   |     | 0                 |       |                          |
+| [yesterdayKills](#yesterdaykills)               | SMALLINT    | UNSIGNED | NO   |     | 0                 |       |                          |
+| [chosenTitle](#chosentitle)                     | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [knownCurrencies](#knowncurrencies)             | BIGINT      | UNSIGNED | NO   |     | 0                 |       |                          |
+| [watchedFaction](#watchedfaction)               | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [drunk](#drunk)                                 | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [health](#health)                               | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power1](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power2](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power3](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power4](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power5](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power6](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [power7](#power)                                | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [latency](#latency)                             | INT         | UNSIGNED | YES  |     | 0                 |       |                          |
+| [talentGroupsCount](#talentgroupscount)         | TINYINT     | UNSIGNED | NO   |     | 1                 |       |                          |
+| [activeTalentGroup](#activetalentgroup)         | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [exploredZones](#exploredzones)                 | LONGTEXT    |          | YES  |     | NULL              |       |                          |
+| [equipmentCache](#equipmentcache)               | LONGTEXT    |          | YES  |     | NULL              |       |                          |
+| [ammoId](#ammoid)                               | INT         | UNSIGNED | NO   |     | 0                 |       |                          |
+| [knownTitles](#knowntitles)                     | LONGTEXT    |          | YES  |     | NULL              |       |                          |
+| [actionBars](#actionbars)                       | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [grantableLevels](#grantablelevels)             | TINYINT     | UNSIGNED | NO   |     | 0                 |       |                          |
+| [order](#order)                                 | TINYINT     |          | YES  |     | NULL              |       |                          |
+| [creation_date](#creationdate)                  | TIMESTAMP   |          | NO   |     | CURRENT_TIMESTAMP |       |                          |
+| [deleteInfos_Account](#deleteinfosaccount)      | INT         | UNSIGNED | YES  |     | NULL              |       |                          |
+| [deleteInfos_Name](#deleteinfosname)            | VARCHAR(12) |          | YES  |     | NULL              |       |                          |
+| [deleteDate](#deletedate)                       | INT         | UNSIGNED | YES  |     | NULL              |       |                          |
+| [innTriggerId](#inntriggerid)                   | INT         | UNSIGNED | NO   |     |                   |       |                          |
+| [extraBonusTalentCount](#extrabonustalentcount) | INT         |          | NO   |     | 0                 |       |                          |
   
-[1]: #guid
-[2]: #account
-[3]: #name
-[4]: #race
-[5]: #class
-[6]: #gender
-[7]: #level
-[8]: #xp
-[9]: #money
-[10]: #skin
-[11]: #face
-[12]: #hairstyle
-[13]: #haircolor
-[14]: #facialstyle
-[15]: #bankslots
-[16]: #reststate
-[17]: #playerflags
-[18]: #positionx
-[19]: #positiony
-[20]: #positionz
-[21]: #map
-[22]: #instanceid
-[23]: #instancemodemask
-[24]: #orientation
-[25]: #taximask
-[26]: #online
-[27]: #cinematic
-[28]: #totaltime
-[29]: #leveltime
-[30]: #logouttime
-[31]: #islogoutresting
-[32]: #restbonus
-[33]: #resettalentscost
-[34]: #resettalentstime
-[35]: #transx
-[36]: #transy
-[37]: #transz
-[38]: #transo
-[39]: #transguid
-[40]: #extraflags
-[41]: #stableslots
-[42]: #atlogin
-[43]: #zone
-[44]: #deathexpiretime
-[45]: #taxipath
-[46]: #arenapoints
-[47]: #totalhonorpoints
-[48]: #todayhonorpoints
-[49]: #yesterdayhonorpoints
-[50]: #totalkills
-[51]: #todaykills
-[52]: #yesterdaykills
-[53]: #chosentitle
-[54]: #knowncurrencies
-[55]: #watchedfaction
-[56]: #drunk
-[57]: #health
-[58]: #power
-[59]: #power
-[60]: #power
-[61]: #power
-[62]: #power
-[63]: #power
-[64]: #power
-[65]: #latency
-[66]: #talentgroupscount
-[67]: #activetalentgroup
-[68]: #exploredzones
-[69]: #equipmentcache
-[70]: #ammoid
-[71]: #knowntitles
-[72]: #actionbars
-[73]: #grantablelevels
-[74]: #order
-[75]: #creationdate
-[76]: #deleteinfosaccount
-[77]: #deleteinfosname
-[78]: #deletedate
-[79]: #inntriggerid
-[80]: #extrabonustalentcount
 
 **Description of the table's fields**
 
@@ -262,34 +182,34 @@ Number of bank bag slots the character has bought.
 
 A bitmask that represents what Player flags the player has. Each bit controls a different flag and to combine flags, you can add each flag that you want, in effect activating the respective bits.
 
-| Flag     |            | Name                          | Comment                                                                           |
-| -------- | ---------- | ----------------------------- | --------------------------------------------------------------------------------- |
-| 1        | 0x00000001 | PLAYER_FLAGS_GROUP_LEADER     |                                                                                   |
-| 2        | 0x00000002 | PLAYER_FLAGS_AFK              |                                                                                   |
-| 4        | 0x00000004 | PLAYER_FLAGS_DND              |                                                                                   |
-| 8        | 0x00000008 | PLAYER_FLAGS_GM               |                                                                                   |
-| 16       | 0x00000010 | PLAYER_FLAGS_GHOST            |                                                                                   |
-| 32       | 0x00000020 | PLAYER_FLAGS_RESTING          |                                                                                   |
-| 64       | 0x00000040 | PLAYER_FLAGS_UNK6             |                                                                                   |
-| 128      | 0x00000080 | PLAYER_FLAGS_UNK7             | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                             |
-| 256      | 0x00000100 | PLAYER_FLAGS_CONTESTED_PVP    | Player has been involved in a PvP combat and will be attacked by contested guards |
-| 512      | 0x00000200 | PLAYER_FLAGS_IN_PVP           |                                                                                   |
-| 1024     | 0x00000400 | PLAYER_FLAGS_HIDE_HELM        |                                                                                   |
-| 2048     | 0x00000800 | PLAYER_FLAGS_HIDE_CLOAK       |                                                                                   |
-| 4096     | 0x00001000 | PLAYER_FLAGS_PARTIAL_PLAY_TIME | played long time                                                                  |
-| 8192     | 0x00002000 | PLAYER_FLAGS_NO_PLAY_TIME     | played too long time                                                              |
-| 16384    | 0x00004000 | PLAYER_FLAGS_IS_OUT_OF_BOUNDS |                                                                                   |
-| 32768    | 0x00008000 | PLAYER_FLAGS_DEVELOPER        | prefix for something?                                                             |
-| 65536    | 0x00010000 | PLAYER_FLAGS_UNK16            | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                |
-| 131072   | 0x00020000 | PLAYER_FLAGS_TAXI_BENCHMARK   | taxi benchmark mode (on/off) (2.0.1)                                              |
-| 262144   | 0x00040000 | PLAYER_FLAGS_PVP_TIMER        | 3.0.2, pvp timer active (after you disable pvp manually)                          |
-| 524288   | 0x00080000 | PLAYER_FLAGS_UBER             |                                                                                   |
-| 1048576  | 0x00100000 | PLAYER_FLAGS_UNK20            |                                                                                   |
-| 2097152  | 0x00200000 | PLAYER_FLAGS_UNK21            |                                                                                   |
-| 4194304  | 0x00400000 | PLAYER_FLAGS_COMMENTATOR2     |                                                                                   |
-| 8388608  | 0x00800000 | PLAYER_ALLOW_ONLY_ABILITY     | used by bladestorm and killing spree                                              |
-| 16777216 | 0x01000000 | PLAYER_FLAGS_UNK24            | disabled all melee ability on tab include autoattack                              |
-| 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN       |                                                                                   |
+| Value    | Hex          | Flag                           | Comment                                                                                                                                                                                                                                                                        |
+| :------- | :----------: | :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1        | `0x00000001` | PLAYER_FLAGS_GROUP_LEADER      | The player is the leader of a group                                                                                                                                                                                                                                            |
+| 2        | `0x00000002` | PLAYER_FLAGS_AFK               | The player is away (AFK)                                                                                                                                                                                                                                                       |
+| 4        | `0x00000004` | PLAYER_FLAGS_DND               | The player is in Do Not Disturb mode                                                                                                                                                                                                                                           |
+| 8        | `0x00000008` | PLAYER_FLAGS_GM                | GM mode is on, the player shows the GM tag                                                                                                                                                                                                                                     |
+| 16       | `0x00000010` | PLAYER_FLAGS_GHOST             | The player is a ghost                                                                                                                                                                                                                                                          |
+| 32       | `0x00000020` | PLAYER_FLAGS_RESTING           | The player is resting (in an inn or a city)                                                                                                                                                                                                                                    |
+| 64       | `0x00000040` | PLAYER_FLAGS_UNK6              | Not used by the core. [TrinityCore](https://github.com/TrinityCore/TrinityCore/blob/3.3.5/src/server/game/Entities/Player/Player.h) names it PLAYER_FLAGS_VOICE_CHAT, [mangos](https://github.com/mangostwo/server/blob/master/src/game/Object/Player.h) guesses an admin flag |
+| 128      | `0x00000080` | PLAYER_FLAGS_UNK7              | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                                                                                                                                                                                                                          |
+| 256      | `0x00000100` | PLAYER_FLAGS_CONTESTED_PVP     | Player has been involved in a PvP combat and will be attacked by contested guards                                                                                                                                                                                              |
+| 512      | `0x00000200` | PLAYER_FLAGS_IN_PVP            | The player is flagged for PvP. [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h) names it PLAYER_FLAGS_PVP_DESIRED, the PvP choice of the player                                                                                       |
+| 1024     | `0x00000400` | PLAYER_FLAGS_HIDE_HELM         | The helm is hidden                                                                                                                                                                                                                                                             |
+| 2048     | `0x00000800` | PLAYER_FLAGS_HIDE_CLOAK        | The cloak is hidden                                                                                                                                                                                                                                                            |
+| 4096     | `0x00001000` | PLAYER_FLAGS_PARTIAL_PLAY_TIME | played long time                                                                                                                                                                                                                                                               |
+| 8192     | `0x00002000` | PLAYER_FLAGS_NO_PLAY_TIME      | played too long time                                                                                                                                                                                                                                                           |
+| 16384    | `0x00004000` | PLAYER_FLAGS_IS_OUT_OF_BOUNDS  | The player is outside the bounds of the map. Read by the client function IsOutOfBounds ([cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h))                                                                                             |
+| 32768    | `0x00008000` | PLAYER_FLAGS_DEVELOPER         | prefix for something?                                                                                                                                                                                                                                                          |
+| 65536    | `0x00010000` | PLAYER_FLAGS_UNK16             | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                                                                                                                                                                                                             |
+| 131072   | `0x00020000` | PLAYER_FLAGS_TAXI_BENCHMARK    | taxi benchmark mode (on/off) (2.0.1)                                                                                                                                                                                                                                           |
+| 262144   | `0x00040000` | PLAYER_FLAGS_PVP_TIMER         | 3.0.2, pvp timer active (after you disable pvp manually)                                                                                                                                                                                                                       |
+| 524288   | `0x00080000` | PLAYER_FLAGS_UBER              | The core does not let a player with this flag be attacked, like an arena spectator. [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h) names it PLAYER_FLAGS_COMMENTATOR                                                                |
+| 1048576  | `0x00100000` | PLAYER_FLAGS_UNK20             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos                                                                                                                                                                                                  |
+| 2097152  | `0x00200000` | PLAYER_FLAGS_UNK21             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos                                                                                                                                                                                                  |
+| 4194304  | `0x00400000` | PLAYER_FLAGS_COMMENTATOR2      | Commentator mode, set and read by the core with SetCommentator and IsCommentator. [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h) names it PLAYER_FLAGS_COMMENTATOR_UBER                                                             |
+| 8388608  | `0x00800000` | PLAYER_ALLOW_ONLY_ABILITY      | used by bladestorm and killing spree                                                                                                                                                                                                                                           |
+| 16777216 | `0x01000000` | PLAYER_FLAGS_UNK24             | disabled all melee ability on tab include autoattack                                                                                                                                                                                                                           |
+| 33554432 | `0x02000000` | PLAYER_FLAGS_NO_XP_GAIN        | The player turned off experience gain                                                                                                                                                                                                                                          |
 
 ### position\_x
 
@@ -315,12 +235,12 @@ The instance ID the character is currently in and bound to.
 
 The current dungeon difficulty that the player is in. This field is bitmask. Values are put together, however, only two of four should be used at once. This description may not be 100% correct.
 
-| Flag | Comment |
-| ---- | ------- |
-| 0    | Normal  |
-| 1    | Heroic  |
-| 16   | 10 man  |
-| 32   | 25 man  |
+| Value | Hex    | Flag   | Comment |
+| :---- | :----: | :----- | :------ |
+| 0     | `0x00` | Normal |         |
+| 1     | `0x01` | Heroic |         |
+| 16    | `0x10` | 10 man |         |
+| 32    | `0x20` | 25 man |         |
 
 ### orientation
 
@@ -390,19 +310,19 @@ The global unique identifier of the transport this character was on when they we
 
 These flags control certain player specific attributes, mostly GM features.
 
-| Flag |            | Name                           | Description                                         |
-| ---- | ---------- | ------------------------------ | --------------------------------------------------- |
-| 1    | 0x00000001 | PLAYER_EXTRA_GM_ON             | Defines GM state                                    |
-| 4    | 0x00000004 | PLAYER_EXTRA_ACCEPT_WHISPERS   | Defines if whispers are accepted                    |
-| 8    | 0x00000008 | PLAYER_EXTRA_TAXICHEAT         | Sets taxicheat                                      |
-| 16   | 0x00000010 | PLAYER_EXTRA_GM_INVISIBLE      | Defines GM visibility                               |
-| 32   | 0x00000020 | PLAYER_EXTRA_GM_CHAT           | Show GM badge in chat messages                      |
-| 64   | 0x00000040 | PLAYER_EXTRA_HAS_310_FLYER     | Marks if player already has 310% speed flying mount |
-| 128  | 0x00000080 | PLAYER_EXTRA_SPECTATOR_ON      | Marks if the player is an arena spectator           |
-| 256  | 0x00000100 | PLAYER_EXTRA_PVP_DEATH         | Store PvP death status until corpse creating        |
-| 1024 | 0x00000400 | PLAYER_EXTRA_SHOW_DK_PET       | Shows the ghoul on the character select screen      |
-| 2048 | 0x00000800 | PLAYER_EXTRA_GM_SPECTATOR      | GM is spectating                                    |
-| 4096 | 0x00001000 | PLAYER_EXTRA_DECLINE_GROUP_INVITES | The player declines all group invites           |
+| Value | Hex      | Flag                               | Comment                                             |
+| :---- | :------: | :--------------------------------- | :-------------------------------------------------- |
+| 1     | `0x0001` | PLAYER_EXTRA_GM_ON                 | Defines GM state                                    |
+| 4     | `0x0004` | PLAYER_EXTRA_ACCEPT_WHISPERS       | Defines if whispers are accepted                    |
+| 8     | `0x0008` | PLAYER_EXTRA_TAXICHEAT             | Sets taxicheat                                      |
+| 16    | `0x0010` | PLAYER_EXTRA_GM_INVISIBLE          | Defines GM visibility                               |
+| 32    | `0x0020` | PLAYER_EXTRA_GM_CHAT               | Show GM badge in chat messages                      |
+| 64    | `0x0040` | PLAYER_EXTRA_HAS_310_FLYER         | Marks if player already has 310% speed flying mount |
+| 128   | `0x0080` | PLAYER_EXTRA_SPECTATOR_ON          | Marks if the player is an arena spectator           |
+| 256   | `0x0100` | PLAYER_EXTRA_PVP_DEATH             | Store PvP death status until corpse creating        |
+| 1024  | `0x0400` | PLAYER_EXTRA_SHOW_DK_PET           | Shows the ghoul on the character select screen      |
+| 2048  | `0x0800` | PLAYER_EXTRA_GM_SPECTATOR          | GM is spectating                                    |
+| 4096  | `0x1000` | PLAYER_EXTRA_DECLINE_GROUP_INVITES | The player declines all group invites               |
 
 ### stable\_slots
 
@@ -412,16 +332,16 @@ The Stable Slots available (bought) at the Stable Master.
 
 This field is a bitmask controlling different actions taken once a player logs in with the character.
 
-| Flag |      | Name                       | Description                          |
-| ---- | ---- | -------------------------- | ------------------------------------ |
-| 1    | 0x01 | AT_LOGIN_RENAME            | Force character to change name       |
-| 2    | 0x02 | AT_LOGIN_RESET_SPELLS      | Reset spells (professions as well)   |
-| 4    | 0x04 | AT_LOGIN_RESET_TALENTS     | Reset talents                        |
-| 8    | 0x08 | AT_LOGIN_CUSTOMIZE         | Customize Characters                 |
-| 16   | 0x10 | AT_LOGIN_RESET_PET_TALENTS | Reset pet talents                    |
-| 32   | 0x20 | AT_LOGIN_FIRST             | Set at and removed after first login |
-| 64   | 0x40 | AT_LOGIN_CHANGE_FACTION    | Faction change                       |
-| 128  | 0x80 | AT_LOGIN_CHANGE_RACE       | Race change                          |
+| Value | Hex    | Flag                       | Comment                              |
+| :---- | :----: | :------------------------- | :----------------------------------- |
+| 1     | `0x01` | AT_LOGIN_RENAME            | Force character to change name       |
+| 2     | `0x02` | AT_LOGIN_RESET_SPELLS      | Reset spells (professions as well)   |
+| 4     | `0x04` | AT_LOGIN_RESET_TALENTS     | Reset talents                        |
+| 8     | `0x08` | AT_LOGIN_CUSTOMIZE         | Customize Characters                 |
+| 16    | `0x10` | AT_LOGIN_RESET_PET_TALENTS | Reset pet talents                    |
+| 32    | `0x20` | AT_LOGIN_FIRST             | Set at and removed after first login |
+| 64    | `0x40` | AT_LOGIN_CHANGE_FACTION    | Faction change                       |
+| 128   | `0x80` | AT_LOGIN_CHANGE_RACE       | Race change                          |
 
 For multiple actions, add values together.
 
@@ -557,12 +477,12 @@ so the 29bit stores the title. This would be 2 ^ 29 = 536870912. This bit store
 
 A bitmask that contains visible actionbars for the player.
 
-| Flag |            | Comment          |
-| ---- | ---------- | ---------------- |
-| 1    | 0x00000001 | Bottom Left Bar  |
-| 2    | 0x00000002 | Bottom Right Bar |
-| 4    | 0x00000004 | Rigth Bar        |
-| 8    | 0x00000008 | Right Bar 2      |
+| Value | Hex    | Flag             | Comment |
+| :---- | :----: | :--------------- | :------ |
+| 1     | `0x01` | Bottom Left Bar  |         |
+| 2     | `0x02` | Bottom Right Bar |         |
+| 4     | `0x04` | Rigth Bar        |         |
+| 8     | `0x08` | Right Bar 2      |         |
 
 ### grantableLevels
 

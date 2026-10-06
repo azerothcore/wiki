@@ -8,43 +8,25 @@ This table holds basic info about groups.
 
 **Table: groups's Structure**
 
-| Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]              | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [leaderGuid][2]        | INT     | UNSIGNED   | MUL | NO   |         |       |         |
-| [lootMethod][3]        | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [looterGuid][4]        | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [lootThreshold][5]     | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [icon1][6]             | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon2][7]             | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon3][8]             | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon4][9]             | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon5][10]            | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon6][11]            | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon7][12]            | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [icon8][13]            | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
-| [groupType][14]        | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [difficulty][15]       | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [raidDifficulty][16]   | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [masterLooterGuid][17] | INT     | UNSIGNED   |     | NO   |         |       |         |
-
-[1]: #guid
-[2]: #leaderguid
-[3]: #lootmethod
-[4]: #looterguid
-[5]: #lootthreshold
-[6]: #icon
-[7]: #icon
-[8]: #icon
-[9]: #icon
-[10]: #icon
-[11]: #icon
-[12]: #icon
-[13]: #icon
-[14]: #grouptype
-[15]: #difficulty
-[16]: #raiddifficulty
-[17]: #masterlooterguid
+| Field                                 | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)                         | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [leaderGuid](#leaderguid)             | INT     | UNSIGNED | NO   | MUL |         |       |         |
+| [lootMethod](#lootmethod)             | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [looterGuid](#looterguid)             | INT     | UNSIGNED | NO   |     |         |       |         |
+| [lootThreshold](#lootthreshold)       | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [icon1](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon2](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon3](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon4](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon5](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon6](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon7](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [icon8](#icon)                        | BIGINT  | UNSIGNED | NO   |     |         |       |         |
+| [groupType](#grouptype)               | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [difficulty](#difficulty)             | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [raidDifficulty](#raiddifficulty)     | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [masterLooterGuid](#masterlooterguid) | INT     | UNSIGNED | NO   |     |         |       |         |
 
 **Description of the table's fields**
 
@@ -81,14 +63,15 @@ The lowest item quality that is rolled for. See [item\_template.Quality](item_te
 
 ### groupType
 
-| Value | Name             | Comments                               |
-| ----- | ---------------- | -------------------------------------- |
-| 0     | GROUPTYPE_NORMAL |                                        |
-| 1     | GROUPTYPE_BG     |                                        |
-| 2     | GROUPTYPE_RAID   |                                        |
-| 3     | GROUPTYPE_BGRAID | GROUPTYPE_BG + GROUPTYPE_RAID, // mask |
-| 4     | GROUPTYPE_UNK1   |                                        |
-| 8     | GROUPTYPE_LFG    |                                        |
+| Value | Hex    | Flag                     | Comment                                                                                                                                                                                                                                                  |
+| :---- | :----: | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0     | `0x00` | GROUPTYPE_NORMAL         | Normal party                                                                                                                                                                                                                                             |
+| 1     | `0x01` | GROUPTYPE_BG             | Battleground group                                                                                                                                                                                                                                       |
+| 2     | `0x02` | GROUPTYPE_RAID           | Raid group                                                                                                                                                                                                                                               |
+| 3     | `0x03` | GROUPTYPE_BGRAID         | GROUPTYPE_BG + GROUPTYPE_RAID, // mask                                                                                                                                                                                                                   |
+| 4     | `0x04` | GROUPTYPE_LFG_RESTRICTED | Group with LFG restrictions                                                                                                                                                                                                                              |
+| 8     | `0x08` | GROUPTYPE_LFG            | Group made by the dungeon finder                                                                                                                                                                                                                         |
+| 16    | `0x10` | GROUP_FLAG_DESTROYED     | Not in the core. Named in [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Groups/Group.h); [WowPacketParser](https://github.com/TrinityCore/WowPacketParser/blob/master/WowPacketParser/Enums/GroupTypeFlag.cs) has it as unknown |
 
 ### difficulty
 

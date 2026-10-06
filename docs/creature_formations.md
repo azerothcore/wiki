@@ -57,18 +57,20 @@ Value must be >=0. If the value does not meet the condition the SQL will fail on
 
 Sets group member behaviors, values are:
 
-| Flag  | Bit | Name                                       | Comment                                                        |
-| ----- | --- | ------------------------------------------ | -------------------------------------------------------------- |
-|       | 0   |                                            | No one assists no one and member doesn't follow the leader     |
-| 0x001 | 1   | GROUP_AI_FLAG_MEMBER_ASSIST_LEADER         | The member aggroes if the leader aggroes                       |
-| 0x002 | 2   | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER         | The leader aggroes if the member aggroes                       |
-|       | 3   |                                            | Everyone assists everyone and member doesn't follow the leader |
-| 0x004 | 4   | GROUP_AI_FLAG_EVADE_TOGETHER               | Everyone evades if any member evades (enters evade mode)       |
-| 0x008 | 8   | GROUP_AI_FLAG_RESPAWN_ON_EVADE             | Everyone respawns if members evade    (enters evade mode)      |
-| 0x010 | 16  | GROUP_AI_FLAG_DONT_RESPAWN_LEADER_ON_EVADE | Used with flag 0x008 to prevent leader from respawning         |
-|       | 24  |                                            | Everyone but leader respawns if members evade                  |
-| 0x200 | 512 | GROUP_AI_FLAG_FOLLOW_LEADER                | Noone assists noone and member follow the leader               |
-|       | 515 |                                            | Everyone assists everyone and member follow the leader         |
+| Value | Hex     | Flag                                       | Comment                                                                                  |
+| :---- | :-----: | :----------------------------------------- | :--------------------------------------------------------------------------------------- |
+| 0     | `0x000` |                                            | No one assists no one and member doesn't follow the leader                               |
+| 1     | `0x001` | GROUP_AI_FLAG_MEMBER_ASSIST_LEADER         | The member aggroes if the leader aggroes                                                 |
+| 2     | `0x002` | GROUP_AI_FLAG_LEADER_ASSIST_MEMBER         | The leader aggroes if the member aggroes                                                 |
+| 3     | `0x003` | GROUP_AI_FLAG_ASSIST_MASK                  | Everyone assists everyone and member doesn't follow the leader                           |
+| 4     | `0x004` | GROUP_AI_FLAG_EVADE_TOGETHER               | Everyone evades if any member evades (enters evade mode)                                 |
+| 8     | `0x008` | GROUP_AI_FLAG_RESPAWN_ON_EVADE             | Everyone respawns if members evade    (enters evade mode)                                |
+| 12    | `0x00C` | GROUP_AI_FLAG_EVADE_MASK                   | Everyone evades and respawns together                                                    |
+| 16    | `0x010` | GROUP_AI_FLAG_DONT_RESPAWN_LEADER_ON_EVADE | Used with flag 0x008 to prevent leader from respawning                                   |
+| 24    | `0x018` |                                            | Everyone but leader respawns if members evade                                            |
+| 32    | `0x020` | GROUP_AI_FLAG_ACQUIRE_NEW_TARGET_ON_EVADE  | A member that would evade takes a new target from the other members of the group instead |
+| 512   | `0x200` | GROUP_AI_FLAG_FOLLOW_LEADER                | Noone assists noone and member follow the leader                                         |
+| 515   | `0x203` |                                            | Everyone assists everyone and member follow the leader                                   |
 
 ### point\_1
 

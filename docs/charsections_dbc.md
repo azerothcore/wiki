@@ -62,10 +62,10 @@ Client texture file paths for this section. Not used by the core.
 
 CharSectionFlags, a bitmask.
 
-| Flag | Bit Value | Comment           |
-| ---- | --------- | ----------------- |
-| 1    | 0x01      | Player            |
-| 4    | 0x04      | Death Knight      |
+| Value | Hex    | Flag         | Comment |
+| :---- | :----: | :----------- | :------ |
+| 1     | `0x01` | Player       |         |
+| 4     | `0x04` | Death Knight |         |
 
 ### VariationIndex
 

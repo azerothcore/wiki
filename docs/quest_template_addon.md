@@ -8,26 +8,26 @@ Contains extra definitions like linking quests, dependencies and requirements fo
 
 **Table: quest\_template\_addon's Structure**
 
-| Field                                           | Type      | Attributes | Key | Null | Default | Extra | Comment                               |
-| ----------------------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
-| [ID](#id)                                       | INT       | UNSIGNED   | PRI | NO   | 0       |       | Unique ID linked to quest_template.ID |
-| [MaxLevel](#maxlevel)                           | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [AllowableClasses](#allowableclasses)           | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [SourceSpellID](#sourcespellid)                 | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [PrevQuestID](#prevquestid)                     | INT       | SIGNED     |     | NO   | 0       |       |                                       |
-| [NextQuestID](#nextquestid)                     | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [ExclusiveGroup](#exclusivegroup)               | INT       | SIGNED     |     | NO   | 0       |       |                                       |
-| [BreadcrumbForQuestId](#breadcrumbforquestid)   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RewardMailTemplateID](#rewardmailtemplateid)   | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RewardMailDelay](#rewardmaildelay)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RequiredSkillID](#requiredskillid)             | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RequiredSkillPoints](#requiredskillpoints)     | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RequiredMinRepFaction](#requiredminrepfaction) | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RequiredMaxRepFaction](#requiredmaxrepfaction) | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RequiredMinRepValue](#requiredminrepvalue)     | INT       | SIGNED     |     | NO   | 0       |       |                                       |
-| [RequiredMaxRepValue](#requiredmaxrepvalue)     | INT       | SIGNED     |     | NO   | 0       |       |                                       |
-| [ProvidedItemCount](#provideditemcount)         | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [SpecialFlags](#specialflags)                   | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
+| Field                                           | Type      |          | Null | Key | Default | Extra | Comment                               |
+| :---------------------------------------------- | :-------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------ |
+| [ID](#id)                                       | INT       | UNSIGNED | NO   | PRI | 0       |       | Unique ID linked to quest_template.ID |
+| [MaxLevel](#maxlevel)                           | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                       |
+| [AllowableClasses](#allowableclasses)           | INT       | UNSIGNED | NO   |     | 0       |       |                                       |
+| [SourceSpellID](#sourcespellid)                 | INT       | UNSIGNED | NO   |     | 0       |       |                                       |
+| [PrevQuestID](#prevquestid)                     | INT       |          | NO   |     | 0       |       |                                       |
+| [NextQuestID](#nextquestid)                     | INT       | UNSIGNED | NO   |     | 0       |       |                                       |
+| [ExclusiveGroup](#exclusivegroup)               | INT       |          | NO   |     | 0       |       |                                       |
+| [BreadcrumbForQuestId](#breadcrumbforquestid)   | MEDIUMINT | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RewardMailTemplateID](#rewardmailtemplateid)   | INT       | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RewardMailDelay](#rewardmaildelay)             | INT       | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RequiredSkillID](#requiredskillid)             | SMALLINT  | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RequiredSkillPoints](#requiredskillpoints)     | SMALLINT  | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RequiredMinRepFaction](#requiredminrepfaction) | SMALLINT  | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RequiredMaxRepFaction](#requiredmaxrepfaction) | SMALLINT  | UNSIGNED | NO   |     | 0       |       |                                       |
+| [RequiredMinRepValue](#requiredminrepvalue)     | INT       |          | NO   |     | 0       |       |                                       |
+| [RequiredMaxRepValue](#requiredmaxrepvalue)     | INT       |          | NO   |     | 0       |       |                                       |
+| [ProvidedItemCount](#provideditemcount)         | TINYINT   | UNSIGNED | NO   |     | 0       |       |                                       |
+| [SpecialFlags](#specialflags)                   | INT       | UNSIGNED | NO   |     | 0       |       |                                       |
 
 **Description of the table's fields**
 
@@ -119,15 +119,15 @@ Number of items given to the player (inserted in the player's bags) upon accepti
 
 This field is a bitmask and is for controlling server side quest functions. Blizzard keeps these data server-side and they are not sent to the client, so we have to populate the field manually.
 
-| Flag                                      | Value | Description                                                                                                                                                                                                                              |
-| ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| QUEST_SPECIAL_FLAGS_NONE                  | 0     | No extra requirements.                                                                                                                                                                                                                   |
-| QUEST_SPECIAL_FLAGS_REPEATABLE            | 1     | Makes the quest repeatable.                                                                                                                                                                                                              |
-| QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT  | 2     | Makes the quest only completable by some external event (an entry in [areatrigger_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell_scripts](scripts) with command 7 as some examples). |
-| QUEST_SPECIAL_FLAGS_AUTO_ACCEPT           | 4     | Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.                                                                                                                                               |
-| QUEST_SPECIAL_FLAGS_DF_QUEST              | 8     | Only used for Dungeon Finder quests.                                                                                                                                                                                                     |
-| QUEST_SPECIAL_FLAGS_MONTHLY               | 16    | Makes the quest monthly.                                                                                                                                                                                                                 |
-| QUEST_SPECIAL_FLAGS_CAST                  | 32    | The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.                                                                                 |
-| QUEST_SPECIAL_FLAGS_NO_REP_SPILLOVER      | 64    | Makes quest not share rewarded reputation with other allied factions.                                                                                                                                                                    |
-| QUEST_SPECIAL_FLAGS_CAN_FAIL_IN_ANY_STATE | 128   | Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed. quests that are 'completed' right from the beginning.                                                                             |
-| QUEST_SPECIAL_FLAGS_NO_LOREMASTER_COUNT   | 256   | This quest shouldn't count towards the Loremaster Achivement.                                                                                                                                                                            |
+| Value | Hex      | Flag                                      | Comment                                                                                                                                                                                                                                  |
+| :---- | :------: | :---------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0     | `0x0000` | QUEST_SPECIAL_FLAGS_NONE                  | No extra requirements.                                                                                                                                                                                                                   |
+| 1     | `0x0001` | QUEST_SPECIAL_FLAGS_REPEATABLE            | Makes the quest repeatable.                                                                                                                                                                                                              |
+| 2     | `0x0002` | QUEST_SPECIAL_FLAGS_EXPLORATION_OR_EVENT  | Makes the quest only completable by some external event (an entry in [areatrigger_involvedrelation](areatrigger_involvedrelation), spell effect quest complete or an entry in [spell_scripts](scripts) with command 7 as some examples). |
+| 4     | `0x0004` | QUEST_SPECIAL_FLAGS_AUTO_ACCEPT           | Make quest auto-accept. As of patch 3.3.5a only quests in the starter area need this flag.                                                                                                                                               |
+| 8     | `0x0008` | QUEST_SPECIAL_FLAGS_DF_QUEST              | Only used for Dungeon Finder quests.                                                                                                                                                                                                     |
+| 16    | `0x0010` | QUEST_SPECIAL_FLAGS_MONTHLY               | Makes the quest monthly.                                                                                                                                                                                                                 |
+| 32    | `0x0020` | QUEST_SPECIAL_FLAGS_CAST                  | The quest requires RequiredOrNpcGo killcredit (a spell cast), but NOT an actual NPC kill. This action usually involves killing an invisible "bunny" NPC.                                                                                 |
+| 64    | `0x0040` | QUEST_SPECIAL_FLAGS_NO_REP_SPILLOVER      | Makes quest not share rewarded reputation with other allied factions.                                                                                                                                                                    |
+| 128   | `0x0080` | QUEST_SPECIAL_FLAGS_CAN_FAIL_IN_ANY_STATE | Allows quest to fail in Player::FailQuest() independant of its current state, e.g. relevant for timed. quests that are 'completed' right from the beginning.                                                                             |
+| 256   | `0x0100` | QUEST_SPECIAL_FLAGS_NO_LOREMASTER_COUNT   | This quest shouldn't count towards the Loremaster Achivement.                                                                                                                                                                            |

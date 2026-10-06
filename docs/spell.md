@@ -256,12 +256,12 @@ These values are used by the core and a few spell\_\* tables.
 
 ## **Category**
 
-| ID  | Description   |
-| --- | ------------- |
-| 0   | Default       |
-| 1   | Summon guards |
-| 2   | Entry         |
-| 4   | Entry         |
+| Value | Hex  | Flag          | Comment |
+| :---- | :--: | :------------ | :------ |
+| 0     | 0x00 | Default       |         |
+| 1     | 0x01 | Summon guards |         |
+| 2     | 0x02 | Entry         |         |
+| 4     | 0x04 | Entry         |         |
 
 ## **powerType**
 

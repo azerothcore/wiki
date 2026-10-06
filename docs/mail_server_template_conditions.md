@@ -10,13 +10,13 @@ Note: Entries in this table will be deleted automatically when the referenced en
 
 **Table: mail\_server\_template\_conditions's Structure**
 
-| Field                            | Type | Attributes                                                                  | Key | Null | Default | Extra          | Comment |
-| -------------------------------- | ---- | --------------------------------------------------------------------------- | --- | ---- | ------- | -------------- | ------- |
-| [id](#id)                        | INT  | UNSIGNED                                                                    | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templateID](#templateid)        | INT  | UNSIGNED                                                                    | MUL | NO   |         |                |         |
-| [conditionType](#conditiontype)  | ENUM | Level,PlayTime,Quest,Achievement,Reputation,Faction,Race,Class,AccountFlags |     | NO   |         |                |         |
-| [conditionValue](#conditiontype) | INT  | UNSIGNED                                                                    |     | NO   |         |                |         |
-| [conditionState](#conditiontype) | INT  | UNSIGNED                                                                    |     | NO   | 0       |                |         |
+| Field                            | Type |                                                                             | Null | Key | Default | Extra          | Comment |
+| :------------------------------- | :--- | :-------------------------------------------------------------------------- | :--: | :-: | :-----: | :------------: | :------ |
+| [id](#id)                        | INT  | UNSIGNED                                                                    | NO   | PRI |         | AUTO_INCREMENT |         |
+| [templateID](#templateid)        | INT  | UNSIGNED                                                                    | NO   | MUL |         |                |         |
+| [conditionType](#conditiontype)  | ENUM | Level,PlayTime,Quest,Achievement,Reputation,Faction,Race,Class,AccountFlags | NO   |     |         |                |         |
+| [conditionValue](#conditiontype) | INT  | UNSIGNED                                                                    | NO   |     |         |                |         |
+| [conditionState](#conditiontype) | INT  | UNSIGNED                                                                    | NO   |     | 0       |                |         |
 
 **Description of the table's fields**
 
@@ -52,17 +52,17 @@ The state the condition checks, see the table in [conditionType](#conditiontype)
 
 #### AccountFlags values
 
-| Flag                            | Value      | Description                         |
-| ------------------------------- | ---------- | ------------------------------------ |
-| ACCOUNT_FLAG_GM                 | 0x1        | Account is GM                        |
-| ACCOUNT_FLAG_COLLECTOR          | 0x4        | Collector's Edition                  |
-| ACCOUNT_FLAG_TRIAL              | 0x8        | Trial account                        |
-| ACCOUNT_FLAG_IGR                | 0x20       | Internet Game Room                   |
-| ACCOUNT_FLAG_REFERRAL           | 0x800      | Recruit-A-Friend                     |
-| ACCOUNT_FLAG_EXPANSION_COLLECTOR | 0x10000   | TBC Collector's Edition              |
-| ACCOUNT_FLAG_DISABLE_VOICE      | 0x20000    | Cannot join voice chat               |
-| ACCOUNT_FLAG_DISABLE_VOICE_SPEAK | 0x40000   | Cannot speak in voice chat           |
-| ACCOUNT_FLAG_REFERRAL_RESURRECT | 0x80000    | Scroll of Resurrection               |
-| ACCOUNT_FLAG_EXPANSION2_COLLECTOR | 0x4000000 | WotLK Collector's Edition           |
-| ACCOUNT_FLAG_OVERMIND_LINKED    | 0x8000000  | Linked with Battle.net               |
-| ACCOUNT_FLAG_DEATH_KNIGHT_OK    | 0x20000000 | Has a level 55+ character on account |
+| Value     | Hex          | Flag                              | Comment                              |
+| :-------- | :----------: | :-------------------------------- | :----------------------------------- |
+| 1         | `0x00000001` | ACCOUNT_FLAG_GM                   | Account is GM                        |
+| 4         | `0x00000004` | ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                  |
+| 8         | `0x00000008` | ACCOUNT_FLAG_TRIAL                | Trial account                        |
+| 32        | `0x00000020` | ACCOUNT_FLAG_IGR                  | Internet Game Room                   |
+| 2048      | `0x00000800` | ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend                     |
+| 65536     | `0x00010000` | ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition              |
+| 131072    | `0x00020000` | ACCOUNT_FLAG_DISABLE_VOICE        | Cannot join voice chat               |
+| 262144    | `0x00040000` | ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Cannot speak in voice chat           |
+| 524288    | `0x00080000` | ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection               |
+| 67108864  | `0x04000000` | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition            |
+| 134217728 | `0x08000000` | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net               |
+| 536870912 | `0x20000000` | ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Has a level 55+ character on account |

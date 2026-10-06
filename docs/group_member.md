@@ -8,19 +8,13 @@ This table holds info about group members.
 
 **Table: group\_member's Structure**
 
-| Field            | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [memberGuid][2]  | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [subgroup][4]    | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-
-[1]: #guid
-[2]: #memberguid
-[3]: #memberflags
-[4]: #subgroup
-[5]: #roles
+| Field                       | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)               | INT     | UNSIGNED | NO   |     |         |       |         |
+| [memberGuid](#memberguid)   | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [memberFlags](#memberflags) | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [subgroup](#subgroup)       | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [roles](#roles)             | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
 
 **Description of the table's fields**
 
@@ -34,11 +28,11 @@ GUID of the character member of the group. See [characters.guid](characters#guid
 
 ### memberFlags
 
-| Name                   | Value | Unique |
-| ---------------------- | ----- | ------ |
-| MEMBER_FLAG_ASSISTANT  | 0x01  |        |
-| MEMBER_FLAG_MAINTANK   | 0x02  | (U)    |
-| MEMBER_FLAG_MAINASSIST | 0x04  | (U)    |
+| Value | Hex    | Flag                   | Unique |
+| :---- | :----: | :--------------------- | :----- |
+| 1     | `0x01` | MEMBER_FLAG_ASSISTANT  |        |
+| 2     | `0x02` | MEMBER_FLAG_MAINTANK   | (U)    |
+| 4     | `0x04` | MEMBER_FLAG_MAINASSIST | (U)    |
 
 *(U) = Unique per group.*
 
@@ -49,10 +43,10 @@ There can only be 5 membes in one subgroup per raid group.
 
 ### roles
 
-| Value | Name        | Comments                                                         |
-| ----- | ----------- | ---------------------------------------------------------------- |
-| 0     | ROLE_NONE   |                                                                  |
-| 1     | ROLE_LEADER | The character has signed to Random Dungeon Finder as experienced |
-| 2     | ROLE_TANK   | The character has signed to Random Dungeon Finder as tank        |
-| 4     | ROLE_HEALER | The character has signed to Random Dungeon Finder as healer      |
-| 8     | ROLE_DAMAGE | The character has signed to Random Dungeon Finder as dps         |
+| Value | Hex    | Flag        | Comment                                                          |
+| :---- | :----: | :---------- | :--------------------------------------------------------------- |
+| 0     | `0x00` | ROLE_NONE   | No role                                                          |
+| 1     | `0x01` | ROLE_LEADER | The character has signed to Random Dungeon Finder as experienced |
+| 2     | `0x02` | ROLE_TANK   | The character has signed to Random Dungeon Finder as tank        |
+| 4     | `0x04` | ROLE_HEALER | The character has signed to Random Dungeon Finder as healer      |
+| 8     | `0x08` | ROLE_DAMAGE | The character has signed to Random Dungeon Finder as dps         |
