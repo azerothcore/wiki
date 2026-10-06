@@ -1113,9 +1113,43 @@ body > .wrapper .sidebar-wrapper li.sidebar-fold ol {
   list-style-type: decimal;
 }
 
-body > .wrapper .sidebar-wrapper li.sidebar-fold ul,
-body > .wrapper .sidebar-wrapper ul ul {
-  list-style-type: disc;
+body > .wrapper .sidebar-wrapper ul > li:not(.sidebar-fold) {
+  list-style: none;
+  margin-left: -1.2em;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary {
+  list-style: none;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Dot and fold arrow drawn at the same size and position */
+body > .wrapper .sidebar-wrapper ul > li:not(.sidebar-fold)::before,
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-right: 0.6em;
+  vertical-align: 0.05em;
+  background: currentColor;
+}
+
+body > .wrapper .sidebar-wrapper ul > li:not(.sidebar-fold)::before {
+  border-radius: 50%;
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details > summary::before {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+body > .wrapper .sidebar-wrapper li.sidebar-fold > details[open] > summary::before {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 body > .wrapper .sidebar-wrapper li.sidebar-fold li {
@@ -1490,4 +1524,54 @@ body > .wrapper #git-wiki-content .cmd-list table td:last-child {
   position: absolute;
   right: 10px;
   top: 8px;
+}
+
+/* Letter headings inside a folded list get the same line as the h2 letter headings */
+body > .wrapper #git-wiki-content details h3 {
+  border-bottom: 2px solid #b4bac1;
+  padding-bottom: 0.3em;
+}
+
+/* DBC Index bullets */
+body > .wrapper li.dbc-columns,
+body > .wrapper li.dbc-documented,
+body > .wrapper li:has(> a[title="Columns only"]),
+body > .wrapper li:has(> a[title="Documented"]) {
+  list-style: none;
+}
+body > .wrapper li.dbc-columns::before,
+body > .wrapper li.dbc-documented::before,
+body > .wrapper li:has(> a[title="Columns only"])::before,
+body > .wrapper li:has(> a[title="Documented"])::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: -1.2em;
+  margin-right: 0.6em;
+  vertical-align: 0.05em;
+  background: currentColor;
+  border-radius: 50%;
+}
+body > .wrapper li.dbc-columns::before,
+body > .wrapper li:has(> a[title="Columns only"])::before {
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  transform: scale(1.35);
+}
+body > .wrapper ul.dbc-legend {
+  margin-bottom: 1em;
+}
+body > .wrapper .hide-columns-only li:has(> a[title="Columns only"]),
+body > .wrapper .hide-columns-only h2:has(+ ul):not(:has(+ ul a[title="Documented"])),
+body > .wrapper .hide-columns-only h2 + ul:not(.dbc-legend):not(:has(a[title="Documented"])) {
+  display: none;
+}
+
+/* Hex values in the centred column of flag tables stay on one line */
+body > .wrapper #git-wiki-content td[align="center"] > code,
+body > .wrapper #git-wiki-content td[style*="center"] > code {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
 }

@@ -72,6 +72,7 @@
                             <li><a href="/wiki/getting-started">Getting Started</a></li>
                             <li><a href="/wiki/gm-commands">GM Commands</a></li>
                             <li><a href="/wiki/guide-to-triaging">Guide to Triaging</a></li>
+                            <li><a href="/wiki/hitinfo-reference">HitInfo Reference</a></li>
                             <li><a href="/wiki/how-to-restart-and-debug">How to Debug and Restart</a></li>
                             <li><a href="/wiki/how-to-use-warden-payload-mgr">How to Use Warden Payload Manager</a></li>
                             <li><a href="/wiki/how-to-work-with-conf-files">How to work with Conf Files</a></li>
@@ -308,7 +309,8 @@
 </script>
 <script>
 /* Arrow button that hides or shows the sidebar on wide screens.
-   A page with "sidebar: collapsed" in its front matter starts with it hidden. */
+   A page with "sidebar: collapsed" in its front matter starts with it hidden,
+   and so do database table pages and DBC pages that have more than the column list. */
 (function () {
     var KEY = "ac-sidebar:" + location.pathname, startHidden = {% if page.sidebar == "collapsed" %}true{% else %}false{% endif %};
     function saved() { try { return sessionStorage.getItem(KEY); } catch (e) { return null; } }
@@ -320,8 +322,16 @@
             btn.setAttribute("aria-label", btn.title);
         }
     }
+    function documented() {
+        var c = document.getElementById("git-wiki-content"), back = c && c.querySelector("p > a");
+        if (!back || back.textContent.indexOf("Back-to") < 0) return false;
+        var href = back.getAttribute("href") || "";
+        if (/database-(auth|characters|world)$/.test(href)) return true;
+        return /dbc-index$/.test(href)
+            && (!!c.querySelector("details, h2, h3, h4") || c.querySelectorAll("table").length > 1);
+    }
     function init() {
-        var s = saved(), hidden = s === null ? startHidden : s === "1";
+        var s = saved(), hidden = s === null ? startHidden || documented() : s === "1";
         var btn = document.createElement("button");
         btn.type = "button"; btn.id = "sidebar-fold";
         btn.addEventListener("click", function () {
@@ -358,5 +368,43 @@
         setTimeout(hide, 60000);
     }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", show); else show();
+})();
+</script>
+<script>
+/* Remembers, for the browser session, which folds are open on a page and whether the diamond pages are hidden. */
+(function () {
+    var KEY = "ac-folds:" + location.pathname, HIDE = "ac-hide-columns-only";
+    function get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+    function set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+    function init() {
+        var c = document.getElementById("git-wiki-content");
+        if (!c) return;
+        var folds = Array.prototype.slice.call(c.querySelectorAll("details")), saved = get(KEY);
+        if (saved !== null && saved.length === folds.length && !location.hash) {
+            folds.forEach(function (d, i) { d.open = saved.charAt(i) === "1"; });
+            var all = folds.every(function (d) { return d.open; });
+            c.querySelectorAll(".details-toggle:not([data-hide-columns])").forEach(function (b) {
+                b.textContent = all ? "Collapse all" : "Expand all";
+            });
+        }
+        folds.forEach(function (d) {
+            d.addEventListener("toggle", function () {
+                set(KEY, folds.map(function (f) { return f.open ? "1" : "0"; }).join(""));
+            });
+        });
+        var btn = c.querySelector("[data-hide-columns]");
+        if (!btn) return;
+        function apply(hide) {
+            c.classList.toggle("hide-columns-only", hide);
+            btn.textContent = hide ? "Show all pages" : "Hide diamond pages";
+        }
+        apply(get(HIDE) === "1");
+        btn.addEventListener("click", function () {
+            var hide = !c.classList.contains("hide-columns-only");
+            set(HIDE, hide ? "1" : "0");
+            apply(hide);
+        });
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();
 </script>

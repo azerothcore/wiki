@@ -27,7 +27,17 @@ LOG_DIR = Path(__file__).resolve().parent / "logs"
 DOCS = Path(__file__).resolve().parent.parent / "docs"
 # A back link is a line that holds nothing but the link.
 BACK_LINK = re.compile(r"(?m)^\[[^\]]+\]\(database-(%s)\)\s*$" % "|".join(DATABASES))
-ENTRY = re.compile(r"^- \[([^\]]+)\]\(([^)]+)\)\s*$")
+ENTRY = re.compile(r'^[-*] \[([^\]]+)\]\(([^)\s]+)(?: "[^"]*")?\)\s*$')
+# Link title in the lists of a page that only has column names and types (shown with a diamond).
+COLUMNS_ONLY = "Columns only"
+# Link title of a page with comments, descriptions or content (shown with a dot).
+DOCUMENTED = "Documented"
+# A row of the structure table with something in its last (Comment) column.
+COMMENT = re.compile(r"^\| *(\d+|\[[^\]]+\]\(#[^)]*\)) *\|.*\| *[^|\s:-][^|]*\|\s*$")
+# Language notes and links to other DBC files do not count as documentation.
+LOCALE_NOTE = re.compile(r"\| *(Assumed |Unknown language|ID in \[|Race mask|Class mask|Bitmask of )[^|]*\|\s*$")
+SECTION = re.compile(r"^(#{2,4} |<details|\*\*.+\*\*\s*$)")
+LETTER = re.compile(r"(#{2,4}) (\w)")
 
 
 def read(path):
@@ -52,32 +62,44 @@ def table_pages(folder):
     return pages
 
 
-def insert_sorted(lines, first, last, name):
+def insert_sorted(lines, first, last, label, target, bullet):
     position = last
     while position > first and not ENTRY.match(lines[position - 1]):
         position -= 1
     for i in range(first, last):
         entry = ENTRY.match(lines[i])
-        if entry and entry.group(1).lower() > name.lower():
+        if entry and entry.group(1).lower() > label.lower():
             position = i
             break
-    lines.insert(position, f"- [{name}]({name})")
+    lines.insert(position, f"{bullet} [{label}]({target})")
 
 
-def add_to_list(lines, name):
-    """Uses the "## A" letter headings when the page has them, else one flat list."""
-    headings = [(i, l[3:].strip()) for i, l in enumerate(lines) if re.fullmatch(r"## \w", l.strip())]
-    if not headings:
-        entries = [i for i, l in enumerate(lines) if ENTRY.match(l)]
-        insert_sorted(lines, entries[0], entries[-1] + 1, name)
-        return
-    letter = name[0].upper()
-    start = next((i for i, h in headings if h == letter), None)
+def add_to_list(lines, first, last, label, target, bullet="-"):
+    """Adds the entry between first and last, under its letter heading when the list has them.
+
+    Returns how many lines were added."""
+    before = len(lines)
+    heads = [(i, m.group(1), m.group(2)) for i in range(first, last)
+             for m in [LETTER.fullmatch(lines[i].strip())] if m]
+    if not heads:
+        insert_sorted(lines, first, last, label, target, bullet)
+        return len(lines) - before
+    marks, letter = heads[0][1], label[0].upper()
+    start = next((i for i, _, h in heads if h == letter), None)
     if start is None:
-        start = next((i for i, h in headings if h > letter), len(lines))
-        lines[start:start] = [f"## {letter}", ""]
-    end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
-    insert_sorted(lines, start + 1, end, name)
+        start = next((i for i, _, h in heads if h > letter), None)
+        if start is None:
+            start = last
+            while start > first and not ENTRY.match(lines[start - 1]):
+                start -= 1
+            lines[start:start] = ["", f"{marks} {letter}"]
+            start += 1
+        else:
+            lines[start:start] = [f"{marks} {letter}", ""]
+        last += 2
+    end = next((i for i in range(start + 1, last) if LETTER.fullmatch(lines[i].strip())), last)
+    insert_sorted(lines, start + 1, end, label, target, bullet)
+    return len(lines) - before
 
 
 def update_database_page(folder, db, names, check):
@@ -91,7 +113,7 @@ def update_database_page(folder, db, names, check):
             print(f"  warning: {path.relative_to(DOCS)} links to '{target}', which has no page")
     missing = [n for n in names if n not in listed]
     for name in missing:
-        add_to_list(lines, name)
+        add_to_list(lines, 0, len(lines), name, name)
     if missing and not check:
         write(path, lines, newline, bom)
     return missing
@@ -107,11 +129,10 @@ def update_index(folder, pages, check):
         start = next(i for i, l in enumerate(lines) if l.strip() == f"## {title}")
         end = next(i for i in range(start, len(lines)) if lines[i].strip() == "</details>")
         listed = {m.group(2) for m in map(ENTRY.match, lines[start:end]) if m}
-        first = next(i for i in range(start, end) if ENTRY.match(lines[i]))
+        first = next(i for i in range(start, end) if ENTRY.match(lines[i]) or LETTER.fullmatch(lines[i].strip()))
         for name in pages[db]:
             if name not in listed:
-                insert_sorted(lines, first, end, name)
-                end += 1
+                end += add_to_list(lines, first, end, name, name)
                 added.append(f"{title}: {name}")
     if added and not check:
         write(path, lines, newline, bom)
@@ -123,9 +144,9 @@ def update_dbc_index(folder, check):
     if not path.exists():
         return []
     lines, newline, bom = read(path)
-    entry = re.compile(r"^[*-] \[([^\]]+)\]\(([^)]+)\)\s*$")
-    rows = [i for i, l in enumerate(lines) if entry.match(l)]
-    listed = {entry.match(lines[i]).group(2) for i in rows}
+    rows = [i for i, l in enumerate(lines) if ENTRY.match(l)]
+    listed = {ENTRY.match(lines[i]).group(2) for i in rows}
+    bullet = lines[rows[0]][0]
     back_link = re.compile(r"(?m)^\[[^\]]+\]\(%s\)\s*$" % re.escape(path.stem))
     added = []
     for page in sorted(folder.glob("*.md")):
@@ -134,13 +155,65 @@ def update_dbc_index(folder, check):
             continue
         title = next((l[2:].strip() for l in head if l.startswith("# ")), page.stem)
         title = re.sub(r"\.dbc$", "", title.replace("\\", ""))
-        position = next((i for i in rows if entry.match(lines[i]).group(1).lower() > title.lower()), rows[-1] + 1)
-        lines.insert(position, f"{lines[rows[0]][0]} [{title}]({page.stem})")
-        rows = [i for i, l in enumerate(lines) if entry.match(l)]
+        add_to_list(lines, rows[0], len(lines), title, page.stem, bullet)
         added.append(page.stem)
     if added and not check:
         write(path, lines, newline, bom)
     return added
+
+
+def documented(text, dbc):
+    if any(COMMENT.match(l) and not LOCALE_NOTE.search(l) for l in text):
+        return True
+    if dbc:
+        return sum(1 for l in text if SECTION.match(l)) > 2
+    end = next((i for i, l in enumerate(text) if l.startswith("|")), 3)
+    while end < len(text) and text[end].startswith("|"):
+        end += 1
+    return any(l.strip() and not l.startswith(("#", "**", "<")) for l in text[end:])
+
+
+def update_marks(folder, name, check):
+    """Sets the link title that draws a dot (documented) or a diamond (columns only)."""
+    path = folder / name
+    if not path.exists():
+        return []
+    lines, newline, bom = read(path)
+    changed = []
+    for i, line in enumerate(lines):
+        entry = ENTRY.match(line)
+        page = folder / f"{entry.group(2)}.md" if entry else None
+        if not page or not page.exists():
+            continue
+        mark = DOCUMENTED if documented(read(page)[0], name == DBC_INDEX_PAGE) else COLUMNS_ONLY
+        new = f'{line[0]} [{entry.group(1)}]({entry.group(2)} "{mark}")'
+        if new != line:
+            lines[i] = new
+            changed.append(f"{entry.group(2)} marked as {'columns only' if mark == COLUMNS_ONLY else 'documented'}")
+    if changed and not check:
+        write(path, lines, newline, bom)
+    return changed
+
+
+def update_dbc_count(folder, check):
+    """Keeps the "246 DBC files" number on the two index pages equal to the DBC Index list."""
+    index = folder / DBC_INDEX_PAGE
+    if not index.exists():
+        return []
+    count = sum(1 for l in read(index)[0] if ENTRY.match(l))
+    changed = []
+    for name in (DBC_INDEX_PAGE, INDEX_PAGE):
+        path = folder / name
+        if not path.exists():
+            continue
+        lines, newline, bom = read(path)
+        text = newline.join(lines)
+        new = re.sub(r"\b\d+( client)? DBC files", lambda m: f"{count}{m.group(1) or ''} DBC files", text)
+        if new != text:
+            changed.append(f"{name[:-3]}: number of DBC files set to {count}")
+            if not check:
+                write(path, new.split(newline), newline, bom)
+    return changed
 
 
 def parse_arguments():
@@ -177,6 +250,11 @@ def main():
             entries.append(f"[{label}] {INDEX_PAGE[:-3]} ({title}): {word} - [{name}]({name})")
         for name in update_dbc_index(folder, check):
             entries.append(f"[{label}] {DBC_INDEX_PAGE[:-3]}: {word} {name}")
+        for name in [DBC_INDEX_PAGE, INDEX_PAGE] + [f"database-{db}.md" for db in DATABASES]:
+            for line in update_marks(folder, name, check):
+                entries.append(f"[{label}] {name[:-3]}: {line}")
+        for line in update_dbc_count(folder, check):
+            entries.append(f"[{label}] {line}")
     for entry in entries:
         print("  " + entry)
     if not entries:
