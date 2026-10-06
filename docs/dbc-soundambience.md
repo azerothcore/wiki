@@ -8,10 +8,10 @@ A client file of 3.3.5a (build 12340). AzerothCore does not load this file: only
 
 **Structure**
 
-| Column | Field        | Type   | Comment |
-| :----: | :----------- | :----- | :------ |
-| 0      | ID           | uint32 |         |
-| 1      | AmbienceID_0 | uint32 |         |
-| 2      | AmbienceID_1 | uint32 |         |
+| Column | Field        | Type   | Comment                                    |
+| :----: | :----------- | :----- | :----------------------------------------- |
+| 0      | ID           | uint32 |                                            |
+| 1      | AmbienceID_0 | uint32 | ID in [SoundEntries.dbc](dbc-soundentries) |
+| 2      | AmbienceID_1 | uint32 | ID in [SoundEntries.dbc](dbc-soundentries) |
 
 The layout of this file is also described on [wowdev.wiki](https://wowdev.wiki/DB/SoundAmbience).

@@ -8,9 +8,9 @@ A client file of 3.3.5a (build 12340). AzerothCore does not load this file: only
 
 **Structure**
 
-| Column | Field   | Type  | Comment |
-| :----: | :------ | :---- | :------ |
-| 0      | RaceID  | uint8 |         |
-| 1      | ClassID | uint8 |         |
+| Column | Field   | Type  | Comment                            |
+| :----: | :------ | :---- | :--------------------------------- |
+| 0      | RaceID  | uint8 |                                    |
+| 1      | ClassID | uint8 | ID in [ChrClasses.dbc](chrclasses) |
 
 The layout of this file is also described on [wowdev.wiki](https://wowdev.wiki/DB/CharBaseInfo).

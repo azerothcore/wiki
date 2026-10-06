@@ -17,4 +17,6 @@ A client file of 3.3.5a (build 12340). AzerothCore does not load this file: only
 | 4      | TextureHoldLayer_2 | uint32 |         |
 | 5      | TextureHoldLayer_3 | uint32 |         |
 
+In a clean 3.3.5a client this file is empty (0 bytes), so the fields listed here could not be checked against it.
+
 The layout of this file is also described on [wowdev.wiki](https://wowdev.wiki/DB/CharVariations).
