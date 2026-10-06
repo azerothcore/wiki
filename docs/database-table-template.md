@@ -63,11 +63,11 @@ Use the name the value has in the core, or a short label when the core has no na
 
 A field that holds flags gets a table with these four columns, in this order:
 
-| Value | Hex  | Flag            | Comment                          |
-| :---- | :--: | :-------------- | :------------------------------- |
-| 1     | 0x01 | EXAMPLE_FLAG_A  | What the core does with the flag |
-| 2     | 0x02 | EXAMPLE_FLAG_B  |                                  |
-| 4     | 0x04 | EXAMPLE_FLAG_C  |                                  |
+| Value | Hex    | Flag           | Comment                          |
+| :---- | :----: | :------------- | :------------------------------- |
+| 1     | `0x01` | EXAMPLE_FLAG_A | What the core does with the flag |
+| 2     | `0x02` | EXAMPLE_FLAG_B |                                  |
+| 4     | `0x04` | EXAMPLE_FLAG_C |                                  |
 
 - **Value**: the decimal value, as it is stored in the database.
 - **Hex**: the same value in hexadecimal, centred. Every row of a table has the same number of digits: enough for its biggest value, rounded up to 2, 4, 8 or 16 digits (`0x01`, `0x0001`, `0x00000001`).
@@ -117,16 +117,16 @@ What the name is used for.
 
 What the flag controls.
 
-| Value | Hex  | Flag      | Comment              |
-| :---- | :--: | :-------- | :------------------- |
-| 1     | 0x01 | FLAG_ONE  | What this flag does. |
-| 2     | 0x02 | FLAG_TWO  | What this flag does. |
-| 4     | 0x04 | FLAG_FOUR | What this flag does. |
+| Value | Hex    | Flag      | Comment              |
+| :---- | :----: | :-------- | :------------------- |
+| 1     | `0x01` | FLAG_ONE  | What this flag does. |
+| 2     | `0x02` | FLAG_TWO  | What this flag does. |
+| 4     | `0x04` | FLAG_FOUR | What this flag does. |
 ```
 
 ## After adding the page
 
-A new table page has to be linked from two lists. Both are in alphabetical order.
+A new table page has to be linked from two lists. Both are in alphabetical order. The script `tools/update_table_lists.py` in the wiki repository adds the lines for you: run `python tools/update_table_lists.py`, or add `--check` to only see what is missing. By hand, the steps are:
 
 1. **The page of its database**: [database-auth](database-auth), [database-characters](database-characters) or [database-world](database-world). Add `- [table_name](table_name)` under the heading of its first letter, and add that heading if the letter is new.
 2. **The [Database Index](database-index)**: add the same line inside the folded list of that database.

@@ -150,7 +150,7 @@ ALL DATABASE TABLE FILES should follow the [Database Table Template](database-ta
 
 ## GM COMMANDS PAGE
 
-THE [GM COMMANDS](gm-commands) PAGE follows the `command` table of the world database and the command scripts of the core. When a command is added or changed, update its row in *All commands* and in the list of its security level, and keep both lists in alphabetical order.
+THE [GM COMMANDS](gm-commands) PAGE follows the `command` table of the world database and the command scripts of the core. When a command is added or changed, update its row in *All commands* and in the list of its security level, and keep both lists in alphabetical order. The script `tools/update_gm_commands.py` in the wiki repository does this from a running database: it updates Security and Syntax, adds new commands, and leaves the descriptions already on the page alone.
 
 - **Command**: the full name without the leading dot. In *All commands* the name carries an anchor, so `gm-commands#account-create` links to the row.
 - **RBAC**: the id of the role that includes the command by default (196 to 199), linked as `[196](rbac_linked_permissions#role-196)`. Leave it empty for a command that only groups subcommands.

@@ -108,6 +108,61 @@ Then open `http://localhost:4000/wiki/home`. Jekyll watches the files and rebuil
 
 The `--baseurl /wiki` part makes the sidebar links work: they point to `/wiki/...` like on the live site.
 
+## Tools
+
+The `tools` folder has the scripts used to preview and maintain the wiki. The Python scripts need Python 3 and are run from the wiki folder.
+
+| Script | What it does |
+| :----- | :----------- |
+| `wiki.bat`, `wiki.sh` | Builds and serves the wiki locally. See [With the test script](#with-the-test-script). |
+| `update_table_lists.py` | Adds new table and DBC pages to the lists and indexes. |
+| `update_gm_commands.py` | Updates the GM Commands page from a database. |
+| `local_theme_cache.rb` | Loaded by the build scripts to keep the theme between builds. It is not run by hand. |
+
+A script that changes pages writes a log of what it changed to `tools/logs`, which is not committed. `--log file.log` writes it to another file.
+
+### Table and DBC lists
+
+Run it after adding a database table page or a DBC page:
+
+```
+python tools/update_table_lists.py --check
+python tools/update_table_lists.py
+```
+
+`--check` only reports what is missing. Without it, the script:
+
+- adds new table pages to `database-auth`, `database-characters` or `database-world` and to the Database Index, under the right letter. The database is read from the back link at the top of the page.
+- adds new DBC pages to the DBC Index.
+- sets the bullet of each entry: a dot for a page with descriptions, a diamond for a page that only has column names and types.
+- keeps the number of DBC files on the index pages correct.
+
+The languages and databases it works on are set at the top of the script. Another docs folder can be given as the first argument: `python tools/update_table_lists.py path/to/docs`.
+
+### GM Commands page
+
+The script reads the `command` table of a running AzerothCore database and updates `docs/gm-commands.md`:
+
+```
+python tools/update_gm_commands.py
+python tools/update_gm_commands.py -y
+python tools/update_gm_commands.py --check
+python tools/update_gm_commands.py --host 10.0.0.5 --user root --password secret
+```
+
+Without options it asks for the connection, and Enter keeps a default (`acore` / `acore` on `127.0.0.1:3306`, databases `acore_world` and `acore_auth`). `-y` uses the defaults without asking.
+
+| Option | What it does |
+| :----- | :----------- |
+| `--check` | Only reports what would change. |
+| `--host`, `--port`, `--user`, `--password`, `--world-db`, `--auth-db` | Connection settings. |
+| `--no-rbac` | Does not read the RBAC tables. |
+| `--replace-rbac` | Also replaces the RBAC column of commands that are already on the page. |
+| `--remove-missing` | Deletes commands that are no longer in the database, instead of flagging them for review. |
+| `--page` | Path to another `gm-commands.md`. |
+
+Security and Syntax come from the database. Descriptions that are already on the page are kept, and a new command gets the help text of the database as its description. It needs PyMySQL, mysql-connector-python or the `mysql` command line client.
+
 ## Project structure
 
 - `docs/` - the wiki pages, one Markdown file per page. `docs/es/` and `docs/cn/` hold the translations, `docs/archive/` the archived pages.
@@ -121,7 +176,7 @@ The `--baseurl /wiki` part makes the sidebar links work: they point to `/wiki/..
 
 - Read the [Wiki Standards](https://www.azerothcore.org/wiki/wiki-standards) first.
 - **New or changed page**: add or edit a Markdown file in `docs/`. `docs/my-page.md` is published as `/wiki/my-page`.
-- **Database table page**: follow the [Database Table Template](https://www.azerothcore.org/wiki/database-table-template).
+- **Database table page**: follow the [Database Table Template](https://www.azerothcore.org/wiki/database-table-template). Then run `python tools/update_table_lists.py` to add it to the lists (see [Tools](#tools)).
 - **Sidebar**: edit `_includes/azerothcore/sidebar.html`.
 
 ## Deployment
