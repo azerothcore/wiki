@@ -36,13 +36,13 @@ The permissions you want to give to a player of that rank on the tab. This is a 
 
 FLAGS:
 
-| Value | Hex  | Flag | Comment                                        |
-| :---- | :--: | :--- | :--------------------------------------------- |
-| 1     | 0x01 |      | view items                                     |
-| 2     | 0x02 |      | deposit items                                  |
-| 4     | 0x04 |      | update item name shown when navigating the tab |
-| 8     | 0x08 |      | withdraw items                                 |
-| 255   | 0xFF |      | Has all rights                                 |
+| Value | Hex    | Flag | Comment                                        |
+| :---- | :----: | :--- | :--------------------------------------------- |
+| 1     | `0x01` |      | view items                                     |
+| 2     | `0x02` |      | deposit items                                  |
+| 4     | `0x04` |      | update item name shown when navigating the tab |
+| 8     | `0x08` |      | withdraw items                                 |
+| 255   | `0xFF` |      | Has all rights                                 |
 
 ### SlotPerDay
 

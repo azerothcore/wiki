@@ -58,12 +58,12 @@ The time the event starts, in Unix time.
 
 ### flags
 
-| Value | Hex    | Flag                          | Comment                                            |
-| :---- | :----: | :---------------------------- | :------------------------------------------------- |
-| 1     | 0x0001 | CALENDAR_FLAG_ALL_ALLOWED     |                                                    |
-| 16    | 0x0010 | CALENDAR_FLAG_INVITES_LOCKED  | Invites can not be changed.                        |
-| 64    | 0x0040 | CALENDAR_FLAG_WITHOUT_INVITES | Guild announcement without invites.                |
-| 1024  | 0x0400 | CALENDAR_FLAG_GUILD_EVENT     | Guild event, all members of the guild can sign up. |
+| Value | Hex      | Flag                          | Comment                                            |
+| :---- | :------: | :---------------------------- | :------------------------------------------------- |
+| 1     | `0x0001` | CALENDAR_FLAG_ALL_ALLOWED     |                                                    |
+| 16    | `0x0010` | CALENDAR_FLAG_INVITES_LOCKED  | Invites can not be changed.                        |
+| 64    | `0x0040` | CALENDAR_FLAG_WITHOUT_INVITES | Guild announcement without invites.                |
+| 1024  | `0x0400` | CALENDAR_FLAG_GUILD_EVENT     | Guild event, all members of the guild can sign up. |
 
 ### time2
 

@@ -28,11 +28,11 @@ GUID of the character member of the group. See [characters.guid](characters#guid
 
 ### memberFlags
 
-| Value | Hex  | Flag                   | Unique |
-| :---- | :--: | :--------------------- | :----- |
-| 1     | 0x01 | MEMBER_FLAG_ASSISTANT  |        |
-| 2     | 0x02 | MEMBER_FLAG_MAINTANK   | (U)    |
-| 4     | 0x04 | MEMBER_FLAG_MAINASSIST | (U)    |
+| Value | Hex    | Flag                   | Unique |
+| :---- | :----: | :--------------------- | :----- |
+| 1     | `0x01` | MEMBER_FLAG_ASSISTANT  |        |
+| 2     | `0x02` | MEMBER_FLAG_MAINTANK   | (U)    |
+| 4     | `0x04` | MEMBER_FLAG_MAINASSIST | (U)    |
 
 *(U) = Unique per group.*
 
@@ -43,10 +43,10 @@ There can only be 5 membes in one subgroup per raid group.
 
 ### roles
 
-| Value | Hex  | Flag        | Comment                                                          |
-| :---- | :--: | :---------- | :--------------------------------------------------------------- |
-| 0     | 0x00 | ROLE_NONE   |                                                                  |
-| 1     | 0x01 | ROLE_LEADER | The character has signed to Random Dungeon Finder as experienced |
-| 2     | 0x02 | ROLE_TANK   | The character has signed to Random Dungeon Finder as tank        |
-| 4     | 0x04 | ROLE_HEALER | The character has signed to Random Dungeon Finder as healer      |
-| 8     | 0x08 | ROLE_DAMAGE | The character has signed to Random Dungeon Finder as dps         |
+| Value | Hex    | Flag        | Comment                                                          |
+| :---- | :----: | :---------- | :--------------------------------------------------------------- |
+| 0     | `0x00` | ROLE_NONE   | No role                                                          |
+| 1     | `0x01` | ROLE_LEADER | The character has signed to Random Dungeon Finder as experienced |
+| 2     | `0x02` | ROLE_TANK   | The character has signed to Random Dungeon Finder as tank        |
+| 4     | `0x04` | ROLE_HEALER | The character has signed to Random Dungeon Finder as healer      |
+| 8     | `0x08` | ROLE_DAMAGE | The character has signed to Random Dungeon Finder as dps         |

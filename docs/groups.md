@@ -63,14 +63,15 @@ The lowest item quality that is rolled for. See [item\_template.Quality](item_te
 
 ### groupType
 
-| Value | Hex  | Flag             | Comment                                |
-| :---- | :--: | :--------------- | :------------------------------------- |
-| 0     | 0x00 | GROUPTYPE_NORMAL |                                        |
-| 1     | 0x01 | GROUPTYPE_BG     |                                        |
-| 2     | 0x02 | GROUPTYPE_RAID   |                                        |
-| 3     | 0x03 | GROUPTYPE_BGRAID | GROUPTYPE_BG + GROUPTYPE_RAID, // mask |
-| 4     | 0x04 | GROUPTYPE_UNK1   |                                        |
-| 8     | 0x08 | GROUPTYPE_LFG    |                                        |
+| Value | Hex    | Flag                     | Comment                                                                                                                                                                                                                                                  |
+| :---- | :----: | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0     | `0x00` | GROUPTYPE_NORMAL         | Normal party                                                                                                                                                                                                                                             |
+| 1     | `0x01` | GROUPTYPE_BG             | Battleground group                                                                                                                                                                                                                                       |
+| 2     | `0x02` | GROUPTYPE_RAID           | Raid group                                                                                                                                                                                                                                               |
+| 3     | `0x03` | GROUPTYPE_BGRAID         | GROUPTYPE_BG + GROUPTYPE_RAID, // mask                                                                                                                                                                                                                   |
+| 4     | `0x04` | GROUPTYPE_LFG_RESTRICTED | Group with LFG restrictions                                                                                                                                                                                                                              |
+| 8     | `0x08` | GROUPTYPE_LFG            | Group made by the dungeon finder                                                                                                                                                                                                                         |
+| 16    | `0x10` | GROUP_FLAG_DESTROYED     | Not in the core. Named in [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Groups/Group.h); [WowPacketParser](https://github.com/TrinityCore/WowPacketParser/blob/master/WowPacketParser/Enums/GroupTypeFlag.cs) has it as unknown |
 
 ### difficulty
 

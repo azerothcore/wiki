@@ -64,14 +64,14 @@ Controls under which difficulties the object is spawned.
 
 Just like flags you can add them as you wish so 3 would be: Spawned in 10/25 man normal versions of maps (pre 3.2 all maps)
 
-| Value | Hex  | Flag | Comment                                                                              |
-| :---- | :--: | :--- | :----------------------------------------------------------------------------------- |
-| 0     | 0x00 |      | Not spawned                                                                          |
-| 1     | 0x01 |      | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
-| 2     | 0x02 |      | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
-| 4     | 0x04 |      | Spawned only in 10-man heroic versions of maps                                       |
-| 8     | 0x08 |      | Spawned only in 25-man-heroic versions of maps                                       |
-| 15    | 0x0F |      | Spawned in all versions of maps                                                      |
+| Value | Hex    | Flag | Comment                                                                              |
+| :---- | :----: | :--- | :----------------------------------------------------------------------------------- |
+| 0     | `0x00` |      | Not spawned                                                                          |
+| 1     | `0x01` |      | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
+| 2     | `0x02` |      | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
+| 4     | `0x04` |      | Spawned only in 10-man heroic versions of maps                                       |
+| 8     | `0x08` |      | Spawned only in 25-man-heroic versions of maps                                       |
+| 15    | `0x0F` |      | Spawned in all versions of maps                                                      |
 
 ### phaseMask
 

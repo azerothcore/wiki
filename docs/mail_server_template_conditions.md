@@ -52,17 +52,17 @@ The state the condition checks, see the table in [conditionType](#conditiontype)
 
 #### AccountFlags values
 
-| Value     | Hex        | Flag                              | Comment                              |
-| :-------- | :--------: | :-------------------------------- | :----------------------------------- |
-| 1         | 0x00000001 | ACCOUNT_FLAG_GM                   | Account is GM                        |
-| 4         | 0x00000004 | ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                  |
-| 8         | 0x00000008 | ACCOUNT_FLAG_TRIAL                | Trial account                        |
-| 32        | 0x00000020 | ACCOUNT_FLAG_IGR                  | Internet Game Room                   |
-| 2048      | 0x00000800 | ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend                     |
-| 65536     | 0x00010000 | ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition              |
-| 131072    | 0x00020000 | ACCOUNT_FLAG_DISABLE_VOICE        | Cannot join voice chat               |
-| 262144    | 0x00040000 | ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Cannot speak in voice chat           |
-| 524288    | 0x00080000 | ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection               |
-| 67108864  | 0x04000000 | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition            |
-| 134217728 | 0x08000000 | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net               |
-| 536870912 | 0x20000000 | ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Has a level 55+ character on account |
+| Value     | Hex          | Flag                              | Comment                              |
+| :-------- | :----------: | :-------------------------------- | :----------------------------------- |
+| 1         | `0x00000001` | ACCOUNT_FLAG_GM                   | Account is GM                        |
+| 4         | `0x00000004` | ACCOUNT_FLAG_COLLECTOR            | Collector's Edition                  |
+| 8         | `0x00000008` | ACCOUNT_FLAG_TRIAL                | Trial account                        |
+| 32        | `0x00000020` | ACCOUNT_FLAG_IGR                  | Internet Game Room                   |
+| 2048      | `0x00000800` | ACCOUNT_FLAG_REFERRAL             | Recruit-A-Friend                     |
+| 65536     | `0x00010000` | ACCOUNT_FLAG_EXPANSION_COLLECTOR  | TBC Collector's Edition              |
+| 131072    | `0x00020000` | ACCOUNT_FLAG_DISABLE_VOICE        | Cannot join voice chat               |
+| 262144    | `0x00040000` | ACCOUNT_FLAG_DISABLE_VOICE_SPEAK  | Cannot speak in voice chat           |
+| 524288    | `0x00080000` | ACCOUNT_FLAG_REFERRAL_RESURRECT   | Scroll of Resurrection               |
+| 67108864  | `0x04000000` | ACCOUNT_FLAG_EXPANSION2_COLLECTOR | WotLK Collector's Edition            |
+| 134217728 | `0x08000000` | ACCOUNT_FLAG_OVERMIND_LINKED      | Linked with Battle.net               |
+| 536870912 | `0x20000000` | ACCOUNT_FLAG_DEATH_KNIGHT_OK      | Has a level 55+ character on account |

@@ -72,14 +72,14 @@ Example:
 
 The creature will spawn in only the 10 and 25 man heroic versions of the map that the creature is spawned on.
 
-| Value | Hex  | Flag | Comment                                                                              |
-| :---- | :--: | :--- | :----------------------------------------------------------------------------------- |
-| 0     | 0x00 |      | Not spawned                                                                          |
-| 1     | 0x01 |      | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
-| 2     | 0x02 |      | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
-| 4     | 0x04 |      | Spawned only in 10-man heroic versions of maps                                       |
-| 8     | 0x08 |      | Spawned only in 25-man-heroic versions of maps                                       |
-| 15    | 0x0F |      | Spawned in all versions of maps                                                      |
+| Value | Hex    | Flag | Comment                                                                              |
+| :---- | :----: | :--- | :----------------------------------------------------------------------------------- |
+| 0     | `0x00` |      | Not spawned                                                                          |
+| 1     | `0x01` |      | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
+| 2     | `0x02` |      | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
+| 4     | `0x04` |      | Spawned only in 10-man heroic versions of maps                                       |
+| 8     | `0x08` |      | Spawned only in 25-man-heroic versions of maps                                       |
+| 15    | `0x0F` |      | Spawned in all versions of maps                                                      |
 
 ### phaseMask
 

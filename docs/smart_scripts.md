@@ -209,21 +209,21 @@ If the script is in phase 1 and want to skip to phase 2:
 <details>
 <summary>Show the event_phase_mask table</summary>
 
-| Value | Hex    | Flag                                                                        | Comment                     |
-| :---- | :----: | :-------------------------------------------------------------------------- | :-------------------------- |
-| 0     | 0x0000 | <span id="SMART_EVENT_PHASE_ALWAYS_BIT">SMART_EVENT_PHASE_ALWAYS_BIT</span> | Means all phases (1 ... 12) |
-| 1     | 0x0001 | <span id="SMART_EVENT_PHASE_1_BIT">SMART_EVENT_PHASE_1_BIT</span>           | Phase 1 only.               |
-| 2     | 0x0002 | <span id="SMART_EVENT_PHASE_2_BIT">SMART_EVENT_PHASE_2_BIT</span>           | Phase 2 only.               |
-| 4     | 0x0004 | <span id="SMART_EVENT_PHASE_3_BIT">SMART_EVENT_PHASE_3_BIT</span>           | Phase 3 only.               |
-| 8     | 0x0008 | <span id="SMART_EVENT_PHASE_4_BIT">SMART_EVENT_PHASE_4_BIT</span>           | Phase 4 only.               |
-| 16    | 0x0010 | <span id="SMART_EVENT_PHASE_5_BIT">SMART_EVENT_PHASE_5_BIT</span>           | Phase 5 only.               |
-| 32    | 0x0020 | <span id="SMART_EVENT_PHASE_6_BIT">SMART_EVENT_PHASE_6_BIT</span>           | Phase 6 only.               |
-| 64    | 0x0040 | <span id="SMART_EVENT_PHASE_7_BIT">SMART_EVENT_PHASE_7_BIT</span>           | Phase 7 only.               |
-| 128   | 0x0080 | <span id="SMART_EVENT_PHASE_8_BIT">SMART_EVENT_PHASE_8_BIT</span>           | Phase 8 only.               |
-| 256   | 0x0100 | <span id="SMART_EVENT_PHASE_9_BIT">SMART_EVENT_PHASE_9_BIT</span>           | Phase 9 only.               |
-| 512   | 0x0200 | <span id="SMART_EVENT_PHASE_10_BIT">SMART_EVENT_PHASE_10_BIT</span>         | Phase 10 only.              |
-| 1024  | 0x0400 | <span id="SMART_EVENT_PHASE_11_BIT">SMART_EVENT_PHASE_11_BIT</span>         | Phase 11 only.              |
-| 2048  | 0x0800 | <span id="SMART_EVENT_PHASE_12_BIT">SMART_EVENT_PHASE_12_BIT</span>         | Phase 12 only.              |
+| Value | Hex      | Flag                                                                        | Comment                     |
+| :---- | :------: | :-------------------------------------------------------------------------- | :-------------------------- |
+| 0     | `0x0000` | <span id="SMART_EVENT_PHASE_ALWAYS_BIT">SMART_EVENT_PHASE_ALWAYS_BIT</span> | Means all phases (1 ... 12) |
+| 1     | `0x0001` | <span id="SMART_EVENT_PHASE_1_BIT">SMART_EVENT_PHASE_1_BIT</span>           | Phase 1 only.               |
+| 2     | `0x0002` | <span id="SMART_EVENT_PHASE_2_BIT">SMART_EVENT_PHASE_2_BIT</span>           | Phase 2 only.               |
+| 4     | `0x0004` | <span id="SMART_EVENT_PHASE_3_BIT">SMART_EVENT_PHASE_3_BIT</span>           | Phase 3 only.               |
+| 8     | `0x0008` | <span id="SMART_EVENT_PHASE_4_BIT">SMART_EVENT_PHASE_4_BIT</span>           | Phase 4 only.               |
+| 16    | `0x0010` | <span id="SMART_EVENT_PHASE_5_BIT">SMART_EVENT_PHASE_5_BIT</span>           | Phase 5 only.               |
+| 32    | `0x0020` | <span id="SMART_EVENT_PHASE_6_BIT">SMART_EVENT_PHASE_6_BIT</span>           | Phase 6 only.               |
+| 64    | `0x0040` | <span id="SMART_EVENT_PHASE_7_BIT">SMART_EVENT_PHASE_7_BIT</span>           | Phase 7 only.               |
+| 128   | `0x0080` | <span id="SMART_EVENT_PHASE_8_BIT">SMART_EVENT_PHASE_8_BIT</span>           | Phase 8 only.               |
+| 256   | `0x0100` | <span id="SMART_EVENT_PHASE_9_BIT">SMART_EVENT_PHASE_9_BIT</span>           | Phase 9 only.               |
+| 512   | `0x0200` | <span id="SMART_EVENT_PHASE_10_BIT">SMART_EVENT_PHASE_10_BIT</span>         | Phase 10 only.              |
+| 1024  | `0x0400` | <span id="SMART_EVENT_PHASE_11_BIT">SMART_EVENT_PHASE_11_BIT</span>         | Phase 11 only.              |
+| 2048  | `0x0800` | <span id="SMART_EVENT_PHASE_12_BIT">SMART_EVENT_PHASE_12_BIT</span>         | Phase 12 only.              |
 
 </details>
 
@@ -239,19 +239,19 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 <details>
 <summary>Show the event_flags table</summary>
 
-| Value      | Hex        | Flag                                                                                                | Comment                                                                                                              |
-| :--------- | :--------: | :-------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
-| 1          | 0x00000001 | <span id="SMART_EVENT_FLAG_NOT_REPEATABLE">SMART_EVENT_FLAG_NOT_REPEATABLE</span>                   | Event can not repeat                                                                                                 |
-| 2          | 0x00000002 | <span id="SMART_EVENT_FLAG_DIFFICULTY_0">SMART_EVENT_FLAG_DIFFICULTY_0</span>                       | Event only occurs in normal dungeon                                                                                  |
-| 4          | 0x00000004 | <span id="SMART_EVENT_FLAG_DIFFICULTY_1">SMART_EVENT_FLAG_DIFFICULTY_1</span>                       | Event only occurs in heroic dungeon                                                                                  |
-| 8          | 0x00000008 | <span id="SMART_EVENT_FLAG_DIFFICULTY_2">SMART_EVENT_FLAG_DIFFICULTY_2</span>                       | Event only occurs in normal raid                                                                                     |
-| 16         | 0x00000010 | <span id="SMART_EVENT_FLAG_DIFFICULTY_3">SMART_EVENT_FLAG_DIFFICULTY_3</span>                       | Event only occurs in heroic raid                                                                                     |
-| 32         | 0x00000020 | <span id="SMART_EVENT_FLAG_RESERVED_5">SMART_EVENT_FLAG_RESERVED_5</span>                           |                                                                                                                      |
-| 64         | 0x00000040 | <span id="SMART_EVENT_FLAG_RESERVED_6">SMART_EVENT_FLAG_RESERVED_6</span>                           |                                                                                                                      |
-| 128        | 0x00000080 | <span id="SMART_EVENT_FLAG_DEBUG_ONLY">SMART_EVENT_FLAG_DEBUG_ONLY</span>                           | Event only occurs in debug build                                                                                     |
-| 256        | 0x00000100 | <span id="SMART_EVENT_FLAG_DONT_RESET">SMART_EVENT_FLAG_DONT_RESET</span>                           | Event will not reset in SmartScript::OnReset()                                                                       |
-| 512        | 0x00000200 | <span id="SMART_EVENT_FLAG_WHILE_CHARMED">SMART_EVENT_FLAG_WHILE_CHARMED</span>                     | Event occurs even if AI owner is charmed                                                                             |
-| 1073741824 | 0x40000000 | <span id="SMART_EVENT_FLAG_TEMP_IGNORE_CHANCE_ROLL">SMART_EVENT_FLAG_TEMP_IGNORE_CHANCE_ROLL</span> | Set by the core while a script runs, so the event ignores its event_chance roll once. Do not set it in the database. |
+| Value      | Hex          | Flag                                                                                                | Comment                                                                                                              |
+| :--------- | :----------: | :-------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| 1          | `0x00000001` | <span id="SMART_EVENT_FLAG_NOT_REPEATABLE">SMART_EVENT_FLAG_NOT_REPEATABLE</span>                   | Event can not repeat                                                                                                 |
+| 2          | `0x00000002` | <span id="SMART_EVENT_FLAG_DIFFICULTY_0">SMART_EVENT_FLAG_DIFFICULTY_0</span>                       | Event only occurs in normal dungeon                                                                                  |
+| 4          | `0x00000004` | <span id="SMART_EVENT_FLAG_DIFFICULTY_1">SMART_EVENT_FLAG_DIFFICULTY_1</span>                       | Event only occurs in heroic dungeon                                                                                  |
+| 8          | `0x00000008` | <span id="SMART_EVENT_FLAG_DIFFICULTY_2">SMART_EVENT_FLAG_DIFFICULTY_2</span>                       | Event only occurs in normal raid                                                                                     |
+| 16         | `0x00000010` | <span id="SMART_EVENT_FLAG_DIFFICULTY_3">SMART_EVENT_FLAG_DIFFICULTY_3</span>                       | Event only occurs in heroic raid                                                                                     |
+| 32         | `0x00000020` | <span id="SMART_EVENT_FLAG_RESERVED_5">SMART_EVENT_FLAG_RESERVED_5</span>                           | Reserved, not used                                                                                                   |
+| 64         | `0x00000040` | <span id="SMART_EVENT_FLAG_RESERVED_6">SMART_EVENT_FLAG_RESERVED_6</span>                           | Reserved, not used                                                                                                   |
+| 128        | `0x00000080` | <span id="SMART_EVENT_FLAG_DEBUG_ONLY">SMART_EVENT_FLAG_DEBUG_ONLY</span>                           | Event only occurs in debug build                                                                                     |
+| 256        | `0x00000100` | <span id="SMART_EVENT_FLAG_DONT_RESET">SMART_EVENT_FLAG_DONT_RESET</span>                           | Event will not reset in SmartScript::OnReset()                                                                       |
+| 512        | `0x00000200` | <span id="SMART_EVENT_FLAG_WHILE_CHARMED">SMART_EVENT_FLAG_WHILE_CHARMED</span>                     | Event occurs even if AI owner is charmed                                                                             |
+| 1073741824 | `0x40000000` | <span id="SMART_EVENT_FLAG_TEMP_IGNORE_CHANCE_ROLL">SMART_EVENT_FLAG_TEMP_IGNORE_CHANCE_ROLL</span> | Set by the core while a script runs, so the event ignores its event_chance roll once. Do not set it in the database. |
 
 </details>
 
@@ -539,16 +539,16 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 <details>
 <summary>Show the Cast Flags table</summary>
 
-| Value | Hex    | Flag                                                                                      | Comment                                                                                                 |
-| :---- | :----: | :---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
-| 1     | 0x0001 | <span id="SMARTCAST_INTERRUPT_PREVIOUS">SMARTCAST_INTERRUPT_PREVIOUS</span>               | Interrupt any spell casting                                                                             |
-| 2     | 0x0002 | <span id="SMARTCAST_TRIGGERED">SMARTCAST_TRIGGERED</span>                                 | Triggered (this makes spell cost zero mana and have no cast time)                                       |
-| 32    | 0x0020 | <span id="SMARTCAST_AURA_NOT_PRESENT">SMARTCAST_AURA_NOT_PRESENT</span>                   | Only casts the spell if the target does not have an aura from the spell                                 |
-| 64    | 0x0040 | <span id="SMARTCAST_COMBAT_MOVE">SMARTCAST_COMBAT_MOVE</span>                             | Prevent combat movement on cast, allow on fail range, mana, LOS                                         |
-| 128   | 0x0080 | <span id="SMARTCAST_THREATLIST_NOT_SINGLE">SMARTCAST_THREATLIST_NOT_SINGLE</span>         | Only cast if the source's threatlist is higher than one. This includes pets                             |
-| 256   | 0x0100 | <span id="SMARTCAST_TARGET_POWER_MANA">SMARTCAST_TARGET_POWER_MANA</span>                 | Only cast if the target has power type mana                                                             |
-| 512   | 0x0200 | <span id="SMARTCAST_ENABLE_COMBAT_MOVE_ON_LOS">SMARTCAST_ENABLE_COMBAT_MOVE_ON_LOS</span> | Enable combat chase movement when the spell fails due to line-of-sight. Use with SMARTCAST_COMBAT_MOVE. |
-| 1024  | 0x0400 | <span id="SMARTCAST_MAIN_SPELL">SMARTCAST_MAIN_SPELL</span>                               | Use with SMARTCAST_COMBAT_MOVE to set attack distance based on spell range                              |
+| Value | Hex      | Flag                                                                                      | Comment                                                                                                 |
+| :---- | :------: | :---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| 1     | `0x0001` | <span id="SMARTCAST_INTERRUPT_PREVIOUS">SMARTCAST_INTERRUPT_PREVIOUS</span>               | Interrupt any spell casting                                                                             |
+| 2     | `0x0002` | <span id="SMARTCAST_TRIGGERED">SMARTCAST_TRIGGERED</span>                                 | Triggered (this makes spell cost zero mana and have no cast time)                                       |
+| 32    | `0x0020` | <span id="SMARTCAST_AURA_NOT_PRESENT">SMARTCAST_AURA_NOT_PRESENT</span>                   | Only casts the spell if the target does not have an aura from the spell                                 |
+| 64    | `0x0040` | <span id="SMARTCAST_COMBAT_MOVE">SMARTCAST_COMBAT_MOVE</span>                             | Prevent combat movement on cast, allow on fail range, mana, LOS                                         |
+| 128   | `0x0080` | <span id="SMARTCAST_THREATLIST_NOT_SINGLE">SMARTCAST_THREATLIST_NOT_SINGLE</span>         | Only cast if the source's threatlist is higher than one. This includes pets                             |
+| 256   | `0x0100` | <span id="SMARTCAST_TARGET_POWER_MANA">SMARTCAST_TARGET_POWER_MANA</span>                 | Only cast if the target has power type mana                                                             |
+| 512   | `0x0200` | <span id="SMARTCAST_ENABLE_COMBAT_MOVE_ON_LOS">SMARTCAST_ENABLE_COMBAT_MOVE_ON_LOS</span> | Enable combat chase movement when the spell fails due to line-of-sight. Use with SMARTCAST_COMBAT_MOVE. |
+| 1024  | `0x0400` | <span id="SMARTCAST_MAIN_SPELL">SMARTCAST_MAIN_SPELL</span>                               | Use with SMARTCAST_COMBAT_MOVE to set attack distance based on spell range                              |
 
 </details>
 
@@ -557,30 +557,30 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 <details>
 <summary>Show the Triggered Flags table</summary>
 
-| Value      | Hex        | Flag                                                                                                          | Comment                                                                                |
-| :--------- | :--------: | :------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------- |
-| 0          | 0x00000000 | <span id="TRIGGERED_NONE">TRIGGERED_NONE</span>                                                               | Not triggered                                                                          |
-| 1          | 0x00000001 | <span id="TRIGGERED_IGNORE_GCD">TRIGGERED_IGNORE_GCD</span>                                                   | Will ignore GCD                                                                        |
-| 2          | 0x00000002 | <span id="TRIGGERED_IGNORE_SPELL_AND_CATEGORY_CD">TRIGGERED_IGNORE_SPELL_AND_CATEGORY_CD</span>               | Will ignore Spell and Category cooldowns                                               |
-| 4          | 0x00000004 | <span id="TRIGGERED_IGNORE_POWER_AND_REAGENT_COST">TRIGGERED_IGNORE_POWER_AND_REAGENT_COST</span>             | Will ignore power and reagent cost                                                     |
-| 8          | 0x00000008 | <span id="TRIGGERED_IGNORE_CAST_ITEM">TRIGGERED_IGNORE_CAST_ITEM</span>                                       | Will not take away cast item or update related achievement criteria                    |
-| 16         | 0x00000010 | <span id="RIGGERED_IGNORE_AURA_SCALING">RIGGERED_IGNORE_AURA_SCALING</span>                                   | Will ignore aura scaling                                                               |
-| 32         | 0x00000020 | <span id="TRIGGERED_IGNORE_CAST_IN_PROGRESS">TRIGGERED_IGNORE_CAST_IN_PROGRESS</span>                         | Will not check if a current cast is in progress                                        |
-| 64         | 0x00000040 | <span id="TRIGGERED_IGNORE_COMBO_POINTS">TRIGGERED_IGNORE_COMBO_POINTS</span>                                 | Will ignore combo point requirement                                                    |
-| 128        | 0x00000080 | <span id="TRIGGERED_CAST_DIRECTLY">TRIGGERED_CAST_DIRECTLY</span>                                             | In Spell::prepare, will be cast directly without setting containers for executed spell |
-| 256        | 0x00000100 | <span id="TRIGGERED_IGNORE_AURA_INTERRUPT_FLAGS">TRIGGERED_IGNORE_AURA_INTERRUPT_FLAGS</span>                 | Will ignore interruptible aura's at cast                                               |
-| 512        | 0x00000200 | <span id="TRIGGERED_IGNORE_SET_FACING">TRIGGERED_IGNORE_SET_FACING</span>                                     | Will not adjust facing to target (if any)                                              |
-| 1024       | 0x00000400 | <span id="TRIGGERED_IGNORE_SHAPESHIFT">TRIGGERED_IGNORE_SHAPESHIFT</span>                                     | Will ignore shapeshift checks                                                          |
-| 2048       | 0x00000800 | <span id="TRIGGERED_IGNORE_CASTER_AURASTATE">TRIGGERED_IGNORE_CASTER_AURASTATE</span>                         | Will ignore caster aura states including combat requirements and death state           |
-| 8192       | 0x00002000 | <span id="TRIGGERED_IGNORE_CASTER_MOUNTED_OR_ON_VEHICLE">TRIGGERED_IGNORE_CASTER_MOUNTED_OR_ON_VEHICLE</span> | Will ignore mounted/on vehicle restrictions                                            |
-| 65536      | 0x00010000 | <span id="TRIGGERED_IGNORE_CASTER_AURAS">TRIGGERED_IGNORE_CASTER_AURAS</span>                                 | Will ignore caster aura restrictions or requirements                                   |
-| 131072     | 0x00020000 | <span id="TRIGGERED_DISALLOW_PROC_EVENTS">TRIGGERED_DISALLOW_PROC_EVENTS</span>                               | Disallows proc events from triggered spell (default)                                   |
-| 262144     | 0x00040000 | <span id="TRIGGERED_DONT_REPORT_CAST_ERROR">TRIGGERED_DONT_REPORT_CAST_ERROR</span>                           | Will return SPELL_FAILED_DONT_REPORT in CheckCast functions                            |
-| 524287     | 0x0007FFFF | <span id="TRIGGERED_FULL_MASK">TRIGGERED_FULL_MASK</span>                                                     | All triggered flags                                                                    |
-| 524288     | 0x00080000 | <span id="TRIGGERED_IGNORE_EQUIPPED_ITEM_REQUIREMENT">TRIGGERED_IGNORE_EQUIPPED_ITEM_REQUIREMENT</span>       | Will ignore equipped item requirements                                                 |
-| 1048576    | 0x00100000 | <span id="TRIGGERED_NO_PERIODIC_RESET">TRIGGERED_NO_PERIODIC_RESET</span>                                     | Periodic aura tick wont be reset on override                                           |
-| 2097152    | 0x00200000 | <span id="TRIGGERED_IGNORE_EFFECTS">TRIGGERED_IGNORE_EFFECTS</span>                                           | Ignore spell effects - used for ritual portals                                         |
-| 4294967295 | 0xFFFFFFFF | <span id="TRIGGERED_FULL_DEBUG_MASK">TRIGGERED_FULL_DEBUG_MASK</span>                                         |                                                                                        |
+| Value      | Hex          | Flag                                                                                                          | Comment                                                                                |
+| :--------- | :----------: | :------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------- |
+| 0          | `0x00000000` | <span id="TRIGGERED_NONE">TRIGGERED_NONE</span>                                                               | Not triggered                                                                          |
+| 1          | `0x00000001` | <span id="TRIGGERED_IGNORE_GCD">TRIGGERED_IGNORE_GCD</span>                                                   | Will ignore GCD                                                                        |
+| 2          | `0x00000002` | <span id="TRIGGERED_IGNORE_SPELL_AND_CATEGORY_CD">TRIGGERED_IGNORE_SPELL_AND_CATEGORY_CD</span>               | Will ignore Spell and Category cooldowns                                               |
+| 4          | `0x00000004` | <span id="TRIGGERED_IGNORE_POWER_AND_REAGENT_COST">TRIGGERED_IGNORE_POWER_AND_REAGENT_COST</span>             | Will ignore power and reagent cost                                                     |
+| 8          | `0x00000008` | <span id="TRIGGERED_IGNORE_CAST_ITEM">TRIGGERED_IGNORE_CAST_ITEM</span>                                       | Will not take away cast item or update related achievement criteria                    |
+| 16         | `0x00000010` | <span id="RIGGERED_IGNORE_AURA_SCALING">RIGGERED_IGNORE_AURA_SCALING</span>                                   | Will ignore aura scaling                                                               |
+| 32         | `0x00000020` | <span id="TRIGGERED_IGNORE_CAST_IN_PROGRESS">TRIGGERED_IGNORE_CAST_IN_PROGRESS</span>                         | Will not check if a current cast is in progress                                        |
+| 64         | `0x00000040` | <span id="TRIGGERED_IGNORE_COMBO_POINTS">TRIGGERED_IGNORE_COMBO_POINTS</span>                                 | Will ignore combo point requirement                                                    |
+| 128        | `0x00000080` | <span id="TRIGGERED_CAST_DIRECTLY">TRIGGERED_CAST_DIRECTLY</span>                                             | In Spell::prepare, will be cast directly without setting containers for executed spell |
+| 256        | `0x00000100` | <span id="TRIGGERED_IGNORE_AURA_INTERRUPT_FLAGS">TRIGGERED_IGNORE_AURA_INTERRUPT_FLAGS</span>                 | Will ignore interruptible aura's at cast                                               |
+| 512        | `0x00000200` | <span id="TRIGGERED_IGNORE_SET_FACING">TRIGGERED_IGNORE_SET_FACING</span>                                     | Will not adjust facing to target (if any)                                              |
+| 1024       | `0x00000400` | <span id="TRIGGERED_IGNORE_SHAPESHIFT">TRIGGERED_IGNORE_SHAPESHIFT</span>                                     | Will ignore shapeshift checks                                                          |
+| 2048       | `0x00000800` | <span id="TRIGGERED_IGNORE_CASTER_AURASTATE">TRIGGERED_IGNORE_CASTER_AURASTATE</span>                         | Will ignore caster aura states including combat requirements and death state           |
+| 8192       | `0x00002000` | <span id="TRIGGERED_IGNORE_CASTER_MOUNTED_OR_ON_VEHICLE">TRIGGERED_IGNORE_CASTER_MOUNTED_OR_ON_VEHICLE</span> | Will ignore mounted/on vehicle restrictions                                            |
+| 65536      | `0x00010000` | <span id="TRIGGERED_IGNORE_CASTER_AURAS">TRIGGERED_IGNORE_CASTER_AURAS</span>                                 | Will ignore caster aura restrictions or requirements                                   |
+| 131072     | `0x00020000` | <span id="TRIGGERED_DISALLOW_PROC_EVENTS">TRIGGERED_DISALLOW_PROC_EVENTS</span>                               | Disallows proc events from triggered spell (default)                                   |
+| 262144     | `0x00040000` | <span id="TRIGGERED_DONT_REPORT_CAST_ERROR">TRIGGERED_DONT_REPORT_CAST_ERROR</span>                           | Will return SPELL_FAILED_DONT_REPORT in CheckCast functions                            |
+| 524287     | `0x0007FFFF` | <span id="TRIGGERED_FULL_MASK">TRIGGERED_FULL_MASK</span>                                                     | All triggered flags                                                                    |
+| 524288     | `0x00080000` | <span id="TRIGGERED_IGNORE_EQUIPPED_ITEM_REQUIREMENT">TRIGGERED_IGNORE_EQUIPPED_ITEM_REQUIREMENT</span>       | Will ignore equipped item requirements                                                 |
+| 1048576    | `0x00100000` | <span id="TRIGGERED_NO_PERIODIC_RESET">TRIGGERED_NO_PERIODIC_RESET</span>                                     | Periodic aura tick wont be reset on override                                           |
+| 2097152    | `0x00200000` | <span id="TRIGGERED_IGNORE_EFFECTS">TRIGGERED_IGNORE_EFFECTS</span>                                           | Ignore spell effects - used for ritual portals                                         |
+| 4294967295 | `0xFFFFFFFF` | <span id="TRIGGERED_FULL_DEBUG_MASK">TRIGGERED_FULL_DEBUG_MASK</span>                                         | Every bit set, for debugging                                                           |
 
 </details>
 

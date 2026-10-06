@@ -71,17 +71,17 @@ The icon of the realm.
 
 Realmflag of this realm.
 
-| Value | Hex  | Flag                        | Comment      |
-| :---- | :--: | :-------------------------- | :----------- |
-| 0     | 0x00 | REALM_FLAG_NONE             | None         |
-| 1     | 0x01 | REALM_FLAG_VERSION_MISMATCH | Invalid      |
-| 2     | 0x02 | REALM_FLAG_OFFLINE          | Offline      |
-| 4     | 0x04 | REALM_FLAG_SPECIFYBUILD     | SpecifyBuild |
-| 8     | 0x08 | REALM_FLAG_UNK1             |              |
-| 16    | 0x10 | REALM_FLAG_UNK2             |              |
-| 32    | 0x20 | REALM_FLAG_RECOMMENDED      | Recommended  |
-| 64    | 0x40 | REALM_FLAG_NEW              | New Players  |
-| 128   | 0x80 | REALM_FLAG_FULL             | Full         |
+| Value | Hex    | Flag                        | Comment                                                                       |
+| :---- | :----: | :-------------------------- | :---------------------------------------------------------------------------- |
+| 0     | `0x00` | REALM_FLAG_NONE             | None                                                                          |
+| 1     | `0x01` | REALM_FLAG_VERSION_MISMATCH | Invalid                                                                       |
+| 2     | `0x02` | REALM_FLAG_OFFLINE          | Offline                                                                       |
+| 4     | `0x04` | REALM_FLAG_SPECIFYBUILD     | SpecifyBuild                                                                  |
+| 8     | `0x08` | REALM_FLAG_UNK1             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos |
+| 16    | `0x10` | REALM_FLAG_UNK2             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos |
+| 32    | `0x20` | REALM_FLAG_RECOMMENDED      | Recommended                                                                   |
+| 64    | `0x40` | REALM_FLAG_NEW              | New Players                                                                   |
+| 128   | `0x80` | REALM_FLAG_FULL             | Full                                                                          |
 
 ### timezone
 

@@ -57,11 +57,11 @@ The type of action:
 
 **Possible types**
 
-| Value | Hex  | Flag        | Comment |
-| :---- | :--: | :---------- | :------ |
-| 0     | 0x00 | Spell       |         |
-| 1     | 0x01 | Click       |         |
-| 32    | 0x20 | Eq set      |         |
-| 64    | 0x40 | Macro       |         |
-| 65    | 0x41 | Click macro |         |
-| 128   | 0x80 | Item        |         |
+| Value | Hex    | Flag        | Comment |
+| :---- | :----: | :---------- | :------ |
+| 0     | `0x00` | Spell       |         |
+| 1     | `0x01` | Click       |         |
+| 32    | `0x20` | Eq set      |         |
+| 64    | `0x40` | Macro       |         |
+| 65    | `0x41` | Click macro |         |
+| 128   | `0x80` | Item        |         |

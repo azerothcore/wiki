@@ -61,14 +61,14 @@ The number of charges for each of the five possible spellcharges on an item, s
 
 ### flags
 
-| Value | Hex    | Flag                          | Comment                                             |
-| :---- | :----: | :---------------------------- | :-------------------------------------------------- |
-| 1     | 0x0001 | ITEM_FIELD_FLAG_SOULBOUND     | The item is soulbound.                              |
-| 4     | 0x0004 | ITEM_FIELD_FLAG_UNLOCKED      | The item had a lock that has been opened.           |
-| 8     | 0x0008 | ITEM_FIELD_FLAG_WRAPPED       | The item is wrapped and contains another item.      |
-| 256   | 0x0100 | ITEM_FIELD_FLAG_BOP_TRADEABLE | The soulbound item can still be traded for a while. |
-| 512   | 0x0200 | ITEM_FIELD_FLAG_READABLE      | Right clicking the item opens a text page.          |
-| 4096  | 0x1000 | ITEM_FIELD_FLAG_REFUNDABLE    | The item can still be returned to the vendor.       |
+| Value | Hex      | Flag                          | Comment                                             |
+| :---- | :------: | :---------------------------- | :-------------------------------------------------- |
+| 1     | `0x0001` | ITEM_FIELD_FLAG_SOULBOUND     | The item is soulbound.                              |
+| 4     | `0x0004` | ITEM_FIELD_FLAG_UNLOCKED      | The item had a lock that has been opened.           |
+| 8     | `0x0008` | ITEM_FIELD_FLAG_WRAPPED       | The item is wrapped and contains another item.      |
+| 256   | `0x0100` | ITEM_FIELD_FLAG_BOP_TRADEABLE | The soulbound item can still be traded for a while. |
+| 512   | `0x0200` | ITEM_FIELD_FLAG_READABLE      | Right clicking the item opens a text page.          |
+| 4096  | `0x1000` | ITEM_FIELD_FLAG_REFUNDABLE    | The item can still be returned to the vendor.       |
 
 ### enchantments
 

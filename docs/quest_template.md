@@ -246,29 +246,29 @@ Item given by the quest giver at the beginning of the quest. The item will be de
 
 This flag field defines more specifically the type of quest it is. The quest requirements are calculated from non-zero values in other quest template fields.
 
-| Value  | Hex        | Flag                                | Comment                                                                                                                                                   |
-| :----- | :--------: | :---------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0      | 0x00000000 | QUEST_FLAGS_NONE                    | No flags.                                                                                                                                                 |
-| 1      | 0x00000001 | QUEST_FLAGS_STAY_ALIVE              | If the player dies, the quest is failed.                                                                                                                  |
-| 2      | 0x00000002 | QUEST_FLAGS_PARTY_ACCEPT            | Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest. |
-| 4      | 0x00000004 | QUEST_FLAGS_EXPLORATION             | Involves the activation of an areatrigger.                                                                                                                |
-| 8      | 0x00000008 | QUEST_FLAGS_SHARABLE                | Allows the quest to be shared with other players.                                                                                                         |
-| 16     | 0x00000010 | QUEST_FLAGS_HAS_CONDITION           | Not used currently.                                                                                                                                       |
-| 32     | 0x00000020 | QUEST_FLAGS_HIDE_REWARD_POI         | Not used currently.                                                                                                                                       |
-| 64     | 0x00000040 | QUEST_FLAGS_RAID                    | Not used by the core. Use [QuestInfoID](#questinfoid) to make a raid quest.                                                                               |
-| 128    | 0x00000080 | QUEST_FLAGS_TBC                     | Not used currently: Available if TBC expansion enabled only.                                                                                              |
-| 256    | 0x00000100 | QUEST_FLAGS_NO_MONEY_FROM_XP        | Experience is not converted to money at the maximum level.                                                                                                |
-| 512    | 0x00000200 | QUEST_FLAGS_HIDDEN_REWARDS          | Item and monetary rewards are hidden in the initial quest details page and in the quest log but will appear once ready to be rewarded.                    |
-| 1024   | 0x00000400 | QUEST_FLAGS_TRACKING                | These quests are automatically rewarded on quest complete and they will never appear in quest log client side.                                            |
-| 2048   | 0x00000800 | QUEST_FLAGS_DEPRECATE_REPUTATION    | Not used currently.                                                                                                                                       |
-| 4096   | 0x00001000 | QUEST_FLAGS_DAILY                   | Daily repeatable quest.                                                                                                                                   |
-| 8192   | 0x00002000 | QUEST_FLAGS_FLAGS_PVP               | Having this quest in log forces PvP flag.                                                                                                                 |
-| 16384  | 0x00004000 | QUEST_FLAGS_UNAVAILABLE             | Used on quests that are not generically available.                                                                                                        |
-| 32768  | 0x00008000 | QUEST_FLAGS_WEEKLY                  | Weekly repeatable quest.                                                                                                                                  |
-| 65536  | 0x00010000 | QUEST_FLAGS_AUTOCOMPLETE            | Auto complete.                                                                                                                                            |
-| 131072 | 0x00020000 | QUEST_FLAGS_DISPLAY_ITEM_IN_TRACKER | Displays usable item in quest tracker.                                                                                                                    |
-| 262144 | 0x00040000 | QUEST_FLAGS_OBJ_TEXT                | Use Objective text as Complete text.                                                                                                                      |
-| 524288 | 0x00080000 | QUEST_FLAGS_AUTO_ACCEPT             | The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag.                                              |
+| Value  | Hex          | Flag                                | Comment                                                                                                                                                   |
+| :----- | :----------: | :---------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0      | `0x00000000` | QUEST_FLAGS_NONE                    | No flags.                                                                                                                                                 |
+| 1      | `0x00000001` | QUEST_FLAGS_STAY_ALIVE              | If the player dies, the quest is failed.                                                                                                                  |
+| 2      | `0x00000002` | QUEST_FLAGS_PARTY_ACCEPT            | Escort quests or any other event-driven quests. If player in party, all players that can accept this quest will receive confirmation box to accept quest. |
+| 4      | `0x00000004` | QUEST_FLAGS_EXPLORATION             | Involves the activation of an areatrigger.                                                                                                                |
+| 8      | `0x00000008` | QUEST_FLAGS_SHARABLE                | Allows the quest to be shared with other players.                                                                                                         |
+| 16     | `0x00000010` | QUEST_FLAGS_HAS_CONDITION           | Not used currently.                                                                                                                                       |
+| 32     | `0x00000020` | QUEST_FLAGS_HIDE_REWARD_POI         | Not used currently.                                                                                                                                       |
+| 64     | `0x00000040` | QUEST_FLAGS_RAID                    | Not used by the core. Use [QuestInfoID](#questinfoid) to make a raid quest.                                                                               |
+| 128    | `0x00000080` | QUEST_FLAGS_TBC                     | Not used currently: Available if TBC expansion enabled only.                                                                                              |
+| 256    | `0x00000100` | QUEST_FLAGS_NO_MONEY_FROM_XP        | Experience is not converted to money at the maximum level.                                                                                                |
+| 512    | `0x00000200` | QUEST_FLAGS_HIDDEN_REWARDS          | Item and monetary rewards are hidden in the initial quest details page and in the quest log but will appear once ready to be rewarded.                    |
+| 1024   | `0x00000400` | QUEST_FLAGS_TRACKING                | These quests are automatically rewarded on quest complete and they will never appear in quest log client side.                                            |
+| 2048   | `0x00000800` | QUEST_FLAGS_DEPRECATE_REPUTATION    | Not used currently.                                                                                                                                       |
+| 4096   | `0x00001000` | QUEST_FLAGS_DAILY                   | Daily repeatable quest.                                                                                                                                   |
+| 8192   | `0x00002000` | QUEST_FLAGS_FLAGS_PVP               | Having this quest in log forces PvP flag.                                                                                                                 |
+| 16384  | `0x00004000` | QUEST_FLAGS_UNAVAILABLE             | Used on quests that are not generically available.                                                                                                        |
+| 32768  | `0x00008000` | QUEST_FLAGS_WEEKLY                  | Weekly repeatable quest.                                                                                                                                  |
+| 65536  | `0x00010000` | QUEST_FLAGS_AUTOCOMPLETE            | Auto complete.                                                                                                                                            |
+| 131072 | `0x00020000` | QUEST_FLAGS_DISPLAY_ITEM_IN_TRACKER | Displays usable item in quest tracker.                                                                                                                    |
+| 262144 | `0x00040000` | QUEST_FLAGS_OBJ_TEXT                | Use Objective text as Complete text.                                                                                                                      |
+| 524288 | `0x00080000` | QUEST_FLAGS_AUTO_ACCEPT             | The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag.                                              |
 
 Like all flag based fields, **Flags** can be added for the different types of quest. Higher flags were added in later expansions and are not used in 3.3.5a.
 
@@ -492,18 +492,18 @@ Time in seconds the player has to complete the quest. If the time runs out, the 
 
 Bitmask of the races that can take the quest. 0 means all races.
 
-| Value | Hex    | Flag      | Comment |
-| :---- | :----: | :-------- | :------ |
-| 1     | 0x0001 | Human     |         |
-| 2     | 0x0002 | Orc       |         |
-| 4     | 0x0004 | Dwarf     |         |
-| 8     | 0x0008 | Night Elf |         |
-| 16    | 0x0010 | Undead    |         |
-| 32    | 0x0020 | Tauren    |         |
-| 64    | 0x0040 | Gnome     |         |
-| 128   | 0x0080 | Troll     |         |
-| 512   | 0x0200 | Blood Elf |         |
-| 1024  | 0x0400 | Draenei   |         |
+| Value | Hex      | Flag      | Comment |
+| :---- | :------: | :-------- | :------ |
+| 1     | `0x0001` | Human     |         |
+| 2     | `0x0002` | Orc       |         |
+| 4     | `0x0004` | Dwarf     |         |
+| 8     | `0x0008` | Night Elf |         |
+| 16    | `0x0010` | Undead    |         |
+| 32    | `0x0020` | Tauren    |         |
+| 64    | `0x0040` | Gnome     |         |
+| 128   | `0x0080` | Troll     |         |
+| 512   | `0x0200` | Blood Elf |         |
+| 1024  | `0x0400` | Draenei   |         |
 
 Add the values together to allow several races. For example, 1101 allows all Alliance races and 690 allows all Horde races.
 

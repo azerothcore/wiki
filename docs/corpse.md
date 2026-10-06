@@ -80,14 +80,14 @@ The guild of the character. See [guild.guildid](guild#guildid).
 
 ### flags
 
-| Value | Hex  | Flag                   | Comment                                                                               |
-| :---- | :--: | :--------------------- | :------------------------------------------------------------------------------------ |
-| 1     | 0x01 | CORPSE_FLAG_BONES      | The corpse is bones.                                                                  |
-| 2     | 0x02 | CORPSE_FLAG_UNK1       |                                                                                       |
-| 4     | 0x04 | CORPSE_FLAG_UNK2       | Set on every corpse.                                                                  |
-| 8     | 0x08 | CORPSE_FLAG_HIDE_HELM  | The character had their helm hidden.                                                  |
-| 16    | 0x10 | CORPSE_FLAG_HIDE_CLOAK | The character had their cloak hidden.                                                 |
-| 32    | 0x20 | CORPSE_FLAG_LOOTABLE   | Other players can loot the corpse, in battlegrounds and in Wintergrasp during battle. |
+| Value | Hex    | Flag                   | Comment                                                                               |
+| :---- | :----: | :--------------------- | :------------------------------------------------------------------------------------ |
+| 1     | `0x01` | CORPSE_FLAG_BONES      | The corpse is bones.                                                                  |
+| 2     | `0x02` | CORPSE_FLAG_UNK1       | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos         |
+| 4     | `0x04` | CORPSE_FLAG_UNK2       | Set on every corpse.                                                                  |
+| 8     | `0x08` | CORPSE_FLAG_HIDE_HELM  | The character had their helm hidden.                                                  |
+| 16    | `0x10` | CORPSE_FLAG_HIDE_CLOAK | The character had their cloak hidden.                                                 |
+| 32    | `0x20` | CORPSE_FLAG_LOOTABLE   | Other players can loot the corpse, in battlegrounds and in Wintergrasp during battle. |
 
 ### dynFlags
 

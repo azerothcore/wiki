@@ -182,34 +182,34 @@ Number of bank bag slots the character has bought.
 
 A bitmask that represents what Player flags the player has. Each bit controls a different flag and to combine flags, you can add each flag that you want, in effect activating the respective bits.
 
-| Value    | Hex        | Flag                           | Comment                                                                           |
-| :------- | :--------: | :----------------------------- | :-------------------------------------------------------------------------------- |
-| 1        | 0x00000001 | PLAYER_FLAGS_GROUP_LEADER      |                                                                                   |
-| 2        | 0x00000002 | PLAYER_FLAGS_AFK               |                                                                                   |
-| 4        | 0x00000004 | PLAYER_FLAGS_DND               |                                                                                   |
-| 8        | 0x00000008 | PLAYER_FLAGS_GM                |                                                                                   |
-| 16       | 0x00000010 | PLAYER_FLAGS_GHOST             |                                                                                   |
-| 32       | 0x00000020 | PLAYER_FLAGS_RESTING           |                                                                                   |
-| 64       | 0x00000040 | PLAYER_FLAGS_UNK6              |                                                                                   |
-| 128      | 0x00000080 | PLAYER_FLAGS_UNK7              | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                             |
-| 256      | 0x00000100 | PLAYER_FLAGS_CONTESTED_PVP     | Player has been involved in a PvP combat and will be attacked by contested guards |
-| 512      | 0x00000200 | PLAYER_FLAGS_IN_PVP            |                                                                                   |
-| 1024     | 0x00000400 | PLAYER_FLAGS_HIDE_HELM         |                                                                                   |
-| 2048     | 0x00000800 | PLAYER_FLAGS_HIDE_CLOAK        |                                                                                   |
-| 4096     | 0x00001000 | PLAYER_FLAGS_PARTIAL_PLAY_TIME | played long time                                                                  |
-| 8192     | 0x00002000 | PLAYER_FLAGS_NO_PLAY_TIME      | played too long time                                                              |
-| 16384    | 0x00004000 | PLAYER_FLAGS_IS_OUT_OF_BOUNDS  |                                                                                   |
-| 32768    | 0x00008000 | PLAYER_FLAGS_DEVELOPER         | prefix for something?                                                             |
-| 65536    | 0x00010000 | PLAYER_FLAGS_UNK16             | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                |
-| 131072   | 0x00020000 | PLAYER_FLAGS_TAXI_BENCHMARK    | taxi benchmark mode (on/off) (2.0.1)                                              |
-| 262144   | 0x00040000 | PLAYER_FLAGS_PVP_TIMER         | 3.0.2, pvp timer active (after you disable pvp manually)                          |
-| 524288   | 0x00080000 | PLAYER_FLAGS_UBER              |                                                                                   |
-| 1048576  | 0x00100000 | PLAYER_FLAGS_UNK20             |                                                                                   |
-| 2097152  | 0x00200000 | PLAYER_FLAGS_UNK21             |                                                                                   |
-| 4194304  | 0x00400000 | PLAYER_FLAGS_COMMENTATOR2      |                                                                                   |
-| 8388608  | 0x00800000 | PLAYER_ALLOW_ONLY_ABILITY      | used by bladestorm and killing spree                                              |
-| 16777216 | 0x01000000 | PLAYER_FLAGS_UNK24             | disabled all melee ability on tab include autoattack                              |
-| 33554432 | 0x02000000 | PLAYER_FLAGS_NO_XP_GAIN        |                                                                                   |
+| Value    | Hex          | Flag                           | Comment                                                                                                                                                                                                                                                                        |
+| :------- | :----------: | :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1        | `0x00000001` | PLAYER_FLAGS_GROUP_LEADER      | The player is the leader of a group                                                                                                                                                                                                                                            |
+| 2        | `0x00000002` | PLAYER_FLAGS_AFK               | The player is away (AFK)                                                                                                                                                                                                                                                       |
+| 4        | `0x00000004` | PLAYER_FLAGS_DND               | The player is in Do Not Disturb mode                                                                                                                                                                                                                                           |
+| 8        | `0x00000008` | PLAYER_FLAGS_GM                | GM mode is on, the player shows the GM tag                                                                                                                                                                                                                                     |
+| 16       | `0x00000010` | PLAYER_FLAGS_GHOST             | The player is a ghost                                                                                                                                                                                                                                                          |
+| 32       | `0x00000020` | PLAYER_FLAGS_RESTING           | The player is resting (in an inn or a city)                                                                                                                                                                                                                                    |
+| 64       | `0x00000040` | PLAYER_FLAGS_UNK6              | Not used by the core. [TrinityCore](https://github.com/TrinityCore/TrinityCore/blob/3.3.5/src/server/game/Entities/Player/Player.h) names it PLAYER_FLAGS_VOICE_CHAT, [mangos](https://github.com/mangostwo/server/blob/master/src/game/Object/Player.h) guesses an admin flag |
+| 128      | `0x00000080` | PLAYER_FLAGS_UNK7              | pre-3.0.3 PLAYER_FLAGS_FFA_PVP flag for FFA PVP state                                                                                                                                                                                                                          |
+| 256      | `0x00000100` | PLAYER_FLAGS_CONTESTED_PVP     | Player has been involved in a PvP combat and will be attacked by contested guards                                                                                                                                                                                              |
+| 512      | `0x00000200` | PLAYER_FLAGS_IN_PVP            | The player is flagged for PvP. [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h) names it PLAYER_FLAGS_PVP_DESIRED, the PvP choice of the player                                                                                       |
+| 1024     | `0x00000400` | PLAYER_FLAGS_HIDE_HELM         | The helm is hidden                                                                                                                                                                                                                                                             |
+| 2048     | `0x00000800` | PLAYER_FLAGS_HIDE_CLOAK        | The cloak is hidden                                                                                                                                                                                                                                                            |
+| 4096     | `0x00001000` | PLAYER_FLAGS_PARTIAL_PLAY_TIME | played long time                                                                                                                                                                                                                                                               |
+| 8192     | `0x00002000` | PLAYER_FLAGS_NO_PLAY_TIME      | played too long time                                                                                                                                                                                                                                                           |
+| 16384    | `0x00004000` | PLAYER_FLAGS_IS_OUT_OF_BOUNDS  | The player is outside the bounds of the map. Read by the client function IsOutOfBounds ([cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h))                                                                                             |
+| 32768    | `0x00008000` | PLAYER_FLAGS_DEVELOPER         | prefix for something?                                                                                                                                                                                                                                                          |
+| 65536    | `0x00010000` | PLAYER_FLAGS_UNK16             | pre-3.0.3 PLAYER_FLAGS_SANCTUARY flag for player entered sanctuary                                                                                                                                                                                                             |
+| 131072   | `0x00020000` | PLAYER_FLAGS_TAXI_BENCHMARK    | taxi benchmark mode (on/off) (2.0.1)                                                                                                                                                                                                                                           |
+| 262144   | `0x00040000` | PLAYER_FLAGS_PVP_TIMER         | 3.0.2, pvp timer active (after you disable pvp manually)                                                                                                                                                                                                                       |
+| 524288   | `0x00080000` | PLAYER_FLAGS_UBER              | The core does not let a player with this flag be attacked, like an arena spectator. [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h) names it PLAYER_FLAGS_COMMENTATOR                                                                |
+| 1048576  | `0x00100000` | PLAYER_FLAGS_UNK20             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos                                                                                                                                                                                                  |
+| 2097152  | `0x00200000` | PLAYER_FLAGS_UNK21             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos                                                                                                                                                                                                  |
+| 4194304  | `0x00400000` | PLAYER_FLAGS_COMMENTATOR2      | Commentator mode, set and read by the core with SetCommentator and IsCommentator. [cmangos](https://github.com/cmangos/mangos-wotlk/blob/master/src/game/Entities/Player.h) names it PLAYER_FLAGS_COMMENTATOR_UBER                                                             |
+| 8388608  | `0x00800000` | PLAYER_ALLOW_ONLY_ABILITY      | used by bladestorm and killing spree                                                                                                                                                                                                                                           |
+| 16777216 | `0x01000000` | PLAYER_FLAGS_UNK24             | disabled all melee ability on tab include autoattack                                                                                                                                                                                                                           |
+| 33554432 | `0x02000000` | PLAYER_FLAGS_NO_XP_GAIN        | The player turned off experience gain                                                                                                                                                                                                                                          |
 
 ### position\_x
 
@@ -235,12 +235,12 @@ The instance ID the character is currently in and bound to.
 
 The current dungeon difficulty that the player is in. This field is bitmask. Values are put together, however, only two of four should be used at once. This description may not be 100% correct.
 
-| Value | Hex  | Flag   | Comment |
-| :---- | :--: | :----- | :------ |
-| 0     | 0x00 | Normal |         |
-| 1     | 0x01 | Heroic |         |
-| 16    | 0x10 | 10 man |         |
-| 32    | 0x20 | 25 man |         |
+| Value | Hex    | Flag   | Comment |
+| :---- | :----: | :----- | :------ |
+| 0     | `0x00` | Normal |         |
+| 1     | `0x01` | Heroic |         |
+| 16    | `0x10` | 10 man |         |
+| 32    | `0x20` | 25 man |         |
 
 ### orientation
 
@@ -310,19 +310,19 @@ The global unique identifier of the transport this character was on when they we
 
 These flags control certain player specific attributes, mostly GM features.
 
-| Value | Hex    | Flag                               | Comment                                             |
-| :---- | :----: | :--------------------------------- | :-------------------------------------------------- |
-| 1     | 0x0001 | PLAYER_EXTRA_GM_ON                 | Defines GM state                                    |
-| 4     | 0x0004 | PLAYER_EXTRA_ACCEPT_WHISPERS       | Defines if whispers are accepted                    |
-| 8     | 0x0008 | PLAYER_EXTRA_TAXICHEAT             | Sets taxicheat                                      |
-| 16    | 0x0010 | PLAYER_EXTRA_GM_INVISIBLE          | Defines GM visibility                               |
-| 32    | 0x0020 | PLAYER_EXTRA_GM_CHAT               | Show GM badge in chat messages                      |
-| 64    | 0x0040 | PLAYER_EXTRA_HAS_310_FLYER         | Marks if player already has 310% speed flying mount |
-| 128   | 0x0080 | PLAYER_EXTRA_SPECTATOR_ON          | Marks if the player is an arena spectator           |
-| 256   | 0x0100 | PLAYER_EXTRA_PVP_DEATH             | Store PvP death status until corpse creating        |
-| 1024  | 0x0400 | PLAYER_EXTRA_SHOW_DK_PET           | Shows the ghoul on the character select screen      |
-| 2048  | 0x0800 | PLAYER_EXTRA_GM_SPECTATOR          | GM is spectating                                    |
-| 4096  | 0x1000 | PLAYER_EXTRA_DECLINE_GROUP_INVITES | The player declines all group invites               |
+| Value | Hex      | Flag                               | Comment                                             |
+| :---- | :------: | :--------------------------------- | :-------------------------------------------------- |
+| 1     | `0x0001` | PLAYER_EXTRA_GM_ON                 | Defines GM state                                    |
+| 4     | `0x0004` | PLAYER_EXTRA_ACCEPT_WHISPERS       | Defines if whispers are accepted                    |
+| 8     | `0x0008` | PLAYER_EXTRA_TAXICHEAT             | Sets taxicheat                                      |
+| 16    | `0x0010` | PLAYER_EXTRA_GM_INVISIBLE          | Defines GM visibility                               |
+| 32    | `0x0020` | PLAYER_EXTRA_GM_CHAT               | Show GM badge in chat messages                      |
+| 64    | `0x0040` | PLAYER_EXTRA_HAS_310_FLYER         | Marks if player already has 310% speed flying mount |
+| 128   | `0x0080` | PLAYER_EXTRA_SPECTATOR_ON          | Marks if the player is an arena spectator           |
+| 256   | `0x0100` | PLAYER_EXTRA_PVP_DEATH             | Store PvP death status until corpse creating        |
+| 1024  | `0x0400` | PLAYER_EXTRA_SHOW_DK_PET           | Shows the ghoul on the character select screen      |
+| 2048  | `0x0800` | PLAYER_EXTRA_GM_SPECTATOR          | GM is spectating                                    |
+| 4096  | `0x1000` | PLAYER_EXTRA_DECLINE_GROUP_INVITES | The player declines all group invites               |
 
 ### stable\_slots
 
@@ -332,16 +332,16 @@ The Stable Slots available (bought) at the Stable Master.
 
 This field is a bitmask controlling different actions taken once a player logs in with the character.
 
-| Value | Hex  | Flag                       | Comment                              |
-| :---- | :--: | :------------------------- | :----------------------------------- |
-| 1     | 0x01 | AT_LOGIN_RENAME            | Force character to change name       |
-| 2     | 0x02 | AT_LOGIN_RESET_SPELLS      | Reset spells (professions as well)   |
-| 4     | 0x04 | AT_LOGIN_RESET_TALENTS     | Reset talents                        |
-| 8     | 0x08 | AT_LOGIN_CUSTOMIZE         | Customize Characters                 |
-| 16    | 0x10 | AT_LOGIN_RESET_PET_TALENTS | Reset pet talents                    |
-| 32    | 0x20 | AT_LOGIN_FIRST             | Set at and removed after first login |
-| 64    | 0x40 | AT_LOGIN_CHANGE_FACTION    | Faction change                       |
-| 128   | 0x80 | AT_LOGIN_CHANGE_RACE       | Race change                          |
+| Value | Hex    | Flag                       | Comment                              |
+| :---- | :----: | :------------------------- | :----------------------------------- |
+| 1     | `0x01` | AT_LOGIN_RENAME            | Force character to change name       |
+| 2     | `0x02` | AT_LOGIN_RESET_SPELLS      | Reset spells (professions as well)   |
+| 4     | `0x04` | AT_LOGIN_RESET_TALENTS     | Reset talents                        |
+| 8     | `0x08` | AT_LOGIN_CUSTOMIZE         | Customize Characters                 |
+| 16    | `0x10` | AT_LOGIN_RESET_PET_TALENTS | Reset pet talents                    |
+| 32    | `0x20` | AT_LOGIN_FIRST             | Set at and removed after first login |
+| 64    | `0x40` | AT_LOGIN_CHANGE_FACTION    | Faction change                       |
+| 128   | `0x80` | AT_LOGIN_CHANGE_RACE       | Race change                          |
 
 For multiple actions, add values together.
 
@@ -477,12 +477,12 @@ so the 29bit stores the title. This would be 2 ^ 29 = 536870912. This bit store
 
 A bitmask that contains visible actionbars for the player.
 
-| Value | Hex  | Flag             | Comment |
-| :---- | :--: | :--------------- | :------ |
-| 1     | 0x01 | Bottom Left Bar  |         |
-| 2     | 0x02 | Bottom Right Bar |         |
-| 4     | 0x04 | Rigth Bar        |         |
-| 8     | 0x08 | Right Bar 2      |         |
+| Value | Hex    | Flag             | Comment |
+| :---- | :----: | :--------------- | :------ |
+| 1     | `0x01` | Bottom Left Bar  |         |
+| 2     | `0x02` | Bottom Right Bar |         |
+| 4     | `0x04` | Rigth Bar        |         |
+| 8     | `0x08` | Right Bar 2      |         |
 
 ### grantableLevels
 

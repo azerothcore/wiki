@@ -145,11 +145,11 @@ when is set to 1, that field \`money\` stores gold for COD.
 
 ### checked
 
-| Value | Hex  | Flag                        | Comment |
-| :---- | :--: | :-------------------------- | :------ |
-| 0     | 0x00 | MAIL_CHECK_MASK_NONE        |         |
-| 1     | 0x01 | MAIL_CHECK_MASK_READ        |         |
-| 2     | 0x02 | MAIL_CHECK_MASK_RETURNED    |         |
-| 4     | 0x04 | MAIL_CHECK_MASK_COPIED      |         |
-| 8     | 0x08 | MAIL_CHECK_MASK_COD_PAYMENT |         |
-| 16    | 0x10 | MAIL_CHECK_MASK_HAS_BODY    |         |
+| Value | Hex    | Flag                        | Comment                                               |
+| :---- | :----: | :-------------------------- | :---------------------------------------------------- |
+| 0     | `0x00` | MAIL_CHECK_MASK_NONE        | No flag                                               |
+| 1     | `0x01` | MAIL_CHECK_MASK_READ        | The mail was read                                     |
+| 2     | `0x02` | MAIL_CHECK_MASK_RETURNED    | The mail was returned, it cannot be returned again    |
+| 4     | `0x04` | MAIL_CHECK_MASK_COPIED      | The mail was copied, its items cannot be copied again |
+| 8     | `0x08` | MAIL_CHECK_MASK_COD_PAYMENT | The mail is the payment of a cash on delivery mail    |
+| 16    | `0x10` | MAIL_CHECK_MASK_HAS_BODY    | The mail has body text                                |
