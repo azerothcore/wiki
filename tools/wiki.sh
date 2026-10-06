@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
+# Builds and serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
+#   ./wiki.sh build   reuses the previous build      ./wiki.sh clean   full rebuild
+#   add "all" to also build the translations
 
 # The script lives in tools; the wiki is one folder up.
 cd "$(dirname "${BASH_SOURCE[0]}")/.." || exit 1
@@ -13,12 +15,19 @@ JEKYLL_PORT=4000
 JEKYLL_HOST="${JEKYLL_HOST:-127.0.0.1}"
 JEKYLL_BASEURL=/wiki
 
-# Options: "all" also builds the translations, "clean" forces a full rebuild.
+# "build" is the default, "clean" forces a full rebuild, "all" also builds the translations.
 JEKYLL_CONFIG=_config.yml,_config.local.yml,_config.local.en.yml
 JEKYLL_CLEAN=0
 for arg in "$@"; do
-    [ "$arg" = "all" ] && JEKYLL_CONFIG=_config.yml,_config.local.yml
-    [ "$arg" = "clean" ] && JEKYLL_CLEAN=1
+    # Accepts build, clean, all, buildAll and cleanAll, with or without leading dashes.
+    opt=$(printf '%s' "$arg" | tr 'A-Z' 'a-z' | tr -d '-')
+    case "$opt" in
+        build) ;;
+        clean) JEKYLL_CLEAN=1 ;;
+        all|buildall) JEKYLL_CONFIG=_config.yml,_config.local.yml ;;
+        cleanall) JEKYLL_CLEAN=1; JEKYLL_CONFIG=_config.yml,_config.local.yml ;;
+        *) echo "Unknown option \"$arg\". Use: ./wiki.sh build, ./wiki.sh clean, ./wiki.sh build all, ./wiki.sh clean all"; exit 1 ;;
+    esac
 done
 
 # Walk up to the site root, so Jekyll is never started from the wrong folder.
@@ -88,7 +97,7 @@ bundle exec jekyll build --baseurl "$JEKYLL_BASEURL" --config "$JEKYLL_CONFIG" -
 T_TOTAL=$(( $(date +%s) - T_START ))
 echo
 echo "Total time from start to finished build: $((T_TOTAL / 60)) min $((T_TOTAL % 60)) s ($T_TOTAL seconds)"
-echo "Options used: ${*:-none - English only, reusing the previous build}"
+echo "Options used: ${*:-build - English only, reusing the previous build}"
 echo "Open http://localhost:$JEKYLL_PORT$JEKYLL_BASEURL/home - press Ctrl+C to stop the server."
 echo
 

@@ -1,5 +1,7 @@
 @echo off
-rem Serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
+rem Builds and serves the wiki locally. Open http://localhost:4000/wiki/home when it is ready.
+rem   wiki build   reuses the previous build      wiki clean   full rebuild
+rem   add "all" to also build the translations
 
 rem The script lives in tools; the wiki is one folder up.
 cd /d "%~dp0.."
@@ -13,14 +15,33 @@ rem before running to let other devices on the network open it.
 if not defined JEKYLL_HOST set JEKYLL_HOST=127.0.0.1
 set JEKYLL_BASEURL=/wiki
 
-rem Options: "all" also builds the translations, "clean" forces a full rebuild.
+rem "build" is the default, "clean" forces a full rebuild, "all" also builds the translations.
 set JEKYLL_CONFIG=_config.yml,_config.local.yml,_config.local.en.yml
 set JEKYLL_CLEAN=0
-for %%A in (%*) do (
-    if /i "%%~A"=="all" set JEKYLL_CONFIG=_config.yml,_config.local.yml
-    if /i "%%~A"=="clean" set JEKYLL_CLEAN=1
+set JEKYLL_BAD=
+for %%A in (%*) do call :option "%%~A"
+if defined JEKYLL_BAD (
+    echo Unknown option "%JEKYLL_BAD%". Use: wiki build, wiki clean, wiki build all, wiki clean all
+    exit /b 1
 )
 
+goto options_done
+
+rem Accepts build, clean, all, buildAll and cleanAll, with or without leading dashes.
+:option
+set "OPT=%~1"
+:option_strip
+if "%OPT:~0,1%"=="-" set "OPT=%OPT:~1%" & goto option_strip
+set "OPT=%OPT:-=%"
+if /i "%OPT%"=="build" exit /b 0
+if /i "%OPT%"=="clean" set JEKYLL_CLEAN=1& exit /b 0
+if /i "%OPT%"=="all" set JEKYLL_CONFIG=_config.yml,_config.local.yml& exit /b 0
+if /i "%OPT%"=="buildall" set JEKYLL_CONFIG=_config.yml,_config.local.yml& exit /b 0
+if /i "%OPT%"=="cleanall" set JEKYLL_CLEAN=1& set JEKYLL_CONFIG=_config.yml,_config.local.yml& exit /b 0
+set "JEKYLL_BAD=%~1"
+exit /b 0
+
+:options_done
 rem Walk up to the site root, so Jekyll is never started from the wrong folder.
 set DEPTH=0
 :findroot
@@ -107,7 +128,7 @@ if defined T_START if defined T_END (
 )
 echo.
 if defined T_TOTAL echo Total time from start to finished build: %T_MIN% min %T_SEC% s (%T_TOTAL% seconds^)
-if "%~1"=="" (echo Options used: none - English only, reusing the previous build) else (echo Options used: %*)
+if "%~1"=="" (echo Options used: build - English only, reusing the previous build) else (echo Options used: %*)
 echo Open http://localhost:%JEKYLL_PORT%%JEKYLL_BASEURL%/home - press Ctrl+C to stop the server.
 echo.
 

@@ -1,3 +1,3 @@
-# tools/test_locally.sh must keep LF line endings, or bash cannot run it.
-tools/test_locally.sh text eol=lf
-tools/test_locally.bat text eol=crlf
+# tools/wiki.sh must keep LF line endings, or bash cannot run it.
+tools/wiki.sh text eol=lf
+tools/wiki.bat text eol=crlf

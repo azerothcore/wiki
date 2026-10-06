@@ -28,8 +28,8 @@ Requires [Ruby](https://jekyllrb.com/docs/installation/) and Bundler (`gem insta
 
 #### With the test script
 
-- Windows: double-click `test_locally.bat` in the `tools` folder
-- Linux and macOS: run `bash tools/test_locally.sh`
+- Windows: double-click `wiki.bat` in the `tools` folder, or open a command prompt in `tools` and run `wiki build`
+- Linux and macOS: in the `tools` folder run `./wiki.sh build`
 
 The script installs the gems if needed, stops any old server still running on port 4000, and serves the site. Then open `http://localhost:4000/wiki/home`.
 
@@ -37,30 +37,32 @@ The first run can be slow, because Jekyll has to generate more than 500 pages (s
 
 ##### Options
 
-Add these words after the script name. They can be combined, in any order.
+Add these words after the script name. They can be combined, in any order. In PowerShell write `.\wiki` instead of `wiki`.
 
 | Option  | What it does |
 | :------ | :----------- |
-| *(none)* | Builds the English pages only, reusing the previous build. This is the fast, everyday mode. |
+| `build` | Builds the English pages only, reusing the previous build. This is the fast, everyday mode, and what the script does when no option is given. |
 | `all`   | Also builds the Spanish and Chinese translations. That is about 1,500 pages, so it takes much longer. |
 | `clean` | Throws away the previous build and the downloaded theme, and rebuilds everything. Use it if a page looks stale or wrong, or after changing the sidebar, a layout or `_config.yml`. |
 
 Without `clean`, the script reuses the previous build and only renders the pages that changed. For that it keeps the theme in the `.theme-cache` folder, which is not committed.
 
-Windows:
+Windows, from the `tools` folder:
 
 ```
-tools\test_locally.bat all
-tools\test_locally.bat clean
-tools\test_locally.bat all clean
+wiki build
+wiki build all
+wiki clean
+wiki clean all
 ```
 
-Linux and macOS:
+Linux and macOS, from the `tools` folder:
 
 ```bash
-bash tools/test_locally.sh all
-bash tools/test_locally.sh clean
-bash tools/test_locally.sh all clean
+./wiki.sh build
+./wiki.sh build all
+./wiki.sh clean
+./wiki.sh clean all
 ```
 
 ##### Build times
@@ -69,10 +71,10 @@ When the build finishes, the script prints how long it took and which options we
 
 | System | Command | Pages | Time |
 | :----- | :------ | :---- | :--- |
-| Windows 11 | `tools\test_locally.bat clean` | about 560 (English only) | about 6 minutes |
-| Windows 11 | `tools\test_locally.bat all clean` | about 1,500 (English and 2 translations) | about 40 minutes |
-| Ubuntu 24.04 | `bash tools/test_locally.sh clean` | about 560 (English only) | about 8 minutes |
-| Ubuntu 24.04 | `bash tools/test_locally.sh all clean` | about 1,500 (English and 2 translations) | about 54 minutes |
+| Windows 11 | `wiki clean` | about 560 (English only) | about 6 minutes |
+| Windows 11 | `wiki clean all` | about 1,500 (English and 2 translations) | about 40 minutes |
+| Ubuntu 24.04 | `./wiki.sh clean` | about 560 (English only) | about 8 minutes |
+| Ubuntu 24.04 | `./wiki.sh clean all` | about 1,500 (English and 2 translations) | about 54 minutes |
 
 After the first build, saving a page only rebuilds that page, which takes about 10 seconds.
 
@@ -82,13 +84,13 @@ Windows:
 
 ```
 set "JEKYLL_HOST=0.0.0.0"
-tools\test_locally.bat
+wiki build
 ```
 
 Linux and macOS:
 
 ```bash
-JEKYLL_HOST=0.0.0.0 bash tools/test_locally.sh
+JEKYLL_HOST=0.0.0.0 ./wiki.sh build
 ```
 
 Local previews do not create the redirects from old page addresses, because on Windows and macOS those would overwrite the real pages.

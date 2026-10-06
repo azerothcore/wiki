@@ -1,4 +1,4 @@
-# Local previews only (used by test_locally).
+# Local previews only (used by tools/wiki).
 # _config.yml's plugins without jekyll-redirect-from, which breaks pages on Windows and macOS.
 plugins:
  - jekyll-feed
