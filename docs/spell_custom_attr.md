@@ -34,7 +34,7 @@ Spell custom attributes from the enumeration SpellCustomAttributes in [SpellInf
 | 64         | 0x00000040 | SPELL_ATTR0_CU_DONT_BREAK_STEALTH            |                                                                       |
 | 128        | 0x00000080 | SPELL_ATTR0_CU_NO_PVP_FLAG                   | Does not PvP flag                                                     |
 | 256        | 0x00000100 | SPELL_ATTR0_CU_DIRECT_DAMAGE                 |                                                                       |
-| 512        | 0x00000200 | SPELL_ATTR0_CU_CHARGE                        |                                                                       |
+| 512        | 0x00000200 | SPELL_ATTR0_CU_IGNORE_BINARY                 | Prevents automatic binary spell classification, allowing partial resists |
 | 1024       | 0x00000400 | SPELL_ATTR0_CU_PICKPOCKET                    |                                                                       |
 | 2048       | 0x00000800 | SPELL_ATTR0_CU_IGNORE_EVADE                  | Do not remove the specified aura upon evading                         |
 | 4096       | 0x00001000 | SPELL_ATTR0_CU_NEGATIVE_EFF0                 |                                                                       |

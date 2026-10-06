@@ -37,7 +37,7 @@ Atributos de hechizo personalizados de la enumeración SpellCustomAttributes en 
 | SPELL_ATTR0_CU_DONT_BREAK_STEALTH            | 64         | 0x00000040 |                                                                       |
 | SPELL_ATTR0_CU_NO_PVP_FLAG                   | 128        | 0x00000080 | No activa el flag de PvP                                              |
 | SPELL_ATTR0_CU_DIRECT_DAMAGE                 | 256        | 0x00000100 |                                                                       |
-| SPELL_ATTR0_CU_CHARGE                        | 512        | 0x00000200 |                                                                       |
+| SPELL_ATTR0_CU_IGNORE_BINARY                 | 512        | 0x00000200 | Evita la clasificación automática como hechizo binario y permite resistencias parciales |
 | SPELL_ATTR0_CU_PICKPOCKET                    | 1024       | 0x00000400 |                                                                       |
 | SPELL_ATTR0_CU_IGNORE_EVADE                  | 2048       | 0x00000800 | No elimina el aura especificada al evadir                            |
 | SPELL_ATTR0_CU_NEGATIVE_EFF0                 | 4096       | 0x00001000 |                                                                       |
