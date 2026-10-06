@@ -8,17 +8,17 @@ This table maps [account_access.gmlevel](account_access#gmlevel) security levels
 
 For a system overview, see [RBAC](rbac).
 
-**Table Structure**
+**Table: rbac\_default\_permissions's Structure**
 
-| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [secId](#secid)               | INT     | UNSIGNED   | PRI | NO   |         |       | Security Level id        |
-| [permissionId](#permissionid) | INT     | UNSIGNED   | PRI | NO   |         |       | Permission id            |
-| [realmId](#realmid)           | INT     | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all   |
+| Field                         | Type | Attributes | Key | Null | Default | Extra | Comment                |
+| ----------------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------------- |
+| [secId](#secid)               | INT  | UNSIGNED   | PRI | NO   |         |       | Security Level id      |
+| [permissionId](#permissionid) | INT  | UNSIGNED   | PRI | NO   |         |       | permission id          |
+| [realmId](#realmid)           | INT  | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all |
 
 The `permissionId` field has a foreign key to [rbac_permissions.id](rbac_permissions#id).
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### secId
 

@@ -1,9 +1,9 @@
 # Networking
 
-| Installation Guide                                                                                                                   |                                                     |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 4: Database Installation](database-installation)                                                                            | [Step 6: Final Server Steps >>](final-server-steps) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 4: Database Installation](database-installation) | [Step 6: Final Server Steps >>](final-server-steps) |
+| :-- | --: |
 
 This guide is intended for advanced setups or just to provide more details in setting up your realm for local or internet use. In general, the default setup explained in your particular OS-specific guide should be fine for simple setups.
 
@@ -49,13 +49,11 @@ You need to make sure that your **authserver** application directs incoming conn
     - **Replace your IP with the one you've chosen to use from above**
     - `UPDATE realmlist SET address = '[your_ip]' WHERE id = 1;`
     - exit
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                     |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 4: Database Installation](database-installation)                                                                            | [Step 6: Final Server Steps >>](final-server-steps) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 4: Database Installation](database-installation) | [Step 6: Final Server Steps >>](final-server-steps) |
+| :-- | --: |

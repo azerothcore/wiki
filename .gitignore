@@ -1,9 +1,13 @@
 _site
 Gemfile.*.lock
 Gemfile.lock
+Gemfile
+.jekyll-metadata
 .sass-cache
 .DS_Store
 
 .idea/*
 
 .claude/
+.theme-cache/
+tools/logs/

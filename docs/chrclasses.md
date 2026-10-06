@@ -30,30 +30,30 @@ This DBC contains all possible player classes.
 
 ### Content
 
-| ID  | Value | Name         |
-| --- | ----- | ------------ |
-| 1   | 1     | Warrior      |
-| 2   | 2     | Paladin      |
-| 3   | 4     | Hunter       |
-| 4   | 8     | Rogue        |
-| 5   | 16    | Priest       |
-| 6   | 32    | Death Knight |
-| 7   | 64    | Shaman       |
-| 8   | 128   | Mage         |
-| 9   | 256   | Warlock      |
-| 11  | 1024  | Druid        |
+| Value | Hex    | Flag         | Class ID |
+| :---- | :----: | :----------- | :------- |
+| 1     | 0x0001 | Warrior      | 1        |
+| 2     | 0x0002 | Paladin      | 2        |
+| 4     | 0x0004 | Hunter       | 3        |
+| 8     | 0x0008 | Rogue        | 4        |
+| 16    | 0x0010 | Priest       | 5        |
+| 32    | 0x0020 | Death Knight | 6        |
+| 64    | 0x0040 | Shaman       | 7        |
+| 128   | 0x0080 | Mage         | 8        |
+| 256   | 0x0100 | Warlock      | 9        |
+| 1024  | 0x0400 | Druid        | 11       |
 
 ### Flags
 
-| Flag | Description                 |
-| ---- | --------------------------- |
-| 1    | Use loincloth               |
-| 2    | Player class                |
-| 4    | Display pet                 |
-| 8    | Unused                      |
-| 16   | Can wear mail               |
-| 32   | Can wear scaling-stat plate |
-| 64   | Bind starting area          |
+| Value | Hex  | Flag                        | Comment |
+| :---- | :--: | :-------------------------- | :------ |
+| 1     | 0x01 | Use loincloth               |         |
+| 2     | 0x02 | Player class                |         |
+| 4     | 0x04 | Display pet                 |         |
+| 8     | 0x08 | Unused                      |         |
+| 16    | 0x10 | Can wear mail               |         |
+| 32    | 0x20 | Can wear scaling-stat plate |         |
+| 64    | 0x40 | Bind starting area          |         |
 
 ### spellClassSet
 

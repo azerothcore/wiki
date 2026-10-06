@@ -6,23 +6,23 @@
 
 This table enables dynamically rewarding money dependent on player's level.
 
-**Table Structure**
+**Table: quest\_money\_reward's Structure**
 
-| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Level](#level)   | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Money0](#money0) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money1](#money1) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money2](#money2) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money3](#money3) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money4](#money4) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money5](#money5) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money6](#money6) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money7](#money7) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money8](#money8) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Money9](#money9) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field             | Type |     | Null | Key | Default | Extra | Comment |
+| :---------------- | :--- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [Level](#level)   | INT  |     | NO   | PRI | 0       |       |         |
+| [Money0](#money0) | INT  |     | NO   |     | 0       |       |         |
+| [Money1](#money1) | INT  |     | NO   |     | 0       |       |         |
+| [Money2](#money2) | INT  |     | NO   |     | 0       |       |         |
+| [Money3](#money3) | INT  |     | NO   |     | 0       |       |         |
+| [Money4](#money4) | INT  |     | NO   |     | 0       |       |         |
+| [Money5](#money5) | INT  |     | NO   |     | 0       |       |         |
+| [Money6](#money6) | INT  |     | NO   |     | 0       |       |         |
+| [Money7](#money7) | INT  |     | NO   |     | 0       |       |         |
+| [Money8](#money8) | INT  |     | NO   |     | 0       |       |         |
+| [Money9](#money9) | INT  |     | NO   |     | 0       |       |         |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### Level
 

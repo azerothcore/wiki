@@ -6,23 +6,17 @@
 
 This table holds the information on all of the ranks available in a guild along with their names and what rights a person with that rank has.
 
-**Table Structure**
+**Table: guild\_rank's Structure**
 
-| Field                | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guildid][1]         | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [rid][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [rname][3]           | VARCHAR(20) | SIGNED     |     | NO   | "       |       |         |
-| [rights][4]          | MEDIUMINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [BankMoneyPerDay][5] | INT         | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                               | Type        |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :---------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guildid](#guildid)                 | INT         | UNSIGNED | NO   | PRI | 0       |       |         |
+| [rid](#rid)                         | TINYINT     | UNSIGNED | NO   | PRI |         |       |         |
+| [rname](#rname)                     | VARCHAR(20) |          | NO   |     | ''      |       |         |
+| [rights](#rights)                   | INT         | UNSIGNED | YES  |     | 0       |       |         |
+| [BankMoneyPerDay](#bankmoneyperday) | INT         | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #guildid
-[2]: #rid
-[3]: #rname
-[4]: #rights
-[5]: #bankmoneyperday
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

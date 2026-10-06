@@ -1,24 +1,24 @@
-# lfg_dungeon_template
+# lfg\_dungeon\_template
 
 [<-Back-to:World](database-world)
 
-**The \`lfg_dungeon_template\` table**
+**The \`lfg\_dungeon\_template\` table**
 
 Used to give NPC spells cooldowns for mindcontroll.
 
-**Table Structure**
+**Table: lfg\_dungeon\_template's Structure**
 
-| Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment                        |
-| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------ |
-| [dungeonId](#dungeonid)         | INT          | UNSIGNED   | PRI | NO   | 0       |       | Unique id from LFGDungeons.dbc |
-| [name](#name)                   | VARCHAR(255) |            |     | YES  | NULL    |       |                                |
-| [position_x](#positionx)        | FLOAT        |            |     | NO   | 0       |       |                                |
-| [position_y](#positiony)        | FLOAT        |            |     | NO   | 0       |       |                                |
-| [position_z](#positionz)        | FLOAT        |            |     | NO   | 0       |       |                                |
-| [orientation](#orientation)     | FLOAT        |            |     | NO   | 0       |       |                                |
-| [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |                                |
+| Field                           | Type         |          | Null | Key | Default | Extra | Comment                        |
+| :------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :----------------------------- |
+| [dungeonId](#dungeonid)         | INT          | UNSIGNED | NO   | PRI | 0       |       | Unique id from LFGDungeons.dbc |
+| [name](#name)                   | VARCHAR(255) |          | YES  |     | NULL    |       |                                |
+| [position_x](#positionx)        | FLOAT        |          | NO   |     | 0       |       |                                |
+| [position_y](#positiony)        | FLOAT        |          | NO   |     | 0       |       |                                |
+| [position_z](#positionz)        | FLOAT        |          | NO   |     | 0       |       |                                |
+| [orientation](#orientation)     | FLOAT        |          | NO   |     | 0       |       |                                |
+| [VerifiedBuild](#verifiedbuild) | INT          |          | YES  |     | NULL    |       |                                |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### dungeonId
 

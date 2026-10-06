@@ -1,21 +1,21 @@
-# item_set_names
+# item\_set\_names
 
 [<-Back-to:World](database-world)
 
-**The \`item_set_names\` table**
+**The \`item\_set\_names\` table**
 
 Names of the items that are part of an item set. The server sends them to the client, which shows them in the set list of the tooltip, also for set pieces the player has never seen.
 
-**Table Structure**
+**Table: item\_set\_names's Structure**
 
-| Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry)                 | MEDIUMINT    | UNSIGNED   | PRI | NO   |         |       |         |
-| [name](#name)                   | VARCHAR(255) | SIGNED     |     | NO   |         |       |         |
-| [InventoryType](#inventorytype) | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT          |            |     | YES  | NULL    |       |         |
+| Field                           | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [name](#name)                   | VARCHAR(255) |          | NO   |     | ''      |       |         |
+| [InventoryType](#inventorytype) | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT          |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Entry
 

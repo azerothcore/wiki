@@ -8,19 +8,15 @@ This table holds information on the achievements a character has earned/complete
 
 **Note:** if you delete a "realm first" achievement from the characters database, you have to reboot the server to take it into account.
 
-**Table Structure**
+**Table: character\_achievement's Structure**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [achievement][2] | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [date][3]        | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)               | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [achievement](#achievement) | SMALLINT | UNSIGNED | NO   | PRI |         |       |         |
+| [date](#date)               | INT      | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #guid
-[2]: #achievement
-[3]: #date
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

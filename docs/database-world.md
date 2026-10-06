@@ -1,12 +1,17 @@
 # Database World
 
 ## A
+- [achievement_category_dbc](achievement_category_dbc)
 - [achievement_criteria_data](achievement_criteria_data)
+- [achievement_criteria_dbc](achievement_criteria_dbc)
 - [achievement_dbc](achievement_dbc)
 - [achievement_reward](achievement_reward)
 - [achievement_reward_locale](achievement_reward_locale)
 - [acore_string](acore_string)
 - [antidos_opcode_policies](antidos_opcode_policies)
+- [areagroup_dbc](areagroup_dbc)
+- [areapoi_dbc](areapoi_dbc)
+- [areatable_dbc](areatable_dbc)
 - [areatrigger](areatrigger)
 - [areatrigger_involvedrelation](areatrigger_involvedrelation)
 - [areatrigger_scripts](areatrigger_scripts)
@@ -14,15 +19,26 @@
 - [areatrigger_teleport](areatrigger_teleport)
 - [arena_season_reward](arena_season_reward)
 - [arena_season_reward_group](arena_season_reward_group)
+- [auctionhouse_dbc](auctionhouse_dbc)
 
 ## B
+- [bankbagslotprices_dbc](bankbagslotprices_dbc)
+- [barbershopstyle_dbc](barbershopstyle_dbc)
 - [battleground_template](battleground_template)
 - [battlemaster_entry](battlemaster_entry)
+- [battlemasterlist_dbc](battlemasterlist_dbc)
 - [broadcast_text](broadcast_text)
 - [broadcast_text_locale](broadcast_text_locale)
 
 ## C
 - [charsections_dbc](charsections_dbc)
+- [charstartoutfit_dbc](charstartoutfit_dbc)
+- [chartitles_dbc](chartitles_dbc)
+- [chatchannels_dbc](chatchannels_dbc)
+- [chrclasses_dbc](chrclasses_dbc)
+- [chrraces_dbc](chrraces_dbc)
+- [cinematiccamera_dbc](cinematiccamera_dbc)
+- [cinematicsequences_dbc](cinematicsequences_dbc)
 - [command](command)
 - [conditions](conditions)
 - [creature](creature)
@@ -53,19 +69,34 @@
 - [creature_text_locale](creature_text_locale)
 - [creature_text_option_sets](creature_text_option_sets)
 - [creature_text_options](creature_text_options)
+- [creaturedisplayinfo_dbc](creaturedisplayinfo_dbc)
+- [creaturedisplayinfoextra_dbc](creaturedisplayinfoextra_dbc)
+- [creaturefamily_dbc](creaturefamily_dbc)
+- [creaturemodeldata_dbc](creaturemodeldata_dbc)
+- [creaturespelldata_dbc](creaturespelldata_dbc)
+- [creaturetype_dbc](creaturetype_dbc)
+- [currencytypes_dbc](currencytypes_dbc)
 
 ## D
+- [destructiblemodeldata_dbc](destructiblemodeldata_dbc)
 - [disables](disables)
 - [disenchant_loot_template](loot_template)
 - [dungeon_access_requirements](dungeon_access_requirements)
 - [dungeon_access_template](dungeon_access_template)
+- [dungeonencounter_dbc](dungeonencounter_dbc)
+- [durabilitycosts_dbc](durabilitycosts_dbc)
+- [durabilityquality_dbc](durabilityquality_dbc)
 
 ## E
+- [emotes_dbc](emotes_dbc)
+- [emotestext_dbc](emotestext_dbc)
 - [emotestextsound_dbc](emotestextsound_dbc)
 - [event_scripts](scripts)
 - [exploration_basexp](exploration_basexp)
 
 ## F
+- [faction_dbc](faction_dbc)
+- [factiontemplate_dbc](factiontemplate_dbc)
 - [fishing_loot_template](loot_template)
 
 ## G
@@ -97,36 +128,71 @@
 - [gameobject_template](gameobject_template)
 - [gameobject_template_addon](gameobject_template_addon)
 - [gameobject_template_locale](gameobject_template_locale)
+- [gameobjectartkit_dbc](gameobjectartkit_dbc)
+- [gameobjectdisplayinfo_dbc](gameobjectdisplayinfo_dbc)
+- [gemproperties_dbc](gemproperties_dbc)
+- [glyphproperties_dbc](glyphproperties_dbc)
+- [glyphslot_dbc](glyphslot_dbc)
 - [gossip_menu](gossip_menu)
 - [gossip_menu_option](gossip_menu_option)
 - [gossip_menu_option_locale](gossip_menu_option_locale)
 - [graveyard_zone](graveyard_zone)
+- [gtbarbershopcostbase_dbc](gtbarbershopcostbase_dbc)
+- [gtchancetomeleecrit_dbc](gtchancetomeleecrit_dbc)
+- [gtchancetomeleecritbase_dbc](gtchancetomeleecritbase_dbc)
+- [gtchancetospellcrit_dbc](gtchancetospellcrit_dbc)
+- [gtchancetospellcritbase_dbc](gtchancetospellcritbase_dbc)
+- [gtcombatratings_dbc](gtcombatratings_dbc)
+- [gtnpcmanacostscaler_dbc](gtnpcmanacostscaler_dbc)
+- [gtoctclasscombatratingscalar_dbc](gtoctclasscombatratingscalar_dbc)
+- [gtoctregenhp_dbc](gtoctregenhp_dbc)
+- [gtregenhpperspt_dbc](gtregenhpperspt_dbc)
+- [gtregenmpperspt_dbc](gtregenmpperspt_dbc)
+
+## H
+- [holidays_dbc](holidays_dbc)
 
 ## I
 - [instance_encounters](instance_encounters)
 - [instance_template](instance_template)
+- [item_dbc](item_dbc)
 - [item_enchantment_template](item_enchantment_template)
 - [item_loot_template](loot_template)
 - [item_set_names](item_set_names)
 - [item_set_names_locale](item_set_names_locale)
 - [item_template](item_template)
 - [item_template_locale](item_template_locale)
+- [itembagfamily_dbc](itembagfamily_dbc)
+- [itemdisplayinfo_dbc](itemdisplayinfo_dbc)
 - [itemextendedcost_dbc](itemextendedcost_dbc)
+- [itemlimitcategory_dbc](itemlimitcategory_dbc)
+- [itemrandomproperties_dbc](itemrandomproperties_dbc)
+- [itemrandomsuffix_dbc](itemrandomsuffix_dbc)
 - [itemset_dbc](itemset_dbc)
 
 ## L
 - [lfg_dungeon_rewards](lfg_dungeon_rewards)
 - [lfg_dungeon_template](lfg_dungeon_template)
+- [lfgdungeons_dbc](lfgdungeons_dbc)
+- [light_dbc](light_dbc)
 - [linked_respawn](linked_respawn)
+- [liquidtype_dbc](liquidtype_dbc)
+- [lock_dbc](lock_dbc)
 
 ## M
 - [mail_level_reward](mail_level_reward)
 - [mail_loot_template](loot_template)
+- [mailtemplate_dbc](mailtemplate_dbc)
+- [map_dbc](map_dbc)
+- [mapdifficulty_dbc](mapdifficulty_dbc)
 - [milling_loot_template](loot_template)
 - [module_string](module_string)
 - [module_string_locale](module_string_locale)
+- [movie_dbc](movie_dbc)
 
 ## N
+- [namesprofanity_dbc](namesprofanity_dbc)
+- [namesreserved_dbc](namesreserved_dbc)
 - [npc_spellclick_spells](npc_spellclick_spells)
 - [npc_text](npc_text)
 - [npc_text_locale](npc_text_locale)
@@ -134,6 +200,7 @@
 
 ## O
 - [outdoorpvp_template](outdoorpvp_template)
+- [overridespelldata_dbc](overridespelldata_dbc)
 
 ## P
 - [page_text](page_text)
@@ -167,7 +234,9 @@
 - [pool_pool](pool_pool)
 - [pool_quest](pool_quest)
 - [pool_template](pool_template)
+- [powerdisplay_dbc](powerdisplay_dbc)
 - [prospecting_loot_template](loot_template)
+- [pvpdifficulty_dbc](pvpdifficulty_dbc)
 
 ## Q
 - [quest_details](quest_details)
@@ -184,21 +253,32 @@
 - [quest_template](quest_template)
 - [quest_template_addon](quest_template_addon)
 - [quest_template_locale](quest_template_locale)
+- [questfactionreward_dbc](questfactionreward_dbc)
+- [questsort_dbc](questsort_dbc)
+- [questxp_dbc](questxp_dbc)
 
 ## R
+- [\*\*\_scripts](scripts)
+- [randproppoints_dbc](randproppoints_dbc)
 - [reference_loot_template](loot_template)
 - [reputation_reward_rate](reputation_reward_rate)
 - [reputation_spillover_template](reputation_spillover_template)
 - [script_waypoint](script_waypoint)
-- [\*\*\_scripts](scripts)
 
 ## S
+- [scalingstatdistribution_dbc](scalingstatdistribution_dbc)
+- [scalingstatvalues_dbc](scalingstatvalues_dbc)
 - [skill_discovery_template](skill_discovery_template)
 - [skill_extra_item_template](skill_extra_item_template)
 - [skill_fishing_base_level](skill_fishing_base_level)
 - [skill_perfect_item_template](skill_perfect_item_template)
+- [skillline_dbc](skillline_dbc)
+- [skilllineability_dbc](skilllineability_dbc)
+- [skillraceclassinfo_dbc](skillraceclassinfo_dbc)
+- [skilltiers_dbc](skilltiers_dbc)
 - [skinning_loot_template](loot_template)
 - [smart_scripts](smart_scripts)
+- [soundentries_dbc](soundentries_dbc)
 - [spawn_group](spawn_group)
 - [spawn_group_template](spawn_group_template)
 - [spell_area](spell_area)
@@ -222,13 +302,34 @@
 - [spell_scripts](scripts)
 - [spell_target_position](spell_target_position)
 - [spell_threat](spell_threat)
+- [spellcasttimes_dbc](spellcasttimes_dbc)
+- [spellcategory_dbc](spellcategory_dbc)
 - [spelldifficulty_dbc](spelldifficulty_dbc)
+- [spellduration_dbc](spellduration_dbc)
+- [spellfocusobject_dbc](spellfocusobject_dbc)
+- [spellitemenchantment_dbc](spellitemenchantment_dbc)
+- [spellitemenchantmentcondition_dbc](spellitemenchantmentcondition_dbc)
+- [spellradius_dbc](spellradius_dbc)
+- [spellrange_dbc](spellrange_dbc)
+- [spellrunecost_dbc](spellrunecost_dbc)
+- [spellshapeshiftform_dbc](spellshapeshiftform_dbc)
+- [spellvisual_dbc](spellvisual_dbc)
+- [stableslotprices_dbc](stableslotprices_dbc)
 - [summonproperties_dbc](summonproperties_dbc)
 
 ## T
+- [talent_dbc](talent_dbc)
+- [talenttab_dbc](talenttab_dbc)
+- [taxinodes_dbc](taxinodes_dbc)
+- [taxipath_dbc](taxipath_dbc)
+- [taxipathnode_dbc](taxipathnode_dbc)
+- [teamcontributionpoints_dbc](teamcontributionpoints_dbc)
+- [totemcategory_dbc](totemcategory_dbc)
 - [trainer](trainer)
 - [trainer_locale](trainer_locale)
 - [trainer_spell](trainer_spell)
+- [transportanimation_dbc](transportanimation_dbc)
+- [transportrotation_dbc](transportrotation_dbc)
 - [transports](transports)
 
 ## U
@@ -237,8 +338,10 @@
 
 ## V
 - [vehicle_accessory](vehicle_accessory)
+- [vehicle_dbc](vehicle_dbc)
 - [vehicle_seat_addon](vehicle_seat_addon)
 - [vehicle_template_accessory](vehicle_template_accessory)
+- [vehicleseat_dbc](vehicleseat_dbc)
 - [version](version)
 
 ## W
@@ -247,3 +350,6 @@
 - [waypoint_data_addon](waypoint_data_addon)
 - [waypoint_scripts](scripts)
 - [waypoints](waypoints)
+- [wmoareatable_dbc](wmoareatable_dbc)
+- [worldmaparea_dbc](worldmaparea_dbc)
+- [worldmapoverlay_dbc](worldmapoverlay_dbc)

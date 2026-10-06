@@ -6,31 +6,21 @@
 
 Comes from sniffs.
 
-**Table Structure**
+**Table: quest\_poi's Structure**
 
-| Field               | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [QuestID][1]        | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [id][2]             | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ObjectiveIndex][3] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [MapID][4]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [WorldMapAreaId][5] | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [Floor][6]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [Priority][7]       | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags][8]          | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [VerifiedBuild][9]  | INT  |            |     | YES  | NULL    |       |         |
+| Field                             | Type |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [QuestID](#questid)               | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [id](#id)                         | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [ObjectiveIndex](#objectiveindex) | INT  |          | NO   |     | 0       |       |         |
+| [MapID](#mapid)                   | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [WorldMapAreaId](#worldmapareaid) | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [Floor](#floor)                   | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [Priority](#priority)             | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [Flags](#flags)                   | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT  |          | YES  |     | NULL    |       |         |
 
-[1]: #questid
-[2]: #id
-[3]: #objectiveindex
-[4]: #mapid
-[5]: #worldmapareaid
-[6]: #floor
-[7]: #priority
-[8]: #flags
-[9]: #verifiedbuild
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### QuestID
 

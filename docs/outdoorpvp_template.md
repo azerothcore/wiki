@@ -1,22 +1,20 @@
-# outdoorpvp_template
+# outdoorpvp\_template
 
 [<-Back-to:World](database-world)
 
-**The \`outdoorpvp_template\` table**
+**The \`outdoorpvp\_template\` table**
 
-**Table Structure**
+Links each outdoor PvP zone type to the script that handles it.
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [TypeId][1]     | TINYINT  | unasigned  | PRI | NO   |         |       |         |
-| [ScriptName][2] | char(64) | SIGNED     |     | NO   | 0       |       |         |
-| [comment][3]    | text     | SIGNED     |     | YES  | NULL    |       |         |
+**Table: outdoorpvp\_template's Structure**
 
-[1]: #typeid
-[2]: #scriptname
-[3]: #comment
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [TypeId](#typeid)         | TINYINT  | UNSIGNED | NO   | PRI |         |       |         |
+| [ScriptName](#scriptname) | CHAR(64) |          | NO   |     | ''      |       |         |
+| [comment](#comment)       | TEXT     |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### TypeId
 Id defined in the emulator for each PvP zone in the world.

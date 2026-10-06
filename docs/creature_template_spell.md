@@ -1,24 +1,21 @@
-# creature_template_spell
+# creature\_template\_spell
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template_spell\` table**
+**The \`creature\_template\_spell\` table**
 
-**Table Structure**
+Holds the spells assigned to a creature template. They are used by the creature's AI, or by a player who controls the creature.
 
-| Field              | Type      | Attribute | Key  | Null | Default | Extra | Comment |
-| ------------------ | --------- | --------- | ---- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]    | MEDIUMINT | UNSIGNED  | PRI  | NO   |         |       |         |
-| [Index][2]         | TINYINT   | UNSIGNED  | PRI  | NO   | 0       |       |         |
-| [Spell][3]         | MEDIUMINT | UNSIGNED  |      | YES  | Null    |       |         |
-| [VerifiedBuild][4] | SMALLINT  | SIGNED    |      | YES  | 0       |       |         |
+**Table: creature\_template\_spell's Structure**
 
-[1]: #creatureid
-[2]: #index
-[3]: #spell
-[4]: #verifiedbuild
+| Field                           | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureID](#creatureid)       | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [Index](#index)                 | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Spell](#spell)                 | INT     | UNSIGNED | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT     |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

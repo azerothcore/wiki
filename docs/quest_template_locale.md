@@ -6,37 +6,24 @@
 
 This table is used to provide to localized clients with localized string for quest templates.
 
-**Table Structure**
+**Table: quest\_template\_locale's Structure**
 
-| Field                | Type       | Attribute | Key | Null | Default | Extra | Comment |
-| -------------------- | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]              | MEDIUMINT  | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [locale][2]          | VARCHAR(4) |           | PRI | NO   |         |       |         |
-| [Title][3]           | text       |           |     | YES  |         |       |         |
-| [Details][4]         | text       |           |     | YES  |         |       |         |
-| [Objectives][5]      | text       |           |     | YES  |         |       |         |
-| [EndText][6]         | text       |           |     | YES  |         |       |         |
-| [CompletedText][7]   | text       |           |     | YES  |         |       |         |
-| [ObjectiveText1][8]  | text       |           |     | YES  |         |       |         |
-| [ObjectiveText2][9]  | text       |           |     | YES  |         |       |         |
-| [ObjectiveText3][10] | text       |           |     | YES  |         |       |         |
-| [ObjectiveText4][11] | text       |           |     | YES  |         |       |         |
-| [VerifiedBuild][12]  | SMALLINT   |           |     | YES  | 0       |       |         |
+| Field                             | Type       |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)                 | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Title](#title)                   | TEXT       |          | YES  |     | NULL    |       |         |
+| [Details](#details)               | TEXT       |          | YES  |     | NULL    |       |         |
+| [Objectives](#objectives)         | TEXT       |          | YES  |     | NULL    |       |         |
+| [EndText](#endtext)               | TEXT       |          | YES  |     | NULL    |       |         |
+| [CompletedText](#completedtext)   | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText1](#objectivetext1) | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText2](#objectivetext2) | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText3](#objectivetext3) | TEXT       |          | YES  |     | NULL    |       |         |
+| [ObjectiveText4](#objectivetext4) | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT        |          | YES  |     | NULL    |       |         |
 
-[1]: #id
-[2]: #locale
-[3]: #title
-[4]: #details
-[5]: #objectives
-[6]: #endtext
-[7]: #completedtext
-[8]: #objectivetext1
-[9]: #objectivetext2
-[10]: #objectivetext3
-[11]: #objectivetext4
-[12]: #verifiedbuild
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

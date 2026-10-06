@@ -6,26 +6,26 @@
 
 This table holds data about gameobjects that are temporarily summoned as a group. It works similarly to [creature\_summon\_groups](creature_summon_groups) but for gameobjects.
 
-## Structure
+**Table: gameobject\_summon\_groups's Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [summonerId](#summonerid)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [summonerType](#summonertype) | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [groupId](#groupid)           | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [entry](#entry)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [position\_x](#positionx)     | FLOAT        |            |     | NO   | 0       |       |         |
-| [position\_y](#positiony)     | FLOAT        |            |     | NO   | 0       |       |         |
-| [position\_z](#positionz)     | FLOAT        |            |     | NO   | 0       |       |         |
-| [orientation](#orientation)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [rotation0](#rotation0)       | FLOAT        |            |     | NO   | 0       |       |         |
-| [rotation1](#rotation1)       | FLOAT        |            |     | NO   | 0       |       |         |
-| [rotation2](#rotation2)       | FLOAT        |            |     | NO   | 0       |       |         |
-| [rotation3](#rotation3)       | FLOAT        |            |     | NO   | 1       |       |         |
-| [respawnTime](#respawntime)   | INT          | UNSIGNED   |     | NO   | 120     |       |         |
-| [Comment](#comment)           | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| Field                         | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [summonerId](#summonerid)     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [summonerType](#summonertype) | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [groupId](#groupid)           | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [entry](#entry)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [position\_x](#positionx)     | FLOAT        |          | NO   |     | 0       |       |         |
+| [position\_y](#positiony)     | FLOAT        |          | NO   |     | 0       |       |         |
+| [position\_z](#positionz)     | FLOAT        |          | NO   |     | 0       |       |         |
+| [orientation](#orientation)   | FLOAT        |          | NO   |     | 0       |       |         |
+| [rotation0](#rotation0)       | FLOAT        |          | NO   |     | 0       |       |         |
+| [rotation1](#rotation1)       | FLOAT        |          | NO   |     | 0       |       |         |
+| [rotation2](#rotation2)       | FLOAT        |          | NO   |     | 0       |       |         |
+| [rotation3](#rotation3)       | FLOAT        |          | NO   |     | 0       |       |         |
+| [respawnTime](#respawntime)   | INT          | UNSIGNED | NO   |     | 120     |       |         |
+| [Comment](#comment)           | VARCHAR(255) |          | NO   |     | ''      |       |         |
 
-## Description of the fields
+**Description of the table's fields**
 
 ### summonerId
 

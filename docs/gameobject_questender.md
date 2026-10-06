@@ -6,17 +6,14 @@
 
 Holds game object quest taker relations. The game objects in this table should all be of type QUESTGIVER (2).
 
-**Table Structure**
+**Table: gameobject\_questender's Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra | Comment          |
-| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                  |
-| [quest][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
+| Field           | Type |          | Null | Key | Default | Extra | Comment          |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :--------------- |
+| [id](#id)       | INT  | UNSIGNED | NO   | PRI | 0       |       |                  |
+| [quest](#quest) | INT  | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier |
 
-[1]: #id
-[2]: #quest
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

@@ -6,19 +6,15 @@
 
 This table contains data regarding items from item\_instance which are being sent via email.
 
-**Table Structure**
+**Table: mail\_items's Structure**
 
-| Field          | Type | Attributes | Key | Null | Default | Extra | Comment                            |
-| -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [mail_id][1]   | INT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [item_guid][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |                                    |
-| [receiver][3]  | INT  | UNSIGNED   |     | NO   | 0       |       | Character Global Unique Identifier |
+| Field                  | Type |          | Null | Key | Default | Extra | Comment                            |
+| :--------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :--------------------------------- |
+| [mail_id](#mailid)     | INT  | UNSIGNED | NO   | MUL | 0       |       |                                    |
+| [item_guid](#itemguid) | INT  | UNSIGNED | NO   | PRI | 0       |       |                                    |
+| [receiver](#receiver)  | INT  | UNSIGNED | NO   | MUL | 0       |       | Character Global Unique Identifier |
 
-[1]: #mailid
-[2]: #itemguid
-[3]: #receiver
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### mail\_id
 

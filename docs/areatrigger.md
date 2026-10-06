@@ -8,22 +8,22 @@ This table contains trigger points for events in certain coordinates in the maps
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)
 
-**Table Structure**
+**Table: areatrigger's Structure**
 
-| Field       | Type  | Attributes | Key | Null | Default | Extra          | Comment                                              |
-| ----------- | ----- | ---------- | --- | ---- | ------- | -------------- | ---------------------------------------------------- |
-| entry       | INT   | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |                                                      |
-| map         | INT   | UNSIGNED   |     | NO   | 0       |                |                                                      |
-| x           | FLOAT |            |     | NO   | 0       |                |                                                      |
-| y           | FLOAT |            |     | NO   | 0       |                |                                                      |
-| z           | FLOAT |            |     | NO   | 0       |                |                                                      |
-| radius      | FLOAT |            |     | NO   | 0       |                | Seems to be a box of size yards with center at x,y,z |
-| length      | FLOAT |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
-| width       | FLOAT |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
-| height      | FLOAT |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
-| orientation | FLOAT |            |     | NO   | 0       |                | Most commonly used when size is 0, but not always    |
+| Field                                               | Type  |          | Null | Key | Default | Extra          | Comment                                              |
+| :-------------------------------------------------- | :---- | :------- | :--: | :-: | :-----: | :------------: | :--------------------------------------------------- |
+| [entry](#entry)                                     | INT   | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |                                                      |
+| [map](#map)                                         | INT   | UNSIGNED | NO   |     | 0       |                |                                                      |
+| [x](#x-y-and-z)                                     | FLOAT |          | NO   |     | 0       |                |                                                      |
+| [y](#x-y-and-z)                                     | FLOAT |          | NO   |     | 0       |                |                                                      |
+| [z](#x-y-and-z)                                     | FLOAT |          | NO   |     | 0       |                |                                                      |
+| [radius](#radius)                                   | FLOAT |          | NO   |     | 0       |                | Seems to be a box of size yards with center at x,y,z |
+| [length](#length-width-height-and-orientation)      | FLOAT |          | NO   |     | 0       |                | Most commonly used when size is 0, but not always    |
+| [width](#length-width-height-and-orientation)       | FLOAT |          | NO   |     | 0       |                | Most commonly used when size is 0, but not always    |
+| [height](#length-width-height-and-orientation)      | FLOAT |          | NO   |     | 0       |                | Most commonly used when size is 0, but not always    |
+| [orientation](#length-width-height-and-orientation) | FLOAT |          | NO   |     | 0       |                | Most commonly used when size is 0, but not always    |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### Entry
 

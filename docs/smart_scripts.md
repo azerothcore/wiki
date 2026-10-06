@@ -2,13 +2,13 @@
 redirect_from: "/sai"
 ---
 
-# smart_scripts
+# smart\_scripts
 
 [<-Back-to:World](database-world)
 
 The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL language. The important thing is always to analyze, who is the event that motivates the execution of an action and of course, who is the objective. As a recommendation, you can review the scripts that are already inside the table, to understand how it works. The advantage, for which several use this method, is that it is not required to compile, when adding records, with restarting the server, if it is well programmed, you can appreciate the changes. Another reason is the portability, but it depends on the point of view of the developer, the response you can get.
 
-**Table Structure**
+**Table: smart\_scripts's Structure**
 
 | Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment       |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------- |
@@ -42,7 +42,7 @@ The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL la
 | [target_y][10]        | FLOAT    | SIGNED     |     | NO   | 0       |       |               |
 | [target_z][10]        | FLOAT    | SIGNED     |     | NO   | 0       |       |               |
 | [target_o][10]        | FLOAT    | SIGNED     |     | NO   | 0       |       |               |
-| [comment][11]         | text     |            |     | NO   |         |       | Event Comment |
+| [comment][11]         | TEXT     |            |     | NO   |         |       | Event Comment |
 
 [1]: #entryorguid
 [2]: #sourcetype
@@ -56,7 +56,7 @@ The `smart_scripts` table has 31 attributes. It serves to make scripts in SQL la
 [10]: #targettype
 [11]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entryorguid
 
@@ -93,63 +93,6 @@ Simple event linking;
 - Smart_event to be used.
 
 **Thanks to the use of links, you can execute several actions, keeping the same event.**
-
-### event_phase_mask
-
-When dealing with phases, *phase IDs* have to be used. There are 13 (12+1) different phases: 1, 2, ... 12 and the default 0.
-
-**Example:** The script is in phase 0 by default - If we want it to go to phase 1, we got two choices:
-
-- SMART_ACTION_INC_EVENT_PHASE by 1 or SMART_ACTION_SET_EVENT_PHASE 1
-
-If the script is in phase 0 and want to skip to phase 2:
-
-- SMART_ACTION_INC_EVENT_PHASE by 2 or SMART_ACTION_SET_EVENT_PHASE 2
-
-If the script is in phase 1 and want to skip to phase 2:
-
-- SMART_ACTION_INC_EVENT_PHASE by 1 or SMART_ACTION_SET_EVENT_PHASE 2
-
-| Name                         | Flag | Hex   | Comment                     |
-| ---------------------------- | ---- | ----- | --------------------------- |
-| SMART_EVENT_PHASE_ALWAYS_BIT | 0    | 0x000 | Means all phases (1 ... 12) |
-| SMART_EVENT_PHASE_1          | 1    | 0x001 | Phase 1 only.               |
-| SMART_EVENT_PHASE_2          | 2    | 0x002 | Phase 2 only.               |
-| SMART_EVENT_PHASE_3          | 4    | 0x004 | Phase 3 only.               |
-| SMART_EVENT_PHASE_4          | 8    | 0x008 | Phase 4 only.               |
-| SMART_EVENT_PHASE_5          | 16   | 0x010 | Phase 5 only.               |
-| SMART_EVENT_PHASE_6          | 32   | 0x020 | Phase 6 only.               |
-| SMART_EVENT_PHASE_7          | 64   | 0x040 | Phase 7 only.               |
-| SMART_EVENT_PHASE_8          | 128  | 0x080 | Phase 8 only.               |
-| SMART_EVENT_PHASE_9          | 256  | 0x100 | Phase 9 only.               |
-| SMART_EVENT_PHASE_10         | 512  | 0x200 | Phase 10 only.              |
-| SMART_EVENT_PHASE_11         | 1024 | 0x400 | Phase 11 only.              |
-| SMART_EVENT_PHASE_12         | 2048 | 0x800 | Phase 12 only.              |
-
-- Event will only be able to occur if creature/GO is in this phase.
-- Example: If we want an event to only be able to occure in phase 1 and 4, **event_phase_mask** = 1+8 = 9
-
-### event_chance
-
-This is the probability of the event to occur as a percentage from 0-100. So, if you want the event to occur roughly half of the time, then set this to 50. 
-
-### event_flags
-
-| Name                            | Flag | Hex   | Comment                                        |
-| ------------------------------- | ---- | ----- | ---------------------------------------------- |
-| SMART_EVENT_FLAG_NOT_REPEATABLE | 1    | 0x01  | Event can not repeat                           |
-| SMART_EVENT_FLAG_DIFFICULTY_0   | 2    | 0x02  | Event only occurs in normal dungeon            |
-| SMART_EVENT_FLAG_DIFFICULTY_1   | 4    | 0x04  | Event only occurs in heroic dungeon            |
-| SMART_EVENT_FLAG_DIFFICULTY_2   | 8    | 0x08  | Event only occurs in normal raid               |
-| SMART_EVENT_FLAG_DIFFICULTY_3   | 16   | 0x10  | Event only occurs in heroic raid               |
-| SMART_EVENT_FLAG_RESERVED_5     | 32   | 0x20  |                                                |
-| SMART_EVENT_FLAG_RESERVED_6     | 64   | 0x40  |                                                |
-| SMART_EVENT_FLAG_DEBUG_ONLY     | 128  | 0x80  | Event only occurs in debug build               |
-| SMART_EVENT_FLAG_DONT_RESET     | 256  | 0x100 | Event will not reset in SmartScript::OnReset() |
-| SMART_EVENT_FLAG_WHILE_CHARMED  | 512  | 0x200 | Event occurs even if AI owner is charmed       |
-
-- Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
-- Values can be added together (bitwise math).
 
 ### event_type
 
@@ -234,6 +177,64 @@ This is the probability of the event to occur as a percentage from 0-100. So, if
 | SMART_EVENT_WAYPOINT_REACHED | 108   | PointId (0 any)                                       | pathId (0 any)              |                   |                                 |                 |          | On Creature Waypoint Reached. Uses 'waypoint_data' table                     |
 | SMART_EVENT_WAYPOINT_ENDED   | 109   | PointId (0 any)                                       | pathId (0 any)              |                   |                                 |                 |          | On Creature Waypoint Finished. Uses 'waypoint_data' table                    |
 | SMART_EVENT_IS_IN_MELEE_RANGE     | 110   | InitialMin                                            | InitialMax                  | RepeatMin         | RepeatMax                       | Distance        | Invert   | On Creature is in melee range of target                                      |
+
+### event_phase_mask
+
+When dealing with phases, *phase IDs* have to be used. There are 13 (12+1) different phases: 1, 2, ... 12 and the default 0.
+
+**Example:** The script is in phase 0 by default - If we want it to go to phase 1, we got two choices:
+
+- SMART_ACTION_INC_EVENT_PHASE by 1 or SMART_ACTION_SET_EVENT_PHASE 1
+
+If the script is in phase 0 and want to skip to phase 2:
+
+- SMART_ACTION_INC_EVENT_PHASE by 2 or SMART_ACTION_SET_EVENT_PHASE 2
+
+If the script is in phase 1 and want to skip to phase 2:
+
+- SMART_ACTION_INC_EVENT_PHASE by 1 or SMART_ACTION_SET_EVENT_PHASE 2
+
+| Name                         | Flag | Hex   | Comment                     |
+| ---------------------------- | ---- | ----- | --------------------------- |
+| SMART_EVENT_PHASE_ALWAYS_BIT | 0    | 0x000 | Means all phases (1 ... 12) |
+| SMART_EVENT_PHASE_1          | 1    | 0x001 | Phase 1 only.               |
+| SMART_EVENT_PHASE_2          | 2    | 0x002 | Phase 2 only.               |
+| SMART_EVENT_PHASE_3          | 4    | 0x004 | Phase 3 only.               |
+| SMART_EVENT_PHASE_4          | 8    | 0x008 | Phase 4 only.               |
+| SMART_EVENT_PHASE_5          | 16   | 0x010 | Phase 5 only.               |
+| SMART_EVENT_PHASE_6          | 32   | 0x020 | Phase 6 only.               |
+| SMART_EVENT_PHASE_7          | 64   | 0x040 | Phase 7 only.               |
+| SMART_EVENT_PHASE_8          | 128  | 0x080 | Phase 8 only.               |
+| SMART_EVENT_PHASE_9          | 256  | 0x100 | Phase 9 only.               |
+| SMART_EVENT_PHASE_10         | 512  | 0x200 | Phase 10 only.              |
+| SMART_EVENT_PHASE_11         | 1024 | 0x400 | Phase 11 only.              |
+| SMART_EVENT_PHASE_12         | 2048 | 0x800 | Phase 12 only.              |
+
+- Event will only be able to occur if creature/GO is in this phase.
+- Example: If we want an event to only be able to occure in phase 1 and 4, **event_phase_mask** = 1+8 = 9
+
+### event_chance
+
+This is the probability of the event to occur as a percentage from 0-100. So, if you want the event to occur roughly half of the time, then set this to 50. 
+
+### event_flags
+
+| Name                            | Flag | Hex   | Comment                                        |
+| ------------------------------- | ---- | ----- | ---------------------------------------------- |
+| SMART_EVENT_FLAG_NOT_REPEATABLE | 1    | 0x01  | Event can not repeat                           |
+| SMART_EVENT_FLAG_DIFFICULTY_0   | 2    | 0x02  | Event only occurs in normal dungeon            |
+| SMART_EVENT_FLAG_DIFFICULTY_1   | 4    | 0x04  | Event only occurs in heroic dungeon            |
+| SMART_EVENT_FLAG_DIFFICULTY_2   | 8    | 0x08  | Event only occurs in normal raid               |
+| SMART_EVENT_FLAG_DIFFICULTY_3   | 16   | 0x10  | Event only occurs in heroic raid               |
+| SMART_EVENT_FLAG_RESERVED_5     | 32   | 0x20  |                                                |
+| SMART_EVENT_FLAG_RESERVED_6     | 64   | 0x40  |                                                |
+| SMART_EVENT_FLAG_DEBUG_ONLY     | 128  | 0x80  | Event only occurs in debug build               |
+| SMART_EVENT_FLAG_DONT_RESET     | 256  | 0x100 | Event will not reset in SmartScript::OnReset() |
+| SMART_EVENT_FLAG_WHILE_CHARMED  | 512  | 0x200 | Event occurs even if AI owner is charmed       |
+
+- Sets if the event should not repeat or should only happen in a given instance/dungeon difficulty (if applicable);
+- Values can be added together (bitwise math).
+
 ### action_type
 
 | Name                                            | Value | Param1                                                                                                                                                                                                                                                                                                                                                                                                                                 | Param2                                                                                               | Param3                                                                                                                     | Param4                                                                                        | Param5                                                                                                          | Param6                                             | Comment                                                                                                                                                                                                                                                                                                                                   |
@@ -485,7 +486,7 @@ INSERT INTO `areatrigger_scripts` (`entry`, `ScriptName`) VALUES (y, 'SmartTrigg
 
 - If the creature or GO is inside a dungeon, set *event_flags* accordingly to the instance difficulty (heroic, 25 man, etc.).
 
-**In case of doubt about an *Event*, *Action_or _Target,_check source code (_src/server/game/AI/SmartScripts* files; mainly \*SmartScript.cpp**)
+**In case of doubt about an *Event*, *Action_or _Target,_check source code (_src/server/game/AI/SmartScripts* files; mainly \*[SmartScript.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/AI/SmartScripts/SmartScript.cpp)**)
 
 ### Cast Flags
 

@@ -6,23 +6,17 @@
 
 This table holds information on the members of all guilds, their ranks in the guild, and any notes made by them or by guild officers.
 
-**Table Structure**
+**Table: guild\_member's Structure**
 
-| Field        | Type        | Attributes | Key    | Null | Default | Extra | Comment             |
-| ------------ | ----------- | ---------- | ------ | ---- | ------- | ----- | ------------------- |
-| [guildid][1] | INT         | UNSIGNED   |        | NO   |         |       | Guild Identificator |
-| [guid][2]    | INT         | UNSIGNED   | Unique | NO   |         |       |                     |
-| [rank][3]    | TINYINT     | UNSIGNED   |        | NO   |         |       |                     |
-| [pnote][4]   | VARCHAR(31) | SIGNED     |        | NO   |         |       |                     |
-| [offnote][5] | VARCHAR(31) | SIGNED     |        | NO   |         |       |                     |
+| Field               | Type        |          | Null | Key | Default | Extra | Comment             |
+| :------------------ | :---------- | :------- | :--: | :-: | :-----: | :---: | :------------------ |
+| [guildid](#guildid) | INT         | UNSIGNED | NO   | MUL |         |       | Guild Identificator |
+| [guid](#guid)       | INT         | UNSIGNED | NO   | UNI |         |       |                     |
+| [rank](#rank)       | TINYINT     | UNSIGNED | NO   |     |         |       |                     |
+| [pnote](#pnote)     | VARCHAR(31) |          | NO   |     | ''      |       |                     |
+| [offnote](#offnote) | VARCHAR(31) |          | NO   |     | ''      |       |                     |
 
-[1]: #guildid
-[2]: #guid
-[3]: #rank
-[4]: #pnote
-[5]: #offnote
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 
