@@ -17,251 +17,253 @@ These values are used by the core and a few spell\_\* tables.
 
 ## **Table Structure**
 
-| ID  | Name                          | Type   |
-| --- | ----------------------------- | ------ |
-| 0   | Entry                         | uint   |
-| 1   | Category                      | uint   |
-| 2   | Dispel                        | uint   |
-| 3   | Mechanic                      | uint   |
-| 4   | Attributes                    | uint   |
-| 5   | AttributesEx                  | uint   |
-| 6   | AttributesEx2                 | uint   |
-| 7   | AttributesEx3                 | uint   |
-| 8   | AttributesEx4                 | uint   |
-| 9   | AttributesEx5                 | uint   |
-| 10  | AttributesEx6                 | uint   |
-| 11  | AttributesEx7                 | uint   |
-| 12  | Stances                       | uint   |
-| 13  | unk_320_2                     | uint   |
-| 14  | StancesNot                    | uint   |
-| 15  | unk_320_3                     | uint   |
-| 16  | Targets                       | uint   |
-| 17  | TargetCreatureType            | uint   |
-| 18  | requiresSpellFocus            | uint   |
-| 19  | FacingCasterFlags             | uint   |
-| 20  | CasterAuraState               | uint   |
-| 21  | TargetAuraState               | uint   |
-| 22  | CasterAuraStateNot            | uint   |
-| 23  | TargetAuraStateNot            | uint   |
-| 24  | casterAuraSpell               | uint   |
-| 25  | targetAuraSpell               | uint   |
-| 26  | excludeCasterAuraSpell        | uint   |
-| 27  | excludeTargetAuraSpell        | uint   |
-| 28  | CastingTimeIndex              | uint   |
-| 29  | RecoveryTime                  | uint   |
-| 30  | CategoryRecoveryTime          | uint   |
-| 31  | InterruptFlags                | uint   |
-| 32  | AuraInterruptFlags            | uint   |
-| 33  | ChannelInterruptFlags         | uint   |
-| 34  | procFlags                     | uint   |
-| 35  | procChance                    | uint   |
-| 36  | procCharges                   | uint   |
-| 37  | maxLevel                      | uint   |
-| 38  | baseLevel                     | uint   |
-| 39  | spellLevel                    | uint   |
-| 40  | DurationIndex                 | uint   |
-| 41  | powerType                     | uint   |
-| 42  | manaCost                      | uint   |
-| 43  | manaCostPerlevel              | uint   |
-| 44  | manaPerSecond                 | uint   |
-| 45  | manaPerSecondPerLevel         | uint   |
-| 46  | rangeIndex                    | uint   |
-| 47  | speed                         | float  |
-| 48  | modalNextSpell                | uint   |
-| 49  | StackAmount                   | uint   |
-| 50  | Totem1                        | uint   |
-| 51  | Totem2                        | uint   |
-| 52  | Reagent1                      | int    |
-| 53  | Reagent2                      | int    |
-| 54  | Reagent3                      | int    |
-| 55  | Reagent4                      | int    |
-| 56  | Reagent5                      | int    |
-| 57  | Reagent6                      | int    |
-| 58  | Reagent7                      | int    |
-| 59  | Reagent8                      | int    |
-| 60  | ReagentCount1                 | uint   |
-| 61  | ReagentCount2                 | uint   |
-| 62  | ReagentCount3                 | uint   |
-| 63  | ReagentCount4                 | uint   |
-| 64  | ReagentCount5                 | uint   |
-| 65  | ReagentCount6                 | uint   |
-| 66  | ReagentCount7                 | uint   |
-| 67  | ReagentCount8                 | uint   |
-| 68  | EquippedItemClass             | int    |
-| 69  | EquippedItemSubClassMask      | int    |
-| 70  | EquippedItemInventoryTypeMask | int    |
-| 71  | Effect1                       | uint   |
-| 72  | Effect2                       | uint   |
-| 73  | Effect3                       | uint   |
-| 74  | EffectDieSides1               | int    |
-| 75  | EffectDieSides2               | int    |
-| 76  | EffectDieSides3               | int    |
-| 77  | EffectRealPointsPerLevel1     | float  |
-| 78  | EffectRealPointsPerLevel2     | float  |
-| 79  | EffectRealPointsPerLevel3     | float  |
-| 80  | EffectBasePoints1             | int    |
-| 81  | EffectBasePoints2             | int    |
-| 82  | EffectBasePoints3             | int    |
-| 83  | EffectMechanic1               | uint   |
-| 84  | EffectMechanic2               | uint   |
-| 85  | EffectMechanic3               | uint   |
-| 86  | EffectImplicitTargetA1        | uint   |
-| 87  | EffectImplicitTargetA2        | uint   |
-| 88  | EffectImplicitTargetA3        | uint   |
-| 89  | EffectImplicitTargetB1        | uint   |
-| 90  | EffectImplicitTargetB2        | uint   |
-| 91  | EffectImplicitTargetB3        | uint   |
-| 92  | EffectRadiusIndex1            | uint   |
-| 93  | EffectRadiusIndex2            | uint   |
-| 94  | EffectRadiusIndex3            | uint   |
-| 95  | EffectApplyAuraName1          | uint   |
-| 96  | EffectApplyAuraName2          | uint   |
-| 97  | EffectApplyAuraName3          | uint   |
-| 98  | EffectAmplitude1              | uint   |
-| 99  | EffectAmplitude2              | uint   |
-| 100 | EffectAmplitude3              | uint   |
-| 101 | EffectValueMultiplier1        | float  |
-| 102 | EffectValueMultiplier2        | float  |
-| 103 | EffectValueMultiplier3        | float  |
-| 104 | EffectChainTarget1            | uint   |
-| 105 | EffectChainTarget2            | uint   |
-| 106 | EffectChainTarget3            | uint   |
-| 107 | EffectItemType1               | uint   |
-| 108 | EffectItemType2               | uint   |
-| 109 | EffectItemType3               | uint   |
-| 110 | EffectMiscValue1              | int    |
-| 111 | EffectMiscValue2              | int    |
-| 112 | EffectMiscValue3              | int    |
-| 113 | EffectMiscValueB1             | int    |
-| 114 | EffectMiscValueB2             | int    |
-| 115 | EffectMiscValueB3             | int    |
-| 116 | EffectTriggerSpell1           | uint   |
-| 117 | EffectTriggerSpell2           | uint   |
-| 118 | EffectTriggerSpell3           | uint   |
-| 119 | EffectPointsPerComboPoint1    | float  |
-| 120 | EffectPointsPerComboPoint2    | float  |
-| 121 | EffectPointsPerComboPoint3    | float  |
-| 122 | EffectSpellClassMask1         | flag96 |
-| 123 | EffectSpellClassMask2         | flag96 |
-| 124 | EffectSpellClassMask3         | flag96 |
-| 125 | EffectSpellClassMask4         | flag96 |
-| 126 | EffectSpellClassMask5         | flag96 |
-| 127 | EffectSpellClassMask6         | flag96 |
-| 128 | EffectSpellClassMask7         | flag96 |
-| 129 | EffectSpellClassMask8         | flag96 |
-| 130 | EffectSpellClassMask9         | flag96 |
-| 131 | SpellVisual1                  | uint   |
-| 132 | SpellVisual2                  | uint   |
-| 133 | SpellIconID                   | uint   |
-| 134 | activeIconID                  | uint   |
-| 135 | spellPriority                 | uint   |
-| 136 | SpellName_0                   | string |
-| 137 | SpellName_1                   | string |
-| 138 | SpellName_2                   | string |
-| 139 | SpellName_3                   | string |
-| 140 | SpellName_4                   | string |
-| 141 | SpellName_5                   | string |
-| 142 | SpellName_6                   | string |
-| 143 | SpellName_7                   | string |
-| 144 | SpellName_8                   | string |
-| 145 | SpellName_9                   | string |
-| 146 | SpellName_10                  | string |
-| 147 | SpellName_11                  | string |
-| 148 | SpellName_12                  | string |
-| 149 | SpellName_13                  | string |
-| 150 | SpellName_14                  | string |
-| 151 | SpellName_15                  | string |
-| 152 | SpellNameFlag                 | uint   |
-| 153 | Rank_0                        | string |
-| 154 | Rank_1                        | string |
-| 155 | Rank_2                        | string |
-| 156 | Rank_3                        | string |
-| 157 | Rank_4                        | string |
-| 158 | Rank_5                        | string |
-| 159 | Rank_6                        | string |
-| 160 | Rank_7                        | string |
-| 161 | Rank_8                        | string |
-| 162 | Rank_9                        | string |
-| 163 | Rank_10                       | string |
-| 164 | Rank_11                       | string |
-| 165 | Rank_12                       | string |
-| 166 | Rank_13                       | string |
-| 167 | Rank_14                       | string |
-| 168 | Rank_15                       | string |
-| 169 | RankFlags                     | uint   |
-| 170 | Description_0                 | string |
-| 171 | Description_1                 | string |
-| 172 | Description_2                 | string |
-| 173 | Description_3                 | string |
-| 174 | Description_4                 | string |
-| 175 | Description_5                 | string |
-| 176 | Description_6                 | string |
-| 177 | Description_7                 | string |
-| 178 | Description_8                 | string |
-| 179 | Description_9                 | string |
-| 180 | Description_10                | string |
-| 181 | Description_11                | string |
-| 182 | Description_12                | string |
-| 183 | Description_13                | string |
-| 184 | Description_14                | string |
-| 185 | Description_15                | string |
-| 186 | DescriptionFlags              | uint   |
-| 187 | ToolTip_0                     | string |
-| 188 | ToolTip_1                     | string |
-| 189 | ToolTip_2                     | string |
-| 190 | ToolTip_3                     | string |
-| 191 | ToolTip_4                     | string |
-| 192 | ToolTip_5                     | string |
-| 193 | ToolTip_6                     | string |
-| 194 | ToolTip_7                     | string |
-| 195 | ToolTip_8                     | string |
-| 196 | ToolTip_9                     | string |
-| 197 | ToolTip_10                    | string |
-| 198 | ToolTip_11                    | string |
-| 199 | ToolTip_12                    | string |
-| 200 | ToolTip_13                    | string |
-| 201 | ToolTip_14                    | string |
-| 202 | ToolTip_15                    | string |
-| 203 | ToolTipFlags                  | uint   |
-| 204 | ManaCostPercentage            | uint   |
-| 205 | StartRecoveryCategory         | uint   |
-| 206 | StartRecoveryTime             | uint   |
-| 207 | MaxTargetLevel                | uint   |
-| 208 | SpellFamilyName               | uint   |
-| 209 | SpellFamilyFlagsLow           | flag96 |
-| 210 | SpellFamilyFlagsHigh          | flag96 |
-| 211 | SpellFamilyFlags2             | flag96 |
-| 212 | MaxAffectedTargets            | uint   |
-| 213 | DmgClass                      | uint   |
-| 214 | PreventionType                | uint   |
-| 215 | StanceBarOrder                | uint   |
-| 216 | EffectDamageMultiplier1       | float  |
-| 217 | EffectDamageMultiplier2       | float  |
-| 218 | EffectDamageMultiplier3       | float  |
-| 219 | MinFactionId                  | uint   |
-| 220 | MinReputation                 | uint   |
-| 221 | RequiredAuraVision            | uint   |
-| 222 | TotemCategory1                | uint   |
-| 223 | TotemCategory2                | uint   |
-| 224 | AreaGroupId                   | int    |
-| 225 | SchoolMask                    | uint   |
-| 226 | runeCostID                    | uint   |
-| 227 | spellMissileID                | uint   |
-| 228 | PowerDisplayId                | uint   |
-| 229 | EffectBonusMultiplier1        | float  |
-| 230 | EffectBonusMultiplier2        | float  |
-| 231 | EffectBonusMultiplier3        | float  |
-| 232 | spellDescriptionVariableID    | uint   |
-| 233 | SpellDifficultyId             | uint   |
+| Column | Field                      | Type   | spell\_dbc column                                                  | Comment                                                                                               |
+| :----: | :------------------------- | :----- | :----------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
+| 0      | ID                         | uint32 | [ID](spell_dbc#id)                                                 |                                                                                                       |
+| 1      | Category                   | uint32 | [Category](spell_dbc#category)                                     | ID in [SpellCategory.dbc](dbc-spellcategory)                                                          |
+| 2      | DispelType                 | uint32 | [DispelType](spell_dbc#dispeltype)                                 | ID in [SpellDispelType.dbc](dbc-spelldispeltype)                                                      |
+| 3      | Mechanic                   | uint32 | [Mechanic](spell_dbc#mechanic)                                     | ID in [SpellMechanic.dbc](dbc-spellmechanic)                                                          |
+| 4      | Attributes                 | uint32 | [Attributes](spell_dbc#attributes)                                 |                                                                                                       |
+| 5      | AttributesEx               | uint32 | [AttributesEx](spell_dbc#attributesex)                             |                                                                                                       |
+| 6      | AttributesExB              | uint32 | [AttributesEx2](spell_dbc#attributesex2)                           |                                                                                                       |
+| 7      | AttributesExC              | uint32 | [AttributesEx3](spell_dbc#attributesex3)                           |                                                                                                       |
+| 8      | AttributesExD              | uint32 | [AttributesEx4](spell_dbc#attributesex4)                           |                                                                                                       |
+| 9      | AttributesExE              | uint32 | [AttributesEx5](spell_dbc#attributesex5)                           |                                                                                                       |
+| 10     | AttributesExF              | uint32 | [AttributesEx6](spell_dbc#attributesex6)                           |                                                                                                       |
+| 11     | AttributesExG              | uint32 | [AttributesEx7](spell_dbc#attributesex7)                           |                                                                                                       |
+| 12     | ShapeshiftMask_0           | uint32 | [ShapeshiftMask](spell_dbc#shapeshiftmask)                         | Bitmask of shapeshift forms (bit = ID - 1). See [SpellShapeshiftForm.dbc](dbc-spellshapeshiftform)    |
+| 13     | ShapeshiftMask_1           | uint32 | [unk_320_2](spell_dbc#unk320)                                      |                                                                                                       |
+| 14     | ShapeshiftExclude_0        | uint32 | [ShapeshiftExclude](spell_dbc#shapeshiftexclude)                   | Bitmask of shapeshift forms (bit = ID - 1). See [SpellShapeshiftForm.dbc](dbc-spellshapeshiftform)    |
+| 15     | ShapeshiftExclude_1        | uint32 | [unk_320_3](spell_dbc#unk320)                                      |                                                                                                       |
+| 16     | Targets                    | uint32 | [Targets](spell_dbc#targets)                                       |                                                                                                       |
+| 17     | TargetCreatureType         | uint32 | [TargetCreatureType](spell_dbc#targetcreaturetype)                 | Bitmask of creature types (bit = ID - 1). See [CreatureType.dbc](dbc-creaturetype)                    |
+| 18     | RequiresSpellFocus         | uint32 | [RequiresSpellFocus](spell_dbc#requiresspellfocus)                 | ID in [SpellFocusObject.dbc](dbc-spellfocusobject)                                                    |
+| 19     | FacingCasterFlags          | uint32 | [FacingCasterFlags](spell_dbc#facingcasterflags)                   |                                                                                                       |
+| 20     | CasterAuraState            | uint32 | [CasterAuraState](spell_dbc#casteraurastate)                       |                                                                                                       |
+| 21     | TargetAuraState            | uint32 | [TargetAuraState](spell_dbc#targetaurastate)                       |                                                                                                       |
+| 22     | ExcludeCasterAuraState     | uint32 | [ExcludeCasterAuraState](spell_dbc#excludecasteraurastate)         |                                                                                                       |
+| 23     | ExcludeTargetAuraState     | uint32 | [ExcludeTargetAuraState](spell_dbc#excludetargetaurastate)         |                                                                                                       |
+| 24     | CasterAuraSpell            | uint32 | [CasterAuraSpell](spell_dbc#casterauraspell)                       |                                                                                                       |
+| 25     | TargetAuraSpell            | uint32 | [TargetAuraSpell](spell_dbc#targetauraspell)                       |                                                                                                       |
+| 26     | ExcludeCasterAuraSpell     | uint32 | [ExcludeCasterAuraSpell](spell_dbc#excludecasterauraspell)         |                                                                                                       |
+| 27     | ExcludeTargetAuraSpell     | uint32 | [ExcludeTargetAuraSpell](spell_dbc#excludetargetauraspell)         |                                                                                                       |
+| 28     | CastingTimeIndex           | uint32 | [CastingTimeIndex](spell_dbc#castingtimeindex)                     | ID in [SpellCastTimes.dbc](dbc-spellcasttimes)                                                        |
+| 29     | RecoveryTime               | uint32 | [RecoveryTime](spell_dbc#recoverytime)                             |                                                                                                       |
+| 30     | CategoryRecoveryTime       | uint32 | [CategoryRecoveryTime](spell_dbc#categoryrecoverytime)             |                                                                                                       |
+| 31     | InterruptFlags             | uint32 | [InterruptFlags](spell_dbc#interruptflags)                         |                                                                                                       |
+| 32     | AuraInterruptFlags         | uint32 | [AuraInterruptFlags](spell_dbc#aurainterruptflags)                 |                                                                                                       |
+| 33     | ChannelInterruptFlags      | uint32 | [ChannelInterruptFlags](spell_dbc#channelinterruptflags)           |                                                                                                       |
+| 34     | ProcTypeMask               | uint32 | [ProcTypeMask](spell_dbc#proctypemask)                             |                                                                                                       |
+| 35     | ProcChance                 | uint32 | [ProcChance](spell_dbc#procchance)                                 |                                                                                                       |
+| 36     | ProcCharges                | uint32 | [ProcCharges](spell_dbc#proccharges)                               |                                                                                                       |
+| 37     | MaxLevel                   | uint32 | [MaxLevel](spell_dbc#maxlevel)                                     |                                                                                                       |
+| 38     | BaseLevel                  | uint32 | [BaseLevel](spell_dbc#baselevel)                                   |                                                                                                       |
+| 39     | SpellLevel                 | uint32 | [SpellLevel](spell_dbc#spelllevel)                                 |                                                                                                       |
+| 40     | DurationIndex              | uint32 | [DurationIndex](spell_dbc#durationindex)                           | ID in [SpellDuration.dbc](dbc-spellduration)                                                          |
+| 41     | PowerType                  | int32  | [PowerType](spell_dbc#powertype)                                   |                                                                                                       |
+| 42     | ManaCost                   | uint32 | [ManaCost](spell_dbc#manacost)                                     |                                                                                                       |
+| 43     | ManaCostPerLevel           | uint32 | [ManaCostPerLevel](spell_dbc#manacostperlevel)                     |                                                                                                       |
+| 44     | ManaPerSecond              | uint32 | [ManaPerSecond](spell_dbc#manapersecond)                           |                                                                                                       |
+| 45     | ManaPerSecondPerLevel      | uint32 | [ManaPerSecondPerLevel](spell_dbc#manapersecondperlevel)           |                                                                                                       |
+| 46     | RangeIndex                 | uint32 | [RangeIndex](spell_dbc#rangeindex)                                 | ID in [SpellRange.dbc](dbc-spellrange)                                                                |
+| 47     | Speed                      | float  | [Speed](spell_dbc#speed)                                           |                                                                                                       |
+| 48     | ModalNextSpell             | uint32 | [ModalNextSpell](spell_dbc#modalnextspell)                         |                                                                                                       |
+| 49     | CumulativeAura             | uint32 | [CumulativeAura](spell_dbc#cumulativeaura)                         |                                                                                                       |
+| 50     | Totem_0                    | uint32 | [Totem_1](spell_dbc#totem)                                         | ID in [Item.dbc](dbc-item)                                                                            |
+| 51     | Totem_1                    | uint32 | [Totem_2](spell_dbc#totem)                                         | ID in [Item.dbc](dbc-item)                                                                            |
+| 52     | Reagent_0                  | int32  | [Reagent_1](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item) (1 of the 837 values used here are not in that file)                       |
+| 53     | Reagent_1                  | int32  | [Reagent_2](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item) (1 of the 500 values used here are not in that file)                       |
+| 54     | Reagent_2                  | int32  | [Reagent_3](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item) (1 of the 346 values used here are not in that file)                       |
+| 55     | Reagent_3                  | int32  | [Reagent_4](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item) (1 of the 217 values used here are not in that file)                       |
+| 56     | Reagent_4                  | int32  | [Reagent_5](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item)                                                                            |
+| 57     | Reagent_5                  | int32  | [Reagent_6](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item)                                                                            |
+| 58     | Reagent_6                  | int32  | [Reagent_7](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item)                                                                            |
+| 59     | Reagent_7                  | int32  | [Reagent_8](spell_dbc#reagent)                                     | ID in [Item.dbc](dbc-item)                                                                            |
+| 60     | ReagentCount_0             | uint32 | [ReagentCount_1](spell_dbc#reagentcount)                           |                                                                                                       |
+| 61     | ReagentCount_1             | uint32 | [ReagentCount_2](spell_dbc#reagentcount)                           |                                                                                                       |
+| 62     | ReagentCount_2             | uint32 | [ReagentCount_3](spell_dbc#reagentcount)                           |                                                                                                       |
+| 63     | ReagentCount_3             | uint32 | [ReagentCount_4](spell_dbc#reagentcount)                           |                                                                                                       |
+| 64     | ReagentCount_4             | uint32 | [ReagentCount_5](spell_dbc#reagentcount)                           |                                                                                                       |
+| 65     | ReagentCount_5             | uint32 | [ReagentCount_6](spell_dbc#reagentcount)                           |                                                                                                       |
+| 66     | ReagentCount_6             | uint32 | [ReagentCount_7](spell_dbc#reagentcount)                           |                                                                                                       |
+| 67     | ReagentCount_7             | uint32 | [ReagentCount_8](spell_dbc#reagentcount)                           |                                                                                                       |
+| 68     | EquippedItemClass          | int32  | [EquippedItemClass](spell_dbc#equippeditemclass)                   | ID in [ItemSubClass.dbc](dbc-itemsubclass)                                                            |
+| 69     | EquippedItemSubclass       | int32  | [EquippedItemSubclass](spell_dbc#equippeditemsubclass)             |                                                                                                       |
+| 70     | EquippedItemInvTypes       | int32  | [EquippedItemInvTypes](spell_dbc#equippediteminvtypes)             |                                                                                                       |
+| 71     | Effect_0                   | uint32 | [Effect_1](spell_dbc#effect)                                       |                                                                                                       |
+| 72     | Effect_1                   | uint32 | [Effect_2](spell_dbc#effect)                                       |                                                                                                       |
+| 73     | Effect_2                   | uint32 | [Effect_3](spell_dbc#effect)                                       |                                                                                                       |
+| 74     | EffectDieSides_0           | int32  | [EffectDieSides_1](spell_dbc#effectdiesides)                       |                                                                                                       |
+| 75     | EffectDieSides_1           | int32  | [EffectDieSides_2](spell_dbc#effectdiesides)                       |                                                                                                       |
+| 76     | EffectDieSides_2           | int32  | [EffectDieSides_3](spell_dbc#effectdiesides)                       |                                                                                                       |
+| 77     | EffectRealPointsPerLevel_0 | float  | [EffectRealPointsPerLevel_1](spell_dbc#effectrealpointsperlevel)   |                                                                                                       |
+| 78     | EffectRealPointsPerLevel_1 | float  | [EffectRealPointsPerLevel_2](spell_dbc#effectrealpointsperlevel)   |                                                                                                       |
+| 79     | EffectRealPointsPerLevel_2 | float  | [EffectRealPointsPerLevel_3](spell_dbc#effectrealpointsperlevel)   |                                                                                                       |
+| 80     | EffectBasePoints_0         | int32  | [EffectBasePoints_1](spell_dbc#effectbasepoints)                   |                                                                                                       |
+| 81     | EffectBasePoints_1         | int32  | [EffectBasePoints_2](spell_dbc#effectbasepoints)                   |                                                                                                       |
+| 82     | EffectBasePoints_2         | int32  | [EffectBasePoints_3](spell_dbc#effectbasepoints)                   |                                                                                                       |
+| 83     | EffectMechanic_0           | uint32 | [EffectMechanic_1](spell_dbc#effectmechanic)                       | ID in [SpellMechanic.dbc](dbc-spellmechanic)                                                          |
+| 84     | EffectMechanic_1           | uint32 | [EffectMechanic_2](spell_dbc#effectmechanic)                       | ID in [SpellMechanic.dbc](dbc-spellmechanic)                                                          |
+| 85     | EffectMechanic_2           | uint32 | [EffectMechanic_3](spell_dbc#effectmechanic)                       | ID in [SpellMechanic.dbc](dbc-spellmechanic)                                                          |
+| 86     | EffectImplicitTargetA_0    | uint32 | [ImplicitTargetA_1](spell_dbc#implicittargeta)                     |                                                                                                       |
+| 87     | EffectImplicitTargetA_1    | uint32 | [ImplicitTargetA_2](spell_dbc#implicittargeta)                     |                                                                                                       |
+| 88     | EffectImplicitTargetA_2    | uint32 | [ImplicitTargetA_3](spell_dbc#implicittargeta)                     |                                                                                                       |
+| 89     | EffectImplicitTargetB_0    | uint32 | [ImplicitTargetB_1](spell_dbc#implicittargetb)                     |                                                                                                       |
+| 90     | EffectImplicitTargetB_1    | uint32 | [ImplicitTargetB_2](spell_dbc#implicittargetb)                     |                                                                                                       |
+| 91     | EffectImplicitTargetB_2    | uint32 | [ImplicitTargetB_3](spell_dbc#implicittargetb)                     |                                                                                                       |
+| 92     | EffectRadiusIndex_0        | uint32 | [EffectRadiusIndex_1](spell_dbc#effectradiusindex)                 | ID in [SpellRadius.dbc](dbc-spellradius)                                                              |
+| 93     | EffectRadiusIndex_1        | uint32 | [EffectRadiusIndex_2](spell_dbc#effectradiusindex)                 | ID in [SpellRadius.dbc](dbc-spellradius)                                                              |
+| 94     | EffectRadiusIndex_2        | uint32 | [EffectRadiusIndex_3](spell_dbc#effectradiusindex)                 | ID in [SpellRadius.dbc](dbc-spellradius)                                                              |
+| 95     | EffectAura_0               | uint32 | [EffectAura_1](spell_dbc#effectaura)                               |                                                                                                       |
+| 96     | EffectAura_1               | uint32 | [EffectAura_2](spell_dbc#effectaura)                               |                                                                                                       |
+| 97     | EffectAura_2               | uint32 | [EffectAura_3](spell_dbc#effectaura)                               |                                                                                                       |
+| 98     | EffectAuraPeriod_0         | uint32 | [EffectAuraPeriod_1](spell_dbc#effectauraperiod)                   |                                                                                                       |
+| 99     | EffectAuraPeriod_1         | uint32 | [EffectAuraPeriod_2](spell_dbc#effectauraperiod)                   |                                                                                                       |
+| 100    | EffectAuraPeriod_2         | uint32 | [EffectAuraPeriod_3](spell_dbc#effectauraperiod)                   |                                                                                                       |
+| 101    | EffectAmplitude_0          | float  | [EffectMultipleValue_1](spell_dbc#effectmultiplevalue)             |                                                                                                       |
+| 102    | EffectAmplitude_1          | float  | [EffectMultipleValue_2](spell_dbc#effectmultiplevalue)             |                                                                                                       |
+| 103    | EffectAmplitude_2          | float  | [EffectMultipleValue_3](spell_dbc#effectmultiplevalue)             |                                                                                                       |
+| 104    | EffectChainTargets_0       | uint32 | [EffectChainTargets_1](spell_dbc#effectchaintargets)               |                                                                                                       |
+| 105    | EffectChainTargets_1       | uint32 | [EffectChainTargets_2](spell_dbc#effectchaintargets)               |                                                                                                       |
+| 106    | EffectChainTargets_2       | uint32 | [EffectChainTargets_3](spell_dbc#effectchaintargets)               |                                                                                                       |
+| 107    | EffectItemType_0           | uint32 | [EffectItemType_1](spell_dbc#effectitemtype)                       | ID in [Item.dbc](dbc-item) (37 of the 4264 values used here are not in that file)                     |
+| 108    | EffectItemType_1           | uint32 | [EffectItemType_2](spell_dbc#effectitemtype)                       | ID in [Item.dbc](dbc-item) (6 of the 52 values used here are not in that file)                        |
+| 109    | EffectItemType_2           | uint32 | [EffectItemType_3](spell_dbc#effectitemtype)                       |                                                                                                       |
+| 110    | EffectMiscValue_0          | int32  | [EffectMiscValue_1](spell_dbc#effectmiscvalue)                     |                                                                                                       |
+| 111    | EffectMiscValue_1          | int32  | [EffectMiscValue_2](spell_dbc#effectmiscvalue)                     |                                                                                                       |
+| 112    | EffectMiscValue_2          | int32  | [EffectMiscValue_3](spell_dbc#effectmiscvalue)                     |                                                                                                       |
+| 113    | EffectMiscValueB_0         | int32  | [EffectMiscValueB_1](spell_dbc#effectmiscvalueb)                   |                                                                                                       |
+| 114    | EffectMiscValueB_1         | int32  | [EffectMiscValueB_2](spell_dbc#effectmiscvalueb)                   |                                                                                                       |
+| 115    | EffectMiscValueB_2         | int32  | [EffectMiscValueB_3](spell_dbc#effectmiscvalueb)                   |                                                                                                       |
+| 116    | EffectTriggerSpell_0       | int32  | [EffectTriggerSpell_1](spell_dbc#effecttriggerspell)               |                                                                                                       |
+| 117    | EffectTriggerSpell_1       | int32  | [EffectTriggerSpell_2](spell_dbc#effecttriggerspell)               |                                                                                                       |
+| 118    | EffectTriggerSpell_2       | int32  | [EffectTriggerSpell_3](spell_dbc#effecttriggerspell)               |                                                                                                       |
+| 119    | EffectPointsPerCombo_0     | float  | [EffectPointsPerCombo_1](spell_dbc#effectpointspercombo)           |                                                                                                       |
+| 120    | EffectPointsPerCombo_1     | float  | [EffectPointsPerCombo_2](spell_dbc#effectpointspercombo)           |                                                                                                       |
+| 121    | EffectPointsPerCombo_2     | float  | [EffectPointsPerCombo_3](spell_dbc#effectpointspercombo)           |                                                                                                       |
+| 122    | EffectSpellClassMask_A_0   | uint32 | [EffectSpellClassMaskA_1](spell_dbc#effectspellclassmaska)         |                                                                                                       |
+| 123    | EffectSpellClassMask_A_1   | uint32 | [EffectSpellClassMaskA_2](spell_dbc#effectspellclassmaska)         |                                                                                                       |
+| 124    | EffectSpellClassMask_A_2   | uint32 | [EffectSpellClassMaskA_3](spell_dbc#effectspellclassmaska)         |                                                                                                       |
+| 125    | EffectSpellClassMask_B_0   | uint32 | [EffectSpellClassMaskB_1](spell_dbc#effectspellclassmaskb)         |                                                                                                       |
+| 126    | EffectSpellClassMask_B_1   | uint32 | [EffectSpellClassMaskB_2](spell_dbc#effectspellclassmaskb)         |                                                                                                       |
+| 127    | EffectSpellClassMask_B_2   | uint32 | [EffectSpellClassMaskB_3](spell_dbc#effectspellclassmaskb)         |                                                                                                       |
+| 128    | EffectSpellClassMask_C_0   | uint32 | [EffectSpellClassMaskC_1](spell_dbc#effectspellclassmaskc)         |                                                                                                       |
+| 129    | EffectSpellClassMask_C_1   | uint32 | [EffectSpellClassMaskC_2](spell_dbc#effectspellclassmaskc)         |                                                                                                       |
+| 130    | EffectSpellClassMask_C_2   | uint32 | [EffectSpellClassMaskC_3](spell_dbc#effectspellclassmaskc)         |                                                                                                       |
+| 131    | SpellVisualID_0            | uint32 | [SpellVisualID_1](spell_dbc#spellvisualid)                         | ID in [SpellVisual.dbc](dbc-spellvisual)                                                              |
+| 132    | SpellVisualID_1            | uint32 | [SpellVisualID_2](spell_dbc#spellvisualid)                         | ID in [SpellVisual.dbc](dbc-spellvisual)                                                              |
+| 133    | SpellIconID                | uint32 | [SpellIconID](spell_dbc#spelliconid)                               | ID in [SpellIcon.dbc](dbc-spellicon)                                                                  |
+| 134    | ActiveIconID               | uint32 | [ActiveIconID](spell_dbc#activeiconid)                             | ID in [SpellIcon.dbc](dbc-spellicon)                                                                  |
+| 135    | SpellPriority              | uint32 | [SpellPriority](spell_dbc#spellpriority)                           |                                                                                                       |
+| 136    | Name_0                     | string | [Name_Lang_enUS](spell_dbc#namelang)                               | Assumed enUS                                                                                          |
+| 137    | Name_1                     | string | [Name_Lang_enGB](spell_dbc#namelang)                               | Assumed enGB, not used in 3.3.5a                                                                      |
+| 138    | Name_2                     | string | [Name_Lang_koKR](spell_dbc#namelang)                               | Assumed koKR                                                                                          |
+| 139    | Name_3                     | string | [Name_Lang_frFR](spell_dbc#namelang)                               | Assumed frFR                                                                                          |
+| 140    | Name_4                     | string | [Name_Lang_deDE](spell_dbc#namelang)                               | Assumed deDE                                                                                          |
+| 141    | Name_5                     | string | [Name_Lang_enCN](spell_dbc#namelang)                               | Assumed enCN, not used in 3.3.5a                                                                      |
+| 142    | Name_6                     | string | [Name_Lang_zhCN](spell_dbc#namelang)                               | Assumed zhCN                                                                                          |
+| 143    | Name_7                     | string | [Name_Lang_enTW](spell_dbc#namelang)                               | Assumed enTW, not used in 3.3.5a                                                                      |
+| 144    | Name_8                     | string | [Name_Lang_zhTW](spell_dbc#namelang)                               | Assumed zhTW                                                                                          |
+| 145    | Name_9                     | string | [Name_Lang_esES](spell_dbc#namelang)                               | Assumed esES                                                                                          |
+| 146    | Name_10                    | string | [Name_Lang_esMX](spell_dbc#namelang)                               | Assumed esMX                                                                                          |
+| 147    | Name_11                    | string | [Name_Lang_ruRU](spell_dbc#namelang)                               | Assumed ruRU                                                                                          |
+| 148    | Name_12                    | string | [Name_Lang_ptPT](spell_dbc#namelang)                               | Assumed ptPT, not used in 3.3.5a                                                                      |
+| 149    | Name_13                    | string | [Name_Lang_ptBR](spell_dbc#namelang)                               | Assumed ptBR, not used in 3.3.5a                                                                      |
+| 150    | Name_14                    | string | [Name_Lang_itIT](spell_dbc#namelang)                               | Assumed itIT, not used in 3.3.5a                                                                      |
+| 151    | Name_15                    | string | [Name_Lang_Unk](spell_dbc#namelang)                                | Unknown language, unsure of the usage in 3.3.5a                                                       |
+| 152    | Name_lang_mask             | uint32 | [Name_Lang_Mask](spell_dbc#namelang)                               | Assumed flags of the localized text                                                                   |
+| 153    | NameSubtext_0              | string | [NameSubtext_Lang_enUS](spell_dbc#namesubtextlang)                 | Assumed enUS                                                                                          |
+| 154    | NameSubtext_1              | string | [NameSubtext_Lang_enGB](spell_dbc#namesubtextlang)                 | Assumed enGB, not used in 3.3.5a                                                                      |
+| 155    | NameSubtext_2              | string | [NameSubtext_Lang_koKR](spell_dbc#namesubtextlang)                 | Assumed koKR                                                                                          |
+| 156    | NameSubtext_3              | string | [NameSubtext_Lang_frFR](spell_dbc#namesubtextlang)                 | Assumed frFR                                                                                          |
+| 157    | NameSubtext_4              | string | [NameSubtext_Lang_deDE](spell_dbc#namesubtextlang)                 | Assumed deDE                                                                                          |
+| 158    | NameSubtext_5              | string | [NameSubtext_Lang_enCN](spell_dbc#namesubtextlang)                 | Assumed enCN, not used in 3.3.5a                                                                      |
+| 159    | NameSubtext_6              | string | [NameSubtext_Lang_zhCN](spell_dbc#namesubtextlang)                 | Assumed zhCN                                                                                          |
+| 160    | NameSubtext_7              | string | [NameSubtext_Lang_enTW](spell_dbc#namesubtextlang)                 | Assumed enTW, not used in 3.3.5a                                                                      |
+| 161    | NameSubtext_8              | string | [NameSubtext_Lang_zhTW](spell_dbc#namesubtextlang)                 | Assumed zhTW                                                                                          |
+| 162    | NameSubtext_9              | string | [NameSubtext_Lang_esES](spell_dbc#namesubtextlang)                 | Assumed esES                                                                                          |
+| 163    | NameSubtext_10             | string | [NameSubtext_Lang_esMX](spell_dbc#namesubtextlang)                 | Assumed esMX                                                                                          |
+| 164    | NameSubtext_11             | string | [NameSubtext_Lang_ruRU](spell_dbc#namesubtextlang)                 | Assumed ruRU                                                                                          |
+| 165    | NameSubtext_12             | string | [NameSubtext_Lang_ptPT](spell_dbc#namesubtextlang)                 | Assumed ptPT, not used in 3.3.5a                                                                      |
+| 166    | NameSubtext_13             | string | [NameSubtext_Lang_ptBR](spell_dbc#namesubtextlang)                 | Assumed ptBR, not used in 3.3.5a                                                                      |
+| 167    | NameSubtext_14             | string | [NameSubtext_Lang_itIT](spell_dbc#namesubtextlang)                 | Assumed itIT, not used in 3.3.5a                                                                      |
+| 168    | NameSubtext_15             | string | [NameSubtext_Lang_Unk](spell_dbc#namesubtextlang)                  | Unknown language, unsure of the usage in 3.3.5a                                                       |
+| 169    | NameSubtext_lang_mask      | uint32 | [NameSubtext_Lang_Mask](spell_dbc#namesubtextlang)                 | Assumed flags of the localized text                                                                   |
+| 170    | Description_0              | string | [Description_Lang_enUS](spell_dbc#descriptionlang)                 | Assumed enUS                                                                                          |
+| 171    | Description_1              | string | [Description_Lang_enGB](spell_dbc#descriptionlang)                 | Assumed enGB, not used in 3.3.5a                                                                      |
+| 172    | Description_2              | string | [Description_Lang_koKR](spell_dbc#descriptionlang)                 | Assumed koKR                                                                                          |
+| 173    | Description_3              | string | [Description_Lang_frFR](spell_dbc#descriptionlang)                 | Assumed frFR                                                                                          |
+| 174    | Description_4              | string | [Description_Lang_deDE](spell_dbc#descriptionlang)                 | Assumed deDE                                                                                          |
+| 175    | Description_5              | string | [Description_Lang_enCN](spell_dbc#descriptionlang)                 | Assumed enCN, not used in 3.3.5a                                                                      |
+| 176    | Description_6              | string | [Description_Lang_zhCN](spell_dbc#descriptionlang)                 | Assumed zhCN                                                                                          |
+| 177    | Description_7              | string | [Description_Lang_enTW](spell_dbc#descriptionlang)                 | Assumed enTW, not used in 3.3.5a                                                                      |
+| 178    | Description_8              | string | [Description_Lang_zhTW](spell_dbc#descriptionlang)                 | Assumed zhTW                                                                                          |
+| 179    | Description_9              | string | [Description_Lang_esES](spell_dbc#descriptionlang)                 | Assumed esES                                                                                          |
+| 180    | Description_10             | string | [Description_Lang_esMX](spell_dbc#descriptionlang)                 | Assumed esMX                                                                                          |
+| 181    | Description_11             | string | [Description_Lang_ruRU](spell_dbc#descriptionlang)                 | Assumed ruRU                                                                                          |
+| 182    | Description_12             | string | [Description_Lang_ptPT](spell_dbc#descriptionlang)                 | Assumed ptPT, not used in 3.3.5a                                                                      |
+| 183    | Description_13             | string | [Description_Lang_ptBR](spell_dbc#descriptionlang)                 | Assumed ptBR, not used in 3.3.5a                                                                      |
+| 184    | Description_14             | string | [Description_Lang_itIT](spell_dbc#descriptionlang)                 | Assumed itIT, not used in 3.3.5a                                                                      |
+| 185    | Description_15             | string | [Description_Lang_Unk](spell_dbc#descriptionlang)                  | Unknown language, unsure of the usage in 3.3.5a                                                       |
+| 186    | Description_lang_mask      | uint32 | [Description_Lang_Mask](spell_dbc#descriptionlang)                 | Assumed flags of the localized text                                                                   |
+| 187    | AuraDescription_0          | string | [AuraDescription_Lang_enUS](spell_dbc#auradescriptionlang)         | Assumed enUS                                                                                          |
+| 188    | AuraDescription_1          | string | [AuraDescription_Lang_enGB](spell_dbc#auradescriptionlang)         | Assumed enGB, not used in 3.3.5a                                                                      |
+| 189    | AuraDescription_2          | string | [AuraDescription_Lang_koKR](spell_dbc#auradescriptionlang)         | Assumed koKR                                                                                          |
+| 190    | AuraDescription_3          | string | [AuraDescription_Lang_frFR](spell_dbc#auradescriptionlang)         | Assumed frFR                                                                                          |
+| 191    | AuraDescription_4          | string | [AuraDescription_Lang_deDE](spell_dbc#auradescriptionlang)         | Assumed deDE                                                                                          |
+| 192    | AuraDescription_5          | string | [AuraDescription_Lang_enCN](spell_dbc#auradescriptionlang)         | Assumed enCN, not used in 3.3.5a                                                                      |
+| 193    | AuraDescription_6          | string | [AuraDescription_Lang_zhCN](spell_dbc#auradescriptionlang)         | Assumed zhCN                                                                                          |
+| 194    | AuraDescription_7          | string | [AuraDescription_Lang_enTW](spell_dbc#auradescriptionlang)         | Assumed enTW, not used in 3.3.5a                                                                      |
+| 195    | AuraDescription_8          | string | [AuraDescription_Lang_zhTW](spell_dbc#auradescriptionlang)         | Assumed zhTW                                                                                          |
+| 196    | AuraDescription_9          | string | [AuraDescription_Lang_esES](spell_dbc#auradescriptionlang)         | Assumed esES                                                                                          |
+| 197    | AuraDescription_10         | string | [AuraDescription_Lang_esMX](spell_dbc#auradescriptionlang)         | Assumed esMX                                                                                          |
+| 198    | AuraDescription_11         | string | [AuraDescription_Lang_ruRU](spell_dbc#auradescriptionlang)         | Assumed ruRU                                                                                          |
+| 199    | AuraDescription_12         | string | [AuraDescription_Lang_ptPT](spell_dbc#auradescriptionlang)         | Assumed ptPT, not used in 3.3.5a                                                                      |
+| 200    | AuraDescription_13         | string | [AuraDescription_Lang_ptBR](spell_dbc#auradescriptionlang)         | Assumed ptBR, not used in 3.3.5a                                                                      |
+| 201    | AuraDescription_14         | string | [AuraDescription_Lang_itIT](spell_dbc#auradescriptionlang)         | Assumed itIT, not used in 3.3.5a                                                                      |
+| 202    | AuraDescription_15         | string | [AuraDescription_Lang_Unk](spell_dbc#auradescriptionlang)          | Unknown language, unsure of the usage in 3.3.5a                                                       |
+| 203    | AuraDescription_lang_mask  | uint32 | [AuraDescription_Lang_Mask](spell_dbc#auradescriptionlang)         | Assumed flags of the localized text                                                                   |
+| 204    | ManaCostPct                | uint32 | [ManaCostPct](spell_dbc#manacostpct)                               |                                                                                                       |
+| 205    | StartRecoveryCategory      | uint32 | [StartRecoveryCategory](spell_dbc#startrecoverycategory)           | ID in [SpellCategory.dbc](dbc-spellcategory)                                                          |
+| 206    | StartRecoveryTime          | uint32 | [StartRecoveryTime](spell_dbc#startrecoverytime)                   |                                                                                                       |
+| 207    | MaxTargetLevel             | uint32 | [MaxTargetLevel](spell_dbc#maxtargetlevel)                         |                                                                                                       |
+| 208    | SpellClassSet              | uint32 | [SpellClassSet](spell_dbc#spellclassset)                           |                                                                                                       |
+| 209    | SpellClassMask_0           | uint32 | [SpellClassMask_1](spell_dbc#spellclassmask)                       |                                                                                                       |
+| 210    | SpellClassMask_1           | uint32 | [SpellClassMask_2](spell_dbc#spellclassmask)                       |                                                                                                       |
+| 211    | SpellClassMask_2           | uint32 | [SpellClassMask_3](spell_dbc#spellclassmask)                       |                                                                                                       |
+| 212    | MaxTargets                 | uint32 | [MaxTargets](spell_dbc#maxtargets)                                 |                                                                                                       |
+| 213    | DefenseType                | uint32 | [DefenseType](spell_dbc#defensetype)                               |                                                                                                       |
+| 214    | PreventionType             | uint32 | [PreventionType](spell_dbc#preventiontype)                         |                                                                                                       |
+| 215    | StanceBarOrder             | int32  | [StanceBarOrder](spell_dbc#stancebarorder)                         |                                                                                                       |
+| 216    | EffectChainAmplitude_0     | float  | [EffectChainAmplitude_1](spell_dbc#effectchainamplitude)           |                                                                                                       |
+| 217    | EffectChainAmplitude_1     | float  | [EffectChainAmplitude_2](spell_dbc#effectchainamplitude)           |                                                                                                       |
+| 218    | EffectChainAmplitude_2     | float  | [EffectChainAmplitude_3](spell_dbc#effectchainamplitude)           |                                                                                                       |
+| 219    | MinFactionID               | uint32 | [MinFactionID](spell_dbc#minfactionid)                             | ID in [Faction.dbc](faction)                                                                          |
+| 220    | MinReputation              | uint32 | [MinReputation](spell_dbc#minreputation)                           |                                                                                                       |
+| 221    | RequiredAuraVision         | uint32 | [RequiredAuraVision](spell_dbc#requiredauravision)                 |                                                                                                       |
+| 222    | RequiredTotemCategoryID_0  | uint32 | [RequiredTotemCategoryID_1](spell_dbc#requiredtotemcategoryid)     | ID in [TotemCategory.dbc](totemcategory)                                                              |
+| 223    | RequiredTotemCategoryID_1  | uint32 | [RequiredTotemCategoryID_2](spell_dbc#requiredtotemcategoryid)     | ID in [TotemCategory.dbc](totemcategory)                                                              |
+| 224    | RequiredAreasID            | int32  | [RequiredAreasID](spell_dbc#requiredareasid)                       | ID in [AreaGroup.dbc](dbc-areagroup)                                                                  |
+| 225    | SchoolMask                 | uint32 | [SchoolMask](spell_dbc#schoolmask)                                 |                                                                                                       |
+| 226    | RuneCostID                 | uint32 | [RuneCostID](spell_dbc#runecostid)                                 | ID in [SpellRuneCost.dbc](dbc-spellrunecost)                                                          |
+| 227    | SpellMissileID             | uint32 | [SpellMissileID](spell_dbc#spellmissileid)                         | ID in [SpellMissile.dbc](dbc-spellmissile) (1 of the 106 values used here are not in that file)       |
+| 228    | PowerDisplayID             | int32  | [PowerDisplayID](spell_dbc#powerdisplayid)                         | ID in [PowerDisplay.dbc](dbc-powerdisplay)                                                            |
+| 229    | EffectBonusCoefficient_0   | float  | [EffectBonusMultiplier_1](spell_dbc#effectbonusmultiplier)         |                                                                                                       |
+| 230    | EffectBonusCoefficient_1   | float  | [EffectBonusMultiplier_2](spell_dbc#effectbonusmultiplier)         |                                                                                                       |
+| 231    | EffectBonusCoefficient_2   | float  | [EffectBonusMultiplier_3](spell_dbc#effectbonusmultiplier)         |                                                                                                       |
+| 232    | DescriptionVariablesID     | int32  | [SpellDescriptionVariableID](spell_dbc#spelldescriptionvariableid) | ID in [SpellDescriptionVariables.dbc](dbc-spelldescriptionvariables)                                  |
+| 233    | Difficulty                 | uint32 | [SpellDifficultyID](spell_dbc#spelldifficultyid)                   | ID in [SpellDifficulty.dbc](dbc-spelldifficulty) (5 of the 582 values used here are not in that file) |
+
+The language of each of the 16 text columns of a localized field is assumed from the column names of the `_dbc` tables. A language is marked as not used in 3.3.5a when it is not in the core's locale list.
 
 ## **Category**
 
-| Value | Hex  | Flag          | Comment |
-| :---- | :--: | :------------ | :------ |
-| 0     | 0x00 | Default       |         |
-| 1     | 0x01 | Summon guards |         |
-| 2     | 0x02 | Entry         |         |
-| 4     | 0x04 | Entry         |         |
+| Value | Hex    | Flag          | Comment |
+| :---- | :----: | :------------ | :------ |
+| 0     | `0x00` | Default       |         |
+| 1     | `0x01` | Summon guards |         |
+| 2     | `0x02` | Entry         |         |
+| 4     | `0x04` | Entry         |         |
 
 ## **powerType**
 
