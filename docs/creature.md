@@ -2,26 +2,26 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: creature's Structure**
 
 Contains individual creature spawn data for each individual spawn of each individual creature in the game world.
 
 | Field                 | Type     | Attributes | Key | Null | Default | Extra          | Comment                                 |
 | --------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | --------------------------------------- |
-| [guid][1]             | INT      | UNSIGNED   | PRI | NO   | NULL    | Auto Increment | Global Unique Identifier                |
-| [id][2]               | INT      | UNSIGNED   |     | NO   | 0       |                | Creature Identifier                     |
-| [map][5]              | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Map Identifier                          |
+| [guid][1]             | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Global Unique Identifier                |
+| [id][2]               | INT      | UNSIGNED   | MUL | NO   | 0       |                | Creature Identifier                     |
+| [map][5]              | SMALLINT | UNSIGNED   | MUL | NO   | 0       |                | Map Identifier                          |
 | [zoneId][6]           | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Zone Identifier                         |
 | [areaId][7]           | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Area Identifier                         |
 | [spawnMask][8]        | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                                         |
-| [phaseMask][9]        | SMALLINT | UNSIGNED   |     | NO   | 1       |                |                                         |
-| [equipment_id][10]    | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                                         |
+| [phaseMask][9]        | INT      | UNSIGNED   |     | NO   | 1       |                |                                         |
+| [equipment_id][10]    | TINYINT  | SIGNED     |     | NO   | 0       |                |                                         |
 | [position_x][11]      | FLOAT    | SIGNED     |     | NO   | 0       |                |                                         |
 | [position_y][12]      | FLOAT    | SIGNED     |     | NO   | 0       |                |                                         |
 | [position_z][13]      | FLOAT    | SIGNED     |     | NO   | 0       |                |                                         |
 | [orientation][14]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                                         |
 | [spawntimesecs][15]   | INT      | UNSIGNED   |     | NO   | 120     |                |                                         |
-| [wander_distance][16] | FLOAT    | SIGNED     |     | NO   | 5       |                | Dist in yards for random movement.      |
+| [wander_distance][16] | FLOAT    | SIGNED     |     | NO   | 0       |                | Dist in yards for random movement.      |
 | [currentwaypoint][17] | INT      | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
 | [curhealth][18]       | INT      | UNSIGNED   |     | NO   | 1       |                | Storage used by core. "Always set as 1" |
 | [curmana][19]         | INT      | UNSIGNED   |     | NO   | 0       |                | Storage used by core. "Always set as 0" |
@@ -29,7 +29,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 | [npcflag][21]         | INT      | UNSIGNED   |     | NO   | 0       |                | creature_template override              |
 | [unit_flags][22]      | INT      | UNSIGNED   |     | NO   | 0       |                | creature_template override              |
 | [dynamicflags][23]    | INT      | UNSIGNED   |     | NO   | 0       |                | creature_template override              |
-| [ScriptName][24]      | CHAR     |            |     | YES  | NULL    |                |                                         |
+| [ScriptName][24]      | CHAR(64) |            |     | YES  | ''      |                |                                         |
 | [VerifiedBuild][25]   | INT      | SIGNED     |     | YES  | NULL    |                | Not used by the core.                   |
 | [CreateObject][26]    | TINYINT  | UNSIGNED   |     | NO   | 0       |                | Not used by the core.                   |
 | [Comment][27]         | TEXT     |            |     | YES  | NULL    |                | Not used by the core.                   |
@@ -60,7 +60,7 @@ Contains individual creature spawn data for each individual spawn of each indivi
 [26]: #createobject
 [27]: #comment
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### guid
 

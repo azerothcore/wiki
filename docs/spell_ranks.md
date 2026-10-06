@@ -6,19 +6,15 @@
 
 Table used by the core to group different ranks of spells (the gray text seen on ranked spells) into one "spell stem". This partly involves checks for aura stacking (e.g. different levels of the same spell). One spell can not be linked to multiple rank chains (they are "unique").
 
-**Table Structure**
+**Table: spell\_ranks's Structure**
 
-| Field               | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [first_spell_id][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [spell_id][2]       | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [rank][3]           | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field                           | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [first_spell_id](#firstspellid) | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [spell_id](#spellid)            | INT     | UNSIGNED | NO   | UNI | 0       |       |         |
+| [rank](#rank)                   | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
 
-[1]: #firstspellid
-[2]: #spellid
-[3]: #rank
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### first\_spell\_id
 

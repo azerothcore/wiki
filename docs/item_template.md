@@ -2,22 +2,22 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: item\_template's Structure**
 
 Holds information on every item that exists in the game. All items are created from their template stored in this table.
 
-(See additional information in the *ItemPrototype.h* file.)
+(See additional information in the *[ItemTemplate.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Item/ItemTemplate.h)* file.)
 
-| Field                           | Type         | Attributes | Key | Null | Default | extra | Comment             |
+| Field                           | Type         | Attributes | Key | Null | Default | Extra | Comment             |
 | ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------- |
-| [entry][1]                      | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |                     |
-| [class][2]                      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [entry][1]                      | INT          | UNSIGNED   | PRI | NO   | 0       |       |                     |
+| [class][2]                      | TINYINT      | UNSIGNED   | MUL | NO   | 0       |       |                     |
 | [subclass][3]                   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [SoundOverrideSubclass][4]      | TINYINT      | SIGNED     |     | NO   | -1      |       |                     |
-| [name][5]                       | VARCHAR(255) | SIGNED     |     | NO   | NULL    |       |                     |
-| [displayid][6]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [name][5]                       | VARCHAR(255) |            | MUL | NO   | ''      |       |                     |
+| [displayid][6]                  | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [Quality][7]                    | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Flags][8]                      | BIGINT       | SIGNED     |     | NO   | 0       |       |                     |
+| [Flags][8]                      | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [FlagsExtra][9]                 | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [BuyCount][10]                  | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                     |
 | [BuyPrice][11]                  | BIGINT       | SIGNED     |     | NO   | 0       |       |                     |
@@ -29,34 +29,34 @@ Holds information on every item that exists in the game. All items are created f
 | [RequiredLevel][17]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [RequiredSkill][18]             | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [RequiredSkillRank][19]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [requiredspell][20]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [requiredhonorrank][21]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredCityRank][22]          | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [requiredspell][20]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [requiredhonorrank][21]         | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RequiredCityRank][22]          | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [RequiredReputationFaction][23] | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [RequiredReputationRank][24]    | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [maxcount][25]                  | INT          | SIGNED     |     | NO   | 0       |       |                     |
-| [stackable][26]                 | INT          | SIGNED     |     | NO   | 1       |       |                     |
-| [ContainerSlots][27]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
+| [stackable][26]                 | INT          | SIGNED     |     | YES  | 1       |       |                     |
+| [ContainerSlots][27]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [stat_type1][28]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value1][29]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value1][29]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type2][30]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value2][31]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value2][31]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type3][32]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value3][33]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value3][33]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type4][34]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value4][35]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value4][35]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type5][36]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value5][37]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value5][37]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type6][38]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value6][39]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value6][39]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type7][40]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value7][41]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value7][41]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type8][42]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value8][43]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value8][43]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type9][44]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value9][45]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value9][45]               | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [stat_type10][46]               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value10][47]              | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
+| [stat_value10][47]              | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [ScalingStatDistribution][48]   | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [ScalingStatValue][49]          | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [dmg_min1][50]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
@@ -65,45 +65,45 @@ Holds information on every item that exists in the game. All items are created f
 | [dmg_min2][53]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [dmg_max2][54]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [dmg_type2][55]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [armor][56]                     | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [holy_res][57]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [fire_res][58]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [nature_res][59]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [frost_res][60]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [shadow_res][61]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [arcane_res][62]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
+| [armor][56]                     | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [holy_res][57]                  | SMALLINT     | SIGNED     |     | YES  | NULL    |       |                     |
+| [fire_res][58]                  | SMALLINT     | SIGNED     |     | YES  | NULL    |       |                     |
+| [nature_res][59]                | SMALLINT     | SIGNED     |     | YES  | NULL    |       |                     |
+| [frost_res][60]                 | SMALLINT     | SIGNED     |     | YES  | NULL    |       |                     |
+| [shadow_res][61]                | SMALLINT     | SIGNED     |     | YES  | NULL    |       |                     |
+| [arcane_res][62]                | SMALLINT     | SIGNED     |     | YES  | NULL    |       |                     |
 | [delay][63]                     | SMALLINT     | UNSIGNED   |     | NO   | 1000    |       |                     |
 | [ammo_type][64]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [RangedModRange][65]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellid_1][66]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spellid_1][66]                 | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [spelltrigger_1][67]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcharges_1][68]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_1][69]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [spellcooldown_1][70]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
 | [spellcategory_1][71]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcategorycooldown_1][72]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_2][73]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spellid_2][73]                 | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [spelltrigger_2][74]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcharges_2][75]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_2][76]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [spellcooldown_2][77]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
 | [spellcategory_2][78]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcategorycooldown_2][79]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_3][80]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spellid_3][80]                 | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [spelltrigger_3][81]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcharges_3][82]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_3][83]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [spellcooldown_3][84]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
 | [spellcategory_3][85]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcategorycooldown_3][86]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_4][87]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spellid_4][87]                 | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [spelltrigger_4][88]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcharges_4][89]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_4][90]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [spellcooldown_4][91]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
 | [spellcategory_4][92]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcategorycooldown_4][93]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_5][94]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [spellid_5][94]                 | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [spelltrigger_5][95]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcharges_5][96]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [spellppmRate_5][97]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
@@ -111,43 +111,43 @@ Holds information on every item that exists in the game. All items are created f
 | [spellcategory_5][99]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
 | [spellcategorycooldown_5][100]  | INT          | SIGNED     |     | NO   | -1      |       |                     |
 | [bonding][101]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [description][102]              | VARCHAR(255) | SIGNED     |     | NO   | NULL    |       |                     |
-| [PageText][103]                 | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [description][102]              | VARCHAR(255) |            |     | NO   | ''      |       |                     |
+| [PageText][103]                 | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [LanguageID][104]               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [PageMaterial][105]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [startquest][106]               | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [lockid][107]                   | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [startquest][106]               | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [lockid][107]                   | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [Material][108]                 | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
 | [sheath][109]                   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RandomProperty][110]           | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [RandomSuffix][111]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [block][112]                    | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [itemset][113]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [RandomProperty][110]           | INT          | SIGNED     |     | NO   | 0       |       |                     |
+| [RandomSuffix][111]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [block][112]                    | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
+| [itemset][113]                  | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [MaxDurability][114]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [area][115]                     | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [area][115]                     | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [Map][116]                      | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [BagFamily][117]                | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [TotemCategory][118]            | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [BagFamily][117]                | INT          | SIGNED     |     | NO   | 0       |       |                     |
+| [TotemCategory][118]            | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [socketColor_1][119]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_1][120]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketContent_1][120]          | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [socketColor_2][121]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_2][122]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketContent_2][122]          | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [socketColor_3][123]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_3][124]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [socketBonus][125]              | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [GemProperties][126]            | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
+| [socketContent_3][124]          | INT          | SIGNED     |     | NO   | 0       |       |                     |
+| [socketBonus][125]              | INT          | SIGNED     |     | NO   | 0       |       |                     |
+| [GemProperties][126]            | INT          | SIGNED     |     | NO   | 0       |       |                     |
 | [RequiredDisenchantSkill][127]  | SMALLINT     | SIGNED     |     | NO   | -1      |       |                     |
 | [ArmorDamageModifier][128]      | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
 | [duration][129]                 | INT          | UNSIGNED   |     | NO   | 0       |       | Duration in seconds |
 | [ItemLimitCategory][130]        | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
 | [HolidayId][131]                | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [ScriptName][132]               | VARCHAR(64)  | SIGNED     |     | NO   | NULL    |       |                     |
-| [DisenchantID][133]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
+| [ScriptName][132]               | VARCHAR(64)  |            |     | NO   | ''      |       |                     |
+| [DisenchantID][133]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [FoodType][134]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
 | [minMoneyLoot][135]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [maxMoneyLoot][136]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
 | [flagsCustom][137]              | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [VerifiedBuild][138]            | SMALLINT     | SIGNED     |     | YES  | 1       |       | (WDBVerified)       |
+| [VerifiedBuild][138]            | INT          | SIGNED     |     | YES  | NULL    |       | (WDBVerified)       |
 
 [1]: #entry
 [2]: #class
@@ -288,7 +288,7 @@ Holds information on every item that exists in the game. All items are created f
 [137]: #flagscustom
 [138]: #verifiedbuild
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### entry
 

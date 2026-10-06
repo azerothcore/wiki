@@ -1,24 +1,24 @@
-# mail_server_template_conditions
+# mail\_server\_template\_conditions
 
 [<-Back-to:Characters](database-characters)
 
-**The \`mail_server_template_conditions\` table**
+**The \`mail\_server\_template\_conditions\` table**
 
 Works together with [mail_server_template](mail_server_template).
 
 Note: Entries in this table will be deleted automatically when the referenced entry in [mail_server_template.id](mail_server_template#id) is deleted. CONSTRAINT `fk_mail_template_conditions`
 
-**Table Structure**
+**Table: mail\_server\_template\_conditions's Structure**
 
-| Field                            | Type | Attributes | Key | Null | Default | Extra          | Comment |
-| -------------------------------- | ---- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [id](#id)                        | INT  | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT |         |
-| [templateID](#templateid)        | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [conditionType](#conditiontype)  | ENUM |            |     | NO   |         |                |         |
-| [conditionValue](#conditiontype) | INT  | UNSIGNED   |     | NO   |         |                |         |
-| [conditionState](#conditiontype) | INT  | UNSIGNED   |     | NO   | 0       |                |         |
+| Field                            | Type | Attributes                                                                  | Key | Null | Default | Extra          | Comment |
+| -------------------------------- | ---- | --------------------------------------------------------------------------- | --- | ---- | ------- | -------------- | ------- |
+| [id](#id)                        | INT  | UNSIGNED                                                                    | PRI | NO   |         | AUTO_INCREMENT |         |
+| [templateID](#templateid)        | INT  | UNSIGNED                                                                    | MUL | NO   |         |                |         |
+| [conditionType](#conditiontype)  | ENUM | Level,PlayTime,Quest,Achievement,Reputation,Faction,Race,Class,AccountFlags |     | NO   |         |                |         |
+| [conditionValue](#conditiontype) | INT  | UNSIGNED                                                                    |     | NO   |         |                |         |
+| [conditionState](#conditiontype) | INT  | UNSIGNED                                                                    |     | NO   | 0       |                |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

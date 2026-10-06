@@ -4,17 +4,16 @@
 
 **The \`secret\_digest\` table**
 
-**Table Structure**
+Stores a digest of each server secret, such as the TOTP master secret, so the core can detect when the configured secret has changed.
 
-| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]     | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [digest][2] | VARCHAR(100) | SIGNED     |     | NO   |         |       |         |
+**Table: secret\_digest's Structure**
 
-[1]: #id
-[2]: #digest
+| Field             | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)         | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [digest](#digest) | VARCHAR(100) |          | NO   |     |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

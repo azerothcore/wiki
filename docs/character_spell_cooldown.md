@@ -6,25 +6,18 @@
 
 Holds the remaining cooldowns from either character spells or item spells for each character.
 
-**Table Structure**
+**Table: character\_spell\_cooldown's Structure**
 
-| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
-| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [guid][1]     | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier, Low part |
-| [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Spell Identifier                   |
-| [category][6] | INT       | UNSIGNED   |     | YES  | 0       |       | Spell category                     |
-| [item][3]     | INT       | UNSIGNED   |     | NO   | 0       |       | Item Identifier                    |
-| [time][4]     | INT       | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [needSend][5] | INT       | UNSIGNED   |     | NO   | 1       |       |                                    |
+| Field                 | Type    |          | Null | Key | Default | Extra | Comment                            |
+| :-------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :--------------------------------- |
+| [guid](#guid)         | INT     | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier, Low part |
+| [spell](#spell)       | INT     | UNSIGNED | NO   | PRI | 0       |       | Spell Identifier                   |
+| [category](#category) | INT     | UNSIGNED | YES  |     | 0       |       | Spell category                     |
+| [item](#item)         | INT     | UNSIGNED | NO   |     | 0       |       | Item Identifier                    |
+| [time](#time)         | INT     | UNSIGNED | NO   |     | 0       |       |                                    |
+| [needSend](#needsend) | TINYINT | UNSIGNED | NO   |     | 1       |       |                                    |
 
-[1]: #guid
-[2]: #spell
-[3]: #item
-[4]: #time
-[5]: #needsend
-[6]: #category
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

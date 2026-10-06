@@ -1,22 +1,22 @@
-# gameobject_template_locale
+# gameobject\_template\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`gameobject_template_locale\` table**
+**The \`gameobject\_template\_locale\` table**
 
 This table is used to provide localized clients with localized strings for gameobjects.
 
-**Table Structure**
+**Table: gameobject\_template\_locale's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry) | INT | UNSIGNED | PRI | NO | 0 |  |  |
-| [locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
-| [name](#name) | TEXT |  |  | YES |  |  |  |
-| [castBarCaption](#castbarcaption) | TEXT |  |  | YES |  |  |  |
-| [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
+| Field                             | Type       |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                   | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)                 | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [name](#name)                     | TEXT       |          | YES  |     | NULL    |       |         |
+| [castBarCaption](#castbarcaption) | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT        |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

@@ -6,21 +6,16 @@
 
 This table holds the re-spawn time when game objects should be re spawned in the world. In case of a server crash, this table holds the re-spawn data so that the game objects don't re-spawn immediately on server restart. How often the re-spawn time is saved for game objects can be controlled in trinitycore.conf at SaveRespawnTimeImmediately. Usually the only objects that despawn and need to be re-spawned are chests and doors.
 
-**Table Structure**
+**Table: gameobject\_respawn's Structure**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [respawnTime][2] | INT      | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mapId][3]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
-| [instanceId][4]  | INT      | UNSIGNED   | PRI | NO   | 0       |       | Instance Identifier      |
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)               | INT      | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [respawnTime](#respawntime) | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [mapId](#mapid)             | SMALLINT | UNSIGNED | NO   |     | 0       |       |                          |
+| [instanceId](#instanceid)   | INT      | UNSIGNED | NO   | PRI | 0       |       | Instance Identifier      |
 
-[1]: #guid
-[2]: #respawntime
-[3]: #mapid
-[4]: #instanceid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

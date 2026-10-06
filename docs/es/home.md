@@ -4,8 +4,6 @@ redirect_from: "/"
 
 Bienvenido a la wiki del proyecto [AzerothCore](http://www.azerothcore.org/).
 
-Leer en: [Inglés :gb:](home) [Español :es:](home)
-
 ## NOTA IMPORTANTE
 
 {% include warning.html content="El equipo y los propietarios de AzerothCore NO patrocinan ni apoyan en ningún caso servidores públicos ilegales. Si utiliza estos proyectos para ejecutar un servidor público ilegal y no para probar y aprender, es su elección personal." %}

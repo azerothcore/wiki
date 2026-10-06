@@ -6,117 +6,117 @@
 
 Contains all basic definitions of available quests.
 
-**Table Structure**
+**Table: quest\_template's Structure**
 
-| Field                                                   | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                               | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [QuestType](#questtype)                                 | TINYINT  | UNSIGNED   |     | NO   | 2       |       |         |
-| [QuestLevel](#questlevel)                               | SMALLINT |            |     | NO   | 1       |       |         |
-| [MinLevel](#minlevel)                                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [QuestSortID](#questsortid)                             | SMALLINT |            |     | NO   | 0       |       |         |
-| [QuestInfoID](#questinfoid)                             | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [SuggestedGroupNum](#suggestedgroupnum)                 | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredFactionId1](#requiredfactionid1)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredFactionId2](#requiredfactionid2)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredFactionValue1](#requiredfactionvalue1)         | INT      |            |     | NO   | 0       |       |         |
-| [RequiredFactionValue2](#requiredfactionvalue2)         | INT      |            |     | NO   | 0       |       |         |
-| [RewardNextQuest](#rewardnextquest)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardXPDifficulty](#rewardxpdifficulty)               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardMoney](#rewardmoney)                             | INT      |            |     | NO   | 0       |       |         |
-| [RewardMoneyDifficulty](#rewardmoneydifficulty)         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardDisplaySpell](#rewarddisplayspell)               | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardSpell](#rewardspell)                             | INT      |            |     | NO   | 0       |       |         |
-| [RewardHonor](#rewardhonor)                             | INT      |            |     | NO   | 0       |       |         |
-| [RewardKillHonor](#rewardkillhonor)                     | FLOAT    |            |     | NO   | 0       |       |         |
-| [StartItem](#startitem)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [Flags](#flags)                                         | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredPlayerKills](#requiredplayerkills)             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardItem1](#rewarditem1)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardAmount1](#rewardamount1)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardItem2](#rewarditem2)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardAmount2](#rewardamount2)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardItem3](#rewarditem3)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardAmount3](#rewardamount3)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardItem4](#rewarditem4)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardAmount4](#rewardamount4)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDrop1](#itemdrop1)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDropQuantity1](#itemdropquantity1)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDrop2](#itemdrop2)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDropQuantity2](#itemdropquantity2)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDrop3](#itemdrop3)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDropQuantity3](#itemdropquantity3)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDrop4](#itemdrop4)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemDropQuantity4](#itemdropquantity4)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemID1](#rewardchoiceitemid1)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity1](#rewardchoiceitemquantity1) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemID2](#rewardchoiceitemid2)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity2](#rewardchoiceitemquantity2) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemID3](#rewardchoiceitemid3)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity3](#rewardchoiceitemquantity3) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemID4](#rewardchoiceitemid4)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity4](#rewardchoiceitemquantity4) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemID5](#rewardchoiceitemid5)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity5](#rewardchoiceitemquantity5) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemID6](#rewardchoiceitemid6)             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardChoiceItemQuantity6](#rewardchoiceitemquantity6) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [POIContinent](#poicontinent)                           | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [POIx](#poix)                                           | FLOAT    |            |     | NO   | 0       |       |         |
-| [POIy](#poiy)                                           | FLOAT    |            |     | NO   | 0       |       |         |
-| [POIPriority](#poipriority)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardTitle](#rewardtitle)                             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardTalents](#rewardtalents)                         | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardArenaPoints](#rewardarenapoints)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardFactionID1](#rewardfactionid1)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardFactionValue1](#rewardfactionvalue1)             | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionOverride1](#rewardfactionoverride1)       | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionID2](#rewardfactionid2)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardFactionValue2](#rewardfactionvalue2)             | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionOverride2](#rewardfactionoverride2)       | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionID3](#rewardfactionid3)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardFactionValue3](#rewardfactionvalue3)             | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionOverride3](#rewardfactionoverride3)       | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionID4](#rewardfactionid4)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardFactionValue4](#rewardfactionvalue4)             | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionOverride4](#rewardfactionoverride4)       | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionID5](#rewardfactionid5)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RewardFactionValue5](#rewardfactionvalue5)             | INT      |            |     | NO   | 0       |       |         |
-| [RewardFactionOverride5](#rewardfactionoverride5)       | INT      |            |     | NO   | 0       |       |         |
-| [TimeAllowed](#timeallowed)                             | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [AllowableRaces](#allowableraces)                       | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [LogTitle](#logtitle)                                   | TEXT     |            |     | YES  |         |       |         |
-| [LogDescription](#logdescription)                       | TEXT     |            |     | YES  |         |       |         |
-| [QuestDescription](#questdescription)                   | TEXT     |            |     | YES  |         |       |         |
-| [AreaDescription](#areadescription)                     | TEXT     |            |     | YES  |         |       |         |
-| [QuestCompletionLog](#questcompletionlog)               | TEXT     |            |     | YES  |         |       |         |
-| [RequiredNpcOrGo1](#requirednpcorgo1)                   | INT      |            |     | NO   | 0       |       |         |
-| [RequiredNpcOrGo2](#requirednpcorgo2)                   | INT      |            |     | NO   | 0       |       |         |
-| [RequiredNpcOrGo3](#requirednpcorgo3)                   | INT      |            |     | NO   | 0       |       |         |
-| [RequiredNpcOrGo4](#requirednpcorgo4)                   | INT      |            |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount1](#requirednpcorgocount1)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount2](#requirednpcorgocount2)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount3](#requirednpcorgocount3)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredNpcOrGoCount4](#requirednpcorgocount4)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemId1](#requireditemid1)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemId2](#requireditemid2)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemId3](#requireditemid3)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemId4](#requireditemid4)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemId5](#requireditemid5)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemId6](#requireditemid6)                     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemCount1](#requireditemcount1)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemCount2](#requireditemcount2)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemCount3](#requireditemcount3)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemCount4](#requireditemcount4)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemCount5](#requireditemcount5)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredItemCount6](#requireditemcount6)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [Unknown0](#unknown0)                                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [ObjectiveText1](#objectivetext1)                       | TEXT     |            |     | YES  |         |       |         |
-| [ObjectiveText2](#objectivetext2)                       | TEXT     |            |     | YES  |         |       |         |
-| [ObjectiveText3](#objectivetext3)                       | TEXT     |            |     | YES  |         |       |         |
-| [ObjectiveText4](#objectivetext4)                       | TEXT     |            |     | YES  |         |       |         |
-| [VerifiedBuild](#verifiedbuild)                         | INT      |            |     | YES  |         |       |         |
+| Field                                                   | Type     | Attributes | Key | Null | Default | Extra | Comment                                  |
+| ------------------------------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------------- |
+| [ID](#id)                                               | INT      | UNSIGNED   | PRI | NO   | 0       |       |                                          |
+| [QuestType](#questtype)                                 | TINYINT  | UNSIGNED   |     | NO   | 2       |       |                                          |
+| [QuestLevel](#questlevel)                               | SMALLINT | SIGNED     |     | NO   | 1       |       |                                          |
+| [MinLevel](#minlevel)                                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [QuestSortID](#questsortid)                             | SMALLINT | SIGNED     |     | NO   | 0       |       |                                          |
+| [QuestInfoID](#questinfoid)                             | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [SuggestedGroupNum](#suggestedgroupnum)                 | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredFactionId1](#requiredfactionid1)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredFactionId2](#requiredfactionid2)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredFactionValue1](#requiredfactionvalue1)         | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RequiredFactionValue2](#requiredfactionvalue2)         | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardNextQuest](#rewardnextquest)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardXPDifficulty](#rewardxpdifficulty)               | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardMoney](#rewardmoney)                             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardMoneyDifficulty](#rewardmoneydifficulty)         | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardDisplaySpell](#rewarddisplayspell)               | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardSpell](#rewardspell)                             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardHonor](#rewardhonor)                             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardKillHonor](#rewardkillhonor)                     | FLOAT    | SIGNED     |     | NO   | 0       |       |                                          |
+| [StartItem](#startitem)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [Flags](#flags)                                         | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredPlayerKills](#requiredplayerkills)             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardItem1](#rewarditem1)                             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardAmount1](#rewardamount1)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardItem2](#rewarditem2)                             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardAmount2](#rewardamount2)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardItem3](#rewarditem3)                             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardAmount3](#rewardamount3)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardItem4](#rewarditem4)                             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardAmount4](#rewardamount4)                         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDrop1](#itemdrop1)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDropQuantity1](#itemdropquantity1)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDrop2](#itemdrop2)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDropQuantity2](#itemdropquantity2)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDrop3](#itemdrop3)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDropQuantity3](#itemdropquantity3)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDrop4](#itemdrop4)                                 | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ItemDropQuantity4](#itemdropquantity4)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemID1](#rewardchoiceitemid1)             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemQuantity1](#rewardchoiceitemquantity1) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemID2](#rewardchoiceitemid2)             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemQuantity2](#rewardchoiceitemquantity2) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemID3](#rewardchoiceitemid3)             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemQuantity3](#rewardchoiceitemquantity3) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemID4](#rewardchoiceitemid4)             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemQuantity4](#rewardchoiceitemquantity4) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemID5](#rewardchoiceitemid5)             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemQuantity5](#rewardchoiceitemquantity5) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemID6](#rewardchoiceitemid6)             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardChoiceItemQuantity6](#rewardchoiceitemquantity6) | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [POIContinent](#poicontinent)                           | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [POIx](#poix)                                           | FLOAT    | SIGNED     |     | NO   | 0       |       |                                          |
+| [POIy](#poiy)                                           | FLOAT    | SIGNED     |     | NO   | 0       |       |                                          |
+| [POIPriority](#poipriority)                             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardTitle](#rewardtitle)                             | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardTalents](#rewardtalents)                         | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardArenaPoints](#rewardarenapoints)                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RewardFactionID1](#rewardfactionid1)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       | faction id from Faction.dbc in this case |
+| [RewardFactionValue1](#rewardfactionvalue1)             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionOverride1](#rewardfactionoverride1)       | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionID2](#rewardfactionid2)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       | faction id from Faction.dbc in this case |
+| [RewardFactionValue2](#rewardfactionvalue2)             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionOverride2](#rewardfactionoverride2)       | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionID3](#rewardfactionid3)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       | faction id from Faction.dbc in this case |
+| [RewardFactionValue3](#rewardfactionvalue3)             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionOverride3](#rewardfactionoverride3)       | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionID4](#rewardfactionid4)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       | faction id from Faction.dbc in this case |
+| [RewardFactionValue4](#rewardfactionvalue4)             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionOverride4](#rewardfactionoverride4)       | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionID5](#rewardfactionid5)                   | SMALLINT | UNSIGNED   |     | NO   | 0       |       | faction id from Faction.dbc in this case |
+| [RewardFactionValue5](#rewardfactionvalue5)             | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RewardFactionOverride5](#rewardfactionoverride5)       | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [TimeAllowed](#timeallowed)                             | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [AllowableRaces](#allowableraces)                       | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [LogTitle](#logtitle)                                   | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [LogDescription](#logdescription)                       | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [QuestDescription](#questdescription)                   | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [AreaDescription](#areadescription)                     | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [QuestCompletionLog](#questcompletionlog)               | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [RequiredNpcOrGo1](#requirednpcorgo1)                   | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGo2](#requirednpcorgo2)                   | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGo3](#requirednpcorgo3)                   | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGo4](#requirednpcorgo4)                   | INT      | SIGNED     |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGoCount1](#requirednpcorgocount1)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGoCount2](#requirednpcorgocount2)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGoCount3](#requirednpcorgocount3)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredNpcOrGoCount4](#requirednpcorgocount4)         | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemId1](#requireditemid1)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemId2](#requireditemid2)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemId3](#requireditemid3)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemId4](#requireditemid4)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemId5](#requireditemid5)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemId6](#requireditemid6)                     | INT      | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemCount1](#requireditemcount1)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemCount2](#requireditemcount2)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemCount3](#requireditemcount3)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemCount4](#requireditemcount4)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemCount5](#requireditemcount5)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [RequiredItemCount6](#requireditemcount6)               | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [Unknown0](#unknown0)                                   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                          |
+| [ObjectiveText1](#objectivetext1)                       | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [ObjectiveText2](#objectivetext2)                       | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [ObjectiveText3](#objectivetext3)                       | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [ObjectiveText4](#objectivetext4)                       | TEXT     |            |     | YES  | NULL    |       |                                          |
+| [VerifiedBuild](#verifiedbuild)                         | INT      | SIGNED     |     | YES  | NULL    |       |                                          |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

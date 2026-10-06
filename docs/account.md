@@ -6,7 +6,7 @@
 
 Holds the accounts that can log in to the server.
 
-**Table Structure**
+**Table: account's Structure**
 
 | Field                             | Type           | Attributes | Key | Null | Default           | Extra          | Comment       |
 | --------------------------------- | -------------- | ---------- | --- | ---- | ----------------- | -------------- | ------------- |
@@ -14,8 +14,8 @@ Holds the accounts that can log in to the server.
 | [username](#username)             | VARCHAR(32)    |            | UNI | NO   | ''                |                |               |
 | [salt](#salt)                     | BINARY(32)     |            |     | NO   |                   |                |               |
 | [verifier](#verifier)             | BINARY(32)     |            |     | NO   |                   |                |               |
-| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  |                   |                |               |
-| [totp_secret](#totpsecret)        | VARBINARY(100) |            |     | YES  |                   |                |               |
+| [session_key](#sessionkey)        | BINARY(40)     |            |     | YES  | NULL              |                |               |
+| [totp_secret](#totpsecret)        | VARBINARY(128) |            |     | YES  | NULL              |                |               |
 | [email](#email)                   | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [reg_mail](#regmail)              | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [joindate](#joindate)             | TIMESTAMP      |            |     | NO   | CURRENT_TIMESTAMP |                |               |
@@ -24,11 +24,11 @@ Holds the accounts that can log in to the server.
 | [failed_logins](#failedlogins)    | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 | [locked](#locked)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
 | [lock_country](#lockcountry)      | VARCHAR(2)     |            |     | NO   | 00                |                |               |
-| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  |                   |                |               |
+| [last_login](#lastlogin)          | TIMESTAMP      |            |     | YES  | NULL              |                |               |
 | [online](#online)                 | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 | [expansion](#expansion)           | TINYINT        | UNSIGNED   |     | NO   | 2                 |                |               |
 | [Flags](#flags)                   | INT            | UNSIGNED   |     | NO   | 0                 |                | Account Flags |
-| [mutetime](#mutetime)             | BIGINT         |            |     | NO   | 0                 |                |               |
+| [mutetime](#mutetime)             | BIGINT         | SIGNED     |     | NO   | 0                 |                |               |
 | [mutereason](#mutereason)         | VARCHAR(255)   |            |     | NO   | ''                |                |               |
 | [muteby](#muteby)                 | VARCHAR(50)    |            |     | NO   | ''                |                |               |
 | [locale](#locale)                 | TINYINT        | UNSIGNED   |     | NO   | 0                 |                |               |
@@ -37,7 +37,7 @@ Holds the accounts that can log in to the server.
 | [totaltime](#totaltime)           | INT            | UNSIGNED   |     | NO   | 0                 |                |               |
 
 
-## Description of the fields
+**Description of the table's fields**
 
 ### id
 
@@ -137,11 +137,6 @@ The two-letter country code the account is locked to, set with the `.account loc
 
 The date when the account was last logged into.
 
-### totaltime
-
-Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
-Stored in Unix Time.
-
 ### online
 
 Boolean 0 or 1 controlling if the account is currently logged in and online.
@@ -235,3 +230,8 @@ Stores information about client's OS. Used by Warden system.
 ### recruiter
 
 The account ID of another account. Used for recruit-a-friend system. See [account.id][1]
+
+### totaltime
+
+Total time played on all the characters of a player. Even the deleted characters that are no longer in the database.
+Stored in Unix Time.

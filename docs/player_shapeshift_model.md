@@ -1,22 +1,22 @@
-# player_shapeshift_model
+# player\_shapeshift\_model
 
 [<-Back-to:World](database-world)
 
-**The \`player_shapeshift_model\` table**
+**The \`player\_shapeshift\_model\` table**
 
 This table holds the information on what values are used for the druid shapeshift models, based on the shapeshift, race, character customization, and the gender of the player character.
 
-**Table Structure**
+**Table: player\_shapeshift\_model's Structure**
 
-| Field                               | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [RaceID](#raceid)                   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [CustomizationID](#customizationid) | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [GenderID](#genderid)               | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [ModelID](#modelid)                 | INT     | UNSIGNED   |     | NO   |         |       |         |
+| Field                               | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ShapeshiftID](#shapeshiftid)       | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [RaceID](#raceid)                   | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [CustomizationID](#customizationid) | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [GenderID](#genderid)               | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [ModelID](#modelid)                 | INT     | UNSIGNED | NO   |     |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ShapeshiftID
 

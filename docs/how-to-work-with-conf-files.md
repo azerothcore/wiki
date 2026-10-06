@@ -37,7 +37,7 @@ After normal `.conf` and `.conf.dist` files have been loaded, you are able to lo
 
 {% include note.html content="We do not recommend you to overwrite server configuration properties since you can have concurrency issues with other modules that use them too. Instead, <b>create new namespaced properties</b>." %}
 
-For example, if you want to modify the "disable water breath" functionality in your module. Instead of using the existing property from `worldserver.conf.dist`:
+For example, if you want to modify the "disable water breath" functionality in your module. Instead of using the existing property from [`worldserver.conf.dist`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist):
 
 ```
 DisableWaterBreath = x

@@ -1,4 +1,4 @@
-# quest_template_addon
+# quest\_template\_addon
 
 [<-Back-to:World](database-world)
 
@@ -6,30 +6,30 @@
 
 Contains extra definitions like linking quests, dependencies and requirements for the quests defined in the [quest_template](quest_template) table to become available to the player.
 
-**Structure:**
+**Table: quest\_template\_addon's Structure**
 
 | Field                                           | Type      | Attributes | Key | Null | Default | Extra | Comment                               |
 | ----------------------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------- |
-| [ID](#id)                                       | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       | Unique ID linked to quest_template.ID |
-| [MaxLevel](#maxlevel)                           | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
-| [AllowableClasses](#allowableclasses)           | INT       | UNSIGNED   |     | NO   |         |       |                                       |
-| [SourceSpellID](#sourcespellid)                 | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
-| [PrevQuestID](#prevquestid)                     | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [NextQuestID](#nextquestid)                     | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [ExclusiveGroup](#exclusivegroup)               | MEDIUMINT |            |     | NO   |         |       |                                       |
+| [ID](#id)                                       | INT       | UNSIGNED   | PRI | NO   | 0       |       | Unique ID linked to quest_template.ID |
+| [MaxLevel](#maxlevel)                           | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [AllowableClasses](#allowableclasses)           | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [SourceSpellID](#sourcespellid)                 | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [PrevQuestID](#prevquestid)                     | INT       | SIGNED     |     | NO   | 0       |       |                                       |
+| [NextQuestID](#nextquestid)                     | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [ExclusiveGroup](#exclusivegroup)               | INT       | SIGNED     |     | NO   | 0       |       |                                       |
 | [BreadcrumbForQuestId](#breadcrumbforquestid)   | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |                                       |
-| [RewardMailTemplateID](#rewardmailtemplateid)   | MEDIUMINT | UNSIGNED   |     | NO   |         |       |                                       |
-| [RewardMailDelay](#rewardmaildelay)             | INT       | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredSkillID](#requiredskillid)             | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredSkillPoints](#requiredskillpoints)     | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredMinRepFaction](#requiredminrepfaction) | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredMaxRepFaction](#requiredmaxrepfaction) | SMALLINT  | UNSIGNED   |     | NO   |         |       |                                       |
-| [RequiredMinRepValue](#requiredminrepvalue)     | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [RequiredMaxRepValue](#requiredmaxrepvalue)     | MEDIUMINT |            |     | NO   |         |       |                                       |
-| [ProvidedItemCount](#provideditemcount)         | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
-| [SpecialFlags](#specialflags)                   | TINYINT   | UNSIGNED   |     | NO   |         |       |                                       |
+| [RewardMailTemplateID](#rewardmailtemplateid)   | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [RewardMailDelay](#rewardmaildelay)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [RequiredSkillID](#requiredskillid)             | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [RequiredSkillPoints](#requiredskillpoints)     | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [RequiredMinRepFaction](#requiredminrepfaction) | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [RequiredMaxRepFaction](#requiredmaxrepfaction) | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [RequiredMinRepValue](#requiredminrepvalue)     | INT       | SIGNED     |     | NO   | 0       |       |                                       |
+| [RequiredMaxRepValue](#requiredmaxrepvalue)     | INT       | SIGNED     |     | NO   | 0       |       |                                       |
+| [ProvidedItemCount](#provideditemcount)         | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                       |
+| [SpecialFlags](#specialflags)                   | INT       | UNSIGNED   |     | NO   | 0       |       |                                       |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### ID
 

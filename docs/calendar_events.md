@@ -4,31 +4,23 @@
 
 **The \`calendar\_events\` table**
 
-**Table Structure**
+Holds the events players create in the in-game calendar.
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra | Comment  |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | ----- | -------- |
-| [id][1]          | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |          |
-| [creator][2]     | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [title][3]       | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
-| [description][4] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |          |
-| [type][5]        | TINYINT      | UNSIGNED   |     | NO   | 4       |       |          |
-| [dungeon][6]     | INT          | SIGNED     |     | NO   | -1      |       |          |
-| [eventtime][7]   | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [flags][8]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
-| [time2][9]       | INT          | UNSIGNED   |     | NO   | 0       |       |          |
+**Table: calendar\_events's Structure**
 
-[1]: #id
-[3]: #creator
-[4]: #title
-[5]: #description
-[6]: #type
-[7]: #dungeon
-[8]: #eventtime
-[9]: #flags
-[10]: #time2
+| Field                       | Type         | Attributes | Key | Null | Default | Extra | Comment |
+| --------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
+| [id](#id)                   | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [creator](#creator)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [title](#title)             | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| [description](#description) | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| [type](#type)               | TINYINT      | UNSIGNED   |     | NO   | 4       |       |         |
+| [dungeon](#dungeon)         | INT          | SIGNED     |     | NO   | -1      |       |         |
+| [eventtime](#eventtime)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [flags](#flags)             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| [time2](#time2)             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

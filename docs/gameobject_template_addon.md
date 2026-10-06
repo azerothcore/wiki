@@ -1,8 +1,10 @@
 # gameobject\_template\_addon
 
+[<-Back-to:World](database-world)
+
 This table holds additional information on gameobjects.
 
-## Structure
+**Table: gameobject\_template\_addon's Structure**
 
 | Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
 | ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
@@ -11,12 +13,12 @@ This table holds additional information on gameobjects.
 | [flags](#flags)     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [mingold](#mingold) | INT      | UNSIGNED   |     | NO   | 0       |       |         |
 | [maxgold](#maxgold) | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [artkit0](#artkit)  | INT      |            |     |      | 0       |       |         |
-| [artkit1](#artkit)  | INT      |            |     |      | 0       |       |         |
-| [artkit2](#artkit)  | INT      |            |     |      | 0       |       |         |
-| [artkit3](#artkit)  | INT      |            |     |      | 0       |       |         |
+| [artkit0](#artkit)  | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [artkit1](#artkit)  | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [artkit2](#artkit)  | INT      | SIGNED     |     | NO   | 0       |       |         |
+| [artkit3](#artkit)  | INT      | SIGNED     |     | NO   | 0       |       |         |
 
-## Description of the fields
+**Description of the table's fields**
 
 ### entry
 

@@ -1,4 +1,4 @@
-# characters 
+# characters
 
 [<-Back-to:Characters](database-characters)
 
@@ -6,90 +6,90 @@
 
 This table holds vital static information for each character. It is used to create the player objects in-game.
 
-**Table Structure**
+**Table: characters's Structure**
 
-| Field                      | Type        | Attributes | Key | Null | Default           | Extra  | Comment                  |
-| -------------------------- | ----------- | ---------- | --- | ---- | ----------------- | ------ | ------------------------ |
-| [guid][1]                  | INT         | UNSIGNED   | PRI | NO   | 0                 | Unique | Global Unique Identifier |
-| [account][2]               | INT         | UNSIGNED   |     | NO   | 0                 |        | Account Identifier       |
-| [name][3]                  | VARCHAR(12) | SIGNED     |     | NO   |                   |        |                          |
-| [race][4]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [class][5]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [gender][6]                | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [level][7]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [xp][8]                    | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [money][9]                 | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [skin][10]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [face][11]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [hairStyle][12]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [hairColor][13]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [facialStyle][14]          | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [bankSlots][15]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [restState][16]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [playerflags][17]          | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [position_x][18]           | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [position_y][19]           | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [position_z][20]           | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [map][21]                  | SMALLINT    | UNSIGNED   |     | NO   | 0                 |        | Map Identifier           |
-| [instance_id][22]          | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [instance_mode_mask][23]   | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [orientation][24]          | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [taximask][25]             | TEXT        | SIGNED     |     | NO   |                   |        |                          |
-| [online][26]               | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [cinematic][27]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [totaltime][28]            | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [leveltime][29]            | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [logout_time][30]          | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [is_logout_resting][31]    | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [rest_bonus][32]           | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [resettalents_cost][33]    | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [resettalents_time][34]    | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [trans_x][35]              | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [trans_y][36]              | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [trans_z][37]              | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [trans_o][38]              | FLOAT       | SIGNED     |     | NO   | 0                 |        |                          |
-| [transguid][39]            | MEDIUMINT   | SIGNED     |     | NO   | 0                 |        |                          |
-| [extra_flags][40]          | SMALLINT    | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [stable_slots][41]         | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [at_login][42]             | SMALLINT    | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [zone][43]                 | SMALLINT    | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [death_expire_time][44]    | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [taxi_path][45]            | TEXT        | SIGNED     |     | YES  |                   |        |                          |
-| [arenaPoints][46]          | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [totalHonorPoints][47]     | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [todayHonorPoints][48]     | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [yesterdayHonorPoints][49] | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [totalKills][50]           | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [todayKills][51]           | SMALLINT    | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [yesterdayKills][52]       | SMALLINT    | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [chosenTitle][53]          | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [knownCurrencies][54]      | BIGINT      | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [watchedFaction][55]       | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [drunk][56]                | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [health][57]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power1][58]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power2][59]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power3][60]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power4][61]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power5][62]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power6][63]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [power7][64]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [latency][65]              | MEDIUMINT   | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [talentGroupsCount][66]    | TINYINT     | UNSIGNED   |     | NO   | 1                 |        |                          |
-| [activeTalentGroup][67]    | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [exploredZones][68]        | LONGTEXT    | SIGNED     |     | YES  |                   |        |                          |
-| [equipmentCache][69]       | LONGTEXT    | SIGNED     |     | YES  |                   |        |                          |
-| [ammoId][70]               | INT         | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [knownTitles][71]          | LONGTEXT    | SIGNED     |     | YES  |                   |        |                          |
-| [actionBars][72]           | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [grantableLevels][73]      | TINYINT     | UNSIGNED   |     | NO   | 0                 |        |                          |
-| [order][74]                | TINYINT     | SIGNED     |     | YES  |                   |        |                          |
-| [creation_date][75]        | TIMESTAMP   | SIGNED     |     | NO   | CURRENT_TIMESTAMP |        |                          |
-| [deleteInfos_Account][76]  | INT         | UNSIGNED   |     | YES  |                   |        |                          |
-| [deleteInfos_Name][77]     | VARCHAR(12) | SIGNED     |     | YES  |                   |        |                          |
-| [deleteDate][78]           | INT         | UNSIGNED   |     | YES  |                   |        |                          |
-| [innTriggerId][79]         | INT         | UNSIGNED   |     | NO   |                   |        |                          |
-| [extraBonusTalentCount][80] | INT        |            |     | NO   | 0                 |        |                          |
+| Field                       | Type        | Attributes | Key | Null | Default           | Extra | Comment                  |
+| --------------------------- | ----------- | ---------- | --- | ---- | ----------------- | ----- | ------------------------ |
+| [guid][1]                   | INT         | UNSIGNED   | PRI | NO   | 0                 |       | Global Unique Identifier |
+| [account][2]                | INT         | UNSIGNED   | MUL | NO   | 0                 |       | Account Identifier       |
+| [name][3]                   | VARCHAR(12) |            | MUL | NO   |                   |       |                          |
+| [race][4]                   | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [class][5]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [gender][6]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [level][7]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [xp][8]                     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [money][9]                  | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [skin][10]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [face][11]                  | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [hairStyle][12]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [hairColor][13]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [facialStyle][14]           | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [bankSlots][15]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [restState][16]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [playerFlags][17]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [position_x][18]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [position_y][19]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [position_z][20]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [map][21]                   | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       | Map Identifier           |
+| [instance_id][22]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [instance_mode_mask][23]    | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [orientation][24]           | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [taximask][25]              | TEXT        |            |     | NO   |                   |       |                          |
+| [online][26]                | TINYINT     | UNSIGNED   | MUL | NO   | 0                 |       |                          |
+| [cinematic][27]             | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [totaltime][28]             | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [leveltime][29]             | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [logout_time][30]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [is_logout_resting][31]     | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [rest_bonus][32]            | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [resettalents_cost][33]     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [resettalents_time][34]     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [trans_x][35]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [trans_y][36]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [trans_z][37]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [trans_o][38]               | FLOAT       | SIGNED     |     | NO   | 0                 |       |                          |
+| [transguid][39]             | INT         | SIGNED     |     | YES  | 0                 |       |                          |
+| [extra_flags][40]           | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [stable_slots][41]          | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [at_login][42]              | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [zone][43]                  | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [death_expire_time][44]     | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [taxi_path][45]             | TEXT        |            |     | YES  | NULL              |       |                          |
+| [arenaPoints][46]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [totalHonorPoints][47]      | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [todayHonorPoints][48]      | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [yesterdayHonorPoints][49]  | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [totalKills][50]            | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [todayKills][51]            | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [yesterdayKills][52]        | SMALLINT    | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [chosenTitle][53]           | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [knownCurrencies][54]       | BIGINT      | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [watchedFaction][55]        | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [drunk][56]                 | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [health][57]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power1][58]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power2][59]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power3][60]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power4][61]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power5][62]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power6][63]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [power7][64]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [latency][65]               | INT         | UNSIGNED   |     | YES  | 0                 |       |                          |
+| [talentGroupsCount][66]     | TINYINT     | UNSIGNED   |     | NO   | 1                 |       |                          |
+| [activeTalentGroup][67]     | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [exploredZones][68]         | LONGTEXT    |            |     | YES  | NULL              |       |                          |
+| [equipmentCache][69]        | LONGTEXT    |            |     | YES  | NULL              |       |                          |
+| [ammoId][70]                | INT         | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [knownTitles][71]           | LONGTEXT    |            |     | YES  | NULL              |       |                          |
+| [actionBars][72]            | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [grantableLevels][73]       | TINYINT     | UNSIGNED   |     | NO   | 0                 |       |                          |
+| [order][74]                 | TINYINT     | SIGNED     |     | YES  | NULL              |       |                          |
+| [creation_date][75]         | TIMESTAMP   |            |     | NO   | CURRENT_TIMESTAMP |       |                          |
+| [deleteInfos_Account][76]   | INT         | UNSIGNED   |     | YES  | NULL              |       |                          |
+| [deleteInfos_Name][77]      | VARCHAR(12) |            |     | YES  | NULL              |       |                          |
+| [deleteDate][78]            | INT         | UNSIGNED   |     | YES  | NULL              |       |                          |
+| [innTriggerId][79]          | INT         | UNSIGNED   |     | NO   |                   |       |                          |
+| [extraBonusTalentCount][80] | INT         | SIGNED     |     | NO   | 0                 |       |                          |
   
 [1]: #guid
 [2]: #account
@@ -172,7 +172,7 @@ This table holds vital static information for each character. It is used to crea
 [79]: #inntriggerid
 [80]: #extrabonustalentcount
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 
@@ -586,7 +586,7 @@ Stores the name of character if the character is deleted and CharDelete.Method i
 
 ### deleteDate
 
-Stores the date when the character was deleted and CharDelete.Method in worldserver.conf.dist is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
+Stores the date when the character was deleted and CharDelete.Method in [worldserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist) is set to 1. Will be checked by worldserver against CharDelete.KeepDays in worldserver.conf.dist. If this value is lower than deleteDate + CharDelete.KeepDays the character will be purged.
 
 ### innTriggerId
 

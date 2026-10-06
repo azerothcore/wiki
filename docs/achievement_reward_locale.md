@@ -6,21 +6,16 @@
 
 It is the table that stores the translations of the table `achievement_reward`, so that the game client can display the messages in different languages.
 
-**Table Structure**
+**Table: achievement\_reward\_locale's Structure**
 
-| Field        | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]      | MEDIUMINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Locale][2]  | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Subject][3] | text       |            |     | YES  |         |       |         |
-| [Text][4]    | text       |            |     | YES  |         |       |         |
+| Field               | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)           | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Locale](#locale)   | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Subject](#subject) | TEXT       |          | YES  |     | NULL    |       |         |
+| [Text](#text)       | TEXT       |          | YES  |     | NULL    |       |         |
 
-[1]: #id
-[2]: #locale
-[3]: #subject
-[4]: #text
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

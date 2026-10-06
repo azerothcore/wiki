@@ -6,21 +6,16 @@
 
 Contains data about character settings.
 
-**Table Structure**
+**Table: character\_account\_data's Structure**
 
-| Field     | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [type][2] | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [time][3] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [data][4] | BLOB    | SIGNED     |     | NO   |         |       |         |
+| Field         | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid) | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [type](#type) | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [time](#time) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [data](#data) | BLOB    |          | NO   |     |         |       |         |
 
-[1]: #guid
-[2]: #type
-[3]: #time
-[4]: #data
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 
@@ -42,4 +37,4 @@ Time of last modification in Unixtime.
 
 ### data
 
-No description can be written. You just must understand it's data.
+The data itself, as the client sent it. What it contains depends on [type](#type).

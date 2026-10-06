@@ -6,21 +6,16 @@
 
 This table holds all item information for items that are stored in the guild bank.
 
-**Table Structure**
+**Table: guild\_bank\_item's Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guildid][1]   | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TabId][2]     | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [SlotId][3]    | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [item_guid][4] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                  | Type    |          | Null | Key | Default | Extra | Comment |
+| :--------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guildid](#guildid)    | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [TabId](#tabid)        | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [SlotId](#slotid)      | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [item_guid](#itemguid) | INT     | UNSIGNED | NO   | MUL | 0       |       |         |
 
-[1]: #guildid
-[2]: #tabid
-[3]: #slotid
-[4]: #itemguid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

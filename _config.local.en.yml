@@ -1,0 +1,2 @@
+# Used by tools/wiki unless it is run with "all": leaves out the translations to keep the build short.
+exclude: ['wiki', 'tools', 'Gemfile', 'Gemfile.lock', 'docs/es', 'docs/cn']

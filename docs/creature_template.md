@@ -1,80 +1,80 @@
-# creature_template
+# creature\_template
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template\` table**
+**The \`creature\_template\` table**
 
 This table contains the description of creatures. Each spawned creature is an instance of a template present in this table, this means every creature MUST be defined in this table.
 
-**Table Structure**
+**Table: creature\_template's Structure**
 
-| Field                                              | Type               | Null | Key | Default | Extra | Comment                              |
-| -------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | ------------------------------------ |
-| [entry](#entry)                                    | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |                                      |
-| [difficulty_entry_1](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [difficulty_entry_2](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [difficulty_entry_3](#difficultyentryx)            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [KillCredit1](#killcredit1)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [KillCredit2](#killcredit2)                        | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [name](#name)                                      | char(100)          | NO   | MUL | 0       |       |                                      |
-| [subname](#subname)                                | char(100)          | YES  |     | (NULL)  |       |                                      |
-| [IconName](#iconname)                              | char(100)          | YES  |     | (NULL)  |       |                                      |
-| [gossip_menu_id](#gossipmenuid)                    | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [minlevel](#minlevel)                              | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
-| [maxlevel](#maxlevel)                              | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
-| [exp](#exp)                                        | SMALLINT           | NO   |     | 0       |       |                                      |
-| [faction](#faction)                                | SMALLINT UNSIGNED  | NO   |     | 0       |       |                                      |
-| [npcflag](#npcflag)                                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [speed_walk](#speedwalk)                           | FLOAT              | NO   |     | 1       |       | Result of 2.5/2.5, most common value |
-| [speed_run](#speedrun)                             | FLOAT              | NO   |     | 1.14286 |       | Result of 8.0/7.0, most common value |
-| [speed_swim](#speedswim)                           | FLOAT              | NO   |     | 1       |       |                                      |
-| [speed_flight](#speedflight)                       | FLOAT              | NO   |     | 1       |       |                                      |
-| [detection_range](#detectionrange)                 | FLOAT              | NO   |     | 20      |       |                                      |
-| [rank](#rank)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [dmgschool](#dmgschool)                            | TINYINT            | NO   |     | 0       |       |                                      |
-| [BaseAttackTime](#baseattacktime)                  | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [RangeAttackTime](#rangeattacktime)                | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [BaseVariance](#basevariance)                      | FLOAT              | NO   |     | 1       |       |                                      |
-| [RangeVariance](#rangevariance)                    | FLOAT              | NO   |     | 1       |       |                                      |
-| [unit_class](#unitclass)                           | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [unit_flags](#unitflags)                           | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [unit_flags2](#unitflags2)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [dynamicflags](#dynamicflags)                      | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [family](#family)                                  | TINYINT            | NO   |     | 0       |       |                                      |
-| [type](#type)                                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [type_flags](#typeflags)                           | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [lootid](#lootid)                                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [pickpocketloot](#pickpocketloot)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [skinloot](#skinloot)                              | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [PetSpellDataId](#petspelldataid)                  | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [VehicleId](#vehicleid)                            | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [mingold](#mingold)                                | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [maxgold](#maxgold)                                | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                      |
-| [AIName](#ainame)                                  | char(64)           | NO   |     |         |       |                                      |
-| [MovementType](#movementtype)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [HoverHeight](#hoverheight)                        | FLOAT              | NO   |     | 1       |       |                                      |
-| [HealthModifier](#healthmodifier)                  | FLOAT              | NO   |     | 1       |       |                                      |
-| [ManaModifier](#manamodifier)                      | FLOAT              | NO   |     | 1       |       |                                      |
-| [ArmorModifier](#armormodifier)                    | FLOAT              | NO   |     | 1       |       |                                      |
-| [DamageModifier](#damagemodifier)                  | FLOAT              | NO   |     | 1       |       |                                      |
-| [ExperienceModifier](#experiencemodifier)          | FLOAT              | NO   |     | 1       |       |                                      |
-| [RacialLeader](#racialleader)                      | TINYINT UNSIGNED   | NO   |     | 0       |       |                                      |
-| [movementId](#movementid)                          | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [RegenHealth](#regenhealth)                        | TINYINT UNSIGNED   | NO   |     | 1       |       |                                      |
-| [CreatureImmunitiesId](#creatureimmunitiesid)      | INT UNSIGNED       | NO   |     | 0       |       | Reference to creature_immunities table |
-| [flags_extra](#flagsextra)                         | INT UNSIGNED       | NO   |     | 0       |       |                                      |
-| [ScriptName](#scriptname)                          | char(64)           | NO   |     |         |       |                                      |
-| [VerifiedBuild](#verifiedbuild)                    | SMALLINT           | YES  |     | 0       |       |                                      |
+| Field                                         | Type      | Attributes | Key | Null | Default | Extra | Comment                                |
+| --------------------------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | -------------------------------------- |
+| [entry](#entry)                               | INT       | UNSIGNED   | PRI | NO   | 0       |       |                                        |
+| [difficulty_entry_1](#difficultyentryx)       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [difficulty_entry_2](#difficultyentryx)       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [difficulty_entry_3](#difficultyentryx)       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [KillCredit1](#killcredit1)                   | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [KillCredit2](#killcredit2)                   | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [name](#name)                                 | CHAR(100) |            | MUL | NO   | 0       |       |                                        |
+| [subname](#subname)                           | CHAR(100) |            |     | YES  | NULL    |       |                                        |
+| [IconName](#iconname)                         | CHAR(100) |            |     | YES  | NULL    |       |                                        |
+| [gossip_menu_id](#gossipmenuid)               | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [minlevel](#minlevel)                         | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                                        |
+| [maxlevel](#maxlevel)                         | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                                        |
+| [exp](#exp)                                   | SMALLINT  | SIGNED     |     | NO   | 0       |       |                                        |
+| [faction](#faction)                           | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [npcflag](#npcflag)                           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [speed_walk](#speedwalk)                      | FLOAT     | SIGNED     |     | NO   | 1       |       | Result of 2.5/2.5, most common value   |
+| [speed_run](#speedrun)                        | FLOAT     | SIGNED     |     | NO   | 1.14286 |       | Result of 8.0/7.0, most common value   |
+| [speed_swim](#speedswim)                      | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [speed_flight](#speedflight)                  | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [detection_range](#detectionrange)            | FLOAT     | SIGNED     |     | NO   | 20      |       |                                        |
+| [rank](#rank)                                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [dmgschool](#dmgschool)                       | TINYINT   | SIGNED     |     | NO   | 0       |       |                                        |
+| [DamageModifier](#damagemodifier)             | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [BaseAttackTime](#baseattacktime)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [RangeAttackTime](#rangeattacktime)           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [BaseVariance](#basevariance)                 | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [RangeVariance](#rangevariance)               | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [unit_class](#unitclass)                      | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [unit_flags](#unitflags)                      | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [unit_flags2](#unitflags2)                    | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [dynamicflags](#dynamicflags)                 | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [family](#family)                             | TINYINT   | SIGNED     |     | NO   | 0       |       |                                        |
+| [type](#type)                                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [type_flags](#typeflags)                      | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [lootid](#lootid)                             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [pickpocketloot](#pickpocketloot)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [skinloot](#skinloot)                         | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [PetSpellDataId](#petspelldataid)             | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [VehicleId](#vehicleid)                       | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [mingold](#mingold)                           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [maxgold](#maxgold)                           | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [AIName](#ainame)                             | CHAR(64)  |            |     | NO   | ''      |       |                                        |
+| [MovementType](#movementtype)                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [HoverHeight](#hoverheight)                   | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [HealthModifier](#healthmodifier)             | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [ManaModifier](#manamodifier)                 | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [ArmorModifier](#armormodifier)               | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [ExperienceModifier](#experiencemodifier)     | FLOAT     | SIGNED     |     | NO   | 1       |       |                                        |
+| [RacialLeader](#racialleader)                 | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [movementId](#movementid)                     | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [RegenHealth](#regenhealth)                   | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                                        |
+| [CreatureImmunitiesId](#creatureimmunitiesid) | INT       | SIGNED     |     | NO   | 0       |       | Reference to creature_immunities table |
+| [flags_extra](#flagsextra)                    | INT       | UNSIGNED   |     | NO   | 0       |       |                                        |
+| [ScriptName](#scriptname)                     | CHAR(64)  |            |     | NO   | ''      |       |                                        |
+| [VerifiedBuild](#verifiedbuild)               | INT       | SIGNED     |     | YES  | NULL    |       |                                        |
 
 ---
 
-**Description of the fields**
+**Description of the table's fields**
 
-#### entry
+### entry
 
 Creature's unique id.
 
-#### difficulty_entry_x
+### difficulty_entry_x
 
 | name                                                      | entry | difficulty_entry_1 | difficulty_entry_2 | difficulty_entry_3 |
 | --------------------------------------------------------- | ----- | ------------------ | ------------------ | ------------------ |
@@ -96,23 +96,23 @@ If you look at the database you will notice a very characteristic pattern which 
 | Raid Creature    | 10man Normal Raid | 25man Normal Raid  | 10man Heroic Raid  | 25man Heroic Raid  |
 | Battleground     | 51- 59            | 60-69              | 70-79              | 80                 |
 
-#### KillCredit1
+### KillCredit1
 
 If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the first [entry](#entry) of the creature that could be killed to give quest credit.
 
-#### KillCredit2
+### KillCredit2
 
 If this is a kill credit template -- one that is a dummy template that is used when more than one creature can count as a kill in a quest, then this is a link to the second [entry](#entry) of the creature that could be killed to give quest credit. If more than two creatures can be killed and count toward a single objective, an smart or C++ script will be required.
 
-#### name
+### name
 
 Base name of the creature.
 
-#### subname
+### subname
 
 The subname of the creature that appears in &lt;&gt; below the creature's name.
 
-#### IconName
+### IconName
 
 Used to tell the player what kind of NPC this creature is.
 
@@ -136,19 +136,19 @@ Used to tell the player what kind of NPC this creature is.
 
 **Attention!** This is not required to make the NPC function unless you are using scripts or gossip options. Names are case sensitive, If in doubt use an example above.
 
-#### gossip_menu_id
+### gossip_menu_id
 
 The gossip ID of this creature. This field is obtained from sniff (update fields). If you can not sniff this value, and need to make one up, it must be &gt; 50000. This field is the link to [gossip_menu.MenuID](gossip_menu#menuid).
 
-#### minlevel
+### minlevel
 
 The minimum level of the creature if the creature has a level range.
 
-#### maxlevel
+### maxlevel
 
 The maximum level of the creature if the creature has a level range. When added to world, a level in chosen in the specified level range.
 
-#### exp
+### exp
 
 The expansion table the creatures health value is taken from. Values are from 0 to 2. See creature_classlevelstats.
 
@@ -158,13 +158,13 @@ The expansion table the creatures health value is taken from. Values are from 0 
 | 1   | The Burning Crusade    |
 | 2   | Wrath of The Lich King |
 
-#### faction
+### faction
 
 The faction of the creature. See [FactionTemplate](factiontemplate). Just because more than one faction has the same name, the inter-faction relationships can be different.
 
 Note: This field also controls the creature family assistance mechanic. Only creatures with the same faction will assist each other.
 
-#### npcflag
+### npcflag
 
 A bitmask that represents what NPC flags the creature has. Each bit controls a different flag and to combine flags, you can add each flag that you want, in effect activating the respective bits.
 
@@ -197,27 +197,27 @@ A bitmask that represents what NPC flags the creature has. Each bit controls a d
 
 So if you want a NPC that is a quest giver(2), a vendor(128) and can repair(4096) you just add specific flags together: 2+128+4096=4226
 
-#### speed_walk
+### speed_walk
 
 Controls how fast the creature can walk. For vehicles: increases fly speed.
 
-#### speed_run
+### speed_run
 
 Controls how fast the creature can run. For vehicles: increases ground movement speed.
 
-#### speed_swim
+### speed_swim
 
 Controls how fast the creature can swim.
 
-#### speed_flight
+### speed_flight
 
 Controls how fast the creature can fly.
 
-#### detection_range
+### detection_range
 
 Controls the range at which creatures detect and see players.
 
-#### rank
+### rank
 
 The rank of the creature:
 
@@ -235,7 +235,7 @@ The rank of the creature:
 
 **Note 3:** If you want the creature to show a skull or "??" in the portrait (often with Bosses), set the [type_flags](#typeflags) to 4.
 
-#### dmgschool
+### dmgschool
 
 Creature's melee damage school.
 
@@ -249,27 +249,44 @@ Creature's melee damage school.
 | 5   | SPELL_SCHOOL_SHADOW |
 | 6   | SPELL_SCHOOL_ARCANE |
 
-#### BaseAttackTime
+### DamageModifier
+
+Used to modify the Minimum/Maximum damage of a creature.
+
+The formulas to calculate the damage output are:
+
+MINDAMAGE = ((([damage_base](creature_classlevelstats#damagebase) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
+MAXDAMAGE = (((([damage_base](creature_classlevelstats#damagebase) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
+
+damage_base comes from the creature_classlevelstats table and takes its value either from [damage_base](creature_classlevelstats#damagebase), [damage_exp1](creature_classlevelstats#damageexp1) or [damage_exp2](creature_classlevelstats#damageexp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
+
+BaseAttackTime is either [BaseAttackTime](#baseattacktime) or [RangeAttackTime](#rangeattacktime) depending on the type of attack.
+
+attackpower is either [attackpower](creature_classlevelstats#attackpower) or [rangedattackpower](creature_classlevelstats#rangedattackpower) depending on the type of attack.
+
+BaseVariance is either [BaseVariance](#basevariance) or [RangeVariance](#rangevariance) depending on the type of attack.
+
+### BaseAttackTime
 
 This is the base time that determines how long a creature must wait between melee attacks. This time is in milliseconds.
 
-#### RangeAttackTime
+### RangeAttackTime
 
 This is the base time that determines how long a creature must wait between ranged attacks. This time is in milliseconds.
 
-#### BaseVariance
+### BaseVariance
 
 Value to customize the creature's damage output. See [DamageModifier](#damagemodifier).
 
 Non-custom creatures should always leave this at 1.
 
-#### RangeVariance
+### RangeVariance
 
 Value to customize the creature's damage output. See [DamageModifier](#damagemodifier).
 
 Non-custom creatures should always leave this at 1.
 
-#### unit_class
+### unit_class
 
 This is the creature's class, and it dictates levels of health and mana. Also note that health and mana will change according to [exp](#exp), [HealthModifier](#healthmodifier), and [ManaModifier](#manamodifier). Not setting this value will report a minor warning in the "DB_Errors.log".
 
@@ -280,7 +297,7 @@ This is the creature's class, and it dictates levels of health and mana. Also no
 | 4     | CLASS_ROGUE   | Health only (equal to warrior)                         |
 | 8     | CLASS_MAGE    | health & mana (less health than paladin but more mana) |
 
-#### unit_flags
+### unit_flags
 
 Allows the manual application of unit flags to creatures. Again this is a bitmask field and to apply more than one flag, just add the different numbers. Some possible flags are:
 
@@ -319,7 +336,7 @@ Allows the manual application of unit flags to creatures. Again this is a bitmas
 | 1073741824 | 0x40000000 | UNIT_FLAG_SHEATHE                       |                                                                                                                                                                                                                                              |
 | 2147483648 | 0x80000000 | UNIT_FLAG_IMMUNE                        | Immune to damage                                                                                                                                                                                                                             |
 
-#### unit_flags2
+### unit_flags2
 
 Allows additional application of unit flags to creatures. Again, this is a bitmask field and to apply more than one flag, just add the different numbers. Some possible flags are:
 
@@ -345,7 +362,7 @@ Allows additional application of unit flags to creatures. Again, this is a bitma
 | 131072 | 0x00020000 | UNIT_FLAG2_PLAY_DEATH_ANIM            | Plays special death animation upon death                                    |
 | 262144 | 0x00040000 | UNIT_FLAG2_ALLOW_CHEAT_SPELLS         | allows casting spells with AttributesEx7 & SPELL_ATTR7_DEBUG_SPELL       |
 
-#### dynamicflags
+### dynamicflags
 
 Flags that control visual appearance of the creature.
 
@@ -364,7 +381,7 @@ A few known flags and their use are:
 | 64   | 0x40 | UNIT_DYNFLAG_REFER_A_FRIEND            |                                                                                                     |
 | 128  | 0x80 | UNIT_DYNFLAG_TAPPED_BY_ALL_THREAT_LIST | Lua_UnitIsTappedByAllThreatList                                                                     |
 
-#### family
+### family
 
 The family this creature belongs to.
 
@@ -391,7 +408,7 @@ The family this creature belongs to.
 | 24. | Bat          | 45. | Core Hound     |
 | 25. | Hyena        | 46. | Spirit Beast   |
 
-#### type
+### type
 
 The type of the creature.
 
@@ -412,7 +429,7 @@ The type of the creature.
 | 12  | Non-Combat Pet |
 | 13  | Gas Cloud      |
 
-#### type_flags
+### type_flags
 
 This field can control whether a mob is minable or herbable or lootable by engineer. If it is either of those three, then the loot given when it is skinned/mined will be stored in the [skinning_loot_template](loot_template) table. It also controls, whether this mob can be tamed by a hunter. Other fields have no special meaning on the serverside. The entire field will be send to the client in SMSG_CREATURE_QUERY_RESPONSE
 
@@ -451,35 +468,35 @@ This field can control whether a mob is minable or herbable or lootable by engin
 | 1073741824 | 0x40000000 | CREATURE_TYPE_FLAG_DO_NOT_RENDER_OBJECT_NAME         |                                                                                            |
 | 2147483648 | 0x80000000 | CREATURE_TYPE_FLAG_QUEST_BOSS                        |                                                                                            |
 
-#### lootid
+### lootid
 
 The ID of the loot template ID that this creature should use to generate loots. See [creature_loot_template.entry](loot_template#entry)
 
-#### pickpocketloot
+### pickpocketloot
 
 The ID of the pickpocketing loot template that this creature should use to generate pickpocketing loots. See [pickpocketing_loot_template.entry](loot_template#entry)
 
-#### skinloot
+### skinloot
 
 The ID of the skinning loot template that this creature should use to generate skinning loots. See [skinning_loot_template.entry](loot_template#entry)
 
-#### PetSpellDataId
+### PetSpellDataId
 
 ID, found in CreatureSpellData.dbc, that displays what spells the pet has in the client.
 
-#### VehicleId
+### VehicleId
 
 Entry of vehicle if creature is/has a vehicle entry. This field determines how the player appears on the vehicle, how the vehicle moves, and whether or not the vehicle action bar is shown. For example, a vehicleID of 292 will make the player invisible, prevent the vehicle from strafing left/right (but will allow forwards/backwards), and will show the vehicle action bar spells (which are defined in [spell1-8](http://trinitycore.atlassian.net#spell)). An npc_spellclick_spells entry must be made for this creature entry in order for this to work.
 
-#### mingold
+### mingold
 
 Minimum money that the creature drops when killed, in copper.
 
-#### maxgold
+### maxgold
 
 Maximum money that the creature drops when killed, in copper.
 
-#### AIName
+### AIName
 
 This field is overridden by ScriptName field if both are set.
 
@@ -500,7 +517,7 @@ This field is overridden by ScriptName field if both are set.
 | VehicleAI      | Creature acts as player vehicle.                                                                    |
 | SmartAI        | Creature uses the "[smart_scripts](smart_scripts)" table to specify it's behaviour.                 |
 
-#### MovementType
+### MovementType
 
 The creature's default movement type.
 
@@ -510,47 +527,29 @@ The creature's default movement type.
 | 1   | Random movement inside the wander_distance radius |
 | 2   | Waypoint movement                                 |
 
-#### HoverHeight
+### HoverHeight
 
 Distance above the ground that the creature will hover if it has MOVEMENTFLAG_DISABLE_GRAVITY enabled. Value taken from sniffs.
 
-#### HealthModifier
+### HealthModifier
 
 Used to modify the base Level/Class health of a creature. This field comes from WDB.
 
-#### ManaModifier
+### ManaModifier
 
 Used to modify the base Level/Class mana of a creature. This field comes from WDB.
 
-#### ArmorModifier
+### ArmorModifier
 
 Used to modify the base Level/Class armor of a creature.
 
-#### DamageModifier
-
-Used to modify the Minimum/Maximum damage of a creature.
-
-The formulas to calculate the damage output are:
-
-MINDAMAGE = ((([damage_base](creature_classlevelstats#damagebase) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))  
-MAXDAMAGE = (((([damage_base](creature_classlevelstats#damagebase) * 1.5) + ([attackpower](creature_classlevelstats#attackpower) / 14) * [BaseVariance](creature_template#basevariance)) * DamageModifier) * ([BaseAttackTime](#baseattacktime) / 1000))
-
-damage_base comes from the creature_classlevelstats table and takes its value either from [damage_base](creature_classlevelstats#damagebase), [damage_exp1](creature_classlevelstats#damageexp1) or [damage_exp2](creature_classlevelstats#damageexp2) according to the creature's value in [exp](#exp) (0 = base_damage, 1 = damage_exp1, 2 = damage_exp2).
-
-BaseAttackTime is either [BaseAttackTime](#baseattacktime) or [RangeAttackTime](#rangeattacktime) depending on the type of attack.
-
-attackpower is either [attackpower](creature_classlevelstats#attackpower) or [rangedattackpower](creature_classlevelstats#rangedattackpower) depending on the type of attack.
-
-BaseVariance is either [BaseVariance](#basevariance) or [RangeVariance](#rangevariance) depending on the type of attack.
-
-
-#### ExperienceModifier
+### ExperienceModifier
 
 Used to modify the experience a player gets for killing the creature. The base experience is multiplied by this value, for example 2 gives double experience and 0 gives none.
 
 Elite creatures already give double experience before this modifier is applied. Use the `CREATURE_FLAG_EXTRA_NO_XP` flag in [flags\_extra](#flagsextra) to make a creature give no experience at all.
 
-#### RacialLeader
+### RacialLeader
 
 A flag with two possible values: '1' or '0' indicating whether the creature is a racial leader or not. Killing racial leaders grants 100 honor.
 
@@ -567,21 +566,21 @@ A flag with two possible values: '1' or '0' indicating whether the creature is a
 | 36648 | Baine Bloodhoof (Leader) |
 | 37764 | Lor'themar Theron        |
 
-#### movementId
+### movementId
 
 We have no idea what this field does. It is passed directly to the client.
 
-#### RegenHealth
+### RegenHealth
 
 Boolean '1' or '0' controlling whether the creature should regenerate it's health or not.
 
-#### CreatureImmunitiesId
+### CreatureImmunitiesId
 
 Reference to the `creature_immunities` table which centralises spell- and mechanic-based immunities.
 
 For the detailed list of mechanics and spell-school bits, see [creature_immunities](creature_immunities).
 
-#### flags_extra
+### flags_extra
 
 These flags control certain creature specific attributes. Flags can be added together to apply more than one.
 
@@ -622,11 +621,11 @@ These flags control certain creature specific attributes. Flags can be added tog
 | 1073741824 | CREATURE_FLAG_EXTRA_IMMUNITY_KNOCKBACK              | 0x40000000 | creature will immune all knockback effects                                                                                             |
 | 2147483648 | CREATURE_FLAG_EXTRA_HARD_RESET                      | 0x80000000 | Creature will despawn on evade                                                                                                         |
 
-#### ScriptName
+### ScriptName
 
 The name of the script that this creature uses, if any. This ties a script from a scripting engine to this creature.
 
-#### VerifiedBuild
+### VerifiedBuild
 
 This field was used to determine whether a template has been verified from WDB files.
 

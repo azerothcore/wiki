@@ -4,16 +4,18 @@
 
 **The \`channels\_rights\` table**
 
-**Table Structure**
+Holds settings applied to chat channels by name: flags, speak delay, join message, delay message and moderators.
+
+**Table: channels\_rights's Structure**
 
 | Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name][1]         | VARCHAR(128) | SIGNED     | PRI | NO   |         |       |         |
+| [name][1]         | VARCHAR(128) |            | PRI | NO   |         |       |         |
 | [flags][2]        | INT          | UNSIGNED   |     | NO   |         |       |         |
 | [speakdelay][3]   | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [joinmessage][4]  | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
-| [delaymessage][5] | VARCHAR(255) | SIGNED     |     | NO   | ''      |       |         |
-| [moderators][6]   | TEXT         | SIGNED     |     | YES  |         |       |         |
+| [joinmessage][4]  | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| [delaymessage][5] | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| [moderators][6]   | TEXT         |            |     | YES  | NULL    |       |         |
 
 [1]: #name
 [2]: #flags
@@ -22,7 +24,7 @@
 [5]: #delaymessage
 [6]: #moderators
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 
