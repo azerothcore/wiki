@@ -6,23 +6,17 @@
 
 This table hold informations regarding the right guild member have to withdraw, deposit etc at the guild bank.
 
-**Table Structure**
+**Table: guild\_bank\_right's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guildid][1]    | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TabId][2]      | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [rid][3]        | TINYINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [gbright][4]    | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [SlotPerDay][5] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guildid](#guildid)       | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [TabId](#tabid)           | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [rid](#rid)               | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [gbright](#gbright)       | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [SlotPerDay](#slotperday) | INT     | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #guildid
-[2]: #tabid
-[3]: #rid
-[4]: #gbright
-[5]: #slotperday
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 
@@ -42,13 +36,13 @@ The permissions you want to give to a player of that rank on the tab. This is a 
 
 FLAGS:
 
-| Value | Description                                    |
-| ----- | ---------------------------------------------- |
-| 1     | view items                                     |
-| 2     | deposit items                                  |
-| 4     | update item name shown when navigating the tab |
-| 8     | withdraw items                                 |
-| 255   | Has all rights                                 |
+| Value | Hex    | Flag | Comment                                        |
+| :---- | :----: | :--- | :--------------------------------------------- |
+| 1     | `0x01` |      | view items                                     |
+| 2     | `0x02` |      | deposit items                                  |
+| 4     | `0x04` |      | update item name shown when navigating the tab |
+| 8     | `0x08` |      | withdraw items                                 |
+| 255   | `0xFF` |      | Has all rights                                 |
 
 ### SlotPerDay
 

@@ -6,41 +6,26 @@
 
 This table holds individual item instance information for all items currently equipped in some kind of character bag or bank, in auction houses, in guild banks or in mails.
 
-**Table Structure**
+**Table: item\_instance's Structure**
 
-| Field                  | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]              | INT       | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [itemEntry][2]         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [owner_guid][3]        | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [creatorGuid][4]       | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [giftCreatorGuid][5]   | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [count][6]             | INT       | UNSIGNED   |     | NO   | 1       |       |         |
-| [duration][7]          | INT       | SIGNED     |     | NO   | 0       |       |         |
-| [charges][8]           | TINYTEXT  | SIGNED     |     | YES  |         |       |         |
-| [flags][9]             | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [enchantments][10]     | TEXT      | SIGNED     |     | NO   |         |       |         |
-| [randomPropertyId][11] | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
-| [durability][12]       | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [playedTime][13]       | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [text][14]             | TEXT      | SIGNED     |     | YES  |         |       |         |
+| Field                                 | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)                         | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [itemEntry](#itementry)               | INT      | UNSIGNED | YES  |     | 0       |       |         |
+| [owner_guid](#ownerguid)              | INT      | UNSIGNED | NO   | MUL | 0       |       |         |
+| [creatorGuid](#creatorguid)           | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [giftCreatorGuid](#giftcreatorguid)   | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [count](#count)                       | INT      | UNSIGNED | NO   |     | 1       |       |         |
+| [duration](#duration)                 | INT      |          | NO   |     | 0       |       |         |
+| [charges](#charges)                   | TINYTEXT |          | YES  |     | NULL    |       |         |
+| [flags](#flags)                       | INT      | UNSIGNED | YES  |     | 0       |       |         |
+| [enchantments](#enchantments)         | TEXT     |          | NO   |     |         |       |         |
+| [randomPropertyId](#randompropertyid) | SMALLINT |          | NO   |     | 0       |       |         |
+| [durability](#durability)             | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [playedTime](#playedtime)             | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [text](#text)                         | TEXT     |          | YES  |     | NULL    |       |         |
 
-[1]: #guid
-[2]: #itementry
-[3]: #ownerguid
-[4]: #creatorguid
-[5]: #giftcreatorguid
-[6]: #count
-[7]: #duration
-[8]: #charges
-[9]: #flags
-[10]: #enchantments
-[11]: #randompropertyid
-[12]: #durability
-[13]: #playedtime
-[14]: #text
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 
@@ -76,14 +61,14 @@ The number of charges for each of the five possible spellcharges on an item, s
 
 ### flags
 
-| Flag | Name                          | Description                                          |
-| ---- | ----------------------------- | ---------------------------------------------------- |
-| 1    | ITEM_FIELD_FLAG_SOULBOUND     | The item is soulbound.                               |
-| 4    | ITEM_FIELD_FLAG_UNLOCKED      | The item had a lock that has been opened.            |
-| 8    | ITEM_FIELD_FLAG_WRAPPED       | The item is wrapped and contains another item.       |
-| 256  | ITEM_FIELD_FLAG_BOP_TRADEABLE | The soulbound item can still be traded for a while.  |
-| 512  | ITEM_FIELD_FLAG_READABLE      | Right clicking the item opens a text page.           |
-| 4096 | ITEM_FIELD_FLAG_REFUNDABLE    | The item can still be returned to the vendor.        |
+| Value | Hex      | Flag                          | Comment                                             |
+| :---- | :------: | :---------------------------- | :-------------------------------------------------- |
+| 1     | `0x0001` | ITEM_FIELD_FLAG_SOULBOUND     | The item is soulbound.                              |
+| 4     | `0x0004` | ITEM_FIELD_FLAG_UNLOCKED      | The item had a lock that has been opened.           |
+| 8     | `0x0008` | ITEM_FIELD_FLAG_WRAPPED       | The item is wrapped and contains another item.      |
+| 256   | `0x0100` | ITEM_FIELD_FLAG_BOP_TRADEABLE | The soulbound item can still be traded for a while. |
+| 512   | `0x0200` | ITEM_FIELD_FLAG_READABLE      | Right clicking the item opens a text page.          |
+| 4096  | `0x1000` | ITEM_FIELD_FLAG_REFUNDABLE    | The item can still be returned to the vendor.       |
 
 ### enchantments
 

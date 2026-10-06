@@ -1,19 +1,19 @@
-# spell_mixology
+# spell\_mixology
 
 [<-Back-to:World](database-world)
 
-**The \`spell_mixology\` table**
+**The \`spell\_mixology\` table**
 
 Bonus the Alchemy talent Mixology gives to elixirs and flasks. Players with Mixology who know the recipe of the elixir or flask get a stronger effect and double duration.
 
-**Table Structure**
+**Table: spell\_mixology's Structure**
 
-| Field             | Type  | Attributes | Key | Null | Default | Extra | Comment          |
-| ----------------- | ----- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [entry](#entry)   | INT   | UNSIGNED   | PRI | NO   |         |       |                  |
-| [pctMod](#pctmod) | FLOAT |            |     | NO   | 30      |       | bonus multiplier |
+| Field             | Type  |          | Null | Key | Default | Extra | Comment          |
+| :---------------- | :---- | :------- | :--: | :-: | :-----: | :---: | :--------------- |
+| [entry](#entry)   | INT   | UNSIGNED | NO   | PRI |         |       |                  |
+| [pctMod](#pctmod) | FLOAT |          | NO   |     | 30      |       | bonus multiplier |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

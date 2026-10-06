@@ -6,23 +6,17 @@
 
 This table contains the data that a player needs to obtain / complete in order to receive a given achievement.
 
-**Table Structure**
+**Table: achievement\_criteria\_data's Structure**
 
-| Field            | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [criteria_id][1] | MEDIUMINT |            | PRI | NO   |         |       |         |
-| [type][2]        | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [value1][3]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [value2][4]      | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ScriptName][5]  | char(64)  |            |     | NO   |         |       |         |
+| Field                      | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [criteria_id](#criteriaid) | INT      |          | NO   | PRI |         |       |         |
+| [type](#type)              | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [value1](#value1)          | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [value2](#value2)          | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [ScriptName](#scriptname)  | CHAR(64) |          | NO   |     | ''      |       |         |
 
-[1]: #criteriaid
-[2]: #type
-[3]: #value1
-[4]: #value2
-[5]: #scriptname
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### criteria\_id
 

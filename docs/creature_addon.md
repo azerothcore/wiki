@@ -8,29 +8,20 @@ The creature\_addon and creature\_template\_addon tables define different things
 
 NOTE: A creature\_addon record will override a creature\_template\_addon record should they overlap on the same creature.
 
-**Table Structure**
+**Table: creature\_addon's Structure**
 
-| Field                        | Type          | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------------------- | ------------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid/entry][1]              | INT           | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [path_id][2]                 | INT           | UNSIGNED   |     | NO   |         |       |         |
-| [mount][3]                   | INT           | UNSIGNED   |     | NO   | 0       |       |         |
-| [bytes1][4]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
-| [bytes2][5]                  | INT           | UNSIGNED   |     | NO   |         |       |         |
-| [emote][6]                   | INT           | UNSIGNED   |     | NO   |         |       |         |
-| [visibilityDistanceType][10] | TINYINT       | UNSIGNED   |     | NO   |         |       |         |
-| [auras][11]                  | text          |            |     | YES  |         |       |         |
+| Field                                             | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid/entry](#guidentry)                          | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [path_id](#pathid)                                | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [mount](#mount)                                   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [bytes1](#bytes1)                                 | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [bytes2](#bytes2)                                 | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [emote](#emote)                                   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [visibilityDistanceType](#visibilitydistancetype) | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [auras](#auras)                                   | TEXT    |          | YES  |     | NULL    |       |         |
 
-[1]: #guidentry
-[2]: #pathid
-[3]: #mount
-[4]: #bytes1
-[5]: #bytes2
-[6]: #emote
-[10]: #visibilitydistancetype
-[11]: #auras
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid/entry
 

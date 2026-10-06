@@ -1,48 +1,50 @@
 # gameobject\_template
 
+[<-Back-to:World](database-world)
+
 Contains template of all gameobjects
 
-## Structure
+**Table: gameobject\_template's Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| entry          | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| type           | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| displayId      | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| name           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| IconName       | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| castBarCaption | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| unk1           | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| size           | FLOAT        | SIGNED     |     | NO   | 1       |       |         |
-| data0          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data1          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
-| data2          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data3          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data4          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data5          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data6          | INT          | UNSIGNED   |     | NO   | -1      |       |         |
-| data7          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data8          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data9          | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data10         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data11         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data12         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data13         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data14         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data15         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data16         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data17         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data18         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data19         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data20         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data21         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data22         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| data23         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| AIName         | char(64)     | SIGNED     |     | NO   | "       |       |         |
-| ScriptName     | VARCHAR(64)  | SIGNED     |     | NO   | "       |       |         |
-| VerifiedBuild    | INT          |            |     | YES  | NULL    |       |         |
+| Field                             | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [type](#type)                     | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [displayId](#displayid)           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [name](#name)                     | VARCHAR(100) |          | NO   | MUL | ''      |       |         |
+| [IconName](#iconname)             | VARCHAR(100) |          | NO   |     | ''      |       |         |
+| [castBarCaption](#castbarcaption) | VARCHAR(100) |          | NO   |     | ''      |       |         |
+| [unk1](#unk1)                     | VARCHAR(100) |          | NO   |     | ''      |       |         |
+| [size](#size)                     | FLOAT        |          | NO   |     | 1       |       |         |
+| [Data0](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data1](#data0-23)                | INT          |          | NO   |     | 0       |       |         |
+| [Data2](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data3](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data4](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data5](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data6](#data0-23)                | INT          |          | NO   |     | 0       |       |         |
+| [Data7](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data8](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data9](#data0-23)                | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data10](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data11](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data12](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data13](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data14](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data15](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data16](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data17](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data18](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data19](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data20](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data21](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data22](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Data23](#data0-23)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AIName](#ainame)                 | CHAR(64)     |          | NO   |     | ''      |       |         |
+| [ScriptName](#scriptname)         | VARCHAR(64)  |          | NO   |     | ''      |       |         |
+| [VerifiedBuild](#verifiedbuild)   | INT          |          | YES  |     | NULL    |       |         |
 
-## Description of the fields
+**Description of the table's fields**
 
 ### entry
 

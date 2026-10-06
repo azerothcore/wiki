@@ -15,29 +15,19 @@ Special costs (honor, tokens etc...) are defined in this table in the column [Ex
 
 If you open the vendor's window in GM mode, you will see all the items sold by the vendor. If you disable GM mode, you will see the items sold like a normal player (ex: if you can't use an item and cannot trade it, you won't see it listed).
 
+**Table: npc\_vendor's Structure**
 
-## Table Structure
+| Field                           | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [slot](#slot)                   | SMALLINT |          | NO   | MUL | 0       |       |         |
+| [item](#item)                   | INT      |          | NO   | PRI | 0       |       |         |
+| [maxcount](#maxcount)           | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [incrtime](#incrtime)           | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [ExtendedCost](#extendedcost)   | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |       |         |
 
-| Field             | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]        | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [slot][2]         | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
-| [item][3]         | MEDIUMINT | SIGNED     | PRI | NO   | 0       |       |         |
-| [maxcount][4]     | TINYINT   | UNSIGNED   |     | NO   | 0       |       |         |
-| [incrtime][5]     | INT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExtendedCost][6] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [VerifiedBuild][7] | INT      |            |     | YES  | NULL    |       |         |
-
-[1]: #entry
-[2]: #slot
-[3]: #item
-[4]: #maxcount
-[5]: #incrtime
-[6]: #extendedcost
-[7]: #verifiedbuild
-
-
-## Field Descriptions
+**Description of the table's fields**
 
 ### entry
 

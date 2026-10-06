@@ -6,23 +6,17 @@
 
 This table defines reusable option rulesets for creature text groups. Each ruleset controls cooldown, trigger chance, and player-only filtering for `SendChat()`. Rulesets are assigned to specific (CreatureID, GroupID) pairs via the [creature\_text\_options](creature_text_options) table.
 
-## Structure
+**Table: creature\_text\_option\_sets's Structure**
 
-| Field                  | Type         | Attributes | Key | Null | Default | Extra | Comment                                  |
-|------------------------|--------------|------------|-----|------|---------|-------|------------------------------------------|
-| [SetID][1]             | TINYINT      | UNSIGNED   | PRI | NO   |         |       |                                          |
-| [Cooldown][2]          | INT          | UNSIGNED   |     | NO   | 0       |       | Group cooldown in milliseconds before it can fire again |
-| [TriggerChance][3]     | TINYINT      | UNSIGNED   |     | NO   | 100     |       | 0-100 percent chance to fire at all      |
-| [PlayerOnly][4]        | TINYINT      | UNSIGNED   |     | NO   | 0       |       | Only fire if target is a player          |
-| [comment][5]           | VARCHAR(255) |            |     | YES  |         |       |                                          |
+| Field                           | Type         |          | Null | Key | Default | Extra | Comment                                       |
+| :------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :-------------------------------------------- |
+| [SetID](#setid)                 | TINYINT      | UNSIGNED | NO   | PRI |         |       |                                               |
+| [Cooldown](#cooldown)           | INT          | UNSIGNED | NO   |     | 0       |       | Group cooldown in ms before it can fire again |
+| [TriggerChance](#triggerchance) | TINYINT      | UNSIGNED | NO   |     | 100     |       | 0-100 pct chance to fire at all               |
+| [PlayerOnly](#playeronly)       | TINYINT      | UNSIGNED | NO   |     | 0       |       | Only fire if target is a player               |
+| [comment](#comment)             | VARCHAR(255) |          | YES  |     | ''      |       |                                               |
 
-[1]: #setid
-[2]: #cooldown
-[3]: #triggerchance
-[4]: #playeronly
-[5]: #comment
-
-## Description of the fields
+**Description of the table's fields**
 
 ### SetID
 

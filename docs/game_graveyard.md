@@ -1,19 +1,23 @@
-# game_graveyard
+# game\_graveyard
 
 [<-Back-to:World](database-world)
 
-**The \`game_graveyard\` table**
+**The \`game\_graveyard\` table**
 
-| Field               | Type         | Key | Null | Default |
-| ------------------- | ------------ | --- | ---- | ------- |
-| [ID](#id)           | INT          | PRI | NO   | 0       |
-| [Map](#map)         | INT          |     | NO   | 0       |
-| [x](#x)             | FLOAT        |     | NO   | 0       |
-| [y](#y)             | FLOAT        |     | NO   | 0       |
-| [z](#z)             | FLOAT        |     | NO   | 0       |
-| [Comment](#comment) | VARCHAR(255) |     | YES  | NULL    |
+Holds the graveyard locations: map and coordinates.
 
-**Description of the fields**
+**Table: game\_graveyard's Structure**
+
+| Field               | Type         |     | Null | Key | Default | Extra | Comment |
+| :------------------ | :----------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)           | INT          |     | NO   | PRI | 0       |       |         |
+| [Map](#map)         | INT          |     | NO   |     | 0       |       |         |
+| [x](#x)             | FLOAT        |     | NO   |     | 0       |       |         |
+| [y](#y)             | FLOAT        |     | NO   |     | 0       |       |         |
+| [z](#z)             | FLOAT        |     | NO   |     | 0       |       |         |
+| [Comment](#comment) | VARCHAR(255) |     | YES  |     | NULL    |       |         |
+
+**Description of the table's fields**
 
 ### ID
 Graveyard's ID. See [WorldSafeLocs.dbc](https://wowdev.wiki/DB/WorldSafeLocs)

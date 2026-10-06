@@ -2,35 +2,25 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The `\lag\_reports\` table**
+**The \`lag\_reports\` table**
 
 This table stores the lag reports made by players ingame (when they click on "Help Request").
 
-**Table Structure**
+**Table: lag\_reports's Structure**
 
-| Field           | Type     | Attributes | Key | Null | Default | Extra          | Comment |
-| --------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [reportId][1]   | INT      | UNSIGNED   | PRI | NO   |         | Auto Increment |         |
-| [guid][2]       | INT      | UNSIGNED   |     | NO   | 0       |                |         |
-| [lagType][3]    | TINYINT  | UNSIGNED   |     | NO   | 0       |                |         |
-| [mapId][4]      | SMALLINT | UNSIGNED   |     | NO   | 0       |                |         |
-| [posX][5]       | FLOAT    | SIGNED     |     | NO   | 0       |                |         |
-| [posY][6]       | FLOAT    | SIGNED     |     | NO   | 0       |                |         |
-| [posZ][7]       | FLOAT    | SIGNED     |     | NO   | 0       |                |         |
-| [latency][8]    | INT      | UNSIGNED   |     | NO   | 0       |                |         |
-| [createTime][9] | INT      | UNSIGNED   |     | NO   | 0       |                |         |
+| Field                     | Type     |          | Null | Key | Default | Extra          | Comment |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [reportId](#reportid)     | INT      | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [guid](#guid)             | INT      | UNSIGNED | NO   |     | 0       |                |         |
+| [lagType](#lagtype)       | TINYINT  | UNSIGNED | NO   |     | 0       |                |         |
+| [mapId](#mapid)           | SMALLINT | UNSIGNED | NO   |     | 0       |                |         |
+| [posX](#posx)             | FLOAT    |          | NO   |     | 0       |                |         |
+| [posY](#posy)             | FLOAT    |          | NO   |     | 0       |                |         |
+| [posZ](#posz)             | FLOAT    |          | NO   |     | 0       |                |         |
+| [latency](#latency)       | INT      | UNSIGNED | NO   |     | 0       |                |         |
+| [createTime](#createtime) | INT      | UNSIGNED | NO   |     | 0       |                |         |
 
-[1]: #reportid
-[2]: #guid
-[3]: #lagtype
-[4]: #mapid
-[5]: #posx
-[6]: #posy
-[7]: #posz
-[8]: #latency
-[9]: #createtime
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### reportId
 

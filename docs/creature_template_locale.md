@@ -1,22 +1,22 @@
-# creature_template_locale
+# creature\_template\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template_locale\` table**
+**The \`creature\_template\_locale\` table**
 
 This table is used to provide localized clients with localized strings for creatures.
 
-**Table Structure**
+**Table: creature\_template\_locale's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry](#entry) | INT | UNSIGNED | PRI | NO | 0 |  |  |
-| [locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
-| [Name](#name) | TEXT |  |  | YES |  |  |  |
-| [Title](#title) | TEXT |  |  | YES |  |  |  |
-| [VerifiedBuild](#verifiedbuild) | INT |  |  | YES | NULL |  |  |
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Name](#name)                   | TEXT       |          | YES  |     | NULL    |       |         |
+| [Title](#title)                 | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

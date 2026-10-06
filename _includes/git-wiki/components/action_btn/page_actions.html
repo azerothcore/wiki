@@ -1,0 +1,12 @@
+<div class="git-wiki-tools">
+    {% assign tools_repo = site.github.repository_url %}
+    {% assign tools_branch = site.git_branch | escape %}
+    {% assign tools_path = page.path | escape %}
+    {% if site.disable_edit != true %}
+    <span class="tools-element"><a target="_blank" href="{{ tools_repo }}/new/{{ tools_branch }}/{{ site.wiki_folder }}?filename=">Add new</a></span>
+    <span class="tools-element"><a target="_blank" href="{{ tools_repo }}/edit/{{ tools_branch }}/{{ tools_path }}">Edit</a></span>
+    <span class="tools-element"><a target="_blank" href="{{ tools_repo }}/delete/{{ tools_branch }}/{{ tools_path }}">Delete</a></span>
+    {% endif %}
+    <span class="tools-element"><a target="_blank" href="{{ tools_repo }}/commits/{{ tools_branch }}/{{ tools_path }}">History</a></span>
+    <span class="tools-element"><a target="_blank" href="{{ tools_repo }}/blob/{{ tools_branch }}/{{ tools_path }}">Source</a></span>
+</div>

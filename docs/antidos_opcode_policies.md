@@ -1,18 +1,18 @@
-# antidos_opcode_policies
+# antidos\_opcode\_policies
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: antidos\_opcode\_policies's Structure**
 
 This table contains the policy definition for opcodes.
 
-| Field                               | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Opcode](#opcode)                   | SMALLINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [Policy](#policy)                   | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
-| [MaxAllowedCount](#maxallowedcount) | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
+| Field                               | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Opcode](#opcode)                   | SMALLINT | UNSIGNED | NO   | PRI |         |       |         |
+| [Policy](#policy)                   | TINYINT  | UNSIGNED | NO   |     |         |       |         |
+| [MaxAllowedCount](#maxallowedcount) | SMALLINT | UNSIGNED | NO   |     |         |       |         |
 
-**Field Descriptions**
+**Description of the table's fields**
 
 ### Opcode
 

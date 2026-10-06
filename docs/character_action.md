@@ -6,23 +6,17 @@
 
 Contains all the individual button data for each character. A button is any of the places in the GUI where you can place for example a spell, item, or macro as a shortcut.
 
-**Table Structure**
+**Table: character\_action's Structure**
 
-| Field       | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]   | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [spec][2]   | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [button][3] | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [action][4] | INT        | UNSIGNED   |     | NO   | 0       |       |         |
-| [type][5]   | TINYINT    | UNSIGNED   |     | NO   | 0       |       |         |
+| Field             | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)     | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [spec](#spec)     | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [button](#button) | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [action](#action) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [type](#type)     | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #guid
-[2]: #spec
-[3]: #button
-[4]: #action
-[5]: #type
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 
@@ -63,11 +57,11 @@ The type of action:
 
 **Possible types**
 
-| Value | Description |
-| ----- | ----------- |
-| 0     | Spell       |
-| 1     | Click       |
-| 32    | Eq set      |
-| 64    | Macro       |
-| 65    | Click macro |
-| 128   | Item        |
+| Value | Hex    | Flag        | Comment |
+| :---- | :----: | :---------- | :------ |
+| 0     | `0x00` | Spell       |         |
+| 1     | `0x01` | Click       |         |
+| 32    | `0x20` | Eq set      |         |
+| 64    | `0x40` | Macro       |         |
+| 65    | `0x41` | Click macro |         |
+| 128   | `0x80` | Item        |         |

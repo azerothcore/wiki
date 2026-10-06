@@ -6,20 +6,20 @@
 
 This table contains data related to the use of the anti-cheat tool Warden, which can be enabled in Worldserver.conf
 
-**Table Structure**
+**Table: warden\_checks's Structure**
 
-| Field                             | Type        | Attributes | Key | NULL | Default         | Comment                                   |
-| --------------------------------- | ----------- | ---------- | --- | ---- | --------------- | ----------------------------------------- |
-| [id](#id)                         | SMALLINT    | UNSIGNED   | PRI | NO   | auto\_increment | Unique ID, automatically incremented by 1 |
-| [type](#type)                     | TINYINT     | UNSIGNED   |     | YES  | NULL            |                                           |
-| [data](#data)                     | VARCHAR(48) |            |     | YES  | NULL            |                                           |
-| [str](#str)                       | VARCHAR(20) |            |     | YES  | NULL            |                                           |
-| [address](#address)               | INT         | UNSIGNED   |     | YES  | NULL            |                                           |
-| [length](#length)                 | TINYINT     | UNSIGNED   |     | YES  | NULL            |                                           |
-| [result](#result)                 | VARCHAR(24) |            |     | YES  | NULL            |                                           |
-| [comment](#comment)               | VARCHAR(50) |            |     | YES  | NULL            |                                           |
+| Field               | Type         |          | Null | Key | Default | Extra          | Comment                                   |
+| :------------------ | :----------- | :------- | :--: | :-: | :-----: | :------------: | :---------------------------------------- |
+| [id](#id)           | SMALLINT     | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT | Unique ID, automatically incremented by 1 |
+| [type](#type)       | TINYINT      | UNSIGNED | YES  |     | NULL    |                |                                           |
+| [data](#data)       | VARCHAR(48)  |          | YES  |     | NULL    |                |                                           |
+| [str](#str)         | VARCHAR(170) |          | YES  |     | NULL    |                |                                           |
+| [address](#address) | INT          | UNSIGNED | YES  |     | NULL    |                |                                           |
+| [length](#length)   | TINYINT      | UNSIGNED | YES  |     | NULL    |                |                                           |
+| [result](#result)   | VARCHAR(24)  |          | YES  |     | NULL    |                |                                           |
+| [comment](#comment) | VARCHAR(50)  |          | YES  |     | NULL    |                |                                           |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### id
 
