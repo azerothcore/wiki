@@ -1,18 +1,17 @@
-# exploration_basexp
+# exploration\_basexp
 
 [<-Back-to:World](database-world)
 
 This table holds the base experience point information needed for when a player explores a new zone.
 
-| Field       | Type      | Attributes | Key | Null | Default |
-| ----------- | --------- | ---------- | --- | ---- | ------- |
-| [level][1]  | TINYINT   | UNSIGNED   | PRI | NO   | 0       |
-| [basexp][2] | MEDIUMINT | SIGNED     |     | NO   | 0       |
+**Table: exploration\_basexp's Structure**
 
-[1]: #level
-[2]: #basexp
+| Field             | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [level](#level)   | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [basexp](#basexp) | INT     |          | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### level
 The player level.

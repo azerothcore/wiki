@@ -1,66 +1,70 @@
-# itemset_dbc
+# itemset\_dbc
 
 [<-Back-to:World](database-world)
 
-**The \`itemset_dbc\` table**
+**The \`itemset\_dbc\` table**
 
-**Table Structure**
+Holds rows that override or add to the data the core loads from ItemSet.dbc.
 
-| Field                                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                               | INT     | SIGNED     | PRI | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelangenus)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelangengb)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelangkokr)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelangfrfr)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelangdede)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelangencn)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelangzhcn)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelangentw)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelangzhtw)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelangeses)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelangesmx)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelangruru)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelangptpt)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelangptbr)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelangitit)       | VARCHAR | SIGNED     |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelangunk)         | VARCHAR | UNSIGNED   |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelangmask)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_1](#itemid1)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_2](#itemid2)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_3](#itemid3)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_4](#itemid4)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_5](#itemid5)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_6](#itemid6)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_7](#itemid7)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_8](#itemid8)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_9](#itemid9)                   | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_10](#itemid10)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_11](#itemid11)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_12](#itemid12)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_13](#itemid13)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_14](#itemid14)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_15](#itemid15)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_16](#itemid16)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [ItemID_17](#itemid17)                 | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_1](#setspellid1)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_2](#setspellid2)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_3](#setspellid3)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_4](#setspellid4)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_5](#setspellid5)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_6](#setspellid6)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_7](#setspellid7)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetSpellID_8](#setspellid8)           | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_1](#setthreshold1)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_2](#setthreshold2)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_3](#setthreshold3)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_4](#setthreshold4)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_5](#setthreshold5)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_6](#setthreshold6)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_7](#setthreshold7)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [SetThreshold_8](#setthreshold8)       | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [RequiredSkill](#requiredskill)         | INT     | SIGNED     |     | NO   | 0       |       |         |
-| [RequiredSkillRank](#requiredskillrank) | INT     | SIGNED     |     | NO   | 0       |
+**Table: itemset\_dbc's Structure**
+
+| Field                                   | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                               | INT          |          | NO   | PRI | 0       |       |         |
+| [Name_Lang_enUS](#namelangenus)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelangengb)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelangkokr)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelangfrfr)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelangdede)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelangencn)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelangzhcn)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelangentw)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelangzhtw)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelangeses)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelangesmx)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelangruru)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelangptpt)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelangptbr)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelangitit)         | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelangunk)           | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelangmask)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ItemID_1](#itemid1)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_2](#itemid2)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_3](#itemid3)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_4](#itemid4)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_5](#itemid5)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_6](#itemid6)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_7](#itemid7)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_8](#itemid8)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_9](#itemid9)                    | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_10](#itemid10)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_11](#itemid11)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_12](#itemid12)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_13](#itemid13)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_14](#itemid14)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_15](#itemid15)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_16](#itemid16)                  | INT          |          | NO   |     | 0       |       |         |
+| [ItemID_17](#itemid17)                  | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_1](#setspellid1)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_2](#setspellid2)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_3](#setspellid3)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_4](#setspellid4)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_5](#setspellid5)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_6](#setspellid6)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_7](#setspellid7)            | INT          |          | NO   |     | 0       |       |         |
+| [SetSpellID_8](#setspellid8)            | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_1](#setthreshold1)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_2](#setthreshold2)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_3](#setthreshold3)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_4](#setthreshold4)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_5](#setthreshold5)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_6](#setthreshold6)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_7](#setthreshold7)        | INT          |          | NO   |     | 0       |       |         |
+| [SetThreshold_8](#setthreshold8)        | INT          |          | NO   |     | 0       |       |         |
+| [RequiredSkill](#requiredskill)         | INT          |          | NO   |     | 0       |       |         |
+| [RequiredSkillRank](#requiredskillrank) | INT          |          | NO   |     | 0       |       |         |
+
+**Description of the table's fields**
 
 ### ID
 
@@ -68,71 +72,71 @@ ID references to the [itemset_dbc](#id) entries.
 
 ### Name_Lang_enUS
 
-Presumed reference name.
+The name of the item set in the enUS locale. The core reads the locale columns by position, not by name, and this is column 1 of the 16, which is the slot for enUS.
 
 ### Name_Lang_enGB
 
-Presumed reference name.
+The name of the item set in the koKR locale. The core reads the locale columns by position, not by name, and this is column 2 of the 16, which is the slot for koKR.
 
 ### Name_Lang_koKR
 
-Presumed reference name.
+The name of the item set in the frFR locale. The core reads the locale columns by position, not by name, and this is column 3 of the 16, which is the slot for frFR.
 
 ### Name_Lang_frFR
 
-Presumed reference name.
+The name of the item set in the deDE locale. The core reads the locale columns by position, not by name, and this is column 4 of the 16, which is the slot for deDE.
 
 ### Name_Lang_deDE
 
-Presumed reference name.
+The name of the item set in the zhCN locale. The core reads the locale columns by position, not by name, and this is column 5 of the 16, which is the slot for zhCN.
 
 ### Name_Lang_enCN
 
-Presumed reference name.
+The name of the item set in the zhTW locale. The core reads the locale columns by position, not by name, and this is column 6 of the 16, which is the slot for zhTW.
 
 ### Name_Lang_zhCN
 
-Presumed reference name.
+The name of the item set in the esES locale. The core reads the locale columns by position, not by name, and this is column 7 of the 16, which is the slot for esES.
 
 ### Name_Lang_enTW
 
-Presumed reference name.
+The name of the item set in the esMX locale. The core reads the locale columns by position, not by name, and this is column 8 of the 16, which is the slot for esMX.
 
 ### Name_Lang_zhTW
 
-Presumed reference name.
+The name of the item set in the ruRU locale. The core reads the locale columns by position, not by name, and this is column 9 of the 16, which is the slot for ruRU.
 
 ### Name_Lang_esES
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_esMX
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_ruRU
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_ptPT
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_ptBR
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_itIT
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_Unk
 
-Presumed reference name.
+Not supported in 3.3.5a and not used. The core's `LocaleConstant` list has only nine locales (enUS, koKR, frFR, deDE, zhCN, zhTW, esES, esMX, ruRU), and they are the first nine text columns.
 
 ### Name_Lang_Mask
 
-Presumed reference ID for the Language Mask.
+The locale mask of the name. Not used by the core.
 
 ### ItemID_1
 

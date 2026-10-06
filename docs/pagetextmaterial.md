@@ -16,14 +16,17 @@ This DBC contains material used to display a gossip window for quest or page tex
 
 ## Structure
 
-| Column | Field   | Type    |
-|--------|---------|---------|
-| 1      | ID      | Integer |
-| 2      | sRefCon | String  |
+| Column | Field | Type   | Comment |
+| :----: | :---- | :----- | :------ |
+| 0      | ID    | uint32 |         |
+| 1      | Name  | string |         |
 
 ## **Content**
 
 &lt;/noinclude&gt;
+
+<details>
+<summary>Show the content of PageTextMaterial.dbc</summary>
 
 | ID | Name      |
 |----|-----------|
@@ -34,3 +37,5 @@ This DBC contains material used to display a gossip window for quest or page tex
 | 5  | Bronze    |
 | 6  | Valentine |
 | 7  | Illidan   |
+
+</details>

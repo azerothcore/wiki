@@ -6,21 +6,16 @@
 
 This table holds threat values on all spells that should either give or take away threat.
 
-**Table Structure**
+**Table: spell\_threat's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    |       |                                           |
-| [flatMod][2]  | INT       | SIGNED     |     | YES  | NULL    |       |                                           |
-| [pctMod][3]   | FLOAT     |            |     | NO   | 1       |       | threat multiplier for damage/healing      |
-| [apPctMod][4] | FLOAT     |            |     | NO   | 0       |       | additional threat bonus from attack power |
+| Field                 | Type  |          | Null | Key | Default | Extra | Comment                                   |
+| :-------------------- | :---- | :------- | :--: | :-: | :-----: | :---: | :---------------------------------------- |
+| [entry](#entry)       | INT   | UNSIGNED | NO   | PRI |         |       |                                           |
+| [flatMod](#flatmod)   | INT   |          | YES  |     | NULL    |       |                                           |
+| [pctMod](#pctmod)     | FLOAT |          | NO   |     | 1       |       | threat multiplier for damage/healing      |
+| [apPctMod](#appctmod) | FLOAT |          | NO   |     | 0       |       | additional threat bonus from attack power |
 
-[1]: #entry
-[2]: #flatmod
-[3]: #pctmod
-[4]: #appctmod
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

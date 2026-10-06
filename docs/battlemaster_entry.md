@@ -6,17 +6,14 @@
 
 Holds information on which NPC can start what battleground or arena.
 
-**Table Structure**
+**Table: battlemaster\_entry's Structure**
 
-| Field            | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
-| ---------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
-| [entry][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Entry of a creature     |
-| [bg_template][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Batleground template id |
+| Field                      | Type |          | Null | Key | Default | Extra | Comment                  |
+| :------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [entry](#entry)            | INT  | UNSIGNED | NO   | PRI | 0       |       | Entry of a creature      |
+| [bg_template](#bgtemplate) | INT  | UNSIGNED | NO   |     | 0       |       | Battleground template id |
 
-[1]: #entry
-[2]: #bgtemplate
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

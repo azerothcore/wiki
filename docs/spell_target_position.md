@@ -6,29 +6,20 @@
 
 This table holds coordinate information on where the player should be teleported to when a spell with target type: TARGET\_DEST\_DB(17).
 
-**Table Structure**
+**Table: spell\_target\_position's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment    |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [id][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       | Identifier |
-| [EffectIndex][7]   | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |            |
-| [MapID][2]         | SMALLINT  | UNSIGNED   |     | NO   | 0       |       |            |
-| [PositionX][3]     | FLOAT     |            |     | NO   | 0       |       |            |
-| [PositionY][4]     | FLOAT     |            |     | NO   | 0       |       |            |
-| [PositionZ][5]     | FLOAT     |            |     | NO   | 0       |       |            |
-| [Orientation][6]   | FLOAT     |            |     | NO   | 0       |       |            |
-| [VerifiedBuild][8] | INT       |            |     | YES  | NULL    |       |            |
+| Field                           | Type     |          | Null | Key | Default | Extra | Comment    |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :--------- |
+| [ID](#id)                       | INT      | UNSIGNED | NO   | PRI | 0       |       | Identifier |
+| [EffectIndex](#effectindex)     | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |            |
+| [MapID](#mapid)                 | SMALLINT | UNSIGNED | NO   |     | 0       |       |            |
+| [PositionX](#positionx)         | FLOAT    |          | NO   |     | 0       |       |            |
+| [PositionY](#positiony)         | FLOAT    |          | NO   |     | 0       |       |            |
+| [PositionZ](#positionz)         | FLOAT    |          | NO   |     | 0       |       |            |
+| [Orientation](#orientation)     | FLOAT    |          | NO   |     | 0       |       |            |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |       |            |
 
-[1]: #id
-[2]: #mapid
-[3]: #positionx
-[4]: #positiony
-[5]: #positionz
-[6]: #orientation
-[7]: #effectindex
-[8]: #verifiedbuild
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

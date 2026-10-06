@@ -2,20 +2,20 @@
 
 [<-Back-to:World](database-world)
 
-**The \`locales\_points\_of\_interest\` table**
+**The \`points\_of\_interest\_locale\` table**
 
 Translations of the names in [points\_of\_interest](points_of_interest).
 
-**Table Structure**
+**Table: points\_of\_interest\_locale's Structure**
 
-| Field                           | Type       | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                       | INT        | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [locale](#locale)               | VARCHAR(4) |            |     |      |         |       |         |
-| [Name](#name)                   | TEXT       |            |     | YES  | NULL    |       |         |
-| [VerifiedBuild](#verifiedbuild) | INT        |            |     | YES  | NULL    |       |         |
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Name](#name)                   | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

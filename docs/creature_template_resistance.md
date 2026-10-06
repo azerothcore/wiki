@@ -1,24 +1,21 @@
-# creature_template_resistance
+# creature\_template\_resistance
 
 [<-Back-to:World](database-world)
 
-**The \`creature_template_resistance\` table**
+**The \`creature\_template\_resistance\` table**
 
-**Table Structure**
+Holds the resistance of a creature template to each spell school.
 
-| Field              | Type      | Attribute | Key | Null | Default | Extra | Comment |
-| ------------------ | --------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [CreatureID][1]    | MEDIUMINT | UNSIGNED  | PRI | NO   |         |       |         |
-| [School][2]        | TINYINT   | UNSIGNED  | PRI | NO   |         |       |         |
-| [Resistance][3]    | SMALLINT  | SIGNED    |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | SMALLINT  | SIGNED    |     | YES  | 0       |       |         |
+**Table: creature\_template\_resistance's Structure**
 
-[1]: #creatureid
-[2]: #school
-[3]: #resistance
-[4]: #verifiedbuild
+| Field                           | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureID](#creatureid)       | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [School](#school)               | TINYINT  | UNSIGNED | NO   | PRI |         |       |         |
+| [Resistance](#resistance)       | SMALLINT |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

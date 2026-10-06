@@ -17,23 +17,25 @@ This DBC contains information about the triggers of the in-game areas.
 ## Structure
 
 
-| Column | Field             | Type    | Notes                                                |
-| ------ | ----------------- | ------- | ---------------------------------------------------- |
-| 1      | ID                | Integer |                                                      |
-| 2      | iRefID_[Map](map) | Integer |                                                      |
-| 3      | X                 | Float   |                                                      |
-| 4      | Y                 | Float   |                                                      |
-| 5      | Z                 | Float   |                                                      |
-| +      | phaseshift        | Integer | New with wotlk or cataclysm                          |
-| 6      | radius            | Float   | Seems to be a box of size yards with center at x,y,z |
-| 7      | box_x             | Float   | Most commonly used when size is 0, but not always    |
-| 8      | box_y             | Float   | Most commonly used when size is 0, but not always    |
-| 9      | box_z             | Float   | Most commonly used when size is 0, but not always    |
-| 10     | box_orientation   | Float   | Most commonly used when size is 0, but not always    |
+| Column | Field       | Type   | Comment                                                |
+| :----: | :---------- | :----- | :----------------------------------------------------- |
+| 0      | ID          | uint32 |                                                        |
+| 1      | ContinentID | uint32 | iRefID_[Map](map)                                      |
+| 2      | Pos_X       | float  |                                                        |
+| 3      | Pos_Y       | float  |                                                        |
+| 4      | Pos_Z       | float  |                                                        |
+| 5      | Radius      | float  | Seems to be a box of size yards with center at x, y, z |
+| 6      | BoxLength   | float  | Most commonly used when size is 0, but not always      |
+| 7      | BoxWidth    | float  | Most commonly used when size is 0, but not always      |
+| 8      | BoxHeight   | float  | Most commonly used when size is 0, but not always      |
+| 9      | BoxYaw      | float  | Most commonly used when size is 0, but not always      |
 
  
 
 ## Content
+
+<details>
+<summary>Show the content of AreaTrigger.dbc</summary>
 
 | ID   | MapId | X             | Y             | Z           | Size      | Box_X      | Box_Y      | Box_Z      | Box_O    |
 | ---- | ----- | ------------- | ------------- | ----------- | --------- | ---------- | ---------- | ---------- | -------- |
@@ -1257,3 +1259,5 @@ This DBC contains information about the triggers of the in-game areas.
 | 5752 | 668   | 5433.129883   | 2137.969971   | 720.091980  | 0.00      | 46.770000  | 4.574000   | 30.00      | 5.508000 |
 | 5867 | 724   | 3152.080078   | 362.875000    | 85.517502   | 100.00    | 0.00       | 0.00       | 0.00       | 0.00     |
 | 5872 | 724   | 3286.800049   | 533.392029    | 98.571800   | 0.00      | 5.00       | 16.00      | 24.00      | 6.248000 |
+
+</details>

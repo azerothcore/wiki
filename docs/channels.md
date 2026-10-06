@@ -6,27 +6,19 @@
 
 Information and settings for ingame, player-based chat channels (not affecting the default system channels).
 
-**Table Structure**
+**Table: channels's Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra          | Comment |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [channelId][1]  | INT          | SIGNED     | PRI | NO   |         | AUTO_INCREMENT |         |
-| [name][2]       | VARCHAR(128) | SIGNED     |     | NO   |         |                |         |
-| [team][3]       | INT          | UNSIGNED   |     | NO   |         |                |         |
-| [announce][4]   | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
-| [ownership][5]  | TINYINT      | UNSIGNED   |     | NO   | 1       |                |         |
-| [password][6]   | VARCHAR(32)  | SIGNED     |     | YES  |         |                |         |
-| [lastUsed][7]   | INT          | UNSIGNED   |     | NO   |         |                |         |
+| Field                   | Type         |          | Null | Key | Default | Extra          | Comment |
+| :---------------------- | :----------- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [channelId](#channelid) | INT          | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [name](#name)           | VARCHAR(128) |          | NO   |     |         |                |         |
+| [team](#team)           | INT          | UNSIGNED | NO   |     |         |                |         |
+| [announce](#announce)   | TINYINT      | UNSIGNED | NO   |     | 1       |                |         |
+| [ownership](#ownership) | TINYINT      | UNSIGNED | NO   |     | 1       |                |         |
+| [password](#password)   | VARCHAR(32)  |          | YES  |     | NULL    |                |         |
+| [lastUsed](#lastused)   | INT          | UNSIGNED | NO   |     |         |                |         |
 
-[1]: #channelid
-[2]: #name
-[3]: #team
-[4]: #announce
-[5]: #ownership
-[6]: #password
-[7]: #lastused
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### channelId
 

@@ -6,31 +6,21 @@
 
 This table is used to store the tutorial state of all the accounts.
 
-**Table Structure**
+**Table: account\_tutorial's Structure**
 
-| Field          | Type | Attributes | Key | Null | Default | Extra  | Comment            |
-| -------------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------ |
-| [accountId][1] | INT  | UNSIGNED   | PRI | NO   | 0       | Unique | Account Identifier |
-| [tut0][2]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut1][3]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut2][4]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut3][5]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut4][6]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut5][7]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut6][8]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
-| [tut7][9]      | INT  | UNSIGNED   |     | NO   | 0       |        |                    |
+| Field                   | Type |          | Null | Key | Default | Extra | Comment            |
+| :---------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :----------------- |
+| [accountId](#accountid) | INT  | UNSIGNED | NO   | PRI | 0       |       | Account Identifier |
+| [tut0](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut1](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut2](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut3](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut4](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut5](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut6](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
+| [tut7](#tut0-7)         | INT  | UNSIGNED | NO   |     | 0       |       |                    |
 
-[1]: #accountid
-[2]: #tut0-7
-[3]: #tut0-7
-[4]: #tut0-7
-[5]: #tut0-7
-[6]: #tut0-7
-[7]: #tut0-7
-[8]: #tut0-7
-[9]: #tut0-7
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### accountId
 

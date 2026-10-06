@@ -12,21 +12,24 @@ This DBC contains emotes which can be used by NPCs.
 
 ## Structure
 
-| Column | Type  | Comment                                                                                                                                               |
-| ------ | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1      | long  | An ID for the emote. Must be unique.                                                                                                                  |
-| 2      | str   | A descriptive name for the emote.                                                                                                                     |
-| 3      | long  | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/AnimationData). This is the ID of the animation to play.                         |
-| 4      | flags |                                                                                                                                                       |
-| 5      | flags |                                                                                                                                                       |
-| 6      | long  |                                                                                                                                                       |
-| 7      | long  | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/SoundEntries). This is the ID of the sound to play when the animation is played. |
+| Column | Field              | Type   | emotes\_dbc column                                  | Comment                                                                                                                                                                                          |
+| :----: | :----------------- | :----- | :-------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0      | ID                 | uint32 | [ID](emotes_dbc#id)                                 | An ID for the emote. Must be unique.                                                                                                                                                             |
+| 1      | EmoteSlashCommand  | string | [EmoteSlashCommand](emotes_dbc#emoteslashcommand)   | A descriptive name for the emote.                                                                                                                                                                |
+| 2      | AnimID             | uint32 | [AnimID](emotes_dbc#animid)                         | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/AnimationData). This is the ID of the animation to play. ID in [AnimationData.dbc](dbc-animationdata)                       |
+| 3      | EmoteFlags         | uint32 | [EmoteFlags](emotes_dbc#emoteflags)                 |                                                                                                                                                                                                  |
+| 4      | EmoteSpecProc      | uint32 | [EmoteSpecProc](emotes_dbc#emotespecproc)           |                                                                                                                                                                                                  |
+| 5      | EmoteSpecProcParam | uint32 | [EmoteSpecProcParam](emotes_dbc#emotespecprocparam) |                                                                                                                                                                                                  |
+| 6      | EventSoundID       | uint32 | [EventSoundID](emotes_dbc#eventsoundid)             | Refers to an ID in [this DBC file](http://collab.kpsn.org/display/tc/SoundEntries). This is the ID of the sound to play when the animation is played. ID in [SoundEntries.dbc](dbc-soundentries) |
 
 Information on the structure this DBC file was taken from [here](https://web.archive.org/web/20161130074340/http://www.pxr.dk/wowdev/wiki/index.php?title=Emotes.dbc) and [here](https://wowdev.wiki/DB/Emotes). For any information on the columns without a comment, just refer to [that page](https://web.archive.org/web/20161130074340/http://www.pxr.dk/wowdev/wiki/index.php?title=Emotes.dbc) or [here](https://wowdev.wiki/DB/Emotes).
 
 ## Content
 
 When testing the NPC emotes listed below using the *.npc playemote \#* command, the NPC generally continuously plays the specified emote. When playing the emote through, for example, and SAI script, the NPC may use the emote differently.
+
+<details>
+<summary>Show the content of Emotes.dbc</summary>
 
 | ID  | Emote name                          | Comment                                       |
 | --- | ----------------------------------- | --------------------------------------------- |
@@ -206,3 +209,5 @@ When testing the NPC emotes listed below using the *.npc playemote \#* command, 
 | 474 | STATE_READYSPELLOMNI                |                                               |
 | 475 | STATE_HOLD_JOUST                    |                                               |
 | 476 | ONESHOT_CRY (JAINA PROUDMOORE ONLY) |                                               |
+
+</details>

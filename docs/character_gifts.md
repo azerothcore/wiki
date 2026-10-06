@@ -6,21 +6,16 @@
 
 This table holds data about wrapped/gift items.
 
-**Table Structure**
+**Table: character\_gifts's Structure**
 
-| Field          | Type | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]      | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [item_guid][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [entry][3]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [flags][4]     | INT  | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                  | Type |          | Null | Key | Default | Extra | Comment |
+| :--------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)          | INT  | UNSIGNED | NO   | MUL | 0       |       |         |
+| [item_guid](#itemguid) | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [entry](#entry)        | INT  | UNSIGNED | NO   |     | 0       |       |         |
+| [flags](#flags)        | INT  | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #guid
-[2]: #itemguid
-[3]: #entry
-[4]: #flags
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -2,293 +2,154 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: item\_template's Structure**
 
 Holds information on every item that exists in the game. All items are created from their template stored in this table.
 
-(See additional information in the *ItemPrototype.h* file.)
+(See additional information in the *[ItemTemplate.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Entities/Item/ItemTemplate.h)* file.)
 
-| Field                           | Type         | Attributes | Key | Null | Default | extra | Comment             |
-| ------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------- |
-| [entry][1]                      | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |                     |
-| [class][2]                      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [subclass][3]                   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [SoundOverrideSubclass][4]      | TINYINT      | SIGNED     |     | NO   | -1      |       |                     |
-| [name][5]                       | VARCHAR(255) | SIGNED     |     | NO   | NULL    |       |                     |
-| [displayid][6]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Quality][7]                    | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Flags][8]                      | BIGINT       | SIGNED     |     | NO   | 0       |       |                     |
-| [FlagsExtra][9]                 | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [BuyCount][10]                  | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                     |
-| [BuyPrice][11]                  | BIGINT       | SIGNED     |     | NO   | 0       |       |                     |
-| [SellPrice][12]                 | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [InventoryType][13]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [AllowableClass][14]            | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [AllowableRace][15]             | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [ItemLevel][16]                 | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredLevel][17]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredSkill][18]             | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredSkillRank][19]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [requiredspell][20]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [requiredhonorrank][21]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredCityRank][22]          | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredReputationFaction][23] | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RequiredReputationRank][24]    | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [maxcount][25]                  | INT          | SIGNED     |     | NO   | 0       |       |                     |
-| [stackable][26]                 | INT          | SIGNED     |     | NO   | 1       |       |                     |
-| [ContainerSlots][27]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_type1][28]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value1][29]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type2][30]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value2][31]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type3][32]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value3][33]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type4][34]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value4][35]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type5][36]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value5][37]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type6][38]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value6][39]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type7][40]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value7][41]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type8][42]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value8][43]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type9][44]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value9][45]               | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [stat_type10][46]               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [stat_value10][47]              | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [ScalingStatDistribution][48]   | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [ScalingStatValue][49]          | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [dmg_min1][50]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [dmg_max1][51]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [dmg_type1][52]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [dmg_min2][53]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [dmg_max2][54]                  | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [dmg_type2][55]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [armor][56]                     | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [holy_res][57]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [fire_res][58]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [nature_res][59]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [frost_res][60]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [shadow_res][61]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [arcane_res][62]                | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [delay][63]                     | SMALLINT     | UNSIGNED   |     | NO   | 1000    |       |                     |
-| [ammo_type][64]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RangedModRange][65]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellid_1][66]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_1][67]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_1][68]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [spellppmRate_1][69]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_1][70]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_1][71]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_1][72]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_2][73]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_2][74]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_2][75]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [spellppmRate_2][76]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_2][77]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_2][78]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_2][79]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_3][80]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_3][81]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_3][82]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [spellppmRate_3][83]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_3][84]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_3][85]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_3][86]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_4][87]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_4][88]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_4][89]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [spellppmRate_4][90]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_4][91]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_4][92]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_4][93]   | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellid_5][94]                 | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [spelltrigger_5][95]            | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcharges_5][96]            | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [spellppmRate_5][97]            | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [spellcooldown_5][98]           | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [spellcategory_5][99]           | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [spellcategorycooldown_5][100]  | INT          | SIGNED     |     | NO   | -1      |       |                     |
-| [bonding][101]                  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [description][102]              | VARCHAR(255) | SIGNED     |     | NO   | NULL    |       |                     |
-| [PageText][103]                 | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [LanguageID][104]               | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [PageMaterial][105]             | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [startquest][106]               | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [lockid][107]                   | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Material][108]                 | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [sheath][109]                   | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [RandomProperty][110]           | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [RandomSuffix][111]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [block][112]                    | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [itemset][113]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [MaxDurability][114]            | SMALLINT     | UNSIGNED   |     | NO   | 0       |       |                     |
-| [area][115]                     | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [Map][116]                      | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [BagFamily][117]                | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [TotemCategory][118]            | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [socketColor_1][119]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_1][120]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [socketColor_2][121]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_2][122]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [socketColor_3][123]            | TINYINT      | SIGNED     |     | NO   | 0       |       |                     |
-| [socketContent_3][124]          | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [socketBonus][125]              | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [GemProperties][126]            | MEDIUMINT    | SIGNED     |     | NO   | 0       |       |                     |
-| [RequiredDisenchantSkill][127]  | SMALLINT     | SIGNED     |     | NO   | -1      |       |                     |
-| [ArmorDamageModifier][128]      | FLOAT        | SIGNED     |     | NO   | 0       |       |                     |
-| [duration][129]                 | INT          | UNSIGNED   |     | NO   | 0       |       | Duration in seconds |
-| [ItemLimitCategory][130]        | SMALLINT     | SIGNED     |     | NO   | 0       |       |                     |
-| [HolidayId][131]                | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [ScriptName][132]               | VARCHAR(64)  | SIGNED     |     | NO   | NULL    |       |                     |
-| [DisenchantID][133]             | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |                     |
-| [FoodType][134]                 | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                     |
-| [minMoneyLoot][135]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [maxMoneyLoot][136]             | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [flagsCustom][137]              | INT          | UNSIGNED   |     | NO   | 0       |       |                     |
-| [VerifiedBuild][138]            | SMALLINT     | SIGNED     |     | YES  | 1       |       | (WDBVerified)       |
+| Field                                                   | Type         |          | Null | Key | Default | Extra | Comment             |
+| :------------------------------------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------------------ |
+| [entry](#entry)                                         | INT          | UNSIGNED | NO   | PRI | 0       |       |                     |
+| [class](#class)                                         | TINYINT      | UNSIGNED | NO   | MUL | 0       |       |                     |
+| [subclass](#subclass)                                   | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [SoundOverrideSubclass](#soundoverridesubclass)         | TINYINT      |          | NO   |     | -1      |       |                     |
+| [name](#name)                                           | VARCHAR(255) |          | NO   | MUL | ''      |       |                     |
+| [displayid](#displayid)                                 | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [Quality](#quality)                                     | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [Flags](#flags)                                         | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [FlagsExtra](#flagsextra)                               | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [BuyCount](#buycount)                                   | TINYINT      | UNSIGNED | NO   |     | 1       |       |                     |
+| [BuyPrice](#buyprice)                                   | BIGINT       |          | NO   |     | 0       |       |                     |
+| [SellPrice](#sellprice)                                 | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [InventoryType](#inventorytype)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [AllowableClass](#allowableclass)                       | INT          |          | NO   |     | -1      |       |                     |
+| [AllowableRace](#allowablerace)                         | INT          |          | NO   |     | -1      |       |                     |
+| [ItemLevel](#itemlevel)                                 | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [RequiredLevel](#requiredlevel)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [RequiredSkill](#requiredskill)                         | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [RequiredSkillRank](#requiredskillrank)                 | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [requiredspell](#requiredspell)                         | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [requiredhonorrank](#requiredhonorrank)                 | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [RequiredCityRank](#requiredcityrank)                   | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [RequiredReputationFaction](#requiredreputationfaction) | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [RequiredReputationRank](#requiredreputationrank)       | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [maxcount](#maxcount)                                   | INT          |          | NO   |     | 0       |       |                     |
+| [stackable](#stackable)                                 | INT          |          | YES  |     | 1       |       |                     |
+| [ContainerSlots](#containerslots)                       | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_type1](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value1](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type2](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value2](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type3](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value3](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type4](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value4](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type5](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value5](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type6](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value6](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type7](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value7](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type8](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value8](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type9](#stattype)                                 | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value9](#statvalue)                               | INT          |          | NO   |     | 0       |       |                     |
+| [stat_type10](#stattype)                                | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [stat_value10](#statvalue)                              | INT          |          | NO   |     | 0       |       |                     |
+| [ScalingStatDistribution](#scalingstatdistribution)     | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [ScalingStatValue](#scalingstatvalue)                   | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [dmg_min1](#dmgmin)                                     | FLOAT        |          | NO   |     | 0       |       |                     |
+| [dmg_max1](#dmgmax)                                     | FLOAT        |          | NO   |     | 0       |       |                     |
+| [dmg_type1](#dmgtype)                                   | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [dmg_min2](#dmgmin)                                     | FLOAT        |          | NO   |     | 0       |       |                     |
+| [dmg_max2](#dmgmax)                                     | FLOAT        |          | NO   |     | 0       |       |                     |
+| [dmg_type2](#dmgtype)                                   | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [armor](#armor)                                         | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [holy_res](#holyres)                                    | SMALLINT     |          | YES  |     | NULL    |       |                     |
+| [fire_res](#fireres)                                    | SMALLINT     |          | YES  |     | NULL    |       |                     |
+| [nature_res](#natureres)                                | SMALLINT     |          | YES  |     | NULL    |       |                     |
+| [frost_res](#frostres)                                  | SMALLINT     |          | YES  |     | NULL    |       |                     |
+| [shadow_res](#shadowres)                                | SMALLINT     |          | YES  |     | NULL    |       |                     |
+| [arcane_res](#arcaneres)                                | SMALLINT     |          | YES  |     | NULL    |       |                     |
+| [delay](#delay)                                         | SMALLINT     | UNSIGNED | NO   |     | 1000    |       |                     |
+| [ammo_type](#ammotype)                                  | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [RangedModRange](#rangedmodrange)                       | FLOAT        |          | NO   |     | 0       |       |                     |
+| [spellid_1](#spellid)                                   | INT          |          | NO   |     | 0       |       |                     |
+| [spelltrigger_1](#spelltrigger)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcharges_1](#spellcharges)                         | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [spellppmRate_1](#spellppmrate)                         | FLOAT        |          | NO   |     | 0       |       |                     |
+| [spellcooldown_1](#spellcooldown)                       | INT          |          | NO   |     | -1      |       |                     |
+| [spellcategory_1](#spellcategory)                       | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcategorycooldown_1](#spellcategorycooldown)       | INT          |          | NO   |     | -1      |       |                     |
+| [spellid_2](#spellid)                                   | INT          |          | NO   |     | 0       |       |                     |
+| [spelltrigger_2](#spelltrigger)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcharges_2](#spellcharges)                         | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [spellppmRate_2](#spellppmrate)                         | FLOAT        |          | NO   |     | 0       |       |                     |
+| [spellcooldown_2](#spellcooldown)                       | INT          |          | NO   |     | -1      |       |                     |
+| [spellcategory_2](#spellcategory)                       | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcategorycooldown_2](#spellcategorycooldown)       | INT          |          | NO   |     | -1      |       |                     |
+| [spellid_3](#spellid)                                   | INT          |          | NO   |     | 0       |       |                     |
+| [spelltrigger_3](#spelltrigger)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcharges_3](#spellcharges)                         | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [spellppmRate_3](#spellppmrate)                         | FLOAT        |          | NO   |     | 0       |       |                     |
+| [spellcooldown_3](#spellcooldown)                       | INT          |          | NO   |     | -1      |       |                     |
+| [spellcategory_3](#spellcategory)                       | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcategorycooldown_3](#spellcategorycooldown)       | INT          |          | NO   |     | -1      |       |                     |
+| [spellid_4](#spellid)                                   | INT          |          | NO   |     | 0       |       |                     |
+| [spelltrigger_4](#spelltrigger)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcharges_4](#spellcharges)                         | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [spellppmRate_4](#spellppmrate)                         | FLOAT        |          | NO   |     | 0       |       |                     |
+| [spellcooldown_4](#spellcooldown)                       | INT          |          | NO   |     | -1      |       |                     |
+| [spellcategory_4](#spellcategory)                       | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcategorycooldown_4](#spellcategorycooldown)       | INT          |          | NO   |     | -1      |       |                     |
+| [spellid_5](#spellid)                                   | INT          |          | NO   |     | 0       |       |                     |
+| [spelltrigger_5](#spelltrigger)                         | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcharges_5](#spellcharges)                         | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [spellppmRate_5](#spellppmrate)                         | FLOAT        |          | NO   |     | 0       |       |                     |
+| [spellcooldown_5](#spellcooldown)                       | INT          |          | NO   |     | -1      |       |                     |
+| [spellcategory_5](#spellcategory)                       | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [spellcategorycooldown_5](#spellcategorycooldown)       | INT          |          | NO   |     | -1      |       |                     |
+| [bonding](#bonding)                                     | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [description](#description)                             | VARCHAR(255) |          | NO   |     | ''      |       |                     |
+| [PageText](#pagetext)                                   | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [LanguageID](#languageid)                               | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [PageMaterial](#pagematerial)                           | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [startquest](#startquest)                               | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [lockid](#lockid)                                       | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [Material](#material)                                   | TINYINT      |          | NO   |     | 0       |       |                     |
+| [sheath](#sheath)                                       | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [RandomProperty](#randomproperty)                       | INT          |          | NO   |     | 0       |       |                     |
+| [RandomSuffix](#randomsuffix)                           | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [block](#block)                                         | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [itemset](#itemset)                                     | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [MaxDurability](#maxdurability)                         | SMALLINT     | UNSIGNED | NO   |     | 0       |       |                     |
+| [area](#area)                                           | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [Map](#map)                                             | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [BagFamily](#bagfamily)                                 | INT          |          | NO   |     | 0       |       |                     |
+| [TotemCategory](#totemcategory)                         | INT          |          | NO   |     | 0       |       |                     |
+| [socketColor_1](#socketcolor)                           | TINYINT      |          | NO   |     | 0       |       |                     |
+| [socketContent_1](#socketcontent)                       | INT          |          | NO   |     | 0       |       |                     |
+| [socketColor_2](#socketcolor)                           | TINYINT      |          | NO   |     | 0       |       |                     |
+| [socketContent_2](#socketcontent)                       | INT          |          | NO   |     | 0       |       |                     |
+| [socketColor_3](#socketcolor)                           | TINYINT      |          | NO   |     | 0       |       |                     |
+| [socketContent_3](#socketcontent)                       | INT          |          | NO   |     | 0       |       |                     |
+| [socketBonus](#socketbonus)                             | INT          |          | NO   |     | 0       |       |                     |
+| [GemProperties](#gemproperties)                         | INT          |          | NO   |     | 0       |       |                     |
+| [RequiredDisenchantSkill](#requireddisenchantskill)     | SMALLINT     |          | NO   |     | -1      |       |                     |
+| [ArmorDamageModifier](#armordamagemodifier)             | FLOAT        |          | NO   |     | 0       |       |                     |
+| [duration](#duration)                                   | INT          | UNSIGNED | NO   |     | 0       |       | Duration in seconds |
+| [ItemLimitCategory](#itemlimitcategory)                 | SMALLINT     |          | NO   |     | 0       |       |                     |
+| [HolidayId](#holidayid)                                 | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [ScriptName](#scriptname)                               | VARCHAR(64)  |          | NO   |     | ''      |       |                     |
+| [DisenchantID](#disenchantid)                           | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [FoodType](#foodtype)                                   | TINYINT      | UNSIGNED | NO   |     | 0       |       |                     |
+| [minMoneyLoot](#minmoneyloot)                           | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [maxMoneyLoot](#maxmoneyloot)                           | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [flagsCustom](#flagscustom)                             | INT          | UNSIGNED | NO   |     | 0       |       |                     |
+| [VerifiedBuild](#verifiedbuild)                         | INT          |          | YES  |     | NULL    |       | (WDBVerified)       |
 
-[1]: #entry
-[2]: #class
-[3]: #subclass
-[4]: #soundoverridesubclass
-[5]: #name
-[6]: #displayid
-[7]: #quality
-[8]: #flags
-[9]: #flagsextra
-[10]: #buycount
-[11]: #buyprice
-[12]: #sellprice
-[13]: #inventorytype
-[14]: #allowableclass
-[15]: #allowablerace
-[16]: #itemlevel
-[17]: #requiredlevel
-[18]: #requiredskill
-[19]: #requiredskillrank
-[20]: #requiredspell
-[21]: #requiredhonorrank
-[22]: #requiredcityrank
-[23]: #requiredreputationfaction
-[24]: #requiredreputationrank
-[25]: #maxcount
-[26]: #stackable
-[27]: #containerslots
-[28]: #stattype
-[29]: #statvalue
-[30]: #stattype
-[31]: #statvalue
-[32]: #stattype
-[33]: #statvalue
-[34]: #stattype
-[35]: #statvalue
-[36]: #stattype
-[37]: #statvalue
-[38]: #stattype
-[39]: #statvalue
-[40]: #stattype
-[41]: #statvalue
-[42]: #stattype
-[43]: #statvalue
-[44]: #stattype
-[45]: #statvalue
-[46]: #stattype
-[47]: #statvalue
-[48]: #scalingstatdistribution
-[49]: #scalingstatvalue
-[50]: #dmgmin
-[51]: #dmgmax
-[52]: #dmgtype
-[53]: #dmgmin
-[54]: #dmgmax
-[55]: #dmgtype
-[56]: #armor
-[57]: #holyres
-[58]: #fireres
-[59]: #natureres
-[60]: #frostres
-[61]: #shadowres
-[62]: #arcaneres
-[63]: #delay
-[64]: #ammotype
-[65]: #rangedmodrange
-[66]: #spellid
-[67]: #spelltrigger
-[68]: #spellcharges
-[69]: #spellppmrate
-[70]: #spellcooldown
-[71]: #spellcategory
-[72]: #spellcategorycooldown
-[73]: #spellid
-[74]: #spelltrigger
-[75]: #spellcharges
-[76]: #spellppmrate
-[77]: #spellcooldown
-[78]: #spellcategory
-[79]: #spellcategorycooldown
-[80]: #spellid
-[81]: #spelltrigger
-[82]: #spellcharges
-[83]: #spellppmrate
-[84]: #spellcooldown
-[85]: #spellcategory
-[86]: #spellcategorycooldown
-[87]: #spellid
-[88]: #spelltrigger
-[89]: #spellcharges
-[90]: #spellppmrate
-[91]: #spellcooldown
-[92]: #spellcategory
-[93]: #spellcategorycooldown
-[94]: #spellid
-[95]: #spelltrigger
-[96]: #spellcharges
-[97]: #spellppmrate
-[98]: #spellcooldown
-[99]: #spellcategory
-[100]: #spellcategorycooldown
-[101]: #bonding
-[102]: #description
-[103]: #pagetext
-[104]: #languageid
-[105]: #pagematerial
-[106]: #startquest
-[107]: #lockid
-[108]: #material
-[109]: #sheath
-[110]: #randomproperty
-[111]: #randomsuffix
-[112]: #block
-[113]: #itemset
-[114]: #maxdurability
-[115]: #area
-[116]: #map
-[117]: #bagfamily
-[118]: #totemcategory
-[119]: #socketcolor
-[120]: #socketcontent
-[121]: #socketcolor
-[122]: #socketcontent
-[123]: #socketcolor
-[124]: #socketcontent
-[125]: #socketbonus
-[126]: #gemproperties
-[127]: #requireddisenchantskill
-[128]: #armordamagemodifier
-[129]: #duration
-[130]: #itemlimitcategory
-[131]: #holidayid
-[132]: #scriptname
-[133]: #disenchantid
-[134]: #foodtype
-[135]: #minmoneyloot
-[136]: #maxmoneyloot
-[137]: #flagscustom
-[138]: #verifiedbuild
-
-**Field Descriptions**
+**Description of the table's fields**
 
 ### entry
 
@@ -474,77 +335,77 @@ The quality of the item.
 
 Bitmask field that contains flags that the item has on it. As all other such fields, just add the flags together to combine them. Possible flags are listed below.
 
-| Flag       | Bit        | Name                             | Comment                                                                                                                              |
-| ---------- | ---------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| 0x01       | 1          | ITEM_FLAG_NO_PICKUP              | (NOT IMPLEMENTED)                                                                                                                    |
-| 0x02       | 2          |                                  | Conjured item                                                                                                                        |
-| 0x04       | 4          |                                  | Openable (can be opened by right-click)                                                                                              |
-| 0x08       | 8          | ITEM_FLAG_HEROIC_TOOLTIP         | (NOT IMPLEMENTED) - Makes green "Heroic" text appear on item                                                                         |
-| 0x10       | 16         | ITEM_FLAG_DEPRECATED             | (NOT IMPLEMENTED) - Deprecated Item                                                                                                  |
-| 0x20       | 32         |                                  | Item cannot be destroyed, except by using spell (item can be reagent for spell)                                                     |
-| 0x40       | 64         | ITEM_FLAG_PLAYERCAST             | (NOT IMPLEMENTED) - Item's spells are castable by players                                                                            |
-| 0x80       | 128        | ITEM_FLAG_NO_EQUIP_COOLDOWN      |                                                                                                                                      |
-| 0x0100     | 256        | ITEM_FLAG_MULTI_LOOT_QUEST       | (NOT IMPLEMENTED)                                                                                                                    |
-| 0x0200     | 512        |                                  | Wrapper : Item can wrap other items                                                                                                  |
-| 0x0400     | 1024       | ITEM_FLAG_USES_RESOURCES         | (NOT IMPLEMENTED)                                                                                                                    |
-| 0x0800     | 2048       |                                  | Item is party loot and can be looted by all                                                                                          |
-| 0x01000    | 4096       |                                  | Item is refundable                                                                                                                   |
-| 0x02000    | 8192       |                                  | Charter (Arena or Guild)                                                                                                             |
-| 0x04000    | 16384      | ITEM_FLAG_HAS_TEXT               | (NOT IMPLEMENTED) - Only readable items have this (but not all)                                                                      |
-| 0x08000    | 32768      | ITEM_FLAG_NO_DISENCHANT          | (NOT IMPLEMENTED) - If enabled, prevent disenchanting. Implemented in another column `RequiredDisenchantSkill`                      |
-| 0x010000   | 65536      | ITEM_FLAG_REAL_DURATION          | (NOT IMPLEMENTED) - Probably real time duration. Implemented in another column `flagsCustom`                                        |
-| 0x020000   | 131072     | ITEM_FLAG_NO_CREATOR             | (NOT IMPLEMENTED OR PARTIALLY) - Maybe to remove the "Made by XX" message on crafted/summoned item or for signing charters         |
-| 0x040000   | 262144     |                                  | Item can be prospected                                                                                                               |
-| 0x080000   | 524288     |                                  | Unique equipped (player can only have one equipped at the same time but as many as they want in their bags, if maxcount = 1, it will still display Unique-Equipped) |
-| 0x0100000  | 1048576    | ITEM_FLAG_IGNORE_FOR_AURAS       | (NOT IMPLEMENTED) - ??                                                                                                               |
-| 0x0200000  | 2097152    |                                  | Item can be used during arena match                                                                                                  |
-| 0x0400000  | 4194304    |                                  | Throwable (for tooltip ingame)                                                                                                       |
-| 0x0800000  | 8388608    |                                  | Item can be used in shapeshift forms                                                                                                 |
-| 0x01000000 | 16777216   | ITEM_FLAG_HAS_QUEST_GLOW         | (NOT IMPLEMENTED)                                                                                                                    |
-| 0x02000000 | 33554432   |                                  | Profession recipes: can only be looted if you meet requirements and don't already know it                                           |
-| 0x04000000 | 67108864   |                                  | Item cannot be used in arena                                                                                                         |
-| 0x08000000 | 134217728  |                                  | Bind to Account (Requires to set Bonding > 0)                                                                                        |
-| 0x10000000 | 268435456  | ITEM_FLAG_NO_REAGENT_COST        | Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents`)                                          |
-| 0x20000000 | 536870912  |                                  | Millable                                                                                                                             |
-| 0x40000000 | 1073741824 | ITEM_FLAG_REPORT_TO_GUILD_CHAT   | (NOT IMPLEMENTED)                                                                                                                    |
-| 0x80000000 | 2147483648 | ITEM_FLAG_NO_PROGRESSIVE_LOOT    | (NOT IMPLEMENTED)                                                                                                                    |
+| Value      | Hex          | Flag                           | Comment                                                                                                                                                             |
+| :--------- | :----------: | :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1          | `0x00000001` | ITEM_FLAG_NO_PICKUP            | (NOT IMPLEMENTED)                                                                                                                                                   |
+| 2          | `0x00000002` |                                | Conjured item                                                                                                                                                       |
+| 4          | `0x00000004` |                                | Openable (can be opened by right-click)                                                                                                                             |
+| 8          | `0x00000008` | ITEM_FLAG_HEROIC_TOOLTIP       | (NOT IMPLEMENTED) - Makes green "Heroic" text appear on item                                                                                                        |
+| 16         | `0x00000010` | ITEM_FLAG_DEPRECATED           | (NOT IMPLEMENTED) - Deprecated Item                                                                                                                                 |
+| 32         | `0x00000020` |                                | Item cannot be destroyed, except by using spell (item can be reagent for spell)                                                                                     |
+| 64         | `0x00000040` | ITEM_FLAG_PLAYERCAST           | (NOT IMPLEMENTED) - Item's spells are castable by players                                                                                                           |
+| 128        | `0x00000080` | ITEM_FLAG_NO_EQUIP_COOLDOWN    | No default 30 seconds cooldown when the item is equipped                                                                                                            |
+| 256        | `0x00000100` | ITEM_FLAG_MULTI_LOOT_QUEST     | (NOT IMPLEMENTED)                                                                                                                                                   |
+| 512        | `0x00000200` |                                | Wrapper : Item can wrap other items                                                                                                                                 |
+| 1024       | `0x00000400` | ITEM_FLAG_USES_RESOURCES       | (NOT IMPLEMENTED)                                                                                                                                                   |
+| 2048       | `0x00000800` |                                | Item is party loot and can be looted by all                                                                                                                         |
+| 4096       | `0x00001000` |                                | Item is refundable                                                                                                                                                  |
+| 8192       | `0x00002000` |                                | Charter (Arena or Guild)                                                                                                                                            |
+| 16384      | `0x00004000` | ITEM_FLAG_HAS_TEXT             | (NOT IMPLEMENTED) - Only readable items have this (but not all)                                                                                                     |
+| 32768      | `0x00008000` | ITEM_FLAG_NO_DISENCHANT        | (NOT IMPLEMENTED) - If enabled, prevent disenchanting. Implemented in another column `RequiredDisenchantSkill`                                                      |
+| 65536      | `0x00010000` | ITEM_FLAG_REAL_DURATION        | (NOT IMPLEMENTED) - Probably real time duration. Implemented in another column `flagsCustom`                                                                        |
+| 131072     | `0x00020000` | ITEM_FLAG_NO_CREATOR           | (NOT IMPLEMENTED OR PARTIALLY) - Maybe to remove the "Made by XX" message on crafted/summoned item or for signing charters                                          |
+| 262144     | `0x00040000` |                                | Item can be prospected                                                                                                                                              |
+| 524288     | `0x00080000` |                                | Unique equipped (player can only have one equipped at the same time but as many as they want in their bags, if maxcount = 1, it will still display Unique-Equipped) |
+| 1048576    | `0x00100000` | ITEM_FLAG_IGNORE_FOR_AURAS     | (NOT IMPLEMENTED) - ??                                                                                                                                              |
+| 2097152    | `0x00200000` |                                | Item can be used during arena match                                                                                                                                 |
+| 4194304    | `0x00400000` |                                | Throwable (for tooltip ingame)                                                                                                                                      |
+| 8388608    | `0x00800000` |                                | Item can be used in shapeshift forms                                                                                                                                |
+| 16777216   | `0x01000000` | ITEM_FLAG_HAS_QUEST_GLOW       | (NOT IMPLEMENTED)                                                                                                                                                   |
+| 33554432   | `0x02000000` |                                | Profession recipes: can only be looted if you meet requirements and don't already know it                                                                           |
+| 67108864   | `0x04000000` |                                | Item cannot be used in arena                                                                                                                                        |
+| 134217728  | `0x08000000` |                                | Bind to Account (Requires to set Bonding > 0)                                                                                                                       |
+| 268435456  | `0x10000000` | ITEM_FLAG_NO_REAGENT_COST      | Spell is cast with triggered flag (in code it's written `Spell is cast ignoring reagents`)                                                                          |
+| 536870912  | `0x20000000` |                                | Millable                                                                                                                                                            |
+| 1073741824 | `0x40000000` | ITEM_FLAG_REPORT_TO_GUILD_CHAT | (NOT IMPLEMENTED)                                                                                                                                                   |
+| 2147483648 | `0x80000000` | ITEM_FLAG_NO_PROGRESSIVE_LOOT  | (NOT IMPLEMENTED)                                                                                                                                                   |
 
 ### FlagsExtra
 
-| Flag       | Bit        | Name                                                | Comment                                 |
-| ---------- | ---------- | --------------------------------------------------- | --------------------------------------- |
-| 0x00000001 | 1          | ITEM_FLAG2_FACTION_HORDE                            | Horde Only                              |
-| 0x00000002 | 2          | ITEM_FLAG2_FACTION_ALLIANCE                         | Alliance Only                           |
-| 0x00000004 | 4          | ITEM_FLAG2_DONT_IGNORE_BUY_PRICE                    | When item uses ExtendedCost in npc_vendor, gold is also required |
-| 0x00000008 | 8          | ITEM_FLAG2_CLASSIFY_AS_CASTER                       | NYI - Unused in item_template           |
-| 0x00000010 | 16         | ITEM_FLAG2_CLASSIFY_AS_PHYSICAL                     | NYI                                     |
-| 0x00000020 | 32         | ITEM_FLAG2_EVERYONE_CAN_ROLL_NEED                   | Anyone can roll need                    |
-| 0x00000040 | 64         | ITEM_FLAG2_NO_TRADE_BIND_ON_ACQUIRE                 | NYI - Unused in item_template           |
-| 0x00000080 | 128        | ITEM_FLAG2_CAN_TRADE_BIND_ON_ACQUIRE                | NYI - Unused in item_template           |
-| 0x00000100 | 256        | ITEM_FLAG2_CAN_ONLY_ROLL_GREED                      | Makes need roll for this item disabled  |
-| 0x00000200 | 512        | ITEM_FLAG2_CASTER_WEAPON                            | NYI                                     |
-| 0x00000400 | 1024       | ITEM_FLAG2_DELETE_ON_LOGIN                          | NYI - Unused in item_template           |
-| 0x00000800 | 2048       | ITEM_FLAG2_INTERNAL_ITEM                            | NYI - Unused in item_template           |
-| 0x00001000 | 4096       | ITEM_FLAG2_NO_VENDOR_VALUE                          | NYI - Unused in item_template           |
-| 0x00002000 | 8192       | ITEM_FLAG2_SHOW_BEFORE_DISCOVERED                   | NYI                                     |
-| 0x00004000 | 16384      | ITEM_FLAG2_OVERRIDE_GOLD_COST                       | NYI - Unused in item_template           |
-| 0x00008000 | 32768      | ITEM_FLAG2_IGNORE_DEFAULT_RATED_BG_RESTRICTIONS     | NYI                                     |
-| 0x00010000 | 65536      | ITEM_FLAG2_NOT_USABLE_IN_RATED_BG                   | NYI                                     |
-| 0x00020000 | 131072     | ITEM_FLAG2_BNET_ACCOUNT_TRADE_OK                    | NYI                                     |
-| 0x00040000 | 262144     | ITEM_FLAG2_CONFIRM_BEFORE_USE                       | NYI - Unused in item_template           |
-| 0x00080000 | 524288     | ITEM_FLAG2_REEVALUATE_BONDING_ON_TRANSFORM          | NYI - Unused in item_template           |
-| 0x00100000 | 1048576    | ITEM_FLAG2_NO_TRANSFORM_ON_CHARGE_DEPLETION         | NYI - Unused in item_template           |
-| 0x00200000 | 2097152    | ITEM_FLAG2_NO_ALTER_ITEM_VISUAL                     | NYI                                     |
-| 0x00400000 | 4194304    | ITEM_FLAG2_NO_SOURCE_FOR_ITEM_VISUAL                | NYI                                     |
-| 0x00800000 | 8388608    | ITEM_FLAG2_IGNORE_QUALITY_FOR_ITEM_VISUAL_SOURCE    | NYI - Unused in item_template           |
-| 0x01000000 | 16777216   | ITEM_FLAG2_NO_DURABILITY                            | NYI - Unused in item_template           |
-| 0x02000000 | 33554432   | ITEM_FLAG2_ROLE_TANK                                | NYI - Unused in item_template           |
-| 0x04000000 | 67108864   | ITEM_FLAG2_ROLE_HEALER                              | NYI - Unused in item_template           |
-| 0x08000000 | 134217728  | ITEM_FLAG2_ROLE_DAMAGE                              | NYI - Unused in item_template           |
-| 0x10000000 | 268435456  | ITEM_FLAG2_CAN_DROP_IN_CHALLENGE_MODE               | NYI - Unused in item_template           |
-| 0x20000000 | 536870912  | ITEM_FLAG2_NEVER_STACK_IN_LOOT_UI                   | NYI - Unused in item_template           |
-| 0x40000000 | 1073741824 | ITEM_FLAG2_DISENCHANT_TO_LOOT_TABLE                 | NYI - Unused in item_template           |
-| 0x80000000 | 2147483648 | ITEM_FLAG2_USED_IN_A_TRADESKILL                     | NYI - Unused in item_template           |
+| Value      | Hex          | Flag                                             | Comment                                                          |
+| :--------- | :----------: | :----------------------------------------------- | :--------------------------------------------------------------- |
+| 1          | `0x00000001` | ITEM_FLAG2_FACTION_HORDE                         | Horde Only                                                       |
+| 2          | `0x00000002` | ITEM_FLAG2_FACTION_ALLIANCE                      | Alliance Only                                                    |
+| 4          | `0x00000004` | ITEM_FLAG2_DONT_IGNORE_BUY_PRICE                 | When item uses ExtendedCost in npc_vendor, gold is also required |
+| 8          | `0x00000008` | ITEM_FLAG2_CLASSIFY_AS_CASTER                    | NYI - Unused in item_template                                    |
+| 16         | `0x00000010` | ITEM_FLAG2_CLASSIFY_AS_PHYSICAL                  | NYI                                                              |
+| 32         | `0x00000020` | ITEM_FLAG2_EVERYONE_CAN_ROLL_NEED                | Anyone can roll need                                             |
+| 64         | `0x00000040` | ITEM_FLAG2_NO_TRADE_BIND_ON_ACQUIRE              | NYI - Unused in item_template                                    |
+| 128        | `0x00000080` | ITEM_FLAG2_CAN_TRADE_BIND_ON_ACQUIRE             | NYI - Unused in item_template                                    |
+| 256        | `0x00000100` | ITEM_FLAG2_CAN_ONLY_ROLL_GREED                   | Makes need roll for this item disabled                           |
+| 512        | `0x00000200` | ITEM_FLAG2_CASTER_WEAPON                         | NYI                                                              |
+| 1024       | `0x00000400` | ITEM_FLAG2_DELETE_ON_LOGIN                       | NYI - Unused in item_template                                    |
+| 2048       | `0x00000800` | ITEM_FLAG2_INTERNAL_ITEM                         | NYI - Unused in item_template                                    |
+| 4096       | `0x00001000` | ITEM_FLAG2_NO_VENDOR_VALUE                       | NYI - Unused in item_template                                    |
+| 8192       | `0x00002000` | ITEM_FLAG2_SHOW_BEFORE_DISCOVERED                | NYI                                                              |
+| 16384      | `0x00004000` | ITEM_FLAG2_OVERRIDE_GOLD_COST                    | NYI - Unused in item_template                                    |
+| 32768      | `0x00008000` | ITEM_FLAG2_IGNORE_DEFAULT_RATED_BG_RESTRICTIONS  | NYI                                                              |
+| 65536      | `0x00010000` | ITEM_FLAG2_NOT_USABLE_IN_RATED_BG                | NYI                                                              |
+| 131072     | `0x00020000` | ITEM_FLAG2_BNET_ACCOUNT_TRADE_OK                 | NYI                                                              |
+| 262144     | `0x00040000` | ITEM_FLAG2_CONFIRM_BEFORE_USE                    | NYI - Unused in item_template                                    |
+| 524288     | `0x00080000` | ITEM_FLAG2_REEVALUATE_BONDING_ON_TRANSFORM       | NYI - Unused in item_template                                    |
+| 1048576    | `0x00100000` | ITEM_FLAG2_NO_TRANSFORM_ON_CHARGE_DEPLETION      | NYI - Unused in item_template                                    |
+| 2097152    | `0x00200000` | ITEM_FLAG2_NO_ALTER_ITEM_VISUAL                  | NYI                                                              |
+| 4194304    | `0x00400000` | ITEM_FLAG2_NO_SOURCE_FOR_ITEM_VISUAL             | NYI                                                              |
+| 8388608    | `0x00800000` | ITEM_FLAG2_IGNORE_QUALITY_FOR_ITEM_VISUAL_SOURCE | NYI - Unused in item_template                                    |
+| 16777216   | `0x01000000` | ITEM_FLAG2_NO_DURABILITY                         | NYI - Unused in item_template                                    |
+| 33554432   | `0x02000000` | ITEM_FLAG2_ROLE_TANK                             | NYI - Unused in item_template                                    |
+| 67108864   | `0x04000000` | ITEM_FLAG2_ROLE_HEALER                           | NYI - Unused in item_template                                    |
+| 134217728  | `0x08000000` | ITEM_FLAG2_ROLE_DAMAGE                           | NYI - Unused in item_template                                    |
+| 268435456  | `0x10000000` | ITEM_FLAG2_CAN_DROP_IN_CHALLENGE_MODE            | NYI - Unused in item_template                                    |
+| 536870912  | `0x20000000` | ITEM_FLAG2_NEVER_STACK_IN_LOOT_UI                | NYI - Unused in item_template                                    |
+| 1073741824 | `0x40000000` | ITEM_FLAG2_DISENCHANT_TO_LOOT_TABLE              | NYI - Unused in item_template                                    |
+| 2147483648 | `0x80000000` | ITEM_FLAG2_USED_IN_A_TRADESKILL                  | NYI - Unused in item_template                                    |
 
 ### BuyCount
 
@@ -943,24 +804,24 @@ The ID of the map in which this item can be used. If you leave the map, the item
 
 If the item is a bag, this field is a bitmask controlling what types of items can be put in this bag. You can combine different types by adding up the bit numbers.
 
-| ID    | Bag Family Mask         |
-| ----- | ----------------------- |
-| 0     | None                    |
-| 1     | Arrows                  |
-| 2     | Bullets                 |
-| 4     | Soul Shards             |
-| 8     | Leatherworking Supplies |
-| 16    | Inscription Supplies    |
-| 32    | Herbs                   |
-| 64    | Enchanting Supplies     |
-| 128   | Engineering Supplies    |
-| 256   | Keys                    |
-| 512   | Gems                    |
-| 1024  | Mining Supplies         |
-| 2048  | Soulbound Equipment     |
-| 4096  | Vanity Pets             |
-| 8192  | Currency Tokens         |
-| 16384 | Quest Items             |
+| Value | Hex      | Flag                    | Comment |
+| :---- | :------: | :---------------------- | :------ |
+| 0     | `0x0000` | None                    |         |
+| 1     | `0x0001` | Arrows                  |         |
+| 2     | `0x0002` | Bullets                 |         |
+| 4     | `0x0004` | Soul Shards             |         |
+| 8     | `0x0008` | Leatherworking Supplies |         |
+| 16    | `0x0010` | Inscription Supplies    |         |
+| 32    | `0x0020` | Herbs                   |         |
+| 64    | `0x0040` | Enchanting Supplies     |         |
+| 128   | `0x0080` | Engineering Supplies    |         |
+| 256   | `0x0100` | Keys                    |         |
+| 512   | `0x0200` | Gems                    |         |
+| 1024  | `0x0400` | Mining Supplies         |         |
+| 2048  | `0x0800` | Soulbound Equipment     |         |
+| 4096  | `0x1000` | Vanity Pets             |         |
+| 8192  | `0x2000` | Currency Tokens         |         |
+| 16384 | `0x4000` | Quest Items             |         |
 
 ### TotemCategory
 
@@ -1005,12 +866,12 @@ Corresponds to the ID in the [TotemCategory DBC file](totemcategory).
 
 The color of the socket that can be placed in this item.
 
-| ID  | Color  |
-| --- | ------ |
-| 1   | Meta   |
-| 2   | Red    |
-| 4   | Yellow |
-| 8   | Blue   |
+| Value | Hex    | Flag   | Comment |
+| :---- | :----: | :----- | :------ |
+| 1     | `0x01` | Meta   |         |
+| 2     | `0x02` | Red    |         |
+| 4     | `0x04` | Yellow |         |
+| 8     | `0x08` | Blue   |         |
 
 ### socketContent
 
@@ -1172,11 +1033,11 @@ If the item is a container that can contain money, then this field defines the m
 
 ### flagsCustom
 
-| Flag       | Bit | Name                              | Comment                                                              |
-| ---------- | --- | --------------------------------- | -------------------------------------------------------------------- |
-| 0x00000001 | 1   | ITEM_FLAGS_CU_DURATION_REAL_TIME  | Item duration will tick even if player is offline                    |
-| 0x00000002 | 2   | ITEM_FLAGS_CU_IGNORE_QUEST_STATUS | No quest status will be checked when this item drops                 |
-| 0x00000004 | 4   | ITEM_FLAGS_CU_FOLLOW_LOOT_RULES   | Item will always follow group/master/need before greed looting rules |
+| Value | Hex    | Flag                              | Comment                                                              |
+| :---- | :----: | :-------------------------------- | :------------------------------------------------------------------- |
+| 1     | `0x01` | ITEM_FLAGS_CU_DURATION_REAL_TIME  | Item duration will tick even if player is offline                    |
+| 2     | `0x02` | ITEM_FLAGS_CU_IGNORE_QUEST_STATUS | No quest status will be checked when this item drops                 |
+| 4     | `0x04` | ITEM_FLAGS_CU_FOLLOW_LOOT_RULES   | Item will always follow group/master/need before greed looting rules |
 
 ### VerifiedBuild
 

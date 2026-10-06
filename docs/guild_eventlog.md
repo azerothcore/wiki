@@ -4,27 +4,21 @@
 
 **The \`guild\_eventlog\` table**
 
-**Table Structure**
+Logs guild events. The entries are shown in the guild log in game.
 
-| Field            | Type    | Attributes | Key | Null | Default | Extra | Comment                                     |
-| ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------------------------- |
-| [guildid][1]     | INT     | UNSIGNED   | PRI | NO   |         |       | Guild Identificator                         |
-| [LogGuid][2]     | INT     | UNSIGNED   | PRI | NO   |         |       | Log record identificator - auxiliary column |
-| [EventType][3]   | TINYINT | UNSIGNED   |     | NO   |         |       | Event type                                  |
-| [PlayerGuid1][4] | INT     | UNSIGNED   |     | NO   |         |       | Player 1                                    |
-| [PlayerGuid2][5] | INT     | UNSIGNED   |     | NO   |         |       | Player 2                                    |
-| [NewRank][6]     | TINYINT | UNSIGNED   |     | NO   |         |       | New rank(in case promotion/demotion)        |
-| [timestamp][7]   | BIGINT  | UNSIGNED   |     | NO   |         |       | Event UNIX time                             |
+**Table: guild\_eventlog's Structure**
 
-[1]: #guildid
-[2]: #logguid
-[3]: #eventtype
-[4]: #playerguid1
-[5]: #playerguid2
-[6]: #newrank
-[7]: #timestamp
+| Field                       | Type    |          | Null | Key | Default | Extra | Comment                                     |
+| :-------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------ |
+| [guildid](#guildid)         | INT     | UNSIGNED | NO   | PRI |         |       | Guild Identificator                         |
+| [LogGuid](#logguid)         | INT     | UNSIGNED | NO   | PRI |         |       | Log record identificator - auxiliary column |
+| [EventType](#eventtype)     | TINYINT | UNSIGNED | NO   |     |         |       | Event type                                  |
+| [PlayerGuid1](#playerguid1) | INT     | UNSIGNED | NO   | MUL |         |       | Player 1                                    |
+| [PlayerGuid2](#playerguid2) | INT     | UNSIGNED | NO   | MUL |         |       | Player 2                                    |
+| [NewRank](#newrank)         | TINYINT | UNSIGNED | NO   |     |         |       | New rank(in case promotion/demotion)        |
+| [TimeStamp](#timestamp)     | INT     | UNSIGNED | NO   |     |         |       | Event UNIX time                             |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

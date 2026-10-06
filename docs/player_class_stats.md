@@ -1,36 +1,26 @@
-# player_class_stats
+# player\_class\_stats
 
 [<-Back-to:World](database-world)
 
-**The \`player_class_stats\` table**
+**The \`player\_class\_stats\` table**
 
 This table holds information on what values are applied to stats for characters as they level up. All of the values in this table signify only the base stats of a class at a specific level.
 
-**Table Structure**
+**Table: player\_class\_stats's Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Class][1]     | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [Level][2]     | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [BaseHP][3]    | INT     | UNSIGNED   |     | NO   | 1       |       |         |
-| [BaseMana][4]  | INT     | UNSIGNED   |     | NO   | 1       |       |         |
-| [Strength][5]  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Agility][6]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Stamina][7]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Intellect][8] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Spirit][9]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                   | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Class](#class)         | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [Level](#level)         | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [BaseHP](#basehp)       | INT     | UNSIGNED | NO   |     | 1       |       |         |
+| [BaseMana](#basemana)   | INT     | UNSIGNED | NO   |     | 1       |       |         |
+| [Strength](#strength)   | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [Agility](#agility)     | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [Stamina](#stamina)     | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [Intellect](#intellect) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [Spirit](#spirit)       | INT     | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #class
-[2]: #level
-[3]: #basehp
-[4]: #basemana
-[5]: #strength
-[6]: #agility
-[7]: #stamina
-[8]: #intellect
-[9]: #spirit
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### Class
 

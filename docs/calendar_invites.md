@@ -4,29 +4,22 @@
 
 **The \`calendar\_invites\` table**
 
-**Table Structure**
+Holds the invitations to the events in [calendar_events](calendar_events) and each invited player's response.
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]         | BIGINT       | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [event][2]      | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [invitee][3]    | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [sender][4]     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [status][5]     | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [statustime][6] | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [rank][7]       | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [text][8]       | VARCHAR(255) |            |     | NO   | ''      |       |         |
+**Table: calendar\_invites's Structure**
 
-[1]: #id
-[2]: #event
-[3]: #invitee
-[4]: #sender
-[5]: #status
-[6]: #statustime
-[7]: #rank
-[8]: #text
+| Field                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                 | BIGINT       | UNSIGNED | NO   | PRI | 0       |       |         |
+| [event](#event)           | BIGINT       | UNSIGNED | NO   |     | 0       |       |         |
+| [invitee](#invitee)       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [sender](#sender)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [status](#status)         | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [statustime](#statustime) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [rank](#rank)             | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [text](#text)             | VARCHAR(255) |          | NO   |     | ''      |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

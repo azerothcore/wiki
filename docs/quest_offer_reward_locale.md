@@ -4,21 +4,18 @@
 
 **The \`quest\_offer\_reward\_locale\` table**
 
-**Table Structure**
+Holds translations of the reward text in [quest_offer_reward](quest_offer_reward).
 
-| Field              | Type       | Attribute | Key | Null | Default | Extra | Comment |
-| ------------------ | ---------- | --------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]            | INT        | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [locale][2]        | VARCHAR(4) |           | PRI | NO   | NULL    |       |         |
-| [RewardText][3]    | text       |           |     | YES  | NULL    |       |         |
-| [VerifiedBuild][4] | SMALLINT   |           |     | NO   | 0       |       |         |
+**Table: quest\_offer\_reward\_locale's Structure**
 
-[1]: #id
-[2]: #locale
-[3]: #rewardtext
-[4]: #verifiedbuild
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [RewardText](#rewardtext)       | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT        |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

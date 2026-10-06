@@ -6,21 +6,16 @@
 
 This table holds security access level for any realm in [realmlist](realmlist) table.
 
-**Table Structure**
+**Table: account\_access's Structure**
 
-| Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]      | INT          | UNSIGNED   | PRI | NO   |         |       |         |
-| [gmlevel][2] | TINYINT      | UNSIGNED   |     | NO   |         |       |         |
-| [RealmID][3] | INT          | SIGNED     | PRI | NO   | -1      |       |         |
-| [comment][4] | VARCHAR(255) | SIGNED     |     | YES  | ''      |       |         |
+| Field               | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)           | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [gmlevel](#gmlevel) | TINYINT      | UNSIGNED | NO   |     |         |       |         |
+| [RealmID](#realmid) | INT          |          | NO   | PRI | -1      |       |         |
+| [comment](#comment) | VARCHAR(255) |          | YES  |     | ''      |       |         |
 
-[1]: #id
-[2]: #gmlevel
-[3]: #realmid
-[4]: #comment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 
