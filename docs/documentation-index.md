@@ -38,6 +38,7 @@ redirect_from: /documentation_index
 * [Getting Started](getting-started)
 * [GM Commands](gm-commands)
 * [Guide to Triaging](guide-to-triaging)
+* [HitInfo Reference](hitinfo-reference)
 * [How to Debug and Restart](how-to-restart-and-debug)
 * [How to Use Warden Payload Manager](how-to-use-warden-payload-mgr)
 * [How to work with Conf Files](how-to-work-with-conf-files)
