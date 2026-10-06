@@ -148,6 +148,17 @@ When adding/removing a table it should also be updated in `database-auth` `datab
 
 ALL DATABASE TABLE FILES should follow the [Database Table Template](database-table-template), and every column should have a description.
 
+## GM COMMANDS PAGE
+
+THE [GM COMMANDS](gm-commands) PAGE follows the `command` table of the world database and the command scripts of the core. When a command is added or changed, update its row in *All commands* and in the list of its security level, and keep both lists in alphabetical order.
+
+- **Command**: the full name without the leading dot. In *All commands* the name carries an anchor, so `gm-commands#account-create` links to the row.
+- **RBAC**: the id of the role that includes the command by default (196 to 199), linked as `[196](rbac_linked_permissions#role-196)`. Leave it empty for a command that only groups subcommands.
+- **Security**: the `security` value of the command, 0 to 4. Only *All commands* has this column; the list of one security level leaves it out.
+- **Console**: `Yes` or `No`, as the command is declared in the core (`Console::Yes` or `Console::No`).
+- **Syntax**: one line inside backticks, starting with the dot and the real command name. Use `$name` for text, `#value` for numbers, `[...]` for optional parts and `<a/b>` for a choice.
+- **Description**: what the command does. Use `<br>` to start a new line, and keep notes about one parameter on their own line. Write `&lt;` and `&gt;` for angle brackets outside backticks.
+
 ## INSTALLATION GUIDE PAGES
 
 EVERY STEP of the installation guide has the same navigation at the top and at the bottom of the page: one sentence, then the previous and the next step.

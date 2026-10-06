@@ -8,20 +8,20 @@ This table sets up information on all available realms. Each row controls a diff
 
 **Table: realmlist's Structure**
 
-| Field                                         | Type         | Attributes | Key | Null | Default       | Extra          | Comment |
-| --------------------------------------------- | ------------ | ---------- | --- | ---- | ------------- | -------------- | ------- |
-| [id](#id)                                     | INT          | UNSIGNED   | PRI | NO   |               | AUTO_INCREMENT |         |
-| [name](#name)                                 | VARCHAR(32)  |            | UNI | NO   | ''            |                |         |
-| [address](#address)                           | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
-| [localAddress](#localaddress)                 | VARCHAR(255) |            |     | NO   | 127.0.0.1     |                |         |
-| [localSubnetMask](#localsubnetmask)           | VARCHAR(255) |            |     | NO   | 255.255.255.0 |                |         |
-| [port](#port)                                 | SMALLINT     | UNSIGNED   |     | NO   | 8085          |                |         |
-| [icon](#icon)                                 | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
-| [flag](#flag)                                 | TINYINT      | UNSIGNED   |     | NO   | 2             |                |         |
-| [timezone](#timezone)                         | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
-| [allowedSecurityLevel](#allowedsecuritylevel) | TINYINT      | UNSIGNED   |     | NO   | 0             |                |         |
-| [population](#population)                     | FLOAT        | SIGNED     |     | NO   | 0             |                |         |
-| [gamebuild](#gamebuild)                       | INT          | UNSIGNED   |     | NO   | 12340         |                |         |
+| Field                                         | Type         |          | Null | Key | Default       | Extra          | Comment |
+| :-------------------------------------------- | :----------- | :------- | :--: | :-: | :-----------: | :------------: | :------ |
+| [id](#id)                                     | INT          | UNSIGNED | NO   | PRI |               | AUTO_INCREMENT |         |
+| [name](#name)                                 | VARCHAR(32)  |          | NO   | UNI | ''            |                |         |
+| [address](#address)                           | VARCHAR(255) |          | NO   |     | 127.0.0.1     |                |         |
+| [localAddress](#localaddress)                 | VARCHAR(255) |          | NO   |     | 127.0.0.1     |                |         |
+| [localSubnetMask](#localsubnetmask)           | VARCHAR(255) |          | NO   |     | 255.255.255.0 |                |         |
+| [port](#port)                                 | SMALLINT     | UNSIGNED | NO   |     | 8085          |                |         |
+| [icon](#icon)                                 | TINYINT      | UNSIGNED | NO   |     | 0             |                |         |
+| [flag](#flag)                                 | TINYINT      | UNSIGNED | NO   |     | 2             |                |         |
+| [timezone](#timezone)                         | TINYINT      | UNSIGNED | NO   |     | 0             |                |         |
+| [allowedSecurityLevel](#allowedsecuritylevel) | TINYINT      | UNSIGNED | NO   |     | 0             |                |         |
+| [population](#population)                     | FLOAT        |          | NO   |     | 0             |                |         |
+| [gamebuild](#gamebuild)                       | INT          | UNSIGNED | NO   |     | 12340         |                |         |
 
 **Description of the table's fields**
 
@@ -71,17 +71,17 @@ The icon of the realm.
 
 Realmflag of this realm.
 
-| Flag | Hex value | Description  |
-| ---- | --------- | ------------ |
-| 0    | 0x0       | None         |
-| 1    | 0x1       | Invalid      |
-| 2    | 0x2       | Offline      |
-| 4    | 0x4       | SpecifyBuild |
-| 8    | 0x8       | Medium       |
-| 16   | 0xF       | Medium       |
-| 32   | 0x10      | New Players  |
-| 64   | 0x20      | Recommended  |
-| 128  | 0x40      | Full         |
+| Value | Hex    | Flag                        | Comment                                                                       |
+| :---- | :----: | :-------------------------- | :---------------------------------------------------------------------------- |
+| 0     | `0x00` | REALM_FLAG_NONE             | None                                                                          |
+| 1     | `0x01` | REALM_FLAG_VERSION_MISMATCH | Invalid                                                                       |
+| 2     | `0x02` | REALM_FLAG_OFFLINE          | Offline                                                                       |
+| 4     | `0x04` | REALM_FLAG_SPECIFYBUILD     | SpecifyBuild                                                                  |
+| 8     | `0x08` | REALM_FLAG_UNK1             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos |
+| 16    | `0x10` | REALM_FLAG_UNK2             | Unknown. It has no description in AzerothCore, TrinityCore, cmangos or mangos |
+| 32    | `0x20` | REALM_FLAG_RECOMMENDED      | Recommended                                                                   |
+| 64    | `0x40` | REALM_FLAG_NEW              | New Players                                                                   |
+| 128   | `0x80` | REALM_FLAG_FULL             | Full                                                                          |
 
 ### timezone
 
