@@ -37,7 +37,7 @@
 | SPELL_ATTR0_CU_DONT_BREAK_STEALTH            | 64         | 0x00000040 |                                                                       |
 | SPELL_ATTR0_CU_NO_PVP_FLAG                   | 128        | 0x00000080 | 不设置 PvP 标记                                                       |
 | SPELL_ATTR0_CU_DIRECT_DAMAGE                 | 256        | 0x00000100 |                                                                       |
-| SPELL_ATTR0_CU_CHARGE                        | 512        | 0x00000200 |                                                                       |
+| SPELL_ATTR0_CU_IGNORE_BINARY                 | 512        | 0x00000200 | 避免被自动分类为二元法术，使其可以受到部分抵抗                          |
 | SPELL_ATTR0_CU_PICKPOCKET                    | 1024       | 0x00000400 |                                                                       |
 | SPELL_ATTR0_CU_IGNORE_EVADE                  | 2048       | 0x00000800 | 闪避（evade）时不移除指定的光环                                        |
 | SPELL_ATTR0_CU_NEGATIVE_EFF0                 | 4096       | 0x00001000 |                                                                       |
