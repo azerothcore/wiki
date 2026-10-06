@@ -86,9 +86,6 @@ The language of each of the 16 text columns of a localized field is assumed from
 
 ### Content
 
-<details>
-<summary>Show the content of ChrRaces.dbc</summary>
-
 | Value   | Hex          | Flag               | Race ID |
 | :------ | :----------: | :----------------- | :------ |
 | 1       | `0x00000001` | Human              | 1       |
@@ -113,8 +110,6 @@ The language of each of the 16 text columns of a localized field is assumed from
 | 524288  | `0x00080000` | Northrend Skeleton | 20      |
 | 1048576 | `0x00100000` | Ice Troll          | 21      |
 
-</details>
-
 ### Flags
 
 | Value | Hex    | Flag         | Comment |
@@ -124,13 +119,11 @@ The language of each of the 16 text columns of a localized field is assumed from
 | 4     | `0x04` | Can mount    |         |
 | 8     | `0x08` | Has bald     |         |
 
-
 ### Faction values
 
 Alliance only = 1101
 Horde only = 690
 Both factions = 1791 (0 may work)
-
 
 ### How do I get the values?
 

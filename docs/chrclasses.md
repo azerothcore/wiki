@@ -77,9 +77,6 @@ The language of each of the 16 text columns of a localized field is assumed from
 
 ### Content
 
-<details>
-<summary>Show the content of ChrClasses.dbc</summary>
-
 | Value | Hex      | Flag         | Class ID |
 | :---- | :------: | :----------- | :------- |
 | 1     | `0x0001` | Warrior      | 1        |
@@ -92,8 +89,6 @@ The language of each of the 16 text columns of a localized field is assumed from
 | 128   | `0x0080` | Mage         | 8        |
 | 256   | `0x0100` | Warlock      | 9        |
 | 1024  | `0x0400` | Druid        | 11       |
-
-</details>
 
 ### Flags
 
