@@ -1,25 +1,21 @@
-# autobroadcast_locale
+# autobroadcast\_locale
 
 [<-Back-to:Auth](database-auth)
 
-**The \`autobroadcast_locale\` table**
+**The \`autobroadcast\_locale\` table**
 
-**Table Structure**
+Holds translations of the messages in [autobroadcast](autobroadcast), one row per realm, message and client locale.
 
-| Field        | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [realmid][1] | INT         |            | PRI | NO   |         |       |         |
-| [id][2]      | INT         |            | PRI | NO   |         |       |         |
-| [locale][3]  | VARCHAR(4)  |            | PRI | NO   |         |       |         |
-| [text][4]    | VARCHAR(45) |            |     | YES  |         |       |         |
+**Table: autobroadcast\_locale's Structure**
 
+| Field               | Type       |     | Null | Key | Default | Extra | Comment |
+| :------------------ | :--------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [realmid](#realmid) | INT        |     | NO   | PRI |         |       |         |
+| [id](#id)           | INT        |     | NO   | PRI |         |       |         |
+| [locale](#locale)   | VARCHAR(4) |     | NO   | PRI |         |       |         |
+| [text](#text)       | LONGTEXT   |     | NO   |     |         |       |         |
 
-[1]: #realmid
-[2]: #id
-[3]: #locale
-[4]: #text
-
-## Description of the fields
+**Description of the table's fields**
 
 ### realmid
 
@@ -48,7 +44,6 @@ You can choose from the following:
 | 6   | esES     |
 | 7   | esMX     |
 | 8   | ruRU     |
-
 
 ### text
 

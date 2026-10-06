@@ -6,15 +6,15 @@
 
 This table holds info about group members.
 
-**Table Structure**
+**Table: group\_member's Structure**
 
-| Field            | Type    | Attributes | Key | Null | Default | Extra  | Comment |
-| ---------------- | ------- | ---------- | --- | ---- | ------- | ------ | ------- |
-| [guid][1]        | INT     | UNSIGNED   |     | NO   |         |        |         |
-| [memberGuid][2]  | INT     | UNSIGNED   | PRI | NO   |         | Unique |         |
-| [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
-| [subgroup][4]    | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
-| [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |        |         |
+| Field            | Type    | Attributes | Key | Null | Default | Extra | Comment |
+| ---------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [guid][1]        | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [memberGuid][2]  | INT     | UNSIGNED   | PRI | NO   |         |       |         |
+| [memberFlags][3] | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [subgroup][4]    | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [roles][5]       | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #guid
 [2]: #memberguid
@@ -22,13 +22,13 @@ This table holds info about group members.
 [4]: #subgroup
 [5]: #roles
 
-**Description of the fields**
+**Description of the table's fields**
 
-#### guid
+### guid
 
 GUID of the group. See [groups.guid](groups#guid).
 
-#### memberGuid
+### memberGuid
 
 GUID of the character member of the group. See [characters.guid](characters#guid).
 

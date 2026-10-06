@@ -6,16 +6,16 @@
 
 This table is used to disable dungeons/bgs/spells/etc.
 
-**Table Structure**
+**Table: disables's Structure**
 
 | Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [sourceType][1] | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [entry][2]      | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
+| [sourceType][1] | INT          | UNSIGNED   | PRI | NO   |         |       |         |
+| [entry][2]      | INT          | UNSIGNED   | PRI | NO   |         |       |         |
 | [flags][3]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [params_0][4]   | VARCHAR(255) |            |     | NO   |         |       |         |
-| [params_1][5]   | VARCHAR(255) |            |     | NO   |         |       |         |
-| [comment][6]    | VARCHAR(255) |            |     | NO   |         |       |         |
+| [params_0][4]   | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| [params_1][5]   | VARCHAR(255) |            |     | NO   | ''      |       |         |
+| [comment][6]    | VARCHAR(255) |            |     | NO   | ''      |       |         |
 
 [1]: #sourcetype
 [2]: #entry
@@ -24,7 +24,7 @@ This table is used to disable dungeons/bgs/spells/etc.
 [5]: #params1
 [6]: #comment
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### sourceType
 

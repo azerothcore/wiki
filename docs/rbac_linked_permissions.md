@@ -6,16 +6,16 @@
 
 This table defines the parent-child relationships between permissions. When a permission (typically a role) is granted, all of its linked permissions are also granted. This is how role inheritance works in the [RBAC](rbac) system.
 
-**Table Structure**
+**Table: rbac\_linked\_permissions's Structure**
 
-| Field         | Type | Attributes | Key | Null | Default | Extra | Comment              |
-| ------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------- |
+| Field                 | Type | Attributes | Key | Null | Default | Extra | Comment              |
+| --------------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------------------- |
 | [id](#id)             | INT  | UNSIGNED   | PRI | NO   |         |       | Permission id        |
 | [linkedId](#linkedid) | INT  | UNSIGNED   | PRI | NO   |         |       | Linked Permission id |
 
 Both fields have a foreign key to [rbac_permissions.id](rbac_permissions#id) with `ON DELETE CASCADE`.
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

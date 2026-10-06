@@ -1,21 +1,21 @@
-# player_factionchange_achievement
+# player\_factionchange\_achievement
 
 [<-Back-to:World](database-world)
 
-**The \`player_factionchange_achievement\` table**
+**The \`player\_factionchange\_achievement\` table**
 
 Basically all achievement changes made when player changes faction.
 
-**Table Structure**
+**Table: player\_factionchange\_achievement's Structure**
 
-| Field                                | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------------ | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id](#allianceid)           | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [alliance_comment](#alliancecomment) | TEXT |            |     | YES  | NULL    |       |         |
-| [horde_id](#hordeid)                 | INT  | SIGNED     | PRI | NO   |         |       |         |
-| [horde_comment](#hordecomment)       | TEXT |            |     | YES  | NULL    |       |         |
+| Field                                | Type |          | Null | Key | Default | Extra | Comment |
+| :----------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [alliance_id](#allianceid)           | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |          | YES  |     | NULL    |       |         |
+| [horde_id](#hordeid)                 | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance_id
 

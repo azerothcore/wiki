@@ -6,19 +6,15 @@
 
 This table contains npcflags that are to be added to an NPC when the specified event is active for the creature with the given guid.
 
-**Table Structure**
+**Table: game\_event\_npcflag's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                 |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
-| [eventEntry][1] | TINYINT   | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
-| [guid][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                         |
-| [npcflag][3]    | INT       | UNSIGNED   |     | NO   | 0       |       |                         |
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment                 |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :---------------------- |
+| [eventEntry](#evententry) | TINYINT | UNSIGNED | NO   | PRI |         |       | Entry of the game event |
+| [guid](#guid)             | INT     | UNSIGNED | NO   | PRI | 0       |       |                         |
+| [npcflag](#npcflag)       | INT     | UNSIGNED | NO   |     | 0       |       |                         |
 
-[1]: #evententry
-[2]: #guid
-[3]: #npcflag
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

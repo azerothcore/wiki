@@ -1,6 +1,6 @@
 # charsections\_dbc
 
-[`Back-to:DBC`](dbc-index)
+[<-Back-to:World](database-world)
 
 **The \`charsections\_dbc\` table**
 
@@ -10,30 +10,22 @@ This DBC contains the character customization sections (skin, face, facial hair,
 
 [How to Import DBC Data onto my Database](how-to-import-dbc-data-in-db)
 
-**Table Structure**
+**Table: charsections\_dbc's Structure**
 
-| Field                 | Type | Attributes | Key | Null | Default | Extra | Comment           |
-| --------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ----------------- |
-| [ID][1]                | INT  | SIGNED     | PRI | NO   | 0       |       | Unique ID         |
-| [RaceID][2]            | INT  | SIGNED     |     | NO   | 0       |       |                   |
-| [SexID][3]             | INT  | SIGNED     |     | NO   | 0       |       |                   |
-| [BaseSection][4]       | INT  | SIGNED     |     | NO   | 0       |       | CharSectionType   |
-| TextureName_1          | TEXT |            |     | YES  | NULL    |       | Not used server-side |
-| TextureName_2          | TEXT |            |     | YES  | NULL    |       | Not used server-side |
-| TextureName_3          | TEXT |            |     | YES  | NULL    |       | Not used server-side |
-| [Flags][5]             | INT  | SIGNED     |     | NO   | 0       |       | CharSectionFlags  |
-| [VariationIndex][6]    | INT  | SIGNED     |     | NO   | 0       |       |                   |
-| [ColorIndex][7]        | INT  | SIGNED     |     | NO   | 0       |       |                   |
+| Field                                                    | Type         |     | Null | Key | Default | Extra | Comment              |
+| :------------------------------------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------------------- |
+| [ID](#id)                                                | INT          |     | NO   | PRI | 0       |       | Unique ID            |
+| [RaceID](#raceid)                                        | INT          |     | NO   |     | 0       |       |                      |
+| [SexID](#sexid)                                          | INT          |     | NO   |     | 0       |       |                      |
+| [BaseSection](#basesection)                              | INT          |     | NO   |     | 0       |       | CharSectionType      |
+| [TextureName_1](#texturename1-texturename2-texturename3) | VARCHAR(100) |     | YES  |     | NULL    |       | Not used server-side |
+| [TextureName_2](#texturename1-texturename2-texturename3) | VARCHAR(100) |     | YES  |     | NULL    |       | Not used server-side |
+| [TextureName_3](#texturename1-texturename2-texturename3) | VARCHAR(100) |     | YES  |     | NULL    |       | Not used server-side |
+| [Flags](#flags)                                          | INT          |     | NO   |     | 0       |       | CharSectionFlags     |
+| [VariationIndex](#variationindex)                        | INT          |     | NO   |     | 0       |       |                      |
+| [ColorIndex](#colorindex)                                | INT          |     | NO   |     | 0       |       |                      |
 
-[1]: #id
-[2]: #raceid
-[3]: #sexid
-[4]: #basesection
-[5]: #flags
-[6]: #variationindex
-[7]: #colorindex
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 
@@ -61,6 +53,10 @@ CharSectionType, the customization category this row belongs to.
 | 2   | Facial Hair  |
 | 3   | Hair         |
 | 4   | Underwear    |
+
+### TextureName\_1, TextureName\_2, TextureName\_3
+
+Client texture file paths for this section. Not used by the core.
 
 ### Flags
 

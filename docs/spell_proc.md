@@ -6,26 +6,26 @@
 
 This table holds information on what events (or procs) certain spells are activated. All spells in this table must have apply a SPELL\_AURA\_PROC\_TRIGGER\_SPELL (42) aura. Any entries in this table will overwrite the existing proc settings in the spell's DBC entry.
 
-**Table Structure**
+**Table: spell\_proc's Structure**
 
-| Field                 | Type     | Attributes | Key | Null | Default | Extra  | Comment |
-| --------------------- | -------- | ---------- | --- | ---- | ------- | ------ | ------- |
-| [SpellId][1]          | INT      | SIGNED     | PRI | NO   | 0       | Unique |         |
-| [SchoolMask][2]       | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyName][3]  | SMALLINT | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyMask0][4] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyMask1][5] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellFamilyMask2][6] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [ProcFlags][7]        | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellTypeMask][8]    | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [SpellPhaseMask][9]   | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [HitMask][10]         | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [AttributesMask][11]     | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [DisableEffectsMask][12] | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [ProcsPerMinute][13]     | FLOAT    |            |     | NO   | 0       |        |         |
-| [Chance][14]             | FLOAT    |            |     | NO   | 0       |        |         |
-| [Cooldown][15]           | INT      | UNSIGNED   |     | NO   | 0       |        |         |
-| [Charges][16]            | TINYINT  | UNSIGNED   |     | NO   | 0       |        |         |
+| Field                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
+| ------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [SpellId][1]             | INT      | SIGNED     | PRI | NO   | 0       |       |         |
+| [SchoolMask][2]          | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellFamilyName][3]     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellFamilyMask0][4]    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellFamilyMask1][5]    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellFamilyMask2][6]    | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ProcFlags][7]           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellTypeMask][8]       | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [SpellPhaseMask][9]      | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [HitMask][10]            | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [AttributesMask][11]     | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [DisableEffectsMask][12] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [ProcsPerMinute][13]     | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [Chance][14]             | FLOAT    | SIGNED     |     | NO   | 0       |       |         |
+| [Cooldown][15]           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
+| [Charges][16]            | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
 
 [1]: #spellid
 [2]: #schoolmask
@@ -44,7 +44,7 @@ This table holds information on what events (or procs) certain spells are activa
 [15]: #cooldown
 [16]: #charges
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### SpellId
 

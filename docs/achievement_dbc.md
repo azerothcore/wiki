@@ -8,14 +8,14 @@ This table has the same columns as [Achievement.dbc](achievement). The core load
 
 The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
-**Table Structure**
+**Table: achievement\_dbc's Structure**
 
 | Field                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
 | ----------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                 | INT          |            | PRI | NO   | 0       |       |         |
-| [Faction](#faction)                       | INT          |            |     | NO   | 0       |       |         |
-| [Instance_Id](#instanceid)                | INT          |            |     | NO   | 0       |       |         |
-| [Supercedes](#supercedes)                 | INT          |            |     | NO   | 0       |       |         |
+| [ID](#id)                                 | INT          | SIGNED     | PRI | NO   | 0       |       |         |
+| [Faction](#faction)                       | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Instance_Id](#instanceid)                | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Supercedes](#supercedes)                 | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [Title_Lang_enUS](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Title_Lang_enGB](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Title_Lang_koKR](#titlelang)             | VARCHAR(100) |            |     | YES  | NULL    |       |         |
@@ -50,11 +50,11 @@ The core reads every column in order, so a row must have a value for all of them
 | [Description_Lang_itIT](#descriptionlang) | VARCHAR(200) |            |     | YES  | NULL    |       |         |
 | [Description_Lang_Unk](#descriptionlang)  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Description_Lang_Mask](#descriptionlang) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Category](#category)                     | INT          |            |     | NO   | 0       |       |         |
-| [Points](#points)                         | INT          |            |     | NO   | 0       |       |         |
-| [Ui_Order](#uiorder)                      | INT          |            |     | NO   | 0       |       |         |
-| [Flags](#flags)                           | INT          |            |     | NO   | 0       |       |         |
-| [IconID](#iconid)                         | INT          |            |     | NO   | 0       |       |         |
+| [Category](#category)                     | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Points](#points)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Ui_Order](#uiorder)                      | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Flags](#flags)                           | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [IconID](#iconid)                         | INT          | SIGNED     |     | NO   | 0       |       |         |
 | [Reward_Lang_enUS](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_enGB](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_koKR](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
@@ -72,10 +72,10 @@ The core reads every column in order, so a row must have a value for all of them
 | [Reward_Lang_itIT](#rewardlang)           | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_Unk](#rewardlang)            | VARCHAR(100) |            |     | YES  | NULL    |       |         |
 | [Reward_Lang_Mask](#rewardlang)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Minimum_Criteria](#minimumcriteria)      | INT          |            |     | NO   | 0       |       |         |
-| [Shares_Criteria](#sharescriteria)        | INT          |            |     | NO   | 0       |       |         |
+| [Minimum_Criteria](#minimumcriteria)      | INT          | SIGNED     |     | NO   | 0       |       |         |
+| [Shares_Criteria](#sharescriteria)        | INT          | SIGNED     |     | NO   | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 
@@ -99,11 +99,15 @@ ID of the achievement this one follows in a series. Not used by the core.
 
 ### Title\_Lang
 
-`Title_Lang_enUS` to `Title_Lang_Unk`, one column per client locale, and `Title_Lang_Mask`. The name of the achievement. The mask is not used by the core.
+`Title_Lang_enUS` to `Title_Lang_Unk` and `Title_Lang_Mask`. The name of the achievement. The mask is not used by the core.
+
+The text columns are the 16 locale slots of the file. The core reads them by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Title_Lang_enUS` = enUS, `Title_Lang_enGB` = koKR, `Title_Lang_koKR` = frFR, `Title_Lang_frFR` = deDE, `Title_Lang_deDE` = zhCN, `Title_Lang_enCN` = zhTW, `Title_Lang_zhCN` = esES, `Title_Lang_enTW` = esMX, `Title_Lang_zhTW` = ruRU. The remaining text columns, `Title_Lang_esES` to `Title_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### Description\_Lang
 
 `Description_Lang_enUS` to `Description_Lang_Unk` and `Description_Lang_Mask`. The description of the achievement. Not used by the core.
+
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Description_Lang_enUS` = enUS, `Description_Lang_enGB` = koKR, `Description_Lang_koKR` = frFR, `Description_Lang_frFR` = deDE, `Description_Lang_deDE` = zhCN, `Description_Lang_enCN` = zhTW, `Description_Lang_zhCN` = esES, `Description_Lang_enTW` = esMX, `Description_Lang_zhTW` = ruRU. The remaining text columns, `Description_Lang_esES` to `Description_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### Category
 
@@ -139,6 +143,8 @@ ID from SpellIcon.dbc of the achievement's icon. Not used by the core.
 ### Reward\_Lang
 
 `Reward_Lang_enUS` to `Reward_Lang_Unk` and `Reward_Lang_Mask`. The reward text, for example "Reward: Title - Explorer". Not used by the core.
+
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Reward_Lang_enUS` = enUS, `Reward_Lang_enGB` = koKR, `Reward_Lang_koKR` = frFR, `Reward_Lang_frFR` = deDE, `Reward_Lang_deDE` = zhCN, `Reward_Lang_enCN` = zhTW, `Reward_Lang_zhCN` = esES, `Reward_Lang_enTW` = esMX, `Reward_Lang_zhTW` = ruRU. The remaining text columns, `Reward_Lang_esES` to `Reward_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### Minimum\_Criteria
 

@@ -6,19 +6,15 @@
 
 This table holds information of **every** rewarded quest to a player.
 
-**Table Structure**
+**Table: character\_queststatus\_rewarded's Structure**
 
-| Field       | Type       | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------- | ---------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]   | INT        | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2]  | INT        | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [active][3] | TINYINT    | UNSIGNED   |     | NO   | 1       |       |                          |
+| Field             | Type    |          | Null | Key | Default | Extra | Comment                  |
+| :---------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)     | INT     | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [quest](#quest)   | INT     | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier         |
+| [active](#active) | TINYINT | UNSIGNED | NO   |     | 1       |       |                          |
 
-[1]: #guid
-[2]: #quest
-[3]: #active
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

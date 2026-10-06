@@ -6,19 +6,15 @@
 
 Holds information on the daily quest status of every player. The quest must have type = 87 or the 4096 flag at QuestFlags.
 
-**Table Structure**
+**Table: character\_queststatus\_daily's Structure**
 
-| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-|----------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
-| [time][3]  | INT     | UNSIGNED   |     | NO   | 0       |       |                          |
+| Field           | Type |          | Null | Key | Default | Extra | Comment                  |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)   | INT  | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [quest](#quest) | INT  | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier         |
+| [time](#time)   | INT  | UNSIGNED | NO   |     | 0       |       |                          |
 
-[1]: #guid
-[2]: #quest
-[3]: #time
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

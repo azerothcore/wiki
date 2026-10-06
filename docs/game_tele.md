@@ -2,29 +2,21 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: game\_tele's Structure**
 
 This table contains a list of teleport locations that can be used with the *.tele* command in-game. Entries in this table can be added/deleted manually or with the *.tele add* and *.tele delete* commands.
 
-| Field            | Type         | Attributes | Key | Null | Default | Extra          |
-| ---------------- | ------------ | ---------- | --- | ---- | ------- | -------------- |
-| [id][1]          | MEDIUMINT    | UNSIGNED   | PRI | NO   | NULL    | Auto increment |
-| [position_x][2]  | FLOAT        | SIGNED     |     | NO   | 0       |                |
-| [position_y][3]  | FLOAT        | SIGNED     |     | NO   | 0       |                |
-| [position_z][4]  | FLOAT        | SIGNED     |     | NO   | 0       |                |
-| [orientation][5] | FLOAT        | SIGNED     |     | NO   | 0       |                |
-| [map][6]         | SMALLINT     | UNSIGNED   |     | NO   | 0       |                |
-| [name][7]        | VARCHAR(100) | SIGNED     |     | NO   | NULL    |                |
+| Field                       | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                   | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [position_x](#positionx)    | FLOAT        |          | NO   |     | 0       |       |         |
+| [position_y](#positiony)    | FLOAT        |          | NO   |     | 0       |       |         |
+| [position_z](#positionz)    | FLOAT        |          | NO   |     | 0       |       |         |
+| [orientation](#orientation) | FLOAT        |          | NO   |     | 0       |       |         |
+| [map](#map)                 | SMALLINT     | UNSIGNED | NO   |     | 0       |       |         |
+| [name](#name)               | VARCHAR(100) |          | NO   |     | ''      |       |         |
 
-[1]: #id
-[2]: #positionx
-[3]: #positiony
-[4]: #positionz
-[5]: #orientation
-[6]: #map
-[7]: #name
-
-**Field Descriptions**
+**Description of the table's fields**
 
 ### id
 

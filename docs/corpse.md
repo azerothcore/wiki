@@ -4,7 +4,9 @@
 
 **The \`corpse\` table**
 
-**Table Structure**
+Holds the corpses of dead player characters that are in the world.
+
+**Table: corpse's Structure**
 
 | Field            | Type     | Attributes | Key | Null | Default | Extra | Comment                            |
 | ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
@@ -16,15 +18,15 @@
 | [mapId][6]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       | Map Identifier                     |
 | [phaseMask][7]   | INT      | UNSIGNED   |     | NO   | 1       |       |                                    |
 | [displayId][8]   | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [itemCache][9]   | TEXT     | SIGNED     |     | NO   |         |       |                                    |
+| [itemCache][9]   | TEXT     |            |     | NO   |         |       |                                    |
 | [bytes1][10]     | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [bytes2][11]     | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [guildId][12]    | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [flags][13]      | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
 | [dynFlags][14]   | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [time][15]       | INT      | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [corpseType][16] | TINYINT  | UNSIGNED   |     | NO   | 0       |       |                                    |
-| [instanceId][17] | INT      | UNSIGNED   |     | NO   | 0       |       | Instance Identifier                |
+| [time][15]       | INT      | UNSIGNED   | MUL | NO   | 0       |       |                                    |
+| [corpseType][16] | TINYINT  | UNSIGNED   | MUL | NO   | 0       |       |                                    |
+| [instanceId][17] | INT      | UNSIGNED   | MUL | NO   | 0       |       | Instance Identifier                |
 
 [1]: #guid
 [2]: #posx
@@ -44,7 +46,7 @@
 [16]: #corpsetype
 [17]: #instanceid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

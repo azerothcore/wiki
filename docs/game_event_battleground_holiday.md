@@ -1,22 +1,22 @@
-# game_event_battleground_holiday
+# game\_event\_battleground\_holiday
 
 [<-Back-to:World](database-world)
 
-**The \`Game_event_battleground_holiday\` table**
+**The \`game\_event\_battleground\_holiday\` table**
 
 This table is used to add a holiday to a battleground, for things like extra reputation / honor.
 
-**Table Structure**
+**Table: game\_event\_battleground\_holiday's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra  | Comment                 |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ------ | ----------------------- |
-| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         | Unique | Entry of the game event |
-| [bgflag][2]     | INT     | UNSIGNED   |     | NO   | 0       |        |                         |
+| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment                 |
+| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ----------------------- |
+| [eventEntry][1] | TINYINT | UNSIGNED   | PRI | NO   |         |       | Entry of the game event |
+| [bgflag][2]     | INT     | UNSIGNED   |     | NO   | 0       |       |                         |
 
 [1]: #evententry
 [2]: #bgflag
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

@@ -6,12 +6,12 @@
 
 This table holds basic info about groups.
 
-**Table Structure**
+**Table: groups's Structure**
 
 | Field                  | Type    | Attributes | Key | Null | Default | Extra | Comment |
 | ---------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
 | [guid][1]              | INT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [leaderGuid][2]        | INT     | UNSIGNED   |     | NO   |         |       |         |
+| [leaderGuid][2]        | INT     | UNSIGNED   | MUL | NO   |         |       |         |
 | [lootMethod][3]        | TINYINT | UNSIGNED   |     | NO   |         |       |         |
 | [looterGuid][4]        | INT     | UNSIGNED   |     | NO   |         |       |         |
 | [lootThreshold][5]     | TINYINT | UNSIGNED   |     | NO   |         |       |         |
@@ -25,7 +25,7 @@ This table holds basic info about groups.
 | [icon8][13]            | BIGINT  | UNSIGNED   |     | NO   |         |       |         |
 | [groupType][14]        | TINYINT | UNSIGNED   |     | NO   |         |       |         |
 | [difficulty][15]       | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [raiddifficulty][16]   | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
+| [raidDifficulty][16]   | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
 | [masterLooterGuid][17] | INT     | UNSIGNED   |     | NO   |         |       |         |
 
 [1]: #guid
@@ -46,7 +46,7 @@ This table holds basic info about groups.
 [16]: #raiddifficulty
 [17]: #masterlooterguid
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

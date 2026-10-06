@@ -6,21 +6,21 @@
 
 This table holds the reputation information for each character.
 
-**Table Structure**
+**Table: character\_reputation's Structure**
 
-| Field         | Type        | Attributes | Key | Null | Default | Extra | Comment                  |
-| ------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]     | INT         | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [faction][2]  | SMALLINT    | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [standing][3] | INT         | SIGNED     |     | NO   | 0       |       |                          |
-| [flags][4]    | SMALLINT    | UNSIGNED   |     | NO   | 0       |       |                          |
+| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment                  |
+| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
+| [guid][1]     | INT      | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
+| [faction][2]  | SMALLINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| [standing][3] | INT      | SIGNED     |     | NO   | 0       |       |                          |
+| [flags][4]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |                          |
 
 [1]: #guid
 [2]: #faction
 [3]: #standing
 [4]: #flags
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

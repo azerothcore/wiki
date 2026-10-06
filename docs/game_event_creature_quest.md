@@ -6,19 +6,15 @@
 
 This table holds information on quests that should only be available when an event is currently taking place.
 
-**Table Structure**
+**Table: game\_event\_creature\_quest's Structure**
 
-| Field           | Type      | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [eventEntry][1] | TINYINT   | UNSIGNED   |     | NO   |         |       | Entry of the game event. |
-| [id][2]         | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [quest][3]      | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                          |
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment                  |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [eventEntry](#evententry) | TINYINT | UNSIGNED | NO   |     |         |       | Entry of the game event. |
+| [id](#id)                 | INT     | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [quest](#quest)           | INT     | UNSIGNED | NO   | PRI | 0       |       |                          |
 
-[1]: #evententry
-[2]: #id
-[3]: #quest
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

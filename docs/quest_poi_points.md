@@ -6,25 +6,18 @@
 
 Comes from sniffs. Visually speaking, this table is used to identify the X and Y coordinates on the map (not the minimap - the main map) where a quest's question mark should appear. Use the ".gps" command where you are standing to find these coordinates. In order to see changes, ".reload quest\_poi", close Wow.exe, then delete your cache folder.
 
-**Table Structure**
+**Table: quest\_poi\_points's Structure**
 
-| Field              | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [questid][1]       | INT      | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [Idx1][6]          | INT      | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [idx2][2]          | INT      | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [x][3]             | INT      | UNSIGNED  |     | NO   | 0       |       |         |
-| [y][4]             | INT      | UNSIGNED  |     | NO   | 0       |       |         |
-| [VerifiedBuild][5] | SMALLINT | UNSIGNED  |     | YES  | NULL    |       |         |
+| Field                           | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [QuestID](#questid)             | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Idx1](#idx1)                   | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Idx2](#idx2)                   | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [X](#x)                         | INT  |          | NO   |     | 0       |       |         |
+| [Y](#y)                         | INT  |          | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild) | INT  |          | YES  |     | NULL    |       |         |
 
-[1]: #questid
-[2]: #idx2
-[3]: #x
-[4]: #y
-[5]: #verifiedbuild
-[6]: #idx1
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### questid
 
