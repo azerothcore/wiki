@@ -216,6 +216,9 @@ The workflow and habits on this page are covered in more depth in these write-up
 - [Keep your AI agent’s memory clean and organized with memory-doctor](https://medium.com/engineering-in-the-age-of-ai/keep-your-ai-agents-memory-clean-and-organized-with-memory-doctor-a79f7174f257)
 - The agentic **Refine-Plan-Act-Consolidate** (RPAC) pattern: explained [in theory](https://medium.com/engineering-in-the-age-of-ai/the-refine-plan-act-pattern-for-agentic-ai-coding-59ee013e4427) and [in practice](https://medium.com/engineering-in-the-age-of-ai/how-i-use-ai-agents-to-solve-programming-tasks-daily-2a68a5828b8e)
 - [Use AI to assist you with both sides of code reviews](https://medium.com/engineering-in-the-age-of-ai/let-ai-speed-up-both-sides-of-your-code-reviews-while-you-stay-in-full-control-3b059506ef39)
+- [The Fresh Eyes agentic review technique](https://medium.com/engineering-in-the-age-of-ai/more-powerful-ai-reviews-with-fresh-eyes-bfad221748c0)
+- [Split and execute your plan into multiple steps](https://medium.com/engineering-in-the-age-of-ai/do-not-execute-the-full-plan-break-it-down-step-by-step-2e0ba30ddf73)
+- [A collection of simple agentic skills to increase your development productivity](https://medium.com/engineering-in-the-age-of-ai/simple-agentic-skills-to-increase-your-daily-development-productivity-6b8958b5290f)
 
 ## Wrap-up
 
