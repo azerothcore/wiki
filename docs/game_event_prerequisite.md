@@ -6,17 +6,14 @@
 
 This table contains events that must have been completed to start the given event. You can have more than one event that must be completed before the next will start.
 
-**Table Structure**
+**Table: game\_event\_prerequisite's Structure**
 
-| Field                   | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1]         | TINYINT   | UNSIGNED   | PRI | NO   |         |       |         |
-| [prerequisite_event][2] | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
+| Field                                    | Type    |          | Null | Key | Default | Extra | Comment                 |
+| :--------------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :---------------------- |
+| [eventEntry](#evententry)                | TINYINT | UNSIGNED | NO   | PRI |         |       | Entry of the game event |
+| [prerequisite_event](#prerequisiteevent) | INT     | UNSIGNED | NO   | PRI |         |       |                         |
 
-[1]: #evententry
-[2]: #prerequisiteevent
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

@@ -6,27 +6,19 @@
 
 This table holds arena info about specific team members. All arena\_team members have a record in this table.
 
-**Table Structure**
+**Table: arena\_team\_member's Structure**
 
-| Field               | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [arenaTeamId][1]    | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [guid][2]           | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [weekGames][3]      | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [weekWins][4]       | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [seasonGames][5]    | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [seasonWins][6]     | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [personalRating][7] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                             | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [arenaTeamId](#arenateamid)       | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [guid](#guid)                     | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [weekGames](#weekgames)           | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [weekWins](#weekwins)             | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [seasonGames](#seasongames)       | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [seasonWins](#seasonwins)         | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [personalRating](#personalrating) | SMALLINT |          | NO   |     | 0       |       |         |
 
-[1]: #arenateamid
-[2]: #guid
-[3]: #weekgames
-[4]: #weekwins
-[5]: #seasongames
-[6]: #seasonwins
-[7]: #personalrating
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### arenaTeamId
 

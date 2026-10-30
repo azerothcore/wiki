@@ -1,21 +1,21 @@
-# arena_season_reward
+# arena\_season\_reward
 
 [<-Back-to:World](database-world)
 
-**The \`arena_season_reward\` table**
+**The \`arena\_season\_reward\` table**
 
 The rewards of each [arena\_season\_reward\_group](arena_season_reward_group). Items are sent by mail, achievements are completed for every member of the team who gets the reward.
 
-**Table Structure**
+**Table: arena\_season\_reward's Structure**
 
-| Field                | Type | Attributes       | Key | Null | Default     | Extra | Comment                                                      |
-| -------------------- | ---- | ---------------- | --- | ---- | ----------- | ----- | ------------------------------------------------------------ |
-| [group_id](#groupid) | INT  |                  | PRI | NO   |             |       | id from arena_season_reward_group table                      |
-| [type](#type)        | ENUM | achievement,item | PRI | NO   | achievement |       |                                                              |
-| [entry](#entry)      | INT  | UNSIGNED         | PRI | NO   | pct         |       | For item type - item entry, for achievement - achevement id. |
+| Field                | Type |                  | Null | Key | Default     | Extra | Comment                                                      |
+| :------------------- | :--- | :--------------- | :--: | :-: | :---------: | :---: | :----------------------------------------------------------- |
+| [group_id](#groupid) | INT  |                  | NO   | PRI |             |       | id from arena_season_reward_group table                      |
+| [type](#type)        | ENUM | achievement,item | NO   | PRI | achievement |       |                                                              |
+| [entry](#entry)      | INT  | UNSIGNED         | NO   | PRI |             |       | For item type - item entry, for achievement - achevement id. |
 
 
-## Description of the fields
+**Description of the table's fields**
 
 ### group_id
 

@@ -4,25 +4,20 @@
 
 **The \`log\_encounter\` table**
 
-**Table Structure**
+Logs completed encounters: time, map, difficulty, the credit given and the players involved.
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [time][1]        | DATATIME | SIGNED     |     | NO   |         |       |         |
-| [map][2]         | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [difficulty][3]  | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
-| [creditType][4]  | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
-| [creditEntry][5] | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [playersInfo][6] | TEXT     | SIGNED     |     | NO   |         |       |         |
+**Table: log\_encounter's Structure**
 
-[1]: #time
-[2]: #map
-[3]: #difficulty
-[4]: #credittype
-[5]: #creditentry
-[6]: #playersinfo
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [time](#time)               | DATETIME |          | NO   |     |         |       |         |
+| [map](#map)                 | SMALLINT | UNSIGNED | NO   |     |         |       |         |
+| [difficulty](#difficulty)   | TINYINT  | UNSIGNED | NO   |     |         |       |         |
+| [creditType](#credittype)   | TINYINT  | UNSIGNED | NO   |     |         |       |         |
+| [creditEntry](#creditentry) | INT      | UNSIGNED | NO   |     |         |       |         |
+| [playersInfo](#playersinfo) | TEXT     |          | NO   |     |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### time
 

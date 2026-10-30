@@ -6,25 +6,18 @@
 
 Table used for storing custom damage/healing bonus coefficients.
 
-**Table Structure**
+**Table: spell\_bonus\_data's Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]        | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [direct_bonus][2] | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [dot_bonus][3]    | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [ap_bonus][4]     | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [ap_dot_bonus][5] | FLOAT        | SIGNED     |     | NO   | 0       |       |         |
-| [comments][6]     | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       |         |
+| Field                        | Type         |          | Null | Key | Default | Extra | Comment |
+| :--------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)              | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [direct_bonus](#directbonus) | FLOAT        |          | NO   |     | 0       |       |         |
+| [dot_bonus](#dotbonus)       | FLOAT        |          | NO   |     | 0       |       |         |
+| [ap_bonus](#apbonus)         | FLOAT        |          | NO   |     | 0       |       |         |
+| [ap_dot_bonus](#apdotbonus)  | FLOAT        |          | NO   |     | 0       |       |         |
+| [comments](#comments)        | VARCHAR(255) |          | YES  |     | NULL    |       |         |
 
-[1]: #entry
-[2]: #directbonus
-[3]: #dotbonus
-[4]: #apbonus
-[5]: #apdotbonus
-[6]: #comments
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

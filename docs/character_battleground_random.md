@@ -6,15 +6,13 @@
 
 This table stores battlegrounds IDs for random battleground sessions.
 
-**Table Structure**
+**Table: character\_battleground\_random's Structure**
 
-| Field     | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1] | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field         | Type |          | Null | Key | Default | Extra | Comment |
+| :------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid) | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
 
-[1]: #guid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

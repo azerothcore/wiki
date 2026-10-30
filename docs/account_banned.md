@@ -6,25 +6,18 @@
 
 This table lists all of the accounts that have been banned along with the date when (or if) the ban will expire.
 
-**Table Structure**
+**Table: account\_banned's Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment    |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------- |
-| [id][1]        | INT          | UNSIGNED   | PRI | NO   | 0       |       | Account id |
-| [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |            |
-| [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |            |
-| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |            |
-| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |            |
-| [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |            |
+| Field                   | Type         |          | Null | Key | Default | Extra | Comment    |
+| :---------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :--------- |
+| [id](#id)               | INT          | UNSIGNED | NO   | PRI | 0       |       | Account id |
+| [bandate](#bandate)     | INT          | UNSIGNED | NO   | PRI | 0       |       |            |
+| [unbandate](#unbandate) | INT          | UNSIGNED | NO   |     | 0       |       |            |
+| [bannedby](#bannedby)   | VARCHAR(50)  |          | NO   |     |         |       |            |
+| [banreason](#banreason) | VARCHAR(255) |          | NO   |     |         |       |            |
+| [active](#active)       | TINYINT      | UNSIGNED | NO   |     | 1       |       |            |
 
-[1]: #id
-[2]: #bandate
-[3]: #unbandate
-[4]: #bannedby
-[5]: #banreason
-[6]: #active
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

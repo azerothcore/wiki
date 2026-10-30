@@ -1,18 +1,18 @@
-# profanity_name
+# profanity\_name
 
 [<-Back-to:Characters](database-characters)
 
-**The `profanity_name` table**
+**The \`profanity\_name\` table**
 
 List of disallowed name fragments used by the profanity name filter to reject character, pet and similar names. See also [reserved_name](reserved_name) for fully reserved names.
 
-**Table Structure**
+**Table: profanity\_name's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [name](#name) | VARCHAR(12) |  | PRI | NO |  |  |  |
+| Field         | Type        |     | Null | Key | Default | Extra | Comment |
+| :------------ | :---------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [name](#name) | VARCHAR(12) |     | NO   | PRI |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### name
 

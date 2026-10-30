@@ -10,23 +10,17 @@ GM-Command: **.mute [$playerName] $timeInMinutes [$reason]**.
 
 Disable chat messaging for any character from account of character $playerName (or currently selected) at $timeInMinutes minutes. Player can be offline.
 
-**Table Structure**
+**Table: account\_muted's Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [mutedate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [mutetime][3]   | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mutedby][4]    | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
-| [mutereason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
+| Field                     | Type         |          | Null | Key | Default | Extra | Comment                  |
+| :------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)             | INT          | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [mutedate](#mutedate)     | INT          | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [mutetime](#mutetime)     | INT          | UNSIGNED | NO   |     | 0       |       |                          |
+| [mutedby](#mutedby)       | VARCHAR(50)  |          | NO   |     |         |       |                          |
+| [mutereason](#mutereason) | VARCHAR(255) |          | NO   |     |         |       |                          |
 
-[1]: #guid
-[2]: #mutedate
-[3]: #mutetime
-[4]: #mutedby
-[5]: #mutereason
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 
@@ -44,6 +38,6 @@ Mute duration in minutes.
 
 Nickname of GM/moderator who issued the mute.
 
-#### mutereason
+### mutereason
 
 Text field with description of mute's reason.

@@ -4,39 +4,27 @@
 
 **The \`log\_arena\_fights\` table**
 
-**Table Structure**
+Logs each arena match: time, type, duration, the two teams and their rating changes.
 
-| Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [fight_id][1]         | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [time][2]             | DATETIME | SIGNED     |     | NO   |         |       |         |
-| [type][3]             | TINYINT  | UNSIGNED   |     | NO   |         |       |         |
-| [duration][4]         | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [winner][5]           | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [loser][6]            | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [winner_tr][7]        | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [winner_mmr][8]       | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [winner_tr_change][9] | SMALLINT | SIGNED     |     | NO   |         |       |         |
-| [loser_tr][10]        | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [loser_mmr][11]       | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [loser_tr_change][12] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [currOnline][13]      | INT      | SIGNED     |     | NO   | 0       |       |         |
+**Table: log\_arena\_fights's Structure**
 
-[1]: #fightid
-[2]: #time
-[3]: #type
-[4]: #duration
-[5]: #winner
-[6]: #loser
-[7]: #winnertr
-[8]: #winnermmr
-[9]: #winnertrchange
-[10]: #losertr
-[11]: #losermmr
-[12]: #losertrchange
-[13]: #curronline
+| Field                               | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [fight_id](#fightid)                | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [time](#time)                       | DATETIME |          | NO   |     |         |       |         |
+| [type](#type)                       | TINYINT  | UNSIGNED | NO   |     |         |       |         |
+| [duration](#duration)               | INT      | UNSIGNED | NO   |     |         |       |         |
+| [winner](#winner)                   | INT      | UNSIGNED | NO   |     |         |       |         |
+| [loser](#loser)                     | INT      | UNSIGNED | NO   |     |         |       |         |
+| [winner_tr](#winnertr)              | SMALLINT | UNSIGNED | NO   |     |         |       |         |
+| [winner_mmr](#winnermmr)            | SMALLINT | UNSIGNED | NO   |     |         |       |         |
+| [winner_tr_change](#winnertrchange) | SMALLINT |          | NO   |     |         |       |         |
+| [loser_tr](#losertr)                | SMALLINT | UNSIGNED | NO   |     |         |       |         |
+| [loser_mmr](#losermmr)              | SMALLINT | UNSIGNED | NO   |     |         |       |         |
+| [loser_tr_change](#losertrchange)   | SMALLINT |          | NO   |     |         |       |         |
+| [currOnline](#curronline)           | INT      | UNSIGNED | NO   |     |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### fight\_id
 

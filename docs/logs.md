@@ -11,23 +11,17 @@ Example db appender:
 Appender.DB=3,5,0
 ```
 
-**Table Structure**
+**Table: logs's Structure**
 
-| Field       | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ----------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [time][1]   | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [realm][2]  | INT          | UNSIGNED   |     | NO   |         |       |         |
-| [type][3]   | VARCHAR(250) | SIGNED     |     | NO   |         |       |         |
-| [level][4]  | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [string][5] | TEXT         | SIGNED     |     | YES  |         |       |         |
+| Field             | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [time](#time)     | INT          | UNSIGNED | NO   |     |         |       |         |
+| [realm](#realm)   | INT          | UNSIGNED | NO   |     |         |       |         |
+| [type](#type)     | VARCHAR(250) |          | NO   |     |         |       |         |
+| [level](#level)   | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [string](#string) | TEXT         |          | YES  |     | NULL    |       |         |
 
-[1]: #time
-[2]: #realm
-[3]: #type
-[4]: #level
-[5]: #string
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### time
 

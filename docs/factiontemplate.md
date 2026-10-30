@@ -16,15 +16,22 @@ This DBC contains information on all of the individual factions. A faction entry
 
 ## **Table Structure**
 
-| Field Nb | Name                                     | Type             |
-| -------- | ---------------------------------------- | ---------------- |
-| 1        | ID                                       | Int              |
-| 2        | Name (Ref to [Faction.dbc](faction))     | Int              |
-| 4        | ourMask                                  | Bitmask (4 bits) |
-| 5        | friendlyMask                             | Bitmask (4 bits) |
-| 6        | hostileMask                              | Bitmask (4 bits) |
-| 7-10     | enemyFactions                            | Int              |
-| 11-14    | friendFactions                           | Int              |
+| Column | Field        | Type   | factiontemplate\_dbc column                      | Comment                                                                            |
+| :----: | :----------- | :----- | :----------------------------------------------- | :--------------------------------------------------------------------------------- |
+| 0      | ID           | uint32 | [ID](factiontemplate_dbc#id)                     |                                                                                    |
+| 1      | Faction      | uint32 | [Faction](factiontemplate_dbc#faction)           | Name (Ref to [Faction.dbc](faction))                                               |
+| 2      | Flags        | uint32 | [Flags](factiontemplate_dbc#flags)               |                                                                                    |
+| 3      | FactionGroup | uint32 | [FactionGroup](factiontemplate_dbc#factiongroup) | Bitmask of faction groups (bit = MaskID). See [FactionGroup.dbc](dbc-factiongroup) |
+| 4      | FriendGroup  | uint32 | [FriendGroup](factiontemplate_dbc#friendgroup)   | Bitmask of faction groups (bit = MaskID). See [FactionGroup.dbc](dbc-factiongroup) |
+| 5      | EnemyGroup   | uint32 | [EnemyGroup](factiontemplate_dbc#enemygroup)     | Bitmask of faction groups (bit = MaskID). See [FactionGroup.dbc](dbc-factiongroup) |
+| 6      | Enemies_0    | uint32 | [Enemies_1](factiontemplate_dbc#enemies)         | ID in [Faction.dbc](faction)                                                       |
+| 7      | Enemies_1    | uint32 | [Enemies_2](factiontemplate_dbc#enemies)         | ID in [Faction.dbc](faction)                                                       |
+| 8      | Enemies_2    | uint32 | [Enemies_3](factiontemplate_dbc#enemies)         | ID in [Faction.dbc](faction)                                                       |
+| 9      | Enemies_3    | uint32 | [Enemies_4](factiontemplate_dbc#enemies)         | ID in [Faction.dbc](faction)                                                       |
+| 10     | Friend_0     | uint32 | [Friend_1](factiontemplate_dbc#friend)           | ID in [Faction.dbc](faction)                                                       |
+| 11     | Friend_1     | uint32 | [Friend_2](factiontemplate_dbc#friend)           | ID in [Faction.dbc](faction)                                                       |
+| 12     | Friend_2     | uint32 | [Friend_3](factiontemplate_dbc#friend)           | ID in [Faction.dbc](faction)                                                       |
+| 13     | Friend_3     | uint32 | [Friend_4](factiontemplate_dbc#friend)           | ID in [Faction.dbc](faction)                                                       |
 
 # **Explanations & Calculations**
 
@@ -36,12 +43,12 @@ If our faction doesn't have the other faction's ID in the enemy or friend factio
 
 First, let's define the four faction groups:
 
-| ID  | Bit | Name                              |
-| --- | --- | --------------------------------- |
-| 0   | 1   | All players (and pets)            |
-| 1   | 2   | Alliance players (and their pets) |
-| 2   | 4   | Horde players (and their pets)    |
-| 3   | 8   | Monster (Not a player nor a pet)  |
+| Value | Hex    | Flag                              | Faction Group ID |
+| :---- | :----: | :-------------------------------- | :--------------- |
+| 1     | `0x01` | All players (and pets)            | 0                |
+| 2     | `0x02` | Alliance players (and their pets) | 1                |
+| 4     | `0x04` | Horde players (and their pets)    | 2                |
+| 8     | `0x08` | Monster (Not a player nor a pet)  | 3                |
 
 The first mask (ourMask) defines what type of faction we are dealing with. Eg, faction 1 (PLAYER, Human) has 3 as ourMask; that means that it has the first two bits set so it classifies as both 'All players' and 'Alliance players'.
 
@@ -115,6 +122,9 @@ And these steps to calculate if faction A is friendly to faction B:
 # **Content**
 
 **Version is : 3.3.5a**
+
+<details>
+<summary>Show the content of FactionTemplate.dbc</summary>
 
 | ID   | Name                                | ourMask | friendlyMask | hostileMask | Enemy Factions      | Friend Factions   |
 | ---- | ----------------------------------- | ------- | ------------ | ----------- | ------------------- | ----------------- |
@@ -959,3 +969,5 @@ And these steps to calculate if faction A is friendly to faction B:
 | 2230 | Argent Crusade                      | 0       | 0            | 0           | 1107 20             | 1106              |
 | 2235 | CTF - Flag - Horde 2                | 0       | 5            | 2           |                     |                   |
 | 2236 | CTF - Flag - Alliance 2             | 0       | 3            | 4           |                     |                   |
+
+</details>

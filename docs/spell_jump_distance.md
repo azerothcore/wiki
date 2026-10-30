@@ -1,20 +1,20 @@
-# spell_jump_distance
+# spell\_jump\_distance
 
 [<-Back-to:World](database-world)
 
 
-**The `spell_jump_distance` table**
+**The \`spell\_jump\_distance\` table**
 
 This table stores per-spell chain hop distance overrides. When present, the server loads `JumpDistance` and assigns it to `SpellInfo::JumpDistance`; `Spell::SearchChainTargets()` then uses this value to constrain chain-target hop radius.
 
-**Table Structure**
+**Table: spell\_jump\_distance's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id) | INT | UNSIGNED | PRI | NO | 0 | | Spell id (links to Spell.dbc) |
-| [JumpDistance](#jumpdistance) | FLOAT | SIGNED | | NO | 0 | | Max hop distance in yards |
+| Field                         | Type  |          | Null | Key | Default | Extra | Comment                   |
+| :---------------------------- | :---- | :------- | :--: | :-: | :-----: | :---: | :------------------------ |
+| [ID](#id)                     | INT   | UNSIGNED | NO   | PRI |         |       | spell id                  |
+| [JumpDistance](#jumpdistance) | FLOAT |          | NO   |     | 0       |       | max hop distance in yards |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

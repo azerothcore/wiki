@@ -1,5 +1,7 @@
 # broadcast\_text\_locale
 
+[<-Back-to:World](database-world)
+
 **The \`broadcast\_text\_locale\` table**
 
 Â 
@@ -9,17 +11,17 @@ This table will have **localized texts** for \`broadcast\_text\` table. Used inÂ
 Its purpose is (will be) used as a globalized table containing the localized texts as mentionned above.
 
 
-**Table Structure**
+**Table: broadcast\_text\_locale's Structure**
 
-| Field                     | Type       | Key | Null | Default | Extra | Comment |
-| ------------------------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                 | MEDIUMINT  | PRI | NO   | 0       |       |         |
-| [locale](#locale)         | VARCHAR(4) | PRI | NO   | NULL    |       |         |
-| [MaleText](#maletext)     | text       |     | YES  | NULL    |       |         |
-| [FemaleText](#femaletext) | text       |     | YES  | NULL    |       |         |
-| VerifiedBuild             | SMALLINT   |     | YES  | 0       |       |         |
+| Field                           | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                       | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [locale](#locale)               | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [MaleText](#maletext)           | TEXT       |          | YES  |     | NULL    |       |         |
+| [FemaleText](#femaletext)       | TEXT       |          | YES  |     | NULL    |       |         |
+| [VerifiedBuild](#verifiedbuild) | SMALLINT   |          | YES  |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

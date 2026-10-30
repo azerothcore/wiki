@@ -6,29 +6,20 @@
 
 Holds reputation multipliers for specific factions.
 
-**Table Structure**
+**Table: reputation\_reward\_rate's Structure**
 
-| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [faction][1]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [quest_rate][2]    | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
-| [quest_daily_rate][5] | FLOAT  | SIGNED     |     | NO   | 1       |       |         |
-| [quest_weekly_rate][6] | FLOAT | SIGNED     |     | NO   | 1       |       |         |
-| [quest_monthly_rate][7] | FLOAT | SIGNED    |     | NO   | 1       |       |         |
-| [quest_repeatable_rate][8] | FLOAT | SIGNED |     | NO   | 1       |       |         |
-| [creature_rate][3] | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
-| [spell_rate][4]    | FLOAT     | SIGNED     |     | NO   | 1       |       |         |
+| Field                                         | Type  |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------------- | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [faction](#faction)                           | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [quest_rate](#questrate)                      | FLOAT |          | NO   |     | 1       |       |         |
+| [quest_daily_rate](#questdailyrate)           | FLOAT |          | NO   |     | 1       |       |         |
+| [quest_weekly_rate](#questweeklyrate)         | FLOAT |          | NO   |     | 1       |       |         |
+| [quest_monthly_rate](#questmonthlyrate)       | FLOAT |          | NO   |     | 1       |       |         |
+| [quest_repeatable_rate](#questrepeatablerate) | FLOAT |          | NO   |     | 1       |       |         |
+| [creature_rate](#creaturerate)                | FLOAT |          | NO   |     | 1       |       |         |
+| [spell_rate](#spellrate)                      | FLOAT |          | NO   |     | 1       |       |         |
 
-[1]: #faction
-[2]: #questrate
-[3]: #creaturerate
-[4]: #spellrate
-[5]: #questdailyrate
-[6]: #questweeklyrate
-[7]: #questmonthlyrate
-[8]: #questrepeatablerate
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### faction
 

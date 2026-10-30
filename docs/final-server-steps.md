@@ -1,9 +1,9 @@
 # Final Server Steps
 
-| Installation Guide                                                                                                                   |                                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 5: Networking](networking)                                                                                                  | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 5: Networking](networking) | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
+| :-- | --: |
 
 ## Starting the server
 
@@ -32,13 +32,11 @@ Read [creating accounts](creating-accounts).
 ## Setting up Remote Access
 For development purposes, this step is not necessary. However, for increased security when you want other people to make accounts you should set up a registration form, so you don't have to paste their passwords. Check out [Remote Access](remote-access) on how to send commands into the server.
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 5: Networking](networking)                                                                                                  | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 5: Networking](networking) | [Step 7: Keeping the Server Up-to-Date >>](keeping-the-server-up-to-date) |
+| :-- | --: |

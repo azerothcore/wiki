@@ -6,23 +6,17 @@
 
 This table holds pieces of names (first and last half) that are use for pet name generation for locale.
 
-**Table Structure**
+**Table: pet\_name\_generation\_locale's Structure**
 
-| Field       | Type      | Attributes | Key | Null | Default | Extra          | Comment |
-| ----------- | --------- | ---------- | --- | ---- | ------- | -------------- | ------- |
-| [ID][1]     | MEDIUMINT | UNSIGNED   | PRI | NO   | NULL    | Auto increment |         |
-| [locale][2] | VARCHAR   |            |     | NO   |         |                |         |
-| [word][3]   | tinytext  | SIGNED     |     | NO   | NULL    |                |         |
-| [entry][4]  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |                |         |
-| [half][5]   | TINYINT   | SIGNED     |     | NO   | 0       |                |         |
+| Field             | Type       |          | Null | Key | Default | Extra | Comment |
+| :---------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)         | INT        | UNSIGNED | NO   | PRI |         |       |         |
+| [Locale](#locale) | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Word](#word)     | TINYTEXT   |          | NO   |     |         |       |         |
+| [Entry](#entry)   | INT        | UNSIGNED | NO   |     | 0       |       |         |
+| [Half](#half)     | TINYINT    | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #id
-[2]: #locale
-[3]: #word
-[4]: #entry
-[5]: #half
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

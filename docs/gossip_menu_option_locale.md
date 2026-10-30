@@ -1,22 +1,22 @@
-# gossip_menu_option_locale
+# gossip\_menu\_option\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`gossip_menu_option_locale\` table**
+**The \`gossip\_menu\_option\_locale\` table**
 
 This table is used to provide localized clients with localized strings for gossip menu options.
 
-**Table Structure**
+**Table: gossip\_menu\_option\_locale's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [MenuID](#menuid) | INT | UNSIGNED | PRI | NO | 0 |  |  |
-| [OptionID](#optionid) | SMALLINT | UNSIGNED | PRI | NO | 0 |  |  |
-| [Locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
-| [OptionText](#optiontext) | TEXT |  |  | YES |  |  |  |
-| [BoxText](#boxtext) | TEXT |  |  | YES |  |  |  |
+| Field                     | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [MenuID](#menuid)         | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [OptionID](#optionid)     | SMALLINT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Locale](#locale)         | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [OptionText](#optiontext) | TEXT       |          | YES  |     | NULL    |       |         |
+| [BoxText](#boxtext)       | TEXT       |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### MenuID
 

@@ -1,4 +1,4 @@
-# module_string
+# module\_string
 
 [<-Back-to:World](database-world)
 
@@ -6,15 +6,15 @@
 
 This table holds information of string entries for modules.
 
-**Table Structure**
+**Table: module\_string's Structure**
 
-| Field             | Type         | Attributes | Key | Null | Default | Extra | Comment                      |
-| ----------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ---------------------------- |
-| [module](#module) | VARCHAR(255) |            | PRI | NO   |         |       | module dir name, eg mod-cfbg |
-| [id](#id)         | INT          | UNSIGNED   | PRI | NO   |         |       |                              |
-| [string](#string) | TEXT         |            |     | NO   |         |       |                              |
+| Field             | Type         |          | Null | Key | Default | Extra | Comment                      |
+| :---------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :--------------------------- |
+| [module](#module) | VARCHAR(255) |          | NO   | PRI |         |       | module dir name, eg mod-cfbg |
+| [id](#id)         | INT          | UNSIGNED | NO   | PRI |         |       |                              |
+| [string](#string) | TEXT         |          | NO   |     |         |       |                              |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### module
 

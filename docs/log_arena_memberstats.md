@@ -4,33 +4,24 @@
 
 **The \`log\_arena\_memberstats\` table**
 
-**Table Structure**
+Logs the result of each player in the arena matches recorded in [log_arena_fights](log_arena_fights).
 
-| Field          | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [fight_id][1]  | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [member_id][2] | TINYINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [name][3]      | CHAR(20) | SIGNED     |     | NO   |         |       |         |
-| [guid][4]      | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [team][5]      | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [account][6]   | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [ip][7]        | CHAR(15) | SIGNED     |     | NO   |         |       |         |
-| [damage][8]    | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [heal][9]      | INT      | UNSIGNED   |     | NO   |         |       |         |
-| [kblows][10]   | INT      | UNSIGNED   |     | NO   |         |       |         |
+**Table: log\_arena\_memberstats's Structure**
 
-[1]: #fightid
-[2]: #memberid
-[3]: #name
-[4]: #guid
-[5]: #team
-[6]: #account
-[7]: #ip
-[8]: #damage
-[9]: #heal
-[10]: #kblows
+| Field                  | Type     |          | Null | Key | Default | Extra | Comment |
+| :--------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [fight_id](#fightid)   | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [member_id](#memberid) | TINYINT  | UNSIGNED | NO   | PRI |         |       |         |
+| [name](#name)          | CHAR(20) |          | NO   |     |         |       |         |
+| [guid](#guid)          | INT      | UNSIGNED | NO   |     |         |       |         |
+| [team](#team)          | INT      | UNSIGNED | NO   |     |         |       |         |
+| [account](#account)    | INT      | UNSIGNED | NO   |     |         |       |         |
+| [ip](#ip)              | CHAR(15) |          | NO   |     |         |       |         |
+| [damage](#damage)      | INT      | UNSIGNED | NO   |     |         |       |         |
+| [heal](#heal)          | INT      | UNSIGNED | NO   |     |         |       |         |
+| [kblows](#kblows)      | INT      | UNSIGNED | NO   |     |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### fight\_id
 

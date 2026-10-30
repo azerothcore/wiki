@@ -6,21 +6,16 @@
 
 This table holds information about character's matchmaker rating in all team types.
 
-**Table Structure**
+**Table: character\_arena\_stats's Structure**
 
-| Field                 | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]             | INT         | UNSIGNED   | PRI | NO   |         |       |         |
-| [slot][2]             | TINYINT     | UNSIGNED   | PRI | NO   |         |       |         |
-| [matchMakerRating][3] | SMALLINT    | UNSIGNED   |     | NO   |         |       |         |
-| [maxMMR][4]           | SMALLINT    | SIGNED     |     | NO   |         |       |         |
+| Field                                 | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)                         | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [slot](#slot)                         | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [matchMakerRating](#matchmakerrating) | SMALLINT | UNSIGNED | NO   |     | 0       |       |         |
+| [maxMMR](#maxmmr)                     | SMALLINT |          | NO   |     |         |       |         |
 
-[1]: #guid
-[2]: #slot
-[3]: #matchmakerrating
-[4]: #maxmmr
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

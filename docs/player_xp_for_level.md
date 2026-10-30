@@ -6,17 +6,14 @@
 
 Includes information on how much experience needed for next level. Comes from sniffs.
 
-**Table Structure**
+**Table: player\_xp\_for\_level's Structure**
 
-| Field           | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Level][1]      | TINYINT | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [Experience][2] | INT     | UNSIGNED   |     | NO   | NULL    |       |         |
+| Field                     | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Level](#level)           | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [Experience](#experience) | INT     | UNSIGNED | NO   |     |         |       |         |
 
-[1]: #level
-[2]: #experience
-
-**Description of the fields**
+**Description of the table's fields**
 
 This table sets the exp point needed to upgrade the player's level.
 

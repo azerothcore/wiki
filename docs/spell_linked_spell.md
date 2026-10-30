@@ -6,21 +6,16 @@
 
 This table provides data for spell linking system, telling it which spells trigger what, and under which conditions.
 
-**Table Structure**
+**Table: spell\_linked\_spell's Structure**
 
-| Field              | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spell_trigger][1] | MEDIUMINT | SIGNED     |     | NO   |         |       |         |
-| [spell_effect][2]  | MEDIUMINT | SIGNED     |     | NO   |         |       |         |
-| [type][3]          | SMALLINT  | UNSIGNED   |     | NO   |         |       |         |
-| [comment][4]       | text      |            |     | NO   |         |       |         |
+| Field                          | Type    |          | Null | Key | Default | Extra | Comment |
+| :----------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [spell_trigger](#spelltrigger) | INT     |          | NO   | MUL |         |       |         |
+| [spell_effect](#spelleffect)   | INT     |          | NO   |     | 0       |       |         |
+| [type](#type)                  | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [comment](#comment)            | TEXT    |          | NO   |     |         |       |         |
 
-[1]: #spelltrigger
-[2]: #spelleffect
-[3]: #type
-[4]: #comment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell\_trigger
 

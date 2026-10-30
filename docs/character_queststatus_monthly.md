@@ -4,17 +4,16 @@
 
 **The \`character\_queststatus\_monthly\` table**
 
-**Table Structure**
+Holds the monthly quests each character has completed in the current month.
 
-| Field       | Type | Attributes | Key | Null | Default | Extra  | Comment                  |
-| ----------- | ---- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
-| [guid][1]   | INT  | UNSIGNED   | PRI | NO   | 0       |        | Global Unique Identifier |
-| [quest][2]  | INT  | UNSIGNED   | PRI | NO   | 0       |        | Quest Identifier         |
+**Table: character\_queststatus\_monthly's Structure**
 
-[1]: #guid
-[2]: #quest
+| Field           | Type |          | Null | Key | Default | Extra | Comment                  |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)   | INT  | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [quest](#quest) | INT  | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

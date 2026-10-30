@@ -6,25 +6,18 @@
 
 This table is used to disable dungeons/bgs/spells/etc.
 
-**Table Structure**
+**Table: disables's Structure**
 
-| Field           | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [sourceType][1] | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [entry][2]      | INT          | UNSIGNED   | PRI | NO   | NULL    |       |         |
-| [flags][3]      | TINYINT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [params_0][4]   | VARCHAR(255) |            |     | NO   |         |       |         |
-| [params_1][5]   | VARCHAR(255) |            |     | NO   |         |       |         |
-| [comment][6]    | VARCHAR(255) |            |     | NO   |         |       |         |
+| Field                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [sourceType](#sourcetype) | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [entry](#entry)           | INT          | UNSIGNED | NO   | PRI |         |       |         |
+| [flags](#flags)           | TINYINT      | UNSIGNED | NO   |     | 0       |       |         |
+| [params_0](#params0)      | VARCHAR(255) |          | NO   |     | ''      |       |         |
+| [params_1](#params1)      | VARCHAR(255) |          | NO   |     | ''      |       |         |
+| [comment](#comment)       | VARCHAR(255) |          | NO   |     | ''      |       |         |
 
-[1]: #sourcetype
-[2]: #entry
-[3]: #flags
-[4]: #params0
-[5]: #params1
-[6]: #comment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### sourceType
 
@@ -82,16 +75,16 @@ Entry of Achievement
 
 If sourceType = DISABLE_TYPE_SPELL: Specifies who the spell is disabled for.
 
-| Value | Type                                                                                          |
-| ----- | --------------------------------------------------------------------------------------------- |
-| 0     | Spell enabled                                                                                 |
-| 1     | Spell disabled for players                                                                    |
-| 2     | Spell disabled for creatures                                                                  |
-| 4     | Spell disabled for pets                                                                       |
-| 8     | Spell completely disabled (used for no logner existing spells in DBCs)                        |
-| 16    | Spell disabled for MapId                                                                      |
-| 32    | Spell disabled for AreaId                                                                     |
-| 64    | Line of Sight (LOS) is disabled for this spell (replaces "vmap.ignoreSpellIds" config option) |
+| Value | Hex    | Flag | Comment                                                                                       |
+| :---- | :----: | :--- | :-------------------------------------------------------------------------------------------- |
+| 0     | `0x00` |      | Spell enabled                                                                                 |
+| 1     | `0x01` |      | Spell disabled for players                                                                    |
+| 2     | `0x02` |      | Spell disabled for creatures                                                                  |
+| 4     | `0x04` |      | Spell disabled for pets                                                                       |
+| 8     | `0x08` |      | Spell completely disabled (used for no logner existing spells in DBCs)                        |
+| 16    | `0x10` |      | Spell disabled for MapId                                                                      |
+| 32    | `0x20` |      | Spell disabled for AreaId                                                                     |
+| 64    | `0x40` |      | Line of Sight (LOS) is disabled for this spell (replaces "vmap.ignoreSpellIds" config option) |
 
 Example: INSERT INTO \`disables\` VALUES (0, 8921, (1+16+32), "571,1", "1519", "Moonfire Example");
 
@@ -101,12 +94,12 @@ This will disable spell Moonfire (8921) for players in maps 571,1 and area 1519.
 
 Specifies what type of map is disabled (5man/10man/heroic/etc).
 
-| Value | Type                                                        |
-| ----- | ----------------------------------------------------------- |
-| 1     | DUNGEON_STATUS_FLAG_NORMAL OR RAID_STATUS_FLAG_10MAN_NORMAL |
-| 2     | DUNGEON_STATUS_FLAG_HEROIC OR RAID_STATUS_FLAG_25MAN_NORMAL |
-| 4     | RAID_STATUS_FLAG_10MAN_HEROIC                               |
-| 8     | RAID_STATUS_FLAG_25MAN_HEROIC                               |
+| Value | Hex    | Flag | Comment                                                     |
+| :---- | :----: | :--- | :---------------------------------------------------------- |
+| 1     | `0x01` |      | DUNGEON_STATUS_FLAG_NORMAL OR RAID_STATUS_FLAG_10MAN_NORMAL |
+| 2     | `0x02` |      | DUNGEON_STATUS_FLAG_HEROIC OR RAID_STATUS_FLAG_25MAN_NORMAL |
+| 4     | `0x04` |      | RAID_STATUS_FLAG_10MAN_HEROIC                               |
+| 8     | `0x08` |      | RAID_STATUS_FLAG_25MAN_HEROIC                               |
 
 The value is a bitmask of VALID modes for the specific map, 15 is as such NOT a valid mask on certain maps, only those actually found possible for the respective map.
 
@@ -114,12 +107,12 @@ The value is a bitmask of VALID modes for the specific map, 15 is as such NOT a 
 
 Specifies on which map should be vMap disabled
 
-| Value | Type                  |
-| ----- | --------------------- |
-| 1     | VMAP_DISABLE_AREAFLAG |
-| 2     | VMAP_DISABLE_HEIGHT   |
-| 4     | VMAP_DISABLE_LOS      |
-| 8     | VMAP_LIQUIDSTATUS     |
+| Value | Hex    | Flag                      | Comment                              |
+| :---- | :----: | :------------------------ | :----------------------------------- |
+| 1     | `0x01` | VMAP_DISABLE_AREAFLAG     | Area flags from vmaps are not used   |
+| 2     | `0x02` | VMAP_DISABLE_HEIGHT       | Height from vmaps is not used        |
+| 4     | `0x04` | VMAP_DISABLE_LOS          | Line of sight from vmaps is not used |
+| 8     | `0x08` | VMAP_DISABLE_LIQUIDSTATUS | Liquid status from vmaps is not used |
 
 Example: INSERT INTO \`disables\` VALUES (6, 1, (2 + 4), 0, 0, "Disable Kalimdor vMaps");
 

@@ -1,28 +1,22 @@
-# creature_text_locale
+# creature\_text\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`creature_text_locale\` table**
+**The \`creature\_text\_locale\` table**
 
 This table is used to provide to localized clients with localized string for creatures texts.
 
-**Table Structure**
+**Table: creature\_text\_locale's Structure**
 
-| Field           | Type       | Attributes | Key | Null | Default | Extra | Comment |
-|-----------------|------------|------------|-----|------|---------|-------|---------|
-| [CreatureID][1] | MEDIUMINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [GroupID][2]    | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [ID][3]         | TINYINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [Locale][4]     | VARCHAR(4) |            | PRI | NO   |         |       |         |
-| [Text][5]       | TEXT       |            |     | YES  | NULL    |       |         |
+| Field                     | Type       |          | Null | Key | Default | Extra | Comment |
+| :------------------------ | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [CreatureID](#creatureid) | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [GroupID](#groupid)       | TINYINT    | UNSIGNED | NO   | PRI | 0       |       |         |
+| [ID](#id)                 | TINYINT    | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Locale](#locale)         | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Text](#text)             | TEXT       |          | YES  |     | NULL    |       |         |
 
-[1]: #creatureid
-[2]: #groupid
-[3]: #id
-[4]: #locale
-[5]: #text
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### CreatureID
 

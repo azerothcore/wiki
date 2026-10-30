@@ -4,27 +4,21 @@
 
 **The \`character\_pet\_declinedname\` table**
 
-**Table Structure**
+Holds the declined (grammatical case) forms of pet names. The Russian client creates them when `DeclinedNames` is enabled in worldserver.conf, which is also the default when the realm zone is Russian.
 
-| Field              | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------ | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]            | INT         | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [owner][2]         | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [genitive][3]      | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [dative][4]        | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [accusative][5]    | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [instrumental][6]  | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
-| [prepositional][7] | VARCHAR(12) | SIGNED     |     | NO   | NULL    |       |         |
+**Table: character\_pet\_declinedname's Structure**
 
-[1]: #id
-[2]: #owner
-[3]: #genitive
-[4]: #dative
-[5]: #accusative
-[6]: #instrumental
-[7]: #prepositional
+| Field                           | Type        |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :---------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                       | INT         | UNSIGNED | NO   | PRI | 0       |       |         |
+| [owner](#owner)                 | INT         | UNSIGNED | NO   | MUL | 0       |       |         |
+| [genitive](#genitive)           | VARCHAR(12) |          | NO   |     | ''      |       |         |
+| [dative](#dative)               | VARCHAR(12) |          | NO   |     | ''      |       |         |
+| [accusative](#accusative)       | VARCHAR(12) |          | NO   |     | ''      |       |         |
+| [instrumental](#instrumental)   | VARCHAR(12) |          | NO   |     | ''      |       |         |
+| [prepositional](#prepositional) | VARCHAR(12) |          | NO   |     | ''      |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

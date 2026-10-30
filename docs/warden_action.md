@@ -6,17 +6,14 @@
 
 Overrides the action taken when a player fails a [Warden check](warden_checks).
 
-**Table Structure**
+**Table: warden\_action's Structure**
 
-| Field         | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [wardenId][1] | SMALLINT | UNSIGNED   |     | NO   |         |       |         |
-| [action][2]   | TINYINT  | UNSIGNED   |     | YES  |         |       |         |
+| Field                 | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [wardenId](#wardenid) | SMALLINT | UNSIGNED | NO   | PRI |         |       |         |
+| [action](#action)     | TINYINT  | UNSIGNED | YES  |     | NULL    |       |         |
 
-[1]: #wardenid
-[2]: #action
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### wardenid
 

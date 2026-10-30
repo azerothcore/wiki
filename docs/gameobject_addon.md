@@ -1,28 +1,24 @@
-# gameobject_addon
+# gameobject\_addon
 
 [<-Back-to:World](database-world)
 
-**The \`gameobject_addon\` table**
+**The \`gameobject\_addon\` table**
 
-| Field                          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------------ | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]                      | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [parent_rotation0][2]          | FLOAT   |            |     | NO   | 0       |       |         |
-| [parent_rotation1][3]          | FLOAT   |            |     | NO   | 0       |       |         |
-| [parent_rotation2][4]          | FLOAT   |            |     | NO   | 0       |       |         |
-| [parent_rotation3][5]          | FLOAT   |            |     | NO   | 1       |       |         |
-| [invisibilityType][6]          | TINYINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [invisibilityValue][7]         | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+Holds additional data for individual gameobject spawns.
 
-[1]: #guid
-[2]: #parentrotation0
-[3]: #parentrotation1
-[4]: #parentrotation2
-[5]: #parentrotation3
-[6]: #invisibilitytype
-[7]: #invisibilityvalue
+**Table: gameobject\_addon's Structure**
 
-**Description of the fields**
+| Field                                   | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)                           | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [parent_rotation0](#parentrotation0)    | FLOAT   |          | NO   |     | 0       |       |         |
+| [parent_rotation1](#parentrotation1)    | FLOAT   |          | NO   |     | 0       |       |         |
+| [parent_rotation2](#parentrotation2)    | FLOAT   |          | NO   |     | 0       |       |         |
+| [parent_rotation3](#parentrotation3)    | FLOAT   |          | NO   |     | 1       |       |         |
+| [invisibilityType](#invisibilitytype)   | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
+| [invisibilityValue](#invisibilityvalue) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+
+**Description of the table's fields**
 
 ### guid
 

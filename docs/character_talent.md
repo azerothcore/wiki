@@ -6,19 +6,15 @@
 
 Contains all the individual talent data for each character. This is only used as a storage table, values get read from here and written to character\_spell, and vice-versa, when a player switches specs.
 
-**Table Structure**
+**Table: character\_talent's Structure**
 
-| Field         | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]     | INT       | UNSIGNED   | PRI | NO   |         |       |         |
-| [spell][2]    | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [specMask][3] | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field                 | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)         | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [spell](#spell)       | INT     | UNSIGNED | NO   | PRI |         |       |         |
+| [specMask](#specmask) | TINYINT | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #guid
-[2]: #spell
-[3]: #specmask
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

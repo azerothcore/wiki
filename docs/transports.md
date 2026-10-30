@@ -6,21 +6,16 @@
 
 This table contains all type 15 transports (Boats and Zeppelins). All other transport types have their frame time read from TransportAnimation.dbc.
 
-**Table Structure**
+**Table: transports's Structure**
 
-| Field           | Type      | Attributes | Key    | Null | Default        | Extra | Comment |
-| --------------- | --------- | ---------- | ------ | ---- | -------------- | ----- | ------- |
-| [Guid][1]       | INT       | UNSIGNED   | PRI    | NO   | AUTO_INCREMENT |       |         |
-| [Entry][2]      | MEDIUMINT | UNSIGNED   | UNIQUE | NO   | 0              |       |         |
-| [Name][3]       | TEXT      |            |        | YES  | NULL           |       |         |
-| [ScriptName][4] | CHAR(64)  |            |        | NO   | ' '            |       |         |
+| Field                     | Type     |          | Null | Key | Default | Extra          | Comment |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :------------: | :------ |
+| [guid](#guid)             | INT      | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT |         |
+| [entry](#entry)           | INT      | UNSIGNED | NO   | UNI | 0       |                |         |
+| [name](#name)             | TEXT     |          | YES  |     | NULL    |                |         |
+| [ScriptName](#scriptname) | CHAR(64) |          | NO   |     | ''      |                |         |
 
-[1]: #guid
-[2]: #entry
-[3]: #name
-[4]: #scriptname
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

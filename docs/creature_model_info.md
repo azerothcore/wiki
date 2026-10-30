@@ -6,25 +6,18 @@
 
 This table contains all models of mobs, their gender and other information that are model related. This means that when a creature uses another model, this information will change as well.
 
-**Table Structure**
+**Table: creature\_model\_info's Structure**
 
-| Field                       | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [DisplayID][1]              | int     | unsigned   | PRI | NO   | 0       |       |         |
-| [BoundingRadius][2]         | float   |            |     | NO   | 0       |       |         |
-| [CombatReach][3]            | float   |            |     | NO   | 0       |       |         |
-| [Gender][4]                 | tinyint | unsigned   |     | NO   | 2       |       |         |
-| [DisplayID_Other_Gender][5] | int     | unsigned   |     | NO   | 0       |       |         |
-| [VerifiedBuild][6]          | mediumint |          |     | YES  | NULL    |       |         |
+| Field                                           | Type      |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :-------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [DisplayID](#displayid)                         | INT       | UNSIGNED | NO   | PRI | 0       |       |         |
+| [BoundingRadius](#boundingradius)               | FLOAT     |          | NO   |     | 0       |       |         |
+| [CombatReach](#combatreach)                     | FLOAT     |          | NO   |     | 0       |       |         |
+| [Gender](#gender)                               | TINYINT   | UNSIGNED | NO   |     | 2       |       |         |
+| [DisplayID_Other_Gender](#displayidothergender) | INT       | UNSIGNED | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)                 | MEDIUMINT |          | YES  |     | NULL    |       |         |
 
-[1]: #displayid
-[2]: #boundingradius
-[3]: #combatreach
-[4]: #gender
-[5]: #displayidothergender
-[6]: #verifiedbuild
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### DisplayID
 
@@ -32,7 +25,7 @@ Display ID from [CreatureDisplayInfo.dbc](https://wowdev.wiki/DB/CreatureDispla
 
 ### BoundingRadius
 
-This field is unused. It's purpose is currently unknown. It may or may not be linked to path-finding.
+The bounding radius of the model. The core multiplies it by the creature's scale and sends the result to the client as the unit's bounding radius.
 
 ### CombatReach
 

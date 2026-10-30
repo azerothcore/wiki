@@ -1,19 +1,19 @@
-# creature_multispawn
+# creature\_multispawn
 
 [<-Back-to:World](database-world)
 
-**The `creature_multispawn` table**
+**The \`creature\_multispawn\` table**
 
 Allows a single creature spawn point to be represented by more than one `creature_template` entry. Each row links a spawn (`creature.guid`, stored in `spawnId`) to a `creature_template.entry` that may be used for that spawn, letting the same guid appear as one of several possible creatures.
 
-**Table Structure**
+**Table: creature\_multispawn's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [spawnId](#spawnid) | INT | UNSIGNED | PRI | NO |  |  | creature.guid |
-| [entry](#entry) | INT | UNSIGNED | PRI | NO |  |  | creature_template.entry |
+| Field               | Type |          | Null | Key | Default | Extra | Comment                 |
+| :------------------ | :--- | :------- | :--: | :-: | :-----: | :---: | :---------------------- |
+| [spawnId](#spawnid) | INT  | UNSIGNED | NO   | PRI |         |       | creature.guid           |
+| [entry](#entry)     | INT  | UNSIGNED | NO   | PRI |         |       | creature_template.entry |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### spawnId
 

@@ -9,6 +9,21 @@ is_wiki_page: true
 <!doctype html>
 <html>
 
+<!-- A missing translated page (/es/... or /cn/...) goes to the English page, which then shows a notice -->
+<script type="text/javascript">
+    (function () {
+        var base = "{{ site.baseurl }}";
+        var m = window.location.pathname.slice(base.length).match(/^\/(es|cn)\/(.+)$/);
+        if (!m) return;
+        var target = base + "/" + m[2];
+        fetch(target, { method: "HEAD" }).then(function (r) {
+            if (!r.ok) return;
+            try { sessionStorage.setItem("ac-lang-fallback", m[1]); } catch (e) {}
+            window.location.replace(target + window.location.hash);
+        }).catch(function () {});
+    })();
+</script>
+
 <!-- redirect to page creator if not exists -->
 <script type="text/javascript">
     function newPage() {

@@ -1,19 +1,19 @@
 # macOS Requirements
 
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](requirements) | [Step 2: Core Installation >>](macos-core-installation) |
+| :-- | --: |
+
+{% include important.html content="<b>MariaDB</b> (any version) and <b>MySQL versions 5.7 and 8.1</b> are <b>not supported</b> by AzerothCore." %}
+
 {% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
 
-| Installation Guide                                                                                                                   |                                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](macos-core-installation) |
-
-|               |
-| :------------ |
-| MacOS ≥ 11    |
-| OpenSSL ≥ 3.0 |
-| Boost ≥ 1.74  |
-| MySQL ≥ 8.0.0 |
-| CMake ≥ 3.16  |
+{% include callout.html content="MacOS ≥ 11<br/>
+OpenSSL ≥ 3.0<br/>
+Boost ≥ 1.74<br/>
+MySQL ≥ 8.0.0<br/>
+CMake ≥ 3.16" type="info" %}
 
 - Install XCode using the App Store, then open the terminal and type:
 
@@ -52,13 +52,11 @@ You can install Sequel Ace with:
 brew install --cask sequel-ace
 ```
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](macos-core-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](requirements) | [Step 2: Core Installation >>](macos-core-installation) |
+| :-- | --: |

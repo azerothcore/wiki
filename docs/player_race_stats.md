@@ -6,25 +6,18 @@
 
 This table holds information on modifiers for stat values applied to characters. All of the values in this table signify only the stat value modifiers based on the race of a character.
 
-**Table Structure**
+**Table: player\_race\_stats's Structure**
 
-| Field          | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| -------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [Race][1]      | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [Strength][2]  | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Agility][3]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Stamina][4]   | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Intellect][5] | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [Spirit][6]    | INT     | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                   | Type    |          | Null | Key | Default | Extra | Comment |
+| :---------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [Race](#race)           | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [Strength](#strength)   | INT     |          | NO   |     | 0       |       |         |
+| [Agility](#agility)     | INT     |          | NO   |     | 0       |       |         |
+| [Stamina](#stamina)     | INT     |          | NO   |     | 0       |       |         |
+| [Intellect](#intellect) | INT     |          | NO   |     | 0       |       |         |
+| [Spirit](#spirit)       | INT     |          | NO   |     | 0       |       |         |
 
-[1]: #race
-[2]: #strength
-[3]: #agility
-[4]: #stamina
-[5]: #intellect
-[6]: #spirit
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### Race
 

@@ -6,21 +6,16 @@
 
 This table serves as a receipt of refundable purchases during a 2 hour ingame time window. It holds information on what currency was spent to purchase the item.
 
-**Table Structure**
+**Table: item\_refund\_instance's Structure**
 
-| Field                 | Type     | Attributes | Key | Null | Default | Extra | Comment     |
-| --------------------- | -------- | ---------- | --- | ---- | ------- | ----- | ----------- |
-| [item_guid][1]        | INT      | UNSIGNED   | PRI | NO   |         |       | Item GUID   |
-| [player_guid][2]      | INT      | UNSIGNED   | PRI | NO   |         |       | Player GUID |
-| [paidMoney][3]        | INT      | UNSIGNED   |     | NO   | 0       |       |             |
-| [paidExtendedCost][4] | SMALLINT | UNSIGNED   |     | NO   | 0       |       |             |
+| Field                                 | Type     |          | Null | Key | Default | Extra | Comment     |
+| :------------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :---------- |
+| [item_guid](#itemguid)                | INT      | UNSIGNED | NO   | PRI |         |       | Item GUID   |
+| [player_guid](#playerguid)            | INT      | UNSIGNED | NO   | PRI |         |       | Player GUID |
+| [paidMoney](#paidmoney)               | INT      | UNSIGNED | NO   |     | 0       |       |             |
+| [paidExtendedCost](#paidextendedcost) | SMALLINT | UNSIGNED | NO   |     | 0       |       |             |
 
-[1]: #itemguid
-[2]: #playerguid
-[3]: #paidmoney
-[4]: #paidextendedcost
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### item\_guid
 

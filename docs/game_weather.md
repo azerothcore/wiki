@@ -2,43 +2,28 @@
 
 [<-Back-to:World](database-world)
 
-**Table Structure**
+**Table: game\_weather's Structure**
 
 This table holds the percent chances for weather changes to occur in various zones. Not all zones can have their weather changed. For any given zone the percentage of all weather types for each season should total, and not exceed 100%.
 
-| Field                     | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [zone][1]                 | MEDIUMINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [spring_rain_chance][2]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [spring_snow_chance][3]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [spring_storm_chance][4]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [summer_rain_chance][5]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [summer_snow_chance][6]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [summer_storm_chance][7]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [fall_rain_chance][8]     | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [fall_snow_chance][9]     | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [fall_storm_chance][10]   | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [winter_rain_chance][11]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [winter_snow_chance][12]  | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [winter_storm_chance][13] | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [ScriptName][14]          | CHAR(64)  |            |     | NO   |         |       |         |
+| Field                                     | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [zone](#zone)                             | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [spring_rain_chance](#springrainchance)   | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [spring_snow_chance](#springsnowchance)   | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [spring_storm_chance](#springstormchance) | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [summer_rain_chance](#summerrainchance)   | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [summer_snow_chance](#summersnowchance)   | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [summer_storm_chance](#summerstormchance) | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [fall_rain_chance](#fallrainchance)       | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [fall_snow_chance](#fallsnowchance)       | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [fall_storm_chance](#fallstormchance)     | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [winter_rain_chance](#winterrainchance)   | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [winter_snow_chance](#wintersnowchance)   | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [winter_storm_chance](#winterstormchance) | TINYINT  | UNSIGNED | NO   |     | 25      |       |         |
+| [ScriptName](#scriptname)                 | CHAR(64) |          | NO   |     | ''      |       |         |
 
-[1]: #zone
-[2]: #springrainchance
-[3]: #springsnowchance
-[4]: #springstormchance
-[5]: #summerrainchance
-[6]: #summersnowchance
-[7]: #summerstormchance
-[8]: #fallrainchance
-[9]: #fallsnowchance
-[10]: #fallstormchance
-[11]: #winterrainchance
-[12]: #wintersnowchance
-[13]: #winterstormchance
-[14]: #scriptname
-
-**Field Descriptions**
+**Description of the table's fields**
 
 ### zone
 

@@ -6,21 +6,16 @@
 
 Includes information on current core and database version.
 
-**Table Structure**
+**Table: version's Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment                         |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------------- |
-| [core_version][1]   | VARCHAR(255) | SIGNED     |     | YES  | NULL    |       | Core revision dumped at startup |
-| [core_revision][2]  | VARCHAR(120) |            |     | YES  | NULL    |       | Core revision hash              |
-| [db_version][3]     | VARCHAR(120) | SIGNED     |     | YES  | NULL    |       | Version of world DB             |
-| [cache_id][5]       | INT          | SIGNED     |     | YES  | 0       |       | Minor DB version                |
+| Field                          | Type         |     | Null | Key | Default | Extra | Comment                          |
+| :----------------------------- | :----------- | :-- | :--: | :-: | :-----: | :---: | :------------------------------- |
+| [core_version](#coreversion)   | VARCHAR(255) |     | NO   | PRI | ''      |       | Core revision dumped at startup. |
+| [core_revision](#corerevision) | VARCHAR(120) |     | YES  |     | NULL    |       | Core revision hash               |
+| [db_version](#dbversion)       | VARCHAR(120) |     | YES  |     | NULL    |       | Version of world DB.             |
+| [cache_id](#cacheid)           | INT          |     | YES  |     | 0       |       | Minor DB version                 |
 
-[1]: #coreversion
-[2]: #corerevision
-[3]: #dbversion
-[5]: #cacheid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### core\_version
 

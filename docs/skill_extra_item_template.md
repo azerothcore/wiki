@@ -6,21 +6,16 @@
 
 This table holds information about when using certain profession spells, you have the chance of creating more than one copy of the item.
 
-**Table Structure**
+**Table: skill\_extra\_item\_template's Structure**
 
-| Field                       | Type      | Attributes | Key | Null | Default | Extra | Comment                            |
-| --------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [spellId][1]                | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | SpellId of the item creation spell |
-| [requiredSpecialization][2] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       | Specialization spell id            |
-| [additionalCreateChance][3] | FLOAT     | SIGNED     |     | NO   | 0       |       | chance to create add               |
-| [additionalMaxNum][4]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       | max num of adds                    |
+| Field                                             | Type    |          | Null | Key | Default | Extra | Comment                            |
+| :------------------------------------------------ | :------ | :------- | :--: | :-: | :-----: | :---: | :--------------------------------- |
+| [spellId](#spellid)                               | INT     | UNSIGNED | NO   | PRI | 0       |       | SpellId of the item creation spell |
+| [requiredSpecialization](#requiredspecialization) | INT     | UNSIGNED | NO   |     | 0       |       | Specialization spell id            |
+| [additionalCreateChance](#additionalcreatechance) | FLOAT   |          | NO   |     | 0       |       | chance to create add               |
+| [additionalMaxNum](#additionalmaxnum)             | TINYINT |          | NO   |     | 0       |       | max num of adds                    |
 
-[1]: #spellid
-[2]: #requiredspecialization
-[3]: #additionalcreatechance
-[4]: #additionalmaxnum
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### spellId
 

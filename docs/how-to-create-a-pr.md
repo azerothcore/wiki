@@ -158,7 +158,7 @@ Make sure all changes abides the [C++ Code Standards](cpp-code-standards)!
 
 If you don't have any C++ changes, you can skip this. Otherwise, open your editor and do them now! I'll wait...
 
-In this guide we will assume that you modified the file `instance_deadmines.cpp`
+In this guide we will assume that you modified the file [`instance_deadmines.cpp`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/scripts/EasternKingdoms/Deadmines/instance_deadmines.cpp)
 
 #### Selecting files with GitHub Desktop
 

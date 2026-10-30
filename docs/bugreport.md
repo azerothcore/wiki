@@ -4,18 +4,20 @@
 
 **The \`bugreport\` table**
 
-**Table Structure**
+Stores the bug reports and suggestions that players submit in game, together with a state, an assignee and a comment for following them up.
 
-| Field                  | Type     | Attributes | Key | Null | Default | Extra          | Comment    |
-| ---------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ---------- |
-| [id](#id)              | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Identifier |
-| [type](#type)          | LONGTEXT | SIGNED     |     | NO   |         |                |            |
-| [content](#content)     | LONGTEXT | SIGNED     |     | NO   |         |                |            | 
-| [State](#state)        | TINYINT  | SIGNED     |     | NO   | 1       |                |            | 
-| [Assignee](#assignee)  | VARCHAR(255) |        |     | YES  | NULL    |                |            | 
-| [Comment](#comment)    | LONGTEXT |            |     | YES  | NULL    |                |            | 
+**Table: bugreport's Structure**
 
-**Description of the fields**
+| Field                 | Type         |          | Null | Key | Default | Extra          | Comment    |
+| :-------------------- | :----------- | :------- | :--: | :-: | :-----: | :------------: | :--------- |
+| [id](#id)             | INT          | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT | Identifier |
+| [type](#type)         | LONGTEXT     |          | NO   |     |         |                |            |
+| [content](#content)   | LONGTEXT     |          | NO   |     |         |                |            |
+| [State](#state)       | TINYINT      |          | NO   |     | 1       |                |            |
+| [Assignee](#assignee) | VARCHAR(255) |          | YES  |     | NULL    |                |            |
+| [Comment](#comment)   | LONGTEXT     |          | YES  |     | NULL    |                |            |
+
+**Description of the table's fields**
 
 ### id
 

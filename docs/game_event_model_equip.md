@@ -1,21 +1,21 @@
-# game_event_model_equip
+# game\_event\_model\_equip
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_model_equip\` table**
+**The \`game\_event\_model\_equip\` table**
 
 Contains all creature instances that need to change display id and/or equipment during defined game events.
 
-**Table Structure**
+**Table: game\_event\_model\_equip's Structure**
 
-| Field                         | Type      | Attributes | Key | Null | Default | Extra  | Comment                  |
-| ----------------------------- | --------- | ---------- | --- | ---- | ------- | ------ | ------------------------ |
-| [eventEntry](#evententry)     | SMALLINT  | SIGNED     |     | NO   | 0       |        | Entry of the game event. |
-| [guid](#guid)                 | INT       | UNSIGNED   | PRI | NO   | 0       | Unique |                          |
-| [modelid](#modelid)           | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
-| [equipment_id](#equipmentid)  | MEDIUMINT | UNSIGNED   |     | NO   | 0       |        |                          |
+| Field                        | Type    |          | Null | Key | Default | Extra | Comment                  |
+| :--------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [eventEntry](#evententry)    | TINYINT | UNSIGNED | NO   |     |         |       | Entry of the game event. |
+| [guid](#guid)                | INT     | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [modelid](#modelid)          | INT     | UNSIGNED | NO   |     | 0       |       |                          |
+| [equipment_id](#equipmentid) | TINYINT | UNSIGNED | NO   |     | 0       |       |                          |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

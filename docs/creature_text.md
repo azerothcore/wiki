@@ -1,5 +1,7 @@
 # creature\_text
 
+[<-Back-to:World](database-world)
+
 # Table: creature\_text
 
 **Short Description:**
@@ -54,39 +56,25 @@ simpler than you might thought. It is stored in **CREATURE\_TEXT** table!
 
 *to be continued...*
 
-## Structure
+**Table: creature\_text's Structure**
 
-| Field                 | Type         | Attributes      | Key | Null | Default | Extra | Comment                 |
-|-----------------------|--------------|-----------------|-----|------|---------|-------|-------------------------|
-| [CreatureID][1]       | MEDIUMINT | UNSIGNED        | PRI | NO   |         |       | creature_template entry |
-| [GroupID][2]          | TINYINT   | UNSIGNED        | PRI | NO   |         |       |                         |
-| [ID][3]               | TINYINT   | UNSIGNED        | PRI | NO   |         |       |                         |
-| [Text][4]             | longtext     | utf8_general_ci |     | YES  | NULL    |       |                         |
-| [Type][5]             | TINYINT   | UNSIGNED        |     | NO   |         |       |                         |
-| [Language][6]         | TINYINT   | UNSIGNED        |     | NO   |         |       |                         |
-| [Probability][7]      | FLOAT        | SIGNED          |     | NO   |         |       |                         |
-| [Emote][8]            | MEDIUMINT | UNSIGNED        |     | NO   |         |       |                         |
-| [Duration][9]         | MEDIUMINT | UNSIGNED        |     | NO   |         |       |                         |
-| [Sound][10]           | MEDIUMINT | UNSIGNED        |     | NO   |         |       |                         |
-| [BroadcastTextId][11] | MEDIUMINT | SIGNED          |     | NO   |         |       |                         |
-| [TextRange][12]       | TINYINT   | UNSIGNED        |     | NO   |         |       |                         |
-| [comment][13]         | VARCHAR(255) | utf8_general_ci |     | YES  | NULL    |       |                         |
+| Field                               | Type         |          | Null | Key | Default | Extra | Comment                 |
+| :---------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :---------------------- |
+| [CreatureID](#creatureid)           | INT          | UNSIGNED | NO   | PRI | 0       |       | creature_template entry |
+| [GroupID](#groupid)                 | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |                         |
+| [ID](#id)                           | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |                         |
+| [Text](#text)                       | LONGTEXT     |          | YES  |     | NULL    |       |                         |
+| [Type](#type)                       | TINYINT      | UNSIGNED | NO   |     | 0       |       |                         |
+| [Language](#language)               | TINYINT      |          | NO   |     | 0       |       |                         |
+| [Probability](#probability)         | FLOAT        |          | NO   |     | 0       |       |                         |
+| [Emote](#emote)                     | INT          | UNSIGNED | NO   |     | 0       |       |                         |
+| [Duration](#duration)               | INT          | UNSIGNED | NO   |     | 0       |       |                         |
+| [Sound](#sound)                     | INT          | UNSIGNED | NO   |     | 0       |       |                         |
+| [BroadcastTextId](#broadcasttextid) | INT          |          | NO   |     | 0       |       |                         |
+| [TextRange](#textrange)             | TINYINT      | UNSIGNED | NO   |     | 0       |       |                         |
+| [comment](#comment)                 | VARCHAR(255) |          | YES  |     | ''      |       |                         |
 
-[1]: #creatureid
-[2]: #groupid
-[3]: #id
-[4]: #text
-[5]: #type
-[6]: #language
-[7]: #probability
-[8]: #emote
-[9]: #duration
-[10]: #sound
-[11]: #broadcasttextid
-[12]: #textrange
-[13]: #comment
-
-## Description of the fields
+**Description of the table's fields**
 
 ### CreatureID
 

@@ -6,55 +6,33 @@
 
 This table holds the individual object data on each spawned game object in the world. This data along with the object's template data is read and used to instantiate the objects in the world.
 
-**Table Structure**
+**Table: gameobject's Structure**
 
-| Field               | Type     | Attributes | Key | Null | Default | Extra          | Comment                  |
-| ------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------------------------ |
-| [guid][1]           | INT      | UNSIGNED   | PRI | NO   | NULL    | Auto increment | Global Unique Identifier |
-| [id][2]             | INT      | UNSIGNED   |     | NO   | 0       |                | Gameobject Identifier    |
-| [map][3]            | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Map Identifier           |
-| [zoneId][4]         | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Zone Identifier          |
-| [areaId][5]         | SMALLINT | UNSIGNED   |     | NO   | 0       |                | Area Identifier          |
-| [spawnMask][6]      | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                          |
-| [phaseMask][7]      | SMALLINT | UNSIGNED   |     | NO   | 1       |                |                          |
-| [position_x][8]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [position_y][9]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [position_z][10]    | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [orientation][11]   | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation0][12]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation1][13]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation2][14]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [rotation3][15]     | FLOAT    | SIGNED     |     | NO   | 0       |                |                          |
-| [spawntimesecs][16] | INT      | SIGNED     |     | NO   | 0       |                |                          |
-| [animprogress][17]  | TINYINT  | UNSIGNED   |     | NO   | 0       |                |                          |
-| [state][18]         | TINYINT  | UNSIGNED   |     | NO   | 1       |                |                          |
-| [ScriptName][19]    | CHAR     |            |     | YES  | ''      |                |                          |
-| [VerifiedBuild][20] | INT      | SIGNED     |     | YES  | NULL    |                | Not used by the core.    |
-| [Comment][21]       | TEXT     |            |     | YES  | NULL    |                |                          |
+| Field                           | Type     |          | Null | Key | Default | Extra          | Comment                  |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :------------: | :----------------------- |
+| [guid](#guid)                   | INT      | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT | Global Unique Identifier |
+| [id](#id)                       | INT      | UNSIGNED | NO   |     | 0       |                | Gameobject Identifier    |
+| [map](#map)                     | SMALLINT | UNSIGNED | NO   |     | 0       |                | Map Identifier           |
+| [zoneId](#zoneid)               | SMALLINT | UNSIGNED | NO   |     | 0       |                | Zone Identifier          |
+| [areaId](#areaid)               | SMALLINT | UNSIGNED | NO   |     | 0       |                | Area Identifier          |
+| [spawnMask](#spawnmask)         | TINYINT  | UNSIGNED | NO   |     | 1       |                |                          |
+| [phaseMask](#phasemask)         | INT      | UNSIGNED | NO   |     | 1       |                |                          |
+| [position_x](#positionx)        | FLOAT    |          | NO   |     | 0       |                |                          |
+| [position_y](#positiony)        | FLOAT    |          | NO   |     | 0       |                |                          |
+| [position_z](#positionz)        | FLOAT    |          | NO   |     | 0       |                |                          |
+| [orientation](#orientation)     | FLOAT    |          | NO   |     | 0       |                |                          |
+| [rotation0](#rotation0)         | FLOAT    |          | NO   |     | 0       |                |                          |
+| [rotation1](#rotation1)         | FLOAT    |          | NO   |     | 0       |                |                          |
+| [rotation2](#rotation2)         | FLOAT    |          | NO   |     | 0       |                |                          |
+| [rotation3](#rotation3)         | FLOAT    |          | NO   |     | 0       |                |                          |
+| [spawntimesecs](#spawntimesecs) | INT      |          | NO   |     | 0       |                |                          |
+| [animprogress](#animprogress)   | TINYINT  | UNSIGNED | NO   |     | 0       |                |                          |
+| [state](#state)                 | TINYINT  | UNSIGNED | NO   |     | 0       |                |                          |
+| [ScriptName](#scriptname)       | CHAR(64) |          | YES  |     | ''      |                |                          |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |                | Not used by the core.    |
+| [Comment](#comment)             | TEXT     |          | YES  |     | NULL    |                |                          |
 
-[1]: #guid
-[2]: #id
-[3]: #map
-[4]: #zoneid
-[5]: #areaid
-[6]: #spawnmask
-[7]: #phasemask
-[8]: #positionx
-[9]: #positiony
-[10]: #positionz
-[11]: #orientation
-[12]: #rotation0
-[13]: #rotation1
-[14]: #rotation2
-[15]: #rotation3
-[16]: #spawntimesecs
-[17]: #animprogress
-[18]: #state
-[19]: #scriptname
-[20]: #verifiedbuild
-[21]: #comment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 
@@ -86,14 +64,14 @@ Controls under which difficulties the object is spawned.
 
 Just like flags you can add them as you wish so 3 would be: Spawned in 10/25 man normal versions of maps (pre 3.2 all maps)
 
-| Value | Comment                                                                              |
-| ----- | ------------------------------------------------------------------------------------ |
-| 0     | Not spawned                                                                          |
-| 1     | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
-| 2     | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
-| 4     | Spawned only in 10-man heroic versions of maps                                       |
-| 8     | Spawned only in 25-man-heroic versions of maps                                       |
-| 15    | Spawned in all versions of maps                                                      |
+| Value | Hex    | Flag | Comment                                                                              |
+| :---- | :----: | :--- | :----------------------------------------------------------------------------------- |
+| 0     | `0x00` |      | Not spawned                                                                          |
+| 1     | `0x01` |      | Spawned only in 10-man-normal versions of maps (includes maps without a heroic mode) |
+| 2     | `0x02` |      | Spawned only in 25-man-normal versions of maps (or heroics pre 3.2)                  |
+| 4     | `0x04` |      | Spawned only in 10-man heroic versions of maps                                       |
+| 8     | `0x08` |      | Spawned only in 25-man-heroic versions of maps                                       |
+| 15    | `0x0F` |      | Spawned in all versions of maps                                                      |
 
 ### phaseMask
 

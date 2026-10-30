@@ -6,21 +6,16 @@
 
 Contains data about character's friends/ignored list.
 
-**Table Structure**
+**Table: character\_social's Structure**
 
-| Field       | Type        | Attributes | Key | Null | Default | Extra | Comment                            |
-| ----------- | ----------- | ---------- | --- | ---- | ------- | ----- | ---------------------------------- |
-| [guid][1]   | INT         | UNSIGNED   | PRI | NO   | 0       |       | Character Global Unique Identifier |
-| [friend][2] | INT         | UNSIGNED   | PRI | NO   | 0       |       | Friend Global Unique Identifier    |
-| [flags][3]  | TINYINT     | UNSIGNED   | PRI | NO   | 0       |       | Friend Flags                       |
-| [note][4]   | VARCHAR(48) | SIGNED     |     | NO   | ''      |       | Friend Note                        |
+| Field             | Type        |          | Null | Key | Default | Extra | Comment                            |
+| :---------------- | :---------- | :------- | :--: | :-: | :-----: | :---: | :--------------------------------- |
+| [guid](#guid)     | INT         | UNSIGNED | NO   | PRI | 0       |       | Character Global Unique Identifier |
+| [friend](#friend) | INT         | UNSIGNED | NO   | PRI | 0       |       | Friend Global Unique Identifier    |
+| [flags](#flags)   | TINYINT     | UNSIGNED | NO   | PRI | 0       |       | Friend Flags                       |
+| [note](#note)     | VARCHAR(48) |          | NO   |     | ''      |       | Friend Note                        |
 
-[1]: #guid
-[2]: #friend
-[3]: #flags
-[4]: #note
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

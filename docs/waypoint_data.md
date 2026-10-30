@@ -6,25 +6,25 @@
 
 This table contains all the path data for creatures that use waypoints and waypoint scripts directly in their creature addon definition. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
-**Table Structure**
+**Table: waypoint\_data's Structure**
 
-| Field                                 | Type      | Attributes | Key | Null | Default |
-| ------------------------------------- | --------- | ---------- | --- | ---- | ------- |
-| [id](#id)                             | INT       | UNSIGNED   | PRI | NO   | 0       |
-| [point](#point)                       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
-| [position\_x](#positionx)             | FLOAT     |            |     | NO   | 0       |
-| [position\_y](#positiony)             | FLOAT     |            |     | NO   | 0       |
-| [position\_z](#positionz)             | FLOAT     |            |     | NO   | 0       |
-| [orientation](#orientation)           | FLOAT     |            |     | YES  | NULL    |
-| [velocity](#velocity)                 | FLOAT     |            |     | NO   | 0       |
-| [delay](#delay)                       | INT       | UNSIGNED   |     | NO   | 0       |
-| [smoothTransition](#smoothtransition) | TINYINT   |            |     | NO   | 0       |
-| [move\_type](#movetype)               | INT       |            |     | NO   | 0       |
-| [action](#action)                     | INT       |            |     | NO   | 0       |
-| [action\_chance](#actionchance)       | SMALLINT  |            |     | NO   | 100     |
-| [wpguid](#wpguid)                     | INT       | UNSIGNED   |     | NO   | 0       |
+| Field                                 | Type     |          | Null | Key | Default | Extra | Comment       |
+| :------------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------------ |
+| [id](#id)                             | INT      | UNSIGNED | NO   | PRI | 0       |       | Creature GUID |
+| [point](#point)                       | INT      | UNSIGNED | NO   | PRI | 0       |       |               |
+| [position\_x](#positionx)             | FLOAT    |          | NO   |     | 0       |       |               |
+| [position\_y](#positiony)             | FLOAT    |          | NO   |     | 0       |       |               |
+| [position\_z](#positionz)             | FLOAT    |          | NO   |     | 0       |       |               |
+| [orientation](#orientation)           | FLOAT    |          | YES  |     | NULL    |       |               |
+| [velocity](#velocity)                 | FLOAT    |          | NO   |     | 0       |       |               |
+| [delay](#delay)                       | INT      | UNSIGNED | NO   |     | 0       |       |               |
+| [smoothTransition](#smoothtransition) | TINYINT  |          | NO   |     | 0       |       |               |
+| [move\_type](#movetype)               | INT      |          | NO   |     | 0       |       |               |
+| [action](#action)                     | INT      |          | NO   |     | 0       |       |               |
+| [action\_chance](#actionchance)       | SMALLINT |          | NO   |     | 100     |       |               |
+| [wpguid](#wpguid)                     | INT      | UNSIGNED | NO   |     | 0       |       |               |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

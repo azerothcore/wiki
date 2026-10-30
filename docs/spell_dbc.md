@@ -8,246 +8,246 @@ This table has the same columns as Spell.dbc. The core loads it after the DBC fi
 
 The core reads every column in order, so a row must have a value for all of them, even the columns the core does not use. An empty text column keeps the text from the DBC file.
 
-**Table Structure**
+**Table: spell\_dbc's Structure**
 
-| Field                                                     | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| --------------------------------------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id)                                                 | INT          |            | PRI | NO   | 0       |       |         |
-| [Category](#category)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [DispelType](#dispeltype)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Mechanic](#mechanic)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Attributes](#attributes)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx](#attributesex)                             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx2](#attributesex2)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx3](#attributesex3)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx4](#attributesex4)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx5](#attributesex5)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx6](#attributesex6)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AttributesEx7](#attributesex7)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ShapeshiftMask](#shapeshiftmask)                         | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [unk_320_2](#unk320)                                      | INT          |            |     | NO   | 0       |       |         |
-| [ShapeshiftExclude](#shapeshiftexclude)                   | BIGINT       | UNSIGNED   |     | NO   | 0       |       |         |
-| [unk_320_3](#unk320)                                      | INT          |            |     | NO   | 0       |       |         |
-| [Targets](#targets)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [TargetCreatureType](#targetcreaturetype)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiresSpellFocus](#requiresspellfocus)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [FacingCasterFlags](#facingcasterflags)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [CasterAuraState](#casteraurastate)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [TargetAuraState](#targetaurastate)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExcludeCasterAuraState](#excludecasteraurastate)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExcludeTargetAuraState](#excludetargetaurastate)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [CasterAuraSpell](#casterauraspell)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [TargetAuraSpell](#targetauraspell)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExcludeCasterAuraSpell](#excludecasterauraspell)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExcludeTargetAuraSpell](#excludetargetauraspell)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [CastingTimeIndex](#castingtimeindex)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RecoveryTime](#recoverytime)                             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [CategoryRecoveryTime](#categoryrecoverytime)             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [InterruptFlags](#interruptflags)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AuraInterruptFlags](#aurainterruptflags)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ChannelInterruptFlags](#channelinterruptflags)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ProcTypeMask](#proctypemask)                             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ProcChance](#procchance)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ProcCharges](#proccharges)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaxLevel](#maxlevel)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [BaseLevel](#baselevel)                                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellLevel](#spelllevel)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [DurationIndex](#durationindex)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [PowerType](#powertype)                                   | INT          |            |     | NO   | 0       |       |         |
-| [ManaCost](#manacost)                                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ManaCostPerLevel](#manacostperlevel)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ManaPerSecond](#manapersecond)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ManaPerSecondPerLevel](#manapersecondperlevel)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RangeIndex](#rangeindex)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Speed](#speed)                                           | FLOAT        |            |     | NO   | 0       |       |         |
-| [ModalNextSpell](#modalnextspell)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [CumulativeAura](#cumulativeaura)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Totem_1](#totem)                                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Totem_2](#totem)                                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Reagent_1](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_2](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_3](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_4](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_5](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_6](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_7](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [Reagent_8](#reagent)                                     | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_1](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_2](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_3](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_4](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_5](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_6](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_7](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [ReagentCount_8](#reagentcount)                           | INT          |            |     | NO   | 0       |       |         |
-| [EquippedItemClass](#equippeditemclass)                   | INT          |            |     | NO   | 0       |       |         |
-| [EquippedItemSubclass](#equippeditemsubclass)             | INT          |            |     | NO   | 0       |       |         |
-| [EquippedItemInvTypes](#equippediteminvtypes)             | INT          |            |     | NO   | 0       |       |         |
-| [Effect_1](#effect)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Effect_2](#effect)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Effect_3](#effect)                                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectDieSides_1](#effectdiesides)                       | INT          |            |     | NO   | 0       |       |         |
-| [EffectDieSides_2](#effectdiesides)                       | INT          |            |     | NO   | 0       |       |         |
-| [EffectDieSides_3](#effectdiesides)                       | INT          |            |     | NO   | 0       |       |         |
-| [EffectRealPointsPerLevel_1](#effectrealpointsperlevel)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectRealPointsPerLevel_2](#effectrealpointsperlevel)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectRealPointsPerLevel_3](#effectrealpointsperlevel)   | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectBasePoints_1](#effectbasepoints)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectBasePoints_2](#effectbasepoints)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectBasePoints_3](#effectbasepoints)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectMechanic_1](#effectmechanic)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectMechanic_2](#effectmechanic)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectMechanic_3](#effectmechanic)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ImplicitTargetA_1](#implicittargeta)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ImplicitTargetA_2](#implicittargeta)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ImplicitTargetA_3](#implicittargeta)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ImplicitTargetB_1](#implicittargetb)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ImplicitTargetB_2](#implicittargetb)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ImplicitTargetB_3](#implicittargetb)                     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectRadiusIndex_1](#effectradiusindex)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectRadiusIndex_2](#effectradiusindex)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectRadiusIndex_3](#effectradiusindex)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectAura_1](#effectaura)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectAura_2](#effectaura)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectAura_3](#effectaura)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectAuraPeriod_1](#effectauraperiod)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectAuraPeriod_2](#effectauraperiod)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectAuraPeriod_3](#effectauraperiod)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectMultipleValue_1](#effectmultiplevalue)             | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectMultipleValue_2](#effectmultiplevalue)             | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectMultipleValue_3](#effectmultiplevalue)             | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectChainTargets_1](#effectchaintargets)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectChainTargets_2](#effectchaintargets)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectChainTargets_3](#effectchaintargets)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectItemType_1](#effectitemtype)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectItemType_2](#effectitemtype)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectItemType_3](#effectitemtype)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectMiscValue_1](#effectmiscvalue)                     | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValue_2](#effectmiscvalue)                     | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValue_3](#effectmiscvalue)                     | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValueB_1](#effectmiscvalueb)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValueB_2](#effectmiscvalueb)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectMiscValueB_3](#effectmiscvalueb)                   | INT          |            |     | NO   | 0       |       |         |
-| [EffectTriggerSpell_1](#effecttriggerspell)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectTriggerSpell_2](#effecttriggerspell)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectTriggerSpell_3](#effecttriggerspell)               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectPointsPerCombo_1](#effectpointspercombo)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectPointsPerCombo_2](#effectpointspercombo)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectPointsPerCombo_3](#effectpointspercombo)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskA_1](#effectspellclassmaska)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskA_2](#effectspellclassmaska)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskA_3](#effectspellclassmaska)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskB_1](#effectspellclassmaskb)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskB_2](#effectspellclassmaskb)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskB_3](#effectspellclassmaskb)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskC_1](#effectspellclassmaskc)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskC_2](#effectspellclassmaskc)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectSpellClassMaskC_3](#effectspellclassmaskc)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellVisualID_1](#spellvisualid)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellVisualID_2](#spellvisualid)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellIconID](#spelliconid)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ActiveIconID](#activeiconid)                             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellPriority](#spellpriority)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Name_Lang_enUS](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enGB](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_koKR](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_frFR](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_deDE](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enCN](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhCN](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_enTW](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_zhTW](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esES](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_esMX](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ruRU](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptPT](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_ptBR](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_itIT](#namelang)                               | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Unk](#namelang)                                | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [Name_Lang_Mask](#namelang)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [NameSubtext_Lang_enUS](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_enGB](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_koKR](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_frFR](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_deDE](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_enCN](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_zhCN](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_enTW](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_zhTW](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_esES](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_esMX](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_ruRU](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_ptPT](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_ptBR](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_itIT](#namesubtextlang)                 | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_Unk](#namesubtextlang)                  | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [NameSubtext_Lang_Mask](#namesubtextlang)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [Description_Lang_enUS](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enGB](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_koKR](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_frFR](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_deDE](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enCN](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhCN](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_enTW](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_zhTW](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esES](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_esMX](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ruRU](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptPT](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_ptBR](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_itIT](#descriptionlang)                 | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Unk](#descriptionlang)                  | TEXT         |            |     | YES  | NULL    |       |         |
-| [Description_Lang_Mask](#descriptionlang)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [AuraDescription_Lang_enUS](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_enGB](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_koKR](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_frFR](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_deDE](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_enCN](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_zhCN](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_enTW](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_zhTW](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_esES](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_esMX](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_ruRU](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_ptPT](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_ptBR](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_itIT](#auradescriptionlang)         | VARCHAR(550) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_Unk](#auradescriptionlang)          | VARCHAR(100) |            |     | YES  | NULL    |       |         |
-| [AuraDescription_Lang_Mask](#auradescriptionlang)         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [ManaCostPct](#manacostpct)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [StartRecoveryCategory](#startrecoverycategory)           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [StartRecoveryTime](#startrecoverytime)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaxTargetLevel](#maxtargetlevel)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellClassSet](#spellclassset)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellClassMask_1](#spellclassmask)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellClassMask_2](#spellclassmask)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellClassMask_3](#spellclassmask)                       | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [MaxTargets](#maxtargets)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [DefenseType](#defensetype)                               | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [PreventionType](#preventiontype)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [StanceBarOrder](#stancebarorder)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [EffectChainAmplitude_1](#effectchainamplitude)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectChainAmplitude_2](#effectchainamplitude)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectChainAmplitude_3](#effectchainamplitude)           | FLOAT        |            |     | NO   | 0       |       |         |
-| [MinFactionID](#minfactionid)                             | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [MinReputation](#minreputation)                           | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredAuraVision](#requiredauravision)                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredTotemCategoryID_1](#requiredtotemcategoryid)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredTotemCategoryID_2](#requiredtotemcategoryid)     | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RequiredAreasID](#requiredareasid)                       | INT          |            |     | NO   | 0       |       |         |
-| [SchoolMask](#schoolmask)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [RuneCostID](#runecostid)                                 | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellMissileID](#spellmissileid)                         | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [PowerDisplayID](#powerdisplayid)                         | INT          |            |     | NO   | 0       |       |         |
-| [EffectBonusMultiplier_1](#effectbonusmultiplier)         | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectBonusMultiplier_2](#effectbonusmultiplier)         | FLOAT        |            |     | NO   | 0       |       |         |
-| [EffectBonusMultiplier_3](#effectbonusmultiplier)         | FLOAT        |            |     | NO   | 0       |       |         |
-| [SpellDescriptionVariableID](#spelldescriptionvariableid) | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [SpellDifficultyID](#spelldifficultyid)                   | INT          | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                                                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                                                 | INT          |          | NO   | PRI | 0       |       |         |
+| [Category](#category)                                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [DispelType](#dispeltype)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Mechanic](#mechanic)                                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Attributes](#attributes)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx](#attributesex)                             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx2](#attributesex2)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx3](#attributesex3)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx4](#attributesex4)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx5](#attributesex5)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx6](#attributesex6)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AttributesEx7](#attributesex7)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ShapeshiftMask](#shapeshiftmask)                         | BIGINT       | UNSIGNED | NO   |     | 0       |       |         |
+| [unk_320_2](#unk320)                                      | INT          |          | NO   |     | 0       |       |         |
+| [ShapeshiftExclude](#shapeshiftexclude)                   | BIGINT       | UNSIGNED | NO   |     | 0       |       |         |
+| [unk_320_3](#unk320)                                      | INT          |          | NO   |     | 0       |       |         |
+| [Targets](#targets)                                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [TargetCreatureType](#targetcreaturetype)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RequiresSpellFocus](#requiresspellfocus)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [FacingCasterFlags](#facingcasterflags)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [CasterAuraState](#casteraurastate)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [TargetAuraState](#targetaurastate)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ExcludeCasterAuraState](#excludecasteraurastate)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ExcludeTargetAuraState](#excludetargetaurastate)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [CasterAuraSpell](#casterauraspell)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [TargetAuraSpell](#targetauraspell)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ExcludeCasterAuraSpell](#excludecasterauraspell)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ExcludeTargetAuraSpell](#excludetargetauraspell)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [CastingTimeIndex](#castingtimeindex)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RecoveryTime](#recoverytime)                             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [CategoryRecoveryTime](#categoryrecoverytime)             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [InterruptFlags](#interruptflags)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AuraInterruptFlags](#aurainterruptflags)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ChannelInterruptFlags](#channelinterruptflags)           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ProcTypeMask](#proctypemask)                             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ProcChance](#procchance)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ProcCharges](#proccharges)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [MaxLevel](#maxlevel)                                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [BaseLevel](#baselevel)                                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellLevel](#spelllevel)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [DurationIndex](#durationindex)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [PowerType](#powertype)                                   | INT          |          | NO   |     | 0       |       |         |
+| [ManaCost](#manacost)                                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ManaCostPerLevel](#manacostperlevel)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ManaPerSecond](#manapersecond)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ManaPerSecondPerLevel](#manapersecondperlevel)           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RangeIndex](#rangeindex)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Speed](#speed)                                           | FLOAT        |          | NO   |     | 0       |       |         |
+| [ModalNextSpell](#modalnextspell)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [CumulativeAura](#cumulativeaura)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Totem_1](#totem)                                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Totem_2](#totem)                                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Reagent_1](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_2](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_3](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_4](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_5](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_6](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_7](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [Reagent_8](#reagent)                                     | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_1](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_2](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_3](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_4](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_5](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_6](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_7](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [ReagentCount_8](#reagentcount)                           | INT          |          | NO   |     | 0       |       |         |
+| [EquippedItemClass](#equippeditemclass)                   | INT          |          | NO   |     | 0       |       |         |
+| [EquippedItemSubclass](#equippeditemsubclass)             | INT          |          | NO   |     | 0       |       |         |
+| [EquippedItemInvTypes](#equippediteminvtypes)             | INT          |          | NO   |     | 0       |       |         |
+| [Effect_1](#effect)                                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Effect_2](#effect)                                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Effect_3](#effect)                                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectDieSides_1](#effectdiesides)                       | INT          |          | NO   |     | 0       |       |         |
+| [EffectDieSides_2](#effectdiesides)                       | INT          |          | NO   |     | 0       |       |         |
+| [EffectDieSides_3](#effectdiesides)                       | INT          |          | NO   |     | 0       |       |         |
+| [EffectRealPointsPerLevel_1](#effectrealpointsperlevel)   | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectRealPointsPerLevel_2](#effectrealpointsperlevel)   | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectRealPointsPerLevel_3](#effectrealpointsperlevel)   | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectBasePoints_1](#effectbasepoints)                   | INT          |          | NO   |     | 0       |       |         |
+| [EffectBasePoints_2](#effectbasepoints)                   | INT          |          | NO   |     | 0       |       |         |
+| [EffectBasePoints_3](#effectbasepoints)                   | INT          |          | NO   |     | 0       |       |         |
+| [EffectMechanic_1](#effectmechanic)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectMechanic_2](#effectmechanic)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectMechanic_3](#effectmechanic)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ImplicitTargetA_1](#implicittargeta)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ImplicitTargetA_2](#implicittargeta)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ImplicitTargetA_3](#implicittargeta)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ImplicitTargetB_1](#implicittargetb)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ImplicitTargetB_2](#implicittargetb)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ImplicitTargetB_3](#implicittargetb)                     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectRadiusIndex_1](#effectradiusindex)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectRadiusIndex_2](#effectradiusindex)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectRadiusIndex_3](#effectradiusindex)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectAura_1](#effectaura)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectAura_2](#effectaura)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectAura_3](#effectaura)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectAuraPeriod_1](#effectauraperiod)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectAuraPeriod_2](#effectauraperiod)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectAuraPeriod_3](#effectauraperiod)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectMultipleValue_1](#effectmultiplevalue)             | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectMultipleValue_2](#effectmultiplevalue)             | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectMultipleValue_3](#effectmultiplevalue)             | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectChainTargets_1](#effectchaintargets)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectChainTargets_2](#effectchaintargets)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectChainTargets_3](#effectchaintargets)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectItemType_1](#effectitemtype)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectItemType_2](#effectitemtype)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectItemType_3](#effectitemtype)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectMiscValue_1](#effectmiscvalue)                     | INT          |          | NO   |     | 0       |       |         |
+| [EffectMiscValue_2](#effectmiscvalue)                     | INT          |          | NO   |     | 0       |       |         |
+| [EffectMiscValue_3](#effectmiscvalue)                     | INT          |          | NO   |     | 0       |       |         |
+| [EffectMiscValueB_1](#effectmiscvalueb)                   | INT          |          | NO   |     | 0       |       |         |
+| [EffectMiscValueB_2](#effectmiscvalueb)                   | INT          |          | NO   |     | 0       |       |         |
+| [EffectMiscValueB_3](#effectmiscvalueb)                   | INT          |          | NO   |     | 0       |       |         |
+| [EffectTriggerSpell_1](#effecttriggerspell)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectTriggerSpell_2](#effecttriggerspell)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectTriggerSpell_3](#effecttriggerspell)               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectPointsPerCombo_1](#effectpointspercombo)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectPointsPerCombo_2](#effectpointspercombo)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectPointsPerCombo_3](#effectpointspercombo)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskA_1](#effectspellclassmaska)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskA_2](#effectspellclassmaska)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskA_3](#effectspellclassmaska)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskB_1](#effectspellclassmaskb)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskB_2](#effectspellclassmaskb)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskB_3](#effectspellclassmaskb)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskC_1](#effectspellclassmaskc)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskC_2](#effectspellclassmaskc)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectSpellClassMaskC_3](#effectspellclassmaskc)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellVisualID_1](#spellvisualid)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellVisualID_2](#spellvisualid)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellIconID](#spelliconid)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ActiveIconID](#activeiconid)                             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellPriority](#spellpriority)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Name_Lang_enUS](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enGB](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_koKR](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_frFR](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_deDE](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enCN](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhCN](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_enTW](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_zhTW](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esES](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_esMX](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ruRU](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptPT](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_ptBR](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_itIT](#namelang)                               | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Unk](#namelang)                                | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [Name_Lang_Mask](#namelang)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [NameSubtext_Lang_enUS](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_enGB](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_koKR](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_frFR](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_deDE](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_enCN](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_zhCN](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_enTW](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_zhTW](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_esES](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_esMX](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_ruRU](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_ptPT](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_ptBR](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_itIT](#namesubtextlang)                 | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_Unk](#namesubtextlang)                  | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [NameSubtext_Lang_Mask](#namesubtextlang)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Description_Lang_enUS](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enGB](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_koKR](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_frFR](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_deDE](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enCN](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhCN](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_enTW](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_zhTW](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esES](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_esMX](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ruRU](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptPT](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_ptBR](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_itIT](#descriptionlang)                 | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Unk](#descriptionlang)                  | TEXT         |          | YES  |     | NULL    |       |         |
+| [Description_Lang_Mask](#descriptionlang)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [AuraDescription_Lang_enUS](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_enGB](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_koKR](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_frFR](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_deDE](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_enCN](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_zhCN](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_enTW](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_zhTW](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_esES](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_esMX](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_ruRU](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_ptPT](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_ptBR](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_itIT](#auradescriptionlang)         | VARCHAR(550) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_Unk](#auradescriptionlang)          | VARCHAR(100) |          | YES  |     | NULL    |       |         |
+| [AuraDescription_Lang_Mask](#auradescriptionlang)         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ManaCostPct](#manacostpct)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [StartRecoveryCategory](#startrecoverycategory)           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [StartRecoveryTime](#startrecoverytime)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [MaxTargetLevel](#maxtargetlevel)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellClassSet](#spellclassset)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellClassMask_1](#spellclassmask)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellClassMask_2](#spellclassmask)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellClassMask_3](#spellclassmask)                       | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [MaxTargets](#maxtargets)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [DefenseType](#defensetype)                               | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [PreventionType](#preventiontype)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [StanceBarOrder](#stancebarorder)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [EffectChainAmplitude_1](#effectchainamplitude)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectChainAmplitude_2](#effectchainamplitude)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectChainAmplitude_3](#effectchainamplitude)           | FLOAT        |          | NO   |     | 0       |       |         |
+| [MinFactionID](#minfactionid)                             | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [MinReputation](#minreputation)                           | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RequiredAuraVision](#requiredauravision)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RequiredTotemCategoryID_1](#requiredtotemcategoryid)     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RequiredTotemCategoryID_2](#requiredtotemcategoryid)     | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RequiredAreasID](#requiredareasid)                       | INT          |          | NO   |     | 0       |       |         |
+| [SchoolMask](#schoolmask)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [RuneCostID](#runecostid)                                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellMissileID](#spellmissileid)                         | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [PowerDisplayID](#powerdisplayid)                         | INT          |          | NO   |     | 0       |       |         |
+| [EffectBonusMultiplier_1](#effectbonusmultiplier)         | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectBonusMultiplier_2](#effectbonusmultiplier)         | FLOAT        |          | NO   |     | 0       |       |         |
+| [EffectBonusMultiplier_3](#effectbonusmultiplier)         | FLOAT        |          | NO   |     | 0       |       |         |
+| [SpellDescriptionVariableID](#spelldescriptionvariableid) | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [SpellDifficultyID](#spelldifficultyid)                   | INT          | UNSIGNED | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 Columns that end in `_1`, `_2` or `_3` hold one value per spell effect, and are described together. The core loads the columns that are not marked "Not used by the core", the others only need to be filled in so the row matches the layout of Spell.dbc.
 
@@ -269,35 +269,35 @@ The mechanic of the spell, for example stun or root. Used for immunities and dim
 
 ### Attributes
 
-Flags from the `SpellAttr0` enum (`SPELL_ATTR0_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr0` enum (`SPELL_ATTR0_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx
 
-Flags from the `SpellAttr1` enum (`SPELL_ATTR1_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr1` enum (`SPELL_ATTR1_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx2
 
-Flags from the `SpellAttr2` enum (`SPELL_ATTR2_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr2` enum (`SPELL_ATTR2_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx3
 
-Flags from the `SpellAttr3` enum (`SPELL_ATTR3_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr3` enum (`SPELL_ATTR3_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx4
 
-Flags from the `SpellAttr4` enum (`SPELL_ATTR4_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr4` enum (`SPELL_ATTR4_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx5
 
-Flags from the `SpellAttr5` enum (`SPELL_ATTR5_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr5` enum (`SPELL_ATTR5_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx6
 
-Flags from the `SpellAttr6` enum (`SPELL_ATTR6_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr6` enum (`SPELL_ATTR6_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### AttributesEx7
 
-Flags from the `SpellAttr7` enum (`SPELL_ATTR7_*`) in `SharedDefines.h`.
+Flags from the `SpellAttr7` enum (`SPELL_ATTR7_*`) in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h).
 
 ### ShapeshiftMask
 
@@ -313,7 +313,7 @@ Bitmask of the shapeshift forms the caster can not be in to cast the spell. Uses
 
 ### Targets
 
-Flags for the kinds of targets the spell can be cast on (`TARGET_FLAG_*` in `SpellInfo.h`), for example a unit, an item or a location.
+Flags for the kinds of targets the spell can be cast on (`TARGET_FLAG_*` in [`SpellInfo.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellInfo.h)), for example a unit, an item or a location.
 
 ### TargetCreatureType
 
@@ -329,7 +329,7 @@ If 1, a player caster must face the target to cast the spell.
 
 ### CasterAuraState
 
-Aura state (`AURA_STATE_*` in `SharedDefines.h`) the caster must have to cast the spell.
+Aura state (`AURA_STATE_*` in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h)) the caster must have to cast the spell.
 
 ### TargetAuraState
 
@@ -373,11 +373,11 @@ Cooldown in milliseconds that is started for all spells in the same [Category](#
 
 ### InterruptFlags
 
-Flags for what interrupts the cast (`SPELL_INTERRUPT_FLAG_*` in `SpellDefines.h`), for example movement or taking damage.
+Flags for what interrupts the cast (`SPELL_INTERRUPT_FLAG_*` in [`SpellDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellDefines.h)), for example movement or taking damage.
 
 ### AuraInterruptFlags
 
-Flags for what removes the aura from the target (`AURA_INTERRUPT_FLAG_*` in `SpellDefines.h`).
+Flags for what removes the aura from the target (`AURA_INTERRUPT_FLAG_*` in [`SpellDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellDefines.h)).
 
 ### ChannelInterruptFlags
 
@@ -493,7 +493,7 @@ Mechanic of the effect. Overrides the spell's [Mechanic](#mechanic) for this eff
 
 ### ImplicitTargetA
 
-Target type of the effect (`TARGET_*` in `SharedDefines.h`), for example the caster or the selected target.
+Target type of the effect (`TARGET_*` in [`SharedDefines.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/shared/SharedDefines.h)), for example the caster or the selected target.
 
 ### ImplicitTargetB
 
@@ -569,19 +569,27 @@ Not used by the core.
 
 ### Name\_Lang
 
-`Name_Lang_enUS` to `Name_Lang_Unk`, one column per client locale, and `Name_Lang_Mask`. The name of the spell. The mask is not used by the core.
+`Name_Lang_enUS` to `Name_Lang_Unk` and `Name_Lang_Mask`. The name of the spell. The mask is not used by the core.
+
+The text columns are the 16 locale slots of the file. The core reads them by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Name_Lang_enUS` = enUS, `Name_Lang_enGB` = koKR, `Name_Lang_koKR` = frFR, `Name_Lang_frFR` = deDE, `Name_Lang_deDE` = zhCN, `Name_Lang_enCN` = zhTW, `Name_Lang_zhCN` = esES, `Name_Lang_enTW` = esMX, `Name_Lang_zhTW` = ruRU. The remaining text columns, `Name_Lang_esES` to `Name_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### NameSubtext\_Lang
 
 `NameSubtext_Lang_enUS` to `NameSubtext_Lang_Unk` and `NameSubtext_Lang_Mask`. The rank text of the spell, for example "Rank 1". The mask is not used by the core.
 
+The text columns are the 16 locale slots of the file. The core reads them by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `NameSubtext_Lang_enUS` = enUS, `NameSubtext_Lang_enGB` = koKR, `NameSubtext_Lang_koKR` = frFR, `NameSubtext_Lang_frFR` = deDE, `NameSubtext_Lang_deDE` = zhCN, `NameSubtext_Lang_enCN` = zhTW, `NameSubtext_Lang_zhCN` = esES, `NameSubtext_Lang_enTW` = esMX, `NameSubtext_Lang_zhTW` = ruRU. The remaining text columns, `NameSubtext_Lang_esES` to `NameSubtext_Lang_Unk`, are not supported in 3.3.5a and are not used.
+
 ### Description\_Lang
 
 `Description_Lang_enUS` to `Description_Lang_Unk` and `Description_Lang_Mask`. The description of the spell. Not used by the core.
 
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `Description_Lang_enUS` = enUS, `Description_Lang_enGB` = koKR, `Description_Lang_koKR` = frFR, `Description_Lang_frFR` = deDE, `Description_Lang_deDE` = zhCN, `Description_Lang_enCN` = zhTW, `Description_Lang_zhCN` = esES, `Description_Lang_enTW` = esMX, `Description_Lang_zhTW` = ruRU. The remaining text columns, `Description_Lang_esES` to `Description_Lang_Unk`, are not supported in 3.3.5a and are not used.
+
 ### AuraDescription\_Lang
 
 `AuraDescription_Lang_enUS` to `AuraDescription_Lang_Unk` and `AuraDescription_Lang_Mask`. The tooltip of the aura. Not used by the core.
+
+The text columns are the 16 locale slots of the file. They are ordered by position, not by name. 3.3.5a supports only the nine locales in the core's `LocaleConstant` list, and they are the first nine columns: `AuraDescription_Lang_enUS` = enUS, `AuraDescription_Lang_enGB` = koKR, `AuraDescription_Lang_koKR` = frFR, `AuraDescription_Lang_frFR` = deDE, `AuraDescription_Lang_deDE` = zhCN, `AuraDescription_Lang_enCN` = zhTW, `AuraDescription_Lang_zhCN` = esES, `AuraDescription_Lang_enTW` = esMX, `AuraDescription_Lang_zhTW` = ruRU. The remaining text columns, `AuraDescription_Lang_esES` to `AuraDescription_Lang_Unk`, are not supported in 3.3.5a and are not used.
 
 ### ManaCostPct
 

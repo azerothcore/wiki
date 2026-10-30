@@ -6,29 +6,20 @@
 
 Contains all the individual glyph data for each character.
 
-**Table Structure**
+**Table: character\_glyphs's Structure**
 
-| Field            | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guid][1]        | INT      | UNSIGNED   | PRI | NO   |         |       |         |
-| [talentGroup][2] | TINYINT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [glyph1][3]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph2][4]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph3][5]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph4][6]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph5][7]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
-| [glyph6][8]      | SMALLINT | UNSIGNED   |     | YES  | 0       |       |         |
+| Field                       | Type     |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)               | INT      | UNSIGNED | NO   | PRI |         |       |         |
+| [talentGroup](#talentgroup) | TINYINT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [glyph1](#glyph)            | SMALLINT | UNSIGNED | YES  |     | 0       |       |         |
+| [glyph2](#glyph)            | SMALLINT | UNSIGNED | YES  |     | 0       |       |         |
+| [glyph3](#glyph)            | SMALLINT | UNSIGNED | YES  |     | 0       |       |         |
+| [glyph4](#glyph)            | SMALLINT | UNSIGNED | YES  |     | 0       |       |         |
+| [glyph5](#glyph)            | SMALLINT | UNSIGNED | YES  |     | 0       |       |         |
+| [glyph6](#glyph)            | SMALLINT | UNSIGNED | YES  |     | 0       |       |         |
 
-[1]: #guid
-[2]: #talentgroup
-[3]: #glyph
-[4]: #glyph
-[5]: #glyph
-[6]: #glyph
-[7]: #glyph
-[8]: #glyph
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

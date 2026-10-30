@@ -346,16 +346,16 @@ SPELL_AURA_MOD_CREATURE_AOE_DAMAGE_AVOIDANCE = 310
 
 ### School Mask
 
-| ID  | School   |
-| --- | -------- |
-| 1   | Physical |
-| 2   | Holy     |
-| 4   | Fire     |
-| 8   | Nature   |
-| 16  | Frost    |
-| 32  | Shadow   |
-| 64  | Arcane   |
-| 127 | All      |
+| Value | Hex    | Flag     | Comment |
+| :---- | :----: | :------- | :------ |
+| 1     | `0x01` | Physical |         |
+| 2     | `0x02` | Holy     |         |
+| 4     | `0x04` | Fire     |         |
+| 8     | `0x08` | Nature   |         |
+| 16    | `0x10` | Frost    |         |
+| 32    | `0x20` | Shadow   |         |
+| 64    | `0x40` | Arcane   |         |
+| 127   | `0x7F` | All      |         |
 
 ### Invisibility Type
 

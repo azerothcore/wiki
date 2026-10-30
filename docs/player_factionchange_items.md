@@ -6,21 +6,16 @@
 
 Basically all item changes made when player changes faction.
 
-**Table Structure**
+**Table: player\_factionchange\_items's Structure**
 
-| Field            | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [alliance_id][2]      | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [alliance_comment][3] | TEXT |            |     | NO   |         |       |         |
-| [horde_id][5]         | INT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [horde_comment][6]    | TEXT |            |     | NO   |         |       |         |
+| Field                                | Type |          | Null | Key | Default | Extra | Comment |
+| :----------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [alliance_id](#allianceid)           | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [alliance_comment](#alliancecomment) | TEXT |          | NO   |     |         |       |         |
+| [horde_id](#hordeid)                 | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [horde_comment](#hordecomment)       | TEXT |          | NO   |     |         |       |         |
 
-[2]: #allianceid
-[3]: #alliancecomment
-[5]: #hordeid
-[6]: #hordecomment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### alliance\_id
 

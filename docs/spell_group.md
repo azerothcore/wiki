@@ -6,22 +6,21 @@
 
 Table used to group spells for varius checks in the core. One spell may be added to many groups, but can occur in one group only once.
 
-| Field             | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]           | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [spell_id][2]     | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+**Table: spell\_group's Structure**
 
-[1]: #id
-[2]: #spellid
+| Field                | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)            | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [spell_id](#spellid) | INT  |          | NO   | PRI |         |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 
 Group identifier
 Rules of assigning id:
 
--   if group is going to be used in core code, use first avalible entry below 1000 and add enum value to SpellGroup enum in SpellMgr.h
+-   if group is going to be used in core code, use first avalible entry below 1000 and add enum value to SpellGroup enum in [SpellMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Spells/SpellMgr.h)
 -   if group is not going to be used in core code, use lowest avalible entry higher than 1000
 
 ### spell\_id

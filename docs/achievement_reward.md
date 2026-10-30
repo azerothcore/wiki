@@ -6,29 +6,20 @@
 
 This table describes the reward that you will receive when you obtain a given achievement.
 
-**Table Structure**
+**Table: achievement\_reward's Structure**
 
-| Field               | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID][1]             | MEDIUMINT    | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TitleA][2]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [TitleH][3]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [ItemID][4]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Sender][5]         | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [Subject][6]        | VARCHAR(255) |            |     | YES  |         |       |         |
-| [Body][7]           | text         |            |     | YES  |         |       |         |
-| [MailTemplateID][8] | MEDIUMINT    | UNSIGNED   |     | YES  | 0       |       |         |
+| Field                             | Type         |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                         | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [TitleA](#titlea)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [TitleH](#titleh)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [ItemID](#itemid)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Sender](#sender)                 | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [Subject](#subject)               | VARCHAR(255) |          | YES  |     | NULL    |       |         |
+| [Body](#body)                     | TEXT         |          | YES  |     | NULL    |       |         |
+| [MailTemplateID](#mailtemplateid) | INT          | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #id
-[2]: #titlea
-[3]: #titleh
-[4]: #itemid
-[5]: #sender
-[6]: #subject
-[7]: #body
-[8]: #mailtemplateid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

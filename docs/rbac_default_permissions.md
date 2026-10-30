@@ -8,17 +8,17 @@ This table maps [account_access.gmlevel](account_access#gmlevel) security levels
 
 For a system overview, see [RBAC](rbac).
 
-**Table Structure**
+**Table: rbac\_default\_permissions's Structure**
 
-| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-| ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [secId](#secid)               | INT     | UNSIGNED   | PRI | NO   |         |       | Security Level id        |
-| [permissionId](#permissionid) | INT     | UNSIGNED   | PRI | NO   |         |       | Permission id            |
-| [realmId](#realmid)           | INT     | SIGNED     | PRI | NO   | -1      |       | Realm Id, -1 means all   |
+| Field                         | Type |          | Null | Key | Default | Extra | Comment                |
+| :---------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :--------------------- |
+| [secId](#secid)               | INT  | UNSIGNED | NO   | PRI |         |       | Security Level id      |
+| [permissionId](#permissionid) | INT  | UNSIGNED | NO   | PRI |         |       | permission id          |
+| [realmId](#realmid)           | INT  |          | NO   | PRI | -1      |       | Realm Id, -1 means all |
 
 The `permissionId` field has a foreign key to [rbac_permissions.id](rbac_permissions#id).
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### secId
 
@@ -26,14 +26,14 @@ The security level from [account_access.gmlevel](account_access#gmlevel).
 
 ### permissionId
 
-The RBAC permission (role) to grant by default for this security level. The default assignments are:
+The RBAC permission (role) to grant by default for this security level. These are the rows a clean AzerothCore database comes with. *Comment* is the name of the permission in [rbac_permissions](rbac_permissions#name):
 
-| secId | permissionId | Role |
-| ----- | ------------ | ---- |
-| 0 | 195 | Player |
-| 1 | 194 | Moderator |
-| 2 | 193 | Gamemaster |
-| 3 | 192 | Administrator |
+| secId | permissionId | realmId | Comment                       |
+| :---- | :----------- | :------ | :---------------------------- |
+| 0     | 195          | -1      | Role: Sec Level Player        |
+| 1     | 194          | -1      | Role: Sec Level Moderator     |
+| 2     | 193          | -1      | Role: Sec Level Gamemaster    |
+| 3     | 192          | -1      | Role: Sec Level Administrator |
 
 Because roles chain through [rbac_linked_permissions](rbac_linked_permissions), granting Administrator (192) automatically includes Gamemaster, Moderator, and Player permissions.
 

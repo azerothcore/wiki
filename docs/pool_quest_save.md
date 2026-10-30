@@ -4,17 +4,16 @@
 
 **The \`pool\_quest\_save\` table**
 
-**Table Structure**
+Stores which quests of each quest pool are currently active.
 
-| Field         | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [pool_id][1]  | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [quest_id][2] | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+**Table: pool\_quest\_save's Structure**
 
-[1]: #poolid
-[2]: #questid
+| Field                | Type |          | Null | Key | Default | Extra | Comment |
+| :------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [pool_id](#poolid)   | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [quest_id](#questid) | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### pool\_id
 

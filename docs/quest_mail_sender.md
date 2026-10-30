@@ -4,17 +4,16 @@
 
 **The \`quest\_mail\_sender\` table**
 
-**Table Structure**
+Holds an alternative sender for a quest's reward mail. Without a row here, the mail comes from the quest giver.
 
-| Field                      | Type | Attribute | Key | Null | Default | Extra | Comment |
-| -------------------------- | ---- | --------- | --- | ---- | ------- | ----- | ------- |
-| [QuestId][1]               | INT  | UNSIGNED  | PRI | NO   | 0       |       |         |
-| [RewardMailSenderEntry][2] | INT  | UNSIGNED  |     | NO   | 0       |       |         |
+**Table: quest\_mail\_sender's Structure**
 
-[1]: #questid
-[2]: #rewardmailsenderentry
+| Field                                           | Type |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [QuestId](#questid)                             | INT  | UNSIGNED | NO   | PRI | 0       |       |         |
+| [RewardMailSenderEntry](#rewardmailsenderentry) | INT  | UNSIGNED | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### QuestId
 

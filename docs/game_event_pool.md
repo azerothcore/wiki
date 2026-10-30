@@ -1,19 +1,19 @@
-# game_event_pool
+# game\_event\_pool
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_pool\` table**
+**The \`game\_event\_pool\` table**
 
 This table determines if a given pool is active for a given game event.
 
-**Table Structure**
+**Table: game\_event\_pool's Structure**
 
-| Field                     | Type      | Attributes | Key | Null | Default | Extra  | Comment                                                             |
-| ------------------------- | --------- | ---------- | --- | ---- | ------- | ------ | ------------------------------------------------------------------- |
-| [eventEntry](#evententry) | SMALLINT  | SIGNED     |     | NO   |         |        | Entry of the game event. Put negative entry to remove during event. |
-| [pool_entry](#poolentry)  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique | Id of the pool                                                      |
+| Field                     | Type     |          | Null | Key | Default | Extra | Comment                                                             |
+| :------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------------------------------ |
+| [eventEntry](#evententry) | SMALLINT |          | NO   |     |         |       | Entry of the game event. Put negative entry to remove during event. |
+| [pool_entry](#poolentry)  | INT      | UNSIGNED | NO   | PRI | 0       |       | Id of the pool                                                      |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

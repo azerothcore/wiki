@@ -4,19 +4,17 @@
 
 **The \`game\_event\_condition\_save\` table**
 
-**Table Structure**
+Stores the saved progress of game event conditions.
 
-| Field             | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry][1]   | TINYINT | UNSIGNED   | PRI | NO   |         |       |         |
-| [condition_id][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [done][3]         | FLOAT   | SIGNED     |     | YES  | 0       |       |         |
+**Table: game\_event\_condition\_save's Structure**
 
-[1]: #evententry
-[2]: #conditionid
-[3]: #done
+| Field                        | Type    |          | Null | Key | Default | Extra | Comment |
+| :--------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [eventEntry](#evententry)    | TINYINT | UNSIGNED | NO   | PRI |         |       |         |
+| [condition_id](#conditionid) | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [done](#done)                | FLOAT   |          | YES  |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

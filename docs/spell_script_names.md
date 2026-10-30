@@ -6,17 +6,14 @@
 
 Holds the spell id to ScriptName pairings for use in spell scripts.
 
-**Table Structure**
+**Table: spell\_script\_names's Structure**
 
-| Field           | Type     | Attributes | Key    | Null | Default | Extra | Comment |
-| --------------- | -------- | ---------- | ------ | ---- | ------- | ----- | ------- |
-| [spell_id][1]   | INT      | SIGNED     | UNIQUE | NO   | NONE    |       |         |
-| [ScriptName][2] | char(64) | UNSIGNED   | UNIQUE | NO   | NONE    |       |         |
+| Field                     | Type     |     | Null | Key | Default | Extra | Comment |
+| :------------------------ | :------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [spell_id](#spellid)      | INT      |     | NO   | MUL |         |       |         |
+| [ScriptName](#scriptname) | CHAR(64) |     | NO   |     |         |       |         |
 
-[1]: #spellid
-[2]: #scriptname
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### spell\_id
 

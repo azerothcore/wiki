@@ -6,18 +6,18 @@
 
 Provides custom intermediate spline interpolation points for waypoint paths that have `smoothTransition = 1` set in [waypoint\_data](waypoint_data). These points shape the catmullrom spline curve a creature follows between its main waypoints.
 
-**Table Structure**
+**Table: waypoint\_data\_addon's Structure**
 
-| Field                                   | Type | Attributes | Key | Null | Default |
-| --------------------------------------- | ---- | ---------- | --- | ---- | ------- |
-| [PathID](#pathid)                       | INT  | UNSIGNED   | PRI | NO   |         |
-| [PointID](#pointid)                     | INT  | UNSIGNED   | PRI | NO   |         |
-| [SplinePointIndex](#splinepointindex)   | INT  | UNSIGNED   | PRI | NO   |         |
-| [PositionX](#positionx)                 | FLOAT |           |     | NO   | 0       |
-| [PositionY](#positiony)                 | FLOAT |           |     | NO   | 0       |
-| [PositionZ](#positionz)                 | FLOAT |           |     | NO   | 0       |
+| Field                                 | Type  |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [PathID](#pathid)                     | INT   | UNSIGNED | NO   | PRI |         |       |         |
+| [PointID](#pointid)                   | INT   | UNSIGNED | NO   | PRI |         |       |         |
+| [SplinePointIndex](#splinepointindex) | INT   | UNSIGNED | NO   | PRI |         |       |         |
+| [PositionX](#positionx)               | FLOAT |          | NO   |     | 0       |       |         |
+| [PositionY](#positiony)               | FLOAT |          | NO   |     | 0       |       |         |
+| [PositionZ](#positionz)               | FLOAT |          | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### PathID
 

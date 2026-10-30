@@ -4,17 +4,16 @@
 
 **The \`character\_brew\_of\_the\_month\` table**
 
-**Table Structure**
+Stores, for each character, the last Brew of the Month event the core recorded for it.
 
-| Field            | Type | Attributes | Key | Null | Default | Extra | Comment  |
-| ---------------- | ---- | ---------- | --- | ---- | ------- | ----- | -------- |
-| [guid][1]        | INT  | UNSIGNED   | PRI | NO   |         |       |          |
-| [lastEventId][2] | INT  | UNSIGNED   |     | NO   | 0       |       |          |
+**Table: character\_brew\_of\_the\_month's Structure**
 
-[1]: #guid
-[2]: #lasteventid
+| Field                       | Type |          | Null | Key | Default | Extra | Comment |
+| :-------------------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guid](#guid)               | INT  | UNSIGNED | NO   | PRI |         |       |         |
+| [lastEventId](#lasteventid) | INT  | UNSIGNED | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

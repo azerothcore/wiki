@@ -1,32 +1,25 @@
 # quest\_tracker
 
-[<-Back-to:Character](database-characters)
+[<-Back-to:Characters](database-characters)
 
 **The \`quest\_tracker\` table**
 
-**Table Structure**
+Records when characters accept, complete and abandon quests, to help find bugged quests. It is only filled when `Quests.EnableQuestTracker` is enabled in worldserver.conf.
 
-| Field                    | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]                  | MEDIUMINT    | UNSIGNED   |     | NO   | 0       |       |         |
-| [character_guid][2]      | INT          | UNSIGNED   |     | NO   | 0       |       |         |
-| [quest_accept_time][3]   | DATETIME     | SIGNED     |     | NO   |         |       |         |
-| [quest_complete_time][4] | DATETIME     | SIGNED     |     | YES  |         |       |         |
-| [quest_abandon_time][5]  | DATETIME     | SIGNED     |     | YES  |         |       |         |
-| [completed_by_gm][6]     | TINYINT      | SIGNED     |     | NO   | 0       |       |         |
-| [core_hash][7]           | VARCHAR(120) | SIGNED     |     | NO   | 0       |       |         |
-| [core_revision][8]       | VARCHAR(120) | SIGNED     |     | NO   | 0       |       |         |
+**Table: quest\_tracker's Structure**
 
-[1]: #id
-[2]: #characterguid
-[3]: #questaccepttime
-[4]: #questcompletetime
-[5]: #questabandontime
-[6]: #completedbygm
-[7]: #corehash
-[8]: #corerevision
+| Field                                     | Type         |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                                 | INT          | UNSIGNED | NO   | MUL | 0       |       |         |
+| [character_guid](#characterguid)          | INT          | UNSIGNED | NO   |     | 0       |       |         |
+| [quest_accept_time](#questaccepttime)     | DATETIME     |          | NO   |     |         |       |         |
+| [quest_complete_time](#questcompletetime) | DATETIME     |          | YES  |     | NULL    |       |         |
+| [quest_abandon_time](#questabandontime)   | DATETIME     |          | YES  |     | NULL    |       |         |
+| [completed_by_gm](#completedbygm)         | TINYINT      |          | NO   |     | 0       |       |         |
+| [core_hash](#corehash)                    | VARCHAR(120) |          | NO   |     | 0       |       |         |
+| [core_revision](#corerevision)            | VARCHAR(120) |          | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

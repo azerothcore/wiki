@@ -137,7 +137,7 @@ plugins:
  - jemoji
  - jekyll-mentions
 
-exclude: ['wiki']
+exclude: ['wiki', 'tools', 'Gemfile', 'Gemfile.lock']
 
 
 #
@@ -164,7 +164,7 @@ inc_before_header :
 inc_after_header :
 inc_before_tail :
 inc_after_tail :
-inc_before_tools :
+inc_before_tools : "azerothcore/languages.html"
 inc_after_tools :
 
 inc_before_page_list : "azerothcore/sidebar.html"

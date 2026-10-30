@@ -1,23 +1,20 @@
-# motd_localized
+# motd\_localized
 
 [<-Back-to:Auth](database-auth)
 
-**The \`motd_localized\` table**
+**The \`motd\_localized\` table**
 
-**Table Structure**
+Holds translations of the message of the day in [motd](motd), per realm and client locale.
 
-| Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [realmid][1] | INT      | SIGNED     | PRI | NO   |         |       |         |
-| [locale][2]  | VARCHAR(4) |          |     | NO   |         |       |         |
-| [text][3]    | LONGTEXT |            |     | YES   | NULL |       |         |
+**Table: motd\_localized's Structure**
 
+| Field               | Type       |     | Null | Key | Default | Extra | Comment |
+| :------------------ | :--------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [realmid](#realmid) | INT        |     | NO   | PRI |         |       |         |
+| [locale](#locale)   | VARCHAR(4) |     | NO   | PRI |         |       |         |
+| [text](#text)       | LONGTEXT   |     | YES  |     | NULL    |       |         |
 
-[1]: #realmid
-[2]: #locale
-[3]: #text
-
-## Description of the fields
+**Description of the table's fields**
 
 ### realmid
 
@@ -42,7 +39,6 @@ You can choose from the following:
 | 6  | esES     |
 | 7  | esMX     |
 | 8  | ruRU     |
-
 
 ### text
 

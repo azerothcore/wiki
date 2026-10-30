@@ -6,45 +6,28 @@
 
 Contains aura information that is loaded when a character is loaded, so the auras that were on the character when it logged out are still kept when it logs back in. A spell can have up to three auras, one in each of its effects.
 
-**Table Structure**
+**Table: character\_aura's Structure**
 
-| Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                       |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
-| [guid][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier      |
-| [casterGuid][2]      | BIGINT    | UNSIGNED   | PRI | NO   | 0       |       | Full Global Unique Identifier |
-| [itemGuid][3]        | BIGINT    | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [spell][4]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [effectMask][5]      | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [recalculateMask][6] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                               |
-| [stackCount][7]      | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                               |
-| [amount0][8]         | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [amount1][9]         | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [amount2][10]        | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [base_amount0][11]   | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [base_amount1][12]   | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [base_amount2][13]   | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [maxDuration][14]    | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [remainTime][15]     | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [remainCharges][16]  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                               |
+| Field                               | Type    |          | Null | Key | Default | Extra | Comment                       |
+| :---------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :---------------------------- |
+| [guid](#guid)                       | INT     | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier      |
+| [casterGuid](#casterguid)           | BIGINT  | UNSIGNED | NO   | PRI | 0       |       | Full Global Unique Identifier |
+| [itemGuid](#itemguid)               | BIGINT  | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [spell](#spell)                     | INT     | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [effectMask](#effectmask)           | TINYINT | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [recalculateMask](#recalculatemask) | TINYINT | UNSIGNED | NO   |     | 0       |       |                               |
+| [stackCount](#stackcount)           | TINYINT | UNSIGNED | NO   |     | 1       |       |                               |
+| [amount0](#amount)                  | INT     |          | NO   |     | 0       |       |                               |
+| [amount1](#amount)                  | INT     |          | NO   |     | 0       |       |                               |
+| [amount2](#amount)                  | INT     |          | NO   |     | 0       |       |                               |
+| [base_amount0](#baseamount0)        | INT     |          | NO   |     | 0       |       |                               |
+| [base_amount1](#baseamount1)        | INT     |          | NO   |     | 0       |       |                               |
+| [base_amount2](#baseamount2)        | INT     |          | NO   |     | 0       |       |                               |
+| [maxDuration](#maxduration)         | INT     |          | NO   |     | 0       |       |                               |
+| [remainTime](#remaintime)           | INT     |          | NO   |     | 0       |       |                               |
+| [remainCharges](#remaincharges)     | TINYINT | UNSIGNED | NO   |     | 0       |       |                               |
 
-[1]: #guid
-[2]: #casterguid
-[3]: #itemguid
-[4]: #spell
-[5]: #effectmask
-[6]: #recalculatemask
-[7]: #stackcount
-[8]: #amount
-[9]: #amount
-[10]: #amount
-[11]: #baseamount0
-[12]: #baseamount1
-[13]: #baseamount2
-[14]: #maxduration
-[15]: #remaintime
-[16]: #remaincharges
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

@@ -6,23 +6,17 @@
 
 This table holds information on all ongoing petitions for a guild or for an arena team.
 
-**Table Structure**
+**Table: petition's Structure**
 
-| Field             | Type        | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------- | ----------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ownerguid][1]    | INT         | UNSIGNED   | PRI | NO   |         |       |         |
-| [petitionguid][2] | INT         | UNSIGNED   |     | YES  | 0       |       |         |
-| [petition_id][5]  | INT         | UNSIGNED   |     | NO   | 0       |       |         |
-| [name][3]         | VARCHAR(24) | SIGNED     |     | NO   |         |       |         |
-| [type][4]         | TINYINT     | UNSIGNED   | PRI | NO   | 0       |       |         |
+| Field                         | Type        |          | Null | Key | Default | Extra | Comment |
+| :---------------------------- | :---------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ownerguid](#ownerguid)       | INT         | UNSIGNED | NO   | PRI |         |       |         |
+| [petitionguid](#petitionguid) | INT         | UNSIGNED | YES  |     | 0       |       |         |
+| [petition_id](#petitionid)    | INT         | UNSIGNED | NO   | MUL | 0       |       |         |
+| [name](#name)                 | VARCHAR(24) |          | NO   |     |         |       |         |
+| [type](#type)                 | TINYINT     | UNSIGNED | NO   | PRI | 0       |       |         |
 
-[1]: #ownerguid
-[2]: #petitionguid
-[3]: #name
-[4]: #type
-[5]: #petitionid
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### ownerguid
 

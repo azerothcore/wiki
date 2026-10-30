@@ -1,9 +1,9 @@
 # Installing a Module
 
-| Installation Guide                                                                                                                   |
-| :----------------------------------------------------------------------------------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 9: Optional Additions](optional-additions)                                                                                  |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 9: Optional Additions](optional-additions) |  |
+| :-- | --: |
 
 Adding a module is an optional step to alter the blizzlike gameplay offered by AzerothCore by default.
 
@@ -38,13 +38,11 @@ You should always check the README file of the module to see if any manual steps
     - You can always use the **.server debug** command to see all loaded modules.
     - Always fall back to the README file from the module for the exact installation steps for that module.
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |
-| :----------------------------------------------------------------------------------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 9: Optional Additions](optional-additions)                                                                                  |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 9: Optional Additions](optional-additions) |  |
+| :-- | --: |

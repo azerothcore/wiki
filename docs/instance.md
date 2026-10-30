@@ -6,25 +6,18 @@
 
 This table holds static information on all current instances that have not yet been reset.
 
-**Table Structure**
+**Table: instance's Structure**
 
-| Field                    | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [id][1]                  | INT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [map][2]                 | SMALLINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [resettime][3]           | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [difficulty][4]          | TINYINT  | UNSIGNED   |     | NO   | 0       |       |         |
-| [completedEncounters][5] | INT      | UNSIGNED   |     | NO   | 0       |       |         |
-| [data][6]                | TINYTEXT | SIGNED     |     | NO   |         |       |         |
+| Field                                       | Type     |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [id](#id)                                   | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [map](#map)                                 | SMALLINT | UNSIGNED | NO   | MUL | 0       |       |         |
+| [resettime](#resettime)                     | INT      | UNSIGNED | NO   | MUL | 0       |       |         |
+| [difficulty](#difficulty)                   | TINYINT  | UNSIGNED | NO   | MUL | 0       |       |         |
+| [completedEncounters](#completedencounters) | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [data](#data)                               | TINYTEXT |          | NO   |     |         |       |         |
 
-[1]: #id
-[2]: #map
-[3]: #resettime
-[4]: #difficulty
-[5]: #completedencounters
-[6]: #data
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

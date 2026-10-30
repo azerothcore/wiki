@@ -16,9 +16,9 @@ The full hook catalog is documented in [Hooks C++ Reference](hooks-script-refere
 
 ### Hook reference
 
-AzerothCore groups its C++ hooks by **script type** inside `ScriptMgr.h`.
+AzerothCore groups its C++ hooks by **script type** inside [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h).
 
-Pick the script type that matches the subsystem you want to extend, then inspect that class in `ScriptMgr.h` for the complete signatures and the full list of available callbacks.
+Pick the script type that matches the subsystem you want to extend, then inspect that class in [`ScriptMgr.h`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h) for the complete signatures and the full list of available callbacks.
 
 #### Lifecycle and server hooks
 
@@ -204,13 +204,13 @@ class MyScriptType : public ScriptObject
 }
 ```
 
-Next, you need to add a specialization for ScriptRegistry. Put this at the beginning of ScriptMgr.cpp:
+Next, you need to add a specialization for ScriptRegistry. Put this at the beginning of [ScriptMgr.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.cpp):
 
 ```cpp
 template class ScriptRegistry<MyScriptType>;
 ```
 
-Now add the register at the bottom of the ScriptMgr.cpp:
+Now add the register at the bottom of the [ScriptMgr.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.cpp):
 
 ```cpp
 MyScriptType::MyScriptType(const char* name)
@@ -236,7 +236,7 @@ If you didn't follow point 1 and you want to reuse an existing ScriptObject, the
 
 What you need to do now is add functions to ScriptMgr that can be called from the core to actually trigger certain events.
 
-In ScriptMgr.h, inside the `class ScriptMgr`
+In [ScriptMgr.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.h), inside the `class ScriptMgr`
 
 ```cpp
 void OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2);
@@ -250,7 +250,7 @@ void OnAnotherEvent(uint32 someArg);
 This step defines the way your hook should call the registered listeners.
 The most common way to do it is the following
 
-In ScriptMgr.cpp:
+In [ScriptMgr.cpp](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/Scripting/ScriptMgr.cpp):
 
 ```cpp
 void ScriptMgr::OnBeforeSomeEvent(uint32 someArg1, std::string& someArg2)

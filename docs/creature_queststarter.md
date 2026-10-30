@@ -6,17 +6,14 @@
 
 Holds NPC quest giver relations on which NPCs start which quests.
 
-**Table Structure**
+**Table: creature\_queststarter's Structure**
 
-| Field      | Type      | Attributes | Key | Null | Default | Extra | Comment          |
-| ---------- | --------- | ---------- | --- | ---- | ------- | ----- | ---------------- |
-| [id][1]    | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Identifier       |
-| [quest][2] | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier |
+| Field           | Type |          | Null | Key | Default | Extra | Comment          |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :--------------- |
+| [id](#id)       | INT  | UNSIGNED | NO   | PRI | 0       |       | Identifier       |
+| [quest](#quest) | INT  | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier |
 
-[1]: #id
-[2]: #quest
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

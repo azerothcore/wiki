@@ -6,27 +6,27 @@
 
 This table allows you to define conditions for various systems - Gossip, loot etc.
 
-**Table Structure**
+**Table: conditions's Structure**
 
-| Field                                                 | Type               | Null | Key | Default | Extra | Comment                                                                          |
-| ----------------------------------------------------- | ------------------ | ---- | --- | ------- | ----- | -------------------------------------------------------------------------------- |
-| [SourceTypeOrReferenceId](#sourcetypeorreferenceid)   | MEDIUMINT SIGNED   | NO   | PRI | 0       |       |                                                                                  |
-| [SourceGroup](#sourcegroup)                           | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
-| [SourceEntry](#sourceentry)                           | MEDIUMINT SIGNED   | NO   | PRI | 0       |       |                                                                                  |
-| [SourceId](#sourceid)     | INT SIGNED         | NO   | PRI | 0       |       | [smart_scripts.source_type](smart_scripts#sourcetype) \|\| 0 for everything else |
-| [ElseGroup](#elsegroup)                               | MEDIUMINT UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
-| [ConditionTypeOrReference](#conditiontypeorreference) | MEDIUMINT SIGNED   | NO   | PRI | 0       |       |                                                                                  |
-| [ConditionTarget](#conditiontarget)                   | TINYINT UNSIGNED   | NO   | PRI | 0       |       |                                                                                  |
-| [ConditionValue1](#conditionvalue1)                   | INT UNSIGNED       | NO   | PRI | 0       |       |                                                                                  |
-| [ConditionValue2](#conditionvalue2)                   | INT UNSIGNED       | NO   | PRI | 0       |       |                                                                                  |
-| [ConditionValue3](#conditionvalue3)                   | INT UNSIGNED       | NO   | PRI | 0       |       |                                                                                  |
-| [NegativeCondition](#negativecondition)               | TINYINT UNSIGNED   | NO   |     | 0       |       | Boolean 0 or 1 (if [NegativeCondition](#negativecondition))                      |
-| [ErrorType](#errortype)                               | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                                                                  |
-| [ErrorTextId](#errortextid)                           | MEDIUMINT UNSIGNED | NO   |     | 0       |       |                                                                                  |
-| [ScriptName](#scriptname)                             | char(64) SIGNED    | NO   |     | ' '     |       |                                                                                  |
-| [Comment](#comment)                                   | VARCHAR(255)       | YES  |     | NULL    |       |                                                                                  |
+| Field                                                 | Type         |          | Null | Key | Default | Extra | Comment                                                                          |
+| :---------------------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :------------------------------------------------------------------------------- |
+| [SourceTypeOrReferenceId](#sourcetypeorreferenceid)   | INT          |          | NO   | PRI | 0       |       |                                                                                  |
+| [SourceGroup](#sourcegroup)                           | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [SourceEntry](#sourceentry)                           | INT          |          | NO   | PRI | 0       |       |                                                                                  |
+| [SourceId](#sourceid)                                 | INT          |          | NO   | PRI | 0       |       | [smart_scripts.source_type](smart_scripts#sourcetype) \|\| 0 for everything else |
+| [ElseGroup](#elsegroup)                               | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionTypeOrReference](#conditiontypeorreference) | INT          |          | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionTarget](#conditiontarget)                   | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionValue1](#conditionvalue1)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionValue2](#conditionvalue2)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [ConditionValue3](#conditionvalue3)                   | INT          | UNSIGNED | NO   | PRI | 0       |       |                                                                                  |
+| [NegativeCondition](#negativecondition)               | TINYINT      | UNSIGNED | NO   |     | 0       |       | Boolean 0 or 1 (if [NegativeCondition](#negativecondition))                      |
+| [ErrorType](#errortype)                               | INT          | UNSIGNED | NO   |     | 0       |       |                                                                                  |
+| [ErrorTextId](#errortextid)                           | INT          | UNSIGNED | NO   |     | 0       |       |                                                                                  |
+| [ScriptName](#scriptname)                             | CHAR(64)     |          | NO   |     | ''      |       |                                                                                  |
+| [Comment](#comment)                                   | VARCHAR(255) |          | YES  |     | NULL    |       |                                                                                  |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### SourceTypeOrReferenceId
 
@@ -651,7 +651,7 @@ Note: This condition controls visibility of creatures and game objects based on 
 
 **CONDITION\_WORLD\_SCRIPT = 103**
 
--   -   ConditionValue1: WorldStateCondition defined in WorldState.h
+-   -   ConditionValue1: WorldStateCondition defined in [WorldState.h](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/game/World/WorldState.h)
     -   ConditionValue2: state or 0 (WORLD_STATE_CONDITION_STATE_NONE)
     -   ConditionValue3: always 0
         *NOTE: condition is true if WorldState::IsConditionFulfilled returns true*

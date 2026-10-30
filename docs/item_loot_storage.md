@@ -1,42 +1,30 @@
-# item\_loot_\storage
+# item\_loot\_storage
 
 [<-Back-to:Characters](database-characters)
 
-**The \`item\_loot_\storage\` table**
+**The \`item\_loot\_storage\` table**
 
-**Table Structure**
+Stores the loot that is still inside item containers that have been opened but not fully looted.
 
-| Field                   | Type    | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------- | ------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [containerGUID][1]      | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [itemid][2]             | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [count][3]              | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [item_index][13]        | INT     | UNSIGNED   |     | NO   | 0       |       |         |
-| [randomPropertyId][4]   | INT     | SIGNED     |     | NO   |         |       |         |
-| [randomSuffix][5]       | INT     | UNSIGNED   |     | NO   |         |       |         |
-| [follow_loot_rules][6]  | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [freeforall][7]         | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [is_blocked][8]         | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [is_counted][9]         | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [is_underthreshold][10] | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [needs_quest][11]       | TINYINT | UNSIGNED   |     | NO   |         |       |         |
-| [conditionLootId][12]   | INT     | SIGNED     |     | NO   | 0       |       |         |
+**Table: item\_loot\_storage's Structure**
 
-[1]: #containerguid
-[2]: #itemid
-[3]: #count
-[4]: #randompropertyid
-[5]: #randomsuffix
-[6]: #followlootrules
-[7]: #freeforall
-[8]: #isblocked
-[9]: #iscounted
-[10]: #isunderthreshold
-[11]: #needsquest
-[12]: #conditionlootid
-[13]: #itemindex
+| Field                                  | Type    |          | Null | Key | Default | Extra | Comment |
+| :------------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [containerGUID](#containerguid)        | INT     | UNSIGNED | NO   |     |         |       |         |
+| [itemid](#itemid)                      | INT     | UNSIGNED | NO   |     |         |       |         |
+| [count](#count)                        | INT     | UNSIGNED | NO   |     |         |       |         |
+| [item_index](#itemindex)               | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [randomPropertyId](#randompropertyid)  | INT     |          | NO   |     |         |       |         |
+| [randomSuffix](#randomsuffix)          | INT     | UNSIGNED | NO   |     |         |       |         |
+| [follow_loot_rules](#followlootrules)  | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [freeforall](#freeforall)              | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [is_blocked](#isblocked)               | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [is_counted](#iscounted)               | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [is_underthreshold](#isunderthreshold) | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [needs_quest](#needsquest)             | TINYINT | UNSIGNED | NO   |     |         |       |         |
+| [conditionLootId](#conditionlootid)    | INT     |          | NO   |     | 0       |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### containerGUID
 

@@ -4,31 +4,23 @@
 
 **The \`character\_entry\_point\` table**
 
-**Table Structure**
+Stores where a character was before the core teleported it into a battleground or a Dungeon Finder dungeon: position, map, taxi path and mount. The core uses it to send the character back afterwards.
 
-| Field           | Type  | Attributes | Key | Null | Default | Extra | Comment                  |
-| --------------- | ----- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]       | INT   | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [joinX][2]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinY][3]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinZ][4]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinO][5]      | FLOAT | SIGNED     |     | NO   | 0       |       |                          |
-| [joinMapId][6]  | INT   | UNSIGNED   |     | YES  | 0       |       | Map Identifier           |
-| [taxiPath0][7]  | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
-| [taxiPath1][9]  | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
-| [mountSpell][8] | INT   | UNSIGNED   |     | NO   | 0       |       |                          |
+**Table: character\_entry\_point's Structure**
 
-[1]: #guid
-[2]: #joinx
-[3]: #joiny
-[4]: #joinz
-[5]: #joino
-[6]: #joinmapid
-[7]: #taxipath0
-[9]: #taxipath1
-[8]: #mountspell
+| Field                     | Type  |          | Null | Key | Default | Extra | Comment                  |
+| :------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)             | INT   | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [joinX](#joinx)           | FLOAT |          | NO   |     | 0       |       |                          |
+| [joinY](#joiny)           | FLOAT |          | NO   |     | 0       |       |                          |
+| [joinZ](#joinz)           | FLOAT |          | NO   |     | 0       |       |                          |
+| [joinO](#joino)           | FLOAT |          | NO   |     | 0       |       |                          |
+| [joinMapId](#joinmapid)   | INT   | UNSIGNED | NO   |     | 0       |       | Map Identifier           |
+| [taxiPath0](#taxipath0)   | INT   | UNSIGNED | NO   |     | 0       |       |                          |
+| [taxiPath1](#taxipath1)   | INT   | UNSIGNED | NO   |     | 0       |       |                          |
+| [mountSpell](#mountspell) | INT   | UNSIGNED | NO   |     | 0       |       |                          |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

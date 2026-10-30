@@ -6,33 +6,22 @@
 
 This table controls the reputation given by creatures when killed by other players.
 
-**Table Structure**
+**Table: creature\_onkill\_reputation's Structure**
 
-| Field                     | Type      | Attributes | Key | Null | Default | Extra | Comment             |
-| ------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------------------- |
-| [creature_id][1]          | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       | Creature Identifier |
-| [RewOnKillRepFaction1][2] | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [RewOnKillRepFaction2][3] | SMALLINT  | SIGNED     |     | NO   | 0       |       |                     |
-| [MaxStanding1][4]         | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [IsTeamAward1][5]         | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [RewOnKillRepValue1][6]   | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [MaxStanding2][7]         | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [IsTeamAward2][8]         | TINYINT   | SIGNED     |     | NO   | 0       |       |                     |
-| [RewOnKillRepValue2][9]   | MEDIUMINT | SIGNED     |     | NO   | 0       |       |                     |
-| [TeamDependent][10]       | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                     |
+| Field                                        | Type     |          | Null | Key | Default | Extra | Comment             |
+| :------------------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------------------ |
+| [creature_id](#creatureid)                   | INT      | UNSIGNED | NO   | PRI | 0       |       | Creature Identifier |
+| [RewOnKillRepFaction1](#rewonkillrepfaction) | SMALLINT |          | NO   |     | 0       |       |                     |
+| [RewOnKillRepFaction2](#rewonkillrepfaction) | SMALLINT |          | NO   |     | 0       |       |                     |
+| [MaxStanding1](#maxstanding)                 | TINYINT  |          | NO   |     | 0       |       |                     |
+| [IsTeamAward1](#isteamaward)                 | TINYINT  |          | NO   |     | 0       |       |                     |
+| [RewOnKillRepValue1](#rewonkillrepvalue)     | FLOAT    |          | NO   |     | 0       |       |                     |
+| [MaxStanding2](#maxstanding)                 | TINYINT  |          | NO   |     | 0       |       |                     |
+| [IsTeamAward2](#isteamaward)                 | TINYINT  |          | NO   |     | 0       |       |                     |
+| [RewOnKillRepValue2](#rewonkillrepvalue)     | FLOAT    |          | NO   |     | 0       |       |                     |
+| [TeamDependent](#teamdependent)              | TINYINT  | UNSIGNED | NO   |     | 0       |       |                     |
 
-[1]: #creatureid
-[2]: #rewonkillrepfaction
-[3]: #rewonkillrepfaction
-[4]: #maxstanding
-[5]: #isteamaward
-[6]: #rewonkillrepvalue
-[7]: #maxstanding
-[8]: #isteamaward
-[9]: #rewonkillrepvalue
-[10]: #teamdependent
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### creature\_id
 

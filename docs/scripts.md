@@ -16,20 +16,20 @@ NOTE: An entry in this table may have more than one row as a script may do more 
 
 **Table Structure**
 
-| Field                     | Type  | Attributes | Key | Null | Default | Extra                                                                                                                          | Comment |
-| ------------------------- | ----- | ---------- | --- | ---- | ------- | ------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| [id](#id)                 | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
-| [effIndex](#effindex)     | INT   | UNSIGNED   |     | NO   | 0       | only used in spell_scripts                                                                                                     |         |
-| [delay](#delay)           | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
-| [command](#command)       | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
-| [datalong](#otherfields)  | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
-| [datalong2](#otherfields) | INT   | UNSIGNED   |     | NO   | 0       |                                                                                                                                |         |
-| [dataint](#otherfields)   | INT   |            |     | NO   | 0       |                                                                                                                                |         |
-| [x](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
-| [y](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
-| [z](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
-| [o](#otherfields)         | FLOAT |            |     | NO   | 0       |                                                                                                                                |         |
-| [guid](#guid)             | INT   |            | PRI | NO   | 0       | only used in waypoint_scripts; acts as primary key and is set automatically using the [GM command](gm-commands) 'wp event add' |         |
+| Field                     | Type  |          | Null | Key | Default | Extra | Comment                                                                                                                        |
+| :------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :----------------------------------------------------------------------------------------------------------------------------- |
+| [id](#id)                 | INT   | UNSIGNED | NO   |     | 0       |       |                                                                                                                                |
+| [effIndex](#effindex)     | INT   | UNSIGNED | NO   |     | 0       |       | only used in spell_scripts                                                                                                     |
+| [delay](#delay)           | INT   | UNSIGNED | NO   |     | 0       |       |                                                                                                                                |
+| [command](#command)       | INT   | UNSIGNED | NO   |     | 0       |       |                                                                                                                                |
+| [datalong](#otherfields)  | INT   | UNSIGNED | NO   |     | 0       |       |                                                                                                                                |
+| [datalong2](#otherfields) | INT   | UNSIGNED | NO   |     | 0       |       |                                                                                                                                |
+| [dataint](#otherfields)   | INT   |          | NO   |     | 0       |       |                                                                                                                                |
+| [x](#otherfields)         | FLOAT |          | NO   |     | 0       |       |                                                                                                                                |
+| [y](#otherfields)         | FLOAT |          | NO   |     | 0       |       |                                                                                                                                |
+| [z](#otherfields)         | FLOAT |          | NO   |     | 0       |       |                                                                                                                                |
+| [o](#otherfields)         | FLOAT |          | NO   |     | 0       |       |                                                                                                                                |
+| [guid](#guid)             | INT   |          | NO   | PRI | 0       |       | only used in waypoint_scripts; acts as primary key and is set automatically using the [GM command](gm-commands) 'wp event add' |
 
 ## **Description of the fields**
 

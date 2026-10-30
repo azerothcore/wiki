@@ -2,25 +2,25 @@
 
 [<-Back-to:Characters](database-characters)
 
-**The `spam_reports` table**
+**The \`spam\_reports\` table**
 
 This table stores spam reports submitted by players in-game (e.g. reporting spam in chat, mail, or calendar). Logging of spam reports can be enabled via the `LogSpamReports` option in `worldserver.conf`.
 
-**Table Structure**
+**Table: spam\_reports's Structure**
 
-| Field                                           | Type     | Attributes | Key | Null | Default | Extra          | Comment                              |
-| ----------------------------------------------- | -------- | ---------- | --- | ---- | ------- | -------------- | ------------------------------------ |
-| [ID](#id)                                       | INT      | UNSIGNED   | PRI | NO   |         | AUTO_INCREMENT | Unique identifier                    |
-| [SpamType](#spamtype)                           | TINYINT  | UNSIGNED   |     | NO   |         |                | 0 = mail, 1 = chat, 2 = calendar     |
-| [SpammerGuid](#spammerguid)                     | INT      | UNSIGNED   |     | NO   | 0       |                | GUID of the reported player          |
-| [Unk1](#unk1)                                   | INT      | UNSIGNED   |     | YES  | 0       |                |                                      |
-| [MailIdOrMessageType](#mailidormessagetype)     | INT      | UNSIGNED   |     | YES  | 0       |                | Mail ID or message type              |
-| [ChannelId](#channelid)                         | INT      | UNSIGNED   |     | YES  | NULL    |                | Only used if SpamType = 1 (chat)     |
-| [SecondsSinceMessage](#secondssincemessage)     | INT      | UNSIGNED   |     | YES  | NULL    |                | Only used if SpamType = 1 (chat)     |
-| [Description](#description)                    | LONGTEXT |            |     | YES  | NULL    |                | Description or context of the report |
-| [Time](#time)                                   | INT      | SIGNED     |     | YES  | NULL    |                | Time of report as Unix timestamp     |
+| Field                                       | Type     |          | Null | Key | Default | Extra          | Comment                              |
+| :------------------------------------------ | :------- | :------- | :--: | :-: | :-----: | :------------: | :----------------------------------- |
+| [ID](#id)                                   | INT      | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT | Unique identifier                    |
+| [SpamType](#spamtype)                       | TINYINT  | UNSIGNED | NO   |     |         |                | 0 = mail, 1 = chat, 2 = calendar     |
+| [SpammerGuid](#spammerguid)                 | INT      | UNSIGNED | NO   |     | 0       |                | GUID of the reported player          |
+| [Unk1](#unk1)                               | INT      | UNSIGNED | YES  |     | 0       |                |                                      |
+| [MailIdOrMessageType](#mailidormessagetype) | INT      | UNSIGNED | YES  |     | 0       |                | Mail ID or message type              |
+| [ChannelId](#channelid)                     | INT      | UNSIGNED | YES  |     | NULL    |                | Only used if SpamType = 1            |
+| [SecondsSinceMessage](#secondssincemessage) | INT      | UNSIGNED | YES  |     | NULL    |                | Only used if SpamType = 1            |
+| [Description](#description)                 | LONGTEXT |          | YES  |     | NULL    |                | Description or context of the report |
+| [Time](#time)                               | INT      |          | YES  |     | NULL    |                | Time of report                       |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

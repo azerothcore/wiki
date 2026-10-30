@@ -8,50 +8,50 @@ Used by [SAI](smart_scripts)
 
 Contains waypoint data, allowing creatures to move to certain X, Y, and Z coordinates. See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
-**Table Structure**
+**Table: waypoints's Structure**
 
-| Field                            | Type      | Attributes | Key | Null | Default |
-| -------------------------------- | --------- | ---------- | --- | ---- | ------- |
-| [entry](#entry)                  | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
-| [pointid](#pointid)              | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |
-| [position\_x](#positionx)        | FLOAT     |            |     | NO   | 0       |
-| [position\_y](#positiony)        | FLOAT     |            |     | NO   | 0       |
-| [position\_z](#positionz)        | FLOAT     |            |     | NO   | 0       |
-| [orientation](#orientation)      | FLOAT     |            |     | YES  | NULL    |
-| [delay](#delay)                  | INT       | UNSIGNED   |     | NO   | 0       |
-| [point\_comment](#pointcomment)  | text      |            |     | YES  | NULL    |
+| Field                           | Type  |          | Null | Key | Default | Extra | Comment |
+| :------------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [entry](#entry)                 | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [pointid](#pointid)             | INT   | UNSIGNED | NO   | PRI | 0       |       |         |
+| [position\_x](#positionx)       | FLOAT |          | NO   |     | 0       |       |         |
+| [position\_y](#positiony)       | FLOAT |          | NO   |     | 0       |       |         |
+| [position\_z](#positionz)       | FLOAT |          | NO   |     | 0       |       |         |
+| [orientation](#orientation)     | FLOAT |          | YES  |     | NULL    |       |         |
+| [delay](#delay)                 | INT   | UNSIGNED | NO   |     | 0       |       |         |
+| [point\_comment](#pointcomment) | TEXT  |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
-#### entry
+### entry
 
 Path ID. Standard way of assigning an ID is [creature\_template.entry](creature_template#entry) * 100, but any random number can be used here.
 
-#### pointid
+### pointid
 
 Unique ID for each waypoint. Starts at 1 and increases with each waypoint.
 
-#### position\_x
+### position\_x
 
 The X coordinate of the destination waypoint.
 
-#### position\_y
+### position\_y
 
 The Y coordinate of the destination waypoint.
 
-#### position\_z
+### position\_z
 
 The Z coordinate of the destination waypoint.
 
-#### orientation
+### orientation
 
 The orientation (facing) the creature should have at this waypoint. `NULL` leaves the facing unchanged.
 
-#### delay
+### delay
 
 Time in milliseconds the creature waits at this waypoint before moving to the next one.
 
-#### point\_comment
+### point\_comment
 
 Text comment.
 

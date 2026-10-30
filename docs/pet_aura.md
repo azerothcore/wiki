@@ -4,43 +4,29 @@
 
 **The \`pet\_aura\` table**
 
-**Table Structure**
+Stores the auras a pet had when it was saved, so they can be restored when the pet is loaded again.
 
-| Field                | Type      | Attributes | Key | Null | Default | Extra | Comment                       |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ----------------------------- |
-| [guid][1]            | INT       | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier      |
-| [casterGuid][2]      | BIGINT    | UNSIGNED   | PRI | NO   | 0       |       | Full Global Unique Identifier |
-| [spell][3]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [effectMask][4]      | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |                               |
-| [recalculateMask][5] | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                               |
-| [stackCount][6]      | TINYINT   | UNSIGNED   |     | NO   | 1       |       |                               |
-| [amount0][7]         | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [amount1][8]         | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [amount2][9]         | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [base_amount0][10]   | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [base_amount1][11]   | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [base_amount2][12]   | MEDIUMINT | SIGNED     |     | NO   |         |       |                               |
-| [maxDuration][13]    | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [remainTime][14]     | INT       | SIGNED     |     | NO   | 0       |       |                               |
-| [remainCharges][15]  | TINYINT   | UNSIGNED   |     | NO   | 0       |       |                               |
+**Table: pet\_aura's Structure**
 
-[1]: #guid
-[2]: #casterguid
-[3]: #spell
-[4]: #effectmask
-[5]: #recalculatemask
-[6]: #stackcount
-[7]: #amount
-[8]: #amount
-[9]: #amount
-[10]: #baseamount
-[11]: #baseamount
-[12]: #baseamount
-[13]: #maxduration
-[14]: #remaintime
-[15]: #remaincharges
+| Field                               | Type    |          | Null | Key | Default | Extra | Comment                       |
+| :---------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :---------------------------- |
+| [guid](#guid)                       | INT     | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier      |
+| [casterGuid](#casterguid)           | BIGINT  | UNSIGNED | NO   | PRI | 0       |       | Full Global Unique Identifier |
+| [spell](#spell)                     | INT     | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [effectMask](#effectmask)           | TINYINT | UNSIGNED | NO   | PRI | 0       |       |                               |
+| [recalculateMask](#recalculatemask) | TINYINT | UNSIGNED | NO   |     | 0       |       |                               |
+| [stackCount](#stackcount)           | TINYINT | UNSIGNED | NO   |     | 1       |       |                               |
+| [amount0](#amount)                  | INT     |          | YES  |     | NULL    |       |                               |
+| [amount1](#amount)                  | INT     |          | YES  |     | NULL    |       |                               |
+| [amount2](#amount)                  | INT     |          | YES  |     | NULL    |       |                               |
+| [base_amount0](#baseamount)         | INT     |          | YES  |     | NULL    |       |                               |
+| [base_amount1](#baseamount)         | INT     |          | YES  |     | NULL    |       |                               |
+| [base_amount2](#baseamount)         | INT     |          | YES  |     | NULL    |       |                               |
+| [maxDuration](#maxduration)         | INT     |          | NO   |     | 0       |       |                               |
+| [remainTime](#remaintime)           | INT     |          | NO   |     | 0       |       |                               |
+| [remainCharges](#remaincharges)     | TINYINT | UNSIGNED | NO   |     | 0       |       |                               |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

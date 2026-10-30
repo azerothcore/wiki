@@ -6,25 +6,18 @@
 
 This table lists all of the characters that have been banned along with the date when (or if) the ban will expire.
 
-**Table Structure**
+**Table: character\_banned's Structure**
 
-| Field          | Type         | Attributes | Key | Null | Default | Extra | Comment                  |
-| -------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]      | INT          | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [bandate][2]   | INT          | UNSIGNED   | PRI | NO   | 0       |       |                          |
-| [unbandate][3] | INT          | UNSIGNED   |     | NO   | 0       |       |                          |
-| [bannedby][4]  | VARCHAR(50)  | SIGNED     |     | NO   |         |       |                          |
-| [banreason][5] | VARCHAR(255) | SIGNED     |     | NO   |         |       |                          |
-| [active][6]    | TINYINT      | UNSIGNED   |     | NO   | 1       |       |                          |
+| Field                   | Type         |          | Null | Key | Default | Extra | Comment                  |
+| :---------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)           | INT          | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [bandate](#bandate)     | INT          | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [unbandate](#unbandate) | INT          | UNSIGNED | NO   |     | 0       |       |                          |
+| [bannedby](#bannedby)   | VARCHAR(50)  |          | NO   |     |         |       |                          |
+| [banreason](#banreason) | VARCHAR(255) |          | NO   |     |         |       |                          |
+| [active](#active)       | TINYINT      | UNSIGNED | NO   |     | 1       |       |                          |
 
-[1]: #guid
-[2]: #bandate
-[3]: #unbandate
-[4]: #bannedby
-[5]: #banreason
-[6]: #active
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

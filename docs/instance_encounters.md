@@ -6,23 +6,17 @@
 
 Definitions of instance encounters. Used by LFG.
 
-**Table Structure**
+**Table: instance\_encounters's Structure**
 
-| Field                     | Type         | Attributes | Key | Null | Default | Extra | Comment                                                                 |
-| ------------------------- | ------------ | ---------- | --- | ---- | ------- | ----- | ----------------------------------------------------------------------- |
-| [entry][1]                | INT          | UNSIGNED   | PRI | NO   | 0       |       | Unique entry from DungeonEncounter.dbc                                  |
-| [creditType][2]           | TINYINT      | UNSIGNED   |     | NO   | 0       |       |                                                                         |
-| [creditEntry][3]          | INT          | UNSIGNED   |     | NO   | 0       |       |                                                                         |
-| [lastEncounterDungeon][4] | SMALLINT     | UNSIGNED   |     | NO   | 0       |       | If not 0, LfgDungeon.dbc entry for the instance it is last encounter in |
-| [comment][5]              | varchat(255) | SIGNED     |     | NO   | "       |       |                                                                         |
+| Field                                         | Type         |          | Null | Key | Default | Extra | Comment                                                                 |
+| :-------------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :---: | :---------------------------------------------------------------------- |
+| [entry](#entry)                               | INT          | UNSIGNED | NO   | PRI |         |       | Unique entry from DungeonEncounter.dbc                                  |
+| [creditType](#credittype)                     | TINYINT      | UNSIGNED | NO   |     | 0       |       |                                                                         |
+| [creditEntry](#creditentry)                   | INT          | UNSIGNED | NO   |     | 0       |       |                                                                         |
+| [lastEncounterDungeon](#lastencounterdungeon) | SMALLINT     | UNSIGNED | NO   |     | 0       |       | If not 0, LfgDungeon.dbc entry for the instance it is last encounter in |
+| [comment](#comment)                           | VARCHAR(255) |          | NO   |     | ''      |       |                                                                         |
 
-[1]: #entry
-[2]: #credittype
-[3]: #creditentry
-[4]: #lastencounterdungeon
-[5]: #comment
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 

@@ -1,9 +1,9 @@
 # Linux Server Setup
 
-| Installation Guide                                                                                                                   |                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 2: Core Installation](linux-core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 2: Core Installation](linux-core-installation) | [Choose another OS](server-setup) | [Step 4: Database Installation >>](database-installation) |
+| :-- | :-: | --: |
 
 **Table of contents**
 - [Client Data Files (Download Pre-Extracted)](#option-1-download-pre-extracted-files)
@@ -86,7 +86,7 @@ When this is complete you will receive the following message which can be safely
 
 ## Config Files: Worldserver and Authserver
 
-First of all you need to find the two default config files (named **worldserver.conf.dist** and **authserver.conf.dist**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within the install directory **$AC_CODE_DIR/env/dist/etc/**.
+First of all you need to find the two default config files (named **[worldserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist)** and **[authserver.conf.dist](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/authserver/authserver.conf.dist)**) and copy them. Then rename the copies to their namesakes without the .dist extension. You can find them within the install directory **$AC_CODE_DIR/env/dist/etc/**.
 
 Open the .conf files and scroll down to LoginDatabaseInfo, WorldDatabaseInfo, and CharacterDatabaseInfo and enter MySQL login information for the server to be able to access your database.
 
@@ -123,7 +123,7 @@ The following steps must be verified:
 
 1. Edit DataDir to the absolute or relative path of your folder. e.g, **/home/acore/azerothcore/data/** or **./data**
 
-{% include tip.html content="For most **worldserver.conf** setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
+{% include tip.html content="For most <b>worldserver.conf</b> setting changes, you can simply type .reload config in-game to see changes instantly without restarting the server." %}
 
 {% include warning.html content="The AzerothCore Team and Owners DO NOT in any case sponsor nor support illegal public servers. If you use these projects to run an illegal public server and not for testing and learning it is your own personal choice." %}
 
@@ -135,7 +135,7 @@ It is possible to load config options via environment variables, which you can r
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 2: Core Installation](linux-core-installation)                                                                                    | [Step 4: Database Installation >>](database-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 2: Core Installation](linux-core-installation) | [Choose another OS](server-setup) | [Step 4: Database Installation >>](database-installation) |
+| :-- | :-: | --: |

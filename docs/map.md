@@ -16,28 +16,81 @@ This DBC contains the maps list.
 
 ## Structure
 
-| Column | Field                                                  | Type    | Notes                                                                                                     |
-| ------ | ------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------- |
-| 1      | ID                                                     | Integer |                                                                                                           |
-| 2      | InternalName                                           | String  | reference to World\\Map\\ \[...\] \\                                                                      |
-| 3      | Flags                                                  | Integer | 0x100 - CAN\_CHANGE\_PLAYER\_DIFFICULTY                                                                   |
-| 4      | Type                                                   | Integer | 0: none, 1: party, 2: raid, 3: pvp, 4: arena, &gt;=5: none (official from "IsInInstance()")               |
-| 5      | IsBattleground                                         | Integer | Boolean (1 = True, 0 = False)                                                                             |
-| 6-22   | Name                                                   | String  | [Localization](https://wowdev.wiki/Localization); displayed on World Map for example                      |
-| 23     | [AreaTableID](https://wowdev.wiki/DB/AreaTable)        | Integer | Ref-ID;                                                                                                   |
-| 24-40  | MapDescriptionA                                        | String  | [Localization](https://wowdev.wiki/Localization)                                                          |
-| 41-57  | MapDescriptionH                                        | String  | [Localization](https://wowdev.wiki/Localization)                                                          |
-| 58     | [LoadingScreen](https://wowdev.wiki/DB/LoadingScreens) | Integer | Ref-ID; The LoadingScreen to Display                                                                      |
-| 59     | BGMapIconScale                                         | Float   |                                                                                                           |
-| 60     | GhostEntranceMap                                       | Integer | Ref-ID; Points to column 1, -1 if none                                                                    |
-| 61     | GhostEntranceX                                         | Float   | The X-Coord of the instance entrance                                                                      |
-| 62     | GhostEntranceY                                         | Float   | The Y-Coord of the instance entrance                                                                      |
-| 63     | TimeOfDayOverride                                      | Integer | Set to -1 for everything but Orgrimmar and Dalaran arena. For those, the time of day will change to this. |
-| 64     | Expansion                                              | Integer | Classic: 0; BC: 1; WotLK: 2                                                                               |
-| 65     | RaidOffset                                             | Integer | Instance-Reset?                                                                                           |
-| 66     | MaxPlayers                                             | Integer |                                                                                                           |
+| Column | Field                     | Type   | map\_dbc column                                          | Comment                                                                                                                                      |
+| :----: | :------------------------ | :----- | :------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0      | ID                        | uint32 | [ID](map_dbc#id)                                         |                                                                                                                                              |
+| 1      | Directory                 | string | [Directory](map_dbc#directory)                           | reference to World\\Map\\ \[...\] \\                                                                                                         |
+| 2      | InstanceType              | uint32 | [InstanceType](map_dbc#instancetype)                     | 0x100 - CAN\_CHANGE\_PLAYER\_DIFFICULTY                                                                                                      |
+| 3      | Flags                     | uint32 | [Flags](map_dbc#flags)                                   | 0: none, 1: party, 2: raid, 3: pvp, 4: arena, &gt;=5: none (official from "IsInInstance()")                                                  |
+| 4      | MapType                   | uint32 | [PVP](map_dbc#pvp)                                       | Boolean (1 = True, 0 = False)                                                                                                                |
+| 5      | MapName_0                 | string | [MapName_Lang_enUS](map_dbc#mapnamelang)                 | [Localization](https://wowdev.wiki/Localization); displayed on World Map for example. Assumed enUS                                           |
+| 6      | MapName_1                 | string | [MapName_Lang_enGB](map_dbc#mapnamelang)                 | Assumed enGB, not used in 3.3.5a                                                                                                             |
+| 7      | MapName_2                 | string | [MapName_Lang_koKR](map_dbc#mapnamelang)                 | Assumed koKR                                                                                                                                 |
+| 8      | MapName_3                 | string | [MapName_Lang_frFR](map_dbc#mapnamelang)                 | Assumed frFR                                                                                                                                 |
+| 9      | MapName_4                 | string | [MapName_Lang_deDE](map_dbc#mapnamelang)                 | Assumed deDE                                                                                                                                 |
+| 10     | MapName_5                 | string | [MapName_Lang_enCN](map_dbc#mapnamelang)                 | Assumed enCN, not used in 3.3.5a                                                                                                             |
+| 11     | MapName_6                 | string | [MapName_Lang_zhCN](map_dbc#mapnamelang)                 | Assumed zhCN                                                                                                                                 |
+| 12     | MapName_7                 | string | [MapName_Lang_enTW](map_dbc#mapnamelang)                 | Assumed enTW, not used in 3.3.5a                                                                                                             |
+| 13     | MapName_8                 | string | [MapName_Lang_zhTW](map_dbc#mapnamelang)                 | Assumed zhTW                                                                                                                                 |
+| 14     | MapName_9                 | string | [MapName_Lang_esES](map_dbc#mapnamelang)                 | Assumed esES                                                                                                                                 |
+| 15     | MapName_10                | string | [MapName_Lang_esMX](map_dbc#mapnamelang)                 | Assumed esMX                                                                                                                                 |
+| 16     | MapName_11                | string | [MapName_Lang_ruRU](map_dbc#mapnamelang)                 | Assumed ruRU                                                                                                                                 |
+| 17     | MapName_12                | string | [MapName_Lang_ptPT](map_dbc#mapnamelang)                 | Assumed ptPT, not used in 3.3.5a                                                                                                             |
+| 18     | MapName_13                | string | [MapName_Lang_ptBR](map_dbc#mapnamelang)                 | Assumed ptBR, not used in 3.3.5a                                                                                                             |
+| 19     | MapName_14                | string | [MapName_Lang_itIT](map_dbc#mapnamelang)                 | Assumed itIT, not used in 3.3.5a                                                                                                             |
+| 20     | MapName_15                | string | [MapName_Lang_Unk](map_dbc#mapnamelang)                  | Unknown language, unsure of the usage in 3.3.5a                                                                                              |
+| 21     | MapName_lang_mask         | uint32 | [MapName_Lang_Mask](map_dbc#mapnamelang)                 | Assumed flags of the localized text                                                                                                          |
+| 22     | AreaTableID               | uint32 | [AreaTableID](map_dbc#areatableid)                       | [AreaTableID](https://wowdev.wiki/DB/AreaTable): Ref-ID;. ID in [AreaTable.dbc](areatable)                                                   |
+| 23     | MapDescription0_0         | string | [MapDescription0_Lang_enUS](map_dbc#mapdescription0lang) | [Localization](https://wowdev.wiki/Localization) Assumed enUS                                                                                |
+| 24     | MapDescription0_1         | string | [MapDescription0_Lang_enGB](map_dbc#mapdescription0lang) | Assumed enGB, not used in 3.3.5a                                                                                                             |
+| 25     | MapDescription0_2         | string | [MapDescription0_Lang_koKR](map_dbc#mapdescription0lang) | Assumed koKR                                                                                                                                 |
+| 26     | MapDescription0_3         | string | [MapDescription0_Lang_frFR](map_dbc#mapdescription0lang) | Assumed frFR                                                                                                                                 |
+| 27     | MapDescription0_4         | string | [MapDescription0_Lang_deDE](map_dbc#mapdescription0lang) | Assumed deDE                                                                                                                                 |
+| 28     | MapDescription0_5         | string | [MapDescription0_Lang_enCN](map_dbc#mapdescription0lang) | Assumed enCN, not used in 3.3.5a                                                                                                             |
+| 29     | MapDescription0_6         | string | [MapDescription0_Lang_zhCN](map_dbc#mapdescription0lang) | Assumed zhCN                                                                                                                                 |
+| 30     | MapDescription0_7         | string | [MapDescription0_Lang_enTW](map_dbc#mapdescription0lang) | Assumed enTW, not used in 3.3.5a                                                                                                             |
+| 31     | MapDescription0_8         | string | [MapDescription0_Lang_zhTW](map_dbc#mapdescription0lang) | Assumed zhTW                                                                                                                                 |
+| 32     | MapDescription0_9         | string | [MapDescription0_Lang_esES](map_dbc#mapdescription0lang) | Assumed esES                                                                                                                                 |
+| 33     | MapDescription0_10        | string | [MapDescription0_Lang_esMX](map_dbc#mapdescription0lang) | Assumed esMX                                                                                                                                 |
+| 34     | MapDescription0_11        | string | [MapDescription0_Lang_ruRU](map_dbc#mapdescription0lang) | Assumed ruRU                                                                                                                                 |
+| 35     | MapDescription0_12        | string | [MapDescription0_Lang_ptPT](map_dbc#mapdescription0lang) | Assumed ptPT, not used in 3.3.5a                                                                                                             |
+| 36     | MapDescription0_13        | string | [MapDescription0_Lang_ptBR](map_dbc#mapdescription0lang) | Assumed ptBR, not used in 3.3.5a                                                                                                             |
+| 37     | MapDescription0_14        | string | [MapDescription0_Lang_itIT](map_dbc#mapdescription0lang) | Assumed itIT, not used in 3.3.5a                                                                                                             |
+| 38     | MapDescription0_15        | string | [MapDescription0_Lang_Unk](map_dbc#mapdescription0lang)  | Unknown language, unsure of the usage in 3.3.5a                                                                                              |
+| 39     | MapDescription0_lang_mask | uint32 | [MapDescription0_Lang_Mask](map_dbc#mapdescription0lang) | Assumed flags of the localized text                                                                                                          |
+| 40     | MapDescription1_0         | string | [MapDescription1_Lang_enUS](map_dbc#mapdescription1lang) | [Localization](https://wowdev.wiki/Localization) Assumed enUS                                                                                |
+| 41     | MapDescription1_1         | string | [MapDescription1_Lang_enGB](map_dbc#mapdescription1lang) | Assumed enGB, not used in 3.3.5a                                                                                                             |
+| 42     | MapDescription1_2         | string | [MapDescription1_Lang_koKR](map_dbc#mapdescription1lang) | Assumed koKR                                                                                                                                 |
+| 43     | MapDescription1_3         | string | [MapDescription1_Lang_frFR](map_dbc#mapdescription1lang) | Assumed frFR                                                                                                                                 |
+| 44     | MapDescription1_4         | string | [MapDescription1_Lang_deDE](map_dbc#mapdescription1lang) | Assumed deDE                                                                                                                                 |
+| 45     | MapDescription1_5         | string | [MapDescription1_Lang_enCN](map_dbc#mapdescription1lang) | Assumed enCN, not used in 3.3.5a                                                                                                             |
+| 46     | MapDescription1_6         | string | [MapDescription1_Lang_zhCN](map_dbc#mapdescription1lang) | Assumed zhCN                                                                                                                                 |
+| 47     | MapDescription1_7         | string | [MapDescription1_Lang_enTW](map_dbc#mapdescription1lang) | Assumed enTW, not used in 3.3.5a                                                                                                             |
+| 48     | MapDescription1_8         | string | [MapDescription1_Lang_zhTW](map_dbc#mapdescription1lang) | Assumed zhTW                                                                                                                                 |
+| 49     | MapDescription1_9         | string | [MapDescription1_Lang_esES](map_dbc#mapdescription1lang) | Assumed esES                                                                                                                                 |
+| 50     | MapDescription1_10        | string | [MapDescription1_Lang_esMX](map_dbc#mapdescription1lang) | Assumed esMX                                                                                                                                 |
+| 51     | MapDescription1_11        | string | [MapDescription1_Lang_ruRU](map_dbc#mapdescription1lang) | Assumed ruRU                                                                                                                                 |
+| 52     | MapDescription1_12        | string | [MapDescription1_Lang_ptPT](map_dbc#mapdescription1lang) | Assumed ptPT, not used in 3.3.5a                                                                                                             |
+| 53     | MapDescription1_13        | string | [MapDescription1_Lang_ptBR](map_dbc#mapdescription1lang) | Assumed ptBR, not used in 3.3.5a                                                                                                             |
+| 54     | MapDescription1_14        | string | [MapDescription1_Lang_itIT](map_dbc#mapdescription1lang) | Assumed itIT, not used in 3.3.5a                                                                                                             |
+| 55     | MapDescription1_15        | string | [MapDescription1_Lang_Unk](map_dbc#mapdescription1lang)  | Unknown language, unsure of the usage in 3.3.5a                                                                                              |
+| 56     | MapDescription1_lang_mask | uint32 | [MapDescription1_Lang_Mask](map_dbc#mapdescription1lang) | Assumed flags of the localized text                                                                                                          |
+| 57     | LoadingScreenID           | uint32 | [LoadingScreenID](map_dbc#loadingscreenid)               | [LoadingScreen](https://wowdev.wiki/DB/LoadingScreens): Ref-ID; The LoadingScreen to Display. ID in [LoadingScreens.dbc](dbc-loadingscreens) |
+| 58     | MinimapIconScale          | float  | [MinimapIconScale](map_dbc#minimapiconscale)             |                                                                                                                                              |
+| 59     | CorpseMapID               | int32  | [CorpseMapID](map_dbc#corpsemapid)                       | Ref-ID; Points to column 1, -1 if none                                                                                                       |
+| 60     | Corpse_X                  | float  | [CorpseX](map_dbc#corpsex)                               | The X-Coord of the instance entrance                                                                                                         |
+| 61     | Corpse_Y                  | float  | [CorpseY](map_dbc#corpsey)                               | The Y-Coord of the instance entrance                                                                                                         |
+| 62     | TimeOfDayOverride         | int32  | [TimeOfDayOverride](map_dbc#timeofdayoverride)           | Set to -1 for everything but Orgrimmar and Dalaran arena. For those, the time of day will change to this.                                    |
+| 63     | ExpansionID               | uint32 | [ExpansionID](map_dbc#expansionid)                       | Classic: 0; BC: 1; WotLK: 2                                                                                                                  |
+| 64     | RaidOffset                | uint32 | [RaidOffset](map_dbc#raidoffset)                         | Instance-Reset?                                                                                                                              |
+| 65     | MaxPlayers                | uint32 | [MaxPlayers](map_dbc#maxplayers)                         |                                                                                                                                              |
+
+The language of each of the 16 text columns of a localized field is assumed from the column names of the `_dbc` tables. A language is marked as not used in 3.3.5a when it is not in the core's locale list.
 
 ## Content
+
+<details>
+<summary>Show the content of Map.dbc</summary>
 
 | ID  | Type | Name                                               | AreaTableID | Expansion | MaxPlayers |
 | --- | ---- | -------------------------------------------------- | ----------- | --------- | ---------- |
@@ -176,5 +229,7 @@ This DBC contains the maps list.
 | 718 | 0    | Transport: The Mighty Wind (Icecrown Citadel Raid) | 0           | 2         | 0          |
 | 723 | 0    | Stormwind                                          | 0           | 0         | 0          |
 | 724 | 2    | The Ruby Sanctum                                   | 0           | 2         | 0          |
+
+</details>
 
 

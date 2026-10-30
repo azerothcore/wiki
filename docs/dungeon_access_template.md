@@ -4,27 +4,21 @@
 
 **The \`dungeon\_access\_template\` table**
 
-**Table Structure**
+Holds the dungeons and difficulties that have entry limits, with their level and item level limits. The detailed requirements are in [dungeon_access_requirements](dungeon_access_requirements).
 
-| Field                   | Type         | Attributes | Key | Null | Default        | Extra                                         | Comment |
-| ----------------------- | ------------ | ---------- | --- | ---- | -------------- | --------------------------------------------- | ------- |
-| [id][1]                 | TINYINT      | UNSIGNED   | PRI | NO   | AUTO_INCREMENT |                                               |         |
-| [map_id][2]             | MEDIUMINT    | UNSIGNED   | KEY | NO   |                | FK_dungeon_access_template__instance_template |         |
-| [difficulty][3]         | TINYINT      | UNSIGNED   |     | NO   | 0              |                                               |         |
-| [min_level][4]          | TINYINT      | UNSIGNED   |     | YES  | NULL           |                                               |         |
-| [max_level][5]          | TINYINT      | UNSIGNED   |     | YES  | NULL           |                                               |         |
-| [min_avg_item_level][6] | SMALLINT     | UNSIGNED   |     | YES  | NULL           |                                               |         |
-| [comment][7]            | VARCHAR(255) |            |     | YES  | NULL           |                                               |         |
+**Table: dungeon\_access\_template's Structure**
 
-[1]: #id
-[2]: #mapid
-[3]: #difficulty
-[4]: #minlevel
-[5]: #maxlevel
-[6]: #minavgitemlevel
-[7]: #comment
+| Field                                  | Type         |          | Null | Key | Default | Extra          | Comment                                                                                                                       |
+| :------------------------------------- | :----------- | :------- | :--: | :-: | :-----: | :------------: | :---------------------------------------------------------------------------------------------------------------------------- |
+| [id](#id)                              | TINYINT      | UNSIGNED | NO   | PRI |         | AUTO_INCREMENT | The dungeon template ID                                                                                                       |
+| [map_id](#mapid)                       | INT          | UNSIGNED | YES  | MUL | NULL    |                | Map ID from instance_template                                                                                                 |
+| [difficulty](#difficulty)              | TINYINT      | UNSIGNED | NO   |     | 0       |                | 5 man: 0 = normal, 1 = heroic, 2 = epic (not implemented) \| 10 man: 0 = normal, 2 = heroic \| 25 man: 1 = normal, 3 = heroic |
+| [min_level](#minlevel)                 | TINYINT      | UNSIGNED | YES  |     | NULL    |                |                                                                                                                               |
+| [max_level](#maxlevel)                 | TINYINT      | UNSIGNED | YES  |     | NULL    |                |                                                                                                                               |
+| [min_avg_item_level](#minavgitemlevel) | SMALLINT     | UNSIGNED | YES  |     | NULL    |                | Min average ilvl required to enter                                                                                            |
+| [comment](#comment)                    | VARCHAR(255) |          | YES  |     | NULL    |                | Dungeon Name 5/10/25/40 man - Normal/Heroic                                                                                   |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### id
 

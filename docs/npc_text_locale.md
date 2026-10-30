@@ -1,35 +1,35 @@
-# npc_text_locale
+# npc\_text\_locale
 
 [<-Back-to:World](database-world)
 
-**The \`npc_text_locale\` table**
+**The \`npc\_text\_locale\` table**
 
 This table is used to provide localized clients with localized strings for npc_texts.
 
-**Table Structure**
+**Table: npc\_text\_locale's Structure**
 
-| Field | Type | Attributes | Key | Null | Default | Extra | Comment |
-| ----- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [ID](#id) | INT | UNSIGNED | PRI | NO | 0 |  |  |
-| [Locale](#locale) | VARCHAR(4) |  | PRI | NO |  |  |  |
-| [Text0_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text0_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text1_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text1_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text2_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text2_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text3_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text3_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text4_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text4_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text5_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text5_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text6_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text6_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text7_0](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
-| [Text7_1](#text00-to-text71) | TEXT |  |  | YES |  |  |  |
+| Field                        | Type       |          | Null | Key | Default | Extra | Comment |
+| :--------------------------- | :--------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [ID](#id)                    | INT        | UNSIGNED | NO   | PRI | 0       |       |         |
+| [Locale](#locale)            | VARCHAR(4) |          | NO   | PRI |         |       |         |
+| [Text0_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text0_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text1_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text1_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text2_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text2_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text3_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text3_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text4_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text4_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text5_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text5_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text6_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text6_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text7_0](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
+| [Text7_1](#text00-to-text71) | LONGTEXT   |          | YES  |     | NULL    |       |         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### ID
 

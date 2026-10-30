@@ -6,17 +6,14 @@
 
 Holds information on the weekly quest status of every player. The timers reset at the same time the Raids reset.
 
-**Table Structure**
+**Table: character\_queststatus\_weekly's Structure**
 
-| Field      | Type    | Attributes | Key | Null | Default | Extra | Comment                  |
-| ---------- | ------- | ---------- | --- | ---- | ------- | ----- | ------------------------ |
-| [guid][1]  | INT     | UNSIGNED   | PRI | NO   | 0       |       | Global Unique Identifier |
-| [quest][2] | INT     | UNSIGNED   | PRI | NO   | 0       |       | Quest Identifier         |
+| Field           | Type |          | Null | Key | Default | Extra | Comment                  |
+| :-------------- | :--- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [guid](#guid)   | INT  | UNSIGNED | NO   | PRI | 0       |       | Global Unique Identifier |
+| [quest](#quest) | INT  | UNSIGNED | NO   | PRI | 0       |       | Quest Identifier         |
 
-[1]: #guid
-[2]: #quest
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guid
 

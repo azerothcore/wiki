@@ -1,10 +1,11 @@
 # Windows VSC Core Installation
 
-{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
 
-| Installation Guide | |
-| :- | :- |
 | [<< Step 1: VSC Requirements](vsc-requirements) | [Step 3: Server Setup >>](server-setup) |
+| :-- | --: |
+
+{% include note.html content="This guide is community-made. It may not be up to date and is not officially supported." %}
 
 ## Required software
 
@@ -137,6 +138,7 @@ pdb files only exist if you compile on Debug or RelWithDebInfo modes, it's not m
 
 To report crash logs it's MANDATORY to compile on Debug or RelWithDebInfo mode.
 
-| Installation Guide | |
-| :- | :- |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
 | [<< Step 1: VSC Requirements](vsc-requirements) | [Step 3: Server Setup >>](server-setup) |
+| :-- | --: |

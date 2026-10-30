@@ -6,23 +6,17 @@
 
 This table holds information on all the tabs in use for all guilds that make use of the guild bank.
 
-**Table Structure**
+**Table: guild\_bank\_tab's Structure**
 
-| Field        | Type         | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | ------------ | ---------- | --- | ---- | ------- | ----- | ------- |
-| [guildid][1] | INT          | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TabId][2]   | TINYINT      | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [TabName][3] | VARCHAR(16)  | SIGNED     |     | NO   | "       |       |         |
-| [TabIcon][4] | VARCHAR(100) | SIGNED     |     | NO   | "       |       |         |
-| [TabText][5] | VARCHAR(500) | SIGNED     |     | YES  |         |       |         |
+| Field               | Type         |          | Null | Key | Default | Extra | Comment |
+| :------------------ | :----------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [guildid](#guildid) | INT          | UNSIGNED | NO   | PRI | 0       |       |         |
+| [TabId](#tabid)     | TINYINT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [TabName](#tabname) | VARCHAR(16)  |          | NO   |     | ''      |       |         |
+| [TabIcon](#tabicon) | VARCHAR(100) |          | NO   |     | ''      |       |         |
+| [TabText](#tabtext) | VARCHAR(500) |          | YES  |     | NULL    |       |         |
 
-[1]: #guildid
-[2]: #tabid
-[3]: #tabname
-[4]: #tabicon
-[5]: #tabtext
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### guildid
 

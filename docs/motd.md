@@ -4,18 +4,16 @@
 
 **The \`motd\` table**
 
-**Table Structure**
+Holds the message of the day for each realm. A realm id of -1 applies to all realms.
 
-| Field        | Type     | Attributes | Key | Null | Default | Extra | Comment |
-| ------------ | -------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [realmid][1] | INT      | SIGNED     | PRI | NO   |         |       |         |
-| [text][2]    | LONGTEXT |            |     | YES  | NULL    |       |         |
+**Table: motd's Structure**
 
+| Field               | Type     |     | Null | Key | Default | Extra | Comment |
+| :------------------ | :------- | :-- | :--: | :-: | :-----: | :---: | :------ |
+| [realmid](#realmid) | INT      |     | NO   | PRI |         |       |         |
+| [text](#text)       | LONGTEXT |     | YES  |     | NULL    |       |         |
 
-[1]: #realmid
-[2]: #text
-
-## Description of the fields
+**Description of the table's fields**
 
 ### realmid
 

@@ -16,18 +16,71 @@ This DBC contains all skills.
 
 ## Structure
 
-| Column | Field                    | Type         | Notes              |
-| ------ | ------------------------ | ------------ | ------------------ |
-| 1      | ID                       | Integer      |                    |
-| 2      | iRefID_SkillLineCategory | Integer      |                    |
-| 3      | skillCostID              | Integer      |                    |
-| 4      | sRefName                 | String + Loc |                    |
-| 5      | description              | String + Loc |                    |
-| 6      | iRefID_SpellIcon         | Integer      |                    |
-| 7      | verb                     | String + Loc |                    |
-| 8      | canLink                  | Integer      | prof. with recipes |
+| Column | Field                   | Type   | skillline\_dbc column                                      | Comment                                              |
+| :----: | :---------------------- | :----- | :--------------------------------------------------------- | :--------------------------------------------------- |
+| 0      | ID                      | uint32 | [ID](skillline_dbc#id)                                     |                                                      |
+| 1      | CategoryID              | int32  | [CategoryID](skillline_dbc#categoryid)                     | ID in [SkillLineCategory.dbc](dbc-skilllinecategory) |
+| 2      | SkillCostsID            | uint32 | [SkillCostsID](skillline_dbc#skillcostsid)                 | ID in [SkillCostsData.dbc](dbc-skillcostsdata)       |
+| 3      | DisplayName_0           | string | [DisplayName_Lang_enUS](skillline_dbc#displaynamelang)     | Assumed enUS                                         |
+| 4      | DisplayName_1           | string | [DisplayName_Lang_enGB](skillline_dbc#displaynamelang)     | Assumed enGB, not used in 3.3.5a                     |
+| 5      | DisplayName_2           | string | [DisplayName_Lang_koKR](skillline_dbc#displaynamelang)     | Assumed koKR                                         |
+| 6      | DisplayName_3           | string | [DisplayName_Lang_frFR](skillline_dbc#displaynamelang)     | Assumed frFR                                         |
+| 7      | DisplayName_4           | string | [DisplayName_Lang_deDE](skillline_dbc#displaynamelang)     | prof. with recipes. Assumed deDE                     |
+| 8      | DisplayName_5           | string | [DisplayName_Lang_enCN](skillline_dbc#displaynamelang)     | Assumed enCN, not used in 3.3.5a                     |
+| 9      | DisplayName_6           | string | [DisplayName_Lang_zhCN](skillline_dbc#displaynamelang)     | Assumed zhCN                                         |
+| 10     | DisplayName_7           | string | [DisplayName_Lang_enTW](skillline_dbc#displaynamelang)     | Assumed enTW, not used in 3.3.5a                     |
+| 11     | DisplayName_8           | string | [DisplayName_Lang_zhTW](skillline_dbc#displaynamelang)     | Assumed zhTW                                         |
+| 12     | DisplayName_9           | string | [DisplayName_Lang_esES](skillline_dbc#displaynamelang)     | Assumed esES                                         |
+| 13     | DisplayName_10          | string | [DisplayName_Lang_esMX](skillline_dbc#displaynamelang)     | Assumed esMX                                         |
+| 14     | DisplayName_11          | string | [DisplayName_Lang_ruRU](skillline_dbc#displaynamelang)     | Assumed ruRU                                         |
+| 15     | DisplayName_12          | string | [DisplayName_Lang_ptPT](skillline_dbc#displaynamelang)     | Assumed ptPT, not used in 3.3.5a                     |
+| 16     | DisplayName_13          | string | [DisplayName_Lang_ptBR](skillline_dbc#displaynamelang)     | Assumed ptBR, not used in 3.3.5a                     |
+| 17     | DisplayName_14          | string | [DisplayName_Lang_itIT](skillline_dbc#displaynamelang)     | Assumed itIT, not used in 3.3.5a                     |
+| 18     | DisplayName_15          | string | [DisplayName_Lang_Unk](skillline_dbc#displaynamelang)      | Unknown language, unsure of the usage in 3.3.5a      |
+| 19     | DisplayName_lang_mask   | uint32 | [DisplayName_Lang_Mask](skillline_dbc#displaynamelang)     | Assumed flags of the localized text                  |
+| 20     | Description_0           | string | [Description_Lang_enUS](skillline_dbc#descriptionlang)     | Assumed enUS                                         |
+| 21     | Description_1           | string | [Description_Lang_enGB](skillline_dbc#descriptionlang)     | Assumed enGB, not used in 3.3.5a                     |
+| 22     | Description_2           | string | [Description_Lang_koKR](skillline_dbc#descriptionlang)     | Assumed koKR                                         |
+| 23     | Description_3           | string | [Description_Lang_frFR](skillline_dbc#descriptionlang)     | Assumed frFR                                         |
+| 24     | Description_4           | string | [Description_Lang_deDE](skillline_dbc#descriptionlang)     | Assumed deDE                                         |
+| 25     | Description_5           | string | [Description_Lang_enCN](skillline_dbc#descriptionlang)     | Assumed enCN, not used in 3.3.5a                     |
+| 26     | Description_6           | string | [Description_Lang_zhCN](skillline_dbc#descriptionlang)     | Assumed zhCN                                         |
+| 27     | Description_7           | string | [Description_Lang_enTW](skillline_dbc#descriptionlang)     | Assumed enTW, not used in 3.3.5a                     |
+| 28     | Description_8           | string | [Description_Lang_zhTW](skillline_dbc#descriptionlang)     | Assumed zhTW                                         |
+| 29     | Description_9           | string | [Description_Lang_esES](skillline_dbc#descriptionlang)     | Assumed esES                                         |
+| 30     | Description_10          | string | [Description_Lang_esMX](skillline_dbc#descriptionlang)     | Assumed esMX                                         |
+| 31     | Description_11          | string | [Description_Lang_ruRU](skillline_dbc#descriptionlang)     | Assumed ruRU                                         |
+| 32     | Description_12          | string | [Description_Lang_ptPT](skillline_dbc#descriptionlang)     | Assumed ptPT, not used in 3.3.5a                     |
+| 33     | Description_13          | string | [Description_Lang_ptBR](skillline_dbc#descriptionlang)     | Assumed ptBR, not used in 3.3.5a                     |
+| 34     | Description_14          | string | [Description_Lang_itIT](skillline_dbc#descriptionlang)     | Assumed itIT, not used in 3.3.5a                     |
+| 35     | Description_15          | string | [Description_Lang_Unk](skillline_dbc#descriptionlang)      | Unknown language, unsure of the usage in 3.3.5a      |
+| 36     | Description_lang_mask   | uint32 | [Description_Lang_Mask](skillline_dbc#descriptionlang)     | Assumed flags of the localized text                  |
+| 37     | SpellIconID             | uint32 | [SpellIconID](skillline_dbc#spelliconid)                   | ID in [SpellIcon.dbc](dbc-spellicon)                 |
+| 38     | AlternateVerb_0         | string | [AlternateVerb_Lang_enUS](skillline_dbc#alternateverblang) | Assumed enUS                                         |
+| 39     | AlternateVerb_1         | string | [AlternateVerb_Lang_enGB](skillline_dbc#alternateverblang) | Assumed enGB, not used in 3.3.5a                     |
+| 40     | AlternateVerb_2         | string | [AlternateVerb_Lang_koKR](skillline_dbc#alternateverblang) | Assumed koKR                                         |
+| 41     | AlternateVerb_3         | string | [AlternateVerb_Lang_frFR](skillline_dbc#alternateverblang) | Assumed frFR                                         |
+| 42     | AlternateVerb_4         | string | [AlternateVerb_Lang_deDE](skillline_dbc#alternateverblang) | Assumed deDE                                         |
+| 43     | AlternateVerb_5         | string | [AlternateVerb_Lang_enCN](skillline_dbc#alternateverblang) | Assumed enCN, not used in 3.3.5a                     |
+| 44     | AlternateVerb_6         | string | [AlternateVerb_Lang_zhCN](skillline_dbc#alternateverblang) | Assumed zhCN                                         |
+| 45     | AlternateVerb_7         | string | [AlternateVerb_Lang_enTW](skillline_dbc#alternateverblang) | Assumed enTW, not used in 3.3.5a                     |
+| 46     | AlternateVerb_8         | string | [AlternateVerb_Lang_zhTW](skillline_dbc#alternateverblang) | Assumed zhTW                                         |
+| 47     | AlternateVerb_9         | string | [AlternateVerb_Lang_esES](skillline_dbc#alternateverblang) | Assumed esES                                         |
+| 48     | AlternateVerb_10        | string | [AlternateVerb_Lang_esMX](skillline_dbc#alternateverblang) | Assumed esMX                                         |
+| 49     | AlternateVerb_11        | string | [AlternateVerb_Lang_ruRU](skillline_dbc#alternateverblang) | Assumed ruRU                                         |
+| 50     | AlternateVerb_12        | string | [AlternateVerb_Lang_ptPT](skillline_dbc#alternateverblang) | Assumed ptPT, not used in 3.3.5a                     |
+| 51     | AlternateVerb_13        | string | [AlternateVerb_Lang_ptBR](skillline_dbc#alternateverblang) | Assumed ptBR, not used in 3.3.5a                     |
+| 52     | AlternateVerb_14        | string | [AlternateVerb_Lang_itIT](skillline_dbc#alternateverblang) | Assumed itIT, not used in 3.3.5a                     |
+| 53     | AlternateVerb_15        | string | [AlternateVerb_Lang_Unk](skillline_dbc#alternateverblang)  | Unknown language, unsure of the usage in 3.3.5a      |
+| 54     | AlternateVerb_lang_mask | uint32 | [AlternateVerb_Lang_Mask](skillline_dbc#alternateverblang) | Assumed flags of the localized text                  |
+| 55     | CanLink                 | uint32 | [CanLink](skillline_dbc#canlink)                           |                                                      |
+
+The language of each of the 16 text columns of a localized field is assumed from the column names of the `_dbc` tables. A language is marked as not used in 3.3.5a when it is not in the core's locale list.
 
 ## **Content**
+
+<details>
+<summary>Show the content of SkillLine.dbc</summary>
 
 | ID  | CategoryId* | SkillCostId | Name                         | SpellIcon | AltVerb   | CanLink |
 | --- | ----------- | ----------- | ---------------------------- | --------- | --------- | ------- |
@@ -181,6 +234,8 @@ This DBC contains all skills.
 | 786 | 7           | 0           | Pet - Exotic Rhino           | 0         |           | 0       |
 | 787 | 7           | 0           | Pet - Exotic Core Hound      | 0         |           | 0       |
 | 788 | 5           | 0           | Pet - Exotic Spirit Beast    | 0         |           | 0       |
+
+</details>
 
 ## CategoryId
 

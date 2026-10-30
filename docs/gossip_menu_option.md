@@ -1,44 +1,31 @@
 # gossip\_menu\_option
 
+[<-Back-to:World](database-world)
+
 **Table: gossip\_menu\_option**
 
 This table holds information about menu options a gossip NPC can have. Examples of options: "Train me!", "I want to unlearn my talents"
 
-## Structure
+**Table: gossip\_menu\_option's Structure**
 
-| Field                      | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [MenuID][1]                | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionID][2]              | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionIcon][3]            | SMALLINT  | UNSIGNED   | PRI | NO   |         |       |         |
-| [OptionText][4]            | text      |            |     | YES  | NULL    |       |         |
-| [OptionBroadcastTextID][5] | MEDIUMINT |            |     | NO   |         |       |         |
-| [OptionType][6]            | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [OptionNpcFlag][7]         | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [ActionMenuID][8]          | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [ActionPoiID][9]           | MEDIUMINT | UNSIGNED   |     | NO   |         |       |         |
-| [BoxCoded][10]             | TINYINT   | UNSIGNED   |     | NO   |         |       |         |
-| [BoxMoney][11]             | INT       | UNSIGNED   |     | NO   |         |       |         |
-| [BoxText][12]              | text      |            |     | YES  | NULL    |       |         |
-| [BoxBroadcastTextID][13]   | MEDIUMINT |            |     | NO   |         |       |         |
-| [VerifiedBuild][14]        | SMALLINT  |            |     | NO   |         |       |         |
+| Field                                           | Type     |          | Null | Key | Default | Extra | Comment |
+| :---------------------------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [MenuID](#menuid)                               | INT      | UNSIGNED | NO   | PRI | 0       |       |         |
+| [OptionID](#optionid)                           | SMALLINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [OptionIcon](#optionicon)                       | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [OptionText](#optiontext)                       | TEXT     |          | YES  |     | NULL    |       |         |
+| [OptionBroadcastTextID](#optionbroadcasttextid) | INT      |          | NO   |     | 0       |       |         |
+| [OptionType](#optiontype)                       | TINYINT  | UNSIGNED | NO   |     | 0       |       |         |
+| [OptionNpcFlag](#optionnpcflag)                 | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [ActionMenuID](#actionmenuid)                   | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [ActionPoiID](#actionpoiid)                     | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [BoxCoded](#boxcoded)                           | TINYINT  | UNSIGNED | NO   |     | 0       |       |         |
+| [BoxMoney](#boxmoney)                           | INT      | UNSIGNED | NO   |     | 0       |       |         |
+| [BoxText](#boxtext)                             | TEXT     |          | YES  |     | NULL    |       |         |
+| [BoxBroadcastTextID](#boxbroadcasttextid)       | INT      |          | NO   |     | 0       |       |         |
+| [VerifiedBuild](#verifiedbuild)                 | INT      |          | YES  |     | NULL    |       |         |
 
-[1]: #menuid
-[2]: #optionid
-[3]: #optionicon
-[4]: #optiontext
-[5]: #optionbroadcasttextid
-[6]: #optiontype
-[7]: #optionnpcflag
-[8]: #actionmenuid
-[9]: #actionpoiid
-[10]: #boxcoded
-[11]: #boxmoney
-[12]: #boxtext
-[13]: #boxbroadcasttextid
-[14]: #verifiedbuild
-
-## Description of the fields
+**Description of the table's fields**
 
 ### MenuID
 
@@ -100,7 +87,6 @@ The ID of the same text in broadcast\_text.ID.
 | GOSSIP_OPTION_LEARNDUALSPEC     | 18    | UNIT_NPC_FLAG_TRAINER (bonus option for GOSSIP_OPTION_TRAINER)              | 16            |
 | GOSSIP_OPTION_OUTDOORPVP        | 19    | Added by code (option for outdoor PvP creatures)                            |               |
 | GOSSIP_OPTION_MAX               |       |                                                                             |               |
-
 
 ### OptionNpcFlag
 

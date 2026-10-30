@@ -21,33 +21,89 @@
         <div id="en" style="display: none">
             <b>Install:</b>
             <ul>
-                <li><a href="/wiki/installation">Installation Guide</a></li>
+                <li><a href="/wiki/installation">Installation Guides</a></li>
+                <li class="sidebar-fold">
+                    <details open>
+                        <summary><a href="/wiki/classic-installation">Classic Installation Guide</a></summary>
+                        <span class="sidebar-hint">Recommended</span>
+                        <ol>
+                            <li><a href="/wiki/requirements">Requirements</a></li>
+                            <li><a href="/wiki/core-installation">Core Installation</a></li>
+                            <li><a href="/wiki/server-setup">Server Setup</a></li>
+                            <li><a href="/wiki/database-installation">Database Installation</a></li>
+                            <li><a href="/wiki/networking">Networking</a></li>
+                            <li><a href="/wiki/final-server-steps">Final Server Steps</a></li>
+                            <li><a href="/wiki/keeping-the-server-up-to-date">Keeping the Server Up-to-Date</a></li>
+                            <li><a href="/wiki/client-setup">Client Setup</a></li>
+                            <li><a href="/wiki/optional-additions">Optional Additions</a></li>
+                        </ol>
+                    </details>
+                </li>
             </ul>
-            <a href="/wiki/classic-installation"><b>Classic Installation Guide:</b></a>
+            <b>Having Issues?</b>
             <ul>
-                <li><a href="/wiki/requirements">Requirements</a></li>
-                <li><a href="/wiki/core-installation">Core Installation</a></li>
-                <li><a href="/wiki/server-setup">Server Setup</a></li>
-                <li><a href="/wiki/database-installation">Database Installation</a></li>
-                <li><a href="/wiki/networking">Networking</a></li>
-                <li><a href="/wiki/final-server-steps">Final Server Steps</a></li>
-                <li><a href="/wiki/keeping-the-server-up-to-date">Keeping the server up to date</a></li>
-                <li><a href="/wiki/client-setup">Client Setup</a></li>
-                <li><a href="/wiki/optional-additions">Optional additions</a></li>
+                <li><a href="/wiki/faq">FAQ</a></li>
+                <li><a href="/wiki/common-errors">Common Errors</a></li>
             </ul>
             <b>Documentation:</b>
             <ul>
                 <li><a href="/wiki/documentation-index">Documentation Index</a></li>
                 <li><a href="https://www.azerothcore.org/doxygen">Doxygen Documentation</a></li>
                 <li><a href="/wiki/standard-operating-procedure">Standard Operating Procedure</a></li>
-                <li><a href="/wiki/faq">FAQ</a></li>
-                <li><a href="/wiki/common-errors">Common Errors</a></li>
+                <li class="sidebar-fold">
+                    <details>
+                        <summary>Full Documentation Index</summary>
+                        <ul>
+                            <li><a href="/wiki/agentic-engineering">Agentic Engineering</a></li>
+                            <li><a href="/wiki/bash_system">Bash system</a></li>
+                            <li><a href="/wiki/bit-and-bytes-tutorial">Bitwise operations</a></li>
+                            <li><a href="/wiki/client-cache-wdb">Client Cache (wdb)</a></li>
+                            <li><a href="/wiki/cluster-mode">Cluster Mode (ToCloud9)</a></li>
+                            <li><a href="/wiki/cmake-options">CMake options</a></li>
+                            <li><a href="/wiki/config-merger">Config Merger Tool</a></li>
+                            <li><a href="/wiki/config-overrides-with-env-var">Config Overrides with Env Var</a></li>
+                            <li><a href="/wiki/core-scripts">Core Scripts</a></li>
+                            <li><a href="/wiki/create-a-module">Create a module</a></li>
+                            <li><a href="/wiki/creating-accounts">Create accounts</a></li>
+                            <li><a href="/wiki/database-squash">Database Squash</a></li>
+                            <li><a href="/wiki/dbc-index">DBC Index</a></li>
+                            <li><a href="/wiki/directory-structure">Directory structure</a></li>
+                            <li><a href="/wiki/exitcodes">Exit Codes</a></li>
+                            <li><a href="/wiki/getting-started">Getting Started</a></li>
+                            <li><a href="/wiki/gm-commands">GM Commands</a></li>
+                            <li><a href="/wiki/guide-to-triaging">Guide to Triaging</a></li>
+                            <li><a href="/wiki/hitinfo-reference">HitInfo Reference</a></li>
+                            <li><a href="/wiki/how-to-restart-and-debug">How to Debug and Restart</a></li>
+                            <li><a href="/wiki/how-to-use-warden-payload-mgr">How to Use Warden Payload Manager</a></li>
+                            <li><a href="/wiki/how-to-work-with-conf-files">How to work with Conf Files</a></li>
+                            <li><a href="/wiki/ip2location">IP2LOCATION</a></li>
+                            <li><a href="/wiki/keira3-internals">Keira3 Internals</a></li>
+                            <li><a href="/wiki/logging-configuration">Logging Configuration</a></li>
+                            <li><a href="/wiki/monitoring-azerothcore-with-grafana">Monitoring AzerothCore with Grafana</a></li>
+                            <li><a href="/wiki/mysqltypescpp">MySQL types (C++)</a></li>
+                            <li><a href="/wiki/rbac">RBAC</a></li>
+                            <li><a href="/wiki/remote-access">Remote Access</a></li>
+                            <li><a href="/wiki/sniffing-and-parsing">Sniffing &amp; Parsing</a></li>
+                            <li><a href="/wiki/spell-aura-reference">Spell Aura Reference</a></li>
+                            <li><a href="/wiki/spell-effects-reference">Spell Effects Reference</a></li>
+                            <li><a href="/wiki/spell_system">Spell System</a></li>
+                            <li><a href="/wiki/sql-directory">SQL Directory</a></li>
+                            <li><a href="/wiki/sql-versioning">SQL Versioning</a></li>
+                            <li><a href="/wiki/unit-testing">Unit testing</a></li>
+                            <li><a href="/wiki/updatefields">UpdateFields</a></li>
+                        </ul>
+                    </details>
+                </li>
             </ul>
             <b>Database:</b>
             <ul>
-                <li><a href="/wiki/database-auth">Auth</a></li>
-                <li><a href="/wiki/database-characters">Characters</a></li>
-                <li><a href="/wiki/database-world">World</a></li>
+                <li><a href="/wiki/database-index">Index</a><span class="table-count" data-db="all"></span>
+                    <ul>
+                        <li><a href="/wiki/database-auth">Auth</a><span class="table-count" data-db="auth"></span></li>
+                        <li><a href="/wiki/database-characters">Characters</a><span class="table-count" data-db="characters"></span></li>
+                        <li><a href="/wiki/database-world">World</a><span class="table-count" data-db="world"></span></li>
+                    </ul>
+                </li>
             </ul>
             <b>Contribute:</b>
             <ul>
@@ -176,3 +232,179 @@
          </div>
     </div>
 </div>
+<script>
+/* Table counts next to the database links: read from the Database Index, kept for a day */
+(function () {
+    var KEY = "ac-table-counts", DAY = 86400000;
+    function count(doc) {
+        var c = { all: 0 };
+        doc.querySelectorAll("details .table-count[data-db]").forEach(function (s) {
+            var n = s.closest("details").querySelectorAll("li").length;
+            c[s.getAttribute("data-db")] = n;
+            c.all += n;
+        });
+        return c.all ? c : null;
+    }
+    function show(c) {
+        document.querySelectorAll(".table-count[data-db]").forEach(function (s) {
+            var n = c[s.getAttribute("data-db")];
+            if (n) s.textContent = " (" + n + (s.getAttribute("data-label") || "") + ")";
+        });
+    }
+    function save(c) {
+        try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), c: c })); } catch (e) {}
+    }
+    function run() {
+        var here = count(document);
+        if (here) { save(here); show(here); return; }
+        try {
+            var s = JSON.parse(localStorage.getItem(KEY));
+            if (s && Date.now() - s.t < DAY) { show(s.c); return; }
+        } catch (e) {}
+        fetch("{{ site.baseurl }}/database-index").then(function (r) { return r.text(); }).then(function (h) {
+            var c = count(new DOMParser().parseFromString(h, "text/html"));
+            if (c) { save(c); show(c); }
+        }).catch(function () {});
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
+})();
+</script>
+<script>
+/* A link to something inside a closed fold opens the fold first */
+(function () {
+    function reveal() {
+        var id = decodeURIComponent(location.hash.slice(1));
+        var el = id && document.getElementById(id);
+        if (!el) return;
+        for (var p = el.parentElement; p; p = p.parentElement) if (p.tagName === "DETAILS") p.open = true;
+        el.scrollIntoView({ block: "center" });
+        el.classList.add("anchor-hit");
+        setTimeout(function () { el.classList.remove("anchor-hit"); }, 2500);
+    }
+    window.addEventListener("hashchange", reveal);
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", reveal); else reveal();
+})();
+/* Hold the middle mouse button on a table that scrolls sideways and drag to move it */
+(function () {
+    var box = null, x = 0, y = 0;
+    document.addEventListener("mousedown", function (e) {
+        if (e.button !== 1 || !e.target.closest) return;
+        var t = e.target.closest("#git-wiki-content table");
+        if (!t || t.scrollWidth <= t.clientWidth) return;
+        box = t; x = e.clientX; y = e.clientY;
+        document.body.classList.add("table-drag");
+        e.preventDefault();
+    });
+    document.addEventListener("mousemove", function (e) {
+        if (!box) return;
+        box.scrollLeft -= e.clientX - x;
+        window.scrollBy(0, y - e.clientY);
+        x = e.clientX; y = e.clientY;
+    });
+    document.addEventListener("mouseup", function () {
+        box = null;
+        document.body.classList.remove("table-drag");
+    });
+})();
+</script>
+<script>
+/* Arrow button that hides or shows the sidebar on wide screens.
+   A page with "sidebar: collapsed" in its front matter starts with it hidden,
+   and so do database table pages and DBC pages that have more than the column list. */
+(function () {
+    var KEY = "ac-sidebar:" + location.pathname, startHidden = {% if page.sidebar == "collapsed" %}true{% else %}false{% endif %};
+    function saved() { try { return sessionStorage.getItem(KEY); } catch (e) { return null; } }
+    function apply(hidden, btn) {
+        document.body.classList.toggle("sidebar-collapsed", hidden);
+        if (btn) {
+            btn.textContent = hidden ? "\u00BB" : "\u00AB";
+            btn.title = hidden ? "Show the sidebar" : "Hide the sidebar";
+            btn.setAttribute("aria-label", btn.title);
+        }
+    }
+    function documented() {
+        var c = document.getElementById("git-wiki-content"), back = c && c.querySelector("p > a");
+        if (!back || back.textContent.indexOf("Back-to") < 0) return false;
+        var href = back.getAttribute("href") || "";
+        if (/database-(auth|characters|world)$/.test(href)) return true;
+        return /dbc-index$/.test(href)
+            && (!!c.querySelector("details, h2, h3, h4") || c.querySelectorAll("table").length > 1);
+    }
+    function init() {
+        var s = saved(), hidden = s === null ? startHidden || documented() : s === "1";
+        var btn = document.createElement("button");
+        btn.type = "button"; btn.id = "sidebar-fold";
+        btn.addEventListener("click", function () {
+            hidden = !hidden;
+            try { sessionStorage.setItem(KEY, hidden ? "1" : "0"); } catch (e) {}
+            apply(hidden, btn);
+        });
+        document.body.appendChild(btn);
+        apply(hidden, btn);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>
+<script>
+/* Notice shown on an English page after the 404 page sent the reader here
+   because the Spanish or Chinese version does not exist. It fades after a minute. */
+(function () {
+    var TEXT = {
+        es: "Esta p\u00e1gina a\u00fan no est\u00e1 traducida al espa\u00f1ol, as\u00ed que se te ha redirigido a la versi\u00f3n en ingl\u00e9s.",
+        cn: "\u6b64\u9875\u9762\u5c1a\u672a\u7ffb\u8bd1\u6210\u7b80\u4f53\u4e2d\u6587\uff0c\u5df2\u4e3a\u60a8\u8df3\u8f6c\u5230\u82f1\u6587\u9875\u9762\u3002"
+    };
+    function show() {
+        var lang = null;
+        try { lang = sessionStorage.getItem("ac-lang-fallback"); sessionStorage.removeItem("ac-lang-fallback"); } catch (e) {}
+        if (!lang || !TEXT[lang]) return;
+        var box = document.createElement("div"), close = document.createElement("button");
+        box.id = "lang-fallback"; box.setAttribute("role", "status"); box.lang = lang === "cn" ? "zh-CN" : lang;
+        box.appendChild(document.createTextNode(TEXT[lang]));
+        close.type = "button"; close.textContent = "\u00d7"; close.setAttribute("aria-label", "Close");
+        function hide() { box.classList.add("lang-fallback-hide"); setTimeout(function () { box.remove(); }, 700); }
+        close.addEventListener("click", hide);
+        box.appendChild(close);
+        document.body.appendChild(box);
+        setTimeout(hide, 60000);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", show); else show();
+})();
+</script>
+<script>
+/* Remembers, for the browser session, which folds are open on a page and whether the diamond pages are hidden. */
+(function () {
+    var KEY = "ac-folds:" + location.pathname, HIDE = "ac-hide-columns-only";
+    function get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+    function set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+    function init() {
+        var c = document.getElementById("git-wiki-content");
+        if (!c) return;
+        var folds = Array.prototype.slice.call(c.querySelectorAll("details")), saved = get(KEY);
+        if (saved !== null && saved.length === folds.length && !location.hash) {
+            folds.forEach(function (d, i) { d.open = saved.charAt(i) === "1"; });
+            var all = folds.every(function (d) { return d.open; });
+            c.querySelectorAll(".details-toggle:not([data-hide-columns])").forEach(function (b) {
+                b.textContent = all ? "Collapse all" : "Expand all";
+            });
+        }
+        folds.forEach(function (d) {
+            d.addEventListener("toggle", function () {
+                set(KEY, folds.map(function (f) { return f.open ? "1" : "0"; }).join(""));
+            });
+        });
+        var btn = c.querySelector("[data-hide-columns]");
+        if (!btn) return;
+        function apply(hide) {
+            c.classList.toggle("hide-columns-only", hide);
+            btn.textContent = hide ? "Show all pages" : "Hide diamond pages";
+        }
+        apply(get(HIDE) === "1");
+        btn.addEventListener("click", function () {
+            var hide = !c.classList.contains("hide-columns-only");
+            set(HIDE, hide ? "1" : "0");
+            apply(hide);
+        });
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>

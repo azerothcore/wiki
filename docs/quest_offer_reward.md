@@ -6,23 +6,23 @@
 
 This table is used for quests offering rewards without any required quest items (no item delivery involved).
 
-**Table Structure**
+**Table: quest\_offer\_reward's Structure**
 
-| Field                           | Type      | Attributes | Key | NULL | Default | Comment                                             |
-| ------------------------------- | --------- | ---------- | --- | ---- | ------- | --------------------------------------------------- |
-| [ID](#id)                       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       | Unique ID ([quest\_template.ID](quest_template#id)) |
-| [Emote1](#emote1)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](emotes)                           |
-| [Emote2](#emote2)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](emotes)                           |
-| [Emote3](#emote3)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](emotes)                           |
-| [Emote4](#emote4)               | SMALLINT  | UNSIGNED   |     | NO   | 0       | Quest NPC [Emote](emotes)                           |
-| [EmoteDelay1](#emotedelay1)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
-| [EmoteDelay2](#emotedelay2)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
-| [EmoteDelay3](#emotedelay3)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
-| [EmoteDelay4](#emotedelay4)     | INT       | UNSIGNED   |     | NO   | 0       | Emote delay in milliseconds                         |
-| [RewardText](#rewardtext)       | TEXT      |            |     | YES  | NULL    | Quest gossip text, single quest dialogue            |
-| [VerifiedBuild](#verifiedbuild) | SMALLINT  |            |     | NO   | 0       | Game client Build number or manually set value      |
+| Field                           | Type     |          | Null | Key | Default | Extra | Comment                                             |
+| :------------------------------ | :------- | :------- | :--: | :-: | :-----: | :---: | :-------------------------------------------------- |
+| [ID](#id)                       | INT      | UNSIGNED | NO   | PRI | 0       |       | Unique ID ([quest\_template.ID](quest_template#id)) |
+| [Emote1](#emote1)               | SMALLINT | UNSIGNED | NO   |     | 0       |       | Quest NPC [Emote](emotes)                           |
+| [Emote2](#emote2)               | SMALLINT | UNSIGNED | NO   |     | 0       |       | Quest NPC [Emote](emotes)                           |
+| [Emote3](#emote3)               | SMALLINT | UNSIGNED | NO   |     | 0       |       | Quest NPC [Emote](emotes)                           |
+| [Emote4](#emote4)               | SMALLINT | UNSIGNED | NO   |     | 0       |       | Quest NPC [Emote](emotes)                           |
+| [EmoteDelay1](#emotedelay1)     | INT      | UNSIGNED | NO   |     | 0       |       | Emote delay in milliseconds                         |
+| [EmoteDelay2](#emotedelay2)     | INT      | UNSIGNED | NO   |     | 0       |       | Emote delay in milliseconds                         |
+| [EmoteDelay3](#emotedelay3)     | INT      | UNSIGNED | NO   |     | 0       |       | Emote delay in milliseconds                         |
+| [EmoteDelay4](#emotedelay4)     | INT      | UNSIGNED | NO   |     | 0       |       | Emote delay in milliseconds                         |
+| [RewardText](#rewardtext)       | TEXT     |          | YES  |     | NULL    |       | Quest gossip text, single quest dialogue            |
+| [VerifiedBuild](#verifiedbuild) | INT      |          | YES  |     | NULL    |       | Game client Build number or manually set value      |
 
-**Description of the fields:**
+**Description of the table's fields**
 
 ### ID
 

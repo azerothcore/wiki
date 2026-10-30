@@ -6,21 +6,16 @@
 
 On certain levels, you receive a mail with some text.
 
-**Table Structure**
+**Table: mail\_level\_reward's Structure**
 
-| Field               | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [level][1]          | TINYINT   | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [raceMask][2]       | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [mailTemplateId][3] | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [senderEntry][4]    | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                             | Type    |          | Null | Key | Default | Extra | Comment |
+| :-------------------------------- | :------ | :------- | :--: | :-: | :-----: | :---: | :------ |
+| [level](#level)                   | TINYINT | UNSIGNED | NO   | PRI | 0       |       |         |
+| [raceMask](#racemask)             | INT     | UNSIGNED | NO   | PRI | 0       |       |         |
+| [mailTemplateId](#mailtemplateid) | INT     | UNSIGNED | NO   |     | 0       |       |         |
+| [senderEntry](#senderentry)       | INT     | UNSIGNED | NO   |     | 0       |       |         |
 
-[1]: #level
-[2]: #racemask
-[3]: #mailtemplateid
-[4]: #senderentry
-
-**Description of the fields**
+**Description of the table's fields**
 
 ### level
 

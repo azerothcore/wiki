@@ -1,24 +1,24 @@
-# game_event_npc_vendor
+# game\_event\_npc\_vendor
 
 [<-Back-to:World](database-world)
 
-**The \`game_event_npc_vendor\` table**
+**The \`game\_event\_npc\_vendor\` table**
 
 This table allows you to change the items a vendor sells, or to create a [vendor list](npc_vendor) for an NPC who does not sell items unless an event is active.
 
-**Table Structure**
+**Table: game\_event\_npc\_vendor's Structure**
 
-| Field                         | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| ----------------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [eventEntry](#evententry)     | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
-| [guid](#guid)                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [slot](#slot)                 | SMALLINT  | SIGNED     |     | NO   | 0       |       |         |
-| [item](#item)                 | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [maxcount](#maxcount)         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [incrtime](#incrtime)         | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
-| [ExtendedCost](#extendedcost) | MEDIUMINT | UNSIGNED   |     | NO   | 0       |       |         |
+| Field                         | Type     |          | Null | Key | Default | Extra | Comment                  |
+| :---------------------------- | :------- | :------- | :--: | :-: | :-----: | :---: | :----------------------- |
+| [eventEntry](#evententry)     | SMALLINT |          | NO   | PRI |         |       | Entry of the game event. |
+| [guid](#guid)                 | INT      | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [slot](#slot)                 | SMALLINT |          | NO   | MUL | 0       |       |                          |
+| [item](#item)                 | INT      | UNSIGNED | NO   | PRI | 0       |       |                          |
+| [maxcount](#maxcount)         | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [incrtime](#incrtime)         | INT      | UNSIGNED | NO   |     | 0       |       |                          |
+| [ExtendedCost](#extendedcost) | INT      | UNSIGNED | NO   |     | 0       |       |                          |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### eventEntry
 

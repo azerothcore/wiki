@@ -6,19 +6,19 @@
 
 This table contains waypoint paths used by creatures driven by scripted AI (`CreatureAI`). It is the scripted-AI counterpart to [waypoint\_data](waypoint_data) (used by creatures via their [creature\_addon](creature_addon)) and to [waypoints](waypoints) (used by [SmartAI](smart_scripts)). See also [Waypoints-Information](waypoints-information) for general information about waypoints.
 
-**Table Structure**
+**Table: script\_waypoint's Structure**
 
-| Field                             | Type | Attributes | Key | Null | Default |
-| --------------------------------- | ---- | ---------- | --- | ---- | ------- |
-| [entry](#entry)                   | INT  | UNSIGNED   | PRI | NO   | 0       |
-| [pointid](#pointid)               | INT  | UNSIGNED   | PRI | NO   | 0       |
-| [location\_x](#locationx)         | FLOAT |           |     | NO   | 0       |
-| [location\_y](#locationy)         | FLOAT |           |     | NO   | 0       |
-| [location\_z](#locationz)         | FLOAT |           |     | NO   | 0       |
-| [waittime](#waittime)             | INT  | UNSIGNED   |     | NO   | 0       |
-| [point\_comment](#pointcomment)   | TEXT |            |     | YES  | NULL    |
+| Field                           | Type  |          | Null | Key | Default | Extra | Comment                 |
+| :------------------------------ | :---- | :------- | :--: | :-: | :-----: | :---: | :---------------------- |
+| [entry](#entry)                 | INT   | UNSIGNED | NO   | PRI | 0       |       | creature_template entry |
+| [pointid](#pointid)             | INT   | UNSIGNED | NO   | PRI | 0       |       |                         |
+| [location\_x](#locationx)       | FLOAT |          | NO   |     | 0       |       |                         |
+| [location\_y](#locationy)       | FLOAT |          | NO   |     | 0       |       |                         |
+| [location\_z](#locationz)       | FLOAT |          | NO   |     | 0       |       |                         |
+| [waittime](#waittime)           | INT   | UNSIGNED | NO   |     | 0       |       | waittime in millisecs   |
+| [point\_comment](#pointcomment) | TEXT  |          | YES  |     | NULL    |       |                         |
 
-**Description of the fields**
+**Description of the table's fields**
 
 ### entry
 
