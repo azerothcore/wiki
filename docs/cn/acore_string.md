@@ -6,26 +6,17 @@
 
 此表保存了服务器内部使用的所有字符串。它主要是为翻译目的而提供的。
 
-要查看哪个 locale ID 对应哪种语言，请访问 Localization\_lang 页面。
+其他语言的翻译保存在 [acore\_string\_locale](acore_string_locale) 中。
 
 **表结构**
 
-| Field                | Type      | Attributes | Key | Null | Default | Extra | Comment |
-| -------------------- | --------- | ---------- | --- | ---- | ------- | ----- | ------- |
-| [entry][1]           | MEDIUMINT | UNSIGNED   | PRI | NO   | 0       |       |         |
-| [content_default][2] | text      |            |     | NO   |         |       |         |
-| [locale_koKR][3]     | text      |            |     | YES  |         |       |         |
-| [locale_frFR][3]     | text      |            |     | YES  |         |       |         |
-| [locale_deDE][3]     | text      |            |     | YES  |         |       |         |
-| [locale_zhCN][3]     | text      |            |     | YES  |         |       |         |
-| [locale_zhTW][3]     | text      |            |     | YES  |         |       |         |
-| [locale_esES][3]     | text      |            |     | YES  |         |       |         |
-| [locale_esMX][3]     | text      |            |     | YES  |         |       |         |
-| [locale_ruRU][3]     | text      |            |     | YES  |         |       |         |
+| Field                | Type | Attributes | Key | Null | Default | Extra | Comment |
+| -------------------- | ---- | ---------- | --- | ---- | ------- | ----- | ------- |
+| [entry][1]           | INT  | UNSIGNED   | PRI | NO   | 0       |       |         |
+| [content_default][2] | text |            |     | NO   |         |       |         |
 
 [1]: #entry
 [2]: #contentdefault
-[3]: #localennnn
 
 **字段描述**
 
@@ -36,7 +27,3 @@
 ### content\_default
 
 英文翻译（locale ID 0）。
-
-### locale\_nnNN
-
-其他语言的翻译，取决于 locale 名称。

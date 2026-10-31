@@ -7,6 +7,7 @@ La base de datos del mundo tiene información básicamente relacionada con criat
 - [achievement_reward](achievement_reward)
 - [achievement_reward_locale](achievement_reward_locale)
 - [acore_string](acore_string)
+- [acore_string_locale](acore_string_locale)
 - [areatrigger](areatrigger)
 - [areatrigger_involvedrelation](areatrigger_involvedrelation)
 - [areatrigger_scripts](areatrigger_scripts)
