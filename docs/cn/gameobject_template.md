@@ -250,7 +250,7 @@ data 字段的内容取决于[游戏对象类型](#type)
 **GAMEOBJECT\_TYPE\_SPELL\_FOCUS = 8**
 
 - data0: spellFocusType（来自 SpellFocusObject.dbc；该值也会作为 RequiresSpellFocus 出现在 [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell) 中）
-- data1: diameter（即半径\*2）
+- data1: radius（单位为码，另加施法者和焦点的体积）
 - data2: linkedTrap（[gameobject\_template.entry](#entry)（生成的 GO 类型 6））
 - data3: serverOnly?（始终为 0）
 - data4: questID（需要处于激活状态的 [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) 才能生效）

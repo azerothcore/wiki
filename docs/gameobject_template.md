@@ -250,7 +250,7 @@ Object type not used
 **GAMEOBJECT\_TYPE\_SPELL\_FOCUS = 8**
 
 - data0: spellFocusType (from SpellFocusObject.dbc; value also appears as RequiresSpellFocus in [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
-- data1: radius (in yards: the spell can be cast within this distance of the focus)
+- data1: radius (in yards, plus the caster and focus sizes)
 - data2: linkedTrap ([gameobject\_template.entry](#entry) (Spawned GO type 6))
 - data3: serverOnly? (Always 0)
 - data4: questID (Required active [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) to work)

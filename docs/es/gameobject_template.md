@@ -250,7 +250,7 @@ Tipo de objeto sin usar
 **GAMEOBJECT\_TYPE\_SPELL\_FOCUS = 8**
 
 - data0: spellFocusType (de SpellFocusObject.dbc; el valor también aparece como RequiresSpellFocus en [Spell.dbc](https://trinitycore.atlassian.net/wiki/display/tc/Spell))
-- data1: radius (en yardas: el hechizo se puede lanzar dentro de esta distancia del foco)
+- data1: radius (en yardas, más el tamaño del lanzador y del foco)
 - data2: linkedTrap ([gameobject\_template.entry](#entry) (GO generado de tipo 6))
 - data3: serverOnly? (Siempre 0)
 - data4: questID (requiere una [quest\_template.id](http://www.azerothcore.org/wiki/quest_template#id) activa para funcionar)
