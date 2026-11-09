@@ -1,9 +1,9 @@
 # macOS Keeping the Server Up-to-Date
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps)                                                                                  | [Step 8: Client Setup >>](client-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 6: Final Server Steps](final-server-steps) | [Choose another OS](keeping-the-server-up-to-date) | [Step 8: Client Setup >>](client-setup) |
+| :-- | :-: | --: |
 
 ## Keeping the source Up-to-Date
 
@@ -23,13 +23,11 @@ Sometimes we add or remove files from the repository. At that point it is necess
 
 Read [Database Keeping the Server Up-to-Date](database-keeping-the-server-up-to-date)
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 6: Final Server Steps](final-server-steps)                                                                                  | [Step 8: Client Setup >>](client-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 6: Final Server Steps](final-server-steps) | [Choose another OS](keeping-the-server-up-to-date) | [Step 8: Client Setup >>](client-setup) |
+| :-- | :-: | --: |

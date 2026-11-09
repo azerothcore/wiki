@@ -1,9 +1,9 @@
 # Client Setup
 
-| Installation Guide                                                                                                                   |                                                       |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. | Optional                                              |
-| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date)                                                            | [Step 9: Optional Additions >>](optional-additions) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date) | [Step 9: Optional Additions >>](optional-additions) |
+| :-- | --: |
 
 AzerothCore does not distribute a client. You will need to find your own clean 3.3.5a client on the internet.
 
@@ -17,13 +17,11 @@ AzerothCore does not distribute a client. You will need to find your own clean 3
 
 {% include note.html content="Don't use localhost for address, if you need to connect to localhost use 127.0.0.1" %}
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                       |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date)                                                            | [Step 9: Optional Additions >>](optional-additions) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 7: Keeping the Server Up-to-Date](keeping-the-server-up-to-date) | [Step 9: Optional Additions >>](optional-additions) |
+| :-- | --: |

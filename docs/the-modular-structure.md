@@ -24,7 +24,7 @@ When you add new hooks, don't forget to [create a PR](http://www.azerothcore.org
 
 CMake hooks allow modules to execute operations during the AzerothCore compilation phase. This can be used, for example, to install and load custom `*.conf` files during the server startup.
 
-So modules can have their own configuration files and you can **avoid patching** the `worldserver.conf.dist` file.
+So modules can have their own configuration files and you can **avoid patching** the [`worldserver.conf.dist`](https://github.com/azerothcore/azerothcore-wotlk/blob/master/src/server/apps/worldserver/worldserver.conf.dist) file.
 
 The list of the CMake hooks is available [here](hooks-cmake).
 

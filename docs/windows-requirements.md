@@ -1,11 +1,13 @@
 # Windows Requirements
 
-{% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
 
-| Installation Guide                                                                                                                   |                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                           |
-| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](windows-core-installation) |
+| [<< Step 1: Requirements](requirements) | [Step 2: Core Installation >>](windows-core-installation) |
+| :-- | --: |
+
+{% include important.html content="<b>MariaDB</b> (any version) and <b>MySQL versions 5.7 and 8.1</b> are <b>not supported</b> by AzerothCore." %}
+
+{% include important.html content="<b>MySQL 26.x.x</b> is <b>not supported</b>. Use <b>MySQL 8.4 LTS</b> instead." %}
 
 {% include callout.html content="Windows ≥ 10<br/>
 Boost ≥ 1.78<br/>
@@ -106,13 +108,11 @@ MS Visual Studio (Community) ≥ 17 (2022) (Desktop) (No preview)" type="info" %
 
 {% include note.html content="Notice that this image shows the version number 1.72.0 - use your actual version number in your settings." %}
   
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                                           |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |                                                           |
-| [<< Start: Installation Guide](classic-installation)                                                                                 | [Step 2: Core Installation >>](windows-core-installation) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](requirements) | [Step 2: Core Installation >>](windows-core-installation) |
+| :-- | --: |

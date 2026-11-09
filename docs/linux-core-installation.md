@@ -1,9 +1,9 @@
 # Linux Core Installation
 
-| Installation Guide                                                                                                                   |                                               |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements)                                                                                        | [Step 3: Server Setup >>](linux-server-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](linux-requirements) | [Choose another OS](core-installation) | [Step 3: Server Setup >>](linux-server-setup) |
+| :-- | :-: | --: |
 
 ## Installation directories
 
@@ -212,7 +212,7 @@ sudo journalctl ac-worldserver.service
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                               |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](linux-requirements)                                                                                        | [Step 3: Server Setup >>](linux-server-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](linux-requirements) | [Choose another OS](core-installation) | [Step 3: Server Setup >>](linux-server-setup) |
+| :-- | :-: | --: |

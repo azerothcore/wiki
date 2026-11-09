@@ -1,9 +1,9 @@
 # Windows Core Installation
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](windows-requirements)                                                                                      | [Step 3: Server Setup >>](windows-server-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](windows-requirements) | [Choose another OS](core-installation) | [Step 3: Server Setup >>](windows-server-setup) |
+| :-- | :-: | --: |
 
 ## Required software
 
@@ -125,13 +125,11 @@ pdb files only exist if you compile with Debug or RelWithDebInfo configuration. 
 
 {% include important.html content="To report crash logs it's MANDATORY to compile with Debug or RelWithDebInfo configuration." %}
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](windows-requirements)                                                                                      | [Step 3: Server Setup >>](windows-server-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](windows-requirements) | [Choose another OS](core-installation) | [Step 3: Server Setup >>](windows-server-setup) |
+| :-- | :-: | --: |

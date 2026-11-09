@@ -1,9 +1,9 @@
 # macOS Core Installation
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](macos-requirements)                                                                                        | [Step 3: Server Setup >>](macos-server-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](macos-requirements) | [Choose another OS](core-installation) | [Step 3: Server Setup >>](macos-server-setup) |
+| :-- | :-: | --: |
 
 ## Required software
 
@@ -98,13 +98,11 @@ make -j `nproc`
 make install
 ```
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Step 1: Requirements](macos-requirements)                                                                                        | [Step 3: Server Setup >>](macos-server-setup) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Step 1: Requirements](macos-requirements) | [Choose another OS](core-installation) | [Step 3: Server Setup >>](macos-server-setup) |
+| :-- | :-: | --: |
