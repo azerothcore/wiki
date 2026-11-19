@@ -457,7 +457,7 @@ Esta es la probabilidad de que ocurra el evento como porcentaje de 0 a 100. Así
 | SMART_TARGET_PLAYER_WITH_AURA | 201 | spellID | Negative (0/1) | MaxDist | MinDist | | | | Number to resize the target list | Apunta a jugadores con o sin el aura |
 | SMART_TARGET_RANDOM_POINT | 202 | range (yards) | amount (for summoning creature) | self as middle (0/1)<br/>else use xyz | | | | | | Esto solo funciona con SMART_ACTION_SUMMON_CREATURE, SMART_ACTION_MOVE_TO_POS y SMART_ACTION_JUMP_TO_POS |
 | SMART_TARGET_ROLE_SELECTION | 203 | rangeMax (yards) | TargetMask (Tanks (1), Healer (2) Damage (4)) | Resize list | | | | | | Apunta a un rol Tank/Healer/DPS. Basado en la especialización de los jugadores. |
-| SMART_TARGET_SUMMONED_CREATURES | 204 | [creature_template.Entry](creature_template#entry) | | | | | | | | |
+| SMART_TARGET_SUMMONED_CREATURES | 204 | [creature_template.Entry](creature_template#entry) | alive state (1 alive, 2 dead, 0 both) | | | | | | | |
 | SMART_TARGET_INSTANCE_STORAGE | 205 | data index | Type (creature (1), gameobject (2)) | | | | | | | |
 | SMART_TARGET_FORMATION | 206 | Type (0: members only, 1: leader only, 2: all) | creature_template.entry (0: Any) | ExcludeSelf (0/1) | | | | | | Apunta a los miembros de la formación de la creature. |
 | SMART_TARGET_SHARED_OWNER_ENTITIES | 207 | Type (creature (1), gameobject (2)) | Filtro por entry (0: cualquiera) | MaxDist (0: visibility range) | | | | | | Apunta a creatures u objetos de juego que comparten el mismo propietario, encantador o invocador que el origen; excluye el propio objeto origen y no devuelve nada si el origen no tiene propietario. |
