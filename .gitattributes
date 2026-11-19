@@ -1,0 +1,3 @@
+# tools/wiki.sh must keep LF line endings, or bash cannot run it.
+tools/wiki.sh text eol=lf
+tools/wiki.bat text eol=crlf

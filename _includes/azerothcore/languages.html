@@ -1,0 +1,19 @@
+{% assign lang_prefix = page.url | slice: 0, 4 %}
+{% if lang_prefix == "/es/" or lang_prefix == "/cn/" %}
+{% assign lang_base = page.url | remove_first: lang_prefix %}
+{% assign lang_current = lang_prefix | remove: "/" %}
+{% else %}
+{% assign lang_base = page.url | remove_first: "/" %}
+{% assign lang_current = "en" %}
+{% endif %}
+{% assign lang_en_url = "/" | append: lang_base %}
+{% assign lang_es_url = "/es/" | append: lang_base %}
+{% assign lang_cn_url = "/cn/" | append: lang_base %}
+{% assign lang_en_page = site.pages | where: "url", lang_en_url | first %}
+{% assign lang_es_page = site.pages | where: "url", lang_es_url | first %}
+{% assign lang_cn_page = site.pages | where: "url", lang_cn_url | first %}
+<div class="lang-switch">
+    {% if lang_en_page %}<a class="lang-btn{% if lang_current == 'en' %} lang-current{% endif %}" href="{{ lang_en_url | relative_url }}">:gb: English</a>{% else %}<span class="lang-btn lang-missing" title="This page is not available in English">:gb: English</span>{% endif %}
+    {% if lang_es_page %}<a class="lang-btn{% if lang_current == 'es' %} lang-current{% endif %}" href="{{ lang_es_url | relative_url }}">:es: Español</a>{% else %}<span class="lang-btn lang-missing" title="This page is not translated to Spanish yet">:es: Español</span>{% endif %}
+    {% if lang_cn_page %}<a class="lang-btn{% if lang_current == 'cn' %} lang-current{% endif %}" href="{{ lang_cn_url | relative_url }}">:cn: 简体中文</a>{% else %}<span class="lang-btn lang-missing" title="This page is not translated to Chinese yet">:cn: 简体中文</span>{% endif %}
+</div>

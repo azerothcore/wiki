@@ -1,9 +1,9 @@
 # Classic Installation
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Start: Installation](installation)                                                                                               | [Step 1: Requirements >>](requirements) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Start: Installation](installation) | [Step 1: Requirements >>](requirements) |
+| :-- | --: |
 
 The guide has been divided into 9 steps, to make it more readable.
 
@@ -27,13 +27,11 @@ The guide has been divided into 9 steps, to make it more readable.
 
 9. [Optional Additions](optional-additions) - modules and cluster mode
 
-<br>
-
 ## Help
 
 {% include help.html %}
 
-| Installation Guide                                                                                                                   |                                         |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps. |
-| [<< Start: Installation](installation)                                                                                               | [Step 1: Requirements >>](requirements) |
+This article is a part of the Installation Guide. You can read it alone or click the previous link to easily move between the steps.
+
+| [<< Start: Installation](installation) | [Step 1: Requirements >>](requirements) |
+| :-- | --: |

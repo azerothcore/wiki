@@ -6,8 +6,6 @@ redirect_from: "/cn/"
 
 欢迎来到 [AzerothCore](http://www.azerothcore.org/) 项目维基。
 
-阅读语言：[English :gb:](/wiki/home) [Español :es:](/wiki/es/home)
-
 ## 重要提示
 
 {% include warning.html content="AzerothCore 团队和所有者绝不赞助或支持任何非法公共服务器。如果你使用这些项目来运行非法的公共服务器而非用于测试和学习，那完全是你的个人选择。" %}
