@@ -4,7 +4,7 @@
 
 **The \`spawn\_group\_entry\` table**
 
-Lets a [spawn group](spawn_group) set the entries of its members, with limits on how many members can hold each entry. It is meant for packs whose composition varies but follows rules, for example "3 or 4 snakes, at least one of each kind". The mechanism follows the spawn groups of cMaNGOS.
+Lets a [spawn group](spawn_group) set the entries of its members, with limits on how many members can hold each entry. It is meant for packs whose composition varies but follows rules, for example "3 or 4 creatures, at least one of each kind". The mechanism follows the spawn groups of cMaNGOS.
 
 A group with rows here decides the entry of each of its members. The members' own [creature.id](creature#id) / [gameobject.id](gameobject#id), and any rows they have in [creature\_spawn\_entry](creature_spawn_entry) / [gameobject\_spawn\_entry](gameobject_spawn_entry), are ignored.
 
@@ -67,21 +67,21 @@ The percent chance (0 to 100) that a member takes this entry, once all minimums 
 
 **Example**
 
-The snake pack at the entrance of Zul'Gurub has four spawn points and two possible entries. It always has at least one Razzashi Serpent and one Razzashi Adder, and one of its points is empty half of the time:
+A pack has four spawn points (creature GUIDs 1001 to 1004) and two possible entries, 100 and 200. It always has at least one of each entry, never more than three of entry 100, and its fourth point is empty half of the time:
 
 ```sql
 INSERT INTO `spawn_group_template` (`groupId`, `groupName`, `groupFlags`) VALUES
-(105, 'Zul''Gurub - Entrance Snake Pack', 0);
+(500, 'Example pack', 0);
 
 INSERT INTO `spawn_group` (`groupId`, `spawnType`, `spawnId`, `chance`) VALUES
-(105, 0, 86963, 0),
-(105, 0, 86964, 50),
-(105, 0, 86965, 0),
-(105, 0, 86966, 0);
+(500, 0, 1001, 0),
+(500, 0, 1002, 0),
+(500, 0, 1003, 0),
+(500, 0, 1004, 50);
 
 INSERT INTO `spawn_group_entry` (`groupId`, `spawnType`, `entry`, `minCount`, `maxCount`, `chance`) VALUES
-(105, 0, 11371, 1, 0, 0), -- Razzashi Serpent
-(105, 0, 11372, 1, 0, 0); -- Razzashi Adder
+(500, 0, 100, 1, 3, 0),
+(500, 0, 200, 1, 0, 0);
 ```
 
-Before this table existed, the same pack needed 20 pools and 72 creature rows, one pool per possible arrangement.
+Without this table, the same pack needs one pool per possible arrangement, each with its own copies of the spawns.
