@@ -64,6 +64,8 @@ The global unique identifier for the game object. This field must be unique amon
 
 The template ID of the gameobject. See [gameobject_template.entry](http://www.azerothcore.org/wiki/gameobject_template#entry)
 
+To let a single spawn point pick from more than one template, list every entry it can spawn as, this `id` included, in [gameobject_spawn_entry](gameobject_spawn_entry), keyed by this gameobject's `guid`.
+
 ### map
 
 The map ID where this object is spawned. See Maps.dbc

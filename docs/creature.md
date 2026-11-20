@@ -70,7 +70,7 @@ A unique identifier given to each creature to distinguish one creature from anot
 
 The ID of the [template](creature_template#entry) that is used when instantiating this creature.
 
-To let a single spawn point pick from more than one template (the old `id1`/`id2`/`id3` behaviour), add the additional entries in [creature_multispawn](creature_multispawn) keyed by this creature's `guid`.
+To let a single spawn point pick from more than one template (the old `id1`/`id2`/`id3` behaviour), list every entry it can spawn as, this `id` included, in [creature_spawn_entry](creature_spawn_entry), keyed by this creature's `guid`. To give a pack of spawns rules such as "at least one of each entry", use [spawn_group_entry](spawn_group_entry).
 
 ### map
 
