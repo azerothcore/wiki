@@ -6,6 +6,7 @@
 * [AreaTrigger](dbc-areatrigger)
 * [ChrClasses](chrclasses)
 * [ChrRaces](chrraces)
+* [CreatureMovementInfo](creaturemovementinfo)
 * [Emotes](emotes)
 * [Faction](faction)
 * [FactionTemplate](factiontemplate)

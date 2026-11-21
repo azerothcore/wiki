@@ -567,7 +567,26 @@ A flag with two possible values: '1' or '0' indicating whether the creature is a
 
 #### movementId
 
-We have no idea what this field does. It is passed directly to the client.
+Reference to `CreatureMovementInfo.dbc`, see [CreatureMovementInfo](creaturemovementinfo). The server never reads the value, it is only passed to the client, where the `smoothFacingChaseRate` column of the referenced row decides how the creature turns: a non-zero value makes the client turn the creature slowly and heavily instead of snapping, and the higher the value the faster it turns.
+
+- `0`, or an id that does not exist in `CreatureMovementInfo.dbc`, means no override: the creature turns normally.
+- Most rows of the retail 3.3.5a DBC carry a rate of `0`, so most ids have no visible effect. Only these rows are non-zero:
+
+| ID  | smoothFacingChaseRate |
+| --- | --------------------- |
+| 1   | 2                     |
+| 321 | 4                     |
+| 341 | 5                     |
+| 381 | 6                     |
+| 401 | 5                     |
+| 441 | 10                    |
+| 541 | 10                    |
+| 661 | 5                     |
+| 681 | 5                     |
+| 721 | 10                    |
+| 741 | 10                    |
+| 781 | 1                     |
+| 801 | 0.25                  |
 
 #### RegenHealth
 

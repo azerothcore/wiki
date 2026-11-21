@@ -572,7 +572,10 @@ Un flag con dos valores posibles: '1' o '0' que indica si la criatura es un líd
 
 #### movementId
 
-No tenemos ni idea de qué hace este campo. Se pasa directamente al cliente.
+Referencia a `CreatureMovementInfo.dbc`, ver [CreatureMovementInfo](creaturemovementinfo). El servidor nunca lee el valor, solo se pasa al cliente, donde la columna `smoothFacingChaseRate` de la fila referenciada decide cómo gira la criatura: un valor distinto de 0 hace que el cliente gire a la criatura lenta y pesadamente en lugar de girar de golpe, y cuanto mayor es el valor más rápido gira.
+
+- `0`, o un id que no exista en `CreatureMovementInfo.dbc`, significa que no hay sustitución: la criatura gira con normalidad.
+- La mayoría de las filas del DBC de 3.3.5a tienen un valor de `0`, así que la mayoría de los ids no producen ningún efecto visible. Los valores distintos de 0 están en la [página en inglés](creature_template#movementid).
 
 #### RegenHealth
 

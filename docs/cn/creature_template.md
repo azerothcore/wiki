@@ -567,7 +567,10 @@ BaseVariance 根据攻击类型为 [BaseVariance](#basevariance) 或 [RangeVaria
 
 #### movementId
 
-我们不知道这个字段是做什么的。它被直接传递给客户端。
+对 `CreatureMovementInfo.dbc` 的引用，见 [CreatureMovementInfo](creaturemovementinfo)。服务器从不读取该值，只把它传递给客户端；客户端用所引用行的 `smoothFacingChaseRate` 列决定生物如何转向：非 0 值会让客户端缓慢沉重地转向，而不是瞬间转身，数值越大转向越快。
+
+- 值为 `0`，或该 id 在 `CreatureMovementInfo.dbc` 中不存在，表示不使用覆盖值：生物正常转向。
+- 3.3.5a 原版 DBC 中绝大多数行的值都是 `0`，因此大多数 id 没有任何可见效果。非 0 的数值见[英文页面](creature_template#movementid)。
 
 #### RegenHealth
 
