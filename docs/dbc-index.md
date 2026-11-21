@@ -7,6 +7,7 @@
 * [CharSections](charsections_dbc)
 * [ChrClasses](chrclasses)
 * [ChrRaces](chrraces)
+* [CreatureMovementInfo](creaturemovementinfo)
 * [Emotes](emotes)
 * [EmotesTextSound](emotestextsound_dbc)
 * [Faction](faction)
